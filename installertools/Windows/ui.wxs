@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment>
+    <UI Id="WixUI">
+
+
+      <DialogRef Id="LicenseAgreementDlg" />
+  <!--       <DialogRef Id="ReadMeDlg" />
+   <DialogRef Id="SetupTypeDlg" /> -->
+
+
+      <Property Id="WixUI_WelcomeDlg_Next" Value="LicenseAgreementDlg" />
+
+      <Property Id="WixUI_LicenseAgreementDlg_Back" Value="WelcomeDlg" />
+      <Property Id="WixUI_LicenseAgreementDlg_Next" Value="VerifyReadyDlg" />
+<!--
+      <Property Id="WixUI_SetupTypeDlg_NextTypical" Value="VerifyReadyDlg" />
+      <Property Id="WixUI_SetupTypeDlg_NextCustom" Value="CustomizeDlg" />
+      <Property Id="WixUI_SetupTypeDlg_NextComplete" Value="VerifyReadyDlg" />
+      <Property Id="WixUI_SetupTypeDlg_Back" Value="UserRegistrationDlg" />
+-->
+
+
+	</UI>
+    <FragmentRef Id="WixUI_Common" />
+  </Fragment>
+</Wix>

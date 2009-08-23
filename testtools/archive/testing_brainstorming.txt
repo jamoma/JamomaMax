@@ -1,0 +1,96 @@
+TESTING
+
+
+- test patches
+    - file extension: .test.mxt
+    - text-format patchers
+    - can be ANYWHERE in knox
+        - the test application iterates through all directories of knox
+    - i/o conformity
+        - initialization
+        - expected results
+        
+    - "assert" object 
+        - one patch can have many assert objects
+            45 tests
+            88 assertions
+        - assert object manages reporting of results
+            so, if in the future we change how we WANT results to be reported, 
+            all we have to do is change the assert object
+        - "assert test_name expected_value"
+        - special modes:
+            "assert test_name has_not_crashed" -> simply tests to make sure the code got there!
+                eg,
+                counter object test flow:
+                send it a jam message
+                assert counter_test_jam has_not_crashed
+                send it a clear message
+                assert counter_test_clear has_not_crashed
+                send it a jam 0 message
+                send it a bang
+                assert counter_test_increment 1   (here we expect the value to be 1)
+        - assert object writes directly to log file
+    
+    
+            
+    
+        
+- test application
+    - iterates through all directories of knox looking for *.test.mxt files
+    - is a standalone?  is a ruby script?  is a java program?
+    - when it finds one...
+        1. launches a copy of Max/MSP/Jitter and loads the patch
+            - on Mac using openandwait
+            - on Win using openpatch.bat
+        
+        
+        5. receives results, log messages
+            - results: PASS/FAIL
+            - log messages: anything to get written to the log file
+            - use networking to pass data from test patches to test application
+        6. receives "test_completed" message
+        6. closes app
+    - output: text file something like...
+        Max MSP Jitter Test Application
+        February 8th 2007 19:43:45
+        SVN #1218
+        
+        Number of tests: 423
+        Number of passes: 422
+        Number of errors: 1
+        
+        Results:
+        
+        metro.test.mxt
+        PASS
+        PASS
+        PASS
+        
+        jit.matrix.test.mxt
+        PASS
+        FAIL: too big a matrix!
+        PASS
+        PASS
+        
+        ...etc
+        
+                
+        
+        
+- test procedure
+    1. check out fresh copy of entire knox
+    2. build release version of everything
+    3. run test application
+    
+-log file
+    - for now can be fixed in one location.  later can figure out the best way to have a flexible location.
+    - /sysbuild/maxtest.log
+    
+    
+    
+    
+investigations:
+    - possible to capture data from Max window to console?  or to script?  or to file?  -> assert object
+    - ruby script that iterates through all files in a directory structure looking for .test.mxt
+    - how do we track crashes?
+    

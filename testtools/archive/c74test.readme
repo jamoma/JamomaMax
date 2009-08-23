@@ -1,0 +1,49 @@
+c74test.readme 
+February 12, 2007
+bbn@cycling74.com
+
+Updated April 4, 2008 for Max 5, SVN, OSC, etc.
+tim@cycling74.com
+
+
+c74test.rb is a Ruby script that searches through the contents of 
+our repository and launches test patches.  The test patches 
+communicate with a UDP server embedded within the script.  Below 
+is some pseudocode that approximates the algorithm:
+
+
+	while we have not found all test patches
+		find a test patch
+		launch it
+		receive results, wait for TEST_FINISHED_STRING
+		send TERMINATE_MAX_STRING
+	end
+
+
+If you're in the knox/testing directory, the syntax for running 
+the script is:
+	ruby c74test.rb svnroot apppath [suffix1] [suffix2] ...
+
+For example:
+	ruby c74test.rb /trunk /sysbuild/Development/MaxMSP.app
+	ruby c74test.rb /trunk /sysbuild/Development/MaxMSP.app .test.pat
+
+where svnroot is the root of our Subversion trunk checkout folder, apppath is the Max 
+app to use to launch the test patches.  The script will by default 
+look for all patches with the 'test.pat' suffix, but if any 
+optional suffix arguments are present it will instead search for 
+those.  For instance, this Mac command line:
+	ruby c74test.rb /knox /Applications/MaxMSP\ 4.6/MaxMSP.app .jitter.test.pat
+	
+would launch all files with the .jitter.test.pat extension.
+
+
+SETUP INSTRUCTIONS
+
+1. On Windows you have to install Ruby.  http://www.ruby-lang.org .  
+Click on the big "Download Ruby" button.  Scroll down to the "Ruby 
+on Windows" section and download the Ruby One-Click installer.  
+Download and install.
+
+2. On Mac you have to make sure you have the "buildtool" svn folder 
+checked out, because we use the 'openandwait' program in there.
