@@ -8,6 +8,7 @@
 libdir = "."
 Dir.chdir libdir        # change to libdir so that requires work
 require "jamomalib"   # C74 build library
+require 'rosc/lib/osc'
 
 
 puts "Jamoma Automated Test Runner"
