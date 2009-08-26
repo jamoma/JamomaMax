@@ -1,9 +1,9 @@
 {
 	"patcher" : 	{
 		"fileversion" : 1,
-		"rect" : [ 4.0, 44.0, 186.0, 124.0 ],
+		"rect" : [ 4.0, 44.0, 187.0, 127.0 ],
 		"bglocked" : 0,
-		"defrect" : [ 4.0, 44.0, 186.0, 124.0 ],
+		"defrect" : [ 4.0, 44.0, 187.0, 127.0 ],
 		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -1715,7 +1715,7 @@
 									"patching_rect" : [ 129.0, 357.0, 197.0, 26.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 102.0, 459.0, 376.0, 51.0 ],
-									"text" : "this is is another nice gitter test"
+									"text" : "improving the gitter a lot"
 								}
 
 							}
@@ -1746,7 +1746,6 @@
 										"imprint" : 0,
 										"enablehscroll" : 1,
 										"enablevscroll" : 1,
-										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"comment" : "",
@@ -2283,7 +2282,7 @@
 													"patcher" : 													{
 														"fileversion" : 1,
 														"rect" : [ 217.0, 171.0, 865.0, 662.0 ],
-														"bgcolor" : [ 0.878431, 0.403922, 0.0, 1.0 ],
+														"bgcolor" : [ 0.372549, 0.372549, 0.368627, 1.0 ],
 														"bglocked" : 0,
 														"defrect" : [ 217.0, 171.0, 865.0, 662.0 ],
 														"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
@@ -4003,7 +4002,7 @@
 									"cols" : 2,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"hcellcolor" : [ 0.923077, 0.589198, 0.0, 1.0 ],
+									"hcellcolor" : [ 0.390554, 0.791209, 0.0, 1.0 ],
 									"hscroll" : 0,
 									"id" : "obj-1",
 									"maxclass" : "jit.cellblock",
@@ -4014,8 +4013,8 @@
 									"patching_rect" : [ 22.0, 104.0, 674.0, 204.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 6.0, 6.0, 600.0, 449.0 ],
-									"rowdef" : [ [ 0, 0, 1, 1.0, 1.0, 1.0, 0, 0.875, 0.402344, 0.0, -1, -1, -1 ], [ 1, 0, 1, 1.0, 1.0, 1.0, 0, 0.875, 0.402344, 0.0, -1, -1, -1 ], [ 2, 0, 1, 1.0, 1.0, 1.0, 0, 0.496094, 0.496094, 0.496094, -1, -1, -1 ] ],
-									"rows" : 1
+									"rowdef" : [ [ 0, 0, 1, 1.0, 1.0, 1.0, 0, 0.371094, 0.371094, 0.367188, -1, -1, -1 ], [ 1, 0, 1, 1.0, 1.0, 1.0, 0, 0.371094, 0.371094, 0.367188, -1, -1, -1 ], [ 2, 0, 1, 1.0, 1.0, 1.0, 0, 0.875, 0.402344, 0.0, -1, -1, -1 ] ],
+									"rows" : 2
 								}
 
 							}
@@ -5333,6 +5332,7 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"hidden" : 1,
 					"id" : "obj-111",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -5660,9 +5660,9 @@
 					"outlettype" : [ "" ],
 					"patcher" : 					{
 						"fileversion" : 1,
-						"rect" : [ 29.0, 303.0, 537.0, 508.0 ],
+						"rect" : [ 29.0, 303.0, 586.0, 505.0 ],
 						"bglocked" : 0,
-						"defrect" : [ 29.0, 303.0, 537.0, 508.0 ],
+						"defrect" : [ 29.0, 303.0, 586.0, 505.0 ],
 						"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5680,12 +5680,56 @@
 								"box" : 								{
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 258.0, 177.0, 106.0, 19.0 ],
+									"presentation_rect" : [ 298.0, 177.0, 0.0, 0.0 ],
+									"text" : "value git-path-root"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 258.0, 233.0, 123.0, 19.0 ],
+									"presentation_rect" : [ 298.0, 233.0, 0.0, 0.0 ],
+									"text" : "value git-path-module"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-103",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "bang", "" ],
+									"patching_rect" : [ 308.0, 121.0, 96.0, 19.0 ],
+									"text" : "sel __root__"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
 									"id" : "obj-78",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 343.0, 213.0, 144.0, 19.0 ],
+									"patching_rect" : [ 385.0, 205.0, 144.0, 19.0 ],
 									"text" : "combine s s"
 								}
 
@@ -5699,7 +5743,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 343.0, 159.0, 144.0, 19.0 ],
+									"patching_rect" : [ 385.0, 151.0, 144.0, 19.0 ],
 									"text" : "t b s"
 								}
 
@@ -5713,7 +5757,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 343.0, 185.0, 106.0, 19.0 ],
+									"patching_rect" : [ 385.0, 177.0, 106.0, 19.0 ],
 									"text" : "value git-path-root"
 								}
 
@@ -5727,7 +5771,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 343.0, 241.0, 123.0, 19.0 ],
+									"patching_rect" : [ 385.0, 233.0, 123.0, 19.0 ],
 									"text" : "value git-path-module"
 								}
 
@@ -5966,7 +6010,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 343.0, 125.0, 25.0, 25.0 ]
+									"patching_rect" : [ 342.0, 72.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -5993,6 +6037,24 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"hidden" : 0,
+									"midpoints" : [  ],
+									"source" : [ "obj-103", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-77", 0 ],
+									"hidden" : 0,
+									"midpoints" : [  ],
+									"source" : [ "obj-103", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-61", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
@@ -6006,6 +6068,15 @@
 									"hidden" : 0,
 									"midpoints" : [  ],
 									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"hidden" : 0,
+									"midpoints" : [  ],
+									"source" : [ "obj-2", 0 ]
 								}
 
 							}
@@ -6209,7 +6280,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-77", 0 ],
+									"destination" : [ "obj-103", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
 									"source" : [ "obj-94", 0 ]
@@ -9299,6 +9370,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-38",
 					"items" : "master",
 					"maxclass" : "umenu",
@@ -9316,7 +9388,6 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"hidden" : 1,
 					"id" : "obj-30",
 					"items" : [ "Kind", "of", "Stable", ",", "Bleeding" ],
 					"maxclass" : "umenu",
