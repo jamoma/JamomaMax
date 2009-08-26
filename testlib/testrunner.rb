@@ -202,9 +202,11 @@ def establishCommunication
   sleep 5
 
   ping = OSC::Message.new('/ping');
+  pathset = OSC::Message.new("/test/path #{@svnroot}/Tools/testlib")
   while @pingReturned == 0
     puts "    Sending ping to Max."
     @oscSender.send(ping, 0, @host, @sendPort)
+    @oscSender.send(pathset, 0, @host, @sendPort)
     sleep 1
   end
 end
