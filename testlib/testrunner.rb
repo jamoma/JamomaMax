@@ -4,11 +4,12 @@
 # Run automated tests for Jamoma
 ###################################################################
 
-# First include the functions in the jamoma lib
-libdir = "."
-Dir.chdir libdir        # change to libdir so that requires work
-require "jamomalib"   # C74 build library
 require 'rosc/lib/osc'
+
+# First include the functions in the jamoma lib
+libdir = ".."
+Dir.chdir libdir        # change to libdir so that requires work
+require "support/jamomalib"   # C74 build library
 
 
 puts "Jamoma Automated Test Runner"
@@ -226,8 +227,8 @@ end
 # here is where we actually run the tests
 ###################################################################
 
-puts "  Copying jcom.test.manager.maxpat to the Max Startup folder"
-`cp "#{@svnroot}/Tools/jcom.test.manager.maxpat" "#{@maxfolder}/Cycling '74/max-startup"`
+puts "  Copying test.manager.maxpat to the Max Startup folder"
+`cp "#{@svnroot}/Tools/testlib/test.manager.maxpat" "#{@maxfolder}/Cycling '74/max-startup"`
 
 
 puts "  Launching Max..."
