@@ -4,10 +4,12 @@
 # Run automated tests for Jamoma
 ###################################################################
 
+require 'rosc/lib/osc'
+
 # First include the functions in the jamoma lib
-libdir = "."
+libdir = ".."
 Dir.chdir libdir        # change to libdir so that requires work
-require "jamomalib"   # C74 build library
+require "support/jamomalib"   # C74 build library
 
 
 puts "Jamoma Automated Test Runner"
@@ -200,9 +202,11 @@ def establishCommunication
   sleep 5
 
   ping = OSC::Message.new('/ping');
+  pathset = OSC::Message.new("/test/path #{@svnroot}/Tools/testlib")
   while @pingReturned == 0
     puts "    Sending ping to Max."
     @oscSender.send(ping, 0, @host, @sendPort)
+    @oscSender.send(pathset, 0, @host, @sendPort)
     sleep 1
   end
 end
@@ -225,8 +229,8 @@ end
 # here is where we actually run the tests
 ###################################################################
 
-puts "  Copying jcom.test.manager.maxpat to the Max Startup folder"
-`cp "#{@svnroot}/Tools/jcom.test.manager.maxpat" "#{@maxfolder}/Cycling '74/max-startup"`
+puts "  Copying test.manager.maxpat to the Max Startup folder"
+`cp "#{@svnroot}/Tools/testlib/test.manager.maxpat" "#{@maxfolder}/Cycling '74/max-startup"`
 
 
 puts "  Launching Max..."
