@@ -12,12 +12,12 @@ Dir.chdir libdir        # change to libdir so that requires work
 require "../library/jamomalib"   # C74 build library
 
 
-@svn_root = ".."
+@svn_root = "../.."	# this is the root of the Jamoma project repository
 if win32?
   Dir.chdir @svn_root
   @svn_root = Dir.pwd
-  Dir.chdir "#{@svn_root}/installertools"
-  @temp = "#{@svn_root}/installertools/Windows"
+  Dir.chdir "#{@svn_root}/Tools/installertools"
+  @temp = "#{@svn_root}/Tools/installertools/Windows"
   @max = "#{@temp}/root"
 else
   @installers = "#{@svn_root}/../Installers"
@@ -34,10 +34,10 @@ end
 ###################################################################
 
 def create_logs
-  @build_log = File.new("#{@svn_root}/installertools/_installer.log", "w")
+  @build_log = File.new("#{@svn_root}/Tools/installertools/_installer.log", "w")
   @build_log.write("JAMOMA INSTALLER LOG: #{`date`}\n\n")
   @build_log.flush
-  @error_log = File.new("#{@svn_root}/installertools/_error.log", "w")
+  @error_log = File.new("#{@svn_root}/Tools/installertools/_error.log", "w")
   @error_log.write("JAMOMA INSTALLER ERROR LOG: #{`date`}\n\n")
   @error_log.flush
   trap("SIGINT") { die }
@@ -86,7 +86,7 @@ end
 
 if win32?
   
-  Dir.chdir("#{@svn_root}/installertools/Windows")
+  Dir.chdir("#{@svn_root}/Tools/installertools/Windows")
 
   puts " Removing old temporary folder"
   `rm -rf root`
@@ -100,7 +100,6 @@ if win32?
   `mkdir "root/Cycling '74/max-startup"`
 #  `mkdir "root/Cycling '74/java"`
 #  `mkdir "root/Cycling '74/java/classes"`
-#  `mkdir "root/Cycling '74/java/classes/cueManager"`
   `mkdir root/patches`
   `mkdir root/patches/extras`
   `mkdir root/patches/templates`
@@ -109,69 +108,48 @@ if win32?
   `mkdir "root/Cycling '74/default-settings"`
   `mkdir "root/Cycling '74/extensions"`
   `mkdir "root/Common Files"`
-  `mkdir "root/Common Files/TTBlue"`
-  `mkdir "root/Common Files/TTBlue/Extensions"`
+  `mkdir "root/Common Files/Jamoma"`
+  `mkdir "root/Common Files/Jamoma/Extensions"`
 
   puts " Copying the Jamoma folder --  this could take a while..."
-  `cp -r "#{@svn_root}/../Modular/Jamoma" "root/Cycling '74"`
+  `cp -r "#{@svn_root}/Modules/Modular/Jamoma" 						"root/Cycling '74"`
 
-  puts " Moving TTBlue Extensions"
-  `mv "root/Cycling '74/Jamoma/library/externals/TTBlueExtensions"/*.ttdll      "root/Common Files/TTBlue/Extensions"`
+  puts " Copying Jamoma Extensions"
+  `cp "#{@svn_root}/Builds"/*.ttdll  							"root/Common Files/Jamoma/Extensions"`
 
-  puts " Moving things around (frameworks, loader, templates, etc)..."
-  `mv "#{@c74}/Jamoma/library/externals/JamomaFramework.dll"  root/support`
-  `mv "#{@c74}/Jamoma/library/externals/JamomaDSP.dll"  root/support`
-  `mv "#{@c74}/Jamoma/library/externals/JamomaModular.dll"  root/support`
-  `mv "#{@c74}/Jamoma/library/externals/TTBlue.dll"           root/support`
-  `mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll        root/support`
+  puts " Copying frameworks into the support folder"
+  `cp "#{@svn_root}/Builds/JamomaFoundation.dll"  					root/support`
+  `cp "#{@svn_root}/Builds/JamomaDSP.dll"  						root/support`
+  `cp "#{@svn_root}/Builds/JamomaModular.dll"  						root/support`
 
-  `mv "#{@c74}/Jamoma/library/externals/windows/jcom.loader.mxe" "#{@c74}/extensions/jcom.loader.mxe"`
+  puts " Copying externals "
+  `mkdir "#{@c74}/Jamoma/library/externals"`
+  `cp "#{@svn_root}/Builds"/*.mxe 							"#{@c74}/Jamoma/library/externals/"`
+	
+  puts " Moving things around : loader, templates, etc..."
+  `mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll				root/support`
+  `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe" 				"#{@c74}/extensions/jcom.loader.mxe"`
+  `cp "#{@c74}/Jamoma/support"/*.maxdefaults   						"#{@c74}/default-settings"`
+  `cp "#{@c74}/Jamoma/support"/*.maxdefines    						"#{@c74}/default-definitions"`
+  `cp "#{@c74}/Jamoma/documentation/jamoma-overview.maxpat" 				root/patches/extras/jamoma-overview.maxpat`
+  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/_Jamoma_Patcher_.maxpat"      	root/patches/templates/_Jamoma_Patcher_.maxpat`
+  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jalg.template.audio~.maxpat"  	root/patches/templates/jalg.template.audio~.maxpat`
+  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jalg.template.video%.maxpat"  	root/patches/templates/jalg.template.video%.maxpat`
+  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jmod.template.audio~.maxpat"  	root/patches/templates/jmod.template.audio~.maxpat`
+  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jmod.template.control.maxpat" 	root/patches/templates/jmod.template.control.maxpat`
+  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jmod.template.maxhelp"        	root/patches/templates/jmod.template.maxhelp`
+  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jmod.template.video%.maxpat"  	root/patches/templates/jmod.template.video%.maxpat`
+  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/layout.xml"                   	root/patches/templates/layout.xml`
 
-  `cp "#{@c74}/Jamoma/support"/*.maxdefaults   "#{@c74}/default-settings"`
-  `cp "#{@c74}/Jamoma/support"/*.maxdefines    "#{@c74}/default-definitions"`
-
-  `cp "#{@c74}/Jamoma/documentation/jamoma-overview.maxpat" root/patches/extras/jamoma-overview.maxpat`
-
-  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/_Jamoma_Patcher_.maxpat"      root/patches/templates/_Jamoma_Patcher_.maxpat`
-  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jalg.template.audio~.maxpat"  root/patches/templates/jalg.template.audio~.maxpat`
-  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jalg.template.video%.maxpat"  root/patches/templates/jalg.template.video%.maxpat`
-  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jmod.template.audio~.maxpat"  root/patches/templates/jmod.template.audio~.maxpat`
-  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jmod.template.control.maxpat" root/patches/templates/jmod.template.control.maxpat`
-  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jmod.template.maxhelp"        root/patches/templates/jmod.template.maxhelp`
-  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jmod.template.video%.maxpat"  root/patches/templates/jmod.template.video%.maxpat`
-  `cp "#{@c74}/Jamoma/documentation/jamoma-templates/layout.xml"                   root/patches/templates/layout.xml`
-
-#  `cp "#{@c74}/Jamoma/modules/control/cueManager/java-classes/Cue.class" "root/Cycling '74/java/classes/cueManager/Cue.class"`
-#  `cp "#{@c74}/Jamoma/modules/control/cueManager/java-classes/CueList.class" "root/Cycling '74/java/classes/cueManager/CueList.class"`
-#  `cp "#{@c74}/Jamoma/modules/control/cueManager/java-classes/Data.class" "root/Cycling '74/java/classes/cueManager/Data.class"`
-#  `cp "#{@c74}/Jamoma/modules/control/cueManager/java-classes/CueManager.class" "root/Cycling '74/java/classes/cueManager/CueManager.class"`
-
-  puts " Stripping .svn folders..."
-  `rm -rf "#{@c74}/Jamoma"/.svn`                              # and remove all .svn folders by brute force (someone can make this better)
-  `rm -rf "#{@c74}/Jamoma"/*/.svn`   
-  `rm -rf "#{@c74}/Jamoma"/*/*/.svn`
-  `rm -rf "#{@c74}/Jamoma"/*/*/*/.svn`
-  `rm -rf "#{@c74}/Jamoma"/*/*/*/*/.svn`
-  `rm -rf "#{@c74}/Jamoma"/*/*/*/*/*/.svn`
-  `rm -rf "#{@c74}/Jamoma"/*/*/*/*/*/*/.svn`
-  `rm -rf "#{@c74}/Jamoma"/*/*/*/*/*/*/*/.svn`
-  `rm -rf "#{@c74}/Jamoma"/*/*/*/*/*/*/*/*/.svn`
+  puts " Copying readme, license, etc...."
+  `cp "#{@c74}/Jamoma/GNU-LGPL.rtf" 							root/License.rtf`
+  `cp "#{@c74}/Jamoma/ReadMe.rtf"   							root/ReadMe.rtf`
 
   puts " Removing files that are not needed (.zips, mac, externs, etc)..."
-  `rm -f   "#{@c74}/Jamoma/library/externals/windows"/*.exp`
-  `rm -f   "#{@c74}/Jamoma/library/externals/windows"/*.ilk`
-  `rm -f   "#{@c74}/Jamoma/library/externals/windows"/*.lib`
-  `rm -f   "#{@c74}/Jamoma/library/externals/windows"/*.pdb`
-  `rm -f   "#{@c74}/Jamoma/library/externals"/*.log`
-  `rm -rf  "#{@c74}/Jamoma/library/externals"/*.zip`
   `rm -rf  "#{@c74}/Jamoma/library/third-party/Mac"`
   `rm -rf  "#{@c74}/Jamoma/library/third-party/WinXP"/*.zip`
   `rm -rf  "#{@c74}/Jamoma/library/third-party/WinXP/support"`
   `rm -rf  "#{@c74}/Jamoma/support"`
-
-  puts " Copying readme, license, etc...."
-  `cp "#{@c74}/Jamoma/GNU-LGPL.rtf" root/License.rtf`
-  `cp "#{@c74}/Jamoma/ReadMe.rtf"   root/ReadMe.rtf`
 
   puts " Building Package -- this could take a while..."
 
@@ -179,7 +157,7 @@ if win32?
   puts `../wix/Paraffin.exe -dir "root/Cycling '74"                     -custom JamomaC74        -g -direXclude .svn -ext .WXS JamomaC74.wxs`
   puts `../wix/Paraffin.exe -dir root/patches/                          -custom JamomaPatches    -g -direXclude .svn -ext .WXS JamomaPatches.wxs`
   puts `../wix/Paraffin.exe -dir root/support/                          -custom JamomaSupport    -g -direXclude .svn -ext .WXS JamomaSupport.wxs`
-  puts `../wix/Paraffin.exe -dir "root/Common Files/TTBlue/Extensions/" -custom JamomaExtensions -g -direXclude .svn -ext .WXS JamomaExtensions.wxs`
+  puts `../wix/Paraffin.exe -dir "root/Common Files/Jamoma/Extensions/" -custom JamomaExtensions -g -direXclude .svn -ext .WXS JamomaExtensions.wxs`
 
   puts " Fixing JamomaExtensions Source"
   # Here we need to perform a substitution on the JamomaExtensions Wix module, because want this to go into a different directory
