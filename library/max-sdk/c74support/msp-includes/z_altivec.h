@@ -1,3 +1,5 @@
+
+#if 0
 #ifdef __ALTIVEC__
 #pragma altivec_model on
 
@@ -26,3 +28,4 @@ static floatToVector __vsf_temp;
     
 #pragma altivec_model off
 #endif
+#endif // 0
