@@ -4807,6 +4807,7 @@
 									"outputmode" : 1,
 									"patching_rect" : [ 129.0, 357.0, 197.0, 26.0 ],
 									"presentation" : 1,
+									"presentation_linecount" : 2,
 									"presentation_rect" : [ 103.0, 630.0, 456.0, 51.0 ],
 									"text" : "adding the .log files to the .gitignore"
 								}
