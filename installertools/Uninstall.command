@@ -48,15 +48,22 @@ function doRemove {
 	fi
 
    if [ -e "$FrameworkFolder" ] ; then
-		echo -ne "- Modular Framework ($FrameworkFolder/Jamoma.framework)"
-		sudo rm -Rf "$FrameworkFolder/Jamoma.framework" && echo -ne "... done.\n"
+		echo -ne "- Modular Framework ($FrameworkFolder/JamomaModular.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaModular.framework" && echo -ne "... done.\n" 
+		echo -ne "- Modular Framework ($FrameworkFolder/JamomaFoundation.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaFoundation.framework" && echo -ne "... done.\n"
+		echo -ne "- Modular Framework ($FrameworkFolder/JamomaGraphics.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaGraphics.framework" && echo -ne "... done.\n"      
+		echo -ne "- Modular Framework ($FrameworkFolder/JamomaMulticore.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaMulticore.framework" && echo -ne "... done.\n"
+	   
 		if [ -e "$TapTools" ]; then
 			echo -ne "It seems that Tap.Tools is installed. Therfore the files that are shared between Jamoma and Tap.Tools will remain.\n"
 		else    
 	    	echo -ne "- DSP Framework ($FrameworkFolder/JamomaDSP.framework)."
 			sudo rm -Rf "$FrameworkFolder/JamomaDSP.framework" && echo -ne "... done.\n"
-			echo -ne "- DSP Extensions (/Library/Application Support/TTBlue)." 
-			sudo rm -Rf "/Library/Application Support/TTBlue" && echo -ne "... done.\n" 
+			echo -ne "- DSP Extensions (/Library/Application Support/Jamoma)." 
+			sudo rm -Rf "/Library/Application Support/Jamoma" && echo -ne "... done.\n" 
 		fi
 	else
 		echo -ne "Sorry, $FrameworkFolder doesn't exist. Frameworks can't be uninstalled.\n"

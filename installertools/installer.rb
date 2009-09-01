@@ -227,8 +227,11 @@ else
 
   puts "  Copying Externals"
   cmd("cp -rpv \"#{@git_root}/Builds\"                                                                       \"#{@c74}/Jamoma/externals\" ")
+  puts "  Removing ≈-Externals" 
+  cmd("rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.mxo")
   
-  puts "  Removing files that are not needed (.zips, windows externs, etc)..."
+  puts "  Removing files that are not needed (.zips, windows externs, etc)..."  
+  cmd("rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt")
 #  cmd("rm -fv \"#{@c74}/Jamoma/library/externals/\"*.zip")
 #  cmd("rm -fv \"#{@c74}/Jamoma/library/externals/\"*.log")  
 #  cmd("rm -fv \"#{@c74}/Jamoma/library/externals/JamomaFramework.dll\"")
