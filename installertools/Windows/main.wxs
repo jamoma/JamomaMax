@@ -27,7 +27,8 @@
         </Directory>
 
         <Directory Id='CommonFilesFolder'>
-	  <Directory Id="EXTENSIONSDIR" Name="TTBlue">
+        	<!-- this next one is for the *.ttdll extensions to the runtime -->
+	  <Directory Id="EXTENSIONSDIR" Name="Jamoma">
 	  </Directory>
 	</Directory>
 

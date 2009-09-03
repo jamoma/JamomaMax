@@ -9,7 +9,7 @@
 
 // Name & Version
 PRODUCT_NAME = $(PROJECT_NAME)
-PRODUCT_VERSION = 0.6
+PRODUCT_VERSION = 0.5.0
 
 
 // Paths
@@ -35,10 +35,13 @@ INFOPLIST_FILE = $(SRCROOT)/../../../../../Tools/library/common/Info.plist
 
 // Per architecture and deployment settings
 SDKROOT = /Developer/SDKs/MacOSX10.5.sdk
-//SDKROOT[arch=ppc] = /Developer/SDKs/MacOSX10.4u.sdk
-GCC_VERSION = 4.2
-//GCC_VERSION[arch=ppc] = 4.2
-MACOSX_DEPLOYMENT_TARGET = 10.5
+SDKROOT[arch=ppc] = /Developer/SDKs/MacOSX10.4u.sdk
+SDKROOT[arch=i386] = /Developer/SDKs/MacOSX10.4u.sdk
+SDKROOT[arch=x86_64] = /Developer/SDKs/MacOSX10.6.sdk
+GCC_VERSION[arch=ppc] = 4.0
+GCC_VERSION[arch=i386] = 4.0
+GCC_VERSION[arch=x86_64] = 4.2
+MACOSX_DEPLOYMENT_TARGET = 10.4
 
 
 // Static Configuration (don't change these)
