@@ -118,15 +118,16 @@ if win32?
   `mkdir "root/Common Files/Jamoma/Extensions"`
 
   puts " Copying the Jamoma folder --  this could take a while..."
-  `cp -r "#{@git_root}/Modules/Modular/Jamoma" 						"root/Cycling '74"`
+  `cp -r "#{@git_root}/Modules/Modular/Jamoma" 								"root/Cycling '74"`
 
   puts " Copying Jamoma Extensions"
-  `cp "#{@git_root}/Builds"/*.ttdll  							"root/Common Files/Jamoma/Extensions"`
+  `cp "#{@git_root}/Builds"/*.ttdll  										"root/Common Files/Jamoma/Extensions"`
 
   puts " Copying frameworks into the support folder"
-  `cp "#{@git_root}/Builds/JamomaFoundation.dll"  					root/support`
-  `cp "#{@git_root}/Builds/JamomaDSP.dll"  						root/support`
-  `cp "#{@git_root}/Builds/JamomaModular.dll"  						root/support`
+  `cp "#{@git_root}/Builds/JamomaFoundation.dll"  							root/support`
+  `cp "#{@git_root}/Builds/JamomaDSP.dll"  									root/support`
+  `cp "#{@git_root}/Builds/JamomaModular.dll"  								root/support`
+  `cp "#{@git_root}/Modules/DSP/library/portaudio/Release/PortAudio.dll"	root/support`
 
   puts " Copying externals "
   `mkdir "#{@c74}/Jamoma/library/externals"`
@@ -134,9 +135,9 @@ if win32?
 	
   puts " Moving things around : loader, templates, etc..."
   `mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll				root/support`
-  `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe" 				"#{@c74}/extensions/jcom.loader.mxe"`
-  `cp "#{@c74}/Jamoma/support"/*.maxdefaults   						"#{@c74}/default-settings"`
-  `cp "#{@c74}/Jamoma/support"/*.maxdefines    						"#{@c74}/default-definitions"`
+  `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe" 					"#{@c74}/extensions/jcom.loader.mxe"`
+  `cp "#{@c74}/Jamoma/support"/*.maxdefaults   								"#{@c74}/default-settings"`
+  `cp "#{@c74}/Jamoma/support"/*.maxdefines    								"#{@c74}/default-definitions"`
   `cp "#{@c74}/Jamoma/documentation/jamoma-overview.maxpat" 				root/patches/extras/jamoma-overview.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/_Jamoma_Patcher_.maxpat"      	root/patches/templates/_Jamoma_Patcher_.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jalg.template.audio~.maxpat"  	root/patches/templates/jalg.template.audio~.maxpat`
