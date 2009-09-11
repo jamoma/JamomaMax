@@ -45,13 +45,10 @@ end
 
 
 ###################################################################
-# Build Jamoma
+# Get Revision Info
 ###################################################################
 
 git_desc = `git describe --tags --abbrev=4 --long`.split('-')
-#git_tag = git_desc.match(/(.*)-.*-.*/)
-#git_dirty_commits = git_desc.match(/.*-(.*)-.*/)
-#git_rev = git_desc.match(/.*-.*-(.*)/)
 git_tag = git_desc[0]
 git_dirty_commits = git_desc[git_desc.size()-2]
 git_rev = git_desc[git_desc.size()-1]
@@ -71,28 +68,9 @@ end
 puts ""
 
 
-
-#
-#puts "  Updating ReadMe for JamomaModular"
-#
-#file_path = "../Modules/Modular/Jamoma/ReadMe.rtf"
-#if FileTest.exist?(file_path)    
-#  f = File.open("#{file_path}", "r+")
-#  str = f.read
-#
-#  if(str.match(/PRODUCT_VERSION = #{version}/))
-#    #puts "version number is the same"
-#  else
-#    str.gsub!(/(PRODUCT_VERSION = \d?\.\d?.\d?)/, "PRODUCT_VERSION = #{version}")
-#    # we provide the build number as an argument to xcodebuild rather than modifying this file under version control
-#    #str.gsub!(/(PRODUCT_BUILD = \d*)/, "PRODUCT_BUILD = #{@buildnum}")
-#  end
-#  f.rewind
-#  f.write(str)
-#  f.truncate(f.pos)
-#  f.close
-#end
-
+###################################################################
+# Build Jamoma
+###################################################################
 
 quietly do
   ARGV = [configuration, clean, debug, git_tag, git_rev]
@@ -112,22 +90,3 @@ load "build.rb"
 
 Dir.chdir "#{glibdir}/../Modules/Modular"
 load "build.rb"
-
-
-#cd ..
-#JAMOMA_PATH=`pwd`
-#
-#cd $JAMOMA_PATH/Modules/Foundation
-#ruby build.rb $1 $2
-#
-#cd $JAMOMA_PATH/Modules/DSP
-#ruby build.rb $1 $2
-#
-#cd $JAMOMA_PATH/Modules/Graphics
-#ruby build.rb $1 $2
-#
-#cd $JAMOMA_PATH/Modules/Multicore
-#ruby build.rb $1 $2
-#
-#cd $JAMOMA_PATH/Modules/Modular
-#ruby build.rb $1 $2
