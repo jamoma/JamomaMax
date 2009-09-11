@@ -24,6 +24,16 @@ require 'support/wininit' if win32?
 ## SUB ROUTINES
 #######
 
+if (defined? quietly) == nil
+  def quietly
+    v = $VERBOSE
+    $VERBOSE = nil
+    yield
+    ensure
+    $VERBOSE = v
+  end
+end
+
 def create_logs
   # set up log files and ensure that the build_root is there
   `mkdir -p #{@log_root}` if !FileTest.exist?(@log_root)
