@@ -55,6 +55,16 @@ git_rev = git_desc[git_desc.size()-1]
 git_rev.sub!('g', '')
 git_rev.chop!
 
+version_digits = git_tag.split(/\./)
+version_maj = 0
+version_min = 0
+version_sub = 0
+version_mod = ''
+version_mod = version_digits[3] if version_digits.size() > 3
+version_sub = version_digits[2] if version_digits.size() > 2
+version_min = version_digits[1] if version_digits.size() > 1
+version_maj = version_digits[0] if version_digits.size() > 0
+
 puts ""
 puts "  Building Jamoma #{git_tag} (rev. #{git_rev})"
 puts ""
@@ -66,6 +76,26 @@ if git_dirty_commits != '0'
 	puts ""
 end
 puts ""
+
+# Update the Shared XCConfig
+file_path = "#{glibdir}/library/common/tt-max.xcconfig"
+if FileTest.exist?(file_path)
+  f = File.open("#{file_path}", "r+")
+  str = f.read
+
+  if (version_mod == '' || version_mod.match(/rc(.*)/))
+    str.sub!(/PRODUCT_VERSION = (.*)/, "PRODUCT_VERSION = #{version_maj}.#{version_min}.#{version_sub}")
+  else
+    str.sub!(/PRODUCT_VERSION = (.*)/, "PRODUCT_VERSION = #{version_maj}.#{version_min}.#{version_sub}#{version_mod}")
+  end
+  str.sub!(/SVNREV = (.*)/, "SVNREV = #{git_rev}")
+
+  f.rewind
+  f.write(str)
+  f.truncate(f.pos)
+  f.close
+end
+
 
 
 ###################################################################
