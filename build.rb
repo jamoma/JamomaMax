@@ -71,7 +71,7 @@ puts ""
 if git_dirty_commits != '0'
 	puts "  !!! WARNING !!!"
 	puts "	THIS BUILD IS COMING FROM A DIRTY REVISION   "
-	puts "	PLEASE USE THIS BUILD FOR PERSONAL USE ONLY  "
+	puts "	THIS BUILD IS FOR PERSONAL USE ONLY  "
 	puts "	DO NOT DISTRIBUTE THIS BUILD TO OTHERS       "
 	puts ""
 end
