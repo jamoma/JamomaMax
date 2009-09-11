@@ -32,7 +32,46 @@ end
 @path_multicore  = "#{@git_root}/Modules/Multicore"
 @path_graphics   = "#{@git_root}/Modules/Graphics"
 
-@version = "0.5"
+
+
+###################################################################
+# Get Revision Info -- BAD FORM, BUT THIS COPY/PASTED FROM build.rb
+###################################################################
+
+git_desc = `git describe --tags --abbrev=4 --long`.split('-')
+git_tag = git_desc[0]
+git_dirty_commits = git_desc[git_desc.size()-2]
+git_rev = git_desc[git_desc.size()-1]
+git_rev.sub!('g', '')
+git_rev.chop!
+
+version_digits = git_tag.split(/\./)
+version_maj = 0
+version_min = 0
+version_sub = 0
+version_mod = ''
+version_mod = version_digits[3] if version_digits.size() > 3
+version_sub = version_digits[2] if version_digits.size() > 2
+version_min = version_digits[1] if version_digits.size() > 1
+version_maj = version_digits[0] if version_digits.size() > 0
+
+puts ""
+puts "  Building Jamoma #{git_tag} (rev. #{git_rev})"
+puts ""
+if git_dirty_commits != '0'
+	puts "  !!! WARNING !!!"
+	puts "	THIS BUILD IS COMING FROM A DIRTY REVISION   "
+	puts "	THIS BUILD IS FOR PERSONAL USE ONLY  "
+	puts "	DO NOT DISTRIBUTE THIS BUILD TO OTHERS       "
+	puts ""
+end
+puts ""
+
+if version_mod == '' || version_mod.match(/rc(.*)/)
+  @version = "#{version_maj}.#{version_min}#{'.' + version_sub if version_sub.to_i > 0}"
+else
+  @version = "#{version_maj}.#{version_min}#{'.' + version_sub if version_sub.to_i > 0}-#{version_mod}"
+end
 
 
 ###################################################################
@@ -275,8 +314,14 @@ else
   #cmd("mv \"#{@git_root}/Installers/Jamoma.pkg.zip\" \"#{@git_root}/Installers/Jamoma-0.4.6-Mac.pkg.zip\"")
 
   puts "  Creating Disk Image..."
-  cmd("rm -rfv \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
-  cmd("hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
+  if version_mod == ''
+    cmd("rm -rfv \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
+    cmd("hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
+  else
+    cmd("rm -rfv \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"")
+    cmd("hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"")
+  end
+  
 
   puts "  All done!"
 
