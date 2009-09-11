@@ -1,7 +1,3 @@
-#!/usr/bin/env ruby
-# not using the version with warnings because rosc posts a lot of annoying warnings...
-#/usr/bin/env ruby -wKU
-
 ###################################################################
 # Library of Ruby stuff for Jamoma
 ###################################################################
