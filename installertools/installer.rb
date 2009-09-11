@@ -314,12 +314,12 @@ else
   #cmd("mv \"#{@git_root}/Installers/Jamoma.pkg.zip\" \"#{@git_root}/Installers/Jamoma-0.4.6-Mac.pkg.zip\"")
 
   puts "  Creating Disk Image..."
-  if version_mod == ''
+  if version_mod.match(/rc(.*)/)
+    cmd("rm -rfv \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"")
+    cmd("hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-#{version_mod}-Mac.dmg\"")
+  else
     cmd("rm -rfv \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
     cmd("hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
-  else
-    cmd("rm -rfv \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"")
-    cmd("hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"")
   end
   
 
