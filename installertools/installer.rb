@@ -128,6 +128,9 @@ end
 ###################################################################
 # here is where we actually build the installer
 ###################################################################
+  puts " "  
+  puts "  Version string is set to Version #{@version}"
+  puts " "
 
 if win32?
   
@@ -197,6 +200,14 @@ if win32?
   `rm -rf  "#{@c74}/Jamoma/library/third-party/WinXP/support"`
   `rm -rf  "#{@c74}/Jamoma/support"`
 
+ puts " Setting Version Number in Wix Source"
+  f = File.open("main.wxs", "r+")
+  str = f.read
+  str.gsub!(/Version="(.*)"/, "Version=\"#{@version}\"")
+  f.rewind
+  f.write(str)
+  f.close
+
   puts " Building Package -- this could take a while..."
 
   puts " Making candle with paraffin"
@@ -215,12 +226,12 @@ if win32?
   f.close
  
   puts " Compiling Wix Sources..."
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo JamomaC74.wxs`
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo JamomaPatches.wxs`
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo JamomaSupport.wxs`
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo JamomaExtensions.wxs`
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo main.wxs`
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo ui.wxs` 
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo JamomaC74.wxs`
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo JamomaPatches.wxs`
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo JamomaSupport.wxs`
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo JamomaExtensions.wxs`
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo main.wxs`
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo ui.wxs` 
   
   puts " Now making the installer" 
   puts `../wix/light.exe /nologo /out Jamoma.msi main.wixobj JamomaC74.wixobj JamomaPatches.wixobj JamomaSupport.wixobj JamomaExtensions.wixobj ui.wixobj ../wix/wixui.wixlib -loc ../wix/WixUI_en-us.wxl`
@@ -231,9 +242,6 @@ else
   `mkdir -pv \"#{@installers}\"`  # need to make directory before the logs are created, and thus before cmd() is ready to be used
   create_logs  
   
-  puts " "  
-  puts "  Version string is set to Version #{@version}"
-  puts " "
   puts "  Creating installer directory structure @ #{@temp} ..."
   cmd("rm -rfv \"#{@temp}\"")                                            # remove an old temp dir if it exists
   cmd("mkdir -pv \"#{@temp}\"")                                         # now make a clean one, and build dir structure in it
