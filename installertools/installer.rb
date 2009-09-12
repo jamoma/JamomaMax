@@ -32,7 +32,46 @@ end
 @path_multicore  = "#{@git_root}/Modules/Multicore"
 @path_graphics   = "#{@git_root}/Modules/Graphics"
 
-@version = "0.5"
+
+
+###################################################################
+# Get Revision Info -- BAD FORM, BUT THIS COPY/PASTED FROM build.rb
+###################################################################
+
+git_desc = `git describe --tags --abbrev=4 --long`.split('-')
+git_tag = git_desc[0]
+git_dirty_commits = git_desc[git_desc.size()-2]
+git_rev = git_desc[git_desc.size()-1]
+git_rev.sub!('g', '')
+git_rev.chop!
+
+version_digits = git_tag.split(/\./)
+version_maj = 0
+version_min = 0
+version_sub = 0
+version_mod = ''
+version_mod = version_digits[3] if version_digits.size() > 3
+version_sub = version_digits[2] if version_digits.size() > 2
+version_min = version_digits[1] if version_digits.size() > 1
+version_maj = version_digits[0] if version_digits.size() > 0
+
+puts ""
+puts "  Building Jamoma #{git_tag} (rev. #{git_rev})"
+puts ""
+if git_dirty_commits != '0'
+	puts "  !!! WARNING !!!"
+	puts "	THIS BUILD IS COMING FROM A DIRTY REVISION   "
+	puts "	THIS BUILD IS FOR PERSONAL USE ONLY  "
+	puts "	DO NOT DISTRIBUTE THIS BUILD TO OTHERS       "
+	puts ""
+end
+puts ""
+
+if version_mod == '' || version_mod.match(/rc(.*)/)
+  @version = "#{version_maj}.#{version_min}#{'.' + version_sub if version_sub.to_i > 0}"
+else
+  @version = "#{version_maj}.#{version_min}#{'.' + version_sub if version_sub.to_i > 0}-#{version_mod}"
+end
 
 
 ###################################################################
@@ -89,6 +128,9 @@ end
 ###################################################################
 # here is where we actually build the installer
 ###################################################################
+  puts " "  
+  puts "  Version string is set to Version #{@version}"
+  puts " "
 
 if win32?
   
@@ -118,15 +160,16 @@ if win32?
   `mkdir "root/Common Files/Jamoma/Extensions"`
 
   puts " Copying the Jamoma folder --  this could take a while..."
-  `cp -r "#{@git_root}/Modules/Modular/Jamoma" 						"root/Cycling '74"`
+  `cp -r "#{@git_root}/Modules/Modular/Jamoma" 								"root/Cycling '74"`
 
   puts " Copying Jamoma Extensions"
-  `cp "#{@git_root}/Builds"/*.ttdll  							"root/Common Files/Jamoma/Extensions"`
+  `cp "#{@git_root}/Builds"/*.ttdll  										"root/Common Files/Jamoma/Extensions"`
 
   puts " Copying frameworks into the support folder"
-  `cp "#{@git_root}/Builds/JamomaFoundation.dll"  					root/support`
-  `cp "#{@git_root}/Builds/JamomaDSP.dll"  						root/support`
-  `cp "#{@git_root}/Builds/JamomaModular.dll"  						root/support`
+  `cp "#{@git_root}/Builds/JamomaFoundation.dll"  							root/support`
+  `cp "#{@git_root}/Builds/JamomaDSP.dll"  									root/support`
+  `cp "#{@git_root}/Builds/JamomaModular.dll"  								root/support`
+  `cp "#{@git_root}/Modules/DSP/library/portaudio/Release/PortAudio.dll"	root/support`
 
   puts " Copying externals "
   `mkdir "#{@c74}/Jamoma/library/externals"`
@@ -134,9 +177,9 @@ if win32?
 	
   puts " Moving things around : loader, templates, etc..."
   `mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll				root/support`
-  `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe" 				"#{@c74}/extensions/jcom.loader.mxe"`
-  `cp "#{@c74}/Jamoma/support"/*.maxdefaults   						"#{@c74}/default-settings"`
-  `cp "#{@c74}/Jamoma/support"/*.maxdefines    						"#{@c74}/default-definitions"`
+  `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe" 					"#{@c74}/extensions/jcom.loader.mxe"`
+  `cp "#{@c74}/Jamoma/support"/*.maxdefaults   								"#{@c74}/default-settings"`
+  `cp "#{@c74}/Jamoma/support"/*.maxdefines    								"#{@c74}/default-definitions"`
   `cp "#{@c74}/Jamoma/documentation/jamoma-overview.maxpat" 				root/patches/extras/jamoma-overview.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/_Jamoma_Patcher_.maxpat"      	root/patches/templates/_Jamoma_Patcher_.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jalg.template.audio~.maxpat"  	root/patches/templates/jalg.template.audio~.maxpat`
@@ -157,6 +200,14 @@ if win32?
   `rm -rf  "#{@c74}/Jamoma/library/third-party/WinXP/support"`
   `rm -rf  "#{@c74}/Jamoma/support"`
 
+ puts " Setting Version Number in Wix Source"
+  f = File.open("main.wxs", "r+")
+  str = f.read
+  str.gsub!(/Version="(.*)"/, "Version=\"#{@version}\"")
+  f.rewind
+  f.write(str)
+  f.close
+
   puts " Building Package -- this could take a while..."
 
   puts " Making candle with paraffin"
@@ -175,12 +226,12 @@ if win32?
   f.close
  
   puts " Compiling Wix Sources..."
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo JamomaC74.wxs`
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo JamomaPatches.wxs`
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo JamomaSupport.wxs`
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo JamomaExtensions.wxs`
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo main.wxs`
-  `../wix/candle.exe -dvar.ProductVersion="0.5" -dvar.ProductName="Jamoma 0.5" /nologo ui.wxs` 
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo JamomaC74.wxs`
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo JamomaPatches.wxs`
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo JamomaSupport.wxs`
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo JamomaExtensions.wxs`
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo main.wxs`
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo ui.wxs` 
   
   puts " Now making the installer" 
   puts `../wix/light.exe /nologo /out Jamoma.msi main.wixobj JamomaC74.wixobj JamomaPatches.wixobj JamomaSupport.wixobj JamomaExtensions.wixobj ui.wixobj ../wix/wixui.wixlib -loc ../wix/WixUI_en-us.wxl`
@@ -191,9 +242,6 @@ else
   `mkdir -pv \"#{@installers}\"`  # need to make directory before the logs are created, and thus before cmd() is ready to be used
   create_logs  
   
-  puts " "  
-  puts "  Version string is set to Version #{@version}"
-  puts " "
   puts "  Creating installer directory structure @ #{@temp} ..."
   cmd("rm -rfv \"#{@temp}\"")                                            # remove an old temp dir if it exists
   cmd("mkdir -pv \"#{@temp}\"")                                         # now make a clean one, and build dir structure in it
@@ -277,8 +325,14 @@ else
   #cmd("mv \"#{@git_root}/Installers/Jamoma.pkg.zip\" \"#{@git_root}/Installers/Jamoma-0.4.6-Mac.pkg.zip\"")
 
   puts "  Creating Disk Image..."
-  cmd("rm -rfv \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
-  cmd("hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
+  if version_mod.match(/rc(.*)/)
+    cmd("rm -rfv \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"")
+    cmd("hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-#{version_mod}-Mac.dmg\"")
+  else
+    cmd("rm -rfv \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
+    cmd("hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
+  end
+  
 
   puts "  All done!"
 

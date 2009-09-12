@@ -36,7 +36,7 @@
     </Directory>
 
 
-    <Feature Id='Complete' Title='Jamoma 0.5' Level='1' Description='Jamoma 0.5 for Max 5'>
+    <Feature Id='Complete' Title='Jamoma' Level='1' Description='Jamoma for Max 5'>
         <ComponentGroupRef Id='group_JamomaC74'/>
         <ComponentGroupRef Id='group_JamomaPatches'/>
         <ComponentGroupRef Id='group_JamomaSupport'/>

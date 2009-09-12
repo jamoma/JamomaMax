@@ -1,7 +1,3 @@
-#!/usr/bin/env ruby
-# not using the version with warnings because rosc posts a lot of annoying warnings...
-#/usr/bin/env ruby -wKU
-
 ###################################################################
 # Library of Ruby stuff for Jamoma
 ###################################################################
@@ -23,6 +19,16 @@ require 'support/wininit' if win32?
 #######
 ## SUB ROUTINES
 #######
+
+if (defined? quietly) == nil
+  def quietly
+    v = $VERBOSE
+    $VERBOSE = nil
+    yield
+    ensure
+    $VERBOSE = v
+  end
+end
 
 def create_logs
   # set up log files and ensure that the build_root is there
