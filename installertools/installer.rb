@@ -132,33 +132,6 @@ end
   puts "  Version string is set to Version #{@version}"
   puts " "
 
-
-  # ReadMe
-  puts "Updating ReadMe..."
-  `cp #{@git_root}/Tools/installertools/ReadMe.Template.rtf #{@git_root}/Tools/installertools/ReadMe.rtf`
-  file_path = "#{@git_root}/Tools/installertools/ReadMe.rtf"
-  if FileTest.exist?(file_path)
-    f = File.open("#{file_path}", "r+")
-    str = f.read
-
-    if (version_mod != '')
-      str.sub!(/\\cf2 Version (.*)\n/, "\\cf2 Version #{version_maj}.#{version_min}.#{version_sub} #{version_mod} (#{git_rev})\n")
-    else
-      str.sub!(/\\cf2 Version (.*)\n/, "\\cf2 Version #{version_maj}.#{version_min}.#{version_sub} (#{git_rev})\n")
-    end
-
-    date = Date.today
-    str.sub!(/\\u8232 (.*)\\/, "\\u8232 #{date.strftime("%d %B %Y")}\\")  
-
-    f.rewind
-    f.write(str)
-    f.truncate(f.pos)
-    f.close
-  end
-
-
-
-
 if win32?
   
   Dir.chdir("#{@git_root}/Tools/installertools/Windows")
@@ -172,9 +145,6 @@ if win32?
   puts  " Creating installer directory structure..."
   `mkdir root`
   `mkdir "root/Cycling '74"`
-  `mkdir "root/Cycling '74/max-startup"`
-#  `mkdir "root/Cycling '74/java"`
-#  `mkdir "root/Cycling '74/java/classes"`
   `mkdir root/patches`
   `mkdir root/patches/extras`
   `mkdir root/patches/templates`
@@ -218,8 +188,8 @@ if win32?
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/layout.xml"                   	root/patches/templates/layout.xml`
 
   puts " Copying readme, license, etc...."
-  `cp "#{@git_root}/Tools/installertools/GNU-LGPL.rtf" 							root/License.rtf`
-  `cp "#{@git_root}/Tools/installertools/ReadMe.rtf"   							root/ReadMe.rtf`
+  `cp "#{@c74}/Jamoma/GNU-LGPL.rtf" 							root/License.rtf`
+  `cp "#{@c74}/Jamoma/ReadMe.rtf"   							root/ReadMe.rtf`
 
   puts " Removing files that are not needed (.zips, mac, externs, etc)..."
   `rm -rf  "#{@c74}/Jamoma/library/third-party/Mac"`
@@ -335,10 +305,10 @@ else
 #  cmd("cp \"#{@c74}/Jamoma/modules/control/cueManager/java-classes/CueManager.class\" \"#{@c74}/java/classes/cueManager\"") 
 
   puts "  Copying readme, license, etc...."
-  cmd("cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"   \"#{@installers}/resources\"")
-  cmd("cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"   \"#{@installers}/Jamoma\"")
-  cmd("cp \"#{@git_root}/Tools/installertools/GNU-LGPL.rtf\" \"#{@installers}/resources/License.rtf\"")
-  cmd("cp \"#{@git_root}/Tools/installertools/GNU-LGPL.rtf\" \"#{@installers}/Jamoma/License.rtf\"")
+  cmd("cp \"#{@c74}/Jamoma/ReadMe.rtf\"   \"#{@installers}/resources\"")
+  cmd("cp \"#{@c74}/Jamoma/ReadMe.rtf\"   \"#{@installers}/Jamoma\"")
+  cmd("cp \"#{@c74}/Jamoma/GNU-LGPL.rtf\" \"#{@installers}/resources/License.rtf\"")
+  cmd("cp \"#{@c74}/Jamoma/GNU-LGPL.rtf\" \"#{@installers}/Jamoma/License.rtf\"")
   cmd("cp \"Uninstall.command\"           \"#{@installers}/Jamoma/Uninstall.command\"")
 
   puts "  Building Package -- this could take a while..."
