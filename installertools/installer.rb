@@ -145,9 +145,6 @@ if win32?
   puts  " Creating installer directory structure..."
   `mkdir root`
   `mkdir "root/Cycling '74"`
-  `mkdir "root/Cycling '74/max-startup"`
-#  `mkdir "root/Cycling '74/java"`
-#  `mkdir "root/Cycling '74/java/classes"`
   `mkdir root/patches`
   `mkdir root/patches/extras`
   `mkdir root/patches/templates`
