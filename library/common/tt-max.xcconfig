@@ -10,7 +10,7 @@
 // Name & Version
 PRODUCT_NAME = $(PROJECT_NAME)
 PRODUCT_VERSION = 0.5.0
-SVNREV = deadbeef
+SVNREV = 9d5c
 
 
 // Paths
@@ -39,7 +39,7 @@ INFOPLIST_FILE = $(SRCROOT)/../../../../../Tools/library/common/Info.plist
 ARCHS = i386
 SDKROOT = /Developer/SDKs/MacOSX10.5.sdk
 SDKROOT[arch=i386] = /Developer/SDKs/MacOSX10.4u.sdk
-SDKROOT[arch=x86_64] = /Developer/SDKs/MacOSX10.6.sdk
+SDKROOT[arch=x86_64] = /Developer/SDKs/MacOSX10.5.sdk
 GCC_VERSION[arch=i386] = 4.0
 GCC_VERSION[arch=x86_64] = 4.2
 MACOSX_DEPLOYMENT_TARGET = 10.4
