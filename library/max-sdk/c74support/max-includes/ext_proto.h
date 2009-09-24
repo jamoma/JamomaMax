@@ -1009,6 +1009,17 @@ void setclock_getftime(t_object *s, double *time);
 
 
 // real-time
+
+/**
+	While most Max/MSP timing references "logical" time derived from Max's millisecond scheduler, 
+	time values produced by the systimer_gettime() are referenced from the CPU clock and can be used 
+	to time real world events with microsecond precision.
+	
+	The standard 'cpuclock' external in Max is a simple wrapper around this function.
+	
+	@ingroup	clocks
+	@return		Returns the current real-world time.
+*/
 double systimer_gettime(void);
 
 

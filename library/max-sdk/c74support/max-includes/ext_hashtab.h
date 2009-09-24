@@ -285,10 +285,11 @@ t_max_err hashtab_methodall(t_hashtab *x, t_symbol *s, ...);
 					It will pass both a pointer to the item in the list, and any argument that you
 					provide.  The following example shows a function that could be called by hashtab_funall().
 	@code
-	void myFun(t_object *myObj, void *myArg)
+	void myFun(t_hashtab_entry *e, void *myArg)
 	{
-		// do something with myObj and myArg here
-		// myObj is the item in the linklist
+		if (e->key && e->value) {
+			// do something with e->key, e->value, and myArg here as appropriate
+		}
 	}
 	@endcode
 */

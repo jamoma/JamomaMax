@@ -34,18 +34,18 @@ typedef struct _jpopupmenu	t_jpopupmenu;	///< An instance of a pop-up menu.					
 #endif
 
 
-// pre-defined colors
+// pre-defined colors -- internal use only -- not exported from the kernel
 
-extern t_jrgb s_jrgb_white;		///< White		@ingroup color
-extern t_jrgb s_jrgb_black;		///< Black		@ingroup color
-extern t_jrgb s_jrgb_red;		///< Red		@ingroup color
-extern t_jrgb s_jrgb_green;		///< Green		@ingroup color
-extern t_jrgb s_jrgb_blue;		///< Blue		@ingroup color
-extern t_jrgb s_jrgb_yellow;	///< Yellow		@ingroup color
-extern t_jrgb s_jrgb_cyan;		///< Cyan		@ingroup color
-extern t_jrgb s_jrgb_magenta;	///< Magenta	@ingroup color
-extern t_jrgb s_jrgb_gray;		///< Gray		@ingroup color
-extern t_jrgb s_jrgb_boxgray;	///< Box Gray	@ingroup color
+extern t_jrgb s_jrgb_white;		// White   
+extern t_jrgb s_jrgb_black;		// Black   
+extern t_jrgb s_jrgb_red;		// Red	   
+extern t_jrgb s_jrgb_green;		// Green   
+extern t_jrgb s_jrgb_blue;		// Blue	   
+extern t_jrgb s_jrgb_yellow;	// Yellow  
+extern t_jrgb s_jrgb_cyan;		// Cyan	   
+extern t_jrgb s_jrgb_magenta;	// Magenta 
+extern t_jrgb s_jrgb_gray;		// Gray	   
+extern t_jrgb s_jrgb_boxgray;	// Box Gray
 
 /**	Determine the coordinate of the bottom of a rect.
 	@ingroup	jgraphics	*/
@@ -66,6 +66,9 @@ extern t_jrgb s_jrgb_boxgray;	///< Box Gray	@ingroup color
 
 /** Utility macro to return the value of half of Pi.	@ingroup jgraphics */
 #define JGRAPHICS_PIOVER2  (0.5 * 3.1415926535897932384626433832795028842)
+
+/** Utility macro to return the 270º Case.				@ingroup jgraphics */
+#define JGRAPHICS_3PIOVER2	((2.0 * JGRAPHICS_PI) / 3.0)
 
 /** Utility for rounding a double to an int.
 	@ingroup jgraphics 
@@ -174,6 +177,17 @@ t_jsurface* jgraphics_image_surface_create_from_filedata(const void *data, unsig
 	@endcode	*/
 t_jsurface* jgraphics_image_surface_create_from_resource(const void* moduleRef, const char *resname);
 
+/**	Low-level routine to access an object's resource data.
+	@ingroup	jsurface
+	@param	moduleRef	A pointer to your external's module, which is passed to your external's main() function when the class is loaded.
+	@param	resname		Base name of the resource data (without an extension)
+	@param	extcount	Count of possible extensions (ignored on Windows)
+	@param	exts		Array of symbol atoms containing possible filename extensions (ignored on Windows)
+	@param	data		Returned resource data assigned to a pointer you supply
+	@param	datasize	Size of the data returned
+	@remark				You are responsible for freeing any data returned in the data pointer
+	@return		A Max error code.	*/
+t_max_err jgraphics_get_resource_data(const void *moduleRef, const char *resname, long extcount, t_atom *exts, void **data, unsigned long *datasize);
 
 /**	Create a reference to an existing surface.
 	Use jgraphics_surface_destroy() to release your reference to the surface when you are done.
@@ -599,7 +613,7 @@ void		jgraphics_rectangle(t_jgraphics *g,
 								double width, double height);
 
 
-/** Add a closed oval path in the context.
+/** Deprecated -- do not use.  Adds a closed oval path in the context, however, it does not scale appropriately.
 	@ingroup		jgraphics
 	@param	g		The graphics context.
 	@param	x		The horizontal origin.
@@ -1099,7 +1113,17 @@ t_jpattern*	jgraphics_pattern_create_rgba(double red,
 t_jpattern*	jgraphics_pattern_create_for_surface(t_jsurface *surface); 
 
 t_jpattern* jgraphics_pattern_create_linear(double x0, double y0, double x1, double y1);
+
+/*
+	cx0 : x coordinate for the center of the start circle
+	cy0 : y coordinate for the center of the start circle
+	radius0 : radius of the start circle
+	cx1 : x coordinate for the center of the end circle
+	cy1 : y coordinate for the center of the end circle
+	radius1 : radius of the end circle
+*/
 t_jpattern* jgraphics_pattern_create_radial(double cx0, double cy0, double radius0, double cx1, double cy1, double radius1);
+
 void jgraphics_pattern_add_color_stop_rgba(t_jpattern* pattern, double offset, double red, double green, double blue, double alpha); 
 
 t_jpattern *jgraphics_pattern_reference(t_jpattern *pattern);
@@ -1222,6 +1246,7 @@ void		jgraphics_translate_source_rgba(t_jgraphics *g,
 											double blueoffset,
 											double alphaoffset);
 
+// example use of this function is in the gswitch object
 void		jgraphics_set_dash(t_jgraphics *g,		
 							   double *dashes, 
 							   int numdashes,
@@ -1275,6 +1300,11 @@ int	jgraphics_path_intersects_line(t_jgraphics *g, double x1, double y1, double 
 
 // various utilities
 int jgraphics_ptinrect(t_pt pt, t_rect rect); 
+
+/*
+	Note that the functions jgraphics_rectangle_rounded() and jgraphics_ptinroundedrect()
+	need different size arguments as ovalsize and ovalwidth.
+*/
 int jgraphics_ptinroundedrect(t_pt pt, t_rect rect, double ovalwidth, double ovalheight); 
 
 // get extents of current path in device coordinates (after transform matrix)
@@ -1429,7 +1459,9 @@ int				jpopupmenu_popup_nearbox(t_jpopupmenu *menu,
 
 
 // unused by any C74 code
-void jmouse_setcursor_surface(t_object *patcherview, t_object *box, t_jsurface *surface, int xHotSpot, int yHotSpot);	// you can draw to a surface and then turn that into a cursor
+// you can draw to a surface and then turn that into a cursor
+// only works with 16 x 16 surfaces
+void jmouse_setcursor_surface(t_object *patcherview, t_object *box, t_jsurface *surface, int xHotSpot, int yHotSpot);	
 
 
 // Unused by any C74 code
@@ -1637,6 +1669,9 @@ t_jgraphics* jbox_start_layer(t_object *b, t_object *view, t_symbol *name, doubl
 t_max_err jbox_end_layer(t_object *b, t_object *view, t_symbol *name);
 
 /**	Paint a layer at a given position.
+	Note that the current color alpha value is used when painting layers to allow you to blend layers.  
+	The same is also true for jgraphics_image_surface_draw() and jgraphics_image_surface_draw_fast().
+
 	@ingroup		boxlayer
 	@param	b		The object/box to be painted.
 	@param	view	The patcherview for the object which should be painted, or NULL for all patcherviews.

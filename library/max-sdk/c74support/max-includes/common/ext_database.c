@@ -15,7 +15,7 @@
 //#define DATABASE_DEBUG
 
 
-t_max_err db_open(t_symbol *dbname, const char *filename, t_database **db)
+t_max_err db_open(t_symbol *dbname, const char *fullpath, t_database **db)
 {
 	long	ac=0;
 	t_atom	av[6];
@@ -23,14 +23,36 @@ t_max_err db_open(t_symbol *dbname, const char *filename, t_database **db)
 	if (*db)
 		object_free(*db);
 	
-	if (filename) {
+	if (fullpath) {
+		char	coercedpath[MAX_PATH_CHARS];
+		short	err;
+		char	dbpath[MAX_PATH_CHARS];
+#ifdef MAC_VERSION
+		char	*temppath;
+#endif
+
+		err = path_nameconform((char*)fullpath, coercedpath, PATH_STYLE_NATIVE_PLAT, PATH_TYPE_ABSOLUTE);
+		if (err)
+			strncpy_zero(coercedpath, fullpath, MAX_PATH_CHARS);
+		
+#ifdef MAC_VERSION
+		temppath = strchr(coercedpath, ':');
+		*temppath = '\0';
+		temppath += 1;
+		
+		// at this point temppath points to the path after the volume, and coercedpath has the volume
+		snprintf(dbpath, MAX_PATH_CHARS, "/Volumes/%s%s", coercedpath, temppath);
+#else // WIN_VERSION
+		strncpy_zero(dbpath, coercedpath, MAX_PATH_CHARS);
+#endif
+		
 		atom_setsym(av+ac, gensym("@rambased"));
 		ac++;
 		atom_setlong(av+ac, 0);
 		ac++;
 		atom_setsym(av+ac, gensym("@filename"));
 		ac++;
-		atom_setsym(av+ac, gensym((char*)filename));
+		atom_setsym(av+ac, gensym(dbpath));
 		ac++;
 	}
 	atom_setsym(av+ac, gensym("@db"));
@@ -147,7 +169,13 @@ t_max_err db_transaction_flush(t_database *db)
 
 t_max_err db_view_create(t_database *db, const char *sql, t_db_view **dbview)
 {
-	*dbview = (t_db_view *)object_method(db, gensym("createview"), gensym((char*)sql));
+	*dbview = NULL;
+	
+	if(sql && sql[0])
+		*dbview = (t_db_view *)object_method(db, gensym("createview"), gensym((char*)sql));
+	else
+		*dbview = (t_db_view *)object_method(db, gensym("createview"), NULL);
+		
 	if (!*dbview)
 		return MAX_ERR_GENERIC;
 
@@ -234,6 +262,16 @@ long db_result_long(t_db_result *result, long recordindex, long fieldindex)
 	if (c)
 		sscanf(c, "%ld", &l);
 	return l;
+}
+
+float db_result_float(t_db_result *result, long recordindex, long fieldindex)
+{
+	char*	c = (char *)object_method(result, _sym_valuebyindex, recordindex, fieldindex);
+	float	f = 0;
+	
+	if (c)
+		sscanf(c, "%f", &f);
+	return f;
 }
 
 unsigned long db_result_datetimeinseconds(t_db_result *result, long recordindex, long fieldindex)

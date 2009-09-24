@@ -88,7 +88,9 @@ enum {
 	JCOLUMN_TEXT_FLOAT = 256,
 	JCOLUMN_TEXT_INT = 512,
 	JCOLUMN_TEXT_CANTEDIT = 1024,
-	JCOLUMN_TEXT_FONTSIZE = 2048
+	JCOLUMN_TEXT_FONTSIZE = 2048,
+	// 4096 is JCOLUMN_DISABLED -- do not use
+	JCOLUMN_TEXT_FILTERED = 8192
 };
 
 enum {
@@ -523,6 +525,7 @@ void jdataview_cellpaste(t_object *dv);
 
 int jdataview_getcellcomponent(t_object *dv, int columnId, int rowNumber, long *options);
 int jdataview_getcellfiletypes(t_object *dv, t_symbol *colname, t_rowref rr, long *count, long **types, char *alloc);
+t_symbol *jdataview_getcellfilterval(t_object *dv, t_symbol *colname, t_rowref rr);
 void jdataview_redrawcell(t_object *dv, t_symbol *colname, t_rowref rr);
 void jdataview_begincellchange(t_object *dv, t_symbol *colname, t_rowref rr);
 void jdataview_endcellchange(t_object *dv, t_symbol *colname, t_rowref rr);

@@ -26,6 +26,9 @@
 
 /** Attribute flags
 	@ingroup attr
+	
+	@remark 	To create a readonly attribute, for example, 
+				you should pass ATTR_SET_OPAQUE or ATTR_SET_OPAQUE_USER as a flag when you create your attribute.
 */
 typedef enum {
 	ATTR_FLAGS_NONE =		0x0000000,	///< No flags
@@ -612,6 +615,9 @@ t_max_err object_findregisteredbyptr(t_symbol **name_space, t_symbol **s, void *
 				UI objects automatically register and attach to themselves in jbox_new().
 
 	@see		object_notify()
+	@see		object_detach()
+	@see		object_attach_byptr()
+	@see		object_register()
 */
 void *object_attach(t_symbol *name_space, t_symbol *s, void *x);
 
@@ -628,18 +634,64 @@ void *object_attach(t_symbol *name_space, t_symbol *s, void *x);
 						If you don't know the name of the registered object, the object_findregisteredbyptr() function can be used to determine it.
 	@param 	x			The client object to attach. Generally, this is the pointer to your Max object. 
 
-	@return 	This function returns the error code #MAX_ERR_NONE if successful, 
-	 			or one of the other error codes defined in #e_max_errorcodes if unsuccessful.
+	@return				This function returns the error code #MAX_ERR_NONE if successful, 
+						or one of the other error codes defined in #e_max_errorcodes if unsuccessful.
 */
 t_max_err object_detach(t_symbol *name_space, t_symbol *s, void *x);
 
 
+/**
+	Attaches a client to a registered object.  
+	Unlike object_attach(), the client is specified by providing a pointer to that object 
+	rather than the registered name of that object.
+ 
+	Once attached, the object will receive notifications sent from the registered object (via the object_notify() function), 
+	if it has a <tt>notify</tt> method defined and implemented.
+
+	@ingroup obj
+	@param	x					The attaching client object. Generally, this is the pointer to your Max object.
+	@param	registeredobject	A pointer to the registered object to which you wish to attach.
+	@return						A Max error code.
+	 
+	@remark						You should not attach an object to itself if the object is a UI object.
+								UI objects automatically register and attach to themselves in jbox_new().
+ 
+	@see		object_notify()
+	@see		object_detach()
+	@see		object_attach()
+	@see		object_register() 
+	@see		object_attach_byptr_register()
+*/
 t_max_err object_attach_byptr(void *x, void *registeredobject);
 
 
-t_max_err object_attach_byptr_register(void *x, void *registeredobject, t_symbol *reg_name_space);
+/**
+	A convenience function wrapping object_register() and object_attach_byptr().
+
+	@ingroup obj
+
+	@param	x					The attaching client object. Generally, this is the pointer to your Max object.
+	@param	object_to_attach	A pointer to the object to which you wish to registered and then to which to attach.
+	@param	reg_name_space		The namespace in which to register the object_to_attach.
+	@return						A Max error code.
+
+	@see		object_register() 
+	@see		object_attach_byptr()
+*/		
+t_max_err object_attach_byptr_register(void *x, void *object_to_attach, t_symbol *reg_name_space);
 
 
+/**
+	Detach a client from a registered object.
+ 
+	@ingroup	obj
+	@param		x					The attaching client object. Generally, this is the pointer to your Max object.
+	@param		registeredobject	The object from which to detach.
+	@return							A Max error code.
+
+	@see		object_detach()
+	@see		object_attach_byptr()
+*/
 t_max_err object_detach_byptr(void *x, void *registeredobject);
 
 
@@ -2054,7 +2106,10 @@ t_max_err class_sticky(t_class *x, t_symbol *stickyname, t_symbol *s, t_object *
 t_max_err class_sticky_clear(t_class *x, t_symbol *stickyname, t_symbol *s);
 
 
-
+// private -- internal use only (and perhaps not exported?)
+t_max_err object_retain(t_object *x);
+t_max_err object_release(t_object *x);		
+		
 typedef struct _method_object
 {
 	t_object	ob;
@@ -2072,13 +2127,15 @@ t_messlist *method_object_getmesslist(t_method_object *x);
 void method_object_setmesslist(t_method_object *x, t_messlist *m);
 
 t_method_object *class_getmethod_object(t_class *x, t_symbol *methodname);
+
+// these methods are private -- instance methods are not actually fully implemented at this time
 t_method_object *object_getmethod_object(t_object *x, t_symbol *methodname);
-
-
 
 t_max_err object_attrhash_apply(t_object *x, t_hashtab *attrhash);
 t_max_err object_sticky(t_object *x, t_symbol *stickyname, t_symbol *s, t_object *o);
 t_max_err object_sticky_clear(t_object *x, t_symbol *stickyname, t_symbol *s);
+
+// these methods are private -- instance methods are not actually fully implemented at this time
 t_max_err object_addmethod(t_object *x, method m, char *name, ...);
 t_max_err object_addmethod_object(t_object *x, t_object *mo);
 t_max_err object_deletemethod(t_object *x, t_symbol *methodsym);

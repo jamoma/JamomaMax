@@ -348,6 +348,7 @@ t_symbol *atom_getsymarg(short which, short argc, t_atom *argv);
 	drawline, userconnect, and enable. 
 	
 	This routine is for normal (non-user-interface objects).
+	It must be called prior to calling class_register() for your class.
 
 	@ingroup	msp
 	@param	c	The class to make dsp-ready.

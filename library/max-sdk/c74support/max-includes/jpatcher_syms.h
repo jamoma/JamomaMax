@@ -5,67 +5,6 @@ BEGIN_USING_C_LINKAGE
 
 void jpatcher_syms_init();
 
-// keycodes
-// keycodes can differ by platform. 
-// So, we set the s_thing of symbols at startup to the proper code for the given key
-extern t_symbol *ps_key_return;
-extern t_symbol *ps_key_enter;
-extern t_symbol *ps_key_spacebar;
-extern t_symbol *ps_key_leftarrow; 
-extern t_symbol *ps_key_rightarrow;
-extern t_symbol *ps_key_uparrow;
-extern t_symbol *ps_key_downarrow; 
-extern t_symbol *ps_key_home;	
-extern t_symbol *ps_key_end;		
-extern t_symbol *ps_key_pageup;	
-extern t_symbol *ps_key_pagedown;
-extern t_symbol *ps_key_backspace;
-extern t_symbol *ps_key_clear; 
-extern t_symbol *ps_key_delete;		
-extern t_symbol *ps_key_tab; 
-extern t_symbol *ps_key_insert;		
-extern t_symbol *ps_key_esc;	
-extern t_symbol *ps_key_backslash;
-extern t_symbol *ps_key_vertbar;
-extern t_symbol *ps_key_grave;
-extern t_symbol *ps_key_tilde;
-extern t_symbol *ps_key_optionspace; 
-extern t_symbol *ps_key_helpkey;
-
-// Make it easy to access the keycodes (with same syntax as before)
-// rbs -- CastPtrToLong avoids warnings when casting a void* to a long value. 
-// don't use it on something that is really a pointer! 
-// perhaps at some point we should move CastPtrToLong() somewhere else.
-#ifdef MAC_VERSION
-#define CastPtrToLong(x)		((long)(x))
-#endif
-#ifdef WIN_VERSION
-#define CastPtrToLong(x)		(PtrToLong(x))
-#endif
-#define JKEY_RETURN				(CastPtrToLong(ps_key_return->s_thing))
-#define JKEY_ENTER				(CastPtrToLong(ps_key_enter->s_thing))
-#define JKEY_SPACEBAR			(CastPtrToLong(ps_key_spacebar->s_thing))
-#define JKEY_BACKSPACE			(CastPtrToLong(ps_key_backspace->s_thing))
-#define JKEY_BACKSLASH			(CastPtrToLong(ps_key_backslash->s_thing))
-#define JKEY_VERTBAR				(CastPtrToLong(ps_key_vertbar->s_thing))
-#define JKEY_GRAVE				(CastPtrToLong(ps_key_grave->s_thing))
-#define JKEY_TILDE				(CastPtrToLong(ps_key_tilde->s_thing))
-#define JKEY_TAB					(CastPtrToLong(ps_key_tab->s_thing))
-#define JKEY_CLEAR				(CastPtrToLong(ps_key_clear->s_thing))
-#define JKEY_ESC					(CastPtrToLong(ps_key_esc->s_thing))
-#define JKEY_OPTIONSPACE			(CastPtrToLong(ps_key_optionspace->s_thing))
-#define JKEY_LEFTARROW			(CastPtrToLong(ps_key_leftarrow->s_thing))
-#define JKEY_RIGHTARROW			(CastPtrToLong(ps_key_rightarrow->s_thing))
-#define JKEY_UPARROW				(CastPtrToLong(ps_key_uparrow->s_thing))
-#define JKEY_DOWNARROW			(CastPtrToLong(ps_key_downarrow->s_thing))
-#define JKEY_HOME				(CastPtrToLong(ps_key_home->s_thing))
-#define JKEY_END					(CastPtrToLong(ps_key_end->s_thing))
-#define JKEY_PAGEUP				(CastPtrToLong(ps_key_pageup->s_thing))
-#define JKEY_PAGEDOWN			(CastPtrToLong(ps_key_pagedown->s_thing))
-#define JKEY_HELPKEY				(CastPtrToLong(ps_key_helpkey->s_thing))
-#define JKEY_DELETE				(CastPtrToLong(ps_key_delete->s_thing))
-#define JKEY_INSERT				(CastPtrToLong(ps_key_insert->s_thing))
-
 extern t_symbol *ps_patcher; 
 extern t_symbol *ps_jpatchline; 
 extern t_symbol *ps_jpatcher; 

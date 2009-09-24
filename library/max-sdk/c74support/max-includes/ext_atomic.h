@@ -6,6 +6,7 @@
 #ifdef MAC_VERSION
 
 #include <libkern/OSAtomic.h>
+typedef int t_int32_atomic;
 
 #define ATOMIC_INCREMENT(pv) OSAtomicIncrement32(pv)
 #define ATOMIC_DECREMENT(pv) OSAtomicDecrement32(pv)
@@ -13,6 +14,7 @@
 #else // WIN_VERSION
 
 #include <intrin.h>
+typedef volatile long t_int32_atomic;
 
 #pragma intrinsic (_InterlockedIncrement)
 #pragma intrinsic (_InterlockedDecrement)

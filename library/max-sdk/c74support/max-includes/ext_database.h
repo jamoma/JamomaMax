@@ -9,7 +9,6 @@
 
 #include "ext.h"
 #include "ext_obex.h"
-#include "ext_database.h"
 
 #ifdef WIN_VERSION
 #ifndef snprintf
@@ -42,17 +41,18 @@ BEGIN_USING_C_LINKAGE
 /**	Create an instance of a database.
 	@ingroup	database
 	@param		dbname		The name of the database.
-	@param		filename	If a database with this dbname is not already open,
+	@param		fullpath	If a database with this dbname is not already open,
 							this will specify a full path to the location where the database is stored on disk.
 							If NULL is passed for this argument, the database will reside in memory only.
+							The path should be formatted as a Max style path.
 	@param		db			The address of a #t_database pointer that will be set to point to the new database instance.
 							If the pointer is not NULL, then it will be treated as a pre-existing database instance 
 							and thus will be freed.
 	@return					An error code.		*/
-t_max_err db_open(t_symbol *dbname, const char *filename, t_database **db);
+t_max_err db_open(t_symbol *dbname, const char *fullpath, t_database **db);
 
 
-/**	Create an instance of a database.
+/**	Close an open database.
 	@ingroup	database
 	@param		db			The address of the #t_database pointer for your database instance.
 							The pointer will be freed and set NULL upon return.
@@ -240,7 +240,7 @@ char* db_result_fieldname(t_db_result *result, long fieldindex);
 	@param		result			The #t_db_result pointer for your query results.
 	@param		recordindex		The zero-based index number of the record (row) in the result.
 	@param		fieldindex		The zero-based index number of the field (column) in the result.
-	@return					A C-String with the content of the specified cell in the result.	*/
+	@return						A C-String with the content of the specified cell in the result.	*/
 char* db_result_string(t_db_result *result, long recordindex, long fieldindex);
 
 /**	Return a single value from a result according to its index and field coordinates.
@@ -248,8 +248,16 @@ char* db_result_string(t_db_result *result, long recordindex, long fieldindex);
 	@param		result			The #t_db_result pointer for your query results.
 	@param		recordindex		The zero-based index number of the record (row) in the result.
 	@param		fieldindex		The zero-based index number of the field (column) in the result.
-	@return					A C-String with the content of the specified cell in the result.	*/
+	@return						The content of the specified cell from the result scanned out to a long int.	*/
 long db_result_long(t_db_result *result, long recordindex, long fieldindex);
+
+/**	Return a single value from a result according to its index and field coordinates.
+	@ingroup	database
+	@param		result			The #t_db_result pointer for your query results.
+	@param		recordindex		The zero-based index number of the record (row) in the result.
+	@param		fieldindex		The zero-based index number of the field (column) in the result.
+	@return						The content of the specified cell from the result scanned out to a float.		*/
+float db_result_float(t_db_result *result, long recordindex, long fieldindex);
 
 /**	Return a single value from a result according to its index and field coordinates.
 	The value will be coerced from an expected datetime field into seconds.

@@ -343,7 +343,10 @@ short path_fileinfo(char *name, short path, void *info);
 
 short path_tempfolder();
 short path_createfolder(short path, char *name, short *newpath);
+
+// internal use only -- not exported -- use path_createfolder()
 short path_createnewfolder(short path, char *name, short *newpath);
+
 short path_copyfile(short srcpath, char *srcname, short dstpath, char *dstname);
 short path_copytotempfile(short srcpath, char *srcname, short *outpath, char *outname);
 short path_copyfolder(short srcpath, short dstpath, char *dstname, long recurse, short *newpath);
@@ -473,7 +476,7 @@ void *path_openfolder(short path);
 	@param	filetype	Contains the file type of the file type on return.
 	@param	name		Contains the file name of the next file on return.
 	@param	descend		Unused.
-	@return				Returns 0 if successful, and an error code if unsuccessful. 
+	@return				Returns non-zero if successful, and zero when there are no more files. 
 	@see				#e_max_path_folder_flags
 */
 short path_foldernextfile(void *xx, long *filetype, char *name, short descend);
@@ -597,11 +600,8 @@ short getfolder(short *vol);
 short open_dialog(char *name, short *volptr, long *typeptr, long *types, short ntypes);
 
 
-// TODO: Not documenting this right now -- this prototype differs from the documentation (taken from WEOFM)
-/*
+/**
 	Present the user with the standard save file dialog.
-	This function is convenient wrapper for using Mac OS Navigation 
-	Services or Standard File for saving files. 
 
 	The mapping of extensions to types is configured in the C74:/init/max-fileformats.txt file.
 	The standard types to use for Max files are ‘maxb’ for old-format binary files, 
@@ -614,16 +614,8 @@ short open_dialog(char *name, short *volptr, long *typeptr, long *types, short n
 
 	@param	path		If the user decides to save the file, the Path ID of the location chosen is returned here.
 
-	@param	format		The default Max file format for saving the file. If 
-						format is set to 2, the Normal binary mode will be 
-						selected. If format is 0, Text will be selected. When 
-						the user decides to save the file, the choice of file 
-						format is returned here. If you pass 0L for format 
-						instead of a pointer to a short, the choice for saving the 
-						file in binary or text formats is not presented to the 
-						user. This is appropriate when you always save your 
-						object’s files in a specialized format. format 1 was used 
-						in previous version of Max to save in "Old Format",which is no longer supported.
+	@param	binptr		Pass NULL for this parameter.  
+						This parameter was used in Max 4 to allow the choice of saving binary or text format patchers.
 	
 	@return				0 if the user choose to save the file.  
 						If the user cancelled, returns a non-zero value.
@@ -632,13 +624,11 @@ short open_dialog(char *name, short *volptr, long *typeptr, long *types, short n
 	@see saveasdialog_extended()
 	@see locatefile_extended()
 */
-short saveas_dialog(char *name, short *volptr, short *binptr);
+short saveas_dialog(char *filename, short *path, short *binptr);
 
 
 /**
 	Present the user with the standard save file dialog with your own list of file types.
-	This function is convenient wrapper for using Mac OS Navigation 
-	Services or Standard File for saving files. 
 
 	saveasdialog_extended() is similar to saveas_dialog(), but allows the 
 	additional feature of specifying a list of possible types. These will be 

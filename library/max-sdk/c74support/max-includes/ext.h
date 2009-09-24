@@ -1,7 +1,7 @@
 #ifndef _EXT_H_
 #define _EXT_H_
 
-#define C74_MAX_SDK_VERSION 0x0506
+#define C74_MAX_SDK_VERSION 0x0508
 
 #include "ext_prefix.h"	/* this header must always be first */
 

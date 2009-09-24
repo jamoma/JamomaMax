@@ -23,7 +23,9 @@
 	@param	b	The second value to compare.
 	@return		Returns the higher of a or b.
 */
+#ifndef MAX
 #define MAX(a,b) ((a)>(b)?(a):(b))
+#endif
 
 
 /**
@@ -34,7 +36,9 @@
 	@param	b	The second value to compare.
 	@return		Returns the lower of a or b.
 */
+#ifndef MIN
 #define MIN(a,b) ((a)<(b)?(a):(b))
+#endif
 
 
 /**

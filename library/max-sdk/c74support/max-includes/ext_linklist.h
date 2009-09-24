@@ -46,6 +46,7 @@ typedef struct _linklist
     #pragma pack()
 #endif
 
+#define LINKLIST_PRUNE_CHUCK	0x00000001L		// chucks object rather than deletes it in linklist_prune
 
 /**
 	Comparison function pointer type.

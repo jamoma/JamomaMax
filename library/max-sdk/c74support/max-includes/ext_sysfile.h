@@ -32,7 +32,8 @@ typedef enum {
 	TEXT_LB_MAC =				0x00000002L,	///< Use Macintosh line breaks
 	TEXT_LB_PC =				0x00000004L,	///< Use Windows line breaks
 	TEXT_LB_UNIX =				0x00000008L,	///< Use Unix line breaks
-	TEXT_ENCODING_USE_FILE =	0x00000100L		///< If this flag is not set then the encoding is forced to UTF8
+	TEXT_ENCODING_USE_FILE =	0x00000100L,	///< If this flag is not set then the encoding is forced to UTF8
+	TEXT_NULL_TERMINATE	=		0x00000200L		///< Terminate memory returned from sysfile_readtextfile() with a NULL character
 } e_max_sysfile_textflags;
 
 

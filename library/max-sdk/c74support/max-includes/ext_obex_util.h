@@ -2309,7 +2309,7 @@ void *object_new_parse(t_symbol *name_space, t_symbol *classname, char *parsestr
 void *object_new_binbuf(t_symbol *name_space, t_symbol *classname, void *buf);
 void *object_new_attrval(t_symbol *name_space, t_symbol *classname, t_symbol *objattrname, t_object *obj);
 void *object_new_objval(t_symbol *name_space, t_symbol *classname, t_object *obj);
-void *object_new_format(t_symbol *name_space, t_symbol *classname, char *fmt, ...);
+void *object_new_format(t_symbol *name_space, t_symbol *classname, char *fmt, ...);	// not used or tested in any Cycling '74 code
 
 
 // attr attr functions necessary due to offset attributes as singletons for the class 
