@@ -48,7 +48,7 @@ end
 # Get Revision Info
 ###################################################################
 
-git_desc = `git describe --tags --abbrev=4 --long`.split('-')
+git_desc = `git describe --tags --abbrev=5 --long`.split('-')
 git_tag = git_desc[0]
 git_dirty_commits = git_desc[git_desc.size()-2]
 git_rev = git_desc[git_desc.size()-1]
