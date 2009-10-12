@@ -11,6 +11,9 @@ function remove5 {
 }
 
 function doRemove {
+	echo -ne "- Jamoma Installer Receipt"
+	sudo rm -Rf "/Library/Receipts/Jamoma.pkg" && echo -ne "... done.\n"
+	
 	if [ -e "$C74Folder" ] ; then
 		echo -ne "- Jamoma Modular Folder ($C74Folder/Jamoma/)"
 		sudo rm -Rf "$C74Folder/Jamoma" && echo -ne "... done.\n"
