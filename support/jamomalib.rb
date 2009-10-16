@@ -5,7 +5,7 @@
 require 'open3'
 require 'fileutils'
 require 'pathname'
-require "support/platform"
+require '../support/platform'
 require 'rexml/document'
 include REXML
 
@@ -13,7 +13,7 @@ def win32?
   (Platform::OS == :unix && Platform::IMPL == :cygwin) || Platform::OS == :win32
 end
 
-require 'support/wininit' if win32?
+require '../support/wininit' if win32?
 
 
 #######
