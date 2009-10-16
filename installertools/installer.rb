@@ -9,7 +9,7 @@
 # First include the functions in the jamoma lib
 libdir = "."
 Dir.chdir libdir        # change to libdir so that requires work
-require "../library/jamomalib"   # C74 build library
+require "../support/jamomalib"   # C74 build library
 
 
 @git_root = "../.."	# this is the root of the Jamoma project repository
