@@ -16,6 +16,7 @@ if(ARGV.length < 1)
   puts "newModule.rb <required:newModuleName(no jmod. prefix)> <optional:moduleType{control(default), audio, spatialization, video, openGL}> <optional:path/to/newModuleParentFolder> "
   puts "examples:"
   puts "  ./newModule.rb tap.specialEffect~ audio /Users/tim/code/Jamoma/UserLib/Tap.Tools"
+  puts "  ./newModule.rb foo~ audio"
   puts "  ./newModule.rb randomThing"
   exit 0;
 end
