@@ -43,11 +43,12 @@ templateFolder = "#{glibdir}/../Modules/Modular/Jamoma/modules/#{moduleType}/#{t
 puts `mkdir -pv "#{moduleFolder}"`
 puts `cp -v "#{templateFolder}"/* "#{moduleFolder}"`
 
-puts `mv "#{moduleFolder}"/jalg.#{templateName}.maxpat  "#{moduleFolder}"/jalg.#{moduleName}.maxpat`
-puts `mv "#{moduleFolder}"/jmod.#{templateName}.maxpat  "#{moduleFolder}"/jmod.#{moduleName}.maxpat`
-puts `mv "#{moduleFolder}"/jmod.#{templateName}.maxhelp "#{moduleFolder}"/jmod.#{moduleName}.maxhelp`
-puts `mv "#{moduleFolder}"/jmod.#{templateName}.xml     "#{moduleFolder}"/jmod.#{moduleName}.xml`
-puts `mv "#{moduleFolder}"/jmod.#{templateName}.html    "#{moduleFolder}"/jmod.#{moduleName}.html`
+puts `mv "#{moduleFolder}"/jalg.#{templateName}.maxpat        "#{moduleFolder}"/jalg.#{moduleName}.maxpat`
+puts `mv "#{moduleFolder}"/jmod.#{templateName}.maxpat        "#{moduleFolder}"/jmod.#{moduleName}.maxpat`
+puts `mv "#{moduleFolder}"/jmod.#{templateName}.test.maxpat   "#{moduleFolder}"/jmod.#{moduleName}.test.maxpat`
+puts `mv "#{moduleFolder}"/jmod.#{templateName}.maxhelp       "#{moduleFolder}"/jmod.#{moduleName}.maxhelp`
+puts `mv "#{moduleFolder}"/jmod.#{templateName}.xml           "#{moduleFolder}"/jmod.#{moduleName}.xml`
+puts `mv "#{moduleFolder}"/jmod.#{templateName}.html          "#{moduleFolder}"/jmod.#{moduleName}.html`
 
 
 ###################################################################
@@ -69,6 +70,7 @@ end
 
 substituteStringsOnFile("#{moduleFolder}/jalg.#{moduleName}.maxpat",  "#{templateName}", "#{moduleName}")
 substituteStringsOnFile("#{moduleFolder}/jmod.#{moduleName}.maxpat",  "#{templateName}", "#{moduleName}")
+substituteStringsOnFile("#{moduleFolder}/jmod.#{moduleName}.test.maxpat",  "#{templateName}", "#{moduleName}")
 substituteStringsOnFile("#{moduleFolder}/jmod.#{moduleName}.maxhelp", "#{templateName}", "#{moduleName}")
 substituteStringsOnFile("#{moduleFolder}/jmod.#{moduleName}.xml",     "#{templateName}", "#{moduleName}")
 substituteStringsOnFile("#{moduleFolder}/jmod.#{moduleName}.html",    "#{templateName}", "#{moduleName}")
