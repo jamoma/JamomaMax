@@ -77,8 +77,10 @@ if git_dirty_commits != '0'
 end
 puts ""
 
-# Update the Shared XCConfig
+# Create the Shared XCConfig from the template we store in Git
 file_path = "#{glibdir}/library/common/tt-max.xcconfig"
+`cp "#{glibdir}/library/common/tt-max-template.xcconfig" "#{file_path}"`
+
 if FileTest.exist?(file_path)
   f = File.open("#{file_path}", "r+")
   str = f.read
