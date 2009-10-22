@@ -41,15 +41,15 @@ templateFolder = "#{glibdir}/../Modules/Modular/Jamoma/modules/#{moduleType}/#{t
 ###################################################################
 # COPY
 
-puts `mkdir -pv "#{moduleFolder}"`
-puts `cp -v "#{templateFolder}"/* "#{moduleFolder}"`
+`mkdir -pv "#{moduleFolder}"`
+`cp -v "#{templateFolder}"/* "#{moduleFolder}"`
 
-puts `mv "#{moduleFolder}"/jalg.#{templateName}.maxpat        "#{moduleFolder}"/jalg.#{moduleName}.maxpat`
-puts `mv "#{moduleFolder}"/jmod.#{templateName}.maxpat        "#{moduleFolder}"/jmod.#{moduleName}.maxpat`
-puts `mv "#{moduleFolder}"/jmod.#{templateName}.test.maxpat   "#{moduleFolder}"/jmod.#{moduleName}.test.maxpat`
-puts `mv "#{moduleFolder}"/jmod.#{templateName}.maxhelp       "#{moduleFolder}"/jmod.#{moduleName}.maxhelp`
-puts `mv "#{moduleFolder}"/jmod.#{templateName}.xml           "#{moduleFolder}"/jmod.#{moduleName}.xml`
-puts `mv "#{moduleFolder}"/jmod.#{templateName}.html          "#{moduleFolder}"/jmod.#{moduleName}.html`
+`mv "#{moduleFolder}"/jalg.#{templateName}.maxpat        "#{moduleFolder}"/jalg.#{moduleName}.maxpat`
+`mv "#{moduleFolder}"/jmod.#{templateName}.maxpat        "#{moduleFolder}"/jmod.#{moduleName}.maxpat`
+`mv "#{moduleFolder}"/jmod.#{templateName}.test.maxpat   "#{moduleFolder}"/jmod.#{moduleName}.test.maxpat`
+`mv "#{moduleFolder}"/jmod.#{templateName}.maxhelp       "#{moduleFolder}"/jmod.#{moduleName}.maxhelp`
+`mv "#{moduleFolder}"/jmod.#{templateName}.xml           "#{moduleFolder}"/jmod.#{moduleName}.xml`
+`mv "#{moduleFolder}"/jmod.#{templateName}.html          "#{moduleFolder}"/jmod.#{moduleName}.html`
 
 
 ###################################################################
