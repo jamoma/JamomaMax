@@ -11,10 +11,13 @@
 
 #include "ext.h"					// Max Header
 #include "ext_obex.h"				// Max Object Extensions (attributes) Header
+#include "z_dsp.h"
 
+typedef t_pxobject	MspObject;
 
 typedef t_class*	ClassPtr;
 typedef t_object*	ObjectPtr;
+typedef MspObject*	MspObjectPtr;
 typedef t_symbol*	SymbolPtr;
 typedef t_atom*		AtomPtr;
 typedef long		AtomCount;
