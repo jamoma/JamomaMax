@@ -4,7 +4,7 @@
 glibdir = "."
 Dir.chdir glibdir             # change to libdir so that requires work
 glibdir = Dir.pwd
-require "support/jamomalib"
+require "supports/jamomalib"
 
 
 ###################################################################
@@ -76,28 +76,6 @@ if git_dirty_commits != '0'
 	puts ""
 end
 puts ""
-
-# Create the Shared XCConfig from the template we store in Git
-file_path = "#{glibdir}/library/common/tt-max.xcconfig"
-`cp "#{glibdir}/library/common/tt-max-template.xcconfig" "#{file_path}"`
-
-if FileTest.exist?(file_path)
-  f = File.open("#{file_path}", "r+")
-  str = f.read
-
-  if (version_mod == '' || version_mod.match(/rc(.*)/))
-    str.sub!(/PRODUCT_VERSION = (.*)/, "PRODUCT_VERSION = #{version_maj}.#{version_min}.#{version_sub}")
-  else
-    str.sub!(/PRODUCT_VERSION = (.*)/, "PRODUCT_VERSION = #{version_maj}.#{version_min}.#{version_sub}#{version_mod}")
-  end
-  str.sub!(/SVNREV = (.*)/, "SVNREV = #{git_rev}")
-
-  f.rewind
-  f.write(str)
-  f.truncate(f.pos)
-  f.close
-end
-
 
 
 ###################################################################
