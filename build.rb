@@ -64,8 +64,8 @@ if(clean)
   # Mac
   else
 
-    # TODO : what to delete under Mac ?
-    cmd("rm -f *.mxo")
+    `rm -rf *.mxo`
+    # TODO : what else to delete under Mac ?
 
   end
 
