@@ -43,7 +43,33 @@ if(ARGV.length > 2)
   end
 end
 
+###################################################################
+# Clean the Build folder
+###################################################################
+if(clean)
 
+  puts " "
+  puts "  Cleaning Builds folder "
+  puts " "
+
+  Dir.chdir "#{glibdir}/../Builds"
+
+  # Windows
+  if win32?
+
+    `rm -f *.ttdll`
+    `rm -f *.dll`
+    `rm -f *.mxe`
+
+  # Mac
+  else
+
+    # TODO : what to delete under Mac ?
+    cmd("rm -f *.mxo")
+
+  end
+
+end
 ###################################################################
 # Get Revision Info
 ###################################################################
