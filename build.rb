@@ -83,7 +83,8 @@ puts ""
 ###################################################################
 
 quietly do
-  ARGV = [configuration, clean, debug, git_tag, git_rev]
+#  ARGV = [configuration, clean, debug, git_tag, git_rev]
+  ARGV = [configuration, clean, debug]
 end
 
 Dir.chdir "#{glibdir}/../Modules/Foundation"
