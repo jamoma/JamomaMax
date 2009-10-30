@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby -wKU
 
 `git checkout master`
-`cd ..; git submodule init;`
+`cd ..; git submodule update --init;`
 `cd ..; git submodule foreach git checkout master`
 `cd ..; git submodule foreach git pull`
 
