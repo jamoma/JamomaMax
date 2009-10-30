@@ -65,7 +65,7 @@ if(clean)
   else
 
     `rm -rf *.mxo`
-    # TODO : what else to delete under Mac ?
+    `rm -rf *.txt`
 
   end
 
