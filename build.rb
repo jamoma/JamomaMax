@@ -4,6 +4,9 @@
 glibdir = "."
 Dir.chdir glibdir             # change to libdir so that requires work
 glibdir = Dir.pwd
+
+$main_repository = true
+
 require "supports/jamomalib"
 
 
@@ -112,18 +115,18 @@ quietly do
 #  ARGV = [configuration, clean, debug, git_tag, git_rev]
   ARGV = [configuration, clean, debug]
 end
-
+                     
 Dir.chdir "#{glibdir}/../Modules/Foundation"
-load "build.rb"
-
+load "build.rb"      
+                     
 Dir.chdir "#{glibdir}/../Modules/DSP"
-load "build.rb"
-
+load "build.rb"      
+                     
 Dir.chdir "#{glibdir}/../Modules/Graphics"
-load "build.rb"
-
+load "build.rb"      
+                     
 Dir.chdir "#{glibdir}/../Modules/Multicore"
-load "build.rb"
-
+load "build.rb"      
+                     
 Dir.chdir "#{glibdir}/../Modules/Modular"
-load "build.rb"
+load "build.rb"      
