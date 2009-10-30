@@ -2,8 +2,8 @@
 
 `git checkout master`
 `cd ..; git submodule init;`
-`git submodule foreach git checkout master`
-`git submodule foreach git pull`
+`cd ..; git submodule foreach git checkout master`
+`cd ..; git submodule foreach git pull`
 
 `cd supports; git co master; git pull`
 
