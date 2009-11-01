@@ -3,9 +3,10 @@
 `git checkout master`
 `cd ..; git submodule init;`
 `cd ..; git submodule foreach git checkout master`
-`cd ..; git submodule foreach git pull`
+`cd ..; git submodule foreach git pull origin master`
 
-`cd supports; git co master; git pull`
+# duplicates the stuff above:
+#`cd supports; git checkout master; git pull origin master`
 
 def doUpdate name
   puts "UPDATING: #{name}"
