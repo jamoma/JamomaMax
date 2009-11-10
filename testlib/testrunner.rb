@@ -7,10 +7,10 @@
 require 'rosc/lib/osc'
 
 # First include the functions in the jamoma lib
-libdir = ".."
+libdir = "../supports"
 Dir.chdir libdir        # change to libdir so that requires work
-require "support/jamomalib"   # C74 build library
-
+require "jamomalib"   # C74 build library
+Dir.chdir "#{libdir}/.."
 
 puts "Jamoma Automated Test Runner"
 
