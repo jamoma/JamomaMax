@@ -1,21 +1,64 @@
 #!/usr/bin/env ruby -wKU
 
-`git checkout master`
-`cd ..; git submodule update --init;`
-`cd ..; git submodule foreach git checkout master`
-`cd ..; git submodule foreach git pull origin master`
+@glibdir = "."
+Dir.chdir @glibdir             # change to libdir so that requires work
+@glibdir = Dir.pwd
 
-# duplicates the stuff above:
-#`cd supports; git checkout master; git pull origin master`
+@branch = ""
+@remote = `git remote`
+@remote.strip!
+
+# argument specifies branch (or meta-branch), otherwise default as below
+if ARGV.length > 0
+  @branch = ARGV[0]
+else
+  result = `git branch`
+  result.each { |line| 
+    if line.match(/\*.*/)
+      line.gsub!(/\*/, " ")
+      @branch = line.strip
+    end
+  }
+end
+
+puts "JAMOMA UPDATING TO branch: #{@branch}  FROM remote: #{@remote}"  
+
+
+#################################################################
 
 def doUpdate name
   puts "UPDATING: #{name}"
-  puts `cd ../Modules/#{name}; ruby update.rb`
+  Dir.chdir "#{@glibdir}/../Modules/#{name}"
+  
+  result = `git checkout #{@branch}`
+  if result.match(/error.*/)
+    result = `git checkout --track remotes/#{@remote}/#{@branch}`
+  end
+
+  puts `git pull #{@remote} #{@branch}`
+  puts `git submodule update --init;`
+  puts `ruby update.rb`
 end
 
 
+#################################################################
 
-#TODO: checkout the correct branch here, based on an arg!
+puts "UPDATING MAIN REPOSITORY..."
+Dir.chdir "#{@glibdir}/.." 
+
+result = `git checkout #{@branch}`
+if result.match(/error.*/)
+  result = `git checkout --track remotes/#{@remote}/#{@branch}`
+end
+
+puts "PULLING..."
+puts `git pull #{@remote} #{@branch}`
+puts "SUBMODULE INIT/UPDATE"
+puts `git submodule update --init;`
+
+
+#################################################################
+
 doUpdate "Foundation"
 doUpdate "DSP"
 doUpdate "Graphics" 
