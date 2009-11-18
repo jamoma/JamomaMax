@@ -254,8 +254,8 @@ quit = OSC::Message.new('/kill');
 @oscSender.send(quit, 0, @host, @sendPort)
 sleep 5
 
-puts "  Clean up: removing jcom.testmanager.maxpat from the Max Startup folder"
-`rm "#{@maxfolder}/Cycling '74/max-startup/jcom.test.manager.maxpat"`
+puts "  Clean up: removing test.manager.maxpat from the Max Startup folder"
+`rm "#{@maxfolder}/Cycling '74/max-startup/test.manager.maxpat"`
 
 puts ""
 puts "  RESULTS:"
