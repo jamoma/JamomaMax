@@ -347,5 +347,3 @@ else
 
 
 end
-
-exit 0
