@@ -191,6 +191,13 @@ if win32?
   `cp "#{@git_root}/Builds/JamomaModular.dll"  						root/support`
   `cp "#{@git_root}/Modules/DSP/library/portaudio/Release/PortAudio.dll"		root/support`
 
+  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libcairo-2.dll"		root/support`
+  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libpng12-0.dll"		root/support`
+  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libfontconfig-1.dll"		root/support`
+#  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/zlib1.dll"		root/support`
+  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libexpat-1.dll"		root/support`
+  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/freetype6.dll"		root/support`
+
   puts " Copying externals "
   `mkdir "#{@c74}/Jamoma/library/externals"`
   `cp "#{@git_root}/Builds"/*.mxe 							"#{@c74}/Jamoma/library/externals/"`
