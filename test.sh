@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd testlib
+cd ../Modules/Test
 ruby testrunner.rb
-cd ..
+cd ../../Tools
