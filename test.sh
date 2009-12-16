@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd testlib
-ruby testrunner.rb
-cd ..
+cd ../Modules/Test
+ruby testrunner.rb . default ../..
+cd ../../Tools

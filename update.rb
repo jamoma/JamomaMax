@@ -55,6 +55,7 @@ puts "PULLING..."
 puts `git pull #{@remote} #{@branch}`
 puts "SUBMODULE INIT/UPDATE"
 puts `git submodule update --init;`
+puts `git submodule foreach co master`
 
 
 #################################################################
@@ -64,3 +65,4 @@ doUpdate "DSP"
 doUpdate "Graphics" 
 doUpdate "Multicore"
 doUpdate "Modular"
+doUpdate "Test"
