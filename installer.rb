@@ -275,61 +275,61 @@ else
   create_logs
 
   puts "  Creating installer directory structure @ #{@temp} ..."
-  cmd("rm -rfv \"#{@temp}\"")                                            # remove an old temp dir if it exists
-  cmd("mkdir -pv \"#{@temp}\"")                                         # now make a clean one, and build dir structure in it
-  cmd("mkdir -pv \"#{@temp}/Library/Frameworks\"")
-  cmd("mkdir -pv \"#{@temp}/Library/Application Support/Jamoma/Extensions\"")
-  cmd("mkdir -pv \"#{@max}\"")
-  cmd("mkdir -pv \"#{@max}/patches/templates\"")
-  cmd("mkdir -pv \"#{@max}/patches/extras\"")
-  cmd("mkdir -pv \"#{@c74}\"")
-  cmd("mkdir -pv \"#{@c74}/extensions\"")
-  cmd("mkdir -pv \"#{@c74}/default-definitions\"")
-  cmd("mkdir -pv \"#{@c74}/default-settings\"")
-  cmd("mkdir -pv \"#{@installers}/resources\"")
-  cmd("mkdir -pv \"#{@installers}/Jamoma\"")
+  `rm -rfv \"#{@temp}\"                                                 `# remove an old temp dir if it exists
+  `mkdir -pv \"#{@temp}\"                                               `# now make a clean one, and build dir structure in it
+  `mkdir -pv \"#{@temp}/Library/Frameworks\"                            `
+  `mkdir -pv \"#{@temp}/Library/Application Support/Jamoma/Extensions\" `
+  `mkdir -pv \"#{@max}\"                                                `
+  `mkdir -pv \"#{@max}/patches/templates\"                              `
+  `mkdir -pv \"#{@max}/patches/extras\"                                 `
+  `mkdir -pv \"#{@c74}\"                                                `
+  `mkdir -pv \"#{@c74}/extensions\"                                     `
+  `mkdir -pv \"#{@c74}/default-definitions\"                            `
+  `mkdir -pv \"#{@c74}/default-settings\"                               `
+  `mkdir -pv \"#{@installers}/resources\"                               `
+  `mkdir -pv \"#{@installers}/Jamoma\"                                  `
 
   puts "  Copying the Jamoma folder..."
-  cmd("cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"")
+  `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
 
   puts "  Copying Shared Libraries"
-  cmd("cp -rpv \"#{@path_foundation}/library/build/UninstalledProducts/JamomaFoundation.framework\"          \"#{@temp}/Library/Frameworks/JamomaFoundation.framework\" ")
-  cmd("cp -rpv \"#{@path_dsp}/library/build/UninstalledProducts/JamomaDSP.framework\"                        \"#{@temp}/Library/Frameworks/JamomaDSP.framework\" ")
-  cmd("cp -rpv \"#{@path_graphics}/library/build/UninstalledProducts/JamomaGraphics.framework\"              \"#{@temp}/Library/Frameworks/JamomaGraphics.framework\" ")
-  cmd("cp -rpv \"#{@path_multicore}/library/build/UninstalledProducts/JamomaMulticore.framework\"            \"#{@temp}/Library/Frameworks/JamomaMulticore.framework\" ")
-  cmd("cp -rpv \"#{@path_modular}/SourceCode/Framework/build/UninstalledProducts/JamomaModular.framework\"   \"#{@temp}/Library/Frameworks/JamomaModular.framework\" ")
+  `cp -rpv \"#{@path_foundation}/library/build/UninstalledProducts/JamomaFoundation.framework\"   \"#{@temp}/Library/Frameworks/JamomaFoundation.framework\" `
+  `cp -rpv \"#{@path_dsp}/library/build/UninstalledProducts/JamomaDSP.framework\"                 \"#{@temp}/Library/Frameworks/JamomaDSP.framework\" `
+  `cp -rpv \"#{@path_graphics}/library/build/UninstalledProducts/JamomaGraphics.framework\"       \"#{@temp}/Library/Frameworks/JamomaGraphics.framework\" `
+  `cp -rpv \"#{@path_multicore}/library/build/UninstalledProducts/JamomaMulticore.framework\"     \"#{@temp}/Library/Frameworks/JamomaMulticore.framework\" `
+  `cp -rpv \"#{@path_modular}/library/build/UninstalledProducts/JamomaModular.framework\"         \"#{@temp}/Library/Frameworks/JamomaModular.framework\" `
 
   puts "  Copying Extensions"
-  cmd("cp -rpv \"/Library/Application Support/Jamoma/Extensions\"/*                                          \"#{@temp}/Library/Application Support/Jamoma/Extensions\"")
+  `cp -rpv \"/Library/Application Support/Jamoma/Extensions\"/*                                   \"#{@temp}/Library/Application Support/Jamoma/Extensions\"`
 
   puts "  Copying Externals"
-  cmd("cp -rpv \"#{@git_root}/Builds\"                                                                       \"#{@c74}/Jamoma/externals\" ")
+  `cp -rpv \"#{@git_root}/Builds\"                                                                \"#{@c74}/Jamoma/externals\"`
   puts "  Removing ≈-Externals"
-  cmd("rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.mxo")
+  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.mxo`
 
   puts "  Removing files that are not needed (.zips, windows externs, etc)..."
-  cmd("rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt")
-  cmd("rm -rfv \"#{@c74}/Jamoma/library/third-party/WinXP\"")
+  `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`
+  `rm -rfv \"#{@c74}/Jamoma/library/third-party/WinXP\"`
 
   puts "  Moving things around (loader, templates, etc)..."
-  cmd("cp \"#{@c74}/Jamoma/documentation/jamoma-templates/\"*       \"#{@max}/patches/templates\"")
-  cmd("cp \"#{@c74}/Jamoma/documentation/jamoma-overview.maxpat\"   \"#{@max}/patches/extras\"")
-  cmd("mv \"#{@c74}/Jamoma/externals/jcom.loader.mxo\"              \"#{@c74}/extensions/\"")
-  cmd("mv \"#{@c74}/Jamoma/support\"/*.maxdefaults                  \"#{@c74}/default-settings\"")
-  cmd("mv \"#{@c74}/Jamoma/support\"/*.maxdefines                   \"#{@c74}/default-definitions\"")
-  cmd("rm -rfv \"#{@c74}/Jamoma/support\"")
+  `cp \"#{@c74}/Jamoma/documentation/jamoma-templates/\"*       \"#{@max}/patches/templates\"   `
+  `cp \"#{@c74}/Jamoma/documentation/jamoma-overview.maxpat\"   \"#{@max}/patches/extras\"      `
+  `mv \"#{@c74}/Jamoma/externals/jcom.loader.mxo\"              \"#{@c74}/extensions/\"         `
+  `mv \"#{@c74}/Jamoma/support\"/*.maxdefaults                  \"#{@c74}/default-settings\"    `
+  `mv \"#{@c74}/Jamoma/support\"/*.maxdefines                   \"#{@c74}/default-definitions\" `
+  `rm -rfv \"#{@c74}/Jamoma/support\"                                                           `
 
   puts "  Copying readme, license, etc...."
-  cmd("cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"   \"#{@installers}/resources\"")
-  cmd("cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"   \"#{@installers}/Jamoma\"")
-  cmd("cp \"#{@git_root}/Tools/installertools/GNU-LGPL.rtf\" \"#{@installers}/resources/License.rtf\"")
-  cmd("cp \"#{@git_root}/Tools/installertools/GNU-LGPL.rtf\" \"#{@installers}/Jamoma/License.rtf\"")
-  cmd("cp \"Uninstall.command\"           \"#{@installers}/Jamoma/Uninstall.command\"")
+  `cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"          \"#{@installers}/resources\"             `
+  `cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"          \"#{@installers}/Jamoma\"                `
+  `cp \"#{@git_root}/Tools/installertools/GNU-LGPL.rtf\"        \"#{@installers}/resources/License.rtf\" `
+  `cp \"#{@git_root}/Tools/installertools/GNU-LGPL.rtf\"        \"#{@installers}/Jamoma/License.rtf\"    `
+  `cp \"#{@git_root}/Tools/installertools/Uninstall.command\"   \"#{@installers}/Jamoma/Uninstall.command\"                 `
 
   puts "  Building Package -- this could take a while..."
-  cmd("rm -rfv \"#{@installers}/MacInstaller/Jamoma.pkg\"")
+  `rm -rfv \"#{@installers}/MacInstaller/Jamoma.pkg\"`
   # TODO: need to find a way to specify the 'allow-downgrade' flag here [TAP]
-  cmd("/Developer/usr/bin/packagemaker --verbose --root \"#{@temp}\" --id org.jamoma.modular --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --resources \"#{@installers}/resources\" --target 10.4 --domain system --root-volume-only")
+  `/Developer/usr/bin/packagemaker --verbose --root \"#{@temp}\" --id org.jamoma.modular --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --resources \"#{@installers}/resources\" --target 10.4 --domain system --root-volume-only`
 
   # Warning: the zip thing seems to be a real problem on the Mac using OS 10.5 at least...  Renaming the zip ends up causing the install to fail
   #puts "  Zipping the Installer..."
@@ -339,11 +339,11 @@ else
 
   puts "  Creating Disk Image..."
   if version_mod.match(/rc(.*)/)
-    cmd("rm -rfv \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"")
-    cmd("hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-#{version_mod}-Mac.dmg\"")
+    `rm -rfv \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"`
+    `hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-#{version_mod}-Mac.dmg\"`
   else
-    cmd("rm -rfv \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
-    cmd("hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"")
+    `rm -rfv \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"`
+    `hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"`
   end
 
 
