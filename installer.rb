@@ -307,6 +307,10 @@ else
   puts "  Removing ≈-Externals"
   `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.mxo`
 
+  puts "  Copying Help Patchers"
+  `cp -rpv \"#{@git_root}/Modules/DSP/implementations/MaxMSP\"/*/*.maxhelp                        \"#{@c74}/Jamoma/documentation/jamoma-help\"`
+  `cp -rpv \"#{@git_root}/Modules/Graphics/implementations/MaxMSP\"/*/*.maxhelp                   \"#{@c74}/Jamoma/documentation/jamoma-help\"`
+
   puts "  Removing files that are not needed (.zips, windows externs, etc)..."
   `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`
   `rm -rfv \"#{@c74}/Jamoma/library/third-party/WinXP\"`
