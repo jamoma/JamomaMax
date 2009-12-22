@@ -32,6 +32,7 @@ def doUpdate name
   
   result = `git checkout #{@branch}`
   if result.match(/error.*/)
+    puts "NOTE: checking out tracking branch..."
     result = `git checkout --track remotes/#{@remote}/#{@branch}`
   end
 
@@ -48,6 +49,7 @@ Dir.chdir "#{@glibdir}/.."
 
 result = `git checkout #{@branch}`
 if result.match(/error.*/)
+  puts "NOTE: checking out tracking branch..."
   result = `git checkout --track remotes/#{@remote}/#{@branch}`
 end
 
