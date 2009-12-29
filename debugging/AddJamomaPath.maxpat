@@ -405,11 +405,11 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 130.0, 164.0, 148.5, 19.0 ],
-					"text" : "t l l"
+					"text" : "t l l",
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "bang", "" ],
 					"patching_rect" : [ 130.0, 164.0, 539.0, 19.0 ],
-					"text" : "t l l l b l"
+					"text" : "t l l l b l",
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "bang" ],
 					"patching_rect" : [ 130.0, 164.0, 407.5, 19.0 ],
