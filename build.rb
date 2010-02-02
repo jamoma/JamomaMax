@@ -55,8 +55,10 @@ if(clean)
   puts "  Cleaning Builds folder "
   puts " "
 
-  Dir.chdir "#{glibdir}/../Builds"
-
+  Dir.chdir "#{glibdir}/../Builds/MaxMSP"
+  
+  `rm -rf *.maxhelp`
+  
   # Windows
   if win32?
 
