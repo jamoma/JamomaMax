@@ -126,6 +126,9 @@ load "build.rb"
                      
 Dir.chdir "#{glibdir}/../Modules/Graphics"
 load "build.rb"      
+
+Dir.chdir "#{glibdir}/../Modules/Graph"
+load "build.rb"
                      
 Dir.chdir "#{glibdir}/../Modules/Multicore"
 load "build.rb"      
