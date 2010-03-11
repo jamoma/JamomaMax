@@ -135,3 +135,6 @@ load "build.rb"
                      
 Dir.chdir "#{glibdir}/../Modules/Modular"
 load "build.rb"      
+
+Dir.chdir "#{glibdir}/../Modules/Ruby"
+load "build.rb"      
