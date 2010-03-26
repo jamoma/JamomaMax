@@ -52,7 +52,9 @@ function doRemove {
 
    if [ -e "$FrameworkFolder" ] ; then
 		echo -ne "- Modular Framework ($FrameworkFolder/JamomaModular.framework)"
-		sudo rm -Rf "$FrameworkFolder/JamomaModular.framework" && echo -ne "... done.\n" 
+		sudo rm -Rf "$FrameworkFolder/JamomaModular.framework" && echo -ne "... done.\n"
+		echo -ne "- Graph Framework ($FrameworkFolder/JamomaGraph.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaGraph.framework" && echo -ne "... done.\n" 
 		echo -ne "- Graphics Framework ($FrameworkFolder/JamomaGraphics.framework)"
 		sudo rm -Rf "$FrameworkFolder/JamomaGraphics.framework" && echo -ne "... done.\n"      
 		echo -ne "- Multicore Framework ($FrameworkFolder/JamomaMulticore.framework)"
