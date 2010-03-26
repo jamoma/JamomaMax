@@ -34,7 +34,7 @@ end
 @path_dsp        = "#{@git_root}/Modules/DSP"
 @path_multicore  = "#{@git_root}/Modules/Multicore"
 @path_graphics   = "#{@git_root}/Modules/Graphics"
-
+@path_graph      = "#{@git_root}/Modules/Graph"
 
 
 ###################################################################
@@ -183,14 +183,14 @@ if win32?
   `cp -r "#{@git_root}/Modules/Modular/Jamoma" 						"root/Cycling '74"`
 
   puts " Copying Jamoma Extensions"
-  `cp "#{@git_root}/Builds"/*.ttdll  							"root/Common Files/Jamoma/Extensions"`
+  `cp "#{@git_root}/Builds/MaxMSP"/*.ttdll  							"root/Common Files/Jamoma/Extensions"`
 
   puts " Copying frameworks into the support folder"
-  `cp "#{@git_root}/Builds/JamomaFoundation.dll"  					root/support`
-  `cp "#{@git_root}/Builds/JamomaDSP.dll"  						root/support`
-  `cp "#{@git_root}/Builds/JamomaModular.dll"  						root/support`
+  `cp "#{@git_root}/Builds/MaxMSP/JamomaFoundation.dll"  					root/support`
+  `cp "#{@git_root}/Builds/MaxMSP/JamomaDSP.dll"  						root/support`
+  `cp "#{@git_root}/Builds/MaxMSP/JamomaModular.dll"  						root/support`
   `cp "#{@git_root}/Modules/DSP/library/portaudio/Release/PortAudio.dll"		root/support`
-
+  # TODO: add Multicore and Graph frameworks here!
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libcairo-2.dll"		root/support`
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libpng12-0.dll"		root/support`
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libfontconfig-1.dll"		root/support`
@@ -200,14 +200,15 @@ if win32?
 
   puts " Copying externals "
   `mkdir "#{@c74}/Jamoma/library/externals"`
-  `cp "#{@git_root}/Builds"/*.mxe 							"#{@c74}/Jamoma/library/externals/"`
+  `cp "#{@git_root}/Builds/MaxMSP"/*.mxe 							"#{@c74}/Jamoma/library/externals/"`
 	
   puts " Moving things around : loader, templates, etc..."
-  `mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll				root/support`
-  `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe" 				"#{@c74}/extensions/jcom.loader.mxe"`
-  `cp "#{@c74}/Jamoma/support"/*.maxdefaults   						"#{@c74}/default-settings"`
-  `cp "#{@c74}/Jamoma/support"/*.maxdefines    						"#{@c74}/default-definitions"`
-  `cp "#{@c74}/Jamoma/documentation/jamoma-overview.maxpat" 				root/patches/extras/jamoma-overview.maxpat`
+  `mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll				            root/support`
+  `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe"                   				"#{@c74}/extensions/jcom.loader.mxe"`
+  `cp "#{@c74}/Jamoma/support"/*.maxdefaults   						                        "#{@c74}/default-settings"`
+  `cp "#{@c74}/Jamoma/support"/*.maxdefines                           						"#{@c74}/default-definitions"`  
+  `cp "#{@path_graphics}/implementations/MaxMSP/jcom.label"/*.maxdefines          "#{@c74}/default-definitions"`
+  `cp "#{@c74}/Jamoma/documentation/jamoma-overview.maxpat" 				                root/patches/extras/jamoma-overview.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/_Jamoma_Patcher_.maxpat"      	root/patches/templates/_Jamoma_Patcher_.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jalg.template.audio~.maxpat"  	root/patches/templates/jalg.template.audio~.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jalg.template.video%.maxpat"  	root/patches/templates/jalg.template.video%.maxpat`
@@ -294,7 +295,8 @@ else
 
   puts "  Copying Shared Libraries"
   `cp -rpv \"#{@path_foundation}/library/build/UninstalledProducts/JamomaFoundation.framework\"   \"#{@temp}/Library/Frameworks/JamomaFoundation.framework\" `
-  `cp -rpv \"#{@path_dsp}/library/build/UninstalledProducts/JamomaDSP.framework\"                 \"#{@temp}/Library/Frameworks/JamomaDSP.framework\" `
+  `cp -rpv \"#{@path_dsp}/library/build/UninstalledProducts/JamomaDSP.framework\"                 \"#{@temp}/Library/Frameworks/JamomaDSP.framework\" `   
+  `cp -rpv \"#{@path_graph}/library/build/UninstalledProducts/JamomaGraph.framework\"             \"#{@temp}/Library/Frameworks/JamomaGraph.framework\" ` 
   `cp -rpv \"#{@path_graphics}/library/build/UninstalledProducts/JamomaGraphics.framework\"       \"#{@temp}/Library/Frameworks/JamomaGraphics.framework\" `
   `cp -rpv \"#{@path_multicore}/library/build/UninstalledProducts/JamomaMulticore.framework\"     \"#{@temp}/Library/Frameworks/JamomaMulticore.framework\" `
   `cp -rpv \"#{@path_modular}/library/build/UninstalledProducts/JamomaModular.framework\"         \"#{@temp}/Library/Frameworks/JamomaModular.framework\" `
@@ -303,13 +305,10 @@ else
   `cp -rpv \"/Library/Application Support/Jamoma/Extensions\"/*                                   \"#{@temp}/Library/Application Support/Jamoma/Extensions\"`
 
   puts "  Copying Externals"
-  `cp -rpv \"#{@git_root}/Builds\"                                                                \"#{@c74}/Jamoma/externals\"`
-  puts "  Removing ≈-Externals"
-  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.mxo`
-
-  puts "  Copying Help Patchers"
-  `cp -rpv \"#{@git_root}/Modules/DSP/implementations/MaxMSP\"/*/*.maxhelp                        \"#{@c74}/Jamoma/documentation/jamoma-help\"`
-  `cp -rpv \"#{@git_root}/Modules/Graphics/implementations/MaxMSP\"/*/*.maxhelp                   \"#{@c74}/Jamoma/documentation/jamoma-help\"`
+  `cp -rpv \"#{@git_root}/Builds/MaxMSP\"                                                                \"#{@c74}/Jamoma/externals\"`
+#  puts "  Removing ≈-Externals"
+#  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.mxo`
+#  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.maxhelp` 
 
   puts "  Removing files that are not needed (.zips, windows externs, etc)..."
   `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`
@@ -320,7 +319,8 @@ else
   `cp \"#{@c74}/Jamoma/documentation/jamoma-overview.maxpat\"   \"#{@max}/patches/extras\"      `
   `mv \"#{@c74}/Jamoma/externals/jcom.loader.mxo\"              \"#{@c74}/extensions/\"         `
   `mv \"#{@c74}/Jamoma/support\"/*.maxdefaults                  \"#{@c74}/default-settings\"    `
-  `mv \"#{@c74}/Jamoma/support\"/*.maxdefines                   \"#{@c74}/default-definitions\" `
+  `mv \"#{@c74}/Jamoma/support\"/*.maxdefines                   \"#{@c74}/default-definitions\" `    
+  `cp \"#{@path_graphics}/implementations/MaxMSP/jcom.label\"/*.maxdefines                   \"#{@c74}/default-definitions\" `    
   `rm -rfv \"#{@c74}/Jamoma/support\"                                                           `
 
   puts "  Copying readme, license, etc...."
