@@ -82,7 +82,7 @@ doUpdate "Foundation"
 doUpdate "DSP"
 doUpdate "Graphics"
 doUpdate "Graph" 
-doUpdate "Multicore"
+doUpdate "AudioGraph"
 doUpdate "Modular"
 doUpdate "Test"     
 

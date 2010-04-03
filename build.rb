@@ -130,7 +130,7 @@ load "build.rb"
 Dir.chdir "#{glibdir}/../Modules/Graph"
 load "build.rb"
                      
-Dir.chdir "#{glibdir}/../Modules/Multicore"
+Dir.chdir "#{glibdir}/../Modules/AudioGraph"
 load "build.rb"      
                      
 Dir.chdir "#{glibdir}/../Modules/Modular"
