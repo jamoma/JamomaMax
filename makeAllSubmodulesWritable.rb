@@ -16,14 +16,13 @@ def doOne submoduleName
   load "makeSubmoduleWritable.rb"      
 end
                      
-            
+doOne "AudioGraph"            
 doOne "Dependencies"          
 doOne "DSP"          
 doOne "Foundation" 
 doOne "Graph"          
 doOne "Graphics"          
 doOne "Modular"          
-doOne "Multicore"          
 doOne "Publications"          
 doOne "Ruby"          
 doOne "Test"                    

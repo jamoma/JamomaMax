@@ -59,7 +59,8 @@ function doRemove {
 		sudo rm -Rf "$FrameworkFolder/JamomaGraphics.framework" && echo -ne "... done.\n"      
 		echo -ne "- Multicore Framework ($FrameworkFolder/JamomaMulticore.framework)"
 		sudo rm -Rf "$FrameworkFolder/JamomaMulticore.framework" && echo -ne "... done.\n"
-	   
+	    	echo -ne "- Multicore Framework ($FrameworkFolder/JamomaAudioGraph.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaAudioGraph.framework" && echo -ne "... done.\n"
 		if [ -e "$TapTools" ]; then
 			echo -ne "It seems that Tap.Tools is installed. Therfore the files that are shared between Jamoma and Tap.Tools will remain.\n"
 		else    

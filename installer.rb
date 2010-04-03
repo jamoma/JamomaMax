@@ -32,7 +32,7 @@ end
 @path_modular    = "#{@git_root}/Modules/Modular"
 @path_foundation = "#{@git_root}/Modules/Foundation"
 @path_dsp        = "#{@git_root}/Modules/DSP"
-@path_multicore  = "#{@git_root}/Modules/Multicore"
+@path_audiograph  = "#{@git_root}/Modules/AudioGraph"
 @path_graphics   = "#{@git_root}/Modules/Graphics"
 @path_graph      = "#{@git_root}/Modules/Graph"
 
@@ -190,7 +190,7 @@ if win32?
   `cp "#{@git_root}/Builds/MaxMSP/JamomaDSP.dll"  						root/support`
   `cp "#{@git_root}/Builds/MaxMSP/JamomaModular.dll"  						root/support`
   `cp "#{@git_root}/Modules/DSP/library/portaudio/Release/PortAudio.dll"		root/support`
-  # TODO: add Multicore and Graph frameworks here!
+  # TODO: add AudioGraph and Graph frameworks here!
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libcairo-2.dll"		root/support`
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libpng12-0.dll"		root/support`
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libfontconfig-1.dll"		root/support`
@@ -298,7 +298,7 @@ else
   `cp -rpv \"#{@path_dsp}/library/build/UninstalledProducts/JamomaDSP.framework\"                 \"#{@temp}/Library/Frameworks/JamomaDSP.framework\" `   
   `cp -rpv \"#{@path_graph}/library/build/UninstalledProducts/JamomaGraph.framework\"             \"#{@temp}/Library/Frameworks/JamomaGraph.framework\" ` 
   `cp -rpv \"#{@path_graphics}/library/build/UninstalledProducts/JamomaGraphics.framework\"       \"#{@temp}/Library/Frameworks/JamomaGraphics.framework\" `
-  `cp -rpv \"#{@path_multicore}/library/build/UninstalledProducts/JamomaMulticore.framework\"     \"#{@temp}/Library/Frameworks/JamomaMulticore.framework\" `
+  `cp -rpv \"#{@path_audiograph}/library/build/UninstalledProducts/JamomaAudioGraph.framework\"     \"#{@temp}/Library/Frameworks/JamomaAudioGraph.framework\" `
   `cp -rpv \"#{@path_modular}/library/build/UninstalledProducts/JamomaModular.framework\"         \"#{@temp}/Library/Frameworks/JamomaModular.framework\" `
 
   puts "  Copying Extensions"
