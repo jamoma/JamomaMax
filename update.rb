@@ -87,7 +87,6 @@ doUpdate "Modular"
 doUpdate "Test"     
 
 doUpdateSimple "Modules/Dependencies"
-doUpdateSimple "Modules/Publications"
 doUpdateSimple "Modules/Ruby"
 doUpdateSimple "Modules/TheGitter" 
   
