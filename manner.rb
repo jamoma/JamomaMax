@@ -7,8 +7,8 @@
 # One argument: name of command to generate pdf man page for
 #
 # Try e.g.
-# $ ruby manner git
-# $ ruby manner git-pull (use hyphen for various GIT comands)
+# $ ruby manner.rb git
+# $ ruby manner.rb git-pull (use hyphen for various GIT comands)
 #
 # License: This code is licensed under the terms of the GNU LGPL
 # http://www.gnu.org/licenses/lgpl.html
