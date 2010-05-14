@@ -34,13 +34,13 @@ end
 `git tag #{$tag}`
 `git push origin --tags`
 
+tagOne "AudioGraph"
 tagOne "Dependencies"
 tagOne "DSP"
 tagOne "Foundation"   
 tagOne "Graph"
 tagOne "Graphics"  
 tagOne "Modular"
-tagOne "Multicore"
 tagOne "Ruby"
 tagOne "Test"
 
