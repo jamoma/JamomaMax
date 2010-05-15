@@ -26,6 +26,14 @@ puts "JAMOMA UPDATING TO branch: #{@branch}  FROM remote: #{@remote}"
 
 #################################################################
 
+def divider
+  puts
+  puts "*************************************************************"
+  puts
+end
+
+#################################################################
+
 def doUpdateSimple name
   puts "UPDATING: #{name}"
   Dir.chdir "#{@glibdir}/../#{name}"
@@ -52,6 +60,7 @@ def doUpdate name
   doUpdateSimple("Modules/#{name}")  
   Dir.chdir "#{@glibdir}/../Modules/#{name}"
   puts `ruby update.rb` 
+  divider
 end  
 
 #################################################################
@@ -61,6 +70,8 @@ end
 puts "UPDATING MAIN REPOSITORY..."
 Dir.chdir "#{@glibdir}/.." 
 
+divider
+
 result = `git checkout #{@branch}`
 if result.match(/error.*/)
   puts "NOTE: checking out tracking branch..."
@@ -69,14 +80,20 @@ end
 
 puts "PULLING..."
 puts `git pull #{@remote} #{@branch}`
+
+divider
+
 puts "SUBMODULE INIT/UPDATE"
 puts `git submodule update --init;`
 puts `git submodule foreach co master`
 
+divider
 
 ################################################################# 
 
 doUpdateSimple "Tools/supports"
+
+divider
 
 doUpdate "Foundation"
 doUpdate "DSP"
@@ -89,7 +106,9 @@ doUpdate "Test"
 doUpdateSimple "Modules/Dependencies"
 doUpdateSimple "Modules/Ruby"
 doUpdateSimple "Modules/TheGitter" 
-  
+
+divider
+
 doUpdateUserLib "Holophon"  
 doUpdateUserLib "Jamoma.Ircam.FTM" 
 doUpdateUserLib "Jamoma.Ircam.IMTR"  
@@ -102,3 +121,4 @@ doUpdateUserLib "Tap.Tools"
 doUpdateUserLib "ViMiC"  
 doUpdateUserLib "Z" 
  
+divider
