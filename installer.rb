@@ -16,6 +16,7 @@ require "supports/jamomalib"   # C74 build library
 require 'date'
 
 @git_root = ".."	# this is the root of the Jamoma project repository
+@installers = "#{@git_root}/Installers"
 if win32?
   Dir.chdir @git_root
   @git_root = Dir.pwd
@@ -23,7 +24,6 @@ if win32?
   @temp = "#{@git_root}/Tools/installertools/Windows"
   @max = "#{@temp}/root"
 else
-  @installers = "#{@git_root}/Installers"
   @temp = "#{@installers}/temp"
   @max = "#{@temp}/Applications/Max5"
 end
@@ -181,17 +181,18 @@ if win32?
   `mkdir "root/Common Files/Jamoma/Extensions"`
 
   puts " Copying the Jamoma folder --  this could take a while..."
-  `cp -r "#{@git_root}/Modules/Modular/Jamoma" 						"root/Cycling '74"`
+  `cp -r "#{@git_root}/Modules/Modular/Max" 						"root/Cycling '74/Jamoma"`
 
   puts " Copying Jamoma Extensions"
-  `cp "#{@git_root}/Builds/MaxMSP"/*.ttdll  							"root/Common Files/Jamoma/Extensions"`
+  `cp "#{@git_root}/Builds"/*.ttdll  							"root/Common Files/Jamoma/Extensions"`
 
   puts " Copying frameworks into the support folder"
-  `cp "#{@git_root}/Builds/MaxMSP/JamomaFoundation.dll"  					root/support`
-  `cp "#{@git_root}/Builds/MaxMSP/JamomaDSP.dll"  						root/support`
-  `cp "#{@git_root}/Builds/MaxMSP/JamomaModular.dll"  						root/support`
+  `cp "#{@git_root}/Builds/JamomaFoundation.dll"  					root/support`
+  `cp "#{@git_root}/Builds/JamomaDSP.dll"  						root/support`
+  `cp "#{@git_root}/Builds/JamomaGraph.dll"  						root/support`
+  `cp "#{@git_root}/Builds/JamomaAudioGraph.dll"  						root/support`
+  `cp "#{@git_root}/Builds/JamomaModular.dll"  						root/support`
   `cp "#{@git_root}/Modules/DSP/library/portaudio/Release/PortAudio.dll"		root/support`
-  # TODO: add AudioGraph and Graph frameworks here!
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libcairo-2.dll"		root/support`
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libpng12-0.dll"		root/support`
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libfontconfig-1.dll"		root/support`
@@ -204,7 +205,8 @@ if win32?
   `cp "#{@git_root}/Builds/MaxMSP"/*.mxe 							"#{@c74}/Jamoma/library/externals/"`
 	
   puts " Moving things around : loader, templates, etc..."
-  `mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll				            root/support`
+	#`mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll				            root/support`
+	`cp "#{@git_root}/Modules/Dependencies/Max/WinXP/support"/* root/support `
   `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe"                   				"#{@c74}/extensions/jcom.loader.mxe"`
   `cp "#{@c74}/Jamoma/support"/*.maxdefaults   						                        "#{@c74}/default-settings"`
   `cp "#{@c74}/Jamoma/support"/*.maxdefines                           						"#{@c74}/default-definitions"`  

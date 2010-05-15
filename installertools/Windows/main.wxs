@@ -2,7 +2,7 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
 
   <Product Name="Jamoma" Id="{BA3D3E15-B2A8-40FF-A04A-6D2A6B5EC967}" 
-	Language="1033" Codepage="1252" Version="0.5" 
+	Language="1033" Codepage="1252" Version="0.5.1" 
 	Manufacturer="jamoma.org" UpgradeCode="{331F2681-7AE0-4BC3-A072-75F9777317C3}">
 
     <Package Id='????????-????-????-????-????????????' Keywords='Installer'
@@ -46,7 +46,7 @@
     <UIRef Id="WixUI_FeatureTree" />
     <UIRef Id="WixUI_ErrorProgressText" />
 
-    <Icon Id="JamomaIcon" SourceFile="..\..\..\Modules\Modular\SourceCode\Framework\resources\jamoma.ico" />
+    <Icon Id="JamomaIcon" SourceFile="..\..\..\Modules\Modular\library\resources\jamoma.ico" />
     <Property Id="ARPPRODUCTICON">JamomaIcon</Property>
     <Property Id="ARPURLINFOABOUT">http://jamoma.org</Property>
 
