@@ -134,7 +134,12 @@ Dir.chdir "#{glibdir}/../Modules/AudioGraph"
 load "build.rb"      
                      
 Dir.chdir "#{glibdir}/../Modules/Modular"
-load "build.rb"      
+load "build.rb"
 
-Dir.chdir "#{glibdir}/../Modules/Ruby"
-load "build.rb"      
+if win32?
+  # At the moment we don't build TTRuby for Windows
+  # If someone is interested in doing that, please feel free!
+else
+  Dir.chdir "#{glibdir}/../Modules/Ruby"
+  load "build.rb"      
+end
