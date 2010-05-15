@@ -138,7 +138,7 @@ end
     f = File.open("#{file_path}", "r+")
     str = f.read
 
- 	  if (version_mod == '' || version_mod.match(/rc(.*)/))
+    if (version_mod == '' || version_mod.match(/rc(.*)/))
       str.sub!(/\\cf2 Version (.*)\n/, "\\cf2 Version #{version_maj}.#{version_min}.#{version_sub} (#{git_rev})\n")
     else
       str.sub!(/\\cf2 Version (.*)\n/, "\\cf2 Version #{version_maj}.#{version_min}.#{version_sub} #{version_mod} (#{git_rev})\n")
