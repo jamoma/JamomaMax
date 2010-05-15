@@ -35,6 +35,7 @@ end
 @path_audiograph  = "#{@git_root}/Modules/AudioGraph"
 @path_graphics   = "#{@git_root}/Modules/Graphics"
 @path_graph      = "#{@git_root}/Modules/Graph"
+@path_ruby        = "#{@git_root}/Modules/Ruby"
 
 
 ###################################################################
@@ -309,6 +310,9 @@ else
 #  puts "  Removing ≈-Externals"
 #  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.mxo`
 #  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.maxhelp` 
+
+  puts "  Copying TTRuby"
+  `cp -rpv \"#{@path_ruby}/library/TTRuby.bundle\"     \"#{@temp}/Library/Ruby/Site/1.8/universal-darwin10.0/TTRuby.bundle\"`
 
   puts "  Removing files that are not needed (.zips, windows externs, etc)..."
   `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`
