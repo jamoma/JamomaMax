@@ -21,11 +21,13 @@ if win32?
   Dir.chdir @git_root
   @git_root = Dir.pwd
   Dir.chdir "#{@git_root}/Tools/installertools"
-  @temp = "#{@git_root}/Tools/installertools/Windows"
-  @max = "#{@temp}/root"
+  @tempDistro = "#{@git_root}/Tools/installertools/Windows"
+  @max = "#{@tempDistro}/root"
 else
-  @temp = "#{@installers}/temp"
-  @max = "#{@temp}/Applications/Max5"
+  @tempDistro = "#{@installers}/temp/distro"
+  @max = "#{@tempDistro}/Applications/Max5"
+  @tempDepend = "#{@installers}/temp/dependencies/Applications/Max5/Cycling '74"
+  
 end
 @c74 = "#{@max}/Cycling '74"
 @log_root        = "#{@installers}/logs"
@@ -36,7 +38,7 @@ end
 @path_graphics   = "#{@git_root}/Modules/Graphics"
 @path_graph      = "#{@git_root}/Modules/Graph"
 @path_ruby        = "#{@git_root}/Modules/Ruby"
-
+@path_dependencies = "#{@git_root}/Modules/Dependencies" 
 
 ###################################################################
 # Get Revision Info -- BAD FORM, BUT THIS COPY/PASTED FROM build.rb
@@ -246,7 +248,7 @@ if win32?
 
   puts " Fixing JamomaExtensions Source"
   # Here we need to perform a substitution on the JamomaExtensions Wix module, because want this to go into a different directory
-  f = File.open("#{@temp}/JamomaExtensions.wxs", "r+")
+  f = File.open("#{@tempDistro}/JamomaExtensions.wxs", "r+")
   str = f.read
   str.gsub!(/TARGETDIR/, 'EXTENSIONSDIR')
   f.rewind
@@ -278,11 +280,12 @@ else
   `mkdir -pv \"#{@installers}\"`  # need to make directory before the logs are created, and thus before cmd() is ready to be used
   create_logs
 
-  puts "  Creating installer directory structure @ #{@temp} ..."
-  `rm -rfv \"#{@temp}\"                                                 `# remove an old temp dir if it exists
-  `mkdir -pv \"#{@temp}\"                                               `# now make a clean one, and build dir structure in it
-  `mkdir -pv \"#{@temp}/Library/Frameworks\"                            `
-  `mkdir -pv \"#{@temp}/Library/Application Support/Jamoma/Extensions\" `
+  puts "  Creating installer directory structure @ #{@tempDistro} ..."
+  `rm -rfv \"#{@installers}/temp\"`     # remove an old temp dir if it exists  
+  `mkdir -pv \"#{@tempDistro}\"                                               ` # now make a clean one, and build dir structure in it
+  `mkdir -pv \"#{@tempDistro}/Library/Frameworks\"                            `
+  `mkdir -pv \"#{@tempDistro}/Library/Application Support/Jamoma/Extensions\" `     
+  `mkdir -pv \"#{@tempDepend}/Jamoma/Dependencies\" `
   `mkdir -pv \"#{@max}\"                                                `
   `mkdir -pv \"#{@max}/patches/templates\"                              `
   `mkdir -pv \"#{@max}/patches/extras\"                                 `
@@ -297,15 +300,15 @@ else
   `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
 
   puts "  Copying Shared Libraries"
-  `cp -rpv \"#{@path_foundation}/library/build/UninstalledProducts/JamomaFoundation.framework\"   \"#{@temp}/Library/Frameworks/JamomaFoundation.framework\" `
-  `cp -rpv \"#{@path_dsp}/library/build/UninstalledProducts/JamomaDSP.framework\"                 \"#{@temp}/Library/Frameworks/JamomaDSP.framework\" `   
-  `cp -rpv \"#{@path_graph}/library/build/UninstalledProducts/JamomaGraph.framework\"             \"#{@temp}/Library/Frameworks/JamomaGraph.framework\" ` 
-  `cp -rpv \"#{@path_graphics}/library/build/UninstalledProducts/JamomaGraphics.framework\"       \"#{@temp}/Library/Frameworks/JamomaGraphics.framework\" `
-  `cp -rpv \"#{@path_audiograph}/library/build/UninstalledProducts/JamomaAudioGraph.framework\"     \"#{@temp}/Library/Frameworks/JamomaAudioGraph.framework\" `
-  `cp -rpv \"#{@path_modular}/library/build/UninstalledProducts/JamomaModular.framework\"         \"#{@temp}/Library/Frameworks/JamomaModular.framework\" `
+  `cp -rpv \"#{@path_foundation}/library/build/UninstalledProducts/JamomaFoundation.framework\"   \"#{@tempDistro}/Library/Frameworks/JamomaFoundation.framework\" `
+  `cp -rpv \"#{@path_dsp}/library/build/UninstalledProducts/JamomaDSP.framework\"                 \"#{@tempDistro}/Library/Frameworks/JamomaDSP.framework\" `   
+  `cp -rpv \"#{@path_graph}/library/build/UninstalledProducts/JamomaGraph.framework\"             \"#{@tempDistro}/Library/Frameworks/JamomaGraph.framework\" ` 
+  `cp -rpv \"#{@path_graphics}/library/build/UninstalledProducts/JamomaGraphics.framework\"       \"#{@tempDistro}/Library/Frameworks/JamomaGraphics.framework\" `
+  `cp -rpv \"#{@path_audiograph}/library/build/UninstalledProducts/JamomaAudioGraph.framework\"     \"#{@tempDistro}/Library/Frameworks/JamomaAudioGraph.framework\" `
+  `cp -rpv \"#{@path_modular}/library/build/UninstalledProducts/JamomaModular.framework\"         \"#{@tempDistro}/Library/Frameworks/JamomaModular.framework\" `
 
   puts "  Copying Extensions"
-  `cp -rpv \"/Library/Application Support/Jamoma/Extensions\"/*                                   \"#{@temp}/Library/Application Support/Jamoma/Extensions\"`
+  `cp -rpv \"/Library/Application Support/Jamoma/Extensions\"/*                                   \"#{@tempDistro}/Library/Application Support/Jamoma/Extensions\"`
 
   puts "  Copying Externals"
   `cp -rpv \"#{@git_root}/Builds/MaxMSP\"                                                                \"#{@c74}/Jamoma/externals\"`
@@ -314,7 +317,11 @@ else
 #  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.maxhelp` 
 
   puts "  Copying TTRuby"
-  `cp -rpv \"#{@path_ruby}/library/TTRuby.bundle\"     \"#{@temp}/Library/Ruby/Site/1.8/universal-darwin10.0/TTRuby.bundle\"`
+  `cp -rpv \"#{@path_ruby}/library/TTRuby.bundle\"     \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0/TTRuby.bundle\"`
+  
+  puts " Copying Dependencies folder"
+   `cp -rpv \"#{@path_dependencies}/Max/Mac\"/*                                                                \"#{@tempDepend}/Jamoma/Dependencies\"`
+  #
 
   puts "  Removing files that are not needed (.zips, windows externs, etc)..."
   `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`
@@ -340,7 +347,7 @@ else
   puts "  Building Package -- this could take a while..."
   `rm -rfv \"#{@installers}/MacInstaller/Jamoma.pkg\"`
   # TODO: need to find a way to specify the 'allow-downgrade' flag here [TAP]
-  `/Developer/usr/bin/packagemaker --verbose --root \"#{@temp}\" --id org.jamoma.modular --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --resources \"#{@installers}/resources\" --target 10.4 --domain system --root-volume-only`
+  `/Developer/usr/bin/packagemaker --verbose  --doc \"#{@git_root}/Tools/installertools/packageMakerScript.pmdoc\" --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --target 10.4 --domain system --root-volume-only`
 
   # Warning: the zip thing seems to be a real problem on the Mac using OS 10.5 at least...  Renaming the zip ends up causing the install to fail
   #puts "  Zipping the Installer..."
