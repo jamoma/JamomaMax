@@ -133,7 +133,7 @@ end
 
 
   # ReadMe
-  puts "Updating ReadMe..."
+  puts " Updating ReadMe..."
   `cp #{@git_root}/Tools/installertools/ReadMe.Template.rtf #{@git_root}/Tools/installertools/ReadMe.rtf`
   file_path = "#{@git_root}/Tools/installertools/ReadMe.rtf"
   if FileTest.exist?(file_path)
@@ -295,6 +295,7 @@ else
   `mkdir -pv \"#{@c74}/default-settings\"                               `
   `mkdir -pv \"#{@installers}/resources\"                               `
   `mkdir -pv \"#{@installers}/Jamoma\"                                  `
+  `mkdir -pv \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0\"    `
 
   puts "  Copying the Jamoma folder..."
   `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
@@ -319,7 +320,7 @@ else
   puts "  Copying TTRuby"
   `cp -rpv \"#{@path_ruby}/library/TTRuby.bundle\"     \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0/TTRuby.bundle\"`
   
-  puts " Copying Dependencies folder"
+  puts "  Copying Dependencies folder"
    `cp -rpv \"#{@path_dependencies}/Max/Mac\"/*                                                                \"#{@tempDepend}/Jamoma/Dependencies\"`
   #
 
@@ -346,9 +347,13 @@ else
 
   puts "  Building Package -- this could take a while..."
   `rm -rfv \"#{@installers}/MacInstaller/Jamoma.pkg\"`
-  # TODO: need to find a way to specify the 'allow-downgrade' flag here [TAP]
-  `/Developer/usr/bin/packagemaker --verbose  --doc \"#{@git_root}/Tools/installertools/packageMakerScript.pmdoc\" --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --target 10.4 --domain system --root-volume-only`
 
+  puts
+  puts "OUTPUT FROM packagemaker COMMAND:"
+  puts `/Developer/usr/bin/packagemaker --verbose  --doc \"#{@git_root}/Tools/installertools/packageMakerScript.pmdoc\" --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --target 10.5 --domain system --root-volume-only`
+  puts "COMPLETED packagemaker COMMAND"
+  puts
+  
   # Warning: the zip thing seems to be a real problem on the Mac using OS 10.5 at least...  Renaming the zip ends up causing the install to fail
   #puts "  Zipping the Installer..."
   #cmd("rm -rfv \"#{@git_root}/Installers/Jamoma-0.4.6.zip\"")
