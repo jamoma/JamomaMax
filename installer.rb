@@ -348,11 +348,11 @@ else
   puts "  Building Package -- this could take a while..."
   `rm -rfv \"#{@installers}/MacInstaller/Jamoma.pkg\"`
 
-  puts
-  puts "OUTPUT FROM packagemaker COMMAND:"
-  puts `/Developer/usr/bin/packagemaker --verbose  --doc \"#{@git_root}/Tools/installertools/packageMakerScript.pmdoc\" --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --target 10.5 --domain system --root-volume-only`
-  puts "COMPLETED packagemaker COMMAND"
-  puts
+  #puts
+  #puts "OUTPUT FROM packagemaker COMMAND:"
+  `/Developer/usr/bin/packagemaker --verbose  --doc \"#{@git_root}/Tools/installertools/packageMakerScript.pmdoc\" --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --target 10.5 --domain system --root-volume-only`
+  #puts "COMPLETED packagemaker COMMAND"
+  #puts
   
   # Warning: the zip thing seems to be a real problem on the Mac using OS 10.5 at least...  Renaming the zip ends up causing the install to fail
   #puts "  Zipping the Installer..."
