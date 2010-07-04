@@ -39,6 +39,7 @@ end
 @path_graph      = "#{@git_root}/Modules/Graph"
 @path_ruby        = "#{@git_root}/Modules/Ruby"
 @path_dependencies = "#{@git_root}/Modules/Dependencies" 
+@path_shared_libs = "/Library/Application Support/Jamoma/Libraries"
 
 ###################################################################
 # Get Revision Info -- BAD FORM, BUT THIS COPY/PASTED FROM build.rb
@@ -284,7 +285,8 @@ else
   `rm -rfv \"#{@installers}/temp\"`     # remove an old temp dir if it exists  
   `mkdir -pv \"#{@tempDistro}\"                                               ` # now make a clean one, and build dir structure in it
   `mkdir -pv \"#{@tempDistro}/Library/Frameworks\"                            `
-  `mkdir -pv \"#{@tempDistro}/Library/Application Support/Jamoma/Extensions\" `     
+  `mkdir -pv \"#{@tempDistro}/Library/Application Support/Jamoma/Extensions\" `   
+  `mkdir -pv \"#{@tempDistro}#{@path_shared_libs}\" `  
   `mkdir -pv \"#{@tempDepend}/Jamoma/Dependencies\" `
   `mkdir -pv \"#{@max}\"                                                `
   `mkdir -pv \"#{@max}/patches/templates\"                              `
@@ -301,12 +303,12 @@ else
   `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
 
   puts "  Copying Shared Libraries"
-  `cp -rpv \"#{@path_foundation}/library/build/UninstalledProducts/JamomaFoundation.framework\"   \"#{@tempDistro}/Library/Frameworks/JamomaFoundation.framework\" `
-  `cp -rpv \"#{@path_dsp}/library/build/UninstalledProducts/JamomaDSP.framework\"                 \"#{@tempDistro}/Library/Frameworks/JamomaDSP.framework\" `   
-  `cp -rpv \"#{@path_graph}/library/build/UninstalledProducts/JamomaGraph.framework\"             \"#{@tempDistro}/Library/Frameworks/JamomaGraph.framework\" ` 
-  `cp -rpv \"#{@path_graphics}/library/build/UninstalledProducts/JamomaGraphics.framework\"       \"#{@tempDistro}/Library/Frameworks/JamomaGraphics.framework\" `
-  `cp -rpv \"#{@path_audiograph}/library/build/UninstalledProducts/JamomaAudioGraph.framework\"     \"#{@tempDistro}/Library/Frameworks/JamomaAudioGraph.framework\" `
-  `cp -rpv \"#{@path_modular}/library/build/UninstalledProducts/JamomaModular.framework\"         \"#{@tempDistro}/Library/Frameworks/JamomaModular.framework\" `
+  `cp -rpv \"#{@path_shared_libs}/JamomaFoundation.dylib\"    \"#{@tempDistro}#{@path_shared_libs}/JamomaFoundation.dylib\" `
+  `cp -rpv \"#{@path_shared_libs}/JamomaDSP.dylib\"           \"#{@tempDistro}#{@path_shared_libs}/JamomaDSP.dylib\" `   
+  `cp -rpv \"#{@path_shared_libs}/JamomaGraph.dylib\"         \"#{@tempDistro}#{@path_shared_libs}/JamomaGraph.dylib\" ` 
+  `cp -rpv \"#{@path_shared_libs}/JamomaGraphics.dylib\"      \"#{@tempDistro}#{@path_shared_libs}/JamomaGraphics.dylib\" `
+  `cp -rpv \"#{@path_shared_libs}/JamomaAudioGraph.dylib\"    \"#{@tempDistro}#{@path_shared_libs}/JamomaAudioGraph.dylib\" `
+  `cp -rpv \"#{@path_shared_libs}/JamomaModular.dylib\"       \"#{@tempDistro}#{@path_shared_libs}/JamomaModular.dylib\" `
 
   puts "  Copying Extensions"
   `cp -rpv \"/Library/Application Support/Jamoma/Extensions\"/*                                   \"#{@tempDistro}/Library/Application Support/Jamoma/Extensions\"`
