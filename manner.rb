@@ -30,5 +30,7 @@ getMan = ARGV[0];
 # On Mac: convert to PDF and open in Preview
 %x[open tmpManner.ps]
 
-# Remove temp file
+# Wait for 5 sec and then remove temp file
+# Waiting is required in case Preview.app has to be started
+sleep 5
 %x[rm tmpManner.ps]
