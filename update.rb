@@ -109,13 +109,13 @@ doUpdateSimple "Modules/TheGitter"
 
 divider
 
+doUpdateUserLib "GDIF"   
 doUpdateUserLib "Holophon"  
 doUpdateUserLib "Jamoma.Ircam.FTM" 
 doUpdateUserLib "Jamoma.Ircam.IMTR"  
 doUpdateUserLib "Jamoma.Ircam.Spat"  
 doUpdateUserLib "NavNav"  
 doUpdateUserLib "Schumacher"  
-doUpdateUserLib "SDIF"   
 doUpdateUserLib "support"
 doUpdateUserLib "Tap.Tools"  
 doUpdateUserLib "ViMiC"  
