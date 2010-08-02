@@ -346,7 +346,7 @@ else
   `cp \"#{@git_root}/Tools/installertools/Uninstall.command\"   \"#{@installers}/Jamoma/Uninstall.command\"                 `
 
   puts "  Building Package -- this could take a while..."
-  `rm -rfv \"#{@installers}/MacInstaller/Jamoma.pkg\"`
+  `rm -rfv \"#{@installers}/MacInstaller/Jamoma\"*.pkg`
 
   #puts
   #puts "OUTPUT FROM packagemaker COMMAND:"
