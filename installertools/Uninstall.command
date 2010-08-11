@@ -35,8 +35,7 @@ function doRemove {
 	fi
 	
 
-	if [ -e "$maxAppFolder" ] ; then
-		
+	if [ -e "$maxAppFolder" ] ; then		
 		echo -ne "- Extra Files ($maxAppFolder/patches/extras/)"
 		sudo rm -f "$maxAppFolder/patches/extras/"jamoma* && echo -ne "... done.\n"
 		
@@ -50,32 +49,28 @@ function doRemove {
 		echo -ne "Sorry, $maxAppFolder doesn't exist. Extra files can't be uninstalled.\n"
 	fi
 
-   if [ -e "$FrameworkFolder" ] ; then
-		echo -ne "- Modular Framework ($FrameworkFolder/JamomaModular.framework)"
-		sudo rm -Rf "$FrameworkFolder/JamomaModular.framework" && echo -ne "... done.\n"
-		echo -ne "- Graph Framework ($FrameworkFolder/JamomaGraph.framework)"
-		sudo rm -Rf "$FrameworkFolder/JamomaGraph.framework" && echo -ne "... done.\n" 
-		echo -ne "- Graphics Framework ($FrameworkFolder/JamomaGraphics.framework)"
-		sudo rm -Rf "$FrameworkFolder/JamomaGraphics.framework" && echo -ne "... done.\n"      
-		echo -ne "- Multicore Framework ($FrameworkFolder/JamomaMulticore.framework)"
-		sudo rm -Rf "$FrameworkFolder/JamomaMulticore.framework" && echo -ne "... done.\n"
-	    	echo -ne "- Multicore Framework ($FrameworkFolder/JamomaAudioGraph.framework)"
-		sudo rm -Rf "$FrameworkFolder/JamomaAudioGraph.framework" && echo -ne "... done.\n"
-		if [ -e "$TapTools" ]; then
-			echo -ne "It seems that Tap.Tools is installed. Therfore the files that are shared between Jamoma and Tap.Tools will remain.\n"
-		else    
-	    	echo -ne "- DSP Framework ($FrameworkFolder/JamomaDSP.framework)."
-			sudo rm -Rf "$FrameworkFolder/JamomaDSP.framework" && echo -ne "... done.\n" 
-			echo -ne "- Foundation Framework ($FrameworkFolder/JamomaFoundation.framework)"
-			sudo rm -Rf "$FrameworkFolder/JamomaFoundation.framework" && echo -ne "... done.\n"
-			echo -ne "- DSP Extensions (/Library/Application Support/Jamoma)." 
-			sudo rm -Rf "/Library/Application Support/Jamoma" && echo -ne "... done.\n" 
-		fi
-	else
-		echo -ne "Sorry, $FrameworkFolder doesn't exist. Frameworks can't be uninstalled.\n"
+   if [ -e "$ApplicationSupportFolder" ]; then
+			echo -ne "- Application Support Folder (/Library/Application Support/Jamoma)." 
+		sudo rm -Rf "$ApplicationSupportFolder" && echo -ne "... done.\n"
 	fi
-	
- 
+
+   if [ -e "$FrameworkFolder" ] ; then
+			echo -ne "- 0.5 Modular Framework ($FrameworkFolder/JamomaModular.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaModular.framework" && echo -ne "... done.\n"
+			echo -ne "- 0.5 Graph Framework ($FrameworkFolder/JamomaGraph.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaGraph.framework" && echo -ne "... done.\n" 
+			echo -ne "- 0.5 Graphics Framework ($FrameworkFolder/JamomaGraphics.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaGraphics.framework" && echo -ne "... done.\n"      
+			echo -ne "- 0.5 Multicore Framework ($FrameworkFolder/JamomaMulticore.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaMulticore.framework" && echo -ne "... done.\n"
+	    	echo -ne "- 0.5 Multicore Framework ($FrameworkFolder/JamomaAudioGraph.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaAudioGraph.framework" && echo -ne "... done.\n"
+	       	echo -ne "- 0.5 DSP Framework ($FrameworkFolder/JamomaDSP.framework)."
+		sudo rm -Rf "$FrameworkFolder/JamomaDSP.framework" && echo -ne "... done.\n" 
+			echo -ne "- 0.5 Foundation Framework ($FrameworkFolder/JamomaFoundation.framework)"
+		sudo rm -Rf "$FrameworkFolder/JamomaFoundation.framework" && echo -ne "... done.\n"	
+	fi
+	 
 	echo -ne "\n";
 
 }
@@ -109,6 +104,7 @@ fi
 
 maxAppFolder="/Applications/Max5";
 FrameworkFolder="/Library/Frameworks";
+ApplicationSupportFolder="/Library/Application Support/Jamoma";
 C74Folder="$maxAppFolder/Cycling '74"; 
 TapTools="$maxAppFolder/Cycling '74/extensions/tap.tools.mxo";
 remove5;

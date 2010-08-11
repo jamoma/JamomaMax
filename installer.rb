@@ -27,7 +27,8 @@ else
   @tempDistro = "#{@installers}/temp/distro"
   @max = "#{@tempDistro}/Applications/Max5"
   @tempDepend = "#{@installers}/temp/dependencies/Applications/Max5/Cycling '74"
-  
+  @path_shared_libs = "/Library/Application Support/Jamoma/"
+    
 end
 @c74 = "#{@max}/Cycling '74"
 @log_root        = "#{@installers}/logs"
@@ -39,7 +40,6 @@ end
 @path_graph      = "#{@git_root}/Modules/Graph"
 @path_ruby        = "#{@git_root}/Modules/Ruby"
 @path_dependencies = "#{@git_root}/Modules/Dependencies" 
-@path_shared_libs = "/Library/Application Support/Jamoma/Libraries"
 
 ###################################################################
 # Get Revision Info -- BAD FORM, BUT THIS COPY/PASTED FROM build.rb
@@ -225,7 +225,7 @@ if win32?
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/layout.xml"                   	root/patches/templates/layout.xml`
 
   puts " Copying readme, license, etc...."
-  `cp "#{@git_root}/Tools/installertools/GNU-LGPL.rtf" 					root/License.rtf`
+  `cp "#{@git_root}/Tools/installertools/License.rtf" 					root/License.rtf`
   `cp "#{@git_root}/Tools/installertools/ReadMe.template.rtf"   			root/ReadMe.rtf`
 
   puts " Removing files that are not needed (.zips, mac, externs, etc)..."
@@ -272,7 +272,7 @@ if win32?
   `mkdir Jamoma-#{@version}`
   `cp Jamoma.msi Jamoma-#{@version}`
   `cp ../ReadMe.rtf Jamoma-#{@version}`
-  `cp ../GNU-LGPL.rtf Jamoma-#{@version}/License.rtf`
+  `cp ../License.rtf Jamoma-#{@version}/License.rtf`
   `rm -f Jamoma-#{longVersion}.zip`
   `zip -r Jamoma-#{longVersion}.zip Jamoma-#{@version}`
 
@@ -284,7 +284,6 @@ else
   puts "  Creating installer directory structure @ #{@tempDistro} ..."
   `rm -rfv \"#{@installers}/temp\"`     # remove an old temp dir if it exists  
   `mkdir -pv \"#{@tempDistro}\"                                               ` # now make a clean one, and build dir structure in it
-  `mkdir -pv \"#{@tempDistro}/Library/Frameworks\"                            `
   `mkdir -pv \"#{@tempDistro}/Library/Application Support/Jamoma/Extensions\" `   
   `mkdir -pv \"#{@tempDistro}#{@path_shared_libs}\" `  
   `mkdir -pv \"#{@tempDepend}/Jamoma/Dependencies\" `
@@ -302,16 +301,8 @@ else
   puts "  Copying the Jamoma folder..."
   `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
 
-  puts "  Copying Shared Libraries"
-  `cp -rpv \"#{@path_shared_libs}/JamomaFoundation.dylib\"    \"#{@tempDistro}#{@path_shared_libs}/JamomaFoundation.dylib\" `
-  `cp -rpv \"#{@path_shared_libs}/JamomaDSP.dylib\"           \"#{@tempDistro}#{@path_shared_libs}/JamomaDSP.dylib\" `   
-  `cp -rpv \"#{@path_shared_libs}/JamomaGraph.dylib\"         \"#{@tempDistro}#{@path_shared_libs}/JamomaGraph.dylib\" ` 
-  `cp -rpv \"#{@path_shared_libs}/JamomaGraphics.dylib\"      \"#{@tempDistro}#{@path_shared_libs}/JamomaGraphics.dylib\" `
-  `cp -rpv \"#{@path_shared_libs}/JamomaAudioGraph.dylib\"    \"#{@tempDistro}#{@path_shared_libs}/JamomaAudioGraph.dylib\" `
-  `cp -rpv \"#{@path_shared_libs}/JamomaModular.dylib\"       \"#{@tempDistro}#{@path_shared_libs}/JamomaModular.dylib\" `
-
-  puts "  Copying Extensions"
-  `cp -rpv \"/Library/Application Support/Jamoma/Extensions\"/*                                   \"#{@tempDistro}/Library/Application Support/Jamoma/Extensions\"`
+  puts "  Copying Shared Libraries & Extensions"
+  `cp -rpv \"#{@path_shared_libs}\"                           \"#{@tempDistro}#{@path_shared_libs}\"`
 
   puts "  Copying Externals"
   `cp -rpv \"#{@git_root}/Builds/MaxMSP\"                                                                \"#{@c74}/Jamoma/externals\"`
@@ -343,8 +334,8 @@ else
   puts "  Copying readme, license, etc...."
   `cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"          \"#{@installers}/resources\"             `
   `cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"          \"#{@installers}/Jamoma\"                `
-  `cp \"#{@git_root}/Tools/installertools/GNU-LGPL.rtf\"        \"#{@installers}/resources/License.rtf\" `
-  `cp \"#{@git_root}/Tools/installertools/GNU-LGPL.rtf\"        \"#{@installers}/Jamoma/License.rtf\"    `
+  `cp \"#{@git_root}/Tools/installertools/License.rtf\"        \"#{@installers}/resources/License.rtf\" `
+  `cp \"#{@git_root}/Tools/installertools/License.rtf\"        \"#{@installers}/Jamoma/License.rtf\"    `
   `cp \"#{@git_root}/Tools/installertools/Uninstall.command\"   \"#{@installers}/Jamoma/Uninstall.command\"                 `
 
   puts "  Building Package -- this could take a while..."
