@@ -1,9 +1,9 @@
 {
 	"patcher" : 	{
 		"fileversion" : 1,
-		"rect" : [ 42.0, 50.0, 950.0, 611.0 ],
+		"rect" : [ -1518.0, 176.0, 950.0, 611.0 ],
 		"bglocked" : 0,
-		"defrect" : [ 42.0, 50.0, 950.0, 611.0 ],
+		"defrect" : [ -1518.0, 176.0, 950.0, 611.0 ],
 		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -394,13 +394,13 @@
 ,
 					"patching_rect" : [ 389.0, 477.5, 67.0, 19.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
 						"default_fontname" : "Arial",
 						"fontname" : "Arial",
 						"default_fontsize" : 12.0,
-						"globalpatchername" : "",
 						"fontface" : 0,
 						"fontsize" : 12.0,
-						"default_fontface" : 0
+						"globalpatchername" : ""
 					}
 ,
 					"text" : "p subfolder"
@@ -739,13 +739,13 @@
 ,
 					"patching_rect" : [ 130.5, 317.5, 67.0, 19.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
 						"default_fontname" : "Arial",
 						"fontname" : "Arial",
 						"default_fontsize" : 12.0,
-						"globalpatchername" : "",
 						"fontface" : 0,
 						"fontsize" : 12.0,
-						"default_fontface" : 0
+						"globalpatchername" : ""
 					}
 ,
 					"text" : "p subfolder"
@@ -1344,7 +1344,7 @@
 					"destination" : [ "obj-15", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ],
-					"source" : [ "obj-56", 0 ]
+					"source" : [ "obj-56", 1 ]
 				}
 
 			}
