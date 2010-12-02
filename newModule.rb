@@ -4,6 +4,8 @@
 glibdir = "."
 Dir.chdir glibdir             # change to libdir so that requires work
 glibdir = Dir.pwd
+
+$main_repository = true
 require "supports/jamomalib"
 
 
@@ -23,7 +25,7 @@ end
 
 moduleName = ARGV[0]
 moduleType = "control"
-parentFolderPath = "#{glibdir}/../Modules/Modular/Jamoma/modules"
+parentFolderPath = "#{glibdir}/../Modules/Modular/Max/modules"
 
 moduleType = ARGV[1] if ARGV.length>1
 parentFolderPath = ARGV[2] if ARGV.length>2
@@ -35,7 +37,7 @@ templateName = "_template~"     if moduleType == "audio"
 templateName = "_sur.template~" if moduleType == "spatialization"
 templateName = "_template%"     if moduleType == "video"
 templateName = "_gl.template%"  if moduleType == "openGL"
-templateFolder = "#{glibdir}/../Modules/Modular/Jamoma/modules/#{moduleType}/#{templateName}"
+templateFolder = "#{glibdir}/../Modules/Modular/Max/modules/#{moduleType}/#{templateName}"
 
 
 ###################################################################
