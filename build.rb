@@ -136,6 +136,9 @@ load "build.rb"
 Dir.chdir "#{glibdir}/../Modules/Modular"
 load "build.rb"
 
+Dir.chdir "#{glibdir}/../Modules/Documentation"
+load "build.rb"
+
 if win32?
   # At the moment we don't build TTRuby for Windows
   # If someone is interested in doing that, please feel free!
