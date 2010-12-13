@@ -106,7 +106,6 @@ doUpdate "Test"
 doUpdateSimple "Modules/Documentation"
 doUpdateSimple "Modules/Dependencies"
 doUpdateSimple "Modules/Ruby"
-doUpdateSimple "Modules/TheGitter" 
 
 divider
 
