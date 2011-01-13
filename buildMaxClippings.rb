@@ -9,6 +9,8 @@ glibdir = Dir.pwd
 # $main_repository = true
 # require "supports/jamomalib"
 
+# TODO now that it works, the script should be re-done from scratch in a sexier way...
+
 modulesPath = "#{glibdir}/../Modules/Modular/Max/modules"
 clippingsPath = "#{glibdir}/../Installers/temp/distro/Applications/Max5/patches/clippings/jamoma"
 initPath = "#{glibdir}/../Installers/temp/distro/Applications/Max5/Cycling '74/init"
