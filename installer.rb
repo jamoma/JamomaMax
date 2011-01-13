@@ -224,6 +224,9 @@ if win32?
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jmod.template.video%.maxpat"  	root/patches/templates/jmod.template.video%.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/layout.xml"                   	root/patches/templates/layout.xml`
 
+  puts " Building Max clippings..."
+  `ruby buildMaxClippings.rb`
+  
   puts " Copying readme, license, etc...."
   `cp "#{@git_root}/Tools/installertools/License.rtf" 					root/License.rtf`
   `cp "#{@git_root}/Tools/installertools/ReadMe.template.rtf"   			root/ReadMe.rtf`
@@ -297,6 +300,9 @@ else
   `mkdir -pv \"#{@installers}/resources\"                               `
   `mkdir -pv \"#{@installers}/Jamoma\"                                  `
   `mkdir -pv \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0\"    `
+
+  puts " Building Max clippings..."
+  `ruby buildMaxClippings.rb`
 
   puts "  Copying the Jamoma folder..."
   `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
