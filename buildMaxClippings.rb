@@ -76,7 +76,7 @@ end
 
 def writeMaxDataBase (myModule, initPath)
   moduleName = myModule.sub(/.+\/jmod.(.*).maxpat/,'\1')
-  moduleType = myModule.sub(/.+\/(audio|control|data|openGL|spatialization|video)\/.*maxpat/, '\1 modules')
+  moduleType = myModule.sub(/.+\/(audio|control|data|openGL|spatialization|video)\/.*maxpat/, '\1')
   
   FileUtils.mkdir_p("#{initPath}") unless File.exist?("#{initPath}")
   
