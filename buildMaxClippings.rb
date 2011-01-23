@@ -81,7 +81,7 @@ def writeMaxDataBase (myModule, initPath)
   FileUtils.mkdir_p("#{initPath}") unless File.exist?("#{initPath}")
   
   jamomaInitFile = File.new("#{initPath}/jamoma-init.txt", "a+")
-  jamomaInitFile.write("max db.addmetadata jmod.clip.#{moduleName} clipping tag Jamoma;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag #{moduleType};\n\n" )
+  jamomaInitFile.write("max db.addmetadata jmod.clip.#{moduleName} clipping tag Jamoma;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag \"#{moduleType} module\";\n\n" )
   jamomaInitFile.close
 
 end
