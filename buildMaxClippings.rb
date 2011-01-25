@@ -24,10 +24,10 @@ def writePatch(myModule, clippingsPath)
   puts "======== #{moduleType} ========"
   puts "#{moduleName}"
   FileUtils.mkdir_p("#{clippingsPath}/#{moduleType}") unless File.exist?("#{clippingsPath}/#{moduleType}")
-  FileUtils.rm("#{clippingsPath}/#{moduleType}/#{moduleName}.maxpat") if File.exist?("#{clippingsPath}/#{moduleType}/#{moduleName}.maxpat")
+  FileUtils.rm("#{clippingsPath}/#{moduleType}/jmod.clip.#{moduleName}.maxpat") if File.exist?("#{clippingsPath}/#{moduleType}/jmod.clip.#{moduleName}.maxpat")
   
     
-  clp = File.open("#{clippingsPath}/#{moduleType}/#{moduleName}.maxpat", "w+")
+  clp = File.open("#{clippingsPath}/#{moduleType}/jmod.clip.#{moduleName}.maxpat", "w+")
   clp.write("{
      \"patcher\" :   {
        \"fileversion\" : 1,
@@ -80,8 +80,8 @@ def writeMaxDataBase (myModule, initPath)
   
   FileUtils.mkdir_p("#{initPath}") unless File.exist?("#{initPath}")
   
-  jamomaInitFile = File.open("#{initPath}/jamoma-init.txt", "a+")
-  jamomaInitFile.write("max db.addmetadata #{moduleName} clipping tag Jamoma;\nmax db.addmetadata #{moduleName} clipping tag #{moduleType};\n" )
+  jamomaInitFile = File.new("#{initPath}/jamoma-init.txt", "a+")
+  jamomaInitFile.write("max db.addmetadata jmod.clip.#{moduleName} clipping tag Jamoma;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag \"#{moduleType} module\";\n\n" )
   jamomaInitFile.close
 
 end
