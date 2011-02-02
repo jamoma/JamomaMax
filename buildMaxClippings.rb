@@ -14,20 +14,19 @@ glibdir = Dir.pwd
 modulesPath = "#{glibdir}/../Modules/Modular/Max/modules"
 clippingsPath = "#{glibdir}/../Installers/temp/distro/Applications/Max5/patches/clippings/jamoma"
 initPath = "#{glibdir}/../Installers/temp/distro/Applications/Max5/Cycling '74/init"
+userLibModulesPath = "#{glibdir}/../UserLib"
 
 
-
-def writePatch(myModule, clippingsPath)
-  moduleType = myModule.sub(/.+\/(audio|control|data|openGL|spatialization|video)\/.*maxpat/, '\1 modules')
+def writePatch(myModule, clippingsPath, moduleType)
   moduleName = myModule.sub(/.+\/jmod.(.*).maxpat/,'\1')
   
-  puts "======== #{moduleType} ========"
+  puts "======== #{moduleType} modules ========"
   puts "#{moduleName}"
-  FileUtils.mkdir_p("#{clippingsPath}/#{moduleType}") unless File.exist?("#{clippingsPath}/#{moduleType}")
-  FileUtils.rm("#{clippingsPath}/#{moduleType}/jmod.clip.#{moduleName}.maxpat") if File.exist?("#{clippingsPath}/#{moduleType}/jmod.clip.#{moduleName}.maxpat")
+  FileUtils.mkdir_p("#{clippingsPath}/#{moduleType}\ modules") unless File.exist?("#{clippingsPath}/#{moduleType}\ modules")
+  FileUtils.rm("#{clippingsPath}/#{moduleType}\ modules/jmod.clip.#{moduleName}.maxpat") if File.exist?("#{clippingsPath}/#{moduleType}\ modules/jmod.clip.#{moduleName}.maxpat")
   
     
-  clp = File.open("#{clippingsPath}/#{moduleType}/jmod.clip.#{moduleName}.maxpat", "w+")
+  clp = File.open("#{clippingsPath}/#{moduleType}\ modules/jmod.clip.#{moduleName}.maxpat", "w+")
   clp.write("{
      \"patcher\" :   {
        \"fileversion\" : 1,
@@ -74,9 +73,8 @@ def buildIndex (myModule)
 # build module index
 end
 
-def writeMaxDataBase (myModule, initPath)
+def writeMaxDataBase (myModule, initPath, moduleType)
   moduleName = myModule.sub(/.+\/jmod.(.*).maxpat/,'\1')
-  moduleType = myModule.sub(/.+\/(audio|control|data|openGL|spatialization|video)\/.*maxpat/, '\1')
   
   FileUtils.mkdir_p("#{initPath}") unless File.exist?("#{initPath}")
   
@@ -100,7 +98,19 @@ modules = Array::new
 modules = search.split("\n")
 
 modules.each do |jmod|
-  writePatch(jmod, clippingsPath)
-  writeMaxDataBase(jmod, initPath)
+  puts jmod
+  moduleType = jmod.sub(/.+\/(audio|control|data|openGL|spatialization|video)\/.*maxpat/, '\1')
+  writePatch(jmod, clippingsPath, moduleType)
+  writeMaxDataBase(jmod, initPath, moduleType)
 end
 
+search = `find #{userLibModulesPath} -name jmod.*maxpat` #Does this only work on OSX ?
+
+modules.clear
+modules = search.split("\n")
+
+modules.each do |jmod|
+  moduleAuthor = jmod.sub(/.*\/UserLib\/(.*)\/.*maxpat/, 'UserLib/\1')
+  writePatch(jmod, clippingsPath, moduleAuthor)
+  writeMaxDataBase(jmod, initPath, moduleAuthor)
+end
