@@ -109,6 +109,7 @@ doUpdateSimple "Modules/Ruby"
 
 divider
 
+doUpdateUserLib "ag.granular"
 doUpdateUserLib "GDIF"   
 doUpdateUserLib "Holophon"  
 doUpdateUserLib "Jamoma.Ircam.FTM" 
