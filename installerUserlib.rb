@@ -85,7 +85,10 @@ else
     #`rm -rfv "#{@c74}/Holophon/lib"`
     `rm -rfv "#{@c74}/Holophon/Max-HoloPlayer_4.2.1"`
     `rm -rfv "#{@c74}/Holophon/toC\'74-java-lib"`
-           
+  
+  puts " creating clippings"
+  `ruby buildUserLibMaxClippings.rb`
+             
   # pkg building
   puts "  building installer pkg..."
   `/Developer/usr/bin/packagemaker --verbose --root \"#{@root}\" --id org.jamoma.#{@name} --out \"#{@dmgroot}/#{@name}.pkg\" --version #{@version} --title #{@name}-#{@version} --target 10.5 --no-relocate --root-volume-only`

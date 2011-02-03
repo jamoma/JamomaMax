@@ -11,15 +11,14 @@ glibdir = Dir.pwd
 
 # TODO now that it works, the script should be re-done from scratch in a sexier way...
 
-modulesPath = "#{glibdir}/../Modules/Modular/Max/modules"
-clippingsPath = "#{glibdir}/../Installers/temp/distro/Applications/Max5/patches/clippings/jamoma"
-initPath = "#{glibdir}/../Installers/temp/distro/Applications/Max5/Cycling '74/init"
-userLibModulesPath = "#{glibdir}/../UserLib"
-
+clippingsPath = "#{glibdir}/../InstallerUserlib/Mac/root/Applications/Max5/patches/clippings/jamoma"
+initPath = "#{glibdir}/../InstallerUserlib/Mac/root/Applications/Max5/Cycling '74/init"
+userLibModulesPath = "#{glibdir}/../InstallerUserlib/Mac/root/Applications/Max5/Cycling '74/JamomaUserLib"
+#userLibModulesPath = "#{glibdir}/../UserLib"
 
 def writePatch(myModule, clippingsPath, moduleType)
+  moduleType = "users"
   moduleName = myModule.sub(/.+\/jmod.(.*).maxpat/,'\1')
-  
   puts "======== #{moduleType} modules ========"
   puts "#{moduleName}"
   FileUtils.mkdir_p("#{clippingsPath}/#{moduleType}\ modules") unless File.exist?("#{clippingsPath}/#{moduleType}\ modules")
@@ -91,7 +90,7 @@ end
 FileUtils.rm("#{initPath}/jamomaUserLib-init.txt") if File.exist?("#{initPath}/jamomaUserLib-init.txt")
 # FileUtils.rmdir("#{clippingsPath}") 
 
-search = `find #{userLibModulesPath} -name jmod.*maxpat` #Does this only work on OSX ?
+search = `find \"#{userLibModulesPath}\" -name jmod.*maxpat` #Does this only work on OSX ?
 
 modules = Array::new
 modules = search.split("\n")
