@@ -17,7 +17,7 @@ userLibModulesPath = "#{glibdir}/../InstallerUserlib/Mac/root/Applications/Max5/
 #userLibModulesPath = "#{glibdir}/../UserLib"
 
 def writePatch(myModule, clippingsPath, moduleType)
-  moduleType = "users"
+  moduleType = "user"
   moduleName = myModule.sub(/.+\/jmod.(.*).maxpat/,'\1')
   puts "======== #{moduleType} modules ========"
   puts "#{moduleName}"
