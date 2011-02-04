@@ -78,7 +78,7 @@ def writeMaxDataBase (myModule, initPath, moduleType)
   FileUtils.mkdir_p("#{initPath}") unless File.exist?("#{initPath}")
   
   jamomaInitFile = File.new("#{initPath}/jamomaUserLib-init.txt", "a+")
-  jamomaInitFile.write("max db.addmetadata jmod.clip.#{moduleName} clipping tag Jamoma;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag UserLib;\n\n" )
+  jamomaInitFile.write("max db.addmetadata jmod.clip.#{moduleName} clipping tag Jamoma;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag UserLib;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag #{moduleType};\n\n" )
   jamomaInitFile.close
 
 end
@@ -96,7 +96,7 @@ modules = Array::new
 modules = search.split("\n")
 
 modules.each do |jmod|
-  moduleAuthor = jmod.sub(/.*\/UserLib\/(.*)\/.*maxpat/, 'UserLib/\1')
+  moduleAuthor = jmod.sub(/.*\/JamomaUserLib\/(.*)\/.*\/.*maxpat/, '\1')
   writePatch(jmod, clippingsPath, moduleAuthor)
   writeMaxDataBase(jmod, initPath, moduleAuthor)
 end
