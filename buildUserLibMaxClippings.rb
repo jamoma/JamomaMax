@@ -23,8 +23,8 @@ def writePatch(myModule, clippingsPath, moduleType)
   puts "#{moduleName}"
   FileUtils.mkdir_p("#{clippingsPath}/#{moduleType}\ modules") unless File.exist?("#{clippingsPath}/#{moduleType}\ modules")
   FileUtils.rm("#{clippingsPath}/#{moduleType}\ modules/jmod.clip.#{moduleName}.maxpat") if File.exist?("#{clippingsPath}/#{moduleType}\ modules/jmod.clip.#{moduleName}.maxpat")
-  
-    
+
+
   clp = File.open("#{clippingsPath}/#{moduleType}\ modules/jmod.clip.#{moduleName}.maxpat", "w+")
   clp.write("{
      \"patcher\" :   {
@@ -74,9 +74,9 @@ end
 
 def writeMaxDataBase (myModule, initPath, moduleType)
   moduleName = myModule.sub(/.+\/jmod.(.*).maxpat/,'\1')
-  
+
   FileUtils.mkdir_p("#{initPath}") unless File.exist?("#{initPath}")
-  
+
   jamomaInitFile = File.new("#{initPath}/jamomaUserLib-init.txt", "a+")
   jamomaInitFile.write("max db.addmetadata jmod.clip.#{moduleName} clipping tag Jamoma;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag UserLib;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag #{moduleType};\n\n" )
   jamomaInitFile.close
@@ -88,7 +88,7 @@ end
 ########################
 
 FileUtils.rm("#{initPath}/jamomaUserLib-init.txt") if File.exist?("#{initPath}/jamomaUserLib-init.txt")
-# FileUtils.rmdir("#{clippingsPath}") 
+# FileUtils.rmdir("#{clippingsPath}")
 
 search = `find \"#{userLibModulesPath}\" -name jmod.*maxpat` #Does this only work on OSX ?
 
@@ -96,7 +96,7 @@ modules = Array::new
 modules = search.split("\n")
 
 modules.each do |jmod|
-  moduleAuthor = jmod.sub(/.*\/JamomaUserLib\/(.*)\/.*\/.*maxpat/, '\1')
+  moduleAuthor = jmod.sub(/.*\/(JamomaUserLib|Orphans)\/([a-z|A-Z|0-9|.]*[^\/])\/+.*.maxpat/, '\2')
   writePatch(jmod, clippingsPath, moduleAuthor)
   writeMaxDataBase(jmod, initPath, moduleAuthor)
 end
