@@ -28,7 +28,7 @@ else
   @max = "#{@tempDistro}/Applications/Max5"
   @tempDepend = "#{@installers}/temp/dependencies/Applications/Max5/Cycling '74"
   @path_shared_libs = "/Library/Application Support/Jamoma/"
-    
+
 end
 @c74 = "#{@max}/Cycling '74"
 @log_root        = "#{@installers}/logs"
@@ -39,7 +39,7 @@ end
 @path_graphics   = "#{@git_root}/Modules/Graphics"
 @path_graph      = "#{@git_root}/Modules/Graph"
 @path_ruby        = "#{@git_root}/Modules/Ruby"
-@path_dependencies = "#{@git_root}/Modules/Dependencies" 
+@path_dependencies = "#{@git_root}/Modules/Dependencies"
 
 ###################################################################
 # Get Revision Info -- BAD FORM, BUT THIS COPY/PASTED FROM build.rb
@@ -99,7 +99,7 @@ end
 #  @error_log.flush
 #  trap("SIGINT") { die }
 #end
-#  
+#
 #def die
 #  close_logs
 #  exit 0
@@ -128,7 +128,7 @@ end
 ###################################################################
 # here is where we actually build the installer
 ###################################################################
-  puts " "  
+  puts " "
   puts "  Version string is set to Version #{@version}"
   puts " "
 
@@ -206,13 +206,13 @@ if win32?
   puts " Copying externals "
   `mkdir "#{@c74}/Jamoma/library/externals"`
   `cp "#{@git_root}/Builds/MaxMSP"/*.mxe 							"#{@c74}/Jamoma/library/externals/"`
-	
+
   puts " Moving things around : loader, templates, etc..."
 	#`mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll				            root/support`
 	`cp "#{@git_root}/Modules/Dependencies/Max/WinXP/support"/* root/support `
   `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe"                   				"#{@c74}/extensions/jcom.loader.mxe"`
   `cp "#{@c74}/Jamoma/support"/*.maxdefaults   						                        "#{@c74}/default-settings"`
-  `cp "#{@c74}/Jamoma/support"/*.maxdefines                           						"#{@c74}/default-definitions"`  
+  `cp "#{@c74}/Jamoma/support"/*.maxdefines                           						"#{@c74}/default-definitions"`
   `cp "#{@path_graphics}/implementations/MaxMSP/jcom.label"/*.maxdefines          "#{@c74}/default-definitions"`
   `cp "#{@c74}/Jamoma/documentation/jamoma-overview.maxpat" 				                root/patches/extras/jamoma-overview.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/_Jamoma_Patcher_.maxpat"      	root/patches/templates/_Jamoma_Patcher_.maxpat`
@@ -226,7 +226,7 @@ if win32?
 
   puts " Building Max clippings..."
   `ruby buildMaxClippings.rb`
-  
+
   puts " Copying readme, license, etc...."
   `cp "#{@git_root}/Tools/installertools/License.rtf" 					root/License.rtf`
   `cp "#{@git_root}/Tools/installertools/ReadMe.template.rtf"   			root/ReadMe.rtf`
@@ -265,9 +265,9 @@ if win32?
   `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo JamomaSupport.wxs`
   `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo JamomaExtensions.wxs`
   `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo main.wxs`
-  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo ui.wxs` 
-  
-  puts " Now making the installer" 
+  `../wix/candle.exe -dvar.ProductVersion="#{@version}" -dvar.ProductName="Jamoma #{@version}" /nologo ui.wxs`
+
+  puts " Now making the installer"
   puts `../wix/light.exe /nologo /out Jamoma.msi main.wixobj JamomaC74.wixobj JamomaPatches.wixobj JamomaSupport.wixobj JamomaExtensions.wixobj ui.wixobj ../wix/wixui.wixlib -loc ../wix/WixUI_en-us.wxl`
 
   # Make Zip Archive
@@ -285,10 +285,10 @@ else
   create_logs
 
   puts "  Creating installer directory structure @ #{@tempDistro} ..."
-  `rm -rfv \"#{@installers}/temp\"`     # remove an old temp dir if it exists  
+  `rm -rfv \"#{@installers}/temp\"`     # remove an old temp dir if it exists
   `mkdir -pv \"#{@tempDistro}\"                                               ` # now make a clean one, and build dir structure in it
-  `mkdir -pv \"#{@tempDistro}/Library/Application Support/Jamoma/Extensions\" `   
-  `mkdir -pv \"#{@tempDistro}#{@path_shared_libs}\" `  
+  `mkdir -pv \"#{@tempDistro}/Library/Application Support/Jamoma/Extensions\" `
+  `mkdir -pv \"#{@tempDistro}#{@path_shared_libs}\" `
   `mkdir -pv \"#{@tempDepend}/Jamoma/Dependencies\" `
   `mkdir -pv \"#{@max}\"                                                `
   `mkdir -pv \"#{@max}/patches/templates\"                              `
@@ -297,12 +297,17 @@ else
   `mkdir -pv \"#{@c74}/extensions\"                                     `
   `mkdir -pv \"#{@c74}/default-definitions\"                            `
   `mkdir -pv \"#{@c74}/default-settings\"                               `
+  `mkdir -pv \"#{@c74}/init\"                                           `
+  `mkdir -pv \"#{@c74}/object-palettes\"                                `
   `mkdir -pv \"#{@installers}/resources\"                               `
   `mkdir -pv \"#{@installers}/Jamoma\"                                  `
   `mkdir -pv \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0\"    `
 
-  puts " Building Max clippings..."
+  puts "  Building Max clippings..."
   `ruby buildMaxClippings.rb`
+
+  puts "  Copying Jamoma configuration file..."
+  `cp -rpv \"#{@git_root}/Modules/Modular/Max/support/JamomaConfiguration.xml\"         \"#{@c74}/init/JamomaConfiguration.xml\"`
 
   puts "  Copying the Jamoma folder..."
   `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
@@ -314,11 +319,11 @@ else
   `cp -rpv \"#{@git_root}/Builds/MaxMSP\"                                                                \"#{@c74}/Jamoma/externals\"`
 #  puts "  Removing ≈-Externals"
 #  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.mxo`
-#  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.maxhelp` 
+#  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.maxhelp`
 
   puts "  Copying TTRuby"
   `cp -rpv \"#{@path_ruby}/library/TTRuby.bundle\"     \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0/TTRuby.bundle\"`
-  
+
   puts "  Copying Dependencies folder"
    `cp -rpv \"#{@path_dependencies}/Max/Mac\"/*                                                                \"#{@tempDepend}/Jamoma/Dependencies\"`
   #
@@ -333,8 +338,9 @@ else
   `mv \"#{@c74}/Jamoma/externals/jcom.loader.mxo\"              \"#{@c74}/extensions/\"         `
   `mv \"#{@c74}/Jamoma/externals\"/*.maxhelp                    \"#{@c74}/Jamoma/documentation/jamoma-help/\"         `
   `mv \"#{@c74}/Jamoma/support\"/*.maxdefaults                  \"#{@c74}/default-settings\"    `
-  `mv \"#{@c74}/Jamoma/support\"/*.maxdefines                   \"#{@c74}/default-definitions\" `    
-  `cp \"#{@path_graphics}/implementations/MaxMSP/jcom.label\"/*.maxdefines                   \"#{@c74}/default-definitions\" `    
+  `mv \"#{@c74}/Jamoma/support\"/*.maxdefines                   \"#{@c74}/default-definitions\" `
+  `cp \"#{@path_graphics}/implementations/MaxMSP/jcom.label\"/*.maxdefines                   \"#{@c74}/default-definitions\" `
+  `cp \"#{@c74}/Jamoma/object-palettes\"/*                      \"#{@c74}/object-palettes\"     `
   `rm -rfv \"#{@c74}/Jamoma/support\"                                                           `
 
   puts "  Copying readme, license, etc...."
@@ -352,7 +358,7 @@ else
   `/Developer/usr/bin/packagemaker --verbose  --doc \"#{@git_root}/Tools/installertools/packageMakerScript.pmdoc\" --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --target 10.5 --domain system --root-volume-only`
   #puts "COMPLETED packagemaker COMMAND"
   #puts
-  
+
   # Warning: the zip thing seems to be a real problem on the Mac using OS 10.5 at least...  Renaming the zip ends up causing the install to fail
   #puts "  Zipping the Installer..."
   #cmd("rm -rfv \"#{@git_root}/Installers/Jamoma-0.4.6.zip\"")
