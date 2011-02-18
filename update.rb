@@ -13,7 +13,7 @@ if ARGV.length > 0
   @branch = ARGV[0]
 else
   result = `git branch`
-  result.each_line { |line| 
+  result.each_line { |line|
     if line.match(/\*.*/)
       line.gsub!(/\*/, " ")
       @branch = line.strip
@@ -21,7 +21,7 @@ else
   }
 end
 
-puts "JAMOMA UPDATING TO branch: #{@branch}  FROM remote: #{@remote}"  
+puts "JAMOMA UPDATING TO branch: #{@branch}  FROM remote: #{@remote}"
 
 
 #################################################################
@@ -37,7 +37,7 @@ end
 def doUpdateSimple name
   puts "UPDATING: #{name}"
   Dir.chdir "#{@glibdir}/../#{name}"
-  
+
   result = `git checkout #{@branch}`
   if result.match(/error.*/)
     puts "NOTE: checking out tracking branch..."
@@ -50,25 +50,25 @@ end
 
 #################################################################
 
-def doUpdateUserLib name     
+def doUpdateUserLib name
   doUpdateSimple("UserLib/#{name}")
-end  
+end
 
 #################################################################
 
-def doUpdate name     
-  doUpdateSimple("Modules/#{name}")  
+def doUpdate name
+  doUpdateSimple("Modules/#{name}")
   Dir.chdir "#{@glibdir}/../Modules/#{name}"
-  puts `ruby update.rb` 
+  puts `ruby update.rb`
   divider
-end  
+end
 
 #################################################################
 
 
 
 puts "UPDATING MAIN REPOSITORY..."
-Dir.chdir "#{@glibdir}/.." 
+Dir.chdir "#{@glibdir}/.."
 
 divider
 
@@ -89,7 +89,7 @@ puts `git submodule foreach co master`
 
 divider
 
-################################################################# 
+#################################################################
 
 doUpdateSimple "Tools/supports"
 
@@ -98,10 +98,10 @@ divider
 doUpdate "Foundation"
 doUpdate "DSP"
 doUpdate "Graphics"
-doUpdate "Graph" 
+doUpdate "Graph"
 doUpdate "AudioGraph"
 doUpdate "Modular"
-doUpdate "Test"     
+doUpdate "Test"
 
 doUpdateSimple "Modules/Documentation"
 doUpdateSimple "Modules/Dependencies"
@@ -109,19 +109,27 @@ doUpdateSimple "Modules/Ruby"
 
 divider
 
-doUpdateUserLib "ag.granular"
-doUpdateUserLib "GDIF"   
-doUpdateUserLib "Holophon"  
-doUpdateUserLib "Jamoma.Ircam.FTM" 
-doUpdateUserLib "Jamoma.Ircam.IMTR"  
-doUpdateUserLib "Jamoma.Ircam.Spat"
-doUpdateUserLib "MusicSpace"  
-doUpdateUserLib "NavNav"  
-doUpdateUserLib "Schumacher"  
-doUpdateUserLib "SoundhackWrappers"
-doUpdateUserLib "support"
-doUpdateUserLib "Tap.Tools"  
-doUpdateUserLib "ViMiC"  
-doUpdateUserLib "Z" 
- 
+# doUpdateUserLib "ag.granular"
+# doUpdateUserLib "GDIF"
+# doUpdateUserLib "Holophon"
+# doUpdateUserLib "Jamoma.Ircam.FTM"
+# doUpdateUserLib "Jamoma.Ircam.IMTR"
+# doUpdateUserLib "Jamoma.Ircam.Spat"
+# doUpdateUserLib "MusicSpace"
+# doUpdateUserLib "NavNav"
+# doUpdateUserLib "Schumacher"
+# doUpdateUserLib "SoundhackWrappers"
+# doUpdateUserLib "support"
+# doUpdateUserLib "Tap.Tools"
+# doUpdateUserLib "ViMiC"
+# doUpdateUserLib "Z"
+
+ulDirContent = `ls "#{@glibdir}/../UserLib"`
+ulModules = Array::new
+ulModules = ulDirContent.split("\n")
+
+ulModules.each do | ulGitDir |
+  doUpdateUserLib(ulGitDir) unless ulGitDir == "Orphans"
+end
+
 divider
