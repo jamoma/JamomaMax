@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby -wKU
+#!/usr/bin/ruby -wKU
 
 # First include the functions in the jamoma lib
 glibdir = "."
