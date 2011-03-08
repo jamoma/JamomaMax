@@ -85,7 +85,7 @@ divider
 
 puts "SUBMODULE INIT/UPDATE"
 puts `git submodule update --init;`
-puts `git submodule foreach co master`
+puts `git submodule foreach checkout master`
 
 divider
 
