@@ -321,8 +321,8 @@ else
 #  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.mxo`
 #  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.maxhelp`
 
-  puts "  Copying TTRuby"
-  `cp -rpv \"#{@path_ruby}/library/TTRuby.bundle\"     \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0/TTRuby.bundle\"`
+  puts "  Copying Ruby bundle"
+  `cp -rpv \"#{@path_ruby}/library/Jamoma.bundle\"     \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0/Jamoma.bundle\"`
 
   puts "  Copying Dependencies folder"
    `cp -rpv \"#{@path_dependencies}/Max/Mac\"/*                                                                \"#{@tempDepend}/Jamoma/Dependencies\"`
