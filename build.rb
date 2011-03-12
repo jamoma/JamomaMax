@@ -144,5 +144,9 @@ if win32?
   # If someone is interested in doing that, please feel free!
 else
   Dir.chdir "#{glibdir}/../Modules/Ruby"
-  load "build.rb"      
+  load "build.rb"
+  puts
+  puts "Installing Jamoma Ruby support -- this may require your password"
+  puts "If you just press enter without entering your password, then the updated Jamoma Ruby support will not be installed for your use."
+  load "install.rb"
 end
