@@ -117,34 +117,46 @@ quietly do
 #  ARGV = [configuration, clean, debug, git_tag, git_rev]
   ARGV = [configuration, clean, debug]
 end
-                     
+
+
+# Get a list of submodules that need to be built
+submodules = Dir.entries("#{glibdir}/../Modules")
+
+# Build the essentials first, since the order in which they are built is important
 Dir.chdir "#{glibdir}/../Modules/Foundation"
-load "build.rb"      
+load "build.rb"
+submodules.delete "Foundation"
                      
 Dir.chdir "#{glibdir}/../Modules/DSP"
 load "build.rb"      
+submodules.delete "DSP"
                      
-Dir.chdir "#{glibdir}/../Modules/Graphics"
-load "build.rb"      
-
 Dir.chdir "#{glibdir}/../Modules/Graph"
 load "build.rb"
+submodules.delete "Graph"
                      
 Dir.chdir "#{glibdir}/../Modules/AudioGraph"
 load "build.rb"      
-                     
-Dir.chdir "#{glibdir}/../Modules/Modular"
-load "build.rb"
+submodules.delete "AudioGraph"
 
-Dir.chdir "#{glibdir}/../Modules/Documentation"
-load "build.rb"
+# Build everything else in the 'Modules' folder
+submodules.each {|submodule| 
+  if submodule[0] != '.' && File.exists?("#{glibdir}/../Modules/#{submodule}/build.rb")
+    if submodule == "Documentation"
+      puts "Skipping Documentation Generation -- we need to iron out bugs here and re-enable."
+      puts
+    else
+      Dir.chdir "#{glibdir}/../Modules/#{submodule}"
+      load "build.rb"
+    end
+  end
+}
 
+# Install Ruby Support
 if win32?
   # At the moment we don't build TTRuby for Windows
   # If someone is interested in doing that, please feel free!
 else
-  Dir.chdir "#{glibdir}/../Modules/Ruby"
-  load "build.rb"
   puts
   puts "Installing Jamoma Ruby support -- this may require your password"
   puts "If you just press enter without entering your password, then the updated Jamoma Ruby support will not be installed for your use."
