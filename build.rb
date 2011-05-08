@@ -160,5 +160,6 @@ else
   puts
   puts "Installing Jamoma Ruby support -- this may require your password"
   puts "If you just press enter without entering your password, then the updated Jamoma Ruby support will not be installed for your use."
+  Dir.chdir "#{glibdir}/../Modules/Ruby"
   load "install.rb"
 end
