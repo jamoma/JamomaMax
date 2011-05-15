@@ -28,7 +28,7 @@ else
   @max = "#{@tempDistro}/Applications/Max5"
   @tempDepend = "#{@installers}/temp/dependencies/Applications/Max5/Cycling '74"
   @path_shared_libs = "/usr/local/jamoma/lib"
-
+  @path_extensions = "/Library/Application Support/Jamoma/Extensions"
 end
 @c74 = "#{@max}/Cycling '74"
 @log_root        = "#{@installers}/logs"
@@ -289,6 +289,7 @@ else
   `mkdir -pv \"#{@tempDistro}\"                                               ` # now make a clean one, and build dir structure in it
   `mkdir -pv \"#{@tempDistro}/usr/local/lib\" `
   `mkdir -pv \"#{@tempDistro}#{@path_shared_libs}\" `
+  `mkdir -pv \"#{@tempDistro}#{@path_extensions}\" `
   `mkdir -pv \"#{@tempDepend}/Jamoma/Dependencies\" `
   `mkdir -pv \"#{@max}\"                                                `
   `mkdir -pv \"#{@max}/patches/templates\"                              `
@@ -313,7 +314,7 @@ else
   `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
 
   puts "  Copying Shared Libraries & Extensions"
-  #{}`cp -pv \"#{@path_shared_libs}\"/*.dylib                    \"#{@tempDistro}#{@path_shared_libs}\"`
+  `cp -pv \"#{@path_extensions}\"/*.ttdylib                    \"#{@tempDistro}#{@path_extensions}\"`
   
   `cp -pv \"#{@git_root}/Modules/Foundation/library/build/UninstalledProducts\"/*.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`  
   `ln -s /usr/local/jamoma/lib/JamomaFoundation.dylib                                     \"#{@tempDistro}/usr/local/lib\"`
