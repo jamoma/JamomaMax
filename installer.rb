@@ -368,10 +368,10 @@ else
   puts "  Creating Disk Image..."
   if version_mod.match(/rc(.*)/)
     `rm -rfv \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"`
-    `hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-#{version_mod}-Mac.dmg\"`
+    `hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-#{version_mod}.dmg\"`
   else
     `rm -rfv \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"`
-    `hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"`
+    `hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}.dmg\"`
   end
 
 
