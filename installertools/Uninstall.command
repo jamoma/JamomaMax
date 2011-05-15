@@ -54,6 +54,7 @@ function doRemove {
 		sudo rm -Rf "$ApplicationSupportFolder" && echo -ne "... done.\n"
 	fi
 
+# the older Jamoma 0.5 folder in Libary/frameworks
    if [ -e "$FrameworkFolder" ] ; then
 			echo -ne "- 0.5 Modular Framework ($FrameworkFolder/JamomaModular.framework)"
 		sudo rm -Rf "$FrameworkFolder/JamomaModular.framework" && echo -ne "... done.\n"
@@ -70,6 +71,12 @@ function doRemove {
 			echo -ne "- 0.5 Foundation Framework ($FrameworkFolder/JamomaFoundation.framework)"
 		sudo rm -Rf "$FrameworkFolder/JamomaFoundation.framework" && echo -ne "... done.\n"	
 	fi
+# the new Jamoma 0.55 folder in usr/local	
+	if [ -e "$usrLocalLibFolder" ]; then
+				echo -ne "- removing Jamoma libs from /usr/local" 
+			sudo rm -Rf "$usrLocalLibFolder" && echo -ne "... done.\n"
+			sudo rm -f "$usrLocalLibFolder/../lib/"Jamoma* && echo -ne "... done.\n"
+		fi
 	 
 	echo -ne "\n";
 
@@ -98,15 +105,14 @@ whichVersion=0;
 if [[ -e "/sysbuild/Development" ]]; then
 	maxAppFolder="/sysbuild/Development";
 	C74Folder="$maxAppFolder/Cycling '74";
-	TapTools="$maxAppFolder/Cycling '74/extensions";
 	remove5;
 fi
 
 maxAppFolder="/Applications/Max5";
 FrameworkFolder="/Library/Frameworks";
 ApplicationSupportFolder="/Library/Application Support/Jamoma";
+usrLocalLibFolder="/usr/local/jamoma";
 C74Folder="$maxAppFolder/Cycling '74"; 
-TapTools="$maxAppFolder/Cycling '74/extensions/tap.tools.mxo";
 remove5;
 
 echo -ne "done"
