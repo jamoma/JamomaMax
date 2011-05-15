@@ -27,7 +27,7 @@ else
   @tempDistro = "#{@installers}/temp/distro"
   @max = "#{@tempDistro}/Applications/Max5"
   @tempDepend = "#{@installers}/temp/dependencies/Applications/Max5/Cycling '74"
-  @path_shared_libs = "/Library/Application Support/Jamoma/"
+  @path_shared_libs = "/usr/local/jamoma/lib"
 
 end
 @c74 = "#{@max}/Cycling '74"
@@ -287,7 +287,7 @@ else
   puts "  Creating installer directory structure @ #{@tempDistro} ..."
   `rm -rfv \"#{@installers}/temp\"`     # remove an old temp dir if it exists
   `mkdir -pv \"#{@tempDistro}\"                                               ` # now make a clean one, and build dir structure in it
-  `mkdir -pv \"#{@tempDistro}/Library/Application Support/Jamoma/Extensions\" `
+  `mkdir -pv \"#{@tempDistro}/usr/local/lib\" `
   `mkdir -pv \"#{@tempDistro}#{@path_shared_libs}\" `
   `mkdir -pv \"#{@tempDepend}/Jamoma/Dependencies\" `
   `mkdir -pv \"#{@max}\"                                                `
@@ -313,7 +313,13 @@ else
   `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
 
   puts "  Copying Shared Libraries & Extensions"
-  `cp -rpv \"#{@path_shared_libs}\"                           \"#{@tempDistro}#{@path_shared_libs}\"`
+  `cp -pv \"#{@path_shared_libs}\"/*.dylib                    \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaFoundation.dylib         \"#{@tempDistro}/usr/local/lib\"`
+  `ln -s /usr/local/jamoma/lib/JamomaDSP.dylib                \"#{@tempDistro}/usr/local/lib\"`
+  `ln -s /usr/local/jamoma/lib/JamomaGraph.dylib              \"#{@tempDistro}/usr/local/lib\"`
+  `ln -s /usr/local/jamoma/lib/JamomaAudioGraph.dylib         \"#{@tempDistro}/usr/local/lib\"`
+  `ln -s /usr/local/jamoma/lib/JamomaGraphics.dylib           \"#{@tempDistro}/usr/local/lib\"`
+  `ln -s /usr/local/jamoma/lib/JamomaModular.dylib            \"#{@tempDistro}/usr/local/lib\"`
 
   puts "  Copying Externals"
   `cp -rpv \"#{@git_root}/Builds/MaxMSP\"                                                                \"#{@c74}/Jamoma/externals\"`
