@@ -313,13 +313,26 @@ else
   `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
 
   puts "  Copying Shared Libraries & Extensions"
-  `cp -pv \"#{@path_shared_libs}\"/*.dylib                    \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaFoundation.dylib         \"#{@tempDistro}/usr/local/lib\"`
-  `ln -s /usr/local/jamoma/lib/JamomaDSP.dylib                \"#{@tempDistro}/usr/local/lib\"`
-  `ln -s /usr/local/jamoma/lib/JamomaGraph.dylib              \"#{@tempDistro}/usr/local/lib\"`
-  `ln -s /usr/local/jamoma/lib/JamomaAudioGraph.dylib         \"#{@tempDistro}/usr/local/lib\"`
-  `ln -s /usr/local/jamoma/lib/JamomaGraphics.dylib           \"#{@tempDistro}/usr/local/lib\"`
-  `ln -s /usr/local/jamoma/lib/JamomaModular.dylib            \"#{@tempDistro}/usr/local/lib\"`
+  #{}`cp -pv \"#{@path_shared_libs}\"/*.dylib                    \"#{@tempDistro}#{@path_shared_libs}\"`
+  
+  `cp -pv \"#{@git_root}/Modules/Foundation/library/build/UninstalledProducts\"/*.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`  
+  `ln -s /usr/local/jamoma/lib/JamomaFoundation.dylib                                     \"#{@tempDistro}/usr/local/lib\"`
+  
+  `cp -pv \"#{@git_root}/Modules/DSP/library/build/UninstalledProducts\"/*.dylib          \"#{@tempDistro}#{@path_shared_libs}\"`  
+  `ln -s /usr/local/jamoma/lib/JamomaDSP.dylib                                            \"#{@tempDistro}/usr/local/lib\"`
+  
+  `cp -pv \"#{@git_root}/Modules/Graph/library/build/UninstalledProducts\"/*.dylib        \"#{@tempDistro}#{@path_shared_libs}\"`  
+  `ln -s /usr/local/jamoma/lib/JamomaGraph.dylib                                          \"#{@tempDistro}/usr/local/lib\"`
+  
+  `cp -pv \"#{@git_root}/Modules/AudioGraph/library/build/UninstalledProducts\"/*.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`  
+  `ln -s /usr/local/jamoma/lib/JamomaAudioGraph.dylib                                     \"#{@tempDistro}/usr/local/lib\"`
+  
+  `cp -pv \"#{@git_root}/Modules/Graphics/library/build/UninstalledProducts\"/*.dylib     \"#{@tempDistro}#{@path_shared_libs}\"`  
+  `ln -s /usr/local/jamoma/lib/JamomaGraphics.dylib                                       \"#{@tempDistro}/usr/local/lib\"`
+  
+  `cp -pv \"#{@git_root}/Modules/Modular/library/build/UninstalledProducts"/*.dylib       \"#{@tempDistro}#{@path_shared_libs}\"`  
+  `ln -s /usr/local/jamoma/lib/JamomaModular.dylib                                        \"#{@tempDistro}/usr/local/lib\"`
+
 
   puts "  Copying Externals"
   `cp -rpv \"#{@git_root}/Builds/MaxMSP\"                                                                \"#{@c74}/Jamoma/externals\"`
