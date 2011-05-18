@@ -194,7 +194,9 @@ if win32?
   `cp "#{@git_root}/Builds/JamomaDSP.dll"  						root/support`
   `cp "#{@git_root}/Builds/JamomaGraph.dll"  						root/support`
   `cp "#{@git_root}/Builds/JamomaAudioGraph.dll"  						root/support`
+  `cp "#{@git_root}/Builds/JamomaGraphics.dll"  						root/support`
   `cp "#{@git_root}/Builds/JamomaModular.dll"  						root/support`
+  `cp "#{@git_root}/Modules/DSP/extensions/SoundfileLib/libsndfile/libsndfile-1.dll"		root/support`
   `cp "#{@git_root}/Modules/DSP/library/portaudio/Release/PortAudio.dll"		root/support`
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libcairo-2.dll"		root/support`
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libpng12-0.dll"		root/support`
