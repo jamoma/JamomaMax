@@ -175,10 +175,13 @@ if win32?
   `mkdir root/patches`
   `mkdir root/patches/extras`
   `mkdir root/patches/templates`
+  `mkdir root/patches/clippings`
+  `mkdir root/patches/clippings/jamoma`
   `mkdir root/support`
   `mkdir "root/Cycling '74/default-definitions"`
   `mkdir "root/Cycling '74/default-settings"`
   `mkdir "root/Cycling '74/extensions"`
+  `mkdir "root/Cycling '74/init"`
   `mkdir "root/Common Files"`
   `mkdir "root/Common Files/Jamoma"`
   `mkdir "root/Common Files/Jamoma/Extensions"`
@@ -205,18 +208,20 @@ if win32?
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libexpat-1.dll"		root/support`
   `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/freetype6.dll"		root/support`
 
-  puts " Copying externals "
+  puts " Copying externals"
   `mkdir "#{@c74}/Jamoma/library/externals"`
   `cp "#{@git_root}/Builds/MaxMSP"/*.mxe 							"#{@c74}/Jamoma/library/externals/"`
 
   puts " Moving things around : loader, templates, etc..."
 	#`mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll				            root/support`
-	`cp "#{@git_root}/Modules/Dependencies/Max/WinXP/support"/* root/support `
-  `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe"                   				"#{@c74}/extensions/jcom.loader.mxe"`
-  `cp "#{@c74}/Jamoma/support"/*.maxdefaults   						                        "#{@c74}/default-settings"`
-  `cp "#{@c74}/Jamoma/support"/*.maxdefines                           						"#{@c74}/default-definitions"`
-  `cp "#{@path_graphics}/implementations/MaxMSP/jcom.label"/*.maxdefines          "#{@c74}/default-definitions"`
-  `cp "#{@c74}/Jamoma/documentation/jamoma-overview.maxpat" 				                root/patches/extras/jamoma-overview.maxpat`
+  `cp "#{@git_root}/Modules/Dependencies/Max/WinXP/support"/*						root/support `
+  `cp "#{@git_root}/Builds/MaxMSP"/*.maxhelp										"#{@c74}/Jamoma/documentation/jamoma-help/"`
+  `cp "#{@git_root}/Builds/MaxMSP/jamoma-objectmappings.txt"						"#{@c74}/init/"`
+  `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe"                   			"#{@c74}/extensions/jcom.loader.mxe"`
+  `cp "#{@c74}/Jamoma/support"/*.maxdefaults										"#{@c74}/default-settings"`
+  `cp "#{@c74}/Jamoma/support"/*.maxdefines                           				"#{@c74}/default-definitions"`
+  `cp "#{@path_graphics}/implementations/MaxMSP/jcom.label"/*.maxdefines			"#{@c74}/default-definitions"`
+  `cp "#{@c74}/Jamoma/documentation/jamoma-overview.maxpat"							root/patches/extras/jamoma-overview.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/_Jamoma_Patcher_.maxpat"      	root/patches/templates/_Jamoma_Patcher_.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jalg.template.audio~.maxpat"  	root/patches/templates/jalg.template.audio~.maxpat`
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/jalg.template.video%.maxpat"  	root/patches/templates/jalg.template.video%.maxpat`
@@ -227,10 +232,14 @@ if win32?
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/layout.xml"                   	root/patches/templates/layout.xml`
 
   puts " Building Max clippings..."
+  Dir.chdir("#{@git_root}/Tools")
   `ruby buildMaxClippings.rb`
+  Dir.chdir("#{@git_root}/Tools/installertools/Windows")
+  `cp -r "#{@git_root}/Installers/temp/distro/Applications/Max5/patches/clippings/jamoma"				root/patches/clippings/jamoma`
+  `cp -r "#{@git_root}/Installers/temp/distro/Applications/Max5/Cycling '74/init/jamoma-init.txt"	"#{@c74}/init/"`
 
   puts " Copying readme, license, etc...."
-  `cp "#{@git_root}/Tools/installertools/License.rtf" 					root/License.rtf`
+  `cp "#{@git_root}/Tools/installertools/License.rtf" 						root/License.rtf`
   `cp "#{@git_root}/Tools/installertools/ReadMe.template.rtf"   			root/ReadMe.rtf`
 
   puts " Removing files that are not needed (.zips, mac, externs, etc)..."
