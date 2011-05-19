@@ -214,7 +214,7 @@ if win32?
 
   puts " Moving things around : loader, templates, etc..."
 	#`mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll				            root/support`
-  `cp "#{@git_root}/Modules/Dependencies/Max/WinXP/support"/*						root/support `
+  `cp "#{@git_root}/Modules/Dependencies/Max/WinXP/support"/*						root/support`
   `cp "#{@git_root}/Builds/MaxMSP"/*.maxhelp										"#{@c74}/Jamoma/documentation/jamoma-help/"`
   `cp "#{@git_root}/Builds/MaxMSP/jamoma-objectmappings.txt"						"#{@c74}/init/"`
   `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe"                   			"#{@c74}/extensions/jcom.loader.mxe"`
@@ -235,7 +235,7 @@ if win32?
   Dir.chdir("#{@git_root}/Tools")
   `ruby buildMaxClippings.rb`
   Dir.chdir("#{@git_root}/Tools/installertools/Windows")
-  `cp -r "#{@git_root}/Installers/temp/distro/Applications/Max5/patches/clippings/jamoma"				root/patches/clippings/jamoma`
+  `cp -r "#{@git_root}/Installers/temp/distro/Applications/Max5/patches/clippings/jamoma"				root/patches/clippings/`
   `cp -r "#{@git_root}/Installers/temp/distro/Applications/Max5/Cycling '74/init/jamoma-init.txt"	"#{@c74}/init/"`
 
   puts " Copying readme, license, etc...."
