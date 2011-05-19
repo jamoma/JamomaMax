@@ -20,7 +20,7 @@ xcodeProjs.each do |proj|
 
 	unless File.exist?("#{vcproj}")
 		puts "CREATING MSVC PROJECT:  " + vcproj + "\n"
-		`cp ./Modules/AudioGraph/implementations/MaxMSP/gain/jcom.gain.vcproj #{vcproj}`
+		`cp ./Modules/AudioGraph/implementations/MaxMSP/adc/jcom.adc.vcproj #{vcproj}`
 		created += 1
 	end
 end
