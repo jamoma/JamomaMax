@@ -216,7 +216,7 @@ if win32?
 	#`mv "#{@c74}/Jamoma/library/third-party/WinXP/support"/*.dll				            root/support`
   `cp "#{@git_root}/Modules/Dependencies/Max/WinXP/support"/*						root/support`
   `cp "#{@git_root}/Builds/MaxMSP"/*.maxhelp										"#{@c74}/Jamoma/documentation/jamoma-help/"`
-  `cp "#{@git_root}/Builds/MaxMSP/jamoma-objectmappings.txt"						"#{@c74}/init/"`
+  `cp "#{@git_root}/Builds/MaxMSP"/*.txt											"#{@c74}/init/"`
   `mv "#{@c74}/Jamoma/library/externals/jcom.loader.mxe"                   			"#{@c74}/extensions/jcom.loader.mxe"`
   `cp "#{@c74}/Jamoma/support"/*.maxdefaults										"#{@c74}/default-settings"`
   `cp "#{@c74}/Jamoma/support"/*.maxdefines                           				"#{@c74}/default-definitions"`
@@ -244,7 +244,7 @@ if win32?
 
   puts " Removing files that are not needed (.zips, mac, externs, etc)..."
   `rm -rf  "#{@c74}/Jamoma/support"`
-
+ if false  #setting a version number containing a letter causes the installer to report errors. this does not prevent proper installation, although should be avoided
  puts " Setting Version Number in Wix Source"
   f = File.open("main.wxs", "r+")
   str = f.read
@@ -252,7 +252,7 @@ if win32?
   f.rewind
   f.write(str)
   f.close
-
+ end
   puts " Building Package -- this could take a while..."
 
   puts " Making candle with paraffin"
