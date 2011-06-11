@@ -359,10 +359,11 @@ else
    `cp -rpv \"#{@path_dependencies}/Max/Mac\"/*                                                                \"#{@tempDepend}/Jamoma/Dependencies\"`
   #
 
-  puts "  Removing files that are not needed (.zips, windows externs, etc)..."
+  puts "  Removing files that are not needed (.zips, windows externs, UserLib clippings)..."
   `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`
   `rm -rfv \"#{@c74}/Jamoma/library/third-party/WinXP\"`
-
+  `rm -rfv \"#{@max}/patches/clippings/Jamoma/UserLib\"`
+  
   puts "  Moving things around (loader, templates, etc)..."
   `cp \"#{@c74}/Jamoma/documentation/jamoma-templates/\"*       \"#{@max}/patches/templates\"   `
   `cp \"#{@c74}/Jamoma/documentation/jamoma-overview.maxpat\"   \"#{@max}/patches/extras\"      `
@@ -371,7 +372,7 @@ else
   `mv \"#{@c74}/Jamoma/support\"/*.maxdefaults                  \"#{@c74}/default-settings\"    `
   `mv \"#{@c74}/Jamoma/support\"/*.maxdefines                   \"#{@c74}/default-definitions\" `
   `cp \"#{@path_graphics}/implementations/MaxMSP/jcom.label\"/*.maxdefines                   \"#{@c74}/default-definitions\" `
-  `cp \"#{@c74}/Jamoma/object-palettes\"/*                      \"#{@c74}/object-palettes\"     `
+  `mv \"#{@c74}/Jamoma/object-palettes\"/*                      \"#{@c74}/object-palettes\"     `
   `rm -rfv \"#{@c74}/Jamoma/support\"                                                           `
 
   puts "  Copying readme, license, etc...."

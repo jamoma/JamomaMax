@@ -20,9 +20,14 @@ function doRemove {
 		
 		echo -ne "- Default Settings Files ($C74Folder/default-settings/)"
 		sudo rm -f "$C74Folder/default-settings/"Jamoma* && echo -ne "... done.\n"
+		sudo rm -f "$C74Folder/init/"jamoma-init.txt && echo -ne "... done.\n"
 		
 		echo -ne "- Default Definitions Files ($C74Folder/default-definitions/)"
 		sudo rm -f "$C74Folder/default-definitions/"jcom* && echo -ne "... done.\n"
+		
+		echo -ne "- Object-palettes ($C74Folder/object-palettes/)"
+		sudo rm -f "$C74Folder/object-palettes/"jcom* && echo -ne "... done.\n"
+		sudo rm -f "$C74Folder/object-palettes/"jamoma* && echo -ne "... done.\n"
 		
 		echo -ne "- Extension File ($C74Folder/extensions/)"
 		sudo rm -Rf "$C74Folder/extensions/"jcom* && echo -ne "... done.\n"    
@@ -38,6 +43,9 @@ function doRemove {
 	if [ -e "$maxAppFolder" ] ; then		
 		echo -ne "- Extra Files ($maxAppFolder/patches/extras/)"
 		sudo rm -f "$maxAppFolder/patches/extras/"jamoma* && echo -ne "... done.\n"
+		
+		echo -ne "- Jamoma clippings ($maxAppFolder/patches/clippings/jamoma)"
+		sudo rm -Rf "$maxAppFolder/patches/clippings/jamoma" && echo -ne "... done.\n"
 		
 		echo -ne "- Template Files ($maxAppFolder/patches/templates/)"
 		sudo rm -f "$maxAppFolder/patches/templates/"jmod* && echo -ne "... done.\n"
