@@ -317,32 +317,34 @@ else
 
   puts "  Building Max clippings..."
   `ruby buildMaxClippings.rb`
-
-  puts "  Copying Jamoma configuration file..."
+# temp fix. Only run the command if the tag starts with "0.6.something" since the JamomaConfiguration.xml is 0.6.x only
+  if git_tag =~ /^0\.6.*/
+     puts "  Copying Jamoma configuration file..."
   `cp -rpv \"#{@git_root}/Modules/Modular/Max/support/JamomaConfiguration.xml\"         \"#{@c74}/init/JamomaConfiguration.xml\"`
+  end
 
   puts "  Copying the Jamoma folder..."
   `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
 
   puts "  Copying Shared Libraries & Extensions"
   `cp -pv \"#{@path_extensions}\"/*.ttdylib                    \"#{@tempDistro}#{@path_extensions}\"`
-  
-  `cp -pv \"#{@git_root}/Modules/Foundation/library/build/UninstalledProducts\"/*.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`  
+
+  `cp -pv \"#{@git_root}/Modules/Foundation/library/build/UninstalledProducts\"/*.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaFoundation.dylib                                     \"#{@tempDistro}/usr/local/lib\"`
-  
-  `cp -pv \"#{@git_root}/Modules/DSP/library/build/UninstalledProducts\"/*.dylib          \"#{@tempDistro}#{@path_shared_libs}\"`  
+
+  `cp -pv \"#{@git_root}/Modules/DSP/library/build/UninstalledProducts\"/*.dylib          \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaDSP.dylib                                            \"#{@tempDistro}/usr/local/lib\"`
-  
-  `cp -pv \"#{@git_root}/Modules/Graph/library/build/UninstalledProducts\"/*.dylib        \"#{@tempDistro}#{@path_shared_libs}\"`  
+
+  `cp -pv \"#{@git_root}/Modules/Graph/library/build/UninstalledProducts\"/*.dylib        \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaGraph.dylib                                          \"#{@tempDistro}/usr/local/lib\"`
-  
-  `cp -pv \"#{@git_root}/Modules/AudioGraph/library/build/UninstalledProducts\"/*.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`  
+
+  `cp -pv \"#{@git_root}/Modules/AudioGraph/library/build/UninstalledProducts\"/*.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaAudioGraph.dylib                                     \"#{@tempDistro}/usr/local/lib\"`
-  
-  `cp -pv \"#{@git_root}/Modules/Graphics/library/build/UninstalledProducts\"/*.dylib     \"#{@tempDistro}#{@path_shared_libs}\"`  
+
+  `cp -pv \"#{@git_root}/Modules/Graphics/library/build/UninstalledProducts\"/*.dylib     \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaGraphics.dylib                                       \"#{@tempDistro}/usr/local/lib\"`
-  
-  `cp -pv \"#{@git_root}/Modules/Modular/library/build/UninstalledProducts"/*.dylib       \"#{@tempDistro}#{@path_shared_libs}\"`  
+
+  `cp -pv \"#{@git_root}/Modules/Modular/library/build/UninstalledProducts"/*.dylib       \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaModular.dylib                                        \"#{@tempDistro}/usr/local/lib\"`
 
 
@@ -363,7 +365,7 @@ else
   `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`
   `rm -rfv \"#{@c74}/Jamoma/library/third-party/WinXP\"`
   `rm -rfv \"#{@max}/patches/clippings/Jamoma/UserLib\"`
-  
+
   puts "  Moving things around (loader, templates, etc)..."
   `cp \"#{@c74}/Jamoma/documentation/jamoma-templates/\"*       \"#{@max}/patches/templates\"   `
   `cp \"#{@c74}/Jamoma/documentation/jamoma-overview.maxpat\"   \"#{@max}/patches/extras\"      `

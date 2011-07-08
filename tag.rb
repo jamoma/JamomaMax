@@ -37,12 +37,13 @@ end
 tagOne "AudioGraph"
 tagOne "Dependencies"
 tagOne "DSP"
-tagOne "Foundation"   
+tagOne "Foundation"
 tagOne "Graph"
-tagOne "Graphics"  
+tagOne "Graphics"
 tagOne "Modular"
 tagOne "Ruby"
 tagOne "Test"
+tagOne "Documentation"
 
 
 #{}`git submodule foreach git remote prune origin`
