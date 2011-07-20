@@ -44,6 +44,7 @@ tagOne "Modular"
 tagOne "Ruby"
 tagOne "Test"
 tagOne "Documentation"
+tagOne "Plugtastic"
 
 
 #{}`git submodule foreach git remote prune origin`
