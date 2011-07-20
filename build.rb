@@ -163,3 +163,7 @@ else
   Dir.chdir "#{glibdir}/../Modules/Ruby"
   load "install.rb"
 end
+
+Dir.chdir "#{glibdir}/../Modules/Plugtastic"
+load "build.rb"      
+submodules.delete "Plugtastic"

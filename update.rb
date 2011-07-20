@@ -102,6 +102,7 @@ doUpdate "Graph"
 doUpdate "AudioGraph"
 doUpdate "Modular"
 doUpdate "Test"
+doUpdate "Plugtastic"
 
 doUpdateSimple "Modules/Documentation"
 doUpdateSimple "Modules/Dependencies"
