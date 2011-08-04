@@ -57,7 +57,7 @@ end
 
 #################################################################
 
-def doUpdateSimple name #TODO case @all
+def doUpdateSimple name
   if @all == true
     brch = @branch
   else
@@ -75,8 +75,6 @@ def doUpdateSimple name #TODO case @all
 
   puts `git pull #{@remote} #{brch}`
   puts `git submodule update --init;`
-  # oldBranch = @allBranches["#{name}"]
-  # `git checkout "#{oldBranch}"` unless oldBranch == @branch
 end
 
 #################################################################
