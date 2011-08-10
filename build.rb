@@ -71,7 +71,6 @@ if(clean)
     `rm -rf *.mxo`
     `rm -rf *.txt`
     
-    puts " "
     puts "  Cleaning Extensions folder "
     puts " "
     
@@ -145,6 +144,16 @@ Dir.chdir "#{glibdir}/../Modules/AudioGraph"
 load "build.rb"      
 submodules.delete "AudioGraph"
 
+if win32?
+  # TODO: as long as Plugtastic only compiles AU plugins, compiling for windows isn't useful  
+  # If someone is interested in doing that, please feel free!
+  submodules.delete "Plugtastic"  
+else
+  Dir.chdir "#{glibdir}/../Modules/Plugtastic"
+  load "build.rb"
+  submodules.delete "Plugtastic"
+end
+
 # Build everything else in the 'Modules' folder
 submodules.each {|submodule| 
   if submodule[0] != '.' && File.exists?("#{glibdir}/../Modules/#{submodule}/build.rb")
@@ -170,6 +179,4 @@ else
   load "install.rb"
 end
 
-Dir.chdir "#{glibdir}/../Modules/Plugtastic"
-load "build.rb"      
-submodules.delete "Plugtastic"
+
