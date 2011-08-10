@@ -68,10 +68,16 @@ if(clean)
 
   # Mac
   else
-
     `rm -rf *.mxo`
     `rm -rf *.txt`
-
+    
+    puts " "
+    puts "  Cleaning Extensions folder "
+    puts " "
+    
+    Dir.chdir "/Library/Application\ Support/Jamoma/Extensions"
+    `rm -rf *.ttdylib` 
+    Dir.chdir "#{glibdir}/../Builds/MaxMSP"
   end
 
 end
