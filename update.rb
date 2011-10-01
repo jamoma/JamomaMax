@@ -31,12 +31,12 @@ elsif  ARGV.length == 1
   @branch = ARGV[0]
   puts "JAMOMA UPDATING TO branch: #{@branch} FROM remote: #{@remote}"
   puts "MY BRANCH IS #{@branch}"
-  
+
 
 elsif ARGV.length == 2
   @all = true
   @branch = ARGV[0]
-  puts "JAMOMA UPDATING MODULES & SUBMODULES TO branch: #{@branch} FROM remote: #{@remote}"  
+  puts "JAMOMA UPDATING MODULES & SUBMODULES TO branch: #{@branch} FROM remote: #{@remote}"
 else
   puts "\nTOO MANY ARGUMENTS. USAGE IS AS FOLLOW"
   puts "update.rb -> update all modules and submodules to their current branch\n"
@@ -63,7 +63,7 @@ def doUpdateSimple name
   else
     brch = @allBranches["#{name}"]
   end
-  
+
   puts "UPDATING: #{name}"
   Dir.chdir "#{@glibdir}/../#{name}"
 
@@ -103,7 +103,7 @@ if @all == false
   divider
   puts "CACHING SUBMODULES ACTIVE BRANCH"
   divider
-  
+
   @allBranches = {}
 subModList = `git submodule foreach 'echo $path'`.split("\n")
 subModList.delete_if {|x| x =~ /^Entering/} # Here we filter out useless stuff printed by Git
@@ -114,6 +114,9 @@ subModList.each do |jamomaModule|
     if line.match(/\*.*/)
       line.gsub!(/\*/, " ")
       b = line.strip
+      if b == "(no branch)"
+        b = "master"
+      end
       puts "#{jamomaModule} is on branch #{b}"
       @allBranches["#{jamomaModule}"] = "#{b}"
     end
