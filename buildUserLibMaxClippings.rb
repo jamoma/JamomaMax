@@ -19,8 +19,10 @@ userLibModulesPath = "#{glibdir}/../InstallerUserlib/Mac/root/Applications/Max5/
 def writePatch(myModule, clippingsPath, moduleType)
   moduleType = "user"
   moduleName = myModule.sub(/.+\/jmod.(.*).maxpat/,'\1')
-  puts "======== #{moduleType} modules ========"
-  puts "#{moduleName}"
+  unless moduleName.match(/\s/)
+    puts "======== #{moduleType} modules ========"
+    puts "#{moduleName}"
+  end
   FileUtils.mkdir_p("#{clippingsPath}/#{moduleType}\ modules") unless File.exist?("#{clippingsPath}/#{moduleType}\ modules")
   FileUtils.rm("#{clippingsPath}/#{moduleType}\ modules/jmod.clip.#{moduleName}.maxpat") if File.exist?("#{clippingsPath}/#{moduleType}\ modules/jmod.clip.#{moduleName}.maxpat")
 
@@ -78,7 +80,9 @@ def writeMaxDataBase (myModule, initPath, moduleType)
   FileUtils.mkdir_p("#{initPath}") unless File.exist?("#{initPath}")
 
   jamomaInitFile = File.new("#{initPath}/jamomaUserLib-init.txt", "a+")
-  jamomaInitFile.write("max db.addmetadata jmod.clip.#{moduleName} clipping tag Jamoma;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag UserLib;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag #{moduleType};\n\n" )
+  unless moduleName.match(/\s/)
+    jamomaInitFile.write("max db.addmetadata jmod.clip.#{moduleName} clipping tag Jamoma;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag UserLib;\nmax db.addmetadata jmod.clip.#{moduleName} clipping tag #{moduleType};\n\n" )
+  end
   jamomaInitFile.close
 
 end
