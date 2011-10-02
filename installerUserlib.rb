@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby -wKU
+# encoding: utf-8
 
 ###################################################################
 # make an installer of the Jamoma UserLib

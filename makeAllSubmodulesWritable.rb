@@ -1,4 +1,6 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby -wKU
+# encoding: utf-8
+
 
 glibdir = "."
 Dir.chdir glibdir             # change to libdir so that requires work

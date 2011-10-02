@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby -wKU
+# encoding: utf-8
 
 if ARGV.length < 1
   puts "  required arg: the name of the submodule"

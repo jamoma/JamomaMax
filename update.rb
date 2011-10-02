@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby -wKU
+# encoding: utf-8
 
 # Usage:
 # "update.rb -> update all modules and submodules to their current branch"

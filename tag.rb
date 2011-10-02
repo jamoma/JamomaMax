@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby -wKU
+# encoding: utf-8
 
 # First include the functions in the jamoma lib
 glibdir = "."
