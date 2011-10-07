@@ -298,7 +298,8 @@ else
 
   puts "  Creating installer directory structure @ #{@tempDistro} ..."
   `rm -rfv \"#{@installers}/temp\"`     # remove an old temp dir if it exists
-  `rm -rfv \"#{@installers}/Jamoma/Jamoma*.pkg"`
+  `rm -rfv #{@installers}/Jamoma/*.pkg`
+  puts "#{@installers}/Jamoma/*.pkg"
   `mkdir -pv \"#{@tempDistro}\"                                               ` # now make a clean one, and build dir structure in it
   `mkdir -pv \"#{@tempDistro}/usr/local/lib\" `
   `mkdir -pv \"#{@tempDistro}#{@path_shared_libs}\" `
