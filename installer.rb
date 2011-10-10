@@ -7,6 +7,31 @@
 # note: all zips should be unzipped (3rd-party externs) too
 ###################################################################
 
+
+###################################################################
+# Check Args
+###################################################################
+
+if(ARGV.length == 0)
+  configuration = "Max5"
+end
+
+configuration = ARGV[0];
+ 	 if(configuration == "Max5")
+    		configuration = "Max5"
+  	else
+		if(configuration == "Max6")
+    			configuration = "Max6"  			
+		else 
+		  configuration = "Max5"
+	  end
+  end
+
+
+
+
+
+#####################################################################
 # First include the functions in the jamoma lib
 libdir = "."
 Dir.chdir libdir        # change to libdir so that requires work
@@ -26,8 +51,12 @@ if win32?
   @max = "#{@tempDistro}/root"
 else
   @tempDistro = "#{@installers}/temp/distro"
+  if (configuration == "Max6") 
+    @tempDepend = "#{@installers}/temp/dependencies/Applications/Max6/Cycling '74"    
+  else    
+    @tempDepend = "#{@installers}/temp/dependencies/Applications/Max5/Cycling '74"    
+  end
   @max = "#{@tempDistro}/Applications/Max5"
-  @tempDepend = "#{@installers}/temp/dependencies/Applications/Max5/Cycling '74"
   @path_shared_libs = "/usr/local/jamoma/lib"
   @path_extensions = "/Library/Application Support/Jamoma/Extensions"
 end
@@ -131,6 +160,7 @@ end
 ###################################################################
   puts " "
   puts "  Version string is set to Version #{@version}"
+  puts "  Installer will be created for #{configuration}"
   puts " "
 
 
@@ -386,6 +416,10 @@ else
   `cp \"#{@git_root}/Tools/installertools/License.rtf\"        \"#{@installers}/Jamoma/License.rtf\"    `
   `cp \"#{@git_root}/Tools/installertools/Uninstall.command\"   \"#{@installers}/Jamoma/Uninstall.command\"                 `
 
+  if (configuration == "Max6")
+    `mv #{@tempDistro}/Applications/Max5 #{@tempDistro}/Applications/Max6`
+  end
+
   puts "  Building Package -- this could take a while..."
   `rm -rfv \"#{@installers}/MacInstaller/Jamoma\"*.pkg`
 
@@ -400,7 +434,7 @@ else
   #cmd("rm -rfv \"#{@git_root}/Installers/Jamoma-0.4.6.zip\"")
   #cmd("zip -rj \"#{@git_root}/Installers/Jamoma.pkg.zip\" \"#{@git_root}/Installers/Jamoma.pkg\"")
   #cmd("mv \"#{@git_root}/Installers/Jamoma.pkg.zip\" \"#{@git_root}/Installers/Jamoma-0.4.6-Mac.pkg.zip\"")
-
+  
   puts "  Creating Disk Image..."
   if version_mod.match(/rc(.*)/)
     `rm -rfv \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"`
