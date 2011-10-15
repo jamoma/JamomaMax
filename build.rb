@@ -8,7 +8,7 @@ glibdir = Dir.pwd
 
 $main_repository = true
 
-require "supports/jamomalib"
+require "#{glibdir}/supports/jamomalib"
 
 
 ###################################################################
