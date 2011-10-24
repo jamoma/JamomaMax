@@ -198,7 +198,7 @@ end
 if ARGV.size < 2
   puts "must provide the path to the source and the path to the destination (including filename and extension)"
   puts "for example: "
-  puts "    ./yaml-to-maxref.rb ../../msp-externs/filterdetail/filterdetail.maxref.yml ../../maxmsp-misc/m5-docs/refpages-edits/msp-ref-edits/filterdetail_ref.xml"
+  puts "    ./yaml-to-maxref.rb ../Modules/Plugtastic/implementations/MaxMSP/jcom.plug.parameter/jcom.plug.parameter#.maxref.yml ../Modules/Plugtastic/implementations/MaxMSP/jcom.plug.parameter/jcom.plug.parameter#.maxref.xml"
   exit
 end
 
