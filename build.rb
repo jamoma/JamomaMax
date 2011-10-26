@@ -72,11 +72,13 @@ if(clean)
     `rm -rf *.mxo`
     `rm -rf *.txt`
     
-    puts "  Cleaning Extensions folder "
-    puts " "
-    
+    puts "  Cleaning Extensions folder "    
     Dir.chdir "/usr/local/jamoma/extensions"
     `rm -rf *.ttdylib` 
+    
+    puts "  Cleaning Include Header folder "
+    Dir.chdir "/usr/local/jamoma/includes"
+    `rm -rf *.*`
     Dir.chdir "#{glibdir}/../Builds/MaxMSP"
   end
 
