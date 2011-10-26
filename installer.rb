@@ -379,7 +379,9 @@ else
   `cp -pv \"#{@git_root}/Modules/Modular/library/build/UninstalledProducts"/*.dylib       \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaModular.dylib                                        \"#{@tempDistro}/usr/local/lib\"`
 
-
+  puts "  Copying header files used by plugtastic"
+  `cp -rpv /usr/local/jamoma/includes                   \"#{@tempDistro}/usr/local/jamoma/includes\"`
+  
   puts "  Copying Externals"
   `cp -rpv \"#{@git_root}/Builds/MaxMSP\"                                                                \"#{@c74}/Jamoma/externals\"`
 #  puts "  Removing ≈-Externals"
