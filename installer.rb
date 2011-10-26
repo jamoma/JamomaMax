@@ -58,7 +58,7 @@ else
   end
   @max = "#{@tempDistro}/Applications/Max5"
   @path_shared_libs = "/usr/local/jamoma/lib"
-  @path_extensions = "/Library/Application Support/Jamoma/Extensions"
+  @path_extensions = "/usr/local/jamoma/extensions"
 end
 @c74 = "#{@max}/Cycling '74"
 @log_root        = "#{@installers}/logs"
@@ -427,7 +427,7 @@ else
 
   #puts
   #puts "OUTPUT FROM packagemaker COMMAND:"
-  `/Developer/usr/bin/packagemaker --verbose  --doc \"#{@git_root}/Tools/installertools/packageMakerScript.pmdoc\" --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --target 10.6 --domain system --root-volume-only`
+  `/Developer/usr/bin/packagemaker --verbose  --doc \"#{@git_root}/Tools/installertools/packageMakerScript.pmdoc\" --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --target 10.5 --domain system --root-volume-only`
   #puts "COMPLETED packagemaker COMMAND"
   #puts
 
