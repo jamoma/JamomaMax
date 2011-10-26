@@ -379,7 +379,9 @@ else
   `cp -pv \"#{@git_root}/Modules/Modular/library/build/UninstalledProducts"/*.dylib       \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaModular.dylib                                        \"#{@tempDistro}/usr/local/lib\"`
 
-
+  puts "  Copying header files used by plugtastic"
+  `cp -rpv /usr/local/jamoma/includes                   \"#{@tempDistro}/usr/local/jamoma/includes\"`
+  
   puts "  Copying Externals"
   `cp -rpv \"#{@git_root}/Builds/MaxMSP\"                                                                \"#{@c74}/Jamoma/externals\"`
 #  puts "  Removing ≈-Externals"
@@ -425,7 +427,7 @@ else
 
   #puts
   #puts "OUTPUT FROM packagemaker COMMAND:"
-  `/Developer/usr/bin/packagemaker --verbose  --doc \"#{@git_root}/Tools/installertools/packageMakerScript.pmdoc\" --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --target 10.5 --domain system --root-volume-only`
+  `/Developer/usr/bin/packagemaker --verbose  --doc \"#{@git_root}/Tools/installertools/packageMakerScript.pmdoc\" --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --target 10.6 --domain system --root-volume-only`
   #puts "COMPLETED packagemaker COMMAND"
   #puts
 
