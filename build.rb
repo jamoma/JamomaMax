@@ -75,7 +75,7 @@ if(clean)
     puts "  Cleaning Extensions folder "
     puts " "
     
-    Dir.chdir "/Library/Application\ Support/Jamoma/Extensions"
+    Dir.chdir "/usr/local/jamoma/extensions"
     `rm -rf *.ttdylib` 
     Dir.chdir "#{glibdir}/../Builds/MaxMSP"
   end
