@@ -82,8 +82,8 @@ function doRemove {
 # the new Jamoma 0.55 folder in usr/local	
 	if [ -e "$usrLocalLibFolder" ]; then
 				echo -ne "- removing Jamoma libs from /usr/local" 
-			sudo rm -Rf "$usrLocalLibFolder" && echo -ne "... done.\n"
-			sudo rm -f "$usrLocalLibFolder/../lib/"Jamoma* && echo -ne "... done.\n"
+			sudo rm -Rf "$usrLocalLibFolder/../lib/"Jamoma*  && echo -ne "... done.\n"
+			sudo rm -Rf "$usrLocalLibFolder" && echo -ne "... done.\n"			
 		fi
 	 
 	echo -ne "\n";
