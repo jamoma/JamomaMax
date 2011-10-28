@@ -81,10 +81,16 @@ function doRemove {
 	fi
 # the new Jamoma 0.55 folder in usr/local	
 	if [ -e "$usrLocalLibFolder" ]; then
-				echo -ne "- removing Jamoma libs from /usr/local" 
-			sudo rm -Rf "$usrLocalLibFolder/../lib/"Jamoma*  && echo -ne "... done.\n"
-			sudo rm -Rf "$usrLocalLibFolder" && echo -ne "... done.\n"			
-		fi
+			echo -ne "- removing Jamoma libs from /usr/local" 
+		sudo rm -Rf "$usrLocalLibFolder/../lib/"Jamoma*  && echo -ne "... done.\n"
+		sudo rm -Rf "$usrLocalLibFolder" && echo -ne "... done.\n"			
+	fi
+	
+	if [ -e "$rubyFolder" ]; then
+			echo -ne "- removing Jamoma for Ruby" 
+		sudo rm -f "$rubyFolder/"Jamoma* && echo -ne "... done.\n"
+		sudo rm -f "$rubyFolder/"TTRuby* && echo -ne "... done.\n"					
+	fi
 	 
 	echo -ne "\n";
 
@@ -120,6 +126,7 @@ maxAppFolder="/Applications/Max5";
 FrameworkFolder="/Library/Frameworks";
 ApplicationSupportFolder="/Library/Application Support/Jamoma";
 usrLocalLibFolder="/usr/local/jamoma";
+rubyFolder="/Library/Ruby/Site/1.8/universal-darwin10.0";
 C74Folder="$maxAppFolder/Cycling '74"; 
 remove5;
 
