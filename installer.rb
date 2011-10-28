@@ -16,16 +16,16 @@ if(ARGV.length == 0)
   configuration = "Max5"
 end
 
-configuration = ARGV[0];
- 	 if(configuration == "Max5")
-    		configuration = "Max5"
-  	else
-		if(configuration == "Max6")
-    			configuration = "Max6"  			
-		else 
+#configuration = ARGV[0];
+# 	 if(configuration == "Max5")
+#    		configuration = "Max5"
+#  	else
+#		if(configuration == "Max6")
+#    			configuration = "Max6"  			
+#		else 
 		  configuration = "Max5"
-	  end
-  end
+#	  end
+#  end
 
 
 
@@ -53,10 +53,11 @@ else
   @tempDistro = "#{@installers}/temp/distro"
   if (configuration == "Max6") 
     @tempDepend = "#{@installers}/temp/dependencies/Applications/Max6/Cycling '74"    
+    @max = "#{@tempDistro}/Applications/Max6"
   else    
     @tempDepend = "#{@installers}/temp/dependencies/Applications/Max5/Cycling '74"    
+    @max = "#{@tempDistro}/Applications/Max5"
   end
-  @max = "#{@tempDistro}/Applications/Max5"
   @path_shared_libs = "/usr/local/jamoma/lib"
   @path_extensions = "/usr/local/jamoma/extensions"
 end
@@ -160,7 +161,7 @@ end
 ###################################################################
   puts " "
   puts "  Version string is set to Version #{@version}"
-  puts "  Installer will be created for #{configuration}"
+#  puts "  Installer will be created for #{configuration}"
   puts " "
 
 
@@ -418,9 +419,9 @@ else
   `cp \"#{@git_root}/Tools/installertools/License.rtf\"        \"#{@installers}/Jamoma/License.rtf\"    `
   `cp \"#{@git_root}/Tools/installertools/Uninstall.command\"   \"#{@installers}/Jamoma/Uninstall.command\"                 `
 
-  if (configuration == "Max6")
-    `mv #{@tempDistro}/Applications/Max5 #{@tempDistro}/Applications/Max6`
-  end
+#  if (configuration == "Max6")
+#    `mv #{@tempDistro}/Applications/Max5 #{@tempDistro}/Applications/Max6`
+#  end
 
   puts "  Building Package -- this could take a while..."
   `rm -rfv \"#{@installers}/MacInstaller/Jamoma\"*.pkg`
