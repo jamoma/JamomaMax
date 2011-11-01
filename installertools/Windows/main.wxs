@@ -2,7 +2,7 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
 
   <Product Name="Jamoma" Id="{BA3D3E15-B2A8-40FF-A04A-6D2A6B5EC967}" 
-	Language="1033" Codepage="1252" Version="0.6-a3" 
+	Language="1033" Codepage="1252" Version="0.5.2" 
 	Manufacturer="jamoma.org" UpgradeCode="{331F2681-7AE0-4BC3-A072-75F9777317C3}">
 
     <Package Id='????????-????-????-????-????????????' Keywords='Installer'

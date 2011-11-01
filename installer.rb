@@ -274,8 +274,10 @@ if win32?
   `cp "#{@git_root}/Tools/installertools/License.rtf" 						root/License.rtf`
   `cp "#{@git_root}/Tools/installertools/ReadMe.template.rtf"   			root/ReadMe.rtf`
 
-  puts " Removing files that are not needed (.zips, mac, externs, etc)..."
+  puts " Removing files that are not needed (.zips, mac, externs, , UserLib clippings etc.)..."
   `rm -rf  "#{@c74}/Jamoma/support"`
+  `rm -rfv \"#{@max}/patches/clippings/jamoma/UserLib\"`  
+
  if false  #setting a version number containing a letter causes the installer to report errors. this does not prevent proper installation, although should be avoided
  puts " Setting Version Number in Wix Source"
   f = File.open("main.wxs", "r+")
