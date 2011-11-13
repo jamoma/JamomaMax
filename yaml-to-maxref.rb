@@ -183,6 +183,9 @@ class YamlToMaxref
     formatter.write @xml, s
     #puts s
 
+    # todo: investigate the formatters thing to have something cleaner than the following
+    s.gsub! /<\?.*\?>/, '<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+    <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>'
     # Now that we have the XML, perform additional substitutions
     s.gsub! /(\s\#)(\S*)/ , ' <o>\2</o>' # Max objects
     s.gsub! /(\s)(jcom\S*)/, ' <jcom>\2</jcom>' #Jamoma objects
