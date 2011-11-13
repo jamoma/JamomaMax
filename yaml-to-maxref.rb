@@ -9,7 +9,7 @@ class YamlToMaxref
 
   attr :xml, true
 
-  def initialize    
+  def initialize
     @xml = Document.new
   end
 
@@ -18,18 +18,18 @@ class YamlToMaxref
     yaml = YAML.load_file(filepath)
     root = Element.new("c74object")
     root.attributes["name"] = filepath.split('/').last.sub(/\.maxref.yml/,'')
-    
+
     e = Element.new("digest")
     e.text = yaml["brief"]
     root.add_element e
- 
+
     e = Element.new("description")
     e.text = yaml["desc"]
     root.add_element e
     # TODO: linking (e.g. the <o> tags for objects in the text)
-    
+
     # METADATA ---------------------------------------------------------------------
-		
+
     e = Element.new("metadatalist")
 
     author = yaml["author"]
@@ -39,7 +39,7 @@ class YamlToMaxref
       meta.text = yaml["author"]
       e.add_element meta
     end
-  
+
     tags = yaml["tags"]
     if tags
       tags.each { |tag|
@@ -49,13 +49,13 @@ class YamlToMaxref
         e.add_element meta
        }
     end
-  
+
     root.add_element e
-    
+
     # ATTRIBUTES ---------------------------------------------------------------------
-    
+
     e = Element.new("attributelist")
-    
+
     attributes = yaml["attributes"]
     if attributes
       attributes.each { |a|
@@ -69,53 +69,53 @@ class YamlToMaxref
         end
         attribute.attributes["get"] = 1
         attribute.attributes["set"] = 1
-        
+
         attrdig = Element.new("digest")
         attrdig.text = a["desc"]
         attribute.add_element attrdig
-        
+
         attrdesc = Element.new("description")
         attrdesc.text = a["desc"]
-        attribute.add_element attrdesc  
-        
+        attribute.add_element attrdesc
+
         e.add_element attribute
       }
     end
 
     root.add_element e
-    
-    
+
+
     # MESSAGES ---------------------------------------------------------------------
-    
+
     e = Element.new("methodlist")
-    
+
     messages = yaml["messages"]
     if messages
       messages.each { |m|
         message = Element.new("method")
         message.attributes["name"] = m["name"]
-        
+
         messagedig = Element.new("digest")
         messagedig.text = m["desc"]
         message.add_element messagedig
-        
+
         messagedesc = Element.new("description")
         messagedesc.text = m["desc"]
         message.add_element messagedesc
-       
+
         # TODO: add arg list
-        
+
         e.add_element message
       }
     end
 
     root.add_element e
-    
-    
+
+
     # SEEALSO ---------------------------------------------------------------------
-		
+
     e = Element.new("seealsolist")
-  
+
     seealsos = yaml["seealso"]
     if seealsos
       seealsos.each { |s|
@@ -124,12 +124,12 @@ class YamlToMaxref
         e.add_element seealso
        }
     end
-  
+
     root.add_element e
-    
-    
+
+
     # MISC ---------------------------------------------------------------------
-		
+
     e = Element.new("misc")
     e.attributes["name"] = "Output"
 
@@ -138,31 +138,31 @@ class YamlToMaxref
       outputs.each { |o|
         output = Element.new("entry")
         output.attributes["name"] = o["name"]
-        
+
         outputdesc = Element.new("description")
         if (o["desc"].class == Array)
           ul = Element.new("ul")
-          o["desc"].each { |item| 
+          o["desc"].each { |item|
             li = Element.new("li")
             li.text = item
-            ul.add_element li 
+            ul.add_element li
           }
           outputdesc.add_element ul
         else
           outputdesc.text = o["desc"]
         end
         output.add_element outputdesc
-        
+
         e.add_element output
        }
     end
-  
+
     root.add_element e
-    
-      
-    
+
+
+
     # FINISH UP ---------------------------------------------------------------------
-    
+
     @xml.add_element root
   end
 
@@ -181,9 +181,9 @@ class YamlToMaxref
 
     formatter.write @xml, s
     #puts s
-    
+
     # Now that we have the XML, perform additional substitutions
-    s.gsub! /\#(\S*)/ , '<o>\1</o>'
+    s.gsub! /(\s\#)(\S*)/ , ' <o>\2</o>'
 
     f.write(s)
     f.close
