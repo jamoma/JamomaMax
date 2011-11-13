@@ -183,7 +183,9 @@ class YamlToMaxref
     #puts s
 
     # Now that we have the XML, perform additional substitutions
-    s.gsub! /(\s\#)(\S*)/ , ' <o>\2</o>'
+    s.gsub! /(\s\#)(\S*)/ , ' <o>\2</o>' # Max objects
+    s.gsub! /(\s)(jcom\S*)/, ' <jcom>\2</jcom>' #Jamoma objects
+    s.gsub! /(\s)(jmod\S*)/, ' <jmod>\2</jmod>' #Jamoma modules
 
     f.write(s)
     f.close
