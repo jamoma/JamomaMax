@@ -26,7 +26,6 @@ class YamlToMaxref
     e = Element.new("description")
     e.text = yaml["desc"]
     root.add_element e
-    # TODO: linking (e.g. the <o> tags for objects in the text)
 
     # METADATA ---------------------------------------------------------------------
 
