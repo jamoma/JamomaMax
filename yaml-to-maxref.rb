@@ -33,10 +33,12 @@ class YamlToMaxref
 
     author = yaml["author"]
     if author
+      author.each {|author|
       meta = Element.new("metadata")
       meta.attributes["name"] = "author"
-      meta.text = yaml["author"]
+      meta.text = author
       e.add_element meta
+    }
     end
 
     tags = yaml["tags"]
