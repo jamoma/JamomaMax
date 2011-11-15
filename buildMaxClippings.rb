@@ -14,7 +14,7 @@ glibdir = Dir.pwd
 modulesPath = "#{glibdir}/../Modules/Modular/Max/modules"
 clippingsPath = "#{glibdir}/../Installers/temp/distro/Applications/Max5/patches/clippings/jamoma"
 initPath = "#{glibdir}/../Installers/temp/distro/Applications/Max5/Cycling '74/init"
-userLibModulesPath = "#{glibdir}/../UserLib"
+# userLibModulesPath = "#{glibdir}/../UserLib"
 
 
 def writePatch(myModule, clippingsPath, moduleType)
@@ -104,13 +104,13 @@ modules.each do |jmod|
   writeMaxDataBase(jmod, initPath, moduleType)
 end
 
-search = `find #{userLibModulesPath} -name jmod.*maxpat` #Does this only work on OSX ?
-
-modules.clear
-modules = search.split("\n")
-
-modules.each do |jmod|
-  moduleAuthor = jmod.sub(/.*\/UserLib\/(.*)\/.*maxpat/, 'UserLib/\1')
-  writePatch(jmod, clippingsPath, moduleAuthor)
-  writeMaxDataBase(jmod, initPath, moduleAuthor)
-end
+# search = `find #{userLibModulesPath} -name jmod.*maxpat` #Does this only work on OSX ?
+# 
+# modules.clear
+# modules = search.split("\n")
+# 
+# modules.each do |jmod|
+#   moduleAuthor = jmod.sub(/.*\/UserLib\/(.*)\/.*maxpat/, 'UserLib/\1')
+#   writePatch(jmod, clippingsPath, moduleAuthor)
+#   writeMaxDataBase(jmod, initPath, moduleAuthor)
+# end
