@@ -94,8 +94,16 @@ version_min = version_digits[1] if version_digits.size() > 1
 version_maj = version_digits[0] if version_digits.size() > 0
 
 puts ""
+puts ""
+puts ""
+puts "  ??? DO YOU KNOW HOW TO CREATE A REALLY GREAT INSTALLER ???"
+puts ""
+puts "  http://redmine.jamoma.org/projects/jamoma/wiki/How_to_create_an_installer "
+puts ""
+puts ""
 puts "  Building Jamoma #{git_tag} (rev. #{git_rev})"
 puts ""
+
 if git_dirty_commits != '0'
 	puts "  !!! WARNING !!!"
 	puts "	THIS BUILD IS COMING FROM A DIRTY REVISION   "
