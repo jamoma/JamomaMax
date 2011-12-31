@@ -70,6 +70,7 @@ end
 @path_graphics   = "#{@git_root}/Modules/Graphics"
 @path_graph      = "#{@git_root}/Modules/Graph"
 @path_ruby        = "#{@git_root}/Modules/Ruby"
+@path_oscTextmateBundle = "#{@git_root}/Modules/Documentation/Tools/Textmate\ bundle"
 @path_dependencies = "#{@git_root}/Modules/Dependencies"
 
 ###################################################################
@@ -356,8 +357,8 @@ else
   `mkdir -pv \"#{@c74}/object-palettes\"                                `
   `mkdir -pv \"#{@installers}/resources\"                               `
   `mkdir -pv \"#{@installers}/Jamoma\"                                  `
-  `mkdir -pv \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0\"    `
-
+  `mkdir -pv \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0\"`
+  `mkdir -pv \"#{@tempDistro}/Library/Application\ Support/Avian/Bundles\"`
   puts "  Building Max clippings..."
   `ruby buildMaxClippings.rb`
 # temp fix. Only run the command if the tag starts with "0.6.something" since the JamomaConfiguration.xml is 0.6.x only
@@ -372,24 +373,27 @@ else
   puts "  Copying Shared Libraries & Extensions"
   `cp -pv \"#{@path_extensions}\"/*.ttdylib                    \"#{@tempDistro}#{@path_extensions}\"`
 
-  `cp -pv \"#{@git_root}/Modules/Foundation/library/build/UninstalledProducts\"/*.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaFoundation.dylib                                     \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/Foundation/library/build\"/JamomaFoundation.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaFoundation.dylib                                \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/DSP/library/build/UninstalledProducts\"/*.dylib          \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaDSP.dylib                                            \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/DSP/library/build\"/JamomaDSP.dylib          \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaDSP.dylib                                \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/Graph/library/build/UninstalledProducts\"/*.dylib        \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaGraph.dylib                                          \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/Graph/library/build\"/JamomaGraph.dylib        \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaGraph.dylib                                \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/AudioGraph/library/build/UninstalledProducts\"/*.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaAudioGraph.dylib                                     \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/AudioGraph/library/build\"/JamomaAudioGraph.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaAudioGraph.dylib                                \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/Graphics/library/build/UninstalledProducts\"/*.dylib     \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaGraphics.dylib                                       \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/Graphics/library/build\"/JamomaGraphics.dylib     \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaGraphics.dylib                                \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/Modular/library/build/UninstalledProducts"/*.dylib       \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaModular.dylib                                        \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/Modular/library/build"/JamomaModular.dylib       \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaModular.dylib                                \"#{@tempDistro}/usr/local/lib\"`
 
+  `cp -pv \"#{@git_root}/Modules/Plugtastic/library/build"/JamomaPlugtastic.dylib       \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaPlugtastic.dylib                                \"#{@tempDistro}/usr/local/lib\"`
+  
   puts "  Copying header files used by plugtastic"
   `cp -rpv /usr/local/jamoma/includes                   \"#{@tempDistro}/usr/local/jamoma/includes\"`
   
@@ -401,6 +405,10 @@ else
 
   puts "  Copying Ruby bundle"
   `cp -rpv \"#{@path_ruby}/library/Jamoma.bundle\"     \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0/Jamoma.bundle\"`
+
+  puts "  Copying Textmate bundle"
+  `cp -rpv \"#{@path_oscTextmateBundle}/OSC\ for\ Jamoma.tmbundle\"     \"#{@tempDistro}/Library/Application\ Support/Avian/Bundles/OSC\ for\ Jamoma.tmbundle\"`
+
 
   puts "  Copying Dependencies folder"
    `cp -rpv \"#{@path_dependencies}/Max/Mac\"/*                                                                \"#{@tempDepend}/Jamoma/Dependencies\"`

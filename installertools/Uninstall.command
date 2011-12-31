@@ -92,6 +92,11 @@ function doRemove {
 		sudo rm -f "$rubyFolder/"TTRuby* && echo -ne "... done.\n"					
 	fi
 	 
+	if [ -e "$textmateFolder" ]; then
+			echo -ne "- removing Jamoma Textmate bundles" 
+		sudo rm -Rf "$textmateFolder/"*Jamoma* && echo -ne "... done.\n"
+	fi
+	 
 	echo -ne "\n";
 
 }
@@ -127,6 +132,7 @@ FrameworkFolder="/Library/Frameworks";
 ApplicationSupportFolder="/Library/Application Support/Jamoma";
 usrLocalLibFolder="/usr/local/jamoma";
 rubyFolder="/Library/Ruby/Site/1.8/universal-darwin10.0";
+textmateFolder="/Library/Library/Application\ Support/Avian/Bundles";
 C74Folder="$maxAppFolder/Cycling '74"; 
 remove5;
 
