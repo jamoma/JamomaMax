@@ -72,10 +72,16 @@ if(clean)
     `rm -rf *.mxo`
     `rm -rf *.txt`
     
+    if (File.exists? "/usr/local/jamoma/lib")
+      puts "  Cleaning dylib folder "    
+      Dir.chdir "/usr/local/jamoma/lib"
+      `rm -rf *.*`
+    end
+    
     if (File.exists? "/usr/local/jamoma/extensions")
       puts "  Cleaning Extensions folder "    
       Dir.chdir "/usr/local/jamoma/extensions"
-      `rm -rf *.ttdylib`
+      `rm -rf *.*`
     end
     
     if (File.exists? "/usr/local/jamoma/includes")
