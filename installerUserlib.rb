@@ -4,12 +4,7 @@
 ###################################################################
 # make an installer of the Jamoma UserLib
 ###################################################################
-
-
-
 @name = "JamomaUserLib"
-
-
 ###################################################################
 
 # First include the functions in the jamoma lib
@@ -68,11 +63,13 @@ else
    `rm -rf "#{@c74}/support/wix"`
    `rm -rf "#{@c74}/support/platform.rb"`
    `rm -rf "#{@c74}/support/jamomalib.rb"`  
-   `rm -rf "#{@c74}/support/wininit.rb"`      
+   `rm -rf "#{@c74}/support/wininit.rb"`  
+   `rm -rf "#{@c74}/support/GenerateHTML.maxpat"`    
    `find "#{@c74}" -type d  -name ".git" -exec rm -rf '{}' ";" -print`
    `find "#{@c74}" -type d  -name ".svn" -exec rm -rf '{}' ";"`
    `find "#{@c74}" -type f  -name ".gitignore" -exec rm -rf '{}' ";"` 
    `find "#{@c74}" -type f  -name "*.msi" -exec rm -rf '{}' ";"` 
+  # `find "#{@c74}" -type f  -name "*.mxo" -exec rm -rf '{}' ";"` 
     puts "  removing old Qmanager from Z folder"
     `rm -rfv "#{@c74}/Z/Qmanager"`
     puts "  removing DOT folder"
@@ -87,17 +84,45 @@ else
     `rm -rfv "#{@c74}/Holophon/Max-HoloPlayer_4.2.1"`
     `rm -rfv "#{@c74}/Holophon/toC\'74-java-lib"`
   
-  puts " creating clippings"
+  puts "  creating clippings"
   `ruby buildUserLibMaxClippings.rb`
-             
+               
   # pkg building
-  puts "  building installer pkg..."
-  `/Developer/usr/bin/packagemaker --verbose --root \"#{@root}\" --id org.jamoma.#{@name} --out \"#{@dmgroot}/#{@name}.pkg\" --version #{@version} --title #{@name}-#{@version} --target 10.5 --no-relocate --root-volume-only`
+  puts " "
+  puts "  building installer pkg for Max5 ... this takes a while"
+  configuration = "Max5"
+  `/Developer/usr/bin/packagemaker --verbose --root \"#{@root}\" --id org.jamoma.#{@name}-#{configuration} --out \"#{@dmgroot}/#{@name}-#{configuration}.pkg\" --version #{configuration}-#{@version} --title #{@name}-#{@version} --target 10.5 --no-relocate --root-volume-only`
   # Note: we can add the following when there is a ReadMe/License/etc in the Git repository
   # --resources \"#{@installers}/resources\" 
 
   # distribution
-  puts "  assembling dmg..."
+  puts "  assembling dmg for Max5"
   `rm -rfv \"../InstallerUserlib/#{@name}-#{@version}.dmg\"`
-  `hdiutil create -srcfolder \"#{@dmgroot}\" \"../InstallerUserlib/#{@name}-#{@version}.dmg\"`
+  `hdiutil create -srcfolder \"#{@dmgroot}\" \"../InstallerUserlib/#{@name}-#{configuration}-#{@version}.dmg\"`
+  
+  `rm -rfv #{@root}/../#{@name}/*.*`
+  ## creating package with Max6 file path  
+  puts " "
+  puts "  setting path to Max6"
+  configuration = "Max6"  
+  `mv #{@root}/Applications/Max5 #{@root}/Applications/Max6`
+  `rm -rfv #{@root}/Applications/Max5`
+                    
+  # pkg building
+  puts "  building installer pkg for Max6 ... this takes a while"
+  `/Developer/usr/bin/packagemaker --verbose --root \"#{@root}\" --id org.jamoma.#{@name}-#{configuration} --out \"#{@dmgroot}/#{@name}-#{configuration}.pkg\" --version #{configuration}-#{@version} --title #{@name}-#{@version} --target 10.5 --no-relocate --root-volume-only`
+  # Note: we can add the following when there is a ReadMe/License/etc in the Git repository
+  # --resources \"#{@installers}/resources\" 
+
+  # distribution
+  puts "  assembling dmg for Max6"
+  `rm -rfv \"../InstallerUserlib/#{@name}-#{@version}.dmg\"`
+  `hdiutil create -srcfolder \"#{@dmgroot}\" \"../InstallerUserlib/#{@name}-#{configuration}-#{@version}.dmg\"`
+  # cleaning pkg
+  `rm -rfv #{@root}/../#{@name}/*.*` 
+  
+  puts " "
+  puts "  all done"
+  puts " "
+  
 end
