@@ -141,6 +141,9 @@ end
 # Get a list of submodules that need to be built
 submodules = Dir.entries("#{glibdir}/../Modules")
 
+# We don't want to build the Support folder itself
+submodules.delete "Support"
+
 # Build the essentials first, since the order in which they are built is important
 Dir.chdir "#{glibdir}/../Modules/Foundation"
 load "build.rb"
