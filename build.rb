@@ -7,7 +7,6 @@ Dir.chdir glibdir             # change to libdir so that requires work
 glibdir = Dir.pwd
 
 $main_repository = true
-
 require "#{glibdir}/Support/jamomalib"
 
 

@@ -2,13 +2,12 @@
 # encoding: utf-8
 
 
-glibdir = "."
+glibdir = "../Modules"
 Dir.chdir glibdir             # change to libdir so that requires work
 glibdir = Dir.pwd
 
 $main_repository = true
-
-require "supports/jamomalib"
+require "#{glibdir}/Support/jamomalib"
 
 
 def doOne submoduleName
