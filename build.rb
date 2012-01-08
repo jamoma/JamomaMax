@@ -2,13 +2,13 @@
 # encoding: utf-8 -wKU
 
 # First include the functions in the jamoma lib
-glibdir = "."
+glibdir = "../Modules"
 Dir.chdir glibdir             # change to libdir so that requires work
 glibdir = Dir.pwd
 
 $main_repository = true
 
-require "#{glibdir}/supports/jamomalib"
+require "#{glibdir}/Support/jamomalib"
 
 
 ###################################################################
