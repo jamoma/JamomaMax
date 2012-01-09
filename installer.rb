@@ -273,7 +273,7 @@ if win32?
   `cp "#{@c74}/Jamoma/documentation/jamoma-templates/layout.xml"                   	root/patches/templates/layout.xml`
 
   puts " Building Max clippings..."
-  Dir.chdir("#{@git_root}/Tools")
+  Dir.chdir("#{@git_root}/Tools")  
   `ruby buildMaxClippings.rb`
   Dir.chdir("#{@git_root}/Tools/installertools/Windows")
   `cp -r "#{@git_root}/Installers/temp/distro/Applications/Max5/patches/clippings/jamoma"				root/patches/clippings/`
@@ -360,6 +360,7 @@ else
   `mkdir -pv \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0\"`
   `mkdir -pv \"#{@tempDistro}/Library/Application\ Support/Avian/Bundles\"`
   puts "  Building Max clippings..."
+  Dir.chdir("#{@git_root}/Tools") 
   `ruby buildMaxClippings.rb`
 # temp fix. Only run the command if the tag starts with "0.6.something" since the JamomaConfiguration.xml is 0.6.x only
   if git_tag =~ /^0\.6.*/
