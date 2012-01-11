@@ -152,11 +152,12 @@ divider
 
 #################################################################
 
-doUpdateSimple "Tools/supports"
+#doUpdateSimple "Tools/supports"
 
 divider
 
-doUpdate "Modules/Foundation"
+doUpdateSimple "Modules/Foundation"
+doUpdate "Modules/Support"
 doUpdate "Modules/DSP"
 doUpdate "Modules/Graphics"
 doUpdate "Modules/Graph"
