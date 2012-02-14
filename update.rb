@@ -158,7 +158,7 @@ divider
 
 doUpdateSimple "Modules/Foundation"
 doUpdate "Modules/Support"
-doUpdate "Modules/DSP"
+doUpdateSimple "Modules/DSP"
 doUpdate "Modules/Graphics"
 doUpdate "Modules/Graph"
 doUpdate "Modules/AudioGraph"
