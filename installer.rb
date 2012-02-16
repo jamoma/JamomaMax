@@ -440,8 +440,8 @@ else
   `cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"                                 \"#{@installers}/Jamoma\"                `
   `cp \"#{@git_root}/Tools/installertools/License.rtf\"                                \"#{@installers}/resources/License.rtf\" `
   `cp \"#{@git_root}/Tools/installertools/License.rtf\"                                \"#{@installers}/Jamoma/License.rtf\"    `
-  `cp \"#{@git_root}/Tools/installertools/Uninstall.command\"                          \"#{@installers}/Jamoma/Uninstall.command\"                 `
-
+  `cp \"#{@git_root}/Tools/installertools/Uninstall-for-Max5.command\"                          \"#{@installers}/Jamoma/Uninstall-for-Max5.command\"                 `
+  `cp \"#{@git_root}/Tools/installertools/Uninstall-for-Max6.command\"                          \"#{@installers}/Jamoma/Uninstall-for-Max6.command\"                 `
 #  if (configuration == "Max6")
 #    `mv #{@tempDistro}/Applications/Max5 #{@tempDistro}/Applications/Max6`
 #  end
