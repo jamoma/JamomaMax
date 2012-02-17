@@ -5,8 +5,8 @@
 ################################
 # Uninstallations Methodes
 ################################
-function remove5 {
-	echo "Removing Jamoma";
+function remove6 {
+	echo "Removing Jamoma for Max6";
 	doRemove;
 }
 
@@ -107,9 +107,9 @@ function doRemove {
 ################################
 clear
 
-echo "--------------------------"
-echo "--- Jamoma Uninstaller ---"
-echo "--------------------------"
+echo "-----------------------------------"
+echo "--- Jamoma Uninstaller for Max6 ---"
+echo "-----------------------------------"
 echo ""
 echo ""
 
@@ -127,17 +127,17 @@ if [[ -e "/sysbuild/Development" ]]; then
 	remove5;
 fi
 
-maxAppFolder="/Applications/Max5";
+maxAppFolder="/Applications/Max6";
 FrameworkFolder="/Library/Frameworks";
 ApplicationSupportFolder="/Library/Application Support/Jamoma";
 usrLocalLibFolder="/usr/local/jamoma";
 rubyFolder="/Library/Ruby/Site/1.8/universal-darwin10.0";
 textmateFolder="/Library/Library/Application\ Support/Avian/Bundles";
 C74Folder="$maxAppFolder/Cycling '74"; 
-remove5;
+remove6;
 
 echo -ne "done"
-echo -ne "\n\nend of Jamoma's Uninstaller.\n"
+echo -ne "\n\n end of Jamoma's Uninstaller.\n"
 echo -ne "(you can quit the Terminal now...)\n"
 
 exit 0;

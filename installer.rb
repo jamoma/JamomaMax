@@ -62,16 +62,17 @@ else
   @path_extensions = "/usr/local/jamoma/extensions"
 end
 @c74 = "#{@max}/Cycling '74"
-@log_root        = "#{@installers}/logs"
-@path_modular    = "#{@git_root}/Modules/Modular"
-@path_foundation = "#{@git_root}/Modules/Foundation"
-@path_dsp        = "#{@git_root}/Modules/DSP"
+@log_root         = "#{@installers}/logs"
+@path_modular     = "#{@git_root}/Modules/Modular"
+@path_foundation  = "#{@git_root}/Modules/Foundation"
+@path_dsp         = "#{@git_root}/Modules/DSP"
 @path_audiograph  = "#{@git_root}/Modules/AudioGraph"
-@path_graphics   = "#{@git_root}/Modules/Graphics"
-@path_graph      = "#{@git_root}/Modules/Graph"
+@path_graphics    = "#{@git_root}/Modules/Graphics"
+@path_graph       = "#{@git_root}/Modules/Graph"
 @path_ruby        = "#{@git_root}/Modules/Ruby"
+@path_plugtastic  = "#{@git_root}/Modules/Plugtastic"
 @path_oscTextmateBundle = "#{@git_root}/Modules/Documentation/Tools/Textmate\ bundle"
-@path_dependencies = "#{@git_root}/Modules/Dependencies"
+@path_dependencies  = "#{@git_root}/Modules/Dependencies"
 
 ###################################################################
 # Get Revision Info -- BAD FORM, BUT THIS COPY/PASTED FROM build.rb
@@ -334,7 +335,7 @@ if win32?
   `zip -r Jamoma-#{longVersion}.zip Jamoma-#{@version}`
 
 else
-# mac
+# mac           
   `mkdir -pv \"#{@installers}\"`  # need to make directory before the logs are created, and thus before cmd() is ready to be used
   create_logs
 
@@ -365,55 +366,58 @@ else
 # temp fix. Only run the command if the tag starts with "0.6.something" since the JamomaConfiguration.xml is 0.6.x only
   if git_tag =~ /^0\.6.*/
      puts "  Copying Jamoma configuration file..."
-  `cp -rpv \"#{@git_root}/Modules/Modular/Max/support/JamomaConfiguration.xml\"         \"#{@c74}/init/JamomaConfiguration.xml\"`
+  `cp -rpv \"#{@git_root}/Modules/Modular/Max/support/JamomaConfiguration.xml\"       \"#{@c74}/init/JamomaConfiguration.xml\"`
   end
 
   puts "  Copying the Jamoma folder..."
   `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
 
   puts "  Copying Shared Libraries & Extensions"
-  `cp -pv \"#{@path_extensions}\"/*.ttdylib                    \"#{@tempDistro}#{@path_extensions}\"`
+  `cp -pv \"#{@path_extensions}\"/*.ttdylib                                          \"#{@tempDistro}#{@path_extensions}\"`
 
   `cp -pv \"#{@git_root}/Modules/Foundation/library/build\"/JamomaFoundation.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaFoundation.dylib                                \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/DSP/library/build\"/JamomaDSP.dylib          \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaDSP.dylib                                \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/DSP/library/build\"/JamomaDSP.dylib                  \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaDSP.dylib                                        \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/Graph/library/build\"/JamomaGraph.dylib        \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaGraph.dylib                                \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/Graph/library/build\"/JamomaGraph.dylib              \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaGraph.dylib                                      \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/AudioGraph/library/build\"/JamomaAudioGraph.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaAudioGraph.dylib                                \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/AudioGraph/library/build\"/JamomaAudioGraph.dylib    \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaAudioGraph.dylib                                 \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/Graphics/library/build\"/JamomaGraphics.dylib     \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaGraphics.dylib                                \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/Graphics/library/build\"/JamomaGraphics.dylib        \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaGraphics.dylib                                   \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/Modular/library/build"/JamomaModular.dylib       \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaModular.dylib                                \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/Modular/library/build"/JamomaModular.dylib           \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaModular.dylib                                    \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/Plugtastic/library/build"/JamomaPlugtastic.dylib       \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaPlugtastic.dylib                                \"#{@tempDistro}/usr/local/lib\"`
+  `cp -pv \"#{@git_root}/Modules/Plugtastic/library/build"/JamomaPlugtastic.dylib     \"#{@tempDistro}#{@path_shared_libs}\"`
+  `ln -s /usr/local/jamoma/lib/JamomaPlugtastic.dylib                                 \"#{@tempDistro}/usr/local/lib\"`
   
   puts "  Copying header files used by plugtastic"
-  `cp -rpv /usr/local/jamoma/includes                   \"#{@tempDistro}/usr/local/jamoma/includes\"`
+  `cp -rpv /usr/local/jamoma/includes                                                 \"#{@tempDistro}/usr/local/jamoma/includes\"`
   
   puts "  Copying Externals"
-  `cp -rpv \"#{@git_root}/Builds/MaxMSP\"                                                                \"#{@c74}/Jamoma/externals\"`
+  `cp -rpv \"#{@git_root}/Builds/MaxMSP\"                                             \"#{@c74}/Jamoma/externals\"`
 #  puts "  Removing ≈-Externals"
 #  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.mxo`
 #  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.maxhelp`
 
   puts "  Copying Ruby bundle"
-  `cp -rpv \"#{@path_ruby}/library/Jamoma.bundle\"     \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0/Jamoma.bundle\"`
+  `cp -rpv \"#{@path_ruby}/library/Jamoma.bundle\"                                    \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0/Jamoma.bundle\"`
 
   puts "  Copying Textmate bundle"
-  `cp -rpv \"#{@path_oscTextmateBundle}/OSC\ for\ Jamoma.tmbundle\"     \"#{@tempDistro}/Library/Application\ Support/Avian/Bundles/OSC\ for\ Jamoma.tmbundle\"`
+  `cp -rpv \"#{@path_oscTextmateBundle}/OSC\ for\ Jamoma.tmbundle\"                   \"#{@tempDistro}/Library/Application\ Support/Avian/Bundles/OSC\ for\ Jamoma.tmbundle\"`
 
 
   puts "  Copying Dependencies folder"
-   `cp -rpv \"#{@path_dependencies}/Max/Mac\"/*                                                                \"#{@tempDepend}/Jamoma/Dependencies\"`
+   `cp -rpv \"#{@path_dependencies}/Max/Mac\"/*                                       \"#{@tempDepend}/Jamoma/Dependencies\"`
   #
+  puts "  Copying Plugtastic examples"
+   `cp -rpv \"#{@path_plugtastic}/Max\"                                               \"#{@c74}/Jamoma/Documentation/examples\"`
+   `mv \"#{@c74}/Jamoma/Documentation/examples/Max\"                                  \"#{@c74}/Jamoma/Documentation/examples/Plugtastic\"`
 
   puts "  Removing files that are not needed (.zips, windows externs, UserLib clippings)..."
   `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`
@@ -421,23 +425,23 @@ else
   `rm -rfv \"#{@max}/patches/clippings/Jamoma/UserLib\"`
 
   puts "  Moving things around (loader, templates, etc)..."
-  `cp \"#{@c74}/Jamoma/documentation/jamoma-templates/\"*       \"#{@max}/patches/templates\"   `
-  `cp \"#{@c74}/Jamoma/documentation/jamoma-overview.maxpat\"   \"#{@max}/patches/extras\"      `
-  `mv \"#{@c74}/Jamoma/externals/jcom.loader.mxo\"              \"#{@c74}/extensions/\"         `
-  `mv \"#{@c74}/Jamoma/externals\"/*.maxhelp                    \"#{@c74}/Jamoma/documentation/jamoma-help/\"         `
-  `mv \"#{@c74}/Jamoma/support\"/*.maxdefaults                  \"#{@c74}/default-settings\"    `
-  `mv \"#{@c74}/Jamoma/support\"/*.maxdefines                   \"#{@c74}/default-definitions\" `
-  `cp \"#{@path_graphics}/implementations/MaxMSP/jcom.label\"/*.maxdefines                   \"#{@c74}/default-definitions\" `
-  `mv \"#{@c74}/Jamoma/object-palettes\"/*                      \"#{@c74}/object-palettes\"     `
-  `rm -rfv \"#{@c74}/Jamoma/support\"                                                           `
+  `cp \"#{@c74}/Jamoma/documentation/jamoma-templates/\"*                              \"#{@max}/patches/templates\"   `
+  `cp \"#{@c74}/Jamoma/documentation/jamoma-overview.maxpat\"                          \"#{@max}/patches/extras\"      `
+  `mv \"#{@c74}/Jamoma/externals/jcom.loader.mxo\"                                     \"#{@c74}/extensions/\"         `
+  `mv \"#{@c74}/Jamoma/externals\"/*.maxhelp                                           \"#{@c74}/Jamoma/documentation/jamoma-help/\"         `
+  `mv \"#{@c74}/Jamoma/support\"/*.maxdefaults                                         \"#{@c74}/default-settings\"    `
+  `mv \"#{@c74}/Jamoma/support\"/*.maxdefines                                          \"#{@c74}/default-definitions\" `
+  `cp \"#{@path_graphics}/implementations/MaxMSP/jcom.label\"/*.maxdefines             \"#{@c74}/default-definitions\" `
+  `mv \"#{@c74}/Jamoma/object-palettes\"/*                                             \"#{@c74}/object-palettes\"     `
+  `rm -rfv \"#{@c74}/Jamoma/support\"`
 
   puts "  Copying readme, license, etc...."
-  `cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"          \"#{@installers}/resources\"             `
-  `cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"          \"#{@installers}/Jamoma\"                `
-  `cp \"#{@git_root}/Tools/installertools/License.rtf\"        \"#{@installers}/resources/License.rtf\" `
-  `cp \"#{@git_root}/Tools/installertools/License.rtf\"        \"#{@installers}/Jamoma/License.rtf\"    `
-  `cp \"#{@git_root}/Tools/installertools/Uninstall.command\"   \"#{@installers}/Jamoma/Uninstall.command\"                 `
-
+  `cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"                                 \"#{@installers}/resources\"             `
+  `cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"                                 \"#{@installers}/Jamoma\"                `
+  `cp \"#{@git_root}/Tools/installertools/License.rtf\"                                \"#{@installers}/resources/License.rtf\" `
+  `cp \"#{@git_root}/Tools/installertools/License.rtf\"                                \"#{@installers}/Jamoma/License.rtf\"    `
+  `cp \"#{@git_root}/Tools/installertools/Uninstall-for-Max5.command\"                          \"#{@installers}/Jamoma/Uninstall-for-Max5.command\"                 `
+  `cp \"#{@git_root}/Tools/installertools/Uninstall-for-Max6.command\"                          \"#{@installers}/Jamoma/Uninstall-for-Max6.command\"                 `
 #  if (configuration == "Max6")
 #    `mv #{@tempDistro}/Applications/Max5 #{@tempDistro}/Applications/Max6`
 #  end
