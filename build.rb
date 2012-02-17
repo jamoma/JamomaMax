@@ -173,13 +173,8 @@ end
 # Build everything else in the 'Modules' folder
 submodules.each {|submodule| 
   if submodule[0] != '.' && File.exists?("#{glibdir}/../Modules/#{submodule}/build.rb")
-    if submodule == "Documentation"
-      puts "Skipping Documentation Generation -- we need to iron out bugs here and re-enable."
-      puts
-    else
-      Dir.chdir "#{glibdir}/../Modules/#{submodule}"
-      load "build.rb"
-    end
+    Dir.chdir "#{glibdir}/../Modules/#{submodule}"
+    load "build.rb"
   end
 }
 
