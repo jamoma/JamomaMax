@@ -62,17 +62,18 @@ else
   @path_extensions = "/usr/local/jamoma/extensions"
 end
 @c74 = "#{@max}/Cycling '74"
-@log_root         = "#{@installers}/logs"
-@path_modular     = "#{@git_root}/Modules/Modular"
-@path_foundation  = "#{@git_root}/Modules/Foundation"
-@path_dsp         = "#{@git_root}/Modules/DSP"
-@path_audiograph  = "#{@git_root}/Modules/AudioGraph"
-@path_graphics    = "#{@git_root}/Modules/Graphics"
-@path_graph       = "#{@git_root}/Modules/Graph"
-@path_ruby        = "#{@git_root}/Modules/Ruby"
-@path_plugtastic  = "#{@git_root}/Modules/Plugtastic"
+@log_root           = "#{@installers}/logs"
+@path_modular       = "#{@git_root}/Modules/Modular"
+@path_foundation    = "#{@git_root}/Modules/Foundation"
+@path_dsp           = "#{@git_root}/Modules/DSP"
+@path_documentation = "#{@git_root}/Modules/Documentation"
+@path_audiograph    = "#{@git_root}/Modules/AudioGraph"
+@path_graphics      = "#{@git_root}/Modules/Graphics"
+@path_graph         = "#{@git_root}/Modules/Graph"
+@path_ruby          = "#{@git_root}/Modules/Ruby"
+@path_plugtastic    = "#{@git_root}/Modules/Plugtastic"
 @path_oscTextmateBundle = "#{@git_root}/Modules/Documentation/Tools/Textmate\ bundle"
-@path_dependencies  = "#{@git_root}/Modules/Dependencies"
+@path_dependencies   = "#{@git_root}/Modules/Dependencies"
 
 ###################################################################
 # Get Revision Info -- BAD FORM, BUT THIS COPY/PASTED FROM build.rb
@@ -350,6 +351,7 @@ else
   `mkdir -pv \"#{@max}\"                                                `
   `mkdir -pv \"#{@max}/patches/templates\"                              `
   `mkdir -pv \"#{@max}/patches/extras\"                                 `
+  `mkdir -pv \"#{@max}/patches/docs\"                                   `
   `mkdir -pv \"#{@c74}\"                                                `
   `mkdir -pv \"#{@c74}/extensions\"                                     `
   `mkdir -pv \"#{@c74}/default-definitions\"                            `
@@ -411,7 +413,6 @@ else
   puts "  Copying Textmate bundle"
   `cp -rpv \"#{@path_oscTextmateBundle}/OSC\ for\ Jamoma.tmbundle\"                   \"#{@tempDistro}/Library/Application\ Support/Avian/Bundles/OSC\ for\ Jamoma.tmbundle\"`
 
-
   puts "  Copying Dependencies folder"
    `cp -rpv \"#{@path_dependencies}/Max/Mac\"/*                                       \"#{@tempDepend}/Jamoma/Dependencies\"`
   #
@@ -419,10 +420,14 @@ else
    `cp -rpv \"#{@path_plugtastic}/Max\"                                               \"#{@c74}/Jamoma/Documentation/examples\"`
    `mv \"#{@c74}/Jamoma/Documentation/examples/Max\"                                  \"#{@c74}/Jamoma/Documentation/examples/Plugtastic\"`
 
+  puts "  Copying refpages"
+  `cp -rpv \"#{@path_documentation}/Builds/Jamoma-doc/refpages\"                      \"#{@max}/patches/docs/refpages\"`
+
   puts "  Removing files that are not needed (.zips, windows externs, UserLib clippings)..."
   `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`
   `rm -rfv \"#{@c74}/Jamoma/library/third-party/WinXP\"`
   `rm -rfv \"#{@max}/patches/clippings/Jamoma/UserLib\"`
+  `rm -rfv \"#{@c74}/Jamoma/documentation/xml_docs\"`
 
   puts "  Moving things around (loader, templates, etc)..."
   `cp \"#{@c74}/Jamoma/documentation/jamoma-templates/\"*                              \"#{@max}/patches/templates\"   `
