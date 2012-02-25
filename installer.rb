@@ -338,7 +338,7 @@ if win32?
 else
 # mac           
   `mkdir -pv \"#{@installers}\"`  # need to make directory before the logs are created, and thus before cmd() is ready to be used
-  create_logs
+  create_logs("installer")
 
   puts "  Creating installer directory structure @ #{@tempDistro} ..."
   `rm -rfv \"#{@installers}/temp\"`     # remove an old temp dir if it exists
@@ -423,11 +423,13 @@ else
   puts "  Copying refpages"
   `cp -rpv \"#{@path_documentation}/Builds/Jamoma-doc/refpages\"                      \"#{@max}/patches/docs/refpages\"`
 
-  puts "  Removing files that are not needed (.zips, windows externs, UserLib clippings)..."
+  puts "  Removing files that are not needed (.zips, windows externs, UserLib clippings, yml-files)..."
   `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`
   `rm -rfv \"#{@c74}/Jamoma/library/third-party/WinXP\"`
   `rm -rfv \"#{@max}/patches/clippings/Jamoma/UserLib\"`
   `rm -rfv \"#{@c74}/Jamoma/documentation/xml_docs\"`
+  `find "#{@c74}/Jamoma/library/components/" -type f  -name "*.yml" -exec rm -rf '{}' ";"` 
+  `find "#{@c74}/Jamoma/library/components/" -type f  -name "*.png" -exec rm -rf '{}' ";"`
 
   puts "  Moving things around (loader, templates, etc)..."
   `cp \"#{@c74}/Jamoma/documentation/jamoma-templates/\"*                              \"#{@max}/patches/templates\"   `
