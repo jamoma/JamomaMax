@@ -67,7 +67,7 @@ else
    `rm -rf "#{@c74}/support/GenerateHTML.maxpat"`    
    `find "#{@c74}" -type d  -name ".git" -exec rm -rf '{}' ";" -print`
    `find "#{@c74}" -type d  -name ".svn" -exec rm -rf '{}' ";"`
-   `find "#{@c74}" -type f  -name ".gitignore" -exec rm -rf '{}' ";"` 
+   `find "#{@c74}" -type f  -name "*.gitignore" -exec rm -rf '{}' ";"` 
    `find "#{@c74}" -type f  -name "*.msi" -exec rm -rf '{}' ";"` 
   # `find "#{@c74}" -type f  -name "*.mxo" -exec rm -rf '{}' ";"` 
     puts "  removing old Qmanager from Z folder"
