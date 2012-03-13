@@ -13,8 +13,9 @@ require "#{glibdir}/Support/jamomalib"
 def doOne submoduleName
   quietly do
     ARGV[0] = "#{submoduleName}"
-  end
-  load "makeSubmoduleWritable.rb"      
+  end  
+  puts "changing permission for #{submoduleName}"
+  load "../Tools/makeSubmoduleWritable.rb"      
 end
                      
 doOne "AudioGraph"
@@ -25,7 +26,8 @@ doOne "Foundation"
 doOne "Graph"
 doOne "Graphics"
 doOne "Modular"
+doOne "Plugtastic"
 doOne "Ruby"
 doOne "Test"
-doOne "supports"              
+doOne "Support"              
 
