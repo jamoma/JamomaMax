@@ -14,4 +14,5 @@ str = f.read
 str.gsub!(/git:\/\/github\.com\//, "git@github.com:")
 f.rewind
 f.write(str)
+f.write("                    ") #this is some extra whitspace to prevent having leftovers from original file
 f.close
