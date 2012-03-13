@@ -163,7 +163,7 @@ doUpdate "Modules/Graphics"
 doUpdateSimple "Modules/Graph"
 doUpdateSimple "Modules/AudioGraph"
 doUpdateSimple "Modules/Modular"
-doUpdate "Modules/Test"
+doUpdateSimple "Modules/Test"
 doUpdateSimple "Modules/Plugtastic"
 
 doUpdateSimple "Modules/Documentation"
