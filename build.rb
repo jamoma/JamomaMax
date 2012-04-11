@@ -50,27 +50,10 @@ end
 # Clean the Build folder
 ###################################################################
 if(clean)
-
-  puts " "
-  puts "  Cleaning Builds folder "
-  puts " "
-
-  Dir.chdir "#{glibdir}/../Builds/MaxMSP"
   
-  `rm -rf *.maxhelp`
-  
-  # Windows
   if win32?
-
-    `rm -f *.ttdll`
-    `rm -f *.dll`
-    `rm -f *.mxe`
-
-  # Mac
+    #windows specific loc. Where ?
   else
-    `rm -rf *.mxo`
-    `rm -rf *.txt`
-    
     if (File.exists? "/usr/local/jamoma/lib")
       puts "  Cleaning dylib folder "    
       Dir.chdir "/usr/local/jamoma/lib"
@@ -88,11 +71,38 @@ if(clean)
       Dir.chdir "/usr/local/jamoma/includes"
       `rm -rf *.*`
     end
-      
+  end
+  
+  if (File.exists? "#{glibdir}/../Builds/MaxMSP")
+    
+    puts " "
+    puts "  Cleaning Builds folder "
+    puts " "
+    
+    Dir.chdir "#{glibdir}/../Builds/MaxMSP"
+  
+    `rm -rf *.maxhelp`
+  
+    # Windows
+    if win32?
+
+      `rm -f *.ttdll`
+      `rm -f *.dll`
+      `rm -f *.mxe`
+
+    # Mac
+    else
+      `rm -rf *.mxo`
+      `rm -rf *.txt`
+    end
+  else
+    `mkdir -p "#{glibdir}/../Builds/MaxMSP"`
     Dir.chdir "#{glibdir}/../Builds/MaxMSP"
   end
 
 end
+
+
 ###################################################################
 # Get Revision Info
 ###################################################################
