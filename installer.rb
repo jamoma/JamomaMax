@@ -421,7 +421,7 @@ else
    `mv \"#{@c74}/Jamoma/Documentation/examples/Max\"                                  \"#{@c74}/Jamoma/Documentation/examples/Plugtastic\"`
 
   puts "  Copying refpages"
-  `cp -rpv \"#{@path_documentation}/Builds/Jamoma-doc/refpages\"                      \"#{@max}/patches/docs/refpages\"`
+  `cp -rpv \"#{@path_documentation}/Builds/Jamoma-doc\"                      \"#{@max}/patches\"`
 
   puts "  Removing files that are not needed (.zips, windows externs, UserLib clippings, yml-files)..."
   `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`

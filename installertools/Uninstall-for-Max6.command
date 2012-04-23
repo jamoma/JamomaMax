@@ -50,6 +50,7 @@ function doRemove {
 		echo -ne "- Jamoma refpages ($maxAppFolder/patches/docs/refpages)"
 		sudo rm -f "$maxAppFolder/patches/docs/refpages/_jdoc_ref_modules.xml" 	&& echo -ne "... done.\n"
 		sudo rm -Rf "$maxAppFolder/patches/docs/refpages/"jamoma* 				&& echo -ne "... done.\n"
+		sudo rm -Rf "$maxAppFolder/patches/"Jamoma-doc  						&& echo -ne "... done.\n"
 		
 		echo -ne "- Template Files ($maxAppFolder/patches/templates/)"
 		sudo rm -f "$maxAppFolder/patches/templates/"jmod* 						&& echo -ne "... done.\n"
