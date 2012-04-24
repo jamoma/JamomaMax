@@ -351,7 +351,7 @@ else
   `mkdir -pv \"#{@max}\"                                                `
   `mkdir -pv \"#{@max}/patches/templates\"                              `
   `mkdir -pv \"#{@max}/patches/extras\"                                 `
-  `mkdir -pv \"#{@max}/patches/docs\"                                   `
+  #`mkdir -pv \"#{@max}/patches/docs\"                                   `
   `mkdir -pv \"#{@c74}\"                                                `
   `mkdir -pv \"#{@c74}/extensions\"                                     `
   `mkdir -pv \"#{@c74}/default-definitions\"                            `
