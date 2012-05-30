@@ -91,7 +91,7 @@
 							"revision" : 5
 						}
 ,
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -161,7 +161,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 206.5, 240.5, 32.5, 19.0 ],
+									"patching_rect" : [ 202.5, 240.5, 32.5, 19.0 ],
 									"text" : "t b l"
 								}
 
@@ -203,8 +203,8 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 136.5, 210.5, 89.0, 19.0 ],
-									"text" : "route clear .svn"
+									"patching_rect" : [ 136.5, 210.5, 85.0, 19.0 ],
+									"text" : "route clear .git"
 								}
 
 							}
@@ -316,7 +316,7 @@
 									"destination" : [ "obj-28", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 216.0, 261.5, 76.0, 261.5 ],
+									"midpoints" : [ 212.0, 261.5, 76.0, 261.5 ],
 									"source" : [ "obj-37", 0 ]
 								}
 
@@ -418,16 +418,16 @@
 ,
 					"patching_rect" : [ 389.0, 477.5, 67.0, 19.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontsize" : 12.0,
+						"fontname" : "Arial",
+						"description" : "",
+						"fontface" : 0,
+						"tags" : "",
 						"fontsize" : 12.0,
 						"default_fontface" : 0,
-						"digest" : "",
-						"default_fontname" : "Arial",
-						"fontname" : "Arial",
-						"tags" : "",
-						"default_fontsize" : 12.0,
-						"description" : "",
 						"globalpatchername" : "",
-						"fontface" : 0
+						"digest" : "",
+						"default_fontname" : "Arial"
 					}
 ,
 					"text" : "p subfolder"
@@ -564,7 +564,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 136.5, 210.5, 89.0, 19.0 ],
-									"text" : "route clear .svn"
+									"text" : "route clear .git"
 								}
 
 							}
@@ -778,16 +778,16 @@
 ,
 					"patching_rect" : [ 130.5, 317.5, 67.0, 19.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontsize" : 12.0,
+						"fontname" : "Arial",
+						"description" : "",
+						"fontface" : 0,
+						"tags" : "",
 						"fontsize" : 12.0,
 						"default_fontface" : 0,
-						"digest" : "",
-						"default_fontname" : "Arial",
-						"fontname" : "Arial",
-						"tags" : "",
-						"default_fontsize" : 12.0,
-						"description" : "",
 						"globalpatchername" : "",
-						"fontface" : 0
+						"digest" : "",
+						"default_fontname" : "Arial"
 					}
 ,
 					"text" : "p subfolder"
