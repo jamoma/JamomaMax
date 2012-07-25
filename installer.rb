@@ -72,6 +72,7 @@ end
 @path_graph         = "#{@git_root}/Modules/Graph"
 @path_ruby          = "#{@git_root}/Modules/Ruby"
 @path_plugtastic    = "#{@git_root}/Modules/Plugtastic"
+@path_testing       = "#{@git_root}/Modules/Test"
 @path_oscTextmateBundle = "#{@git_root}/Modules/Documentation/Tools/Textmate\ bundle"
 @path_dependencies   = "#{@git_root}/Modules/Dependencies"
 
@@ -420,16 +421,23 @@ else
    `cp -rpv \"#{@path_plugtastic}/Max\"                                               \"#{@c74}/Jamoma/Documentation/examples\"`
    `mv \"#{@c74}/Jamoma/Documentation/examples/Max\"                                  \"#{@c74}/Jamoma/Documentation/examples/Plugtastic\"`
 
+  puts "  Copying Testing components"
+  `cp -rpv \"#{@path_testing}/components\"                                             \"#{@c74}/Jamoma/library/testing\"`
+  `mkdir   \"#{@c74}/Jamoma/library/testing/externals\"` 
+  `mv  \"#{@c74}/Jamoma/externals/jcom.test.\"*                                     \"#{@c74}/Jamoma/library/testing/externals\"` 
+  
+   
   puts "  Copying refpages"
   `cp -rpv \"#{@path_documentation}/Builds/Jamoma-doc\"                      \"#{@max}/patches\"`
-
+   
+   
   puts "  Removing files that are not needed (.zips, windows externs, UserLib clippings, yml-files)..."
   `rm -rfv \"#{@c74}/Jamoma/externals/\"readme.txt`
   `rm -rfv \"#{@c74}/Jamoma/library/third-party/WinXP\"`
   `rm -rfv \"#{@max}/patches/clippings/Jamoma/UserLib\"`
   `rm -rfv \"#{@c74}/Jamoma/documentation/xml_docs\"`
-  `find "#{@c74}/Jamoma/library/components/" -type f  -name "*.maxref.yml" -exec rm -rf '{}' ";"` 
-  `find "#{@c74}/Jamoma/library/components/" -type f  -name "*.maxref.png" -exec rm -rf '{}' ";"`
+  `find "#{@c74}/Jamoma/library/" -type f  -name "*.maxref.yml" -exec rm -rf '{}' ";"` 
+  `find "#{@c74}/Jamoma/library/" -type f  -name "*.maxref.png" -exec rm -rf '{}' ";"`
 
   puts "  Moving things around (loader, templates, etc)..."
   `cp \"#{@c74}/Jamoma/documentation/jamoma-templates/\"*                              \"#{@max}/patches/templates\"   `
