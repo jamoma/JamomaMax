@@ -7,6 +7,26 @@
 # note: all zips should be unzipped (3rd-party externs) too
 ###################################################################
 
+###################################################################
+# This installer script is made to work with Xcode 4.2 or earlier
+# Xcode 4.3 and later is now an application residing in /Applications
+# One consequence is that PackageMaker no longer is installed by default
+# Here are steps to make this script working with Xcode 4.3 or later
+#
+# 1) Log in to developer.apple.com
+# 2) Go to https://developer.apple.com/downloads
+# 3) Download Xcode 4.4 Auxiliary Tool
+# 4) Create the following folder/ssubfolder structure if it is not already existing: /Developer/usr/bin
+# 5) Create a new folder "Applications/Xcode 4.4 Auxiliary Tool"
+# 6) Create a symlink using this Terminal command:
+#
+# ln -s /Applications/Xcode\ Auxiliary\ Tools/PackageMaker.app/Contents/MacOS/PackageMaker /Developer/usr/bin/packagemaker
+#
+# Now the installer script is able to find packagemaker.
+#
+# This comment was added by Trond on 2012-07-25
+#
+###################################################################
 
 ###################################################################
 # Check Args
