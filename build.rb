@@ -168,7 +168,7 @@ submodules.delete "Graph"
                      
 Dir.chdir "#{glibdir}/../Modules/AudioGraph"
 load "build.rb"      
-submodules.delete "AudioGraph"
+submodules.delete "AudioGraph"  
 
 if win32?
   # TODO: as long as Plugtastic only compiles AU plugins, compiling for windows isn't useful  
@@ -200,14 +200,24 @@ else
   load "install.rb"
 end
 
+
+
 puts
+puts "Running Unit Tests for all subprojects"
+puts
+submodules = Dir.entries("#{glibdir}/../Modules")
+# We don't want to build the Support folder itself
+submodules.delete "Support"
+submodules.each {|submodule| 
+  if submodule[0] != '.' && File.exists?("#{glibdir}/../Modules/#{submodule}/test.rb") && File.directory?("#{glibdir}/../Modules/#{submodule}/Tests/unit")
+    Dir.chdir "#{glibdir}/../Modules/#{submodule}"
+    load "test.rb"
+  end
+}
+
 puts
 puts "==================== SUMMARY ===================="
 puts "Combined Error log of all subprojects:"
 puts
 Dir.chdir "#{glibdir}/../Modules/Support"
 puts `cat logs-*/error*`
-
-
-
-
