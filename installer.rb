@@ -443,9 +443,9 @@ else
 
   puts "  Copying Testing components"
   `cp -rpv \"#{@path_testing}/components\"                                             \"#{@c74}/Jamoma/library/testing\"`
+  `mv  \"#{@path_testing}/selftests\"*                                              \"#{@c74}/Jamoma/library/testing/selftests\"`   
   `mkdir   \"#{@c74}/Jamoma/library/testing/externals\"` 
   `mv  \"#{@c74}/Jamoma/externals/jcom.test.\"*                                     \"#{@c74}/Jamoma/library/testing/externals\"` 
-  
    
   puts "  Copying refpages"
   `cp -rpv \"#{@path_documentation}/Builds/Jamoma-doc\"                      \"#{@max}/patches\"`
@@ -481,14 +481,22 @@ else
 #    `mv #{@tempDistro}/Applications/Max5 #{@tempDistro}/Applications/Max6`
 #  end
 
+  puts
+  puts "  Copying Integration Test"  
+  submodules = Dir.entries("#{@git_root}/Modules/")
+  `mkdir \"#{@installers}/installerTests\"`
+  submodules.each {|submodule| 
+    if submodule[0] != '.' && File.directory?("#{glibdir}/#{submodule}/Tests/integration/MaxMSP")    
+      `mkdir \"#{@installers}/installerTests/#{submodule}\"`    
+      `cp -rpv \"#{glibdir}/#{submodule}/Tests/integration/MaxMSP/\"                \"#{@installers}/installerTests/#{submodule}\"`    
+    end
+  }
+  `zip -r \"#{@installers}/JamomaInstallationTests-#{@version}.zip\" \"#{@installers}/installerTests\"`
+  
+  puts
   puts "  Building Package -- this could take a while..."
-  `rm -rfv \"#{@installers}/MacInstaller/Jamoma\"*.pkg`
-
-  #puts
-  #puts "OUTPUT FROM packagemaker COMMAND:"
+  `rm -rfv \"#{@installers}/MacInstaller/Jamoma\"*.pkg`  
   `/Developer/usr/bin/packagemaker --verbose  --doc \"#{@git_root}/Tools/installertools/packageMakerScript.pmdoc\" --out \"#{@installers}/Jamoma/Jamoma-#{@version}.pkg\" --version #{longVersion} --title Jamoma-#{@version} --target 10.5 --domain system --root-volume-only`
-  #puts "COMPLETED packagemaker COMMAND"
-  #puts
 
   # Warning: the zip thing seems to be a real problem on the Mac using OS 10.5 at least...  Renaming the zip ends up causing the install to fail
   #puts "  Zipping the Installer..."
@@ -498,12 +506,12 @@ else
   
   puts "  Creating Disk Image..."
   if version_mod.match(/rc(.*)/)
-    `rm -rfv \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"`
+     `rm -rfv \"#{@installers}/Jamoma-#{@version}#{version_mod}-Mac.dmg\"`
     `hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}-#{version_mod}.dmg\"`
   else
     `rm -rfv \"#{@installers}/Jamoma-#{@version}-Mac.dmg\"`
     `hdiutil create -srcfolder \"#{@installers}/Jamoma\" \"#{@installers}/Jamoma-#{@version}.dmg\"`
-  end
+ end
 
 
   puts "  All done!"
