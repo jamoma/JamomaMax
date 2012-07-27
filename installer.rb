@@ -443,7 +443,7 @@ else
 
   puts "  Copying Testing components"
   `cp -rpv \"#{@path_testing}/components\"                                             \"#{@c74}/Jamoma/library/testing\"`
-  `mv  \"#{@path_testing}/selftests\"*                                              \"#{@c74}/Jamoma/library/testing/selftests\"`   
+  `cp -rpv \"#{@path_testing}/selftests\"*                                              \"#{@c74}/Jamoma/library/testing/selftests\"`   
   `mkdir   \"#{@c74}/Jamoma/library/testing/externals\"` 
   `mv  \"#{@c74}/Jamoma/externals/jcom.test.\"*                                     \"#{@c74}/Jamoma/library/testing/externals\"` 
    
