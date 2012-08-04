@@ -172,7 +172,7 @@ submodules.delete "AudioGraph"
 
 Dir.chdir "#{glibdir}/../Modules/Graphics"
 load "build.rb"      
-submodules.delete "AudioGraph"  
+submodules.delete "Graphics"
 
 if win32?
   # TODO: as long as Plugtastic only compiles AU plugins, compiling for windows isn't useful  
