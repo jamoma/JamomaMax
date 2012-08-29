@@ -1,3 +1,13 @@
+##########################################################################
+#
+# This script makes the repository of a submodule writeable.
+#
+# It might not work with newer versions of git, as git now seem to be storing
+# the .git folder for submodules in a .git/modules folder embedded in the 
+# .git folder of the top level repository rather than creating .git folders
+# inside the folders of each of the submodules.
+#
+##########################################################################
 #!/usr/bin/env ruby -wKU
 # encoding: utf-8
 
