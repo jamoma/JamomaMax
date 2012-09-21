@@ -17,7 +17,7 @@
 # 2) Go to https://developer.apple.com/downloads
 # 3) Download Xcode 4.4 Auxiliary Tool
 # 4) Create the following folder/ssubfolder structure if it is not already existing: /Developer/usr/bin
-# 5) Create a new folder "Applications/Xcode 4.4 Auxiliary Tool"
+# 5) Create a new folder "Applications/Xcode Auxiliary Tools"
 # 6) Create a symlink using this Terminal command:
 #
 # ln -s /Applications/Xcode\ Auxiliary\ Tools/PackageMaker.app/Contents/MacOS/PackageMaker /Developer/usr/bin/packagemaker
