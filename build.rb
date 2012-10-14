@@ -206,6 +206,20 @@ end
 
 
 
+# Get a list of UserLib submodules that need to be built
+userlib_submodules = Dir.entries("#{glibdir}/../UserLib")
+
+# If a UserLib has a 'build.rb' script in it, then we run it (otherwise do nothing)
+userlib_submodules.each {|submodule| 
+  if submodule[0] != '.' && File.exists?("#{glibdir}/../UserLib/#{submodule}/build.rb")
+    Dir.chdir "#{glibdir}/../UserLib/#{submodule}"
+    load "build.rb"
+  end
+}
+
+
+
+
 puts
 puts "Running Unit Tests for all subprojects"
 puts
