@@ -1,6 +1,13 @@
 #!/usr/bin/env ruby -wKU
 # encoding: utf-8 -wKU
 
+###################################################################
+# Build Jamoma
+#
+# Use the <help> option to get an overview of available arguments
+#
+###################################################################
+
 # First include the functions in the jamoma lib
 glibdir = "../Modules"
 Dir.chdir glibdir             # change to libdir so that requires work
@@ -14,36 +21,87 @@ require "#{glibdir}/Support/jamomalib"
 # Check Args
 ###################################################################
 
-if(ARGV.length == 0)
-  puts "usage: "
-  puts "build.rb <required:configuration> <optional:clean>"
-  exit 0;
+# Default values for arguments:
+
+configuration = "Development"
+clean = false
+compiler = false
+postLog = false
+runTests = false
+
+# If no arguments are provided we post a help message
+
+ARGV.each do |arg|
+  if(arg=="help")
+    puts
+    puts "The build.rb script takes the following arguments:"
+    puts
+    puts "- <Deployment> or <Release> ensures a deployment build."
+    puts "  The default is a Development build"
+    puts
+    puts "- <clean> ensures a clean build."
+    puts "  The default is a non-clean build."
+    puts
+    puts "- <log> causes build logs to be posted to Terminal"
+    puts "  The default is that build logs are not posted to Terminal"
+    puts 
+    puts "- <test> causes Ruby unit tests to be run at the end of the build process"
+    puts "  The defaul is that unit tests are not run at the end of the build process"
+    puts "- Additionally on Mac you can enforce the use of a certain compiler"
+    puts "  Possible options are <icc>, <gcc47> or <clang>"
+    puts "  By default the build script will look for available compilers with the following priority:"
+    puts "  (1) icc, (2) clang, (3) gcc47"
+    puts
+    puts "The order of arguments is optional"
+    exit 0
+  end
 end
 
-configuration = ARGV[0];
+ARGV.each do |arg|
+
+  # Build Debug or Release?
+  if(arg=="Deployment" || arg=="Release" )
+    configuration = "Debug"
+  end
+  
+  # Do a clean build?
+  if(arg == "clean")
+    clean = true
+  end
+  
+  # On the Mac you can force the use of a certain compiler
+  if mac?
+    if(arg=="icc")
+      compiler = "icc"
+    elsif (arg=="gcc47")
+      compiler = "gcc47"
+    elsif (arg=="clang")
+      compiler = "clang"
+    end
+  end
+  
+  # Do we want to post the log to Terminal?
+  if (arg=="log")
+    postLog = true
+  end
+  
+  # Do we want to run the tests at the ewnd of the building process?
+  if (arg=="test")
+    runTests = true
+  end
+  
+end
+
+# Having initially set all options we need to make some further Windows-specific precautions:
+
 if win32?
  	 if(configuration == "Development" || configuration == "Debug" )
     		configuration = "Debug"
   	else
-		if(configuration == "Deployment" || configuration == "Release" )
-    			configuration = "Release"
-		end
+		  if(configuration == "Deployment" || configuration == "Release" )
+		    configuration = "Release"
+	    end
  	 end
-end
-
-clean = false;
-debug = false;
-
-if(ARGV.length > 1)
-  if(ARGV[1] != "0" || ARGV[1] != "false")
-    clean = true;
-  end
-end
-
-if(ARGV.length > 2)
-  if(ARGV[2] != "0" || ARGV[2] != "false")
-    debug = true;
-  end
 end
 
 ###################################################################
@@ -124,9 +182,15 @@ version_sub = version_digits[2] if version_digits.size() > 2
 version_min = version_digits[1] if version_digits.size() > 1
 version_maj = version_digits[0] if version_digits.size() > 0
 
-puts ""
+puts
 puts "  Building Jamoma #{git_tag} (rev. #{git_rev})"
-puts ""
+puts
+puts "  configuration = #{configuration}"
+puts "  clean         = #{clean}"
+puts "  compiler      = #{compiler}"
+puts "  postLog       = #{postLog}"
+puts "  runTests      = #{runTests}"
+puts
 if git_dirty_commits != '0'
 	puts "  !!! WARNING !!!"
 	puts "	THIS BUILD IS COMING FROM A DIRTY REVISION   "
@@ -141,8 +205,8 @@ puts ""
 ###################################################################
 
 quietly do
-#  ARGV = [configuration, clean, debug, git_tag, git_rev]
-  ARGV = [configuration, clean, debug]
+#  ARGV = [configuration, clean, compiler, git_tag, git_rev]
+  ARGV = [configuration, clean, compiler]
 end
 
 
@@ -219,23 +283,32 @@ userlib_submodules.each {|submodule|
 
 
 
+if (runTests)
+  puts
+  puts "Running Unit Tests for all subprojects"
+  puts
+  submodules = Dir.entries("#{glibdir}/../Modules")
+  # We don't want to build the Support folder itself
+  submodules.delete "Support"
+  submodules.each {|submodule| 
+    if submodule[0] != '.' && File.exists?("#{glibdir}/../Modules/#{submodule}/test.rb") && File.directory?("#{glibdir}/../Modules/#{submodule}/Tests/unit")
+      Dir.chdir "#{glibdir}/../Modules/#{submodule}"
+      load "test.rb"
+    end
+  }
+else
+  puts "Not running unit tests"
+end
+
+if (postLog)
+  puts
+  puts "==================== SUMMARY ===================="
+  puts "Combined Error log of all subprojects:"
+  puts
+  Dir.chdir "#{glibdir}/../Modules/Support"
+  puts `cat logs-*/error*`
+else
+  puts "Not posting error logs"
+end
 
 puts
-puts "Running Unit Tests for all subprojects"
-puts
-submodules = Dir.entries("#{glibdir}/../Modules")
-# We don't want to build the Support folder itself
-submodules.delete "Support"
-submodules.each {|submodule| 
-  if submodule[0] != '.' && File.exists?("#{glibdir}/../Modules/#{submodule}/test.rb") && File.directory?("#{glibdir}/../Modules/#{submodule}/Tests/unit")
-    Dir.chdir "#{glibdir}/../Modules/#{submodule}"
-    load "test.rb"
-  end
-}
-
-puts
-puts "==================== SUMMARY ===================="
-puts "Combined Error log of all subprojects:"
-puts
-Dir.chdir "#{glibdir}/../Modules/Support"
-puts `cat logs-*/error*`
