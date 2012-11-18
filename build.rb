@@ -14,7 +14,7 @@ Dir.chdir glibdir             # change to libdir so that requires work
 glibdir = Dir.pwd
 
 $main_repository = true
-require "#{glibdir}/Support/jamomalib"
+require "#{glibdir}/../Core/Shared/jamomalib"
 
 
 ###################################################################
@@ -214,41 +214,11 @@ end
 # Get a list of submodules that need to be built
 submodules = Dir.entries("#{glibdir}/../Modules")
 
-# We don't want to build the Support folder itself
-submodules.delete "Support"
-
 # Build the essentials first, since the order in which they are built is important
-Dir.chdir "#{glibdir}/../Modules/Foundation"
+Dir.chdir "#{glibdir}/../Core"
 load "build.rb"
-submodules.delete "Foundation"
-                     
-Dir.chdir "#{glibdir}/../Modules/DSP"
-load "build.rb"      
-submodules.delete "DSP"
-                     
-Dir.chdir "#{glibdir}/../Modules/Graph"
-load "build.rb"
-submodules.delete "Graph"
-                     
-Dir.chdir "#{glibdir}/../Modules/AudioGraph"
-load "build.rb"      
-submodules.delete "AudioGraph"  
 
-Dir.chdir "#{glibdir}/../Modules/Graphics"
-load "build.rb"      
-submodules.delete "Graphics"
-
-if win32?
-  # TODO: as long as Plugtastic only compiles AU plugins, compiling for windows isn't useful  
-  # If someone is interested in doing that, please feel free!
-  submodules.delete "Plugtastic"  
-else
-  Dir.chdir "#{glibdir}/../Modules/Plugtastic"
-  load "build.rb"
-  submodules.delete "Plugtastic"
-end
-
-# Build everything else in the 'Modules' folder
+# Build everything in the 'Modules' folder
 submodules.each {|submodule| 
   if submodule[0] != '.' && File.exists?("#{glibdir}/../Modules/#{submodule}/build.rb")
     Dir.chdir "#{glibdir}/../Modules/#{submodule}"
@@ -264,7 +234,7 @@ else
   puts
   puts "Installing Jamoma Ruby support -- this may require your password"
   puts "If you just press enter without entering your password, then the updated Jamoma Ruby support will not be installed for your use."
-  Dir.chdir "#{glibdir}/../Modules/Ruby"
+  Dir.chdir "#{glibdir}/../Core/Ruby"
   load "install.rb"
 end
 
@@ -288,8 +258,6 @@ if (runTests)
   puts "Running Unit Tests for all subprojects"
   puts
   submodules = Dir.entries("#{glibdir}/../Modules")
-  # We don't want to build the Support folder itself
-  submodules.delete "Support"
   submodules.each {|submodule| 
     if submodule[0] != '.' && File.exists?("#{glibdir}/../Modules/#{submodule}/test.rb") && File.directory?("#{glibdir}/../Modules/#{submodule}/Tests/unit")
       Dir.chdir "#{glibdir}/../Modules/#{submodule}"
@@ -305,7 +273,7 @@ if (postLog)
   puts "==================== SUMMARY ===================="
   puts "Combined Error log of all subprojects:"
   puts
-  Dir.chdir "#{glibdir}/../Modules/Support"
+  Dir.chdir "#{glibdir}/../Modules/Shared"
   puts `cat logs-*/error*`
 else
   puts "Not posting error logs"
