@@ -6,7 +6,6 @@
 # "update.rb <branch> -> update main Jamoma module to <branch> and all submodules to their current branch"
 # "update.rb <branch> all -> update main Jamoma repository + submodules to <branch>"
 
-
 @glibdir = "."
 Dir.chdir @glibdir             # change to libdir so that requires work
 @glibdir = Dir.pwd
@@ -33,7 +32,6 @@ elsif  ARGV.length == 1
   puts "JAMOMA UPDATING TO branch: #{@branch} FROM remote: #{@remote}"
   puts "MY BRANCH IS #{@branch}"
 
-
 elsif ARGV.length == 2
   @all = true
   @branch = ARGV[0]
@@ -45,8 +43,6 @@ else
   puts "update.rb <nameOfBranch> all -> update main Jamoma repository + submodules to <nameOfBranch>\n\n"
   exit 0;
 end
-
-
 
 #################################################################
 
@@ -76,21 +72,6 @@ def doUpdateSimple name
 
   puts `git pull #{@remote} #{brch}`
   puts `git submodule update --init;`
-end
-
-#################################################################
-
-def doUpdateUserLib name
-  doUpdateSimple("#{name}")
-end
-
-#################################################################
-
-def doUpdate name
-  doUpdateSimple("#{name}")
-  Dir.chdir "#{@glibdir}/../#{name}"
-  puts `ruby update.rb`
-  divider
 end
 
 #################################################################
@@ -152,47 +133,22 @@ divider
 
 #################################################################
 
-#doUpdateSimple "Tools/supports"
-
 divider
 
-doUpdateSimple "Modules/Foundation"
-doUpdate "Modules/Support"
-doUpdateSimple "Modules/DSP"
-doUpdate "Modules/Graphics"
-doUpdateSimple "Modules/Graph"
-doUpdateSimple "Modules/AudioGraph"
+doUpdateSimple "Core"
 doUpdateSimple "Modules/Modular"
 doUpdateSimple "Modules/Test"
-doUpdateSimple "Modules/Plugtastic"
-
 doUpdateSimple "Modules/Documentation"
 doUpdateSimple "Modules/Dependencies"
-doUpdateSimple "Modules/Ruby"
 
 divider
-
-# doUpdateUserLib "ag.granular"
-# doUpdateUserLib "GDIF"
-# doUpdateUserLib "Holophon"
-# doUpdateUserLib "Jamoma.Ircam.FTM"
-# doUpdateUserLib "Jamoma.Ircam.IMTR"
-# doUpdateUserLib "Jamoma.Ircam.Spat"
-# doUpdateUserLib "MusicSpace"
-# doUpdateUserLib "NavNav"
-# doUpdateUserLib "Schumacher"
-# doUpdateUserLib "SoundhackWrappers"
-# doUpdateUserLib "support"
-# doUpdateUserLib "Tap.Tools"
-# doUpdateUserLib "ViMiC"
-# doUpdateUserLib "Z"
 
 ulDirContent = `ls "#{@glibdir}/../UserLib"`
 ulModules = Array::new
 ulModules = ulDirContent.split("\n")
 
 ulModules.each do | ulGitDir |
-  doUpdateUserLib("UserLib/#{ulGitDir}") unless ulGitDir == "Orphans"
+  doUpdateSimple("UserLib/#{ulGitDir}") unless ulGitDir == "Orphans"
 end
 
 divider
