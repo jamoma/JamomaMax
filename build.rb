@@ -60,12 +60,12 @@ ARGV.each do |arg|
 end
 
 ARGV.each do |arg|
-
+  
   # Build Debug or Release?
   if(arg=="Deployment" || arg=="Release" )
-    configuration = "Debug"
+    configuration = "Deployment"
   end
-  
+    
   # Do a clean build?
   if(arg == "clean")
     clean = true
