@@ -259,10 +259,10 @@ if (runTests)
   puts
   puts "Running Unit Tests for all subprojects"
   puts
-  submodules = Dir.entries("#{glibdir}/../Modules")
+  submodules = Dir.entries("#{glibdir}/../Core")
   submodules.each {|submodule| 
-    if submodule[0] != '.' && File.exists?("#{glibdir}/../Modules/#{submodule}/test.rb") && File.directory?("#{glibdir}/../Modules/#{submodule}/Tests/unit")
-      Dir.chdir "#{glibdir}/../Modules/#{submodule}"
+    if submodule[0] != '.' && File.exists?("#{glibdir}/../Core/#{submodule}/test.rb") && File.directory?("#{glibdir}/../Core/#{submodule}/Tests/unit")
+      Dir.chdir "#{glibdir}/../Core/#{submodule}"
       load "test.rb"
     end
   }
@@ -275,7 +275,7 @@ if (postLog)
   puts "==================== SUMMARY ===================="
   puts "Combined Error log of all subprojects:"
   puts
-  Dir.chdir "#{glibdir}/../Modules/Shared"
+  Dir.chdir "#{glibdir}/../Core/Shared"
   puts `cat logs-*/error*`
 else
   puts "Not posting error logs"
