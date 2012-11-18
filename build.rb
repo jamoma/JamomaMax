@@ -46,13 +46,15 @@ ARGV.each do |arg|
     puts "  The default is that build logs are not posted to Terminal"
     puts 
     puts "- <test> causes Ruby unit tests to be run at the end of the build process"
-    puts "  The defaul is that unit tests are not run at the end of the build process"
+    puts "  The default is that unit tests are not run at the end of the build process"
+    puts
     puts "- Additionally on Mac you can enforce the use of a certain compiler"
     puts "  Possible options are <icc>, <gcc47> or <clang>"
     puts "  By default the build script will look for available compilers with the following priority:"
     puts "  (1) icc, (2) clang, (3) gcc47"
     puts
     puts "The order of arguments is optional"
+    puts
     exit 0
   end
 end
