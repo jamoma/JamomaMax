@@ -216,6 +216,9 @@ end
 # Get a list of submodules that need to be built
 submodules = Dir.entries("#{glibdir}/../Modules")
 
+# Get a list of implementations that need to be built
+implementations = Dir.entries("#{glibdir}/../Implementations")
+
 # Build the essentials first, since the order in which they are built is important
 Dir.chdir "#{glibdir}/../Core"
 load "build.rb"
@@ -228,6 +231,14 @@ submodules.each {|submodule|
   end
 }
 
+# Build everything in the 'Implementations' folder
+implementations.each {|implementation| 
+  if implementation[0] != '.' && File.exists?("#{glibdir}/../Implementations/#{implementation}/build.rb")
+    Dir.chdir "#{glibdir}/../Implementations/#{implementation}"
+    load "build.rb"
+  end
+}
+
 # Install Ruby Support
 if win32?
   # At the moment we don't build TTRuby for Windows
@@ -236,7 +247,7 @@ else
   puts
   puts "Installing Jamoma Ruby support -- this may require your password"
   puts "If you just press enter without entering your password, then the updated Jamoma Ruby support will not be installed for your use."
-  Dir.chdir "#{glibdir}/../Core/Ruby"
+  Dir.chdir "#{glibdir}/../Implementations/Ruby"
   load "install.rb"
 end
 
