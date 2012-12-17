@@ -58,7 +58,7 @@ Dir.chdir glibdir             # change to libdir so that requires work
 glibdir = Dir.pwd
 
 $main_repository = true
-require "#{glibdir}/Support/jamomalib"
+require "#{glibdir}/../Core/Shared/jamomalib"
 require 'date'
 
 @git_root = ".."	# this is the root of the Jamoma project repository
@@ -84,14 +84,12 @@ end
 @c74 = "#{@max}/Cycling '74"
 @log_root           = "#{@installers}/logs"
 @path_modular       = "#{@git_root}/Modules/Modular"
-@path_foundation    = "#{@git_root}/Modules/Foundation"
-@path_dsp           = "#{@git_root}/Modules/DSP"
+@path_foundation    = "#{@git_root}/Core/Foundation"
+@path_dsp           = "#{@git_root}/Core/DSP"
 @path_documentation = "#{@git_root}/Modules/Documentation"
-@path_audiograph    = "#{@git_root}/Modules/AudioGraph"
-@path_graphics      = "#{@git_root}/Modules/Graphics"
-@path_graph         = "#{@git_root}/Modules/Graph"
-@path_ruby          = "#{@git_root}/Modules/Ruby"
-@path_plugtastic    = "#{@git_root}/Modules/Plugtastic"
+@path_audiograph    = "#{@git_root}/Core/AudioGraph"
+@path_graph         = "#{@git_root}/Core/Graph"
+@path_ruby          = "#{@git_root}/Implementations/Ruby"
 @path_testing       = "#{@git_root}/Modules/Test"
 @path_oscTextmateBundle = "#{@git_root}/Modules/Documentation/Tools/Textmate\ bundle"
 @path_dependencies   = "#{@git_root}/Modules/Dependencies"
@@ -259,20 +257,13 @@ if win32?
   `cp "#{@git_root}/Builds"/*.ttdll  							"root/Common Files/Jamoma/Extensions"`
 
   puts " Copying frameworks into the support folder"
-  `cp "#{@git_root}/Builds/JamomaFoundation.dll"  					root/support`
-  `cp "#{@git_root}/Builds/JamomaDSP.dll"  						root/support`
-  `cp "#{@git_root}/Builds/JamomaGraph.dll"  						root/support`
-  `cp "#{@git_root}/Builds/JamomaAudioGraph.dll"  						root/support`
-  `cp "#{@git_root}/Builds/JamomaGraphics.dll"  						root/support`
-  `cp "#{@git_root}/Builds/JamomaModular.dll"  						root/support`
-  `cp "#{@git_root}/Modules/DSP/extensions/SoundfileLib/libsndfile/libsndfile-1.dll"		root/support`
-  `cp "#{@git_root}/Modules/DSP/library/portaudio/Release/PortAudio.dll"		root/support`
-  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libcairo-2.dll"		root/support`
-  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libpng12-0.dll"		root/support`
-  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libfontconfig-1.dll"		root/support`
-#  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/zlib1.dll"		root/support`
-  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/libexpat-1.dll"		root/support`
-  `cp "#{@git_root}/Modules/Graphics/library/cairo-lib/freetype6.dll"		root/support`
+  `cp "#{@git_root}/Builds/JamomaFoundation.dll"  			                                root/support`
+  `cp "#{@git_root}/Builds/JamomaDSP.dll"  						                                  root/support`
+  `cp "#{@git_root}/Builds/JamomaGraph.dll"  						                                root/support`
+  `cp "#{@git_root}/Builds/JamomaAudioGraph.dll"  			                                root/support`
+  `cp "#{@git_root}/Builds/JamomaModular.dll"  					                                root/support`
+  `cp "#{@git_root}/Core/DSP/extensions/SoundfileLib/libsndfile/libsndfile-1.dll"		    root/support`
+  `cp "#{@git_root}/Core/DSP/library/portaudio/Release/PortAudio.dll"		                root/support`
 
   puts " Copying externals"
   `mkdir "#{@c74}/Jamoma/library/externals"`
@@ -401,26 +392,20 @@ else
   puts "  Copying Shared Libraries & Extensions"
   `cp -pv \"#{@path_extensions}\"/*.ttdylib                                          \"#{@tempDistro}#{@path_extensions}\"`
 
-  `cp -pv \"#{@git_root}/Modules/Foundation/library/build\"/JamomaFoundation.dylib   \"#{@tempDistro}#{@path_shared_libs}\"`
+  `cp -pv \"#{@git_root}/Core/Foundation/library/build\"/JamomaFoundation.dylib      \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaFoundation.dylib                                \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/DSP/library/build\"/JamomaDSP.dylib                  \"#{@tempDistro}#{@path_shared_libs}\"`
+  `cp -pv \"#{@git_root}/Core/DSP/library/build\"/JamomaDSP.dylib                  \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaDSP.dylib                                        \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/Graph/library/build\"/JamomaGraph.dylib              \"#{@tempDistro}#{@path_shared_libs}\"`
+  `cp -pv \"#{@git_root}/Core/Graph/library/build\"/JamomaGraph.dylib              \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaGraph.dylib                                      \"#{@tempDistro}/usr/local/lib\"`
 
-  `cp -pv \"#{@git_root}/Modules/AudioGraph/library/build\"/JamomaAudioGraph.dylib    \"#{@tempDistro}#{@path_shared_libs}\"`
+  `cp -pv \"#{@git_root}/Core/AudioGraph/library/build\"/JamomaAudioGraph.dylib    \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaAudioGraph.dylib                                 \"#{@tempDistro}/usr/local/lib\"`
-
-  `cp -pv \"#{@git_root}/Modules/Graphics/library/build\"/JamomaGraphics.dylib        \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaGraphics.dylib                                   \"#{@tempDistro}/usr/local/lib\"`
 
   `cp -pv \"#{@git_root}/Modules/Modular/library/build"/JamomaModular.dylib           \"#{@tempDistro}#{@path_shared_libs}\"`
   `ln -s /usr/local/jamoma/lib/JamomaModular.dylib                                    \"#{@tempDistro}/usr/local/lib\"`
-
-  `cp -pv \"#{@git_root}/Modules/Plugtastic/library/build"/JamomaPlugtastic.dylib     \"#{@tempDistro}#{@path_shared_libs}\"`
-  `ln -s /usr/local/jamoma/lib/JamomaPlugtastic.dylib                                 \"#{@tempDistro}/usr/local/lib\"`
   
   puts "  Copying header files used by plugtastic"
   `cp -rpv /usr/local/jamoma/includes                                                 \"#{@tempDistro}/usr/local/jamoma/includes\"`
@@ -440,10 +425,6 @@ else
 
   puts "  Copying Dependencies folder"
    `cp -rpv \"#{@path_dependencies}/Max/Mac\"/*                                       \"#{@tempDepend}/Jamoma/Dependencies\"`
-  #
-  puts "  Copying Plugtastic examples"
-   `cp -rpv \"#{@path_plugtastic}/Max\"                                               \"#{@c74}/Jamoma/Documentation/examples\"`
-   `mv \"#{@c74}/Jamoma/Documentation/examples/Max\"                                  \"#{@c74}/Jamoma/Documentation/examples/Plugtastic\"`
 
   puts "  Copying Testing components"
   `cp -rpv \"#{@path_testing}/components\"                                             \"#{@c74}/Jamoma/library/testing\"`
