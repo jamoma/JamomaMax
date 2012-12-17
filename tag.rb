@@ -7,7 +7,7 @@ Dir.chdir glibdir             # change to libdir so that requires work
 glibdir = Dir.pwd
 
 $main_repository = true
-require "#{glibdir}/Support/jamomalib"
+require "#{glibdir}/../Core/Shared/jamomalib"
 
 
 ###################################################################
@@ -22,6 +22,14 @@ end
 
 $tag = ARGV[0];
 
+def tagCore
+
+  puts "tagging Core"
+  `cd ../Core; git remote prune origin`
+  `cd ../Core; git tag #{$tag}`
+  `cd ../Core; git push origin --tags`
+
+end
 
 def tagOne name
 
@@ -36,17 +44,11 @@ end
 `git tag #{$tag}`
 `git push origin --tags`
 
-tagOne "AudioGraph"
+tagCore
 tagOne "Dependencies"
-tagOne "DSP"
-tagOne "Foundation"
-tagOne "Graph"
-tagOne "Graphics"
-tagOne "Modular"
-tagOne "Ruby"
-tagOne "Test"
 tagOne "Documentation"
-tagOne "Plugtastic"
+tagOne "Modular"
+tagOne "Test"
 
 
 #{}`git submodule foreach git remote prune origin`
