@@ -385,6 +385,7 @@ else
   `mkdir -pv \"#{@installers}/Jamoma\"                                  `
   `mkdir -pv \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0\"`
   `mkdir -pv \"#{@tempDistro}/Library/Application\ Support/Avian/Bundles\"`
+  `mkdir -pv \"#{@tempDistro}/Library/Application\ Support/TextMate/Bundles\"`
   puts "  Building Max clippings..."
   Dir.chdir("#{@git_root}/Tools") 
   `ruby buildMaxClippings.rb`
@@ -435,6 +436,7 @@ else
 
   puts "  Copying Textmate bundle"
   `cp -rpv \"#{@path_oscTextmateBundle}/OSC\ for\ Jamoma.tmbundle\"                   \"#{@tempDistro}/Library/Application\ Support/Avian/Bundles/OSC\ for\ Jamoma.tmbundle\"`
+  `cp -rpv \"#{@path_oscTextmateBundle}/OSC\ for\ Jamoma.tmbundle\"                   \"#{@tempDistro}/Library/Application\ Support/TextMate/Bundles/OSC\ for\ Jamoma.tmbundle\"`
 
   puts "  Copying Dependencies folder"
    `cp -rpv \"#{@path_dependencies}/Max/Mac\"/*                                       \"#{@tempDepend}/Jamoma/Dependencies\"`
