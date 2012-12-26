@@ -29,5 +29,6 @@ load "build.rb"
 `mkdir -p "#{glibdir}"/max/extensions`
 `rm -rf "#{glibdir}"/max/externals/*`
 `rm -rf "#{glibdir}"/max/extensions/*`
-#`mv "#{glibdir}"/../Builds/MaxMSP/jcom.* "#{glibdir}"/max/externals`
-#`mv "#{glibdir}"/max/externals/jcom.loader.* "#{glibdir}"/max/extensions`
+`cp -r "#{glibdir}"/../../Builds/MaxMSP/jcom.*.mxo "#{glibdir}"/max/externals`
+`cp -r "#{glibdir}"/max/externals/jcom.loader.* "#{glibdir}"/max/extensions`
+`cp -r "#{glibdir}"/../../Builds/MaxMSP/jcom.*.maxhelp "#{glibdir}"/max/help`

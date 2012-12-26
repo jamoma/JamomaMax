@@ -1,3 +1,5 @@
 *.o
 Makefile
 build
+max/extensions
+max/externals
