@@ -1,89 +1,49 @@
 /*
  * jamoma~
- * Multichannel gain control
- * By Tim Place, Copyright © 2005
+ * A generic class wrapping object that loads any Jamoma class
+ * By Tim Place, Copyright 2012
  *
  * License: This code is licensed under the terms of the "New BSD License"
  * http://creativecommons.org/licenses/BSD/
  */
 
 #include "TTClassWrapperMax.h"
-//#include "ext_hashtab.h"
-//#include "ext.h"						// Max Header
-//#include "z_dsp.h"						// MSP Header
-//#include "ext_strings.h"				// String Functions
-//#include "commonsyms.h"					// Common symbols used by the Max 4.5 API
-//#include "ext_obex.h"					// Max Object Extensions (attributes) Header
-
 #include "TTDSP.h"
-//#define MAX_NUM_CHANNELS 32
-
-/*
-// Data Structure for this object
-typedef struct _jamoma {
-	t_pxobject 			obj;
-	TTAudioObject*	ugen;
-	TTAudioSignal*	signalIn;
-	TTAudioSignal*	signalOut;
-	TTUInt16				numChannels;
-	char						attrBypass;			// toggle 1 = bypass
-} t_jamoma;
-*/
 
 // Prototypes for methods
 ObjectPtr	jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv);
 ObjectPtr	wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv);
 void		wrappedClass_free(WrappedInstancePtr x);
-//void			jamoma_free(t_jamoma *x);
-//void			jamoma_dsp64(t_jamoma *x, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags);
-//void			jamoma_assist(t_jamoma *x, void *b, long m, long a, char *s);
-
-//t_max_err	attr_set_bypass(t_jamoma *x, void *attr, long argc, t_atom *argv);
-
 
 // Globals
 static ClassPtr		s_jamoma_class;
 static t_hashtab*	s_jamoma_class_hash = NULL;
 
-
 /************************************************************************************/
-// Define our class
+// Define a Max class that does essentially nothing but let users type the name into an object box.
+// The class we actually use will be defined in the new method.
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	ClassPtr c = class_new("jamoma~", (method)jamoma_new, (method)wrappedClass_free, sizeof(WrappedInstance), (method)0L, A_GIMME, 0);
+	s_jamoma_class = class_new("jamoma~", (method)jamoma_new, (method)wrappedClass_free, sizeof(WrappedInstance), (method)0L, A_GIMME, 0);
+	class_register(CLASS_BOX, s_jamoma_class);
 
-	TTDSPInit();
 	common_symbols_init();
-
-//	class_addmethod(c, (method)jamoma_dsp64,			"dsp64", A_CANT, 0);
-//	class_addmethod(c, (method)object_obex_dumpout, 	"dumpout", A_CANT,0);
-//	class_addmethod(c, (method)jamoma_assist, 			"assist", A_CANT, 0L);
-
-//	CLASS_ATTR_CHAR(c,		"bypass",	0,		t_jamoma,	attrBypass);
-//	CLASS_ATTR_ACCESSORS(c,	"bypass",	NULL,	attr_set_bypass);
-
-	// Setup our class to work with MSP
-	class_dspinit(c);
-
-	// Finalize our class
-	class_register(CLASS_BOX, c);
-	s_jamoma_class = c;
+	TTDSPInit();
 	return 0;
 }
 
-
 /************************************************************************************/
-// Object Life
+// When a new instance of jamoma~ is created, we look at the first argument to get a Jamoma class name.
+// Then we wrap that class as a Max class.
+// Finally, we proceed to then instantiate the new Max class instead of the jamoma~ Max class.
 
-// Create
 ObjectPtr jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 {
 	int				attrstart = attr_args_offset(argc, argv);
 	int				i = 0;
 	int				channelCount = 2;
 	SymbolPtr		className = gensym("gain");
-//	t_class*		maxClass = NULL;
 	WrappedClassPtr	classWrapper = NULL;
 	char			maxClassName[256];
 
@@ -91,7 +51,6 @@ ObjectPtr jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 		error("must specify a jamoma class as the first argument");
 		return NULL;
 	}
-
 	while (attrstart--) {
 		if (atom_gettype(argv+i) == A_LONG)
 			channelCount = atom_getlong(argv+i);
@@ -113,4 +72,3 @@ ObjectPtr jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 
 	return wrappedClass_new(gensym(maxClassName), argc-1, argv+1);
 }
-
