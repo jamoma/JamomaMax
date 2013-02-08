@@ -96,9 +96,9 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 			}
 		}
 		
-		TTObjectInstantiate(wrappedMaxClass->ttblueClassName, &x->wrappedObject, x->maxNumChannels);		
-		TTObjectInstantiate(TT("audiosignal"), &x->audioIn, x->numInputs);
-		TTObjectInstantiate(TT("audiosignal"), &x->audioOut,x->numOutputs);
+		TTObjectBaseInstantiate(wrappedMaxClass->ttblueClassName, &x->wrappedObject, x->maxNumChannels);		
+		TTObjectBaseInstantiate(TT("audiosignal"), &x->audioIn, x->numInputs);
+		TTObjectBaseInstantiate(TT("audiosignal"), &x->audioOut,x->numOutputs);
 		attr_args_process(x,argc,argv);				// handle attribute args			
     	object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x,NULL));	// dumpout
 		
@@ -119,7 +119,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
             
             x->controlOutlet = outlet_new((t_pxobject*)x, NULL);
             
-            err = TTObjectInstantiate(TT("callback"), &x->controlCallback, kTTValNONE);
+            err = TTObjectBaseInstantiate(TT("callback"), &x->controlCallback, kTTValNONE);
             x->controlCallback->setAttributeValue(TT("function"), TTPtr(&wrappedClass_receiveNotificationForOutlet));
             x->controlCallback->setAttributeValue(TT("baton"), TTPtr(x));	
  
@@ -144,9 +144,9 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 void wrappedClass_free(WrappedInstancePtr x)
 {
 	dsp_free((t_pxobject *)x);
-	TTObjectRelease(&x->wrappedObject);
-	TTObjectRelease(&x->audioIn);
-	TTObjectRelease(&x->audioOut);
+	TTObjectBaseRelease(&x->wrappedObject);
+	TTObjectBaseRelease(&x->audioIn);
+	TTObjectBaseRelease(&x->audioOut);
 	delete[] x->controlSignalNames;
 }
 
@@ -460,7 +460,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 
 TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, WrappedClassPtr* c, WrappedClassOptionsPtr options)
 {
-	TTObject*		o = NULL;
+	TTObjectBase*		o = NULL;
 	TTValue			v;
 	TTUInt16		numChannels = 1;
 	WrappedClass*	wrappedMaxClass = NULL;
@@ -491,7 +491,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 	wrappedMaxClass->maxNamesToTTNames = hashtab_new(0);
 	
 	// Create a temporary instance of the class so that we can query it.
-	TTObjectInstantiate(ttblueClassName, &o, numChannels);
+	TTObjectBaseInstantiate(ttblueClassName, &o, numChannels);
 	
 	if (!o) {
 		error("Jamoma ClassWrapper failed to load %s", ttblueClassName.c_str());
@@ -555,7 +555,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 		nameCString = NULL;
 	}
 	
-	TTObjectRelease(&o);
+	TTObjectBaseRelease(&o);
 		
  	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_dsp, 		"dsp",			A_CANT, 0L);
  	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_dsp64, 		"dsp64",		A_CANT, 0L);
