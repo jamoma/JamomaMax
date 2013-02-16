@@ -96,7 +96,7 @@ end
 
 # Having initially set all options we need to make some further Windows-specific precautions:
 
-if win32?
+if win?
  	 if(configuration == "Development" || configuration == "Debug" )
     		configuration = "Debug"
   	else
@@ -111,7 +111,7 @@ end
 ###################################################################
 if(clean)
   
-  if win32?
+  if win?
     #windows specific loc. Where ?
   else
     if (File.exists? "/usr/local/jamoma/lib")
@@ -144,7 +144,7 @@ if(clean)
     `rm -rf *.maxhelp`
   
     # Windows
-    if win32?
+    if win?
 
       `rm -f *.ttdll`
       `rm -f *.dll`
@@ -240,9 +240,11 @@ implementations.each {|implementation|
 }
 
 # Install Ruby Support
-if win32?
-  # At the moment we don't build TTRuby for Windows
-  # If someone is interested in doing that, please feel free!
+if win?
+  puts
+  puts "At the moment we don't build TTRuby for Windows"
+  puts "If someone is interested in doing that, please feel free!"
+  puts
 else
   puts
   puts "Installing Jamoma Ruby support -- this may require your password"
