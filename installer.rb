@@ -63,7 +63,7 @@ require 'date'
 
 @git_root = ".."	# this is the root of the Jamoma project repository
 @installers = "#{@git_root}/Installers"
-if win32?
+if win?
   Dir.chdir @git_root
   @git_root = Dir.pwd
   Dir.chdir "#{@git_root}/Tools/installertools"
@@ -223,7 +223,7 @@ end
 
 
 
-if win32?
+if win?
 
   Dir.chdir("#{@git_root}/Tools/installertools/Windows")
 
