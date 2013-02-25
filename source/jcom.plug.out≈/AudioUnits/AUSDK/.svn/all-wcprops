@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK
+END
+AUInputElement.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUInputElement.cpp
+END
+CAHostTimeBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAHostTimeBase.h
+END
+AUSilentTimeout.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUSilentTimeout.h
+END
+AUBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUBase.cpp
+END
+AUOutputElement.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUOutputElement.cpp
+END
+CAVectorUnitTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAVectorUnitTypes.h
+END
+CAAudioChannelLayout.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAAudioChannelLayout.h
+END
+ComponentBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/ComponentBase.h
+END
+AUMIDIBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUMIDIBase.cpp
+END
+AUBuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUBuffer.h
+END
+CAStreamBasicDescription.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAStreamBasicDescription.h
+END
+CAVectorUnit.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAVectorUnit.h
+END
+CAThreadSafeList.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAThreadSafeList.h
+END
+AUEffectBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUEffectBase.cpp
+END
+AUScopeElement.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUScopeElement.h
+END
+AUMIDIEffectBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUMIDIEffectBase.cpp
+END
+AUDispatch.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUDispatch.h
+END
+CAAudioChannelLayout.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAAudioChannelLayout.cpp
+END
+ComponentBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/ComponentBase.cpp
+END
+AUBuffer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUBuffer.cpp
+END
+CAMath.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAMath.h
+END
+CADebugMacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CADebugMacros.h
+END
+AUInputElement.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUInputElement.h
+END
+CAStreamBasicDescription.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAStreamBasicDescription.cpp
+END
+AUBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUBase.h
+END
+AUOutputElement.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUOutputElement.h
+END
+CAVectorUnit.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAVectorUnit.cpp
+END
+AUMIDIBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUMIDIBase.h
+END
+AUScopeElement.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUScopeElement.cpp
+END
+CAAtomicStack.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAAtomicStack.h
+END
+AUResources.r
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUResources.r
+END
+AUEffectBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUEffectBase.h
+END
+AUDispatch.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUDispatch.cpp
+END
+AUMIDIEffectBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/AUMIDIEffectBase.h
+END
+CAReferenceCounted.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/supercollider/!svn/ver/9821/trunk/mac/SuperColliderAU/AUSDK/CAReferenceCounted.h
+END

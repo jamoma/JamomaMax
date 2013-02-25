@@ -1,0 +1,13 @@
+
+PRODUCT_NAME = My Awesome Effect
+PRODUCT_VERSION = 1.0
+MANUFACTURER_NAME = Plugtastic
+DSTROOT = /
+DEPLOYMENT_LOCATION = YES
+
+// Paths
+JAMOMALIBS = /usr/local/jamoma/lib
+
+HEADER_SEARCH_PATHS = /usr/local/jamoma/includes ../AUSDK
+
+OTHER_LDFLAGS = "$(JAMOMALIBS)"/JamomaFoundation.dylib "$(JAMOMALIBS)"/JamomaDSP.dylib "$(JAMOMALIBS)"/JamomaGraph.dylib "$(JAMOMALIBS)"/JamomaAudioGraph.dylib "$(JAMOMALIBS)"/JamomaGraphics.dylib "$(JAMOMALIBS)"/JamomaPlugtastic.dylib

@@ -1,0 +1,165 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		A79D072C1655C88900D02D46 /* jcom.mixer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = jcom.mixer.cpp; sourceTree = "<group>"; };
+		A79D072E1655C88E00D02D46 /* jcom.mixer≈.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "jcom.mixer≈.yml"; sourceTree = "<group>"; };
+		A79D075D1655D73F00D02D46 /* MaxAudioGraph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MaxAudioGraph.cpp; path = ../MaxAudioGraph.cpp; sourceTree = "<group>"; };
+		A79D075E1655D73F00D02D46 /* MaxAudioGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MaxAudioGraph.h; path = ../MaxAudioGraph.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		A79D071C1655C87200D02D46 = {
+			isa = PBXGroup;
+			children = (
+				A79D072E1655C88E00D02D46 /* jcom.mixer≈.yml */,
+				A79D072C1655C88900D02D46 /* jcom.mixer.cpp */,
+				A79D075D1655D73F00D02D46 /* MaxAudioGraph.cpp */,
+				A79D075E1655D73F00D02D46 /* MaxAudioGraph.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		A79D07231655C87200D02D46 /* jcom.mixer≈ */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = A79D07261655C87200D02D46 /* Build configuration list for PBXLegacyTarget "jcom.mixer≈" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = "jcom.mixer≈";
+			passBuildSettingsInEnvironment = 1;
+			productName = "jcom.mixer≈";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		A79D071E1655C87200D02D46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = org.jamoma;
+			};
+			buildConfigurationList = A79D07211655C87200D02D46 /* Build configuration list for PBXProject "jcom.mixer≈" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A79D071C1655C87200D02D46;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A79D07231655C87200D02D46 /* jcom.mixer≈ */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		A79D07241655C87200D02D46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A79D07251655C87200D02D46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A79D07271655C87200D02D46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A79D07281655C87200D02D46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A79D07211655C87200D02D46 /* Build configuration list for PBXProject "jcom.mixer≈" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79D07241655C87200D02D46 /* Debug */,
+				A79D07251655C87200D02D46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79D07261655C87200D02D46 /* Build configuration list for PBXLegacyTarget "jcom.mixer≈" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79D07271655C87200D02D46 /* Debug */,
+				A79D07281655C87200D02D46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A79D071E1655C87200D02D46 /* Project object */;
+}

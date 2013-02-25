@@ -1,0 +1,168 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		2213D9531655887A00F7B2BC /* jcom.plug.out.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = jcom.plug.out.cpp; sourceTree = "<group>"; };
+		2213D9541655887A00F7B2BC /* jcom.plug.out.export.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = jcom.plug.out.export.mm; sourceTree = "<group>"; };
+		2213D9551655887A00F7B2BC /* jcom.plug.out.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jcom.plug.out.h; sourceTree = "<group>"; };
+		2213D9561655887A00F7B2BC /* jcom.plug.out≈.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "jcom.plug.out≈.yml"; sourceTree = "<group>"; };
+		2213D9571655887A00F7B2BC /* PlugtasticProgressWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlugtasticProgressWindow.h; sourceTree = "<group>"; };
+		2213D9581655887A00F7B2BC /* PlugtasticProgressWindow.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PlugtasticProgressWindow.mm; sourceTree = "<group>"; };
+		2213D95A1655892000F7B2BC /* TTGraphDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTGraphDescription.h; path = ../../../../Graph/library/includes/TTGraphDescription.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		A79C81E71523171D00119511 = {
+			isa = PBXGroup;
+			children = (
+				2213D9561655887A00F7B2BC /* jcom.plug.out≈.yml */,
+				2213D9551655887A00F7B2BC /* jcom.plug.out.h */,
+				2213D9531655887A00F7B2BC /* jcom.plug.out.cpp */,
+				2213D9541655887A00F7B2BC /* jcom.plug.out.export.mm */,
+				2213D9571655887A00F7B2BC /* PlugtasticProgressWindow.h */,
+				2213D9581655887A00F7B2BC /* PlugtasticProgressWindow.mm */,
+				2213D95A1655892000F7B2BC /* TTGraphDescription.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		A79C81EE1523171D00119511 /* jcom.plug.out≈ */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION) $(CONFIGURATION)";
+			buildConfigurationList = A79C81F11523171D00119511 /* Build configuration list for PBXLegacyTarget "jcom.plug.out≈" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "jcom.plug.out≈";
+			passBuildSettingsInEnvironment = 1;
+			productName = jcom.plug;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		A79C81E91523171D00119511 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "BEK - Bergen senter for elektronisk kunst";
+			};
+			buildConfigurationList = A79C81EC1523171D00119511 /* Build configuration list for PBXProject "jcom.plug.out≈" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A79C81E71523171D00119511;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A79C81EE1523171D00119511 /* jcom.plug.out≈ */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		A79C81EF1523171D00119511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A79C81F01523171D00119511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A79C81F21523171D00119511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "jcom.plug.out≈";
+			};
+			name = Debug;
+		};
+		A79C81F31523171D00119511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "jcom.plug.out≈";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A79C81EC1523171D00119511 /* Build configuration list for PBXProject "jcom.plug.out≈" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79C81EF1523171D00119511 /* Debug */,
+				A79C81F01523171D00119511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79C81F11523171D00119511 /* Build configuration list for PBXLegacyTarget "jcom.plug.out≈" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79C81F21523171D00119511 /* Debug */,
+				A79C81F31523171D00119511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A79C81E91523171D00119511 /* Project object */;
+}

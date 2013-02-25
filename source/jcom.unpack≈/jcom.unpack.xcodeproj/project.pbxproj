@@ -1,0 +1,173 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		A7FF4088165DB41800130C98 /* jcom.unpack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = jcom.unpack.cpp; sourceTree = "<group>"; };
+		A7FF4089165DB41800130C98 /* jcom.unpack≈.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "jcom.unpack≈.yml"; sourceTree = "<group>"; };
+		A7FF408C165DB43900130C98 /* MaxAudioGraph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MaxAudioGraph.cpp; path = ../MaxAudioGraph.cpp; sourceTree = "<group>"; };
+		A7FF408D165DB43900130C98 /* MaxAudioGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MaxAudioGraph.h; path = ../MaxAudioGraph.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		A7FF4078165DB3EA00130C98 = {
+			isa = PBXGroup;
+			children = (
+				A7FF4089165DB41800130C98 /* jcom.unpack≈.yml */,
+				A7FF408B165DB42100130C98 /* source */,
+				A7FF408D165DB43900130C98 /* MaxAudioGraph.h */,
+				A7FF408C165DB43900130C98 /* MaxAudioGraph.cpp */,
+			);
+			sourceTree = "<group>";
+		};
+		A7FF408B165DB42100130C98 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				A7FF4088165DB41800130C98 /* jcom.unpack.cpp */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		A7FF407F165DB3EA00130C98 /* jcom.unpack */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = A7FF4082165DB3EA00130C98 /* Build configuration list for PBXLegacyTarget "jcom.unpack" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = jcom.unpack;
+			passBuildSettingsInEnvironment = 1;
+			productName = jcom.unpack;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		A7FF407A165DB3EA00130C98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = org.jamoma;
+			};
+			buildConfigurationList = A7FF407D165DB3EA00130C98 /* Build configuration list for PBXProject "jcom.unpack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A7FF4078165DB3EA00130C98;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7FF407F165DB3EA00130C98 /* jcom.unpack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		A7FF4080165DB3EA00130C98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A7FF4081165DB3EA00130C98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A7FF4083165DB3EA00130C98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A7FF4084165DB3EA00130C98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7FF407D165DB3EA00130C98 /* Build configuration list for PBXProject "jcom.unpack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FF4080165DB3EA00130C98 /* Debug */,
+				A7FF4081165DB3EA00130C98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7FF4082165DB3EA00130C98 /* Build configuration list for PBXLegacyTarget "jcom.unpack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FF4083165DB3EA00130C98 /* Debug */,
+				A7FF4084165DB3EA00130C98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7FF407A165DB3EA00130C98 /* Project object */;
+}
