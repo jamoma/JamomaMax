@@ -1,0 +1,5 @@
+-look at ttblue functionality and replace what i can with its members.
+-replace switch in perform with ttblue's hashtable lookup approach as per TTNoise
+-reduce number of switches generally, don't repeat yourself, make it classier, etc.
+
+
