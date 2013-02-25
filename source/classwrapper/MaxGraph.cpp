@@ -79,7 +79,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 		v.set(0, wrappedMaxClass->ttClassName);
 		v.set(1, numInputs);
 		v.set(2, numOutputs);
-		err = TTObjectInstantiate(TT("audio.object"), (TTObjectPtr*)&self->graphObject, v);
+		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->graphObject, v);
 				
 		attr_args_process(self, argc, argv);
 	}
@@ -90,7 +90,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 void wrappedClass_free(WrappedInstancePtr self)
 {
 	if (self->graphObject)
-		TTObjectRelease((TTObjectPtr*)&self->graphObject);
+		TTObjectBaseRelease((TTObjectBasePtr*)&self->graphObject);
 
 	for (int i=0; i<MAX_NUM_INLETS; i++) {
 		if (self->inlets[i])
@@ -318,7 +318,7 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 
 TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr* c, WrappedClassOptionsPtr options)
 {
-	TTObject*		o = NULL;
+	TTObjectBasePtr	o = NULL;
 	TTValue			v;
 	TTUInt16		numChannels = 1;
 	WrappedClass*	wrappedMaxClass = NULL;
@@ -349,7 +349,7 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 	wrappedMaxClass->maxNamesToTTNames = hashtab_new(0);
 	
 	// Create a temporary instance of the class so that we can query it.
-	TTObjectInstantiate(ttClassName, &o, numChannels);
+	TTObjectBaseInstantiate(ttClassName, &o, numChannels);
 
 	o->getMessageNames(v);
 	for (TTUInt16 i=0; i<v.getSize(); i++) {
@@ -406,7 +406,7 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 		nameCString = NULL;
 	}
 	
-	TTObjectRelease(&o);
+	TTObjectBaseRelease(&o);
 	
 	class_addmethod(wrappedMaxClass->maxClass, (method)MaxGraphReset,		"graph.reset",		A_CANT, 0);
 	class_addmethod(wrappedMaxClass->maxClass, (method)MaxGraphSetup,		"graph.setup",		A_CANT, 0);

@@ -107,7 +107,7 @@ ObjectPtr MaxAudioGraphWrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr 
 		v.set(0, wrappedMaxClass->ttClassName);
 		v.set(1, self->numInputs);
 		v.set(2, self->numOutputs);
-		err = TTObjectInstantiate(TT("audio.object"), (TTObjectPtr*)&self->audioGraphObject, v);
+		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("generator"), v))
 			self->audioGraphObject->addAudioFlag(kTTAudioGraphGenerator);
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("nonadapting"), v))
@@ -121,7 +121,7 @@ ObjectPtr MaxAudioGraphWrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr 
 void MaxAudioGraphWrappedClass_free(WrappedInstancePtr self)
 {
 	if (self->audioGraphObject)
-		TTObjectRelease((TTObjectPtr*)&self->audioGraphObject);
+		TTObjectBaseRelease((TTObjectBasePtr*)&self->audioGraphObject);
 
 	for (int i=0; i<MAX_NUM_INLETS; i++) {
 		if (self->inlets[i])
@@ -363,7 +363,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 
 TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c, MaxAudioGraphWrappedClassOptionsPtr options)
 {
-	TTObject*					o = NULL;
+	TTObjectBasePtr				o = NULL;
 	TTValue						v;
 	TTUInt16					numChannels = 1;
 	MaxAudioGraphWrappedClassPtr	wrappedMaxClass = NULL;
@@ -393,7 +393,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 	wrappedMaxClass->options = options;
 	
 	// Create a temporary instance of the class so that we can query it.
-	TTObjectInstantiate(ttClassName, &o, numChannels);
+	TTObjectBaseInstantiate(ttClassName, &o, numChannels);
 
 	o->getMessageNames(v);
 	for (TTUInt16 i=0; i<v.getSize(); i++) {
@@ -449,7 +449,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 		nameCString = NULL;
 	}
 	
-	TTObjectRelease(&o);
+	TTObjectBaseRelease(&o);
 	
 	class_addmethod(wrappedMaxClass->maxClass, (method)MaxAudioGraphReset,		"audio.reset",		A_CANT, 0);
 	class_addmethod(wrappedMaxClass->maxClass, (method)MaxAudioGraphSetup,		"audio.setup",		A_CANT, 0);

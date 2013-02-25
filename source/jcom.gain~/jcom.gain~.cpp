@@ -20,8 +20,8 @@
 // Data Structure for this object
 typedef struct _gain{
 	t_pxobject 		obj;
-	TTAudioObject*	xfade;				// crossfade object from the ttblue library
-	TTAudioObject*	gain;				// gain control object the ttblue library
+	TTAudioObjectBase*	xfade;				// crossfade object from the ttblue library
+	TTAudioObjectBase*	gain;				// gain control object the ttblue library
 	TTAudioSignal*	signalIn;
 	TTAudioSignal*	signalOut;
 	TTAudioSignal*	signalTemp;
@@ -111,11 +111,11 @@ void* gain_new(t_symbol* s, long argc, t_atom* argv)
 
 		//x->xfade = new TTCrossfade(x->numChannels);				// Constructors
 		//x->gain = new TTGain(x->numChannels);
-		TTObjectInstantiate(TT("crossfade"), &x->xfade, x->numChannels);
-		TTObjectInstantiate(TT("gain"), &x->gain, x->numChannels);
-		TTObjectInstantiate(kTTSym_audiosignal, &x->signalTemp, x->numChannels);
-		TTObjectInstantiate(kTTSym_audiosignal, &x->signalOut, x->numChannels);
-		TTObjectInstantiate(kTTSym_audiosignal, &x->signalIn, x->numChannels*2);
+		TTObjectBaseInstantiate(TT("crossfade"), &x->xfade, x->numChannels);
+		TTObjectBaseInstantiate(TT("gain"), &x->gain, x->numChannels);
+		TTObjectBaseInstantiate(kTTSym_audiosignal, &x->signalTemp, x->numChannels);
+		TTObjectBaseInstantiate(kTTSym_audiosignal, &x->signalOut, x->numChannels);
+		TTObjectBaseInstantiate(kTTSym_audiosignal, &x->signalIn, x->numChannels*2);
 		//x->signalTemp = new TTAudioSignal(x->numChannels);
 		//x->signalOut = new TTAudioSignal(x->numChannels);
 		//x->signalIn = new TTAudioSignal(x->numChannels*2);
@@ -135,11 +135,11 @@ void* gain_new(t_symbol* s, long argc, t_atom* argv)
 void gain_free(t_gain *x)
 {
 	dsp_free((t_pxobject *)x);		// Always call dsp_free first in this routine
-	TTObjectRelease(&x->xfade);
-	TTObjectRelease(&x->gain);
-	TTObjectRelease(&x->signalTemp);
-	TTObjectRelease(&x->signalOut);
-	TTObjectRelease(&x->signalIn);
+	TTObjectBaseRelease(&x->xfade);
+	TTObjectBaseRelease(&x->gain);
+	TTObjectBaseRelease(&x->signalTemp);
+	TTObjectBaseRelease(&x->signalOut);
+	TTObjectBaseRelease(&x->signalIn);
 }
 
 /************************************************************************************/
