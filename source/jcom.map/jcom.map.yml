@@ -12,6 +12,7 @@ includes:
   - ../../../../Modules/Modular/library/SchedulerLib
   - ../../../../Modules/Modular/library/ProtocolLib
   - ../../../../Core/DSP/library/includes
+  - ../classwrapper
   - C74-INCLUDES
 libraries:
   - FOUNDATION

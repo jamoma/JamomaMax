@@ -8,8 +8,6 @@
 
 /* Begin PBXFileReference section */
 		46147FE616D0EAA7005D50AD /* jcom.cue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = jcom.cue.cpp; sourceTree = "<group>"; };
-		46147FEB16D0EABA005D50AD /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../../../../../Core/Shared/max/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
-		46147FEC16D0EABA005D50AD /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../../../../../Core/Shared/max/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -17,8 +15,6 @@
 			isa = PBXGroup;
 			children = (
 				46147FE616D0EAA7005D50AD /* jcom.cue.cpp */,
-				46147FEB16D0EABA005D50AD /* TTModularClassWrapperMax.h */,
-				46147FEC16D0EABA005D50AD /* TTModularClassWrapperMax.cpp */,
 			);
 			sourceTree = "<group>";
 		};
