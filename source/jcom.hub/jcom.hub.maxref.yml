@@ -1,0 +1,86 @@
+title: jcom.parameter
+author: [Jamoma]
+created_at: 2012/1/1
+tags: [interface, control, osc]
+
+brief: The central nervouos system of a Jammoma module
+
+desc: >
+ "jcom.hub is the central brain in a jamoma module. It parses input, distributes messaging to parameters, manages the pattrstorage object, generates documentation, configures the jcom.gui object, etc."
+ 
+inputs:
+  - name: left
+    desc: "Connect to left inlet of the module. Used for OSC communication to the module."
+
+outputs:
+ - name: left
+   desc: "Connect to left outlet of the module. Used for OSC communication from the module."
+ - name: right
+   desc: "dumpout"
+
+args:
+    
+messages:
+ - name: bang
+   desc: "bang is triggering calculations of new ramp values when the asynchronuous ramp drive method is used"
+ - name: /algorithm_type:/get
+   desc: "Get the algoritm type of this module"
+ - name: /alias
+   desc: "Provide the module with an OSC alias. This can be used for future remote OSC communiation to the module."
+ - name: /alias/remove
+   desc: "Remove the OSC alias of the module"
+ - name: /core_module_name:/get
+   desc: "Get the name of the core module, whatever that is"
+ - name: /documentation/generate
+   desc: "Generate HTML documentation for this module. This message is implemented as a jcom.message embedded in the jcom.ui object"
+ - name: "/init"
+   desc: "Initialise this module. This message is implemented as a jcom.message embedded in the jcom.ui object"
+ - name: /message_names:/dump
+   desc: "Get the names of all jcom.message objects associated with this module"
+ - name: /module/help
+   desc: "Open the help patch for this module."
+ - name: /module/reference
+   desc: "Open the HTML reference file for this module."
+ - name: /module_name:/get
+   desc: "Get the current OSC alias name of the module"
+ - name: /name:/get
+   desc: "Get the current OSC alias name of the module"
+ - name: /parameter_names:/dump
+   desc: "Get the names of all jcom.parameter objects associated with this module"
+ - name: /parameter_values:/dump
+   desc: "Get current values of all jcom.parameter objects associated with this module"
+ - name: /preset/store [preset-number preset-name]
+   desc: "Make snapshot of current parameter settings, and add as a new preset to the preset file currently loaded in RAM. Please note that the new preset is not stored to disk. In order to save the updated set of presets to disk, use the message /preset/write. This message is implemented as a jcom.message embedded in the jcom.ui object"
+ - name: /preset/write
+   desc: "Write current preset file to disk. This message is implemented as a jcom.message embedded in the jcom.ui object"
+ - name: /return_names:/dump
+   desc: "Get the names of all jcom.return objects associated with this module"
+ - name: /*_names:/dump
+   desc: "Get the names of all jcom.message, jcom.parameter and jcom.return objects associated with this module"
+ - name: (anything)
+   desc: a
+
+attributes:
+ - name: algorithm_type
+   desc: "What kind of algorithm do the module embed (control, jitter, etc.)?"
+ - name: class
+   desc: "Module class name"
+ - name: description
+   desc: "A textual description of the module fpr auto-documentation purpoises"
+ - name: module_type
+   desc: "What kind of module is this?  (audio, video, control, etc.)"
+ - name: name
+   desc: "Name of the module"
+ - name: user_path
+   desc: "The path of the last file used to save the presets"
+
+seealso:
+ - jcom.message
+ - jcom.parameter
+ - jcom.return
+ - jcom.in
+ - jcom.in~
+ - jcom.out
+ - jcom.out
+
+discussion: Jamoma is a free and open source project. http://www.jamoma.org

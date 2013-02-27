@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="'http://www.w3.org/2001/XMLSchema-instance'" xsi:schemaLocation="'http://jamoma.org/ file:jamoma.xsd'">
+ <preset name="default">
+ <!--this is the default preset-->
+  <command address="myParameter">0.020000</command>
+  <command address="myIndex">45</command>
+  <command address="myLabel">"foo and bar"</command>
+  <command address="any">65 "is that true ?" 4.500000</command>
+ </preset>
+ <preset name="standard setup">
+ <!--this is an usual setup for this model-->
+  <command address="myParameter">0.030000</command>
+  <command address="myIndex" unit="db">56</command>
+  <command address="myLabel">foo</command>
+  <command address="any">33 gege 7.900000</command>
+ </preset>
+ <preset name="another case">
+ <!--this is a setup used for a specific purpose-->
+  <command address="myParameter">1000</command>
+  <command address="myIndex" unit="db">2</command>
+  <command address="myLabel">ernest</command>
+  <command address="any">"bla bla bla"</command>
+ </preset>
+</jamoma>
