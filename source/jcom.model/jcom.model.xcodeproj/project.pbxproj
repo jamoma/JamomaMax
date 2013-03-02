@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		46534A7116E20D4900F61ED0 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
+		46534A7216E20D4900F61ED0 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
 		D289EBD4150FC13A00FC7F7E /* jcom.model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jcom.model.cpp; sourceTree = "<group>"; };
-		D2CAE4461512BBFB0020B900 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../../../../../Core/Shared/max/TTModularClassWrapperMax.cpp; sourceTree = SOURCE_ROOT; };
-		D2CAE4471512BBFB0020B900 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../../../../../Core/Shared/max/TTModularClassWrapperMax.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -17,8 +17,8 @@
 			isa = PBXGroup;
 			children = (
 				D289EBD4150FC13A00FC7F7E /* jcom.model.cpp */,
-				D2CAE4471512BBFB0020B900 /* TTModularClassWrapperMax.h */,
-				D2CAE4461512BBFB0020B900 /* TTModularClassWrapperMax.cpp */,
+				46534A7216E20D4900F61ED0 /* TTModularClassWrapperMax.h */,
+				46534A7116E20D4900F61ED0 /* TTModularClassWrapperMax.cpp */,
 			);
 			name = jcom.model;
 			sourceTree = "<group>";
