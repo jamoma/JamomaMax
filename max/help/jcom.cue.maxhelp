@@ -2358,8 +2358,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 455.0, 141.0, 220.0, 18.0 ],
-					"text" : "namespace/append /degrade~/bitdepth",
+					"patching_rect" : [ 455.0, 141.0, 228.0, 18.0 ],
+					"text" : "namespace/append /degrade~/out.*/gain",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
