@@ -1241,10 +1241,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-48", 0 ],
+					"destination" : [ "obj-53", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 202.75, 513.0, 84.5, 513.0 ],
+					"midpoints" : [ 202.75, 473.0, 398.5, 473.0 ],
 					"source" : [ "obj-19", 0 ]
 				}
 
