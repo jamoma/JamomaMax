@@ -4,10 +4,10 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 0,
-			"revision" : 5
+			"revision" : 8
 		}
 ,
-		"rect" : [ 82.0, 72.0, 865.0, 597.0 ],
+		"rect" : [ 592.0, 160.0, 854.0, 581.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 220.5, 205.0, 201.0, 31.0 ],
+					"patching_rect" : [ 220.5, 205.0, 205.0, 31.0 ],
 					"text" : "regexp (Tools/debugging) @substitute Modules/Test/components"
 				}
 
@@ -46,7 +46,7 @@
 					"bubble" : 1,
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"frgb" : [ 1.0, 0.0, 0.0, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-60",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -103,7 +103,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 0,
-							"revision" : 5
+							"revision" : 8
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -427,22 +427,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 389.0, 477.5, 67.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"fontsize" : 12.0,
-						"tags" : "",
 						"default_fontface" : 0,
-						"digest" : "",
-						"globalpatchername" : "",
 						"default_fontname" : "Arial",
-						"fontname" : "Arial",
 						"default_fontsize" : 12.0,
 						"description" : "",
-						"fontface" : 0
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p subfolder"
@@ -463,7 +462,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 0,
-							"revision" : 5
+							"revision" : 8
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -787,22 +786,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 75.0, 331.5, 67.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"fontsize" : 12.0,
-						"tags" : "",
 						"default_fontface" : 0,
-						"digest" : "",
-						"globalpatchername" : "",
 						"default_fontname" : "Arial",
-						"fontname" : "Arial",
 						"default_fontsize" : 12.0,
 						"description" : "",
-						"fontface" : 0
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p subfolder"
@@ -833,7 +831,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 692.5, 205.0, 140.5, 31.0 ],
+					"patching_rect" : [ 692.5, 205.0, 147.5, 31.0 ],
 					"text" : "regexp (Tools/debugging) @substitute UserLib"
 				}
 
@@ -1027,13 +1025,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-22",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 193.25, 276.0, 213.5, 31.0 ],
-					"text" : "regexp (Tools/debugging) @substitute Builds/MaxMSP"
+					"patching_rect" : [ 193.25, 276.0, 148.0, 43.0 ],
+					"text" : "regexp (Tools/debugging) @substitute Implementations/Max/max"
 				}
 
 			}
@@ -1041,7 +1039,7 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-35",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1055,7 +1053,7 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 18.0,
-					"frgb" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-33",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1068,7 +1066,6 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-31",
-					"ignoreclick" : 1,
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1128,7 +1125,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 75.0, 230.0, 138.0, 43.0 ],
+					"patching_rect" : [ 75.0, 205.0, 141.0, 43.0 ],
 					"text" : "regexp (Tools/debugging) @substitute Modules/Modular/Max"
 				}
 
@@ -1234,9 +1231,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
+					"destination" : [ "obj-29", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 230.0, 262.5, 84.5, 262.5 ],
 					"source" : [ "obj-18", 0 ]
 				}
 
