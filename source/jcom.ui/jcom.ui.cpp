@@ -407,14 +407,40 @@ void ui_build(t_ui *x)
 	
 	// Set the textfield to display the address
 	textfield = jbox_get_textfield((t_object*) x);
-	if (textfield)
+	if (textfield) {
 			
 		// if there is still no address
-		if (x->modelAddress == kTTAdrsEmpty)
+		if (x->modelAddress == kTTAdrsEmpty) {
+            
 			object_method(textfield, gensym("settext"), NO_MODEL_STRING);
-		else
-			object_method(textfield, gensym("settext"), x->modelAddress.c_str());
-			
+        }
+		else {
+            
+            double r,t,l,b;
+            textfield_get_textmargins(textfield, &r, &t, &l, &b);
+            
+            TTUInt32 maxLetter = (uiRect.width - l - r) / 6; // assuming a letter is 6 pixels max
+                        
+            post("%d >= %d", strlen(x->modelAddress.c_str()), maxLetter);
+            
+            if (strlen(x->modelAddress.c_str()) >= maxLetter) {
+                
+                TTString        croppedAddress;
+                TTString        modelAddress = x->modelAddress.string();
+                TTStringIter    begin = modelAddress.begin();
+                TTStringIter    end = modelAddress.end();
+                
+                croppedAddress = TTString(begin, begin+(maxLetter/2)-1);
+                croppedAddress += "..";
+                croppedAddress += TTString(end-(maxLetter/2)+1, end);
+                object_method(textfield, gensym("settext"), croppedAddress.c_str());
+            }
+            else
+                object_method(textfield, gensym("settext"), x->modelAddress.c_str());
+        
+        }
+    }
+    
 	// Redraw
 	jbox_redraw(&x->box);
 }
@@ -920,12 +946,6 @@ void ui_mouseup(t_ui *x, t_object *patcherview)
 {
 	x->mixDragging = false;
 	x->gainDragging = false;
-	t_object *textfield = jbox_get_textfield((t_object*) x);
-	if (textfield)
-		if (x->modelAddress != kTTSymEmpty)
-			object_method(textfield, gensym("settext"), x->modelAddress.c_str());
-		else
-			object_method(textfield, gensym("settext"),NO_MODEL_STRING);
 	
 	jbox_redraw(&x->box);
 }
@@ -1376,7 +1396,7 @@ void* ui_oksize(t_ui *x, t_rect *rect)
 	textfield_set_readonly(textfield, 1);
 	textfield_set_editonclick(textfield, 0);
 	textfield_set_wordwrap(textfield, 0);
-	textfield_set_useellipsis(textfield, 1); 
+	textfield_set_useellipsis(textfield, 0);
 	textfield_set_textcolor(textfield, &x->textcolor);
 	textfield_set_textmargins(textfield, 20.0, 2.0, 60.0, rect->height - 19.0);
 	
