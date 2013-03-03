@@ -421,8 +421,6 @@ void ui_build(t_ui *x)
             
             TTUInt32 maxLetter = (uiRect.width - l - r) / 6; // assuming a letter is 6 pixels max
                         
-            post("%d >= %d", strlen(x->modelAddress.c_str()), maxLetter);
-            
             if (strlen(x->modelAddress.c_str()) >= maxLetter) {
                 
                 TTString        croppedAddress;
