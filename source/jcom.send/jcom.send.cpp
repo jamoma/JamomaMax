@@ -267,6 +267,10 @@ void send_subscribe(TTPtr self)
 		// a viewer on the contextAddress/model/address parameter
 		x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
 		contextAddress = v[0];
+        
+        // release the subscriber
+        TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
+        x->subscriberObject = NULL;
 		
 		if (x->patcherContext != kTTSymEmpty) {
 			makeInternals_receiver(x, contextAddress, TTSymbol("/model/address"), gensym("return_model_address"), &anObject, YES);  // YES : we want to deferlow this method
@@ -277,6 +281,11 @@ void send_subscribe(TTPtr self)
 	
 	// else, if no context, set address directly
 	else if (x->patcherContext == kTTSymEmpty) {
+        
+        // release the subscriber
+        TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
+        x->subscriberObject = NULL;
+        
 		contextAddress = kTTAdrsRoot;
 		absoluteAddress = contextAddress.appendAddress(x->address);
 		x->wrappedObject->setAttributeValue(kTTSym_address, absoluteAddress);
@@ -413,7 +422,7 @@ void send_address(TTPtr self, SymbolPtr address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	x->address =  TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
-	
+    
 	send_subscribe(self);
 }
 
