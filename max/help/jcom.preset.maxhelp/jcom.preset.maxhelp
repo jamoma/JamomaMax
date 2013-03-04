@@ -2479,28 +2479,28 @@
 		"dependency_cache" : [ 			{
 				"name" : "jcom.maxhelpui.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
+				"patcherrelativepath" : "../../../../../Modules/Modular/Max/library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jcom.maxhelpuiButton.png",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
+				"patcherrelativepath" : "../../../../../Modules/Modular/Max/library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jcom.maxhelpuiResize.js",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
+				"patcherrelativepath" : "../../../../../Modules/Modular/Max/library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jcom.jamomaPath.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
-				"patcherrelativepath" : "../../../Max/library/components/jamomaPath",
+				"patcherrelativepath" : "../../../../../Modules/Modular/Max/library/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
