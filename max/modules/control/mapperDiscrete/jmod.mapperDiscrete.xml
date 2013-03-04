@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.4'
+        xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset number='1' name='default'>
+    <item name='edit' type='string' priority='0'>edit</item>
+    <item name='in/action' type='integer' priority='0'>0</item>
+    <item name='in/direct' type='generic' priority='0'>0</item>
+    <item name='in/message' type='generic' priority='0'>0</item>
+    <item name='in/module/derivative' type='integer' priority='0'>0</item>
+    <item name='in/module/listindex' type='integer' priority='0'>0</item>
+    <item name='in/value' type='decimal' priority='0'>0.000000</item>
+    <item name='in/value/variation' type='decimal' priority='0'>0</item>
+    <item name='out/action' type='integer' priority='0'>0</item>
+    <item name='out/direct' type='generic' priority='0'>0</item>  
+    <item name='out/message' type='generic' priority='0'>0</item>
+    <item name='out/ramp' type='integer' priority='0'>0</item>
+    <item name='out/value' type='decimal' priority='0'>0.000000</item>
+    <item name='time/repeat' type='decimal' priority='0'>0.000000</item>
+    <item name='time/wait' type='decimal' priority='0'>0</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+</jamoma>

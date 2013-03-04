@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+
+<jamoma version="0.4" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd"
+>
+	
+	<preset number="1" name="default">
+		<item name="receive/port" type="integer">7400</item>
+		<item name="send/port" type="integer">7400</item>
+		<item name="send/host" type="string">127.0.0.1</item>
+		<item name="multicast/ip" type="string">224.0.0.3</item>
+		<item name="multicast/join" type="integer">0</item>
+		<item name="multicast/port" type="integer">7500</item>
+		<item name="prefix" type="string">null</item>
+		<item name="send/active" type="boolean">1</item>
+		<item name="mode" type="string">single</item>
+	</preset>
+	<preset number ="2" name ="multicast">
+		<item name="receive/port" type="integer">7400</item>
+		<item name="send/port" type="integer">7400</item>
+		<item name="send/host" type="string">127.0.0.1</item>
+		<item name="multicast/ip" type="string">224.0.0.3</item>
+		<item name="multicast/join" type="integer">1</item>
+		<item name="multicast/port" type="integer">7500</item>
+		<item name="prefix" type="string">null</item>
+		<item name="send/active" type="boolean">1</item> 
+		<item name="mode" type="string">multicast</item>
+	</preset>
+	<preset number ="3" name ="broadcast">
+		<item name="receive/port" type="integer">7400</item>
+		<item name="send/port" type="integer">7400</item>
+		<item name="send/host" type="decimal">255.255.255.255</item>
+		<item name="multicast/ip" type="string">224.0.0.3</item>
+		<item name="multicast/join" type="integer">0</item>
+		<item name="multicast/port" type="integer">7500</item>
+		<item name="prefix" type="string">null</item> 
+		<item name="send/active" type="boolean">1</item> 
+		<item name="mode" type="string">multicast</item>
+    </preset>
+</jamoma>

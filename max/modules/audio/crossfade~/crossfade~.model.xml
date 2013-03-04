@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.4'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset number='1' name='default'>
+    <item name='audio/bypass' type='boolean' priority='0'>0</item>
+    <item name='audio/gain' type='decimal' priority='0'>0.000000</item>
+    <item name='audio/mute' type='boolean' priority='0'>1</item>
+    <item name='mode' type='string' priority='0'>FastMode</item>
+    <item name='position' type='decimal' priority='0'>1.000000</item>
+    <item name='shape' type='string' priority='0'>EqualPowerFade</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='2' name='linear_fade'>
+    <item name='audio/bypass' type='boolean' priority='0'>0</item>	
+    <item name='audio/gain' type='decimal' priority='0'>0.000000</item>	
+    <item name='audio/mute' type='boolean' priority='0'>1</item>
+    <item name='mode' type='string' priority='0'>FastMode</item>
+    <item name='position' type='decimal' priority='0'>1.000000</item>
+    <item name='shape' type='string' priority='0'>LinearFade</item>	
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+</jamoma>

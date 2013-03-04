@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.4'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset number='1' name='default'>
+    <item name='port' type='integer' priority='0'>0</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='2' name='Max0'>
+    <item name='port' type='integer' priority='0'>4000</item>
+    <item name='service_name' type='string' priority='0'>Max</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='3' name='Bob1'>
+    <item name='port' type='integer' priority='0'>4001</item>
+    <item name='service_name' type='string' priority='0'>Bob</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='4' name='Joe0'>
+    <item name='port' type='integer' priority='0'>4000</item>
+    <item name='service_name' type='string' priority='0'>Joe</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='5' name='Bill1'>
+    <item name='port' type='integer' priority='0'>4001</item>
+    <item name='service_name' type='string' priority='0'>Bill</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='6' name='Joe2'>
+    <item name='port' type='integer' priority='0'>4002</item>
+    <item name='service_name' type='string' priority='0'>Joe</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+</jamoma>

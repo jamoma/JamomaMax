@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="'http://www.w3.org/2001/XMLSchema-instance'" xsi:schemaLocation="'http://jamoma.org/ file:jamoma.xsd'">
+ <!--TODO : TTContainer Description at mAddress-->
+ <preset number="1" name="default">
+  <!---->
+  <Data address="track.5/turn.3/enable" value="1" priority="1"/>
+  <Data address="track.7/key.2/enable" value="1" priority="1"/>
+  <Data address="track.6/press.2/enable" value="1" priority="1"/>
+  <Data address="track.1/press.3/enable" value="1" priority="1"/>
+  <Data address="track.1/turn.2/enable" value="1" priority="1"/>
+  <Data address="midiOut" value="BCF2000 Port 1" priority="1"/>
+  <Data address="track.6/key.2/enable" value="1" priority="1"/>
+  <Data address="track.3/turn.1/enable" value="1" priority="1"/>
+  <Data address="track.6/press.1/enable" value="1" priority="1"/>
+  <Data address="track.7/press.3/enable" value="1" priority="1"/>
+  <Data address="track.5/turn.4/enable" value="1" priority="1"/>
+  <Data address="track.4/turn.2/enable" value="1" priority="1"/>
+  <Data address="track.8/fader/enable" value="1" priority="1"/>
+  <Data address="track.3/press.2/enable" value="1" priority="1"/>
+  <Data address="track.4/press.1/enable" value="1" priority="1"/>
+  <Data address="track.2/key.2/enable" value="1" priority="1"/>
+  <Data address="track.6/turn.4/enable" value="1" priority="1"/>
+  <Data address="track.1/key.1/enable" value="1" priority="1"/>
+  <Data address="track.5/press.4/enable" value="1" priority="1"/>
+  <Data address="track.7/press.1/enable" value="1" priority="1"/>
+  <Data address="track.1/press.2/enable" value="1" priority="1"/>
+  <Data address="track.6/fader/enable" value="1" priority="1"/>
+  <Data address="track.2/press.4/enable" value="1" priority="1"/>
+  <Data address="track.4/press.2/enable" value="1" priority="1"/>
+  <Data address="track.7/turn.3/enable" value="1" priority="1"/>
+  <Data address="track.2/fader/enable" value="1" priority="1"/>
+  <Data address="track.1/press.1/enable" value="1" priority="1"/>
+  <Data address="track.7/press.2/enable" value="1" priority="1"/>
+  <Data address="track.8/key.2/enable" value="1" priority="1"/>
+  <Data address="track.4/key.1/enable" value="1" priority="1"/>
+  <Data address="track.7/turn.4/enable" value="1" priority="1"/>
+  <Data address="midiIn" value="BCF2000 Port 1" priority="1"/>
+  <Data address="track.7/turn.1/enable" value="1" priority="1"/>
+  <Data address="track.4/turn.3/enable" value="1" priority="1"/>
+  <Data address="track.8/turn.2/enable" value="1" priority="1"/>
+  <Data address="track.2/press.1/enable" value="1" priority="1"/>
+  <Data address="track.1/fader/enable" value="1" priority="1"/>
+  <Data address="track.4/fader/enable" value="1" priority="1"/>
+  <Data address="track.4/press.4/enable" value="1" priority="1"/>
+  <Data address="track.2/turn.2/enable" value="1" priority="1"/>
+  <Data address="track.8/turn.4/enable" value="1" priority="1"/>
+  <Data address="track.2/key.1/enable" value="1" priority="1"/>
+  <Data address="track.1/turn.1/enable" value="1" priority="1"/>
+  <Data address="track.6/press.3/enable" value="1" priority="1"/>
+  <Data address="track.3/turn.3/enable" value="1" priority="1"/>
+  <Data address="track.3/key.2/enable" value="1" priority="1"/>
+  <Data address="track.7/key.1/enable" value="1" priority="1"/>
+  <Data address="track.5/turn.1/enable" value="1" priority="1"/>
+  <Data address="track.6/key.1/enable" value="1" priority="1"/>
+  <Data address="track.3/press.1/enable" value="1" priority="1"/>
+  <Data address="track.2/turn.1/enable" value="1" priority="1"/>
+  <Data address="track.7/turn.2/enable" value="1" priority="1"/>
+  <Data address="track.8/press.3/enable" value="1" priority="1"/>
+  <Data address="track.3/fader/enable" value="1" priority="1"/>
+  <Data address="track.3/turn.2/enable" value="1" priority="1"/>
+  <Data address="track.8/press.1/enable" value="1" priority="1"/>
+  <Data address="track.2/turn.3/enable" value="1" priority="1"/>
+  <Data address="track.5/key.1/enable" value="1" priority="1"/>
+  <Data address="track.6/turn.1/enable" value="1" priority="1"/>
+  <Data address="track.3/press.3/enable" value="1" priority="1"/>
+  <Data address="track.3/key.1/enable" value="1" priority="1"/>
+  <Data address="track.2/press.2/enable" value="1" priority="1"/>
+  <Data address="track.1/turn.4/enable" value="1" priority="1"/>
+  <Data address="track.5/press.3/enable" value="1" priority="1"/>
+  <Data address="track.6/press.4/enable" value="1" priority="1"/>
+  <Data address="track.1/turn.3/enable" value="1" priority="1"/>
+  <Data address="track.4/key.2/enable" value="1" priority="1"/>
+  <Data address="track.5/press.2/enable" value="1" priority="1"/>
+  <Data address="track.7/press.4/enable" value="1" priority="1"/>
+  <Data address="track.8/turn.1/enable" value="1" priority="1"/>
+  <Data address="track.1/press.4/enable" value="1" priority="1"/>
+  <Data address="track.4/press.3/enable" value="1" priority="1"/>
+  <Data address="track.5/press.1/enable" value="1" priority="1"/>
+  <Data address="track.3/press.4/enable" value="1" priority="1"/>
+  <Data address="track.4/turn.4/enable" value="1" priority="1"/>
+  <Data address="track.6/turn.3/enable" value="1" priority="1"/>
+  <Data address="track.7/fader/enable" value="1" priority="1"/>
+  <Data address="track.5/fader/enable" value="1" priority="1"/>
+  <Data address="track.2/press.3/enable" value="1" priority="1"/>
+  <Data address="track.8/press.4/enable" value="1" priority="1"/>
+  <Data address="track.5/turn.2/enable" value="1" priority="1"/>
+  <Data address="track.8/press.2/enable" value="1" priority="1"/>
+  <Data address="track.5/key.2/enable" value="1" priority="1"/>
+  <Data address="track.6/turn.2/enable" value="1" priority="1"/>
+  <Data address="track.1/key.2/enable" value="1" priority="1"/>
+  <Data address="track.3/turn.4/enable" value="1" priority="1"/>
+  <Data address="track.2/turn.4/enable" value="1" priority="1"/>
+  <Data address="track.8/turn.3/enable" value="1" priority="1"/>
+  <Data address="track.8/key.1/enable" value="1" priority="1"/>
+  <Data address="track.4/turn.1/enable" value="1" priority="1"/>
+  <Data address="track.5/key.2/address" value="/" priority="3"/>
+  <Data address="track.6/turn.2/address" value="/" priority="3"/>
+  <Data address="track.3/turn.4/address" value="/" priority="3"/>
+  <Data address="track.1/fader/address" value="/" priority="3"/>
+  <Data address="track.8/turn.1/address" value="/" priority="3"/>
+  <Data address="track.1/press.4/address" value="/" priority="3"/>
+  <Data address="track.5/turn.3/address" value="/" priority="3"/>
+  <Data address="track.7/key.2/address" value="/" priority="3"/>
+  <Data address="track.6/press.2/address" value="/" priority="3"/>
+  <Data address="track.6/key.2/address" value="/" priority="3"/>
+  <Data address="track.1/press.2/address" value="/" priority="3"/>
+  <Data address="track.8/press.4/address" value="/" priority="3"/>
+  <Data address="track.1/turn.2/address" value="/" priority="3"/>
+  <Data address="track.4/turn.1/address" value="/" priority="3"/>
+  <Data address="track.8/press.2/address" value="/" priority="3"/>
+  <Data address="track.6/press.1/address" value="/" priority="3"/>
+  <Data address="track.7/press.3/address" value="/" priority="3"/>
+  <Data address="track.2/fader/address" value="/" priority="3"/>
+  <Data address="track.5/turn.4/address" value="/" priority="3"/>
+  <Data address="track.1/press.3/address" value="/" priority="3"/>
+  <Data address="track.4/turn.2/address" value="/" priority="3"/>
+  <Data address="track.8/turn.3/address" value="/" priority="3"/>
+  <Data address="track.8/key.1/address" value="/" priority="3"/>
+  <Data address="track.3/press.2/address" value="/" priority="3"/>
+  <Data address="track.1/turn.3/address" value="/" priority="3"/>
+  <Data address="track.6/turn.4/address" value="/" priority="3"/>
+  <Data address="track.1/turn.1/address" value="/" priority="3"/>
+  <Data address="track.1/key.1/address" value="/" priority="3"/>
+  <Data address="track.5/press.4/address" value="/" priority="3"/>
+  <Data address="track.7/press.1/address" value="/" priority="3"/>
+  <Data address="track.2/turn.4/address" value="/" priority="3"/>
+  <Data address="track.8/fader/address" value="/" priority="3"/>
+  <Data address="track.6/fader/address" value="/" priority="3"/>
+  <Data address="track.4/press.2/address" value="/" priority="3"/>
+  <Data address="track.7/turn.3/address" value="/" priority="3"/>
+  <Data address="track.7/press.2/address" value="/" priority="3"/>
+  <Data address="track.4/key.1/address" value="/" priority="3"/>
+  <Data address="track.7/turn.4/address" value="/" priority="3"/>
+  <Data address="track.7/turn.1/address" value="/" priority="3"/>
+  <Data address="track.4/turn.3/address" value="/" priority="3"/>
+  <Data address="track.2/turn.3/address" value="/" priority="3"/>
+  <Data address="track.4/fader/address" value="/" priority="3"/>
+  <Data address="track.4/press.4/address" value="/" priority="3"/>
+  <Data address="track.2/turn.2/address" value="/" priority="3"/>
+  <Data address="track.6/press.3/address" value="/" priority="3"/>
+  <Data address="track.3/turn.3/address" value="/" priority="3"/>
+  <Data address="track.1/key.2/address" value="/" priority="3"/>
+  <Data address="track.7/key.1/address" value="/" priority="3"/>
+  <Data address="track.5/turn.1/address" value="/" priority="3"/>
+  <Data address="track.8/key.2/address" value="/" priority="3"/>
+  <Data address="track.2/key.2/address" value="/" priority="3"/>
+  <Data address="track.6/key.1/address" value="/" priority="3"/>
+  <Data address="track.3/press.1/address" value="/" priority="3"/>
+  <Data address="track.7/turn.2/address" value="/" priority="3"/>
+  <Data address="track.8/turn.2/address" value="/" priority="3"/>
+  <Data address="track.3/fader/address" value="/" priority="3"/>
+  <Data address="track.3/turn.2/address" value="/" priority="3"/>
+  <Data address="track.2/press.2/address" value="/" priority="3"/>
+  <Data address="track.2/turn.1/address" value="/" priority="3"/>
+  <Data address="track.5/key.1/address" value="/" priority="3"/>
+  <Data address="track.6/turn.1/address" value="/" priority="3"/>
+  <Data address="track.3/press.3/address" value="/" priority="3"/>
+  <Data address="track.5/fader/address" value="/" priority="3"/>
+  <Data address="track.4/key.2/address" value="/" priority="3"/>
+  <Data address="track.3/key.1/address" value="/" priority="3"/>
+  <Data address="track.8/turn.4/address" value="/" priority="3"/>
+  <Data address="track.2/press.3/address" value="/" priority="3"/>
+  <Data address="track.5/press.3/address" value="/" priority="3"/>
+  <Data address="track.2/press.4/address" value="/" priority="3"/>
+  <Data address="track.4/press.1/address" value="/" priority="3"/>
+  <Data address="track.2/press.1/address" value="/" priority="3"/>
+  <Data address="track.6/press.4/address" value="/" priority="3"/>
+  <Data address="track.8/press.3/address" value="/" priority="3"/>
+  <Data address="track.3/key.2/address" value="/" priority="3"/>
+  <Data address="track.8/press.1/address" value="/" priority="3"/>
+  <Data address="track.5/press.2/address" value="/" priority="3"/>
+  <Data address="track.7/press.4/address" value="/" priority="3"/>
+  <Data address="track.5/press.1/address" value="/" priority="3"/>
+  <Data address="track.3/press.4/address" value="/" priority="3"/>
+  <Data address="track.4/turn.4/address" value="/" priority="3"/>
+  <Data address="track.1/turn.4/address" value="/" priority="3"/>
+  <Data address="track.1/press.1/address" value="/" priority="3"/>
+  <Data address="track.6/turn.3/address" value="/" priority="3"/>
+  <Data address="track.7/fader/address" value="/" priority="3"/>
+  <Data address="track.5/turn.2/address" value="/" priority="3"/>
+  <Data address="track.2/key.1/address" value="/" priority="3"/>
+  <Data address="track.4/press.3/address" value="/" priority="3"/>
+  <Data address="track.3/turn.1/address" value="/" priority="3"/>
+  <Data address="track.7/press.3/mode" value="0" priority="4"/>
+  <Data address="track.1/press.2/mode" value="0" priority="4"/>
+  <Data address="track.6/key.2/mode" value="0" priority="4"/>
+  <Data address="track.1/turn.3/mode" value="0" priority="4"/>
+  <Data address="track.2/fader/mode" value="0" priority="4"/>
+  <Data address="track.3/press.2/mode" value="0" priority="4"/>
+  <Data address="track.7/key.2/mode" value="0" priority="4"/>
+  <Data address="track.4/press.1/mode" value="0" priority="4"/>
+  <Data address="track.4/turn.2/mode" value="0" priority="4"/>
+  <Data address="track.1/turn.1/mode" value="0" priority="4"/>
+  <Data address="track.1/turn.2/mode" value="0" priority="4"/>
+  <Data address="track.8/turn.4/mode" value="0" priority="4"/>
+  <Data address="track.8/key.2/mode" value="0" priority="4"/>
+  <Data address="track.8/turn.2/mode" value="0" priority="4"/>
+  <Data address="track.1/key.1/mode" value="0" priority="4"/>
+  <Data address="track.8/press.3/mode" value="0" priority="4"/>
+  <Data address="track.3/turn.1/mode" value="0" priority="4"/>
+  <Data address="track.5/press.4/mode" value="0" priority="4"/>
+  <Data address="track.6/turn.4/mode" value="0" priority="4"/>
+  <Data address="track.7/press.1/mode" value="0" priority="4"/>
+  <Data address="track.8/press.1/mode" value="0" priority="4"/>
+  <Data address="track.2/key.2/mode" value="0" priority="4"/>
+  <Data address="track.2/press.4/mode" value="0" priority="4"/>
+  <Data address="track.4/press.2/mode" value="0" priority="4"/>
+  <Data address="track.3/key.1/mode" value="0" priority="4"/>
+  <Data address="track.2/turn.4/mode" value="0" priority="4"/>
+  <Data address="track.5/key.2/mode" value="0" priority="4"/>
+  <Data address="track.7/turn.3/mode" value="0" priority="4"/>
+  <Data address="track.4/turn.1/mode" value="0" priority="4"/>
+  <Data address="track.7/press.2/mode" value="0" priority="4"/>
+  <Data address="track.6/fader/mode" value="0" priority="4"/>
+  <Data address="track.1/press.1/mode" value="0" priority="4"/>
+  <Data address="track.4/press.4/mode" value="0" priority="4"/>
+  <Data address="track.7/turn.4/mode" value="0" priority="4"/>
+  <Data address="track.2/press.1/mode" value="0" priority="4"/>
+  <Data address="track.4/key.1/mode" value="0" priority="4"/>
+  <Data address="track.7/turn.1/mode" value="0" priority="4"/>
+  <Data address="track.4/turn.3/mode" value="0" priority="4"/>
+  <Data address="track.6/press.3/mode" value="0" priority="4"/>
+  <Data address="track.4/fader/mode" value="0" priority="4"/>
+  <Data address="track.8/press.4/mode" value="0" priority="4"/>
+  <Data address="track.3/turn.3/mode" value="0" priority="4"/>
+  <Data address="track.1/fader/mode" value="0" priority="4"/>
+  <Data address="track.3/press.1/mode" value="0" priority="4"/>
+  <Data address="track.2/turn.1/mode" value="0" priority="4"/>
+  <Data address="track.8/turn.1/mode" value="0" priority="4"/>
+  <Data address="track.5/turn.1/mode" value="0" priority="4"/>
+  <Data address="track.2/key.1/mode" value="0" priority="4"/>
+  <Data address="track.3/key.2/mode" value="0" priority="4"/>
+  <Data address="track.2/turn.2/mode" value="0" priority="4"/>
+  <Data address="track.6/turn.2/mode" value="0" priority="4"/>
+  <Data address="track.7/turn.2/mode" value="0" priority="4"/>
+  <Data address="track.3/press.3/mode" value="0" priority="4"/>
+  <Data address="track.6/key.1/mode" value="0" priority="4"/>
+  <Data address="track.2/press.2/mode" value="0" priority="4"/>
+  <Data address="track.3/turn.2/mode" value="0" priority="4"/>
+  <Data address="track.5/press.3/mode" value="0" priority="4"/>
+  <Data address="track.6/turn.1/mode" value="0" priority="4"/>
+  <Data address="track.8/turn.3/mode" value="0" priority="4"/>
+  <Data address="track.3/fader/mode" value="0" priority="4"/>
+  <Data address="track.8/fader/mode" value="0" priority="4"/>
+  <Data address="track.5/key.1/mode" value="0" priority="4"/>
+  <Data address="track.8/key.1/mode" value="0" priority="4"/>
+  <Data address="track.6/press.4/mode" value="0" priority="4"/>
+  <Data address="track.7/key.1/mode" value="0" priority="4"/>
+  <Data address="track.5/press.2/mode" value="0" priority="4"/>
+  <Data address="track.7/press.4/mode" value="0" priority="4"/>
+  <Data address="track.1/press.4/mode" value="0" priority="4"/>
+  <Data address="track.4/press.3/mode" value="0" priority="4"/>
+  <Data address="track.5/press.1/mode" value="0" priority="4"/>
+  <Data address="track.3/press.4/mode" value="0" priority="4"/>
+  <Data address="track.6/press.2/mode" value="0" priority="4"/>
+  <Data address="track.4/turn.4/mode" value="0" priority="4"/>
+  <Data address="track.2/press.3/mode" value="0" priority="4"/>
+  <Data address="track.6/turn.3/mode" value="0" priority="4"/>
+  <Data address="track.5/turn.2/mode" value="0" priority="4"/>
+  <Data address="track.7/fader/mode" value="0" priority="4"/>
+  <Data address="track.5/fader/mode" value="0" priority="4"/>
+  <Data address="track.1/turn.4/mode" value="0" priority="4"/>
+  <Data address="track.8/press.2/mode" value="0" priority="4"/>
+  <Data address="track.1/press.3/mode" value="0" priority="4"/>
+  <Data address="track.3/turn.4/mode" value="0" priority="4"/>
+  <Data address="track.5/turn.4/mode" value="0" priority="4"/>
+  <Data address="track.2/turn.3/mode" value="0" priority="4"/>
+  <Data address="track.4/key.2/mode" value="0" priority="4"/>
+  <Data address="track.1/key.2/mode" value="0" priority="4"/>
+  <Data address="track.5/turn.3/mode" value="0" priority="4"/>
+  <Data address="track.6/press.1/mode" value="0" priority="4"/>
+  <Data address="track.3/turn.1/power" value="0.000000" priority="30"/>
+  <Data address="track.6/key.2/power" value="0.000000" priority="30"/>
+  <Data address="track.1/turn.3/power" value="0.000000" priority="30"/>
+  <Data address="track.6/press.1/power" value="0.000000" priority="30"/>
+  <Data address="track.7/press.3/power" value="0.000000" priority="30"/>
+  <Data address="track.1/press.2/power" value="0.000000" priority="30"/>
+  <Data address="track.5/turn.4/power" value="0.000000" priority="30"/>
+  <Data address="track.7/key.2/power" value="0.000000" priority="30"/>
+  <Data address="track.4/turn.2/power" value="0.000000" priority="30"/>
+  <Data address="track.1/press.3/power" value="0.000000" priority="30"/>
+  <Data address="track.3/press.2/power" value="0.000000" priority="30"/>
+  <Data address="track.4/press.1/power" value="0.000000" priority="30"/>
+  <Data address="track.8/press.2/power" value="0.000000" priority="30"/>
+  <Data address="track.6/turn.4/power" value="0.000000" priority="30"/>
+  <Data address="track.2/key.2/power" value="0.000000" priority="30"/>
+  <Data address="track.5/press.4/power" value="0.000000" priority="30"/>
+  <Data address="track.7/press.1/power" value="0.000000" priority="30"/>
+  <Data address="track.2/fader/power" value="0.000000" priority="30"/>
+  <Data address="track.8/turn.2/power" value="0.000000" priority="30"/>
+  <Data address="track.5/key.2/power" value="0.000000" priority="30"/>
+  <Data address="track.2/press.4/power" value="0.000000" priority="30"/>
+  <Data address="track.4/press.2/power" value="0.000000" priority="30"/>
+  <Data address="track.7/turn.3/power" value="0.000000" priority="30"/>
+  <Data address="track.8/turn.4/power" value="0.000000" priority="30"/>
+  <Data address="track.8/key.2/power" value="0.000000" priority="30"/>
+  <Data address="track.2/turn.2/power" value="0.000000" priority="30"/>
+  <Data address="track.1/key.1/power" value="0.000000" priority="30"/>
+  <Data address="track.6/fader/power" value="0.000000" priority="30"/>
+  <Data address="track.7/press.2/power" value="0.000000" priority="30"/>
+  <Data address="track.7/turn.4/power" value="0.000000" priority="30"/>
+  <Data address="track.1/press.1/power" value="0.000000" priority="30"/>
+  <Data address="track.8/press.3/power" value="0.000000" priority="30"/>
+  <Data address="track.4/key.1/power" value="0.000000" priority="30"/>
+  <Data address="track.7/turn.1/power" value="0.000000" priority="30"/>
+  <Data address="track.4/turn.3/power" value="0.000000" priority="30"/>
+  <Data address="track.8/press.1/power" value="0.000000" priority="30"/>
+  <Data address="track.2/press.1/power" value="0.000000" priority="30"/>
+  <Data address="track.4/press.4/power" value="0.000000" priority="30"/>
+  <Data address="track.1/turn.1/power" value="0.000000" priority="30"/>
+  <Data address="track.6/press.3/power" value="0.000000" priority="30"/>
+  <Data address="track.4/fader/power" value="0.000000" priority="30"/>
+  <Data address="track.3/turn.3/power" value="0.000000" priority="30"/>
+  <Data address="track.5/turn.1/power" value="0.000000" priority="30"/>
+  <Data address="track.2/key.1/power" value="0.000000" priority="30"/>
+  <Data address="track.3/key.2/power" value="0.000000" priority="30"/>
+  <Data address="track.7/key.1/power" value="0.000000" priority="30"/>
+  <Data address="track.3/press.1/power" value="0.000000" priority="30"/>
+  <Data address="track.6/turn.2/power" value="0.000000" priority="30"/>
+  <Data address="track.2/turn.4/power" value="0.000000" priority="30"/>
+  <Data address="track.7/turn.2/power" value="0.000000" priority="30"/>
+  <Data address="track.6/key.1/power" value="0.000000" priority="30"/>
+  <Data address="track.3/turn.2/power" value="0.000000" priority="30"/>
+  <Data address="track.6/turn.1/power" value="0.000000" priority="30"/>
+  <Data address="track.3/press.3/power" value="0.000000" priority="30"/>
+  <Data address="track.8/turn.1/power" value="0.000000" priority="30"/>
+  <Data address="track.2/press.2/power" value="0.000000" priority="30"/>
+  <Data address="track.3/fader/power" value="0.000000" priority="30"/>
+  <Data address="track.1/fader/power" value="0.000000" priority="30"/>
+  <Data address="track.5/press.3/power" value="0.000000" priority="30"/>
+  <Data address="track.5/key.1/power" value="0.000000" priority="30"/>
+  <Data address="track.3/key.1/power" value="0.000000" priority="30"/>
+  <Data address="track.1/turn.4/power" value="0.000000" priority="30"/>
+  <Data address="track.8/press.4/power" value="0.000000" priority="30"/>
+  <Data address="track.2/turn.1/power" value="0.000000" priority="30"/>
+  <Data address="track.6/press.4/power" value="0.000000" priority="30"/>
+  <Data address="track.5/press.2/power" value="0.000000" priority="30"/>
+  <Data address="track.7/press.4/power" value="0.000000" priority="30"/>
+  <Data address="track.8/turn.3/power" value="0.000000" priority="30"/>
+  <Data address="track.1/press.4/power" value="0.000000" priority="30"/>
+  <Data address="track.4/press.3/power" value="0.000000" priority="30"/>
+  <Data address="track.5/press.1/power" value="0.000000" priority="30"/>
+  <Data address="track.3/press.4/power" value="0.000000" priority="30"/>
+  <Data address="track.4/turn.4/power" value="0.000000" priority="30"/>
+  <Data address="track.2/turn.3/power" value="0.000000" priority="30"/>
+  <Data address="track.8/key.1/power" value="0.000000" priority="30"/>
+  <Data address="track.6/turn.3/power" value="0.000000" priority="30"/>
+  <Data address="track.2/press.3/power" value="0.000000" priority="30"/>
+  <Data address="track.5/turn.2/power" value="0.000000" priority="30"/>
+  <Data address="track.7/fader/power" value="0.000000" priority="30"/>
+  <Data address="track.5/fader/power" value="0.000000" priority="30"/>
+  <Data address="track.3/turn.4/power" value="0.000000" priority="30"/>
+  <Data address="track.4/turn.1/power" value="0.000000" priority="30"/>
+  <Data address="track.4/key.2/power" value="0.000000" priority="30"/>
+  <Data address="track.1/key.2/power" value="0.000000" priority="30"/>
+  <Data address="track.1/turn.2/power" value="0.000000" priority="30"/>
+  <Data address="track.5/turn.3/power" value="0.000000" priority="30"/>
+  <Data address="track.8/fader/power" value="0.000000" priority="30"/>
+  <Data address="track.6/press.2/power" value="0.000000" priority="30"/>
+  <Data address="track.2/turn.1/model/mute" priority="0"/>
+  <Data address="track.2/model/mute" value="0" priority="0"/>
+  <Data address="track.5/key.1/model/mute" priority="0"/>
+  <Data address="track.3/turn.1/value" value="0.000000" priority="0"/>
+  <Data address="track.3/key.2/value" value="0.000000" priority="0"/>
+  <Data address="track.8/press.2/model/mute" priority="0"/>
+  <Data address="track.3/fader/value" value="0.000000" priority="0"/>
+  <Data address="track.6/key.1/model/mute" priority="0"/>
+  <Data address="track.5/press.3/model/mute" priority="0"/>
+  <Data address="track.3/press.3/model/mute" priority="0"/>
+  <Data address="track.8/press.3/value" value="0.000000" priority="0"/>
+  <Data address="track.2/press.2/model/mute" priority="0"/>
+  <Data address="track.8/press.3/model/mute" priority="0"/>
+  <Data address="track.3/turn.2/model/mute" priority="0"/>
+  <Data address="track.6/model/mute" value="0" priority="0"/>
+  <Data address="track.8/press.1/value" value="0.000000" priority="0"/>
+  <Data address="track.2/press.2/value" value="0.000000" priority="0"/>
+  <Data address="track.2/key.2/model/mute" priority="0"/>
+  <Data address="track.5/key.2/value" value="0.000000" priority="0"/>
+  <Data address="track.3/turn.4/value" value="0.000000" priority="0"/>
+  <Data address="track.3/fader/model/mute" priority="0"/>
+  <Data address="track.2/key.1/model/mute" priority="0"/>
+  <Data address="track.1/fader/value" value="0.000000" priority="0"/>
+  <Data address="track.6/press.4/model/mute" priority="0"/>
+  <Data address="track.6/turn.2/model/mute" priority="0"/>
+  <Data address="track.5/press.4/model/mute" priority="0"/>
+  <Data address="track.2/fader/model/mute" priority="0"/>
+  <Data address="track.6/turn.2/value" value="0.000000" priority="0"/>
+  <Data address="track.6/press.2/value" value="0.000000" priority="0"/>
+  <Data address="track.2/turn.2/value" value="0.000000" priority="0"/>
+  <Data address="track.7/fader/model/mute" priority="0"/>
+  <Data address="track.3/turn.1/model/mute" priority="0"/>
+  <Data address="track.6/key.2/value" value="0.000000" priority="0"/>
+  <Data address="track.1/press.4/model/mute" priority="0"/>
+  <Data address="track.5/press.2/model/mute" priority="0"/>
+  <Data address="track.8/key.1/model/mute" priority="0"/>
+  <Data address="track.5/press.1/model/mute" priority="0"/>
+  <Data address="track.4/turn.4/model/mute" priority="0"/>
+  <Data address="track.3/press.1/value" value="0.000000" priority="0"/>
+  <Data address="track.7/key.2/value" value="0.000000" priority="0"/>
+  <Data address="track.1/key.1/value" value="0.000000" priority="0"/>
+  <Data address="track.2/press.3/model/mute" priority="0"/>
+  <Data address="track.6/press.1/value" value="0.000000" priority="0"/>
+  <Data address="track.4/press.3/model/mute" priority="0"/>
+  <Data address="track.1/turn.4/model/mute" priority="0"/>
+  <Data address="track.7/press.3/value" value="0.000000" priority="0"/>
+  <Data address="track.3/press.4/model/mute" priority="0"/>
+  <Data address="track.8/turn.3/model/mute" priority="0"/>
+  <Data address="track.5/turn.4/value" value="0.000000" priority="0"/>
+  <Data address="track.4/press.1/value" value="0.000000" priority="0"/>
+  <Data address="track.4/turn.4/value" value="0.000000" priority="0"/>
+  <Data address="track.6/press.2/model/mute" priority="0"/>
+  <Data address="track.3/turn.3/model/mute" priority="0"/>
+  <Data address="track.1/press.4/value" value="0.000000" priority="0"/>
+  <Data address="track.8/turn.1/value" value="0.000000" priority="0"/>
+  <Data address="track.6/turn.3/model/mute" priority="0"/>
+  <Data address="track.2/press.3/value" value="0.000000" priority="0"/>
+  <Data address="track.2/turn.2/model/mute" priority="0"/>
+  <Data address="track.8/press.1/model/mute" priority="0"/>
+  <Data address="track.1/fader/model/mute" priority="0"/>
+  <Data address="track.8/turn.4/model/mute" priority="0"/>
+  <Data address="track.7/key.2/model/mute" priority="0"/>
+  <Data address="track.8/press.4/value" value="0.000000" priority="0"/>
+  <Data address="track.5/press.4/value" value="0.000000" priority="0"/>
+  <Data address="track.6/turn.4/value" value="0.000000" priority="0"/>
+  <Data address="track.3/turn.2/value" value="0.000000" priority="0"/>
+  <Data address="track.3/turn.4/model/mute" priority="0"/>
+  <Data address="track.1/turn.3/value" value="0.000000" priority="0"/>
+  <Data address="track.8/turn.1/model/mute" priority="0"/>
+  <Data address="track.2/fader/value" value="0.000000" priority="0"/>
+  <Data address="track.2/key.2/value" value="0.000000" priority="0"/>
+  <Data address="track.1/key.2/value" value="0.000000" priority="0"/>
+  <Data address="track.6/turn.1/model/mute" priority="0"/>
+  <Data address="track.7/press.1/value" value="0.000000" priority="0"/>
+  <Data address="track.5/turn.4/model/mute" priority="0"/>
+  <Data address="track.4/press.3/value" value="0.000000" priority="0"/>
+  <Data address="track.1/press.2/model/mute" priority="0"/>
+  <Data address="track.2/press.4/value" value="0.000000" priority="0"/>
+  <Data address="track.2/turn.1/value" value="0.000000" priority="0"/>
+  <Data address="track.6/fader/value" value="0.000000" priority="0"/>
+  <Data address="track.8/turn.3/value" value="0.000000" priority="0"/>
+  <Data address="track.4/key.2/model/mute" priority="0"/>
+  <Data address="track.8/press.2/value" value="0.000000" priority="0"/>
+  <Data address="track.4/press.2/value" value="0.000000" priority="0"/>
+  <Data address="track.7/turn.3/value" value="0.000000" priority="0"/>
+  <Data address="track.1/key.2/model/mute" priority="0"/>
+  <Data address="track.3/model/mute" value="0" priority="0"/>
+  <Data address="track.8/key.1/value" value="0.000000" priority="0"/>
+  <Data address="track.5/turn.3/model/mute" priority="0"/>
+  <Data address="track.2/turn.3/model/mute" priority="0"/>
+  <Data address="track.5/fader/value" value="0.000000" priority="0"/>
+  <Data address="track.8/model/mute" value="0" priority="0"/>
+  <Data address="track.7/key.1/model/mute" priority="0"/>
+  <Data address="track.1/press.3/model/mute" priority="0"/>
+  <Data address="track.6/press.1/model/mute" priority="0"/>
+  <Data address="track.1/turn.2/model/mute" priority="0"/>
+  <Data address="track.8/key.2/model/mute" priority="0"/>
+  <Data address="track.4/key.1/value" value="0.000000" priority="0"/>
+  <Data address="track.2/turn.3/value" value="0.000000" priority="0"/>
+  <Data address="track.4/turn.2/model/mute" priority="0"/>
+  <Data address="track.1/turn.4/value" value="0.000000" priority="0"/>
+  <Data address="track.7/press.2/value" value="0.000000" priority="0"/>
+  <Data address="track.6/key.2/model/mute" priority="0"/>
+  <Data address="track.4/turn.3/value" value="0.000000" priority="0"/>
+  <Data address="track.7/model/mute" value="0" priority="0"/>
+  <Data address="track.3/press.2/model/mute" priority="0"/>
+  <Data address="track.4/fader/value" value="0.000000" priority="0"/>
+  <Data address="track.1/turn.3/model/mute" priority="0"/>
+  <Data address="track.4/turn.1/value" value="0.000000" priority="0"/>
+  <Data address="track.5/fader/model/mute" priority="0"/>
+  <Data address="track.4/turn.2/value" value="0.000000" priority="0"/>
+  <Data address="track.7/turn.1/value" value="0.000000" priority="0"/>
+  <Data address="track.4/press.1/model/mute" priority="0"/>
+  <Data address="track.1/press.1/value" value="0.000000" priority="0"/>
+  <Data address="track.2/key.1/value" value="0.000000" priority="0"/>
+  <Data address="track.8/press.4/model/mute" priority="0"/>
+  <Data address="track.8/fader/value" value="0.000000" priority="0"/>
+  <Data address="track.7/turn.4/value" value="0.000000" priority="0"/>
+  <Data address="track.5/turn.3/value" value="0.000000" priority="0"/>
+  <Data address="track.2/turn.4/model/mute" priority="0"/>
+  <Data address="track.5/turn.1/value" value="0.000000" priority="0"/>
+  <Data address="track.7/press.4/model/mute" priority="0"/>
+  <Data address="track.6/press.3/value" value="0.000000" priority="0"/>
+  <Data address="track.8/turn.2/model/mute" priority="0"/>
+  <Data address="track.1/turn.1/model/mute" priority="0"/>
+  <Data address="track.1/key.1/model/mute" priority="0"/>
+  <Data address="track.6/turn.4/model/mute" priority="0"/>
+  <Data address="track.7/turn.4/model/mute" priority="0"/>
+  <Data address="track.3/turn.3/value" value="0.000000" priority="0"/>
+  <Data address="track.6/key.1/value" value="0.000000" priority="0"/>
+  <Data address="track.7/turn.2/value" value="0.000000" priority="0"/>
+  <Data address="track.2/press.4/model/mute" priority="0"/>
+  <Data address="track.7/key.1/value" value="0.000000" priority="0"/>
+  <Data address="track.7/press.1/model/mute" priority="0"/>
+  <Data address="track.5/key.2/model/mute" priority="0"/>
+  <Data address="track.3/press.3/value" value="0.000000" priority="0"/>
+  <Data address="track.5/model/mute" value="0" priority="0"/>
+  <Data address="track.4/turn.1/model/mute" priority="0"/>
+  <Data address="track.7/press.3/model/mute" priority="0"/>
+  <Data address="track.7/turn.3/model/mute" priority="0"/>
+  <Data address="track.1/model/mute" value="0" priority="0"/>
+  <Data address="track.7/turn.2/model/mute" priority="0"/>
+  <Data address="track.1/press.2/value" value="0.000000" priority="0"/>
+  <Data address="track.6/turn.1/value" value="0.000000" priority="0"/>
+  <Data address="track.1/turn.2/value" value="0.000000" priority="0"/>
+  <Data address="track.6/fader/model/mute" priority="0"/>
+  <Data address="track.4/key.2/value" value="0.000000" priority="0"/>
+  <Data address="track.1/press.1/model/mute" priority="0"/>
+  <Data address="track.5/turn.2/model/mute" priority="0"/>
+  <Data address="track.4/press.4/value" value="0.000000" priority="0"/>
+  <Data address="model/mute" priority="0"/>
+  <Data address="track.3/key.1/model/mute" priority="0"/>
+  <Data address="track.5/key.1/value" value="0.000000" priority="0"/>
+  <Data address="track.3/press.2/value" value="0.000000" priority="0"/>
+  <Data address="track.4/model/mute" value="0" priority="0"/>
+  <Data address="track.4/press.4/model/mute" priority="0"/>
+  <Data address="track.3/key.1/value" value="0.000000" priority="0"/>
+  <Data address="track.1/turn.1/value" value="0.000000" priority="0"/>
+  <Data address="track.2/press.1/model/mute" priority="0"/>
+  <Data address="track.4/press.2/model/mute" priority="0"/>
+  <Data address="track.7/turn.1/model/mute" priority="0"/>
+  <Data address="track.2/press.1/value" value="0.000000" priority="0"/>
+  <Data address="track.4/key.1/model/mute" priority="0"/>
+  <Data address="track.6/press.4/value" value="0.000000" priority="0"/>
+  <Data address="track.4/turn.3/model/mute" priority="0"/>
+  <Data address="track.6/press.3/model/mute" priority="0"/>
+  <Data address="track.3/press.1/model/mute" priority="0"/>
+  <Data address="track.8/turn.2/value" value="0.000000" priority="0"/>
+  <Data address="track.7/press.2/model/mute" priority="0"/>
+  <Data address="track.8/key.2/value" value="0.000000" priority="0"/>
+  <Data address="track.5/press.1/value" value="0.000000" priority="0"/>
+  <Data address="track.3/press.4/value" value="0.000000" priority="0"/>
+  <Data address="track.3/key.2/model/mute" priority="0"/>
+  <Data address="track.8/fader/model/mute" priority="0"/>
+  <Data address="track.5/press.2/value" value="0.000000" priority="0"/>
+  <Data address="track.7/press.4/value" value="0.000000" priority="0"/>
+  <Data address="track.5/press.3/value" value="0.000000" priority="0"/>
+  <Data address="track.8/turn.4/value" value="0.000000" priority="0"/>
+  <Data address="track.4/fader/model/mute" priority="0"/>
+  <Data address="track.5/turn.2/value" value="0.000000" priority="0"/>
+  <Data address="track.2/turn.4/value" value="0.000000" priority="0"/>
+  <Data address="track.1/press.3/value" value="0.000000" priority="0"/>
+  <Data address="track.5/turn.1/model/mute" priority="0"/>
+  <Data address="track.6/turn.3/value" value="0.000000" priority="0"/>
+  <Data address="track.7/fader/value" value="0.000000" priority="0"/>
+ </preset>
+</jamoma>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.4'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset number='1' name='layout-demo1'>
+    <item name='layout' type='integer' priority='0'>1</item>
+    <item name='positions' type='array' priority='0'>/output~ 428 206 1 Toto 300 140 0 clavier 300 280 0 Swatch 300 70 0 Dial[2] 600 0 0 Dial[1] 600 140 0 Dial 600 70 0 imovie 0 0 0 /degrade~ 107 156 1 /filter~ 22 72 1 /noise~ 355 47 1 /limiter~ 40 254 1 texto 0 0 0 </item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='2' name='layout-demo2'>
+    <item name='layout' type='string' priority='1'>layout-demo2</item>
+    <item name='positions' type='array' priority='0'>maxhelpui 0 0 1 Toto 300 140 0 clavier 300 280 0 Swatch 300 70 0 Dial[1] 600 140 0 Dial 600 70 0 imovie 0 0 0 /degrade~ 0 70 1 /filter~ 300 210 1 /noise~ 300 280 1 /limiter~ 0 140 1 texto 13 13 0 /output~ 300 70 1 Dial[2] 600 0 0 </item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <item name='view/color/border' type='array' priority='0'>0.620000 0.000000 0.360000 1.000000 </item>
+    <item name='view/color/contentBackground' type='array' priority='0'>0</item>
+    <item name='view/color/toolbarBackground' type='array' priority='0'>0</item>
+    <item name='view/color/toolbarText' type='array' priority='0'>0</item>
+
+  </preset>
+  <preset number='3' name='layout-demo3'>
+    <item name='layout' type='string' priority='1'>layout-demo3</item>
+    <item name='positions' type='array' priority='0'>maxhelpui 0 0 1 Toto 300 140 0 clavier 300 280 0 Swatch 300 70 0 Dial[1] 600 140 0 Dial 600 70 0 imovie 0 0 0 /degrade~ 0 70 1 /filter~ 300 210 1 /noise~ 300 70 1 /limiter~ 0 140 1 texto 13 13 0 /output~ 0 245 1 Dial[2] 600 0 0 </item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <item name='view/color/border' type='array' priority='0'>0.620000 0.000000 0.360000 1.000000 </item>
+    <item name='view/color/contentBackground' type='array' priority='0'>0</item>
+    <item name='view/color/toolbarBackground' type='array' priority='0'>0</item>
+    <item name='view/color/toolbarText' type='array' priority='0'>0</item>
+
+  </preset>
+  <preset number='4' name='layout-demo4'>
+    <item name='layout' type='string' priority='1'>layout-demo4</item>
+    <item name='positions' type='array' priority='0'>maxhelpui 0 0 1 Toto 300 140 0 clavier 300 280 0 Swatch 300 70 0 Dial[1] 323 191 1 Dial 323 118 1 imovie 0 0 0 /degrade~ 0 70 0 /filter~ 0 0 0 /noise~ 0 210 1 /limiter~ 0 105 1 texto 13 13 0 /output~ 300 70 0 Dial[2] 324 272 1 </item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <item name='view/color/border' type='array' priority='0'>0.620000 0.000000 0.360000 1.000000 </item>
+    <item name='view/color/contentBackground' type='array' priority='0'>0</item>
+    <item name='view/color/toolbarBackground' type='array' priority='0'>0</item>
+    <item name='view/color/toolbarText' type='array' priority='0'>0</item>
+
+  </preset>
+  <preset number='5' name='layout-demo5'>
+    <item name='layout' type='string' priority='1'>layout-demo5</item>
+    <item name='positions' type='array' priority='0'>maxhelpui 0 0 1 Toto 316 148 1 clavier 241 266 1 Swatch 316 77 1 Dial[1] 156 251 1 Dial 82 251 1 imovie 0 0 0 /degrade~ 15 111 0 /filter~ 0 0 0 /noise~ 0 0 0 /limiter~ 0 70 0 texto 13 13 0 /output~ 0 105 1 Dial[2] 8 250 1 </item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <item name='view/color/border' type='array' priority='0'>0.620000 0.000000 0.360000 1.000000 </item>
+    <item name='view/color/contentBackground' type='array' priority='0'>0</item>
+    <item name='view/color/toolbarBackground' type='array' priority='0'>0</item>
+    <item name='view/color/toolbarText' type='array' priority='0'>0</item>
+
+  </preset>
+  <preset number='6' name='layout-demo6'>
+    <item name='layout' type='string' priority='1'>layout-demo6</item>
+    <item name='positions' type='array' priority='0'>maxhelpui 0 0 1 Toto 202 106 1 clavier 22 226 1 Swatch 300 350 1 Dial[1] 33 317 1 Dial 530 128 1 imovie 23 88 1 /degrade~ 0 175 0 /filter~ 0 105 0 /noise~ 0 0 0 /limiter~ 0 70 0 texto 13 13 1 /output~ 0 0 0 Dial[2] 130 319 1 </item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <item name='view/color/border' type='array' priority='0'>0.620000 0.000000 0.360000 1.000000 </item>
+    <item name='view/color/contentBackground' type='array' priority='0'>0</item>
+    <item name='view/color/toolbarBackground' type='array' priority='0'>0</item>
+    <item name='view/color/toolbarText' type='array' priority='0'>0</item>
+
+  </preset>
+</jamoma>

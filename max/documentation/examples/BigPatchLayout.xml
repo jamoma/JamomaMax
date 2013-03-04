@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.4'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+
+  <preset number='1' name='layout-demo1'>
+    <item name='layout' type='integer' priority='0'>0</item>
+    <item name='positions' type='array' priority='0'>/filter~ 300 210 1 /degrade~ 0 140 1 /limiter~ 0 210 1 /noise~ 300 70 1 /output~ 0 525 1 /fileBrowser_1 300 0 1 /input~ 300 70 1 /multidelay~ 300 280 1 /saturation~ 300 350 1 /fileBrowser_2 600 0 1 /input~[2] 600 70 1 /filter~[2] 600 210 1 /multidelay~[2] 600 280 1 /fileBrowser_3 900 0 1 /input~[3] 900 70 1 /filter~[3] 900 210 1 /multidelay~[3] 900 280 1 /saturation~[3] 900 350 1 /fileBrowser_4 300 455 1 /input~[4] 300 525 1 /filter~[4] 300 665 1 /multidelay~[4] 300 735 1 /saturation~[4] 300 805 1 /fileBrowser_5 600 455 1 /input~[5] 600 525 1 /filter~[5] 600 665 1 /multidelay~[5] 600 735 1 /saturation~[5] 600 805 1 /fileBrowser_6 900 455 1 /input~[6] 900 525 1 /filter~[6] 900 665 1 /multidelay~[6] 900 735 1 /saturation~[6] 900 805 1 jmod.control 0 0 1 /mouse/1 0 315 1 /saturation~[2] 600 350 1 cuelist 0 455 1 </item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+</jamoma>

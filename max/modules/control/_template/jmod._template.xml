@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.4'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset number='1' name='default'>
+    <item name='this_parameter' type='decimal'>1.000000</item>
+    <item name='audio/mute' type='boolean'>1</item>
+    <item name='audio/mix' type='decimal'>100.000000</item>
+    <item name='audio/gain' type='decimal'>0.000000</item>
+    <item name='audio/bypass' type='boolean'>0</item>
+  </preset>
+  <preset number='2' name='crunchy'>
+    <item name='this_parameter' type='decimal'>1.000000</item>
+    <item name='audio/mute' type='boolean'>0</item>
+    <item name='audio/bypass' type='boolean'>0</item>
+    <item name='audio/mix' type='decimal'>0.000000</item>
+    <item name='audio/gain' type='integer'>0</item>
+  </preset>
+</jamoma>

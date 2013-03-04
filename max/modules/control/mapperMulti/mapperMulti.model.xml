@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="'http://www.w3.org/2001/XMLSchema-instance'" xsi:schemaLocation="'http://jamoma.org/ file:jamoma.xsd'">
+ <!--TODO : TTContainer Description at mAddress-->
+ <preset number="1" name="Init">
+  <!---->
+  <Data address="/mapper.3/enable" priority="1" value="0.000000"/>
+  <Data address="/InstanceNumber" priority="1" value="12"/>
+  <Data address="/mapper.6/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.7/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.2/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.11/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.12/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.1/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.10/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.5/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.8/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.9/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.4/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.1/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.10/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.8/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.6/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.3/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.5/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.11/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.12/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.9/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.4/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.2/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.7/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.6/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.1/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.7/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.5/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.2/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.8/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.9/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.3/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.11/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.10/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.12/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.4/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.8/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.10/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.8/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.3/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.1/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.6/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.2/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.12/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.5/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.11/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.9/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.3/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.9/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.7/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.5/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.10/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.4/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.4/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.6/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.7/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.11/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.2/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.12/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.1/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.11/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.12/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.10/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.4/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.3/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.1/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.4/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.6/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.3/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.1/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.5/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.11/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.9/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.2/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.9/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.7/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.5/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.8/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.10/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.12/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.8/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.7/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.6/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.2/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.4/function" priority="10"/>
+  <Data address="/mapper.12/function" priority="10"/>
+  <Data address="/mapper.3/function" priority="10"/>
+  <Data address="/mapper.10/function" priority="10"/>
+  <Data address="/mapper.7/function" priority="10"/>
+  <Data address="/mapper.6/function" priority="10"/>
+  <Data address="/mapper.2/function" priority="10"/>
+  <Data address="/mapper.1/function" priority="10"/>
+  <Data address="/mapper.11/function" priority="10"/>
+  <Data address="/mapper.8/function" priority="10"/>
+  <Data address="/mapper.5/function" priority="10"/>
+  <Data address="/mapper.9/function" priority="10"/>
+  <Data address="/mapper.11/function/parameter" priority="20"/>
+  <Data address="/mapper.3/function/parameter" priority="20"/>
+  <Data address="/mapper.10/function/parameter" priority="20"/>
+  <Data address="/mapper.4/function/parameter" priority="20"/>
+  <Data address="/mapper.5/function/parameter" priority="20"/>
+  <Data address="/mapper.8/function/parameter" priority="20"/>
+  <Data address="/mapper.1/function/parameter" priority="20"/>
+  <Data address="/mapper.2/function/parameter" priority="20"/>
+  <Data address="/mapper.9/function/parameter" priority="20"/>
+  <Data address="/mapper.6/function/parameter" priority="20"/>
+  <Data address="/mapper.12/function/parameter" priority="20"/>
+  <Data address="/mapper.7/function/parameter" priority="20"/>
+  <Data address="/mapper.7/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.1/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.11/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.8/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.5/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.9/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.6/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.4/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.10/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.2/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.12/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.3/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.3/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.2/model/mute" priority="0" value="0"/>
+  <Data address="/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.5/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.10/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.6/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.9/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.11/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.1/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.4/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.8/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.12/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.7/model/mute" priority="0" value="0"/>
+ </preset>
+ <preset number="2" name="Sel1-intensités">
+  <!---->
+  <Data address="/mapper.7/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.9/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.5/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.3/enable" priority="1" value="1"/>
+  <Data address="/mapper.4/enable" priority="1" value="0"/>
+  <Data address="/mapper.2/enable" priority="1" value="1"/>
+  <Data address="/mapper.8/enable" priority="1" value="0.000000"/>
+  <Data address="/InstanceNumber" priority="1" value="12"/>
+  <Data address="/mapper.6/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.1/enable" priority="1" value="1"/>
+  <Data address="/mapper.12/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.11/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.10/enable" priority="1" value="0.000000"/>
+  <Data address="/mapper.2/in/address" priority="2" value="/wacom/y"/>
+  <Data address="/mapper.7/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.3/in/address" priority="2" value="/wacom/z"/>
+  <Data address="/mapper.12/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.9/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.11/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.6/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.8/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.10/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.1/in/address" priority="2" value="/wacom/x"/>
+  <Data address="/mapper.5/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.4/in/address" priority="2" value="0.000000"/>
+  <Data address="/mapper.3/out/address" priority="3" value="/Sel.1/intensity"/>
+  <Data address="/mapper.2/out/address" priority="3" value="/Sel.1/spread"/>
+  <Data address="/mapper.1/out/address" priority="3" value="/Sel.1/pan"/>
+  <Data address="/mapper.5/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.8/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.11/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.4/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.9/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.6/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.10/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.12/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.7/out/address" priority="3" value="0.000000"/>
+  <Data address="/mapper.3/in/max" priority="5" value="1.000000"/>
+  <Data address="/mapper.1/out/max" priority="5" value="1.000000"/>
+  <Data address="/mapper.9/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.2/out/max" priority="5" value="1.000000"/>
+  <Data address="/mapper.7/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.4/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.6/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.5/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.12/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.2/in/max" priority="5" value="1.000000"/>
+  <Data address="/mapper.5/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.8/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.11/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.3/out/max" priority="5" value="1.000000"/>
+  <Data address="/mapper.6/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.8/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.9/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.7/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.10/out/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.10/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.11/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.12/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.4/in/max" priority="5" value="0.000000"/>
+  <Data address="/mapper.1/in/max" priority="5" value="1.000000"/>
+  <Data address="/mapper.3/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.12/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.4/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.1/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.2/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.3/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.2/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.11/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.6/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.7/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.6/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.1/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.8/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.5/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.5/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.11/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.12/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.4/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.9/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.9/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.10/in/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.7/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.8/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.10/out/min" priority="6" value="0.000000"/>
+  <Data address="/mapper.11/function" priority="10" value=""/>
+  <Data address="/mapper.3/function" priority="10" value=""/>
+  <Data address="/mapper.10/function" priority="10" value=""/>
+  <Data address="/mapper.8/function" priority="10" value=""/>
+  <Data address="/mapper.2/function" priority="10" value=""/>
+  <Data address="/mapper.12/function" priority="10" value=""/>
+  <Data address="/mapper.7/function" priority="10" value=""/>
+  <Data address="/mapper.6/function" priority="10" value=""/>
+  <Data address="/mapper.5/function" priority="10" value=""/>
+  <Data address="/mapper.4/function" priority="10" value=""/>
+  <Data address="/mapper.1/function" priority="10" value=""/>
+  <Data address="/mapper.9/function" priority="10" value=""/>
+  <Data address="/mapper.7/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.8/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.9/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.3/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.12/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.6/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.11/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.1/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.4/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.2/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.10/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.5/function/parameter" priority="20" value=""/>
+  <Data address="/mapper.7/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.2/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.12/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.9/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.1/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.11/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.4/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.3/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.5/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.10/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.8/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.6/function/parameter/value" priority="30" value="0.000000"/>
+  <Data address="/mapper.7/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.2/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.4/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.8/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.1/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.11/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.6/model/mute" priority="0" value="0"/>
+  <Data address="/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.5/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.9/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.10/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.3/model/mute" priority="0" value="0"/>
+  <Data address="/mapper.12/model/mute" priority="0" value="0"/>
+ </preset>
+</jamoma>

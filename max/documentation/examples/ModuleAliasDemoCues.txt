@@ -1,0 +1,64 @@
+###########################################################################
+CUE Remove_Alias	# (fold)
+###########################################################################
+
+# Module /player.1
+	/player.1/alias/remove
+	/player.1/view/highlight yellow
+# Module /player.2
+	/player.2/alias/remove
+	/player.2/view/highlight yellow
+
+# (end)
+
+###########################################################################
+CUE AntonAndDrums	# (fold)
+###########################################################################
+
+	# Module /anton
+		/player.1/alias /anton
+		/anton/soundfile/open anton.aif
+		/anton/audio/active 1
+		/anton/audio/gain 74.221
+		/anton/soundfile/loop 1
+		/anton/soundfile/play 1
+		/anton/source soundfile
+		/anton/testtone/frequency 1000
+		/anton/view/freeze 0
+		/anton/view/highlight green
+	# Module /drums
+		/player.2/alias /drums
+		/drums/soundfile/open drumLoop.aif
+		/drums/audio/gain 75.870
+		/drums/soundfile/loop 1
+		/drums/soundfile/play 1
+		/drums/source soundfile
+		/drums/view/highlight green
+	
+# (end)
+
+###########################################################################
+CUE CelloAndBeats	# (fold)
+###########################################################################
+
+	# Module /anton
+		/player.1/alias /cello
+		/cello/soundfile/open cello-f2.aif
+		/cello/audio/active 1
+		/cello/audio/gain 74.221
+		/cello/soundfile/loop 1
+		/cello/soundfile/play 1
+		/cello/source soundfile
+		/cello/testtone/frequency 1000
+		/cello/view/freeze 0
+		/cello/view/highlight azure
+	# Module /beats
+		/player.2/alias /beats
+		/beats/soundfile/open sho0630.aif
+		/beats/audio/gain 75.870
+		/beats/soundfile/loop 1
+		/beats/soundfile/play 1
+		/beats/source soundfile
+		/beats/view/highlight azure
+	
+# (end)

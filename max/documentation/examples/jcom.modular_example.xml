@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="'http://www.w3.org/2001/XMLSchema-instance'" xsi:schemaLocation="'http://jamoma.org/ file:jamoma.xsd'">
+ <!--TODO : a TTApplication Manager comment-->
+ <application name="myApplication" version="0.1">
+  <protocol name="Minuit" ip="127.0.0.1" port="8002"/>
+ </application>
+ <application name="distantApp" version="">
+  <protocol name="Minuit" ip="127.0.0.1" port="7003"/>
+ </application>
+ <application name="dlight" version="">
+  <protocol name="Minuit" ip="127.0.0.1" port="7000"/>
+  <namespace file="/Users/TO/Documents/Jamoma/Tools/debugging/olivier_test/namespace_dlight.opml"/>
+ </application>
+</jamoma>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
+ <!--Conversion table-->
+ <conversionTable>
+  <entry App="value/default" TT="valueDefault"/>
+  <entry App="value/stepsize" TT="valueStepsize"/>
+  <entry App="range/clipmode" TT="rangeClipmode"/>
+  <entry App="ramp/drive" TT="rampDrive"/>
+  <entry App="repetitions/allow" TT="repetitionsAllow"/>
+  <entry App="ramp/function" TT="rampFunction"/>
+  <entry App="ramp/function/parameters" TT="rampFunctionParameters"/>
+  <entry App="range/bounds" TT="rangeBounds"/>
+  <entry App="ramp/status" TT="rampStatus"/>
+  <entry App="dataspace/unit" TT="dataspaceUnit"/>
+  <entry App="jcom.parameter" TT="Data service parameter"/>
+  <entry App="jcom.return" TT="Data service return"/>
+  <entry App="activity/in" TT="activityIn"/>
+  <entry App="activity/out" TT="activityOut"/>
+
+  <entry App="dec" TT="Dec"/>
+  <entry App="namespace/build" TT="DirectoryBuild"/>
+  <entry App="namespace/observe" TT="DirectoryObserve"/>
+  <entry App="inc" TT="Inc"/>
+  <entry App="init" TT="Init"/>
+  <entry App="new" TT="New"/>
+  <entry App="recall" TT="Recall"/>
+  <entry App="refresh" TT="Refresh"/>
+  <entry App="remove" TT="Remove"/>
+  <entry App="reset" TT="Reset"/>
+  <entry App="send" TT="Send"/>
+  <entry App="store" TT="Store"/>
+ </conversionTable>
+</jamoma>

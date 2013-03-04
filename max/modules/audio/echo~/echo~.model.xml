@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+
+<jamoma version="0.4" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd"
+>
+	
+	<preset number="1" name="default">
+		<item name="audio/gain" type="integer">0</item>
+		<item name="audio/mix" type="decimal">100.</item>
+		<item name="audio/bypass" type="integer">0</item>
+		<item name="audio/mute" type="integer">1</item>		
+		<item name="delay/left" type="integer">250</item>
+		<item name="delay/right" type="integer">750</item>
+		<item name="filter/frequency" type="decimal" priority="4">8571.957031</item>
+		<item name="filter/q" type="decimal">0.80165</item>
+		<item name="filter/gain" type="decimal">-0.547163</item>
+		<item name="filter/type" type="string">lowpass</item>		
+	    <item name='feedback/gain' type='decimal' priority='0'>0.2</item>
+	    <item name='feedback/mode' type='string' priority='0'>stereo</item>
+    </preset>
+</jamoma>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.4'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset number='1' name='default'>
+    <item name='audio/bypass' type='boolean' priority='0'>0</item>
+    <item name='audio/gain' type='decimal' priority='0'>0</item>
+    <item name='audio/mute' type='boolean' priority='0'>0</item>
+    <item name='color' type='boolean' priority='0'>0</item>
+    <item name='colors' type='generic' priority='0'>0.000000 0.000000 0.000000 1.000000 </item>
+    <item name='dimensions/height' type='integer' priority='0'>240</item>
+    <item name='dimensions/width' type='integer' priority='0'>1024</item>
+    <item name='inverse' type='boolean' priority='0'>1</item>
+    <item name='metro/on' type='boolean' priority='0'>1</item>
+    <item name='metro/speed' type='decimal' priority='0'>0</item>
+    <item name='scaling' type='decimal' priority='0'>4.000000</item>
+    <item name='speed' type='decimal' priority='0'>1000.000000</item>
+    <item name='threshold' type='decimal' priority='0'>0.100000</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+
+  </preset>
+</jamoma>

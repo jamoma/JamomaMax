@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.4'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset number='1' name='default'>
+    <item name='audio/gain' type='decimal' priority='0'>0.000000</item>
+    <item name='audio/mute' type='boolean' priority='0'>1</item>
+    <item name='oscillators' type='integer' priority='0'>10</item>
+    <item name='range' type='array' priority='0'>24.000000 96.000000 </item>
+    <item name='rate' type='decimal' priority='0'>-1.000000</item>
+    <item name='rolloff' type='decimal' priority='0'>-60.000000</item>
+    <item name='spacing' type='decimal' priority='0'>12.000000</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='2' name='up'>
+    <item name='audio/gain' type='decimal' priority='0'>110.000000</item>
+    <item name='audio/mute' type='boolean' priority='0'>0</item>
+    <item name='oscillators' type='integer' priority='0'>10</item>
+    <item name='range' type='array' priority='0'>24.000000 96.000000 </item>
+    <item name='rate' type='decimal' priority='0'>-1.000000</item>
+    <item name='rolloff' type='decimal' priority='0'>-60.000000</item>
+    <item name='spacing' type='decimal' priority='0'>12.000000</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='3' name='down'>
+    <item name='audio/gain' type='decimal' priority='0'>110.000000</item>
+    <item name='audio/mute' type='boolean' priority='0'>0</item>
+    <item name='oscillators' type='integer' priority='0'>10</item>
+    <item name='range' type='array' priority='0'>24.000000 96.000000 </item>
+    <item name='rate' type='decimal' priority='0'>-1.000000</item>
+    <item name='rolloff' type='decimal' priority='0'>-60.000000</item>
+    <item name='spacing' type='decimal' priority='0'>12.000000</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='4' name='FalseAlarm'>
+    <item name='audio/gain' type='decimal' priority='0'>110.000000</item>
+    <item name='audio/mute' type='boolean' priority='0'>0</item>
+    <item name='oscillators' type='integer' priority='0'>10</item>
+    <item name='range' type='array' priority='0'>24.000000 96.000000 </item>
+    <item name='rate' type='decimal' priority='0'>24.000000</item>
+    <item name='rolloff' type='decimal' priority='0'>-60.000000</item>
+    <item name='spacing' type='decimal' priority='0'>12.000000</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='5' name='PsychedelicIdea'>
+    <item name='audio/gain' type='decimal' priority='0'>110.000000</item>
+    <item name='audio/mute' type='boolean' priority='0'>0</item>
+    <item name='oscillators' type='integer' priority='0'>10</item>
+    <item name='range' type='array' priority='0'>24.000000 96.000000 </item>
+    <item name='rate' type='decimal' priority='0'>24.000000</item>
+    <item name='rolloff' type='decimal' priority='0'>-12.000000</item>
+    <item name='spacing' type='decimal' priority='0'>4.000000</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+</jamoma>

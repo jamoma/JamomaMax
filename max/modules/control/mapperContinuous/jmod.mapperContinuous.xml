@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.4'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset number='1' name='default'>
+    <item name='clipmode' type='string' priority='0'>both</item>
+    <item name='edit' type='string' priority='1'>edit</item>
+    <item name='function' type='string' priority='3'>linear</item>
+    <item name='function/parameter1' type='decimal' priority='5'>0.000000</item>
+    <item name='function/parameter2' type='decimal' priority='4'>0.000000</item>
+    <item name='function/symmetry' type='string' priority='3'>0</item>
+    <item name='in/direct' type='decimal' priority='0'>0.000000</item>
+    <item name='in/max' type='decimal' priority='0'>1.000000</item>
+    <item name='in/min' type='decimal' priority='0'>0.000000</item>
+    <item name='in/module/derivative' type='integer' priority='0'>0</item>
+    <item name='in/module/instance' type='integer' priority='2'>0</item>
+    <item name='in/module/listindex' type='integer' priority='0'>1</item>
+    <item name='in/module/name' type='string' priority='1'>/input</item>
+    <item name='in/module/parameter' type='string' priority='6'>/audio/amplitude.1</item>
+    <item name='mode' type='string' priority='1'>--></item>
+    <item name='out/max' type='decimal' priority='0'>127.000000</item>
+    <item name='out/min' type='decimal' priority='0'>0.000000</item>
+    <item name='out/module/instance' type='integer' priority='4'>0</item>
+    <item name='out/module/name' type='string' priority='3'>/input</item>
+    <item name='out/module/parameter' type='string' priority='5'>/audio/gain</item>
+    <item name='ramp' type='integer' priority='0'>0</item>
+    <item name='slide/down' type='decimal' priority='0'>0.000000</item>
+    <item name='slide/up' type='decimal' priority='0'>0.000000</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+
+  </preset>
+  <preset number='2' name='mouse'>
+    <item name='clipmode' type='string' priority='0'>none</item>
+    <item name='edit' type='string' priority='0'>edit</item>
+    <item name='function' type='string' priority='1'>linear</item>
+    <item name='in/max' type='decimal' priority='0'>1.000000</item>
+    <item name='in/min' type='decimal' priority='0'>0.000000</item>
+    <item name='in/module/derivative' type='integer' priority='0'>0</item>
+    <item name='in/module/listindex' type='integer' priority='0'>1</item>
+    <item name='in/module/parameter' type='string' priority='6'>/position/x</item>
+    <item name='in/module/name' type='string' priority='1'>/mouse</item>
+    <item name='in/module/instance' type='integer' priority='2'>0</item>
+    <item name='out/max' type='decimal' priority='0'>100.000000</item>
+    <item name='out/min' type='decimal' priority='0'>0.000000</item>
+    <item name='out/module/parameter' type='string' priority='5'>/audio/mix</item>
+    <item name='out/module/name' type='string' priority='3'>/filter~</item>
+    <item name='out/module/instance' type='integer' priority='4'>0</item>
+    <item name='function/parameter1' type='decimal' priority='5'>0.000000</item>
+    <item name='function/parameter2' type='decimal' priority='4'>0.000000</item>
+    <item name='function/symmetry' type='string' priority='3'>0</item>
+    <item name='ramp' type='integer' priority='0'>0</item>
+    <item name='slide/down' type='decimal' priority='0'>0.000000</item>
+    <item name='slide/up' type='decimal' priority='0'>0.000000</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='3' name='audio'>
+    <item name='clipmode' type='string' priority='0'>both</item>
+    <item name='edit' type='string' priority='0'>edit</item>
+    <item name='function' type='string' priority='1'>power</item>
+    <item name='in/max' type='decimal' priority='0'>1.000000</item>
+    <item name='in/min' type='decimal' priority='0'>0.000000</item>
+    <item name='in/module/derivative' type='integer' priority='0'>0</item>
+    <item name='in/module/listindex' type='integer' priority='0'>1</item>
+    <item name='in/module/parameter' type='string' priority='6'>/audio/amplitude.1</item>
+    <item name='in/module/name' type='string' priority='1'>/input~</item>
+    <item name='in/module/instance' type='integer' priority='2'>0</item>
+    <item name='out/max' type='decimal' priority='0'>11025.000000</item>
+    <item name='out/min' type='decimal' priority='0'>30.000000</item>
+    <item name='out/module/parameter' type='string' priority='5'>/frequency</item>
+    <item name='out/module/name' type='string' priority='3'>/filter~</item>
+    <item name='out/module/instance' type='integer' priority='4'>0</item>
+    <item name='function/parameter1' type='decimal' priority='5'>-0.520000</item>
+    <item name='function/parameter2' type='decimal' priority='4'>0.000000</item>
+    <item name='function/symmetry' type='string' priority='3'>0</item>
+    <item name='ramp' type='integer' priority='0'>150</item>
+    <item name='slide/down' type='decimal' priority='0'>0.000000</item>
+    <item name='slide/up' type='decimal' priority='0'>0.000000</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  </preset>
+</jamoma>

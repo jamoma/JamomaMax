@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<jamoma version='0.4' 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
+	<preset number="1" name="default">
+		<Data address="/audio/mute" type="boolean" value="1"/>
+		<Data address="/audio/mix" type="decimal" value="100.000000"/>
+		<Data address="/audio/meters/freeze" type="boolean" value="0"/>
+		<Data address="/audio/gain" type="decimal" value="0.000000"/>
+		<Data address="/audio/bypass" type="boolean" value="0"/>
+		<item address="lookahead" type="integer" value="10"/>
+		<item address="attack" type="integer" value="10"/>
+		<item address="release" type="integer" value="300"/>
+		<item address="threshold" type="integer" value="-40"/>
+	</preset>
+</jamoma>

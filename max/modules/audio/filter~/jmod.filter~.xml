@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+
+<jamoma version="0.4" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd"
+>
+	
+	<preset number="1" name="default">
+		<item name="audio/gain" type="decimal">0.0</item>
+		<item name="audio/mix" type="decimal">100.</item>
+		<item name="audio/bypass" type="boolean">0</item>
+		<item name="audio/mute" type="integer">1</item>		
+		<item name="frequency" type="decimal">1548.</item>
+		<item name="q" type="decimal">1.</item>
+		<item name="filtergain" type="decimal">0.</item>
+		<item name="filtertype" type="string">lowpass</item>
+    </preset>
+	<preset number="2" name="Bandpass Octave filter 1000 Hz">
+		<item name="frequency" type="decimal">1000.</item>
+		<item name="q" type="decimal">1.408</item>
+		<item name="filtergain" type="decimal">0.</item>
+		<item name="filtertype" type="string">bandpass</item>
+    </preset>
+	<preset number="3" name="Bandpass 3rd-Octave filter 1000 Hz">
+		<item name="frequency" type="decimal">1000.</item>
+		<item name="q" type="decimal">4.33</item>
+		<item name="filtergain" type="decimal">0.</item>
+		<item name="filtertype" type="string">bandpass</item>
+    </preset>                             
+</jamoma>

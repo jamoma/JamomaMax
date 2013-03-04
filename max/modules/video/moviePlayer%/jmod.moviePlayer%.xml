@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.4'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset number='1' name='default'>
+    <item name='colormode' type='string' priority='0'>argb</item>
+    <item name='deinterlace' type='boolean' priority='0'>1</item>
+    <item name='dim' type='array' priority='0'>320.000000 240.000000 </item>
+    <item name='highquality' type='boolean' priority='0'>1</item>
+    <item name='loop' type='string' priority='0'>normal</item>
+    <item name='singlefield' type='boolean' priority='0'>0</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <item name='unique' type='boolean' priority='0'>0</item>
+    <item name='video/bypass' type='boolean' priority='0'>0</item>
+    <item name='video/freeze' type='boolean' priority='0'>0</item>
+    <item name='video/mute' type='boolean' priority='0'>0</item>
+    <item name='video/preview' type='boolean' priority='0'>0</item>
+  </preset>
+  <preset number='2' name='320x240'>
+    <item name='dim' type='array' priority='0'>320.000000 240.000000 </item>
+  </preset>
+  <preset number='3' name='640x480 (NTSC)'>
+    <item name='dim' type='array' priority='0'>640.000000 320.000000 </item>
+  </preset>
+  <preset number='4' name='720 480 (PAL)'>
+    <item name='dim' type='array' priority='0'>720.000000 480.000000 </item>
+  </preset>
+  <preset number='5' name='Colormode ARGB'>
+    <item name='colormode' type='string' priority='0'>argb</item>
+  </preset>
+  <preset number='6' name='Colormode uyvy'>
+    <item name='colormode' type='string' priority='0'>uyvy</item>
+  </preset>
+</jamoma>

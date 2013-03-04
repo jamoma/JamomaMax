@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
+ <preset name="default">
+  <!--"edit a comment"-->
+  <command address="samplerateRatio">1.000000</command>
+  <command address="bitdepth">24</command>
+  <command address="in.2/amplitude/active">0</command>
+  <command address="in.2/bypass">0</command>
+  <command address="in.2/mute">0</command>
+  <command address="out.2/mix">100.000000</command>
+  <command address="out.2/amplitude/active">150</command>
+  <command address="out.2/mute">0</command>
+  <command address="out.2/gain">100.000000</command>
+  <command address="out.1/amplitude/active">150</command>
+  <command address="out.1/mute">0</command>
+  <command address="out.1/gain">100.000000</command>
+  <command address="out.1/mix">100.000000</command>
+  <command address="in.1/amplitude/active">0</command>
+  <command address="in.1/bypass">0</command>
+  <command address="in.1/mute">0</command>
+ </preset>
+ <preset name="crunchy">
+  <!--"edit a comment"-->
+  <command address="samplerateRatio">0.050000</command>
+  <command address="bitdepth">5</command>
+  <command address="in.2/amplitude/active">0</command>
+  <command address="in.2/bypass">0</command>
+  <command address="in.2/mute">0</command>
+  <command address="out.2/mix">100.000000</command>
+  <command address="out.2/amplitude/active">150</command>
+  <command address="out.2/mute">0</command>
+  <command address="out.2/gain">100.000000</command>
+  <command address="out.1/amplitude/active">150</command>
+  <command address="out.1/mute">0</command>
+  <command address="out.1/gain">100.000000</command>
+  <command address="out.1/mix">100.000000</command>
+  <command address="in.1/amplitude/active">0</command>
+  <command address="in.1/bypass">0</command>
+  <command address="in.1/mute">0</command>
+ </preset>
+</jamoma>

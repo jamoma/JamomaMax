@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="'http://www.w3.org/2001/XMLSchema-instance'" xsi:schemaLocation="'http://jamoma.org/ file:jamoma.xsd'">
+ <cue name="init">
+  <!---->
+   <command address="/file/path">oh.mov</command>
+   <command address="/file/path.1">bball.mov</command>
+   <command address="/play.1">1</command>
+   <command address="/play">1</command>
+   <command address="/rate" ramp="3000">1.000000</command>
+   <command address="/rate.1" ramp="3000">-1.000000</command>
+ </cue>
+ <cue name="start">
+  <!---->
+   <command address="/file/path">dozer.mov</command>
+   <command address="/file/path.1">garbage.mov</command>
+   <command address="/play.1">1</command>
+   <command address="/play">1</command>
+   <command address="/rate" ramp="3000">2.000000</command>
+   <command address="/rate.1" ramp="3000">1.000000</command>
+ </cue>
+</jamoma>

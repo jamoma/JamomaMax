@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.4'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset number='1' name='default'>
+    <item name='frequency/scale' type='decimal' priority='0'>-2.260000</item>
+    <item name='frequency/shift' type='decimal' priority='0'>-344.000000</item>
+    <item name='bypass' type='boolean' priority='0'>0</item>
+    <item name='feedback/gain' type='decimal' priority='0'>-60.000000</item>
+    <item name='feedback/time' type='integer' priority='0'>10</item>
+    <item name='gain' type='decimal' priority='0'>0.000000</item>
+    <item name='limiter/dcblocker/active' type='boolean' priority='0'>1</item>
+    <item name='limiter/lookahead' type='integer' priority='0'>100</item>
+    <item name='limiter/mode' type='string' priority='0'>exponential</item>
+    <item name='limiter/postamp' type='decimal' priority='0'>0</item>
+    <item name='limiter/preamp' type='decimal' priority='0'>6.000000</item>
+    <item name='limiter/release' type='decimal' priority='0'>250.000000</item>
+    <item name='limiter/threshold' type='decimal' priority='0'>0</item>
+    <item name='mix' type='decimal' priority='0'>100.000000</item>
+    <item name='mute' type='boolean' priority='0'>1</item>
+    <item name='view/freeze' type='boolean' priority='0'>0</item>
+
+  </preset>
+</jamoma>

@@ -1,0 +1,128 @@
+###########################################################################
+CUE Initialisation	# (fold)
+###########################################################################
+
+	# Module /output~
+		/output~/alias/remove
+		/output~/audio/active 0
+		/output~/audio/gain 0.000
+		/output~/limiter/active 0
+		/output~/limiter/dcblocker/active 1
+		/output~/limiter/lookahead 64
+		/output~/limiter/mode exponential
+		/output~/limiter/postamp 0.000
+		/output~/limiter/preamp 6.000
+		/output~/limiter/release 300.000
+		/output~/limiter/threshold -1.000
+		/output~/record/filetype aiff
+		/output~/record/samptype int24
+		/output~/view/freeze 0
+		/output~/view/highlight 0
+	# Module /filePlayer
+		/filePlayer/alias/remove
+		/filePlayer/nextFile/loop/start 0.000
+		/filePlayer/nextFile/loop/end 0.000
+		/filePlayer/nextFile/rate 1.000
+		/filePlayer/audio/gain 0.000
+		/filePlayer/audio/mute 0
+		/filePlayer/loop 1
+		/filePlayer/play 0
+		/filePlayer/view/freeze 0
+		/filePlayer/view/highlight 0
+
+# (end)
+
+###########################################################################
+CUE AudioOn	# (fold)
+###########################################################################
+
+	# Module /filePlayer
+		/filePlayer/audio/gain 100.000
+
+	# Module /output~
+		/output~/audio/active 1
+		/output~/audio/gain 75.000 ramp 2000
+
+# (end)
+
+###########################################################################
+CUE PreloadDrums	# (fold)
+###########################################################################
+
+	# First we set the file to play, start and end positions, and playback rate
+	/filePlayer/nextFile/open drumLoop.aif
+	/filePlayer/nextFile/loop/start 0.
+	/filePlayer/nextFile/loop/end 0.		# 0: Play to end of file
+	/filePlayer/nextFile/rate 1.
+	
+	# Next we preload it.
+	# This way it can be triggered instantly by next cue, without delays caused by disk seek times
+	/filePlayer/nextFile/preload
+
+# (end)
+
+###########################################################################
+CUE PlayDrums	# (fold)
+###########################################################################
+
+	# We make the preloaded file the current one
+	/filePlayer/nextFile/makeCurrent
+	
+	/filePlayer/play 1
+
+# (end)
+
+###########################################################################
+CUE PreloadCello	# (fold)
+###########################################################################
+
+	# First we set the file to play, start and end positions, and playback rate
+	/filePlayer/nextFile/open cello-f2.aif
+	/filePlayer/nextFile/loop/start 0.
+	/filePlayer/nextFile/loop/end 0.
+	/filePlayer/nextFile/rate -1.			# Reverse playback
+	
+	# Next we preload it.
+	# This way it can be triggered instantly by next cue, without delays caused by disk seek times
+	/filePlayer/nextFile/preload
+
+# (end)
+
+###########################################################################
+CUE PlayCello	# (fold)
+###########################################################################
+
+	# We make the preloaded file the current one
+	/filePlayer/nextFile/makeCurrent
+
+	/filePlayer/play 1
+
+# (end)
+
+
+###########################################################################
+CUE PreloadVibes	# (fold)
+###########################################################################
+
+	# First we set the file to play, start and end positions, and playback rate
+	/filePlayer/nextFile/open vibes-a1.aif
+	/filePlayer/nextFile/loop/start 450	# Start playback 200 ms into the sound file
+	/filePlayer/nextFile/loop/end 0		# Loop end point at end of sound file
+	/filePlayer/nextFile/rate -0.5		# Reverse playback at reduced speed
+	
+	# Next we preload it.
+	# This way it can be triggered instantly by next cue, without delays caused by disk seek times
+	/filePlayer/nextFile/preload
+
+# (end)
+
+###########################################################################
+CUE PlayVibes	# (fold)
+###########################################################################
+
+	# We make the preloaded file the current one
+	/filePlayer/nextFile/makeCurrent
+
+	/filePlayer/play 1
+	
+# (end)

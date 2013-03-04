@@ -1,0 +1,27 @@
+#N canvas 978 568 444 159 10;
+#X obj 8 102 sendOSC;
+#X obj 8 8 loadbang;
+#X msg 8 28 connect localhost 8002;
+#X obj 22 55 r send;
+#X obj 22 75 prepend send;
+#X obj 8 124 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X msg 245 59 /play \$1;
+#X obj 245 109 s send;
+#X obj 245 40 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 205 59 /load;
+#X msg 302 59 /rate \$1;
+#X obj 305 40 hsl 128 15 -2 2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 200 11 Directly control the Jamoma patch;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 6 0 7 0;
+#X connect 8 0 6 0;
+#X connect 9 0 7 0;
+#X connect 10 0 7 0;
+#X connect 11 0 10 0;

@@ -1,0 +1,2 @@
+edge%/thresh, -> wake%/bleed;
+analysis/result, jmod.scale.alg 0. 1. 0 127 1.08 -> reverb/gain/midi;

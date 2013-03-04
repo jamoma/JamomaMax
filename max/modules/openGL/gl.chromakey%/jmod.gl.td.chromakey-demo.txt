@@ -1,0 +1,167 @@
+###############################################
+
+CUE oh
+
+###############################################
+
+# Module /backgroundMovie
+    /backgroundMovie/colormode argb
+    /backgroundMovie/deinterlace 1
+    /backgroundMovie/dim 320.000 240.000
+    /backgroundMovie/highquality 1
+    /backgroundMovie/loop normal
+	/backgroundMovie/read sunset.jpg
+    /backgroundMovie/singlefield 0
+    /backgroundMovie/view/freeze 0
+    /backgroundMovie/unique 0
+    /backgroundMovie/video/bypass 0
+    /backgroundMovie/video/freeze 0
+    /backgroundMovie/video/mute 0
+    /backgroundMovie/video/preview 1
+    /backgroundMovie/view/color/border 0
+    /backgroundMovie/view/color/contentBackground 0
+    /backgroundMovie/view/color/toolbarBackground 0
+    /backgroundMovie/view/color/toolbarText 0
+    /backgroundMovie/view/size 300 105
+# Module /cue_script
+    /cue_script/view/freeze 0
+    /cue_script/view/color/border 0
+    /cue_script/view/color/contentBackground 0
+    /cue_script/view/color/toolbarBackground 0
+    /cue_script/view/color/toolbarText 0
+    /cue_script/view/size 300 70
+# Module /cueTrigger
+    /cueTrigger/repeat 0
+    /cueTrigger/view/freeze 0
+    /cueTrigger/view/color/border 0
+    /cueTrigger/view/color/contentBackground 0
+    /cueTrigger/view/color/toolbarBackground 0
+    /cueTrigger/view/color/toolbarText 0
+    /cueTrigger/view/size 300 140
+# Module /foregrundMovie
+	/foregrundMovie/colormode argb
+    /foregrundMovie/deinterlace 1
+    /foregrundMovie/dim 320.000 240.000
+    /foregrundMovie/highquality 1
+    /foregrundMovie/loop normal
+	/foregrundMovie/read oh.mov
+    /foregrundMovie/singlefield 0
+    /foregrundMovie/view/freeze 0
+    /foregrundMovie/unique 0
+    /foregrundMovie/video/bypass 0
+    /foregrundMovie/video/freeze 0
+    /foregrundMovie/video/mute 0
+    /foregrundMovie/video/preview 1
+    /foregrundMovie/view/color/border 0
+    /foregrundMovie/view/color/contentBackground 0
+    /foregrundMovie/view/color/toolbarBackground 0
+    /foregrundMovie/view/color/toolbarText 0
+    /foregrundMovie/view/size 300 105
+# Module /qmetro
+    /qmetro/randomness 0
+    /qmetro/time 40
+    /qmetro/toggle 1
+    /qmetro/view/freeze 0
+    /qmetro/view/color/border 0
+    /qmetro/view/color/contentBackground 0
+    /qmetro/view/color/toolbarBackground 0
+    /qmetro/view/color/toolbarText 0
+    /qmetro/view/size 150 70
+# Module /slab_based_chromakey
+    /slab_based_chromakey/3D/position 0.000 0.000 0.000
+    /slab_based_chromakey/3D/rotate 0.000 0.000 1.000 0.000
+    /slab_based_chromakey/3D/scale 1.000 1.000 1.000
+    /slab_based_chromakey/blend/enable 0
+    /slab_based_chromakey/blend/mode 6 7
+    /slab_based_chromakey/bypass 0
+    /slab_based_chromakey/chromakey/binary 1
+    /slab_based_chromakey/chromakey/color 64.000 106.000 255.000
+    /slab_based_chromakey/chromakey/fade 0
+    /slab_based_chromakey/chromakey/invert 0
+    /slab_based_chromakey/chromakey/modus 0
+    /slab_based_chromakey/chromakey/tolerance 0.300
+    /slab_based_chromakey/color/alpha 1.000
+    /slab_based_chromakey/color/inherit 0
+    /slab_based_chromakey/color/rgb 1.000 1.000 1.000
+    /slab_based_chromakey/depth/clear 0
+    /slab_based_chromakey/depth/enable 1
+    /slab_based_chromakey/depth/inherit 0
+    /slab_based_chromakey/fog/amount 0
+    /slab_based_chromakey/fog/inherit 0
+    /slab_based_chromakey/fog/params 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+    /slab_based_chromakey/freeze 0
+    /slab_based_chromakey/material/automatic 1
+    /slab_based_chromakey/material/inherit 0
+    /slab_based_chromakey/material/light/ambient 0.000 0.000 0.000 0.000
+    /slab_based_chromakey/material/light/diffuse 0.000 0.000 0.000 0.000
+    /slab_based_chromakey/material/light/emission 0.000 0.000 0.000 0.000
+    /slab_based_chromakey/material/light/enable 0
+    /slab_based_chromakey/material/light/specular 0.000 0.000 0.000 0.000
+    /slab_based_chromakey/material/shininess 16.000
+    /slab_based_chromakey/mute 0
+    /slab_based_chromakey/preview 1
+    /slab_based_chromakey/render/antialias 0
+    /slab_based_chromakey/render/automatic 1
+    /slab_based_chromakey/render/context chroma_context
+    /slab_based_chromakey/render/enable 1
+    /slab_based_chromakey/render/layer 0
+    /slab_based_chromakey/view/freeze 0
+    /slab_based_chromakey/view/color/border 0
+    /slab_based_chromakey/view/color/contentBackground 0
+    /slab_based_chromakey/view/color/toolbarBackground 0
+    /slab_based_chromakey/view/color/toolbarText 0
+    /slab_based_chromakey/view/size 300 70
+# Module /videoplane
+    /videoplane/3D/position 0
+    /videoplane/3D/rotate 0
+    /videoplane/3D/scale 1.333 1.000 1.000
+    /videoplane/blend/enable 0
+    /videoplane/blend/mode 6 7
+    /videoplane/color/alpha 1.000
+    /videoplane/color/inherit 0
+    /videoplane/color/rgb 1.000 1.000 1.000
+    /videoplane/depth/clear 0
+    /videoplane/depth/enable 1
+    /videoplane/depth/inherit 0
+    /videoplane/fog/amount 0.000
+    /videoplane/fog/inherit 0
+    /videoplane/fog/params 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+    /videoplane/material/automatic 1
+    /videoplane/material/inherit 0
+    /videoplane/material/light/ambient 0.000 0.000 0.000 0.000
+    /videoplane/material/light/diffuse 0.000 0.000 0.000 0.000
+    /videoplane/material/light/emission 0.000 0.000 0.000 0.000
+    /videoplane/material/light/enable 0
+    /videoplane/material/light/specular 0.000 0.000 0.000 0.000
+    /videoplane/material/shininess 16.000
+    /videoplane/render/antialias 0
+    /videoplane/render/automatic 1
+    /videoplane/render/context chroma_context
+    /videoplane/render/enable 1
+    /videoplane/render/layer 0
+    /videoplane/view/freeze 0
+    /videoplane/video/freeze 0
+    /videoplane/video/mute 0
+    /videoplane/videoplane/client_storage 1
+    /videoplane/videoplane/colormode argb
+    /videoplane/videoplane/dim 20 20
+    /videoplane/videoplane/displaylist 0
+    /videoplane/videoplane/gridmode 0
+    /videoplane/videoplane/interpolate 1
+    /videoplane/videoplane/nudge 0.010
+    /videoplane/videoplane/texture/offset 0.000 0.000
+    /videoplane/videoplane/texture/scale 1.000 1.000
+    /videoplane/view/color/border 0
+    /videoplane/view/color/contentBackground 0
+    /videoplane/view/color/toolbarBackground 0
+    /videoplane/view/color/toolbarText 0
+    /videoplane/view/size 300 140
+
+###############################################
+
+CUE ToleranceAndFadeDemo
+
+###############################################
+
+# Module /foregrundMovie
+	/foregrundMovie/read colorswatch.pict

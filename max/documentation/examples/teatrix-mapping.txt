@@ -1,0 +1,1 @@
+link, /motion/motion/quantity * -> /echo/right;
