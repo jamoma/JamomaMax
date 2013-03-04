@@ -250,8 +250,8 @@ if win?
   `mkdir "root/Common Files/Jamoma"`
   `mkdir "root/Common Files/Jamoma/Extensions"`
 
-  puts " Copying the Jamoma folder --  this could take a while..."
-  `cp -r "#{@git_root}/Modules/Modular/Max" 						"root/Cycling '74/Jamoma"`
+  puts " Copying the Jamoma for Max folder --  this could take a while..."
+  `cp -r "#{@git_root}/Implementations/Max/max" 					"root/Cycling '74/Jamoma"`
 
   puts " Copying Jamoma Extensions"
   `cp "#{@git_root}/Builds"/*.ttdll  							"root/Common Files/Jamoma/Extensions"`
@@ -383,11 +383,11 @@ else
 # temp fix. Only run the command if the tag starts with "0.6.something" since the JamomaConfiguration.xml is 0.6.x only
   if git_tag =~ /^0\.6.*/
      puts "  Copying Jamoma configuration file..."
-  `cp -rpv \"#{@git_root}/Modules/Modular/Max/support/JamomaConfiguration.xml\"       \"#{@c74}/init/JamomaConfiguration.xml\"`
+  `cp -rpv \"#{@git_root}/Implementations/Max/max/support/JamomaConfiguration.xml\"       \"#{@c74}/init/JamomaConfiguration.xml\"`
   end
 
   puts "  Copying the Jamoma folder..."
-  `cp -rpv \"#{@git_root}/Modules/Modular/Max\" \"#{@c74}/Jamoma\"`
+  `cp -rpv \"#{@git_root}/Implementations/Max/max\"                                   \"#{@c74}/Jamoma\"`
 
   puts "  Copying Shared Libraries & Extensions"
   `cp -pv \"#{@path_extensions}\"/*.ttdylib                                          \"#{@tempDistro}#{@path_extensions}\"`
@@ -410,12 +410,6 @@ else
   puts "  Copying header files used by plugtastic"
   `cp -rpv /usr/local/jamoma/includes                                                 \"#{@tempDistro}/usr/local/jamoma/includes\"`
   
-  puts "  Copying Externals"
-  `cp -rpv \"#{@git_root}/Builds/MaxMSP\"                                             \"#{@c74}/Jamoma/externals\"`
-#  puts "  Removing ≈-Externals"
-#  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.mxo`
-#  `rm -rfv \"#{@c74}/Jamoma/externals/\"*≈.maxhelp`
-
   puts "  Copying Ruby bundle"
   `cp -rpv \"#{@path_ruby}/library/Jamoma.bundle\"                                    \"#{@tempDistro}/Library/Ruby/Site/1.8/universal-darwin10.0/Jamoma.bundle\"`
 
@@ -447,21 +441,22 @@ else
   puts "  Moving things around (loader, templates, etc)..."
   `cp \"#{@c74}/Jamoma/documentation/jamoma-templates/\"*                              \"#{@max}/patches/templates\"   `
   `cp \"#{@c74}/Jamoma/documentation/jamoma-overview.maxpat\"                          \"#{@max}/patches/extras\"      `
-  `mv \"#{@c74}/Jamoma/externals/jcom.loader.mxo\"                                     \"#{@c74}/extensions/\"         `
-  `mv \"#{@c74}/Jamoma/externals\"/*.maxhelp                                           \"#{@c74}/Jamoma/documentation/jamoma-help/\"         `
+  `mv \"#{@c74}/Jamoma/extensions\"/jcom.loader.mxo                                    \"#{@c74}/extensions\"    `
   `mv \"#{@c74}/Jamoma/support\"/*.maxdefaults                                         \"#{@c74}/default-settings\"    `
   `mv \"#{@c74}/Jamoma/support\"/*.maxdefines                                          \"#{@c74}/default-definitions\" `
-  `cp \"#{@path_graphics}/implementations/MaxMSP/jcom.label\"/*.maxdefines             \"#{@c74}/default-definitions\" `
   `mv \"#{@c74}/Jamoma/object-palettes\"/*                                             \"#{@c74}/object-palettes\"     `
+    
+  `rm -rfv \"#{@c74}/Jamoma/extensions\"`
   `rm -rfv \"#{@c74}/Jamoma/support\"`
+  `rm -rfv \"#{@c74}/Jamoma/object-palettes\"`  
 
   puts "  Copying readme, license, etc...."
   `cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"                                 \"#{@installers}/resources\"             `
   `cp \"#{@git_root}/Tools/installertools/ReadMe.rtf\"                                 \"#{@installers}/Jamoma\"                `
   `cp \"#{@git_root}/Tools/installertools/License.rtf\"                                \"#{@installers}/resources/License.rtf\" `
   `cp \"#{@git_root}/Tools/installertools/License.rtf\"                                \"#{@installers}/Jamoma/License.rtf\"    `
-  `cp \"#{@git_root}/Tools/installertools/Uninstall-for-Max5.command\"                          \"#{@installers}/Jamoma/Uninstall-for-Max5.command\"                 `
-  `cp \"#{@git_root}/Tools/installertools/Uninstall-for-Max6.command\"                          \"#{@installers}/Jamoma/Uninstall-for-Max6.command\"                 `
+  `cp \"#{@git_root}/Tools/installertools/Uninstall-for-Max5.command\"                 \"#{@installers}/Jamoma/Uninstall-for-Max5.command\" `
+  `cp \"#{@git_root}/Tools/installertools/Uninstall-for-Max6.command\"                 \"#{@installers}/Jamoma/Uninstall-for-Max6.command\" `
 #  if (configuration == "Max6")
 #    `mv #{@tempDistro}/Applications/Max5 #{@tempDistro}/Applications/Max6`
 #  end
@@ -469,10 +464,10 @@ else
   puts
   puts "  Copying Integration Test"  
   submodules = Dir.entries("#{@git_root}/Modules/")
-  `mkdir \"#{@installers}/installerTests\"`
+  `mkdir -pv \"#{@installers}/installerTests\"`
   submodules.each {|submodule| 
     if submodule[0] != '.' && File.directory?("#{glibdir}/#{submodule}/Tests/integration/MaxMSP")    
-      `mkdir \"#{@installers}/installerTests/#{submodule}\"`    
+      `mkdir -pv \"#{@installers}/installerTests/#{submodule}\"`    
       `cp -rpv \"#{glibdir}/#{submodule}/Tests/integration/MaxMSP/\"                \"#{@installers}/installerTests/#{submodule}\"`    
     end
   }
