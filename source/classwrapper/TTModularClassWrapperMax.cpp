@@ -529,10 +529,6 @@ void wrappedModularClass_dump(TTPtr self)
         atom_setsym(&a, gensym((char *) address.c_str()));
         object_obex_dumpout(self, gensym("address"), 1, &a);
     }
-    else
-    {   // subscriber obj. does not yet exist!
-		object_warn((t_object *) self, "dump: subscriber object does not yet exist");
-    }
 #endif
 	
     selectedObject->getAttributeNames(names);
@@ -1100,20 +1096,27 @@ void copy_msg_argc_argv(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTBoolean	copyMsg = false;
-	TTUInt32	i;
+    TTUInt32	i;
 	
 	if (msg != _sym_nothing && msg != _sym_int && msg != _sym_float && msg != _sym_symbol && msg != _sym_list)
 		copyMsg = true;
 	
 	x->msg = msg;
-	x->argc = argc;
-	if (copyMsg)
-		x->argc++;
-	
-	x->argv = NULL;
-	x->argv = (AtomPtr)sysmem_newptr(sizeof(t_atom) * x->argc);
-	
-	if (x->argc) {
+    
+    // prepare memory if needed
+    if (x->argv == NULL) {
+        x->argc = argc + copyMsg;
+        x->argv = (AtomPtr)sysmem_newptr(sizeof(t_atom) * x->argc);
+    }
+    // or resize memory if needed
+    else if (x->argc != argc + copyMsg) {
+        x->argc = argc + copyMsg;
+        x->argv = (AtomPtr)sysmem_resizeptr(&x->argv, sizeof(t_atom) * x->argc);
+    }
+    
+    // copy
+	if (x->argc && x->argv) {
+        
 		if (copyMsg) {
 			atom_setsym(&x->argv[0], msg);
 			for (i = 1; i < x->argc; i++)
