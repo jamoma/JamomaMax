@@ -221,6 +221,10 @@ void receive_subscribe(TTPtr self)
 		// a viewer on the contextAddress/model/address parameter
 		x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
 		contextAddress = v[0];
+        
+        // release the subscriber
+        TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
+        x->subscriberObject = NULL;
 		
 		if (x->patcherContext) {
             
@@ -247,6 +251,10 @@ void receive_subscribe(TTPtr self)
 	
 	// else, if no context, set address directly
 	else if (x->patcherContext == kTTSymEmpty) {
+        
+        // release the subscriber
+        TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
+        x->subscriberObject = NULL;
         
 		contextAddress = kTTAdrsRoot;
 		absoluteAddress = contextAddress.appendAddress(x->address);
