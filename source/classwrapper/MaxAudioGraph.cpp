@@ -143,7 +143,7 @@ TTErr MaxAudioGraphReset(ObjectPtr x, long vectorSize)
 TTErr MaxAudioGraphSetup(ObjectPtr x)
 {
 	WrappedInstancePtr self = (WrappedInstancePtr)x;
-	Atom		a[2];
+	t_atom		a[2];
 	TTUInt16	i=0;
 	
 	atom_setobj(a+0, ObjectPtr(self->audioGraphObject));
@@ -258,7 +258,7 @@ t_max_err MaxAudioGraphWrappedClass_attrGetNumChannels(WrappedInstancePtr self, 
 {
 	*argc = 1;
 	if (!(*argv)) // otherwise use memory passed in
-		*argv = (AtomPtr)sysmem_newptr(sizeof(Atom));
+		*argv = (AtomPtr)sysmem_newptr(sizeof(t_atom));
 	
 	atom_setlong(*argv, self->audioGraphObject->getOutputNumChannels(0));
 	return MAX_ERR_NONE;
@@ -304,7 +304,7 @@ void MaxAudioGraphWrappedClass_anything(WrappedInstancePtr self, SymbolPtr s, At
 			AtomCount	ac = v_out.getSize();
 
 			if (ac) {
-				AtomPtr		av = (AtomPtr)malloc(sizeof(Atom) * ac);
+				AtomPtr		av = (AtomPtr)malloc(sizeof(t_atom) * ac);
 				
 				for (AtomCount i=0; i<ac; i++) {
 					if (v_out.getType() == kTypeSymbol){
