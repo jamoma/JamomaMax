@@ -1037,7 +1037,7 @@ TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, Symbo
 	storedObject = TTValue(TTObjectBasePtr(*returnedReceiver));
 	x->internals->append(name, storedObject);
     
-     JamomaDebug object_post((ObjectPtr)x, "makes internal \"%s\" receiver to bind on : %s", name.c_str(), adrs.c_str());
+    JamomaDebug object_post((ObjectPtr)x, "makes internal \"%s\" receiver to bind on : %s", name.c_str(), adrs.c_str());
     
 	return kTTErrNone;
 }
