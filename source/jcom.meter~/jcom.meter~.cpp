@@ -15,8 +15,10 @@
 #include "ext_common.h"
 #include "jpatcher_api.h"	// jpatcher_api.h must come before z_dsp.h (in Jamoma.h)
 #include "jgraphics.h"
-#include "Jamoma.h"
-#include "TTDSP.h"
+//#include "Jamoma.h"
+//#include "z_dsp.h"
+//#include "TTDSP.h"
+#include "TTClassWrapperMax.h"
 
 
 // Constants
@@ -93,9 +95,9 @@ static t_class*	s_meter_class;
 #if 0
 #pragma mark -
 #pragma mark Class Definition
-#endif 0
+#endif // 0
 
-int JAMOMA_EXPORT_MAXOBJ main(void)
+int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	t_class *c = class_new("jcom.meter~", (method)meter_new, (method)meter_free, sizeof(t_meter), (method)NULL, A_GIMME, 0L);
 	
@@ -103,7 +105,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	jbox_initclass(c, 0);
 	class_dspinitjbox(c);
 
-	jamoma_init();
+//	jamoma_init();
 	common_symbols_init();
 	
 	class_addmethod(c, (method)meter_bang,		"bang",			0);
@@ -161,7 +163,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 #if 0
 #pragma mark -
 #pragma mark Life Cycle
-#endif 0
+#endif // 0
 
 void *meter_new(t_symbol *s, long argc, t_atom *argv)
 {
@@ -208,7 +210,6 @@ void *meter_new(t_symbol *s, long argc, t_atom *argv)
 
 void meter_free(t_meter *x)
 {	
-	notify_free((t_object *)x);
 	dsp_freejbox((t_pxjbox *)x);
 	jgraphics_surface_destroy(x->gradientSurface);
 	object_free((t_object *)x->clock);
@@ -219,7 +220,7 @@ void meter_free(t_meter *x)
 #if 0
 #pragma mark -
 #pragma mark Methods
-#endif 0
+#endif // 0
 
 t_max_err meter_notify(t_meter *x, t_symbol *s, t_symbol *msg, void *sender, void *data)
 {
@@ -309,7 +310,7 @@ void meter_clock(t_meter *x)
 #if 0
 #pragma mark -
 #pragma mark Signal Processing
-#endif 0
+#endif // 0
 
 t_int *meter_perform(t_int *w)
 {
@@ -372,7 +373,7 @@ void meter_dsp64(t_meter *x, t_object *dsp64, short *count, double samplerate, l
 #if 0
 #pragma mark -
 #pragma mark User Interface
-#endif 0
+#endif // 0
 
 void *meter_oksize(t_meter *x, t_rect *newrect)
 {

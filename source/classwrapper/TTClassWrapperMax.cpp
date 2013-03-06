@@ -284,7 +284,7 @@ void wrappedClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv
 			AtomCount	ac = v_out.getSize();
 
 			if (ac) {
-				AtomPtr		av = (AtomPtr)malloc(sizeof(Atom) * ac);
+				AtomPtr		av = (AtomPtr)malloc(sizeof(t_atom) * ac);
 				
 				for (AtomCount i=0; i<ac; i++) {
 					if (v_out.getType() == kTypeSymbol){
@@ -638,7 +638,7 @@ TTErr TTAtomsFromValue(const TTValue& v, AtomCount* ac, AtomPtr* av)
 		; // memory was passed-in from the calling function -- use it
 	else {
 		*ac = size;
-		*av = new Atom[size];// (t_atom*)sysmem_newptr(sizeof(t_atom) * size);
+		*av = new t_atom[size];// (t_atom*)sysmem_newptr(sizeof(t_atom) * size);
 	}
 
 	for (int i=0; i<size; i++) {

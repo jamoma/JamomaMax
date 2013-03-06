@@ -113,7 +113,7 @@ TTErr MaxGraphReset(ObjectPtr x)
 TTErr MaxGraphSetup(ObjectPtr x)
 {
 	WrappedInstancePtr	self = WrappedInstancePtr(x);
-	Atom				a[2];
+	t_atom				a[2];
 	TTUInt16			i=0;
 	
 	atom_setobj(a+0, ObjectPtr(self->graphObject));
@@ -264,7 +264,7 @@ void wrappedClass_anything(WrappedInstancePtr self, SymbolPtr s, AtomCount argc,
 			AtomCount	ac = v.getSize();
 
 			if (ac) {
-				AtomPtr		av = (AtomPtr)malloc(sizeof(Atom) * ac);
+				AtomPtr		av = (AtomPtr)malloc(sizeof(t_atom) * ac);
 				
 				for (AtomCount i=0; i<ac; i++) {
 					if (v.getType() == kTypeSymbol){
