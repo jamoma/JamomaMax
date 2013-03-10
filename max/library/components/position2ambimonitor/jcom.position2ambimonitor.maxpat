@@ -7,7 +7,7 @@
 			"revision" : 8
 		}
 ,
-		"rect" : [ 308.0, 44.0, 585.0, 599.0 ],
+		"rect" : [ 526.0, 51.0, 585.0, 599.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -120,7 +120,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 280.0, 160.0, 67.0, 19.0 ],
-					"text" : "sprintf /%s"
+					"text" : "sprintf %s"
 				}
 
 			}
