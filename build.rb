@@ -9,12 +9,12 @@
 ###################################################################
 
 # First include the functions in the jamoma lib
-glibdir = "../Modules"
+glibdir = "../"
 Dir.chdir glibdir             # change to libdir so that requires work
 glibdir = Dir.pwd
 
 $main_repository = true
-require "#{glibdir}/../Core/Shared/jamomalib"
+require "#{glibdir}/Core/Shared/jamomalib"
 
 
 ###################################################################
@@ -133,13 +133,13 @@ if(clean)
     end
   end
   
-  if (File.exists? "#{glibdir}/../Builds/MaxMSP")
+  if (File.exists? "#{glibdir}/Builds/MaxMSP")
     
     puts " "
     puts "  Cleaning Builds folder "
     puts " "
     
-    Dir.chdir "#{glibdir}/../Builds/MaxMSP"
+    Dir.chdir "#{glibdir}/Builds/MaxMSP"
   
     `rm -rf *.maxhelp`
   
@@ -156,8 +156,8 @@ if(clean)
       `rm -rf *.txt`
     end
   else
-    `mkdir -p "#{glibdir}/../Builds/MaxMSP"`
-    Dir.chdir "#{glibdir}/../Builds/MaxMSP"
+    `mkdir -p "#{glibdir}/Builds/MaxMSP"`
+    Dir.chdir "#{glibdir}/Builds/MaxMSP"
   end
 
 end
@@ -211,22 +211,17 @@ quietly do
   ARGV = [configuration, clean, compiler]
 end
 
-
-
-# Get a list of submodules that need to be built
-submodules = Dir.entries("#{glibdir}/../Modules")
-
 # Get a list of implementations that need to be built
-implementations = Dir.entries("#{glibdir}/../Implementations")
+implementations = Dir.entries("#{glibdir}/Implementations")
 
 # Build the essentials first, since the order in which they are built is important
-Dir.chdir "#{glibdir}/../Core"
+Dir.chdir "#{glibdir}/Core"
 load "build.rb"
 
 # Build everything in the 'Implementations' folder
 implementations.each {|implementation| 
-  if implementation[0] != '.' && File.exists?("#{glibdir}/../Implementations/#{implementation}/build.rb")
-    Dir.chdir "#{glibdir}/../Implementations/#{implementation}"
+  if implementation[0] != '.' && File.exists?("#{glibdir}/Implementations/#{implementation}/build.rb")
+    Dir.chdir "#{glibdir}/Implementations/#{implementation}"
     load "build.rb"
   end
 }
@@ -241,7 +236,7 @@ else
   puts
   puts "Installing Jamoma Ruby support -- this may require your password"
   puts "If you just press enter without entering your password, then the updated Jamoma Ruby support will not be installed for your use."
-  Dir.chdir "#{glibdir}/../Implementations/Ruby"
+  Dir.chdir "#{glibdir}/Implementations/Ruby"
   load "install.rb"
 end
 
@@ -250,10 +245,10 @@ if (runTests)
   puts
   puts "Running Unit Tests for all subprojects"
   puts
-  submodules = Dir.entries("#{glibdir}/../Core")
+  submodules = Dir.entries("#{glibdir}/Core")
   submodules.each {|submodule| 
-    if submodule[0] != '.' && File.exists?("#{glibdir}/../Core/#{submodule}/test.rb") && File.directory?("#{glibdir}/../Core/#{submodule}/Tests/unit")
-      Dir.chdir "#{glibdir}/../Core/#{submodule}"
+    if submodule[0] != '.' && File.exists?("#{glibdir}/Core/#{submodule}/test.rb") && File.directory?("#{glibdir}/Core/#{submodule}/Tests/unit")
+      Dir.chdir "#{glibdir}/Core/#{submodule}"
       load "test.rb"
     end
   }
@@ -266,7 +261,7 @@ if (postLog)
   puts "==================== SUMMARY ===================="
   puts "Combined Error log of all subprojects:"
   puts
-  Dir.chdir "#{glibdir}/../Core/Shared"
+  Dir.chdir "#{glibdir}/Core/Shared"
   puts `cat logs-*/error*`
 else
   puts "Not posting error logs"
