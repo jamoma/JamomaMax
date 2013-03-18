@@ -223,14 +223,6 @@ implementations = Dir.entries("#{glibdir}/../Implementations")
 Dir.chdir "#{glibdir}/../Core"
 load "build.rb"
 
-# Build everything in the 'Modules' folder
-submodules.each {|submodule| 
-  if submodule[0] != '.' && File.exists?("#{glibdir}/../Modules/#{submodule}/build.rb")
-    Dir.chdir "#{glibdir}/../Modules/#{submodule}"
-    load "build.rb"
-  end
-}
-
 # Build everything in the 'Implementations' folder
 implementations.each {|implementation| 
   if implementation[0] != '.' && File.exists?("#{glibdir}/../Implementations/#{implementation}/build.rb")
