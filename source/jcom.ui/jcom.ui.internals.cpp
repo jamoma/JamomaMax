@@ -184,12 +184,11 @@ void ui_data_interface(t_ui *x, TTSymbol name)
 {
 	char			filename[MAX_FILENAME_CHARS];
 	short			path;
-	long			type;
-	long			filetype = 'JSON';
+	t_fourcc		type, filetype = 'JSON';
 	t_dictionary*	d;
 	ObjectPtr		p;
 	TTAddress address;
-	Atom			a;
+	t_atom			a;
 	
 	strncpy_zero(filename, "jcom.reference_interface.maxpat", MAX_FILENAME_CHARS);
 	locatefile_extended(filename, &path, &type, &filetype, 1);

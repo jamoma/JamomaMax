@@ -824,7 +824,11 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 				objclass = object_attr_getsym(obj, _sym_maxclass);
 				if (objclass == gensym("jcom.remote")) {
 					
-					object_method(object_attr_getobj(obj, _sym_object), gensym("mousedown"), patcherview, px, modifiers);
+                    // we should not pass it a t_pt any longer.
+                    // instead we should pass two doubles (one for the x coordinate and one for the y coordinate)
+                    // so in jcom.remote : that function should change its prototype,
+                    // and then the arguments to object_method should change too object_method() is much more picky now
+                    //> object_method(object_attr_getobj(obj, _sym_object), gensym("mousedown"), patcherview, px, modifiers);
 					
 				}
 				obj = object_attr_getobj(obj, _sym_nextobject);
@@ -983,7 +987,11 @@ void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 		objclass = object_attr_getsym(obj, _sym_maxclass);
 		if (objclass == gensym("jcom.remote")) {
 			
-			object_method(object_attr_getobj(obj, _sym_object), gensym("mousemove"), patcherview, pt, modifiers);
+            // we should not pass it a t_pt any longer.
+            // instead we should pass two doubles (one for the x coordinate and one for the y coordinate)
+            // so in jcom.remote : that function should change its prototype,
+            // and then the arguments to object_method should change too object_method() is much more picky now
+			//> object_method(object_attr_getobj(obj, _sym_object), gensym("mousemove"), patcherview, pt, modifiers);
 
 		}
 		obj = object_attr_getobj(obj, _sym_nextobject);
@@ -1006,7 +1014,11 @@ void ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 		objclass = object_attr_getsym(obj, _sym_maxclass);
 		if (objclass == gensym("jcom.remote")) {
 			
-			object_method(object_attr_getobj(obj, _sym_object), gensym("mouseleave"), patcherview, pt, modifiers*x->hover); // * hover allows to return to a normal display
+			// we should not pass it a t_pt any longer.
+            // instead we should pass two doubles (one for the x coordinate and one for the y coordinate)
+            // so in jcom.remote : that function should change its prototype,
+            // and then the arguments to object_method should change too object_method() is much more picky now
+			//> object_method(object_attr_getobj(obj, _sym_object), gensym("mouseleave"), patcherview, pt, modifiers*x->hover); // * hover allows to return to a normal display
 			
 		}
 		obj = object_attr_getobj(obj, _sym_nextobject);

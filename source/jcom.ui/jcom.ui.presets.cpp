@@ -32,7 +32,7 @@ void ui_preset_doread(t_ui *x)
 	char 			fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
 	char			posixpath[MAX_PATH_CHARS];
 	short 			path;					// pathID#
-    long			filetype = 'TEXT', outtype;  // the file type that is actually true    
+    t_fourcc		filetype = 'TEXT', outtype;  // the file type that is actually true
 	
 	if (open_dialog(filename, &path, &outtype, &filetype, 1))		// Returns 0 if successful
 		return;														// User Cancelled
@@ -45,12 +45,12 @@ void ui_preset_doread(t_ui *x)
 
 void ui_preset_dowrite(t_ui *x)
 {
-	long 			type = 'TEXT';				// four-char code for Mac file type
+	t_fourcc 		type = 'TEXT';				// four-char code for Mac file type
 	char 			filename[MAX_FILENAME_CHARS];	// for storing the name of the file locally
 	char 			fullpath[MAX_PATH_CHARS];	// for storing the absolute path of the file
 	char			posixpath[MAX_PATH_CHARS];
 	short 			path, err;					// pathID#, error number
-	long			outtype;					// the file type that is actually true
+	t_fourcc		outtype;					// the file type that is actually true
 	t_filehandle	file_handle;				// a reference to our file (for opening it, closing it, etc.)
 	TTNodePtr		patcherNode;
 	ObjectPtr		modelPatcher = NULL;
@@ -110,11 +110,11 @@ void ui_preset_interface(t_ui *x)
 {
 	char			filename[MAX_FILENAME_CHARS];
 	short			path;
-	long			type;
-	long			filetype = 'JSON';
+	t_fourcc		type;
+	t_fourcc		filetype = 'JSON';
 	t_dictionary*	d;
 	ObjectPtr		p;
-	Atom			a;
+	t_atom			a;
 	
 	strncpy_zero(filename, "jcom.preset_interface.maxpat", MAX_FILENAME_CHARS);
 	locatefile_extended(filename, &path, &type, &filetype, 1);
