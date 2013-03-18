@@ -438,10 +438,10 @@ void preset_default(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	short		outvol;
-	long		outtype, filetype = 'TEXT';
+	t_fourcc	outtype, filetype = 'TEXT';
 	char 		fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
 	char		posixpath[MAX_PATH_CHARS];
-	Atom		a;
+	t_atom		a;
 	SymbolPtr	xmlfile;
 
 	if (x->patcherClass != kTTSymEmpty) {
