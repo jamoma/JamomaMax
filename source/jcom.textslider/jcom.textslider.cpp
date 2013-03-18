@@ -291,7 +291,6 @@ void *textslider_new(t_symbol *s, long argc, t_atom *argv)
 
 void textslider_free(t_textslider *x)
 {	
-	notify_free((t_object *)x);
 	jbox_free((t_jbox *)x);
 }
 
