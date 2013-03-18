@@ -5,11 +5,11 @@ sources:
     
 includes:
   - ../../../../Core/Foundation/library/includes
-  - ../../../../Modules/Modular/library/includes
-  - ../../../../Modules/Modular/library/PeerObject
-  - ../../../../Modules/Modular/library/ModularForMax
-  - ../../../../Modules/Modular/library/SchedulerLib
-  - ../../../../Modules/Modular/library/ProtocolLib
+  - ../../../../Core/Modular/library/includes
+  - ../../../../Core/Modular/library/PeerObject
+  - ../../../../Core/Modular/library/ModularForMax
+  - ../../../../Core/Modular/library/SchedulerLib
+  - ../../../../Core/Modular/library/ProtocolLib
   - ../../../../Core/DSP/library/includes
   - ../classwrapper
   - C74-INCLUDES
@@ -19,4 +19,4 @@ libraries:
   - MODULAR  
   - C74
   
-prefix: ../../../../../Core/Shared/max/c74support/max-includes/macho-prefix.pch
+prefix: ../c74support/max-includes/macho-prefix.pch

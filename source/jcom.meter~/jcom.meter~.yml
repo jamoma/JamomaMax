@@ -14,4 +14,4 @@ libraries:
   - DSP
   - C74
 
-prefix: ../../../../../Core/Shared/max/c74support/max-includes/macho-prefix.pch
+prefix: ../c74support/max-includes/macho-prefix.pch
