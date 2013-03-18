@@ -1,17 +1,10 @@
-/*
- *  obdictionary.h
- *
- *  Copyright 2006 Cycling '74. All rights reserved.
- *
- */
+// ext_dictionary.h -- copyright 2012 Cycling '74 -- All rights reserved
 
-#ifndef __OBDICTIONARY_H__
-#define __OBDICTIONARY_H__
+#ifndef __EXT_DICTIONARY_H__
+#define __EXT_DICTIONARY_H__
 
 
-#ifdef __cplusplus
-	extern "C" {
-#endif // __cplusplus
+BEGIN_USING_C_LINKAGE
 
 #if C74_PRAGMA_STRUCT_PACKPUSH
     #pragma pack(push, 2)
@@ -30,6 +23,7 @@ typedef struct _dictionary_entry {
 	t_object		e_obj;
 	t_symbol		*e_key;			// redundant with hashtab, but allows getting key during linklist traversal
 	t_atom			e_value; 
+	long			e_flags;
 } t_dictionary_entry; 
 
 
@@ -54,8 +48,8 @@ typedef struct _dictionary
 
 
 /**
-	Create a new linklist object.
-	You can free the linklist by calling object_free().  
+	Create a new dictionary object.
+	You can free the dictionary by calling object_free().  
 	However, you should keep in mind the guidelines provided in @ref when_to_free_a_dictionary.
 	
 	@ingroup dictionary
@@ -63,7 +57,7 @@ typedef struct _dictionary
 	
 	@see				object_free()
 */
-t_dictionary* dictionary_new();
+t_dictionary* dictionary_new(void);
 
 
 // private
@@ -81,7 +75,7 @@ t_dictionary* dictionary_prototypefromclass(t_class *c);
 	@param	value	The new value to append to the dictionary.
 	@return			A Max error code.
 */
-t_max_err dictionary_appendlong(t_dictionary *d, t_symbol *key, long value);
+t_max_err dictionary_appendlong(t_dictionary *d, t_symbol *key, t_atom_long value);
 
 
 /**
@@ -162,6 +156,9 @@ t_max_err dictionary_appendstring(t_dictionary *d, t_symbol *key, const char *va
 */
 t_max_err dictionary_appendatoms(t_dictionary *d, t_symbol *key, long argc, t_atom *argv); 
 
+// internal use only
+t_max_err dictionary_appendatoms_flags(t_dictionary *d, t_symbol *key, long argc, t_atom *argv, long flags); 
+
 
 /**
 	Add an @ref atomarray object to the dictionary.
@@ -228,7 +225,7 @@ t_max_err dictionary_appendbinbuf(t_dictionary *d, t_symbol *key, void *value);
 	@param	value	The address of variable to hold the value associated with the key.
 	@return			A Max error code.
 */
-t_max_err dictionary_getlong(t_dictionary *d, t_symbol *key, long *value);
+t_max_err dictionary_getlong(C74_CONST t_dictionary *d, t_symbol *key, t_atom_long *value);
 
 
 /**
@@ -240,7 +237,7 @@ t_max_err dictionary_getlong(t_dictionary *d, t_symbol *key, long *value);
 	@param	value	The address of variable to hold the value associated with the key.
 	@return			A Max error code.
 */
-t_max_err dictionary_getfloat(t_dictionary *d, t_symbol *key, double *value); 
+t_max_err dictionary_getfloat(C74_CONST t_dictionary *d, t_symbol *key, double *value); 
 
 
 /**
@@ -252,7 +249,7 @@ t_max_err dictionary_getfloat(t_dictionary *d, t_symbol *key, double *value);
 	@param	value	The address of variable to hold the value associated with the key.
 	@return			A Max error code.
 */
-t_max_err dictionary_getsym(t_dictionary *d, t_symbol *key, t_symbol **value); 
+t_max_err dictionary_getsym(C74_CONST t_dictionary *d, t_symbol *key, t_symbol **value); 
 
 
 /**
@@ -264,11 +261,11 @@ t_max_err dictionary_getsym(t_dictionary *d, t_symbol *key, t_symbol **value);
 	@param	value	The address of variable to hold the value associated with the key.
 	@return			A Max error code.
 */
-t_max_err dictionary_getatom(t_dictionary *d, t_symbol *key, t_atom *value); 
+t_max_err dictionary_getatom(C74_CONST t_dictionary *d, t_symbol *key, t_atom *value); 
 
 
 // private
-t_max_err dictionary_getattribute(t_dictionary *d, t_symbol *key, t_symbol *attrname, t_object *obj);	
+t_max_err dictionary_getattribute(const t_dictionary *d, t_symbol *key, t_symbol *attrname, t_object *obj);	
 
 
 /**
@@ -281,7 +278,7 @@ t_max_err dictionary_getattribute(t_dictionary *d, t_symbol *key, t_symbol *attr
 	@param	value	The address of variable to hold the value associated with the key.
 	@return			A Max error code.
 */
-t_max_err dictionary_getstring(t_dictionary *d, t_symbol *key, const char **value); 
+t_max_err dictionary_getstring(C74_CONST t_dictionary *d, t_symbol *key, const char **value); 
 
 
 /**
@@ -298,7 +295,7 @@ t_max_err dictionary_getstring(t_dictionary *d, t_symbol *key, const char **valu
 	
 	@see			dictionary_copyatoms()
 */
-t_max_err dictionary_getatoms(t_dictionary *d, t_symbol *key, long *argc, t_atom **argv);
+t_max_err dictionary_getatoms(C74_CONST t_dictionary *d, t_symbol *key, long *argc, t_atom **argv);
 
 
 /**
@@ -316,7 +313,7 @@ t_max_err dictionary_getatoms(t_dictionary *d, t_symbol *key, long *argc, t_atom
 	
 	@see			dictionary_getatoms()
 */
-t_max_err dictionary_copyatoms(t_dictionary *d, t_symbol *key, long *argc, t_atom **argv);
+t_max_err dictionary_copyatoms(C74_CONST t_dictionary *d, t_symbol *key, long *argc, t_atom **argv);
 
 
 /**
@@ -328,7 +325,7 @@ t_max_err dictionary_copyatoms(t_dictionary *d, t_symbol *key, long *argc, t_ato
 	@param	value	The address of variable to hold the value associated with the key.
 	@return			A Max error code.
 */
-t_max_err dictionary_getatomarray(t_dictionary *d, t_symbol *key, t_object **value); 
+t_max_err dictionary_getatomarray(C74_CONST t_dictionary *d, t_symbol *key, t_object **value); 
 
 
 /**
@@ -340,7 +337,23 @@ t_max_err dictionary_getatomarray(t_dictionary *d, t_symbol *key, t_object **val
 	@param	value	The address of variable to hold the value associated with the key.
 	@return			A Max error code.
 */
-t_max_err dictionary_getdictionary(t_dictionary *d, t_symbol *key, t_object **value); 
+t_max_err dictionary_getdictionary(C74_CONST t_dictionary *d, t_symbol *key, t_object **value); 
+
+/**
+	Retrieve the address of a #t_atom array of in the dictionary within nested dictionaries.
+	The address can index into nested dictionaries using the '::' operator.  For example, 
+	the key "field::subfield" will look for the value at key "field" and then look for the 
+	value "subfield" in the value found at "field".
+	
+	@ingroup		dictionary
+	@param	d		The dictionary instance.
+	@param	key		The key associated with the value to lookup.  
+	@param	ac		The number of return values
+	@param	av		The return values
+	@param	errstr	An error message if an error code was returned.
+	@return			A Max error code.
+*/
+t_max_err dictionary_get_ex(t_dictionary *d, t_symbol *key, long *ac, t_atom **av, char *errstr);
 
 
 /**
@@ -352,7 +365,7 @@ t_max_err dictionary_getdictionary(t_dictionary *d, t_symbol *key, t_object **va
 	@param	value	The address of variable to hold the value associated with the key.
 	@return			A Max error code.
 */
-t_max_err dictionary_getobject(t_dictionary *d, t_symbol *key, t_object **value); 
+t_max_err dictionary_getobject(C74_CONST t_dictionary *d, t_symbol *key, t_object **value); 
 
 
 /**
@@ -363,7 +376,7 @@ t_max_err dictionary_getobject(t_dictionary *d, t_symbol *key, t_object **value)
 	@param	key		The key associated with the value to test.  
 	@return			Returns true if the key contains a #t_string, otherwise returns false.
 */
-long dictionary_entryisstring(t_dictionary *d, t_symbol *key); 
+long dictionary_entryisstring(C74_CONST t_dictionary *d, t_symbol *key); 
 
 
 /**
@@ -374,7 +387,7 @@ long dictionary_entryisstring(t_dictionary *d, t_symbol *key);
 	@param	key		The key associated with the value to test.  
 	@return			Returns true if the key contains a #t_atomarray, otherwise returns false.
 */
-long dictionary_entryisatomarray(t_dictionary *d, t_symbol *key);
+long dictionary_entryisatomarray(C74_CONST t_dictionary *d, t_symbol *key);
 
 
 /**
@@ -385,7 +398,7 @@ long dictionary_entryisatomarray(t_dictionary *d, t_symbol *key);
 	@param	key		The key associated with the value to test.  
 	@return			Returns true if the key contains a #t_dictionary, otherwise returns false.
 */
-long dictionary_entryisdictionary(t_dictionary *d, t_symbol *key); 
+long dictionary_entryisdictionary(C74_CONST t_dictionary *d, t_symbol *key); 
 
 
 /**
@@ -396,7 +409,7 @@ long dictionary_entryisdictionary(t_dictionary *d, t_symbol *key);
 	@param	key		The key associated with the value to test.  
 	@return			Returns true if the key exists, otherwise returns false.
 */
-long dictionary_hasentry(t_dictionary *d, t_symbol *key); 
+long dictionary_hasentry(C74_CONST t_dictionary *d, t_symbol *key); 
 
 
 /**
@@ -406,7 +419,7 @@ long dictionary_hasentry(t_dictionary *d, t_symbol *key);
 	@param	d		The dictionary instance.
 	@return			The number of keys in the dictionary.
 */
-long dictionary_getentrycount(t_dictionary *d);
+t_atom_long dictionary_getentrycount(C74_CONST t_dictionary *d);
 
 
 /**
@@ -441,8 +454,8 @@ long dictionary_getentrycount(t_dictionary *d);
 	
 	@see 		dictionary_freekeys()
 */
-t_max_err dictionary_getkeys(t_dictionary *d, long *numkeys, t_symbol ***keys);
-t_max_err dictionary_getkeys_ordered(t_dictionary *d, long *numkeys, t_symbol ***keys);
+t_max_err dictionary_getkeys(C74_CONST t_dictionary *d, long *numkeys, t_symbol ***keys);
+t_max_err dictionary_getkeys_ordered(C74_CONST t_dictionary *d, long *numkeys, t_symbol ***keys);
 
 
 /**
@@ -505,6 +518,11 @@ t_max_err dictionary_chuckentry(t_dictionary *d, t_symbol *key);		// remove a va
 t_max_err dictionary_clear(t_dictionary *d);
 
 
+
+t_dictionary *dictionary_clone(t_dictionary *d);
+t_max_err dictionary_clone_to_existing(const t_dictionary *d, t_dictionary *dc);
+
+
 // funall will pass the t_dictionary_entry pointer to the fun
 // use the methods below to access the fields
 
@@ -560,7 +578,20 @@ t_symbol* dictionary_entry_getkey(t_dictionary_entry *x);
 	@see dictionary_entry_getkey()
 	@see dictionary_funall()
 */
-void dictionary_entry_getvalue(t_dictionary_entry *x, t_atom *value); 
+void dictionary_entry_getvalue(t_dictionary_entry *x, t_atom *value);
+
+/**
+	Given a #t_dictionary_entry*, return the values associated with that entry.
+
+	@ingroup		dictionary
+	@param	x		The dictionary entry.
+	@param	argc	The length of the returned #t_atom vector.
+	@param	argv	The address of a #t_atom vector to which the values will be copied.
+		
+	@see dictionary_entry_getkey()
+	@see dictionary_funall()
+*/
+void dictionary_entry_getvalues(t_dictionary_entry *x, long *argc, t_atom **argv); 
 
 
 
@@ -591,7 +622,7 @@ t_max_err dictionary_copyunique(t_dictionary *d, t_dictionary *copyfrom);
 	
 	@see			dictionary_getlong()
 */
-t_max_err dictionary_getdeflong(t_dictionary *d, t_symbol *key, long *value, long def);
+t_max_err dictionary_getdeflong(t_dictionary *d, t_symbol *key, t_atom_long *value, t_atom_long def);
 
 
 /**
@@ -849,8 +880,6 @@ t_object *newobject_sprintf(t_object *patcher, C74_CONST char *fmt, ...);
 t_object *newobject_fromdictionary(t_object *patcher, t_dictionary *d);
 
 
-#ifdef __cplusplus
-}
-#endif // __cplusplus
+END_USING_C_LINKAGE
 
-#endif //__OBDICTIONARY_H__
+#endif //__EXT_DICTIONARY_H__

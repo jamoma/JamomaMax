@@ -1,9 +1,9 @@
 #ifndef _EXT_SYSTHREAD_H_
 #define _EXT_SYSTHREAD_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+#include "ext_obex.h"
+
+BEGIN_USING_C_LINKAGE
 
 /** An opaque thread instance pointer. 
 	@ingroup threading
@@ -22,6 +22,7 @@ typedef void *t_systhread_mutex;
 */
 typedef void *t_systhread_cond;
 
+typedef void *t_systhread_rwlock;	
 
 /** systhread_mutex_new() flags
 	@ingroup threading
@@ -38,6 +39,11 @@ typedef enum {
 	SYSTHREAD_PRIORITY_MAX = 30
 } e_max_systhread_priority; 
 
+typedef enum {
+	SYSTHREAD_RWLOCK_NORMAL =		0x00000000,
+	SYSTHREAD_RWLOCK_LITE =			0x00000001
+} e_max_systhread_rwlock_flags; 
+	
 /**
  	Create a new thread.
 	@ingroup threading
@@ -215,7 +221,16 @@ long systhread_mutex_trylock(t_systhread_mutex pmutex);
 */
 long systhread_mutex_newlock(t_systhread_mutex *pmutex,long flags);
 
-
+t_max_err systhread_rwlock_new(t_systhread_rwlock *rwlock, long flags); 
+t_max_err systhread_rwlock_free(t_systhread_rwlock rwlock); 
+t_max_err systhread_rwlock_rdlock(t_systhread_rwlock rwlock); 
+t_max_err systhread_rwlock_tryrdlock(t_systhread_rwlock rwlock); 
+t_max_err systhread_rwlock_rdunlock(t_systhread_rwlock rwlock); 
+t_max_err systhread_rwlock_wrlock(t_systhread_rwlock rwlock); 
+t_max_err systhread_rwlock_trywrlock(t_systhread_rwlock rwlock); 
+t_max_err systhread_rwlock_wrunlock(t_systhread_rwlock rwlock); 
+t_max_err systhread_rwlock_setspintime(t_systhread_rwlock rwlock, double spintime_ms);
+t_max_err systhread_rwlock_getspintime(t_systhread_rwlock rwlock, double *spintime_ms);	
 
 long systhread_cond_new(t_systhread_cond *pcond, long flags);
 long systhread_cond_free(t_systhread_cond pcond);
@@ -223,10 +238,7 @@ long systhread_cond_wait(t_systhread_cond pcond, t_systhread_mutex pmutex);
 long systhread_cond_signal(t_systhread_cond pcond);
 long systhread_cond_broadcast(t_systhread_cond pcond);
 
-
-#ifdef __cplusplus
-}
-#endif
+END_USING_C_LINKAGE
 
 #endif // _EXT_SYSTHREAD_H_
 

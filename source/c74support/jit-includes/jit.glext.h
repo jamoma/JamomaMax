@@ -787,7 +787,9 @@ extern "C" {
 #endif
 
 #ifndef GL_ARB_shading_language_100
+#define GL_SHADING_LANGUAGE_VERSION   0x8B8C
 #define GL_SHADING_LANGUAGE_VERSION_ARB   0x8B8C
+#define GL_SHADING_LANGUAGE_VERSION		  0x8B8C
 #endif
 
 #ifndef GL_ARB_texture_non_power_of_two

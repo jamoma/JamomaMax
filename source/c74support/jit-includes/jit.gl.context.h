@@ -23,13 +23,34 @@ extern "C" {
 /****************************************************************************/
 
 #ifdef MAC_VERSION
-typedef AGLDrawable					t_jit_gl_native_drawable;	
-typedef AGLContext					t_jit_gl_native_context;
-typedef AGLPixelFormat				t_jit_gl_native_pixelformat;	
+#ifdef JIT_GL_AGL
+typedef WindowRef					t_jit_gl_native_window;
+typedef AGLDevice					t_jit_gl_native_device;			// Defines a reference to a list of graphics devices.
+typedef AGLDrawable					t_jit_gl_native_drawable;		// Defines an opaque data type that represents a Carbon window.
+typedef AGLContext					t_jit_gl_native_context;		// Represents a pointer to an opaque AGL context object
+typedef AGLPixelFormat				t_jit_gl_native_pixelformat;	// Represents a pointer to an opaque pixel format object.
+#endif
+#ifdef JIT_GL_NSGL
+typedef void*						t_jit_gl_native_window;			// NWWindow *
+typedef CGDirectDisplayID			t_jit_gl_native_device;			// Defines a reference to a list of graphics devices.
+typedef void*						t_jit_gl_native_drawable;		// NSView *
+typedef void*						t_jit_gl_native_context;		// NSOpenGLContext *
+typedef void*						t_jit_gl_native_pixelformat;	// NSOpenGLPixelFormat *
+#endif
 #endif
 
 #ifdef WIN_VERSION
-typedef HDC							t_jit_gl_native_drawable;	
+/*
+	Key object types:
+		
+		HDC - a handle to a device independent graphics context (screen, printer, memory, etc.).  HDC
+				conflates the AGLDevice and AGLDrawable concepts.
+
+		HGLRC - a handle to an opengl rendering context.  Equivalent to an AGLContext.
+*/
+typedef HWND						t_jit_gl_native_window;
+typedef HDC							t_jit_gl_native_device;
+typedef HDC							t_jit_gl_native_drawable;
 typedef HGLRC						t_jit_gl_native_context;	
 typedef GLint*						t_jit_gl_native_pixelformat;	
 
@@ -43,7 +64,7 @@ typedef struct _jit_gl_platform_data {
 typedef struct _jit_gl_context_struct
 {
 	t_jit_gl_native_context			context;
-	t_jit_gl_native_drawable		drawable;
+	t_jit_gl_native_device			device;
 	t_jit_gl_native_pixelformat 	pixelformat;	
 	t_jit_gl_extprocs				*procs;			// proc table for opengl extensions
 	t_jit_gl_support				*support;		// opengl feature support
@@ -67,13 +88,13 @@ typedef struct _jit_gl_context_info
 	t_jit_gl_pixelformat			*pixelformat;
 } t_jit_gl_context_info;
 
+
 /****************************************************************************/
 
 t_jit_gl_context jit_gl_create_context(void *target, t_jit_gl_context_info *info);
 GLboolean jit_gl_destroy_context(t_jit_gl_context ctx);
 GLboolean jit_gl_destroy_native_context(t_jit_gl_native_context native);
 GLboolean jit_gl_update_context(t_jit_gl_context ctx);
-GLboolean jit_gl_set_target(t_jit_gl_context ctx, void *target, long targettype);
 GLboolean jit_gl_set_context(t_jit_gl_context ctx);
 t_jit_gl_context jit_gl_get_context(void);
 t_jit_gl_support *jit_gl_get_support(void);
@@ -97,6 +118,7 @@ char jit_gl_is_extension_supported(t_jit_gl_context ctx, const char* ext);
 #define	JIT_GL_TARGET_MATRIX		0x00000001
 #define JIT_GL_TARGET_PWINDOW		0x00000002
 #define JIT_GL_TARGET_TEXTURE		0x00000003
+#define JIT_GL_TARGET_ROOT_SHARED	0x00000004
 
 /****************************************************************************/
 

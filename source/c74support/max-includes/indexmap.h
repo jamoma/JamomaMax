@@ -5,7 +5,7 @@
 
 BEGIN_USING_C_LINKAGE
 
-#ifndef _EXT_SYSTHREAD_H_
+#if !defined( _EXT_SYSTHREAD_H_ ) && !defined ( _SYSTHREAD_H_ )
 typedef void *t_systhread_mutex;
 #endif
 
@@ -41,7 +41,7 @@ typedef struct _indexmap
 
 
 // private -- initialize the indexmap class
-void indexmap_initclass();
+void indexmap_initclass(void);
 
 
 /** Create a new indexmap object.

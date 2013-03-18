@@ -140,5 +140,15 @@ JIT_EX_DATA t_symbol *_jit_sym_resolve_raw;                          ///< cached
 JIT_EX_DATA t_symbol *_jit_sym_notifyall;                            ///< cached #t_symbol @ingroup jitter
 JIT_EX_DATA t_symbol *_jit_sym_block;                                ///< cached #t_symbol @ingroup jitter
 JIT_EX_DATA t_symbol *_jit_sym_unblock;                              ///< cached #t_symbol @ingroup jitter
+JIT_EX_DATA t_symbol *_jit_sym_position;                             ///< cached #t_symbol @ingroup jitter
+JIT_EX_DATA t_symbol *_jit_sym_rotatexyz;                            ///< cached #t_symbol @ingroup jitter
+JIT_EX_DATA t_symbol *_jit_sym_scale;								 ///< cached #t_symbol @ingroup jitter
+JIT_EX_DATA t_symbol *_jit_sym_quat;								 ///< cached #t_symbol @ingroup jitter
+JIT_EX_DATA t_symbol *_jit_sym_direction;                            ///< cached #t_symbol @ingroup jitter
+JIT_EX_DATA t_symbol *_jit_sym_lookat;								 ///< cached #t_symbol @ingroup jitter
+JIT_EX_DATA t_symbol *_jit_sym_anim;								 ///< cached #t_symbol @ingroup jitter
+JIT_EX_DATA t_symbol *_jit_sym_bounds;								 ///< cached #t_symbol @ingroup jitter
+JIT_EX_DATA t_symbol *_jit_sym_boundcalc;							 ///< cached #t_symbol @ingroup jitter
+JIT_EX_DATA t_symbol *_jit_sym_calcbounds;							 ///< cached #t_symbol @ingroup jitter
 
 #endif // __JIT_SYMBOLS_H__

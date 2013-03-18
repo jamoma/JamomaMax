@@ -5,8 +5,6 @@
 #include <stdlib.h>		// for vec_malloc
 #endif
 
-#define SIXTEENIZE(p) ((((unsigned long)(p)) + 16) & 0xFFFFFFF0L);
-
 typedef union 
 {
 	float			flt[4];

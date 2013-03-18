@@ -38,6 +38,10 @@ extern "C" {
 #define JIT_OB3D_IS_RENDERER				1 << 13     ///< ob3d flag @ingroup jitter
 #define JIT_OB3D_NO_COLOR					1 << 14     ///< ob3d flag @ingroup jitter
 #define JIT_OB3D_IS_SLAB					1 << 15     ///< ob3d flag @ingroup jitter
+#define JIT_OB3D_NO_SHADER					1 << 16
+#define JIT_OB3D_PASS_THRU					1 << 17
+#define JIT_OB3D_IS_CAMERA					1 << 18
+#define JIT_OB3D_NO_BOUNDS					1 << 19
 
 /****************************************************************************/
 
@@ -58,14 +62,17 @@ void jit_ob3d_free(void *x);
 t_jit_err jit_ob3d_set_context(void *x);
 t_jit_err jit_ob3d_draw_chunk(void *ob3d, t_jit_glchunk * chunk);
 
-void max_ob3d_setup(void);
+void max_ob3d_setup(void);					// legacy api
+void max_jit_class_ob3d_wrap(t_class *c);	// newer api
 
 // attach jit object bearing an ob3d to a max object and its outlet.
 void max_jit_ob3d_attach(void *x, t_jit_object *jit_ob, void *outlet);
 void max_jit_ob3d_detach(void *x);
 t_jit_err max_jit_ob3d_assist(void *x, void *b, long m, long a, char *s);
+t_atom_long max_jit_ob3d_acceptsdrag(void *x, t_object *drag, t_object *view);
 
 void * ob3d_jitob_get(void *v);
+void * ob3d_patcher_get(void *v);
 void * ob3d_next_get(void *v);
 long ob3d_auto_get(void *v);
 long ob3d_enable_get(void *v);
@@ -76,7 +83,12 @@ void ob3d_dirty_set(void *v, long c);
 void ob3d_dest_dim_set(void *v, long width, long height);
 void ob3d_dest_dim_get(void *v, long *width, long *height);
 void ob3d_render_ptr_set(void *v, void *render_ptr);
-void *ob3d_render_ptr_get(void *v);
+void * ob3d_render_ptr_get(void *v);
+
+void * ob3d_get_light(void *v, long index);
+void ob3d_set_color(void *v, float *color);
+void ob3d_get_color(void *v, float *color);
+long ob3d_texture_count(void *v);
 
 t_jit_err ob3d_draw_begin(void *ob3d, long setup);
 t_jit_err ob3d_draw_end(void *ob3d, long setup);
@@ -85,6 +97,8 @@ void *jit_gl_current_ob3d_set(void * p);
 void *jit_gl_current_ob3d_get();
 void jit_gl_ob3d_set(void * p);
 void *jit_gl_ob3d_get();
+
+t_symbol * jit_ob3d_init_jpatcher_render(void *jitob);
 
 /****************************************************************************/
 

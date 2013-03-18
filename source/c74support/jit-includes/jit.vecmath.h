@@ -20,6 +20,8 @@
  *		// matrix -> array
  *		jit_mat4_to_array(m, a);
  *
+ * and jit_quat_to_axes and jit_quat_to_angleaxis
+ *
  */
  
 #include "jit.common.h"
@@ -54,9 +56,9 @@ extern "C" {
 #define JIT_VEC2_DOT(p1, p2)  ((p1)[0] * (p2)[0] + (p1)[1] * (p2)[1])
 
 #define JIT_VEC2_NORMALIZE(v) { \
-	double s = DBL_EPSILON; \
+	double s = JIT_MATH_F64_EPS; \
 	double m = (v)[0]*(v)[0] + (v)[1]*(v)[1]; \
-	if (m > DBL_EPSILON) \
+	if (m > JIT_MATH_F64_EPS) \
 	{ \
 		s = jit_math_sqrt(m); \
 		(v)[0] /= s; \
@@ -100,9 +102,9 @@ extern "C" {
 			   (c)[2] = (a)[0] * (b)[1] - (a)[1] * (b)[0]; }
 
 #define JIT_VEC3_NORMALIZE(v) { \
-	double s = DBL_EPSILON; \
+	double s = JIT_MATH_F64_EPS; \
 	double m = (v)[0]*(v)[0] + (v)[1]*(v)[1] + (v)[2]*(v)[2]; \
-	if (m > DBL_EPSILON) \
+	if (m > JIT_MATH_F64_EPS) \
 	{ \
 		s = jit_math_sqrt(m); \
 		(v)[0] /= s; \
@@ -195,6 +197,42 @@ typedef union _jit_mat4 {
 	
 } t_jit_mat4;
 
+typedef struct _jit_line {
+	t_jit_vec3	start;
+	t_jit_vec3	end;
+} t_jit_line;
+
+typedef struct _jit_ray {
+	t_jit_vec3	origin;
+	t_jit_vec3	direction;
+} t_jit_ray;
+
+typedef struct _jit_plane {
+	t_jit_vec3	origin;
+	t_jit_vec3	normal;
+	//float		distance;
+} t_jit_plane;
+
+typedef struct _jit_sphere {
+	t_jit_vec3	center;
+	float		radius;	
+} t_jit_sphere;
+
+typedef struct _jit_aabb {
+	t_jit_vec3	min;
+	t_jit_vec3	max;
+} t_jit_aabb;
+
+JIT_EX_DATA t_jit_vec3 vec3_zero;
+JIT_EX_DATA t_jit_vec3 vec3_identity;
+JIT_EX_DATA t_jit_vec3 vec3_unit_x;
+JIT_EX_DATA t_jit_vec3 vec3_unit_y;
+JIT_EX_DATA t_jit_vec3 vec3_unit_z;
+JIT_EX_DATA t_jit_vec3 vec3_neg_unit_x;
+JIT_EX_DATA t_jit_vec3 vec3_neg_unit_y;
+JIT_EX_DATA t_jit_vec3 vec3_neg_unit_z;
+
+t_jit_err jit_vecmath_init(void);
 
 // ----------------------------------------------------------------------------
 
@@ -233,6 +271,8 @@ void jit_vec3_to_array(t_jit_vec3 *u, float *xyz);
 void jit_vec3_to_coords(t_jit_vec3 *u, float *x, float *y, float *z);
 long jit_vec3_equal(t_jit_vec3 *u, t_jit_vec3 *v);
 long jit_vec3_not_equal(t_jit_vec3 *u, t_jit_vec3 *v);
+long jit_vec3_less(t_jit_vec3 *u, t_jit_vec3 *v);
+long jit_vec3_greater(t_jit_vec3 *u, t_jit_vec3 *v);
 void jit_vec3_mult( t_jit_vec3 *u,  t_jit_vec3 *a,  t_jit_vec3 *b);
 void jit_vec3_scale( t_jit_vec3 *u,  t_jit_vec3 *a, float s);
 void jit_vec3_accum_scale( t_jit_vec3 *u,  float s);
@@ -301,7 +341,11 @@ void jit_quat_scale( t_jit_quat *u,  t_jit_quat *a, float s);
 void jit_quat_accum_scale( t_jit_quat *u,  float s);
 void jit_quat_div( t_jit_quat *u,  t_jit_quat *a, float s);
 void jit_quat_add(t_jit_quat * r,  t_jit_quat * q1,  t_jit_quat * q2);
+void jit_quat_sub(t_jit_quat * r,  t_jit_quat * q1,  t_jit_quat * q2);
 void jit_quat_mult( t_jit_quat *r, t_jit_quat * p,  t_jit_quat * q);
+void jit_quat_inverse( t_jit_quat * r,  t_jit_quat * p);
+void jit_quat_log( t_jit_quat * r,  t_jit_quat * p);
+void jit_quat_exp( t_jit_quat * r,  t_jit_quat * p);
 float jit_quat_dot(t_jit_quat * q1,  t_jit_quat * q2);
 float jit_quat_get_coord( t_jit_quat *u, long i);
 float jit_quat_mag_sqr( t_jit_quat *u);
@@ -314,9 +358,20 @@ void jit_quat_from_mat3( t_jit_quat *q, t_jit_mat3 *m);
 void jit_mat3_from_quat(t_jit_mat3 *mat, t_jit_quat *q);
 void jit_quat_from_mat4(t_jit_quat * q,  t_jit_mat4 *m);
 void jit_quat_from_axisangle(t_jit_quat * q,  t_jit_vec3 *a,  float angle);
+void jit_quat_to_axisangle(t_jit_quat *q, t_jit_vec3 *a, float *angle);
+void jit_quat_from_xyz(t_jit_quat *q, float *xyz);
+void jit_quat_to_xyz(t_jit_quat *q, float *xyz);
+void jit_quat_mult_vec3(t_jit_vec3 *r, t_jit_quat *q, t_jit_vec3 *v);
+void jit_quat_from_axes(t_jit_quat *q, t_jit_vec3 *x, t_jit_vec3 *y, t_jit_vec3 *z);
+void jit_quat_to_axes(t_jit_quat *q, t_jit_vec3 *x, t_jit_vec3 *y, t_jit_vec3 *z);
+void jit_quat_shortest_arc(t_jit_quat *q, t_jit_vec3 *a, t_jit_vec3 *b);
 void jit_quat_conj(t_jit_quat * p);
 void jit_quat_get_conj(t_jit_quat * p,  t_jit_quat * q);
+void jit_quat_lerp(t_jit_quat *r, float s,  t_jit_quat * q1,  t_jit_quat * q2, long shortest);
 void jit_quat_slerp(t_jit_quat *r, float s,  t_jit_quat * q1,  t_jit_quat * q2);
+void jit_quat_slerp_shortest(t_jit_quat *r, float s,  t_jit_quat * q1,  t_jit_quat * q2);
+void jit_quat_squad(t_jit_quat *r, float s,  t_jit_quat * p,  t_jit_quat * a,
+	t_jit_quat * b,  t_jit_quat * q, int shortestpath);
 void jit_quat_trackball(t_jit_quat * q, t_jit_vec2 *p1, t_jit_vec2 *p2, float radius);
 long jit_quat_is_valid( t_jit_quat *v);
 
@@ -396,10 +451,12 @@ void jit_mat4_transpose(t_jit_mat4 *m);
 void jit_mat4_get_transpose(t_jit_mat4 *b,  t_jit_mat4 *a);
 void jit_mat4_get_inverse(t_jit_mat4 *b,  t_jit_mat4 *a);
 void jit_mat4_get_inverse_rot_trans(t_jit_mat4 *b,  t_jit_mat4 *a);
+void jit_mat4_identity(t_jit_mat4 *m);
 void jit_mat4_look_at(t_jit_mat4 *m,  t_jit_vec3 *eye,  t_jit_vec3 *center,  t_jit_vec3 *up);
 void jit_mat4_frustum(t_jit_mat4 *m, float left, float right, float bottom, float top, float near,  float far);
 void jit_mat4_perspective(t_jit_mat4 *m,  float fovy,  float aspect,  float near,  float far);
 void jit_mat4_ortho(t_jit_mat4 *m, float left, float right,	float bottom, float top, float near, float far);
+void jit_mat4_ortho_view(t_jit_mat4 *m, float lens_angle, float aspect, float n, float f);
 void jit_mat4_from_quat( t_jit_mat4 *m, t_jit_quat * q);
 void jit_mat4_from_axisangle( t_jit_mat4 *m,  t_jit_vec3 *v, float theta); 
 void jit_mat4_from_uv( t_jit_mat4 *m, t_jit_vec3 *u,  t_jit_vec3 *v);
@@ -417,6 +474,15 @@ float jit_tri_area( t_jit_vec3 *v1,  t_jit_vec3 *v2,  t_jit_vec3 *v3);
 float jit_tri_perimeter( t_jit_vec3 *v1,  t_jit_vec3 *v2,  t_jit_vec3 *v3);
 float jit_tri_find_in_circle(t_jit_vec3 *center,  t_jit_vec3 *v1,  t_jit_vec3 *v2,  t_jit_vec3 *v3);
 float jit_tri_find_circ_circle( t_jit_vec3 *center,  t_jit_vec3 *v1,  t_jit_vec3 *v2,  t_jit_vec3 *v3);
+
+// ----------------------------------------------------------------------------
+
+void jit_ray_get_point(t_jit_vec3 *p, t_jit_ray *ray, float t);
+long jit_ray_intersects_plane(float *d, t_jit_ray *ray, t_jit_plane *plane);
+long jit_ray_intersects_sphere(float *d, t_jit_ray *ray, t_jit_sphere *sphere, long discard_inside);
+long jit_ray_intersects_box(float *d, t_jit_ray *ray, t_jit_aabb *box);
+long jit_line_intersects_sphere(t_jit_vec3 *p1, t_jit_line *line, t_jit_sphere *sphere);
+void jit_line_closest_sphere(t_jit_vec3 *p1, t_jit_line *line, t_jit_sphere *sphere);
 
 // ----------------------------------------------------------------------------
 

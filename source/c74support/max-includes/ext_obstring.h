@@ -5,12 +5,10 @@
  *
  */
 
-#ifndef __OBSTRING_H__
-#define __OBSTRING_H__
+#ifndef _EXT_OBSTRING_H_
+#define _EXT_OBSTRING_H_
 
-#ifdef __cplusplus
-	extern "C" {
-#endif // __cplusplus
+BEGIN_USING_C_LINKAGE
 
 #if C74_PRAGMA_STRUCT_PACKPUSH
     #pragma pack(push, 2)
@@ -28,7 +26,8 @@
 typedef struct _string
 {
 	t_object		s_obj;
-	char			*s_text; 
+	char			*s_text;
+	long			s_size;		// number of bytes allocated
 } t_string;  
 
 #if C74_PRAGMA_STRUCT_PACKPUSH
@@ -48,19 +47,46 @@ t_string* string_new(const char *psz);
 
 
 /**
-	Create a new string object.
+	Fetch a pointer to a string object's internal C-string.
 	@ingroup string
 	@param	x		The string object instance.
 	@return			A pointer to the internally maintained C-string.
 */
 const char* string_getptr(t_string *x);
 
+		
+/**
+	Reserve additional memory for future string growth.
+	@ingroup string
+	@param	x			The string object instance.
+	@param	numbytes	The total number of bytes to allocate for this string object.
+ */
+void string_reserve(t_string *x, long numbytes);
+
+
+/**
+	Append a C-string onto the existing string maintained by a #t_string object.
+	Memory allocation for the string will grow as needed to hold the concatenated string.
+ 
+	@ingroup string
+	@param	x			The string object instance.
+	@param	s			A string to append/concatenate with the existing string.
+ */
+void string_append(t_string *x, const char *s);
+
+		
+/**
+	Shorten a string by eliminating N characters from the end.
+ 
+	@ingroup string
+	@param	x			The string object instance.
+	@param	numchars	The number of characters to chop from the end of the string.
+ */
+void string_chop(t_string *x, long numchars);
+
 
 // TODO: This object has a number of additional methods exposed via Max's messaging interface
 
+END_USING_C_LINKAGE
 
-#ifdef __cplusplus
-}
-#endif // __cplusplus
-
-#endif //__OBSTRING_H__
+#endif //#ifndef _EXT_OBSTRING_H_

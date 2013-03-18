@@ -19,6 +19,7 @@ struct t_jfont;
 struct t_jtextlayout;
 struct t_jtransform;
 struct t_jsurface;
+struct t_jdesktopui; 
 struct t_jpopupmenu; 
 struct t_jsvg; 
 #else 
@@ -29,8 +30,9 @@ typedef struct _jfont		t_jfont;		///< An instance of a jgraphics font.				@ingro
 typedef struct _jtextlayout	t_jtextlayout;	///< An instance of a jgraphics text layout object.	@ingroup jgraphics
 typedef struct _jtransform	t_jtransform;	///< An instance of a jgraphics transform.			@ingroup jgraphics
 typedef struct _jsurface	t_jsurface; 	///< An instance of a jgraphics surface.			@ingroup jsurface
-typedef struct _jsvg		t_jsvg; 		///< An instance of an SVG object.					@ingroup jgraphics
+typedef struct _jdesktopui	t_jdesktopui;	///< An instance of a transparent UI window on the desktop		@ingroup jgraphics
 typedef struct _jpopupmenu	t_jpopupmenu;	///< An instance of a pop-up menu.					@ingroup jgraphics
+typedef struct _jsvg		t_jsvg; 		///< An instance of an SVG object.					@ingroup jgraphics
 #endif
 
 
@@ -70,6 +72,26 @@ extern t_jrgb s_jrgb_boxgray;	// Box Gray
 /** Utility macro to return the 270º Case.				@ingroup jgraphics */
 #define JGRAPHICS_3PIOVER2	((3.0 * JGRAPHICS_PI) / 2.0)
 
+
+typedef enum _jgraphics_line_join {
+	JGRAPHICS_LINE_JOIN_MITER,
+	JGRAPHICS_LINE_JOIN_ROUND,
+	JGRAPHICS_LINE_JOIN_BEVEL
+} t_jgraphics_line_join;
+
+typedef enum _jgraphics_line_cap {
+	JGRAPHICS_LINE_CAP_BUTT,
+	JGRAPHICS_LINE_CAP_ROUND,
+	JGRAPHICS_LINE_CAP_SQUARE
+} t_jgraphics_line_cap;
+
+typedef enum _jgraphics_bubble_side {
+	JGRAPHICS_BUBBLE_SIDE_TOP,
+	JGRAPHICS_BUBBLE_SIDE_LEFT,
+	JGRAPHICS_BUBBLE_SIDE_BOTTOM,
+	JGRAPHICS_BUBBLE_SIDE_RIGHT
+} t_jgraphics_bubble_side;
+	
 /** Utility for rounding a double to an int.
 	@ingroup jgraphics 
 	@param	d	floating-point input.
@@ -452,9 +474,20 @@ void		jgraphics_new_path(t_jgraphics *g);
 
 /**	Get a copy of the current path from a context. 
 	@ingroup	jgraphics
-	@param	g	A copy of the current path.	*/
+	@param g	the graphics context containing the current path
+	@return		A copy of the current path.	
+ */
 t_jpath*	jgraphics_copy_path(t_jgraphics *g);
 
+/** Create a new path consisting of the original path stroked with a given thickness
+	@ingroup			jgraphics
+	@param p			the path to be stroked
+	@param thickness	thickness of the stroke
+	@param join			the style to join segments together at corners
+	@param cap			the style of end cap to use 
+	@return				the new path, which must be freed with jgraphics_path_destroy() when done
+ */
+t_jpath*	jgraphics_path_createstroked(t_jpath *p, double thickness, t_jgraphics_line_join join, t_jgraphics_line_cap cap); 
 
 /**	Release/free a path. 
 	@ingroup		jgraphics
@@ -483,6 +516,49 @@ void		jgraphics_close_path(t_jgraphics *g);
 	@param	cornerRadius	The amount by which to round corners.	*/
 void		jgraphics_path_roundcorners(t_jgraphics *g, double cornerRadius);
 
+/** Test if the path contains the point x,y.
+	@ingroup				jgraphics
+	@param path				the path
+	@param x				the x-coordinate of the point to test
+	@param y				the y-coordinate of the point to test     */
+long		jgraphics_path_contains(t_jpath *path, double x, double y); 
+
+/** Test if the path intersects the line defined by x1,y1 and x2,y2.
+	@ingroup				jgraphics
+	@param path				the path
+	@param x1				the x-coordinate of the first point on the line
+	@param y1				the y-coordinate of the first point on the line     
+	@param x2				the x-coordinate of the second point on the line
+	@param y2				the y-coordinate of the second point on the line     
+ */
+long		jgraphics_path_intersectsline(t_jpath *path, double x1, double y1, double x2, double y2); 
+
+/** Return the length of a path
+	@ingroup				jgraphics
+	@param path				the path
+	@return					the length of the path
+ */
+double		jgraphics_path_getlength(t_jpath *path); 
+
+/** Return a point that lies a given distance from the start of the path
+	@ingroup					jgraphics
+	@param path					the path
+	@param distancefromstart	distance from the start point
+	@param x					pointer to double to receive the x position of the point
+	@param y					pointer to double to receive the y position of the point
+ */
+void		jgraphics_path_getpointalongpath(t_jpath *path, double distancefromstart, double *x, double *y); 
+
+/** Finds the point on the path that is nearest to the point x,y passed in
+	@ingroup					jgraphics
+	@param path					the path to search
+	@param x					x position of the target point
+	@param y					y position of the target point 
+	@param path_x				pointer to double to receive the x position of closest point on path
+	@param path_y				pointer to double to receive the y position of the closest point on path 
+	@return						returns the distance along the path from the path start position to the found point on the path 
+*/
+double		jgraphics_path_getnearestpoint(t_jpath *path, double x, double y, double *path_x, double *path_y);
 
 /**	Get the current location of the cursor in a graphics context.
 	@ingroup	jgraphics
@@ -653,6 +729,26 @@ void		jgraphics_ellipse(t_jgraphics *g,
 							  double x, double y, 
 							  double width, double height);
 
+/** Add a closed bubble path in the context.
+ @ingroup		jgraphics
+ @param	g		The graphics context.
+ @param	bodyx	Horizontal body origin.
+ @param	bodyy	The vertical origin.
+ @param	bodywidth	The width of the rect.
+ @param	bodyheight	The height of the rect.
+ @param cornersize	Body rounded corners
+ @param arrowtipx	X position of arrow tip
+ @param arrowtipy	Y position of arrow tip
+ @param whichside	side to connect arrow, 0 = top, 1 = left, 2 = bottom, 3 = right, 
+ @param arrowedgeprop	Arrow proportion along edge (0-1) 
+ @param arrowwidth	Arrow base width
+*/
+void		jgraphics_bubble(t_jgraphics *g, 
+							  double bodyx, double bodyy, 
+							  double bodywidth, double bodyheight,
+							  double cornersize, double arrowtipx, double arrowtipy, 
+							  t_jgraphics_bubble_side whichside, double arrowedgeprop, double arrowwidth);
+
 
 // Internal use only
 void jgraphics_diagonal_line_fill(t_jgraphics *g, double pixels, double x, double y, double width, double height);
@@ -716,6 +812,12 @@ void		jgraphics_set_underline(t_jgraphics *g, char underline);
 	@param	utf8		The text to display.	*/
 void		jgraphics_show_text(t_jgraphics *g, const char *utf8); 
 
+/**	Add a path of text to the current path.
+ @ingroup			jgraphics
+ @param	g			The graphics context.
+ @param	utf8		The text to generate path for.	*/
+void		jgraphics_text_path(t_jgraphics *g, const char *utf8); 
+
 
 /**	A structure for holding information related to how much space the rendering of a given font will use.
 	The units for these measurements is in pixels.
@@ -758,7 +860,7 @@ void jgraphics_text_measure(t_jgraphics *g, const char *utf8, double *width, dou
 	@param	height				The address of a variable to be filled with the height of the rendered text.
 	@param	numlines			The address of a variable to be filled with the number of lines required to render the text.
 */
-void jgraphics_text_measure_wrapped(t_jgraphics *g, const char *utf8, double wrapwidth, long includewhitespace,
+void jgraphics_text_measuretext_wrapped(t_jgraphics *g, const char *utf8, double wrapwidth, long includewhitespace,
 									double *width, double *height, long *numlines); 
 
 
@@ -798,6 +900,13 @@ t_jfont*	jfont_reference(t_jfont *font);
 	@param	font	The font object to release.		*/
 void		jfont_destroy(t_jfont *font); 
 
+
+/** Compare two fonts to see if they are equivalent.
+	@ingroup jfont
+	@param font		The first font object that is being compared.
+	@param other	The second font object that is being compared.
+	@return			Nonzero value if the two fonts are equivalent.   */
+long		jfont_isequalto(t_jfont *font, t_jfont *other);
 
 /** Set the size of a font object.
 	@ingroup		jfont
@@ -842,8 +951,16 @@ void		jfont_text_measure(t_jfont *font, const char *utf8, double *width, double 
 	@param	width				The address of a variable to hold the width upon return.
 	@param	height				The address of a variable to hold the height upon return.
 	@param	numlines			The address of a variable to hold the number of lines of text after wrapping upon return.	*/
-void		jfont_text_measure_wrapped(t_jfont *font, const char *utf8, double wrapwidth, long includewhitespace,
+void		jfont_text_measuretext_wrapped(t_jfont *font, const char *utf8, double wrapwidth, long includewhitespace,
 									   double *width, double *height, long *numlines);
+
+/** Given a font, find out the width and height of the 'M' character. 
+    This is equivalent to jfont_text_measure(font, "M", width, height) but is faster.
+	@ingroup					jfont
+	@param	font				The font object.
+	@param	width	The address of a variable to hold the width upon return.
+	@param	height	The address of a variable to hold the height upon return.	*/
+void		jfont_get_em_dimensions(t_jfont *font, double *width, double *height); 
 
 /**	Get a list of font names.
 	@ingroup		jfont
@@ -854,6 +971,9 @@ void		jfont_text_measure_wrapped(t_jfont *font, const char *utf8, double wrapwid
 	@return			A Max error code.	*/
 t_max_err	jfont_getfontlist(long *count, t_symbol ***list);
 
+long jfont_isfixedwidth(const char *name); 
+
+const char *jfont_get_default_fixedwidth_name(void);
 
 // Internal Use Only -- not exported
 void		jfont_set_juce_default_fontname(char *s);
@@ -957,7 +1077,7 @@ void	  jtextlayout_settextcolor(t_jtextlayout *textlayout, t_jrgba *textcolor);
 	@param	width				Returns the width of text not including any margins.
 	@param	height				Returns the height of text not including any margins.
 	@param	numlines			Returns the number of lines of text.	*/
-void	  jtextlayout_measure(t_jtextlayout *textlayout, 
+void	  jtextlayout_measuretext(t_jtextlayout *textlayout, 
 		  					long startindex,					
 		  					long numchars,						
 		  					long includewhitespace,
@@ -1157,7 +1277,14 @@ void jgraphics_pattern_set_extend(t_jpattern *pattern, t_jgraphics_extend extend
 t_jgraphics_extend jgraphics_pattern_get_extend(t_jpattern *pattern); 
 
 void jgraphics_pattern_set_matrix(t_jpattern *pattern, const t_jmatrix *matrix); 
-void jgraphics_pattern_get_matrix(t_jpattern *pattern, t_jmatrix *matrix); 
+void jgraphics_pattern_get_matrix(t_jpattern *pattern, t_jmatrix *matrix);
+// pattern matrix convenience functions
+void jgraphics_pattern_translate(t_jpattern *pattern, double tx, double ty);
+void jgraphics_pattern_scale(t_jpattern *pattern, double sx, double sy);
+void jgraphics_pattern_rotate(t_jpattern *pattern, double angle);
+void jgraphics_pattern_transform(t_jpattern *pattern, const t_jmatrix *matrix);
+void jgraphics_pattern_identity_matrix(t_jpattern *pattern);
+t_jsurface *jgraphics_pattern_get_surface(t_jpattern *pattern);
 
 // Transforms
 void		jgraphics_translate(t_jgraphics *g, double tx, double ty);
@@ -1265,23 +1392,8 @@ typedef enum _jgraphics_fill_rule {
 void					jgraphics_set_fill_rule(t_jgraphics *g, t_jgraphics_fill_rule fill_rule);
 t_jgraphics_fill_rule	jgraphics_get_fill_rule(t_jgraphics *g);
 
-
-typedef enum _jgraphics_line_cap {
-	JGRAPHICS_LINE_CAP_BUTT,
-	JGRAPHICS_LINE_CAP_ROUND,
-	JGRAPHICS_LINE_CAP_SQUARE
-} t_jgraphics_line_cap;
-
 void					jgraphics_set_line_cap(t_jgraphics *g, t_jgraphics_line_cap line_cap);
 t_jgraphics_line_cap	jgraphics_get_line_cap(t_jgraphics *g);
-
-
-typedef enum _jgraphics_line_join {
-	JGRAPHICS_LINE_JOIN_MITER,
-	JGRAPHICS_LINE_JOIN_ROUND,
-	JGRAPHICS_LINE_JOIN_BEVEL
-} t_jgraphics_line_join;
-
 
 void		jgraphics_set_line_join(t_jgraphics *g,
 									t_jgraphics_line_join line_join);
@@ -1296,7 +1408,8 @@ double		jgraphics_get_line_width(t_jgraphics *g);
 
 void		jgraphics_fill(t_jgraphics *g);
 void		jgraphics_fill_preserve(t_jgraphics *g); 
-
+void		jgraphics_fill_with_alpha(t_jgraphics *g, double alpha);
+void		jgraphics_fill_preserve_with_alpha(t_jgraphics *g, double alpha);
 // Note: you can use jgraphics_image_surface_create with a 1x1 offscreen to do path stuff 
 //       that isn't actually going to be used for drawing.  
 int jgraphics_in_fill(t_jgraphics *g, double x, double y);		// hit test
@@ -1333,14 +1446,36 @@ void		jgraphics_paint_with_alpha(t_jgraphics *g,
 
 void		jgraphics_stroke(t_jgraphics *g);
 void		jgraphics_stroke_preserve(t_jgraphics *g);
+void		jgraphics_stroke_with_alpha(t_jgraphics *g, double alpha);
+void		jgraphics_stroke_preserve_with_alpha(t_jgraphics *g, double alpha);
 
 // fast non antialiasing/rotating versions
 void jgraphics_rectangle_fill_fast(t_jgraphics *g, double x, double y, double width, double height);
 void jgraphics_rectangle_draw_fast(t_jgraphics *g, double x, double y, double width, double height, double border);
 void jgraphics_line_draw_fast(t_jgraphics *g, double x1, double y1, double x2, double y2, double linewidth);
 
+// desktopui API: so externals can create transparent popup windows, draw to them, and receive mouse events
 
+typedef enum _jdesktopui_flags {
+	JDESKTOPUI_FLAGS_FIRSTFLAG = 1				// no flags defined yet, but this is a placeholder
+} t_jdesktopui_flags;
 
+t_jdesktopui* jdesktopui_new(t_object *owner, t_jdesktopui_flags flags, t_rect rect); 
+void jdesktopui_destroy(t_jdesktopui *x); 
+void jdesktopui_setvisible(t_jdesktopui *x, long way); 
+void jdesktopui_setalwaysontop(t_jdesktopui *x, long way); 
+void jdesktopui_setrect(t_jdesktopui *x, t_rect rect); 
+void jdesktopui_getrect(t_jdesktopui *x, t_rect *rect); 
+void jdesktopui_setposition(t_jdesktopui *x, t_pt pt); 
+void jdesktopui_setfadetimes(t_jdesktopui *x, int fade_in_ms, int fade_out_ms); 
+t_jgraphics* jdesktopui_get_jgraphics(t_jdesktopui *x); 
+void jdesktopui_redraw(t_jdesktopui *x); 
+void jdesktopui_redrawrect(t_jdesktopui *x, t_rect rect); 
+double jdesktopui_getopacity(t_jdesktopui *x);
+void *jdesktopui_createtimer(t_jdesktopui *x, t_symbol *msg, void *arg);
+void jdesktopui_starttimer(void *ref, int interval);
+void jdesktopui_stoptimer(void *ref, int alsodelete);
+void jdesktopui_destroytimer(void *ref);
 
 // popup menu API so externals can create popup menus that can also be drawn into
 
@@ -1462,6 +1597,29 @@ int				jpopupmenu_popup_nearbox(t_jpopupmenu *menu,
 										 int defitemid); 
 
 
+/**	Tell a menu to display below a given rectangle in a patcher.
+ @ingroup			jpopupmenu
+ @param	menu		The pop-up menu to display.
+ @param	rect		The rectangle below which to display the menu.
+ @param	defitemid	The initially choosen item id.
+ @return				The item id for the item in the menu choosen by the user.	*/
+int				jpopupmenu_popup_belowrect(t_jpopupmenu *menu, t_rect rect, int defitemid);
+
+int				jpopupmenu_popup_leftofpt(t_jpopupmenu *menu, t_pt pt, int defitemid, int flags);
+
+void jpopupmenu_estimatesize(t_jpopupmenu *menu, int *width, int *height);
+void *jpopupmenu_getjucemenu(t_jpopupmenu *menu);
+void jpopupmenu_setitemtooltip(void *itemref, char *tip);
+
+enum {
+	JPOPUPMENU_DARKSTYLE = 1
+};
+
+void jpopupmenu_setstandardstyle(t_jpopupmenu *menu, long styleindex, double fontsize, int margin);
+
+void jpopupmenu_setstandardstyle_forjucemenu(void *jpm, long styleindex, double fontsize, t_jrgba *headertextcolor);
+
+
 /** Tell any open popup menus to go away. 
 */
 void jpopupmenu_closeall(); 
@@ -1489,8 +1647,6 @@ long jbox_get_font_slant(t_object *b);
 
 // create a jfont object for box -- internal use only
 t_jfont *jbox_createfont(t_object *b);
-
-
 
 
 // utility funtions and macros for new rgba attribtes and legacy rgb attributes
@@ -1613,7 +1769,7 @@ long jrgba_compare(t_jrgba *rgba1, t_jrgba *rgba2);
 	@remark This example shows a common usage of jgraphics_getfiletypes().
 	@code
 	char       filename[MAX_PATH_CHARS];
-	long       *type = NULL;
+	t_fourcc   *type = NULL;
 	long       ntype;
 	long       outtype;
 	t_max_err  err;
@@ -1639,7 +1795,7 @@ out:
 		sysmem_freeptr((char *)type);
 	@endcode
 */
-void jgraphics_getfiletypes(void *dummy, long *count, long **filetypes, char *alloc);
+void jgraphics_getfiletypes(void *dummy, long *count, t_fourcc **filetypes, char *alloc);
 
 
 // boxlayer stuff

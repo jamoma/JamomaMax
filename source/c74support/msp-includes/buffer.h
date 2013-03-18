@@ -1,8 +1,11 @@
 #ifndef _BUFFER_H_
 #define _BUFFER_H_
 
+#include "ext_obex.h"
+#include "ext_systhread.h"
 #include "ext_critical.h"
 #include "ext_atomic.h"
+#include "ext_buffer.h"
 
 #if C74_PRAGMA_STRUCT_PACKPUSH
     #pragma pack(push, 2)
@@ -27,9 +30,10 @@ enum {
 
 
 /**	Data structure for the buffer~ object.
-	@ingroup buffers
+	Deprectated.
+	Use #t_buffer_ref and #t_buffer_obj instead.
 */
-typedef struct _buffer
+struct _buffer
 {
 	t_object b_obj;		///< doesn't have any signals so it doesn't need to be pxobject
 	long b_valid;		///< flag is off during read replacement or editing operation
@@ -57,7 +61,8 @@ typedef struct _buffer
 	double b_pixperfr;
 	double b_frperpix;
 	long b_imagesize;
-	Point b_scroll;
+	short b_unusedshort1;		// was Point b_scroll
+	short b_unusedshort2;		// could chop if struct compatibility wasn't important
 	long b_scrollscale;
 	long b_selbegin[MAXCHAN];
 	long b_selend[MAXCHAN];
@@ -71,13 +76,29 @@ typedef struct _buffer
 	long b_outputbytes;		///< number of bytes used for output sample (1-4)
 	long b_modtime;			///< last modified time ("dirty" method)
 	struct _buffer *b_peer;	///< objects that share this symbol (used as a link in the peers)
-	Boolean b_owner;		///< b_memory/b_samples "owned" by this object
+	t_bool b_owner;		///< b_memory/b_samples "owned" by this object
 	long b_outputfmt;		///< sample type (A_LONG, A_FLOAT, etc.)
 	t_int32_atomic b_inuse;	///< objects that use buffer should ATOMIC_INCREMENT / ATOMIC_DECREMENT this in their perform
 	void *b_dspchain;		///< dspchain used for this instance
-} t_buffer;
+	long b_padding;			///< amount of padding (number of samples) in b_memory before b_samples starts
+	long b_paddingchanged;	///< flag indicating that b_padding has changed and needs to be allocated
+	t_object *b_jsoundfile;	///< internal instance for reading/writing FLAC format
+	t_systhread_mutex b_mutex; ///< mutex to use when locking and performing operations anywhere except perform method
+	long b_wasvalid;		///< internal flag used by replacement or editing operation
+};
+
+// Direct access to a t_buffer struct is deprecated and will no longer be supported in the future.
+// Instead, use t_buffer_ref and t_buffer_obj as defined in the 'ext_buffer.h' header file.
+
+#ifdef C74_BUFFER_INTERNAL
+typedef struct _buffer t_buffer;
+#else
+C74_DEPRECATED( typedef struct _buffer t_buffer );
+#endif // C74_BUFFER_INTERNAL
+
 
 #define BUFWIND(x) ((t_wind *)(x->b_wind))
+
 
 #if C74_PRAGMA_STRUCT_PACKPUSH
     #pragma pack(pop)

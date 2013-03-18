@@ -28,8 +28,7 @@ extern "C" {
 
 /****************************************************************************/
 
-typedef struct _jit_gl_support
-{
+typedef struct _jit_gl_support {
 	long				initialized;				// flag for support initialization
 	long				color_buffer_float;			// flag if float pixels are supported for creating a color buffer pixelformat
 	long				color_float_pixels;			// flag if float pixels are enabled in current context
@@ -51,6 +50,7 @@ typedef struct _jit_gl_support
 	long				multisample_samples;		// number of samples available in multisampling mode
 	long				light_count;				// number of lights available
 	long				texture_units;				// number of texture units available
+	long				texture_image_units;		// number of texture image units available	
 	long				texture_max_size;			// maximum texture width or height
 	long				texture_3d;					// flag for 3d texture support
 	long				texture_cubemap;			// flag for cubemap support
@@ -80,6 +80,7 @@ typedef struct _jit_gl_support
 	long				pixel_float_target;			// backend for float support (APPLE, ATI, NV)
 	long				pbo;						// flag for pixel buffer objects support
 	long				fbo;						// flag for frame buffer object support
+	long				vbo;						// flag for vertex buffer object support
 	long				pbuffer;					// flag for hardware assisted pbuffer support
 	long				pbuffer_float;				// flag for float pbuffer support
 	long				pbuffer_float_target;		// backend for float support (APPLE, ATI, NV)
@@ -98,9 +99,16 @@ typedef struct _jit_gl_support
 	long				fragment_program_nv;		// flag for nv fragment program support
 	long				fragment_program_nv_version;// version for nv fragment program support
 	long				fragment_program_shadow;	// flag for frament shader depth comparison capability
+	long				geometry_shader;			// flag for geometry shader support
+	long				gpu_program4_nv;			// flag for nvidia geometry shader support (for Cg)
+	long				transform_feedback;			// flag for transform feedback support
+	long				gpu_program_parameters;		// flag for shader parameter environment support
+	long				gpu_shader4;				// flag for shader model 4 support
 	long				version_major;				// major version number
 	long				version_minor;				// minor version number
 	long				version_release;			// release version number
+	long				glsl_version_major;			// glsl major version
+	long				glsl_version_minor;			// glsl minor version
 
 } t_jit_gl_support;
 
@@ -108,6 +116,7 @@ typedef struct _jit_gl_support
 
 t_jit_gl_support *jit_gl_support_new(void);
 t_jit_err jit_gl_support_init(t_jit_gl_support *x, const char *extensions);
+long jit_gl_support_field_value(t_jit_gl_support *x, t_symbol *name);
 void jit_gl_support_free(t_jit_gl_support *x);
 
 /****************************************************************************/
@@ -326,7 +335,75 @@ void jit_gl_support_free(t_jit_gl_support *x);
 #define GL_MAX_COLOR_ATTACHMENTS_EXT						(0x8CDF)
 #define GL_MAX_RENDERBUFFER_SIZE_EXT						(0x84E8)
 #define GL_INVALID_FRAMEBUFFER_OPERATION_EXT				(0x0506)
+//#define GL_MAX_DRAW_BUFFERS_ARB								(0x8824)
 #endif
+
+//geometry shaders
+#ifndef GL_EXT_geometry_shader4
+#define GL_EXT_geometry_shader4						1
+#define GL_GEOMETRY_SHADER_EXT						0x8DD9
+#define GL_GEOMETRY_VERTICES_OUT_EXT				0x8DDA
+#define GL_GEOMETRY_INPUT_TYPE_EXT					0x8DDB
+#define GL_GEOMETRY_OUTPUT_TYPE_EXT					0x8DDC
+#define GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_EXT		0x8C29
+#define GL_MAX_GEOMETRY_VARYING_COMPONENTS_EXT		0x8DDD
+#define GL_MAX_VERTEX_VARYING_COMPONENTS_EXT		0x8DDE
+#define GL_MAX_VARYING_COMPONENTS_EXT				0x8B4B
+#define GL_MAX_GEOMETRY_UNIFORM_COMPONENTS_EXT		0x8DDF
+#define GL_MAX_GEOMETRY_OUTPUT_VERTICES_EXT			0x8DE0
+#define GL_MAX_GEOMETRY_TOTAL_OUTPUT_COMPONENTS_EXT	0x8DE1
+#define GL_LINES_ADJACENCY_EXT						0xA
+#define GL_LINE_STRIP_ADJACENCY_EXT					0xB
+#define GL_TRIANGLES_ADJACENCY_EXT					0xC
+#define GL_TRIANGLE_STRIP_ADJACENCY_EXT				0xD
+#define GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS_EXT	0x8DA8
+#define GL_FRAMEBUFFER_INCOMPLETE_LAYER_COUNT_EXT	0x8DA9
+#define GL_FRAMEBUFFER_ATTACHMENT_LAYERED_EXT		0x8DA7
+#define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER_EXT	0x8CD4
+#define GL_PROGRAM_POINT_SIZE_EXT					0x8642
+#endif
+
+//transform feedback
+#ifndef GL_EXT_transform_feedback
+#define GL_EXT_transform_feedback								1
+#define GL_TRANSFORM_FEEDBACK_BUFFER_EXT                      0x8C8E 
+#define GL_TRANSFORM_FEEDBACK_BUFFER_START_EXT                0x8C84 
+#define GL_TRANSFORM_FEEDBACK_BUFFER_SIZE_EXT                 0x8C85 
+#define GL_TRANSFORM_FEEDBACK_BUFFER_BINDING_EXT              0x8C8F 
+#define GL_INTERLEAVED_ATTRIBS_EXT                            0x8C8C 
+#define GL_SEPARATE_ATTRIBS_EXT                               0x8C8D 
+#define GL_PRIMITIVES_GENERATED_EXT                           0x8C87 
+#define GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN_EXT          0x8C88 
+#define GL_RASTERIZER_DISCARD_EXT                             0x8C89 
+#define GL_MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS_EXT  0x8C8A 
+#define GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS_EXT        0x8C8B 
+#define GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS_EXT     0x8C80 
+#define GL_TRANSFORM_FEEDBACK_VARYINGS_EXT                    0x8C83 
+#define GL_TRANSFORM_FEEDBACK_BUFFER_MODE_EXT                 0x8C7F
+#define GL_TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH_EXT          0x8C76 
+#endif
+
+// draw buffer for MRT FBO
+#ifndef GL_ARB_draw_buffers
+#define GL_MAX_DRAW_BUFFERS_ARB           0x8824
+#define GL_DRAW_BUFFER0_ARB               0x8825
+#define GL_DRAW_BUFFER1_ARB               0x8826
+#define GL_DRAW_BUFFER2_ARB               0x8827
+#define GL_DRAW_BUFFER3_ARB               0x8828
+#define GL_DRAW_BUFFER4_ARB               0x8829
+#define GL_DRAW_BUFFER5_ARB               0x882A
+#define GL_DRAW_BUFFER6_ARB               0x882B
+#define GL_DRAW_BUFFER7_ARB               0x882C
+#define GL_DRAW_BUFFER8_ARB               0x882D
+#define GL_DRAW_BUFFER9_ARB               0x882E
+#define GL_DRAW_BUFFER10_ARB              0x882F
+#define GL_DRAW_BUFFER11_ARB              0x8830
+#define GL_DRAW_BUFFER12_ARB              0x8831
+#define GL_DRAW_BUFFER13_ARB              0x8832
+#define GL_DRAW_BUFFER14_ARB              0x8833
+#define GL_DRAW_BUFFER15_ARB              0x8834
+#endif
+
 
 /****************************************************************************/
 

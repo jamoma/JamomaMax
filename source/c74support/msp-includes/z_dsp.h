@@ -4,18 +4,11 @@
 
 #ifndef _Z_DSP_H
 #define _Z_DSP_H
-
-#ifndef SAMPLE_TYPEDEF
-/**	An integer.	@ingroup msp	*/
-typedef int t_int;
-/**	A float.	@ingroup msp	*/
-typedef float t_float;
-/**	A sample value.	@ingroup msp	*/
-typedef float t_sample;
-#define SAMPLE_TYPEDEF
-#endif
-
+	
+#include "z_sampletype.h"
 #include "ext_systhread.h"
+#include "ext_linklist.h"
+#include "ext_atomic.h"
 
 #if C74_PRAGMA_STRUCT_PACKPUSH
     #pragma pack(push, 2)
@@ -30,48 +23,6 @@ enum {
 	SYS_MAXSIGS = 250		///< number of signal inlets you can have in an object
 };
 
-// macro loop for checking for NAN/INF
-
-// note: this may be platform-dependent
-
-#define NAN_MASK 0x7F800000
-
-#define NAN_CHECK(n,o) \
-while (n--) { if ((*(o) & NAN_MASK) == NAN_MASK) *(o) = 0; (o)++; } // now post inc/dec -Rd jun 05
-
-#define IS_DENORM_FLOAT(v)		((((*(unsigned long *)&(v))&0x7f800000)==0)&&((v)!=0.f))
-#define IS_DENORM_DOUBLE(v)		((((((unsigned long *)&(v))[1])&0x7fe00000)==0)&&((v)!=0.))			
-
-#define IS_NAN_FLOAT(v)			(((*(unsigned long *)&(v))&0x7f800000)==0x7f800000)
-#define IS_NAN_DOUBLE(v)		(((((unsigned long *)&(v))[1])&0x7fe00000)==0x7fe00000) 
-
-#define IS_DENORM_NAN_FLOAT(v)		(IS_DENORM_FLOAT(v)||IS_NAN_FLOAT(v))
-#define IS_DENORM_NAN_DOUBLE(v)		(IS_DENORM_DOUBLE(v)||IS_NAN_DOUBLE(v))			
-
-// currently all little endian processors are x86
-#if defined(WIN_VERSION) || (defined(MAC_VERSION)&&TARGET_RT_LITTLE_ENDIAN)
-#define DENORM_WANT_FIX		1
-#endif
-
-#ifdef DENORM_WANT_FIX
-
-#define FIX_DENORM_FLOAT(v)		((v)=IS_DENORM_FLOAT(v)?0.f:(v))
-#define FIX_DENORM_DOUBLE(v)	((v)=IS_DENORM_DOUBLE(v)?0.f:(v))
-
-#define FIX_DENORM_NAN_FLOAT(v)		((v)=IS_DENORM_NAN_FLOAT(v)?0.f:(v))
-#define FIX_DENORM_NAN_DOUBLE(v)	((v)=IS_DENORM_NAN_DOUBLE(v)?0.:(v))
-
-#else
-
-#define FIX_DENORM_FLOAT(v)		
-#define FIX_DENORM_DOUBLE(v)	
-
-#define FIX_DENORM_NAN_FLOAT(v)		
-#define FIX_DENORM_NAN_DOUBLE(v)
-
-#endif
-
-
 // header for all DSP objects. Provides a proxy.
 
 // z_misc flags:
@@ -79,8 +30,23 @@ while (n--) { if ((*(o) & NAN_MASK) == NAN_MASK) *(o) = 0; (o)++; } // now post 
 #define Z_NO_INPLACE 1	///< flag indicating the object doesn't want signals in place @ingroup msp
 #define Z_PUT_LAST 2	///< when list of ugens is resorted, put this object at end @ingroup msp
 #define Z_PUT_FIRST 4	///< when list of ugens is resorted, put this object at beginning @ingroup msp
+#define Z_IGNORE_DISABLE 8	///< ignore the disable field when executing the chain, e.g. to process the pass~ object in a muted patcher.
+#define Z_DONT_ADD 16		///< if this flag is set the object will be ignored and its dsp method won't be called.
+
+#define SIXTEENIZE(p) ((((t_ptr_uint)(p)) + 16) & (~(t_ptr_uint)0xF))
+#define THIRTYTWOIZE(p) ((((t_ptr_uint)(p)) + 32) & (~(t_ptr_uint)0x1F))
 
 typedef void *t_proxy;
+
+/**	Common struct for MSP objects. 
+ @ingroup	msp	*/
+typedef struct _pxdata {
+	long	z_in;
+	void	*z_proxy;
+	long	z_disabled;		///< set to non-zero if this object is muted (using the pcontrol or mute~ objects)
+	short	z_count;		///< an array that indicates what inlets/outlets are connected with signals
+	short	z_misc;			///< flags (bitmask) determining object behaviour, such as #Z_NO_INPLACE, #Z_PUT_FIRST, or #Z_PUT_LAST
+} t_pxdata; 
 
 /**	Header for any non-ui signal processing object. 
 	For ui objects use #t_pxjbox.
@@ -88,11 +54,7 @@ typedef void *t_proxy;
 typedef struct t_pxobject {
 	struct object z_ob;	///< The standard #t_object struct.
 	long z_in;
-#ifdef PROBE_TEST
 	void *z_proxy;
-#else
-	t_proxy *z_proxy;
-#endif
 	long z_disabled;	///< set to non-zero if this object is muted (using the pcontrol or mute~ objects)
 	short z_count;		///< an array that indicates what inlets/outlets are connected with signals
 	short z_misc;		///< flags (bitmask) determining object behaviour, such as #Z_NO_INPLACE, #Z_PUT_FIRST, or #Z_PUT_LAST
@@ -117,6 +79,9 @@ typedef struct _signal
 
 
 // c74 private
+
+struct _chain64item;
+struct _chain64item_extra;
 
 typedef struct _dspchain
 {
@@ -143,14 +108,23 @@ typedef struct _dspchain
 	volatile long c_broken;			// object being freed, don't run it
 	long c_intype;					// using old signal linklist (0) or array
 	long c_outtype;					// using old signal linklist (0) or array
-	volatile long c_insidetick;		// so we can set c_broken safely
+	t_int32_atomic c_dontbreak;		// temporarily prevent chain from being broken
+	t_int32_atomic c_wantsbreak;		// so main thread can tell audio thread it wants to become broken
 	void *c_patchers;				// used to keep track of all patchers in chain
-	void *c_posttickobjects;		// list of objects to be ticked after process
+	void *c_posttickobjects;		// list of objects to be ticked after process (called from same thread as dspchain is ticked from)
+	void *c_mixerlisteners;			// list of objects listening to various mixer notifications
+	void *unused;					// was c_chain64 but no longer used
+	struct _ugenbox *c_curugen;		// internal use: ugenbox pointer to current box during dsp64 method call 
+	t_object *c_implicitugens;		// internal use
+	long c_32bitchain;				// flag set when this is really a 32 bit chain (for wrapper)
+	long c_benchmark;				// flag set when benchmarking cpu consumption
+	double c_benchtime_used;		// cumulative cputime (in milliseconds) used for ticking all objects in the chain (only when benchmarking is enabled)
+	double c_benchtime_available;	// cumulative time (in milliseconds) since this dspchain has been started (only when benchmarking is enabled)
+	long c_chain64_alloclen; 
+	long c_chain64_len; 
+	struct _chain64item *c_chain64_array; 
+	struct _chain64item_extra *c_chain64_extra_array;
 } t_dspchain;
-
-/**	A function pointer for the audio perform routine used by MSP objects to process blocks of samples. @ingroup msp */
-typedef t_int *(*t_perfroutine)(t_int *args);
-
 
 #ifndef VPTR_TYPEDEF
 /** A void pointer.		@ingroup msp	*/
@@ -178,6 +152,11 @@ typedef void *vptr;
 // system access prototypes
 
 BEGIN_USING_C_LINKAGE 
+
+/**	A function pointer for the audio perform routine used by MSP objects to process blocks of samples. @ingroup msp */
+typedef t_int *(*t_perfroutine)(t_int *args);
+
+typedef void (*t_perfroutine64)(t_object *x, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam); 
 
 // messages to the dsp object
 
@@ -226,6 +205,13 @@ void dsp_tick(void);			// no longer used
 
 // the dspchain object
 
+#define DSPCHAIN_MIXERLISTENER_WILLPROCESSIOVECTOR		(0x00000001)
+#define DSPCHAIN_MIXERLISTENER_WILLPROCESSMIXER			(0x00000002)
+#define DSPCHAIN_MIXERLISTENER_DIDPROCESSMIXER			(0x00000004)
+#define DSPCHAIN_MIXERLISTENER_DIDPROCESSIOVECTOR		(0x00000008)
+#define DSPCHAIN_MIXERLISTENER_MIXERGRAPHWILLSTART		(0x00000010)
+#define DSPCHAIN_MIXERLISTENER_MIXERGRAPHWILLSTOP		(0x00000020)
+
 t_dspchain *dspchain_start(long bs, long sr);
 t_dspchain *dspchain_get(void);
 t_dspchain *dspchain_compile(t_patcher *p, long bs, long sr);
@@ -234,14 +220,25 @@ void dspchain_tick(t_dspchain *c);
 void canvas_start_onedsp(t_patcher *p, t_dspchain **c, long bs, long sr); 
 void canvas_stop_onedsp(t_dspchain *c);
 void dspchain_setbroken(t_dspchain *c);
+t_max_err dspchain_lock(t_dspchain *c); 
+void dspchain_unlock(t_dspchain *c); 
+t_dspchain *dspchain_fromobject(t_object *o); 
+void dspchain_addmixerlistener(t_dspchain *chain, t_object *listener, long notifications); 
 
 // utility perform routines
 
 void set_zero(float *dst, long n);
+void set_zero64(double *dst, long n);
+void copy_64from32(t_double *dst, const t_float *src, long n);
+void copy_32from64(t_float *dst, const t_double *src, long n);
 t_int *plus_perform(t_int *args);
+t_int *plus_perform64(t_int *args);
 t_int *sig_perform(t_int *args);
+t_int *sig_perform64(t_int *args);
 t_int *copy_perform(t_int *args);
+t_int *copy_perform64(t_int *args);
 t_int *plus2_perform(t_int *w);
+t_int *plus2_perform64(t_int *w);
 
 // setup routines used by DSP objects
 
@@ -257,7 +254,7 @@ t_int *plus2_perform(t_int *w);
 	@param	...	The arguments that will be passed to the perform routine.	
 	@see		@ref chapter_msp_anatomy_dsp
 	@see		@ref chapter_msp_advanced_connections	*/
-void dsp_add(t_perfroutine f, int n, ...);
+C74_DEPRECATED( void dsp_add(t_perfroutine f, int n, ...) );
 
 /**	Call this function in your MSP object's dsp method.
 	Use dsp_addv() to add your object's perform routine to the DSP call 
@@ -270,8 +267,9 @@ void dsp_add(t_perfroutine f, int n, ...);
 	@param	vector 	The arguments that will be passed to the perform routine.
 	@see			@ref chapter_msp_anatomy_dsp
 	@see			@ref chapter_msp_advanced_connections	*/
-void dsp_addv(t_perfroutine f, int n, void **vector);
+C74_DEPRECATED( void dsp_addv(t_perfroutine f, int n, void **vector) );
 
+void dsp_add64(t_object *chain, t_object *x, t_perfroutine64 f, long flags, void *userparam); 
 
 /**	Call this routine after creating your object in the new instance routine 
 	with object_alloc(). Cast your object to #t_pxobject as the first 
@@ -294,6 +292,8 @@ void z_dsp_setup(t_pxobject *x, long nsignals);		// called in new method
  	@ingroup	msp	*/
 #define dsp_setup z_dsp_setup
 
+void dsp_resize(t_pxobject *x, long nsignals); // for dynamic inlets
+
 
 /**	This function disposes of any memory used by proxies allocated by 
 	dsp_setup(). It also notifies the signal compiler that the DSP call chain 
@@ -312,7 +312,7 @@ void z_dsp_free(t_pxobject *x);
 #define dsp_free z_dsp_free
 
 
-void z_add_signalmethod(void);						// called in initialization routine
+C74_DEPRECATED ( void z_add_signalmethod(void) );						// called in initialization routine
 #define dsp_initclass z_add_signalmethod
 
 void z_sysinit(void);
@@ -429,16 +429,11 @@ BEGIN_USING_C_LINKAGE
 typedef struct _pxjbox {
 	t_jbox	z_box;			///< The box struct used by all ui objects.
 	long	z_in;
-#ifdef PROBE_TEST
 	void	*z_proxy;
-#else
-	t_proxy	*z_proxy;
-#endif
 	long	z_disabled;		///< set to non-zero if this object is muted (using the pcontrol or mute~ objects)
 	short	z_count;		///< an array that indicates what inlets/outlets are connected with signals
 	short	z_misc;			///< flags (bitmask) determining object behaviour, such as #Z_NO_INPLACE, #Z_PUT_FIRST, or #Z_PUT_LAST
 } t_pxjbox;
-
 
 void z_jbox_dsp_setup(t_pxjbox *x, long nsignals); 
 void z_jbox_dsp_free(t_pxjbox *x);

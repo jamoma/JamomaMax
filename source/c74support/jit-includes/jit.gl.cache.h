@@ -1,9 +1,6 @@
 /*
  * jit.gl.cache.h
  *
- * Copyright 2001-2005 - Cycling '74
- * Derek Gerstmann - derek@cycling74.com
- *
  * Internal data structure for storing cached geometric data.
  *
  */
@@ -39,14 +36,12 @@ extern "C" {
 
 // --------------------------------------------------------------------------------
 
-typedef struct _jit_gl_cache
-{
+typedef struct _jit_gl_cache {
 	void						*data;			// raw data values
 	long						bytes;			// number of allocated bytes
 	long						manage;			// flag to manage data creation/deletion
 	long						type;			// type of cached data (VERTEX/NORMAL/etc)
 	long						buffertype;		// type of buffer (ARRAY/ELEMENT)
-	long						buffersize;		// total size of allocated buffer
 	long						datatype;		// enumerated datatype prim
 	long						datasize;		// sizeof datatype
 	long						enumtype;		// type of geometry (quad, triangles, line)
@@ -91,7 +86,7 @@ t_jit_err jit_gl_cache_reset(t_jit_gl_cache *x);
 long jit_gl_cache_compare(t_jit_gl_cache *x, long a, long b, double epsilon);
 t_jit_err jit_gl_cache_weld(t_jit_gl_cache *x, double epsilon);
 t_jit_err jit_gl_cache_grow(t_jit_gl_cache *x, long bytes, long copy);
-t_jit_err jit_gl_cache_resize(t_jit_gl_cache *x, long count, long coords, long datatype, long copy);
+t_jit_err jit_gl_cache_resize(t_jit_gl_cache *x, long elements, long coords, long datatype, long copy);
 t_jit_err jit_gl_cache_append(t_jit_gl_cache *x, char *data, long count, long coords, long datatype);
 t_jit_err jit_gl_cache_replace(t_jit_gl_cache *x, long index, char *data, long count, long coords, long datatype);
 GLenum jit_gl_cache_datatype_from_symbol(t_symbol *s);

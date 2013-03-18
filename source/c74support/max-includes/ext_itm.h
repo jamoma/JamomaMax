@@ -23,6 +23,7 @@ typedef struct _clocksource
 	long c_usedcount;		// number of transports using this clock source
 	method c_gettempo;		// get current tempo
 	method c_gettimesig;	// get current timesig
+	method c_getsr;			// get current samplerate 
 } t_clocksource;
 
 // used by clocksource to report time sig change to ITM

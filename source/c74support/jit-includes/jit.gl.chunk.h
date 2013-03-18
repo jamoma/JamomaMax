@@ -34,8 +34,7 @@ extern "C" {
  * in a format which can be passed easily to glDrawRangeElements, and matrixoutput.  
  *
  */
-typedef struct _jit_glchunk
-{
+typedef struct _jit_glchunk {
 	t_symbol	*	prim;			///< drawing primitive. "tri_strip", "tri", "quads", "quad_grid", etc. 
 	t_jit_object *	m_vertex;		///< vertex matrix containing xyzst... data 
 	t_symbol *		m_vertex_name;	///< vertex matrix name
