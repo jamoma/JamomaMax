@@ -47,11 +47,13 @@ load "build.rb"
 
 # copy build results into the Max Package
 `cp -r "#{glibdir}"/../../Core/*/library/build/*.dylib "#{glibdir}"/max/support`
+`rm "#{glibdir}"/max/support/*-i386.dylib`
+`rm "#{glibdir}"/max/support/*-x86_64.dylib`
 `cp -r "#{glibdir}"/../../Core/*/extensions/*/build/*.ttdylib "#{glibdir}"/max/support`
 `rm "#{glibdir}"/max/support/*-i386.ttdylib`
 `rm "#{glibdir}"/max/support/*-x86_64.ttdylib`
 `cp -r "#{glibdir}"/../../Core/*/extensions/*/build/*.ttdll "#{glibdir}"/max/support`
-`mv "#{glibdir}"/max/externals/jcom.loader "#{glibdir}"/max/extensions/jcom.loader`
+`mv "#{glibdir}"/max/externals/jcom.loader.mxo "#{glibdir}"/max/extensions/`
 
 # Making sure that twin projects build on Mac
 if win?
