@@ -38,6 +38,7 @@ void		model_return_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr ar
 void		model_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void		model_subscribe(TTPtr self);
+void		model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void		model_init(TTPtr self);
 
@@ -83,7 +84,7 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)model_help,					"model_help",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_reference,				"model_reference",		A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_open,                    "model_open",		A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_open,                    "model_open",           A_CANT, 0);
 //	class_addmethod(c->maxClass, (method)model_mute,					"model_mute",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_address,					"model_address",		A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_autodoc,					"doc_generate",			A_CANT, 0);
@@ -149,7 +150,6 @@ void model_subscribe(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue						v, args;
-	TTAddress                   returnedAddress, argAdrs;
     TTNodePtr                   returnedNode = NULL;
     TTNodePtr                   returnedContextNode = NULL;
 	TTSymbol					classAdrs, helpAdrs, refAdrs, openAdrs, documentationAdrs, editAdrs, muteAdrs;
@@ -157,10 +157,8 @@ void model_subscribe(TTPtr self)
 	TTTextHandlerPtr			aTextHandler;
     TTPresetPtr                 aPreset;
 	TTPtr						context;
-	TTList						whereToSearch;
-	TTBoolean					isThere, isSubModel;
-	TTNodePtr					firstTTNode;
-	TTAddress                   containerAdrs;
+	TTBoolean					isSubModel;
+	TTAddress                   returnedAddress;
 	AtomCount					ac;
 	AtomPtr						av;
 	ObjectPtr					aPatcher = jamoma_patcher_get((ObjectPtr)x);
@@ -310,44 +308,10 @@ void model_subscribe(TTPtr self)
 					attr_args_process(x, ac, av);
 			}
 			
-			// In view patcher :
-			if (x->patcherContext == kTTSym_view) {
-					
-				// look for a model of the same class into the patcher to get his model/address
-				jamoma_patcher_get_model_patcher(x->patcherPtr, x->patcherClass, &aPatcher);
-				
-				// if a model exists
-				if (aPatcher) {
-					
-					// is there a container (e.g. a jcom.model) registered with the same context in this model patcher ?
-					whereToSearch.append(JamomaDirectory->getRoot());
-					JamomaDirectory->IsThere(&whereToSearch, &testNodeContext, (TTPtr)aPatcher, &isThere, &firstTTNode);
-					
-					if (isThere) {
-						firstTTNode->getAddress(containerAdrs);
-						EXTRA->modelAddress = containerAdrs;
-					}
-				}
+			// In view patcher : deferlow the model/address setup
+			if (x->patcherContext == kTTSym_view)
+                defer_low((ObjectPtr)x, (method)model_subscribe_view, _sym_nothing, ac, av);
 
-				// else, if args exists, the first argument of the patcher is the model/address value
-				else if (ac > 0) {
-					
-					argAdrs = TTAddress(atom_getsym(av)->s_name);
-					
-					// the model/address have to be absolute
-					if (argAdrs.getType() == kAddressAbsolute)
-						EXTRA->modelAddress = argAdrs;
-					else
-						EXTRA->modelAddress = kTTAdrsRoot.appendAddress(argAdrs);
-				}
-                // else the view is not binding a model for instant
-                else
-                    EXTRA->modelAddress = TTAddress("/noModelAddress");
-				
-                // set the model/address data value to notify all observers
-                aData->setAttributeValue(kTTSym_value, EXTRA->modelAddress);
-			}
-			
 			// output ContextNode address
 			Atom a;
 			x->subscriberObject->getAttributeValue(TTSymbol("contextNodeAddress"), v);
@@ -363,6 +327,61 @@ void model_subscribe(TTPtr self)
 				defer_low(x, (method)model_init, 0, 0, 0L);
 		}
 	}
+}
+
+void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTValue         o;
+    TTObjectBasePtr modelAddressData;
+    ObjectPtr		aPatcher;
+    TTList          whereToSearch;
+    TTBoolean       isThere;
+    TTNodePtr       firstTTNode;
+    TTAddress       containerAdrs, argAdrs;
+    TTErr           tterr;
+    
+    tterr = x->internals->lookup(TTSymbol("model/address"), o);
+    
+    if (!tterr) {
+        
+        modelAddressData = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+        
+        // look for a model of the same class into the patcher to get his model/address
+        jamoma_patcher_get_model_patcher(x->patcherPtr, x->patcherClass, &aPatcher);
+        
+        // if a model exists
+        if (aPatcher) {
+            
+            // is there a container (e.g. a jcom.model) registered with the same context in this model patcher ?
+            whereToSearch.append(JamomaDirectory->getRoot());
+            JamomaDirectory->IsThere(&whereToSearch, &testNodeContext, (TTPtr)aPatcher, &isThere, &firstTTNode);
+            
+            if (isThere) {
+                firstTTNode->getAddress(containerAdrs);
+                EXTRA->modelAddress = containerAdrs;
+            }
+        }
+        
+        // else, if args exists, the first argument of the patcher is the model/address value
+        else if (argc > 0) {
+            
+            argAdrs = TTAddress(atom_getsym(argv)->s_name);
+            
+            // the model/address have to be absolute
+            if (argAdrs.getType() == kAddressAbsolute)
+                EXTRA->modelAddress = argAdrs;
+            else
+                EXTRA->modelAddress = kTTAdrsRoot.appendAddress(argAdrs);
+        }
+        
+        // if the model/address is empty : the view is not binding a model for instant
+        if (EXTRA->modelAddress == kTTSymEmpty)
+            EXTRA->modelAddress = TTAddress("/noModelAddress");
+        
+        // set the model/address data value to notify all observers
+        modelAddressData->setAttributeValue(kTTSym_value, EXTRA->modelAddress);
+    }
 }
 
 void model_init(TTPtr self)
