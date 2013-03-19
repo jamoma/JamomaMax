@@ -28,7 +28,7 @@ void ui_data_create_all(t_ui* obj)
 		
 		// get the view address
 		obj->uiSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
-		v.get(0, obj->viewAddress);
+		obj->viewAddress = v[0];
 		
 		// make a receiver on contextAddress/model/address data
 		ui_receiver_create(obj, &anObject, gensym("return_model_address"), TTSymbol("model/address"), obj->viewAddress, YES); // YES : we want to deferlow this method
