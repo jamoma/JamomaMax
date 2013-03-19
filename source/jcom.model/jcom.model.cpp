@@ -308,9 +308,9 @@ void model_subscribe(TTPtr self)
 					attr_args_process(x, ac, av);
 			}
 			
-			// In view patcher : deferlow the model/address setup
+			// In view patcher :
 			if (x->patcherContext == kTTSym_view)
-                defer_low((ObjectPtr)x, (method)model_subscribe_view, _sym_nothing, ac, av);
+                model_subscribe_view(self, _sym_nothing, ac, av);
 
 			// output ContextNode address
 			Atom a;
@@ -360,6 +360,12 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
             if (isThere) {
                 firstTTNode->getAddress(containerAdrs);
                 EXTRA->modelAddress = containerAdrs;
+            }
+            
+            // deferlow to try another time because the model patcher is maybe not ready
+            else {
+                defer_low((ObjectPtr)x, (method)model_subscribe_view, _sym_nothing, argc, argv);
+                return;
             }
         }
         
