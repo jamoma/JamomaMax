@@ -30,8 +30,6 @@ void*		loader_new(t_symbol *name, long argc, t_atom *argv);
 t_class		*loader_class;
 
 
-
-
 /************************************************************************************/
 // A class that we can send messages to in the same way that messages are sent to ;max or ;dsp
 
