@@ -50,17 +50,17 @@ typedef struct _ui{
 	TTHashPtr			hash_datas;				///< hash table of TTData
 	TTHashPtr			hash_viewers;			///< hash table of TTViewer
 	TTHashPtr			hash_receivers;			///< hash table of TTReceiver
-	TTObjectBasePtr			nmspcExplorer;			///< internal TTExplorer object to observe the entire namespace
-	TTObjectBasePtr			modelExplorer;			///< internal TTExplorer object to observe the model namespace
-	TTObjectBasePtr			modelMessExplorer;		///< internal TTExplorer object to observe messages
-	TTObjectBasePtr			modelParamExplorer;		///< internal TTExplorer object to observe parameters
-	TTObjectBasePtr			modelRetExplorer;		///< internal TTExplorer object to observe returns
+	TTObjectBasePtr		nmspcExplorer;			///< internal TTExplorer object to observe the entire namespace
+	TTObjectBasePtr		modelExplorer;			///< internal TTExplorer object to observe the model namespace
+	TTObjectBasePtr		modelMessExplorer;		///< internal TTExplorer object to observe messages
+	TTObjectBasePtr		modelParamExplorer;		///< internal TTExplorer object to observe parameters
+	TTObjectBasePtr		modelRetExplorer;		///< internal TTExplorer object to observe returns
 	TTSubscriberPtr		uiSubscriber;			///< internal TTSubscriber object to create a /ui node
 	TTCallbackPtr		previewSignal;			///< internal TTCallback to get back preview signal
 	TTOutputPtr			modelOutput;			///< a pointer to TTOutput object of the binded model
 	
-	TTAddress	viewAddress;
-	TTAddress	modelAddress;
+	TTAddress           viewAddress;
+	TTAddress           modelAddress;
 	ObjectPtr			patcherPtr;				///< the patcher in which the external is (ignoring subpatcher)
 	TTSymbol			patcherContext;			///< the patcher context in which the external is (model, view)
 	TTSymbol			patcherClass;			///< the patcher class in which the external is
@@ -158,6 +158,7 @@ void 		ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers);
 void 		ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers);
 void*		ui_oksize(t_ui *x, t_rect *rect);
 void		ui_preset_interface(t_ui *x);
+void 		ui_paint_address(t_ui *x, t_object *textfield);
 
 // prototypes: menus
 void		ui_menu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers);
