@@ -407,37 +407,8 @@ void ui_build(t_ui *x)
 	
 	// Set the textfield to display the address
 	textfield = jbox_get_textfield((t_object*) x);
-	if (textfield) {
-			
-		// if there is still no address
-		if (x->modelAddress == kTTAdrsEmpty) {
-            
-			object_method(textfield, gensym("settext"), NO_MODEL_STRING);
-        }
-		else {
-            
-            double r,t,l,b;
-            textfield_get_textmargins(textfield, &r, &t, &l, &b);
-            
-            TTUInt32 maxLetter = (uiRect.width - l - r) / 6; // assuming a letter is 6 pixels max
-                        
-            if (strlen(x->modelAddress.c_str()) >= maxLetter) {
-                
-                TTString        croppedAddress;
-                TTString        modelAddress = x->modelAddress.string();
-                TTStringIter    begin = modelAddress.begin();
-                TTStringIter    end = modelAddress.end();
-                
-                croppedAddress = TTString(begin, begin+(maxLetter/2)-1);
-                croppedAddress += "..";
-                croppedAddress += TTString(end-(maxLetter/2)+1, end);
-                object_method(textfield, gensym("settext"), croppedAddress.c_str());
-            }
-            else
-                object_method(textfield, gensym("settext"), x->modelAddress.c_str());
-        
-        }
-    }
+	if (textfield)
+        ui_paint_address(x, textfield);
     
 	// Redraw
 	jbox_redraw(&x->box);
@@ -802,6 +773,41 @@ void ui_paint(t_ui *x, t_object *view)
 	}
 }
 
+void ui_paint_address(t_ui *x, t_object *textfield)
+{
+    // if there is still no address
+    if (x->modelAddress == kTTAdrsEmpty) {
+        
+        object_method(textfield, gensym("settext"), NO_MODEL_STRING);
+    }
+    else {
+        
+        double r,t,l,b;
+        t_rect uiRect;
+        
+        object_attr_get_rect((ObjectPtr)x, _sym_presentation_rect, &uiRect);
+        textfield_get_textmargins(textfield, &r, &t, &l, &b);
+        
+        TTUInt32 maxLetter = (uiRect.width - l - r) / 6; // assuming a letter is 6 pixels max
+        
+        if (strlen(x->modelAddress.c_str()) >= maxLetter) {
+            
+            TTString        croppedAddress;
+            TTString        modelAddress = x->modelAddress.string();
+            TTStringIter    begin = modelAddress.begin();
+            TTStringIter    end = modelAddress.end();
+            
+            croppedAddress = TTString(begin, begin+(maxLetter/2)-1);
+            croppedAddress += "..";
+            croppedAddress += TTString(end-(maxLetter/2)+1, end);
+            object_method(textfield, gensym("settext"), croppedAddress.c_str());
+        }
+        else
+            object_method(textfield, gensym("settext"), x->modelAddress.c_str());
+        
+    }
+}
+
 void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 {
 	ObjectPtr	obj;
@@ -948,6 +954,11 @@ void ui_mouseup(t_ui *x, t_object *patcherview)
 {
 	x->mixDragging = false;
 	x->gainDragging = false;
+    
+    // Set the textfield to display the address after dragging widget
+	ObjectPtr textfield = jbox_get_textfield((t_object*) x);
+	if (textfield)
+        ui_paint_address(x, textfield);
 	
 	jbox_redraw(&x->box);
 }
