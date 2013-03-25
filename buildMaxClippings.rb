@@ -11,9 +11,9 @@ glibdir = Dir.pwd
 
 # TODO now that it works, the script should be re-done from scratch in a sexier way...
 
-modulesPath = "#{glibdir}/../Implementations/Max/max/modules"
-clippingsPath = "#{glibdir}/../Installers/temp/distro/Applications/Max5/patches/clippings/jamoma"
-initPath = "#{glibdir}/../Installers/temp/distro/Applications/Max5/Cycling '74/init"
+modulesPath = "#{glibdir}/../Implementations/Max/Jamoma/patches/modules"
+clippingsPath = "#{glibdir}/../Implementations/Max/Jamoma/patches/clippings"
+initPath = "#{glibdir}/../Implementations/Max/Jamoma/patches/init"
 # userLibModulesPath = "#{glibdir}/../UserLib"
 
 
