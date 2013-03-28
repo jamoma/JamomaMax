@@ -21,7 +21,7 @@
 #ifdef WIN_VERSION
 #define TTCLASSWRAPPERMAX_EXPORT __declspec(dllexport) 
 #else
-#define TTCLASSWRAPPERMAX_EXPORT
+#define TTCLASSWRAPPERMAX_EXPORT __attribute__((visibility("default")))
 #endif
 
 // TYPE DEFINITIONS
