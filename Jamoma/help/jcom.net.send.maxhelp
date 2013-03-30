@@ -8,7 +8,7 @@
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Verdana",
+		"default_fontname" : "Arial",
 		"gridonopen" : 0,
 		"gridsize" : [ 5.0, 5.0 ],
 		"gridsnaponopen" : 0,
@@ -23,11 +23,11 @@
 					"maxclass" : "message",
 					"text" : "dog",
 					"id" : "obj-32",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"presentation_rect" : [ 250.0, 132.0, 0.0, 0.0 ],
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 250.0, 130.0, 32.5, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -38,10 +38,10 @@
 					"maxclass" : "message",
 					"text" : "port 9002",
 					"id" : "obj-35",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 290.0, 535.0, 60.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -52,10 +52,10 @@
 					"maxclass" : "message",
 					"text" : "port 9001",
 					"id" : "obj-34",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 705.0, 570.0, 60.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -66,10 +66,10 @@
 					"maxclass" : "message",
 					"text" : "port 9002",
 					"id" : "obj-33",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 640.0, 570.0, 60.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -80,10 +80,10 @@
 					"maxclass" : "message",
 					"text" : "port 9001",
 					"id" : "obj-31",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 225.0, 535.0, 60.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -93,10 +93,10 @@
 				"box" : 				{
 					"maxclass" : "message",
 					"id" : "obj-29",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 640.0, 625.0, 157.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -107,10 +107,10 @@
 					"maxclass" : "newobj",
 					"text" : "jcom.net.receive @port 9001 @mode tcp",
 					"id" : "obj-30",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 640.0, 595.0, 218.0, 19.0 ],
 					"outlettype" : [ "", "" ]
 				}
@@ -121,10 +121,10 @@
 					"maxclass" : "message",
 					"text" : "port 9000",
 					"id" : "obj-28",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 225.0, 185.0, 60.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -136,11 +136,11 @@
 					"text" : "or we can be fancy and use our own object to receive the messages.",
 					"linecount" : 3,
 					"id" : "obj-27",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
 					"numoutlets" : 0,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 640.0, 265.0, 129.0, 43.0 ]
 				}
 
@@ -150,10 +150,10 @@
 					"maxclass" : "message",
 					"text" : "\"/boo/who? it's me! \"",
 					"id" : "obj-24",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 640.0, 340.0, 157.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -164,10 +164,10 @@
 					"maxclass" : "newobj",
 					"text" : "jcom.net.receive @port 9000 @mode udp",
 					"id" : "obj-23",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 640.0, 310.0, 221.0, 19.0 ],
 					"outlettype" : [ "", "" ]
 				}
@@ -179,11 +179,11 @@
 					"text" : "not really sure what is going on here...\nIf you send some messages, they are indeed sent.  However, the mxj object will not dump them to its outlet until the connection is closed (e.g. you change the port.)",
 					"linecount" : 6,
 					"id" : "obj-20",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
 					"numoutlets" : 0,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 410.0, 465.0, 221.0, 79.0 ]
 				}
 
@@ -193,11 +193,11 @@
 					"maxclass" : "comment",
 					"text" : "can also send using TCP instead of UDP",
 					"id" : "obj-26",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
 					"numoutlets" : 0,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 430.0, 253.0, 19.0 ]
 				}
 
@@ -207,10 +207,10 @@
 					"maxclass" : "message",
 					"text" : "/egg/cooked? scrambled",
 					"id" : "obj-25",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 205.0, 480.0, 134.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -220,10 +220,10 @@
 				"box" : 				{
 					"maxclass" : "message",
 					"id" : "obj-21",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 625.0, 157.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -234,10 +234,10 @@
 					"maxclass" : "newobj",
 					"text" : "mxj net.tcp.recv @port 7490",
 					"id" : "obj-22",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 595.0, 156.0, 19.0 ],
 					"outlettype" : [ "", "" ]
 				}
@@ -248,10 +248,10 @@
 					"maxclass" : "message",
 					"text" : "port 8000",
 					"id" : "obj-19",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 160.0, 185.0, 60.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -262,10 +262,10 @@
 					"maxclass" : "message",
 					"text" : "port 7491",
 					"id" : "obj-18",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 160.0, 535.0, 60.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -276,10 +276,10 @@
 					"maxclass" : "message",
 					"text" : "/egg/cooked? fried",
 					"id" : "obj-10",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 95.0, 480.0, 105.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -290,10 +290,10 @@
 					"maxclass" : "message",
 					"text" : "port 7490",
 					"id" : "obj-13",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 95.0, 535.0, 60.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -304,10 +304,10 @@
 					"maxclass" : "newobj",
 					"text" : "prepend send",
 					"id" : "obj-15",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 510.0, 79.0, 19.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -318,10 +318,10 @@
 					"maxclass" : "message",
 					"text" : "/egg/cooked?",
 					"id" : "obj-16",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 455.0, 79.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -332,10 +332,10 @@
 					"maxclass" : "newobj",
 					"text" : "jcom.net.send @address 127.0.0.1 @port 7490 @mode tcp",
 					"id" : "obj-17",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 560.0, 311.0, 19.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -347,11 +347,11 @@
 					"text" : "however, udpreceive requires fully-compliant OSC formatted packets, not raw packets, so this will throw errors when it tries to receive our messages.",
 					"linecount" : 3,
 					"id" : "obj-12",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
 					"numoutlets" : 0,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 320.0, 265.0, 284.0, 43.0 ]
 				}
 
@@ -362,11 +362,11 @@
 					"text" : "at the moment, messages send from jcom.net.send can be received from the java classes like this:",
 					"linecount" : 3,
 					"id" : "obj-11",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
 					"numoutlets" : 0,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 265.0, 198.0, 43.0 ]
 				}
 
@@ -376,10 +376,10 @@
 					"maxclass" : "message",
 					"text" : "/boo/who?",
 					"id" : "obj-9",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 340.0, 157.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -390,10 +390,10 @@
 					"maxclass" : "message",
 					"text" : "/boo/who? it's me!",
 					"id" : "obj-8",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 95.0, 130.0, 105.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -404,10 +404,10 @@
 					"maxclass" : "newobj",
 					"text" : "mxj net.udp.recv @port 7419",
 					"id" : "obj-5",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 310.0, 160.0, 19.0 ],
 					"outlettype" : [ "", "" ]
 				}
@@ -418,10 +418,10 @@
 					"maxclass" : "message",
 					"text" : "port 7419",
 					"id" : "obj-2",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 95.0, 185.0, 60.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -432,10 +432,10 @@
 					"maxclass" : "newobj",
 					"text" : "prepend send",
 					"id" : "obj-7",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 160.0, 79.0, 19.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -445,10 +445,10 @@
 				"box" : 				{
 					"maxclass" : "message",
 					"id" : "obj-6",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 320.0, 340.0, 157.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -459,10 +459,10 @@
 					"maxclass" : "newobj",
 					"text" : "udpreceive 8000 @quiet 1",
 					"id" : "obj-4",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 320.0, 310.0, 143.0, 19.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -473,10 +473,10 @@
 					"maxclass" : "message",
 					"text" : "/boo/who?",
 					"id" : "obj-3",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 105.0, 64.0, 17.0 ],
 					"outlettype" : [ "" ]
 				}
@@ -487,10 +487,10 @@
 					"maxclass" : "newobj",
 					"text" : "jcom.net.send @address 127.0.0.1 @port 7419 @mode udp",
 					"id" : "obj-1",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"patching_rect" : [ 80.0, 210.0, 314.0, 19.0 ],
 					"outlettype" : [ "" ]
 				}

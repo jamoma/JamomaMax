@@ -176,7 +176,7 @@
 					"focusbordercolor" : [ 0.0, 0.019608, 0.078431, 1.0 ],
 					"fontface" : 1,
 					"fontname" : "Arial",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"hidden" : 0,
 					"hotcolor" : [ 1.0, 0.756863, 0.039216, 1.0 ],
 					"id" : "obj-23",

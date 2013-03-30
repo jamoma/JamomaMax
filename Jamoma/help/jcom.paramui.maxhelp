@@ -8,7 +8,7 @@
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Verdana",
+		"default_fontname" : "Arial",
 		"gridonopen" : 0,
 		"gridsize" : [ 5.0, 5.0 ],
 		"gridsnaponopen" : 0,
@@ -33,7 +33,7 @@
 				"box" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"description" : "",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-14",
 					"maxclass" : "jcom.paramui",
 					"name" : "your/parameter",
@@ -52,7 +52,7 @@
 				"box" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"description" : "",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-13",
 					"maxclass" : "jcom.paramui",
 					"numinlets" : 1,
@@ -70,7 +70,7 @@
 				"box" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"description" : "",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-12",
 					"label" : "bar",
 					"maxclass" : "jcom.paramui",
@@ -89,7 +89,7 @@
 				"box" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"description" : "",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-15",
 					"label" : "another bar",
 					"maxclass" : "jcom.paramui",
@@ -108,7 +108,7 @@
 				"box" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"description" : "",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-10",
 					"maxclass" : "jcom.paramui",
 					"numinlets" : 1,
@@ -143,7 +143,7 @@
 				"box" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"description" : "",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-9",
 					"maxclass" : "jcom.paramui",
 					"numinlets" : 1,
@@ -160,7 +160,7 @@
 				"box" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"description" : "",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-3",
 					"maxclass" : "jcom.paramui",
 					"numinlets" : 1,
@@ -177,7 +177,7 @@
 				"box" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"description" : "",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-33",
 					"maxclass" : "jcom.paramui",
 					"numinlets" : 1,
@@ -194,7 +194,7 @@
 				"box" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"description" : "",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-34",
 					"maxclass" : "jcom.paramui",
 					"numinlets" : 1,
