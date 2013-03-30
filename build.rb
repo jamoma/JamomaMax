@@ -132,34 +132,6 @@ if(clean)
       `rm -rf *.*`
     end
   end
-  
-  if (File.exists? "#{glibdir}/Builds/MaxMSP")
-    
-    puts " "
-    puts "  Cleaning Builds folder "
-    puts " "
-    
-    Dir.chdir "#{glibdir}/Builds/MaxMSP"
-  
-    `rm -rf *.maxhelp`
-  
-    # Windows
-    if win?
-
-      `rm -f *.ttdll`
-      `rm -f *.dll`
-      `rm -f *.mxe`
-
-    # Mac
-    else
-      `rm -rf *.mxo`
-      `rm -rf *.txt`
-    end
-  else
-    `mkdir -p "#{glibdir}/Builds/MaxMSP"`
-    Dir.chdir "#{glibdir}/Builds/MaxMSP"
-  end
-
 end
 
 
