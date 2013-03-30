@@ -27,7 +27,6 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 {	
 	t_class *c;
 
-	jamoma_init();
 	common_symbols_init();
 	ps_rolloff			= gensym("rolloff");
 	ps_src_position		= gensym("src_position");

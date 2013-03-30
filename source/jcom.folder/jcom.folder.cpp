@@ -37,7 +37,6 @@ t_class *folder_class;
 int JAMOMA_EXPORT_MAXOBJ main(void)
 
 {	
-	jamoma_init();
 	common_symbols_init();
 	
 	t_class *c = class_new("jcom.folder",(method)folder_new, (method)0L, sizeof(t_folder), (method)0L, A_GIMME, 0);

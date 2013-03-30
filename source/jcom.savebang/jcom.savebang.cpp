@@ -30,7 +30,6 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 {
 	t_class *c;
 	
-	jamoma_init();
 	common_symbols_init();
 	
 	// Define our class
