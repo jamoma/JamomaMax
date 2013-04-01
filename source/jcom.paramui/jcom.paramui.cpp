@@ -369,7 +369,7 @@ void paramui_paint(t_paramui *x, t_object *view)
 	jgraphics_fill(g);
 
 
-	if (x->attr_dataspace != jps_none) {
+	if (x->attr_dataspace != gensym("none")) {
 		char data[64];	
 	
 		strncpy(data, x->attr_unitActive->s_name, 64);
@@ -407,11 +407,11 @@ void paramui_paint(t_paramui *x, t_object *view)
 		if (x->obj_parameter) {
 			object_attr_getvalueof(x->obj_parameter, gensym("value"), &ac, &av);
 			if (ac) {
-				if (x->attr_type == jps_decimal)
+				if (x->attr_type == gensym("decimal"))
 					snprintf(data, 256, "%.4f", atom_getfloat(av));
-				else if (x->attr_type == jps_integer || x->attr_type == jps_boolean)
+				else if (x->attr_type == gensym("integer") || x->attr_type == gensym("boolean"))
 					snprintf(data, 256, "%ld", atom_getlong(av));
-				else if (x->attr_type == jps_string)
+				else if (x->attr_type == gensym("string"))
 					strcpy(data, atom_getsym(av)->s_name);
 				
 				jtextlayout_settextcolor(x->layout_value, &s_light_gray);

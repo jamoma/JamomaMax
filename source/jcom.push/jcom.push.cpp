@@ -118,7 +118,7 @@ void *push_new(t_symbol *msg, long argc, t_atom *argv)
 		x->attrFriction = 0.1;
 		for (i=0; i<MAXDIMENSIONS; i++)
 			x->attrSize[i] = 40.0;			// This is the same default as for ViMiC
-		x->attrBoundaryMode = jps_none;
+		x->attrBoundaryMode = gensym("none");
 		push_clear(x);						// initilaize instance
 		attr_args_process(x, argc, argv);	// handle attribute args
 
@@ -206,7 +206,7 @@ t_max_err push_attr_setBoundaryMode(t_push *x, void *attr, long argc, t_atom *ar
 	
 	if (argc && argv) {
 		s = atom_getsym(argv);
-		if ((s==jps_none) || (s==ps_clip) || (s==jps_wrap) || (s==ps_bounce) || (s==ps_repel))
+		if ((s==gensym("none")) || (s==ps_clip) || (s==gensym("wrap")) || (s==ps_bounce) || (s==ps_repel))
 			x->attrBoundaryMode = s;
 	}
 	return MAX_ERR_NONE;
@@ -253,7 +253,7 @@ void push_bang(t_push *x)
 			TTLimit(position, rangeLow, rangeHigh);
 			velocity = position - x->previousPosition[i];
 		}
-		else if (x->attrBoundaryMode == jps_wrap)
+		else if (x->attrBoundaryMode == gensym("wrap"))
 			position = TTInfWrap(position, rangeLow, rangeHigh);
 		else if (x->attrBoundaryMode == ps_bounce) {
 			// Do we need to fold? The following test works because of symetry while avoiding fabs()
