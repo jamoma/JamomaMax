@@ -261,7 +261,7 @@ void cue_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
 	if (x->wrappedObject) {
 		
-		fullpath = jamoma_file_read((ObjectPtr)x, argc, argv, 'TEXT');
+		fullpath = jamoma_file_read((ObjectPtr)x, argc, argv, (t_fourcc)'TEXT');
 		v.append(fullpath);
 		
 		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
@@ -431,7 +431,7 @@ void cue_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	TTHashPtr			allCues;
 	TTValue				v, o, args;
 	TTSymbol			name = kTTSymEmpty;
-    Atom                a;
+    t_atom				a;
 	TTErr				tterr;
 	
 	// choose object to edit : default the cuelist
@@ -532,7 +532,7 @@ void cue_doedit(TTPtr self)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTTextHandlerPtr	aTextHandler = NULL;
 	TTValue				o, args;
-    Atom                a;
+    t_atom				a;
 	TTErr				tterr;
 	
 	// get the buffer handler

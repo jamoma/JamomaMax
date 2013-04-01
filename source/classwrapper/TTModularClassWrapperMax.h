@@ -19,7 +19,6 @@
 #ifdef UI_EXTERNAL
 #include "jpatcher_api.h"			// jpatcher_api.h must come before z_dsp.h
 #include "jgraphics.h"
-#include "TTGraphics.h"				// Jamoma Graphics API
 #endif
 
 #include "TTClassWrapperMax.h"
