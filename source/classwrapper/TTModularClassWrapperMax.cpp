@@ -519,7 +519,7 @@ void wrappedModularClass_dump(TTPtr self)
     AtomPtr			av;
 	
 #ifndef ARRAY_EXTERNAL
-    Atom			a;
+    t_atom			a;
 	
     if (x->subscriberObject)
     {
