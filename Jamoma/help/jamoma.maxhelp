@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 19.0, 54.0, 594.0, 399.0 ],
+		"rect" : [ 208.0, 87.0, 594.0, 399.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -65,7 +65,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 19.0, 80.0, 594.0, 373.0 ],
+						"rect" : [ 208.0, 113.0, 594.0, 373.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -100,54 +100,54 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Helvetica Neue Light",
+									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-6",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 46.0, 165.0, 265.0, 21.0 ],
-									"text" : "the first argument is the Jamoma class name ",
+									"patching_rect" : [ 46.0, 165.0, 274.0, 20.0 ],
+									"text" : "The first argument is the Jamoma class name ",
 									"textcolor" : [ 0.333333, 0.333333, 0.333333, 1.0 ]
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Helvetica Neue Light",
+									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-3",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
+									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 296.0, 240.0, 109.0, 21.0 ],
+									"patching_rect" : [ 296.0, 240.0, 113.0, 20.0 ],
 									"text" : "jamoma dataspace"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Helvetica Neue Light",
+									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-2",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
+									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 181.0, 240.0, 100.0, 21.0 ],
+									"patching_rect" : [ 181.0, 240.0, 104.0, 20.0 ],
 									"text" : "jamoma net.send"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Helvetica Neue Light",
+									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-1",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
+									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 51.0, 240.0, 111.0, 21.0 ],
+									"patching_rect" : [ 51.0, 240.0, 116.0, 20.0 ],
 									"text" : "jamoma net.receive"
 								}
 
@@ -294,6 +294,22 @@
 				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "jcom.loader.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jcom.route.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jcom.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jcom.send.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
