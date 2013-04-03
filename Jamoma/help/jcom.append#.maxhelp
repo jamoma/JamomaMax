@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 19.0, 54.0, 796.0, 509.0 ],
+		"rect" : [ 19.0, 54.0, 1099.0, 747.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -54,7 +54,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 332.0, 205.0, 127.0, 20.0 ],
+					"patching_rect" : [ 525.0, 468.0, 127.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "helpstarter.js",
 						"parameter_enable" : 0
@@ -81,7 +81,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 19.0, 80.0, 796.0, 483.0 ],
+						"rect" : [ 19.0, 80.0, 1099.0, 721.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -110,7 +110,7 @@
 									"name" : "jcom.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 796.0, 70.0 ]
+									"patching_rect" : [ 0.0, 0.0, 1099.0, 70.0 ]
 								}
 
 							}
@@ -154,7 +154,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 796.0, 483.0 ],
+						"rect" : [ 0.0, 26.0, 1099.0, 721.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -240,6 +240,18 @@
 				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "jcom.route.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jcom.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jcom.send.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
