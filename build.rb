@@ -64,10 +64,23 @@ else
     
     cleanAndBuildExternal glibdir, "jcom.in"
     cleanAndBuildExternal glibdir, "jcom.in~"
+    
     cleanAndBuildExternal glibdir, "jcom.message"
     cleanAndBuildExternal glibdir, "jcom.parameter"
+    
     cleanAndBuildExternal glibdir, "jcom.out"
     cleanAndBuildExternal glibdir, "jcom.out~"
+    
+    cleanAndBuildExternal glibdir, "jcom.messageArray"
+    cleanAndBuildExternal glibdir, "jcom.parameterArray"
+    cleanAndBuildExternal glibdir, "jcom.remoteArray"
+    cleanAndBuildExternal glibdir, "jcom.returnArray"
+    
+    cleanAndBuildExternal glibdir, "jcom.receive"
+    cleanAndBuildExternal glibdir, "jcom.receive~"
+    
+    cleanAndBuildExternal glibdir, "jcom.send"
+    cleanAndBuildExternal glibdir, "jcom.send~"
     
 end
 
