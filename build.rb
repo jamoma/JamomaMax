@@ -107,32 +107,32 @@ if win?
 end
 
 ###################################################################
-# Clean the Build folder
+# We no longer install in /usr/local, so neither do we clean there
 ###################################################################
-if(clean)
-  
-  if win?
-    #windows specific loc. Where ?
-  else
-    if (File.exists? "/usr/local/jamoma/lib")
-      puts "  Cleaning dylib folder "    
-      Dir.chdir "/usr/local/jamoma/lib"
-      `rm -rf *.*`
-    end
+#if(clean)
+#  
+#  if win?
+#    #windows specific loc. Where ?
+#  else
+#    if (File.exists? "/usr/local/jamoma/lib")
+#      puts "  Cleaning dylib folder "    
+#      Dir.chdir "/usr/local/jamoma/lib"
+#      `rm -rf *.*`
+#    end
+#    
+#    if (File.exists? "/usr/local/jamoma/extensions")
+#      puts "  Cleaning Extensions folder "    
+#      Dir.chdir "/usr/local/jamoma/extensions"
+#      `rm -rf *.*`
+#    end
     
-    if (File.exists? "/usr/local/jamoma/extensions")
-      puts "  Cleaning Extensions folder "    
-      Dir.chdir "/usr/local/jamoma/extensions"
-      `rm -rf *.*`
-    end
-    
-    if (File.exists? "/usr/local/jamoma/includes")
-      puts "  Cleaning Include Header folder "
-      Dir.chdir "/usr/local/jamoma/includes"
-      `rm -rf *.*`
-    end
-  end
-end
+#    if (File.exists? "/usr/local/jamoma/includes")
+#      puts "  Cleaning Include Header folder "
+#      Dir.chdir "/usr/local/jamoma/includes"
+#      `rm -rf *.*`
+#    end
+#  end
+#end
 
 
 ###################################################################
