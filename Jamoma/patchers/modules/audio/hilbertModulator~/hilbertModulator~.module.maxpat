@@ -307,19 +307,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "jcom.ui",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/#1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1",
@@ -329,6 +316,19 @@
 					"outlettype" : [ "", "signal", "signal" ],
 					"patching_rect" : [ 35.0, 193.0, 183.0, 20.0 ],
 					"text" : "hilbertModulator.model~ #1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "jcom.ui",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -470,6 +470,10 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "jcom.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "jcom.parameter.mxo",
 				"type" : "iLaX"
 			}
@@ -487,10 +491,6 @@
 			}
 , 			{
 				"name" : "jcom.preset.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
