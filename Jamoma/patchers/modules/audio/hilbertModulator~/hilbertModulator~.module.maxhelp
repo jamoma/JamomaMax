@@ -26,7 +26,7 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.hilbertModulator~", "@description", "One-sided ring modulator based on Hilbert filter." ],
+					"args" : [ "@name", "hilbertModulator~.module", "@description", "One-sided ring modulator based on Hilbert filter." ],
 					"bgmode" : 1,
 					"id" : "obj-6",
 					"maxclass" : "bpatcher",
@@ -72,7 +72,7 @@
 					"args" : [ "hilbertModulator~" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.hilbertModulator~.maxpat",
+					"name" : "hilbertModulator~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
