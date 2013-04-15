@@ -20,7 +20,7 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod._template~", "@description", "A groovy new module" ],
+					"args" : [ "@name", "template.module", "@description", "A groovy new module" ],
 					"bgmode" : 1,
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
@@ -111,7 +111,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 780.0, 510.0, 132.0, 19.0 ],
-									"text" : "s jmod._template~.cmd"
+									"text" : "s template.module.cmd"
 								}
 
 							}
@@ -237,7 +237,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 665.0, 130.0, 132.0, 19.0 ],
-									"text" : "s jmod._template~.cmd"
+									"text" : "s template.module.cmd"
 								}
 
 							}
@@ -264,7 +264,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 281.0, 272.0, 132.0, 19.0 ],
-									"text" : "s jmod._template~.cmd"
+									"text" : "s template.module.cmd"
 								}
 
 							}
@@ -305,7 +305,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 260.0, 45.0, 132.0, 19.0 ],
-									"text" : "s jmod._template~.cmd"
+									"text" : "s template.module.cmd"
 								}
 
 							}
@@ -319,7 +319,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 667.0, 43.0, 132.0, 19.0 ],
-									"text" : "s jmod._template~.cmd"
+									"text" : "s template.module.cmd"
 								}
 
 							}
@@ -629,7 +629,7 @@
 						"default_fontsize" : 10.0
 					}
 ,
-					"text" : "p controlling_jmod._template~"
+					"text" : "p controlling_template.module"
 				}
 
 			}
@@ -643,7 +643,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 39.0, 347.0, 131.0, 19.0 ],
-					"text" : "r jmod._template~.cmd"
+					"text" : "r template.module.cmd"
 				}
 
 			}
@@ -683,7 +683,7 @@
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"id" : "obj-28",
 					"maxclass" : "bpatcher",
-					"name" : "jmod._template~.maxpat",
+					"name" : "template.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
