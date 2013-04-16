@@ -30,7 +30,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.tremolo~", "@description", "Stereo tremolo effect with channel phase offset" ],
+					"args" : [ "@name", "tremolo~.module", "@description", "Stereo tremolo effect with channel phase offset" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -49,13 +49,13 @@
 					"id" : "obj-4",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.tremolo~.maxpat",
+					"name" : "tremolo~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
 					"patching_rect" : [ 30.0, 265.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"varname" : "jmod.tremolo~"
+					"varname" : "tremolo~.module"
 				}
 
 			}
