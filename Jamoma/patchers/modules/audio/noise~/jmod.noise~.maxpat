@@ -6,9 +6,9 @@
 		"defrect" : [ 182.0, 322.0, 612.0, 409.0 ],
 		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 		"openinpresentation" : 1,
-		"default_fontsize" : 10.0,
+		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Verdana",
+		"default_fontname" : "Arial",
 		"gridonopen" : 0,
 		"gridsize" : [ 5.0, 5.0 ],
 		"gridsnaponopen" : 0,
@@ -21,11 +21,11 @@
 					"maxclass" : "message",
 					"text" : "/preset/store 1 default, /preset/write",
 					"id" : "obj-22",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"patching_rect" : [ 85.0, 220.0, 251.0, 17.0 ],
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"outlettype" : [ "" ]
 				}
 
@@ -35,11 +35,11 @@
 					"maxclass" : "newobj",
 					"text" : "jcom.meter_receive 1",
 					"id" : "obj-14",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"patching_rect" : [ 360.0, 20.0, 141.0, 19.0 ],
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"outlettype" : [ "" ]
 				}
 
@@ -61,11 +61,11 @@
 					"maxclass" : "newobj",
 					"text" : "jcom.out~ 1",
 					"id" : "obj-1",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"patching_rect" : [ 380.0, 280.0, 82.0, 19.0 ],
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"outlettype" : [ "signal", "" ]
 				}
 
@@ -75,11 +75,11 @@
 					"maxclass" : "newobj",
 					"text" : "jcom.in~",
 					"id" : "obj-2",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"patching_rect" : [ 380.0, 230.0, 63.0, 19.0 ],
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"outlettype" : [ "", "" ]
 				}
 
@@ -89,11 +89,11 @@
 					"maxclass" : "message",
 					"text" : "/documentation/generate",
 					"id" : "obj-3",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"patching_rect" : [ 134.0, 241.0, 158.0, 17.0 ],
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"outlettype" : [ "" ]
 				}
 
@@ -104,12 +104,12 @@
 					"text" : "mode:",
 					"frgb" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-4",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"presentation_rect" : [ 16.0, 30.0, 46.0, 19.0 ],
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 16.0, 30.0, 46.0, 19.0 ],
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"presentation" : 1
 				}
 
@@ -119,13 +119,13 @@
 					"maxclass" : "umenu",
 					"varname" : "Mode",
 					"id" : "obj-5",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"presentation_rect" : [ 65.0, 30.0, 83.0, 19.0 ],
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"types" : [  ],
 					"patching_rect" : [ 25.0, 99.0, 83.0, 19.0 ],
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"pattrmode" : 1,
 					"presentation" : 1,
 					"items" : [ "off", ",", "white", ",", "pink" ],
@@ -138,11 +138,11 @@
 					"maxclass" : "message",
 					"text" : "/init",
 					"id" : "obj-6",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"patching_rect" : [ 292.0, 240.0, 47.0, 17.0 ],
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"outlettype" : [ "" ]
 				}
 
@@ -164,11 +164,11 @@
 					"text" : "---signal outputs---",
 					"frgb" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-8",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 410.0, 322.0, 140.0, 19.0 ],
-					"fontsize" : 10.0
+					"fontsize" : 12.0
 				}
 
 			}
@@ -178,11 +178,11 @@
 					"text" : "command input",
 					"frgb" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-9",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 45.0, 175.0, 90.0, 19.0 ],
-					"fontsize" : 10.0
+					"fontsize" : 12.0
 				}
 
 			}
@@ -191,11 +191,11 @@
 					"maxclass" : "newobj",
 					"text" : "jalg.noise~",
 					"id" : "obj-10",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"patching_rect" : [ 380.0, 255.0, 101.0, 19.0 ],
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"outlettype" : [ "signal" ]
 				}
 
@@ -230,11 +230,11 @@
 					"text" : "jcom.model @type audio @description \"Play sine tones - square - triangle waves etc.\"",
 					"linecount" : 2,
 					"id" : "obj-13",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"patching_rect" : [ 15.0, 269.0, 333.0, 31.0 ],
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"outlettype" : [ "", "" ]
 				}
 
@@ -245,11 +245,11 @@
 					"varname" : "mode[1]",
 					"text" : "jcom.parameter mode @type string @description \"choose the noise function.\"",
 					"id" : "obj-15",
-					"fontname" : "Verdana",
+					"fontname" : "Arial",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"patching_rect" : [ 25.0, 130.0, 440.0, 19.0 ],
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"outlettype" : [ "", "", "" ]
 				}
 
