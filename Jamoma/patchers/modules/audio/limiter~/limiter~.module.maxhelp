@@ -17,7 +17,7 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.limiter~", "@description", "Stereo limiter module" ],
+					"args" : [ "@name", "limiter~.module", "@description", "Stereo limiter module" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -111,7 +111,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "jmod.limiter~" ],
+									"args" : [ "limiter~.module" ],
 									"id" : "obj-4",
 									"maxclass" : "bpatcher",
 									"name" : "jmod.preset_params.maxpat",
@@ -700,7 +700,7 @@
 					"args" : [ "/limiter~" ],
 					"id" : "obj-35",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.limiter~.maxpat",
+					"name" : "limiter~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
