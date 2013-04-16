@@ -17,7 +17,7 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.saturation~", "@description", "Stereo saturation/distortion effect" ],
+					"args" : [ "@name", "saturation~.module", "@description", "Stereo saturation/distortion effect" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -172,7 +172,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "jmod.saturation~" ],
+									"args" : [ "saturation~.module" ],
 									"id" : "obj-8",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
@@ -439,7 +439,7 @@
 					"id" : "obj-24",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.saturation~.maxpat",
+					"name" : "saturation~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
