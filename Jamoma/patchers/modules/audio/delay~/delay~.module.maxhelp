@@ -17,7 +17,7 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.delay~", "@description", "Sample-accurate delay module" ],
+					"args" : [ "@name", "delay~.module", "@description", "Sample-accurate delay module" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -158,7 +158,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "jmod.delay~" ],
+									"args" : [ "delay~.module" ],
 									"id" : "obj-6",
 									"maxclass" : "bpatcher",
 									"name" : "jmod.preset_params.maxpat",
@@ -629,7 +629,7 @@
 					"args" : [  ],
 					"id" : "obj-36",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.delay~.maxpat",
+					"name" : "delay~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
