@@ -17,7 +17,7 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.sine~", "@description", "Playing simple waveforms" ],
+					"args" : [ "@name", "sine~.module", "@description", "Playing simple waveforms" ],
 					"bgmode" : 1,
 					"id" : "obj-10",
 					"maxclass" : "bpatcher",
@@ -226,7 +226,7 @@
 					"id" : "obj-14",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.sine~.maxpat",
+					"name" : "sine~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "signal" ],
