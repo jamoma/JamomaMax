@@ -551,9 +551,7 @@ void cue_doedit(TTPtr self)
         atom_setsym(&a, gensym("closed"));
         object_obex_dumpout(self, gensym("editor"), 1, &a);
 		
-		if (!tterr)
-			object_obex_dumpout(self, _sym_read, 0, NULL);
-		else
+		if (tterr)
 			object_obex_dumpout(self, _sym_error, 0, NULL);
 	}
 	
