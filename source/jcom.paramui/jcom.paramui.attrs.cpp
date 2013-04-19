@@ -207,7 +207,7 @@ t_max_err paramui_setDescription(t_paramui *x, void *attr, long argc, t_atom *ar
 		x->attr_description = gensym(text);
 		sysmem_freeptr(text);
 	}
-	object_attr_setsym(x->obj_parameter, jps_description, x->attr_description);
+	object_attr_setsym(x->obj_parameter, gensym("description"), x->attr_description);
 	return MAX_ERR_NONE;
 }
 

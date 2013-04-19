@@ -429,7 +429,7 @@ void vimic_reflGain(t_vimic *x, t_symbol *s, short argc, t_atom *argv) //TODO ch
                 {
                     //if (argv[1].a_w.w_float <= 8.0 && argv[1].a_w.w_float >= 0.0)
                     //{
-                    x->reflGains[b] = CLIP(argv[1].a_w.w_float,0.0, 8.0);
+                    x->reflGains[b] = TTClip<float>(argv[1].a_w.w_float,0.0, 8.0);
 					
 					if (x->reflGains[2] > 0.0){
 						x->reflOrder = 2;
@@ -609,7 +609,7 @@ void vimic_minSensi(t_vimic *x, double n)
 
 void vimic_distModel(t_vimic *x, long n)
 {   
-    x->distModel = CLIP(n,1,2);
+    x->distModel = TTClip<int>(n,1,2);
     x->room->sources[0].flag(true);
     if (x->directBang == 1) vimic_bang(x);
     // modelID 1 for inverse proportional decrease

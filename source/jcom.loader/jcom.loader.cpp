@@ -23,11 +23,11 @@ typedef struct _loader{
 
 
 // Prototypes for methods
-void*		loader_new(t_symbol *name, long argc, t_atom *argv);
+void* loader_new(t_symbol *name, long argc, t_atom *argv);
 
 
 // Globals
-t_class		*loader_class;
+static t_class *loader_class;
 
 
 /************************************************************************************/

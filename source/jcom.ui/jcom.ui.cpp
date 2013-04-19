@@ -372,7 +372,7 @@ void ui_build(t_ui *x)
 	x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
 	hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
 	
-	box = object_attr_getobj(x->patcherPtr, jps_box);
+	box = object_attr_getobj(x->patcherPtr, gensym("box"));
 	object_attr_get_rect((ObjectPtr)x, _sym_presentation_rect, &uiRect);
 	
 	if (hierarchy == _sym_bpatcher) {

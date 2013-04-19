@@ -122,8 +122,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	t_class *c;
 	t_object *attr;
 
-	jamoma_init();
-common_symbols_init();
+	common_symbols_init();
 	jps_symbol  = gensym("symbol");
 	jps_long    = gensym("long");
 	jps_float32 = gensym("float32");

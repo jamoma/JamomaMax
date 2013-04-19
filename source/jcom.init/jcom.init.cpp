@@ -84,7 +84,7 @@ void *init_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 		
 		x->dumpout = outlet_new(x, NULL);
 		x->outlet = outlet_new(x, NULL);
-		object_obex_store((void *)x, jps_dumpout, (object *)x->dumpout);		// setup the dumpout
+		object_obex_store((void *)x, gensym("dumpout"), (object *)x->dumpout);		// setup the dumpout
 
 		x->patcherNode = NULL;
 		x->initReceiver = NULL;

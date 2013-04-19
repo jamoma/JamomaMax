@@ -113,7 +113,6 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	long	flags;
 	t_class *c;
 	
-	jamoma_init();
 	common_symbols_init();
 	
 	c = class_new("jcom.textslider", 
