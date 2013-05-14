@@ -31,6 +31,92 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 191.375, 261.0, 65.0, 20.0 ],
+					"text" : "jcom.view"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-10",
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 90.5, 300.0, 27.0, 27.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-28",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "signal", "signal" ],
+					"patching_rect" : [ 21.0, 261.0, 158.0, 20.0 ],
+					"text" : "panpotM~.model #1",
+					"varname" : "jcom.model"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-30",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 21.0, 198.0, 26.0, 26.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-32",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 160.0, 198.0, 27.0, 27.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-33",
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 160.0, 300.0, 27.0, 27.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-40",
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 21.0, 300.0, 26.0, 26.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -100,7 +186,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 267.25, 358.0, 55.0, 20.0 ],
+					"patching_rect" : [ 407.25, 326.0, 55.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 10.5, 47.0, 48.0, 20.0 ]
 				}
@@ -256,7 +342,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 208.0, 303.5, 49.0, 20.0 ],
+					"patching_rect" : [ 348.0, 271.5, 49.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -288,7 +374,7 @@
 					"outlettype" : [ "float" ],
 					"outlinecolor" : [ 0.67451, 0.690196, 0.345098, 1.0 ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 208.0, 338.0, 40.0, 40.0 ],
+					"patching_rect" : [ 348.0, 306.0, 40.0, 40.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 64.5, 19.5, 54.0, 54.0 ],
 					"size" : 2.0
@@ -304,7 +390,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 208.0, 261.0, 119.0, 20.0 ],
+					"patching_rect" : [ 348.0, 229.0, 119.0, 20.0 ],
 					"text" : "jcom.remote position",
 					"varname" : "position"
 				}
@@ -534,43 +620,6 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-13",
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 156.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-3",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 84.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 20.0, 121.0, 63.0, 20.0 ],
-					"text" : "jcom.view"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"background" : 1,
 					"id" : "obj-34",
 					"maxclass" : "jcom.ui",
@@ -587,15 +636,6 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-13", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -608,7 +648,7 @@
 					"destination" : [ "obj-27", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 217.5, 297.0, 276.75, 297.0 ],
+					"midpoints" : [ 357.5, 265.0, 416.75, 265.0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -627,7 +667,7 @@
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 217.5, 387.0, 200.5, 387.0, 200.5, 251.0, 217.5, 251.0 ],
+					"midpoints" : [ 357.5, 355.0, 340.5, 355.0, 340.5, 219.0, 357.5, 219.0 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -646,17 +686,53 @@
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 276.75, 394.0, 191.125, 394.0, 191.125, 244.0, 217.5, 244.0 ],
+					"midpoints" : [ 416.75, 362.0, 331.125, 362.0, 331.125, 212.0, 357.5, 212.0 ],
 					"source" : [ "obj-27", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
+					"source" : [ "obj-28", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-33", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-28", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-28", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-30", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-28", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-32", 0 ]
 				}
 
 			}
@@ -680,11 +756,14 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.ui.mxo",
-				"type" : "iLaX"
+				"name" : "panpotM~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/panpot~",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "jcom.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -697,6 +776,22 @@
 			}
 , 			{
 				"name" : "jcom.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jcom.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jcom.panorama~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jcom.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jcom.view.mxo",
 				"type" : "iLaX"
 			}
  ]
