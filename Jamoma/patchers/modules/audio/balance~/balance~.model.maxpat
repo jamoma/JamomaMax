@@ -67,7 +67,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 684.0, 63.5, 153.0, 74.0 ],
+					"patching_rect" : [ 684.0, 63.5, 157.0, 74.0 ],
 					"text" : "jcom.parameter shape @type string @description \"Choose the panning function: linear, squareroot, or equal-power\"",
 					"varname" : "shape[1]"
 				}
@@ -644,8 +644,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 24.0, 268.5, 187.0, 33.0 ],
-					"text" : "jcom.model \"Balancing the two channels of a stereo signal.\""
+					"patching_rect" : [ 24.0, 268.5, 215.0, 33.0 ],
+					"text" : "jcom.model @description \"Balancing the two channels of a stereo signal.\""
 				}
 
 			}
