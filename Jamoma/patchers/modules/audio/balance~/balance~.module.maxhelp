@@ -88,7 +88,7 @@
 					"args" : [ "panpot~" ],
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.panpot~.maxpat",
+					"name" : "panpot~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
@@ -729,7 +729,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.panpot~.maxpat",
+				"name" : "panpot~.module.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/audio/panpot~",
 				"patcherrelativepath" : "",
 				"type" : "JSON",

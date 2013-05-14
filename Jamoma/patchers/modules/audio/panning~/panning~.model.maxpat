@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 128.0, 90.0, 855.0, 389.0 ],
+		"rect" : [ 128.0, 90.0, 938.0, 385.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 302.0, 237.0, 69.0, 18.0 ],
+					"patching_rect" : [ 416.0, 237.0, 69.0, 18.0 ],
 					"text" : "position $1"
 				}
 
@@ -51,7 +51,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 649.0, 23.5, 148.0, 114.0 ],
+					"patching_rect" : [ 763.0, 23.5, 148.0, 114.0 ],
 					"text" : "jcom.parameter Mode @type string @description \"choose internal calculation mode for panning: fast uses a lookup table while precision performs trigonometric calculations\"",
 					"varname" : "mode[1]"
 				}
@@ -67,7 +67,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 485.0, 23.5, 146.0, 87.0 ],
+					"patching_rect" : [ 599.0, 23.5, 146.0, 87.0 ],
 					"text" : "jcom.parameter shape @type string @description \"Choose the panning function: linear, squareroot, or equal-power\"",
 					"varname" : "shape[1]"
 				}
@@ -83,7 +83,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 302.0, 23.5, 170.0, 127.0 ],
+					"patching_rect" : [ 416.0, 23.5, 170.0, 127.0 ],
 					"text" : "jcom.parameter position @type decimal @range/bounds -1 1. @ramp/drive Max @value/default 0. @range/clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
 					"varname" : "position"
 				}
@@ -286,7 +286,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 649.0, 237.0, 72.0, 20.0 ],
+					"patching_rect" : [ 763.0, 237.0, 72.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -311,7 +311,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 24.0, 322.5, 24.0, 24.0 ]
+					"patching_rect" : [ 24.0, 341.5, 24.0, 24.0 ]
 				}
 
 			}
@@ -544,7 +544,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 485.0, 237.0, 74.0, 20.0 ],
+					"patching_rect" : [ 599.0, 237.0, 74.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -582,7 +582,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 141.0, 23.5, 24.0, 24.0 ]
+					"patching_rect" : [ 255.0, 23.5, 24.0, 24.0 ]
 				}
 
 			}
@@ -593,7 +593,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 186.0, 322.5, 24.0, 24.0 ]
+					"patching_rect" : [ 300.0, 341.5, 24.0, 24.0 ]
 				}
 
 			}
@@ -604,7 +604,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 141.0, 322.5, 24.0, 24.0 ]
+					"patching_rect" : [ 255.0, 341.5, 24.0, 24.0 ]
 				}
 
 			}
@@ -617,7 +617,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 141.0, 282.0, 109.0, 20.0 ],
+					"patching_rect" : [ 255.0, 282.0, 109.0, 20.0 ],
 					"text" : "jcom.panorama~ 1"
 				}
 
@@ -627,12 +627,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1",
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 24.0, 282.0, 100.0, 20.0 ],
-					"text" : "jcom.model"
+					"patching_rect" : [ 24.0, 282.0, 192.0, 47.0 ],
+					"text" : "jcom.model @description \"APanning  a mono sound source to stereo.\""
 				}
 
 			}
@@ -669,7 +670,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 658.5, 269.0, 150.5, 269.0 ],
+					"midpoints" : [ 772.5, 269.0, 264.5, 269.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -688,7 +689,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 150.5, 314.0, 150.5, 314.0 ],
+					"midpoints" : [ 264.5, 314.0, 264.5, 314.0 ],
 					"source" : [ "obj-18", 0 ]
 				}
 
@@ -698,7 +699,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 494.5, 269.0, 150.5, 269.0 ],
+					"midpoints" : [ 608.5, 269.0, 264.5, 269.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -717,7 +718,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 311.5, 268.0, 150.5, 268.0 ],
+					"midpoints" : [ 425.5, 268.0, 264.5, 268.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
