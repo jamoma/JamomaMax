@@ -950,7 +950,7 @@ void ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 	long		init = atom_getlong(argv);
 	TTValue		v;
 	
-	if (init) {
+	if (init && obj->modelExplorer) {
 		
 		// observe the namespace of the model
 		// by this way, the creation of any widgets depends on the existence of the data	
