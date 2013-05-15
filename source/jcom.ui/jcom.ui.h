@@ -77,7 +77,7 @@ typedef struct _ui{
 	t_jrgba				textcolor;
 	t_jrgba				selectcolor;
 	
-	long				ui_freeze;				// freeze all viewers of the view (TODO)
+	long				ui_freeze;				// freeze all viewers of the view
 	
 	t_jpopupmenu		*menu;					// model menu
 	void				*menu_qelem;			// ...
@@ -143,8 +143,6 @@ typedef struct _ui{
 t_ui*		ui_new(t_symbol *s, long argc, t_atom *argv);
 void 		ui_free(t_ui *x);
 t_max_err	ui_notify(t_ui *x, t_symbol *s, t_symbol *msg, void *sender, void *data);
-t_max_err	ui_address_set(t_ui *x, t_object *attr, long argc, t_atom *argv);
-t_max_err	ui_address_get(t_ui *x, t_object *attr, long *argc, t_atom **argv);
 void		ui_subscribe(t_ui *x, SymbolPtr address);
 void		ui_build(t_ui *x);
 void 		ui_bang(t_ui *x);
