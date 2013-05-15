@@ -203,7 +203,17 @@ void remote_new_address(TTPtr self, SymbolPtr address)
         // Starts iteration on internals
         x->iterateInternals = YES;
         
-        // prepare arrayValue
+        // clear former arrayValue
+        if (EXTRA->arrayValue) {
+            for (j = 0; j < x->arraySize; j++)
+                if (EXTRA->arrayValue[j])
+                    delete EXTRA->arrayValue[j];
+            
+            free(EXTRA->arrayValue);
+            EXTRA->arrayValue = NULL;
+        }
+        
+        // prepare new arrayValue
         x->arraySize = number;
         EXTRA->arrayValue = (TTValuePtr*)malloc(sizeof(TTValuePtr)*number);
         for (j = 0; j < x->arraySize; j++)
