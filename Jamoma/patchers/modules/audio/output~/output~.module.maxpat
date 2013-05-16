@@ -36,7 +36,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 345.5, 567.0, 106.5, 20.0 ],
+					"patching_rect" : [ 19.0, 553.0, 106.5, 20.0 ],
 					"text" : "output~.model #1"
 				}
 
@@ -1221,7 +1221,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 19.0, 560.0, 63.0, 20.0 ],
+					"patching_rect" : [ 147.0, 553.0, 63.0, 20.0 ],
 					"text" : "jcom.view",
 					"varname" : "jcom.hub"
 				}
@@ -1895,7 +1895,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 433.0, 504.0, 24.0, 24.0 ]
+					"patching_rect" : [ 106.5, 503.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -1907,7 +1907,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 388.0, 504.0, 24.0, 24.0 ]
+					"patching_rect" : [ 62.75, 503.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -2216,15 +2216,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-88", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-22", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-42", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2506,6 +2497,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-88", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-6", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2588,7 +2588,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
+					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-89", 0 ]
