@@ -17,7 +17,7 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.output~", "@description", "Generic stereo output module with some master fx and recording" ],
+					"args" : [ "@name", "output~.module", "@description", "Generic stereo output module with some master fx and recording" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -88,7 +88,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 246.0, 44.0, 112.0, 19.0 ],
-													"text" : "s jmod.output~.help"
+													"text" : "s output~.module.help"
 												}
 
 											}
@@ -185,7 +185,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 81.0, 276.0, 112.0, 19.0 ],
-									"text" : "s jmod.output~.help"
+									"text" : "s output~.module.help"
 								}
 
 							}
@@ -457,7 +457,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 453.0, 411.0, 112.0, 19.0 ],
-									"text" : "s jmod.output~.help"
+									"text" : "s output~.module.help"
 								}
 
 							}
@@ -656,7 +656,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 278.0, 20.0, 112.0, 19.0 ],
-									"text" : "s jmod.output~.help"
+									"text" : "s output~.module.help"
 								}
 
 							}
@@ -1190,7 +1190,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 90.0, 252.0, 111.0, 19.0 ],
-					"text" : "r jmod.output~.help"
+					"text" : "r output~.module.help"
 				}
 
 			}
@@ -1199,7 +1199,7 @@
 					"args" : [ "/output~" ],
 					"id" : "obj-49",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.output~.maxpat",
+					"name" : "output~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

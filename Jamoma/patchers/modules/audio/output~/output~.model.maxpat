@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 139.0, 80.0, 898.0, 494.0 ],
+		"rect" : [ 626.0, 107.0, 898.0, 494.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -31,6 +31,49 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-1",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 195.0, 15.0, 139.0, 31.0 ],
+					"text" : "/preset/store 1 default, /preset/write"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-2",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 15.0, 15.0, 141.0, 18.0 ],
+					"text" : "/documentation/generate"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-81",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 155.0, 15.0, 39.0, 18.0 ],
+					"text" : "/init"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-28",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -45,7 +88,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 1083.0, 651.0 ],
+						"rect" : [ 25.0, 69.0, 1209.0, 651.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -71,8 +114,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 266.0, 284.0, 25.0, 25.0 ],
-									"presentation_rect" : [ 296.0, 365.0, 0.0, 0.0 ]
+									"patching_rect" : [ 266.0, 284.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -92,13 +134,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
-									"linecount" : 6,
+									"linecount" : 8,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 539.5, 178.0, 204.0, 87.0 ],
-									"text" : "jcom.return audio/amplitude.2 @type decimal @range/bounds 0. 1. @enable 0 @description \"instant amplitude of the signal number 2\" @repetitions/allow 1 @dataspace gain"
+									"patching_rect" : [ 539.5, 178.0, 172.0, 114.0 ],
+									"text" : "jcom.return audio/amplitude.2 @type decimal @range/bounds 0. 1. @repetitions/allow 1 @dataspace gain @description \"instant amplitude of the signal number 2\""
 								}
 
 							}
@@ -107,13 +149,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-10",
-									"linecount" : 6,
+									"linecount" : 8,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 324.0, 178.0, 204.0, 87.0 ],
-									"text" : "jcom.return audio/amplitude.1 @type decimal @range/bounds 0. 1. @enable 0 @description \"instant amplitude of the signal number 1\" @repetitions/allow 1 @dataspace gain"
+									"patching_rect" : [ 324.0, 178.0, 172.0, 114.0 ],
+									"text" : "jcom.return audio/amplitude.1 @type decimal @range/bounds 0. 1. @repetitions/allow 1 @dataspace gain @description \"instant amplitude of the signal number 1\""
 								}
 
 							}
@@ -153,7 +195,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "float" ],
+									"outlettype" : [ "bang" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
@@ -476,13 +518,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-30",
-					"linecount" : 5,
+					"linecount" : 6,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 262.799988, 335.0, 163.0, 74.0 ],
-					"text" : "jcom.return cpu @enable 0 @description \"reports the cpu usage of the dsp processing\" @range/bounds 0. 100. @type decimal"
+					"patching_rect" : [ 262.799988, 335.0, 147.0, 87.0 ],
+					"text" : "jcom.return cpu @range/bounds 0. 100. @type decimal @description \"reports the cpu usage of the dsp processing\""
 				}
 
 			}
@@ -680,8 +722,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 173.0, 317.0, 25.0, 25.0 ],
-									"presentation_rect" : [ 178.0, 322.0, 0.0, 0.0 ]
+									"patching_rect" : [ 173.0, 317.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -1036,7 +1077,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
 									"patching_rect" : [ 141.0, 316.0, 32.5, 20.0 ],
-									"presentation_rect" : [ 123.0, 254.0, 0.0, 0.0 ],
 									"text" : "*~"
 								}
 
@@ -1279,8 +1319,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 140.0, 354.0, 25.0, 25.0 ],
-									"presentation_rect" : [ 123.0, 412.0, 0.0, 0.0 ]
+									"patching_rect" : [ 140.0, 354.0, 25.0, 25.0 ]
 								}
 
 							}
