@@ -181,7 +181,7 @@
 					"id" : "obj-13",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.output~.maxpat",
+					"name" : "output~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1236,7 +1236,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.output~.maxpat",
+				"name" : "output~.module.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/audio/output~",
 				"patcherrelativepath" : "../../audio/output~",
 				"type" : "JSON",

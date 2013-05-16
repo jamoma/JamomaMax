@@ -36,13 +36,13 @@
 					"id" : "obj-2",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.output~.maxpat",
+					"name" : "output~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 63.0, 464.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"varname" : "jmod.output~"
+					"varname" : "output~.module"
 				}
 
 			}
