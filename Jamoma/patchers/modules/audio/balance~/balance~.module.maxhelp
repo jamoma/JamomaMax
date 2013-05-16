@@ -85,10 +85,10 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "panpot~" ],
+					"args" : [ "balance~" ],
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
-					"name" : "panpot~.module.maxpat",
+					"name" : "balance~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
@@ -99,7 +99,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@description", "A panpot for stereo sources" ],
+					"args" : [ "@description", "A balance for stereo sources" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -117,7 +117,7 @@
 					"args" : [ "/output~" ],
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.output~.maxpat",
+					"name" : "output~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -673,7 +673,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.output~.maxpat",
+				"name" : "output~.module.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/audio/output~",
 				"patcherrelativepath" : "../output~",
 				"type" : "JSON",
@@ -729,15 +729,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "panpot~.module.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/audio/panpot~",
+				"name" : "balance~.module.maxpat",
+				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/audio/balance~",
 				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jalg.panpot~.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/audio/panpot~",
+				"name" : "jalg.balance~.maxpat",
+				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/audio/balance~",
 				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
