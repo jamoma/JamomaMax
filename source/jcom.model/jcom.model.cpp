@@ -611,10 +611,10 @@ void model_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
             aPreset = TTPresetPtr((TTObjectBasePtr)o2[0]);
             
             // Store the preset
-            aPreset->sendMessage(TTSymbol("Store"), kTTValNONE, kTTValNONE);
+            aPreset->sendMessage(TTSymbol("Store"));
 			
 			critical_enter(0);
-			args = TTValue(TTPtr(aPreset));
+			args = TTValue(TTObjectBasePtr(aPreset));
 			aTextHandler->setAttributeValue(kTTSym_object, args);
 			args = TTValue((TTPtr)buffer);
 			tterr1 = aTextHandler->sendMessage(kTTSym_Write, args, kTTValNONE);

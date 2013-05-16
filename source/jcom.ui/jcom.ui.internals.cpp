@@ -868,38 +868,25 @@ void ui_return_ui_size(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void ui_return_ui_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	t_ui* obj = (t_ui*)self;
+    TTNodePtr   modelNode;
+    TTErr       err;
 	
 	if (argc == 1)
-		object_attr_setvalueof(obj, gensym("ui_is_frozen"), argc, argv);
+		obj->ui_freeze = atom_getlong(argv);
 	
-	// TODO : Freeze all jcom.remote of the view patch
-	// 1. Get the TTContainer object of the view patch
-	// 2. use his send message : /*.*:freeze 0/1
-	
-	// freeze all widgets
-	// gain
-	if (obj->has_gain)
-		ui_viewer_freeze(obj, TTSymbol("gain"), obj->ui_freeze);
-	
-	// mix
-	if (obj->has_mix)
-		ui_viewer_freeze(obj, TTSymbol("mix"), obj->ui_freeze);
-	
-	// bypass
-	if (obj->has_bypass)
-		ui_viewer_freeze(obj, TTSymbol("bypass"), obj->ui_freeze);
-	
-	// freeze
-	if (obj->has_freeze)
-		ui_viewer_freeze(obj, TTSymbol("freeze"), obj->ui_freeze);
-	
-	// preview
-	if (obj->has_preview)
-		ui_viewer_freeze(obj, TTSymbol("preview"), obj->ui_freeze);
-	
-	// mute
-	if (obj->has_mute) 
-		ui_viewer_freeze(obj, TTSymbol("mute"), obj->ui_freeze);
+	// get the TTContainer object of the view patch
+    err = JamomaDirectory->getTTNode(obj->viewAddress, &modelNode);
+    
+    if (!err) {
+        
+        if (modelNode->getObject()) {
+            
+            // set freeze attribute to all jcom.remote (on 3 levels only as we don't have the // operator)
+            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*:freeze"), argc, argv);
+            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*/*.*:freeze"), argc, argv);
+            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*/*.*/*.*:freeze"), argc, argv);
+        }
+    }
 }
 
 void ui_return_color_contentBackground(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -939,9 +926,12 @@ void ui_return_color_border(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
 
 void ui_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
-	t_ui* obj = (t_ui*)self; 
-	
-	object_attr_setvalueof(obj, gensym("address"), argc, argv);
+    ObjectPtr obj = (ObjectPtr)self;
+    
+    // The following must be deferred because we have to interrogate our box,
+	// and our box is not yet valid until we have finished instantiating the object.
+	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
+	defer_low(obj, (method)ui_subscribe, atom_getsym(argv), 0, 0);
 }
 
 void ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -950,7 +940,7 @@ void ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 	long		init = atom_getlong(argv);
 	TTValue		v;
 	
-	if (init) {
+	if (init && obj->modelExplorer) {
 		
 		// observe the namespace of the model
 		// by this way, the creation of any widgets depends on the existence of the data	

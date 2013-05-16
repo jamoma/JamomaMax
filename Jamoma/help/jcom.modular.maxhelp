@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 2,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 3.0, 44.0, 540.0, 854.0 ],
@@ -217,7 +218,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 184.5, 526.0, 317.5, 60.0 ],
-					"text" : "Open the remoteMinuitApp patcher using Max Runtime (see in jamoma/documentation/examples/ folder) to see how Minuit allows namespace discovering for applcation that use Minuit protocol."
+					"text" : "Open the remoteMinuitApp patcher using Max Runtime (see in Jamoma/examples folder) to see how Minuit allows namespace discovering for applcation that use Minuit protocol."
 				}
 
 			}
@@ -235,8 +236,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 2,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 544.0, 44.0, 421.0, 183.0 ],
@@ -483,8 +485,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 2,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 544.0, 296.0, 420.0, 602.0 ],
@@ -643,7 +646,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-24",
-									"items" : [ "/", ",", "filter", ",", "filter/frequency", ",", "filter/type", ",", "player", ",", "player/gain", ",", "player/play" ],
+									"items" : "<empty>",
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -837,7 +840,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 3.0, 106.5, 404.0, 20.0 ],
-									"text" : "/player/gain -21.15",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 
@@ -1068,7 +1070,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 108.75, 425.0, 414.25, 87.0 ],
-					"text" : "Many applications cannot describe themself because they use a protocol which doesn't allow it (like OSC). That's why you need to load a namespace file to declare the parameter|message|return of the application to control.\n\nFor the remoteOSCApp used for this example, load the \"remoteOSCApp - namespace.xml\" file in jamoma/documentation/examples folder before."
+					"text" : "Many applications cannot describe themself because they use a protocol which doesn't allow it (like OSC). That's why you need to load a namespace file to declare the parameter|message|return of the application to control.\n\nFor the remoteOSCApp used for this example, load the \"remoteOSCApp - namespace.xml\" file in Jamoma/examples folder before."
 				}
 
 			}
@@ -1492,36 +1494,50 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "jcom.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jcom.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jcom.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jcom.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
-				"patcherrelativepath" : "../../../Max/library/components/jamomaPath",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"patcherrelativepath" : "../patchers/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/modules/audio/equalizer~",
-				"patcherrelativepath" : "../../../Max/modules/audio/equalizer~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/equalizer~",
+				"patcherrelativepath" : "../patchers/modules/audio/equalizer~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "equalizer~views.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/equalizer~",
+				"patcherrelativepath" : "../patchers/modules/audio/equalizer~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "jcom.thru.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
+				"patcherrelativepath" : "../patchers/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1566,15 +1582,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "jcom.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remoteArray.mxo",
+				"name" : "jcom.meter~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jcom.init.mxo",
 				"type" : "iLaX"
 			}
  ]

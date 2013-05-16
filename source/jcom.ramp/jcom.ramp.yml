@@ -1,9 +1,11 @@
 
 sources:
   - jcom.ramp.cpp		
+  - ../classwrapper/TTModularClassWrapperMax.cpp
   - ../c74support/max-includes/common/commonsyms.cpp
     
 includes:
+  - . 
   - ../../../../Core/Foundation/library/includes
   - ../../../../Core/Modular/library/includes
   - ../../../../Core/Modular/library/PeerObject

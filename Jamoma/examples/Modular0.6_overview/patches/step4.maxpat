@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 2,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 289.0, 44.0, 1151.0, 622.0 ],
@@ -426,7 +427,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 930.0, 525.0, 187.0, 18.0 ],
-					"text" : "bang"
+					"text" : "out/mute 0"
 				}
 
 			}
@@ -958,8 +959,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 2,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 505.0, 220.0 ],
@@ -1202,7 +1204,7 @@
 					"fontsize" : 12.0,
 					"framecolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"id" : "obj-47",
-					"items" : "<empty>",
+					"items" : [ "channel.A/fps", ",", "channel.A/model/address", ",", "channel.A/model/class", ",", "channel.A/preset/order", ",", "channel.B/fps", ",", "channel.B/model/address", ",", "channel.B/model/class", ",", "channel.B/preset/order", ",", "model/address", ",", "model/class" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1223,7 +1225,7 @@
 					"fontsize" : 12.0,
 					"framecolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"id" : "obj-19",
-					"items" : "<empty>",
+					"items" : [ "channel.A/file/load", ",", "channel.A/model/documentation/generate", ",", "channel.A/model/edit", ",", "channel.A/model/help", ",", "channel.A/model/open", ",", "channel.A/model/reference", ",", "channel.A/preset/interpolate", ",", "channel.A/preset/mix", ",", "channel.A/preset/read", ",", "channel.A/preset/read/again", ",", "channel.A/preset/recall", ",", "channel.A/preset/remove", ",", "channel.A/preset/store", ",", "channel.A/preset/write", ",", "channel.A/preset/write/again", ",", "channel.B/file/load", ",", "channel.B/model/documentation/generate", ",", "channel.B/model/edit", ",", "channel.B/model/help", ",", "channel.B/model/open", ",", "channel.B/model/reference", ",", "channel.B/preset/interpolate", ",", "channel.B/preset/mix", ",", "channel.B/preset/read", ",", "channel.B/preset/read/again", ",", "channel.B/preset/recall", ",", "channel.B/preset/remove", ",", "channel.B/preset/store", ",", "channel.B/preset/write", ",", "channel.B/preset/write/again", ",", "model/documentation/generate", ",", "model/edit", ",", "model/help", ",", "model/open", ",", "model/reference" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1244,7 +1246,7 @@
 					"fontsize" : 12.0,
 					"framecolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"id" : "obj-14",
-					"items" : "<empty>",
+					"items" : [ "channel.A/file/path", ",", "channel.A/out/freeze", ",", "channel.A/out/mute", ",", "channel.A/out/preview", ",", "channel.A/play", ",", "channel.A/rate", ",", "channel.B/file/path", ",", "channel.B/out/freeze", ",", "channel.B/out/mute", ",", "channel.B/out/preview", ",", "channel.B/play", ",", "channel.B/rate" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1442,7 +1444,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 14.0, 66.0, 272.0, 27.0 ],
-					"text" : "Open jmod.movie.model.maxpat"
+					"text" : "Open movie.model.maxpat"
 				}
 
 			}
@@ -1485,8 +1487,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 4.0, 111.0, 177.0, 18.0 ],
-					"text" : "load jmod.movie.model.maxpat"
+					"patching_rect" : [ 4.0, 111.0, 147.0, 18.0 ],
+					"text" : "load movie.model.maxpat"
 				}
 
 			}
@@ -2085,14 +2087,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "movie.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/documentation/examples/Modular0.6_overview/movie",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
 				"patcherrelativepath" : "../movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "track.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/documentation/examples/Modular0.6_overview/track",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/track",
 				"patcherrelativepath" : "../track",
 				"type" : "JSON",
 				"implicit" : 1
