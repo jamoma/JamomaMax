@@ -26,3 +26,7 @@ function bang()
 	outlet(0, "plugin", this.max.isplugin);
 	outlet(0, "runtime", this.max.isruntime);
 }
+
+function msg_int(value) {
+	bang();
+}
