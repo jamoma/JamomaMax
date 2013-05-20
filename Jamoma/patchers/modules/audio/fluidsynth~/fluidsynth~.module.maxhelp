@@ -56,7 +56,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.fluidsynth~", "@description", "Synth based on the fluidsynth using soundfonts" ],
+					"args" : [ "@name", "fluidsynth~.module", "@description", "Synth based on the fluidsynth using soundfonts" ],
 					"bgmode" : 1,
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
@@ -74,7 +74,7 @@
 					"args" : [ "/output~" ],
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.output~.maxpat",
+					"name" : "output~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -278,7 +278,7 @@
 					"args" : [ "/fluidsynth~" ],
 					"id" : "obj-14",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.fluidsynth~.maxpat",
+					"name" : "fluidsynth~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
@@ -384,7 +384,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jmod.fluidsynth~.maxpat",
+				"name" : "fluidsynth~.module.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/modules/audio/fluidsynth~",
 				"patcherrelativepath" : "",
 				"type" : "JSON",
@@ -433,7 +433,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.output~.maxpat",
+				"name" : "output~.module.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/modules/audio/output~",
 				"patcherrelativepath" : "../output~",
 				"type" : "JSON",

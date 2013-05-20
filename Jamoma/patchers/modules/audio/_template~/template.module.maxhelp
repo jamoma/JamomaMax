@@ -65,7 +65,7 @@
 					"args" : [ "/output~" ],
 					"id" : "obj-43",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.output~.maxpat",
+					"name" : "output~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 273.0, 189.0, 1056.0, 608.0 ],
+		"rect" : [ 133.0, 318.0, 1056.0, 608.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -315,7 +315,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
 					"patching_rect" : [ 35.0, 193.0, 183.0, 20.0 ],
-					"text" : "hilbertModulator.model~ #1"
+					"text" : "hilbertModulator~.model #1"
 				}
 
 			}
@@ -463,7 +463,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "hilbertModulator.model~.maxpat",
+				"name" : "hilbertModulator~.model.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/hilbertModulator~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

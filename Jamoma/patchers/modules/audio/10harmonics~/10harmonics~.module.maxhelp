@@ -70,7 +70,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.10harmonics~", "@description", "A module for additive synthesis" ],
+					"args" : [ "@name", "10harmonics~.module", "@description", "A module for additive synthesis" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -87,7 +87,7 @@
 					"args" : [ "/harmonics" ],
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.10harmonics~.maxpat",
+					"name" : "10harmonics~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "signal" ],
@@ -101,7 +101,7 @@
 					"args" : [ "/output" ],
 					"id" : "obj-47",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.output~.maxpat",
+					"name" : "output~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

@@ -46,7 +46,7 @@
 					"args" : [ "/output~" ],
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.output~.maxpat",
+					"name" : "output~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -673,7 +673,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.output~.maxpat",
+				"name" : "output~.module.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/modules/audio/output~",
 				"patcherrelativepath" : "../output~",
 				"type" : "JSON",
