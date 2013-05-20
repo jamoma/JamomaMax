@@ -16,15 +16,18 @@
 
 #include "Jamoma.h"
 
+
+#define start_out 0
+#define	end_out 1
+
 // Data Structure for this object
 typedef struct _init{
 	Object				obj;
 	TTNodePtr			patcherNode;
 	TTReceiverPtr		initReceiver;
 	TTSubscriberPtr		subscriberObject;
-	TTAddress	address;
-	void				*outlet;
-	void				*dumpout;
+	TTAddress           address;
+	TTHandle            outlets;
 } t_init;
 
 // Prototypes for methods
@@ -82,9 +85,9 @@ void *init_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 	
 	if (x) {
 		
-		x->dumpout = outlet_new(x, NULL);
-		x->outlet = outlet_new(x, NULL);
-		object_obex_store((void *)x, gensym("dumpout"), (object *)x->dumpout);		// setup the dumpout
+        x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
+        x->outlets[end_out] = bangout(x);
+		x->outlets[start_out] = bangout(x);
 
 		x->patcherNode = NULL;
 		x->initReceiver = NULL;
@@ -123,9 +126,9 @@ void init_assist(t_init *x, void *b, long msg, long arg, char *dst)
 		strcpy(dst, "");
 	else if (msg==2) { // Outlets
 		if (arg == 0) 
-			strcpy(dst, "0 when initialization starts, 1 when initilization is done");
+			strcpy(dst, "bang when initialization starts");
 		else 
-			strcpy(dst, "dumpout");
+			strcpy(dst, "bang when initilization is done");
 	}
 }
 
@@ -203,8 +206,14 @@ void init_return_address(t_init *x, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 // GO !
 void init_return_value(t_init *x, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
-	if (atom_gettype(argv) == A_LONG)
-		outlet_int(x->outlet, atom_getlong(argv));
+	if (atom_gettype(argv) == A_LONG) {
+        
+        if (atom_getlong(argv) == 0)
+            outlet_bang(x->outlets[start_out]);
+        else
+            outlet_bang(x->outlets[end_out]);
+        
+    }
 }
 
 /*
