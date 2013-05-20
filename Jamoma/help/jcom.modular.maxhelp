@@ -512,6 +512,31 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 10.0, 513.0, 20.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-10",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 307.0, 304.0, 93.0, 18.0 ],
+									"text" : "-6. ramp 3000"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-18",
@@ -519,7 +544,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 10.0, 457.0, 60.0, 18.0 ],
+									"patching_rect" : [ 10.0, 449.0, 60.0, 18.0 ],
 									"text" : "-90. 0."
 								}
 
@@ -534,7 +559,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 10.0, 483.0, 241.0, 33.0 ],
+									"patching_rect" : [ 10.0, 475.0, 241.0, 33.0 ],
 									"text" : "jcom.send remoteOSCApp:/player/gain:range/bounds"
 								}
 
@@ -548,8 +573,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 10.0, 574.0, 60.0, 18.0 ],
-									"text" : "-90. 0."
+									"patching_rect" : [ 10.0, 579.0, 60.0, 18.0 ]
 								}
 
 							}
@@ -563,7 +587,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 10.0, 528.0, 241.0, 33.0 ],
+									"patching_rect" : [ 10.0, 535.0, 241.0, 33.0 ],
 									"text" : "jcom.receive remoteOSCApp:/player/gain:range/bounds"
 								}
 
@@ -622,7 +646,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 239.75, 308.0, 50.0, 20.0 ]
+									"patching_rect" : [ 239.75, 304.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -646,7 +670,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-24",
-									"items" : "<empty>",
+									"items" : [ "/", ",", "filter", ",", "filter/frequency", ",", "filter/type", ",", "player", ",", "player/gain", ",", "player/play" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -680,7 +704,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 10.0, 310.0, 50.0, 18.0 ],
+									"patching_rect" : [ 10.0, 308.0, 50.0, 18.0 ],
 									"text" : "explore"
 								}
 
@@ -910,6 +934,25 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-20", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 316.5, 326.5, 249.25, 326.5 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-49", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1032,7 +1075,7 @@
 									"destination" : [ "obj-12", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 19.5, 567.0, 60.5, 567.0 ],
+									"midpoints" : [ 19.5, 572.0, 60.5, 572.0 ],
 									"source" : [ "obj-8", 0 ]
 								}
 

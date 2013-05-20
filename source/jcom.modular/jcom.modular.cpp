@@ -94,6 +94,18 @@ void WrappedApplicationClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 		}
 		
 		protocolName = TTSymbol(atom_getsym(argv+1)->s_name);
+        
+        // set the type of the application depending on the plugin
+        if (protocolName == TTSymbol("Minuit")) {
+            
+            v = TTValue(TTSymbol("mirror"));
+            x->wrappedObject->setAttributeValue(kTTSym_type, v);
+        }
+        else {
+            
+            v = TTValue(TTSymbol("proxy"));
+            x->wrappedObject->setAttributeValue(kTTSym_type, v);
+        }
 	}
 	
 	// jcom.modular handle only one protocol per application
