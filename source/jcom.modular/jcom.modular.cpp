@@ -212,18 +212,27 @@ void modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
 						hashParameters->remove(parameterName);
 						hashParameters->append(parameterName, parameterValue);
 						
-						// stop the protocol (for local application setup only)
+						// stop the protocol for local application
                         if (applicationName == getLocalApplicationName)
                             aProtocol->sendMessage(TTSymbol("Stop"));
+                        
+                        // stop the protocol for the distant application
+                        else
+                            aProtocol->sendMessage(TTSymbol("Stop"), applicationName, kTTValNONE);
+                            
 						
 						// set parameters
 						v = TTValue(applicationName);
 						v.append(TTPtr(hashParameters));
 						err = aProtocol->setAttributeValue(TTSymbol("applicationParameters"), v);
 						
-						// run the protocol (for local application setup only)
+						// run the protocol for local application
                         if (applicationName == getLocalApplicationName)
                             aProtocol->sendMessage(TTSymbol("Run"));
+                        
+                        // run the protocol for the distant application
+                        else
+                            aProtocol->sendMessage(TTSymbol("Run"), applicationName, kTTValNONE);
 					}
 					else
 						object_error((ObjectPtr)x, "%s is not a parameter of %s protocol", parameterName.c_str(), EXTRA->protocolName.c_str());
