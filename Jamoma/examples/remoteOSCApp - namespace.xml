@@ -6,7 +6,7 @@
    <!--"play the soundfile"-->
    <play object="Data" service="parameter" type="boolean" rangeBounds="0 1" priority="1" />
    <!--"audio level"-->
-   <gain object="Data" service="parameter" type="decimal" dataspace="gain" dataspaceUnit="dB" rampDrive="Max" rangeBounds="-100. 12." rangeClipmode="both" priority="0" valueStepsize="0.100000" valueDefault="0.000000" />
+   <gain object="Data" service="parameter" type="decimal" dataspace="gain" dataspaceUnit="dB" rampDrive="external" rangeBounds="-100. 12." rangeClipmode="both" priority="0" valueStepsize="0.100000" valueDefault="0.000000" />
   </player>
   <!--"a filter model"-->
   <filter object="Container" tag="model" priority="0">
