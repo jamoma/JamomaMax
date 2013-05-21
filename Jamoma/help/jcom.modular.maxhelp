@@ -563,8 +563,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 3.0, 229.0, 404.0, 33.0 ],
-									"text" : "Here /player/gain have an external drive unit while the /filter/gain doesn't.\nTest the difference below by clicking on the message below"
+									"patching_rect" : [ 3.0, 229.0, 405.75, 33.0 ],
+									"text" : "Here /player/gain have an external drive unit while the /filter/gain uses Max scheduler. Test the difference below by clicking on the message below"
 								}
 
 							}
@@ -634,8 +634,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 4.0, 580.0, 60.0, 18.0 ],
-									"text" : "-100. 12."
+									"patching_rect" : [ 4.0, 580.0, 60.0, 18.0 ]
 								}
 
 							}
@@ -732,7 +731,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-24",
-									"items" : [ "/", ",", "filter", ",", "filter/frequency", ",", "filter/type", ",", "player", ",", "player/gain", ",", "player/play" ],
+									"items" : "<empty>",
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -782,7 +781,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 3.0, 268.0, 404.0, 33.0 ],
+									"patching_rect" : [ 3.0, 268.0, 405.75, 33.0 ],
 									"text" : "Here is some externals you can use in myApplication to control, explore, map, ... the remoteOSCApp."
 								}
 
@@ -910,7 +909,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 109.0, 43.0, 298.0, 20.0 ],
+									"patching_rect" : [ 109.0, 43.0, 299.75, 20.0 ],
 									"text" : "message from myApplication to remoteOSCApp"
 								}
 
@@ -926,7 +925,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 3.0, 97.5, 404.0, 20.0 ],
-									"text" : "/player/gain -6.00 3000.00",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 
@@ -971,7 +969,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 3.0, 2.0, 404.0, 33.0 ],
+									"patching_rect" : [ 3.0, 2.0, 405.75, 33.0 ],
 									"text" : "This is a simulation of a remote application which uses the OSC protocol to be controled by myApplication."
 								}
 
