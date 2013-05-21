@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 2,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 544.0, 44.0, 515.0, 647.0 ],
@@ -40,8 +41,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 2,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 1015.0, 44.0, 664.0, 853.0 ],
@@ -64,6 +66,20 @@
 						"digest" : "",
 						"tags" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-3",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 178.0, 255.0, 161.0, 18.0 ],
+									"text" : "remoteMinuitApp?get /myInt"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -724,6 +740,16 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-39", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 187.5, 279.0, 174.5, 279.0 ],
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1233,15 +1259,29 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "equalizer~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/modules/audio/equalizer~",
-				"patcherrelativepath" : "../../modules/audio/equalizer~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/equalizer~",
+				"patcherrelativepath" : "../patchers/modules/audio/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/modules/audio/equalizer~",
-				"patcherrelativepath" : "../../modules/audio/equalizer~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/equalizer~",
+				"patcherrelativepath" : "../patchers/modules/audio/equalizer~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "equalizer~views.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/equalizer~",
+				"patcherrelativepath" : "../patchers/modules/audio/equalizer~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "jcom.thru.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
+				"patcherrelativepath" : "../patchers/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1278,11 +1318,19 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "jcom.map.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "jcom.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "jcom.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jcom.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1294,11 +1342,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.remoteArray.mxo",
+				"name" : "jcom.init.mxo",
 				"type" : "iLaX"
 			}
  ]
