@@ -145,7 +145,7 @@ void cue_subscribe(TTPtr self)
 	TTDataPtr					aData;
 	TTXmlHandlerPtr				aXmlHandler;
 	TTTextHandlerPtr			aTextHandler;
-	
+/*
 	// if the subscription is successful
 	if (!jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, TTAddress("cue"), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
@@ -183,7 +183,7 @@ void cue_subscribe(TTPtr self)
 		aData->setAttributeValue(kTTSym_type, kTTSym_array);
 		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
 		aData->setAttributeValue(kTTSym_description, TTSymbol("The order of the cue list"));
-		
+*/		
 		// create internal TTXmlHandler and internal messages for Read and Write
 		aXmlHandler = NULL;
 		TTObjectBaseInstantiate(kTTSym_XmlHandler, TTObjectBaseHandle(&aXmlHandler), args);
@@ -197,7 +197,7 @@ void cue_subscribe(TTPtr self)
 		TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&aTextHandler), args);
 		v = TTValue(aTextHandler);
 		x->internals->append(kTTSym_TextHandler, v);
-		
+/*
 		//x->subscriberObject->exposeMessage(aXmlHandler, TTSymbol("Read"), &aData);
 		makeInternals_data(self, returnedAddress, TTSymbol("read"), gensym("cue_read"), x->patcherPtr, kTTSym_message, (TTObjectBasePtr*)&aData);
 		aData->setAttributeValue(kTTSym_type, kTTSym_string);
@@ -210,6 +210,7 @@ void cue_subscribe(TTPtr self)
 		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
 		aData->setAttributeValue(kTTSym_description, TTSymbol("Write a xml cue file"));
 	}
+*/
 }
 
 // Method for Assistance Messages
