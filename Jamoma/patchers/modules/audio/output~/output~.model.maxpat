@@ -131,8 +131,7 @@
 					"numoutlets" : 1,
 					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 822.0, 215.0, 56.0, 11.0 ],
-					"presentation_rect" : [ 820.0, 215.0, 0.0, 0.0 ]
+					"patching_rect" : [ 822.0, 215.0, 56.0, 11.0 ]
 				}
 
 			}
@@ -144,8 +143,7 @@
 					"numoutlets" : 1,
 					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 721.0, 215.0, 56.0, 11.0 ],
-					"presentation_rect" : [ 719.0, 215.0, 0.0, 0.0 ]
+					"patching_rect" : [ 721.0, 215.0, 56.0, 11.0 ]
 				}
 
 			}
@@ -157,8 +155,7 @@
 					"numoutlets" : 1,
 					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 822.0, 163.0, 56.0, 11.0 ],
-					"presentation_rect" : [ 821.0, 161.0, 0.0, 0.0 ]
+					"patching_rect" : [ 822.0, 163.0, 56.0, 11.0 ]
 				}
 
 			}
@@ -171,45 +168,6 @@
 					"orientation" : 1,
 					"outlettype" : [ "list" ],
 					"patching_rect" : [ 721.0, 163.0, 56.0, 11.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-10",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 498.0, 232.0, 79.0, 20.0 ],
-					"text" : "print balance"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 498.0, 187.0, 69.0, 20.0 ],
-					"text" : "print limiter"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-6",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 498.0, 139.0, 90.0, 20.0 ],
-					"text" : "print saturation"
 				}
 
 			}
@@ -2055,15 +2013,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-20", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-22", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2095,15 +2044,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-21", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-21", 0 ]
 				}
 
 			}
@@ -2167,15 +2107,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-28", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
 				}
 
 			}

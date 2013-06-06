@@ -220,7 +220,6 @@ void modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
                         else
                             aProtocol->sendMessage(TTSymbol("Stop"), applicationName, kTTValNONE);
                             
-						
 						// set parameters
 						v = TTValue(applicationName);
 						v.append(TTPtr(hashParameters));
