@@ -183,6 +183,7 @@ void WrappedSenderClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	SymbolPtr					address;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
+    t_atom						a[1];
 	
 	// read first argument
 	if (attrstart && argv) 
@@ -210,7 +211,17 @@ void WrappedSenderClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	
 	// handle attribute args
 	attr_args_process(x, argc, argv);
-	
+    
+	// for absolute address
+	if (x->address.getType() == kAddressAbsolute) {
+		
+		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
+		
+		atom_setsym(a, gensym((char*)x->address.c_str()));
+		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
+		return;
+	}
+    
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
 	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
@@ -234,7 +245,7 @@ void send_subscribe(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue						v;
-	Atom						a[1];
+	t_atom						a[1];
 	TTAddress                   contextAddress = kTTAdrsEmpty;
 	TTAddress                   absoluteAddress, returnedAddress;
     TTNodePtr                   returnedNode = NULL;
@@ -247,16 +258,6 @@ void send_subscribe(TTPtr self)
 	// if the jcom.send tries to bind an Input object : bind the signal attribute
 	if (x->address.getName() == TTSymbol("in"))
 		x->address = x->address.appendAttribute(kTTSym_signal);
-	
-	// for absolute address
-	if (x->address.getType() == kAddressAbsolute) {
-		
-		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
-		
-		atom_setsym(a, gensym((char*)x->address.c_str()));
-		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
-		return;
-	}
 	
 	// for relative address
 	jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
