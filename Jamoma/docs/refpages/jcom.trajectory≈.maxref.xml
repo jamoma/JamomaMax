@@ -3,7 +3,7 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="jcom.trajectory≈" module="" category="">
+<c74object name="jcom.trajectory≈" module="" category="Jamoma">
 	<digest>
 		TEXT_HERE
 	</digest>
@@ -13,7 +13,7 @@
 	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
-			Cycling '74
+			Jamoma
 		</metadata>
 		<metadata name="tag">
 			TEXT_HERE
