@@ -177,12 +177,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-16",
-					"linecount" : 7,
+					"linecount" : 6,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 906.0, 178.0, 156.0, 100.0 ],
+					"patching_rect" : [ 906.0, 178.0, 157.0, 87.0 ],
 					"text" : "jcom.parameter buffer/pixel @range/bounds 2 8092 @range/clipmode both @type integer @description \"buffers per pixel, control the scope display\"",
 					"varname" : "jcom.parameter.mxb[3]"
 				}
@@ -212,8 +212,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 95.0, 348.0, 154.0, 74.0 ],
-					"text" : "jcom.model @description \"An oscilloscope emulator for viewing waverforms or analyzing phase relationships.\"",
+					"patching_rect" : [ 95.0, 348.0, 169.0, 74.0 ],
+					"text" : "jcom.view @description \"An oscilloscope emulator for viewing waverforms or analyzing phase relationships.\"",
 					"varname" : "jcom.model"
 				}
 
@@ -441,7 +441,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.model.mxo",
+				"name" : "jcom.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
