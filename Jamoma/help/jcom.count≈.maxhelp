@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 19.0, 54.0, 642.0, 653.0 ],
+		"rect" : [ 791.0, 44.0, 642.0, 653.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -77,11 +77,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 19.0, 80.0, 642.0, 627.0 ],
+						"rect" : [ 791.0, 70.0, 642.0, 627.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -103,6 +103,22 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"border" : 0,
+									"filename" : "helpdetails.js",
+									"id" : "obj-7",
+									"ignoreclick" : 1,
+									"jsarguments" : [ "jcom.count≈" ],
+									"maxclass" : "jsui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 5.0, 5.0, 460.0, 90.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"bubble" : 1,
 									"bubbleside" : 0,
 									"fontname" : "Arial",
@@ -115,19 +131,6 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 81.0, 364.0, 356.0, 106.0 ],
 									"text" : "This object was first made to test for the AudioGraph issue where graphs with mutiple sinks would be processed multiple times per vector.\n\nIf this issue is solved the above number box should display a value of \"1\"."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"args" : [ "@name", "jcom.count≈", "@description", "Count the number of samples processed so far" ],
-									"bgmode" : 1,
-									"id" : "obj-25",
-									"maxclass" : "bpatcher",
-									"name" : "jcom.maxhelpui.maxpat",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 642.0, 70.0 ]
 								}
 
 							}
@@ -434,7 +437,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -484,31 +487,10 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../patchers/components/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "jcom.maxhelpuiButton.png",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../patchers/components/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "jcom.maxhelpuiResize.js",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../patchers/components/maxhelpui",
+				"name" : "helpdetails.js",
+				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "jcom.jamomaPath.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
-				"patcherrelativepath" : "../patchers/components/jamomaPath",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -531,18 +513,6 @@
 			}
 , 			{
 				"name" : "jcom.count≈.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.route.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.send.mxo",
 				"type" : "iLaX"
 			}
  ]
