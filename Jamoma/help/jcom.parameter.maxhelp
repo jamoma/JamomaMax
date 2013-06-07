@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 296.0, 44.0, 1320.0, 960.0 ],
+		"rect" : [ 209.0, 44.0, 1320.0, 960.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 354.0, 213.0, 723.0, 477.0 ],
+						"rect" : [ 0.0, 26.0, 1320.0, 934.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -66,7 +66,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"bubble" : 1,
@@ -78,8 +77,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 581.0, 390.0, 171.0, 78.0 ],
-									"presentation_rect" : [ 393.0, 318.0, 0.0, 0.0 ],
+									"patching_rect" : [ 439.0, 410.0, 171.0, 78.0 ],
 									"text" : "Setting a dataspace and unit for your parameter makes it possible to listen to this value using different unit."
 								}
 
@@ -96,7 +94,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 521.0, 287.0, 171.0, 78.0 ],
-									"presentation_rect" : [ 343.0, 197.0, 0.0, 0.0 ],
 									"text" : "With a dataspace specified, one can set value using a different unit from the dataspace, such as midi or db in that case."
 								}
 
@@ -111,7 +108,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 446.0, 317.0, 49.0, 18.0 ],
-									"presentation_rect" : [ 258.0, 239.0, 0.0, 0.0 ],
 									"text" : "50 midi"
 								}
 
@@ -127,7 +123,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 379.0, 135.0, 168.0, 118.0 ],
+									"patching_rect" : [ 379.0, 135.0, 171.0, 118.0 ],
 									"text" : "jcom.parameter can be defined a dataspace and a unit using the @dataspace and @dataspace/unit attributes. See help patch for jcom.dataspace to explore the list of available dataspaces"
 								}
 
@@ -156,8 +152,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 355.0, 448.0, 93.0, 20.0 ],
-									"presentation_rect" : [ 441.0, 391.0, 0.0, 0.0 ]
+									"patching_rect" : [ 213.0, 468.0, 93.0, 20.0 ]
 								}
 
 							}
@@ -170,7 +165,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 355.0, 419.0, 216.0, 20.0 ],
+									"patching_rect" : [ 213.0, 439.0, 216.0, 20.0 ],
 									"text" : "jcom.remote /gain @dataspace/unit db"
 								}
 
@@ -185,8 +180,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 208.0, 317.0, 111.0, 20.0 ],
-									"presentation_rect" : [ 195.0, 258.0, 0.0, 0.0 ]
+									"patching_rect" : [ 208.0, 317.0, 111.0, 20.0 ]
 								}
 
 							}
@@ -398,7 +392,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 414.0, 237.0, 157.0, 145.0 ],
-									"presentation_rect" : [ 269.0, 242.0, 0.0, 0.0 ],
 									"text" : "By default, jcom.parameter will ramp using the function defined by the ramp/function attibute. Here, we use a linear function by default. This attribute can be changed on the fly to use different curves."
 								}
 
@@ -444,7 +437,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 237.0, 324.0, 143.0, 17.0 ],
-									"presentation_rect" : [ 92.0, 321.0, 0.0, 0.0 ],
 									"text" : "ramp/function exponential",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -461,7 +453,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 237.0, 296.0, 132.0, 17.0 ],
-									"presentation_rect" : [ 91.0, 293.0, 0.0, 0.0 ],
 									"text" : "ramp/function trapezoid",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -840,7 +831,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 296.0, 70.0, 1320.0, 934.0 ],
+						"rect" : [ 209.0, 70.0, 1320.0, 934.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -871,7 +862,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 994.5, 493.5, 158.0, 114.0 ],
+									"patching_rect" : [ 994.5, 493.5, 160.0, 114.0 ],
 									"text" : "Note that you need to specify the full address of the parameter within the Jamoma namespace. Here, we state that our \"frequency\" parameter resides at the root of the patch (\"/\")."
 								}
 
@@ -888,7 +879,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 994.5, 305.5, 150.0, 98.0 ],
-									"presentation_rect" : [ 956.5, 319.0, 0.0, 0.0 ],
 									"text" : "The parameter value can easily be accessed using Jamoma's send/receive or remote objects."
 								}
 

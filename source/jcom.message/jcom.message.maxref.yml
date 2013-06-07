@@ -30,11 +30,11 @@ messages:
 attributes:
  - name: type
    type: symbol
-   desc: "Datatype of the message. Optinons are: decimal, integer, boolean, string, decimalArray, integerArray, generic"
+   desc: "Datatype of the parameter. Options are: decimal, integer, boolean, string, array, generic" #decimalArray and integerArray are not ported yet
    unit:
    default: generic
  - name: range/bounds
-   type: array [low-bound high-bond]
+   type: array [low-bound high-bound]
    desc: "Lower and upper boundaries defining the range of possible message values."
    unit:
    default: 0. 1.
