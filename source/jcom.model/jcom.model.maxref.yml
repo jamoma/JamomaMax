@@ -1,0 +1,64 @@
+title: jcom.parameter
+author: [Jamoma]
+created_at: 2012/1/1
+tags: [interface, control, osc]
+
+brief: The central nervous system of a Jamoma model
+
+desc: >
+ "jcom.model is the central brain in a jamoma model. It parses input, distributes messaging to parameters, generates documentation,  etc."
+ 
+inputs:
+  - name: left
+    desc: "Connect to left inlet of the model. Used for OSC communication to the model."
+
+outputs:
+ - name: left
+   desc: "Connect to left outlet of the model. Used for OSC communication from the model."
+ - name: right
+   desc: "dumpout"
+
+args:
+ - name: component
+   desc: "When the "component" argument is specified, jcom.model restricts its inner services to the minimum (i.e. hides all model/* parameters and messages)"
+    
+messages:
+ - name: bang
+   desc: "bang is triggering calculations of new ramp values when the asynchronuous ramp drive method is used"
+ - name: alias/remove
+   desc: "Remove the OSC alias of the model"
+ - name: model/documentation/generate
+   desc: "Generate HTML documentation for this model. This message is implemented as a jcom.message embedded in the jcom.ui object"
+ - name: dump
+   desc: "Dump all attributes' values out the rightmost outlet"
+ - name: "init"
+   desc: "Initialize this model. This message is implemented as a jcom.message embedded in the jcom.model object"
+ - name: model/edit
+   desc: "Opens a text editor with all current values of all parameters of the model (called by "Get current state as text menu item in jcom.ui")"
+ - name: model/help
+   desc: "Opens the model's help patcher"
+ - name: model/open
+   desc: "Opens and brings to front the model's patcher"
+ - name: model/reference
+   desc: "Opens the model's reference page" 
+   
+attributes:
+ - name: alias
+   desc: "Provide the model with an OSC alias. This can be used for future remote OSC communication to the model."
+ - name: description
+   desc: "A textual description of the model fpr auto-documentation purpoises"
+ - name: priority
+   desc: "The priority of the model - used for preset and cue management"
+ - name: tag
+   desc: "Arbitrary list of tags that can be further used by several services such as jcom.namespace"
+
+seealso:
+ - jcom.message
+ - jcom.parameter
+ - jcom.return
+ - jcom.in
+ - jcom.in~
+ - jcom.out
+ - jcom.out
+
+discussion: Jamoma is a free and open source project. http://www.jamoma.org
