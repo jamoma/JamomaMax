@@ -8,9 +8,9 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 117.0, 44.0, 1427.0, 714.0 ],
+		"rect" : [ 117.0, 44.0, 1110.0, 349.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 1,
+		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -31,13 +31,99 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-24",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 904.0, 248.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-19",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 904.0, 45.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-14",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 739.0, 248.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-12",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 739.0, 45.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-5",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 568.0, 248.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-2",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 568.0, 45.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-16",
+					"linecount" : 7,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 716.0, 178.0, 66.0, 20.0 ],
-					"text" : "jcom.in~ 2"
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 568.0, 103.0, 160.0, 100.0 ],
+					"text" : "jcom.parameter buffer/pixel @type integer @range/bounds 2 8092 @range/clipmode both @description \"buffers per pixel, control the scope display\"",
+					"varname" : "jcom.parameter.mxb[3]"
 				}
 
 			}
@@ -50,7 +136,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 173.5, 440.0, 73.0, 20.0 ],
+					"patching_rect" : [ 176.5, 236.0, 73.0, 20.0 ],
 					"text" : "jcom.preset"
 				}
 
@@ -64,64 +150,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 307.0, 307.0, 198.0, 18.0 ],
+					"patching_rect" : [ 310.0, 103.0, 198.0, 18.0 ],
 					"text" : "/preset/store 1 default, /preset/write"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "bang", "float", "float" ],
-					"patching_rect" : [ 1072.0, 328.0, 107.0, 20.0 ],
-					"text" : "t b f f"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 525.0, 178.0, 66.0, 20.0 ],
-					"text" : "jcom.in~ 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1072.0, 383.0, 107.0, 20.0 ],
-					"text" : "pack range -1. 1."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 1116.0, 356.0, 36.0, 20.0 ],
-					"text" : "* -1."
 				}
 
 			}
@@ -135,8 +165,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1072.0, 178.0, 153.0, 127.0 ],
-					"text" : "jcom.parameter range @range/bounds 0 100 @range/clipmode low @repetitions/allow 0 @type decimal @ramp/drive Max @description \"range of values above and below the zero line to display.\"",
+					"patching_rect" : [ 739.0, 103.0, 158.0, 127.0 ],
+					"text" : "jcom.parameter range @type decimal @range/bounds 0 100 @range/clipmode low @repetitions/allow 0 @ramp/drive Max @description \"range of values above and below the zero line to display.\"",
 					"varname" : "jcom.parameter.mxb"
 				}
 
@@ -146,45 +176,14 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-10",
-					"linecount" : 8,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1240.0, 178.0, 160.0, 114.0 ],
-					"text" : "jcom.parameter buffer/samples @range/bounds 8 256 @type integer @range/clipmode both @description \"samples per buffer, control the scope display\"",
-					"varname" : "jcom.parameter.mxb[2]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"calccount" : 128,
-					"id" : "obj-15",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 525.0, 447.0, 210.0, 112.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 56.0, 21.0, 210.0, 112.0 ],
-					"rounded" : 15
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-16",
 					"linecount" : 6,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 906.0, 178.0, 157.0, 87.0 ],
-					"text" : "jcom.parameter buffer/pixel @range/bounds 2 8092 @range/clipmode both @type integer @description \"buffers per pixel, control the scope display\"",
-					"varname" : "jcom.parameter.mxb[3]"
+					"patching_rect" : [ 904.0, 103.0, 174.0, 87.0 ],
+					"text" : "jcom.parameter buffer/samples @type integer @range/bounds 8 256 @range/clipmode both @description \"samples per buffer, control the scope display\"",
+					"varname" : "jcom.parameter.mxb[2]"
 				}
 
 			}
@@ -197,7 +196,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 130.0, 308.0, 141.0, 18.0 ],
+					"patching_rect" : [ 133.0, 104.0, 141.0, 18.0 ],
 					"text" : "/documentation/generate"
 				}
 
@@ -212,33 +211,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 95.0, 348.0, 169.0, 74.0 ],
-					"text" : "jcom.view @description \"An oscilloscope emulator for viewing waverforms or analyzing phase relationships.\"",
+					"patching_rect" : [ 98.0, 144.0, 161.0, 74.0 ],
+					"text" : "jcom.model @description \"An oscilloscope emulator for viewing waverforms or analyzing phase relationships.\"",
 					"varname" : "jcom.model"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-19",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 716.0, 144.0, 26.0, 26.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-20",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 525.0, 144.0, 26.0, 26.0 ]
 				}
 
 			}
@@ -251,7 +226,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 270.0, 308.0, 29.0, 18.0 ],
+					"patching_rect" : [ 273.0, 104.0, 29.0, 18.0 ],
 					"text" : "/init"
 				}
 
@@ -263,7 +238,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 95.0, 470.0, 26.0, 26.0 ]
+					"patching_rect" : [ 98.0, 266.0, 26.0, 26.0 ]
 				}
 
 			}
@@ -275,24 +250,23 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 95.0, 298.0, 26.0, 26.0 ]
+					"patching_rect" : [ 98.0, 94.0, 26.0, 26.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 1 ],
+					"destination" : [ "obj-24", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1249.5, 437.0, 725.5, 437.0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 1 ],
+					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-12", 0 ]
@@ -301,10 +275,9 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
+					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 915.5, 413.0, 534.5, 413.0 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -314,7 +287,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 139.5, 341.0, 104.5, 341.0 ],
+					"midpoints" : [ 142.5, 137.0, 107.5, 137.0 ],
 					"source" : [ "obj-17", 0 ]
 				}
 
@@ -330,7 +303,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
+					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-19", 0 ]
@@ -339,20 +312,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
+					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 534.5, 415.0, 534.5, 415.0 ],
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-20", 0 ]
 				}
 
 			}
@@ -361,7 +324,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 279.5, 343.0, 104.5, 343.0 ],
+					"midpoints" : [ 282.5, 139.0, 107.5, 139.0 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -386,53 +349,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1081.5, 424.5, 534.5, 424.5 ],
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 2 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
+					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-9", 0 ]
@@ -441,15 +358,11 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.view.mxo",
+				"name" : "jcom.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "jcom.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
