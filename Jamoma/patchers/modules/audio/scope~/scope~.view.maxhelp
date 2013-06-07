@@ -17,7 +17,7 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.scope~", "@description", "Visualization of audio signal" ],
+					"args" : [ "@name", "scope~.view", "@description", "Visualization of audio signal" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -157,7 +157,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "jmod.scope~" ],
+									"args" : [ "scope~.view" ],
 									"id" : "obj-7",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
@@ -486,7 +486,7 @@
 					"id" : "obj-20",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.scope~.maxpat",
+					"name" : "scope~.view.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
