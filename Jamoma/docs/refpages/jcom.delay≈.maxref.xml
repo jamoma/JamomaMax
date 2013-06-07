@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.delay≈" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Delay an Audio Signal
 	</digest>
 	<description>
-		TEXT_HERE
+		<!-- TEXT_HERE -->
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -260,8 +260,10 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="jcom.delay~"/>
+		<seealso name="delay~"/>
+		<seealso name="tapin~"/>
+		<seealso name="tapout~"/>
 		</seealso>
 	</seealsolist>
 </c74object>

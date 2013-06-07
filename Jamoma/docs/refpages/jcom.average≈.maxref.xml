@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.average≈" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		A moving average filter
 	</digest>
 	<description>
-		TEXT_HERE
+		A moving average filter
 	</description>
 	<!--METADATA-->
 	<metadatalist>

@@ -5,10 +5,9 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.dbapBformat" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
-	</digest>
+		DBAP using B-format signals as input	</digest>
 	<description>
-		TEXT_HERE
+		<!-- TEXT_HERE -->
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -239,8 +238,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="jcom.dbap"/>
+		<!-- <seealso name="jcom.dbap"/> -->
 	</seealsolist>
 </c74object>

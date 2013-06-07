@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.dataspace" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Convert between various types of units using the dataspaceLib
 	</digest>
 	<description>
-		TEXT_HERE
+		<!-- TEXT_HERE -->
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -155,8 +155,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="jcom.parameter">
+				
 		</seealso>
 	</seealsolist>
 </c74object>

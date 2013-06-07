@@ -5,10 +5,9 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.cue" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
-	</digest>
+		Store and recall the state of several model	</digest>
 	<description>
-		TEXT_HERE
+		<!-- TEXT_HERE -->
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -383,8 +382,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="jcom.preset">
+			<!-- TEXT_HERE -->
 		</seealso>
 	</seealsolist>
 </c74object>

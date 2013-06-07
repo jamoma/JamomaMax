@@ -5,10 +5,9 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.adsr≈" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
-	</digest>
+		ADSR envelope generator	</digest>
 	<description>
-		TEXT_HERE
+		jcom.adsr≈ generates audio graph envelopes
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -276,8 +275,10 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
+		<seealso name="jcom.function~">
 			TEXT_HERE
+		</seealso>
+		<seealso name="adsr~">
 		</seealso>
 	</seealsolist>
 </c74object>
