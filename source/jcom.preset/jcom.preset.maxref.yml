@@ -1,12 +1,12 @@
-title: jcom.parameter
+title: jcom.preset
 author: [Jamoma]
 created_at: 2012/1/1
 tags: [interface, control, osc]
 
-brief: This external belongs to Jamoma 0.5 and is now deprecated. See jcom.model instead.
+brief: Preset management service for Jamoma models
 
 desc: >
- "This external belongs to Jamoma 0.5 and is now deprecated. See jcom.model instead."
+ "jcom.preset allows to create, recall and manage presets in Jamoma models"
  
 inputs:
   - name: left
