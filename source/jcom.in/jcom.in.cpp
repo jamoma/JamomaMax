@@ -71,12 +71,6 @@ void		in_subscribe(TTPtr self);
 
 #ifdef JCOM_IN_TILDE
 
-/** jcom.in~ 32-bit MSP perform method (for Max 5). Only defineed for jcom.in~. */
-t_int*		in_perform(t_int *w);
-
-/** jcom.in~ 32-bit DSP method (for Max 5).Only defineed for jcom.in~. */
-void		in_dsp(TTPtr self, t_signal **sp, short *count);
-
 /** jcom.in~ 64-bit MSP perform method (for Max 6). Only defineed for jcom.in~. */
 void		in_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam);
 
@@ -168,7 +162,6 @@ void WrapTTInputClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)in_assist,						"assist",				A_CANT, 0L);
 	
 #ifdef JCOM_IN_TILDE
-	class_addmethod(c->maxClass, (method)in_dsp,						"dsp", 					A_CANT, 0L);
 	class_addmethod(c->maxClass, (method)in_dsp64,						"dsp64",				A_CANT, 0);
 	
 	class_addmethod(c->maxClass, (method)in_return_amplitude_active,	"return_amplitude_active",	A_CANT, 0);
@@ -350,8 +343,6 @@ void in_subscribe(TTPtr self)
 // Method for Assistance Messages
 void in_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst)
 {
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
 	if (msg==1)				// Inlets
 		strcpy(dst, "(signal) input of the model");
 	else if (msg==2) {		// Outlets
@@ -418,129 +409,20 @@ void in_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 #pragma mark Methods relating to audio processing
 
 #ifdef JCOM_IN_TILDE
-// Perform Method - just pass the whole vector straight through
-// (the work is all done in the dsp method)
-t_int *in_perform(t_int *w)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)(w[1]);
-	TTInputPtr					anInput = (TTInputPtr)x->wrappedObject;
-	TTAudioSignalPtr			sentSignal;
-	TTUInt16					vectorSize = 0;
-	
-	if (anInput) {
-		
-		// get signal vectorSize
-		anInput->mSignalIn->getAttributeValue(kTTSym_vectorSize, vectorSize);
-		
-		// Store the input from the inlets
-		TTAudioSignalPtr(anInput->mSignalIn)->setVector(0, vectorSize, (TTFloat32*)w[2]);
-		
-		// if signal is bypassed or muted : send a zero signal to the algorithm
-		if (anInput->mBypass || anInput->mMute)
-            TTAudioSignal::copy(*TTAudioSignalPtr(anInput->mSignalZero), *TTAudioSignalPtr(anInput->mSignalOut));
-        
-		// else copy in to out
-		else
-            TTAudioSignal::copy(*TTAudioSignalPtr(anInput->mSignalIn), *TTAudioSignalPtr(anInput->mSignalOut));
-		
-		// sum signal from jcom.send~ objects
-		if (anInput->mSignalCache) {
-			
-			for (anInput->mSignalCache->begin(); anInput->mSignalCache->end(); anInput->mSignalCache->next()) {
-				
-				sentSignal = TTAudioSignalPtr((TTObjectBasePtr)anInput->mSignalCache->current()[0]);
-				
-				if (sentSignal)
-					*TTAudioSignalPtr(anInput->mSignalOut) += *sentSignal;
-			}
-		}
-		
-		// clear the signal cache
-		anInput->mSignalCache->clear();
-		
-		// Send the input on to the outlets for the algorithm
-		TTAudioSignalPtr(anInput->mSignalOut)->getVector(0, vectorSize, (TTFloat32*)w[3]);
-		
-		// metering
-		if (!anInput->mMute) {
-			
-            TTUInt16				n = vectorSize;
-            TTFloat32				currentvalue = 0;
-            TTFloat32				peakvalue = 0.0;
-            t_float*                envelope = (t_float *)(w[3]);
-			
-			while (n--) {
-				if ((*envelope) < 0 )						// get the current sample's absolute value
-					currentvalue = -(*envelope);
-				else
-					currentvalue = *envelope;
-				
-				if (currentvalue > peakvalue) 				// if it's a new peak amplitude...
-					peakvalue = currentvalue;
-				envelope++; 								// increment pointer in the vector
-			}
-			
-			// set meter
-			EXTRA->meter = peakvalue;
-			
-			// set peak
-			if (peakvalue > EXTRA->peak)
-				EXTRA->peak = peakvalue;
-		}
-	}
-	
-	return w + 4;
-}
 
 // Perform Method 64 bit - just pass the whole vector straight through
 // (the work is all done in the dsp 64 bit method)
 void in_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputPtr					anInput = (TTInputPtr)x->wrappedObject;
-    TTAudioSignalPtr			sentSignal;
-	TTUInt16					vectorSize = 0;
+	TTInputAudioPtr				anInput = (TTInputAudioPtr)x->wrappedObject;
     
 	if (anInput) {
-		
-		// get signal vectorSize
-		anInput->mSignalIn->getAttributeValue(kTTSym_vectorSize, vectorSize);
+		anInput->process(ins[0], outs[0], sampleframes);
 
-		// Store the input from the inlets
-		TTAudioSignalPtr(anInput->mSignalIn)->setVector64Copy(0, vectorSize, ins[0]);
-		
-		// if signal is bypassed or muted : send a zero signal to the algorithm
-		if (anInput->mBypass || anInput->mMute)
-            TTAudioSignal::copy(*TTAudioSignalPtr(anInput->mSignalZero), *TTAudioSignalPtr(anInput->mSignalOut));
-        
-		// else copy in to out and add remote signal
-		else {
-            
-            TTAudioSignal::copy(*TTAudioSignalPtr(anInput->mSignalIn), *TTAudioSignalPtr(anInput->mSignalOut));
-            
-            // sum signal from jcom.send~ objects
-            if (anInput->mSignalCache) {
-                
-                for (anInput->mSignalCache->begin(); anInput->mSignalCache->end(); anInput->mSignalCache->next()) {
-                    
-                    sentSignal = TTAudioSignalPtr((TTObjectBasePtr)anInput->mSignalCache->current()[0]);
-                    
-                    if (sentSignal)
-                        *TTAudioSignalPtr(anInput->mSignalOut) += *sentSignal;
-                }
-            }
-        }
-		
-		// clear the signal cache
-		anInput->mSignalCache->clear();
-		
-		// Send the input on to the outlets for the algorithm
-		TTAudioSignalPtr(anInput->mSignalOut)->getVectorCopy(0, vectorSize, outs[0]);
-        
         // metering
 		if (!anInput->mMute) {
-			
-            TTUInt16				n = vectorSize;;
+            TTUInt16				n = sampleframes;;
             TTFloat32				currentvalue = 0;
             TTFloat32				peakvalue = 0.0;
             TTSampleValue*          envelope = outs[0];
@@ -566,66 +448,19 @@ void in_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, double
 	}
 }
 
-// DSP Method
-void in_dsp(TTPtr self, t_signal **sp, short *count)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputPtr					anInput = (TTInputPtr)x->wrappedObject;
-	void**						audioVectors = NULL;
-	TTUInt16					vectorSize = 0;
-	
-	if (anInput) {
-		
-		audioVectors = (void**)sysmem_newptr(sizeof(void*) * 3);
-		audioVectors[0] = x;
-
-		if (count[0] || count[1]) {
-			if (sp[0]->s_n > vectorSize)
-				vectorSize = sp[0]->s_n;
-			
-			audioVectors[1] = sp[0]->s_vec;
-			audioVectors[2] = sp[1]->s_vec;
-		}
-		
-		// set signal numChannels and vectorSize
-		anInput->mSignalIn->setAttributeValue(kTTSym_numChannels, 1);
-		anInput->mSignalOut->setAttributeValue(kTTSym_numChannels, 1);
-		anInput->mSignalIn->setAttributeValue(kTTSym_vectorSize, vectorSize);
-		anInput->mSignalOut->setAttributeValue(kTTSym_vectorSize, vectorSize);
-		
-		// anInput->mSignalIn will be set in the perform method
-		anInput->mSignalOut->sendMessage(kTTSym_alloc);
-		
-		dsp_addv(in_perform, 3, audioVectors);
-		sysmem_freeptr(audioVectors);
-	}
-}
 
 // DSP64 method
 void in_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputPtr					anInput = (TTInputPtr)x->wrappedObject;
+	TTInputAudioPtr				anInput = (TTInputAudioPtr)x->wrappedObject;
 	
 	if (anInput) {
-		
-		// set signal numChannels and vectorSize
-		anInput->mSignalIn->setAttributeValue(kTTSym_numChannels, 1);
-		anInput->mSignalOut->setAttributeValue(kTTSym_numChannels, 1);
-        anInput->mSignalZero->setAttributeValue(kTTSym_numChannels, 1);
-        
-		anInput->mSignalIn->setAttributeValue(kTTSym_vectorSize, (TTUInt16)maxvectorsize);
-		anInput->mSignalOut->setAttributeValue(kTTSym_vectorSize,(TTUInt16)maxvectorsize);
-        anInput->mSignalZero->setAttributeValue(kTTSym_vectorSize, (TTUInt16)maxvectorsize);
-		
-		// mSignalIn will be set in the perform method
-		anInput->mSignalOut->sendMessage(kTTSym_alloc);
-        anInput->mSignalZero->sendMessage(kTTSym_alloc);
-        anInput->mSignalZero->sendMessage(kTTSym_clear);
-		
+		anInput->setupAudioSignals(maxvectorsize);
 		object_method(dsp64, gensym("dsp_add64"), x, in_perform64, 0, NULL);
 	}
 }
+
 
 void in_return_amplitude_active(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
