@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.function~" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		FunctionLib for MSP
 	</digest>
 	<description>
-		TEXT_HERE
+		jcom.function~ provides the function implemented by Jamoma FunctionLib
 	</description>
 	<!--METADATA-->
 	<metadatalist>
