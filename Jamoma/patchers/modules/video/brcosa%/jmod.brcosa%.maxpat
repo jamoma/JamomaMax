@@ -239,7 +239,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 42.0, 51.0, 118.0, 18.0 ],
-									"text" : "jcom.pwindow.mouse"
+									"text" : "j.pwindow.mouse"
 								}
 
 							}
@@ -430,7 +430,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 112.0, 382.0, 52.0, 18.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -471,7 +471,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 112.0, 277.0, 55.0, 18.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -486,7 +486,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 516.0, 457.0, 256.0, 30.0 ],
-					"text" : "jcom.parameter monochrome @type boolean @description \"Monochrome image - 0 is default\"",
+					"text" : "j.parameter monochrome @type boolean @description \"Monochrome image - 0 is default\"",
 					"varname" : "monochrome[1]"
 				}
 
@@ -530,7 +530,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 516.0, 375.0, 478.0, 30.0 ],
-					"text" : "jcom.parameter saturation @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 4. @range/clipmode none @description \"Saturation of image - 1 is default\"",
+					"text" : "j.parameter saturation @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 4. @range/clipmode none @description \"Saturation of image - 1 is default\"",
 					"varname" : "saturation[1]"
 				}
 
@@ -661,7 +661,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 516.0, 293.0, 468.0, 30.0 ],
-					"text" : "jcom.parameter contrast @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 4. @range/clipmode none @description \"Contrast of image - 1 is default\"",
+					"text" : "j.parameter contrast @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 4. @range/clipmode none @description \"Contrast of image - 1 is default\"",
 					"varname" : "contrast[1]"
 				}
 
@@ -677,7 +677,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 516.0, 216.0, 478.0, 30.0 ],
-					"text" : "jcom.parameter brightness @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 4. @range/clipmode none @description \"Brightness of image - 1 is default\"",
+					"text" : "j.parameter brightness @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 4. @range/clipmode none @description \"Brightness of image - 1 is default\"",
 					"varname" : "brightness[1]"
 				}
 
@@ -748,8 +748,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 7.0, 133.0, 264.0, 30.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Simple image controls\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Simple image controls\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -783,7 +783,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-36",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

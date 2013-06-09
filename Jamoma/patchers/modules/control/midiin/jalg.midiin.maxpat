@@ -28,7 +28,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 890.0, 525.0, 271.0, 43.0 ],
-					"text" : "jcom.return raw/voice.*/touch @type integer @range/bounds 0 127 @description \"Aftertouch on channel *.\""
+					"text" : "j.return raw/voice.*/touch @type integer @range/bounds 0 127 @description \"Aftertouch on channel *.\""
 				}
 
 			}
@@ -126,7 +126,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 136.0, 135.0, 54.0, 19.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -689,7 +689,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 718.0, 451.0, 172.0, 43.0 ],
-					"text" : "jcom.return raw/voice.*/poly @type generic @description \"poly information on channel *.\""
+					"text" : "j.return raw/voice.*/poly @type generic @description \"poly information on channel *.\""
 				}
 
 			}
@@ -769,7 +769,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 136.0, 135.0, 54.0, 19.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -1089,7 +1089,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 535.0, 451.0, 182.0, 55.0 ],
-					"text" : "jcom.return raw/voice.*/program @type integer @range/bounds 0 127 @description \"Program change information on channel *.\""
+					"text" : "j.return raw/voice.*/program @type integer @range/bounds 0 127 @description \"Program change information on channel *.\""
 				}
 
 			}
@@ -1201,7 +1201,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 162.0, 81.0, 58.0, 19.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -1215,7 +1215,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 226.0, 387.0, 483.0, 19.0 ],
-					"text" : "jcom.return raw/voice.* @description \"generic output for midiin module\" @repetitions/allow 1"
+					"text" : "j.return raw/voice.* @description \"generic output for midiin module\" @repetitions/allow 1"
 				}
 
 			}
@@ -1449,7 +1449,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 36.0, 54.0, 341.0, 19.0 ],
-					"text" : "jcom.oscroute /device /initDevice /normalizeMidi"
+					"text" : "j.oscroute /device /initDevice /normalizeMidi"
 				}
 
 			}
@@ -1491,7 +1491,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 202.0, 451.0, 169.0, 67.0 ],
-					"text" : "jcom.return raw/voice.*/cc.* @type integer @range/bounds 0 127 @description \"Control number m changed at channel n. (1st*=n, 2d*=m) \""
+					"text" : "j.return raw/voice.*/cc.* @type integer @range/bounds 0 127 @description \"Control number m changed at channel n. (1st*=n, 2d*=m) \""
 				}
 
 			}
@@ -1506,7 +1506,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 35.0, 450.0, 175.0, 55.0 ],
-					"text" : "jcom.return raw/voice.*/note @type generic @description \"MIDI note information as pitch and velocity on channel *.\""
+					"text" : "j.return raw/voice.*/note @type generic @description \"MIDI note information as pitch and velocity on channel *.\""
 				}
 
 			}
@@ -1521,7 +1521,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 374.0, 451.0, 183.0, 55.0 ],
-					"text" : "jcom.return raw/voice.*/bend @type decimal @range/bounds -24. 24. @description \"Pitch bend on channel *.\""
+					"text" : "j.return raw/voice.*/bend @type decimal @range/bounds -24. 24. @description \"Pitch bend on channel *.\""
 				}
 
 			}

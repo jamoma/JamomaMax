@@ -93,7 +93,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 140.0, 275.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -108,7 +108,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 530.0, 237.0, 405.0, 31.0 ],
-					"text" : "jcom.parameter normalizeMidi @type boolean @range/clipmode none @description \"Choose whether data should be normalized to a [0. 1.] range.\"",
+					"text" : "j.parameter normalizeMidi @type boolean @range/clipmode none @description \"Choose whether data should be normalized to a [0. 1.] range.\"",
 					"varname" : "midi_normalize[1]"
 				}
 
@@ -124,8 +124,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 530.0, 300.0, 326.0, 31.0 ],
-					"text" : "jcom.message initDevice @type generic @range/clipmode none @description \"Initialization of midi devices\"",
-					"varname" : "jcom.parameter[3]"
+					"text" : "j.message initDevice @type generic @range/clipmode none @description \"Initialization of midi devices\"",
+					"varname" : "j.parameter[3]"
 				}
 
 			}
@@ -160,7 +160,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 279.0, 354.0, 387.0, 31.0 ],
-					"text" : "jcom.parameter device @type generic @priority 1 @range/clipmode none @description \"Choose which MIDI device to use\"",
+					"text" : "j.parameter device @type generic @priority 1 @range/clipmode none @description \"Choose which MIDI device to use\"",
 					"varname" : "device_menu[1]"
 				}
 
@@ -189,8 +189,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 16.0, 123.0, 371.0, 19.0 ],
-					"text" : "jcom.model @type control @description \"Use any MIDI device\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Use any MIDI device\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -220,7 +220,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-26",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

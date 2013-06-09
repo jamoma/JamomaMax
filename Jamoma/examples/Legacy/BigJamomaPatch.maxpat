@@ -156,7 +156,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 262.0, 837.0, 151.0, 19.0 ],
-					"text" : "jcom.pass /cue @strip 0"
+					"text" : "j.pass /cue @strip 0"
 				}
 
 			}
@@ -171,7 +171,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 262.0, 667.0, 159.0, 19.0 ],
-					"text" : "jcom.pass /cues @strip 0"
+					"text" : "j.pass /cues @strip 0"
 				}
 
 			}
@@ -970,7 +970,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 47.0, 57.0, 103.0, 19.0 ],
-									"text" : "jcom.oscroute /file"
+									"text" : "j.oscroute /file"
 								}
 
 							}
@@ -1176,7 +1176,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 47.0, 57.0, 103.0, 19.0 ],
-									"text" : "jcom.oscroute /file"
+									"text" : "j.oscroute /file"
 								}
 
 							}
@@ -1382,7 +1382,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 47.0, 57.0, 103.0, 19.0 ],
-									"text" : "jcom.oscroute /file"
+									"text" : "j.oscroute /file"
 								}
 
 							}
@@ -1588,7 +1588,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 47.0, 57.0, 103.0, 19.0 ],
-									"text" : "jcom.oscroute /file"
+									"text" : "j.oscroute /file"
 								}
 
 							}
@@ -1794,7 +1794,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 47.0, 57.0, 103.0, 19.0 ],
-									"text" : "jcom.oscroute /file"
+									"text" : "j.oscroute /file"
 								}
 
 							}
@@ -2032,7 +2032,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 47.0, 57.0, 103.0, 19.0 ],
-									"text" : "jcom.oscroute /file"
+									"text" : "j.oscroute /file"
 								}
 
 							}
@@ -2326,7 +2326,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 390.0, 137.0, 19.0 ],
-					"text" : "jcom.oscroute /position/x"
+					"text" : "j.oscroute /position/x"
 				}
 
 			}
@@ -2342,7 +2342,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 15.0, 592.0, 132.0, 31.0 ],
-					"text" : "jcom.send jcom.remote.module.to"
+					"text" : "j.send j.remote.module.to"
 				}
 
 			}

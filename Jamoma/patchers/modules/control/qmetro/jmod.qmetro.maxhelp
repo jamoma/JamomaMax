@@ -21,7 +21,7 @@
 					"bgmode" : 1,
 					"id" : "obj-10",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 762.0, 70.0 ],
@@ -207,7 +207,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 442.0, 356.0, 293.0, 19.0 ],
-					"text" : "jcom.dataspace @dataspace time @input s @output ms"
+					"text" : "j.dataspace @dataspace time @input s @output ms"
 				}
 
 			}
@@ -397,7 +397,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 47.0, 266.0, 143.0, 19.0 ],
-					"text" : "jcom.oscroute /trigger"
+					"text" : "j.oscroute /trigger"
 				}
 
 			}

@@ -38,7 +38,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 114.0, 116.0, 217.0, 74.0 ],
-					"text" : "In order to create all jcom.parameters/messages/returns, you can use the jcom.parameterCreate utility below : just double-click on it and choose the desired attributes",
+					"text" : "In order to create all j.parameters/messages/returns, you can use the j.parameterCreate utility below : just double-click on it and choose the desired attributes",
 					"textcolor" : [ 0.709804, 0.101961, 0.101961, 1.0 ]
 				}
 
@@ -53,7 +53,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 114.0, 198.0, 130.0, 20.0 ],
-					"text" : "jcom.parameterCreate"
+					"text" : "j.parameterCreate"
 				}
 
 			}
@@ -68,7 +68,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 849.0, 624.0, 159.0, 55.0 ],
-					"text" : "jcom.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
+					"text" : "j.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
 				}
 
 			}
@@ -144,7 +144,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 385.5, 147.0, 74.0 ],
-					"text" : "jcom.parameter thisMenu @repetitions/allow 1 @type string @description \"a menu\" @priority 1",
+					"text" : "j.parameter thisMenu @repetitions/allow 1 @type string @description \"a menu\" @priority 1",
 					"varname" : "module_in[1]"
 				}
 
@@ -160,7 +160,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 286.5, 159.0, 74.0 ],
-					"text" : "jcom.parameter thisToggle @type boolean @description \"Tell me what you are doing I will tell you who you are\"",
+					"text" : "j.parameter thisToggle @type boolean @description \"Tell me what you are doing I will tell you who you are\"",
 					"varname" : "saturation/active"
 				}
 
@@ -176,7 +176,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 489.0, 165.0, 87.0 ],
-					"text" : "jcom.message thisMessage @type integer @range/bounds 0. 1. @range/clipmode none @description \"Document what this message does...\"",
+					"text" : "j.message thisMessage @type integer @range/bounds 0. 1. @range/clipmode none @description \"Document what this message does...\"",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -192,7 +192,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 151.0, 151.0, 127.0 ],
-					"text" : "jcom.parameter thisParameter @repetitions/allow 1 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter thisParameter @repetitions/allow 1 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
 
@@ -207,7 +207,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 102.5, 298.0, 82.0, 20.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -222,7 +222,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 76.0, 251.0, 241.0, 33.0 ],
-					"text" : "jcom.model @description \"Provide a brief description of this model.\""
+					"text" : "j.model @description \"Provide a brief description of this model.\""
 				}
 
 			}
@@ -236,7 +236,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 491.0, 190.0, 67.0, 20.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -250,7 +250,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 491.0, 412.0, 74.0, 20.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -264,7 +264,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 368.0, 412.0, 74.0, 20.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -278,7 +278,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 368.0, 190.0, 67.0, 20.0 ],
-					"text" : "jcom.in~ 1"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -551,46 +551,46 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.parameterCreate.maxpat",
+				"name" : "j.parameterCreate.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/parameterCreate",
 				"patcherrelativepath" : "../../../components/parameterCreate",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
  ]

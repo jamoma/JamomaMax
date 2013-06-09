@@ -380,7 +380,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 32.0, 68.0, 210.0, 18.0 ],
-					"text" : "jcom.oscroute /genframe /direct /yfade"
+					"text" : "j.oscroute /genframe /direct /yfade"
 				}
 
 			}

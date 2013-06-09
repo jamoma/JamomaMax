@@ -74,7 +74,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 435.0, 155.0, 318.0, 31.0 ],
-					"text" : "jcom.parameter trackChannel @type string @description \"What color channel to use when converting to gray image.\""
+					"text" : "j.parameter trackChannel @type string @description \"What color channel to use when converting to gray image.\""
 				}
 
 			}
@@ -88,7 +88,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 285.0, 233.0, 56.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -128,7 +128,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 290.0, 147.0, 59.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -181,7 +181,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 95.0, 220.0, 174.0, 31.0 ],
-					"text" : "jcom.model @description \"Change rgb to grayscale image.\""
+					"text" : "j.model @description \"Change rgb to grayscale image.\""
 				}
 
 			}
@@ -263,7 +263,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 60.0, 75.0, 156.0, 19.0 ],
-									"text" : "jcom.oscroute /trackChannel"
+									"text" : "j.oscroute /trackChannel"
 								}
 
 							}
@@ -579,7 +579,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

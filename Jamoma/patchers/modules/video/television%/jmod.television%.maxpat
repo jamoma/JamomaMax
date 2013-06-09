@@ -62,7 +62,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 497.0, 312.0, 554.0, 31.0 ],
-					"text" : "jcom.parameter stability @repetitions/allow 0 @type integer @range/bounds 1 100 @range/clipmode none @description \"stability of the picture in horizontal and vertical dimension\" @ramp/drive Max",
+					"text" : "j.parameter stability @repetitions/allow 0 @type integer @range/bounds 1 100 @range/clipmode none @description \"stability of the picture in horizontal and vertical dimension\" @ramp/drive Max",
 					"varname" : "hue_angle[5]"
 				}
 
@@ -140,7 +140,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 494.0, 267.0, 562.0, 31.0 ],
-					"text" : "jcom.parameter updaterate @repetitions/allow 0 @type integer @range/bounds 1 100 @range/clipmode low @description \"update rate for changes in the effect\" @ramp/drive Max",
+					"text" : "j.parameter updaterate @repetitions/allow 0 @type integer @range/bounds 1 100 @range/clipmode low @description \"update rate for changes in the effect\" @ramp/drive Max",
 					"varname" : "hue_angle[4]"
 				}
 
@@ -189,7 +189,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 497.0, 230.0, 600.0, 31.0 ],
-					"text" : "jcom.parameter fade @repetitions/allow 0 @type decimal @range/bounds 0. 1. @range/clipmode both @description \"over saturation effect\" @ramp/drive Max",
+					"text" : "j.parameter fade @repetitions/allow 0 @type decimal @range/bounds 0. 1. @range/clipmode both @description \"over saturation effect\" @ramp/drive Max",
 					"varname" : "hue_angle[3]"
 				}
 
@@ -221,7 +221,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 493.0, 189.0, 588.0, 31.0 ],
-					"text" : "jcom.parameter noise/granularity.y @repetitions/allow 0 @type integer @range/bounds 0. 100. @range/clipmode low @description \"Size of the noise particles in y dimension\" @ramp/drive Max",
+					"text" : "j.parameter noise/granularity.y @repetitions/allow 0 @type integer @range/bounds 0. 100. @range/clipmode low @description \"Size of the noise particles in y dimension\" @ramp/drive Max",
 					"varname" : "hue_angle[2]"
 				}
 
@@ -269,7 +269,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 495.0, 152.0, 588.0, 31.0 ],
-					"text" : "jcom.parameter noise/granularity.x @repetitions/allow 0 @type integer @range/bounds 0. 100. @range/clipmode low @description \"Size of the noise particles in x dimension\" @ramp/drive Max",
+					"text" : "j.parameter noise/granularity.x @repetitions/allow 0 @type integer @range/bounds 0. 100. @range/clipmode low @description \"Size of the noise particles in x dimension\" @ramp/drive Max",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -320,7 +320,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 160.0, 410.0, 65.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -368,7 +368,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 493.0, 113.0, 594.0, 31.0 ],
-					"text" : "jcom.parameter noise/probability @repetitions/allow 0 @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Set the amount of 'snow' on the TV \" @ramp/drive Max",
+					"text" : "j.parameter noise/probability @repetitions/allow 0 @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Set the amount of 'snow' on the TV \" @ramp/drive Max",
 					"varname" : "hue_angle"
 				}
 
@@ -383,7 +383,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 160.0, 330.0, 68.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -411,8 +411,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 14.0, 211.0, 206.0, 19.0 ],
-					"text" : "jcom.model @description \"Bad-TV effect\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Bad-TV effect\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -446,7 +446,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-16",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

@@ -55,7 +55,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 71.0, 97.0, 101.0, 20.0 ],
-					"text" : "jcom.pass /mode"
+					"text" : "j.pass /mode"
 				}
 
 			}
@@ -284,7 +284,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 536.0, 41.0, 151.0, 20.0 ],
-									"text" : "jcom.oscroute /framedelay"
+									"text" : "j.oscroute /framedelay"
 								}
 
 							}

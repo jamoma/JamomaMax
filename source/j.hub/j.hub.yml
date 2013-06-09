@@ -1,0 +1,24 @@
+sources:
+  - j.hub.cpp
+  - ../classwrapper/TTModularClassWrapperMax.cpp
+  - ../c74support/max-includes/common/commonsyms.cpp
+    
+includes:
+  - . 
+  - ../../../../Core/Foundation/library/includes
+  - ../../../../Core/Modular/library/includes
+  - ../../../../Core/Modular/library/PeerObject
+  - ../../../../Core/Modular/library/ModularForMax
+  - ../../../../Core/Modular/library/SchedulerLib
+  - ../../../../Core/Modular/library/ProtocolLib
+  - ../../../../Core/DSP/library/includes
+  - ../classwrapper
+  - C74-INCLUDES
+
+libraries:
+  - FOUNDATION
+  - MODULAR  
+  - DSP
+  - C74
+
+prefix: ../c74support/max-includes/macho-prefix.pch

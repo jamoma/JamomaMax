@@ -120,7 +120,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 42.0, 51.0, 118.0, 18.0 ],
-									"text" : "jcom.pwindow.mouse"
+									"text" : "j.pwindow.mouse"
 								}
 
 							}
@@ -267,7 +267,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 140.0, 307.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -281,7 +281,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 192.0, 242.0, 56.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -330,7 +330,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 525.0, 226.0, 331.0, 31.0 ],
-					"text" : "jcom.parameter algorithm @type string @description \"Choose the type of algorithm to use for the edge detection.\"",
+					"text" : "j.parameter algorithm @type string @description \"Choose the type of algorithm to use for the edge detection.\"",
 					"varname" : "algorithm"
 				}
 
@@ -346,7 +346,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 525.0, 146.0, 406.0, 31.0 ],
-					"text" : "jcom.parameter thresh @type decimal @ramp/drive Max @description \"Edge detection threshold - pixels below the threshold are set to black.\"",
+					"text" : "j.parameter thresh @type decimal @ramp/drive Max @description \"Edge detection threshold - pixels below the threshold are set to black.\"",
 					"varname" : "thresh"
 				}
 
@@ -502,8 +502,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 6.0, 153.0, 310.0, 31.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Glowing Edges Effect\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Glowing Edges Effect\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -537,7 +537,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

@@ -79,7 +79,7 @@
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 645.0, 70.0 ],
@@ -234,7 +234,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 455.0, 230.0, 187.0, 31.0 ],
-									"text" : "jcom.dataspace @dataspace color @input hsl @output rgb"
+									"text" : "j.dataspace @dataspace color @input hsl @output rgb"
 								}
 
 							}
@@ -1103,7 +1103,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 483.0, 272.0, 109.0, 19.0 ],
-					"text" : "jcom.oscroute /raw"
+					"text" : "j.oscroute /raw"
 				}
 
 			}
@@ -1145,7 +1145,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 159.0, 273.0, 113.0, 19.0 ],
-					"text" : "jcom.oscroute /x /y"
+					"text" : "j.oscroute /x /y"
 				}
 
 			}
@@ -1201,7 +1201,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 23.0, 273.0, 112.0, 19.0 ],
-					"text" : "jcom.oscroute /x /y"
+					"text" : "j.oscroute /x /y"
 				}
 
 			}
@@ -1215,7 +1215,7 @@
 					"numoutlets" : 8,
 					"outlettype" : [ "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 33.0, 248.0, 544.0, 19.0 ],
-					"text" : "jcom.oscroute /position /pressure /tilt /direction /proximity /touch /buttons"
+					"text" : "j.oscroute /position /pressure /tilt /direction /proximity /touch /buttons"
 				}
 
 			}

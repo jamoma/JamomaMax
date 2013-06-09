@@ -50,7 +50,7 @@
 					"fontsize" : 9.0,
 					"id" : "obj-46",
 					"knobcolor" : [ 0.733333, 0.137255, 0.137255, 1.0 ],
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -353,7 +353,7 @@
 					"id" : "obj-42",
 					"ignoreclick" : 1,
 					"knobcolor" : [ 0.698039, 0.698039, 0.698039, 0.0 ],
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -378,7 +378,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 327.0, 270.0, 156.0, 67.0 ],
-					"text" : "jcom.return cpu @enable 0 @description \"reports the cpu usage of the dsp processing\" @range/bounds 0. 100. @type decimal"
+					"text" : "j.return cpu @enable 0 @description \"reports the cpu usage of the dsp processing\" @range/bounds 0. 100. @type decimal"
 				}
 
 			}
@@ -446,7 +446,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 555.0, 540.0, 518.0, 20.0 ],
-					"text" : "jcom.message audio/panic @type none @description \"Panic: Stop audio immediately.\""
+					"text" : "j.message audio/panic @type none @description \"Panic: Stop audio immediately.\""
 				}
 
 			}
@@ -474,7 +474,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 555.0, 503.0, 504.0, 19.0 ],
-					"text" : "jcom.parameter audio/active @type boolean @description \"Toggle the global DSP on and off.\"",
+					"text" : "j.parameter audio/active @type boolean @description \"Toggle the global DSP on and off.\"",
 					"varname" : "audio[1]"
 				}
 
@@ -536,7 +536,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 555.0, 435.0, 352.0, 19.0 ],
-					"text" : "jcom.message dspStatus @description \" Open DSP Status window.\""
+					"text" : "j.message dspStatus @description \" Open DSP Status window.\""
 				}
 
 			}
@@ -635,7 +635,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 611.0, 294.0, 543.0, 43.0 ],
-					"text" : "jcom.message record/active @type generic @repetitions/allow 1 @description \"record to a sound file, a value of 1 opens save-as dialog and will start recording afterwards; a string value will start the recording and will save the recording under the provided  string; a value of 0 stops recording\"",
+					"text" : "j.message record/active @type generic @repetitions/allow 1 @description \"record to a sound file, a value of 1 opens save-as dialog and will start recording afterwards; a string value will start the recording and will save the recording under the provided  string; a value of 0 stops recording\"",
 					"varname" : "record"
 				}
 
@@ -1052,7 +1052,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 370.0, 485.0, 304.0, 31.0 ],
-									"text" : "jcom.parameter record/samptype @type string @description \"Recording: Set sample type for sound files.\"",
+									"text" : "j.parameter record/samptype @type string @description \"Recording: Set sample type for sound files.\"",
 									"varname" : "record/samptype"
 								}
 
@@ -1068,7 +1068,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 370.0, 440.0, 283.0, 31.0 ],
-									"text" : "jcom.parameter record/filetype @type string @description \"Recording: Set file type for sound files.\"",
+									"text" : "j.parameter record/filetype @type string @description \"Recording: Set file type for sound files.\"",
 									"varname" : "record/filetype"
 								}
 
@@ -1144,7 +1144,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 60.0, 60.0, 54.0, 19.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -1232,7 +1232,7 @@
 														"parameter_enable" : 0
 													}
 ,
-													"text" : "js jcom.js_systeminfo.js"
+													"text" : "js j.js_systeminfo.js"
 												}
 
 											}
@@ -1331,13 +1331,13 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.js_systeminfo.js",
+												"name" : "j.js_systeminfo.js",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/javascript",
 												"type" : "TEXT",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.init.mxo",
+												"name" : "j.init.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -1478,7 +1478,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 370.0, 320.0, 712.0, 31.0 ],
-									"text" : "jcom.parameter limiter/release @ramp/drive Max @type decimal @range/bounds 0 3000 @range/clipmode low @dataspace time @dataspace/unit ms @description \"Limiter: Set release time as ms.\"",
+									"text" : "j.parameter limiter/release @ramp/drive Max @type decimal @range/bounds 0 3000 @range/clipmode low @dataspace time @dataspace/unit ms @description \"Limiter: Set release time as ms.\"",
 									"varname" : "limiter/release"
 								}
 
@@ -1494,7 +1494,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 370.0, 275.0, 722.0, 31.0 ],
-									"text" : "jcom.parameter limiter/preamp @ramp/drive Max @range/bounds 0 48 @range/clipmode none @type decimal @dataspace gain @dataspace/unit dB @description \"Limiter: Preamp as dB.\"",
+									"text" : "j.parameter limiter/preamp @ramp/drive Max @range/bounds 0 48 @range/clipmode none @type decimal @dataspace gain @dataspace/unit dB @description \"Limiter: Preamp as dB.\"",
 									"varname" : "limiter/preamp"
 								}
 
@@ -1645,7 +1645,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 370.0, 240.0, 659.0, 19.0 ],
-									"text" : "jcom.parameter limiter/dcblocker/active @type boolean @description \"DC blocker feature of the limiter: Active or bypassed.\"",
+									"text" : "j.parameter limiter/dcblocker/active @type boolean @description \"DC blocker feature of the limiter: Active or bypassed.\"",
 									"varname" : "limiter/active[1]"
 								}
 
@@ -1720,7 +1720,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 370.0, 100.0, 333.0, 31.0 ],
-									"text" : "jcom.parameter limiter/mode @type string @description \"Limiter: Set the function to be used for calculating the scaling.\"",
+									"text" : "j.parameter limiter/mode @type string @description \"Limiter: Set the function to be used for calculating the scaling.\"",
 									"varname" : "limiter/mode"
 								}
 
@@ -1736,7 +1736,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 370.0, 55.0, 781.0, 31.0 ],
-									"text" : "jcom.parameter limiter/threshold @ramp/drive Max @range/bounds -24 48 @range/clipmode none @type decimal @dataspace gain @dataspace/unit dB @description \"Limiter: Set threshold as dB.\"",
+									"text" : "j.parameter limiter/threshold @ramp/drive Max @range/bounds -24 48 @range/clipmode none @type decimal @dataspace gain @dataspace/unit dB @description \"Limiter: Set threshold as dB.\"",
 									"varname" : "limiter/threshold"
 								}
 
@@ -1752,7 +1752,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 370.0, 190.0, 513.0, 31.0 ],
-									"text" : "jcom.parameter limiter/lookahead @ramp/drive Max @range/bounds 0 256 @range/clipmode both @type integer @description \"Limiter: The number of samples to look ahead.\"",
+									"text" : "j.parameter limiter/lookahead @ramp/drive Max @range/bounds 0 256 @range/clipmode both @type integer @description \"Limiter: The number of samples to look ahead.\"",
 									"varname" : "limiter/lookahead"
 								}
 
@@ -1768,7 +1768,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 370.0, 145.0, 727.0, 31.0 ],
-									"text" : "jcom.parameter limiter/postamp @ramp/drive Max @range/bounds -24 48 @range/clipmode none @type decimal @dataspace gain @dataspace/unit dB @description \"Limiter: Postamp as dB.\"",
+									"text" : "j.parameter limiter/postamp @ramp/drive Max @range/bounds -24 48 @range/clipmode none @type decimal @dataspace gain @dataspace/unit dB @description \"Limiter: Postamp as dB.\"",
 									"varname" : "limiter/postamp"
 								}
 
@@ -2046,17 +2046,17 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.js_systeminfo.js",
+								"name" : "j.js_systeminfo.js",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/javascript",
 								"type" : "TEXT",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.parameter.mxo",
+								"name" : "j.parameter.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.init.mxo",
+								"name" : "j.init.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -2090,7 +2090,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 585.0, 230.0, 479.0, 19.0 ],
-					"text" : "jcom.parameter limiter/active @type boolean @description \"Limiter: Active or bypassed.\"",
+					"text" : "j.parameter limiter/active @type boolean @description \"Limiter: Active or bypassed.\"",
 					"varname" : "limiter/active"
 				}
 
@@ -2201,7 +2201,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 305.0, 210.0, 54.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -2216,7 +2216,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 585.0, 170.0, 540.0, 31.0 ],
-					"text" : "jcom.parameter offset @type integer @repetitions/allow 0 @range/bounds 0 32 @range/clipmode both @description \"Set channel offset for the multicable. Changes only take effect when audio is off.\"",
+					"text" : "j.parameter offset @type integer @repetitions/allow 0 @range/bounds 0 32 @range/clipmode both @description \"Set channel offset for the multicable. Changes only take effect when audio is off.\"",
 					"varname" : "offset"
 				}
 
@@ -2563,7 +2563,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 289.0, 341.0, 319.0, 31.0 ],
-									"text" : "jcom.parameter setup @type integerArray @range/bounds 1 32 @range/clipmode low @description \"List of output channels that multicable signal is routed to.\"",
+									"text" : "j.parameter setup @type integerArray @range/bounds 1 32 @range/clipmode low @description \"List of output channels that multicable signal is routed to.\"",
 									"varname" : "setup"
 								}
 
@@ -3779,7 +3779,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.parameter.mxo",
+								"name" : "j.parameter.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -3814,7 +3814,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 159.0, 280.0, 148.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -3920,7 +3920,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 585.0, 50.0, 581.0, 31.0 ],
-					"text" : "jcom.parameter numSpeakers @type integer @repetitions/allow 0 @range/bounds 2 32 @range/clipmode both @description \"Set number of output channels to use. Changes only take effect when audio is off.\"",
+					"text" : "j.parameter numSpeakers @type integer @repetitions/allow 0 @range/bounds 2 32 @range/clipmode both @description \"Set number of output channels to use. Changes only take effect when audio is off.\"",
 					"varname" : "voices"
 				}
 
@@ -3936,8 +3936,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 150.0, 323.0, 31.0 ],
-					"text" : "jcom.model @description \"Send multicable signal to multiple dac~ channels. Includes  limiter and recording device\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Send multicable signal to multiple dac~ channels. Includes  limiter and recording device\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -3947,7 +3947,7 @@
 					"has_mute" : 1,
 					"has_panel" : 1,
 					"id" : "obj-36",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -4353,7 +4353,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
@@ -4367,91 +4367,91 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.metro.maxhelp",
+				"name" : "j.metro.maxhelp",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/metro",
 				"patcherrelativepath" : "../../../library/components/metro",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.metro.maxpat",
+				"name" : "j.metro.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/metro",
 				"patcherrelativepath" : "../../../library/components/metro",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.audioOnOff.maxpat",
+				"name" : "j.audioOnOff.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/audioOnOff",
 				"patcherrelativepath" : "../../../library/components/audioOnOff",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.js_systeminfo.js",
+				"name" : "j.js_systeminfo.js",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/javascript",
 				"patcherrelativepath" : "../../../library/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.stats.mxo",
+				"name" : "j.stats.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.limiter≈.mxo",
+				"name" : "j.limiter≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.gain≈.mxo",
+				"name" : "j.gain≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.textslider.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
  ]

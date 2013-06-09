@@ -92,7 +92,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 145.0, 405.0, 65.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -126,7 +126,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 495.0, 90.0, 593.0, 31.0 ],
-					"text" : "jcom.parameter alpha/mode @repetitions/allow 1 @type string @description \"crossfade mode: 0 = crossfade right to left, 1 = crossfade left to right.\"",
+					"text" : "j.parameter alpha/mode @repetitions/allow 1 @type string @description \"crossfade mode: 0 = crossfade right to left, 1 = crossfade left to right.\"",
 					"varname" : "module_in[1]"
 				}
 
@@ -155,7 +155,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 105.0, 300.0, 59.5, 19.0 ],
-					"text" : "jcom.in 2"
+					"text" : "j.in 2"
 				}
 
 			}
@@ -198,8 +198,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 14.0, 191.0, 309.0, 31.0 ],
-					"text" : "jcom.model @type video @description \"This module doesn't do much yet\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @description \"This module doesn't do much yet\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -247,7 +247,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-16",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

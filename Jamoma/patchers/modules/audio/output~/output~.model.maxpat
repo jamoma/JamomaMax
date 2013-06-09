@@ -284,7 +284,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 539.5, 178.0, 172.0, 114.0 ],
-									"text" : "jcom.return audio/amplitude.2 @type decimal @range/bounds 0. 1. @repetitions/allow 1 @dataspace gain @description \"instant amplitude of the signal number 2\""
+									"text" : "j.return audio/amplitude.2 @type decimal @range/bounds 0. 1. @repetitions/allow 1 @dataspace gain @description \"instant amplitude of the signal number 2\""
 								}
 
 							}
@@ -299,7 +299,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 324.0, 178.0, 172.0, 114.0 ],
-									"text" : "jcom.return audio/amplitude.1 @type decimal @range/bounds 0. 1. @repetitions/allow 1 @dataspace gain @description \"instant amplitude of the signal number 1\""
+									"text" : "j.return audio/amplitude.1 @type decimal @range/bounds 0. 1. @repetitions/allow 1 @dataspace gain @description \"instant amplitude of the signal number 1\""
 								}
 
 							}
@@ -307,7 +307,7 @@
 								"box" : 								{
 									"annotation" : "instant amplitude of the signal number 2",
 									"id" : "obj-13",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -321,7 +321,7 @@
 								"box" : 								{
 									"annotation" : "instant amplitude of the signal number 1",
 									"id" : "obj-14",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -668,7 +668,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 262.799988, 335.0, 147.0, 87.0 ],
-					"text" : "jcom.return cpu @range/bounds 0. 100. @type decimal @description \"reports the cpu usage of the dsp processing\""
+					"text" : "j.return cpu @range/bounds 0. 100. @type decimal @description \"reports the cpu usage of the dsp processing\""
 				}
 
 			}
@@ -747,7 +747,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 88.0, 78.0, 73.0, 20.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -762,7 +762,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 43.0, 141.0, 343.0, 33.0 ],
-					"text" : "jcom.model @description \"A generic audio output model with built in master saturation, limiter, and recording abilities.\""
+					"text" : "j.model @description \"A generic audio output model with built in master saturation, limiter, and recording abilities.\""
 				}
 
 			}
@@ -776,7 +776,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "int", "float", "float", "float", "float", "" ],
 					"patching_rect" : [ 216.0, 300.0, 97.0, 20.0 ],
-					"text" : "jcom.stats 50 50"
+					"text" : "j.stats 50 50"
 				}
 
 			}
@@ -892,7 +892,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 362.0, 104.0, 146.0, 60.0 ],
-									"text" : "jcom.message dspStatus @type none @description \"Open DSP Status window.\""
+									"text" : "j.message dspStatus @type none @description \"Open DSP Status window.\""
 								}
 
 							}
@@ -907,7 +907,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 680.0, 104.0, 152.0, 60.0 ],
-									"text" : "jcom.parameter ch.2 @type integer @description \" Set logical output for right channel.\"",
+									"text" : "j.parameter ch.2 @type integer @description \" Set logical output for right channel.\"",
 									"varname" : "ch_2"
 								}
 
@@ -923,7 +923,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 515.0, 104.0, 153.0, 60.0 ],
-									"text" : "jcom.parameter ch.1 @type integer @description \" Set logical output for left channel.\"",
+									"text" : "j.parameter ch.1 @type integer @description \" Set logical output for left channel.\"",
 									"varname" : "ch_1"
 								}
 
@@ -1250,8 +1250,8 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 236.0, 85.0, 330.0, 60.0 ],
-									"text" : "jcom.parameter audio/gain @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"master gain\"",
-									"varname" : "jcom.parameter.gain"
+									"text" : "j.parameter audio/gain @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"master gain\"",
+									"varname" : "j.parameter.gain"
 								}
 
 							}
@@ -1266,7 +1266,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 236.0, 163.0, 101.0, 60.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -1489,7 +1489,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 254.0, 46.0, 257.0, 33.0 ],
-									"text" : "jcom.message record/active @type boolean @description \"record to a sound file\"",
+									"text" : "j.message record/active @type boolean @description \"record to a sound file\"",
 									"varname" : "record"
 								}
 
@@ -1505,7 +1505,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 534.0, 140.5, 320.0, 33.0 ],
-									"text" : "jcom.parameter record/samptype @type string @description \"Recording: Set sample type for sound files.\"",
+									"text" : "j.parameter record/samptype @type string @description \"Recording: Set sample type for sound files.\"",
 									"varname" : "record/samptype"
 								}
 
@@ -1521,7 +1521,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 528.0, 41.5, 297.0, 33.0 ],
-									"text" : "jcom.parameter record/filetype @type string @description \"Recording: Set file type for sound files.\"",
+									"text" : "j.parameter record/filetype @type string @description \"Recording: Set file type for sound files.\"",
 									"varname" : "record/filetype"
 								}
 
@@ -2187,55 +2187,55 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.stats.mxo",
+				"name" : "j.stats.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.overdrive~.mxo",
+				"name" : "j.overdrive~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.limiter~.mxo",
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.panorama~.mxo",
+				"name" : "j.panorama~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
  ]

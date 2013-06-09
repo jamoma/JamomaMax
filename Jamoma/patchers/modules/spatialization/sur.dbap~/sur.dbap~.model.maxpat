@@ -37,7 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 548.0, 30.0, 548.0, 31.0 ],
-					"text" : "jcom.parameter audio/gain @type integer @range/bounds 0 127 @range/clipmode both @dataspace gain @dataspace/unit midi",
+					"text" : "j.parameter audio/gain @type integer @range/bounds 0 127 @range/clipmode both @dataspace gain @dataspace/unit midi",
 					"varname" : "voices[5]"
 				}
 
@@ -52,7 +52,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 548.0, 5.0, 451.0, 19.0 ],
-					"text" : "jcom.parameter audio/mute @type boolean @range/bounds 0 1 @range/clipmode both",
+					"text" : "j.parameter audio/mute @type boolean @range/bounds 0 1 @range/clipmode both",
 					"varname" : "voices[4]"
 				}
 
@@ -780,7 +780,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 88.0, 129.0, 135.0, 44.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -950,7 +950,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.dataspace.mxo",
+								"name" : "j.dataspace.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -1410,7 +1410,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 5.0, 49.0, 70.0, 19.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -1425,7 +1425,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 684.0, 574.0, 31.0 ],
-					"text" : "jcom.messageArray speaker.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+					"text" : "j.messageArray speaker.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 				}
 
 			}
@@ -1440,7 +1440,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 588.0, 596.0, 31.0 ],
-					"text" : "jcom.parameterArray source.[32]/weight @type array @range/bounds 0. 1. @description \"Set spatial weight of the nth source.\""
+					"text" : "j.parameterArray source.[32]/weight @type array @range/bounds 0. 1. @description \"Set spatial weight of the nth source.\""
 				}
 
 			}
@@ -1455,7 +1455,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 488.0, 592.0, 31.0 ],
-					"text" : "jcom.messageArray source.[32]/active @type boolean @repetitions/allow 1 @description \"Mute or unmute the nth source.\""
+					"text" : "j.messageArray source.[32]/active @type boolean @repetitions/allow 1 @description \"Mute or unmute the nth source.\""
 				}
 
 			}
@@ -1470,7 +1470,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 409.0, 591.0, 31.0 ],
-					"text" : "jcom.messageArray source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @description \"Input gain for the nth source.\""
+					"text" : "j.messageArray source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @description \"Input gain for the nth source.\""
 				}
 
 			}
@@ -1485,7 +1485,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 313.0, 606.0, 31.0 ],
-					"text" : "jcom.messageArray source.[32]/blur @type decimal @range/bounds 0. 100. @description \"Set spatial blur of the nth source.\""
+					"text" : "j.messageArray source.[32]/blur @type decimal @range/bounds 0. 100. @description \"Set spatial blur of the nth source.\""
 				}
 
 			}
@@ -1526,7 +1526,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 232.0, 569.0, 31.0 ],
-					"text" : "jcom.messageArray source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+					"text" : "j.messageArray source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 				}
 
 			}
@@ -1558,7 +1558,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 425.0, 23.0, 105.0, 19.0 ],
-					"text" : "jcom.message info"
+					"text" : "j.message info"
 				}
 
 			}
@@ -1573,7 +1573,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 425.0, 99.0, 592.0, 31.0 ],
-					"text" : "jcom.parameter rolloff @type decimal @range/bounds 1 6 @range/clipmode low @description \"Rolloff in dB with doubling of distance.\"",
+					"text" : "j.parameter rolloff @type decimal @range/bounds 1 6 @range/clipmode low @description \"Rolloff in dB with doubling of distance.\"",
 					"varname" : "voices[3]"
 				}
 
@@ -1589,7 +1589,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 425.0, 68.0, 606.0, 31.0 ],
-					"text" : "jcom.parameter dimensions @type integer @range/bounds 1 3 @range/clipmode both @description \"Dimensions of the space spanned by loudspeakers.\"",
+					"text" : "j.parameter dimensions @type integer @range/bounds 1 3 @range/clipmode both @description \"Dimensions of the space spanned by loudspeakers.\"",
 					"varname" : "voices[2]"
 				}
 
@@ -1605,7 +1605,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 425.0, 130.0, 568.0, 31.0 ],
-					"text" : "jcom.parameter numSpeakers @type integer @range/bounds 1 32 @range/clipmode both @description \"The number of speakers to diffuse to.\" @priority 3",
+					"text" : "j.parameter numSpeakers @type integer @range/bounds 1 32 @range/clipmode both @description \"The number of speakers to diffuse to.\" @priority 3",
 					"varname" : "voices[1]"
 				}
 
@@ -1670,8 +1670,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 5.0, 150.0, 388.0, 31.0 ],
-					"text" : "jcom.model @description \"Distance-based amplitude panning. <br>NOTE: The positions of the speakers are not maintained by this module.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Distance-based amplitude panning. <br>NOTE: The positions of the speakers are not maintained by this module.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1709,7 +1709,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 425.0, 158.0, 557.0, 31.0 ],
-					"text" : "jcom.parameter numSources @type integer @range/bounds 1 32 @range/clipmode both @description \"The number of sources to process.\" @priority 2",
+					"text" : "j.parameter numSources @type integer @range/bounds 1 32 @range/clipmode both @description \"The number of sources to process.\" @priority 2",
 					"varname" : "voices"
 				}
 
@@ -1809,7 +1809,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 159.0, 126.0, 150.0, 44.0 ],
-													"text" : "a simple workaround until jcom.oçscinstance can deal with relative addresses"
+													"text" : "a simple workaround until j.oçscinstance can deal with relative addresses"
 												}
 
 											}
@@ -1956,7 +1956,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 534.0, 185.0, 59.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -1970,7 +1970,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 534.0, 112.0, 95.0, 19.0 ],
-									"text" : "jcom.pass /mute"
+									"text" : "j.pass /mute"
 								}
 
 							}
@@ -1984,7 +1984,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 610.0, 132.0, 111.0, 19.0 ],
-									"text" : "jcom.oscroute /gain"
+									"text" : "j.oscroute /gain"
 								}
 
 							}
@@ -2055,7 +2055,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 610.0, 155.0, 102.0, 55.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -2069,7 +2069,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 252.0, 72.0, 264.0, 19.0 ],
-									"text" : "jcom.oscroute /numSources /numSpeakers /audio"
+									"text" : "j.oscroute /numSources /numSpeakers /audio"
 								}
 
 							}
@@ -2124,7 +2124,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 51.0, 72.0, 190.0, 19.0 ],
-									"text" : "jcom.pass /info /dimensions /rolloff"
+									"text" : "j.pass /info /dimensions /rolloff"
 								}
 
 							}
@@ -2138,7 +2138,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 256.0, 454.0, 63.0, 19.0 ],
-									"text" : "jcom.dbap"
+									"text" : "j.dbap"
 								}
 
 							}
@@ -2403,25 +2403,25 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.thru.maxpat",
+								"name" : "j.thru.maxpat",
 								"bootpath" : "/Users/jln/@Jamoma/Jamoma/Modules/Modular/Max/library/components/thru",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.dbap.mxo",
+								"name" : "j.dbap.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.pass.mxo",
+								"name" : "j.pass.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.dataspace.mxo",
+								"name" : "j.dataspace.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -2457,7 +2457,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 139.5, 491.0, 96.0, 31.0 ],
-					"text" : "jcom.matrix≈ @interpolated 1",
+					"text" : "j.matrix≈ @interpolated 1",
 					"varname" : "matrix"
 				}
 
@@ -2682,54 +2682,54 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.matrix≈.mxo",
+				"name" : "j.matrix≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dbap.mxo",
+				"name" : "j.dbap.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.messageArray.mxo",
+				"name" : "j.messageArray.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameterArray.mxo",
+				"name" : "j.parameterArray.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

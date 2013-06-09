@@ -205,7 +205,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 295.0, 271.0, 30.0 ],
-									"text" : "jcom.parameter gdif/emotion/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/emotion/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/emotion/on"
 								}
 
@@ -222,7 +222,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 255.0, 294.0, 30.0 ],
-									"text" : "jcom.parameter gdif/performance/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/performance/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/performance/on"
 								}
 
@@ -239,7 +239,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 215.0, 294.0, 30.0 ],
-									"text" : "jcom.parameter gdif/environment/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/environment/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/environment/on"
 								}
 
@@ -256,7 +256,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 175.0, 267.0, 30.0 ],
-									"text" : "jcom.parameter gdif/device/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/device/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/device/on"
 								}
 
@@ -273,7 +273,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 135.0, 267.0, 30.0 ],
-									"text" : "jcom.parameter gdif/body/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/body/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/body/on"
 								}
 
@@ -290,7 +290,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 95.0, 267.0, 30.0 ],
-									"text" : "jcom.parameter gdif/cooked/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/cooked/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/cooked/on"
 								}
 
@@ -307,7 +307,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 55.0, 267.0, 30.0 ],
-									"text" : "jcom.parameter gdif/raw/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/raw/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/raw/on"
 								}
 
@@ -551,7 +551,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 277.0, 366.0, 163.0, 18.0 ],
-									"text" : "jcom.oscroute /view/panel"
+									"text" : "j.oscroute /view/panel"
 								}
 
 							}
@@ -938,7 +938,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 493.0, 215.0, 418.0, 18.0 ],
-					"text" : "jcom.parameter mode @type string @description \"Choose reference mode\"",
+					"text" : "j.parameter mode @type string @description \"Choose reference mode\"",
 					"varname" : "mode[1]"
 				}
 
@@ -973,7 +973,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 493.0, 292.0, 446.0, 30.0 ],
-					"text" : "jcom.parameter sample_rate @type integer @range/bounds 0 1000 @range/clipmode low @range/clipmode none @description \"Sample rate of mouse values.\"",
+					"text" : "j.parameter sample_rate @type integer @range/bounds 0 1000 @range/clipmode low @range/clipmode none @description \"Sample rate of mouse values.\"",
 					"varname" : "sample_rate"
 				}
 
@@ -1016,7 +1016,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 142.0, 184.0, 144.0, 18.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -1030,7 +1030,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 300.0, 160.0, 45.0, 18.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -1044,7 +1044,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 493.0, 146.0, 437.0, 18.0 ],
-					"text" : "jcom.parameter reference @type string @description \"Choose reference mode\"",
+					"text" : "j.parameter reference @type string @description \"Choose reference mode\"",
 					"varname" : "reference[1]"
 				}
 
@@ -1080,7 +1080,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 493.0, 66.0, 278.0, 30.0 ],
-					"text" : "jcom.parameter mouse_on @type boolean @range/clipmode none @description \"Turn polling on\"",
+					"text" : "j.parameter mouse_on @type boolean @range/clipmode none @description \"Turn polling on\"",
 					"varname" : "mouse_on[1]"
 				}
 
@@ -1122,8 +1122,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 116.0, 295.0, 18.0 ],
-					"text" : "jcom.model @description \"Output information from mouse\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Output information from mouse\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1154,7 +1154,7 @@
 				"box" : 				{
 					"has_panel" : 1,
 					"id" : "obj-30",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

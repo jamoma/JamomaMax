@@ -175,7 +175,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 63.0, 100.0, 70.0, 21.0 ],
-									"text" : "r jcom.init"
+									"text" : "r j.init"
 								}
 
 							}
@@ -203,7 +203,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 63.0, 126.0, 155.0, 21.0 ],
-									"text" : "js jcom.js_systeminfo.js"
+									"text" : "js j.js_systeminfo.js"
 								}
 
 							}
@@ -393,7 +393,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 391.0, 84.0, 64.0, 19.0 ],
-					"text" : "r jcom.init"
+					"text" : "r j.init"
 				}
 
 			}
@@ -407,7 +407,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 125.0, 388.0, 433.0, 19.0 ],
-					"text" : "jcom.return hi/* @enable 1 @description \"Raw data from Human Interface device.\""
+					"text" : "j.return hi/* @enable 1 @description \"Raw data from Human Interface device.\""
 				}
 
 			}
@@ -504,7 +504,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 168.0, 52.0, 317.0, 19.0 ],
-					"text" : "jcom.oscroute /device /active /initDevice /update"
+					"text" : "j.oscroute /device /active /initDevice /update"
 				}
 
 			}

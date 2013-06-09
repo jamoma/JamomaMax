@@ -772,7 +772,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 5.0, 145.0, 114.0, 31.0 ],
-					"text" : "jcom.oscroute /offsetX /offsetY"
+					"text" : "j.oscroute /offsetX /offsetY"
 				}
 
 			}
@@ -797,7 +797,7 @@
 					"numoutlets" : 10,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 30.0, 55.0, 488.0, 19.0 ],
-					"text" : "jcom.oscroute /boundmode /genframe /direct /zoomX /zoomY /angle /mirror /rotate2 /rotate1"
+					"text" : "j.oscroute /boundmode /genframe /direct /zoomX /zoomY /angle /mirror /rotate2 /rotate1"
 				}
 
 			}

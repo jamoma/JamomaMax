@@ -52,7 +52,7 @@
 					"bgmode" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 453.0, 70.0 ],
@@ -141,7 +141,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 65.0, 110.0, 305.0, 19.0 ],
-									"text" : "jcom.dataspace @dataspace color @input rgb @output hsl"
+									"text" : "j.dataspace @dataspace color @input rgb @output hsl"
 								}
 
 							}

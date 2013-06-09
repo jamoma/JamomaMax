@@ -38,7 +38,7 @@
 					"bgmode" : 1,
 					"id" : "obj-5",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 933.0, 70.0 ],
@@ -456,7 +456,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 180.0, 150.0, 299.0, 19.0 ],
-									"text" : "jcom.route @searchstring /numSpeaker @partialmatch 1"
+									"text" : "j.route @searchstring /numSpeaker @partialmatch 1"
 								}
 
 							}
@@ -470,7 +470,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 278.0, 19.0 ],
-									"text" : "jcom.route @searchstring /speaker. @partialmatch 1"
+									"text" : "j.route @searchstring /speaker. @partialmatch 1"
 								}
 
 							}
@@ -561,7 +561,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 47.0, 237.0, 154.0, 31.0 ],
-					"text" : "jcom.position2ambimonitor @prefix speaker @radius 10."
+					"text" : "j.position2ambimonitor @prefix speaker @radius 10."
 				}
 
 			}
@@ -751,7 +751,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 232.0, 152.0, 144.0, 19.0 ],
-													"text" : "jcom.initialized /setup 200"
+													"text" : "j.initialized /setup 200"
 												}
 
 											}
@@ -925,7 +925,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 227.0, 241.0, 134.0, 43.0 ],
-									"text" : "jcom.dataspace @dataspace position @input aed @output xyz"
+									"text" : "j.dataspace @dataspace position @input aed @output xyz"
 								}
 
 							}

@@ -51,7 +51,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 56.0, 246.0, 73.0, 20.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -65,7 +65,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 536.0, 547.0, 73.0, 20.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -79,7 +79,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 401.0, 547.0, 73.0, 20.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -93,7 +93,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 536.0, 77.0, 66.0, 20.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -107,7 +107,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 401.0, 77.0, 66.0, 20.0 ],
-					"text" : "jcom.in~ 1"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -122,7 +122,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1328.0, 44.0, 161.0, 154.0 ],
-					"text" : "jcom.parameter delay/maxSize @type integer @value/default 1000000 @ramp/drive none @repetitions/allow 0 @range/bounds 0 1000000 @range/clipmode low @dataspace time @dataspace/unit sample @description \"Maximum delay size in samples.\"",
+					"text" : "j.parameter delay/maxSize @type integer @value/default 1000000 @ramp/drive none @repetitions/allow 0 @range/bounds 0 1000000 @range/clipmode low @dataspace time @dataspace/unit sample @description \"Maximum delay size in samples.\"",
 					"varname" : "delay/right[1]"
 				}
 
@@ -138,8 +138,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 884.0, 44.0, 159.0, 127.0 ],
-					"text" : "jcom.message delay @type integer @ramp/drive Max @repetitions/allow 1 @range/bounds 0 1000000 @dataspace time @dataspace/unit sample @description \"Delay time in samples to be applied to both channels.\"",
-					"varname" : "jcom.parameter.mxb[9]"
+					"text" : "j.message delay @type integer @ramp/drive Max @repetitions/allow 1 @range/bounds 0 1000000 @dataspace time @dataspace/unit sample @description \"Delay time in samples to be applied to both channels.\"",
+					"varname" : "j.parameter.mxb[9]"
 				}
 
 			}
@@ -154,7 +154,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1048.0, 244.0, 157.0, 127.0 ],
-					"text" : "jcom.parameter delay/right @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for right channel.\"",
+					"text" : "j.parameter delay/right @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for right channel.\"",
 					"varname" : "delay/right"
 				}
 
@@ -169,8 +169,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 25.0, 188.0, 390.0, 20.0 ],
-					"text" : "jcom.model @type audio @description \"Sample-accurate stereo delay.\"",
-					"varname" : "jcom.hub"
+					"text" : "j.model @type audio @description \"Sample-accurate stereo delay.\"",
+					"varname" : "j.hub"
 				}
 
 			}
@@ -185,7 +185,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 884.0, 244.0, 150.0, 167.0 ],
-					"text" : "jcom.parameter delay/left @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for left channel.\"",
+					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for left channel.\"",
 					"varname" : "delay/left"
 				}
 
@@ -540,27 +540,27 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

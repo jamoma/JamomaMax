@@ -53,7 +53,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 260.0, 235.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -98,7 +98,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 115.0, 565.0, 245.0, 42.0 ],
-					"text" : "jcom.parameter context @type string @description \"Name of the window and rendering context\"",
+					"text" : "j.parameter context @type string @description \"Name of the window and rendering context\"",
 					"varname" : "interpolate[2]"
 				}
 
@@ -201,7 +201,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 230.0, 180.0, 55.0, 18.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -216,7 +216,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 28.0, 386.0, 245.0, 30.0 ],
-					"text" : "jcom.parameter interpolate @type boolean @description \"Interpolate the video output\"",
+					"text" : "j.parameter interpolate @type boolean @description \"Interpolate the video output\"",
 					"varname" : "interpolate[1]"
 				}
 
@@ -232,7 +232,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 27.0, 306.0, 328.0, 30.0 ],
-					"text" : "jcom.parameter fullscreen @type boolean @description \"Toggle fullscreen - can be turned on and off with the ESC key.\"",
+					"text" : "j.parameter fullscreen @type boolean @description \"Toggle fullscreen - can be turned on and off with the ESC key.\"",
 					"varname" : "fullscreen[1]"
 				}
 
@@ -317,8 +317,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1.0, 149.0, 173.0, 54.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Output to an OpenGL window\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Output to an OpenGL window\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -351,7 +351,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

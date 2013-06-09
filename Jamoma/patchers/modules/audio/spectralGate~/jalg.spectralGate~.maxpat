@@ -68,7 +68,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 95.0, 150.0, 502.0, 19.0 ],
-									"text" : "jcom.map @function exponential @inputMin 0. @inputMax 1. @outputMin 1. @outputMax 10000."
+									"text" : "j.map @function exponential @inputMin 0. @inputMax 1. @outputMin 1. @outputMax 10000."
 								}
 
 							}
@@ -96,7 +96,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 140.0, 125.0, 502.0, 19.0 ],
-									"text" : "jcom.map @function exponential @inputMin 0. @inputMax 1. @outputMin 1. @outputMax 10000."
+									"text" : "j.map @function exponential @inputMin 0. @inputMax 1. @outputMin 1. @outputMax 10000."
 								}
 
 							}
@@ -241,7 +241,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 285.0, 120.0, 98.0, 19.0 ],
-					"text" : "jcom.pass /invert"
+					"text" : "j.pass /invert"
 				}
 
 			}
@@ -255,7 +255,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 110.0, 120.0, 158.0, 19.0 ],
-					"text" : "jcom.oscroute /attack /decay"
+					"text" : "j.oscroute /attack /decay"
 				}
 
 			}
@@ -297,7 +297,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 25.0, 90.0, 190.0, 19.0 ],
-					"text" : "jcom.oscroute /threshold /response"
+					"text" : "j.oscroute /threshold /response"
 				}
 
 			}
@@ -325,7 +325,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 385.0, 265.0, 142.0, 19.0 ],
-					"text" : "jcom.limiter~ @preamp 6"
+					"text" : "j.limiter~ @preamp 6"
 				}
 
 			}

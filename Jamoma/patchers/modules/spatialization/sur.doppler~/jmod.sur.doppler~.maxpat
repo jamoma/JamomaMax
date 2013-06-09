@@ -29,7 +29,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 544.0, 291.0, 567.0, 31.0 ],
-					"text" : "jcom.message.array 32 source active @type boolean @value/default 1 @value 1 @description \"active 0 will mute the Nth source.\""
+					"text" : "j.message.array 32 source active @type boolean @value/default 1 @value 1 @description \"active 0 will mute the Nth source.\""
 				}
 
 			}
@@ -44,7 +44,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 544.0, 246.0, 606.0, 43.0 ],
-					"text" : "jcom.message.array 32 source position @type decimalArray @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
+					"text" : "j.message.array 32 source position @type decimalArray @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -72,7 +72,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 190.0, 194.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -87,7 +87,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 544.0, 83.0, 594.0, 31.0 ],
-					"text" : "jcom.parameter metersPerUnit @type decimal @repetitions/allow 0 @range/bounds 0. 10. @range/clipmode low @description \"Meters per unit lengt as provided by the /aed messages.\"",
+					"text" : "j.parameter metersPerUnit @type decimal @repetitions/allow 0 @range/bounds 0. 10. @range/clipmode low @description \"Meters per unit lengt as provided by the /aed messages.\"",
 					"varname" : "meters_per_unit"
 				}
 
@@ -229,7 +229,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 544.0, 174.0, 574.0, 31.0 ],
-					"text" : "jcom.parameter numSources @type integer @repetitions/allow 0 @range/bounds 1 32 @range/clipmode both @description \"The number of input audio channels. Changes only take effect when audio is off.\"",
+					"text" : "j.parameter numSources @type integer @repetitions/allow 0 @range/bounds 1 32 @range/clipmode both @description \"The number of input audio channels. Changes only take effect when audio is off.\"",
 					"varname" : "voices"
 				}
 
@@ -323,8 +323,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 30.0, 160.0, 361.0, 19.0 ],
-					"text" : "jcom.model @description \"Add doppler shift for up to 32 mono signals.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Add doppler shift for up to 32 mono signals.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -332,7 +332,7 @@
 				"box" : 				{
 					"has_mute" : 1,
 					"id" : "obj-32",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

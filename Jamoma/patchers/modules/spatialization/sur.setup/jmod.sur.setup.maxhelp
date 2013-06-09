@@ -487,7 +487,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 20.0, 10.0, 188.0, 19.0 ],
-									"text" : "jcom.receive notifications"
+									"text" : "j.receive notifications"
 								}
 
 							}
@@ -655,7 +655,7 @@
 					"id" : "obj-3",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jcom.SpatDIF.coordinates.maxpat",
+					"name" : "j.SpatDIF.coordinates.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 465.0, 70.0, 575.0, 674.0 ]
@@ -668,7 +668,7 @@
 					"bgmode" : 1,
 					"id" : "obj-6",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 1047.0, 70.0 ],
@@ -769,7 +769,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 270.0, 225.0, 176.0, 31.0 ],
-									"text" : "jcom.dataspace @dataspace position @input aed @output xyz"
+									"text" : "j.dataspace @dataspace position @input aed @output xyz"
 								}
 
 							}
@@ -1260,7 +1260,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 366.0, 82.0, 97.0, 19.0 ],
-									"text" : "jcom.oscinstance"
+									"text" : "j.oscinstance"
 								}
 
 							}
@@ -1297,7 +1297,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 124.0, 122.0, 239.0, 19.0 ],
-									"text" : "jcom.oscroute /source/active /speaker/active"
+									"text" : "j.oscroute /source/active /speaker/active"
 								}
 
 							}
@@ -1484,7 +1484,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 150.0, 75.0, 90.0, 48.0 ],
-									"text" : "jcom.oscroute /dump /numChannels"
+									"text" : "j.oscroute /dump /numChannels"
 								}
 
 							}
@@ -1499,7 +1499,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 45.0, 75.0, 90.0, 48.0 ],
-									"text" : "jcom.oscroute /dump /numChannels"
+									"text" : "j.oscroute /dump /numChannels"
 								}
 
 							}
@@ -2032,7 +2032,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 252.0, 260.0, 200.0, 31.0 ],
-									"text" : "jcom.ambimonitor2position @prefix speaker @radius 10. @offset -100"
+									"text" : "j.ambimonitor2position @prefix speaker @radius 10. @offset -100"
 								}
 
 							}
@@ -2047,7 +2047,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 70.0, 260.0, 166.0, 31.0 ],
-									"text" : "jcom.ambimonitor2position @prefix source @radius 10."
+									"text" : "j.ambimonitor2position @prefix source @radius 10."
 								}
 
 							}
@@ -2198,7 +2198,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 260.0, 280.0, 193.0, 31.0 ],
-					"text" : "jcom.position2ambimonitor @prefix speaker @radius 10. @offset 100"
+					"text" : "j.position2ambimonitor @prefix speaker @radius 10. @offset 100"
 				}
 
 			}
@@ -2213,7 +2213,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 90.0, 286.0, 157.0, 31.0 ],
-					"text" : "jcom.position2ambimonitor @prefix source @radius 10."
+					"text" : "j.position2ambimonitor @prefix source @radius 10."
 				}
 
 			}

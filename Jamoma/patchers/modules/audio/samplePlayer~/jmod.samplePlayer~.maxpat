@@ -50,7 +50,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 439.0, 405.0, 86.0, 19.0 ],
-					"text" : "jcom.savebang"
+					"text" : "j.savebang"
 				}
 
 			}
@@ -80,7 +80,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 690.0, 441.0, 146.0, 55.0 ],
-					"text" : "jcom.message sample/buffername @type string @description \"Name of buffer used\"",
+					"text" : "j.message sample/buffername @type string @description \"Name of buffer used\"",
 					"varname" : "sample/buffername"
 				}
 
@@ -96,7 +96,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 506.0, 506.0, 189.0, 55.0 ],
-					"text" : "jcom.return info/filename @type string @description \"returns the name of the loaded file\" @repetitions/allow 1"
+					"text" : "j.return info/filename @type string @description \"returns the name of the loaded file\" @repetitions/allow 1"
 				}
 
 			}
@@ -111,7 +111,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 878.0, 506.0, 262.0, 55.0 ],
-					"text" : "jcom.return info/length @type integer @description \"returns the length in [ms] of the internal buffer\" @repetitions/allow 1 @dataspace time @dataspace/unit ms"
+					"text" : "j.return info/length @type integer @description \"returns the length in [ms] of the internal buffer\" @repetitions/allow 1 @dataspace time @dataspace/unit ms"
 				}
 
 			}
@@ -126,7 +126,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 698.0, 506.0, 179.0, 55.0 ],
-					"text" : "jcom.return info/playername @type string @description \"returns the name of the internal buffer\" @repetitions/allow 1"
+					"text" : "j.return info/playername @type string @description \"returns the name of the internal buffer\" @repetitions/allow 1"
 				}
 
 			}
@@ -283,7 +283,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 144.0, 19.0 ],
-									"text" : "jcom.oscroute /view/panel"
+									"text" : "j.oscroute /view/panel"
 								}
 
 							}
@@ -340,7 +340,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -374,7 +374,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 326.0, 195.0, 647.0, 19.0 ],
-					"text" : "jcom.message direct @type generic @repetitions/allow 1 @description \"direct communication with the groove~ module\""
+					"text" : "j.message direct @type generic @repetitions/allow 1 @description \"direct communication with the groove~ module\""
 				}
 
 			}
@@ -472,7 +472,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 450.0, 333.0, 510.0, 18.0 ],
-					"text" : "jcom.parameter loopsync/mode @type string @description \" modes: normalized, loop_time, sample_time\""
+					"text" : "j.parameter loopsync/mode @type string @description \" modes: normalized, loop_time, sample_time\""
 				}
 
 			}
@@ -497,7 +497,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 450.0, 308.0, 315.0, 18.0 ],
-					"text" : "jcom.parameter loopsync/active @type boolean @value/default 0"
+					"text" : "j.parameter loopsync/active @type boolean @value/default 0"
 				}
 
 			}
@@ -557,7 +557,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 412.0, 35.0, 142.0, 19.0 ],
-					"text" : "jcom.meter_receive 2"
+					"text" : "j.meter_receive 2"
 				}
 
 			}
@@ -571,7 +571,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 412.0, 12.0, 142.0, 19.0 ],
-					"text" : "jcom.meter_receive 1"
+					"text" : "j.meter_receive 1"
 				}
 
 			}
@@ -579,7 +579,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 2",
 					"id" : "obj-9",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -593,7 +593,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-34",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -716,7 +716,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 449.0, 281.0, 534.0, 19.0 ],
-					"text" : "jcom.parameter speed/active @type boolean @description \"turn on/off vari-speed.\"",
+					"text" : "j.parameter speed/active @type boolean @description \"turn on/off vari-speed.\"",
 					"varname" : "speed/active"
 				}
 
@@ -731,7 +731,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 434.0, 253.0, 757.0, 19.0 ],
-					"text" : "jcom.parameter speed/ratio @type decimal @range/bounds -4. 4. @ramp/drive Max @range/clipmode none @description \"playback speed\"",
+					"text" : "j.parameter speed/ratio @type decimal @range/bounds -4. 4. @ramp/drive Max @range/clipmode none @description \"playback speed\"",
 					"varname" : "speed/ratio"
 				}
 
@@ -746,7 +746,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 412.0, 222.0, 575.0, 19.0 ],
-					"text" : "jcom.parameter reverse @type boolean @description \"whether sample is played forward or backward\"",
+					"text" : "j.parameter reverse @type boolean @description \"whether sample is played forward or backward\"",
 					"varname" : "reverse"
 				}
 
@@ -818,7 +818,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 53.0, 431.0, 330.0, 19.0 ],
-					"text" : "jcom.oscroute /sample/start /sample/stop /sample/buffername"
+					"text" : "j.oscroute /sample/start /sample/stop /sample/buffername"
 				}
 
 			}
@@ -834,7 +834,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 367.0, 146.0, 472.0, 19.0 ],
-					"text" : "jcom.message play @type boolean @repetitions/allow 0 @description \"Play sound file.\"",
+					"text" : "j.message play @type boolean @repetitions/allow 0 @description \"Play sound file.\"",
 					"varname" : "play"
 				}
 
@@ -851,7 +851,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 398.0, 172.0, 423.0, 19.0 ],
-					"text" : "jcom.parameter loop @type boolean @description \"Loop soundfile.\"",
+					"text" : "j.parameter loop @type boolean @description \"Loop soundfile.\"",
 					"varname" : "loop"
 				}
 
@@ -869,8 +869,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 364.0, 93.0, 543.0, 31.0 ],
-					"text" : "jcom.message open @type generic @repetitions/allow 1 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\"",
-					"varname" : "jcom.parameter.mxb[10]"
+					"text" : "j.message open @type generic @repetitions/allow 1 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\"",
+					"varname" : "j.parameter.mxb[10]"
 				}
 
 			}
@@ -1342,7 +1342,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 102.0, 310.0, 59.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -1776,7 +1776,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 448.0, 457.0, 135.0, 17.0 ],
-									"text" : "jcom.oscroute /length /filename"
+									"text" : "j.oscroute /length /filename"
 								}
 
 							}
@@ -1868,7 +1868,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 226.0, 19.0, 304.0, 27.0 ],
-									"text" : "jcom.parameter sample/vzoom @type decimal @range/clipmode non @description @repetitions/allow 0 @ramp/drive none \"set vertical zoom\"",
+									"text" : "j.parameter sample/vzoom @type decimal @range/clipmode non @description @repetitions/allow 0 @ramp/drive none \"set vertical zoom\"",
 									"varname" : "sample/vzoom"
 								}
 
@@ -1964,7 +1964,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 759.0, 320.0, 557.0, 27.0 ],
-									"text" : "jcom.message sample/displaystart @type decimal @range/bounds 0. 1000000. @range/clipmode low @description @repetitions/allow 0 @ramp/drive Max \"display start  time in ms\"",
+									"text" : "j.message sample/displaystart @type decimal @range/bounds 0. 1000000. @range/clipmode low @description @repetitions/allow 0 @ramp/drive Max \"display start  time in ms\"",
 									"varname" : "sample/displaystart"
 								}
 
@@ -1981,7 +1981,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 763.0, 220.0, 564.0, 27.0 ],
-									"text" : "jcom.message sample/displaylength @type decimal @range/bounds 0. 1000000. @range/clipmode low @description @repetitions/allow 0 @ramp/drive Max @description \"display length in ms\"",
+									"text" : "j.message sample/displaylength @type decimal @range/bounds 0. 1000000. @range/clipmode low @description @repetitions/allow 0 @ramp/drive Max @description \"display length in ms\"",
 									"varname" : "sample/displaylength"
 								}
 
@@ -2455,7 +2455,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 761.0, 157.0, 385.0, 27.0 ],
-									"text" : "jcom.parameter sample/stop @type decimal @range/bounds 0. 1000000. @range/clipmode low @description \"stoptime time in ms\" @repetitions/allow 0 @ramp/drive Max",
+									"text" : "j.parameter sample/stop @type decimal @range/bounds 0. 1000000. @range/clipmode low @description \"stoptime time in ms\" @repetitions/allow 0 @ramp/drive Max",
 									"varname" : "sample/stop"
 								}
 
@@ -2471,7 +2471,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 91.0, 468.0, 190.0, 17.0 ],
-									"text" : "jcom.oscroute /play /info /sample/buffername"
+									"text" : "j.oscroute /play /info /sample/buffername"
 								}
 
 							}
@@ -2516,7 +2516,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 760.0, 97.0, 385.0, 27.0 ],
-									"text" : "jcom.parameter sample/start @type decimal @range/bounds 0. 1000000. @range/clipmode low @description \"start time in ms\" @repetitions/allow 0 @ramp/drive Max",
+									"text" : "j.parameter sample/start @type decimal @range/bounds 0. 1000000. @range/clipmode low @description \"start time in ms\" @repetitions/allow 0 @ramp/drive Max",
 									"varname" : "sample/start"
 								}
 
@@ -3391,21 +3391,21 @@
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.thru.maxpat",
+								"name" : "j.thru.maxpat",
 								"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/thru",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.parameter.mxo",
+								"name" : "j.parameter.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.message.mxo",
+								"name" : "j.message.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -3454,7 +3454,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 178.0, 338.0, 75.0, 19.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -3468,7 +3468,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 77.0, 283.0, 64.0, 19.0 ],
-					"text" : "jcom.in~"
+					"text" : "j.in~"
 				}
 
 			}
@@ -3497,8 +3497,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 36.0, 259.0, 308.0, 19.0 ],
-					"text" : "jcom.model @description \"simple monophonic sampleplayer\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"simple monophonic sampleplayer\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -3584,7 +3584,7 @@
 					"has_mute" : 1,
 					"has_panel" : 1,
 					"id" : "obj-62",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -4176,65 +4176,65 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.meter_receive.maxpat",
+				"name" : "j.meter_receive.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/meter_receive",
 				"patcherrelativepath" : "../../../library/components/meter_receive",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.savebang.mxo",
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
  ]

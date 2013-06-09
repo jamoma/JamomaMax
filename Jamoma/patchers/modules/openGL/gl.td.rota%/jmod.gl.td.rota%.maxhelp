@@ -47,7 +47,7 @@
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 687.0, 70.0 ],
@@ -558,35 +558,35 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.class.gl_slab.route.maxpat",
+				"name" : "j.class.gl_slab.route.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/class.gl_slab.route",
 				"patcherrelativepath" : "../../../library/components/class.gl_slab.route",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.list2parameter.maxpat",
+				"name" : "j.list2parameter.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/list2parameter",
 				"patcherrelativepath" : "../../../library/components/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.class.gl_group.inspect.maxpat",
+				"name" : "j.class.gl_group.inspect.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/class.gl_group.inspect",
 				"patcherrelativepath" : "../../../library/components/class.gl_group.inspect",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.class.gl_slab.inspect.maxpat",
+				"name" : "j.class.gl_slab.inspect.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/class.gl_slab.inspect",
 				"patcherrelativepath" : "../../../library/components/class.gl_slab.inspect",
 				"type" : "JSON",
@@ -607,75 +607,75 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
 				"patcherrelativepath" : "../../../library/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
  ]

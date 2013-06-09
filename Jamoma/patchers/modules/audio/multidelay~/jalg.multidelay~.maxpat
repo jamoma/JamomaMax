@@ -282,7 +282,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 76.0, 368.0, 151.0, 19.0 ],
-					"text" : "jcom.oscroute /mode /gain"
+					"text" : "j.oscroute /mode /gain"
 				}
 
 			}
@@ -324,7 +324,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 335.0, 495.0, 320.0, 19.0 ],
-					"text" : "jcom.limiter~"
+					"text" : "j.limiter~"
 				}
 
 			}
@@ -510,7 +510,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 53.0, 120.0, 314.0, 19.0 ],
-					"text" : "jcom.oscroute /delay/left /delay/max /delay/right /feedback"
+					"text" : "j.oscroute /delay/left /delay/max /delay/right /feedback"
 				}
 
 			}
@@ -956,11 +956,11 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.limiter~.mxo",
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
  ]

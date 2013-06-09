@@ -114,7 +114,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 27.0, 288.001862, 269.0, 33.0 ],
-									"text" : "jcom.test.assert.equal db>midi-test @input 3 db @compareTo 107.433846 @tolerance 0.000001"
+									"text" : "j.test.assert.equal db>midi-test @input 3 db @compareTo 107.433846 @tolerance 0.000001"
 								}
 
 							}
@@ -198,7 +198,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 27.0, 87.001862, 305.0, 33.0 ],
-									"text" : "jcom.test.assert.equal linear>midi-test @input 0.5 linear @compareTo 86.597214 @tolerance 0.000001"
+									"text" : "j.test.assert.equal linear>midi-test @input 0.5 linear @compareTo 86.597214 @tolerance 0.000001"
 								}
 
 							}
@@ -489,7 +489,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 27.0, 288.001862, 298.0, 33.0 ],
-									"text" : "jcom.test.assert.equal midi>db-test @input 110 midi @compareTo 3.987592 @tolerance 0.000001"
+									"text" : "j.test.assert.equal midi>db-test @input 110 midi @compareTo 3.987592 @tolerance 0.000001"
 								}
 
 							}
@@ -573,7 +573,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 27.0, 87.001862, 298.0, 33.0 ],
-									"text" : "jcom.test.assert.equal linear>db-test @input 0.5 linear @compareTo -6.0206 @tolerance 0.000001"
+									"text" : "j.test.assert.equal linear>db-test @input 0.5 linear @compareTo -6.0206 @tolerance 0.000001"
 								}
 
 							}
@@ -864,7 +864,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 27.0, 288.001862, 303.0, 33.0 ],
-									"text" : "jcom.test.assert.equal midi>linear-test @input 110 midi @compareTo 1.582631 @tolerance 0.000001"
+									"text" : "j.test.assert.equal midi>linear-test @input 110 midi @compareTo 1.582631 @tolerance 0.000001"
 								}
 
 							}
@@ -948,7 +948,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 27.0, 87.001862, 273.0, 33.0 ],
-									"text" : "jcom.test.assert.equal db>linear-test @input 3 db @compareTo 1.412538 @tolerance 0.000001"
+									"text" : "j.test.assert.equal db>linear-test @input 3 db @compareTo 1.412538 @tolerance 0.000001"
 								}
 
 							}
@@ -1242,7 +1242,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 8.0, 59.0, 103.0, 20.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -1256,7 +1256,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "bang" ],
 					"patching_rect" : [ 8.0, 11.0, 85.0, 20.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}
@@ -1271,7 +1271,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 8.0, 136.0, 205.0, 33.0 ],
-					"text" : "jcom.parameter test @type decimal @dataspace gain"
+					"text" : "j.parameter test @type decimal @dataspace gain"
 				}
 
 			}
@@ -1332,28 +1332,28 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.test.start.maxpat",
+				"name" : "j.test.start.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.start",
 				"patcherrelativepath" : "../../../../../../Test/components/test.start",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.finished.maxpat",
+				"name" : "j.test.finished.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.finished",
 				"patcherrelativepath" : "../../../../../../Test/components/test.finished",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.assert.equal.maxpat",
+				"name" : "j.test.assert.equal.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.assert.equal",
 				"patcherrelativepath" : "../../../../../../Test/components/test.assert.equal",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
  ]

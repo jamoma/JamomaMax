@@ -2443,7 +2443,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 150.0, 98.0, 103.0, 19.0 ],
-					"text" : "jcom.jamomaPath"
+					"text" : "j.jamomaPath"
 				}
 
 			}

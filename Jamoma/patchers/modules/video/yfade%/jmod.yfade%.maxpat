@@ -47,7 +47,7 @@
 				"box" : 				{
 					"clickjump" : 0,
 					"id" : "obj-9",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -97,7 +97,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 53.0, 364.0, 125.0, 19.0 ],
-					"text" : "jcom.out 2"
+					"text" : "j.out 2"
 				}
 
 			}
@@ -111,7 +111,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 85.0, 289.0, 78.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -137,7 +137,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 276.0, 296.0, 425.0, 31.0 ],
-					"text" : "jcom.parameter yfade @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 1. @range/clipmode both @description \"Crossfade switch\"",
+					"text" : "j.parameter yfade @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 1. @range/clipmode both @description \"Crossfade switch\"",
 					"varname" : "yfade"
 				}
 
@@ -247,8 +247,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 4.0, 132.0, 226.0, 43.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"crossfade a source to two outputs\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"crossfade a source to two outputs\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -282,7 +282,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-16",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

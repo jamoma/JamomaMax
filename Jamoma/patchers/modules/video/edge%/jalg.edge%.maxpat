@@ -39,7 +39,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 300.0, 129.0, 102.0, 19.0 ],
-					"text" : "jcom.pass /thresh"
+					"text" : "j.pass /thresh"
 				}
 
 			}
@@ -53,7 +53,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 24.0, 58.0, 175.0, 19.0 ],
-					"text" : "jcom.oscroute /direct /genframe"
+					"text" : "j.oscroute /direct /genframe"
 				}
 
 			}
@@ -246,7 +246,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 180.0, 105.0, 139.0, 19.0 ],
-					"text" : "jcom.oscroute /algorithm"
+					"text" : "j.oscroute /algorithm"
 				}
 
 			}

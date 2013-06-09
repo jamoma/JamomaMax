@@ -24,7 +24,7 @@
 					"bgmode" : 1,
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 378.0, 70.0 ],
@@ -56,7 +56,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 45.0, 155.0, 227.0, 19.0 ],
-					"text" : "jcom.send /my_template~/this_parameter"
+					"text" : "j.send /my_template~/this_parameter"
 				}
 
 			}

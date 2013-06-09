@@ -276,7 +276,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 351.0, 526.0, 590.0, 31.0 ],
-					"text" : "jcom.parameter line @type integer @range/bounds 1 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis scanline in pixels.\"",
+					"text" : "j.parameter line @type integer @range/bounds 1 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis scanline in pixels.\"",
 					"varname" : "dimensions/width[1]"
 				}
 
@@ -309,7 +309,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 349.0, 458.0, 515.0, 19.0 ],
-					"text" : "jcom.parameter type @type boolean @description \"Type - motiongram based on average or a line\"",
+					"text" : "j.parameter type @type boolean @description \"Type - motiongram based on average or a line\"",
 					"varname" : "mode[1]"
 				}
 
@@ -348,7 +348,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 82.0, 335.0, 103.0, 19.0 ],
-					"text" : "jcom.out 2"
+					"text" : "j.out 2"
 				}
 
 			}
@@ -387,7 +387,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 82.0, 267.0, 57.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -439,7 +439,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 350.0, 367.0, 454.0, 19.0 ],
-					"text" : "jcom.message save @type none @description \"Saves an image file of the motiongram.\"",
+					"text" : "j.message save @type none @description \"Saves an image file of the motiongram.\"",
 					"varname" : "jmod.parameter.mxb[2]"
 				}
 
@@ -454,7 +454,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 350.0, 319.0, 352.0, 19.0 ],
-					"text" : "jcom.message clear @type none @description \"Clears the image.\"",
+					"text" : "j.message clear @type none @description \"Clears the image.\"",
 					"varname" : "jmod.parameter.mxb[1]"
 				}
 
@@ -488,7 +488,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 350.0, 217.0, 429.0, 43.0 ],
-					"text" : "jcom.parameter dimensions/height @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the y-axis offset in pixels.\"",
+					"text" : "j.parameter dimensions/height @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the y-axis offset in pixels.\"",
 					"varname" : "dimensions/height"
 				}
 
@@ -555,7 +555,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 350.0, 136.0, 429.0, 43.0 ],
-					"text" : "jcom.parameter dimensions/width @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
+					"text" : "j.parameter dimensions/width @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
 					"varname" : "dimensions/width"
 				}
 
@@ -570,7 +570,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 350.0, 55.0, 586.0, 19.0 ],
-					"text" : "jcom.parameter direction @type boolean @description \"Direction - horizontal or vertical direction of motiongram.\"",
+					"text" : "j.parameter direction @type boolean @description \"Direction - horizontal or vertical direction of motiongram.\"",
 					"varname" : "mode"
 				}
 
@@ -586,7 +586,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 0.0, 124.0, 241.0, 43.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Creates a motiongram from running video stream\"",
+					"text" : "j.model @type video @algorithm_type jitter @description \"Creates a motiongram from running video stream\"",
 					"varname" : "jmod.hub"
 				}
 
@@ -649,7 +649,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

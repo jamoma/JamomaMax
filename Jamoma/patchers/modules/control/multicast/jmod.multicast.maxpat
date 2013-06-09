@@ -325,7 +325,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 422.0, 193.0, 268.0, 31.0 ],
-					"text" : "jcom.parameter service_name @type string @description \"bonjour name of this multicast core\"",
+					"text" : "j.parameter service_name @type string @description \"bonjour name of this multicast core\"",
 					"varname" : "service_name"
 				}
 
@@ -354,7 +354,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 120.0, 250.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -416,8 +416,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 150.0, 271.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"Multicast bonjour device\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Multicast bonjour device\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -455,7 +455,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 415.0, 75.0, 303.0, 31.0 ],
-					"text" : "jcom.parameter port @repetitions/allow 0 @type integer @description \"port number for this multicast core\"",
+					"text" : "j.parameter port @repetitions/allow 0 @type integer @description \"port number for this multicast core\"",
 					"varname" : "port"
 				}
 
@@ -463,7 +463,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-28",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

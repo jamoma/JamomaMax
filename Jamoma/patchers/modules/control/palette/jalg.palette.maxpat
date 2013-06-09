@@ -203,7 +203,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 28.0, 365.0, 285.0, 31.0 ],
-					"text" : "jcom.return color @type decimalArray @description \"RGB triplet representing a mix of the colors on the palette.\""
+					"text" : "j.return color @type decimalArray @description \"RGB triplet representing a mix of the colors on the palette.\""
 				}
 
 			}
@@ -1856,7 +1856,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 95.0, 25.0, 52.0, 19.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -1870,7 +1870,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 55.0, 140.0, 303.0, 19.0 ],
-									"text" : "jcom.dataspace @dataspace color @input hsl @output rgb"
+									"text" : "j.dataspace @dataspace color @input hsl @output rgb"
 								}
 
 							}
@@ -2271,7 +2271,7 @@
 					"numoutlets" : 8,
 					"outlettype" : [ "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 116.0, 55.0, 573.0, 19.0 ],
-					"text" : "jcom.oscroute /generateColor /random/mode /colors /random/stepSize /clear /interpolate/stepSize /interpolate"
+					"text" : "j.oscroute /generateColor /random/mode /colors /random/stepSize /clear /interpolate/stepSize /interpolate"
 				}
 
 			}

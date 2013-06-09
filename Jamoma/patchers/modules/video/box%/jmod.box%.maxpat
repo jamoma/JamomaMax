@@ -28,7 +28,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 497.0, 123.0, 303.0, 31.0 ],
-					"text" : "jcom.parameter contraction/window/on @type boolean @description \"Turn display of contraction box on or off.\"",
+					"text" : "j.parameter contraction/window/on @type boolean @description \"Turn display of contraction box on or off.\"",
 					"varname" : "centroid/on[1]"
 				}
 
@@ -44,7 +44,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 497.0, 89.0, 260.0, 31.0 ],
-					"text" : "jcom.parameter centroid/on @type boolean @description \"Turn display of centre of mass on.\"",
+					"text" : "j.parameter centroid/on @type boolean @description \"Turn display of centre of mass on.\"",
 					"varname" : "centroid/on"
 				}
 
@@ -60,7 +60,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 497.0, 57.0, 295.0, 31.0 ],
-					"text" : "jcom.parameter contraction/max/on @type boolean @description \"Turn max contraction box on or off.\"",
+					"text" : "j.parameter contraction/max/on @type boolean @description \"Turn max contraction box on or off.\"",
 					"varname" : "contraction/max/on"
 				}
 
@@ -76,7 +76,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 497.0, 22.0, 269.0, 31.0 ],
-					"text" : "jcom.parameter contraction/on @type boolean @description \"Turn local contraction box on or off.\"",
+					"text" : "j.parameter contraction/on @type boolean @description \"Turn local contraction box on or off.\"",
 					"varname" : "contraction/on"
 				}
 
@@ -267,7 +267,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 213.0, 302.0, 148.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -356,7 +356,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 217.0, 321.0, 589.0, 31.0 ],
-									"text" : "jcom.parameter centroid/size @type integer @range/bounds 1 20 @range/clipmode low @description \"Size of the centre of mass.\"",
+									"text" : "j.parameter centroid/size @type integer @range/bounds 1 20 @range/clipmode low @description \"Size of the centre of mass.\"",
 									"varname" : "centroid/size/on[2]"
 								}
 
@@ -388,7 +388,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 216.0, 279.0, 585.0, 31.0 ],
-									"text" : "jcom.parameter contraction/window/size @type integer @range/bounds 0 20 @range/clipmode low @description \"Size of the contraction window border.\"",
+									"text" : "j.parameter contraction/window/size @type integer @range/bounds 0 20 @range/clipmode low @description \"Size of the contraction window border.\"",
 									"varname" : "centroid/size/on[1]"
 								}
 
@@ -541,7 +541,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-29",
-									"maxclass" : "jcom.textslider",
+									"maxclass" : "j.textslider",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -701,7 +701,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-26",
-									"maxclass" : "jcom.textslider",
+									"maxclass" : "j.textslider",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -1005,7 +1005,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 213.0, 238.0, 482.0, 31.0 ],
-									"text" : "jcom.parameter data/smoothing @type decimal @range/bounds 0. 12. @range/clipmode low @description \"Level of smoothing for the returned data\"",
+									"text" : "j.parameter data/smoothing @type decimal @range/bounds 0. 12. @range/clipmode low @description \"Level of smoothing for the returned data\"",
 									"varname" : "data/smoothing"
 								}
 
@@ -1021,7 +1021,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 764.0, 387.0, 249.0, 31.0 ],
-									"text" : "jcom.parameter centroid/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of centroid.\"",
+									"text" : "j.parameter centroid/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of centroid.\"",
 									"varname" : "centroid/color"
 								}
 
@@ -1037,7 +1037,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 764.0, 224.0, 211.0, 43.0 ],
-									"text" : "jcom.parameter contraction/max/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of max contraction box.\"",
+									"text" : "j.parameter contraction/max/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of max contraction box.\"",
 									"varname" : "contraction/max/color"
 								}
 
@@ -1053,7 +1053,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 764.0, 71.0, 278.0, 31.0 ],
-									"text" : "jcom.parameter contraction/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of local contraction box.\"",
+									"text" : "j.parameter contraction/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of local contraction box.\"",
 									"varname" : "contraction/color"
 								}
 
@@ -1069,7 +1069,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 222.0, 181.0, 448.0, 31.0 ],
-									"text" : "jcom.parameter centroid/size/on @type boolean @description \"Turn on automatic size adjustment of centre of mass - based on quantity of motion.\"",
+									"text" : "j.parameter centroid/size/on @type boolean @description \"Turn on automatic size adjustment of centre of mass - based on quantity of motion.\"",
 									"varname" : "centroid/size/on"
 								}
 
@@ -1084,7 +1084,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 221.0, 120.0, 485.0, 19.0 ],
-									"text" : "jcom.message contraction/max/reset @type none @description \"Reset max_contraction box.\"",
+									"text" : "j.message contraction/max/reset @type none @description \"Reset max_contraction box.\"",
 									"varname" : "jmod.parameter[12]"
 								}
 
@@ -1100,7 +1100,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 221.0, 145.0, 480.0, 31.0 ],
-									"text" : "jcom.parameter contraction/slide @type decimal @range/bounds 0. 10. @range/clipmode low @repetitions/allow 0 @description \"The level of smoothing for contraction box.\"",
+									"text" : "j.parameter contraction/slide @type decimal @range/bounds 0. 10. @range/clipmode low @repetitions/allow 0 @description \"The level of smoothing for contraction box.\"",
 									"varname" : "contraction/slide"
 								}
 
@@ -1218,7 +1218,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-47",
-									"maxclass" : "jcom.textslider",
+									"maxclass" : "j.textslider",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -1522,7 +1522,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 196.0, 441.0, 57.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -1562,7 +1562,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 175.0, 276.0, 60.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -1645,8 +1645,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 154.0, 342.0, 43.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Display of various types of bounding boxes based on filtered image or motion image.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Display of various types of bounding boxes based on filtered image or motion image.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1681,7 +1681,7 @@
 					"has_panel" : 1,
 					"has_preview" : 1,
 					"id" : "obj-35",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

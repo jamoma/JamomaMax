@@ -105,7 +105,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 115.0, 336.0, 451.0, 20.0 ],
-					"text" : "jcom.parameter connect @type integer @range/bounds 0 1 @range/clipmode both"
+					"text" : "j.parameter connect @type integer @range/bounds 0 1 @range/clipmode both"
 				}
 
 			}
@@ -130,7 +130,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 390.0, 49.0, 20.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -158,7 +158,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 414.0, 95.0, 20.0 ],
-					"text" : "jcom.pass open"
+					"text" : "j.pass open"
 				}
 
 			}
@@ -426,7 +426,7 @@
 									"numoutlets" : 15,
 									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 50.0, 75.0, 742.0, 34.0 ],
-									"text" : "jcom.oscroute /dataEnable.1 /dataEnable.2 /dataEnable.3 /dataEnable.4 /dataEnable.5 /dataEnable.6 /dataEnable.7 /dataEnable.8 /dataEnable.9 /dataEnable.10 /dataEnable.11 /dataEnable.12 /dataEnable.13 /dataEnable.0"
+									"text" : "j.oscroute /dataEnable.1 /dataEnable.2 /dataEnable.3 /dataEnable.4 /dataEnable.5 /dataEnable.6 /dataEnable.7 /dataEnable.8 /dataEnable.9 /dataEnable.10 /dataEnable.11 /dataEnable.12 /dataEnable.13 /dataEnable.0"
 								}
 
 							}
@@ -753,7 +753,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 115.0, 370.0, 322.0, 34.0 ],
-					"text" : "jcom.message.array 13 dataEnable @type integer @repetitions/allow 1 @description \"Toggle data streams\""
+					"text" : "j.message.array 13 dataEnable @type integer @repetitions/allow 1 @description \"Toggle data streams\""
 				}
 
 			}
@@ -1004,7 +1004,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 115.0, 269.0, 218.0, 48.0 ],
-					"text" : "jcom.parameter host @type string @repetitions/allow 1 @description \"IP address of the QTM computer\""
+					"text" : "j.parameter host @type string @repetitions/allow 1 @description \"IP address of the QTM computer\""
 				}
 
 			}
@@ -1018,7 +1018,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 115.0, 225.0, 451.0, 20.0 ],
-					"text" : "jcom.parameter port @type integer @range/bounds 0 10000 @range/clipmode low"
+					"text" : "j.parameter port @type integer @range/bounds 0 10000 @range/clipmode low"
 				}
 
 			}
@@ -1056,7 +1056,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 11.0, 117.0, 258.0, 48.0 ],
-					"text" : "jcom.model @type control @description \"Module for receiving OSC data from the Qualisys motion capture system\""
+					"text" : "j.model @type control @description \"Module for receiving OSC data from the Qualisys motion capture system\""
 				}
 
 			}
@@ -1064,7 +1064,7 @@
 				"box" : 				{
 					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
 					"id" : "obj-1",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

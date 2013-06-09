@@ -54,7 +54,7 @@ load "build.rb"
 `rm "#{glibdir}"/Jamoma/support/*-i386.ttdylib`
 `rm "#{glibdir}"/Jamoma/support/*-x86_64.ttdylib`
 `cp -r "#{glibdir}"/../../Core/*/extensions/*/build/*.ttdll "#{glibdir}"/Jamoma/support` if win?
-`mv "#{glibdir}"/Jamoma/externals/jcom.loader.mxo "#{glibdir}"/Jamoma/extensions/`
+`mv "#{glibdir}"/Jamoma/externals/j.loader.mxo "#{glibdir}"/Jamoma/extensions/`
 
 # Making sure that twin projects build on Mac
 if win?
@@ -62,25 +62,25 @@ else
     
     puts "Making sure that twin projects build on Mac"
     
-    cleanAndBuildExternal glibdir, "jcom.in"
-    cleanAndBuildExternal glibdir, "jcom.in~"
+    cleanAndBuildExternal glibdir, "j.in"
+    cleanAndBuildExternal glibdir, "j.in~"
     
-    cleanAndBuildExternal glibdir, "jcom.message"
-    cleanAndBuildExternal glibdir, "jcom.parameter"
+    cleanAndBuildExternal glibdir, "j.message"
+    cleanAndBuildExternal glibdir, "j.parameter"
     
-    cleanAndBuildExternal glibdir, "jcom.out"
-    cleanAndBuildExternal glibdir, "jcom.out~"
+    cleanAndBuildExternal glibdir, "j.out"
+    cleanAndBuildExternal glibdir, "j.out~"
     
-    cleanAndBuildExternal glibdir, "jcom.messageArray"
-    cleanAndBuildExternal glibdir, "jcom.parameterArray"
-    cleanAndBuildExternal glibdir, "jcom.remoteArray"
-    cleanAndBuildExternal glibdir, "jcom.returnArray"
+    cleanAndBuildExternal glibdir, "j.messageArray"
+    cleanAndBuildExternal glibdir, "j.parameterArray"
+    cleanAndBuildExternal glibdir, "j.remoteArray"
+    cleanAndBuildExternal glibdir, "j.returnArray"
     
-    cleanAndBuildExternal glibdir, "jcom.receive"
-    cleanAndBuildExternal glibdir, "jcom.receive~"
+    cleanAndBuildExternal glibdir, "j.receive"
+    cleanAndBuildExternal glibdir, "j.receive~"
     
-    cleanAndBuildExternal glibdir, "jcom.send"
-    cleanAndBuildExternal glibdir, "jcom.send~"
+    cleanAndBuildExternal glibdir, "j.send"
+    cleanAndBuildExternal glibdir, "j.send~"
     
 end
 
@@ -98,13 +98,13 @@ else
 #    
 #    puts "Copying various files to Max5 folder"
 #    
-#    `rm -rf "/Applications/Max5/Cycling '74/extensions/jcom.loader.mxo"`
-#    `cp -r "Jamoma/extensions/jcom.loader.mxo" "/Applications/Max5/Cycling '74/extensions/jcom.loader.mxo"`
+#    `rm -rf "/Applications/Max5/Cycling '74/extensions/j.loader.mxo"`
+#    `cp -r "Jamoma/extensions/j.loader.mxo" "/Applications/Max5/Cycling '74/extensions/j.loader.mxo"`
 #    `cp -r "Jamoma/init/JamomaConfiguration.xml" "/Applications/Max5/Cycling '74/init/JamomaConfiguration.xml"`
 #    
 #    # Copy default files into Max 5 - comment this out if you don't want it
-#    `cp -r "Jamoma/default-definitions/jcom.textslider.maxdefines" "/Applications/Max5/Cycling '74/default-definitions/jcom.textslider.maxdefines"`
-#    `cp -r "Jamoma/default-definitions/jcom.ui.maxdefines" "/Applications/Max5/Cycling '74/default-definitions/jcom.ui.maxdefines"`
+#    `cp -r "Jamoma/default-definitions/j.textslider.maxdefines" "/Applications/Max5/Cycling '74/default-definitions/j.textslider.maxdefines"`
+#    `cp -r "Jamoma/default-definitions/j.ui.maxdefines" "/Applications/Max5/Cycling '74/default-definitions/j.ui.maxdefines"`
 #    
 #    `cp -r "Jamoma/default-settings/JamomaArarat.maxdefaults" "/Applications/Max5/Cycling '74/default-settings/JamomaArarat.maxdefaults"`
 #    `cp -r "Jamoma/default-settings/JamomaDark.maxdefaults" "/Applications/Max5/Cycling '74/default-settings/JamomaDark.maxdefaults"`
@@ -119,13 +119,13 @@ else
 #    
 #	puts "Copying various files to Max6 folder (this is no longer needed in Max 6.1)"
 #	
-#    `rm -rf "/Applications/Max6/Cycling '74/extensions/jcom.loader.mxo"`
-#    `cp -r "Jamoma/extensions/jcom.loader.mxo" "/Applications/Max6/Cycling '74/extensions/jcom.loader.mxo"`
+#    `rm -rf "/Applications/Max6/Cycling '74/extensions/j.loader.mxo"`
+#    `cp -r "Jamoma/extensions/j.loader.mxo" "/Applications/Max6/Cycling '74/extensions/j.loader.mxo"`
 #    `cp -r "Jamoma/init/JamomaConfiguration.xml" "/Applications/Max6/Cycling '74/init/JamomaConfiguration.xml"`
 	
 	# Copy default files into Max 6  - comment this out if you don't want it
-#    `cp -r "Jamoma/default-definitions/jcom.textslider.maxdefines" "/Applications/Max6/Cycling '74/default-definitions/jcom.textslider.maxdefines"`
-#    `cp -r "Jamoma/default-definitions/jcom.ui.maxdefines" "/Applications/Max6/Cycling '74/default-definitions/jcom.ui.maxdefines"`
+#    `cp -r "Jamoma/default-definitions/j.textslider.maxdefines" "/Applications/Max6/Cycling '74/default-definitions/j.textslider.maxdefines"`
+#    `cp -r "Jamoma/default-definitions/j.ui.maxdefines" "/Applications/Max6/Cycling '74/default-definitions/j.ui.maxdefines"`
 #	
 #    `cp -r "Jamoma/default-settings/JamomaArarat.maxdefaults" "/Applications/Max6/Cycling '74/default-settings/JamomaArarat.maxdefaults"`
 #    `cp -r "Jamoma/default-settings/JamomaDark.maxdefaults" "/Applications/Max6/Cycling '74/default-settings/JamomaDark.maxdefaults"`

@@ -97,7 +97,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 270.0, 225.0, 176.0, 31.0 ],
-									"text" : "jcom.dataspace @dataspace position @input aed @output xyz"
+									"text" : "j.dataspace @dataspace position @input aed @output xyz"
 								}
 
 							}
@@ -464,7 +464,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 444.0, 194.0, 184.0, 19.0 ],
-									"text" : "jcom.pass /numSpeakers @strip 0"
+									"text" : "j.pass /numSpeakers @strip 0"
 								}
 
 							}
@@ -489,7 +489,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 362.0, 166.0, 275.0, 19.0 ],
-									"text" : "jcom.route @searchstring /speaker @partialmatch 1"
+									"text" : "j.route @searchstring /speaker @partialmatch 1"
 								}
 
 							}
@@ -532,7 +532,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 104.0, 165.0, 31.0 ],
-									"text" : "jcom.position2ambimonitor @prefix speaker @radius 10."
+									"text" : "j.position2ambimonitor @prefix speaker @radius 10."
 								}
 
 							}
@@ -759,7 +759,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 40.0, 113.5, 215.0, 19.0 ],
-									"text" : "jcom.initialized /sur.ambi.decode~ 2000"
+									"text" : "j.initialized /sur.ambi.decode~ 2000"
 								}
 
 							}
@@ -1223,7 +1223,7 @@
 					"bgmode" : 1,
 					"id" : "obj-19",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 639.0, 70.0 ],

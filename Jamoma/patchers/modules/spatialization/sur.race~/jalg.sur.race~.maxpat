@@ -43,7 +43,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 293.0, 174.0, 140.0, 43.0 ],
-					"text" : "jcom.dataspace @dataspace gain @input db @output linear"
+					"text" : "j.dataspace @dataspace gain @input db @output linear"
 				}
 
 			}
@@ -57,7 +57,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 429.0, 225.0, 234.0, 19.0 ],
-					"text" : "jcom.filter~ 2 @type lowpass.butterworth.2"
+					"text" : "j.filter~ 2 @type lowpass.butterworth.2"
 				}
 
 			}
@@ -71,7 +71,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 429.0, 262.0, 238.0, 19.0 ],
-					"text" : "jcom.filter~ 2 @type highpass.butterworth.2"
+					"text" : "j.filter~ 2 @type highpass.butterworth.2"
 				}
 
 			}
@@ -100,7 +100,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 677.0, 227.0, 134.0, 31.0 ],
-					"text" : "jcom.filter~ 2 @type lowpass.butterworth.2"
+					"text" : "j.filter~ 2 @type lowpass.butterworth.2"
 				}
 
 			}
@@ -129,7 +129,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 821.0, 227.0, 131.0, 31.0 ],
-					"text" : "jcom.filter~ 2 @type highpass.butterworth.2"
+					"text" : "j.filter~ 2 @type highpass.butterworth.2"
 				}
 
 			}
@@ -333,7 +333,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"patching_rect" : [ 9.0, 57.0, 374.0, 19.0 ],
-					"text" : "jcom.oscroute /delay /attenation /lowMid /midHigh /sidechain"
+					"text" : "j.oscroute /delay /attenation /lowMid /midHigh /sidechain"
 				}
 
 			}
@@ -348,7 +348,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 85.0, 176.0, 98.0, 55.0 ],
-					"text" : "jcom.dataspace @dataspace gain @input db @output linear"
+					"text" : "j.dataspace @dataspace gain @input db @output linear"
 				}
 
 			}

@@ -34,7 +34,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 135.0, 362.0, 71.0, 20.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -48,7 +48,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 136.0, 457.0, 79.0, 20.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 40.0, 70.0, 82.0, 20.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -76,7 +76,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 56.0, 457.0, 79.0, 20.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -173,7 +173,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 56.0, 362.0, 71.0, 20.0 ],
-					"text" : "jcom.in~ 1"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -202,7 +202,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 244.0, 213.0, 207.0, 127.0 ],
-					"text" : "jcom.parameter bitdepth @type integer @range/bounds 1 24 @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"The number of bits that will be retained in each sample - use this for bit crunching effects\" @priority 2"
+					"text" : "j.parameter bitdepth @type integer @range/bounds 1 24 @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"The number of bits that will be retained in each sample - use this for bit crunching effects\" @priority 2"
 				}
 
 			}
@@ -217,7 +217,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 219.0, 99.0, 294.0, 73.0 ],
-					"text" : "jcom.parameter samplerateRatio @type decimal @range/bounds 0. 1. @repetitions/allow 1 @range/clipmode both @ramp/drive Max @description \"A ratio of the emulated sample-rate to the global sample-rate.\" @priority 1"
+					"text" : "j.parameter samplerateRatio @type decimal @range/bounds 0. 1. @repetitions/allow 1 @range/clipmode both @ramp/drive Max @description \"A ratio of the emulated sample-rate to the global sample-rate.\" @priority 1"
 				}
 
 			}
@@ -231,7 +231,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 25.0, 45.0, 484.0, 20.0 ],
-					"text" : "jcom.model @description \"Emulate the use of lower sample-rates and bit-resolution.\""
+					"text" : "j.model @description \"Emulate the use of lower sample-rates and bit-resolution.\""
 				}
 
 			}

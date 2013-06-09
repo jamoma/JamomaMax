@@ -95,7 +95,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 80.0, 127.0, 322.0, 19.0 ],
-									"text" : "jcom.dataspace @dataspace position @input xyz @output aed"
+									"text" : "j.dataspace @dataspace position @input xyz @output aed"
 								}
 
 							}
@@ -224,7 +224,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 474.0, 116.0, 115.0, 19.0 ],
-									"text" : "jcom.oscroute /audio"
+									"text" : "j.oscroute /audio"
 								}
 
 							}
@@ -238,7 +238,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 124.0, 97.0, 129.0, 19.0 ],
-									"text" : "jcom.oscroute /speaker"
+									"text" : "j.oscroute /speaker"
 								}
 
 							}
@@ -319,7 +319,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 124.0, 75.0, 369.0, 19.0 ],
-									"text" : "jcom.oscinstance"
+									"text" : "j.oscinstance"
 								}
 
 							}
@@ -483,7 +483,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 220.0, 601.0, 437.5, 19.0 ],
-					"text" : "jcom.pack≈ 32",
+					"text" : "j.pack≈ 32",
 					"varname" : "multiin"
 				}
 
@@ -498,7 +498,7 @@
 					"numoutlets" : 33,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 220.0, 95.0, 451.0, 19.0 ],
-					"text" : "jcom.unpack≈ 32",
+					"text" : "j.unpack≈ 32",
 					"varname" : "multiout"
 				}
 
@@ -553,7 +553,7 @@
 					"numoutlets" : 7,
 					"outlettype" : [ "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 708.0, 77.0, 392.0, 19.0 ],
-					"text" : "jcom.pass /position /delay /numSpeakers /bypass /temperature /automatic"
+					"text" : "j.pass /position /delay /numSpeakers /bypass /temperature /automatic"
 				}
 
 			}
@@ -605,7 +605,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 761.0, 133.0, 169.0, 19.0 ],
-					"text" : "js jcom.sur.speaker.delays.js",
+					"text" : "js j.sur.speaker.delays.js",
 					"varname" : "javascript"
 				}
 

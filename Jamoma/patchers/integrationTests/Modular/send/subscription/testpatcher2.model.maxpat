@@ -48,7 +48,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 316.0, 49.0, 88.0, 20.0 ],
-					"text" : "jcom.send test"
+					"text" : "j.send test"
 				}
 
 			}
@@ -73,7 +73,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 140.0, 49.0, 117.0, 20.0 ],
-					"text" : "jcom.parameter test"
+					"text" : "j.parameter test"
 				}
 
 			}
@@ -110,7 +110,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 49.0, 72.0, 20.0 ],
-					"text" : "jcom.model"
+					"text" : "j.model"
 				}
 
 			}
@@ -153,15 +153,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
  ]

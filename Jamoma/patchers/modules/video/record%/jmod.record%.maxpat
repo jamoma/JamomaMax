@@ -237,7 +237,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 151.0, 309.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -278,7 +278,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 132.0, 247.0, 57.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -342,7 +342,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 464.0, 252.0, 300.0, 31.0 ],
-					"text" : "jcom.parameter realtime @type boolean @description \"Realtime (flag). When enabled internal clock is used.\"",
+					"text" : "j.parameter realtime @type boolean @description \"Realtime (flag). When enabled internal clock is used.\"",
 					"varname" : "realtime"
 				}
 
@@ -357,7 +357,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 465.0, 206.0, 386.0, 19.0 ],
-					"text" : "jcom.parameter interp @type boolean @description \"Interpolate (flag).\"",
+					"text" : "j.parameter interp @type boolean @description \"Interpolate (flag).\"",
 					"varname" : "interp"
 				}
 
@@ -372,7 +372,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 445.0, 340.0, 366.0, 19.0 ],
-					"text" : "jcom.message stop @description \"Stop recording QuickTime movie.\""
+					"text" : "j.message stop @description \"Stop recording QuickTime movie.\""
 				}
 
 			}
@@ -386,7 +386,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 430.0, 361.0, 376.0, 19.0 ],
-					"text" : "jcom.message write @description \"Start recording QuickTime movie.\""
+					"text" : "j.message write @description \"Start recording QuickTime movie.\""
 				}
 
 			}
@@ -401,7 +401,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 462.0, 39.0, 428.0, 31.0 ],
-					"text" : "jcom.parameter framerate @type decimal @ramp/drive none @repetitions/allow 0 @range/bounds 1. 25 @range/clipmode low @description Framerate.",
+					"text" : "j.parameter framerate @type decimal @ramp/drive none @repetitions/allow 0 @range/bounds 1. 25 @range/clipmode low @description Framerate.",
 					"varname" : "framerate"
 				}
 
@@ -416,7 +416,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 465.0, 154.0, 379.0, 19.0 ],
-					"text" : "jcom.parameter quality @type string @description \"Codec quality.\"",
+					"text" : "j.parameter quality @type string @description \"Codec quality.\"",
 					"varname" : "quality"
 				}
 
@@ -431,7 +431,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 449.0, 409.0, 362.0, 19.0 ],
-					"text" : "jcom.parameter codec @type string @description \"Codec type.\"",
+					"text" : "j.parameter codec @type string @description \"Codec type.\"",
 					"varname" : "codec"
 				}
 
@@ -514,8 +514,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 7.0, 153.0, 263.0, 43.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Record video to QuickTime movie.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Record video to QuickTime movie.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -658,7 +658,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-43",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

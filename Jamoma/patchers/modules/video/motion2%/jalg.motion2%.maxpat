@@ -70,7 +70,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 139.0, 73.0, 126.0, 19.0 ],
-									"text" : "jcom.oscroute /inverse"
+									"text" : "j.oscroute /inverse"
 								}
 
 							}
@@ -312,7 +312,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 332.0, 193.0, 87.0, 19.0 ],
-									"text" : "s #0_jcom.sum"
+									"text" : "s #0_j.sum"
 								}
 
 							}
@@ -396,7 +396,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 37.0, 56.0, 95.0, 19.0 ],
-									"text" : "jcom.rgb2luma%"
+									"text" : "j.rgb2luma%"
 								}
 
 							}
@@ -411,7 +411,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 157.0, 266.436279, 520.0, 31.0 ],
-									"text" : "jcom.return motion/y @range/bounds 0. 1. @type decimal @description \"The center of gravity for the y-axis of the motion in the frame in a range of 0. to 1. (zero is bottom - one is top).\""
+									"text" : "j.return motion/y @range/bounds 0. 1. @type decimal @description \"The center of gravity for the y-axis of the motion in the frame in a range of 0. to 1. (zero is bottom - one is top).\""
 								}
 
 							}
@@ -440,7 +440,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 104.0, 310.0, 587.0, 31.0 ],
-									"text" : "jcom.return motion/x @range/bounds 0. 1. @type decimal @description \"The center of gravity for the x-axis of the motion in the frame in a range of 0. to 1. (zero is left - one is right).\""
+									"text" : "j.return motion/x @range/bounds 0. 1. @type decimal @description \"The center of gravity for the x-axis of the motion in the frame in a range of 0. to 1. (zero is left - one is right).\""
 								}
 
 							}
@@ -455,7 +455,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 37.0, 354.0, 577.0, 31.0 ],
-									"text" : "jcom.return motion/quantity @type decimal @range/bounds 0. 1. @description \"The amount of motion in the frame in a range of 0. to 1.\""
+									"text" : "j.return motion/quantity @type decimal @range/bounds 0. 1. @description \"The amount of motion in the frame in a range of 0. to 1.\""
 								}
 
 							}
@@ -469,7 +469,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "" ],
 									"patching_rect" : [ 37.0, 109.0, 69.0, 19.0 ],
-									"text" : "jcom.sum%"
+									"text" : "j.sum%"
 								}
 
 							}
@@ -684,7 +684,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 128.0, 113.0, 21.0 ],
-									"text" : "jcom.rgb2luma%"
+									"text" : "j.rgb2luma%"
 								}
 
 							}
@@ -857,7 +857,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "jit_matrix" ],
 									"patching_rect" : [ 86.0, 131.0, 136.0, 21.0 ],
-									"text" : "jcom.noiseremoval%"
+									"text" : "j.noiseremoval%"
 								}
 
 							}
@@ -1062,7 +1062,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 169.0, 138.0, 82.0, 19.0 ],
-					"text" : "jcom.motion%"
+					"text" : "j.motion%"
 				}
 
 			}
@@ -1101,7 +1101,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"patching_rect" : [ 26.0, 48.0, 377.0, 19.0 ],
-					"text" : "jcom.oscroute /genframe /data_smoothing /color /threshold /noise"
+					"text" : "j.oscroute /genframe /data_smoothing /color /threshold /noise"
 				}
 
 			}

@@ -27,7 +27,7 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-5",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -47,7 +47,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 441.0, 535.0, 121.0, 19.0 ],
-					"text" : "jcom.meter_receive 1"
+					"text" : "j.meter_receive 1"
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 438.0, 498.0, 557.0, 31.0 ],
-					"text" : "jcom.message counter @type integer @range/bounds 0 1024 @range/clipmode low @ramp/drive Max @description \"The counter that runs through the matrix.\""
+					"text" : "j.message counter @type integer @range/bounds 0 1024 @range/clipmode low @ramp/drive Max @description \"The counter that runs through the matrix.\""
 				}
 
 			}
@@ -93,7 +93,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 439.0, 388.0, 581.0, 31.0 ],
-					"text" : "jcom.parameter smooth/magnitude @type decimal @range/bounds 0. 1000. @range/clipmode low @ramp/drive none @description \"Smoothing the magnitude values.\"",
+					"text" : "j.parameter smooth/magnitude @type decimal @range/bounds 0. 1000. @range/clipmode low @ramp/drive none @description \"Smoothing the magnitude values.\"",
 					"varname" : "dimensions/width[4]"
 				}
 
@@ -141,7 +141,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 439.0, 305.0, 606.0, 31.0 ],
-					"text" : "jcom.parameter smooth/frequency @type decimal @range/bounds 0. 1000. @range/clipmode low @ramp/drive none @description \"Smoothing the frequency values.\"",
+					"text" : "j.parameter smooth/frequency @type decimal @range/bounds 0. 1000. @range/clipmode low @ramp/drive none @description \"Smoothing the frequency values.\"",
 					"varname" : "dimensions/width[2]"
 				}
 
@@ -205,7 +205,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 439.0, 223.0, 542.0, 31.0 ],
-					"text" : "jcom.parameter offset @type decimal @range/bounds 0. 1000. @range/clipmode low @ramp/drive none @description \"Pitch offset.\"",
+					"text" : "j.parameter offset @type decimal @range/bounds 0. 1000. @range/clipmode low @ramp/drive none @description \"Pitch offset.\"",
 					"varname" : "dimensions/width[3]"
 				}
 
@@ -237,7 +237,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 439.0, 123.0, 582.0, 31.0 ],
-					"text" : "jcom.parameter harmonicsteps @type decimal @range/bounds 0. 100. @range/clipmode low @ramp/drive none @description \"Harmonic steps in the range.\"",
+					"text" : "j.parameter harmonicsteps @type decimal @range/bounds 0. 100. @range/clipmode low @ramp/drive none @description \"Harmonic steps in the range.\"",
 					"varname" : "dimensions/width[1]"
 				}
 
@@ -287,7 +287,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 439.0, 472.0, 342.0, 19.0 ],
-					"text" : "jcom.message clear @type none @description \"Clears the buffer.\"",
+					"text" : "j.message clear @type none @description \"Clears the buffer.\"",
 					"varname" : "jmod.parameter.mxb[3]"
 				}
 
@@ -335,7 +335,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 439.0, 41.0, 598.0, 31.0 ],
-					"text" : "jcom.parameter scaling @type decimal @range/bounds 0. 1. @range/clipmode low @ramp/drive none @description \"Exponential scaling of the range.\"",
+					"text" : "j.parameter scaling @type decimal @range/bounds 0. 1. @range/clipmode low @ramp/drive none @description \"Exponential scaling of the range.\"",
 					"varname" : "dimensions/width"
 				}
 
@@ -350,7 +350,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 64.0, 451.0, 73.0, 19.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -434,7 +434,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 64.0, 381.0, 58.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -509,7 +509,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 216.0, 271.0, 43.0 ],
-					"text" : "jcom.model @type audio @description \"Sonification of a video matrix, preferably based on a motiongram.\""
+					"text" : "j.model @type audio @description \"Sonification of a video matrix, preferably based on a motiongram.\""
 				}
 
 			}
@@ -520,7 +520,7 @@
 					"has_meters" : 2,
 					"has_mute" : 1,
 					"id" : "obj-31",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

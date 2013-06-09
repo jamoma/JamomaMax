@@ -140,13 +140,13 @@
 									"id" : "obj-1",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.class.gl_slab.inspect.maxpat",
+									"name" : "j.class.gl_slab.inspect.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 277.0, 0.0, 268.0, 762.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 278.0, 3.0, 268.0, 762.0 ],
-									"varname" : "jcom.class.gl_slab.inspect"
+									"varname" : "j.class.gl_slab.inspect"
 								}
 
 							}
@@ -156,13 +156,13 @@
 									"id" : "obj-3",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.class.gl_group.inspect.maxpat",
+									"name" : "j.class.gl_group.inspect.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 4.0, 0.0, 268.0, 761.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 5.0, 3.0, 268.0, 761.0 ],
-									"varname" : "jcom.class.gl_group.inspect"
+									"varname" : "j.class.gl_group.inspect"
 								}
 
 							}
@@ -205,7 +205,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 690.0, 110.0, 151.0, 19.0 ],
-									"text" : "jcom.oscroute /view/panel"
+									"text" : "j.oscroute /view/panel"
 								}
 
 							}
@@ -283,7 +283,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 761.0, 366.0, 596.0, 31.0 ],
-					"text" : "jcom.parameter layer.3 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 3 (backmost layer) as list of rgba values.\"",
+					"text" : "j.parameter layer.3 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 3 (backmost layer) as list of rgba values.\"",
 					"varname" : "layer_3"
 				}
 
@@ -298,7 +298,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 603.0, 371.0, 144.0, 19.0 ],
-					"text" : "jcom.list2parameter 4"
+					"text" : "j.list2parameter 4"
 				}
 
 			}
@@ -313,7 +313,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 760.0, 267.0, 586.0, 31.0 ],
-					"text" : "jcom.parameter layer.2 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 2 as list of rgba values.\"",
+					"text" : "j.parameter layer.2 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 2 as list of rgba values.\"",
 					"varname" : "layer_2"
 				}
 
@@ -328,7 +328,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 605.0, 272.0, 144.0, 19.0 ],
-					"text" : "jcom.list2parameter 4"
+					"text" : "j.list2parameter 4"
 				}
 
 			}
@@ -343,7 +343,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 760.0, 180.0, 586.0, 31.0 ],
-					"text" : "jcom.parameter layer.1 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 1 as list of rgba values.\"",
+					"text" : "j.parameter layer.1 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 1 as list of rgba values.\"",
 					"varname" : "layer_1"
 				}
 
@@ -358,7 +358,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 606.0, 184.0, 144.0, 19.0 ],
-					"text" : "jcom.list2parameter 4"
+					"text" : "j.list2parameter 4"
 				}
 
 			}
@@ -373,7 +373,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 760.0, 92.0, 597.0, 31.0 ],
-					"text" : "jcom.parameter layer.0 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 0 (frontmost layer) as list of rgba values.\"",
+					"text" : "j.parameter layer.0 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 0 (frontmost layer) as list of rgba values.\"",
 					"varname" : "layer_0"
 				}
 
@@ -388,7 +388,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 606.0, 93.0, 144.0, 19.0 ],
-					"text" : "jcom.list2parameter 4"
+					"text" : "j.list2parameter 4"
 				}
 
 			}
@@ -848,7 +848,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 175.0, 455.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -862,7 +862,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"patching_rect" : [ 95.0, 385.0, 147.0, 19.0 ],
-					"text" : "jcom.in 4"
+					"text" : "j.in 4"
 				}
 
 			}
@@ -907,7 +907,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 10.0, 220.0, 319.0, 31.0 ],
-					"text" : "jcom.model @description \"A four channel slab-based video mixer with alpha channels and Photoshop-style layers.\"",
+					"text" : "j.model @description \"A four channel slab-based video mixer with alpha channels and Photoshop-style layers.\"",
 					"varname" : "jmod.hub"
 				}
 
@@ -1022,7 +1022,7 @@
 					"has_panel" : 1,
 					"has_preview" : 1,
 					"id" : "obj-74",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

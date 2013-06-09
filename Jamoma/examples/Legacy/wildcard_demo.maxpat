@@ -210,7 +210,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 21.0, 332.0, 201.0, 19.0 ],
-					"text" : "jcom.send jcom.remote.module.to"
+					"text" : "j.send j.remote.module.to"
 				}
 
 			}

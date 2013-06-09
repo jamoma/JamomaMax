@@ -104,7 +104,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 356.0, 346.0, 594.0, 31.0 ],
-					"text" : "jcom.message editWith @description \"edit current cue script with your preferred editor. e.g. /edit textmate\" @type string"
+					"text" : "j.message editWith @description \"edit current cue script with your preferred editor. e.g. /edit textmate\" @type string"
 				}
 
 			}
@@ -453,7 +453,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 85.0, 235.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -537,7 +537,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 307.0, 155.0, 54.0, 19.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -695,7 +695,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.init.mxo",
+								"name" : "j.init.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -730,7 +730,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 355.0, 210.0, 598.0, 43.0 ],
-					"text" : "jcom.message saveScript @repetitions/allow 1 @description \"Save cue script to a file. An argument determines the path and name of the file.  No argument will bring up a file dialog (like saveas) or save the script to the existing file that is in use.\""
+					"text" : "j.message saveScript @repetitions/allow 1 @description \"Save cue script to a file. An argument determines the path and name of the file.  No argument will bring up a file dialog (like saveas) or save the script to the existing file that is in use.\""
 				}
 
 			}
@@ -744,7 +744,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 355.0, 295.0, 488.0, 19.0 ],
-					"text" : "jcom.message view @description \"View current cue script in a text window.\" @type none"
+					"text" : "j.message view @description \"View current cue script in a text window.\" @type none"
 				}
 
 			}
@@ -759,7 +759,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 356.0, 429.0, 321.0, 31.0 ],
-					"text" : "jcom.message cue @repetitions/allow 1 @type generic @description \"Recall cue event from cue script.\""
+					"text" : "j.message cue @repetitions/allow 1 @type generic @description \"Recall cue event from cue script.\""
 				}
 
 			}
@@ -788,7 +788,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 355.0, 126.0, 590.0, 43.0 ],
-					"text" : "jcom.message loadScript @repetitions/allow 1 @description \"Load cue script from file. <br>NOTE: jcom.cueScript will be watching the file and automatically update if the content of the file is changed. This way you can use an external editor to work on the cue script while Jamoma is running.\""
+					"text" : "j.message loadScript @repetitions/allow 1 @description \"Load cue script from file. <br>NOTE: j.cueScript will be watching the file and automatically update if the content of the file is changed. This way you can use an external editor to work on the cue script while Jamoma is running.\""
 				}
 
 			}
@@ -816,8 +816,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 157.0, 291.0, 19.0 ],
-					"text" : "jcom.model @description \"Manage cue list in text format\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Manage cue list in text format\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -855,8 +855,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 355.0, 66.0, 566.0, 31.0 ],
-					"text" : "jcom.message getState @type none @description \"Poll state for all bridged modules, and display in text window.\"",
-					"varname" : "jcom.parameter"
+					"text" : "j.message getState @type none @description \"Poll state for all bridged modules, and display in text window.\"",
+					"varname" : "j.parameter"
 				}
 
 			}
@@ -884,7 +884,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-32",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1131,67 +1131,67 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.filesaver.maxpat",
+				"name" : "j.filesaver.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/filesaver",
 				"patcherrelativepath" : "../../../library/components/filesaver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.js_systeminfo.js",
+				"name" : "j.js_systeminfo.js",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/javascript",
 				"patcherrelativepath" : "../../../library/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.filewatcher.maxpat",
+				"name" : "j.filewatcher.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/filewatcher",
 				"patcherrelativepath" : "../../../library/components/filewatcher",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
  ]

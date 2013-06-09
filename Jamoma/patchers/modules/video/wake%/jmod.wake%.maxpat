@@ -283,7 +283,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 42.0, 51.0, 118.0, 19.0 ],
-									"text" : "jcom.pwindow.mouse"
+									"text" : "j.pwindow.mouse"
 								}
 
 							}
@@ -523,7 +523,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 85.0, 396.0, 53.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -564,7 +564,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 85.0, 337.0, 78.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -660,7 +660,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 362.0, 389.0, 257.0, 31.0 ],
-					"text" : "jcom.parameter normalize @type boolean @description \"Switches normalization on and off\"",
+					"text" : "j.parameter normalize @type boolean @description \"Switches normalization on and off\"",
 					"varname" : "normalize"
 				}
 
@@ -710,7 +710,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 396.0, 176.0, 329.0, 31.0 ],
-					"text" : "jcom.parameter bleed @type decimal @ramp/drive Max @description \"Sets convolution kernel value for all colors\"",
+					"text" : "j.parameter bleed @type decimal @ramp/drive Max @description \"Sets convolution kernel value for all colors\"",
 					"varname" : "bleed"
 				}
 
@@ -726,7 +726,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 416.0, 101.0, 273.0, 31.0 ],
-					"text" : "jcom.parameter gain @type decimal @ramp/drive Max @description \"The gain level for all colors\"",
+					"text" : "j.parameter gain @type decimal @ramp/drive Max @description \"The gain level for all colors\"",
 					"varname" : "gain"
 				}
 
@@ -808,7 +808,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 377.0, 245.0, 301.0, 31.0 ],
-					"text" : "jcom.parameter feedback @type decimal @ramp/drive Max @description \"The feedback value for all colors\"",
+					"text" : "j.parameter feedback @type decimal @ramp/drive Max @description \"The feedback value for all colors\"",
 					"varname" : "feedback"
 				}
 
@@ -865,8 +865,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 18.0, 156.0, 302.0, 43.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Video feedback with convolution for trippy effects\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Video feedback with convolution for trippy effects\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -904,7 +904,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 357.0, 311.0, 316.0, 31.0 ],
-					"text" : "jcom.parameter feedforward @type decimal @ramp/drive Max @description \"The feedforward value for all colors\"",
+					"text" : "j.parameter feedforward @type decimal @ramp/drive Max @description \"The feedforward value for all colors\"",
 					"varname" : "feedforward"
 				}
 
@@ -930,7 +930,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-32",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

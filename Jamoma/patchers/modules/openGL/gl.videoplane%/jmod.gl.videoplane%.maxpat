@@ -27,7 +27,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 145.0, 440.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -67,7 +67,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 95.0, 330.0, 118.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -135,7 +135,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 185.0, 547.0, 31.0 ],
-					"text" : "jcom.parameter videoplane/gridmode @type string @description \"Grid mode (0 = quadrilated, 1 = triangular).\"",
+					"text" : "j.parameter videoplane/gridmode @type string @description \"Grid mode (0 = quadrilated, 1 = triangular).\"",
 					"varname" : "videoplane/gridmode"
 				}
 
@@ -150,7 +150,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 150.0, 527.0, 19.0 ],
-					"text" : "jcom.parameter videoplane/colormode @type string @description \"Color mode (argb or uyvy).\"",
+					"text" : "j.parameter videoplane/colormode @type string @description \"Color mode (argb or uyvy).\"",
 					"varname" : "videoplane/colormode"
 				}
 
@@ -165,7 +165,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 115.0, 464.0, 19.0 ],
-					"text" : "jcom.parameter videoplane/interpolate @type boolean @description \\\"Interpolation.\\\"",
+					"text" : "j.parameter videoplane/interpolate @type boolean @description \\\"Interpolation.\\\"",
 					"varname" : "videoplane/interpolate"
 				}
 
@@ -181,7 +181,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 75.0, 563.0, 31.0 ],
-					"text" : "jcom.parameter videoplane/displaylist @type boolean @description \"Cache in displaylist (might speed up rendering on graphic card).\"",
+					"text" : "j.parameter videoplane/displaylist @type boolean @description \"Cache in displaylist (might speed up rendering on graphic card).\"",
 					"varname" : "videoplane/displaylist"
 				}
 
@@ -197,7 +197,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 30.0, 590.0, 31.0 ],
-					"text" : "jcom.parameter videoplane/client_storage @type boolean @description \"When set jit.videoplane use incoming matrix's storage rather than allocating texture memory.\"",
+					"text" : "j.parameter videoplane/client_storage @type boolean @description \"When set jit.videoplane use incoming matrix's storage rather than allocating texture memory.\"",
 					"varname" : "videoplane/client_storage"
 				}
 
@@ -213,7 +213,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 275.0, 601.0, 43.0 ],
-					"text" : "jcom.parameter videoplane/nudge @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Amount of the texture that is nudged from boundary to accomodate for boundary errors when mapping the texture to the plane.\"",
+					"text" : "j.parameter videoplane/nudge @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Amount of the texture that is nudged from boundary to accomodate for boundary errors when mapping the texture to the plane.\"",
 					"varname" : "videoplane/nudge"
 				}
 
@@ -242,7 +242,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 385.0, 539.0, 19.0 ],
-					"text" : "jcom.parameter videoplane/dim @type generic @range/bounds 1 1000 @range/clipmode low @description \"Dimension of the grid (x, y coordinates).\"",
+					"text" : "j.parameter videoplane/dim @type generic @range/bounds 1 1000 @range/clipmode low @description \"Dimension of the grid (x, y coordinates).\"",
 					"varname" : "videoplane/dim"
 				}
 
@@ -257,7 +257,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 395.0, 385.0, 154.0, 19.0 ],
-					"text" : "jcom.list2parameter 2"
+					"text" : "j.list2parameter 2"
 				}
 
 			}
@@ -271,7 +271,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 470.0, 544.0, 19.0 ],
-					"text" : "jcom.parameter videoplane/texture/scale @type decimalArray @description \"Texture scale (x, y coordinates).\"",
+					"text" : "j.parameter videoplane/texture/scale @type decimalArray @description \"Texture scale (x, y coordinates).\"",
 					"varname" : "videoplane/texture/scale"
 				}
 
@@ -286,7 +286,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 395.0, 470.0, 154.0, 19.0 ],
-					"text" : "jcom.list2parameter 2"
+					"text" : "j.list2parameter 2"
 				}
 
 			}
@@ -300,7 +300,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 550.0, 550.0, 19.0 ],
-					"text" : "jcom.parameter videoplane/texture/offset @type generic @description \"Texture offset (x, y coordinates).\"",
+					"text" : "j.parameter videoplane/texture/offset @type generic @description \"Texture offset (x, y coordinates).\"",
 					"varname" : "videoplane/texture/offset"
 				}
 
@@ -315,7 +315,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 400.0, 550.0, 154.0, 19.0 ],
-					"text" : "jcom.list2parameter 2"
+					"text" : "j.list2parameter 2"
 				}
 
 			}
@@ -684,11 +684,11 @@
 									"id" : "obj-2",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.class.gl_group.inspect.maxpat",
+									"name" : "j.class.gl_group.inspect.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 5.0, 0.0, 268.0, 761.0 ],
-									"varname" : "jcom.class.gl_group.inspect"
+									"varname" : "j.class.gl_group.inspect"
 								}
 
 							}
@@ -823,8 +823,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 10.0, 230.0, 258.0, 43.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Apply incoming video matrix as texture to OpenGL videoplane.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Apply incoming video matrix as texture to OpenGL videoplane.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -896,7 +896,7 @@
 					"has_mute" : 1,
 					"has_panel" : 1,
 					"id" : "obj-66",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

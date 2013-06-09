@@ -136,7 +136,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 76.0, 168.0, 245.0, 19.0 ],
-					"text" : "jcom.oscroute /this_parameter /this_message"
+					"text" : "j.oscroute /this_parameter /this_message"
 				}
 
 			}

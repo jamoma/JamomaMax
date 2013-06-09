@@ -68,7 +68,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 143.0, 356.0, 53.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -82,7 +82,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 221.0, 296.0, 56.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -131,7 +131,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 440.0, 57.0, 303.0, 31.0 ],
-					"text" : "jcom.parameter y @type integer @ramp/drive Max @description \"Specify the x-axis offset in pixels.\"",
+					"text" : "j.parameter y @type integer @ramp/drive Max @description \"Specify the x-axis offset in pixels.\"",
 					"varname" : "y"
 				}
 
@@ -215,7 +215,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 436.0, 20.0, 303.0, 31.0 ],
-					"text" : "jcom.parameter x @type integer @ramp/drive Max @description \"Specify the x-axis offset in pixels.\"",
+					"text" : "j.parameter x @type integer @ramp/drive Max @description \"Specify the x-axis offset in pixels.\"",
 					"varname" : "x"
 				}
 
@@ -231,7 +231,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 464.0, 100.0, 601.0, 31.0 ],
-					"text" : "jcom.parameter mode @type string @description \"Determine what happens when an offset pixel is outside of the video frame's boundaries. Possible edgemodes are clip fold and wrap.\"",
+					"text" : "j.parameter mode @type string @description \"Determine what happens when an offset pixel is outside of the video frame's boundaries. Possible edgemodes are clip fold and wrap.\"",
 					"varname" : "mode"
 				}
 
@@ -247,8 +247,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 0.0, 140.0, 310.0, 43.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"averages 4 pixels of input for each pixel of output\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"averages 4 pixels of input for each pixel of output\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -377,7 +377,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

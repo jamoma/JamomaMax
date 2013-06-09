@@ -60,7 +60,7 @@
 					"bgmode" : 1,
 					"id" : "obj-25",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 594.0, 70.0 ],
@@ -72,7 +72,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-9",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -162,7 +162,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 155.0, 215.0, 437.5, 19.0 ],
-					"text" : "jcom.pack≈ 32"
+					"text" : "j.pack≈ 32"
 				}
 
 			}
@@ -227,7 +227,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-15",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -238,7 +238,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-16",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -249,7 +249,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-17",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -260,7 +260,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-18",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -271,7 +271,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-19",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -282,7 +282,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-20",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -293,7 +293,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-21",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -304,7 +304,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-22",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -315,7 +315,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-23",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -326,7 +326,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-24",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -337,7 +337,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-26",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -348,7 +348,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-27",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -359,7 +359,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-28",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -370,7 +370,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-29",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -381,7 +381,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-30",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -659,28 +659,28 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
 				"patcherrelativepath" : "../../../library/components/jamomaPath",
 				"type" : "JSON",
@@ -701,59 +701,59 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pack≈.mxo",
+				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.offset≈.mxo",
+				"name" : "j.offset≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

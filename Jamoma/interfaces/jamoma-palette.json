@@ -25,13 +25,13 @@
 					"patching_rect" : [ 234.0, 139.0, 48.0, 48.0 ],
 					"id" : "jcomui-1",
 					"numoutlets" : 0,
-					"pic" : "jcom.ui.svg",
+					"pic" : "j.ui.svg",
 					"instance_attributes" : 					{
 						"palette_order" : "first",
 						"palette_numerical_order" : 1,
 						"palette_category" : ["Basic", "Interface", "Jamoma"],
-						"palette_caption" : "jcom.ui",
-						"palette_action" : "jcom.ui"
+						"palette_caption" : "j.ui",
+						"palette_action" : "j.ui"
 					}
 
 				}
@@ -46,13 +46,13 @@
 					"patching_rect" : [ 234.0, 139.0, 48.0, 48.0 ],
 					"id" : "jcomspatDisplay-1",
 					"numoutlets" : 0,
-					"pic" : "jcom.spatDisplay.svg",
+					"pic" : "j.spatDisplay.svg",
 					"instance_attributes" : 					{
 						"palette_order" : "third",
 						"palette_numerical_order" : 3,
 						"palette_category" : ["Interface", "Jamoma"],
-						"palette_caption" : "jcom.spatDisplay",
-						"palette_action" : "jcom.spatDisplay"
+						"palette_caption" : "j.spatDisplay",
+						"palette_action" : "j.spatDisplay"
 					}
 
 				}
@@ -66,13 +66,13 @@
 					"patching_rect" : [ 234.0, 139.0, 48.0, 48.0 ],
 					"id" : "jcomlabel-1",
 					"numoutlets" : 0,
-					"pic" : "jcom.label.svg",
+					"pic" : "j.label.svg",
 					"instance_attributes" : 					{
 						"palette_order" : "second",
 						"palette_numerical_order" : 2,
 						"palette_category" : ["Basic", "Interface", "Jamoma"],
-						"palette_caption" : "jcom.label",
-						"palette_action" : "jcom.label"
+						"palette_caption" : "j.label",
+						"palette_action" : "j.label"
 					}
 
 				}

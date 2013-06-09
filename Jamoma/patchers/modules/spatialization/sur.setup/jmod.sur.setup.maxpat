@@ -110,7 +110,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 593.0, 462.0, 556.0, 31.0 ],
-					"text" : "jcom.message radius/dec @repetitions/allow 1 @type none @description \"change the radius of the speaker arrangement\"",
+					"text" : "j.message radius/dec @repetitions/allow 1 @type none @description \"change the radius of the speaker arrangement\"",
 					"varname" : "module_in[3]"
 				}
 
@@ -127,7 +127,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 593.0, 425.0, 552.0, 31.0 ],
-					"text" : "jcom.message radius/inc @repetitions/allow 1 @type none @description \"change the radius of the speaker arrangement\"",
+					"text" : "j.message radius/inc @repetitions/allow 1 @type none @description \"change the radius of the speaker arrangement\"",
 					"varname" : "module_in[2]"
 				}
 
@@ -177,7 +177,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 197.0, 268.0, 55.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -191,7 +191,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 593.0, 348.0, 536.0, 19.0 ],
-					"text" : "jcom.message dump @type generic @repetitions/allow 1 @description \"Bang to send all positions\""
+					"text" : "j.message dump @type generic @repetitions/allow 1 @description \"Bang to send all positions\""
 				}
 
 			}
@@ -224,7 +224,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 593.0, 176.0, 339.0, 43.0 ],
-					"text" : "jcom.message numSources @type integer @range/bounds 0 32 @repetitions/allow 1 @range/clipmode both @description \"alternative description of number of channels to display.\""
+					"text" : "j.message numSources @type integer @range/bounds 0 32 @repetitions/allow 1 @range/clipmode both @description \"alternative description of number of channels to display.\""
 				}
 
 			}
@@ -239,7 +239,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 935.0, 176.0, 346.0, 43.0 ],
-					"text" : "jcom.message numSpeakers @type integer @range/bounds 0 32 @repetitions/allow 1 @range/clipmode both @description \"alternative description of number of channels to display.\""
+					"text" : "j.message numSpeakers @type integer @range/bounds 0 32 @repetitions/allow 1 @range/clipmode both @description \"alternative description of number of channels to display.\""
 				}
 
 			}
@@ -254,7 +254,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 593.0, 235.0, 574.0, 31.0 ],
-					"text" : "jcom.parameter numChannels @repetitions/allow 1 @type integer @range/bounds 0 32 @range/clipmode both @priority 2 @description \"Number of channels in the set.\"",
+					"text" : "j.parameter numChannels @repetitions/allow 1 @type integer @range/bounds 0 32 @range/clipmode both @priority 2 @description \"Number of channels in the set.\"",
 					"varname" : "voices[4]"
 				}
 
@@ -396,7 +396,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 593.0, 97.0, 295.0, 31.0 ],
-					"text" : "jcom.parameter type @repetitions/allow 0 @type string @description \"Type of instances\" @priority 1",
+					"text" : "j.parameter type @repetitions/allow 0 @type string @description \"Type of instances\" @priority 1",
 					"varname" : "module_in[1]"
 				}
 
@@ -425,8 +425,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 20.0, 150.0, 426.0, 19.0 ],
-					"text" : "jcom.model @description \"Describe position of instances as sets of xyz coordinates.\"",
-					"varname" : "jcom.model[1]"
+					"text" : "j.model @description \"Describe position of instances as sets of xyz coordinates.\"",
+					"varname" : "j.model[1]"
 				}
 
 			}
@@ -656,7 +656,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 129.0, 161.0, 54.0, 19.0 ],
-																	"text" : "jcom.init"
+																	"text" : "j.init"
 																}
 
 															}
@@ -891,7 +891,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 418.0, 413.0, 59.0, 19.0 ],
-																	"text" : "jcom.thru"
+																	"text" : "j.thru"
 																}
 
 															}
@@ -920,7 +920,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 188.0, 289.0, 59.0, 19.0 ],
-																	"text" : "jcom.thru"
+																	"text" : "j.thru"
 																}
 
 															}
@@ -1196,13 +1196,13 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.thru.maxpat",
+																"name" : "j.thru.maxpat",
 																"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 																"type" : "JSON",
 																"implicit" : 1
 															}
 , 															{
-																"name" : "jcom.init.mxo",
+																"name" : "j.init.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -1300,13 +1300,13 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.thru.maxpat",
+												"name" : "j.thru.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.init.mxo",
+												"name" : "j.init.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -1397,7 +1397,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 850.0, 70.0, 225.0, 19.0 ],
-									"text" : "jcom.oscroute /type /numChannels /dump"
+									"text" : "j.oscroute /type /numChannels /dump"
 								}
 
 							}
@@ -1411,7 +1411,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 650.0, 100.0, 59.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -1472,7 +1472,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 50.0, 144.0, 18.0 ],
-													"text" : "jcom.oscroute /view/panel"
+													"text" : "j.oscroute /view/panel"
 												}
 
 											}
@@ -1552,7 +1552,7 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.oscroute.mxo",
+												"name" : "j.oscroute.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -1583,7 +1583,7 @@
 									"id" : "obj-10",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 247.0, 282.0, 23.0 ],
@@ -1600,7 +1600,7 @@
 									"id" : "obj-11",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 218.0, 282.0, 23.0 ],
@@ -1617,7 +1617,7 @@
 									"id" : "obj-12",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 189.0, 282.0, 23.0 ],
@@ -1634,7 +1634,7 @@
 									"id" : "obj-13",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 160.0, 282.0, 23.0 ],
@@ -1651,7 +1651,7 @@
 									"id" : "obj-14",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 131.0, 282.0, 23.0 ],
@@ -1668,7 +1668,7 @@
 									"id" : "obj-15",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 102.0, 282.0, 23.0 ],
@@ -1685,7 +1685,7 @@
 									"id" : "obj-16",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 73.0, 282.0, 23.0 ],
@@ -1702,7 +1702,7 @@
 									"id" : "obj-17",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 303.0, 44.0, 282.0, 23.0 ],
@@ -1719,7 +1719,7 @@
 									"id" : "obj-18",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 15.0, 282.0, 23.0 ],
@@ -1817,7 +1817,7 @@
 									"id" : "obj-28",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 450.0, 282.0, 23.0 ],
@@ -1834,7 +1834,7 @@
 									"id" : "obj-29",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 421.0, 282.0, 23.0 ],
@@ -1851,7 +1851,7 @@
 									"id" : "obj-3",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 450.0, 282.0, 23.0 ],
@@ -1868,7 +1868,7 @@
 									"id" : "obj-30",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 392.0, 282.0, 23.0 ],
@@ -1885,7 +1885,7 @@
 									"id" : "obj-31",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 363.0, 282.0, 23.0 ],
@@ -1902,7 +1902,7 @@
 									"id" : "obj-32",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 334.0, 282.0, 23.0 ],
@@ -1919,7 +1919,7 @@
 									"id" : "obj-33",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 305.0, 282.0, 23.0 ],
@@ -1936,7 +1936,7 @@
 									"id" : "obj-34",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 276.0, 282.0, 23.0 ],
@@ -1953,7 +1953,7 @@
 									"id" : "obj-35",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 247.0, 282.0, 23.0 ],
@@ -1970,7 +1970,7 @@
 									"id" : "obj-36",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 218.0, 282.0, 23.0 ],
@@ -1987,7 +1987,7 @@
 									"id" : "obj-37",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 189.0, 282.0, 23.0 ],
@@ -2004,7 +2004,7 @@
 									"id" : "obj-38",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 160.0, 282.0, 23.0 ],
@@ -2021,7 +2021,7 @@
 									"id" : "obj-39",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 131.0, 282.0, 23.0 ],
@@ -2038,7 +2038,7 @@
 									"id" : "obj-4",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 421.0, 282.0, 23.0 ],
@@ -2054,7 +2054,7 @@
 									"id" : "obj-40",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 102.0, 282.0, 23.0 ],
@@ -2070,7 +2070,7 @@
 									"id" : "obj-41",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 73.0, 282.0, 23.0 ],
@@ -2086,7 +2086,7 @@
 									"id" : "obj-42",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 44.0, 282.0, 23.0 ],
@@ -2102,7 +2102,7 @@
 									"id" : "obj-43",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 15.0, 282.0, 23.0 ],
@@ -2135,7 +2135,7 @@
 									"id" : "obj-5",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 392.0, 282.0, 23.0 ],
@@ -2238,7 +2238,7 @@
 									"id" : "obj-6",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 363.0, 282.0, 23.0 ],
@@ -2255,7 +2255,7 @@
 									"id" : "obj-7",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 334.0, 282.0, 23.0 ],
@@ -2272,7 +2272,7 @@
 									"id" : "obj-8",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 305.0, 282.0, 23.0 ],
@@ -2289,7 +2289,7 @@
 									"id" : "obj-9",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.sur.channel.xyz_setup.maxpat",
+									"name" : "j.sur.channel.xyz_setup.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 276.0, 282.0, 23.0 ],
@@ -2755,41 +2755,41 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.sur.channel.xyz_setup.maxpat",
+								"name" : "j.sur.channel.xyz_setup.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/spatialization/sur.setup",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.list2parameter.maxpat",
+								"name" : "j.list2parameter.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/list2parameter",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.thru.maxpat",
+								"name" : "j.thru.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.parameter.mxo",
+								"name" : "j.parameter.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.message.mxo",
+								"name" : "j.message.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.return.mxo",
+								"name" : "j.return.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.init.mxo",
+								"name" : "j.init.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -2817,7 +2817,7 @@
 				"box" : 				{
 					"has_panel" : 1,
 					"id" : "obj-24",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -2838,7 +2838,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 196.0, 211.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -3020,60 +3020,60 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.sur.channel.xyz_setup.maxpat",
+				"name" : "j.sur.channel.xyz_setup.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/spatialization/sur.setup",
 				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.list2parameter.maxpat",
+				"name" : "j.list2parameter.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/list2parameter",
 				"patcherrelativepath" : "../../../library/components/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
  ]

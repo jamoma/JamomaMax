@@ -47,7 +47,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 420.0, 171.0, 216.0, 19.0 ],
-					"text" : "jcom.return numChannels @type integer"
+					"text" : "j.return numChannels @type integer"
 				}
 
 			}
@@ -61,7 +61,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 191.0, 235.0, 434.0, 19.0 ],
-					"text" : "jcom.return samplerate @type integer @dataspace time @dataspace/unit Hz"
+					"text" : "j.return samplerate @type integer @dataspace time @dataspace/unit Hz"
 				}
 
 			}
@@ -75,7 +75,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 325.0, 205.0, 198.0, 19.0 ],
-					"text" : "jcom.return vectorsize @type integer"
+					"text" : "j.return vectorsize @type integer"
 				}
 
 			}
@@ -103,7 +103,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 110.0, 128.0, 421.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -117,7 +117,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 110.0, 55.0, 124.0, 19.0 ],
-					"text" : "jcom.oscroute /update"
+					"text" : "j.oscroute /update"
 				}
 
 			}
@@ -232,15 +232,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.info≈.mxo",
+				"name" : "j.info≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
  ]

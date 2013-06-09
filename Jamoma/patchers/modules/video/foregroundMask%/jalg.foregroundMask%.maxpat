@@ -117,7 +117,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 185.0, 95.0, 278.0, 19.0 ],
-					"text" : "jcom.oscroute /filter/feedback /filter/clear /threshold"
+					"text" : "j.oscroute /filter/feedback /filter/clear /threshold"
 				}
 
 			}
@@ -180,7 +180,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 80.0, 290.0, 116.0, 19.0 ],
-					"text" : "jcom.noiseremoval%"
+					"text" : "j.noiseremoval%"
 				}
 
 			}

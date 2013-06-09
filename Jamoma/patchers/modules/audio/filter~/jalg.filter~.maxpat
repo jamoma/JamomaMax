@@ -129,7 +129,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 70.0, 80.0, 259.0, 19.0 ],
-					"text" : "jcom.oscroute /filtertype /frequency /filtergain /q"
+					"text" : "j.oscroute /filtertype /frequency /filtergain /q"
 				}
 
 			}

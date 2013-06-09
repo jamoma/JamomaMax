@@ -502,7 +502,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 79.0, 100.0, 220.0, 19.0 ],
-									"text" : "jcom.oscroute /preset/recall /preset/store"
+									"text" : "j.oscroute /preset/recall /preset/store"
 								}
 
 							}
@@ -1059,7 +1059,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 15.0, 45.0, 119.0, 19.0 ],
-									"text" : "jcom.oscroute /preset"
+									"text" : "j.oscroute /preset"
 								}
 
 							}
@@ -1073,7 +1073,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 16.0, 70.0, 240.0, 19.0 ],
-									"text" : "jcom.oscroute /recall /store /dump /storenext"
+									"text" : "j.oscroute /recall /store /dump /storenext"
 								}
 
 							}
@@ -2226,7 +2226,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 17.0, 286.0, 151.0, 55.0 ],
-					"text" : "jcom.message fullscreen @repetitions/allow 0 @type integer @description \"turn patch to fullscreen mode\"",
+					"text" : "j.message fullscreen @repetitions/allow 0 @type integer @description \"turn patch to fullscreen mode\"",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -2256,7 +2256,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 234.0, 26.0, 300.0, 31.0 ],
-					"text" : "jcom.parameter layout @type string @priority 1 @repetitions/allow 0 @description \"layout name to recall\""
+					"text" : "j.parameter layout @type string @priority 1 @repetitions/allow 0 @description \"layout name to recall\""
 				}
 
 			}
@@ -2349,7 +2349,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 305.0, 415.0, 334.0, 31.0 ],
-					"text" : "jcom.parameter positions @repetitions/allow 1 @type generic @description \"list of modules + position + show/hide\"",
+					"text" : "j.parameter positions @repetitions/allow 1 @type generic @description \"list of modules + position + show/hide\"",
 					"varname" : "hue_angle"
 				}
 
@@ -2378,7 +2378,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 235.0, 299.0, 56.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -4865,7 +4865,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 50.0, 83.0, 133.0, 19.0 ],
-																	"text" : "jcom.getDescriptionFromHtml"
+																	"text" : "j.getDescriptionFromHtml"
 																}
 
 															}
@@ -5576,7 +5576,7 @@
 																	"fontname" : "Verdana",
 																	"fontsize" : 10.0,
 																	"id" : "obj-84",
-																	"items" : [ "10harmonics~/jalg.10harmonics~.maxpat", ",", "10harmonics~/jmod.10harmonics~.maxhelp", ",", "10harmonics~/jmod.10harmonics~.maxpat", ",", "_template~/jalg._template~.maxpat", ",", "_template~/jmod._template~.maxhelp", ",", "_template~/jmod._template~.maxpat", ",", "_template~/jmod._template~.test.maxpat", ",", "audiounit~/jalg.audiounit~.maxpat", ",", "audiounit~/jmod.audiounit~.maxhelp", ",", "audiounit~/jmod.audiounit~.maxpat", ",", "crossfade~/jalg.crossfade~.maxpat", ",", "crossfade~/jmod.crossfade~.maxhelp", ",", "crossfade~/jmod.crossfade~.maxpat", ",", "degrade~/jalg.degrade~.maxpat", ",", "degrade~/jmod.degrade~.maxhelp", ",", "degrade~/jmod.degrade~.maxpat", ",", "delay~/jalg.delay~.maxpat", ",", "delay~/jmod.delay~.maxhelp", ",", "delay~/jmod.delay~.maxpat", ",", "echo~/jalg.echo~.maxpat", ",", "echo~/jmod.echo~.maxhelp", ",", "echo~/jmod.echo~.maxpat", ",", "equalizer~/jalg.equalizer~.maxpat", ",", "equalizer~/jalg.equalizer~_params.maxpat", ",", "equalizer~/jmod.equalizer~.maxhelp", ",", "equalizer~/jmod.equalizer~.maxpat", ",", "filter~/jalg.filter~.maxpat", ",", "filter~/jmod.filter~.maxhelp", ",", "filter~/jmod.filter~.maxpat", ",", "fluidsynth~/jalg.fluidsynth~.maxpat", ",", "fluidsynth~/jmod.fluidsynth~.maxhelp", ",", "fluidsynth~/jmod.fluidsynth~.maxpat", ",", "input~/jmod.input~.maxhelp", ",", "input~/jmod.input~.maxpat", ",", "limiter~/jmod.limiter~.maxhelp", ",", "limiter~/jmod.limiter~.maxpat", ",", "multidelay~/jalg.multidelay~.maxpat", ",", "multidelay~/jmod.multidelay~.maxhelp", ",", "multidelay~/jmod.multidelay~.maxpat", ",", "noisegate~/jalg.noisegate~.maxpat", ",", "noisegate~/jmod.noisegate~.maxhelp", ",", "noisegate~/jmod.noisegate~.maxpat", ",", "noise~/jalg.noise~.maxpat", ",", "noise~/jmod.noise~.maxhelp", ",", "noise~/jmod.noise~.maxpat", ",", "output~/output~.module.maxhelp", ",", "output~/output~.module.maxpat", ",", "rissetGlissando/jalg.rissetGlissando~.maxpat", ",", "rissetGlissando/jmod.rissetGlissando~.maxhelp", ",", "rissetGlissando/jmod.rissetGlissando~.maxpat", ",", "samplePlayer2~/jalg.samplePlayer2~.maxpat", ",", "samplePlayer2~/jmod.samplePlayer2~.maxhelp", ",", "samplePlayer2~/jmod.sampleplayer2~.maxpat", ",", "samplePlayer~/jalg.samplePlayer~.maxpat", ",", "samplePlayer~/jmod.samplePlayer~.maxhelp", ",", "samplePlayer~/jmod.samplePlayer~.maxpat", ",", "saturation~/jmod.saturation~.maxhelp", ",", "saturation~/jmod.saturation~.maxpat", ",", "scope~/jmod.scope~.maxhelp", ",", "scope~/jmod.scope~.maxpat", ",", "sine~/jalg.sine~.maxpat", ",", "sine~/jmod.sine~.maxhelp", ",", "sine~/jmod.sine~.maxpat", ",", "sonifyer~/jalg.sonifyer~.maxpat", ",", "sonifyer~/jmod.sonifyer~.maxhelp", ",", "sonifyer~/jmod.sonifyer~.maxpat", ",", "spectralShift~/jalg.spectralShift~.maxpat", ",", "spectralShift~/jcom.spectralShiftVoice~.maxpat", ",", "spectralShift~/jmod.spectralShift~.maxhelp", ",", "spectralShift~/jmod.spectralShift~.maxpat", ",", "spectrogram~/jalg.spectrogram~.maxpat", ",", "spectrogram~/jmod.spectrogram~.maxhelp", ",", "spectrogram~/jmod.spectrogram~.maxpat", ",", "tremolo~/jalg.tremolo~.maxpat", ",", "tremolo~/jmod.tremolo~.maxhelp", ",", "tremolo~/jmod.tremolo~.maxpat", ",", "vst~/jalg.vst~.maxpat", ",", "vst~/jmod.vst~.maxhelp", ",", "vst~/jmod.vst~.maxpat" ],
+																	"items" : [ "10harmonics~/jalg.10harmonics~.maxpat", ",", "10harmonics~/jmod.10harmonics~.maxhelp", ",", "10harmonics~/jmod.10harmonics~.maxpat", ",", "_template~/jalg._template~.maxpat", ",", "_template~/jmod._template~.maxhelp", ",", "_template~/jmod._template~.maxpat", ",", "_template~/jmod._template~.test.maxpat", ",", "audiounit~/jalg.audiounit~.maxpat", ",", "audiounit~/jmod.audiounit~.maxhelp", ",", "audiounit~/jmod.audiounit~.maxpat", ",", "crossfade~/jalg.crossfade~.maxpat", ",", "crossfade~/jmod.crossfade~.maxhelp", ",", "crossfade~/jmod.crossfade~.maxpat", ",", "degrade~/jalg.degrade~.maxpat", ",", "degrade~/jmod.degrade~.maxhelp", ",", "degrade~/jmod.degrade~.maxpat", ",", "delay~/jalg.delay~.maxpat", ",", "delay~/jmod.delay~.maxhelp", ",", "delay~/jmod.delay~.maxpat", ",", "echo~/jalg.echo~.maxpat", ",", "echo~/jmod.echo~.maxhelp", ",", "echo~/jmod.echo~.maxpat", ",", "equalizer~/jalg.equalizer~.maxpat", ",", "equalizer~/jalg.equalizer~_params.maxpat", ",", "equalizer~/jmod.equalizer~.maxhelp", ",", "equalizer~/jmod.equalizer~.maxpat", ",", "filter~/jalg.filter~.maxpat", ",", "filter~/jmod.filter~.maxhelp", ",", "filter~/jmod.filter~.maxpat", ",", "fluidsynth~/jalg.fluidsynth~.maxpat", ",", "fluidsynth~/jmod.fluidsynth~.maxhelp", ",", "fluidsynth~/jmod.fluidsynth~.maxpat", ",", "input~/jmod.input~.maxhelp", ",", "input~/jmod.input~.maxpat", ",", "limiter~/jmod.limiter~.maxhelp", ",", "limiter~/jmod.limiter~.maxpat", ",", "multidelay~/jalg.multidelay~.maxpat", ",", "multidelay~/jmod.multidelay~.maxhelp", ",", "multidelay~/jmod.multidelay~.maxpat", ",", "noisegate~/jalg.noisegate~.maxpat", ",", "noisegate~/jmod.noisegate~.maxhelp", ",", "noisegate~/jmod.noisegate~.maxpat", ",", "noise~/jalg.noise~.maxpat", ",", "noise~/jmod.noise~.maxhelp", ",", "noise~/jmod.noise~.maxpat", ",", "output~/output~.module.maxhelp", ",", "output~/output~.module.maxpat", ",", "rissetGlissando/jalg.rissetGlissando~.maxpat", ",", "rissetGlissando/jmod.rissetGlissando~.maxhelp", ",", "rissetGlissando/jmod.rissetGlissando~.maxpat", ",", "samplePlayer2~/jalg.samplePlayer2~.maxpat", ",", "samplePlayer2~/jmod.samplePlayer2~.maxhelp", ",", "samplePlayer2~/jmod.sampleplayer2~.maxpat", ",", "samplePlayer~/jalg.samplePlayer~.maxpat", ",", "samplePlayer~/jmod.samplePlayer~.maxhelp", ",", "samplePlayer~/jmod.samplePlayer~.maxpat", ",", "saturation~/jmod.saturation~.maxhelp", ",", "saturation~/jmod.saturation~.maxpat", ",", "scope~/jmod.scope~.maxhelp", ",", "scope~/jmod.scope~.maxpat", ",", "sine~/jalg.sine~.maxpat", ",", "sine~/jmod.sine~.maxhelp", ",", "sine~/jmod.sine~.maxpat", ",", "sonifyer~/jalg.sonifyer~.maxpat", ",", "sonifyer~/jmod.sonifyer~.maxhelp", ",", "sonifyer~/jmod.sonifyer~.maxpat", ",", "spectralShift~/jalg.spectralShift~.maxpat", ",", "spectralShift~/j.spectralShiftVoice~.maxpat", ",", "spectralShift~/jmod.spectralShift~.maxhelp", ",", "spectralShift~/jmod.spectralShift~.maxpat", ",", "spectrogram~/jalg.spectrogram~.maxpat", ",", "spectrogram~/jmod.spectrogram~.maxhelp", ",", "spectrogram~/jmod.spectrogram~.maxpat", ",", "tremolo~/jalg.tremolo~.maxpat", ",", "tremolo~/jmod.tremolo~.maxhelp", ",", "tremolo~/jmod.tremolo~.maxpat", ",", "vst~/jalg.vst~.maxpat", ",", "vst~/jmod.vst~.maxhelp", ",", "vst~/jmod.vst~.maxpat" ],
 																	"maxclass" : "umenu",
 																	"numinlets" : 1,
 																	"numoutlets" : 3,
@@ -6737,7 +6737,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 249.0, 182.0, 95.0, 19.0 ],
-																	"text" : "jcom.userlibpath"
+																	"text" : "j.userlibpath"
 																}
 
 															}
@@ -7065,7 +7065,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 138.0, 120.0, 100.0, 19.0 ],
-																	"text" : "jcom.jamomaPath"
+																	"text" : "j.jamomaPath"
 																}
 
 															}
@@ -8209,7 +8209,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 559.0, 71.0, 188.0, 19.0 ],
-													"text" : "jcom.receive notifications"
+													"text" : "j.receive notifications"
 												}
 
 											}
@@ -10571,7 +10571,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 851.0, 728.073242, 158.0, 31.0 ],
-													"text" : "parceque sinon, une liste est tronquée par jcom.parameter"
+													"text" : "parceque sinon, une liste est tronquée par j.parameter"
 												}
 
 											}
@@ -11836,7 +11836,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 16.0, 47.0, 324.0, 19.0 ],
-									"text" : "jcom.oscroute /view/panel /positions /fullscreen /preset/recall"
+									"text" : "j.oscroute /view/panel /positions /fullscreen /preset/recall"
 								}
 
 							}
@@ -12727,8 +12727,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 191.0, 178.0, 311.0, 31.0 ],
-					"text" : "jcom.model jmod.layout @type control @description \"store presentation position of modules in presets\"",
-					"varname" : "jcom.model"
+					"text" : "j.model jmod.layout @type control @description \"store presentation position of modules in presets\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -12773,7 +12773,7 @@
 				"box" : 				{
 					"has_panel" : 1,
 					"id" : "obj-16",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

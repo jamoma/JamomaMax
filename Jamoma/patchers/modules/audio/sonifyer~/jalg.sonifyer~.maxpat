@@ -261,7 +261,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 146.0, 339.0, 103.0, 20.0 ],
-					"text" : "jcom.pass /clear"
+					"text" : "j.pass /clear"
 				}
 
 			}
@@ -275,7 +275,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 45.0, 219.0, 221.0, 20.0 ],
-					"text" : "jcom.oscroute /frequency /magnitude"
+					"text" : "j.oscroute /frequency /magnitude"
 				}
 
 			}
@@ -289,7 +289,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"patching_rect" : [ 45.0, 83.0, 366.0, 20.0 ],
-					"text" : "jcom.oscroute /smooth /offset /harmonicsteps /scaling /counter"
+					"text" : "j.oscroute /smooth /offset /harmonicsteps /scaling /counter"
 				}
 
 			}

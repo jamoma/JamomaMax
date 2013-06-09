@@ -73,7 +73,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "bang" ],
 					"patching_rect" : [ 115.0, 60.0, 87.0, 19.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}
@@ -281,7 +281,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 65.0, 400.0, 172.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old NoMaxErrors 0"
+					"text" : "j.test.assert.equal.old NoMaxErrors 0"
 				}
 
 			}
@@ -348,7 +348,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.0, 470.0, 100.0, 19.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -361,7 +361,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 425.0, 555.0, 236.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old correctGainConversionDb 1"
+					"text" : "j.test.assert.equal.old correctGainConversionDb 1"
 				}
 
 			}

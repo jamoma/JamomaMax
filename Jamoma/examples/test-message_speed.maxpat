@@ -271,7 +271,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "int", "float", "float", "float", "float", "" ],
 									"patching_rect" : [ 334.0, 182.0, 282.0, 19.0 ],
-									"text" : "jcom.stats"
+									"text" : "j.stats"
 								}
 
 							}
@@ -315,7 +315,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 217.0, 148.0, 85.0, 19.0 ],
-									"text" : "jcom.cpuTimer"
+									"text" : "j.cpuTimer"
 								}
 
 							}
@@ -720,7 +720,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "int", "float", "float", "float", "float", "" ],
 									"patching_rect" : [ 334.0, 182.0, 282.0, 19.0 ],
-									"text" : "jcom.stats"
+									"text" : "j.stats"
 								}
 
 							}
@@ -764,7 +764,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 217.0, 148.0, 85.0, 19.0 ],
-									"text" : "jcom.cpuTimer"
+									"text" : "j.cpuTimer"
 								}
 
 							}
@@ -1183,7 +1183,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "int", "float", "float", "float", "float", "" ],
 									"patching_rect" : [ 293.0, 182.0, 282.0, 19.0 ],
-									"text" : "jcom.stats"
+									"text" : "j.stats"
 								}
 
 							}
@@ -1227,7 +1227,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 176.0, 149.0, 85.0, 19.0 ],
-									"text" : "jcom.cpuTimer"
+									"text" : "j.cpuTimer"
 								}
 
 							}
@@ -1644,7 +1644,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "int", "float", "float", "float", "float", "" ],
 									"patching_rect" : [ 293.0, 182.0, 282.0, 19.0 ],
-									"text" : "jcom.stats"
+									"text" : "j.stats"
 								}
 
 							}
@@ -1688,7 +1688,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 176.0, 149.0, 85.0, 19.0 ],
-									"text" : "jcom.cpuTimer"
+									"text" : "j.cpuTimer"
 								}
 
 							}

@@ -1080,7 +1080,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 21.0, 551.0, 444.0, 19.0 ],
-					"text" : "jcom.message aux.3/description @type string @description \"descriptive text of Aux 3\"",
+					"text" : "j.message aux.3/description @type string @description \"descriptive text of Aux 3\"",
 					"varname" : "aux.3/description"
 				}
 
@@ -1095,7 +1095,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 21.0, 479.0, 444.0, 19.0 ],
-					"text" : "jcom.message aux.2/description @type string @description \"descriptive text of Aux 2\"",
+					"text" : "j.message aux.2/description @type string @description \"descriptive text of Aux 2\"",
 					"varname" : "aux.2/description"
 				}
 
@@ -1110,7 +1110,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 21.0, 404.0, 444.0, 19.0 ],
-					"text" : "jcom.message aux.1/description @type string @description \"descriptive text of Aux 1\"",
+					"text" : "j.message aux.1/description @type string @description \"descriptive text of Aux 1\"",
 					"varname" : "aux.1/description"
 				}
 
@@ -1125,7 +1125,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 108.0, 598.0, 412.0, 19.0 ],
-					"text" : "jcom.parameter aux.3/active @type boolean @description \"switch Bus 3 on/off\"",
+					"text" : "j.parameter aux.3/active @type boolean @description \"switch Bus 3 on/off\"",
 					"varname" : "aux.3/active"
 				}
 
@@ -1140,7 +1140,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 108.0, 527.0, 412.0, 19.0 ],
-					"text" : "jcom.parameter aux.2/active @type boolean @description \"switch Bus 2 on/off\"",
+					"text" : "j.parameter aux.2/active @type boolean @description \"switch Bus 2 on/off\"",
 					"varname" : "aux.2/active"
 				}
 
@@ -1155,7 +1155,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 108.0, 450.0, 412.0, 19.0 ],
-					"text" : "jcom.parameter aux.1/active @type boolean @description \"switch Bus 1 on/off\"",
+					"text" : "j.parameter aux.1/active @type boolean @description \"switch Bus 1 on/off\"",
 					"varname" : "aux.1/active"
 				}
 
@@ -1163,7 +1163,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-20",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1187,7 +1187,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 411.0, 567.0, 705.0, 31.0 ],
-					"text" : "jcom.parameter aux.3/gain @repetitions/allow 0 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to all aux bus 3\"",
+					"text" : "j.parameter aux.3/gain @repetitions/allow 0 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to all aux bus 3\"",
 					"varname" : "aux.3/gain"
 				}
 
@@ -1195,7 +1195,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-22",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1219,7 +1219,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 411.0, 499.0, 690.0, 31.0 ],
-					"text" : "jcom.parameter aux.2/gain @repetitions/allow 0 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to aux bus 2\"",
+					"text" : "j.parameter aux.2/gain @repetitions/allow 0 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to aux bus 2\"",
 					"varname" : "aux.2/gain"
 				}
 
@@ -1227,7 +1227,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-24",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1251,7 +1251,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 411.0, 419.0, 690.0, 31.0 ],
-					"text" : "jcom.parameter aux.1/gain @repetitions/allow 0 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to aux bus 1\"",
+					"text" : "j.parameter aux.1/gain @repetitions/allow 0 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to aux bus 1\"",
 					"varname" : "aux.1/gain"
 				}
 
@@ -1362,7 +1362,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 158.0, 284.0, 53.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -1376,7 +1376,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 157.0, 195.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -1510,7 +1510,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 0.0, 140.0, 337.0, 19.0 ],
-					"text" : "jcom.model @description \"auxiluaries for multichannel modules\"",
+					"text" : "j.model @description \"auxiluaries for multichannel modules\"",
 					"varname" : "jalg.hub"
 				}
 
@@ -1520,7 +1520,7 @@
 					"has_gain" : 1,
 					"has_mute" : 1,
 					"id" : "obj-17",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1834,43 +1834,43 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.gain≈.mxo",
+				"name" : "j.gain≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.textslider.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]

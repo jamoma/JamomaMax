@@ -60,7 +60,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 475.0, 240.0, 531.0, 31.0 ],
-					"text" : "jcom.parameter levels @type decimal @range/bounds 1.001 15 @range/clipmode low @ramp/drive Max @ramp/function linear @description \"Amount of levels to flatten color information  towards.\""
+					"text" : "j.parameter levels @type decimal @range/bounds 1.001 15 @range/clipmode low @ramp/drive Max @ramp/function linear @description \"Amount of levels to flatten color information  towards.\""
 				}
 
 			}
@@ -113,7 +113,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -145,7 +145,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 330.0, 325.0, 65.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -159,7 +159,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 330.0, 255.0, 58.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -196,7 +196,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 55.0, 260.0, 251.0, 19.0 ],
-					"text" : "jcom.model @description \"Video posterize effect.\""
+					"text" : "j.model @description \"Video posterize effect.\""
 				}
 
 			}
@@ -359,7 +359,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 210.0, 176.0, 19.0 ],
-									"text" : "jcom.oscroute /video/mix /levels"
+									"text" : "j.oscroute /video/mix /levels"
 								}
 
 							}
@@ -415,7 +415,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 360.0, 235.0, 142.0, 19.0 ],
-									"text" : "jcom.pass planecount dim"
+									"text" : "j.pass planecount dim"
 								}
 
 							}

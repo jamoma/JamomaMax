@@ -168,7 +168,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 8.0, 117.0, 193.0, 20.0 ],
-					"text" : "jcom.namespace @filter/list view"
+					"text" : "j.namespace @filter/list view"
 				}
 
 			}
@@ -246,7 +246,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 589.5, 582.001831, 155.0, 60.0 ],
-									"text" : "jcom.test.assert.equal bpatcher.modelwithnoname-test @input bang @compareTo /testpatcher"
+									"text" : "j.test.assert.equal bpatcher.modelwithnoname-test @input bang @compareTo /testpatcher"
 								}
 
 							}
@@ -372,7 +372,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 413.5, 582.001831, 129.0, 60.0 ],
-									"text" : "jcom.test.assert.equal bpatcher.twoarg-test @input bang @compareTo /tester"
+									"text" : "j.test.assert.equal bpatcher.twoarg-test @input bang @compareTo /tester"
 								}
 
 							}
@@ -387,7 +387,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 243.0, 582.001831, 130.0, 60.0 ],
-									"text" : "jcom.test.assert.equal bpatcher.onearg-test @input bang @compareTo /tester"
+									"text" : "j.test.assert.equal bpatcher.onearg-test @input bang @compareTo /tester"
 								}
 
 							}
@@ -402,7 +402,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 43.0, 575.001831, 139.0, 74.0 ],
-									"text" : "jcom.test.assert.equal bpatcher.noarg-test @input bang @compareTo /noModelAddress"
+									"text" : "j.test.assert.equal bpatcher.noarg-test @input bang @compareTo /noModelAddress"
 								}
 
 							}
@@ -566,7 +566,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 308.001862, 271.0, 47.0 ],
-									"text" : "jcom.test.assert.equal bpatcher.deferlow-test @input / @compareTo 4 testpatcher(view) testpatcher(view).1 testpatcher(view).2 testview"
+									"text" : "j.test.assert.equal bpatcher.deferlow-test @input / @compareTo 4 testpatcher(view) testpatcher(view).1 testpatcher(view).2 testview"
 								}
 
 							}
@@ -650,7 +650,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 112.001862, 202.0, 33.0 ],
-									"text" : "jcom.test.assert.equal bpatcher-test @input / @compareTo nothing"
+									"text" : "j.test.assert.equal bpatcher-test @input / @compareTo nothing"
 								}
 
 							}
@@ -1077,7 +1077,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 8.0, 59.0, 103.0, 20.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -1091,7 +1091,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "bang" ],
 					"patching_rect" : [ 8.0, 11.0, 85.0, 20.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}
@@ -1200,21 +1200,21 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.test.start.maxpat",
+				"name" : "j.test.start.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.start",
 				"patcherrelativepath" : "../../../../../../Test/components/test.start",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.finished.maxpat",
+				"name" : "j.test.finished.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.finished",
 				"patcherrelativepath" : "../../../../../../Test/components/test.finished",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.assert.equal.maxpat",
+				"name" : "j.test.assert.equal.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.assert.equal",
 				"patcherrelativepath" : "../../../../../../Test/components/test.assert.equal",
 				"type" : "JSON",
@@ -1235,15 +1235,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.namespace.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
  ]

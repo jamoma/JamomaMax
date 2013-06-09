@@ -21,7 +21,7 @@
 					"bgmode" : 1,
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 907.0, 70.0 ],
@@ -187,7 +187,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 40.0, 331.0, 124.0, 19.0 ],
-					"text" : "jcom.oscroute /receive"
+					"text" : "j.oscroute /receive"
 				}
 
 			}

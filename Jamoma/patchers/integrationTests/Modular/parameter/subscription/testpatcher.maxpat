@@ -54,7 +54,7 @@
 					"patching_rect" : [ 15.0, 41.0, 117.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.0, 41.0, 117.0, 20.0 ],
-					"text" : "jcom.parameter test"
+					"text" : "j.parameter test"
 				}
 
 			}
@@ -70,7 +70,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
  ]

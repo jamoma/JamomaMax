@@ -55,7 +55,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 115.0, 90.0, 150.0, 19.0 ],
-					"text" : "jcom.oscroute /alpha/mode"
+					"text" : "j.oscroute /alpha/mode"
 				}
 
 			}

@@ -276,7 +276,7 @@
 					"bgmode" : 1,
 					"id" : "obj-68",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 1152.0, 70.0 ],
@@ -330,7 +330,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 780.0, 255.0, 131.0, 19.0 ],
-					"text" : "jcom.oscroute /quantity"
+					"text" : "j.oscroute /quantity"
 				}
 
 			}
@@ -360,7 +360,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 937.0, 255.0, 137.0, 19.0 ],
-					"text" : "jcom.oscroute /left /right"
+					"text" : "j.oscroute /left /right"
 				}
 
 			}
@@ -374,7 +374,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 622.0, 279.0, 166.0, 19.0 ],
-					"text" : "jcom.oscroute /pitch /yaw /roll"
+					"text" : "j.oscroute /pitch /yaw /roll"
 				}
 
 			}
@@ -740,7 +740,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 431.0, 257.0, 154.0, 19.0 ],
-					"text" : "jcom.oscroute /x /y /z"
+					"text" : "j.oscroute /x /y /z"
 				}
 
 			}
@@ -754,7 +754,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 464.0, 225.0, 650.0, 19.0 ],
-					"text" : "jcom.oscroute /position /rotation /motion /button"
+					"text" : "j.oscroute /position /rotation /motion /button"
 				}
 
 			}
@@ -768,7 +768,7 @@
 					"numoutlets" : 9,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 25.0, 225.0, 378.0, 19.0 ],
-					"text" : "jcom.oscroute /Tx /Ty /Tz /Rx /Ry /Rz /leftButton /rightButton"
+					"text" : "j.oscroute /Tx /Ty /Tz /Rx /Ry /Rz /leftButton /rightButton"
 				}
 
 			}
@@ -1314,7 +1314,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 25.0, 185.0, 178.0, 19.0 ],
-					"text" : "jcom.oscroute /raw /cooked"
+					"text" : "j.oscroute /raw /cooked"
 				}
 
 			}

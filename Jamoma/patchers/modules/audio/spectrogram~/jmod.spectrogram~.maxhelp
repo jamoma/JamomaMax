@@ -97,7 +97,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 238.0, 59.0, 97.0, 19.0 ],
-									"text" : "jcom.luma2rgb%"
+									"text" : "j.luma2rgb%"
 								}
 
 							}
@@ -297,7 +297,7 @@
 					"bgmode" : 1,
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 676.0, 70.0 ],

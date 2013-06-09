@@ -130,7 +130,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute /this_parameter /this_message",
+					"text" : "j.oscroute /this_parameter /this_message",
 					"numoutlets" : 3,
 					"id" : "obj-10",
 					"outlettype" : [ "", "", "" ],

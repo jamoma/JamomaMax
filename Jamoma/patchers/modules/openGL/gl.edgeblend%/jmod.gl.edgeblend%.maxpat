@@ -71,7 +71,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 360.0, 310.0, 144.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -86,7 +86,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 629.0, 461.0, 260.0, 31.0 ],
-					"text" : "jcom.parameter edgeblend/invert @type boolean @description \"Invert edge blending.\"",
+					"text" : "j.parameter edgeblend/invert @type boolean @description \"Invert edge blending.\"",
 					"varname" : "edgeblend/invert"
 				}
 
@@ -102,7 +102,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 630.0, 380.0, 424.0, 31.0 ],
-					"text" : "jcom.parameter edgeblend/fade/bottom @type decimal @ramp/drive Max @range/bounds 0. 1. @range/clipmode both @description \"Edge blend left side.\"",
+					"text" : "j.parameter edgeblend/fade/bottom @type decimal @ramp/drive Max @range/bounds 0. 1. @range/clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/bottom"
 				}
 
@@ -118,7 +118,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 630.0, 295.0, 417.0, 31.0 ],
-					"text" : "jcom.parameter edgeblend/fade/right @type decimal @ramp/drive Max @range/bounds 0. 1. @range/clipmode both @description \"Edge blend left side.\"",
+					"text" : "j.parameter edgeblend/fade/right @type decimal @ramp/drive Max @range/bounds 0. 1. @range/clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/right"
 				}
 
@@ -134,7 +134,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 630.0, 215.0, 417.0, 31.0 ],
-					"text" : "jcom.parameter edgeblend/fade/top @type decimal @ramp/drive Max @range/bounds 0. 1. @range/clipmode both @description \"Edge blend left side.\"",
+					"text" : "j.parameter edgeblend/fade/top @type decimal @ramp/drive Max @range/bounds 0. 1. @range/clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/top"
 				}
 
@@ -150,7 +150,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 630.0, 135.0, 417.0, 31.0 ],
-					"text" : "jcom.parameter edgeblend/fade/left @type decimal @ramp/drive Max @range/bounds 0. 1. @range/clipmode both @description \"Edge blend left side.\"",
+					"text" : "j.parameter edgeblend/fade/left @type decimal @ramp/drive Max @range/bounds 0. 1. @range/clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/left"
 				}
 
@@ -344,7 +344,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 245.0, 355.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -384,7 +384,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 85.0, 255.0, 129.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -435,13 +435,13 @@
 									"id" : "obj-1",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.class.gl_slab.inspect.maxpat",
+									"name" : "j.class.gl_slab.inspect.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 278.0, 0.0, 268.0, 762.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 278.0, 0.0, 268.0, 762.0 ],
-									"varname" : "jcom.class.gl_slab.inspect"
+									"varname" : "j.class.gl_slab.inspect"
 								}
 
 							}
@@ -451,13 +451,13 @@
 									"id" : "obj-3",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.class.gl_group.inspect.maxpat",
+									"name" : "j.class.gl_group.inspect.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 0.0, 269.0, 774.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 7.0, 0.0, 269.0, 774.0 ],
-									"varname" : "jcom.class.gl_group.inspect"
+									"varname" : "j.class.gl_group.inspect"
 								}
 
 							}
@@ -567,8 +567,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 5.0, 175.0, 397.0, 19.0 ],
-					"text" : "jcom.model @description \"Apply edgblending to incomming matrix or texture.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Apply edgblending to incomming matrix or texture.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -669,7 +669,7 @@
 					"has_panel" : 1,
 					"has_preview" : 1,
 					"id" : "obj-43",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

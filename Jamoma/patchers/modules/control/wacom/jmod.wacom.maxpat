@@ -41,7 +41,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 497.0, 513.0, 316.0, 43.0 ],
-					"text" : "jcom.parameter flusheventqueue @type boolean @description flusheventqueue \"1 message to have no delay at the output.\"",
+					"text" : "j.parameter flusheventqueue @type boolean @description flusheventqueue \"1 message to have no delay at the output.\"",
 					"varname" : "nopointer[3]"
 				}
 
@@ -57,7 +57,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 498.0, 444.0, 316.0, 31.0 ],
-					"text" : "jcom.parameter bgrd @type boolean @description \"Use the object when Max/MSP is in background\"",
+					"text" : "j.parameter bgrd @type boolean @description \"Use the object when Max/MSP is in background\"",
 					"varname" : "nopointer[2]"
 				}
 
@@ -147,7 +147,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 498.0, 372.0, 311.0, 31.0 ],
-					"text" : "jcom.parameter xyrange @type generic @range/clipmode none @description \"change range for X Y\""
+					"text" : "j.parameter xyrange @type generic @range/clipmode none @description \"change range for X Y\""
 				}
 
 			}
@@ -217,7 +217,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 175.0, 210.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -232,7 +232,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 495.0, 210.0, 310.0, 31.0 ],
-					"text" : "jcom.parameter nopointer @type boolean @range/clipmode none @description \"Move mouse pointer\"",
+					"text" : "j.parameter nopointer @type boolean @range/clipmode none @description \"Move mouse pointer\"",
 					"varname" : "nopointer[1]"
 				}
 
@@ -248,8 +248,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 497.0, 136.0, 298.0, 31.0 ],
-					"text" : "jcom.message initDevice @type generic @range/clipmode none @description \"Initialization of wacom object\"",
-					"varname" : "jcom.parameter[3]"
+					"text" : "j.message initDevice @type generic @range/clipmode none @description \"Initialization of wacom object\"",
+					"varname" : "j.parameter[3]"
 				}
 
 			}
@@ -264,7 +264,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 495.0, 68.0, 283.0, 31.0 ],
-					"text" : "jcom.parameter on @type boolean @range/clipmode none @description \"Turn polling on\"",
+					"text" : "j.parameter on @type boolean @range/clipmode none @description \"Turn polling on\"",
 					"varname" : "on[1]"
 				}
 
@@ -315,7 +315,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 496.0, 305.0, 323.0, 31.0 ],
-					"text" : "jcom.parameter menu @type generic @range/clipmode none @description \"Choose which wacom device to use\"",
+					"text" : "j.parameter menu @type generic @range/clipmode none @description \"Choose which wacom device to use\"",
 					"varname" : "menu[1]"
 				}
 
@@ -358,8 +358,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 10.0, 120.0, 461.0, 19.0 ],
-					"text" : "jcom.model @type control @description \"Use Wacom graphic tablets\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Use Wacom graphic tablets\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -403,7 +403,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-26",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

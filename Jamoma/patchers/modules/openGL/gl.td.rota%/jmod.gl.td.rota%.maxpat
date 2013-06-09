@@ -66,7 +66,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 270.0, 340.0, 144.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -272,13 +272,13 @@
 									"id" : "obj-1",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.class.gl_slab.inspect.maxpat",
+									"name" : "j.class.gl_slab.inspect.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 280.0, 0.0, 267.0, 774.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 275.0, 0.0, 268.0, 95.0 ],
-									"varname" : "jcom.class.gl_slab.inspect"
+									"varname" : "j.class.gl_slab.inspect"
 								}
 
 							}
@@ -288,13 +288,13 @@
 									"id" : "obj-3",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.class.gl_group.inspect.maxpat",
+									"name" : "j.class.gl_group.inspect.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 0.0, 269.0, 774.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 5.0, 0.0, 269.0, 774.0 ],
-									"varname" : "jcom.class.gl_group.inspect"
+									"varname" : "j.class.gl_group.inspect"
 								}
 
 							}
@@ -390,7 +390,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 655.0, 315.0, 465.0, 19.0 ],
-					"text" : "jcom.parameter boundmode @type string @description \"Boundary handling mode.\"",
+					"text" : "j.parameter boundmode @type string @description \"Boundary handling mode.\"",
 					"varname" : "boundmode"
 				}
 
@@ -424,7 +424,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 655.0, 275.0, 442.0, 31.0 ],
-					"text" : "jcom.parameter theta @type decimal @range/bounds -180. 180. @range/clipmode none @ramp/drive Max @description \"Rotation angle in degrees.\"",
+					"text" : "j.parameter theta @type decimal @range/bounds -180. 180. @range/clipmode none @ramp/drive Max @description \"Rotation angle in degrees.\"",
 					"varname" : "theta"
 				}
 
@@ -439,7 +439,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 655.0, 195.0, 466.0, 19.0 ],
-					"text" : "jcom.parameter anchor @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
+					"text" : "j.parameter anchor @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
 					"varname" : "anchor"
 				}
 
@@ -454,7 +454,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 500.0, 195.0, 144.0, 19.0 ],
-					"text" : "jcom.list2parameter 2"
+					"text" : "j.list2parameter 2"
 				}
 
 			}
@@ -468,7 +468,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 655.0, 125.0, 460.0, 19.0 ],
-					"text" : "jcom.parameter offset @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
+					"text" : "j.parameter offset @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
 					"varname" : "offset"
 				}
 
@@ -483,7 +483,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 500.0, 125.0, 144.0, 19.0 ],
-					"text" : "jcom.list2parameter 2"
+					"text" : "j.list2parameter 2"
 				}
 
 			}
@@ -497,7 +497,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 655.0, 45.0, 459.0, 19.0 ],
-					"text" : "jcom.parameter zoom @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
+					"text" : "j.parameter zoom @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
 					"varname" : "zoom"
 				}
 
@@ -512,7 +512,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 500.0, 45.0, 144.0, 19.0 ],
-					"text" : "jcom.list2parameter 2"
+					"text" : "j.list2parameter 2"
 				}
 
 			}
@@ -558,7 +558,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 165.0, 365.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -572,7 +572,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 165.0, 295.0, 56.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -616,7 +616,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 220.0, 332.0, 19.0 ],
-					"text" : "jcom.model @description \"Slab-based rotation and repositioning.\"",
+					"text" : "j.model @description \"Slab-based rotation and repositioning.\"",
 					"varname" : "jmod.hub"
 				}
 
@@ -731,7 +731,7 @@
 					"has_panel" : 1,
 					"has_preview" : 1,
 					"id" : "obj-48",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

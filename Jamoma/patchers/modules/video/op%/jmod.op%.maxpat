@@ -51,7 +51,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 112.0, 348.0, 56.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -65,7 +65,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 114.0, 274.0, 61.0, 19.0 ],
-					"text" : "jcom.in 2"
+					"text" : "j.in 2"
 				}
 
 			}
@@ -117,7 +117,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 378.0, 208.0, 348.0, 43.0 ],
-					"text" : "jcom.parameter opValue @type decimal @ramp/drive Max @repetitions/allow 0 @description \"Number to associate with operation.\"",
+					"text" : "j.parameter opValue @type decimal @ramp/drive Max @repetitions/allow 0 @description \"Number to associate with operation.\"",
 					"varname" : "op_value"
 				}
 
@@ -166,8 +166,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 0.0, 124.0, 267.0, 43.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Perform mathematical operations using two video inputs as the operands\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Perform mathematical operations using two video inputs as the operands\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -216,7 +216,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 377.0, 118.0, 351.0, 43.0 ],
-					"text" : "jcom.parameter op @type string @description \"Chooses the type of operation to perform on the two video inputs to the module.\"",
+					"text" : "j.parameter op @type string @description \"Chooses the type of operation to perform on the two video inputs to the module.\"",
 					"varname" : "op"
 				}
 
@@ -302,7 +302,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

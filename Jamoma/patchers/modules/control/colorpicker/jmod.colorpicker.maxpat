@@ -71,7 +71,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 225.0, 114.0, 19.0 ],
-									"text" : "jcom.oscroute /color"
+									"text" : "j.oscroute /color"
 								}
 
 							}
@@ -113,7 +113,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 97.0, 19.0 ],
-									"text" : "jcom.oscinstance"
+									"text" : "j.oscinstance"
 								}
 
 							}
@@ -127,7 +127,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 185.0, 225.0, 171.0, 19.0 ],
-									"text" : "jcom.oscroute /numberOfColors"
+									"text" : "j.oscroute /numberOfColors"
 								}
 
 							}
@@ -297,7 +297,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 315.0, 280.0, 412.0, 19.0 ],
-					"text" : "jcom.return colors/return @type decimalArray @description \"List of all selected colors.\""
+					"text" : "j.return colors/return @type decimalArray @description \"List of all selected colors.\""
 				}
 
 			}
@@ -737,7 +737,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 335.0, 95.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -1139,7 +1139,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 35.0, 130.0, 540.0, 31.0 ],
-									"text" : "jcom.parameter numberOfColors @type integer @range/bounds 1 12 @range/clipmode both @priority 1 @repetitions/allow 1 @description \"Number of active colors.\""
+									"text" : "j.parameter numberOfColors @type integer @range/bounds 1 12 @range/clipmode both @priority 1 @repetitions/allow 1 @description \"Number of active colors.\""
 								}
 
 							}
@@ -1150,7 +1150,7 @@
 									"id" : "obj-1",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 955.0, 245.0, 85.0 ],
@@ -1167,7 +1167,7 @@
 									"id" : "obj-2",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 870.0, 245.0, 85.0 ],
@@ -1184,7 +1184,7 @@
 									"id" : "obj-3",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 785.0, 245.0, 85.0 ],
@@ -1201,7 +1201,7 @@
 									"id" : "obj-4",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 700.0, 245.0, 85.0 ],
@@ -1218,7 +1218,7 @@
 									"id" : "obj-7",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 615.0, 245.0, 85.0 ],
@@ -1235,7 +1235,7 @@
 									"id" : "obj-8",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 530.0, 245.0, 85.0 ],
@@ -1252,7 +1252,7 @@
 									"id" : "obj-9",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 445.0, 245.0, 85.0 ],
@@ -1269,7 +1269,7 @@
 									"id" : "obj-10",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 365.0, 245.0, 85.0 ],
@@ -1286,7 +1286,7 @@
 									"id" : "obj-11",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 280.0, 245.0, 85.0 ],
@@ -1302,7 +1302,7 @@
 									"id" : "obj-12",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 195.0, 245.0, 85.0 ],
@@ -1318,7 +1318,7 @@
 									"id" : "obj-13",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 110.0, 245.0, 85.0 ],
@@ -1334,7 +1334,7 @@
 									"id" : "obj-14",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.HSLColorPicker.maxpat",
+									"name" : "j.HSLColorPicker.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 720.0, 20.0, 245.0, 85.0 ],
@@ -1396,7 +1396,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 35.0, 270.0, 365.0, 31.0 ],
-									"text" : "jcom.message colors/in @type decimalArray @repetitions/allow 1 @description \"Shortcut for setting colors: List of 1 to 12 HSL triplets.\"",
+									"text" : "j.message colors/in @type decimalArray @repetitions/allow 1 @description \"Shortcut for setting colors: List of 1 to 12 HSL triplets.\"",
 									"varname" : "colors"
 								}
 
@@ -1893,7 +1893,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 485.0, 150.0, 146.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -2030,7 +2030,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 90.0, 165.0, 305.0, 19.0 ],
-													"text" : "jcom.dataspace @dataspace color @input hsl @output rgb"
+													"text" : "j.dataspace @dataspace color @input hsl @output rgb"
 												}
 
 											}
@@ -2504,8 +2504,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 16.0, 166.0, 300.0, 19.0 ],
-					"text" : "jcom.model @description \"Utility for setting 1 to 12 colors.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Utility for setting 1 to 12 colors.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -2565,7 +2565,7 @@
 				"box" : 				{
 					"has_panel" : 1,
 					"id" : "obj-18",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

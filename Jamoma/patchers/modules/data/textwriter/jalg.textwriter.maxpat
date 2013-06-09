@@ -169,7 +169,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 39.5, 50.0, 169.0, 19.0 ],
-					"text" : "jcom.pass /clear /write /settitle"
+					"text" : "j.pass /clear /write /settitle"
 				}
 
 			}
@@ -267,7 +267,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 215.5, 50.0, 164.0, 19.0 ],
-					"text" : "jcom.oscroute /show /active"
+					"text" : "j.oscroute /show /active"
 				}
 
 			}
@@ -511,7 +511,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -519,7 +519,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{

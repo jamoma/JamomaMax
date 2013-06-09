@@ -28,7 +28,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 96.0, 115.0, 307.0, 19.0 ],
-					"text" : "jcom.oscroute /numSpeakers /matrix/dump /audio/bypass"
+					"text" : "j.oscroute /numSpeakers /matrix/dump /audio/bypass"
 				}
 
 			}
@@ -154,7 +154,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 183.0, 173.0, 19.0 ],
-									"text" : "jcom.oscroute /speaker/position"
+									"text" : "j.oscroute /speaker/position"
 								}
 
 							}
@@ -210,7 +210,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 97.0, 19.0 ],
-									"text" : "jcom.oscinstance"
+									"text" : "j.oscinstance"
 								}
 
 							}
@@ -1602,7 +1602,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 431.0, 209.0, 79.0, 19.0 ],
-					"text" : "jcom.mixer≈",
+					"text" : "j.mixer≈",
 					"varname" : "MATRIX"
 				}
 

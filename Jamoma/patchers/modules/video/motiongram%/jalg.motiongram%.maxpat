@@ -42,7 +42,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 98.0, 68.0, 260.0, 19.0 ],
-					"text" : "jcom.oscroute /clear /direction /type"
+					"text" : "j.oscroute /clear /direction /type"
 				}
 
 			}
@@ -346,7 +346,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 380.0, 63.0, 107.0, 19.0 ],
-									"text" : "jcom.oscroute /line"
+									"text" : "j.oscroute /line"
 								}
 
 							}
@@ -775,7 +775,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 155.0, 195.0, 172.0, 43.0 ],
-									"text" : "could use jcom.mean instead of xray.jit.mean, but it is much less efficient"
+									"text" : "could use j.mean instead of xray.jit.mean, but it is much less efficient"
 								}
 
 							}
@@ -789,7 +789,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 58.0, 205.0, 77.0, 19.0 ],
-									"text" : "jcom.mean%"
+									"text" : "j.mean%"
 								}
 
 							}
@@ -966,7 +966,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 154.0, 342.0, 92.0, 19.0 ],
-					"text" : "jcom.pass /save"
+					"text" : "j.pass /save"
 				}
 
 			}
@@ -1010,7 +1010,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 81.0, 274.0, 160.0, 79.0 ],
-									"text" : "jcom.return counter @type integer @range/bounds 0 1024 @description \"Returns the number of the counter running through the motiongram\"",
+									"text" : "j.return counter @type integer @range/bounds 0 1024 @description \"Returns the number of the counter running through the motiongram\"",
 									"varname" : "xraymean[2]"
 								}
 
@@ -1025,7 +1025,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 231.0, 70.0, 230.0, 19.0 ],
-									"text" : "jcom.oscroute /direction /clear /dimensions"
+									"text" : "j.oscroute /direction /clear /dimensions"
 								}
 
 							}
@@ -1081,7 +1081,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 627.0, 121.0, 155.0, 19.0 ],
-									"text" : "jcom.oscroute /width /height"
+									"text" : "j.oscroute /width /height"
 								}
 
 							}
@@ -1096,7 +1096,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 278.0, 266.0, 151.0, 92.0 ],
-									"text" : "jcom.return motiongram_end @description \" Returns a 1 when the counter gets to the end of the limit of the size of the motiongram and a 0 at the beginning\"",
+									"text" : "j.return motiongram_end @description \" Returns a 1 when the counter gets to the end of the limit of the size of the motiongram and a 0 at the beginning\"",
 									"varname" : "xraymean[1]"
 								}
 

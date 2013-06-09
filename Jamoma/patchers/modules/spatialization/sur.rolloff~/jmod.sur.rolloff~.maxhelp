@@ -29,7 +29,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 67.0, 342.0, 158.0, 31.0 ],
-					"text" : "jcom.ambimonitor2position @prefix source @radius 50"
+					"text" : "j.ambimonitor2position @prefix source @radius 50"
 				}
 
 			}
@@ -44,7 +44,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.0, 102.0, 151.0, 31.0 ],
-					"text" : "jcom.position2ambimonitor @prefix source @radius 50"
+					"text" : "j.position2ambimonitor @prefix source @radius 50"
 				}
 
 			}
@@ -70,7 +70,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 471.0, 244.0, 70.0, 19.0 ],
-					"text" : "jcom.pack≈"
+					"text" : "j.pack≈"
 				}
 
 			}
@@ -80,7 +80,7 @@
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 866.0, 70.0 ],
@@ -306,7 +306,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 154.0, 666.0, 184.0, 19.0 ],
-					"text" : "jcom.send jcom.remote.module.to"
+					"text" : "j.send j.remote.module.to"
 				}
 
 			}
@@ -360,7 +360,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 262.0, 274.0, 163.0, 19.0 ],
-					"text" : "jcom.initialized /doppler~ 500"
+					"text" : "j.initialized /doppler~ 500"
 				}
 
 			}

@@ -42,7 +42,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 50.0, 195.0, 144.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -78,7 +78,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 427.0, 345.0, 366.0, 31.0 ],
-					"text" : "jcom.parameter automatic @type boolean @description \"position based calculation (automatic) or manual setting of delays.\" @priority 2"
+					"text" : "j.parameter automatic @type boolean @description \"position based calculation (automatic) or manual setting of delays.\" @priority 2"
 				}
 
 			}
@@ -125,7 +125,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 6.0, 603.0, 43.0 ],
-					"text" : "jcom.parameter temperature @type decimal @repetitions/allow 0 @range/bounds -273. 40. @range/clipmode low @description \"temperature to calculate speed of sound.\" @dataspace temperature @dataspace/unit Celsius",
+					"text" : "j.parameter temperature @type decimal @repetitions/allow 0 @range/bounds -273. 40. @range/clipmode low @description \"temperature to calculate speed of sound.\" @dataspace temperature @dataspace/unit Celsius",
 					"varname" : "voices[1]"
 				}
 
@@ -629,7 +629,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 50.0, 178.0, 59.0, 19.0 ],
-													"text" : "jcom.thru"
+													"text" : "j.thru"
 												}
 
 											}
@@ -1380,7 +1380,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 20.0, 38.0, 291.0, 19.0 ],
-									"text" : "jcom.oscroute /numSpeakers /audio/bypass /automatic"
+									"text" : "j.oscroute /numSpeakers /audio/bypass /automatic"
 								}
 
 							}
@@ -1809,7 +1809,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 427.0, 294.0, 589.0, 43.0 ],
-					"text" : "jcom.parameter.array 32 speaker delay @type decimal @repetitions/allow 1 @value/default 0. @range/bounds 0. 1000. @range/clipmode both @dataspace time @dataspace/unit ms @description \"delay to be applied on the Nth speaker  in [ms] by default\""
+					"text" : "j.parameter.array 32 speaker delay @type decimal @repetitions/allow 1 @value/default 0. @range/bounds 0. 1000. @range/clipmode both @dataspace time @dataspace/unit ms @description \"delay to be applied on the Nth speaker  in [ms] by default\""
 				}
 
 			}
@@ -1824,7 +1824,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 427.0, 248.0, 567.0, 43.0 ],
-					"text" : "jcom.message.array 32 speaker position @type decimalArray @repetitions/allow 1 @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+					"text" : "j.message.array 32 speaker position @type decimalArray @repetitions/allow 1 @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -1884,7 +1884,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 72.0, 172.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -1936,7 +1936,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 427.0, 190.0, 466.0, 43.0 ],
-					"text" : "jcom.parameter numSpeakers @type integer @repetitions/allow 0 @range/bounds 2 32 @range/clipmode both @description \"The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.\" @priority 1",
+					"text" : "j.parameter numSpeakers @type integer @repetitions/allow 0 @range/bounds 2 32 @range/clipmode both @description \"The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.\" @priority 1",
 					"varname" : "voices"
 				}
 
@@ -2031,8 +2031,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 10.0, 140.0, 583.0, 31.0 ],
-					"text" : "jcom.model @description \"Adjust delay of the loudspeakers to adjust for varying distances. Delay can either be provided as a time delay or will be calculated from loudspeaker positions automatically.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Adjust delay of the loudspeakers to adjust for varying distances. Delay can either be provided as a time delay or will be calculated from loudspeaker positions automatically.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -2041,7 +2041,7 @@
 					"has_bypass" : 1,
 					"has_panel" : 1,
 					"id" : "obj-30",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

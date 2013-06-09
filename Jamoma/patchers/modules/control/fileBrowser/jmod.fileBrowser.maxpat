@@ -27,7 +27,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 838.0, 381.0, 277.0, 31.0 ],
-					"text" : "when depth has changed, the menu autopolulates again, so that the jcom.return get's its update"
+					"text" : "when depth has changed, the menu autopolulates again, so that the j.return get's its update"
 				}
 
 			}
@@ -250,7 +250,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 457.0, 420.0, 587.0, 31.0 ],
-					"text" : "jcom.message item @type integer @range/bounds 0 100 @range/clipmode low @repetitions/allow 1 @description \"The file number being played\"",
+					"text" : "j.message item @type integer @range/bounds 0 100 @range/clipmode low @repetitions/allow 1 @description \"The file number being played\"",
 					"varname" : "depth[2]"
 				}
 
@@ -336,7 +336,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 412.0, 220.0, 700.0, 19.0 ],
-					"text" : "jcom.parameter type @type string @priority 4 @repetitions/allow 1 @description \"File types to display\" @priority 1",
+					"text" : "j.parameter type @type string @priority 4 @repetitions/allow 1 @description \"File types to display\" @priority 1",
 					"varname" : "type[2]"
 				}
 
@@ -352,7 +352,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 488.0, 339.0, 588.0, 31.0 ],
-					"text" : "jcom.parameter depth @type integer @range/bounds 0 9 @range/clipmode low @priority 6 @repetitions/allow 0 @description \"Numbers of levels of folders below the chosen one to look into\"",
+					"text" : "j.parameter depth @type integer @range/bounds 0 9 @range/clipmode low @priority 6 @repetitions/allow 0 @description \"Numbers of levels of folders below the chosen one to look into\"",
 					"varname" : "depth[1]"
 				}
 
@@ -367,7 +367,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 350.0, 115.0, 487.0, 19.0 ],
-					"text" : "jcom.parameter folder @type string @description \"Path of folder to browse\" @priority 3",
+					"text" : "j.parameter folder @type string @description \"Path of folder to browse\" @priority 3",
 					"varname" : "folder"
 				}
 
@@ -755,7 +755,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 501.0, 523.0, 493.0, 19.0 ],
-					"text" : "jcom.parameter file @type string @repetitions/allow 1 @description \"Selected file name\"",
+					"text" : "j.parameter file @type string @repetitions/allow 1 @description \"Selected file name\"",
 					"varname" : "file"
 				}
 
@@ -771,7 +771,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 560.0, 595.0, 594.0, 31.0 ],
-					"text" : "jcom.return poolsize @range/bounds 0 99 @range/clipmode low @repetitions/allow 1 @type integer @description \"Number of matching items in folder\""
+					"text" : "j.return poolsize @range/bounds 0 99 @range/clipmode low @repetitions/allow 1 @type integer @description \"Number of matching items in folder\""
 				}
 
 			}
@@ -799,7 +799,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 200.0, 193.0, 60.0, 19.0 ],
-					"text" : "r jcom.init"
+					"text" : "r j.init"
 				}
 
 			}
@@ -1034,8 +1034,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 18.0, 131.0, 249.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"Browsing and selecting files\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Browsing and selecting files\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1081,7 +1081,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

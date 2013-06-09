@@ -54,7 +54,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 45.0, 135.0, 102.0, 19.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -109,7 +109,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 395.0, 195.0, 378.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old list_that_starts_with_a_sym_test goof 87 hug me"
+					"text" : "j.test.assert.equal.old list_that_starts_with_a_sym_test goof 87 hug me"
 				}
 
 			}
@@ -136,7 +136,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 336.0, 225.0, 348.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old list_that_starts_with_a_number_test 43 a b"
+					"text" : "j.test.assert.equal.old list_that_starts_with_a_number_test 43 a b"
 				}
 
 			}
@@ -163,7 +163,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 290.0, 253.0, 274.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old sym_test_fail yo! @reverse 1"
+					"text" : "j.test.assert.equal.old sym_test_fail yo! @reverse 1"
 				}
 
 			}
@@ -190,7 +190,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 251.0, 279.0, 192.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old sym_test yo!"
+					"text" : "j.test.assert.equal.old sym_test yo!"
 				}
 
 			}
@@ -217,7 +217,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 205.0, 305.0, 282.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old float_test_fail 23.1 @reverse 1"
+					"text" : "j.test.assert.equal.old float_test_fail 23.1 @reverse 1"
 				}
 
 			}
@@ -244,7 +244,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 159.0, 332.0, 200.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old float_test 23.1"
+					"text" : "j.test.assert.equal.old float_test 23.1"
 				}
 
 			}
@@ -271,7 +271,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 127.0, 359.0, 263.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old int_test_fail 23 @reverse 1"
+					"text" : "j.test.assert.equal.old int_test_fail 23 @reverse 1"
 				}
 
 			}
@@ -298,7 +298,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 95.0, 385.0, 183.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old int_test 23"
+					"text" : "j.test.assert.equal.old int_test 23"
 				}
 
 			}

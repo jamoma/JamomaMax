@@ -127,7 +127,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 65.0, 200.0, 173.0, 19.0 ],
-									"text" : "jcom.oscroute /speaker/position"
+									"text" : "j.oscroute /speaker/position"
 								}
 
 							}
@@ -169,7 +169,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 65.0, 90.0, 140.0, 19.0 ],
-									"text" : "jcom.oscinstance"
+									"text" : "j.oscinstance"
 								}
 
 							}
@@ -747,7 +747,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 305.0, 25.0, 167.0, 19.0 ],
-									"text" : "jcom.initialized /dbapBformat~"
+									"text" : "j.initialized /dbapBformat~"
 								}
 
 							}
@@ -1178,7 +1178,7 @@
 					"bgmode" : 1,
 					"id" : "obj-11",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 847.0, 70.0 ],
@@ -1614,7 +1614,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-59",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1625,7 +1625,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-58",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1636,7 +1636,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-57",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1647,7 +1647,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-56",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1658,7 +1658,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-54",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1669,7 +1669,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-52",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1680,7 +1680,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-51",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

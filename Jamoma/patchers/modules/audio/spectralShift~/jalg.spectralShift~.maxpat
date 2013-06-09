@@ -125,7 +125,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 386.0, 103.0, 209.0, 19.0 ],
-									"text" : "jcom.oscroute /active /dcblocker/active"
+									"text" : "j.oscroute /active /dcblocker/active"
 								}
 
 							}
@@ -139,7 +139,7 @@
 									"numoutlets" : 7,
 									"outlettype" : [ "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 50.0, 80.0, 352.0, 19.0 ],
-									"text" : "jcom.pass /preamp /postamp /threshold /lookahead /release /mode"
+									"text" : "j.pass /preamp /postamp /threshold /lookahead /release /mode"
 								}
 
 							}
@@ -368,7 +368,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 50.0, 285.0, 141.0, 19.0 ],
-					"text" : "jcom.oscroute /time /gain"
+					"text" : "j.oscroute /time /gain"
 				}
 
 			}
@@ -382,7 +382,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 50.0, 90.0, 233.0, 19.0 ],
-					"text" : "jcom.oscroute /feedback /limiter /frequency"
+					"text" : "j.oscroute /feedback /limiter /frequency"
 				}
 
 			}
@@ -492,7 +492,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 280.0, 235.0, 215.0, 19.0 ],
-					"text" : "jcom.limiter~ @preamp 6. @release 250"
+					"text" : "j.limiter~ @preamp 6. @release 250"
 				}
 
 			}
@@ -552,7 +552,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 280.0, 190.0, 205.0, 19.0 ],
-					"text" : "pfft~ jcom.spectralShiftVoice~ 1024 4"
+					"text" : "pfft~ j.spectralShiftVoice~ 1024 4"
 				}
 
 			}

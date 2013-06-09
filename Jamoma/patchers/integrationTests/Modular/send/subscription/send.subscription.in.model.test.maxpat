@@ -154,7 +154,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 19.0, 73.001862, 328.0, 33.0 ],
-									"text" : "jcom.test.assert.equal in.model.command-test @input 1 2.5 foo \"bar thing\" @compareTo test 1 2.5 foo \"bar thing\""
+									"text" : "j.test.assert.equal in.model.command-test @input 1 2.5 foo \"bar thing\" @compareTo test 1 2.5 foo \"bar thing\""
 								}
 
 							}
@@ -437,7 +437,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 283.001862, 250.0, 33.0 ],
-									"text" : "jcom.test.assert.equal in.model.deferlow-test @input dump @compareTo /tester/test:value"
+									"text" : "j.test.assert.equal in.model.deferlow-test @input dump @compareTo /tester/test:value"
 								}
 
 							}
@@ -521,7 +521,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 111.001862, 240.0, 33.0 ],
-									"text" : "jcom.test.assert.equal in.model-test @input dump @compareTo /tester/test:value"
+									"text" : "j.test.assert.equal in.model-test @input dump @compareTo /tester/test:value"
 								}
 
 							}
@@ -755,7 +755,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 8.0, 83.0, 103.0, 20.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -769,7 +769,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "bang" ],
 					"patching_rect" : [ 8.0, 11.0, 85.0, 20.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}
@@ -848,21 +848,21 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.test.start.maxpat",
+				"name" : "j.test.start.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
 				"patcherrelativepath" : "../../../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.finished.maxpat",
+				"name" : "j.test.finished.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
 				"patcherrelativepath" : "../../../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.assert.equal.maxpat",
+				"name" : "j.test.assert.equal.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
 				"patcherrelativepath" : "../../../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
@@ -876,15 +876,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -142,7 +142,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 540.0, 146.0, 152.0, 19.0 ],
-					"text" : "jcom.gain≈ @interpolated 1",
+					"text" : "j.gain≈ @interpolated 1",
 					"varname" : "limiter[2]"
 				}
 
@@ -157,7 +157,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 540.0, 120.0, 79.0, 19.0 ],
-					"text" : "jcom.limiter≈",
+					"text" : "j.limiter≈",
 					"varname" : "limiter[1]"
 				}
 
@@ -171,7 +171,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 449.0, 55.0, 119.0, 19.0 ],
-					"text" : "jcom.audioOnOff #1_"
+					"text" : "j.audioOnOff #1_"
 				}
 
 			}
@@ -219,7 +219,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "int", "float", "float", "float", "float", "" ],
 									"patching_rect" : [ 50.0, 175.0, 95.0, 19.0 ],
-									"text" : "jcom.stats 10 10"
+									"text" : "j.stats 10 10"
 								}
 
 							}
@@ -647,7 +647,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 50.0, 127.0, 300.0, 19.0 ],
-													"text" : "jcom.route @searchstring default @searchpositions 2"
+													"text" : "j.route @searchstring default @searchpositions 2"
 												}
 
 											}
@@ -784,7 +784,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 192.0, 225.0, 100.0, 67.0 ],
-									"text" : "jcom.route @searchstring default @searchpositions 2"
+									"text" : "j.route @searchstring default @searchpositions 2"
 								}
 
 							}
@@ -928,7 +928,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "wave" ],
 													"patching_rect" : [ 550.0, 180.0, 59.0, 19.0 ],
-													"text" : "jcom.thru"
+													"text" : "j.thru"
 												}
 
 											}
@@ -1361,7 +1361,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 419.0, 73.0, 117.0, 19.0 ],
-									"text" : "jcom.pass /samptype"
+									"text" : "j.pass /samptype"
 								}
 
 							}
@@ -1375,7 +1375,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 517.0, 95.0, 165.0, 19.0 ],
-									"text" : "jcom.oscroute /filetype /active"
+									"text" : "j.oscroute /filetype /active"
 								}
 
 							}
@@ -1747,7 +1747,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 395.0, 120.0, 210.0, 19.0 ],
-									"text" : "jcom.oscroute /active /dcblocker/active"
+									"text" : "j.oscroute /active /dcblocker/active"
 								}
 
 							}
@@ -1784,7 +1784,7 @@
 									"numoutlets" : 7,
 									"outlettype" : [ "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 60.0, 75.0, 352.0, 19.0 ],
-									"text" : "jcom.pass /preamp /postamp /threshold /lookahead /release /mode"
+									"text" : "j.pass /preamp /postamp /threshold /lookahead /release /mode"
 								}
 
 							}
@@ -3625,7 +3625,7 @@
 					"numoutlets" : 8,
 					"outlettype" : [ "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 10.0, 55.0, 430.0, 19.0 ],
-					"text" : "jcom.oscroute /numSpeakers /offset /setup /record /limiter /dspStatus /audio/gain"
+					"text" : "j.oscroute /numSpeakers /offset /setup /record /limiter /dspStatus /audio/gain"
 				}
 
 			}
@@ -3639,7 +3639,7 @@
 					"numoutlets" : 33,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 540.0, 179.0, 451.0, 19.0 ],
-					"text" : "jcom.unpack≈ 32",
+					"text" : "j.unpack≈ 32",
 					"varname" : "multiout"
 				}
 

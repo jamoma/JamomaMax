@@ -61,7 +61,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 600.0, 245.0, 358.0, 31.0 ],
-					"text" : "jcom.parameter stripImaginaryPlane @type boolean @description \"Strip the imaginary plane of incoming frame before processing.\""
+					"text" : "j.parameter stripImaginaryPlane @type boolean @description \"Strip the imaginary plane of incoming frame before processing.\""
 				}
 
 			}
@@ -104,7 +104,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 600.0, 320.0, 470.0, 19.0 ],
-					"text" : "jcom.parameter clear/auto @type boolean @description \"Clear iFFT object for each frame.\""
+					"text" : "j.parameter clear/auto @type boolean @description \"Clear iFFT object for each frame.\""
 				}
 
 			}
@@ -131,7 +131,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 600.0, 385.0, 414.0, 19.0 ],
-					"text" : "jcom.message clear/now @type none @description \"Clear the iFFT frame once.\""
+					"text" : "j.message clear/now @type none @description \"Clear the iFFT frame once.\""
 				}
 
 			}
@@ -192,7 +192,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 435.0, 145.0, 154.0, 19.0 ],
-					"text" : "jcom.list2parameter 2"
+					"text" : "j.list2parameter 2"
 				}
 
 			}
@@ -236,7 +236,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 600.0, 130.0, 417.0, 31.0 ],
-					"text" : "jcom.parameter dim @type generic @range/bounds 1 512 @range/clipmode low @description \"dimension of matrix to perform Fourier Transform on.\""
+					"text" : "j.parameter dim @type generic @range/bounds 1 512 @range/clipmode low @description \"dimension of matrix to perform Fourier Transform on.\""
 				}
 
 			}
@@ -250,7 +250,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 285.0, 233.0, 56.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -290,7 +290,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 290.0, 147.0, 59.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -343,7 +343,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 50.0, 225.0, 203.0, 31.0 ],
-					"text" : "jcom.model @description \"Inverse FFT processing of incoming matrix.\""
+					"text" : "j.model @description \"Inverse FFT processing of incoming matrix.\""
 				}
 
 			}
@@ -478,7 +478,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 95.0, 220.0, 141.0, 19.0 ],
-									"text" : "jcom.oscroute /now /auto"
+									"text" : "j.oscroute /now /auto"
 								}
 
 							}
@@ -492,7 +492,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 30.0, 110.0, 83.0, 19.0 ],
-									"text" : "jcom.pass dim"
+									"text" : "j.pass dim"
 								}
 
 							}
@@ -707,7 +707,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 95.0, 135.0, 223.0, 19.0 ],
-									"text" : "jcom.oscroute /clear /stripImaginaryPlane"
+									"text" : "j.oscroute /clear /stripImaginaryPlane"
 								}
 
 							}
@@ -935,7 +935,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

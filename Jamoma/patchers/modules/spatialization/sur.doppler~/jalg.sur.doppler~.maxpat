@@ -174,7 +174,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 124.0, 75.0, 267.0, 19.0 ],
-									"text" : "jcom.oscinstance"
+									"text" : "j.oscinstance"
 								}
 
 							}
@@ -359,7 +359,7 @@
 					"numoutlets" : 32,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 3.0, 91.0, 417.0, 19.0 ],
-					"text" : "jcom.multi.out~",
+					"text" : "j.multi.out~",
 					"varname" : "multiout"
 				}
 
@@ -374,7 +374,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 80.0, 602.0, 417.0, 19.0 ],
-					"text" : "jcom.multi.in~",
+					"text" : "j.multi.in~",
 					"varname" : "multiin"
 				}
 
@@ -389,7 +389,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1060.0, 145.0, 161.0, 19.0 ],
-					"text" : "jcom.oscroute /metersPerUnit",
+					"text" : "j.oscroute /metersPerUnit",
 					"varname" : "oscroute"
 				}
 
@@ -459,7 +459,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 925.0, 120.0, 152.0, 19.0 ],
-					"text" : "jcom.oscroute /numSources"
+					"text" : "j.oscroute /numSources"
 				}
 
 			}
@@ -513,7 +513,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 927.0, 586.0, 118.0, 19.0 ],
-					"text" : "js jcom.sur.doppler.js",
+					"text" : "js j.sur.doppler.js",
 					"varname" : "javascript"
 				}
 

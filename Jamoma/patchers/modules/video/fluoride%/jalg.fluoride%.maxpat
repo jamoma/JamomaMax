@@ -54,7 +54,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 283.0, 94.0, 127.0, 18.0 ],
-					"text" : "jcom.pass /mode /glow"
+					"text" : "j.pass /mode /glow"
 				}
 
 			}
@@ -68,7 +68,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 17.0, 63.0, 285.0, 18.0 ],
-					"text" : "jcom.oscroute /genframe /direct /luminance /tolerance"
+					"text" : "j.oscroute /genframe /direct /luminance /tolerance"
 				}
 
 			}

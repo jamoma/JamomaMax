@@ -197,7 +197,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 50.0, 157.0, 287.0, 19.0 ],
-													"text" : "jcom.route @searchstring /parameter @partialmatch 1"
+													"text" : "j.route @searchstring /parameter @partialmatch 1"
 												}
 
 											}
@@ -239,7 +239,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 50.0, 130.0, 141.0, 19.0 ],
-													"text" : "jcom.getParameterNames"
+													"text" : "j.getParameterNames"
 												}
 
 											}
@@ -525,7 +525,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 66.0, 231.0, 206.0, 20.0 ],
-									"text" : "jcom.getAllAttributes"
+									"text" : "j.getAllAttributes"
 								}
 
 							}
@@ -664,7 +664,7 @@
 					"bgmode" : 1,
 					"id" : "obj-6",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 662.0, 70.0 ],
@@ -809,7 +809,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 29.0, 0.0, 154.0, 19.0 ],
-													"text" : "jcom.initialized /midiin 1000"
+													"text" : "j.initialized /midiin 1000"
 												}
 
 											}
@@ -901,7 +901,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 17.0, 114.0, 267.0, 19.0 ],
-									"text" : "jcom.pass /raw/voice.range /normalizeMidi /device"
+									"text" : "j.pass /raw/voice.range /normalizeMidi /device"
 								}
 
 							}

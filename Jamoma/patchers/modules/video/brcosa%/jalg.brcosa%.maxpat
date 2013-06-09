@@ -125,7 +125,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute /dummy /monochrome /genframe /direct",
+					"text" : "j.oscroute /dummy /monochrome /genframe /direct",
 					"fontsize" : 10.0,
 					"numinlets" : 1,
 					"numoutlets" : 5,
@@ -152,7 +152,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.pass /brightness /contrast /saturation",
+					"text" : "j.pass /brightness /contrast /saturation",
 					"fontsize" : 10.0,
 					"numinlets" : 1,
 					"numoutlets" : 4,

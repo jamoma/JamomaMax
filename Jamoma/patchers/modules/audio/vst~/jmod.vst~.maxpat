@@ -28,7 +28,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 430.0, 40.0, 86.0, 19.0 ],
-					"text" : "jcom.savebang"
+					"text" : "j.savebang"
 				}
 
 			}
@@ -77,7 +77,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 685.0, 506.0, 19.0 ],
-					"text" : "jcom.message raw/midievent @type decimalArray @description \"Send raw midi messages to the plug-in.\""
+					"text" : "j.message raw/midievent @type decimalArray @description \"Send raw midi messages to the plug-in.\""
 				}
 
 			}
@@ -133,7 +133,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 415.0, 665.0, 65.0, 19.0 ],
-					"text" : "sel jcom.ui"
+					"text" : "sel j.ui"
 				}
 
 			}
@@ -147,7 +147,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 575.0, 795.0, 141.0, 19.0 ],
-					"text" : "jcom.meter_receive 2"
+					"text" : "j.meter_receive 2"
 				}
 
 			}
@@ -161,14 +161,14 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 575.0, 740.0, 141.0, 19.0 ],
-					"text" : "jcom.meter_receive 1"
+					"text" : "j.meter_receive 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-111",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -181,7 +181,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-112",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -317,7 +317,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 540.0, 346.0, 31.0 ],
-					"text" : "jcom.message vst/title @type string @description \"Change the title displayed for the name of the plug-ins\" edit window."
+					"text" : "j.message vst/title @type string @description \"Change the title displayed for the name of the plug-ins\" edit window."
 				}
 
 			}
@@ -332,7 +332,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 495.0, 351.0, 31.0 ],
-					"text" : "jcom.message vst/write/program @type generic @description \"Write current settings to an  individual effect program file.\""
+					"text" : "j.message vst/write/program @type generic @description \"Write current settings to an  individual effect program file.\""
 				}
 
 			}
@@ -347,7 +347,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 430.0, 333.0, 31.0 ],
-					"text" : "jcom.message vst/write/bank @type generic @description \"Write current effect settings to a program bank file.\""
+					"text" : "j.message vst/write/bank @type generic @description \"Write current effect settings to a program bank file.\""
 				}
 
 			}
@@ -362,7 +362,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 366.0, 387.0, 31.0 ],
-					"text" : "jcom.message vst/read @type generic @description \"Read a VS  file \rof effect programs, either in bank or individual program format.\""
+					"text" : "j.message vst/read @type generic @description \"Read a VS  file \rof effect programs, either in bank or individual program format.\""
 				}
 
 			}
@@ -459,7 +459,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 575.0, 710.0, 201.0, 19.0 ],
-					"text" : "jcom.midi.channel_messages_receive"
+					"text" : "j.midi.channel_messages_receive"
 				}
 
 			}
@@ -586,7 +586,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 130.0, 65.0, 131.0, 19.0 ],
-									"text" : "js jcom.js_systeminfo.js"
+									"text" : "js j.js_systeminfo.js"
 								}
 
 							}
@@ -904,7 +904,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 65.0, 131.0, 19.0 ],
-									"text" : "js jcom.js_systeminfo.js"
+									"text" : "js j.js_systeminfo.js"
 								}
 
 							}
@@ -1061,7 +1061,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 290.0, 405.0, 43.0 ],
-					"text" : "jcom.message vst/open @type generic @description \"Open the plug-in's edit window. Two optional integer values specifying the left and top window \rcoordinates respectively.\""
+					"text" : "j.message vst/open @type generic @description \"Open the plug-in's edit window. Two optional integer values specifying the left and top window \rcoordinates respectively.\""
 				}
 
 			}
@@ -2082,7 +2082,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 700.0, 105.0, 146.0, 19.0 ],
-													"text" : "jcom.oscroute /view/panel"
+													"text" : "j.oscroute /view/panel"
 												}
 
 											}
@@ -2792,7 +2792,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 931.0, 280.0, 572.0, 31.0 ],
-																	"text" : "sprintf script newdefault textslider/%s %ld %ld jcom.textslider @presentation_rect %ld %ld 165 20 @text %s @presentation 1 @range 0 1 @clickjump 1"
+																	"text" : "sprintf script newdefault textslider/%s %ld %ld j.textslider @presentation_rect %ld %ld 165 20 @text %s @presentation 1 @range 0 1 @clickjump 1"
 																}
 
 															}
@@ -2807,7 +2807,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 535.0, 280.0, 381.0, 55.0 ],
-																	"text" : "sprintf script newdefault parameter/%s %ld %ld jcom.parameter parameter/%s @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @priority 3 @description \"Nth parameter of the VST plugin.\""
+																	"text" : "sprintf script newdefault parameter/%s %ld %ld j.parameter parameter/%s @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @priority 3 @description \"Nth parameter of the VST plugin.\""
 																}
 
 															}
@@ -2821,7 +2821,7 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
 																	"patching_rect" : [ 410.0, 430.0, 326.0, 31.0 ],
-																	"text" : "Have to keep track of the names of all parameters in order to properly delete jcom.paramter instances when the vst is freed."
+																	"text" : "Have to keep track of the names of all parameters in order to properly delete j.paramter instances when the vst is freed."
 																}
 
 															}
@@ -3748,7 +3748,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 121.0, 643.0, 71.0, 19.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -3762,7 +3762,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "", "" ],
 					"patching_rect" : [ 150.0, 380.0, 183.0, 19.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -3790,8 +3790,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 30.0, 270.0, 360.0, 19.0 ],
-					"text" : "jcom.model @description \"A Jamoma module wrapper for vst plug-ins.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"A Jamoma module wrapper for vst plug-ins.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -3868,7 +3868,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 65.0, 291.0, 31.0 ],
-					"text" : "jcom.parameter vst/program @priority 2 @ramp/drive none @repetitions/allow 1 @description \"VST program.\"",
+					"text" : "j.parameter vst/program @priority 2 @ramp/drive none @repetitions/allow 1 @description \"VST program.\"",
 					"varname" : "vst/program"
 				}
 
@@ -3972,7 +3972,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 600.0, 376.0, 43.0 ],
-					"text" : "jcom.parameter \"parameter/<parameter name>\" @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @priority 3 @description \"Address specific parameter of the VST plugin.\"",
+					"text" : "j.parameter \"parameter/<parameter name>\" @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @priority 3 @description \"Address specific parameter of the VST plugin.\"",
 					"varname" : "parameter/<parameter name>"
 				}
 
@@ -4001,7 +4001,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 190.0, 397.0, 43.0 ],
-					"text" : "jcom.parameter vst/plug @type generic @priority 1 @repetitions/allow 0 @description \"Load a VST effect.  An optional argument define what VST plug-in to open. The plug-in has to be in the Max search path.\"",
+					"text" : "j.parameter vst/plug @type generic @priority 1 @repetitions/allow 0 @description \"Load a VST effect.  An optional argument define what VST plug-in to open. The plug-in has to be in the Max search path.\"",
 					"varname" : "vst/plug"
 				}
 
@@ -4014,7 +4014,7 @@
 					"has_mute" : 1,
 					"has_panel" : 1,
 					"id" : "obj-57",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

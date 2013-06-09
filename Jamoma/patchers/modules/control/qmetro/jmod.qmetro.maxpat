@@ -57,7 +57,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 435.0, 155.0, 589.0, 43.0 ],
-					"text" : "jcom.parameter randomness @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 5000 @range/clipmode low @description \"Defines a range of randomness in milliseconds to be applied to the metro interval\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter randomness @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 5000 @range/clipmode low @description \"Defines a range of randomness in milliseconds to be applied to the metro interval\" @dataspace time @dataspace/unit ms",
 					"varname" : "randomness"
 				}
 
@@ -72,7 +72,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 75.0, 225.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -150,7 +150,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 75.0, 305.0, 549.0, 19.0 ],
-					"text" : "jcom.return trigger @type none @repetitions/allow 1 @description \"Sent every time the metronome fires.\""
+					"text" : "j.return trigger @type none @repetitions/allow 1 @description \"Sent every time the metronome fires.\""
 				}
 
 			}
@@ -227,7 +227,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 435.0, 90.0, 484.0, 43.0 ],
-					"text" : "jcom.parameter time @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 1 5000 @range/clipmode low @dataspace time @dataspace/unit ms @description \"Metro interval (ms)\"",
+					"text" : "j.parameter time @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 1 5000 @range/clipmode low @dataspace time @dataspace/unit ms @description \"Metro interval (ms)\"",
 					"varname" : "time"
 				}
 
@@ -257,7 +257,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 75.0, 247.0, 111.0, 19.0 ],
 					"text" : "jalg.qmetro.maxpat",
-					"varname" : "jcom.qmetro.mod"
+					"varname" : "j.qmetro.mod"
 				}
 
 			}
@@ -287,8 +287,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 150.0, 246.0, 19.0 ],
-					"text" : "jcom.model @description \"A queue based metro\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"A queue based metro\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -326,7 +326,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 435.0, 25.0, 423.0, 31.0 ],
-					"text" : "jcom.parameter toggle @type boolean @ramp/drive none @repetitions/allow 0 @range/bounds 0 1 @range/clipmode both @description \"Toggle qmetro on/off\"",
+					"text" : "j.parameter toggle @type boolean @ramp/drive none @repetitions/allow 0 @range/bounds 0 1 @range/clipmode both @description \"Toggle qmetro on/off\"",
 					"varname" : "toggle"
 				}
 
@@ -334,7 +334,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-47",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

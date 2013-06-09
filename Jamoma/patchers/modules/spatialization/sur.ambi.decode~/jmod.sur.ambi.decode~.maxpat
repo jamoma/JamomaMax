@@ -36,7 +36,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 503.0, 529.0, 59.0, 19.0 ],
-					"text" : "jcom.thru"
+					"text" : "j.thru"
 				}
 
 			}
@@ -1133,7 +1133,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 602.0, 528.0, 296.0, 43.0 ],
-					"text" : "jcom.parameter orderWeights @type decimalArray @description \"manually set weights for given number of orders.\" @repetitions/allow 0 @ramp/drive Max"
+					"text" : "j.parameter orderWeights @type decimalArray @description \"manually set weights for given number of orders.\" @repetitions/allow 0 @ramp/drive Max"
 				}
 
 			}
@@ -1148,7 +1148,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 600.0, 166.0, 560.0, 31.0 ],
-					"text" : "jcom.message.array 32 speaker gain @type decimal @value/default 1 @value 1 @description \"gain value of loudspeaker channel\""
+					"text" : "j.message.array 32 speaker gain @type decimal @value/default 1 @value 1 @description \"gain value of loudspeaker channel\""
 				}
 
 			}
@@ -1205,7 +1205,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 601.0, 262.0, 403.0, 31.0 ],
-					"text" : "jcom.parameter flavor @repetitions/allow 0 @type string @description \"Ambisonics type of decoding and encoding. Furse-Malham, N3D or SN3D\"",
+					"text" : "j.parameter flavor @repetitions/allow 0 @type string @description \"Ambisonics type of decoding and encoding. Furse-Malham, N3D or SN3D\"",
 					"varname" : "destination/voices[5]"
 				}
 
@@ -1239,7 +1239,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 601.0, 132.0, 573.0, 31.0 ],
-					"text" : "jcom.message.array 32 speaker active @type boolean @value/default 1 @value 1 @description \"active 0 will mute the Nth speaker.\""
+					"text" : "j.message.array 32 speaker active @type boolean @value/default 1 @value 1 @description \"active 0 will mute the Nth speaker.\""
 				}
 
 			}
@@ -1254,7 +1254,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 601.0, 82.0, 598.0, 43.0 ],
-					"text" : "jcom.message.array 32 speaker position @type decimalArray @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+					"text" : "j.message.array 32 speaker position @type decimalArray @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -1269,7 +1269,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 602.0, 218.0, 604.0, 31.0 ],
-					"text" : "jcom.message report @repetitions/allow 1 @type generic @description \"reports the state of the ambiencode external in the max window\""
+					"text" : "j.message report @repetitions/allow 1 @type generic @description \"reports the state of the ambiencode external in the max window\""
 				}
 
 			}
@@ -1335,7 +1335,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 129.0, 258.0, 54.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -1445,8 +1445,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 0.0, 151.0, 408.0, 31.0 ],
-					"text" : "jcom.model @description \"Decoding ambisonic signal to multispeaker setup. NOTE: The positions of the speakers are not maintained by this module.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Decoding ambisonic signal to multispeaker setup. NOTE: The positions of the speakers are not maintained by this module.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1487,7 +1487,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 601.0, 364.0, 601.0, 31.0 ],
-					"text" : "jcom.parameter order @type integer @repetitions/allow 0 @range/bounds 1 3 @range/clipmode both @description \"Order of decoding for ambisonic signal.  Changes only take effect when audio is off.\"",
+					"text" : "j.parameter order @type integer @repetitions/allow 0 @range/bounds 1 3 @range/clipmode both @description \"Order of decoding for ambisonic signal.  Changes only take effect when audio is off.\"",
 					"varname" : "order"
 				}
 
@@ -1530,7 +1530,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 601.0, 5.0, 600.0, 43.0 ],
-					"text" : "jcom.parameter numSpeakers @type integer @repetitions/allow 0 @range/bounds 1 32 @range/clipmode both @description \"The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.\"",
+					"text" : "j.parameter numSpeakers @type integer @repetitions/allow 0 @range/bounds 1 32 @range/clipmode both @description \"The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.\"",
 					"varname" : "voices"
 				}
 
@@ -1541,7 +1541,7 @@
 					"has_mute" : 1,
 					"has_panel" : 1,
 					"id" : "obj-46",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1905,36 +1905,36 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.message.array.maxpat",
+				"name" : "j.message.array.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/message.array",
 				"patcherrelativepath" : "../../../library/components/message.array",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.message.array.instance.maxpat",
+				"name" : "j.message.array.instance.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/message.array",
 				"patcherrelativepath" : "../../../library/components/message.array",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1942,39 +1942,39 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscinstance.mxo",
+				"name" : "j.oscinstance.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pack≈.mxo",
+				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]

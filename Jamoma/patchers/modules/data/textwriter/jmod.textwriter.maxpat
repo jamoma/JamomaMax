@@ -177,7 +177,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 226.0, 82.0, 54.0, 19.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -337,8 +337,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 440.0, 240.0, 593.0, 19.0 ],
-					"text" : "jcom.message show @type none @repetitions/allow 1 @description \"Open the text buffer to view the content\"",
-					"varname" : "jcom.parameter[2]"
+					"text" : "j.message show @type none @repetitions/allow 1 @description \"Open the text buffer to view the content\"",
+					"varname" : "j.parameter[2]"
 				}
 
 			}
@@ -353,8 +353,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 440.0, 170.0, 313.0, 31.0 ],
-					"text" : "jcom.message write @type generic @repetitions/allow 1 @description \"Write the text buffer to a file\"",
-					"varname" : "jcom.parameter[1]"
+					"text" : "j.message write @type generic @repetitions/allow 1 @description \"Write the text buffer to a file\"",
+					"varname" : "j.parameter[1]"
 				}
 
 			}
@@ -368,8 +368,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 440.0, 104.0, 490.0, 19.0 ],
-					"text" : "jcom.message clear @type none @repetitions/allow 1 @description \"Clear the text buffer\"",
-					"varname" : "jcom.parameter[3]"
+					"text" : "j.message clear @type none @repetitions/allow 1 @description \"Clear the text buffer\"",
+					"varname" : "j.parameter[3]"
 				}
 
 			}
@@ -383,7 +383,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 278.0, 242.0, 56.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -397,7 +397,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 440.0, 44.0, 387.0, 19.0 ],
-					"text" : "jcom.parameter active @type boolean @description \"Turn buffering on\"",
+					"text" : "j.parameter active @type boolean @description \"Turn buffering on\"",
 					"varname" : "on[1]"
 				}
 
@@ -441,8 +441,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 20.0, 130.0, 339.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"Write data to a text file with a timestamp for each value.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Write data to a text file with a timestamp for each value.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -472,7 +472,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-29",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -648,15 +648,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -664,7 +664,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -672,15 +672,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -688,7 +688,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
  ]

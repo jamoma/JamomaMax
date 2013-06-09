@@ -78,7 +78,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 247.0, 112.0, 244.0, 43.0 ],
-									"text" : "jcom.return buttons @range/bounds 0 3 @type integer @enable 1 @range/clipmode low @description \"buttons of the Wacom tool \""
+									"text" : "j.return buttons @range/bounds 0 3 @type integer @enable 1 @range/clipmode low @description \"buttons of the Wacom tool \""
 								}
 
 							}
@@ -93,7 +93,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 27.0, 114.0, 211.0, 55.0 ],
-									"text" : "jcom.return touch @range/bounds 0 1 @type boolean @enable 1 @range/clipmode both @description \"Indicates if the tool touches the tablet\""
+									"text" : "j.return touch @range/bounds 0 1 @type boolean @enable 1 @range/clipmode both @description \"Indicates if the tool touches the tablet\""
 								}
 
 							}
@@ -203,7 +203,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 875.0, 515.0, 291.0, 43.0 ],
-					"text" : "jcom.return proximity @range/bounds 0 1 @type integer @range/clipmode both @description \"Detects the presence of a tool near the tablet (without contact)\""
+					"text" : "j.return proximity @range/bounds 0 1 @type integer @range/clipmode both @description \"Detects the presence of a tool near the tablet (without contact)\""
 				}
 
 			}
@@ -218,7 +218,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 738.0, 414.0, 257.0, 43.0 ],
-					"text" : "jcom.return direction @range/bounds 0 1 @type integer @range/clipmode both @description \"Direction of the Wacom tool\""
+					"text" : "j.return direction @range/bounds 0 1 @type integer @range/clipmode both @description \"Direction of the Wacom tool\""
 				}
 
 			}
@@ -233,7 +233,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 546.0, 516.0, 322.0, 43.0 ],
-					"text" : "jcom.return buttons/raw @range/bounds 0 5 @type integer @range/clipmode both @enable 0 @description \"button flags of the Wacom tool (odd when pressed, even when released)\""
+					"text" : "j.return buttons/raw @range/bounds 0 5 @type integer @range/clipmode both @enable 0 @description \"button flags of the Wacom tool (odd when pressed, even when released)\""
 				}
 
 			}
@@ -248,7 +248,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 559.0, 430.0, 154.0, 67.0 ],
-					"text" : "jcom.return rotation @range/bounds 0. 1. @type decimal @range/clipmode both @description \"rotation  of the Wacom tool\""
+					"text" : "j.return rotation @range/bounds 0. 1. @type decimal @range/clipmode both @description \"rotation  of the Wacom tool\""
 				}
 
 			}
@@ -263,7 +263,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 399.0, 416.0, 148.0, 79.0 ],
-					"text" : "jcom.return tilt/y @range/bounds 0. 1. @type decimal @range/clipmode both @description \"y tilt of the Wacom tool\""
+					"text" : "j.return tilt/y @range/bounds 0. 1. @type decimal @range/clipmode both @description \"y tilt of the Wacom tool\""
 				}
 
 			}
@@ -278,7 +278,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 353.0, 503.0, 195.0, 55.0 ],
-					"text" : "jcom.return tilt/x @range/bounds 0. 1. @type decimal @range/clipmode both @description \"x tilt of the Wacom tool\""
+					"text" : "j.return tilt/x @range/bounds 0. 1. @type decimal @range/clipmode both @description \"x tilt of the Wacom tool\""
 				}
 
 			}
@@ -293,7 +293,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 210.0, 434.0, 144.0, 67.0 ],
-					"text" : "jcom.return pressure @range/bounds 0. 1. @type decimal @description \"pressure of the Wacom tool\""
+					"text" : "j.return pressure @range/bounds 0. 1. @type decimal @description \"pressure of the Wacom tool\""
 				}
 
 			}
@@ -308,7 +308,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 117.0, 507.0, 209.0, 55.0 ],
-					"text" : "jcom.return position/y @range/bounds 0. 1. @type decimal @range/clipmode both @description \"y position of the Wacom tool\""
+					"text" : "j.return position/y @range/bounds 0. 1. @type decimal @range/clipmode both @description \"y position of the Wacom tool\""
 				}
 
 			}
@@ -613,7 +613,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 48.0, 435.0, 158.0, 55.0 ],
-					"text" : "jcom.return position/x @range/bounds 0. 1. @type decimal @description \"x position of the Wacom tool\""
+					"text" : "j.return position/x @range/bounds 0. 1. @type decimal @description \"x position of the Wacom tool\""
 				}
 
 			}
@@ -638,7 +638,7 @@
 					"numoutlets" : 8,
 					"outlettype" : [ "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 82.0, 63.0, 561.0, 19.0 ],
-					"text" : "jcom.oscroute /on /xyrange /nopointer /initDevice /bgrd /flusheventqueue /menu"
+					"text" : "j.oscroute /on /xyrange /nopointer /initDevice /bgrd /flusheventqueue /menu"
 				}
 
 			}

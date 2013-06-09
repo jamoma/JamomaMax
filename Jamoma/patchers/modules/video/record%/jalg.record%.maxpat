@@ -89,7 +89,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 689.0, 139.0, 121.0, 19.0 ],
-					"text" : "jcom.passmatrixinfo%"
+					"text" : "j.passmatrixinfo%"
 				}
 
 			}
@@ -272,7 +272,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 809.0, 279.0, 219.0, 31.0 ],
-					"text" : "jcom.return dump @description \"Messages dumped from jit.qt.record.\""
+					"text" : "j.return dump @description \"Messages dumped from jit.qt.record.\""
 				}
 
 			}
@@ -286,7 +286,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 454.0, 137.0, 168.0, 19.0 ],
-					"text" : "jcom.class.matrix.route /matrix"
+					"text" : "j.class.matrix.route /matrix"
 				}
 
 			}
@@ -300,7 +300,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 327.0, 110.0, 146.0, 19.0 ],
-					"text" : "jcom.pass /realtime /interp"
+					"text" : "j.pass /realtime /interp"
 				}
 
 			}
@@ -328,7 +328,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 27.0, 51.0, 89.0, 19.0 ],
-					"text" : "jcom.pass /stop"
+					"text" : "j.pass /stop"
 				}
 
 			}
@@ -356,7 +356,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 97.0, 77.0, 249.0, 19.0 ],
-					"text" : "jcom.oscroute /write /framerate /codec /quality"
+					"text" : "j.oscroute /write /framerate /codec /quality"
 				}
 
 			}

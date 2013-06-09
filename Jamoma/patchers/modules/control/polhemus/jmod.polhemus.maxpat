@@ -44,8 +44,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 312.0, 220.0, 479.0, 19.0 ],
-					"text" : "jcom.message update @type none @description \"get update messagefrom an external clock\"",
-					"varname" : "jcom.parameter[2]"
+					"text" : "j.message update @type none @description \"get update messagefrom an external clock\"",
+					"varname" : "j.parameter[2]"
 				}
 
 			}
@@ -79,8 +79,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 323.0, 110.0, 456.0, 19.0 ],
-					"text" : "jcom.message initDevice @type none @description \"Initialization of the serial port\"",
-					"varname" : "jcom.parameter[1]"
+					"text" : "j.message initDevice @type none @description \"Initialization of the serial port\"",
+					"varname" : "j.parameter[1]"
 				}
 
 			}
@@ -115,7 +115,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 170.0, 341.0, 318.0, 31.0 ],
-					"text" : "jcom.parameter menu @type generic @description \"Define the Polhemus port\"",
+					"text" : "j.parameter menu @type generic @description \"Define the Polhemus port\"",
 					"varname" : "menu"
 				}
 
@@ -130,7 +130,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 170.0, 255.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -145,7 +145,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 312.0, 178.0, 569.0, 31.0 ],
-					"text" : "jcom.parameter updaterate @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 240 @range/clipmode low @description \"Sample rate in [Hz] by default\"",
+					"text" : "j.parameter updaterate @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 240 @range/clipmode low @description \"Sample rate in [Hz] by default\"",
 					"varname" : "sample_rate[1]"
 				}
 
@@ -199,7 +199,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 328.0, 49.0, 374.0, 19.0 ],
-					"text" : "jcom.parameter active @type boolean @description \"Turn polling on\"",
+					"text" : "j.parameter active @type boolean @description \"Turn polling on\"",
 					"varname" : "status[1]"
 				}
 
@@ -243,8 +243,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 161.0, 273.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"Use polhemus.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Use polhemus.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -290,7 +290,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-26",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

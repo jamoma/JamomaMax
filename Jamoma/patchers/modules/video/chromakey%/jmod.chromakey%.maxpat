@@ -28,7 +28,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 620.0, 485.0, 471.0, 31.0 ],
-					"text" : "jcom.parameter chromakey/color @repetitions/allow 0 @type decimalArray  @dataspace color @dataspace/unit rgb @range/bounds 0. 1. @range/clipmode both @description \"Chroma keying color (RGB in the range 0-1).\"",
+					"text" : "j.parameter chromakey/color @repetitions/allow 0 @type decimalArray  @dataspace color @dataspace/unit rgb @range/bounds 0. 1. @range/clipmode both @description \"Chroma keying color (RGB in the range 0-1).\"",
 					"varname" : "key/blue[1]"
 				}
 
@@ -43,7 +43,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 450.0, 485.0, 154.0, 19.0 ],
-					"text" : "jcom.list2parameter 3"
+					"text" : "j.list2parameter 3"
 				}
 
 			}
@@ -98,7 +98,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 140.0, 525.0, 53.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -150,7 +150,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 190.0, 450.0, 59.5, 19.0 ],
-					"text" : "jcom.in 2"
+					"text" : "j.in 2"
 				}
 
 			}
@@ -428,7 +428,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 566.0, 357.0, 400.0, 31.0 ],
-					"text" : "jcom.parameter chromakey/alphaignore @repetitions/allow 0 @type boolean @range/bounds 0. 1. @description \"alpha of the chromakey\"",
+					"text" : "j.parameter chromakey/alphaignore @repetitions/allow 0 @type boolean @range/bounds 0. 1. @description \"alpha of the chromakey\"",
 					"varname" : "alpha"
 				}
 
@@ -444,7 +444,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 566.0, 290.0, 394.0, 31.0 ],
-					"text" : "jcom.parameter chromakey/maxkey @repetitions/allow 0 @type decimal @range/bounds 0. 10. @description \"maxkey of the chromakey\"",
+					"text" : "j.parameter chromakey/maxkey @repetitions/allow 0 @type decimal @range/bounds 0. 10. @description \"maxkey of the chromakey\"",
 					"varname" : "maxkey[1]"
 				}
 
@@ -460,7 +460,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 566.0, 221.0, 394.0, 31.0 ],
-					"text" : "jcom.parameter chromakey/minkey @repetitions/allow 0 @type decimal @range/bounds 0. 10. @description \"minkey of the chromakey\"",
+					"text" : "j.parameter chromakey/minkey @repetitions/allow 0 @type decimal @range/bounds 0. 10. @description \"minkey of the chromakey\"",
 					"varname" : "minkey[1]"
 				}
 
@@ -476,7 +476,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 566.0, 152.0, 394.0, 31.0 ],
-					"text" : "jcom.parameter chromakey/fade @repetitions/allow 0 @type decimal @range/bounds 0. 10. @description \"fade of the chromakey\"",
+					"text" : "j.parameter chromakey/fade @repetitions/allow 0 @type decimal @range/bounds 0. 10. @description \"fade of the chromakey\"",
 					"varname" : "fade[1]"
 				}
 
@@ -522,7 +522,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 566.0, 84.0, 394.0, 31.0 ],
-					"text" : "jcom.parameter chromakey/tolerance @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"Tolerance of the chromakey\"",
+					"text" : "j.parameter chromakey/tolerance @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"Tolerance of the chromakey\"",
 					"varname" : "tolerance"
 				}
 
@@ -553,8 +553,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 8.0, 218.0, 326.0, 43.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Simple 2-source chromakey : Keying based on chromatic distance\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Simple 2-source chromakey : Keying based on chromatic distance\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -688,7 +688,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-63",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

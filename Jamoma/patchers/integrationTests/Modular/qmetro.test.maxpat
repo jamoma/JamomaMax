@@ -95,7 +95,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 235.0, 15.0, 188.0, 19.0 ],
-					"text" : "jcom.receive notifications"
+					"text" : "j.receive notifications"
 				}
 
 			}
@@ -138,7 +138,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 105.0, 420.0, 72.0, 19.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -260,7 +260,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 215.0, 365.0, 255.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old CorrectNumberOfInitialBangs 7"
+					"text" : "j.test.assert.equal.old CorrectNumberOfInitialBangs 7"
 				}
 
 			}

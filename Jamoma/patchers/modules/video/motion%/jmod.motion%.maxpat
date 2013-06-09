@@ -52,7 +52,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 36.0, 683.0, 454.0, 19.0 ],
-					"text" : "jcom.parameter inverse @type boolean @description \"Regular or inverse motion image\"",
+					"text" : "j.parameter inverse @type boolean @description \"Regular or inverse motion image\"",
 					"varname" : "color[2]"
 				}
 
@@ -125,7 +125,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 140.0, 335.0, 294.0, 31.0 ],
-									"text" : "jcom.parameter /contraction/window/on @type boolean @description \"Turn display of contraction box on or off.\"",
+									"text" : "j.parameter /contraction/window/on @type boolean @description \"Turn display of contraction box on or off.\"",
 									"varname" : "centroid/on[1]"
 								}
 
@@ -141,7 +141,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 139.0, 301.0, 257.0, 31.0 ],
-									"text" : "jcom.parameter centroid/on @type boolean @description \"Turn display of centre of mass on.\"",
+									"text" : "j.parameter centroid/on @type boolean @description \"Turn display of centre of mass on.\"",
 									"varname" : "centroid/on"
 								}
 
@@ -157,7 +157,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 140.0, 269.0, 273.0, 31.0 ],
-									"text" : "jcom.parameter contraction/max/on @type boolean @description \"Turn max contraction box on or off.\"",
+									"text" : "j.parameter contraction/max/on @type boolean @description \"Turn max contraction box on or off.\"",
 									"varname" : "contraction/max/on"
 								}
 
@@ -173,7 +173,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 139.0, 234.0, 265.0, 31.0 ],
-									"text" : "jcom.parameter contraction/on @type boolean @description \"Turn local contraction box on or off.\"",
+									"text" : "j.parameter contraction/on @type boolean @description \"Turn local contraction box on or off.\"",
 									"varname" : "contraction/on"
 								}
 
@@ -388,7 +388,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 341.0, 193.0, 348.0, 31.0 ],
-									"text" : "jcom.parameter /centroid/size @type integer @range/bounds 0 20 @range/clipmode low @description \"Size of the centre of mass.\"",
+									"text" : "j.parameter /centroid/size @type integer @range/bounds 0 20 @range/clipmode low @description \"Size of the centre of mass.\"",
 									"varname" : "centroid/size/on[2]"
 								}
 
@@ -420,7 +420,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 340.0, 151.0, 406.0, 31.0 ],
-									"text" : "jcom.parameter /contraction/window/size @type integer @range/bounds 0 20 @range/clipmode low @description \"Size of the contraction window border.\"",
+									"text" : "j.parameter /contraction/window/size @type integer @range/bounds 0 20 @range/clipmode low @description \"Size of the contraction window border.\"",
 									"varname" : "centroid/size/on[1]"
 								}
 
@@ -1159,7 +1159,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 340.0, 52.0, 403.0, 31.0 ],
-									"text" : "jcom.parameter data/smoothing @type decimal @range/bounds 0. 12. @range/clipmode low @description \"Level of smoothing for the returned data\"",
+									"text" : "j.parameter data/smoothing @type decimal @range/bounds 0. 12. @range/clipmode low @description \"Level of smoothing for the returned data\"",
 									"varname" : "data/smoothing"
 								}
 
@@ -1175,7 +1175,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 524.0, 438.0, 231.0, 31.0 ],
-									"text" : "jcom.parameter centroid/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of centroid.\"",
+									"text" : "j.parameter centroid/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of centroid.\"",
 									"varname" : "centroid/color"
 								}
 
@@ -1191,7 +1191,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 137.0, 445.0, 275.0, 31.0 ],
-									"text" : "jcom.parameter contraction/max/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of max contraction box.\"",
+									"text" : "j.parameter contraction/max/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of max contraction box.\"",
 									"varname" : "contraction/max/color"
 								}
 
@@ -1207,7 +1207,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 519.0, 309.0, 276.0, 31.0 ],
-									"text" : "jcom.parameter contraction/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of local contraction box.\"",
+									"text" : "j.parameter contraction/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of local contraction box.\"",
 									"varname" : "contraction/color"
 								}
 
@@ -1223,7 +1223,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 340.0, 117.0, 395.0, 31.0 ],
-									"text" : "jcom.parameter centroid/size/on @type boolean @description \"Turn on automatic size adjustment of centre of mass - based on quantity of motion.\"",
+									"text" : "j.parameter centroid/size/on @type boolean @description \"Turn on automatic size adjustment of centre of mass - based on quantity of motion.\"",
 									"varname" : "centroid/size/on"
 								}
 
@@ -1238,7 +1238,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 340.0, 90.0, 418.0, 19.0 ],
-									"text" : "jcom.message contraction/max/reset @description \"Reset max_contraction box.\"",
+									"text" : "j.message contraction/max/reset @description \"Reset max_contraction box.\"",
 									"varname" : "jmod.parameter[12]"
 								}
 
@@ -1254,7 +1254,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 340.0, 16.0, 465.0, 31.0 ],
-									"text" : "jcom.parameter contraction/slide @type decimal @range/bounds 0. 10. @range/clipmode low @repetitions/allow 0 @description \"The level of smoothing for contraction box.\"",
+									"text" : "j.parameter contraction/slide @type decimal @range/bounds 0. 10. @range/clipmode low @repetitions/allow 0 @description \"The level of smoothing for contraction box.\"",
 									"varname" : "contraction/slide"
 								}
 
@@ -1760,11 +1760,11 @@
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.parameter.mxo",
+								"name" : "j.parameter.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.message.mxo",
+								"name" : "j.message.mxo",
 								"type" : "iLaX"
 							}
 , 							{
@@ -1850,7 +1850,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 443.0, 61.0, 148.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -1878,7 +1878,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 427.0, 197.0, 57.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -1918,7 +1918,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 409.0, 36.0, 60.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -1932,7 +1932,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 33.681591, 636.0, 391.0, 19.0 ],
-					"text" : "jcom.parameter color @type boolean @description \"Color or greyscale\"",
+					"text" : "j.parameter color @type boolean @description \"Color or greyscale\"",
 					"varname" : "color[1]"
 				}
 
@@ -1985,7 +1985,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 33.681591, 574.0, 418.0, 19.0 ],
-					"text" : "jcom.parameter edge/threshold @type decimal @description \"Edge threshold\"",
+					"text" : "j.parameter edge/threshold @type decimal @description \"Edge threshold\"",
 					"varname" : "edge/threshold"
 				}
 
@@ -2116,7 +2116,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 33.681591, 518.0, 409.0, 19.0 ],
-					"text" : "jcom.parameter edge/algorithm @type integer @description \"Edge detection\"",
+					"text" : "j.parameter edge/algorithm @type integer @description \"Edge detection\"",
 					"varname" : "edge/algorithm"
 				}
 
@@ -2131,7 +2131,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 33.681591, 460.0, 425.0, 19.0 ],
-					"text" : "jcom.parameter slide @type decimal @description \"Level of slide for thre trails\"",
+					"text" : "j.parameter slide @type decimal @description \"Level of slide for thre trails\"",
 					"varname" : "slide[1]"
 				}
 
@@ -2146,7 +2146,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 33.681591, 402.0, 418.0, 19.0 ],
-					"text" : "jcom.parameter trails @type boolean @description \"Trails - ghostlike image\"",
+					"text" : "j.parameter trails @type boolean @description \"Trails - ghostlike image\"",
 					"varname" : "trails[1]"
 				}
 
@@ -2183,7 +2183,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 33.681591, 341.0, 380.0, 19.0 ],
-					"text" : "jcom.parameter noise @type boolean @description \"Noise reduction\"",
+					"text" : "j.parameter noise @type boolean @description \"Noise reduction\"",
 					"varname" : "noise[1]"
 				}
 
@@ -2277,7 +2277,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 33.681591, 275.0, 372.0, 19.0 ],
-					"text" : "jcom.parameter threshold @type decimal @description \\\"Threshold\\\"",
+					"text" : "j.parameter threshold @type decimal @description \\\"Threshold\\\"",
 					"varname" : "threshold[1]"
 				}
 
@@ -2335,8 +2335,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1.0, 124.0, 327.0, 31.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Motion-related analysis\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Motion-related analysis\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -2384,7 +2384,7 @@
 					"has_panel" : 1,
 					"has_preview" : 1,
 					"id" : "obj-49",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -2686,60 +2686,60 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.motion%.maxpat",
+				"name" : "j.motion%.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/motion%",
 				"patcherrelativepath" : "../../../library/components/motion%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.checkplanes%.maxpat",
+				"name" : "j.checkplanes%.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/checkplanes%",
 				"patcherrelativepath" : "../../../library/components/checkplanes%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.absdiff.maxpat",
+				"name" : "j.absdiff.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/absdiff",
 				"patcherrelativepath" : "../../../library/components/absdiff",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.autoscale.maxpat",
+				"name" : "j.autoscale.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/autoscale",
 				"patcherrelativepath" : "../../../library/components/autoscale",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.passmatrixinfo%.maxpat",
+				"name" : "j.passmatrixinfo%.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/passmatrixinfo%",
 				"patcherrelativepath" : "../../../library/components/passmatrixinfo%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.rgb2luma%.maxpat",
+				"name" : "j.rgb2luma%.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/rgb2luma%",
 				"patcherrelativepath" : "../../../library/components/rgb2luma%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.sum%.maxpat",
+				"name" : "j.sum%.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/sum%",
 				"patcherrelativepath" : "../../../library/components/sum%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -2747,7 +2747,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -2771,7 +2771,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.stats.mxo",
+				"name" : "j.stats.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -2779,11 +2779,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -2799,7 +2799,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -2807,15 +2807,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]

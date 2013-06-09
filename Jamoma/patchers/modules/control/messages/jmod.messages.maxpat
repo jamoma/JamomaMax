@@ -65,7 +65,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 936.0, 92.0, 367.0, 31.0 ],
-					"text" : "jcom.parameter view/color/display.2 @type decimalArray @description \"to set background color of display.2 in the format RGBA\"",
+					"text" : "j.parameter view/color/display.2 @type decimalArray @description \"to set background color of display.2 in the format RGBA\"",
 					"varname" : "display/1[10]"
 				}
 
@@ -95,7 +95,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 842.0, 352.0, 367.0, 31.0 ],
-					"text" : "jcom.parameter view/color/display.5 @type decimalArray @description \"to set background color of display.5 in the format RGBA\"",
+					"text" : "j.parameter view/color/display.5 @type decimalArray @description \"to set background color of display.5 in the format RGBA\"",
 					"varname" : "display/1[9]"
 				}
 
@@ -125,7 +125,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 838.0, 261.0, 367.0, 31.0 ],
-					"text" : "jcom.parameter view/color/display.4 @type decimalArray @description \"to set background color of display.4 in the format RGBA\"",
+					"text" : "j.parameter view/color/display.4 @type decimalArray @description \"to set background color of display.4 in the format RGBA\"",
 					"varname" : "display/1[8]"
 				}
 
@@ -155,7 +155,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 839.0, 176.0, 367.0, 31.0 ],
-					"text" : "jcom.parameter view/color/display.3 @type decimalArray @description \"to set background color of display.3 in the format RGBA\"",
+					"text" : "j.parameter view/color/display.3 @type decimalArray @description \"to set background color of display.3 in the format RGBA\"",
 					"varname" : "display/1[7]"
 				}
 
@@ -171,7 +171,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 944.0, 15.0, 367.0, 31.0 ],
-					"text" : "jcom.parameter view/color/display.1 @type decimalArray @description \"to set background color of display.1 in the format RGBA\"",
+					"text" : "j.parameter view/color/display.1 @type decimalArray @description \"to set background color of display.1 in the format RGBA\"",
 					"varname" : "display/1[5]"
 				}
 
@@ -202,7 +202,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 525.0, 353.0, 311.0, 31.0 ],
-					"text" : "jcom.parameter display.5 @type string @ramp/drive none @description \"Lower-right display string\"",
+					"text" : "j.parameter display.5 @type string @ramp/drive none @description \"Lower-right display string\"",
 					"varname" : "display/5"
 				}
 
@@ -253,7 +253,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 512.0, 261.0, 321.0, 31.0 ],
-					"text" : "jcom.parameter display.4 @type string @ramp/drive none @description \"Lower-middle display string\"",
+					"text" : "j.parameter display.4 @type string @ramp/drive none @description \"Lower-middle display string\"",
 					"varname" : "display/4"
 				}
 
@@ -284,7 +284,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 525.0, 175.0, 309.0, 31.0 ],
-					"text" : "jcom.parameter display.3 @type string @ramp/drive none @description \"Lower-left display string\"",
+					"text" : "j.parameter display.3 @type string @ramp/drive none @description \"Lower-left display string\"",
 					"varname" : "display/3"
 				}
 
@@ -315,7 +315,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 526.0, 80.0, 309.0, 31.0 ],
-					"text" : "jcom.parameter display.2 @type string @ramp/drive none @description \"Secondary/Digest display string\"",
+					"text" : "j.parameter display.2 @type string @ramp/drive none @description \"Secondary/Digest display string\"",
 					"varname" : "display/2"
 				}
 
@@ -360,7 +360,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 525.0, 13.0, 309.0, 31.0 ],
-					"text" : "jcom.parameter display.1 @type string @ramp/drive none @description \"Main/Headline display string\"",
+					"text" : "j.parameter display.1 @type string @ramp/drive none @description \"Main/Headline display string\"",
 					"varname" : "display/1"
 				}
 
@@ -469,7 +469,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 71.0, 291.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -511,8 +511,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 18.0, 239.0, 416.0, 19.0 ],
-					"text" : "jcom.model @type control @description \"Message Display\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Message Display\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -556,7 +556,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-56",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -808,19 +808,19 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
  ]

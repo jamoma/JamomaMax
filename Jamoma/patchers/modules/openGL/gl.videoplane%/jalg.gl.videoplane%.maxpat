@@ -80,7 +80,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 730.0, 190.0, 130.0, 19.0 ],
-									"text" : "jcom.pass argb uyvy"
+									"text" : "j.pass argb uyvy"
 								}
 
 							}
@@ -193,7 +193,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 340.0, 150.0, 620.0, 19.0 ],
-									"text" : "jcom.oscroute /texture/offset /texture/scale /colormode /interpolate"
+									"text" : "j.oscroute /texture/offset /texture/scale /colormode /interpolate"
 								}
 
 							}
@@ -207,7 +207,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "", "", "", "", "", "" ],
 									"patching_rect" : [ 40.0, 115.0, 319.0, 19.0 ],
-									"text" : "jcom.pass /client_storage /dim /displaylist /gridmode /nudge"
+									"text" : "j.pass /client_storage /dim /displaylist /gridmode /nudge"
 								}
 
 							}
@@ -221,7 +221,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 40.0, 90.0, 165.0, 19.0 ],
-									"text" : "jcom.oscroute /videoplane"
+									"text" : "j.oscroute /videoplane"
 								}
 
 							}
@@ -482,7 +482,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 190.0, 56.0, 141.0, 19.0 ],
-					"text" : "jcom.class.gl_group.route"
+					"text" : "j.class.gl_group.route"
 				}
 
 			}

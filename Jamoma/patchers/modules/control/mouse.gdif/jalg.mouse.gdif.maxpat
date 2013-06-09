@@ -158,7 +158,7 @@
 , 											{
 												"box" : 												{
 													"maxclass" : "newobj",
-													"text" : "jcom.init",
+													"text" : "j.init",
 													"numinlets" : 1,
 													"fontname" : "Verdana",
 													"id" : "obj-2",
@@ -420,7 +420,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/meta/flow @type decimal @range/bounds 0. 1. @description \"Fluidity of movements (legato-staccato)\"",
+									"text" : "j.return gdif/meta/flow @type decimal @range/bounds 0. 1. @description \"Fluidity of movements (legato-staccato)\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -435,7 +435,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/meta/dynamics @type decimal @range/bounds 0. 1. @description \"Dynamic level (pp-FF)\"",
+									"text" : "j.return gdif/meta/dynamics @type decimal @range/bounds 0. 1. @description \"Dynamic level (pp-FF)\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -520,7 +520,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.oscroute /on /unit /description",
+									"text" : "j.oscroute /on /unit /description",
 									"numinlets" : 1,
 									"fontname" : "Verdana",
 									"id" : "obj-13",
@@ -669,7 +669,7 @@
 										"boxes" : [ 											{
 												"box" : 												{
 													"maxclass" : "newobj",
-													"text" : "jcom.init",
+													"text" : "j.init",
 													"numinlets" : 1,
 													"fontname" : "Verdana",
 													"id" : "obj-1",
@@ -1251,7 +1251,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.oscroute /on /unit /description",
+									"text" : "j.oscroute /on /unit /description",
 									"numinlets" : 1,
 									"fontname" : "Verdana",
 									"id" : "obj-3",
@@ -1372,7 +1372,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/device/mouse/button/2/press @type boolean @range/bounds 0 1 @description \"Button up or down\"",
+									"text" : "j.return gdif/device/mouse/button/2/press @type boolean @range/bounds 0 1 @description \"Button up or down\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -1387,7 +1387,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/device/mouse/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\"",
+									"text" : "j.return gdif/device/mouse/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -1402,7 +1402,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/device/mouse/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\"",
+									"text" : "j.return gdif/device/mouse/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -1445,7 +1445,7 @@
 										"boxes" : [ 											{
 												"box" : 												{
 													"maxclass" : "newobj",
-													"text" : "jcom.init",
+													"text" : "j.init",
 													"numinlets" : 1,
 													"fontname" : "Verdana",
 													"id" : "obj-1",
@@ -1988,7 +1988,7 @@
 , 											{
 												"box" : 												{
 													"maxclass" : "newobj",
-													"text" : "jcom.init",
+													"text" : "j.init",
 													"numinlets" : 1,
 													"fontname" : "Verdana",
 													"id" : "obj-2",
@@ -2250,7 +2250,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/performance/fluidity @type decimal @range/bounds 0. 1. @description \"Fluidity of movements (legato-staccato)\"",
+									"text" : "j.return gdif/performance/fluidity @type decimal @range/bounds 0. 1. @description \"Fluidity of movements (legato-staccato)\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -2265,7 +2265,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/performance/dynamics @type decimal @range/bounds 0. 1. @description \"Dynamic level (pp-FF)\"",
+									"text" : "j.return gdif/performance/dynamics @type decimal @range/bounds 0. 1. @description \"Dynamic level (pp-FF)\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -2350,7 +2350,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.oscroute /on /unit /description",
+									"text" : "j.oscroute /on /unit /description",
 									"numinlets" : 1,
 									"fontname" : "Verdana",
 									"id" : "obj-13",
@@ -2499,7 +2499,7 @@
 										"boxes" : [ 											{
 												"box" : 												{
 													"maxclass" : "newobj",
-													"text" : "jcom.init",
+													"text" : "j.init",
 													"numinlets" : 1,
 													"fontname" : "Verdana",
 													"id" : "obj-1",
@@ -3205,7 +3205,7 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.init",
+									"text" : "j.init",
 									"numinlets" : 1,
 									"fontname" : "Verdana",
 									"id" : "obj-1",
@@ -3485,7 +3485,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.return position/y @type decimal @range/bounds 0. 1. @description \"Vertical position of mouse\"",
+					"text" : "j.return position/y @type decimal @range/bounds 0. 1. @description \"Vertical position of mouse\"",
 					"linecount" : 2,
 					"numinlets" : 1,
 					"fontname" : "Verdana",
@@ -3500,7 +3500,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.return position/x @type decimal @range/bounds 0. 1. @description \"Horizontal position of mouse\"",
+					"text" : "j.return position/x @type decimal @range/bounds 0. 1. @description \"Horizontal position of mouse\"",
 					"linecount" : 2,
 					"numinlets" : 1,
 					"fontname" : "Verdana",
@@ -3515,7 +3515,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.return button @type boolean @range/bounds 0 1 @description \"Mouse button\"",
+					"text" : "j.return button @type boolean @range/bounds 0 1 @description \"Mouse button\"",
 					"linecount" : 2,
 					"numinlets" : 1,
 					"fontname" : "Verdana",
@@ -3599,7 +3599,7 @@
 , 											{
 												"box" : 												{
 													"maxclass" : "newobj",
-													"text" : "jcom.init",
+													"text" : "j.init",
 													"numinlets" : 1,
 													"fontname" : "Verdana",
 													"id" : "obj-2",
@@ -3861,7 +3861,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/body/hand/right/motion/direction @type decimal @range/bounds 0. 1. @description \"Direction of motion in radians\"",
+									"text" : "j.return gdif/body/hand/right/motion/direction @type decimal @range/bounds 0. 1. @description \"Direction of motion in radians\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -3876,7 +3876,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/body/hand/right/motion/quantity @type decimal @range/bounds 0. 1. @description \"Quantity of Motion (QoM) of hand\"",
+									"text" : "j.return gdif/body/hand/right/motion/quantity @type decimal @range/bounds 0. 1. @description \"Quantity of Motion (QoM) of hand\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -3933,7 +3933,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/body/hand/right/orientation @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\"",
+									"text" : "j.return gdif/body/hand/right/orientation @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -3948,7 +3948,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/body/hand/right/distance @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\"",
+									"text" : "j.return gdif/body/hand/right/distance @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -4005,7 +4005,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.oscroute /on /unit /description",
+									"text" : "j.oscroute /on /unit /description",
 									"numinlets" : 1,
 									"fontname" : "Verdana",
 									"id" : "obj-14",
@@ -4126,7 +4126,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/body/hand/right/finger/2/press @type boolean @range/bounds 0 1 @description \"Finger up or down\"",
+									"text" : "j.return gdif/body/hand/right/finger/2/press @type boolean @range/bounds 0 1 @description \"Finger up or down\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -4141,7 +4141,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/body/hand/right/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\"",
+									"text" : "j.return gdif/body/hand/right/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -4156,7 +4156,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/body/hand/right/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\"",
+									"text" : "j.return gdif/body/hand/right/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -4199,7 +4199,7 @@
 										"boxes" : [ 											{
 												"box" : 												{
 													"maxclass" : "newobj",
-													"text" : "jcom.init",
+													"text" : "j.init",
 													"numinlets" : 1,
 													"fontname" : "Verdana",
 													"id" : "obj-1",
@@ -4810,7 +4810,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute /raw /cooked /body /device /environment /performance /meta",
+					"text" : "j.oscroute /raw /cooked /body /device /environment /performance /meta",
 					"numinlets" : 1,
 					"fontname" : "Verdana",
 					"id" : "obj-26",
@@ -4851,7 +4851,7 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.oscroute /on /unit /description",
+									"text" : "j.oscroute /on /unit /description",
 									"numinlets" : 1,
 									"fontname" : "Verdana",
 									"id" : "obj-1",
@@ -4972,7 +4972,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/cooked/button @type boolean @range/bounds 0 1 @description \"Mouse button on or off\"",
+									"text" : "j.return gdif/cooked/button @type boolean @range/bounds 0 1 @description \"Mouse button on or off\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -4987,7 +4987,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/cooked/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of mouse\"",
+									"text" : "j.return gdif/cooked/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of mouse\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -5002,7 +5002,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/cooked/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of mouse\"",
+									"text" : "j.return gdif/cooked/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of mouse\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -5045,7 +5045,7 @@
 										"boxes" : [ 											{
 												"box" : 												{
 													"maxclass" : "newobj",
-													"text" : "jcom.init",
+													"text" : "j.init",
 													"numinlets" : 1,
 													"fontname" : "Verdana",
 													"id" : "obj-1",
@@ -5566,7 +5566,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.oscroute /on /unit /description",
+									"text" : "j.oscroute /on /unit /description",
 									"numinlets" : 1,
 									"fontname" : "Verdana",
 									"id" : "obj-5",
@@ -5673,7 +5673,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/raw/button @type boolean @range/bounds 0 1 @description \"Mouse button on off\"",
+									"text" : "j.return gdif/raw/button @type boolean @range/bounds 0 1 @description \"Mouse button on off\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -5688,7 +5688,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/raw/location/vertical @type integer @range/bounds 0 2000 @description \"Vertical position of mouse\"",
+									"text" : "j.return gdif/raw/location/vertical @type integer @range/bounds 0 2000 @description \"Vertical position of mouse\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -5703,7 +5703,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.return gdif/raw/location/horizontal @type integer @range/bounds 0 2000 @description \"Horizontal position of mouse\"",
+									"text" : "j.return gdif/raw/location/horizontal @type integer @range/bounds 0 2000 @description \"Horizontal position of mouse\"",
 									"linecount" : 2,
 									"numinlets" : 1,
 									"fontname" : "Verdana",
@@ -5994,7 +5994,7 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "newobj",
-									"text" : "jcom.init",
+									"text" : "j.init",
 									"numinlets" : 1,
 									"fontname" : "Verdana",
 									"id" : "obj-2",
@@ -6228,7 +6228,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.return delta/angle @type decimal @range/bounds -3.14 3.14 @description \"Angle (in radians) of relative position of mouse.\"",
+					"text" : "j.return delta/angle @type decimal @range/bounds -3.14 3.14 @description \"Angle (in radians) of relative position of mouse.\"",
 					"linecount" : 2,
 					"numinlets" : 1,
 					"fontname" : "Verdana",
@@ -6285,7 +6285,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.return delta/magnitude @type decimal @range/bounds 0. 0.4 @description \"Mangitude (in screen percentage) of relative position of mouse (sum of horizontal and vertical).\"",
+					"text" : "j.return delta/magnitude @type decimal @range/bounds 0. 0.4 @description \"Mangitude (in screen percentage) of relative position of mouse (sum of horizontal and vertical).\"",
 					"linecount" : 2,
 					"numinlets" : 1,
 					"fontname" : "Verdana",
@@ -6300,7 +6300,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.return delta/y @type decimal @range/bounds -0.2 0.2 @description \"Vertical delta position of mouse\"",
+					"text" : "j.return delta/y @type decimal @range/bounds -0.2 0.2 @description \"Vertical delta position of mouse\"",
 					"linecount" : 2,
 					"numinlets" : 1,
 					"fontname" : "Verdana",
@@ -6315,7 +6315,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.return delta/x @type decimal @range/bounds -0.2 0.2 @description \"Horizontal delta position of mouse\"",
+					"text" : "j.return delta/x @type decimal @range/bounds -0.2 0.2 @description \"Horizontal delta position of mouse\"",
 					"linecount" : 2,
 					"numinlets" : 1,
 					"fontname" : "Verdana",
@@ -6345,7 +6345,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute /reference /mode /mouse_on /sample_rate /gdif",
+					"text" : "j.oscroute /reference /mode /mouse_on /sample_rate /gdif",
 					"numinlets" : 1,
 					"fontname" : "Verdana",
 					"id" : "obj-46",

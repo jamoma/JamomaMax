@@ -25,7 +25,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 191.0, 71.0, 166.0, 19.0 ],
-					"text" : "jcom.pass /center /ring /ripple"
+					"text" : "j.pass /center /ring /ripple"
 				}
 
 			}
@@ -39,7 +39,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 13.0, 71.0, 175.0, 19.0 ],
-					"text" : "jcom.oscroute /genframe /direct"
+					"text" : "j.oscroute /genframe /direct"
 				}
 
 			}

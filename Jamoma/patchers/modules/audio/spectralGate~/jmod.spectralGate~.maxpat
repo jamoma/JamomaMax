@@ -34,7 +34,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 520.0, 141.0, 19.0 ],
-					"text" : "jcom.meter_receive 2"
+					"text" : "j.meter_receive 2"
 				}
 
 			}
@@ -48,14 +48,14 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 475.0, 141.0, 19.0 ],
-					"text" : "jcom.meter_receive 1"
+					"text" : "j.meter_receive 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-19",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -68,7 +68,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-20",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -110,7 +110,7 @@
 				"box" : 				{
 					"defaultvalue" : 100.0,
 					"id" : "obj-69",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -126,7 +126,7 @@
 				"box" : 				{
 					"defaultvalue" : 100.0,
 					"id" : "obj-67",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -141,7 +141,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-66",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -184,7 +184,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 550.0, 370.0, 562.0, 31.0 ],
-					"text" : "jcom.parameter invert @type boolean @description \"Sets the threshold below which a bin of the spectrum is attenuated.\""
+					"text" : "j.parameter invert @type boolean @description \"Sets the threshold below which a bin of the spectrum is attenuated.\""
 				}
 
 			}
@@ -199,7 +199,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 550.0, 270.0, 603.0, 31.0 ],
-					"text" : "jcom.parameter response/decay @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
+					"text" : "j.parameter response/decay @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
 
 			}
@@ -214,7 +214,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 550.0, 175.0, 605.0, 31.0 ],
-					"text" : "jcom.parameter response/attack @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
+					"text" : "j.parameter response/attack @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
 
 			}
@@ -229,7 +229,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 550.0, 90.0, 591.0, 31.0 ],
-					"text" : "jcom.parameter threshold @type decimal @range/bounds -48. 18. @range/clipmode none @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
+					"text" : "j.parameter threshold @type decimal @range/bounds -48. 18. @range/clipmode none @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
 
 			}
@@ -270,7 +270,7 @@
 					"has_mix" : 1,
 					"has_mute" : 1,
 					"id" : "obj-50",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -315,7 +315,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 25.0, 200.0, 382.0, 31.0 ],
-					"text" : "jcom.model @description \"Spectral purification and noise reduction. This module is based on the Brita plugin that was part of the Hipno plugins.\""
+					"text" : "j.model @description \"Spectral purification and noise reduction. This module is based on the Brita plugin that was part of the Hipno plugins.\""
 				}
 
 			}
@@ -375,7 +375,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 135.0, 430.0, 74.0, 19.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -389,7 +389,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "", "" ],
 					"patching_rect" : [ 135.0, 330.0, 67.0, 19.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}

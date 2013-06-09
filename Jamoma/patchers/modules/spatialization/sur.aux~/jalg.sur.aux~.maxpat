@@ -155,7 +155,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 98.0, 55.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -305,7 +305,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.dataspace.mxo",
+								"name" : "j.dataspace.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -404,7 +404,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 307.0, 146.0, 137.0, 43.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -484,7 +484,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 307.0, 124.0, 307.0, 19.0 ],
-									"text" : "jcom.oscroute /gain /active"
+									"text" : "j.oscroute /gain /active"
 								}
 
 							}
@@ -624,11 +624,11 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.dataspace.mxo",
+								"name" : "j.dataspace.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -727,7 +727,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 307.0, 146.0, 137.0, 43.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -807,7 +807,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 307.0, 124.0, 307.0, 19.0 ],
-									"text" : "jcom.oscroute /gain /active"
+									"text" : "j.oscroute /gain /active"
 								}
 
 							}
@@ -947,11 +947,11 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.dataspace.mxo",
+								"name" : "j.dataspace.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -1050,7 +1050,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 307.0, 146.0, 137.0, 43.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -1130,7 +1130,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 307.0, 124.0, 307.0, 19.0 ],
-									"text" : "jcom.oscroute /gain /active"
+									"text" : "j.oscroute /gain /active"
 								}
 
 							}
@@ -1270,11 +1270,11 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.dataspace.mxo",
+								"name" : "j.dataspace.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -1308,7 +1308,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"patching_rect" : [ 70.0, 54.0, 489.0, 19.0 ],
-					"text" : "jcom.oscroute /aux.1 /aux.2 /aux.3 /audio/gain /audio/mute"
+					"text" : "j.oscroute /aux.1 /aux.2 /aux.3 /audio/gain /audio/mute"
 				}
 
 			}
@@ -1323,7 +1323,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 258.0, 291.0, 94.0, 31.0 ],
-					"text" : "jcom.gain≈ @interpolated 1"
+					"text" : "j.gain≈ @interpolated 1"
 				}
 
 			}
@@ -1338,7 +1338,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 164.0, 291.0, 94.0, 31.0 ],
-					"text" : "jcom.gain≈ @interpolated 1"
+					"text" : "j.gain≈ @interpolated 1"
 				}
 
 			}
@@ -1397,7 +1397,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 70.0, 291.0, 94.0, 31.0 ],
-					"text" : "jcom.gain≈ @interpolated 1"
+					"text" : "j.gain≈ @interpolated 1"
 				}
 
 			}
@@ -1593,15 +1593,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.gain≈.mxo",
+				"name" : "j.gain≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
  ]

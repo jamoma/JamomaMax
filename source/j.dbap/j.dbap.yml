@@ -1,0 +1,25 @@
+
+sources:
+  - j.dbap.cpp		
+  - hull2D.cpp		
+  - ../c74support/max-includes/common/commonsyms.cpp
+    
+includes:
+  - .
+  - ../../../../Core/Foundation/library/includes
+  - ../../../../Core/Modular/library/includes
+  - ../../../../Core/Modular/library/PeerObject
+  - ../../../../Core/Modular/library/ModularForMax
+  - ../../../../Core/Modular/library/SchedulerLib
+  - ../../../../Core/Modular/library/ProtocolLib
+  - ../../../../Core/DSP/library/includes
+  - ../classwrapper
+  - C74-INCLUDES
+  - "../../../../../Core/Shared/max/c74support/jit-includes"
+  
+libraries:
+  - FOUNDATION
+  - MODULAR  
+  - C74
+
+prefix: ../c74support/max-includes/macho-prefix.pch

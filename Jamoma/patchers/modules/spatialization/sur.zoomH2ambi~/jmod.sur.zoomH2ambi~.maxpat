@@ -102,7 +102,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 75.0, 288.0, 336.0, 34.0 ],
-					"text" : "jcom.model @description \"Convert a Zoom-H2 four channel recording into a horizontal-only B-format 2nd order\""
+					"text" : "j.model @description \"Convert a Zoom-H2 four channel recording into a horizontal-only B-format 2nd order\""
 				}
 
 			}
@@ -116,7 +116,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 140.0, 451.0, 49.0, 20.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -170,7 +170,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 101.0, 162.0, 147.0, 48.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input dB @output linear"
+									"text" : "j.dataspace @dataspace gain @input dB @output linear"
 								}
 
 							}
@@ -735,7 +735,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 101.0, 133.0, 125.0, 19.0 ],
-									"text" : "jcom.oscroute /gain/W"
+									"text" : "j.oscroute /gain/W"
 								}
 
 							}
@@ -764,7 +764,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 269.0, 482.0, 191.0, 19.0 ],
-									"text" : "jcom.pack≈ 9"
+									"text" : "j.pack≈ 9"
 								}
 
 							}
@@ -778,7 +778,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 596.0, 105.0, 59.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -792,7 +792,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 511.0, 102.0, 59.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -806,7 +806,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 399.0, 100.0, 59.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -820,7 +820,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 266.0, 103.0, 59.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -1168,7 +1168,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 443.0, 19.0, 536.0, 34.0 ],
-					"text" : "jcom.parameter gain/W @type decimal @description \"gain of the B-format's W-channel\" @range/bounds -60. 12. @range/clipmode none @ramp/drive Max @ramp/function linear"
+					"text" : "j.parameter gain/W @type decimal @description \"gain of the B-format's W-channel\" @range/bounds -60. 12. @range/clipmode none @ramp/drive Max @ramp/function linear"
 				}
 
 			}
@@ -1324,7 +1324,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 503.0, 394.0, 93.0, 19.0 ],
-					"text" : "jcom.unpack≈ 4"
+					"text" : "j.unpack≈ 4"
 				}
 
 			}
@@ -1332,7 +1332,7 @@
 				"box" : 				{
 					"background" : 1,
 					"id" : "obj-1",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

@@ -414,7 +414,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 405.0, 585.0, 89.0, 19.0 ],
-					"text" : "jcom.xfade~ 2"
+					"text" : "j.xfade~ 2"
 				}
 
 			}
@@ -578,7 +578,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
 									"patching_rect" : [ 285.0, 150.0, 190.0, 19.0 ],
-									"text" : "pfft~ jcom.gizmo_transpose 4096 4"
+									"text" : "pfft~ j.gizmo_transpose 4096 4"
 								}
 
 							}
@@ -592,7 +592,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
 									"patching_rect" : [ 85.0, 150.0, 190.0, 19.0 ],
-									"text" : "pfft~ jcom.gizmo_transpose 4096 4"
+									"text" : "pfft~ j.gizmo_transpose 4096 4"
 								}
 
 							}
@@ -655,7 +655,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.gizmo_transpose.maxpat",
+								"name" : "j.gizmo_transpose.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/gizmo_transpose",
 								"type" : "JSON",
 								"implicit" : 1
@@ -1268,7 +1268,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 436.0, 71.0, 94.0, 31.0 ],
-					"text" : "jcom.oscroute /buffername"
+					"text" : "j.oscroute /buffername"
 				}
 
 			}
@@ -1364,7 +1364,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 404.0, 142.0, 52.0, 19.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -1498,7 +1498,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 300.0, 220.0, 59.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -2218,7 +2218,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 474.0, 50.0, 154.0, 19.0 ],
-									"text" : "jcom.oscroute /active /mode"
+									"text" : "j.oscroute /active /mode"
 								}
 
 							}
@@ -2785,13 +2785,13 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.thru.maxpat",
+								"name" : "j.thru.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -3228,7 +3228,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 463.0, 242.0, 306.0, 19.0 ],
-					"text" : "jcom.oscroute /start /stop"
+					"text" : "j.oscroute /start /stop"
 				}
 
 			}
@@ -3321,7 +3321,7 @@
 					"numoutlets" : 12,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 242.0, 47.0, 841.0, 19.0 ],
-					"text" : "jcom.oscroute /open /loop /play /sample /reverse /speed/ratio /speed/active /direct /loopsync /pitch/active /pitch/ratio"
+					"text" : "j.oscroute /open /loop /play /sample /reverse /speed/ratio /speed/active /direct /loopsync /pitch/active /pitch/ratio"
 				}
 
 			}
@@ -4239,29 +4239,29 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.gizmo_transpose.maxpat",
+				"name" : "j.gizmo_transpose.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/gizmo_transpose",
 				"patcherrelativepath" : "../../../library/components/gizmo_transpose",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.xfade~.mxo",
+				"name" : "j.xfade~.mxo",
 				"type" : "iLaX"
 			}
  ]

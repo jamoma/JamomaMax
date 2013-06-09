@@ -230,7 +230,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 95.0, 550.0, 361.0, 20.0 ],
-									"text" : "jcom.return gdif/cooked/voice/* @description \"Cooked output.\""
+									"text" : "j.return gdif/cooked/voice/* @description \"Cooked output.\""
 								}
 
 							}
@@ -314,7 +314,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 69.0, 54.0, 208.0, 20.0 ],
-									"text" : "jcom.oscroute /on /unit /description"
+									"text" : "j.oscroute /on /unit /description"
 								}
 
 							}
@@ -1647,7 +1647,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 53.0, 83.0, 162.0, 20.0 ],
-					"text" : "jcom.oscroute /midiIn /gdif"
+					"text" : "j.oscroute /midiIn /gdif"
 				}
 
 			}
@@ -1752,7 +1752,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 144.0, 46.0, 57.0, 20.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -2017,7 +2017,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 307.0, 347.0, 33.0 ],
-									"text" : "jcom.return gdif/meta/flow @type decimal @range/bounds 0. 1. @description \"Fluidity of movements (legato-staccato)\""
+									"text" : "j.return gdif/meta/flow @type decimal @range/bounds 0. 1. @description \"Fluidity of movements (legato-staccato)\""
 								}
 
 							}
@@ -2032,7 +2032,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 256.0, 337.0, 33.0 ],
-									"text" : "jcom.return gdif/meta/dynamics @type decimal @range/bounds 0. 1. @description \"Dynamic level (pp-FF)\""
+									"text" : "j.return gdif/meta/dynamics @type decimal @range/bounds 0. 1. @description \"Dynamic level (pp-FF)\""
 								}
 
 							}
@@ -2116,7 +2116,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 19.0, 53.0, 208.0, 20.0 ],
-									"text" : "jcom.oscroute /on /unit /description"
+									"text" : "j.oscroute /on /unit /description"
 								}
 
 							}
@@ -2262,7 +2262,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 144.0, 46.0, 57.0, 20.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -2846,7 +2846,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 19.0, 53.0, 208.0, 20.0 ],
-									"text" : "jcom.oscroute /on /unit /description"
+									"text" : "j.oscroute /on /unit /description"
 								}
 
 							}
@@ -2968,7 +2968,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 71.0, 371.0, 344.0, 33.0 ],
-									"text" : "jcom.return gdif/device/mouse/button/2/press @type boolean @range/bounds 0 1 @description \"Button up or down\""
+									"text" : "j.return gdif/device/mouse/button/2/press @type boolean @range/bounds 0 1 @description \"Button up or down\""
 								}
 
 							}
@@ -2983,7 +2983,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 519.0, 422.0, 370.0, 33.0 ],
-									"text" : "jcom.return gdif/device/mouse/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\""
+									"text" : "j.return gdif/device/mouse/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\""
 								}
 
 							}
@@ -2998,7 +2998,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 346.0, 371.0, 384.0, 33.0 ],
-									"text" : "jcom.return gdif/device/mouse/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\""
+									"text" : "j.return gdif/device/mouse/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\""
 								}
 
 							}
@@ -3037,7 +3037,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 144.0, 46.0, 57.0, 20.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -3579,7 +3579,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 144.0, 46.0, 57.0, 20.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -3844,7 +3844,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 307.0, 404.0, 33.0 ],
-									"text" : "jcom.return gdif/performance/fluidity @type decimal @range/bounds 0. 1. @description \"Fluidity of movements (legato-staccato)\""
+									"text" : "j.return gdif/performance/fluidity @type decimal @range/bounds 0. 1. @description \"Fluidity of movements (legato-staccato)\""
 								}
 
 							}
@@ -3859,7 +3859,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 256.0, 337.0, 33.0 ],
-									"text" : "jcom.return gdif/performance/dynamics @type decimal @range/bounds 0. 1. @description \"Dynamic level (pp-FF)\""
+									"text" : "j.return gdif/performance/dynamics @type decimal @range/bounds 0. 1. @description \"Dynamic level (pp-FF)\""
 								}
 
 							}
@@ -3943,7 +3943,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 19.0, 53.0, 208.0, 20.0 ],
-									"text" : "jcom.oscroute /on /unit /description"
+									"text" : "j.oscroute /on /unit /description"
 								}
 
 							}
@@ -4089,7 +4089,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 144.0, 46.0, 57.0, 20.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -4684,7 +4684,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 144.0, 46.0, 57.0, 20.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -4949,7 +4949,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 270.0, 386.0, 33.0 ],
-									"text" : "jcom.return gdif/body/hand/right/motion/direction @type decimal @range/bounds 0. 1. @description \"Direction of motion in radians\""
+									"text" : "j.return gdif/body/hand/right/motion/direction @type decimal @range/bounds 0. 1. @description \"Direction of motion in radians\""
 								}
 
 							}
@@ -4964,7 +4964,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 219.0, 401.0, 33.0 ],
-									"text" : "jcom.return gdif/body/hand/right/motion/quantity @type decimal @range/bounds 0. 1. @description \"Quantity of Motion (QoM) of hand\""
+									"text" : "j.return gdif/body/hand/right/motion/quantity @type decimal @range/bounds 0. 1. @description \"Quantity of Motion (QoM) of hand\""
 								}
 
 							}
@@ -5021,7 +5021,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 699.0, 371.0, 355.0, 33.0 ],
-									"text" : "jcom.return gdif/body/hand/right/orientation @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\""
+									"text" : "j.return gdif/body/hand/right/orientation @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\""
 								}
 
 							}
@@ -5036,7 +5036,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 662.0, 327.0, 363.0, 33.0 ],
-									"text" : "jcom.return gdif/body/hand/right/distance @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\""
+									"text" : "j.return gdif/body/hand/right/distance @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\""
 								}
 
 							}
@@ -5092,7 +5092,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 19.0, 53.0, 208.0, 20.0 ],
-									"text" : "jcom.oscroute /on /unit /description"
+									"text" : "j.oscroute /on /unit /description"
 								}
 
 							}
@@ -5214,7 +5214,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 71.0, 371.0, 345.0, 33.0 ],
-									"text" : "jcom.return gdif/body/hand/right/finger/2/press @type boolean @range/bounds 0 1 @description \"Finger up or down\""
+									"text" : "j.return gdif/body/hand/right/finger/2/press @type boolean @range/bounds 0 1 @description \"Finger up or down\""
 								}
 
 							}
@@ -5229,7 +5229,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 519.0, 422.0, 383.0, 33.0 ],
-									"text" : "jcom.return gdif/body/hand/right/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\""
+									"text" : "j.return gdif/body/hand/right/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\""
 								}
 
 							}
@@ -5244,7 +5244,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 346.0, 371.0, 398.0, 33.0 ],
-									"text" : "jcom.return gdif/body/hand/right/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\""
+									"text" : "j.return gdif/body/hand/right/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\""
 								}
 
 							}
@@ -5283,7 +5283,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 144.0, 46.0, 57.0, 20.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -5860,7 +5860,7 @@
 					"numoutlets" : 8,
 					"outlettype" : [ "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 119.0, 116.0, 437.0, 20.0 ],
-					"text" : "jcom.oscroute /raw /cooked /body /device /environment /performance /meta"
+					"text" : "j.oscroute /raw /cooked /body /device /environment /performance /meta"
 				}
 
 			}
@@ -5898,7 +5898,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 19.0, 53.0, 208.0, 20.0 ],
-									"text" : "jcom.oscroute /on /unit /description"
+									"text" : "j.oscroute /on /unit /description"
 								}
 
 							}
@@ -6020,7 +6020,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 71.0, 241.0, 333.0, 33.0 ],
-									"text" : "jcom.return gdif/cooked/button @type boolean @range/bounds 0 1 @description \"Mouse button on or off\""
+									"text" : "j.return gdif/cooked/button @type boolean @range/bounds 0 1 @description \"Mouse button on or off\""
 								}
 
 							}
@@ -6035,7 +6035,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 657.0, 241.0, 358.0, 33.0 ],
-									"text" : "jcom.return gdif/cooked/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of mouse\""
+									"text" : "j.return gdif/cooked/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of mouse\""
 								}
 
 							}
@@ -6050,7 +6050,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 346.0, 241.0, 372.0, 33.0 ],
-									"text" : "jcom.return gdif/cooked/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of mouse\""
+									"text" : "j.return gdif/cooked/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of mouse\""
 								}
 
 							}
@@ -6089,7 +6089,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 144.0, 46.0, 57.0, 20.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -6658,7 +6658,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 74.0, 224.0, 355.0, 20.0 ],
-									"text" : "jcom.return gdif/raw/voice/* @description \"Raw MIDI output.\""
+									"text" : "j.return gdif/raw/voice/* @description \"Raw MIDI output.\""
 								}
 
 							}
@@ -6756,7 +6756,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 29.0, 50.0, 208.0, 20.0 ],
-									"text" : "jcom.oscroute /on /unit /description"
+									"text" : "j.oscroute /on /unit /description"
 								}
 
 							}

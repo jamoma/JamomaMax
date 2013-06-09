@@ -464,7 +464,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 42.0, 87.0, 223.0, 19.0 ],
-					"text" : "jcom.oscroute /source /active /updaterate"
+					"text" : "j.oscroute /source /active /updaterate"
 				}
 
 			}
@@ -660,7 +660,7 @@
 									"numoutlets" : 8,
 									"outlettype" : [ "", "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 31.0, 52.0, 403.0, 19.0 ],
-									"text" : "jcom.oscroute dummy /active /rate /offset/x /offset/y /size/x /size/y"
+									"text" : "j.oscroute dummy /active /rate /offset/x /offset/y /size/x /size/y"
 								}
 
 							}
@@ -932,7 +932,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"patching_rect" : [ 32.0, 359.0, 369.0, 19.0 ],
-					"text" : "jcom.oscroute /camera /file /video/gain /synth /desktop"
+					"text" : "j.oscroute /camera /file /video/gain /synth /desktop"
 				}
 
 			}
@@ -1002,7 +1002,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 101.0, 55.0, 115.0, 19.0 ],
-									"text" : "jcom.oscroute /noise"
+									"text" : "j.oscroute /noise"
 								}
 
 							}
@@ -1099,7 +1099,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "", "", "", "", "", "" ],
 									"patching_rect" : [ 101.0, 89.0, 329.0, 19.0 ],
-									"text" : "jcom.oscroute /planes /active /rate /size/x /size/y"
+									"text" : "j.oscroute /planes /active /rate /size/x /size/y"
 								}
 
 							}
@@ -1678,7 +1678,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 560.0, 57.0, 320.0, 19.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -1719,7 +1719,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 22.0, 52.0, 209.0, 19.0 ],
-									"text" : "jcom.pass /open /start /stop /autostart"
+									"text" : "j.pass /open /start /stop /autostart"
 								}
 
 							}
@@ -1733,7 +1733,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 833.0, 238.0, 57.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -1845,7 +1845,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 353.0, 368.0, 193.0, 19.0 ],
-									"text" : "jcom.pass time duration moviename"
+									"text" : "j.pass time duration moviename"
 								}
 
 							}
@@ -2179,7 +2179,7 @@
 									"numoutlets" : 10,
 									"outlettype" : [ "", "", "", "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 212.0, 88.0, 567.0, 19.0 ],
-									"text" : "jcom.oscroute /direct /active /loop/mode /size /rate /counter /audio /loop/bounds /framedump"
+									"text" : "j.oscroute /direct /active /loop/mode /size /rate /counter /audio /loop/bounds /framedump"
 								}
 
 							}
@@ -2777,7 +2777,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 385.0, 295.0, 168.0, 19.0 ],
-									"text" : "jcom.oscroute /device /camera"
+									"text" : "j.oscroute /device /camera"
 								}
 
 							}
@@ -2791,7 +2791,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 45.0, 60.0, 127.0, 19.0 ],
-									"text" : "jcom.pass /open /close"
+									"text" : "j.pass /open /close"
 								}
 
 							}
@@ -2844,7 +2844,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 429.0, 87.0, 63.0, 19.0 ],
-									"text" : "r jcom.init"
+									"text" : "r j.init"
 								}
 
 							}
@@ -3394,7 +3394,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 184.0, 60.0, 274.0, 19.0 ],
-									"text" : "jcom.oscroute /grabber /settings /size /direct"
+									"text" : "j.oscroute /grabber /settings /size /direct"
 								}
 
 							}
@@ -3879,7 +3879,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 50.0, 50.0, 60.0, 19.0 ],
-													"text" : "r jcom.init"
+													"text" : "r j.init"
 												}
 
 											}

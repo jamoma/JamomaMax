@@ -174,7 +174,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 436.0, 71.0, 94.0, 29.0 ],
-					"text" : "jcom.oscroute /buffername"
+					"text" : "j.oscroute /buffername"
 				}
 
 			}
@@ -270,7 +270,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 404.0, 142.0, 47.0, 18.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -796,7 +796,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 474.0, 50.0, 135.0, 18.0 ],
-									"text" : "jcom.oscroute /active /mode"
+									"text" : "j.oscroute /active /mode"
 								}
 
 							}
@@ -1336,7 +1336,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -2052,7 +2052,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 462.0, 243.0, 306.0, 17.0 ],
-					"text" : "jcom.oscroute /start /stop"
+					"text" : "j.oscroute /start /stop"
 				}
 
 			}
@@ -2145,7 +2145,7 @@
 					"numoutlets" : 10,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 242.0, 47.0, 680.0, 17.0 ],
-					"text" : "jcom.oscroute /open /loop /play /sample /reverse /speed/ratio /speed/active /direct /loopsync"
+					"text" : "j.oscroute /open /loop /play /sample /reverse /speed/ratio /speed/active /direct /loopsync"
 				}
 
 			}
@@ -2805,11 +2805,11 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
  ]

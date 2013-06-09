@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_jdoc_ref.xsl" type="text/xsl"?>
+<c74object category='spatialization, surround, pan' module='Jamoma' name='j.dbap'>
+  <digest>
+    Distance amplitude panning
+  </digest>
+  <!--DESCRIPTION-->
+  <description>
+    DBAP is a amplitude based spatialisation technique that can be used with
+    irregular loudspeakers configuation. It does not assume the loudspeakers to
+    be in a regular array or circle surrounding the listener, and neither is it
+    optimized for a particular listening position (sweet spot). 
+  </description>
+  <metadatalist>
+    <metadata name='author'>
+      Jamoma
+    </metadata>
+    <metadata name='author'>
+      Julien Rabin
+    </metadata>
+    <metadata name='tag'>
+      spatialization
+    </metadata>
+    <metadata name='tag'>
+      surround
+    </metadata>
+    <metadata name='tag'>
+      pan
+    </metadata>
+  </metadatalist>
+  <!--INLETS-->
+  <inletlist/>
+  <!--OUTLETS-->
+  <outletlist/>
+  <!--ATTRIBUTES-->
+  <attributelist>
+    <attribute type='integer' get='1' name='dimensions' set='1' size='1'>
+      <digest>
+        Number of dimensions of the geometric space: 1, 2 or 3.
+      </digest>
+      <description>
+        Number of dimensions of the geometric space: 1, 2 or 3.
+      </description>
+    </attribute>
+    <attribute type='integer' get='1' name='num_sources' set='1' size='1'>
+      <digest>
+        Number of sources to be panned
+      </digest>
+      <description>
+        Number of sources to be panned
+      </description>
+    </attribute>
+    <attribute type='integer' get='1' name='num_destinations' set='1' size='1'>
+      <digest>
+        Number of destination points the incoming signals will be panned to.
+      </digest>
+      <description>
+        Number of destination points the incoming signals will be panned to.
+      </description>
+    </attribute>
+    <attribute type='decimal' get='1' name='rolloff' set='1' size='1'>
+      <digest>
+        The relative roll-off of amplitude with increasing distance from a
+        destination point. The higher the roll-off value, the more sources will
+        tend to be attracted towards the closest destination(s). High values can
+        be used for synthetic spatialisation effects where sources are attracted
+        to one destination at a time, with non-discontinuous transitions from
+        one destination to the next.
+      </digest>
+      <description>
+        The relative roll-off of amplitude with increasing distance from a
+        destination point. The higher the roll-off value, the more sources will
+        tend to be attracted towards the closest destination(s). High values can
+        be used for synthetic spatialisation effects where sources are attracted
+        to one destination at a time, with non-discontinuous transitions from
+        one destination to the next.
+      </description>
+    </attribute>
+  </attributelist>
+  <!--MESSAGES-->
+  <methodlist>
+    <method name='blur'>
+      <digest>
+        The spatial blurriness of each source can be controlled by the message
+        <m>blur</m> with two arguments: the source instance number (integer),
+        starting at 1, and the blur factor to use (decimal). The blur factor is
+        related to the size of the space spanned by the destination points, with
+        the intent that it is supposed to perceptually work similarly when moved
+        from one layout to another. &lt;br/&gt; When the distance from source to
+        destination is calculated as part of the DBAP algorithm, a radius <i>r</i> is
+        introduced as an extra dimension in the calculation: distance =
+        sqrt(Δx*Δx+Δy*Δy+r*r) where r = blur*v &lt;br/&gt; v is the variance
+        of mean distance from destination points to the the mean position of the
+        destination space. The larger the blurriness is, the more evenly the
+        signal is distributed to all positions, resulting in a more diffuse
+        localization.
+      </digest>
+      <description>
+        The spatial blurriness of each source can be controlled by the message
+        <m>blur</m> with two arguments: the source instance number (integer),
+        starting at 1, and the blur factor to use (decimal). The blur factor is
+        related to the size of the space spanned by the destination points, with
+        the intent that it is supposed to perceptually work similarly when moved
+        from one layout to another. &lt;br/&gt; When the distance from source to
+        destination is calculated as part of the DBAP algorithm, a radius <i>r</i> is
+        introduced as an extra dimension in the calculation: distance =
+        sqrt(Δx*Δx+Δy*Δy+r*r) where r = blur*v &lt;br/&gt; v is the variance
+        of mean distance from destination points to the the mean position of the
+        destination space. The larger the blurriness is, the more evenly the
+        signal is distributed to all positions, resulting in a more diffuse
+        localization.
+      </description>
+    </method>
+    <method name='blurall'>
+      <digest>
+        The <m>blurall@ message with a decimal argument can be used to set @blur</m>
+        factor for all sources.
+      </digest>
+      <description>
+        The <m>blurall@ message with a decimal argument can be used to set @blur</m>
+        factor for all sources.
+      </description>
+    </method>
+    <method name='dst_position'>
+      <digest>
+        The message <m>dst_position</m> can be used to set the position of one
+        destination point. An integer argument sets the instance number,
+        starting from 1, and is followed by one to three decimal values setting
+        the position, according to the current number of dimensions.
+      </digest>
+      <description>
+        The message <m>dst_position</m> can be used to set the position of one
+        destination point. An integer argument sets the instance number,
+        starting from 1, and is followed by one to three decimal values setting
+        the position, according to the current number of dimensions.
+      </description>
+    </method>
+    <method name='info'>
+      <digest>
+        The message <m>info</m> cause <jcom>j.dbap</jcom> to output information concerning
+        current positions of sources and destinations.
+      </digest>
+      <description>
+        The message <m>info</m> cause <jcom>j.dbap</jcom> to output information concerning
+        current positions of sources and destinations.
+      </description>
+    </method>
+    <method name='master_gain'>
+      <digest>
+        The message <m>master_gain</m> can be used to control the general gain level
+        for all matrix~ routings controlled by <jcom>j.dbap.</jcom> All amplitude values
+        calculated internally by <jcom>j.dbap</jcom> are multiplied by the value of
+        <m>master_gain</m> before being passed to matrix~.
+      </digest>
+      <description>
+        The message <m>master_gain</m> can be used to control the general gain level
+        for all matrix~ routings controlled by <jcom>j.dbap.</jcom> All amplitude values
+        calculated internally by <jcom>j.dbap</jcom> are multiplied by the value of
+        <m>master_gain</m> before being passed to matrix~.
+      </description>
+    </method>
+    <method name='src_gain'>
+      <digest>
+        The message <m>src_gain</m> can be used to control incoming gain level
+        independently for each source. An integer argument sets the instance
+        number, starting from 1, and is followed by a decimal value interpreted
+        as linear gain level. All source gain levels are set to 1.0 on
+        initialization of the object.
+      </digest>
+      <description>
+        The message <m>src_gain</m> can be used to control incoming gain level
+        independently for each source. An integer argument sets the instance
+        number, starting from 1, and is followed by a decimal value interpreted
+        as linear gain level. All source gain levels are set to 1.0 on
+        initialization of the object.
+      </description>
+    </method>
+    <method name='src_mute'>
+      <digest>
+        The message <m>src_mute</m> can be used to individually mute and unmute the
+        sources. An integer argument sets the instance number, starting from 1,
+        and is followed by a integer or decimal value. A value of 0 or 0.0
+        un-mutes the source, all other values mutes the source.
+      </digest>
+      <description>
+        The message <m>src_mute</m> can be used to individually mute and unmute the
+        sources. An integer argument sets the instance number, starting from 1,
+        and is followed by a integer or decimal value. A value of 0 or 0.0
+        un-mutes the source, all other values mutes the source.
+      </description>
+    </method>
+    <method name='src_position'>
+      <digest>
+        The message <m>src_position</m> can be used to set the position of one source
+        point. An integer argument sets the instance number, starting from 1,
+        and is followed by one to three decimal values setting the position,
+        according to the current number of dimensions.
+      </digest>
+      <description>
+        The message <m>src_position</m> can be used to set the position of one source
+        point. An integer argument sets the instance number, starting from 1,
+        and is followed by one to three decimal values setting the position,
+        according to the current number of dimensions.
+      </description>
+    </method>
+  </methodlist>
+  <!--ARGUMENTS-->
+  <objarglist/>
+  <!--EXAMPLE-->
+  <examplelist>
+    <example img='j.dbap.maxref.png'/>
+  </examplelist>
+  <!--SEE ALSO-->
+  <seealsolist>
+    <seealso name='ambidecode~'/>
+    <seealso name='ambiencode~'/>
+    <seealso name='j.matrix≈'/>
+    <seealso name='matrix~'/>
+    <seealso name='jmod.sur.vbap~'/>
+  </seealsolist>
+  <discussion>
+    _
+  </discussion>
+  <!--MISC-->
+  <misc name='Output'/>
+</c74object>

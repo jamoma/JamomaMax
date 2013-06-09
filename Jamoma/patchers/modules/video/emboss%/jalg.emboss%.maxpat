@@ -18,7 +18,7 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute \/red \/green \/blue",
+					"text" : "j.oscroute \/red \/green \/blue",
 					"linecount" : 2,
 					"numinlets" : 1,
 					"patching_rect" : [ 146.0, 89.0, 79.0, 28.0 ],
@@ -33,7 +33,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute \/red \/green \/blue",
+					"text" : "j.oscroute \/red \/green \/blue",
 					"linecount" : 2,
 					"numinlets" : 1,
 					"patching_rect" : [ 54.0, 89.0, 79.0, 28.0 ],
@@ -48,7 +48,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute \/mask \/tint \/direct",
+					"text" : "j.oscroute \/mask \/tint \/direct",
 					"numinlets" : 1,
 					"patching_rect" : [ 54.0, 61.0, 286.0, 17.0 ],
 					"numoutlets" : 4,

@@ -95,7 +95,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 195.0, 245.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -164,8 +164,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 100.0, 343.0, 31.0 ],
-					"text" : "jcom.message colors @type decimalArray @description \"Set what colors to mix from (list containing 1 to 12 triplets of RGB values).\"",
-					"varname" : "jcom.parameter[7]"
+					"text" : "j.message colors @type decimalArray @description \"Set what colors to mix from (list containing 1 to 12 triplets of RGB values).\"",
+					"varname" : "j.parameter[7]"
 				}
 
 			}
@@ -180,7 +180,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 310.0, 597.0, 43.0 ],
-					"text" : "jcom.parameter random/stepSize @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 1. @range/clipmode both @description \"Set how much next color can deviate from the current when random mode is walk.\"",
+					"text" : "j.parameter random/stepSize @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 1. @range/clipmode both @description \"Set how much next color can deviate from the current when random mode is walk.\"",
 					"varname" : "random/step_size"
 				}
 
@@ -195,8 +195,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 175.0, 350.0, 19.0 ],
-					"text" : "jcom.message clear @description \"Set all colors on palett to black.\"",
-					"varname" : "jcom.parameter[5]"
+					"text" : "j.message clear @description \"Set all colors on palett to black.\"",
+					"varname" : "j.parameter[5]"
 				}
 
 			}
@@ -210,8 +210,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 65.0, 571.0, 19.0 ],
-					"text" : "jcom.message generateColor @repetitions/allow 1 @type none @description \"Generate new color triplet.\"",
-					"varname" : "jcom.parameter[4]"
+					"text" : "j.message generateColor @repetitions/allow 1 @type none @description \"Generate new color triplet.\"",
+					"varname" : "j.parameter[4]"
 				}
 
 			}
@@ -226,7 +226,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 475.0, 584.0, 31.0 ],
-					"text" : "jcom.parameter interpolate/stepSize @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @repetitions/allow 1 @description \"Step size when interpolating.\"",
+					"text" : "j.parameter interpolate/stepSize @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @repetitions/allow 1 @description \"Step size when interpolating.\"",
 					"varname" : "interpolate/step_size"
 				}
 
@@ -242,7 +242,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 240.0, 303.0, 31.0 ],
-					"text" : "jcom.parameter random/mode @type string @description \"Select distribution mode: random or walk.\"",
+					"text" : "j.parameter random/mode @type string @description \"Select distribution mode: random or walk.\"",
 					"varname" : "random/mode"
 				}
 
@@ -258,7 +258,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 400.0, 257.0, 31.0 ],
-					"text" : "jcom.parameter interpolate @type boolean @description \"Perform cubic interpolation (flag).\"",
+					"text" : "j.parameter interpolate @type boolean @description \"Perform cubic interpolation (flag).\"",
 					"varname" : "interpolate"
 				}
 
@@ -353,8 +353,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 140.0, 220.0, 43.0 ],
-					"text" : "jcom.model @type control @description \"Create various blends of the RGB colors available.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Create various blends of the RGB colors available.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -441,7 +441,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-37",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -613,39 +613,39 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
  ]

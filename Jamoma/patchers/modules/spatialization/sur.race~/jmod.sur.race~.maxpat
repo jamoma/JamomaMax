@@ -31,7 +31,7 @@
 					"annotation" : "gain for controlling the effect of the recursive bandpass sidechain",
 					"fontsize" : 9.0,
 					"id" : "obj-18",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -56,7 +56,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 415.0, 82.0, 588.0, 43.0 ],
-					"text" : "jcom.parameter sidechain @type decimal @range/bounds -60. 3. @range/clipmode both @description \"gain for controlling the effect of the recursive bandpass sidechain\" @dataspace gain @dataspace/unit dB"
+					"text" : "j.parameter sidechain @type decimal @range/bounds -60. 3. @range/clipmode both @description \"gain for controlling the effect of the recursive bandpass sidechain\" @dataspace gain @dataspace/unit dB"
 				}
 
 			}
@@ -112,7 +112,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 375.0, 166.0, 136.0, 19.0 ],
-					"text" : "jcom.parameter midHigh"
+					"text" : "j.parameter midHigh"
 				}
 
 			}
@@ -149,7 +149,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 379.0, 194.0, 121.0, 19.0 ],
-					"text" : "jcom.parameter delay"
+					"text" : "j.parameter delay"
 				}
 
 			}
@@ -208,7 +208,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 380.0, 222.0, 146.0, 19.0 ],
-					"text" : "jcom.parameter attenation"
+					"text" : "j.parameter attenation"
 				}
 
 			}
@@ -237,7 +237,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 78.0, 312.0, 88.0, 19.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -284,7 +284,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 25.0, 165.0, 233.0, 19.0 ],
-					"text" : "jcom.model @description \"Ambiphonics RACE\"",
+					"text" : "j.model @description \"Ambiphonics RACE\"",
 					"varname" : "jmod.hub"
 				}
 
@@ -374,7 +374,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "", "" ],
 					"patching_rect" : [ 116.0, 225.0, 68.0, 19.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -397,7 +397,7 @@
 					"has_gain" : 1,
 					"has_mute" : 1,
 					"id" : "obj-4",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -451,7 +451,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 375.0, 140.0, 129.0, 19.0 ],
-					"text" : "jcom.parameter lowMid"
+					"text" : "j.parameter lowMid"
 				}
 
 			}
@@ -722,39 +722,39 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.filter~.mxo",
+				"name" : "j.filter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.textslider.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
  ]

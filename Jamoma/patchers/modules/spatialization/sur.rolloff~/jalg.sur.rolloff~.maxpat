@@ -28,7 +28,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 20.0, 174.0, 138.0, 19.0 ],
-					"text" : "jcom.pass /mute /bypass"
+					"text" : "j.pass /mute /bypass"
 				}
 
 			}
@@ -42,7 +42,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 20.0, 42.0, 117.0, 19.0 ],
-					"text" : "jcom.oscroute /audio"
+					"text" : "j.oscroute /audio"
 				}
 
 			}
@@ -389,7 +389,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 303.0, 405.0, 156.0, 34.0 ],
-													"text" : "smoothing should be done inside jcom.mixer≈"
+													"text" : "smoothing should be done inside j.mixer≈"
 												}
 
 											}
@@ -801,7 +801,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 272.0, 178.0, 59.0, 19.0 ],
-																	"text" : "jcom.thru"
+																	"text" : "j.thru"
 																}
 
 															}
@@ -971,7 +971,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 142.0, 135.0, 242.0, 19.0 ],
-													"text" : "jcom.oscroute /source/active /source/position"
+													"text" : "j.oscroute /source/active /source/position"
 												}
 
 											}
@@ -1578,7 +1578,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 128.0, 97.0, 289.0, 19.0 ],
-									"text" : "jcom.oscroute /referenceDistance /rollOff /numSources",
+									"text" : "j.oscroute /referenceDistance /rollOff /numSources",
 									"varname" : "oscroute"
 								}
 
@@ -1688,7 +1688,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 124.0, 75.0, 267.0, 19.0 ],
-													"text" : "jcom.oscinstance"
+													"text" : "j.oscinstance"
 												}
 
 											}
@@ -1937,7 +1937,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 235.0, 239.0, 79.0, 19.0 ],
-					"text" : "jcom.mixer≈"
+					"text" : "j.mixer≈"
 				}
 
 			}

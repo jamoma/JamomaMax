@@ -47,7 +47,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 214.0, 170.0, 70.0, 19.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -430,8 +430,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 23.0, 97.0, 401.0, 19.0 ],
-					"text" : "jcom.model @description \"Unpack up to 32 mono signals onto a multi cable.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Unpack up to 32 mono signals onto a multi cable.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -483,7 +483,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 537.143066, 128.0, 557.0, 31.0 ],
-					"text" : "jcom.parameter channel_offset @type integer @repetitions/allow 1 @range/bounds 0 64 @range/clipmode low @description \"Set channel offset for signals. Only take effect the next time audio is started.\"",
+					"text" : "j.parameter channel_offset @type integer @repetitions/allow 1 @range/bounds 0 64 @range/clipmode low @description \"Set channel offset for signals. Only take effect the next time audio is started.\"",
 					"varname" : "channel_offset"
 				}
 
@@ -509,7 +509,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 267.40625, 302.0, 127.0, 19.0 ],
-					"text" : "jcom.offset≈ @offset 0"
+					"text" : "j.offset≈ @offset 0"
 				}
 
 			}
@@ -537,7 +537,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 95.40625, 206.0, 159.0, 19.0 ],
-					"text" : "jcom.oscroute channel_offset"
+					"text" : "j.oscroute channel_offset"
 				}
 
 			}
@@ -551,7 +551,7 @@
 					"numoutlets" : 33,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 267.40625, 333.0, 882.157227, 19.0 ],
-					"text" : "jcom.unpack≈ 32"
+					"text" : "j.unpack≈ 32"
 				}
 
 			}
@@ -930,27 +930,27 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.offset≈.mxo",
+				"name" : "j.offset≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

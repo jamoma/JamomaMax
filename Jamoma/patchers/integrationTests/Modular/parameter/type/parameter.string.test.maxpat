@@ -127,7 +127,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 26.0, 105.001862, 374.0, 20.0 ],
-									"text" : "jcom.test.assert.equal ramp-test @input ramp/status @compareTo 0"
+									"text" : "j.test.assert.equal ramp-test @input ramp/status @compareTo 0"
 								}
 
 							}
@@ -512,7 +512,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 481.0, 765.001831, 395.0, 20.0 ],
-									"text" : "jcom.test.assert.equal list-test @input foo bar ? @compareTo \"foo bar ?\""
+									"text" : "j.test.assert.equal list-test @input foo bar ? @compareTo \"foo bar ?\""
 								}
 
 							}
@@ -581,7 +581,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 481.0, 602.001831, 427.0, 20.0 ],
-									"text" : "jcom.test.assert.equal symbol-test @input \"foo bar ?\" @compareTo \"foo bar ?\""
+									"text" : "j.test.assert.equal symbol-test @input \"foo bar ?\" @compareTo \"foo bar ?\""
 								}
 
 							}
@@ -650,7 +650,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 481.0, 430.001801, 408.0, 20.0 ],
-									"text" : "jcom.test.assert.equal float-test @input 3.141593 @compareTo \"3.141593\""
+									"text" : "j.test.assert.equal float-test @input 3.141593 @compareTo \"3.141593\""
 								}
 
 							}
@@ -719,7 +719,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 482.5, 244.001862, 336.0, 20.0 ],
-									"text" : "jcom.test.assert.equal integer-test @input 3 @compareTo \"3\""
+									"text" : "j.test.assert.equal integer-test @input 3 @compareTo \"3\""
 								}
 
 							}
@@ -788,7 +788,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 489.0, 68.001831, 347.0, 20.0 ],
-									"text" : "jcom.test.assert.equal bang-test @input bang @compareTo foo"
+									"text" : "j.test.assert.equal bang-test @input bang @compareTo foo"
 								}
 
 							}
@@ -871,7 +871,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 767.001831, 348.0, 20.0 ],
-									"text" : "jcom.test.assert.equal reset-test @input reset @compareTo bar"
+									"text" : "j.test.assert.equal reset-test @input reset @compareTo bar"
 								}
 
 							}
@@ -912,7 +912,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 608.001831, 365.0, 20.0 ],
-									"text" : "jcom.test.assert.equal dec-test @input dec 2 @compareTo nothing"
+									"text" : "j.test.assert.equal dec-test @input dec 2 @compareTo nothing"
 								}
 
 							}
@@ -926,7 +926,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 430.001862, 357.0, 20.0 ],
-									"text" : "jcom.test.assert.equal inc-test @input inc 2 @compareTo nothing"
+									"text" : "j.test.assert.equal inc-test @input inc 2 @compareTo nothing"
 								}
 
 							}
@@ -940,7 +940,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 246.001862, 324.0, 20.0 ],
-									"text" : "jcom.test.assert.equal --test @input - @compareTo nothing"
+									"text" : "j.test.assert.equal --test @input - @compareTo nothing"
 								}
 
 							}
@@ -982,7 +982,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 68.001862, 330.0, 20.0 ],
-									"text" : "jcom.test.assert.equal +-test @input + @compareTo nothing"
+									"text" : "j.test.assert.equal +-test @input + @compareTo nothing"
 								}
 
 							}
@@ -1698,7 +1698,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1090.650879, 758.964111, 233.0, 33.0 ],
-									"text" : "jcom.test.assert.equal value/stepsize-test @input value/stepsize @compareTo bang"
+									"text" : "j.test.assert.equal value/stepsize-test @input value/stepsize @compareTo bang"
 								}
 
 							}
@@ -1754,7 +1754,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1090.650879, 637.964111, 223.0, 33.0 ],
-									"text" : "jcom.test.assert.equal value/default-test @input value/default @compareTo bang"
+									"text" : "j.test.assert.equal value/default-test @input value/default @compareTo bang"
 								}
 
 							}
@@ -1894,7 +1894,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1090.650879, 520.501892, 225.0, 33.0 ],
-									"text" : "jcom.test.assert.equal value-test @input value @compareTo bang"
+									"text" : "j.test.assert.equal value-test @input value @compareTo bang"
 								}
 
 							}
@@ -1922,7 +1922,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1090.650879, 396.947571, 225.0, 33.0 ],
-									"text" : "jcom.test.assert.equal type-test @input type @compareTo string"
+									"text" : "j.test.assert.equal type-test @input type @compareTo string"
 								}
 
 							}
@@ -1950,7 +1950,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1090.650879, 282.106842, 223.0, 33.0 ],
-									"text" : "jcom.test.assert.equal tag-test @input tag @compareTo none"
+									"text" : "j.test.assert.equal tag-test @input tag @compareTo none"
 								}
 
 							}
@@ -1978,7 +1978,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1090.650879, 151.464111, 223.0, 33.0 ],
-									"text" : "jcom.test.assert.equal service-test @input service @compareTo parameter"
+									"text" : "j.test.assert.equal service-test @input service @compareTo parameter"
 								}
 
 							}
@@ -2286,7 +2286,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 550.0, 758.964111, 241.0, 33.0 ],
-									"text" : "jcom.test.assert.equal repetitions/allow-test @input repetitions/allow @compareTo 1"
+									"text" : "j.test.assert.equal repetitions/allow-test @input repetitions/allow @compareTo 1"
 								}
 
 							}
@@ -2314,7 +2314,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 550.0, 637.964111, 240.0, 33.0 ],
-									"text" : "jcom.test.assert.equal range/clipmode-test @input range/clipmode @compareTo none"
+									"text" : "j.test.assert.equal range/clipmode-test @input range/clipmode @compareTo none"
 								}
 
 							}
@@ -2342,7 +2342,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 552.0, 520.501892, 247.0, 33.0 ],
-									"text" : "jcom.test.assert.equal range/bounds-test @input range/bounds @compareTo bang"
+									"text" : "j.test.assert.equal range/bounds-test @input range/bounds @compareTo bang"
 								}
 
 							}
@@ -2370,7 +2370,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 552.0, 396.947571, 220.0, 33.0 ],
-									"text" : "jcom.test.assert.equal ramp/status-test @input ramp/status @compareTo 0"
+									"text" : "j.test.assert.equal ramp/status-test @input ramp/status @compareTo 0"
 								}
 
 							}
@@ -2398,7 +2398,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 552.0, 282.106842, 296.0, 33.0 ],
-									"text" : "jcom.test.assert.equal ramp/function/parameters-test @input ramp/function/parameters @compareTo bang"
+									"text" : "j.test.assert.equal ramp/function/parameters-test @input ramp/function/parameters @compareTo bang"
 								}
 
 							}
@@ -2426,7 +2426,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 552.0, 162.001862, 236.0, 33.0 ],
-									"text" : "jcom.test.assert.equal ramp/function-test @input ramp/function @compareTo none"
+									"text" : "j.test.assert.equal ramp/function-test @input ramp/function @compareTo none"
 								}
 
 							}
@@ -2454,7 +2454,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 758.964111, 236.0, 33.0 ],
-									"text" : "jcom.test.assert.equal ramp/drive-test @input ramp/drive @compareTo none"
+									"text" : "j.test.assert.equal ramp/drive-test @input ramp/drive @compareTo none"
 								}
 
 							}
@@ -2482,7 +2482,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 637.964111, 220.0, 33.0 ],
-									"text" : "jcom.test.assert.equal priority-test @input priority @compareTo 0"
+									"text" : "j.test.assert.equal priority-test @input priority @compareTo 0"
 								}
 
 							}
@@ -2510,7 +2510,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 520.501892, 203.0, 33.0 ],
-									"text" : "jcom.test.assert.equal active-test @input active @compareTo 1"
+									"text" : "j.test.assert.equal active-test @input active @compareTo 1"
 								}
 
 							}
@@ -2552,7 +2552,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 396.947571, 236.0, 33.0 ],
-									"text" : "jcom.test.assert.equal description-test @input description @compareTo none"
+									"text" : "j.test.assert.equal description-test @input description @compareTo none"
 								}
 
 							}
@@ -2594,7 +2594,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 282.106842, 236.0, 33.0 ],
-									"text" : "jcom.test.assert.equal dataspace/unit-test @input dataspace/unit @compareTo none"
+									"text" : "j.test.assert.equal dataspace/unit-test @input dataspace/unit @compareTo none"
 								}
 
 							}
@@ -2636,7 +2636,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 162.001862, 220.0, 33.0 ],
-									"text" : "jcom.test.assert.equal dataspace-test @input dataspace @compareTo none"
+									"text" : "j.test.assert.equal dataspace-test @input dataspace @compareTo none"
 								}
 
 							}
@@ -3266,7 +3266,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 8.0, 59.0, 103.0, 20.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -3280,7 +3280,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "bang" ],
 					"patching_rect" : [ 8.0, 11.0, 85.0, 20.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}
@@ -3294,7 +3294,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 8.0, 136.0, 187.0, 20.0 ],
-					"text" : "jcom.parameter test @type string"
+					"text" : "j.parameter test @type string"
 				}
 
 			}
@@ -3355,28 +3355,28 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.test.start.maxpat",
+				"name" : "j.test.start.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.start",
 				"patcherrelativepath" : "../../../../../../Test/components/test.start",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.finished.maxpat",
+				"name" : "j.test.finished.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.finished",
 				"patcherrelativepath" : "../../../../../../Test/components/test.finished",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.assert.equal.maxpat",
+				"name" : "j.test.assert.equal.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.assert.equal",
 				"patcherrelativepath" : "../../../../../../Test/components/test.assert.equal",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
  ]

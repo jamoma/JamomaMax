@@ -138,7 +138,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 488.0, 233.0, 280.0, 19.0 ],
-					"text" : "jcom.oscroute /samplerate /vectorsize /numChannels"
+					"text" : "j.oscroute /samplerate /vectorsize /numChannels"
 				}
 
 			}
@@ -168,7 +168,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 401.0, 90.0, 490.0, 19.0 ],
-					"text" : "jcom.message update @type none @description \"refreshes the signal information if necessary\""
+					"text" : "j.message update @type none @description \"refreshes the signal information if necessary\""
 				}
 
 			}
@@ -226,7 +226,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 73.0, 278.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -319,7 +319,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 0.0, 140.0, 261.0, 19.0 ],
-					"text" : "jcom.model @description \"a module for jcom.info≈\"",
+					"text" : "j.model @description \"a module for j.info≈\"",
 					"varname" : "jalg.hub"
 				}
 
@@ -327,7 +327,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-17",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

@@ -21,7 +21,7 @@
 					"bgmode" : 1,
 					"id" : "obj-22",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 688.0, 70.0 ],
@@ -97,7 +97,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 511.0, 486.0, 84.0, 17.0 ],
-					"text" : "jcom.autoscale"
+					"text" : "j.autoscale"
 				}
 
 			}

@@ -21,7 +21,7 @@
 					"bgmode" : 1,
 					"id" : "obj-19",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 711.0, 70.0 ],
@@ -82,7 +82,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 50.0, 175.0, 121.0, 19.0 ],
-					"text" : "jcom.oscroute /trigger"
+					"text" : "j.oscroute /trigger"
 				}
 
 			}
@@ -143,7 +143,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 50.0, 735.0, 131.0, 19.0 ],
-					"text" : "jcom.pass /cue @strip 0"
+					"text" : "j.pass /cue @strip 0"
 				}
 
 			}
@@ -158,7 +158,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 50.0, 565.0, 136.0, 19.0 ],
-					"text" : "jcom.pass /cues @strip 0"
+					"text" : "j.pass /cues @strip 0"
 				}
 
 			}

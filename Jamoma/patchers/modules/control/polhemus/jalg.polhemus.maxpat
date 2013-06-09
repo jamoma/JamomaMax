@@ -34,7 +34,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 78.0, 681.0, 363.0, 19.0 ],
-					"text" : "jcom.return raw.8 @description \"Raw values from Polhemus sensor 8\""
+					"text" : "j.return raw.8 @description \"Raw values from Polhemus sensor 8\""
 				}
 
 			}
@@ -48,7 +48,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 78.0, 653.0, 363.0, 19.0 ],
-					"text" : "jcom.return raw.7 @description \"Raw values from Polhemus sensor 7\""
+					"text" : "j.return raw.7 @description \"Raw values from Polhemus sensor 7\""
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 78.0, 627.0, 363.0, 19.0 ],
-					"text" : "jcom.return raw.6 @description \"Raw values from Polhemus sensor 6\""
+					"text" : "j.return raw.6 @description \"Raw values from Polhemus sensor 6\""
 				}
 
 			}
@@ -76,7 +76,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 78.0, 599.0, 363.0, 19.0 ],
-					"text" : "jcom.return raw.5 @description \"Raw values from Polhemus sensor 5\""
+					"text" : "j.return raw.5 @description \"Raw values from Polhemus sensor 5\""
 				}
 
 			}
@@ -90,7 +90,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 78.0, 570.0, 363.0, 19.0 ],
-					"text" : "jcom.return raw.4 @description \"Raw values from Polhemus sensor 4\""
+					"text" : "j.return raw.4 @description \"Raw values from Polhemus sensor 4\""
 				}
 
 			}
@@ -104,7 +104,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 78.0, 542.0, 363.0, 19.0 ],
-					"text" : "jcom.return raw.3 @description \"Raw values from Polhemus sensor 3\""
+					"text" : "j.return raw.3 @description \"Raw values from Polhemus sensor 3\""
 				}
 
 			}
@@ -132,7 +132,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 78.0, 514.0, 363.0, 19.0 ],
-					"text" : "jcom.return raw.2 @description \"Raw values from Polhemus sensor 2\""
+					"text" : "j.return raw.2 @description \"Raw values from Polhemus sensor 2\""
 				}
 
 			}
@@ -146,7 +146,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 78.0, 488.0, 363.0, 19.0 ],
-					"text" : "jcom.return raw.1 @description \"Raw values from Polhemus sensor 1\""
+					"text" : "j.return raw.1 @description \"Raw values from Polhemus sensor 1\""
 				}
 
 			}
@@ -993,7 +993,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"patching_rect" : [ 63.0, 20.0, 319.0, 19.0 ],
-					"text" : "jcom.oscroute /active /updaterate /menu /update /initDevice"
+					"text" : "j.oscroute /active /updaterate /menu /update /initDevice"
 				}
 
 			}

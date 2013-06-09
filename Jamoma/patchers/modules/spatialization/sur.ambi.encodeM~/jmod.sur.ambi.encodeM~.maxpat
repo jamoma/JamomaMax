@@ -550,7 +550,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 279.0, 85.0, 55.0, 20.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -674,7 +674,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 602.0, 26.0, 403.0, 31.0 ],
-					"text" : "jcom.parameter flavor @repetitions/allow 0 @type string @description \"Ambisonics type of decoding and encoding. Furse-Malham, N3D or SN3D\"",
+					"text" : "j.parameter flavor @repetitions/allow 0 @type string @description \"Ambisonics type of decoding and encoding. Furse-Malham, N3D or SN3D\"",
 					"varname" : "destination/voices[5]"
 				}
 
@@ -728,7 +728,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 600.0, 106.0, 442.0, 31.0 ],
-					"text" : "jcom.parameter order @repetitions/allow 0 @type integer @range/bounds 1 11 @range/clipmode both @description \"maximum ambisonics order for encoding\"",
+					"text" : "j.parameter order @repetitions/allow 0 @type integer @range/bounds 1 11 @range/clipmode both @description \"maximum ambisonics order for encoding\"",
 					"varname" : "destination/voices[2]"
 				}
 
@@ -775,7 +775,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 536.0, 507.0, 517.0, 31.0 ],
-					"text" : "jcom.parameter interpolation @repetitions/allow 0 @type boolean @range/bounds 0 1 @range/clipmode both @description \"switch blockwise interpolation of all coefficient changes on/off\"",
+					"text" : "j.parameter interpolation @repetitions/allow 0 @type boolean @range/bounds 0 1 @range/clipmode both @description \"switch blockwise interpolation of all coefficient changes on/off\"",
 					"varname" : "destination/dimensions[1]"
 				}
 
@@ -1147,7 +1147,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 89.0, 68.0, 55.0, 20.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -1210,7 +1210,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 354.0, 165.0, 188.0, 20.0 ],
-									"text" : "jcom.oscroute /size /curve /decay"
+									"text" : "j.oscroute /size /curve /decay"
 								}
 
 							}
@@ -1224,7 +1224,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 88.0, 142.0, 137.0, 20.0 ],
-									"text" : "jcom.oscroute /distance"
+									"text" : "j.oscroute /distance"
 								}
 
 							}
@@ -1252,7 +1252,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 87.0, 113.0, 85.0, 20.0 ],
-									"text" : "jcom.oscroute"
+									"text" : "j.oscroute"
 								}
 
 							}
@@ -1266,7 +1266,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 354.0, 142.0, 199.0, 20.0 ],
-									"text" : "jcom.oscroute /center /numSources"
+									"text" : "j.oscroute /center /numSources"
 								}
 
 							}
@@ -3416,7 +3416,7 @@
 								"box" : 								{
 									"defaultvalue" : 100.0,
 									"id" : "obj-62",
-									"maxclass" : "jcom.textslider",
+									"maxclass" : "j.textslider",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -5275,7 +5275,7 @@
 									"id" : "obj-10",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 247.0, 282.0, 23.0 ],
@@ -5292,7 +5292,7 @@
 									"id" : "obj-11",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 218.0, 282.0, 23.0 ],
@@ -5309,7 +5309,7 @@
 									"id" : "obj-12",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 189.0, 282.0, 23.0 ],
@@ -5326,7 +5326,7 @@
 									"id" : "obj-13",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 160.0, 282.0, 23.0 ],
@@ -5343,7 +5343,7 @@
 									"id" : "obj-14",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 131.0, 282.0, 23.0 ],
@@ -5360,7 +5360,7 @@
 									"id" : "obj-15",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 102.0, 282.0, 23.0 ],
@@ -5377,7 +5377,7 @@
 									"id" : "obj-16",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 73.0, 282.0, 23.0 ],
@@ -5394,7 +5394,7 @@
 									"id" : "obj-17",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 44.0, 282.0, 23.0 ],
@@ -5411,7 +5411,7 @@
 									"id" : "obj-18",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 15.0, 282.0, 23.0 ],
@@ -5472,7 +5472,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 129.0, 161.0, 54.0, 19.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -5707,7 +5707,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 418.0, 413.0, 59.0, 19.0 ],
-													"text" : "jcom.thru"
+													"text" : "j.thru"
 												}
 
 											}
@@ -5736,7 +5736,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 188.0, 289.0, 59.0, 19.0 ],
-													"text" : "jcom.thru"
+													"text" : "j.thru"
 												}
 
 											}
@@ -6136,7 +6136,7 @@
 									"id" : "obj-28",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 450.0, 282.0, 23.0 ],
@@ -6153,7 +6153,7 @@
 									"id" : "obj-29",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 421.0, 282.0, 23.0 ],
@@ -6170,7 +6170,7 @@
 									"id" : "obj-3",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 450.0, 282.0, 23.0 ],
@@ -6187,7 +6187,7 @@
 									"id" : "obj-30",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 392.0, 282.0, 23.0 ],
@@ -6204,7 +6204,7 @@
 									"id" : "obj-31",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 363.0, 282.0, 23.0 ],
@@ -6221,7 +6221,7 @@
 									"id" : "obj-32",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 334.0, 282.0, 23.0 ],
@@ -6238,7 +6238,7 @@
 									"id" : "obj-33",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 305.0, 282.0, 23.0 ],
@@ -6255,7 +6255,7 @@
 									"id" : "obj-34",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 276.0, 282.0, 23.0 ],
@@ -6272,7 +6272,7 @@
 									"id" : "obj-35",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 247.0, 282.0, 23.0 ],
@@ -6289,7 +6289,7 @@
 									"id" : "obj-36",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 218.0, 282.0, 23.0 ],
@@ -6306,7 +6306,7 @@
 									"id" : "obj-37",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 189.0, 282.0, 23.0 ],
@@ -6323,7 +6323,7 @@
 									"id" : "obj-38",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 160.0, 282.0, 23.0 ],
@@ -6340,7 +6340,7 @@
 									"id" : "obj-39",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 131.0, 282.0, 23.0 ],
@@ -6357,7 +6357,7 @@
 									"id" : "obj-4",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 421.0, 282.0, 23.0 ],
@@ -6374,7 +6374,7 @@
 									"id" : "obj-40",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 102.0, 282.0, 23.0 ],
@@ -6390,7 +6390,7 @@
 									"id" : "obj-41",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 73.0, 282.0, 23.0 ],
@@ -6406,7 +6406,7 @@
 									"id" : "obj-42",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 44.0, 282.0, 23.0 ],
@@ -6422,7 +6422,7 @@
 									"id" : "obj-43",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 15.0, 282.0, 23.0 ],
@@ -6455,7 +6455,7 @@
 									"id" : "obj-5",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 392.0, 282.0, 23.0 ],
@@ -6558,7 +6558,7 @@
 									"id" : "obj-6",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 363.0, 282.0, 23.0 ],
@@ -6575,7 +6575,7 @@
 									"id" : "obj-7",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 334.0, 282.0, 23.0 ],
@@ -6592,7 +6592,7 @@
 									"id" : "obj-8",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 305.0, 282.0, 23.0 ],
@@ -6609,7 +6609,7 @@
 									"id" : "obj-9",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 276.0, 282.0, 23.0 ],
@@ -6841,7 +6841,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 139.0, 387.0, 147.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -6855,8 +6855,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 48.0, 182.0, 324.0, 19.0 ],
-					"text" : "jcom.model @description \"Ambisonic encoding of mono signals.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Ambisonic encoding of mono signals.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -6870,7 +6870,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 297.0, 285.0, 58.0, 19.0 ],
-					"text" : "jcom.in 0"
+					"text" : "j.in 0"
 				}
 
 			}
@@ -7008,7 +7008,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 528.0, 279.0, 574.0, 31.0 ],
-					"text" : "jcom.parameter numSources @repetitions/allow 0 @type integer @range/bounds 1 32 @range/clipmode both @description \"Number of incomming mono sources to pan.\" @priority 1",
+					"text" : "j.parameter numSources @repetitions/allow 0 @type integer @range/bounds 1 32 @range/clipmode both @description \"Number of incomming mono sources to pan.\" @priority 1",
 					"varname" : "source/voices"
 				}
 
@@ -7120,7 +7120,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 536.0, 610.0, 495.0, 43.0 ],
-					"text" : "jcom.parameter center/decay @repetitions/allow 0 @type decimal @range/bounds 0 60 @range/clipmode low @description \"max. attenuation inside the center area in dB\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter center/decay @repetitions/allow 0 @type decimal @range/bounds 0 60 @range/clipmode low @description \"max. attenuation inside the center area in dB\" @dataspace gain @dataspace/unit dB",
 					"varname" : "destination/voices[4]"
 				}
 
@@ -7152,7 +7152,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 536.0, 574.0, 497.0, 31.0 ],
-					"text" : "jcom.parameter center/curve @repetitions/allow 0 @type decimal @range/bounds 0 1 @range/clipmode both @description \"curvature of the distance function inside the center area\"",
+					"text" : "j.parameter center/curve @repetitions/allow 0 @type decimal @range/bounds 0 1 @range/clipmode both @description \"curvature of the distance function inside the center area\"",
 					"varname" : "destination/voices[3]"
 				}
 
@@ -7184,7 +7184,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 536.0, 541.0, 458.0, 31.0 ],
-					"text" : "jcom.parameter center/size @repetitions/allow 0 @type decimal @range/bounds 0 128 @range/clipmode both @description \"Size of the center (in model units)\"",
+					"text" : "j.parameter center/size @repetitions/allow 0 @type decimal @range/bounds 0 128 @range/clipmode both @description \"Size of the center (in model units)\"",
 					"varname" : "destination/voices[1]"
 				}
 
@@ -7200,7 +7200,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 536.0, 471.0, 408.0, 31.0 ],
-					"text" : "jcom.message report @repetitions/allow 1 @type generic @description \"reports the state of the ambiencode external in the max window\""
+					"text" : "j.message report @repetitions/allow 1 @type generic @description \"reports the state of the ambiencode external in the max window\""
 				}
 
 			}
@@ -7210,7 +7210,7 @@
 					"has_mute" : 1,
 					"has_panel" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

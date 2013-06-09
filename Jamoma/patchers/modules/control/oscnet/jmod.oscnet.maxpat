@@ -28,7 +28,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 193.0, 231.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -43,7 +43,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 487.0, 214.0, 562.0, 31.0 ],
-					"text" : "jcom.message send @repetitions/allow 1 @description \"An Open Sound Control message to send out over the network.\""
+					"text" : "j.message send @repetitions/allow 1 @description \"An Open Sound Control message to send out over the network.\""
 				}
 
 			}
@@ -58,7 +58,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 193.0, 286.0, 599.0, 31.0 ],
-					"text" : "jcom.return receive @repetitions/allow 1 @type generic @description \"Open Sound Control messages coming in from the network are reported here.\""
+					"text" : "j.return receive @repetitions/allow 1 @type generic @description \"Open Sound Control messages coming in from the network are reported here.\""
 				}
 
 			}
@@ -91,7 +91,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 490.0, 95.0, 525.0, 19.0 ],
-					"text" : "jcom.parameter mode @type string @description \"Choose between single IP or multicast usage\"",
+					"text" : "j.parameter mode @type string @description \"Choose between single IP or multicast usage\"",
 					"varname" : "mode"
 				}
 
@@ -167,8 +167,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 16.0, 134.0, 345.0, 43.0 ],
-					"text" : "jcom.model @description \"Send and receive Open Sound Control (OSC) over a network port.  You may receive directly or join up to 2 multicast addresses in addition to receiving directly.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Send and receive Open Sound Control (OSC) over a network port.  You may receive directly or join up to 2 multicast addresses in addition to receiving directly.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -198,7 +198,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-12",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

@@ -53,7 +53,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 13.0, 72.0, 371.0, 19.0 ],
-					"text" : "jcom.oscroute /genframe /direct /slideDown /slideUp"
+					"text" : "j.oscroute /genframe /direct /slideDown /slideUp"
 				}
 
 			}

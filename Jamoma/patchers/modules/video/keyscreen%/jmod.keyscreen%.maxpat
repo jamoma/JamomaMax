@@ -124,7 +124,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 439.0, 57.0, 18.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -138,7 +138,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 45.0, 376.0, 139.0, 18.0 ],
-					"text" : "jcom.in 3"
+					"text" : "j.in 3"
 				}
 
 			}
@@ -250,7 +250,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 482.0, 609.0, 332.0, 30.0 ],
-					"text" : "jcom.parameter key/blue @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"blue level of the chromakey\"",
+					"text" : "j.parameter key/blue @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"blue level of the chromakey\"",
 					"varname" : "key/blue"
 				}
 
@@ -266,7 +266,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 482.0, 531.0, 339.0, 30.0 ],
-					"text" : "jcom.parameter key/green @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"green level of the chromakey\"",
+					"text" : "j.parameter key/green @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"green level of the chromakey\"",
 					"varname" : "key/green"
 				}
 
@@ -282,7 +282,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 482.0, 450.0, 327.0, 30.0 ],
-					"text" : "jcom.parameter key/red @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"red level of the chromakey\"",
+					"text" : "j.parameter key/red @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"red level of the chromakey\"",
 					"varname" : "key/red"
 				}
 
@@ -555,7 +555,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 482.0, 374.0, 312.0, 30.0 ],
-					"text" : "jcom.parameter mode @repetitions/allow 0 @type boolean @range/bounds 0 1 @description \"keying mode\"",
+					"text" : "j.parameter mode @repetitions/allow 0 @type boolean @range/bounds 0 1 @description \"keying mode\"",
 					"varname" : "mode"
 				}
 
@@ -571,7 +571,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 482.0, 307.0, 388.0, 30.0 ],
-					"text" : "jcom.parameter mask @repetitions/allow 0 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as mask\"",
+					"text" : "j.parameter mask @repetitions/allow 0 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as mask\"",
 					"varname" : "mask[1]"
 				}
 
@@ -587,7 +587,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 482.0, 238.0, 391.0, 30.0 ],
-					"text" : "jcom.parameter target @repetitions/allow 0 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as target\"",
+					"text" : "j.parameter target @repetitions/allow 0 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as target\"",
 					"varname" : "target[1]"
 				}
 
@@ -603,7 +603,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 483.0, 149.0, 253.0, 42.0 ],
-					"text" : "jcom.parameter key @repetitions/allow 0 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as key\"",
+					"text" : "j.parameter key @repetitions/allow 0 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as key\"",
 					"varname" : "key[1]"
 				}
 
@@ -675,7 +675,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 483.0, 81.0, 416.0, 30.0 ],
-					"text" : "jcom.parameter tolerance @repetitions/allow 0 @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Tolerance of the chromakey\"",
+					"text" : "j.parameter tolerance @repetitions/allow 0 @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Tolerance of the chromakey\"",
 					"varname" : "tolerance"
 				}
 
@@ -706,8 +706,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 7.0, 195.0, 262.0, 30.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Choke chromakey 3 sources\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Choke chromakey 3 sources\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -835,7 +835,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-67",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

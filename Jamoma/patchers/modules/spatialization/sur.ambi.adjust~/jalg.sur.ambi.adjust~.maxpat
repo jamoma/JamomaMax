@@ -691,7 +691,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 32.0, 52.0, 437.0, 19.0 ],
-													"text" : "A similar function for mapping amplitude to displayed levels as used by jcom.meter~"
+													"text" : "A similar function for mapping amplitude to displayed levels as used by j.meter~"
 												}
 
 											}
@@ -1736,7 +1736,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -1931,7 +1931,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -2126,7 +2126,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -2321,7 +2321,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -2516,7 +2516,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -2711,7 +2711,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -2906,7 +2906,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -3101,7 +3101,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -3296,7 +3296,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -3491,7 +3491,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -3686,7 +3686,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -3881,7 +3881,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -4076,7 +4076,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -4271,7 +4271,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -4466,7 +4466,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -4660,7 +4660,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 107.0, 76.0, 109.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -4784,7 +4784,7 @@
 									"numoutlets" : 17,
 									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 50.0, 55.0, 786.0, 19.0 ],
-									"text" : "jcom.oscroute /w /x /y /z /r /s /t /u /v /k /l /m /n /o /p /q"
+									"text" : "j.oscroute /w /x /y /z /r /s /t /u /v /k /l /m /n /o /p /q"
 								}
 
 							}
@@ -5303,7 +5303,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 34.0, 117.0, 185.0, 19.0 ],
-					"text" : "jcom.oscroute /order /meter"
+					"text" : "j.oscroute /order /meter"
 				}
 
 			}
@@ -7227,7 +7227,7 @@
 					"numoutlets" : 33,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 432.0, 155.0, 1139.0, 19.0 ],
-					"text" : "jcom.unpack≈ 32",
+					"text" : "j.unpack≈ 32",
 					"varname" : "multi.out"
 				}
 
@@ -7242,7 +7242,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 432.0, 442.0, 1114.5, 19.0 ],
-					"text" : "jcom.pack≈ 32",
+					"text" : "j.pack≈ 32",
 					"varname" : "multi.in"
 				}
 

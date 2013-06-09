@@ -95,7 +95,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 502.0, 335.0, 588.0, 31.0 ],
-					"text" : "jcom.parameter noise/threshold @type decimal @range/bounds 0. 100. @range/clipmode both @description \"Set threshold level for the noise reduction\"",
+					"text" : "j.parameter noise/threshold @type decimal @range/bounds 0. 100. @range/clipmode both @description \"Set threshold level for the noise reduction\"",
 					"varname" : "noise[2]"
 				}
 
@@ -110,7 +110,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 502.0, 157.0, 461.0, 19.0 ],
-					"text" : "jcom.parameter filter/active @type boolean @description \"Turn lowpass filter on and off\"",
+					"text" : "j.parameter filter/active @type boolean @description \"Turn lowpass filter on and off\"",
 					"varname" : "filter/on"
 				}
 
@@ -144,7 +144,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 502.0, 276.0, 432.0, 19.0 ],
-					"text" : "jcom.parameter noise/active @type boolean @description \"Turn on noise reduction\"",
+					"text" : "j.parameter noise/active @type boolean @description \"Turn on noise reduction\"",
 					"varname" : "noise[1]"
 				}
 
@@ -206,7 +206,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 502.0, 221.0, 562.0, 31.0 ],
-					"text" : "jcom.parameter filter/threshold @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Set the threshold level for the lowpass filter\"",
+					"text" : "j.parameter filter/threshold @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Set the threshold level for the lowpass filter\"",
 					"varname" : "filter/threshold"
 				}
 
@@ -221,7 +221,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 502.0, 101.093468, 503.0, 19.0 ],
-					"text" : "jcom.parameter record @type integer @description \"Turn on recording of the background image.\"",
+					"text" : "j.parameter record @type integer @description \"Turn on recording of the background image.\"",
 					"varname" : "record"
 				}
 
@@ -255,7 +255,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 502.0, 65.0, 594.0, 19.0 ],
-					"text" : "jcom.parameter mode @type integer @description \"Choose between four different background subtraction models.\"",
+					"text" : "j.parameter mode @type integer @description \"Choose between four different background subtraction models.\"",
 					"varname" : "mode"
 				}
 
@@ -284,7 +284,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 104.0, 329.0, 64.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -298,7 +298,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 104.0, 240.0, 57.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -327,7 +327,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 8.0, 138.0, 359.0, 31.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Two different types of video background subtraction\"",
+					"text" : "j.model @type video @algorithm_type jitter @description \"Two different types of video background subtraction\"",
 					"varname" : "jmod.hub"
 				}
 
@@ -452,7 +452,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-16",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

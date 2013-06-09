@@ -62,7 +62,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 340.0, 360.0, 74.0, 19.0 ],
-					"text" : "jcom.xfade~"
+					"text" : "j.xfade~"
 				}
 
 			}
@@ -76,7 +76,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 75.0, 360.0, 74.0, 19.0 ],
-					"text" : "jcom.xfade~"
+					"text" : "j.xfade~"
 				}
 
 			}

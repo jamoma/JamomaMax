@@ -668,7 +668,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 327.0, 199.0, 182.0, 19.0 ],
-									"text" : "jcom.send jcom.remote.module.to"
+									"text" : "j.send j.remote.module.to"
 								}
 
 							}
@@ -1035,7 +1035,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 30.0, 180.0, 182.0, 19.0 ],
-									"text" : "jcom.send jcom.remote.module.to"
+									"text" : "j.send j.remote.module.to"
 								}
 
 							}
@@ -1146,7 +1146,7 @@
 					"bgmode" : 1,
 					"id" : "obj-31",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 980.0, 70.0 ],

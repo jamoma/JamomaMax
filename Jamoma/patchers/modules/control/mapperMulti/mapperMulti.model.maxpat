@@ -28,7 +28,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 344.0, 125.0, 100.0, 18.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -477,7 +477,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 379.0, 33.0, 100.0, 18.0 ],
-									"text" : "jcom.savebang"
+									"text" : "j.savebang"
 								}
 
 							}
@@ -1272,7 +1272,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 120.0, 37.0, 516.0, 34.0 ],
-					"text" : "jcom.parameter InstanceNumber @type integer @description \"the number of mappers\" @range/bounds 0 100 @range/clipmode low @priority 1 @repetitions/allow 0"
+					"text" : "j.parameter InstanceNumber @type integer @description \"the number of mappers\" @range/bounds 0 100 @range/clipmode low @priority 1 @repetitions/allow 0"
 				}
 
 			}
@@ -1309,7 +1309,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 33.0, 87.0, 68.0, 18.0 ],
-					"text" : "jcom.model"
+					"text" : "j.model"
 				}
 
 			}

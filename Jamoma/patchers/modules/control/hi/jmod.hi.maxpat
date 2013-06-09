@@ -25,8 +25,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 394.0, 276.0, 533.0, 19.0 ],
-					"text" : "jcom.message update @type none @description \"get update command through an external clock\"",
-					"varname" : "jcom.parameter[1]"
+					"text" : "j.message update @type none @description \"get update command through an external clock\"",
+					"varname" : "j.parameter[1]"
 				}
 
 			}
@@ -104,7 +104,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 395.0, 16.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -118,8 +118,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 243.0, 532.0, 19.0 ],
-					"text" : "jcom.message initDevice @type generic @range/clipmode none @description \"Initialization of hi object\"",
-					"varname" : "jcom.parameter[3]"
+					"text" : "j.message initDevice @type generic @range/clipmode none @description \"Initialization of hi object\"",
+					"varname" : "j.parameter[3]"
 				}
 
 			}
@@ -133,7 +133,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 172.0, 584.0, 19.0 ],
-					"text" : "jcom.parameter active @type boolean @range/clipmode none @description \"Turn polling on (10 ms interval)\"",
+					"text" : "j.parameter active @type boolean @range/clipmode none @description \"Turn polling on (10 ms interval)\"",
 					"varname" : "hi_on[1]"
 				}
 
@@ -168,7 +168,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 103.0, 585.0, 19.0 ],
-					"text" : "jcom.parameter device @type string @range/clipmode none @description \"Choose which HI device to use\"",
+					"text" : "j.parameter device @type string @range/clipmode none @description \"Choose which HI device to use\"",
 					"varname" : "device_menu[1]"
 				}
 
@@ -198,8 +198,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 17.0, 149.0, 326.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"Use human interface devices (gamepads and joysticks).\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Use human interface devices (gamepads and joysticks).\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -229,7 +229,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-24",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

@@ -2614,7 +2614,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 544.0, 471.0, 406.0, 20.0 ],
-					"text" : "jcom.return connectionStatus @type string @description connectionStatus"
+					"text" : "j.return connectionStatus @type string @description connectionStatus"
 				}
 
 			}
@@ -2698,7 +2698,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 69.0, 128.0, 161.0, 20.0 ],
-									"text" : "jcom.oscroute /qtm/cmd_res"
+									"text" : "j.oscroute /qtm/cmd_res"
 								}
 
 							}
@@ -2902,7 +2902,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 51.0, 82.0, 341.0, 20.0 ],
-					"text" : "jcom.oscroute /host /enable /connect /port"
+					"text" : "j.oscroute /host /enable /connect /port"
 				}
 
 			}

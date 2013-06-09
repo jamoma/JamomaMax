@@ -41,7 +41,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 380.0, 118.0, 298.0, 31.0 ],
-					"text" : "jcom.parameter algorithm @type generic @description \"Choose which algorithm to use\"",
+					"text" : "j.parameter algorithm @type generic @description \"Choose which algorithm to use\"",
 					"varname" : "algorithm"
 				}
 
@@ -89,7 +89,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 371.0, 313.0, 67.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -128,7 +128,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 371.0, 233.0, 60.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -214,7 +214,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 377.0, 34.0, 340.0, 31.0 ],
-					"text" : "jcom.parameter mode @type generic @description \"There are four different modes with an increasing amount of visibility\"",
+					"text" : "j.parameter mode @type generic @description \"There are four different modes with an increasing amount of visibility\"",
 					"varname" : "mode"
 				}
 
@@ -230,7 +230,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 4.0, 171.0, 269.0, 55.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Creates a similarity matrix from a running video input. This could be either a regular video or a motiongram.\"",
+					"text" : "j.model @type video @algorithm_type jitter @description \"Creates a similarity matrix from a running video input. This could be either a regular video or a motiongram.\"",
 					"varname" : "jmod.hub"
 				}
 
@@ -306,7 +306,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-22",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

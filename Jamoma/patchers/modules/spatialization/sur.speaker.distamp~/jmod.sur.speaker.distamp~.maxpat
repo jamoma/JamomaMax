@@ -28,7 +28,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 214.0, 356.0, 55.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -43,7 +43,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 524.0, 199.0, 567.0, 43.0 ],
-					"text" : "jcom.message.array 32 speaker position @type decimalArray @repetitions/allow 1 @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+					"text" : "j.message.array 32 speaker position @type decimalArray @repetitions/allow 1 @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -58,7 +58,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 524.0, 245.0, 362.0, 31.0 ],
-					"text" : "jcom.message matrix/dump @type none @description \"Post current matrix settings to the Max window .\""
+					"text" : "j.message matrix/dump @type none @description \"Post current matrix settings to the Max window .\""
 				}
 
 			}
@@ -73,7 +73,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 526.0, 131.0, 599.0, 43.0 ],
-					"text" : "jcom.message numSpeakers @type integer @repetitions/allow 0 @range/bounds 2 32 @range/clipmode both @description \"The number of loudspeaker channels that a soundscape is diffused to. Changes only take effect when audio is off.\"",
+					"text" : "j.message numSpeakers @type integer @repetitions/allow 0 @range/bounds 2 32 @range/clipmode both @description \"The number of loudspeaker channels that a soundscape is diffused to. Changes only take effect when audio is off.\"",
 					"varname" : "voices"
 				}
 
@@ -118,7 +118,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 210.0, 200.0, 54.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -230,8 +230,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 10.0, 150.0, 295.0, 31.0 ],
-					"text" : "jcom.model @description \"Amplitude of speakers adjusted in proportion to distance from sweet spot\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Amplitude of speakers adjusted in proportion to distance from sweet spot\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -303,7 +303,7 @@
 				"box" : 				{
 					"has_bypass" : 1,
 					"id" : "obj-28",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

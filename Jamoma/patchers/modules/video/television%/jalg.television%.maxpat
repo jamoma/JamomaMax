@@ -28,7 +28,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 13.0, 154.0, 289.0, 20.0 ],
-					"text" : "jcom.oscroute /probability /granularity.x /granularity.y"
+					"text" : "j.oscroute /probability /granularity.x /granularity.y"
 				}
 
 			}
@@ -42,7 +42,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 178.0, 38.0, 270.0, 20.0 ],
-					"text" : "jcom.oscroute /noise /fade"
+					"text" : "j.oscroute /noise /fade"
 				}
 
 			}
@@ -192,7 +192,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 82.0, 143.0, 142.0, 19.0 ],
-									"text" : "jcom.pass planecount dim"
+									"text" : "j.pass planecount dim"
 								}
 
 							}
@@ -325,7 +325,7 @@
 						"default_fontname" : "Arial"
 					}
 ,
-					"text" : "p jcom.passmatrixinfo%"
+					"text" : "p j.passmatrixinfo%"
 				}
 
 			}
@@ -339,7 +339,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 18.0, 243.0, 60.0, 20.0 ],
-					"text" : "jcom.thru"
+					"text" : "j.thru"
 				}
 
 			}
@@ -463,7 +463,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 428.0, 130.0, 319.0, 20.0 ],
-					"text" : "jcom.dataspace @dataspace time @input Hz @output ms"
+					"text" : "j.dataspace @dataspace time @input Hz @output ms"
 				}
 
 			}
@@ -491,7 +491,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 428.0, 106.0, 299.0, 20.0 ],
-					"text" : "jcom.oscroute /updaterate /stability /vertical /horizontal"
+					"text" : "j.oscroute /updaterate /stability /vertical /horizontal"
 				}
 
 			}

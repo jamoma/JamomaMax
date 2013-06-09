@@ -532,7 +532,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 52.0, 161.0, 154.0, 79.0 ],
-									"text" : "jcom.return info/position @enable 0 @type decimal @description \"returns the normalized value for the current position in the soundfile\""
+									"text" : "j.return info/position @enable 0 @type decimal @description \"returns the normalized value for the current position in the soundfile\""
 								}
 
 							}
@@ -574,7 +574,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 668.0, 70.0, 54.0, 19.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -630,7 +630,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 539.0, 44.0, 209.0, 19.0 ],
-									"text" : "jcom.oscroute /countdown /view/freeze"
+									"text" : "j.oscroute /countdown /view/freeze"
 								}
 
 							}
@@ -2049,7 +2049,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 320.0, 163.0, 57.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -2088,7 +2088,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 331.0, 470.0, 52.0, 19.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -2236,7 +2236,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 211.0, 166.0, 54.0, 19.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -3832,7 +3832,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 432.0, 196.0, 57.0, 19.0 ],
-					"text" : "jcom.thru",
+					"text" : "j.thru",
 					"varname" : "thru"
 				}
 
@@ -4336,7 +4336,7 @@
 					"numoutlets" : 7,
 					"outlettype" : [ "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 349.0, 44.0, 516.0, 19.0 ],
-					"text" : "jcom.oscroute /open /direct /play /pause /loop /start"
+					"text" : "j.oscroute /open /direct /play /pause /loop /start"
 				}
 
 			}
@@ -4631,22 +4631,22 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
  ]

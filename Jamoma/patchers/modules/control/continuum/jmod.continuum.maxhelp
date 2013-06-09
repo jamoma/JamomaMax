@@ -21,7 +21,7 @@
 					"bgmode" : 1,
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 426.0, 70.0 ],
@@ -116,7 +116,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 63.0, 169.0, 177.0, 19.0 ],
-					"text" : "jcom.oscroute /gdif/cooked/voice"
+					"text" : "j.oscroute /gdif/cooked/voice"
 				}
 
 			}

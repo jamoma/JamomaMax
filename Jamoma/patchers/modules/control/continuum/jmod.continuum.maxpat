@@ -40,7 +40,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 252.0, 347.0, 263.0, 19.0 ],
-					"text" : "jcom.return return_c @range/bounds 0. 1."
+					"text" : "j.return return_c @range/bounds 0. 1."
 				}
 
 			}
@@ -117,7 +117,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 495.0, 98.0, 441.0, 19.0 ],
-					"text" : "jcom.parameter midiIn @priority 0 @description \"Port to receive MIDI messages on.\"",
+					"text" : "j.parameter midiIn @priority 0 @description \"Port to receive MIDI messages on.\"",
 					"varname" : "midi_in"
 				}
 
@@ -160,7 +160,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 45.0, 248.0, 163.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -319,7 +319,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 295.0, 275.0, 31.0 ],
-									"text" : "jcom.parameter gdif/emotion/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/emotion/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/emotion/on"
 								}
 
@@ -336,7 +336,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 255.0, 297.0, 31.0 ],
-									"text" : "jcom.parameter gdif/performance/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/performance/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/performance/on"
 								}
 
@@ -353,7 +353,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 215.0, 298.0, 31.0 ],
-									"text" : "jcom.parameter gdif/environment/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/environment/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/environment/on"
 								}
 
@@ -370,7 +370,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 175.0, 271.0, 31.0 ],
-									"text" : "jcom.parameter gdif/device/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/device/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/device/on"
 								}
 
@@ -387,7 +387,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 135.0, 271.0, 31.0 ],
-									"text" : "jcom.parameter gdif/body/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/body/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/body/on"
 								}
 
@@ -404,7 +404,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 95.0, 271.0, 31.0 ],
-									"text" : "jcom.parameter gdif/cooked/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/cooked/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/cooked/on"
 								}
 
@@ -421,7 +421,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 306.0, 55.0, 271.0, 31.0 ],
-									"text" : "jcom.parameter gdif/raw/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/raw/on @type boolean @range/clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/raw/on"
 								}
 
@@ -665,7 +665,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 277.0, 366.0, 165.0, 19.0 ],
-									"text" : "jcom.oscroute /open_inspector"
+									"text" : "j.oscroute /open_inspector"
 								}
 
 							}
@@ -1046,7 +1046,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 245.0, 205.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -1089,8 +1089,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 114.0, 342.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"A module receving input from the Haken Continuum Fingerboard.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"A module receving input from the Haken Continuum Fingerboard.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1135,7 +1135,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-26",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

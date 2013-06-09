@@ -33,7 +33,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.meter_receive 1",
+					"text" : "j.meter_receive 1",
 					"id" : "obj-14",
 					"fontname" : "Arial",
 					"numinlets" : 0,
@@ -46,7 +46,7 @@
 			}
 , 			{
 				"box" : 				{
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"id" : "obj-49",
 					"presentation_rect" : [ 180.0, 5.0, 80.0, 4.0 ],
 					"numinlets" : 1,
@@ -59,7 +59,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.out~ 1",
+					"text" : "j.out~ 1",
 					"id" : "obj-1",
 					"fontname" : "Arial",
 					"numinlets" : 1,
@@ -73,7 +73,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.in~",
+					"text" : "j.in~",
 					"id" : "obj-2",
 					"fontname" : "Arial",
 					"numinlets" : 1,
@@ -226,8 +226,8 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"varname" : "jcom.model",
-					"text" : "jcom.model @type audio @description \"Play sine tones - square - triangle waves etc.\"",
+					"varname" : "j.model",
+					"text" : "j.model @type audio @description \"Play sine tones - square - triangle waves etc.\"",
 					"linecount" : 2,
 					"id" : "obj-13",
 					"fontname" : "Arial",
@@ -243,7 +243,7 @@
 				"box" : 				{
 					"maxclass" : "newobj",
 					"varname" : "mode[1]",
-					"text" : "jcom.parameter mode @type string @description \"choose the noise function.\"",
+					"text" : "j.parameter mode @type string @description \"choose the noise function.\"",
 					"id" : "obj-15",
 					"fontname" : "Arial",
 					"numinlets" : 1,
@@ -256,7 +256,7 @@
 			}
 , 			{
 				"box" : 				{
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"text" : "/editing_this_module.1",
 					"has_gain" : 1,
 					"has_mute" : 1,

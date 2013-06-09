@@ -240,7 +240,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 25.0, 48.0, 176.0, 19.0 ],
-					"text" : "jcom.oscroute /algorithm /mode"
+					"text" : "j.oscroute /algorithm /mode"
 				}
 
 			}

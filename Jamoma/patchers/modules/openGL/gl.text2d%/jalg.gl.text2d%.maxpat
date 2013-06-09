@@ -219,7 +219,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 160.0, 70.0, 198.0, 19.0 ],
-									"text" : "jcom.oscroute /color/rgb /color/alpha"
+									"text" : "j.oscroute /color/rgb /color/alpha"
 								}
 
 							}
@@ -244,7 +244,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 520.0, 315.0, 57.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -312,7 +312,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 30.0, 70.0, 121.0, 19.0 ],
-									"text" : "jcom.oscroute /enable"
+									"text" : "j.oscroute /enable"
 								}
 
 							}
@@ -394,7 +394,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 365.0, 70.0, 116.0, 19.0 ],
-									"text" : "jcom.oscroute /offset"
+									"text" : "j.oscroute /offset"
 								}
 
 							}
@@ -796,7 +796,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 270.0, 75.0, 130.0, 19.0 ],
-					"text" : "jcom.pass color position"
+					"text" : "j.pass color position"
 				}
 
 			}
@@ -1111,7 +1111,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 425.0, 75.0, 223.0, 19.0 ],
-									"text" : "jcom.oscroute /align /font /fontsize /direct"
+									"text" : "j.oscroute /align /font /fontsize /direct"
 								}
 
 							}
@@ -1148,7 +1148,7 @@
 									"numoutlets" : 8,
 									"outlettype" : [ "", "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 60.0, 75.0, 355.0, 19.0 ],
-									"text" : "jcom.pass /read /face /leadscale /screenmode /interp /tracking /text"
+									"text" : "j.pass /read /face /leadscale /screenmode /interp /tracking /text"
 								}
 
 							}
@@ -1162,7 +1162,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 655.0, 75.0, 126.0, 19.0 ],
-									"text" : "jcom.oscroute /shadow"
+									"text" : "j.oscroute /shadow"
 								}
 
 							}
@@ -1393,7 +1393,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 270.0, 45.0, 148.0, 19.0 ],
-					"text" : "jcom.class.gl_group.route"
+					"text" : "j.class.gl_group.route"
 				}
 
 			}

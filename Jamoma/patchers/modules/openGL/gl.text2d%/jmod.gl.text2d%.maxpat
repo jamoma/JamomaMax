@@ -27,7 +27,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 790.0, 605.0, 513.0, 19.0 ],
-					"text" : "jcom.message direct @type generic @description \"direct access to the embedded jit.gl.text2d\""
+					"text" : "j.message direct @type generic @description \"direct access to the embedded jit.gl.text2d\""
 				}
 
 			}
@@ -41,7 +41,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 790.0, 580.0, 419.0, 19.0 ],
-					"text" : "jcom.message text @type string @description \"provide a string to display\""
+					"text" : "j.message text @type string @description \"provide a string to display\""
 				}
 
 			}
@@ -89,13 +89,13 @@
 									"id" : "obj-2",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.class.gl_group.inspect.maxpat",
+									"name" : "j.class.gl_group.inspect.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 2.0, 2.0, 268.0, 761.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 2.0, 2.0, 268.0, 761.0 ],
-									"varname" : "jcom.class.gl_group.inspect"
+									"varname" : "j.class.gl_group.inspect"
 								}
 
 							}
@@ -156,7 +156,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 240.0, 345.0, 144.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -334,7 +334,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 940.0, 390.0, 248.0, 31.0 ],
-					"text" : "jcom.parameter shadow/offset @type decimalArray @description \"Offset of shadow position (%).\"",
+					"text" : "j.parameter shadow/offset @type decimalArray @description \"Offset of shadow position (%).\"",
 					"varname" : "shadow/offset"
 				}
 
@@ -349,7 +349,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 790.0, 390.0, 144.0, 19.0 ],
-					"text" : "jcom.list2parameter 3"
+					"text" : "j.list2parameter 3"
 				}
 
 			}
@@ -394,7 +394,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 790.0, 695.0, 495.0, 31.0 ],
-					"text" : "jcom.parameter shadow/color/alpha @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @description \"Object alpha transparency (0.-1.).\"",
+					"text" : "j.parameter shadow/color/alpha @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @description \"Object alpha transparency (0.-1.).\"",
 					"varname" : "shadow/color/alpha"
 				}
 
@@ -410,7 +410,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 620.0, 730.0, 286.0, 31.0 ],
-					"text" : "jcom.parameter shadow/color/rgb @type decimalArray @range/bounds 0. 1. @dataspace color @dataspace/unit rgb @description \"Object color as red, green, blue (0.-1.).\"",
+					"text" : "j.parameter shadow/color/rgb @type decimalArray @range/bounds 0. 1. @dataspace color @dataspace/unit rgb @description \"Object color as red, green, blue (0.-1.).\"",
 					"varname" : "shadow/color/rgb"
 				}
 
@@ -425,7 +425,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 465.0, 730.0, 144.0, 19.0 ],
-					"text" : "jcom.list2parameter 3"
+					"text" : "j.list2parameter 3"
 				}
 
 			}
@@ -535,7 +535,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 485.0, 655.0, 380.0, 19.0 ],
-					"text" : "jcom.parameter shadow/enable @type boolean \"Enable text shadow.\"",
+					"text" : "j.parameter shadow/enable @type boolean \"Enable text shadow.\"",
 					"varname" : "shadow/enable"
 				}
 
@@ -551,7 +551,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 490.0, 221.0, 581.0, 31.0 ],
-					"text" : "jcom.parameter screenmode @type boolean @description \"If screenmode = 1, some 3D transformations are skipped so that pixel-accurate text can be drawn..\"",
+					"text" : "j.parameter screenmode @type boolean @description \"If screenmode = 1, some 3D transformations are skipped so that pixel-accurate text can be drawn..\"",
 					"varname" : "screenmode"
 				}
 
@@ -602,7 +602,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 790.0, 545.0, 282.0, 31.0 ],
-					"text" : "jcom.message read @type generic @description \"Read a text file containing the text to be displayed.\""
+					"text" : "j.message read @type generic @description \"Read a text file containing the text to be displayed.\""
 				}
 
 			}
@@ -617,7 +617,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 485.0, 555.0, 287.0, 31.0 ],
-					"text" : "jcom.parameter face @type string @description \"Specifies the face variant of the current font..\"",
+					"text" : "j.parameter face @type string @description \"Specifies the face variant of the current font..\"",
 					"varname" : "face"
 				}
 
@@ -632,7 +632,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 487.0, 482.0, 690.0, 19.0 ],
-					"text" : "jcom.parameter fontsize @type integer @range/bounds 1 72 @range/clipmode low @description \"Specifies the size in which to draw.\"",
+					"text" : "j.parameter fontsize @type integer @range/bounds 1 72 @range/clipmode low @description \"Specifies the size in which to draw.\"",
 					"varname" : "fontsize"
 				}
 
@@ -665,7 +665,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 485.0, 410.0, 263.0, 31.0 ],
-					"text" : "jcom.parameter font @type string @description \"Specifies the font in which to draw.\"",
+					"text" : "j.parameter font @type string @description \"Specifies the font in which to draw.\"",
 					"varname" : "font"
 				}
 
@@ -680,7 +680,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 485.0, 330.0, 52.0, 19.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -713,7 +713,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 487.0, 282.0, 599.0, 31.0 ],
-					"text" : "jcom.parameter tracking @type decimal @range/bounds 0.5 2 @range/clipmode none @description \"The tracking (intra-character spacing) as a multiple of the standard tracking for the face. \"",
+					"text" : "j.parameter tracking @type decimal @range/bounds 0.5 2 @range/clipmode none @description \"The tracking (intra-character spacing) as a multiple of the standard tracking for the face. \"",
 					"varname" : "tracking"
 				}
 
@@ -729,7 +729,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 490.0, 163.0, 580.0, 31.0 ],
-					"text" : "jcom.parameter interp @type boolean @description \"Controls whether interpolation is used to draw textures when not in classic mode.\"",
+					"text" : "j.parameter interp @type boolean @description \"Controls whether interpolation is used to draw textures when not in classic mode.\"",
 					"varname" : "interp"
 				}
 
@@ -780,7 +780,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 490.0, 94.0, 600.0, 31.0 ],
-					"text" : "jcom.parameter leadscale @type decimal @range/bounds 0.5 2 @range/clipmode none @description \"The leading between multiple rows of text as a multiple of the standard leading. \"",
+					"text" : "j.parameter leadscale @type decimal @range/bounds 0.5 2 @range/clipmode none @description \"The leading between multiple rows of text as a multiple of the standard leading. \"",
 					"varname" : "leadscale"
 				}
 
@@ -795,7 +795,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 490.0, 45.0, 437.0, 19.0 ],
-					"text" : "jcom.parameter align @type string @description \"Alignment for rows of text.\"",
+					"text" : "j.parameter align @type string @description \"Alignment for rows of text.\"",
 					"varname" : "align"
 				}
 
@@ -873,7 +873,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 205.0, 455.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -887,7 +887,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 204.0, 305.0, 56.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -917,7 +917,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 215.0, 339.0, 31.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Write bitmap text.\"",
+					"text" : "j.model @type video @algorithm_type jitter @description \"Write bitmap text.\"",
 					"varname" : "jmod.hub"
 				}
 
@@ -1065,7 +1065,7 @@
 					"has_mute" : 1,
 					"has_panel" : 1,
 					"id" : "obj-87",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

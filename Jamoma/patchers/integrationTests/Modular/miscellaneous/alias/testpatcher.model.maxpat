@@ -34,7 +34,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 149.0, 49.0, 117.0, 20.0 ],
-					"text" : "jcom.parameter test"
+					"text" : "j.parameter test"
 				}
 
 			}
@@ -71,7 +71,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 49.0, 72.0, 20.0 ],
-					"text" : "jcom.model"
+					"text" : "j.model"
 				}
 
 			}

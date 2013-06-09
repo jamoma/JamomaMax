@@ -88,7 +88,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -147,7 +147,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 70.0, 108.0, 19.0 ],
-									"text" : "jcom.oscroute /info"
+									"text" : "j.oscroute /info"
 								}
 
 							}
@@ -162,7 +162,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 292.0, 226.0, 189.0, 43.0 ],
-									"text" : "jcom.return info/channels @type integer @description \"number of channels of the soundfile\""
+									"text" : "j.return info/channels @type integer @description \"number of channels of the soundfile\""
 								}
 
 							}
@@ -177,7 +177,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 294.0, 178.0, 530.0, 31.0 ],
-									"text" : "jcom.return info/length @type integer @description \"length of the soundfile in [ms]\" @dataspace time @dataspace/unit ms"
+									"text" : "j.return info/length @type integer @description \"length of the soundfile in [ms]\" @dataspace time @dataspace/unit ms"
 								}
 
 							}
@@ -191,7 +191,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 296.0, 127.0, 441.0, 19.0 ],
-									"text" : "jcom.return info/playername @type string @description \"name of the sfplay~ object\""
+									"text" : "j.return info/playername @type string @description \"name of the sfplay~ object\""
 								}
 
 							}
@@ -205,7 +205,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 347.0, 19.0 ],
-									"text" : "jcom.oscroute /channels /name /size /playername"
+									"text" : "j.oscroute /channels /name /size /playername"
 								}
 
 							}
@@ -329,11 +329,11 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.return.mxo",
+								"name" : "j.return.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -419,7 +419,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 113.0, 150.0, 43.0 ],
-									"text" : "a hack to reset the current audio/gain value after jcom.out~ is recreated"
+									"text" : "a hack to reset the current audio/gain value after j.out~ is recreated"
 								}
 
 							}
@@ -593,7 +593,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 296.0, 231.0, 113.0, 19.0 ],
-													"text" : "prepend jcom.meter"
+													"text" : "prepend j.meter"
 												}
 
 											}
@@ -762,7 +762,7 @@
 										"default_fontname" : "Verdana"
 									}
 ,
-									"text" : "p delete_jcom.meter_receive"
+									"text" : "p delete_j.meter_receive"
 								}
 
 							}
@@ -868,7 +868,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 365.0, 228.0, 113.0, 19.0 ],
-													"text" : "prepend jcom.meter"
+													"text" : "prepend j.meter"
 												}
 
 											}
@@ -910,7 +910,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 142.0, 240.0, 156.0, 19.0 ],
-													"text" : "prepend jcom.meter_receive"
+													"text" : "prepend j.meter_receive"
 												}
 
 											}
@@ -1147,7 +1147,7 @@
 										"default_fontname" : "Verdana"
 									}
 ,
-									"text" : "p create_jcom.meter_receive"
+									"text" : "p create_j.meter_receive"
 								}
 
 							}
@@ -1621,7 +1621,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 51.0, 100.0, 108.0, 19.0 ],
-													"text" : "prepend jcom.out~"
+													"text" : "prepend j.out~"
 												}
 
 											}
@@ -2297,7 +2297,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 523.0, 37.0, 602.0, 19.0 ],
-					"text" : "jcom.message direct @type generic @repetitions/allow 1 @description \"direct commands to the sfplay~ object\"",
+					"text" : "j.message direct @type generic @repetitions/allow 1 @description \"direct commands to the sfplay~ object\"",
 					"varname" : "play[2]"
 				}
 
@@ -2343,7 +2343,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 826.0, 506.0, 281.0, 55.0 ],
-					"text" : "jcom.message start @type decimal @repetitions/allow 0 @dataspace time @dataspace/unit second @description \"start time in soundfile to play in [sec]\"",
+					"text" : "j.message start @type decimal @repetitions/allow 0 @dataspace time @dataspace/unit second @description \"start time in soundfile to play in [sec]\"",
 					"varname" : "start"
 				}
 
@@ -2565,7 +2565,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 523.0, 11.0, 636.0, 19.0 ],
-					"text" : "jcom.parameter countdown @type boolean @description \"changes the time displayed in the module to countdown mode\"",
+					"text" : "j.parameter countdown @type boolean @description \"changes the time displayed in the module to countdown mode\"",
 					"varname" : "countdown[1]"
 				}
 
@@ -2626,7 +2626,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 603.0, 279.0, 403.0, 19.0 ],
-					"text" : "jcom.message pause @type boolean @repetitions/allow 0 @description Pause",
+					"text" : "j.message pause @type boolean @repetitions/allow 0 @description Pause",
 					"varname" : "play[1]"
 				}
 
@@ -2641,7 +2641,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 275.0, 540.0, 437.5, 19.0 ],
-					"text" : "jcom.pack≈ 32",
+					"text" : "j.pack≈ 32",
 					"varname" : "multi"
 				}
 
@@ -2716,7 +2716,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 542.0, 336.0, 516.0, 19.0 ],
-					"text" : "jcom.parameter play @type boolean @repetitions/allow 0 @priority 2 @description \"starts playback\"",
+					"text" : "j.parameter play @type boolean @repetitions/allow 0 @priority 2 @description \"starts playback\"",
 					"varname" : "play"
 				}
 
@@ -2732,7 +2732,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 525.0, 60.0, 369.0, 19.0 ],
-					"text" : "jcom.parameter loop @type boolean @description \"Loop soundfile.\"",
+					"text" : "j.parameter loop @type boolean @description \"Loop soundfile.\"",
 					"varname" : "loop"
 				}
 
@@ -2749,7 +2749,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 497.0, 168.0, 565.0, 31.0 ],
-					"text" : "jcom.parameter open @type string @priority 1 @repetitions/allow 1 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\" @value/default NULL"
+					"text" : "j.parameter open @type string @priority 1 @repetitions/allow 1 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\" @value/default NULL"
 				}
 
 			}
@@ -2778,7 +2778,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 275.0, 384.0, 56.0, 19.0 ],
-					"text" : "jcom.in~"
+					"text" : "j.in~"
 				}
 
 			}
@@ -2807,8 +2807,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 22.0, 266.0, 410.0, 19.0 ],
-					"text" : "jcom.hub @description \"A simple multichannel sampleplayer based on sfplay~\"",
-					"varname" : "jcom.hub"
+					"text" : "j.hub @description \"A simple multichannel sampleplayer based on sfplay~\"",
+					"varname" : "j.hub"
 				}
 
 			}
@@ -2920,7 +2920,7 @@
 					"has_gain" : 1,
 					"has_mute" : 1,
 					"id" : "obj-69",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -2942,7 +2942,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 275.0, 486.0, 100.0, 19.0 ],
-					"text" : "jcom.out~ 1",
+					"text" : "j.out~ 1",
 					"varname" : "jcom_out"
 				}
 
@@ -2957,8 +2957,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 67.0, 384.0, 119.0, 19.0 ],
-					"text" : "jcom.meter_receive 1",
-					"varname" : "jcom.meter1"
+					"text" : "j.meter_receive 1",
+					"varname" : "j.meter1"
 				}
 
 			}
@@ -3412,7 +3412,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.meter_receive.maxpat",
+				"name" : "j.meter_receive.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/meter_receive",
 				"patcherrelativepath" : "../../../library/components/meter_receive",
 				"type" : "JSON",
@@ -3426,7 +3426,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
@@ -3440,51 +3440,51 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pack≈.mxo",
+				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.textslider.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -183,7 +183,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 458.0, 321.0, 59.0, 19.0 ],
-					"text" : "jcom.thru"
+					"text" : "j.thru"
 				}
 
 			}
@@ -362,7 +362,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 71.0, 419.0, 20.0 ],
-									"text" : "jcom.oscroute /read /save"
+									"text" : "j.oscroute /read /save"
 								}
 
 							}
@@ -540,7 +540,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 20.0, 108.0, 151.0, 19.0 ],
-					"text" : "jcom.oscroute /plug /preset"
+					"text" : "j.oscroute /plug /preset"
 				}
 
 			}
@@ -568,7 +568,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 399.0, 245.0, 54.0, 19.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -780,7 +780,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 803.0, 86.0, 59.0, 19.0 ],
-					"text" : "jcom.thru"
+					"text" : "j.thru"
 				}
 
 			}
@@ -878,7 +878,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 25.0, 145.0, 116.0, 19.0 ],
-									"text" : "jcom.oscroute /voice"
+									"text" : "j.oscroute /voice"
 								}
 
 							}
@@ -892,7 +892,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 25.0, 65.0, 100.0, 19.0 ],
-									"text" : "jcom.oscinstance"
+									"text" : "j.oscinstance"
 								}
 
 							}
@@ -1755,7 +1755,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "", "", "", "", "", "" ],
 									"patching_rect" : [ 25.0, 175.0, 282.0, 19.0 ],
-									"text" : "jcom.oscroute /bend /cc /note /poly /program"
+									"text" : "j.oscroute /bend /cc /note /poly /program"
 								}
 
 							}
@@ -1991,7 +1991,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 217.0, 110.0, 112.0, 19.0 ],
-					"text" : "jcom.oscroute /view"
+					"text" : "j.oscroute /view"
 				}
 
 			}
@@ -2666,7 +2666,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 20.0, 80.0, 222.0, 19.0 ],
-					"text" : "jcom.oscroute /parameter /au /raw",
+					"text" : "j.oscroute /parameter /au /raw",
 					"varname" : "oscroute_parameter"
 				}
 

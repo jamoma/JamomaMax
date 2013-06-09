@@ -103,7 +103,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 84.0, 270.0, 108.0, 19.0 ],
-					"text" : "jcom.oscroute /tick"
+					"text" : "j.oscroute /tick"
 				}
 
 			}
@@ -153,7 +153,7 @@
 					"bgmode" : 1,
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 500.0, 70.0 ],

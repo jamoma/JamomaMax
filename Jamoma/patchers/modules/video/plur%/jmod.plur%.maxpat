@@ -314,7 +314,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 42.0, 51.0, 118.0, 19.0 ],
-									"text" : "jcom.pwindow.mouse"
+									"text" : "j.pwindow.mouse"
 								}
 
 							}
@@ -554,7 +554,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 51.0, 391.0, 54.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -594,7 +594,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 51.0, 330.0, 57.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -609,7 +609,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 342.0, 492.714294, 570.0, 31.0 ],
-					"text" : "jcom.parameter colormode @type string @description \"colormode determines how jit.plur handles values that exceed the hi and lo values. wrap | clip | bounce\"",
+					"text" : "j.parameter colormode @type string @description \"colormode determines how jit.plur handles values that exceed the hi and lo values. wrap | clip | bounce\"",
 					"varname" : "colormode"
 				}
 
@@ -625,7 +625,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 342.0, 423.714294, 351.0, 31.0 ],
-					"text" : "jcom.parameter scale @type integer @ramp/drive Max @description \"scale: actually a bit shift before display. normal is 8.\"",
+					"text" : "j.parameter scale @type integer @ramp/drive Max @description \"scale: actually a bit shift before display. normal is 8.\"",
 					"varname" : "scale"
 				}
 
@@ -641,7 +641,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 342.0, 354.714294, 678.0, 31.0 ],
-					"text" : "jcom.parameter mode @type integer @range/bounds 0 15 @range/clipmode both @ramp/drive none @description \"the different modes represent different (highly arbitrary) variations on the classic linear interpolationorithm. there are 16 of them. try them all!\"",
+					"text" : "j.parameter mode @type integer @range/bounds 0 15 @range/clipmode both @ramp/drive none @description \"the different modes represent different (highly arbitrary) variations on the classic linear interpolationorithm. there are 16 of them. try them all!\"",
 					"varname" : "mode"
 				}
 
@@ -807,8 +807,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 18.0, 172.0, 240.0, 43.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"peace - love - unity - rave\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"peace - love - unity - rave\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -905,7 +905,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 342.0, 561.714294, 569.0, 31.0 ],
-					"text" : "jcom.parameter gang @type boolean @description \"when gang is on (default) x/range and y/range values are ignored - using the x/step  and y/step values instead.\"",
+					"text" : "j.parameter gang @type boolean @description \"when gang is on (default) x/range and y/range values are ignored - using the x/step  and y/step values instead.\"",
 					"varname" : "gang"
 				}
 
@@ -921,7 +921,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 342.0, 78.0, 606.0, 31.0 ],
-					"text" : "jcom.parameter x/step @type integer @ramp/drive Max @description \"x/step and y/step represent the distance between the 'corners' between which the 'interpolation' takes place.\"",
+					"text" : "j.parameter x/step @type integer @ramp/drive Max @description \"x/step and y/step represent the distance between the 'corners' between which the 'interpolation' takes place.\"",
 					"varname" : "x_step"
 				}
 
@@ -937,7 +937,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 342.0, 147.714294, 606.0, 31.0 ],
-					"text" : "jcom.parameter y/step @type integer @ramp/drive Max @description \"x/step and y/step represent the distance between the 'corners' between which the 'interpolation' takes place.\"",
+					"text" : "j.parameter y/step @type integer @ramp/drive Max @description \"x/step and y/step represent the distance between the 'corners' between which the 'interpolation' takes place.\"",
 					"varname" : "y_step"
 				}
 
@@ -985,7 +985,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 342.0, 285.714264, 583.0, 31.0 ],
-					"text" : "jcom.parameter y/range @type integer @ramp/drive Max @description \"x/range and y/range represent the distance between the actual points used for the 'interpolation' calculation.\"",
+					"text" : "j.parameter y/range @type integer @ramp/drive Max @description \"x/range and y/range represent the distance between the actual points used for the 'interpolation' calculation.\"",
 					"varname" : "y_range"
 				}
 
@@ -1063,7 +1063,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 344.0, 215.714279, 596.0, 31.0 ],
-					"text" : "jcom.parameter x/range @type integer @ramp/drive Max @description \"x/range and y/range range represent the distance between the actual points used for the 'interpolation' calculation.\"",
+					"text" : "j.parameter x/range @type integer @ramp/drive Max @description \"x/range and y/range range represent the distance between the actual points used for the 'interpolation' calculation.\"",
 					"varname" : "x_range"
 				}
 
@@ -1089,7 +1089,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-40",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

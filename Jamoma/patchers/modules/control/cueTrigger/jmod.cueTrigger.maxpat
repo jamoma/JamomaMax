@@ -52,7 +52,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 80.0, 460.0, 525.0, 19.0 ],
-					"text" : "jcom.parameter repeat @type string @repetitions/allow 1 @description \"repeat mode: none, all, one \""
+					"text" : "j.parameter repeat @type string @repetitions/allow 1 @description \"repeat mode: none, all, one \""
 				}
 
 			}
@@ -67,7 +67,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 475.0, 375.0, 257.0, 43.0 ],
-					"text" : "jcom.return cue @type string @repetitions/allow 1 @description \"Cue to be triggered. For communication with jmod.cuelist.\""
+					"text" : "j.return cue @type string @repetitions/allow 1 @description \"Cue to be triggered. For communication with jmod.cuelist.\""
 				}
 
 			}
@@ -109,7 +109,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 25.0, 430.0, 498.0, 19.0 ],
-					"text" : "jcom.message rewind @type none @repetitions/allow 1 @description \"Rewind to first cue in list.\""
+					"text" : "j.message rewind @type none @repetitions/allow 1 @description \"Rewind to first cue in list.\""
 				}
 
 			}
@@ -142,7 +142,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 25.0, 490.0, 407.0, 31.0 ],
-					"text" : "jcom.message cues @type generic @repetitions/allow 1 @description \"Stream of all cues as symbols.\""
+					"text" : "j.message cues @type generic @repetitions/allow 1 @description \"Stream of all cues as symbols.\""
 				}
 
 			}
@@ -820,7 +820,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 265.0, 140.0, 160.0, 19.0 ],
-									"text" : "jcom.oscroute /length /repeat"
+									"text" : "j.oscroute /length /repeat"
 								}
 
 							}
@@ -835,7 +835,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 55.0, 20.0, 204.0, 67.0 ],
-									"text" : "jcom.message go @type generic @repetitions/allow 1 @description \"Trigger selected cue. If a number is provided e.g. /go 2, then the Nth cue in the cuelist is immediately triggered\""
+									"text" : "j.message go @type generic @repetitions/allow 1 @description \"Trigger selected cue. If a number is provided e.g. /go 2, then the Nth cue in the cuelist is immediately triggered\""
 								}
 
 							}
@@ -1442,7 +1442,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 610.0, 95.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -1859,7 +1859,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 70.0, 83.0, 262.0, 19.0 ],
-									"text" : "jcom.oscroute /rewind /cues"
+									"text" : "j.oscroute /rewind /cues"
 								}
 
 							}
@@ -2155,8 +2155,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 25.0, 260.0, 320.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"graphical interface for triggering cues in conjunction with jmod.cuelist.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"graphical interface for triggering cues in conjunction with jmod.cuelist.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -2201,7 +2201,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-27",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

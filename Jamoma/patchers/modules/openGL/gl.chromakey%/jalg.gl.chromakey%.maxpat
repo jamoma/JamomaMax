@@ -191,7 +191,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 50.0, 145.0, 19.0 ],
-									"text" : "jcom.oscroute /chromakey"
+									"text" : "j.oscroute /chromakey"
 								}
 
 							}
@@ -286,7 +286,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 85.0, 168.0, 19.0 ],
-									"text" : "jcom.pass /fade /invert /binary"
+									"text" : "j.pass /fade /invert /binary"
 								}
 
 							}
@@ -500,7 +500,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 230.0, 85.0, 141.0, 19.0 ],
-					"text" : "jcom.class.gl_group.route"
+					"text" : "j.class.gl_group.route"
 				}
 
 			}

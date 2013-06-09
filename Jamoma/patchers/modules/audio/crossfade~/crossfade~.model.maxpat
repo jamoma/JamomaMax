@@ -34,7 +34,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 272.0, 390.0, 73.0, 19.0 ],
-					"text" : "jcom.in~ R2"
+					"text" : "j.in~ R2"
 				}
 
 			}
@@ -48,7 +48,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 228.0, 366.0, 71.0, 19.0 ],
-					"text" : "jcom.in~ L2"
+					"text" : "j.in~ L2"
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 184.0, 342.0, 73.0, 19.0 ],
-					"text" : "jcom.in~ R1"
+					"text" : "j.in~ R1"
 				}
 
 			}
@@ -76,7 +76,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 228.0, 464.0, 74.0, 19.0 ],
-					"text" : "jcom.out~ R"
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -168,7 +168,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 140.0, 319.0, 71.0, 19.0 ],
-					"text" : "jcom.in~ L1"
+					"text" : "j.in~ L1"
 				}
 
 			}
@@ -182,7 +182,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 140.0, 464.0, 72.0, 19.0 ],
-					"text" : "jcom.out~ L"
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -254,7 +254,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 3.0, 109.0, 309.0, 43.0 ],
-					"text" : "jcom.model @type audio @description \"Allows crossfades between 2 stereo sources. The first two inputs are the first source while the second 2 inputs are the second source\""
+					"text" : "j.model @type audio @description \"Allows crossfades between 2 stereo sources. The first two inputs are the first source while the second 2 inputs are the second source\""
 				}
 
 			}
@@ -269,7 +269,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 372.0, 240.0, 253.0, 55.0 ],
-					"text" : "jcom.parameter mode @type string @description \"Choose the calculation mode for the crossfade: fast uses a lookup table while precisision performs trig calculations\"",
+					"text" : "j.parameter mode @type string @description \"Choose the calculation mode for the crossfade: fast uses a lookup table while precisision performs trig calculations\"",
 					"varname" : "mode[1]"
 				}
 
@@ -285,7 +285,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 442.0, 323.0, 208.0, 43.0 ],
-					"text" : "jcom.parameter shape @type string @description \"Choose the shape of the crossfade: linear or equal-power\"",
+					"text" : "j.parameter shape @type string @description \"Choose the shape of the crossfade: linear or equal-power\"",
 					"varname" : "shape[1]"
 				}
 
@@ -301,7 +301,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 316.0, 169.0, 376.0, 55.0 ],
-					"text" : "jcom.parameter position @type decimal @range/bounds 1. 2. @ramp/drive Max @description \"Set the position of the crossfade.  1 is entirely source 1 - 2 is entirely source 2 - positions in the middle are a location between source one and two.\"",
+					"text" : "j.parameter position @type decimal @range/bounds 1. 2. @ramp/drive Max @description \"Set the position of the crossfade.  1 is entirely source 1 - 2 is entirely source 2 - positions in the middle are a location between source one and two.\"",
 					"varname" : "position"
 				}
 
@@ -730,7 +730,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 140.0, 437.0, 195.0, 19.0 ],
-					"text" : "jcom.xfade~ 2"
+					"text" : "j.xfade~ 2"
 				}
 
 			}

@@ -84,7 +84,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 587.0, 131.0, 95.0, 19.0 ],
-									"text" : "jcom.pass /mute"
+									"text" : "j.pass /mute"
 								}
 
 							}
@@ -126,7 +126,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 587.0, 173.0, 59.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -168,7 +168,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "", "", "", "", "", "" ],
 									"patching_rect" : [ 265.0, 105.0, 556.0, 19.0 ],
-									"text" : "jcom.oscroute /dimensions /numSpeakers /numSources /audio /interpolationTime"
+									"text" : "j.oscroute /dimensions /numSpeakers /numSources /audio /interpolationTime"
 								}
 
 							}
@@ -210,7 +210,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 25.0, 55.0, 140.0, 19.0 ],
-									"text" : "jcom.oscinstance"
+									"text" : "j.oscinstance"
 								}
 
 							}
@@ -260,7 +260,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 625.0, 62.0, 111.0, 19.0 ],
-													"text" : "jcom.oscroute /gain"
+													"text" : "j.oscroute /gain"
 												}
 
 											}
@@ -325,7 +325,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 95.0, 160.0, 143.0, 43.0 ],
-																	"text" : "jcom.dataspace @dataspace position @input xyz @output aed"
+																	"text" : "j.dataspace @dataspace position @input xyz @output aed"
 																}
 
 															}
@@ -454,7 +454,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 465.0, 155.0, 100.0, 55.0 ],
-																	"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+																	"text" : "j.dataspace @dataspace gain @input midi @output linear"
 																}
 
 															}
@@ -566,7 +566,7 @@
 																	"numoutlets" : 5,
 																	"outlettype" : [ "", "", "", "", "" ],
 																	"patching_rect" : [ 50.0, 80.0, 732.0, 19.0 ],
-																	"text" : "jcom.oscroute /position /blur /gain /active"
+																	"text" : "j.oscroute /position /blur /gain /active"
 																}
 
 															}
@@ -878,11 +878,11 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.oscroute.mxo",
+																"name" : "j.oscroute.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.dataspace.mxo",
+																"name" : "j.dataspace.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -959,7 +959,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 560.0, 115.0, 55.0, 19.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -1051,7 +1051,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 55.0, 75.0, 55.0, 19.0 ],
-																	"text" : "jcom.init"
+																	"text" : "j.init"
 																}
 
 															}
@@ -1096,7 +1096,7 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.init.mxo",
+																"name" : "j.init.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -1243,7 +1243,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 625.0, 85.0, 98.0, 55.0 ],
-													"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+													"text" : "j.dataspace @dataspace gain @input midi @output linear"
 												}
 
 											}
@@ -1949,15 +1949,15 @@
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.dataspace.mxo",
+												"name" : "j.dataspace.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.init.mxo",
+												"name" : "j.init.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.oscroute.mxo",
+												"name" : "j.oscroute.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -2056,7 +2056,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 355.0, 90.0, 143.0, 43.0 ],
-													"text" : "jcom.dataspace @dataspace position @input xyz @output aed"
+													"text" : "j.dataspace @dataspace position @input xyz @output aed"
 												}
 
 											}
@@ -2946,7 +2946,7 @@
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.dataspace.mxo",
+												"name" : "j.dataspace.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -2980,7 +2980,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 25.0, 145.0, 216.0, 19.0 ],
-									"text" : "jcom.oscroute /source /speaker/position"
+									"text" : "j.oscroute /source /speaker/position"
 								}
 
 							}
@@ -3232,13 +3232,13 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.thru.maxpat",
+								"name" : "j.thru.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
@@ -3246,7 +3246,7 @@
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.dataspace.mxo",
+								"name" : "j.dataspace.mxo",
 								"type" : "iLaX"
 							}
 , 							{
@@ -3254,15 +3254,15 @@
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.init.mxo",
+								"name" : "j.init.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.oscinstance.mxo",
+								"name" : "j.oscinstance.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.pass.mxo",
+								"name" : "j.pass.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -3335,7 +3335,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 275.0, 187.0, 92.0, 31.0 ],
-					"text" : "jcom.mixer≈ @interpolated 1",
+					"text" : "j.mixer≈ @interpolated 1",
 					"varname" : "matrix"
 				}
 
@@ -3380,18 +3380,18 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.mixer≈.mxo",
+				"name" : "j.mixer≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -3399,7 +3399,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -3407,15 +3407,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscinstance.mxo",
+				"name" : "j.oscinstance.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
  ]

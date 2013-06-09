@@ -300,7 +300,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 772.0, 139.0, 484.0, 19.0 ],
-					"text" : "jcom.message extension @type string @description \"file extension file name to be generated\"",
+					"text" : "j.message extension @type string @description \"file extension file name to be generated\"",
 					"varname" : "file_name[1]"
 				}
 
@@ -364,7 +364,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 813.0, 421.0, 387.0, 31.0 ],
-					"text" : "jcom.message take @type integer @range/bounds 0 9999999 @range/clipmode low @description \"take index - tail of current file name\"",
+					"text" : "j.message take @type integer @range/bounds 0 9999999 @range/clipmode low @description \"take index - tail of current file name\"",
 					"varname" : "take_p"
 				}
 
@@ -379,7 +379,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 631.0, 639.0, 316.0, 19.0 ],
-					"text" : "jcom.return file @type string @description \"current new file\""
+					"text" : "j.return file @type string @description \"current new file\""
 				}
 
 			}
@@ -449,7 +449,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 717.0, 522.0, 473.0, 19.0 ],
-					"text" : "jcom.message name @type string @description \"first part of the file name to be generated\"",
+					"text" : "j.message name @type string @description \"first part of the file name to be generated\"",
 					"varname" : "file_name"
 				}
 
@@ -558,7 +558,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 331.0, 194.0, 130.0, 31.0 ],
-					"text" : "jcom.parameter folder @type string",
+					"text" : "j.parameter folder @type string",
 					"varname" : "folder"
 				}
 
@@ -587,7 +587,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 521.0, 76.0, 76.0, 19.0 ],
-					"text" : "r jcom.init"
+					"text" : "r j.init"
 				}
 
 			}
@@ -719,8 +719,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 12.0, 168.0, 269.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"Browsing and organizing sessions of new files\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Browsing and organizing sessions of new files\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -750,7 +750,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-52",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

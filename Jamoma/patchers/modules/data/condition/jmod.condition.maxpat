@@ -38,7 +38,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 20.0, 491.0, 363.0, 30.0 ],
-					"text" : "jcom.parameter repetitions @type boolean @range/clipmode none @description \"Select whether repetitions should be filtered out or not.\"",
+					"text" : "j.parameter repetitions @type boolean @range/clipmode none @description \"Select whether repetitions should be filtered out or not.\"",
 					"varname" : "repetitions[1]"
 				}
 
@@ -54,7 +54,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 20.0, 429.0, 287.0, 30.0 ],
-					"text" : "jcom.parameter clip @type boolean @range/clipmode none @description \"Turn clipping on.\"",
+					"text" : "j.parameter clip @type boolean @range/clipmode none @description \"Turn clipping on.\"",
 					"varname" : "clip[1]"
 				}
 
@@ -70,7 +70,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 20.0, 304.0, 298.0, 30.0 ],
-					"text" : "jcom.parameter smooth @type boolean @range/clipmode none @description \"Turn smoothing on\"",
+					"text" : "j.parameter smooth @type boolean @range/clipmode none @description \"Turn smoothing on\"",
 					"varname" : "smooth[1]"
 				}
 
@@ -86,7 +86,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 20.0, 366.0, 326.0, 30.0 ],
-					"text" : "jcom.parameter smooth/value @type decimal @range/clipmode none @description \"Smoothing value (slide).\"",
+					"text" : "j.parameter smooth/value @type decimal @range/clipmode none @description \"Smoothing value (slide).\"",
 					"varname" : "smooth/value"
 				}
 
@@ -122,7 +122,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 515.0, 361.0, 30.0 ],
-					"text" : "jcom.parameter scale/output/max @type decimal @range/clipmode none @description \"Output maximum scaling value.\"",
+					"text" : "j.parameter scale/output/max @type decimal @range/clipmode none @description \"Output maximum scaling value.\"",
 					"varname" : "scale/output/max"
 				}
 
@@ -138,7 +138,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 452.0, 352.0, 30.0 ],
-					"text" : "jcom.parameter scale/output/min @type decimal @range/clipmode none @description \"Input minimum scaling value.\"",
+					"text" : "j.parameter scale/output/min @type decimal @range/clipmode none @description \"Input minimum scaling value.\"",
 					"varname" : "scale/output/min"
 				}
 
@@ -154,7 +154,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 390.0, 420.0, 30.0 ],
-					"text" : "jcom.parameter scale/input/max @type decimal @range/clipmode none @description \"Input maximum scaling value. Only works in manual scaling mode.\"",
+					"text" : "j.parameter scale/input/max @type decimal @range/clipmode none @description \"Input maximum scaling value. Only works in manual scaling mode.\"",
 					"varname" : "scale/input/max"
 				}
 
@@ -170,7 +170,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 328.0, 417.0, 30.0 ],
-					"text" : "jcom.parameter scale/input/min @type decimal @range/clipmode none @description \"Input minimum scaling value. Only works in manual scaling mode.\"",
+					"text" : "j.parameter scale/input/min @type decimal @range/clipmode none @description \"Input minimum scaling value. Only works in manual scaling mode.\"",
 					"varname" : "scale/input/min"
 				}
 
@@ -400,7 +400,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 500.0, 110.0, 55.0, 18.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -431,7 +431,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 265.0, 587.0, 30.0 ],
-					"text" : "jcom.parameter scale @type integer @range/clipmode none @description \"Choose scaling mode: none - manual - auto.\"",
+					"text" : "j.parameter scale @type integer @range/clipmode none @description \"Choose scaling mode: none - manual - auto.\"",
 					"varname" : "scale[1]"
 				}
 
@@ -461,8 +461,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 17.0, 130.0, 272.0, 42.0 ],
-					"text" : "jcom.model @type control @description \"Condition a continuous control signal: smooth - scale - clip - repeat.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Condition a continuous control signal: smooth - scale - clip - repeat.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -506,7 +506,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-50",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

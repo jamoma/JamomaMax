@@ -39,7 +39,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 487.0, 61.0, 461.0, 31.0 ],
-					"text" : "jcom.parameter center @type decimal @ramp/drive Max @range/clipmode none @range/bounds 0. 1. @description \"Weight of center cell\"",
+					"text" : "j.parameter center @type decimal @ramp/drive Max @range/clipmode none @range/bounds 0. 1. @description \"Weight of center cell\"",
 					"varname" : "center"
 				}
 
@@ -88,7 +88,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 117.0, 316.0, 56.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -127,7 +127,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 117.0, 255.0, 59.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -263,7 +263,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 487.0, 219.0, 457.0, 31.0 ],
-					"text" : "jcom.parameter ripple @type decimal @ramp/drive Max @range/clipmode none @range/bounds -1. 1. @description \"Scaling applied to outer ringing cells\"",
+					"text" : "j.parameter ripple @type decimal @ramp/drive Max @range/clipmode none @range/bounds -1. 1. @description \"Scaling applied to outer ringing cells\"",
 					"varname" : "ripple"
 				}
 
@@ -279,7 +279,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 487.0, 140.0, 448.0, 31.0 ],
-					"text" : "jcom.parameter ring @type decimal @ramp/drive Max @range/clipmode none @range/bounds 0. 1. @description \"Weight of cells adjoining the center\"",
+					"text" : "j.parameter ring @type decimal @ramp/drive Max @range/clipmode none @range/bounds 0. 1. @description \"Weight of cells adjoining the center\"",
 					"varname" : "ring"
 				}
 
@@ -308,8 +308,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 0.0, 128.0, 288.0, 43.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Blur the image using the jit.fastblur algorithm.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Blur the image using the jit.fastblur algorithm.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -343,7 +343,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

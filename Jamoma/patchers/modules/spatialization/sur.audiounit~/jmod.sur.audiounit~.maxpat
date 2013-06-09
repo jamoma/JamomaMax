@@ -164,7 +164,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 585.0, 20.0, 555.0, 31.0 ],
-					"text" : "jcom.parameter numInputs @repetitions/allow 0 @type integer @range/bounds 1 8 @range/clipmode both @description \"Number of AU input signals.\" @priority 3",
+					"text" : "j.parameter numInputs @repetitions/allow 0 @type integer @range/bounds 1 8 @range/clipmode both @description \"Number of AU input signals.\" @priority 3",
 					"varname" : "destination/voices"
 				}
 
@@ -180,7 +180,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 585.0, 60.0, 563.0, 31.0 ],
-					"text" : "jcom.parameter numOutputs @repetitions/allow 0 @type integer @range/bounds 1 8 @range/clipmode both @description \"Number of AU output signals\" @priority 1",
+					"text" : "j.parameter numOutputs @repetitions/allow 0 @type integer @range/bounds 1 8 @range/clipmode both @description \"Number of AU output signals\" @priority 1",
 					"varname" : "source/voices"
 				}
 
@@ -195,7 +195,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 135.0, 565.0, 65.0, 19.0 ],
-					"text" : "jcom.out 0"
+					"text" : "j.out 0"
 				}
 
 			}
@@ -289,7 +289,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 470.0, 360.0, 86.0, 19.0 ],
-					"text" : "jcom.savebang"
+					"text" : "j.savebang"
 				}
 
 			}
@@ -359,7 +359,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 415.0, 665.0, 65.0, 19.0 ],
-					"text" : "sel jcom.ui"
+					"text" : "sel j.ui"
 				}
 
 			}
@@ -411,7 +411,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 260.0, 479.0, 31.0 ],
-					"text" : "jcom.message au/preset/save @repetitions/allow 1 @type generic @ramp/drive none @description \"Write current settings to an AU User preset file to ~/Library/Audio/Presets\""
+					"text" : "j.message au/preset/save @repetitions/allow 1 @type generic @ramp/drive none @description \"Write current settings to an AU User preset file to ~/Library/Audio/Presets\""
 				}
 
 			}
@@ -498,7 +498,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 575.0, 570.0, 201.0, 19.0 ],
-					"text" : "jcom.midi.channel_messages_receive"
+					"text" : "j.midi.channel_messages_receive"
 				}
 
 			}
@@ -575,7 +575,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 555.0, 185.0, 564.0, 31.0 ],
-					"text" : "jcom.message au/view @type string @description \"Open the plug-in's edit window. \\\"editor\\\" or \\\"controls\\\" specifies what interface will be shown.\" @repetitions/allow 1"
+					"text" : "j.message au/view @type string @description \"Open the plug-in's edit window. \\\"editor\\\" or \\\"controls\\\" specifies what interface will be shown.\" @repetitions/allow 1"
 				}
 
 			}
@@ -3958,7 +3958,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 829.0, 297.0, 320.0, 41.0 ],
-																	"text" : "script newdefault $1 $3 $4 jcom.textslider @presentation_rect $3 $4 165 20 @text $2 @presentation 1 @range $5 $6 @clickjump 1 @unit $8"
+																	"text" : "script newdefault $1 $3 $4 j.textslider @presentation_rect $3 $4 165 20 @text $2 @presentation 1 @range $5 $6 @clickjump 1 @unit $8"
 																}
 
 															}
@@ -3973,7 +3973,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 476.0, 294.0, 335.0, 41.0 ],
-																	"text" : "script newdefault $1 $2 $3 jcom.parameter $1 @type decimal @range/bounds $4 $5 @range/clipmode both @ramp/drive Max @priority 3 @value/default $6 @value/stepsize $7"
+																	"text" : "script newdefault $1 $2 $3 j.parameter $1 @type decimal @range/bounds $4 $5 @range/clipmode both @ramp/drive Max @priority 3 @value/default $6 @value/stepsize $7"
 																}
 
 															}
@@ -4669,7 +4669,7 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
 																	"patching_rect" : [ 397.0, 490.0, 326.0, 31.0 ],
-																	"text" : "Have to keep track of the names of all parameters in order to properly delete jcom.paramter instances when the vst is freed."
+																	"text" : "Have to keep track of the names of all parameters in order to properly delete j.paramter instances when the vst is freed."
 																}
 
 															}
@@ -5859,7 +5859,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 90.0, 350.0, 58.0, 19.0 ],
-					"text" : "jcom.in 0"
+					"text" : "j.in 0"
 				}
 
 			}
@@ -5887,8 +5887,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 30.0, 270.0, 393.0, 19.0 ],
-					"text" : "jcom.model @description \"A Jamoma module wrapper for AudioUnit plug-ins.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"A Jamoma module wrapper for AudioUnit plug-ins.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -5954,7 +5954,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 580.0, 365.0, 573.0, 19.0 ],
-					"text" : "jcom.message au/preset/read @type string @ramp/drive none @repetitions/allow 1 @description \"AU presets.\"",
+					"text" : "j.message au/preset/read @type string @ramp/drive none @repetitions/allow 1 @description \"AU presets.\"",
 					"varname" : "vst/program"
 				}
 
@@ -6049,7 +6049,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 470.0, 422.0, 31.0 ],
-					"text" : "jcom.parameter au/plug @type string @priority 1 @repetitions/allow 1 @description \"Load an AU plugin. must work with 2 audio ins and 2 audio outs.\"",
+					"text" : "j.parameter au/plug @type string @priority 1 @repetitions/allow 1 @description \"Load an AU plugin. must work with 2 audio ins and 2 audio outs.\"",
 					"varname" : "vst/plug"
 				}
 
@@ -6059,7 +6059,7 @@
 					"has_bypass" : 1,
 					"has_gain" : 1,
 					"id" : "obj-57",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -6075,7 +6075,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-78",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -6500,14 +6500,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.midi.channel_messages_receive.maxpat",
+				"name" : "j.midi.channel_messages_receive.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/midi.channel_messages_receive",
 				"patcherrelativepath" : "../../../library/components/midi.channel_messages_receive",
 				"type" : "JSON",
@@ -6521,55 +6521,55 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.textslider.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscinstance.mxo",
+				"name" : "j.oscinstance.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pack≈.mxo",
+				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.savebang.mxo",
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
  ]

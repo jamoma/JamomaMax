@@ -36,7 +36,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 395.0, 60.0, 141.0, 19.0 ],
-					"text" : "jcom.meter_receive 2"
+					"text" : "j.meter_receive 2"
 				}
 
 			}
@@ -50,7 +50,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 395.0, 15.0, 141.0, 19.0 ],
-					"text" : "jcom.meter_receive 1"
+					"text" : "j.meter_receive 1"
 				}
 
 			}
@@ -58,7 +58,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 2",
 					"id" : "obj-50",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -72,7 +72,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-49",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -92,7 +92,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 390.0, 711.0, 71.0, 19.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -106,7 +106,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "", "" ],
 					"patching_rect" : [ 390.0, 650.0, 96.0, 19.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -826,7 +826,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 15.0, 175.0, 284.0, 31.0 ],
-					"text" : "jcom.message filtergraph @description \"Messages to filtergraph. See the MSP reference for further details\""
+					"text" : "j.message filtergraph @description \"Messages to filtergraph. See the MSP reference for further details\""
 				}
 
 			}
@@ -863,7 +863,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 43.0, 120.0, 482.0, 31.0 ],
-					"text" : "jcom.parameter filtertype @type string @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf\"",
+					"text" : "j.parameter filtertype @type string @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf\"",
 					"varname" : "filtertype"
 				}
 
@@ -879,7 +879,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 198.0, 431.0, 579.0, 31.0 ],
-					"text" : "jcom.parameter filtergain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter filtergain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
 					"varname" : "filtergain"
 				}
 
@@ -895,7 +895,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 198.0, 356.0, 412.0, 31.0 ],
-					"text" : "jcom.parameter q @type decimal @ramp/drive Max @range/bounds 0. 100. @range/clipmode both @repetitions/allow 0 @description \"Resonance (Q)\"",
+					"text" : "j.parameter q @type decimal @ramp/drive Max @range/bounds 0. 100. @range/clipmode both @repetitions/allow 0 @description \"Resonance (Q)\"",
 					"varname" : "q"
 				}
 
@@ -911,7 +911,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 198.0, 512.0, 594.0, 31.0 ],
-					"text" : "jcom.parameter frequency @type decimal @range/bounds 30. 11025. @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
+					"text" : "j.parameter frequency @type decimal @range/bounds 30. 11025. @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
 					"varname" : "cf"
 				}
 
@@ -1133,8 +1133,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 35.0, 695.0, 287.0, 31.0 ],
-					"text" : "jcom.model @type audio @description \"Stereo 2nd order IIR filter based on biquad~\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type audio @description \"Stereo 2nd order IIR filter based on biquad~\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1177,7 +1177,7 @@
 					"has_mix" : 1,
 					"has_mute" : 1,
 					"id" : "obj-44",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1564,50 +1564,50 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.meter_receive.maxpat",
+				"name" : "j.meter_receive.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/meter_receive",
 				"patcherrelativepath" : "../../../library/components/meter_receive",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
  ]

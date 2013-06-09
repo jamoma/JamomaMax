@@ -29,7 +29,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 488.0, 328.0, 585.0, 55.0 ],
-					"text" : "jcom.parameter file/autostart @type integer @range/bounds 0 2 @range/clipmode both @description \"Defines module's behavior when 'file/open' is received. When set to 0, reading of a video file is triggered with 'file/start'. When set to 1 (default), opening a video file automatically triggers 'file/start'. When set to 2, opening a video file automatically triggers 'file/start', only if a file was previously being read.\"",
+					"text" : "j.parameter file/autostart @type integer @range/bounds 0 2 @range/clipmode both @description \"Defines module's behavior when 'file/open' is received. When set to 0, reading of a video file is triggered with 'file/start'. When set to 1 (default), opening a video file automatically triggers 'file/start'. When set to 2, opening a video file automatically triggers 'file/start', only if a file was previously being read.\"",
 					"varname" : "camera/camera[1]"
 				}
 
@@ -85,7 +85,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 489.0, 289.265015, 604.0, 31.0 ],
-					"text" : "jcom.parameter active @type boolean @range/bounds 0 1 @range/clipmode both @repetitions/allow 0 @ramp/drive none @description \"Turn video noise on or off\"",
+					"text" : "j.parameter active @type boolean @range/bounds 0 1 @range/clipmode both @repetitions/allow 0 @ramp/drive none @description \"Turn video noise on or off\"",
 					"varname" : "synth/noise/on[2]"
 				}
 
@@ -120,7 +120,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 489.0, 248.0, 604.0, 31.0 ],
-					"text" : "jcom.parameter updaterate @type integer @range/bounds 1 100 @range/clipmode low @description \"Update rate in milliseconds\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter updaterate @type integer @range/bounds 1 100 @range/clipmode low @description \"Update rate in milliseconds\" @dataspace time @dataspace/unit ms",
 					"varname" : "camera/camera[2]"
 				}
 
@@ -186,7 +186,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 222.0, 339.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -200,7 +200,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 132.0, 276.0, 58.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -214,7 +214,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 362.0, 414.0, 602.0, 19.0 ],
-					"text" : "jcom.parameter source @type string @description \"Choose between 'camera', 'file' , 'synthesis' or 'desktop' as input\"",
+					"text" : "j.parameter source @type string @description \"Choose between 'camera', 'file' , 'synthesis' or 'desktop' as input\"",
 					"varname" : "source_mode[1]"
 				}
 
@@ -321,8 +321,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 185.0, 419.0, 31.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Input from either a camera - video file - noise synthesis - or a real time screen capture.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Input from either a camera - video file - noise synthesis - or a real time screen capture.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -358,7 +358,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

@@ -355,7 +355,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 679.0, 405.0, 141.0, 20.0 ],
-					"text" : "jcom.receive /play.*"
+					"text" : "j.receive /play.*"
 				}
 
 			}
@@ -370,7 +370,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 425.0, 406.0, 108.0, 20.0 ],
-					"text" : "jcom.send /play.1"
+					"text" : "j.send /play.1"
 				}
 
 			}
@@ -528,7 +528,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 405.0, 101.0, 20.0 ],
-					"text" : "jcom.send /play.*"
+					"text" : "j.send /play.*"
 				}
 
 			}
@@ -639,7 +639,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 492.0, 664.5, 239.0, 33.0 ],
-					"text" : "jcom.map @input /rate @output /rate.1 @function power"
+					"text" : "j.map @input /rate @output /rate.1 @function power"
 				}
 
 			}
@@ -685,7 +685,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 504.0, 572.0, 33.0 ],
-					"text" : "The jcom.cue external allows to store and recall the state of a patch. \nHere, two cues are already defined - more info on how to use jcom.cue will come later"
+					"text" : "The j.cue external allows to store and recall the state of a patch. \nHere, two cues are already defined - more info on how to use j.cue will come later"
 				}
 
 			}
@@ -949,7 +949,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 548.0, 59.0, 20.0 ],
-					"text" : "jcom.cue"
+					"text" : "j.cue"
 				}
 
 			}
@@ -987,7 +987,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 550.0, 236.0, 107.0, 20.0 ],
-					"text" : "jcom.receive /play"
+					"text" : "j.receive /play"
 				}
 
 			}
@@ -1042,7 +1042,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 682.0, 259.0, 196.0, 20.0 ],
-					"text" : "jcom.receive /play:repetitions/allow"
+					"text" : "j.receive /play:repetitions/allow"
 				}
 
 			}
@@ -1069,7 +1069,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 683.0, 236.0, 183.0, 20.0 ],
-					"text" : "jcom.send /play:repetitions/allow"
+					"text" : "j.send /play:repetitions/allow"
 				}
 
 			}
@@ -1084,7 +1084,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 425.0, 236.0, 94.0, 20.0 ],
-					"text" : "jcom.send /play"
+					"text" : "j.send /play"
 				}
 
 			}
@@ -1111,7 +1111,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 391.0, 170.0, 472.0, 33.0 ],
-					"text" : "Then jcom.send and jcom.receive can respectively control and observe any registered parameter / message / return. They can access their values  and all their attributes"
+					"text" : "Then j.send and j.receive can respectively control and observe any registered parameter / message / return. They can access their values  and all their attributes"
 				}
 
 			}
@@ -1169,7 +1169,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 745.0, 72.0, 103.0, 47.0 ],
-					"text" : "jcom.namespace @filter/list return @format umenu"
+					"text" : "j.namespace @filter/list return @format umenu"
 				}
 
 			}
@@ -1185,7 +1185,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 576.0, 72.0, 119.0, 47.0 ],
-					"text" : "jcom.namespace @filter/list message @format umenu"
+					"text" : "j.namespace @filter/list message @format umenu"
 				}
 
 			}
@@ -1238,7 +1238,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 407.0, 72.0, 125.0, 47.0 ],
-					"text" : "jcom.namespace @filter/list parameter @format umenu"
+					"text" : "j.namespace @filter/list parameter @format umenu"
 				}
 
 			}
@@ -1294,7 +1294,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 3.0, 4.0, 230.0, 85.0 ],
-					"text" : "The \"step2\" is now instantiated as an abstraction. Even if it's not yet a jamoma model, a Max programmer can use many jcom.externals to manage his patch."
+					"text" : "The \"step2\" is now instantiated as an abstraction. Even if it's not yet a jamoma model, a Max programmer can use many j.externals to manage his patch."
 				}
 
 			}
@@ -1837,35 +1837,35 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.namespace.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.cue.mxo",
+				"name" : "j.cue.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
  ]

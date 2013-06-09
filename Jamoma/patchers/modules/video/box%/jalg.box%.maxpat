@@ -237,7 +237,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 208.0, 281.436279, 347.0, 43.0 ],
-									"text" : "jcom.return motion/y @range/bounds 0. 1. @type decimal @description \"The center of gravity for the y-axis of the motion in the frame in a range of 0. to 1. (zero is bottom - one is top).\""
+									"text" : "j.return motion/y @range/bounds 0. 1. @type decimal @description \"The center of gravity for the y-axis of the motion in the frame in a range of 0. to 1. (zero is bottom - one is top).\""
 								}
 
 							}
@@ -266,7 +266,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 133.0, 334.0, 413.0, 43.0 ],
-									"text" : "jcom.return motion/x @range/bounds 0. 1. @type decimal @description \"The center of gravity for the x-axis of the motion in the frame in a range of 0. to 1. (zero is left - one is right).\""
+									"text" : "j.return motion/x @range/bounds 0. 1. @type decimal @description \"The center of gravity for the x-axis of the motion in the frame in a range of 0. to 1. (zero is left - one is right).\""
 								}
 
 							}
@@ -281,7 +281,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 56.0, 395.0, 496.0, 31.0 ],
-									"text" : "jcom.return motion/quantity @type decimal @range/bounds 0. 1. @description \"The amount of motion in the frame in a range of 0. to 1.\""
+									"text" : "j.return motion/quantity @type decimal @range/bounds 0. 1. @description \"The amount of motion in the frame in a range of 0. to 1.\""
 								}
 
 							}
@@ -295,7 +295,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "" ],
 									"patching_rect" : [ 56.0, 51.0, 74.0, 19.0 ],
-									"text" : "jcom.sum%"
+									"text" : "j.sum%"
 								}
 
 							}
@@ -579,7 +579,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 203.0, 55.0, 97.0, 19.0 ],
-					"text" : "jcom.rgb2luma%"
+					"text" : "j.rgb2luma%"
 				}
 
 			}
@@ -618,7 +618,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 22.0, 55.0, 138.0, 19.0 ],
-					"text" : "jcom.oscroute /genframe"
+					"text" : "j.oscroute /genframe"
 				}
 
 			}
@@ -2194,7 +2194,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 136.0, 53.0, 351.0, 19.0 ],
-									"text" : "jcom.oscroute /contraction/window/reset /contraction/window/color"
+									"text" : "j.oscroute /contraction/window/reset /contraction/window/color"
 								}
 
 							}
@@ -2554,7 +2554,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 49.0, 487.0, 123.0, 19.0 ],
-					"text" : "jcom.passmatrixinfo%"
+					"text" : "j.passmatrixinfo%"
 				}
 
 			}
@@ -2568,7 +2568,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 141.0, 306.0, 515.0, 19.0 ],
-					"text" : "jcom.oscroute /contraction/on /contraction/max/on /contraction/window/on /centroid/on"
+					"text" : "j.oscroute /contraction/on /contraction/max/on /contraction/window/on /centroid/on"
 				}
 
 			}
@@ -2633,7 +2633,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 168.0, 67.0, 321.0, 19.0 ],
-									"text" : "jcom.oscroute /contraction/max/reset /contraction/max/color"
+									"text" : "j.oscroute /contraction/max/reset /contraction/max/color"
 								}
 
 							}
@@ -3141,7 +3141,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 173.0, 537.0, 346.0, 31.0 ],
-									"text" : "jcom.return contraction/area @range/bounds 0. 1. @type decimal @description \"Contraction area in a range of 0. to 1.\""
+									"text" : "j.return contraction/area @range/bounds 0. 1. @type decimal @description \"Contraction area in a range of 0. to 1.\""
 								}
 
 							}
@@ -3184,7 +3184,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 241.0, 476.0, 355.0, 31.0 ],
-									"text" : "jcom.return contraction/height @range/bounds 0. 1. @type decimal @description \"Contraction_height in a range of 0. to 1.\""
+									"text" : "j.return contraction/height @range/bounds 0. 1. @type decimal @description \"Contraction_height in a range of 0. to 1.\""
 								}
 
 							}
@@ -3199,7 +3199,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 108.0, 582.0, 351.0, 31.0 ],
-									"text" : "jcom.return contraction/width @range/bounds 0. 1. @type decimal @description \"Contraction width in a range of 0. to 1.\""
+									"text" : "j.return contraction/width @range/bounds 0. 1. @type decimal @description \"Contraction width in a range of 0. to 1.\""
 								}
 
 							}
@@ -3225,7 +3225,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 372.0, 55.0, 264.0, 19.0 ],
-									"text" : "jcom.oscroute /contraction/slide /contraction/color"
+									"text" : "j.oscroute /contraction/slide /contraction/color"
 								}
 
 							}
@@ -3255,7 +3255,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 241.0, 412.0, 85.0, 19.0 ],
-									"text" : "jcom.autoscale"
+									"text" : "j.autoscale"
 								}
 
 							}
@@ -3269,7 +3269,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 108.0, 412.0, 85.0, 19.0 ],
-									"text" : "jcom.autoscale"
+									"text" : "j.autoscale"
 								}
 
 							}
@@ -3283,7 +3283,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 241.0, 381.0, 73.0, 19.0 ],
-									"text" : "jcom.absdiff"
+									"text" : "j.absdiff"
 								}
 
 							}
@@ -3297,7 +3297,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 108.0, 381.0, 73.0, 19.0 ],
-									"text" : "jcom.absdiff"
+									"text" : "j.absdiff"
 								}
 
 							}
@@ -4574,7 +4574,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 22.0, 527.0, 59.0, 19.0 ],
-					"text" : "jcom.thru"
+					"text" : "j.thru"
 				}
 
 			}
@@ -4643,7 +4643,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 370.0, 105.0, 102.0, 19.0 ],
-									"text" : "jcom.oscroute /on"
+									"text" : "j.oscroute /on"
 								}
 
 							}
@@ -4685,7 +4685,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 416.0, 44.0, 128.0, 19.0 ],
-									"text" : "jcom.oscroute /centroid"
+									"text" : "j.oscroute /centroid"
 								}
 
 							}
@@ -4850,7 +4850,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 416.0, 72.0, 141.0, 19.0 ],
-									"text" : "jcom.oscroute /size /color"
+									"text" : "j.oscroute /size /color"
 								}
 
 							}

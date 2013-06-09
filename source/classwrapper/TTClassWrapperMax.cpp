@@ -624,7 +624,7 @@ TTErr TTValueFromAtoms(TTValue& v, AtomCount ac, AtomPtr av)
 {
 	v.clear();
 	
-	// For now we assume floats for speed (e.g. in the performance sensitive jcom.dataspace object)
+	// For now we assume floats for speed (e.g. in the performance sensitive j.dataspace object)
 	for (int i=0; i<ac; i++)
 		v.append((TTFloat64)atom_getfloat(av+i));
 	return kTTErrNone;

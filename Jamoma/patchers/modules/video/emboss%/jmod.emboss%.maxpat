@@ -391,7 +391,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 42.0, 51.0, 118.0, 19.0 ],
-									"text" : "jcom.pwindow.mouse"
+									"text" : "j.pwindow.mouse"
 								}
 
 							}
@@ -717,7 +717,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 385.0, 234.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -743,7 +743,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 385.0, 159.0, 78.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -791,7 +791,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 700.0, 341.0, 347.0, 31.0 ],
-					"text" : "jcom.parameter mask/blue @type decimal @ramp/drive Max @description \"Sets the masking for the blue component.\"",
+					"text" : "j.parameter mask/blue @type decimal @ramp/drive Max @description \"Sets the masking for the blue component.\"",
 					"varname" : "mask/blue"
 				}
 
@@ -840,7 +840,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 700.0, 385.0, 338.0, 31.0 ],
-					"text" : "jcom.parameter tint/blue @type decimal @ramp/drive Max @description \"Sets the tinting of the blue component.\"",
+					"text" : "j.parameter tint/blue @type decimal @ramp/drive Max @description \"Sets the tinting of the blue component.\"",
 					"varname" : "tint/blue"
 				}
 
@@ -922,7 +922,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 700.0, 152.0, 343.0, 31.0 ],
-					"text" : "jcom.parameter mask/red @type decimal @ramp/drive Max @description \"Sets the masking for the red component.\"",
+					"text" : "j.parameter mask/red @type decimal @ramp/drive Max @description \"Sets the masking for the red component.\"",
 					"varname" : "mask/red"
 				}
 
@@ -938,7 +938,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 700.0, 241.0, 355.0, 31.0 ],
-					"text" : "jcom.parameter mask/green @type decimal @ramp/drive Max @description \"Sets the masking for the green component.\"",
+					"text" : "j.parameter mask/green @type decimal @ramp/drive Max @description \"Sets the masking for the green component.\"",
 					"varname" : "mask/green"
 				}
 
@@ -1020,7 +1020,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 700.0, 194.0, 333.0, 31.0 ],
-					"text" : "jcom.parameter tint/red @type decimal @ramp/drive Max @description \"Sets the tinting of the red component.\"",
+					"text" : "j.parameter tint/red @type decimal @ramp/drive Max @description \"Sets the tinting of the red component.\"",
 					"varname" : "tint/red"
 				}
 
@@ -1036,7 +1036,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 700.0, 287.0, 345.0, 31.0 ],
-					"text" : "jcom.parameter tint/green @type decimal @ramp/drive Max @description \"Sets the tinting of the green component.\"",
+					"text" : "j.parameter tint/green @type decimal @ramp/drive Max @description \"Sets the tinting of the green component.\"",
 					"varname" : "tint/green"
 				}
 
@@ -1052,8 +1052,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 195.0, 339.0, 31.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"cheesy embossing effect\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"cheesy embossing effect\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1126,7 +1126,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

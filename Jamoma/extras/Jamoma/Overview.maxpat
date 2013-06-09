@@ -450,7 +450,7 @@
 													"bgmode" : 1,
 													"id" : "obj-4",
 													"maxclass" : "bpatcher",
-													"name" : "jcom.maxhelpui.maxpat",
+													"name" : "j.maxhelpui.maxpat",
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 0.0, 0.0, 1276.0, 70.0 ],
@@ -1213,11 +1213,11 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 19.0, 220.0, 133.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "jcom.js_systeminfo.js",
+						"filename" : "j.js_systeminfo.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js jcom.js_systeminfo.js"
+					"text" : "js j.js_systeminfo.js"
 				}
 
 			}
@@ -1723,7 +1723,7 @@
 									"patching_rect" : [ 303.0, 671.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 559.0, 139.0, 17.0 ],
-									"text" : "jcom.test.sample~"
+									"text" : "j.test.sample~"
 								}
 
 							}
@@ -1790,7 +1790,7 @@
 									"rounded" : 10.0,
 									"spacing_y" : 6.0,
 									"tabcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
-									"tabs" : [ "*jcom.allpass~", "*jcom.array~", "*jcom.average~", "*jcom.balance~", "*jcom.dcblock~", "*jcom.degrade~", "*jcom.delay~", "*jcom.filter~", "*jcom.function~", "*jcom.gain~", "*jcom.hmlshelf~", "*jcom.limiter~", "*jcom.meter~", "*jcom.onepole~", "*jcom.op~", "*jcom.overdrive~", "*jcom.panorama~", "*jcom.ramp~", "*jcom.waveshaper~", "*jcom.xfade~", "*jcom.zerox~", "jcom.thru~" ]
+									"tabs" : [ "*j.allpass~", "*j.array~", "*j.average~", "*j.balance~", "*j.dcblock~", "*j.degrade~", "*j.delay~", "*j.filter~", "*j.function~", "*j.gain~", "*j.hmlshelf~", "*j.limiter~", "*j.meter~", "*j.onepole~", "*j.op~", "*j.overdrive~", "*j.panorama~", "*j.ramp~", "*j.waveshaper~", "*j.xfade~", "*j.zerox~", "j.thru~" ]
 								}
 
 							}
@@ -1899,7 +1899,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "bang", "" ],
 																	"patching_rect" : [ 216.0, 177.0, 113.0, 20.0 ],
-																	"text" : "sel jcom.audiounit≈"
+																	"text" : "sel j.audiounit≈"
 																}
 
 															}
@@ -2073,7 +2073,7 @@
 																	"numoutlets" : 5,
 																	"outlettype" : [ "", "", "", "", "" ],
 																	"patching_rect" : [ 50.0, 100.0, 309.0, 20.0 ],
-																	"text" : "route jcom.vimic~ jcom.in~ jcom.out~ jcom.test.sample~"
+																	"text" : "route j.vimic~ j.in~ j.out~ j.test.sample~"
 																}
 
 															}
@@ -2195,7 +2195,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 50.0, 100.0, 189.0, 20.0 ],
-																	"text" : "prepend jcom.thru~"
+																	"text" : "prepend j.thru~"
 																}
 
 															}
@@ -2515,7 +2515,7 @@
 													"fontname" : "Verdana",
 													"fontsize" : 11.0,
 													"id" : "obj-59",
-													"items" : [ "jcom.adsr≈.maxhelp", ",", "jcom.allpass~.maxhelp", ",", "jcom.append#.maxhelp", ",", "jcom.array~.maxhelp", ",", "jcom.array≈.maxhelp", ",", "jcom.audiounit≈.maxhelp", ",", "jcom.average~.maxhelp", ",", "jcom.average≈.maxhelp", ",", "jcom.balance~.maxhelp", ",", "jcom.clip≈.maxhelp", ",", "jcom.count≈.maxhelp", ",", "jcom.cubicInterpolate.maxhelp", ",", "jcom.cuemanager.maxhelp", ",", "jcom.dataspace#.maxhelp", ",", "jcom.dataspace.maxhelp", ",", "jcom.dbap.maxhelp", ",", "jcom.dbapBformat.maxhelp", ",", "jcom.dcblocker≈.maxhelp", ",", "jcom.dcblock~.maxhelp", ",", "jcom.degrade~.maxhelp", ",", "jcom.degrade≈.maxhelp", ",", "jcom.delay~.maxhelp", ",", "jcom.delay≈.maxhelp", ",", "jcom.delta.maxhelp", ",", "jcom.envexp.maxhelp", ",", "jcom.fft≈.maxhelp", ",", "jcom.filter~.maxhelp", ",", "jcom.filter≈.maxhelp", ",", "jcom.folder.maxhelp", ",", "jcom.function~.maxhelp", ",", "jcom.gain%.maxhelp", ",", "jcom.gain~.maxhelp", ",", "jcom.gain≈.maxhelp", ",", "jcom.gang.maxhelp", ",", "jcom.hilbert≈.maxhelp", ",", "jcom.hmlshelf~.maxhelp", ",", "jcom.hub.maxhelp", ",", "jcom.in.maxhelp", ",", "jcom.info≈.maxhelp", ",", "jcom.init.maxhelp", ",", "jcom.in~.maxhelp", ",", "jcom.iter#.maxhelp", ",", "jcom.join≈.maxhelp", ",", "jcom.limiter~.maxhelp", ",", "jcom.limiter≈.maxhelp", ",", "jcom.map.maxhelp", ",", "jcom.message.maxhelp", ",", "jcom.meter~.maxhelp", ",", "jcom.midi.filter#.maxhelp", ",", "jcom.midi.format#.maxhelp", ",", "jcom.midi.in#.maxhelp", ",", "jcom.midi.out#.maxhelp", ",", "jcom.mixer≈.maxhelp", ",", "jcom.multimixer≈.maxhelp", ",", "jcom.net.receive.maxhelp", ",", "jcom.net.send.maxhelp", ",", "jcom.noise≈.maxhelp", ",", "jcom.offset≈.maxhelp", ",", "jcom.onepole~.maxhelp", ",", "jcom.op#.maxhelp", ",", "jcom.op~.maxhelp", ",", "jcom.op≈.maxhelp", ",", "jcom.oscinstance.maxhelp", ",", "jcom.oscroute.maxhelp", ",", "jcom.out.maxhelp", ",", "jcom.out~.maxhelp", ",", "jcom.overdrive~.maxhelp", ",", "jcom.overdrive≈.maxhelp", ",", "jcom.pack#.maxhelp", ",", "jcom.pack≈.maxhelp", ",", "jcom.panorama~.maxhelp", ",", "jcom.parameter.maxhelp", ",", "jcom.paramui.maxhelp", ",", "jcom.pass.maxhelp", ",", "jcom.phasor≈.maxhelp", ",", "jcom.pick≈.maxhelp", ",", "jcom.plug.in≈.maxhelp", ",", "jcom.plug.out≈.maxhelp", ",", "jcom.plug.parameter#.maxhelp", ",", "jcom.pulsesub≈.maxhelp", ",", "jcom.push.maxhelp", ",", "jcom.ramp.maxhelp", ",", "jcom.ramp~.maxhelp", ",", "jcom.ramp≈.maxhelp", ",", "jcom.remote.maxhelp", ",", "jcom.resample≈.maxhelp", ",", "jcom.return.maxhelp", ",", "jcom.route.maxhelp", ",", "jcom.savebang.maxhelp", ",", "jcom.sig≈.maxhelp", ",", "jcom.soundfile.player≈.maxhelp", ",", "jcom.soundfile.recorder≈.maxhelp", ",", "jcom.spat≈.maxhelp", ",", "jcom.split≈.maxhelp", ",", "jcom.stats.maxhelp", ",", "jcom.stencil%.maxhelp", ",", "jcom.test.sample~.maxhelp", ",", "jcom.textslider.maxhelp", ",", "jcom.trajectory≈.maxhelp", ",", "jcom.ui.maxhelp", ",", "jcom.unpack#.maxhelp", ",", "jcom.unpack≈.maxhelp", ",", "jcom.unsig≈.maxhelp", ",", "jcom.vimic~.maxhelp", ",", "jcom.waveshaper~.maxhelp", ",", "jcom.waveshaper≈.maxhelp", ",", "jcom.wavetable≈.maxhelp", ",", "jcom.window≈.maxhelp", ",", "jcom.xfade~.maxhelp", ",", "jcom.zerox~.maxhelp" ],
+													"items" : [ "j.adsr≈.maxhelp", ",", "j.allpass~.maxhelp", ",", "j.append#.maxhelp", ",", "j.array~.maxhelp", ",", "j.array≈.maxhelp", ",", "j.audiounit≈.maxhelp", ",", "j.average~.maxhelp", ",", "j.average≈.maxhelp", ",", "j.balance~.maxhelp", ",", "j.clip≈.maxhelp", ",", "j.count≈.maxhelp", ",", "j.cubicInterpolate.maxhelp", ",", "j.cuemanager.maxhelp", ",", "j.dataspace#.maxhelp", ",", "j.dataspace.maxhelp", ",", "j.dbap.maxhelp", ",", "j.dbapBformat.maxhelp", ",", "j.dcblocker≈.maxhelp", ",", "j.dcblock~.maxhelp", ",", "j.degrade~.maxhelp", ",", "j.degrade≈.maxhelp", ",", "j.delay~.maxhelp", ",", "j.delay≈.maxhelp", ",", "j.delta.maxhelp", ",", "j.envexp.maxhelp", ",", "j.fft≈.maxhelp", ",", "j.filter~.maxhelp", ",", "j.filter≈.maxhelp", ",", "j.folder.maxhelp", ",", "j.function~.maxhelp", ",", "j.gain%.maxhelp", ",", "j.gain~.maxhelp", ",", "j.gain≈.maxhelp", ",", "j.gang.maxhelp", ",", "j.hilbert≈.maxhelp", ",", "j.hmlshelf~.maxhelp", ",", "j.hub.maxhelp", ",", "j.in.maxhelp", ",", "j.info≈.maxhelp", ",", "j.init.maxhelp", ",", "j.in~.maxhelp", ",", "j.iter#.maxhelp", ",", "j.join≈.maxhelp", ",", "j.limiter~.maxhelp", ",", "j.limiter≈.maxhelp", ",", "j.map.maxhelp", ",", "j.message.maxhelp", ",", "j.meter~.maxhelp", ",", "j.midi.filter#.maxhelp", ",", "j.midi.format#.maxhelp", ",", "j.midi.in#.maxhelp", ",", "j.midi.out#.maxhelp", ",", "j.mixer≈.maxhelp", ",", "j.multimixer≈.maxhelp", ",", "j.net.receive.maxhelp", ",", "j.net.send.maxhelp", ",", "j.noise≈.maxhelp", ",", "j.offset≈.maxhelp", ",", "j.onepole~.maxhelp", ",", "j.op#.maxhelp", ",", "j.op~.maxhelp", ",", "j.op≈.maxhelp", ",", "j.oscinstance.maxhelp", ",", "j.oscroute.maxhelp", ",", "j.out.maxhelp", ",", "j.out~.maxhelp", ",", "j.overdrive~.maxhelp", ",", "j.overdrive≈.maxhelp", ",", "j.pack#.maxhelp", ",", "j.pack≈.maxhelp", ",", "j.panorama~.maxhelp", ",", "j.parameter.maxhelp", ",", "j.paramui.maxhelp", ",", "j.pass.maxhelp", ",", "j.phasor≈.maxhelp", ",", "j.pick≈.maxhelp", ",", "j.plug.in≈.maxhelp", ",", "j.plug.out≈.maxhelp", ",", "j.plug.parameter#.maxhelp", ",", "j.pulsesub≈.maxhelp", ",", "j.push.maxhelp", ",", "j.ramp.maxhelp", ",", "j.ramp~.maxhelp", ",", "j.ramp≈.maxhelp", ",", "j.remote.maxhelp", ",", "j.resample≈.maxhelp", ",", "j.return.maxhelp", ",", "j.route.maxhelp", ",", "j.savebang.maxhelp", ",", "j.sig≈.maxhelp", ",", "j.soundfile.player≈.maxhelp", ",", "j.soundfile.recorder≈.maxhelp", ",", "j.spat≈.maxhelp", ",", "j.split≈.maxhelp", ",", "j.stats.maxhelp", ",", "j.stencil%.maxhelp", ",", "j.test.sample~.maxhelp", ",", "j.textslider.maxhelp", ",", "j.trajectory≈.maxhelp", ",", "j.ui.maxhelp", ",", "j.unpack#.maxhelp", ",", "j.unpack≈.maxhelp", ",", "j.unsig≈.maxhelp", ",", "j.vimic~.maxhelp", ",", "j.waveshaper~.maxhelp", ",", "j.waveshaper≈.maxhelp", ",", "j.wavetable≈.maxhelp", ",", "j.window≈.maxhelp", ",", "j.xfade~.maxhelp", ",", "j.zerox~.maxhelp" ],
 													"maxclass" : "umenu",
 													"numinlets" : 1,
 													"numoutlets" : 3,
@@ -2537,7 +2537,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 53.0, 121.0, 147.0, 20.0 ],
-													"text" : "jcom.degrade~.maxhelp"
+													"text" : "j.degrade~.maxhelp"
 												}
 
 											}
@@ -2921,7 +2921,7 @@
 									"rounded" : 10.0,
 									"spacing_y" : 6.0,
 									"tabcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
-									"tabs" : [ "*jcom.adsr≈", "*jcom.array≈", "*jcom.average≈", "*jcom.clip≈", "*jcom.count≈", "*jcom.dcblocker≈", "*jcom.degrade≈", "*jcom.delay≈", "*jcom.fft≈", "*jcom.filter≈", "*jcom.gain≈", "*jcom.hilbert≈", "*jcom.info≈", "*jcom.join≈", "*jcom.limiter≈", "*jcom.mixer≈", "*jcom.multimixer≈", "*jcom.noise≈", "*jcom.offset≈", "*jcom.op≈", "*jcom.overdrive≈", "*jcom.pack≈", "*jcom.phasor≈", "*jcom.pick≈", "*jcom.plug.in≈", "*jcom.plug.out≈", "*jcom.pulsesub≈", "*jcom.ramp≈", "*jcom.resample≈", "*jcom.sig≈", "*jcom.soundfile.player≈", "*jcom.soundfile.recorder≈", "*jcom.spat≈", "*jcom.split≈", "*jcom.trajectory≈", "*jcom.unpack≈", "*jcom.unsig≈", "*jcom.waveshaper≈", "*jcom.wavetable≈", "*jcom.window≈" ]
+									"tabs" : [ "*j.adsr≈", "*j.array≈", "*j.average≈", "*j.clip≈", "*j.count≈", "*j.dcblocker≈", "*j.degrade≈", "*j.delay≈", "*j.fft≈", "*j.filter≈", "*j.gain≈", "*j.hilbert≈", "*j.info≈", "*j.join≈", "*j.limiter≈", "*j.mixer≈", "*j.multimixer≈", "*j.noise≈", "*j.offset≈", "*j.op≈", "*j.overdrive≈", "*j.pack≈", "*j.phasor≈", "*j.pick≈", "*j.plug.in≈", "*j.plug.out≈", "*j.pulsesub≈", "*j.ramp≈", "*j.resample≈", "*j.sig≈", "*j.soundfile.player≈", "*j.soundfile.recorder≈", "*j.spat≈", "*j.split≈", "*j.trajectory≈", "*j.unpack≈", "*j.unsig≈", "*j.waveshaper≈", "*j.wavetable≈", "*j.window≈" ]
 								}
 
 							}
@@ -2953,7 +2953,7 @@
 									"patching_rect" : [ 673.25, 727.0, 103.5, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 462.0, 143.0, 17.0 ],
-									"text" : "jcom.hipnoscope"
+									"text" : "j.hipnoscope"
 								}
 
 							}
@@ -3001,7 +3001,7 @@
 									"patching_rect" : [ 673.25, 710.0, 103.5, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 444.0, 143.0, 17.0 ],
-									"text" : "jcom.spatDisplay"
+									"text" : "j.spatDisplay"
 								}
 
 							}
@@ -3017,7 +3017,7 @@
 									"patching_rect" : [ 658.25, 695.0, 103.5, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 424.0, 143.0, 17.0 ],
-									"text" : "jcom.meter~"
+									"text" : "j.meter~"
 								}
 
 							}
@@ -3049,7 +3049,7 @@
 									"patching_rect" : [ 315.0, 315.0, 63.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 535.0, 274.0, 140.0, 17.0 ],
-									"text" : "jcom.push"
+									"text" : "j.push"
 								}
 
 							}
@@ -3081,7 +3081,7 @@
 									"patching_rect" : [ 1172.0, 640.0, 112.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 927.0, 600.0, 132.0, 17.0 ],
-									"text" : "jcom.dbapBformat"
+									"text" : "j.dbapBformat"
 								}
 
 							}
@@ -3149,7 +3149,7 @@
 									"patching_rect" : [ 870.0, 505.0, 71.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 293.0, 142.0, 17.0 ],
-									"text" : "jcom.gain%"
+									"text" : "j.gain%"
 								}
 
 							}
@@ -3165,7 +3165,7 @@
 									"patching_rect" : [ 855.0, 490.0, 81.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 520.0, 142.0, 17.0 ],
-									"text" : "jcom.stencil%"
+									"text" : "j.stencil%"
 								}
 
 							}
@@ -3181,7 +3181,7 @@
 									"patching_rect" : [ 850.0, 305.0, 107.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 162.0, 142.0, 17.0 ],
-									"text" : "jcom.autoexpose%"
+									"text" : "j.autoexpose%"
 								}
 
 							}
@@ -3243,7 +3243,7 @@
 									"patching_rect" : [ 350.0, 255.0, 61.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 348.0, 140.0, 17.0 ],
-									"text" : "jcom.qom"
+									"text" : "j.qom"
 								}
 
 							}
@@ -3275,7 +3275,7 @@
 									"patching_rect" : [ 1162.0, 690.0, 140.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 927.0, 620.0, 132.0, 17.0 ],
-									"text" : "jcom.vimic~"
+									"text" : "j.vimic~"
 								}
 
 							}
@@ -3307,7 +3307,7 @@
 									"patching_rect" : [ 595.0, 515.0, 124.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 346.0, 482.0, 140.0, 17.0 ],
-									"text" : "jcom.parameterCreate"
+									"text" : "j.parameterCreate"
 								}
 
 							}
@@ -3339,7 +3339,7 @@
 									"patching_rect" : [ 595.0, 535.0, 113.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 386.0, 140.0, 17.0 ],
-									"text" : "jcom.message.array"
+									"text" : "j.message.array"
 								}
 
 							}
@@ -3355,7 +3355,7 @@
 									"patching_rect" : [ 590.0, 500.0, 128.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 464.0, 140.0, 17.0 ],
-									"text" : "jcom.parameter.array"
+									"text" : "j.parameter.array"
 								}
 
 							}
@@ -3403,7 +3403,7 @@
 									"patching_rect" : [ 1169.0, 652.0, 120.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 405.0, 143.0, 17.0 ],
-									"text" : "jcom.jsui_multigain.js"
+									"text" : "j.jsui_multigain.js"
 								}
 
 							}
@@ -3419,7 +3419,7 @@
 									"patching_rect" : [ 1050.0, 640.0, 119.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 348.0, 140.0, 17.0 ],
-									"text" : "jcom.js_systeminfo.js"
+									"text" : "j.js_systeminfo.js"
 								}
 
 							}
@@ -3531,7 +3531,7 @@
 									"patching_rect" : [ 1046.0, 520.0, 140.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 346.0, 199.0, 141.0, 17.0 ],
-									"text" : "jcom.folder"
+									"text" : "j.folder"
 								}
 
 							}
@@ -3547,7 +3547,7 @@
 									"patching_rect" : [ 1161.0, 712.0, 140.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 927.0, 581.0, 132.0, 17.0 ],
-									"text" : "jcom.dbap"
+									"text" : "j.dbap"
 								}
 
 							}
@@ -3579,7 +3579,7 @@
 									"patching_rect" : [ 1045.0, 562.0, 139.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 173.0, 245.0, 141.0, 17.0 ],
-									"text" : "jcom.oscinstance"
+									"text" : "j.oscinstance"
 								}
 
 							}
@@ -3595,7 +3595,7 @@
 									"patching_rect" : [ 216.0, 615.0, 140.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 520.0, 139.0, 17.0 ],
-									"text" : "jcom.test.assert.equal"
+									"text" : "j.test.assert.equal"
 								}
 
 							}
@@ -3611,7 +3611,7 @@
 									"patching_rect" : [ 225.0, 635.0, 140.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 500.0, 139.0, 17.0 ],
-									"text" : "jcom.test.manager"
+									"text" : "j.test.manager"
 								}
 
 							}
@@ -3627,7 +3627,7 @@
 									"patching_rect" : [ 216.0, 595.0, 140.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 405.0, 139.0, 17.0 ],
-									"text" : "jcom.metro"
+									"text" : "j.metro"
 								}
 
 							}
@@ -3659,7 +3659,7 @@
 									"patching_rect" : [ 1046.0, 540.0, 140.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 349.0, 237.0, 136.0, 17.0 ],
-									"text" : "jcom.gang"
+									"text" : "j.gang"
 								}
 
 							}
@@ -3721,7 +3721,7 @@
 									"patching_rect" : [ 1045.0, 582.0, 140.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 173.0, 265.0, 141.0, 17.0 ],
-									"text" : "jcom.oscroute"
+									"text" : "j.oscroute"
 								}
 
 							}
@@ -3737,7 +3737,7 @@
 									"patching_rect" : [ 1045.0, 621.0, 140.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 520.0, 140.0, 17.0 ],
-									"text" : "jcom.route"
+									"text" : "j.route"
 								}
 
 							}
@@ -3753,7 +3753,7 @@
 									"patching_rect" : [ 1045.0, 601.0, 140.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 173.0, 286.0, 139.0, 17.0 ],
-									"text" : "jcom.pass"
+									"text" : "j.pass"
 								}
 
 							}
@@ -3993,7 +3993,7 @@
 									"patching_rect" : [ 69.0, 605.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 405.0, 121.0, 17.0 ],
-									"text" : "jcom.ui"
+									"text" : "j.ui"
 								}
 
 							}
@@ -4007,7 +4007,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 69.0, 445.0, 130.0, 17.0 ],
-									"text" : "jcom.paramui"
+									"text" : "j.paramui"
 								}
 
 							}
@@ -4023,7 +4023,7 @@
 									"patching_rect" : [ 35.0, 505.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 325.0, 120.0, 17.0 ],
-									"text" : "jcom.receive~"
+									"text" : "j.receive~"
 								}
 
 							}
@@ -4039,7 +4039,7 @@
 									"patching_rect" : [ 60.0, 585.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 385.0, 120.0, 17.0 ],
-									"text" : "jcom.send~"
+									"text" : "j.send~"
 								}
 
 							}
@@ -4101,7 +4101,7 @@
 									"patching_rect" : [ 55.0, 565.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 365.0, 120.0, 17.0 ],
-									"text" : "jcom.send"
+									"text" : "j.send"
 								}
 
 							}
@@ -4117,7 +4117,7 @@
 									"patching_rect" : [ 69.0, 545.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 345.0, 120.0, 17.0 ],
-									"text" : "jcom.return"
+									"text" : "j.return"
 								}
 
 							}
@@ -4133,7 +4133,7 @@
 									"patching_rect" : [ 303.0, 695.0, 157.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 539.0, 139.0, 17.0 ],
-									"text" : "jcom.test.assert.equal.old"
+									"text" : "j.test.assert.equal.old"
 								}
 
 							}
@@ -4149,7 +4149,7 @@
 									"patching_rect" : [ 35.0, 485.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 305.0, 120.0, 17.0 ],
-									"text" : "jcom.receive"
+									"text" : "j.receive"
 								}
 
 							}
@@ -4165,7 +4165,7 @@
 									"patching_rect" : [ 69.0, 465.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 285.0, 120.0, 17.0 ],
-									"text" : "jcom.ramp"
+									"text" : "j.ramp"
 								}
 
 							}
@@ -4181,7 +4181,7 @@
 									"patching_rect" : [ 69.0, 425.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 266.0, 120.0, 17.0 ],
-									"text" : "jcom.parameter"
+									"text" : "j.parameter"
 								}
 
 							}
@@ -4197,7 +4197,7 @@
 									"patching_rect" : [ 69.0, 405.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 246.0, 120.0, 17.0 ],
-									"text" : "jcom.out~"
+									"text" : "j.out~"
 								}
 
 							}
@@ -4213,7 +4213,7 @@
 									"patching_rect" : [ 69.0, 385.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 225.0, 120.0, 17.0 ],
-									"text" : "jcom.out"
+									"text" : "j.out"
 								}
 
 							}
@@ -4229,7 +4229,7 @@
 									"patching_rect" : [ 69.0, 365.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 205.0, 120.0, 17.0 ],
-									"text" : "jcom.message"
+									"text" : "j.message"
 								}
 
 							}
@@ -4245,7 +4245,7 @@
 									"patching_rect" : [ 70.0, 345.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 185.0, 120.0, 17.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -4261,7 +4261,7 @@
 									"patching_rect" : [ 70.0, 305.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 145.0, 120.0, 17.0 ],
-									"text" : "jcom.in"
+									"text" : "j.in"
 								}
 
 							}
@@ -4277,7 +4277,7 @@
 									"patching_rect" : [ 55.0, 625.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 165.0, 120.0, 17.0 ],
-									"text" : "jcom.in~"
+									"text" : "j.in~"
 								}
 
 							}
@@ -4293,7 +4293,7 @@
 									"patching_rect" : [ 70.0, 285.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 125.0, 120.0, 17.0 ],
-									"text" : "jcom.hub"
+									"text" : "j.hub"
 								}
 
 							}
@@ -4405,7 +4405,7 @@
 									"patching_rect" : [ 658.0, 639.0, 85.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 365.0, 142.0, 17.0 ],
-									"text" : "jcom.textslider"
+									"text" : "j.textslider"
 								}
 
 							}
@@ -4421,7 +4421,7 @@
 									"patching_rect" : [ 370.0, 295.0, 70.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 218.0, 140.0, 17.0 ],
-									"text" : "jcom.map"
+									"text" : "j.map"
 								}
 
 							}
@@ -4437,7 +4437,7 @@
 									"patching_rect" : [ 345.0, 275.0, 122.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 162.0, 140.0, 17.0 ],
-									"text" : "jcom.cubicInterpolate"
+									"text" : "j.cubicInterpolate"
 								}
 
 							}
@@ -4453,7 +4453,7 @@
 									"patching_rect" : [ 295.0, 295.0, 68.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 199.0, 140.0, 17.0 ],
-									"text" : "jcom.delta"
+									"text" : "j.delta"
 								}
 
 							}
@@ -4486,7 +4486,7 @@
 									"patching_rect" : [ 495.0, 370.0, 108.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 293.0, 140.0, 17.0 ],
-									"text" : "jcom.initialized"
+									"text" : "j.initialized"
 								}
 
 							}
@@ -4496,7 +4496,7 @@
 									"bgmode" : 1,
 									"id" : "obj-33",
 									"maxclass" : "bpatcher",
-									"name" : "jcom.maxhelpui.maxpat",
+									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 0.0, 0.0, 1276.0, 70.0 ],
@@ -4519,7 +4519,7 @@
 									"patching_rect" : [ 851.0, 321.0, 123.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 424.0, 142.0, 17.0 ],
-									"text" : "jcom.passmatrixinfo%"
+									"text" : "j.passmatrixinfo%"
 								}
 
 							}
@@ -4535,7 +4535,7 @@
 									"patching_rect" : [ 863.0, 380.0, 87.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 348.0, 142.0, 17.0 ],
-									"text" : "jcom.motion%"
+									"text" : "j.motion%"
 								}
 
 							}
@@ -4551,7 +4551,7 @@
 									"patching_rect" : [ 831.0, 466.0, 77.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 330.0, 142.0, 17.0 ],
-									"text" : "jcom.mean%"
+									"text" : "j.mean%"
 								}
 
 							}
@@ -4567,7 +4567,7 @@
 									"patching_rect" : [ 495.0, 395.0, 98.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 218.0, 140.0, 17.0 ],
-									"text" : "jcom.fullscreen"
+									"text" : "j.fullscreen"
 								}
 
 							}
@@ -4583,7 +4583,7 @@
 									"patching_rect" : [ 841.0, 286.0, 89.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 181.0, 142.0, 17.0 ],
-									"text" : "jcom.binary%"
+									"text" : "j.binary%"
 								}
 
 							}
@@ -4599,7 +4599,7 @@
 									"patching_rect" : [ 845.0, 360.0, 98.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 274.0, 142.0, 17.0 ],
-									"text" : "jcom.fullscreen%"
+									"text" : "j.fullscreen%"
 								}
 
 							}
@@ -4615,7 +4615,7 @@
 									"patching_rect" : [ 505.0, 630.0, 108.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 424.0, 140.0, 17.0 ],
-									"text" : "jcom.moduleColor"
+									"text" : "j.moduleColor"
 								}
 
 							}
@@ -4631,7 +4631,7 @@
 									"patching_rect" : [ 240.0, 270.0, 98.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 293.0, 140.0, 17.0 ],
-									"text" : "jcom.random"
+									"text" : "j.random"
 								}
 
 							}
@@ -4647,7 +4647,7 @@
 									"patching_rect" : [ 235.0, 250.0, 98.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 312.0, 140.0, 17.0 ],
-									"text" : "jcom.randomizer"
+									"text" : "j.randomizer"
 								}
 
 							}
@@ -4680,7 +4680,7 @@
 									"patching_rect" : [ 831.0, 426.0, 117.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 464.0, 142.0, 17.0 ],
-									"text" : "jcom.qom%"
+									"text" : "j.qom%"
 								}
 
 							}
@@ -4696,7 +4696,7 @@
 									"patching_rect" : [ 736.0, 486.0, 133.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 405.0, 142.0, 17.0 ],
-									"text" : "jcom.noiseremoval%"
+									"text" : "j.noiseremoval%"
 								}
 
 							}
@@ -4712,7 +4712,7 @@
 									"patching_rect" : [ 736.0, 466.0, 71.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 539.0, 142.0, 17.0 ],
-									"text" : "jcom.sum%"
+									"text" : "j.sum%"
 								}
 
 							}
@@ -4728,7 +4728,7 @@
 									"patching_rect" : [ 490.0, 615.0, 108.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 330.0, 140.0, 17.0 ],
-									"text" : "jcom.jamomaPath"
+									"text" : "j.jamomaPath"
 								}
 
 							}
@@ -4744,7 +4744,7 @@
 									"patching_rect" : [ 495.0, 595.0, 142.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 256.0, 140.0, 17.0 ],
-									"text" : "jcom.idle"
+									"text" : "j.idle"
 								}
 
 							}
@@ -4760,7 +4760,7 @@
 									"patching_rect" : [ 490.0, 575.0, 142.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 312.0, 140.0, 17.0 ],
-									"text" : "jcom.instance2instance"
+									"text" : "j.instance2instance"
 								}
 
 							}
@@ -4776,7 +4776,7 @@
 									"patching_rect" : [ 235.0, 495.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 173.0, 125.0, 141.0, 17.0 ],
-									"text" : "jcom.getAllAttributes"
+									"text" : "j.getAllAttributes"
 								}
 
 							}
@@ -4792,7 +4792,7 @@
 									"patching_rect" : [ 826.0, 446.0, 95.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 386.0, 142.0, 17.0 ],
-									"text" : "jcom.multi.out%"
+									"text" : "j.multi.out%"
 								}
 
 							}
@@ -4808,7 +4808,7 @@
 									"patching_rect" : [ 736.0, 446.0, 88.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 367.0, 142.0, 17.0 ],
-									"text" : "jcom.multi.in%"
+									"text" : "j.multi.in%"
 								}
 
 							}
@@ -4824,7 +4824,7 @@
 									"patching_rect" : [ 235.0, 230.0, 98.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 330.0, 140.0, 17.0 ],
-									"text" : "jcom.stats"
+									"text" : "j.stats"
 								}
 
 							}
@@ -4840,7 +4840,7 @@
 									"patching_rect" : [ 490.0, 535.0, 98.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 144.0, 140.0, 17.0 ],
-									"text" : "jcom.datetime"
+									"text" : "j.datetime"
 								}
 
 							}
@@ -4872,7 +4872,7 @@
 									"patching_rect" : [ 746.0, 196.0, 98.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 7.0, 539.5, 142.0, 17.0 ],
-									"text" : "jcom.eno"
+									"text" : "j.eno"
 								}
 
 							}
@@ -4888,7 +4888,7 @@
 									"patching_rect" : [ 490.0, 515.0, 98.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 237.0, 140.0, 17.0 ],
-									"text" : "jcom.op"
+									"text" : "j.op"
 								}
 
 							}
@@ -4904,7 +4904,7 @@
 									"patching_rect" : [ 490.0, 495.0, 95.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 444.0, 140.0, 17.0 ],
-									"text" : "jcom.osc2opml"
+									"text" : "j.osc2opml"
 								}
 
 							}
@@ -4964,7 +4964,7 @@
 									"patching_rect" : [ 736.0, 364.0, 69.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 237.0, 142.0, 17.0 ],
-									"text" : "jcom.crop%"
+									"text" : "j.crop%"
 								}
 
 							}
@@ -4980,7 +4980,7 @@
 									"patching_rect" : [ 750.0, 571.0, 115.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 927.0, 665.0, 134.0, 17.0 ],
-									"text" : "jcom.sur.ambi2UHJ~"
+									"text" : "j.sur.ambi2UHJ~"
 								}
 
 							}
@@ -4996,7 +4996,7 @@
 									"patching_rect" : [ 750.0, 588.0, 115.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 927.0, 685.0, 134.0, 17.0 ],
-									"text" : "jcom.sur.UHJ2ambi~"
+									"text" : "j.sur.UHJ2ambi~"
 								}
 
 							}
@@ -5028,7 +5028,7 @@
 									"patching_rect" : [ 235.0, 370.0, 125.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 173.0, 144.0, 141.0, 17.0 ],
-									"text" : "jcom.getModuleNames"
+									"text" : "j.getModuleNames"
 								}
 
 							}
@@ -5044,7 +5044,7 @@
 									"patching_rect" : [ 235.0, 395.0, 132.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 173.0, 164.0, 141.0, 17.0 ],
-									"text" : "jcom.getMessageNames"
+									"text" : "j.getMessageNames"
 								}
 
 							}
@@ -5060,7 +5060,7 @@
 									"patching_rect" : [ 235.0, 420.0, 141.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 173.0, 184.0, 141.0, 17.0 ],
-									"text" : "jcom.getParameterNames"
+									"text" : "j.getParameterNames"
 								}
 
 							}
@@ -5076,7 +5076,7 @@
 									"patching_rect" : [ 235.0, 445.0, 123.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 173.0, 204.0, 141.0, 17.0 ],
-									"text" : "jcom.getReturnNames"
+									"text" : "j.getReturnNames"
 								}
 
 							}
@@ -5092,7 +5092,7 @@
 									"patching_rect" : [ 235.0, 470.0, 119.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 173.0, 224.0, 141.0, 17.0 ],
-									"text" : "jcom.getOneAttribute"
+									"text" : "j.getOneAttribute"
 								}
 
 							}
@@ -5124,7 +5124,7 @@
 									"patching_rect" : [ 495.0, 295.0, 87.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 125.0, 140.0, 17.0 ],
-									"text" : "jcom.cpuTimer"
+									"text" : "j.cpuTimer"
 								}
 
 							}
@@ -5140,7 +5140,7 @@
 									"patching_rect" : [ 660.0, 657.0, 103.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 345.0, 142.0, 17.0 ],
-									"text" : "jcom.numberslider"
+									"text" : "j.numberslider"
 								}
 
 							}
@@ -5156,7 +5156,7 @@
 									"patching_rect" : [ 736.0, 423.0, 75.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 500.0, 142.0, 17.0 ],
-									"text" : "jcom.spray%"
+									"text" : "j.spray%"
 								}
 
 							}
@@ -5172,7 +5172,7 @@
 									"patching_rect" : [ 830.0, 345.0, 98.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 256.0, 142.0, 17.0 ],
-									"text" : "jcom.float2char%"
+									"text" : "j.float2char%"
 								}
 
 							}
@@ -5188,7 +5188,7 @@
 									"patching_rect" : [ 735.0, 345.0, 98.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 199.0, 142.0, 17.0 ],
-									"text" : "jcom.char2float%"
+									"text" : "j.char2float%"
 								}
 
 							}
@@ -5236,7 +5236,7 @@
 									"patching_rect" : [ 490.0, 420.0, 112.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 367.0, 140.0, 17.0 ],
-									"text" : "jcom.list2parameter"
+									"text" : "j.list2parameter"
 								}
 
 							}
@@ -5252,7 +5252,7 @@
 									"patching_rect" : [ 735.0, 325.0, 108.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 218.0, 142.0, 17.0 ],
-									"text" : "jcom.checkplanes%"
+									"text" : "j.checkplanes%"
 								}
 
 							}
@@ -5268,7 +5268,7 @@
 									"patching_rect" : [ 824.0, 403.0, 95.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 312.0, 142.0, 17.0 ],
-									"text" : "jcom.luma2rgb%"
+									"text" : "j.luma2rgb%"
 								}
 
 							}
@@ -5284,7 +5284,7 @@
 									"patching_rect" : [ 736.0, 403.0, 95.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 482.0, 142.0, 17.0 ],
-									"text" : "jcom.rgb2luma%"
+									"text" : "j.rgb2luma%"
 								}
 
 							}
@@ -5300,7 +5300,7 @@
 									"patching_rect" : [ 660.0, 675.0, 62.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 385.0, 142.0, 17.0 ],
-									"text" : "jcom.label"
+									"text" : "j.label"
 								}
 
 							}
@@ -5316,7 +5316,7 @@
 									"patching_rect" : [ 495.0, 349.0, 52.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 274.0, 140.0, 17.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -5378,7 +5378,7 @@
 									"patching_rect" : [ 959.0, 669.0, 89.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 181.0, 140.0, 17.0 ],
-									"text" : "jcom.dataspace"
+									"text" : "j.dataspace"
 								}
 
 							}
@@ -5392,7 +5392,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 490.0, 689.0, 90.0, 17.0 ],
-									"text" : "jcom.multi.out~"
+									"text" : "j.multi.out~"
 								}
 
 							}
@@ -5406,7 +5406,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 490.0, 671.0, 83.0, 17.0 ],
-									"text" : "jcom.multi.in~"
+									"text" : "j.multi.in~"
 								}
 
 							}
@@ -5498,7 +5498,7 @@
 									"patching_rect" : [ 490.0, 456.0, 57.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 539.0, 140.0, 17.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -5514,7 +5514,7 @@
 									"patching_rect" : [ 490.0, 438.0, 58.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 500.0, 140.0, 17.0 ],
-									"text" : "jcom.post"
+									"text" : "j.post"
 								}
 
 							}
@@ -5530,7 +5530,7 @@
 									"patching_rect" : [ 495.0, 331.0, 91.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 181.0, 140.0, 17.0 ],
-									"text" : "jcom.filewatcher"
+									"text" : "j.filewatcher"
 								}
 
 							}
@@ -5546,7 +5546,7 @@
 									"patching_rect" : [ 495.0, 313.0, 79.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 162.0, 140.0, 17.0 ],
-									"text" : "jcom.filesaver"
+									"text" : "j.filesaver"
 								}
 
 							}
@@ -5562,7 +5562,7 @@
 									"patching_rect" : [ 735.0, 306.0, 89.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 144.0, 142.0, 17.0 ],
-									"text" : "jcom.autosize%"
+									"text" : "j.autosize%"
 								}
 
 							}
@@ -5578,7 +5578,7 @@
 									"patching_rect" : [ 495.0, 277.0, 84.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 144.0, 140.0, 17.0 ],
-									"text" : "jcom.autoscale"
+									"text" : "j.autoscale"
 								}
 
 							}
@@ -5594,7 +5594,7 @@
 									"patching_rect" : [ 736.0, 383.0, 117.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 444.0, 142.0, 17.0 ],
-									"text" : "jcom.pwindow.mouse"
+									"text" : "j.pwindow.mouse"
 								}
 
 							}
@@ -5610,7 +5610,7 @@
 									"patching_rect" : [ 240.0, 290.0, 46.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 256.0, 140.0, 17.0 ],
-									"text" : "jcom.pi"
+									"text" : "j.pi"
 								}
 
 							}
@@ -5626,7 +5626,7 @@
 									"patching_rect" : [ 735.0, 288.0, 91.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 722.0, 125.0, 142.0, 17.0 ],
-									"text" : "jcom.autocrop%"
+									"text" : "j.autocrop%"
 								}
 
 							}
@@ -5642,7 +5642,7 @@
 									"patching_rect" : [ 958.0, 710.0, 148.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 527.0, 405.0, 149.0, 17.0 ],
-									"text" : "jcom.ambimonitor2position"
+									"text" : "j.ambimonitor2position"
 								}
 
 							}
@@ -5658,7 +5658,7 @@
 									"patching_rect" : [ 959.0, 687.0, 148.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 527.0, 424.0, 148.0, 17.0 ],
-									"text" : "jcom.position2ambimonitor"
+									"text" : "j.position2ambimonitor"
 								}
 
 							}
@@ -5674,7 +5674,7 @@
 									"patching_rect" : [ 495.0, 259.0, 70.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 536.0, 125.0, 140.0, 17.0 ],
-									"text" : "jcom.absdiff"
+									"text" : "j.absdiff"
 								}
 
 							}
@@ -6879,7 +6879,7 @@
 									"bgmode" : 1,
 									"id" : "obj-3",
 									"maxclass" : "bpatcher",
-									"name" : "jcom.maxhelpui.maxpat",
+									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 0.0, 0.0, 1276.0, 70.0 ],
@@ -7780,7 +7780,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 510.0, 89.0, 86.0, 19.0 ],
-													"text" : "jcom.savebang"
+													"text" : "j.savebang"
 												}
 
 											}
@@ -7794,7 +7794,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 239.0, 163.0, 159.0, 19.0 ],
-													"text" : "jcom.getDescriptionFromHtml"
+													"text" : "j.getDescriptionFromHtml"
 												}
 
 											}
@@ -10395,7 +10395,7 @@
 									"bgmode" : 1,
 									"id" : "obj-136",
 									"maxclass" : "bpatcher",
-									"name" : "jcom.maxhelpui.maxpat",
+									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 0.0, 0.0, 1276.0, 70.0 ],
@@ -11901,68 +11901,68 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
 				"patcherrelativepath" : "../library/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.getDescriptionFromHtml.maxpat",
+				"name" : "j.getDescriptionFromHtml.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getDescriptionFromHtml",
 				"patcherrelativepath" : "../library/components/getDescriptionFromHtml",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.js_systeminfo.js",
+				"name" : "j.js_systeminfo.js",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/javascript",
 				"patcherrelativepath" : "../library/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.savebang.mxo",
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
  ]

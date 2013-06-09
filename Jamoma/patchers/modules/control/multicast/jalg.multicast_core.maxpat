@@ -149,7 +149,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 115.0, 120.0, 291.0, 20.0 ],
-					"text" : "jcom.message sendTo/client @type generic"
+					"text" : "j.message sendTo/client @type generic"
 				}
 
 			}

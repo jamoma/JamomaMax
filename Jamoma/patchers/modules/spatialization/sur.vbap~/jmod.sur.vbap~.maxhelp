@@ -48,7 +48,7 @@
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 530.0, 70.0 ],
@@ -123,7 +123,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 50.0, 122.0, 199.0, 19.0 ],
-									"text" : "jcom.noise≈ @mode pink @gain -22."
+									"text" : "j.noise≈ @mode pink @gain -22."
 								}
 
 							}
@@ -204,7 +204,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 50.0, 90.0, 93.0, 19.0 ],
-									"text" : "jcom.unpack≈ 4"
+									"text" : "j.unpack≈ 4"
 								}
 
 							}
@@ -338,7 +338,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 25.0, 332.0, 228.0, 19.0 ],
-					"text" : "jcom.ambimonitor2position @prefix source"
+					"text" : "j.ambimonitor2position @prefix source"
 				}
 
 			}
@@ -505,7 +505,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 35.0, 120.0, 141.0, 19.0 ],
-									"text" : "jcom.initialized /vbap 100"
+									"text" : "j.initialized /vbap 100"
 								}
 
 							}

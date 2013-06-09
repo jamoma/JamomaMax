@@ -156,7 +156,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute /toggle /time /randomness",
+					"text" : "j.oscroute /toggle /time /randomness",
 					"numinlets" : 1,
 					"id" : "obj-11",
 					"fontname" : "Verdana",

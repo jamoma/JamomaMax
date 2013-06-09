@@ -64,7 +64,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 625.0, 295.0, 216.0, 19.0 ],
-					"text" : "commenting out jcom.op~ due to crash",
+					"text" : "commenting out j.op~ due to crash",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -79,7 +79,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 655.0, 371.0, 107.0, 19.0 ],
-					"text" : "jcom.waveshaper~"
+					"text" : "j.waveshaper~"
 				}
 
 			}
@@ -93,7 +93,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 333.0, 100.0, 19.0 ],
-					"text" : "jcom.panorama~"
+					"text" : "j.panorama~"
 				}
 
 			}
@@ -107,7 +107,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 69.0, 100.0, 19.0 ],
-					"text" : "jcom.average~"
+					"text" : "j.average~"
 				}
 
 			}
@@ -121,7 +121,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 50.0, 100.0, 19.0 ],
-					"text" : "jcom.array~"
+					"text" : "j.array~"
 				}
 
 			}
@@ -135,7 +135,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 201.0, 102.0, 19.0 ],
-					"text" : "jcom.function~"
+					"text" : "j.function~"
 				}
 
 			}
@@ -149,7 +149,7 @@
 					"numoutlets" : 8,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal" ],
 					"patching_rect" : [ 655.0, 390.0, 113.5, 19.0 ],
-					"text" : "jcom.vimic~"
+					"text" : "j.vimic~"
 				}
 
 			}
@@ -163,7 +163,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 276.0, 99.0, 19.0 ],
-					"text" : "jcom.onepole~"
+					"text" : "j.onepole~"
 				}
 
 			}
@@ -177,7 +177,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 163.0, 102.0, 19.0 ],
-					"text" : "jcom.delay~"
+					"text" : "j.delay~"
 				}
 
 			}
@@ -191,7 +191,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 106.0, 100.0, 19.0 ],
-					"text" : "jcom.clip~"
+					"text" : "j.clip~"
 				}
 
 			}
@@ -205,7 +205,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 31.0, 100.0, 19.0 ],
-					"text" : "jcom.allpass~"
+					"text" : "j.allpass~"
 				}
 
 			}
@@ -219,7 +219,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 655.0, 428.0, 100.0, 19.0 ],
-					"text" : "jcom.zerox~"
+					"text" : "j.zerox~"
 				}
 
 			}
@@ -233,7 +233,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 655.0, 409.0, 100.0, 19.0 ],
-					"text" : "jcom.xfade~"
+					"text" : "j.xfade~"
 				}
 
 			}
@@ -247,7 +247,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 655.0, 352.0, 100.0, 19.0 ],
-					"text" : "jcom.ramp~"
+					"text" : "j.ramp~"
 				}
 
 			}
@@ -261,7 +261,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 314.0, 100.0, 19.0 ],
-					"text" : "jcom.overdrive~"
+					"text" : "j.overdrive~"
 				}
 
 			}
@@ -275,7 +275,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 257.0, 100.0, 19.0 ],
-					"text" : "jcom.limiter~"
+					"text" : "j.limiter~"
 				}
 
 			}
@@ -289,7 +289,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 238.0, 100.0, 19.0 ],
-					"text" : "jcom.hmlshelf~"
+					"text" : "j.hmlshelf~"
 				}
 
 			}
@@ -303,7 +303,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 654.0, 220.0, 100.0, 19.0 ],
-					"text" : "jcom.gain~"
+					"text" : "j.gain~"
 				}
 
 			}
@@ -317,7 +317,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 182.0, 100.0, 19.0 ],
-					"text" : "jcom.filter~"
+					"text" : "j.filter~"
 				}
 
 			}
@@ -331,7 +331,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 144.0, 100.0, 19.0 ],
-					"text" : "jcom.degrade~"
+					"text" : "j.degrade~"
 				}
 
 			}
@@ -345,7 +345,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 654.0, 125.0, 100.0, 19.0 ],
-					"text" : "jcom.dcblock~"
+					"text" : "j.dcblock~"
 				}
 
 			}
@@ -359,7 +359,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 654.0, 88.0, 100.0, 19.0 ],
-					"text" : "jcom.balance~"
+					"text" : "j.balance~"
 				}
 
 			}
@@ -386,7 +386,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 485.0, 605.0, 74.0, 19.0 ],
-					"text" : "jcom.test.log"
+					"text" : "j.test.log"
 				}
 
 			}
@@ -400,7 +400,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 365.0, 790.0, 437.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old \"TEST JamomaDSP NoErrorsRunningDSPinHelpPatchers\" 0"
+					"text" : "j.test.assert.equal.old \"TEST JamomaDSP NoErrorsRunningDSPinHelpPatchers\" 0"
 				}
 
 			}
@@ -968,7 +968,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "bang" ],
 					"patching_rect" : [ 30.0, 40.0, 83.0, 19.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}
@@ -1008,7 +1008,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 55.0, 405.0, 98.0, 19.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -1600,115 +1600,115 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.finished.maxpat",
+				"name" : "j.test.finished.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.finished",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.finished",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.start.maxpat",
+				"name" : "j.test.start.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.start",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.start",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.assert.equal.old.maxpat",
+				"name" : "j.test.assert.equal.old.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.assert.equal.old",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.assert.equal.old",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.log.maxpat",
+				"name" : "j.test.log.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.log",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.log",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.balance~.mxo",
+				"name" : "j.balance~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dcblock~.mxo",
+				"name" : "j.dcblock~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.degrade~.mxo",
+				"name" : "j.degrade~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.filter~.mxo",
+				"name" : "j.filter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.gain~.mxo",
+				"name" : "j.gain~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hmlshelf~.mxo",
+				"name" : "j.hmlshelf~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.limiter~.mxo",
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.overdrive~.mxo",
+				"name" : "j.overdrive~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ramp~.mxo",
+				"name" : "j.ramp~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.xfade~.mxo",
+				"name" : "j.xfade~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.zerox~.mxo",
+				"name" : "j.zerox~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.allpass~.mxo",
+				"name" : "j.allpass~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.clip~.mxo",
+				"name" : "j.clip~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.delay~.mxo",
+				"name" : "j.delay~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.onepole~.mxo",
+				"name" : "j.onepole~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.vimic~.mxo",
+				"name" : "j.vimic~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.function~.mxo",
+				"name" : "j.function~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.array~.mxo",
+				"name" : "j.array~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.average~.mxo",
+				"name" : "j.average~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.panorama~.mxo",
+				"name" : "j.panorama~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.waveshaper~.mxo",
+				"name" : "j.waveshaper~.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -428,7 +428,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 244.0, 93.0, 116.0, 18.0 ],
-					"text" : "jcom.oscroute /xfade"
+					"text" : "j.oscroute /xfade"
 				}
 
 			}
@@ -442,7 +442,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 38.0, 53.0, 225.0, 18.0 ],
-					"text" : "jcom.oscroute /genframe /direct /op_value"
+					"text" : "j.oscroute /genframe /direct /op_value"
 				}
 
 			}

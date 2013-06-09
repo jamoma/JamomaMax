@@ -359,7 +359,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 66.0, 244.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -374,7 +374,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 626.0, 232.0, 262.0, 31.0 ],
-					"text" : "jcom.message clear @type none @description \"Reset by removing all existing mappings. \""
+					"text" : "j.message clear @type none @description \"Reset by removing all existing mappings. \""
 				}
 
 			}
@@ -389,7 +389,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 244.3564, 381.0, 162.287201, 55.0 ],
-					"text" : "jcom.parameter mapToReturn @type generic @description \"Displays the currently active parameter\"",
+					"text" : "j.parameter mapToReturn @type generic @description \"Displays the currently active parameter\"",
 					"varname" : "mapToReturn[1]"
 				}
 
@@ -405,7 +405,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 66.0, 381.0, 169.0, 55.0 ],
-					"text" : "jcom.parameter mapFromReturn @type generic @description \"Displays the currently active parameter\"",
+					"text" : "j.parameter mapFromReturn @type generic @description \"Displays the currently active parameter\"",
 					"varname" : "mapFromReturn[1]"
 				}
 
@@ -420,8 +420,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 450.0, 552.0, 369.0, 19.0 ],
-					"text" : "jcom.message mapCreate @description \"Bang to create new mapping.\"",
-					"varname" : "jcom.parameter[6]"
+					"text" : "j.message mapCreate @description \"Bang to create new mapping.\"",
+					"varname" : "j.parameter[6]"
 				}
 
 			}
@@ -436,7 +436,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 77.3564, 526.0, 270.0, 31.0 ],
-					"text" : "jcom.parameter mapAlgorithm @type generic @description \"algorithm to use when mapping. \"",
+					"text" : "j.parameter mapAlgorithm @type generic @description \"algorithm to use when mapping. \"",
 					"varname" : "mapAlgorithm[1]"
 				}
 
@@ -452,7 +452,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 487.0, 516.0, 325.0, 31.0 ],
-					"text" : "jcom.parameter mapTo @type boolean @description \"Turn on the listen function for values that you want to map to.\"",
+					"text" : "j.parameter mapTo @type boolean @description \"Turn on the listen function for values that you want to map to.\"",
 					"varname" : "mapTo[1]"
 				}
 
@@ -468,7 +468,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 501.75, 480.0, 340.0, 31.0 ],
-					"text" : "jcom.parameter mapFrom @type boolean @description \"Turn on the listen function for values that you want to map from.\"",
+					"text" : "j.parameter mapFrom @type boolean @description \"Turn on the listen function for values that you want to map from.\"",
 					"varname" : "mapFrom[1]"
 				}
 
@@ -575,7 +575,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 612.5, 273.0, 452.0, 43.0 ],
-					"text" : "jcom.message update @type none @description \"If you have made changes in the viewer (or an external text editor) then you will need to send this /update message in order for them to take effect.  This done automatically when you open a fresh file.\""
+					"text" : "j.message update @type none @description \"If you have made changes in the viewer (or an external text editor) then you will need to send this /update message in order for them to take effect.  This done automatically when you open a fresh file.\""
 				}
 
 			}
@@ -590,7 +590,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 585.5, 362.0, 361.0, 43.0 ],
-					"text" : "jcom.message saveMappings @description \"Save mappings to a file.  An argument determines the file path and name.  If no argument is given then a file dialog will be presented.\""
+					"text" : "j.message saveMappings @description \"Save mappings to a file.  An argument determines the file path and name.  If no argument is given then a file dialog will be presented.\""
 				}
 
 			}
@@ -604,7 +604,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 482.0, 130.0, 510.0, 19.0 ],
-					"text" : "jcom.message clear @repetitions/allow 1 @description \"Reset by removing all existing mappings. \""
+					"text" : "j.message clear @repetitions/allow 1 @description \"Reset by removing all existing mappings. \""
 				}
 
 			}
@@ -633,7 +633,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 599.0, 328.0, 350.0, 31.0 ],
-					"text" : "jcom.message view @type none @repetitions/allow 1 @description \"View current mappings in a text window.\""
+					"text" : "j.message view @type none @repetitions/allow 1 @description \"View current mappings in a text window.\""
 				}
 
 			}
@@ -648,7 +648,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 572.0, 413.0, 374.0, 55.0 ],
-					"text" : "jcom.message loadMappings @description \"Load mappings from file. <br/>NOTE: jcom.mappings will be watching the file and automatically update if the content of the file is changed. This way you can use an external editor to work on the cue script while Jamoma is running.\""
+					"text" : "j.message loadMappings @description \"Load mappings from file. <br/>NOTE: j.mappings will be watching the file and automatically update if the content of the file is changed. This way you can use an external editor to work on the cue script while Jamoma is running.\""
 				}
 
 			}
@@ -663,7 +663,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 482.0, 92.0, 589.0, 31.0 ],
-					"text" : "jcom.message modify @repetitions/allow 1 @description \"Remove an existing mapping.  the required argument is the mapping_name.\""
+					"text" : "j.message modify @repetitions/allow 1 @description \"Remove an existing mapping.  the required argument is the mapping_name.\""
 				}
 
 			}
@@ -678,7 +678,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 482.0, 55.0, 593.0, 31.0 ],
-					"text" : "jcom.message remove @repetitions/allow 1 @description \"Remove an existing mapping.  the required argument is the mapping_name.\""
+					"text" : "j.message remove @repetitions/allow 1 @description \"Remove an existing mapping.  the required argument is the mapping_name.\""
 				}
 
 			}
@@ -707,7 +707,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 482.0, 6.0, 595.0, 31.0 ],
-					"text" : "jcom.message create @repetitions/allow 1 @description \"Create a new mapping. Arguments are: [mapping_name] [mapping_source (OSC)] [optionalorithm to apply][ ->][mapping_destination (OSC)].\""
+					"text" : "j.message create @repetitions/allow 1 @description \"Create a new mapping. Arguments are: [mapping_name] [mapping_source (OSC)] [optionalorithm to apply][ ->][mapping_destination (OSC)].\""
 				}
 
 			}
@@ -750,8 +750,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 8.0, 185.0, 382.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"Create and manage mappings of parameters\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Create and manage mappings of parameters\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -866,7 +866,7 @@
 				"box" : 				{
 					"background" : 1,
 					"id" : "obj-56",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1234,56 +1234,56 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.mappings.js",
+				"name" : "j.mappings.js",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/control/mapper",
 				"patcherrelativepath" : "",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.filewatcher.maxpat",
+				"name" : "j.filewatcher.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/filewatcher",
 				"patcherrelativepath" : "../../../library/components/filewatcher",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.filesaver.maxpat",
+				"name" : "j.filesaver.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/filesaver",
 				"patcherrelativepath" : "../../../library/components/filesaver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
  ]

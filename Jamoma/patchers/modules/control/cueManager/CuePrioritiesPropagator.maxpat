@@ -471,7 +471,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 153.0, 187.0, 230.0, 20.0 ],
-					"text" : "jcom.oscroute /CONFIG"
+					"text" : "j.oscroute /CONFIG"
 				}
 
 			}

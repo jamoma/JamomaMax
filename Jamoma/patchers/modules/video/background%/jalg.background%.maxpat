@@ -25,7 +25,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 23.0, 289.0, 148.0, 19.0 ],
-					"text" : "jcom.oscroute /noise /filter"
+					"text" : "j.oscroute /noise /filter"
 				}
 
 			}
@@ -64,7 +64,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 57.0, 83.0, 205.0, 21.0 ],
-									"text" : "jcom.oscroute /active /threshold"
+									"text" : "j.oscroute /active /threshold"
 								}
 
 							}
@@ -340,7 +340,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 52.0, 51.0, 173.0, 19.0 ],
-									"text" : "jcom.oscroute /active /threshold"
+									"text" : "j.oscroute /active /threshold"
 								}
 
 							}
@@ -2095,7 +2095,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 261.0, 283.0, 61.0, 19.0 ],
-					"text" : "jcom.thru"
+					"text" : "j.thru"
 				}
 
 			}
@@ -2109,7 +2109,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 119.0, 75.0, 160.0, 19.0 ],
-					"text" : "jcom.oscroute /record /mode"
+					"text" : "j.oscroute /record /mode"
 				}
 
 			}

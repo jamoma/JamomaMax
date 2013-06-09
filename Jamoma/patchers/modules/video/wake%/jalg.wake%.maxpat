@@ -25,7 +25,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 294.0, 120.0, 184.0, 19.0 ],
-					"text" : "jcom.pass /bleed /gain /normalize"
+					"text" : "j.pass /bleed /gain /normalize"
 				}
 
 			}
@@ -67,7 +67,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 17.0, 83.0, 296.0, 19.0 ],
-					"text" : "jcom.oscroute /genframe /direct /feedforward /feedback"
+					"text" : "j.oscroute /genframe /direct /feedforward /feedback"
 				}
 
 			}

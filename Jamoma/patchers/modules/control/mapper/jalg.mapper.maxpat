@@ -178,7 +178,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 69.0, 50.0, 227.0, 20.0 ],
-									"text" : "jcom.receive jcom.remote.module.from"
+									"text" : "j.receive j.remote.module.from"
 								}
 
 							}
@@ -287,7 +287,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.loader.mxo",
+								"name" : "j.loader.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -397,7 +397,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 69.0, 50.0, 227.0, 20.0 ],
-									"text" : "jcom.receive jcom.remote.module.from"
+									"text" : "j.receive j.remote.module.from"
 								}
 
 							}
@@ -515,7 +515,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.loader.mxo",
+								"name" : "j.loader.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -661,7 +661,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 410.0, 148.0, 118.0, 20.0 ],
-					"text" : "jcom.filesaver TEXT"
+					"text" : "j.filesaver TEXT"
 				}
 
 			}
@@ -728,7 +728,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 335.0, 113.0, 99.0, 20.0 ],
-					"text" : "jcom.filewatcher"
+					"text" : "j.filewatcher"
 				}
 
 			}
@@ -913,7 +913,7 @@
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js jcom.mappings.js"
+					"text" : "js j.mappings.js"
 				}
 
 			}
@@ -928,7 +928,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 59.0, 323.0, 134.0, 33.0 ],
-					"text" : "jcom.pass /modify /remove /create /clear"
+					"text" : "j.pass /modify /remove /create /clear"
 				}
 
 			}
@@ -974,7 +974,7 @@
 						"embed" : 0
 					}
 ,
-					"text" : "coll #0_jcom.mappings 1"
+					"text" : "coll #0_j.mappings 1"
 				}
 
 			}
@@ -988,7 +988,7 @@
 					"numoutlets" : 13,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 71.0, 70.0, 810.0, 20.0 ],
-					"text" : "jcom.oscroute /modify /remove /create /view /loadMappings /clear /saveMappings /update /mapCreate /mapFrom /mapAlgorithm /mapTo"
+					"text" : "j.oscroute /modify /remove /create /view /loadMappings /clear /saveMappings /update /mapCreate /mapFrom /mapAlgorithm /mapTo"
 				}
 
 			}
@@ -1601,36 +1601,36 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.mappings.js",
+				"name" : "j.mappings.js",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/control/mapper",
 				"patcherrelativepath" : "",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.filewatcher.maxpat",
+				"name" : "j.filewatcher.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/filewatcher",
 				"patcherrelativepath" : "../../../library/components/filewatcher",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.filesaver.maxpat",
+				"name" : "j.filesaver.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/filesaver",
 				"patcherrelativepath" : "../../../library/components/filesaver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
  ]

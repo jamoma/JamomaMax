@@ -127,7 +127,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 43.0, 55.0, 20.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -152,7 +152,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 103.966797, 61.0, 19.0 ],
-									"text" : "jcom.map"
+									"text" : "j.map"
 								}
 
 							}
@@ -209,11 +209,11 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.map.mxo",
+								"name" : "j.map.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.init.mxo",
+								"name" : "j.init.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -356,7 +356,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 161.0, 183.0, 326.0, 43.0 ],
-					"text" : "jcom.parameter mode @repetitions/allow 1 @priority 1 @type string @description \"Mapping mode : -->:mono-directionnal, <->:bi-directionnal, x->:excluded from cues\"",
+					"text" : "j.parameter mode @repetitions/allow 1 @priority 1 @type string @description \"Mapping mode : -->:mono-directionnal, <->:bi-directionnal, x->:excluded from cues\"",
 					"varname" : "slide_down[2]"
 				}
 
@@ -489,7 +489,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 619.0, 201.0, 323.0, 43.0 ],
-					"text" : "jcom.parameter in/direct @repetitions/allow 1 @ramp/drive Max @type decimal @description \"use this parameter to alternatively provide a source for mapping\""
+					"text" : "j.parameter in/direct @repetitions/allow 1 @ramp/drive Max @type decimal @description \"use this parameter to alternatively provide a source for mapping\""
 				}
 
 			}
@@ -504,7 +504,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 673.0, 726.0, 584.0, 31.0 ],
-					"text" : "jcom.parameter in/module/derivative @repetitions/allow 1 @type integer @range/bounds 0 2 @range/clipmode both @description \"mapping from the 0th, 1st, or 2nd derivative input value\" @value/default 0",
+					"text" : "j.parameter in/module/derivative @repetitions/allow 1 @type integer @range/bounds 0 2 @range/clipmode both @description \"mapping from the 0th, 1st, or 2nd derivative input value\" @value/default 0",
 					"varname" : "module_in_nr[2]"
 				}
 
@@ -635,7 +635,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 652.0, 678.0, 583.0, 31.0 ],
-					"text" : "jcom.parameter in/module/listindex @repetitions/allow 1 @type integer @range/bounds 1 32 @range/clipmode both @description \"If input parameter is a list, this option allows to pick the Nth value from that list\"",
+					"text" : "j.parameter in/module/listindex @repetitions/allow 1 @type integer @range/bounds 1 32 @range/clipmode both @description \"If input parameter is a list, this option allows to pick the Nth value from that list\"",
 					"varname" : "moduleListindex"
 				}
 
@@ -790,7 +790,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 174.0, 639.0, 454.0, 19.0 ],
-					"text" : "jcom.parameter function/parameter1 @type decimal @priority 5 @repetitions/allow 1"
+					"text" : "j.parameter function/parameter1 @type decimal @priority 5 @repetitions/allow 1"
 				}
 
 			}
@@ -804,7 +804,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 173.0, 744.0, 460.0, 19.0 ],
-					"text" : "jcom.parameter function/symmetry @type string @priority 3 @repetitions/allow 1"
+					"text" : "j.parameter function/symmetry @type string @priority 3 @repetitions/allow 1"
 				}
 
 			}
@@ -818,7 +818,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 172.0, 691.0, 454.0, 19.0 ],
-					"text" : "jcom.parameter function/parameter2 @type decimal @priority 4 @repetitions/allow 1"
+					"text" : "j.parameter function/parameter2 @type decimal @priority 4 @repetitions/allow 1"
 				}
 
 			}
@@ -832,7 +832,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 37.0, 556.0, 570.0, 19.0 ],
-					"text" : "jcom.parameter function @type string @priority 3 @repetitions/allow 1 @description \"select mapping function\""
+					"text" : "j.parameter function @type string @priority 3 @repetitions/allow 1 @description \"select mapping function\""
 				}
 
 			}
@@ -970,8 +970,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 17.0, 138.0, 454.0, 19.0 ],
-					"text" : "jcom.model @type control @description \"One-to-one Mapper\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"One-to-one Mapper\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1009,7 +1009,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1153.0, 495.0, 396.0, 31.0 ],
-					"text" : "jcom.parameter out/module/name @repetitions/allow 1 @type string @description \"Destination module of the mapping\" @priority 3",
+					"text" : "j.parameter out/module/name @repetitions/allow 1 @type string @description \"Destination module of the mapping\" @priority 3",
 					"varname" : "module_out[1]"
 				}
 
@@ -1293,7 +1293,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 705.0, 0.0, 54.0, 19.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -1344,7 +1344,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 520.0, 160.0, 425.0, 31.0 ],
-					"text" : "jcom.parameter slide/down @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Smoothing coef when value decreases\"",
+					"text" : "j.parameter slide/down @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Smoothing coef when value decreases\"",
 					"varname" : "slide_down[1]"
 				}
 
@@ -1360,7 +1360,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 572.0, 119.0, 366.0, 31.0 ],
-					"text" : "jcom.parameter slide/up @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Smoothing coef when value raises\"",
+					"text" : "j.parameter slide/up @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Smoothing coef when value raises\"",
 					"varname" : "slide_up[1]"
 				}
 
@@ -1488,8 +1488,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 640.0, 605.0, 353.0, 31.0 ],
-					"text" : "jcom.parameter clipmode @repetitions/allow 1 @type string @description \"Choose the clipping mode (none, low, high, both)\"",
-					"varname" : "jcom.parameter[12]"
+					"text" : "j.parameter clipmode @repetitions/allow 1 @type string @description \"Choose the clipping mode (none, low, high, both)\"",
+					"varname" : "j.parameter[12]"
 				}
 
 			}
@@ -1541,8 +1541,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 640.0, 30.0, 332.0, 31.0 ],
-					"text" : "jcom.parameter edit @repetitions/allow 1 @type string @description \"Choose operation mode (active, edit, bypass)\"",
-					"varname" : "jcom.parameter[10]"
+					"text" : "j.parameter edit @repetitions/allow 1 @type string @description \"Choose operation mode (active, edit, bypass)\"",
+					"varname" : "j.parameter[10]"
 				}
 
 			}
@@ -1557,7 +1557,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 490.0, 489.0, 237.0, 43.0 ],
-					"text" : "jcom.parameter out/max @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Maximum output value\"",
+					"text" : "j.parameter out/max @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Maximum output value\"",
 					"varname" : "out_max[1]"
 				}
 
@@ -1573,7 +1573,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 250.0, 380.0, 340.0, 31.0 ],
-					"text" : "jcom.parameter out/min @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Minimum output value\"",
+					"text" : "j.parameter out/min @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Minimum output value\"",
 					"varname" : "out_min[1]"
 				}
 
@@ -1589,7 +1589,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 845.0, 452.0, 147.0, 79.0 ],
-					"text" : "jcom.parameter in/max @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Maximum input value\"",
+					"text" : "j.parameter in/max @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Maximum input value\"",
 					"varname" : "in_max[1]"
 				}
 
@@ -1605,7 +1605,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 846.0, 324.0, 131.0, 79.0 ],
-					"text" : "jcom.parameter in/min @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Minimum input value\"",
+					"text" : "j.parameter in/min @repetitions/allow 1 @ramp/drive Max @type decimal @description \"Minimum input value\"",
 					"varname" : "in_min[1]"
 				}
 
@@ -1676,7 +1676,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 240.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -1747,7 +1747,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 743.0, 566.0, 427.0, 31.0 ],
-					"text" : "jcom.parameter in/module/parameter @repetitions/allow 1 @type string @description \"The parameter that will be the input to the mapping\" @priority 6",
+					"text" : "j.parameter in/module/parameter @repetitions/allow 1 @type string @description \"The parameter that will be the input to the mapping\" @priority 6",
 					"varname" : "module_in_function"
 				}
 
@@ -1763,7 +1763,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 90.0, 430.0, 496.0, 31.0 ],
-					"text" : "jcom.parameter out/module/parameter @repetitions/allow 1 @type string @description \"The parameter that the mapped or scaled value will be passed to.\" @priority 5",
+					"text" : "j.parameter out/module/parameter @repetitions/allow 1 @type string @description \"The parameter that the mapped or scaled value will be passed to.\" @priority 5",
 					"varname" : "module_out_function"
 				}
 
@@ -1835,7 +1835,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 971.0, 171.0, 592.0, 31.0 ],
-					"text" : "jcom.parameter in/module/instance @repetitions/allow 1 @type integer @description \"Source module instance of the mapping\" @priority 2",
+					"text" : "j.parameter in/module/instance @repetitions/allow 1 @type integer @description \"Source module instance of the mapping\" @priority 2",
 					"varname" : "module_in_nr"
 				}
 
@@ -1851,7 +1851,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1202.0, 392.0, 374.0, 31.0 ],
-					"text" : "jcom.parameter in/module/name @repetitions/allow 1 @type string @description \"Source module of the mapping\" @priority 1",
+					"text" : "j.parameter in/module/name @repetitions/allow 1 @type string @description \"Source module of the mapping\" @priority 1",
 					"varname" : "module_in[1]"
 				}
 
@@ -1867,7 +1867,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 643.0, 351.0, 200.0, 55.0 ],
-					"text" : "jcom.parameter out/module/instance @repetitions/allow 1 @type integer @description \"Destination module instance of the mapping\" @priority 4",
+					"text" : "j.parameter out/module/instance @repetitions/allow 1 @type integer @description \"Destination module instance of the mapping\" @priority 4",
 					"varname" : "module_out_nr"
 				}
 
@@ -1883,7 +1883,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 483.0, 222.0, 43.0 ],
-					"text" : "jcom.return out/direct @type decimal @enable 0 @description \"direct result of the mapping\"",
+					"text" : "j.return out/direct @type decimal @enable 0 @description \"direct result of the mapping\"",
 					"varname" : "module_out_function[1]"
 				}
 
@@ -2381,7 +2381,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 32.0, 105.0, 174.0, 17.0 ],
-																	"text" : "name jcom.remote.module.from"
+																	"text" : "name j.remote.module.from"
 																}
 
 															}
@@ -2479,7 +2479,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 197.0, 129.5, 162.0, 19.0 ],
-																	"text" : "jcom.receive #0_I_am_deaf",
+																	"text" : "j.receive #0_I_am_deaf",
 																	"varname" : "mapping_object_src_0"
 																}
 
@@ -2494,7 +2494,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 197.0, 226.5, 82.0, 19.0 ],
-																	"text" : "jcom.oscroute",
+																	"text" : "j.oscroute",
 																	"varname" : "mapping_object_dst_0[3]"
 																}
 
@@ -2701,11 +2701,11 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.oscroute.mxo",
+																"name" : "j.oscroute.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.loader.mxo",
+																"name" : "j.loader.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -2872,7 +2872,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 95.0, 113.0, 100.0, 20.0 ],
-																	"text" : "jcom.oscroute /*"
+																	"text" : "j.oscroute /*"
 																}
 
 															}
@@ -3210,7 +3210,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 445.0, 79.0, 100.0, 20.0 ],
-																	"text" : "jcom.oscroute /*"
+																	"text" : "j.oscroute /*"
 																}
 
 															}
@@ -3647,7 +3647,7 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.oscroute.mxo",
+																"name" : "j.oscroute.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -4338,7 +4338,7 @@
 																	"numoutlets" : 3,
 																	"outlettype" : [ "", "", "" ],
 																	"patching_rect" : [ 43.0, 42.0, 171.0, 19.0 ],
-																	"text" : "jcom.oscroute /mode /function"
+																	"text" : "j.oscroute /mode /function"
 																}
 
 															}
@@ -4435,7 +4435,7 @@
 																	"numoutlets" : 5,
 																	"outlettype" : [ "", "", "", "", "" ],
 																	"patching_rect" : [ 119.0, 72.0, 556.0, 19.0 ],
-																	"text" : "jcom.oscroute /dummy /parameter1 /parameter2 /symmetry"
+																	"text" : "j.oscroute /dummy /parameter1 /parameter2 /symmetry"
 																}
 
 															}
@@ -5139,7 +5139,7 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.oscroute.mxo",
+																"name" : "j.oscroute.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -5200,7 +5200,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 217.5, 465.0, 182.0, 19.0 ],
-													"text" : "jcom.send jcom.remote.module.to",
+													"text" : "j.send j.remote.module.to",
 													"varname" : "mapping_object_dst_0[2]"
 												}
 
@@ -5230,7 +5230,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 204.0, 350.0, 61.0, 19.0 ],
-													"text" : "jcom.map"
+													"text" : "j.map"
 												}
 
 											}
@@ -5312,7 +5312,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 29.0, 149.0, 59.0, 19.0 ],
-													"text" : "jcom.thru"
+													"text" : "j.thru"
 												}
 
 											}
@@ -5634,7 +5634,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 53.0, 43.0, 131.0, 19.0 ],
-																	"text" : "jcom.oscroute /function"
+																	"text" : "j.oscroute /function"
 																}
 
 															}
@@ -5847,7 +5847,7 @@
 																	"numoutlets" : 5,
 																	"outlettype" : [ "", "", "", "", "" ],
 																	"patching_rect" : [ 53.0, 68.0, 556.0, 19.0 ],
-																	"text" : "jcom.oscroute /dummy /parameter1 /parameter2 /symmetry"
+																	"text" : "j.oscroute /dummy /parameter1 /parameter2 /symmetry"
 																}
 
 															}
@@ -6573,7 +6573,7 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.oscroute.mxo",
+																"name" : "j.oscroute.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -6663,7 +6663,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 29.0, 334.0, 61.0, 19.0 ],
-													"text" : "jcom.map"
+													"text" : "j.map"
 												}
 
 											}
@@ -7005,25 +7005,25 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.thru.maxpat",
+												"name" : "j.thru.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.map.mxo",
+												"name" : "j.map.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.oscroute.mxo",
+												"name" : "j.oscroute.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.loader.mxo",
+												"name" : "j.loader.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.loader.mxo",
+												"name" : "j.loader.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -7165,7 +7165,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 128.0, 512.0, 59.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -7179,7 +7179,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 453.0, 273.0, 258.0, 19.0 ],
-									"text" : "jcom.oscroute /clipmode /slide /ramp"
+									"text" : "j.oscroute /clipmode /slide /ramp"
 								}
 
 							}
@@ -8229,7 +8229,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 53.0, 251.0, 144.0, 19.0 ],
-													"text" : "jcom.map @function linear"
+													"text" : "j.map @function linear"
 												}
 
 											}
@@ -8478,7 +8478,7 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.map.mxo",
+												"name" : "j.map.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -9112,7 +9112,7 @@
 																	"numoutlets" : 4,
 																	"outlettype" : [ "float", "float", "float", "" ],
 																	"patching_rect" : [ 59.0, 194.0, 159.0, 20.0 ],
-																	"text" : "jcom.delta"
+																	"text" : "j.delta"
 																}
 
 															}
@@ -9165,7 +9165,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 22.0, 58.0, 60.0, 20.0 ],
-																	"text" : "jcom.thru"
+																	"text" : "j.thru"
 																}
 
 															}
@@ -9384,13 +9384,13 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.thru.maxpat",
+																"name" : "j.thru.maxpat",
 																"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 																"type" : "JSON",
 																"implicit" : 1
 															}
 , 															{
-																"name" : "jcom.delta.mxo",
+																"name" : "j.delta.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -9883,7 +9883,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 12.0, 152.0, 174.0, 17.0 ],
-																	"text" : "name jcom.remote.module.from"
+																	"text" : "name j.remote.module.from"
 																}
 
 															}
@@ -10930,7 +10930,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 45.0, 105.0, 183.0, 19.0 ],
-																	"text" : "jcom.oscroute /audio/amplitude.*"
+																	"text" : "j.oscroute /audio/amplitude.*"
 																}
 
 															}
@@ -11052,7 +11052,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 45.0, 420.0, 182.0, 19.0 ],
-																	"text" : "jcom.send jcom.remote.module.to"
+																	"text" : "j.send j.remote.module.to"
 																}
 
 															}
@@ -11247,11 +11247,11 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.loader.mxo",
+																"name" : "j.loader.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.oscroute.mxo",
+																"name" : "j.oscroute.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -12173,7 +12173,7 @@
 																					"numoutlets" : 1,
 																					"outlettype" : [ "" ],
 																					"patching_rect" : [ 324.0, 211.0, 145.0, 19.0 ],
-																					"text" : "jcom.getOneAttribute type"
+																					"text" : "j.getOneAttribute type"
 																				}
 
 																			}
@@ -12361,21 +12361,21 @@
 																			}
  ],
 																		"dependency_cache" : [ 																			{
-																				"name" : "jcom.getOneAttribute.maxpat",
+																				"name" : "j.getOneAttribute.maxpat",
 																				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getOneAttribute",
 																				"type" : "JSON",
 																				"implicit" : 1
 																			}
 , 																			{
-																				"name" : "jcom.loader.mxo",
+																				"name" : "j.loader.mxo",
 																				"type" : "iLaX"
 																			}
 , 																			{
-																				"name" : "jcom.loader.mxo",
+																				"name" : "j.loader.mxo",
 																				"type" : "iLaX"
 																			}
 , 																			{
-																				"name" : "jcom.oscroute.mxo",
+																				"name" : "j.oscroute.mxo",
 																				"type" : "iLaX"
 																			}
  ]
@@ -12529,7 +12529,7 @@
 																					"numoutlets" : 1,
 																					"outlettype" : [ "" ],
 																					"patching_rect" : [ 324.0, 211.0, 145.0, 19.0 ],
-																					"text" : "jcom.getOneAttribute type"
+																					"text" : "j.getOneAttribute type"
 																				}
 
 																			}
@@ -12584,7 +12584,7 @@
 																					"numoutlets" : 3,
 																					"outlettype" : [ "", "", "" ],
 																					"patching_rect" : [ 151.0, 91.0, 153.0, 19.0 ],
-																					"text" : "jcom.oscroute /ui /view/size"
+																					"text" : "j.oscroute /ui /view/size"
 																				}
 
 																			}
@@ -12740,21 +12740,21 @@
 																			}
  ],
 																		"dependency_cache" : [ 																			{
-																				"name" : "jcom.getOneAttribute.maxpat",
+																				"name" : "j.getOneAttribute.maxpat",
 																				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getOneAttribute",
 																				"type" : "JSON",
 																				"implicit" : 1
 																			}
 , 																			{
-																				"name" : "jcom.oscroute.mxo",
+																				"name" : "j.oscroute.mxo",
 																				"type" : "iLaX"
 																			}
 , 																			{
-																				"name" : "jcom.loader.mxo",
+																				"name" : "j.loader.mxo",
 																				"type" : "iLaX"
 																			}
 , 																			{
-																				"name" : "jcom.loader.mxo",
+																				"name" : "j.loader.mxo",
 																				"type" : "iLaX"
 																			}
  ]
@@ -12920,7 +12920,7 @@
 																					"numoutlets" : 1,
 																					"outlettype" : [ "" ],
 																					"patching_rect" : [ 501.0, 262.0, 145.0, 19.0 ],
-																					"text" : "jcom.getOneAttribute type"
+																					"text" : "j.getOneAttribute type"
 																				}
 
 																			}
@@ -12948,7 +12948,7 @@
 																					"numoutlets" : 8,
 																					"outlettype" : [ "", "", "", "", "", "", "", "" ],
 																					"patching_rect" : [ 126.0, 75.0, 389.0, 19.0 ],
-																					"text" : "jcom.oscroute /documentation /panel /init /preset /view/script /ui /module"
+																					"text" : "j.oscroute /documentation /panel /init /preset /view/script /ui /module"
 																				}
 
 																			}
@@ -13119,21 +13119,21 @@
 																			}
  ],
 																		"dependency_cache" : [ 																			{
-																				"name" : "jcom.getOneAttribute.maxpat",
+																				"name" : "j.getOneAttribute.maxpat",
 																				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getOneAttribute",
 																				"type" : "JSON",
 																				"implicit" : 1
 																			}
 , 																			{
-																				"name" : "jcom.oscroute.mxo",
+																				"name" : "j.oscroute.mxo",
 																				"type" : "iLaX"
 																			}
 , 																			{
-																				"name" : "jcom.loader.mxo",
+																				"name" : "j.loader.mxo",
 																				"type" : "iLaX"
 																			}
 , 																			{
-																				"name" : "jcom.loader.mxo",
+																				"name" : "j.loader.mxo",
 																				"type" : "iLaX"
 																			}
  ]
@@ -13167,7 +13167,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 71.0, 74.0, 132.0, 19.0 ],
-																	"text" : "jcom.getMessageNames"
+																	"text" : "j.getMessageNames"
 																}
 
 															}
@@ -13181,7 +13181,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 258.0, 76.0, 141.0, 19.0 ],
-																	"text" : "jcom.getParameterNames"
+																	"text" : "j.getParameterNames"
 																}
 
 															}
@@ -13209,7 +13209,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 435.0, 74.0, 128.0, 19.0 ],
-																	"text" : "jcom.getReturnNames"
+																	"text" : "j.getReturnNames"
 																}
 
 															}
@@ -13447,39 +13447,39 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.getReturnNames.maxpat",
+																"name" : "j.getReturnNames.maxpat",
 																"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getReturnNames",
 																"type" : "JSON",
 																"implicit" : 1
 															}
 , 															{
-																"name" : "jcom.getParameterNames.maxpat",
+																"name" : "j.getParameterNames.maxpat",
 																"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getParameterNames",
 																"type" : "JSON",
 																"implicit" : 1
 															}
 , 															{
-																"name" : "jcom.getMessageNames.maxpat",
+																"name" : "j.getMessageNames.maxpat",
 																"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getMessageNames",
 																"type" : "JSON",
 																"implicit" : 1
 															}
 , 															{
-																"name" : "jcom.getOneAttribute.maxpat",
+																"name" : "j.getOneAttribute.maxpat",
 																"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getOneAttribute",
 																"type" : "JSON",
 																"implicit" : 1
 															}
 , 															{
-																"name" : "jcom.loader.mxo",
+																"name" : "j.loader.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.loader.mxo",
+																"name" : "j.loader.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.oscroute.mxo",
+																"name" : "j.oscroute.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -13573,7 +13573,7 @@
 														"embed" : 0
 													}
 ,
-													"text" : "coll jcom.modules_instances 1"
+													"text" : "coll j.modules_instances 1"
 												}
 
 											}
@@ -13731,7 +13731,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 225.0, 470.0, 247.0, 19.0 ],
-													"text" : "jcom.getAllAttributes"
+													"text" : "j.getAllAttributes"
 												}
 
 											}
@@ -13745,7 +13745,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 251.0, 571.0, 189.0, 19.0 ],
-													"text" : "jcom.oscroute /range/bounds /type"
+													"text" : "j.oscroute /range/bounds /type"
 												}
 
 											}
@@ -13771,7 +13771,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 85.0, 601.0, 57.0, 19.0 ],
-													"text" : "jcom.thru"
+													"text" : "j.thru"
 												}
 
 											}
@@ -13852,7 +13852,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 552.0, 505.0, 80.0, 43.0 ],
-													"text" : "jcom.receive jcom.remote.module.from",
+													"text" : "j.receive j.remote.module.from",
 													"varname" : "mapping_object_src_0"
 												}
 
@@ -13867,7 +13867,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 519.0, 585.0, 100.0, 19.0 ],
-													"text" : "jcom.oscroute",
+													"text" : "j.oscroute",
 													"varname" : "oscroute"
 												}
 
@@ -14648,55 +14648,55 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.thru.maxpat",
+												"name" : "j.thru.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.getAllAttributes.maxpat",
+												"name" : "j.getAllAttributes.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getAllAttributes",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.getReturnNames.maxpat",
+												"name" : "j.getReturnNames.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getReturnNames",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.getParameterNames.maxpat",
+												"name" : "j.getParameterNames.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getParameterNames",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.getMessageNames.maxpat",
+												"name" : "j.getMessageNames.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getMessageNames",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.getOneAttribute.maxpat",
+												"name" : "j.getOneAttribute.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getOneAttribute",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.oscroute.mxo",
+												"name" : "j.oscroute.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.loader.mxo",
+												"name" : "j.loader.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.loader.mxo",
+												"name" : "j.loader.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.delta.mxo",
+												"name" : "j.delta.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -15384,7 +15384,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "int", "clear" ],
 									"patching_rect" : [ 536.0, 543.0, 124.0, 19.0 ],
-									"text" : "jcom.modulesDumper"
+									"text" : "j.modulesDumper"
 								}
 
 							}
@@ -16331,7 +16331,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 33.0, 657.0, 182.0, 19.0 ],
-									"text" : "jcom.send jcom.remote.module.to",
+									"text" : "j.send j.remote.module.to",
 									"varname" : "mapping_object_dst_0[1]"
 								}
 
@@ -16823,7 +16823,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 231.0, 470.0, 308.0, 19.0 ],
-													"text" : "jcom.oscroute /range/bounds /range/clipmode /ramp/drive"
+													"text" : "j.oscroute /range/bounds /range/clipmode /ramp/drive"
 												}
 
 											}
@@ -16943,7 +16943,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 232.0, 393.0, 219.0, 19.0 ],
-													"text" : "jcom.getAllAttributes"
+													"text" : "j.getAllAttributes"
 												}
 
 											}
@@ -17237,7 +17237,7 @@
 														"embed" : 0
 													}
 ,
-													"text" : "coll jcom.modules_instances 1"
+													"text" : "coll j.modules_instances 1"
 												}
 
 											}
@@ -17609,7 +17609,7 @@
 																					"numoutlets" : 1,
 																					"outlettype" : [ "" ],
 																					"patching_rect" : [ 324.0, 211.0, 145.0, 19.0 ],
-																					"text" : "jcom.getOneAttribute type"
+																					"text" : "j.getOneAttribute type"
 																				}
 
 																			}
@@ -17664,7 +17664,7 @@
 																					"numoutlets" : 3,
 																					"outlettype" : [ "", "", "" ],
 																					"patching_rect" : [ 151.0, 91.0, 153.0, 19.0 ],
-																					"text" : "jcom.oscroute /ui /view/size"
+																					"text" : "j.oscroute /ui /view/size"
 																				}
 
 																			}
@@ -17820,21 +17820,21 @@
 																			}
  ],
 																		"dependency_cache" : [ 																			{
-																				"name" : "jcom.getOneAttribute.maxpat",
+																				"name" : "j.getOneAttribute.maxpat",
 																				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getOneAttribute",
 																				"type" : "JSON",
 																				"implicit" : 1
 																			}
 , 																			{
-																				"name" : "jcom.oscroute.mxo",
+																				"name" : "j.oscroute.mxo",
 																				"type" : "iLaX"
 																			}
 , 																			{
-																				"name" : "jcom.loader.mxo",
+																				"name" : "j.loader.mxo",
 																				"type" : "iLaX"
 																			}
 , 																			{
-																				"name" : "jcom.loader.mxo",
+																				"name" : "j.loader.mxo",
 																				"type" : "iLaX"
 																			}
  ]
@@ -18000,7 +18000,7 @@
 																					"numoutlets" : 1,
 																					"outlettype" : [ "" ],
 																					"patching_rect" : [ 501.0, 262.0, 145.0, 19.0 ],
-																					"text" : "jcom.getOneAttribute type"
+																					"text" : "j.getOneAttribute type"
 																				}
 
 																			}
@@ -18028,7 +18028,7 @@
 																					"numoutlets" : 8,
 																					"outlettype" : [ "", "", "", "", "", "", "", "" ],
 																					"patching_rect" : [ 126.0, 75.0, 389.0, 19.0 ],
-																					"text" : "jcom.oscroute /documentation /panel /init /preset /view/script /ui /module"
+																					"text" : "j.oscroute /documentation /panel /init /preset /view/script /ui /module"
 																				}
 
 																			}
@@ -18199,21 +18199,21 @@
 																			}
  ],
 																		"dependency_cache" : [ 																			{
-																				"name" : "jcom.getOneAttribute.maxpat",
+																				"name" : "j.getOneAttribute.maxpat",
 																				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getOneAttribute",
 																				"type" : "JSON",
 																				"implicit" : 1
 																			}
 , 																			{
-																				"name" : "jcom.oscroute.mxo",
+																				"name" : "j.oscroute.mxo",
 																				"type" : "iLaX"
 																			}
 , 																			{
-																				"name" : "jcom.loader.mxo",
+																				"name" : "j.loader.mxo",
 																				"type" : "iLaX"
 																			}
 , 																			{
-																				"name" : "jcom.loader.mxo",
+																				"name" : "j.loader.mxo",
 																				"type" : "iLaX"
 																			}
  ]
@@ -18247,7 +18247,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 71.0, 74.0, 132.0, 19.0 ],
-																	"text" : "jcom.getMessageNames"
+																	"text" : "j.getMessageNames"
 																}
 
 															}
@@ -18261,7 +18261,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 229.0, 73.0, 141.0, 19.0 ],
-																	"text" : "jcom.getParameterNames"
+																	"text" : "j.getParameterNames"
 																}
 
 															}
@@ -18456,33 +18456,33 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.getParameterNames.maxpat",
+																"name" : "j.getParameterNames.maxpat",
 																"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getParameterNames",
 																"type" : "JSON",
 																"implicit" : 1
 															}
 , 															{
-																"name" : "jcom.getMessageNames.maxpat",
+																"name" : "j.getMessageNames.maxpat",
 																"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getMessageNames",
 																"type" : "JSON",
 																"implicit" : 1
 															}
 , 															{
-																"name" : "jcom.getOneAttribute.maxpat",
+																"name" : "j.getOneAttribute.maxpat",
 																"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getOneAttribute",
 																"type" : "JSON",
 																"implicit" : 1
 															}
 , 															{
-																"name" : "jcom.loader.mxo",
+																"name" : "j.loader.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.loader.mxo",
+																"name" : "j.loader.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.oscroute.mxo",
+																"name" : "j.oscroute.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -18672,7 +18672,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 79.0, 487.0, 57.0, 19.0 ],
-													"text" : "jcom.thru"
+													"text" : "j.thru"
 												}
 
 											}
@@ -19360,45 +19360,45 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.thru.maxpat",
+												"name" : "j.thru.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.getParameterNames.maxpat",
+												"name" : "j.getParameterNames.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getParameterNames",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.getMessageNames.maxpat",
+												"name" : "j.getMessageNames.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getMessageNames",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.getOneAttribute.maxpat",
+												"name" : "j.getOneAttribute.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getOneAttribute",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.getAllAttributes.maxpat",
+												"name" : "j.getAllAttributes.maxpat",
 												"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getAllAttributes",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.loader.mxo",
+												"name" : "j.loader.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.loader.mxo",
+												"name" : "j.loader.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.oscroute.mxo",
+												"name" : "j.oscroute.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -19492,7 +19492,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 536.0, 518.0, 54.0, 19.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -19753,7 +19753,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 40.0, 42.0, 775.0, 19.0 ],
-									"text" : "jcom.oscroute /out /in /edit"
+									"text" : "j.oscroute /out /in /edit"
 								}
 
 							}
@@ -19767,7 +19767,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 40.0, 67.0, 245.0, 19.0 ],
-									"text" : "jcom.oscroute /module /min /max"
+									"text" : "j.oscroute /module /min /max"
 								}
 
 							}
@@ -19781,7 +19781,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 40.0, 126.0, 228.0, 19.0 ],
-									"text" : "jcom.oscroute /name /instance /parameter"
+									"text" : "j.oscroute /name /instance /parameter"
 								}
 
 							}
@@ -19795,7 +19795,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "", "", "", "", "", "" ],
 									"patching_rect" : [ 306.0, 130.0, 336.0, 19.0 ],
-									"text" : "jcom.oscroute /name /instance /parameter /derivative /listindex"
+									"text" : "j.oscroute /name /instance /parameter /derivative /listindex"
 								}
 
 							}
@@ -19809,7 +19809,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 305.0, 67.0, 224.0, 19.0 ],
-									"text" : "jcom.oscroute /module /min /max"
+									"text" : "j.oscroute /module /min /max"
 								}
 
 							}
@@ -19823,7 +19823,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 478.0, 307.0, 142.0, 19.0 ],
-									"text" : "jcom.oscroute /up /down"
+									"text" : "j.oscroute /up /down"
 								}
 
 							}
@@ -20583,73 +20583,73 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.thru.maxpat",
+								"name" : "j.thru.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.getParameterNames.maxpat",
+								"name" : "j.getParameterNames.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getParameterNames",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.getMessageNames.maxpat",
+								"name" : "j.getMessageNames.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getMessageNames",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.getOneAttribute.maxpat",
+								"name" : "j.getOneAttribute.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getOneAttribute",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.getAllAttributes.maxpat",
+								"name" : "j.getAllAttributes.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getAllAttributes",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.modulesDumper.maxpat",
+								"name" : "j.modulesDumper.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/modulesDumper",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.getReturnNames.maxpat",
+								"name" : "j.getReturnNames.maxpat",
 								"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getReturnNames",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.init.mxo",
+								"name" : "j.init.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.loader.mxo",
+								"name" : "j.loader.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.loader.mxo",
+								"name" : "j.loader.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.oscinstance.mxo",
+								"name" : "j.oscinstance.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.delta.mxo",
+								"name" : "j.delta.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.map.mxo",
+								"name" : "j.map.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -20706,7 +20706,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 995.0, 40.0, 320.0, 31.0 ],
-					"text" : "jcom.parameter ramp @repetitions/allow 1 @ramp/drive Max @type integer @description \"Ramp time\"",
+					"text" : "j.parameter ramp @repetitions/allow 1 @ramp/drive Max @type integer @description \"Ramp time\"",
 					"varname" : "ramp[1]"
 				}
 
@@ -20748,7 +20748,7 @@
 					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
 					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-48",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -21776,100 +21776,100 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.getParameterNames.maxpat",
+				"name" : "j.getParameterNames.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getParameterNames",
 				"patcherrelativepath" : "../../../library/components/getParameterNames",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.getMessageNames.maxpat",
+				"name" : "j.getMessageNames.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getMessageNames",
 				"patcherrelativepath" : "../../../library/components/getMessageNames",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.getOneAttribute.maxpat",
+				"name" : "j.getOneAttribute.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getOneAttribute",
 				"patcherrelativepath" : "../../../library/components/getOneAttribute",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.getAllAttributes.maxpat",
+				"name" : "j.getAllAttributes.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getAllAttributes",
 				"patcherrelativepath" : "../../../library/components/getAllAttributes",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.modulesDumper.maxpat",
+				"name" : "j.modulesDumper.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/modulesDumper",
 				"patcherrelativepath" : "../../../library/components/modulesDumper",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.getReturnNames.maxpat",
+				"name" : "j.getReturnNames.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getReturnNames",
 				"patcherrelativepath" : "../../../library/components/getReturnNames",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscinstance.mxo",
+				"name" : "j.oscinstance.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.delta.mxo",
+				"name" : "j.delta.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
  ]

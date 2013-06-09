@@ -184,7 +184,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 42.0, 60.0, 438.0, 19.0 ],
-					"text" : "jcom.oscroute /interpolate /fullscreen /context"
+					"text" : "j.oscroute /interpolate /fullscreen /context"
 				}
 
 			}

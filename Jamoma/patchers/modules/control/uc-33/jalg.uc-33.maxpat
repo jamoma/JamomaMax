@@ -147,7 +147,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 45.0, 125.0, 417.0, 31.0 ],
-									"text" : "jcom.return #2/rotary/lower @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Lower rotary control.\"",
+									"text" : "j.return #2/rotary/lower @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Lower rotary control.\"",
 									"varname" : "#2/rotary/upper"
 								}
 
@@ -387,7 +387,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 45.0, 130.0, 419.0, 31.0 ],
-									"text" : "jcom.return #2/rotary/middle @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Middle rotary control.\"",
+									"text" : "j.return #2/rotary/middle @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Middle rotary control.\"",
 									"varname" : "#2/rotary/upper"
 								}
 
@@ -726,7 +726,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 45.0, 130.0, 417.0, 31.0 ],
-									"text" : "jcom.return #2/rotary/upper @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Upper rotary control.\"",
+									"text" : "j.return #2/rotary/upper @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Upper rotary control.\"",
 									"varname" : "#2/rotary/upper"
 								}
 
@@ -966,7 +966,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 45.0, 130.0, 341.0, 31.0 ],
-									"text" : "jcom.return #2/fader @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Fader.\"",
+									"text" : "j.return #2/fader @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Fader.\"",
 									"varname" : "#2/fader"
 								}
 

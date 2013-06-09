@@ -44,7 +44,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 500.0, 300.0, 492.0, 19.0 ],
-					"text" : "jcom.message filter/clear @type none @description \"Reset filter used for background removal.\""
+					"text" : "j.message filter/clear @type none @description \"Reset filter used for background removal.\""
 				}
 
 			}
@@ -75,7 +75,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 495.0, 190.0, 599.0, 43.0 ],
-					"text" : "jcom.parameter threshold @type decimal @range/bounds 0 1 @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Threshold level for masking, based on absolute difference between foreground and background.\"",
+					"text" : "j.parameter threshold @type decimal @range/bounds 0 1 @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Threshold level for masking, based on absolute difference between foreground and background.\"",
 					"varname" : "module_in[2]"
 				}
 
@@ -173,7 +173,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 165.0, 375.0, 65.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -189,7 +189,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 495.0, 90.0, 590.0, 43.0 ],
-					"text" : "jcom.parameter filter/feedback @type decimal @range/bounds 0 1 @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Feedback coefficient. Used for background removal by calculating running mean of incomming image.\"",
+					"text" : "j.parameter filter/feedback @type decimal @range/bounds 0 1 @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Feedback coefficient. Used for background removal by calculating running mean of incomming image.\"",
 					"varname" : "module_in[1]"
 				}
 
@@ -218,7 +218,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 165.0, 300.0, 58.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -246,8 +246,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 14.0, 191.0, 348.0, 19.0 ],
-					"text" : "jcom.model @description \"Create mask based on image foreground.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Create mask based on image foreground.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -295,7 +295,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-16",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

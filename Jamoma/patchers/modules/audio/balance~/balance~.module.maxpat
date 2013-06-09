@@ -37,7 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 191.375, 261.0, 65.0, 20.0 ],
-					"text" : "jcom.view"
+					"text" : "j.view"
 				}
 
 			}
@@ -75,7 +75,7 @@
 					"outlettype" : [ "", "signal", "signal" ],
 					"patching_rect" : [ 21.0, 261.0, 158.0, 20.0 ],
 					"text" : "panpot~.model #1",
-					"varname" : "jcom.model"
+					"varname" : "j.model"
 				}
 
 			}
@@ -135,7 +135,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 379.75, 24.5, 161.0, 20.0 ],
-					"text" : "jcom.receive out.2/amplitude"
+					"text" : "j.receive out.2/amplitude"
 				}
 
 			}
@@ -149,7 +149,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 214.25, 24.5, 161.0, 20.0 ],
-					"text" : "jcom.receive out.1/amplitude"
+					"text" : "j.receive out.1/amplitude"
 				}
 
 			}
@@ -159,7 +159,7 @@
 					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-5",
 					"ignoreclick" : 1,
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -175,7 +175,7 @@
 					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-7",
 					"ignoreclick" : 1,
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -403,7 +403,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 348.0, 229.0, 119.0, 20.0 ],
-					"text" : "jcom.remote position",
+					"text" : "j.remote position",
 					"varname" : "position"
 				}
 
@@ -471,7 +471,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 212.0, 258.0, 106.0, 19.0 ],
-									"text" : "jcom.remote mode",
+									"text" : "j.remote mode",
 									"varname" : "mode[1]"
 								}
 
@@ -487,7 +487,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 212.0, 223.0, 108.0, 19.0 ],
-									"text" : "jcom.remote shape",
+									"text" : "j.remote shape",
 									"varname" : "shape[1]"
 								}
 
@@ -634,7 +634,7 @@
 				"box" : 				{
 					"background" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -784,35 +784,35 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.panorama~.mxo",
+				"name" : "j.panorama~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
  ]

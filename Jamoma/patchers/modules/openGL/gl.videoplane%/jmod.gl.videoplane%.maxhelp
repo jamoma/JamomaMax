@@ -21,7 +21,7 @@
 					"bgmode" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 682.0, 70.0 ],
@@ -93,7 +93,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 191.0, 19.0 ],
-									"text" : "jcom.receive notifications"
+									"text" : "j.receive notifications"
 								}
 
 							}

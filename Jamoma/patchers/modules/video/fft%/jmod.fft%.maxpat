@@ -29,7 +29,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 600.0, 70.0, 319.0, 31.0 ],
-					"text" : "jcom.parameter mode @type string @description \"Format of the processed matrix.\""
+					"text" : "j.parameter mode @type string @description \"Format of the processed matrix.\""
 				}
 
 			}
@@ -107,7 +107,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 435.0, 145.0, 154.0, 19.0 ],
-					"text" : "jcom.list2parameter 2"
+					"text" : "j.list2parameter 2"
 				}
 
 			}
@@ -151,7 +151,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 600.0, 130.0, 234.0, 43.0 ],
-					"text" : "jcom.parameter dim @type generic @description \"dimension of matrix to perform Fourier Transform on.\""
+					"text" : "j.parameter dim @type generic @description \"dimension of matrix to perform Fourier Transform on.\""
 				}
 
 			}
@@ -165,7 +165,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 285.0, 233.0, 56.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -205,7 +205,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 290.0, 147.0, 59.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -258,7 +258,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 50.0, 225.0, 219.0, 43.0 ],
-					"text" : "jcom.model @description \"Perform Fast Fourier transform on incoming 1 plane image.\""
+					"text" : "j.model @description \"Perform Fast Fourier transform on incoming 1 plane image.\""
 				}
 
 			}
@@ -1054,7 +1054,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 60.0, 70.0, 118.0, 19.0 ],
-									"text" : "jcom.oscroute /mode"
+									"text" : "j.oscroute /mode"
 								}
 
 							}
@@ -1096,7 +1096,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 160.0, 110.0, 83.0, 19.0 ],
-									"text" : "jcom.pass dim"
+									"text" : "j.pass dim"
 								}
 
 							}
@@ -1414,7 +1414,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

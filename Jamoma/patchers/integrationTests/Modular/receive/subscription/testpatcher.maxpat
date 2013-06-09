@@ -101,7 +101,7 @@
 					"patching_rect" : [ 186.0, 58.0, 101.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 186.0, 41.0, 101.0, 20.0 ],
-					"text" : "jcom.receive test"
+					"text" : "j.receive test"
 				}
 
 			}
@@ -117,7 +117,7 @@
 					"patching_rect" : [ 30.0, 58.0, 117.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.0, 41.0, 117.0, 20.0 ],
-					"text" : "jcom.parameter test"
+					"text" : "j.parameter test"
 				}
 
 			}

@@ -52,7 +52,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 28.0, 146.0, 403.0, 19.0 ],
-					"text" : "jcom.oscroute /current/id /cuelist"
+					"text" : "j.oscroute /current/id /cuelist"
 				}
 
 			}
@@ -389,8 +389,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 7.0, 440.0, 89.0, 104.0 ],
-					"text" : "jcom.model @type control @description \"manages comments for jmod.cueManager\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"manages comments for jmod.cueManager\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -420,7 +420,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-16",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

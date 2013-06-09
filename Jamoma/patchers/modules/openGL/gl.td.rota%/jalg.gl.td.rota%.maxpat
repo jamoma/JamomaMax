@@ -72,7 +72,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 50.0, 166.0, 19.0 ],
-									"text" : "jcom.oscroute /slab"
+									"text" : "j.oscroute /slab"
 								}
 
 							}
@@ -86,7 +86,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 72.0, 141.0, 19.0 ],
-									"text" : "jcom.class.gl_slab.route"
+									"text" : "j.class.gl_slab.route"
 								}
 
 							}
@@ -163,17 +163,17 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.class.gl_slab.route.maxpat",
+								"name" : "j.class.gl_slab.route.maxpat",
 								"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/class.gl_slab.route",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.pass.mxo",
+								"name" : "j.pass.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -947,7 +947,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 380.0, 120.0, 75.0, 19.0 ],
-					"text" : "jcom.thru"
+					"text" : "j.thru"
 				}
 
 			}
@@ -961,7 +961,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 560.0, 195.0, 75.0, 19.0 ],
-					"text" : "jcom.thru",
+					"text" : "j.thru",
 					"varname" : "THRU_0"
 				}
 
@@ -1126,7 +1126,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 305.0, 51.0, 125.0, 19.0 ],
-													"text" : "jcom.oscroute /context"
+													"text" : "j.oscroute /context"
 												}
 
 											}
@@ -1140,7 +1140,7 @@
 													"numoutlets" : 5,
 													"outlettype" : [ "", "", "", "", "" ],
 													"patching_rect" : [ 50.0, 50.0, 241.0, 19.0 ],
-													"text" : "jcom.pass /antialias /automatic /enable /layer"
+													"text" : "j.pass /antialias /automatic /enable /layer"
 												}
 
 											}
@@ -1265,11 +1265,11 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.pass.mxo",
+												"name" : "j.pass.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.oscroute.mxo",
+												"name" : "j.oscroute.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -1381,7 +1381,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 50.0, 55.0, 348.0, 19.0 ],
-													"text" : "jcom.oscroute /clear /enable /inherit"
+													"text" : "j.oscroute /clear /enable /inherit"
 												}
 
 											}
@@ -1476,7 +1476,7 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.oscroute.mxo",
+												"name" : "j.oscroute.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -1616,7 +1616,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 50.0, 50.0, 180.0, 19.0 ],
-													"text" : "jcom.oscroute /rgb /alpha /inherit"
+													"text" : "j.oscroute /rgb /alpha /inherit"
 												}
 
 											}
@@ -1738,7 +1738,7 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.oscroute.mxo",
+												"name" : "j.oscroute.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -1808,7 +1808,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 60.0, 107.0, 19.0 ],
-													"text" : "jcom.pass /position"
+													"text" : "j.pass /position"
 												}
 
 											}
@@ -1856,7 +1856,7 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.pass.mxo",
+												"name" : "j.pass.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -1954,7 +1954,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 50.0, 50.0, 243.0, 19.0 ],
-													"text" : "jcom.oscroute /enable /mode"
+													"text" : "j.oscroute /enable /mode"
 												}
 
 											}
@@ -2029,7 +2029,7 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.oscroute.mxo",
+												"name" : "j.oscroute.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -2063,7 +2063,7 @@
 									"numoutlets" : 8,
 									"outlettype" : [ "", "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 50.0, 50.0, 341.0, 19.0 ],
-									"text" : "jcom.oscroute /3D /blend /color /depth /fog /material /render"
+									"text" : "j.oscroute /3D /blend /color /depth /fog /material /render"
 								}
 
 							}
@@ -2226,11 +2226,11 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.pass.mxo",
+								"name" : "j.pass.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -2344,7 +2344,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 235.0, 80.0, 108.0, 55.0 ],
-									"text" : "jcom.dataspace @dataspace angle @input degree @output radian"
+									"text" : "j.dataspace @dataspace angle @input degree @output radian"
 								}
 
 							}
@@ -2358,7 +2358,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 55.0, 173.0, 19.0 ],
-									"text" : "jcom.pass /zoom /offset /anchor"
+									"text" : "j.pass /zoom /offset /anchor"
 								}
 
 							}
@@ -2372,7 +2372,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 235.0, 55.0, 240.0, 19.0 ],
-									"text" : "jcom.oscroute /theta /boundmode"
+									"text" : "j.oscroute /theta /boundmode"
 								}
 
 							}
@@ -2590,15 +2590,15 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.pass.mxo",
+								"name" : "j.pass.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.dataspace.mxo",
+								"name" : "j.dataspace.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -2923,29 +2923,29 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.class.gl_slab.route.maxpat",
+				"name" : "j.class.gl_slab.route.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/class.gl_slab.route",
 				"patcherrelativepath" : "../../../library/components/class.gl_slab.route",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
  ]

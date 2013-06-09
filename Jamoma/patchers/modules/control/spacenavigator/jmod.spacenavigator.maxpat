@@ -29,7 +29,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 420.0, 75.0, 306.0, 31.0 ],
-					"text" : "jcom.parameter model @type string @repetitions/allow 1 @description \"What SpaceNavigator model to use\"",
+					"text" : "j.parameter model @type string @repetitions/allow 1 @description \"What SpaceNavigator model to use\"",
 					"varname" : "on[2]"
 				}
 
@@ -94,7 +94,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 175.0, 220.0, 56.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -109,7 +109,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 420.0, 30.0, 283.0, 31.0 ],
-					"text" : "jcom.parameter active @type boolean @range/clipmode none @description \"Turn polling on\"",
+					"text" : "j.parameter active @type boolean @range/clipmode none @description \"Turn polling on\"",
 					"varname" : "on[1]"
 				}
 
@@ -152,8 +152,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 20.0, 165.0, 473.0, 19.0 ],
-					"text" : "jcom.model @description \"Use the Space Navigator from 3D Connexion\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Use the Space Navigator from 3D Connexion\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -183,7 +183,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-17",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

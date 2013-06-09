@@ -173,7 +173,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 42.0, 51.0, 118.0, 18.0 ],
-									"text" : "jcom.pwindow.mouse"
+									"text" : "j.pwindow.mouse"
 								}
 
 							}
@@ -341,7 +341,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 132.0, 355.0, 53.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -380,7 +380,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 132.0, 294.0, 80.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -510,7 +510,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 329.0, 264.0, 451.0, 43.0 ],
-					"text" : "jcom.parameter slideDown @type decimal @ramp/drive Max @range/clipmode low @range/bounds 1 100 @description \"The slide down factor - meaning how quickly (in frames) colors move from bright to dark\"",
+					"text" : "j.parameter slideDown @type decimal @ramp/drive Max @range/clipmode low @range/bounds 1 100 @description \"The slide down factor - meaning how quickly (in frames) colors move from bright to dark\"",
 					"varname" : "slide_down"
 				}
 
@@ -526,7 +526,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 329.0, 177.0, 455.0, 43.0 ],
-					"text" : "jcom.parameter slideUp @type decimal @ramp/drive Max @range/clipmode low @range/bounds 1 100 @description \"The slide up factor - meaning how quickly (in frames) colors move from dark up to bright\"",
+					"text" : "j.parameter slideUp @type decimal @ramp/drive Max @range/clipmode low @range/bounds 1 100 @description \"The slide up factor - meaning how quickly (in frames) colors move from dark up to bright\"",
 					"varname" : "slide_up"
 				}
 
@@ -555,8 +555,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 24.0, 142.0, 238.0, 55.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Create a Motion-Blur type of effect by using a brightness-based envelope follower\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Create a Motion-Blur type of effect by using a brightness-based envelope follower\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -590,7 +590,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

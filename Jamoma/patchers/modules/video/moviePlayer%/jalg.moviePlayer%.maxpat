@@ -95,7 +95,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 845.0, 243.0, 136.0, 18.0 ],
-					"text" : "jcom.pass colormode dim"
+					"text" : "j.pass colormode dim"
 				}
 
 			}
@@ -175,7 +175,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 962.0, 277.0, 134.0, 18.0 ],
-					"text" : "jcom.oscroute /getlength"
+					"text" : "j.oscroute /getlength"
 				}
 
 			}
@@ -189,7 +189,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1077.0, 308.0, 115.0, 18.0 ],
-					"text" : "jcom.oscroute /direct"
+					"text" : "j.oscroute /direct"
 				}
 
 			}
@@ -203,7 +203,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 581.0, 208.0, 283.0, 18.0 ],
-					"text" : "jcom.pass /deinterlace /highquality /singlefield /unique"
+					"text" : "j.pass /deinterlace /highquality /singlefield /unique"
 				}
 
 			}
@@ -217,7 +217,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 454.0, 162.0, 146.0, 18.0 ],
-					"text" : "jcom.pass /loop /looppoints"
+					"text" : "j.pass /loop /looppoints"
 				}
 
 			}
@@ -231,7 +231,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"patching_rect" : [ 242.0, 118.0, 231.0, 18.0 ],
-					"text" : "jcom.pass /read /start /stop /pause /dispose"
+					"text" : "j.pass /read /start /stop /pause /dispose"
 				}
 
 			}

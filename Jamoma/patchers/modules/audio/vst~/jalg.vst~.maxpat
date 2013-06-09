@@ -42,7 +42,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 760.0, 85.0, 59.0, 19.0 ],
-					"text" : "jcom.thru"
+					"text" : "j.thru"
 				}
 
 			}
@@ -98,7 +98,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 230.0, 110.0, 107.0, 19.0 ],
-					"text" : "jcom.oscroute /title"
+					"text" : "j.oscroute /title"
 				}
 
 			}
@@ -140,7 +140,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 25.0, 80.0, 119.0, 19.0 ],
-									"text" : "jcom.pass /midievent"
+									"text" : "j.pass /midievent"
 								}
 
 							}
@@ -182,7 +182,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 125.0, 210.0, 116.0, 19.0 ],
-									"text" : "jcom.oscroute /voice"
+									"text" : "j.oscroute /voice"
 								}
 
 							}
@@ -196,7 +196,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 125.0, 130.0, 100.0, 19.0 ],
-									"text" : "jcom.oscinstance"
+									"text" : "j.oscinstance"
 								}
 
 							}
@@ -1059,7 +1059,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "", "", "", "", "", "" ],
 									"patching_rect" : [ 125.0, 240.0, 282.0, 19.0 ],
-									"text" : "jcom.oscroute /bend /cc /note /poly /program"
+									"text" : "j.oscroute /bend /cc /note /poly /program"
 								}
 
 							}
@@ -1899,7 +1899,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 50.0, 361.0, 19.0 ],
-									"text" : "jcom.oscroute /program /read /write"
+									"text" : "j.oscroute /program /read /write"
 								}
 
 							}
@@ -2138,7 +2138,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 98.0, 110.0, 121.0, 19.0 ],
-					"text" : "jcom.pass /plug /open"
+					"text" : "j.pass /plug /open"
 				}
 
 			}
@@ -2569,7 +2569,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 585.0, 470.0, 203.0, 31.0 ],
-													"text" : "sprintf script newdefault oscrt-%ld 30 %ld jcom.pass /%s"
+													"text" : "sprintf script newdefault oscrt-%ld 30 %ld j.pass /%s"
 												}
 
 											}
@@ -3248,7 +3248,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 30.0, 80.0, 222.0, 19.0 ],
-					"text" : "jcom.oscroute /parameter /vst /raw",
+					"text" : "j.oscroute /parameter /vst /raw",
 					"varname" : "oscroute_parameter"
 				}
 

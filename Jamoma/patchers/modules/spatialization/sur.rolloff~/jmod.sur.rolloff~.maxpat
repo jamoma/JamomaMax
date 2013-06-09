@@ -29,7 +29,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 476.0, 202.0, 587.0, 31.0 ],
-					"text" : "jcom.message.array 32 source active @type boolean @value/default 1 @value 1 @description \"active 0 will mute the Nth source.\""
+					"text" : "j.message.array 32 source active @type boolean @value/default 1 @value 1 @description \"active 0 will mute the Nth source.\""
 				}
 
 			}
@@ -44,7 +44,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 476.0, 157.0, 593.0, 43.0 ],
-					"text" : "jcom.message.array 32 source position @type decimalArray @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
+					"text" : "j.message.array 32 source position @type decimalArray @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -152,7 +152,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 476.0, 62.0, 701.0, 31.0 ],
-					"text" : "jcom.parameter rollOff @type decimal @repetitions/allow 0 @range/bounds 1. 6. @range/clipmode both @description \"Roll-off in dB per doubling of distance.\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter rollOff @type decimal @repetitions/allow 0 @range/bounds 1. 6. @range/clipmode both @description \"Roll-off in dB per doubling of distance.\" @dataspace gain @dataspace/unit dB",
 					"varname" : "meters_per_unit[1]"
 				}
 
@@ -167,7 +167,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 57.0, 174.0, 48.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -182,7 +182,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 476.0, 30.0, 606.0, 31.0 ],
-					"text" : "jcom.parameter referenceDistance @type decimal @repetitions/allow 0 @range/bounds 0.15 10. @range/clipmode low @description \"Reference distance used to calculate roll-off.\"",
+					"text" : "j.parameter referenceDistance @type decimal @repetitions/allow 0 @range/bounds 0.15 10. @range/clipmode low @description \"Reference distance used to calculate roll-off.\"",
 					"varname" : "meters_per_unit"
 				}
 
@@ -268,7 +268,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 476.0, 97.0, 574.0, 31.0 ],
-					"text" : "jcom.parameter numSources @type integer @repetitions/allow 0 @range/bounds 1 32 @range/clipmode both @description \"The number of sound sources. Changes only take effect when audio is off.\"",
+					"text" : "j.parameter numSources @type integer @repetitions/allow 0 @range/bounds 1 32 @range/clipmode both @description \"The number of sound sources. Changes only take effect when audio is off.\"",
 					"varname" : "voices"
 				}
 
@@ -362,8 +362,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 0.0, 140.0, 436.0, 19.0 ],
-					"text" : "jcom.model @description \"Free-field amplitude roll-of with distance.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Free-field amplitude roll-of with distance.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -372,7 +372,7 @@
 					"has_bypass" : 1,
 					"has_mute" : 1,
 					"id" : "obj-37",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

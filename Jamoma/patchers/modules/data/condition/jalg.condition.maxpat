@@ -89,7 +89,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute /input/min /input/max /output/min /output/max",
+					"text" : "j.oscroute /input/min /input/max /output/min /output/max",
 					"patching_rect" : [ 177.0, 235.0, 324.0, 18.0 ],
 					"fontsize" : 10.0,
 					"numinlets" : 1,
@@ -103,7 +103,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute /value",
+					"text" : "j.oscroute /value",
 					"patching_rect" : [ 282.0, 87.0, 113.0, 18.0 ],
 					"fontsize" : 10.0,
 					"numinlets" : 1,
@@ -242,7 +242,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute /min /max",
+					"text" : "j.oscroute /min /max",
 					"patching_rect" : [ 180.0, 373.0, 135.0, 18.0 ],
 					"fontsize" : 10.0,
 					"numinlets" : 1,
@@ -353,7 +353,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute /repetitions /clip /scale /smooth",
+					"text" : "j.oscroute /repetitions /clip /scale /smooth",
 					"patching_rect" : [ 51.0, 48.0, 242.0, 18.0 ],
 					"fontsize" : 10.0,
 					"numinlets" : 1,
@@ -381,7 +381,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.autoscale",
+					"text" : "j.autoscale",
 					"patching_rect" : [ 180.0, 341.0, 83.0, 18.0 ],
 					"fontsize" : 10.0,
 					"numinlets" : 1,

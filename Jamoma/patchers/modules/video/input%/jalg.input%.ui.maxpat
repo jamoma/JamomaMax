@@ -313,8 +313,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 128.0, 1071.20813, 423.0, 19.0 ],
-					"text" : "jcom.message file/stop @type none @description \"Stop reading of the video file\"",
-					"varname" : "jcom.parameter[8]"
+					"text" : "j.message file/stop @type none @description \"Stop reading of the video file\"",
+					"varname" : "j.parameter[8]"
 				}
 
 			}
@@ -366,8 +366,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 128.0, 1119.0, 429.0, 19.0 ],
-					"text" : "jcom.message file/start @type none @description \"Start reading of the video file\"",
-					"varname" : "jcom.parameter[9]"
+					"text" : "j.message file/start @type none @description \"Start reading of the video file\"",
+					"varname" : "j.parameter[9]"
 				}
 
 			}
@@ -381,8 +381,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 121.0, 413.20813, 364.0, 19.0 ],
-					"text" : "jcom.message camera/close @description \"Open the camera grabber\"",
-					"varname" : "jcom.parameter[7]"
+					"text" : "j.message camera/close @description \"Open the camera grabber\"",
+					"varname" : "j.parameter[7]"
 				}
 
 			}
@@ -434,8 +434,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 121.0, 467.0, 363.0, 19.0 ],
-					"text" : "jcom.message camera/open @description \"Open the camera grabber\"",
-					"varname" : "jcom.parameter[6]"
+					"text" : "j.message camera/open @description \"Open the camera grabber\"",
+					"varname" : "j.parameter[6]"
 				}
 
 			}
@@ -464,8 +464,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 103.0, 804.0, 443.0, 31.0 ],
-					"text" : "jcom.message camera/direct @repetitions/allow 1 @description \"Direct access to the embedded jit.qt/dx.grab object\"",
-					"varname" : "jcom.parameter[5]"
+					"text" : "j.message camera/direct @repetitions/allow 1 @description \"Direct access to the embedded jit.qt/dx.grab object\"",
+					"varname" : "j.parameter[5]"
 				}
 
 			}
@@ -497,7 +497,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 121.0, 754.0, 568.0, 31.0 ],
-					"text" : "jcom.parameter camera/updaterate @type integer @range/bounds 1 100 @range/clipmode low @description \"Update rate of the camera, in milliseconds\"",
+					"text" : "j.parameter camera/updaterate @type integer @range/bounds 1 100 @range/clipmode low @description \"Update rate of the camera, in milliseconds\"",
 					"varname" : "camera/camera[1]"
 				}
 
@@ -540,8 +540,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 128.0, 1043.0, 572.0, 19.0 ],
-					"text" : "jcom.message file/direct @repetitions/allow 1 @description \"Direct access to the embedded jit.qt.movie object\"",
-					"varname" : "jcom.parameter[4]"
+					"text" : "j.message file/direct @repetitions/allow 1 @description \"Direct access to the embedded jit.qt.movie object\"",
+					"varname" : "j.parameter[4]"
 				}
 
 			}
@@ -618,7 +618,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 101.0, 1836.0, 597.0, 31.0 ],
-					"text" : "jcom.parameter desktop/offset/x @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 0 640 @range/clipmode low @description \"x value of the upper right corner of the desktop crop\"",
+					"text" : "j.parameter desktop/offset/x @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 0 640 @range/clipmode low @description \"x value of the upper right corner of the desktop crop\"",
 					"varname" : "synth/noise/size/x[2]"
 				}
 
@@ -654,7 +654,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 101.0, 1788.0, 597.0, 31.0 ],
-					"text" : "jcom.parameter desktop/offset/y @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 0 480 @range/clipmode low @description \" y value of the upper right corner of the desktop crop\"",
+					"text" : "j.parameter desktop/offset/y @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 0 480 @range/clipmode low @description \" y value of the upper right corner of the desktop crop\"",
 					"varname" : "synth/noise/size/y[2]"
 				}
 
@@ -690,7 +690,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 101.0, 1747.0, 588.0, 31.0 ],
-					"text" : "jcom.parameter desktop/size/x @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 640 @range/clipmode low @description \"y size of desktop crop\"",
+					"text" : "j.parameter desktop/size/x @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 640 @range/clipmode low @description \"y size of desktop crop\"",
 					"varname" : "synth/noise/size/x[1]"
 				}
 
@@ -727,7 +727,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 101.0, 1702.0, 588.0, 31.0 ],
-					"text" : "jcom.parameter desktop/size/y @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 480 @range/clipmode low @description \"x size of desktop crop\"",
+					"text" : "j.parameter desktop/size/y @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 480 @range/clipmode low @description \"x size of desktop crop\"",
 					"varname" : "synth/noise/size/y[1]"
 				}
 
@@ -1344,7 +1344,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 122.0, 709.0, 399.0, 19.0 ],
-					"text" : "jcom.parameter camera/camera @type string @description \"Choose camera\"",
+					"text" : "j.parameter camera/camera @type string @description \"Choose camera\"",
 					"varname" : "camera/camera"
 				}
 
@@ -1359,7 +1359,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 121.0, 635.0, 405.0, 19.0 ],
-					"text" : "jcom.parameter camera/device @type string @description \"Input device type\"",
+					"text" : "j.parameter camera/device @type string @description \"Input device type\"",
 					"varname" : "camera/device"
 				}
 
@@ -1403,7 +1403,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 128.0, 1169.0, 368.0, 31.0 ],
-					"text" : "jcom.parameter file/framedump @type boolean @repetitions/allow 0 @description \"Turn on or off framedump of the video\"",
+					"text" : "j.parameter file/framedump @type boolean @repetitions/allow 0 @description \"Turn on or off framedump of the video\"",
 					"varname" : "file/framedump"
 				}
 
@@ -1418,7 +1418,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 105.0, 1555.0, 422.0, 19.0 ],
-					"text" : "jcom.parameter synth/color @type generic @description \"List of RGB colors\"",
+					"text" : "j.parameter synth/color @type generic @description \"List of RGB colors\"",
 					"varname" : "synth/color"
 				}
 
@@ -1616,7 +1616,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 779.0, 201.0, 205.0, 55.0 ],
-					"text" : "jcom.parameter file/loop/bounds @type decimalArray @repetitions/allow 0 @description \"List of low and high loop point values\"",
+					"text" : "j.parameter file/loop/bounds @type decimalArray @repetitions/allow 0 @description \"List of low and high loop point values\"",
 					"varname" : "file/loop_points"
 				}
 
@@ -1662,7 +1662,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 105.0, 1583.0, 585.0, 31.0 ],
-					"text" : "jcom.parameter synth/noise/size/y @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 480 @range/clipmode low @description \"y size of noise matrix\"",
+					"text" : "j.parameter synth/noise/size/y @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 480 @range/clipmode low @description \"y size of noise matrix\"",
 					"varname" : "synth/noise/size/y"
 				}
 
@@ -1678,7 +1678,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 105.0, 1387.0, 330.0, 43.0 ],
-					"text" : "jcom.parameter synth/noise/size/x @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 640 @range/clipmode low @description \"x size of noise matrix\"",
+					"text" : "j.parameter synth/noise/size/x @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 640 @range/clipmode low @description \"x size of noise matrix\"",
 					"varname" : "synth/noise/size/x"
 				}
 
@@ -1846,7 +1846,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 309.0, 175.0, 220.0, 55.0 ],
-					"text" : "jcom.message file/counter @type integer @range/bounds 0 100000 @range/clipmode low @repetitions/allow 1 @description \"Video file time counter\"",
+					"text" : "j.message file/counter @type integer @range/bounds 0 100000 @range/clipmode low @repetitions/allow 1 @description \"Video file time counter\"",
 					"varname" : "file/counter"
 				}
 
@@ -1862,7 +1862,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 128.0, 1270.0, 452.0, 31.0 ],
-					"text" : "jcom.parameter file/rate @type decimal @repetitions/allow 0 @ramp/drive Max @range/bounds -2. 2. @range/clipmode none @description \"Playback rate of video file\"",
+					"text" : "j.parameter file/rate @type decimal @repetitions/allow 0 @ramp/drive Max @range/bounds -2. 2. @range/clipmode none @description \"Playback rate of video file\"",
 					"varname" : "file/rate"
 				}
 
@@ -1878,7 +1878,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 128.0, 1225.0, 311.0, 31.0 ],
-					"text" : "jcom.parameter file/size @type integer @repetitions/allow 0 @description \"Select size of video playback\"",
+					"text" : "j.parameter file/size @type integer @repetitions/allow 0 @description \"Select size of video playback\"",
 					"varname" : "file/size"
 				}
 
@@ -1894,7 +1894,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 756.0, 359.0, 574.0, 31.0 ],
-					"text" : "jcom.parameter file/loop/mode @type integer @range/bounds 0 2 @range/clipmode both @repetitions/allow 0 @description \"0: no looping | 1: looping on | 2: palindrom \"",
+					"text" : "j.parameter file/loop/mode @type integer @range/bounds 0 2 @range/clipmode both @repetitions/allow 0 @description \"0: no looping | 1: looping on | 2: palindrom \"",
 					"varname" : "file/loop"
 				}
 
@@ -1910,8 +1910,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 128.0, 992.0, 515.0, 31.0 ],
-					"text" : "jcom.parameter file/open @type generic @description \"Open dialog to select video file\" @repetitions/allow 1",
-					"varname" : "jcom.parameter[2]"
+					"text" : "j.parameter file/open @type generic @description \"Open dialog to select video file\" @repetitions/allow 1",
+					"varname" : "j.parameter[2]"
 				}
 
 			}
@@ -1926,7 +1926,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 105.0, 1440.0, 427.0, 31.0 ],
-					"text" : "jcom.parameter synth/noise/planes @type integer @range/bounds 1 4 @range/clipmode both @ramp/drive none @description \"Number of matrix planes\"",
+					"text" : "j.parameter synth/noise/planes @type integer @range/bounds 1 4 @range/clipmode both @ramp/drive none @description \"Number of matrix planes\"",
 					"varname" : "synth/noise/planes"
 				}
 
@@ -1975,7 +1975,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 121.0, 547.0, 236.0, 31.0 ],
-					"text" : "jcom.parameter camera/size @type integer @description \"Resolution of captured image\"",
+					"text" : "j.parameter camera/size @type integer @description \"Resolution of captured image\"",
 					"varname" : "camera/size"
 				}
 
@@ -2010,8 +2010,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 121.0, 367.0, 408.0, 19.0 ],
-					"text" : "jcom.message camera/settings @description \"Open dialog for camera settings\"",
-					"varname" : "jcom.parameter[1]"
+					"text" : "j.message camera/settings @description \"Open dialog for camera settings\"",
+					"varname" : "j.parameter[1]"
 				}
 
 			}
@@ -2075,7 +2075,7 @@
 				"box" : 				{
 					"hint" : "Scrub through the file",
 					"id" : "obj-69",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -2159,7 +2159,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 105.0, 1481.392822, 597.0, 31.0 ],
-					"text" : "jcom.parameter synth/color/active @type boolean @range/bounds 0 1 @range/clipmode both @repetitions/allow 0 @ramp/drive none @description \"Turn video color synth on or off\"",
+					"text" : "j.parameter synth/color/active @type boolean @range/bounds 0 1 @range/clipmode both @repetitions/allow 0 @ramp/drive none @description \"Turn video color synth on or off\"",
 					"varname" : "synth/color/on"
 				}
 
@@ -3144,15 +3144,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.textslider.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]

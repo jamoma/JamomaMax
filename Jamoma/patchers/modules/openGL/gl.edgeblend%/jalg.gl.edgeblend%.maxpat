@@ -76,7 +76,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 675.0, 190.0, 75.0, 19.0 ],
-					"text" : "jcom.thru",
+					"text" : "j.thru",
 					"varname" : "THRU"
 				}
 
@@ -210,7 +210,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 300.0, 65.0, 125.0, 19.0 ],
-													"text" : "jcom.oscroute /context"
+													"text" : "j.oscroute /context"
 												}
 
 											}
@@ -224,7 +224,7 @@
 													"numoutlets" : 5,
 													"outlettype" : [ "", "", "", "", "" ],
 													"patching_rect" : [ 50.0, 65.0, 241.0, 19.0 ],
-													"text" : "jcom.pass /antialias /automatic /enable /layer"
+													"text" : "j.pass /antialias /automatic /enable /layer"
 												}
 
 											}
@@ -446,7 +446,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 50.0, 65.0, 348.0, 19.0 ],
-													"text" : "jcom.oscroute /clear /enable /inherit"
+													"text" : "j.oscroute /clear /enable /inherit"
 												}
 
 											}
@@ -669,7 +669,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 50.0, 65.0, 180.0, 19.0 ],
-													"text" : "jcom.oscroute /rgb /alpha /inherit"
+													"text" : "j.oscroute /rgb /alpha /inherit"
 												}
 
 											}
@@ -849,7 +849,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 60.0, 107.0, 19.0 ],
-													"text" : "jcom.pass /position"
+													"text" : "j.pass /position"
 												}
 
 											}
@@ -985,7 +985,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 50.0, 70.0, 243.0, 19.0 ],
-													"text" : "jcom.oscroute /enable /mode"
+													"text" : "j.oscroute /enable /mode"
 												}
 
 											}
@@ -1086,7 +1086,7 @@
 									"numoutlets" : 8,
 									"outlettype" : [ "", "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 50.0, 55.0, 341.0, 19.0 ],
-									"text" : "jcom.oscroute /3D /blend /color /depth /fog /material /render"
+									"text" : "j.oscroute /3D /blend /color /depth /fog /material /render"
 								}
 
 							}
@@ -1270,7 +1270,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 255.0, 70.0, 302.0, 19.0 ],
-					"text" : "jcom.oscroute /slab /edgeblend"
+					"text" : "j.oscroute /slab /edgeblend"
 				}
 
 			}
@@ -1284,7 +1284,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 255.0, 100.0, 141.0, 19.0 ],
-					"text" : "jcom.class.gl_slab.route"
+					"text" : "j.class.gl_slab.route"
 				}
 
 			}
@@ -1374,7 +1374,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 260.0, 55.0, 96.0, 19.0 ],
-									"text" : "jcom.pass /invert"
+									"text" : "j.pass /invert"
 								}
 
 							}
@@ -1388,7 +1388,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 55.0, 109.0, 19.0 ],
-									"text" : "jcom.oscroute /fade"
+									"text" : "j.oscroute /fade"
 								}
 
 							}
@@ -1439,7 +1439,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 50.0, 90.0, 204.0, 19.0 ],
-									"text" : "jcom.oscroute /left /top /right /bottom"
+									"text" : "j.oscroute /left /top /right /bottom"
 								}
 
 							}

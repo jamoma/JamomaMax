@@ -537,7 +537,7 @@
 					"numoutlets" : 10,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 10.0, 81.0, 757.0, 19.0 ],
-					"text" : "jcom.oscroute /send/host /send/port /receive/port /mode /multicast/port /multicast/ip /multicast/join /prefix /send/active"
+					"text" : "j.oscroute /send/host /send/port /receive/port /mode /multicast/port /multicast/ip /multicast/join /prefix /send/active"
 				}
 
 			}

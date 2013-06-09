@@ -116,7 +116,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 335.0, 515.0, 154.0, 19.0 ],
-					"text" : "jcom.list2parameter 3"
+					"text" : "j.list2parameter 3"
 				}
 
 			}
@@ -180,11 +180,11 @@
 									"id" : "obj-2",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.class.gl_group.inspect.maxpat",
+									"name" : "j.class.gl_group.inspect.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 0.0, 268.0, 761.0 ],
-									"varname" : "jcom.class.gl_group.inspect.mxt"
+									"varname" : "j.class.gl_group.inspect.mxt"
 								}
 
 							}
@@ -227,7 +227,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 290.0, 60.0, 146.0, 19.0 ],
-									"text" : "jcom.oscroute /view/panel"
+									"text" : "j.oscroute /view/panel"
 								}
 
 							}
@@ -318,7 +318,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 270.0, 375.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -332,7 +332,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 255.0, 295.0, 56.0, 19.0 ],
-					"text" : "jcom.in 2"
+					"text" : "j.in 2"
 				}
 
 			}
@@ -508,7 +508,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 295.0, 427.0, 19.0 ],
-					"text" : "jcom.parameter chromakey/modus @type boolean @description \"Mask mode.\"",
+					"text" : "j.parameter chromakey/modus @type boolean @description \"Mask mode.\"",
 					"varname" : "modus"
 				}
 
@@ -523,7 +523,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 270.0, 426.0, 19.0 ],
-					"text" : "jcom.parameter chromakey/invert @type boolean @description \"Invert mask.\"",
+					"text" : "j.parameter chromakey/invert @type boolean @description \"Invert mask.\"",
 					"varname" : "invert"
 				}
 
@@ -539,7 +539,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 505.0, 135.0, 383.0, 31.0 ],
-					"text" : "jcom.parameter chromakey/fade @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Fade amount.\"",
+					"text" : "j.parameter chromakey/fade @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Fade amount.\"",
 					"varname" : "fade"
 				}
 
@@ -555,7 +555,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 505.0, 60.0, 407.0, 31.0 ],
-					"text" : "jcom.parameter chromakey/tolerance @type decimal @range/bounds 0. 1. @range/clipmode both @description Tolerance.",
+					"text" : "j.parameter chromakey/tolerance @type decimal @range/bounds 0. 1. @range/clipmode both @description Tolerance.",
 					"varname" : "tolerance"
 				}
 
@@ -587,7 +587,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 490.0, 515.0, 603.0, 31.0 ],
-					"text" : "jcom.parameter chromakey/color @type decimalArray @range/bounds 0. 255. @range/clipmode both @dataspace color @dataspace/unit rgb8 @description \"Color target (RGB).\"",
+					"text" : "j.parameter chromakey/color @type decimalArray @range/bounds 0. 255. @range/clipmode both @dataspace color @dataspace/unit rgb8 @description \"Color target (RGB).\"",
 					"varname" : "color"
 				}
 
@@ -616,7 +616,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 5.0, 215.0, 280.0, 19.0 ],
-					"text" : "jcom.model @description \"Chromakey using jit.gl.slab.\"",
+					"text" : "j.model @description \"Chromakey using jit.gl.slab.\"",
 					"varname" : "jmod.hub"
 				}
 
@@ -720,7 +720,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 575.0, 320.0, 428.0, 31.0 ],
-					"text" : "jcom.parameter chromakey/binary @type boolean @description \"Mix with second source (if 0, just gen alpha channel).\"",
+					"text" : "j.parameter chromakey/binary @type boolean @description \"Mix with second source (if 0, just gen alpha channel).\"",
 					"varname" : "binary"
 				}
 
@@ -733,7 +733,7 @@
 					"has_panel" : 1,
 					"has_preview" : 1,
 					"id" : "obj-55",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

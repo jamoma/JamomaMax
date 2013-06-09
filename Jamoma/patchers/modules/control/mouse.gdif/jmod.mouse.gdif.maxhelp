@@ -36,7 +36,7 @@
 					"bgmode" : 1,
 					"id" : "obj-10",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 700.0, 70.0 ],
@@ -1665,7 +1665,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 576.0, 304.0, 125.0, 20.0 ],
-									"text" : "jcom.oscroute /press"
+									"text" : "j.oscroute /press"
 								}
 
 							}
@@ -1718,7 +1718,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 895.0, 176.0, 131.0, 20.0 ],
-									"text" : "jcom.oscroute /device"
+									"text" : "j.oscroute /device"
 								}
 
 							}
@@ -1745,7 +1745,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 576.0, 278.0, 102.0, 20.0 ],
-									"text" : "jcom.oscroute /2"
+									"text" : "j.oscroute /2"
 								}
 
 							}
@@ -1791,7 +1791,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 694.0, 278.0, 199.0, 20.0 ],
-									"text" : "jcom.oscroute /horizontal /vertical"
+									"text" : "j.oscroute /horizontal /vertical"
 								}
 
 							}
@@ -1805,7 +1805,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 576.0, 249.0, 247.0, 20.0 ],
-									"text" : "jcom.oscroute /button /location"
+									"text" : "j.oscroute /button /location"
 								}
 
 							}
@@ -1819,7 +1819,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 576.0, 176.0, 132.0, 20.0 ],
-									"text" : "jcom.oscroute /mouse"
+									"text" : "j.oscroute /mouse"
 								}
 
 							}
@@ -1963,7 +1963,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 72.0, 137.0, 245.0, 20.0 ],
-									"text" : "jcom.oscroute /body /device /environment"
+									"text" : "j.oscroute /body /device /environment"
 								}
 
 							}
@@ -1977,7 +1977,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 72.0, 304.0, 125.0, 20.0 ],
-									"text" : "jcom.oscroute /press"
+									"text" : "j.oscroute /press"
 								}
 
 							}
@@ -5205,7 +5205,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 364.0, 278.0, 197.0, 20.0 ],
-									"text" : "jcom.oscroute /quantity /direction"
+									"text" : "j.oscroute /quantity /direction"
 								}
 
 							}
@@ -5232,7 +5232,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 72.0, 278.0, 102.0, 20.0 ],
-									"text" : "jcom.oscroute /2"
+									"text" : "j.oscroute /2"
 								}
 
 							}
@@ -5289,7 +5289,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 182.0, 278.0, 199.0, 20.0 ],
-									"text" : "jcom.oscroute /horizontal /vertical"
+									"text" : "j.oscroute /horizontal /vertical"
 								}
 
 							}
@@ -5303,7 +5303,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 72.0, 249.0, 340.0, 20.0 ],
-									"text" : "jcom.oscroute /finger /location /motion"
+									"text" : "j.oscroute /finger /location /motion"
 								}
 
 							}
@@ -5317,7 +5317,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 72.0, 225.0, 121.0, 20.0 ],
-									"text" : "jcom.oscroute /right"
+									"text" : "j.oscroute /right"
 								}
 
 							}
@@ -5331,7 +5331,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 72.0, 176.0, 123.0, 20.0 ],
-									"text" : "jcom.oscroute /hand"
+									"text" : "j.oscroute /hand"
 								}
 
 							}
@@ -5873,7 +5873,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 60.0, 67.0, 124.0, 20.0 ],
-									"text" : "jcom.oscroute /meta"
+									"text" : "j.oscroute /meta"
 								}
 
 							}
@@ -5887,7 +5887,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 60.0, 91.0, 220.0, 20.0 ],
-									"text" : "jcom.oscroute /happy-sad /anger-fear"
+									"text" : "j.oscroute /happy-sad /anger-fear"
 								}
 
 							}
@@ -6147,7 +6147,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 85.0, 87.0, 165.0, 20.0 ],
-									"text" : "jcom.oscroute /performance"
+									"text" : "j.oscroute /performance"
 								}
 
 							}
@@ -6161,7 +6161,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 85.0, 118.0, 179.0, 20.0 ],
-									"text" : "jcom.oscroute /dynamics /flow"
+									"text" : "j.oscroute /dynamics /flow"
 								}
 
 							}
@@ -6545,7 +6545,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 410.0, 186.0, 199.0, 20.0 ],
-									"text" : "jcom.oscroute /horizontal /vertical"
+									"text" : "j.oscroute /horizontal /vertical"
 								}
 
 							}
@@ -6559,7 +6559,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 338.0, 137.0, 183.0, 20.0 ],
-									"text" : "jcom.oscroute /button /location"
+									"text" : "j.oscroute /button /location"
 								}
 
 							}
@@ -6616,7 +6616,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 128.0, 186.0, 199.0, 20.0 ],
-									"text" : "jcom.oscroute /horizontal /vertical"
+									"text" : "j.oscroute /horizontal /vertical"
 								}
 
 							}
@@ -6630,7 +6630,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 56.0, 137.0, 183.0, 20.0 ],
-									"text" : "jcom.oscroute /button /location"
+									"text" : "j.oscroute /button /location"
 								}
 
 							}
@@ -6644,7 +6644,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 56.0, 92.0, 163.0, 20.0 ],
-									"text" : "jcom.oscroute /raw /cooked"
+									"text" : "j.oscroute /raw /cooked"
 								}
 
 							}
@@ -6940,7 +6940,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 49.0, 71.0, 213.0, 20.0 ],
-									"text" : "jcom.oscroute /position/x /position/y"
+									"text" : "j.oscroute /position/x /position/y"
 								}
 
 							}
@@ -7222,7 +7222,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 40.0, 213.0, 223.0, 20.0 ],
-									"text" : "jcom.oscroute /delta/x /delta/y"
+									"text" : "j.oscroute /delta/x /delta/y"
 								}
 
 							}
@@ -7289,7 +7289,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 42.0, 383.0, 257.0, 20.0 ],
-									"text" : "jcom.oscroute /delta/magnitude /delta/angle"
+									"text" : "j.oscroute /delta/magnitude /delta/angle"
 								}
 
 							}
@@ -7346,7 +7346,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 40.0, 64.0, 258.0, 20.0 ],
-									"text" : "jcom.oscroute /button /position/x /position/y"
+									"text" : "j.oscroute /button /position/x /position/y"
 								}
 
 							}
@@ -7565,7 +7565,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 135.0, 224.0, 106.0, 19.0 ],
-					"text" : "jcom.oscroute /gdif"
+					"text" : "j.oscroute /gdif"
 				}
 
 			}

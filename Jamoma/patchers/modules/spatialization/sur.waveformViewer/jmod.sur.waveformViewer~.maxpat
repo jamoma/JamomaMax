@@ -44,7 +44,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 460.0, 280.0, 438.0, 19.0 ],
-					"text" : "jcom.parameter active @type boolean @description \"Is monitoring currently active?\""
+					"text" : "j.parameter active @type boolean @description \"Is monitoring currently active?\""
 				}
 
 			}
@@ -193,7 +193,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 460.0, 185.0, 533.0, 31.0 ],
-					"text" : "jcom.parameter downSample @type integer @range/bounds 1 250 @range/clipmode low @description \"Downsampling for slower scrolling\""
+					"text" : "j.parameter downSample @type integer @range/bounds 1 250 @range/clipmode low @description \"Downsampling for slower scrolling\""
 				}
 
 			}
@@ -207,7 +207,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 280.0, 145.0, 48.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -222,7 +222,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 20.0, 165.0, 251.0, 31.0 ],
-					"text" : "jcom.model @description \"Display waveform of real-time multi-channel signal as jitter matrix.\""
+					"text" : "j.model @description \"Display waveform of real-time multi-channel signal as jitter matrix.\""
 				}
 
 			}
@@ -252,7 +252,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 460.0, 100.0, 596.0, 31.0 ],
-					"text" : "jcom.parameter numberOfChannels @type integer @repetitions/allow 0 @range/bounds 1 8 @range/clipmode both @ramp/drive none @description \"The number of channels to monitor.\""
+					"text" : "j.parameter numberOfChannels @type integer @repetitions/allow 0 @range/bounds 1 8 @range/clipmode both @ramp/drive none @description \"The number of channels to monitor.\""
 				}
 
 			}
@@ -309,7 +309,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 130.0, 75.0, 192.0, 19.0 ],
-									"text" : "jcom.oscroute /downSample /active"
+									"text" : "j.oscroute /downSample /active"
 								}
 
 							}
@@ -323,7 +323,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 350.0, 170.0, 136.0, 19.0 ],
-									"text" : "jcom.op≈ @operator abs",
+									"text" : "j.op≈ @operator abs",
 									"varname" : "abs"
 								}
 
@@ -338,7 +338,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 230.0, 200.0, 59.0, 19.0 ],
-									"text" : "jcom.thru",
+									"text" : "j.thru",
 									"varname" : "toCatch"
 								}
 
@@ -922,7 +922,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 50.0, 130.0, 301.0, 53.0 ],
-																	"text" : "script newdefault unpack≈ 350 200 jcom.unpack≈ $1, script newdefault catch 350 230 jit.catch~ $1 @mode 3, script newdefault unpack 350 260 jit.unpack $1, script newdefault glue 350 360 jit.glue @rows $1"
+																	"text" : "script newdefault unpack≈ 350 200 j.unpack≈ $1, script newdefault catch 350 230 jit.catch~ $1 @mode 3, script newdefault unpack 350 260 jit.unpack $1, script newdefault glue 350 360 jit.glue @rows $1"
 																}
 
 															}
@@ -1304,7 +1304,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 45.0, 115.0, 186.0, 19.0 ],
-													"text" : "jcom.oscroute /numberOfChannels"
+													"text" : "j.oscroute /numberOfChannels"
 												}
 
 											}
@@ -1569,7 +1569,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 350.0, 200.0, 100.0, 19.0 ],
-									"text" : "jcom.unpack≈ 2",
+									"text" : "j.unpack≈ 2",
 									"varname" : "unpack≈"
 								}
 
@@ -1830,7 +1830,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-42",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

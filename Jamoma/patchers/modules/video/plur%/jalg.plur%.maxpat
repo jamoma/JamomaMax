@@ -229,7 +229,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"patching_rect" : [ 411.0, 112.0, 197.0, 19.0 ],
-					"text" : "jcom.pass /gang /mode /scale /lo /hi"
+					"text" : "j.pass /gang /mode /scale /lo /hi"
 				}
 
 			}
@@ -243,7 +243,7 @@
 					"numoutlets" : 8,
 					"outlettype" : [ "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 20.0, 82.0, 409.0, 19.0 ],
-					"text" : "jcom.oscroute /genframe /direct /x/step /y/step /x/range /y/range /colormode"
+					"text" : "j.oscroute /genframe /direct /x/step /y/step /x/range /y/range /colormode"
 				}
 
 			}

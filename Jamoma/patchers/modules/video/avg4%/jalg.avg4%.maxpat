@@ -69,7 +69,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 115.0, 56.0, 273.0, 19.0 ],
-					"text" : "jcom.oscroute /video/direct /video/genframe /mode"
+					"text" : "j.oscroute /video/direct /video/genframe /mode"
 				}
 
 			}
@@ -83,7 +83,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 28.0, 31.0, 106.0, 19.0 ],
-					"text" : "jcom.pass /x /y"
+					"text" : "j.pass /x /y"
 				}
 
 			}

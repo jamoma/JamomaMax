@@ -29,7 +29,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 229.159088, 553.0, 31.0 ],
-					"text" : "jcom.parameter zoomY @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 10. @range/clipmode none @description \"Zoom image in Y-direction.\"",
+					"text" : "j.parameter zoomY @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 10. @range/clipmode none @description \"Zoom image in Y-direction.\"",
 					"varname" : "zoom[4]"
 				}
 
@@ -109,7 +109,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 696.0, 600.0, 67.0 ],
-					"text" : "jcom.parameter boundmode @type string @repetitions/allow 1 @description \"Boundary mode for values outside the range (0, width) (0, height). <br /> 0 = ignore: Values that exceed the limits are ignored.<br /> 1 = clear: Values that exceed the limits are set to 0.<br /> 2 = wrap: Values that exceed the limits are wrapped around to the opposite limit with a modulo operation.<br /> 3 = clip: Values are limited not to exceed width or height.<br /> 4 = fold: Values that exceed the limits are folded back in the opposite.\""
+					"text" : "j.parameter boundmode @type string @repetitions/allow 1 @description \"Boundary mode for values outside the range (0, width) (0, height). <br /> 0 = ignore: Values that exceed the limits are ignored.<br /> 1 = clear: Values that exceed the limits are set to 0.<br /> 2 = wrap: Values that exceed the limits are wrapped around to the opposite limit with a modulo operation.<br /> 3 = clip: Values are limited not to exceed width or height.<br /> 4 = fold: Values that exceed the limits are folded back in the opposite.\""
 				}
 
 			}
@@ -477,7 +477,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 45.0, 50.0, 118.0, 19.0 ],
-									"text" : "jcom.pwindow.mouse"
+									"text" : "j.pwindow.mouse"
 								}
 
 							}
@@ -897,7 +897,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 146.0, 449.0, 53.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -937,7 +937,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 146.0, 349.0, 85.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -951,7 +951,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 460.820862, 128.0, 251.0, 19.0 ],
-					"text" : "jcom.oscroute /zoomX /zoomY /offsetX /offsetY"
+					"text" : "j.oscroute /zoomX /zoomY /offsetX /offsetY"
 				}
 
 			}
@@ -966,7 +966,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 612.0, 446.0, 31.0 ],
-					"text" : "jcom.parameter angle @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 90 @range/clipmode none @description \"Rotate image - in degrees\"",
+					"text" : "j.parameter angle @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 90 @range/clipmode none @description \"Rotate image - in degrees\"",
 					"varname" : "angle[1]"
 				}
 
@@ -982,7 +982,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 366.0, 552.0, 31.0 ],
-					"text" : "jcom.parameter offsetY @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -1. 1. @range/clipmode none @description \"Offset image in Y-direction\"",
+					"text" : "j.parameter offsetY @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -1. 1. @range/clipmode none @description \"Offset image in Y-direction\"",
 					"varname" : "offset_y"
 				}
 
@@ -997,7 +997,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 498.0, 361.0, 19.0 ],
-					"text" : "jcom.parameter rotate2 @type boolean @description \"Flip vertical\"",
+					"text" : "j.parameter rotate2 @type boolean @description \"Flip vertical\"",
 					"varname" : "rotate2[1]"
 				}
 
@@ -1101,7 +1101,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 301.0, 553.0, 31.0 ],
-					"text" : "jcom.parameter offsetX @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -1. 1. @range/clipmode none @description \"Offset image in X-direction\"",
+					"text" : "j.parameter offsetX @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -1. 1. @range/clipmode none @description \"Offset image in X-direction\"",
 					"varname" : "offset_x"
 				}
 
@@ -1116,7 +1116,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 554.0, 362.0, 19.0 ],
-					"text" : "jcom.parameter mirror @type boolean @description \"Mirror image\"",
+					"text" : "j.parameter mirror @type boolean @description \"Mirror image\"",
 					"varname" : "mirror[1]"
 				}
 
@@ -1196,7 +1196,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 438.0, 374.0, 19.0 ],
-					"text" : "jcom.parameter rotate1 @type boolean @description \"Flip horizontal\"",
+					"text" : "j.parameter rotate1 @type boolean @description \"Flip horizontal\"",
 					"varname" : "rotate1[1]"
 				}
 
@@ -1212,7 +1212,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 165.0, 554.0, 31.0 ],
-					"text" : "jcom.parameter zoomX @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 10. @range/clipmode none @description \"Zoom image in X-direction.\"",
+					"text" : "j.parameter zoomX @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 10. @range/clipmode none @description \"Zoom image in X-direction.\"",
 					"varname" : "zoom[1]"
 				}
 
@@ -1281,8 +1281,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 10.0, 185.0, 259.0, 31.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Orientation and size of video\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Orientation and size of video\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1316,7 +1316,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-45",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

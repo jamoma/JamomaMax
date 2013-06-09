@@ -633,7 +633,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 302.0, 75.0, 153.0, 19.0 ],
-					"text" : "jcom.initialized /input% 200"
+					"text" : "j.initialized /input% 200"
 				}
 
 			}
@@ -724,7 +724,7 @@
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 701.0, 70.0 ]

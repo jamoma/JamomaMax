@@ -112,7 +112,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 120.0, 94.0, 19.0 ],
-									"text" : "jcom.filewatcher"
+									"text" : "j.filewatcher"
 								}
 
 							}
@@ -301,11 +301,11 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 82.0, 128.0, 154.0, 19.0 ],
 									"saved_object_attributes" : 									{
-										"filename" : "jcom.js_systeminfo.js",
+										"filename" : "j.js_systeminfo.js",
 										"parameter_enable" : 0
 									}
 ,
-									"text" : "js jcom.js_systeminfo.js"
+									"text" : "js j.js_systeminfo.js"
 								}
 
 							}
@@ -682,7 +682,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 418.0, 417.0, 182.0, 19.0 ],
-					"text" : "jcom.send jcom.remote.module.to"
+					"text" : "j.send j.remote.module.to"
 				}
 
 			}
@@ -1715,7 +1715,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 389.0, 491.0, 262.0, 67.0 ],
-					"text" : "jcom.return cues @type string @description \"When a new cue script is loaded, all cues are dumped one ata time. The symbols ---START and ---END indicates the start and end of the list of cues.\" @repetitions/allow 1"
+					"text" : "j.return cues @type string @description \"When a new cue script is loaded, all cues are dumped one ata time. The symbols ---START and ---END indicates the start and end of the list of cues.\" @repetitions/allow 1"
 				}
 
 			}
@@ -1765,7 +1765,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 30.0, 595.0, 59.0, 19.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -3619,7 +3619,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 507.0, 223.0, 111.0, 19.0 ],
-					"text" : "jcom.filesaver TEXT"
+					"text" : "j.filesaver TEXT"
 				}
 
 			}
@@ -3718,7 +3718,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 220.0, 350.0, 115.0, 19.0 ],
-													"text" : "jcom.oscroute /alias"
+													"text" : "j.oscroute /alias"
 												}
 
 											}
@@ -3747,7 +3747,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 430.0, 210.0, 213.0, 43.0 ],
-													"text" : "This stops jcom.receive from listening if we are not currently requesting the names of all modules."
+													"text" : "This stops j.receive from listening if we are not currently requesting the names of all modules."
 												}
 
 											}
@@ -3761,7 +3761,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 250.0, 235.0, 172.0, 17.0 ],
-													"text" : "name jcom.remote.module.from"
+													"text" : "name j.remote.module.from"
 												}
 
 											}
@@ -3901,7 +3901,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 220.0, 325.0, 175.0, 19.0 ],
-													"text" : "jcom.oscroute /parameter_value"
+													"text" : "j.oscroute /parameter_value"
 												}
 
 											}
@@ -3929,7 +3929,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 220.0, 260.0, 231.0, 19.0 ],
-													"text" : "jcom.receive \"that deaf dumb and blind kid\""
+													"text" : "j.receive \"that deaf dumb and blind kid\""
 												}
 
 											}
@@ -3943,7 +3943,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 220.0, 295.0, 94.0, 19.0 ],
-													"text" : "jcom.oscroute /*"
+													"text" : "j.oscroute /*"
 												}
 
 											}
@@ -3958,7 +3958,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 233.0, 169.0, 127.0, 31.0 ],
-													"text" : "jcom.send jcom.remote.module.to"
+													"text" : "j.send j.remote.module.to"
 												}
 
 											}
@@ -4370,7 +4370,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 215.0, 203.0, 172.0, 17.0 ],
-													"text" : "name jcom.remote.module.from"
+													"text" : "name j.remote.module.from"
 												}
 
 											}
@@ -4472,7 +4472,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 175.0, 298.0, 159.0, 19.0 ],
-													"text" : "jcom.oscroute /module_name"
+													"text" : "j.oscroute /module_name"
 												}
 
 											}
@@ -4486,7 +4486,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 175.0, 273.0, 94.0, 19.0 ],
-													"text" : "jcom.oscroute /*"
+													"text" : "j.oscroute /*"
 												}
 
 											}
@@ -4500,7 +4500,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 175.0, 238.0, 231.0, 19.0 ],
-													"text" : "jcom.receive \"that deaf dumb and blind kid\""
+													"text" : "j.receive \"that deaf dumb and blind kid\""
 												}
 
 											}
@@ -4515,7 +4515,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 174.0, 96.0, 127.0, 31.0 ],
-													"text" : "jcom.send jcom.remote.module.to"
+													"text" : "j.send j.remote.module.to"
 												}
 
 											}
@@ -4583,7 +4583,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 399.0, 183.0, 213.0, 43.0 ],
-													"text" : "This stops jcom.receive from listening if we are not currently requesting the names of all modules."
+													"text" : "This stops j.receive from listening if we are not currently requesting the names of all modules."
 												}
 
 											}
@@ -4888,7 +4888,7 @@
 					"numoutlets" : 7,
 					"outlettype" : [ "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 150.0, 71.0, 554.0, 19.0 ],
-					"text" : "jcom.oscroute /loadScript /getState /view /cue /saveScript /editWith"
+					"text" : "j.oscroute /loadScript /getState /view /cue /saveScript /editWith"
 				}
 
 			}
@@ -5162,47 +5162,47 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.filesaver.maxpat",
+				"name" : "j.filesaver.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/filesaver",
 				"patcherrelativepath" : "../../../library/components/filesaver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.js_systeminfo.js",
+				"name" : "j.js_systeminfo.js",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/javascript",
 				"patcherrelativepath" : "../../../library/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.filewatcher.maxpat",
+				"name" : "j.filewatcher.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/filewatcher",
 				"patcherrelativepath" : "../../../library/components/filewatcher",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
  ]

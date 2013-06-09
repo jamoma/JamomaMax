@@ -88,7 +88,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 479.0, 186.0, 596.0, 31.0 ],
-					"text" : "jcom.parameter mode @repetitions/allow 0 @type integer @range/bounds 0 2 @range/clipmode both @description \"modes: 0 - vertical, 1 - horizontal, 2 - map\" @ramp/drive Max",
+					"text" : "j.parameter mode @repetitions/allow 0 @type integer @range/bounds 0 2 @range/clipmode both @description \"modes: 0 - vertical, 1 - horizontal, 2 - map\" @ramp/drive Max",
 					"varname" : "hue_angle[2]"
 				}
 
@@ -167,7 +167,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 478.0, 136.0, 563.0, 31.0 ],
-					"text" : "jcom.parameter framedelay @repetitions/allow 0 @type integer @range/bounds 0 200 @range/clipmode low @description \"what is the maximum delay in frames\" @ramp/drive Max",
+					"text" : "j.parameter framedelay @repetitions/allow 0 @type integer @range/bounds 0 200 @range/clipmode low @description \"what is the maximum delay in frames\" @ramp/drive Max",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -218,7 +218,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 98.0, 403.0, 65.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -232,7 +232,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 160.0, 330.0, 68.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -260,8 +260,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 14.0, 211.0, 234.0, 19.0 ],
-					"text" : "jcom.model @description \"Slit scanning effect\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Slit scanning effect\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -295,7 +295,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-16",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

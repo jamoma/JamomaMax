@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 83.0, 124.0, 304.0, 43.0 ],
-					"text" : "In order to create all jcom.parameters/messages/returns, you can use the jcom.parameterCreate utility below : just double-click on it and choose the desired attributes",
+					"text" : "In order to create all j.parameters/messages/returns, you can use the j.parameterCreate utility below : just double-click on it and choose the desired attributes",
 					"textcolor" : [ 0.709804, 0.101961, 0.101961, 1.0 ]
 				}
 
@@ -60,7 +60,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 42.0, 181.0, 131.0, 19.0 ],
-					"text" : "jcom.parameterCreate"
+					"text" : "j.parameterCreate"
 				}
 
 			}
@@ -100,7 +100,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 435.0, 113.0, 19.0 ],
-									"text" : "for jcom.return only"
+									"text" : "for j.return only"
 								}
 
 							}
@@ -139,7 +139,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 11.0, 364.0, 133.0, 19.0 ],
-									"text" : "for jcom.parameter only"
+									"text" : "for j.parameter only"
 								}
 
 							}
@@ -284,7 +284,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 139.0, 370.0, 43.0 ],
-									"text" : "If you need to return messages from your algorithm to the rest of the world. you can specify type, range... etc as in jcom.parameter or jcom.message"
+									"text" : "If you need to return messages from your algorithm to the rest of the world. you can specify type, range... etc as in j.parameter or j.message"
 								}
 
 							}
@@ -297,7 +297,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 11.0, 119.0, 380.0, 19.0 ],
-									"text" : "jcom.return:"
+									"text" : "j.return:"
 								}
 
 							}
@@ -311,7 +311,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 79.0, 342.0, 31.0 ],
-									"text" : "If you need to send messages to or within the patch, but it's not required that they be stored or retrieveable, use jcom.message."
+									"text" : "If you need to send messages to or within the patch, but it's not required that they be stored or retrieveable, use j.message."
 								}
 
 							}
@@ -324,7 +324,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 11.0, 59.0, 366.0, 19.0 ],
-									"text" : "jcom.message:"
+									"text" : "j.message:"
 								}
 
 							}
@@ -350,7 +350,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 11.0, 9.0, 293.0, 19.0 ],
-									"text" : "jcom.parameter:"
+									"text" : "j.parameter:"
 								}
 
 							}
@@ -441,7 +441,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 11.0, 194.0, 295.0, 19.0 ],
-									"text" : "Attributes for jcom.parameter and jcom.message:"
+									"text" : "Attributes for j.parameter and j.message:"
 								}
 
 							}
@@ -565,7 +565,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 131.821503, 151.313141, 436.0, 31.0 ],
-									"text" : "jcom.parameter a_bang @type generic @repetitions/allow 1 @ramp/drive none @priority 1 @description \"a bang\"",
+									"text" : "j.parameter a_bang @type generic @repetitions/allow 1 @ramp/drive none @priority 1 @description \"a bang\"",
 									"varname" : "foot/switch"
 								}
 
@@ -679,7 +679,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 50.0, 144.0, 19.0 ],
-													"text" : "jcom.oscroute /view/panel"
+													"text" : "j.oscroute /view/panel"
 												}
 
 											}
@@ -976,7 +976,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 639.0, 350.0, 523.0, 19.0 ],
-					"text" : "jcom.parameter a_menu @repetitions/allow 1 @type string @description \"a menu\" @priority 1",
+					"text" : "j.parameter a_menu @repetitions/allow 1 @type string @description \"a menu\" @priority 1",
 					"varname" : "module_in[1]"
 				}
 
@@ -992,7 +992,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 639.0, 300.0, 584.0, 31.0 ],
-					"text" : "jcom.parameter a_slider @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter a_slider @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle[2]"
 				}
 
@@ -1023,7 +1023,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 639.0, 270.0, 588.0, 19.0 ],
-					"text" : "jcom.parameter a_toggle @type boolean @description \"Tell me what you are doing I will tell you who you are\"",
+					"text" : "j.parameter a_toggle @type boolean @description \"Tell me what you are doing I will tell you who you are\"",
 					"varname" : "saturation/active"
 				}
 
@@ -1168,7 +1168,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 385.0, 316.0, 121.0, 19.0 ],
-					"text" : "jcom.meter_receive 2"
+					"text" : "j.meter_receive 2"
 				}
 
 			}
@@ -1182,14 +1182,14 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 258.0, 316.0, 121.0, 19.0 ],
-					"text" : "jcom.meter_receive 1"
+					"text" : "j.meter_receive 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-53",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1202,7 +1202,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-54",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1238,7 +1238,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 626.0, 176.0, 596.0, 31.0 ],
-					"text" : "jcom.message this_message @type integer @range/bounds 0. 1. @range/clipmode none @description \"Document what this message does...\"",
+					"text" : "j.message this_message @type integer @range/bounds 0. 1. @range/clipmode none @description \"Document what this message does...\"",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -1287,7 +1287,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 626.0, 136.0, 601.0, 31.0 ],
-					"text" : "jcom.parameter this_parameter @repetitions/allow 1 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter this_parameter @repetitions/allow 1 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
 
@@ -1301,7 +1301,7 @@
 					"has_mute" : 1,
 					"has_panel" : 1,
 					"id" : "obj-37",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1324,7 +1324,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 30.0, 480.0, 269.0, 31.0 ],
-					"text" : "jcom.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
+					"text" : "j.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
 				}
 
 			}
@@ -1338,7 +1338,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 90.0, 410.0, 79.0, 19.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -1352,7 +1352,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "", "" ],
 					"patching_rect" : [ 90.0, 335.0, 151.0, 19.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -1366,8 +1366,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 14.0, 210.0, 421.0, 19.0 ],
-					"text" : "jcom.model @type audio @description \"This module doesn't do much yet\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type audio @description \"This module doesn't do much yet\"",
+					"varname" : "j.model"
 				}
 
 			}

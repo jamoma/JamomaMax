@@ -73,7 +73,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 824.0, 534.0, 596.0, 43.0 ],
-					"text" : "jcom.parameter soundfile/transpose @type decimal @range/bounds -12. 12. @range/clipmode none @dataspace time @dataspace/unit midi @ramp/drive Max @ramp/function linear @description \"Control soundfile playback speed/transposition as MIDI transposition.\""
+					"text" : "j.parameter soundfile/transpose @type decimal @range/bounds -12. 12. @range/clipmode none @dataspace time @dataspace/unit midi @ramp/drive Max @ramp/function linear @description \"Control soundfile playback speed/transposition as MIDI transposition.\""
 				}
 
 			}
@@ -87,7 +87,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 181.0, 591.0, 86.0, 19.0 ],
-					"text" : "jcom.savebang"
+					"text" : "j.savebang"
 				}
 
 			}
@@ -124,7 +124,7 @@
 					"clickjump" : 0,
 					"id" : "obj-79",
 					"ignoreclick" : 1,
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -283,7 +283,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 819.0, 119.0, 552.0, 43.0 ],
-					"text" : "jcom.parameter testtone/frequency @type integer @ramp/drive Max @description \"The Frequency of the test tone. in [Hz] by default.\" @range/bounds 0.2 16000. @range/clipmode both @dataspace time @dataspace/unit Hz",
+					"text" : "j.parameter testtone/frequency @type integer @ramp/drive Max @description \"The Frequency of the test tone. in [Hz] by default.\" @range/bounds 0.2 16000. @range/clipmode both @dataspace time @dataspace/unit Hz",
 					"varname" : "ch_1[2]"
 				}
 
@@ -1036,7 +1036,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 819.0, 73.0, 540.0, 43.0 ],
-					"text" : "jcom.parameter clicktrain/rate @type decimal @ramp/drive Max @description \"How often a click is generated. in [Hz] by default.\" @range/bounds 0.01 100. @range/clipmode both @dataspace time @dataspace/unit Hz",
+					"text" : "j.parameter clicktrain/rate @type decimal @ramp/drive Max @description \"How often a click is generated. in [Hz] by default.\" @range/bounds 0.01 100. @range/clipmode both @dataspace time @dataspace/unit Hz",
 					"varname" : "ch_1[1]"
 				}
 
@@ -1070,8 +1070,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 824.0, 779.0, 546.0, 19.0 ],
-					"text" : "jcom.message audio/panic @type none @repetitions/allow 1 @description \"Stop audio immediately.\"",
-					"varname" : "jcom.parameter"
+					"text" : "j.message audio/panic @type none @repetitions/allow 1 @description \"Stop audio immediately.\"",
+					"varname" : "j.parameter"
 				}
 
 			}
@@ -1099,7 +1099,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 824.0, 746.0, 456.0, 19.0 ],
-					"text" : "jcom.parameter audio/active @type boolean @description \"Toggle audio on and off.\"",
+					"text" : "j.parameter audio/active @type boolean @description \"Toggle audio on and off.\"",
 					"varname" : "audio[1]"
 				}
 
@@ -1230,7 +1230,7 @@
 					"annotation" : "master gain",
 					"hint" : "Master Gain",
 					"id" : "obj-35",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1338,7 +1338,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 824.0, 671.0, 452.0, 19.0 ],
-					"text" : "jcom.parameter ch.2 @type integer @description \" Set logical input for right channel.\"",
+					"text" : "j.parameter ch.2 @type integer @description \" Set logical input for right channel.\"",
 					"varname" : "ch_2"
 				}
 
@@ -1353,7 +1353,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 824.0, 641.0, 444.0, 19.0 ],
-					"text" : "jcom.parameter ch.1 @type integer @description \" Set logical input for left channel.\"",
+					"text" : "j.parameter ch.1 @type integer @description \" Set logical input for left channel.\"",
 					"varname" : "ch_1"
 				}
 
@@ -1412,7 +1412,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 335.0, 200.0, 423.0, 31.0 ],
-					"text" : "jcom.parameter balance @type decimal @range/bounds -1 1 @range/clipmode both @ramp/drive Max @description \"Pan-pot for the stereo signal\""
+					"text" : "j.parameter balance @type decimal @range/bounds -1 1 @range/clipmode both @ramp/drive Max @description \"Pan-pot for the stereo signal\""
 				}
 
 			}
@@ -1426,8 +1426,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 204.0, 304.0, 19.0 ],
-					"text" : "jcom.hub @description \"A generic module for audio input\"",
-					"varname" : "jcom.hub"
+					"text" : "j.hub @description \"A generic module for audio input\"",
+					"varname" : "j.hub"
 				}
 
 			}
@@ -1441,7 +1441,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 461.0, 283.0, 121.0, 19.0 ],
-					"text" : "jcom.meter_receive 2"
+					"text" : "j.meter_receive 2"
 				}
 
 			}
@@ -1455,7 +1455,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 461.0, 238.0, 121.0, 19.0 ],
-					"text" : "jcom.meter_receive 1"
+					"text" : "j.meter_receive 1"
 				}
 
 			}
@@ -1484,8 +1484,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 334.0, 81.0, 328.0, 55.0 ],
-					"text" : "jcom.parameter audio/gain @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"master gain\"",
-					"varname" : "jcom.parameter.gain"
+					"text" : "j.parameter audio/gain @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"master gain\"",
+					"varname" : "j.parameter.gain"
 				}
 
 			}
@@ -1499,7 +1499,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 45.0, 410.0, 81.0, 19.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -1513,7 +1513,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 45.0, 345.0, 56.0, 19.0 ],
-					"text" : "jcom.in~"
+					"text" : "j.in~"
 				}
 
 			}
@@ -1541,7 +1541,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 268.0, 534.0, 440.0, 19.0 ],
-					"text" : "jcom.message dspStatus @type none @description \"Open DSP Status window.\""
+					"text" : "j.message dspStatus @type none @description \"Open DSP Status window.\""
 				}
 
 			}
@@ -1748,7 +1748,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 431.0, 71.0, 119.0, 19.0 ],
-									"text" : "jcom.audioOnOff #0_"
+									"text" : "j.audioOnOff #0_"
 								}
 
 							}
@@ -2250,7 +2250,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 95.0, 70.0, 304.0, 19.0 ],
-									"text" : "jcom.oscroute /source /testtone/frequency /clicktrain/rate"
+									"text" : "j.oscroute /source /testtone/frequency /clicktrain/rate"
 								}
 
 							}
@@ -2472,7 +2472,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 475.0, 112.0, 88.0, 19.0 ],
-													"text" : "r jcom.audio.off"
+													"text" : "r j.audio.off"
 												}
 
 											}
@@ -2928,7 +2928,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 170.0, 101.0, 55.0 ],
-													"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+													"text" : "j.dataspace @dataspace gain @input midi @output linear"
 												}
 
 											}
@@ -3534,7 +3534,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 100.0, 323.0, 19.0 ],
-																	"text" : "jcom.dataspace @dataspace time @input midi @output speed"
+																	"text" : "j.dataspace @dataspace time @input midi @output speed"
 																}
 
 															}
@@ -3773,7 +3773,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 685.0, 354.0, 375.0, 31.0 ],
-													"text" : "jcom.return soundfile/report @type none @description \"Report when sound file reach end point and loop to start point.\" @repetitions/allow 1"
+													"text" : "j.return soundfile/report @type none @description \"Report when sound file reach end point and loop to start point.\" @repetitions/allow 1"
 												}
 
 											}
@@ -4114,7 +4114,7 @@
 													"numoutlets" : 6,
 													"outlettype" : [ "", "", "", "", "", "" ],
 													"patching_rect" : [ 118.0, 50.0, 514.0, 19.0 ],
-													"text" : "jcom.oscroute /soundfile/open /soundfile/play /soundfile/direct /soundfile/loop /soundfile/transpose"
+													"text" : "j.oscroute /soundfile/open /soundfile/play /soundfile/direct /soundfile/loop /soundfile/transpose"
 												}
 
 											}
@@ -4142,7 +4142,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 207.0, 140.0, 52.0, 19.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -4965,7 +4965,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 50.0, 75.0, 199.0, 19.0 ],
-													"text" : "jcom.oscroute /ch.1 /ch.2 /dspStatus"
+													"text" : "j.oscroute /ch.1 /ch.2 /dspStatus"
 												}
 
 											}
@@ -5977,8 +5977,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 824.0, 255.0, 555.0, 31.0 ],
-					"text" : "jcom.parameter soundfile/open @type generic @repetitions/allow 1 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\" @value bang",
-					"varname" : "jcom.parameter.mxb[10]"
+					"text" : "j.parameter soundfile/open @type generic @repetitions/allow 1 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\" @value bang",
+					"varname" : "j.parameter.mxb[10]"
 				}
 
 			}
@@ -5992,7 +5992,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 828.0, 7.0, 475.0, 19.0 ],
-					"text" : "jcom.parameter source @type string @description \"Select what audio source to use.\"",
+					"text" : "j.parameter source @type string @description \"Select what audio source to use.\"",
 					"varname" : "source_select"
 				}
 
@@ -6008,8 +6008,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 824.0, 596.0, 595.0, 31.0 ],
-					"text" : "jcom.message soundfile/direct @type none @repetitions/allow 1 @description container for various messages sent directly to the sfplay~ object. Refer to the MSP documentation for further details.",
-					"varname" : "jcom.parameter.mxb[9]"
+					"text" : "j.message soundfile/direct @type none @repetitions/allow 1 @description container for various messages sent directly to the sfplay~ object. Refer to the MSP documentation for further details.",
+					"varname" : "j.parameter.mxb[9]"
 				}
 
 			}
@@ -6023,7 +6023,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 824.0, 389.0, 527.0, 19.0 ],
-					"text" : "jcom.parameter soundfile/play @type boolean @repetitions/allow 1 @description \"Play sound file.\"",
+					"text" : "j.parameter soundfile/play @type boolean @repetitions/allow 1 @description \"Play sound file.\"",
 					"varname" : "play"
 				}
 
@@ -6038,7 +6038,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 824.0, 449.0, 420.0, 19.0 ],
-					"text" : "jcom.parameter soundfile/loop @type boolean @description \"Loop soundfile.\"",
+					"text" : "j.parameter soundfile/loop @type boolean @description \"Loop soundfile.\"",
 					"varname" : "loop"
 				}
 
@@ -6106,7 +6106,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-37",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -6120,7 +6120,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 2",
 					"id" : "obj-3",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -6214,7 +6214,7 @@
 				"box" : 				{
 					"background" : 1,
 					"id" : "obj-78",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -6799,73 +6799,73 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.audioOnOff.maxpat",
+				"name" : "j.audioOnOff.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/audioOnOff",
 				"patcherrelativepath" : "../../../library/components/audioOnOff",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.meter_receive.maxpat",
+				"name" : "j.meter_receive.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/meter_receive",
 				"patcherrelativepath" : "../../../library/components/meter_receive",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.textslider.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.savebang.mxo",
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -631,7 +631,7 @@
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 918.0, 70.0 ],
@@ -651,7 +651,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 15.0, 411.0, 235.0, 19.0 ],
-					"text" : "jcom.initialized /motiongram%.vertical 1000"
+					"text" : "j.initialized /motiongram%.vertical 1000"
 				}
 
 			}

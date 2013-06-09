@@ -39,7 +39,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 345.0, 63.0, 156.0, 64.0 ],
-					"text" : "If you want a panel, make it a subpatch and connect to rightmost outlet of jcom.ui"
+					"text" : "If you want a panel, make it a subpatch and connect to rightmost outlet of j.ui"
 				}
 
 			}
@@ -53,14 +53,14 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 658.0, 394.0, 162.0, 20.0 ],
-					"text" : "jcom.remote out.2/amplitude"
+					"text" : "j.remote out.2/amplitude"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-6",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -73,7 +73,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-7",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -93,7 +93,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 658.0, 331.0, 162.0, 20.0 ],
-					"text" : "jcom.remote out.1/amplitude"
+					"text" : "j.remote out.1/amplitude"
 				}
 
 			}
@@ -143,7 +143,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 435.0, 115.0, 20.0 ],
-									"text" : "for jcom.return only"
+									"text" : "for j.return only"
 								}
 
 							}
@@ -185,7 +185,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 11.0, 364.0, 138.0, 20.0 ],
-									"text" : "for jcom.parameter only"
+									"text" : "for j.parameter only"
 								}
 
 							}
@@ -341,7 +341,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 139.0, 324.0, 47.0 ],
-									"text" : "If you need to return messages from your algorithm to the rest of the world. you can specify type, range... etc as in jcom.parameter or jcom.message"
+									"text" : "If you need to return messages from your algorithm to the rest of the world. you can specify type, range... etc as in j.parameter or j.message"
 								}
 
 							}
@@ -355,7 +355,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 11.0, 119.0, 381.0, 20.0 ],
-									"text" : "jcom.return:"
+									"text" : "j.return:"
 								}
 
 							}
@@ -370,7 +370,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 79.0, 353.0, 33.0 ],
-									"text" : "If you need to send messages to or within the patch, but it's not required that they be stored or retrieveable, use jcom.message."
+									"text" : "If you need to send messages to or within the patch, but it's not required that they be stored or retrieveable, use j.message."
 								}
 
 							}
@@ -384,7 +384,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 11.0, 59.0, 385.0, 20.0 ],
-									"text" : "jcom.message:"
+									"text" : "j.message:"
 								}
 
 							}
@@ -412,7 +412,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 11.0, 9.0, 301.0, 20.0 ],
-									"text" : "jcom.parameter:"
+									"text" : "j.parameter:"
 								}
 
 							}
@@ -510,7 +510,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 11.0, 194.0, 307.0, 20.0 ],
-									"text" : "Attributes for jcom.parameter and jcom.message:"
+									"text" : "Attributes for j.parameter and j.message:"
 								}
 
 							}
@@ -646,7 +646,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 137.821503, 144.313141, 128.0, 20.0 ],
-									"text" : "jcom.remote thisBang",
+									"text" : "j.remote thisBang",
 									"varname" : "foot/switch"
 								}
 
@@ -766,7 +766,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 65.0, 150.0, 20.0 ],
-													"text" : "jcom.oscroute /view/panel"
+													"text" : "j.oscroute /view/panel"
 												}
 
 											}
@@ -1041,7 +1041,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 658.0, 273.0, 129.0, 20.0 ],
-					"text" : "jcom.remote thisMenu",
+					"text" : "j.remote thisMenu",
 					"varname" : "module_in[1]"
 				}
 
@@ -1056,7 +1056,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 658.0, 237.0, 134.0, 20.0 ],
-					"text" : "jcom.remote thisToggle",
+					"text" : "j.remote thisToggle",
 					"varname" : "saturation/active"
 				}
 
@@ -1207,7 +1207,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 658.0, 176.0, 147.0, 20.0 ],
-					"text" : "jcom.remote thisMessage",
+					"text" : "j.remote thisMessage",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -1257,7 +1257,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 658.0, 136.0, 149.0, 20.0 ],
-					"text" : "jcom.return thisParameter",
+					"text" : "j.return thisParameter",
 					"varname" : "hue_angle"
 				}
 
@@ -1265,7 +1265,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-37",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -1286,8 +1286,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 227.0, 202.0, 63.0, 20.0 ],
-					"text" : "jcom.view",
-					"varname" : "jcom.model"
+					"text" : "j.view",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1551,66 +1551,66 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.parameterCreate.maxpat",
+				"name" : "j.parameterCreate.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/parameterCreate",
 				"patcherrelativepath" : "../../../components/parameterCreate",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
  ]

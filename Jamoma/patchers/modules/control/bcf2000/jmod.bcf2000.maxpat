@@ -56,7 +56,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 706.0, 51.0, 224.0, 19.0 ],
-					"text" : "jcom.oscroute /midiIn /midiOut"
+					"text" : "j.oscroute /midiIn /midiOut"
 				}
 
 			}
@@ -166,7 +166,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 398.0, 218.0, 54.0, 19.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -566,7 +566,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 352.0, 31.0 ],
-													"text" : "jcom.parameter foot/switch @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Foot Pedal: Switch.\"",
+													"text" : "j.parameter foot/switch @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Foot Pedal: Switch.\"",
 													"varname" : "foot/switch"
 												}
 
@@ -807,7 +807,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 337.0, 31.0 ],
-													"text" : "jcom.parameter button.4 @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Button 4.\"",
+													"text" : "j.parameter button.4 @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Button 4.\"",
 													"varname" : "button/4"
 												}
 
@@ -1048,7 +1048,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 340.0, 31.0 ],
-													"text" : "jcom.parameter button.2 @priority 2 @type boolean @repetitions/allow 1 @ramp/drive none @description \"Button 2.\"",
+													"text" : "j.parameter button.2 @priority 2 @type boolean @repetitions/allow 1 @ramp/drive none @description \"Button 2.\"",
 													"varname" : "button/2"
 												}
 
@@ -1231,7 +1231,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 50.0, 144.0, 19.0 ],
-													"text" : "jcom.oscroute /view/panel"
+													"text" : "j.oscroute /view/panel"
 												}
 
 											}
@@ -1499,7 +1499,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 355.0, 43.0 ],
-													"text" : "jcom.parameter foot/control @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @ramp/drive Max @priority 2 @description \"Foot Pedal: Continuous Controller.\"",
+													"text" : "j.parameter foot/control @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @ramp/drive Max @priority 2 @description \"Foot Pedal: Continuous Controller.\"",
 													"varname" : "foot/control"
 												}
 
@@ -1766,7 +1766,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 337.0, 31.0 ],
-													"text" : "jcom.parameter button.3 @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Button 3.\"",
+													"text" : "j.parameter button.3 @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Button 3.\"",
 													"varname" : "button/3"
 												}
 
@@ -2007,7 +2007,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 337.0, 31.0 ],
-													"text" : "jcom.parameter button.1 @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Button 1.\"",
+													"text" : "j.parameter button.1 @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Button 1.\"",
 													"varname" : "button/1"
 												}
 
@@ -2512,7 +2512,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 621.0, 19.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -2559,8 +2559,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 16.0, 133.0, 598.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"A module interfacing with the Behringer BCF2000 motorized MIDI fader.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"A module interfacing with the Behringer BCF2000 motorized MIDI fader.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -2598,7 +2598,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 146.0, 307.0, 362.0, 31.0 ],
-					"text" : "jcom.parameter midiIn @priority 1 @type generic @repetitions/allow 1 @description \"Port to receive MIDI messages on.\"",
+					"text" : "j.parameter midiIn @priority 1 @type generic @repetitions/allow 1 @description \"Port to receive MIDI messages on.\"",
 					"varname" : "midi_in"
 				}
 
@@ -2622,7 +2622,7 @@
 				"box" : 				{
 					"has_panel" : 1,
 					"id" : "obj-30",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -2643,7 +2643,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 528.0, 306.0, 370.0, 31.0 ],
-					"text" : "jcom.parameter midiOut @priority 1 @type generic @repetitions/allow 1 @description \"Port to send MIDI messages to.\"",
+					"text" : "j.parameter midiOut @priority 1 @type generic @repetitions/allow 1 @description \"Port to send MIDI messages to.\"",
 					"varname" : "midi_out"
 				}
 

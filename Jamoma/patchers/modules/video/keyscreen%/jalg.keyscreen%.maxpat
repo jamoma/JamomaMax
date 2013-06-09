@@ -266,7 +266,7 @@
 					"numoutlets" : 9,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 15.0, 39.0, 511.0, 19.0 ],
-					"text" : "jcom.oscroute /key/red /key/green /key/blue /tolerance /key /target /mask /mode"
+					"text" : "j.oscroute /key/red /key/green /key/blue /tolerance /key /target /mask /mode"
 				}
 
 			}

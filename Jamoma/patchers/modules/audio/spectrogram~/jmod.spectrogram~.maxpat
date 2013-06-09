@@ -114,7 +114,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 126.0, 305.0, 19.0 ],
-									"text" : "jcom.dataspace @dataspace color @input rgb @output hsl"
+									"text" : "j.dataspace @dataspace color @input rgb @output hsl"
 								}
 
 							}
@@ -283,7 +283,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 720.0, 549.0, 581.0, 31.0 ],
-					"text" : "jcom.parameter colors @type decimalArray @range/bounds 0. 1. @range/clipmode none@ramp/drive none @dataspace color @dataspace/unit rgb @description \"Color adjustments to spectrogram\"",
+					"text" : "j.parameter colors @type decimalArray @range/bounds 0. 1. @range/clipmode none@ramp/drive none @dataspace color @dataspace/unit rgb @description \"Color adjustments to spectrogram\"",
 					"varname" : "threshold[2]"
 				}
 
@@ -335,7 +335,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 258.0, 533.0, 412.0, 19.0 ],
-					"text" : "jcom.parameter scaling @type decimal @description \"Scaling of the luminosity\"",
+					"text" : "j.parameter scaling @type decimal @description \"Scaling of the luminosity\"",
 					"varname" : "threshold[4]"
 				}
 
@@ -464,7 +464,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 257.0, 461.0, 338.0, 31.0 ],
-					"text" : "jcom.parameter speed @type decimal @description \"Drawing speed of spectrogram\"",
+					"text" : "j.parameter speed @type decimal @description \"Drawing speed of spectrogram\"",
 					"varname" : "threshold[5]"
 				}
 
@@ -501,7 +501,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 257.0, 375.0, 339.0, 43.0 ],
-					"text" : "jcom.parameter inverse @type boolean @description \"Decide whether spectrogram should be black on white (0) or white on black (1) (default = 0)\"",
+					"text" : "j.parameter inverse @type boolean @description \"Decide whether spectrogram should be black on white (0) or white on black (1) (default = 0)\"",
 					"varname" : "noise[5]"
 				}
 
@@ -538,7 +538,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 257.0, 289.0, 329.0, 43.0 ],
-					"text" : "jcom.parameter color @type boolean @description \"Decide whether spectrogram should be in greyscale (0) or color (1) (default = 0)\"",
+					"text" : "j.parameter color @type boolean @description \"Decide whether spectrogram should be in greyscale (0) or color (1) (default = 0)\"",
 					"varname" : "noise[3]"
 				}
 
@@ -571,7 +571,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 720.0, 428.0, 395.0, 19.0 ],
-					"text" : "jcom.parameter metro/speed @type decimal @description \"Speed of metro\"",
+					"text" : "j.parameter metro/speed @type decimal @description \"Speed of metro\"",
 					"varname" : "threshold[3]"
 				}
 
@@ -664,7 +664,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 720.0, 325.0, 454.0, 19.0 ],
-					"text" : "jcom.message save @type none @description \"Saves an image file of the motiongram.\"",
+					"text" : "j.message save @type none @description \"Saves an image file of the motiongram.\"",
 					"varname" : "jmod.parameter.mxb[2]"
 				}
 
@@ -679,7 +679,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 720.0, 259.0, 367.0, 19.0 ],
-					"text" : "jcom.message clear @type none @description \"Clears the image.\"",
+					"text" : "j.message clear @type none @description \"Clears the image.\"",
 					"varname" : "jmod.parameter.mxb[1]"
 				}
 
@@ -715,7 +715,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 720.0, 163.0, 429.0, 43.0 ],
-					"text" : "jcom.parameter dimensions/height @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
+					"text" : "j.parameter dimensions/height @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
 					"varname" : "dimensions/height"
 				}
 
@@ -751,7 +751,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 720.0, 82.0, 429.0, 43.0 ],
-					"text" : "jcom.parameter dimensions/width @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
+					"text" : "j.parameter dimensions/width @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
 					"varname" : "dimensions/width"
 				}
 
@@ -787,7 +787,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 720.0, 377.0, 372.0, 19.0 ],
-					"text" : "jcom.parameter metro/on @type boolean @description \"Turn metro on\"",
+					"text" : "j.parameter metro/on @type boolean @description \"Turn metro on\"",
 					"varname" : "noise[1]"
 				}
 
@@ -823,7 +823,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 720.0, 479.0, 340.0, 19.0 ],
-					"text" : "jcom.parameter threshold @type decimal @description Threshold",
+					"text" : "j.parameter threshold @type decimal @description Threshold",
 					"varname" : "threshold[1]"
 				}
 
@@ -838,7 +838,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 720.0, 18.0, 141.0, 19.0 ],
-					"text" : "jcom.meter_receive 1"
+					"text" : "j.meter_receive 1"
 				}
 
 			}
@@ -846,7 +846,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-4",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -866,7 +866,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 64.0, 422.0, 65.0, 19.0 ],
-					"text" : "jcom.out 2"
+					"text" : "j.out 2"
 				}
 
 			}
@@ -978,7 +978,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
 					"patching_rect" : [ 64.0, 321.0, 66.0, 19.0 ],
-					"text" : "jcom.in~ 1"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -1052,7 +1052,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 216.0, 428.0, 19.0 ],
-					"text" : "jcom.model @type audio @description \"Spectrogram display of input audio.\""
+					"text" : "j.model @type audio @description \"Spectrogram display of input audio.\""
 				}
 
 			}
@@ -1062,7 +1062,7 @@
 					"has_gain" : 1,
 					"has_mute" : 1,
 					"id" : "obj-31",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1497,58 +1497,58 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.meter_receive.maxpat",
+				"name" : "j.meter_receive.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/meter_receive",
 				"patcherrelativepath" : "../../../library/components/meter_receive",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
  ]

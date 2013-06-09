@@ -37,7 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 705.0, 511.0, 73.0, 19.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -51,7 +51,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 705.0, 254.0, 66.0, 19.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -66,7 +66,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 866.0, 511.0, 267.0, 43.0 ],
-					"text" : "jcom.return status @type boolean @description \"Indicates if the input signal is currently gated or not.\""
+					"text" : "j.return status @type boolean @description \"Indicates if the input signal is currently gated or not.\""
 				}
 
 			}
@@ -80,7 +80,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 626.0, 511.0, 73.0, 19.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -94,7 +94,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 626.0, 254.0, 66.0, 19.0 ],
-					"text" : "jcom.in~ 1"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -108,7 +108,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 75.0, 380.0, 70.0, 19.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -123,7 +123,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 491.0, 140.5, 569.0, 43.0 ],
-					"text" : "jcom.parameter threshold @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds -90 24 @range/clipmode both @description \"The threshold sets the level at which the Noise Gate opens and closes..\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter threshold @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds -90 24 @range/clipmode both @description \"The threshold sets the level at which the Noise Gate opens and closes..\" @dataspace gain @dataspace/unit dB",
 					"varname" : "threshold"
 				}
 
@@ -139,7 +139,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 361.0, 91.5, 593.0, 43.0 ],
-					"text" : "jcom.parameter release @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000 @range/clipmode both @description \"When the gate closes, this parameter sets how many milliseconds it will take to fade out.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter release @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000 @range/clipmode both @description \"When the gate closes, this parameter sets how many milliseconds it will take to fade out.\" @dataspace time @dataspace/unit ms",
 					"varname" : "release"
 				}
 
@@ -155,7 +155,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 281.0, 34.0, 600.0, 43.0 ],
-					"text" : "jcom.parameter attack @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000 @range/clipmode low @description \"When the gate opens, this parameter sets how many milliseconds it will take to fade in.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter attack @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000 @range/clipmode low @description \"When the gate opens, this parameter sets how many milliseconds it will take to fade in.\" @dataspace time @dataspace/unit ms",
 					"varname" : "attack"
 				}
 
@@ -171,7 +171,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 855.0, 242.0, 412.0, 43.0 ],
-					"text" : "jcom.parameter lookahead @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 100 @range/clipmode low @description \"How many samples to look ahead while monitoring incoming signal.\"",
+					"text" : "j.parameter lookahead @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 100 @range/clipmode low @description \"How many samples to look ahead while monitoring incoming signal.\"",
 					"varname" : "lookahead"
 				}
 
@@ -186,8 +186,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 30.0, 336.0, 207.0, 19.0 ],
-					"text" : "jcom.model @description \"Noise gate.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Noise gate.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -756,27 +756,27 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
  ]

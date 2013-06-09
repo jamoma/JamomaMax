@@ -29,7 +29,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 186.0, 478.0, 179.0, 19.0 ],
-					"text" : "jcom.oscroute /bars /beats /units"
+					"text" : "j.oscroute /bars /beats /units"
 				}
 
 			}
@@ -43,7 +43,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 53.0, 167.0, 129.0, 19.0 ],
-					"text" : "jcom.oscroute /position"
+					"text" : "j.oscroute /position"
 				}
 
 			}
@@ -114,7 +114,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 7.0, 334.0, 105.0, 79.0 ],
-					"text" : "jcom.return tick/bar @type none @description \"returns one impulsion every bar\" @enable 0",
+					"text" : "j.return tick/bar @type none @description \"returns one impulsion every bar\" @enable 0",
 					"varname" : "tick/beat[1]"
 				}
 
@@ -196,7 +196,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 541.0, 444.0, 179.0, 67.0 ],
-					"text" : "jcom.parameter position/units @type decimal @range/clipmode none @ramp/drive none @priority 12 @description \"current position in Units\"",
+					"text" : "j.parameter position/units @type decimal @range/clipmode none @ramp/drive none @priority 12 @description \"current position in Units\"",
 					"varname" : "position/Bars[2]"
 				}
 
@@ -212,7 +212,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 510.0, 379.0, 211.0, 55.0 ],
-					"text" : "jcom.parameter position/beats @type integer @range/clipmode none @ramp/drive none @priority 11 @description \"current position in Beats\"",
+					"text" : "j.parameter position/beats @type integer @range/clipmode none @ramp/drive none @priority 11 @description \"current position in Beats\"",
 					"varname" : "position/Bars[1]"
 				}
 
@@ -278,7 +278,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 237.0, 158.0, 116.0, 19.0 ],
-					"text" : "jcom.oscroute /mute"
+					"text" : "j.oscroute /mute"
 				}
 
 			}
@@ -1163,7 +1163,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 395.0, 179.0, 49.0, 18.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -1236,7 +1236,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 237.0, 132.0, 56.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -1251,8 +1251,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 14.0, 198.0, 182.0, 43.0 ],
-					"text" : "jcom.model @type control @description \"Control interface to Max's global transport\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"Control interface to Max's global transport\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1283,7 +1283,7 @@
 				"box" : 				{
 					"has_mute" : 1,
 					"id" : "obj-16",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1304,7 +1304,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 972.0, 451.0, 276.0, 43.0 ],
-					"text" : "jcom.parameter beats @type integer @range/clipmode low @ramp/drive Max @priority 3 @description \"Number of beats per bar\"",
+					"text" : "j.parameter beats @type integer @range/clipmode low @ramp/drive Max @priority 3 @description \"Number of beats per bar\"",
 					"varname" : "Beats"
 				}
 
@@ -1320,7 +1320,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1017.0, 497.0, 318.0, 43.0 ],
-					"text" : "jcom.parameter unit @type integer @range/bounds 1 16 @range/clipmode both @priority 4 @description \"Unit (number of bar subdivisions) : possible vamues : 4 8 16\"",
+					"text" : "j.parameter unit @type integer @range/bounds 1 16 @range/clipmode both @priority 4 @description \"Unit (number of bar subdivisions) : possible vamues : 4 8 16\"",
 					"varname" : "Unit"
 				}
 
@@ -1336,7 +1336,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 395.0, 317.0, 209.0, 55.0 ],
-					"text" : "jcom.parameter position/bars @type integer @range/clipmode none @ramp/drive none @priority 10 @description \"current position in Bars\"",
+					"text" : "j.parameter position/bars @type integer @range/clipmode none @ramp/drive none @priority 10 @description \"current position in Bars\"",
 					"varname" : "position/Bars"
 				}
 
@@ -1352,7 +1352,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 747.0, 499.0, 217.0, 43.0 ],
-					"text" : "jcom.message tempo/tap @type none @description \"send succesive impulsions to tap the desired tempo\"",
+					"text" : "j.message tempo/tap @type none @description \"send succesive impulsions to tap the desired tempo\"",
 					"varname" : "tempo/tap"
 				}
 
@@ -1368,7 +1368,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 787.0, 266.0, 155.0, 79.0 ],
-					"text" : "jcom.message tempo/value @type decimal @description \"tempo of the global transport\" @range/clipmode 0. 200. @ramp/drive Max",
+					"text" : "j.message tempo/value @type decimal @description \"tempo of the global transport\" @range/clipmode 0. 200. @ramp/drive Max",
 					"varname" : "tempo/value"
 				}
 
@@ -1384,7 +1384,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 477.0, 124.0, 67.0 ],
-					"text" : "jcom.return tick/beat @type none @description \"returns one impulsion every beat\" @enable 0",
+					"text" : "j.return tick/beat @type none @description \"returns one impulsion every beat\" @enable 0",
 					"varname" : "tick/beat"
 				}
 
@@ -1400,7 +1400,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1171.0, 378.0, 276.0, 43.0 ],
-					"text" : "jcom.return position/time @type generic @description \"returns the current position in SMPTE format\" @enable 0",
+					"text" : "j.return position/time @type generic @description \"returns the current position in SMPTE format\" @enable 0",
 					"varname" : "position/time"
 				}
 

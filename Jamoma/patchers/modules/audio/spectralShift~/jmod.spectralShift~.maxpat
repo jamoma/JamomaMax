@@ -170,7 +170,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 610.0, 317.0, 558.0, 43.0 ],
-					"text" : "jcom.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -60 6 @range/clipmode both @description \"Feedback gain leven (dB).\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -60 6 @range/clipmode both @description \"Feedback gain leven (dB).\" @dataspace gain @dataspace/unit dB",
 					"varname" : "feedback"
 				}
 
@@ -186,7 +186,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 610.0, 250.0, 591.0, 31.0 ],
-					"text" : "jcom.parameter feedback/time @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0 200 @range/clipmode both @description \"Feedback delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter feedback/time @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0 200 @range/clipmode both @description \"Feedback delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
 					"varname" : "right"
 				}
 
@@ -202,7 +202,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 610.0, 180.0, 581.0, 31.0 ],
-					"text" : "jcom.parameter frequency/shift @type decimal @range/bounds -500 500 \"Slide all frequency bins up or down (Hz).\" @dataspace time @dataspace/unit Hz"
+					"text" : "j.parameter frequency/shift @type decimal @range/bounds -500 500 \"Slide all frequency bins up or down (Hz).\" @dataspace time @dataspace/unit Hz"
 				}
 
 			}
@@ -216,7 +216,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 610.0, 130.0, 591.0, 19.0 ],
-					"text" : "jcom.parameter frequency/scale @type decimal @range/bounds -48. 48. @description \"Pitch shift in semitones.\""
+					"text" : "j.parameter frequency/scale @type decimal @range/bounds -48. 48. @description \"Pitch shift in semitones.\""
 				}
 
 			}
@@ -258,7 +258,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 400.0, 385.0, 141.0, 19.0 ],
-					"text" : "jcom.meter_receive 2"
+					"text" : "j.meter_receive 2"
 				}
 
 			}
@@ -272,7 +272,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 400.0, 340.0, 141.0, 19.0 ],
-					"text" : "jcom.meter_receive 1"
+					"text" : "j.meter_receive 1"
 				}
 
 			}
@@ -280,7 +280,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 2",
 					"id" : "obj-19",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -294,7 +294,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-20",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -520,7 +520,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 325.0, 230.0, 710.0, 31.0 ],
-									"text" : "jcom.parameter limiter/release @ramp/drive Max @type decimal @range/bounds 0 3000 @range/clipmode low @description \"Limiter: Set release time as ms.\" @dataspace time @dataspace/unit ms",
+									"text" : "j.parameter limiter/release @ramp/drive Max @type decimal @range/bounds 0 3000 @range/clipmode low @description \"Limiter: Set release time as ms.\" @dataspace time @dataspace/unit ms",
 									"varname" : "limiter/release"
 								}
 
@@ -536,7 +536,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 325.0, 60.0, 693.0, 31.0 ],
-									"text" : "jcom.parameter limiter/preamp @ramp/drive Max @range/bounds 0 48 @range/clipmode none @type decimal @description \"Limiter: Preamp as dB.\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter limiter/preamp @ramp/drive Max @range/bounds 0 48 @range/clipmode none @type decimal @description \"Limiter: Preamp as dB.\" @dataspace gain @dataspace/unit dB",
 									"varname" : "limiter/preamp"
 								}
 
@@ -680,7 +680,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 325.0, 310.0, 553.0, 19.0 ],
-									"text" : "jcom.parameter limiter/dcblocker/active @type boolean @description \"DC Blocker: Active or bypassed.\"",
+									"text" : "j.parameter limiter/dcblocker/active @type boolean @description \"DC Blocker: Active or bypassed.\"",
 									"varname" : "limiter/active[1]"
 								}
 
@@ -755,7 +755,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 325.0, 268.5, 333.0, 31.0 ],
-									"text" : "jcom.parameter limiter/mode @type string @description \"Limiter: Set the function to be used for calculating the scaling.\"",
+									"text" : "j.parameter limiter/mode @type string @description \"Limiter: Set the function to be used for calculating the scaling.\"",
 									"varname" : "limiter/mode"
 								}
 
@@ -771,7 +771,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 325.0, 140.0, 530.0, 43.0 ],
-									"text" : "jcom.parameter limiter/threshold @ramp/drive Max @range/bounds -24 48 @range/clipmode none @type decimal @dataspace gain @dataspace/unit dB @description \"Limiter: Set threshold as dB.\"",
+									"text" : "j.parameter limiter/threshold @ramp/drive Max @range/bounds -24 48 @range/clipmode none @type decimal @dataspace gain @dataspace/unit dB @description \"Limiter: Set threshold as dB.\"",
 									"varname" : "limiter/threshold"
 								}
 
@@ -787,7 +787,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 325.0, 190.0, 539.0, 31.0 ],
-									"text" : "jcom.parameter limiter/lookahead @ramp/drive Max @range/bounds 0 256 @range/clipmode both @type integer @description \"Limiter: The number of samples to look ahead.\"",
+									"text" : "j.parameter limiter/lookahead @ramp/drive Max @range/bounds 0 256 @range/clipmode both @type integer @description \"Limiter: The number of samples to look ahead.\"",
 									"varname" : "limiter/lookahead"
 								}
 
@@ -803,7 +803,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 325.0, 100.0, 704.0, 31.0 ],
-									"text" : "jcom.parameter limiter/postamp @ramp/drive Max @range/bounds -24 48 @range/clipmode none @type decimal @dataspace gain @dataspace/unit dB @description \"Limiter: Postamp as dB.\"",
+									"text" : "j.parameter limiter/postamp @ramp/drive Max @range/bounds -24 48 @range/clipmode none @type decimal @dataspace gain @dataspace/unit dB @description \"Limiter: Postamp as dB.\"",
 									"varname" : "limiter/postamp"
 								}
 
@@ -1024,7 +1024,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 400.0, 230.0, 146.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -1038,7 +1038,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 265.0, 295.0, 73.0, 19.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -1052,7 +1052,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "", "" ],
 					"patching_rect" : [ 265.0, 185.0, 66.0, 19.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -1081,7 +1081,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 205.0, 128.0, 43.0 ],
-					"text" : "jcom.model @description \"Spectral shifting with feedback\""
+					"text" : "j.model @description \"Spectral shifting with feedback\""
 				}
 
 			}
@@ -1162,7 +1162,7 @@
 					"has_mute" : 1,
 					"has_panel" : 1,
 					"id" : "obj-1",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1425,61 +1425,61 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.spectralShiftVoice~.maxpat",
+				"name" : "j.spectralShiftVoice~.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/modules/audio/spectralShift~",
 				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.meter_receive.maxpat",
+				"name" : "j.meter_receive.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/meter_receive",
 				"patcherrelativepath" : "../../../library/components/meter_receive",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.limiter~.mxo",
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
  ]

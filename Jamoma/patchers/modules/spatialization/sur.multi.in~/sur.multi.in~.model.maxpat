@@ -36,7 +36,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 214.0, 170.0, 70.0, 19.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -450,8 +450,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 23.0, 97.0, 472.0, 19.0 ],
-					"text" : "jcom.model @description \"Pack up to 32 mono signals onto a multi cable.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Pack up to 32 mono signals onto a multi cable.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -514,7 +514,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 294.379944, 366.0, 557.0, 31.0 ],
-					"text" : "jcom.parameter channel_offset @type integer @repetitions/allow 1 @range/bounds 0 64 @range/clipmode low @description \"Set channel offset for signals. Only take effect the next time audio is started.\"",
+					"text" : "j.parameter channel_offset @type integer @repetitions/allow 1 @range/bounds 0 64 @range/clipmode low @description \"Set channel offset for signals. Only take effect the next time audio is started.\"",
 					"varname" : "channel_offset"
 				}
 
@@ -566,7 +566,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 267.40625, 419.0, 127.0, 19.0 ],
-					"text" : "jcom.offset≈ @offset 0"
+					"text" : "j.offset≈ @offset 0"
 				}
 
 			}
@@ -594,7 +594,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 96.40625, 261.0, 159.0, 19.0 ],
-					"text" : "jcom.oscroute channel_offset"
+					"text" : "j.oscroute channel_offset"
 				}
 
 			}
@@ -608,7 +608,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 267.40625, 261.0, 855.5, 19.0 ],
-					"text" : "jcom.pack≈ 32"
+					"text" : "j.pack≈ 32"
 				}
 
 			}
@@ -987,27 +987,27 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.pack≈.mxo",
+				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.offset≈.mxo",
+				"name" : "j.offset≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

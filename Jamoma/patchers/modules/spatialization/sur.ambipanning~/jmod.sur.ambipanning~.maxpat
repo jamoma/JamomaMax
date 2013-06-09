@@ -51,7 +51,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 457.0, 276.0, 432.0, 31.0 ],
-					"text" : "jcom.message report @repetitions/allow 1 @type none @description \"reports the state of the ambipanning external in the max window\""
+					"text" : "j.message report @repetitions/allow 1 @type none @description \"reports the state of the ambipanning external in the max window\""
 				}
 
 			}
@@ -99,7 +99,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 527.0, 160.0, 587.0, 31.0 ],
-					"text" : "jcom.parameter interpolation @repetitions/allow 0 @type boolean @range/bounds 0 1 @range/clipmode both @description \"switch blockwise interpolation of all coefficient changes on/off\"",
+					"text" : "j.parameter interpolation @repetitions/allow 0 @type boolean @range/bounds 0 1 @range/clipmode both @description \"switch blockwise interpolation of all coefficient changes on/off\"",
 					"varname" : "destination/dimensions[1]"
 				}
 
@@ -857,7 +857,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 89.0, 68.0, 55.0, 20.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -905,7 +905,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 354.0, 165.0, 188.0, 20.0 ],
-									"text" : "jcom.oscroute /size /curve /decay"
+									"text" : "j.oscroute /size /curve /decay"
 								}
 
 							}
@@ -919,7 +919,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 88.0, 142.0, 137.0, 20.0 ],
-									"text" : "jcom.oscroute /distance"
+									"text" : "j.oscroute /distance"
 								}
 
 							}
@@ -947,7 +947,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 87.0, 113.0, 85.0, 20.0 ],
-									"text" : "jcom.oscroute"
+									"text" : "j.oscroute"
 								}
 
 							}
@@ -961,7 +961,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 354.0, 142.0, 199.0, 20.0 ],
-									"text" : "jcom.oscroute /center /numSources"
+									"text" : "j.oscroute /center /numSources"
 								}
 
 							}
@@ -3085,7 +3085,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 428.0, 58.0, 587.0, 19.0 ],
-					"text" : "jcom.message.array 32 speaker active @type boolean @description \"enables or disables a loudspeaker.\" @value 1"
+					"text" : "j.message.array 32 speaker active @type boolean @description \"enables or disables a loudspeaker.\" @value 1"
 				}
 
 			}
@@ -3166,7 +3166,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 382.0, 542.0, 43.0 ],
-					"text" : "jcom.parameter center/decay @repetitions/allow 0 @type decimal @range/bounds 0 60 @range/clipmode low @description \"max. attenuation inside the center area in dB\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter center/decay @repetitions/allow 0 @type decimal @range/bounds 0 60 @range/clipmode low @description \"max. attenuation inside the center area in dB\" @dataspace gain @dataspace/unit dB",
 					"varname" : "destination/voices[4]"
 				}
 
@@ -3200,7 +3200,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 426.0, 346.0, 579.0, 31.0 ],
-					"text" : "jcom.parameter center/curve @repetitions/allow 0 @type decimal @range/bounds 0 1 @range/clipmode both @description \"curvature of the distance function inside the center area\"",
+					"text" : "j.parameter center/curve @repetitions/allow 0 @type decimal @range/bounds 0 1 @range/clipmode both @description \"curvature of the distance function inside the center area\"",
 					"varname" : "destination/voices[3]"
 				}
 
@@ -3234,7 +3234,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 313.0, 583.0, 31.0 ],
-					"text" : "jcom.parameter center/size @repetitions/allow 0 @type decimal @range/bounds 0 128 @range/clipmode both @description \"Size of the center (in model units)\"",
+					"text" : "j.parameter center/size @repetitions/allow 0 @type decimal @range/bounds 0 128 @range/clipmode both @description \"Size of the center (in model units)\"",
 					"varname" : "destination/voices[1]"
 				}
 
@@ -5205,7 +5205,7 @@
 								"box" : 								{
 									"defaultvalue" : 100.0,
 									"id" : "obj-48",
-									"maxclass" : "jcom.textslider",
+									"maxclass" : "j.textslider",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -5259,7 +5259,7 @@
 									"id" : "obj-10",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 247.0, 282.0, 23.0 ],
@@ -5276,7 +5276,7 @@
 									"id" : "obj-11",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 218.0, 282.0, 23.0 ],
@@ -5293,7 +5293,7 @@
 									"id" : "obj-12",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 189.0, 282.0, 23.0 ],
@@ -5310,7 +5310,7 @@
 									"id" : "obj-13",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 160.0, 282.0, 23.0 ],
@@ -5327,7 +5327,7 @@
 									"id" : "obj-14",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 131.0, 282.0, 23.0 ],
@@ -5344,7 +5344,7 @@
 									"id" : "obj-15",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 102.0, 282.0, 23.0 ],
@@ -5361,7 +5361,7 @@
 									"id" : "obj-16",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 73.0, 282.0, 23.0 ],
@@ -5378,7 +5378,7 @@
 									"id" : "obj-17",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 44.0, 282.0, 23.0 ],
@@ -5395,7 +5395,7 @@
 									"id" : "obj-18",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 15.0, 282.0, 23.0 ],
@@ -5465,7 +5465,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 129.0, 161.0, 54.0, 19.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -5700,7 +5700,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 418.0, 413.0, 59.0, 19.0 ],
-													"text" : "jcom.thru"
+													"text" : "j.thru"
 												}
 
 											}
@@ -5729,7 +5729,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 188.0, 289.0, 59.0, 19.0 ],
-													"text" : "jcom.thru"
+													"text" : "j.thru"
 												}
 
 											}
@@ -6132,7 +6132,7 @@
 									"id" : "obj-28",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 450.0, 282.0, 23.0 ],
@@ -6149,7 +6149,7 @@
 									"id" : "obj-29",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 421.0, 282.0, 23.0 ],
@@ -6166,7 +6166,7 @@
 									"id" : "obj-3",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 450.0, 282.0, 23.0 ],
@@ -6183,7 +6183,7 @@
 									"id" : "obj-30",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 392.0, 282.0, 23.0 ],
@@ -6200,7 +6200,7 @@
 									"id" : "obj-31",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 363.0, 282.0, 23.0 ],
@@ -6217,7 +6217,7 @@
 									"id" : "obj-32",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 334.0, 282.0, 23.0 ],
@@ -6234,7 +6234,7 @@
 									"id" : "obj-33",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 305.0, 282.0, 23.0 ],
@@ -6251,7 +6251,7 @@
 									"id" : "obj-34",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 276.0, 282.0, 23.0 ],
@@ -6268,7 +6268,7 @@
 									"id" : "obj-35",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 247.0, 282.0, 23.0 ],
@@ -6285,7 +6285,7 @@
 									"id" : "obj-36",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 218.0, 282.0, 23.0 ],
@@ -6302,7 +6302,7 @@
 									"id" : "obj-37",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 189.0, 282.0, 23.0 ],
@@ -6319,7 +6319,7 @@
 									"id" : "obj-38",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 160.0, 282.0, 23.0 ],
@@ -6336,7 +6336,7 @@
 									"id" : "obj-39",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 131.0, 282.0, 23.0 ],
@@ -6353,7 +6353,7 @@
 									"id" : "obj-4",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 421.0, 282.0, 23.0 ],
@@ -6370,7 +6370,7 @@
 									"id" : "obj-40",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 102.0, 282.0, 23.0 ],
@@ -6386,7 +6386,7 @@
 									"id" : "obj-41",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 73.0, 282.0, 23.0 ],
@@ -6402,7 +6402,7 @@
 									"id" : "obj-42",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 44.0, 282.0, 23.0 ],
@@ -6418,7 +6418,7 @@
 									"id" : "obj-43",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 15.0, 282.0, 23.0 ],
@@ -6451,7 +6451,7 @@
 									"id" : "obj-5",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 392.0, 282.0, 23.0 ],
@@ -6554,7 +6554,7 @@
 									"id" : "obj-6",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 363.0, 282.0, 23.0 ],
@@ -6571,7 +6571,7 @@
 									"id" : "obj-7",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 334.0, 282.0, 23.0 ],
@@ -6588,7 +6588,7 @@
 									"id" : "obj-8",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 305.0, 282.0, 23.0 ],
@@ -6605,7 +6605,7 @@
 									"id" : "obj-9",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.ambipanSource.maxpat",
+									"name" : "j.ambipanSource.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 302.0, 276.0, 282.0, 23.0 ],
@@ -6833,7 +6833,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 272.0, 230.0, 151.0, 19.0 ],
-					"text" : "jcom.oscroute /view/panel"
+					"text" : "j.oscroute /view/panel"
 				}
 
 			}
@@ -6876,7 +6876,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 428.0, 24.0, 537.0, 31.0 ],
-					"text" : "jcom.message.array 32 speaker position @type decimalArray @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+					"text" : "j.message.array 32 speaker position @type decimalArray @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 				}
 
 			}
@@ -6891,8 +6891,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 10.0, 187.0, 234.0, 31.0 ],
-					"text" : "jcom.model @description \"ICST Ambipanning for multiple sources for multiple speakers.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"ICST Ambipanning for multiple sources for multiple speakers.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -6922,7 +6922,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 130.0, 227.0, 48.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -6993,7 +6993,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 477.0, 125.0, 580.0, 31.0 ],
-					"text" : "jcom.parameter numSpeakers @repetitions/allow 0 @type integer @range/bounds 2 32 @range/clipmode both @description \"Number of speakers that signals are distributed to.\" @priority 3",
+					"text" : "j.parameter numSpeakers @repetitions/allow 0 @type integer @range/bounds 2 32 @range/clipmode both @description \"Number of speakers that signals are distributed to.\" @priority 3",
 					"varname" : "destination/voices"
 				}
 
@@ -7099,7 +7099,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 477.0, 194.0, 574.0, 31.0 ],
-					"text" : "jcom.parameter numSources @repetitions/allow 0 @type integer @range/bounds 1 32 @range/clipmode both @description \"Number of incomming mono sources to pan.\" @priority 1",
+					"text" : "j.parameter numSources @repetitions/allow 0 @type integer @range/bounds 1 32 @range/clipmode both @description \"Number of incomming mono sources to pan.\" @priority 1",
 					"varname" : "source/voices"
 				}
 
@@ -7110,7 +7110,7 @@
 					"has_mute" : 1,
 					"has_panel" : 1,
 					"id" : "obj-36",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -7433,46 +7433,46 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.message.array.maxpat",
+				"name" : "j.message.array.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/message.array",
 				"patcherrelativepath" : "../../../library/components/message.array",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.message.array.instance.maxpat",
+				"name" : "j.message.array.instance.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/message.array",
 				"patcherrelativepath" : "../../../library/components/message.array",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ambipanSource.maxpat",
+				"name" : "j.ambipanSource.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/spatialization/sur.ambipanning~",
 				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.list2parameter.maxpat",
+				"name" : "j.list2parameter.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/list2parameter",
 				"patcherrelativepath" : "../../../library/components/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -7480,47 +7480,47 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscinstance.mxo",
+				"name" : "j.oscinstance.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pack≈.mxo",
+				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.textslider.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
  ]

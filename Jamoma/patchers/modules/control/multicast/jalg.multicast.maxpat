@@ -82,7 +82,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 224.0, 309.0, 603.0, 33.0 ],
-					"text" : "jcom.return clientMenu @repetitions/allow 1 @type generic @description \"connect this to a menu for a list of clients\""
+					"text" : "j.return clientMenu @repetitions/allow 1 @type generic @description \"connect this to a menu for a list of clients\""
 				}
 
 			}
@@ -112,7 +112,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 408.0, 256.0, 393.0, 33.0 ],
-					"text" : "jcom.return received @repetitions/allow 1 @type generic @description \"stuff received from the network\""
+					"text" : "j.return received @repetitions/allow 1 @type generic @description \"stuff received from the network\""
 				}
 
 			}
@@ -126,7 +126,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 13.0, 94.0, 822.0, 20.0 ],
-					"text" : "jcom.oscroute /service_name /port"
+					"text" : "j.oscroute /service_name /port"
 				}
 
 			}

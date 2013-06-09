@@ -67,7 +67,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 89.0, 495.0, 68.0, 20.0 ],
-					"text" : "jcom.out~"
+					"text" : "j.out~"
 				}
 
 			}
@@ -95,7 +95,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "", "" ],
 					"patching_rect" : [ 90.0, 305.0, 64.0, 19.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -174,8 +174,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 750.0, 185.0, 551.0, 31.0 ],
-					"text" : "jcom.parameter range @range/bounds 0 100 @range/clipmode low @repetitions/allow 0 @type decimal @ramp/drive Max @description \"range of values above and below the zero line to display.\"",
-					"varname" : "jcom.parameter.mxb"
+					"text" : "j.parameter range @range/bounds 0 100 @range/clipmode low @repetitions/allow 0 @type decimal @ramp/drive Max @description \"range of values above and below the zero line to display.\"",
+					"varname" : "j.parameter.mxb"
 				}
 
 			}
@@ -190,8 +190,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 267.0, 289.0, 604.0, 31.0 ],
-					"text" : "jcom.parameter buffer/samples @range/bounds 8 256 @type integer @range/clipmode both @description \"samples per buffer, control the scope display\"",
-					"varname" : "jcom.parameter.mxb[2]"
+					"text" : "j.parameter buffer/samples @range/bounds 8 256 @type integer @range/clipmode both @description \"samples per buffer, control the scope display\"",
+					"varname" : "j.parameter.mxb[2]"
 				}
 
 			}
@@ -303,8 +303,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 69.0, 184.0, 587.0, 31.0 ],
-					"text" : "jcom.parameter buffer/pixel @range/bounds 2 8092 @range/clipmode both @type integer @description \"buffers per pixel, control the scope display\"",
-					"varname" : "jcom.parameter.mxb[3]"
+					"text" : "j.parameter buffer/pixel @range/bounds 2 8092 @range/clipmode both @type integer @description \"buffers per pixel, control the scope display\"",
+					"varname" : "j.parameter.mxb[3]"
 				}
 
 			}
@@ -333,8 +333,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 35.0, 590.0, 614.0, 31.0 ],
-					"text" : "jcom.model @type audio @description \"An oscilloscope emulator for viewing waverforms or analyzing phase relationships.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type audio @description \"An oscilloscope emulator for viewing waverforms or analyzing phase relationships.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -417,7 +417,7 @@
 				"box" : 				{
 					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
 					"id" : "obj-25",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

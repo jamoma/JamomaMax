@@ -60,7 +60,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 137.0, 59.0, 160.0, 20.0 ],
-					"text" : "jcom.receive model/address"
+					"text" : "j.receive model/address"
 				}
 
 			}
@@ -204,7 +204,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 102.0, 156.0, 123.0, 20.0 ],
-					"text" : "jcom.remote myFloat"
+					"text" : "j.remote myFloat"
 				}
 
 			}

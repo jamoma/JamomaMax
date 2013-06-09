@@ -53,7 +53,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 457.0, 466.0, 454.0, 19.0 ],
-					"text" : "jcom.parameter inverse @type boolean @description \"Regular or inverse motion image\"",
+					"text" : "j.parameter inverse @type boolean @description \"Regular or inverse motion image\"",
 					"varname" : "color[2]"
 				}
 
@@ -119,7 +119,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 444.0, 118.0, 53.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -159,7 +159,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 413.0, 46.0, 78.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -173,7 +173,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 454.0, 408.0, 367.0, 19.0 ],
-					"text" : "jcom.parameter color @type boolean @description \"Color or greyscale\"",
+					"text" : "j.parameter color @type boolean @description \"Color or greyscale\"",
 					"varname" : "color[1]"
 				}
 
@@ -227,7 +227,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 454.0, 346.0, 402.0, 19.0 ],
-					"text" : "jcom.parameter edge/threshold @type decimal @description \"Edge threshold\"",
+					"text" : "j.parameter edge/threshold @type decimal @description \"Edge threshold\"",
 					"varname" : "edge/threshold"
 				}
 
@@ -256,7 +256,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 454.0, 290.0, 393.0, 19.0 ],
-					"text" : "jcom.parameter edge/algorithm @type string @description \"Edge detection\"",
+					"text" : "j.parameter edge/algorithm @type string @description \"Edge detection\"",
 					"varname" : "edge/algorithm"
 				}
 
@@ -286,7 +286,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 34.0, 460.0, 221.0, 31.0 ],
-					"text" : "jcom.parameter slide @type decimal @description \"Level of slide for thre trails\"",
+					"text" : "j.parameter slide @type decimal @description \"Level of slide for thre trails\"",
 					"varname" : "slide[1]"
 				}
 
@@ -315,7 +315,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 34.0, 402.0, 393.0, 19.0 ],
-					"text" : "jcom.parameter trails @type boolean @description \"Trails - ghostlike image\"",
+					"text" : "j.parameter trails @type boolean @description \"Trails - ghostlike image\"",
 					"varname" : "trails[1]"
 				}
 
@@ -366,7 +366,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 34.0, 341.0, 356.0, 19.0 ],
-					"text" : "jcom.parameter noise @type boolean @description \"Noise reduction\"",
+					"text" : "j.parameter noise @type boolean @description \"Noise reduction\"",
 					"varname" : "noise[1]"
 				}
 
@@ -462,7 +462,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 34.0, 281.0, 357.0, 19.0 ],
-					"text" : "jcom.parameter threshold @type decimal @description \\\"Threshold\\\"",
+					"text" : "j.parameter threshold @type decimal @description \\\"Threshold\\\"",
 					"varname" : "threshold[1]"
 				}
 
@@ -520,8 +520,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 36.0, 123.332855, 255.0, 31.0 ],
-					"text" : "jcom.model @type video @algorithm_type jitter @description \"Motion-related analysis\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type video @algorithm_type jitter @description \"Motion-related analysis\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -568,7 +568,7 @@
 					"has_mute" : 1,
 					"has_preview" : 1,
 					"id" : "obj-39",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -835,39 +835,39 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.motion%.maxpat",
+				"name" : "j.motion%.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/motion%",
 				"patcherrelativepath" : "../../../library/components/motion%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.noiseremoval%.maxpat",
+				"name" : "j.noiseremoval%.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/noiseremoval%",
 				"patcherrelativepath" : "../../../library/components/noiseremoval%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.rgb2luma%.maxpat",
+				"name" : "j.rgb2luma%.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/rgb2luma%",
 				"patcherrelativepath" : "../../../library/components/rgb2luma%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.sum%.maxpat",
+				"name" : "j.sum%.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/sum%",
 				"patcherrelativepath" : "../../../library/components/sum%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -875,7 +875,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -899,7 +899,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -907,15 +907,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
  ]

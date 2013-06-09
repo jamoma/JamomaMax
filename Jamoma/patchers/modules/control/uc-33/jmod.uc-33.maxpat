@@ -189,7 +189,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 115.0, 310.0, 146.0, 19.0 ],
-									"text" : "jcom.oscroute /view/panel"
+									"text" : "j.oscroute /view/panel"
 								}
 
 							}
@@ -662,7 +662,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 70.0, 220.0, 437.0, 19.0 ],
-													"text" : "jcom.return transport/stop @type none @description \"Transport button: Stop.\"",
+													"text" : "j.return transport/stop @type none @description \"Transport button: Stop.\"",
 													"varname" : "transport/record"
 												}
 
@@ -864,7 +864,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 75.0, 250.0, 433.0, 19.0 ],
-													"text" : "jcom.return transport/play @type none @description \"Transport button: Play.\"",
+													"text" : "j.return transport/play @type none @description \"Transport button: Play.\"",
 													"varname" : "transport/play"
 												}
 
@@ -1065,7 +1065,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 471.0, 19.0 ],
-													"text" : "jcom.return button.tapTempo @type boolean @description \"Button labeled Tap Tempo.\"",
+													"text" : "j.return button.tapTempo @type boolean @description \"Button labeled Tap Tempo.\"",
 													"varname" : "button/tap"
 												}
 
@@ -1285,7 +1285,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 252.0, 31.0 ],
-													"text" : "jcom.return transport/record @type boolean @description \"Transport button: Record.\"",
+													"text" : "j.return transport/record @type boolean @description \"Transport button: Record.\"",
 													"varname" : "transport/record"
 												}
 
@@ -1517,7 +1517,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 412.0, 19.0 ],
-													"text" : "jcom.return button.stop @type boolean @description \"Button labeled stop.\"",
+													"text" : "j.return button.stop @type boolean @description \"Button labeled stop.\"",
 													"varname" : "button/stop"
 												}
 
@@ -1745,7 +1745,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 420.0, 19.0 ],
-													"text" : "jcom.return button.pluss @type boolean @description \"Button labeled pluss.\"",
+													"text" : "j.return button.pluss @type boolean @description \"Button labeled pluss.\"",
 													"varname" : "button/pluss"
 												}
 
@@ -1964,7 +1964,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 343.0, 19.0 ],
-													"text" : "jcom.return button.6 @type boolean @description \"Button 6.\"",
+													"text" : "j.return button.6 @type boolean @description \"Button 6.\"",
 													"varname" : "button/6"
 												}
 
@@ -2183,7 +2183,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 342.0, 19.0 ],
-													"text" : "jcom.return button.3 @type boolean @description \"Button 3.\"",
+													"text" : "j.return button.3 @type boolean @description \"Button 3.\"",
 													"varname" : "button/3"
 												}
 
@@ -2402,7 +2402,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 342.0, 19.0 ],
-													"text" : "jcom.return button.1 @type boolean @description \"Button 1.\"",
+													"text" : "j.return button.1 @type boolean @description \"Button 1.\"",
 													"varname" : "button/1"
 												}
 
@@ -2621,7 +2621,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 409.0, 19.0 ],
-													"text" : "jcom.return button.play @type boolean @description \"Button labeled Play.\"",
+													"text" : "j.return button.play @type boolean @description \"Button labeled Play.\"",
 													"varname" : "button/play"
 												}
 
@@ -2840,7 +2840,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 244.0, 19.0 ],
-													"text" : "jcom.return button.5 @description \"Button 5.\"",
+													"text" : "j.return button.5 @description \"Button 5.\"",
 													"varname" : "button/5"
 												}
 
@@ -3200,7 +3200,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 342.0, 19.0 ],
-													"text" : "jcom.return button.2 @type boolean @description \"Button 2.\"",
+													"text" : "j.return button.2 @type boolean @description \"Button 2.\"",
 													"varname" : "button/2"
 												}
 
@@ -3419,7 +3419,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 326.0, 19.0 ],
-													"text" : "jcom.return button.minus @description \"Button labels minus.\"",
+													"text" : "j.return button.minus @description \"Button labels minus.\"",
 													"varname" : "button/minus"
 												}
 
@@ -3638,7 +3638,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 342.0, 19.0 ],
-													"text" : "jcom.return button.4 @type boolean @description \"Button 4.\"",
+													"text" : "j.return button.4 @type boolean @description \"Button 4.\"",
 													"varname" : "button/4"
 												}
 
@@ -4270,7 +4270,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 120.0, 240.0, 46.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -4301,8 +4301,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 150.0, 362.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"A module interfacing with the Edirol UC-33 MIDI fader.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"A module interfacing with the Edirol UC-33 MIDI fader.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -4340,7 +4340,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 465.0, 130.0, 269.0, 31.0 ],
-					"text" : "jcom.parameter midiIn @priority 0 @description \"Port to receive MIDI messages on.\"",
+					"text" : "j.parameter midiIn @priority 0 @description \"Port to receive MIDI messages on.\"",
 					"varname" : "midi_in"
 				}
 
@@ -4363,7 +4363,7 @@
 				"box" : 				{
 					"has_panel" : 1,
 					"id" : "obj-22",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
