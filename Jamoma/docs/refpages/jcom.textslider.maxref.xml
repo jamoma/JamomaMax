@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="jcom.textslider" module="" category="Jamoma">
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			TEXT_HERE
+		</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="INLET_TYPE">
+			<digest>
+				Input
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="OUTLET_TYPE">
+			<digest>
+				Output
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</objarg>
+	</objarglist>
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="bang">
+			<arglist />
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+		<method name="int">
+			<arglist>
+				<arg name="ARG_NAME_0" type="int" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+		<method name="float">
+			<arglist>
+				<arg name="ARG_NAME_0" type="float" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+		<method name="(mouse)">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+		<method name="set">
+			<arglist>
+				<arg name="ARG_NAME_0" type="float" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name="bgcolor" get="1" set="1" type="float" size="4">
+			<digest>
+				Background Color
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Color" />
+				<attribute name="defaultname" get="1" set="1" type="float" size="4" value="0.8 0.8 0.8 0.7" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Background Color" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="rgba" />
+			</attributelist>
+		</attribute>
+		<attribute name="bordercolor" get="1" set="1" type="float" size="4">
+			<digest>
+				Border Color
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Color" />
+				<attribute name="defaultname" get="1" set="1" type="float" size="4" value="0.5 0.5 0.5 1." />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Border Color" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="rgba" />
+			</attributelist>
+		</attribute>
+		<attribute name="clickjump" get="1" set="1" type="int" size="1">
+			<digest>
+				Jump to Value on Mouse Down
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Jamoma" />
+				<attribute name="default" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Jump to Value on Mouse Down" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="defaultvalue" get="1" set="1" type="float" size="1">
+			<digest>
+				Default value
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Jamoma" />
+				<attribute name="default" get="1" set="1" type="float" size="1" value="0." />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Default value" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+			</attributelist>
+		</attribute>
+		<attribute name="fgcolor" get="1" set="1" type="float" size="4">
+			<digest>
+				Foreground Color
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Color" />
+				<attribute name="defaultname" get="1" set="1" type="float" size="4" value="0.95 0.95 0.95 1." />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Foreground Color" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="rgba" />
+			</attributelist>
+		</attribute>
+		<attribute name="knobcolor" get="1" set="1" type="float" size="4">
+			<digest>
+				Knob Color
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Color" />
+				<attribute name="defaultname" get="1" set="1" type="float" size="4" value="0.7 0.7 0.7 1." />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Knob Color" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="rgba" />
+			</attributelist>
+		</attribute>
+		<attribute name="range" get="1" set="1" type="float" size="2">
+			<digest>
+				Range
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Jamoma" />
+				<attribute name="default" get="1" set="1" type="float" size="2" value="0. 1." />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Range" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+			</attributelist>
+		</attribute>
+		<attribute name="showvalue" get="1" set="1" type="int" size="1">
+			<digest>
+				Shows Value while editing &amp;amp; hovering
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Jamoma" />
+				<attribute name="default" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Shows Value while editing &amp; hovering" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="text" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Displayed Text
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Jamoma" />
+				<attribute name="default" get="1" set="1" type="symbol" size="1" value="textslider" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Displayed Text" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+			</attributelist>
+		</attribute>
+		<attribute name="textcolor" get="1" set="1" type="float" size="4">
+			<digest>
+				Text Color
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Color" />
+				<attribute name="defaultname" get="1" set="1" type="float" size="4" value="0. 0. 0. 1." />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Text Color" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="rgba" />
+			</attributelist>
+		</attribute>
+		<attribute name="textpos" get="1" set="1" type="float" size="2">
+			<digest>
+				Text position
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Jamoma" />
+				<attribute name="default" get="1" set="1" type="float" size="2" value="10. 4." />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Text position" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+			</attributelist>
+		</attribute>
+		<attribute name="tracking" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Mouse Tracking
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Jamoma" />
+				<attribute name="default" get="1" set="1" type="symbol" size="1" value="horizontal" />
+				<attribute name="enumvals" get="1" set="1" type="atom" size="3">
+					<enumlist>
+						<enum name="horizontal">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+						<enum name="vertical">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+						<enum name="both">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+					</enumlist>
+				</attribute>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Mouse Tracking" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
+			</attributelist>
+		</attribute>
+		<attribute name="unit" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Displayed Unit
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="atom" size="1" value="Jamoma" />
+				<attribute name="default" get="1" set="1" type="symbol" size="1" value="" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Displayed Unit" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+			</attributelist>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="bogus">
+			TEXT_HERE
+		</seealso>
+	</seealsolist>
+</c74object>

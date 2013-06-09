@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 506.0, 134.0, 650.0, 559.0 ],
+		"rect" : [ 349.0, 163.0, 650.0, 559.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 506.0, 160.0, 650.0, 533.0 ],
+						"rect" : [ 349.0, 189.0, 650.0, 533.0 ],
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -80,16 +80,74 @@
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"hidden" : 0,
-									"id" : "obj-3",
+									"id" : "obj-8",
 									"ignoreclick" : 1,
 									"linecount" : 4,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 387.0, 406.0, 150.0, 60.0 ],
+									"patching_rect" : [ 388.0, 386.0, 164.0, 60.0 ],
+									"presentation" : 0,
+									"presentation_rect" : [ 388.0, 344.0, 0.0, 0.0 ],
+									"text" : "You can also use listen to your model using other Jamoma externals such as jcom.receive, jcom.map, etc.",
+									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"textjustification" : 0,
+									"underline" : 0
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"background" : 0,
+									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+									"bubble" : 1,
+									"bubblepoint" : 0.5,
+									"bubbleside" : 1,
+									"bubbletextmargin" : 5,
+									"fontface" : 0,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"hidden" : 0,
+									"id" : "obj-5",
+									"ignoreclick" : 1,
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 242.0, 171.0, 156.0, 64.0 ],
 									"presentation" : 0,
 									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-									"text" : "Output returned from a module can be listened to using regular Jamoma listeners.",
+									"text" : "Double-click myMetronomModel to give a look at the model's returns.",
+									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"textjustification" : 0,
+									"underline" : 0
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"background" : 0,
+									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+									"bubble" : 0,
+									"bubblepoint" : 0.5,
+									"bubbleside" : 1,
+									"bubbletextmargin" : 5,
+									"fontface" : 0,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"hidden" : 0,
+									"id" : "obj-3",
+									"ignoreclick" : 1,
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 388.0, 279.0, 158.0, 47.0 ],
+									"presentation" : 0,
+									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
+									"text" : "Outputs declared using a jcom.return are sent out by jcom.model.",
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 0,
 									"underline" : 0
@@ -135,7 +193,7 @@
 									"patching_rect" : [ 74.0, 299.0, 50.0, 18.0 ],
 									"presentation" : 0,
 									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-									"text" : "2624",
+									"text" : "1981",
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 0
 								}
@@ -245,7 +303,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 164.0, 198.0, 35.0, 18.0 ],
-													"text" : "2624"
+													"text" : "1981"
 												}
 
 											}
@@ -560,7 +618,7 @@
 									"patching_rect" : [ 43.0, 440.0, 81.0, 16.0 ],
 									"presentation" : 0,
 									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-									"text" : "2624",
+									"text" : "1981",
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 0
 								}
