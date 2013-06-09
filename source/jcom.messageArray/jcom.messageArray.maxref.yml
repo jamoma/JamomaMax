@@ -3,7 +3,7 @@ author: [Jamoma, Julien Rabin]
 created_at: 2013/1/30
 tags: [message, control, osc, array]
 
-brief: Handling array of messages in the Jamoma modules
+brief: Handling array of messages in the Jamoma models
 
 desc: >
  "jcom.messageArray creates an array of messages in a Jamoma model."
@@ -80,12 +80,12 @@ attributes:
    default: none
  - name: priority
    type: int
-   desc: "Used to determine order of message recall in a preset. When presets of modules are recalled, messages are set according to priority, so that messages with priority 1 get updated first, then	messages with priority 2, then priority 3, and so on. If the priority attribute is not set, it defaults to 0. Parameters with priority 0 are regarded the lowest priority, and end up at the end of the queue of messages to be set."
+   desc: "Used to determine order of message recall in a preset. When presets of models are recalled, messages are set according to priority, so that messages with priority 1 get updated first, then	messages with priority 2, then priority 3, and so on. If the priority attribute is not set, it defaults to 0. Parameters with priority 0 are regarded the lowest priority, and end up at the end of the queue of messages to be set."
    unit:
    default:
  - name: description
    type: symbol
-   desc: "Short info about the message. Used for auto-documentation of the module."
+   desc: "Short info about the message. Used for auto-documentation of the model."
    unit:
    default:
  - name: value
