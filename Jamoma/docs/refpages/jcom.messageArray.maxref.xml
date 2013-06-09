@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.messageArray" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Handling array of messages in Jamoma model
 	</digest>
 	<description>
-		TEXT_HERE
+		jcom.messageArray creates an array of messages in a Jamoma model
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			message
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -26,7 +26,7 @@
 				set the value of the selected instance(s)
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
@@ -34,7 +34,7 @@
 				index (use * to bind all instances)
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</inlet>
 	</inletlist>
@@ -45,7 +45,7 @@
 				direct: values
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</outlet>
 	</outletlist>
@@ -53,10 +53,10 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				OSC name defining an array of messages in the namespace using a bracket-based syntaxe: my/message.[2]
 			</digest>
 			<description>
-				TEXT_HERE
+				OSC name defining an array of messages in the namespace using a bracket-based syntaxe: my/message.[2]
 			</description>
 		</objarg>
 	</objarglist>
@@ -67,10 +67,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="address">
@@ -78,10 +78,10 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				The address message followed by an osc name containing a number of instances placed in bracket declares an array of messages in the namespace. Ex: 'address my/message.[5]'
 			</digest>
 			<description>
-				TEXT_HERE
+				The address message followed by an osc name containing a number of instances placed in bracket declares an array of messages in the namespace. Ex: 'address my/message.[5]'
 			</description>
 		</method>
 		<method name="array/select">
@@ -89,10 +89,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				This message select which jcom.messageArray's instance to address
 			</digest>
 			<description>
-				TEXT_HERE
+				This message select which jcom.messageArray's instance to address
 			</description>
 		</method>
 		<method name="array/resize">
@@ -100,10 +100,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				This message create a new array of jcom.messages
 			</digest>
 			<description>
-				TEXT_HERE
+				This message create a new array of jcom.messages
 			</description>
 		</method>
 		<method name="dec">
@@ -111,10 +111,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Decrement the value by the amount defined by the @value/stepsize attribute
 			</digest>
 			<description>
-				TEXT_HERE
+				Decrement the value by the amount defined by the @value/stepsize attribute
 			</description>
 		</method>
 		<method name="dump">
@@ -122,10 +122,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Dump all attributes out the right-most outlet
 			</digest>
 			<description>
-				TEXT_HERE
+				Dump all attributes out the right-most outlet
 			</description>
 		</method>
 		<method name="inc">
@@ -133,10 +133,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Increment the value by the amount defined by the @value/stepsize attribute
 			</digest>
 			<description>
-				TEXT_HERE
+				Increment the value by the amount defined by the @value/stepsize attribute
 			</description>
 		</method>
 		<method name="reset">
@@ -144,10 +144,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Reset the selected jcom.message instance to its default state
 			</digest>
 			<description>
-				TEXT_HERE
+				Reset the selected jcom.message instance to its default state
 			</description>
 		</method>
 	</methodlist>
@@ -155,10 +155,10 @@
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Set whether the array of jcom.message is enable or not
 			</digest>
 			<description>
-				TEXT_HERE
+				Set whether the array of jcom.message is enable or not
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -166,44 +166,44 @@
 		</attribute>
 		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set what dataspace used internally by the message for unit conversions
 			</digest>
 			<description>
-				TEXT_HERE
+				Set what dataspace used internally by the message for unit conversions
 			</description>
 		</attribute>
 		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				The dataspace unit used for communication to the algorithm from the outside world
 			</digest>
 			<description>
-				TEXT_HERE
+				The dataspace unit used for communication to the algorithm from the outside world
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Short info about the message. Used for auto-documentation of the model
 			</digest>
 			<description>
-				TEXT_HERE
+				Short info about the message. Used for auto-documentation of the model
 			</description>
 		</attribute>
 		<attribute name="format" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Format of the values output: single or array
 			</digest>
 			<description>
-				TEXT_HERE
+				Format of the values output: single or array
 			</description>
 			<attributelist>
 				<attribute name="enumvals" get="1" set="1" type="atom" size="2">
 					<enumlist>
 						<enum name="single">
 							<digest>
-								TEXT_HERE
+								Values are output instance by instance
 							</digest>
 							<description>
-								TEXT_HERE
+								Values are output instance by instance
 							</description>
 						</enum>
 						<enum name="array">
@@ -219,36 +219,36 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
 			</attributelist>
 		</attribute>
-		<attribute name="priority" get="1" set="1" type="int" size="1">
+		<!-- <attribute name="priority" get="1" set="1" type="int" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
 			</digest>
 			<description>
-				TEXT_HERE
+				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
 			</description>
 		</attribute>
 		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				The mapping function determining the curve of the ramping to new message value
 			</digest>
 			<description>
-				TEXT_HERE
+				The mapping function determining the curve of the ramping to new message value
 			</description>
 		</attribute>
 		<attribute name="ramp/function/parameters" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Optional parameters for the chosen ramping function
 			</digest>
 			<description>
-				TEXT_HERE
+				Optional parameters for the chosen ramping function
 			</description>
 		</attribute>
 		<attribute name="ramp/status" get="1" set="1" type="int" size="1">
@@ -261,74 +261,72 @@
 		</attribute>
 		<attribute name="range/bounds" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Lower and upper boundaries defining the range of possible message values
 			</digest>
 			<description>
-				TEXT_HERE
+				Lower and upper boundaries defining the range of possible message values
 			</description>
 		</attribute>
 		<attribute name="range/clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
 			</digest>
 			<description>
-				TEXT_HERE
+				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
 			</description>
 		</attribute>
 		<attribute name="repetitions/allow" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Determines whether repeated message values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)
 			</digest>
 			<description>
-				TEXT_HERE
+				Determines whether repeated message values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)
 			</description>
 		</attribute>
-		<attribute name="service" get="1" set="1" type="symbol" size="1">
+		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 		<attribute name="tag" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
-			</digest>
+Some optional tags			</digest>
 			<description>
-				TEXT_HERE
-			</description>
+Some optional tags			</description>
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Datatype of the message. Options are: decimal, integer, boolean, string, array, generic
 			</digest>
 			<description>
-				TEXT_HERE
+				Datatype of the message. Options are: decimal, integer, boolean, string, array, generic
 			</description>
 		</attribute>
 		<attribute name="value" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Current message value
 			</digest>
 			<description>
-				TEXT_HERE
+				Current message value
 			</description>
 		</attribute>
 		<attribute name="value/default" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Default message value
 			</digest>
 			<description>
-				TEXT_HERE
+				Default message value
 			</description>
 		</attribute>
 		<attribute name="value/stepsize" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Step by which the current value is being increased/decreased when a /value/inc or /value/dec message is received
 			</digest>
 			<description>
-				TEXT_HERE
+				Step by which the current value is being increased/decreased when a /value/inc or /value/dec message is received
 			</description>
 		</attribute>
 	</attributelist>
@@ -338,8 +336,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="jcom.message"/>
+		<seealso none="jcom.parameterArray"/>
 	</seealsolist>
 </c74object>
