@@ -1,11 +1,18 @@
-/* 
- *	delay≈
- *	Jamoma AudioGraph external object for Max
- *	Copyright © 2008 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief delay~ : wraps the #TTDelay class as audio delay external for AudioGraph with several options for interpolation method
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2009 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 

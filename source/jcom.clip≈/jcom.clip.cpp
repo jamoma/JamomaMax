@@ -1,14 +1,14 @@
 /** @file
  *
- * @ingroup audioGraphMax
+ * @ingroup implementationMax
  *
- * @brief jcom.clip≈ : Range clipping external for Jamoma AudioGraph.
+ * @brief clip≈ : wraps the #Clipper class as a range clipping external for AudioGraph
  *
- * @details This wraps the Jamoma DSP class #Clipper as a Jamoma AudioGraph external for Max.
+ * @details
  *
- * @authors Nils Peters, Trond Lossius
+ * @authors Tim Place, Trond Lossius
  *
- * @copyright Copyright © 2011 by Nils Peters @n
+ * @copyright © 2010 by Tim Place @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */

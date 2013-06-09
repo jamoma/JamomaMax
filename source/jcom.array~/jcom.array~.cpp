@@ -1,10 +1,18 @@
-/* 
- *	External object for Max/MSP
- *	Copyright © 2011 by Timothy Place
- * 
- *	License: This code is licensed under the terms of the "New BSD License"
- *	http://creativecommons.org/licenses/BSD/
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief array~ : Array object for MaxMSP.
+ *
+ * @details This wraps the Jamoma DSP class #TTAudioObjectBaseArray as a Jamoma DSP external for Max.
+ *
+ * @authors Timothy Place
+ *
+ * @copyright © 2011 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTClassWrapperMax.h"
 

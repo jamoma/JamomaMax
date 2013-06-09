@@ -1,11 +1,18 @@
-/* 
- *	dcblocker≈
- *	DC-Blocking Filter object for Jamoma AudioGraph
- *	Copyright © 2008 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief dcblock≈ : wraps the #TTDCBlock class as DC offset removing filter external for AudioGraph
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2008 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 

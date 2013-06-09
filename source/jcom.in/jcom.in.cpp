@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup modularMax
+ * @ingroup implementationMax
  *
  * @brief Externals for Jamoma: jcom.in & jcom.in~ - Manage control and audio inputs for a module
  *

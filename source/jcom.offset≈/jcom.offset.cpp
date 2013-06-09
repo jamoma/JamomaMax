@@ -1,11 +1,18 @@
-/* 
- *	offset≈
- *	External object for Jamoma AudioGraph
- *	Copyright © 2008 by Nils Peters
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief offset≈ : wraps the #TTAudioGraphOffset class as an envelope following external for AudioGraph
+ *
+ * @details
+ *
+ * @authors Nils Peters, Trond Lossius
+ *
+ * @copyright © 2010 by Nils Peters @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 

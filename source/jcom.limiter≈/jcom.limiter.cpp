@@ -1,11 +1,18 @@
-/* 
- *	limiter≈
- *	Jamoma AudioGraph external object for Max
- *	Copyright © 2008 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief limiter≈ : wraps the #TTLimiter class as a gain limiting external for AudioGraph
+ *
+ * @details
+ *
+ * @authors Timothy Place, Nils Peters, Trond Lossius
+ *
+ * @copyright © 2010 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 

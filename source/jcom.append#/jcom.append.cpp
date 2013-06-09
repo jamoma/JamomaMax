@@ -1,11 +1,18 @@
-/* 
- *	append#
- *	External object for Max to append keys to a dictionary being passed in a Jamoma Graph
- *	Copyright © 2010 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief append# - External object for Max to append keys to a dictionary being passed in a Jamoma Graph
+ *
+ * @details
+ *
+ * @authors Timothy Place
+ *
+ * @copyright © 2010 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxGraph.h"
 

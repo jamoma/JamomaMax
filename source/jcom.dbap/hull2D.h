@@ -1,7 +1,7 @@
 /**
  @file
  
- @ingroup modularMax
+ @ingroup implementationMax
  
  @brief Compute convex hulls in 2 dimensions.
 

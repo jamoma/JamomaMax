@@ -1,9 +1,16 @@
-/* 
- *	External object for Max/MSP
- *	Copyright © 2010 by Timothy Place
- * 
- *	License: This code is licensed under the terms of the "New BSD License"
- *	http://creativecommons.org/licenses/BSD/
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief allpass~ : wrapping the #TTAllpass class as an MSP external
+ *
+ * @details
+ *
+ * @authors Timothy Place
+ *
+ * @copyright © 2010 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
 
 #include "TTClassWrapperMax.h"

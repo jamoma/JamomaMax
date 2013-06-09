@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup modularMax
+>  * @ingroup implementationMax
  *
  * @brief External for Jamoma: jcom.hub - The main control center of a Jamoma module
  *

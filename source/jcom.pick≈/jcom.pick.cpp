@@ -1,17 +1,18 @@
 /** @file
  *
- * @ingroup audioGraphMax
+ * @ingroup implementationMax
  *
- * @brief jcom.pick≈ - extracts N specific audio signals from a Jamoma AudioGraph signal
+ * @brief pick≈ : wraps the #TTAudioGraphPick class as an external that extracts N specific audio signals from a Jamoma AudioGraph signal
  *
- * @details 
+ * @details
  *
- * @authors Nils Peters
+ * @authors Nils Peters, Trond Lossius
  *
- * @copyright Copyright © 2011, Nils Peters @n
+ * @copyright © 2011 by Nils Peters @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
  
 #include "maxAudioGraph.h"
 

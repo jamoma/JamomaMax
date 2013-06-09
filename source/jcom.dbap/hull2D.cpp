@@ -1,7 +1,7 @@
 /**
  @file
  
- @ingroup modularMax
+ @ingroup implementationMax
  
  @brief 2D implementation on convex hull.
  

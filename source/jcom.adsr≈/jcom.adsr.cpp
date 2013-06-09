@@ -1,14 +1,14 @@
 /** @file
  *
- * @ingroup audioGraphMax
+ * @ingroup implementationMax
  *
- * @brief jcom.adsr~ : Envelope Generator object for Jamoma Audio Graph
+ * @brief adsr≈ : wraps the #TTAdsr class as an envelope following external for AudioGraph
  *
- * @details This wraps the Jamoma DSP class #TTAdsr as a Jamoma AudioGraph external for Max.
+ * @details
  *
  * @authors Timothy Place, Nils Peters, Trond Lossius
  *
- * @copyright Copyright © 2010, Timothy Place @n
+ * @copyright © 2010 by Timothy Place @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
