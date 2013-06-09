@@ -3,10 +3,10 @@ author: [Jamoma]
 created_at: 2012/1/1
 tags: [interface, control, osc]
 
-brief: The central nervouos system of a Jammoma module
+brief: This external belongs to Jamoma 0.5 and is now deprecated. See jcom.model instead.
 
 desc: >
- "jcom.hub is the central brain in a jamoma module. It parses input, distributes messaging to parameters, manages the pattrstorage object, generates documentation, configures the jcom.gui object, etc."
+ "This external belongs to Jamoma 0.5 and is now deprecated. See jcom.model instead."
  
 inputs:
   - name: left

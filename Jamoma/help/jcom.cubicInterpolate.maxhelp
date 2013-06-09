@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 19.0, 54.0, 648.0, 741.0 ],
+		"rect" : [ 500.0, 137.0, 648.0, 741.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -77,11 +77,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 19.0, 80.0, 648.0, 715.0 ],
+						"rect" : [ 500.0, 163.0, 648.0, 715.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -103,6 +103,22 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"border" : 0,
+									"filename" : "helpdetails.js",
+									"id" : "obj-2",
+									"ignoreclick" : 1,
+									"jsarguments" : [ "jcom.cubicInterpolate" ],
+									"maxclass" : "jsui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 5.0, 5.0, 545.0, 100.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"hidden" : 1,
@@ -111,22 +127,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 214.0, 266.0, 77.0, 21.0 ],
+									"patching_rect" : [ 225.0, 162.0, 77.0, 21.0 ],
 									"text" : "loadmess 1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"args" : [ "@name", "jcom.cubicInterpolate", "@description", "Cubic interpolation on a stream of number" ],
-									"bgmode" : 1,
-									"id" : "obj-33",
-									"maxclass" : "bpatcher",
-									"name" : "jcom.maxhelpui.maxpat",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 642.0, 70.0 ],
-									"varname" : "maxhelpui"
 								}
 
 							}
@@ -139,162 +141,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 88.0, 297.0, 37.0, 18.0 ],
+									"patching_rect" : [ 99.0, 193.0, 37.0, 18.0 ],
 									"text" : "clear"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-2",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 154.0, 246.0, 301.0, 20.0 ],
-									"text" : "bang: request for new target value"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-3",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 88.0, 246.0, 60.0, 20.0 ],
-									"text" : "middle:"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-4",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 154.0, 226.0, 302.0, 20.0 ],
-									"text" : "interpolated value (float)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-5",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 88.0, 226.0, 62.0, 20.0 ],
-									"text" : "left:"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-6",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 70.0, 196.0, 111.0, 20.0 ],
-									"text" : "Output:"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-7",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 154.0, 163.0, 294.0, 20.0 ],
-									"text" : "step size (0-1)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-8",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 86.0, 163.0, 60.0, 20.0 ],
-									"text" : "step:"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-9",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 154.0, 143.0, 294.0, 20.0 ],
-									"text" : "new target value"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-10",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 86.0, 143.0, 62.0, 20.0 ],
-									"text" : "int/float:"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-11",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 154.0, 123.0, 297.0, 20.0 ],
-									"text" : "step forward and calculate new interpolated value"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-12",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 86.0, 123.0, 58.0, 20.0 ],
-									"text" : "bang:"
 								}
 
 							}
@@ -310,7 +158,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 131.0, 297.0, 39.0, 20.0 ],
+									"patching_rect" : [ 142.0, 193.0, 39.0, 20.0 ],
 									"triscale" : 0.9
 								}
 
@@ -324,7 +172,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
-									"patching_rect" : [ 214.0, 467.0, 32.5, 20.0 ],
+									"patching_rect" : [ 225.0, 363.0, 32.5, 20.0 ],
 									"text" : "t f b"
 								}
 
@@ -338,7 +186,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 394.0, 503.0, 32.5, 20.0 ],
+									"patching_rect" : [ 405.0, 399.0, 32.5, 20.0 ],
 									"text" : "f"
 								}
 
@@ -358,7 +206,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 394.0, 528.0, 173.0, 99.0 ],
+									"patching_rect" : [ 405.0, 424.0, 173.0, 99.0 ],
 									"peakcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"setminmax" : [ 0.0, 100.0 ],
 									"setstyle" : 2,
@@ -381,7 +229,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 214.0, 528.0, 173.0, 99.0 ],
+									"patching_rect" : [ 225.0, 424.0, 173.0, 99.0 ],
 									"peakcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"setminmax" : [ 0.0, 100.0 ],
 									"setstyle" : 2,
@@ -397,7 +245,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 214.0, 296.0, 20.0, 20.0 ]
+									"patching_rect" : [ 225.0, 192.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -410,7 +258,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 214.0, 322.0, 65.0, 20.0 ],
+									"patching_rect" : [ 225.0, 218.0, 65.0, 20.0 ],
 									"text" : "qmetro 20"
 								}
 
@@ -424,7 +272,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 34.0, 297.0, 50.0, 18.0 ],
+									"patching_rect" : [ 45.0, 193.0, 50.0, 18.0 ],
 									"text" : "getstep"
 								}
 
@@ -438,7 +286,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 131.0, 322.0, 50.0, 18.0 ],
+									"patching_rect" : [ 142.0, 218.0, 50.0, 18.0 ],
 									"text" : "step $1"
 								}
 
@@ -453,7 +301,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 319.0, 367.0, 37.0, 20.0 ],
+									"patching_rect" : [ 330.0, 263.0, 37.0, 20.0 ],
 									"triscale" : 0.9
 								}
 
@@ -468,7 +316,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 214.0, 442.0, 64.0, 20.0 ],
+									"patching_rect" : [ 225.0, 338.0, 64.0, 20.0 ],
 									"triscale" : 0.9
 								}
 
@@ -480,7 +328,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 299.0, 442.0, 20.0, 20.0 ]
+									"patching_rect" : [ 310.0, 338.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -493,7 +341,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 319.0, 342.0, 75.0, 20.0 ],
+									"patching_rect" : [ 330.0, 238.0, 75.0, 20.0 ],
 									"text" : "random 101"
 								}
 
@@ -508,7 +356,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "float", "bang", "" ],
-									"patching_rect" : [ 214.0, 412.0, 189.0, 20.0 ],
+									"patching_rect" : [ 225.0, 308.0, 189.0, 20.0 ],
 									"text" : "jcom.cubicInterpolate @step 0.02"
 								}
 
@@ -523,22 +371,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 214.0, 635.0, 189.0, 33.0 ],
+									"patching_rect" : [ 225.0, 531.0, 191.0, 33.0 ],
 									"text" : "Notice how the cubic interpolation always is lagging a bit behind."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-32",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 70.0, 93.0, 116.0, 20.0 ],
-									"text" : "Input:"
 								}
 
 							}
@@ -548,7 +382,7 @@
 									"destination" : [ "obj-30", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 97.5, 363.0, 223.5, 363.0 ],
+									"midpoints" : [ 108.5, 259.0, 234.5, 259.0 ],
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -567,7 +401,7 @@
 									"destination" : [ "obj-15", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 237.0, 492.0, 403.5, 492.0 ],
+									"midpoints" : [ 248.0, 388.0, 414.5, 388.0 ],
 									"source" : [ "obj-14", 1 ]
 								}
 
@@ -613,7 +447,7 @@
 									"destination" : [ "obj-30", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 43.5, 363.0, 223.5, 363.0 ],
+									"midpoints" : [ 54.5, 259.0, 234.5, 259.0 ],
 									"source" : [ "obj-20", 0 ]
 								}
 
@@ -632,7 +466,7 @@
 									"destination" : [ "obj-30", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 140.5, 363.5, 223.5, 363.5 ],
+									"midpoints" : [ 151.5, 259.5, 234.5, 259.5 ],
 									"source" : [ "obj-25", 0 ]
 								}
 
@@ -642,7 +476,7 @@
 									"destination" : [ "obj-15", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 328.5, 392.0, 417.0, 392.0 ],
+									"midpoints" : [ 339.5, 288.0, 428.0, 288.0 ],
 									"source" : [ "obj-26", 0 ]
 								}
 
@@ -652,7 +486,7 @@
 									"destination" : [ "obj-30", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 328.5, 400.0, 223.5, 400.0 ],
+									"midpoints" : [ 339.5, 296.0, 234.5, 296.0 ],
 									"source" : [ "obj-26", 0 ]
 								}
 
@@ -699,7 +533,7 @@
 									"destination" : [ "obj-29", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 308.5, 437.0, 435.0, 437.0, 435.0, 325.0, 328.5, 325.0 ],
+									"midpoints" : [ 319.5, 333.0, 446.0, 333.0, 446.0, 221.0, 339.5, 221.0 ],
 									"source" : [ "obj-30", 1 ]
 								}
 
@@ -739,7 +573,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -789,31 +623,10 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../patchers/components/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "jcom.maxhelpuiButton.png",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../patchers/components/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "jcom.maxhelpuiResize.js",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../patchers/components/maxhelpui",
+				"name" : "helpdetails.js",
+				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "jcom.jamomaPath.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
-				"patcherrelativepath" : "../patchers/components/jamomaPath",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -832,18 +645,6 @@
 			}
 , 			{
 				"name" : "jcom.cubicInterpolate.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.route.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.send.mxo",
 				"type" : "iLaX"
 			}
  ]

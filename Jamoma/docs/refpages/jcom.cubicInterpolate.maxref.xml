@@ -3,17 +3,16 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="jcom.cubicInterpolate" module="" category="">
+<c74object name="jcom.cubicInterpolate" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
-	</digest>
+		Cubic interpolation on a stream of number	</digest>
 	<description>
-		TEXT_HERE
+		<!-- TEXT_HERE -->
 	</description>
 	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
-			Cycling '74
+			Jamoma
 		</metadata>
 		<metadata name="tag">
 			TEXT_HERE
@@ -126,8 +125,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
+		<!-- <seealso name="bogus">
 			TEXT_HERE
-		</seealso>
+		</seealso> -->
 	</seealsolist>
 </c74object>
