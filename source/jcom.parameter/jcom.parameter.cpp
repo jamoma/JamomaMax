@@ -26,6 +26,14 @@ void		WrapTTDataClass(WrappedClassPtr c);
 void		WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
 void        WrappedDataClass_free(TTPtr self);
 
+
+/** Provide assistance on input and output while patching.
+ @param self	The parameter instance.
+ @param b
+ @param	msg		Determines if assistance is requested for an input or output.
+ @param arg		Determines what input/output assistance is requested for.
+ @param dst		Destination address that assistance string is copied to.
+ */
 void		data_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst);
 
 void		data_new_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
@@ -38,14 +46,60 @@ void		data_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 
 #ifndef JMOD_MESSAGE
 void		WrappedDataClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+
+/** Process an incoming 'bang' message.
+ @param self The parameter instance
+ */
 void		data_bang(TTPtr self);
+
+
+/** Process an incoming integer value.
+ @param self		The parameter instance.
+ @param value		The integer value received.
+ */
 void		data_int(TTPtr self, long value);
+
+
+/** Process an incoming float value.
+ @param self		The parameter instance.
+ @param value		The float value received.
+ */
 void		data_float(TTPtr self, double value);
+
+
+/** Process an incoming message containing a list.
+ @param self		The parameter instance.
+ @param msg		The dec symbol pointer
+ @param argc	Atom array count (length)
+ @param argv	Pointer to the atom array
+ */
 void		data_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
+
+/** Increase parameter value in steps.
+ @details Optional arguments passed as pointer to array of atoms specify how many steps to increase value by, if parameter is to ramp to new value and ramp time.
+ @param self	The parameter instance
+ @param msg		The dec symbol pointer
+ @param argc	Atom array count (length)
+ @param argv	Pointer to the atom array
+ @see	param_inc
+ */
 void		data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+
+/** Decrease parameter value in steps.
+ @details Optional arguments passed as pointer to array of atoms specify how many steps to increase value by, if parameter is to ramp to new value and ramp time.
+ @param self	The parameter instance
+ @param msg		The dec symbol pointer
+ @param argc	Atom array count (length)
+ @param argv	Pointer to the atom array
+ @see	param_inc
+ */
 void		data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 #endif
+
+
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
