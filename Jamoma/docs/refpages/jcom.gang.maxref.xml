@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.gang" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Link objects together
 	</digest>
 	<description>
-		TEXT_HERE
+		<!-- Link objects together -->
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -23,34 +23,34 @@
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				connect to ui object
+				Connect to ui object
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				connect to pp
+				Connect to pp
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</inlet>
 		<inlet id="2" type="INLET_TYPE">
 			<digest>
-				aux object 1
+				Aux object 1
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</inlet>
 		<inlet id="3" type="INLET_TYPE">
 			<digest>
-				aux object 2
+				Aux object 2
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</inlet>
 	</inletlist>
@@ -58,47 +58,47 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				connect to ui object
+				Connect to ui object
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
 			<digest>
-				connect to pp
+				Connect to pp
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</outlet>
 		<outlet id="2" type="OUTLET_TYPE">
 			<digest>
-				aux object 1
+				Aux object 1
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</outlet>
 		<outlet id="3" type="OUTLET_TYPE">
 			<digest>
-				aux object 2
+				Aux object 2
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</outlet>
 		<outlet id="4" type="OUTLET_TYPE">
 			<digest>
-				dumpout
+				Dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</outlet>
 	</outletlist>
 	<!--ARGUMENTS-->
-	<objarglist>
+	<!-- <objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
 				TEXT_HERE
@@ -107,25 +107,25 @@
 				TEXT_HERE
 			</description>
 		</objarg>
-	</objarglist>
+	</objarglist> -->
 	<!--MESSAGES-->
 	<methodlist>
 		<method name="int">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Integer input
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="float">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Float input
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="list">
@@ -133,10 +133,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				List input
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 	</methodlist>
@@ -146,9 +146,9 @@
 		<example caption="" img="" />
 	</examplelist>
 	<!--SEEALSO-->
-	<seealsolist>
+	<!-- <seealsolist>
 		<seealso name="bogus">
 			TEXT_HERE
 		</seealso>
-	</seealsolist>
+	</seealsolist> -->
 </c74object>

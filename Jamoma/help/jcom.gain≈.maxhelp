@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 357.0, 73.0, 580.0, 599.0 ],
+		"rect" : [ 10.0, 44.0, 580.0, 599.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -105,7 +105,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 357.0, 99.0, 580.0, 573.0 ],
+						"rect" : [ 10.0, 70.0, 580.0, 573.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -136,7 +136,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 334.0, 224.0, 167.0, 64.0 ],
+									"patching_rect" : [ 334.0, 224.0, 169.0, 64.0 ],
 									"text" : "'interpolated 1' smoothes the control gain messages over one vector size to avoid clicks"
 								}
 
@@ -151,8 +151,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 128.0, 245.0, 193.0, 20.0 ],
-									"presentation_rect" : [ 129.0, 223.0, 0.0, 0.0 ]
+									"patching_rect" : [ 128.0, 245.0, 193.0, 20.0 ]
 								}
 
 							}
@@ -256,7 +255,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-20",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.gain~" ],
+									"jsarguments" : [ "jcom.gain≈" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
