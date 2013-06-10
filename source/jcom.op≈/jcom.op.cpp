@@ -1,11 +1,18 @@
-/* 
- *	op≈
- *	External object for Max/MSP to perform basic mathematical operations on objects in a Jamoma AudioGraph dsp chain.
- *	Copyright © 2008 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief op≈ : wraps the #TTOperator class as an external for AudioGraph performing basic mathematical operations on multichannel signals
+ *
+ * @details
+ *
+ * @authors Timothy Place, Nils Peters, Trond Lossius
+ *
+ * @copyright © 2008 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 #include "maxGraph.h"

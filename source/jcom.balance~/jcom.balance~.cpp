@@ -1,11 +1,15 @@
-/* 
- *	tt.balance~
- *	External object for Max/MSP
- *	
- *	Example project for TTBlue
- *	Copyright © 2008 by Trond Lossius
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief balance~ : The amplitude envelope of one audio signal imitates that of another
+ *
+ * @details The code is based on an algorithm from Dodge & Jerse (1997): Computer Music: Synthesis, Composition, and Performance.
+ *
+ * @authors Trond Lossius
+ *
+ * @copyright Copyright © 2008 by Trond Lossius @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
 

@@ -1,11 +1,18 @@
-/* 
- *	jcom.cue
- *	External object
- *	Copyright © 2010 by Théo de la Hogue
+/** @file
  * 
- * License: This code is licensed under the terms of the GNU LGPL
- * http://www.gnu.org/licenses/lgpl.html 
+ * @ingroup implementationMax
+ *
+ * @brief cue - store and recall the state of several models
+ *
+ * @details
+ *
+ * @authors Théo de la Hogue, Trond Lossius
+ *
+ * @copyright © 2010 by Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTModularClassWrapperMax.h"
 #include "jpatcher_api.h"

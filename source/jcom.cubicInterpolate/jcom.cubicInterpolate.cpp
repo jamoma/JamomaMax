@@ -1,6 +1,6 @@
 /** @file
  * 
- * @ingroup modularMax
+ * @ingroup implementationMax
  *
  * @brief External for Jamoma: jcom.cubicInterpolate - Cubic interpolation on a stream of floats
  *

@@ -1,11 +1,18 @@
-/* 
- *	info≈
- *	External object for Max/MSP to get information about TTAudioSignals from a Jamoma AudioGraph dsp chain.
- *	Copyright © 2008 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief info≈ : creates an external for AudioGraph that provides information about the incoming multichannel signal
+ *
+ * @details
+ *
+ * @authors Timothy Place, Trond Lossius
+ *
+ * @copyright © 2008 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 
