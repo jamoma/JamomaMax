@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 2,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 2.0, 44.0, 1058.0, 510.0 ],
@@ -49,7 +50,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 356.0, 421.001862, 646.0, 17.0 ]
+					"patching_rect" : [ 356.0, 421.001862, 646.0, 17.0 ],
+					"text" : "ROOT bang LIKE_ROOT bang SUB_LEVEL bang 3 SECOND bang 2. FIRST bang 1. 1.1 3.1 2.1"
 				}
 
 			}
@@ -172,7 +174,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"outlettype" : [ "bang", "bang" ],
 					"patching_rect" : [ 202.0, 159.0, 105.0, 19.0 ],
 					"text" : "j.init sub_level"
 				}
@@ -186,7 +188,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"outlettype" : [ "bang", "bang" ],
 					"patching_rect" : [ 106.0, 159.0, 54.0, 19.0 ],
 					"text" : "j.init"
 				}
@@ -216,34 +218,6 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 106.0, 214.0, 65.0, 19.0 ],
 					"text" : "s to_group"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 1.0, 0.0, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-97",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 251.0, 9.0, 69.0, 19.0 ],
-					"text" : "r TestResult"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-96",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 251.0, 61.0, 67.0, 20.0 ],
-					"text" : "print result"
 				}
 
 			}
@@ -301,8 +275,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 2,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 582.0, 312.0, 384.0, 112.0 ],
@@ -345,7 +320,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
+									"outlettype" : [ "bang", "bang" ],
 									"patching_rect" : [ 3.0, 36.0, 54.0, 19.0 ],
 									"text" : "j.init"
 								}
@@ -470,8 +445,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 2,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 582.0, 54.0, 372.0, 134.0 ],
@@ -514,7 +490,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
+									"outlettype" : [ "bang", "bang" ],
 									"patching_rect" : [ 4.0, 40.0, 54.0, 19.0 ],
 									"text" : "j.init"
 								}
@@ -682,8 +658,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 2,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 581.0, 569.0, 154.0, 93.0 ],
@@ -713,7 +690,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
+									"outlettype" : [ "bang", "bang" ],
 									"patching_rect" : [ 6.0, 6.0, 54.0, 19.0 ],
 									"text" : "j.init"
 								}
@@ -906,34 +883,25 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-96", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-97", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.test.start.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.start",
-				"patcherrelativepath" : "../../../../../Test/components/test.start",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.test.finished.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.finished",
-				"patcherrelativepath" : "../../../../../Test/components/test.finished",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.test.assert.equal.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.assert.equal",
-				"patcherrelativepath" : "../../../../../Test/components/test.assert.equal",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
 				"implicit" : 1
 			}
