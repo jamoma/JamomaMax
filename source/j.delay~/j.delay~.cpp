@@ -19,6 +19,6 @@
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	TTDSPInit();
-	return wrapTTClassAsMaxClass(TT("delay"), "jcom.delay~", NULL);
+	return wrapTTClassAsMaxClass(TT("delay"), "j.delay~", NULL);
 }
 

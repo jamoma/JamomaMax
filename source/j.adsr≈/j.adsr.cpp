@@ -6,7 +6,7 @@
  * @brief j.adsr~ : Envelope Generator object for Jamoma Audio Graph
 =======
  * @brief adsr≈ : wraps the #TTAdsr class as an envelope following external for AudioGraph
->>>>>>> dev:source/jcom.adsr≈/jcom.adsr.cpp
+>>>>>>> dev:source/j.adsr≈/j.adsr.cpp
  *
  * @details
  *

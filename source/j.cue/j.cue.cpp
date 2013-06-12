@@ -66,7 +66,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	spec->_free = &WrappedCueManageClass_free;
 	spec->_any = NULL;
 	
-	return wrapTTModularClassAsMaxClass(kTTSym_CueManager, "jcom.cue", NULL, spec);
+	return wrapTTModularClassAsMaxClass(kTTSym_CueManager, "j.cue", NULL, spec);
 }
 
 void WrapTTCueManagerClass(WrappedClassPtr c)

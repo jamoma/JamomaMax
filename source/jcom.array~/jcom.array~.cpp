@@ -19,6 +19,6 @@
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	TTDSPInit();
-	return wrapTTClassAsMaxClass(TT("array"), "jcom.array~", NULL);
+	return wrapTTClassAsMaxClass(TT("array"), "j.array~", NULL);
 }
 

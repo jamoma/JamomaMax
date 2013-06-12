@@ -59,7 +59,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	common_symbols_init();
 	
 	// Define our class
-	c = class_new("jcom.dataspace",(method)dataspace_new, (method)dataspace_free, sizeof(t_dataspace), (method)0L, A_GIMME, 0);
+	c = class_new("j.dataspace",(method)dataspace_new, (method)dataspace_free, sizeof(t_dataspace), (method)0L, A_GIMME, 0);
 	
 	// Make methods accessible for our class:
 	class_addmethod(c, (method)dataspace_int,			"int",				A_GIMME, 0);

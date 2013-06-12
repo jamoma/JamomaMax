@@ -6,7 +6,7 @@
  * @brief j.pick≈ - extracts N specific audio signals from a Jamoma AudioGraph signal
 =======
  * @brief pick≈ : wraps the #TTAudioGraphPick class as an external that extracts N specific audio signals from a Jamoma AudioGraph signal
->>>>>>> dev:source/jcom.pick≈/jcom.pick.cpp
+>>>>>>> dev:source/j.pick≈/j.pick.cpp
  *
  * @details
  *

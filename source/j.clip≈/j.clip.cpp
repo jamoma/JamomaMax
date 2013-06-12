@@ -6,7 +6,7 @@
  * @brief j.clip≈ : Range clipping external for Jamoma AudioGraph.
 =======
  * @brief clip≈ : wraps the #Clipper class as a range clipping external for AudioGraph
->>>>>>> dev:source/jcom.clip≈/jcom.clip.cpp
+>>>>>>> dev:source/j.clip≈/j.clip.cpp
  *
  * @details
  *

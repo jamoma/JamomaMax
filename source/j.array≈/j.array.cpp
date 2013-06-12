@@ -6,7 +6,7 @@
  * @brief j.array≈ : Array object for Jamoma AudioGraph.
 =======
  * @brief array≈ : wraps the #TTAudioObjectBaseArray class as an AudioGraph array external for Jamoma AudioGraph.
->>>>>>> dev:source/jcom.array≈/jcom.array.cpp
+>>>>>>> dev:source/j.array≈/j.array.cpp
  *
  * @details
  *

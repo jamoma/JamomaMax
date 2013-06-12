@@ -6,7 +6,7 @@
  * @brief j.count≈ : Sample Counting Generator object for Jamoma Audio Graph
 =======
  * @brief count≈ : wraps the #TTCounter class as a sample counting signal generator external for AudioGraph
->>>>>>> dev:source/jcom.count≈/jcom.count.cpp
+>>>>>>> dev:source/j.count≈/j.count.cpp
  *
  * @details
  *

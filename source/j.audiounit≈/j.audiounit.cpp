@@ -6,7 +6,7 @@
  * @brief j.audiounit≈ : Jamoma AudioGraph external for Max for hosting AudioUnit plugins
 =======
  * @brief audiounit≈ : wraps the #TTAudioUnit class as an AudioUnit plugin host for AudioGraph
->>>>>>> dev:source/jcom.audiounit≈/jcom.audiounit.cpp
+>>>>>>> dev:source/j.audiounit≈/j.audiounit.cpp
  *
  * @details
  *
