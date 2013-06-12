@@ -1,26 +1,22 @@
 /** @file
  *
- * @ingroup audioGraphMax
+ * @ingroup implementationMax
  *
+<<<<<<< HEAD:source/j.audiounit≈/j.audiounit.cpp
  * @brief j.audiounit≈ : Jamoma AudioGraph external for Max for hosting AudioUnit plugins
+=======
+ * @brief audiounit≈ : wraps the #TTAudioUnit class as an AudioUnit plugin host for AudioGraph
+>>>>>>> dev:source/jcom.audiounit≈/jcom.audiounit.cpp
  *
- * @details This wraps the Jamoma DSP class #TTAudioUnit as a Jamoma AudioGraph external for Max.
+ * @details
  *
  * @authors Timothy Place, Nils Peters, Trond Lossius
  *
- * @copyright Copyright © 2011 by Nils Peters @n
+ * @copyright © 2008 by Nils Peters @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
 
-/*
- *	audiounit≈
- *	Jamoma AudioGraph external object for Max
- *	Copyright © 2008 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
- * http://creativecommons.org/licenses/BSD/
- */
 
 #include "maxAudioGraph.h"
 

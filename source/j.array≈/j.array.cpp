@@ -1,14 +1,18 @@
 /** @file
  *
- * @ingroup audioGraphMax
+ * @ingroup implementationMax
  *
+<<<<<<< HEAD:source/j.array≈/j.array.cpp
  * @brief j.array≈ : Array object for Jamoma AudioGraph.
+=======
+ * @brief array≈ : wraps the #TTAudioObjectBaseArray class as an AudioGraph array external for Jamoma AudioGraph.
+>>>>>>> dev:source/jcom.array≈/jcom.array.cpp
  *
- * @details This wraps the Jamoma DSP class #TTAudioObjectBaseArray as a Jamoma AudioGraph external for Max.
+ * @details
  *
  * @authors Nils Peters, Trond Lossius
  *
- * @copyright Copyright © 2011 by Nils Peters @n
+ * @copyright © 2011 by Nils Peters @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */

@@ -1,11 +1,18 @@
-/* 
- *	mixer≈
- *	External object for Jamoma AudioGraph
- *	Copyright © 2009 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief mixer≈ : wraps the #TTMixer class as a matrix mixing external for AudioGraph
+ *
+ * @details
+ *
+ * @authors Timothy Place, Nils Peters, Trond Lossius
+ *
+ * @copyright © 2009 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 

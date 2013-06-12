@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup modularMax
+ * @ingroup implementationMax
  *
  * @brief External for Jamoma: j.gang - Gang multiple objects together
  *

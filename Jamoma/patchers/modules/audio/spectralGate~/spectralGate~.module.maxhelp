@@ -26,7 +26,7 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.spectralGate~", "@description", "Spectral purification and noise reduction, based on the Hipno Brita plugin." ],
+					"args" : [ "@name", "spectralGate~.module", "@description", "Spectral purification and noise reduction, based on the Hipno Brita plugin." ],
 					"bgmode" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
@@ -72,7 +72,7 @@
 					"args" : [ "spectralGate~" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.spectralGate~.maxpat",
+					"name" : "spectralGate~.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],

@@ -1,11 +1,18 @@
-/* 
- *	dataspace#
- *	convert values from one kind of unit to another kind of unit
- *	Copyright © 2011 by Timothy Place
+/** @file
  * 
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMax
+ *
+ * @brief dataspace - Max external for Jamoma Graph that converts values from one kind of unit to another kind of unit
+ *
+ * @details The convertions make use of the DataspaceLib
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2011 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxGraph.h"
 

@@ -1,9 +1,15 @@
-/*
- * jamoma≈
- * A generic class wrapping object that loads any Jamoma class
- * By Tim Place, Copyright 2012
+/** @file
  *
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMax
+ *
+ * @brief jamoma~ : creates an AudioGraph external that is able to wrap any Jamoma class
+ *
+ * @details
+ *
+ * @authors Tim Place
+ *
+ * @copyright © 2012 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
 

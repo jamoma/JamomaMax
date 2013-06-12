@@ -1,14 +1,18 @@
 /** @file
  *
- * @ingroup audioGraphMax
+ * @ingroup implementationMax
  *
+<<<<<<< HEAD:source/j.average≈/j.average.cpp
  * @brief j.average≈ : Signal average analysis object for Jamoma AudioGraph.
+=======
+ * @brief average≈ : wraps the #TTAverage class as an average analysis object for AudioGraph
+>>>>>>> dev:source/jcom.average≈/jcom.average.cpp
  *
- * @details This wraps the Jamoma DSP class #TTAverage as a Jamoma AudioGraph external for Max.
+ * @details
  *
  * @authors Nils Peters, Trond Lossius
  *
- * @copyright Copyright © 2011 by Nils Peters @n
+ * @copyright © 2011 by Nils Peters @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */

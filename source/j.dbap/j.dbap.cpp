@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup modularMax
+ * @ingroup implementationMax
  *
  * @brief External for Jamoma: j.dbap - Distance Based Amplitude Panning
  *

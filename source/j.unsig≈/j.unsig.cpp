@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup audioGraphMax
+ * @ingroup implementationMax
  *
  * @brief j.unsig≈ - converts Jamoma AudioGraph signal to a Max message list.
  *

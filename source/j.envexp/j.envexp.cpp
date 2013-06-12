@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup modularMax
+ * @ingroup implementationMax
  *
  * @brief External for Jamoma: j.envexp - Create envelope with linear attack and exponential decay.
  *

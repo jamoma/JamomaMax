@@ -1,11 +1,18 @@
-/* 
- * j.dataspace
- * External for Jamoma: map input to output: y=f(x)
- * Copyright © 2007
+/** @file
  * 
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMax
+ *
+ * @brief dataspace - Max external that converts values from one kind of unit to another kind of unit
+ *
+ * @details The convertions make use of the DataspaceLib
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2007 Tim Place, Trond Lossius @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTClassWrapperMax.h"
 
@@ -52,7 +59,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	common_symbols_init();
 	
 	// Define our class
-	c = class_new("j.dataspace",(method)dataspace_new, (method)dataspace_free, sizeof(t_dataspace), (method)0L, A_GIMME, 0);
+	c = class_new("jcom.dataspace",(method)dataspace_new, (method)dataspace_free, sizeof(t_dataspace), (method)0L, A_GIMME, 0);
 	
 	// Make methods accessible for our class:
 	class_addmethod(c, (method)dataspace_int,			"int",				A_GIMME, 0);

@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup modularMax
+ * @ingroup implementationMax
  *
  * @brief External for Jamoma: j.init - Send bang to initialize something.
  *
