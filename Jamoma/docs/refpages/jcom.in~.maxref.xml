@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.in~" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Jamoma model audio input
 	</digest>
 	<description>
-		TEXT_HERE
+		jcom.in~ is an audio input for Jamoma models
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,11 +16,11 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			model
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
-	<inletlist>
+	<!-- <inletlist>
 		<inlet id="0" type="signal">
 			<digest>
 				input of the model
@@ -37,9 +37,9 @@
 				TEXT_HERE
 			</description>
 		</inlet>
-	</inletlist>
+	</inletlist> -->
 	<!--OUTLETS-->
-	<outletlist>
+	<!-- <outletlist>
 		<outlet id="0" type="signal">
 			<digest>
 				connect to the algorithm
@@ -56,15 +56,15 @@
 				TEXT_HERE
 			</description>
 		</outlet>
-	</outletlist>
+	</outletlist> -->
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<objarg id="0" name="instance name" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				Name to subscribe input in Jamoma namespace
 			</digest>
 			<description>
-				TEXT_HERE
+				Name to subscribe input in Jamoma namespace
 			</description>
 		</objarg>
 	</objarglist>
@@ -75,10 +75,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="dump">
@@ -86,19 +86,19 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="signal">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Audio signal input
 			</digest>
 			<description>
-				TEXT_HERE
+				Audio signal input
 			</description>
 		</method>
 	</methodlist>
@@ -117,20 +117,20 @@
 		</attribute>
 		<attribute name="output/address" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				jcom.out~ address in the namespace to send audio to when bypassing the model
 			</digest>
 			<description>
-				TEXT_HERE
+				jcom.out~ address in the namespace to send audio to when bypassing the model
 			</description>
 		</attribute>
-		<attribute name="type" get="1" set="1" type="symbol" size="1">
+		<!-- <attribute name="type" get="1" set="1" type="symbol" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 	</attributelist>
 	<!--EXAMPLE-->
 	<examplelist>
@@ -138,8 +138,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="jcom.out~"/>
+		<seealso name="jcom.in"/>
+		<seealso name="jcom.model"/>
 	</seealsolist>
 </c74object>

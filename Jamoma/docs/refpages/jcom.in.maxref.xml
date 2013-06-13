@@ -167,14 +167,14 @@
 				jcom.out address in the namespace to send data to when bypassing the model
 			</description>
 		</attribute>
-		<attribute name="type" get="1" set="0" type="symbol" size="1">
+		<!-- <attribute name="type" get="1" set="0" type="symbol" size="1">
 			<digest>
 				Data type
 			</digest>
 			<description>
 				Data type
 			</description>
-		</attribute>
+		</attribute> -->
 	</attributelist>
 	<!--EXAMPLE-->
 	<examplelist>

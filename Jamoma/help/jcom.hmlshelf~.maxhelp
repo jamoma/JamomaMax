@@ -137,8 +137,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 198.5, 241.0, 171.0, 20.0 ],
-									"presentation_rect" : [ 671.0, 288.0, 0.0, 0.0 ]
+									"patching_rect" : [ 198.5, 241.0, 171.0, 20.0 ]
 								}
 
 							}
@@ -154,8 +153,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 198.5, 283.0, 171.0, 20.0 ],
-									"presentation_rect" : [ 666.0, 152.0, 0.0, 0.0 ]
+									"patching_rect" : [ 198.5, 283.0, 171.0, 20.0 ]
 								}
 
 							}
@@ -171,8 +169,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 198.5, 262.0, 171.0, 20.0 ],
-									"presentation_rect" : [ 672.0, 178.0, 0.0, 0.0 ]
+									"patching_rect" : [ 198.5, 262.0, 171.0, 20.0 ]
 								}
 
 							}
@@ -188,24 +185,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 198.5, 220.0, 171.0, 20.0 ],
-									"presentation_rect" : [ 671.0, 118.0, 0.0, 0.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"border" : 0,
-									"filename" : "helpdetails.js",
-									"id" : "obj-3",
-									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.hmlshelf~" ],
-									"maxclass" : "jsui",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 10.0, 554.0, 151.0 ]
+									"patching_rect" : [ 198.5, 220.0, 171.0, 20.0 ]
 								}
 
 							}
@@ -419,6 +399,22 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 198.5, 199.0, 171.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"border" : 0,
+									"filename" : "helpdetails.js",
+									"id" : "obj-3",
+									"ignoreclick" : 1,
+									"jsarguments" : [ "jcom.hmlshelf~" ],
+									"maxclass" : "jsui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 7.0, 11.0, 554.0, 151.0 ]
 								}
 
 							}

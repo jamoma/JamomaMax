@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.join≈" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Merging multichannel signals
 	</digest>
 	<description>
-		TEXT_HERE
+		Merging multichannel signals
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			audio graph
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -59,17 +59,17 @@
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<objarg id="0" name="inputs" type="int" optional="0">
 			<digest>
-				TEXT_HERE
+				Number of audio graph inputs
 			</digest>
 			<description>
-				TEXT_HERE
+				Number of audio graph inputs
 			</description>
 		</objarg>
 	</objarglist>
 	<!--MESSAGES-->
-	<methodlist>
+	<!-- <methodlist>
 		<method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
@@ -138,7 +138,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-	</methodlist>
+	</methodlist> -->
 	<!--ATTRIBUTES-->
 	<attributelist>
 		<attribute name="bypass" get="1" set="1" type="int" size="1">
@@ -178,8 +178,6 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="jcom.array≈"/>
 	</seealsolist>
 </c74object>
