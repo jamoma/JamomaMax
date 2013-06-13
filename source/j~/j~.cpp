@@ -32,7 +32,7 @@ static t_hashtab*	s_jamoma_class_hash = NULL;
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	s_jamoma_class = class_new("jamoma~", (method)jamoma_new, (method)wrappedClass_free, sizeof(WrappedInstance), (method)0L, A_GIMME, 0);
+	s_jamoma_class = class_new("j~", (method)jamoma_new, (method)wrappedClass_free, sizeof(WrappedInstance), (method)0L, A_GIMME, 0);
 	class_register(CLASS_BOX, s_jamoma_class);
 
 	common_symbols_init();
