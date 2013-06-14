@@ -66,7 +66,7 @@ ObjectPtr jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 		i++;
 	}
 	
-	snprintf(maxClassName, 256, "jamoma.%s~", className->s_name);
+	snprintf(maxClassName, 256, "j.%s~", className->s_name);
 
 	if (!s_jamoma_class_hash)
 		s_jamoma_class_hash = hashtab_new(0);
