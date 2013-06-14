@@ -17,7 +17,7 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.input~", "@description", "Generic stereo audio input module" ],
+					"args" : [ "@name", "input~.module", "@description", "Generic stereo audio input module" ],
 					"bgmode" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
@@ -106,7 +106,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 268.0, 10.0, 105.0, 19.0 ],
-									"text" : "s jmod.input~.help"
+									"text" : "s input~.module.help"
 								}
 
 							}
@@ -222,7 +222,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 266.0, 237.0, 105.0, 19.0 ],
-									"text" : "s jmod.input~.help"
+									"text" : "s input~.module.help"
 								}
 
 							}
@@ -702,7 +702,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 275.0, 10.0, 105.0, 19.0 ],
-									"text" : "s jmod.input~.help"
+									"text" : "s input~.module.help"
 								}
 
 							}
@@ -790,13 +790,13 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 278.0, 11.0, 105.0, 19.0 ],
-									"text" : "s jmod.input~.help"
+									"text" : "s input~.module.help"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "jmod.input~" ],
+									"args" : [ "input~.module" ],
 									"id" : "obj-2",
 									"maxclass" : "bpatcher",
 									"name" : "jmod.preset_params.maxpat",
@@ -870,7 +870,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 55.0, 175.0, 104.0, 19.0 ],
-					"text" : "r jmod.input~.help"
+					"text" : "r input~.module.help"
 				}
 
 			}
@@ -879,7 +879,7 @@
 					"args" : [ "/input" ],
 					"id" : "obj-32",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input~.maxpat",
+					"name" : "input~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],

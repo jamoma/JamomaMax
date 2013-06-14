@@ -10079,8 +10079,8 @@
 									"patching_rect" : [ 200.0, 127.0, 150.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 200.0, 130.0, 150.0, 17.0 ],
-									"text" : "jmod.input~",
-									"varname" : "jmod.input~"
+									"text" : "input~.module",
+									"varname" : "input~.module"
 								}
 
 							}

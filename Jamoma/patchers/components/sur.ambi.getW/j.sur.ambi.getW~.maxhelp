@@ -144,7 +144,7 @@
 					"args" : [ "/input~" ],
 					"id" : "obj-15",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input~.maxpat",
+					"name" : "input~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
@@ -221,7 +221,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jmod.input~.maxpat",
+				"name" : "input~.module.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/audio/input~",
 				"patcherrelativepath" : "../../../modules/audio/input~",
 				"type" : "JSON",

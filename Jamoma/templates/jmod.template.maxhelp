@@ -172,7 +172,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "jmod.input~" ],
+									"args" : [ "input~.module" ],
 									"id" : "obj-2",
 									"maxclass" : "bpatcher",
 									"name" : "jmod.preset_params.maxpat",
