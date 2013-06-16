@@ -78,7 +78,7 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="audio.connect">
+		<!-- 	<method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -90,6 +90,7 @@
 				TEXT_HERE
 			</description>
 		</method>
+ -->
 		<method name="signal">
 			<arglist />
 			<digest>

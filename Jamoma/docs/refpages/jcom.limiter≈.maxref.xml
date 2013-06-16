@@ -78,17 +78,17 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<!-- <method name="calculate">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method> -->
+		<!-- <!-- <method name="calculate">
+	<arglist>
+		<arg name="ARG_NAME_0" type="list" optional="0" />
+	</arglist>
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+</method> --> -->
 		<method name="clear">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -100,7 +100,7 @@
 				Reset the history internally kept by the object
 			</description>
 		</method>
-		<!-- <method name="getProcessingBenchmark">
+		<!-- <!-- 		<method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -111,7 +111,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="resetBenchmarking">
+ -->
+		<!-- 						<method name="resetBenchmarking">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -122,7 +123,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="test">
+ -->
+		<!-- 								<method name="test">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -132,7 +134,8 @@
 			<description>
 				TEXT_HERE
 			</description>
-		</method> -->
+		</method>
+ --> -->
 		<method name="signal">
 			<arglist />
 			<digest>

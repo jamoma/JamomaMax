@@ -70,7 +70,7 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="audio.connect">
+		<!-- 	<method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -82,17 +82,18 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="calculate">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
+ -->
+		<!-- <method name="calculate">
+	<arglist>
+		<arg name="ARG_NAME_0" type="list" optional="0" />
+	</arglist>
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+</method> -->
 		<method name="clear">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -104,7 +105,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="getProcessingBenchmark">
+		<!-- 		<method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -115,6 +116,7 @@
 				TEXT_HERE
 			</description>
 		</method>
+ -->
 		<method name="getTypes">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -126,7 +128,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="graph.connect">
+		<!-- 				<method name="graph.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -138,6 +140,7 @@
 				TEXT_HERE
 			</description>
 		</method>
+ -->
 		<method name="mode">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -149,7 +152,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="resetBenchmarking">
+		<!-- 						<method name="resetBenchmarking">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -160,7 +163,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="test">
+ -->
+		<!-- 								<method name="test">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -171,6 +175,7 @@
 				TEXT_HERE
 			</description>
 		</method>
+ -->
 	</methodlist>
 	<!--ATTRIBUTES-->
 	<attributelist>
