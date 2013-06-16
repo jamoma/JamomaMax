@@ -69,7 +69,7 @@
 		</objarg>
 	</objarglist>
 	<!--MESSAGES-->
-	<!-- <methodlist>
+	<methodlist>
 		<!-- 	<method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
@@ -143,7 +143,7 @@
 			</description>
 		</method>
  -->
-	</methodlist> -->
+	</methodlist> 
 	<!--ATTRIBUTES-->
 	<attributelist>
 		<attribute name="bypass" get="1" set="1" type="int" size="1">

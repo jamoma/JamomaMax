@@ -103,7 +103,7 @@
 				Sends multichannel information to outlets
 			</description>
 		</method>
-		<!-- <!-- 	<method name="audio.connect">
+		<!--  	<method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -116,7 +116,7 @@
 			</description>
 		</method>
  -->
-	</methodlist> -->
+	</methodlist>
 	<!--ATTRIBUTES-->
 	<!--EXAMPLE-->
 	<examplelist>

@@ -78,7 +78,7 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<!-- <!-- <method name="calculate">
+		<!--  <method name="calculate">
 	<arglist>
 		<arg name="ARG_NAME_0" type="list" optional="0" />
 	</arglist>
@@ -100,7 +100,7 @@
 				Reset the history internally kept by the object
 			</description>
 		</method>
-		<!-- <!-- 		<method name="getProcessingBenchmark">
+		<!--  		<method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>

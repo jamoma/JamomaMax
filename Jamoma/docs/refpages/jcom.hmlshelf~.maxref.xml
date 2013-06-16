@@ -78,7 +78,7 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<!-- <!-- <method name="calculate">
+		<!-- <method name="calculate">
 	<arglist>
 		<arg name="ARG_NAME_0" type="list" optional="0" />
 	</arglist>
@@ -88,7 +88,7 @@
 	<description>
 		TEXT_HERE
 	</description>
-</method> --> -->
+</method> -->
 		<method name="clear">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -100,7 +100,7 @@
 				<!-- TEXT_HERE -->
 			</description>
 		</method>
-		<!-- <!-- 		<method name="getProcessingBenchmark">
+		<!-- <method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -135,7 +135,7 @@
 				TEXT_HERE
 			</description>
 		</method>
- --> -->
+ -->
 		<method name="signal">
 			<arglist />
 			<digest>

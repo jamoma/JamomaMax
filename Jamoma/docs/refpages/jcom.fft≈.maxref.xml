@@ -62,7 +62,7 @@
 	</objarglist> -->
 	<!--MESSAGES-->
 	<methodlist>
-		<!-- <!-- 	<method name="audio.connect">
+		<!-- <method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -74,7 +74,7 @@
 				TEXT_HERE
 			</description>
 		</method>
- --> -->
+ -->
 		<!-- <method name="calculate">
 	<arglist>
 		<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -86,15 +86,15 @@
 		TEXT_HERE
 	</description>
 </method> -->
-		<method name="getProcessingBenchmark">
+		<!-- <method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				TEXT_HERE
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				TEXT_HERE
 			</description>
 		</method>
 		<method name="graph.connect">
@@ -103,10 +103,10 @@
 				<arg name="ARG_NAME_1" type="int" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				TEXT_HERE 
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				TEXT_HERE 
 			</description>
 		</method>
 		<method name="resetBenchmarking">
@@ -114,10 +114,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				 TEXT_HERE 
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				TEXT_HERE 
 			</description>
 		</method>
 		<method name="test">
@@ -125,13 +125,14 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				 TEXT_HERE 
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				TEXT_HERE 
 			</description>
-		</method>
+		</method> -->
 	</methodlist>
+
 	<!--ATTRIBUTES-->
 	<attributelist>
 		<attribute name="algorithm" get="1" set="1" type="symbol" size="1">
