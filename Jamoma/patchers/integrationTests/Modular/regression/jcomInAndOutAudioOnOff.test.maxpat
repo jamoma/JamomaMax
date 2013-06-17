@@ -33,7 +33,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.test.assert.equal.old InAndOutCrashTest 0",
+					"text" : "j.test.assert.equal.old InAndOutCrashTest 0",
 					"fontname" : "Arial",
 					"numinlets" : 2,
 					"numoutlets" : 0,
@@ -61,7 +61,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "comment",
-					"text" : "Crash discovered on windows fixed with revision 3606 of jcom.out.cpp",
+					"text" : "Crash discovered on windows fixed with revision 3606 of j.out.cpp",
 					"linecount" : 3,
 					"fontname" : "Verdana",
 					"numinlets" : 1,
@@ -92,7 +92,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "comment",
-					"text" : "This test test's for crashes when turning audio on with jcom.in~ and jcom.out~",
+					"text" : "This test test's for crashes when turning audio on with j.in~ and j.out~",
 					"linecount" : 2,
 					"fontname" : "Verdana",
 					"numinlets" : 1,
@@ -132,7 +132,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.test.finished",
+					"text" : "j.test.finished",
 					"fontname" : "Arial",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -213,7 +213,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.in~ 2",
+					"text" : "j.in~ 2",
 					"fontname" : "Arial",
 					"numinlets" : 2,
 					"numoutlets" : 4,
@@ -240,7 +240,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.out~ 2",
+					"text" : "j.out~ 2",
 					"fontname" : "Arial",
 					"numinlets" : 2,
 					"numoutlets" : 3,

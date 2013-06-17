@@ -122,8 +122,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 568.0, 103.0, 160.0, 100.0 ],
-					"text" : "jcom.parameter buffer/pixel @type integer @range/bounds 2 8092 @range/clipmode both @description \"buffers per pixel, control the scope display\"",
-					"varname" : "jcom.parameter.mxb[3]"
+					"text" : "j.parameter buffer/pixel @type integer @range/bounds 2 8092 @range/clipmode both @description \"buffers per pixel, control the scope display\"",
+					"varname" : "j.parameter.mxb[3]"
 				}
 
 			}
@@ -137,7 +137,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 176.5, 236.0, 73.0, 20.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -166,8 +166,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 739.0, 103.0, 158.0, 127.0 ],
-					"text" : "jcom.parameter range @type decimal @range/bounds 0 100 @range/clipmode low @repetitions/allow 0 @ramp/drive Max @description \"range of values above and below the zero line to display.\"",
-					"varname" : "jcom.parameter.mxb"
+					"text" : "j.parameter range @type decimal @range/bounds 0 100 @range/clipmode low @repetitions/allow 0 @ramp/drive Max @description \"range of values above and below the zero line to display.\"",
+					"varname" : "j.parameter.mxb"
 				}
 
 			}
@@ -182,8 +182,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 904.0, 103.0, 174.0, 87.0 ],
-					"text" : "jcom.parameter buffer/samples @type integer @range/bounds 8 256 @range/clipmode both @description \"samples per buffer, control the scope display\"",
-					"varname" : "jcom.parameter.mxb[2]"
+					"text" : "j.parameter buffer/samples @type integer @range/bounds 8 256 @range/clipmode both @description \"samples per buffer, control the scope display\"",
+					"varname" : "j.parameter.mxb[2]"
 				}
 
 			}
@@ -212,8 +212,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 98.0, 144.0, 161.0, 74.0 ],
-					"text" : "jcom.model @description \"An oscilloscope emulator for viewing waverforms or analyzing phase relationships.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"An oscilloscope emulator for viewing waverforms or analyzing phase relationships.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -358,15 +358,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

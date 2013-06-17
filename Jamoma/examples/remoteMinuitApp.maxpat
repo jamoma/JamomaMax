@@ -116,7 +116,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 10.0, 674.5, 137.0, 20.0 ],
-									"text" : "jcom.receive /:activity/in"
+									"text" : "j.receive /:activity/in"
 								}
 
 							}
@@ -978,7 +978,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 347.5, 238.0, 33.0 ],
-					"text" : "This jcom.modular binds on myApplication (see in jcom.modular.maxhelp)"
+					"text" : "This j.modular binds on myApplication (see in j.modular.maxhelp)"
 				}
 
 			}
@@ -992,7 +992,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 195.5, 344.0, 20.0 ],
-					"text" : "This jcom.modular exposes this patch on the Jamoma network"
+					"text" : "This j.modular exposes this patch on the Jamoma network"
 				}
 
 			}
@@ -1083,7 +1083,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 5.0, 327.5, 196.0, 20.0 ],
-					"text" : "jcom.modular myApplication Minuit"
+					"text" : "j.modular myApplication Minuit"
 				}
 
 			}
@@ -1144,7 +1144,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 5.0, 175.5, 257.0, 20.0 ],
-					"text" : "jcom.modular Minuit @name remoteMinuitApp"
+					"text" : "j.modular Minuit @name remoteMinuitApp"
 				}
 
 			}
@@ -1159,7 +1159,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 29.0, 505.0, 33.0 ],
-					"text" : "This is a simulation of a remote application using the Minuit protocol to to be controled or to control, get or listen the parameter of myApplication (see in jcom.modular.maxhelp)"
+					"text" : "This is a simulation of a remote application using the Minuit protocol to to be controled or to control, get or listen the parameter of myApplication (see in j.modular.maxhelp)"
 				}
 
 			}
@@ -1279,70 +1279,70 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
 				"patcherrelativepath" : "../patchers/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.modular.mxo",
+				"name" : "j.modular.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameterArray.mxo",
+				"name" : "j.parameterArray.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
  ]

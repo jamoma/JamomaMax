@@ -188,7 +188,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 371.0, 345.0, 254.0, 60.0 ],
-					"text" : "The jcom.out handles signal outputing.\n\nNotice a /out level is automatically created when a jcom.out is in added to a model"
+					"text" : "The j.out handles signal outputing.\n\nNotice a /out level is automatically created when a j.out is in added to a model"
 				}
 
 			}
@@ -203,7 +203,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 632.0, 361.0, 56.0, 20.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -286,7 +286,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1005.0, 198.0, 227.0, 60.0 ],
-					"text" : "jcom.parameter rate @type decimal @range/bounds -2. 2. @value/default 1. @description \"movie playback rate\" @ramp/drive Max"
+					"text" : "j.parameter rate @type decimal @range/bounds -2. 2. @value/default 1. @description \"movie playback rate\" @ramp/drive Max"
 				}
 
 			}
@@ -424,7 +424,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 777.0, 198.0, 205.0, 47.0 ],
-					"text" : "jcom.parameter play @type boolean @description \"play the movie\" @priority 2"
+					"text" : "j.parameter play @type boolean @description \"play the movie\" @priority 2"
 				}
 
 			}
@@ -575,7 +575,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 777.0, 459.0, 178.0, 33.0 ],
-					"text" : "jcom.return fps @type decimal @description \"current fps\""
+					"text" : "j.return fps @type decimal @description \"current fps\""
 				}
 
 			}
@@ -591,7 +591,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 528.0, 87.0, 202.0, 33.0 ],
-					"text" : "jcom.message file/load @type none @description \"load a movie\""
+					"text" : "j.message file/load @type none @description \"load a movie\""
 				}
 
 			}
@@ -607,7 +607,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 528.0, 198.0, 226.0, 47.0 ],
-					"text" : "jcom.parameter file/path @type string @description \"the path to a movie\" @priority 1"
+					"text" : "j.parameter file/path @type string @description \"the path to a movie\" @priority 1"
 				}
 
 			}
@@ -676,7 +676,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 295.0, 74.0 ],
-					"text" : "The jcom.model is the control tower of your model. It creates a default /movie (or #1 @varname.) level and binds on each jcom.parameter, message, return of this patch (even those embedded inside jcom externals like jcom.preset or jcom.out). "
+					"text" : "The j.model is the control tower of your model. It creates a default /movie (or #1 @varname.) level and binds on each j.parameter, message, return of this patch (even those embedded inside jcom externals like j.preset or j.out). "
 				}
 
 			}
@@ -691,7 +691,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 300.0, 288.0, 87.0 ],
-					"text" : "The jcom.preset is now a separate feature which allows a model to have a preset file manager (default : movie.model.xml)\n\nNotice a /preset level is automatically created when a jcom.preset is in added to a model"
+					"text" : "The j.preset is now a separate feature which allows a model to have a preset file manager (default : movie.model.xml)\n\nNotice a /preset level is automatically created when a j.preset is in added to a model"
 				}
 
 			}
@@ -748,7 +748,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 435.0, 93.0, 20.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -788,7 +788,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 155.0, 286.0, 20.0 ],
-					"text" : "jcom.model @description \"a movie playback model\"",
+					"text" : "j.model @description \"a movie playback model\"",
 					"varname" : "_jcom_node"
 				}
 
@@ -900,7 +900,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
 					"patching_rect" : [ 939.0, 47.0, 59.0, 20.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -1341,31 +1341,31 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -39,7 +39,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 461.0, 649.0, 294.0, 47.0 ],
-					"text" : "About panel, if a patcher is connected to his second outlet, the jcom.ui  will automatically create an internal /view/panel message and add the \"+\" widget."
+					"text" : "About panel, if a patcher is connected to his second outlet, the j.ui  will automatically create an internal /view/panel message and add the \"+\" widget."
 				}
 
 			}
@@ -122,7 +122,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 468.0, 448.0, 101.0, 20.0 ],
-					"text" : "jcom.remote rate"
+					"text" : "j.remote rate"
 				}
 
 			}
@@ -310,7 +310,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 14.0, 553.0, 403.0, 60.0 ],
-					"text" : "The jcom.ui has been entirely redesigned. All formers features are still available except Disable UI updates, Refresh UI, Defeat Meters and Get Current State as Text which are currently broken. However the menu item and widgets will appears only if the feature it represent exists."
+					"text" : "The j.ui has been entirely redesigned. All formers features are still available except Disable UI updates, Refresh UI, Defeat Meters and Get Current State as Text which are currently broken. However the menu item and widgets will appears only if the feature it represent exists."
 				}
 
 			}
@@ -325,7 +325,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 468.0, 199.0, 172.0, 20.0 ],
-					"text" : "jcom.remote play @highlight 0"
+					"text" : "j.remote play @highlight 0"
 				}
 
 			}
@@ -340,7 +340,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 735.0, 287.0, 166.0, 20.0 ],
-					"text" : "jcom.remote fps @highlight 0"
+					"text" : "j.remote fps @highlight 0"
 				}
 
 			}
@@ -370,7 +370,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 468.0, 287.0, 122.0, 20.0 ],
-					"text" : "jcom.remote file/path"
+					"text" : "j.remote file/path"
 				}
 
 			}
@@ -401,7 +401,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 735.0, 199.0, 191.0, 20.0 ],
-					"text" : "jcom.remote file/load @highlight 0"
+					"text" : "j.remote file/load @highlight 0"
 				}
 
 			}
@@ -416,7 +416,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 282.0, 47.0 ],
-					"text" : "The jcom.view is the control tower of your view. It creates a default /movie(view) (or #1) level and binds on each jcom.ui and jcom.view of the patch."
+					"text" : "The j.view is the control tower of your view. It creates a default /movie(view) (or #1) level and binds on each j.ui and j.view of the patch."
 				}
 
 			}
@@ -431,7 +431,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 178.0, 410.0, 234.0 ],
-					"text" : "Each jcom.remote binds on the parameter/message/return given in first argument. But this information is not enough to bind on a particular intance of a model. That's why an internal /model/address parameter is created by the jcom.view.\n\nListening at the /model/address parameter, jcom.remote and jcom.ui binds automatically on parameter/message/return of the given model.\n\nAn other feature is the highlight of ui object in presentation mode if a jcom.ui exists. As explain in the main patch, this feature would allows users to show highlight state by pressing the shift key if the mouse is over the jcom.ui. Then, still pressing the shift key, a click on the selection zone would change the highlight state.\n\nTo make this feature available, you only have to connect the middle outlet of the jcom.view to the ui object. Then close and open you're patcher in presentation mode to test it. "
+					"text" : "Each j.remote binds on the parameter/message/return given in first argument. But this information is not enough to bind on a particular intance of a model. That's why an internal /model/address parameter is created by the j.view.\n\nListening at the /model/address parameter, j.remote and j.ui binds automatically on parameter/message/return of the given model.\n\nAn other feature is the highlight of ui object in presentation mode if a j.ui exists. As explain in the main patch, this feature would allows users to show highlight state by pressing the shift key if the mouse is over the j.ui. Then, still pressing the shift key, a click on the selection zone would change the highlight state.\n\nTo make this feature available, you only have to connect the middle outlet of the j.view to the ui object. Then close and open you're patcher in presentation mode to test it. "
 				}
 
 			}
@@ -561,7 +561,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 17.0, 91.0, 160.0, 33.0 ],
-					"text" : "jcom.view @description \"an interface for a movie model\"",
+					"text" : "j.view @description \"an interface for a movie model\"",
 					"varname" : "_jcom_node"
 				}
 
@@ -570,7 +570,7 @@
 				"box" : 				{
 					"background" : 1,
 					"id" : "obj-15",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -742,15 +742,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]

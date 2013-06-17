@@ -352,7 +352,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
 					"patching_rect" : [ 584.0, 253.0, 110.0, 20.0 ],
-					"text" : "jcom.receive~ in.2"
+					"text" : "j.receive~ in.2"
 				}
 
 			}
@@ -366,7 +366,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
 					"patching_rect" : [ 393.0, 253.0, 110.0, 20.0 ],
-					"text" : "jcom.receive~ in.1"
+					"text" : "j.receive~ in.1"
 				}
 
 			}
@@ -462,8 +462,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 52.0, 384.0, 153.0, 74.0 ],
-					"text" : "jcom.view @description \"An oscilloscope emulator for viewing waverforms or analyzing phase relationships.\"",
-					"varname" : "jcom.model"
+					"text" : "j.view @description \"An oscilloscope emulator for viewing waverforms or analyzing phase relationships.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -509,7 +509,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-25",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -630,8 +630,8 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1152.0, 162.5, 138.0, 20.0 ],
-					"text" : "jcom.remote buffer/pixel",
-					"varname" : "jcom.parameter.mxb[3]"
+					"text" : "j.remote buffer/pixel",
+					"varname" : "j.parameter.mxb[3]"
 				}
 
 			}
@@ -645,8 +645,8 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 926.5, 162.5, 111.0, 20.0 ],
-					"text" : "jcom.remote range",
-					"varname" : "jcom.parameter.mxb"
+					"text" : "j.remote range",
+					"varname" : "j.parameter.mxb"
 				}
 
 			}
@@ -660,8 +660,8 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1306.5, 162.5, 158.0, 20.0 ],
-					"text" : "jcom.remote buffer/samples",
-					"varname" : "jcom.parameter.mxb[2]"
+					"text" : "j.remote buffer/samples",
+					"varname" : "j.parameter.mxb[2]"
 				}
 
 			}
@@ -892,31 +892,31 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive~.mxo",
+				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
  ]

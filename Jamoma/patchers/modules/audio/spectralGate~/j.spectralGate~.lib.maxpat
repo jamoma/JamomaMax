@@ -64,8 +64,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 340.0, 360.0, 74.0, 20.0 ],
-					"text" : "jcom.xfade~"
+					"patching_rect" : [ 340.0, 360.0, 74.0, 19.0 ],
+					"text" : "j.xfade~"
 				}
 
 			}
@@ -78,8 +78,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 75.0, 360.0, 74.0, 20.0 ],
-					"text" : "jcom.xfade~"
+					"patching_rect" : [ 75.0, 360.0, 74.0, 19.0 ],
+					"text" : "j.xfade~"
 				}
 
 			}
@@ -740,7 +740,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.xfade~.mxo",
+				"name" : "j.xfade~.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -50,7 +50,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 575.0, 175.0, 175.0, 21.0 ],
-					"text" : "jcom.remote /foo/out.right:mute"
+					"text" : "j.remote /foo/out.right:mute"
 				}
 
 			}
@@ -76,7 +76,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 575.0, 150.0, 168.0, 21.0 ],
-					"text" : "jcom.remote /foo/out.left:mute"
+					"text" : "j.remote /foo/out.left:mute"
 				}
 
 			}
@@ -105,7 +105,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 600.0, 250.0, 154.0, 21.0 ],
-					"text" : "jcom.send /foo/preset:recall"
+					"text" : "j.send /foo/preset:recall"
 				}
 
 			}
@@ -134,7 +134,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 440.0, 250.0, 153.0, 21.0 ],
-					"text" : "jcom.send /foo/preset:store"
+					"text" : "j.send /foo/preset:store"
 				}
 
 			}
@@ -162,7 +162,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 575.0, 60.0, 155.0, 21.0 ],
-					"text" : "jcom.remote /foo/coefficient"
+					"text" : "j.remote /foo/coefficient"
 				}
 
 			}
@@ -190,7 +190,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 575.0, 30.0, 130.0, 21.0 ],
-					"text" : "jcom.remote /foo/delay"
+					"text" : "j.remote /foo/delay"
 				}
 
 			}
@@ -215,7 +215,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 575.0, 90.0, 117.0, 21.0 ],
-					"text" : "jcom.send /foo/clear"
+					"text" : "j.send /foo/clear"
 				}
 
 			}
@@ -1469,7 +1469,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 350.0, 65.0, 171.0, 21.0 ],
-									"text" : "jcom.receive /foo/coefficient"
+									"text" : "j.receive /foo/coefficient"
 								}
 
 							}
@@ -1483,7 +1483,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 165.0, 35.0, 143.0, 21.0 ],
-									"text" : "jcom.receive /foo/delay"
+									"text" : "j.receive /foo/delay"
 								}
 
 							}
@@ -2622,7 +2622,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 785.0, 50.0, 99.0, 21.0 ],
-					"text" : "jcom.namespace"
+					"text" : "j.namespace"
 				}
 
 			}
@@ -2902,19 +2902,19 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.namespace.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]

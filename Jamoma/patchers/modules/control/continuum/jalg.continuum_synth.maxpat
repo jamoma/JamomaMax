@@ -249,7 +249,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute \/x \/y \/z \/active",
+					"text" : "j.oscroute \/x \/y \/z \/active",
 					"patching_rect" : [ 68.0, 166.0, 155.0, 17.0 ],
 					"fontname" : "Verdana",
 					"id" : "obj-17",
@@ -305,7 +305,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute",
+					"text" : "j.oscroute",
 					"patching_rect" : [ 68.0, 142.0, 74.0, 17.0 ],
 					"fontname" : "Verdana",
 					"id" : "obj-21",

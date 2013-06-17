@@ -107,7 +107,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 921.0, 59.0, 163.0, 20.0 ],
-					"text" : "jcom.remote out.2/amplitude"
+					"text" : "j.remote out.2/amplitude"
 				}
 
 			}
@@ -121,7 +121,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 921.0, 20.0, 163.0, 20.0 ],
-					"text" : "jcom.remote out.1/amplitude"
+					"text" : "j.remote out.1/amplitude"
 				}
 
 			}
@@ -135,7 +135,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 778.0, 49.0, 107.0, 20.0 ],
-					"text" : "jcom.remote clear"
+					"text" : "j.remote clear"
 				}
 
 			}
@@ -149,7 +149,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 778.0, 308.59021, 163.0, 20.0 ],
-					"text" : "jcom.remote feedback/mode",
+					"text" : "j.remote feedback/mode",
 					"varname" : "feedback[2]"
 				}
 
@@ -220,7 +220,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 778.0, 390.545441, 156.0, 20.0 ],
-					"text" : "jcom.remote feedback/gain",
+					"text" : "j.remote feedback/gain",
 					"varname" : "feedback"
 				}
 
@@ -235,7 +235,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 778.0, 194.0, 136.0, 20.0 ],
-					"text" : "jcom.remote delay/right",
+					"text" : "j.remote delay/right",
 					"varname" : "right"
 				}
 
@@ -868,7 +868,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 511.666687, 74.0, 128.0, 19.0 ],
-					"text" : "jcom.remote filter/type",
+					"text" : "j.remote filter/type",
 					"varname" : "filtertype"
 				}
 
@@ -883,7 +883,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 569.036743, 286.5, 130.0, 20.0 ],
-					"text" : "jcom.remote filter/gain",
+					"text" : "j.remote filter/gain",
 					"varname" : "filtergain"
 				}
 
@@ -898,7 +898,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 569.036743, 243.545441, 114.0, 20.0 ],
-					"text" : "jcom.remote filter/q",
+					"text" : "j.remote filter/q",
 					"varname" : "q"
 				}
 
@@ -913,7 +913,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 569.036743, 330.545441, 160.0, 20.0 ],
-					"text" : "jcom.remote filter/frequency",
+					"text" : "j.remote filter/frequency",
 					"varname" : "cf"
 				}
 
@@ -943,8 +943,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 137.0, 232.0, 64.0, 20.0 ],
-					"text" : "jcom.view",
-					"varname" : "jcom.model"
+					"text" : "j.view",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1021,7 +1021,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 778.0, 120.0, 129.0, 20.0 ],
-					"text" : "jcom.remote delay/left",
+					"text" : "j.remote delay/left",
 					"varname" : "left"
 				}
 
@@ -1216,51 +1216,51 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.limiter~.mxo",
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive~.mxo",
+				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
  ]

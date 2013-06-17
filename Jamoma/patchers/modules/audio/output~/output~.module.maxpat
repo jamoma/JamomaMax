@@ -64,7 +64,7 @@
 					"fontsize" : 9.0,
 					"id" : "obj-39",
 					"knobcolor" : [ 0.733333, 0.137255, 0.137255, 1.0 ],
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -391,7 +391,7 @@
 					"id" : "obj-49",
 					"ignoreclick" : 1,
 					"knobcolor" : [ 0.698039, 0.698039, 0.698039, 0.0 ],
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -448,7 +448,7 @@
 				"box" : 				{
 					"annotation" : "master gain",
 					"id" : "obj-35",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -524,7 +524,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 932.0, 639.0, 122.0, 20.0 ],
-					"text" : "jcom.remote balance"
+					"text" : "j.remote balance"
 				}
 
 			}
@@ -538,7 +538,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 566.0, 605.0, 99.0, 20.0 ],
-					"text" : "jcom.remote cpu"
+					"text" : "j.remote cpu"
 				}
 
 			}
@@ -552,7 +552,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 566.0, 532.0, 175.0, 20.0 ],
-					"text" : "jcom.remote audio/amplitude.2"
+					"text" : "j.remote audio/amplitude.2"
 				}
 
 			}
@@ -566,7 +566,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 566.0, 464.0, 175.0, 20.0 ],
-					"text" : "jcom.remote audio/amplitude.1"
+					"text" : "j.remote audio/amplitude.1"
 				}
 
 			}
@@ -580,7 +580,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 932.0, 605.0, 473.0, 20.0 ],
-					"text" : "jcom.message audio/panic @type none @description \"Panic: Stop audio immediately.\""
+					"text" : "j.message audio/panic @type none @description \"Panic: Stop audio immediately.\""
 				}
 
 			}
@@ -608,7 +608,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 913.0, 560.0, 144.0, 20.0 ],
-					"text" : "jcom.remote audio/active",
+					"text" : "j.remote audio/active",
 					"varname" : "audio[1]"
 				}
 
@@ -908,7 +908,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 293.0, 204.0, 201.0, 20.0 ],
-									"text" : "jcom.remote limiter/dcblocker/active",
+									"text" : "j.remote limiter/dcblocker/active",
 									"varname" : "limiter/active[1]"
 								}
 
@@ -982,7 +982,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 293.0, 92.5, 145.0, 20.0 ],
-									"text" : "jcom.remote limiter/mode",
+									"text" : "j.remote limiter/mode",
 									"varname" : "limiter/mode"
 								}
 
@@ -997,7 +997,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 292.0, 45.5, 165.0, 20.0 ],
-									"text" : "jcom.remote limiter/threshold",
+									"text" : "j.remote limiter/threshold",
 									"varname" : "limiter/threshold"
 								}
 
@@ -1012,7 +1012,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 293.0, 166.5, 171.0, 20.0 ],
-									"text" : "jcom.remote limiter/lookahead",
+									"text" : "j.remote limiter/lookahead",
 									"varname" : "limiter/lookahead"
 								}
 
@@ -1027,7 +1027,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 293.0, 129.5, 161.0, 20.0 ],
-									"text" : "jcom.remote limiter/postamp",
+									"text" : "j.remote limiter/postamp",
 									"varname" : "limiter/postamp"
 								}
 
@@ -1222,8 +1222,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 147.0, 553.0, 63.0, 20.0 ],
-					"text" : "jcom.view",
-					"varname" : "jcom.hub"
+					"text" : "j.view",
+					"varname" : "j.hub"
 				}
 
 			}
@@ -1231,7 +1231,7 @@
 				"box" : 				{
 					"annotation" : "instant amplitude of the signal number 2",
 					"id" : "obj-3",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1245,7 +1245,7 @@
 				"box" : 				{
 					"annotation" : "instant amplitude of the signal number 1",
 					"id" : "obj-2",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1265,8 +1265,8 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 497.0, 95.0, 135.0, 20.0 ],
-					"text" : "jcom.remote audio/gain",
-					"varname" : "jcom.parameter.gain"
+					"text" : "j.remote audio/gain",
+					"varname" : "j.parameter.gain"
 				}
 
 			}
@@ -1280,7 +1280,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 932.0, 492.0, 372.0, 20.0 ],
-					"text" : "jcom.message dspStatus @description \" Open DSP Status window.\""
+					"text" : "j.message dspStatus @description \" Open DSP Status window.\""
 				}
 
 			}
@@ -1294,7 +1294,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 566.0, 343.0, 149.0, 20.0 ],
-					"text" : "jcom.remote record/active",
+					"text" : "j.remote record/active",
 					"varname" : "record"
 				}
 
@@ -1354,7 +1354,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 932.0, 221.0, 147.0, 20.0 ],
-					"text" : "jcom.remote limiter/active",
+					"text" : "j.remote limiter/active",
 					"varname" : "limiter/active"
 				}
 
@@ -1428,7 +1428,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 932.0, 335.0, 155.0, 20.0 ],
-					"text" : "jcom.remote limiter/release",
+					"text" : "j.remote limiter/release",
 					"varname" : "limiter/release"
 				}
 
@@ -1443,7 +1443,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 932.0, 300.0, 156.0, 20.0 ],
-					"text" : "jcom.remote limiter/preamp",
+					"text" : "j.remote limiter/preamp",
 					"varname" : "limiter/preamp"
 				}
 
@@ -1504,7 +1504,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 932.0, 147.0, 167.0, 20.0 ],
-					"text" : "jcom.remote saturation/active",
+					"text" : "j.remote saturation/active",
 					"varname" : "saturation/active"
 				}
 
@@ -1519,7 +1519,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 932.0, 71.0, 166.0, 20.0 ],
-					"text" : "jcom.remote saturation/depth",
+					"text" : "j.remote saturation/depth",
 					"varname" : "saturation/depth"
 				}
 
@@ -1550,7 +1550,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 566.0, 283.0, 169.0, 20.0 ],
-					"text" : "jcom.remote record/samptype",
+					"text" : "j.remote record/samptype",
 					"varname" : "record/samptype"
 				}
 
@@ -1565,7 +1565,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 566.0, 247.0, 155.0, 20.0 ],
-					"text" : "jcom.remote record/filetype",
+					"text" : "j.remote record/filetype",
 					"varname" : "record/filetype"
 				}
 
@@ -1642,7 +1642,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 60.0, 60.0, 55.0, 20.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -1727,11 +1727,11 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 60.0, 99.0, 136.0, 20.0 ],
 									"saved_object_attributes" : 									{
-										"filename" : "jcom.js_systeminfo.js",
+										"filename" : "j.js_systeminfo.js",
 										"parameter_enable" : 0
 									}
 ,
-									"text" : "js jcom.js_systeminfo.js"
+									"text" : "js j.js_systeminfo.js"
 								}
 
 							}
@@ -1936,7 +1936,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 932.0, 438.0, 103.0, 20.0 ],
-					"text" : "jcom.remote ch.2",
+					"text" : "j.remote ch.2",
 					"varname" : "ch_2"
 				}
 
@@ -1951,7 +1951,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 932.0, 408.0, 103.0, 20.0 ],
-					"text" : "jcom.remote ch.1",
+					"text" : "j.remote ch.1",
 					"varname" : "ch_1"
 				}
 
@@ -2127,7 +2127,7 @@
 				"box" : 				{
 					"fontsize" : 12.0,
 					"id" : "obj-95",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -2633,7 +2633,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.js_systeminfo.js",
+				"name" : "j.js_systeminfo.js",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/javascript",
 				"patcherrelativepath" : "../../../../javascript",
 				"type" : "TEXT",
@@ -2668,71 +2668,71 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.textslider.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.stats.mxo",
+				"name" : "j.stats.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.overdrive~.mxo",
+				"name" : "j.overdrive~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.panorama~.mxo",
+				"name" : "j.panorama~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
  ]

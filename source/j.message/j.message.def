@@ -1,0 +1,6 @@
+;exported symbols
+
+LIBRARY "j.message.mxe"
+
+EXPORTS
+	main

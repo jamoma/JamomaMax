@@ -110,7 +110,7 @@
 					"id" : "obj-7",
 					"outlettype" : [ "", "signal", "signal" ],
 					"args" : [  ],
-					"name" : "jmod.input~.maxpat"
+					"name" : "input~.module.maxpat"
 				}
 
 			}

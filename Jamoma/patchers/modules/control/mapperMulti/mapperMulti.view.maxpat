@@ -51,7 +51,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 690.0, 170.0, 47.0, 18.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -2021,15 +2021,15 @@
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.receive.mxo",
+								"name" : "j.receive.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.oscinstance.mxo",
+								"name" : "j.oscinstance.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -2172,7 +2172,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 24.0, 95.0, 100.0, 18.0 ],
-									"text" : "jcom.receive"
+									"text" : "j.receive"
 								}
 
 							}
@@ -2315,7 +2315,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.receive.mxo",
+								"name" : "j.receive.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -2364,7 +2364,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 447.0, 169.0, 221.0, 29.0 ],
-					"text" : "jcom.parameter mapperInstance @type integer @range/bounds 0 10 @priority 2"
+					"text" : "j.parameter mapperInstance @type integer @range/bounds 0 10 @priority 2"
 				}
 
 			}
@@ -2460,7 +2460,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 306.0, 118.0, 286.0, 18.0 ],
-					"text" : "jcom.parameter modelInstance @type string @priority 1"
+					"text" : "j.parameter modelInstance @type string @priority 1"
 				}
 
 			}
@@ -2554,7 +2554,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 72.0, 85.0, 136.0, 48.0 ],
-									"text" : "jcom.namespace @output brothers @format umenu_prefix"
+									"text" : "j.namespace @output brothers @format umenu_prefix"
 								}
 
 							}
@@ -2651,7 +2651,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.namespace.mxo",
+								"name" : "j.namespace.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -2722,7 +2722,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 37.0, 171.0, 119.0, 18.0 ],
-					"text" : "jcom.view"
+					"text" : "j.view"
 				}
 
 			}
@@ -2730,7 +2730,7 @@
 				"box" : 				{
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
 					"id" : "obj-42",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -2984,7 +2984,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.namespaceMenu.maxpat",
+				"name" : "j.namespaceMenu.maxpat",
 				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespaceMenu",
 				"patcherrelativepath" : "../../../library/components/namespaceMenu",
 				"type" : "JSON",
@@ -2998,47 +2998,47 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.namespace.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscinstance.mxo",
+				"name" : "j.oscinstance.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.savebang.mxo",
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
  ]

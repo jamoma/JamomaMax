@@ -67,7 +67,7 @@
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 640.0, 70.0 ]
@@ -172,7 +172,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "jmod.input~" ],
+									"args" : [ "input~.module" ],
 									"id" : "obj-2",
 									"maxclass" : "bpatcher",
 									"name" : "jmod.preset_params.maxpat",

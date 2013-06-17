@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 2,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 2.0, 44.0, 326.0, 371.0 ],
@@ -65,8 +66,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 2,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 327.0, 44.0, 566.0, 577.0 ],
@@ -141,7 +143,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 282.5, 446.001831, 200.0, 33.0 ],
-									"text" : "jcom.test.assert.equal large.list-test @input bang @compareTo 1024"
+									"text" : "j.test.assert.equal large.list-test @input bang @compareTo 1024"
 								}
 
 							}
@@ -239,7 +241,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 282.5, 64.001831, 237.0, 33.0 ],
-									"text" : "jcom.test.assert.equal symbol-test @input \"test symbol\" @compareTo \"test symbol\""
+									"text" : "j.test.assert.equal symbol-test @input \"test symbol\" @compareTo \"test symbol\""
 								}
 
 							}
@@ -323,7 +325,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 14.5, 434.001831, 197.0, 33.0 ],
-									"text" : "jcom.test.assert.equal decimal-test @input 3.14 @compareTo 3.14"
+									"text" : "j.test.assert.equal decimal-test @input 3.14 @compareTo 3.14"
 								}
 
 							}
@@ -407,7 +409,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 16.0, 250.001831, 193.0, 33.0 ],
-									"text" : "jcom.test.assert.equal integer-test @input 3 @compareTo 3"
+									"text" : "j.test.assert.equal integer-test @input 3 @compareTo 3"
 								}
 
 							}
@@ -491,7 +493,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 16.0, 64.001831, 193.0, 33.0 ],
-									"text" : "jcom.test.assert.equal bang-test @input bang @compareTo bang"
+									"text" : "j.test.assert.equal bang-test @input bang @compareTo bang"
 								}
 
 							}
@@ -575,7 +577,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 282.5, 250.001831, 263.0, 33.0 ],
-									"text" : "jcom.test.assert.equal list-test @input 1 2.5 foo \"bar thing\" @compareTo 1 2.5 foo \"bar thing\""
+									"text" : "j.test.assert.equal list-test @input 1 2.5 foo \"bar thing\" @compareTo 1 2.5 foo \"bar thing\""
 								}
 
 							}
@@ -1124,7 +1126,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 8.0, 241.962219, 119.0, 20.0 ],
-					"text" : "jcom.out test"
+					"text" : "j.out test"
 				}
 
 			}
@@ -1138,7 +1140,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 8.0, 149.0, 119.0, 20.0 ],
-					"text" : "jcom.in test"
+					"text" : "j.in test"
 				}
 
 			}
@@ -1171,34 +1173,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 1.0, 0.0, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-97",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 250.0, 12.0, 69.0, 19.0 ],
-					"text" : "r TestResult"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-96",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 250.0, 59.0, 67.0, 20.0 ],
-					"text" : "print result"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-16",
@@ -1220,7 +1194,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 8.0, 59.0, 103.0, 20.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -1234,7 +1208,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "bang" ],
 					"patching_rect" : [ 8.0, 11.0, 85.0, 20.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}
@@ -1320,43 +1294,34 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-96", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-97", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.test.start.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.start",
-				"patcherrelativepath" : "../../../../../Test/components/test.start",
+				"name" : "j.test.start.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.finished.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.finished",
-				"patcherrelativepath" : "../../../../../Test/components/test.finished",
+				"name" : "j.test.finished.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.assert.equal.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Test/components/test.assert.equal",
-				"patcherrelativepath" : "../../../../../Test/components/test.assert.equal",
+				"name" : "j.test.assert.equal.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
  ]

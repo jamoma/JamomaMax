@@ -79,7 +79,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 3.0, 19.0, 73.0, 33.0 ],
-					"text" : "jcom.model component"
+					"text" : "j.model component"
 				}
 
 			}
@@ -166,7 +166,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 102.0, 115.0, 140.0, 20.0 ],
-					"text" : "jcom.parameter myFloat"
+					"text" : "j.parameter myFloat"
 				}
 
 			}

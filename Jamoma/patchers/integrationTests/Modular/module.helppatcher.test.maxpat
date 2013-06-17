@@ -49,7 +49,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 500.0, 607.0, 74.0, 19.0 ],
-					"text" : "jcom.test.log"
+					"text" : "j.test.log"
 				}
 
 			}
@@ -374,7 +374,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 447.0, 792.0, 330.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old \"TEST RunningModuleHelpPatcher\" 0"
+					"text" : "j.test.assert.equal.old \"TEST RunningModuleHelpPatcher\" 0"
 				}
 
 			}
@@ -799,7 +799,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "bang" ],
 					"patching_rect" : [ 145.0, 40.0, 83.0, 19.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}
@@ -839,7 +839,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 55.0, 405.0, 98.0, 19.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -1419,28 +1419,28 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.test.finished.maxpat",
+				"name" : "j.test.finished.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.finished",
 				"patcherrelativepath" : "../../../../Test/components/test.finished",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.start.maxpat",
+				"name" : "j.test.start.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.start",
 				"patcherrelativepath" : "../../../../Test/components/test.start",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.assert.equal.old.maxpat",
+				"name" : "j.test.assert.equal.old.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.assert.equal.old",
 				"patcherrelativepath" : "../../../../Test/components/test.assert.equal.old",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.log.maxpat",
+				"name" : "j.test.log.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.log",
 				"patcherrelativepath" : "../../../../Test/components/test.log",
 				"type" : "JSON",

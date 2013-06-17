@@ -28,7 +28,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 77.0, 342.0, 76.0, 19.0 ],
-					"text" : "jcom.in~"
+					"text" : "j.in~"
 				}
 
 			}
@@ -42,14 +42,14 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 480.0, 50.0, 142.0, 19.0 ],
-					"text" : "jcom.meter_receive 1"
+					"text" : "j.meter_receive 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-49",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -70,7 +70,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 480.0, 444.0, 571.0, 43.0 ],
-					"text" : "jcom.parameter rolloff @type decimal @range/bounds -96 0. @range/clipmode high @ramp/drive Max @ramp/function linear @description \"Rolloff in dB for the Gaussian windowing function.\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter rolloff @type decimal @range/bounds -96 0. @range/clipmode high @ramp/drive Max @ramp/function linear @description \"Rolloff in dB for the Gaussian windowing function.\" @dataspace gain @dataspace/unit dB",
 					"varname" : "rolloff"
 				}
 
@@ -86,7 +86,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 480.0, 366.0, 558.0, 43.0 ],
-					"text" : "jcom.parameter oscillators @type integer @range/bounds 1 64 @range/clipmode both @ramp/drive none @description \"Maximum number of oscillators to use. Tha actual number of oscillators used might be lower, depending on range and spacing.\"",
+					"text" : "j.parameter oscillators @type integer @range/bounds 1 64 @range/clipmode both @ramp/drive none @description \"Maximum number of oscillators to use. Tha actual number of oscillators used might be lower, depending on range and spacing.\"",
 					"varname" : "oscillators"
 				}
 
@@ -102,7 +102,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 480.0, 288.0, 419.0, 43.0 ],
-					"text" : "jcom.parameter rate @type decimal @range/bounds -12 12 @range/clipmode none @ramp/drive Max @ramp/function linear @description \"Rate of the glissando movement as MIDI pitch difference per second.\"",
+					"text" : "j.parameter rate @type decimal @range/bounds -12 12 @range/clipmode none @ramp/drive Max @ramp/function linear @description \"Rate of the glissando movement as MIDI pitch difference per second.\"",
 					"varname" : "rate"
 				}
 
@@ -118,7 +118,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 480.0, 210.0, 367.0, 43.0 ],
-					"text" : "jcom.parameter spacing @type decimal @range/bounds 0 12 @range/clipmode low @ramp/drive Max @ramp/function linear @description \"Spacing between adjecent oscillators (as MIDI values).\"",
+					"text" : "j.parameter spacing @type decimal @range/bounds 0 12 @range/clipmode low @ramp/drive Max @ramp/function linear @description \"Spacing between adjecent oscillators (as MIDI values).\"",
 					"varname" : "spacing"
 				}
 
@@ -134,7 +134,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 685.0, 135.0, 427.0, 31.0 ],
-					"text" : "jcom.parameter range @type decimalArray @ramp/drive Max @ramp/function linear @description \"The range of the sweeps as MIDI values.\"",
+					"text" : "j.parameter range @type decimalArray @ramp/drive Max @ramp/function linear @description \"The range of the sweeps as MIDI values.\"",
 					"varname" : "range"
 				}
 
@@ -293,7 +293,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 479.0, 140.0, 183.0, 19.0 ],
-					"text" : "jcom.list2parameter 2"
+					"text" : "j.list2parameter 2"
 				}
 
 			}
@@ -321,7 +321,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 173.0, 420.0, 84.0, 19.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -350,8 +350,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 220.0, 393.0, 31.0 ],
-					"text" : "jcom.model @type audio @description \"Audio module generating Risset/Shepard glissando.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type audio @description \"Audio module generating Risset/Shepard glissando.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -502,7 +502,7 @@
 					"has_gain" : 1,
 					"has_mute" : 1,
 					"id" : "obj-40",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

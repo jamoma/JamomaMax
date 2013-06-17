@@ -80,7 +80,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 189.0, 138.0, 152.0, 20.0 ],
-					"text" : "jcom.remote /player.B/play"
+					"text" : "j.remote /player.B/play"
 				}
 
 			}
@@ -95,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 3.0, 208.0, 75.0 ],
-					"text" : "In a patcher with no context (model or view) it is possible to make a jcom.remote binding directly on a parameter|message|return using the first argument."
+					"text" : "In a patcher with no context (model or view) it is possible to make a j.remote binding directly on a parameter|message|return using the first argument."
 				}
 
 			}
@@ -140,7 +140,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 30.0, 138.0, 152.0, 20.0 ],
-					"text" : "jcom.remote /player.A/play"
+					"text" : "j.remote /player.A/play"
 				}
 
 			}

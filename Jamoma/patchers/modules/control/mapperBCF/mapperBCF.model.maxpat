@@ -76,7 +76,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 384.0, 129.0, 100.0, 18.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -329,8 +329,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 19.0, 47.0, 315.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"A module interfacing with the Behringer BCF2000 motorized MIDI fader.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @type control @description \"A module interfacing with the Behringer BCF2000 motorized MIDI fader.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -368,7 +368,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 93.0, 101.0, 269.0, 43.0 ],
-					"text" : "jcom.parameter midiIn @priority 1 @type generic @repetitions/allow 1 @description \"Port to receive MIDI messages on.\" @tag setup",
+					"text" : "j.parameter midiIn @priority 1 @type generic @repetitions/allow 1 @description \"Port to receive MIDI messages on.\" @tag setup",
 					"varname" : "midi_in"
 				}
 
@@ -384,7 +384,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 244.0, 164.0, 271.0, 43.0 ],
-					"text" : "jcom.parameter midiOut @priority 1 @type generic @repetitions/allow 1 @description \"Port to send MIDI messages to.\" @tag setup",
+					"text" : "j.parameter midiOut @priority 1 @type generic @repetitions/allow 1 @description \"Port to send MIDI messages to.\" @tag setup",
 					"varname" : "midi_out"
 				}
 

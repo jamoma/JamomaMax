@@ -34,7 +34,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 668.0, 137.0, 88.0, 19.0 ],
-					"text" : "jcom.midi.out#"
+					"text" : "j.midi.out#"
 				}
 
 			}
@@ -48,7 +48,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 580.0, 136.0, 81.0, 19.0 ],
-					"text" : "jcom.midi.in#"
+					"text" : "j.midi.in#"
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 580.0, 114.0, 105.0, 19.0 ],
-					"text" : "jcom.midi.format#"
+					"text" : "j.midi.format#"
 				}
 
 			}
@@ -76,7 +76,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 580.0, 92.0, 95.0, 19.0 ],
-					"text" : "jcom.midi.filter#"
+					"text" : "j.midi.filter#"
 				}
 
 			}
@@ -90,7 +90,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 580.0, 69.0, 64.0, 19.0 ],
-					"text" : "jcom.iter#"
+					"text" : "j.iter#"
 				}
 
 			}
@@ -104,7 +104,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 580.0, 23.0, 82.0, 19.0 ],
-					"text" : "jcom.append#"
+					"text" : "j.append#"
 				}
 
 			}
@@ -118,7 +118,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 580.0, 47.0, 100.0, 19.0 ],
-					"text" : "jcom.dataspace#"
+					"text" : "j.dataspace#"
 				}
 
 			}
@@ -131,7 +131,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 580.0, 158.0, 57.0, 19.0 ],
-					"text" : "jcom.op#"
+					"text" : "j.op#"
 				}
 
 			}
@@ -145,7 +145,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 580.0, 207.0, 81.0, 19.0 ],
-					"text" : "jcom.unpack#"
+					"text" : "j.unpack#"
 				}
 
 			}
@@ -159,7 +159,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 580.0, 182.0, 68.0, 19.0 ],
-					"text" : "jcom.pack#"
+					"text" : "j.pack#"
 				}
 
 			}
@@ -172,7 +172,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 195.0, 325.0, 320.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old \"TEST Graph AllExternalsLoadingProperly\" 1"
+					"text" : "j.test.assert.equal.old \"TEST Graph AllExternalsLoadingProperly\" 1"
 				}
 
 			}
@@ -200,7 +200,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 50.0, 85.0, 57.0, 19.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}
@@ -240,7 +240,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 50.0, 200.0, 100.0, 19.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}

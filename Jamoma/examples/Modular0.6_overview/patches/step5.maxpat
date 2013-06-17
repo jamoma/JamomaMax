@@ -36,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 827.0, 714.0, 236.0, 20.0 ],
-					"text" : "get the highlight state of a jcom.remote"
+					"text" : "get the highlight state of a j.remote"
 				}
 
 			}
@@ -73,7 +73,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 809.0, 736.0, 203.0, 20.0 ],
-					"text" : "jcom.receive /interface/rate:highlight"
+					"text" : "j.receive /interface/rate:highlight"
 				}
 
 			}
@@ -88,7 +88,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 921.0, 73.0, 156.0, 33.0 ],
-					"text" : "Use jcom.receive to listen the activity of a model"
+					"text" : "Use j.receive to listen the activity of a model"
 				}
 
 			}
@@ -117,7 +117,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 921.0, 116.0, 168.0, 20.0 ],
-					"text" : "jcom.receive /player.B:activity"
+					"text" : "j.receive /player.B:activity"
 				}
 
 			}
@@ -252,7 +252,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 340.0, 237.0, 302.0, 47.0 ],
-					"text" : "The basic view patch show how to use jcom.remote in one model or view patch. In this case the jcom.remote is not registered into the namespace."
+					"text" : "The basic view patch show how to use j.remote in one model or view patch. In this case the j.remote is not registered into the namespace."
 				}
 
 			}
@@ -355,7 +355,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 330.0, 655.0, 144.0, 33.0 ],
-					"text" : "Set attribute of a  jcom.remote object."
+					"text" : "Set attribute of a  j.remote object."
 				}
 
 			}
@@ -411,7 +411,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 330.0, 501.0, 138.0, 60.0 ],
-					"text" : "It is possible to talk to a parameter/message if a jcom.remote binds on it in a view bpatcher."
+					"text" : "It is possible to talk to a parameter/message if a j.remote binds on it in a view bpatcher."
 				}
 
 			}
@@ -426,7 +426,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 809.0, 605.0, 265.0, 100.0 ],
-					"text" : "If you press the shift key when you are on a jcom.ui this would show the highlight state of each ui object. If you click on the highlight label this would change his highlight state.\n\nThis can be used to facilitate parameter selection from a client"
+					"text" : "If you press the shift key when you are on a j.ui this would show the highlight state of each ui object. If you click on the highlight label this would change his highlight state.\n\nThis can be used to facilitate parameter selection from a client"
 				}
 
 			}
@@ -494,7 +494,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 809.0, 521.0, 266.0, 47.0 ],
-					"text" : "Here the movie.model have a jcom.out so it provides internals /out/mute, /out/freeze and /out/preview parameter."
+					"text" : "Here the movie.model have a j.out so it provides internals /out/mute, /out/freeze and /out/preview parameter."
 				}
 
 			}
@@ -509,7 +509,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 809.0, 474.0, 265.0, 47.0 ],
-					"text" : "The jcom.ui widgets are now automatically added if the standard internal parameters exist in the binded model."
+					"text" : "The j.ui widgets are now automatically added if the standard internal parameters exist in the binded model."
 				}
 
 			}
@@ -937,7 +937,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 525.0, 117.0, 105.0, 47.0 ],
-									"text" : "jcom.namespace @filter/list remote @format umenu"
+									"text" : "j.namespace @filter/list remote @format umenu"
 								}
 
 							}
@@ -978,7 +978,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 354.0, 117.0, 108.0, 47.0 ],
-									"text" : "jcom.namespace @filter/list return @format umenu"
+									"text" : "j.namespace @filter/list return @format umenu"
 								}
 
 							}
@@ -994,7 +994,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 182.0, 117.0, 125.0, 47.0 ],
-									"text" : "jcom.namespace @filter/list message @format umenu"
+									"text" : "j.namespace @filter/list message @format umenu"
 								}
 
 							}
@@ -1010,7 +1010,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 10.0, 117.0, 131.0, 47.0 ],
-									"text" : "jcom.namespace @filter/list parameter @format umenu"
+									"text" : "j.namespace @filter/list parameter @format umenu"
 								}
 
 							}
@@ -1881,51 +1881,51 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.namespace.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
  ]

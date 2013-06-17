@@ -37,7 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 449.0, 493.0, 73.0, 20.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -51,7 +51,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 326.25, 493.0, 73.0, 20.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -65,7 +65,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 449.0, 138.0, 66.0, 20.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -79,7 +79,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 329.0, 138.0, 66.0, 20.0 ],
-					"text" : "jcom.in~ 1"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -93,7 +93,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 96.0, 274.0, 73.0, 20.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -108,7 +108,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 929.0, 70.0, 170.0, 114.0 ],
-					"text" : "jcom.parameter lfo/depth @type decimal @range/bounds 0. 100. @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"LFO depth (0-100%).\"",
+					"text" : "j.parameter lfo/depth @type decimal @range/bounds 0. 100. @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"LFO depth (0-100%).\"",
 					"varname" : "#1/lfo/depth"
 				}
 
@@ -124,7 +124,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 558.5, 70.0, 171.0, 141.0 ],
-					"text" : "jcom.parameter lfo/frequency @type decimal @range/bounds 0. 100. @range/clipmode low @ramp/drive Max @repetitions/allow 0 @dataspace time @dataspace/unit Hz @description \"LFO frequency (Hz).\"",
+					"text" : "j.parameter lfo/frequency @type decimal @range/bounds 0. 100. @range/clipmode low @ramp/drive Max @repetitions/allow 0 @dataspace time @dataspace/unit Hz @description \"LFO frequency (Hz).\"",
 					"varname" : "#1/lfo/frequency"
 				}
 
@@ -140,7 +140,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 743.0, 70.0, 167.0, 114.0 ],
-					"text" : "jcom.parameter lfo/phase @type decimal @range/bounds 0. 1. @range/clipmode wrap @ramp/drive Max @description \"LFO phase offset between left and right channels (0-1).\"",
+					"text" : "j.parameter lfo/phase @type decimal @range/bounds 0. 1. @range/clipmode wrap @ramp/drive Max @description \"LFO phase offset between left and right channels (0-1).\"",
 					"varname" : "tremolo/phase_offset"
 				}
 
@@ -156,8 +156,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 60.0, 199.0, 159.0, 47.0 ],
-					"text" : "jcom.model @description \"Apply tremolo to incoming signal.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Apply tremolo to incoming signal.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -668,23 +668,23 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
  ]

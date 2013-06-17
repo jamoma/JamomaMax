@@ -25,7 +25,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 255.0, 290.0, 58.0, 19.0 ],
-					"text" : "jcom.in 1"
+					"text" : "j.in 1"
 				}
 
 			}
@@ -39,7 +39,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 510.0, 140.0, 392.0, 19.0 ],
-					"text" : "jcom.message clear @type none @description \"Clear buffered image.\"",
+					"text" : "j.message clear @type none @description \"Clear buffered image.\"",
 					"varname" : "tolerance[1]"
 				}
 
@@ -147,11 +147,11 @@
 									"id" : "obj-2",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "jcom.class.gl_group.inspect.maxpat",
+									"name" : "j.class.gl_group.inspect.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 0.0, 268.0, 761.0 ],
-									"varname" : "jcom.class.gl_group.inspect.mxt"
+									"varname" : "j.class.gl_group.inspect.mxt"
 								}
 
 							}
@@ -194,7 +194,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 290.0, 60.0, 146.0, 19.0 ],
-									"text" : "jcom.oscroute /view/panel"
+									"text" : "j.oscroute /view/panel"
 								}
 
 							}
@@ -285,7 +285,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 255.0, 380.0, 63.0, 19.0 ],
-					"text" : "jcom.out 1"
+					"text" : "j.out 1"
 				}
 
 			}
@@ -318,7 +318,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 505.0, 60.0, 597.0, 31.0 ],
-					"text" : "jcom.parameter weight @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Low pass filter coefficient.\"",
+					"text" : "j.parameter weight @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Low pass filter coefficient.\"",
 					"varname" : "tolerance"
 				}
 
@@ -347,7 +347,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 5.0, 215.0, 280.0, 19.0 ],
-					"text" : "jcom.model @description \"Chromakey using jit.gl.slab.\"",
+					"text" : "j.model @description \"Chromakey using jit.gl.slab.\"",
 					"varname" : "jmod.hub"
 				}
 
@@ -434,7 +434,7 @@
 					"has_panel" : 1,
 					"has_preview" : 1,
 					"id" : "obj-55",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

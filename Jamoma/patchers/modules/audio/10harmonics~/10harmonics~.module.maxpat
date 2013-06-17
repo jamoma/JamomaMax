@@ -36,7 +36,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 145.0, 297.0, 61.0, 19.0 ],
-					"text" : "jcom.view"
+					"text" : "j.view"
 				}
 
 			}
@@ -561,7 +561,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 980.0, 415.0, 574.0, 31.0 ],
-					"text" : "jcom.parameter factors @type decimalArray @description \"list of factors that determines the frequencies of the 10 partials as a factor of /frequency, default is 1 2 3 4 5 6 7 8 9 10\" @range/bounds 1. 100. @range/clipmode low"
+					"text" : "j.parameter factors @type decimalArray @description \"list of factors that determines the frequencies of the 10 partials as a factor of /frequency, default is 1 2 3 4 5 6 7 8 9 10\" @range/bounds 1. 100. @range/clipmode low"
 				}
 
 			}
@@ -589,7 +589,7 @@
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 578.0, 424.0, 392.0, 19.0 ],
-					"text" : "jcom.list2parameter 10"
+					"text" : "j.list2parameter 10"
 				}
 
 			}
@@ -2059,7 +2059,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 200.0, 644.0, 660.0, 31.0 ],
-									"text" : "jcom.parameter harmonic.10/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 10th partial\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter harmonic.10/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 10th partial\" @dataspace gain @dataspace/unit dB",
 									"varname" : "harmonic_gains[9]"
 								}
 
@@ -2075,7 +2075,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 200.0, 589.0, 654.0, 31.0 ],
-									"text" : "jcom.parameter harmonic.9/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 9th partial\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter harmonic.9/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 9th partial\" @dataspace gain @dataspace/unit dB",
 									"varname" : "harmonic_gains[10]"
 								}
 
@@ -2091,7 +2091,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 200.0, 534.0, 654.0, 31.0 ],
-									"text" : "jcom.parameter harmonic.8/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 8th partial\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter harmonic.8/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 8th partial\" @dataspace gain @dataspace/unit dB",
 									"varname" : "harmonic_gains[8]"
 								}
 
@@ -2107,7 +2107,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 200.0, 477.0, 654.0, 31.0 ],
-									"text" : "jcom.parameter harmonic.7/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 7th partial\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter harmonic.7/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 7th partial\" @dataspace gain @dataspace/unit dB",
 									"varname" : "harmonic_gains[7]"
 								}
 
@@ -2123,7 +2123,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 200.0, 423.0, 654.0, 31.0 ],
-									"text" : "jcom.parameter harmonic.6/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 6th partial\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter harmonic.6/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 6th partial\" @dataspace gain @dataspace/unit dB",
 									"varname" : "harmonic_gains[6]"
 								}
 
@@ -2139,7 +2139,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 200.0, 362.0, 654.0, 31.0 ],
-									"text" : "jcom.parameter harmonic.5/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 5th partial\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter harmonic.5/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 5th partial\" @dataspace gain @dataspace/unit dB",
 									"varname" : "harmonic_gains[5]"
 								}
 
@@ -2155,7 +2155,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 200.0, 305.0, 654.0, 31.0 ],
-									"text" : "jcom.parameter harmonic.4/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 4th partial\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter harmonic.4/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 4th partial\" @dataspace gain @dataspace/unit dB",
 									"varname" : "harmonic_gains[4]"
 								}
 
@@ -2171,7 +2171,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 200.0, 252.0, 654.0, 31.0 ],
-									"text" : "jcom.parameter harmonic.3/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 3rd partial\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter harmonic.3/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 3rd partial\" @dataspace gain @dataspace/unit dB",
 									"varname" : "harmonic_gains[3]"
 								}
 
@@ -2187,7 +2187,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 200.0, 193.0, 654.0, 31.0 ],
-									"text" : "jcom.parameter harmonic.2/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 2nd partial\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter harmonic.2/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 2nd partial\" @dataspace gain @dataspace/unit dB",
 									"varname" : "harmonic_gains[2]"
 								}
 
@@ -2203,7 +2203,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 200.0, 138.0, 654.0, 31.0 ],
-									"text" : "jcom.parameter harmonic.1/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 1st partial\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter harmonic.1/gain @type decimal @ramp/drive Max @ramp/function linear @description \"Gain values (dB) for the 1st partial\" @dataspace gain @dataspace/unit dB",
 									"varname" : "harmonic_gains[1]"
 								}
 
@@ -2513,7 +2513,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.parameter.mxo",
+								"name" : "j.parameter.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -2541,7 +2541,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-26",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -2561,7 +2561,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 470.0, 30.0, 142.0, 19.0 ],
-					"text" : "jcom.meter_receive 1"
+					"text" : "j.meter_receive 1"
 				}
 
 			}
@@ -2620,7 +2620,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 255.0, 445.0, 76.0, 19.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -2634,7 +2634,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 135.0, 385.0, 58.0, 19.0 ],
-					"text" : "jcom.in~"
+					"text" : "j.in~"
 				}
 
 			}
@@ -2663,7 +2663,7 @@
 					"outlettype" : [ "", "signal" ],
 					"patching_rect" : [ 15.0, 205.0, 136.0, 19.0 ],
 					"text" : "10harmonics~.model #1",
-					"varname" : "jcom.model"
+					"varname" : "j.model"
 				}
 
 			}
@@ -2748,7 +2748,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 468.0, 74.0, 598.0, 43.0 ],
-					"text" : "jcom.parameter frequency @type decimal @range/bounds 20 20000 @range/clipmode none @ramp/drive Max @ramp/function linear @description \"Frequency of the signal.\" @dataspace time @dataspace/unit Hz",
+					"text" : "j.parameter frequency @type decimal @range/bounds 20 20000 @range/clipmode none @ramp/drive Max @ramp/function linear @description \"Frequency of the signal.\" @dataspace time @dataspace/unit Hz",
 					"varname" : "frequency"
 				}
 
@@ -2811,7 +2811,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-25",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -3441,61 +3441,61 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.meter_receive.maxpat",
+				"name" : "j.meter_receive.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/meter_receive",
 				"patcherrelativepath" : "../../../library/components/meter_receive",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.list2parameter.maxpat",
+				"name" : "j.list2parameter.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/list2parameter",
 				"patcherrelativepath" : "../../../library/components/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameterArray.mxo",
+				"name" : "j.parameterArray.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
  ]

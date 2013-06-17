@@ -126,7 +126,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 22.0, 135.0, 254.0, 43.0 ],
-									"text" : "jcom.parameter ramp/time @type decimal @range/bounds 0. 10. @range/clipmode low @value/default 0."
+									"text" : "j.parameter ramp/time @type decimal @range/bounds 0. 10. @range/clipmode low @value/default 0."
 								}
 
 							}
@@ -141,7 +141,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 72.0, 25.0, 238.0, 31.0 ],
-									"text" : "jcom.parameter ramp/active @type boolean @value/default 0"
+									"text" : "j.parameter ramp/active @type boolean @value/default 0"
 								}
 
 							}
@@ -202,7 +202,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.parameter.mxo",
+								"name" : "j.parameter.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -236,7 +236,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 372.0, 217.0, 128.0, 17.0 ],
-					"text" : "jcom.return cue/current/time"
+					"text" : "j.return cue/current/time"
 				}
 
 			}
@@ -299,7 +299,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 235.0, 54.0, 142.0, 17.0 ],
-									"text" : "jcom.message preset/write/again"
+									"text" : "j.message preset/write/again"
 								}
 
 							}
@@ -327,7 +327,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 161.0, 26.0, 220.0, 17.0 ],
-									"text" : "jcom.message preset/current/get @type none"
+									"text" : "j.message preset/current/get @type none"
 								}
 
 							}
@@ -341,7 +341,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 68.0, 110.0, 165.0, 17.0 ],
-									"text" : "jcom.return preset/current @type array"
+									"text" : "j.return preset/current @type array"
 								}
 
 							}
@@ -397,7 +397,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 29.0, 24.0, 115.0, 17.0 ],
-									"text" : "jcom.message preset/new"
+									"text" : "j.message preset/new"
 								}
 
 							}
@@ -411,7 +411,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 30.0, 67.0, 57.0, 17.0 ],
-									"text" : "jcom.preset"
+									"text" : "j.preset"
 								}
 
 							}
@@ -502,15 +502,15 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.preset.mxo",
+								"name" : "j.preset.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.message.mxo",
+								"name" : "j.message.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.return.mxo",
+								"name" : "j.return.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -594,7 +594,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 23.0, 22.0, 367.0, 31.0 ],
-									"text" : "jcom.message autofollow/enable @type boolean @repetitions/allow 1 @description \"temporary disable/enable autofollow mode\""
+									"text" : "j.message autofollow/enable @type boolean @repetitions/allow 1 @description \"temporary disable/enable autofollow mode\""
 								}
 
 							}
@@ -662,7 +662,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 23.0, 284.0, 153.0, 19.0 ],
-									"text" : "jcom.remote cue/recall/next"
+									"text" : "j.remote cue/recall/next"
 								}
 
 							}
@@ -705,7 +705,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 104.0, 177.0, 382.0, 31.0 ],
-									"text" : "jcom.parameter autofollow/time @type decimal @repetitions/allow 1 @description \"autofollow time (in seconds)\" @priority 1 @value/default 0."
+									"text" : "j.parameter autofollow/time @type decimal @repetitions/allow 1 @description \"autofollow time (in seconds)\" @priority 1 @value/default 0."
 								}
 
 							}
@@ -720,7 +720,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 105.0, 100.0, 370.0, 31.0 ],
-									"text" : "jcom.parameter autofollow/active @type boolean @repetitions/allow 1 @description \"enable autofollow mode\" @value/default 0 @priority 2"
+									"text" : "j.parameter autofollow/active @type boolean @repetitions/allow 1 @description \"enable autofollow mode\" @value/default 0 @priority 2"
 								}
 
 							}
@@ -850,15 +850,15 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.parameter.mxo",
+								"name" : "j.parameter.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.remote.mxo",
+								"name" : "j.remote.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.message.mxo",
+								"name" : "j.message.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -921,7 +921,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 41.0, 23.0, 425.0, 27.0 ],
-					"text" : "jcom.parameter addresses @type array @description \"addresses to include in the cue\" @value/default / @priority 3 @repetitions/allow 0"
+					"text" : "j.parameter addresses @type array @description \"addresses to include in the cue\" @value/default / @priority 3 @repetitions/allow 0"
 				}
 
 			}
@@ -1055,7 +1055,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 179.0, 213.0, 118.0, 17.0 ],
-									"text" : "jcom.remote ramp/time"
+									"text" : "j.remote ramp/time"
 								}
 
 							}
@@ -1220,7 +1220,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 286.0, 316.0, 61.0, 17.0 ],
-													"text" : "jcom.receive"
+													"text" : "j.receive"
 												}
 
 											}
@@ -1333,7 +1333,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 333.0, 76.0, 102.0, 17.0 ],
-													"text" : "jcom.remote addresses"
+													"text" : "j.remote addresses"
 												}
 
 											}
@@ -1348,7 +1348,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 270.0, 157.0, 137.0, 27.0 ],
-													"text" : "jcom.namespace @filter/list jcom.parameter @format none"
+													"text" : "j.namespace @filter/list j.parameter @format none"
 												}
 
 											}
@@ -1493,7 +1493,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 267.0, 413.0, 68.0, 17.0 ],
-													"text" : "jcom.receive"
+													"text" : "j.receive"
 												}
 
 											}
@@ -1536,7 +1536,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 194.0, 578.0, 224.0, 31.0 ],
-													"text" : "jcom.parameter addresses/ramp @value/default none"
+													"text" : "j.parameter addresses/ramp @value/default none"
 												}
 
 											}
@@ -1550,7 +1550,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 111.0, 791.0, 100.0, 17.0 ],
-													"text" : "jcom.send"
+													"text" : "j.send"
 												}
 
 											}
@@ -2047,23 +2047,23 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.send.mxo",
+												"name" : "j.send.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.parameter.mxo",
+												"name" : "j.parameter.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.receive.mxo",
+												"name" : "j.receive.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.namespace.mxo",
+												"name" : "j.namespace.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.remote.mxo",
+												"name" : "j.remote.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -2202,7 +2202,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 485.0, 308.0, 207.0, 38.0 ],
-													"text" : "jcom.parameter filter/addresses/excluded @type generic @description \"addresses to filter in/out  from the cue\" @value/default none @priority 3"
+													"text" : "j.parameter filter/addresses/excluded @type generic @description \"addresses to filter in/out  from the cue\" @value/default none @priority 3"
 												}
 
 											}
@@ -2547,7 +2547,7 @@
 																	"numoutlets" : 4,
 																	"outlettype" : [ "", "", "", "" ],
 																	"patching_rect" : [ 154.0, 102.0, 102.0, 17.0 ],
-																	"text" : "jcom.remote addresses"
+																	"text" : "j.remote addresses"
 																}
 
 															}
@@ -2562,7 +2562,7 @@
 																	"numoutlets" : 3,
 																	"outlettype" : [ "", "", "" ],
 																	"patching_rect" : [ 146.0, 192.0, 137.0, 27.0 ],
-																	"text" : "jcom.namespace @lookfor jcom.parameter @format none"
+																	"text" : "j.namespace @lookfor j.parameter @format none"
 																}
 
 															}
@@ -2767,11 +2767,11 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.namespace.mxo",
+																"name" : "j.namespace.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.remote.mxo",
+																"name" : "j.remote.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -2805,7 +2805,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 18.0, 433.0, 124.0, 17.0 ],
-													"text" : "jcom.oscroute /cueManager"
+													"text" : "j.oscroute /cueManager"
 												}
 
 											}
@@ -2820,7 +2820,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 558.0, 150.0, 139.0, 48.0 ],
-													"text" : "jcom.parameter filter/tags/mode @type boolean @description \"filter mode for tags\" @value/default 0 @priority 8"
+													"text" : "j.parameter filter/tags/mode @type boolean @description \"filter mode for tags\" @value/default 0 @priority 8"
 												}
 
 											}
@@ -2835,7 +2835,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 325.0, 114.0, 142.0, 48.0 ],
-													"text" : "jcom.parameter filter/keys/mode @type boolean @description \"filter mode for keys\" @value/default 0 @priority 6"
+													"text" : "j.parameter filter/keys/mode @type boolean @description \"filter mode for keys\" @value/default 0 @priority 6"
 												}
 
 											}
@@ -2850,7 +2850,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 104.0, 120.0, 132.0, 58.0 ],
-													"text" : "jcom.parameter filter/adresses/mode @type boolean @description \"filter mode for addresses\" @value/default 0 @priority 4"
+													"text" : "j.parameter filter/adresses/mode @type boolean @description \"filter mode for addresses\" @value/default 0 @priority 4"
 												}
 
 											}
@@ -3187,7 +3187,7 @@
 																	"numoutlets" : 4,
 																	"outlettype" : [ "", "", "", "" ],
 																	"patching_rect" : [ 47.0, 77.0, 102.0, 17.0 ],
-																	"text" : "jcom.remote addresses"
+																	"text" : "j.remote addresses"
 																}
 
 															}
@@ -3268,7 +3268,7 @@
 																	"numoutlets" : 3,
 																	"outlettype" : [ "", "", "" ],
 																	"patching_rect" : [ 33.0, 173.0, 187.0, 17.0 ],
-																	"text" : "jcom.namespace+ @lookfor jcom.parameter"
+																	"text" : "j.namespace+ @lookfor j.parameter"
 																}
 
 															}
@@ -3407,21 +3407,21 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.namespace+.maxpat",
+																"name" : "j.namespace+.maxpat",
 																"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespace+",
 																"type" : "JSON",
 																"implicit" : 1
 															}
 , 															{
-																"name" : "jcom.namespace.mxo",
+																"name" : "j.namespace.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.receive.mxo",
+																"name" : "j.receive.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.remote.mxo",
+																"name" : "j.remote.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -3772,7 +3772,7 @@
 																	"numoutlets" : 4,
 																	"outlettype" : [ "", "", "", "" ],
 																	"patching_rect" : [ 60.0, 116.0, 102.0, 17.0 ],
-																	"text" : "jcom.remote addresses"
+																	"text" : "j.remote addresses"
 																}
 
 															}
@@ -3853,7 +3853,7 @@
 																	"numoutlets" : 3,
 																	"outlettype" : [ "", "", "" ],
 																	"patching_rect" : [ 46.0, 203.0, 150.0, 17.0 ],
-																	"text" : "jcom.namespace+ jcom.parameter"
+																	"text" : "j.namespace+ j.parameter"
 																}
 
 															}
@@ -3991,21 +3991,21 @@
 															}
  ],
 														"dependency_cache" : [ 															{
-																"name" : "jcom.namespace+.maxpat",
+																"name" : "j.namespace+.maxpat",
 																"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespace+",
 																"type" : "JSON",
 																"implicit" : 1
 															}
 , 															{
-																"name" : "jcom.namespace.mxo",
+																"name" : "j.namespace.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.receive.mxo",
+																"name" : "j.receive.mxo",
 																"type" : "iLaX"
 															}
 , 															{
-																"name" : "jcom.remote.mxo",
+																"name" : "j.remote.mxo",
 																"type" : "iLaX"
 															}
  ]
@@ -4068,7 +4068,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 488.0, 76.0, 206.0, 38.0 ],
-													"text" : "jcom.parameter filter/tags @type array @description \"tags  to filter  addresses in/out  from the cue\" @value/default none @priority 9"
+													"text" : "j.parameter filter/tags @type array @description \"tags  to filter  addresses in/out  from the cue\" @value/default none @priority 9"
 												}
 
 											}
@@ -4083,7 +4083,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 257.0, 71.0, 201.0, 38.0 ],
-													"text" : "jcom.parameter filter/keys @type array @description \"keys in addresses to filter in/out  from the cue\" @value/default none @priority 7"
+													"text" : "j.parameter filter/keys @type array @description \"keys in addresses to filter in/out  from the cue\" @value/default none @priority 7"
 												}
 
 											}
@@ -4139,7 +4139,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 32.0, 543.0, 100.0, 17.0 ],
-													"text" : "jcom.send"
+													"text" : "j.send"
 												}
 
 											}
@@ -4196,7 +4196,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 38.0, 74.0, 201.0, 38.0 ],
-													"text" : "jcom.parameter filter/adresses @type generic @description \"addresses to  filter in/out  from the cue\" @value/default none @priority 5"
+													"text" : "j.parameter filter/adresses @type generic @description \"addresses to  filter in/out  from the cue\" @value/default none @priority 5"
 												}
 
 											}
@@ -4715,33 +4715,33 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.namespace+.maxpat",
+												"name" : "j.namespace+.maxpat",
 												"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespace+",
 												"type" : "JSON",
 												"implicit" : 1
 											}
 , 											{
-												"name" : "jcom.parameter.mxo",
+												"name" : "j.parameter.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.send.mxo",
+												"name" : "j.send.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.namespace.mxo",
+												"name" : "j.namespace.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.receive.mxo",
+												"name" : "j.receive.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.remote.mxo",
+												"name" : "j.remote.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.oscroute.mxo",
+												"name" : "j.oscroute.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -4841,7 +4841,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 155.0, 213.0, 426.0, 31.0 ],
-													"text" : "jcom.message cue/move @type array @repetitions/allow 1 @description \"rename a cue : format is 'original index of cue' 'new index of cue' \""
+													"text" : "j.message cue/move @type array @repetitions/allow 1 @description \"rename a cue : format is 'original index of cue' 'new index of cue' \""
 												}
 
 											}
@@ -4885,7 +4885,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 115.0, 108.0, 407.0, 43.0 ],
-													"text" : "jcom.message cue/copy @type array @repetitions/allow 1 @description \"rename a cue : format is 'index of cue to copy' 'index of new cue'  'new  cue name'\""
+													"text" : "j.message cue/copy @type array @repetitions/allow 1 @description \"rename a cue : format is 'index of cue to copy' 'index of new cue'  'new  cue name'\""
 												}
 
 											}
@@ -4929,7 +4929,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 17.0, 28.0, 391.0, 31.0 ],
-													"text" : "jcom.message cue/rename @type array @repetitions/allow 1 @description \"rename a cue : format is 'index of cue' 'new name'\""
+													"text" : "j.message cue/rename @type array @repetitions/allow 1 @description \"rename a cue : format is 'index of cue' 'new name'\""
 												}
 
 											}
@@ -5001,7 +5001,7 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.message.mxo",
+												"name" : "j.message.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -5114,7 +5114,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 281.0, 252.0, 407.0, 31.0 ],
-													"text" : "jcom.message cue/remove/current @type none @repetitions/allow 1 @description \"remove the current cue\""
+													"text" : "j.message cue/remove/current @type none @repetitions/allow 1 @description \"remove the current cue\""
 												}
 
 											}
@@ -5143,7 +5143,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 275.0, 187.0, 407.0, 31.0 ],
-													"text" : "jcom.message cue/remove/previous @type none @repetitions/allow 1 @description \"remove the previous cue\""
+													"text" : "j.message cue/remove/previous @type none @repetitions/allow 1 @description \"remove the previous cue\""
 												}
 
 											}
@@ -5172,7 +5172,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 162.0, 146.0, 407.0, 31.0 ],
-													"text" : "jcom.message cue/remove/next @type none @repetitions/allow 1 @description \"remove the next cue\""
+													"text" : "j.message cue/remove/next @type none @repetitions/allow 1 @description \"remove the next cue\""
 												}
 
 											}
@@ -5201,7 +5201,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 100.0, 391.0, 31.0 ],
-													"text" : "jcom.message cue/remove @type array @repetitions/allow 1 @description \"remove the selected cue by its number or name\""
+													"text" : "j.message cue/remove @type array @repetitions/allow 1 @description \"remove the selected cue by its number or name\""
 												}
 
 											}
@@ -5291,7 +5291,7 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.message.mxo",
+												"name" : "j.message.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -5403,7 +5403,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 181.0, 293.0, 107.0, 17.0 ],
-													"text" : "jcom.return cue/recalled"
+													"text" : "j.return cue/recalled"
 												}
 
 											}
@@ -5432,7 +5432,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 269.0, 179.0, 407.0, 31.0 ],
-													"text" : "jcom.message cue/recall/current @type none @repetitions/allow 1 @description \"trigger the current cue\""
+													"text" : "j.message cue/recall/current @type none @repetitions/allow 1 @description \"trigger the current cue\""
 												}
 
 											}
@@ -5461,7 +5461,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 263.0, 114.0, 407.0, 31.0 ],
-													"text" : "jcom.message cue/recall/previous @type none @repetitions/allow 1 @description \"trigger the previous cue\""
+													"text" : "j.message cue/recall/previous @type none @repetitions/allow 1 @description \"trigger the previous cue\""
 												}
 
 											}
@@ -5490,7 +5490,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 150.0, 73.0, 407.0, 31.0 ],
-													"text" : "jcom.message cue/recall/next @type none @repetitions/allow 1 @description \"trigger the next cue\""
+													"text" : "j.message cue/recall/next @type none @repetitions/allow 1 @description \"trigger the next cue\""
 												}
 
 											}
@@ -5519,7 +5519,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 38.0, 27.0, 380.0, 31.0 ],
-													"text" : "jcom.message cue/recall @type array @repetitions/allow 1 @description \"trigger the selected cue by its number or name\""
+													"text" : "j.message cue/recall @type array @repetitions/allow 1 @description \"trigger the selected cue by its number or name\""
 												}
 
 											}
@@ -5672,11 +5672,11 @@
 											}
  ],
 										"dependency_cache" : [ 											{
-												"name" : "jcom.message.mxo",
+												"name" : "j.message.mxo",
 												"type" : "iLaX"
 											}
 , 											{
-												"name" : "jcom.return.mxo",
+												"name" : "j.return.mxo",
 												"type" : "iLaX"
 											}
  ]
@@ -5739,7 +5739,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 170.0, 60.0, 212.0, 43.0 ],
-									"text" : "jcom.message cue/update @type none @repetitions/allow 1 @description \"Store last changes in the selected CUE\""
+									"text" : "j.message cue/update @type none @repetitions/allow 1 @description \"Store last changes in the selected CUE\""
 								}
 
 							}
@@ -5811,7 +5811,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 31.0, 12.0, 318.0, 43.0 ],
-									"text" : "jcom.message cue/create @type array @repetitions/allow 1 @description \"create a new cue by number and name - name only will create a new cue after the current one\""
+									"text" : "j.message cue/create @type array @repetitions/allow 1 @description \"create a new cue by number and name - name only will create a new cue after the current one\""
 								}
 
 							}
@@ -6133,41 +6133,41 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.namespace+.maxpat",
+								"name" : "j.namespace+.maxpat",
 								"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespace+",
 								"type" : "JSON",
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.message.mxo",
+								"name" : "j.message.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.return.mxo",
+								"name" : "j.return.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.parameter.mxo",
+								"name" : "j.parameter.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.send.mxo",
+								"name" : "j.send.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.namespace.mxo",
+								"name" : "j.namespace.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.receive.mxo",
+								"name" : "j.receive.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.remote.mxo",
+								"name" : "j.remote.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -6430,7 +6430,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 23.0, 22.0, 308.0, 31.0 ],
-									"text" : "jcom.message file/new @type none @repetitions/allow 1 @description \"clear all the cuelist to start a new one\""
+									"text" : "j.message file/new @type none @repetitions/allow 1 @description \"clear all the cuelist to start a new one\""
 								}
 
 							}
@@ -6445,7 +6445,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 130.0, 176.0, 312.0, 43.0 ],
-									"text" : "jcom.message file/edit @type generic @repetitions/allow 1 @description \"edit the cuelist in a text editor - optional argument (editor name) to edit in an external editor\""
+									"text" : "j.message file/edit @type generic @repetitions/allow 1 @description \"edit the cuelist in a text editor - optional argument (editor name) to edit in an external editor\""
 								}
 
 							}
@@ -6460,7 +6460,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 347.0, 22.0, 292.0, 31.0 ],
-									"text" : "jcom.message file/load @type generic @repetitions/allow 1 @description \"load a cuelist file\""
+									"text" : "j.message file/load @type generic @repetitions/allow 1 @description \"load a cuelist file\""
 								}
 
 							}
@@ -6475,7 +6475,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 478.0, 126.0, 347.0, 31.0 ],
-									"text" : "jcom.message file/write/again @type none @repetitions/allow 1 @description \"save the cues in the last file\""
+									"text" : "j.message file/write/again @type none @repetitions/allow 1 @description \"save the cues in the last file\""
 								}
 
 							}
@@ -6490,7 +6490,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 648.0, 23.0, 298.0, 31.0 ],
-									"text" : "jcom.message file/write @type generic @repetitions/allow 1 @description \"save cues into a file\""
+									"text" : "j.message file/write @type generic @repetitions/allow 1 @description \"save cues into a file\""
 								}
 
 							}
@@ -6675,7 +6675,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.message.mxo",
+								"name" : "j.message.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -6709,7 +6709,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 357.0, 164.0, 128.0, 17.0 ],
-					"text" : "jcom.return cue/current/name"
+					"text" : "j.return cue/current/name"
 				}
 
 			}
@@ -6723,7 +6723,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 308.0, 191.0, 136.0, 17.0 ],
-					"text" : "jcom.return cue/current/number"
+					"text" : "j.return cue/current/number"
 				}
 
 			}
@@ -6737,7 +6737,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 258.0, 164.0, 105.0, 17.0 ],
-					"text" : "jcom.return cue/names"
+					"text" : "j.return cue/names"
 				}
 
 			}
@@ -6900,7 +6900,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 29.0, 56.0, 228.0, 20.0 ],
-									"text" : "jcom.oscroute names current addresses"
+									"text" : "j.oscroute names current addresses"
 								}
 
 							}
@@ -7020,7 +7020,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.oscroute.mxo",
+								"name" : "j.oscroute.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -7055,7 +7055,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 171.0, 97.0, 106.0, 20.0 ],
-					"text" : "jcom.cuemanager"
+					"text" : "j.cuemanager"
 				}
 
 			}
@@ -7070,7 +7070,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 36.0, 171.0, 176.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"a cue list module\""
+					"text" : "j.model @type control @description \"a cue list module\""
 				}
 
 			}
@@ -7260,54 +7260,54 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.namespace+.maxpat",
+				"name" : "j.namespace+.maxpat",
 				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespace+",
 				"patcherrelativepath" : "../../../library/components/namespace+",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.cuemanager.mxo",
+				"name" : "j.cuemanager.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.namespace.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

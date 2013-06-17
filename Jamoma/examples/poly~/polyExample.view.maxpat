@@ -147,7 +147,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 161.333328, 185.0, 188.0, 19.0 ],
-					"text" : "jcom.remoteArray unit.[0]/myFloat",
+					"text" : "j.remoteArray unit.[0]/myFloat",
 					"varname" : "jalg.filter_params"
 				}
 
@@ -162,7 +162,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 128.666656, 89.0, 117.0, 19.0 ],
-					"text" : "jcom.remote number"
+					"text" : "j.remote number"
 				}
 
 			}
@@ -176,8 +176,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 16.0, 89.0, 61.0, 19.0 ],
-					"text" : "jcom.view",
-					"varname" : "jcom.model"
+					"text" : "j.view",
+					"varname" : "j.model"
 				}
 
 			}

@@ -80,7 +80,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 173.666656, 89.0, 223.0, 19.0 ],
-					"text" : "jcom.parameter number @value/default 2"
+					"text" : "j.parameter number @value/default 2"
 				}
 
 			}
@@ -94,8 +94,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 16.0, 89.0, 69.0, 19.0 ],
-					"text" : "jcom.model",
-					"varname" : "jcom.model"
+					"text" : "j.model",
+					"varname" : "j.model"
 				}
 
 			}

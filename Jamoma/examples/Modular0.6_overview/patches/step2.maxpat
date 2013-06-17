@@ -308,7 +308,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 763.0, 152.0, 225.0, 60.0 ],
-					"text" : "jcom.parameter rate @type decimal @range/bounds -2. 2. @value/default 1. @description \"movie playback rate\" @ramp/drive Max"
+					"text" : "j.parameter rate @type decimal @range/bounds -2. 2. @value/default 1. @description \"movie playback rate\" @ramp/drive Max"
 				}
 
 			}
@@ -441,7 +441,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 484.0, 152.0, 205.0, 47.0 ],
-					"text" : "jcom.parameter play @type boolean @description \"play the movie\" @priority 2"
+					"text" : "j.parameter play @type boolean @description \"play the movie\" @priority 2"
 				}
 
 			}
@@ -587,7 +587,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 484.0, 413.0, 178.0, 33.0 ],
-					"text" : "jcom.return fps @type decimal @description \"current fps\""
+					"text" : "j.return fps @type decimal @description \"current fps\""
 				}
 
 			}
@@ -603,7 +603,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 235.0, 40.0, 202.0, 33.0 ],
-					"text" : "jcom.message file/load @type none @description \"load a movie\""
+					"text" : "j.message file/load @type none @description \"load a movie\""
 				}
 
 			}
@@ -619,7 +619,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 235.0, 152.0, 226.0, 47.0 ],
-					"text" : "jcom.parameter file/path @type string @description \"the path to a movie\" @priority 1"
+					"text" : "j.parameter file/path @type string @description \"the path to a movie\" @priority 1"
 				}
 
 			}
@@ -634,7 +634,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 3.0, 4.0, 197.0, 225.0 ],
-					"text" : "This step shows how to jamomize a Max patch simply by adding jcom.parameter jcom.message or jcom.return.\n\nThis patch is not a model yet but all parameters, messages and returns are registered to the jamoma system.\n\nLet see what are the features that this simple example allows to use :\nclick on \"Next step\""
+					"text" : "This step shows how to jamomize a Max patch simply by adding j.parameter j.message or j.return.\n\nThis patch is not a model yet but all parameters, messages and returns are registered to the jamoma system.\n\nLet see what are the features that this simple example allows to use :\nclick on \"Next step\""
 				}
 
 			}
@@ -1054,15 +1054,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
  ]

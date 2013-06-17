@@ -838,7 +838,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 		
 		if ((MaxName = jamoma_TTName_To_MaxName(TTName))) {
             
-            if (TTName == kTTSym_bypass && wrappedMaxClass->maxClassName != gensym("jcom.in"))
+            if (TTName == kTTSym_bypass && wrappedMaxClass->maxClassName != gensym("j.in"))
                 continue;
             
 			o->findAttribute(TTName, &attr);

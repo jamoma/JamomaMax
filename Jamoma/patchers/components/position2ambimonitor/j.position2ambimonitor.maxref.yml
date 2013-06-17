@@ -1,0 +1,47 @@
+title: j.position2ambimonitor
+author: [Jamoma]
+created_at: 2012/2/2
+tags: [mapping, max, spatialization, spatdif]
+
+brief: Translate position description from Jamoma OSC position to ambimonitor
+
+desc: >
+ use j.position2ambimonitor to parse Jamoma's position description to ICST ambimonitor. It understands '/prefix.N/position' and '/prefix.N/orientation'.
+
+inlets:
+  - id: 0
+    type: OSC-message
+    desc: Jamoma's OSC-messages.
+
+outlets:
+ - id: 0
+   type: message
+   desc: A message that the ambimonitor recognizes. 
+
+outputs:
+ - name: list
+   desc: A message that the ambimonitor recognizes. 
+   
+args:
+
+attributes:
+ - name: prefix
+   type: string
+   desc: The osc class name (e.g. 'source' when the osc message is '/source.1/position 1 2 3').
+   default: none
+ - name: radius
+   type: float
+   desc: The maximum distance displayed in the ambimonitor. (default 1.0)
+   default: 1.0
+ - name: offset
+   type: int
+   desc: Offset added to incomming instance number N. (default 0)
+   default: 0
+      
+messages:
+
+seealso:
+ - j.ambimonitor2position
+ - j.instance2instance
+
+discussion: Jamoma is a free and open source project. http://www.jamoma.org. The ambimonitor is made by http://www.icst.net.  

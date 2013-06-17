@@ -287,7 +287,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 39.0, 93.0, 285.0, 18.0 ],
-									"text" : "jcom.namespace @filter/list parameter @format umenu_prefix"
+									"text" : "j.namespace @filter/list parameter @format umenu_prefix"
 								}
 
 							}
@@ -328,7 +328,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 39.0, 25.0, 44.0, 17.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -458,11 +458,11 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "jcom.init.mxo",
+								"name" : "j.init.mxo",
 								"type" : "iLaX"
 							}
 , 							{
-								"name" : "jcom.namespace.mxo",
+								"name" : "j.namespace.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -580,7 +580,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 507.0, 236.0, 100.0, 18.0 ],
-					"text" : "jcom.remote mode"
+					"text" : "j.remote mode"
 				}
 
 			}
@@ -840,7 +840,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 109.0, 189.0, 97.0, 18.0 ],
-					"text" : "jcom.remote enable"
+					"text" : "j.remote enable"
 				}
 
 			}
@@ -896,7 +896,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 524.0, 191.0, 167.0, 18.0 ],
-					"text" : "jcom.remote power"
+					"text" : "j.remote power"
 				}
 
 			}
@@ -1215,7 +1215,7 @@
 					"args" : [ "parameter", "message" ],
 					"id" : "obj-40",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.namespaceMenu.maxpat",
+					"name" : "j.namespaceMenu.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1235,7 +1235,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 440.0, 68.0, 109.0, 18.0 ],
-					"text" : "jcom.remote address"
+					"text" : "j.remote address"
 				}
 
 			}
@@ -1250,7 +1250,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 285.0, 117.0, 132.0, 18.0 ],
-					"text" : "jcom.map @function power"
+					"text" : "j.map @function power"
 				}
 
 			}
@@ -1287,7 +1287,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 53.0, 150.0, 119.0, 18.0 ],
-					"text" : "jcom.view"
+					"text" : "j.view"
 				}
 
 			}
@@ -1539,46 +1539,46 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.namespaceMenu.maxpat",
+				"name" : "j.namespaceMenu.maxpat",
 				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespaceMenu",
 				"patcherrelativepath" : "../../../library/components/namespaceMenu",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscinstance.mxo",
+				"name" : "j.oscinstance.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.namespace.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.savebang.mxo",
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -258,7 +258,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 73.0, 245.0, 127.0, 20.0 ],
-					"text" : "jcom.test.finished 100"
+					"text" : "j.test.finished 100"
 				}
 
 			}
@@ -296,7 +296,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 784.0, 357.0, 209.0, 47.0 ],
-					"text" : "jcom.test.assert.equal OneInputRight @input 0.3 @compareTo 0.3 0. 0. 0. 0. 0.3 0."
+					"text" : "j.test.assert.equal OneInputRight @input 0.3 @compareTo 0.3 0. 0. 0. 0. 0.3 0."
 				}
 
 			}
@@ -324,7 +324,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 546.25, 357.0, 192.5, 47.0 ],
-					"text" : "jcom.test.assert.equal OneInputLeft @input 0.5 @compareTo 0. 0. 0. 0.5 0. 0. 0."
+					"text" : "j.test.assert.equal OneInputLeft @input 0.5 @compareTo 0. 0. 0. 0.5 0. 0. 0."
 				}
 
 			}
@@ -365,7 +365,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 291.285706, 357.0, 198.714294, 47.0 ],
-					"text" : "jcom.test.assert.equal mixedInputs @input 0.5 @compareTo 0.3 0. 0. 0.5 0. 0.3 0. @issue 1323"
+					"text" : "j.test.assert.equal mixedInputs @input 0.5 @compareTo 0.3 0. 0. 0.5 0. 0.3 0. @issue 1323"
 				}
 
 			}
@@ -386,7 +386,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-63",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -397,7 +397,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-64",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -408,7 +408,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-65",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -419,7 +419,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-66",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -430,7 +430,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-67",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -441,7 +441,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-68",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -452,7 +452,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-69",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -470,14 +470,14 @@
 					"numoutlets" : 8,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 291.857117, 231.0, 144.333359, 20.0 ],
-					"text" : "jcom.unpack≈ 7"
+					"text" : "j.unpack≈ 7"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-59",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -502,7 +502,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-52",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -513,7 +513,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-53",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -524,7 +524,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-54",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -535,7 +535,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-55",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -546,7 +546,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-56",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -557,7 +557,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-57",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -575,7 +575,7 @@
 					"numoutlets" : 8,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 784.0, 231.0, 145.0, 20.0 ],
-					"text" : "jcom.unpack≈ 7"
+					"text" : "j.unpack≈ 7"
 				}
 
 			}
@@ -596,7 +596,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-22",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -607,7 +607,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-23",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -618,7 +618,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-24",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -629,7 +629,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-25",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -640,7 +640,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-26",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -651,7 +651,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-27",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -662,7 +662,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-28",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -680,7 +680,7 @@
 					"numoutlets" : 8,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 543.5, 231.0, 145.0, 20.0 ],
-					"text" : "jcom.unpack≈ 7"
+					"text" : "j.unpack≈ 7"
 				}
 
 			}
@@ -722,7 +722,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 784.0, 172.0, 100.0, 20.0 ],
-					"text" : "jcom.pack≈ 7"
+					"text" : "j.pack≈ 7"
 				}
 
 			}
@@ -736,7 +736,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 543.5, 172.0, 100.0, 20.0 ],
-					"text" : "jcom.pack≈ 7"
+					"text" : "j.pack≈ 7"
 				}
 
 			}
@@ -1401,29 +1401,29 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.test.assert.equal.maxpat",
+				"name" : "j.test.assert.equal.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.assert.equal",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.assert.equal",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.finished.maxpat",
+				"name" : "j.test.finished.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.finished",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.finished",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.pack≈.mxo",
+				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -156,7 +156,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 45.0, 130.0, 273.0, 43.0 ],
-									"text" : "jcom.return master/fader @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Master fader.\"",
+									"text" : "j.return master/fader @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Master fader.\"",
 									"varname" : "#2/fader"
 								}
 

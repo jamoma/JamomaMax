@@ -706,7 +706,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute /rolloff /range /rate /spacing /oscillators",
+					"text" : "j.oscroute /rolloff /range /rate /spacing /oscillators",
 					"numoutlets" : 6,
 					"fontname" : "Arial",
 					"outlettype" : [ "", "", "", "", "", "" ],

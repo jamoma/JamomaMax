@@ -224,7 +224,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 128.0, 10.0, 107.0, 18.0 ],
-					"text" : "jcom.remote #1/address"
+					"text" : "j.remote #1/address"
 				}
 
 			}
@@ -467,7 +467,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 39.0, 41.0, 81.0, 29.0 ],
-					"text" : "jcom.remote #1/value"
+					"text" : "j.remote #1/value"
 				}
 
 			}

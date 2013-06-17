@@ -52,7 +52,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 335.0, 493.0, 496.0, 20.0 ],
-					"text" : "parameters can also be controlled by UI objects through the jcom.remote external"
+					"text" : "parameters can also be controlled by UI objects through the j.remote external"
 				}
 
 			}
@@ -78,7 +78,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 335.0, 525.0, 173.0, 20.0 ],
-					"text" : "jcom.remote /player.B/file/load"
+					"text" : "j.remote /player.B/file/load"
 				}
 
 			}
@@ -135,7 +135,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 605.5, 567.0, 173.0, 20.0 ],
-					"text" : "jcom.remote /player.B/rate"
+					"text" : "j.remote /player.B/rate"
 				}
 
 			}
@@ -162,7 +162,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 335.0, 567.0, 173.0, 20.0 ],
-					"text" : "jcom.remote /player.B/play"
+					"text" : "j.remote /player.B/play"
 				}
 
 			}
@@ -233,7 +233,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 930.0, 371.0, 173.0, 20.0 ],
-					"text" : "jcom.receive /player.A/play"
+					"text" : "j.receive /player.A/play"
 				}
 
 			}
@@ -274,7 +274,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 930.0, 421.0, 173.0, 20.0 ],
-					"text" : "jcom.receive /player.*/play"
+					"text" : "j.receive /player.*/play"
 				}
 
 			}
@@ -289,7 +289,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 930.0, 337.0, 156.0, 33.0 ],
-					"text" : "Use jcom.receive to listen to one parameter :"
+					"text" : "Use j.receive to listen to one parameter :"
 				}
 
 			}
@@ -345,7 +345,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 957.0, 194.0, 170.0, 20.0 ],
-					"text" : "as there is a jcom.model, you "
+					"text" : "as there is a j.model, you "
 				}
 
 			}
@@ -386,7 +386,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 930.0, 287.0, 177.0, 20.0 ],
-					"text" : "jcom.send /track/channel.*/play"
+					"text" : "j.send /track/channel.*/play"
 				}
 
 			}
@@ -413,7 +413,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 930.0, 116.0, 173.0, 20.0 ],
-					"text" : "jcom.send /player.A/play"
+					"text" : "j.send /player.A/play"
 				}
 
 			}
@@ -442,7 +442,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 930.0, 499.0, 168.0, 20.0 ],
-					"text" : "jcom.receive /player.B:activity"
+					"text" : "j.receive /player.B:activity"
 				}
 
 			}
@@ -471,7 +471,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 930.0, 51.0, 198.0, 33.0 ],
-					"text" : "Use jcom.send to access remotely  parameters/attributes"
+					"text" : "Use j.send to access remotely  parameters/attributes"
 				}
 
 			}
@@ -512,7 +512,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 930.0, 235.0, 115.0, 20.0 ],
-					"text" : "jcom.send /player.A"
+					"text" : "j.send /player.A"
 				}
 
 			}
@@ -651,7 +651,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 635.0, 287.0, 198.0, 20.0 ],
-					"text" : "jcom.oscroute channel.A channel.B"
+					"text" : "j.oscroute channel.A channel.B"
 				}
 
 			}
@@ -1009,7 +1009,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 354.0, 117.0, 103.0, 47.0 ],
-									"text" : "jcom.namespace @filter/list return @format umenu"
+									"text" : "j.namespace @filter/list return @format umenu"
 								}
 
 							}
@@ -1025,7 +1025,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 182.0, 117.0, 119.0, 47.0 ],
-									"text" : "jcom.namespace @filter/list message @format umenu"
+									"text" : "j.namespace @filter/list message @format umenu"
 								}
 
 							}
@@ -1041,7 +1041,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 10.0, 117.0, 125.0, 47.0 ],
-									"text" : "jcom.namespace @filter/list parameter @format umenu"
+									"text" : "j.namespace @filter/list parameter @format umenu"
 								}
 
 							}
@@ -2100,51 +2100,51 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.namespace.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]

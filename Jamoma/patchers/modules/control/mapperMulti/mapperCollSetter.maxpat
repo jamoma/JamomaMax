@@ -126,7 +126,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 104.0, 381.0, 100.0, 18.0 ],
-					"text" : "jcom.oscinstance"
+					"text" : "j.oscinstance"
 				}
 
 			}
@@ -140,7 +140,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 104.0, 359.0, 100.0, 18.0 ],
-					"text" : "jcom.oscroute"
+					"text" : "j.oscroute"
 				}
 
 			}
@@ -252,7 +252,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 63.0, 332.0, 100.0, 18.0 ],
-					"text" : "jcom.receive"
+					"text" : "j.receive"
 				}
 
 			}

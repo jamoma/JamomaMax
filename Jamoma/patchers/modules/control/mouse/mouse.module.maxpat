@@ -72,7 +72,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 270.0, 155.0, 125.0, 19.0 ],
-					"text" : "jcom.remote reference",
+					"text" : "j.remote reference",
 					"varname" : "mouse_on[3]"
 				}
 
@@ -87,7 +87,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 245.0, 70.0, 108.0, 19.0 ],
-					"text" : "jcom.remote active",
+					"text" : "j.remote active",
 					"varname" : "mouse_on[2]"
 				}
 
@@ -141,8 +141,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 46.0, 135.0, 61.0, 19.0 ],
-					"text" : "jcom.view",
-					"varname" : "jcom.model"
+					"text" : "j.view",
+					"varname" : "j.model"
 				}
 
 			}
@@ -150,7 +150,7 @@
 				"box" : 				{
 					"background" : 1,
 					"id" : "obj-6",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],

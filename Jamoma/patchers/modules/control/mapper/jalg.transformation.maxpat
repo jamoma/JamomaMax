@@ -18,7 +18,7 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute \/in_low \/in_high \/out_low \/out_high \/exponent_base",
+					"text" : "j.oscroute \/in_low \/in_high \/out_low \/out_high \/exponent_base",
 					"patching_rect" : [ 82.0, 170.0, 321.0, 17.0 ],
 					"fontname" : "Verdana",
 					"id" : "obj-1",
@@ -85,7 +85,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute algorithm",
+					"text" : "j.oscroute algorithm",
 					"patching_rect" : [ 82.0, 54.0, 120.0, 17.0 ],
 					"fontname" : "Verdana",
 					"id" : "obj-6",
