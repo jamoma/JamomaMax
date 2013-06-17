@@ -1,11 +1,18 @@
-/* 
- * jcom.parameter
- * External for Jamoma: parameter definition
- * By Tim Place and Théo de la Hogue, Copyright © 2011
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief j.parameter : Jamoma model parameter definition
+ *
+ * @details
+ *
+ * @authors Timothy Place, Théo de la Hogue, Trond Lossius
+ *
+ * @copyright © 2011 by Timothy Place, Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTModularClassWrapperMax.h"
 
@@ -70,19 +77,19 @@ void		data_float(TTPtr self, double value);
 
 /** Process an incoming message containing a list.
  @param self		The parameter instance.
- @param msg		The dec symbol pointer
- @param argc	Atom array count (length)
- @param argv	Pointer to the atom array
+ @param msg			The dec symbol pointer
+ @param argc		Atom array count (length)
+ @param argv		Pointer to the atom array
  */
 void		data_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 
 /** Increase parameter value in steps.
  @details Optional arguments passed as pointer to array of atoms specify how many steps to increase value by, if parameter is to ramp to new value and ramp time.
- @param self	The parameter instance
- @param msg		The dec symbol pointer
- @param argc	Atom array count (length)
- @param argv	Pointer to the atom array
+ @param self		The parameter instance
+ @param msg			The dec symbol pointer
+ @param argc		Atom array count (length)
+ @param argv		Pointer to the atom array
  @see	param_inc
  */
 void		data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
@@ -90,10 +97,10 @@ void		data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 /** Decrease parameter value in steps.
  @details Optional arguments passed as pointer to array of atoms specify how many steps to increase value by, if parameter is to ramp to new value and ramp time.
- @param self	The parameter instance
- @param msg		The dec symbol pointer
- @param argc	Atom array count (length)
- @param argv	Pointer to the atom array
+ @param self		The parameter instance
+ @param msg			The dec symbol pointer
+ @param argc		Atom array count (length)
+ @param argv		Pointer to the atom array
  @see	param_inc
  */
 void		data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
@@ -128,6 +135,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 #endif
 }
 
+
 void WrapTTDataClass(WrappedClassPtr c)
 {
 	class_addmethod(c->maxClass, (method)data_assist,						"assist",				A_CANT, 0L);
@@ -148,6 +156,7 @@ void WrapTTDataClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)data_address,						"address",				A_SYM,0);
 }
+
 
 void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 {
@@ -188,12 +197,14 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	data_new_address(self, relativeAddress, argc--, argv++);
 }
 
+
 void WrappedDataClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	free(EXTRA);
 }
-	
+
+
 void data_new_address(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -224,6 +235,7 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, Ato
 	defer_low((ObjectPtr)x, (method)data_subscribe, relativeAddress, argc, argv);
 }
 
+
 void data_subscribe(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -241,6 +253,7 @@ void data_subscribe(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, AtomP
 		object_error((ObjectPtr)x, "can't register because %s is not a relative address", relativeAddress->s_name);
 }
 
+
 void data_address(TTPtr self, SymbolPtr address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -256,6 +269,7 @@ void data_address(TTPtr self, SymbolPtr address)
 	// rebuild wrapped object (or internals)
 	defer_low(self,(method)data_new_address, address, argc, argv);
 }
+
 
 // Method for Assistance Messages
 void data_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst)
@@ -274,11 +288,13 @@ void data_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst)
  	}
 }
 
+
 #ifndef JMOD_MESSAGE
 void data_bang(TTPtr self)
 {
 	data_list(self, _sym_bang, 0, NULL);
 }
+
 
 void data_int(TTPtr self, long value)
 {
@@ -288,6 +304,7 @@ void data_int(TTPtr self, long value)
 	data_list(self, _sym_int, 1, &a);
 }
 
+
 void data_float(TTPtr self, double value)
 {
 	t_atom a;
@@ -296,12 +313,14 @@ void data_float(TTPtr self, double value)
 	data_list(self, _sym_float, 1, &a);
 }
 
+
 void data_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 
 	jamoma_data_command((TTDataPtr)selectedObject, msg, argc, argv);
 }
+
 
 void WrappedDataClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
@@ -310,6 +329,7 @@ void WrappedDataClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 	jamoma_data_command((TTDataPtr)selectedObject, msg, argc, argv);
 }
 #endif
+
 
 #ifndef JMOD_RETURN
 void data_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -324,6 +344,7 @@ void data_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 }
 #endif
 
+
 #ifndef JMOD_MESSAGE
 void data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
@@ -333,6 +354,7 @@ void data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
 	selectedObject->sendMessage(TTSymbol("Inc"), v, kTTValNONE);
 }
+
 
 void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
