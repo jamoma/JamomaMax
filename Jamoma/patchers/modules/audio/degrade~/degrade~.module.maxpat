@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 368.0, 313.0, 814.0, 242.0 ],
+		"rect" : [ 432.0, 402.0, 814.0, 242.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -95,10 +95,10 @@
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 610.0, 96.0, 163.0, 20.0 ],
-					"text" : "j.remote out.2/amplitude"
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 610.0, 96.0, 123.0, 20.0 ],
+					"text" : "j.meter_receive out.2"
 				}
 
 			}
@@ -135,10 +135,10 @@
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 610.0, 33.0, 163.0, 20.0 ],
-					"text" : "j.remote out.1/amplitude"
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 610.0, 33.0, 123.0, 20.0 ],
+					"text" : "j.meter_receive out.1"
 				}
 
 			}
@@ -415,8 +415,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "j.meter_receive.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/meter_receive",
+				"patcherrelativepath" : "../../../components/meter_receive",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -431,6 +438,14 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
