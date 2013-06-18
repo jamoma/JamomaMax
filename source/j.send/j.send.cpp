@@ -170,7 +170,7 @@ void WrapTTSenderClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)WrappedSenderClass_anything,	"symbol",					A_SYM, 0L);
 #endif
 	
-	class_addmethod(c->maxClass, (method)send_address,						"address",					A_SYM, 0L);
+	class_addmethod(c->maxClass, (method)send_address,					"address",					A_SYM, 0L);
 	
     // no class_dspinit : it is done in wrapTTModularClassAsMaxClass for AUDIO_EXTERNAL
 }
@@ -482,8 +482,8 @@ t_int *send_perform(t_int *w)
 					
 					if (anObject) {
 						
-						// INPUT case : cache the signal into the input
-						if (anObject->getName() == kTTSym_Input)
+						// INPUT AUDIO case : cache the signal into the input
+						if (anObject->getName() == kTTSym_InputAudio)
 							TTInputPtr(anObject)->mSignalCache->appendUnique(aSender->mSignal);
 						
 						// DATA case : send the mean value of the sample

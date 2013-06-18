@@ -8,6 +8,8 @@
 
 /* Begin PBXFileReference section */
 		46ABF92A16842D9900B0DCB9 /* j.out~.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.out~.yml"; sourceTree = "<group>"; };
+		46DEED0D177067F3003FC4F0 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
+		46DEED0E177067F3003FC4F0 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
 		D22F0B89155E673E0090ED01 /* j.out.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = j.out.cpp; path = ../j.out/j.out.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -17,6 +19,8 @@
 			children = (
 				46ABF92A16842D9900B0DCB9 /* j.out~.yml */,
 				D22F0B89155E673E0090ED01 /* j.out.cpp */,
+				46DEED0D177067F3003FC4F0 /* TTModularClassWrapperMax.h */,
+				46DEED0E177067F3003FC4F0 /* TTModularClassWrapperMax.cpp */,
 			);
 			sourceTree = "<group>";
 		};

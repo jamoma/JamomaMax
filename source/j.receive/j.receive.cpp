@@ -195,7 +195,7 @@ void receive_subscribe(TTPtr self)
 		return;
 	
 	// if the j.receive tries to bind an Output object : bind the signal attribute
-	if (x->address.getName() == TTSymbol("out"))
+	if (x->address.getName() == TTSymbol("out") || x->address.getName() == TTSymbol("in"))
 		x->address = x->address.appendAttribute(kTTSym_signal);
 	
 	// for absolute address
@@ -427,7 +427,7 @@ t_int *receive_perform(t_int *w)
 					if (anObject) {
 						
 						// OUTPUT case : sum the signal from the output
-						if (anObject->getName() == kTTSym_Output) {
+						if (anObject->getName() == kTTSym_OutputAudio) {
 							
 							// get output signal vectorSize
 							TTOutputPtr(anObject)->mSignalOut->getAttributeValue(kTTSym_vectorSize, vectorSize);
@@ -435,6 +435,16 @@ t_int *receive_perform(t_int *w)
 							// sum output signal
 							*TTAudioSignalPtr(aReceiver->mSignal) += *TTAudioSignalPtr(TTOutputPtr(anObject)->mSignalOut);
 						}
+                        
+                        // INPUT AUDIO case : sum the signal from the input
+                        else if (anObject->getName() == kTTSym_InputAudio) {
+                            
+                            // get output signal vectorSize
+							TTInputPtr(anObject)->mSignalOut->getAttributeValue(kTTSym_vectorSize, vectorSize);
+							
+							// sum output signal
+							*TTAudioSignalPtr(aReceiver->mSignal) += *TTAudioSignalPtr(TTOutputPtr(anObject)->mSignalOut);
+                        }
 						
 						// DATA case : fill a signal with the data value and sum it
 						else if (anObject->getName() == kTTSym_Data) {
@@ -513,8 +523,8 @@ void receive_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, d
 					
 					if (anObject) {
 						
-						// OUTPUT case : sum the signal from the output
-						if (anObject->getName() == kTTSym_Output) {
+						// OUTPUT AUDIO case : sum the signal from the output
+						if (anObject->getName() == kTTSym_OutputAudio) {
 							
 							// get output signal vectorSize
 							TTOutputPtr(anObject)->mSignalOut->getAttributeValue(kTTSym_vectorSize, vectorSize);
@@ -522,6 +532,16 @@ void receive_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, d
 							// sum output signal
 							*TTAudioSignalPtr(aReceiver->mSignal) += *TTAudioSignalPtr(TTOutputPtr(anObject)->mSignalOut);
 						}
+                        
+                        // INPUT AUDIO case : sum the signal from the input
+                        else if (anObject->getName() == kTTSym_InputAudio) {
+                            
+                            // get output signal vectorSize
+							TTInputPtr(anObject)->mSignalOut->getAttributeValue(kTTSym_vectorSize, vectorSize);
+							
+							// sum output signal
+							*TTAudioSignalPtr(aReceiver->mSignal) += *TTAudioSignalPtr(TTInputPtr(anObject)->mSignalOut);
+                        }
 						
 						// DATA case : fill a signal with the data value and sum it
 						else if (anObject->getName() == kTTSym_Data) {

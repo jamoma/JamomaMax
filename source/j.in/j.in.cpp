@@ -22,14 +22,6 @@
 typedef struct extra {
 	
 	TTSymbol instance;		///< Input instance symbol
-
-#ifdef JCOM_IN_TILDE
-	// Store extra data relating to envelope tracking. Only available to j.in~
-	void		*clock;			///< Clock to update amplitude returns
-	TTUInt32	pollInterval;	///< The sample rate of the amplitude follower
-	TTFloat32	meter;			///< meter value
-	TTFloat32	peak;			///< peak value
-#endif
 	
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
@@ -76,21 +68,6 @@ void		in_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doubl
 
 /** j.in~ 64-bit DSP method (for Max 6). Only defineed for j.in~. */
 void		in_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags);
-
-/** Activate envelope tracking in j.in~. 
- @param self		Pointer to this object.
- @param msg			The message sent to this object.
- @param argc		The number of arguments passed to the object.
- @param argv		Pointer to an array of atoms passed to the object.
- @see				in_update_amplitude
- */
-void		in_return_amplitude_active(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-/** Perform envelope tracking in j.in~.
- @param self		Pointer to this object.
- @see				in_return_amplitude_active
- */
-void		in_update_amplitude(TTPtr self);
 
 #else
 
@@ -164,7 +141,6 @@ void WrapTTInputClass(WrappedClassPtr c)
 #ifdef JCOM_IN_TILDE
 	class_addmethod(c->maxClass, (method)in_dsp64,						"dsp64",				A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)in_return_amplitude_active,	"return_amplitude_active",	A_CANT, 0);
 #else
 	class_addmethod(c->maxClass, (method)in_return_signal,				"return_signal",		A_CANT, 0);
 	
@@ -217,12 +193,6 @@ void WrappedInputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// Prepare memory to store internal datas
 	x->internals = new TTHash();
 	
-	// Prepare extra data for envelope tracking
-	EXTRA->clock = NULL;
-	EXTRA->pollInterval = 0;	// not active by default
-	EXTRA->meter = 0.;
-	EXTRA->peak = 0.;
-
 #else
 	
 	jamoma_input_create((ObjectPtr)x, &x->wrappedObject);
@@ -247,8 +217,6 @@ void WrappedInputClass_free(TTPtr self)
 #ifdef JCOM_IN_TILDE
 	dsp_free((t_pxobject *)x);					// Always call dsp_free first in this routine
 	
-	if (EXTRA->clock)
-		freeobject((t_object *)EXTRA->clock);	// delete our clock
 #endif
 }
 
@@ -283,41 +251,6 @@ void in_subscribe(TTPtr self)
 		returnedNode->getParent()->getAddress(parentAddress);
 		outputAddress = parentAddress.appendAddress(TTAddress("out")).appendInstance(EXTRA->instance);
 		x->wrappedObject->setAttributeValue(TTSymbol("outputAddress"), outputAddress);
-		
-#ifdef JCOM_IN_TILDE
-		
-		// make internal data to return amplitude
-		v = TTValue(0., 1.);
-		formatDescription = "instant amplitude of %s input";
-		
-		sInstance = EXTRA->instance.c_str();
-		jamoma_edit_string_instance(formatDescription, &inDescription, sInstance);
-			
-		makeInternals_data(x, returnedAddress, TTSymbol("amplitude"), NULL, x->patcherPtr, kTTSym_return, (TTObjectBasePtr*)&aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_decimal);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_rangeBounds, v);
-		aData->setAttributeValue(kTTSym_description, TTSymbol(inDescription->s_name));
-		aData->setAttributeValue(kTTSym_dataspace, TTSymbol("gain"));
-		aData->setAttributeValue(kTTSym_dataspaceUnit, TTSymbol("linear"));
-		
-		// make internal data to parameter in/amplitude/active
-		makeInternals_data(x, returnedAddress, TTSymbol("amplitude/active"), gensym("return_amplitude_active"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_integer);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		v = TTValue((int)EXTRA->pollInterval);
-		aData->setAttributeValue(kTTSym_valueDefault, v);
-		v = TTValue(0, 1000);
-		aData->setAttributeValue(kTTSym_rangeBounds, v);
-		aData->setAttributeValue(kTTSym_rangeClipmode, kTTSym_low);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("set the sample rate of the amplitude follower"));
-		
-		// launch the clock to update amplitude regulary
-		EXTRA->clock = clock_new(x, (method)in_update_amplitude);
-		if (EXTRA->pollInterval)
-			clock_delay(EXTRA->clock, EXTRA->pollInterval);
-		
-#endif
 		
 		// expose bypass and mute attributes of TTInput as TTData in the tree structure
 		x->subscriberObject->exposeAttribute(x->wrappedObject, kTTSym_bypass, kTTSym_parameter, &aData);
@@ -417,35 +350,8 @@ void in_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, double
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTInputAudioPtr				anInput = (TTInputAudioPtr)x->wrappedObject;
     
-	if (anInput) {
+	if (anInput)
 		anInput->process(ins[0], outs[0], sampleframes);
-
-        // metering
-		if (!anInput->mMute) {
-            TTUInt16				n = sampleframes;;
-            TTFloat32				currentvalue = 0;
-            TTFloat32				peakvalue = 0.0;
-            TTSampleValue*          envelope = outs[0];
-			
-			while (n--) {
-				if ((*envelope) < 0 )						// get the current sample's absolute value
-					currentvalue = -(*envelope);
-				else
-					currentvalue = *envelope;
-				
-				if (currentvalue > peakvalue) 				// if it's a new peak amplitude...
-					peakvalue = currentvalue;
-				envelope++; 								// increment pointer in the vector
-			}
-			
-			// set meter
-			EXTRA->meter = peakvalue;
-			
-			// set peak
-			if (peakvalue > EXTRA->peak)
-				EXTRA->peak = peakvalue;
-		}
-	}
 }
 
 
@@ -458,56 +364,6 @@ void in_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, long
 	if (anInput) {
 		anInput->setupAudioSignals(maxvectorsize);
 		object_method(dsp64, gensym("dsp_add64"), x, in_perform64, 0, NULL);
-	}
-}
-
-
-void in_return_amplitude_active(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
-	TTBoolean clockStopped;
-	
-	if (argc && argv) {
-		
-		clockStopped = EXTRA->pollInterval == 0;
-		
-		EXTRA->pollInterval = atom_getlong(argv);
-		
-		// start our clock
-		if (clockStopped && EXTRA->pollInterval)
-			clock_delay(EXTRA->clock, EXTRA->pollInterval);
-	}
-}
-
-void in_update_amplitude(TTPtr self)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputPtr		anInput = (TTInputPtr)x->wrappedObject;
-	TTValue			storedObject;
-	TTObjectBasePtr		anObject;
-	TTErr			err;
-	
-	if (anInput) {
-		
-		if (x->internals) {
-			if (!x->internals->isEmpty()) {
-				
-				// get internal data object used to return amplitude
-				err = x->internals->lookup(TTSymbol("amplitude"), storedObject);
-				
-				if (!err) {
-					
-					anObject = storedObject[0];
-					
-					// set current meter value
-					anObject->setAttributeValue(kTTSym_value, EXTRA->meter);
-				}
-			}
-		}
-		
-		// restart the clock
-		if (EXTRA->pollInterval)
-			clock_delay(EXTRA->clock, EXTRA->pollInterval);
 	}
 }
 
