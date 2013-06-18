@@ -226,6 +226,7 @@ void WrappedInputClass_free(TTPtr self)
 void in_subscribe(TTPtr self)
 {
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
+    TTAddress   signalAddress;
 	TTAddress   inputAddress;
 	TTAddress   outputAddress;
 	TTValue		v, args;
@@ -236,8 +237,15 @@ void in_subscribe(TTPtr self)
 	TTString	formatDescription, sInstance;
 	SymbolPtr	inDescription;
 	
-	inputAddress = TTAddress("in").appendInstance(EXTRA->instance);
-	
+#ifdef JCOM_IN_TILDE
+    signalAddress = TTAddress("audio");
+#else
+    signalAddress = TTAddress("flow");
+#endif
+
+    // edit "signal/in.instance" address
+    inputAddress = signalAddress.appendAddress(TTAddress("in")).appendInstance(EXTRA->instance);
+
 	// if the subscription is successful
 	if (!jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, inputAddress, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
@@ -251,21 +259,22 @@ void in_subscribe(TTPtr self)
 		returnedNode->getParent()->getAddress(parentAddress);
 		outputAddress = parentAddress.appendAddress(TTAddress("out")).appendInstance(EXTRA->instance);
 		x->wrappedObject->setAttributeValue(TTSymbol("outputAddress"), outputAddress);
-		
-		// expose bypass and mute attributes of TTInput as TTData in the tree structure
-		x->subscriberObject->exposeAttribute(x->wrappedObject, kTTSym_bypass, kTTSym_parameter, &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this attribute bypasses the model's processing algtorithm, letting incoming signal pass through unaffected"));
-		v = TTValue(0);
-		aData->setAttributeValue(kTTSym_valueDefault, v);			
-		
-		x->subscriberObject->exposeAttribute(x->wrappedObject, kTTSym_mute, kTTSym_parameter, &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this attribute turns off model's inputs."));
-		v = TTValue(0);
-		aData->setAttributeValue(kTTSym_valueDefault, v);
+        
+        /* TODO : move this inside j.model (which have to listen any signal node creation/destruction)
+
+         // make internal parameter at signal/mute address
+         makeInternals_data(x, parentAddress, TTSymbol("mute"), gensym("return_mute"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
+         aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
+         aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+         aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter turns off model's audio processing"));
+         
+         // make internal parameter at signal/bypass address
+         makeInternals_data(x, parentAddress, TTSymbol("bypass"), gensym("return_bypass"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
+         aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
+         aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+         aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter bypasses the model's processing algtorithm, letting incoming signal pass through unaffected"));
+         */
+
 	}
 }
 
