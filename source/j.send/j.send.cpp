@@ -170,7 +170,7 @@ void WrapTTSenderClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)WrappedSenderClass_anything,	"symbol",					A_SYM, 0L);
 #endif
 	
-	class_addmethod(c->maxClass, (method)send_address,						"address",					A_SYM, 0L);
+	class_addmethod(c->maxClass, (method)send_address,					"address",					A_SYM, 0L);
 	
     // no class_dspinit : it is done in wrapTTModularClassAsMaxClass for AUDIO_EXTERNAL
 }
@@ -324,8 +324,8 @@ void send_subscribe(TTPtr self)
 void send_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTAddress			absoluteAddress;
-	Atom						a[1];
+	TTAddress                   absoluteAddress;
+	t_atom						a[1];
 	
 	if (argc && argv && x->wrappedObject) {
 		
@@ -424,7 +424,19 @@ void WrappedSenderClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
 void send_address(TTPtr self, SymbolPtr address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	x->address =  TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+    t_atom						a[1];
+    
+    x->address =  TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+    
+    // for absolute address
+	if (x->address.getType() == kAddressAbsolute) {
+		
+		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
+		
+		atom_setsym(a, gensym((char*)x->address.c_str()));
+		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
+		return;
+	}
     
 	send_subscribe(self);
 }
@@ -482,8 +494,8 @@ t_int *send_perform(t_int *w)
 					
 					if (anObject) {
 						
-						// INPUT case : cache the signal into the input
-						if (anObject->getName() == kTTSym_Input)
+						// INPUT AUDIO case : cache the signal into the input
+						if (anObject->getName() == kTTSym_InputAudio)
 							TTInputPtr(anObject)->mSignalCache->appendUnique(aSender->mSignal);
 						
 						// DATA case : send the mean value of the sample

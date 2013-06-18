@@ -8,8 +8,6 @@
 
 /* Begin PBXFileReference section */
 		D24041E815AC3E4700D5CCD5 /* j.send.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = j.send.cpp; path = ../j.send/j.send.cpp; sourceTree = SOURCE_ROOT; };
-		D24041E915AC3E5600D5CCD5 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../../../../../Core/Shared/max/TTModularClassWrapperMax.cpp; sourceTree = SOURCE_ROOT; };
-		D24041EA15AC3E5600D5CCD5 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../../../../../Core/Shared/max/TTModularClassWrapperMax.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -17,8 +15,6 @@
 			isa = PBXGroup;
 			children = (
 				D24041E815AC3E4700D5CCD5 /* j.send.cpp */,
-				D24041EA15AC3E5600D5CCD5 /* TTModularClassWrapperMax.h */,
-				D24041E915AC3E5600D5CCD5 /* TTModularClassWrapperMax.cpp */,
 			);
 			name = "j.send~";
 			sourceTree = "<group>";

@@ -114,6 +114,10 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->outlets[data_out] = outlet_new(x, NULL);						// anything outlet to output data
 	x->outlets[set_out] = outlet_new(x, NULL);						// anything outlet to output defered data prepend with a 'set'
 	
+    x->useInternals = YES;
+    x->internals = new TTHash();
+    x->internals->setThreadProtection(YES);
+    
 	x->arraySize = 0;
 	x->arrayIndex = 0;
 	x->arrayAddress = kTTAdrsEmpty;
@@ -188,11 +192,7 @@ void remote_new_address(TTPtr self, SymbolPtr address)
 	TTObjectBasePtr				anObject;
 	TTValue						v;
 		
-    x->useInternals = YES;
-    x->internals = new TTHash();
-    x->internals->setThreadProtection(YES);
     x->cursor = kTTSymEmpty;
-    
     x->arrayAddress = newAddress;
     
     number = jamoma_parse_bracket(address, x->arrayFormatInteger, x->arrayFormatString);
@@ -497,6 +497,7 @@ void remote_address(TTPtr self, SymbolPtr address)
                 
                 // rebuild internals
                 EXTRA->countSubscription = 0;
+                x->internals->clear();
                 defer(self,(method)remote_new_address, address, 0, NULL);
             }
         }
@@ -543,9 +544,8 @@ void remote_bang(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
-	if (x->internals) {
+	if (x->arraySize > 0)
 		remote_list(self, _sym_bang, 0, NULL);
-	}
 	else
 		object_error((ObjectPtr)x, "bang : the array is empty");
 }
@@ -560,7 +560,7 @@ void remote_int(TTPtr self, long value)
 		wrappedModularClass_ArraySelect(self, _sym_nothing, 1, &a);
 	}
 	else {
-		if (x->internals) {
+		if (x->arraySize > 0) {
 			atom_setlong(&a, value);
 			remote_list(self, _sym_int, 1, &a);
 		}
@@ -574,7 +574,8 @@ void remote_float(TTPtr self, double value)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	t_atom a;
 	
-	if (x->internals) {
+	if (x->arraySize > 0) {
+        
 		atom_setfloat(&a, value);
 		remote_list(self, _sym_float, 1, &a);
 	}
@@ -586,7 +587,7 @@ void remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 
-	if (x->internals) {
+	if (x->arraySize > 0) {
 		
 		// send to each view
 		if (x->arrayIndex == 0) {
@@ -642,7 +643,7 @@ void remote_array(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
     SymbolPtr	instanceAddress;
     TTSymbol	memoCursor;
     
-	if (x->internals) {
+	if (x->arraySize > 0) {
 		
 		// is the incoming data size is a multiple of the array size ?
         d = argc / x->arraySize;
@@ -839,27 +840,24 @@ void remote_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
 	
 	if (msg) {
 		
-		if (x->internals) {
-			
-			// Starts iteration on internals
-			x->iterateInternals = YES;
-			
-			for (i = 1; i <= x->arraySize; i++) {
-				
-				jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
-				x->cursor = TTSymbol(instanceAddress->s_name);
-				
-				// set address attribute of the internal Viewer object
-				address = TTAddress(msg->s_name).appendAddress(TTAddress(instanceAddress->s_name));
-				selectedObject->setAttributeValue(kTTSym_address, address);
-                
-                JamomaDebug object_post((ObjectPtr)x, "binds on %s", address.c_str());
-			}
-			
-			// Ends iteration on internals
-			x->iterateInternals = NO;
-
-			EXTRA->countSubscription = 0;
-		}
+        // Starts iteration on internals
+        x->iterateInternals = YES;
+        
+        for (i = 1; i <= x->arraySize; i++) {
+            
+            jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
+            x->cursor = TTSymbol(instanceAddress->s_name);
+            
+            // set address attribute of the internal Viewer object
+            address = TTAddress(msg->s_name).appendAddress(TTAddress(instanceAddress->s_name));
+            selectedObject->setAttributeValue(kTTSym_address, address);
+            
+            JamomaDebug object_post((ObjectPtr)x, "binds on %s", address.c_str());
+        }
+        
+        // Ends iteration on internals
+        x->iterateInternals = NO;
+        
+        EXTRA->countSubscription = 0;
 	}
 }
