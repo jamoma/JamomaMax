@@ -29,7 +29,6 @@ TTErr	PackReset(PackPtr self, long vectorSize);
 TTErr	PackSetup(PackPtr self);
 TTErr	PackObject(PackPtr self, TTAudioGraphObjectPtr audioSourceObject);
 t_int*	PackPerform(t_int* w);
-void	PackDsp(PackPtr self, t_signal** sp, short* count);
 void	PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags);
 //MaxErr	PackSetGain(PackPtr self, void* attr, AtomCount argc, AtomPtr argv);
 
@@ -54,7 +53,6 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	class_addmethod(c, (method)PackSetup,				"audio.setup",		A_CANT, 0);
 	class_addmethod(c, (method)MaxAudioGraphDrop,		"audio.drop",		A_CANT, 0);
 	class_addmethod(c, (method)MaxAudioGraphObject,		"audio.object",		A_CANT, 0);
- 	class_addmethod(c, (method)PackDsp,					"dsp",				A_CANT, 0);		
  	class_addmethod(c, (method)PackDsp64,				"dsp64",			A_CANT, 0);		
 	class_addmethod(c, (method)PackAssist,				"assist",			A_CANT, 0); 
     class_addmethod(c, (method)object_obex_dumpout,		"dumpout",			A_CANT, 0);  
@@ -85,7 +83,7 @@ PackPtr PackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
 
-		v.setSize(3);
+		v.resize(3);
 		v.set(0, TT("audio.generator"));
 		v.set(1, 0); // no audio graph inlets (only msp inlets)
 		v.set(2, 1); // one audio graph outlet
@@ -142,7 +140,7 @@ TTErr PackReset(PackPtr self, long vectorSize)
 
 TTErr PackSetup(PackPtr self)
 {
-	Atom a[2];
+	t_atom a[2];
 	
 	atom_setobj(a+0, ObjectPtr(self->audioGraphObject));
 	atom_setlong(a+1, 0);
@@ -151,56 +149,10 @@ TTErr PackSetup(PackPtr self)
 }
 
 
-// Perform (signal) Method
-t_int*PackPerform(t_int* w)
-{
-   	PackPtr		self = (PackPtr)(w[1]);
-		
-	if (!self->obj.z_disabled) {
-		for (TTUInt32 i=0; i < self->numChannels; i++)
-			TTAudioGraphGeneratorPtr(self->audioGraphObject->getUnitGenerator())->mBuffer->setVector(i, self->vectorSize, (TTFloat32*)w[i+2]);
-	}	
-	return w + (self->numChannels+2);
-}
-
-
 void PackPerform64(PackPtr self, ObjectPtr dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {	
 	for (TTUInt32 i=0; i < self->numChannels; i++)
 		TTAudioGraphGeneratorPtr(self->audioGraphObject->getUnitGenerator())->mBuffer->setVector64Copy(i, self->vectorSize, ins[i]);
-}
-
-
-// DSP Method
-void PackDsp(PackPtr self, t_signal** sp, short* count)
-{
-	TTUInt16	i, k=0;
-	void		**audioVectors = NULL;
-	TTUInt16	highestIndexForConnectedSignal = 0;
-	
-	self->vectorSize = sp[0]->s_n;
-			
-	// Setup the perform method
-	audioVectors = (void**)sysmem_newptr(sizeof(void*) * (self->maxNumChannels + 1));
-	audioVectors[k] = self;
-	k++;
-	
-	self->numChannels = 0;
-	for (i=0; i < self->maxNumChannels; i++) {
-		self->numChannels++;
-		audioVectors[k] = sp[i]->s_vec;
-		k++;
-		if (count[i])
-			highestIndexForConnectedSignal = i;
-	}
-	
-	self->audioGraphObject->setOutputNumChannels(0, highestIndexForConnectedSignal+1);
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_vectorSize, (uint)self->vectorSize);
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_maxNumChannels, (uint)self->maxNumChannels);
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_sampleRate, (uint)sp[0]->s_sr);
-	
-	dsp_addv(PackPerform, k, audioVectors);
-	sysmem_freeptr(audioVectors);
 }
 
 
@@ -217,9 +169,9 @@ void PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, l
 	}
 	
 	self->audioGraphObject->setOutputNumChannels(0, highestIndexForConnectedSignal+1);
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_vectorSize, (uint)self->vectorSize);
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_maxNumChannels, (uint)self->maxNumChannels);
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_sampleRate, (uint)samplerate);
+	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_vectorSize, self->vectorSize);
+	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_maxNumChannels, self->maxNumChannels);
+	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_sampleRate, samplerate);
 	
 	object_method(dsp64, gensym("dsp_add64"), self,PackPerform64, 0, NULL); 
 	//dsp_add64(dsp64, (ObjectPtr)self, (t_perfroutine64)PackPerform64, 0, NULL);
