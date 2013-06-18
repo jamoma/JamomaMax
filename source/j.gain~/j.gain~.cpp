@@ -61,7 +61,6 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 
 	// Make methods accessible for our class: 
 	class_addmethod(c, (method)gain_dsp64,				"dsp64", A_CANT, 0);
-    class_addmethod(c, (method)object_obex_dumpout, 	"dumpout", A_CANT,0);
     class_addmethod(c, (method)gain_assist, 			"assist", A_CANT, 0L);
 
 	CLASS_ATTR_CHAR(c,		"bypass",	0,		t_gain,	attrBypass);
@@ -94,8 +93,6 @@ void* gain_new(t_symbol* s, long argc, t_atom* argv)
 	t_gain*	x = (t_gain*)object_alloc(s_gain_class);
 
 	if(x){
-		object_obex_store((void*)x, _sym_dumpout, (object*)outlet_new(x, NULL));	// dumpout
-
 		x->numChannels = 1;
 		if(attrstart && argv){
 			int argument = atom_getlong(argv);
@@ -113,8 +110,8 @@ void* gain_new(t_symbol* s, long argc, t_atom* argv)
 		x->signalOut	= new TTAudio(x->numChannels);
 		x->signalIn		= new TTAudio(x->numChannels*2);
 		
-		x->xfade->setAttributeValue(TT("position"), 1.0);		// defaults
-		x->gain->setAttributeValue(TT("linearGain"), 0.0);
+		x->xfade->set("position", 1.0);		// defaults
+		x->gain->set("linearGain", 0.0);
 		
 		x->attrBypass = 0;
 		x->attrGain = 0;
@@ -141,20 +138,16 @@ void gain_free(t_gain *x)
 // Method for Assistance Messages
 void gain_assist(t_gain *x, void *b, long msg, long arg, char *dst)
 {   	
-	if(msg==1){ 	// Inlets
-		if(arg == 0)
+	if (msg==1) { 	// Inlets
+		if (arg == 0)
 			snprintf(dst, 256, "(signal) raw audio (ch. %ld), control messages", arg+1);
 		else if(arg < x->numChannels)
 			snprintf(dst, 256, "(signal) raw audio (ch. %ld)", arg+1);
 		else if(arg >= x->numChannels)
 			snprintf(dst, 256, "(signal) wet audio (ch. %ld)", arg-x->numChannels+1);
 	}
-	else if(msg==2) {// Outlets		
-		if(arg == x->numChannels)
-			strcpy(dst, "dumpout");					
-		else 
-			snprintf(dst, 256, "(signal) processed audio (ch. %ld)", arg+1);  
-	}
+	else if (msg==2) // Outlets		
+		snprintf(dst, 256, "(signal) processed audio (ch. %ld)", arg+1);  
 }
 
 
@@ -163,7 +156,7 @@ void gain_assist(t_gain *x, void *b, long msg, long arg, char *dst)
 t_max_err attr_set_gain(t_gain *x, void *attr, long argc, t_atom *argv)
 {
 	x->attrGain = atom_getfloat(argv);
-	x->gain->setAttributeValue(TT("midiGain"), x->attrGain);
+	x->gain->set("midiGain", x->attrGain);
 	return MAX_ERR_NONE;
 }
 
@@ -173,7 +166,7 @@ t_max_err attr_set_mix(t_gain *x, void *attr, long argc, t_atom *argv)
 {
 	x->attrMix = atom_getfloat(argv);
 	if(x->attrBypass == 0)
-		x->xfade->setAttributeValue(TT("position"), x->attrMix * 0.01);
+		x->xfade->set("position", x->attrMix * 0.01);
 	return MAX_ERR_NONE;
 }
 
@@ -183,9 +176,9 @@ t_max_err attr_set_bypass(t_gain *x, void *attr, long argc, t_atom *argv)
 {
 	x->attrBypass = atom_getlong(argv);
 	if(x->attrBypass == 0)
-		x->xfade->setAttributeValue(TT("position"), x->attrMix * 0.01);
+		x->xfade->set("position", x->attrMix * 0.01);
 	else
-		x->xfade->setAttributeValue(TT("position"), 0.0);
+		x->xfade->set("position", 0.0);
 	return MAX_ERR_NONE;
 }
 
@@ -235,9 +228,9 @@ void gain_dsp64(t_gain *x, t_object *dsp64, short *count, double samplerate, lon
 	x->signalOut->alloc();
 	x->signalTemp->alloc();
 	
-	x->xfade->setAttributeValue(kTTSym_sampleRate, samplerate);
-	x->gain->setAttributeValue(kTTSym_sampleRate, samplerate);
-	x->gain->setAttributeValue(TT("interpolated"), true);
+	x->xfade->set(kTTSym_sampleRate, samplerate);
+	x->gain->set(kTTSym_sampleRate, samplerate);
+	x->gain->set("interpolated", true);
 	object_method(dsp64, gensym("dsp_add64"), x, gain_perform64, 0, NULL);
 }
 
