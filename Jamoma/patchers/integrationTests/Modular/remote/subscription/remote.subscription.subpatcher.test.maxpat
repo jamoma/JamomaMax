@@ -213,7 +213,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 327.0, 44.0, 322.0, 448.0 ],
+						"rect" : [ 327.0, 44.0, 325.0, 448.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -369,8 +369,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 28.0, 111.001862, 213.0, 33.0 ],
-									"text" : "j.test.assert.equal subpatcher-test @input address @compareTo nothing"
+									"patching_rect" : [ 28.0, 111.001862, 196.0, 33.0 ],
+									"text" : "j.test.assert.equal subpatcher-test @input address @compareTo /test"
 								}
 
 							}
