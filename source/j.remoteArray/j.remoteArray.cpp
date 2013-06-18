@@ -114,6 +114,10 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->outlets[data_out] = outlet_new(x, NULL);						// anything outlet to output data
 	x->outlets[set_out] = outlet_new(x, NULL);						// anything outlet to output defered data prepend with a 'set'
 	
+    x->useInternals = YES;
+    x->internals = new TTHash();
+    x->internals->setThreadProtection(YES);
+    
 	x->arraySize = 0;
 	x->arrayIndex = 0;
 	x->arrayAddress = kTTAdrsEmpty;
@@ -188,11 +192,7 @@ void remote_new_address(TTPtr self, SymbolPtr address)
 	TTObjectBasePtr				anObject;
 	TTValue						v;
 		
-    x->useInternals = YES;
-    x->internals = new TTHash();
-    x->internals->setThreadProtection(YES);
     x->cursor = kTTSymEmpty;
-    
     x->arrayAddress = newAddress;
     
     number = jamoma_parse_bracket(address, x->arrayFormatInteger, x->arrayFormatString);
@@ -497,6 +497,7 @@ void remote_address(TTPtr self, SymbolPtr address)
                 
                 // rebuild internals
                 EXTRA->countSubscription = 0;
+                x->internals->clear();
                 defer(self,(method)remote_new_address, address, 0, NULL);
             }
         }
