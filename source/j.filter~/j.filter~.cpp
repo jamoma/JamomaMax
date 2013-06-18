@@ -25,13 +25,13 @@
 /** Data structure for the tt.filter~ object. */
 typedef struct _filter	{
     t_pxobject 				obj;						///< REQUIRED: The MSP 'base class'
-	TTAudioObjectBasePtr		filter;						///< The TTBlue filter unit used
+	TTAudioObjectBasePtr	filter;						///< The TTBlue filter unit used
 	TTAudioSignalPtr		audioIn;					///< The TTBlue audio signal object that is used for filter input
 	TTAudioSignalPtr		audioOut;					///< The TTBlue audio signal object that us used for filter output
 	TTUInt16				maxNumChannels;				///< The maximum number of audio channels permitted
 	TTUInt16				numChannels;				///< The actual number of audio channels used
 	TTUInt16				vs;							///< The vector size (number of samples per processing block)
-	long					sr;							///< The sample rate
+	TTUInt32				sr;							///< The sample rate
 	long					attrBypass;					///< ATTRIBUTE: Bypass filtering
 	TTFloat64				attrFrequency;				///< ATTRIBUTE: Filter cutoff or center frequency, depending on the kind of filter
 	TTFloat64				attrQ;						///< ATTRIBUTE: Filter resonance
@@ -230,7 +230,7 @@ void filter_gettypes(t_filter *x)
 	atom_setsym(a, _sym_append);
 	
 	TTGetRegisteredClassNamesForTags(v, TT("filter"));
-	for(TTUInt16 i=0; i<v.getSize(); i++){
+	for(TTUInt16 i=0; i<v.size(); i++){
 		TTSymbol classname;
 		v.get(i, classname);
 		atom_setsym(a+1, gensym((char*)classname.c_str()));
@@ -287,7 +287,7 @@ t_max_err filter_setType(t_filter *x, void *attr, long argc, t_atom *argv)
 					err = x->filter->setAttributeValue(TT("resonance"), x->attrQ);
 				x->filter->setAttributeValue(TT("mode"), x->attrMode->s_name);				
 				x->filter->setAttributeValue(kTTSym_bypass, (TTBoolean)x->attrBypass);
-				x->filter->setAttributeValue(kTTSym_sampleRate, (uint)x->sr);
+				x->filter->setAttributeValue(kTTSym_sampleRate, x->sr);
 			}
 		}
 	}
