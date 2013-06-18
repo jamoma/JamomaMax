@@ -1435,7 +1435,7 @@
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"id" : "obj-27",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input~.maxpat",
+					"name" : "input~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],

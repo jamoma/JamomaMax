@@ -657,13 +657,13 @@
 					"args" : [ "/input~" ],
 					"id" : "obj-14",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input~.maxpat",
+					"name" : "input~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
 					"patching_rect" : [ 63.0, 119.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"varname" : "jmod.input~"
+					"varname" : "input~.module"
 				}
 
 			}

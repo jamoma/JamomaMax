@@ -285,7 +285,7 @@
 						"count" : 4,
 						"data" : [ 							{
 								"key" : 0,
-								"value" : [ "load", "jmod.input~", 300, 45, 255, 120, "/input~" ]
+								"value" : [ "load", "input~.module", 300, 45, 255, 120, "/input~" ]
 							}
 , 							{
 								"key" : 1,
@@ -337,13 +337,13 @@
 					"id" : "obj-21",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input~.maxpat",
+					"name" : "input~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
 					"patching_rect" : [ 300.0, 45.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"varname" : "jmod.input~"
+					"varname" : "input~.module"
 				}
 
 			}
@@ -681,7 +681,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.input~.maxpat",
+				"name" : "input~.module.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/audio/input~",
 				"patcherrelativepath" : "../../modules/audio/input~",
 				"type" : "JSON",

@@ -208,7 +208,7 @@
 											}
 , 											{
 												"box" : 												{
-													"args" : [ "jmod.input~" ],
+													"args" : [ "input~.module" ],
 													"id" : "obj-2",
 													"maxclass" : "bpatcher",
 													"name" : "jmod.preset_params.maxpat",
@@ -1299,7 +1299,7 @@
 					"args" : [ "/input~" ],
 					"id" : "obj-6",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input~.maxpat",
+					"name" : "input~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "" ],
@@ -1498,7 +1498,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.input~.maxpat",
+				"name" : "input~.module.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
 				"patcherrelativepath" : "../input~",
 				"type" : "JSON",

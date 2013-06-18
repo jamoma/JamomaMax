@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
@@ -62,7 +62,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
 					"patching_rect" : [ 21.0, 261.0, 158.0, 20.0 ],
-					"text" : "panpotM~.model #1",
+					"text" : "panning~.model #1",
 					"varname" : "j.model"
 				}
 
@@ -206,7 +206,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -409,7 +409,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -453,7 +453,6 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-9",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 4,
@@ -469,7 +468,6 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-10",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 4,
@@ -756,8 +754,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "panpotM~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/panpot~",
+				"name" : "panning~.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/panning~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
