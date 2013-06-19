@@ -42,7 +42,7 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				multichannel output
+				Multichannel output
 			</digest>
 			<description>
 				TEXT_HERE

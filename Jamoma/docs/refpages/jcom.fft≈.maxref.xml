@@ -23,10 +23,10 @@
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				multichannel input and control messages
+				Multichannel input and control messages
 			</digest>
 			<description>
-				multichannel input and control messages
+				Multichannel input and control messages
 			</description>
 		</inlet>
 	</inletlist>
@@ -34,10 +34,10 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				multichannel output 1
+				Multichannel output 1
 			</digest>
 			<description>
-				multichannel output 1
+				Multichannel output 1
 			</description>
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">

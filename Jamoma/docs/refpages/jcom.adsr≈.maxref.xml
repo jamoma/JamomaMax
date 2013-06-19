@@ -22,7 +22,7 @@
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				multichannel input and control messages
+				Multichannel input and control messages
 			</digest>
 			<description>
 				TEXT_HERE
@@ -30,7 +30,7 @@
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				multichannel input 2
+				Multichannel input 2
 			</digest>
 			<description>
 				TEXT_HERE
@@ -41,7 +41,7 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				multichannel output 1
+				Multichannel output 1
 			</digest>
 			<description>
 				TEXT_HERE
