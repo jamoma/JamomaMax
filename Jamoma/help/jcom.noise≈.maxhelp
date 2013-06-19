@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 662.0, 522.0 ],
+						"rect" : [ 352.0, 154.0, 662.0, 522.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -137,6 +137,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-1",
@@ -283,7 +284,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 352.0, 154.0, 662.0, 522.0 ],
+						"rect" : [ 0.0, 26.0, 662.0, 522.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -432,6 +433,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"frozen_object_attributes" : 									{
