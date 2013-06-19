@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			audio graph
+			multichannel
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -61,10 +61,10 @@
 	<objarglist>
 		<objarg id="0" name="inputs" type="int" optional="0">
 			<digest>
-				Number of audio graph inputs
+				Number of multichannel inputs
 			</digest>
 			<description>
-				Number of audio graph inputs
+				Number of multichannel inputs
 			</description>
 		</objarg>
 	</objarglist>

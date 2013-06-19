@@ -5,7 +5,7 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.clip≈" module="" category="Jamoma">
 	<digest>
-		Limit the range of an audio graph signal
+		Limit the range of an multichannel signal
 	</digest>
 	<description>
 		<!-- TEXT_HERE -->

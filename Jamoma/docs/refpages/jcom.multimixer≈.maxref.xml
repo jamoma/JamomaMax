@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.multimixer≈" module="" category="Jamoma">
 	<digest>
-		Mixing matrix for NxM audio graph signals
+		Mixing matrix for NxM multichannel signals
 	</digest>
 	<description>
-		Mixing matrix for NxM audio graph signals
+		Mixing matrix for NxM multichannel signals
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			audio graph
+			multichannel
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->

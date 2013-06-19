@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.gain≈" module="" category="Jamoma">
 	<digest>
-		Control level of Jamoma Audio Graph signal
+		Control level of Jamoma multichannel signal
 	</digest>
 	<description>
-		Control level of Jamoma Audio Graph signal
+		Control level of Jamoma multichannel signal
 	</description>
 	<!--METADATA-->
 	<metadatalist>

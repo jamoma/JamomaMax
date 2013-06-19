@@ -8,7 +8,7 @@
 		Fast Fourier Transform
 	</digest>
 	<description>
-		jcom.fft≈ performs a fast Fourier Transform on a Jamoma Audio Graph signal
+		jcom.fft≈ performs a fast Fourier Transform on a Jamoma multichannel signal
 	</description>
 	<!--METADATA-->
 	<metadatalist>

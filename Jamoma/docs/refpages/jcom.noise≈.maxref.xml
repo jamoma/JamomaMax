@@ -8,7 +8,7 @@
 		Multichannels noise generator
 	</digest>
 	<description>
-		Multimode noise generator as audio graph signal
+		Multimode noise generator as multichannel signal
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			audio graph
+			multichannel
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->

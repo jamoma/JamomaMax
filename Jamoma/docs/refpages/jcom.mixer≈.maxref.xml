@@ -5,7 +5,7 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.mixer≈" module="" category="Jamoma">
 	<digest>
-		Apply matrix to channels within audio graph signals
+		Apply matrix to channels within multichannel signals
 	</digest>
 	<description>
 		<!-- TEXT_HERE -->

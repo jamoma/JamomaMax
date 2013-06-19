@@ -7,7 +7,7 @@
 	<digest>
 		ADSR envelope generator	</digest>
 	<description>
-		jcom.adsr≈ generates audio graph envelopes
+		jcom.adsr≈ generates multichannel envelopes
 	</description>
 	<!--METADATA-->
 	<metadatalist>

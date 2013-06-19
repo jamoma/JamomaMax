@@ -16,14 +16,14 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			audio graph
+			multichannel
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<!-- <inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				multichannel audio connection and control messages
+				Multichannel audio connection and control messages
 			</digest>
 			<description>
 				TEXT_HERE
@@ -31,7 +31,7 @@
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				multichannel audio connection and control messages
+				Multichannel audio connection and control messages
 			</digest>
 			<description>
 				TEXT_HERE
