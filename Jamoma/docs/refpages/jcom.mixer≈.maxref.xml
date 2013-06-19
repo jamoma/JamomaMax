@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.mixer≈" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Apply matrix to channels within audio graph signals
 	</digest>
 	<description>
-		TEXT_HERE
+		<!-- TEXT_HERE -->
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -23,18 +23,18 @@
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				multichannel input and control messages
+				Multichannel input and control messages
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel input and control messages
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				multichannel input 2
+				Multichannel input 2
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel input 2
 			</description>
 		</inlet>
 	</inletlist>
@@ -42,10 +42,10 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				multichannel output 1
+				Multichannel output 1
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel output 1
 			</description>
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
@@ -53,20 +53,20 @@
 				dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				Dumpout
 			</description>
 		</outlet>
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<!-- <objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</objarg>
+		</objarg> -->
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
@@ -99,10 +99,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Clear all connections
 			</digest>
 			<description>
-				TEXT_HERE
+				Clear all connections
 			</description>
 		</method>
 		<!-- 		<method name="getProcessingBenchmark">
@@ -203,10 +203,10 @@
 		</attribute>
 		<attribute name="interpolated" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Smooth gain control messages
 			</digest>
 			<description>
-				TEXT_HERE
+				Smooth gain control messages over 1 signal vector size
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -225,18 +225,18 @@
 		</attribute>
 		<attribute name="numInputs" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Default number of input channels
 			</digest>
 			<description>
-				TEXT_HERE
+				Default number of input channels. This attributes is automatically overwritten by incoming number of channels
 			</description>
 		</attribute>
 		<attribute name="numOutputs" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Default number of output channels
 			</digest>
 			<description>
-				TEXT_HERE
+				Default number of output channels
 			</description>
 		</attribute>
 		<attribute name="sampleRate" get="1" set="1" type="int" size="1">
@@ -254,8 +254,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="jcom.multimixer≈"/>
+		<seealso name="matrix~"/>
 	</seealsolist>
 </c74object>

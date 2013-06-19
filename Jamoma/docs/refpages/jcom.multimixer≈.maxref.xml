@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.multimixer≈" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Mixing matrix for NxM audio graph signals
 	</digest>
 	<description>
-		TEXT_HERE
+		Mixing matrix for NxM audio graph signals
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,25 +16,25 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			audio graph
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				multichannel input and control messages
+				Multichannel input and control messages
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel input and control messages
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				multichannel input 2
+				Multichannel input 2
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel input 2
 			</description>
 		</inlet>
 	</inletlist>
@@ -42,10 +42,10 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				multichannel output 1
+				Multichannel output 1
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel output 1
 			</description>
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
@@ -53,7 +53,7 @@
 				dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				Dumpout
 			</description>
 		</outlet>
 	</outletlist>
@@ -61,12 +61,21 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				Number of inputs
 			</digest>
 			<description>
-				TEXT_HERE
+				Number of multichannels inputs
 			</description>
 		</objarg>
+		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+			<digest>
+				Number of outputs
+			</digest>
+			<description>
+				Number of multichannels outputs
+			</description>
+		</objarg>
+
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
@@ -99,10 +108,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Clear all routing connections
 			</digest>
 			<description>
-				TEXT_HERE
+				Clear all routing connections
 			</description>
 		</method>
 		<!-- 		<method name="getProcessingBenchmark">
@@ -214,18 +223,18 @@
 		</attribute>
 		<attribute name="numInputs" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Default number of multichannels inputs
 			</digest>
 			<description>
-				TEXT_HERE
+				Default number of multichannels inputs
 			</description>
 		</attribute>
 		<attribute name="numOutputs" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Default number of multichannels outputs
 			</digest>
 			<description>
-				TEXT_HERE
+				Default number of multichannels outputs
 			</description>
 		</attribute>
 		<attribute name="sampleRate" get="1" set="1" type="int" size="1">
@@ -243,8 +252,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="jcom.mixer≈"/>
+		<seealso name="matrix~"/>
 	</seealsolist>
 </c74object>

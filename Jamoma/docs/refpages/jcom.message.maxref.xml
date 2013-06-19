@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="jcom.message" module="" category="Jamoma">
 	<digest>
-		Handling message in the Jamoma modules
+		Handling input message of Jamoma models
 	</digest>
 	<description>
-		jcom.message creates a message in a Jamoma module and interfaces with GUI elements
+		jcom.message creates a message in a Jamoma model
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			model
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->

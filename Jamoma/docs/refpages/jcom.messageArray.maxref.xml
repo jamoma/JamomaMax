@@ -337,6 +337,7 @@ Some optional tags			</description>
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="jcom.message"/>
-		<seealso none="jcom.parameterArray"/>
+		<seealso name="jcom.parameterArray"/>
+		<seealso name="jcom.remoteArray"/>
 	</seealsolist>
 </c74object>

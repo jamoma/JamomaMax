@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 3,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 284.0, 78.0, 959.0, 920.0 ],
+		"rect" : [ 841.0, 141.0, 736.0, 766.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -41,11 +42,12 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 959.0, 894.0 ],
+						"rect" : [ 0.0, 26.0, 736.0, 740.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -69,7 +71,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 603.0, 549.0, 26.0, 19.0 ],
+					"patching_rect" : [ 603.0, 549.0, 26.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -99,11 +101,12 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 284.0, 104.0, 959.0, 894.0 ],
+						"rect" : [ 0.0, 26.0, 736.0, 740.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -133,7 +136,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 518.0, 264.0, 50.0, 19.0 ]
+									"patching_rect" : [ 518.0, 264.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -147,7 +150,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 518.0, 292.0, 87.0, 17.0 ],
+									"patching_rect" : [ 518.0, 292.0, 89.0, 18.0 ],
 									"text" : "array/resize $1",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -209,7 +212,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 105.0, 477.0, 100.0, 17.0 ],
+									"patching_rect" : [ 105.0, 477.0, 100.0, 18.0 ],
 									"text" : "address items.[3]"
 								}
 
@@ -255,7 +258,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 439.0, 515.0, 32.5, 17.0 ],
+									"patching_rect" : [ 439.0, 515.0, 32.5, 18.0 ],
 									"text" : "6"
 								}
 
@@ -269,7 +272,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 439.0, 497.0, 32.5, 17.0 ],
+									"patching_rect" : [ 439.0, 497.0, 32.5, 18.0 ],
 									"text" : "5"
 								}
 
@@ -283,7 +286,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 439.0, 479.0, 32.5, 17.0 ],
+									"patching_rect" : [ 439.0, 479.0, 32.5, 18.0 ],
 									"text" : "4"
 								}
 
@@ -297,7 +300,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 406.0, 515.0, 32.5, 17.0 ],
+									"patching_rect" : [ 406.0, 515.0, 32.5, 18.0 ],
 									"text" : "3"
 								}
 
@@ -311,7 +314,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 406.0, 497.0, 32.5, 17.0 ],
+									"patching_rect" : [ 406.0, 497.0, 32.5, 18.0 ],
 									"text" : "2"
 								}
 
@@ -325,7 +328,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 406.0, 479.0, 32.5, 17.0 ],
+									"patching_rect" : [ 406.0, 479.0, 32.5, 18.0 ],
 									"text" : "1"
 								}
 
@@ -339,7 +342,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 133.0, 635.0, 69.0, 19.0 ],
+									"patching_rect" : [ 133.0, 635.0, 73.0, 20.0 ],
 									"text" : "single value"
 								}
 
@@ -353,7 +356,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 295.0, 635.0, 38.0, 19.0 ],
+									"patching_rect" : [ 302.0, 635.0, 38.0, 20.0 ],
 									"text" : "index"
 								}
 
@@ -368,7 +371,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 82.0, 635.0, 50.0, 19.0 ]
+									"patching_rect" : [ 82.0, 635.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -382,7 +385,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 82.0, 431.0, 50.0, 19.0 ]
+									"patching_rect" : [ 82.0, 431.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -396,7 +399,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 82.0, 585.0, 343.0, 19.0 ],
+									"patching_rect" : [ 82.0, 585.0, 357.0, 20.0 ],
 									"text" : "jcom.parameterArray items.[6] @type decimal @description Hello"
 								}
 
@@ -411,7 +414,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 244.0, 635.0, 50.0, 19.0 ]
+									"patching_rect" : [ 251.0, 635.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -425,7 +428,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 46.0, 322.0, 347.0, 19.0 ],
+									"patching_rect" : [ 46.0, 322.0, 361.0, 20.0 ],
 									"text" : "jcom.parameterArray object.[6] @type decimal @description Hello"
 								}
 
@@ -496,7 +499,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 46.0, 292.0, 390.0, 19.0 ],
+									"patching_rect" : [ 46.0, 292.0, 404.0, 20.0 ],
 									"text" : "jcom.parameterArray source.[4]/position @type integer @description Hello"
 								}
 
@@ -507,7 +510,7 @@
 									"destination" : [ "obj-36", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 448.5, 538.0, 415.5, 538.0 ],
+									"midpoints" : [ 448.5, 538.0, 429.5, 538.0 ],
 									"source" : [ "obj-11", 0 ]
 								}
 
@@ -517,7 +520,7 @@
 									"destination" : [ "obj-36", 1 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 448.5, 538.0, 415.5, 538.0 ],
+									"midpoints" : [ 448.5, 538.0, 429.5, 538.0 ],
 									"source" : [ "obj-14", 0 ]
 								}
 
@@ -527,7 +530,7 @@
 									"destination" : [ "obj-36", 1 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 448.5, 538.0, 415.5, 538.0 ],
+									"midpoints" : [ 448.5, 538.0, 429.5, 538.0 ],
 									"source" : [ "obj-25", 0 ]
 								}
 
@@ -547,7 +550,7 @@
 									"destination" : [ "obj-36", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 415.5, 538.0, 415.5, 538.0 ],
+									"midpoints" : [ 415.5, 538.0, 429.5, 538.0 ],
 									"source" : [ "obj-27", 0 ]
 								}
 
@@ -557,7 +560,7 @@
 									"destination" : [ "obj-36", 1 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 415.5, 538.0, 415.5, 538.0 ],
+									"midpoints" : [ 415.5, 538.0, 429.5, 538.0 ],
 									"source" : [ "obj-28", 0 ]
 								}
 
@@ -567,7 +570,7 @@
 									"destination" : [ "obj-36", 1 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 415.5, 538.0, 415.5, 538.0 ],
+									"midpoints" : [ 415.5, 538.0, 429.5, 538.0 ],
 									"source" : [ "obj-29", 0 ]
 								}
 
@@ -623,7 +626,7 @@
 									"destination" : [ "obj-36", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 448.5, 576.5, 415.5, 576.5 ],
+									"midpoints" : [ 448.5, 576.5, 429.5, 576.5 ],
 									"source" : [ "obj-9", 0 ]
 								}
 
@@ -631,7 +634,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 177.0, 551.0, 46.0, 19.0 ],
+					"patching_rect" : [ 152.0, 551.0, 48.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -661,11 +664,12 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 959.0, 894.0 ],
+						"rect" : [ 0.0, 26.0, 736.0, 740.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -706,6 +710,7 @@
 									"border" : 0,
 									"filename" : "helpname.js",
 									"id" : "obj-2",
+									"ignoreclick" : 1,
 									"jsarguments" : [ "jcom.parameterArray" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
@@ -840,7 +845,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 157.0, 448.0, 259.0, 19.0 ],
+									"patching_rect" : [ 157.0, 448.0, 267.0, 20.0 ],
 									"text" : "jcom.parameterArray indexed.[5] @format single",
 									"varname" : "my_float[1]"
 								}
@@ -931,7 +936,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 229.0, 550.0, 126.0, 19.0 ],
+					"patching_rect" : [ 204.0, 550.0, 143.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -945,7 +950,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p addressing-instances"
+					"text" : "p \"Addressing instances\""
 				}
 
 			}
@@ -961,11 +966,12 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 959.0, 894.0 ],
+						"rect" : [ 841.0, 167.0, 736.0, 740.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -990,6 +996,7 @@
 									"border" : 0,
 									"filename" : "helpname.js",
 									"id" : "obj-7",
+									"ignoreclick" : 1,
 									"jsarguments" : [ "jcom.parameterArray" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
@@ -1168,7 +1175,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 66.0, 357.0, 338.0, 19.0 ],
+									"patching_rect" : [ 66.0, 357.0, 348.0, 20.0 ],
 									"text" : "jcom.parameterArray split/items.[5] @type array @format single",
 									"varname" : "my_float[1]"
 								}
@@ -1259,7 +1266,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 495.0, 549.0, 96.0, 19.0 ],
+					"patching_rect" : [ 495.0, 549.0, 108.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1273,7 +1280,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p type-vs-format"
+					"text" : "p \"Type vs format\""
 				}
 
 			}
@@ -1289,11 +1296,12 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 959.0, 894.0 ],
+						"rect" : [ 0.0, 26.0, 736.0, 740.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1325,7 +1333,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 120.0, 590.0, 172.0, 69.0 ],
+									"patching_rect" : [ 128.0, 566.5, 172.0, 69.0 ],
 									"text" : "In 'array' mode, jcom.parameterArray will output a list containing values of all instances"
 								}
 
@@ -1341,7 +1349,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 340.0, 218.0, 151.0, 141.0 ],
+									"patching_rect" : [ 340.0, 218.0, 153.0, 141.0 ],
 									"text" : "In 'single' mode (default), jcom.parameterArray will output the instance whose value has been changed out of the middle outlet then the value out of the left outlet"
 								}
 
@@ -1366,6 +1374,7 @@
 									"border" : 0,
 									"filename" : "helpname.js",
 									"id" : "obj-2",
+									"ignoreclick" : 1,
 									"jsarguments" : [ "jcom.parameterArray" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
@@ -1399,7 +1408,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 340.0, 565.0, 85.0, 20.0 ],
+									"patching_rect" : [ 340.0, 528.5, 85.0, 20.0 ],
 									"text" : "prepend array"
 								}
 
@@ -1413,7 +1422,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 340.0, 500.0, 214.0, 57.0 ],
+									"patching_rect" : [ 340.0, 463.5, 214.0, 57.0 ],
 									"setminmax" : [ 0.0, 100.0 ],
 									"settype" : 0,
 									"size" : 5
@@ -1429,7 +1438,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 5,
 									"outlettype" : [ "int", "int", "int", "int", "int" ],
-									"patching_rect" : [ 340.0, 672.0, 219.0, 20.0 ],
+									"patching_rect" : [ 340.0, 635.5, 219.0, 20.0 ],
 									"text" : "unpack 1 2 3 4 5"
 								}
 
@@ -1444,7 +1453,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 540.0, 724.0, 50.0, 20.0 ]
+									"patching_rect" : [ 540.0, 687.5, 50.0, 20.0 ]
 								}
 
 							}
@@ -1458,7 +1467,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 490.0, 724.0, 50.0, 20.0 ]
+									"patching_rect" : [ 490.0, 687.5, 50.0, 20.0 ]
 								}
 
 							}
@@ -1472,7 +1481,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 440.0, 724.0, 50.0, 20.0 ]
+									"patching_rect" : [ 440.0, 687.5, 50.0, 20.0 ]
 								}
 
 							}
@@ -1486,7 +1495,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 390.0, 724.0, 50.0, 20.0 ]
+									"patching_rect" : [ 390.0, 687.5, 50.0, 20.0 ]
 								}
 
 							}
@@ -1500,7 +1509,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 340.0, 724.0, 50.0, 20.0 ]
+									"patching_rect" : [ 340.0, 687.5, 50.0, 20.0 ]
 								}
 
 							}
@@ -1514,7 +1523,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 340.0, 603.0, 270.0, 19.0 ],
+									"patching_rect" : [ 340.0, 566.5, 274.0, 20.0 ],
 									"text" : "jcom.parameterArray other/stuff.[5] @format array",
 									"varname" : "my_float[2]"
 								}
@@ -1630,7 +1639,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 50.0, 359.0, 274.0, 19.0 ],
+									"patching_rect" : [ 50.0, 359.0, 280.0, 20.0 ],
 									"text" : "jcom.parameterArray some/stuff.[5] @format single",
 									"varname" : "my_float[1]"
 								}
@@ -1793,7 +1802,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 366.0, 550.0, 55.0, 19.0 ],
+					"patching_rect" : [ 366.0, 550.0, 55.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1830,6 +1839,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-38",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
@@ -1851,11 +1861,12 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 959.0, 894.0 ],
+						"rect" : [ 0.0, 26.0, 736.0, 740.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1969,7 +1980,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 188.0, 164.0, 252.0, 19.0 ],
+									"patching_rect" : [ 188.0, 164.0, 260.0, 20.0 ],
 									"text" : "jcom.parameterArray distant.[5] @type decimal",
 									"varname" : "my_float[1]"
 								}
@@ -1980,6 +1991,7 @@
 									"border" : 0,
 									"filename" : "helpname.js",
 									"id" : "obj-2",
+									"ignoreclick" : 1,
 									"jsarguments" : [ "jcom.parameterArray" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
@@ -2016,7 +2028,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 188.0, 580.0, 50.0, 19.0 ]
+									"patching_rect" : [ 188.0, 580.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -2029,7 +2041,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 188.0, 601.0, 115.0, 19.0 ],
+									"patching_rect" : [ 188.0, 601.0, 115.0, 20.0 ],
 									"text" : "jcom.send /distant.*"
 								}
 
@@ -2045,7 +2057,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 338.0, 491.0, 166.0, 54.0 ],
+									"patching_rect" : [ 338.0, 491.0, 167.0, 54.0 ],
 									"text" : "Of course, all instances can be addressed using a wildcard symbol."
 								}
 
@@ -2061,7 +2073,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 338.0, 361.0, 187.0, 69.0 ],
+									"patching_rect" : [ 338.0, 361.0, 188.0, 69.0 ],
 									"text" : "Specific instances can be addressed using the parameter name + instance number as below"
 								}
 
@@ -2076,7 +2088,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 188.0, 490.0, 50.0, 19.0 ]
+									"patching_rect" : [ 188.0, 490.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -2089,7 +2101,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 188.0, 508.5, 127.0, 19.0 ],
+									"patching_rect" : [ 188.0, 508.5, 127.0, 20.0 ],
 									"text" : "jcom.remote /distant.*"
 								}
 
@@ -2104,7 +2116,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 194.5, 367.5, 50.0, 19.0 ]
+									"patching_rect" : [ 194.5, 367.5, 50.0, 20.0 ]
 								}
 
 							}
@@ -2117,7 +2129,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 194.5, 387.5, 127.0, 19.0 ],
+									"patching_rect" : [ 194.5, 387.5, 127.0, 20.0 ],
 									"text" : "jcom.remote /distant.2"
 								}
 
@@ -2236,7 +2248,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 422.0, 549.0, 64.0, 19.0 ],
+					"patching_rect" : [ 422.0, 549.0, 68.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2273,6 +2285,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-46",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
@@ -2288,6 +2301,7 @@
 					"fontsize" : 12.0,
 					"hidden" : 1,
 					"id" : "obj-47",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -2318,6 +2332,7 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-72",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2366,43 +2381,43 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "jcom.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
+				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jcom.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
+				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jcom.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
+				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jcom.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
-				"patcherrelativepath" : "../../../Max/library/components/jamomaPath",
+				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"patcherrelativepath" : "../patchers/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpname.js",
-				"bootpath" : "/Applications/Max6/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max6/Cycling '74/help-resources",
+				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpdetails.js",
-				"bootpath" : "/Applications/Max6/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max6/Cycling '74/help-resources",
+				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
