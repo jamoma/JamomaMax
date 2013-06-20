@@ -1022,7 +1022,7 @@
 									"numoutlets" : 6,
 									"outlettype" : [ "int", "float", "float", "float", "float", "" ],
 									"patching_rect" : [ 548.0, 459.0, 202.0, 20.0 ],
-									"text" : "jcom.stats 1000 1000 @windowed 1"
+									"text" : "j.stats 1000 1000 @windowed 1"
 								}
 
 							}
@@ -1110,7 +1110,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 1010.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1125,7 +1125,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 995.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1139,7 +1139,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 905.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1154,7 +1154,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 890.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1168,7 +1168,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 800.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1183,7 +1183,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 785.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1197,7 +1197,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 695.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1212,7 +1212,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 680.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1226,7 +1226,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 590.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1241,7 +1241,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 575.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1255,7 +1255,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 485.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1270,7 +1270,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 470.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1284,7 +1284,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 380.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1299,7 +1299,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 365.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1313,7 +1313,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 275.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1328,7 +1328,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 260.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1342,7 +1342,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 170.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1357,7 +1357,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 155.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1371,7 +1371,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 65.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1386,7 +1386,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 50.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1752,7 +1752,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 1010.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1767,7 +1767,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 995.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1781,7 +1781,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 905.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1796,7 +1796,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 890.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1810,7 +1810,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 800.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1825,7 +1825,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 785.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1839,7 +1839,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 695.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1854,7 +1854,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 680.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1868,7 +1868,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 590.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1883,7 +1883,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 575.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1897,7 +1897,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 485.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1912,7 +1912,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 470.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1926,7 +1926,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 380.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1941,7 +1941,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 365.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1955,7 +1955,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 275.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1970,7 +1970,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 260.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -1984,7 +1984,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 170.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -1999,7 +1999,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 155.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -2013,7 +2013,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 65.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -2028,7 +2028,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 50.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -2394,7 +2394,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 1010.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -2409,7 +2409,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 995.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -2423,7 +2423,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 905.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -2438,7 +2438,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 890.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -2452,7 +2452,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 800.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -2467,7 +2467,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 785.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -2481,7 +2481,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 695.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -2496,7 +2496,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 680.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -2510,7 +2510,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 590.0, 100.0, 84.0, 20.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -2525,7 +2525,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 575.0, 125.0, 80.0, 20.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -2539,7 +2539,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 485.0, 100.0, 84.0, 20.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -2554,7 +2554,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 470.0, 125.0, 80.0, 20.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -2568,7 +2568,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 380.0, 100.0, 84.0, 20.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -2583,7 +2583,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 365.0, 125.0, 80.0, 20.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -2597,7 +2597,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 275.0, 100.0, 84.0, 20.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -2612,7 +2612,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 260.0, 125.0, 80.0, 20.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -2626,7 +2626,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 170.0, 100.0, 84.0, 20.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -2641,7 +2641,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 155.0, 125.0, 80.0, 20.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -2655,7 +2655,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 65.0, 100.0, 84.0, 20.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -2670,7 +2670,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 50.0, 125.0, 80.0, 20.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3036,7 +3036,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 1010.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3051,7 +3051,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 995.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3065,7 +3065,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 905.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3080,7 +3080,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 890.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3094,7 +3094,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 800.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3109,7 +3109,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 785.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3123,7 +3123,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 695.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3138,7 +3138,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 680.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3152,7 +3152,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 590.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3167,7 +3167,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 575.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3181,7 +3181,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 485.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3196,7 +3196,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 470.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3210,7 +3210,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 380.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3225,7 +3225,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 365.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3239,7 +3239,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 275.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3254,7 +3254,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 260.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3268,7 +3268,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 170.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3283,7 +3283,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 155.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3297,7 +3297,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 65.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3312,7 +3312,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 50.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3678,7 +3678,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 1010.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3693,7 +3693,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 995.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3707,7 +3707,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 905.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3722,7 +3722,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 890.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3736,7 +3736,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 800.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3751,7 +3751,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 785.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3765,7 +3765,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 695.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3780,7 +3780,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 680.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3794,7 +3794,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 590.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3809,7 +3809,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 575.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3823,7 +3823,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 485.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3838,7 +3838,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 470.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3852,7 +3852,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 380.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3867,7 +3867,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 365.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3881,7 +3881,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 275.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3896,7 +3896,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 260.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3910,7 +3910,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 170.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3925,7 +3925,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 155.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -3939,7 +3939,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 65.0, 100.0, 84.0, 19.0 ],
-													"text" : "r to-jcom.filter"
+													"text" : "r to-j.filter"
 												}
 
 											}
@@ -3954,7 +3954,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "" ],
 													"patching_rect" : [ 50.0, 125.0, 80.0, 19.0 ],
-													"text" : "jcom.filter~ 1"
+													"text" : "j.filter~ 1"
 												}
 
 											}
@@ -4297,7 +4297,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 338.0, 364.0, 85.0, 20.0 ],
-									"text" : "s to-jcom.filter"
+									"text" : "s to-j.filter"
 								}
 
 							}
@@ -5035,7 +5035,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-26",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.filter~" ],
+									"jsarguments" : [ "j.filter~" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -5238,7 +5238,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 362.5, 360.0, 175.0, 20.0 ],
-									"text" : "jcom.filter~ 2"
+									"text" : "j.filter~ 2"
 								}
 
 							}
@@ -5539,11 +5539,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.filter~.mxo",
+				"name" : "j.filter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.stats.mxo",
+				"name" : "j.stats.mxo",
 				"type" : "iLaX"
 			}
  ]

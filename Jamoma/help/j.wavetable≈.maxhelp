@@ -20,11 +20,11 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.wavetable≈", "@description", "wavetablelator with multicore output" ],
+					"args" : [ "@name", "j.wavetable≈", "@description", "wavetablelator with multicore output" ],
 					"bgmode" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 693.0, 70.0 ]
@@ -109,7 +109,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 195.0, 222.0, 169.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -234,7 +234,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 195.0, 346.0, 91.0, 19.0 ],
-					"text" : "jcom.unpack≈ 1"
+					"text" : "j.unpack≈ 1"
 				}
 
 			}
@@ -249,7 +249,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 195.0, 162.0, 208.0, 31.0 ],
-					"text" : "jcom.wavetable≈ @waveform sine @interpolation linear @frequency 220."
+					"text" : "j.wavetable≈ @waveform sine @interpolation linear @frequency 220."
 				}
 
 			}

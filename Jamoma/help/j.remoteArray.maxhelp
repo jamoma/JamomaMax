@@ -425,7 +425,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 482.0, 570.0, 118.0, 17.0 ],
-					"text" : "jcom.parameterArray"
+					"text" : "j.parameterArray"
 				}
 
 			}
@@ -496,7 +496,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 417.0, 464.0, 141.0, 19.0 ],
-					"text" : "also with jcom.send"
+					"text" : "also with j.send"
 				}
 
 			}
@@ -524,7 +524,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 358.0, 484.0, 153.0, 19.0 ],
-					"text" : "jcom.send source.3/position"
+					"text" : "j.send source.3/position"
 				}
 
 			}
@@ -566,7 +566,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 358.0, 421.0, 165.0, 19.0 ],
-					"text" : "jcom.remote source.*/position"
+					"text" : "j.remote source.*/position"
 				}
 
 			}
@@ -679,17 +679,17 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 42.0, 283.0, 315.0, 19.0 ],
-					"text" : "jcom.remoteArray source.[6]/position"
+					"text" : "j.remoteArray source.[6]/position"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.remoteArray", "@description", "Define an array of remote access" ],
+					"args" : [ "@name", "j.remoteArray", "@description", "Define an array of remote access" ],
 					"bgmode" : 1,
 					"id" : "obj-19",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 612.0, 70.0 ],
@@ -707,7 +707,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 482.0, 589.0, 118.0, 17.0 ],
-					"text" : "jcom.messageArray"
+					"text" : "j.messageArray"
 				}
 
 			}
@@ -851,7 +851,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 40.0, 550.0, 69.0, 19.0 ],
-					"text" : "jcom.model"
+					"text" : "j.model"
 				}
 
 			}
@@ -866,7 +866,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 333.0, 143.0, 219.0, 31.0 ],
-					"text" : "jcom.parameterArray source.[6]/position @description Hello"
+					"text" : "j.parameterArray source.[6]/position @description Hello"
 				}
 
 			}
@@ -1128,59 +1128,59 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
 				"patcherrelativepath" : "../../../Max/library/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.parameterArray.mxo",
+				"name" : "j.parameterArray.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remoteArray.mxo",
+				"name" : "j.remoteArray.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]

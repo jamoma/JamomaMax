@@ -76,17 +76,17 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 370.0, 205.0, 111.0, 43.0 ],
-					"text" : "jcom.onepole~ @mode highpass @frequency 20000"
+					"text" : "j.onepole~ @mode highpass @frequency 20000"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.onepole~", "@description", "One Pole Filter" ],
+					"args" : [ "@name", "j.onepole~", "@description", "One Pole Filter" ],
 					"bgmode" : 1,
 					"id" : "obj-14",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 1289.0, 70.0 ]
@@ -158,7 +158,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 210.0, 205.0, 103.0, 31.0 ],
-					"text" : "jcom.onepole~ @frequency 2000"
+					"text" : "j.onepole~ @frequency 2000"
 				}
 
 			}

@@ -41,7 +41,7 @@
 					"ignoreclick" : 0,
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
@@ -140,7 +140,7 @@
 					"patching_rect" : [ 90.0, 555.0, 391.0, 38.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "The jcom.plug.out≈ object mirrors its SmartSignal input to its output so that you can audition the plug-in during development in Max.",
+					"text" : "The j.plug.out≈ object mirrors its SmartSignal input to its output so that you can audition the plug-in during development in Max.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -255,7 +255,7 @@
 					"patching_rect" : [ 20.0, 505.0, 91.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.unpack≈",
+					"text" : "j.unpack≈",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -326,7 +326,7 @@
 					"patching_rect" : [ 20.0, 215.0, 86.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.plug.in≈",
+					"text" : "j.plug.in≈",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -374,7 +374,7 @@
 					"patching_rect" : [ 20.0, 385.0, 240.0, 115.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.plug.out≈ @manufacturer \"My Plug-ins\" @manufacturerCode Acm3 @pluginIdCode H3lp @pluginVersion 1.0.1",
+					"text" : "j.plug.out≈ @manufacturer \"My Plug-ins\" @manufacturerCode Acm3 @pluginIdCode H3lp @pluginVersion 1.0.1",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -397,7 +397,7 @@
 					"patching_rect" : [ 130.0, 280.0, 308.0, 38.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "Audio objects in the chain that follow jcom.plug.in≈ will adapt to the number of channels they are passed.",
+					"text" : "Audio objects in the chain that follow j.plug.in≈ will adapt to the number of channels they are passed.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -421,7 +421,7 @@
 					"patching_rect" : [ 20.0, 280.0, 105.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.dcblocker≈",
+					"text" : "j.dcblocker≈",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -599,7 +599,7 @@
 					"patching_rect" : [ 20.0, 185.0, 77.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.pack≈",
+					"text" : "j.pack≈",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 

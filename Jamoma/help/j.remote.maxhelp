@@ -205,7 +205,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 494.0, 104.5, 202.0, 114.0 ],
-													"text" : "When used inside a view containing a jcom.view object, jcom.remote belongs to the node in the namespace jcom.view is binding to. Here, jcom.remote automatically binds to the parameter \"myModelParameter\" placed in the moddel called \"myModelParameter\""
+													"text" : "When used inside a view containing a j.view object, j.remote belongs to the node in the namespace j.view is binding to. Here, j.remote automatically binds to the parameter \"myModelParameter\" placed in the moddel called \"myModelParameter\""
 												}
 
 											}
@@ -242,7 +242,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 83.0, 110.5, 63.0, 20.0 ],
-													"text" : "jcom.view"
+													"text" : "j.view"
 												}
 
 											}
@@ -271,7 +271,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 259.0, 151.5, 185.0, 20.0 ],
-													"text" : "jcom.remote myModelParameter"
+													"text" : "j.remote myModelParameter"
 												}
 
 											}
@@ -461,7 +461,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 28.0, 97.0, 72.0, 20.0 ],
-													"text" : "jcom.model"
+													"text" : "j.model"
 												}
 
 											}
@@ -503,7 +503,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 242.0, 170.0, 285.0, 20.0 ],
-													"text" : "jcom.parameter myModelParameter @type decimal"
+													"text" : "j.parameter myModelParameter @type decimal"
 												}
 
 											}
@@ -639,7 +639,7 @@
 					"filename" : "helpdetails.js",
 					"id" : "obj-3",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "jcom.remote" ],
+					"jsarguments" : [ "j.remote" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -734,7 +734,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 323.0, 375.0, 196.0, 91.0 ],
-									"text" : "jcom.remote's first outlet prepend a \"set\" message to the returned value. It is then straightforward to connect a gui object. You can use the second outlet to receive direct value."
+									"text" : "j.remote's first outlet prepend a \"set\" message to the returned value. It is then straightforward to connect a gui object. You can use the second outlet to receive direct value."
 								}
 
 							}
@@ -749,7 +749,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 373.0, 154.5, 187.0, 141.0 ],
-									"text" : "jcom.remote allows to bind to a parameter value. It can be useful to build user interfaces for example.\n\nHere we set our jcom.remote to bind to a parameter called \"myParameter\" and situated at the root of our namespace (defined as \"/\")."
+									"text" : "j.remote allows to bind to a parameter value. It can be useful to build user interfaces for example.\n\nHere we set our j.remote to bind to a parameter called \"myParameter\" and situated at the root of our namespace (defined as \"/\")."
 								}
 
 							}
@@ -759,7 +759,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-3",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.remote" ],
+									"jsarguments" : [ "j.remote" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -821,7 +821,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 161.5, 171.0, 168.0, 20.0 ],
-									"text" : "jcom.parameter myParameter"
+									"text" : "j.parameter myParameter"
 								}
 
 							}
@@ -836,7 +836,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 151.5, 330.0, 154.0, 20.0 ],
-									"text" : "jcom.remote /myParameter"
+									"text" : "j.remote /myParameter"
 								}
 
 							}
@@ -988,7 +988,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 44.5, 319.0, 272.0, 20.0 ],
-									"text" : "jcom.remote /mySuperModel/myModelParameter"
+									"text" : "j.remote /mySuperModel/myModelParameter"
 								}
 
 							}
@@ -1016,7 +1016,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 514.5, 319.0, 205.0, 20.0 ],
-									"text" : "jcom.parameter myLonelyParameter"
+									"text" : "j.parameter myLonelyParameter"
 								}
 
 							}
@@ -1100,7 +1100,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 495.0, 200.5, 150.0, 91.0 ],
-													"text" : "Here, jcom.remote is set to an absolute address, hence it does not belongs to the model jcom.vie binds to."
+													"text" : "Here, j.remote is set to an absolute address, hence it does not belongs to the model j.vie binds to."
 												}
 
 											}
@@ -1129,7 +1129,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 281.0, 200.5, 191.0, 20.0 ],
-													"text" : "jcom.remote /myLonelyParameter"
+													"text" : "j.remote /myLonelyParameter"
 												}
 
 											}
@@ -1166,7 +1166,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 83.0, 110.5, 63.0, 20.0 ],
-													"text" : "jcom.view"
+													"text" : "j.view"
 												}
 
 											}
@@ -1195,7 +1195,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 281.0, 88.5, 185.0, 20.0 ],
-													"text" : "jcom.remote myModelParameter"
+													"text" : "j.remote myModelParameter"
 												}
 
 											}
@@ -1404,7 +1404,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 28.0, 97.0, 72.0, 20.0 ],
-													"text" : "jcom.model"
+													"text" : "j.model"
 												}
 
 											}
@@ -1446,7 +1446,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 242.0, 170.0, 285.0, 20.0 ],
-													"text" : "jcom.parameter myModelParameter @type decimal"
+													"text" : "j.parameter myModelParameter @type decimal"
 												}
 
 											}
@@ -1615,19 +1615,19 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
  ]

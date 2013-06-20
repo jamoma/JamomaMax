@@ -101,7 +101,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 254.0, 360.0, 180.0, 33.0 ],
-									"text" : "jcom.receive /modelMaxhelp/model/address"
+									"text" : "j.receive /modelMaxhelp/model/address"
 								}
 
 							}
@@ -116,7 +116,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 16.0, 321.0, 182.0, 33.0 ],
-									"text" : "jcom.remote /modelMaxhelp/model/edit"
+									"text" : "j.remote /modelMaxhelp/model/edit"
 								}
 
 							}
@@ -181,7 +181,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 254.0, 294.0, 180.0, 33.0 ],
-									"text" : "jcom.receive /modelMaxhelp/model/class"
+									"text" : "j.receive /modelMaxhelp/model/class"
 								}
 
 							}
@@ -196,7 +196,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 16.0, 387.0, 182.0, 33.0 ],
-									"text" : "jcom.remote /modelMaxhelp/model/reference"
+									"text" : "j.remote /modelMaxhelp/model/reference"
 								}
 
 							}
@@ -211,7 +211,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 241.0, 9.0, 193.0, 47.0 ],
-									"text" : "Some information about a model are automatically exposed as jcom.return under a model level"
+									"text" : "Some information about a model are automatically exposed as j.return under a model level"
 								}
 
 							}
@@ -254,7 +254,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 253.0, 427.0, 33.0 ],
-									"text" : "So it is possible to address them like any other message|return of your model (via jcom.model or jcom.send, jcom.receive or jcom.remote)"
+									"text" : "So it is possible to address them like any other message|return of your model (via j.model or j.send, j.receive or j.remote)"
 								}
 
 							}
@@ -283,7 +283,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 9.0, 237.0, 47.0 ],
-									"text" : "Some feature of a model are automatically exposed as jcom.message under a model level"
+									"text" : "Some feature of a model are automatically exposed as j.message under a model level"
 								}
 
 							}
@@ -450,7 +450,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 195.5, 297.0, 279.0, 47.0 ],
-									"text" : "as we are in the same patcher (or abstraction), we can access the same message in a relative way (because we are under the same jcom.model)"
+									"text" : "as we are in the same patcher (or abstraction), we can access the same message in a relative way (because we are under the same j.model)"
 								}
 
 							}
@@ -492,7 +492,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 60.0, 351.0, 173.0, 20.0 ],
-									"text" : "jcom.send mymessage"
+									"text" : "j.send mymessage"
 								}
 
 							}
@@ -549,7 +549,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 60.0, 254.0, 173.0, 20.0 ],
-									"text" : "jcom.send /model/mymessage"
+									"text" : "j.send /model/mymessage"
 								}
 
 							}
@@ -622,7 +622,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 38.0, 23.0, 399.0, 33.0 ],
-									"text" : "parameters, messages and returns included to a model can be accessed with jcom.send, jcom.receive and jcom.remote"
+									"text" : "parameters, messages and returns included to a model can be accessed with j.send, j.receive and j.remote"
 								}
 
 							}
@@ -828,7 +828,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 30.5, 348.0, 181.0, 20.0 ],
-									"text" : "jcom.send /model/mymessage"
+									"text" : "j.send /model/mymessage"
 								}
 
 							}
@@ -897,7 +897,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 30.5, 137.0, 133.0, 20.0 ],
-									"text" : "jcom.send /model:alias"
+									"text" : "j.send /model:alias"
 								}
 
 							}
@@ -925,7 +925,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 30.5, 246.0, 213.0, 20.0 ],
-									"text" : "jcom.send /anotherName/mymessage"
+									"text" : "j.send /anotherName/mymessage"
 								}
 
 							}
@@ -1121,7 +1121,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 49.5, 458.0, 372.0, 43.0 ],
-									"text" : "when a subpatcher is duplicated andthen  renamed, jcom.model keeps the name of the original subpatcher, until it is rebuilt (by reloading the patcher, or cutting/pasting the subpatcher)"
+									"text" : "when a subpatcher is duplicated andthen  renamed, j.model keeps the name of the original subpatcher, until it is rebuilt (by reloading the patcher, or cutting/pasting the subpatcher)"
 								}
 
 							}
@@ -1136,7 +1136,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 49.5, 419.0, 372.0, 31.0 ],
-									"text" : "jcom.models have to be created first, in order for the jcom.parameters in the same patcher (or below) to subscribe to them"
+									"text" : "j.models have to be created first, in order for the j.parameters in the same patcher (or below) to subscribe to them"
 								}
 
 							}
@@ -1264,7 +1264,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 25.5, 193.0, 451.0, 19.0 ],
-									"text" : "the name of the node of jcom.hub is then based on the name of the patcher (here sub)"
+									"text" : "the name of the node of j.hub is then based on the name of the patcher (here sub)"
 								}
 
 							}
@@ -1292,7 +1292,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 268.5, 341.0, 185.0, 20.0 ],
-									"text" : "jcom.remote sub/aParam"
+									"text" : "j.remote sub/aParam"
 								}
 
 							}
@@ -1320,7 +1320,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 268.5, 303.0, 185.0, 20.0 ],
-									"text" : "jcom.remote /model/sub/aParam"
+									"text" : "j.remote /model/sub/aParam"
 								}
 
 							}
@@ -1384,7 +1384,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 239.0, 43.0, 139.0, 20.0 ],
-													"text" : "jcom.parameter aParam"
+													"text" : "j.parameter aParam"
 												}
 
 											}
@@ -1421,7 +1421,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 57.0, 55.0, 100.0, 20.0 ],
-													"text" : "jcom.model"
+													"text" : "j.model"
 												}
 
 											}
@@ -1659,7 +1659,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 990.0, 509.0, 70.0, 17.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -1673,7 +1673,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 990.0, 529.0, 61.0, 17.0 ],
-					"text" : "jcom.view"
+					"text" : "j.view"
 				}
 
 			}
@@ -1688,7 +1688,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 44.0, 609.0, 331.0, 43.0 ],
-					"text" : "In Jamoma 0.6 the gui of your model is a view patcher and jcom.view is used to managed it as in the model patcher (see jcom.view to know more)"
+					"text" : "In Jamoma 0.6 the gui of your model is a view patcher and j.view is used to managed it as in the model patcher (see j.view to know more)"
 				}
 
 			}
@@ -1717,7 +1717,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 44.0, 519.0, 266.0, 31.0 ],
-					"text" : "In Jamoma 0.6 the jcom.model is directly embbed inside your algorithm (which is a model)"
+					"text" : "In Jamoma 0.6 the j.model is directly embbed inside your algorithm (which is a model)"
 				}
 
 			}
@@ -1759,7 +1759,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 990.0, 569.0, 75.0, 17.0 ],
-					"text" : "jcom.remote"
+					"text" : "j.remote"
 				}
 
 			}
@@ -1773,17 +1773,17 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 891.0, 569.0, 53.0, 17.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.model", "@description", "The central nervous system of a model patcher" ],
+					"args" : [ "@name", "j.model", "@description", "The central nervous system of a model patcher" ],
 					"bgmode" : 1,
 					"id" : "obj-44",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 1162.0, 70.0 ],
@@ -1815,7 +1815,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 990.0, 549.0, 53.0, 17.0 ],
-					"text" : "jcom.ui"
+					"text" : "j.ui"
 				}
 
 			}
@@ -1829,7 +1829,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 891.0, 549.0, 69.0, 17.0 ],
-					"text" : "jcom.return"
+					"text" : "j.return"
 				}
 
 			}
@@ -1843,7 +1843,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 891.0, 529.0, 82.0, 17.0 ],
-					"text" : "jcom.message"
+					"text" : "j.message"
 				}
 
 			}
@@ -1857,7 +1857,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 159.0, 416.0, 348.0, 19.0 ],
-					"text" : "- Leftmost inlet of model is connected to left inlet of jcom.model."
+					"text" : "- Leftmost inlet of model is connected to left inlet of j.model."
 				}
 
 			}
@@ -1871,7 +1871,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 159.0, 447.0, 348.0, 19.0 ],
-					"text" : "- Left outlet of jcom.model connected to leftmost outlet of model."
+					"text" : "- Left outlet of j.model connected to leftmost outlet of model."
 				}
 
 			}
@@ -1998,7 +1998,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 891.0, 509.0, 90.0, 17.0 ],
-					"text" : "jcom.parameter"
+					"text" : "j.parameter"
 				}
 
 			}
@@ -2098,7 +2098,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 900.0, 181.0, 214.0, 19.0 ],
-					"text" : "jcom.message mymessage @type string"
+					"text" : "j.message mymessage @type string"
 				}
 
 			}
@@ -2140,7 +2140,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 544.0, 212.0, 100.0, 24.0 ],
-					"text" : "jcom.model"
+					"text" : "j.model"
 				}
 
 			}
@@ -2156,8 +2156,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 549.0, 277.0, 213.0, 31.0 ],
-					"text" : "jcom.model @type control @description \"this model doesn't do anything\"",
-					"varname" : "jcom.hub"
+					"text" : "j.model @type control @description \"this model doesn't do anything\"",
+					"varname" : "j.hub"
 				}
 
 			}
@@ -2223,7 +2223,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 16.0, 117.0, 560.0, 31.0 ],
-					"text" : "For information on configuring the attributes to the jcom.model object, please refer to the Jamoma tutorials. These are the best source for getting familiar with the steps involved in building modules."
+					"text" : "For information on configuring the attributes to the j.model object, please refer to the Jamoma tutorials. These are the best source for getting familiar with the steps involved in building modules."
 				}
 
 			}
@@ -2238,7 +2238,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 16.0, 79.0, 611.0, 31.0 ],
-					"text" : "jcom.model is the central brain in a jamoma model. It parses input, distributes messaging to subscribed jcom external (as jcom.parmater, jcom.view, jcom.preset, ...) and generates documentation about it."
+					"text" : "j.model is the central brain in a jamoma model. It parses input, distributes messaging to subscribed jcom external (as j.parmater, j.view, j.preset, ...) and generates documentation about it."
 				}
 
 			}
@@ -2488,59 +2488,59 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
 				"patcherrelativepath" : "../../../Max/library/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]

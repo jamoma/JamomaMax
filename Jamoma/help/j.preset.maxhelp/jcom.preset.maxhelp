@@ -151,7 +151,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 565.0, 390.5, 185.0, 20.0 ],
-									"text" : "jcom.remote /presetMaxhelp/any"
+									"text" : "j.remote /presetMaxhelp/any"
 								}
 
 							}
@@ -180,7 +180,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 565.0, 325.5, 211.0, 20.0 ],
-									"text" : "jcom.remote /presetMaxhelp/myLabel"
+									"text" : "j.remote /presetMaxhelp/myLabel"
 								}
 
 							}
@@ -209,7 +209,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 565.0, 261.5, 211.0, 20.0 ],
-									"text" : "jcom.remote /presetMaxhelp/myIndex"
+									"text" : "j.remote /presetMaxhelp/myIndex"
 								}
 
 							}
@@ -238,7 +238,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 565.0, 189.0, 237.0, 20.0 ],
-									"text" : "jcom.remote /presetMaxhelp/myParameter"
+									"text" : "j.remote /presetMaxhelp/myParameter"
 								}
 
 							}
@@ -610,7 +610,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-45",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.preset" ],
+									"jsarguments" : [ "j.preset" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -737,7 +737,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 772.0, 450.0, 314.0, 20.0 ],
-									"text" : "jcom.parameter myParameter @type decimal @priority 1",
+									"text" : "j.parameter myParameter @type decimal @priority 1",
 									"varname" : "_param"
 								}
 
@@ -766,7 +766,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 772.0, 500.0, 282.0, 20.0 ],
-									"text" : "jcom.parameter myIndex @type integer @priority 2"
+									"text" : "j.parameter myIndex @type integer @priority 2"
 								}
 
 							}
@@ -794,7 +794,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 772.0, 549.0, 213.0, 20.0 ],
-									"text" : "jcom.parameter myLabel @type string"
+									"text" : "j.parameter myLabel @type string"
 								}
 
 							}
@@ -839,7 +839,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 772.0, 598.0, 197.0, 20.0 ],
-									"text" : "jcom.parameter any @type generic"
+									"text" : "j.parameter any @type generic"
 								}
 
 							}
@@ -853,7 +853,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 772.0, 413.0, 72.0, 20.0 ],
-									"text" : "jcom.model"
+									"text" : "j.model"
 								}
 
 							}
@@ -1532,7 +1532,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 251.0, 470.0, 91.0, 20.0 ],
-									"text" : "jcom.preset"
+									"text" : "j.preset"
 								}
 
 							}
@@ -2648,7 +2648,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 266.0, 336.0, 168.0, 33.0 ],
-									"text" : "jcom.send /presetMaxhelp/preset/recall"
+									"text" : "j.send /presetMaxhelp/preset/recall"
 								}
 
 							}
@@ -2677,7 +2677,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 16.0, 336.0, 163.0, 33.0 ],
-									"text" : "jcom.receive /presetMaxhelp/preset/order"
+									"text" : "j.receive /presetMaxhelp/preset/order"
 								}
 
 							}
@@ -2692,7 +2692,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 255.0, 9.0, 197.0, 33.0 ],
-									"text" : "The order attribute is also exposed as a jcom.parameter"
+									"text" : "The order attribute is also exposed as a j.parameter"
 								}
 
 							}
@@ -2777,7 +2777,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 253.0, 445.0, 33.0 ],
-									"text" : "So it is possible to address them like any other parameter|message of your model (via jcom.model or jcom.send, jcom.receive or jcom.remote)"
+									"text" : "So it is possible to address them like any other parameter|message of your model (via j.model or j.send, j.receive or j.remote)"
 								}
 
 							}
@@ -2806,7 +2806,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 9.0, 230.0, 47.0 ],
-									"text" : "Some messages of the jcom.preset are automatically exposed as jcom.message under a preset level"
+									"text" : "Some messages of the j.preset are automatically exposed as j.message under a preset level"
 								}
 
 							}
@@ -2945,27 +2945,27 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]

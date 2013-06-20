@@ -17,11 +17,11 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.route", "@description", "A routing object with some advanced features" ],
+					"args" : [ "@name", "j.route", "@description", "A routing object with some advanced features" ],
 					"bgmode" : 1,
 					"id" : "obj-15",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 714.0, 70.0 ],
@@ -158,7 +158,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 40.0, 490.0, 289.0, 19.0 ],
-					"text" : "jcom.route @searchstring module @partialmatch 1"
+					"text" : "j.route @searchstring module @partialmatch 1"
 				}
 
 			}
@@ -184,7 +184,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 30.0, 421.0, 272.0, 19.0 ],
-					"text" : "Note: jcom.route matches from the beginning only:"
+					"text" : "Note: j.route matches from the beginning only:"
 				}
 
 			}
@@ -424,7 +424,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 40.0, 330.0, 319.0, 19.0 ],
-					"text" : "jcom.route @searchstring gain_midi @searchpositions 3"
+					"text" : "j.route @searchstring gain_midi @searchpositions 3"
 				}
 
 			}
@@ -622,7 +622,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 40.0, 165.0, 289.0, 19.0 ],
-					"text" : "jcom.route @searchstring module @partialmatch 1"
+					"text" : "j.route @searchstring module @partialmatch 1"
 				}
 
 			}

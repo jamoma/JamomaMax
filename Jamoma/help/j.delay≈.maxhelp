@@ -131,7 +131,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-1",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.delay≈" ],
+									"jsarguments" : [ "j.delay≈" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -248,7 +248,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 262.5, 274.0, 59.0, 20.0 ],
-									"text" : "jcom.thru"
+									"text" : "j.thru"
 								}
 
 							}
@@ -360,7 +360,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 116.5, 402.0, 74.0, 20.0 ],
-									"text" : "jcom.delay≈"
+									"text" : "j.delay≈"
 								}
 
 							}
@@ -374,7 +374,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 116.5, 431.0, 93.0, 20.0 ],
-									"text" : "jcom.unpack≈ 2"
+									"text" : "j.unpack≈ 2"
 								}
 
 							}
@@ -388,7 +388,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 116.5, 327.0, 80.0, 20.0 ],
-									"text" : "jcom.pack≈ 2"
+									"text" : "j.pack≈ 2"
 								}
 
 							}
@@ -799,7 +799,7 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/thru",
 				"patcherrelativepath" : "../patchers/components/thru",
 				"type" : "JSON",
@@ -813,15 +813,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.pack≈.mxo",
+				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.delay≈.mxo",
+				"name" : "j.delay≈.mxo",
 				"type" : "iLaX"
 			}
  ]

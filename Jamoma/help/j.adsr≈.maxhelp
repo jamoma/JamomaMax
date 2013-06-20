@@ -35,7 +35,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "jcom.adsr≈" ],
+					"jsarguments" : [ "j.adsr≈" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -368,7 +368,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "audio.connect", "", "", "", "" ],
 									"patching_rect" : [ 163.0, 230.0, 146.0, 20.0 ],
-									"text" : "jcom.info≈"
+									"text" : "j.info≈"
 								}
 
 							}
@@ -386,11 +386,11 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "jcom.adsr≈", "@description", "ADSR envelope generator" ],
+									"args" : [ "@name", "j.adsr≈", "@description", "ADSR envelope generator" ],
 									"bgmode" : 1,
 									"id" : "obj-3",
 									"maxclass" : "bpatcher",
-									"name" : "jcom.maxhelpui.maxpat",
+									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 0.0, 0.0, 664.0, 70.0 ]
@@ -422,7 +422,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
 									"patching_rect" : [ 163.0, 304.0, 95.0, 20.0 ],
-									"text" : "jcom.unpack≈ 1"
+									"text" : "j.unpack≈ 1"
 								}
 
 							}
@@ -437,7 +437,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 163.0, 202.0, 70.0, 20.0 ],
-									"text" : "jcom.adsr≈"
+									"text" : "j.adsr≈"
 								}
 
 							}
@@ -651,28 +651,28 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../patchers/components/jamomaPath",
 				"type" : "JSON",
@@ -693,27 +693,27 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.adsr≈.mxo",
+				"name" : "j.adsr≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.info≈.mxo",
+				"name" : "j.info≈.mxo",
 				"type" : "iLaX"
 			}
  ]

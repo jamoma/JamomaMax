@@ -20,11 +20,11 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.ramp~", "@description", "Generate ramping signal" ],
+					"args" : [ "@name", "j.ramp~", "@description", "Generate ramping signal" ],
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 556.0, 70.0 ]
@@ -62,7 +62,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 320.0, 245.0, 175.0, 67.0 ],
-					"text" : "jcom.ramp~ can be used as an alternative to msp's line~ object. The two objects are very similar, though jcom.ramp~ has some extra options available.",
+					"text" : "j.ramp~ can be used as an alternative to msp's line~ object. The two objects are very similar, though j.ramp~ has some extra options available.",
 					"textcolor" : [ 0.003922, 0.003922, 0.003922, 1.0 ]
 				}
 
@@ -134,7 +134,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 45.0, 230.0, 73.0, 19.0 ],
-					"text" : "jcom.ramp~"
+					"text" : "j.ramp~"
 				}
 
 			}

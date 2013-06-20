@@ -105,7 +105,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.net.receive @port 9001 @mode tcp",
+					"text" : "j.net.receive @port 9001 @mode tcp",
 					"id" : "obj-30",
 					"fontsize" : 12.0,
 					"numinlets" : 1,
@@ -162,7 +162,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.net.receive @port 9000 @mode udp",
+					"text" : "j.net.receive @port 9000 @mode udp",
 					"id" : "obj-23",
 					"fontsize" : 12.0,
 					"numinlets" : 1,
@@ -330,7 +330,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.net.send @address 127.0.0.1 @port 7490 @mode tcp",
+					"text" : "j.net.send @address 127.0.0.1 @port 7490 @mode tcp",
 					"id" : "obj-17",
 					"fontsize" : 12.0,
 					"numinlets" : 1,
@@ -359,7 +359,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "comment",
-					"text" : "at the moment, messages send from jcom.net.send can be received from the java classes like this:",
+					"text" : "at the moment, messages send from j.net.send can be received from the java classes like this:",
 					"linecount" : 3,
 					"id" : "obj-11",
 					"fontsize" : 12.0,
@@ -485,7 +485,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.net.send @address 127.0.0.1 @port 7419 @mode udp",
+					"text" : "j.net.send @address 127.0.0.1 @port 7419 @mode udp",
 					"id" : "obj-1",
 					"fontsize" : 12.0,
 					"numinlets" : 1,
@@ -500,8 +500,8 @@
 				"box" : 				{
 					"maxclass" : "bpatcher",
 					"id" : "obj-14",
-					"name" : "jcom.maxhelpui.maxpat",
-					"args" : [ "@name", "jcom.net.send", "@description", "send data over a network socket" ],
+					"name" : "j.maxhelpui.maxpat",
+					"args" : [ "@name", "j.net.send", "@description", "send data over a network socket" ],
 					"numinlets" : 1,
 					"bgmode" : 1,
 					"numoutlets" : 0,

@@ -149,7 +149,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 408.0, 164.0, 167.0, 19.0 ],
-					"text" : "'bang' to refresh all jcom.info≈"
+					"text" : "'bang' to refresh all j.info≈"
 				}
 
 			}
@@ -389,7 +389,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 162.0, 470.0, 199.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -445,7 +445,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 162.0, 263.0, 199.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -459,7 +459,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 162.0, 443.0, 166.0, 19.0 ],
-					"text" : "jcom.resample≈ @direction up"
+					"text" : "j.resample≈ @direction up"
 				}
 
 			}
@@ -473,7 +473,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 162.0, 238.0, 180.0, 19.0 ],
-					"text" : "jcom.resample≈ @direction down"
+					"text" : "j.resample≈ @direction down"
 				}
 
 			}
@@ -501,7 +501,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 162.0, 398.0, 253.0, 19.0 ],
-					"text" : "jcom.filter≈ @type mirror.5 @frequency 20000."
+					"text" : "j.filter≈ @type mirror.5 @frequency 20000."
 				}
 
 			}
@@ -568,7 +568,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 162.0, 163.0, 199.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -594,17 +594,17 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "audio.connect", "audio.connect", "" ],
 					"patching_rect" : [ 162.0, 133.0, 509.0, 19.0 ],
-					"text" : "jcom.soundfile.player≈ @loop 1 @filePath /Applications/Max5/examples/sounds/jongly.aif @play 1"
+					"text" : "j.soundfile.player≈ @loop 1 @filePath /Applications/Max5/examples/sounds/jongly.aif @play 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.resample≈", "@description", "Resample an input signal at a different sample rate or block size." ],
+					"args" : [ "@name", "j.resample≈", "@description", "Resample an input signal at a different sample rate or block size." ],
 					"bgmode" : 1,
 					"id" : "obj-18",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 891.0, 70.0 ]
@@ -634,7 +634,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 162.0, 548.0, 93.0, 19.0 ],
-					"text" : "jcom.unpack≈ 1"
+					"text" : "j.unpack≈ 1"
 				}
 
 			}
@@ -1272,70 +1272,70 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../../Modular/Max/library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../../Modular/Max/library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../../Modular/Max/library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
 				"patcherrelativepath" : "../../../../Modular/Max/library/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../../Modular/Max/library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.soundfile.player≈.mxo",
+				"name" : "j.soundfile.player≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.info≈.mxo",
+				"name" : "j.info≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.filter≈.mxo",
+				"name" : "j.filter≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.resample≈.mxo",
+				"name" : "j.resample≈.mxo",
 				"type" : "iLaX"
 			}
  ]

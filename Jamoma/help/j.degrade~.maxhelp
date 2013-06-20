@@ -131,7 +131,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-18",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.degrade~" ],
+									"jsarguments" : [ "j.degrade~" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -323,7 +323,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 79.5, 275.0, 88.0, 20.0 ],
-									"text" : "jcom.degrade~"
+									"text" : "j.degrade~"
 								}
 
 							}
@@ -627,7 +627,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.degrade~.mxo",
+				"name" : "j.degrade~.mxo",
 				"type" : "iLaX"
 			}
  ]

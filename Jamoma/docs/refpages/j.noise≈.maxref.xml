@@ -3,7 +3,7 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="jcom.noise≈" module="" category="Jamoma">
+<c74object name="j.noise≈" module="" category="Jamoma">
 	<digest>
 		Multichannels noise generator
 	</digest>
@@ -259,7 +259,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="jcom.wavetable≈"/>
+		<seealso name="j.wavetable≈"/>
 		<seealso name="noise~"/>
 		<seealso name="pink~/">
 	</seealsolist>

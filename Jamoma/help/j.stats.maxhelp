@@ -35,11 +35,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.stats", "@description", "Calculate statistics on running data" ],
+					"args" : [ "@name", "j.stats", "@description", "Calculate statistics on running data" ],
 					"bgmode" : 1,
 					"id" : "obj-57",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 623.0, 70.0 ],
@@ -1130,7 +1130,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "int", "float", "float", "float", "float", "" ],
 					"patching_rect" : [ 188.0, 207.0, 294.0, 19.0 ],
-					"text" : "jcom.stats 500 200 @windowed 1"
+					"text" : "j.stats 500 200 @windowed 1"
 				}
 
 			}

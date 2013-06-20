@@ -49,7 +49,7 @@
 					"patching_rect" : [ 160.0, 520.0, 308.0, 38.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "Audio objects in the chain that follow jcom.plug.in≈ will adapt to the number of channels they are passed.",
+					"text" : "Audio objects in the chain that follow j.plug.in≈ will adapt to the number of channels they are passed.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -101,7 +101,7 @@
 					"patching_rect" : [ 50.0, 520.0, 104.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.dcblocker≈",
+					"text" : "j.dcblocker≈",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -124,7 +124,7 @@
 					"patching_rect" : [ 50.0, 550.0, 95.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.plug.out≈",
+					"text" : "j.plug.out≈",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -151,7 +151,7 @@
 					"patching_rect" : [ 65.0, 400.0, 370.0, 38.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "Output from jcom.plug.in≈ is a SmartSignal containing the number of audio channels provided by the plug-in host.",
+					"text" : "Output from j.plug.in≈ is a SmartSignal containing the number of audio channels provided by the plug-in host.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -262,7 +262,7 @@
 					"patching_rect" : [ 60.0, 270.0, 361.0, 38.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "Input to jcom.plug.in≈ is a SmartSignal, which is passed to the object's output in Max, but ignored when the plug-in is built.",
+					"text" : "Input to j.plug.in≈ is a SmartSignal, which is passed to the object's output in Max, but ignored when the plug-in is built.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -286,7 +286,7 @@
 					"patching_rect" : [ 50.0, 335.0, 115.0, 28.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.plug.in≈",
+					"text" : "j.plug.in≈",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -397,7 +397,7 @@
 					"patching_rect" : [ 50.0, 210.0, 85.5, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.pack≈ 4",
+					"text" : "j.pack≈ 4",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -419,7 +419,7 @@
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"modulemode" : 0,
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
@@ -533,66 +533,66 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../../Modular/Max/library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../../Modular/Max/library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../../Modular/Max/library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
 				"patcherrelativepath" : "../../../../Modular/Max/library/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../../Modular/Max/library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pack≈.mxo",
+				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.plug.in≈.mxo",
+				"name" : "j.plug.in≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.plug.out≈.mxo",
+				"name" : "j.plug.out≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dcblocker≈.mxo",
+				"name" : "j.dcblocker≈.mxo",
 				"type" : "iLaX"
 			}
  ]

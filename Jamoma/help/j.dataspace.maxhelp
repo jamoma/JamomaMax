@@ -131,7 +131,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-7",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.dataspace" ],
+									"jsarguments" : [ "j.dataspace" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -574,7 +574,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 142.0, 400.0, 97.0, 20.0 ],
-									"text" : "jcom.dataspace"
+									"text" : "j.dataspace"
 								}
 
 							}
@@ -1172,7 +1172,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 233.0, 282.0, 331.0, 20.0 ],
-									"text" : "jcom.dataspace @dataspace position @input xy @output ad"
+									"text" : "j.dataspace @dataspace position @input xy @output ad"
 								}
 
 							}
@@ -1292,7 +1292,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 44.0, 117.0, 344.0, 20.0 ],
-									"text" : "jcom.dataspace @dataspace position @input xyz @output aed"
+									"text" : "j.dataspace @dataspace position @input xyz @output aed"
 								}
 
 							}
@@ -1374,7 +1374,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 14.0, 495.0, 205.0, 17.0 ],
-									"text" : "load jcom.SpatDIF.coordinates.maxpat"
+									"text" : "load j.SpatDIF.coordinates.maxpat"
 								}
 
 							}
@@ -1730,7 +1730,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 122.0, 491.0, 205.0, 17.0 ],
-									"text" : "load jcom.SpatDIF.coordinates.maxpat"
+									"text" : "load j.SpatDIF.coordinates.maxpat"
 								}
 
 							}
@@ -1935,7 +1935,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 152.0, 135.0, 344.0, 20.0 ],
-									"text" : "jcom.dataspace @dataspace position @input aed @output xyz"
+									"text" : "j.dataspace @dataspace position @input aed @output xyz"
 								}
 
 							}
@@ -2207,7 +2207,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 82.0, 105.0, 241.0, 60.0 ],
-									"text" : "Rather than the default Max/MSP convention that a midi value of 128 is like multiplying by 1.0, in the jcom.dataspace, a midivalue of 100 is like multiplying with 1.0"
+									"text" : "Rather than the default Max/MSP convention that a midi value of 128 is like multiplying by 1.0, in the j.dataspace, a midivalue of 100 is like multiplying with 1.0"
 								}
 
 							}
@@ -2298,7 +2298,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 41.0, 235.0, 338.0, 20.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -2709,7 +2709,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 40.0, 475.0, 323.0, 20.0 ],
-									"text" : "jcom.dataspace @dataspace color @input rgb @output hsl"
+									"text" : "j.dataspace @dataspace color @input rgb @output hsl"
 								}
 
 							}
@@ -2851,7 +2851,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 40.0, 348.0, 323.0, 20.0 ],
-									"text" : "jcom.dataspace @dataspace color @input hsl @output rgb"
+									"text" : "j.dataspace @dataspace color @input hsl @output rgb"
 								}
 
 							}
@@ -3026,7 +3026,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 20.0, 15.0, 362.0, 43.0 ],
-													"text" : "jcom.colorspace is a port to Jamoma of tap.colorspace from TapTools by Tim Place. The conversion routines were taken from Luke Dubois' Percolate Nato external 242.colorspace. His comments below:"
+													"text" : "j.colorspace is a port to Jamoma of tap.colorspace from TapTools by Tim Place. The conversion routines were taken from Luke Dubois' Percolate Nato external 242.colorspace. His comments below:"
 												}
 
 											}
@@ -3414,7 +3414,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
  ]

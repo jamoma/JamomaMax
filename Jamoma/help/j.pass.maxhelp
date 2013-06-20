@@ -17,11 +17,11 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.pass", "@description", "Direct", "messages", "and", "numbers", "to", "different", "outlets" ],
+					"args" : [ "@name", "j.pass", "@description", "Direct", "messages", "and", "numbers", "to", "different", "outlets" ],
 					"bgmode" : 1,
 					"id" : "obj-25",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1.0, 0.0, 683.0, 70.0 ],
@@ -287,7 +287,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 73.0, 185.0, 232.0, 19.0 ],
-					"text" : "jcom.pass a 1 6.7"
+					"text" : "j.pass a 1 6.7"
 				}
 
 			}
@@ -300,7 +300,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 68.0, 112.0, 396.0, 19.0 ],
-					"text" : "jcom.pass differss from route by not stripping the argument used for routing"
+					"text" : "j.pass differss from route by not stripping the argument used for routing"
 				}
 
 			}

@@ -76,7 +76,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 107.0, 72.0, 363.0, 21.0 ],
-									"text" : "jcom.balance~ can be used with multichannel signals as well."
+									"text" : "j.balance~ can be used with multichannel signals as well."
 								}
 
 							}
@@ -243,7 +243,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 239.0, 383.0, 208.0, 20.0 ],
-									"text" : "jcom.balance~ 2"
+									"text" : "j.balance~ 2"
 								}
 
 							}
@@ -426,7 +426,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "jcom.balance~" ],
+					"jsarguments" : [ "j.balance~" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -498,7 +498,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-6",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.balance~" ],
+									"jsarguments" : [ "j.balance~" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1169,7 +1169,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
 									"patching_rect" : [ 268.5, 566.0, 121.0, 20.0 ],
-									"text" : "jcom.balance~"
+									"text" : "j.balance~"
 								}
 
 							}
@@ -1761,7 +1761,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.balance~.mxo",
+				"name" : "j.balance~.mxo",
 				"type" : "iLaX"
 			}
  ]

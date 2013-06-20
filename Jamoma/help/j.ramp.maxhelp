@@ -295,11 +295,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.ramp", "@description", "Ramping from a value to a value... with some extra features" ],
+					"args" : [ "@name", "j.ramp", "@description", "Ramping from a value to a value... with some extra features" ],
 					"bgmode" : 1,
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 1033.0, 70.0 ],
@@ -1632,7 +1632,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 71.0, 319.0, 155.0, 19.0 ],
-					"text" : "jcom.ramp @drive Max"
+					"text" : "j.ramp @drive Max"
 				}
 
 			}

@@ -1278,7 +1278,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 491.0, 88.0, 59.0, 19.0 ],
-					"text" : "jcom.map"
+					"text" : "j.map"
 				}
 
 			}

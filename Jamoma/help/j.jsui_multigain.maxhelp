@@ -17,11 +17,11 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.jsui_multigain.js", "@description", "Adjust and monitor gains for multiple audio channels" ],
+					"args" : [ "@name", "j.jsui_multigain.js", "@description", "Adjust and monitor gains for multiple audio channels" ],
 					"bgmode" : 1,
 					"id" : "obj-51",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 842.0, 70.0 ],
@@ -820,7 +820,7 @@
 			}
 , 			{
 				"box" : 				{
-					"filename" : "jcom.jsui_multigain.js",
+					"filename" : "j.jsui_multigain.js",
 					"id" : "obj-36",
 					"jsarguments" : [ 16, 16 ],
 					"maxclass" : "jsui",
@@ -969,7 +969,7 @@
 			}
 , 			{
 				"box" : 				{
-					"filename" : "jcom.jsui_multigain.js",
+					"filename" : "j.jsui_multigain.js",
 					"id" : "obj-47",
 					"jsarguments" : [ 2, 2 ],
 					"maxclass" : "jsui",
@@ -1309,7 +1309,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 32.0, 52.0, 438.0, 19.0 ],
-													"text" : "A similar function for mapping amplitude to displayed levels as used by jcom.meter~"
+													"text" : "A similar function for mapping amplitude to displayed levels as used by j.meter~"
 												}
 
 											}

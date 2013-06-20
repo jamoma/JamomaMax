@@ -19,11 +19,11 @@
 		"enablevscroll" : 1,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.op~", "@description", "A multi-operator DSP object" ],
+					"args" : [ "@name", "j.op~", "@description", "A multi-operator DSP object" ],
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 671.0, 70.0 ]
@@ -194,7 +194,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 247.0, 243.0, 201.0, 19.0 ],
-					"text" : "jcom.op~ 3 @operator + @operand 5"
+					"text" : "j.op~ 3 @operator + @operand 5"
 				}
 
 			}

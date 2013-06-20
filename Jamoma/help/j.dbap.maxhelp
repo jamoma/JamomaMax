@@ -131,7 +131,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-14",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.dbap" ],
+									"jsarguments" : [ "j.dbap" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1965,7 +1965,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 493.0, 394.0, 374.0, 20.0 ],
-									"text" : "jcom.dbap @dimensions 2 @num_sources 3 @num_destinations 16"
+									"text" : "j.dbap @dimensions 2 @num_sources 3 @num_destinations 16"
 								}
 
 							}
@@ -2036,7 +2036,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 768.0, 192.0, 122.0, 56.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -4485,7 +4485,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 518.0, 490.0, 126.0, 60.0 ],
-									"text" : "jcom.dbap @dimensions 1 @num_sources 3 @num_destinations 2"
+									"text" : "j.dbap @dimensions 1 @num_sources 3 @num_destinations 2"
 								}
 
 							}
@@ -4646,7 +4646,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 638.0, 305.0, 107.0, 56.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -4740,7 +4740,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 758.0, 305.0, 107.0, 56.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -4895,7 +4895,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 518.0, 305.0, 107.0, 56.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -5394,11 +5394,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dbap.mxo",
+				"name" : "j.dbap.mxo",
 				"type" : "iLaX"
 			}
  ]

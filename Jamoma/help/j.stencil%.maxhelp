@@ -578,7 +578,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
 									"patching_rect" : [ 20.0, 390.0, 147.0, 20.0 ],
-									"text" : "jcom.stencil% @stencil 0.5"
+									"text" : "j.stencil% @stencil 0.5"
 								}
 
 							}
@@ -1295,7 +1295,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 1115.0, 240.0, 147.0, 20.0 ],
-					"text" : "jcom.stencil% @stencil 0.5"
+					"text" : "j.stencil% @stencil 0.5"
 				}
 
 			}
@@ -1380,7 +1380,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 945.0, 240.0, 147.0, 20.0 ],
-					"text" : "jcom.stencil% @stencil 0.5"
+					"text" : "j.stencil% @stencil 0.5"
 				}
 
 			}
@@ -1451,7 +1451,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 700.0, 535.0, 147.0, 20.0 ],
-					"text" : "jcom.stencil% @stencil 0.5"
+					"text" : "j.stencil% @stencil 0.5"
 				}
 
 			}
@@ -1536,7 +1536,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 1310.0, 240.0, 147.0, 20.0 ],
-					"text" : "jcom.stencil% @stencil 0.5"
+					"text" : "j.stencil% @stencil 0.5"
 				}
 
 			}
@@ -1742,7 +1742,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 385.0, 390.0, 79.0, 20.0 ],
-					"text" : "jcom.stencil%"
+					"text" : "j.stencil%"
 				}
 
 			}
@@ -1764,11 +1764,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.stencil%", "@description", "perform operations on a stencil of points in a matrix" ],
+					"args" : [ "@name", "j.stencil%", "@description", "perform operations on a stencil of points in a matrix" ],
 					"bgmode" : 1,
 					"id" : "obj-14",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 1348.0, 70.0 ]

@@ -46,7 +46,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 351.0, 477.0, 55.0, 19.0 ],
-					"text" : "jcom.out"
+					"text" : "j.out"
 				}
 
 			}
@@ -95,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 10.0, 368.0, 268.0, 43.0 ],
-					"text" : "If jcom.out~ is instantiated into a model it would create internal parameters /out/mute, /out/ freeze and /out/preview"
+					"text" : "If j.out~ is instantiated into a model it would create internal parameters /out/mute, /out/ freeze and /out/preview"
 				}
 
 			}
@@ -158,7 +158,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 157.0, 231.0, 245.0, 55.0 ],
-					"text" : "Noticed that in Jamoma 0.6 jcom.in~ doesn't deal with communication between hub and algorithm because it is now part of the algorithm."
+					"text" : "Noticed that in Jamoma 0.6 j.in~ doesn't deal with communication between hub and algorithm because it is now part of the algorithm."
 				}
 
 			}
@@ -173,7 +173,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 157.0, 289.0, 375.0, 55.0 ],
-					"text" : "Another important function they provide is bypassing and wet/dry mix. for muting, the jcom.out~ does zero the output signals for you, but it is expected that you will handle the mute message yourself so that your algorithm does not use CPU (using poly~ or pcontrol)."
+					"text" : "Another important function they provide is bypassing and wet/dry mix. for muting, the j.out~ does zero the output signals for you, but it is expected that you will handle the mute message yourself so that your algorithm does not use CPU (using poly~ or pcontrol)."
 				}
 
 			}
@@ -188,7 +188,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 157.0, 197.0, 249.0, 31.0 ],
-					"text" : "The second outlet from the right for jcom.in~ is a dump outlet to get attribute's value."
+					"text" : "The second outlet from the right for j.in~ is a dump outlet to get attribute's value."
 				}
 
 			}
@@ -264,7 +264,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 31.0, 203.0, 103.0, 19.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -278,7 +278,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 31.0, 133.0, 102.0, 19.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -293,17 +293,17 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 157.0, 94.0, 274.0, 43.0 ],
-					"text" : "jcom.in~ and jcom.out~ are input/output conduits for audio signals in a jamoma module, much like jcom.in and jcom.out (no tildes) for control 'signals'."
+					"text" : "j.in~ and j.out~ are input/output conduits for audio signals in a jamoma module, much like j.in and j.out (no tildes) for control 'signals'."
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.out~", "@description", "Module conduit for audio output" ],
+					"args" : [ "@name", "j.out~", "@description", "Module conduit for audio output" ],
 					"bgmode" : 1,
 					"id" : "obj-17",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 556.0, 70.0 ],

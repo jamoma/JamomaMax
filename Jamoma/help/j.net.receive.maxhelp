@@ -107,7 +107,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.net.receive @port 9090 @mode udp",
+					"text" : "j.net.receive @port 9090 @mode udp",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"patching_rect" : [ 285.0, 370.0, 221.0, 19.0 ],
@@ -163,7 +163,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.net.send @address 127.0.0.1 @port 9090 @mode udp",
+					"text" : "j.net.send @address 127.0.0.1 @port 9090 @mode udp",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"patching_rect" : [ 80.0, 210.0, 314.0, 19.0 ],
@@ -178,12 +178,12 @@
 				"box" : 				{
 					"maxclass" : "bpatcher",
 					"numinlets" : 1,
-					"args" : [ "@name", "jcom.net.receive", "@description", "receive data via a network socket" ],
+					"args" : [ "@name", "j.net.receive", "@description", "receive data via a network socket" ],
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 918.0, 70.0 ],
 					"bgmode" : 1,
 					"id" : "obj-14",
-					"name" : "jcom.maxhelpui.maxpat"
+					"name" : "j.maxhelpui.maxpat"
 				}
 
 			}

@@ -131,7 +131,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-5",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.dcblocker≈" ],
+									"jsarguments" : [ "j.dcblocker≈" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -213,7 +213,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
 									"patching_rect" : [ 110.0, 310.0, 93.0, 20.0 ],
-									"text" : "jcom.unpack≈ 1"
+									"text" : "j.unpack≈ 1"
 								}
 
 							}
@@ -227,7 +227,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 110.0, 285.0, 95.0, 20.0 ],
-									"text" : "jcom.dcblocker≈"
+									"text" : "j.dcblocker≈"
 								}
 
 							}
@@ -241,7 +241,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 110.0, 180.0, 201.0, 20.0 ],
-									"text" : "jcom.op≈ @operator + @operand 1."
+									"text" : "j.op≈ @operator + @operand 1."
 								}
 
 							}
@@ -256,7 +256,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 110.0, 130.0, 214.0, 33.0 ],
-									"text" : "jcom.wavetable≈ @waveform sine @interpolation linear @frequency 220."
+									"text" : "j.wavetable≈ @waveform sine @interpolation linear @frequency 220."
 								}
 
 							}
@@ -357,19 +357,19 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.wavetable≈.mxo",
+				"name" : "j.wavetable≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.op≈.mxo",
+				"name" : "j.op≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dcblocker≈.mxo",
+				"name" : "j.dcblocker≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
  ]

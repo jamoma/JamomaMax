@@ -136,7 +136,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 105.0, 178.5, 269.0, 38.0 ],
-									"text" : "jcom.meter~ is now deprecated. Please use Max's native live.meter~",
+									"text" : "j.meter~ is now deprecated. Please use Max's native live.meter~",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 								}
 
@@ -147,7 +147,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-10",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.meter~" ],
+									"jsarguments" : [ "j.meter~" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,

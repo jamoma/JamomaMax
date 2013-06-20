@@ -97,7 +97,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 3873.0, 480.75, 171.0, 20.0 ],
-					"text" : "jcom.map @function freehand"
+					"text" : "j.map @function freehand"
 				}
 
 			}
@@ -167,7 +167,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 2272.0, 381.0, 156.0, 20.0 ],
-					"text" : "jcom.map @function power"
+					"text" : "j.map @function power"
 				}
 
 			}
@@ -209,7 +209,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1561.0, 412.0, 167.0, 20.0 ],
-					"text" : "jcom.map @function lowpass"
+					"text" : "j.map @function lowpass"
 				}
 
 			}
@@ -251,7 +251,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 880.0, 154.5, 173.0, 20.0 ],
-					"text" : "jcom.map @function logarithm"
+					"text" : "j.map @function logarithm"
 				}
 
 			}
@@ -293,7 +293,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 84.0, 126.5, 185.0, 20.0 ],
-					"text" : "jcom.map @function exponential"
+					"text" : "j.map @function exponential"
 				}
 
 			}
@@ -621,7 +621,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 205.0, 310.0, 514.0, 20.0 ],
-									"text" : "jcom.map @function exponential @input/min 0. @input/max 1. @output/min 0. @output/max 1."
+									"text" : "j.map @function exponential @input/min 0. @input/max 1. @output/min 0. @output/max 1."
 								}
 
 							}
@@ -1018,7 +1018,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 84.0, 468.0, 532.0, 20.0 ],
-					"text" : "jcom.map @function exponential @input/min -20. @input/max 0. @output/min 0.1 @output/max 1."
+					"text" : "j.map @function exponential @input/min -20. @input/max 0. @output/min 0.1 @output/max 1."
 				}
 
 			}
@@ -1103,7 +1103,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 84.0, 318.0, 551.0, 20.0 ],
-					"text" : "jcom.map @function exponential @input/min 69. @input/max 81 @output/min 440. @output/max 880."
+					"text" : "j.map @function exponential @input/min 69. @input/max 81 @output/min 440. @output/max 880."
 				}
 
 			}
@@ -1283,7 +1283,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 780.0, 480.0, 510.0, 33.0 ],
-					"text" : "jcom.map @function logarithm @input/min 0.1 @input/max 1. @output/min -20. @output/max 0."
+					"text" : "j.map @function logarithm @input/min 0.1 @input/max 1. @output/min -20. @output/max 0."
 				}
 
 			}
@@ -1370,7 +1370,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 780.0, 330.0, 528.0, 33.0 ],
-					"text" : "jcom.map @function logarithm @input/min 440. @input/max 880. @output/min 69. @output/max 81."
+					"text" : "j.map @function logarithm @input/min 440. @input/max 880. @output/min 69. @output/max 81."
 				}
 
 			}
@@ -1593,7 +1593,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 2990.0, 420.0, 147.0, 20.0 ],
-					"text" : "jcom.map @function tanh"
+					"text" : "j.map @function tanh"
 				}
 
 			}
@@ -4250,7 +4250,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
  ]

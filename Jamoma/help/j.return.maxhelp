@@ -89,7 +89,7 @@
 									"patching_rect" : [ 388.0, 386.0, 164.0, 60.0 ],
 									"presentation" : 0,
 									"presentation_rect" : [ 388.0, 344.0, 0.0, 0.0 ],
-									"text" : "You can also use listen to your model using other Jamoma externals such as jcom.receive, jcom.map, etc.",
+									"text" : "You can also use listen to your model using other Jamoma externals such as j.receive, j.map, etc.",
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 0,
 									"underline" : 0
@@ -147,7 +147,7 @@
 									"patching_rect" : [ 388.0, 279.0, 158.0, 47.0 ],
 									"presentation" : 0,
 									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-									"text" : "Outputs declared using a jcom.return are sent out by jcom.model.",
+									"text" : "Outputs declared using a j.return are sent out by j.model.",
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 0,
 									"underline" : 0
@@ -217,7 +217,7 @@
 									"patching_rect" : [ 105.0, 247.0, 197.0, 20.0 ],
 									"presentation" : 0,
 									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-									"text" : "jcom.oscroute myCounter myMetro",
+									"text" : "j.oscroute myCounter myMetro",
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 0
 								}
@@ -345,7 +345,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 395.0, 223.0, 271.0, 60.0 ],
-													"text" : "jcom.return myCounter @type integer @active 1 @range/bounds 0 10 @range/clipmode wrap @repetitions/allow 0 @description \"Count from 0 to 9\""
+													"text" : "j.return myCounter @type integer @active 1 @range/bounds 0 10 @range/clipmode wrap @repetitions/allow 0 @description \"Count from 0 to 9\""
 												}
 
 											}
@@ -359,7 +359,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 91.0, 164.0, 196.0, 20.0 ],
-													"text" : "jcom.oscroute myMetro myCounter"
+													"text" : "j.oscroute myMetro myCounter"
 												}
 
 											}
@@ -390,7 +390,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 412.0, 132.0, 252.0, 33.0 ],
-													"text" : "jcom.return myMetro @type generic @description \"Send bang out of jcom.hub\""
+													"text" : "j.return myMetro @type generic @description \"Send bang out of j.hub\""
 												}
 
 											}
@@ -418,8 +418,8 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 124.0, 72.0, 20.0 ],
-													"text" : "jcom.model",
-													"varname" : "jcom.hub"
+													"text" : "j.model",
+													"varname" : "j.hub"
 												}
 
 											}
@@ -642,7 +642,7 @@
 									"patching_rect" : [ 105.0, 406.0, 249.0, 20.0 ],
 									"presentation" : 0,
 									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-									"text" : "jcom.receive /myMetronomModel/myCounter",
+									"text" : "j.receive /myMetronomModel/myCounter",
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 0
 								}
@@ -656,7 +656,7 @@
 									"hidden" : 0,
 									"id" : "obj-1",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.return" ],
+									"jsarguments" : [ "j.return" ],
 									"maxclass" : "jsui",
 									"nofsaa" : 0,
 									"numinlets" : 1,
@@ -751,19 +751,19 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
  ]

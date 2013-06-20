@@ -17,11 +17,11 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.ui", "@description", "User interface object for Jamoma modules" ],
+					"args" : [ "@name", "j.ui", "@description", "User interface object for Jamoma modules" ],
 					"bgmode" : 1,
 					"id" : "obj-8",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 693.0, 70.0 ],
@@ -39,7 +39,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 390.0, 405.0, 284.0, 43.0 ],
-					"text" : "for video modules, the first outlet of jcom.ui can be connected to a jit.pwindow, for previewing... see the video template)"
+					"text" : "for video modules, the first outlet of j.ui can be connected to a jit.pwindow, for previewing... see the video template)"
 				}
 
 			}
@@ -77,7 +77,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 70.0, 190.0, 163.0, 19.0 ],
-									"text" : "jcom.message extra_message"
+									"text" : "j.message extra_message"
 								}
 
 							}
@@ -91,7 +91,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 70.0, 165.0, 159.0, 19.0 ],
-									"text" : "jcom.parameter extra_param"
+									"text" : "j.parameter extra_param"
 								}
 
 							}
@@ -472,7 +472,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 390.0, 280.0, 275.0, 55.0 ],
-					"text" : "in order for the generic parameters to be named correctly, the \"OSC prefix for parameter name\" should be set as audio for audio modules, and video for the video modules, in the inspector of jcom.ui"
+					"text" : "in order for the generic parameters to be named correctly, the \"OSC prefix for parameter name\" should be set as audio for audio modules, and video for the video modules, in the inspector of j.ui"
 				}
 
 			}
@@ -925,7 +925,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 45.0, 270.0, 84.0, 24.0 ],
-					"text" : "jcom.hub"
+					"text" : "j.hub"
 				}
 
 			}
@@ -940,8 +940,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 50.0, 345.0, 245.0, 31.0 ],
-					"text" : "jcom.hub @module_type control @description \"this module doesn't do anything\"",
-					"varname" : "jcom.hub"
+					"text" : "j.hub @module_type control @description \"this module doesn't do anything\"",
+					"varname" : "j.hub"
 				}
 
 			}
@@ -1003,7 +1003,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 45.0, 125.0, 79.0, 24.0 ],
-					"text" : "jcom.ui"
+					"text" : "j.ui"
 				}
 
 			}
@@ -1017,7 +1017,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 40.0, 80.0, 322.0, 31.0 ],
-					"text" : "jcom.gui is a component that is used as the background for a module when it is being designed. It is loaded in a bpatcher"
+					"text" : "j.gui is a component that is used as the background for a module when it is being designed. It is loaded in a bpatcher"
 				}
 
 			}
@@ -1031,7 +1031,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 465.0, 625.0, 57.0, 17.0 ],
-					"text" : "jcom.hub"
+					"text" : "j.hub"
 				}
 
 			}
@@ -1045,7 +1045,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 465.0, 605.0, 69.0, 17.0 ],
-					"text" : "jcom.return"
+					"text" : "j.return"
 				}
 
 			}
@@ -1059,7 +1059,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 465.0, 585.0, 82.0, 17.0 ],
-					"text" : "jcom.message"
+					"text" : "j.message"
 				}
 
 			}
@@ -1073,7 +1073,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 465.0, 565.0, 90.0, 17.0 ],
-					"text" : "jcom.parameter"
+					"text" : "j.parameter"
 				}
 
 			}
@@ -1130,7 +1130,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 230.0, 635.0, 93.0, 19.0 ],
-					"text" : "jcom.return cow"
+					"text" : "j.return cow"
 				}
 
 			}
@@ -1144,7 +1144,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 230.0, 610.0, 118.0, 19.0 ],
-					"text" : "jcom.message messy"
+					"text" : "j.message messy"
 				}
 
 			}
@@ -1158,7 +1158,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 230.0, 585.0, 111.0, 19.0 ],
-					"text" : "jcom.parameter bar"
+					"text" : "j.parameter bar"
 				}
 
 			}
@@ -1172,7 +1172,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 230.0, 560.0, 110.0, 19.0 ],
-					"text" : "jcom.parameter foo"
+					"text" : "j.parameter foo"
 				}
 
 			}
@@ -1225,7 +1225,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 70.0, 560.0, 48.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -1239,7 +1239,7 @@
 					"has_panel" : 1,
 					"has_preview" : 1,
 					"id" : "obj-2",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

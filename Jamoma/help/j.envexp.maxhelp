@@ -314,7 +314,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 242.0, 378.0, 315.0, 20.0 ],
-									"text" : "jcom.envExp @amplitude 1 @attack 10.5 @decayrate 18"
+									"text" : "j.envExp @amplitude 1 @attack 10.5 @decayrate 18"
 								}
 
 							}
@@ -838,7 +838,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-24",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.envexp" ],
+									"jsarguments" : [ "j.envexp" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -924,7 +924,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 142.0, 312.0, 80.0, 20.0 ],
-									"text" : "jcom.envExp"
+									"text" : "j.envExp"
 								}
 
 							}
@@ -1091,7 +1091,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.envexp.mxo",
+				"name" : "j.envexp.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -137,7 +137,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 724.0, 573.0, 182.0, 40.0 ],
-									"text" : "This also applies to jcom.send"
+									"text" : "This also applies to j.send"
 								}
 
 							}
@@ -165,7 +165,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 574.0, 583.0, 112.0, 20.0 ],
-									"text" : "jcom.send /object.*"
+									"text" : "j.send /object.*"
 								}
 
 							}
@@ -225,7 +225,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 574.0, 490.5, 123.0, 20.0 ],
-									"text" : "jcom.remote /object.*"
+									"text" : "j.remote /object.*"
 								}
 
 							}
@@ -253,7 +253,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 580.5, 369.5, 125.0, 20.0 ],
-									"text" : "jcom.remote /object.2"
+									"text" : "j.remote /object.2"
 								}
 
 							}
@@ -353,7 +353,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-3",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.messageArray" ],
+									"jsarguments" : [ "j.messageArray" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -374,7 +374,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 128.0, 468.0, 356.0, 20.0 ],
-									"text" : "jcom.messageArray object.[6] @type decimal @description Hello"
+									"text" : "j.messageArray object.[6] @type decimal @description Hello"
 								}
 
 							}
@@ -445,7 +445,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 55.0, 266.0, 400.0, 20.0 ],
-									"text" : "jcom.messageArray source.[4]/position @type integer @description Hello"
+									"text" : "j.messageArray source.[4]/position @type integer @description Hello"
 								}
 
 							}
@@ -602,7 +602,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 66.0, 259.0, 182.0, 20.0 ],
-									"text" : "jcom.remoteArray /split/items.[5]"
+									"text" : "j.remoteArray /split/items.[5]"
 								}
 
 							}
@@ -775,7 +775,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 66.0, 357.0, 343.0, 20.0 ],
-									"text" : "jcom.messageArray split/items.[5] @type array @format single",
+									"text" : "j.messageArray split/items.[5] @type array @format single",
 									"varname" : "my_float[1]"
 								}
 
@@ -931,7 +931,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 733.0, 224.5, 182.0, 20.0 ],
-									"text" : "jcom.remoteArray /other/stuff.[5]",
+									"text" : "j.remoteArray /other/stuff.[5]",
 									"varname" : "my_float[4]"
 								}
 
@@ -947,7 +947,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 278.5, 184.0, 20.0 ],
-									"text" : "jcom.remoteArray /some/stuff.[5]",
+									"text" : "j.remoteArray /some/stuff.[5]",
 									"varname" : "my_float[3]"
 								}
 
@@ -965,7 +965,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 521.0, 301.5, 172.0, 69.0 ],
-									"text" : "In 'array' mode, jcom.parameterArray will output a list containing values of all instances"
+									"text" : "In 'array' mode, j.parameterArray will output a list containing values of all instances"
 								}
 
 							}
@@ -981,7 +981,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 340.0, 218.0, 153.0, 141.0 ],
-									"text" : "In 'single' mode (default), jcom.parameterArray will output the instance whose value has been changed out of the middle outlet then the value out of the left outlet"
+									"text" : "In 'single' mode (default), j.parameterArray will output the instance whose value has been changed out of the middle outlet then the value out of the left outlet"
 								}
 
 							}
@@ -996,7 +996,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 50.0, 77.0, 172.0, 65.0 ],
-									"text" : "You can specify how will jcom.messageArray output its values using the @format attribute."
+									"text" : "You can specify how will j.messageArray output its values using the @format attribute."
 								}
 
 							}
@@ -1140,7 +1140,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 733.0, 301.5, 270.0, 20.0 ],
-									"text" : "jcom.messageArray other/stuff.[5] @format array",
+									"text" : "j.messageArray other/stuff.[5] @format array",
 									"varname" : "my_float[2]"
 								}
 
@@ -1256,7 +1256,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 326.0, 276.0, 20.0 ],
-									"text" : "jcom.messageArray some/stuff.[5] @format single",
+									"text" : "j.messageArray some/stuff.[5] @format single",
 									"varname" : "my_float[1]"
 								}
 
@@ -1446,19 +1446,19 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.messageArray.mxo",
+				"name" : "j.messageArray.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remoteArray.mxo",
+				"name" : "j.remoteArray.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -131,7 +131,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-1",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.folder" ],
+									"jsarguments" : [ "j.folder" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -234,7 +234,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 50.0, 77.0, 102.0, 33.0 ],
-													"text" : "jcom.jamomaPath"
+													"text" : "j.jamomaPath"
 												}
 
 											}
@@ -476,7 +476,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 211.0, 403.0, 206.0, 20.0 ],
-									"text" : "jcom.folder based on tap.folder from "
+									"text" : "j.folder based on tap.folder from "
 								}
 
 							}
@@ -558,7 +558,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 388.0, 67.0, 20.0 ],
-									"text" : "jcom.folder"
+									"text" : "j.folder"
 								}
 
 							}
@@ -634,7 +634,7 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../patchers/components/jamomaPath",
 				"type" : "JSON",
@@ -648,7 +648,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.folder.mxo",
+				"name" : "j.folder.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -40,7 +40,7 @@
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 675.0, 435.0, 265.0, 33.0 ],
-					"text" : "the output of jcom.namespace can be sorted by priority or alphabetically, with the sort atrtribute"
+					"text" : "the output of j.namespace can be sorted by priority or alphabetically, with the sort atrtribute"
 				}
 
 			}
@@ -397,7 +397,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 11.0, 119.0, 179.0, 33.0 ],
-									"text" : "jcom.namespace mySelection @filter/list model"
+									"text" : "j.namespace mySelection @filter/list model"
 								}
 
 							}
@@ -954,7 +954,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 285.0, 319.0, 228.0, 33.0 ],
-									"text" : "jcom.namespace mySelection @filter/list parameter @format jit.cellblock"
+									"text" : "j.namespace mySelection @filter/list parameter @format jit.cellblock"
 								}
 
 							}
@@ -999,7 +999,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 11.0, 319.0, 209.0, 33.0 ],
-									"text" : "jcom.namespace mySelection @filter/list model @format jit.cellblock"
+									"text" : "j.namespace mySelection @filter/list model @format jit.cellblock"
 								}
 
 							}
@@ -1082,7 +1082,7 @@
 									"presentation" : 1,
 									"presentation_linecount" : 2,
 									"presentation_rect" : [ 2.0, 2.0, 318.0, 33.0 ],
-									"text" : "The jcom.namespace can handle a set of addresses to manage their selection state and display it for any format."
+									"text" : "The j.namespace can handle a set of addresses to manage their selection state and display it for any format."
 								}
 
 							}
@@ -1813,7 +1813,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 835.0, 410.0, 131.0, 47.0 ],
-					"text" : "jcom.namespace @output brothers @format umenu_prefix"
+					"text" : "j.namespace @output brothers @format umenu_prefix"
 				}
 
 			}
@@ -2581,7 +2581,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 38.0, 611.0, 441.0, 20.0 ],
-									"text" : "Viewer : any jcom.remote."
+									"text" : "Viewer : any j.remote."
 								}
 
 							}
@@ -2596,7 +2596,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 38.0, 578.0, 441.0, 33.0 ],
-									"text" : "Container : any jcom.model or jcom.view. Actually a jcom.model is a Container with his tag attribute equals to model."
+									"text" : "Container : any j.model or j.view. Actually a j.model is a Container with his tag attribute equals to model."
 								}
 
 							}
@@ -2611,7 +2611,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 38.0, 545.0, 441.0, 33.0 ],
-									"text" : "Data : any jcom.parameter|message|return. Actually a jcom.parameter is a Data with his service attribute equals to parameter."
+									"text" : "Data : any j.parameter|message|return. Actually a j.parameter is a Data with his service attribute equals to parameter."
 								}
 
 							}
@@ -2670,7 +2670,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 2.0, 2.0, 622.0, 47.0 ],
-									"text" : "The jcom.namespace exploration can filter in or out the result it returns. It is possible to compare object type and/or attributes value, the name or the instance of an address using a regular expression. It is also possible to use a combination of many filters in order to filter in or out the namespace precisely."
+									"text" : "The j.namespace exploration can filter in or out the result it returns. It is possible to compare object type and/or attributes value, the name or the instance of an address using a regular expression. It is also possible to use a combination of many filters in order to filter in or out the namespace precisely."
 								}
 
 							}
@@ -2718,7 +2718,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 16.0, 447.0, 227.0, 20.0 ],
-									"text" : "jcom.namespace @format umenu_prefix"
+									"text" : "j.namespace @format umenu_prefix"
 								}
 
 							}
@@ -3731,7 +3731,7 @@
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 15.0, 360.0, 247.0, 33.0 ],
-					"text" : "Finally it is possible to get all attributes and their values (using a jcom.receive)"
+					"text" : "Finally it is possible to get all attributes and their values (using a j.receive)"
 				}
 
 			}
@@ -3784,7 +3784,7 @@
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 0.0, 75.0, 281.0, 33.0 ],
-					"text" : "Two examples of Jamoma namespace discovering using the jcom.namespace component"
+					"text" : "Two examples of Jamoma namespace discovering using the j.namespace component"
 				}
 
 			}
@@ -3870,11 +3870,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.namespace", "@description", "An external to discover the Jamoma Namespace" ],
+					"args" : [ "@name", "j.namespace", "@description", "An external to discover the Jamoma Namespace" ],
 					"bgmode" : 1,
 					"id" : "obj-36",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 948.0, 70.0 ],
@@ -3988,7 +3988,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 760.0, 241.0, 132.0, 47.0 ],
-					"text" : "jcom.namespace @output children @format umenu_prefix"
+					"text" : "j.namespace @output children @format umenu_prefix"
 				}
 
 			}
@@ -4076,7 +4076,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 438.0, 652.0, 164.0, 20.0 ],
-					"text" : "jcom.receive"
+					"text" : "j.receive"
 				}
 
 			}
@@ -4092,7 +4092,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 306.0, 484.0, 132.0, 47.0 ],
-					"text" : "jcom.namespace @output attributes @format umenu_prefix"
+					"text" : "j.namespace @output attributes @format umenu_prefix"
 				}
 
 			}
@@ -4192,7 +4192,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 396.0, 325.0, 135.0, 60.0 ],
-					"text" : "jcom.namespace @format umenu_prefix @filter/list return @sort priority"
+					"text" : "j.namespace @format umenu_prefix @filter/list return @sort priority"
 				}
 
 			}
@@ -4208,7 +4208,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 246.0, 325.0, 148.0, 60.0 ],
-					"text" : "jcom.namespace @format umenu_prefix @filter/list message @sort priority"
+					"text" : "j.namespace @format umenu_prefix @filter/list message @sort priority"
 				}
 
 			}
@@ -4224,7 +4224,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 87.0, 325.0, 134.0, 60.0 ],
-					"text" : "jcom.namespace @format umenu_prefix @filter/list parameter @sort priority"
+					"text" : "j.namespace @format umenu_prefix @filter/list parameter @sort priority"
 				}
 
 			}
@@ -4276,7 +4276,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 12.0, 192.0, 134.0, 47.0 ],
-					"text" : "jcom.namespace @filter/list model @format umenu_prefix"
+					"text" : "j.namespace @filter/list model @format umenu_prefix"
 				}
 
 			}
@@ -4831,83 +4831,83 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
 				"patcherrelativepath" : "../../../Max/library/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.namespace.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
  ]

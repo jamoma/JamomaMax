@@ -36,7 +36,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 370.0, 215.0, 320.0, 19.0 ],
-					"text" : "jcom.dataspace# @dataspace color @input hsl @output rgb8"
+					"text" : "j.dataspace# @dataspace color @input hsl @output rgb8"
 				}
 
 			}
@@ -92,7 +92,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 370.0, 260.0, 81.0, 19.0 ],
-					"text" : "jcom.unpack#"
+					"text" : "j.unpack#"
 				}
 
 			}
@@ -106,7 +106,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 370.0, 175.0, 68.0, 19.0 ],
-					"text" : "jcom.pack#"
+					"text" : "j.pack#"
 				}
 
 			}
@@ -140,11 +140,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.op#", "@description", "A multi-operator graph object" ],
+					"args" : [ "@name", "j.op#", "@description", "A multi-operator graph object" ],
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 966.0, 70.0 ]
@@ -161,7 +161,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 30.0, 260.0, 81.0, 19.0 ],
-					"text" : "jcom.unpack#"
+					"text" : "j.unpack#"
 				}
 
 			}
@@ -175,7 +175,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 30.0, 215.0, 329.0, 19.0 ],
-					"text" : "jcom.dataspace# @dataspace time @input midi @output Hertz"
+					"text" : "j.dataspace# @dataspace time @input midi @output Hertz"
 				}
 
 			}
@@ -189,7 +189,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 30.0, 175.0, 70.0, 19.0 ],
-					"text" : "jcom.pack#"
+					"text" : "j.pack#"
 				}
 
 			}
@@ -279,54 +279,54 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/code/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../Modules/Modular/Max/library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/code/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../Modules/Modular/Max/library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/code/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../Modules/Modular/Max/library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/code/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
 				"patcherrelativepath" : "../../Modules/Modular/Max/library/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/code/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../Modules/Modular/Max/library/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.pack#.mxo",
+				"name" : "j.pack#.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace#.mxo",
+				"name" : "j.dataspace#.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack#.mxo",
+				"name" : "j.unpack#.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
  ]

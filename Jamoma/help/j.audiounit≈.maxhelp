@@ -35,7 +35,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "jcom.audiounit≈" ],
+					"jsarguments" : [ "j.audiounit≈" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -125,7 +125,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 166.0, 216.0, 465.0, 22.0 ],
-									"text" : "without setting @class,  jcom.array≈ will process a gain stage by default"
+									"text" : "without setting @class,  j.array≈ will process a gain stage by default"
 								}
 
 							}
@@ -183,7 +183,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 81.0, 609.0, 883.0, 20.0 ],
-									"text" : "jcom.unpack≈ 4"
+									"text" : "j.unpack≈ 4"
 								}
 
 							}
@@ -306,7 +306,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "audio.connect", "", "", "", "" ],
 									"patching_rect" : [ 81.0, 241.0, 65.0, 20.0 ],
-									"text" : "jcom.info≈"
+									"text" : "j.info≈"
 								}
 
 							}
@@ -320,7 +320,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 81.0, 577.0, 151.0, 22.0 ],
-									"text" : "jcom.array≈ @class filter"
+									"text" : "j.array≈ @class filter"
 								}
 
 							}
@@ -334,7 +334,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 236.0, 577.0, 294.0, 22.0 ],
-									"text" : "use jcom.array≈ with any JamomaDSP class"
+									"text" : "use j.array≈ with any JamomaDSP class"
 								}
 
 							}
@@ -434,7 +434,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 80.0, 105.0, 186.0, 22.0 ],
-									"text" : "jcom.noise≈ @numChannels 4"
+									"text" : "j.noise≈ @numChannels 4"
 								}
 
 							}
@@ -495,17 +495,17 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 80.0, 216.0, 77.0, 22.0 ],
-									"text" : "jcom.array≈"
+									"text" : "j.array≈"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "jcom.array≈", "@description", "An audio swiss army knife" ],
+									"args" : [ "@name", "j.array≈", "@description", "An audio swiss army knife" ],
 									"bgmode" : 1,
 									"id" : "obj-32",
 									"maxclass" : "bpatcher",
-									"name" : "jcom.maxhelpui.maxpat",
+									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 0.0, 0.0, 1117.0, 70.0 ]
@@ -532,7 +532,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 101.0, 306.0, 883.0, 20.0 ],
-									"text" : "jcom.unpack≈ 4"
+									"text" : "j.unpack≈ 4"
 								}
 
 							}
@@ -861,28 +861,28 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../patchers/components/jamomaPath",
 				"type" : "JSON",
@@ -903,31 +903,31 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.array≈.mxo",
+				"name" : "j.array≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.noise≈.mxo",
+				"name" : "j.noise≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.info≈.mxo",
+				"name" : "j.info≈.mxo",
 				"type" : "iLaX"
 			}
  ]

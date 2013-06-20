@@ -152,7 +152,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "float", "float", "float", "" ],
 									"patching_rect" : [ 375.0, 435.0, 65.0, 20.0 ],
-									"text" : "jcom.delta"
+									"text" : "j.delta"
 								}
 
 							}
@@ -420,7 +420,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "float", "float", "float", "" ],
 									"patching_rect" : [ 177.0, 291.0, 65.0, 20.0 ],
-									"text" : "jcom.delta"
+									"text" : "j.delta"
 								}
 
 							}
@@ -609,7 +609,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-46",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.delta" ],
+									"jsarguments" : [ "j.delta" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -663,7 +663,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "float", "float", "float", "" ],
 									"patching_rect" : [ 176.0, 233.0, 71.0, 20.0 ],
-									"text" : "jcom.delta"
+									"text" : "j.delta"
 								}
 
 							}
@@ -956,7 +956,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "float", "float", "float", "" ],
 									"patching_rect" : [ 631.0, 233.0, 71.0, 20.0 ],
-									"text" : "jcom.delta"
+									"text" : "j.delta"
 								}
 
 							}
@@ -1121,7 +1121,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.delta.mxo",
+				"name" : "j.delta.mxo",
 				"type" : "iLaX"
 			}
  ]

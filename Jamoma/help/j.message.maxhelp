@@ -132,7 +132,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-17",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.message" ],
+									"jsarguments" : [ "j.message" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -301,7 +301,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 650.0, 593.5, 374.0, 20.0 ],
-									"text" : "jcom.message yummi @type string @description \"A string example.\"",
+									"text" : "j.message yummi @type string @description \"A string example.\"",
 									"varname" : "my_menu"
 								}
 
@@ -317,7 +317,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 650.0, 539.5, 362.0, 20.0 ],
-									"text" : "jcom.message myToggle @type boolean @description \"My toggle\"",
+									"text" : "j.message myToggle @type boolean @description \"My toggle\"",
 									"varname" : "my_toggle"
 								}
 
@@ -334,7 +334,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 650.0, 446.5, 358.0, 33.0 ],
-									"text" : "jcom.message myFloat @range/clipmode none @type decimal @ramp/drive Max @description \"My float\"",
+									"text" : "j.message myFloat @range/clipmode none @type decimal @ramp/drive Max @description \"My float\"",
 									"varname" : "my_float"
 								}
 
@@ -424,7 +424,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 650.0, 361.0, 360.0, 33.0 ],
-									"text" : "jcom.message myInteger @type integer @description \"An integer example.\""
+									"text" : "j.message myInteger @type integer @description \"An integer example.\""
 								}
 
 							}
@@ -480,8 +480,8 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 122.0, 549.0, 71.0, 20.0 ],
-									"text" : "jcom.model",
-									"varname" : "jcom.hub"
+									"text" : "j.model",
+									"varname" : "j.hub"
 								}
 
 							}
@@ -524,7 +524,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 80.0, 223.0, 386.0, 60.0 ],
-									"text" : "It behaves the same as jcom.parameter and takes the same attributes. The only difference is that it is not stored as part of the state in jcom.model, hence cannot be saved in presets or cues. See jcom.parameter help patch for more info about common behavior."
+									"text" : "It behaves the same as j.parameter and takes the same attributes. The only difference is that it is not stored as part of the state in j.model, hence cannot be saved in presets or cues. See j.parameter help patch for more info about common behavior."
 								}
 
 							}
@@ -539,7 +539,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 80.0, 190.0, 385.0, 33.0 ],
-									"text" : "jcom.message can be used to declare some inputs messages to your models."
+									"text" : "j.message can be used to declare some inputs messages to your models."
 								}
 
 							}
@@ -774,11 +774,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]

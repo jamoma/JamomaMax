@@ -382,7 +382,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 179.0, 361.0, 381.0, 20.0 ],
-									"text" : "jcom.hmlshelf~ 2"
+									"text" : "j.hmlshelf~ 2"
 								}
 
 							}
@@ -408,7 +408,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-3",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.hmlshelf~" ],
+									"jsarguments" : [ "j.hmlshelf~" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -605,7 +605,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.hmlshelf~.mxo",
+				"name" : "j.hmlshelf~.mxo",
 				"type" : "iLaX"
 			}
  ]

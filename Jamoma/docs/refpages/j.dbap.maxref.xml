@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <?xml-stylesheet href="./_jdoc_ref.xsl" type="text/xsl"?>
-<c74object category='spatialization, surround, pan' module='Jamoma' name='jcom.dbap'>
+<c74object category='spatialization, surround, pan' module='Jamoma' name='j.dbap'>
   <digest>
     Distance amplitude panning
   </digest>
@@ -137,25 +137,25 @@
     </method>
     <method name='info'>
       <digest>
-        The message <m>info</m> cause <jcom>jcom.dbap</jcom> to output information concerning
+        The message <m>info</m> cause <jcom>j.dbap</jcom> to output information concerning
         current positions of sources and destinations.
       </digest>
       <description>
-        The message <m>info</m> cause <jcom>jcom.dbap</jcom> to output information concerning
+        The message <m>info</m> cause <jcom>j.dbap</jcom> to output information concerning
         current positions of sources and destinations.
       </description>
     </method>
     <method name='master_gain'>
       <digest>
         The message <m>master_gain</m> can be used to control the general gain level
-        for all matrix~ routings controlled by <jcom>jcom.dbap.</jcom> All amplitude values
-        calculated internally by <jcom>jcom.dbap</jcom> are multiplied by the value of
+        for all matrix~ routings controlled by <jcom>j.dbap.</jcom> All amplitude values
+        calculated internally by <jcom>j.dbap</jcom> are multiplied by the value of
         <m>master_gain</m> before being passed to matrix~.
       </digest>
       <description>
         The message <m>master_gain</m> can be used to control the general gain level
-        for all matrix~ routings controlled by <jcom>jcom.dbap.</jcom> All amplitude values
-        calculated internally by <jcom>jcom.dbap</jcom> are multiplied by the value of
+        for all matrix~ routings controlled by <jcom>j.dbap.</jcom> All amplitude values
+        calculated internally by <jcom>j.dbap</jcom> are multiplied by the value of
         <m>master_gain</m> before being passed to matrix~.
       </description>
     </method>
@@ -208,13 +208,13 @@
   <objarglist/>
   <!--EXAMPLE-->
   <examplelist>
-    <example img='jcom.dbap.maxref.png'/>
+    <example img='j.dbap.maxref.png'/>
   </examplelist>
   <!--SEE ALSO-->
   <seealsolist>
     <seealso name='ambidecode~'/>
     <seealso name='ambiencode~'/>
-    <seealso name='jcom.matrix≈'/>
+    <seealso name='j.matrix≈'/>
     <seealso name='matrix~'/>
     <seealso name='jmod.sur.vbap~'/>
   </seealsolist>

@@ -421,7 +421,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
 									"patching_rect" : [ 250.0, 260.0, 172.0, 20.0 ],
-									"text" : "jcom.function~ 1"
+									"text" : "j.function~ 1"
 								}
 
 							}
@@ -455,7 +455,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-2",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.function~" ],
+									"jsarguments" : [ "j.function~" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -599,7 +599,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.function~.mxo",
+				"name" : "j.function~.mxo",
 				"type" : "iLaX"
 			}
  ]

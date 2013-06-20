@@ -92,7 +92,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 197.0, 335.0, 208.0, 20.0 ],
-									"text" : "jcom.parameter bar @value/default 2",
+									"text" : "j.parameter bar @value/default 2",
 									"varname" : "foo[1]"
 								}
 
@@ -122,7 +122,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 61.0, 261.0, 72.0, 20.0 ],
-									"text" : "jcom.preset"
+									"text" : "j.preset"
 								}
 
 							}
@@ -155,7 +155,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 197.0, 261.0, 209.0, 20.0 ],
-									"text" : "jcom.parameter foo @value/default 1.",
+									"text" : "j.parameter foo @value/default 1.",
 									"varname" : "foo"
 								}
 
@@ -170,7 +170,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 61.0, 225.0, 71.0, 20.0 ],
-									"text" : "jcom.model"
+									"text" : "j.model"
 								}
 
 							}
@@ -185,7 +185,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 61.0, 124.0, 316.0, 60.0 ],
-									"text" : "Sending the message init  makes jcom.preset reset all parameters to the default preset (so the needs a jcom.preset and a preset file to load) or to parameters default value"
+									"text" : "Sending the message init  makes j.preset reset all parameters to the default preset (so the needs a j.preset and a preset file to load) or to parameters default value"
 								}
 
 							}
@@ -439,7 +439,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "bang" ],
 									"patching_rect" : [ 570.0, 258.0, 63.5, 33.0 ],
-									"text" : "jcom.init sub_level"
+									"text" : "j.init sub_level"
 								}
 
 							}
@@ -555,7 +555,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "bang", "bang" ],
 													"patching_rect" : [ 3.0, 2.0, 62.0, 20.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -599,7 +599,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 160.0, 105.0, 210.0, 20.0 ],
-													"text" : "jcom.parameter bar @value/default 1.",
+													"text" : "j.parameter bar @value/default 1.",
 													"varname" : "foo"
 												}
 
@@ -614,7 +614,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 160.0, 60.0, 131.0, 20.0 ],
-													"text" : "jcom.model @priority 2"
+													"text" : "j.model @priority 2"
 												}
 
 											}
@@ -629,7 +629,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 160.0, 2.0, 203.0, 33.0 ],
-													"text" : "A jcom.model can be used to create a sub level of a model's namespace"
+													"text" : "A j.model can be used to create a sub level of a model's namespace"
 												}
 
 											}
@@ -841,7 +841,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "bang", "bang" ],
 													"patching_rect" : [ 4.0, 6.0, 62.0, 20.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -885,7 +885,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 154.0, 104.0, 216.0, 20.0 ],
-													"text" : "jcom.parameter kuru @value/default 1.",
+													"text" : "j.parameter kuru @value/default 1.",
 													"varname" : "foo"
 												}
 
@@ -900,7 +900,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 154.0, 62.0, 131.0, 20.0 ],
-													"text" : "jcom.model @priority 1"
+													"text" : "j.model @priority 1"
 												}
 
 											}
@@ -915,7 +915,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 154.0, 6.0, 203.0, 33.0 ],
-													"text" : "A jcom.model can be used to create a sub level of a model's namespace"
+													"text" : "A j.model can be used to create a sub level of a model's namespace"
 												}
 
 											}
@@ -1071,7 +1071,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 71.0, 326.0, 72.0, 20.0 ],
-									"text" : "jcom.preset"
+									"text" : "j.preset"
 								}
 
 							}
@@ -1104,7 +1104,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 207.0, 296.0, 209.0, 20.0 ],
-									"text" : "jcom.parameter foo @value/default 1.",
+									"text" : "j.parameter foo @value/default 1.",
 									"varname" : "foo"
 								}
 
@@ -1119,7 +1119,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 71.0, 290.0, 71.0, 20.0 ],
-									"text" : "jcom.model"
+									"text" : "j.model"
 								}
 
 							}
@@ -1235,7 +1235,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "bang", "bang" ],
 													"patching_rect" : [ 6.0, 5.0, 62.0, 20.0 ],
-													"text" : "jcom.init"
+													"text" : "j.init"
 												}
 
 											}
@@ -1327,7 +1327,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 60.0, 180.0, 286.0, 47.0 ],
-									"text" : "jcom.init connects to jcom.model in order to link to all other instances of jcom.init within the same model. "
+									"text" : "j.init connects to j.model in order to link to all other instances of j.init within the same model. "
 								}
 
 							}
@@ -1342,7 +1342,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "bang" ],
 									"patching_rect" : [ 440.0, 258.0, 62.0, 20.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -1357,7 +1357,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 60.0, 135.0, 270.0, 47.0 ],
-									"text" : "jcom.init is a kind of loadbang local to the model. This way it is possible to initialize one module without resetting all preexisting modules."
+									"text" : "j.init is a kind of loadbang local to the model. This way it is possible to initialize one module without resetting all preexisting modules."
 								}
 
 							}
@@ -1372,7 +1372,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 71.0, 381.0, 321.0, 47.0 ],
-									"text" : "Example illustrating that jcom.init works locally for sub levels of a model's namespace but it needs a hub around. Noticed that upper jcom.init are banging lowerones"
+									"text" : "Example illustrating that j.init works locally for sub levels of a model's namespace but it needs a hub around. Noticed that upper j.init are banging lowerones"
 								}
 
 							}
@@ -1382,7 +1382,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-6",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.init" ],
+									"jsarguments" : [ "j.init" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1552,19 +1552,19 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

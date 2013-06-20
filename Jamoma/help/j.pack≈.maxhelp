@@ -20,11 +20,11 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.pack≈", "@description", "MSP signals to multicore" ],
+					"args" : [ "@name", "j.pack≈", "@description", "MSP signals to multicore" ],
 					"bgmode" : 1,
 					"id" : "obj-44",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 640.0, 70.0 ]
@@ -167,7 +167,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 255.0, 340.0, 259.0, 19.0 ],
-					"text" : "jcom.unpack≈ 4"
+					"text" : "j.unpack≈ 4"
 				}
 
 			}
@@ -181,7 +181,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 255.0, 215.0, 229.5, 19.0 ],
-					"text" : "jcom.pack≈ 4"
+					"text" : "j.pack≈ 4"
 				}
 
 			}

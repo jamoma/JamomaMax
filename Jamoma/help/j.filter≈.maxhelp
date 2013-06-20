@@ -131,7 +131,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-1",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.filter≈" ],
+									"jsarguments" : [ "j.filter≈" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -347,7 +347,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 280.0, 370.0, 70.0, 20.0 ],
-									"text" : "jcom.filter≈"
+									"text" : "j.filter≈"
 								}
 
 							}
@@ -398,7 +398,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
 									"patching_rect" : [ 280.0, 597.0, 93.0, 20.0 ],
-									"text" : "jcom.unpack≈ 1"
+									"text" : "j.unpack≈ 1"
 								}
 
 							}
@@ -412,7 +412,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 280.0, 572.0, 68.0, 20.0 ],
-									"text" : "jcom.gain≈"
+									"text" : "j.gain≈"
 								}
 
 							}
@@ -426,7 +426,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 280.0, 154.0, 73.0, 20.0 ],
-									"text" : "jcom.noise≈"
+									"text" : "j.noise≈"
 								}
 
 							}
@@ -686,19 +686,19 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.noise≈.mxo",
+				"name" : "j.noise≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.gain≈.mxo",
+				"name" : "j.gain≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.filter≈.mxo",
+				"name" : "j.filter≈.mxo",
 				"type" : "iLaX"
 			}
  ]

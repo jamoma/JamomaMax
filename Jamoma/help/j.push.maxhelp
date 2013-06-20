@@ -292,7 +292,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-1",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -933,11 +933,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.push", "@description", "Push an object around by applying force to it" ],
+					"args" : [ "@name", "j.push", "@description", "Push an object around by applying force to it" ],
 					"bgmode" : 1,
 					"id" : "obj-43",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 809.0, 70.0 ],
@@ -971,7 +971,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "" ],
 					"patching_rect" : [ 50.0, 345.0, 295.0, 19.0 ],
-					"text" : "jcom.push @dimensions 2 @friction 0.11 @size 400 400"
+					"text" : "j.push @dimensions 2 @friction 0.11 @size 400 400"
 				}
 
 			}

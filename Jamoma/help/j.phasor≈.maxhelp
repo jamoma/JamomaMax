@@ -20,11 +20,11 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.phasor≈", "@description", "Generate a cyclic ramp wave" ],
+					"args" : [ "@name", "j.phasor≈", "@description", "Generate a cyclic ramp wave" ],
 					"bgmode" : 1,
 					"id" : "obj-44",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 332.0, 70.0 ]
@@ -140,7 +140,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 90.0, 300.0, 91.0, 19.0 ],
-					"text" : "jcom.unpack≈ 1"
+					"text" : "j.unpack≈ 1"
 				}
 
 			}
@@ -154,7 +154,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 90.0, 275.0, 68.0, 19.0 ],
-					"text" : "jcom.gain≈"
+					"text" : "j.gain≈"
 				}
 
 			}
@@ -168,7 +168,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 90.0, 105.0, 170.0, 19.0 ],
-					"text" : "jcom.phasor≈ @frequency 220."
+					"text" : "j.phasor≈ @frequency 220."
 				}
 
 			}

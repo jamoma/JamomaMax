@@ -203,7 +203,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 6.0, 609.0, 212.0, 20.0 ],
-					"text" : "jcom.modular remoteMinuitApp Minuit"
+					"text" : "j.modular remoteMinuitApp Minuit"
 				}
 
 			}
@@ -300,7 +300,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 420.0, 107.0, 128.0, 33.0 ],
-									"text" : "jcom.parameter myInt @type integer"
+									"text" : "j.parameter myInt @type integer"
 								}
 
 							}
@@ -391,7 +391,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 233.0, 121.0, 156.0, 33.0 ],
-									"text" : "jcom.parameter mySymbol @type string",
+									"text" : "j.parameter mySymbol @type string",
 									"varname" : "mySymbol"
 								}
 
@@ -421,7 +421,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 38.0, 107.0, 146.0, 60.0 ],
-									"text" : "jcom.parameter myFloat @type decimal @ramp/drive Max @range/bounds -10. 10.",
+									"text" : "j.parameter myFloat @type decimal @ramp/drive Max @range/bounds -10. 10.",
 									"varname" : "myFloat"
 								}
 
@@ -663,7 +663,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 697.0, 152.5, 59.0, 20.0 ],
-									"text" : "jcom.cue"
+									"text" : "j.cue"
 								}
 
 							}
@@ -692,7 +692,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 447.0, 310.0, 160.0, 33.0 ],
-									"text" : "jcom.receive remoteOSCApp:/player/gain"
+									"text" : "j.receive remoteOSCApp:/player/gain"
 								}
 
 							}
@@ -855,7 +855,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 447.0, 433.0, 180.0, 33.0 ],
-									"text" : "jcom.send remoteOSCApp:/player/play"
+									"text" : "j.send remoteOSCApp:/player/play"
 								}
 
 							}
@@ -963,7 +963,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 660.0, 405.0, 180.0, 33.0 ],
-									"text" : "jcom.receive remoteOSCApp:/player/end"
+									"text" : "j.receive remoteOSCApp:/player/end"
 								}
 
 							}
@@ -1006,7 +1006,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 660.0, 271.0, 180.0, 33.0 ],
-									"text" : "jcom.send remoteOSCApp:/filter/frequency"
+									"text" : "j.send remoteOSCApp:/filter/frequency"
 								}
 
 							}
@@ -1078,7 +1078,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 447.0, 550.0, 239.0, 33.0 ],
-									"text" : "jcom.remote remoteOSCApp:/player/gain:range/bounds"
+									"text" : "j.remote remoteOSCApp:/player/gain:range/bounds"
 								}
 
 							}
@@ -1107,7 +1107,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 660.0, 310.0, 180.0, 33.0 ],
-									"text" : "jcom.receive remoteOSCApp:/filter/frequency"
+									"text" : "j.receive remoteOSCApp:/filter/frequency"
 								}
 
 							}
@@ -1122,7 +1122,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 447.0, 152.5, 208.0, 33.0 ],
-									"text" : "jcom.map @input /myFloat @output remoteOSCApp:/player/gain"
+									"text" : "j.map @input /myFloat @output remoteOSCApp:/player/gain"
 								}
 
 							}
@@ -1151,7 +1151,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 447.0, 271.0, 160.0, 33.0 ],
-									"text" : "jcom.send remoteOSCApp:/player/gain"
+									"text" : "j.send remoteOSCApp:/player/gain"
 								}
 
 							}
@@ -1181,7 +1181,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 447.0, 65.0, 208.0, 33.0 ],
-									"text" : "jcom.namespace @address remoteOSCApp:/ @format umenu"
+									"text" : "j.namespace @address remoteOSCApp:/ @format umenu"
 								}
 
 							}
@@ -1281,7 +1281,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 195.5, 159.0, 174.0, 20.0 ],
-									"text" : "jcom.oscroute type frequency"
+									"text" : "j.oscroute type frequency"
 								}
 
 							}
@@ -1295,7 +1295,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 3.0, 159.0, 143.0, 20.0 ],
-									"text" : "jcom.oscroute play gain"
+									"text" : "j.oscroute play gain"
 								}
 
 							}
@@ -1309,7 +1309,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 3.0, 129.0, 404.0, 20.0 ],
-									"text" : "jcom.oscroute /player /filter"
+									"text" : "j.oscroute /player /filter"
 								}
 
 							}
@@ -1880,7 +1880,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 341.0, 228.0, 145.0, 20.0 ],
-					"text" : "jcom.receive /:activity/out"
+					"text" : "j.receive /:activity/out"
 				}
 
 			}
@@ -1907,7 +1907,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 184.5, 228.0, 137.0, 20.0 ],
-					"text" : "jcom.receive /:activity/in"
+					"text" : "j.receive /:activity/in"
 				}
 
 			}
@@ -1969,7 +1969,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 9.0, 403.0, 200.0, 20.0 ],
-					"text" : "jcom.modular remoteOSCApp OSC"
+					"text" : "j.modular remoteOSCApp OSC"
 				}
 
 			}
@@ -1985,7 +1985,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 6.0, 291.0, 254.0, 33.0 ],
-					"text" : "With 2 arguments, jcom.modular enable a protocol to deal with a remote application :"
+					"text" : "With 2 arguments, j.modular enable a protocol to deal with a remote application :"
 				}
 
 			}
@@ -2014,7 +2014,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 6.0, 74.0, 246.0, 33.0 ],
-					"text" : "With 1 argument, jcom.modular enable a protocol to deal with the patcher :"
+					"text" : "With 1 argument, j.modular enable a protocol to deal with the patcher :"
 				}
 
 			}
@@ -2088,7 +2088,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 9.0, 159.5, 243.0, 33.0 ],
-					"text" : "jcom.modular Minuit @name myApplication @author \"Jamoma Team\" @version v1"
+					"text" : "j.modular Minuit @name myApplication @author \"Jamoma Team\" @version v1"
 				}
 
 			}
@@ -2109,10 +2109,10 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.modular", "@description", "Manage communication between a Jamoma patch and distant application using many protocoles" ],
+					"args" : [ "@name", "j.modular", "@description", "Manage communication between a Jamoma patch and distant application using many protocoles" ],
 					"id" : "obj-31",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 540.0, 70.0 ]
@@ -2277,28 +2277,28 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../patchers/components/jamomaPath",
 				"type" : "JSON",
@@ -2319,66 +2319,66 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
 				"patcherrelativepath" : "../patchers/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.modular.mxo",
+				"name" : "j.modular.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.namespace.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.cue.mxo",
+				"name" : "j.cue.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
  ]

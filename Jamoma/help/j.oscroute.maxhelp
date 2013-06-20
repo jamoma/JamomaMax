@@ -116,11 +116,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.oscroute", "@description", "Route Open Sound Control messages" ],
+					"args" : [ "@name", "j.oscroute", "@description", "Route Open Sound Control messages" ],
 					"bgmode" : 1,
 					"id" : "obj-27",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 900.0, 70.0 ],
@@ -215,7 +215,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 30.0, 485.0, 144.0, 19.0 ],
-									"text" : "jcom.oscroute loop/enable"
+									"text" : "j.oscroute loop/enable"
 								}
 
 							}
@@ -302,7 +302,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 30.0, 445.0, 130.0, 19.0 ],
-									"text" : "jcom.oscroute /sampler"
+									"text" : "j.oscroute /sampler"
 								}
 
 							}
@@ -331,7 +331,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 30.0, 20.0, 449.0, 36.0 ],
-									"text" : "\"Because of its central function in Jamoma, jcom.oscroute is optimized in such a way that the first item matched bypasses any further process\""
+									"text" : "\"Because of its central function in Jamoma, j.oscroute is optimized in such a way that the first item matched bypasses any further process\""
 								}
 
 							}
@@ -418,7 +418,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 90.0, 225.0, 241.0, 19.0 ],
-									"text" : "jcom.oscroute /sampler /sampler/loop/enable"
+									"text" : "j.oscroute /sampler /sampler/loop/enable"
 								}
 
 							}
@@ -693,7 +693,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 329.0, 149.0, 133.0, 19.0 ],
-													"text" : "jcom.oscroute /source.*"
+													"text" : "j.oscroute /source.*"
 												}
 
 											}
@@ -736,7 +736,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 136.0, 149.0, 177.0, 19.0 ],
-													"text" : "jcom.oscroute /source.*/position"
+													"text" : "j.oscroute /source.*/position"
 												}
 
 											}
@@ -915,7 +915,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 250.0, 179.0, 166.0, 19.0 ],
-									"text" : "jcom.oscroute /robot.* /foot/*"
+									"text" : "j.oscroute /robot.* /foot/*"
 								}
 
 							}
@@ -986,7 +986,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 67.0, 179.0, 166.0, 19.0 ],
-									"text" : "jcom.oscroute /fruit/* /robot.*"
+									"text" : "j.oscroute /fruit/* /robot.*"
 								}
 
 							}
@@ -1000,7 +1000,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 60.0, 55.0, 265.0, 19.0 ],
-									"text" : "jcom.oscroute also manages the * (star) wildcard."
+									"text" : "j.oscroute also manages the * (star) wildcard."
 								}
 
 							}
@@ -1257,7 +1257,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 643.0, 420.0, 90.0, 19.0 ],
-					"text" : "jcom.oscroute"
+					"text" : "j.oscroute"
 				}
 
 			}
@@ -1350,7 +1350,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 42.0, 242.0, 199.0, 19.0 ],
-					"text" : "jcom.oscroute /fruit /vegetable"
+					"text" : "j.oscroute /fruit /vegetable"
 				}
 
 			}
@@ -1450,7 +1450,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 645.0, 217.0, 188.0, 19.0 ],
-					"text" : "jcom.oscroute /limiter/bypass"
+					"text" : "j.oscroute /limiter/bypass"
 				}
 
 			}
@@ -1714,7 +1714,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 262.0, 366.0, 165.0, 19.0 ],
-					"text" : "jcom.oscroute potato carrots"
+					"text" : "j.oscroute potato carrots"
 				}
 
 			}
@@ -1729,7 +1729,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 42.0, 366.0, 165.0, 19.0 ],
-					"text" : "jcom.oscroute apple orange"
+					"text" : "j.oscroute apple orange"
 				}
 
 			}
@@ -1857,7 +1857,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 623.0, 278.0, 213.0, 67.0 ],
-					"text" : "If no argument is provided to jcom.oscroute, a second inlet will be created. You can then send an OSC string to the second inlet to set the pattern to match."
+					"text" : "If no argument is provided to j.oscroute, a second inlet will be created. You can then send an OSC string to the second inlet to set the pattern to match."
 				}
 
 			}

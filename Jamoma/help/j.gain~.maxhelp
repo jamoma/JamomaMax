@@ -173,7 +173,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-20",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.gain~" ],
+									"jsarguments" : [ "j.gain~" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -602,7 +602,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-33",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -613,7 +613,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-34",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -647,7 +647,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 150.0, 360.0, 78.0, 20.0 ],
-									"text" : "jcom.gain~ 2"
+									"text" : "j.gain~ 2"
 								}
 
 							}
@@ -837,11 +837,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.gain~.mxo",
+				"name" : "j.gain~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
  ]

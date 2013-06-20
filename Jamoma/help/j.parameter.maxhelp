@@ -124,7 +124,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 379.0, 135.0, 171.0, 118.0 ],
-									"text" : "jcom.parameter can be defined a dataspace and a unit using the @dataspace and @dataspace/unit attributes. See help patch for jcom.dataspace to explore the list of available dataspaces"
+									"text" : "j.parameter can be defined a dataspace and a unit using the @dataspace and @dataspace/unit attributes. See help patch for j.dataspace to explore the list of available dataspaces"
 								}
 
 							}
@@ -166,7 +166,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 213.0, 439.0, 216.0, 20.0 ],
-									"text" : "jcom.remote /gain @dataspace/unit db"
+									"text" : "j.remote /gain @dataspace/unit db"
 								}
 
 							}
@@ -211,7 +211,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 208.0, 164.0, 145.0, 60.0 ],
-									"text" : "jcom.parameter gain @type decimal @dataspace gain @dataspace/unit linear"
+									"text" : "j.parameter gain @type decimal @dataspace gain @dataspace/unit linear"
 								}
 
 							}
@@ -392,7 +392,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 414.0, 237.0, 157.0, 145.0 ],
-									"text" : "By default, jcom.parameter will ramp using the function defined by the ramp/function attibute. Here, we use a linear function by default. This attribute can be changed on the fly to use different curves."
+									"text" : "By default, j.parameter will ramp using the function defined by the ramp/function attibute. Here, we use a linear function by default. This attribute can be changed on the fly to use different curves."
 								}
 
 							}
@@ -422,7 +422,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 20.0, 669.0, 22.0 ],
-									"text" : "jcom.parameter embed Jamoma functionLib feature so one can ask a parameter to ramp to a new value."
+									"text" : "j.parameter embed Jamoma functionLib feature so one can ask a parameter to ramp to a new value."
 								}
 
 							}
@@ -486,7 +486,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 217.0, 433.0, 354.0, 20.0 ],
-									"text" : "jcom.parameter myLine @value/default 0. @ramp/function linear"
+									"text" : "j.parameter myLine @value/default 0. @ramp/function linear"
 								}
 
 							}
@@ -907,7 +907,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 587.5, 691.0, 136.0, 20.0 ],
-									"text" : "jcom.remote /frequency"
+									"text" : "j.remote /frequency"
 								}
 
 							}
@@ -950,7 +950,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 695.285706, 440.0, 137.0, 20.0 ],
-									"text" : "jcom.receive /frequency"
+									"text" : "j.receive /frequency"
 								}
 
 							}
@@ -991,7 +991,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 526.0, 365.0, 125.0, 20.0 ],
-									"text" : "jcom.send /frequency"
+									"text" : "j.send /frequency"
 								}
 
 							}
@@ -1001,7 +1001,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-7",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.parameter" ],
+									"jsarguments" : [ "j.parameter" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1088,7 +1088,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 45.0, 347.0, 198.0, 43.0 ],
-									"text" : "jcom.parameter frequency @description \"the frequency value of my patch\"",
+									"text" : "j.parameter frequency @description \"the frequency value of my patch\"",
 									"varname" : "my_float[1]"
 								}
 
@@ -1142,7 +1142,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 45.0, 176.5, 391.0, 94.0 ],
-									"text" : "The jcom.parameter is a core component of the Jamoma library. It allows Max programmers to declare a parameter within a patch in order store its value, remotely access it, etc. In this regard, jcom.parameter is somewhat similar to Max' pattr although providing number of features embeded in the Jamoma framework."
+									"text" : "The j.parameter is a core component of the Jamoma library. It allows Max programmers to declare a parameter within a patch in order store its value, remotely access it, etc. In this regard, j.parameter is somewhat similar to Max' pattr although providing number of features embeded in the Jamoma framework."
 								}
 
 							}
@@ -1393,7 +1393,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 419.0, 458.0, 212.0, 19.0 ],
-									"text" : "jcom.parameter my_menu @type string",
+									"text" : "j.parameter my_menu @type string",
 									"varname" : "my_menu"
 								}
 
@@ -1409,7 +1409,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 419.0, 360.0, 226.0, 19.0 ],
-									"text" : "jcom.parameter my_toggle @type boolean",
+									"text" : "j.parameter my_toggle @type boolean",
 									"varname" : "my_toggle"
 								}
 
@@ -1425,7 +1425,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 419.0, 271.0, 204.0, 19.0 ],
-									"text" : "jcom.parameter my_int @type integer",
+									"text" : "j.parameter my_int @type integer",
 									"varname" : "my_int"
 								}
 
@@ -1648,7 +1648,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 195.0, 723.0, 411.0, 31.0 ],
-									"text" : "- keywords can be specified in the tag attribute in order to allow an easier/more powerful sorting in jcom.namespace and other functions"
+									"text" : "- keywords can be specified in the tag attribute in order to allow an easier/more powerful sorting in j.namespace and other functions"
 								}
 
 							}
@@ -1705,7 +1705,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 436.0, 620.0, 89.0, 17.0 ],
-									"text" : "jcom.dataspace"
+									"text" : "j.dataspace"
 								}
 
 							}
@@ -1847,7 +1847,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 240.0, 311.0, 65.0, 17.0 ],
-									"text" : "jcom.ramp"
+									"text" : "j.ramp"
 								}
 
 							}
@@ -2444,19 +2444,19 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]

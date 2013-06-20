@@ -35,7 +35,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "jcom.cubicInterpolate" ],
+					"jsarguments" : [ "j.cubicInterpolate" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -107,7 +107,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-2",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.cubicInterpolate" ],
+									"jsarguments" : [ "j.cubicInterpolate" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -357,7 +357,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "float", "bang", "" ],
 									"patching_rect" : [ 225.0, 308.0, 189.0, 20.0 ],
-									"text" : "jcom.cubicInterpolate @step 0.02"
+									"text" : "j.cubicInterpolate @step 0.02"
 								}
 
 							}
@@ -644,7 +644,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.cubicInterpolate.mxo",
+				"name" : "j.cubicInterpolate.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -72,7 +72,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-15",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.js_systeminfo.js" ],
+									"jsarguments" : [ "j.js_systeminfo.js" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -231,11 +231,11 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 160.0, 235.0, 154.0, 20.0 ],
 									"saved_object_attributes" : 									{
-										"filename" : "jcom.js_systeminfo.js",
+										"filename" : "j.js_systeminfo.js",
 										"parameter_enable" : 0
 									}
 ,
-									"text" : "js jcom.js_systeminfo.js"
+									"text" : "js j.js_systeminfo.js"
 								}
 
 							}
@@ -436,7 +436,7 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.js_systeminfo.js",
+				"name" : "j.js_systeminfo.js",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/javascript",
 				"patcherrelativepath" : "../javascript",
 				"type" : "TEXT",

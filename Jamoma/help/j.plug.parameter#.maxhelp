@@ -41,7 +41,7 @@
 					"ignoreclick" : 0,
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
@@ -70,7 +70,7 @@
 					"patching_rect" : [ 50.0, 140.0, 194.0, 94.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.plug.parameter# frequency @style hertz @range 20 8000 @default 1000.",
+					"text" : "j.plug.parameter# frequency @style hertz @range 20 8000 @default 1000.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -118,7 +118,7 @@
 					"patching_rect" : [ 50.0, 390.0, 101.0, 54.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.append# @key name @value q",
+					"text" : "j.append# @key name @value q",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -142,7 +142,7 @@
 					"patching_rect" : [ 50.0, 290.0, 196.0, 72.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.plug.parameter# resonance @range 0. 4. @default 1.",
+					"text" : "j.plug.parameter# resonance @range 0. 4. @default 1.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -189,7 +189,7 @@
 					"patching_rect" : [ 250.0, 365.0, 288.0, 85.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "The dictionary produced by jcom.plug.parameter# includes both the parameter value and the parameter name.  Thus, the name of the parameter is also the name of the attribute it will try and control in the connected audio object.",
+					"text" : "The dictionary produced by j.plug.parameter# includes both the parameter value and the parameter name.  Thus, the name of the parameter is also the name of the attribute it will try and control in the connected audio object.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -323,7 +323,7 @@
 					"patching_rect" : [ 250.0, 140.0, 282.0, 54.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "The jcom.plug.parameter# object defines a parameter that can be automated and contolled by the host environment for the plug-in.",
+					"text" : "The j.plug.parameter# object defines a parameter that can be automated and contolled by the host environment for the plug-in.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -371,7 +371,7 @@
 					"patching_rect" : [ 250.0, 290.0, 280.0, 69.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "The jcom.plug.parameter# object produces a dictionary output.  A dictionary is a collection of information where specific pieces of information (values) are associated with a 'key'.",
+					"text" : "The j.plug.parameter# object produces a dictionary output.  A dictionary is a collection of information where specific pieces of information (values) are associated with a 'key'.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -441,7 +441,7 @@
 					"patching_rect" : [ 20.0, 105.0, 86.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.plug.in≈",
+					"text" : "j.plug.in≈",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -487,7 +487,7 @@
 					"patching_rect" : [ 20.0, 520.0, 72.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.filter≈",
+					"text" : "j.filter≈",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -510,7 +510,7 @@
 					"patching_rect" : [ 20.0, 550.0, 95.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "jcom.plug.out≈",
+					"text" : "j.plug.out≈",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 

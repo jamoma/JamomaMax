@@ -113,7 +113,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 410.0, 295.0, 129.0, 19.0 ],
-					"text" : "jcom.op≈ @operator +"
+					"text" : "j.op≈ @operator +"
 				}
 
 			}
@@ -170,7 +170,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 410.0, 325.0, 93.0, 19.0 ],
-					"text" : "jcom.unpack≈ 1"
+					"text" : "j.unpack≈ 1"
 				}
 
 			}
@@ -184,7 +184,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 520.0, 165.0, 80.0, 19.0 ],
-					"text" : "jcom.pack≈ 1"
+					"text" : "j.pack≈ 1"
 				}
 
 			}
@@ -198,17 +198,17 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 410.0, 165.0, 80.0, 19.0 ],
-					"text" : "jcom.pack≈ 1"
+					"text" : "j.pack≈ 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.op≈", "@description", "A multi-operator DSP object" ],
+					"args" : [ "@name", "j.op≈", "@description", "A multi-operator DSP object" ],
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 640.0, 70.0 ]
@@ -351,7 +351,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 110.0, 325.0, 258.0, 19.0 ],
-					"text" : "jcom.unpack≈ 4"
+					"text" : "j.unpack≈ 4"
 				}
 
 			}
@@ -365,7 +365,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 110.0, 285.0, 191.0, 19.0 ],
-					"text" : "jcom.op≈ @operator + @operand 5"
+					"text" : "j.op≈ @operator + @operand 5"
 				}
 
 			}
@@ -379,7 +379,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 110.0, 200.0, 229.0, 19.0 ],
-					"text" : "jcom.pack≈ 4"
+					"text" : "j.pack≈ 4"
 				}
 
 			}

@@ -200,7 +200,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 163.0, 297.0, 91.0, 19.0 ],
-					"text" : "jcom.unpack≈ 1"
+					"text" : "j.unpack≈ 1"
 				}
 
 			}
@@ -215,7 +215,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 163.0, 237.0, 115.0, 55.0 ],
-					"text" : "jcom.window≈ @mode apply @padding 10 @function hamming"
+					"text" : "j.window≈ @mode apply @padding 10 @function hamming"
 				}
 
 			}
@@ -229,17 +229,17 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 163.0, 137.0, 78.0, 19.0 ],
-					"text" : "jcom.pack≈ 1"
+					"text" : "j.pack≈ 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.window≈", "@description", "Apply windowing functions" ],
+					"args" : [ "@name", "j.window≈", "@description", "Apply windowing functions" ],
 					"bgmode" : 1,
 					"id" : "obj-44",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 551.0, 70.0 ]

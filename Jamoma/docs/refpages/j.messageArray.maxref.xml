@@ -3,12 +3,12 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="jcom.messageArray" module="" category="Jamoma">
+<c74object name="j.messageArray" module="" category="Jamoma">
 	<digest>
 		Handling array of messages in Jamoma model
 	</digest>
 	<description>
-		jcom.messageArray creates an array of messages in a Jamoma model
+		j.messageArray creates an array of messages in a Jamoma model
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -89,10 +89,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				This message select which jcom.messageArray's instance to address
+				This message select which j.messageArray's instance to address
 			</digest>
 			<description>
-				This message select which jcom.messageArray's instance to address
+				This message select which j.messageArray's instance to address
 			</description>
 		</method>
 		<method name="array/resize">
@@ -100,10 +100,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				This message create a new array of jcom.messages
+				This message create a new array of j.messages
 			</digest>
 			<description>
-				This message create a new array of jcom.messages
+				This message create a new array of j.messages
 			</description>
 		</method>
 		<method name="dec">
@@ -144,10 +144,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Reset the selected jcom.message instance to its default state
+				Reset the selected j.message instance to its default state
 			</digest>
 			<description>
-				Reset the selected jcom.message instance to its default state
+				Reset the selected j.message instance to its default state
 			</description>
 		</method>
 	</methodlist>
@@ -155,10 +155,10 @@
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				Set whether the array of jcom.message is enable or not
+				Set whether the array of j.message is enable or not
 			</digest>
 			<description>
-				Set whether the array of jcom.message is enable or not
+				Set whether the array of j.message is enable or not
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -336,8 +336,8 @@ Some optional tags			</description>
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="jcom.message"/>
-		<seealso name="jcom.parameterArray"/>
-		<seealso name="jcom.remoteArray"/>
+		<seealso name="j.message"/>
+		<seealso name="j.parameterArray"/>
+		<seealso name="j.remoteArray"/>
 	</seealsolist>
 </c74object>

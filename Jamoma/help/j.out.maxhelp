@@ -163,7 +163,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 323.0, 91.0, 223.0, 55.0 ],
-					"text" : "jcom.out is an output conduits for control signals in a jamoma model (most often these are Jitter matrices), much like jcom.out~ is for audio 'signals'."
+					"text" : "j.out is an output conduits for control signals in a jamoma model (most often these are Jitter matrices), much like j.out~ is for audio 'signals'."
 				}
 
 			}
@@ -192,7 +192,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 283.0, 207.0, 55.0 ],
-					"text" : "If jcom.out is instantiated into a model it would create internal parameters :\nout.mySignal/mute\nout.mySignal/freeze"
+					"text" : "If j.out is instantiated into a model it would create internal parameters :\nout.mySignal/mute\nout.mySignal/freeze"
 				}
 
 			}
@@ -230,7 +230,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 199.0, 209.0, 105.0, 19.0 ],
-					"text" : "jcom.out mySignal"
+					"text" : "j.out mySignal"
 				}
 
 			}
@@ -244,17 +244,17 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 199.0, 139.0, 98.0, 19.0 ],
-					"text" : "jcom.in mySignal"
+					"text" : "j.in mySignal"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.out", "@description", "Module conduit for non-audio output" ],
+					"args" : [ "@name", "j.out", "@description", "Module conduit for non-audio output" ],
 					"bgmode" : 1,
 					"id" : "obj-18",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 560.0, 70.0 ],

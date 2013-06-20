@@ -54,11 +54,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.oscinstance", "@description", "Retrieve the instance addressed in OSC messages" ],
+					"args" : [ "@name", "j.oscinstance", "@description", "Retrieve the instance addressed in OSC messages" ],
 					"bgmode" : 1,
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 553.0, 70.0 ],
@@ -145,7 +145,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 43.0, 153.0, 100.0, 19.0 ],
-					"text" : "jcom.oscinstance"
+					"text" : "j.oscinstance"
 				}
 
 			}
@@ -246,7 +246,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 43.0, 353.0, 100.0, 19.0 ],
-					"text" : "jcom.oscinstance"
+					"text" : "j.oscinstance"
 				}
 
 			}
@@ -343,7 +343,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 43.0, 508.0, 100.0, 19.0 ],
-					"text" : "jcom.oscinstance"
+					"text" : "j.oscinstance"
 				}
 
 			}

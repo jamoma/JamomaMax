@@ -132,7 +132,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-14",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.dbapBformat" ],
+									"jsarguments" : [ "j.dbapBformat" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -202,7 +202,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-63",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -213,7 +213,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-62",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -224,7 +224,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-58",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -235,7 +235,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-57",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -1429,7 +1429,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 493.0, 394.0, 323.0, 20.0 ],
-									"text" : "jcom.dbapBformat @num_sources 1 @num_destinations 7"
+									"text" : "j.dbapBformat @num_sources 1 @num_destinations 7"
 								}
 
 							}
@@ -1486,7 +1486,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 768.0, 192.0, 147.0, 47.0 ],
-									"text" : "jcom.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -3155,15 +3155,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dbapBformat.mxo",
+				"name" : "j.dbapBformat.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
  ]

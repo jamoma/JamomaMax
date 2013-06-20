@@ -20,11 +20,11 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.textslider", "@description", "Slider with value and text display" ],
+					"args" : [ "@name", "j.textslider", "@description", "Slider with value and text display" ],
 					"bgmode" : 1,
 					"id" : "obj-14",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 963.0, 70.0 ],
@@ -670,7 +670,7 @@
 				"box" : 				{
 					"bordercolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"id" : "obj-1",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

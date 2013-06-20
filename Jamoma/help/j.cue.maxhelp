@@ -835,7 +835,7 @@
 									"presentation" : 1,
 									"presentation_linecount" : 3,
 									"presentation_rect" : [ 393.0, 50.0, 142.0, 47.0 ],
-									"text" : "Passing an argument to the jcom.cue will make it binds on a namespace"
+									"text" : "Passing an argument to the j.cue will make it binds on a namespace"
 								}
 
 							}
@@ -1272,7 +1272,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 336.0, 140.0, 228.0, 33.0 ],
-									"text" : "jcom.namespace mySelection @filter/list parameter @format jit.cellblock"
+									"text" : "j.namespace mySelection @filter/list parameter @format jit.cellblock"
 								}
 
 							}
@@ -1317,7 +1317,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 62.0, 140.0, 209.0, 33.0 ],
-									"text" : "jcom.namespace mySelection @filter/list model @format jit.cellblock"
+									"text" : "j.namespace mySelection @filter/list model @format jit.cellblock"
 								}
 
 							}
@@ -1401,7 +1401,7 @@
 									"presentation" : 1,
 									"presentation_linecount" : 2,
 									"presentation_rect" : [ 17.0, 17.0, 264.0, 33.0 ],
-									"text" : "The jcom.cue can bind on a namespace handle by a jcom.namespace to manage cue content. "
+									"text" : "The j.cue can bind on a namespace handle by a j.namespace to manage cue content. "
 								}
 
 							}
@@ -2924,7 +2924,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 60.5, 391.0, 105.0, 20.0 ],
-									"text" : "jcom.cue"
+									"text" : "j.cue"
 								}
 
 							}
@@ -3130,7 +3130,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "jcom.cue" ],
+					"jsarguments" : [ "j.cue" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -3202,7 +3202,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-10",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.cue" ],
+									"jsarguments" : [ "j.cue" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -4444,55 +4444,55 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.cue.mxo",
+				"name" : "j.cue.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.namespace.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
  ]

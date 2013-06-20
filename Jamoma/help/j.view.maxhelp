@@ -73,7 +73,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 241.0, 110.0, 193.0, 60.0 ],
-									"text" : "The most important internal parameter of the jcom.view is the model/address parameter which exposed the address to bind"
+									"text" : "The most important internal parameter of the j.view is the model/address parameter which exposed the address to bind"
 								}
 
 							}
@@ -116,7 +116,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 254.0, 360.0, 197.0, 33.0 ],
-									"text" : "jcom.receive /viewMaxhelp(view)/model/address"
+									"text" : "j.receive /viewMaxhelp(view)/model/address"
 								}
 
 							}
@@ -156,7 +156,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 254.0, 294.0, 197.0, 33.0 ],
-									"text" : "jcom.receive /viewMaxhelp(view)/view/class"
+									"text" : "j.receive /viewMaxhelp(view)/view/class"
 								}
 
 							}
@@ -171,7 +171,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 16.0, 346.5, 196.0, 33.0 ],
-									"text" : "jcom.remote /viewMaxhelp(view)/view/reference"
+									"text" : "j.remote /viewMaxhelp(view)/view/reference"
 								}
 
 							}
@@ -186,7 +186,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 241.0, 9.0, 193.0, 47.0 ],
-									"text" : "Some information about a model are automatically exposed as jcom.return under a model level"
+									"text" : "Some information about a model are automatically exposed as j.return under a model level"
 								}
 
 							}
@@ -215,7 +215,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 253.0, 427.0, 33.0 ],
-									"text" : "So it is possible to address them like any other message|return of your model (via jcom.model or jcom.send, jcom.receive or jcom.remote)"
+									"text" : "So it is possible to address them like any other message|return of your model (via j.model or j.send, j.receive or j.remote)"
 								}
 
 							}
@@ -244,7 +244,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 9.0, 237.0, 47.0 ],
-									"text" : "Some feature of a model are automatically exposed as jcom.message under a model level"
+									"text" : "Some feature of a model are automatically exposed as j.message under a model level"
 								}
 
 							}
@@ -389,7 +389,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 990.0, 509.0, 70.0, 17.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -403,7 +403,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 990.0, 529.0, 69.0, 17.0 ],
-					"text" : "jcom.model"
+					"text" : "j.model"
 				}
 
 			}
@@ -445,7 +445,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 990.0, 569.0, 75.0, 17.0 ],
-					"text" : "jcom.remote"
+					"text" : "j.remote"
 				}
 
 			}
@@ -459,17 +459,17 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 891.0, 569.0, 53.0, 17.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.view", "@description", "The central nervous system of a view patcher" ],
+					"args" : [ "@name", "j.view", "@description", "The central nervous system of a view patcher" ],
 					"bgmode" : 1,
 					"id" : "obj-44",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 1163.0, 70.0 ],
@@ -502,7 +502,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 990.0, 549.0, 53.0, 17.0 ],
-					"text" : "jcom.ui"
+					"text" : "j.ui"
 				}
 
 			}
@@ -516,7 +516,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 891.0, 549.0, 69.0, 17.0 ],
-					"text" : "jcom.return"
+					"text" : "j.return"
 				}
 
 			}
@@ -530,7 +530,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 891.0, 529.0, 82.0, 17.0 ],
-					"text" : "jcom.message"
+					"text" : "j.message"
 				}
 
 			}
@@ -544,7 +544,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 160.0, 402.0, 348.0, 19.0 ],
-					"text" : "- Leftmost inlet of view is connected to left inlet of jcom.view."
+					"text" : "- Leftmost inlet of view is connected to left inlet of j.view."
 				}
 
 			}
@@ -558,7 +558,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 160.0, 433.0, 348.0, 19.0 ],
-					"text" : "- Left outlet of jcom.view connected to leftmost outlet of view."
+					"text" : "- Left outlet of j.view connected to leftmost outlet of view."
 				}
 
 			}
@@ -685,7 +685,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 891.0, 509.0, 90.0, 17.0 ],
-					"text" : "jcom.parameter"
+					"text" : "j.parameter"
 				}
 
 			}
@@ -785,7 +785,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 885.0, 245.0, 214.0, 19.0 ],
-					"text" : "jcom.message mymessage @type string"
+					"text" : "j.message mymessage @type string"
 				}
 
 			}
@@ -856,7 +856,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 550.0, 353.0, 100.0, 24.0 ],
-					"text" : "jcom.model"
+					"text" : "j.model"
 				}
 
 			}
@@ -872,8 +872,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 555.0, 419.0, 209.0, 31.0 ],
-					"text" : "jcom.view @type control @description \"this view doesn't do anything\"",
-					"varname" : "jcom.hub"
+					"text" : "j.view @type control @description \"this view doesn't do anything\"",
+					"varname" : "j.hub"
 				}
 
 			}
@@ -938,7 +938,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 550.0, 228.0, 82.0, 24.0 ],
-					"text" : "jcom.ui"
+					"text" : "j.ui"
 				}
 
 			}
@@ -967,7 +967,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 16.0, 117.0, 560.0, 31.0 ],
-					"text" : "For information on configuring the attributes to the jcom.view object, please refer to the Jamoma tutorials. These are the best source for getting familiar with the steps involved in building modules."
+					"text" : "For information on configuring the attributes to the j.view object, please refer to the Jamoma tutorials. These are the best source for getting familiar with the steps involved in building modules."
 				}
 
 			}
@@ -982,7 +982,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 16.0, 79.0, 617.0, 31.0 ],
-					"text" : "jcom.view is the central brain in a jamoma view. It parses input, distributes messaging to subscribed jcom external (as jcom.parmater, jcom.remote, jcom.preset, ...) and generates documentation about it."
+					"text" : "j.view is the central brain in a jamoma view. It parses input, distributes messaging to subscribed jcom external (as j.parmater, j.remote, j.preset, ...) and generates documentation about it."
 				}
 
 			}
@@ -1004,7 +1004,7 @@
 				"box" : 				{
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
 					"id" : "obj-8",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -1249,59 +1249,59 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
 				"patcherrelativepath" : "../../../Max/library/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -72,7 +72,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-11",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.dcblock~" ],
+									"jsarguments" : [ "j.dcblock~" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -253,7 +253,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 184.0, 487.0, 489.0, 20.0 ],
-									"text" : "jcom.dcblock~ 4"
+									"text" : "j.dcblock~ 4"
 								}
 
 							}
@@ -358,7 +358,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 189.0, 267.0, 86.0, 20.0 ],
-									"text" : "jcom.dcblock~"
+									"text" : "j.dcblock~"
 								}
 
 							}
@@ -634,7 +634,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.dcblock~.mxo",
+				"name" : "j.dcblock~.mxo",
 				"type" : "iLaX"
 			}
  ]

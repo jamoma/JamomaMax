@@ -110,7 +110,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 910.0, 430.0, 130.0, 20.0 ],
-					"text" : "jcom.gain% @gain 0.5"
+					"text" : "j.gain% @gain 0.5"
 				}
 
 			}
@@ -195,7 +195,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 740.0, 430.0, 130.0, 20.0 ],
-					"text" : "jcom.gain% @gain 0.5"
+					"text" : "j.gain% @gain 0.5"
 				}
 
 			}
@@ -280,7 +280,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 570.0, 430.0, 130.0, 20.0 ],
-					"text" : "jcom.gain% @gain 0.5"
+					"text" : "j.gain% @gain 0.5"
 				}
 
 			}
@@ -365,7 +365,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 410.0, 430.0, 128.0, 20.0 ],
-					"text" : "jcom.gain% @gain 0.5"
+					"text" : "j.gain% @gain 0.5"
 				}
 
 			}
@@ -571,7 +571,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 39.0, 232.0, 72.0, 20.0 ],
-					"text" : "jcom.gain%"
+					"text" : "j.gain%"
 				}
 
 			}
@@ -593,11 +593,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.gain%", "@description", "scale values in a matrix" ],
+					"args" : [ "@name", "j.gain%", "@description", "scale values in a matrix" ],
 					"bgmode" : 1,
 					"id" : "obj-14",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 1096.0, 70.0 ]

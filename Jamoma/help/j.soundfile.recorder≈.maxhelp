@@ -87,7 +87,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 139.0, 181.0, 68.0, 19.0 ],
-					"text" : "jcom.gain≈"
+					"text" : "j.gain≈"
 				}
 
 			}
@@ -201,7 +201,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 284.0, 275.0, 218.0, 31.0 ],
-					"text" : "... so we connect it to an object (e.g., jcom.unpack≈) that knows how to pull."
+					"text" : "... so we connect it to an object (e.g., j.unpack≈) that knows how to pull."
 				}
 
 			}
@@ -215,7 +215,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 139.0, 277.0, 103.0, 19.0 ],
-					"text" : "jcom.unpack≈"
+					"text" : "j.unpack≈"
 				}
 
 			}
@@ -230,7 +230,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 284.0, 236.0, 166.0, 31.0 ],
-					"text" : "jcom.soundfile.recorder≈ doesn't know how to pull! ...",
+					"text" : "j.soundfile.recorder≈ doesn't know how to pull! ...",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -245,7 +245,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 139.0, 241.0, 138.0, 19.0 ],
-					"text" : "jcom.soundfile.recorder≈"
+					"text" : "j.soundfile.recorder≈"
 				}
 
 			}
@@ -259,7 +259,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 139.0, 128.0, 84.0, 19.0 ],
-					"text" : "jcom.pack≈ 2"
+					"text" : "j.pack≈ 2"
 				}
 
 			}
@@ -6345,11 +6345,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.soundfile.recorder≈", "@description", "Record sound files." ],
+					"args" : [ "@name", "j.soundfile.recorder≈", "@description", "Record sound files." ],
 					"bgmode" : 1,
 					"id" : "obj-44",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 693.0, 70.0 ]

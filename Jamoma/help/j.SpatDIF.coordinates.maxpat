@@ -17,11 +17,11 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.SpatDIF.coordinates", "@description", "Recommended coordinates system in the SpatDIF Spatial Sound Description Interchange Format" ],
+					"args" : [ "@name", "j.SpatDIF.coordinates", "@description", "Recommended coordinates system in the SpatDIF Spatial Sound Description Interchange Format" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 927.0, 70.0 ],

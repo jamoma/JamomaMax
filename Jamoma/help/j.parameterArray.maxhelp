@@ -192,7 +192,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-3",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.parameterArray" ],
+									"jsarguments" : [ "j.parameterArray" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -245,7 +245,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 480.0, 453.0, 185.0, 83.0 ],
-									"text" : "You can address any instance by sending the instance number in jcom.parameterArray right inlet"
+									"text" : "You can address any instance by sending the instance number in j.parameterArray right inlet"
 								}
 
 							}
@@ -400,7 +400,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 82.0, 585.0, 357.0, 20.0 ],
-									"text" : "jcom.parameterArray items.[6] @type decimal @description Hello"
+									"text" : "j.parameterArray items.[6] @type decimal @description Hello"
 								}
 
 							}
@@ -429,7 +429,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 46.0, 322.0, 361.0, 20.0 ],
-									"text" : "jcom.parameterArray object.[6] @type decimal @description Hello"
+									"text" : "j.parameterArray object.[6] @type decimal @description Hello"
 								}
 
 							}
@@ -500,7 +500,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 46.0, 292.0, 404.0, 20.0 ],
-									"text" : "jcom.parameterArray source.[4]/position @type integer @description Hello"
+									"text" : "j.parameterArray source.[4]/position @type integer @description Hello"
 								}
 
 							}
@@ -711,7 +711,7 @@
 									"filename" : "helpname.js",
 									"id" : "obj-2",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.parameterArray" ],
+									"jsarguments" : [ "j.parameterArray" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -846,7 +846,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 157.0, 448.0, 267.0, 20.0 ],
-									"text" : "jcom.parameterArray indexed.[5] @format single",
+									"text" : "j.parameterArray indexed.[5] @format single",
 									"varname" : "my_float[1]"
 								}
 
@@ -997,7 +997,7 @@
 									"filename" : "helpname.js",
 									"id" : "obj-7",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.parameterArray" ],
+									"jsarguments" : [ "j.parameterArray" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1176,7 +1176,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 66.0, 357.0, 348.0, 20.0 ],
-									"text" : "jcom.parameterArray split/items.[5] @type array @format single",
+									"text" : "j.parameterArray split/items.[5] @type array @format single",
 									"varname" : "my_float[1]"
 								}
 
@@ -1334,7 +1334,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 128.0, 566.5, 172.0, 69.0 ],
-									"text" : "In 'array' mode, jcom.parameterArray will output a list containing values of all instances"
+									"text" : "In 'array' mode, j.parameterArray will output a list containing values of all instances"
 								}
 
 							}
@@ -1350,7 +1350,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 340.0, 218.0, 153.0, 141.0 ],
-									"text" : "In 'single' mode (default), jcom.parameterArray will output the instance whose value has been changed out of the middle outlet then the value out of the left outlet"
+									"text" : "In 'single' mode (default), j.parameterArray will output the instance whose value has been changed out of the middle outlet then the value out of the left outlet"
 								}
 
 							}
@@ -1365,7 +1365,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 60.0, 100.0, 156.0, 65.0 ],
-									"text" : "You can specify how will jcom.parameterArray output its values using the @format attribute."
+									"text" : "You can specify how will j.parameterArray output its values using the @format attribute."
 								}
 
 							}
@@ -1375,7 +1375,7 @@
 									"filename" : "helpname.js",
 									"id" : "obj-2",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.parameterArray" ],
+									"jsarguments" : [ "j.parameterArray" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1524,7 +1524,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 340.0, 566.5, 274.0, 20.0 ],
-									"text" : "jcom.parameterArray other/stuff.[5] @format array",
+									"text" : "j.parameterArray other/stuff.[5] @format array",
 									"varname" : "my_float[2]"
 								}
 
@@ -1640,7 +1640,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 359.0, 280.0, 20.0 ],
-									"text" : "jcom.parameterArray some/stuff.[5] @format single",
+									"text" : "j.parameterArray some/stuff.[5] @format single",
 									"varname" : "my_float[1]"
 								}
 
@@ -1830,7 +1830,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 503.0, 1014.0, 97.0, 17.0 ],
-					"text" : "jcom.returnArray"
+					"text" : "j.returnArray"
 				}
 
 			}
@@ -1845,7 +1845,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 503.0, 978.0, 91.0, 17.0 ],
-					"text" : "jcom.parameter"
+					"text" : "j.parameter"
 				}
 
 			}
@@ -1981,7 +1981,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 188.0, 164.0, 260.0, 20.0 ],
-									"text" : "jcom.parameterArray distant.[5] @type decimal",
+									"text" : "j.parameterArray distant.[5] @type decimal",
 									"varname" : "my_float[1]"
 								}
 
@@ -1992,7 +1992,7 @@
 									"filename" : "helpname.js",
 									"id" : "obj-2",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.parameterArray" ],
+									"jsarguments" : [ "j.parameterArray" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -2014,7 +2014,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 338.0, 591.0, 182.0, 40.0 ],
-									"text" : "This also applies to jcom.send"
+									"text" : "This also applies to j.send"
 								}
 
 							}
@@ -2042,7 +2042,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 188.0, 601.0, 115.0, 20.0 ],
-									"text" : "jcom.send /distant.*"
+									"text" : "j.send /distant.*"
 								}
 
 							}
@@ -2102,7 +2102,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 188.0, 508.5, 127.0, 20.0 ],
-									"text" : "jcom.remote /distant.*"
+									"text" : "j.remote /distant.*"
 								}
 
 							}
@@ -2130,7 +2130,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 194.5, 387.5, 127.0, 20.0 ],
-									"text" : "jcom.remote /distant.2"
+									"text" : "j.remote /distant.2"
 								}
 
 							}
@@ -2268,11 +2268,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.parameterArray", "@description", "Define an array of parameter instances" ],
+					"args" : [ "@name", "j.parameterArray", "@description", "Define an array of parameter instances" ],
 					"bgmode" : 1,
 					"id" : "obj-19",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 959.0, 70.0 ],
@@ -2291,7 +2291,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 503.0, 996.0, 113.0, 17.0 ],
-					"text" : "jcom.messageArray"
+					"text" : "j.messageArray"
 				}
 
 			}
@@ -2380,28 +2380,28 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../patchers/components/jamomaPath",
 				"type" : "JSON",
@@ -2422,23 +2422,23 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameterArray.mxo",
+				"name" : "j.parameterArray.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -77,7 +77,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 263.0, 184.0, 175.0, 87.0 ],
-									"text" : "Noticed that in Jamoma 0.6 jcom.in~ doesn't deal with communication between former jcom.hub and algorithm because it is now part of the algorithm."
+									"text" : "Noticed that in Jamoma 0.6 j.in~ doesn't deal with communication between former j.hub and algorithm because it is now part of the algorithm."
 								}
 
 							}
@@ -162,7 +162,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 223.0, 597.0, 79.0, 20.0 ],
-									"text" : "jcom.out first"
+									"text" : "j.out first"
 								}
 
 							}
@@ -176,7 +176,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 223.0, 91.0, 71.0, 20.0 ],
-									"text" : "jcom.in first"
+									"text" : "j.in first"
 								}
 
 							}
@@ -190,7 +190,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 29.0, 208.0, 72.0, 20.0 ],
-									"text" : "jcom.model"
+									"text" : "j.model"
 								}
 
 							}
@@ -205,7 +205,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 161.0, 303.0, 195.0, 60.0 ],
-									"text" : "If jcom.in~ is instantiated in a model it will create internal parameters : in.mySignal/mute in.mySignal/bypass"
+									"text" : "If j.in~ is instantiated in a model it will create internal parameters : in.mySignal/mute in.mySignal/bypass"
 								}
 
 							}
@@ -382,7 +382,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-21",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.in" ],
+									"jsarguments" : [ "j.in" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -571,7 +571,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 516.0, 248.666656, 198.0, 118.0 ],
-									"text" : "jcom.in automagically provides bypassing and wet/dry mix. For muting, the jcom.out~ does zero the output signals for you, but it is expected that you will handle the mute message yourself so that your algorithm does not use CPU (using poly~ or pcontrol)."
+									"text" : "j.in automagically provides bypassing and wet/dry mix. For muting, the j.out~ does zero the output signals for you, but it is expected that you will handle the mute message yourself so that your algorithm does not use CPU (using poly~ or pcontrol)."
 								}
 
 							}
@@ -602,7 +602,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 287.0, 463.666656, 116.0, 20.0 ],
-									"text" : "jcom.out~ mySignal"
+									"text" : "j.out~ mySignal"
 								}
 
 							}
@@ -617,7 +617,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 287.0, 342.666656, 108.0, 20.0 ],
-									"text" : "jcom.in~ mySignal"
+									"text" : "j.in~ mySignal"
 								}
 
 							}
@@ -632,7 +632,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 23.0, 149.0, 225.0, 47.0 ],
-									"text" : "jcom.in~ is an input conduits for audio signals in a jamoma model, much like jcom.in is for control signals."
+									"text" : "j.in~ is an input conduits for audio signals in a jamoma model, much like j.in is for control signals."
 								}
 
 							}
@@ -843,15 +843,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
  ]

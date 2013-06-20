@@ -545,7 +545,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 90.0, 297.0, 184.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -590,11 +590,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.soundfile.player≈", "@description", "Play back sound files." ],
+					"args" : [ "@name", "j.soundfile.player≈", "@description", "Play back sound files." ],
 					"bgmode" : 1,
 					"id" : "obj-44",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 845.0, 70.0 ]
@@ -635,7 +635,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 90.0, 345.0, 311.0, 19.0 ],
-					"text" : "jcom.unpack≈ 2"
+					"text" : "j.unpack≈ 2"
 				}
 
 			}
@@ -649,7 +649,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "audio.connect", "audio.connect", "" ],
 					"patching_rect" : [ 90.0, 266.0, 127.0, 19.0 ],
-					"text" : "jcom.soundfile.player≈"
+					"text" : "j.soundfile.player≈"
 				}
 
 			}

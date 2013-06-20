@@ -28,17 +28,17 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 392.0, 170.0, 150.0, 19.0 ],
-					"text" : "this bangs all jcom.info≈"
+					"text" : "this bangs all j.info≈"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.split≈", "@description", "Takes a multichannel signal, and splits it into N smaller multichannel signals" ],
+					"args" : [ "@name", "j.split≈", "@description", "Takes a multichannel signal, and splits it into N smaller multichannel signals" ],
 					"bgmode" : 1,
 					"id" : "obj-53",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 996.0, 70.0 ]
@@ -68,7 +68,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 248.0, 571.0, 63.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -95,7 +95,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 453.0, 571.0, 63.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -122,7 +122,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 658.0, 571.0, 63.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -181,7 +181,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 658.0, 596.0, 198.5, 19.0 ],
-					"text" : "jcom.unpack≈ 3"
+					"text" : "j.unpack≈ 3"
 				}
 
 			}
@@ -240,7 +240,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 453.0, 596.0, 198.5, 19.0 ],
-					"text" : "jcom.unpack≈ 3"
+					"text" : "j.unpack≈ 3"
 				}
 
 			}
@@ -299,7 +299,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 248.0, 596.0, 198.5, 19.0 ],
-					"text" : "jcom.unpack≈ 3"
+					"text" : "j.unpack≈ 3"
 				}
 
 			}
@@ -313,7 +313,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "audio.connect", "audio.connect", "audio.connect", "" ],
 					"patching_rect" : [ 248.0, 526.0, 153.0, 19.0 ],
-					"text" : "jcom.split≈ 3 @groups 2 1 2"
+					"text" : "j.split≈ 3 @groups 2 1 2"
 				}
 
 			}
@@ -397,7 +397,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 248.0, 496.0, 299.0, 19.0 ],
-					"text" : "jcom.pack≈ 5"
+					"text" : "j.pack≈ 5"
 				}
 
 			}
@@ -439,7 +439,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 458.0, 316.0, 63.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -453,7 +453,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 458.0, 291.0, 196.0, 19.0 ],
-					"text" : "jcom.op≈ @operator * @operand 10"
+					"text" : "j.op≈ @operator * @operand 10"
 				}
 
 			}
@@ -535,7 +535,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 458.0, 246.0, 63.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -562,7 +562,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 253.0, 171.0, 63.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -589,7 +589,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 253.0, 246.0, 63.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -633,7 +633,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 458.0, 356.0, 169.0, 19.0 ],
-					"text" : "jcom.unpack≈ 2"
+					"text" : "j.unpack≈ 2"
 				}
 
 			}
@@ -647,7 +647,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "audio.connect", "audio.connect", "" ],
 					"patching_rect" : [ 253.0, 216.0, 428.0, 19.0 ],
-					"text" : "jcom.split≈ 2 @groups 3 2"
+					"text" : "j.split≈ 2 @groups 3 2"
 				}
 
 			}
@@ -757,7 +757,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 253.0, 291.0, 198.5, 19.0 ],
-					"text" : "jcom.unpack≈ 3"
+					"text" : "j.unpack≈ 3"
 				}
 
 			}
@@ -771,7 +771,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 253.0, 141.0, 299.0, 19.0 ],
-					"text" : "jcom.pack≈ 5"
+					"text" : "j.pack≈ 5"
 				}
 
 			}

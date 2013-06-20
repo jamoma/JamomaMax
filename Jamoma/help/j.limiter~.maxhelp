@@ -878,7 +878,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 302.0, 359.0, 221.0, 20.0 ],
-									"text" : "jcom.limiter~ @preamp 0. @postamp 0."
+									"text" : "j.limiter~ @preamp 0. @postamp 0."
 								}
 
 							}
@@ -943,7 +943,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-50",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.limiter~" ],
+									"jsarguments" : [ "j.limiter~" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1400,7 +1400,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.limiter~.mxo",
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
  ]

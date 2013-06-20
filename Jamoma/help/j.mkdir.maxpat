@@ -26,7 +26,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 143.0, 52.0, 191.0, 43.0 ],
-					"text" : "the purpose of this patch is to stay backward compatible to the old jcom.mkdir (RIP)"
+					"text" : "the purpose of this patch is to stay backward compatible to the old j.mkdir (RIP)"
 				}
 
 			}
@@ -40,7 +40,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 42.0, 103.0, 67.0, 19.0 ],
-					"text" : "jcom.folder"
+					"text" : "j.folder"
 				}
 
 			}

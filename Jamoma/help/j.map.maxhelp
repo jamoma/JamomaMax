@@ -161,7 +161,7 @@
 								"box" : 								{
 									"id" : "obj-15",
 									"maxclass" : "bpatcher",
-									"name" : "jcom.map.functions.maxpat",
+									"name" : "j.map.functions.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"offset" : [ -3500.0, 0.0 ],
@@ -620,7 +620,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-1",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.map" ],
+									"jsarguments" : [ "j.map" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1286,7 +1286,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 252.0, 355.0, 392.0, 20.0 ],
-									"text" : "jcom.map @function exponential"
+									"text" : "j.map @function exponential"
 								}
 
 							}
@@ -2002,7 +2002,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 810.0, 397.0, 200.0, 20.0 ],
-									"text" : "jcom.map @input /p.1 @output /p.2"
+									"text" : "j.map @input /p.1 @output /p.2"
 								}
 
 							}
@@ -2017,7 +2017,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 384.0, 385.0, 318.0, 33.0 ],
-									"text" : "jcom.parameter p.2 @type decimal @range/bounds -5. 5. @ramp/drive Max"
+									"text" : "j.parameter p.2 @type decimal @range/bounds -5. 5. @ramp/drive Max"
 								}
 
 							}
@@ -2045,7 +2045,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 384.0, 353.0, 236.0, 20.0 ],
-									"text" : "jcom.parameter p.1 @range/bounds 0. 10."
+									"text" : "j.parameter p.1 @range/bounds 0. 10."
 								}
 
 							}
@@ -2151,11 +2151,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.map", "@description", "scaling and mapping input to output using the Jamoma function library" ],
+					"args" : [ "@name", "j.map", "@description", "scaling and mapping input to output using the Jamoma function library" ],
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 1418.0, 70.0 ],
@@ -2228,7 +2228,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 565.0, 386.0, 156.0, 20.0 ],
-									"text" : "jcom.map @function cosine"
+									"text" : "j.map @function cosine"
 								}
 
 							}
@@ -2487,28 +2487,28 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../patchers/components/jamomaPath",
 				"type" : "JSON",
@@ -2522,30 +2522,30 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.map.functions.maxpat",
+				"name" : "j.map.functions.maxpat",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/help",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.send.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
  ]

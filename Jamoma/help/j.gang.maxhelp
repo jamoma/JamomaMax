@@ -184,7 +184,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "float", "float", "float", "float", "" ],
 									"patching_rect" : [ 360.0, 290.0, 102.0, 20.0 ],
-									"text" : "jcom.gang"
+									"text" : "j.gang"
 								}
 
 							}
@@ -255,7 +255,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "float", "float", "float", "float", "" ],
 									"patching_rect" : [ 91.5, 290.0, 172.0, 20.0 ],
-									"text" : "jcom.gang"
+									"text" : "j.gang"
 								}
 
 							}
@@ -280,7 +280,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-1",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.gang" ],
+									"jsarguments" : [ "j.gang" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -456,7 +456,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.gang.mxo",
+				"name" : "j.gang.mxo",
 				"type" : "iLaX"
 			}
  ]

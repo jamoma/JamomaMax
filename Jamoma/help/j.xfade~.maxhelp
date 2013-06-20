@@ -20,11 +20,11 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jcom.xfade~", "@description", "Crossfade object for n channels" ],
+					"args" : [ "@name", "j.xfade~", "@description", "Crossfade object for n channels" ],
 					"bgmode" : 1,
 					"id" : "obj-16",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 800.0, 70.0 ]
@@ -666,7 +666,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 120.0, 185.0, 84.0, 19.0 ],
-					"text" : "jcom.xfade~ 2"
+					"text" : "j.xfade~ 2"
 				}
 
 			}

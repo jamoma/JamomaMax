@@ -131,7 +131,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-14",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "jcom.delay~" ],
+									"jsarguments" : [ "j.delay~" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -242,7 +242,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-12",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -253,7 +253,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-18",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -264,7 +264,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-7",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -275,7 +275,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-5",
-									"maxclass" : "jcom.meter~",
+									"maxclass" : "j.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -294,7 +294,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 60.0, 318.0, 85.0, 47.0 ],
-									"text" : "jcom.op~ @operator * @operand 0.5"
+									"text" : "j.op~ @operator * @operand 0.5"
 								}
 
 							}
@@ -337,7 +337,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "float", "float", "float", "float", "" ],
 									"patching_rect" : [ 121.5, 450.0, 73.0, 20.0 ],
-									"text" : "jcom.gang"
+									"text" : "j.gang"
 								}
 
 							}
@@ -443,7 +443,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 145.0, 278.0, 173.0, 20.0 ],
-									"text" : "jcom.delay~ @delayMax 2000."
+									"text" : "j.delay~ @delayMax 2000."
 								}
 
 							}
@@ -778,19 +778,19 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.delay~.mxo",
+				"name" : "j.delay~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.gang.mxo",
+				"name" : "j.gang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.op~.mxo",
+				"name" : "j.op~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
  ]
