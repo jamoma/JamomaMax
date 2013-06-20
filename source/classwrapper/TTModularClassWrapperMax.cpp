@@ -114,6 +114,7 @@ ObjectPtr wrappedModularClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 	return ObjectPtr(x);
 }
 
+
 void wrappedModularClass_unregister(WrappedModularInstancePtr x)
 {
 	TTValue			keys, storedObject;
@@ -189,6 +190,7 @@ void wrappedModularClass_unregister(WrappedModularInstancePtr x)
 	x->internals = NULL;
 }
 
+
 void wrappedModularClass_free(WrappedModularInstancePtr x)
 {	
 	ModularSpec* spec = (ModularSpec*)x->wrappedClassDefinition->specificities;
@@ -208,6 +210,7 @@ void wrappedModularClass_free(WrappedModularInstancePtr x)
 	if (spec->_free)
 		spec->_free(x);
 }
+
 
 t_max_err wrappedModularClass_notify(TTPtr self, t_symbol *s, t_symbol *msg, void *sender, void *data)
 {
@@ -258,6 +261,7 @@ t_max_err wrappedModularClass_notify(TTPtr self, t_symbol *s, t_symbol *msg, voi
 #endif
 }
 
+
 void wrappedModularClass_shareContextNode(TTPtr self, TTNodePtr *contextNode)
 {
 	TTValue	v;
@@ -272,6 +276,7 @@ void wrappedModularClass_shareContextNode(TTPtr self, TTNodePtr *contextNode)
 #endif
 		*contextNode = NULL;
 }
+
 
 t_max_err wrappedModularClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, AtomPtr* argv)
 {
@@ -294,6 +299,7 @@ t_max_err wrappedModularClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* arg
 	
 	return MAX_ERR_NONE;
 }
+
 
 t_max_err wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomPtr argv)
 {
@@ -368,6 +374,7 @@ t_max_err wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc
 	
 	return MAX_ERR_GENERIC;
 }
+
 	
 void wrappedModularClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
 {
@@ -438,6 +445,7 @@ void wrappedModularClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomP
 	}
 }
 
+
 TTErr wrappedModularClass_sendMessage(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -477,6 +485,7 @@ TTErr wrappedModularClass_sendMessage(TTPtr self, SymbolPtr s, AtomCount argc, A
 		return kTTErrGeneric;
 }
 
+
 TTErr wrappedModularClass_setAttribute(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -507,6 +516,7 @@ TTErr wrappedModularClass_setAttribute(TTPtr self, SymbolPtr s, AtomCount argc, 
 	
 	return err;
 }
+
 
 void wrappedModularClass_dump(TTPtr self)
 {
@@ -549,6 +559,7 @@ void wrappedModularClass_dump(TTPtr self)
     }
 }
 
+
 #ifdef UI_EXTERNAL
 void wrappedModularClass_paint(WrappedModularInstancePtr x, t_object *view)
 {
@@ -589,6 +600,7 @@ void wrappedModularClass_paint(WrappedModularInstancePtr x, t_object *view)
 	}
 }
 
+
 TTPtr wrappedModularClass_oksize(TTPtr self, t_rect *newrect)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -621,6 +633,7 @@ void wrappedModularClass_mousedblclick(TTPtr self, ObjectPtr patcherview, t_pt p
 	jbox_redraw((t_jbox *)x);
 }
 
+
 void wrappedModularClass_mousedown(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -634,6 +647,7 @@ void wrappedModularClass_mousedown(TTPtr self, ObjectPtr patcherview, t_pt pt, l
 	jbox_redraw((t_jbox *)x);
 }
 
+
 void wrappedModularClass_mousedrag(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -646,6 +660,7 @@ void wrappedModularClass_mousedrag(TTPtr self, ObjectPtr patcherview, t_pt pt, l
 	selectedObject->sendMessage(TTSymbol("mouseDragged"), v);
 	jbox_redraw((t_jbox *)x);
 }
+
 
 void wrappedModularClass_mouseup(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
 {
@@ -674,6 +689,7 @@ void wrappedModularClass_mouseenter(TTPtr self, ObjectPtr patcherview, t_pt pt, 
 	jbox_redraw((t_jbox *)x);
 }
 
+
 void wrappedModularClass_mousemove(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -687,6 +703,7 @@ void wrappedModularClass_mousemove(TTPtr self, ObjectPtr patcherview, t_pt pt, l
 	jbox_redraw((t_jbox *)x);
 }
 
+
 void wrappedModularClass_mouseleave(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -699,6 +716,7 @@ void wrappedModularClass_mouseleave(TTPtr self, ObjectPtr patcherview, t_pt pt, 
 	selectedObject->sendMessage(TTSymbol("mouseExited"), v);
 	jbox_redraw((t_jbox *)x);
 }
+
 
 int convertModifiersFromMaxToTTGraphics(int maxModifiers)
 {
@@ -820,7 +838,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 		
 		if ((MaxName = jamoma_TTName_To_MaxName(TTName))) {
             
-            if (TTName == kTTSym_bypass && wrappedMaxClass->maxClassName != gensym("jcom.in"))
+            if (TTName == kTTSym_bypass && wrappedMaxClass->maxClassName != gensym("j.in"))
                 continue;
             
 			o->findAttribute(TTName, &attr);
@@ -886,6 +904,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 	return kTTErrNone;
 }
 
+
 TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTPtr context, TTSymbol service, TTObjectBasePtr *returnedData, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -931,6 +950,7 @@ TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr
 	return kTTErrNone;
 }
 
+
 TTErr makeInternals_explorer(TTPtr self, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedExplorer, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -963,6 +983,7 @@ TTErr makeInternals_explorer(TTPtr self, TTSymbol name, SymbolPtr callbackMethod
     
 	return kTTErrNone;
 }
+
 
 TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedViewer, TTBoolean deferlow)
 {
@@ -1000,6 +1021,7 @@ TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolP
     
 	return kTTErrNone;
 }
+
 
 TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedReceiver, TTBoolean deferlow)
 {
@@ -1042,6 +1064,7 @@ TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, Symbo
 	return kTTErrNone;
 }
 
+
 TTErr removeInternals_data(TTPtr self, TTAddress address, TTAddress name)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -1069,6 +1092,7 @@ TTErr removeInternals_data(TTPtr self, TTAddress address, TTAddress name)
 	return kTTErrNone;
 }
 
+
 TTObjectBasePtr	getSelectedObject(WrappedModularInstancePtr x)
 {
 	if (x->useInternals) {
@@ -1091,6 +1115,7 @@ TTObjectBasePtr	getSelectedObject(WrappedModularInstancePtr x)
 		return NULL;
 #endif
 }
+
 
 void copy_msg_argc_argv(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
@@ -1128,6 +1153,7 @@ void copy_msg_argc_argv(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	}
 }
 
+
 #ifdef ARRAY_EXTERNAL
 t_max_err wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av)
 {
@@ -1149,6 +1175,7 @@ t_max_err wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, AtomCount *ac, A
 	return MAX_ERR_NONE;
 }
 
+
 t_max_err wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av) 
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -1161,6 +1188,7 @@ t_max_err wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, AtomCount ac, At
 	}
 	return MAX_ERR_NONE;
 }
+
 
 void wrappedModularClass_ArraySelect(TTPtr self, SymbolPtr msg, AtomCount ac, AtomPtr av)
 {
@@ -1206,6 +1234,7 @@ void wrappedModularClass_ArraySelect(TTPtr self, SymbolPtr msg, AtomCount ac, At
 	else
 		object_error((ObjectPtr)x, "array/select : the array is empty");
 }
+
 
 void wrappedModularClass_ArrayResize(TTPtr self, long newSize)
 {

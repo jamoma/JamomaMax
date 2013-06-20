@@ -103,7 +103,7 @@
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 733.0, 70.0 ],
@@ -538,7 +538,7 @@
 								"implicit" : 1
 							}
 , 							{
-								"name" : "jcom.map.mxo",
+								"name" : "j.map.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -680,49 +680,49 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.audioOnOff.maxpat",
+				"name" : "j.audioOnOff.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/audioOnOff",
 				"patcherrelativepath" : "../../../library/components/audioOnOff",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.js_systeminfo.js",
+				"name" : "j.js_systeminfo.js",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/javascript",
 				"patcherrelativepath" : "../../../library/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpui.maxpat",
+				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../library/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiButton.png",
+				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../library/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.maxhelpuiResize.js",
+				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
 				"patcherrelativepath" : "../../../library/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.jamomaPath.maxpat",
+				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
 				"patcherrelativepath" : "../../../library/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.thru.maxpat",
+				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",
@@ -743,98 +743,98 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.meter_receive.maxpat",
+				"name" : "j.meter_receive.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/meter_receive",
 				"patcherrelativepath" : "../../../library/components/meter_receive",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pass.mxo",
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.dataspace.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.overdrive~.mxo",
+				"name" : "j.overdrive~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.limiter~.mxo",
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.stats.mxo",
+				"name" : "j.stats.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.textslider.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.route.mxo",
+				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.loader.mxo",
+				"name" : "j.loader.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.panorama~.mxo",
+				"name" : "j.panorama~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -37,7 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 94.0, 130.0, 82.0, 19.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -161,7 +161,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1402.5, 22.0, 149.0, 114.0 ],
-					"text" : "jcom.parameter mode @repetitions/allow 0 @type string @description \"Set the function to be used for calculating the scaling. Possible values: exponential | linear\"",
+					"text" : "j.parameter mode @repetitions/allow 0 @type string @description \"Set the function to be used for calculating the scaling. Possible values: exponential | linear\"",
 					"varname" : "mode"
 				}
 
@@ -177,7 +177,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1228.5, 22.0, 161.0, 127.0 ],
-					"text" : "jcom.parameter release @type decimal @range/bounds 0 500 @range/clipmode low @dataspace time @dataspace/unit ms @ramp/drive Max @description \"The release time (ms).\"",
+					"text" : "j.parameter release @type decimal @range/bounds 0 500 @range/clipmode low @dataspace time @dataspace/unit ms @ramp/drive Max @description \"The release time (ms).\"",
 					"varname" : "release"
 				}
 
@@ -193,7 +193,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1050.5, 22.0, 165.0, 167.0 ],
-					"text" : "jcom.parameter lookahead @type integer @range/bounds 0 256 @range/clipmode both @ramp/drive Max @repetitions/allow 0 @dataspace time @dataspace/unit sample @description \"The number of samples (up to 256) to look ahead into the signal to see what is coming.\"",
+					"text" : "j.parameter lookahead @type integer @range/bounds 0 256 @range/clipmode both @ramp/drive Max @repetitions/allow 0 @dataspace time @dataspace/unit sample @description \"The number of samples (up to 256) to look ahead into the signal to see what is coming.\"",
 					"varname" : "lookahead"
 				}
 
@@ -209,7 +209,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 863.5, 22.0, 171.0, 194.0 ],
-					"text" : "jcom.parameter threshold @type decimal @range/bounds -48 6 @range/clipmode none @ramp/drive Max @dataspace gain @dataspace/unit dB @description \"The limiter threshold (in dB below full scale). When the input signal level exceeds this threshold, it will be attenuated as necessary to keep the level below the threshold.\"",
+					"text" : "j.parameter threshold @type decimal @range/bounds -48 6 @range/clipmode none @ramp/drive Max @dataspace gain @dataspace/unit dB @description \"The limiter threshold (in dB below full scale). When the input signal level exceeds this threshold, it will be attenuated as necessary to keep the level below the threshold.\"",
 					"varname" : "threshold"
 				}
 
@@ -225,7 +225,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 699.0, 22.0, 151.0, 141.0 ],
-					"text" : "jcom.parameter postamp @type decimal @range/bounds -6 48 @range/clipmode none @dataspace gain @dataspace/unit dB @ramp/drive Max @description \"The gain in dB applied to the signal after limiting. \"",
+					"text" : "j.parameter postamp @type decimal @range/bounds -6 48 @range/clipmode none @dataspace gain @dataspace/unit dB @ramp/drive Max @description \"The gain in dB applied to the signal after limiting. \"",
 					"varname" : "postamp"
 				}
 
@@ -241,7 +241,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 514.0, 22.0, 171.5, 154.0 ],
-					"text" : "jcom.parameter preamp @type decimal @range/bounds -6 48 @range/clipmode none @ramp/drive Max @dataspace gain @dataspace/unit dB @ramp/function linear @description \"The gain in dB applied to the signal before limiting.\"",
+					"text" : "j.parameter preamp @type decimal @range/bounds -6 48 @range/clipmode none @ramp/drive Max @dataspace gain @dataspace/unit dB @ramp/function linear @description \"The gain in dB applied to the signal before limiting.\"",
 					"varname" : "preamp"
 				}
 
@@ -257,8 +257,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 60.0, 76.0, 150.0, 33.0 ],
-					"text" : "jcom.model @description \"A stereo limiter\"",
-					"varname" : "jcom.hub"
+					"text" : "j.model @description \"A stereo limiter\"",
+					"varname" : "j.hub"
 				}
 
 			}
@@ -272,7 +272,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 317.0, 374.0, 73.0, 20.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -286,7 +286,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 233.0, 374.0, 73.0, 20.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -300,7 +300,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 401.0, 76.0, 66.0, 20.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -314,7 +314,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 233.0, 76.0, 66.0, 20.0 ],
-					"text" : "jcom.in~ 1"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -328,7 +328,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 233.0, 326.0, 187.0, 20.0 ],
-					"text" : "jcom.limiter~"
+					"text" : "j.limiter~"
 				}
 
 			}
@@ -579,27 +579,27 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.limiter~.mxo",
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

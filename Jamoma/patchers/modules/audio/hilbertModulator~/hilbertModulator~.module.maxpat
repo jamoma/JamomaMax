@@ -37,7 +37,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 450.0, 107.0, 164.0, 20.0 ],
-					"text" : "jcom.remote out.2/amplitude"
+					"text" : "j.remote out.2/amplitude"
 				}
 
 			}
@@ -51,7 +51,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 450.0, 55.0, 164.0, 20.0 ],
-					"text" : "jcom.remote out.1/amplitude"
+					"text" : "j.remote out.1/amplitude"
 				}
 
 			}
@@ -87,7 +87,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 2",
 					"id" : "obj-50",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -101,7 +101,7 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-49",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -121,7 +121,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 450.0, 315.0, 195.0, 20.0 ],
-					"text" : "jcom.remote lowerSideband/active"
+					"text" : "j.remote lowerSideband/active"
 				}
 
 			}
@@ -218,7 +218,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 450.0, 210.0, 196.0, 20.0 ],
-					"text" : "jcom.remote modulatingFrequency"
+					"text" : "j.remote modulatingFrequency"
 				}
 
 			}
@@ -232,7 +232,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 236.5, 193.0, 64.0, 20.0 ],
-					"text" : "jcom.view"
+					"text" : "j.view"
 				}
 
 			}
@@ -322,7 +322,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-2",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -470,39 +470,39 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
  ]

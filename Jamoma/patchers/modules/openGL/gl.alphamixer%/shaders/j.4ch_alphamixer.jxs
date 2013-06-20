@@ -1,0 +1,64 @@
+<jittershader name="fourwaymix">
+	<description>
+	4 channel video mixer with alpha. Mix one layer on top of the next according to opacity.
+	</description>
+	<param name="a" type="vec4" default="1. 1. 1. 0.25" />
+	<param name="b" type="vec4" default="1. 1. 1. 0.25" />
+	<param name="c" type="vec4" default="1. 1. 1. 0.25" />
+	<param name="d" type="vec4" default="1. 1. 1. 0.25" />
+	<param name="tex0" type="int" default="0" />
+	<param name="tex1" type="int" default="1" />
+	<param name="tex2" type="int" default="2" />
+	<param name="tex3" type="int" default="3" />
+	<language name="glsl" version="1.0">
+		<bind param="a" program="fp" />
+		<bind param="b" program="fp" />
+		<bind param="c" program="fp" />
+		<bind param="d" program="fp" />
+		<bind param="tex0" program="fp" />
+		<bind param="tex1" program="fp" />
+		<bind param="tex2" program="fp" />
+		<bind param="tex3" program="fp" />
+		<program name="vp" type="vertex" source="j.4ch_alphamixer.vp.glsl" />
+		<program name="fp" type="fragment">
+<![CDATA[		
+		
+// opacity (rgba)
+uniform vec4 a;
+uniform vec4 b;
+uniform vec4 c;
+uniform vec4 d;
+
+// define our varying texture coordinates
+varying vec2 texcoord0;
+varying vec2 texcoord1;
+varying vec2 texcoord2;
+varying vec2 texcoord3;
+
+// define our rectangular texture samplers
+uniform sampler2DRect tex0;
+uniform sampler2DRect tex1;
+uniform sampler2DRect tex2;
+uniform sampler2DRect tex3;
+
+void main (void)
+{
+	// sample our textures
+	vec4 input0 = a*texture2DRect(tex0, texcoord0);
+	vec4 input1 = b*texture2DRect(tex1, texcoord1);
+	vec4 input2 = c*texture2DRect(tex2, texcoord2);
+	vec4 input3 = d*texture2DRect(tex3, texcoord3);
+	
+	// perform our calculation and write our data to the fragment color
+	vec3 mix3 = input3.rgb * vec3(input3.a);
+	vec3 mix2 = mix(input2.rgb,mix3,(1.-input2.a));
+	vec3 mix1 = mix(input1.rgb,mix2,(1.-input1.a));
+	vec3 mix0 = mix(input0.rgb,mix1,(1.-input0.a));	
+	gl_FragColor = vec4(mix0,1.);
+	
+}
+		
+]]>
+		</program>		
+	</language>
+</jittershader>

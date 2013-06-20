@@ -52,7 +52,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 763.0, 23.5, 148.0, 114.0 ],
-					"text" : "jcom.parameter Mode @type string @description \"choose internal calculation mode for panning: fast uses a lookup table while precision performs trigonometric calculations\"",
+					"text" : "j.parameter Mode @type string @description \"choose internal calculation mode for panning: fast uses a lookup table while precision performs trigonometric calculations\"",
 					"varname" : "mode[1]"
 				}
 
@@ -68,7 +68,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 599.0, 23.5, 146.0, 87.0 ],
-					"text" : "jcom.parameter shape @type string @description \"Choose the panning function: linear, squareroot, or equal-power\"",
+					"text" : "j.parameter shape @type string @description \"Choose the panning function: linear, squareroot, or equal-power\"",
 					"varname" : "shape[1]"
 				}
 
@@ -84,7 +84,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 416.0, 23.5, 170.0, 127.0 ],
-					"text" : "jcom.parameter position @type decimal @range/bounds -1 1. @ramp/drive Max @value/default 0. @range/clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
+					"text" : "j.parameter position @type decimal @range/bounds -1 1. @ramp/drive Max @value/default 0. @range/clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
 					"varname" : "position"
 				}
 
@@ -618,7 +618,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 255.0, 282.0, 109.0, 20.0 ],
-					"text" : "jcom.panorama~ 1"
+					"text" : "j.panorama~ 1"
 				}
 
 			}
@@ -633,7 +633,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 24.0, 282.0, 192.0, 47.0 ],
-					"text" : "jcom.model @description \"APanning  a mono sound source to stereo.\""
+					"text" : "j.model @description \"APanning  a mono sound source to stereo.\""
 				}
 
 			}
@@ -743,15 +743,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.panorama~.mxo",
+				"name" : "j.panorama~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
  ]

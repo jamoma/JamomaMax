@@ -1,13 +1,13 @@
 {
 	"defaults" : 	{
-		"jcom.ui_bordercolor" : [ 0.298039, 0.298039, 0.298039, 1.0 ],
-		"jcom.ui_bgcolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
-		"jcom.ui_textcolor" : [ 0.909804, 0.909804, 0.909804, 1.0 ],
-		"jcom.ui_headercolor" : [ 0.2, 0.2, 0.2, 1.0 ],
-		"jcom.textslider_bgcolor" : [ 0.141176, 0.141176, 0.141176, 1.0 ],
-		"jcom.textslider_textcolor" : [ 0.933333, 0.933333, 0.933333, 1.0 ],
-		"jcom.textslider_bordercolor" : [ 0.317647, 0.317647, 0.317647, 1.0 ],
-		"jcom.textslider_fgcolor" : [ 0.356863, 0.356863, 0.356863, 0.388235 ],
+		"j.ui_bordercolor" : [ 0.298039, 0.298039, 0.298039, 1.0 ],
+		"j.ui_bgcolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
+		"j.ui_textcolor" : [ 0.909804, 0.909804, 0.909804, 1.0 ],
+		"j.ui_headercolor" : [ 0.2, 0.2, 0.2, 1.0 ],
+		"j.textslider_bgcolor" : [ 0.141176, 0.141176, 0.141176, 1.0 ],
+		"j.textslider_textcolor" : [ 0.933333, 0.933333, 0.933333, 1.0 ],
+		"j.textslider_bordercolor" : [ 0.317647, 0.317647, 0.317647, 1.0 ],
+		"j.textslider_fgcolor" : [ 0.356863, 0.356863, 0.356863, 0.388235 ],
 	
 		"button_bgcolor" : [ 0., 0., 0., 0.1 ],
 		"comment_bgcolor" : [ 0.95, 0.95, 0.95, 0. ],

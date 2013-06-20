@@ -84,7 +84,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 40.0, 63.0, 20.0 ],
-					"text" : "jcom.view"
+					"text" : "j.view"
 				}
 
 			}

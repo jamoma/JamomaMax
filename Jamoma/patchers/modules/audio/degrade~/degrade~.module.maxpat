@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 368.0, 313.0, 814.0, 242.0 ],
+		"rect" : [ 432.0, 402.0, 814.0, 242.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -95,17 +95,17 @@
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 610.0, 96.0, 163.0, 20.0 ],
-					"text" : "jcom.remote out.2/amplitude"
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 610.0, 96.0, 123.0, 20.0 ],
+					"text" : "j.meter_receive out.2"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-11",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -118,7 +118,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-4",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -135,10 +135,10 @@
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 610.0, 33.0, 163.0, 20.0 ],
-					"text" : "jcom.remote out.1/amplitude"
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 610.0, 33.0, 123.0, 20.0 ],
+					"text" : "j.meter_receive out.1"
 				}
 
 			}
@@ -184,7 +184,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 356.0, 52.0, 125.0, 20.0 ],
-					"text" : "jcom.remote bitdepth"
+					"text" : "j.remote bitdepth"
 				}
 
 			}
@@ -198,7 +198,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 356.0, 129.0, 168.0, 20.0 ],
-					"text" : "jcom.remote samplerateRatio"
+					"text" : "j.remote samplerateRatio"
 				}
 
 			}
@@ -237,7 +237,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-2",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -280,7 +280,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 170.0, 141.0, 64.0, 20.0 ],
-					"text" : "jcom.view"
+					"text" : "j.view"
 				}
 
 			}
@@ -415,46 +415,61 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "j.meter_receive.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/meter_receive",
+				"patcherrelativepath" : "../../../components/meter_receive",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.in~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

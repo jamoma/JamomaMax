@@ -37,7 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 65.0, 230.0, 81.0, 20.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -52,7 +52,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 45.0, 165.0, 158.0, 47.0 ],
-					"text" : "jcom.model @description \"One-sided ring modulator using Hilbert filter.\""
+					"text" : "j.model @description \"One-sided ring modulator using Hilbert filter.\""
 				}
 
 			}
@@ -66,7 +66,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 535.0, 114.0, 67.0, 20.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -80,7 +80,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 535.0, 466.0, 74.0, 20.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -94,7 +94,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 300.0, 466.0, 74.0, 20.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -108,7 +108,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 300.0, 114.0, 67.0, 20.0 ],
-					"text" : "jcom.in~ 1"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -135,7 +135,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 805.0, 310.0, 308.0, 33.0 ],
-					"text" : "jcom.parameter lowerSideband/active @type boolean @description \"Enable and disable lower sideband.\""
+					"text" : "j.parameter lowerSideband/active @type boolean @description \"Enable and disable lower sideband.\""
 				}
 
 			}
@@ -150,7 +150,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 664.333313, 63.0, 523.0, 47.0 ],
-					"text" : "jcom.parameter modulatingFrequency @type decimal @range/bounds -200. 1000. @range/clipmode none @ramp/function linear @ramp/drive Max @description \"Modulator frequency (Hz). \" @dataspace time @dataspace/unit Hz"
+					"text" : "j.parameter modulatingFrequency @type decimal @range/bounds -200. 1000. @range/clipmode none @ramp/function linear @ramp/drive Max @description \"Modulator frequency (Hz). \" @dataspace time @dataspace/unit Hz"
 				}
 
 			}
@@ -1638,23 +1638,23 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

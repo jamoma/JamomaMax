@@ -37,7 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 81.0, 311.0, 73.0, 20.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 265.0, 396.0, 73.0, 20.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -77,7 +77,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 265.0, 80.0, 141.0, 60.0 ],
-					"text" : "jcom.parameter mode @type string @description \"choose the waveform type.\"",
+					"text" : "j.parameter mode @type string @description \"choose the waveform type.\"",
 					"varname" : "mode[1]"
 				}
 
@@ -93,7 +93,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1119.0, 80.0, 154.0, 114.0 ],
-					"text" : "jcom.parameter frequency @type decimal @range/bounds 0. 20000. @ramp/drive Max @dataspace time @dataspace/unit Hz @description \"Frequency used.\"",
+					"text" : "j.parameter frequency @type decimal @range/bounds 0. 20000. @ramp/drive Max @dataspace time @dataspace/unit Hz @description \"Frequency used.\"",
 					"varname" : "frequency"
 				}
 
@@ -109,8 +109,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 46.0, 243.0, 162.0, 47.0 ],
-					"text" : "jcom.model @description \"Play sine tones - square - triangle waves etc.\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Play sine tones - square - triangle waves etc.\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -1339,19 +1339,19 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

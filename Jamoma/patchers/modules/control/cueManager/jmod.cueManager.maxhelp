@@ -623,7 +623,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 33.0, 215.0, 198.0, 18.0 ],
-													"text" : "jcom.send /cueManager/autofollow/enable"
+													"text" : "j.send /cueManager/autofollow/enable"
 												}
 
 											}
@@ -637,7 +637,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 75.0, 190.0, 176.0, 18.0 ],
-													"text" : "jcom.send /cueManager/ramp/enable"
+													"text" : "j.send /cueManager/ramp/enable"
 												}
 
 											}
@@ -1136,7 +1136,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 27.0, 215.0, 151.0, 19.0 ],
-									"text" : "jcom.pass /cue @strip 0"
+									"text" : "j.pass /cue @strip 0"
 								}
 
 							}
@@ -1151,7 +1151,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 27.0, 45.0, 159.0, 19.0 ],
-									"text" : "jcom.pass /cues @strip 0"
+									"text" : "j.pass /cues @strip 0"
 								}
 
 							}
@@ -1259,7 +1259,7 @@
 					"bgmode" : 1,
 					"id" : "obj-12",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 678.0, 70.0 ],
@@ -1435,7 +1435,7 @@
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"id" : "obj-27",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input~.maxpat",
+					"name" : "input~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],

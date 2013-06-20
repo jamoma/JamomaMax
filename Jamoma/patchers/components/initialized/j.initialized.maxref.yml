@@ -1,0 +1,36 @@
+title: j.initialized
+author: [Jamoma, Julien Rabin]
+created_at: 2010/11/11
+tags: [loadbang, initialization, order, loading]
+
+brief: Send a bang when a module has been initialized
+
+
+desc: >
+ j.initialized is somewhat similar to Max's #loadbang and sends a @bang@ when a particular module has been initialized.
+
+inputs:
+
+outputs:
+ - name: 1
+   desc: A @bang@ is returned when the defined module is initialized.
+
+args:
+ - name: name   
+   type: string
+   desc: Defines the module name (such as @/myModule.1@) to get initialization notification from.
+ - name: output_delay
+   optional: 1
+   type: integer/decimal
+   desc: This optional argument defines a delay time before outputting a @bang@.
+   unit: millisecond
+   default: 0
+
+attributes:
+
+messages:
+
+seealso:
+ - j.init
+ - j.receive
+ - loadbang

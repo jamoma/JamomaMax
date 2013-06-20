@@ -34,7 +34,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 525.0, 140.0, 81.0, 19.0 ],
-					"text" : "jcom.stencil%"
+					"text" : "j.stencil%"
 				}
 
 			}
@@ -48,7 +48,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 525.0, 115.0, 82.0, 19.0 ],
-					"text" : "jcom.net.send"
+					"text" : "j.net.send"
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 525.0, 90.0, 94.0, 19.0 ],
-					"text" : "jcom.net.receive"
+					"text" : "j.net.receive"
 				}
 
 			}
@@ -76,7 +76,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 525.0, 65.0, 71.0, 19.0 ],
-					"text" : "jcom.gain%"
+					"text" : "j.gain%"
 				}
 
 			}
@@ -90,7 +90,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 525.0, 40.0, 89.0, 19.0 ],
-					"text" : "jcom.dataspace"
+					"text" : "j.dataspace"
 				}
 
 			}
@@ -103,7 +103,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 195.0, 325.0, 345.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old \"TEST Foundation AllExternalsLoadingProperly\" 1"
+					"text" : "j.test.assert.equal.old \"TEST Foundation AllExternalsLoadingProperly\" 1"
 				}
 
 			}
@@ -131,7 +131,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "bang" ],
 					"patching_rect" : [ 50.0, 85.0, 57.0, 19.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}
@@ -171,7 +171,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 50.0, 200.0, 100.0, 19.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}

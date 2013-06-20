@@ -88,7 +88,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 		}
 		
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("additionalSignalInputSetsAttribute"), v)) {
-			x->numControlSignals = v.getSize();
+			x->numControlSignals = v.size();
 			x->controlSignalNames = new TTSymbol[x->numControlSignals];
 			for(TTUInt16 i=0; i<x->numControlSignals; i++){
 				x->numInputs++;
@@ -179,17 +179,17 @@ t_max_err wrappedClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, Atom
 	
 	x->wrappedObject->getAttributeValue(ttAttrName, v);
 
-	*argc = v.getSize();
+	*argc = v.size();
 	if (!(*argv)) // otherwise use memory passed in
-		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.getSize());
+		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.size());
 
-	for (i=0; i<v.getSize(); i++) {
-		if(v.getType(i) == kTypeFloat32 || v.getType(i) == kTypeFloat64){
+	for (i=0; i<v.size(); i++) {
+		if(v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64){
 			TTFloat64	value;
 			v.get(i, value);
 			atom_setfloat(*argv+i, value);
 		}
-		else if(v.getType(i) == kTypeSymbol){
+		else if(v[i].type() == kTypeSymbol){
 			TTSymbol	value;
 			v.get(i, value);
 			atom_setsym(*argv+i, gensym((char*)value.c_str()));
@@ -232,7 +232,7 @@ t_max_err wrappedClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomP
 		
 		TTSymbol	ttAttrName(ptr);
 		
-		v.setSize(argc);
+		v.resize(argc);
 		for (i=0; i<argc; i++) {
 			if(atom_gettype(argv+i) == A_LONG)
 				v.set(i, AtomGetInt(argv+i));
@@ -265,7 +265,7 @@ void wrappedClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv
 	}
 
 	if (argc && argv) {
-		v_in.setSize(argc);
+		v_in.resize(argc);
 		for (AtomCount i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
 				v_in.set(i, AtomGetInt(argv+i));
@@ -279,37 +279,34 @@ void wrappedClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv
 	}
 	x->wrappedObject->sendMessage(ttName, v_in, v_out);
 		
-		// process the returned value for the dumpout outlet
-		{
-			AtomCount	ac = v_out.getSize();
+	// process the returned value for the dumpout outlet
+	{
+		AtomCount	ac = v_out.size();
 
-			if (ac) {
-				AtomPtr		av = (AtomPtr)malloc(sizeof(t_atom) * ac);
-				
-				for (AtomCount i=0; i<ac; i++) {
-					if (v_out.getType() == kTypeSymbol){
-						TTSymbol ttSym;
-						v_out.get(i, ttSym);
-						atom_setsym(av+i, gensym((char*)ttSym.c_str()));
-					}
-					else if (v_out.getType() == kTypeFloat32 || v_out.getType() == kTypeFloat64) {
-						TTFloat64 f = 0.0;
-						v_out.get(i, f);
-						atom_setfloat(av+i, f);
-					}
-					else {
-						TTInt32 l = 0;
-						v_out.get(i, l);
-						atom_setfloat(av+i, l);
-					}
+		if (ac) {
+			AtomPtr		av = (AtomPtr)malloc(sizeof(t_atom) * ac);
+			
+			for (AtomCount i=0; i<ac; i++) {
+				if (v_out[0].type() == kTypeSymbol){
+					TTSymbol ttSym;
+					v_out.get(i, ttSym);
+					atom_setsym(av+i, gensym((char*)ttSym.c_str()));
 				}
-				object_obex_dumpout(self, s, ac, av);
-				free(av);
+				else if (v_out[0].type() == kTypeFloat32 || v_out[0].type() == kTypeFloat64) {
+					TTFloat64 f = 0.0;
+					v_out.get(i, f);
+					atom_setfloat(av+i, f);
+				}
+				else {
+					TTInt32 l = 0;
+					v_out.get(i, l);
+					atom_setfloat(av+i, l);
+				}
 			}
+			object_obex_dumpout(self, s, ac, av);
+			free(av);
 		}
-//	}
-//	else
-//		x->wrappedObject->sendMessage(ttName);
+	}
 }
 
 
@@ -499,7 +496,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 	}
 
 	o->getMessageNames(v);
-	for (TTUInt16 i=0; i<v.getSize(); i++) {
+	for (TTUInt16 i=0; i<v.size(); i++) {
 		v.get(i, name);
 		//nameSize = name->getString().length();	// to -- this crash on Windows...
 		nameSize = strlen(name.c_str());
@@ -515,7 +512,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 	}
 	
 	o->getAttributeNames(v);
-	for (TTUInt16 i=0; i<v.getSize(); i++) {
+	for (TTUInt16 i=0; i<v.size(); i++) {
 		TTAttributePtr	attr = NULL;
 		SymbolPtr		maxType = _sym_long;
 		
@@ -624,7 +621,7 @@ TTErr TTValueFromAtoms(TTValue& v, AtomCount ac, AtomPtr av)
 {
 	v.clear();
 	
-	// For now we assume floats for speed (e.g. in the performance sensitive jcom.dataspace object)
+	// For now we assume floats for speed (e.g. in the performance sensitive j.dataspace object)
 	for (int i=0; i<ac; i++)
 		v.append((TTFloat64)atom_getfloat(av+i));
 	return kTTErrNone;
@@ -632,7 +629,7 @@ TTErr TTValueFromAtoms(TTValue& v, AtomCount ac, AtomPtr av)
 
 TTErr TTAtomsFromValue(const TTValue& v, AtomCount* ac, AtomPtr* av)
 {
-	int	size = v.getSize();
+	int	size = v.size();
 	
 	if (*ac && *av)
 		; // memory was passed-in from the calling function -- use it
@@ -642,7 +639,7 @@ TTErr TTAtomsFromValue(const TTValue& v, AtomCount* ac, AtomPtr* av)
 	}
 
 	for (int i=0; i<size; i++) {
-		atom_setfloat((*av)+i, v.getFloat64(i));
+		atom_setfloat((*av)+i, v[i]);
 	}
 	return kTTErrNone;
 }
@@ -695,7 +692,7 @@ long TTMatrixReferenceJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix, T
 	aTTMatrix->setAttributeValue(kTTSym_elementCount, (int)jitterMatrixInfo.planecount);
 	
 	jitterDimensionCount = jitterMatrixInfo.dimcount;
-	dimensions.setSize(jitterDimensionCount);
+	dimensions.resize(jitterDimensionCount);
 	
 	for (int d=0; d < jitterDimensionCount; d++) {
 		// The first 2 dimensions (rows and columns) are reversed in Jitter as compared to Jamoma

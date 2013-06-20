@@ -177,46 +177,46 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.meter_receive.maxpat",
+				"name" : "j.meter_receive.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/meter_receive",
 				"patcherrelativepath" : "../../library/components/meter_receive",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hub.mxo",
+				"name" : "j.hub.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.meter~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.return.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
  ]

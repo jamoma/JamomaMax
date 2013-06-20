@@ -86,7 +86,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 171.0, 86.0, 305.0, 43.0 ],
-					"text" : "In order to create all jcom.parameters/messages/returns, you can use the jcom.parameterCreate utility to the left : just double-click on it and choose the desired attributes",
+					"text" : "In order to create all j.parameters/messages/returns, you can use the j.parameterCreate utility to the left : just double-click on it and choose the desired attributes",
 					"textcolor" : [ 0.709804, 0.101961, 0.101961, 1.0 ]
 				}
 
@@ -101,7 +101,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 40.0, 108.0, 131.0, 19.0 ],
-					"text" : "jcom.parameterCreate"
+					"text" : "j.parameterCreate"
 				}
 
 			}
@@ -353,7 +353,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 10.0, 250.0, 162.0, 19.0 ],
-									"text" : "open jcom.hub reference"
+									"text" : "open j.hub reference"
 								}
 
 							}
@@ -500,7 +500,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 10.0, 225.0, 202.0, 19.0 ],
-									"text" : "open jcom.parameter reference"
+									"text" : "open j.parameter reference"
 								}
 
 							}
@@ -515,7 +515,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 35.0, 140.0, 370.0, 43.0 ],
-									"text" : "If you need to return messages from your algorithm to the rest of the world. you can specify type, range... etc as in jcom.parameter or jcom.message"
+									"text" : "If you need to return messages from your algorithm to the rest of the world. you can specify type, range... etc as in j.parameter or j.message"
 								}
 
 							}
@@ -529,7 +529,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 120.0, 380.0, 19.0 ],
-									"text" : "jcom.return:"
+									"text" : "j.return:"
 								}
 
 							}
@@ -544,7 +544,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 35.0, 80.0, 342.0, 31.0 ],
-									"text" : "If you need to send messages to or within the patch, but it's not required that they be stored or retrieveable, use jcom.message."
+									"text" : "If you need to send messages to or within the patch, but it's not required that they be stored or retrieveable, use j.message."
 								}
 
 							}
@@ -558,7 +558,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 60.0, 366.0, 19.0 ],
-									"text" : "jcom.message:"
+									"text" : "j.message:"
 								}
 
 							}
@@ -586,7 +586,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 10.0, 293.0, 19.0 ],
-									"text" : "jcom.parameter:"
+									"text" : "j.parameter:"
 								}
 
 							}
@@ -712,7 +712,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 121.821503, 211.313141, 413.0, 31.0 ],
-									"text" : "jcom.parameter a_bang @type generic @repetitions/allow 1 @ramp/drive none @priority 1 @description \"a bang\"",
+									"text" : "j.parameter a_bang @type generic @repetitions/allow 1 @ramp/drive none @priority 1 @description \"a bang\"",
 									"varname" : "foot/switch"
 								}
 
@@ -825,7 +825,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 50.0, 144.0, 19.0 ],
-													"text" : "jcom.oscroute /view/panel"
+													"text" : "j.oscroute /view/panel"
 												}
 
 											}
@@ -1124,7 +1124,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 503.0, 239.0, 576.0, 31.0 ],
-					"text" : "jcom.message this_message @type integer @range/bounds 0. 1. @range/clipmode none @repetitions/allow 0 @ramp/drive none @description \"Document what this message does...\"",
+					"text" : "j.message this_message @type integer @range/bounds 0. 1. @range/clipmode none @repetitions/allow 0 @ramp/drive none @description \"Document what this message does...\"",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -1173,7 +1173,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 503.0, 204.0, 577.0, 31.0 ],
-					"text" : "jcom.parameter this_parameter @type decimal @range/bounds 0. 1. @range/clipmode none @repetitions/allow 0 @ramp/drive Max @description \"Document what this parameter does...\"",
+					"text" : "j.parameter this_parameter @type decimal @range/bounds 0. 1. @range/clipmode none @repetitions/allow 0 @ramp/drive Max @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
 
@@ -1189,7 +1189,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 11.0, 422.0, 284.0, 31.0 ],
-					"text" : "jcom.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
+					"text" : "j.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
 				}
 
 			}
@@ -1203,7 +1203,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 11.0, 342.0, 56.0, 19.0 ],
-					"text" : "jcom.in"
+					"text" : "j.in"
 				}
 
 			}
@@ -1245,7 +1245,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 70.0, 90.0, 227.0, 19.0 ],
-									"text" : "jcom.oscroute /param_a /message_b"
+									"text" : "j.oscroute /param_a /message_b"
 								}
 
 							}
@@ -1326,8 +1326,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 13.0, 198.0, 302.0, 31.0 ],
-					"text" : "jcom.hub @module_type control @description \"This module doesn't do much yet\"",
-					"varname" : "jcom.hub"
+					"text" : "j.hub @module_type control @description \"This module doesn't do much yet\"",
+					"varname" : "j.hub"
 				}
 
 			}
@@ -1372,7 +1372,7 @@
 				"box" : 				{
 					"has_panel" : 1,
 					"id" : "obj-16",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],

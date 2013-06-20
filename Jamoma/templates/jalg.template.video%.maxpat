@@ -100,7 +100,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.oscroute /genframe /direct /this_parameter /this_message",
+					"text" : "j.oscroute /genframe /direct /this_parameter /this_message",
 					"id" : "obj-5",
 					"fontname" : "Verdana",
 					"numinlets" : 1,
@@ -163,7 +163,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "jcom.pass /hue_angle",
+					"text" : "j.pass /hue_angle",
 					"id" : "obj-10",
 					"fontname" : "Verdana",
 					"numinlets" : 1,

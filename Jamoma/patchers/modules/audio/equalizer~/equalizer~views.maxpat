@@ -79,7 +79,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1040.0, 88.0, 152.0, 19.0 ],
-					"text" : "jcom.receive model/address"
+					"text" : "j.receive model/address"
 				}
 
 			}
@@ -293,7 +293,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 393.0, 443.0, 125.0, 31.0 ],
-					"text" : "jcom.remote gain @dataspace/unit dB"
+					"text" : "j.remote gain @dataspace/unit dB"
 				}
 
 			}
@@ -1423,7 +1423,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 392.0, 503.0, 128.0, 19.0 ],
-					"text" : "jcom.remote frequency"
+					"text" : "j.remote frequency"
 				}
 
 			}
@@ -1437,7 +1437,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 392.0, 373.0, 84.0, 19.0 ],
-					"text" : "jcom.remote q"
+					"text" : "j.remote q"
 				}
 
 			}
@@ -1451,7 +1451,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 344.0, 246.0, 157.0, 19.0 ],
-					"text" : "jcom.remote type"
+					"text" : "j.remote type"
 				}
 
 			}

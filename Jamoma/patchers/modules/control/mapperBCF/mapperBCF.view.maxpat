@@ -43,7 +43,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 321.0, 18.0, 47.0, 18.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -322,8 +322,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 34.0, 113.0, 100.0, 31.0 ],
-					"text" : "jcom.view",
-					"varname" : "jcom.model"
+					"text" : "j.view",
+					"varname" : "j.model"
 				}
 
 			}
@@ -360,7 +360,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 151.0, 115.0, 54.0, 19.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -454,7 +454,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 240.0, 235.0, 109.0, 19.0 ],
-					"text" : "jcom.remote midiOut"
+					"text" : "j.remote midiOut"
 				}
 
 			}
@@ -468,7 +468,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 122.0, 243.0, 101.0, 19.0 ],
-					"text" : "jcom.remote midiIn"
+					"text" : "j.remote midiIn"
 				}
 
 			}
@@ -476,7 +476,7 @@
 				"box" : 				{
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
 					"id" : "obj-22",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],

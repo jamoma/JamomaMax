@@ -137,7 +137,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 727.5, 679.0, 373.0, 20.0 ],
-					"text" : "jcom.message resume @type none @description \"Pause playback.\""
+					"text" : "j.message resume @type none @description \"Pause playback.\""
 				}
 
 			}
@@ -151,7 +151,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 741.0, 618.0, 366.0, 20.0 ],
-					"text" : "jcom.message pause @type none @description \"Pause playback.\""
+					"text" : "j.message pause @type none @description \"Pause playback.\""
 				}
 
 			}
@@ -301,7 +301,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 727.5, 465.0, 482.0, 20.0 ],
-					"text" : "jcom.parameter play @type boolean @repetitions/allow 1 @description \"Play sound file.\"",
+					"text" : "j.parameter play @type boolean @repetitions/allow 1 @description \"Play sound file.\"",
 					"varname" : "play"
 				}
 
@@ -560,7 +560,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 124.0, 154.0 ],
-									"text" : "jcom.parameter nextFile/open @type generic @repetitions/allow 1 @priority 1 @description \"The (next) file to play. This need to be in the Max search path, or a full filepath should be provided.\""
+									"text" : "j.parameter nextFile/open @type generic @repetitions/allow 1 @priority 1 @description \"The (next) file to play. This need to be in the Max search path, or a full filepath should be provided.\""
 								}
 
 							}
@@ -575,7 +575,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 249.0, 100.0, 139.0, 208.0 ],
-									"text" : "jcom.parameter nextFile/loop/start @type decimal @range/bounds 0 180000 @range/clipmode low @ramp/drive none @repetitions/allow 1 @dataspace time @dataspace/unit ms @priority 2 @description \"Playback start position. Use 0 for playback from start of file.\""
+									"text" : "j.parameter nextFile/loop/start @type decimal @range/bounds 0 180000 @range/clipmode low @ramp/drive none @repetitions/allow 1 @dataspace time @dataspace/unit ms @priority 2 @description \"Playback start position. Use 0 for playback from start of file.\""
 								}
 
 							}
@@ -590,7 +590,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 439.0, 100.0, 144.0, 181.0 ],
-									"text" : "jcom.parameter nextFile/loop/end @type decimal @range/bounds 0 180000 @range/clipmode low @ramp/drive none @repetitions/allow 1 @dataspace time @dataspace/unit ms @priority 3 @description \"Playback end position. Use 0 for playback to end of file.\""
+									"text" : "j.parameter nextFile/loop/end @type decimal @range/bounds 0 180000 @range/clipmode low @ramp/drive none @repetitions/allow 1 @dataspace time @dataspace/unit ms @priority 3 @description \"Playback end position. Use 0 for playback to end of file.\""
 								}
 
 							}
@@ -605,7 +605,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 627.0, 100.0, 165.0, 167.0 ],
-									"text" : "jcom.parameter nextFile/rate @type decimal @range/bounds -1. 1. @range/clipmode none @ramp/drive none @repetitions/allow 1 @dataspace time @dataspace/unit ms @priority 4 @description \"Playback start position. Use 0 for playback from start of file.\""
+									"text" : "j.parameter nextFile/rate @type decimal @range/bounds -1. 1. @range/clipmode none @ramp/drive none @repetitions/allow 1 @dataspace time @dataspace/unit ms @priority 4 @description \"Playback start position. Use 0 for playback from start of file.\""
 								}
 
 							}
@@ -620,7 +620,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 801.0, 100.0, 249.0, 47.0 ],
-									"text" : "jcom.message nextFile/preload @type none @description \"Preload the next sound file to be played accoding to current specifications.\""
+									"text" : "j.message nextFile/preload @type none @description \"Preload the next sound file to be played accoding to current specifications.\""
 								}
 
 							}
@@ -635,7 +635,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 1056.0, 100.0, 282.0, 47.0 ],
-									"text" : "jcom.message nextFile/makeCurrent @type none @description \"Activate the preloaded file, so that it can be played.\""
+									"text" : "j.message nextFile/makeCurrent @type none @description \"Activate the preloaded file, so that it can be played.\""
 								}
 
 							}
@@ -900,7 +900,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1273.5, 101.0, 151.0, 87.0 ],
-					"text" : "jcom.parameter loop @type boolean @repetitions/allow 1 @description \"Flag indicating if the file is to play back in loop.\""
+					"text" : "j.parameter loop @type boolean @repetitions/allow 1 @description \"Flag indicating if the file is to play back in loop.\""
 				}
 
 			}
@@ -1139,7 +1139,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 88.0, 314.0, 66.0, 20.0 ],
-					"text" : "jcom.in~ 0"
+					"text" : "j.in~ 0"
 				}
 
 			}
@@ -1153,7 +1153,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 330.0, 196.0, 92.0, 20.0 ],
-					"text" : "jcom.savebang"
+					"text" : "j.savebang"
 				}
 
 			}
@@ -1192,7 +1192,7 @@
 					"fontsize" : 12.0,
 					"id" : "obj-79",
 					"ignoreclick" : 1,
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1454,7 +1454,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 348.0, 415.669922, 431.0, 185.0 ],
-									"text" : "This outlet is connected to a sfplay~ object with 1, 2 or 4 channels, depending on which version of the module you use. The sfplay~ object is linked to the sflist~ object in this patch.\n\nA bunch of local send and receive objects passes messages between different parts of the patch.\n\nMost of the GUI (with the exception of jcom.ui itself) is embedded in the algorithm (one level up from the subpatch you are currently seeing), embedded as a bpatcher in the various modules.\n\nThis way three versions of the module can co-exist (mono, stereo, 4 channel), while maintaining a DRY design."
+									"text" : "This outlet is connected to a sfplay~ object with 1, 2 or 4 channels, depending on which version of the module you use. The sfplay~ object is linked to the sflist~ object in this patch.\n\nA bunch of local send and receive objects passes messages between different parts of the patch.\n\nMost of the GUI (with the exception of j.ui itself) is embedded in the algorithm (one level up from the subpatch you are currently seeing), embedded as a bpatcher in the various modules.\n\nThis way three versions of the module can co-exist (mono, stereo, 4 channel), while maintaining a DRY design."
 								}
 
 							}
@@ -1482,7 +1482,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 238.0, 193.169922, 53.0, 20.0 ],
-									"text" : "jcom.init"
+									"text" : "j.init"
 								}
 
 							}
@@ -2862,7 +2862,7 @@
 													"numoutlets" : 7,
 													"outlettype" : [ "", "", "", "", "", "", "" ],
 													"patching_rect" : [ 50.0, 100.0, 534.249939, 20.0 ],
-													"text" : "jcom.oscroute /preload /open /loop/start /loop/end /rate /makeCurrent"
+													"text" : "j.oscroute /preload /open /loop/start /loop/end /rate /makeCurrent"
 												}
 
 											}
@@ -3535,7 +3535,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 307.0, 104.169922, 229.0, 20.0 ],
-									"text" : "jcom.oscroute /loop /play /pause /resume"
+									"text" : "j.oscroute /loop /play /pause /resume"
 								}
 
 							}
@@ -3549,7 +3549,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 104.169922, 134.0, 20.0 ],
-									"text" : "jcom.oscroute /nextFile"
+									"text" : "j.oscroute /nextFile"
 								}
 
 							}
@@ -4257,31 +4257,31 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.oscroute.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.init.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.textslider.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.savebang.mxo",
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]

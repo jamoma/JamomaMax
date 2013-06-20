@@ -36,7 +36,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 711.0, 97.0, 19.0 ],
-					"text" : "jcom.wavetable≈"
+					"text" : "j.wavetable≈"
 				}
 
 			}
@@ -64,7 +64,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 97.0, 75.0, 19.0 ],
-					"text" : "jcom.count≈"
+					"text" : "j.count≈"
 				}
 
 			}
@@ -78,7 +78,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 78.0, 64.0, 19.0 ],
-					"text" : "jcom.clip≈"
+					"text" : "j.clip≈"
 				}
 
 			}
@@ -92,7 +92,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 692.0, 107.0, 19.0 ],
-					"text" : "jcom.waveshaper≈"
+					"text" : "j.waveshaper≈"
 				}
 
 			}
@@ -106,7 +106,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "list", "" ],
 					"patching_rect" : [ 620.0, 673.0, 74.0, 19.0 ],
-					"text" : "jcom.unsig≈"
+					"text" : "j.unsig≈"
 				}
 
 			}
@@ -120,7 +120,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 635.0, 96.0, 19.0 ],
-					"text" : "jcom.trajectory≈"
+					"text" : "j.trajectory≈"
 				}
 
 			}
@@ -134,7 +134,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 597.0, 68.0, 19.0 ],
-					"text" : "jcom.spat≈"
+					"text" : "j.spat≈"
 				}
 
 			}
@@ -148,7 +148,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 502.0, 73.0, 19.0 ],
-					"text" : "jcom.ramp≈"
+					"text" : "j.ramp≈"
 				}
 
 			}
@@ -162,7 +162,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 464.0, 67.0, 19.0 ],
-					"text" : "jcom.pick≈"
+					"text" : "j.pick≈"
 				}
 
 			}
@@ -176,7 +176,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 373.0, 75.0, 19.0 ],
-					"text" : "jcom.offset≈"
+					"text" : "j.offset≈"
 				}
 
 			}
@@ -190,7 +190,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 114.0, 87.0, 19.0 ],
-					"text" : "jcom.average≈"
+					"text" : "j.average≈"
 				}
 
 			}
@@ -204,7 +204,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 21.0, 68.0, 19.0 ],
-					"text" : "jcom.adsr≈"
+					"text" : "j.adsr≈"
 				}
 
 			}
@@ -218,7 +218,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 620.0, 389.0, 206.0, 19.0 ],
-					"text" : "not testing jcom.op≈ due to crashing",
+					"text" : "not testing j.op≈ due to crashing",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -233,7 +233,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 40.0, 73.0, 19.0 ],
-					"text" : "jcom.array≈"
+					"text" : "j.array≈"
 				}
 
 			}
@@ -247,7 +247,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 540.0, 61.0, 19.0 ],
-					"text" : "jcom.sig≈"
+					"text" : "j.sig≈"
 				}
 
 			}
@@ -289,7 +289,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 485.0, 605.0, 74.0, 19.0 ],
-					"text" : "jcom.test.log"
+					"text" : "j.test.log"
 				}
 
 			}
@@ -303,7 +303,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 365.0, 790.0, 433.0, 19.0 ],
-					"text" : "jcom.test.assert.equal.old \"TEST AudioGraph NoErrorsRunningDSPinHelpPatchers\" 0"
+					"text" : "j.test.assert.equal.old \"TEST AudioGraph NoErrorsRunningDSPinHelpPatchers\" 0"
 				}
 
 			}
@@ -857,7 +857,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 578.0, 138.0, 19.0 ],
-					"text" : "jcom.soundfile.recorder≈"
+					"text" : "j.soundfile.recorder≈"
 				}
 
 			}
@@ -871,7 +871,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "audio.connect", "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 559.0, 126.0, 19.0 ],
-					"text" : "jcom.soundfile.player≈"
+					"text" : "j.soundfile.player≈"
 				}
 
 			}
@@ -885,7 +885,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 521.0, 93.0, 19.0 ],
-					"text" : "jcom.resample≈"
+					"text" : "j.resample≈"
 				}
 
 			}
@@ -899,7 +899,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 408.0, 94.0, 19.0 ],
-					"text" : "jcom.overdrive≈"
+					"text" : "j.overdrive≈"
 				}
 
 			}
@@ -913,7 +913,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "audio.connect", "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 245.0, 79.0, 19.0 ],
-					"text" : "jcom.hilbert≈"
+					"text" : "j.hilbert≈"
 				}
 
 			}
@@ -927,7 +927,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 730.0, 85.0, 19.0 ],
-					"text" : "jcom.window≈"
+					"text" : "j.window≈"
 				}
 
 			}
@@ -941,7 +941,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 620.0, 654.0, 83.0, 19.0 ],
-					"text" : "jcom.unpack≈"
+					"text" : "j.unpack≈"
 				}
 
 			}
@@ -955,7 +955,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 616.0, 68.0, 19.0 ],
-					"text" : "jcom.split≈"
+					"text" : "j.split≈"
 				}
 
 			}
@@ -969,7 +969,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 483.0, 91.0, 19.0 ],
-					"text" : "jcom.pulsesub≈"
+					"text" : "j.pulsesub≈"
 				}
 
 			}
@@ -983,7 +983,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 445.0, 81.0, 19.0 ],
-					"text" : "jcom.phasor≈"
+					"text" : "j.phasor≈"
 				}
 
 			}
@@ -997,7 +997,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 426.0, 70.0, 19.0 ],
-					"text" : "jcom.pack≈"
+					"text" : "j.pack≈"
 				}
 
 			}
@@ -1011,7 +1011,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 354.0, 73.0, 19.0 ],
-					"text" : "jcom.noise≈"
+					"text" : "j.noise≈"
 				}
 
 			}
@@ -1025,7 +1025,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 319.0, 75.0, 19.0 ],
-					"text" : "jcom.mixer≈"
+					"text" : "j.mixer≈"
 				}
 
 			}
@@ -1039,7 +1039,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 338.0, 101.0, 19.0 ],
-					"text" : "jcom.multimixer≈"
+					"text" : "j.multimixer≈"
 				}
 
 			}
@@ -1053,7 +1053,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 301.0, 79.0, 19.0 ],
-					"text" : "jcom.limiter≈"
+					"text" : "j.limiter≈"
 				}
 
 			}
@@ -1067,7 +1067,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 283.0, 65.0, 19.0 ],
-					"text" : "jcom.join≈"
+					"text" : "j.join≈"
 				}
 
 			}
@@ -1081,7 +1081,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 620.0, 264.0, 65.0, 19.0 ],
-					"text" : "jcom.info≈"
+					"text" : "j.info≈"
 				}
 
 			}
@@ -1095,7 +1095,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 226.0, 68.0, 19.0 ],
-					"text" : "jcom.gain≈"
+					"text" : "j.gain≈"
 				}
 
 			}
@@ -1109,7 +1109,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 207.0, 70.0, 19.0 ],
-					"text" : "jcom.filter≈"
+					"text" : "j.filter≈"
 				}
 
 			}
@@ -1123,7 +1123,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 188.0, 58.0, 19.0 ],
-					"text" : "jcom.fft≈"
+					"text" : "j.fft≈"
 				}
 
 			}
@@ -1137,7 +1137,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 169.0, 74.0, 19.0 ],
-					"text" : "jcom.delay≈"
+					"text" : "j.delay≈"
 				}
 
 			}
@@ -1151,7 +1151,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 150.0, 88.0, 19.0 ],
-					"text" : "jcom.degrade≈"
+					"text" : "j.degrade≈"
 				}
 
 			}
@@ -1165,7 +1165,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 620.0, 132.0, 95.0, 19.0 ],
-					"text" : "jcom.dcblocker≈"
+					"text" : "j.dcblocker≈"
 				}
 
 			}
@@ -1193,7 +1193,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "bang" ],
 					"patching_rect" : [ 30.0, 40.0, 83.0, 19.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}
@@ -1233,7 +1233,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 55.0, 405.0, 98.0, 19.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -1797,179 +1797,179 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.finished.maxpat",
+				"name" : "j.test.finished.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.finished",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.finished",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.start.maxpat",
+				"name" : "j.test.start.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.start",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.start",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.assert.equal.old.maxpat",
+				"name" : "j.test.assert.equal.old.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.assert.equal.old",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.assert.equal.old",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.log.maxpat",
+				"name" : "j.test.log.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Test/components/test.log",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.log",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.dcblocker≈.mxo",
+				"name" : "j.dcblocker≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.degrade≈.mxo",
+				"name" : "j.degrade≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.delay≈.mxo",
+				"name" : "j.delay≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.fft≈.mxo",
+				"name" : "j.fft≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.filter≈.mxo",
+				"name" : "j.filter≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.gain≈.mxo",
+				"name" : "j.gain≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.info≈.mxo",
+				"name" : "j.info≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.join≈.mxo",
+				"name" : "j.join≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.limiter≈.mxo",
+				"name" : "j.limiter≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.multimixer≈.mxo",
+				"name" : "j.multimixer≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.mixer≈.mxo",
+				"name" : "j.mixer≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.noise≈.mxo",
+				"name" : "j.noise≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pack≈.mxo",
+				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.phasor≈.mxo",
+				"name" : "j.phasor≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pulsesub≈.mxo",
+				"name" : "j.pulsesub≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.split≈.mxo",
+				"name" : "j.split≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.window≈.mxo",
+				"name" : "j.window≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.hilbert≈.mxo",
+				"name" : "j.hilbert≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.overdrive≈.mxo",
+				"name" : "j.overdrive≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.resample≈.mxo",
+				"name" : "j.resample≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.soundfile.player≈.mxo",
+				"name" : "j.soundfile.player≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.soundfile.recorder≈.mxo",
+				"name" : "j.soundfile.recorder≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.sig≈.mxo",
+				"name" : "j.sig≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.array≈.mxo",
+				"name" : "j.array≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.adsr≈.mxo",
+				"name" : "j.adsr≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.average≈.mxo",
+				"name" : "j.average≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.offset≈.mxo",
+				"name" : "j.offset≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pick≈.mxo",
+				"name" : "j.pick≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.ramp≈.mxo",
+				"name" : "j.ramp≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.spat≈.mxo",
+				"name" : "j.spat≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.trajectory≈.mxo",
+				"name" : "j.trajectory≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.unsig≈.mxo",
+				"name" : "j.unsig≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.waveshaper≈.mxo",
+				"name" : "j.waveshaper≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.clip≈.mxo",
+				"name" : "j.clip≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.count≈.mxo",
+				"name" : "j.count≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.wavetable≈.mxo",
+				"name" : "j.wavetable≈.mxo",
 				"type" : "iLaX"
 			}
  ]

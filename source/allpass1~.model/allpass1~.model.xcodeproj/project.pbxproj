@@ -29,17 +29,17 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		A7768C5E1518865D00D38CC4 /* jcom.cubicInterpolate */ = {
+		A7768C5E1518865D00D38CC4 /* j.cubicInterpolate */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION) $(CONFIGURATION)";
-			buildConfigurationList = A7768C611518865D00D38CC4 /* Build configuration list for PBXLegacyTarget "jcom.cubicInterpolate" */;
+			buildConfigurationList = A7768C611518865D00D38CC4 /* Build configuration list for PBXLegacyTarget "j.cubicInterpolate" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			buildWorkingDirectory = "";
 			dependencies = (
 			);
-			name = jcom.cubicInterpolate;
+			name = j.cubicInterpolate;
 			passBuildSettingsInEnvironment = 1;
 			productName = jcom;
 		};
@@ -63,7 +63,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A7768C5E1518865D00D38CC4 /* jcom.cubicInterpolate */,
+				A7768C5E1518865D00D38CC4 /* j.cubicInterpolate */,
 			);
 		};
 /* End PBXProject section */
@@ -124,7 +124,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = jcom.cubicInterpolate;
+				PRODUCT_NAME = j.cubicInterpolate;
 			};
 			name = Debug;
 		};
@@ -133,7 +133,7 @@
 			buildSettings = {
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = jcom.cubicInterpolate;
+				PRODUCT_NAME = j.cubicInterpolate;
 			};
 			name = Release;
 		};
@@ -149,7 +149,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7768C611518865D00D38CC4 /* Build configuration list for PBXLegacyTarget "jcom.cubicInterpolate" */ = {
+		A7768C611518865D00D38CC4 /* Build configuration list for PBXLegacyTarget "j.cubicInterpolate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7768C621518865D00D38CC4 /* Debug */,

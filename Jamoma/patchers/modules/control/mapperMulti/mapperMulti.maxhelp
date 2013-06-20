@@ -84,7 +84,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 647.0, 152.0, 104.0, 29.0 ],
-					"text" : "jcom.send /Multi.*/mapper.*/edit"
+					"text" : "j.send /Multi.*/mapper.*/edit"
 				}
 
 			}
@@ -184,7 +184,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 26.0, 73.0, 171.0, 18.0 ],
-									"text" : "jcom.oscroute /out/address"
+									"text" : "j.oscroute /out/address"
 								}
 
 							}
@@ -421,7 +421,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 26.0, 46.0, 171.0, 18.0 ],
-									"text" : "jcom.oscroute mapper.*/out/address"
+									"text" : "j.oscroute mapper.*/out/address"
 								}
 
 							}
@@ -532,7 +532,7 @@
 					"bgmode" : 1,
 					"id" : "obj-36",
 					"maxclass" : "bpatcher",
-					"name" : "jcom.maxhelpui.maxpat",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 834.0, 70.0 ],

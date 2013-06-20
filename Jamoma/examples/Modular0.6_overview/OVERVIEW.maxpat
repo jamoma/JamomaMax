@@ -67,7 +67,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 54.0, 411.0, 83.0, 20.0 ],
-					"text" : "jcom.modular"
+					"text" : "j.modular"
 				}
 
 			}
@@ -1092,7 +1092,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.modular.mxo",
+				"name" : "j.modular.mxo",
 				"type" : "iLaX"
 			}
  ]

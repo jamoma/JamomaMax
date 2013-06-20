@@ -36,7 +36,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 531.0, 79.0, 71.0, 20.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -50,7 +50,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 430.5, 820.0, 79.0, 20.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -64,7 +64,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 137.0, 398.0, 82.0, 20.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -78,7 +78,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 330.0, 820.0, 79.0, 20.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -115,7 +115,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 329.0, 79.0, 71.0, 20.0 ],
-					"text" : "jcom.in~ 1"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -130,7 +130,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 58.0, 352.5, 161.0, 33.0 ],
-					"text" : "jcom.model @description \"Stereo echo module.\""
+					"text" : "j.model @description \"Stereo echo module.\""
 				}
 
 			}
@@ -145,7 +145,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 734.0, 39.0, 648.0, 33.0 ],
-					"text" : "jcom.message clear @type none @description \"clear the feedback, filter, and limiter histories to return to a clean slate.  Useful in the event that some rogue samples wound up stuck in the feedback loops.\""
+					"text" : "j.message clear @type none @description \"clear the feedback, filter, and limiter histories to return to a clean slate.  Useful in the event that some rogue samples wound up stuck in the feedback loops.\""
 				}
 
 			}
@@ -160,7 +160,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 893.785706, 649.0, 618.0, 47.0 ],
-					"text" : "jcom.parameter feedback/mode @type string @description \"Feedback mode. 'pingpong': crossed-over feedback between the two delays. 'stereo': two mono delay lines each with independent feedback paths.'pingleft' and 'pingright' feed the left or the right delay outputs back.\"",
+					"text" : "j.parameter feedback/mode @type string @description \"Feedback mode. 'pingpong': crossed-over feedback between the two delays. 'stereo': two mono delay lines each with independent feedback paths.'pingleft' and 'pingright' feed the left or the right delay outputs back.\"",
 					"varname" : "feedback[2]"
 				}
 
@@ -176,7 +176,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 877.5, 596.0, 495.0, 47.0 ],
-					"text" : "jcom.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -1. 1. @range/clipmode both @description Feedback. @dataspace gain @dataspace/unit linear",
+					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -1. 1. @range/clipmode both @description Feedback. @dataspace gain @dataspace/unit linear",
 					"varname" : "feedback"
 				}
 
@@ -192,7 +192,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 813.285706, 128.0, 534.0, 47.0 ],
-					"text" : "jcom.parameter delay/right @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 10000 @range/clipmode both @description \"Delay time in milliseconds for right channel.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter delay/right @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 10000 @range/clipmode both @description \"Delay time in milliseconds for right channel.\" @dataspace time @dataspace/unit ms",
 					"varname" : "right"
 				}
 
@@ -208,7 +208,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 836.5, 216.0, 301.0, 33.0 ],
-					"text" : "jcom.message filter/graph @description \"Messages to filtergraph. See the MSP reference for further details\""
+					"text" : "j.message filter/graph @description \"Messages to filtergraph. See the MSP reference for further details\""
 				}
 
 			}
@@ -223,7 +223,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 850.0, 255.0, 595.0, 33.0 ],
-					"text" : "jcom.parameter filter/type @type string @repetitions/allow 0 @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf\"",
+					"text" : "j.parameter filter/type @type string @repetitions/allow 0 @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf\"",
 					"varname" : "filtertype"
 				}
 
@@ -239,7 +239,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 975.142883, 346.0, 611.0, 33.0 ],
-					"text" : "jcom.parameter filter/gain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter filter/gain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
 					"varname" : "filtergain"
 				}
 
@@ -255,7 +255,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 996.0, 408.5, 473.0, 33.0 ],
-					"text" : "jcom.parameter filter/q @type decimal @ramp/drive Max @range/bounds 0. 100. @range/clipmode both @repetitions/allow 0 @description \"Resonance (Q)\"",
+					"text" : "j.parameter filter/q @type decimal @ramp/drive Max @range/bounds 0. 100. @range/clipmode both @repetitions/allow 0 @description \"Resonance (Q)\"",
 					"varname" : "q"
 				}
 
@@ -271,7 +271,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 954.285706, 292.5, 565.0, 47.0 ],
-					"text" : "jcom.parameter filter/frequency @type decimal @range/bounds 30. 11025. @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
+					"text" : "j.parameter filter/frequency @type decimal @range/bounds 30. 11025. @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
 					"varname" : "cf"
 				}
 
@@ -287,7 +287,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 798.785706, 77.0, 578.0, 47.0 ],
-					"text" : "jcom.parameter delay/left @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 10000 @range/clipmode both @description \"Delay time in milliseconds for left channel.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 10000 @range/clipmode both @description \"Delay time in milliseconds for left channel.\" @dataspace time @dataspace/unit ms",
 					"varname" : "left"
 				}
 
@@ -636,7 +636,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 330.0, 609.5, 220.0, 20.0 ],
-					"text" : "jcom.limiter~"
+					"text" : "j.limiter~"
 				}
 
 			}
@@ -1151,31 +1151,31 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.limiter~.mxo",
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

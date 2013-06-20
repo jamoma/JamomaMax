@@ -59,7 +59,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 140.0, 49.0, 99.0, 20.0 ],
-					"text" : "jcom.remote test"
+					"text" : "j.remote test"
 				}
 
 			}
@@ -96,7 +96,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 49.0, 63.0, 20.0 ],
-					"text" : "jcom.view"
+					"text" : "j.view"
 				}
 
 			}

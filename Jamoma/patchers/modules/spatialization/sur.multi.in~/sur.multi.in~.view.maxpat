@@ -36,8 +36,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 13.0, 178.0, 61.0, 19.0 ],
-					"text" : "jcom.view",
-					"varname" : "jcom.model"
+					"text" : "j.view",
+					"varname" : "j.model"
 				}
 
 			}
@@ -63,7 +63,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 312.0, 113.0, 151.0, 19.0 ],
-					"text" : "jcom.remote channel_offset",
+					"text" : "j.remote channel_offset",
 					"varname" : "channel_offset"
 				}
 
@@ -119,7 +119,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-52",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -180,15 +180,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.ui.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
  ]

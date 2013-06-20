@@ -47,7 +47,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 8.0, 190.0, 124.0, 20.0 ],
-					"text" : "jcom.receive /foo/test"
+					"text" : "j.receive /foo/test"
 				}
 
 			}
@@ -61,7 +61,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 8.0, 115.0, 111.0, 20.0 ],
-					"text" : "jcom.send /foo/test"
+					"text" : "j.send /foo/test"
 				}
 
 			}
@@ -165,7 +165,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 21.0, 65.001862, 180.0, 34.0 ],
-									"text" : "jcom.test.assert.equal alias-test @input 3 @compareTo 3"
+									"text" : "j.test.assert.equal alias-test @input 3 @compareTo 3"
 								}
 
 							}
@@ -343,7 +343,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 8.0, 59.0, 103.0, 20.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -357,7 +357,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "bang" ],
 					"patching_rect" : [ 8.0, 11.0, 85.0, 20.0 ],
-					"text" : "jcom.test.start"
+					"text" : "j.test.start"
 				}
 
 			}

@@ -70,7 +70,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 140.0, 49.0, 101.0, 20.0 ],
-					"text" : "jcom.receive test"
+					"text" : "j.receive test"
 				}
 
 			}
@@ -107,7 +107,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 49.0, 63.0, 20.0 ],
-					"text" : "jcom.view"
+					"text" : "j.view"
 				}
 
 			}
@@ -159,11 +159,11 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.view.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.receive.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -35,7 +35,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 5.0, 78.0, 61.0, 19.0 ],
-					"text" : "jcom.view"
+					"text" : "j.view"
 				}
 
 			}
@@ -142,7 +142,7 @@
 					"clickjump" : 0,
 					"defaultvalue" : 1.5,
 					"id" : "obj-6",
-					"maxclass" : "jcom.textslider",
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -165,7 +165,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 308.0, 48.0, 159.0, 19.0 ],
-					"text" : "jcom.remote out.R/amplitude"
+					"text" : "j.remote out.R/amplitude"
 				}
 
 			}
@@ -179,14 +179,14 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 308.0, 3.0, 158.0, 19.0 ],
-					"text" : "jcom.remote out.L/amplitude"
+					"text" : "j.remote out.L/amplitude"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -199,7 +199,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-4",
-					"maxclass" : "jcom.meter~",
+					"maxclass" : "j.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -328,7 +328,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 318.0, 211.0, 106.0, 19.0 ],
-					"text" : "jcom.remote mode",
+					"text" : "j.remote mode",
 					"varname" : "mode[1]"
 				}
 
@@ -343,7 +343,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 318.0, 147.0, 108.0, 19.0 ],
-					"text" : "jcom.remote shape",
+					"text" : "j.remote shape",
 					"varname" : "shape[1]"
 				}
 
@@ -358,7 +358,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 318.0, 317.0, 117.0, 19.0 ],
-					"text" : "jcom.remote position",
+					"text" : "j.remote position",
 					"varname" : "position"
 				}
 
@@ -419,7 +419,7 @@
 				"box" : 				{
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
 					"id" : "obj-34",
-					"maxclass" : "jcom.ui",
+					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],

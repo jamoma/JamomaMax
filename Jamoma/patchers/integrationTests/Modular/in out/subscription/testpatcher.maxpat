@@ -116,7 +116,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 25.0, 135.962219, 119.0, 20.0 ],
-					"text" : "jcom.out test"
+					"text" : "j.out test"
 				}
 
 			}
@@ -130,7 +130,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 25.0, 43.0, 119.0, 20.0 ],
-					"text" : "jcom.in test"
+					"text" : "j.in test"
 				}
 
 			}

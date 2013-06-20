@@ -42,7 +42,7 @@
 					"patching_rect" : [ 45.0, 18.0, 300.0, 140.0 ],
 					"id" : "obj-3",
 					"numoutlets" : 3,
-					"name" : "jmod.input~.maxpat",
+					"name" : "input~.module.maxpat",
 					"outlettype" : [ "", "signal", "signal" ],
 					"args" : [  ]
 				}

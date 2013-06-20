@@ -199,7 +199,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 148.0, 555.0, 101.0, 20.0 ],
-					"text" : "jcom.test.finished"
+					"text" : "j.test.finished"
 				}
 
 			}
@@ -241,7 +241,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 600.5, 619.0, 525.0, 20.0 ],
-					"text" : "jcom.test.assert.equal correctBranchingOfProcessingWithTwoSinks @input none @compareTo 1"
+					"text" : "j.test.assert.equal correctBranchingOfProcessingWithTwoSinks @input none @compareTo 1"
 				}
 
 			}
@@ -255,7 +255,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 526.5, 162.0, 81.0, 20.0 ],
-					"text" : "jcom.pack≈ 4"
+					"text" : "j.pack≈ 4"
 				}
 
 			}
@@ -269,7 +269,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 526.5, 210.0, 203.0, 20.0 ],
-					"text" : "jcom.op≈ @operator + @operand 1."
+					"text" : "j.op≈ @operator + @operand 1."
 				}
 
 			}
@@ -362,7 +362,7 @@
 					"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 805.5, 391.0, 243.0, 20.0 ],
 					"presentation_rect" : [ 480.0, 226.0, 0.0, 0.0 ],
-					"text" : "jcom.unpack≈ 4"
+					"text" : "j.unpack≈ 4"
 				}
 
 			}
@@ -437,7 +437,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 526.5, 336.0, 200.0, 20.0 ],
-					"text" : "jcom.op≈ @operator * @operand 2."
+					"text" : "j.op≈ @operator * @operand 2."
 				}
 
 			}
@@ -451,7 +451,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 526.5, 390.0, 243.0, 20.0 ],
-					"text" : "jcom.unpack≈ 4"
+					"text" : "j.unpack≈ 4"
 				}
 
 			}
@@ -777,29 +777,29 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.test.assert.equal.maxpat",
+				"name" : "j.test.assert.equal.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Test/components/test.assert.equal",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.assert.equal",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.test.finished.maxpat",
+				"name" : "j.test.finished.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Test/components/test.finished",
 				"patcherrelativepath" : "../../../../../Modules/Test/components/test.finished",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jcom.unpack≈.mxo",
+				"name" : "j.unpack≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.op≈.mxo",
+				"name" : "j.op≈.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.pack≈.mxo",
+				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
  ]

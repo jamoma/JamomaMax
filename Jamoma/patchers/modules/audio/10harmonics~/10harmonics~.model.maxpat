@@ -37,7 +37,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 111.0, 239.0, 382.0, 62.0 ],
-					"text" : "jcom.parameterArray harmonic.[10]/gain @format single @type decimal @ramp/drive Max @ramp/function linear @dataspace gain @dataspace/unit @description \"Gain values (dB) for the 1st partial\""
+					"text" : "j.parameterArray harmonic.[10]/gain @format single @type decimal @ramp/drive Max @ramp/function linear @dataspace gain @dataspace/unit @description \"Gain values (dB) for the 1st partial\""
 				}
 
 			}
@@ -52,7 +52,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 627.0, 152.0, 352.0, 62.0 ],
-					"text" : "jcom.parameter factors @type array @range/bounds 1. 100. @range/clipmode low @description \"list of factors that determines the frequencies of the 10 partials as a factor of the fundamental frequency, default is 1 2 3 4 5 6 7 8 9 10\""
+					"text" : "j.parameter factors @type array @range/bounds 1. 100. @range/clipmode low @description \"list of factors that determines the frequencies of the 10 partials as a factor of the fundamental frequency, default is 1 2 3 4 5 6 7 8 9 10\""
 				}
 
 			}
@@ -67,7 +67,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 766.5, 229.0, 331.0, 62.0 ],
-					"text" : "jcom.parameter frequency @type decimal @range/bounds 20 20000 @range/clipmode none @ramp/drive Max @ramp/function linear @dataspace time @dataspace/unit Hz @description \"Fundamental frequency of the signal.\"",
+					"text" : "j.parameter frequency @type decimal @range/bounds 20 20000 @range/clipmode none @ramp/drive Max @ramp/function linear @dataspace time @dataspace/unit Hz @description \"Fundamental frequency of the signal.\"",
 					"varname" : "frequency"
 				}
 
@@ -82,7 +82,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 627.0, 581.0, 76.0, 20.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -108,7 +108,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 43.0, 99.0, 84.0, 20.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -122,7 +122,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 28.0, 74.0, 403.0, 20.0 ],
-					"text" : "jcom.model @description \"Additive synthesis using 10 harmonic partials.\""
+					"text" : "j.model @description \"Additive synthesis using 10 harmonic partials.\""
 				}
 
 			}
@@ -544,23 +544,23 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameterArray.mxo",
+				"name" : "j.parameterArray.mxo",
 				"type" : "iLaX"
 			}
  ]

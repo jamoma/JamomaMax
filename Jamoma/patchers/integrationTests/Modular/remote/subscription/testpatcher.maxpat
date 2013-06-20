@@ -77,7 +77,7 @@
 					"patching_rect" : [ 186.0, 58.0, 99.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 186.0, 41.0, 99.0, 20.0 ],
-					"text" : "jcom.remote test"
+					"text" : "j.remote test"
 				}
 
 			}
@@ -125,7 +125,7 @@
 					"patching_rect" : [ 30.0, 58.0, 117.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.0, 41.0, 117.0, 20.0 ],
-					"text" : "jcom.parameter test"
+					"text" : "j.parameter test"
 				}
 
 			}
@@ -197,11 +197,11 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.remote.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]

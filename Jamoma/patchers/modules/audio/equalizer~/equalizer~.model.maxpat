@@ -278,7 +278,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 137.0, 183.0, 122.0, 60.0 ],
-																	"text" : "jcom.map @function power @input/min 0 @output/min 75 @output/max 7575"
+																	"text" : "j.map @function power @input/min 0 @output/min 75 @output/max 7575"
 																}
 
 															}
@@ -1089,7 +1089,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 250.0, 241.0, 437.5, 43.0 ],
-					"text" : "jcom.parameterArray filter.[6]/gain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive scheduler @repetitions/allow 0 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB @priority 3 @value/default 0."
+					"text" : "j.parameterArray filter.[6]/gain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive scheduler @repetitions/allow 0 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB @priority 3 @value/default 0."
 				}
 
 			}
@@ -1104,7 +1104,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 307.75, 186.0, 466.25, 43.0 ],
-					"text" : "jcom.parameterArray filter.[6]/frequency @type decimal @range/bounds 30. 11025. @range/clipmode both @ramp/drive scheduler @repetitions/allow 0 @description \"Center frequency (Hz)\" @dataspace pitch @dataspace/unit Hz @priority 2"
+					"text" : "j.parameterArray filter.[6]/frequency @type decimal @range/bounds 30. 11025. @range/clipmode both @ramp/drive scheduler @repetitions/allow 0 @description \"Center frequency (Hz)\" @dataspace pitch @dataspace/unit Hz @priority 2"
 				}
 
 			}
@@ -1119,7 +1119,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 192.25, 298.0, 391.75, 43.0 ],
-					"text" : "jcom.parameterArray filter.[6]/q @type decimal @ramp/drive scheduler @range/bounds 0. 100. @range/clipmode both @repetitions/allow 0 @description \"Resonance (Q)\" @priority 4 @value/default 2."
+					"text" : "j.parameterArray filter.[6]/q @type decimal @ramp/drive scheduler @range/bounds 0. 100. @range/clipmode both @repetitions/allow 0 @description \"Resonance (Q)\" @priority 4 @value/default 2."
 				}
 
 			}
@@ -1134,7 +1134,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 365.5, 134.0, 389.5, 43.0 ],
-					"text" : "jcom.parameterArray filter.[6]/type @type string @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf | resonant | allpass \" @priority 1"
+					"text" : "j.parameterArray filter.[6]/type @type string @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf | resonant | allpass \" @priority 1"
 				}
 
 			}
@@ -1164,7 +1164,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 192.25, 38.0, 505.0, 31.0 ],
-					"text" : "jcom.parameter bands @type integer @priority -1 @description \"Number of bands of the filter\" @tag setup @repetitions/allow 0 @range/clipmode both @value/default #2 @range/bounds 1 24",
+					"text" : "j.parameter bands @type integer @priority -1 @description \"Number of bands of the filter\" @tag setup @repetitions/allow 0 @range/clipmode both @value/default #2 @range/bounds 1 24",
 					"varname" : "bands[1]"
 				}
 
@@ -1180,7 +1180,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 372.25, 365.0, 303.0, 31.0 ],
-					"text" : "jcom.message filtergraph @description \"Messages to filtergraph. See the MSP reference for further details\""
+					"text" : "j.message filtergraph @description \"Messages to filtergraph. See the MSP reference for further details\""
 				}
 
 			}
@@ -1214,7 +1214,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 104.0, 622.0, 73.0, 19.0 ],
-					"text" : "jcom.out~ 2"
+					"text" : "j.out~ 2"
 				}
 
 			}
@@ -1228,7 +1228,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 104.0, 556.0, 66.0, 19.0 ],
-					"text" : "jcom.in~ 2"
+					"text" : "j.in~ 2"
 				}
 
 			}
@@ -1242,7 +1242,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 23.0, 164.0, 70.0, 19.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -1256,7 +1256,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 23.0, 622.0, 73.0, 19.0 ],
-					"text" : "jcom.out~ 1"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -1270,7 +1270,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 23.0, 556.0, 66.0, 19.0 ],
-					"text" : "jcom.in~ 1"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -1284,7 +1284,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 23.0, 62.0, 69.0, 19.0 ],
-					"text" : "jcom.model"
+					"text" : "j.model"
 				}
 
 			}
@@ -1778,35 +1778,35 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jcom.model.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.in~.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.out~.mxo",
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.preset.mxo",
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.message.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameter.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.parameterArray.mxo",
+				"name" : "j.parameterArray.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jcom.map.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
  ]

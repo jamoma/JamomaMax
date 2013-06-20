@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
@@ -103,7 +103,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 333.0, 36.0, 70.0, 19.0 ],
-					"text" : "jcom.preset"
+					"text" : "j.preset"
 				}
 
 			}
@@ -130,9 +130,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "bang", "bang" ],
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 317.0, 191.0, 55.0, 20.0 ],
-					"text" : "jcom.init"
+					"text" : "j.init"
 				}
 
 			}
@@ -147,8 +147,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 6.0, 36.0, 315.0, 19.0 ],
-					"text" : "jcom.model @description \"Output information from mouse\"",
-					"varname" : "jcom.model"
+					"text" : "j.model @description \"Output information from mouse\"",
+					"varname" : "j.model"
 				}
 
 			}
@@ -291,7 +291,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -561,7 +561,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -860,7 +860,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 272.0, 320.0, 349.0, 31.0 ],
-					"text" : "jcom.return delta/angle @type decimal @range/bounds -3.14 3.14 @description \"Angle (in radians) of relative position of mouse.\""
+					"text" : "j.return delta/angle @type decimal @range/bounds -3.14 3.14 @description \"Angle (in radians) of relative position of mouse.\""
 				}
 
 			}
@@ -904,7 +904,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 235.0, 355.0, 486.0, 31.0 ],
-					"text" : "jcom.return delta/magnitude @type decimal @range/bounds 0. 0.4 @description \"Mangitude (in screen percentage) of relative position of mouse (sum of horizontal and vertical).\""
+					"text" : "j.return delta/magnitude @type decimal @range/bounds 0. 0.4 @description \"Mangitude (in screen percentage) of relative position of mouse (sum of horizontal and vertical).\""
 				}
 
 			}
@@ -920,7 +920,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 317.0, 285.0, 289.0, 31.0 ],
-					"text" : "jcom.return delta/y @type decimal @range/bounds -0.2 0.2 @description \"Vertical delta position of mouse\""
+					"text" : "j.return delta/y @type decimal @range/bounds -0.2 0.2 @description \"Vertical delta position of mouse\""
 				}
 
 			}
@@ -936,7 +936,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 220.0, 391.0, 303.0, 31.0 ],
-					"text" : "jcom.return delta/x @type decimal @range/bounds -0.2 0.2 @description \"Horizontal delta position of mouse\""
+					"text" : "j.return delta/x @type decimal @range/bounds -0.2 0.2 @description \"Horizontal delta position of mouse\""
 				}
 
 			}
@@ -952,7 +952,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 221.0, 465.0, 293.0, 31.0 ],
-					"text" : "jcom.return position/y @type decimal @range/bounds 0. 1. @description \"Vertical position of mouse\""
+					"text" : "j.return position/y @type decimal @range/bounds 0. 1. @description \"Vertical position of mouse\""
 				}
 
 			}
@@ -968,7 +968,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 121.0, 502.0, 293.0, 31.0 ],
-					"text" : "jcom.return position/x @type decimal @range/bounds 0. 1. @description \"Horizontal position of mouse\""
+					"text" : "j.return position/x @type decimal @range/bounds 0. 1. @description \"Horizontal position of mouse\""
 				}
 
 			}
@@ -993,12 +993,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-31",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 72.0, 541.0, 437.0, 19.0 ],
-					"text" : "jcom.return button @type boolean @range/bounds 0 1 @description \"Mouse button\""
+					"patching_rect" : [ 72.0, 541.0, 261.0, 31.0 ],
+					"text" : "j.return button @type toggle @range/bounds 0 1 @description \"Mouse button\""
 				}
 
 			}
@@ -1013,7 +1014,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 72.0, 100.0, 658.0, 19.0 ],
-					"text" : "jcom.parameter reference @type string @range/clipmode none @description \"Choose reference mode\" @value/default screen",
+					"text" : "j.parameter reference @type string @range/clipmode none @description \"Choose reference mode\" @value/default screen",
 					"varname" : "reference"
 				}
 
@@ -1029,7 +1030,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 163.0, 122.0, 374.0, 19.0 ],
-					"text" : "jcom.parameter active @type boolean @description \"Turn polling on\"",
+					"text" : "j.parameter active @type boolean @description \"Turn polling on\"",
 					"varname" : "mouse_on[1]"
 				}
 
@@ -1378,27 +1379,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "jcom.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jcom.preset.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
