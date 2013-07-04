@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 427.0, 148.0, 751.0, 698.0 ],
+		"rect" : [ 15.0, 86.0, 751.0, 698.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -1397,10 +1397,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 49.0, 48.0, 264.0, 33.0 ],
+									"patching_rect" : [ 49.0, 48.0, 267.0, 33.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ 17.0, 17.0, 264.0, 33.0 ],
+									"presentation_rect" : [ 17.0, 17.0, 267.0, 33.0 ],
 									"text" : "The j.cue can bind on a namespace handle by a j.namespace to manage cue content. "
 								}
 
@@ -2008,6 +2008,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -3136,7 +3137,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 10.0, 10.0, 197.070312, 53.625 ]
+					"patching_rect" : [ 10.0, 10.0, 106.390625, 53.625 ]
 				}
 
 			}
@@ -3176,7 +3177,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 427.0, 174.0, 751.0, 672.0 ],
+						"rect" : [ 15.0, 112.0, 751.0, 672.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4423,6 +4424,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "j.meter_receive.maxpat",
+				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/meter_receive",
+				"patcherrelativepath" : "../patchers/components/meter_receive",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "degrade~.model.maxpat",
 				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
@@ -4456,6 +4464,14 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
@@ -4477,10 +4493,6 @@
 			}
 , 			{
 				"name" : "j.preset.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
