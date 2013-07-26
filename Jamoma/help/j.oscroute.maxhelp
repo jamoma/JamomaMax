@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 402.0, 80.0, 991.0, 580.0 ],
+		"rect" : [ 540.0, 246.0, 991.0, 580.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -612,7 +612,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 402.0, 106.0, 991.0, 554.0 ],
+						"rect" : [ 540.0, 272.0, 991.0, 554.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -953,8 +953,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 183.0, 311.0, 70.0, 18.0 ],
-									"text" : "potato 7.8"
+									"patching_rect" : [ 183.0, 311.0, 70.0, 18.0 ]
 								}
 
 							}
@@ -1179,7 +1178,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 696.0, 290.0, 136.0, 93.0 ],
+									"patching_rect" : [ 696.0, 290.0, 138.0, 93.0 ],
 									"text" : "You can route according to namespace and one or more subspaces in one go:"
 								}
 
@@ -1575,7 +1574,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 757.0, 166.0, 558.0, 561.0 ],
+						"rect" : [ 0.0, 26.0, 991.0, 554.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -1595,7 +1594,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -1752,7 +1750,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 25.0, 310.0, 360.0, 20.0 ],
+									"patching_rect" : [ 25.0, 310.0, 362.0, 20.0 ],
 									"text" : "we recommand to treat this kind of situation in a hierarchical way : "
 								}
 
@@ -1871,7 +1869,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 60.0, 95.0, 397.0, 33.0 ],
+									"patching_rect" : [ 60.0, 95.0, 399.0, 33.0 ],
 									"text" : "-> for example : having a node and a subnode in the same object causes the result to be processed on the first (lef-to-right) item of the object"
 								}
 
@@ -2032,7 +2030,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 367.0, 460.0, 627.0, 274.0 ],
+						"rect" : [ 0.0, 26.0, 991.0, 554.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -2052,7 +2050,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -2106,8 +2103,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 436.5, 332.0, 80.0, 18.0 ],
-									"text" : "/finger 0.2"
+									"patching_rect" : [ 436.5, 332.0, 80.0, 18.0 ]
 								}
 
 							}
@@ -2120,8 +2116,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 356.0, 332.0, 87.0, 18.0 ],
-									"text" : "/param 0.1"
+									"patching_rect" : [ 356.0, 332.0, 87.0, 18.0 ]
 								}
 
 							}
@@ -2134,8 +2129,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 283.0, 332.0, 50.5, 18.0 ],
-									"text" : "0.5"
+									"patching_rect" : [ 283.0, 332.0, 50.5, 18.0 ]
 								}
 
 							}
@@ -2148,8 +2142,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 173.0, 332.0, 87.0, 18.0 ],
-									"text" : "0.5"
+									"patching_rect" : [ 173.0, 332.0, 87.0, 18.0 ]
 								}
 
 							}

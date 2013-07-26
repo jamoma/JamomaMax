@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.overdrive~" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Overdrive an audio signal
 	</digest>
 	<description>
-		TEXT_HERE
+		Overdrive an audio signal
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -39,7 +39,7 @@
 		</inlet>
 		<inlet id="2" type="INLET_TYPE">
 			<digest>
-				control signal for &amp;quot;drive&amp;quot;
+				Control signal for drive
 			</digest>
 			<description>
 				TEXT_HERE
@@ -231,8 +231,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.array~">
+		<seealso name="jamoma~">
+		<seealso name="overdrive~"
 	</seealsolist>
 </c74object>

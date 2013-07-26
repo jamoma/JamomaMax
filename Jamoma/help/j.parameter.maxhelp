@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ -4.0, 44.0, 1138.0, 941.0 ],
+		"rect" : [ 377.0, 53.0, 1135.0, 832.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1138.0, 915.0 ],
+						"rect" : [ 0.0, 26.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -301,7 +301,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1138.0, 915.0 ],
+						"rect" : [ 0.0, 26.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -360,7 +360,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1138.0, 915.0 ],
+						"rect" : [ 0.0, 26.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -387,7 +387,7 @@
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-15",
-									"linecount" : 10,
+									"linecount" : 9,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
@@ -831,7 +831,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ -4.0, 70.0, 1138.0, 915.0 ],
+						"rect" : [ 377.0, 79.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1087,7 +1087,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 45.0, 347.0, 198.0, 43.0 ],
+									"patching_rect" : [ 45.0, 347.0, 188.0, 43.0 ],
 									"text" : "j.parameter frequency @description \"the frequency value of my patch\"",
 									"varname" : "my_float[1]"
 								}
@@ -1126,7 +1126,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 256.5, 334.0, 178.0, 113.0 ],
+									"patching_rect" : [ 256.5, 334.0, 180.0, 113.0 ],
 									"text" : "In the very simple example below, a parameter called \"frequency\" is set so it can be stored in presets, accessed from other patches, etc."
 								}
 
@@ -1141,7 +1141,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 45.0, 176.5, 391.0, 94.0 ],
+									"patching_rect" : [ 45.0, 176.5, 395.0, 94.0 ],
 									"text" : "The j.parameter is a core component of the Jamoma library. It allows Max programmers to declare a parameter within a patch in order store its value, remotely access it, etc. In this regard, j.parameter is somewhat similar to Max' pattr although providing number of features embeded in the Jamoma framework."
 								}
 
@@ -1305,7 +1305,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1138.0, 915.0 ],
+						"rect" : [ 0.0, 26.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1617,7 +1617,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1138.0, 915.0 ],
+						"rect" : [ 0.0, 26.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
