@@ -7,34 +7,9 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "maxAudioGraph.h"
 
-// Data Structure for this object
-struct Pack {
-    t_pxobject				obj;
-	TTAudioGraphObjectPtr	audioGraphObject;
-	TTPtr					audioGraphObjectOutlet;
-	TTUInt32				maxNumChannels;			// the number of inlets or outlets, which is an argument at instantiation
-	TTUInt32				numChannels;			// the actual number of channels to use, set by the dsp method
-	TTUInt32				vectorSize;				// cached by the DSP method
-};
-typedef Pack* PackPtr;
+#include "j.pack.h"
 
-
-// Prototypes for methods
-PackPtr	PackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void	PackFree(PackPtr self);
-void	PackAssist(PackPtr self, void* b, long msg, long arg, char* dst);
-TTErr	PackReset(PackPtr self, long vectorSize);
-TTErr	PackSetup(PackPtr self);
-TTErr	PackObject(PackPtr self, TTAudioGraphObjectPtr audioSourceObject);
-t_int*	PackPerform(t_int* w);
-void	PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags);
-//MaxErr	PackSetGain(PackPtr self, void* attr, AtomCount argc, AtomPtr argv);
-
-
-// Globals
-static ClassPtr sInClass;
 
 
 /************************************************************************************/
@@ -81,15 +56,17 @@ PackPtr PackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		if (attrstart && argv)
 			self->maxNumChannels = atom_getlong(argv);
 		
+		// Set the sample rate of the Jamoma AudioGraph environment
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
-
+		
+		// Create an embedded Jamoma AudioGraph object functioning as a signal generator.
 		v.resize(3);
 		v.set(0, TT("audio.generator"));
 		v.set(1, 0); // no audio graph inlets (only msp inlets)
 		v.set(2, 1); // one audio graph outlet
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 		self->audioGraphObject->addAudioFlag(kTTAudioGraphGenerator);
-
+		// Self check and return error if this did not work out.
 		if (!self->audioGraphObject->getUnitGenerator()) {
 			object_error(SELF, "cannot load audio.generator");
 			return NULL;
@@ -97,10 +74,16 @@ PackPtr PackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 
 		attr_args_process(self, argc, argv);
 		
+		// Create rightmost outlet for dumping attributes etc.
     	object_obex_store((void*)self, _sym_dumpout, (object*)outlet_new(self,NULL));
+		
+		// Create AudioGraph outlet
 		self->audioGraphObjectOutlet = outlet_new((t_pxobject*)self, "audio.connect");
+		
+		// Register this object as a DSP object with MSP
 	    dsp_setup((t_pxobject*)self, self->maxNumChannels);
 		
+		// Set flags necsessary to ensure correct interaction with the MSP processing chain.
 		self->obj.z_misc = Z_NO_INPLACE | Z_PUT_FIRST;
 	}
 	return self;
@@ -110,6 +93,7 @@ PackPtr PackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void PackFree(PackPtr self)
 {
 	dsp_free((t_pxobject*)self);
+	// Release the AudioGraph object.
 	TTObjectBaseRelease((TTObjectBasePtr*)&self->audioGraphObject);
 }
 
@@ -158,6 +142,7 @@ void PackPerform64(PackPtr self, ObjectPtr dsp64, double **ins, long numins, dou
 
 void PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
+	// Find the rightmost inlet that an audio signal is connected to.
 	TTUInt16	highestIndexForConnectedSignal = 0;
 	
 	self->vectorSize = maxvectorsize;
