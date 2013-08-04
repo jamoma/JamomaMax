@@ -1,25 +1,33 @@
-/* 
- *	in≈
- *	External object for Max/MSP to Provide a source for TTAudioSignals usable by a Jamoma AudioGraph dsp chain.
- *	Copyright © 2008 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMax
+ *
+ * @brief Max external packing several MSP audio signals onto one AudioGraph multichannel audio signal.
+ *
+ * @details This object functions as a source (generator) for #TTAudioSignal usable by a Jamoma AudioGraph dsp chain.
+ *
+ * @authors Tim Place, Trond Lossius, Nils Peters
+ *
+ * @copyright Copyright © 2008 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
 
+
 #include "maxAudioGraph.h"
 
-/** Data Structure for the j.in≈ Max object.
+/** Data Structure for the j.pack≈ Max object.
  */
 struct Pack {
     t_pxobject				obj;					///< Pointer to Max object struct, this alwasy needs to be the first member of the struct.
 	TTAudioGraphObjectPtr	audioGraphObject;		///< Pointer to an embedded Jamoma AudioGraph object serving as a generator for the downstream AudioGraph.
 	TTPtr					audioGraphObjectOutlet; ///< Pointer to an embedded Jamoma AudioGraph outlet used to interface sith downstream AudioGraph objects.
-	TTUInt32				maxNumChannels;			///< The maximum number of MSP audio channels this object can pack onto an AudioGraph signal, set by an argument at object instantiation time.
+	TTUInt32				maxNumChannels;			///< The maximum number of MSP audio channels this object can pack onto an AudioGraph signal, set as an argument at object instantiation time.
 	TTUInt32				numChannels;			///< The actual number of channels to use. This is set by the #PackDsp64 method when the MSP processing chain is being compiled, based on what inlets of j.pack≈ that have incoming MSP audio signals connected.
 	TTUInt32				vectorSize;				///< The size of audio vectors to process, cached by the DSP method.
 };
-typedef Pack* PackPtr;
+
+typedef Pack* PackPtr;								///< Pointer to a j.pack≈ instance.
 
 
 // Prototypes for methods
@@ -57,30 +65,36 @@ void	PackAssist(PackPtr self, void* b, long msg, long arg, char* dst);
 
 /** Reset audio for this object.
  @param self				Pointer to this instance of j.in≈.
+ @param vectorSize			Not used currently.
  */
 TTErr	PackReset(PackPtr self, long vectorSize);
 
 
-/**
+/** This method is used internally by AudioGraph when configuring itself.
  @param self				Pointer to this instance of j.in≈.
  */
 TTErr	PackSetup(PackPtr self);
 
 
-/**
+/** TODO: Do this method exist at all? It is lacking from j.pack.cpp...
  @param self				Pointer to this instance of j.in≈.
  */
 TTErr	PackObject(PackPtr self, TTAudioGraphObjectPtr audioSourceObject);
 
 
-/**
+/** Performs the actual DSP processing on incomming MSP audio signals, packing them into a multichannel source for AudioGraph.
  @param self				Pointer to this instance of j.in≈.
  */
 t_int*	PackPerform(t_int* w);
 
 
-/** Process audio vectors as 64-bit floating point values.
+/** Called when MSP is compiling the DSP chain, used to set up audio processing.
  @param self				Pointer to this instance of j.in≈.
+ @param dsp64
+ @param count
+ @param samplerate
+ @param maxvectorsize
+ @param flags
  */
 void	PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags);
 //MaxErr	PackSetGain(PackPtr self, void* attr, AtomCount argc, AtomPtr argv);
