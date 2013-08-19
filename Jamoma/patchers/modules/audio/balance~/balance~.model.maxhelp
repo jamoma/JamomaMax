@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 443.0, 44.0, 733.0, 676.0 ],
+		"rect" : [ 443.0, 44.0, 485.0, 649.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -530,7 +530,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 511.0, 293.5, 143.0, 20.0 ],
+					"patching_rect" : [ 46.0, 190.0, 143.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -558,7 +558,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 46.0, 371.0, 182.0, 18.0 ],
-					"text" : "out.1/gain 115."
+					"text" : "position 0."
 				}
 
 			}
@@ -780,6 +780,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.stats.mxo",
 				"type" : "iLaX"
 			}
@@ -793,10 +797,6 @@
 			}
 , 			{
 				"name" : "j.in~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -828,6 +828,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
@@ -841,10 +845,6 @@
 			}
 , 			{
 				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
  ]
