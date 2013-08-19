@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 133.0, 318.0, 1056.0, 608.0 ],
+		"rect" : [ 603.0, 263.0, 492.0, 256.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -34,9 +34,9 @@
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 450.0, 107.0, 164.0, 20.0 ],
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "", "" ],
+					"patching_rect" : [ 339.0, 66.0, 92.0, 20.0 ],
 					"text" : "j.receive~ out.2"
 				}
 
@@ -48,38 +48,10 @@
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 450.0, 55.0, 164.0, 20.0 ],
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "", "" ],
+					"patching_rect" : [ 339.0, 14.0, 92.0, 20.0 ],
 					"text" : "j.receive~ out.1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-25",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 195.0, 112.0, 150.0, 18.0 ],
-					"text" : "/documentation/generate"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-48",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 145.0, 87.0, 205.0, 18.0 ],
-					"text" : "/preset/store 1 default, /preset/write"
 				}
 
 			}
@@ -91,7 +63,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 450.0, 135.0, 80.0, 4.0 ],
+					"patching_rect" : [ 339.0, 94.0, 80.0, 4.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 152.0, 10.0, 80.0, 4.0 ]
 				}
@@ -105,7 +77,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 450.0, 83.0, 80.0, 4.0 ],
+					"patching_rect" : [ 339.0, 42.0, 80.0, 4.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 152.0, 5.0, 80.0, 4.0 ]
 				}
@@ -120,7 +92,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 450.0, 315.0, 195.0, 20.0 ],
+					"patching_rect" : [ 123.5, 189.0, 195.0, 20.0 ],
 					"text" : "j.remote lowerSideband/active"
 				}
 
@@ -136,7 +108,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 450.0, 285.0, 100.0, 20.0 ],
+					"patching_rect" : [ 123.5, 159.0, 100.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 150.0, 45.0, 60.0, 20.0 ],
 					"text" : "Off",
@@ -202,7 +174,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 450.0, 185.0, 53.0, 20.0 ],
+					"patching_rect" : [ 123.5, 94.0, 53.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 150.0, 23.0, 63.0, 20.0 ]
 				}
@@ -217,7 +189,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 450.0, 210.0, 196.0, 20.0 ],
+					"patching_rect" : [ 123.5, 119.0, 196.0, 20.0 ],
 					"text" : "j.remote modulatingFrequency"
 				}
 
@@ -231,7 +203,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 236.5, 193.0, 64.0, 20.0 ],
+					"patching_rect" : [ 18.0, 152.0, 64.0, 20.0 ],
 					"text" : "j.view"
 				}
 
@@ -243,7 +215,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 35.0, 260.0, 25.0, 25.0 ]
+					"patching_rect" : [ 18.0, 184.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -255,67 +227,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 140.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-8",
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 199.0, 260.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-7",
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 117.0, 260.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-6",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 199.0, 140.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-3",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 117.0, 140.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 35.0, 193.0, 183.0, 20.0 ],
-					"text" : "hilbertModulator~.model #1"
+					"patching_rect" : [ 18.0, 107.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -328,26 +240,17 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/#1"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 2 ]
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -356,16 +259,7 @@
 					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-11", 0 ]
+					"source" : [ "obj-12", 0 ]
 				}
 
 			}
@@ -383,7 +277,7 @@
 					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 459.5, 262.0, 444.0, 262.0, 444.0, 176.0, 459.5, 176.0 ],
+					"midpoints" : [ 133.0, 146.0, 117.5, 146.0, 117.5, 85.0, 133.0, 85.0 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -420,17 +314,8 @@
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 459.5, 351.0, 445.0, 351.0, 445.0, 277.0, 459.5, 277.0 ],
+					"midpoints" : [ 133.0, 225.0, 118.5, 225.0, 118.5, 151.0, 133.0, 151.0 ],
 					"source" : [ "obj-24", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -452,45 +337,9 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 2 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-6", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "hilbertModulator~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/hilbertModulator~",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -503,6 +352,10 @@
 			}
 , 			{
 				"name" : "j.meter~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
  ]
