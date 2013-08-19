@@ -8,8 +8,8 @@
 
 /* Begin PBXFileReference section */
 		A738FF451637389600BD5C89 /* j.gain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.gain.cpp; sourceTree = "<group>"; };
-		A738FF46163738CE00BD5C89 /* MaxAudioGraph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MaxAudioGraph.cpp; path = ../MaxAudioGraph.cpp; sourceTree = "<group>"; };
-		A738FF47163738CE00BD5C89 /* MaxAudioGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MaxAudioGraph.h; path = ../MaxAudioGraph.h; sourceTree = "<group>"; };
+		A738FF46163738CE00BD5C89 /* MaxAudioGraph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MaxAudioGraph.cpp; path = ../classwrapper/MaxAudioGraph.cpp; sourceTree = "<group>"; };
+		A738FF47163738CE00BD5C89 /* MaxAudioGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MaxAudioGraph.h; path = ../classwrapper/MaxAudioGraph.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
