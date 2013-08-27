@@ -21,7 +21,7 @@ void ui_preset_store_next(t_ui *x)
 	if (result != 1)
 		return;
 	
-	ui_viewer_send(x, TTSymbol("preset/store"), TTSymbol(text));
+	ui_viewer_send(x, TTSymbol("preset:store"), TTSymbol(text));
 	
 	// TODO: do we not have to free text?
 }
@@ -40,7 +40,7 @@ void ui_preset_doread(t_ui *x)
 	path_topathname(path, filename, fullpath);
 	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
 	
-	ui_viewer_send(x, TTSymbol("preset/read"), TTSymbol(posixpath));
+	ui_viewer_send(x, TTSymbol("preset:read"), TTSymbol(posixpath));
 }
 
 void ui_preset_dowrite(t_ui *x)
@@ -88,7 +88,7 @@ void ui_preset_dowrite(t_ui *x)
 	path_topathname(path, filename, fullpath);
 	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
 	
-	ui_viewer_send(x, TTSymbol("preset/write"), TTSymbol(posixpath));
+	ui_viewer_send(x, TTSymbol("preset:write"), TTSymbol(posixpath));
 }
 
 void ui_return_preset_order(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)

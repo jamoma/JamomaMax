@@ -7,55 +7,7 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "TTModularClassWrapperMax.h"
-
-// This is used to store extra data
-typedef struct extra {
-	ObjectPtr			modelInternal;		// store an internal model patcher
-	TTAddress           modelAddress;		// store the /model/address parameter
-	TTBoolean			component;			// is the model a simple component ?
-    
-    TTString            *text;				// the text of the editor to read after edclose
-	ObjectPtr           textEditor;			// the text editor window
-} t_extra;
-#define EXTRA ((t_extra*)x->extra)
-
-#define data_out 0
-#define dump_out 1
-
-// Definitions
-void		WrapTTContainerClass(WrappedClassPtr c);
-void		WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
-void		WrappedContainerClass_free(TTPtr self);
-void		WrappedContainerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-void		model_assist(TTPtr self, void *b, long msg, long arg, char *dst);
-
-void		model_share_patcher_info(TTPtr self, TTValuePtr patcherInfo);
-void		model_share_patcher_node(TTPtr self, TTNodePtr *patcherNode);
-
-void		model_return_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-void		model_subscribe(TTPtr self);
-void		model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-void		model_init(TTPtr self);
-
-void		model_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-void		model_help(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_reference(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_open(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-//void		model_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);		// only in view patch
-
-void		model_autodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_doautodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-void		model_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_edclose(TTPtr self, char **text, long size);
-void		model_doedit(TTPtr self);
+#include "j.model.h"
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
@@ -88,10 +40,34 @@ void WrapTTContainerClass(WrappedClassPtr c)
 //	class_addmethod(c->maxClass, (method)model_mute,					"model_mute",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_address,					"model_address",		A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_autodoc,					"doc_generate",			A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_edit,					"model_edit",			A_CANT, 0);
+//    class_addmethod(c->maxClass, (method)model_edit,					"model_edit",			A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_edit,					"dblclick",				A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_edclose,                 "edclose",				A_CANT, 0);
+    //class_addmethod(c->maxClass, (method)model_edit,					"dblclick",				A_CANT, 0);
+    //class_addmethod(c->maxClass, (method)model_edclose,               "edclose",				A_CANT, 0);
+    
+    class_addmethod(c->maxClass, (method)model_preset_return_order,		"return_order",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_preset_filechanged,		"filechanged",			A_CANT, 0);
+	
+	class_addmethod(c->maxClass, (method)model_preset_read,				"preset_read",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_preset_write,			"preset_write",			A_CANT, 0);
+    
+    class_addmethod(c->maxClass, (method)model_preset_read_again,		"preset_read_again",	A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_preset_write_again,		"preset_write_again",	A_CANT, 0);
+	
+	class_addmethod(c->maxClass, (method)model_preset_edit,				"dblclick",				A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_preset_edclose,			"edclose",				A_CANT, 0);
+	
+	class_addmethod(c->maxClass, (method)model_preset_read,				"preset:read",			A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)model_preset_write,			"preset:write",			A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)model_preset_edit,				"preset:edit",			A_GIMME, 0);
+	
+	class_addmethod(c->maxClass, (method)model_preset_read_again,		"preset:read/again",	0);
+	class_addmethod(c->maxClass, (method)model_preset_write_again,		"preset:write/again",	0);
+	
+	CLASS_ATTR_LONG(c->maxClass,		"load_default",	0,		WrappedModularInstance,	extra);
+	CLASS_ATTR_DEFAULT(c->maxClass,		"load_default",	0,		"1")
+	CLASS_ATTR_ACCESSORS(c->maxClass,	"load_default",			model_preset_get_load_default,	model_preset_set_load_default);
+	CLASS_ATTR_STYLE(c->maxClass,		"load_default",	0,		"onoff");
 }
 
 void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
@@ -125,6 +101,11 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	EXTRA->modelAddress = kTTAdrsEmpty;
     EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
+    EXTRA->presetManager = NULL;
+    EXTRA->attr_load_default = true;
+	EXTRA->filewatcher = NULL;
+	EXTRA->toEdit = x->wrappedObject;
+	EXTRA->presetName = kTTSymEmpty;
 	
 	// read first argument to know if the model is a component
 	if (attrstart && argv) {
@@ -133,6 +114,9 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 		else
 			object_error((ObjectPtr)x, "%s is not expected as argument", atom_getsym(argv)->s_name);
 	}
+    
+    // create the preset manager
+	jamoma_presetManager_create((ObjectPtr)x, &EXTRA->presetManager);
 	
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
@@ -143,6 +127,16 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 void WrappedContainerClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    // delete the preset manager
+    TTObjectBaseRelease(&EXTRA->presetManager);
+    
+    // delete filewatcher
+	if (EXTRA->filewatcher) {
+		filewatcher_stop(EXTRA->filewatcher);
+		object_free(EXTRA->filewatcher);
+	}
+    
 	free(EXTRA);
 }
 
@@ -250,6 +244,10 @@ void model_subscribe(TTPtr self)
                 // for model state management :
                 if (x->patcherContext == kTTSym_model) {
                     
+                    // subscribe preset manager object
+                    model_preset_subscribe(self, returnedAddress);
+                    
+                    /*
                     // Add a /model/edit data
                     makeInternals_data(x, returnedAddress, editAdrs, gensym("model_edit"), context, kTTSym_message, &aData);
                     aData->setAttributeValue(kTTSym_type, kTTSym_none);
@@ -265,6 +263,7 @@ void model_subscribe(TTPtr self)
                     aPreset->setAttributeValue(kTTSym_address, v);
                     v = TTValue(TTSymbol("state"));
                     aPreset->setAttributeValue(kTTSym_name, v);
+                     */
                 }
 			}
 			
@@ -580,7 +579,7 @@ void model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		}
 	}
 }
-
+/*
 void model_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -683,3 +682,4 @@ void model_doedit(TTPtr self)
 	EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
 }
+*/
