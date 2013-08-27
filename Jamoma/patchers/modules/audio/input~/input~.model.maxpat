@@ -751,7 +751,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 475.0, 163.0, 33.0, 17.0 ],
+													"patching_rect" : [ 475.0, 163.0, 33.0, 18.0 ],
 													"text" : "0 10"
 												}
 
@@ -761,12 +761,11 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-2",
-													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "bang", "" ],
-													"patching_rect" : [ 410.0, 140.0, 32.0, 19.0 ],
+													"patching_rect" : [ 410.0, 140.0, 36.0, 20.0 ],
 													"text" : "sel 1"
 												}
 
@@ -780,7 +779,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "signal" ],
-													"patching_rect" : [ 319.0, 270.0, 27.0, 19.0 ],
+													"patching_rect" : [ 319.0, 270.0, 27.0, 20.0 ],
 													"text" : "*~"
 												}
 
@@ -794,7 +793,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "signal" ],
-													"patching_rect" : [ 284.0, 270.0, 27.0, 19.0 ],
+													"patching_rect" : [ 284.0, 270.0, 27.0, 20.0 ],
 													"text" : "*~"
 												}
 
@@ -808,7 +807,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 410.0, 163.0, 45.0, 17.0 ],
+													"patching_rect" : [ 410.0, 163.0, 45.0, 18.0 ],
 													"text" : "0, 1 10"
 												}
 
@@ -822,7 +821,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "signal", "bang" ],
-													"patching_rect" : [ 410.0, 189.0, 34.0, 19.0 ],
+													"patching_rect" : [ 410.0, 189.0, 34.0, 20.0 ],
 													"text" : "line~"
 												}
 
@@ -832,12 +831,11 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-7",
-													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 4,
 													"outlettype" : [ "int", "float", "int", "int" ],
-													"patching_rect" : [ 410.0, 112.0, 59.0, 19.0 ],
+													"patching_rect" : [ 410.0, 112.0, 63.0, 20.0 ],
 													"text" : "dspstate~"
 												}
 
@@ -848,11 +846,10 @@
 													"fontsize" : 12.0,
 													"frgb" : 0.0,
 													"id" : "obj-8",
-													"linecount" : 2,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 40.0, 350.0, 231.0, 19.0 ],
+													"patching_rect" : [ 40.0, 350.0, 246.0, 20.0 ],
 													"text" : "NOTE: This fade is not displayed in the GUI."
 												}
 
@@ -863,11 +860,10 @@
 													"fontsize" : 12.0,
 													"frgb" : 0.0,
 													"id" : "obj-9",
-													"linecount" : 2,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 40.0, 35.0, 162.0, 19.0 ],
+													"patching_rect" : [ 40.0, 35.0, 172.0, 20.0 ],
 													"text" : "Quick fade in when audio start"
 												}
 
@@ -927,7 +923,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 475.0, 112.0, 88.0, 19.0 ],
+													"patching_rect" : [ 475.0, 112.0, 70.0, 20.0 ],
 													"text" : "r j.audio.off"
 												}
 
@@ -938,11 +934,10 @@
 													"fontsize" : 12.0,
 													"frgb" : 0.0,
 													"id" : "obj-15",
-													"linecount" : 2,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 40.0, 15.0, 168.0, 19.0 ],
+													"patching_rect" : [ 40.0, 15.0, 179.0, 20.0 ],
 													"text" : "Quick fade out when audio stop"
 												}
 
@@ -953,11 +948,10 @@
 													"fontsize" : 12.0,
 													"frgb" : 0.0,
 													"id" : "obj-16",
-													"linecount" : 2,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 40.0, 55.0, 281.0, 19.0 ],
+													"patching_rect" : [ 40.0, 55.0, 287.0, 20.0 ],
 													"text" : "line~ is able to handle this. gain~ and matrix~ is not."
 												}
 
@@ -1244,21 +1238,6 @@
 												"box" : 												{
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
-													"frgb" : 0.0,
-													"id" : "obj-1",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 125.0, 145.0, 276.0, 20.0 ],
-													"text" : "<- this one should be  removed once #298 is fixed",
-													"textcolor" : [ 0.658824, 0.084918, 0.0, 1.0 ]
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
 													"id" : "obj-47",
 													"linecount" : 4,
 													"maxclass" : "newobj",
@@ -1283,20 +1262,6 @@
 													"patching_rect" : [ 50.0, 7.0, 320.0, 60.0 ],
 													"text" : "j.parameter audio/gain @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"master gain\"",
 													"varname" : "j.parameter.gain"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-22",
-													"maxclass" : "flonum",
-													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "float", "bang" ],
-													"parameter_enable" : 0,
-													"patching_rect" : [ 50.0, 145.0, 50.0, 20.0 ]
 												}
 
 											}
@@ -1618,15 +1583,6 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-3", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-22", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
 													"destination" : [ "obj-6", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
@@ -1708,7 +1664,7 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-22", 0 ],
+													"destination" : [ "obj-3", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-48", 0 ]
@@ -1859,8 +1815,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "int" ],
 													"parameter_enable" : 0,
-													"patching_rect" : [ 579.0, 186.0, 20.0, 20.0 ],
-													"presentation_rect" : [ 579.0, 186.0, 0.0, 0.0 ]
+													"patching_rect" : [ 579.0, 186.0, 20.0, 20.0 ]
 												}
 
 											}
@@ -1872,8 +1827,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "int" ],
 													"parameter_enable" : 0,
-													"patching_rect" : [ 225.0, 145.0, 20.0, 20.0 ],
-													"presentation_rect" : [ 230.0, 149.0, 0.0, 0.0 ]
+													"patching_rect" : [ 225.0, 145.0, 20.0, 20.0 ]
 												}
 
 											}
@@ -1969,7 +1923,7 @@
 															"architecture" : "x86"
 														}
 ,
-														"rect" : [ 50.0, 94.0, 406.0, 397.0 ],
+														"rect" : [ 50.0, 94.0, 410.0, 328.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -1989,35 +1943,6 @@
 														"digest" : "",
 														"tags" : "",
 														"boxes" : [ 															{
-																"box" : 																{
-																	"fontname" : "Arial",
-																	"fontsize" : 12.0,
-																	"frgb" : 0.0,
-																	"id" : "obj-20",
-																	"maxclass" : "comment",
-																	"numinlets" : 1,
-																	"numoutlets" : 0,
-																	"patching_rect" : [ 97.0, 159.0, 276.0, 20.0 ],
-																	"text" : "<- this one should be  removed once #298 is fixed",
-																	"textcolor" : [ 0.658824, 0.084918, 0.0, 1.0 ]
-																}
-
-															}
-, 															{
-																"box" : 																{
-																	"fontname" : "Arial",
-																	"fontsize" : 12.0,
-																	"id" : "obj-1",
-																	"maxclass" : "newobj",
-																	"numinlets" : 2,
-																	"numoutlets" : 1,
-																	"outlettype" : [ "float" ],
-																	"patching_rect" : [ 50.0, 159.0, 32.5, 20.0 ],
-																	"text" : "f"
-																}
-
-															}
-, 															{
 																"box" : 																{
 																	"fontname" : "Arial",
 																	"fontsize" : 12.0,
@@ -2041,7 +1966,7 @@
 																	"numinlets" : 2,
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
-																	"patching_rect" : [ 50.0, 257.0, 39.0, 18.0 ],
+																	"patching_rect" : [ 50.0, 207.0, 39.0, 18.0 ],
 																	"text" : "$1 20"
 																}
 
@@ -2055,7 +1980,7 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
-																	"patching_rect" : [ 50.0, 229.0, 100.0, 20.0 ],
+																	"patching_rect" : [ 50.0, 179.0, 100.0, 20.0 ],
 																	"text" : "if $f1>0. then $f1"
 																}
 
@@ -2069,7 +1994,7 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
-																	"patching_rect" : [ 50.0, 194.0, 323.0, 20.0 ],
+																	"patching_rect" : [ 50.0, 144.0, 323.0, 20.0 ],
 																	"text" : "j.dataspace @dataspace time @input midi @output speed"
 																}
 
@@ -2083,7 +2008,7 @@
 																	"numinlets" : 2,
 																	"numoutlets" : 2,
 																	"outlettype" : [ "signal", "bang" ],
-																	"patching_rect" : [ 50.0, 287.0, 36.0, 20.0 ],
+																	"patching_rect" : [ 50.0, 237.0, 36.0, 20.0 ],
 																	"text" : "line~"
 																}
 
@@ -2095,21 +2020,12 @@
 																	"maxclass" : "outlet",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 50.0, 328.0, 25.0, 25.0 ]
+																	"patching_rect" : [ 50.0, 278.0, 25.0, 25.0 ]
 																}
 
 															}
  ],
 														"lines" : [ 															{
-																"patchline" : 																{
-																	"destination" : [ "obj-27", 0 ],
-																	"disabled" : 0,
-																	"hidden" : 0,
-																	"source" : [ "obj-1", 0 ]
-																}
-
-															}
-, 															{
 																"patchline" : 																{
 																	"destination" : [ "obj-36", 0 ],
 																	"disabled" : 0,
@@ -2147,7 +2063,7 @@
 															}
 , 															{
 																"patchline" : 																{
-																	"destination" : [ "obj-1", 0 ],
+																	"destination" : [ "obj-27", 0 ],
 																	"disabled" : 0,
 																	"hidden" : 0,
 																	"source" : [ "obj-43", 0 ]
@@ -2663,7 +2579,6 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-10",
-													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
@@ -2701,7 +2616,7 @@
 																	"fontname" : "Arial",
 																	"fontsize" : 12.0,
 																	"id" : "obj-2",
-																	"linecount" : 3,
+																	"linecount" : 2,
 																	"maxclass" : "newobj",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
@@ -2715,7 +2630,7 @@
 																	"fontname" : "Arial",
 																	"fontsize" : 12.0,
 																	"id" : "obj-3",
-																	"linecount" : 3,
+																	"linecount" : 2,
 																	"maxclass" : "newobj",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
@@ -2927,7 +2842,7 @@
  ]
 													}
 ,
-													"patching_rect" : [ 10.0, 162.0, 101.0, 33.0 ],
+													"patching_rect" : [ 10.0, 162.0, 108.0, 20.0 ],
 													"saved_object_attributes" : 													{
 														"default_fontface" : 0,
 														"default_fontname" : "Arial",
@@ -3794,12 +3709,11 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-4",
-													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "signal" ],
-													"patching_rect" : [ 136.5, 84.0, 71.0, 33.0 ],
+													"patching_rect" : [ 136.5, 84.0, 75.0, 20.0 ],
 													"text" : "cycle~ 1000"
 												}
 
@@ -3919,7 +3833,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "signal" ],
-													"patching_rect" : [ 50.0, 110.0, 41.0, 19.0 ],
+													"patching_rect" : [ 50.0, 110.0, 41.0, 20.0 ],
 													"text" : "pass~"
 												}
 
@@ -3945,7 +3859,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "signal" ],
-													"patching_rect" : [ 50.0, 75.0, 38.0, 19.0 ],
+													"patching_rect" : [ 50.0, 75.0, 38.0, 20.0 ],
 													"text" : "pink~"
 												}
 
@@ -4570,6 +4484,46 @@
 					"source" : [ "obj-91", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.audioOnOff.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/audioOnOff",
+				"patcherrelativepath" : "../../../components/audioOnOff",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.dataspace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscroute.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
