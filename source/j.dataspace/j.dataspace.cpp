@@ -62,8 +62,8 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	c = class_new("j.dataspace",(method)dataspace_new, (method)dataspace_free, sizeof(t_dataspace), (method)0L, A_GIMME, 0);
 	
 	// Make methods accessible for our class:
-	class_addmethod(c, (method)dataspace_int,			"int",				A_GIMME, 0);
-	class_addmethod(c, (method)dataspace_float,			"float",			A_GIMME, 0);
+	class_addmethod(c, (method)dataspace_int,			"int",				A_LONG, 0);
+	class_addmethod(c, (method)dataspace_float,			"float",			A_FLOAT, 0);
 	class_addmethod(c, (method)dataspace_list,			"list",				A_GIMME, 0);
 	class_addmethod(c, (method)dataspace_getDataspaces,	"dataspaces.get",	0);
  	class_addmethod(c, (method)dataspace_getUnits,		"units.get",		A_GIMME, 0);
