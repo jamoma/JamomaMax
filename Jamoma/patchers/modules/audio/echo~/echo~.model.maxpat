@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 2,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 321.0, 52.0, 1537.0, 956.0 ],
+		"rect" : [ 143.0, 52.0, 1537.0, 956.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -35,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 531.0, 79.0, 71.0, 20.0 ],
+					"patching_rect" : [ 531.0, 79.0, 71.0, 19.0 ],
 					"text" : "j.in~ 2"
 				}
 
@@ -49,22 +50,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 430.5, 820.0, 79.0, 20.0 ],
+					"patching_rect" : [ 430.5, 820.0, 79.0, 19.0 ],
 					"text" : "j.out~ 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 11.0,
-					"id" : "obj-6",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 137.0, 398.0, 82.0, 20.0 ],
-					"text" : "j.preset"
 				}
 
 			}
@@ -77,7 +64,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 330.0, 820.0, 79.0, 20.0 ],
+					"patching_rect" : [ 330.0, 820.0, 79.0, 19.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -114,7 +101,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 329.0, 79.0, 71.0, 20.0 ],
+					"patching_rect" : [ 329.0, 79.0, 71.0, 19.0 ],
 					"text" : "j.in~ 1"
 				}
 
@@ -129,7 +116,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 58.0, 352.5, 161.0, 33.0 ],
+					"patching_rect" : [ 58.0, 352.5, 161.0, 31.0 ],
 					"text" : "j.model @description \"Stereo echo module.\""
 				}
 
@@ -333,8 +320,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 2,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 566.0, 91.0, 640.0, 480.0 ],
@@ -1172,10 +1160,6 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

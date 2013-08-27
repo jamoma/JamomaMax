@@ -29,20 +29,6 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-6",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 81.0, 311.0, 73.0, 20.0 ],
-					"text" : "j.preset"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "",
 					"id" : "obj-7",
 					"maxclass" : "outlet",
@@ -76,7 +62,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 265.0, 80.0, 141.0, 60.0 ],
+					"patching_rect" : [ 265.0, 80.0, 144.0, 60.0 ],
 					"text" : "j.parameter mode @type string @description \"choose the waveform type.\"",
 					"varname" : "mode[1]"
 				}
@@ -108,7 +94,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 46.0, 243.0, 162.0, 47.0 ],
+					"patching_rect" : [ 46.0, 243.0, 164.0, 47.0 ],
 					"text" : "j.model @description \"Play sine tones - square - triangle waves etc.\"",
 					"varname" : "j.model"
 				}
@@ -1348,10 +1334,6 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]
