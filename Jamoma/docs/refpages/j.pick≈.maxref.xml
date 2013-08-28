@@ -5,18 +5,18 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.pick≈" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Extracts N audio signals from a multichannel signal
 	</digest>
-	<description>
+	<!-- <description>
 		TEXT_HERE
-	</description>
+	</description> -->
 	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			multichannel
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -170,10 +170,10 @@
 		</attribute>
 		<attribute name="picks" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Array of channel numbers to extract
 			</digest>
 			<description>
-				TEXT_HERE
+				Array of channel numbers to extract. These can be non-consecutive
 			</description>
 		</attribute>
 		<attribute name="sampleRate" get="1" set="1" type="int" size="1">
@@ -191,8 +191,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
-	</seealsolist>
+		<seealso name="j.pack≈">
+		<seealso name="j.matrix≈>"
+		</seealsolist>
 </c74object>
