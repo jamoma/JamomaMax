@@ -7,9 +7,9 @@
 	<digest>
 		Control level as well as dry/wet mix
 	</digest>
-	<description>
+	<!-- <description>
 		Control level as well as dry/wet mix
-	</description>
+	</description> -->
 	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
@@ -39,7 +39,7 @@
 		</inlet>
 	</inletlist> -->
 	<!--OUTLETS-->
-	<outletlist>
+	<!-- <outletlist> -->
 		<!-- <outlet id="0" type="signal">
 			<digest>
 				processed audio (ch. 1)

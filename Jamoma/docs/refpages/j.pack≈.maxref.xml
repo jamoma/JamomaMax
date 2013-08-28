@@ -87,10 +87,9 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.unpack≈">
-		<seealso name="j.matrix≈">
-		<seealso name="j.multimixer≈">
-		<seealso name="pack">
-		</seealso>
+		<seealso name="j.unpack≈"/>
+		<seealso name="j.matrix≈"/>
+		<seealso name="j.multimixer≈"/>
+		<seealso name="pack"/>
 	</seealsolist>
 </c74object>

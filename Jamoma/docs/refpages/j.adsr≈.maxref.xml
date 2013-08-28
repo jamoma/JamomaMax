@@ -280,10 +280,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.function~">
-			TEXT_HERE
-		</seealso>
-		<seealso name="adsr~">
-		</seealso>
+		<seealso name="j.function~"/>
+		<seealso name="adsr~"/>
 	</seealsolist>
 </c74object>
