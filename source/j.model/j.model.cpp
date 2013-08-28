@@ -99,6 +99,7 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
 	EXTRA->modelAddress = kTTAdrsEmpty;
+    EXTRA->component = NO;
     EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
     EXTRA->presetManager = NULL;
