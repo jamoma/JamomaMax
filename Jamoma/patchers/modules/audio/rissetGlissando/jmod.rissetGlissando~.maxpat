@@ -42,7 +42,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 480.0, 50.0, 142.0, 19.0 ],
-					"text" : "j.meter_receive 1"
+					"text" : "j.receive~ 1"
 				}
 
 			}

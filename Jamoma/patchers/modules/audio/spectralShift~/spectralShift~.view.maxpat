@@ -401,7 +401,7 @@
             141.0,
             19.0
           ],
-          "text": "j.receive in.2/amplitude"
+          "text": "j.receive~ out.2"
         }
       },
       {
@@ -421,7 +421,7 @@
             141.0,
             19.0
           ],
-          "text": "j.receive in.1/amplitude"
+          "text": "j.receive~ out.1"
         }
       },
       {
@@ -2190,7 +2190,7 @@
         "implicit": 1
       },
       {
-        "name": "j.meter_receive.maxpat",
+        "name": "j.receive~.maxpat",
         "bootpath": "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/meter_receive",
         "patcherrelativepath": "../../../library/components/meter_receive",
         "type": "JSON",

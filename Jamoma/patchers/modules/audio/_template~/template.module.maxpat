@@ -53,7 +53,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 658.0, 394.0, 162.0, 20.0 ],
-					"text" : "j.remote out.2/amplitude"
+					"text" : "j.receive~ out.2"
 				}
 
 			}
@@ -93,7 +93,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 658.0, 331.0, 162.0, 20.0 ],
-					"text" : "j.remote out.1/amplitude"
+					"text" : "j.receive~ out.1"
 				}
 
 			}

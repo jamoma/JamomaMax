@@ -9,8 +9,8 @@
 /* Begin PBXFileReference section */
 		A79D072C1655C88900D02D46 /* j.mixer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.mixer.cpp; sourceTree = "<group>"; };
 		A79D072E1655C88E00D02D46 /* j.mixer≈.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.mixer≈.yml"; sourceTree = "<group>"; };
-		A79D075D1655D73F00D02D46 /* MaxAudioGraph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MaxAudioGraph.cpp; path = ../MaxAudioGraph.cpp; sourceTree = "<group>"; };
-		A79D075E1655D73F00D02D46 /* MaxAudioGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MaxAudioGraph.h; path = ../MaxAudioGraph.h; sourceTree = "<group>"; };
+		A79D075D1655D73F00D02D46 /* MaxAudioGraph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MaxAudioGraph.cpp; path = ../classwrapper/MaxAudioGraph.cpp; sourceTree = "<group>"; };
+		A79D075E1655D73F00D02D46 /* MaxAudioGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MaxAudioGraph.h; path = ../classwrapper/MaxAudioGraph.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */

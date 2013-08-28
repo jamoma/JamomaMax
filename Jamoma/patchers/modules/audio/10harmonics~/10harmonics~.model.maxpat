@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 5
+			"minor" : 1,
+			"revision" : 3,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1440.0, 806.0 ],
+		"rect" : [ 0.0, 44.0, 1298.0, 746.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -30,14 +31,30 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-2",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 992.0, 160.0, 150.0, 33.0 ],
+					"text" : "<- why isn't this one a parameterArray ?",
+					"textcolor" : [ 0.658824, 0.046517, 0.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-28",
 					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 111.0, 239.0, 382.0, 62.0 ],
-					"text" : "j.parameterArray harmonic.[10]/gain @format single @type decimal @ramp/drive Max @ramp/function linear @dataspace gain @dataspace/unit @description \"Gain values (dB) for the 1st partial\""
+					"patching_rect" : [ 111.0, 238.0, 364.0, 60.0 ],
+					"text" : "j.parameterArray harmonic.[10]/gain @format single @type decimal @ramp/drive Max @ramp/function linear @dataspace gain @dataspace/unit dB @description \"Gain values (dB) for the 1st partial\""
 				}
 
 			}
@@ -51,7 +68,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 627.0, 152.0, 352.0, 62.0 ],
+					"patching_rect" : [ 627.0, 152.0, 352.0, 60.0 ],
 					"text" : "j.parameter factors @type array @range/bounds 1. 100. @range/clipmode low @description \"list of factors that determines the frequencies of the 10 partials as a factor of the fundamental frequency, default is 1 2 3 4 5 6 7 8 9 10\""
 				}
 
@@ -66,7 +83,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 766.5, 229.0, 331.0, 62.0 ],
+					"patching_rect" : [ 766.5, 229.0, 331.0, 60.0 ],
 					"text" : "j.parameter frequency @type decimal @range/bounds 20 20000 @range/clipmode none @ramp/drive Max @ramp/function linear @dataspace time @dataspace/unit Hz @description \"Fundamental frequency of the signal.\"",
 					"varname" : "frequency"
 				}
@@ -177,7 +194,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 292.5, 310.0, 77.0, 20.0 ],
+					"patching_rect" : [ 283.5, 307.0, 77.0, 20.0 ],
 					"text" : "prepend set"
 				}
 
@@ -428,7 +445,7 @@
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 302.0, 336.0, 120.5, 336.0 ],
+					"midpoints" : [ 293.0, 336.0, 120.5, 336.0 ],
 					"source" : [ "obj-18", 0 ]
 				}
 
@@ -541,27 +558,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameterArray.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
