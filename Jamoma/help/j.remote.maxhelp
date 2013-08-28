@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 100.0, 100.0, 819.0, 535.0 ],
+		"rect" : [ 143.0, 211.0, 819.0, 535.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 54.0, 94.0, 640.0, 480.0 ],
+						"rect" : [ 0.0, 26.0, 819.0, 509.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -66,7 +66,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [  ],
 						"lines" : [  ]
 					}
@@ -200,7 +199,7 @@
 													"fontsize" : 12.0,
 													"frgb" : 0.0,
 													"id" : "obj-6",
-													"linecount" : 8,
+													"linecount" : 7,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
@@ -666,7 +665,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 100.0, 126.0, 819.0, 509.0 ],
+						"rect" : [ 143.0, 237.0, 819.0, 509.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -733,7 +732,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 323.0, 375.0, 196.0, 91.0 ],
+									"patching_rect" : [ 323.0, 375.0, 198.0, 91.0 ],
 									"text" : "j.remote's first outlet prepend a \"set\" message to the returned value. It is then straightforward to connect a gui object. You can use the second outlet to receive direct value."
 								}
 
@@ -1095,7 +1094,7 @@
 													"fontsize" : 12.0,
 													"frgb" : 0.0,
 													"id" : "obj-8",
-													"linecount" : 6,
+													"linecount" : 5,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,

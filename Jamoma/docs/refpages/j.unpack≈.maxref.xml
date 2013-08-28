@@ -23,7 +23,7 @@
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				multichannel audio connection and control messages
+				Multichannel audio connection and control messages
 			</digest>
 			<description>
 				TEXT_HERE
@@ -31,7 +31,7 @@
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				multichannel audio connection and control messages
+				Multichannel audio connection and control messages
 			</digest>
 			<description>
 				TEXT_HERE
@@ -78,7 +78,7 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="audio.connect">
+		<!-- 	<method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -90,6 +90,7 @@
 				TEXT_HERE
 			</description>
 		</method>
+ -->
 		<method name="signal">
 			<arglist />
 			<digest>

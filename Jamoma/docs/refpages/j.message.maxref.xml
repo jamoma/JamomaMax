@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.message" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Handling input message of Jamoma models
 	</digest>
 	<description>
-		TEXT_HERE
+		j.message creates a message in a Jamoma model
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,17 +16,17 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			model
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
-	<inletlist>
+	<!-- <inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
 				input
 			</digest>
 			<description>
-				TEXT_HERE
+				input from the user interface object
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
@@ -37,9 +37,9 @@
 				TEXT_HERE
 			</description>
 		</inlet>
-	</inletlist>
+	</inletlist> -->
 	<!--OUTLETS-->
-	<outletlist>
+	<!-- <outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
 				direct: values
@@ -48,15 +48,15 @@
 				TEXT_HERE
 			</description>
 		</outlet>
-	</outletlist>
+	</outletlist> -->
 	<!--ARGUMENTS-->
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				The name of the message defined in Jamoma namespace
 			</digest>
 			<description>
-				TEXT_HERE
+				The name of the message defined in Jamoma namespace
 			</description>
 		</objarg>
 	</objarglist>
@@ -67,10 +67,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="address">
@@ -78,10 +78,10 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				OSC name of the message. A couple of names are prohibited because these are reserved names used by the Jamoma module
 			</digest>
 			<description>
-				TEXT_HERE
+				OSC name of the message. A couple of names are prohibited because these are reserved names used by the Jamoma module
 			</description>
 		</method>
 		<method name="dec">
@@ -89,10 +89,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Decrement the curent value by the amount defined with the stepsize @attribute
 			</digest>
 			<description>
-				TEXT_HERE
+				Decrement the curent value by the amount defined with the stepsize @attribute
 			</description>
 		</method>
 		<method name="dump">
@@ -100,10 +100,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Dump all attributes
 			</digest>
 			<description>
-				TEXT_HERE
+				Dump all attributes
 			</description>
 		</method>
 		<method name="inc">
@@ -111,10 +111,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Increment the curent value by the amount defined with the stepsize @attribute
 			</digest>
 			<description>
-				TEXT_HERE
+				Increment the curent value by the amount defined with the stepsize @attribute
 			</description>
 		</method>
 		<method name="reset">
@@ -122,10 +122,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Reset the value to the default value
 			</digest>
 			<description>
-				TEXT_HERE
+				Reset the value to the default value
 			</description>
 		</method>
 	</methodlist>
@@ -133,10 +133,10 @@
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Set whether j.message is enabled or not
 			</digest>
 			<description>
-				TEXT_HERE
+				Set whether j.message is enabled or not
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -144,138 +144,137 @@
 		</attribute>
 		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set what dataspace used internally by the message for unit conversions
 			</digest>
 			<description>
-				TEXT_HERE
+				Set what dataspace used internally by the message for unit conversions
 			</description>
 		</attribute>
 		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				The dataspace unit used for communication to the algorithm from the outside world
 			</digest>
 			<description>
-				TEXT_HERE
+				The dataspace unit used for communication to the algorithm from the outside world
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Short info about the message. Used for auto-documentation of the module
 			</digest>
 			<description>
-				TEXT_HERE
+				Short info about the message. Used for auto-documentation of the module
 			</description>
 		</attribute>
-		<attribute name="priority" get="1" set="1" type="int" size="1">
+		<!-- <attribute name="priority" get="1" set="1" type="int" size="1">
+				<digest>
+					TEXT_HERE
+				</digest>
+				<description>
+					Used to determine order of parameter recall in a preset. When presets of modules are recalled, parameters are set according to priority, so that parameters with priority 1 get updated first, then	parameters with priority 2, then priority 3, and so on. If the priority attribute is not set, it defaults to 0. Parameters with priority 0 are regarded the lowest priority, and end up at the end of the queue of parameters to be set
+				</description>
+			</attribute> -->
+			<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
-		</attribute>
-		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
+				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
 			</description>
 		</attribute>
 		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				The mapping function determining the curve of the ramping to new message value
 			</digest>
 			<description>
-				TEXT_HERE
+				The mapping function determining the curve of the ramping to new message value
 			</description>
 		</attribute>
 		<attribute name="ramp/function/parameters" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Additionnal parameters for the selected ramp option
 			</digest>
 			<description>
-				TEXT_HERE
+				Additionnal parameters for the selected ramp option
 			</description>
 		</attribute>
-		<attribute name="ramp/status" get="1" set="1" type="int" size="1">
+		<attribute name="ramp/status" get="1" set="0" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Read-only attribute to get notification of the end of a ramp
 			</digest>
 			<description>
-				TEXT_HERE
+				Read-only attribute to get notification of the end of a ramp
 			</description>
 		</attribute>
 		<attribute name="range/bounds" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Lower and upper boundaries defining the range of possible message values
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
+Lower and upper boundaries defining the range of possible message values			</description>
 		</attribute>
 		<attribute name="range/clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
 			</digest>
 			<description>
-				TEXT_HERE
+				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
 			</description>
 		</attribute>
 		<attribute name="repetitions/allow" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Determines whether repeated message values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)
 			</digest>
 			<description>
-				TEXT_HERE
+				Determines whether repeated message values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)
 			</description>
 		</attribute>
-		<attribute name="service" get="1" set="1" type="symbol" size="1">
+		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 		<attribute name="tag" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Some user defined tags
 			</digest>
 			<description>
-				TEXT_HERE
+				Some user defined tags
 			</description>
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Datatype of the parameter. Options are: decimal, integer, boolean, string, array, generic
 			</digest>
 			<description>
-				TEXT_HERE
+				Datatype of the parameter. Options are: decimal, integer, boolean, string, array, generic
 			</description>
 		</attribute>
 		<attribute name="value" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Current message value
 			</digest>
 			<description>
-				TEXT_HERE
+				Current message value
 			</description>
 		</attribute>
 		<attribute name="value/default" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Default message value
 			</digest>
 			<description>
-				TEXT_HERE
+				Default message value
 			</description>
 		</attribute>
 		<attribute name="value/stepsize" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Step by which the current value is being increased/decreased when a /value/inc or /value/dec message is received
 			</digest>
 			<description>
-				TEXT_HERE
+				Step by which the current value is being increased/decreased when a /value/inc or /value/dec message is received
 			</description>
 		</attribute>
 	</attributelist>
@@ -285,8 +284,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.parameter"/>
+		<seealso name="j.model"/>
+		<seealso name="j.ramp"/>
 	</seealsolist>
 </c74object>

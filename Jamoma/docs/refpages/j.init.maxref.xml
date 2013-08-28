@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.init" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		loadbang for Jamoma models
 	</digest>
 	<description>
-		TEXT_HERE
+		Utility for initialization of models
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,11 +16,11 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			loadbang
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
-	<inletlist>
+	<!-- <inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
 			</digest>
@@ -35,10 +35,10 @@
 				TEXT_HERE
 			</description>
 		</inlet>
-	</inletlist>
+	</inletlist> -->
 	<!--OUTLETS-->
 	<outletlist>
-		<outlet id="0" type="OUTLET_TYPE">
+		<outlet id="0" type="bang">
 			<digest>
 				bang when initialization starts
 			</digest>
@@ -46,9 +46,9 @@
 				TEXT_HERE
 			</description>
 		</outlet>
-		<outlet id="1" type="OUTLET_TYPE">
+		<outlet id="1" type="bang">
 			<digest>
-				bang when initilization is done
+				bang when initialization is done
 			</digest>
 			<description>
 				TEXT_HERE
@@ -57,12 +57,12 @@
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<objarg id="0" name="model address" type="symbol" optional="1">
 			<digest>
-				TEXT_HERE
+				Address of the model to listen for initialization state
 			</digest>
 			<description>
-				TEXT_HERE
+				Address of the model to listen for initialization state
 			</description>
 		</objarg>
 	</objarglist>
@@ -74,8 +74,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.initialized"/>
+		<seealso name="j.model"/>
+		<seealso name="loadbang"/>
 	</seealsolist>
 </c74object>

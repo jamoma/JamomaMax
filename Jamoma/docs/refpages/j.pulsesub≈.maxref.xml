@@ -5,7 +5,7 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.pulsesub≈" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Apply a periodic enveloppe over an incoming multichannel signal
 	</digest>
 	<description>
 		TEXT_HERE
@@ -16,14 +16,14 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			multichannel
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				multichannel input and control messages
+				Multichannel input and control messages
 			</digest>
 			<description>
 				TEXT_HERE
@@ -31,7 +31,7 @@
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				multichannel input 2
+				Multichannel input 2
 			</digest>
 			<description>
 				TEXT_HERE
@@ -42,7 +42,7 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				multichannel output 1
+				Multichannel output 1
 			</digest>
 			<description>
 				TEXT_HERE
@@ -70,7 +70,7 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="audio.connect">
+		<!-- 	<method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -82,7 +82,19 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="calculate">
+ -->
+		<!-- <method name="calculate">
+	<arglist>
+		<arg name="ARG_NAME_0" type="list" optional="0" />
+	</arglist>
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+</method> -->
+		<!-- 		<method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -93,18 +105,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="getProcessingBenchmark">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
-		<method name="graph.connect">
+ -->
+		<!-- 				<method name="graph.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -116,7 +118,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="resetBenchmarking">
+ -->
+		<!-- 						<method name="resetBenchmarking">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -127,7 +130,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="test">
+ -->
+		<!-- 								<method name="test">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -138,12 +142,13 @@
 				TEXT_HERE
 			</description>
 		</method>
+ -->
 	</methodlist>
 	<!--ATTRIBUTES-->
 	<attributelist>
 		<attribute name="attack" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Attack time in milliseconds
 			</digest>
 			<description>
 				TEXT_HERE
@@ -162,7 +167,7 @@
 		</attribute>
 		<attribute name="decay" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Decay time in milliseconds
 			</digest>
 			<description>
 				TEXT_HERE
@@ -170,7 +175,7 @@
 		</attribute>
 		<attribute name="frequency" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Enveloppe frequency in Hz
 			</digest>
 			<description>
 				TEXT_HERE
@@ -205,7 +210,7 @@
 		</attribute>
 		<attribute name="release" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Release time in milliseconds
 			</digest>
 			<description>
 				TEXT_HERE
@@ -221,7 +226,7 @@
 		</attribute>
 		<attribute name="sustain" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Sustain value in dB
 			</digest>
 			<description>
 				TEXT_HERE
@@ -245,8 +250,6 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.window≈">
 	</seealsolist>
 </c74object>

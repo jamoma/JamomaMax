@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.oscinstance" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Retrieve the instance addressed in OSC messages
 	</digest>
 	<description>
-		TEXT_HERE
+		Retrieve the instance addressed in OSC messages
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			osc
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -66,23 +66,23 @@
 		</outlet>
 		<outlet id="3" type="OUTLET_TYPE">
 			<digest>
-				dumpout / overflow from non-matching input
+				Non-matching input
 			</digest>
 			<description>
-				TEXT_HERE
+				Non-matching input
 			</description>
 		</outlet>
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<!-- <objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</objarg>
+		</objarg> -->
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
@@ -147,8 +147,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="j.oscroute">
 		</seealso>
 	</seealsolist>
 </c74object>
