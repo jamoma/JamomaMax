@@ -335,8 +335,9 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 void ui_build(t_ui *x)
 {
 	TTValue			v, n, p, args;
-	SymbolPtr		hierarchy;
+	SymbolPtr		hierarchy, moduleHierarchy;
 	ObjectPtr		box, textfield;
+    ObjectPtr       modulePatcher, moduleBox;
 	t_rect			boxRect;
 	t_rect			uiRect;
 	
@@ -351,6 +352,8 @@ void ui_build(t_ui *x)
 	object_attr_get_rect((ObjectPtr)x, _sym_presentation_rect, &uiRect);
 	
 	if (hierarchy == _sym_bpatcher) {
+        
+        // resize the bpatcher
 		object_attr_get_rect(box, _sym_patching_rect, &boxRect);
 		boxRect.width = uiRect.width;
 		boxRect.height = uiRect.height;
@@ -359,6 +362,25 @@ void ui_build(t_ui *x)
 		boxRect.width = uiRect.width;
 		boxRect.height = uiRect.height;
 		object_attr_set_rect(box, _sym_presentation_rect, &boxRect);
+        
+        // Module CASE : is this bpather inside another bpatcher ?
+        modulePatcher = jamoma_patcher_get(x->patcherPtr);
+        moduleHierarchy = jamoma_patcher_get_hierarchy(modulePatcher);
+        
+        moduleBox = object_attr_getobj(modulePatcher, gensym("box"));
+        
+        if (moduleHierarchy == _sym_bpatcher) {
+            
+            // resize the module bpatcher
+            object_attr_get_rect(moduleBox, _sym_patching_rect, &boxRect);
+            boxRect.width = uiRect.width;
+            boxRect.height = uiRect.height;
+            object_attr_set_rect(moduleBox, _sym_patching_rect, &boxRect);
+            object_attr_get_rect(moduleBox, _sym_presentation_rect, &boxRect);
+            boxRect.width = uiRect.width;
+            boxRect.height = uiRect.height;
+            object_attr_set_rect(moduleBox, _sym_presentation_rect, &boxRect);
+        }
 	}
 	else if (hierarchy == _sym_subpatcher) {
 		object_attr_get_rect(x->patcherPtr, _sym_defrect, &boxRect);
