@@ -323,9 +323,8 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 		}
 		x->modelOutput = NULL;
 		
-		// observe model initialisation to explore
+		// observe model initialisation to explore (the method also get the value)
 		ui_receiver_create(x, &aReceiver, gensym("return_model_init"), kTTSymEmpty, x->modelAddress.appendAttribute(kTTSym_initialized));
-		aReceiver->sendMessage(kTTSym_Get);
 	}
 	
 	// The following must be deferred because 
@@ -342,7 +341,10 @@ void ui_build(t_ui *x)
 	t_rect			uiRect;
 	
 	// Examine the context to resize the view, set textfield, ...
-	x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
+	
+    // TEST : get the module patcher to resize it
+    //x->patcherPtr = jamoma_patcher_get(jamoma_patcher_get((ObjectPtr)x));
+    x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
 	hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
 	
 	box = object_attr_getobj(x->patcherPtr, gensym("box"));
