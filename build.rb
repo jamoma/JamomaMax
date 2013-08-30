@@ -47,13 +47,15 @@ load "build.rb"
 
 # copy build results into the Max Package
 `cp -r "#{glibdir}"/../../Core/*/library/build/*.dylib "#{glibdir}"/Jamoma/support` if mac?
-`cp -r "#{glibdir}"/../../Core/*/library/build/*.dll "#{glibdir}"/Jamoma/support` if win?
-`rm "#{glibdir}"/Jamoma/support/*-i386.dylib`
-`rm "#{glibdir}"/Jamoma/support/*-x86_64.dylib`
+`rm "#{glibdir}"/Jamoma/support/*-i386.dylib` if mac?
+`rm "#{glibdir}"/Jamoma/support/*-x86_64.dylib` if mac?
 `cp -r "#{glibdir}"/../../Core/*/extensions/*/build/*.ttdylib "#{glibdir}"/Jamoma/support` if mac?
-`rm "#{glibdir}"/Jamoma/support/*-i386.ttdylib`
-`rm "#{glibdir}"/Jamoma/support/*-x86_64.ttdylib`
-`cp -r "#{glibdir}"/../../Core/*/extensions/*/build/*.ttdll "#{glibdir}"/Jamoma/support` if win?
+`rm "#{glibdir}"/Jamoma/support/*-i386.ttdylib` if mac?
+`rm "#{glibdir}"/Jamoma/support/*-x86_64.ttdylib` if mac?
+
+`cp -r "#{glibdir}"/../../Core/*/library/*/*.dll "#{glibdir}"/Jamoma/support` if win?
+`cp -r "#{glibdir}"/../../Core/*/extensions/*/*/*.ttdll "#{glibdir}"/Jamoma/support` if win?
+
 `mv "#{glibdir}"/Jamoma/externals/j.loader.mxo "#{glibdir}"/Jamoma/extensions/`
 
 # Making sure that twin projects build on Mac
