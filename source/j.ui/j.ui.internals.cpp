@@ -468,39 +468,50 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 	TTBoolean	bypass = false;
 	TTBoolean	freeze = false;
 	TTBoolean	preview = false;
-	TTBoolean	meters = false;
     TTBoolean	mute = false;
-	TTBoolean	preset = false;			// is there a /preset node in the model ?
-	TTBoolean	model = false;			// is there a /model node in the model ?
+	TTBoolean	preset = false;			// is there a preset node in the model ?
+	TTBoolean	model = false;			// is there a model node in the model ?
 	TTBoolean	change = false;
 	TTAddress   relativeAddress;
-	TTInt8		d;
+
 	
 	// model namespace observation
 	if (obj->modelAddress != kTTAdrsEmpty) {
-		
+        
 		// look the namelist to know which data exist
 		for (long i=0; i<argc; i++) {
-			
+            
 			relativeAddress = TTAddress(atom_getsym(argv+i)->s_name);
-			
-			if (relativeAddress.compare(TTAddress("out.*/gain"), d) == kAddressEqual)
-				gain = true;
-			else if (relativeAddress.compare(TTAddress("out.*/mix"), d) == kAddressEqual)
-				mix = true;
-			else if (relativeAddress.compare(TTAddress("in.*/bypass"), d) == kAddressEqual)
+            
+            if (relativeAddress.getName() == TTSymbol("out")) {
+                
+                TTNodePtr   aNode;
+                TTValue     v;
+                TTSymbol    type;
+                
+                // check first Output object type to know what to display
+                if (!JamomaDirectory->getTTNode(obj->modelAddress.appendAddress(TTAddress("out.1")), &aNode)) {
+                    
+                    aNode->getObject()->getAttributeValue("type", v);
+                    type = v[0];
+                }
+                
+                if (type == TTSymbol("audio")) {
+                    gain = true;
+                    mix = true;
+                    mute = true;
+                }
+                else {
+                    freeze = true;
+                    preview = true;
+                    mute = true;
+                }
+            }
+			else if (relativeAddress.getName() == TTSymbol("in"))
 				bypass = true;
-			else if (relativeAddress.compare(TTAddress("out.*/freeze"), d) == kAddressEqual)
-				freeze = true;
-			else if (relativeAddress.compare(TTAddress("out.*/preview"), d) == kAddressEqual)
-				preview = true;
-			else if (relativeAddress.compare(TTAddress("out.*/mute"), d) == kAddressEqual)
-				mute = true;
-			else if (relativeAddress.compare(TTAddress("audio/meters/freeze"), d) == kAddressEqual)
-				meters = true;
-			else if (relativeAddress.compare(TTAddress("preset/store"), d) == kAddressEqual)		// the internal TTExplorer looks for Datas (not for node like /preset)
+			else if (relativeAddress.getName() == TTSymbol("preset"))
 				preset = true;
-            else if (relativeAddress.compare(TTAddress("model/edit"), d) == kAddressEqual)          // the internal TTExplorer looks for Datas (not for node like /model)
+            else if (relativeAddress.getName() == TTSymbol("model"))
 				model = true;
 		}
 		
@@ -586,11 +597,11 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 		if (preset != obj->has_preset) {
 			obj->has_preset = preset;
 			if (preset) {
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset/write"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset/read"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset/recall"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset/store"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, gensym("return_preset_order"), TTSymbol("preset/order"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:write"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:read"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:recall"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:store"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, gensym("return_preset_order"), TTSymbol("preset:order"), obj->modelAddress, NO);
 			}
 			else {
 				ui_viewer_destroy(obj, TTSymbol("write"));
