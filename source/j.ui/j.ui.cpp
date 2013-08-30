@@ -130,7 +130,7 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 	t_ui			*x = NULL;
 	t_dictionary 	*d = NULL;
 	long 			flags;
-	TTValue			filters;
+	TTValue			f, out, filters;
 	
 	if (!(d=object_dictionaryarg(argc, argv)))
 		return NULL;	
@@ -203,10 +203,11 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		
 		ui_explorer_create((ObjectPtr)x, &x->modelExplorer, gensym("return_modelExploration"));
 		
-		filters.append(TTSymbol("data"));
-		filters.append(TTSymbol("genericTag"));
-		
-		x->modelExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+        f = TTString("presetFilter object Data mode exclude");
+        f.fromString();
+        
+        x->modelExplorer->sendMessage(TTSymbol("FilterSet"), f, out);
+        x->modelExplorer->setAttributeValue(TTSymbol("depth"), 1);
 		
 		attr_dictionary_process(x, d); 	// handle attribute args
 		
@@ -1117,10 +1118,10 @@ void ui_menu_qfn(t_ui *x)
 		defer(x, (method)ui_preset_dowrite, NULL, 0, 0L);
 	
 	else if (item->sym == gensym("Restore Default Settings"))
-		ui_viewer_send(x, TTSymbol("preset/recall"), kTTVal1);
+		ui_viewer_send(x, TTSymbol("preset:recall"), kTTVal1);
 	
 	else if (item->sym == gensym("Store Current Preset"))
-		ui_viewer_send(x, TTSymbol("preset/store"), kTTValNONE);
+		ui_viewer_send(x, TTSymbol("preset:store"), kTTValNONE);
 	
 	else if (item->sym == gensym("Store as Next Preset"))
 		ui_preset_store_next(x);
@@ -1141,7 +1142,7 @@ void ui_menu_qfn(t_ui *x)
 		ui_viewer_send(x, TTSymbol("model/reference"), kTTValNONE);
 	
 	else	// assume the menu item is a preset name
-		ui_viewer_send(x, TTSymbol("preset/recall"), TTSymbol(item->sym->s_name));
+		ui_viewer_send(x, TTSymbol("preset:recall"), TTSymbol(item->sym->s_name));
 }
 
 void ui_menu_build(t_ui *x)
