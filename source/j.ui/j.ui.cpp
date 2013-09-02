@@ -343,9 +343,7 @@ void ui_build(t_ui *x)
 	t_rect			uiRect;
 	
 	// Examine the context to resize the view, set textfield, ...
-	
-    // TEST : get the module patcher to resize it
-    //x->patcherPtr = jamoma_patcher_get(jamoma_patcher_get((ObjectPtr)x));
+    
     x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
 	hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
 	
@@ -364,7 +362,7 @@ void ui_build(t_ui *x)
 		boxRect.height = uiRect.height;
 		object_attr_set_rect(box, _sym_presentation_rect, &boxRect);
         
-        // Module CASE : is this bpather inside another bpatcher ?
+        // Module CASE : is this bpatcher inside another bpatcher ?
         modulePatcher = jamoma_patcher_get(x->patcherPtr);
         moduleHierarchy = jamoma_patcher_get_hierarchy(modulePatcher);
         
