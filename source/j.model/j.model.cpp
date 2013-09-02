@@ -128,9 +128,21 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 void WrappedContainerClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTAddress    modelAddress, presetAddress;
+    TTValue      v;
     
-    // delete the preset manager
-    TTObjectBaseRelease(&EXTRA->presetManager);
+    if (EXTRA->presetManager) {
+        // get the modelAddress from the preset manager address
+        EXTRA->presetManager->getAttributeValue(kTTSym_address, v);
+        modelAddress = v[0];
+        presetAddress = modelAddress.appendAddress(TTAddress("preset"));
+        
+        // remove the preset node
+        JamomaDirectory->TTNodeRemove(presetAddress);
+        
+        // delete the preset manager
+        TTObjectBaseRelease(&EXTRA->presetManager);
+    }
     
     // delete filewatcher
 	if (EXTRA->filewatcher) {
