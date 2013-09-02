@@ -1,6 +1,5 @@
 
 sources:
-  - j.pack.h
   - j.pack.cpp
   - ../c74support/max-includes/common/commonsyms.cpp
   - ../classwrapper/MaxAudioGraph.cpp
