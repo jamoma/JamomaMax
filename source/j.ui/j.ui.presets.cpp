@@ -91,18 +91,18 @@ void ui_preset_dowrite(t_ui *x)
 	ui_viewer_send(x, TTSymbol("preset:write"), TTSymbol(posixpath));
 }
 
-void ui_return_preset_order(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
 	obj->preset_num = argc;
 	
-	if (obj->preset_order)
-		sysmem_freeptr(obj->preset_order);
-	obj->preset_order = (AtomPtr)sysmem_newptr(sizeof(t_atom) * argc);
+	if (obj->preset_names)
+		sysmem_freeptr(obj->preset_names);
+	obj->preset_names = (AtomPtr)sysmem_newptr(sizeof(t_atom) * argc);
 	
 	for (int i=0; i<argc; i++) {
-		atom_setsym(&obj->preset_order[i], atom_getsym(&argv[i]));
+		atom_setsym(&obj->preset_names[i], atom_getsym(&argv[i]));
 	}
 }
 

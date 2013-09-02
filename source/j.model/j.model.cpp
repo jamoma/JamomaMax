@@ -45,7 +45,7 @@ void WrapTTContainerClass(WrappedClassPtr c)
     //class_addmethod(c->maxClass, (method)model_edit,					"dblclick",				A_CANT, 0);
     //class_addmethod(c->maxClass, (method)model_edclose,               "edclose",				A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_preset_return_order,		"return_order",			A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_preset_return_names,		"return_names",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_preset_filechanged,		"filechanged",			A_CANT, 0);
 	
 	class_addmethod(c->maxClass, (method)model_preset_read,				"preset_read",			A_CANT, 0);

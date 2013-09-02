@@ -601,7 +601,7 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:read"), obj->modelAddress, NO);
 				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:recall"), obj->modelAddress, NO);
 				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:store"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, gensym("return_preset_order"), TTSymbol("preset:order"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, gensym("return_preset_names"), TTSymbol("preset:names"), obj->modelAddress, NO);
 			}
 			else {
 				ui_viewer_destroy(obj, TTSymbol("write"));
@@ -612,8 +612,8 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 				obj->hash_viewers->remove(TTSymbol("recall"));
 				ui_viewer_destroy(obj, TTSymbol("store"));
 				obj->hash_viewers->remove(TTSymbol("store"));
-				ui_viewer_destroy(obj, TTSymbol("order"));
-				obj->hash_viewers->remove(TTSymbol("order"));
+				ui_viewer_destroy(obj, TTSymbol("names"));
+				obj->hash_viewers->remove(TTSymbol("names"));
 			}
 			
 			change = true;
