@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 209.0, 44.0, 1320.0, 960.0 ],
+		"rect" : [ 377.0, 53.0, 1135.0, 832.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1320.0, 934.0 ],
+						"rect" : [ 0.0, 26.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -266,7 +266,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 210.0, 500.0, 116.0, 19.0 ],
+					"patching_rect" : [ 296.0, 416.5, 116.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -301,7 +301,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1320.0, 934.0 ],
+						"rect" : [ 0.0, 26.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -360,7 +360,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1320.0, 934.0 ],
+						"rect" : [ 0.0, 26.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -387,7 +387,7 @@
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-15",
-									"linecount" : 10,
+									"linecount" : 9,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
@@ -796,7 +796,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 330.0, 500.0, 131.0, 19.0 ],
+					"patching_rect" : [ 430.0, 416.5, 131.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -831,7 +831,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 209.0, 70.0, 1320.0, 934.0 ],
+						"rect" : [ 377.0, 79.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -862,7 +862,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 994.5, 493.5, 160.0, 114.0 ],
+									"patching_rect" : [ 884.5, 504.5, 160.0, 114.0 ],
 									"text" : "Note that you need to specify the full address of the parameter within the Jamoma namespace. Here, we state that our \"frequency\" parameter resides at the root of the patch (\"/\")."
 								}
 
@@ -878,7 +878,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 994.5, 305.5, 150.0, 98.0 ],
+									"patching_rect" : [ 884.5, 316.5, 150.0, 98.0 ],
 									"text" : "The parameter value can easily be accessed using Jamoma's send/receive or remote objects."
 								}
 
@@ -893,7 +893,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 639.5, 680.0, 50.0, 20.0 ]
+									"patching_rect" : [ 529.5, 691.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -906,7 +906,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 697.5, 680.0, 136.0, 20.0 ],
+									"patching_rect" : [ 587.5, 691.0, 136.0, 20.0 ],
 									"text" : "j.remote /frequency"
 								}
 
@@ -921,7 +921,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 636.0, 443.0, 131.0, 20.0 ],
+									"patching_rect" : [ 526.0, 454.0, 131.0, 20.0 ],
 									"text" : "loadmess edit_mode 1"
 								}
 
@@ -935,7 +935,7 @@
 									"numoutlets" : 7,
 									"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 636.0, 472.0, 256.0, 128.0 ],
+									"patching_rect" : [ 526.0, 483.0, 256.0, 128.0 ],
 									"setfilter" : [ 0, 1, 1, 0, 0, 123.470825, 0.920364, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 								}
 
@@ -949,7 +949,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 805.285706, 429.0, 137.0, 20.0 ],
+									"patching_rect" : [ 695.285706, 440.0, 137.0, 20.0 ],
 									"text" : "j.receive /frequency"
 								}
 
@@ -963,7 +963,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 636.0, 328.0, 34.0, 20.0 ],
+									"patching_rect" : [ 526.0, 339.0, 34.0, 20.0 ],
 									"text" : "mtof"
 								}
 
@@ -976,7 +976,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 636.0, 263.0, 336.0, 53.0 ],
+									"patching_rect" : [ 526.0, 274.0, 336.0, 53.0 ],
 									"presentation_rect" : [ 0.0, 0.0, 336.0, 53.0 ]
 								}
 
@@ -990,7 +990,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 636.0, 354.0, 125.0, 20.0 ],
+									"patching_rect" : [ 526.0, 365.0, 125.0, 20.0 ],
 									"text" : "j.send /frequency"
 								}
 
@@ -1007,7 +1007,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 6.0, 5.0, 595.0, 95.0 ]
+									"patching_rect" : [ 6.0, 5.0, 690.0, 143.0 ]
 								}
 
 							}
@@ -1087,7 +1087,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 45.0, 347.0, 198.0, 43.0 ],
+									"patching_rect" : [ 45.0, 347.0, 188.0, 43.0 ],
 									"text" : "j.parameter frequency @description \"the frequency value of my patch\"",
 									"varname" : "my_float[1]"
 								}
@@ -1122,11 +1122,11 @@
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-16",
-									"linecount" : 4,
+									"linecount" : 7,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 256.5, 334.0, 303.0, 69.0 ],
+									"patching_rect" : [ 256.5, 334.0, 180.0, 113.0 ],
 									"text" : "In the very simple example below, a parameter called \"frequency\" is set so it can be stored in presets, accessed from other patches, etc."
 								}
 
@@ -1141,7 +1141,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 11.5, 126.5, 391.0, 94.0 ],
+									"patching_rect" : [ 45.0, 176.5, 395.0, 94.0 ],
 									"text" : "The j.parameter is a core component of the Jamoma library. It allows Max programmers to declare a parameter within a patch in order store its value, remotely access it, etc. In this regard, j.parameter is somewhat similar to Max' pattr although providing number of features embeded in the Jamoma framework."
 								}
 
@@ -1305,7 +1305,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 4.0, 44.0, 1320.0, 934.0 ],
+						"rect" : [ 0.0, 26.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1324,7 +1324,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"showontab" : 0,
+						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -1335,7 +1335,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 100.0, 287.0, 36.0 ],
+									"patching_rect" : [ 394.0, 206.0, 287.0, 36.0 ],
 									"text" : "Differents types of parameter can be used to deal with several kind of algorithm data."
 								}
 
@@ -1349,7 +1349,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 290.0, 327.0, 46.0, 17.0 ],
+									"patching_rect" : [ 634.0, 433.0, 46.0, 17.0 ],
 									"text" : "trez"
 								}
 
@@ -1363,7 +1363,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 250.0, 327.0, 39.0, 17.0 ],
+									"patching_rect" : [ 594.0, 433.0, 39.0, 17.0 ],
 									"text" : "doz"
 								}
 
@@ -1377,7 +1377,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 210.0, 327.0, 40.0, 17.0 ],
+									"patching_rect" : [ 554.0, 433.0, 40.0, 17.0 ],
 									"text" : "uno"
 								}
 
@@ -1392,7 +1392,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 75.0, 352.0, 212.0, 19.0 ],
+									"patching_rect" : [ 419.0, 458.0, 212.0, 19.0 ],
 									"text" : "j.parameter my_menu @type string",
 									"varname" : "my_menu"
 								}
@@ -1408,7 +1408,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 75.0, 254.0, 226.0, 19.0 ],
+									"patching_rect" : [ 419.0, 360.0, 226.0, 19.0 ],
 									"text" : "j.parameter my_toggle @type boolean",
 									"varname" : "my_toggle"
 								}
@@ -1424,7 +1424,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 75.0, 165.0, 204.0, 19.0 ],
+									"patching_rect" : [ 419.0, 271.0, 204.0, 19.0 ],
 									"text" : "j.parameter my_int @type integer",
 									"varname" : "my_int"
 								}
@@ -1442,7 +1442,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 75.0, 327.0, 74.0, 19.0 ],
+									"patching_rect" : [ 419.0, 433.0, 74.0, 19.0 ],
 									"varname" : "My_Menu"
 								}
 
@@ -1455,7 +1455,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 75.0, 234.0, 18.0, 18.0 ],
+									"patching_rect" : [ 419.0, 340.0, 18.0, 18.0 ],
 									"varname" : "My_Toggle"
 								}
 
@@ -1470,7 +1470,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 75.0, 145.0, 51.0, 19.0 ],
+									"patching_rect" : [ 419.0, 251.0, 51.0, 19.0 ],
 									"triscale" : 0.9,
 									"varname" : "My_Int"
 								}
@@ -1485,7 +1485,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 125.0, 145.0, 44.0, 19.0 ],
+									"patching_rect" : [ 469.0, 251.0, 44.0, 19.0 ],
 									"text" : "my_int"
 								}
 
@@ -1499,7 +1499,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 97.0, 232.0, 62.0, 19.0 ],
+									"patching_rect" : [ 441.0, 338.0, 62.0, 19.0 ],
 									"text" : "my_toggle"
 								}
 
@@ -1513,7 +1513,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 148.0, 327.0, 59.0, 19.0 ],
+									"patching_rect" : [ 492.0, 433.0, 59.0, 19.0 ],
 									"text" : "my_menu"
 								}
 
@@ -1524,7 +1524,7 @@
 									"destination" : [ "obj-52", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 299.5, 349.5, 84.5, 349.5 ],
+									"midpoints" : [ 643.5, 455.5, 428.5, 455.5 ],
 									"source" : [ "obj-29", 0 ]
 								}
 
@@ -1534,7 +1534,7 @@
 									"destination" : [ "obj-52", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 259.5, 349.5, 84.5, 349.5 ],
+									"midpoints" : [ 603.5, 455.5, 428.5, 455.5 ],
 									"source" : [ "obj-30", 0 ]
 								}
 
@@ -1544,7 +1544,7 @@
 									"destination" : [ "obj-52", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 219.5, 349.5, 84.5, 349.5 ],
+									"midpoints" : [ 563.5, 455.5, 428.5, 455.5 ],
 									"source" : [ "obj-31", 0 ]
 								}
 
@@ -1554,7 +1554,7 @@
 									"destination" : [ "obj-52", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 112.0, 349.0, 84.5, 349.0 ],
+									"midpoints" : [ 456.0, 455.0, 428.5, 455.0 ],
 									"source" : [ "obj-58", 1 ]
 								}
 
@@ -1580,7 +1580,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 431.5, 413.5, 72.0, 26.0 ],
+					"patching_rect" : [ 222.5, 405.5, 72.0, 26.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1617,7 +1617,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1320.0, 934.0 ],
+						"rect" : [ 0.0, 26.0, 1135.0, 806.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,

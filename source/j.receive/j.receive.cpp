@@ -128,6 +128,7 @@ void WrappedReceiverClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	SymbolPtr					address;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
+    t_atom						a[1];
 	
 	// read first argument
 	if (attrstart && argv) 
@@ -160,6 +161,20 @@ void WrappedReceiverClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 
 	// handle attribute args
 	attr_args_process(x, argc, argv);
+    
+    // for absolute address
+	if (x->address.getType() == kAddressAbsolute) {
+		
+		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
+		atom_setsym(a, gensym((char*)x->address.c_str()));
+		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
+        
+        JamomaDebug object_post((ObjectPtr)x, "binds on %s", x->address.c_str());
+        
+        x->wrappedObject->sendMessage(kTTSym_Get);
+        
+		return;
+	}
 	
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
@@ -184,7 +199,7 @@ void receive_subscribe(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue						v;
-	Atom						a[1];
+	t_atom						a[1];
 	TTAddress                   contextAddress = kTTAdrsEmpty;
 	TTAddress                   absoluteAddress, returnedAddress;
     TTNodePtr                   returnedNode = NULL;
@@ -197,20 +212,6 @@ void receive_subscribe(TTPtr self)
 	// if the j.receive tries to bind an Output object : bind the signal attribute
 	if (x->address.getName() == TTSymbol("out") || x->address.getName() == TTSymbol("in"))
 		x->address = x->address.appendAttribute(kTTSym_signal);
-	
-	// for absolute address
-	if (x->address.getType() == kAddressAbsolute) {
-		
-		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
-		atom_setsym(a, gensym((char*)x->address.c_str()));
-		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
-        
-        JamomaDebug object_post((ObjectPtr)x, "binds on %s", x->address.c_str());
-        
-        x->wrappedObject->sendMessage(kTTSym_Get);
-        
-		return;
-	}
 	
 	// for relative address
 	jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
@@ -295,7 +296,7 @@ void receive_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, Ato
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTAddress                   absoluteAddress;
-	Atom						a[1];
+	t_atom						a[1];
 	
 	if (argc && argv && x->wrappedObject) {
 		
@@ -375,7 +376,23 @@ void receive_bang(TTPtr self)
 void receive_address(TTPtr self, SymbolPtr address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    t_atom						a[1];
+    
 	x->address =  TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+    
+    // for absolute address
+	if (x->address.getType() == kAddressAbsolute) {
+		
+		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
+		atom_setsym(a, gensym((char*)x->address.c_str()));
+		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
+        
+        JamomaDebug object_post((ObjectPtr)x, "binds on %s", x->address.c_str());
+        
+        x->wrappedObject->sendMessage(kTTSym_Get);
+        
+		return;
+	}
 	
 	receive_subscribe(self);
 }

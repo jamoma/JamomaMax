@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.out~" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Module conduit for audio output
 	</digest>
 	<description>
-		TEXT_HERE
+		Module conduit for audio output
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -23,7 +23,7 @@
 	<inletlist>
 		<inlet id="0" type="signal">
 			<digest>
-				connect to the algorithm
+				Connect to the algorithm
 			</digest>
 			<description>
 				TEXT_HERE
@@ -31,7 +31,7 @@
 		</inlet>
 		<inlet id="1" type="signal">
 			<digest>
-				connect to the algorithm
+				Connect to the algorithm
 			</digest>
 			<description>
 				TEXT_HERE
@@ -42,7 +42,7 @@
 	<outletlist>
 		<outlet id="0" type="signal">
 			<digest>
-				output of the model
+				Audio output of the model
 			</digest>
 			<description>
 				TEXT_HERE
@@ -61,10 +61,10 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				Name of the output instance
 			</digest>
 			<description>
-				TEXT_HERE
+				Name of the output instance
 			</description>
 		</objarg>
 	</objarglist>
@@ -106,10 +106,10 @@
 		<method name="signal">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Audio signal to send out of the model
 			</digest>
 			<description>
-				TEXT_HERE
+				Audio signal to send out of the model
 			</description>
 		</method>
 	</methodlist>
@@ -187,8 +187,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.in~">
+		<seealso name="j.out">
 	</seealsolist>
 </c74object>

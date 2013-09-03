@@ -475,8 +475,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 28.0, 111.001862, 196.0, 33.0 ],
-									"text" : "j.test.assert.equal patcher-test @input bang @compareTo nothing"
+									"patching_rect" : [ 28.0, 111.001862, 220.0, 33.0 ],
+									"text" : "j.test.assert.equal patcher-test @input bang @compareTo /test:value"
 								}
 
 							}

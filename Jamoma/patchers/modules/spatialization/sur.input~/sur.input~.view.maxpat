@@ -1119,7 +1119,7 @@
                     "digest": "",
                     "default_fontname": "Verdana"
                   },
-                  "text": "p delete_j.meter_receive"
+                  "text": "p delete_j.receive~"
                 }
               },
               {
@@ -1327,7 +1327,7 @@
                             156.0,
                             19.0
                           ],
-                          "text": "prepend j.meter_receive"
+                          "text": "prepend j.receive~"
                         }
                       },
                       {
@@ -1681,7 +1681,7 @@
                     "digest": "",
                     "default_fontname": "Verdana"
                   },
-                  "text": "p create_j.meter_receive"
+                  "text": "p create_j.receive~"
                 }
               },
               {
@@ -4472,7 +4472,7 @@
             119.0,
             19.0
           ],
-          "text": "j.receive in.1/amplitude",
+          "text": "j.receive~ out.1",
           "varname": "j.meter1"
         }
       }
@@ -5207,7 +5207,7 @@
     ],
     "dependency_cache": [
       {
-        "name": "j.meter_receive.maxpat",
+        "name": "j.receive~.maxpat",
         "bootpath": "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/meter_receive",
         "patcherrelativepath": "../../../library/components/meter_receive",
         "type": "JSON",

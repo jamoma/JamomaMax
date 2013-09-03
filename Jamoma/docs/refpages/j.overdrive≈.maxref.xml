@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.overdrive≈" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Overdrive multichannels signal
 	</digest>
 	<description>
-		TEXT_HERE
+		Overdrive multichannels signal
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,14 +16,14 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			audio graph
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				multichannel input and control messages
+				Multichannel input and control messages
 			</digest>
 			<description>
 				TEXT_HERE
@@ -31,7 +31,7 @@
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				multichannel input 2
+				Multichannel input 2
 			</digest>
 			<description>
 				TEXT_HERE
@@ -42,7 +42,7 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				multichannel output 1
+				Multichannel output 1
 			</digest>
 			<description>
 				TEXT_HERE
@@ -70,7 +70,7 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="audio.connect">
+		<!-- 	<method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -82,17 +82,18 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="calculate">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
+ -->
+		<!-- <method name="calculate">
+	<arglist>
+		<arg name="ARG_NAME_0" type="list" optional="0" />
+	</arglist>
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+</method> -->
 		<method name="clear">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -104,7 +105,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="getProcessingBenchmark">
+		<!-- 		<method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -115,7 +116,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="graph.connect">
+ -->
+		<!-- 				<method name="graph.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -127,7 +129,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="resetBenchmarking">
+ -->
+		<!-- 						<method name="resetBenchmarking">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -138,7 +141,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="test">
+ -->
+		<!-- 								<method name="test">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -149,6 +153,7 @@
 				TEXT_HERE
 			</description>
 		</method>
+ -->
 	</methodlist>
 	<!--ATTRIBUTES-->
 	<attributelist>
@@ -227,8 +232,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.overdrive~">
+		<seealso name="jamoma≈">
+		<seealso name="j.array≈">
 	</seealsolist>
 </c74object>

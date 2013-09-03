@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.multimixer≈" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Mixing matrix for NxM multichannel signals
 	</digest>
 	<description>
-		TEXT_HERE
+		Mixing matrix for NxM multichannel signals
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,25 +16,25 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			multichannel
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				multichannel input and control messages
+				Multichannel input and control messages
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel input and control messages
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				multichannel input 2
+				Multichannel input 2
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel input 2
 			</description>
 		</inlet>
 	</inletlist>
@@ -42,10 +42,10 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				multichannel output 1
+				Multichannel output 1
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel output 1
 			</description>
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
@@ -53,7 +53,7 @@
 				dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				Dumpout
 			</description>
 		</outlet>
 	</outletlist>
@@ -61,16 +61,25 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				Number of inputs
 			</digest>
 			<description>
-				TEXT_HERE
+				Number of multichannels inputs
 			</description>
 		</objarg>
+		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+			<digest>
+				Number of outputs
+			</digest>
+			<description>
+				Number of multichannels outputs
+			</description>
+		</objarg>
+
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="audio.connect">
+		<!-- 	<method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -82,29 +91,30 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="calculate">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
+ -->
+		<!-- <method name="calculate">
+	<arglist>
+		<arg name="ARG_NAME_0" type="list" optional="0" />
+	</arglist>
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+</method> -->
 		<method name="clear">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Clear all routing connections
 			</digest>
 			<description>
-				TEXT_HERE
+				Clear all routing connections
 			</description>
 		</method>
-		<method name="getProcessingBenchmark">
+		<!-- 		<method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -115,7 +125,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="graph.connect">
+ -->
+		<!-- 				<method name="graph.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -127,6 +138,7 @@
 				TEXT_HERE
 			</description>
 		</method>
+ -->
 		<method name="setGain">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -149,7 +161,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="resetBenchmarking">
+		<!-- 						<method name="resetBenchmarking">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -160,7 +172,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="test">
+ -->
+		<!-- 								<method name="test">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -171,6 +184,7 @@
 				TEXT_HERE
 			</description>
 		</method>
+ -->
 		<method name="setLinearGain">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -209,18 +223,18 @@
 		</attribute>
 		<attribute name="numInputs" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Default number of multichannels inputs
 			</digest>
 			<description>
-				TEXT_HERE
+				Default number of multichannels inputs
 			</description>
 		</attribute>
 		<attribute name="numOutputs" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Default number of multichannels outputs
 			</digest>
 			<description>
-				TEXT_HERE
+				Default number of multichannels outputs
 			</description>
 		</attribute>
 		<attribute name="sampleRate" get="1" set="1" type="int" size="1">
@@ -238,8 +252,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.mixer≈"/>
+		<seealso name="matrix~"/>
 	</seealsolist>
 </c74object>

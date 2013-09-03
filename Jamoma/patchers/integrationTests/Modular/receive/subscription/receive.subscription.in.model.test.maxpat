@@ -520,8 +520,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 28.0, 111.001862, 202.0, 33.0 ],
-									"text" : "j.test.assert.equal in.model-test @input test @compareTo nothing"
+									"patching_rect" : [ 28.0, 111.001862, 222.0, 33.0 ],
+									"text" : "j.test.assert.equal in.model-test @input test @compareTo /tester/test:value"
 								}
 
 							}

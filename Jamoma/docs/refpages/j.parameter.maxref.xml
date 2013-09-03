@@ -8,7 +8,7 @@
 		Declaring parameter of a patcher
 	</digest>
 	<description>
-		j.parameter allows to declare a parameter within a patche of model
+		j.parameter allows to declare a parameter within a patch or a model
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			model
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->

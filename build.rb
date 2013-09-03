@@ -46,15 +46,17 @@ zero_count
 load "build.rb"
 
 # copy build results into the Max Package
+# todo : on windows add a case if we want debug or release, 32 or 64
 `cp -r "#{glibdir}"/../../Core/*/library/build/*.dylib "#{glibdir}"/Jamoma/support` if mac?
-`cp -r "#{glibdir}"/../../Core/*/library/build/*.dll "#{glibdir}"/Jamoma/support` if win?
-`rm "#{glibdir}"/Jamoma/support/*-i386.dylib`
-`rm "#{glibdir}"/Jamoma/support/*-x86_64.dylib`
+`cp -r "#{glibdir}"/../../Core/*/library/Debug/*.dll "#{glibdir}"/Jamoma/support` if win?
+`rm "#{glibdir}"/Jamoma/support/*-i386.dylib` if mac?
+`rm "#{glibdir}"/Jamoma/support/*-x86_64.dylib` if mac?
 `cp -r "#{glibdir}"/../../Core/*/extensions/*/build/*.ttdylib "#{glibdir}"/Jamoma/support` if mac?
-`rm "#{glibdir}"/Jamoma/support/*-i386.ttdylib`
-`rm "#{glibdir}"/Jamoma/support/*-x86_64.ttdylib`
-`cp -r "#{glibdir}"/../../Core/*/extensions/*/build/*.ttdll "#{glibdir}"/Jamoma/support` if win?
-`mv "#{glibdir}"/Jamoma/externals/j.loader.mxo "#{glibdir}"/Jamoma/extensions/`
+`cp -r "#{glibdir}"/../../Core/*/extensions/*/Debug/*.ttdll "#{glibdir}"/Jamoma/support` if win?
+`rm "#{glibdir}"/Jamoma/support/*-i386.ttdylib` if mac?
+`rm "#{glibdir}"/Jamoma/support/*-x86_64.ttdylib` if mac?
+`mv "#{glibdir}"/Jamoma/externals/j.loader.mxo "#{glibdir}"/Jamoma/extensions/` if mac?
+`mv "#{glibdir}"/Jamoma/externals/j.loader.mxe "#{glibdir}"/Jamoma/extensions/` if win?
 
 # Making sure that twin projects build on Mac
 if win?

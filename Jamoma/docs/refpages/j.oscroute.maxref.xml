@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.oscroute" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Route Open Sound Control messages
 	</digest>
 	<description>
-		TEXT_HERE
+		Route Open Sound Control messages
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			osc
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -50,7 +50,7 @@
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
 			<digest>
-				dumpout / overflow from non-matching input
+				Non-matching input
 			</digest>
 			<description>
 				TEXT_HERE
@@ -61,10 +61,10 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				OSC address to route
 			</digest>
 			<description>
-				TEXT_HERE
+				OSC address to route
 			</description>
 		</objarg>
 	</objarglist>
@@ -131,8 +131,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.oscinstance"/>
+		<seealso name="j.pass"/>
+		<seealso name="route"/>
 	</seealsolist>
 </c74object>
