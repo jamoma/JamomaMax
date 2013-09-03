@@ -89,7 +89,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_return_gain,						"return_gain",						A_CANT, 0);
 	class_addmethod(c, (method)ui_return_freeze,					"return_freeze",					A_CANT, 0);
 	class_addmethod(c, (method)ui_return_preview,					"return_preview",					A_CANT, 0);
-	class_addmethod(c, (method)ui_return_preset_order,				"return_preset_order",				A_CANT, 0);
+	class_addmethod(c, (method)ui_return_preset_names,				"return_preset_names",				A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_return_signal,					"return_signal",					A_CANT, 0);
 	
@@ -160,7 +160,7 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		x->hash_datas = new TTHash();
 		x->hash_viewers = new TTHash();
 		x->hash_receivers = new TTHash();
-		x->preset_order = NULL;
+		x->preset_names = NULL;
 		x->preset_num = 0;
 		
 		jbox_ready(&x->box);
@@ -343,9 +343,7 @@ void ui_build(t_ui *x)
 	t_rect			uiRect;
 	
 	// Examine the context to resize the view, set textfield, ...
-	
-    // TEST : get the module patcher to resize it
-    //x->patcherPtr = jamoma_patcher_get(jamoma_patcher_get((ObjectPtr)x));
+    
     x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
 	hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
 	
@@ -364,7 +362,7 @@ void ui_build(t_ui *x)
 		boxRect.height = uiRect.height;
 		object_attr_set_rect(box, _sym_presentation_rect, &boxRect);
         
-        // Module CASE : is this bpather inside another bpatcher ?
+        // Module CASE : is this bpatcher inside another bpatcher ?
         modulePatcher = jamoma_patcher_get(x->patcherPtr);
         moduleHierarchy = jamoma_patcher_get_hierarchy(modulePatcher);
         
@@ -1200,12 +1198,12 @@ void ui_menu_build(t_ui *x)
 	linklist_append(x->menu_items, item);	
 	
 	// append preset name list
-	if (x->preset_order) {
+	if (x->preset_names) {
 		item = (t_symobject *)symobject_new(gensym("-"));
 		linklist_append(x->menu_items, item);
 		
 		for (i=0; i<x->preset_num; i++) {
-			item = (t_symobject *)symobject_new(atom_getsym(&x->preset_order[i]));
+			item = (t_symobject *)symobject_new(atom_getsym(&x->preset_names[i]));
 			linklist_append(x->menu_items, item);
 		}
 	}

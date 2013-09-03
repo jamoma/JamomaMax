@@ -59,10 +59,10 @@ void model_preset_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 }
 */
 
-void model_preset_return_order(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_preset_return_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	outlet_anything(x->outlets[dump_out], gensym("order"), argc, argv);
+	outlet_anything(x->outlets[dump_out], gensym("names"), argc, argv);
 }
 
 void model_preset_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -310,8 +310,8 @@ void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		
 		if (atom_gettype(argv) == A_LONG) {
 			
-			// get presets order
-			EXTRA->presetManager->getAttributeValue(TTSymbol("order"), v);
+			// get presets names
+			EXTRA->presetManager->getAttributeValue(TTSymbol("names"), v);
 			
 			if (atom_getlong(argv) <= v.size())
 				name = v[atom_getlong(argv)-1];

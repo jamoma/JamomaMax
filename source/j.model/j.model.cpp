@@ -45,7 +45,7 @@ void WrapTTContainerClass(WrappedClassPtr c)
     //class_addmethod(c->maxClass, (method)model_edit,					"dblclick",				A_CANT, 0);
     //class_addmethod(c->maxClass, (method)model_edclose,               "edclose",				A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_preset_return_order,		"return_order",			A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_preset_return_names,		"return_names",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_preset_filechanged,		"filechanged",			A_CANT, 0);
 	
 	class_addmethod(c->maxClass, (method)model_preset_read,				"preset_read",			A_CANT, 0);
@@ -128,9 +128,21 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 void WrappedContainerClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTAddress    modelAddress, presetAddress;
+    TTValue      v;
     
-    // delete the preset manager
-    TTObjectBaseRelease(&EXTRA->presetManager);
+    if (EXTRA->presetManager) {
+        // get the modelAddress from the preset manager address
+        EXTRA->presetManager->getAttributeValue(kTTSym_address, v);
+        modelAddress = v[0];
+        presetAddress = modelAddress.appendAddress(TTAddress("preset"));
+        
+        // remove the preset node
+        JamomaDirectory->TTNodeRemove(presetAddress);
+        
+        // delete the preset manager
+        TTObjectBaseRelease(&EXTRA->presetManager);
+    }
     
     // delete filewatcher
 	if (EXTRA->filewatcher) {
@@ -334,6 +346,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTValue         o;
     TTObjectBasePtr modelAddressData;
+    SymbolPtr		hierarchy;
     ObjectPtr		aPatcher;
     TTList          whereToSearch;
     TTBoolean       isThere;
@@ -347,8 +360,15 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
         
         modelAddressData = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
         
-        // look for a model of the same class into the patcher to get his model/address
-        jamoma_patcher_get_model_patcher(x->patcherPtr, x->patcherClass, &aPatcher);
+        hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
+        
+        // if the view is inside a bpatcher
+        if (hierarchy == _sym_bpatcher)
+            // look for a model of the same class into the patcher of the bpatcher to get his model/address
+            jamoma_patcher_get_model_patcher(jamoma_patcher_get(x->patcherPtr), x->patcherClass, &aPatcher);
+        else
+            // look for a model of the same class into the patcher to get his model/address
+            jamoma_patcher_get_model_patcher(x->patcherPtr, x->patcherClass, &aPatcher);
         
         // if a model exists
         if (aPatcher) {
@@ -370,7 +390,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
         }
         
         // else, if args exists, the first argument of the patcher is the model/address value
-        else if (argc > 0) {
+        else if (argc > 0 && atom_gettype(argv) == A_SYM) {
             
             argAdrs = TTAddress(atom_getsym(argv)->s_name);
             

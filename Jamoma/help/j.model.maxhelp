@@ -166,7 +166,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 823.0, 456.25, 127.0, 18.0 ],
-									"text" : "3 \"another case\""
+									"text" : "1 default"
 								}
 
 							}
@@ -207,8 +207,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 584.0, 425.25, 123.0, 20.0 ],
-									"text" : "j.receive preset:order"
+									"patching_rect" : [ 584.0, 425.25, 131.0, 20.0 ],
+									"text" : "j.receive preset:names"
 								}
 
 							}
@@ -651,7 +651,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 266.0, 76.75, 100.0, 58.0 ],
-									"text" : "preset:order \"standard setup\" \"another case\" default"
+									"text" : "preset:names \"standard setup\" \"another case\" default"
 								}
 
 							}
@@ -3254,26 +3254,12 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-19",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 990.0, 509.0, 70.0, 18.0 ],
-					"text" : "j.preset"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-16",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 990.0, 529.0, 61.0, 18.0 ],
+					"patching_rect" : [ 989.0, 509.0, 61.0, 18.0 ],
 					"text" : "j.view"
 				}
 
@@ -3359,7 +3345,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 990.0, 569.0, 75.0, 18.0 ],
+					"patching_rect" : [ 989.0, 549.0, 75.0, 18.0 ],
 					"text" : "j.remote"
 				}
 
@@ -3415,7 +3401,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 990.0, 549.0, 53.0, 18.0 ],
+					"patching_rect" : [ 989.0, 529.0, 53.0, 18.0 ],
 					"text" : "j.ui"
 				}
 
@@ -3883,15 +3869,6 @@
 					"disabled" : 0,
 					"hidden" : 1,
 					"source" : [ "obj-18", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-19", 0 ]
 				}
 
 			}

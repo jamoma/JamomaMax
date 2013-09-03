@@ -83,7 +83,7 @@ typedef struct _ui{
 	void				*menu_qelem;			// ...
 	long				menu_selection;			// ...
 	t_linklist			*menu_items;			// ...
-	AtomPtr				preset_order;
+	AtomPtr				preset_names;
 	AtomCount			preset_num;
 
 	t_jpopupmenu		*refmenu;				// reference menu
@@ -218,4 +218,4 @@ void		ui_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_preset_store_next(t_ui *x);
 void		ui_preset_doread(t_ui *x);
 void		ui_preset_dowrite(t_ui *x);
-void		ui_return_preset_order(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
