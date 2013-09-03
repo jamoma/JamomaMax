@@ -192,6 +192,11 @@ void WrappedSenderClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 		address = _sym_nothing;
 	
 	x->address = TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+    
+    // if the j.send tries to bind an Input object : bind the signal attribute
+    if (x->address.getName() == TTSymbol("in"))
+        x->address = x->address.appendAttribute(kTTSym_signal);
+    
 	x->argc = 0; // the argc member is usefull to count how many time the external tries to bind
 
 #ifdef JCOM_SEND_TILDE
@@ -254,10 +259,6 @@ void send_subscribe(TTPtr self)
 	
 	if (x->address == kTTAdrsEmpty)
 		return;
-	
-	// if the j.send tries to bind an Input object : bind the signal attribute
-	if (x->address.getName() == TTSymbol("in"))
-		x->address = x->address.appendAttribute(kTTSym_signal);
 	
 	// for relative address
 	jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
@@ -561,7 +562,7 @@ void send_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doub
 					if (anObject) {
 						
 						// INPUT case : cache the signal into the input
-						if (anObject->getName() == kTTSym_Input)
+						if (anObject->getName() == kTTSym_InputAudio)
 							TTInputPtr(anObject)->mSignalCache->appendUnique(aSender->mSignal);
 						
 						// DATA case : send the mean value of the sample

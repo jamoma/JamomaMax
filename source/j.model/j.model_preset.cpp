@@ -13,7 +13,6 @@ void model_preset_subscribe(TTPtr self, TTAddress modelAddress)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue						v, a, args;
-	TTDataPtr					aData;
 	TTXmlHandlerPtr				aXmlHandler;
     TTTextHandlerPtr			aTextHandler;
     TTAddress                   presetAddress;

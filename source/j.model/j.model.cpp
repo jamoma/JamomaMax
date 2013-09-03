@@ -63,6 +63,16 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)model_preset_read_again,		"preset:read/again",	0);
 	class_addmethod(c->maxClass, (method)model_preset_write_again,		"preset:write/again",	0);
+    
+    class_addmethod(c->maxClass, (method)model_signal_return_flow_mute,	"return_flow_mute",		A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_signal_return_flow_bypass,"return_flow_bypass",	A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_flow_freeze,"return_flow_freeze",	A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_flow_preview,"return_flow_preview",A_CANT, 0);
+    
+    class_addmethod(c->maxClass, (method)model_signal_return_audio_mute,"return_audio_mute",	A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_audio_bypass,"return_audio_bypass",A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_audio_mix,"return_audio_mix",      A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_audio_gain,"return_audio_gain",	A_CANT, 0);
 	
 	CLASS_ATTR_LONG(c->maxClass,		"load_default",	0,		WrappedModularInstance,	extra);
 	CLASS_ATTR_DEFAULT(c->maxClass,		"load_default",	0,		"1")
@@ -259,6 +269,9 @@ void model_subscribe(TTPtr self)
                     
                     // subscribe preset manager object
                     model_preset_subscribe(self, returnedAddress);
+                    
+                    // subscribe signal in/out datas
+                    model_signal_subscribe(self, returnedAddress);
                     
                     /*
                     // Add a /model/edit data

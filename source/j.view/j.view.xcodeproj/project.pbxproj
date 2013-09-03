@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		4606969A17CD0184000AF37B /* j.model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = j.model.h; path = ../j.model/j.model.h; sourceTree = "<group>"; };
+		463284A717D5ED1C008A11EC /* j.view.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.view.yml; sourceTree = "<group>"; };
 		D289EC34150FD2DB00FC7F7E /* j.model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = j.model.cpp; path = ../j.model/j.model.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -15,6 +16,7 @@
 		08FB7794FE84155DC02AAC07 /* j.view */ = {
 			isa = PBXGroup;
 			children = (
+				463284A717D5ED1C008A11EC /* j.view.yml */,
 				4606969A17CD0184000AF37B /* j.model.h */,
 				D289EC34150FD2DB00FC7F7E /* j.model.cpp */,
 			);

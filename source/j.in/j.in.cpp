@@ -233,9 +233,7 @@ void in_subscribe(TTPtr self)
 	TTNodePtr	returnedNode = NULL;
     TTNodePtr   returnedContextNode = NULL;
 	TTAddress   returnedAddress, parentAddress;
-	TTDataPtr	aData;
 	TTString	formatDescription, sInstance;
-	SymbolPtr	inDescription;
 	
 #ifdef JCOM_IN_TILDE
     signalAddress = TTAddress("audio");
@@ -259,22 +257,6 @@ void in_subscribe(TTPtr self)
 		returnedNode->getParent()->getAddress(parentAddress);
 		outputAddress = parentAddress.appendAddress(TTAddress("out")).appendInstance(EXTRA->instance);
 		x->wrappedObject->setAttributeValue(TTSymbol("outputAddress"), outputAddress);
-        
-        /* TODO : move this inside j.model (which have to listen any signal node creation/destruction)
-
-         // make internal parameter at signal/mute address
-         makeInternals_data(x, parentAddress, TTSymbol("mute"), gensym("return_mute"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
-         aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-         aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-         aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter turns off model's audio processing"));
-         
-         // make internal parameter at signal/bypass address
-         makeInternals_data(x, parentAddress, TTSymbol("bypass"), gensym("return_bypass"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
-         aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-         aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-         aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter bypasses the model's processing algtorithm, letting incoming signal pass through unaffected"));
-         */
-
 	}
 }
 

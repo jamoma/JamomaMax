@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
@@ -37,8 +37,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 610.0, 96.0, 123.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"patching_rect" : [ 610.0, 96.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.2"
 				}
 
 			}
@@ -79,8 +79,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 610.0, 33.0, 123.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"patching_rect" : [ 610.0, 33.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.1"
 				}
 
 			}
@@ -185,7 +185,7 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/#1"
+					"text" : "/degrade~"
 				}
 
 			}
@@ -318,27 +318,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

@@ -86,3 +86,16 @@ void		model_preset_subscribe(TTPtr self, TTAddress modelAddress);
 
 t_max_err	model_preset_get_load_default(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av);
 t_max_err	model_preset_set_load_default(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av);
+
+void        model_signal_subscribe(TTPtr self, TTAddress modelAddress);
+
+void        model_signal_return_flow_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_flow_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_flow_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_flow_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+void        model_signal_return_audio_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_audio_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_audio_mix(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_audio_gain(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+

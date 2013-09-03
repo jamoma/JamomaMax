@@ -463,18 +463,21 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 {
 	t_ui* obj = (t_ui*)self;
 	TTObjectBasePtr anObject;
-	TTBoolean	gain = false;
-	TTBoolean	mix = false;
-	TTBoolean	bypass = false;
-	TTBoolean	freeze = false;
-	TTBoolean	preview = false;
-    TTBoolean	mute = false;
-	TTBoolean	preset = false;			// is there a preset node in the model ?
-	TTBoolean	model = false;			// is there a model node in the model ?
-	TTBoolean	change = false;
+	TTBoolean	gain = NO;
+	TTBoolean	mix = NO;
+	TTBoolean	bypass = NO;
+	TTBoolean	freeze = NO;
+	TTBoolean	preview = NO;
+    TTBoolean	mute = NO;
+	TTBoolean	preset = NO;		// is there a preset node in the model ?
+	TTBoolean	model = NO;			// is there a model node in the model ?
+	TTBoolean	change = NO;
 	TTAddress   relativeAddress;
+    TTBoolean   flowInput = NO;
+    TTBoolean   flowOutput = NO;
+    TTBoolean   audioInput = NO;
+    TTBoolean   audioOutput = NO;
 
-	
 	// model namespace observation
 	if (obj->modelAddress != kTTAdrsEmpty) {
         
@@ -483,37 +486,51 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
             
 			relativeAddress = TTAddress(atom_getsym(argv+i)->s_name);
             
-            if (relativeAddress.getName() == TTSymbol("out")) {
+            if (relativeAddress.getName() == TTSymbol("in")) {
                 
-                TTNodePtr   aNode;
-                TTValue     v;
-                TTSymbol    type;
+                if (relativeAddress.getParent() == TTAddress("flow"))
+                    flowInput = YES;
                 
-                // check first Output object type to know what to display
-                if (!JamomaDirectory->getTTNode(obj->modelAddress.appendAddress(TTAddress("out.1")), &aNode)) {
-                    
-                    aNode->getObject()->getAttributeValue("type", v);
-                    type = v[0];
-                }
-                
-                if (type == TTSymbol("audio")) {
-                    gain = true;
-                    mix = true;
-                    mute = true;
-                }
-                else {
-                    freeze = true;
-                    preview = true;
-                    mute = true;
-                }
+                else if (relativeAddress.getParent() == TTAddress("audio"))
+                    audioInput = YES;
+				
             }
-			else if (relativeAddress.getName() == TTSymbol("in"))
-				bypass = true;
+            else if (relativeAddress.getName() == TTSymbol("out")) {
+                
+                if (relativeAddress.getParent() == TTAddress("flow"))
+                    flowOutput = YES;
+                
+                else if (relativeAddress.getParent() == TTAddress("audio"))
+                    audioOutput = YES;
+            }
 			else if (relativeAddress.getName() == TTSymbol("preset"))
 				preset = true;
+            
             else if (relativeAddress.getName() == TTSymbol("model"))
 				model = true;
 		}
+        
+        if (flowInput || flowOutput)
+            mute = true;
+        
+        if (flowInput && flowOutput)
+            bypass = true;
+        
+        if (flowOutput) {
+            freeze = true;
+            preview = true;
+        }
+        
+        if (audioInput || audioOutput)
+            mute = true;
+        
+        if (audioInput && audioOutput) {
+            bypass = true;
+            mix = true;
+        }
+        
+        if (audioOutput)
+            gain = true;
 		
 		// if a data appears or disappears : create or remove the viewer
 		
@@ -521,10 +538,10 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 		if (gain != obj->has_gain) {
 			obj->has_gain = gain;
 			if (gain) 
-				ui_viewer_create(obj, &anObject, gensym("return_gain"), TTSymbol("out.*/gain"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_gain"), TTSymbol("*.*/gain"), obj->modelAddress, YES);
 			else {
-				ui_viewer_destroy(obj, TTSymbol("out.*/gain"));
-				obj->hash_viewers->remove(TTSymbol("out.*/gain"));
+				ui_viewer_destroy(obj, TTSymbol("*.*/gain"));
+				obj->hash_viewers->remove(TTSymbol("*.*/gain"));
 			}
 		}
 		
@@ -532,10 +549,10 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 		if (mix != obj->has_mix) {
 			obj->has_mix = mix;
 			if (mix) 
-				ui_viewer_create(obj, &anObject, gensym("return_mix"), TTSymbol("out.*/mix"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_mix"), TTSymbol("*.*/mix"), obj->modelAddress, YES);
 			else {
-				ui_viewer_destroy(obj, TTSymbol("out.*/mix"));
-				obj->hash_viewers->remove(TTSymbol("out.*/mix"));
+				ui_viewer_destroy(obj, TTSymbol("*.*/mix"));
+				obj->hash_viewers->remove(TTSymbol("*.*/mix"));
 			}
 			
 			change = true;
@@ -545,10 +562,10 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 		if (bypass != obj->has_bypass) {
 			obj->has_bypass = bypass;
 			if (bypass) 
-				ui_viewer_create(obj, &anObject, gensym("return_bypass"), TTSymbol("in.*/bypass"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_bypass"), TTSymbol("*.*/bypass"), obj->modelAddress, YES);
 			else {
-				ui_viewer_destroy(obj, TTSymbol("in.*/bypass"));
-				obj->hash_viewers->remove(TTSymbol("in.*/bypass"));
+				ui_viewer_destroy(obj, TTSymbol("*.*/bypass"));
+				obj->hash_viewers->remove(TTSymbol("*.*/bypass"));
 			}
 			
 			change = true;
@@ -558,10 +575,10 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 		if (freeze != obj->has_freeze) {
 			obj->has_freeze = freeze;
 			if (freeze) 
-				ui_viewer_create(obj, &anObject, gensym("return_freeze"), TTSymbol("out.*/freeze"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_freeze"), TTSymbol("*.*/freeze"), obj->modelAddress, YES);
 			else {
-				ui_viewer_destroy(obj, TTSymbol("out.*/freeze"));
-				obj->hash_viewers->remove(TTSymbol("out.*/freeze"));
+				ui_viewer_destroy(obj, TTSymbol("*.*/freeze"));
+				obj->hash_viewers->remove(TTSymbol("*.*/freeze"));
 			}
 			
 			change = true;
@@ -571,10 +588,10 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 		if (preview != obj->has_preview) {
 			obj->has_preview = preview;
 			if (preview)
-				ui_viewer_create(obj, &anObject, gensym("return_preview"), TTSymbol("out.*/preview"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_preview"), TTSymbol("*.*/preview"), obj->modelAddress, YES);
 			else {
-				ui_viewer_destroy(obj, TTSymbol("out.*/preview"));
-				obj->hash_viewers->remove(TTSymbol("out.*/preview"));
+				ui_viewer_destroy(obj, TTSymbol("*.*/preview"));
+				obj->hash_viewers->remove(TTSymbol("*.*/preview"));
 			}
 			
 			change = true;
@@ -584,10 +601,10 @@ void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 		if (mute != obj->has_mute) {
 			obj->has_mute = mute;
 			if (mute) 
-				ui_viewer_create(obj, &anObject, gensym("return_mute"), TTSymbol("out.*/mute"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_mute"), TTSymbol("*.*/mute"), obj->modelAddress, YES);
 			else {
-				ui_viewer_destroy(obj, TTSymbol("out.*/mute"));
-				obj->hash_viewers->remove(TTSymbol("out.*/mute"));
+				ui_viewer_destroy(obj, TTSymbol("*.*/mute"));
+				obj->hash_viewers->remove(TTSymbol("*.*/mute"));
 			}
 			
 			change = true;

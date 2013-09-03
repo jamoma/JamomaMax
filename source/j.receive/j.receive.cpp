@@ -137,6 +137,11 @@ void WrappedReceiverClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 		address = _sym_nothing;
 	
 	x->address = TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+    
+    // if the j.receive tries to bind an Output object : bind the signal attribute
+	if (x->address.getName() == TTSymbol("out") || x->address.getName() == TTSymbol("in"))
+		x->address = x->address.appendAttribute(kTTSym_signal);
+    
 	x->index = 0; // the index member is usefull to count how many time the external tries to bind
 	
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
@@ -208,10 +213,6 @@ void receive_subscribe(TTPtr self)
 	
 	if (x->address == kTTAdrsEmpty)
 		return;
-	
-	// if the j.receive tries to bind an Output object : bind the signal attribute
-	if (x->address.getName() == TTSymbol("out") || x->address.getName() == TTSymbol("in"))
-		x->address = x->address.appendAttribute(kTTSym_signal);
 	
 	// for relative address
 	jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
