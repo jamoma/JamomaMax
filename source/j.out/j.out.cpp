@@ -124,7 +124,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 #endif
 	
 #ifdef JCOM_OUT_TILDE
-	return wrapTTModularClassAsMaxClass(kTTSym_Output, "j.out~", NULL, spec);
+	return wrapTTModularClassAsMaxClass(kTTSym_OutputAudio, "j.out~", NULL, spec);
 #else
 	return wrapTTModularClassAsMaxClass(kTTSym_Output, "j.out", NULL, spec);
 #endif
