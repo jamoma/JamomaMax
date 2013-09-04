@@ -53,10 +53,16 @@ load "build.rb"
 `rm "#{glibdir}"/Jamoma/support/*-x86_64.dylib` if mac?
 `cp -r "#{glibdir}"/../../Core/*/extensions/*/build/*.ttdylib "#{glibdir}"/Jamoma/support` if mac?
 `cp -r "#{glibdir}"/../../Core/*/extensions/*/Debug/*.ttdll "#{glibdir}"/Jamoma/support` if win?
+`cp -r "#{glibdir}"/../../Core/*/extensions/*/Debug/*.dll "#{glibdir}"/Jamoma/support` if win?
 `rm "#{glibdir}"/Jamoma/support/*-i386.ttdylib` if mac?
 `rm "#{glibdir}"/Jamoma/support/*-x86_64.ttdylib` if mac?
 `mv "#{glibdir}"/Jamoma/externals/j.loader.mxo "#{glibdir}"/Jamoma/extensions/` if mac?
 `mv "#{glibdir}"/Jamoma/externals/j.loader.mxe "#{glibdir}"/Jamoma/extensions/` if win?
+
+# dlls needed at running on windows, should be in support folder ?
+`cp -r "#{glibdir}"/../../Core/Foundation/library/libxml2/win32/bin/libxml2.dll "#{glibdir}"/Jamoma/support` if win?
+`cp -r "#{glibdir}"/../../Core/Foundation/library/libiconv/bin/iconv.dll "#{glibdir}"/Jamoma/support` if win?
+`cp -r "#{glibdir}"/../../Core/DSP/library/portaudio/Debug/PortAudio.dll "#{glibdir}"/Jamoma/support` if win?
 
 # Making sure that twin projects build on Mac
 if win?
