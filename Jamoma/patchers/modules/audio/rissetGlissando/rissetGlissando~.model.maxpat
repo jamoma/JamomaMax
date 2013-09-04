@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
@@ -112,13 +112,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-45",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 47.0, 144.0, 122.0, 31.0 ],
-					"text" : "/preset/store 1 default, /preset/write"
+					"patching_rect" : [ 47.0, 144.0, 182.0, 18.0 ],
+					"text" : "preset:store default, preset:write"
 				}
 
 			}
@@ -145,8 +144,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 122.0, 143.0, 18.0 ],
-					"text" : "/documentation/generate"
+					"patching_rect" : [ 28.0, 122.0, 176.0, 18.0 ],
+					"text" : "model/documentation/generate"
 				}
 
 			}
@@ -175,8 +174,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 88.0, 187.0, 40.0, 18.0 ],
-					"text" : "/init"
+					"patching_rect" : [ 88.0, 187.0, 32.5, 18.0 ],
+					"text" : "init"
 				}
 
 			}
@@ -283,7 +282,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -752,7 +751,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -1216,7 +1215,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -1728,7 +1727,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,

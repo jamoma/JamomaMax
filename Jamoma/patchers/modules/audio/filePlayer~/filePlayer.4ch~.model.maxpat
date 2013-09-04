@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
@@ -76,8 +76,8 @@
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 4,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 28.333336, 429.5, 96.666664, 20.0 ],
 					"text" : "j.pack≈ 4"
 				}
@@ -161,8 +161,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 57.0, 54.5, 198.0, 18.0 ],
-					"text" : "/preset/store 1 default, /preset/write"
+					"patching_rect" : [ 57.0, 54.5, 192.0, 18.0 ],
+					"text" : "preset:store default, preset:write"
 				}
 
 			}
@@ -175,8 +175,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 80.0, 77.0, 144.0, 18.0 ],
-					"text" : "/documentation/generate"
+					"patching_rect" : [ 73.0, 78.0, 176.0, 18.0 ],
+					"text" : "model/documentation/generate"
 				}
 
 			}
@@ -371,7 +371,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "filePlayer.algorithm.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -402,10 +402,6 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pack≈.mxo",
 				"type" : "iLaX"
 			}
  ]

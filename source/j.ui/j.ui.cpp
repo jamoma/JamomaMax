@@ -89,7 +89,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_return_gain,						"return_gain",						A_CANT, 0);
 	class_addmethod(c, (method)ui_return_freeze,					"return_freeze",					A_CANT, 0);
 	class_addmethod(c, (method)ui_return_preview,					"return_preview",					A_CANT, 0);
-	class_addmethod(c, (method)ui_return_preset_order,				"return_preset_order",				A_CANT, 0);
+	class_addmethod(c, (method)ui_return_preset_names,				"return_preset_names",				A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_return_signal,					"return_signal",					A_CANT, 0);
 	
@@ -130,7 +130,7 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 	t_ui			*x = NULL;
 	t_dictionary 	*d = NULL;
 	long 			flags;
-	TTValue			filters;
+	TTValue			f, out, filters;
 	
 	if (!(d=object_dictionaryarg(argc, argv)))
 		return NULL;	
@@ -160,7 +160,7 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		x->hash_datas = new TTHash();
 		x->hash_viewers = new TTHash();
 		x->hash_receivers = new TTHash();
-		x->preset_order = NULL;
+		x->preset_names = NULL;
 		x->preset_num = 0;
 		
 		jbox_ready(&x->box);
@@ -203,10 +203,11 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		
 		ui_explorer_create((ObjectPtr)x, &x->modelExplorer, gensym("return_modelExploration"));
 		
-		filters.append(TTSymbol("data"));
-		filters.append(TTSymbol("genericTag"));
-		
-		x->modelExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+        f = TTString("presetFilter object Data mode exclude");
+        f.fromString();
+        
+        x->modelExplorer->sendMessage(TTSymbol("FilterSet"), f, out);
+        x->modelExplorer->setAttributeValue(TTSymbol("depth"), 1);
 		
 		attr_dictionary_process(x, d); 	// handle attribute args
 		
@@ -323,9 +324,8 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 		}
 		x->modelOutput = NULL;
 		
-		// observe model initialisation to explore
+		// observe model initialisation to explore (the method also get the value)
 		ui_receiver_create(x, &aReceiver, gensym("return_model_init"), kTTSymEmpty, x->modelAddress.appendAttribute(kTTSym_initialized));
-		aReceiver->sendMessage(kTTSym_Get);
 	}
 	
 	// The following must be deferred because 
@@ -336,19 +336,23 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 void ui_build(t_ui *x)
 {
 	TTValue			v, n, p, args;
-	SymbolPtr		hierarchy;
+	SymbolPtr		hierarchy, moduleHierarchy;
 	ObjectPtr		box, textfield;
+    ObjectPtr       modulePatcher, moduleBox;
 	t_rect			boxRect;
 	t_rect			uiRect;
 	
 	// Examine the context to resize the view, set textfield, ...
-	x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
+    
+    x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
 	hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
 	
 	box = object_attr_getobj(x->patcherPtr, gensym("box"));
 	object_attr_get_rect((ObjectPtr)x, _sym_presentation_rect, &uiRect);
 	
 	if (hierarchy == _sym_bpatcher) {
+        
+        // resize the bpatcher
 		object_attr_get_rect(box, _sym_patching_rect, &boxRect);
 		boxRect.width = uiRect.width;
 		boxRect.height = uiRect.height;
@@ -357,6 +361,25 @@ void ui_build(t_ui *x)
 		boxRect.width = uiRect.width;
 		boxRect.height = uiRect.height;
 		object_attr_set_rect(box, _sym_presentation_rect, &boxRect);
+        
+        // Module CASE : is this bpatcher inside another bpatcher ?
+        modulePatcher = jamoma_patcher_get(x->patcherPtr);
+        moduleHierarchy = jamoma_patcher_get_hierarchy(modulePatcher);
+        
+        moduleBox = object_attr_getobj(modulePatcher, gensym("box"));
+        
+        if (moduleHierarchy == _sym_bpatcher) {
+            
+            // resize the module bpatcher
+            object_attr_get_rect(moduleBox, _sym_patching_rect, &boxRect);
+            boxRect.width = uiRect.width;
+            boxRect.height = uiRect.height;
+            object_attr_set_rect(moduleBox, _sym_patching_rect, &boxRect);
+            object_attr_get_rect(moduleBox, _sym_presentation_rect, &boxRect);
+            boxRect.width = uiRect.width;
+            boxRect.height = uiRect.height;
+            object_attr_set_rect(moduleBox, _sym_presentation_rect, &boxRect);
+        }
 	}
 	else if (hierarchy == _sym_subpatcher) {
 		object_attr_get_rect(x->patcherPtr, _sym_defrect, &boxRect);
@@ -1093,10 +1116,10 @@ void ui_menu_qfn(t_ui *x)
 		defer(x, (method)ui_preset_dowrite, NULL, 0, 0L);
 	
 	else if (item->sym == gensym("Restore Default Settings"))
-		ui_viewer_send(x, TTSymbol("preset/recall"), kTTVal1);
+		ui_viewer_send(x, TTSymbol("preset:recall"), kTTVal1);
 	
 	else if (item->sym == gensym("Store Current Preset"))
-		ui_viewer_send(x, TTSymbol("preset/store"), kTTValNONE);
+		ui_viewer_send(x, TTSymbol("preset:store"), kTTValNONE);
 	
 	else if (item->sym == gensym("Store as Next Preset"))
 		ui_preset_store_next(x);
@@ -1117,7 +1140,7 @@ void ui_menu_qfn(t_ui *x)
 		ui_viewer_send(x, TTSymbol("model/reference"), kTTValNONE);
 	
 	else	// assume the menu item is a preset name
-		ui_viewer_send(x, TTSymbol("preset/recall"), TTSymbol(item->sym->s_name));
+		ui_viewer_send(x, TTSymbol("preset:recall"), TTSymbol(item->sym->s_name));
 }
 
 void ui_menu_build(t_ui *x)
@@ -1175,12 +1198,12 @@ void ui_menu_build(t_ui *x)
 	linklist_append(x->menu_items, item);	
 	
 	// append preset name list
-	if (x->preset_order) {
+	if (x->preset_names) {
 		item = (t_symobject *)symobject_new(gensym("-"));
 		linklist_append(x->menu_items, item);
 		
 		for (i=0; i<x->preset_num; i++) {
-			item = (t_symobject *)symobject_new(atom_getsym(&x->preset_order[i]));
+			item = (t_symobject *)symobject_new(atom_getsym(&x->preset_names[i]));
 			linklist_append(x->menu_items, item);
 		}
 	}
