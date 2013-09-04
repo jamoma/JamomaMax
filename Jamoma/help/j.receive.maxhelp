@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 2,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 100.0, 100.0, 461.0, 295.0 ],
+		"rect" : [ 3.0, 44.0, 477.0, 320.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -28,6 +29,22 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"border" : 0,
+					"filename" : "helpdetails.js",
+					"id" : "obj-21",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "j.receive" ],
+					"maxclass" : "jsui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ -0.25, 0.0, 463.25, 100.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
@@ -35,7 +52,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 224.0, 85.0, 172.0, 19.0 ],
+					"patching_rect" : [ 224.0, 117.0, 176.0, 20.0 ],
 					"text" : "change destination dynamically"
 				}
 
@@ -50,7 +67,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 224.0, 102.0, 123.0, 17.0 ],
+					"patching_rect" : [ 224.0, 134.0, 129.0, 18.0 ],
 					"text" : "address other/address",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -65,7 +82,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 276.0, 249.0, 120.0, 17.0 ]
+					"patching_rect" : [ 276.0, 281.0, 142.0, 18.0 ],
+					"text" : "/flow/out.mySignal:signal"
 				}
 
 			}
@@ -78,7 +96,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 276.0, 154.0, 123.0, 17.0 ],
+					"patching_rect" : [ 276.0, 186.0, 123.0, 18.0 ],
 					"text" : "/myParameter"
 				}
 
@@ -93,7 +111,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 224.0, 248.0, 50.0, 19.0 ]
+					"patching_rect" : [ 224.0, 280.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -107,8 +125,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 224.0, 223.0, 144.0, 19.0 ],
-					"text" : "j.receive out.mySignal"
+					"patching_rect" : [ 224.0, 255.0, 153.0, 20.0 ],
+					"text" : "j.receive flow/out.mySignal"
 				}
 
 			}
@@ -122,7 +140,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 24.0, 197.0, 50.0, 19.0 ]
+					"patching_rect" : [ 24.0, 229.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -135,7 +153,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 24.0, 223.0, 105.0, 19.0 ],
+					"patching_rect" : [ 24.0, 255.0, 105.0, 20.0 ],
 					"text" : "j.out mySignal"
 				}
 
@@ -150,7 +168,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 24.0, 102.0, 50.0, 19.0 ]
+					"patching_rect" : [ 24.0, 134.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -164,7 +182,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 224.0, 154.0, 50.0, 19.0 ]
+					"patching_rect" : [ 224.0, 186.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -177,7 +195,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 24.0, 128.0, 162.0, 19.0 ],
+					"patching_rect" : [ 24.0, 160.0, 162.0, 20.0 ],
 					"text" : "j.parameter myParameter"
 				}
 
@@ -192,22 +210,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 224.0, 128.0, 145.0, 19.0 ],
+					"patching_rect" : [ 224.0, 160.0, 145.0, 20.0 ],
 					"text" : "j.receive myParameter"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "@name", "j.receive", "@description", "listening attributes value of parameter, return or hub external using their address" ],
-					"bgmode" : 1,
-					"id" : "obj-2",
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 449.0, 70.0 ],
-					"varname" : "maxhelpui"
 				}
 
 			}
@@ -221,7 +225,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 224.0, 197.0, 125.0, 19.0 ]
+					"patching_rect" : [ 224.0, 229.0, 125.0, 20.0 ]
 				}
 
 			}
@@ -240,7 +244,7 @@
 					"destination" : [ "obj-8", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 296.5, 150.0, 389.5, 150.0 ],
+					"midpoints" : [ 296.5, 182.0, 389.5, 182.0 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -250,7 +254,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 233.5, 123.0, 233.5, 123.0 ],
+					"midpoints" : [ 233.5, 155.0, 233.5, 155.0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -269,7 +273,7 @@
 					"destination" : [ "obj-4", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 296.0, 245.0, 386.5, 245.0 ],
+					"midpoints" : [ 300.5, 277.0, 408.5, 277.0 ],
 					"source" : [ "obj-12", 1 ]
 				}
 
@@ -303,43 +307,14 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
+				"name" : "helpdetails.js",
+				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
-				"patcherrelativepath" : "../../../Max/library/components/jamomaPath",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.route.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
