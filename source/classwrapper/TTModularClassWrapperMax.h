@@ -179,8 +179,11 @@ TTErr		makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, Symbol
 
 /**
  */
-TTErr		makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedReceiver, TTBoolean deferlow = NO);
+TTErr		makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedReceiver, TTBoolean deferlow = NO, TTBoolean appendNameAsAttribute = NO);
 
+/**
+ */
+TTErr       makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObjectBasePtr *returnedSender, TTBoolean appendNameAsAttribute = NO);
 
 /**
  */

@@ -1,10 +1,10 @@
-/* 
+/*
  *	TTModularClassWrapperMax
  *	An automated class wrapper to make TTBlue object's available as objects for Max/MSP
  *	Copyright © 2008 by Timothy Place
- * 
+ *
  * License: This code is licensed under the terms of the GNU LGPL
- * http://www.gnu.org/licenses/lgpl.html 
+ * http://www.gnu.org/licenses/lgpl.html
  */
 
 #include "TTModularClassWrapperMax.h"
@@ -16,7 +16,7 @@ static t_hashtab*	wrappedMaxClasses = NULL;
 
 
 ObjectPtr wrappedModularClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
-{	
+{
 	WrappedClass*				wrappedMaxClass = NULL;
     WrappedModularInstancePtr	x = NULL;
 	TTErr						err = kTTErrNone;
@@ -72,7 +72,7 @@ ObjectPtr wrappedModularClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 		object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x,NULL));
 		
 #ifdef UI_EXTERNAL
-		flags = 0 
+		flags = 0
 		| JBOX_DRAWFIRSTIN		// 0
 		| JBOX_NODRAWBOX		// 1
 		| JBOX_DRAWINLAST		// 2
@@ -123,7 +123,7 @@ void wrappedModularClass_unregister(WrappedModularInstancePtr x)
 	TTObjectBasePtr	anObject;
 	TTObjectBasePtr aSubscriber;
 	TTErr			err;
-
+    
 #ifndef ARRAY_EXTERNAL
 	if (x->subscriberObject)
 		TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
@@ -182,7 +182,7 @@ void wrappedModularClass_unregister(WrappedModularInstancePtr x)
 		}
 	}
 	
-#ifndef ARRAY_EXTERNAL	
+#ifndef ARRAY_EXTERNAL
 	x->subscriberObject = NULL;
 	x->wrappedObject = NULL;
 #endif
@@ -192,7 +192,7 @@ void wrappedModularClass_unregister(WrappedModularInstancePtr x)
 
 
 void wrappedModularClass_free(WrappedModularInstancePtr x)
-{	
+{
 	ModularSpec* spec = (ModularSpec*)x->wrappedClassDefinition->specificities;
 	
 	wrappedModularClass_unregister(x);
@@ -218,7 +218,7 @@ t_max_err wrappedModularClass_notify(TTPtr self, t_symbol *s, t_symbol *msg, voi
 	ModularSpec*				spec = (ModularSpec*)x->wrappedClassDefinition->specificities;
 	TTValue						v;
 	TTAddress                   contextAddress;
-
+    
 #ifndef ARRAY_EXTERNAL
 	ObjectPtr					context;
     
@@ -251,8 +251,8 @@ t_max_err wrappedModularClass_notify(TTPtr self, t_symbol *s, t_symbol *msg, voi
 	
 #ifdef UI_EXTERNAL
 	if (msg == _sym_modified)
-		jbox_redraw(&x->box);	
-	else if ((msg == _sym_attr_modified) && (sender == x))	
+		jbox_redraw(&x->box);
+	else if ((msg == _sym_attr_modified) && (sender == x))
 		jbox_redraw(&x->box);
 	
 	return jbox_notify((t_jbox*)x, s, msg, sender, data);
@@ -267,7 +267,7 @@ void wrappedModularClass_shareContextNode(TTPtr self, TTNodePtr *contextNode)
 	TTValue	v;
 #ifndef ARRAY_EXTERNAL
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-
+    
 	if (x->subscriberObject) {
 		x->subscriberObject->getAttributeValue(TTSymbol("contextNode"), v);
 		*contextNode = TTNodePtr((TTPtr)v[0]);
@@ -352,9 +352,9 @@ t_max_err wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc
 			selectedObject->setAttributeValue(ttAttrName, v);
 			return MAX_ERR_NONE;
 		}
-		else 
+		else
 			return MAX_ERR_GENERIC;
-
+        
 	}
 	// or get it and dumpout his value
 	else {
@@ -368,14 +368,14 @@ t_max_err wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc
 			sysmem_freeptr(av);
 			return MAX_ERR_NONE;
 		}
-		else 
+		else
 			return MAX_ERR_GENERIC;
 	}
 	
 	return MAX_ERR_GENERIC;
 }
 
-	
+
 void wrappedModularClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -614,7 +614,7 @@ TTPtr wrappedModularClass_oksize(TTPtr self, t_rect *newrect)
 	
 	selectedObject->sendMessage(TTSymbol("verifyResize"), v);
 	
-	v[2] newrect->width; 
+	v[2] newrect->width;
 	v[3] newrect->height;
 	return (void *)1;
 }
@@ -749,7 +749,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 	
 	jamoma_init();
 	common_symbols_init();
-
+    
 #ifdef UI_EXTERNAL
 	TTGraphicsInit();
 #endif
@@ -759,12 +759,12 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 	
 	wrappedMaxClass = new WrappedClass;
 	wrappedMaxClass->maxClassName = gensym(maxClassName);
-	wrappedMaxClass->maxClass = class_new(	maxClassName, 
-										  (method)wrappedModularClass_new, 
-										  (method)wrappedModularClass_free, 
-										  sizeof(WrappedModularInstance), 
-										  (method)0L, 
-										  A_GIMME, 
+	wrappedMaxClass->maxClass = class_new(	maxClassName,
+										  (method)wrappedModularClass_new,
+										  (method)wrappedModularClass_free,
+										  sizeof(WrappedModularInstance),
+										  (method)0L,
+										  A_GIMME,
 										  0);
 	wrappedMaxClass->ttblueClassName = ttblueClassName;
 	wrappedMaxClass->validityCheck = NULL;
@@ -773,13 +773,13 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 	wrappedMaxClass->maxNamesToTTNames = hashtab_new(0);
 	
 	wrappedMaxClass->specificities = specificities;
-
+    
 #ifdef UI_EXTERNAL
-	jbox_initclass(wrappedMaxClass->maxClass, flags);	
+	jbox_initclass(wrappedMaxClass->maxClass, flags);
 	wrappedMaxClass->maxClass->c_flags |= CLASS_FLAG_NEWDICTIONARY; // to specify dictionary constructor
 #endif
-
-#ifdef AUDIO_EXTERNAL    
+    
+#ifdef AUDIO_EXTERNAL
     // Setup our class to work with MSP
 	class_dspinit(wrappedMaxClass->maxClass);
 #endif
@@ -792,7 +792,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 	o->getMessageNames(v);
 	for (i = 0; i < v.size(); i++) {
 		TTName = v[i];
-
+        
 #ifdef UI_EXTERNAL
 		if (TTName == TTSymbol("mouseDown"))
 			class_addmethod(wrappedMaxClass->maxClass, (method)wrappedUIClass_mousedown,	"mousedown",	A_CANT, 0);
@@ -810,16 +810,16 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 			class_addmethod(wrappedMaxClass->maxClass, (method)wrappedUIClass_mousedblclick,"mousedoubleclick",	A_CANT, 0);
 		else if (TTName == TTSymbol("verifyResize"))
 			class_addmethod(wrappedMaxClass->maxClass, (method)wrappedUIClass_oksize,		"oksize",		A_CANT, 0);
-		else 
+		else
 #endif
-		if (TTName == TTSymbol("test")                      ||
-            TTName == TTSymbol("getProcessingBenchmark")    ||
-            TTName == TTSymbol("resetBenchmarking")) 
-			continue;
-		else if ((MaxName = jamoma_TTName_To_MaxName(TTName))) {
-			hashtab_store(wrappedMaxClass->maxNamesToTTNames, MaxName, ObjectPtr(TTName.rawpointer()));
-			class_addmethod(wrappedMaxClass->maxClass, (method)wrappedModularClass_anything, MaxName->s_name, A_GIMME, 0);
-		}
+            if (TTName == TTSymbol("test")                      ||
+                TTName == TTSymbol("getProcessingBenchmark")    ||
+                TTName == TTSymbol("resetBenchmarking"))
+                continue;
+            else if ((MaxName = jamoma_TTName_To_MaxName(TTName))) {
+                hashtab_store(wrappedMaxClass->maxNamesToTTNames, MaxName, ObjectPtr(TTName.rawpointer()));
+                class_addmethod(wrappedMaxClass->maxClass, (method)wrappedModularClass_anything, MaxName->s_name, A_GIMME, 0);
+            }
 	}
 	
 	// Register Attributes as Max attr
@@ -880,7 +880,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 	}
 	
 	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedModularClass_dump,				"dump",					A_GIMME, 0);
-
+    
 #ifdef UI_EXTERNAL
 	CLASS_ATTR_DEFAULT(wrappedMaxClass->maxClass,	"patching_rect",	0,	"0. 0. 160. 160.");
 	CLASS_ATTR_MIN(wrappedMaxClass->maxClass,		"patching_size",	0,	"1. 1.");
@@ -939,7 +939,7 @@ TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr
 	
 	aNode->getAddress(dataAddress);
 	aNode->getAddress(dataName, address);
-
+    
 	// absolute registration case : set the address in second position (see in unregister method)
 	storedObject = TTValue(TTObjectBasePtr(*returnedData));
 	storedObject.append(dataAddress);
@@ -1010,7 +1010,7 @@ TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolP
 	
 	// Set address attributes
 	adrs = address.appendAddress(TTAddress(name));
-										 
+    
 	(*returnedViewer)->setAttributeValue(kTTSym_address, adrs);
 	
 	// default registration case : store object only (see in unregister method)
@@ -1023,7 +1023,7 @@ TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolP
 }
 
 
-TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedReceiver, TTBoolean deferlow)
+TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedReceiver, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			args, storedObject;
@@ -1051,7 +1051,10 @@ TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, Symbo
 	TTObjectBaseInstantiate(kTTSym_Receiver, TTObjectBaseHandle(returnedReceiver), args);
 	
 	// Set address attributes
-	adrs = address.appendAddress(TTAddress(name));
+	if (appendNameAsAttribute)
+        adrs = address.appendAttribute(name);
+    else
+        adrs = address.appendAddress(TTAddress(name.c_str()));
 	
 	(*returnedReceiver)->setAttributeValue(kTTSym_address, adrs);
 	
@@ -1064,6 +1067,33 @@ TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, Symbo
 	return kTTErrNone;
 }
 
+TTErr makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObjectBasePtr *returnedSender, TTBoolean appendNameAsAttribute)
+{
+	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+	TTValue			args, storedObject;
+	TTAddress       adrs;
+	
+	// no arguments
+	
+	*returnedSender = NULL;
+	TTObjectBaseInstantiate(kTTSym_Sender, TTObjectBaseHandle(returnedSender), args);
+	
+	// Set address attributes
+	if (appendNameAsAttribute)
+        adrs = address.appendAttribute(name);
+    else
+        adrs = address.appendAddress(TTAddress(name.c_str()));
+	
+	(*returnedSender)->setAttributeValue(kTTSym_address, adrs);
+	
+	// default registration case : store object only (see in unregister method)
+	storedObject = TTValue(TTObjectBasePtr(*returnedSender));
+	x->internals->append(name, storedObject);
+    
+    JamomaDebug object_post((ObjectPtr)x, "makes internal \"%s\" sender to bind on : %s", name.c_str(), adrs.c_str());
+    
+	return kTTErrNone;
+}
 
 TTErr removeInternals_data(TTPtr self, TTAddress address, TTAddress name)
 {
@@ -1176,7 +1206,7 @@ t_max_err wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, AtomCount *ac, A
 }
 
 
-t_max_err wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av) 
+t_max_err wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -1247,7 +1277,7 @@ void wrappedModularClass_ArrayResize(TTPtr self, long newSize)
         
         v = TTInt64(newSize);
         v.toString();
-
+        
         s_bracket = "[";
         s_bracket += TTString(v[0]);
         s_bracket += "]";
