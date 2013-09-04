@@ -8,7 +8,7 @@
 		Jamoma model input
 	</digest>
 	<description>
-		j.in is a non-audio input for Jamoma models
+		j.in is an input conduits for control signals in a jamoma model (most often these are Jitter matrices), much like j.in~ is for audio signals
 	</description>
 	<!--METADATA-->
 	<metadatalist>
