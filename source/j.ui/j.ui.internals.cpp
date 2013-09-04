@@ -215,7 +215,7 @@ void ui_data_interface(t_ui *x, TTSymbol name)
 	object_method(p, _sym_loadbang);
 }
 
-void ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow)
+void ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
 {
 	TTValue			v, args;
 	TTObjectBasePtr	returnValueCallback;
@@ -240,7 +240,11 @@ void ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr 
 	TTObjectBaseInstantiate(kTTSym_Receiver, TTObjectBaseHandle(returnedReceiver), args);
 	
 	// Set address to bind
-	adrs = address.appendAddress(TTAddress(name.c_str()));
+    if (appendNameAsAttribute)
+        adrs = address.appendAttribute(name);
+    else
+        adrs = address.appendAddress(TTAddress(name.c_str()));
+        
 	(*returnedReceiver)->setAttributeValue(kTTSym_address, adrs);
     
     // refresh receiver
@@ -254,7 +258,7 @@ void ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr 
 void ui_receiver_destroy(t_ui *obj, TTSymbol name)
 {
 	TTValue			storedObject;
-	TTObjectBasePtr		aReceiver;
+	TTObjectBasePtr	aReceiver;
 	
 	if (obj->hash_receivers)
 		if (!obj->hash_receivers->lookup(name, storedObject)) {
@@ -457,212 +461,6 @@ void ui_explorer_create(ObjectPtr x, TTObjectBasePtr *returnedExplorer, SymbolPt
 	
 	*returnedExplorer = NULL;
 	TTObjectBaseInstantiate(kTTSym_Explorer, TTObjectBaseHandle(returnedExplorer), args);
-}
-
-void ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	t_ui* obj = (t_ui*)self;
-	TTObjectBasePtr anObject;
-	TTBoolean	gain = NO;
-	TTBoolean	mix = NO;
-	TTBoolean	bypass = NO;
-	TTBoolean	freeze = NO;
-	TTBoolean	preview = NO;
-    TTBoolean	mute = NO;
-	TTBoolean	preset = NO;		// is there a preset node in the model ?
-	TTBoolean	model = NO;			// is there a model node in the model ?
-	TTBoolean	change = NO;
-	TTAddress   relativeAddress;
-    TTBoolean   flowInput = NO;
-    TTBoolean   flowOutput = NO;
-    TTBoolean   audioInput = NO;
-    TTBoolean   audioOutput = NO;
-
-	// model namespace observation
-	if (obj->modelAddress != kTTAdrsEmpty) {
-        
-		// look the namelist to know which data exist
-		for (long i=0; i<argc; i++) {
-            
-			relativeAddress = TTAddress(atom_getsym(argv+i)->s_name);
-            
-            if (relativeAddress.getName() == TTSymbol("in")) {
-                
-                if (relativeAddress.getParent() == TTAddress("flow"))
-                    flowInput = YES;
-                
-                else if (relativeAddress.getParent() == TTAddress("audio"))
-                    audioInput = YES;
-				
-            }
-            else if (relativeAddress.getName() == TTSymbol("out")) {
-                
-                if (relativeAddress.getParent() == TTAddress("flow"))
-                    flowOutput = YES;
-                
-                else if (relativeAddress.getParent() == TTAddress("audio"))
-                    audioOutput = YES;
-            }
-			else if (relativeAddress.getName() == TTSymbol("preset"))
-				preset = true;
-            
-            else if (relativeAddress.getName() == TTSymbol("model"))
-				model = true;
-		}
-        
-        if (flowInput || flowOutput)
-            mute = true;
-        
-        if (flowInput && flowOutput)
-            bypass = true;
-        
-        if (flowOutput) {
-            freeze = true;
-            preview = true;
-        }
-        
-        if (audioInput || audioOutput)
-            mute = true;
-        
-        if (audioInput && audioOutput) {
-            bypass = true;
-            mix = true;
-        }
-        
-        if (audioOutput)
-            gain = true;
-		
-		// if a data appears or disappears : create or remove the viewer
-		
-		// gain
-		if (gain != obj->has_gain) {
-			obj->has_gain = gain;
-			if (gain) 
-				ui_viewer_create(obj, &anObject, gensym("return_gain"), TTSymbol("*.*/gain"), obj->modelAddress, YES);
-			else {
-				ui_viewer_destroy(obj, TTSymbol("*.*/gain"));
-				obj->hash_viewers->remove(TTSymbol("*.*/gain"));
-			}
-		}
-		
-		// mix
-		if (mix != obj->has_mix) {
-			obj->has_mix = mix;
-			if (mix) 
-				ui_viewer_create(obj, &anObject, gensym("return_mix"), TTSymbol("*.*/mix"), obj->modelAddress, YES);
-			else {
-				ui_viewer_destroy(obj, TTSymbol("*.*/mix"));
-				obj->hash_viewers->remove(TTSymbol("*.*/mix"));
-			}
-			
-			change = true;
-		}
-		
-		// bypass
-		if (bypass != obj->has_bypass) {
-			obj->has_bypass = bypass;
-			if (bypass) 
-				ui_viewer_create(obj, &anObject, gensym("return_bypass"), TTSymbol("*.*/bypass"), obj->modelAddress, YES);
-			else {
-				ui_viewer_destroy(obj, TTSymbol("*.*/bypass"));
-				obj->hash_viewers->remove(TTSymbol("*.*/bypass"));
-			}
-			
-			change = true;
-		}
-		
-		// freeze
-		if (freeze != obj->has_freeze) {
-			obj->has_freeze = freeze;
-			if (freeze) 
-				ui_viewer_create(obj, &anObject, gensym("return_freeze"), TTSymbol("*.*/freeze"), obj->modelAddress, YES);
-			else {
-				ui_viewer_destroy(obj, TTSymbol("*.*/freeze"));
-				obj->hash_viewers->remove(TTSymbol("*.*/freeze"));
-			}
-			
-			change = true;
-		}
-		
-		// preview
-		if (preview != obj->has_preview) {
-			obj->has_preview = preview;
-			if (preview)
-				ui_viewer_create(obj, &anObject, gensym("return_preview"), TTSymbol("*.*/preview"), obj->modelAddress, YES);
-			else {
-				ui_viewer_destroy(obj, TTSymbol("*.*/preview"));
-				obj->hash_viewers->remove(TTSymbol("*.*/preview"));
-			}
-			
-			change = true;
-		}
-		
-		// mute
-		if (mute != obj->has_mute) {
-			obj->has_mute = mute;
-			if (mute) 
-				ui_viewer_create(obj, &anObject, gensym("return_mute"), TTSymbol("*.*/mute"), obj->modelAddress, YES);
-			else {
-				ui_viewer_destroy(obj, TTSymbol("*.*/mute"));
-				obj->hash_viewers->remove(TTSymbol("*.*/mute"));
-			}
-			
-			change = true;
-		}
-		
-		// preset
-		if (preset != obj->has_preset) {
-			obj->has_preset = preset;
-			if (preset) {
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:write"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:read"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:recall"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:store"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, gensym("return_preset_names"), TTSymbol("preset:names"), obj->modelAddress, NO);
-			}
-			else {
-				ui_viewer_destroy(obj, TTSymbol("write"));
-				obj->hash_viewers->remove(TTSymbol("write"));
-				ui_viewer_destroy(obj, TTSymbol("read"));
-				obj->hash_viewers->remove(TTSymbol("read"));
-				ui_viewer_destroy(obj, TTSymbol("recall"));
-				obj->hash_viewers->remove(TTSymbol("recall"));
-				ui_viewer_destroy(obj, TTSymbol("store"));
-				obj->hash_viewers->remove(TTSymbol("store"));
-				ui_viewer_destroy(obj, TTSymbol("names"));
-				obj->hash_viewers->remove(TTSymbol("names"));
-			}
-			
-			change = true;
-		}
-		
-		// model
-		if (model != obj->has_model) {
-			obj->has_model = model;
-			if (model) {
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/open"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/help"), obj->modelAddress, NO);
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/reference"), obj->modelAddress, NO);
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/edit"), obj->modelAddress, NO);
-            }
-			else {
-                ui_viewer_destroy(obj, TTSymbol("model/open"));
-				obj->hash_viewers->remove(TTSymbol("model/open"));
-				ui_viewer_destroy(obj, TTSymbol("model/help"));
-				obj->hash_viewers->remove(TTSymbol("model/help"));
-                ui_viewer_destroy(obj, TTSymbol("model/reference"));
-				obj->hash_viewers->remove(TTSymbol("model/reference"));
-                ui_viewer_destroy(obj, TTSymbol("model/edit"));
-				obj->hash_viewers->remove(TTSymbol("model/edit"));
-			}
-			
-			change = true;
-		}
-		
-		if (change)
-			jbox_redraw(&obj->box);
-		
-	}
 }
 
 void ui_modelParamExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -964,16 +762,223 @@ void ui_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 
 void ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
-	t_ui* obj = (t_ui*)self;
-	long		init = atom_getlong(argv);
-	TTValue		v;
+	t_ui*           obj = (t_ui*)self;
+	long            init = atom_getlong(argv);
+	TTValue         v;
+    TTObjectBasePtr aReceiver;
 	
-	if (init && obj->modelExplorer) {
+    // if the model is initialized and no content observer have been created
+	if (init && obj->hash_receivers->lookup(kTTSym_content, v)) {
 		
-		// observe the namespace of the model
-		// by this way, the creation of any widgets depends on the existence of the data	
-		obj->modelExplorer->setAttributeValue(kTTSym_address, obj->modelAddress);
-		obj->modelExplorer->sendMessage(TTSymbol("Explore"));
+		// observe the content of the model
+		// by this way, the creation of any widgets depends on the existence of the data
+        ui_receiver_create(obj, &aReceiver, gensym("return_model_content"), kTTSym_content, obj->modelAddress, NO, YES);
+	}
+}
+
+void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+    t_ui* obj = (t_ui*)self;
+	TTObjectBasePtr anObject;
+	TTBoolean	gain = NO;
+	TTBoolean	mix = NO;
+	TTBoolean	bypass = NO;
+	TTBoolean	freeze = NO;
+	TTBoolean	preview = NO;
+    TTBoolean	mute = NO;
+	TTBoolean	preset = NO;		// is there a preset node in the model ?
+	TTBoolean	model = NO;			// is there a model node in the model ?
+	TTBoolean	change = NO;
+	TTAddress   relativeAddress;
+    TTBoolean   flowInput = NO;
+    TTBoolean   flowOutput = NO;
+    TTBoolean   audioInput = NO;
+    TTBoolean   audioOutput = NO;
+    
+	// model namespace observation
+	if (obj->modelAddress != kTTAdrsEmpty) {
+        
+		// look the namelist to know which data exist
+		for (long i=0; i<argc; i++) {
+            
+			relativeAddress = TTAddress(atom_getsym(argv+i)->s_name);
+            
+            if (relativeAddress.getName() == TTSymbol("in")) {
+                
+                if (relativeAddress.getParent() == TTAddress("flow"))
+                    flowInput = YES;
+                
+                else if (relativeAddress.getParent() == TTAddress("audio"))
+                    audioInput = YES;
+				
+            }
+            else if (relativeAddress.getName() == TTSymbol("out")) {
+                
+                if (relativeAddress.getParent() == TTAddress("flow"))
+                    flowOutput = YES;
+                
+                else if (relativeAddress.getParent() == TTAddress("audio"))
+                    audioOutput = YES;
+            }
+			else if (relativeAddress.getName() == TTSymbol("preset"))
+				preset = true;
+            
+            else if (relativeAddress.getParent() == TTSymbol("model"))
+				model = true;
+		}
+        
+        if (flowInput || flowOutput)
+            mute = true;
+        
+        if (flowInput && flowOutput)
+            bypass = true;
+        
+        if (flowOutput) {
+            freeze = true;
+            preview = true;
+        }
+        
+        if (audioInput || audioOutput)
+            mute = true;
+        
+        if (audioInput && audioOutput) {
+            bypass = true;
+            mix = true;
+        }
+        
+        if (audioOutput)
+            gain = true;
+		
+		// if a data appears or disappears : create or remove the viewer
+		
+		// gain
+		if (gain != obj->has_gain) {
+			obj->has_gain = gain;
+			if (gain)
+				ui_viewer_create(obj, &anObject, gensym("return_gain"), TTSymbol("*.*/gain"), obj->modelAddress, YES);
+			else {
+				ui_viewer_destroy(obj, TTSymbol("*.*/gain"));
+				obj->hash_viewers->remove(TTSymbol("*.*/gain"));
+			}
+		}
+		
+		// mix
+		if (mix != obj->has_mix) {
+			obj->has_mix = mix;
+			if (mix)
+				ui_viewer_create(obj, &anObject, gensym("return_mix"), TTSymbol("*.*/mix"), obj->modelAddress, YES);
+			else {
+				ui_viewer_destroy(obj, TTSymbol("*.*/mix"));
+				obj->hash_viewers->remove(TTSymbol("*.*/mix"));
+			}
+			
+			change = true;
+		}
+		
+		// bypass
+		if (bypass != obj->has_bypass) {
+			obj->has_bypass = bypass;
+			if (bypass)
+				ui_viewer_create(obj, &anObject, gensym("return_bypass"), TTSymbol("*.*/bypass"), obj->modelAddress, YES);
+			else {
+				ui_viewer_destroy(obj, TTSymbol("*.*/bypass"));
+				obj->hash_viewers->remove(TTSymbol("*.*/bypass"));
+			}
+			
+			change = true;
+		}
+		
+		// freeze
+		if (freeze != obj->has_freeze) {
+			obj->has_freeze = freeze;
+			if (freeze)
+				ui_viewer_create(obj, &anObject, gensym("return_freeze"), TTSymbol("*.*/freeze"), obj->modelAddress, YES);
+			else {
+				ui_viewer_destroy(obj, TTSymbol("*.*/freeze"));
+				obj->hash_viewers->remove(TTSymbol("*.*/freeze"));
+			}
+			
+			change = true;
+		}
+		
+		// preview
+		if (preview != obj->has_preview) {
+			obj->has_preview = preview;
+			if (preview)
+				ui_viewer_create(obj, &anObject, gensym("return_preview"), TTSymbol("*.*/preview"), obj->modelAddress, YES);
+			else {
+				ui_viewer_destroy(obj, TTSymbol("*.*/preview"));
+				obj->hash_viewers->remove(TTSymbol("*.*/preview"));
+			}
+			
+			change = true;
+		}
+		
+		// mute
+		if (mute != obj->has_mute) {
+			obj->has_mute = mute;
+			if (mute)
+				ui_viewer_create(obj, &anObject, gensym("return_mute"), TTSymbol("*.*/mute"), obj->modelAddress, YES);
+			else {
+				ui_viewer_destroy(obj, TTSymbol("*.*/mute"));
+				obj->hash_viewers->remove(TTSymbol("*.*/mute"));
+			}
+			
+			change = true;
+		}
+		
+		// preset
+		if (preset != obj->has_preset) {
+			obj->has_preset = preset;
+			if (preset) {
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:write"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:read"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:recall"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:store"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, gensym("return_preset_names"), TTSymbol("preset:names"), obj->modelAddress, NO);
+			}
+			else {
+				ui_viewer_destroy(obj, TTSymbol("write"));
+				obj->hash_viewers->remove(TTSymbol("write"));
+				ui_viewer_destroy(obj, TTSymbol("read"));
+				obj->hash_viewers->remove(TTSymbol("read"));
+				ui_viewer_destroy(obj, TTSymbol("recall"));
+				obj->hash_viewers->remove(TTSymbol("recall"));
+				ui_viewer_destroy(obj, TTSymbol("store"));
+				obj->hash_viewers->remove(TTSymbol("store"));
+				ui_viewer_destroy(obj, TTSymbol("names"));
+				obj->hash_viewers->remove(TTSymbol("names"));
+			}
+			
+			change = true;
+		}
+		
+		// model
+		if (model != obj->has_model) {
+			obj->has_model = model;
+			if (model) {
+                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/open"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/help"), obj->modelAddress, NO);
+                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/reference"), obj->modelAddress, NO);
+                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/edit"), obj->modelAddress, NO);
+            }
+			else {
+                ui_viewer_destroy(obj, TTSymbol("model/open"));
+				obj->hash_viewers->remove(TTSymbol("model/open"));
+				ui_viewer_destroy(obj, TTSymbol("model/help"));
+				obj->hash_viewers->remove(TTSymbol("model/help"));
+                ui_viewer_destroy(obj, TTSymbol("model/reference"));
+				obj->hash_viewers->remove(TTSymbol("model/reference"));
+                ui_viewer_destroy(obj, TTSymbol("model/edit"));
+				obj->hash_viewers->remove(TTSymbol("model/edit"));
+			}
+			
+			change = true;
+		}
+		
+		if (change)
+			jbox_redraw(&obj->box);
+		
 	}
 }
 

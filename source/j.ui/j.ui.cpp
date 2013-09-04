@@ -64,7 +64,6 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_mouseleave,						"mouseleave",						A_CANT, 0);
 	class_addmethod(c, (method)ui_oksize,							"oksize",							A_CANT, 0);
 	
-	class_addmethod(c, (method)ui_modelExplorer_callback,			"return_modelExploration",			A_CANT, 0);
 	class_addmethod(c, (method)ui_modelParamExplorer_callback,		"return_modelParamExploration",		A_CANT, 0);
 	class_addmethod(c, (method)ui_modelMessExplorer_callback,		"return_modelMessExploration",		A_CANT, 0);
 	class_addmethod(c, (method)ui_modelRetExplorer_callback,		"return_modelRetExploration",		A_CANT, 0);
@@ -81,6 +80,8 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_return_model_address,				"return_model_address",				A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_return_model_init,				"return_model_init",				A_CANT, 0);
+    
+    class_addmethod(c, (method)ui_return_model_content,             "return_model_content",             A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_return_metersdefeated,			"return_metersdefeated",			A_CANT, 0);
 	class_addmethod(c, (method)ui_return_mute,						"return_mute",						A_CANT, 0);
@@ -201,14 +202,6 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		x->modelOutput = NULL;
 		x->previewSignal = NULL;
 		
-		ui_explorer_create((ObjectPtr)x, &x->modelExplorer, gensym("return_modelExploration"));
-		
-        f = TTString("presetFilter object Data mode exclude");
-        f.fromString();
-        
-        x->modelExplorer->sendMessage(TTSymbol("FilterSet"), f, out);
-        x->modelExplorer->setAttributeValue(TTSymbol("depth"), 2);  // to get "preset" and "audio/in" for example
-		
 		attr_dictionary_process(x, d); 	// handle attribute args
 		
 		// The following must be deferred because we have to interrogate our box,
@@ -240,12 +233,6 @@ void ui_free(t_ui *x)
 	qelem_free(x->refmenu_qelem);
 	x->refmenu_qelem = NULL;
 	object_free(x->refmenu_items);
-	
-	if (x->nmspcExplorer)
-		TTObjectBaseRelease(&x->nmspcExplorer);
-	
-	if (x->modelExplorer)
-		TTObjectBaseRelease(&x->modelExplorer);
 	
 	TTObjectBaseRelease(TTObjectBaseHandle(&x->uiSubscriber));
 	
