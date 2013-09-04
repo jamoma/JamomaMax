@@ -64,6 +64,8 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)model_preset_read_again,		"preset:read/again",	0);
 	class_addmethod(c->maxClass, (method)model_preset_write_again,		"preset:write/again",	0);
     
+    class_addmethod(c->maxClass, (method)model_signal_return_content,	"return_content",		A_CANT, 0);
+    
     class_addmethod(c->maxClass, (method)model_signal_return_flow_mute,	"return_flow_mute",		A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_signal_return_flow_bypass,"return_flow_bypass",	A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_return_flow_freeze,"return_flow_freeze",	A_CANT, 0);
@@ -117,6 +119,7 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	EXTRA->filewatcher = NULL;
 	EXTRA->toEdit = x->wrappedObject;
 	EXTRA->presetName = kTTSymEmpty;
+    EXTRA->readingContent = NO;
 	
 	// read first argument to know if the model is a component
 	if (attrstart && argv) {
@@ -170,7 +173,7 @@ void model_subscribe(TTPtr self)
     TTNodePtr                   returnedNode = NULL;
     TTNodePtr                   returnedContextNode = NULL;
 	TTSymbol					classAdrs, helpAdrs, refAdrs, openAdrs, documentationAdrs, editAdrs, muteAdrs;
-	TTObjectBasePtr				aData;
+	TTObjectBasePtr				aData, aReceiver;
 	TTTextHandlerPtr			aTextHandler;
     TTPresetPtr                 aPreset;
 	TTPtr						context;
@@ -188,6 +191,9 @@ void model_subscribe(TTPtr self)
 		
 		// set the address attribute of the Container 
 		x->wrappedObject->setAttributeValue(kTTSym_address, returnedAddress);
+        
+        if (x->patcherContext == kTTSym_model)
+            EXTRA->modelAddress = returnedAddress;
 		
 		// if the j.model is well subscribed
 		if (aPatcher == x->patcherPtr && x->patcherContext != kTTSymEmpty) {
@@ -270,8 +276,9 @@ void model_subscribe(TTPtr self)
                     // subscribe preset manager object
                     model_preset_subscribe(self, returnedAddress);
                     
-                    // subscribe signal in/out datas
-                    model_signal_subscribe(self, returnedAddress);
+                    // observe model's content to create signal in/out datas
+                    makeInternals_receiver(self, returnedAddress, kTTSym_content, gensym("return_content"), &aReceiver, YES, YES); // we need to deferlow to avoid lock crash on TTContainer content
+                    aReceiver->sendMessage(kTTSym_Get);
                     
                     /*
                     // Add a /model/edit data

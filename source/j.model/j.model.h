@@ -23,6 +23,8 @@ typedef struct extra {
 	TTPtr               filewatcher;		// a preset filewather
 	TTObjectBasePtr     toEdit;				// the object to edit (a preset or all the preset list)
 	TTSymbol            presetName;			// the name of the edited preset
+    
+    TTBoolean           readingContent;     // a flag to avoid infinite loop in model_return_content
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
 
@@ -87,7 +89,7 @@ void		model_preset_subscribe(TTPtr self, TTAddress modelAddress);
 t_max_err	model_preset_get_load_default(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av);
 t_max_err	model_preset_set_load_default(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av);
 
-void        model_signal_subscribe(TTPtr self, TTAddress modelAddress);
+void        model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void        model_signal_return_flow_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void        model_signal_return_flow_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
