@@ -764,7 +764,7 @@ void ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 {
 	t_ui*           obj = (t_ui*)self;
 	long            init = atom_getlong(argv);
-	TTValue         v, args;
+	TTValue         v;
     TTObjectBasePtr aReceiver;
 	
     // if the model is initialized and no content observer have been created
@@ -773,17 +773,6 @@ void ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 		// observe the content of the model
 		// by this way, the creation of any widgets depends on the existence of the data
         ui_receiver_create(obj, &aReceiver, gensym("return_model_content"), kTTSym_content, obj->modelAddress, NO, YES);
-        
-         // create internal TTPreset to handle model's state
-         TTObjectBaseInstantiate(kTTSym_Preset, TTObjectBaseHandle(&obj->state), args);
-         
-         obj->state->setAttributeValue(kTTSym_address, obj->modelAddress);
-        
-        // create internal TTTextHandler to edit model's state via the Max text editor
-        TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&obj->textHandler), args);
-        
-        args = TTValue(obj->state);
-        obj->textHandler->setAttributeValue(kTTSym_object, args);
 	}
 }
 

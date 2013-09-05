@@ -243,8 +243,12 @@ void ui_free(t_ui *x)
 	object_free(x->refmenu_items);
 	
 	TTObjectBaseRelease(TTObjectBaseHandle(&x->uiSubscriber));
-    TTObjectBaseRelease(TTObjectBaseHandle(&x->textHandler));
-    TTObjectBaseRelease(TTObjectBaseHandle(&x->state));
+    
+    if (x->textHandler)
+        TTObjectBaseRelease(TTObjectBaseHandle(&x->textHandler));
+    
+    if (x->state)
+        TTObjectBaseRelease(TTObjectBaseHandle(&x->state));
 	
 	if (x->previewSignal && x->modelOutput) {
 		if (x->modelOutput->valid) {
@@ -286,9 +290,9 @@ t_max_err ui_notify(t_ui *x, t_symbol *s, t_symbol *msg, void *sender, void *dat
 void ui_subscribe(t_ui *x, SymbolPtr address)
 {
 	TTAddress adrs = TTAddress(address->s_name);
-	TTValue			v;
+	TTValue			v, args;
 	TTAttributePtr	anAttribute;
-	TTObjectBasePtr		aReceiver;
+	TTObjectBasePtr	aReceiver;
 	TTErr			err;
 
 	if ((x->modelAddress == kTTAdrsEmpty && adrs != kTTAdrsEmpty) || adrs != x->modelAddress) {
@@ -323,6 +327,22 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 		
 		// observe model initialisation to explore (the method also get the value)
 		ui_receiver_create(x, &aReceiver, gensym("return_model_init"), kTTSymEmpty, x->modelAddress.appendAttribute(kTTSym_initialized));
+        
+        // create internal TTPreset to handle model's state
+        if (!x->state)
+            TTObjectBaseInstantiate(kTTSym_Preset, TTObjectBaseHandle(&x->state), args);
+        
+        // create internal TTTextHandler to edit model's state via the Max text editor
+        if (!x->textHandler) {
+            
+            TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&x->textHandler), args);
+            
+            args = TTValue(x->state);
+            x->textHandler->setAttributeValue(kTTSym_object, args);
+        }
+        
+        // set the model address
+        x->state->setAttributeValue(kTTSym_address, x->modelAddress);
 	}
 	
 	// The following must be deferred because 
