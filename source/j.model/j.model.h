@@ -61,10 +61,6 @@ void		model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);		/
 void		model_autodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		model_doautodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-//void		model_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-//void		model_edclose(TTPtr self, char **text, long size);
-//void		model_doedit(TTPtr self);
-
 //void		model_preset_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		model_preset_return_names(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 void		model_preset_filechanged(TTPtr self, char *filename, short path);

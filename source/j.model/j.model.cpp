@@ -40,10 +40,6 @@ void WrapTTContainerClass(WrappedClassPtr c)
 //	class_addmethod(c->maxClass, (method)model_mute,					"model_mute",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_address,					"model_address",		A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_autodoc,					"doc_generate",			A_CANT, 0);
-//    class_addmethod(c->maxClass, (method)model_edit,					"model_edit",			A_CANT, 0);
-    
-    //class_addmethod(c->maxClass, (method)model_edit,					"dblclick",				A_CANT, 0);
-    //class_addmethod(c->maxClass, (method)model_edclose,               "edclose",				A_CANT, 0);
     
     class_addmethod(c->maxClass, (method)model_preset_return_names,		"return_names",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_preset_filechanged,		"filechanged",			A_CANT, 0);
@@ -252,26 +248,22 @@ void model_subscribe(TTPtr self)
 				aData->setAttributeValue(kTTSym_description, TTSymbol("Mute all parameters in the patcher"));
                  */
                 
-                // for model auto documentation :
+                // for model model preset, documentation and signal management :
                 if (x->patcherContext == kTTSym_model) {
                     
-                    // Add a /documentation/generate data
-                    makeInternals_data(x, returnedAddress, documentationAdrs, gensym("doc_generate"), context, kTTSym_message, &aData);
-                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
-                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                    aData->setAttributeValue(kTTSym_description, TTSymbol("Make a html page description"));
-                    
-                    // create internal TTTextHandler
+                    // create internal TTTextHandler (for documention and preset management)
                     aTextHandler = NULL;
                     TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&aTextHandler), args);
                     v = TTValue(aTextHandler);
                     x->internals->append(kTTSym_TextHandler, v);
                     v = TTValue(x->wrappedObject);
                     aTextHandler->setAttributeValue(kTTSym_object, v);
-                }
-                
-                // for model state management :
-                if (x->patcherContext == kTTSym_model) {
+                    
+                    // Add a /documentation/generate data
+                    makeInternals_data(x, returnedAddress, documentationAdrs, gensym("doc_generate"), context, kTTSym_message, &aData);
+                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
+                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                    aData->setAttributeValue(kTTSym_description, TTSymbol("Make a html page description"));
                     
                     // subscribe preset manager object
                     model_preset_subscribe(self, returnedAddress);
@@ -280,23 +272,6 @@ void model_subscribe(TTPtr self)
                     makeInternals_receiver(self, returnedAddress, kTTSym_content, gensym("return_content"), &aReceiver, YES, YES); // we need to deferlow to avoid lock crash on TTContainer content
                     aReceiver->sendMessage(kTTSym_Get);
                     
-                    /*
-                    // Add a /model/edit data
-                    makeInternals_data(x, returnedAddress, editAdrs, gensym("model_edit"), context, kTTSym_message, &aData);
-                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
-                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                    aData->setAttributeValue(kTTSym_description, TTSymbol("Edit the state of the model"));
-                    
-                    // create internal TTPreset
-                    aPreset = NULL;
-                    TTObjectBaseInstantiate(kTTSym_Preset, TTObjectBaseHandle(&aPreset), args);
-                    v = TTValue(aPreset);
-                    x->internals->append(kTTSym_Preset, v);
-                    v = TTValue(returnedAddress);
-                    aPreset->setAttributeValue(kTTSym_address, v);
-                    v = TTValue(TTSymbol("state"));
-                    aPreset->setAttributeValue(kTTSym_name, v);
-                     */
                 }
 			}
 			
@@ -345,7 +320,7 @@ void model_subscribe(TTPtr self)
                 model_subscribe_view(self, _sym_nothing, ac, av);
 
 			// output ContextNode address
-			Atom a;
+			t_atom a;
 			x->subscriberObject->getAttributeValue(TTSymbol("contextNodeAddress"), v);
             
             if (v.size() == 1) {
@@ -378,7 +353,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
     
     if (!tterr) {
         
-        modelAddressData = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+        modelAddressData = o[0];
         
         hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
         
@@ -620,107 +595,3 @@ void model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		}
 	}
 }
-/*
-void model_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTString			*buffer;
-	char				title[MAX_FILENAME_CHARS];
-	TTTextHandlerPtr	aTextHandler = NULL;
-	TTPresetPtr			aPreset = NULL;
-	TTValue				o1, o2, args;
-	TTSymbol			name;
-	TTErr				tterr1, tterr2;
-	
-	// only one editor can be open in the same time
-	if (!EXTRA->textEditor) {
-        
-		EXTRA->textEditor = (t_object*)object_new(_sym_nobox, _sym_jed, x, 0);
-		
-		buffer = new TTString();
-		
-		// get the text handler
-		tterr1 = x->internals->lookup(kTTSym_TextHandler, o1);
-        
-        // get the preset handler
-		tterr2 = x->internals->lookup(kTTSym_Preset, o2);
-		
-		if (!tterr1 && !tterr2) {
-			
-			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o1[0]);
-            aPreset = TTPresetPtr((TTObjectBasePtr)o2[0]);
-            
-            // Store the preset
-            aPreset->sendMessage(TTSymbol("Store"));
-			
-			critical_enter(0);
-			args = TTValue(TTObjectBasePtr(aPreset));
-			aTextHandler->setAttributeValue(kTTSym_object, args);
-			args = TTValue((TTPtr)buffer);
-			tterr1 = aTextHandler->sendMessage(kTTSym_Write, args, kTTValNONE);
-			critical_exit(0);
-		}
-		
-		// pass the buffer to the editor
-		object_method(EXTRA->textEditor, _sym_settext, buffer->c_str(), _sym_utf_8);
-		object_attr_setchar(EXTRA->textEditor, gensym("scratch"), 1);
-		
-		snprintf(title, MAX_FILENAME_CHARS, "%s state editor", x->patcherClass.c_str());
-		object_attr_setsym(EXTRA->textEditor, _sym_title, gensym(title));
-		
-		buffer->clear();
-		delete buffer;
-		buffer = NULL;
-	}
-}
-
-void model_edclose(TTPtr self, char **text, long size)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-	EXTRA->text = new TTString(*text);
-	EXTRA->textEditor = NULL;
-	
-	defer_low((ObjectPtr)x, (method)model_doedit, NULL, 0, NULL);
-}
-
-void model_doedit(TTPtr self)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTTextHandlerPtr	aTextHandler = NULL;
-    TTPresetPtr			aPreset = NULL;
-	TTValue				o1, o2, args;
-	TTErr				tterr1, tterr2;
-	
-	// get the text handler
-	tterr1 = x->internals->lookup(kTTSym_TextHandler, o1);
-    
-    // get the preset handler
-    tterr2 = x->internals->lookup(kTTSym_Preset, o2);
-	
-	if (!tterr1 && !tterr2) {
-		
-		aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o1[0]);
-        aPreset = TTPresetPtr((TTObjectBasePtr)o2[0]);
-		
-		critical_enter(0);
-        args = TTValue(TTPtr(aPreset));
-        aTextHandler->setAttributeValue(kTTSym_object, args);
-		args = TTValue((TTPtr)EXTRA->text);
-		tterr1 = aTextHandler->sendMessage(kTTSym_Read, args, kTTValNONE);
-		critical_exit(0);
-		
-		// recall the preset
-        aPreset->sendMessage(kTTSym_Recall, kTTValNONE, kTTValNONE);
-		
-		if (!tterr1)
-			object_obex_dumpout(self, _sym_read, 0, NULL);
-		else
-			object_obex_dumpout(self, _sym_error, 0, NULL);
-	}
-	
-	delete EXTRA->text;
-	EXTRA->text = NULL;
-	EXTRA->textEditor = NULL;
-}
-*/

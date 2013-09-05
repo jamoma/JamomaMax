@@ -63,6 +63,9 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_mousemove,						"mousemove",						A_CANT, 0);
 	class_addmethod(c, (method)ui_mouseleave,						"mouseleave",						A_CANT, 0);
 	class_addmethod(c, (method)ui_oksize,							"oksize",							A_CANT, 0);
+    
+    class_addmethod(c, (method)ui_edit,                             "dblclick",                         A_CANT, 0);
+    class_addmethod(c, (method)ui_edclose,                          "edclose",                          A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_modelParamExplorer_callback,		"return_modelParamExploration",		A_CANT, 0);
 	class_addmethod(c, (method)ui_modelMessExplorer_callback,		"return_modelMessExploration",		A_CANT, 0);
@@ -201,6 +204,11 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		
 		x->modelOutput = NULL;
 		x->previewSignal = NULL;
+        
+        x->text = NULL;
+        x->textEditor = NULL;
+        x->textHandler = NULL;
+        x->state = NULL;
 		
 		attr_dictionary_process(x, d); 	// handle attribute args
 		
@@ -235,6 +243,8 @@ void ui_free(t_ui *x)
 	object_free(x->refmenu_items);
 	
 	TTObjectBaseRelease(TTObjectBaseHandle(&x->uiSubscriber));
+    TTObjectBaseRelease(TTObjectBaseHandle(&x->textHandler));
+    TTObjectBaseRelease(TTObjectBaseHandle(&x->state));
 	
 	if (x->previewSignal && x->modelOutput) {
 		if (x->modelOutput->valid) {
@@ -1115,7 +1125,7 @@ void ui_menu_qfn(t_ui *x)
 		ui_preset_interface(x);
 	
 	else if (item->sym == gensym("Edit Current State as Text"))
-		ui_viewer_send(x, TTSymbol("model/edit"), kTTValNONE);
+		ui_edit(x);
 	
 	else if (item->sym == gensym("Open Model Internal"))
 		ui_viewer_send(x, TTSymbol("model/open"), kTTValNONE);
@@ -1405,5 +1415,64 @@ void* ui_oksize(t_ui *x, t_rect *rect)
 	textfield_set_textmargins(textfield, 20.0, 2.0, 60.0, rect->height - 19.0);
 	
 	return (void *)1;
+}
+
+void ui_edit(t_ui *x)
+{
+    TTString    *buffer;
+    char        title[MAX_FILENAME_CHARS];
+    TTValue     args;
+    TTSymbol    name;
+    
+    // only one editor can be open in the same time
+    if (!x->textEditor) {
+        
+        x->textEditor = (t_object*)object_new(_sym_nobox, _sym_jed, x, 0);
+        buffer = new TTString();
+        
+        // Store the preset
+        x->state->sendMessage(TTSymbol("Store"));
+        
+        critical_enter(0);
+        args = TTValue((TTPtr)buffer);
+        x->textHandler->sendMessage(kTTSym_Write, args, kTTValNONE);
+        critical_exit(0);
+        
+        // pass the buffer to the editor
+        object_method(x->textEditor, _sym_settext, buffer->c_str(), _sym_utf_8);
+        object_attr_setchar(x->textEditor, gensym("scratch"), 1);
+        
+        snprintf(title, MAX_FILENAME_CHARS, "%s state editor", x->patcherClass.c_str());
+        object_attr_setsym(x->textEditor, _sym_title, gensym(title));
+        
+        buffer->clear();
+        delete buffer;
+        buffer = NULL;
+    }
+}
+
+void ui_edclose(t_ui *x, char **text, long size)
+{
+    x->text = new TTString(*text);
+    x->textEditor = NULL;
+    
+    defer_low((ObjectPtr)x, (method)ui_doedit, NULL, 0, NULL);
+}
+
+void ui_doedit(t_ui *x)
+{
+    TTValue args;
+    
+    critical_enter(0);
+    args = TTValue((TTPtr)x->text);
+    x->textHandler->sendMessage(kTTSym_Read, args, kTTValNONE);
+    critical_exit(0);
+    
+    // recall the preset
+    x->state->sendMessage(kTTSym_Recall, kTTValNONE, kTTValNONE);
+    
+    delete x->text;
+    x->text = NULL;
+    x->textEditor = NULL;
 }
 

@@ -14,7 +14,6 @@ void model_preset_subscribe(TTPtr self, TTAddress modelAddress)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue						v, a, args;
 	TTXmlHandlerPtr				aXmlHandler;
-    TTTextHandlerPtr			aTextHandler;
     TTAddress                   presetAddress;
     TTNodePtr                   aNode;
     TTBoolean                   newInstanceCreated;
@@ -32,12 +31,6 @@ void model_preset_subscribe(TTPtr self, TTAddress modelAddress)
         x->internals->append(kTTSym_XmlHandler, v);
         v = TTValue(EXTRA->presetManager);
         aXmlHandler->setAttributeValue(kTTSym_object, v);
-        
-        // create internal TTTextHandler
-        aTextHandler = NULL;
-        TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&aTextHandler), args);
-        v = TTValue(aTextHandler);
-        x->internals->append(kTTSym_TextHandler, v);
         
         // if desired, load default modelClass.patcherContext.xml file preset
         if (EXTRA->attr_load_default)
