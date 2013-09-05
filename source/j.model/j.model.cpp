@@ -26,56 +26,61 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 
 void WrapTTContainerClass(WrappedClassPtr c)
 {
-	class_addmethod(c->maxClass, (method)model_assist,					"assist",				A_CANT, 0L);
+	class_addmethod(c->maxClass, (method)model_assist,                      "assist",				A_CANT, 0L);
 	
-	class_addmethod(c->maxClass, (method)model_share_patcher_info,		"share_patcher_info",	A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_share_patcher_node,		"share_patcher_node",	A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_share_patcher_info,          "share_patcher_info",	A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_share_patcher_node,          "share_patcher_node",	A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)model_return_address,			"return_address",		A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_return_value,			"return_value",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_return_address,              "return_address",		A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_return_value,                "return_value",			A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)model_help,					"model_help",			A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_reference,				"model_reference",		A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_open,                    "model_open",           A_CANT, 0);
-//	class_addmethod(c->maxClass, (method)model_mute,					"model_mute",			A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_address,					"model_address",		A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_autodoc,					"doc_generate",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_help,                        "model_help",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_reference,                   "model_reference",		A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_open,                        "model_open",           A_CANT, 0);
+//	class_addmethod(c->maxClass, (method)model_mute,                        "model_mute",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_address,                     "model_address",		A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_autodoc,                     "doc_generate",			A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_preset_return_names,		"return_names",			A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_preset_filechanged,		"filechanged",			A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_preset_return_names,         "return_names",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_preset_filechanged,          "filechanged",			A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)model_preset_read,				"preset_read",			A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_preset_write,			"preset_write",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_preset_read,                 "preset_read",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_preset_write,                "preset_write",			A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_preset_read_again,		"preset_read_again",	A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_preset_write_again,		"preset_write_again",	A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_preset_read_again,           "preset_read_again",	A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_preset_write_again,          "preset_write_again",	A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)model_preset_edit,				"dblclick",				A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_preset_edclose,			"edclose",				A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_preset_edit,                 "dblclick",				A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_preset_edclose,              "edclose",				A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)model_preset_read,				"preset:read",			A_GIMME, 0);
-	class_addmethod(c->maxClass, (method)model_preset_write,			"preset:write",			A_GIMME, 0);
-	class_addmethod(c->maxClass, (method)model_preset_edit,				"preset:edit",			A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)model_preset_read,                 "preset:read",			A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)model_preset_write,                "preset:write",			A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)model_preset_edit,                 "preset:edit",			A_GIMME, 0);
 	
-	class_addmethod(c->maxClass, (method)model_preset_read_again,		"preset:read/again",	0);
-	class_addmethod(c->maxClass, (method)model_preset_write_again,		"preset:write/again",	0);
+	class_addmethod(c->maxClass, (method)model_preset_read_again,           "preset:read/again",	0);
+	class_addmethod(c->maxClass, (method)model_preset_write_again,          "preset:write/again",	0);
     
-    class_addmethod(c->maxClass, (method)model_signal_return_content,	"return_content",		A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_content,       "return_content",		A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_signal_return_flow_mute,	"return_flow_mute",		A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_signal_return_flow_bypass,"return_flow_bypass",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_flow_freeze,"return_flow_freeze",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_flow_preview,"return_flow_preview",A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_flow_mute,     "return_flow_mute",		A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_signal_return_flow_bypass,   "return_flow_bypass",	A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_flow_freeze,   "return_flow_freeze",	A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_flow_preview,  "return_flow_preview",  A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_signal_return_audio_mute,"return_audio_mute",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_audio_bypass,"return_audio_bypass",A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_audio_mix,"return_audio_mix",      A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_audio_gain,"return_audio_gain",	A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_audio_mute,    "return_audio_mute",	A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_audio_bypass,  "return_audio_bypass",  A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_audio_mix,     "return_audio_mix",     A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_audio_gain,    "return_audio_gain",	A_CANT, 0);
 	
 	CLASS_ATTR_LONG(c->maxClass,		"load_default",	0,		WrappedModularInstance,	extra);
-	CLASS_ATTR_DEFAULT(c->maxClass,		"load_default",	0,		"1")
+	CLASS_ATTR_DEFAULT(c->maxClass,		"load_default",	0,		"1");
 	CLASS_ATTR_ACCESSORS(c->maxClass,	"load_default",			model_preset_get_load_default,	model_preset_set_load_default);
 	CLASS_ATTR_STYLE(c->maxClass,		"load_default",	0,		"onoff");
+    
+    CLASS_ATTR_ATOM(c->maxClass,        "amenities",	0,		WrappedModularInstance,	extra);
+	CLASS_ATTR_DEFAULT(c->maxClass,		"amenities",	0,		"all");
+	CLASS_ATTR_ACCESSORS(c->maxClass,	"amenities",			model_get_amenities, model_set_amenities);
+	CLASS_ATTR_STYLE(c->maxClass,		"amenities",	0,		"text");
 }
 
 void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
@@ -107,7 +112,6 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
 	EXTRA->modelAddress = kTTAdrsEmpty;
-    EXTRA->component = NO;
     EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
     EXTRA->presetManager = NULL;
@@ -116,15 +120,12 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	EXTRA->toEdit = x->wrappedObject;
 	EXTRA->presetName = kTTSymEmpty;
     EXTRA->readingContent = NO;
-	
-	// read first argument to know if the model is a component
-	if (attrstart && argv) {
-		if (atom_getsym(argv) == gensym("component"))
-			EXTRA->component = YES;
-		else
-			object_error((ObjectPtr)x, "%s is not expected as argument", atom_getsym(argv)->s_name);
-	}
+    EXTRA->attr_amenities = new TTHash();
+    EXTRA->all_amenities = NO;
+    EXTRA->no_amenities = NO;
     
+    EXTRA->attr_amenities->append(TTSymbol("all"), kTTValNONE);
+	
     // create the preset manager
 	jamoma_presetManager_create((ObjectPtr)x, &EXTRA->presetManager);
 	
@@ -168,11 +169,8 @@ void model_subscribe(TTPtr self)
 	TTValue						v, args;
     TTNodePtr                   returnedNode = NULL;
     TTNodePtr                   returnedContextNode = NULL;
-	TTSymbol					classAdrs, helpAdrs, refAdrs, openAdrs, documentationAdrs, editAdrs, muteAdrs;
 	TTObjectBasePtr				aData, aReceiver;
 	TTTextHandlerPtr			aTextHandler;
-    TTPresetPtr                 aPreset;
-	TTPtr						context;
 	TTBoolean					isSubModel;
 	TTAddress                   returnedAddress;
 	AtomCount					ac;
@@ -191,103 +189,10 @@ void model_subscribe(TTPtr self)
         if (x->patcherContext == kTTSym_model)
             EXTRA->modelAddress = returnedAddress;
 		
-		// if the j.model is well subscribed
+		// if the j.model|j.view is well subscribed
 		if (aPatcher == x->patcherPtr && x->patcherContext != kTTSymEmpty) {
-			
-			// no internal parameter for component
-			if (!EXTRA->component) {
-				
-				if (x->patcherContext == kTTSym_model) {
-					classAdrs = TTSymbol("model/class");
-					helpAdrs =  TTSymbol("model/help");
-					refAdrs = TTSymbol("model/reference");
-					openAdrs = TTSymbol("model/open");
-					documentationAdrs = TTSymbol("model/documentation/generate");
-                    editAdrs = TTSymbol("model/edit");
-					//muteAdrs = TTSymbol("model/mute");
-				}
-				else if (x->patcherContext == kTTSym_view) {
-					classAdrs = TTSymbol("view/class");
-					helpAdrs =  TTSymbol("view/help");
-					refAdrs = TTSymbol("view/reference");
-					openAdrs = TTSymbol("view/open");
-					documentationAdrs = TTSymbol("view/documentation/generate");
-					//muteAdrs = TTSymbol("view/mute");
-				}
-				
-				// Add a /class data
-				makeInternals_data(x, returnedAddress, classAdrs, gensym("model_class"), context, kTTSym_return, &aData);
-				aData->setAttributeValue(kTTSym_type, kTTSym_string);
-				aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-				aData->setAttributeValue(kTTSym_description, TTSymbol("The patcher class"));
-				aData->setAttributeValue(kTTSym_value, x->patcherClass);
-				
-				// Add a /help data
-				makeInternals_data(x, returnedAddress, helpAdrs, gensym("model_help"), context, kTTSym_message, &aData);
-				aData->setAttributeValue(kTTSym_type, kTTSym_none);
-				aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-				aData->setAttributeValue(kTTSym_description, TTSymbol("Open the maxhelp patch"));
-				
-				// Add a /reference data
-				makeInternals_data(x, returnedAddress, refAdrs, gensym("model_reference"), context, kTTSym_message, &aData);
-				aData->setAttributeValue(kTTSym_type, kTTSym_none);
-				aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-				aData->setAttributeValue(kTTSym_description, TTSymbol("Open the reference page"));
-				
-				// Add a /open data
-				makeInternals_data(x, returnedAddress, openAdrs, gensym("model_open"), context, kTTSym_message, &aData);
-				aData->setAttributeValue(kTTSym_type, kTTSym_none);
-				aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-				aData->setAttributeValue(kTTSym_description, TTSymbol("Open the patcher"));
-				
-				/* Add a /model/mute data
-				makeInternals_data(x, nodeAdrs, muteAdrs, gensym("model_mute"), context, kTTSym_parameter, &aData);
-				aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-				aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-				aData->setAttributeValue(kTTSym_priority, -1); // very high priority flag
-				aData->setAttributeValue(kTTSym_description, TTSymbol("Mute all parameters in the patcher"));
-                 */
-                
-                // for model model preset, documentation and signal management :
-                if (x->patcherContext == kTTSym_model) {
-                    
-                    // create internal TTTextHandler (for documention and preset management)
-                    aTextHandler = NULL;
-                    TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&aTextHandler), args);
-                    v = TTValue(aTextHandler);
-                    x->internals->append(kTTSym_TextHandler, v);
-                    v = TTValue(x->wrappedObject);
-                    aTextHandler->setAttributeValue(kTTSym_object, v);
-                    
-                    // Add a /documentation/generate data
-                    makeInternals_data(x, returnedAddress, documentationAdrs, gensym("doc_generate"), context, kTTSym_message, &aData);
-                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
-                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                    aData->setAttributeValue(kTTSym_description, TTSymbol("Make a html page description"));
-                    
-                    // subscribe preset manager object
-                    model_preset_subscribe(self, returnedAddress);
-                    
-                    // observe model's content to create signal in/out datas
-                    makeInternals_receiver(self, returnedAddress, kTTSym_content, gensym("return_content"), &aReceiver, YES, YES); // we need to deferlow to avoid lock crash on TTContainer content
-                    aReceiver->sendMessage(kTTSym_Get);
-                    
-                }
-			}
-			
-			// In model *and* view patcher : Add /model/address data
-			if (x->patcherContext == kTTSym_model) // as return
-				makeInternals_data(x, returnedAddress,  TTSymbol("model/address"), gensym("model_address"), context, kTTSym_return, &aData);
-			
-			if (x->patcherContext == kTTSym_view) // as parameter
-				makeInternals_data(x, returnedAddress,  TTSymbol("model/address"), gensym("model_address"), context, kTTSym_parameter, &aData);
-			
-			aData->setAttributeValue(kTTSym_type, kTTSym_string);
-			aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-			aData->setAttributeValue(kTTSym_description, TTSymbol("The model address to bind for the view. A model patcher bind on himself"));
-			aData->setAttributeValue(kTTSym_priority, -1); // very high priority flag
-			
-			// Get patcher arguments
+            
+            // Get patcher arguments
 			ac = 0;
 			av = NULL;
 			
@@ -306,16 +211,102 @@ void model_subscribe(TTPtr self)
 				av++;
 			}
 			
-			// In model patcher : set /model/address with his address
+			// j.model case :
 			if (x->patcherContext == kTTSym_model) {
-				aData->setAttributeValue(kTTSym_value, returnedAddress);
-				
-				// use aPatcher args to setup the model attributes (like @priority)
+                
+                // use patcher arguments to setup the model attributes (like @priority and @amenities)
 				if (ac && av)
 					attr_args_process(x, ac, av);
+                
+                // Create internal TTTextHandler (for documention and preset management)
+                aTextHandler = NULL;
+                TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&aTextHandler), args);
+                v = TTValue(aTextHandler);
+                x->internals->append(kTTSym_TextHandler, v);
+                v = TTValue(x->wrappedObject);
+                aTextHandler->setAttributeValue(kTTSym_object, v);
+                
+                if (!EXTRA->attr_amenities->lookup(TTSymbol("all"), v))
+                    EXTRA->all_amenities = YES;
+                
+                if (!EXTRA->attr_amenities->lookup(TTSymbol("none"), v))
+                    EXTRA->no_amenities = YES;
+				
+                // Add amenities relative to model informations
+                if (model_test_amenities(self, TTSymbol("model"))) {
+                    
+                    // Add a /class data
+                    makeInternals_data(x, returnedAddress, TTSymbol("model/class"), gensym("model_class"), x->patcherPtr, kTTSym_return, &aData);
+                    aData->setAttributeValue(kTTSym_type, kTTSym_string);
+                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                    aData->setAttributeValue(kTTSym_description, TTSymbol("The patcher class"));
+                    aData->setAttributeValue(kTTSym_value, x->patcherClass);
+                    
+                    // Add a /help data
+                    makeInternals_data(x, returnedAddress, TTSymbol("model/help"), gensym("model_help"), x->patcherPtr, kTTSym_message, &aData);
+                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
+                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                    aData->setAttributeValue(kTTSym_description, TTSymbol("Open the maxhelp patch"));
+                    
+                    // Add a /reference data
+                    makeInternals_data(x, returnedAddress, TTSymbol("model/reference"), gensym("model_reference"), x->patcherPtr, kTTSym_message, &aData);
+                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
+                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                    aData->setAttributeValue(kTTSym_description, TTSymbol("Open the reference page"));
+                    
+                    // Add a /open data
+                    makeInternals_data(x, returnedAddress, TTSymbol("model/open"), gensym("model_open"), x->patcherPtr, kTTSym_message, &aData);
+                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
+                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                    aData->setAttributeValue(kTTSym_description, TTSymbol("Open the patcher"));
+                    
+                    // Add a /documentation/generate data
+                    makeInternals_data(x, returnedAddress, TTSymbol("model/documentation/generate"), gensym("doc_generate"), x->patcherPtr, kTTSym_message, &aData);
+                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
+                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                    aData->setAttributeValue(kTTSym_description, TTSymbol("Make a html page description"));
+                    
+                    /* Add a /model/mute data
+                     makeInternals_data(x, nodeAdrs, TTSymbol("model/mute"), gensym("model_mute"), x->patcherContext, kTTSym_parameter, &aData);
+                     aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
+                     aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                     aData->setAttributeValue(kTTSym_priority, -1); // very high priority flag
+                     aData->setAttributeValue(kTTSym_description, TTSymbol("Mute all parameters in the patcher"));
+                     */
+                }
+                
+                // Add amenities relative to preset informations
+                if (model_test_amenities(self, TTSymbol("preset")))
+                    
+                    // subscribe preset manager object
+                    model_preset_subscribe(self, returnedAddress);
+                
+                // Add amenities relative to signal informations
+                if (model_test_amenities(self, TTSymbol("flow")) || model_test_amenities(self, TTSymbol("audio"))) {
+                    
+                    // observe model's content to create signal in/out datas
+                    makeInternals_receiver(self, returnedAddress, kTTSym_content, gensym("return_content"), &aReceiver, YES, YES); // we need to deferlow to avoid lock crash on TTContainer content
+                    aReceiver->sendMessage(kTTSym_Get);
+                }
 			}
 			
-			// In view patcher :
+			// In model *and* view patcher : Add /model/address data
+			if (x->patcherContext == kTTSym_model) // as return
+				makeInternals_data(x, returnedAddress,  TTSymbol("model/address"), gensym("model_address"), x->patcherPtr, kTTSym_return, &aData);
+			
+			if (x->patcherContext == kTTSym_view) // as parameter
+				makeInternals_data(x, returnedAddress,  TTSymbol("model/address"), gensym("model_address"), x->patcherPtr, kTTSym_parameter, &aData);
+			
+			aData->setAttributeValue(kTTSym_type, kTTSym_string);
+			aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+			aData->setAttributeValue(kTTSym_description, TTSymbol("The model address to bind for the view. A model patcher bind on himself"));
+			aData->setAttributeValue(kTTSym_priority, -1); // very high priority flag
+			
+			// In model patcher : set /model/address with his address
+			if (x->patcherContext == kTTSym_model)
+				aData->setAttributeValue(kTTSym_value, returnedAddress);
+			
+			// In view patcher : see in model_subscribe_view
 			if (x->patcherContext == kTTSym_view)
                 model_subscribe_view(self, _sym_nothing, ac, av);
 
@@ -594,4 +585,60 @@ void model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 			EXTRA->modelAddress = TTAddress(atom_getsym(argv)->s_name);
 		}
 	}
+}
+
+t_max_err model_get_amenities(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTValue keys;
+    
+    EXTRA->attr_amenities->getKeysSorted(keys);
+	
+	if ((*ac)&&(*av)) {
+		//memory passed in, use it
+	} else {
+        
+		//otherwise allocate memory
+		*ac = keys.size();
+		if (!(*av = (AtomPtr)getbytes(sizeof(Atom)*(*ac)))) {
+			*ac = 0;
+			return MAX_ERR_OUT_OF_MEM;
+		}
+	}
+	
+	jamoma_ttvalue_to_Atom(keys, ac, av);
+	
+	return MAX_ERR_NONE;
+}
+
+t_max_err model_set_amenities(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTValue     keys;
+    TTSymbol    key;
+    
+    EXTRA->attr_amenities->clear();
+	
+	if (ac&&av) {
+        
+		jamoma_ttvalue_from_Atom(keys, _sym_nothing, ac, av);
+        
+        for (TTUInt8 i = 0; i < keys.size(); i++) {
+            
+            key = keys[i];
+            EXTRA->attr_amenities->append(key, kTTValNONE);
+        }
+    }
+	else
+		EXTRA->attr_amenities->append(TTSymbol("all"), kTTValNONE); // default all
+	
+	return MAX_ERR_NONE;
+}
+
+TTBoolean model_test_amenities(TTPtr self, TTSymbol name)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTValue v;
+    
+    return !EXTRA->no_amenities && (EXTRA->all_amenities || !EXTRA->attr_amenities->lookup(name, v));
 }

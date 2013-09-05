@@ -13,7 +13,6 @@
 typedef struct extra {
 	ObjectPtr			modelInternal;		// store an internal model patcher
 	TTAddress           modelAddress;		// store the /model/address parameter
-	TTBoolean			component;			// is the model a simple component ?
     
     TTString            *text;				// the text of the editor to read after edclose
 	ObjectPtr           textEditor;			// the text editor window
@@ -25,6 +24,10 @@ typedef struct extra {
 	TTSymbol            presetName;			// the name of the edited preset
     
     TTBoolean           readingContent;     // a flag to avoid infinite loop in model_return_content
+    
+    TTHashPtr           attr_amenities;
+    TTBoolean           all_amenities;
+    TTBoolean           no_amenities;
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
 
@@ -84,6 +87,10 @@ void		model_preset_subscribe(TTPtr self, TTAddress modelAddress);
 
 t_max_err	model_preset_get_load_default(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av);
 t_max_err	model_preset_set_load_default(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av);
+
+t_max_err	model_get_amenities(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av);
+t_max_err	model_set_amenities(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av);
+TTBoolean   model_test_amenities(TTPtr self, TTSymbol name);
 
 void        model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
