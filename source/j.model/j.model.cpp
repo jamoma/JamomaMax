@@ -33,6 +33,8 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)model_return_address,              "return_address",		A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_return_value,                "return_value",			A_CANT, 0);
+    
+    class_addmethod(c->maxClass, (method)model_return_upper_view_model_address,"return_upper_view_model_address", A_CANT, 0);
 	
 	class_addmethod(c->maxClass, (method)model_help,                        "model_help",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_reference,                   "model_reference",		A_CANT, 0);
@@ -112,6 +114,7 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
 	EXTRA->modelAddress = kTTAdrsEmpty;
+    EXTRA->argAddress = kTTAdrsEmpty;
     EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
     EXTRA->presetManager = NULL;
@@ -330,14 +333,14 @@ void model_subscribe(TTPtr self)
 void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTValue         o;
-    TTObjectBasePtr modelAddressData;
+    TTObjectBasePtr modelAddressData, aReceiver;
     SymbolPtr		hierarchy;
     ObjectPtr		aPatcher;
     TTList          whereToSearch;
     TTBoolean       isThere;
     TTNodePtr       firstTTNode;
     TTAddress       containerAdrs, argAdrs;
+    TTValue         v, o;
     TTErr           tterr;
     
     tterr = x->internals->lookup(TTSymbol("model/address"), o);
@@ -380,11 +383,24 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
             
             argAdrs = TTAddress(atom_getsym(argv)->s_name);
             
-            // the model/address have to be absolute
+            // if the model/address is absolute : use it directly
             if (argAdrs.getType() == kAddressAbsolute)
                 EXTRA->modelAddress = argAdrs;
-            else
-                EXTRA->modelAddress = kTTAdrsRoot.appendAddress(argAdrs);
+            
+            // in case of relative address : try to use the upper view patcher model/address (else use root)
+            else {
+                
+                // keep the argument address
+                EXTRA->argAddress = argAdrs;
+                
+                // get the address attribute of the Container
+                x->wrappedObject->getAttributeValue(kTTSym_address, v);
+                containerAdrs = v[0];
+                
+                // observe upper view model/address parameter
+                makeInternals_receiver(self, containerAdrs.getParent(), TTAddress("model/address"), gensym("return_upper_view_model_address"), &aReceiver, YES); // we need to deferlow to avoid lock crash on TTContainer content
+                aReceiver->sendMessage(kTTSym_Get);
+            }
         }
         
         // if the model/address is empty : the view is not binding a model for instant
@@ -393,6 +409,33 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
         
         // set the model/address data value to notify all observers
         modelAddressData->setAttributeValue(kTTSym_value, EXTRA->modelAddress);
+    }
+}
+
+void model_return_upper_view_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTObjectBasePtr modelAddressData;
+    TTAddress       upperViewModelAddress;
+    TTValue         v, o, out;
+    TTErr           tterr;
+    
+    jamoma_ttvalue_from_Atom(v, msg, argc, argv);
+    upperViewModelAddress = v[0];
+    
+    // append argAddress stored in model_view_subscribe
+    if (upperViewModelAddress != kTTSymEmpty)
+        EXTRA->modelAddress = upperViewModelAddress.appendAddress(EXTRA->argAddress);
+    else
+        EXTRA->modelAddress = kTTAdrsRoot.appendAddress(EXTRA->argAddress);
+    
+    // set the model/address data
+    tterr = x->internals->lookup(TTSymbol("model/address"), o);
+    
+    if (!tterr) {
+        
+        modelAddressData = o[0];
+        modelAddressData->sendMessage(kTTSym_Command, EXTRA->modelAddress, out);
     }
 }
 

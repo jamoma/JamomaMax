@@ -13,6 +13,7 @@
 typedef struct extra {
 	ObjectPtr			modelInternal;		// store an internal model patcher
 	TTAddress           modelAddress;		// store the /model/address parameter
+    TTAddress           argAddress;         // store the address from the argument (see in model_upper_view_model_address)
     
     TTString            *text;				// the text of the editor to read after edclose
 	ObjectPtr           textEditor;			// the text editor window
@@ -50,6 +51,8 @@ void		model_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv
 
 void		model_subscribe(TTPtr self);
 void		model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+void        model_return_upper_view_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void		model_init(TTPtr self);
 
