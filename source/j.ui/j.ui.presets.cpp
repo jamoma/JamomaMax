@@ -31,16 +31,39 @@ void ui_preset_doread(t_ui *x)
 	char 			filename[MAX_FILENAME_CHARS];	// for storing the name of the file locally
 	char 			fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
 	char			posixpath[MAX_PATH_CHARS];
-	short 			path;					// pathID#
-    t_fourcc		filetype = 'TEXT', outtype;  // the file type that is actually true
+	short 			path;                           // pathID#
+    t_fourcc		filetype = 'TEXT', outtype;     // the file type that is actually true
+    TTNodePtr		patcherNode;
+    ObjectPtr       obj, modelPatcher = NULL;
+	SymbolPtr       _sym_jclass, _sym_jmodel = gensym("j.model");
+    t_atom          a[1];
 	
 	if (open_dialog(filename, &path, &outtype, &filetype, 1))		// Returns 0 if successful
 		return;														// User Cancelled
 
 	path_topathname(path, filename, fullpath);
 	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
+    
+    // get model patcher
+	JamomaDirectory->getTTNode(x->modelAddress, &patcherNode);
+	modelPatcher = (ObjectPtr)patcherNode->getContext();
 	
-	ui_viewer_send(x, TTSymbol("preset:read"), TTSymbol(posixpath));
+	// find the j.model object inside the model patcher
+    obj = object_attr_getobj(modelPatcher, _sym_firstobject);
+    
+    while (obj) {
+		_sym_jclass = object_attr_getsym(obj, _sym_maxclass);
+		if (_sym_jclass == _sym_jmodel) {
+            
+            atom_setsym(a, gensym(posixpath));
+            
+			// send a preset:read path message
+			object_method_typed(object_attr_getobj(obj, _sym_object), gensym("preset:read"), 1, a, NULL);
+            
+            break;
+		}
+		obj = object_attr_getobj(obj, _sym_nextobject);
+	}
 }
 
 void ui_preset_dowrite(t_ui *x)
@@ -53,8 +76,10 @@ void ui_preset_dowrite(t_ui *x)
 	t_fourcc		outtype;					// the file type that is actually true
 	t_filehandle	file_handle;				// a reference to our file (for opening it, closing it, etc.)
 	TTNodePtr		patcherNode;
-	ObjectPtr		modelPatcher = NULL;
+	ObjectPtr		obj, modelPatcher = NULL;
 	TTSymbol		modelClass;
+	SymbolPtr       _sym_jclass, _sym_jmodel = gensym("j.model");
+    t_atom          a[1];
 	
 	// get model patcher class for preset file name
 	JamomaDirectory->getTTNode(x->modelAddress, &patcherNode);
@@ -66,10 +91,10 @@ void ui_preset_dowrite(t_ui *x)
 		if (modelClass)
 			snprintf(filename, MAX_FILENAME_CHARS, "%s.model.xml", modelClass.c_str());	// Default File Name
 		else
-			snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");		// Default File Name
+			snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");               // Default File Name
 	}
 	else
-		snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");		// Default File Name
+		snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");                   // Default File Name
 	
 	
 	saveas_promptset("Save Preset...");											// Instructional Text in the dialog
@@ -79,16 +104,30 @@ void ui_preset_dowrite(t_ui *x)
 	
 	// NOW ATTEMPT TO CREATE THE FILE...
 	err = path_createsysfile(filename, path, type, &file_handle);
-	if (err) {																// Handle any errors that occur
+	if (err) {                                                                  // Handle any errors that occur
 		object_error((t_object*)x, "%s - error %d creating file", filename, err);
 		return;	
 	}
 	
-	// ... AND WE SAVE THE fullpath IN THE HUB ATTRIBUTE user_path.
 	path_topathname(path, filename, fullpath);
 	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
-	
-	ui_viewer_send(x, TTSymbol("preset:write"), TTSymbol(posixpath));
+    
+    // find the j.model object inside the model patcher
+    obj = object_attr_getobj(modelPatcher, _sym_firstobject);
+    
+    while (obj) {
+		_sym_jclass = object_attr_getsym(obj, _sym_maxclass);
+		if (_sym_jclass == _sym_jmodel) {
+            
+            atom_setsym(a, gensym(posixpath));
+            
+			// send a preset:write path message
+			object_method_typed(object_attr_getobj(obj, _sym_object), gensym("preset:write"), 1, a, NULL);
+        
+            break;
+		}
+		obj = object_attr_getobj(obj, _sym_nextobject);
+	}
 }
 
 void ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
