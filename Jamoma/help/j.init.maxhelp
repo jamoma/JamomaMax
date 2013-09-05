@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 62.0, 66.0, 745.0, 572.0 ],
+		"rect" : [ 100.0, 100.0, 745.0, 572.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -77,7 +77,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 197.0, 364.0, 120.0, 18.0 ],
-									"presentation_rect" : [ 199.0, 364.0, 0.0, 0.0 ],
 									"text" : "2"
 								}
 
@@ -109,20 +108,6 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 197.0, 290.0, 120.0, 18.0 ],
 									"text" : "1."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-17",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 61.0, 261.0, 72.0, 20.0 ],
-									"text" : "j.preset"
 								}
 
 							}
@@ -184,7 +169,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 61.0, 124.0, 316.0, 60.0 ],
+									"patching_rect" : [ 61.0, 124.0, 306.0, 60.0 ],
 									"text" : "Sending the message init  makes j.preset reset all parameters to the default preset (so the needs a j.preset and a preset file to load) or to parameters default value"
 								}
 
@@ -221,7 +206,6 @@
 					}
 ,
 					"patching_rect" : [ 132.0, 112.0, 97.0, 18.0 ],
-					"presentation_rect" : [ 135.0, 111.0, 0.0, 0.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -252,7 +236,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -311,11 +295,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 62.0, 92.0, 745.0, 546.0 ],
+						"rect" : [ 100.0, 126.0, 745.0, 546.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -457,7 +441,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 2,
 											"architecture" : "x86"
 										}
 ,
@@ -743,7 +727,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 2,
 											"architecture" : "x86"
 										}
 ,
@@ -1063,20 +1047,6 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-17",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 71.0, 326.0, 72.0, 20.0 ],
-									"text" : "j.preset"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 									"bgcolor2" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"fontname" : "Arial",
@@ -1137,7 +1107,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 2,
 											"architecture" : "x86"
 										}
 ,
@@ -1326,7 +1296,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 60.0, 180.0, 286.0, 47.0 ],
+									"patching_rect" : [ 60.0, 180.0, 252.0, 47.0 ],
 									"text" : "j.init connects to j.model in order to link to all other instances of j.init within the same model. "
 								}
 
@@ -1356,7 +1326,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 60.0, 135.0, 270.0, 47.0 ],
+									"patching_rect" : [ 60.0, 135.0, 273.0, 47.0 ],
 									"text" : "j.init is a kind of loadbang local to the model. This way it is possible to initialize one module without resetting all preexisting modules."
 								}
 
@@ -1371,7 +1341,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 71.0, 381.0, 321.0, 47.0 ],
+									"patching_rect" : [ 71.0, 381.0, 323.0, 47.0 ],
 									"text" : "Example illustrating that j.init works locally for sub levels of a model's namespace but it needs a hub around. Noticed that upper j.init are banging lowerones"
 								}
 
@@ -1561,10 +1531,6 @@
 			}
 , 			{
 				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]
