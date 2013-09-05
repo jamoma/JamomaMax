@@ -29,6 +29,251 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+					"fontname" : "Arial",
+					"fontsize" : 16.0,
+					"id" : "obj-68",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 2,
+							"architecture" : "x86"
+						}
+,
+						"rect" : [ 1166.0, 44.0, 254.0, 422.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 0,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"boxanimatetime" : 200,
+						"imprint" : 0,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-11",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 346.0, 244.0, 47.0 ],
+									"text" : " it is possible to enable several amenities in the same time. Here the preset and model amenities are enabled."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-10",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 266.0, 244.0, 47.0 ],
+									"text" : "flow : enable flow signal amenities only\n(which is useless in case of degrade~model as it doesn't deal with flow signal)"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-9",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 212.0, 244.0, 20.0 ],
+									"text" : "audio : enable audio signal  amenities only"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-8",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 158.0, 219.0, 20.0 ],
+									"text" : "preset : enable preset amenities only"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-7",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 105.0, 219.0, 20.0 ],
+									"text" : "none : disable all amenities"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "signal", "signal" ],
+									"patching_rect" : [ 7.0, 393.0, 237.0, 20.0 ],
+									"text" : "degrade~.model @amenities preset model"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "signal", "signal" ],
+									"patching_rect" : [ 7.0, 313.0, 219.0, 20.0 ],
+									"text" : "degrade~.model @amenities flow"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "signal", "signal" ],
+									"patching_rect" : [ 7.0, 232.0, 219.0, 20.0 ],
+									"text" : "degrade~.model @amenities audio"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "signal", "signal" ],
+									"patching_rect" : [ 7.0, 178.0, 219.0, 20.0 ],
+									"text" : "degrade~.model @amenities preset"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "signal", "signal" ],
+									"patching_rect" : [ 7.0, 125.0, 219.0, 20.0 ],
+									"text" : "degrade~.model @amenities none"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-74",
+									"linecount" : 6,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 9.0, 219.0, 87.0 ],
+									"text" : "a model have 3 types of amenities : preset, signal and model.\n\nThey are all enable by default but it is possible to select them during a model instanciation."
+								}
+
+							}
+ ],
+						"lines" : [  ]
+					}
+,
+					"patching_rect" : [ 608.0, 530.0, 92.0, 24.0 ],
+					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"default_fontsize" : 12.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p amenities",
+					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-64",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 532.0, 408.0, 130.0, 20.0 ],
+					"text" : "Tree structure :"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-63",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 532.0, 532.0, 72.0, 20.0 ],
+					"text" : "Amenities :"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-53",
@@ -101,7 +346,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 301.0, 233.0, 379.0, 460.0 ],
+						"rect" : [ 925.0, 221.0, 379.0, 460.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -591,7 +836,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 4.5, 39.0, 370.5, 47.0 ],
-									"text" : "Some features relative to model input and output are automatically exposed as j.parameters under a flow or audio level to control all inputs/outputs in a row."
+									"text" : "Some features relative to model signal management are automatically exposed as j.parameters under a flow or audio level to control all inputs/outputs relative to a signal type in a row."
 								}
 
 							}
@@ -797,7 +1042,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 549.0, 119.0, 24.0 ],
+					"patching_rect" : [ 532.0, 590.0, 145.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -811,7 +1056,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p j.in_and_j.out",
+					"text" : "p signal_amenities",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
 				}
 
@@ -863,7 +1108,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 555.0, 349.0, 967.0, 526.0 ],
+						"rect" : [ 695.0, 405.0, 974.0, 582.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -886,6 +1131,21 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-11",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 13.0, 2.75, 409.0, 47.0 ],
+									"text" : "The preset management feature is handled by an internal object registered under a preset node. All the preset object service can be accessed using preset:service syntaxe."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
 									"id" : "obj-13",
 									"maxclass" : "number",
 									"minimum" : 1,
@@ -893,7 +1153,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 823.0, 479.25, 50.0, 20.0 ]
+									"patching_rect" : [ 823.0, 526.25, 50.0, 20.0 ]
 								}
 
 							}
@@ -906,7 +1166,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 823.0, 502.25, 92.0, 20.0 ],
+									"patching_rect" : [ 823.0, 549.25, 92.0, 20.0 ],
 									"text" : "j.send preset"
 								}
 
@@ -921,7 +1181,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 335.0, 425.25, 202.0, 33.0 ],
+									"patching_rect" : [ 335.0, 472.25, 202.0, 33.0 ],
 									"text" : "get some notifications back relative to file reading or text editiong"
 								}
 
@@ -935,7 +1195,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 355.0, 491.75, 50.0, 18.0 ]
+									"patching_rect" : [ 355.0, 538.75, 50.0, 18.0 ]
 								}
 
 							}
@@ -946,7 +1206,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 326.0, 491.75, 20.0, 20.0 ]
+									"patching_rect" : [ 326.0, 538.75, 20.0, 20.0 ]
 								}
 
 							}
@@ -957,7 +1217,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 266.0, 491.75, 20.0, 20.0 ]
+									"patching_rect" : [ 266.0, 538.75, 20.0, 20.0 ]
 								}
 
 							}
@@ -970,7 +1230,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 823.0, 456.25, 127.0, 18.0 ],
+									"patching_rect" : [ 823.0, 503.25, 127.0, 18.0 ],
 									"text" : "1 default"
 								}
 
@@ -984,7 +1244,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 823.0, 425.25, 92.0, 20.0 ],
+									"patching_rect" : [ 823.0, 472.25, 92.0, 20.0 ],
 									"text" : "j.receive preset"
 								}
 
@@ -998,7 +1258,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 584.0, 456.25, 217.0, 18.0 ],
+									"patching_rect" : [ 584.0, 503.25, 217.0, 18.0 ],
 									"text" : "default \"standard setup\" \"another case\""
 								}
 
@@ -1012,7 +1272,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 584.0, 425.25, 131.0, 20.0 ],
+									"patching_rect" : [ 584.0, 472.25, 131.0, 20.0 ],
 									"text" : "j.receive preset:names"
 								}
 
@@ -1027,7 +1287,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.0, 437.75, 148.0, 33.0 ],
+									"patching_rect" : [ 13.0, 484.75, 148.0, 33.0 ],
 									"text" : "it is possible to recall only an element of a preset"
 								}
 
@@ -1041,7 +1301,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 470.75, 191.0, 18.0 ],
+									"patching_rect" : [ 13.0, 517.75, 191.0, 18.0 ],
 									"text" : "preset:recall default myParameter"
 								}
 
@@ -1056,7 +1316,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 8.0, 596.75, 363.0, 47.0 ],
+									"patching_rect" : [ 8.0, 643.75, 363.0, 47.0 ],
 									"text" : "the 'output' feature was available into the former j.preset but it means nothing to output the lines of a preset on the leftmost outlet of the j.model now as this outlet report the current internal state.",
 									"textcolor" : [ 0.656533, 0.023209, 0.0, 1.0 ]
 								}
@@ -1071,7 +1331,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 266.0, 379.25, 146.0, 18.0 ],
+									"patching_rect" : [ 266.0, 426.25, 146.0, 18.0 ],
 									"text" : "preset:mix 1 $1 2 $2 3 $3"
 								}
 
@@ -1085,7 +1345,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 266.0, 257.75, 140.0, 18.0 ],
+									"patching_rect" : [ 266.0, 304.75, 140.0, 18.0 ],
 									"text" : "preset:interpolate 1 2 $1"
 								}
 
@@ -1102,7 +1362,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 266.0, 294.25, 78.0, 78.0 ],
+									"patching_rect" : [ 266.0, 341.25, 78.0, 78.0 ],
 									"xplace" : [ 0.384615, 0.23, 0.948718 ],
 									"yplace" : [ 0.230769, 0.77, 0.615385 ]
 								}
@@ -1118,7 +1378,7 @@
 									"orientation" : 0,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 266.0, 234.75, 131.0, 17.0 ],
+									"patching_rect" : [ 266.0, 281.75, 131.0, 17.0 ],
 									"setminmax" : [ 0.0, 1.0 ]
 								}
 
@@ -1132,7 +1392,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 120.0, 254.25, 77.0, 18.0 ],
+									"patching_rect" : [ 120.0, 301.25, 77.0, 18.0 ],
 									"text" : "preset:edit 1"
 								}
 
@@ -1146,7 +1406,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.0, 164.75, 97.0, 18.0 ],
+									"patching_rect" : [ 141.0, 211.75, 97.0, 18.0 ],
 									"text" : "preset:remove 1"
 								}
 
@@ -1160,7 +1420,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 98.0, 7.75, 54.0, 18.0 ],
+									"patching_rect" : [ 98.0, 54.75, 54.0, 18.0 ],
 									"text" : "preset 1"
 								}
 
@@ -1174,7 +1434,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 314.25, 67.0, 18.0 ],
+									"patching_rect" : [ 13.0, 361.25, 67.0, 18.0 ],
 									"text" : "preset:edit"
 								}
 
@@ -1188,7 +1448,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 294.75, 148.0, 18.0 ],
+									"patching_rect" : [ 13.0, 341.75, 148.0, 18.0 ],
 									"text" : "preset:edit \"another case\""
 								}
 
@@ -1202,7 +1462,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 274.25, 158.0, 18.0 ],
+									"patching_rect" : [ 13.0, 321.25, 158.0, 18.0 ],
 									"text" : "preset:edit \"standard setup\""
 								}
 
@@ -1216,7 +1476,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 254.25, 106.0, 18.0 ],
+									"patching_rect" : [ 13.0, 301.25, 106.0, 18.0 ],
 									"text" : "preset:edit default"
 								}
 
@@ -1230,7 +1490,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 224.75, 87.0, 18.0 ],
+									"patching_rect" : [ 13.0, 271.75, 87.0, 18.0 ],
 									"text" : "preset:remove"
 								}
 
@@ -1244,7 +1504,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 204.25, 168.0, 18.0 ],
+									"patching_rect" : [ 13.0, 251.25, 168.0, 18.0 ],
 									"text" : "preset:remove \"another case\""
 								}
 
@@ -1258,7 +1518,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 184.75, 178.0, 18.0 ],
+									"patching_rect" : [ 13.0, 231.75, 178.0, 18.0 ],
 									"text" : "preset:remove \"standard setup\""
 								}
 
@@ -1272,7 +1532,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 164.75, 127.0, 18.0 ],
+									"patching_rect" : [ 13.0, 211.75, 127.0, 18.0 ],
 									"text" : "preset:remove default"
 								}
 
@@ -1286,7 +1546,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 48.25, 125.0, 18.0 ],
+									"patching_rect" : [ 13.0, 95.25, 125.0, 18.0 ],
 									"text" : "preset \"another case\""
 								}
 
@@ -1300,7 +1560,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 28.25, 135.0, 18.0 ],
+									"patching_rect" : [ 13.0, 75.25, 135.0, 18.0 ],
 									"text" : "preset \"standard setup\""
 								}
 
@@ -1314,7 +1574,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 7.75, 83.0, 18.0 ],
+									"patching_rect" : [ 13.0, 54.75, 83.0, 18.0 ],
 									"text" : "preset default"
 								}
 
@@ -1328,7 +1588,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 136.25, 74.0, 18.0 ],
+									"patching_rect" : [ 13.0, 183.25, 74.0, 18.0 ],
 									"text" : "preset:store"
 								}
 
@@ -1342,7 +1602,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 116.25, 155.0, 18.0 ],
+									"patching_rect" : [ 13.0, 163.25, 155.0, 18.0 ],
 									"text" : "preset:store \"another case\""
 								}
 
@@ -1356,7 +1616,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 96.75, 165.0, 18.0 ],
+									"patching_rect" : [ 13.0, 143.75, 165.0, 18.0 ],
 									"text" : "preset:store \"standard setup\""
 								}
 
@@ -1370,7 +1630,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.0, 76.75, 113.0, 18.0 ],
+									"patching_rect" : [ 13.0, 123.75, 113.0, 18.0 ],
 									"text" : "preset:store default"
 								}
 
@@ -1384,7 +1644,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 164.0, 411.25, 102.0, 20.0 ],
+									"patching_rect" : [ 164.0, 458.25, 102.0, 20.0 ],
 									"text" : "forward incoming"
 								}
 
@@ -1398,7 +1658,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 266.0, 196.75, 214.0, 18.0 ],
+									"patching_rect" : [ 266.0, 243.75, 214.0, 18.0 ],
 									"text" : "preset:rename default \"curious preset\""
 								}
 
@@ -1412,7 +1672,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 266.0, 176.75, 189.0, 18.0 ],
+									"patching_rect" : [ 266.0, 223.75, 189.0, 18.0 ],
 									"text" : "preset:copy default defaultCopy 1"
 								}
 
@@ -1426,7 +1686,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 266.0, 156.75, 126.0, 18.0 ],
+									"patching_rect" : [ 266.0, 203.75, 126.0, 18.0 ],
 									"text" : "preset:move default 3"
 								}
 
@@ -1440,7 +1700,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 266.0, 136.75, 97.0, 18.0 ],
+									"patching_rect" : [ 266.0, 183.75, 97.0, 18.0 ],
 									"text" : "preset:move 1 2"
 								}
 
@@ -1455,7 +1715,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 266.0, 76.75, 100.0, 58.0 ],
+									"patching_rect" : [ 266.0, 123.75, 100.0, 58.0 ],
 									"text" : "preset:names \"standard setup\" \"another case\" default"
 								}
 
@@ -1469,7 +1729,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 266.0, 7.75, 73.0, 18.0 ],
+									"patching_rect" : [ 266.0, 54.75, 73.0, 18.0 ],
 									"text" : "preset:clear"
 								}
 
@@ -1483,7 +1743,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 266.0, 47.75, 73.0, 18.0 ],
+									"patching_rect" : [ 266.0, 94.75, 73.0, 18.0 ],
 									"text" : "preset:write"
 								}
 
@@ -1497,7 +1757,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 266.0, 27.75, 71.0, 18.0 ],
+									"patching_rect" : [ 266.0, 74.75, 71.0, 18.0 ],
 									"text" : "preset:read"
 								}
 
@@ -1511,7 +1771,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 266.0, 431.25, 65.0, 20.0 ],
+									"patching_rect" : [ 266.0, 478.25, 65.0, 20.0 ],
 									"text" : "r dumpout"
 								}
 
@@ -1526,7 +1786,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.0, 333.25, 169.0, 33.0 ],
+									"patching_rect" : [ 13.0, 380.25, 169.0, 33.0 ],
 									"text" : "double click on the j.model to edit the entire preset file"
 								}
 
@@ -1540,7 +1800,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 626.0, 143.25, 127.0, 20.0 ],
+									"patching_rect" : [ 626.0, 190.25, 127.0, 20.0 ],
 									"text" : "j.send /modelMaxhelp"
 								}
 
@@ -1555,7 +1815,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 715.0, 177.25, 81.0, 20.0 ],
+									"patching_rect" : [ 715.0, 224.25, 81.0, 20.0 ],
 									"text" : "loadmess set"
 								}
 
@@ -1571,7 +1831,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 705.0, 99.75, 185.0, 31.0 ],
+									"patching_rect" : [ 705.0, 146.75, 185.0, 31.0 ],
 									"text" : "myParameter 1000, myIndex 2, myLabel ernest, any \"bla bla bla\"",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -1584,7 +1844,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 605.0, 363.25, 20.0, 20.0 ]
+									"patching_rect" : [ 605.0, 410.25, 20.0, 20.0 ]
 								}
 
 							}
@@ -1595,7 +1855,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 605.0, 314.25, 20.0, 20.0 ]
+									"patching_rect" : [ 605.0, 361.25, 20.0, 20.0 ]
 								}
 
 							}
@@ -1606,7 +1866,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 605.0, 265.25, 20.0, 20.0 ]
+									"patching_rect" : [ 605.0, 312.25, 20.0, 20.0 ]
 								}
 
 							}
@@ -1617,7 +1877,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 604.0, 215.25, 20.0, 20.0 ]
+									"patching_rect" : [ 604.0, 262.25, 20.0, 20.0 ]
 								}
 
 							}
@@ -1632,7 +1892,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 626.0, 25.75, 231.0, 31.0 ],
+									"patching_rect" : [ 626.0, 72.75, 231.0, 31.0 ],
 									"text" : "myParameter 0.02, myIndex 45, myLabel \"foo and bar\", any 65 \"is that true ?\" 4.5",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -1647,7 +1907,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 626.0, 241.75, 110.0, 18.0 ],
+									"patching_rect" : [ 626.0, 288.75, 110.0, 18.0 ],
 									"text" : "0.02"
 								}
 
@@ -1661,7 +1921,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 626.0, 215.25, 314.0, 20.0 ],
+									"patching_rect" : [ 626.0, 262.25, 314.0, 20.0 ],
 									"text" : "j.parameter myParameter @type decimal @priority 1",
 									"varname" : "_param"
 								}
@@ -1676,7 +1936,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 626.0, 289.25, 57.0, 18.0 ],
+									"patching_rect" : [ 626.0, 336.25, 57.0, 18.0 ],
 									"text" : "45"
 								}
 
@@ -1690,7 +1950,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 626.0, 265.25, 282.0, 20.0 ],
+									"patching_rect" : [ 626.0, 312.25, 282.0, 20.0 ],
 									"text" : "j.parameter myIndex @type integer @priority 2"
 								}
 
@@ -1704,7 +1964,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 626.0, 338.25, 110.0, 18.0 ],
+									"patching_rect" : [ 626.0, 385.25, 110.0, 18.0 ],
 									"text" : "\"foo and bar\""
 								}
 
@@ -1718,7 +1978,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 626.0, 314.25, 213.0, 20.0 ],
+									"patching_rect" : [ 626.0, 361.25, 213.0, 20.0 ],
 									"text" : "j.parameter myLabel @type string"
 								}
 
@@ -1734,7 +1994,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 670.0, 62.75, 183.0, 31.0 ],
+									"patching_rect" : [ 670.0, 109.75, 183.0, 31.0 ],
 									"text" : "myParameter 0.03, myIndex 56, myLabel foo, any 33 gege 7.9",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -1749,7 +2009,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 625.0, 387.25, 142.0, 18.0 ],
+									"patching_rect" : [ 625.0, 434.25, 142.0, 18.0 ],
 									"text" : "65 \"is that true ?\" 4.5"
 								}
 
@@ -1763,7 +2023,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 626.0, 363.25, 197.0, 20.0 ],
+									"patching_rect" : [ 626.0, 410.25, 197.0, 20.0 ],
 									"text" : "j.parameter any @type generic"
 								}
 
@@ -1778,7 +2038,7 @@
 									"maxclass" : "panel",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 584.0, 7.75, 363.0, 408.5 ],
+									"patching_rect" : [ 584.0, 54.75, 363.0, 408.5 ],
 									"rounded" : 15
 								}
 
@@ -1794,7 +2054,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 8.0, 563.75, 81.0, 18.0 ],
+									"patching_rect" : [ 8.0, 610.75, 81.0, 18.0 ],
 									"text" : "preset:output",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -1811,7 +2071,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 129.0, 544.75, 91.0, 18.0 ],
+									"patching_rect" : [ 129.0, 591.75, 91.0, 18.0 ],
 									"text" : "preset:output 1",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -1827,7 +2087,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 90.0, 563.75, 85.0, 33.0 ],
+									"patching_rect" : [ 90.0, 610.75, 85.0, 33.0 ],
 									"text" : "dump on the leftmost outlet",
 									"textcolor" : [ 0.656533, 0.023209, 0.0, 1.0 ]
 								}
@@ -1844,7 +2104,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 8.0, 544.75, 120.0, 18.0 ],
+									"patching_rect" : [ 8.0, 591.75, 120.0, 18.0 ],
 									"text" : "preset:output default",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -1859,7 +2119,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 83.0, 314.25, 97.0, 20.0 ],
+									"patching_rect" : [ 83.0, 361.25, 97.0, 20.0 ],
 									"text" : "all the preset list"
 								}
 
@@ -1873,7 +2133,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 102.0, 224.75, 87.0, 20.0 ],
+									"patching_rect" : [ 102.0, 271.75, 87.0, 20.0 ],
 									"text" : "current preset"
 								}
 
@@ -1887,7 +2147,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 89.0, 136.25, 105.0, 20.0 ],
+									"patching_rect" : [ 89.0, 183.25, 105.0, 20.0 ],
 									"text" : "into current preset"
 								}
 
@@ -1902,7 +2162,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 366.0, 76.75, 103.0, 33.0 ],
+									"patching_rect" : [ 366.0, 123.75, 103.0, 33.0 ],
 									"text" : "change the order of the preset list"
 								}
 
@@ -1916,7 +2176,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 366.0, 47.75, 171.0, 20.0 ],
+									"patching_rect" : [ 366.0, 94.75, 171.0, 20.0 ],
 									"text" : "write the preset list on the disk"
 								}
 
@@ -1930,7 +2190,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 366.0, 27.75, 171.0, 20.0 ],
+									"patching_rect" : [ 366.0, 74.75, 171.0, 20.0 ],
 									"text" : "load a preset list from the disk"
 								}
 
@@ -1944,7 +2204,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 366.0, 7.75, 114.0, 20.0 ],
+									"patching_rect" : [ 366.0, 54.75, 114.0, 20.0 ],
 									"text" : "clear the preset list"
 								}
 
@@ -1958,7 +2218,7 @@
 									"numinlets" : 4,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 266.0, 464.75, 199.0, 20.0 ],
+									"patching_rect" : [ 266.0, 511.75, 199.0, 20.0 ],
 									"text" : "route read error editor"
 								}
 
@@ -2023,7 +2283,7 @@
 									"destination" : [ "obj-131", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 635.5, 335.75, 726.5, 335.75 ],
+									"midpoints" : [ 635.5, 382.75, 726.5, 382.75 ],
 									"source" : [ "obj-106", 0 ]
 								}
 
@@ -2078,7 +2338,7 @@
 									"destination" : [ "obj-142", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 635.5, 286.75, 673.5, 286.75 ],
+									"midpoints" : [ 635.5, 333.75, 673.5, 333.75 ],
 									"source" : [ "obj-141", 0 ]
 								}
 
@@ -2151,7 +2411,7 @@
 									"destination" : [ "obj-30", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 593.5, 450.25, 791.5, 450.25 ],
+									"midpoints" : [ 593.5, 497.25, 791.5, 497.25 ],
 									"source" : [ "obj-3", 0 ]
 								}
 
@@ -2197,7 +2457,7 @@
 									"destination" : [ "obj-40", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 832.5, 450.25, 940.5, 450.25 ],
+									"midpoints" : [ 832.5, 497.25, 940.5, 497.25 ],
 									"source" : [ "obj-42", 0 ]
 								}
 
@@ -2252,7 +2512,7 @@
 									"destination" : [ "obj-8", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 635.5, 236.75, 726.5, 236.75 ],
+									"midpoints" : [ 635.5, 283.75, 726.5, 283.75 ],
 									"source" : [ "obj-7", 0 ]
 								}
 
@@ -2361,7 +2621,7 @@
 									"destination" : [ "obj-91", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 635.5, 384.75, 757.5, 384.75 ],
+									"midpoints" : [ 635.5, 431.75, 757.5, 431.75 ],
 									"source" : [ "obj-88", 0 ]
 								}
 
@@ -2450,7 +2710,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 460.0, 171.0, 24.0 ],
+					"patching_rect" : [ 532.0, 560.0, 146.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2464,7 +2724,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p preset_management",
+					"text" : "p preset_amenities",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
 				}
 
@@ -2628,8 +2888,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 143.0, 185.0, 47.0 ],
-									"text" : "Some information about a model are automatically exposed as j.return under a model level"
+									"patching_rect" : [ 7.0, 143.0, 190.0, 47.0 ],
+									"text" : "Some informations about a model are automatically exposed as j.return under a model level"
 								}
 
 							}
@@ -2686,8 +2946,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 9.0, 185.0, 47.0 ],
-									"text" : "Some feature relative to a model are automatically exposed as j.message under a model level"
+									"patching_rect" : [ 7.0, 9.0, 190.0, 47.0 ],
+									"text" : "Some features relative to a model are automatically exposed as j.message under a model level"
 								}
 
 							}
@@ -2752,7 +3012,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 520.0, 163.0, 24.0 ],
+					"patching_rect" : [ 532.0, 620.0, 145.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2766,7 +3026,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p model_informations",
+					"text" : "p model_amenities",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
 				}
 
@@ -3063,7 +3323,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 399.0, 130.0, 24.0 ],
+					"patching_rect" : [ 532.0, 434.0, 130.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3100,7 +3360,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1256.0, 92.0, 577.0, 418.0 ],
+						"rect" : [ 1103.0, 92.0, 577.0, 418.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3255,7 +3515,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 184.5, 137.0, 65.0, 19.0 ],
+									"patching_rect" : [ 184.5, 137.0, 65.0, 33.0 ],
 									"text" : "s incoming"
 								}
 
@@ -3340,7 +3600,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 30.5, 22.0, 522.0, 33.0 ],
+									"patching_rect" : [ 30.5, 22.0, 522.0, 31.0 ],
 									"text" : "A model can have an alias. \nThis will allow to access the model's address (and sub-addresses) with a temporary name."
 								}
 
@@ -3403,7 +3663,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 490.0, 72.0, 24.0 ],
+					"patching_rect" : [ 532.0, 494.0, 72.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3942,7 +4202,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 430.0, 262.0, 24.0 ],
+					"patching_rect" : [ 532.0, 464.0, 262.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -4504,7 +4764,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 592.0, 338.0, 229.0, 18.0 ],
-					"text" : "input_and_output/flow/bypass 1"
+					"text" : "model/reference"
 				}
 
 			}
@@ -4877,6 +5137,13 @@
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
 				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "degrade~.model.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
