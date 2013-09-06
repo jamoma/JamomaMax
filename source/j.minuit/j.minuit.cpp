@@ -13,7 +13,7 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "minuit.h"
+#include "j.minuit.h"
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
@@ -23,12 +23,15 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	spec->_any = NULL;
 	spec->_free = &WrappedMinuitClass_free;
 	
-	return wrapTTModularClassAsMaxClass(TTSymbol("Minuit"), "j.minuit", NULL, spec);
+    kTTSym_Minuit = TTSymbol("Minuit");
+	return wrapTTModularClassAsMaxClass(kTTSym_Minuit, "j.minuit", NULL, spec);
 }
 
 void WrapMinuitClass(WrappedClassPtr c)
 {
 	class_addmethod(c->maxClass, (method)minuit_assist,					"assist",						A_CANT, 0L);
+    
+    class_addmethod(c->maxClass, (method)minuit_return_activity_in,      "return_activity_in",           A_CANT, 0);
 /*
 	class_addmethod(c->maxClass, (method)minuit_protocol_setup,			"protocol/setup",				A_GIMME, 0);
 	
@@ -43,12 +46,13 @@ void WrappedMinuitClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTSymbol					applicationName;
     TTObjectBasePtr             anApplication = NULL;
+    TTObjectBasePtr             aReceiver;
 	TTXmlHandlerPtr             anXmlHandler;
 	TTValue						v, args;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
     
     // Get the Minuit protocol object
-    x->wrappedObject = getProtocol(TTSymbol("Minuit"));
+    x->wrappedObject = getProtocol(kTTSym_Minuit);
     
     // Is the Minuit protocol available ?
     if (!x->wrappedObject) {
@@ -83,19 +87,18 @@ void WrappedMinuitClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
         anApplication->setAttributeValue(kTTSym_type, v);
     }
     
-    // Register the application to the protocol
-    v = TTValue(applicationName);
-    x->wrappedObject->sendMessage(TTSymbol("registerApplication"), v, kTTValNONE);
-            
-    // Run this protocol
-    TTModularApplications->sendMessage(TTSymbol("ProtocolRun"), TTSymbol("Minuit"), kTTValNONE);
-
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
 	EXTRA->applicationName = applicationName;
 	
 	// Prepare Internals hash to store XmlHanler object
 	x->internals = new TTHash();
+    
+    // Observe the /:activity/in
+    makeInternals_receiver(self, kTTAdrsRoot, TTSymbol("activity/in"), gensym("return_activity_in"), &aReceiver, NO, YES);
+    
+    // Observe the /:activity/out
+    makeInternals_receiver(self, kTTAdrsRoot, TTSymbol("activity/in"), gensym("return_activity_in"), &aReceiver, NO, YES);
 	
 	// Create internal TTXmlHandler to write/read the namespace the application
 	anXmlHandler = NULL;
@@ -108,6 +111,13 @@ void WrappedMinuitClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
     // Parse arguments to setup the protocol parameters
 	if (attrstart && argv)
         attr_args_process(x, argc, argv);
+    
+    // Register the application to the protocol
+    v = TTValue(applicationName);
+    x->wrappedObject->sendMessage(TTSymbol("registerApplication"), v, kTTValNONE);
+    
+    // Run this protocol
+    TTModularApplications->sendMessage(TTSymbol("ProtocolRun"), kTTSym_Minuit, kTTValNONE);
 }
 
 void WrappedMinuitClass_free(TTPtr self)
@@ -133,6 +143,13 @@ void minuit_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 				break;
 		}
  	}
+}
+
+void minuit_return_activity_in(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    object_obex_dumpout(self, msg, argc, argv);
 }
 
 /*

@@ -17,6 +17,8 @@
 
 #define dump_out 0
 
+static TTSymbol kTTSym_Minuit;
+
 // This is used to store extra data
 typedef struct extra {
 	
@@ -56,6 +58,15 @@ void	WrappedMinuitClass_free(TTPtr self);
  @param dst			Pointer to the destination that assistance strings are passed to for display.
  */
 void	minuit_assist(TTPtr self, void *b, long msg, long arg, char *dst);
+
+/** ...
+ @param self		Pointer to this object.
+ @param msg			The message sent to this object.
+ @param argc		The number of arguments passed to the object.
+ @param argv		Pointer to an array of atoms passed to the object.
+ @see				...
+ */
+void	minuit_return_activity_in(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 /** ...
  @param self		Pointer to this object.
