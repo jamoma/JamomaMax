@@ -1,140 +1,103 @@
-/* 
- * j.modular
- * External for Jamoma : to manage local and distant application
+/** @file
  *
- * By Theo de la Hogue, Copyright 2010
- * 
- * License: This code is licensed under the terms of the GNU LGPL
- * http://www.gnu.org/licenses/lgpl.html
+ * @ingroup implementationMax
+ *
+ * @brief minuit : wraps the #Minuit ProtocolLib extension class part
+ *
+ * @details Minuit protocol is a query-answer protocol built on top of the OSC protocol
+ *
+ * @authors Theo de la Hogue
+ *
+ * @copyright © 2010-13 by Theo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
 
-#include "TTModularClassWrapperMax.h"
-
-#define dump_out 0
-
-// This is used to store extra data
-typedef struct extra {
-	
-	TTSymbol			protocolName;	// remember the handled protocol 
-	
-} t_extra;
-#define EXTRA ((t_extra*)x->extra)
-
-
-// Definitions
-void	WrapTTApplicationClass(WrappedClassPtr c);
-void	WrappedApplicationClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
-void	WrappedApplicationClass_free(TTPtr self);
-
-void	modular_assist(TTPtr self, void *b, long msg, long arg, char *dst);
-
-void	modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-void	modular_namespace_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void	modular_namespace_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-void	modular_namespace_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void	modular_namespace_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+#include "minuit.h"
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	ModularSpec *spec = new ModularSpec;
-	spec->_wrap = &WrapTTApplicationClass;
-	spec->_new = &WrappedApplicationClass_new;
+	spec->_wrap = &WrapMinuitClass;
+	spec->_new = &WrappedMinuitClass_new;
 	spec->_any = NULL;
-	spec->_free = &WrappedApplicationClass_free;
+	spec->_free = &WrappedMinuitClass_free;
 	
-	return wrapTTModularClassAsMaxClass(kTTSym_Application, "j.modular", NULL, spec);
+	return wrapTTModularClassAsMaxClass(TTSymbol("Minuit"), "j.minuit", NULL, spec);
 }
 
-void WrapTTApplicationClass(WrappedClassPtr c)
+void WrapMinuitClass(WrappedClassPtr c)
 {
-	class_addmethod(c->maxClass, (method)modular_assist,					"assist",						A_CANT, 0L);
+	class_addmethod(c->maxClass, (method)minuit_assist,					"assist",						A_CANT, 0L);
+/*
+	class_addmethod(c->maxClass, (method)minuit_protocol_setup,			"protocol/setup",				A_GIMME, 0);
 	
-	class_addmethod(c->maxClass, (method)modular_protocol_setup,			"protocol/setup",				A_GIMME, 0);
-	
-	class_addmethod(c->maxClass, (method)modular_namespace_read,			"namespace/read",				A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)minuit_namespace_read,			"namespace/read",				A_GIMME, 0);
     
-    class_addmethod(c->maxClass, (method)modular_namespace_write,			"namespace/write",				A_GIMME, 0);
+    class_addmethod(c->maxClass, (method)minuit_namespace_write,		"namespace/write",				A_GIMME, 0);
+ */
 }
 
-void WrappedApplicationClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
+void WrappedMinuitClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTSymbol					applicationName;
-	TTSymbol					protocolName;
+    TTObjectBasePtr             anApplication = NULL;
 	TTXmlHandlerPtr             anXmlHandler;
 	TTValue						v, args;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
-		
-	// j.modular can handle the local application (1 argument to declare a protocol to use)
-	if (attrstart <= 1) {
-		
-		// our wrapped object is the local application
-		applicationName = getLocalApplicationName;
-		x->wrappedObject = getLocalApplication;
-		
-		if (attrstart == 1)
-			protocolName = TTSymbol(atom_getsym(argv)->s_name);
-		
-	}
-	// or it can handle a distant application (2 arguments to declare the name of the distant application and the protocol to use)
-	else if (attrstart == 2) {
-		
-		// our wrapped object is a distant application
-		applicationName = TTSymbol(atom_getsym(argv)->s_name);
-		x->wrappedObject = getApplication(applicationName);
-		
-		// if the application doesn't exists
-		if (!x->wrappedObject) {
-			
-			// create the application
-			args = TTValue(applicationName);
-			TTObjectBaseInstantiate(kTTSym_Application, TTObjectBaseHandle(&x->wrappedObject), args);
-		}
-		
-		protocolName = TTSymbol(atom_getsym(argv+1)->s_name);
+    
+    // Get the Minuit protocol object
+    x->wrappedObject = getProtocol(TTSymbol("Minuit"));
+    
+    // Is the Minuit protocol available ?
+    if (!x->wrappedObject) {
         
-        // set the type of the application depending on the plugin
-        if (protocolName == TTSymbol("Minuit")) {
-            
-            v = TTValue(TTSymbol("mirror"));
-            x->wrappedObject->setAttributeValue(kTTSym_type, v);
-        }
-        else {
-            
-            v = TTValue(TTSymbol("proxy"));
-            x->wrappedObject->setAttributeValue(kTTSym_type, v);
-        }
-	}
-	
-	// j.modular handle only one protocol per application
-	if (protocolName != kTTSymEmpty) {
+        object_error((ObjectPtr)x, "Minuit protocol is not available");
+        return;
+    }
+    
+	// no argument : j.minuit handles the local application
+	if (attrstart == 0) {
+
+		applicationName = getLocalApplicationName;
+        anApplication = getLocalApplication;
+    }
 		
-		// check if the protocol has been loaded
-		if (!getProtocol(protocolName)) {
-            
-			object_error((ObjectPtr)x, "the %s protocol is not available", protocolName.c_str());
-		}
-        else {
-            
-            // register the application to the protocol
-            v = TTValue(applicationName);
-            getProtocol(protocolName)->sendMessage(TTSymbol("registerApplication"), v, kTTValNONE);
-            
-            // run this protocol
-            TTModularApplications->sendMessage(TTSymbol("ProtocolRun"), protocolName, kTTValNONE);
+	// 1 argument : j.minuit handles a distant application
+	else if (attrstart == 1) {
+		
+		applicationName = TTSymbol(atom_getsym(argv)->s_name);
+        anApplication = getApplication(applicationName);
+        
+        // if the application doesn't exists
+        if (!anApplication) {
+			
+            // create the application
+            args = TTValue(applicationName);
+            TTObjectBaseInstantiate(kTTSym_Application, TTObjectBaseHandle(&anApplication), args);
         }
-	}
-	
+        
+        // as it is Minuit protocol : set the type of the application to mirror
+        v = TTValue(TTSymbol("mirror"));
+        anApplication->setAttributeValue(kTTSym_type, v);
+    }
+    
+    // Register the application to the protocol
+    v = TTValue(applicationName);
+    x->wrappedObject->sendMessage(TTSymbol("registerApplication"), v, kTTValNONE);
+            
+    // Run this protocol
+    TTModularApplications->sendMessage(TTSymbol("ProtocolRun"), TTSymbol("Minuit"), kTTValNONE);
+
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
-	EXTRA->protocolName = protocolName;
+	EXTRA->applicationName = applicationName;
 	
 	// Prepare Internals hash to store XmlHanler object
 	x->internals = new TTHash();
 	
-	// create internal TTXmlHandler
+	// Create internal TTXmlHandler to write/read the namespace the application
 	anXmlHandler = NULL;
 	TTObjectBaseInstantiate(kTTSym_XmlHandler, TTObjectBaseHandle(&anXmlHandler), args);
 	v = TTValue(anXmlHandler);
@@ -142,10 +105,12 @@ void WrappedApplicationClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	v = TTValue(x->wrappedObject);
 	anXmlHandler->setAttributeValue(kTTSym_object, v);
 	
-	if (attrstart && argv) attr_args_process(x, argc, argv);
+    // Parse arguments to setup the protocol parameters
+	if (attrstart && argv)
+        attr_args_process(x, argc, argv);
 }
 
-void WrappedApplicationClass_free(TTPtr self)
+void WrappedMinuitClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 
@@ -157,7 +122,7 @@ void WrappedApplicationClass_free(TTPtr self)
 }
 
 // Method for Assistance Messages
-void modular_assist(TTPtr self, void *b, long msg, long arg, char *dst)
+void minuit_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 {
 	if (msg==1) 						// Inlet
 		strcpy(dst, "input");
@@ -170,7 +135,8 @@ void modular_assist(TTPtr self, void *b, long msg, long arg, char *dst)
  	}
 }
 
-void modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+/*
+void minuit_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTSymbol    applicationName, parameterName;
@@ -260,12 +226,12 @@ void modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
 	}
 }
 
-void modular_namespace_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void minuit_namespace_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	defer(self, (method)modular_namespace_doread, msg, argc, argv);
 }
 
-void modular_namespace_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void minuit_namespace_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue				o, v;
@@ -296,12 +262,12 @@ void modular_namespace_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr
 	}
 }
 
-void	modular_namespace_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void minuit_namespace_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
     defer(self, (method)modular_namespace_dowrite, msg, argc, argv);
 }
 
-void	modular_namespace_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void minuit_namespace_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char 			filename[MAX_FILENAME_CHARS];
@@ -333,3 +299,4 @@ void	modular_namespace_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 		}
 	}
 }
+ */
