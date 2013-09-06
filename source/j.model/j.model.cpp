@@ -100,9 +100,6 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->patcherContext = kTTSym_view;
 	x->wrappedObject->setAttributeValue(kTTSym_tag, kTTSym_view);
 #endif
-	
-	// handle attribute args
-	attr_args_process(x, argc, argv);
 		
 	// Make two outlets
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 1);
@@ -128,6 +125,9 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
     EXTRA->no_amenities = NO;
     
     EXTRA->attr_amenities->append(TTSymbol("all"), kTTValNONE);
+    
+    // handle attribute args
+	attr_args_process(x, argc, argv);
 	
     // create the preset manager
 	jamoma_presetManager_create((ObjectPtr)x, &EXTRA->presetManager);
