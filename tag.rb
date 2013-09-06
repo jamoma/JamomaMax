@@ -27,8 +27,8 @@ end
 # Define function to easily tag each sub modules
 def tagModule relativePathFromJamomaFolder
 
-  if ($tag != "default")
-    puts "switching #{relativePathFromJamomaFolder} to #{$tag}"
+  if ($branch != "default")
+    puts "switching #{relativePathFromJamomaFolder} to #{$branch}"
     `cd ./#{relativePathFromJamomaFolder}; git checkout #{$branch}`
   end
     
