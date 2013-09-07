@@ -45,7 +45,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1166.0, 44.0, 254.0, 422.0 ],
+						"rect" : [ 1166.0, 44.0, 256.0, 487.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -69,12 +69,40 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
+									"id" : "obj-6",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 111.0, 219.0, 20.0 ],
+									"text" : "all : enable all amenities (default)"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-12",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "signal", "signal" ],
+									"patching_rect" : [ 7.0, 131.0, 219.0, 20.0 ],
+									"text" : "degrade~.model @amenities all"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
 									"id" : "obj-11",
 									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 346.0, 244.0, 47.0 ],
+									"patching_rect" : [ 7.0, 412.0, 244.0, 47.0 ],
 									"text" : " it is possible to enable several amenities in the same time. Here the preset and model amenities are enabled."
 								}
 
@@ -89,7 +117,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 266.0, 244.0, 47.0 ],
+									"patching_rect" : [ 7.0, 331.0, 244.0, 47.0 ],
 									"text" : "flow : enable flow signal amenities only\n(which is useless in case of degrade~model as it doesn't deal with flow signal)"
 								}
 
@@ -103,7 +131,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 212.0, 244.0, 20.0 ],
+									"patching_rect" : [ 7.0, 277.0, 244.0, 20.0 ],
 									"text" : "audio : enable audio signal  amenities only"
 								}
 
@@ -117,7 +145,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 158.0, 219.0, 20.0 ],
+									"patching_rect" : [ 7.0, 223.0, 219.0, 20.0 ],
 									"text" : "preset : enable preset amenities only"
 								}
 
@@ -131,7 +159,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 105.0, 219.0, 20.0 ],
+									"patching_rect" : [ 7.0, 166.0, 219.0, 20.0 ],
 									"text" : "none : disable all amenities"
 								}
 
@@ -145,7 +173,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 7.0, 393.0, 237.0, 20.0 ],
+									"patching_rect" : [ 7.0, 459.0, 237.0, 20.0 ],
 									"text" : "degrade~.model @amenities preset model"
 								}
 
@@ -159,7 +187,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 7.0, 313.0, 219.0, 20.0 ],
+									"patching_rect" : [ 7.0, 378.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities flow"
 								}
 
@@ -173,7 +201,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 7.0, 232.0, 219.0, 20.0 ],
+									"patching_rect" : [ 7.0, 297.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities audio"
 								}
 
@@ -187,7 +215,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 7.0, 178.0, 219.0, 20.0 ],
+									"patching_rect" : [ 7.0, 243.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities preset"
 								}
 
@@ -201,7 +229,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 7.0, 125.0, 219.0, 20.0 ],
+									"patching_rect" : [ 7.0, 186.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities none"
 								}
 
@@ -4735,7 +4763,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 592.0, 338.0, 229.0, 18.0 ],
-					"text" : "any 65 \"is that true ?\" 4.5"
+					"text" : "degrade~.5/audio/mix 100."
 				}
 
 			}
