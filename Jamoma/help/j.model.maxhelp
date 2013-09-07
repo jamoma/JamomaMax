@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 2.0, 44.0, 1163.0, 680.0 ],
+		"rect" : [ 1834.0, 126.0, 1158.0, 663.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -41,7 +41,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -225,7 +225,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 608.0, 530.0, 92.0, 24.0 ],
+					"patching_rect" : [ 597.5, 530.0, 92.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -267,7 +267,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 532.0, 532.0, 72.0, 20.0 ],
+					"patching_rect" : [ 532.0, 530.0, 72.0, 20.0 ],
 					"text" : "Amenities :"
 				}
 
@@ -342,7 +342,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -1042,7 +1042,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 590.0, 145.0, 24.0 ],
+					"patching_rect" : [ 532.0, 590.0, 157.5, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1104,7 +1104,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -2710,7 +2710,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 560.0, 146.0, 24.0 ],
+					"patching_rect" : [ 532.0, 560.0, 158.5, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2743,7 +2743,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -3012,7 +3012,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 620.0, 145.0, 24.0 ],
+					"patching_rect" : [ 532.0, 620.0, 157.5, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3045,7 +3045,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -3356,11 +3356,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1103.0, 92.0, 577.0, 418.0 ],
+						"rect" : [ 1894.0, 294.0, 577.0, 418.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3558,7 +3558,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 30.5, 137.0, 133.0, 20.0 ],
-									"text" : "j.send /model:alias"
+									"text" : "j.send :alias"
 								}
 
 							}
@@ -3732,7 +3732,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 41.0, 328.5, 388.0, 33.0 ],
+					"patching_rect" : [ 38.0, 379.5, 388.0, 33.0 ],
 					"text" : "atributes of the parent patcher/abstraction are propagated to the model\nthis can be useful e.g. to set a priority in the parent patcher..."
 				}
 
@@ -3751,7 +3751,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -4002,7 +4002,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 3,
 											"architecture" : "x86"
 										}
 ,
@@ -4339,8 +4339,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 44.0, 609.0, 331.0, 47.0 ],
-					"text" : "In Jamoma 0.6 the gui of your model is a view patcher and j.view is used to managed it as in the model patcher (see j.view to know more)"
+					"patching_rect" : [ 40.0, 590.0, 416.0, 47.0 ],
+					"text" : "In Jamoma 0.6 one or several gui  patchers can be created for each model \nthey are called view patchers and  contain a j.view object in place of j.model\nand connect with the model patcher (see j.view to know more)"
 				}
 
 			}
@@ -4353,23 +4353,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 577.0, 260.0, 22.0 ],
+					"patching_rect" : [ 16.0, 558.0, 260.0, 22.0 ],
 					"text" : "Communication with the view"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-14",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 44.0, 519.0, 266.0, 33.0 ],
-					"text" : "In Jamoma 0.6 the j.model is directly embbed inside your algorithm (which is a model)"
 				}
 
 			}
@@ -4382,7 +4367,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 155.0, 297.5, 351.0, 20.0 ],
+					"patching_rect" : [ 152.0, 348.5, 351.0, 20.0 ],
 					"text" : "- priorize your model to make a hierachy between other model"
 				}
 
@@ -4396,7 +4381,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 41.0, 297.5, 100.0, 20.0 ],
+					"patching_rect" : [ 38.0, 348.5, 100.0, 20.0 ],
 					"text" : "@priority"
 				}
 
@@ -4426,20 +4411,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 886.25, 564.0, 53.0, 18.0 ],
 					"text" : "j.init"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"frgb" : 0.0,
-					"id" : "obj-5",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 489.0, 260.0, 22.0 ],
-					"text" : "Communication with the algorithm"
 				}
 
 			}
@@ -4494,7 +4465,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 159.0, 416.0, 348.0, 20.0 ],
+					"patching_rect" : [ 156.0, 467.0, 348.0, 20.0 ],
 					"text" : "- Leftmost inlet of model is connected to left inlet of j.model."
 				}
 
@@ -4508,7 +4479,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 159.0, 447.0, 348.0, 20.0 ],
+					"patching_rect" : [ 156.0, 498.0, 348.0, 20.0 ],
 					"text" : "- Left outlet of j.model connected to leftmost outlet of model."
 				}
 
@@ -4522,7 +4493,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 43.0, 447.0, 51.0, 20.0 ],
+					"patching_rect" : [ 40.0, 498.0, 51.0, 20.0 ],
 					"text" : "Outlets:"
 				}
 
@@ -4536,7 +4507,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 43.0, 416.0, 43.0, 20.0 ],
+					"patching_rect" : [ 40.0, 467.0, 43.0, 20.0 ],
 					"text" : "Inlets:"
 				}
 
@@ -4550,7 +4521,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 388.0, 183.0, 22.0 ],
+					"patching_rect" : [ 17.0, 439.0, 183.0, 22.0 ],
 					"text" : "Standard connections:"
 				}
 
@@ -4564,7 +4535,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 184.0, 89.0, 22.0 ],
+					"patching_rect" : [ 17.0, 235.0, 89.0, 22.0 ],
 					"text" : "Attributes:"
 				}
 
@@ -4578,7 +4549,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 155.0, 268.0, 363.0, 20.0 ],
+					"patching_rect" : [ 152.0, 319.0, 363.0, 20.0 ],
 					"text" : "- text describing the parameter for html auto-documenting modules"
 				}
 
@@ -4592,7 +4563,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 41.0, 268.0, 100.0, 20.0 ],
+					"patching_rect" : [ 38.0, 319.0, 100.0, 20.0 ],
 					"text" : "@description"
 				}
 
@@ -4607,8 +4578,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 155.0, 225.0, 326.0, 33.0 ],
-					"text" : "- what kind of model is this? Possible values : control, audio, audio.ambisonic,  video"
+					"patching_rect" : [ 152.0, 276.0, 326.0, 33.0 ],
+					"text" : "- a generic container for all kinds of tags that can be defined by the user or developer - can be a list of symbols"
 				}
 
 			}
@@ -4621,8 +4592,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 225.0, 100.0, 20.0 ],
-					"text" : "@type"
+					"patching_rect" : [ 37.0, 276.0, 100.0, 20.0 ],
+					"text" : "@tag"
 				}
 
 			}
@@ -4650,7 +4621,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1026.0, 610.0, 80.0, 20.0 ],
+					"patching_rect" : [ 1026.75, 590.0, 80.0, 20.0 ],
 					"text" : "prepend help"
 				}
 
@@ -4665,7 +4636,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1026.0, 635.0, 51.0, 20.0 ],
+					"patching_rect" : [ 1026.75, 615.0, 51.0, 20.0 ],
 					"text" : "pcontrol"
 				}
 
@@ -4764,7 +4735,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 592.0, 338.0, 229.0, 18.0 ],
-					"text" : "model/reference"
+					"text" : "any 65 \"is that true ?\" 4.5"
 				}
 
 			}
@@ -4846,7 +4817,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 129.0, 560.0, 33.0 ],
+					"patching_rect" : [ 17.0, 154.0, 560.0, 33.0 ],
 					"text" : "For information on configuring the attributes to the j.model object, please refer to the Jamoma tutorials. These are the best source for getting familiar with the steps involved in building modules."
 				}
 
@@ -5141,8 +5112,8 @@
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/bltzr/Dropbox/jamomapackage/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../../../../../../Dropbox/jamomapackage/Jamoma/patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
