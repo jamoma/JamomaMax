@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 4,
+			"revision" : 3,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 299.0, 90.0, 1277.0, 885.0 ],
+		"rect" : [ 238.0, 45.0, 1277.0, 885.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -101,11 +101,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 299.0, 116.0, 1277.0, 859.0 ],
+						"rect" : [ 238.0, 71.0, 1277.0, 859.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -238,7 +238,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 4,
+											"revision" : 3,
 											"architecture" : "x86"
 										}
 ,
@@ -548,7 +548,7 @@
 													"maxclass" : "inlet",
 													"numinlets" : 0,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "int" ],
 													"patching_rect" : [ 30.0, 47.0, 25.0, 25.0 ]
 												}
 
@@ -787,13 +787,13 @@
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 3,
-									"outlettype" : [ "", "bang", "" ],
+									"outlettype" : [ "", "", "int" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 4,
+											"revision" : 3,
 											"architecture" : "x86"
 										}
 ,
@@ -1125,7 +1125,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 4,
+											"revision" : 3,
 											"architecture" : "x86"
 										}
 ,
@@ -1365,7 +1365,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 4,
+											"revision" : 3,
 											"architecture" : "x86"
 										}
 ,
@@ -1440,7 +1440,7 @@
 													"maxclass" : "inlet",
 													"numinlets" : 0,
 													"numoutlets" : 1,
-													"outlettype" : [ "bang" ],
+													"outlettype" : [ "" ],
 													"patching_rect" : [ 65.0, 25.0, 25.0, 25.0 ]
 												}
 
@@ -1642,7 +1642,7 @@
 													"maxclass" : "inlet",
 													"numinlets" : 0,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "list" ],
 													"patching_rect" : [ 680.0, 25.0, 25.0, 25.0 ]
 												}
 
@@ -2240,7 +2240,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 4,
+											"revision" : 3,
 											"architecture" : "x86"
 										}
 ,
@@ -2786,7 +2786,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 4,
+											"revision" : 3,
 											"architecture" : "x86"
 										}
 ,
@@ -3864,7 +3864,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -3898,7 +3898,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 165.0, 353.0, 205.0, 100.0 ],
+									"patching_rect" : [ 165.0, 353.0, 204.0, 100.0 ],
 									"text" : "weights can also be fractional, and then be used to differentiate the spatial spread for each loudspeaker, as shown on the visualization window, enabling \nindividual topologies for each source."
 								}
 
@@ -4191,7 +4191,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p \"Speakers weights\""
+					"text" : "p “Speakers weights"
 				}
 
 			}
@@ -4208,7 +4208,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -4282,11 +4282,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1277.0, 859.0 ],
+						"rect" : [ 785.0, 44.0, 622.0, 198.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4306,6 +4306,7 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -4447,11 +4448,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1277.0, 859.0 ],
+						"rect" : [ 434.0, 297.0, 778.0, 520.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4471,6 +4472,7 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"color" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -4482,7 +4484,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 518.0, 490.0, 124.0, 60.0 ],
+									"patching_rect" : [ 518.0, 490.0, 126.0, 60.0 ],
 									"text" : "j.dbap @dimensions 1 @num_sources 3 @num_destinations 2"
 								}
 
