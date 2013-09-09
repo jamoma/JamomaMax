@@ -325,8 +325,19 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 		}
 		x->modelOutput = NULL;
 		
-		// observe model initialisation to explore (the method also get the value)
-		ui_receiver_create(x, &aReceiver, gensym("return_model_init"), kTTSymEmpty, x->modelAddress.appendAttribute(kTTSym_initialized));
+        if (x->hash_receivers->lookup(kTTSym_initialized, v))
+            
+            // observe model initialisation to explore (the method also get the value)
+            ui_receiver_create(x, &aReceiver, gensym("return_model_init"), kTTSym_initialized, x->modelAddress, NO, YES);
+        
+        else {
+            
+            // update the model address and get the initialized state
+            aReceiver = v[0];
+            
+            aReceiver->setAttributeValue(kTTSym_address, x->modelAddress.appendAttribute(kTTSym_initialized));
+            aReceiver->sendMessage(kTTSym_Get);
+        }
         
         // create internal TTPreset to handle model's state
         if (!x->state)
@@ -425,6 +436,37 @@ void ui_build(t_ui *x)
     
 	// Redraw
 	jbox_redraw(&x->box);
+}
+
+ObjectPtr ui_get_model_object(t_ui *x)
+{
+    TTNodePtr   patcherNode;
+    ObjectPtr   obj;
+    ObjectPtr   modelObject = NULL;
+	SymbolPtr   _sym_jclass, _sym_jmodel = gensym("j.model");
+
+    // get model patcher
+	if (!JamomaDirectory->getTTNode(x->modelAddress, &patcherNode)) {
+	
+        if (patcherNode->getContext()) {
+    
+            // find the j.model object inside the model patcher
+            obj = object_attr_getobj((ObjectPtr)patcherNode->getContext(), _sym_firstobject);
+    
+            while (obj) {
+                
+                _sym_jclass = object_attr_getsym(obj, _sym_maxclass);
+                if (_sym_jclass == _sym_jmodel) {
+                    
+                    modelObject = object_attr_getobj(obj, _sym_object);
+                    break;
+                }
+                obj = object_attr_getobj(obj, _sym_nextobject);
+            }
+        }
+    }
+    
+    return modelObject;
 }
 
 #pragma mark -
@@ -1112,7 +1154,14 @@ void ui_menu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 void ui_menu_qfn(t_ui *x)
 {
 	t_symobject *item = (t_symobject *)linklist_getindex(x->menu_items, x->menu_selection);
-	
+    
+    // get model object
+    ObjectPtr modelObject = ui_get_model_object(x);
+    if (!modelObject)
+        return;
+    
+    // TODO : use the model object to directly send message to the Max object
+        
 	if (item->sym == gensym("Defeat Signal Meters")) {
 		if (x->is_metersdefeated)
 			ui_viewer_send(x, TTSymbol("audio/meters/freeze"), NO);

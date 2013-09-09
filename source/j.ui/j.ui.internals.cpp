@@ -768,11 +768,20 @@ void ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
     TTObjectBasePtr aReceiver;
 	
     // if the model is initialized and no content observer have been created
-	if (init && obj->hash_receivers->lookup(kTTSym_content, v)) {
+	if (init) {
 		
-		// observe the content of the model
-		// by this way, the creation of any widgets depends on the existence of the data
-        ui_receiver_create(obj, &aReceiver, gensym("return_model_content"), kTTSym_content, obj->modelAddress, NO, YES);
+        if (obj->hash_receivers->lookup(kTTSym_content, v))
+            
+            // observe the content of the model
+            // by this way, the creation of any widgets depends on the existence of the data
+            ui_receiver_create(obj, &aReceiver, gensym("return_model_content"), kTTSym_content, obj->modelAddress, NO, YES);
+        
+        else {
+            
+            // get the content of the model
+            aReceiver = v[0];
+            aReceiver->sendMessage(kTTSym_Get);
+        }
 	}
 }
 

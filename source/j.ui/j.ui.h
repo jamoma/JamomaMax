@@ -148,6 +148,7 @@ void 		ui_free(t_ui *x);
 t_max_err	ui_notify(t_ui *x, t_symbol *s, t_symbol *msg, void *sender, void *data);
 void		ui_subscribe(t_ui *x, SymbolPtr address);
 void		ui_build(t_ui *x);
+ObjectPtr   ui_get_model_object(t_ui *x);
 void 		ui_bang(t_ui *x);
 
 // prototypes: drawing/ui
