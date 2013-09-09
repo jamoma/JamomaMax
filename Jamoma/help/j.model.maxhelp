@@ -118,7 +118,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 331.0, 244.0, 47.0 ],
-									"text" : "flow : enable flow signal amenities only\n(which is useless in case of degrade~model as it doesn't deal with flow signal)"
+									"text" : "data : enable data signal amenities only\n(which is useless in case of degrade~model as it doesn't deal with data signal)"
 								}
 
 							}
@@ -188,7 +188,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
 									"patching_rect" : [ 7.0, 378.0, 219.0, 20.0 ],
-									"text" : "degrade~.model @amenities flow"
+									"text" : "degrade~.model @amenities data"
 								}
 
 							}
@@ -695,7 +695,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 7.0, 419.0, 120.0, 20.0 ],
-									"text" : "j.remote flow/bypass"
+									"text" : "j.remote data/bypass"
 								}
 
 							}
@@ -765,7 +765,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 7.0, 134.0, 69.0, 18.0 ],
-									"text" : "flow/freeze"
+									"text" : "data/freeze"
 								}
 
 							}
@@ -779,7 +779,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 7.0, 116.0, 73.0, 18.0 ],
-									"text" : "flow/bypass"
+									"text" : "data/bypass"
 								}
 
 							}
@@ -793,7 +793,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 7.0, 98.0, 62.0, 18.0 ],
-									"text" : "flow/mute"
+									"text" : "data/mute"
 								}
 
 							}
@@ -864,7 +864,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 4.5, 39.0, 370.5, 47.0 ],
-									"text" : "Some features relative to model signal management are automatically exposed as j.parameters under a flow or audio level to control all inputs/outputs relative to a signal type in a row."
+									"text" : "Some features relative to model signal management are automatically exposed as j.parameters under a data or audio level to control all inputs/outputs relative to a signal type in a row."
 								}
 
 							}

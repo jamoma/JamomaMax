@@ -82,7 +82,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 17.0, 258.0, 133.0, 20.0 ],
-					"text" : "j.send flow/in.mySignal"
+					"text" : "j.send data/in.mySignal"
 				}
 
 			}

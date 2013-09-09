@@ -20,8 +20,8 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
     EXTRA->readingContent = YES;
     
     TTAddress       relativeAddress;
-    TTBoolean       flowInput = NO;
-    TTBoolean       flowOutput = NO;
+    TTBoolean       dataInput = NO;
+    TTBoolean       dataOutput = NO;
     TTBoolean       audioInput = NO;
     TTBoolean       audioOutput = NO;
     TTObjectBasePtr aData, aSender;
@@ -34,8 +34,8 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
         
         if (relativeAddress.getName() == TTSymbol("in")) {
             
-            if (relativeAddress.getParent() == TTAddress("flow"))
-                flowInput = YES;
+            if (relativeAddress.getParent() == TTAddress("data"))
+                dataInput = YES;
             
             else if (relativeAddress.getParent() == TTAddress("audio"))
                 audioInput = YES;
@@ -43,75 +43,75 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
         }
         else if (relativeAddress.getName() == TTSymbol("out")) {
             
-            if (relativeAddress.getParent() == TTAddress("flow"))
-                flowOutput = YES;
+            if (relativeAddress.getParent() == TTAddress("data"))
+                dataOutput = YES;
             
             else if (relativeAddress.getParent() == TTAddress("audio"))
                 audioOutput = YES;
         }
     }
     
-    if (model_test_amenities(self, TTSymbol("flow"))) {
+    if (model_test_amenities(self, TTSymbol("data"))) {
         
-        // create internal flow datas depending on what have been found
-        if (flowInput || flowOutput) {
+        // create internal data datas depending on what have been found
+        if (dataInput || dataOutput) {
             
-            // make internal parameter at flow/mute address
-            if (x->internals->lookup(TTSymbol("flow/mute"), v)) {
+            // make internal parameter at data/mute address
+            if (x->internals->lookup(TTSymbol("data/mute"), v)) {
                 
-                makeInternals_data(x, EXTRA->modelAddress, TTSymbol("flow/mute"), gensym("return_flow_mute"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
+                makeInternals_data(x, EXTRA->modelAddress, TTSymbol("data/mute"), gensym("return_data_mute"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
                 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter turns off model's flow processing"));
+                aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter turns off model's data processing"));
             }
             
             // make an internal sender to access to all in|out instance mute attribute
-            if (x->internals->lookup(TTSymbol("flow/*.*:mute"), v))
-                makeInternals_sender(self, EXTRA->modelAddress, TTSymbol("flow/*.*:mute"), &aSender);
+            if (x->internals->lookup(TTSymbol("data/*.*:mute"), v))
+                makeInternals_sender(self, EXTRA->modelAddress, TTSymbol("data/*.*:mute"), &aSender);
         }
         
-        if (flowInput && flowOutput) {
+        if (dataInput && dataOutput) {
             
-            // make internal parameter at flow/bypass address
-            if (x->internals->lookup(TTSymbol("flow/bypass"), v)) {
+            // make internal parameter at data/bypass address
+            if (x->internals->lookup(TTSymbol("data/bypass"), v)) {
                 
-                makeInternals_data(x, EXTRA->modelAddress, TTSymbol("flow/bypass"), gensym("return_flow_bypass"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
+                makeInternals_data(x, EXTRA->modelAddress, TTSymbol("data/bypass"), gensym("return_data_bypass"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
                 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter bypasses the model's flow processing algorithm, letting incoming signal pass through unaffected"));
+                aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter bypasses the model's data processing algorithm, letting incoming signal pass through unaffected"));
             }
             
             // make an internal sender to access to all in instance bypass attribute
-            if (x->internals->lookup(TTSymbol("flow/in.*:bypass"), v))
-                makeInternals_sender(self, EXTRA->modelAddress, TTSymbol("flow/in.*:bypass"), &aSender);
+            if (x->internals->lookup(TTSymbol("data/in.*:bypass"), v))
+                makeInternals_sender(self, EXTRA->modelAddress, TTSymbol("data/in.*:bypass"), &aSender);
         }
         
-        if (flowOutput) {
+        if (dataOutput) {
             
-            // make internal parameter at flow/freeze address
-            if (x->internals->lookup(TTSymbol("flow/freeze"), v)) {
+            // make internal parameter at data/freeze address
+            if (x->internals->lookup(TTSymbol("data/freeze"), v)) {
                 
-                makeInternals_data(x, EXTRA->modelAddress, TTSymbol("flow/freeze"), gensym("return_flow_freeze"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
+                makeInternals_data(x, EXTRA->modelAddress, TTSymbol("data/freeze"), gensym("return_data_freeze"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
                 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                aData->setAttributeValue(kTTSym_description, TTSymbol("Freezes the last state of model's outputs from the flow processing algorithm"));
+                aData->setAttributeValue(kTTSym_description, TTSymbol("Freezes the last state of model's outputs from the data processing algorithm"));
                 v = TTValue(NO);
                 aData->setAttributeValue(kTTSym_valueDefault, v);
             }
             
             // make an internal sender to access to all out instance freeze attribute
-            if (x->internals->lookup(TTSymbol("flow/out.*:freeze"), v))
-                makeInternals_sender(self, EXTRA->modelAddress, TTSymbol("flow/out.*:freeze"), &aSender);
+            if (x->internals->lookup(TTSymbol("data/out.*:freeze"), v))
+                makeInternals_sender(self, EXTRA->modelAddress, TTSymbol("data/out.*:freeze"), &aSender);
             
             
             // TODO : preview should not be inside the model
-            // make internal parameter at flow/preview address
-            if (x->internals->lookup(TTSymbol("flow/preview"), v)) {
+            // make internal parameter at data/preview address
+            if (x->internals->lookup(TTSymbol("data/preview"), v)) {
                 
-                makeInternals_data(x, EXTRA->modelAddress, TTSymbol("flow/preview"), gensym("return_flow_preview"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
+                makeInternals_data(x, EXTRA->modelAddress, TTSymbol("data/preview"), gensym("return_data_preview"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
                 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                aData->setAttributeValue(kTTSym_description, TTSymbol("Turns on/off preview display of model's outputs from the flow processing algorithm"));
+                aData->setAttributeValue(kTTSym_description, TTSymbol("Turns on/off preview display of model's outputs from the data processing algorithm"));
                 v = TTValue(NO);
                 aData->setAttributeValue(kTTSym_valueDefault, v);
             }
@@ -152,7 +152,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
             if (x->internals->lookup(TTSymbol("audio/in.*:bypass"), v))
                 makeInternals_sender(self, EXTRA->modelAddress, TTSymbol("audio/in.*:bypass"), &aSender);
             
-            // make internal parameter at flow/mix address
+            // make internal parameter at data/mix address
             if (x->internals->lookup(TTSymbol("audio/mix"), v)) {
                 
                 makeInternals_data(x, EXTRA->modelAddress, TTSymbol("audio/mix"), gensym("return_audio_mix"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
@@ -200,13 +200,13 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
     EXTRA->readingContent = NO;
 }
 
-void model_signal_return_flow_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_data_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObjectBasePtr aSender;
     TTValue         v, out;
 	
-	if (!x->internals->lookup(TTSymbol("flow/*.*:mute"), v)) {
+	if (!x->internals->lookup(TTSymbol("data/*.*:mute"), v)) {
         
         aSender = v[0];
         
@@ -216,13 +216,13 @@ void model_signal_return_flow_mute(TTPtr self, SymbolPtr msg, AtomCount argc, At
     }
 }
 
-void model_signal_return_flow_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_data_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObjectBasePtr aSender;
     TTValue         v, out;
 	
-	if (!x->internals->lookup(TTSymbol("flow/in.*:bypass"), v)) {
+	if (!x->internals->lookup(TTSymbol("data/in.*:bypass"), v)) {
         
         aSender = v[0];
         
@@ -232,13 +232,13 @@ void model_signal_return_flow_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, 
     }
 }
 
-void model_signal_return_flow_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_data_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObjectBasePtr aSender;
     TTValue         v, out;
 	
-	if (!x->internals->lookup(TTSymbol("flow/out.*:freeze"), v)) {
+	if (!x->internals->lookup(TTSymbol("data/out.*:freeze"), v)) {
         
         aSender = v[0];
         
@@ -248,7 +248,7 @@ void model_signal_return_flow_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, 
     }
 }
 
-void model_signal_return_flow_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_data_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
     // do nothing
 }

@@ -83,7 +83,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 276.0, 281.0, 142.0, 18.0 ],
-					"text" : "/flow/out.mySignal:signal"
+					"text" : "/data/out.mySignal:signal"
 				}
 
 			}
@@ -126,7 +126,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 224.0, 255.0, 153.0, 20.0 ],
-					"text" : "j.receive flow/out.mySignal"
+					"text" : "j.receive data/out.mySignal"
 				}
 
 			}

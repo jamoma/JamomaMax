@@ -171,7 +171,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 328.0, 320.001862, 268.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel.deferlow-test @input input/address @compareTo /flow/in.test"
+									"text" : "j.test.assert.equal toplevel.deferlow-test @input input/address @compareTo /data/in.test"
 								}
 
 							}
@@ -255,7 +255,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 328.0, 123.001862, 220.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel-test @input input/address @compareTo /flow/in.test"
+									"text" : "j.test.assert.equal toplevel-test @input input/address @compareTo /data/in.test"
 								}
 
 							}
@@ -340,7 +340,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 29.0, 320.001862, 283.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel.deferlow-test @input output/address @compareTo /flow/out.test"
+									"text" : "j.test.assert.equal toplevel.deferlow-test @input output/address @compareTo /data/out.test"
 								}
 
 							}
@@ -424,7 +424,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 29.0, 123.001862, 234.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel-test @input output/address @compareTo /flow/out.test"
+									"text" : "j.test.assert.equal toplevel-test @input output/address @compareTo /data/out.test"
 								}
 
 							}

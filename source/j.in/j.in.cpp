@@ -238,7 +238,7 @@ void in_subscribe(TTPtr self)
 #ifdef JCOM_IN_TILDE
     signalAddress = TTAddress("audio");
 #else
-    signalAddress = TTAddress("flow");
+    signalAddress = TTAddress("data");
 #endif
 
     // edit "signal/in.instance" address

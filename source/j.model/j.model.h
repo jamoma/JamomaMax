@@ -97,10 +97,10 @@ TTBoolean   model_test_amenities(TTPtr self, TTSymbol name);
 
 void        model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-void        model_signal_return_flow_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void        model_signal_return_flow_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void        model_signal_return_flow_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void        model_signal_return_flow_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_data_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_data_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_data_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_data_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void        model_signal_return_audio_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void        model_signal_return_audio_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
