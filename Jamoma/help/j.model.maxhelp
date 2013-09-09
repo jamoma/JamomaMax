@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 2.0, 44.0, 1163.0, 680.0 ],
+		"rect" : [ 522.0, 126.0, 1158.0, 663.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -118,7 +118,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 331.0, 244.0, 47.0 ],
-									"text" : "flow : enable flow signal amenities only\n(which is useless in case of degrade~model as it doesn't deal with flow signal)"
+									"text" : "data : enable data signal amenities only\n(which is useless in case of degrade~model as it doesn't deal with data signal)"
 								}
 
 							}
@@ -188,7 +188,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
 									"patching_rect" : [ 7.0, 378.0, 219.0, 20.0 ],
-									"text" : "degrade~.model @amenities flow"
+									"text" : "degrade~.model @amenities data"
 								}
 
 							}
@@ -253,7 +253,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 608.0, 530.0, 92.0, 24.0 ],
+					"patching_rect" : [ 597.5, 530.0, 92.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -295,7 +295,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 532.0, 532.0, 72.0, 20.0 ],
+					"patching_rect" : [ 532.0, 530.0, 72.0, 20.0 ],
 					"text" : "Amenities :"
 				}
 
@@ -695,7 +695,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 7.0, 419.0, 120.0, 20.0 ],
-									"text" : "j.remote flow/bypass"
+									"text" : "j.remote data/bypass"
 								}
 
 							}
@@ -765,7 +765,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 7.0, 134.0, 69.0, 18.0 ],
-									"text" : "flow/freeze"
+									"text" : "data/freeze"
 								}
 
 							}
@@ -779,7 +779,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 7.0, 116.0, 73.0, 18.0 ],
-									"text" : "flow/bypass"
+									"text" : "data/bypass"
 								}
 
 							}
@@ -793,7 +793,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 7.0, 98.0, 62.0, 18.0 ],
-									"text" : "flow/mute"
+									"text" : "data/mute"
 								}
 
 							}
@@ -864,7 +864,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 4.5, 39.0, 370.5, 47.0 ],
-									"text" : "Some features relative to model signal management are automatically exposed as j.parameters under a flow or audio level to control all inputs/outputs relative to a signal type in a row."
+									"text" : "Some features relative to model signal management are automatically exposed as j.parameters under a data or audio level to control all inputs/outputs relative to a signal type in a row."
 								}
 
 							}
@@ -1070,7 +1070,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 590.0, 145.0, 24.0 ],
+					"patching_rect" : [ 532.0, 590.0, 157.5, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1136,7 +1136,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 695.0, 405.0, 974.0, 582.0 ],
+						"rect" : [ 23.0, 242.0, 974.0, 582.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1156,6 +1156,20 @@
 						"digest" : "",
 						"tags" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-25",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 131.0, 123.75, 104.0, 18.0 ],
+									"text" : "preset:store 2 foo"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -1223,7 +1237,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 355.0, 538.75, 50.0, 18.0 ]
+									"patching_rect" : [ 355.0, 538.75, 50.0, 18.0 ],
+									"text" : "closed"
 								}
 
 							}
@@ -1259,7 +1274,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 823.0, 503.25, 127.0, 18.0 ],
-									"text" : "1 default"
+									"text" : "2 foo"
 								}
 
 							}
@@ -1282,12 +1297,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-30",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 584.0, 503.25, 217.0, 18.0 ],
-									"text" : "default \"standard setup\" \"another case\""
+									"patching_rect" : [ 584.0, 503.25, 215.0, 31.0 ],
+									"text" : "default foo \"standard setup\" \"another case\""
 								}
 
 							}
@@ -2418,6 +2434,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-81", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-25", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-35", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -2439,7 +2464,7 @@
 									"destination" : [ "obj-30", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 593.5, 497.25, 791.5, 497.25 ],
+									"midpoints" : [ 593.5, 497.25, 789.5, 497.25 ],
 									"source" : [ "obj-3", 0 ]
 								}
 
@@ -2738,7 +2763,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 560.0, 146.0, 24.0 ],
+					"patching_rect" : [ 532.0, 560.0, 158.5, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3040,7 +3065,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 620.0, 145.0, 24.0 ],
+					"patching_rect" : [ 532.0, 620.0, 157.5, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3388,7 +3413,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1103.0, 92.0, 577.0, 418.0 ],
+						"rect" : [ 1894.0, 294.0, 577.0, 418.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3586,7 +3611,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 30.5, 137.0, 133.0, 20.0 ],
-									"text" : "j.send /model:alias"
+									"text" : "j.send :alias"
 								}
 
 							}
@@ -3760,7 +3785,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 41.0, 328.5, 388.0, 33.0 ],
+					"patching_rect" : [ 38.0, 379.5, 388.0, 33.0 ],
 					"text" : "atributes of the parent patcher/abstraction are propagated to the model\nthis can be useful e.g. to set a priority in the parent patcher..."
 				}
 
@@ -4367,8 +4392,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 44.0, 609.0, 331.0, 47.0 ],
-					"text" : "In Jamoma 0.6 the gui of your model is a view patcher and j.view is used to managed it as in the model patcher (see j.view to know more)"
+					"patching_rect" : [ 40.0, 590.0, 416.0, 47.0 ],
+					"text" : "In Jamoma 0.6 one or several gui  patchers can be created for each model \nthey are called view patchers and  contain a j.view object in place of j.model\nand connect with the model patcher (see j.view to know more)"
 				}
 
 			}
@@ -4381,23 +4406,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 577.0, 260.0, 22.0 ],
+					"patching_rect" : [ 16.0, 558.0, 260.0, 22.0 ],
 					"text" : "Communication with the view"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-14",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 44.0, 519.0, 266.0, 33.0 ],
-					"text" : "In Jamoma 0.6 the j.model is directly embbed inside your algorithm (which is a model)"
 				}
 
 			}
@@ -4410,7 +4420,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 155.0, 297.5, 351.0, 20.0 ],
+					"patching_rect" : [ 152.0, 348.5, 351.0, 20.0 ],
 					"text" : "- priorize your model to make a hierachy between other model"
 				}
 
@@ -4424,7 +4434,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 41.0, 297.5, 100.0, 20.0 ],
+					"patching_rect" : [ 38.0, 348.5, 100.0, 20.0 ],
 					"text" : "@priority"
 				}
 
@@ -4454,20 +4464,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 886.25, 564.0, 53.0, 18.0 ],
 					"text" : "j.init"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"frgb" : 0.0,
-					"id" : "obj-5",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 489.0, 260.0, 22.0 ],
-					"text" : "Communication with the algorithm"
 				}
 
 			}
@@ -4522,7 +4518,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 159.0, 416.0, 348.0, 20.0 ],
+					"patching_rect" : [ 156.0, 467.0, 348.0, 20.0 ],
 					"text" : "- Leftmost inlet of model is connected to left inlet of j.model."
 				}
 
@@ -4536,7 +4532,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 159.0, 447.0, 348.0, 20.0 ],
+					"patching_rect" : [ 156.0, 498.0, 348.0, 20.0 ],
 					"text" : "- Left outlet of j.model connected to leftmost outlet of model."
 				}
 
@@ -4550,7 +4546,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 43.0, 447.0, 51.0, 20.0 ],
+					"patching_rect" : [ 40.0, 498.0, 51.0, 20.0 ],
 					"text" : "Outlets:"
 				}
 
@@ -4564,7 +4560,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 43.0, 416.0, 43.0, 20.0 ],
+					"patching_rect" : [ 40.0, 467.0, 43.0, 20.0 ],
 					"text" : "Inlets:"
 				}
 
@@ -4578,7 +4574,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 388.0, 183.0, 22.0 ],
+					"patching_rect" : [ 17.0, 439.0, 183.0, 22.0 ],
 					"text" : "Standard connections:"
 				}
 
@@ -4592,7 +4588,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 184.0, 89.0, 22.0 ],
+					"patching_rect" : [ 17.0, 235.0, 89.0, 22.0 ],
 					"text" : "Attributes:"
 				}
 
@@ -4606,7 +4602,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 155.0, 268.0, 363.0, 20.0 ],
+					"patching_rect" : [ 152.0, 319.0, 363.0, 20.0 ],
 					"text" : "- text describing the parameter for html auto-documenting modules"
 				}
 
@@ -4620,7 +4616,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 41.0, 268.0, 100.0, 20.0 ],
+					"patching_rect" : [ 38.0, 319.0, 100.0, 20.0 ],
 					"text" : "@description"
 				}
 
@@ -4635,8 +4631,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 155.0, 225.0, 326.0, 33.0 ],
-					"text" : "- what kind of model is this? Possible values : control, audio, audio.ambisonic,  video"
+					"patching_rect" : [ 152.0, 276.0, 326.0, 33.0 ],
+					"text" : "- a generic container for all kinds of tags that can be defined by the user or developer - can be a list of symbols"
 				}
 
 			}
@@ -4649,8 +4645,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 225.0, 100.0, 20.0 ],
-					"text" : "@type"
+					"patching_rect" : [ 37.0, 276.0, 100.0, 20.0 ],
+					"text" : "@tag"
 				}
 
 			}
@@ -4678,7 +4674,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1026.0, 610.0, 80.0, 20.0 ],
+					"patching_rect" : [ 1026.75, 590.0, 80.0, 20.0 ],
 					"text" : "prepend help"
 				}
 
@@ -4693,7 +4689,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1026.0, 635.0, 51.0, 20.0 ],
+					"patching_rect" : [ 1026.75, 615.0, 51.0, 20.0 ],
 					"text" : "pcontrol"
 				}
 
@@ -4792,7 +4788,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 592.0, 338.0, 229.0, 18.0 ],
-					"text" : "degrade~.5/audio/mix 100."
+					"text" : "any 65 \"is that true ?\" 4.5"
 				}
 
 			}
@@ -4874,7 +4870,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 129.0, 560.0, 33.0 ],
+					"patching_rect" : [ 17.0, 154.0, 560.0, 33.0 ],
 					"text" : "For information on configuring the attributes to the j.model object, please refer to the Jamoma tutorials. These are the best source for getting familiar with the steps involved in building modules."
 				}
 

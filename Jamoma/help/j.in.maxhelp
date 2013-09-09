@@ -240,7 +240,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 340.0, 359.666656, 133.0, 20.0 ],
-									"text" : "j.send flow/in.mySignal"
+									"text" : "j.send data/in.mySignal"
 								}
 
 							}
@@ -256,7 +256,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 319.0, 266.166656, 187.0, 37.0 ],
-									"text" : "j.in is registered under a flow node : flow/in.mySignal"
+									"text" : "j.in is registered under a data node : data/in.mySignal"
 								}
 
 							}

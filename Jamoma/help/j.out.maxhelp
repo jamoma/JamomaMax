@@ -286,7 +286,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 309.5, 545.166626, 153.0, 20.0 ],
-									"text" : "j.receive flow/out.mySignal"
+									"text" : "j.receive data/out.mySignal"
 								}
 
 							}
@@ -302,7 +302,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 288.5, 490.166656, 192.0, 37.0 ],
-									"text" : "j.out is registered under a flow node : flow/out.mySignal"
+									"text" : "j.out is registered under a data node : data/out.mySignal"
 								}
 
 							}

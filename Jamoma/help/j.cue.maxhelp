@@ -2904,7 +2904,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-63",
-									"items" : "Init",
+									"items" : [ "Init", ",", "Init-bis", ",", "Act I - Scene I" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -3198,6 +3198,20 @@
 						"tags" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-12",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 90.5, 161.0, 86.0, 18.0 ],
+									"text" : "store 2 Init-bis"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"border" : 0,
 									"filename" : "helpdetails.js",
@@ -3869,7 +3883,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 30.0, 187.0, 124.0, 18.0 ],
+									"patching_rect" : [ 30.0, 187.0, 128.0, 18.0 ],
 									"text" : "store \"Act I - Scene I\""
 								}
 
@@ -3976,6 +3990,15 @@
 									"disabled" : 0,
 									"hidden" : 1,
 									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-12", 0 ]
 								}
 
 							}

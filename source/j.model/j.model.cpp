@@ -64,10 +64,10 @@ void WrapTTContainerClass(WrappedClassPtr c)
     
     class_addmethod(c->maxClass, (method)model_signal_return_content,       "return_content",		A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_signal_return_flow_mute,     "return_flow_mute",		A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_signal_return_flow_bypass,   "return_flow_bypass",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_flow_freeze,   "return_flow_freeze",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_flow_preview,  "return_flow_preview",  A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_data_mute,     "return_data_mute",		A_CANT, 0);
+	class_addmethod(c->maxClass, (method)model_signal_return_data_bypass,   "return_data_bypass",	A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_data_freeze,   "return_data_freeze",	A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_data_preview,  "return_data_preview",  A_CANT, 0);
     
     class_addmethod(c->maxClass, (method)model_signal_return_audio_mute,    "return_audio_mute",	A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_return_audio_bypass,  "return_audio_bypass",  A_CANT, 0);
@@ -285,7 +285,7 @@ void model_subscribe(TTPtr self)
                     model_preset_subscribe(self, returnedAddress);
                 
                 // Add amenities relative to signal informations
-                if (model_test_amenities(self, TTSymbol("flow")) || model_test_amenities(self, TTSymbol("audio"))) {
+                if (model_test_amenities(self, TTSymbol("data")) || model_test_amenities(self, TTSymbol("audio"))) {
                     
                     // observe model's content to create signal in/out datas
                     makeInternals_receiver(self, returnedAddress, kTTSym_content, gensym("return_content"), &aReceiver, YES, YES); // we need to deferlow to avoid lock crash on TTContainer content

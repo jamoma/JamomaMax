@@ -236,7 +236,7 @@ void out_subscribe(TTPtr self)
 #ifdef JCOM_OUT_TILDE
 	signalAddress = TTAddress("audio");
 #else
-    signalAddress = TTAddress("flow");
+    signalAddress = TTAddress("data");
 #endif
     
     // edit "signal/out.instance" address

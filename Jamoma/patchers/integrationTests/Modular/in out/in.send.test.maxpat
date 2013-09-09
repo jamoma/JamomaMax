@@ -271,7 +271,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 8.0, 156.0, 103.0, 20.0 ],
-					"text" : "j.send flow/in.test"
+					"text" : "j.send data/in.test"
 				}
 
 			}

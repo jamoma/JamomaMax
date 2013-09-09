@@ -33,9 +33,7 @@ void ui_preset_doread(t_ui *x)
 	char			posixpath[MAX_PATH_CHARS];
 	short 			path;                           // pathID#
     t_fourcc		filetype = 'TEXT', outtype;     // the file type that is actually true
-    TTNodePtr		patcherNode;
-    ObjectPtr       obj, modelPatcher = NULL;
-	SymbolPtr       _sym_jclass, _sym_jmodel = gensym("j.model");
+    ObjectPtr       modelObject;
     t_atom          a[1];
 	
 	if (open_dialog(filename, &path, &outtype, &filetype, 1))		// Returns 0 if successful
@@ -44,25 +42,14 @@ void ui_preset_doread(t_ui *x)
 	path_topathname(path, filename, fullpath);
 	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
     
-    // get model patcher
-	JamomaDirectory->getTTNode(x->modelAddress, &patcherNode);
-	modelPatcher = (ObjectPtr)patcherNode->getContext();
-	
-	// find the j.model object inside the model patcher
-    obj = object_attr_getobj(modelPatcher, _sym_firstobject);
-    
-    while (obj) {
-		_sym_jclass = object_attr_getsym(obj, _sym_maxclass);
-		if (_sym_jclass == _sym_jmodel) {
+    // get model object
+    modelObject = ui_get_model_object(x);
+    if (modelObject) {
             
-            atom_setsym(a, gensym(posixpath));
+        atom_setsym(a, gensym(posixpath));
             
-			// send a preset:read path message
-			object_method_typed(object_attr_getobj(obj, _sym_object), gensym("preset:read"), 1, a, NULL);
-            
-            break;
-		}
-		obj = object_attr_getobj(obj, _sym_nextobject);
+        // send a preset:read path message
+        object_method_typed(modelObject, gensym("preset:read"), 1, a, NULL);
 	}
 }
 
@@ -75,10 +62,10 @@ void ui_preset_dowrite(t_ui *x)
 	short 			path, err;					// pathID#, error number
 	t_fourcc		outtype;					// the file type that is actually true
 	t_filehandle	file_handle;				// a reference to our file (for opening it, closing it, etc.)
-	TTNodePtr		patcherNode;
-	ObjectPtr		obj, modelPatcher = NULL;
-	TTSymbol		modelClass;
-	SymbolPtr       _sym_jclass, _sym_jmodel = gensym("j.model");
+    TTNodePtr       patcherNode;
+    TTSymbol        modelClass;
+    ObjectPtr       modelPatcher = NULL;
+	ObjectPtr       modelObject;
     t_atom          a[1];
 	
 	// get model patcher class for preset file name
@@ -112,21 +99,14 @@ void ui_preset_dowrite(t_ui *x)
 	path_topathname(path, filename, fullpath);
 	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
     
-    // find the j.model object inside the model patcher
-    obj = object_attr_getobj(modelPatcher, _sym_firstobject);
-    
-    while (obj) {
-		_sym_jclass = object_attr_getsym(obj, _sym_maxclass);
-		if (_sym_jclass == _sym_jmodel) {
-            
-            atom_setsym(a, gensym(posixpath));
-            
-			// send a preset:write path message
-			object_method_typed(object_attr_getobj(obj, _sym_object), gensym("preset:write"), 1, a, NULL);
+    // get model object
+    modelObject = ui_get_model_object(x);
+    if (modelObject) {
         
-            break;
-		}
-		obj = object_attr_getobj(obj, _sym_nextobject);
+        atom_setsym(a, gensym(posixpath));
+        
+        // send a preset:write path message
+        object_method_typed(modelObject, gensym("preset:write"), 1, a, NULL);
 	}
 }
 

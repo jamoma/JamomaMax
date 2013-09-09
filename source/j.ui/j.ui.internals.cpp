@@ -768,11 +768,20 @@ void ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
     TTObjectBasePtr aReceiver;
 	
     // if the model is initialized and no content observer have been created
-	if (init && obj->hash_receivers->lookup(kTTSym_content, v)) {
+	if (init) {
 		
-		// observe the content of the model
-		// by this way, the creation of any widgets depends on the existence of the data
-        ui_receiver_create(obj, &aReceiver, gensym("return_model_content"), kTTSym_content, obj->modelAddress, NO, YES);
+        if (obj->hash_receivers->lookup(kTTSym_content, v))
+            
+            // observe the content of the model
+            // by this way, the creation of any widgets depends on the existence of the data
+            ui_receiver_create(obj, &aReceiver, gensym("return_model_content"), kTTSym_content, obj->modelAddress, NO, YES);
+        
+        else {
+            
+            // get the content of the model
+            aReceiver = v[0];
+            aReceiver->sendMessage(kTTSym_Get);
+        }
 	}
 }
 
@@ -790,8 +799,8 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 	TTBoolean	model = NO;			// is there a model node in the model ?
 	TTBoolean	change = NO;
 	TTAddress   relativeAddress;
-    TTBoolean   flowInput = NO;
-    TTBoolean   flowOutput = NO;
+    TTBoolean   dataInput = NO;
+    TTBoolean   dataOutput = NO;
     TTBoolean   audioInput = NO;
     TTBoolean   audioOutput = NO;
     
@@ -805,8 +814,8 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
             
             if (relativeAddress.getName() == TTSymbol("in")) {
                 
-                if (relativeAddress.getParent() == TTAddress("flow"))
-                    flowInput = YES;
+                if (relativeAddress.getParent() == TTAddress("data"))
+                    dataInput = YES;
                 
                 else if (relativeAddress.getParent() == TTAddress("audio"))
                     audioInput = YES;
@@ -814,8 +823,8 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
             }
             else if (relativeAddress.getName() == TTSymbol("out")) {
                 
-                if (relativeAddress.getParent() == TTAddress("flow"))
-                    flowOutput = YES;
+                if (relativeAddress.getParent() == TTAddress("data"))
+                    dataOutput = YES;
                 
                 else if (relativeAddress.getParent() == TTAddress("audio"))
                     audioOutput = YES;
@@ -827,13 +836,13 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 				model = true;
 		}
         
-        if (flowInput || flowOutput)
+        if (dataInput || dataOutput)
             mute = true;
         
-        if (flowInput && flowOutput)
+        if (dataInput && dataOutput)
             bypass = true;
         
-        if (flowOutput) {
+        if (dataOutput) {
             freeze = true;
             preview = true;
         }
