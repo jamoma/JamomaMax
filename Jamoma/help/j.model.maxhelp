@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 327.0, 172.0, 1185.0, 691.0 ],
+		"rect" : [ 450.0, 240.0, 1185.0, 691.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -106,7 +106,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 327.0, 198.0, 1185.0, 665.0 ],
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -610,7 +610,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 592.5, 338.0, 229.0, 18.0 ],
-									"text" : "any 65 \"is that true ?\" 4.5"
+									"text" : "model/address /Basic"
 								}
 
 							}
@@ -894,7 +894,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
+						"rect" : [ 450.0, 266.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -917,13 +917,222 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"frgb" : 0.0,
+									"id" : "obj-13",
+									"linecount" : 7,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 196.0, 495.0, 309.0, 108.0 ],
+									"presentation_rect" : [ 194.0, 495.0, 0.0, 0.0 ],
+									"text" : "Patching a model. \n\nNote that j.model embed a way to manage default attribute values in a similar way to patcherargs. Hence, attributes values defined as argument to j.model may be overwritten when instanciating a model in your patch.",
+									"textcolor" : [ 0.5, 0.5, 0.5, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-29",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 934.0, 209.0, 92.0, 51.0 ],
+									"text" : "Fine pick the needed feature"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-26",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 912.0, 426.0, 88.0, 51.0 ],
+									"text" : "Multiple amenities enabling"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-24",
+									"linecolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"maxclass" : "live.line",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 934.0, 58.0, 216.0, 19.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"hidden" : 1,
+									"id" : "obj-23",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 4,
+											"architecture" : "x86"
+										}
+,
+										"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 11.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Helvetica Neue",
+										"gridonopen" : 0,
+										"gridsize" : [ 10.0, 10.0 ],
+										"gridsnaponopen" : 0,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"boxanimatetime" : 200,
+										"imprint" : 0,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"boxes" : [ 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-19",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 50.0, 100.0, 24.0, 20.0 ],
+													"text" : "t b"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-16",
+													"linecount" : 2,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 50.0, 126.0, 305.0, 31.0 ],
+													"text" : ";\rmax launchbrowser http://en.wikipedia.org/wiki/Amenity"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-22",
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ]
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-16", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-19", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-19", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-22", 0 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 931.5, 67.0, 19.0, 20.0 ],
+									"saved_object_attributes" : 									{
+										"default_fontface" : 0,
+										"default_fontname" : "Helvetica Neue",
+										"default_fontsize" : 11.0,
+										"description" : "",
+										"digest" : "",
+										"fontface" : 0,
+										"fontname" : "Helvetica Neue",
+										"fontsize" : 11.0,
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.99842, 0.972394, 1.0, 0.0 ],
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-18",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 931.5, 43.0, 227.0, 17.0 ],
+									"text" : "Ok, but what does amenities really mean ?",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"frgb" : 0.0,
+									"id" : "obj-14",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 196.0, 47.0, 309.0, 65.0 ],
+									"text" : "j.model embed a number of handy features such as data or audio input/output handling, preset managing. These can be set (in-)active using the amenities attribute."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-6",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 160.0, 142.0, 219.0, 20.0 ],
+									"patching_rect" : [ 196.0, 273.0, 219.0, 20.0 ],
 									"text" : "all : enable all amenities (default)"
 								}
 
@@ -937,7 +1146,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 160.0, 162.0, 219.0, 20.0 ],
+									"patching_rect" : [ 196.0, 293.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities all"
 								}
 
@@ -952,7 +1161,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 160.0, 443.0, 244.0, 47.0 ],
+									"patching_rect" : [ 655.0, 394.5, 244.0, 47.0 ],
 									"text" : " it is possible to enable several amenities in the same time. Here the preset and model amenities are enabled."
 								}
 
@@ -967,7 +1176,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 160.0, 362.0, 244.0, 47.0 ],
+									"patching_rect" : [ 655.0, 243.0, 244.0, 47.0 ],
 									"text" : "data : enable data signal amenities only\n(which is useless in case of degrade~model as it doesn't deal with data signal)"
 								}
 
@@ -981,7 +1190,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 160.0, 308.0, 244.0, 20.0 ],
+									"patching_rect" : [ 655.0, 189.0, 244.0, 20.0 ],
 									"text" : "audio : enable audio signal  amenities only"
 								}
 
@@ -995,7 +1204,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 160.0, 254.0, 219.0, 20.0 ],
+									"patching_rect" : [ 655.0, 135.0, 219.0, 20.0 ],
 									"text" : "preset : enable preset amenities only"
 								}
 
@@ -1009,7 +1218,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 160.0, 197.0, 219.0, 20.0 ],
+									"patching_rect" : [ 196.0, 328.0, 219.0, 20.0 ],
 									"text" : "none : disable all amenities"
 								}
 
@@ -1023,7 +1232,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 160.0, 490.0, 237.0, 20.0 ],
+									"patching_rect" : [ 655.0, 441.5, 237.0, 20.0 ],
 									"text" : "degrade~.model @amenities preset model"
 								}
 
@@ -1037,7 +1246,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 160.0, 409.0, 219.0, 20.0 ],
+									"patching_rect" : [ 655.0, 290.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities data"
 								}
 
@@ -1051,7 +1260,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 160.0, 328.0, 219.0, 20.0 ],
+									"patching_rect" : [ 655.0, 209.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities audio"
 								}
 
@@ -1065,7 +1274,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 160.0, 274.0, 219.0, 20.0 ],
+									"patching_rect" : [ 655.0, 155.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities preset"
 								}
 
@@ -1079,7 +1288,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 160.0, 217.0, 219.0, 20.0 ],
+									"patching_rect" : [ 196.0, 348.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities none"
 								}
 
@@ -1087,20 +1296,30 @@
 , 							{
 								"box" : 								{
 									"fontname" : "Arial",
-									"fontsize" : 12.0,
+									"fontsize" : 13.0,
 									"frgb" : 0.0,
 									"id" : "obj-74",
-									"linecount" : 6,
+									"linecount" : 5,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 160.0, 40.0, 219.0, 87.0 ],
-									"text" : "a model have 3 types of amenities : preset, signal and model.\n\nThey are all enable by default but it is possible to select them during a model instanciation."
+									"patching_rect" : [ 196.0, 163.0, 309.0, 79.0 ],
+									"text" : "Unless defined within the model abstraction, data, audio and preset features are all enable by default. Setting an amenity inactive prevent the model from loading the corresponding feature and thus lighten the model namespace.",
+									"textcolor" : [ 0.5, 0.5, 0.5, 1.0 ]
 								}
 
 							}
  ],
-						"lines" : [  ]
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-23", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-18", 0 ]
+								}
+
+							}
+ ]
 					}
 ,
 					"patching_rect" : [ 475.0, 243.0, 93.0, 24.0 ],
@@ -2690,8 +2909,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 626.0, 288.75, 110.0, 18.0 ],
-									"text" : "0.02"
+									"patching_rect" : [ 626.0, 288.75, 110.0, 18.0 ]
 								}
 
 							}
@@ -2719,8 +2937,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 626.0, 336.25, 57.0, 18.0 ],
-									"text" : "45"
+									"patching_rect" : [ 626.0, 336.25, 57.0, 18.0 ]
 								}
 
 							}
@@ -2747,8 +2964,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 626.0, 385.25, 110.0, 18.0 ],
-									"text" : "\"foo and bar\""
+									"patching_rect" : [ 626.0, 385.25, 110.0, 18.0 ]
 								}
 
 							}
@@ -2792,8 +3008,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 625.0, 434.25, 142.0, 18.0 ],
-									"text" : "65 \"is that true ?\" 4.5"
+									"patching_rect" : [ 625.0, 434.25, 142.0, 18.0 ]
 								}
 
 							}
