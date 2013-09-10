@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 5
+			"minor" : 1,
+			"revision" : 3,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 56.0, 485.0, 880.0, 310.0 ],
@@ -40,8 +41,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -146,8 +148,7 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 230.0, 98.0, 49.0, 18.0 ],
@@ -155,15 +156,15 @@
 					"presentation_rect" : [ 28.0, 214.0, 98.0, 18.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
-						"digest" : "",
-						"globalpatchername" : "",
 						"default_fontname" : "Arial",
-						"fontface" : 0,
-						"fontsize" : 9.0,
 						"default_fontsize" : 9.0,
 						"description" : "",
-						"tags" : "",
-						"fontname" : "Arial"
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 9.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p -/value"
@@ -183,8 +184,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 328.0, 124.0, 355.0, 256.0 ],
@@ -326,7 +328,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
+									"outlettype" : [ "bang", "bang" ],
 									"patching_rect" : [ 39.0, 25.0, 44.0, 17.0 ],
 									"text" : "j.init"
 								}
@@ -340,7 +342,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "/BCF" ],
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 39.0, 69.0, 39.0, 18.0 ],
 									"text" : "t #1"
 								}
@@ -456,30 +458,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "j.init.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.namespace.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 274.0, 38.0, 88.0, 18.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
-						"digest" : "",
-						"globalpatchername" : "",
 						"default_fontname" : "Arial",
-						"fontface" : 0,
-						"fontsize" : 9.0,
 						"default_fontsize" : 9.0,
 						"description" : "",
-						"tags" : "",
-						"fontname" : "Arial"
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 9.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p populate_menu"
@@ -542,7 +535,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-17",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -550,7 +543,7 @@
 					"patching_rect" : [ 367.0, 236.0, 82.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 82.0, 2.0, 82.0, 18.0 ],
-					"text" : "mapping mode :"
+					"text" : "directionnality :"
 				}
 
 			}
@@ -558,7 +551,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-13",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -580,7 +573,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 507.0, 236.0, 100.0, 18.0 ],
-					"text" : "j.remote mode"
+					"text" : "j.remote dir"
 				}
 
 			}
@@ -613,7 +606,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 285.0, 170.0, 134.0, 46.0 ],
+					"patching_rect" : [ 285.0, 170.0, 134.0, 45.0 ],
 					"text" : "powerValue $1, function/samples, output/min, output/max"
 				}
 
@@ -631,8 +624,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 223.0, 289.0 ],
@@ -788,22 +782,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 151.0, 213.0, 46.0, 18.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
-						"digest" : "",
-						"globalpatchername" : "",
 						"default_fontname" : "Arial",
-						"fontface" : 0,
-						"fontsize" : 10.0,
 						"default_fontsize" : 10.0,
 						"description" : "",
-						"tags" : "",
-						"fontname" : "Arial"
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p toggle"
@@ -874,7 +867,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-52",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -913,8 +906,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 266.0, 292.0, 624.0, 338.0 ],
@@ -1148,22 +1142,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 394.0, 140.0, 321.0, 18.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
-						"digest" : "",
-						"globalpatchername" : "",
 						"default_fontname" : "Arial",
-						"fontface" : 0,
-						"fontsize" : 10.0,
 						"default_fontsize" : 10.0,
 						"description" : "",
-						"tags" : "",
-						"fontname" : "Arial"
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p"
@@ -1540,8 +1533,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.namespaceMenu.maxpat",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespaceMenu",
-				"patcherrelativepath" : "../../../library/components/namespaceMenu",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/namespaceMenu",
+				"patcherrelativepath" : "../../../components/namespaceMenu",
 				"type" : "JSON",
 				"implicit" : 1
 			}
