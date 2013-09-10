@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 3,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 308.0, 44.0, 1115.0, 793.0 ],
@@ -102,7 +103,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 921.0, 144.0, 180.0, 18.0 ],
-					"text" : "fps 33.294228"
+					"text" : "fps 32.304413"
 				}
 
 			}
@@ -493,7 +494,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 809.0, 521.0, 266.0, 47.0 ],
+					"patching_rect" : [ 809.0, 521.0, 269.0, 47.0 ],
 					"text" : "Here the movie.model have a j.out so it provides internals /out/mute, /out/freeze and /out/preview parameter."
 				}
 
@@ -538,7 +539,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 479.0, 585.0, 153.0, 18.0 ],
-					"text" : "fps 22.664623"
+					"text" : "fps 32.304413"
 				}
 
 			}
@@ -622,8 +623,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 597.0, 143.0, 96.0, 18.0 ],
-					"text" : "fps 33.294228"
+					"patching_rect" : [ 681.0, 155.0, 96.0, 18.0 ],
+					"text" : "fps 32.304413"
 				}
 
 			}
@@ -902,8 +903,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 48.0, 230.0, 647.0, 226.0 ],
@@ -1278,8 +1280,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 302.0, 143.0, 96.0, 18.0 ],
-					"text" : "fps 22.664623"
+					"patching_rect" : [ 386.0, 155.0, 96.0, 18.0 ],
+					"text" : "fps 32.17"
 				}
 
 			}
@@ -1478,6 +1480,7 @@
 					"destination" : [ "obj-3", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 683.5, 146.0, 767.5, 146.0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -1543,6 +1546,7 @@
 					"destination" : [ "obj-42", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 388.5, 146.0, 472.5, 146.0 ],
 					"source" : [ "obj-31", 0 ]
 				}
 
@@ -1861,22 +1865,22 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "movie.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/documentation/examples/Modular0.6_overview/movie",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
 				"patcherrelativepath" : "../movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "movie.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/documentation/examples/Modular0.6_overview/movie",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
 				"patcherrelativepath" : "../movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "basicView.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/documentation/examples/Modular0.6_overview/patches",
-				"patcherrelativepath" : "",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/patches",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1886,10 +1890,6 @@
 			}
 , 			{
 				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
