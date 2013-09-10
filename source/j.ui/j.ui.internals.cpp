@@ -631,7 +631,7 @@ void ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
 	// get the TTOutput object
 	if (!obj->modelOutput) {
-		outAdrs = obj->modelAddress.appendAddress(TTAddress("out"));
+		outAdrs = obj->modelAddress.appendAddress(TTAddress("data/out"));
 		
 		JamomaDirectory->getTTNode(outAdrs, &aNode);
 		obj->modelOutput = (TTOutputPtr)aNode->getObject();
