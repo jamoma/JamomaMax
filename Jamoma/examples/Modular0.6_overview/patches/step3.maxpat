@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 3,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 308.0, 44.0, 923.0, 764.0 ],
@@ -27,6 +28,67 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-56",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 542.0, 695.5, 225.0, 20.0 ],
+					"presentation_rect" : [ 542.0, 698.5, 0.0, 0.0 ],
+					"text" : "the output replicates the  value of /rate.1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-55",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 542.0, 632.5, 195.0, 20.0 ],
+					"presentation_rect" : [ 542.0, 625.5, 0.0, 0.0 ],
+					"text" : "or by sending a number to the inlet"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-42",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 470.0, 609.5, 433.0, 20.0 ],
+					"presentation_rect" : [ 544.0, 606.5, 0.0, 0.0 ],
+					"text" : "the input can be handled by changing the rate j.parameter (in step2 abstraction)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-15",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 794.5, 634.5, 122.0, 33.0 ],
+					"presentation_rect" : [ 536.0, 607.5, 0.0, 0.0 ],
+					"text" : "see the mapping's parameters "
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -68,8 +130,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 370.0, 182.0 ],
@@ -432,31 +495,16 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-15",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 442.0, 39.0, 33.0, 18.0 ],
-					"text" : "/cue",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-54",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 408.0, 609.5, 116.0, 20.0 ],
-					"text" : "enable the mapping"
+					"patching_rect" : [ 372.25, 595.5, 73.0, 33.0 ],
+					"text" : "enable the \nmapping: "
 				}
 
 			}
@@ -470,7 +518,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 389.0, 632.5, 59.0, 18.0 ],
+					"patching_rect" : [ 427.25, 632.5, 59.0, 18.0 ],
 					"text" : "active $1",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -484,7 +532,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 389.0, 609.5, 20.0, 20.0 ]
+					"patching_rect" : [ 427.25, 609.5, 20.0, 20.0 ]
 				}
 
 			}
@@ -498,7 +546,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 316.0, 582.5, 72.0, 20.0 ],
+					"patching_rect" : [ 427.25, 556.5, 72.0, 20.0 ],
 					"text" : "loadmess 0"
 				}
 
@@ -553,7 +601,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 390.0, 581.5, 413.0, 20.0 ],
+					"patching_rect" : [ 470.0, 582.5, 413.0, 20.0 ],
 					"text" : "Finaly it is possible to map any parameter/return to any parameter/message"
 				}
 
@@ -593,7 +641,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 712.0, 704.5, 81.0, 20.0 ],
+					"patching_rect" : [ 775.5, 695.5, 81.0, 20.0 ],
 					"text" : "print attribute",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -609,7 +657,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 492.0, 704.5, 50.0, 20.0 ]
+					"patching_rect" : [ 492.0, 695.5, 50.0, 20.0 ]
 				}
 
 			}
@@ -633,13 +681,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-67",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 492.0, 664.5, 239.0, 33.0 ],
-					"text" : "j.map @input /rate @output /rate.1 @function power"
+					"patching_rect" : [ 492.0, 664.5, 302.5, 20.0 ],
+					"text" : "j.map @input /rate @output /rate.1"
 				}
 
 			}
@@ -653,7 +700,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 691.0, 632.5, 41.0, 18.0 ],
+					"patching_rect" : [ 753.5, 634.5, 41.0, 18.0 ],
 					"text" : "dump",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -703,8 +750,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 179.0, 173.0 ],
@@ -1248,12 +1296,11 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-9",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 391.0, 5.0, 274.0, 33.0 ],
-					"text" : "First of all it is possible to explore the namespace of the patch or of a subpart of the patch"
+					"patching_rect" : [ 446.0, 39.0, 342.0, 20.0 ],
+					"text" : "First of all it is possible to explore the namespace of the patch "
 				}
 
 			}
@@ -1470,36 +1517,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 451.5, 65.0, 416.5, 65.0 ],
-					"source" : [ "obj-15", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 451.5, 65.0, 754.5, 65.0 ],
-					"source" : [ "obj-15", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 451.5, 65.0, 585.5, 65.0 ],
-					"source" : [ "obj-15", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-35", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1580,7 +1597,7 @@
 					"destination" : [ "obj-67", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 700.5, 658.5, 501.5, 658.5 ],
+					"midpoints" : [ 763.0, 658.5, 501.5, 658.5 ],
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -1693,7 +1710,7 @@
 					"destination" : [ "obj-50", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
-					"midpoints" : [ 325.5, 605.5, 398.5, 605.5 ],
+					"midpoints" : [ 436.75, 605.5, 436.75, 605.5 ],
 					"source" : [ "obj-48", 0 ]
 				}
 
@@ -1721,7 +1738,7 @@
 					"destination" : [ "obj-67", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 398.5, 658.0, 501.5, 658.0 ],
+					"midpoints" : [ 436.75, 658.0, 501.5, 658.0 ],
 					"source" : [ "obj-51", 0 ]
 				}
 
@@ -1831,8 +1848,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "step2.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/documentation/examples/Modular0.6_overview/patches",
-				"patcherrelativepath" : "",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/patches",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}

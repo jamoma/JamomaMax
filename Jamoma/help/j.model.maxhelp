@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 4,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 522.0, 126.0, 1158.0, 663.0 ],
+		"rect" : [ 450.0, 240.0, 1185.0, 691.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -27,7 +27,856 @@
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"showrootpatcherontab" : 0,
+		"showontab" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 4,
+							"architecture" : "x86"
+						}
+,
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 11.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Helvetica Neue",
+						"gridonopen" : 0,
+						"gridsize" : [ 10.0, 10.0 ],
+						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"boxanimatetime" : 200,
+						"imprint" : 0,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"showontab" : 1,
+						"boxes" : [  ],
+						"lines" : [  ]
+					}
+,
+					"patching_rect" : [ 977.0, 240.0, 24.0, 18.0 ],
+					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Helvetica Neue",
+						"default_fontsize" : 11.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Helvetica Neue",
+						"fontsize" : 11.0,
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p ?"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-15",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 4,
+							"architecture" : "x86"
+						}
+,
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 11.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Helvetica Neue",
+						"gridonopen" : 0,
+						"gridsize" : [ 10.0, 10.0 ],
+						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"boxanimatetime" : 200,
+						"imprint" : 0,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"showontab" : 1,
+						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-64",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 532.5, 408.0, 130.0, 20.0 ],
+									"text" : "Tree structure :"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"border" : 0,
+									"filename" : "helpdetails.js",
+									"id" : "obj-19",
+									"ignoreclick" : 1,
+									"jsarguments" : [ "j.model" ],
+									"maxclass" : "jsui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 0.0, 0.0, 1159.5, 118.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-40",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 736.5, 302.0, 67.0, 20.0 ],
+									"text" : "s dumpout"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-34",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 931.5, 399.0, 177.0, 20.0 ],
+									"text" : "access to the model's attributes"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-35",
+									"maxclass" : "toggle",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 911.5, 399.0, 20.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-31",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 911.5, 419.0, 171.0, 18.0 ],
+									"text" : "bypass $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-28",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 38.5, 379.5, 388.0, 33.0 ],
+									"text" : "atributes of the parent patcher/abstraction are propagated to the model\nthis can be useful e.g. to set a priority in the parent patcher..."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-26",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 931.5, 347.0, 164.0, 20.0 ],
+									"text" : "access to message attributes"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-21",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 909.5, 301.0, 201.0, 20.0 ],
+									"text" : "the message is relative to our model"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.811765, 0.372549, 0.372549, 1.0 ],
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-7",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 908.5, 319.0, 232.0, 18.0 ],
+									"text" : "/myMessage can't use absolute address !"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-33",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 898.5, 209.0, 214.0, 18.0 ],
+									"text" : "no"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-30",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 878.5, 209.0, 20.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-27",
+									"maxclass" : "toggle",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 911.5, 347.0, 20.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-20",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 911.5, 370.0, 179.0, 18.0 ],
+									"text" : "myMessage:repetitionsAllow $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-15",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 40.5, 590.0, 416.0, 47.0 ],
+									"text" : "In Jamoma 0.6 one or several gui  patchers can be created for each model \nthey are called view patchers and  contain a j.view object in place of j.model\nand connect with the model patcher (see j.view to know more)"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 14.0,
+									"frgb" : 0.0,
+									"id" : "obj-4",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 16.5, 558.0, 260.0, 22.0 ],
+									"text" : "Communication with the view"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-6",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 152.5, 348.5, 351.0, 20.0 ],
+									"text" : "- priorize your model to make a hierachy between other model"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-24",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 38.5, 348.5, 100.0, 20.0 ],
+									"text" : "@priority"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-9",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 156.5, 467.0, 348.0, 20.0 ],
+									"text" : "- Leftmost inlet of model is connected to left inlet of j.model."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-10",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 156.5, 498.0, 348.0, 20.0 ],
+									"text" : "- Left outlet of j.model connected to leftmost outlet of model."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-11",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 40.5, 498.0, 51.0, 20.0 ],
+									"text" : "Outlets:"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-12",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 40.5, 467.0, 43.0, 20.0 ],
+									"text" : "Inlets:"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 14.0,
+									"frgb" : 0.0,
+									"id" : "obj-13",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 17.5, 439.0, 183.0, 22.0 ],
+									"text" : "Standard connections:"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 14.0,
+									"frgb" : 0.0,
+									"id" : "obj-17",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 17.5, 235.0, 89.0, 22.0 ],
+									"text" : "Attributes:"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-22",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 152.5, 319.0, 363.0, 20.0 ],
+									"text" : "- text describing the parameter for html auto-documenting modules"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-23",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 38.5, 319.0, 100.0, 20.0 ],
+									"text" : "@description"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-29",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 152.5, 276.0, 326.0, 33.0 ],
+									"text" : "- a generic container for all kinds of tags that can be defined by the user or developer - can be a list of symbols"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-32",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 37.5, 276.0, 100.0, 20.0 ],
+									"text" : "@tag"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-45",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 878.5, 444.0, 74.0, 20.0 ],
+									"text" : "s incoming"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-46",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 878.5, 256.0, 123.0, 18.0 ],
+									"text" : "myMessage So Long"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-47",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 893.5, 276.0, 216.0, 18.0 ],
+									"text" : "myMessage And thanks for all the fish!"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"hidden" : 1,
+									"id" : "obj-48",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 592.5, 318.0, 79.0, 20.0 ],
+									"text" : "loadmess set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-49",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 878.5, 181.0, 204.0, 20.0 ],
+									"text" : "j.message myMessage @type string"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-52",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 736.5, 216.0, 73.0, 20.0 ],
+									"text" : "r incoming"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-54",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 592.5, 338.0, 229.0, 18.0 ],
+									"text" : "model/address /Basic"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-59",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 552.5, 261.5, 203.0, 33.0 ],
+									"text" : "j.model @tag control @description \"this model doesn't do anything\"",
+									"varname" : "j.hub"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-60",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 552.5, 196.0, 96.0, 20.0 ],
+									"text" : "Command input"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-65",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 552.5, 364.0, 183.0, 20.0 ],
+									"text" : "Reporting to the rest of the world"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-67",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 17.5, 154.0, 560.0, 33.0 ],
+									"text" : "For information on configuring the attributes to the j.model object, please refer to the Jamoma tutorials. These are the best source for getting familiar with the steps involved in building modules."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"background" : 1,
+									"bgcolor" : [ 0.780392, 0.780392, 0.839216, 0.0 ],
+									"border" : 2,
+									"bordercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"id" : "obj-66",
+									"maxclass" : "panel",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 532.5, 181.0, 325.0, 210.0 ],
+									"rounded" : 15
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-5",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 552.5, 176.0, 25.0, 25.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-14",
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 552.5, 331.0, 25.0, 25.0 ]
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-45", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 921.0, 389.0, 888.0, 389.0 ],
+									"source" : [ "obj-20", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-20", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-27", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-45", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-31", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-31", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-35", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-45", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-46", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-45", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 903.0, 303.0, 888.0, 303.0 ],
+									"source" : [ "obj-47", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-54", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-48", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-30", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 888.0, 206.0, 888.0, 206.0 ],
+									"source" : [ "obj-49", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-33", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 888.0, 205.5, 1103.0, 205.5 ],
+									"source" : [ "obj-49", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-59", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-5", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-59", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 746.0, 251.0, 562.0, 251.0 ],
+									"source" : [ "obj-52", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-14", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-59", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-40", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-59", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-54", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 562.0, 328.0, 812.0, 328.0 ],
+									"source" : [ "obj-59", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-45", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 918.0, 343.5, 888.0, 343.5 ],
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 32.5, 246.0, 43.0, 18.0 ],
+					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Helvetica Neue",
+						"default_fontsize" : 11.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Helvetica Neue",
+						"fontsize" : 11.0,
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p Basic"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"color" : [ 0.619608, 0.0, 0.360784, 0.7 ],
 					"fontname" : "Arial",
@@ -41,11 +890,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1166.0, 44.0, 256.0, 487.0 ],
+						"rect" : [ 450.0, 266.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -64,7 +913,217 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"frgb" : 0.0,
+									"id" : "obj-13",
+									"linecount" : 7,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 196.0, 495.0, 309.0, 108.0 ],
+									"presentation_rect" : [ 194.0, 495.0, 0.0, 0.0 ],
+									"text" : "Patching a model. \n\nNote that j.model embed a way to manage default attribute values in a similar way to patcherargs. Hence, attributes values defined as argument to j.model may be overwritten when instanciating a model in your patch.",
+									"textcolor" : [ 0.5, 0.5, 0.5, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-29",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 934.0, 209.0, 92.0, 51.0 ],
+									"text" : "Fine pick the needed feature"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-26",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 912.0, 426.0, 88.0, 51.0 ],
+									"text" : "Multiple amenities enabling"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-24",
+									"linecolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"maxclass" : "live.line",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 934.0, 58.0, 216.0, 19.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"hidden" : 1,
+									"id" : "obj-23",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 4,
+											"architecture" : "x86"
+										}
+,
+										"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 11.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Helvetica Neue",
+										"gridonopen" : 0,
+										"gridsize" : [ 10.0, 10.0 ],
+										"gridsnaponopen" : 0,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"boxanimatetime" : 200,
+										"imprint" : 0,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"boxes" : [ 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-19",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 50.0, 100.0, 24.0, 20.0 ],
+													"text" : "t b"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-16",
+													"linecount" : 2,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 50.0, 126.0, 305.0, 31.0 ],
+													"text" : ";\rmax launchbrowser http://en.wikipedia.org/wiki/Amenity"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-22",
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ]
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-16", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-19", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-19", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-22", 0 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 931.5, 67.0, 19.0, 20.0 ],
+									"saved_object_attributes" : 									{
+										"default_fontface" : 0,
+										"default_fontname" : "Helvetica Neue",
+										"default_fontsize" : 11.0,
+										"description" : "",
+										"digest" : "",
+										"fontface" : 0,
+										"fontname" : "Helvetica Neue",
+										"fontsize" : 11.0,
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.99842, 0.972394, 1.0, 0.0 ],
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-18",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 931.5, 43.0, 227.0, 17.0 ],
+									"text" : "Ok, but what does amenities really mean ?",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"frgb" : 0.0,
+									"id" : "obj-14",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 196.0, 47.0, 309.0, 65.0 ],
+									"text" : "j.model embed a number of handy features such as data or audio input/output handling, preset managing. These can be set (in-)active using the amenities attribute."
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -73,7 +1132,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 111.0, 219.0, 20.0 ],
+									"patching_rect" : [ 196.0, 273.0, 219.0, 20.0 ],
 									"text" : "all : enable all amenities (default)"
 								}
 
@@ -87,7 +1146,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 7.0, 131.0, 219.0, 20.0 ],
+									"patching_rect" : [ 196.0, 293.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities all"
 								}
 
@@ -102,7 +1161,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 412.0, 244.0, 47.0 ],
+									"patching_rect" : [ 655.0, 394.5, 244.0, 47.0 ],
 									"text" : " it is possible to enable several amenities in the same time. Here the preset and model amenities are enabled."
 								}
 
@@ -117,7 +1176,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 331.0, 244.0, 47.0 ],
+									"patching_rect" : [ 655.0, 243.0, 244.0, 47.0 ],
 									"text" : "data : enable data signal amenities only\n(which is useless in case of degrade~model as it doesn't deal with data signal)"
 								}
 
@@ -131,7 +1190,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 277.0, 244.0, 20.0 ],
+									"patching_rect" : [ 655.0, 189.0, 244.0, 20.0 ],
 									"text" : "audio : enable audio signal  amenities only"
 								}
 
@@ -145,7 +1204,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 223.0, 219.0, 20.0 ],
+									"patching_rect" : [ 655.0, 135.0, 219.0, 20.0 ],
 									"text" : "preset : enable preset amenities only"
 								}
 
@@ -159,7 +1218,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 166.0, 219.0, 20.0 ],
+									"patching_rect" : [ 196.0, 328.0, 219.0, 20.0 ],
 									"text" : "none : disable all amenities"
 								}
 
@@ -173,7 +1232,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 7.0, 459.0, 237.0, 20.0 ],
+									"patching_rect" : [ 655.0, 441.5, 237.0, 20.0 ],
 									"text" : "degrade~.model @amenities preset model"
 								}
 
@@ -187,7 +1246,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 7.0, 378.0, 219.0, 20.0 ],
+									"patching_rect" : [ 655.0, 290.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities data"
 								}
 
@@ -201,7 +1260,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 7.0, 297.0, 219.0, 20.0 ],
+									"patching_rect" : [ 655.0, 209.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities audio"
 								}
 
@@ -215,7 +1274,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 7.0, 243.0, 219.0, 20.0 ],
+									"patching_rect" : [ 655.0, 155.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities preset"
 								}
 
@@ -229,7 +1288,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 7.0, 186.0, 219.0, 20.0 ],
+									"patching_rect" : [ 196.0, 348.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities none"
 								}
 
@@ -237,23 +1296,33 @@
 , 							{
 								"box" : 								{
 									"fontname" : "Arial",
-									"fontsize" : 12.0,
+									"fontsize" : 13.0,
 									"frgb" : 0.0,
 									"id" : "obj-74",
-									"linecount" : 6,
+									"linecount" : 5,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 9.0, 219.0, 87.0 ],
-									"text" : "a model have 3 types of amenities : preset, signal and model.\n\nThey are all enable by default but it is possible to select them during a model instanciation."
+									"patching_rect" : [ 196.0, 163.0, 309.0, 79.0 ],
+									"text" : "Unless defined within the model abstraction, data, audio and preset features are all enable by default. Setting an amenity inactive prevent the model from loading the corresponding feature and thus lighten the model namespace.",
+									"textcolor" : [ 0.5, 0.5, 0.5, 1.0 ]
 								}
 
 							}
  ],
-						"lines" : [  ]
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-23", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-18", 0 ]
+								}
+
+							}
+ ]
 					}
 ,
-					"patching_rect" : [ 597.5, 530.0, 92.0, 24.0 ],
+					"patching_rect" : [ 475.0, 243.0, 93.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -267,92 +1336,8 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p amenities",
+					"text" : "p Amenities",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-64",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 532.0, 408.0, 130.0, 20.0 ],
-					"text" : "Tree structure :"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-63",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 532.0, 530.0, 72.0, 20.0 ],
-					"text" : "Amenities :"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-53",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 980.5, 564.0, 40.0, 18.0 ],
-					"text" : "j.out~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-55",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 980.5, 544.0, 40.0, 18.0 ],
-					"text" : "j.in~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-51",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 980.5, 524.0, 40.0, 18.0 ],
-					"text" : "j.out"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-50",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 980.5, 504.0, 40.0, 18.0 ],
-					"text" : "j.in"
 				}
 
 			}
@@ -370,11 +1355,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 925.0, 221.0, 379.0, 460.0 ],
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -393,13 +1378,14 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-29",
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 293.0, 339.0, 66.0, 20.0 ]
+									"patching_rect" : [ 383.0, 404.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -409,7 +1395,7 @@
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 293.0, 227.0, 66.0, 20.0 ]
+									"patching_rect" : [ 383.0, 292.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -419,7 +1405,7 @@
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 293.0, 280.0, 66.0, 20.0 ]
+									"patching_rect" : [ 383.0, 345.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -432,7 +1418,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 293.0, 200.0, 48.0, 20.0 ],
+									"patching_rect" : [ 383.0, 265.0, 48.0, 20.0 ],
 									"text" : "rect~ 1"
 								}
 
@@ -446,7 +1432,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
-									"patching_rect" : [ 293.0, 308.0, 52.0, 20.0 ],
+									"patching_rect" : [ 383.0, 373.0, 52.0, 20.0 ],
 									"text" : "j.out~ D"
 								}
 
@@ -460,7 +1446,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
-									"patching_rect" : [ 293.0, 254.0, 45.0, 20.0 ],
+									"patching_rect" : [ 383.0, 319.0, 45.0, 20.0 ],
 									"text" : "j.in~ D"
 								}
 
@@ -475,7 +1461,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 72.0, 339.0, 50.0, 20.0 ]
+									"patching_rect" : [ 162.0, 404.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -489,7 +1475,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 72.0, 280.0, 50.0, 20.0 ]
+									"patching_rect" : [ 162.0, 345.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -503,7 +1489,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 72.0, 200.0, 50.0, 20.0 ]
+									"patching_rect" : [ 162.0, 265.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -516,7 +1502,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 72.0, 308.0, 45.0, 20.0 ],
+									"patching_rect" : [ 162.0, 373.0, 45.0, 20.0 ],
 									"text" : "j.out B"
 								}
 
@@ -530,7 +1516,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 72.0, 254.0, 37.0, 20.0 ],
+									"patching_rect" : [ 162.0, 319.0, 37.0, 20.0 ],
 									"text" : "j.in B"
 								}
 
@@ -544,7 +1530,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 4.5, 13.0, 49.0, 20.0 ],
+									"patching_rect" : [ 94.5, 78.0, 49.0, 20.0 ],
 									"text" : "j.model"
 								}
 
@@ -555,7 +1541,7 @@
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 344.0, 2.0, 31.0, 31.0 ]
+									"patching_rect" : [ 434.0, 67.0, 31.0, 31.0 ]
 								}
 
 							}
@@ -565,7 +1551,7 @@
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 212.0, 339.0, 66.0, 20.0 ]
+									"patching_rect" : [ 302.0, 404.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -575,7 +1561,7 @@
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 212.0, 227.0, 66.0, 20.0 ]
+									"patching_rect" : [ 302.0, 292.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -585,7 +1571,7 @@
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 212.0, 280.0, 66.0, 20.0 ]
+									"patching_rect" : [ 302.0, 345.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -598,7 +1584,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 212.0, 200.0, 55.0, 20.0 ],
+									"patching_rect" : [ 302.0, 265.0, 55.0, 20.0 ],
 									"text" : "cycle~ 1"
 								}
 
@@ -613,7 +1599,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 212.0, 393.0, 50.0, 20.0 ]
+									"patching_rect" : [ 302.0, 458.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -626,7 +1612,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 212.0, 419.0, 113.0, 20.0 ],
+									"patching_rect" : [ 302.0, 484.0, 113.0, 20.0 ],
 									"text" : "j.remote audio/gain"
 								}
 
@@ -641,7 +1627,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 7.0, 339.0, 50.0, 20.0 ]
+									"patching_rect" : [ 97.0, 404.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -655,7 +1641,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 7.0, 280.0, 50.0, 20.0 ]
+									"patching_rect" : [ 97.0, 345.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -669,7 +1655,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 7.0, 200.0, 50.0, 20.0 ]
+									"patching_rect" : [ 97.0, 265.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -681,7 +1667,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 7.0, 393.0, 20.0, 20.0 ]
+									"patching_rect" : [ 97.0, 458.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -694,7 +1680,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 7.0, 419.0, 120.0, 20.0 ],
+									"patching_rect" : [ 97.0, 484.0, 120.0, 20.0 ],
 									"text" : "j.remote data/bypass"
 								}
 
@@ -708,7 +1694,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 152.0, 66.0, 18.0 ],
+									"patching_rect" : [ 302.0, 217.0, 66.0, 18.0 ],
 									"text" : "audio/gain"
 								}
 
@@ -722,7 +1708,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 134.0, 62.0, 18.0 ],
+									"patching_rect" : [ 302.0, 199.0, 62.0, 18.0 ],
 									"text" : "audio/mix"
 								}
 
@@ -736,7 +1722,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 116.0, 81.0, 18.0 ],
+									"patching_rect" : [ 302.0, 181.0, 81.0, 18.0 ],
 									"text" : "audio/bypass"
 								}
 
@@ -750,7 +1736,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 98.0, 70.0, 18.0 ],
+									"patching_rect" : [ 302.0, 163.0, 70.0, 18.0 ],
 									"text" : "audio/mute"
 								}
 
@@ -764,7 +1750,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 7.0, 134.0, 69.0, 18.0 ],
+									"patching_rect" : [ 97.0, 199.0, 69.0, 18.0 ],
 									"text" : "data/freeze"
 								}
 
@@ -778,7 +1764,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 7.0, 116.0, 73.0, 18.0 ],
+									"patching_rect" : [ 97.0, 181.0, 73.0, 18.0 ],
 									"text" : "data/bypass"
 								}
 
@@ -792,7 +1778,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 7.0, 98.0, 62.0, 18.0 ],
+									"patching_rect" : [ 97.0, 163.0, 62.0, 18.0 ],
 									"text" : "data/mute"
 								}
 
@@ -806,7 +1792,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
-									"patching_rect" : [ 212.0, 308.0, 52.0, 20.0 ],
+									"patching_rect" : [ 302.0, 373.0, 52.0, 20.0 ],
 									"text" : "j.out~ C"
 								}
 
@@ -820,7 +1806,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
-									"patching_rect" : [ 212.0, 254.0, 45.0, 20.0 ],
+									"patching_rect" : [ 302.0, 319.0, 45.0, 20.0 ],
 									"text" : "j.in~ C"
 								}
 
@@ -834,7 +1820,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 7.0, 308.0, 44.0, 20.0 ],
+									"patching_rect" : [ 97.0, 373.0, 44.0, 20.0 ],
 									"text" : "j.out A"
 								}
 
@@ -848,7 +1834,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 7.0, 254.0, 44.0, 20.0 ],
+									"patching_rect" : [ 97.0, 319.0, 44.0, 20.0 ],
 									"text" : "j.in A"
 								}
 
@@ -863,7 +1849,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 4.5, 39.0, 370.5, 47.0 ],
+									"patching_rect" : [ 94.5, 104.0, 370.5, 47.0 ],
 									"text" : "Some features relative to model signal management are automatically exposed as j.parameters under a data or audio level to control all inputs/outputs relative to a signal type in a row."
 								}
 
@@ -1070,7 +2056,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 590.0, 157.5, 24.0 ],
+					"patching_rect" : [ 656.0, 243.0, 234.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1084,37 +2070,8 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p signal_amenities",
+					"text" : "p \"Signal and data input/output\"",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"border" : 0,
-					"filename" : "helpdetails.js",
-					"id" : "obj-19",
-					"ignoreclick" : 1,
-					"jsarguments" : [ "j.model" ],
-					"maxclass" : "jsui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ -0.5, 0.0, 1159.5, 118.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-40",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 736.0, 302.0, 67.0, 20.0 ],
-					"text" : "s dumpout"
 				}
 
 			}
@@ -1132,11 +2089,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 23.0, 242.0, 974.0, 582.0 ],
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1155,6 +2112,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -1274,7 +2232,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 823.0, 503.25, 127.0, 18.0 ],
-									"text" : "2 foo"
+									"text" : "1 default"
 								}
 
 							}
@@ -1303,7 +2261,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 584.0, 503.25, 215.0, 31.0 ],
-									"text" : "default foo \"standard setup\" \"another case\""
+									"text" : "default \"standard setup\" \"another case\""
 								}
 
 							}
@@ -1951,8 +2909,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 626.0, 288.75, 110.0, 18.0 ],
-									"text" : "0.02"
+									"patching_rect" : [ 626.0, 288.75, 110.0, 18.0 ]
 								}
 
 							}
@@ -1980,8 +2937,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 626.0, 336.25, 57.0, 18.0 ],
-									"text" : "45"
+									"patching_rect" : [ 626.0, 336.25, 57.0, 18.0 ]
 								}
 
 							}
@@ -2008,8 +2964,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 626.0, 385.25, 110.0, 18.0 ],
-									"text" : "\"foo and bar\""
+									"patching_rect" : [ 626.0, 385.25, 110.0, 18.0 ]
 								}
 
 							}
@@ -2053,8 +3008,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 625.0, 434.25, 142.0, 18.0 ],
-									"text" : "65 \"is that true ?\" 4.5"
+									"patching_rect" : [ 625.0, 434.25, 142.0, 18.0 ]
 								}
 
 							}
@@ -2763,7 +3717,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 560.0, 158.5, 24.0 ],
+					"patching_rect" : [ 574.0, 243.0, 78.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2777,7 +3731,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p preset_amenities",
+					"text" : "p Presets",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
 				}
 
@@ -2796,11 +3750,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1161.0, 44.0, 251.0, 511.0 ],
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2819,6 +3773,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -2828,7 +3783,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 20.0, 465.0, 180.0, 18.0 ],
+									"patching_rect" : [ 133.0, 544.0, 180.0, 18.0 ],
 									"text" : "/modelMaxhelp"
 								}
 
@@ -2842,7 +3797,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 20.0, 399.0, 180.0, 18.0 ],
+									"patching_rect" : [ 133.0, 478.0, 180.0, 18.0 ],
 									"text" : "modelMaxhelp"
 								}
 
@@ -2857,7 +3812,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 20.0, 423.0, 180.0, 33.0 ],
+									"patching_rect" : [ 133.0, 502.0, 180.0, 33.0 ],
 									"text" : "j.receive /modelMaxhelp/model/address"
 								}
 
@@ -2869,7 +3824,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 20.0, 290.0, 20.0, 20.0 ]
+									"patching_rect" : [ 133.0, 369.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -2882,7 +3837,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 16.0, 110.0, 176.0, 18.0 ],
+									"patching_rect" : [ 129.0, 189.0, 176.0, 18.0 ],
 									"text" : "model/documentation/generate"
 								}
 
@@ -2896,7 +3851,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 20.0, 208.0, 89.0, 18.0 ],
+									"patching_rect" : [ 133.0, 287.0, 89.0, 18.0 ],
 									"text" : "model/address"
 								}
 
@@ -2911,7 +3866,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 20.0, 357.0, 180.0, 33.0 ],
+									"patching_rect" : [ 133.0, 436.0, 180.0, 33.0 ],
 									"text" : "j.receive /modelMaxhelp/model/class"
 								}
 
@@ -2926,7 +3881,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 20.0, 317.0, 182.0, 33.0 ],
+									"patching_rect" : [ 133.0, 396.0, 182.0, 33.0 ],
 									"text" : "j.remote /modelMaxhelp/model/reference"
 								}
 
@@ -2941,7 +3896,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 143.0, 190.0, 47.0 ],
+									"patching_rect" : [ 120.0, 222.0, 191.0, 47.0 ],
 									"text" : "Some informations about a model are automatically exposed as j.return under a model level"
 								}
 
@@ -2955,7 +3910,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 16.0, 92.0, 73.0, 18.0 ],
+									"patching_rect" : [ 129.0, 171.0, 73.0, 18.0 ],
 									"text" : "model/open"
 								}
 
@@ -2970,7 +3925,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 241.0, 235.0, 47.0 ],
+									"patching_rect" : [ 120.0, 320.0, 235.0, 47.0 ],
 									"text" : "So it is possible to address them like any other message|return of your model (via j.model or j.send, j.receive or j.remote)"
 								}
 
@@ -2984,7 +3939,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 20.0, 190.0, 74.0, 18.0 ],
+									"patching_rect" : [ 133.0, 269.0, 74.0, 18.0 ],
 									"text" : "model/class"
 								}
 
@@ -2999,7 +3954,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 9.0, 190.0, 47.0 ],
+									"patching_rect" : [ 120.0, 88.0, 191.0, 47.0 ],
 									"text" : "Some features relative to a model are automatically exposed as j.message under a model level"
 								}
 
@@ -3013,7 +3968,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 16.0, 74.0, 97.0, 18.0 ],
+									"patching_rect" : [ 129.0, 153.0, 97.0, 18.0 ],
 									"text" : "model/reference"
 								}
 
@@ -3027,7 +3982,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 16.0, 56.0, 69.0, 18.0 ],
+									"patching_rect" : [ 129.0, 135.0, 69.0, 18.0 ],
 									"text" : "model/help"
 								}
 
@@ -3038,7 +3993,7 @@
 									"destination" : [ "obj-17", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 29.5, 460.0, 190.5, 460.0 ],
+									"midpoints" : [ 142.5, 539.0, 303.5, 539.0 ],
 									"source" : [ "obj-14", 0 ]
 								}
 
@@ -3048,7 +4003,7 @@
 									"destination" : [ "obj-16", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 29.5, 394.0, 190.5, 394.0 ],
+									"midpoints" : [ 142.5, 473.0, 303.5, 473.0 ],
 									"source" : [ "obj-3", 0 ]
 								}
 
@@ -3065,7 +4020,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 620.0, 157.5, 24.0 ],
+					"patching_rect" : [ 895.0, 240.0, 69.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3079,7 +4034,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p model_amenities",
+					"text" : "p Extras",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
 				}
 
@@ -3098,11 +4053,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 797.0, 483.0, 502.0, 405.0 ],
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3121,6 +4076,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -3130,7 +4086,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 244.0, 351.0, 136.0, 20.0 ],
+									"patching_rect" : [ 561.0, 440.0, 136.0, 20.0 ],
 									"text" : "no leading slash here"
 								}
 
@@ -3144,7 +4100,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 244.0, 254.0, 136.0, 20.0 ],
+									"patching_rect" : [ 561.0, 343.0, 136.0, 20.0 ],
 									"text" : "notice the leading slash"
 								}
 
@@ -3159,7 +4115,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 195.5, 297.0, 279.0, 47.0 ],
+									"patching_rect" : [ 512.5, 386.0, 279.0, 47.0 ],
 									"text" : "as we are in the same patcher (or abstraction), we can access the same message in a relative way (because we are under the same j.model)"
 								}
 
@@ -3173,7 +4129,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 121.5, 313.0, 50.0, 18.0 ],
+									"patching_rect" : [ 438.5, 402.0, 50.0, 18.0 ],
 									"text" : "bbye"
 								}
 
@@ -3187,7 +4143,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 60.0, 313.0, 50.0, 18.0 ],
+									"patching_rect" : [ 377.0, 402.0, 50.0, 18.0 ],
 									"text" : "hello"
 								}
 
@@ -3201,7 +4157,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 60.0, 351.0, 173.0, 20.0 ],
+									"patching_rect" : [ 377.0, 440.0, 173.0, 20.0 ],
 									"text" : "j.send mymessage"
 								}
 
@@ -3216,7 +4172,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 195.5, 210.0, 263.5, 33.0 ],
+									"patching_rect" : [ 512.5, 299.0, 263.5, 33.0 ],
 									"text" : "this is what we call \"absolute addressing\", because it would work from anywhere in Max"
 								}
 
@@ -3230,7 +4186,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 121.5, 218.0, 50.0, 18.0 ],
+									"patching_rect" : [ 438.5, 307.0, 50.0, 18.0 ],
 									"text" : "bbye"
 								}
 
@@ -3244,7 +4200,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 60.0, 218.0, 50.0, 18.0 ],
+									"patching_rect" : [ 377.0, 307.0, 50.0, 18.0 ],
 									"text" : "hello"
 								}
 
@@ -3258,7 +4214,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 60.0, 254.0, 173.0, 20.0 ],
+									"patching_rect" : [ 377.0, 343.0, 173.0, 20.0 ],
 									"text" : "j.send /model/mymessage"
 								}
 
@@ -3272,7 +4228,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 60.0, 178.0, 399.0, 20.0 ],
+									"patching_rect" : [ 377.0, 267.0, 399.0, 20.0 ],
 									"text" : "thus, the mymessage message can be accessed via /model/mymessage"
 								}
 
@@ -3287,7 +4243,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 60.0, 136.0, 399.0, 33.0 ],
+									"patching_rect" : [ 377.0, 225.0, 399.0, 33.0 ],
 									"text" : "in the case of this help patcher, as the model is placed at the top-level, it is named model"
 								}
 
@@ -3302,7 +4258,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 60.0, 94.0, 399.0, 33.0 ],
+									"patching_rect" : [ 377.0, 183.0, 399.0, 33.0 ],
 									"text" : "typically, when a model is placed inside of an abstraction/bpatcher or supatcher, the model is named after the first argument"
 								}
 
@@ -3316,7 +4272,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 60.0, 68.0, 399.0, 20.0 ],
+									"patching_rect" : [ 377.0, 157.0, 399.0, 20.0 ],
 									"text" : "the address for doing so is /modelAddress/parameterName"
 								}
 
@@ -3331,7 +4287,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 38.0, 23.0, 399.0, 33.0 ],
+									"patching_rect" : [ 355.0, 112.0, 399.0, 33.0 ],
 									"text" : "parameters, messages and returns included to a model can be accessed with j.send, j.receive and j.remote"
 								}
 
@@ -3376,7 +4332,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 434.0, 130.0, 24.0 ],
+					"patching_rect" : [ 92.0, 246.0, 145.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3390,7 +4346,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p remote_access",
+					"text" : "p \"Remote access\"",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
 				}
 
@@ -3409,11 +4365,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1894.0, 294.0, 577.0, 418.0 ],
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3432,6 +4388,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -3441,7 +4398,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 30.5, 291.0, 286.0, 20.0 ],
+									"patching_rect" : [ 326.5, 386.0, 286.0, 20.0 ],
 									"text" : "The initial address of the model remains accessible."
 								}
 
@@ -3455,7 +4412,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 30.5, 185.0, 271.0, 20.0 ],
+									"patching_rect" : [ 326.5, 280.0, 271.0, 20.0 ],
 									"text" : "messages can then be addressed using the alias"
 								}
 
@@ -3470,7 +4427,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 314.5, 110.0, 229.0, 47.0 ],
+									"patching_rect" : [ 610.5, 205.0, 229.0, 47.0 ],
 									"text" : "notice that there is a leading slash to the alias (so it doesn't depend on where it is  placed in the addressing architecture"
 								}
 
@@ -3484,7 +4441,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 30.5, 80.0, 269.0, 20.0 ],
+									"patching_rect" : [ 326.5, 175.0, 269.0, 20.0 ],
 									"text" : "two different ways of giving an alias to the model"
 								}
 
@@ -3498,7 +4455,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 115.0, 320.0, 85.0, 20.0 ],
+									"patching_rect" : [ 411.0, 415.0, 85.0, 20.0 ],
 									"text" : "this still works"
 								}
 
@@ -3512,7 +4469,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 76.25, 320.0, 32.5, 18.0 ],
+									"patching_rect" : [ 372.25, 415.0, 32.5, 18.0 ],
 									"text" : "no"
 								}
 
@@ -3526,7 +4483,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 30.5, 320.0, 32.5, 18.0 ],
+									"patching_rect" : [ 326.5, 415.0, 32.5, 18.0 ],
 									"text" : "yes"
 								}
 
@@ -3540,7 +4497,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 30.5, 348.0, 181.0, 20.0 ],
+									"patching_rect" : [ 326.5, 443.0, 181.0, 20.0 ],
 									"text" : "j.send /model/mymessage"
 								}
 
@@ -3554,7 +4511,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 184.5, 110.0, 115.0, 18.0 ],
+									"patching_rect" : [ 480.5, 205.0, 115.0, 18.0 ],
 									"text" : "alias /anotherName"
 								}
 
@@ -3568,7 +4525,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 184.5, 137.0, 65.0, 33.0 ],
+									"patching_rect" : [ 480.5, 232.0, 65.0, 33.0 ],
 									"text" : "s incoming"
 								}
 
@@ -3582,7 +4539,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 76.25, 218.0, 32.5, 18.0 ],
+									"patching_rect" : [ 372.25, 313.0, 32.5, 18.0 ],
 									"text" : "no"
 								}
 
@@ -3596,7 +4553,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 30.5, 110.0, 87.0, 18.0 ],
+									"patching_rect" : [ 326.5, 205.0, 87.0, 18.0 ],
 									"text" : "/anotherName"
 								}
 
@@ -3610,7 +4567,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 30.5, 137.0, 133.0, 20.0 ],
+									"patching_rect" : [ 326.5, 232.0, 133.0, 20.0 ],
 									"text" : "j.send :alias"
 								}
 
@@ -3624,7 +4581,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 30.5, 218.0, 32.5, 18.0 ],
+									"patching_rect" : [ 326.5, 313.0, 32.5, 18.0 ],
 									"text" : "yes"
 								}
 
@@ -3638,7 +4595,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 30.5, 246.0, 213.0, 20.0 ],
+									"patching_rect" : [ 326.5, 341.0, 213.0, 20.0 ],
 									"text" : "j.send /anotherName/mymessage"
 								}
 
@@ -3653,7 +4610,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 30.5, 22.0, 522.0, 31.0 ],
+									"patching_rect" : [ 326.5, 117.0, 522.0, 31.0 ],
 									"text" : "A model can have an alias. \nThis will allow to access the model's address (and sub-addresses) with a temporary name."
 								}
 
@@ -3716,7 +4673,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 494.0, 72.0, 24.0 ],
+					"patching_rect" : [ 392.0, 246.0, 75.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3730,63 +4687,8 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p aliases",
+					"text" : "p Aliases",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-34",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 931.0, 399.0, 177.0, 20.0 ],
-					"text" : "access to the model's attributes"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-35",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 911.0, 399.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-31",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 911.0, 419.0, 171.0, 18.0 ],
-					"text" : "bypass $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-28",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 379.5, 388.0, 33.0 ],
-					"text" : "atributes of the parent patcher/abstraction are propagated to the model\nthis can be useful e.g. to set a priority in the parent patcher..."
 				}
 
 			}
@@ -3804,11 +4706,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 537.0, 519.0 ],
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3827,6 +4729,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -3837,7 +4740,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 49.5, 458.0, 372.0, 47.0 ],
+									"patching_rect" : [ 318.5, 513.0, 372.0, 47.0 ],
 									"text" : "when a subpatcher is duplicated andthen  renamed, j.model keeps the name of the original subpatcher, until it is rebuilt (by reloading the patcher, or cutting/pasting the subpatcher)"
 								}
 
@@ -3852,7 +4755,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 49.5, 419.0, 372.0, 33.0 ],
+									"patching_rect" : [ 318.5, 474.0, 372.0, 33.0 ],
 									"text" : "j.models have to be created first, in order for the j.parameters in the same patcher (or below) to subscribe to them"
 								}
 
@@ -3866,7 +4769,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 25.5, 384.0, 295.0, 20.0 ],
+									"patching_rect" : [ 294.5, 439.0, 295.0, 20.0 ],
 									"text" : "NOTES :"
 								}
 
@@ -3880,7 +4783,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 49.5, 341.0, 172.0, 20.0 ],
+									"patching_rect" : [ 318.5, 396.0, 172.0, 20.0 ],
 									"text" : "or locally without leading slash"
 								}
 
@@ -3894,7 +4797,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 49.5, 304.0, 166.0, 20.0 ],
+									"patching_rect" : [ 318.5, 359.0, 166.0, 20.0 ],
 									"text" : "globally using a leading slash"
 								}
 
@@ -3908,7 +4811,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 25.5, 262.0, 185.0, 20.0 ],
+									"patching_rect" : [ 294.5, 317.0, 185.0, 20.0 ],
 									"text" : "its parameters can be accessed :"
 								}
 
@@ -3922,7 +4825,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 25.5, 225.0, 305.0, 20.0 ],
+									"patching_rect" : [ 294.5, 280.0, 305.0, 20.0 ],
 									"text" : "in this case the address of the model is then /model/sub"
 								}
 
@@ -3937,7 +4840,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 25.5, 100.0, 458.0, 33.0 ],
+									"patching_rect" : [ 294.5, 155.0, 458.0, 33.0 ],
 									"text" : "this allows the creation of submodules or \"surmodules\" \n(see e.g. the track.model in documentation/examples/overview)"
 								}
 
@@ -3952,7 +4855,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 25.5, 62.0, 458.0, 33.0 ],
+									"patching_rect" : [ 294.5, 117.0, 458.0, 33.0 ],
 									"text" : "if models are placed in a subpatcher/abstraction inside of a patcher containing a model, these models will be hierarchically placed *under* the main model"
 								}
 
@@ -3966,7 +4869,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 25.5, 29.0, 162.0, 22.0 ],
+									"patching_rect" : [ 294.5, 84.0, 162.0, 22.0 ],
 									"text" : "Models can be nested"
 								}
 
@@ -3980,7 +4883,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 25.5, 193.0, 451.0, 20.0 ],
+									"patching_rect" : [ 294.5, 248.0, 451.0, 20.0 ],
 									"text" : "the name of the node of j.hub is then based on the name of the patcher (here sub)"
 								}
 
@@ -3995,7 +4898,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 218.5, 341.0, 50.0, 20.0 ]
+									"patching_rect" : [ 487.5, 396.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -4008,7 +4911,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 268.5, 341.0, 185.0, 20.0 ],
+									"patching_rect" : [ 537.5, 396.0, 185.0, 20.0 ],
 									"text" : "j.remote sub/aParam"
 								}
 
@@ -4023,7 +4926,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 218.5, 303.0, 50.0, 20.0 ]
+									"patching_rect" : [ 487.5, 358.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -4036,7 +4939,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 268.5, 303.0, 185.0, 20.0 ],
+									"patching_rect" : [ 537.5, 358.0, 185.0, 20.0 ],
 									"text" : "j.remote /model/sub/aParam"
 								}
 
@@ -4055,7 +4958,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 4,
 											"architecture" : "x86"
 										}
 ,
@@ -4183,7 +5086,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 416.5, 153.0, 60.0, 27.0 ],
+									"patching_rect" : [ 685.5, 208.0, 60.0, 27.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
@@ -4210,7 +5113,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 25.5, 153.0, 305.0, 22.0 ],
+									"patching_rect" : [ 294.5, 208.0, 305.0, 22.0 ],
 									"text" : "Models can be created in subpatchers  : "
 								}
 
@@ -4255,7 +5158,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 532.0, 464.0, 262.0, 24.0 ],
+					"patching_rect" : [ 241.0, 246.0, 142.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -4269,894 +5172,21 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p nested_models_and_subpacthers",
+					"text" : "p \"Nested models\"",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-26",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 931.0, 347.0, 164.0, 20.0 ],
-					"text" : "access to message attributes"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-21",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 909.0, 301.0, 201.0, 20.0 ],
-					"text" : "the message is relative to our model"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.811765, 0.372549, 0.372549, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-7",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 908.0, 319.0, 232.0, 18.0 ],
-					"text" : "/myMessage can't use absolute address !"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-33",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 898.0, 209.0, 214.0, 18.0 ],
-					"text" : "no"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-30",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 878.0, 209.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-27",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 911.0, 347.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-20",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 911.0, 370.0, 179.0, 18.0 ],
-					"text" : "myMessage:repetitionsAllow $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-16",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1026.75, 504.0, 53.0, 18.0 ],
-					"text" : "j.view"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-15",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 590.0, 416.0, 47.0 ],
-					"text" : "In Jamoma 0.6 one or several gui  patchers can be created for each model \nthey are called view patchers and  contain a j.view object in place of j.model\nand connect with the model patcher (see j.view to know more)"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"frgb" : 0.0,
-					"id" : "obj-4",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 16.0, 558.0, 260.0, 22.0 ],
-					"text" : "Communication with the view"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-6",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 152.0, 348.5, 351.0, 20.0 ],
-					"text" : "- priorize your model to make a hierachy between other model"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-24",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 348.5, 100.0, 20.0 ],
-					"text" : "@priority"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-25",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1026.75, 544.0, 53.0, 18.0 ],
-					"text" : "j.remote"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-18",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 886.25, 564.0, 53.0, 18.0 ],
-					"text" : "j.init"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-1",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1026.75, 524.0, 53.0, 18.0 ],
-					"text" : "j.ui"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-2",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 886.25, 544.0, 69.0, 18.0 ],
-					"text" : "j.return"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-3",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 886.25, 524.0, 82.0, 18.0 ],
-					"text" : "j.message"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-9",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 156.0, 467.0, 348.0, 20.0 ],
-					"text" : "- Leftmost inlet of model is connected to left inlet of j.model."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-10",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 156.0, 498.0, 348.0, 20.0 ],
-					"text" : "- Left outlet of j.model connected to leftmost outlet of model."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-11",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 498.0, 51.0, 20.0 ],
-					"text" : "Outlets:"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-12",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 467.0, 43.0, 20.0 ],
-					"text" : "Inlets:"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"frgb" : 0.0,
-					"id" : "obj-13",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 439.0, 183.0, 22.0 ],
-					"text" : "Standard connections:"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"frgb" : 0.0,
-					"id" : "obj-17",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 235.0, 89.0, 22.0 ],
-					"text" : "Attributes:"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-22",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 152.0, 319.0, 363.0, 20.0 ],
-					"text" : "- text describing the parameter for html auto-documenting modules"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-23",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 319.0, 100.0, 20.0 ],
-					"text" : "@description"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-29",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 152.0, 276.0, 326.0, 33.0 ],
-					"text" : "- a generic container for all kinds of tags that can be defined by the user or developer - can be a list of symbols"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-32",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 37.0, 276.0, 100.0, 20.0 ],
-					"text" : "@tag"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-41",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 886.25, 504.0, 90.0, 18.0 ],
-					"text" : "j.parameter"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"hidden" : 1,
-					"id" : "obj-42",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1026.75, 590.0, 80.0, 20.0 ],
-					"text" : "prepend help"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"hidden" : 1,
-					"id" : "obj-43",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1026.75, 615.0, 51.0, 20.0 ],
-					"text" : "pcontrol"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-45",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 878.0, 444.0, 74.0, 20.0 ],
-					"text" : "s incoming"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-46",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 878.0, 256.0, 123.0, 18.0 ],
-					"text" : "myMessage So Long"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-47",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 893.0, 276.0, 216.0, 18.0 ],
-					"text" : "myMessage And thanks for all the fish!"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"hidden" : 1,
-					"id" : "obj-48",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 592.0, 318.0, 79.0, 20.0 ],
-					"text" : "loadmess set"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-49",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 878.0, 181.0, 204.0, 20.0 ],
-					"text" : "j.message myMessage @type string"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-52",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 736.0, 216.0, 73.0, 20.0 ],
-					"text" : "r incoming"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-54",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 592.0, 338.0, 229.0, 18.0 ],
-					"text" : "any 65 \"is that true ?\" 4.5"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-59",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 552.0, 261.5, 203.0, 33.0 ],
-					"text" : "j.model @tag control @description \"this model doesn't do anything\"",
-					"varname" : "j.hub"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-60",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 552.0, 196.0, 96.0, 20.0 ],
-					"text" : "Command input"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-61",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 552.0, 216.0, 26.0, 26.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-62",
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 552.0, 338.0, 26.0, 26.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-65",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 552.0, 364.0, 183.0, 20.0 ],
-					"text" : "Reporting to the rest of the world"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-67",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 154.0, 560.0, 33.0 ],
-					"text" : "For information on configuring the attributes to the j.model object, please refer to the Jamoma tutorials. These are the best source for getting familiar with the steps involved in building modules."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-72",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 886.25, 484.0, 56.0, 20.0 ],
-					"text" : "See also"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"background" : 1,
-					"bgcolor" : [ 0.780392, 0.780392, 0.839216, 0.0 ],
-					"border" : 2,
-					"bordercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-					"id" : "obj-66",
-					"maxclass" : "panel",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 532.0, 181.0, 325.0, 210.0 ],
-					"rounded" : 15
-				}
-
-			}
  ],
-		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-16", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-18", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-45", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 920.5, 389.0, 887.5, 389.0 ],
-					"source" : [ "obj-20", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-25", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-27", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-45", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-31", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-31", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-35", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-41", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-43", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-42", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-45", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-46", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-45", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 902.5, 303.0, 887.5, 303.0 ],
-					"source" : [ "obj-47", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-54", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-48", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-30", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 887.5, 206.0, 887.5, 206.0 ],
-					"source" : [ "obj-49", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-33", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 887.5, 205.5, 1102.5, 205.5 ],
-					"source" : [ "obj-49", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-50", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-51", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-59", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 745.5, 251.0, 561.5, 251.0 ],
-					"source" : [ "obj-52", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-53", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-55", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-40", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-59", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-54", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 561.5, 328.0, 811.5, 328.0 ],
-					"source" : [ "obj-59", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-62", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-59", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-59", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-61", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-45", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 917.5, 343.5, 887.5, 343.5 ],
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
- ],
+		"lines" : [  ],
 		"dependency_cache" : [ 			{
+				"name" : "degrade~.model.maxpat",
+				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
 				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
@@ -5164,18 +5194,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -5208,6 +5227,10 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]
