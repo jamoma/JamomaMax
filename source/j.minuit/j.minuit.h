@@ -75,6 +75,15 @@ void	minuit_return_activity_in(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
  @param argv		Pointer to an array of atoms passed to the object.
  @see				...
  */
+void	minuit_return_activity_out(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+/** ...
+ @param self		Pointer to this object.
+ @param msg			The message sent to this object.
+ @param argc		The number of arguments passed to the object.
+ @param argv		Pointer to an array of atoms passed to the object.
+ @see				...
+ */
 //void	minuit_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 /** ...
