@@ -209,7 +209,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.in">
-		<seealso name="j.out~">
+		<seealso name="j.in"/>
+		<seealso name="j.out~"/>
 	</seealsolist>
 </c74object>

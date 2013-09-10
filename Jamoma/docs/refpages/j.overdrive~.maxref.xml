@@ -231,8 +231,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.array~">
-		<seealso name="jamoma~">
-		<seealso name="overdrive~"
+		<seealso name="j.array~"/>
+		<seealso name="jamoma~"/>
+		<seealso name="overdrive~"/>
 	</seealsolist>
 </c74object>
