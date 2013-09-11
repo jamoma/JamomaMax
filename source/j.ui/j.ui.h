@@ -53,7 +53,7 @@ typedef struct _ui{
 	TTObjectBasePtr		modelMessExplorer;		///< internal TTExplorer object to observe messages
 	TTObjectBasePtr		modelParamExplorer;		///< internal TTExplorer object to observe parameters
 	TTObjectBasePtr		modelRetExplorer;		///< internal TTExplorer object to observe returns
-	TTSubscriberPtr		uiSubscriber;			///< internal TTSubscriber object to create a /ui node
+	TTSubscriberPtr		viewSubscriber;			///< internal TTSubscriber object to bind on the view node
 	TTCallbackPtr		previewSignal;			///< internal TTCallback to get back preview signal
 	TTOutputPtr			modelOutput;			///< a pointer to TTOutput object of the binded model
 	
