@@ -2,6 +2,7 @@ defines:
   - JCOM_MODEL
   
 sources:
+  - TTModel.cpp
   - j.model.cpp
   - j.model_preset.cpp
   - j.model_signal.cpp

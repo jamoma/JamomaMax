@@ -16,7 +16,9 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	spec->_new = &WrappedContainerClass_new;
 	spec->_free = &WrappedContainerClass_free;
 	spec->_any = &WrappedContainerClass_anything;
-
+    
+    TTModel::registerClass();
+    
 #ifndef JCOM_VIEW
 	return wrapTTModularClassAsMaxClass(kTTSym_Container, "j.model", NULL, spec);
 #else
@@ -95,10 +97,10 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	
 #ifndef JCOM_VIEW
 	x->patcherContext = kTTSym_model;
-	x->wrappedObject->setAttributeValue(kTTSym_tag, kTTSym_model);
+	x->wrappedObject->setAttributeValue(kTTSym_service, kTTSym_model);
 #else
 	x->patcherContext = kTTSym_view;
-	x->wrappedObject->setAttributeValue(kTTSym_tag, kTTSym_view);
+	x->wrappedObject->setAttributeValue(kTTSym_service, kTTSym_view);
 #endif
 		
 	// Make two outlets
@@ -111,6 +113,7 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
 	EXTRA->modelAddress = kTTAdrsEmpty;
+    EXTRA->model = NULL;
     EXTRA->argAddress = kTTAdrsEmpty;
     EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
@@ -144,7 +147,14 @@ void WrappedContainerClass_free(TTPtr self)
     TTAddress    modelAddress, presetAddress;
     TTValue      v;
     
+    if (EXTRA->model) {
+        
+        // delete the model
+        TTObjectBaseRelease(&EXTRA->model);
+    }
+    
     if (EXTRA->presetManager) {
+        
         // get the modelAddress from the preset manager address
         EXTRA->presetManager->getAttributeValue(kTTSym_address, v);
         modelAddress = v[0];
@@ -238,6 +248,10 @@ void model_subscribe(TTPtr self)
                 // Add amenities relative to model informations
                 if (model_test_amenities(self, TTSymbol("model"))) {
                     
+                    args.clear();
+                    TTObjectBaseInstantiate(TTSymbol("Model"), &(EXTRA->model), args);
+                    
+                    /*
                     // Add a /class data
                     makeInternals_data(x, returnedAddress, TTSymbol("model/class"), gensym("model_class"), x->patcherPtr, kTTSym_return, &aData);
                     aData->setAttributeValue(kTTSym_type, kTTSym_string);
@@ -268,6 +282,7 @@ void model_subscribe(TTPtr self)
                     aData->setAttributeValue(kTTSym_type, kTTSym_none);
                     aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
                     aData->setAttributeValue(kTTSym_description, TTSymbol("Make a html page description"));
+                     */
                     
                     /* Add a /model/mute data
                      makeInternals_data(x, nodeAdrs, TTSymbol("model/mute"), gensym("model_mute"), x->patcherContext, kTTSym_parameter, &aData);

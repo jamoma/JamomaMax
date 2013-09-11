@@ -8,11 +8,13 @@
  */
 
 #include "TTModularClassWrapperMax.h"
+#include "TTModel.h"
 
 // This is used to store extra data
 typedef struct extra {
 	ObjectPtr			modelInternal;		// store an internal model patcher
 	TTAddress           modelAddress;		// store the /model/address parameter
+    TTObjectBasePtr     model;
     TTAddress           argAddress;         // store the address from the argument (see in model_upper_view_model_address)
     
     TTString            *text;				// the text of the editor to read after edclose
