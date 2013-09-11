@@ -9,20 +9,29 @@
 
 #include "j.model.h"
 
-void model_preset_subscribe(TTPtr self, TTAddress modelAddress)
+void model_preset_amenities(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTAddress                   modelAdrs;
 	TTValue						v, a, args;
 	TTXmlHandlerPtr				aXmlHandler;
     TTAddress                   presetAddress;
     TTNodePtr                   aNode;
     TTBoolean                   newInstanceCreated;
+
+    // get model:address
+    EXTRA->model->getAttributeValue(kTTSym_address, v);
+    modelAdrs = v[0];
     
-    presetAddress = modelAddress.appendAddress(TTAddress("preset"));
+    // create the preset manager
+	jamoma_presetManager_create((ObjectPtr)x, &EXTRA->presetManager);
+    
+    // suscribe it under a preset node 
+    presetAddress = modelAdrs.appendAddress(TTAddress("preset"));
     
     if (!JamomaDirectory->TTNodeCreate(presetAddress, EXTRA->presetManager, x->patcherPtr,  &aNode, &newInstanceCreated)) {
 	
-        EXTRA->presetManager->setAttributeValue(kTTSym_address, modelAddress);
+        EXTRA->presetManager->setAttributeValue(kTTSym_address, modelAdrs);
         
         // create internal TTXmlHandler
         aXmlHandler = NULL;
