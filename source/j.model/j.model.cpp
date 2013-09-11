@@ -95,10 +95,10 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	
 #ifndef JCOM_VIEW
 	x->patcherContext = kTTSym_model;
-	x->wrappedObject->setAttributeValue(kTTSym_tag, kTTSym_model);
+	x->wrappedObject->setAttributeValue(kTTSym_service, kTTSym_model);
 #else
 	x->patcherContext = kTTSym_view;
-	x->wrappedObject->setAttributeValue(kTTSym_tag, kTTSym_view);
+	x->wrappedObject->setAttributeValue(kTTSym_service, kTTSym_view);
 #endif
 		
 	// Make two outlets
