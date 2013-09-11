@@ -241,8 +241,6 @@ void ui_free(t_ui *x)
 	qelem_free(x->refmenu_qelem);
 	x->refmenu_qelem = NULL;
 	object_free(x->refmenu_items);
-	
-	TTObjectBaseRelease(TTObjectBaseHandle(&x->uiSubscriber));
     
     if (x->textHandler)
         TTObjectBaseRelease(TTObjectBaseHandle(&x->textHandler));
