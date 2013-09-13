@@ -11,7 +11,7 @@
 
 void ui_data_create_all(t_ui* obj)
 {
-	TTObjectBasePtr	anObject;
+	TTObjectBasePtr	anObject = NULL;
     TTAddress       returnedAddress;
     TTNodePtr       returnedNode = NULL;
     TTNodePtr       returnedContextNode = NULL;
@@ -19,15 +19,13 @@ void ui_data_create_all(t_ui* obj)
 	TTValue			v;
 	
 	// create a ui node with our patcher as context
-	anObject = NULL;
-	TTObjectBaseInstantiate(kTTSym_Container, &anObject, kTTValNONE);
-	if (!jamoma_subscriber_create((ObjectPtr)obj, anObject, TTAddress("ui"), &obj->uiSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((ObjectPtr)obj, NULL, kTTAdrsEmpty, &obj->viewSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
 		// get info relative to our patcher
 		jamoma_patcher_get_info((ObjectPtr)obj, &obj->patcherPtr, obj->patcherContext, obj->patcherClass, obj->patcherName);
 		
 		// get the view address
-		obj->uiSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
+		obj->viewSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
 		obj->viewAddress = v[0];
 		
 		// make a receiver on contextAddress/model/address data
@@ -35,28 +33,28 @@ void ui_data_create_all(t_ui* obj)
 		
 		// Then create all internal datas concerning the j.ui
 		// ui/color/contentBackground
-		ui_data_create(obj, &anObject, gensym("return_color_contentBackground"), kTTSym_message, TTSymbol("color/contentBackground"));
+		ui_data_create(obj, &anObject, gensym("return_color_contentBackground"), kTTSym_message, TTSymbol("ui/color/contentBackground"));
 		anObject->setAttributeValue(kTTSym_type, kTTSym_array);
 		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
 		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
 		anObject->setAttributeValue(kTTSym_description, TTSymbol("The background color of the module in the format RGBA where values range [0.0, 1.0]."));
 		
 		// ui/color/toolbarBackground
-		ui_data_create(obj, &anObject, gensym("return_color_toolbarBackground"), kTTSym_message, TTSymbol("color/toolbarBackground"));
+		ui_data_create(obj, &anObject, gensym("return_color_toolbarBackground"), kTTSym_message, TTSymbol("ui/color/toolbarBackground"));
 		anObject->setAttributeValue(kTTSym_type, kTTSym_array);
 		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
 		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
 		anObject->setAttributeValue(kTTSym_description, TTSymbol("The background color of the module's toolbar in the format RGBA where values range [0.0, 1.0]."));
 		
 		// ui/color/toolbarText
-		ui_data_create(obj, &anObject, gensym("return_color_toolbarText"), kTTSym_message, TTSymbol("color/toolbarText"));
+		ui_data_create(obj, &anObject, gensym("return_color_toolbarText"), kTTSym_message, TTSymbol("ui/color/toolbarText"));
 		anObject->setAttributeValue(kTTSym_type, kTTSym_array);
 		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
 		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
 		anObject->setAttributeValue(kTTSym_description, TTSymbol("The color of the module's toolbar text in the format RGBA where values range [0.0, 1.0]."));
 		
 		// ui/color/border
-		ui_data_create(obj, &anObject, gensym("return_color_border"), kTTSym_message, TTSymbol("color/border"));
+		ui_data_create(obj, &anObject, gensym("return_color_border"), kTTSym_message, TTSymbol("ui/color/border"));
 		anObject->setAttributeValue(kTTSym_type, kTTSym_array);
 		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
 		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
@@ -65,7 +63,7 @@ void ui_data_create_all(t_ui* obj)
 		obj->memo_bordercolor = obj->bordercolor;
 		
 		// ui/size
-		ui_data_create(obj, &anObject, gensym("return_ui_size"), kTTSym_parameter, TTSymbol("size"));
+		ui_data_create(obj, &anObject, gensym("return_ui_size"), kTTSym_parameter, TTSymbol("ui/size"));
 		anObject->setAttributeValue(kTTSym_type, kTTSym_array);
 		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
 		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
@@ -76,7 +74,7 @@ void ui_data_create_all(t_ui* obj)
 		anObject->setAttributeValue(kTTSym_value, v);
 		
 		// ui/freeze
-		ui_data_create(obj, &anObject, gensym("return_ui_freeze"), kTTSym_parameter, TTSymbol("freeze"));
+		ui_data_create(obj, &anObject, gensym("return_ui_freeze"), kTTSym_parameter, TTSymbol("ui/freeze"));
 		anObject->setAttributeValue(kTTSym_type, kTTSym_boolean);
 		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
 		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
@@ -109,9 +107,9 @@ void ui_data_destroy_all(t_ui *obj)
 void ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbackMethod, TTSymbol service, TTSymbol name, TTBoolean deferlow)
 {
 	TTValue			args, v;
-	TTObjectBasePtr		returnValueCallback;
+	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
-	TTAddress       uiAddress, dataAddress;
+	TTAddress       viewAddress, dataAddress;
 	TTNodePtr		aNode;
 	TTBoolean		nodeCreated;
 	
@@ -133,9 +131,9 @@ void ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbac
 	TTObjectBaseInstantiate(kTTSym_Data, TTObjectBaseHandle(returnedData), args);
 	
 	// Register data
-	obj->uiSubscriber->getAttributeValue(TTSymbol("nodeAddress"), v);
-	v.get(0, uiAddress);
-	dataAddress = uiAddress.appendAddress(TTAddress(name.c_str()));
+	obj->viewSubscriber->getAttributeValue(TTSymbol("nodeAddress"), v);
+	v.get(0, viewAddress);
+	dataAddress = viewAddress.appendAddress(TTAddress(name.c_str()));
 	JamomaDirectory->TTNodeCreate(dataAddress, *returnedData, obj->patcherPtr, &aNode, &nodeCreated);
 	
 	// Store data
@@ -299,9 +297,9 @@ void ui_receiver_destroy_all(t_ui *obj)
 void ui_viewer_create(t_ui *obj, TTObjectBasePtr *returnedViewer, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean subscribe, TTBoolean deferlow)
 {
 	TTValue			v, args;
-	TTObjectBasePtr		returnValueCallback;
+	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
-	TTAddress uiAddress, viewerAddress, adrs;
+	TTAddress       viewAddress, viewerAddress, adrs;
 	TTNodePtr		aNode;
 	TTBoolean		nodeCreated;
 	
@@ -322,10 +320,10 @@ void ui_viewer_create(t_ui *obj, TTObjectBasePtr *returnedViewer, SymbolPtr aCal
 	
 	if (subscribe) {
 		// Register viewer
-		obj->uiSubscriber->getAttributeValue(TTSymbol("nodeAddress"), v);
-		v.get(0, uiAddress);
+		obj->viewSubscriber->getAttributeValue(TTSymbol("nodeAddress"), v);
+		v.get(0, viewAddress);
 		
-		viewerAddress = uiAddress.appendAddress(TTAddress(name.c_str()));
+		viewerAddress = viewAddress.appendAddress(TTAddress(name.c_str()));
 		
 		JamomaDirectory->TTNodeCreate(viewerAddress, *returnedViewer, obj->patcherPtr, &aNode, &nodeCreated);
 	}
@@ -631,7 +629,7 @@ void ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
 	// get the TTOutput object
 	if (!obj->modelOutput) {
-		outAdrs = obj->modelAddress.appendAddress(TTAddress("out"));
+		outAdrs = obj->modelAddress.appendAddress(TTAddress("data/out"));
 		
 		JamomaDirectory->getTTNode(outAdrs, &aNode);
 		obj->modelOutput = (TTOutputPtr)aNode->getObject();
@@ -864,7 +862,7 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (gain != obj->has_gain) {
 			obj->has_gain = gain;
 			if (gain)
-				ui_viewer_create(obj, &anObject, gensym("return_gain"), TTSymbol("*.*/gain"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_gain"), TTSymbol("*.*/gain"), obj->modelAddress, NO); // don't subscribe this viewer
 			else {
 				ui_viewer_destroy(obj, TTSymbol("*.*/gain"));
 				obj->hash_viewers->remove(TTSymbol("*.*/gain"));
@@ -875,7 +873,7 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (mix != obj->has_mix) {
 			obj->has_mix = mix;
 			if (mix)
-				ui_viewer_create(obj, &anObject, gensym("return_mix"), TTSymbol("*.*/mix"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_mix"), TTSymbol("*.*/mix"), obj->modelAddress, NO); // don't subscribe this viewer
 			else {
 				ui_viewer_destroy(obj, TTSymbol("*.*/mix"));
 				obj->hash_viewers->remove(TTSymbol("*.*/mix"));
@@ -888,7 +886,7 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (bypass != obj->has_bypass) {
 			obj->has_bypass = bypass;
 			if (bypass)
-				ui_viewer_create(obj, &anObject, gensym("return_bypass"), TTSymbol("*.*/bypass"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_bypass"), TTSymbol("*.*/bypass"), obj->modelAddress, NO); // don't subscribe this viewer
 			else {
 				ui_viewer_destroy(obj, TTSymbol("*.*/bypass"));
 				obj->hash_viewers->remove(TTSymbol("*.*/bypass"));
@@ -901,7 +899,7 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (freeze != obj->has_freeze) {
 			obj->has_freeze = freeze;
 			if (freeze)
-				ui_viewer_create(obj, &anObject, gensym("return_freeze"), TTSymbol("*.*/freeze"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_freeze"), TTSymbol("*.*/freeze"), obj->modelAddress, NO); // don't subscribe this viewer
 			else {
 				ui_viewer_destroy(obj, TTSymbol("*.*/freeze"));
 				obj->hash_viewers->remove(TTSymbol("*.*/freeze"));
@@ -914,7 +912,7 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (preview != obj->has_preview) {
 			obj->has_preview = preview;
 			if (preview)
-				ui_viewer_create(obj, &anObject, gensym("return_preview"), TTSymbol("*.*/preview"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_preview"), TTSymbol("*.*/preview"), obj->modelAddress, NO); // don't subscribe this viewer
 			else {
 				ui_viewer_destroy(obj, TTSymbol("*.*/preview"));
 				obj->hash_viewers->remove(TTSymbol("*.*/preview"));
@@ -927,7 +925,7 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (mute != obj->has_mute) {
 			obj->has_mute = mute;
 			if (mute)
-				ui_viewer_create(obj, &anObject, gensym("return_mute"), TTSymbol("*.*/mute"), obj->modelAddress, YES);
+				ui_viewer_create(obj, &anObject, gensym("return_mute"), TTSymbol("*.*/mute"), obj->modelAddress, NO); // don't subscribe this viewer
 			else {
 				ui_viewer_destroy(obj, TTSymbol("*.*/mute"));
 				obj->hash_viewers->remove(TTSymbol("*.*/mute"));
@@ -940,9 +938,9 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (preset != obj->has_preset) {
 			obj->has_preset = preset;
 			if (preset) {
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:recall"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:store"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, gensym("return_preset_names"), TTSymbol("preset:names"), obj->modelAddress, NO);
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:recall"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:store"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, &anObject, gensym("return_preset_names"), TTSymbol("preset:names"), obj->modelAddress, NO); // don't subscribe this viewer
 			}
 			else {
 				ui_viewer_destroy(obj, TTSymbol("recall"));
@@ -960,9 +958,9 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (model != obj->has_model) {
 			obj->has_model = model;
 			if (model) {
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/open"), obj->modelAddress, NO);
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/help"), obj->modelAddress, NO);
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/reference"), obj->modelAddress, NO);
+                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/open"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/help"), obj->modelAddress, NO); // don't subscribe this viewer
+                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/reference"), obj->modelAddress, NO); // don't subscribe this viewer
             }
 			else {
                 ui_viewer_destroy(obj, TTSymbol("model/open"));
