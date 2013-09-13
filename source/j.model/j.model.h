@@ -59,10 +59,6 @@ void		model_init(TTPtr self);
 
 void		model_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-void		model_help(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_reference(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_open(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-//void		model_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);		// only in view patch
 
 void		model_autodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);

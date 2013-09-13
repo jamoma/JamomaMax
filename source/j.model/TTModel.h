@@ -37,6 +37,11 @@ public:
      */
     TTErr setAddress(const TTValue& newValue);
     
+    /** Open the internal patcher
+     @return    TTErr       kTTErrNone load was successful
+     */
+	TTErr InternalOpen();
+    
     /** Open the help page
      @return    TTErr       kTTErrNone load was successful
      */
@@ -46,6 +51,11 @@ public:
      @return    TTErr       kTTErrNone load was successful
      */
     TTErr ReferenceOpen();
+    
+    /** Mute the patcher
+     @return    TTErr       kTTErrNone load was successful
+     */
+    TTErr Mute();
 	
 };
 

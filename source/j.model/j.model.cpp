@@ -38,10 +38,6 @@ void WrapTTContainerClass(WrappedClassPtr c)
     
     class_addmethod(c->maxClass, (method)model_return_upper_view_model_address,"return_upper_view_model_address", A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)model_help,                        "model_help",			A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_reference,                   "model_reference",		A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_open,                        "model_open",           A_CANT, 0);
-//	class_addmethod(c->maxClass, (method)model_mute,                        "model_mute",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_address,                     "model_address",		A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_autodoc,                     "doc_generate",			A_CANT, 0);
     
@@ -502,40 +498,6 @@ void model_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	outlet_anything(x->outlets[data_out], x->msg, argc, argv);
 }
 
-void model_help(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-	// opening the module helpfile (no help file dedicated for model or view)
-	if (x->patcherClass != kTTSymEmpty) {
-		
-		SymbolPtr helpfileName;
-		jamoma_edit_filename(*HelpPatcherFormat, x->patcherClass, &helpfileName);
-		classname_openhelp((char*)helpfileName->s_name);
-	}
-}
-
-void model_reference(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-	if (x->patcherContext != kTTSymEmpty && x->patcherClass != kTTSymEmpty) {
-		
-		SymbolPtr refpagefileName;
-		jamoma_edit_filename(*RefpageFormat, x->patcherClass, &refpagefileName);
-		classname_openrefpage((char*)refpagefileName->s_name);
-	}
-}
-
-void model_open(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-	ObjectPtr p = jamoma_patcher_get((ObjectPtr)x);
-	
-	object_method(p, _sym_vis);
-}
-
 void model_autodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	defer(self, (method)model_doautodoc, msg, argc, argv);
@@ -568,27 +530,6 @@ void model_doautodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		}
 	}
 }
-
-/*
-void model_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	ObjectPtr					patcher = jamoma_patcher_get((ObjectPtr)x);
-	long						mute;
-	t_atom						a[2];
-	
-	// 'setrock' is the message that is used by pcontrol to enable patcher
-	// it was inside former j.in or out. Not sure for what it was used (audio mute maybe...)
-	
-	if (argc && argv)
-		if (atom_gettype(argv) == A_LONG) {
-			mute = atom_getlong(argv);
-			atom_setlong(a+0, !mute);
-			atom_setlong(a+1, 1);
-			object_method(patcher, gensym("setrock"), 2, a);
-		}
-}
-*/
 
 void model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {

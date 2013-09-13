@@ -27,6 +27,7 @@ mClass(kTTSymEmpty)
     addAttributeWithSetter(Address, kTypeSymbol);
     addAttribute(Class, kTypeSymbol);
     
+    addMessage(InternalOpen);
     addMessage(HelpOpen);
     addMessage(ReferenceOpen);
     
@@ -46,6 +47,21 @@ TTErr TTModel::setAddress(const TTValue& newValue)
     
     // notify content observers
     addressAttribute->sendNotification(kTTSym_notify, mAddress);	// we use kTTSym_notify because we know that observers are TTCallback
+    
+    return kTTErrNone;
+}
+
+TTErr TTModel::InternalOpen()
+{
+    /* TODO : add an Object member
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+	
+	ObjectPtr p = jamoma_patcher_get((ObjectPtr)x);
+	
+	object_method(p, _sym_vis);
+     */
+    
+    return kTTErrGeneric;
 }
 
 TTErr TTModel::HelpOpen()
@@ -74,6 +90,29 @@ TTErr TTModel::ReferenceOpen()
         
         return kTTErrNone;
 	}
+    
+    return kTTErrGeneric;
+}
+
+TTErr TTModel::Mute()
+{
+    /*
+     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+     ObjectPtr					patcher = jamoma_patcher_get((ObjectPtr)x);
+     long						mute;
+     t_atom						a[2];
+     
+     // 'setrock' is the message that is used by pcontrol to enable patcher
+     // it was inside former j.in or out. Not sure for what it was used (audio mute maybe...)
+     
+     if (argc && argv)
+        if (atom_gettype(argv) == A_LONG) {
+        mute = atom_getlong(argv);
+        atom_setlong(a+0, !mute);
+        atom_setlong(a+1, 1);
+        object_method(patcher, gensym("setrock"), 2, a);
+     }
+     */
     
     return kTTErrGeneric;
 }

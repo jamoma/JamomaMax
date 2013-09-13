@@ -390,7 +390,7 @@ void ui_viewer_destroy_all(t_ui *obj)
 void ui_viewer_send(t_ui *obj, TTSymbol name, TTValue v)
 {
 	TTValue			storedObject;
-	TTObjectBasePtr		anObject;
+	TTObjectBasePtr	anObject;
 	TTErr			err;
 	if (obj->hash_viewers) {
 		err = obj->hash_viewers->lookup(name, storedObject);
@@ -406,7 +406,7 @@ void ui_viewer_send(t_ui *obj, TTSymbol name, TTValue v)
 void ui_viewer_highlight(t_ui *obj, TTSymbol name, TTBoolean s)
 {
 	TTValue			storedObject;
-	TTObjectBasePtr		anObject;
+	TTObjectBasePtr	anObject;
 	TTErr			err;
 	if (obj->hash_viewers) {
 		err = obj->hash_viewers->lookup(name, storedObject);
@@ -830,7 +830,7 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 			else if (relativeAddress.getName() == TTSymbol("preset"))
 				preset = true;
             
-            else if (relativeAddress.getParent() == TTSymbol("model"))
+            else if (relativeAddress.getName() == TTSymbol("model"))
 				model = true;
 		}
         
@@ -958,17 +958,17 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (model != obj->has_model) {
 			obj->has_model = model;
 			if (model) {
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/open"), obj->modelAddress, NO); // don't subscribe this viewer
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/help"), obj->modelAddress, NO); // don't subscribe this viewer
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model/reference"), obj->modelAddress, NO); // don't subscribe this viewer
+                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:internal/open"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:help/open"), obj->modelAddress, NO); // don't subscribe this viewer
+                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:reference/open"), obj->modelAddress, NO); // don't subscribe this viewer
             }
 			else {
-                ui_viewer_destroy(obj, TTSymbol("model/open"));
-				obj->hash_viewers->remove(TTSymbol("model/open"));
-				ui_viewer_destroy(obj, TTSymbol("model/help"));
-				obj->hash_viewers->remove(TTSymbol("model/help"));
-                ui_viewer_destroy(obj, TTSymbol("model/reference"));
-				obj->hash_viewers->remove(TTSymbol("model/reference"));
+                ui_viewer_destroy(obj, TTSymbol("model:internal/open"));
+				obj->hash_viewers->remove(TTSymbol("model:internal/open"));
+				ui_viewer_destroy(obj, TTSymbol("model:help/open"));
+				obj->hash_viewers->remove(TTSymbol("model:help/open"));
+                ui_viewer_destroy(obj, TTSymbol("model:reference/open"));
+				obj->hash_viewers->remove(TTSymbol("model:reference/open"));
 			}
 			
 			change = true;
