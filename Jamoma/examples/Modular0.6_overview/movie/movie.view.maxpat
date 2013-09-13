@@ -39,7 +39,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 461.0, 649.0, 294.0, 47.0 ],
-					"text" : "About panel, if a patcher is connected to his second outlet, the j.ui  will automatically create an internal /view/panel message and add the \"+\" widget."
+					"text" : "About panel, if a patcher is connected to his second outlet, the j.ui  will automatically create an internal ui/panel message and add the \"+\" widget."
 				}
 
 			}
@@ -107,7 +107,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 468.0, 496.0, 232.0, 33.0 ],
-					"text" : "Here we decided the /rate parameter can be highlighted and it will be by default"
+					"text" : "Here we decided the rate parameter can be highlighted and it will be by default"
 				}
 
 			}
@@ -250,7 +250,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 468.0, 226.0, 169.0, 47.0 ],
-					"text" : "Here we decided the /play parameter can be highlighted but it will not by default"
+					"text" : "Here we decided the play parameter can be highlighted but it will not by default"
 				}
 
 			}
@@ -265,7 +265,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 735.0, 331.0, 166.0, 33.0 ],
-					"text" : "Here we decided the /fps return cannot be highlighted"
+					"text" : "Here we decided the fps return cannot be highlighted"
 				}
 
 			}
@@ -280,7 +280,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 468.0, 396.0, 238.0, 33.0 ],
-					"text" : "Here we decided the /file/path parameter can be highlighted and it will be by default."
+					"text" : "Here we decided the file/path parameter can be highlighted and it will be by default."
 				}
 
 			}
@@ -295,7 +295,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 735.0, 226.0, 188.0, 33.0 ],
-					"text" : "Here we decided the /file/load message cannot be highlighted"
+					"text" : "Here we decided the file/load message cannot be highlighted"
 				}
 
 			}
@@ -426,12 +426,12 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-37",
-					"linecount" : 17,
+					"linecount" : 15,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 178.0, 410.0, 234.0 ],
-					"text" : "Each j.remote binds on the parameter/message/return given in first argument. But this information is not enough to bind on a particular intance of a model. That's why an internal /model/address parameter is created by the j.view.\n\nListening at the /model/address parameter, j.remote and j.ui binds automatically on parameter/message/return of the given model.\n\nAn other feature is the highlight of ui object in presentation mode if a j.ui exists. As explain in the main patch, this feature would allows users to show highlight state by pressing the shift key if the mouse is over the j.ui. Then, still pressing the shift key, a click on the selection zone would change the highlight state.\n\nTo make this feature available, you only have to connect the middle outlet of the j.view to the ui object. Then close and open you're patcher in presentation mode to test it. "
+					"patching_rect" : [ 15.0, 178.0, 460.0, 208.0 ],
+					"text" : "Each j.remote binds on the parameter/message/return given in first argument. But this information is not enough to bind on a particular intance of a model. That's why the model:address attribute is provided by the j.view.\n\nListening at the model:address attribute, j.remote and j.ui binds automatically on parameter/message/return of the given model.\n\nAn other feature is the highlight of ui object in presentation mode if a j.ui exists. As explain in the main patch, this feature would allows users to show highlight state by pressing the shift key if the mouse is over the j.ui. Then, still pressing the shift key, a click on the selection zone would change the highlight state.\n\nTo make this feature available, you only have to connect the middle outlet of the j.view to the ui object. Then close and open you're patcher in presentation mode to test it. "
 				}
 
 			}
