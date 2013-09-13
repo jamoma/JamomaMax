@@ -12,8 +12,8 @@
 
 // This is used to store extra data
 typedef struct extra {
-	ObjectPtr			modelInternal;		// store an internal model patcher
-    TTObjectBasePtr     model;
+	TTObjectBasePtr     model;
+    TTAddress           containerAddress;   // store the address of the container (see in model_subscribe and model_free)
     TTAddress           argAddress;         // store the address from the argument (see in model_upper_view_model_address)
     
     TTString            *text;				// the text of the editor to read after edclose

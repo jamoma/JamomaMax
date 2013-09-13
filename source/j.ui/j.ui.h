@@ -18,7 +18,7 @@
 #include "MaxObjectTypes.h"
 #include "ext_symobject.h"
 
-#define NO_MODEL_STRING "waiting for a model/address"
+#define NO_MODEL_STRING "waiting for a model:address"
 
 #define preview_out 0
 #define panel_out 1

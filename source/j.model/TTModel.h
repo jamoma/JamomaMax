@@ -23,13 +23,29 @@
 class TTMODULAR_EXPORT TTModel : public TTDataObjectBase
 {
 	TTCLASS_SETUP(TTModel)
-
+    
+    TTAddress           mAddress;               ///< ATTRIBUTE : the address of the model (for j.model) or the address of the model to bind (j.view)
     TTSymbol            mClass;                 ///< ATTRIBUTE : the class name of the model
+    
+    TTAttributePtr      addressAttribute;       ///< cache address attribute for observer notification
     
 public:
     
-    /** Open the help page */
+    /** Atribute accessor. Send a filepath to the object and attempt to interface with the file.
+     @param     newValue    an absolute address
+     @return	TTErr		kTTErrNone
+     */
+    TTErr setAddress(const TTValue& newValue);
+    
+    /** Open the help page
+     @return    TTErr       kTTErrNone load was successful
+     */
 	TTErr HelpOpen();
+    
+    /** Open the help page
+     @return    TTErr       kTTErrNone load was successful
+     */
+    TTErr ReferenceOpen();
 	
 };
 

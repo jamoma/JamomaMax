@@ -148,7 +148,7 @@ void init_subscribe(t_init *x)
 		if (!jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
             
 			// get the context address to make
-			// a receiver on the contextAddress/model/address parameter
+			// a receiver on the contextAddress:initialized attribute
 			x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
 			contextAddress = v[0];
 		}

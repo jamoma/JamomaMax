@@ -113,6 +113,7 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
     EXTRA->model = NULL;
+    EXTRA->containerAddress = kTTAdrsEmpty;
     EXTRA->argAddress = kTTAdrsEmpty;
     EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
@@ -145,12 +146,9 @@ void WrappedContainerClass_free(TTPtr self)
     
     if (EXTRA->model) {
         
-        // get the modelAddress from the model:address
-        EXTRA->model->getAttributeValue(kTTSym_address, v);
-        modelAddress = v[0];
-        modelAddress = modelAddress.appendAddress(TTAddress("model"));
+        modelAddress = EXTRA->containerAddress.appendAddress(TTAddress("model"));
         
-        // remove the preset node
+        // remove the model node
         JamomaDirectory->TTNodeRemove(modelAddress);
         
         // delete the model
@@ -159,10 +157,7 @@ void WrappedContainerClass_free(TTPtr self)
     
     if (EXTRA->presetManager) {
         
-        // ed the presetAddress from the presetManager:address
-        EXTRA->presetManager->getAttributeValue(kTTSym_address, v);
-        presetAddress = v[0];
-        presetAddress = presetAddress.appendAddress(TTAddress("preset"));
+        presetAddress = EXTRA->containerAddress.appendAddress(TTAddress("preset"));
         
         // remove the preset node
         JamomaDirectory->TTNodeRemove(presetAddress);
@@ -203,6 +198,9 @@ void model_subscribe(TTPtr self)
 		
 		// set the address attribute of the Container 
 		x->wrappedObject->setAttributeValue(kTTSym_address, returnedAddress);
+        
+        // keep the address for model_free (because the wrappedObject will be freed before)
+        EXTRA->containerAddress = returnedAddress;
         
 		// if the j.model|j.view is well subscribed
 		if (aPatcher == x->patcherPtr && x->patcherContext != kTTSymEmpty) {
@@ -311,61 +309,75 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
     TTAddress       modelAdrs, argAdrs, viewAdrs;
     TTValue         v;
     
-    hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
-    
-    // if the view is inside a bpatcher
-    if (hierarchy == _sym_bpatcher)
-        // look for a model of the same class into the patcher of the bpatcher to get his model/address
-        jamoma_patcher_get_model_patcher(jamoma_patcher_get(x->patcherPtr), x->patcherClass, &aPatcher);
-    else
-        // look for a model of the same class into the patcher to get his model/address
-        jamoma_patcher_get_model_patcher(x->patcherPtr, x->patcherClass, &aPatcher);
-    
-    // if a model exists
-    if (aPatcher) {
-        
-        // is there a container (e.g. a j.model) registered with the same context in this model patcher ?
-        whereToSearch.append(JamomaDirectory->getRoot());
-        JamomaDirectory->IsThere(&whereToSearch, &testNodeContext, (TTPtr)aPatcher, &isThere, &firstTTNode);
-        
-        if (isThere) {
-            
-            firstTTNode->getAddress(modelAdrs);
-            
-            // set the model:address attribute to notify all observers
-            EXTRA->model->setAttributeValue(kTTSym_address, modelAdrs);
-            return;
-        }
-        
-        // deferlow to try another time because the model patcher is maybe not ready
-        else {
-            defer_low((ObjectPtr)x, (method)model_subscribe_view, _sym_nothing, argc, argv);
-            return;
-        }
-    }
-    
-    // else, if args exists, the first argument of the patcher is the model/address value
-    else if (argc > 0 && atom_gettype(argv) == A_SYM) {
+    // if args exists, the first argument of the patcher is the model:address value
+    if (argc > 0 && atom_gettype(argv) == A_SYM) {
         
         argAdrs = TTAddress(atom_getsym(argv)->s_name);
         
         // if the address is absolute : use it directly
-        if (argAdrs.getType() == kAddressAbsolute)
-            modelAdrs = argAdrs;
+        if (argAdrs.getType() == kAddressAbsolute) {
+            
+            // set the model:address attribute to notify all observers
+            EXTRA->model->setAttributeValue(kTTSym_address, argAdrs);
+            return;
+        }
         
         // in case of relative address : try to use the upper view patcher model:address (else use root)
         else {
             
-            // keep the argument address
-            EXTRA->argAddress = argAdrs;
+            // if there is a parent view address : get the upper view address
+            if (EXTRA->containerAddress.getParent() != kTTAdrsRoot) {
+                
+                // keep the argument address
+                EXTRA->argAddress = argAdrs;
+                
+                // observe the selected view model:address attribute
+                makeInternals_receiver(self, EXTRA->containerAddress.getParent(), TTAddress("model:address"), gensym("return_upper_view_model_address"), &aReceiver, YES); // we need to deferlow to avoid lock crash on TTContainer content
+                aReceiver->sendMessage(kTTSym_Get);
+            }
+            // use the argument address as an absolute address
+            else {
+                
+                // set the model:address attribute to notify all observers
+                EXTRA->model->setAttributeValue(kTTSym_address, kTTAdrsRoot.appendAddress(argAdrs));
+                return;
+            }
+        }
+    }
+    // else look around the patcher for model of the same class
+    else {
+        
+        hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
+        
+        // if the view is inside a bpatcher
+        if (hierarchy == _sym_bpatcher)
+            // look for a model of the same class into the patcher of the bpatcher to get his model/address
+            jamoma_patcher_get_model_patcher(jamoma_patcher_get(x->patcherPtr), x->patcherClass, &aPatcher);
+        else
+            // look for a model of the same class into the patcher to get his model/address
+            jamoma_patcher_get_model_patcher(x->patcherPtr, x->patcherClass, &aPatcher);
+        
+        // if a model exists
+        if (aPatcher) {
             
-            // get the address attribute of the Container
-            x->wrappedObject->getAttributeValue(kTTSym_address, v);
-            viewAdrs = v[0];
+            // is there a container (e.g. a j.model) registered with the same context in this model patcher ?
+            whereToSearch.append(JamomaDirectory->getRoot());
+            JamomaDirectory->IsThere(&whereToSearch, &testNodeContext, (TTPtr)aPatcher, &isThere, &firstTTNode);
             
-            // observe upper view model:address attribute
-            makeInternals_receiver(self, viewAdrs.getParent(), TTAddress("model:address"), gensym("return_upper_view_model_address"), &aReceiver, YES); // we need to deferlow to avoid lock crash on TTContainer content
-            aReceiver->sendMessage(kTTSym_Get);
+            if (isThere) {
+                
+                firstTTNode->getAddress(modelAdrs);
+                
+                // set the model:address attribute to notify all observers
+                EXTRA->model->setAttributeValue(kTTSym_address, modelAdrs);
+                return;
+            }
+            
+            // deferlow to try another time because the model patcher is maybe not ready
+            else {
+                defer_low((ObjectPtr)x, (method)model_subscribe_view, _sym_nothing, argc, argv);
+                return;
+            }
         }
     }
     

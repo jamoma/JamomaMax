@@ -28,8 +28,8 @@ void ui_data_create_all(t_ui* obj)
 		obj->viewSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
 		obj->viewAddress = v[0];
 		
-		// make a receiver on contextAddress/model/address data
-		ui_receiver_create(obj, &anObject, gensym("return_model_address"), TTSymbol("model/address"), obj->viewAddress, YES); // YES : we want to deferlow this method
+		// make a receiver on contextAddress/model:address attribute
+		ui_receiver_create(obj, &anObject, gensym("return_model_address"), TTSymbol("model:address"), obj->viewAddress, YES); // YES : we want to deferlow this method
 		
 		// Then create all internal datas concerning the j.ui
 		// ui/color/contentBackground
