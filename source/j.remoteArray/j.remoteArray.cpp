@@ -341,7 +341,7 @@ void remote_array_subscribe(TTPtr self, SymbolPtr address)
 		if (!jamoma_subscriber_create((ObjectPtr)x, toSubscribe, TTAddress(instanceAddress->s_name), &aSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
 			
 			// get the context address to make
-			// a viewer on the contextAddress/model/address parameter
+			// a viewer on the contextAddress/model:address attribute
 			aSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
 			contextAddress = v[0];
 			
@@ -379,8 +379,8 @@ void remote_array_subscribe(TTPtr self, SymbolPtr address)
 	// if the subscription success
 	if (contextAddress != kTTAdrsEmpty) {
 		
-        // make the model/address receiver binds on the model/address data
-        EXTRA->modelAddressReceiver->setAttributeValue(kTTSym_address, contextAddress.appendAddress(TTAddress("model/address")));
+        // make the model/address receiver binds on the model:address attribute
+        EXTRA->modelAddressReceiver->setAttributeValue(kTTSym_address, contextAddress.appendAddress(TTAddress("model:address")));
         
 		// get the model/address value
         EXTRA->modelAddressReceiver->sendMessage(kTTSym_Get);

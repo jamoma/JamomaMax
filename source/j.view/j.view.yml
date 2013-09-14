@@ -2,6 +2,7 @@ defines:
   - JCOM_VIEW
   
 sources:
+  - ../j.model/TTModel.cpp
   - ../j.model/j.model.cpp
   - ../j.model/j.model_preset.cpp
   - ../j.model/j.model_signal.cpp

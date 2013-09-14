@@ -22,13 +22,16 @@
   <entry App="dec" TT="Dec"/>
   <entry App="namespace/build" TT="DirectoryBuild"/>
   <entry App="namespace/observe" TT="DirectoryObserve"/>
+  <entry App="help/open" TT="HelpOpen"/>
   <entry App="inc" TT="Inc"/>
   <entry App="init" TT="Init"/>
+  <entry App="internal/open" TT="InternalOpen"/>
   <entry App="interpolate" TT="Interpolate"/>
   <entry App="mix" TT="Mix"/>
   <entry App="move" TT="Move"/>
   <entry App="new" TT="New"/>
   <entry App="recall" TT="Recall"/>
+  <entry App="reference/open" TT="ReferenceOpen"/>
   <entry App="refresh" TT="Refresh"/>
   <entry App="remove" TT="Remove"/>
   <entry App="rename" TT="Rename"/>

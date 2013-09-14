@@ -263,10 +263,10 @@ void send_subscribe(TTPtr self)
 	// for relative address
 	jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
 	
-	if (!jamoma_subscriber_create((ObjectPtr)x, NULL, TTAddress("model/address"), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((ObjectPtr)x, NULL, TTAddress("model"), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
 		// get the context address to make
-		// a viewer on the contextAddress/model/address parameter
+		// a viewer on the contextAddress/model:address attribute
 		x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
 		contextAddress = v[0];
         
@@ -276,8 +276,8 @@ void send_subscribe(TTPtr self)
 		
 		if (x->patcherContext != kTTSymEmpty) {
             
-            // observe model/address data (in view patcher : deferlow return_model_address)
-			makeInternals_receiver(x, contextAddress, TTSymbol("/model/address"), gensym("return_model_address"), &anObject, x->patcherContext == kTTSym_view);
+            // observe model:address attribute (in view patcher : deferlow return_model_address)
+			makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), &anObject, x->patcherContext == kTTSym_view);
 			anObject->sendMessage(kTTSym_Get);
 			return;
 		}

@@ -8,11 +8,12 @@
  */
 
 #include "TTModularClassWrapperMax.h"
+#include "TTModel.h"
 
 // This is used to store extra data
 typedef struct extra {
-	ObjectPtr			modelInternal;		// store an internal model patcher
-	TTAddress           modelAddress;		// store the /model/address parameter
+	TTObjectBasePtr     model;
+    TTAddress           containerAddress;   // store the address of the container (see in model_subscribe and model_free)
     TTAddress           argAddress;         // store the address from the argument (see in model_upper_view_model_address)
     
     TTString            *text;				// the text of the editor to read after edclose
@@ -58,14 +59,12 @@ void		model_init(TTPtr self);
 
 void		model_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-void		model_help(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_reference(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_open(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-//void		model_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);		// only in view patch
 
 void		model_autodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		model_doautodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+void		model_preset_amenities(TTPtr self);
 
 //void		model_preset_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		model_preset_return_names(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
@@ -85,8 +84,6 @@ void		model_preset_dorecall(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
 void		model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		model_preset_edclose(TTPtr self, char **text, long size);
 void		model_preset_doedit(TTPtr self);
-
-void		model_preset_subscribe(TTPtr self, TTAddress modelAddress);
 
 t_max_err	model_preset_get_load_default(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av);
 t_max_err	model_preset_set_load_default(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av);

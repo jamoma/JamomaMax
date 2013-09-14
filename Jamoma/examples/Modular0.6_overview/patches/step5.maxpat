@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
@@ -103,7 +103,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 921.0, 144.0, 180.0, 18.0 ],
-					"text" : "fps 32.304413"
+					"text" : "fps 33.376759"
 				}
 
 			}
@@ -340,8 +340,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 340.0, 353.0, 552.0, 47.0 ],
-					"text" : "Here is an intantiation of a movie view : \nthe first argument specifies the model to bind to (equivalent to the model/address internal parameter) \nthe second (optional) argument defines the address of the view  (here /interface)"
+					"patching_rect" : [ 340.0, 353.0, 489.0, 47.0 ],
+					"text" : "Here is an intantiation of a movie view : \nthe first argument specifies the model to bind to (equivalent to the model:address attribute) \nthe second (optional) argument defines the address of the view  (here /interface)"
 				}
 
 			}
@@ -392,12 +392,12 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-13",
-					"linecount" : 11,
+					"linecount" : 9,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 479.0, 606.0, 303.0, 154.0 ],
-					"text" : "With no argument in the bpatcher, a view bpatcher registers his namespace below a /movie(view) node in order to do not create a new /movie instance.\nThe first argument can be used to set the /model/address directly. By default /model/address will be /movie if this instance exists (because it is a movie.view patch). Here the /model/address is /player.A.\nThen a second argument can register the view under another name than /movie(view) (here /interface address)"
+					"patching_rect" : [ 479.0, 606.0, 316.0, 127.0 ],
+					"text" : "With no argument in the bpatcher, a view bpatcher registers his namespace below a /movie(view) node in order to do not create a new /movie instance.\nThe first argument can be used to set the model:address directly. By default model:address will be /movie if this instance exists (because it is a movie.view patch). Here the model:address is /player.A.\nThen a second argument can register the view under another name than /movie(view) (here /interface address)"
 				}
 
 			}
@@ -494,8 +494,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 809.0, 521.0, 269.0, 47.0 ],
-					"text" : "Here the movie.model have a j.out so it provides internals /out/mute, /out/freeze and /out/preview parameter."
+					"patching_rect" : [ 809.0, 521.0, 265.0, 47.0 ],
+					"text" : "Here the movie.model have a j.out so it provides internals data/mute, data/freeze and data/preview parameter."
 				}
 
 			}
@@ -524,8 +524,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 479.0, 408.0, 335.0, 33.0 ],
-					"text" : "It's possible to set the /model/address parameter of a view bpatcher to make it binds on a particular instance of a model."
+					"patching_rect" : [ 479.0, 408.0, 359.0, 33.0 ],
+					"text" : "It's possible to set the model:address attribute of a view bpatcher to make it binds on a particular instance of a model."
 				}
 
 			}
@@ -539,7 +539,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 479.0, 585.0, 153.0, 18.0 ],
-					"text" : "fps 32.304413"
+					"text" : "fps 33.439121"
 				}
 
 			}
@@ -568,7 +568,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 629.0, 441.0, 139.0, 18.0 ],
-					"text" : "model/address /player.B",
+					"text" : "model:address /player.B",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -584,7 +584,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 479.0, 441.0, 139.0, 18.0 ],
-					"text" : "model/address /player.A",
+					"text" : "model:address /player.A",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -624,7 +624,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 681.0, 155.0, 96.0, 18.0 ],
-					"text" : "fps 32.304413"
+					"text" : "fps 33.376759"
 				}
 
 			}
@@ -904,7 +904,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -1281,7 +1281,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 386.0, 155.0, 96.0, 18.0 ],
-					"text" : "fps 32.17"
+					"text" : "fps 33.279354"
 				}
 
 			}
@@ -1865,21 +1865,21 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "movie.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
 				"patcherrelativepath" : "../movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "movie.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
 				"patcherrelativepath" : "../movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "basicView.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/patches",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/patches",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

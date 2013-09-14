@@ -1195,13 +1195,13 @@ void ui_menu_qfn(t_ui *x)
 		ui_edit(x);
 	
 	else if (item->sym == gensym("Open Model Internal"))
-		ui_viewer_send(x, TTSymbol("model/open"), kTTValNONE);
+		ui_viewer_send(x, TTSymbol("model:internal/open"), kTTValNONE);
 	
 	else if (item->sym == gensym("Open Model Help Patch"))
-		ui_viewer_send(x, TTSymbol("model/help"), kTTValNONE);
+		ui_viewer_send(x, TTSymbol("model:help/open"), kTTValNONE);
 	
 	else if (item->sym == gensym("Open Model Reference Page"))
-		ui_viewer_send(x, TTSymbol("model/reference"), kTTValNONE);
+		ui_viewer_send(x, TTSymbol("model:reference/open"), kTTValNONE);
 	
 	else	// assume the menu item is a preset name
 		ui_viewer_send(x, TTSymbol("preset:recall"), TTSymbol(item->sym->s_name));
