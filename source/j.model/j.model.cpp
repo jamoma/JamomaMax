@@ -202,6 +202,7 @@ void model_subscribe(TTPtr self)
 		if (aPatcher == x->patcherPtr && x->patcherContext != kTTSymEmpty) {
             
             // create a model object (for j.view too !)
+            args = (TTPtr)x;
             TTObjectBaseInstantiate(TTSymbol("Model"), &(EXTRA->model), args);
             
             // set his class attribute

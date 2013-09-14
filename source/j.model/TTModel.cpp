@@ -22,7 +22,11 @@
 TT_MODULAR_CONSTRUCTOR,
 mClass(kTTSymEmpty)
 {
-    TT_ASSERT("Correct number of args to create TTModel", arguments.size() == 0);
+    TT_ASSERT("Correct number of args to create TTModel", arguments.size() == 1);
+    
+    if (arguments.size() == 1)
+        if (arguments[0].type() == kTypePointer)
+            mObject = ObjectPtr(TTPtr(arguments[0]));
     
     addAttributeWithSetter(Address, kTypeSymbol);
     addAttribute(Class, kTypeSymbol);
@@ -52,16 +56,12 @@ TTErr TTModel::setAddress(const TTValue& newValue)
 }
 
 TTErr TTModel::InternalOpen()
-{
-    /* TODO : add an Object member
-    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-	ObjectPtr p = jamoma_patcher_get((ObjectPtr)x);
+{	
+	ObjectPtr p = jamoma_patcher_get(mObject);
 	
 	object_method(p, _sym_vis);
-     */
     
-    return kTTErrGeneric;
+    return kTTErrNone;
 }
 
 TTErr TTModel::HelpOpen()
@@ -70,7 +70,7 @@ TTErr TTModel::HelpOpen()
 	if (mClass != kTTSymEmpty) {
 		
 		SymbolPtr helpfileName;
-		jamoma_edit_filename(*HelpPatcherFormat, gensym((char*)mClass.c_str()), &helpfileName);
+		jamoma_edit_filename(*HelpPatcherFormat, mClass, &helpfileName);
 		classname_openhelp((char*)helpfileName->s_name);
         
         return kTTErrNone;
@@ -85,7 +85,7 @@ TTErr TTModel::ReferenceOpen()
     if (mClass != kTTSymEmpty) {
         
 		SymbolPtr refpagefileName;
-		jamoma_edit_filename(*RefpageFormat, gensym((char*)mClass.c_str()), &refpagefileName);
+		jamoma_edit_filename(*RefpageFormat, mClass, &refpagefileName);
 		classname_openrefpage((char*)refpagefileName->s_name);
         
         return kTTErrNone;
