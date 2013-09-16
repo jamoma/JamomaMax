@@ -35,11 +35,11 @@ messages:
    desc: "Initialize this model. This message is implemented as a j.message embedded in the j.model object"
  - name: model/edit
    desc: "Opens a text editor with all current values of all parameters of the model (called by "Get current state as text menu item in j.ui")"
- - name: model/help
+ - name: model:help/open
    desc: "Opens the model's help patcher"
- - name: model/open
+ - name: model:internal/open
    desc: "Opens and brings to front the model's patcher"
- - name: model/reference
+ - name: model:reference/open
    desc: "Opens the model's reference page" 
    
 attributes:

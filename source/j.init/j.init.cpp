@@ -153,7 +153,7 @@ void init_subscribe(t_init *x)
 			contextAddress = v[0];
 		}
 		
-		// bind on the /model/address parameter (view patch) or return (model patch)
+		// bind on the /model:address parameter (view patch) or return (model patch)
 		if (contextAddress != kTTAdrsEmpty) {
 			
 			// Make a TTReceiver object

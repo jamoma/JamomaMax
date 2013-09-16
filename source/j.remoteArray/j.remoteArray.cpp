@@ -18,7 +18,7 @@
 // This is used to store extra data
 typedef struct extra {
     
-    TTObjectBasePtr	modelAddressReceiver;	// the internal model/address receiver (not registered inside internals)
+    TTObjectBasePtr	modelAddressReceiver;	// the internal model:address receiver (not registered inside internals)
 	TTValuePtr		*arrayValue;            // store each value in an array to output them together
 	TTBoolean		changingAddress;        // a flag to protect from succession of address changes
 	TTPtr			ui_qelem;               // to output "qlim'd" data for ui object
@@ -134,7 +134,7 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
     EXTRA->ui_qelem_list = new TTList();
 	EXTRA->countSubscription = 0;
     
-    // create model/address receiver
+    // create model:address receiver
     remote_create_model_address_receiver(self);
 	
 	// handle args
@@ -160,7 +160,7 @@ void WrappedViewerClass_free(TTPtr self)
 	
     if (EXTRA) {
         
-        // delete model/address receiver
+        // delete model:address receiver
         remote_free_model_address_receiver(self);
         
         // delete array
@@ -379,10 +379,10 @@ void remote_array_subscribe(TTPtr self, SymbolPtr address)
 	// if the subscription success
 	if (contextAddress != kTTAdrsEmpty) {
 		
-        // make the model/address receiver binds on the model:address attribute
+        // make the model:address receiver binds on the model:address attribute
         EXTRA->modelAddressReceiver->setAttributeValue(kTTSym_address, contextAddress.appendAddress(TTAddress("model:address")));
         
-		// get the model/address value
+		// get the model:address value
         EXTRA->modelAddressReceiver->sendMessage(kTTSym_Get);
         return;
 	}

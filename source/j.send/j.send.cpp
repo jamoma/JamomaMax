@@ -50,7 +50,7 @@ void		send_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 /** Associate j.send(~) with NodeLib. This is a prerequisit for communication with other Jamoma object in the module and beyond.  */
 void		send_subscribe(TTPtr self);
 
-/** Internal method called when the model/address parameter changed. It allows relative address binding.
+/** Internal method called when the model:address parameter changed. It allows relative address binding.
  @param self		Pointer to this object.
  @param msg			The message sent to this object.
  @param argc		The number of arguments passed to the object.
