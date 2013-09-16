@@ -639,7 +639,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 65.0, 163.0, 133.0, 15.0 ],
-					"text" : "model/address /cueManager"
+					"text" : "model:address /cueManager"
 				}
 
 			}

@@ -2790,7 +2790,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 38.0, 145.0, 147.0, 17.0 ],
-					"text" : "model/address /equalizer~"
+					"text" : "model:address /equalizer~"
 				}
 
 			}

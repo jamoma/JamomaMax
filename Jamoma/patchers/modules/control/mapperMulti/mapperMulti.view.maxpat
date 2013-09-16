@@ -1060,7 +1060,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 145.0, 183.0, 18.0 ],
-									"text" : "sprintf model/address %s/mapper.%ld"
+									"text" : "sprintf model:address %s/mapper.%ld"
 								}
 
 							}
@@ -2685,7 +2685,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 176.0, 142.0, 118.0, 18.0 ],
-					"text" : "prepend model/address"
+					"text" : "prepend model:address"
 				}
 
 			}

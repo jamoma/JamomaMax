@@ -527,7 +527,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 90.0, 121.0, 116.0, 18.0 ],
-					"text" : "prepend model/address"
+					"text" : "prepend model:address"
 				}
 
 			}

@@ -610,7 +610,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 592.5, 338.0, 229.0, 18.0 ],
-									"text" : "model/address /Basic"
+									"text" : "model:address /Basic"
 								}
 
 							}
@@ -3813,7 +3813,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 133.0, 502.0, 180.0, 33.0 ],
-									"text" : "j.receive /modelMaxhelp/model/address"
+									"text" : "j.receive /modelMaxhelp/model:address"
 								}
 
 							}
@@ -3852,7 +3852,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 133.0, 287.0, 89.0, 18.0 ],
-									"text" : "model/address"
+									"text" : "model:address"
 								}
 
 							}
@@ -3867,7 +3867,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 133.0, 436.0, 180.0, 33.0 ],
-									"text" : "j.receive /modelMaxhelp/model/class"
+									"text" : "j.receive /modelMaxhelp/model:class"
 								}
 
 							}
@@ -3882,7 +3882,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 133.0, 396.0, 182.0, 33.0 ],
-									"text" : "j.remote /modelMaxhelp/model/reference"
+									"text" : "j.remote /modelMaxhelp/model:reference/open"
 								}
 
 							}
@@ -3911,7 +3911,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 129.0, 171.0, 73.0, 18.0 ],
-									"text" : "model/open"
+									"text" : "model:internal/open"
 								}
 
 							}
@@ -3940,7 +3940,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 133.0, 269.0, 74.0, 18.0 ],
-									"text" : "model/class"
+									"text" : "model:class"
 								}
 
 							}
@@ -3969,7 +3969,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 129.0, 153.0, 97.0, 18.0 ],
-									"text" : "model/reference"
+									"text" : "model:reference/open"
 								}
 
 							}
@@ -3983,7 +3983,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 129.0, 135.0, 69.0, 18.0 ],
-									"text" : "model/help"
+									"text" : "model:help/open"
 								}
 
 							}

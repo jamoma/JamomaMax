@@ -38,7 +38,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 530.0, 270.0, 144.0, 18.0 ],
 					"presentation_rect" : [ 533.0, 275.0, 0.0, 0.0 ],
-					"text" : "model/address degrade~"
+					"text" : "model:address degrade~"
 				}
 
 			}
@@ -52,7 +52,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 530.0, 241.0, 152.0, 18.0 ],
-					"text" : "model/address saturation~"
+					"text" : "model:address saturation~"
 				}
 
 			}
@@ -905,7 +905,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.0, 450.0, 205.0, 18.0 ],
-					"text" : "model/address degrade~"
+					"text" : "model:address degrade~"
 				}
 
 			}

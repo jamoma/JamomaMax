@@ -289,7 +289,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 248.0, 198.0, 115.0, 31.0 ],
-													"text" : "model/address /myMetronomModel"
+													"text" : "model:address /myMetronomModel"
 												}
 
 											}

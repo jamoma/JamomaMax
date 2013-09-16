@@ -16421,7 +16421,7 @@
 					"patching_rect" : [ 0.0, 1.0, 300.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "waiting for a /model/address",
+					"text" : "waiting for a /model:address",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 

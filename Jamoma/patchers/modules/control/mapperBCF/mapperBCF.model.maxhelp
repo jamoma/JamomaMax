@@ -145,7 +145,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 180.0, 118.0, 18.0 ],
-									"text" : "prepend model/address"
+									"text" : "prepend model:address"
 								}
 
 							}
@@ -493,7 +493,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 68.0, 385.0, 61.0, 27.0 ],
-					"text" : "model/address "
+					"text" : "model:address "
 				}
 
 			}

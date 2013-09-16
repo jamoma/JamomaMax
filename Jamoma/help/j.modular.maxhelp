@@ -66,7 +66,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 223.0, 678.0, 213.0, 18.0 ],
-					"text" : "model/address remoteMinuitApp:/filter",
+					"text" : "model:address remoteMinuitApp:/filter",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
