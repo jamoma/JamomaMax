@@ -908,7 +908,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTPtr context, TTSymbol service, TTObjectBasePtr *returnedData, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args;
+	TTValue			args, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	TTNodePtr		aNode;
@@ -918,7 +918,7 @@ TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr
 	
 	// Prepare arguments to create a TTData object
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
 	
 	returnValueBaton = new TTValue(TTPtr(x));
 	returnValueBaton->append(TTPtr(callbackMethod));
@@ -954,13 +954,13 @@ TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr
 TTErr makeInternals_explorer(TTPtr self, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedExplorer, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args, storedObject;
-	TTObjectBasePtr		returnValueCallback;
+	TTValue			args, storedObject, none;
+	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
 	returnValueBaton = new TTValue(TTPtr(x));
 	returnValueBaton->append(TTPtr(callbackMethod));
@@ -988,14 +988,14 @@ TTErr makeInternals_explorer(TTPtr self, TTSymbol name, SymbolPtr callbackMethod
 TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedViewer, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args, storedObject;
+	TTValue			args, storedObject, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	TTAddress       adrs;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
 	returnValueBaton = new TTValue(TTPtr(x));
 	returnValueBaton->append(TTPtr(callbackMethod));
@@ -1026,7 +1026,7 @@ TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolP
 TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedReceiver, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args, storedObject;
+	TTValue			args, storedObject, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	TTAddress       adrs;
@@ -1037,7 +1037,7 @@ TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, Symbo
 	args.append(NULL);
 	
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
 	returnValueBaton = new TTValue(TTPtr(x));
 	returnValueBaton->append(TTPtr(callbackMethod));

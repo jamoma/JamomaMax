@@ -107,6 +107,7 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	SymbolPtr					relativeAddress;
 	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
+	TTValue						none;
 	
 	// check address argument
 	relativeAddress = _sym_nothing;
@@ -140,7 +141,7 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->arraySize = 0;
 	x->arrayIndex = 0;
 	x->arrayAddress = kTTAdrsEmpty;
-	x->arrayArgs = kTTValNONE;
+	x->arrayArgs = none;
 	x->arrayAttrFormat = gensym("single");
 	
 	// Prepare extra data for parameters and messages
@@ -285,14 +286,14 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
 
 void data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt8 index)
 {
-	TTValue			args;
+	TTValue			args, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	
 	// prepare arguments
 	
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
 #ifndef JMOD_RETURN
 	returnValueBaton = new TTValue(self);
 	returnValueBaton->append(index);
@@ -514,19 +515,19 @@ void data_array(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue v;
+	TTValue v, none;
 	
 	jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
-	selectedObject->sendMessage(TTSymbol("Inc"), v, kTTValNONE);
+	selectedObject->sendMessage(TTSymbol("Inc"), v, none);
 }
 
 void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue v;
+	TTValue v, none;
 	
 	jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
-	selectedObject->sendMessage(TTSymbol("Dec"), v, kTTValNONE);
+	selectedObject->sendMessage(TTSymbol("Dec"), v, none);
 }
 #endif
 
@@ -589,7 +590,7 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 					type = t[0];
 					
 					// if there is no default value
-					if (g == kTTValNONE) {
+					if (g.size() == 0) {
 						
 						if (type == kTTSym_string)
 							m = new TTValue(kTTSym_none);

@@ -64,7 +64,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 IterPtr IterNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
     IterPtr	self;
-	TTValue	v;
+	TTValue	v, none;
 	TTErr	err;
 	
     self = IterPtr(object_alloc(sIterClass));
@@ -82,7 +82,7 @@ IterPtr IterNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 			return NULL;
 		}
 		
-		err = TTObjectBaseInstantiate(TT("callback"), (TTObjectBasePtr*)&self->callback, kTTValNONE);
+		err = TTObjectBaseInstantiate(TT("callback"), (TTObjectBasePtr*)&self->callback, none);
 		self->callback->setAttributeValue(TT("function"), TTPtr(&IterGraphCallback));
 		self->callback->setAttributeValue(TT("baton"), TTPtr(self));	
 		// dynamically add a message to the callback object so that it can handle the 'dictionaryReceived' notification

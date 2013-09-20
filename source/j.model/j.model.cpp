@@ -87,6 +87,7 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
+	TTValue						none;
 		
 	// create a container
 	jamoma_container_create((ObjectPtr)x, &x->wrappedObject);
@@ -123,7 +124,7 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
     EXTRA->all_amenities = NO;
     EXTRA->no_amenities = NO;
     
-    EXTRA->attr_amenities->append(TTSymbol("all"), kTTValNONE);
+    EXTRA->attr_amenities->append(TTSymbol("all"), none);
     
     // handle attribute args
 	attr_args_process(x, argc, argv);
@@ -509,7 +510,7 @@ void model_doautodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char				filename[MAX_FILENAME_CHARS];
 	TTSymbol			fullpath;
-	TTValue				o, v;
+	TTValue				o, v, none;
 	TTTextHandlerPtr	aTextHandler;
 	TTErr				tterr;
 	
@@ -526,7 +527,7 @@ void model_doautodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
 			
 			critical_enter(0);
-			aTextHandler->sendMessage(TTSymbol("Write"), v, kTTValNONE);
+			aTextHandler->sendMessage(TTSymbol("Write"), v, none);
 			critical_exit(0);
 		}
 	}
@@ -576,7 +577,7 @@ t_max_err model_get_amenities(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av
 t_max_err model_set_amenities(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTValue     keys;
+    TTValue     keys, none;
     TTSymbol    key;
     
     EXTRA->attr_amenities->clear();
@@ -588,11 +589,11 @@ t_max_err model_set_amenities(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av)
         for (TTUInt8 i = 0; i < keys.size(); i++) {
             
             key = keys[i];
-            EXTRA->attr_amenities->append(key, kTTValNONE);
+            EXTRA->attr_amenities->append(key, none);
         }
     }
 	else
-		EXTRA->attr_amenities->append(TTSymbol("all"), kTTValNONE); // default all
+		EXTRA->attr_amenities->append(TTSymbol("all"), none); // default all
 	
 	return MAX_ERR_NONE;
 }

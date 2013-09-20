@@ -88,6 +88,7 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
 	SymbolPtr					address;
+	TTValue						none;
 	
 	// check address argument
 	address = _sym_nothing;
@@ -121,7 +122,7 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->arraySize = 0;
 	x->arrayIndex = 0;
 	x->arrayAddress = kTTAdrsEmpty;
-	x->arrayArgs = kTTValNONE;
+	x->arrayArgs = none;
 	x->arrayAttrFormat = gensym("single");
 	
 	// Prepare extra data for parameters and messages
@@ -255,13 +256,13 @@ void remote_new_address(TTPtr self, SymbolPtr address)
 
 void remote_array_create(TTPtr self, TTObjectBasePtr *returnedViewer, TTUInt8 index)
 {
-	TTValue			args;
+	TTValue			args, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
 
 	returnValueBaton = new TTValue(self);
 	returnValueBaton->append(index);
@@ -797,7 +798,7 @@ void remote_ui_queuefn(TTPtr self)
 void remote_create_model_address_receiver(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args;
+	TTValue			args, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	
@@ -805,7 +806,7 @@ void remote_create_model_address_receiver(TTPtr self)
 	args.append(NULL);
 	
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
 	returnValueBaton = new TTValue(TTPtr(x));
     returnValueBaton->append(TTPtr(gensym("return_model_address")));

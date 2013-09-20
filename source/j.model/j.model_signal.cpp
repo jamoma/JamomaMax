@@ -68,7 +68,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
                 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
                 aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter turns off model's data processing"));
-                aData->setAttributeValue(kTTSym_valueDefault, kTTBoolNo);
+                aData->setAttributeValue(kTTSym_valueDefault, NO);
             }
             
             // make an internal sender to access to all in|out instance mute attribute
@@ -85,7 +85,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
                 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
                 aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter bypasses the model's data processing algorithm, letting incoming signal pass through unaffected"));
-                aData->setAttributeValue(kTTSym_valueDefault, kTTBoolNo);
+                aData->setAttributeValue(kTTSym_valueDefault, NO);
             }
             
             // make an internal sender to access to all in instance bypass attribute
@@ -102,7 +102,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
                 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
                 aData->setAttributeValue(kTTSym_description, TTSymbol("Freezes the last state of model's outputs from the data processing algorithm"));
-                aData->setAttributeValue(kTTSym_valueDefault, kTTBoolNo);
+                aData->setAttributeValue(kTTSym_valueDefault, NO);
             }
             
             // make an internal sender to access to all out instance freeze attribute
@@ -118,7 +118,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
                 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
                 aData->setAttributeValue(kTTSym_description, TTSymbol("Turns on/off preview display of model's outputs from the data processing algorithm"));
-                aData->setAttributeValue(kTTSym_valueDefault, kTTBoolNo);
+                aData->setAttributeValue(kTTSym_valueDefault, NO);
             }
         }
     }
@@ -135,7 +135,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
                 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
                 aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter turns off model's audio processing"));
-                aData->setAttributeValue(kTTSym_valueDefault, kTTBoolNo);
+                aData->setAttributeValue(kTTSym_valueDefault, NO);
             }
             
             // make an internal sender to access to all in|out instance mute attribute
@@ -152,7 +152,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
                 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
                 aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter bypasses the model's audio processing algorithm, letting incoming signal pass through unaffected"));
-                aData->setAttributeValue(kTTSym_valueDefault, kTTBoolNo);
+                aData->setAttributeValue(kTTSym_valueDefault, NO);
             }
             
             // make an internal sender to access to all in instance bypass attribute

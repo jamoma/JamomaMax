@@ -458,7 +458,7 @@ t_int *send_perform(t_int *w)
     TTUInt16					n;
 	t_float*					envelope;
 	TTFloat32					sum, mean;
-	TTValue						v;
+	TTValue						v, none;
     
     if (x->obj.z_disabled)
         return w + 4;
@@ -501,7 +501,7 @@ t_int *send_perform(t_int *w)
 						
 						// DATA case : send the mean value of the sample
 						else if (anObject->getName() == kTTSym_Data)
-							anObject->sendMessage(kTTSym_Command, v, kTTValNONE);
+							anObject->sendMessage(kTTSym_Command, v, none);
 						
 					}
 				}
@@ -524,7 +524,7 @@ void send_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doub
     TTUInt16					n;
 	TTSampleValue*              envelope;
 	TTFloat32					sum, mean;
-	TTValue						v;
+	TTValue						v, none;
     
     if (x->obj.z_disabled)
         return;
@@ -567,7 +567,7 @@ void send_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doub
 						
 						// DATA case : send the mean value of the sample
 						else if (anObject->getName() == kTTSym_Data)
-							anObject->sendMessage(kTTSym_Command, v, kTTValNONE);
+							anObject->sendMessage(kTTSym_Command, v, none);
 					}
 				}
 			}

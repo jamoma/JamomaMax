@@ -134,7 +134,7 @@ void init_assist(t_init *x, void *b, long msg, long arg, char *dst)
 
 void init_subscribe(t_init *x)
 {
-	TTValue			v, args;
+	TTValue			v, args, none;
 	TTAddress       contextAddress = kTTAdrsEmpty;
     TTAddress       returnedAddress;
     TTNodePtr       returnedNode = NULL;
@@ -158,14 +158,14 @@ void init_subscribe(t_init *x)
 			
 			// Make a TTReceiver object
 			returnAddressCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-			TTObjectBaseInstantiate(TTSymbol("callback"), &returnAddressCallback, kTTValNONE);
+			TTObjectBaseInstantiate(TTSymbol("callback"), &returnAddressCallback, none);
 			returnAddressBaton = new TTValue(TTPtr(x));
 			returnAddressCallback->setAttributeValue(kTTSym_baton, TTPtr(returnAddressBaton));
 			returnAddressCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_address));
 			args.append(returnAddressCallback);
 			
 			returnValueCallback = NULL;				// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-			TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+			TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
 			returnValueBaton = new TTValue(TTPtr(x));
 			returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
 			returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));

@@ -866,6 +866,7 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 	ObjectPtr	obj;
 	SymbolPtr	objclass;
 	t_rect		rect;
+	TTValue		none;
 	
 	// usually we don't want mousedragdelta -- we turn it on below as necessary
 	jbox_set_mousedragdelta((t_object *)x, 0);
@@ -927,7 +928,7 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 			}
 		}
 		else if (x->has_panel && px.x >= x->rect_panel.x && px.x <= (x->rect_panel.x + x->rect_panel.width))
-			ui_data_send(x, TTSymbol("panel"), kTTValNONE);
+			ui_data_send(x, TTSymbol("panel"), none);
 		
 		else if (x->has_preview && px.x >= x->rect_preview.x && px.x <= (x->rect_preview.x + x->rect_preview.width)) {
 			if (x->selection) {
@@ -1152,6 +1153,7 @@ void ui_menu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 void ui_menu_qfn(t_ui *x)
 {
 	t_symobject *item = (t_symobject *)linklist_getindex(x->menu_items, x->menu_selection);
+    TTValue     none;
     
     // get model object
     ObjectPtr modelObject = ui_get_model_object(x);
@@ -1180,10 +1182,10 @@ void ui_menu_qfn(t_ui *x)
 		defer(x, (method)ui_preset_dowrite, NULL, 0, 0L);
 	
 	else if (item->sym == gensym("Restore Default Settings"))
-		ui_viewer_send(x, TTSymbol("preset:recall"), kTTVal1);
+		ui_viewer_send(x, TTSymbol("preset:recall"), 1);
 	
 	else if (item->sym == gensym("Store Current Preset"))
-		ui_viewer_send(x, TTSymbol("preset:store"), kTTValNONE);
+		ui_viewer_send(x, TTSymbol("preset:store"), none);
 	
 	else if (item->sym == gensym("Store as Next Preset"))
 		ui_preset_store_next(x);
@@ -1195,13 +1197,13 @@ void ui_menu_qfn(t_ui *x)
 		ui_edit(x);
 	
 	else if (item->sym == gensym("Open Model Internal"))
-		ui_viewer_send(x, TTSymbol("model:internal/open"), kTTValNONE);
+		ui_viewer_send(x, TTSymbol("model:internal/open"), none);
 	
 	else if (item->sym == gensym("Open Model Help Patch"))
-		ui_viewer_send(x, TTSymbol("model:help/open"), kTTValNONE);
+		ui_viewer_send(x, TTSymbol("model:help/open"), none);
 	
 	else if (item->sym == gensym("Open Model Reference Page"))
-		ui_viewer_send(x, TTSymbol("model:reference/open"), kTTValNONE);
+		ui_viewer_send(x, TTSymbol("model:reference/open"), none);
 	
 	else	// assume the menu item is a preset name
 		ui_viewer_send(x, TTSymbol("preset:recall"), TTSymbol(item->sym->s_name));
@@ -1488,7 +1490,7 @@ void ui_edit(t_ui *x)
 {
     TTString    *buffer;
     char        title[MAX_FILENAME_CHARS];
-    TTValue     args;
+    TTValue     args, none;
     TTSymbol    name;
     
     // only one editor can be open in the same time
@@ -1502,7 +1504,7 @@ void ui_edit(t_ui *x)
         
         critical_enter(0);
         args = TTValue((TTPtr)buffer);
-        x->textHandler->sendMessage(kTTSym_Write, args, kTTValNONE);
+        x->textHandler->sendMessage(kTTSym_Write, args, none);
         critical_exit(0);
         
         // pass the buffer to the editor
@@ -1528,15 +1530,15 @@ void ui_edclose(t_ui *x, char **text, long size)
 
 void ui_doedit(t_ui *x)
 {
-    TTValue args;
+    TTValue args, none;
     
     critical_enter(0);
     args = TTValue((TTPtr)x->text);
-    x->textHandler->sendMessage(kTTSym_Read, args, kTTValNONE);
+    x->textHandler->sendMessage(kTTSym_Read, args, none);
     critical_exit(0);
     
     // recall the preset
-    x->state->sendMessage(kTTSym_Recall, kTTValNONE, kTTValNONE);
+    x->state->sendMessage(kTTSym_Recall, none, none);
     
     delete x->text;
     x->text = NULL;

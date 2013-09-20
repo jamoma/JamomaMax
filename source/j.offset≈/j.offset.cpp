@@ -24,7 +24,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 
 	TTAudioGraphInit();
 	options->append(TT("nonadapting"), value); // don't change the number of out-channels in response to changes in the number of in-channels
-	options->append(TT("userCanSetNumChannels"), kTTBoolNo);
+	options->append(TT("userCanSetNumChannels"), NO);
 	wrapAsMaxAudioGraph(TT("audio.offset"), "j.offset≈", NULL, options);
 	return wrapAsMaxAudioGraph(TT("audio.offset"), "offset≈", NULL, options);
 	

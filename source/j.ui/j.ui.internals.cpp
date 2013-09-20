@@ -106,7 +106,7 @@ void ui_data_destroy_all(t_ui *obj)
 
 void ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbackMethod, TTSymbol service, TTSymbol name, TTBoolean deferlow)
 {
-	TTValue			args, v;
+	TTValue			args, v, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	TTAddress       viewAddress, dataAddress;
@@ -115,7 +115,7 @@ void ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbac
 	
 	// Prepare arguments to create a TTData object
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
 	returnValueBaton = new TTValue(TTPtr(obj));
 	returnValueBaton->append(TTPtr(aCallbackMethod));
@@ -215,7 +215,7 @@ void ui_data_interface(t_ui *x, TTSymbol name)
 
 void ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
 {
-	TTValue			v, args;
+	TTValue			v, args, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	TTAddress adrs;
@@ -224,7 +224,7 @@ void ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr 
 	args.append(NULL);
 	
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
 	returnValueBaton = new TTValue(TTPtr(obj));
 	returnValueBaton->append(TTPtr(aCallbackMethod));
@@ -296,7 +296,7 @@ void ui_receiver_destroy_all(t_ui *obj)
 
 void ui_viewer_create(t_ui *obj, TTObjectBasePtr *returnedViewer, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean subscribe, TTBoolean deferlow)
 {
-	TTValue			v, args;
+	TTValue			v, args, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	TTAddress       viewAddress, viewerAddress, adrs;
@@ -305,7 +305,7 @@ void ui_viewer_create(t_ui *obj, TTObjectBasePtr *returnedViewer, SymbolPtr aCal
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
 	returnValueBaton = new TTValue(TTPtr(obj));
 	returnValueBaton->append(TTPtr(aCallbackMethod));
@@ -389,16 +389,17 @@ void ui_viewer_destroy_all(t_ui *obj)
 
 void ui_viewer_send(t_ui *obj, TTSymbol name, TTValue v)
 {
-	TTValue			storedObject;
+	TTValue			storedObject, none;
 	TTObjectBasePtr	anObject;
 	TTErr			err;
+	
 	if (obj->hash_viewers) {
 		err = obj->hash_viewers->lookup(name, storedObject);
 		
 		if (!err) {
 			anObject = storedObject[0];
 			if (anObject)
-				anObject->sendMessage(kTTSym_Send, v, kTTValNONE);
+				anObject->sendMessage(kTTSym_Send, v, none);
 		}
 	}
 }
@@ -442,13 +443,13 @@ void ui_viewer_freeze(t_ui *obj, TTSymbol name, TTBoolean f)
 
 void ui_explorer_create(ObjectPtr x, TTObjectBasePtr *returnedExplorer, SymbolPtr method)
 {
-	TTValue			args;
-	TTObjectBasePtr		returnValueCallback;
+	TTValue			args, none;
+	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
 	returnValueBaton = new TTValue(TTPtr(x));
 	returnValueBaton->append(TTPtr(method));
 	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
@@ -618,8 +619,8 @@ void ui_return_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	t_ui*			obj = (t_ui*)self;
-	TTAddress outAdrs;
-	TTValue			v;
+	TTAddress 		outAdrs;
+	TTValue			v, none;
 	TTNodePtr		aNode;
 	TTValuePtr		newBaton;
 	TTAttributePtr	anAttribute = NULL;
@@ -649,7 +650,7 @@ void ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 					obj->previewSignal = NULL;
 				}
 				
-				TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&obj->previewSignal), kTTValNONE);
+				TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&obj->previewSignal), none);
 				
 				newBaton = new TTValue(TTPtr(self));
 				obj->previewSignal->setAttributeValue(kTTSym_baton, TTPtr(newBaton));

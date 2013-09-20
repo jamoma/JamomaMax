@@ -413,7 +413,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 	for (TTUInt16 i=0; i<v.getSize(); i++) {
 		TTAttributePtr	attr = NULL;
 		SymbolPtr		maxType = _sym_long;
-		TTValue			isGenerator = kTTBoolNo;
+		TTValue			isGenerator = NO;
 		
 		v.get(i, name);
 		nameSize = strlen(name.c_str());
@@ -465,10 +465,10 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 	
 	
 	if (wrappedMaxClass->options) {
-		TTValue		userCanSetNumChannels = kTTBoolNo;
+		TTValue		userCanSetNumChannels = NO;
 		TTErr		err = wrappedMaxClass->options->lookup(TT("userCanSetNumChannels"), userCanSetNumChannels);
 		
-		if (!err && userCanSetNumChannels == kTTBoolYes)
+		if (!err && userCanSetNumChannels == TTValue(YES))
 			class_addattr(wrappedMaxClass->maxClass, attr_offset_new("numChannels", _sym_long, 0, 
 																	 (method)MaxAudioGraphWrappedClass_attrGetNumChannels, 
 																	 (method)MaxAudioGraphWrappedClass_attrSetNumChannels, 
