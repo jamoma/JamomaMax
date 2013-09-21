@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 3,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1280.0, 706.0 ],
+		"rect" : [ 532.0, 44.0, 889.0, 924.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -31,6 +32,48 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
+					"id" : "obj-53",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 354.0, 99.20813, 115.0, 19.0 ],
+					"text" : "j.remote moviename"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-50",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 136.333344, 35.0, 99.0, 19.0 ],
+					"text" : "j.remote duration"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-44",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 39.0, 129.0, 79.0, 19.0 ],
+					"text" : "j.remote time"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-47",
 					"maxclass" : "comment",
@@ -51,7 +94,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 45.0, 1017.0, 79.0, 19.0 ],
+					"patching_rect" : [ 45.0, 1017.0, 83.0, 19.0 ],
 					"text" : "r #1autostart"
 				}
 
@@ -79,7 +122,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 330.0, 1095.0, 24.0, 19.0 ],
+					"patching_rect" : [ 154.0, 1093.0, 24.0, 19.0 ],
 					"text" : "t 0"
 				}
 
@@ -93,7 +136,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 333.0, 1140.0, 24.0, 19.0 ],
+					"patching_rect" : [ 157.0, 1138.0, 24.0, 19.0 ],
 					"text" : "t 1"
 				}
 
@@ -108,7 +151,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 485.0, 521.0, 128.0, 19.0 ],
+					"patching_rect" : [ 339.0, 509.0, 132.0, 19.0 ],
 					"text" : "value #1camera/status"
 				}
 
@@ -123,7 +166,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 15.0, 367.0, 102.0, 19.0 ],
+					"patching_rect" : [ 15.0, 367.0, 106.0, 19.0 ],
 					"text" : "r #1cameraStatus"
 				}
 
@@ -202,7 +245,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 194.0, 1665.0, 93.0, 19.0 ],
+					"patching_rect" : [ 112.0, 1639.0, 93.0, 19.0 ],
 					"text" : "Desktop settings"
 				}
 
@@ -213,7 +256,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 101.0, 1657.0, 335.0, 33.0 ]
+					"patching_rect" : [ 19.0, 1631.0, 262.0, 38.0 ]
 				}
 
 			}
@@ -226,7 +269,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 198.0, 1352.0, 93.0, 19.0 ],
+					"patching_rect" : [ 112.0, 1350.0, 93.0, 19.0 ],
 					"text" : "Synth settings"
 				}
 
@@ -237,7 +280,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 105.0, 1344.0, 335.0, 33.0 ]
+					"patching_rect" : [ 19.0, 1342.0, 262.0, 38.0 ]
 				}
 
 			}
@@ -298,7 +341,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 590.0, 267.0, 93.0, 19.0 ],
+					"patching_rect" : [ 403.5, 236.0, 93.0, 19.0 ],
 					"text" : "General settings"
 				}
 
@@ -310,11 +353,11 @@
 					"id" : "obj-105",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 128.0, 1071.20813, 423.0, 19.0 ],
-					"text" : "j.message file/stop @type none @description \"Stop reading of the video file\"",
-					"varname" : "j.parameter[8]"
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 128.0, 1071.20813, 98.0, 19.0 ],
+					"text" : "j.remote file/stop",
+					"varname" : "j.remote[8]"
 				}
 
 			}
@@ -363,11 +406,11 @@
 					"id" : "obj-108",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 128.0, 1119.0, 429.0, 19.0 ],
-					"text" : "j.message file/start @type none @description \"Start reading of the video file\"",
-					"varname" : "j.parameter[9]"
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 128.0, 1119.0, 100.0, 19.0 ],
+					"text" : "j.remote file/start",
+					"varname" : "j.remote[9]"
 				}
 
 			}
@@ -378,11 +421,11 @@
 					"id" : "obj-104",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 121.0, 413.20813, 364.0, 19.0 ],
-					"text" : "j.message camera/close @description \"Open the camera grabber\"",
-					"varname" : "j.parameter[7]"
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 121.0, 413.20813, 124.0, 19.0 ],
+					"text" : "j.remote camera/close",
+					"varname" : "j.remote[7]"
 				}
 
 			}
@@ -431,11 +474,11 @@
 					"id" : "obj-83",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 121.0, 467.0, 363.0, 19.0 ],
-					"text" : "j.message camera/open @description \"Open the camera grabber\"",
-					"varname" : "j.parameter[6]"
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 121.0, 467.0, 123.0, 19.0 ],
+					"text" : "j.remote camera/open",
+					"varname" : "j.remote[6]"
 				}
 
 			}
@@ -458,14 +501,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-66",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 103.0, 804.0, 443.0, 31.0 ],
-					"text" : "j.message camera/direct @repetitions/allow 1 @description \"Direct access to the embedded jit.qt/dx.grab object\"",
-					"varname" : "j.parameter[5]"
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 103.0, 804.0, 127.0, 19.0 ],
+					"text" : "j.remote camera/direct",
+					"varname" : "j.remote[5]"
 				}
 
 			}
@@ -491,13 +533,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-22",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 121.0, 754.0, 568.0, 31.0 ],
-					"text" : "j.parameter camera/updaterate @type integer @range/bounds 1 100 @range/clipmode low @description \"Update rate of the camera, in milliseconds\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 121.0, 754.0, 153.0, 19.0 ],
+					"text" : "j.remote camera/updaterate",
 					"varname" : "camera/camera[1]"
 				}
 
@@ -511,7 +552,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 532.0, 141.0, 81.0, 20.0 ],
+					"patching_rect" : [ 386.0, 129.0, 81.0, 20.0 ],
 					"text" : "prepend text"
 				}
 
@@ -525,7 +566,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 309.0, 129.0, 116.0, 18.0 ],
+					"patching_rect" : [ 163.0, 117.0, 116.0, 18.0 ],
 					"text" : "range/bounds 0 $1"
 				}
 
@@ -537,25 +578,11 @@
 					"id" : "obj-25",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 128.0, 1043.0, 572.0, 19.0 ],
-					"text" : "j.message file/direct @repetitions/allow 1 @description \"Direct access to the embedded jit.qt.movie object\"",
-					"varname" : "j.parameter[4]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 11.0,
-					"id" : "obj-64",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 185.0, 158.0, 76.0, 20.0 ],
-					"text" : "prepend set"
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 128.0, 1036.0, 105.0, 19.0 ],
+					"text" : "j.remote file/direct",
+					"varname" : "j.remote[4]"
 				}
 
 			}
@@ -568,7 +595,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 633.0, 1452.0, 41.0, 19.0 ],
+					"patching_rect" : [ 321.5, 1027.0, 41.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 116.0, 466.0, 40.0, 19.0 ],
 					"text" : "Offset"
@@ -612,13 +639,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-74",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 101.0, 1836.0, 597.0, 31.0 ],
-					"text" : "j.parameter desktop/offset/x @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 0 640 @range/clipmode low @description \"x value of the upper right corner of the desktop crop\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 101.0, 1836.0, 140.0, 19.0 ],
+					"text" : "j.remote desktop/offset/x",
 					"varname" : "synth/noise/size/x[2]"
 				}
 
@@ -648,13 +674,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-77",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 101.0, 1788.0, 597.0, 31.0 ],
-					"text" : "j.parameter desktop/offset/y @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 0 480 @range/clipmode low @description \" y value of the upper right corner of the desktop crop\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 101.0, 1788.0, 140.0, 19.0 ],
+					"text" : "j.remote desktop/offset/y",
 					"varname" : "synth/noise/size/y[2]"
 				}
 
@@ -684,13 +709,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-59",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 101.0, 1747.0, 588.0, 31.0 ],
-					"text" : "j.parameter desktop/size/x @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 640 @range/clipmode low @description \"y size of desktop crop\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 101.0, 1747.0, 131.0, 19.0 ],
+					"text" : "j.remote desktop/size/x",
 					"varname" : "synth/noise/size/x[1]"
 				}
 
@@ -721,13 +745,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-52",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 101.0, 1702.0, 588.0, 31.0 ],
-					"text" : "j.parameter desktop/size/y @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 480 @range/clipmode low @description \"x size of desktop crop\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 101.0, 1702.0, 131.0, 19.0 ],
+					"text" : "j.remote desktop/size/y",
 					"varname" : "synth/noise/size/y[1]"
 				}
 
@@ -826,11 +849,12 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 186.0, 143.0, 833.0, 327.0 ],
+						"rect" : [ 186.0, 169.0, 1048.0, 364.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -1294,7 +1318,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 111.0, 56.0, 73.0, 19.0 ],
+					"patching_rect" : [ 15.0, 48.0, 73.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1327,7 +1351,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 756.0, 309.0, 84.0, 19.0 ],
+					"patching_rect" : [ 602.0, 357.20813, 84.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 67.0, 118.0, 30.0, 19.0 ],
 					"varname" : "file_loop"
@@ -1341,10 +1365,10 @@
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 122.0, 709.0, 399.0, 19.0 ],
-					"text" : "j.parameter camera/camera @type string @description \"Choose camera\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 122.0, 709.0, 136.0, 19.0 ],
+					"text" : "j.remote camera/camera",
 					"varname" : "camera/camera"
 				}
 
@@ -1356,10 +1380,10 @@
 					"id" : "obj-9",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 121.0, 635.0, 405.0, 19.0 ],
-					"text" : "j.parameter camera/device @type string @description \"Input device type\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 121.0, 635.0, 131.0, 19.0 ],
+					"text" : "j.remote camera/device",
 					"varname" : "camera/device"
 				}
 
@@ -1397,13 +1421,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-12",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 128.0, 1169.0, 368.0, 31.0 ],
-					"text" : "j.parameter file/framedump @type boolean @repetitions/allow 0 @description \"Turn on or off framedump of the video\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 128.0, 1169.0, 134.0, 19.0 ],
+					"text" : "j.remote file/framedump",
 					"varname" : "file/framedump"
 				}
 
@@ -1415,10 +1438,10 @@
 					"id" : "obj-14",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 105.0, 1555.0, 422.0, 19.0 ],
-					"text" : "j.parameter synth/color @type generic @description \"List of RGB colors\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 105.0, 1555.0, 114.0, 19.0 ],
+					"text" : "j.remote synth/color",
 					"varname" : "synth/color"
 				}
 
@@ -1436,8 +1459,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 3,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 20.0, 74.0, 186.0, 179.0 ],
@@ -1587,7 +1611,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 779.0, 174.0, 43.0, 19.0 ],
+					"patching_rect" : [ 555.5, 202.20813, 43.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1610,13 +1634,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-16",
-					"linecount" : 4,
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 779.0, 201.0, 205.0, 55.0 ],
-					"text" : "j.parameter file/loop/bounds @type decimalArray @repetitions/allow 0 @description \"List of low and high loop point values\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 555.5, 229.20813, 95.0, 31.0 ],
+					"text" : "j.remote file/loop/bounds",
 					"varname" : "file/loop_points"
 				}
 
@@ -1629,7 +1653,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 756.0, 340.0, 15.0, 15.0 ]
+					"patching_rect" : [ 591.0, 382.0, 15.0, 15.0 ]
 				}
 
 			}
@@ -1643,7 +1667,7 @@
 					"orientation" : 1,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 779.0, 138.0, 85.0, 15.0 ],
+					"patching_rect" : [ 555.5, 166.20813, 120.0, 14.79187 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 95.0, 120.0, 135.0, 13.0 ],
 					"size" : 18.0,
@@ -1656,13 +1680,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-21",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 105.0, 1583.0, 585.0, 31.0 ],
-					"text" : "j.parameter synth/noise/size/y @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 480 @range/clipmode low @description \"y size of noise matrix\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 105.0, 1583.0, 150.0, 19.0 ],
+					"text" : "j.remote synth/noise/size/y",
 					"varname" : "synth/noise/size/y"
 				}
 
@@ -1672,13 +1695,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-26",
-					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 105.0, 1387.0, 330.0, 43.0 ],
-					"text" : "j.parameter synth/noise/size/x @type integer @repetitions/allow 0 @ramp/drive Max @range/bounds 1 640 @range/clipmode low @description \"x size of noise matrix\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 105.0, 1387.0, 150.0, 19.0 ],
+					"text" : "j.remote synth/noise/size/x",
 					"varname" : "synth/noise/size/x"
 				}
 
@@ -1788,22 +1810,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 608.0, 176.0, 65.0, 17.0 ],
+					"patching_rect" : [ 462.0, 164.0, 65.0, 17.0 ],
 					"text" : "range 0 $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-34",
-					"maxclass" : "newobj",
-					"numinlets" : 4,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 185.0, 94.0, 392.0, 19.0 ],
-					"text" : "route time duration moviename"
 				}
 
 			}
@@ -1840,13 +1848,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-39",
-					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 309.0, 175.0, 220.0, 55.0 ],
-					"text" : "j.message file/counter @type integer @range/bounds 0 100000 @range/clipmode low @repetitions/allow 1 @description \"Video file time counter\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 163.0, 163.0, 115.0, 19.0 ],
+					"text" : "j.remote file/counter",
 					"varname" : "file/counter"
 				}
 
@@ -1856,13 +1863,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-41",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 128.0, 1270.0, 452.0, 31.0 ],
-					"text" : "j.parameter file/rate @type decimal @repetitions/allow 0 @ramp/drive Max @range/bounds -2. 2. @range/clipmode none @description \"Playback rate of video file\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 128.0, 1270.0, 97.0, 19.0 ],
+					"text" : "j.remote file/rate",
 					"varname" : "file/rate"
 				}
 
@@ -1872,13 +1878,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-43",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 128.0, 1225.0, 311.0, 31.0 ],
-					"text" : "j.parameter file/size @type integer @repetitions/allow 0 @description \"Select size of video playback\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 128.0, 1225.0, 96.0, 19.0 ],
+					"text" : "j.remote file/size",
 					"varname" : "file/size"
 				}
 
@@ -1888,13 +1893,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-45",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 756.0, 359.0, 574.0, 31.0 ],
-					"text" : "j.parameter file/loop/mode @type integer @range/bounds 0 2 @range/clipmode both @repetitions/allow 0 @description \"0: no looping | 1: looping on | 2: palindrom \"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 590.5, 413.20813, 130.0, 19.0 ],
+					"text" : "j.remote file/loop/mode",
 					"varname" : "file/loop"
 				}
 
@@ -1904,14 +1908,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-49",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 128.0, 992.0, 515.0, 31.0 ],
-					"text" : "j.parameter file/open @type generic @description \"Open dialog to select video file\" @repetitions/allow 1",
-					"varname" : "j.parameter[2]"
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 128.0, 992.0, 101.0, 19.0 ],
+					"text" : "j.remote file/open",
+					"varname" : "j.remote[2]"
 				}
 
 			}
@@ -1920,13 +1923,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-51",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 105.0, 1440.0, 427.0, 31.0 ],
-					"text" : "j.parameter synth/noise/planes @type integer @range/bounds 1 4 @range/clipmode both @ramp/drive none @description \"Number of matrix planes\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 105.0, 1440.0, 153.0, 19.0 ],
+					"text" : "j.remote synth/noise/planes",
 					"varname" : "synth/noise/planes"
 				}
 
@@ -1969,13 +1971,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-60",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 121.0, 547.0, 236.0, 31.0 ],
-					"text" : "j.parameter camera/size @type integer @description \"Resolution of captured image\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 121.0, 547.0, 118.0, 19.0 ],
+					"text" : "j.remote camera/size",
 					"varname" : "camera/size"
 				}
 
@@ -2007,11 +2008,11 @@
 					"id" : "obj-63",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 121.0, 367.0, 408.0, 19.0 ],
-					"text" : "j.message camera/settings @description \"Open dialog for camera settings\"",
-					"varname" : "j.parameter[1]"
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 121.0, 367.0, 138.0, 19.0 ],
+					"text" : "j.remote camera/settings",
+					"varname" : "j.remote[1]"
 				}
 
 			}
@@ -2026,7 +2027,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 185.0, 196.0, 47.0, 19.0 ],
+					"patching_rect" : [ 39.0, 184.0, 47.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 160.040146, 149.0, 69.959846, 19.0 ],
 					"triangle" : 0,
@@ -2064,7 +2065,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 563.0, 1396.0, 30.0, 19.0 ],
+					"patching_rect" : [ 229.5, 1270.0, 30.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 1.0, 149.0, 29.0, 19.0 ],
 					"text" : "rate"
@@ -2079,7 +2080,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 532.0, 203.0, 128.0, 14.0 ],
+					"patching_rect" : [ 386.0, 191.0, 128.0, 14.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 135.0, 227.0, 13.0 ],
 					"range" : [ 0.0, 1840.0 ],
@@ -2153,13 +2154,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-76",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 105.0, 1481.392822, 597.0, 31.0 ],
-					"text" : "j.parameter synth/color/active @type boolean @range/bounds 0 1 @range/clipmode both @repetitions/allow 0 @ramp/drive none @description \"Turn video color synth on or off\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 105.0, 1481.392822, 148.0, 19.0 ],
+					"text" : "j.remote synth/color/active",
 					"varname" : "synth/color/on"
 				}
 
@@ -2173,7 +2173,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 111.0, 76.0, 65.0, 19.0 ],
+					"patching_rect" : [ 15.0, 77.0, 65.0, 19.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
@@ -2187,7 +2187,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 111.0, 8.0, 25.0, 25.0 ]
+					"patching_rect" : [ 15.0, 9.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -2201,7 +2201,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 311.0, 47.0, 177.0, 43.0 ],
+					"patching_rect" : [ 170.5, 78.0, 177.0, 43.0 ],
 					"text" : "This almost works. There is a problem with setting max values after looping is turned off."
 				}
 
@@ -2215,7 +2215,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 846.0, 307.0, 22.0, 19.0 ],
+					"patching_rect" : [ 591.0, 316.0, 22.0, 19.0 ],
 					"text" : "t 1"
 				}
 
@@ -2229,7 +2229,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 846.0, 281.0, 82.0, 19.0 ],
+					"patching_rect" : [ 591.0, 290.0, 82.0, 19.0 ],
 					"text" : "speedlim 1000"
 				}
 
@@ -2243,7 +2243,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 779.0, 102.0, 78.0, 19.0 ],
+					"patching_rect" : [ 555.5, 130.20813, 78.0, 19.0 ],
 					"text" : "pak set 0 100"
 				}
 
@@ -2257,7 +2257,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 779.0, 71.0, 32.0, 19.0 ],
+					"patching_rect" : [ 555.5, 99.20813, 32.0, 19.0 ],
 					"text" : "sel 0"
 				}
 
@@ -2271,7 +2271,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 837.0, 71.0, 37.0, 19.0 ],
+					"patching_rect" : [ 613.5, 99.20813, 37.0, 19.0 ],
 					"text" : "/ 100",
 					"varname" : "/[2]"
 				}
@@ -2286,7 +2286,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 861.0, 102.0, 44.0, 17.0 ],
+					"patching_rect" : [ 637.5, 130.20813, 44.0, 17.0 ],
 					"text" : "size $1"
 				}
 
@@ -2423,7 +2423,7 @@
 					"destination" : [ "obj-48", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 303.5, 463.5, 494.5, 463.5 ],
+					"midpoints" : [ 303.5, 463.5, 348.5, 463.5 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -2451,7 +2451,7 @@
 					"destination" : [ "obj-89", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 765.0, 362.0, 742.0, 362.0, 742.0, 64.0, 788.5, 64.0 ],
+					"midpoints" : [ 600.0, 405.0, 553.5, 405.0, 553.5, 89.20813, 565.0, 89.20813 ],
 					"source" : [ "obj-17", 0 ]
 				}
 
@@ -2461,7 +2461,7 @@
 					"destination" : [ "obj-15", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 854.5, 171.0, 812.5, 171.0 ],
+					"midpoints" : [ 666.0, 199.20813, 589.0, 199.20813 ],
 					"source" : [ "obj-18", 1 ]
 				}
 
@@ -2480,7 +2480,7 @@
 					"destination" : [ "obj-87", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 854.5, 194.0, 975.0, 194.0, 975.0, 272.0, 855.5, 272.0 ],
+					"midpoints" : [ 666.0, 272.0, 600.5, 272.0 ],
 					"source" : [ "obj-18", 1 ]
 				}
 
@@ -2508,7 +2508,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 339.5, 1114.5, 125.5, 1114.5, 125.5, 1042.5, 66.5, 1042.5 ],
+					"midpoints" : [ 163.5, 1114.5, 125.5, 1114.5, 125.5, 1042.5, 66.5, 1042.5 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
@@ -2614,54 +2614,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 318.833344, 122.0, 318.5, 122.0 ],
-					"source" : [ "obj-34", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-32", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-34", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-33", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 318.833344, 122.0, 617.5, 122.0 ],
-					"source" : [ "obj-34", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-64", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-34", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-90", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 318.833344, 118.0, 582.666687, 118.0, 582.666687, 59.0, 846.5, 59.0 ],
-					"source" : [ "obj-34", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-63", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2702,7 +2654,7 @@
 					"destination" : [ "obj-65", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 318.5, 238.0, 179.5, 238.0, 179.5, 186.0, 194.5, 186.0 ],
+					"midpoints" : [ 172.5, 226.0, 33.5, 226.0, 33.5, 174.0, 48.5, 174.0 ],
 					"source" : [ "obj-39", 0 ]
 				}
 
@@ -2748,7 +2700,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 342.5, 1160.5, 119.0, 1160.5, 119.0, 1042.5, 66.5, 1042.5 ],
+					"midpoints" : [ 166.5, 1160.5, 119.0, 1160.5, 119.0, 1042.5, 66.5, 1042.5 ],
 					"source" : [ "obj-42", 0 ]
 				}
 
@@ -2764,10 +2716,28 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-65", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 765.5, 394.0, 749.0, 394.0, 749.0, 305.0, 765.5, 305.0 ],
+					"midpoints" : [ 600.0, 442.20813, 583.5, 442.20813, 583.5, 353.20813, 611.5, 353.20813 ],
 					"source" : [ "obj-45", 0 ]
 				}
 
@@ -2792,6 +2762,35 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-50", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-33", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 172.500015, 77.5, 471.5, 77.5 ],
+					"source" : [ "obj-50", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-90", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 172.500015, 76.5, 623.0, 76.5 ],
+					"source" : [ "obj-50", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2805,6 +2804,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-52", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-32", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-53", 1 ]
 				}
 
 			}
@@ -2874,28 +2882,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-65", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-64", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-69", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-64", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-39", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 194.5, 224.0, 302.5, 224.0, 302.5, 165.0, 318.5, 165.0 ],
+					"midpoints" : [ 48.5, 212.0, 156.5, 212.0, 156.5, 153.0, 172.5, 153.0 ],
 					"source" : [ "obj-65", 0 ]
 				}
 
@@ -3024,18 +3014,8 @@
 					"destination" : [ "obj-48", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 302.5, 515.0, 494.5, 515.0 ],
+					"midpoints" : [ 302.5, 515.0, 348.5, 515.0 ],
 					"source" : [ "obj-8", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 120.5, 35.0, 194.5, 35.0 ],
-					"source" : [ "obj-81", 0 ]
 				}
 
 			}
@@ -3071,7 +3051,7 @@
 					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 855.5, 335.0, 765.0, 335.0 ],
+					"midpoints" : [ 600.5, 329.0, 600.0, 329.0 ],
 					"source" : [ "obj-86", 0 ]
 				}
 
@@ -3127,7 +3107,7 @@
 					"destination" : [ "obj-91", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 846.5, 96.0, 870.5, 96.0 ],
+					"midpoints" : [ 623.0, 124.20813, 647.0, 124.20813 ],
 					"source" : [ "obj-90", 0 ]
 				}
 
@@ -3137,22 +3117,18 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 870.5, 127.0, 788.5, 127.0 ],
+					"midpoints" : [ 647.0, 155.20813, 565.0, 155.20813 ],
 					"source" : [ "obj-91", 0 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.parameter.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.textslider.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]
