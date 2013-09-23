@@ -931,7 +931,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 45.0, 281.0, 205.0, 18.0 ],
-									"text" : "load j.class.gl_group.inspect $1 #0_"
+									"text" : "load j.class.gl_group.remotes $1 #0_"
 								}
 
 							}
