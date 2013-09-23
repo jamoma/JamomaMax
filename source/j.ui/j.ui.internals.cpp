@@ -170,7 +170,7 @@ void ui_data_destroy(t_ui *obj, TTSymbol name)
 void ui_data_send(t_ui *obj, TTSymbol name, TTValue v)
 {
 	TTValue			storedObject;
-	TTObjectBasePtr		anObject;
+	TTObjectBasePtr	anObject;
 	
 	obj->hash_datas->lookup(name, storedObject);
     anObject = storedObject[0];

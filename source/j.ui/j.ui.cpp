@@ -1163,16 +1163,10 @@ void ui_menu_qfn(t_ui *x)
     // TODO : use the model object to directly send message to the Max object
         
 	if (item->sym == gensym("Defeat Signal Meters")) {
-		if (x->is_metersdefeated)
-			ui_viewer_send(x, TTSymbol("audio/meters/freeze"), NO);
-		else
-			ui_viewer_send(x, TTSymbol("audio/meters/freeze"), YES);
+		; // TODO : how to do this ?
 	}
 	else if (item->sym == gensym("Disable UI Updates")) {
-		if (x->ui_freeze)
-			ui_data_send(x, TTSymbol("freeze"), NO);
-		else
-			ui_data_send(x, TTSymbol("freeze"), YES);
+		; // TODO : set each j.remote freeze attribute
 	}
 	
 	else if (item->sym == gensym("Load Settings..."))
