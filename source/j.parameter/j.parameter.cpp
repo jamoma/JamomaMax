@@ -174,6 +174,22 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 		object_error((ObjectPtr)x, "needs a name as first argument");
 		return;
 	}
+    
+    // check for reserved address
+    if (relativeAddress == gensym("data/mute")      ||
+        relativeAddress == gensym("data/bypass")    ||
+        relativeAddress == gensym("data/freeze")    ||
+        relativeAddress == gensym("data/preview")   ||
+        relativeAddress == gensym("audio/mute")     ||
+        relativeAddress == gensym("audio/bypass")   ||
+        relativeAddress == gensym("audio/mix")      ||
+        relativeAddress == gensym("audio/gain")     ||
+        relativeAddress == gensym("model")          ||
+        relativeAddress == gensym("preset")         ) {
+        
+        object_error((ObjectPtr)x, "%s address is reserved by j.model", relativeAddress->s_name);
+		return;
+    }
 	
 	// Make outlets (before attr_args_process)
 	/////////////////////////////////////////////////////////////////////////////////
