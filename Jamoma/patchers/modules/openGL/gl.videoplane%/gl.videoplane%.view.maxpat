@@ -631,7 +631,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 123.0, 80.0, 265.0, 719.0 ],
+						"rect" : [ 125.0, 83.0, 265.0, 719.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -656,12 +656,27 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"hidden" : 1,
+									"id" : "obj-23",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 45.0, 280.0, 100.0, 20.0 ],
+									"text" : "sprintf %s/GL"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"hidden" : 1,
 									"id" : "obj-11",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "wclose" ],
-									"patching_rect" : [ 116.0, 340.0, 54.0, 20.0 ],
+									"patching_rect" : [ 116.0, 366.0, 54.0, 20.0 ],
 									"text" : "t wclose"
 								}
 
@@ -675,7 +690,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 116.0, 373.0, 68.0, 20.0 ],
+									"patching_rect" : [ 116.0, 399.0, 68.0, 20.0 ],
 									"text" : "s #0_close"
 								}
 
@@ -690,7 +705,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 116.0, 311.0, 58.0, 20.0 ],
+									"patching_rect" : [ 116.0, 337.0, 58.0, 20.0 ],
 									"text" : "freebang"
 								}
 
@@ -720,7 +735,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 340.0, 69.0, 20.0 ],
+									"patching_rect" : [ 20.0, 366.0, 69.0, 20.0 ],
 									"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 									"text" : "thispatcher"
 								}
@@ -930,7 +945,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 45.0, 281.0, 205.0, 18.0 ],
+									"patching_rect" : [ 45.0, 307.0, 205.0, 18.0 ],
 									"text" : "load j.class.gl_group.remotes $1 #0_"
 								}
 
@@ -945,7 +960,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 45.0, 311.0, 53.0, 20.0 ],
+									"patching_rect" : [ 45.0, 337.0, 53.0, 20.0 ],
 									"text" : "pcontrol"
 								}
 
@@ -1075,10 +1090,19 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
+									"destination" : [ "obj-23", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
 									"source" : [ "obj-21", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-23", 0 ]
 								}
 
 							}
