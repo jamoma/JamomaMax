@@ -31,6 +31,20 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 989.0, 66.0, 139.0, 19.0 ],
+					"text" : "j.model @amenities none"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-3",
 					"maxclass" : "comment",
@@ -2464,8 +2478,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 160.0, 48.0, 347.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 7,
-					"presentation_rect" : [ 7.0, 30.0, 67.0, 92.0 ],
+					"presentation_linecount" : 6,
+					"presentation_rect" : [ 7.0, 30.0, 71.0, 79.0 ],
 					"text" : "<- all these guys should be put as value/default in each parameter"
 				}
 
@@ -2871,6 +2885,23 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.pass.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscroute.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
