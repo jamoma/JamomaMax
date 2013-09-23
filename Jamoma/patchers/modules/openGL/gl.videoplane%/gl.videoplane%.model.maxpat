@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 4,
 			"architecture" : "x86"
 		}
 ,
@@ -183,8 +183,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 69.0, 507.0, 126.0, 19.0 ],
-					"text" : "jit.gl.videoplane bar"
+					"patching_rect" : [ 69.0, 515.0, 126.0, 19.0 ],
+					"text" : "jit.gl.videoplane"
 				}
 
 			}
@@ -457,8 +457,31 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"attr" : "drawto",
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-1",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 210.5, 507.0, 150.0, 19.0 ]
+				}
+
+			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
@@ -730,7 +753,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.class.gl_group.parameters.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/class.gl_group.parameters",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/class.gl_group.parameters",
 				"patcherrelativepath" : "../../../components/class.gl_group.parameters",
 				"type" : "JSON",
 				"implicit" : 1
