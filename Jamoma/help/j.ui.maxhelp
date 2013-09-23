@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
@@ -38,7 +38,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 381.0, 90.0, 307.0, 60.0 ],
-					"presentation_rect" : [ 349.0, 85.0, 0.0, 0.0 ],
 					"text" : "on the topleft of j.ui, two menus allow to :\n- access some generic functions\n- display all parameters/messages/returns of the bound model"
 				}
 
@@ -53,7 +52,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 391.0, 363.0, 190.0, 22.0 ],
-					"presentation_rect" : [ 372.0, 344.25, 0.0, 0.0 ],
 					"text" : "Note : should we allow that ?",
 					"textcolor" : [ 0.658824, 0.0, 0.007767, 1.0 ]
 				}
@@ -70,7 +68,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 372.0, 323.25, 306.0, 33.0 ],
-					"presentation_rect" : [ 376.0, 314.25, 0.0, 0.0 ],
 					"text" : "changing the model:address to which the view patcher is bound updates j.ui infos and capabilities..."
 				}
 
@@ -84,9 +81,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 264.0, 318.0, 47.0, 18.0 ],
-					"presentation_rect" : [ 279.0, 309.0, 0.0, 0.0 ],
-					"text" : "mouse"
+					"patching_rect" : [ 264.0, 318.0, 51.0, 18.0 ],
+					"text" : "/mouse"
 				}
 
 			}
@@ -99,9 +95,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 209.0, 318.0, 44.0, 18.0 ],
-					"presentation_rect" : [ 223.0, 306.0, 0.0, 0.0 ],
-					"text" : "echo~"
+					"patching_rect" : [ 209.0, 318.0, 47.0, 18.0 ],
+					"text" : "/echo~"
 				}
 
 			}
@@ -114,9 +109,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 139.0, 318.0, 62.0, 18.0 ],
-					"presentation_rect" : [ 161.0, 310.0, 0.0, 0.0 ],
-					"text" : "degrade~"
+					"patching_rect" : [ 139.0, 318.0, 65.0, 18.0 ],
+					"text" : "/degrade~"
 				}
 
 			}
@@ -131,7 +125,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 37.0, 259.25, 235.0, 33.0 ],
-					"presentation_rect" : [ 386.0, 307.0, 0.0, 0.0 ],
 					"text" : "a panel patcher that can be used  to display further controls"
 				}
 
@@ -147,7 +140,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 381.0, 259.25, 306.0, 33.0 ],
-					"presentation_rect" : [ 389.0, 261.0, 0.0, 0.0 ],
 					"text" : "when a panel  patcher is connected to the rightmost outlet, j.ui displays a (+) which allows to open it"
 				}
 
@@ -207,7 +199,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -390,7 +382,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 84.0, 469.0, 153.0, 18.0 ],
-					"text" : "panel"
+					"text" : "ui/size 0. 0."
 				}
 
 			}
@@ -613,7 +605,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 49.0, 164.0, 300.0, 70.0 ],
-					"text" : "mouse",
+					"text" : "/degrade~",
 					"textcolor" : [ 0.65, 0.65, 0.65, 1.0 ]
 				}
 
@@ -821,49 +813,49 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../patchers/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "echo~.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/echo~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/echo~",
 				"patcherrelativepath" : "../patchers/modules/audio/echo~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
 				"patcherrelativepath" : "../patchers/modules/control/mouse",
 				"type" : "JSON",
 				"implicit" : 1
