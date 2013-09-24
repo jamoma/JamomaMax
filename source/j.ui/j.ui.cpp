@@ -906,7 +906,7 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		if (x->has_gain && px.x >= x->rect_gain.x && px.x <= (x->rect_gain.x + x->rect_gain.width)) {
 			if (x->selection) {
 				x->sel_gain = !x->sel_gain;
-				ui_viewer_highlight(x, TTSymbol("*.*/gain"), x->sel_gain);
+				ui_viewer_highlight(x, TTSymbol("audio/gain"), x->sel_gain);
 			}
 			else {
 				x->gainDragging = true;
@@ -918,7 +918,7 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		else if (x->has_mix && px.x >= x->rect_mix.x && px.x <= (x->rect_mix.x + x->rect_mix.width)) {
 			if (x->selection) {
 				x->sel_mix = !x->sel_mix;
-				ui_viewer_highlight(x, TTSymbol("*.*/mix"), x->sel_mix);
+				ui_viewer_highlight(x, TTSymbol("audio/mix"), x->sel_mix);
 			}
 			else {
 				x->mixDragging = true;
@@ -933,18 +933,18 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		else if (x->has_preview && px.x >= x->rect_preview.x && px.x <= (x->rect_preview.x + x->rect_preview.width)) {
 			if (x->selection) {
 				x->sel_preview = !x->sel_preview;
-				ui_viewer_highlight(x, TTSymbol("*.*/preview"), x->sel_preview);
+				ui_viewer_highlight(x, TTSymbol("data/preview"), x->sel_preview);
 			}
 			else
-				ui_viewer_send(x, TTSymbol("*.*/preview"), TTValue(!x->is_previewing));
+				ui_viewer_send(x, TTSymbol("data/preview"), TTValue(!x->is_previewing));
 		}
 		else if (x->has_freeze && px.x >= x->rect_freeze.x && px.x <= (x->rect_freeze.x + x->rect_freeze.width)) {
 			if (x->selection) {
 				x->sel_freeze = !x->sel_freeze;
-				ui_viewer_highlight(x, TTSymbol("*.*/freeze"), x->sel_freeze);
+				ui_viewer_highlight(x, TTSymbol("data/freeze"), x->sel_freeze);
 			}
 			else
-				ui_viewer_send(x, TTSymbol("*.*/freeze"), TTValue(!x->is_frozen));
+				ui_viewer_send(x, TTSymbol("data/freeze"), TTValue(!x->is_frozen));
 		}
 		else if (x->has_bypass && px.x >= x->rect_bypass.x && px.x <= (x->rect_bypass.x + x->rect_bypass.width)) {
 			if (x->selection) {
@@ -989,7 +989,7 @@ void ui_mousedragdelta(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 	if (x->mixDragging) {
 		x->anchorValue = x->anchorValue - (pt.y * factor);
 		TTLimit(x->anchorValue, 0.0f, 100.0f);
-		ui_viewer_send(x, TTSymbol("*.*/mix"), TTValue(x->anchorValue));
+		ui_viewer_send(x, TTSymbol("audio/mix"), TTValue(x->anchorValue));
 		
 		snprintf(str, sizeof(str), "%f", x->mix);
 		object_method(textfield, gensym("settext"), str);
@@ -997,7 +997,7 @@ void ui_mousedragdelta(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 	else if (x->gainDragging) {
 		x->anchorValue = x->anchorValue - (pt.y * factor);
 		TTLimit(x->anchorValue, 0.0f, 127.0f);
-		ui_viewer_send(x, TTSymbol("*.*/gain"), TTValue(x->anchorValue));
+		ui_viewer_send(x, TTSymbol("audio/gain"), TTValue(x->anchorValue));
 		
 		snprintf(str, sizeof(str), "%f", x->gain);
 		object_method(textfield, gensym("settext"), str);

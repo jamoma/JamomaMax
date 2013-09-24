@@ -863,10 +863,10 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (gain != obj->has_gain) {
 			obj->has_gain = gain;
 			if (gain)
-				ui_viewer_create(obj, &anObject, gensym("return_gain"), TTSymbol("*.*/gain"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, &anObject, gensym("return_gain"), TTSymbol("audio/gain"), obj->modelAddress, NO); // don't subscribe this viewer
 			else {
-				ui_viewer_destroy(obj, TTSymbol("*.*/gain"));
-				obj->hash_viewers->remove(TTSymbol("*.*/gain"));
+				ui_viewer_destroy(obj, TTSymbol("audio/gain"));
+				obj->hash_viewers->remove(TTSymbol("audio/gain"));
 			}
 		}
 		
@@ -874,10 +874,10 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (mix != obj->has_mix) {
 			obj->has_mix = mix;
 			if (mix)
-				ui_viewer_create(obj, &anObject, gensym("return_mix"), TTSymbol("*.*/mix"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, &anObject, gensym("return_mix"), TTSymbol("audio/mix"), obj->modelAddress, NO); // don't subscribe this viewer
 			else {
-				ui_viewer_destroy(obj, TTSymbol("*.*/mix"));
-				obj->hash_viewers->remove(TTSymbol("*.*/mix"));
+				ui_viewer_destroy(obj, TTSymbol("audio/mix"));
+				obj->hash_viewers->remove(TTSymbol("audio/mix"));
 			}
 			
 			change = true;
@@ -900,10 +900,10 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (freeze != obj->has_freeze) {
 			obj->has_freeze = freeze;
 			if (freeze)
-				ui_viewer_create(obj, &anObject, gensym("return_freeze"), TTSymbol("*.*/freeze"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, &anObject, gensym("return_freeze"), TTSymbol("data/freeze"), obj->modelAddress, NO); // don't subscribe this viewer
 			else {
-				ui_viewer_destroy(obj, TTSymbol("*.*/freeze"));
-				obj->hash_viewers->remove(TTSymbol("*.*/freeze"));
+				ui_viewer_destroy(obj, TTSymbol("data/freeze"));
+				obj->hash_viewers->remove(TTSymbol("data/freeze"));
 			}
 			
 			change = true;
@@ -913,10 +913,10 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (preview != obj->has_preview) {
 			obj->has_preview = preview;
 			if (preview)
-				ui_viewer_create(obj, &anObject, gensym("return_preview"), TTSymbol("*.*/preview"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, &anObject, gensym("return_preview"), TTSymbol("data/preview"), obj->modelAddress, NO); // don't subscribe this viewer
 			else {
-				ui_viewer_destroy(obj, TTSymbol("*.*/preview"));
-				obj->hash_viewers->remove(TTSymbol("*.*/preview"));
+				ui_viewer_destroy(obj, TTSymbol("data/preview"));
+				obj->hash_viewers->remove(TTSymbol("data/preview"));
 			}
 			
 			change = true;
