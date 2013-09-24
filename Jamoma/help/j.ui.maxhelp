@@ -45,21 +45,6 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"frgb" : 0.0,
-					"id" : "obj-23",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 391.0, 363.0, 190.0, 22.0 ],
-					"text" : "Note : should we allow that ?",
-					"textcolor" : [ 0.658824, 0.0, 0.007767, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-22",
@@ -67,7 +52,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 372.0, 323.25, 306.0, 33.0 ],
+					"patching_rect" : [ 381.0, 318.0, 306.0, 33.0 ],
 					"text" : "changing the model:address to which the view patcher is bound updates j.ui infos and capabilities..."
 				}
 
@@ -389,20 +374,6 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"frgb" : 0.0,
-					"id" : "obj-13",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 44.0, 314.0, 84.0, 22.0 ],
-					"text" : "j.hub"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-14",
 					"linecount" : 2,
@@ -410,8 +381,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 49.0, 389.0, 250.0, 33.0 ],
-					"text" : "j.view @module_type control @description \"this module doesn't do anything\"",
+					"patching_rect" : [ 49.0, 389.0, 168.0, 33.0 ],
+					"text" : "j.view @description \"this view doesn't display anything\"",
 					"varname" : "j.hub"
 				}
 
@@ -605,7 +576,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 49.0, 164.0, 300.0, 70.0 ],
-					"text" : "/degrade~",
+					"text" : "/noModelAddress",
 					"textcolor" : [ 0.65, 0.65, 0.65, 1.0 ]
 				}
 
