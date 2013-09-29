@@ -20,7 +20,7 @@
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
-	<!-- <inletlist>
+	<inletlist>
 		<inlet id="0" type="int/float">
 			<digest>
 				function value
@@ -73,7 +73,7 @@
 		</outlet>
 	</outletlist>
 	<!--ARGUMENTS-->
-	<!-- <objarglist>
+	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
 				TEXT_HERE
@@ -86,7 +86,7 @@
 	<!--MESSAGES-->
 	<methodlist>
 		<method name="int">
-			<!-- <arglist>
+			<arglist>
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
