@@ -25,7 +25,7 @@ require "#{glibdir}/Core/Shared/jamomalib"
 
 configuration = "Development"
 clean = false
-compiler = false
+# compiler = false
 postLog = false
 runTests = false
 
@@ -48,11 +48,11 @@ ARGV.each do |arg|
     puts "- <test> causes Ruby unit tests to be run at the end of the build process"
     puts "  The default is that unit tests are not run at the end of the build process"
     puts
-    puts "- Additionally on Mac you can enforce the use of a certain compiler"
-    puts "  Possible options are <icc>, <gcc47> or <clang>"
-    puts "  By default the build script will look for available compilers with the following priority:"
-    puts "  (1) icc, (2) clang, (3) gcc47"
-    puts
+#    puts "- Additionally on Mac you can enforce the use of a certain compiler"
+#    puts "  Possible options are <icc>, <gcc47> or <clang>"
+#    puts "  By default the build script will look for available compilers with the following priority:"
+#    puts "  (1) icc, (2) clang, (3) gcc47"
+#    puts
     puts "The order of arguments is optional"
     puts
     exit 0
@@ -72,15 +72,15 @@ ARGV.each do |arg|
   end
   
   # On the Mac you can force the use of a certain compiler
-  if mac?
-    if(arg=="icc")
-      compiler = "icc"
-    elsif (arg=="gcc47")
-      compiler = "gcc47"
-    elsif (arg=="clang")
-      compiler = "clang"
-    end
-  end
+  #if mac?
+  #  if(arg=="icc")
+  #    compiler = "icc"
+  #  elsif (arg=="gcc47")
+  #    compiler = "gcc47"
+  #  elsif (arg=="clang")
+  #    compiler = "clang"
+  #  end
+  #end
   
   # Do we want to post the log to Terminal?
   if (arg=="log")
@@ -161,7 +161,7 @@ puts "  Building Jamoma #{git_tag} (rev. #{git_rev})"
 puts
 puts "  configuration = #{configuration}"
 puts "  clean         = #{clean}"
-puts "  compiler      = #{compiler}"
+# puts "  compiler      = #{compiler}"
 puts "  postLog       = #{postLog}"
 puts "  runTests      = #{runTests}"
 puts
@@ -180,7 +180,8 @@ puts ""
 
 quietly do
 #  ARGV = [configuration, clean, compiler, git_tag, git_rev]
-  ARGV = [configuration, clean, compiler]
+#  ARGV = [configuration, clean, compiler]
+  ARGV = [configuration, clean]
 end
 
 # Get a list of implementations that need to be built
