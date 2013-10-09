@@ -277,6 +277,8 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
                 defer((ObjectPtr)x, (method)wrappedModularClass_anything, _sym_reset, 0, NULL);
 #endif
         }
+        else if (number > 255)
+            object_error((ObjectPtr)x, "the size have to be lower than 256");
         
         EXTRA->firstArray = NO;
     }
