@@ -23,7 +23,7 @@ typedef struct extra {
 	TTBoolean		changingAddress;        // a flag to protect from succession of address changes
 	TTPtr			ui_qelem;               // to output "qlim'd" data for ui object
     TTListPtr       ui_qelem_list;          // a list of defered value to output
-	TTUInt8			countSubscription;      // to count how many time we try to subscribe
+	TTUInt32		countSubscription;      // to count how many time we try to subscribe
 
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
@@ -36,7 +36,7 @@ void		WrappedViewerClass_free(TTPtr self);
 void		remote_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst);
 
 void		remote_new_address(TTPtr self, SymbolPtr address);
-void		remote_array_create(TTPtr self, TTObjectBasePtr *returnedViewer, TTUInt8 index);
+void		remote_array_create(TTPtr self, TTObjectBasePtr *returnedViewer, TTUInt32 index);
 void		remote_array_subscribe(TTPtr self, SymbolPtr address);
 void		remote_array_select(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		remote_address(TTPtr self, SymbolPtr name);
@@ -166,7 +166,7 @@ void WrappedViewerClass_free(TTPtr self)
         
         // delete array
         if (EXTRA->arrayValue) {
-            for (TTUInt8 i = 0; i < x->arraySize; i++)
+            for (TTUInt32 i = 0; i < x->arraySize; i++)
                 if (EXTRA->arrayValue[i])
                     delete EXTRA->arrayValue[i];
             
@@ -187,7 +187,7 @@ void remote_new_address(TTPtr self, SymbolPtr address)
 	AtomCount					argc = 0; 
 	AtomPtr						argv = NULL;
 	TTUInt32					number;
-	TTUInt8						i, j;
+	TTUInt32					i, j;
 	TTAddress                   newAddress = TTAddress(address->s_name);
 	SymbolPtr					instanceAddress;
 	TTObjectBasePtr				anObject;
@@ -199,7 +199,7 @@ void remote_new_address(TTPtr self, SymbolPtr address)
     number = jamoma_parse_bracket(address, x->arrayFormatInteger, x->arrayFormatString);
     
     // don't resize to 0
-    if (number && number <= 255) {
+    if (number && number <= MAX_ARRAY_SIZE) {
         
         // Starts iteration on internals
         x->iterateInternals = YES;
@@ -252,9 +252,11 @@ void remote_new_address(TTPtr self, SymbolPtr address)
         // attach the j.remote to connected ui object
         //remote_attach(self);
     }
+    else if (number > MAX_ARRAY_SIZE)
+        object_error((ObjectPtr)x, "the size is greater than the maximum array size (%d)", MAX_ARRAY_SIZE);
 }
 
-void remote_array_create(TTPtr self, TTObjectBasePtr *returnedViewer, TTUInt8 index)
+void remote_array_create(TTPtr self, TTObjectBasePtr *returnedViewer, TTUInt32 index)
 {
 	TTValue			args, none;
 	TTObjectBasePtr	returnValueCallback;
@@ -286,7 +288,7 @@ void remote_array_subscribe(TTPtr self, SymbolPtr address)
 	TTObjectBasePtr				toSubscribe;
 	TTBoolean					subscribe;
 	TTSubscriberPtr				aSubscriber;
-	TTUInt8						i;
+	TTUInt32					i;
 	TTValue						v;
 	Atom						a[1];
 	
@@ -444,7 +446,7 @@ void remote_address(TTPtr self, SymbolPtr address)
 	TTObjectBasePtr	anObject, aSubscriber;
 	SymbolPtr		instanceAddress;
 	TTValue			v;
-	TTUInt8			i;
+	TTUInt32		i;
 	
 	// Avoid succession of address changes
     if (!EXTRA->changingAddress) {
@@ -488,7 +490,7 @@ void remote_address(TTPtr self, SymbolPtr address)
                 
                 // delete array
                 if (EXTRA->arrayValue) {
-                    for (TTUInt8 i = 0; i < x->arraySize; i++)
+                    for (TTUInt32 i = 0; i < x->arraySize; i++)
                         if (EXTRA->arrayValue[i])
                             delete EXTRA->arrayValue[i];
                     
@@ -680,7 +682,7 @@ void remote_array_return_value(TTPtr baton, TTValue& v)
 	TTValuePtr					b, m;
 	SymbolPtr					msg, iAdrs;
 	long						argc = 0;
-	TTUInt8						i;
+	TTUInt32					i;
 	AtomPtr						argv = NULL;
 	TTBoolean					shifted = NO;
 	TTSymbol					memoCursor;
@@ -836,7 +838,7 @@ void remote_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
 	TTAddress           address;
 	TTSymbol			service;
 	TTList				returnedNodes;
-	TTUInt8				i;
+	TTUInt32			i;
 	TTValue				v;
 	
 	if (msg) {

@@ -38,6 +38,8 @@
 #define selectedObject getSelectedObject(x)
 #define selectedAddress x->cursor
 
+#define MAX_ARRAY_SIZE 256
+
 
 /** Definition for specific TT class things. TODO: This description is non-informative.
  @param c
@@ -138,8 +140,8 @@ typedef struct _wrappedModularInstance {
 	TTAddress								patcherAddress;				///< the patcher address in which the external is
 	
 #ifdef ARRAY_EXTERNAL
-	TTUInt8									arraySize;					// the size of the array size for iteration
-	TTUInt8									arrayIndex;					// the index number for array selection
+	TTUInt32								arraySize;					// the size of the array size for iteration
+	TTUInt32								arrayIndex;					// the index number for array selection
 	TTAddress								arrayAddress;				// keep the address in memory to filter repetitions
 	TTValue									arrayArgs;					// keep attributes argument of the external for dynamic creation
 	

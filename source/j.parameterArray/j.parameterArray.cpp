@@ -36,7 +36,7 @@ void		WrappedDataClass_free(TTPtr self);
 void		data_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst);
 
 void		data_new_address(TTPtr self, SymbolPtr msg);
-void		data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt8 index);
+void		data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt32 index);
 void		data_address(TTPtr self, SymbolPtr name);
 
 #ifndef JMOD_RETURN
@@ -177,7 +177,7 @@ void WrappedDataClass_free(TTPtr self)
 #ifndef JMOD_RETURN
 	// delete array
 	if (x->extra && EXTRA->arrayValue) {
-		for (TTUInt8 i = 0; i < x->arraySize; i++)
+		for (TTUInt32 i = 0; i < x->arraySize; i++)
 			if (EXTRA->arrayValue[i])
 				delete EXTRA->arrayValue[i];
 		
@@ -194,7 +194,7 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
 	AtomCount					argc = 0; 
 	AtomPtr						argv = NULL;
 	TTUInt32					number;
-	TTUInt8						i, j;
+	TTUInt32					i, j;
 	TTAddress					newAddress = relativeAddress->s_name;
     TTAddress                   returnedAddress;
     TTNodePtr                   returnedNode = NULL;
@@ -215,7 +215,7 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
         number = jamoma_parse_bracket(relativeAddress, x->arrayFormatInteger, x->arrayFormatString);
         
         // don't resize to 0
-        if (number && number <= 255) {
+        if (number && number <= MAX_ARRAY_SIZE) {
             
             // Starts iteration on internals
             x->iterateInternals = YES;
@@ -277,8 +277,8 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
                 defer((ObjectPtr)x, (method)wrappedModularClass_anything, _sym_reset, 0, NULL);
 #endif
         }
-        else if (number > 255)
-            object_error((ObjectPtr)x, "the size have to be lower than 256");
+        else if (number > MAX_ARRAY_SIZE)
+            object_error((ObjectPtr)x, "the size is greater than the maximum array size (%d)", MAX_ARRAY_SIZE);
         
         EXTRA->firstArray = NO;
     }
@@ -286,7 +286,7 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
         object_error((ObjectPtr)x, "can't register because %s is not a relative address", relativeAddress->s_name);
 }
 
-void data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt8 index)
+void data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt32 index)
 {
 	TTValue			args, none;
 	TTObjectBasePtr	returnValueCallback;
@@ -331,7 +331,7 @@ void data_address(TTPtr self, SymbolPtr address)
 #ifndef JMOD_RETURN
                 // delete array
                 if (EXTRA->arrayValue) {
-                    for (TTUInt8 i = 0; i < x->arraySize; i++)
+                    for (TTUInt32 i = 0; i < x->arraySize; i++)
                         if (EXTRA->arrayValue[i])
                             delete EXTRA->arrayValue[i];
                     
@@ -541,7 +541,7 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 	TTValuePtr					b, m;
 	TTSymbol					type;
 	SymbolPtr					msg, iAdrs;
-	TTUInt8						i; 
+	TTUInt32					i;
 	long						argc = 0;
 	AtomPtr						argv = NULL;
 	TTBoolean					shifted = NO;
