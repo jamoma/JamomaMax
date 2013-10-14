@@ -24,7 +24,7 @@ class MicArray {
         MicArray(short numMics);
 
         //! True if the channel num >= 0 and < the total number of channels.
-        bool validChannel(short channelNum);
+        bool validChannel(short channelNum = 8);
 
         //! Set center in x.
         void centerLR(double newCenterLR);
