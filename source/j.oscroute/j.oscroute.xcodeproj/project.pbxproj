@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		469BD9ED180B564E00A023B3 /* j.oscroute.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.oscroute.yml; sourceTree = "<group>"; };
 		A7CC31381518942800992C6E /* j.oscroute.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.oscroute.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -14,6 +15,7 @@
 		A72D873215188DFD001DA7C1 = {
 			isa = PBXGroup;
 			children = (
+				469BD9ED180B564E00A023B3 /* j.oscroute.yml */,
 				A7CC31371518941E00992C6E /* Sources */,
 			);
 			sourceTree = "<group>";

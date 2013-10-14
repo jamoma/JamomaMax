@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		469BD9EB180B55E000A023B3 /* j.namespace.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.namespace.yml; sourceTree = "<group>"; };
 		D24A23A81510B73A008A5F67 /* j.namespace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.namespace.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -14,6 +15,7 @@
 		08FB7794FE84155DC02AAC07 /* j.namespace */ = {
 			isa = PBXGroup;
 			children = (
+				469BD9EB180B55E000A023B3 /* j.namespace.yml */,
 				D24A23A81510B73A008A5F67 /* j.namespace.cpp */,
 			);
 			name = j.namespace;

@@ -21,6 +21,7 @@ libraries:
   - MODULAR  
   - DSP
   - C74
+  - JAMOMA_FOR_MAX
 
 prefix: ../c74support/max-includes/macho-prefix.pch
 

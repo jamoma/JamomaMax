@@ -14,7 +14,7 @@
  */
 
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 #define NUM_INLETS 4
 #define NUM_OUTLETS 4

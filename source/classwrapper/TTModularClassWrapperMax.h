@@ -31,9 +31,10 @@
 #include "TTClassWrapperMax.h"
 
 #include "TTModular.h"				// Jamoma Modular API
+#include "JamomaForMax.h"           // Jamoma for Max
 #include "TTInputAudio.h"
 #include "TTOutputAudio.h"
-#include "ModularForMax.h"			// Jamoma Modular for Max
+
 
 #define selectedObject getSelectedObject(x)
 #define selectedAddress x->cursor

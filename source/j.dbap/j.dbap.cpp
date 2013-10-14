@@ -14,7 +14,7 @@
  */
 
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 #include "j.dbap.h"
 
 // Globals

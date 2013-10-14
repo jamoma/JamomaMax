@@ -1,13 +1,13 @@
 /** 
  * \file j.pass.cpp
  * External for Jamoma: pass messages if they match our criteria
- * By Tim Place, Copyright © 2005
+ * By Tim Place, Copyright ï¿½ 2005
  * 
  * License: This code is licensed under the terms of the "New BSD License"
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 #define MAX_ARGCOUNT 100
 #define MAX_MESS_SIZE 2048

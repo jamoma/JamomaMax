@@ -15,9 +15,9 @@
 #include "ext_obex.h"
 #include "ext_user.h"
 #include "ext_common.h"
-#include "jpatcher_api.h"			// jpatcher_api.h must come before z_dsp.h (in Jamoma.h)
+#include "jpatcher_api.h"			// jpatcher_api.h must come before z_dsp.h (in JamomaForMax.h)
 #include "jgraphics.h"
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 #include "ext_symobject.h"
 
 #define LISTSIZE 512	// TODO: Discuss longer list support for Max 5

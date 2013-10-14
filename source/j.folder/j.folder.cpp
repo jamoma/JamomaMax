@@ -14,7 +14,7 @@
  */
 
  
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 typedef struct _folder {
 	t_object	obj;

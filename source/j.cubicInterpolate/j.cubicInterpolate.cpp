@@ -14,7 +14,7 @@
  */
 
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 typedef struct _cubic_interp{	// Data structure for this object 
 	t_object	ob;				// Must always be the first field; used by Max
