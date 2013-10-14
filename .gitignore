@@ -44,3 +44,5 @@ project.xcworkspace
 *.mxo
 *.sdf
 *.vcxproj
+
+JamomaMaxVersion.h
