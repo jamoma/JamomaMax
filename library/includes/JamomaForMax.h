@@ -24,7 +24,7 @@
 #include <Carbon/Carbon.h>
 #endif
 
-#ifdef JAMOMA_PLATFORM_WIN
+#ifdef TT_PLATFORM_WIN
 
     #include "windows.h"
     #define JAMOMA_EXPORT_MAXOBJ __declspec(dllexport)
@@ -42,9 +42,9 @@
     #endif
     #endif
 
-#else // JAMOMA_PLATFORM_MAC
+#else // TT_PLATFORM_MAC
 
-    #define JAMOMA_PLATFORM_MAC
+    #define TT_PLATFORM_MAC
     #define JAMOMA_EXPORT_MAXOBJ __attribute__((visibility("default")))
 
     #ifdef JAMOMA_EXPORTS
