@@ -587,7 +587,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 167.0, 155.0, 310.0, 29.0 ],
-					"text" : "j.parameter #1/value @type float @range/bounds 0. 1. @range/clipmode both @repetitions/allow 0 @value/default 0."
+					"text" : "j.parameter #1/value @type float @range/bounds 0. 1. @range/clipmode both @repetitions/filter 1 @value/default 0."
 				}
 
 			}

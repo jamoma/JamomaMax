@@ -594,7 +594,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 23.0, 22.0, 367.0, 31.0 ],
-									"text" : "j.message autofollow/enable @type boolean @repetitions/allow 1 @description \"temporary disable/enable autofollow mode\""
+									"text" : "j.message autofollow/enable @type boolean @repetitions/filter 0 @description \"temporary disable/enable autofollow mode\""
 								}
 
 							}
@@ -705,7 +705,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 104.0, 177.0, 382.0, 31.0 ],
-									"text" : "j.parameter autofollow/time @type decimal @repetitions/allow 1 @description \"autofollow time (in seconds)\" @priority 1 @value/default 0."
+									"text" : "j.parameter autofollow/time @type decimal @repetitions/filter 0 @description \"autofollow time (in seconds)\" @priority 1 @value/default 0."
 								}
 
 							}
@@ -720,7 +720,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 105.0, 100.0, 370.0, 31.0 ],
-									"text" : "j.parameter autofollow/active @type boolean @repetitions/allow 1 @description \"enable autofollow mode\" @value/default 0 @priority 2"
+									"text" : "j.parameter autofollow/active @type boolean @repetitions/filter 0 @description \"enable autofollow mode\" @value/default 0 @priority 2"
 								}
 
 							}
@@ -921,7 +921,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 41.0, 23.0, 425.0, 27.0 ],
-					"text" : "j.parameter addresses @type array @description \"addresses to include in the cue\" @value/default / @priority 3 @repetitions/allow 0"
+					"text" : "j.parameter addresses @type array @description \"addresses to include in the cue\" @value/default / @priority 3 @repetitions/filter 1"
 				}
 
 			}
@@ -4841,7 +4841,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 155.0, 213.0, 426.0, 31.0 ],
-													"text" : "j.message cue/move @type array @repetitions/allow 1 @description \"rename a cue : format is 'original index of cue' 'new index of cue' \""
+													"text" : "j.message cue/move @type array @repetitions/filter 0 @description \"rename a cue : format is 'original index of cue' 'new index of cue' \""
 												}
 
 											}
@@ -4885,7 +4885,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 115.0, 108.0, 407.0, 43.0 ],
-													"text" : "j.message cue/copy @type array @repetitions/allow 1 @description \"rename a cue : format is 'index of cue to copy' 'index of new cue'  'new  cue name'\""
+													"text" : "j.message cue/copy @type array @repetitions/filter 0 @description \"rename a cue : format is 'index of cue to copy' 'index of new cue'  'new  cue name'\""
 												}
 
 											}
@@ -4929,7 +4929,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 17.0, 28.0, 391.0, 31.0 ],
-													"text" : "j.message cue/rename @type array @repetitions/allow 1 @description \"rename a cue : format is 'index of cue' 'new name'\""
+													"text" : "j.message cue/rename @type array @repetitions/filter 0 @description \"rename a cue : format is 'index of cue' 'new name'\""
 												}
 
 											}
@@ -5114,7 +5114,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 281.0, 252.0, 407.0, 31.0 ],
-													"text" : "j.message cue/remove/current @type none @repetitions/allow 1 @description \"remove the current cue\""
+													"text" : "j.message cue/remove/current @type none @repetitions/filter 0 @description \"remove the current cue\""
 												}
 
 											}
@@ -5143,7 +5143,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 275.0, 187.0, 407.0, 31.0 ],
-													"text" : "j.message cue/remove/previous @type none @repetitions/allow 1 @description \"remove the previous cue\""
+													"text" : "j.message cue/remove/previous @type none @repetitions/filter 0 @description \"remove the previous cue\""
 												}
 
 											}
@@ -5172,7 +5172,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 162.0, 146.0, 407.0, 31.0 ],
-													"text" : "j.message cue/remove/next @type none @repetitions/allow 1 @description \"remove the next cue\""
+													"text" : "j.message cue/remove/next @type none @repetitions/filter 0 @description \"remove the next cue\""
 												}
 
 											}
@@ -5201,7 +5201,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 100.0, 391.0, 31.0 ],
-													"text" : "j.message cue/remove @type array @repetitions/allow 1 @description \"remove the selected cue by its number or name\""
+													"text" : "j.message cue/remove @type array @repetitions/filter 0 @description \"remove the selected cue by its number or name\""
 												}
 
 											}
@@ -5432,7 +5432,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 269.0, 179.0, 407.0, 31.0 ],
-													"text" : "j.message cue/recall/current @type none @repetitions/allow 1 @description \"trigger the current cue\""
+													"text" : "j.message cue/recall/current @type none @repetitions/filter 0 @description \"trigger the current cue\""
 												}
 
 											}
@@ -5461,7 +5461,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 263.0, 114.0, 407.0, 31.0 ],
-													"text" : "j.message cue/recall/previous @type none @repetitions/allow 1 @description \"trigger the previous cue\""
+													"text" : "j.message cue/recall/previous @type none @repetitions/filter 0 @description \"trigger the previous cue\""
 												}
 
 											}
@@ -5490,7 +5490,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 150.0, 73.0, 407.0, 31.0 ],
-													"text" : "j.message cue/recall/next @type none @repetitions/allow 1 @description \"trigger the next cue\""
+													"text" : "j.message cue/recall/next @type none @repetitions/filter 0 @description \"trigger the next cue\""
 												}
 
 											}
@@ -5519,7 +5519,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 38.0, 27.0, 380.0, 31.0 ],
-													"text" : "j.message cue/recall @type array @repetitions/allow 1 @description \"trigger the selected cue by its number or name\""
+													"text" : "j.message cue/recall @type array @repetitions/filter 0 @description \"trigger the selected cue by its number or name\""
 												}
 
 											}
@@ -5739,7 +5739,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 170.0, 60.0, 212.0, 43.0 ],
-									"text" : "j.message cue/update @type none @repetitions/allow 1 @description \"Store last changes in the selected CUE\""
+									"text" : "j.message cue/update @type none @repetitions/filter 0 @description \"Store last changes in the selected CUE\""
 								}
 
 							}
@@ -5811,7 +5811,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 31.0, 12.0, 318.0, 43.0 ],
-									"text" : "j.message cue/create @type array @repetitions/allow 1 @description \"create a new cue by number and name - name only will create a new cue after the current one\""
+									"text" : "j.message cue/create @type array @repetitions/filter 0 @description \"create a new cue by number and name - name only will create a new cue after the current one\""
 								}
 
 							}
@@ -6430,7 +6430,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 23.0, 22.0, 308.0, 31.0 ],
-									"text" : "j.message file/new @type none @repetitions/allow 1 @description \"clear all the cuelist to start a new one\""
+									"text" : "j.message file/new @type none @repetitions/filter 0 @description \"clear all the cuelist to start a new one\""
 								}
 
 							}
@@ -6445,7 +6445,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 130.0, 176.0, 312.0, 43.0 ],
-									"text" : "j.message file/edit @type generic @repetitions/allow 1 @description \"edit the cuelist in a text editor - optional argument (editor name) to edit in an external editor\""
+									"text" : "j.message file/edit @type generic @repetitions/filter 0 @description \"edit the cuelist in a text editor - optional argument (editor name) to edit in an external editor\""
 								}
 
 							}
@@ -6460,7 +6460,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 347.0, 22.0, 292.0, 31.0 ],
-									"text" : "j.message file/load @type generic @repetitions/allow 1 @description \"load a cuelist file\""
+									"text" : "j.message file/load @type generic @repetitions/filter 0 @description \"load a cuelist file\""
 								}
 
 							}
@@ -6475,7 +6475,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 478.0, 126.0, 347.0, 31.0 ],
-									"text" : "j.message file/write/again @type none @repetitions/allow 1 @description \"save the cues in the last file\""
+									"text" : "j.message file/write/again @type none @repetitions/filter 0 @description \"save the cues in the last file\""
 								}
 
 							}
@@ -6490,7 +6490,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 648.0, 23.0, 298.0, 31.0 ],
-									"text" : "j.message file/write @type generic @repetitions/allow 1 @description \"save cues into a file\""
+									"text" : "j.message file/write @type generic @repetitions/filter 0 @description \"save cues into a file\""
 								}
 
 							}

@@ -287,7 +287,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 274.0, 105.0, 19.0 ],
-									"text" : "@repetitions/allow"
+									"text" : "@repetitions/filter"
 								}
 
 							}
@@ -457,7 +457,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 146.0, 274.0, 282.0, 19.0 ],
-									"text" : "1 (default)/0 --- 1 means that repetitions are allowed"
+									"text" : "0 (default)/0 --- 1 means that repetitions are filtered"
 								}
 
 							}
@@ -651,7 +651,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 131.821503, 151.313141, 436.0, 31.0 ],
-									"text" : "j.parameter a_bang @type generic @repetitions/allow 1 @ramp/drive none @priority 1 @description \"a bang\"",
+									"text" : "j.parameter a_bang @type generic @repetitions/filter 0 @ramp/drive none @priority 1 @description \"a bang\"",
 									"varname" : "foot/switch"
 								}
 
@@ -1062,7 +1062,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 639.0, 350.0, 523.0, 19.0 ],
-					"text" : "j.parameter a_menu @repetitions/allow 1 @type string @description \"a menu\" @priority 1",
+					"text" : "j.parameter a_menu @repetitions/filter 0 @type string @description \"a menu\" @priority 1",
 					"varname" : "module_in[1]"
 				}
 
@@ -1380,7 +1380,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 626.0, 136.0, 601.0, 31.0 ],
-					"text" : "j.parameter this_parameter @repetitions/allow 1 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter this_parameter @repetitions/filter 0 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
 

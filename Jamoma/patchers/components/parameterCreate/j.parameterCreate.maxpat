@@ -6348,7 +6348,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 295.0, 93.0, 145.0, 17.0 ],
-									"text" : "remove @repetitions/allow"
+									"text" : "remove @repetitions/filter"
 								}
 
 							}
@@ -6434,7 +6434,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 140.0, 90.0, 149.0, 19.0 ],
-									"text" : "prepend @repetitions/allow"
+									"text" : "prepend @repetitions/filter"
 								}
 
 							}
@@ -6568,7 +6568,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 10.0, 242.0, 94.0, 19.0 ],
-					"text" : "Allow repetitions"
+					"text" : "Filter repetitions"
 				}
 
 			}

@@ -87,7 +87,7 @@ t_symbol	*jps_done,
 			*jps_ramp,	
 			*jps_ramp_drive,
 			*jps_ramp_function,
-			*jps_repetitions_allow,
+			*jps_repetitions_filter,
 			*jps_description,
 			*jps_enable,
 			*jps_value,
@@ -301,7 +301,7 @@ void jamomaSymbolsInit()
 	jps_ramp_drive					= SymbolGen("ramp/drive");
 	jps_ramp_function				= SymbolGen("ramp/function");
 	
-	jps_repetitions_allow			= SymbolGen("repetitions/allow");
+	jps_repetitions_filter			= SymbolGen("repetitions/filter");
 	jps_description					= SymbolGen("description");
 	jps_enable						= SymbolGen("enable");
 	jps_value						= SymbolGen("value");

@@ -926,7 +926,7 @@
             562.0,
             31.0
           ],
-          "text": "j.message send @repetitions/allow 1 @description \"An Open Sound Control message to send out over the network.\""
+          "text": "j.message send @repetitions/filter 0 @description \"An Open Sound Control message to send out over the network.\""
         }
       },
       {
@@ -948,7 +948,7 @@
             599.0,
             31.0
           ],
-          "text": "j.return receive @repetitions/allow 1 @type generic @description \"Open Sound Control messages coming in from the network are reported here.\""
+          "text": "j.return receive @repetitions/filter 0 @type generic @description \"Open Sound Control messages coming in from the network are reported here.\""
         }
       },
       {

@@ -2201,7 +2201,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 195.0, 335.0, 200.0, 19.0 ],
-									"text" : "- allow repetitions of the same value"
+									"text" : "- filter repetitions of the same value"
 								}
 
 							}
@@ -2257,7 +2257,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 40.0, 336.0, 115.0, 19.0 ],
-									"text" : "@repetitions/allow"
+									"text" : "@repetitions/filter"
 								}
 
 							}

@@ -2403,7 +2403,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 550.0, 734.0, 127.0, 20.0 ],
-									"text" : "route repetitions/allow"
+									"text" : "route repetitions/filter"
 								}
 
 							}
@@ -2670,7 +2670,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 550.0, 758.964111, 241.0, 33.0 ],
-									"text" : "j.test.assert.equal repetitions/allow-test @input repetitions/allow @compareTo 1"
+									"text" : "j.test.assert.equal repetitions/filter-test @input repetitions/filter @compareTo 1"
 								}
 
 							}

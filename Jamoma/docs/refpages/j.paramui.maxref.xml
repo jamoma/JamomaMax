@@ -514,9 +514,9 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
 			</attributelist>
 		</attribute>
-		<attribute name="repetitions/allow" get="1" set="1" type="int" size="1">
+		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
 			<digest>
-				Allow Repeated Values
+				Filter Repeated Values
 			</digest>
 			<description>
 				TEXT_HERE
@@ -524,7 +524,7 @@
 			<attributelist>
 				<attribute name="category" get="1" set="1" type="atom" size="1" value="Jamoma" />
 				<attribute name="default" get="1" set="1" type="int" size="1" value="0" />
-				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Allow Repeated Values" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Filter Repeated Values" />
 				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
 			</attributelist>

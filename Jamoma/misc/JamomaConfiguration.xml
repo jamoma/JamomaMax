@@ -6,7 +6,7 @@
   <entry App="value/stepsize" TT="valueStepsize"/>
   <entry App="range/clipmode" TT="rangeClipmode"/>
   <entry App="ramp/drive" TT="rampDrive"/>
-  <entry App="repetitions/allow" TT="repetitionsAllow"/>
+  <entry App="repetitions/filter" TT="repetitionsFilter"/>
   <entry App="ramp/function" TT="rampFunction"/>
   <entry App="ramp/function/parameters" TT="rampFunctionParameters"/>
   <entry App="range/bounds" TT="rangeBounds"/>

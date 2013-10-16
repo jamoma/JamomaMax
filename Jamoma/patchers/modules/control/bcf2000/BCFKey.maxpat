@@ -290,7 +290,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 46.0, 166.0, 357.0, 31.0 ],
-					"text" : "j.parameter #2/key/upper @type boolean @repetitions/allow 1 @ramp/drive none @priority 5 @description \"Upper key.\"",
+					"text" : "j.parameter #2/key/upper @type boolean @repetitions/filter 0 @ramp/drive none @priority 5 @description \"Upper key.\"",
 					"varname" : "8/key/upper"
 				}
 

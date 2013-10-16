@@ -456,7 +456,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 361.0, 255.0, 275.0, 18.0 ],
-									"text" : "remoteMinuitApp?get /mySymbol:repetitionsAllow"
+									"text" : "remoteMinuitApp?get /mySymbol:repetitionsFilter"
 								}
 
 							}

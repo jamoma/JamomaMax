@@ -249,7 +249,7 @@
             348.0,
             43.0
           ],
-          "text": "j.parameter opValue @type decimal @ramp/drive Max @repetitions/allow 0 @description \"Number to associate with operation.\"",
+          "text": "j.parameter opValue @type decimal @ramp/drive Max @repetitions/filter 1 @description \"Number to associate with operation.\"",
           "varname": "op_value"
         }
       },

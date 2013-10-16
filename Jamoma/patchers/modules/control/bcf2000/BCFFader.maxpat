@@ -193,7 +193,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 46.0, 127.0, 432.0, 31.0 ],
-					"text" : "j.parameter #2/fader @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @ramp/drive Max @priority 4 @description \"Fader.\"",
+					"text" : "j.parameter #2/fader @type integer @range/bounds 0 127 @range/clipmode both @repetitions/filter 0 @ramp/drive Max @priority 4 @description \"Fader.\"",
 					"varname" : "8/fader"
 				}
 

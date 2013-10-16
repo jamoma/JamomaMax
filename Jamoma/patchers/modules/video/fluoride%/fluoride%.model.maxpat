@@ -319,7 +319,7 @@
             590.0,
             31.0
           ],
-          "text": "j.parameter glow @type decimalArray @repetitions/allow 0  @dataspace color @dataspace/unit rgb @range/bounds 0. 1. @description \"Specify the red green and blue components for the glowing color (RGB). The range for each component should be between 0.0 and 1.0.\"",
+          "text": "j.parameter glow @type decimalArray @repetitions/filter 1  @dataspace color @dataspace/unit rgb @range/bounds 0. 1. @description \"Specify the red green and blue components for the glowing color (RGB). The range for each component should be between 0.0 and 1.0.\"",
           "varname": "glow"
         }
       },

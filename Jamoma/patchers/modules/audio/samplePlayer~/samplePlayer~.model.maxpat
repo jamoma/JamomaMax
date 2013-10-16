@@ -68,7 +68,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 859.5, 553.0, 465.0, 27.0 ],
-					"text" : "j.parameter sample/vzoom @type decimal @range/clipmode non @description @repetitions/allow 0 @ramp/drive none \"set vertical zoom\"",
+					"text" : "j.parameter sample/vzoom @type decimal @range/clipmode non @description @repetitions/filter 1 @ramp/drive none \"set vertical zoom\"",
 					"varname" : "sample/vzoom"
 				}
 
@@ -85,7 +85,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 859.5, 594.0, 457.0, 27.0 ],
-					"text" : "j.message sample/displaystart @type decimal @range/bounds 0. 1000000. @range/clipmode low @description @repetitions/allow 0 @ramp/drive Max \"display start  time in ms\"",
+					"text" : "j.message sample/displaystart @type decimal @range/bounds 0. 1000000. @range/clipmode low @description @repetitions/filter 1 @ramp/drive Max \"display start  time in ms\"",
 					"varname" : "sample/displaystart"
 				}
 
@@ -102,7 +102,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 859.5, 632.0, 464.0, 27.0 ],
-					"text" : "j.message sample/displaylength @type decimal @range/bounds 0. 1000000. @range/clipmode low @description @repetitions/allow 0 @ramp/drive Max @description \"display length in ms\"",
+					"text" : "j.message sample/displaylength @type decimal @range/bounds 0. 1000000. @range/clipmode low @description @repetitions/filter 1 @ramp/drive Max @description \"display length in ms\"",
 					"varname" : "sample/displaylength"
 				}
 
@@ -118,7 +118,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 702.0, 410.0, 674.0, 17.0 ],
-					"text" : "j.parameter sample/stop @type decimal @range/bounds 0. 1000000. @range/clipmode low @description \"stoptime time in ms\" @repetitions/allow 0 @ramp/drive Max",
+					"text" : "j.parameter sample/stop @type decimal @range/bounds 0. 1000000. @range/clipmode low @description \"stoptime time in ms\" @repetitions/filter 1 @ramp/drive Max",
 					"varname" : "sample/stop"
 				}
 
@@ -134,7 +134,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 648.5, 380.0, 658.0, 17.0 ],
-					"text" : "j.parameter sample/start @type decimal @range/bounds 0. 1000000. @range/clipmode low @description \"start time in ms\" @repetitions/allow 0 @ramp/drive Max",
+					"text" : "j.parameter sample/start @type decimal @range/bounds 0. 1000000. @range/clipmode low @description \"start time in ms\" @repetitions/filter 1 @ramp/drive Max",
 					"varname" : "sample/start"
 				}
 
@@ -2239,7 +2239,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 285.0, 591.0, 461.0, 33.0 ],
-					"text" : "j.return info/filename @type string @description \"returns the name of the loaded file\" @repetitions/allow 1"
+					"text" : "j.return info/filename @type string @description \"returns the name of the loaded file\" @repetitions/filter 0"
 				}
 
 			}
@@ -2254,7 +2254,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 195.0, 636.0, 477.0, 33.0 ],
-					"text" : "j.return info/length @type integer @description \"returns the length in [ms] of the internal buffer\" @repetitions/allow 1 @dataspace time @dataspace/unit ms"
+					"text" : "j.return info/length @type integer @description \"returns the length in [ms] of the internal buffer\" @repetitions/filter 0 @dataspace time @dataspace/unit ms"
 				}
 
 			}
@@ -2269,7 +2269,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 64.0, 682.0, 459.0, 33.0 ],
-					"text" : "j.return info/playername @type string @description \"returns the name of the internal buffer\" @repetitions/allow 1"
+					"text" : "j.return info/playername @type string @description \"returns the name of the internal buffer\" @repetitions/filter 0"
 				}
 
 			}
@@ -2283,7 +2283,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 629.5, 349.0, 624.0, 20.0 ],
-					"text" : "j.message direct @type generic @repetitions/allow 1 @description \"direct communication with the groove~ object\""
+					"text" : "j.message direct @type generic @repetitions/filter 0 @description \"direct communication with the groove~ object\""
 				}
 
 			}
@@ -2346,7 +2346,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 402.5, 86.0, 472.0, 20.0 ],
-					"text" : "j.message play @type boolean @repetitions/allow 0 @description \"Play sound file.\"",
+					"text" : "j.message play @type boolean @repetitions/filter 1 @description \"Play sound file.\"",
 					"varname" : "play"
 				}
 
@@ -2381,7 +2381,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 91.0, 113.0, 131.0, 127.0 ],
-					"text" : "j.message open @type generic @repetitions/allow 1 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\"",
+					"text" : "j.message open @type generic @repetitions/filter 0 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\"",
 					"varname" : "j.parameter.mxb[10]"
 				}
 

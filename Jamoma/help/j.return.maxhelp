@@ -345,7 +345,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 395.0, 223.0, 271.0, 60.0 ],
-													"text" : "j.return myCounter @type integer @active 1 @range/bounds 0 10 @range/clipmode wrap @repetitions/allow 0 @description \"Count from 0 to 9\""
+													"text" : "j.return myCounter @type integer @active 1 @range/bounds 0 10 @range/clipmode wrap @repetitions/filter 1 @description \"Count from 0 to 9\""
 												}
 
 											}

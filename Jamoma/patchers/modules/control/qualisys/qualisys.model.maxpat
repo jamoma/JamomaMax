@@ -4669,7 +4669,7 @@
             322.0,
             34.0
           ],
-          "text": "j.message.array 13 dataEnable @type integer @repetitions/allow 1 @description \"Toggle data streams\""
+          "text": "j.message.array 13 dataEnable @type integer @repetitions/filter 0 @description \"Toggle data streams\""
         }
       },
       {
@@ -4692,7 +4692,7 @@
             218.0,
             48.0
           ],
-          "text": "j.parameter host @type string @repetitions/allow 1 @description \"IP address of the QTM computer\""
+          "text": "j.parameter host @type string @repetitions/filter 0 @description \"IP address of the QTM computer\""
         }
       },
       {

@@ -1090,7 +1090,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 682.0, 259.0, 196.0, 20.0 ],
-					"text" : "j.receive /play:repetitions/allow"
+					"text" : "j.receive /play:repetitions/filter"
 				}
 
 			}
@@ -1117,7 +1117,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 683.0, 236.0, 183.0, 20.0 ],
-					"text" : "j.send /play:repetitions/allow"
+					"text" : "j.send /play:repetitions/filter"
 				}
 
 			}

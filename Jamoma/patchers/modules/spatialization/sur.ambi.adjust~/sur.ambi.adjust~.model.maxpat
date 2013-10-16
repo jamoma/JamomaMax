@@ -12125,7 +12125,7 @@
             361.0,
             43.0
           ],
-          "text": "j.parameter order @type integer @range/bounds 1 3 @range/clipmode both @repetitions/allow 1 @description \"Ambisonic order. Note: Order is only updated when audio is not running.\"",
+          "text": "j.parameter order @type integer @range/bounds 1 3 @range/clipmode both @repetitions/filter 0 @description \"Ambisonic order. Note: Order is only updated when audio is not running.\"",
           "varname": "order"
         }
       }

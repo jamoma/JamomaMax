@@ -109,7 +109,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 491.0, 140.5, 569.0, 47.0 ],
-					"text" : "j.parameter threshold @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds -90 24 @range/clipmode both @description \"The threshold sets the level at which the Noise Gate opens and closes..\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter threshold @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds -90 24 @range/clipmode both @description \"The threshold sets the level at which the Noise Gate opens and closes..\" @dataspace gain @dataspace/unit dB",
 					"varname" : "threshold"
 				}
 
@@ -125,7 +125,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 361.0, 91.5, 594.0, 47.0 ],
-					"text" : "j.parameter release @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000 @range/clipmode both @description \"When the gate closes, this parameter sets how many milliseconds it will take to fade out.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter release @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 1000 @range/clipmode both @description \"When the gate closes, this parameter sets how many milliseconds it will take to fade out.\" @dataspace time @dataspace/unit ms",
 					"varname" : "release"
 				}
 
@@ -141,7 +141,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 281.0, 34.0, 600.0, 47.0 ],
-					"text" : "j.parameter attack @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000 @range/clipmode low @description \"When the gate opens, this parameter sets how many milliseconds it will take to fade in.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter attack @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 1000 @range/clipmode low @description \"When the gate opens, this parameter sets how many milliseconds it will take to fade in.\" @dataspace time @dataspace/unit ms",
 					"varname" : "attack"
 				}
 
@@ -157,7 +157,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 855.0, 242.0, 412.0, 47.0 ],
-					"text" : "j.parameter lookahead @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 100 @range/clipmode low @description \"How many samples to look ahead while monitoring incoming signal.\"",
+					"text" : "j.parameter lookahead @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 100 @range/clipmode low @description \"How many samples to look ahead while monitoring incoming signal.\"",
 					"varname" : "lookahead"
 				}
 

@@ -297,7 +297,7 @@
             589.0,
             43.0
           ],
-          "text": "j.parameter randomness @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 5000 @range/clipmode low @description \"Defines a range of randomness in milliseconds to be applied to the metro interval\" @dataspace time @dataspace/unit ms",
+          "text": "j.parameter randomness @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 5000 @range/clipmode low @description \"Defines a range of randomness in milliseconds to be applied to the metro interval\" @dataspace time @dataspace/unit ms",
           "varname": "randomness"
         }
       },
@@ -340,7 +340,7 @@
             549.0,
             19.0
           ],
-          "text": "j.return trigger @type none @repetitions/allow 1 @description \"Sent every time the metronome fires.\""
+          "text": "j.return trigger @type none @repetitions/filter 0 @description \"Sent every time the metronome fires.\""
         }
       },
       {
@@ -363,7 +363,7 @@
             484.0,
             43.0
           ],
-          "text": "j.parameter time @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 1 5000 @range/clipmode low @dataspace time @dataspace/unit ms @description \"Metro interval (ms)\"",
+          "text": "j.parameter time @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 1 5000 @range/clipmode low @dataspace time @dataspace/unit ms @description \"Metro interval (ms)\"",
           "varname": "time"
         }
       },
@@ -387,7 +387,7 @@
             423.0,
             31.0
           ],
-          "text": "j.parameter toggle @type boolean @ramp/drive none @repetitions/allow 0 @range/bounds 0 1 @range/clipmode both @description \"Toggle qmetro on/off\"",
+          "text": "j.parameter toggle @type boolean @ramp/drive none @repetitions/filter 1 @range/bounds 0 1 @range/clipmode both @description \"Toggle qmetro on/off\"",
           "varname": "toggle"
         }
       }

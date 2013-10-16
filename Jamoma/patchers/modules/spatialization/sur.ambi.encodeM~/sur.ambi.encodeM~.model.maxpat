@@ -11874,7 +11874,7 @@
             403.0,
             31.0
           ],
-          "text": "j.parameter flavor @repetitions/allow 0 @type string @description \"Ambisonics type of decoding and encoding. Furse-Malham, N3D or SN3D\"",
+          "text": "j.parameter flavor @repetitions/filter 1 @type string @description \"Ambisonics type of decoding and encoding. Furse-Malham, N3D or SN3D\"",
           "varname": "destination/voices[5]"
         }
       },
@@ -11898,7 +11898,7 @@
             442.0,
             31.0
           ],
-          "text": "j.parameter order @repetitions/allow 0 @type integer @range/bounds 1 11 @range/clipmode both @description \"maximum ambisonics order for encoding\"",
+          "text": "j.parameter order @repetitions/filter 1 @type integer @range/bounds 1 11 @range/clipmode both @description \"maximum ambisonics order for encoding\"",
           "varname": "destination/voices[2]"
         }
       },
@@ -11922,7 +11922,7 @@
             517.0,
             31.0
           ],
-          "text": "j.parameter interpolation @repetitions/allow 0 @type boolean @range/bounds 0 1 @range/clipmode both @description \"switch blockwise interpolation of all coefficient changes on/off\"",
+          "text": "j.parameter interpolation @repetitions/filter 1 @type boolean @range/bounds 0 1 @range/clipmode both @description \"switch blockwise interpolation of all coefficient changes on/off\"",
           "varname": "destination/dimensions[1]"
         }
       },
@@ -11967,7 +11967,7 @@
             574.0,
             31.0
           ],
-          "text": "j.parameter numSources @repetitions/allow 0 @type integer @range/bounds 1 32 @range/clipmode both @description \"Number of incomming mono sources to pan.\" @priority 1",
+          "text": "j.parameter numSources @repetitions/filter 1 @type integer @range/bounds 1 32 @range/clipmode both @description \"Number of incomming mono sources to pan.\" @priority 1",
           "varname": "source/voices"
         }
       },
@@ -11991,7 +11991,7 @@
             495.0,
             43.0
           ],
-          "text": "j.parameter center/decay @repetitions/allow 0 @type decimal @range/bounds 0 60 @range/clipmode low @description \"max. attenuation inside the center area in dB\" @dataspace gain @dataspace/unit dB",
+          "text": "j.parameter center/decay @repetitions/filter 1 @type decimal @range/bounds 0 60 @range/clipmode low @description \"max. attenuation inside the center area in dB\" @dataspace gain @dataspace/unit dB",
           "varname": "destination/voices[4]"
         }
       },
@@ -12015,7 +12015,7 @@
             497.0,
             31.0
           ],
-          "text": "j.parameter center/curve @repetitions/allow 0 @type decimal @range/bounds 0 1 @range/clipmode both @description \"curvature of the distance function inside the center area\"",
+          "text": "j.parameter center/curve @repetitions/filter 1 @type decimal @range/bounds 0 1 @range/clipmode both @description \"curvature of the distance function inside the center area\"",
           "varname": "destination/voices[3]"
         }
       },
@@ -12039,7 +12039,7 @@
             458.0,
             31.0
           ],
-          "text": "j.parameter center/size @repetitions/allow 0 @type decimal @range/bounds 0 128 @range/clipmode both @description \"Size of the center (in model units)\"",
+          "text": "j.parameter center/size @repetitions/filter 1 @type decimal @range/bounds 0 128 @range/clipmode both @description \"Size of the center (in model units)\"",
           "varname": "destination/voices[1]"
         }
       },
@@ -12063,7 +12063,7 @@
             408.0,
             31.0
           ],
-          "text": "j.message report @repetitions/allow 1 @type generic @description \"reports the state of the ambiencode external in the max window\""
+          "text": "j.message report @repetitions/filter 0 @type generic @description \"reports the state of the ambiencode external in the max window\""
         }
       }
     ],

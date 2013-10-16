@@ -2532,7 +2532,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 403.0, 521.0, 240.0, 24.0 ],
-					"text" : "sprintf address %s:repetitions/allow"
+					"text" : "sprintf address %s:repetitions/filter"
 				}
 
 			}
@@ -4618,7 +4618,7 @@
 					"patching_rect" : [ 477.0, 604.0, 84.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 129.0, 84.0, 17.0 ],
-					"text" : "Allow repetitions"
+					"text" : "Filter repetitions"
 				}
 
 			}

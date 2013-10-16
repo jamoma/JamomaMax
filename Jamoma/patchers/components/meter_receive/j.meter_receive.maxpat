@@ -575,7 +575,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 87.0, 236.0, 533.0, 33.0 ],
-					"text" : "j.return audio/amplitude @repetitions/allow 1 @type decimal @range/bounds 0. 1. @active 0 @description \"instant amplitude of the signal #1\" @dataspace gain @dataspace/unit linear"
+					"text" : "j.return audio/amplitude @repetitions/filter 0 @type decimal @range/bounds 0. 1. @active 0 @description \"instant amplitude of the signal #1\" @dataspace gain @dataspace/unit linear"
 				}
 
 			}

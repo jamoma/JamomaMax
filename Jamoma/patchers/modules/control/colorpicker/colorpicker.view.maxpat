@@ -1828,7 +1828,7 @@
                     540.0,
                     31.0
                   ],
-                  "text": "j.parameter numberOfColors @type integer @range/bounds 1 12 @range/clipmode both @priority 1 @repetitions/allow 1 @description \"Number of active colors.\""
+                  "text": "j.parameter numberOfColors @type integer @range/bounds 1 12 @range/clipmode both @priority 1 @repetitions/filter 0 @description \"Number of active colors.\""
                 }
               },
               {
@@ -2251,7 +2251,7 @@
                     365.0,
                     31.0
                   ],
-                  "text": "j.message colors/in @type decimalArray @repetitions/allow 1 @description \"Shortcut for setting colors: List of 1 to 12 HSL triplets.\"",
+                  "text": "j.message colors/in @type decimalArray @repetitions/filter 0 @description \"Shortcut for setting colors: List of 1 to 12 HSL triplets.\"",
                   "varname": "colors"
                 }
               },

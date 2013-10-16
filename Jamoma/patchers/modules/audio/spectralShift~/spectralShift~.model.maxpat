@@ -891,7 +891,7 @@
             558.0,
             43.0
           ],
-          "text": "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -60 6 @range/clipmode both @description \"Feedback gain leven (dB).\" @dataspace gain @dataspace/unit dB",
+          "text": "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds -60 6 @range/clipmode both @description \"Feedback gain leven (dB).\" @dataspace gain @dataspace/unit dB",
           "varname": "feedback"
         }
       },
@@ -915,7 +915,7 @@
             591.0,
             31.0
           ],
-          "text": "j.parameter feedback/time @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0 200 @range/clipmode both @description \"Feedback delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
+          "text": "j.parameter feedback/time @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0 200 @range/clipmode both @description \"Feedback delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
           "varname": "right"
         }
       },

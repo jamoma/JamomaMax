@@ -473,7 +473,7 @@
             332.0,
             30.0
           ],
-          "text": "j.parameter key/blue @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"blue level of the chromakey\"",
+          "text": "j.parameter key/blue @repetitions/filter 1 @type decimal @range/bounds 0. 1. @description \"blue level of the chromakey\"",
           "varname": "key/blue"
         }
       },
@@ -497,7 +497,7 @@
             339.0,
             30.0
           ],
-          "text": "j.parameter key/green @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"green level of the chromakey\"",
+          "text": "j.parameter key/green @repetitions/filter 1 @type decimal @range/bounds 0. 1. @description \"green level of the chromakey\"",
           "varname": "key/green"
         }
       },
@@ -521,7 +521,7 @@
             327.0,
             30.0
           ],
-          "text": "j.parameter key/red @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"red level of the chromakey\"",
+          "text": "j.parameter key/red @repetitions/filter 1 @type decimal @range/bounds 0. 1. @description \"red level of the chromakey\"",
           "varname": "key/red"
         }
       },
@@ -545,7 +545,7 @@
             312.0,
             30.0
           ],
-          "text": "j.parameter mode @repetitions/allow 0 @type boolean @range/bounds 0 1 @description \"keying mode\"",
+          "text": "j.parameter mode @repetitions/filter 1 @type boolean @range/bounds 0 1 @description \"keying mode\"",
           "varname": "mode"
         }
       },
@@ -569,7 +569,7 @@
             388.0,
             30.0
           ],
-          "text": "j.parameter mask @repetitions/allow 0 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as mask\"",
+          "text": "j.parameter mask @repetitions/filter 1 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as mask\"",
           "varname": "mask[1]"
         }
       },
@@ -593,7 +593,7 @@
             391.0,
             30.0
           ],
-          "text": "j.parameter target @repetitions/allow 0 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as target\"",
+          "text": "j.parameter target @repetitions/filter 1 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as target\"",
           "varname": "target[1]"
         }
       },
@@ -617,7 +617,7 @@
             253.0,
             42.0
           ],
-          "text": "j.parameter key @repetitions/allow 0 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as key\"",
+          "text": "j.parameter key @repetitions/filter 1 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as key\"",
           "varname": "key[1]"
         }
       },
@@ -641,7 +641,7 @@
             416.0,
             30.0
           ],
-          "text": "j.parameter tolerance @repetitions/allow 0 @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Tolerance of the chromakey\"",
+          "text": "j.parameter tolerance @repetitions/filter 1 @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Tolerance of the chromakey\"",
           "varname": "tolerance"
         }
       }
