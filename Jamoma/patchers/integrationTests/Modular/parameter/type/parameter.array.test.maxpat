@@ -2670,7 +2670,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 550.0, 758.964111, 241.0, 33.0 ],
-									"text" : "j.test.assert.equal repetitions/filter-test @input repetitions/filter @compareTo 1"
+									"text" : "j.test.assert.equal repetitions/filter-test @input repetitions/filter @compareTo 0"
 								}
 
 							}
