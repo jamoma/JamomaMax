@@ -123,7 +123,7 @@ void *dbap_new(t_symbol *msg, long argc, t_atom *argv)
 
 		// prepare a jit_matrix_info, an unique name and an empty jit_matrix
 		jit_matrix_info_default(&x->view_info);
-		x->view_info.type = _jit_sym_char;
+		x->view_info.type = gensym("char");
 		x->view_info.planecount = 1;
 		x->view_info.dimcount = 2;
 		x->view_info.dim[0] = 80;						// x size of the view matrix
