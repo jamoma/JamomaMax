@@ -936,7 +936,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 355.0, 1078.0, 169.0, 18.0 ],
-									"text" : "address /test:repetitions/allow"
+									"text" : "address /test:repetitions/filter"
 								}
 
 							}
@@ -978,7 +978,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 324.0, 1018.001831, 256.0, 33.0 ],
-									"text" : "j.test.assert.equal repetitions/allow-test @input repetitions/allow 0 @compareTo 0"
+									"text" : "j.test.assert.equal repetitions/filter-test @input repetitions/filter 1 @compareTo 1"
 								}
 
 							}

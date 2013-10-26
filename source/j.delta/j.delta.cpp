@@ -84,7 +84,7 @@
 	MAXREF--->
 */
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 #define nonzero(x)				((x > 0) ? x : 1.)
 

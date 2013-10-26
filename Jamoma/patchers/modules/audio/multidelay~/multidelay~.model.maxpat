@@ -569,7 +569,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 64.0, 288.5, 182.0, 114.0 ],
-					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/allow 0 @range/clipmode both @range/bounds 0. 1. @description \"Amount of delay feedback.\" @dataspace gain @dataspace/unit linear",
+					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range/clipmode both @range/bounds 0. 1. @description \"Amount of delay feedback.\" @dataspace gain @dataspace/unit linear",
 					"varname" : "feedback[1]"
 				}
 
@@ -585,7 +585,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 602.0, 141.0, 245.0, 74.0 ],
-					"text" : "j.parameter delay/right @type decimalArray @repetitions/allow 0 @ramp/drive none @range/bounds 0 10000 @range/clipmode low @description \"Delay time in milliseconds for right channel.\"",
+					"text" : "j.parameter delay/right @type decimalArray @repetitions/filter 1 @ramp/drive none @range/bounds 0 10000 @range/clipmode low @description \"Delay time in milliseconds for right channel.\"",
 					"varname" : "right[1]"
 				}
 
@@ -601,7 +601,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 289.5, 148.0, 243.0, 74.0 ],
-					"text" : "j.parameter delay/left @type decimalArray @repetitions/allow 0 @ramp/drive none @range/bounds 0 10000 @range/clipmode low @description \"Delay time in milliseconds for left channel.\"",
+					"text" : "j.parameter delay/left @type decimalArray @repetitions/filter 1 @ramp/drive none @range/bounds 0 10000 @range/clipmode low @description \"Delay time in milliseconds for left channel.\"",
 					"varname" : "left[1]"
 				}
 
@@ -617,7 +617,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 272.0, 50.5, 596.0, 33.0 ],
-					"text" : "j.parameter delay/max @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 10000 @range/clipmode low @description \"Max delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter delay/max @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 10000 @range/clipmode low @description \"Max delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
 					"varname" : "maxdelay"
 				}
 

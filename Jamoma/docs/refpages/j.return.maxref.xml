@@ -286,7 +286,7 @@
 				TEXT_HERE
 			</description>
 		</attribute>
-		<attribute name="repetitions/allow" get="1" set="1" type="int" size="1">
+		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>

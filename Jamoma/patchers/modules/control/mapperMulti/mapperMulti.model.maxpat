@@ -1314,7 +1314,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 120.0, 37.0, 516.0, 33.0 ],
-					"text" : "j.parameter InstanceNumber @type integer @description \"the number of mappers\" @range/bounds 0 100 @range/clipmode low @priority 1 @repetitions/allow 0"
+					"text" : "j.parameter InstanceNumber @type integer @description \"the number of mappers\" @range/bounds 0 100 @range/clipmode low @priority 1 @repetitions/filter 1"
 				}
 
 			}

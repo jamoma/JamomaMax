@@ -909,7 +909,7 @@
             430.0,
             31.0
           ],
-          "text": "j.parameter xfade @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 1. @range/clipmode both @description \"Crossfade value\"",
+          "text": "j.parameter xfade @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 1. @range/clipmode both @description \"Crossfade value\"",
           "varname": "xfade[1]"
         }
       }

@@ -42,7 +42,7 @@ int MicArray::AziAngle[Properties::MAXNUMCHANNELS][Properties::MAXNUMCHANNELS] =
     /* 24ch */	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 };
 
-MicArray::MicArray(short initNumChannels = 8)
+MicArray::MicArray(short initNumChannels)
 {
     centerLR_ = 0.0;
     centerFB_ = 0.0;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		469BD9FF180B594400A023B3 /* j.ui.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.ui.yml; sourceTree = "<group>"; };
 		D289EC59150FD6A900FC7F7E /* j.ui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.ui.cpp; sourceTree = "<group>"; };
 		D289EC5A150FD6A900FC7F7E /* j.ui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = j.ui.h; sourceTree = "<group>"; };
 		D289EC5B150FD6A900FC7F7E /* j.ui.internals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.ui.internals.cpp; sourceTree = "<group>"; };
@@ -17,6 +18,7 @@
 		08FB7794FE84155DC02AAC07 /* j.ui */ = {
 			isa = PBXGroup;
 			children = (
+				469BD9FF180B594400A023B3 /* j.ui.yml */,
 				D289EC5A150FD6A900FC7F7E /* j.ui.h */,
 				D289EC59150FD6A900FC7F7E /* j.ui.cpp */,
 				D289EC5B150FD6A900FC7F7E /* j.ui.internals.cpp */,

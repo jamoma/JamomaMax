@@ -144,7 +144,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 385.5, 147.0, 74.0 ],
-					"text" : "j.parameter thisMenu @repetitions/allow 1 @type string @description \"a menu\" @priority 1",
+					"text" : "j.parameter thisMenu @repetitions/filter 0 @type string @description \"a menu\" @priority 1",
 					"varname" : "module_in[1]"
 				}
 
@@ -192,7 +192,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 151.0, 145.0, 127.0 ],
-					"text" : "j.parameter thisParameter @repetitions/allow 1 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter thisParameter @repetitions/filter 0 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
 

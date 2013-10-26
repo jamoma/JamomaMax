@@ -7,7 +7,7 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 typedef struct _stats{			// Data structure for this object 
 	struct	object ob;			// Must always be the first field; used by Max

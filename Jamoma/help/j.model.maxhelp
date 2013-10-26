@@ -314,7 +314,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 911.5, 370.0, 179.0, 18.0 ],
-									"text" : "myMessage:repetitionsAllow $1"
+									"text" : "myMessage:repetitionsFilter $1"
 								}
 
 							}

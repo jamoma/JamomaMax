@@ -268,7 +268,7 @@
             593.0,
             31.0
           ],
-          "text": "j.parameter alpha/mode @repetitions/allow 1 @type string @description \"crossfade mode: 0 = crossfade right to left, 1 = crossfade left to right.\"",
+          "text": "j.parameter alpha/mode @repetitions/filter 0 @type string @description \"crossfade mode: 0 = crossfade right to left, 1 = crossfade left to right.\"",
           "varname": "module_in[1]"
         }
       },

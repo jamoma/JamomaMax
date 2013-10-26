@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		469BDA00180B596300A023B3 /* j.unfocus.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.unfocus.yml; sourceTree = "<group>"; };
 		A7FD864515189AEA00FAD6D7 /* j.unfocus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.unfocus.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -14,6 +15,7 @@
 		A72D873215188DFD001DA7C1 = {
 			isa = PBXGroup;
 			children = (
+				469BDA00180B596300A023B3 /* j.unfocus.yml */,
 				A7FD864415189AE000FAD6D7 /* Sources */,
 			);
 			sourceTree = "<group>";

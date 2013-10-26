@@ -3283,7 +3283,7 @@
             701.0,
             31.0
           ],
-          "text": "j.parameter rollOff @type decimal @repetitions/allow 0 @range/bounds 1. 6. @range/clipmode both @description \"Roll-off in dB per doubling of distance.\" @dataspace gain @dataspace/unit dB",
+          "text": "j.parameter rollOff @type decimal @repetitions/filter 1 @range/bounds 1. 6. @range/clipmode both @description \"Roll-off in dB per doubling of distance.\" @dataspace gain @dataspace/unit dB",
           "varname": "meters_per_unit[1]"
         }
       },
@@ -3328,7 +3328,7 @@
             606.0,
             31.0
           ],
-          "text": "j.parameter referenceDistance @type decimal @repetitions/allow 0 @range/bounds 0.15 10. @range/clipmode low @description \"Reference distance used to calculate roll-off.\"",
+          "text": "j.parameter referenceDistance @type decimal @repetitions/filter 1 @range/bounds 0.15 10. @range/clipmode low @description \"Reference distance used to calculate roll-off.\"",
           "varname": "meters_per_unit"
         }
       },
@@ -3352,7 +3352,7 @@
             574.0,
             31.0
           ],
-          "text": "j.parameter numSources @type integer @repetitions/allow 0 @range/bounds 1 32 @range/clipmode both @description \"The number of sound sources. Changes only take effect when audio is off.\"",
+          "text": "j.parameter numSources @type integer @repetitions/filter 1 @range/bounds 1 32 @range/clipmode both @description \"The number of sound sources. Changes only take effect when audio is off.\"",
           "varname": "voices"
         }
       }

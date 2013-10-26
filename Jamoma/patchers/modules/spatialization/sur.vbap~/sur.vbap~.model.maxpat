@@ -5143,7 +5143,7 @@
             588.0,
             43.0
           ],
-          "text": "j.parameter interpolationTime @repetitions/allow 0 @type integer @range/bounds 10 2000 @range/clipmode low @description \"Sets the interpolation time in [ms] for the maitrix~ object. default value is 10 ms\" @dataspace time @dataspace/unit ms",
+          "text": "j.parameter interpolationTime @repetitions/filter 1 @type integer @range/bounds 10 2000 @range/clipmode low @description \"Sets the interpolation time in [ms] for the maitrix~ object. default value is 10 ms\" @dataspace time @dataspace/unit ms",
           "varname": "destination/dimensions[1]"
         }
       },
@@ -5188,7 +5188,7 @@
             580.0,
             31.0
           ],
-          "text": "j.parameter numSpeakers @repetitions/allow 0 @type integer @range/bounds 2 32 @range/clipmode both @description \"Number of speakers that signals are distributed to.\" @priority 3",
+          "text": "j.parameter numSpeakers @repetitions/filter 1 @type integer @range/bounds 2 32 @range/clipmode both @description \"Number of speakers that signals are distributed to.\" @priority 3",
           "varname": "destination/voices"
         }
       },
@@ -5212,7 +5212,7 @@
             509.0,
             31.0
           ],
-          "text": "j.parameter dimensions @repetitions/allow 0 @type integer @range/bounds 2 3 @range/clipmode both @description \"Dimension of the loudspeaker setup (2D or 3D).\" @priority 2",
+          "text": "j.parameter dimensions @repetitions/filter 1 @type integer @range/bounds 2 3 @range/clipmode both @description \"Dimension of the loudspeaker setup (2D or 3D).\" @priority 2",
           "varname": "destination/dimensions"
         }
       },
@@ -5236,7 +5236,7 @@
             574.0,
             31.0
           ],
-          "text": "j.parameter numSources @repetitions/allow 0 @type integer @range/bounds 1 32 @range/clipmode both @description \"Number of incomming mono sources to pan.\" @priority 1",
+          "text": "j.parameter numSources @repetitions/filter 1 @type integer @range/bounds 1 32 @range/clipmode both @description \"Number of incomming mono sources to pan.\" @priority 1",
           "varname": "source/voices"
         }
       }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		469BD9DC180B537C00A023B3 /* j.delta.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.delta.yml; sourceTree = "<group>"; };
 		A7D5FC4A15188AC100B3F1CC /* j.delta.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.delta.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -14,6 +15,7 @@
 		A7D5FC3815188A7800B3F1CC = {
 			isa = PBXGroup;
 			children = (
+				469BD9DC180B537C00A023B3 /* j.delta.yml */,
 				A7D5FC4915188AAF00B3F1CC /* Sources */,
 			);
 			sourceTree = "<group>";

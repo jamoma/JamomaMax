@@ -10,12 +10,14 @@
 		46147FE616D0EAA7005D50AD /* j.cue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.cue.cpp; sourceTree = "<group>"; };
 		46534A7316E21A0E00F61ED0 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
 		46534A7416E21A0E00F61ED0 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
+		469BD9D8180B4B8500A023B3 /* j.cue.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.cue.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		46147FD616D0EA75005D50AD = {
 			isa = PBXGroup;
 			children = (
+				469BD9D8180B4B8500A023B3 /* j.cue.yml */,
 				46147FE616D0EAA7005D50AD /* j.cue.cpp */,
 				46534A7416E21A0E00F61ED0 /* TTModularClassWrapperMax.h */,
 				46534A7316E21A0E00F61ED0 /* TTModularClassWrapperMax.cpp */,

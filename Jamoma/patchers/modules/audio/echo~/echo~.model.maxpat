@@ -163,7 +163,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 877.5, 596.0, 495.0, 47.0 ],
-					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -1. 1. @range/clipmode both @description Feedback. @dataspace gain @dataspace/unit linear",
+					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds -1. 1. @range/clipmode both @description Feedback. @dataspace gain @dataspace/unit linear",
 					"varname" : "feedback"
 				}
 
@@ -179,7 +179,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 813.285706, 128.0, 534.0, 47.0 ],
-					"text" : "j.parameter delay/right @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 10000 @range/clipmode both @description \"Delay time in milliseconds for right channel.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter delay/right @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 10000 @range/clipmode both @description \"Delay time in milliseconds for right channel.\" @dataspace time @dataspace/unit ms",
 					"varname" : "right"
 				}
 
@@ -210,7 +210,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 850.0, 255.0, 595.0, 33.0 ],
-					"text" : "j.parameter filter/type @type string @repetitions/allow 0 @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf\"",
+					"text" : "j.parameter filter/type @type string @repetitions/filter 1 @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf\"",
 					"varname" : "filtertype"
 				}
 
@@ -226,7 +226,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 975.142883, 346.0, 611.0, 33.0 ],
-					"text" : "j.parameter filter/gain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter filter/gain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive Max @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
 					"varname" : "filtergain"
 				}
 
@@ -242,7 +242,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 996.0, 408.5, 473.0, 33.0 ],
-					"text" : "j.parameter filter/q @type decimal @ramp/drive Max @range/bounds 0. 100. @range/clipmode both @repetitions/allow 0 @description \"Resonance (Q)\"",
+					"text" : "j.parameter filter/q @type decimal @ramp/drive Max @range/bounds 0. 100. @range/clipmode both @repetitions/filter 1 @description \"Resonance (Q)\"",
 					"varname" : "q"
 				}
 
@@ -258,7 +258,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 954.285706, 292.5, 565.0, 47.0 ],
-					"text" : "j.parameter filter/frequency @type decimal @range/bounds 30. 11025. @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
+					"text" : "j.parameter filter/frequency @type decimal @range/bounds 30. 11025. @range/clipmode both @ramp/drive Max @repetitions/filter 1 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
 					"varname" : "cf"
 				}
 
@@ -274,7 +274,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 798.785706, 77.0, 578.0, 47.0 ],
-					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 10000 @range/clipmode both @description \"Delay time in milliseconds for left channel.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 10000 @range/clipmode both @description \"Delay time in milliseconds for left channel.\" @dataspace time @dataspace/unit ms",
 					"varname" : "left"
 				}
 

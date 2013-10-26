@@ -173,7 +173,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 577.0, 56.0, 111.0, 18.0 ],
-					"text" : "repetitions/allow $1",
+					"text" : "repetitions/filter $1",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -234,7 +234,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 591.0, 77.0, 97.0, 18.0 ],
-					"text" : "repetitions/allow",
+					"text" : "repetitions/filter",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 

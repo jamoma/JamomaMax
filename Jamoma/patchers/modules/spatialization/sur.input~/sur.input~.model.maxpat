@@ -6532,7 +6532,7 @@
             602.0,
             19.0
           ],
-          "text": "j.message direct @type generic @repetitions/allow 1 @description \"direct commands to the sfplay~ object\"",
+          "text": "j.message direct @type generic @repetitions/filter 0 @description \"direct commands to the sfplay~ object\"",
           "varname": "play[2]"
         }
       },
@@ -6562,7 +6562,7 @@
             281.0,
             55.0
           ],
-          "text": "j.message start @type decimal @repetitions/allow 0 @dataspace time @dataspace/unit second @description \"start time in soundfile to play in [sec]\"",
+          "text": "j.message start @type decimal @repetitions/filter 1 @dataspace time @dataspace/unit second @description \"start time in soundfile to play in [sec]\"",
           "varname": "start"
         }
       },
@@ -6620,7 +6620,7 @@
             403.0,
             19.0
           ],
-          "text": "j.message pause @type boolean @repetitions/allow 0 @description Pause",
+          "text": "j.message pause @type boolean @repetitions/filter 1 @description Pause",
           "varname": "play[1]"
         }
       },
@@ -6649,7 +6649,7 @@
             516.0,
             19.0
           ],
-          "text": "j.parameter play @type boolean @repetitions/allow 0 @priority 2 @description \"starts playback\"",
+          "text": "j.parameter play @type boolean @repetitions/filter 1 @priority 2 @description \"starts playback\"",
           "varname": "play"
         }
       },
@@ -6708,7 +6708,7 @@
             565.0,
             31.0
           ],
-          "text": "j.parameter open @type string @priority 1 @repetitions/allow 1 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\" @value/default NULL"
+          "text": "j.parameter open @type string @priority 1 @repetitions/filter 0 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\" @value/default NULL"
         }
       },
       {

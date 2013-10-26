@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		469BD9E0180B543E00A023B3 /* j.hub.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.hub.yml; sourceTree = "<group>"; };
 		D2116E31155E6014004410F4 /* j.hub.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.hub.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -14,6 +15,7 @@
 		08FB7794FE84155DC02AAC07 /* j.model */ = {
 			isa = PBXGroup;
 			children = (
+				469BD9E0180B543E00A023B3 /* j.hub.yml */,
 				D2116E31155E6014004410F4 /* j.hub.cpp */,
 			);
 			name = j.model;

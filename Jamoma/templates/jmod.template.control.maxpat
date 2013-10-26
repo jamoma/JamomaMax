@@ -712,7 +712,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 121.821503, 211.313141, 413.0, 31.0 ],
-									"text" : "j.parameter a_bang @type generic @repetitions/allow 1 @ramp/drive none @priority 1 @description \"a bang\"",
+									"text" : "j.parameter a_bang @type generic @repetitions/filter 0 @ramp/drive none @priority 1 @description \"a bang\"",
 									"varname" : "foot/switch"
 								}
 
@@ -1124,7 +1124,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 503.0, 239.0, 576.0, 31.0 ],
-					"text" : "j.message this_message @type integer @range/bounds 0. 1. @range/clipmode none @repetitions/allow 0 @ramp/drive none @description \"Document what this message does...\"",
+					"text" : "j.message this_message @type integer @range/bounds 0. 1. @range/clipmode none @repetitions/filter 1 @ramp/drive none @description \"Document what this message does...\"",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -1173,7 +1173,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 503.0, 204.0, 577.0, 31.0 ],
-					"text" : "j.parameter this_parameter @type decimal @range/bounds 0. 1. @range/clipmode none @repetitions/allow 0 @ramp/drive Max @description \"Document what this parameter does...\"",
+					"text" : "j.parameter this_parameter @type decimal @range/bounds 0. 1. @range/clipmode none @repetitions/filter 1 @ramp/drive Max @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
 

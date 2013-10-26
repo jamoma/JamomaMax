@@ -301,7 +301,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 727.5, 465.0, 482.0, 20.0 ],
-					"text" : "j.parameter play @type boolean @repetitions/allow 1 @description \"Play sound file.\"",
+					"text" : "j.parameter play @type boolean @repetitions/filter 0 @description \"Play sound file.\"",
 					"varname" : "play"
 				}
 
@@ -560,7 +560,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 124.0, 154.0 ],
-									"text" : "j.parameter nextFile/open @type generic @repetitions/allow 1 @priority 1 @description \"The (next) file to play. This need to be in the Max search path, or a full filepath should be provided.\""
+									"text" : "j.parameter nextFile/open @type generic @repetitions/filter 0 @priority 1 @description \"The (next) file to play. This need to be in the Max search path, or a full filepath should be provided.\""
 								}
 
 							}
@@ -575,7 +575,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 249.0, 100.0, 139.0, 208.0 ],
-									"text" : "j.parameter nextFile/loop/start @type decimal @range/bounds 0 180000 @range/clipmode low @ramp/drive none @repetitions/allow 1 @dataspace time @dataspace/unit ms @priority 2 @description \"Playback start position. Use 0 for playback from start of file.\""
+									"text" : "j.parameter nextFile/loop/start @type decimal @range/bounds 0 180000 @range/clipmode low @ramp/drive none @repetitions/filter 0 @dataspace time @dataspace/unit ms @priority 2 @description \"Playback start position. Use 0 for playback from start of file.\""
 								}
 
 							}
@@ -590,7 +590,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 439.0, 100.0, 144.0, 181.0 ],
-									"text" : "j.parameter nextFile/loop/end @type decimal @range/bounds 0 180000 @range/clipmode low @ramp/drive none @repetitions/allow 1 @dataspace time @dataspace/unit ms @priority 3 @description \"Playback end position. Use 0 for playback to end of file.\""
+									"text" : "j.parameter nextFile/loop/end @type decimal @range/bounds 0 180000 @range/clipmode low @ramp/drive none @repetitions/filter 0 @dataspace time @dataspace/unit ms @priority 3 @description \"Playback end position. Use 0 for playback to end of file.\""
 								}
 
 							}
@@ -605,7 +605,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 627.0, 100.0, 165.0, 167.0 ],
-									"text" : "j.parameter nextFile/rate @type decimal @range/bounds -1. 1. @range/clipmode none @ramp/drive none @repetitions/allow 1 @dataspace time @dataspace/unit ms @priority 4 @description \"Playback start position. Use 0 for playback from start of file.\""
+									"text" : "j.parameter nextFile/rate @type decimal @range/bounds -1. 1. @range/clipmode none @ramp/drive none @repetitions/filter 0 @dataspace time @dataspace/unit ms @priority 4 @description \"Playback start position. Use 0 for playback from start of file.\""
 								}
 
 							}
@@ -900,7 +900,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1273.5, 101.0, 151.0, 87.0 ],
-					"text" : "j.parameter loop @type boolean @repetitions/allow 1 @description \"Flag indicating if the file is to play back in loop.\""
+					"text" : "j.parameter loop @type boolean @repetitions/filter 0 @description \"Flag indicating if the file is to play back in loop.\""
 				}
 
 			}

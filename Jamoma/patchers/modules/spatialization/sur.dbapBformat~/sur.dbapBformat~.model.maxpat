@@ -2115,7 +2115,7 @@
             578.0,
             31.0
           ],
-          "text": "j.message.array 8 source active @type boolean @repetitions/allow 1 @description \"Mute or unmute the nth source.\""
+          "text": "j.message.array 8 source active @type boolean @repetitions/filter 0 @description \"Mute or unmute the nth source.\""
         }
       },
       {

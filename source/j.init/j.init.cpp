@@ -14,7 +14,7 @@
  */
 
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 
 #define start_out 0

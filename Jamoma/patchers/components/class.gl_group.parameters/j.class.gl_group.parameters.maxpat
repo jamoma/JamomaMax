@@ -30,14 +30,14 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Verdana",
-					"fontsize" : 20.555126,
-					"frgb" : 0.0,
-					"id" : "obj-68",
-					"maxclass" : "comment",
+					"fontsize" : 10.0,
+					"id" : "obj-2",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 955.5, 346.0, 26.0, 31.0 ],
-					"text" : "?"
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 963.5, 372.0, 117.0, 19.0 ],
+					"text" : "prepend fog"
 				}
 
 			}
@@ -841,7 +841,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 981.5, 346.0, 323.0, 31.0 ],
+					"patching_rect" : [ 963.5, 338.0, 323.0, 31.0 ],
 					"text" : "j.parameter fog/amount @type decimal @range/bounds 0. 1. @description \"The amount of fog effect.\" @value/default 0.",
 					"varname" : "fog/amount"
 				}
@@ -1102,6 +1102,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-146", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1187,6 +1196,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-51", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-52", 0 ]
 				}
 
 			}

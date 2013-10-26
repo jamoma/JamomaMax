@@ -1817,7 +1817,7 @@
                     603.0,
                     31.0
                   ],
-                  "text": "j.return cooked/rotation/roll @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Z rotation from the 3D Connexion Space Navigator\" @repetitions/allow 1"
+                  "text": "j.return cooked/rotation/roll @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Z rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
                 }
               },
               {
@@ -1839,7 +1839,7 @@
                     590.0,
                     31.0
                   ],
-                  "text": "j.return raw/Rz @range/bounds -225 221 @type integer @range/clipmode none @description \"Raw Z rotation from the 3D Connexion Space Navigator\" @repetitions/allow 1"
+                  "text": "j.return raw/Rz @range/bounds -225 221 @type integer @range/clipmode none @description \"Raw Z rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
                 }
               },
               {
@@ -1861,7 +1861,7 @@
                     562.0,
                     31.0
                   ],
-                  "text": "j.return cooked/rotation/yaw @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Yaw rotation from the 3D Connexion Space Navigator\" @repetitions/allow 1"
+                  "text": "j.return cooked/rotation/yaw @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Yaw rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
                 }
               },
               {
@@ -1883,7 +1883,7 @@
                     590.0,
                     31.0
                   ],
-                  "text": "j.return raw/Ry @range/bounds -294 175 @type integer @range/clipmode none @description \"Raw Y rotation from the 3D Connexion Space Navigator\" @repetitions/allow 1"
+                  "text": "j.return raw/Ry @range/bounds -294 175 @type integer @range/clipmode none @description \"Raw Y rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
                 }
               },
               {
@@ -1905,7 +1905,7 @@
                     566.0,
                     31.0
                   ],
-                  "text": "j.return cooked/rotation/pitch @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked X rotation from the 3D Connexion Space Navigator\" @repetitions/allow 1"
+                  "text": "j.return cooked/rotation/pitch @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked X rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
                 }
               },
               {
@@ -1927,7 +1927,7 @@
                     591.0,
                     31.0
                   ],
-                  "text": "j.return raw/Rx @range/bounds -207 208 @type integer @range/clipmode none @description \"Raw X rotation from the 3D Connexion Space Navigator\" @repetitions/allow 1"
+                  "text": "j.return raw/Rx @range/bounds -207 208 @type integer @range/clipmode none @description \"Raw X rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
                 }
               },
               {
@@ -2295,7 +2295,7 @@
                     563.0,
                     31.0
                   ],
-                  "text": "j.return cooked/position @range/bounds -1. 1. @type decimalArray @range/clipmode none @repetitions/allow 0 @dataspace position @dataspace/unit xyz @description \"XYZ position\" @enable 0 @dataspace position @dataspace/unit xyz"
+                  "text": "j.return cooked/position @range/bounds -1. 1. @type decimalArray @range/clipmode none @repetitions/filter 1 @dataspace position @dataspace/unit xyz @description \"XYZ position\" @enable 0 @dataspace position @dataspace/unit xyz"
                 }
               },
               {
@@ -2317,7 +2317,7 @@
                     602.0,
                     31.0
                   ],
-                  "text": "j.return cooked/position/z @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Z position from the 3D Connexion Space Navigator\" @repetitions/allow 1 @enable 1"
+                  "text": "j.return cooked/position/z @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Z position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
                 }
               },
               {
@@ -2339,7 +2339,7 @@
                     589.0,
                     31.0
                   ],
-                  "text": "j.return raw/Tz @range/bounds -243 232 @type integer @range/clipmode none @description \"Raw Z position from the 3D Connexion Space Navigator\" @repetitions/allow 1"
+                  "text": "j.return raw/Tz @range/bounds -243 232 @type integer @range/clipmode none @description \"Raw Z position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
                 }
               },
               {
@@ -2361,7 +2361,7 @@
                     602.0,
                     31.0
                   ],
-                  "text": "j.return cooked/position/y @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Y position from the 3D Connexion Space Navigator\" @repetitions/allow 1 @enable 1"
+                  "text": "j.return cooked/position/y @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Y position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
                 }
               },
               {
@@ -2383,7 +2383,7 @@
                     589.0,
                     31.0
                   ],
-                  "text": "j.return raw/Ty @range/bounds -241 255 @type integer @range/clipmode none @description \"Raw Y position from the 3D Connexion Space Navigator\" @repetitions/allow 1"
+                  "text": "j.return raw/Ty @range/bounds -241 255 @type integer @range/clipmode none @description \"Raw Y position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
                 }
               },
               {
@@ -2405,7 +2405,7 @@
                     603.0,
                     31.0
                   ],
-                  "text": "j.return cooked/position/x @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked X position from the 3D Connexion Space Navigator\" @repetitions/allow 1 @enable 1"
+                  "text": "j.return cooked/position/x @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked X position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
                 }
               },
               {
@@ -2487,7 +2487,7 @@
                     590.0,
                     31.0
                   ],
-                  "text": "j.return raw/Tx @range/bounds -214 281 @type integer @range/clipmode none @description \"Raw X position from the 3D Connexion Space Navigator\" @repetitions/allow 1"
+                  "text": "j.return raw/Tx @range/bounds -214 281 @type integer @range/clipmode none @description \"Raw X position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
                 }
               },
               {
@@ -2889,7 +2889,7 @@
             306.0,
             31.0
           ],
-          "text": "j.parameter model @type string @repetitions/allow 1 @description \"What SpaceNavigator model to use\"",
+          "text": "j.parameter model @type string @repetitions/filter 0 @description \"What SpaceNavigator model to use\"",
           "varname": "on[2]"
         }
       },

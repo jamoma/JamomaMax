@@ -14,8 +14,7 @@
 #include "jpatcher_api.h"			// jpatcher_api.h must come before z_dsp.h (in Jamoma.h)
 #include "jgraphics.h"
 #include "TTModular.h"				// Jamoma Modular API
-#include "ModularForMax.h"			// Jamoma Modular for Max
-#include "MaxObjectTypes.h"
+#include "JamomaForMax.h"			// Jamoma for Max
 #include "ext_symobject.h"
 
 #define NO_MODEL_STRING "waiting for a model:address"

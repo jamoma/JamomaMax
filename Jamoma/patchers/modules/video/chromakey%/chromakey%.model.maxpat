@@ -276,7 +276,7 @@
             471.0,
             31.0
           ],
-          "text": "j.parameter chromakey/color @repetitions/allow 0 @type decimalArray  @dataspace color @dataspace/unit rgb @range/bounds 0. 1. @range/clipmode both @description \"Chroma keying color (RGB in the range 0-1).\"",
+          "text": "j.parameter chromakey/color @repetitions/filter 1 @type decimalArray  @dataspace color @dataspace/unit rgb @range/bounds 0. 1. @range/clipmode both @description \"Chroma keying color (RGB in the range 0-1).\"",
           "varname": "key/blue[1]"
         }
       },
@@ -344,7 +344,7 @@
             400.0,
             31.0
           ],
-          "text": "j.parameter chromakey/alphaignore @repetitions/allow 0 @type boolean @range/bounds 0. 1. @description \"alpha of the chromakey\"",
+          "text": "j.parameter chromakey/alphaignore @repetitions/filter 1 @type boolean @range/bounds 0. 1. @description \"alpha of the chromakey\"",
           "varname": "alpha"
         }
       },
@@ -368,7 +368,7 @@
             394.0,
             31.0
           ],
-          "text": "j.parameter chromakey/maxkey @repetitions/allow 0 @type decimal @range/bounds 0. 10. @description \"maxkey of the chromakey\"",
+          "text": "j.parameter chromakey/maxkey @repetitions/filter 1 @type decimal @range/bounds 0. 10. @description \"maxkey of the chromakey\"",
           "varname": "maxkey[1]"
         }
       },
@@ -392,7 +392,7 @@
             394.0,
             31.0
           ],
-          "text": "j.parameter chromakey/minkey @repetitions/allow 0 @type decimal @range/bounds 0. 10. @description \"minkey of the chromakey\"",
+          "text": "j.parameter chromakey/minkey @repetitions/filter 1 @type decimal @range/bounds 0. 10. @description \"minkey of the chromakey\"",
           "varname": "minkey[1]"
         }
       },
@@ -416,7 +416,7 @@
             394.0,
             31.0
           ],
-          "text": "j.parameter chromakey/fade @repetitions/allow 0 @type decimal @range/bounds 0. 10. @description \"fade of the chromakey\"",
+          "text": "j.parameter chromakey/fade @repetitions/filter 1 @type decimal @range/bounds 0. 10. @description \"fade of the chromakey\"",
           "varname": "fade[1]"
         }
       },
@@ -440,7 +440,7 @@
             394.0,
             31.0
           ],
-          "text": "j.parameter chromakey/tolerance @repetitions/allow 0 @type decimal @range/bounds 0. 1. @description \"Tolerance of the chromakey\"",
+          "text": "j.parameter chromakey/tolerance @repetitions/filter 1 @type decimal @range/bounds 0. 1. @description \"Tolerance of the chromakey\"",
           "varname": "tolerance"
         }
       }

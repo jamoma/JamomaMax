@@ -237,7 +237,7 @@
                     417.0,
                     31.0
                   ],
-                  "text": "j.return #2/rotary/lower @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Lower rotary control.\"",
+                  "text": "j.return #2/rotary/lower @type integer @range/bounds 0 127 @range/clipmode both @repetitions/filter 0 @description \"Lower rotary control.\"",
                   "varname": "#2/rotary/upper"
                 }
               },
@@ -610,7 +610,7 @@
                     419.0,
                     31.0
                   ],
-                  "text": "j.return #2/rotary/middle @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Middle rotary control.\"",
+                  "text": "j.return #2/rotary/middle @type integer @range/bounds 0 127 @range/clipmode both @repetitions/filter 0 @description \"Middle rotary control.\"",
                   "varname": "#2/rotary/upper"
                 }
               },
@@ -1259,7 +1259,7 @@
                     417.0,
                     31.0
                   ],
-                  "text": "j.return #2/rotary/upper @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Upper rotary control.\"",
+                  "text": "j.return #2/rotary/upper @type integer @range/bounds 0 127 @range/clipmode both @repetitions/filter 0 @description \"Upper rotary control.\"",
                   "varname": "#2/rotary/upper"
                 }
               },
@@ -1632,7 +1632,7 @@
                     341.0,
                     31.0
                   ],
-                  "text": "j.return #2/fader @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @description \"Fader.\"",
+                  "text": "j.return #2/fader @type integer @range/bounds 0 127 @range/clipmode both @repetitions/filter 0 @description \"Fader.\"",
                   "varname": "#2/fader"
                 }
               },

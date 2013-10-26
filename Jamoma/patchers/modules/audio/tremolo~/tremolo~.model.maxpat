@@ -94,7 +94,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 929.0, 70.0, 156.0, 114.0 ],
-					"text" : "j.parameter lfo/depth @type decimal @range/bounds 0. 100. @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"LFO depth (0-100%).\"",
+					"text" : "j.parameter lfo/depth @type decimal @range/bounds 0. 100. @range/clipmode both @ramp/drive Max @repetitions/filter 1 @description \"LFO depth (0-100%).\"",
 					"varname" : "#1/lfo/depth"
 				}
 
@@ -110,7 +110,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 558.5, 70.0, 171.0, 141.0 ],
-					"text" : "j.parameter lfo/frequency @type decimal @range/bounds 0. 100. @range/clipmode low @ramp/drive Max @repetitions/allow 0 @dataspace time @dataspace/unit Hz @description \"LFO frequency (Hz).\"",
+					"text" : "j.parameter lfo/frequency @type decimal @range/bounds 0. 100. @range/clipmode low @ramp/drive Max @repetitions/filter 1 @dataspace time @dataspace/unit Hz @description \"LFO frequency (Hz).\"",
 					"varname" : "#1/lfo/frequency"
 				}
 

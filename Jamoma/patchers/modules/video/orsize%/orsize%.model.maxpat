@@ -1692,7 +1692,7 @@
             553.0,
             31.0
           ],
-          "text": "j.parameter zoomY @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 10. @range/clipmode none @description \"Zoom image in Y-direction.\"",
+          "text": "j.parameter zoomY @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 10. @range/clipmode none @description \"Zoom image in Y-direction.\"",
           "varname": "zoom[4]"
         }
       },
@@ -1716,7 +1716,7 @@
             600.0,
             67.0
           ],
-          "text": "j.parameter boundmode @type string @repetitions/allow 1 @description \"Boundary mode for values outside the range (0, width) (0, height). <br /> 0 = ignore: Values that exceed the limits are ignored.<br /> 1 = clear: Values that exceed the limits are set to 0.<br /> 2 = wrap: Values that exceed the limits are wrapped around to the opposite limit with a modulo operation.<br /> 3 = clip: Values are limited not to exceed width or height.<br /> 4 = fold: Values that exceed the limits are folded back in the opposite.\""
+          "text": "j.parameter boundmode @type string @repetitions/filter 0 @description \"Boundary mode for values outside the range (0, width) (0, height). <br /> 0 = ignore: Values that exceed the limits are ignored.<br /> 1 = clear: Values that exceed the limits are set to 0.<br /> 2 = wrap: Values that exceed the limits are wrapped around to the opposite limit with a modulo operation.<br /> 3 = clip: Values are limited not to exceed width or height.<br /> 4 = fold: Values that exceed the limits are folded back in the opposite.\""
         }
       },
       {
@@ -1782,7 +1782,7 @@
             446.0,
             31.0
           ],
-          "text": "j.parameter angle @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 90 @range/clipmode none @description \"Rotate image - in degrees\"",
+          "text": "j.parameter angle @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 90 @range/clipmode none @description \"Rotate image - in degrees\"",
           "varname": "angle[1]"
         }
       },
@@ -1806,7 +1806,7 @@
             552.0,
             31.0
           ],
-          "text": "j.parameter offsetY @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -1. 1. @range/clipmode none @description \"Offset image in Y-direction\"",
+          "text": "j.parameter offsetY @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds -1. 1. @range/clipmode none @description \"Offset image in Y-direction\"",
           "varname": "offset_y"
         }
       },
@@ -1853,7 +1853,7 @@
             553.0,
             31.0
           ],
-          "text": "j.parameter offsetX @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds -1. 1. @range/clipmode none @description \"Offset image in X-direction\"",
+          "text": "j.parameter offsetX @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds -1. 1. @range/clipmode none @description \"Offset image in X-direction\"",
           "varname": "offset_x"
         }
       },
@@ -1923,7 +1923,7 @@
             554.0,
             31.0
           ],
-          "text": "j.parameter zoomX @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 10. @range/clipmode none @description \"Zoom image in X-direction.\"",
+          "text": "j.parameter zoomX @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 10. @range/clipmode none @description \"Zoom image in X-direction.\"",
           "varname": "zoom[1]"
         }
       }
