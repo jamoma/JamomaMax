@@ -50,13 +50,13 @@ typedef struct _ui{
 	t_jbox				box;
 	TTHandle			outlets;
     TTObjectBasePtr     uiInfo;
+    TTObjectBasePtr		uiSubscriber;			///< internal TTSubscriber object to bind on the ui node
 	TTHashPtr			hash_datas;				///< hash table of TTData
 	TTHashPtr			hash_viewers;			///< hash table of TTViewer
 	TTHashPtr			hash_receivers;			///< hash table of TTReceiver
 	TTObjectBasePtr		modelMessExplorer;		///< internal TTExplorer object to observe messages
 	TTObjectBasePtr		modelParamExplorer;		///< internal TTExplorer object to observe parameters
 	TTObjectBasePtr		modelRetExplorer;		///< internal TTExplorer object to observe returns
-	TTSubscriberPtr		viewSubscriber;			///< internal TTSubscriber object to bind on the view node
 	TTCallbackPtr		previewSignal;			///< internal TTCallback to get back preview signal
 	TTOutputPtr			modelOutput;			///< a pointer to TTOutput object of the binded model
 	

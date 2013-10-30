@@ -23,13 +23,13 @@ void ui_data_create_all(t_ui* obj)
     TTObjectBaseInstantiate(TTSymbol("UiInfo"), &(obj->uiInfo), args);
 	
 	// create a ui node with our patcher as context
-	if (!jamoma_subscriber_create((ObjectPtr)obj, NULL, kTTAdrsEmpty, &obj->viewSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((ObjectPtr)obj, obj->uiInfo, TTAddress("ui"), (TTSubscriberPtr*)&obj->uiSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
 		// get info relative to our patcher
 		jamoma_patcher_get_info((ObjectPtr)obj, &obj->patcherPtr, obj->patcherContext, obj->patcherClass, obj->patcherName);
 		
-		// get the view address
-		obj->viewSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
+		// get the view address from the ui address
+		obj->uiSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
 		obj->viewAddress = v[0];
 		
 		// make a receiver on contextAddress/model:address attribute
@@ -66,8 +66,6 @@ void ui_data_create_all(t_ui* obj)
 		
 		obj->memo_bordercolor = obj->bordercolor;
 		
-
-		
 		// ui/freeze
 		ui_data_create(obj, &anObject, gensym("return_ui_freeze"), kTTSym_parameter, TTSymbol("ui/freeze"));
 		anObject->setAttributeValue(kTTSym_type, kTTSym_boolean);
@@ -97,6 +95,14 @@ void ui_data_destroy_all(t_ui *obj)
 		}
 		delete obj->hash_datas;
 	}
+    
+    // unregister the ui info object
+    if (obj->uiSubscriber)
+        TTObjectBaseRelease(&obj->uiSubscriber);
+    
+    // delete the ui info object
+    if (obj->uiInfo)
+        TTObjectBaseRelease(&obj->uiInfo);
 }
 
 void ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbackMethod, TTSymbol service, TTSymbol name, TTBoolean deferlow)
@@ -126,8 +132,9 @@ void ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbac
 	TTObjectBaseInstantiate(kTTSym_Data, TTObjectBaseHandle(returnedData), args);
 	
 	// Register data
-	obj->viewSubscriber->getAttributeValue(TTSymbol("nodeAddress"), v);
-	v.get(0, viewAddress);
+	obj->uiSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
+	viewAddress = v[0];
+    
 	dataAddress = viewAddress.appendAddress(TTAddress(name.c_str()));
 	JamomaDirectory->TTNodeCreate(dataAddress, *returnedData, obj->patcherPtr, &aNode, &nodeCreated);
 	
@@ -315,9 +322,9 @@ void ui_viewer_create(t_ui *obj, TTObjectBasePtr *returnedViewer, SymbolPtr aCal
 	
 	if (subscribe) {
 		// Register viewer
-		obj->viewSubscriber->getAttributeValue(TTSymbol("nodeAddress"), v);
-		v.get(0, viewAddress);
-		
+		obj->uiSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
+		viewAddress = v[0];
+        
 		viewerAddress = viewAddress.appendAddress(TTAddress(name.c_str()));
 		
 		JamomaDirectory->TTNodeCreate(viewerAddress, *returnedViewer, obj->patcherPtr, &aNode, &nodeCreated);

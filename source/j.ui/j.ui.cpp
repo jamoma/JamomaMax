@@ -42,6 +42,8 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	
 	jamoma_init();
 	common_symbols_init();
+    
+    TTUiInfo::registerClass();
 	
 	c = class_new("j.ui",
 				  (method)ui_new,

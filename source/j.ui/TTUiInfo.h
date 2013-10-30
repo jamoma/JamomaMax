@@ -19,8 +19,6 @@
 #include "TTModularClassWrapperMax.h"
 #include "j.ui.h"
 
-typedef t_ui* t_uiPtr;
-
 /** A base class for j.ui info
  */
 class TTMODULAR_EXPORT TTUiInfo : public TTDataObjectBase
@@ -29,7 +27,7 @@ class TTMODULAR_EXPORT TTUiInfo : public TTDataObjectBase
     
     TTValue             mSize;                  ///< ATTRIBUTE : the size of the j.ui
    
-    t_uiPtr             mObject;                ///< cache the j.ui object
+    t_ui*               mObject;                ///< cache the j.ui object
     
 public:
     

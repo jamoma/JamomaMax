@@ -25,13 +25,9 @@ TT_MODULAR_CONSTRUCTOR
     
     if (arguments.size() == 1)
         if (arguments[0].type() == kTypePointer)
-            mObject = t_uiPtr(TTPtr(arguments[0]));
+            mObject = (t_ui*)(TTPtr(arguments[0]));
     
     addAttributeWithGetterAndSetter(Size, kTypeLocalValue);
-    
-    // set default size value
-    mSize = TTValue(TTUInt32(mObject->box.b_presentation_rect.width));
-    mSize.append(TTUInt32(mObject->box.b_presentation_rect.height));
 }
 
 
@@ -44,13 +40,11 @@ TTErr TTUiInfo::setSize(const TTValue& newValue)
 {
     t_rect* rect;
     
-    mSize = newValue;
-    
 	rect = (t_rect*)malloc(sizeof(t_rect));
 	rect->x = 0;
 	rect->y = 0;
-	rect->width = TTUInt32(mSize[0]);
-	rect->height = TTUInt32(mSize[1]);
+	rect->width = TTUInt32(newValue[0]);
+	rect->height = TTUInt32(newValue[1]);
     
 	object_attr_set_rect((ObjectPtr)mObject, _sym_presentation_rect, rect);
 	
@@ -62,10 +56,8 @@ TTErr TTUiInfo::setSize(const TTValue& newValue)
 
 TTErr TTUiInfo::getSize(TTValue& value)
 {
-    mSize = TTValue(TTUInt32(mObject->box.b_presentation_rect.width));
-    mSize.append(TTUInt32(mObject->box.b_presentation_rect.height));
-    
-    value = mSize;
+    value = TTValue(TTUInt32(mObject->box.b_presentation_rect.width));
+    value.append(TTUInt32(mObject->box.b_presentation_rect.height));
     
     return kTTErrNone;
 }
