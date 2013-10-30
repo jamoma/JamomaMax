@@ -263,7 +263,14 @@ void data_subscribe(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, AtomP
 	if (TTAddress(relativeAddress->s_name).getType() == kAddressRelative) {
         
 		jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, TTAddress(jamoma_parse_dieze((ObjectPtr)x, relativeAddress)->s_name), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
-		
+        
+#ifndef JMOD_MESSAGE
+#ifndef JMOD_RETURN
+        // if a j.parameter is registered under the root : reset to the default value our self
+        if (returnedContextNode == JamomaDirectory->getRoot())
+            x->wrappedObject->sendMessage(kTTSym_Reset);
+#endif
+#endif
 	}
 	else
 		object_error((ObjectPtr)x, "can't register because %s is not a relative address", relativeAddress->s_name);

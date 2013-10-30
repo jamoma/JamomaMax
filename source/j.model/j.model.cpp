@@ -288,8 +288,8 @@ void model_subscribe(TTPtr self)
                 object_obex_dumpout(self, gensym("address"), 1, &a);
             }
 			
-			// init the model (but not subModel)
-			if (!isSubModel)
+			// init the model (but not subModel) or any model registered under the root
+			if (!isSubModel || returnedContextNode->getParent()->getContext() == JamomaDirectory->getRoot()->getContext())
 				defer_low(x, (method)model_init, 0, 0, 0L);
 		}
 	}
