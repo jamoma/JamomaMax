@@ -13,8 +13,8 @@
 		463284A617D5E8A3008A11EC /* j.model_signal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.model_signal.cpp; sourceTree = "<group>"; };
 		46534A7116E20D4900F61ED0 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
 		46534A7216E20D4900F61ED0 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
-		46D7004B17DF577C003278BD /* TTModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TTModel.cpp; sourceTree = "<group>"; };
-		46D7004C17DF577C003278BD /* TTModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTModel.h; sourceTree = "<group>"; };
+		46D7004B17DF577C003278BD /* TTModelInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TTModelInfo.cpp; sourceTree = "<group>"; };
+		46D7004C17DF577C003278BD /* TTModelInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTModelInfo.h; sourceTree = "<group>"; };
 		D289EBD4150FC13A00FC7F7E /* j.model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.model.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -27,8 +27,8 @@
 				D289EBD4150FC13A00FC7F7E /* j.model.cpp */,
 				4606969717CC9DE4000AF37B /* j.model_preset.cpp */,
 				463284A617D5E8A3008A11EC /* j.model_signal.cpp */,
-				46D7004C17DF577C003278BD /* TTModel.h */,
-				46D7004B17DF577C003278BD /* TTModel.cpp */,
+				46D7004C17DF577C003278BD /* TTModelInfo.h */,
+				46D7004B17DF577C003278BD /* TTModelInfo.cpp */,
 				46534A7216E20D4900F61ED0 /* TTModularClassWrapperMax.h */,
 				46534A7116E20D4900F61ED0 /* TTModularClassWrapperMax.cpp */,
 			);

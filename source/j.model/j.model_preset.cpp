@@ -20,7 +20,7 @@ void model_preset_amenities(TTPtr self)
     TTBoolean                   newInstanceCreated;
 
     // get model:address
-    EXTRA->model->getAttributeValue(kTTSym_address, v);
+    EXTRA->modelInfo->getAttributeValue(kTTSym_address, v);
     modelAdrs = v[0];
     
     // create the preset manager

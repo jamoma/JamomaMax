@@ -8,11 +8,11 @@
  */
 
 #include "TTModularClassWrapperMax.h"
-#include "TTModel.h"
+#include "TTModelInfo.h"
 
 // This is used to store extra data
 typedef struct extra {
-	TTObjectBasePtr     model;
+	TTObjectBasePtr     modelInfo;
     TTAddress           containerAddress;   // store the address of the container (see in model_subscribe and model_free)
     TTAddress           argAddress;         // store the address from the argument (see in model_upper_view_model_address)
     

@@ -16,7 +16,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
     TTValue     v;
     
     // get model:address
-    EXTRA->model->getAttributeValue(kTTSym_address, v);
+    EXTRA->modelInfo->getAttributeValue(kTTSym_address, v);
     modelAdrs = v[0];
     
     // to avoid infinite loop (as there are data registrations here)

@@ -2,10 +2,10 @@ defines:
   - JCOM_MODEL
   
 sources:
-  - TTModel.cpp
   - j.model.cpp
   - j.model_preset.cpp
   - j.model_signal.cpp
+  - TTModelInfo.cpp
   - ../classwrapper/TTModularClassWrapperMax.cpp
   - ../c74support/max-includes/common/commonsyms.cpp
     

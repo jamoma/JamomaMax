@@ -13,16 +13,16 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#ifndef __TT_MODEL_H__
-#define __TT_MODEL_H__
+#ifndef __TT_MODEL_INFO_H__
+#define __TT_MODEL_INFO_H__
 
 #include "TTModularClassWrapperMax.h"
 
 /** A base class for Jamoma models
  */
-class TTMODULAR_EXPORT TTModel : public TTDataObjectBase
+class TTMODULAR_EXPORT TTModelInfo : public TTDataObjectBase
 {
-	TTCLASS_SETUP(TTModel)
+	TTCLASS_SETUP(TTModelInfo)
     
     TTAddress           mAddress;               ///< ATTRIBUTE : the address of the model (for j.model) or the address of the model to bind (j.view)
     TTSymbol            mClass;                 ///< ATTRIBUTE : the class name of the model
@@ -61,7 +61,7 @@ public:
 	
 };
 
-typedef TTModel* TTModelPtr;
+typedef TTModelInfo* TTModelInfoPtr;
 
 
-#endif // __TT_MODEL_H__
+#endif // __TT_MODEL_INFO_H__

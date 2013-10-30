@@ -13,16 +13,16 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "TTModel.h"
+#include "TTModelInfo.h"
 
-#define thisTTClass			TTModel
-#define thisTTClassName		"Model"
-#define thisTTClassTags		"model"
+#define thisTTClass			TTModelInfo
+#define thisTTClassName		"ModelInfo"
+#define thisTTClassTags		"model info"
 
 TT_MODULAR_CONSTRUCTOR,
 mClass(kTTSymEmpty)
 {
-    TT_ASSERT("Correct number of args to create TTModel", arguments.size() == 1);
+    TT_ASSERT("Correct number of args to create TTModelInfo", arguments.size() == 1);
     
     if (arguments.size() == 1)
         if (arguments[0].type() == kTypePointer)
@@ -40,12 +40,12 @@ mClass(kTTSymEmpty)
 }
 
 
-TTModel::~TTModel()
+TTModelInfo::~TTModelInfo()
 {
     ;
 }
 
-TTErr TTModel::setAddress(const TTValue& newValue)
+TTErr TTModelInfo::setAddress(const TTValue& newValue)
 {
     mAddress = newValue[0];
     
@@ -55,7 +55,7 @@ TTErr TTModel::setAddress(const TTValue& newValue)
     return kTTErrNone;
 }
 
-TTErr TTModel::InternalOpen()
+TTErr TTModelInfo::InternalOpen()
 {	
 	ObjectPtr p = jamoma_patcher_get(mObject);
 	
@@ -64,7 +64,7 @@ TTErr TTModel::InternalOpen()
     return kTTErrNone;
 }
 
-TTErr TTModel::HelpOpen()
+TTErr TTModelInfo::HelpOpen()
 {
 	// opening the model helpfile
 	if (mClass != kTTSymEmpty) {
@@ -79,7 +79,7 @@ TTErr TTModel::HelpOpen()
     return kTTErrGeneric;
 }
 
-TTErr TTModel::ReferenceOpen()
+TTErr TTModelInfo::ReferenceOpen()
 {
     // opening the model reference
     if (mClass != kTTSymEmpty) {
@@ -94,7 +94,7 @@ TTErr TTModel::ReferenceOpen()
     return kTTErrGeneric;
 }
 
-TTErr TTModel::Mute()
+TTErr TTModelInfo::Mute()
 {
     /*
      WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;

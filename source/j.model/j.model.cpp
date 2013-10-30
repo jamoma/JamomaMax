@@ -17,7 +17,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	spec->_free = &WrappedContainerClass_free;
 	spec->_any = &WrappedContainerClass_anything;
     
-    TTModel::registerClass();
+    TTModelInfo::registerClass();
     
 #ifndef JCOM_VIEW
 	return wrapTTModularClassAsMaxClass(kTTSym_Container, "j.model", NULL, spec);
@@ -109,7 +109,7 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
-    EXTRA->model = NULL;
+    EXTRA->modelInfo = NULL;
     EXTRA->containerAddress = kTTAdrsEmpty;
     EXTRA->argAddress = kTTAdrsEmpty;
     EXTRA->text = NULL;
@@ -141,7 +141,7 @@ void WrappedContainerClass_free(TTPtr self)
     TTAddress    modelAddress, presetAddress;
     TTValue      v;
     
-    if (EXTRA->model) {
+    if (EXTRA->modelInfo) {
         
         modelAddress = EXTRA->containerAddress.appendAddress(TTAddress("model"));
         
@@ -149,7 +149,7 @@ void WrappedContainerClass_free(TTPtr self)
         JamomaDirectory->TTNodeRemove(modelAddress);
         
         // delete the model
-        TTObjectBaseRelease(&EXTRA->model);
+        TTObjectBaseRelease(&EXTRA->modelInfo);
     }
     
     if (EXTRA->presetManager) {
@@ -204,20 +204,20 @@ void model_subscribe(TTPtr self)
             
             // create a model object (for j.view too !)
             args = (TTPtr)x;
-            TTObjectBaseInstantiate(TTSymbol("Model"), &(EXTRA->model), args);
+            TTObjectBaseInstantiate(TTSymbol("ModelInfo"), &(EXTRA->modelInfo), args);
             
             // set his class attribute
-            EXTRA->model->setAttributeValue(TTSymbol("class"), x->patcherClass);
+            EXTRA->modelInfo->setAttributeValue(TTSymbol("class"), x->patcherClass);
             
             // suscribe it under a model node
             adrs = returnedAddress.appendAddress(TTAddress("model"));
             
-            if (JamomaDirectory->TTNodeCreate(adrs, EXTRA->model, x->patcherPtr, &returnedModelNode, &newInstanceCreated))
+            if (JamomaDirectory->TTNodeCreate(adrs, EXTRA->modelInfo, x->patcherPtr, &returnedModelNode, &newInstanceCreated))
                 object_error((ObjectPtr)x, "can't subscribe model object");
             
             // In model patcher : set model:address with the model address
 			if (x->patcherContext == kTTSym_model)
-				EXTRA->model->setAttributeValue(kTTSym_address, returnedAddress);
+				EXTRA->modelInfo->setAttributeValue(kTTSym_address, returnedAddress);
             
             // Get patcher arguments
 			ac = 0;
@@ -316,7 +316,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
         if (argAdrs.getType() == kAddressAbsolute) {
             
             // set the model:address attribute to notify all observers
-            EXTRA->model->setAttributeValue(kTTSym_address, argAdrs);
+            EXTRA->modelInfo->setAttributeValue(kTTSym_address, argAdrs);
             return;
         }
         
@@ -337,7 +337,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
             else {
                 
                 // set the model:address attribute to notify all observers
-                EXTRA->model->setAttributeValue(kTTSym_address, kTTAdrsRoot.appendAddress(argAdrs));
+                EXTRA->modelInfo->setAttributeValue(kTTSym_address, kTTAdrsRoot.appendAddress(argAdrs));
                 return;
             }
         }
@@ -367,7 +367,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
                 firstTTNode->getAddress(modelAdrs);
                 
                 // set the model:address attribute to notify all observers
-                EXTRA->model->setAttributeValue(kTTSym_address, modelAdrs);
+                EXTRA->modelInfo->setAttributeValue(kTTSym_address, modelAdrs);
                 return;
             }
             
@@ -380,7 +380,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
     }
     
     // check if the model address have been filled or not (see in model_return_upper_view_model_address)
-    EXTRA->model->getAttributeValue(kTTSym_address, v);
+    EXTRA->modelInfo->getAttributeValue(kTTSym_address, v);
     modelAdrs = v[0];
     
     // if the model:address is still empty : the view is not binding a model for instant
@@ -388,7 +388,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
         modelAdrs = TTAddress("/noModelAddress");
     
     // set the model:address attribute to notify all observers
-    EXTRA->model->setAttributeValue(kTTSym_address, modelAdrs);
+    EXTRA->modelInfo->setAttributeValue(kTTSym_address, modelAdrs);
 }
 
 void model_return_upper_view_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -407,7 +407,7 @@ void model_return_upper_view_model_address(TTPtr self, SymbolPtr msg, AtomCount 
         upperViewModelAddress = kTTAdrsRoot.appendAddress(EXTRA->argAddress);
     
     // set the model:address attribute to notify all observers
-    EXTRA->model->setAttributeValue(kTTSym_address, upperViewModelAddress);
+    EXTRA->modelInfo->setAttributeValue(kTTSym_address, upperViewModelAddress);
 }
 
 void model_init(TTPtr self)
@@ -545,7 +545,7 @@ void model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 			TTAddress modelAdrs = TTAddress(atom_getsym(argv)->s_name);
             
             // set the model:address attribute to notify all observers
-            EXTRA->model->setAttributeValue(kTTSym_address, modelAdrs);
+            EXTRA->modelInfo->setAttributeValue(kTTSym_address, modelAdrs);
 		}
 	}
 }
