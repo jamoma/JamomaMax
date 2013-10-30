@@ -8,6 +8,7 @@
  */
 
 #include "j.ui.h"
+#include "TTUiInfo.h"
 
 // class variables
 static t_class		*s_ui_class = NULL;
@@ -77,7 +78,6 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_return_color_toolbarBackground,	"return_color_toolbarBackground",	A_CANT, 0);
 	class_addmethod(c, (method)ui_return_color_toolbarText,			"return_color_toolbarText",			A_CANT, 0);
 	class_addmethod(c, (method)ui_return_color_border,				"return_color_border",				A_CANT, 0);
-	class_addmethod(c, (method)ui_return_ui_size,					"return_ui_size",					A_CANT, 0);
 	class_addmethod(c, (method)ui_return_ui_freeze,					"return_ui_freeze",					A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_return_model_address,				"return_model_address",				A_CANT, 0);
@@ -158,6 +158,8 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
 		x->outlets[panel_out] = outlet_new(x, NULL);						// outlet to open panel
 		x->outlets[preview_out] = outlet_new(x, NULL);						// outlet to output preview signal
+        
+        x->uiInfo = NULL;
 		
 		x->menu_items = NULL;
 		x->refmenu_items = NULL;

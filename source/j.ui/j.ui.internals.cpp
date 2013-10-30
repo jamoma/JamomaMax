@@ -16,7 +16,11 @@ void ui_data_create_all(t_ui* obj)
     TTNodePtr       returnedNode = NULL;
     TTNodePtr       returnedContextNode = NULL;
 	TTString		uiStr, parentStr, dataStr;
-	TTValue			v;
+	TTValue			v, args;
+    
+    // create a ui info object
+    args = (TTPtr)obj;
+    TTObjectBaseInstantiate(TTSymbol("UiInfo"), &(obj->uiInfo), args);
 	
 	// create a ui node with our patcher as context
 	if (!jamoma_subscriber_create((ObjectPtr)obj, NULL, kTTAdrsEmpty, &obj->viewSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
@@ -62,16 +66,7 @@ void ui_data_create_all(t_ui* obj)
 		
 		obj->memo_bordercolor = obj->bordercolor;
 		
-		// ui/size
-		ui_data_create(obj, &anObject, gensym("return_ui_size"), kTTSym_parameter, TTSymbol("ui/size"));
-		anObject->setAttributeValue(kTTSym_type, kTTSym_array);
-		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
-		anObject->setAttributeValue(kTTSym_description, TTSymbol("The size of the view's UI."));
-		
-		v = TTValue(obj->box.b_presentation_rect.width);
-		v.append(obj->box.b_presentation_rect.height);
-		anObject->setAttributeValue(kTTSym_value, v);
+
 		
 		// ui/freeze
 		ui_data_create(obj, &anObject, gensym("return_ui_freeze"), kTTSym_parameter, TTSymbol("ui/freeze"));
@@ -671,23 +666,6 @@ void ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	}
 	
 	jbox_redraw(&obj->box);
-}
-
-void ui_return_ui_size(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	t_ui* obj = (t_ui*)self;
-	t_rect* rect;
-	
-	rect = (t_rect*)malloc(sizeof(t_rect));
-	rect->x = 0;
-	rect->y = 0;
-	rect->width = atom_getlong(argv);
-	rect->height = atom_getlong(argv+1);
-
-	object_attr_set_rect((t_object*)obj, _sym_presentation_rect, rect);
-	
-	jbox_redraw(&obj->box);
-	free(rect);
 }
 
 void ui_return_ui_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)

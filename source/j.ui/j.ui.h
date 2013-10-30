@@ -7,6 +7,9 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
+#ifndef __J_UI__
+#define __J_UI__
+
 #include "ext.h"
 #include "ext_obex.h"
 #include "ext_user.h"
@@ -46,6 +49,7 @@ typedef struct inlet {
 typedef struct _ui{
 	t_jbox				box;
 	TTHandle			outlets;
+    TTObjectBasePtr     uiInfo;
 	TTHashPtr			hash_datas;				///< hash table of TTData
 	TTHashPtr			hash_viewers;			///< hash table of TTViewer
 	TTHashPtr			hash_receivers;			///< hash table of TTReceiver
@@ -140,7 +144,6 @@ typedef struct _ui{
 	float				anchorValue;		//	...
 } t_ui;
 
-
 // prototypes: general
 t_ui*		ui_new(t_symbol *s, long argc, t_atom *argv);
 void 		ui_free(t_ui *x);
@@ -200,7 +203,6 @@ void		ui_return_color_contentBackground(TTPtr self, SymbolPtr msg, AtomCount arg
 void		ui_return_color_toolbarBackground(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_return_color_toolbarText(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_return_color_border(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_ui_size(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_return_ui_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void		ui_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
@@ -227,3 +229,5 @@ void		ui_preset_store_next(t_ui *x);
 void		ui_preset_doread(t_ui *x);
 void		ui_preset_dowrite(t_ui *x);
 void		ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+#endif // __J_UI__

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		467C91CD18211F5300C182A0 /* TTUiInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TTUiInfo.cpp; sourceTree = "<group>"; };
+		467C91CE18211F5300C182A0 /* TTUiInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTUiInfo.h; sourceTree = "<group>"; };
 		469BD9FF180B594400A023B3 /* j.ui.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.ui.yml; sourceTree = "<group>"; };
 		D289EC59150FD6A900FC7F7E /* j.ui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.ui.cpp; sourceTree = "<group>"; };
 		D289EC5A150FD6A900FC7F7E /* j.ui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = j.ui.h; sourceTree = "<group>"; };
@@ -23,6 +25,8 @@
 				D289EC59150FD6A900FC7F7E /* j.ui.cpp */,
 				D289EC5B150FD6A900FC7F7E /* j.ui.internals.cpp */,
 				D289EC5C150FD6A900FC7F7E /* j.ui.presets.cpp */,
+				467C91CE18211F5300C182A0 /* TTUiInfo.h */,
+				467C91CD18211F5300C182A0 /* TTUiInfo.cpp */,
 			);
 			name = j.ui;
 			sourceTree = "<group>";
