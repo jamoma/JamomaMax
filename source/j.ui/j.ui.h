@@ -172,11 +172,13 @@ void		ui_refmenu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers);
 void 		ui_refmenu_qfn(t_ui *x);
 void 		ui_refmenu_build(t_ui *x);
 
+// prototypes: TTUiInfo registration
+void		ui_register_info(t_ui* obj);
+void		ui_unregister_info(t_ui* obj);
+
 // prototypes: internal TTData and TTViewer
 void		ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbackMethod, TTSymbol service, TTSymbol name, TTBoolean deferlow = NO);
-void		ui_data_create_all(t_ui* obj);
 void		ui_data_destroy(t_ui *obj, TTSymbol name);
-void		ui_data_destroy_all(t_ui* obj);
 void		ui_data_send(t_ui *obj, TTSymbol name, TTValue v);
 void		ui_data_interface(t_ui *x, TTSymbol name);
 
@@ -197,13 +199,6 @@ void		ui_modelParamExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, 
 void		ui_modelRetExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void		ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-void		ui_view_panel_return(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-void		ui_return_color_contentBackground(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_color_toolbarBackground(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_color_toolbarText(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_color_border(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_ui_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void		ui_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);

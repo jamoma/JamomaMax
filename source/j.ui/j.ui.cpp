@@ -74,14 +74,6 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_modelMessExplorer_callback,		"return_modelMessExploration",		A_CANT, 0);
 	class_addmethod(c, (method)ui_modelRetExplorer_callback,		"return_modelRetExploration",		A_CANT, 0);
 	
-	class_addmethod(c, (method)ui_view_panel_return,				"return_view_panel",				A_CANT, 0);
-	
-	class_addmethod(c, (method)ui_return_color_contentBackground,	"return_color_contentBackground",	A_CANT, 0);
-	class_addmethod(c, (method)ui_return_color_toolbarBackground,	"return_color_toolbarBackground",	A_CANT, 0);
-	class_addmethod(c, (method)ui_return_color_toolbarText,			"return_color_toolbarText",			A_CANT, 0);
-	class_addmethod(c, (method)ui_return_color_border,				"return_color_border",				A_CANT, 0);
-	class_addmethod(c, (method)ui_return_ui_freeze,					"return_ui_freeze",					A_CANT, 0);
-	
 	class_addmethod(c, (method)ui_return_model_address,				"return_model_address",				A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_return_model_init,				"return_model_init",				A_CANT, 0);
@@ -213,13 +205,15 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
         x->textEditor = NULL;
         x->textHandler = NULL;
         x->state = NULL;
-		
+        
+        x->patcher_panel = NULL;
+        
 		attr_dictionary_process(x, d); 	// handle attribute args
 		
 		// The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-		defer_low((ObjectPtr)x, (method)ui_data_create_all, NULL, 0, 0);
+		defer_low((ObjectPtr)x, (method)ui_register_info, NULL, 0, 0);
 		
 		// The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
@@ -261,7 +255,7 @@ void ui_free(t_ui *x)
 		}
 	}
 	
-	ui_data_destroy_all(x);
+	ui_unregister_info(x);
 	ui_viewer_destroy_all(x);
 	ui_receiver_destroy_all(x);
 }
@@ -932,7 +926,7 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 			}
 		}
 		else if (x->has_panel && px.x >= x->rect_panel.x && px.x <= (x->rect_panel.x + x->rect_panel.width))
-			ui_data_send(x, TTSymbol("panel"), none);
+			x->uiInfo->sendMessage(TTSymbol("Panel"));
 		
 		else if (x->has_preview && px.x >= x->rect_preview.x && px.x <= (x->rect_preview.x + x->rect_preview.width)) {
 			if (x->selection) {

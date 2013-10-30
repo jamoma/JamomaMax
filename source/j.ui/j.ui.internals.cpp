@@ -9,13 +9,12 @@
 
 #include "j.ui.h"
 
-void ui_data_create_all(t_ui* obj)
+void ui_register_info(t_ui* obj)
 {
 	TTObjectBasePtr	anObject = NULL;
     TTAddress       returnedAddress;
     TTNodePtr       returnedNode = NULL;
     TTNodePtr       returnedContextNode = NULL;
-	TTString		uiStr, parentStr, dataStr;
 	TTValue			v, args;
     
     // create a ui info object
@@ -34,68 +33,14 @@ void ui_data_create_all(t_ui* obj)
 		
 		// make a receiver on contextAddress/model:address attribute
 		ui_receiver_create(obj, &anObject, gensym("return_model_address"), TTSymbol("model:address"), obj->viewAddress, YES); // YES : we want to deferlow this method
-		
-		// Then create all internal datas concerning the j.ui
-		// ui/color/contentBackground
-		ui_data_create(obj, &anObject, gensym("return_color_contentBackground"), kTTSym_message, TTSymbol("ui/color/contentBackground"));
-		anObject->setAttributeValue(kTTSym_type, kTTSym_array);
-		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
-		anObject->setAttributeValue(kTTSym_description, TTSymbol("The background color of the module in the format RGBA where values range [0.0, 1.0]."));
-		
-		// ui/color/toolbarBackground
-		ui_data_create(obj, &anObject, gensym("return_color_toolbarBackground"), kTTSym_message, TTSymbol("ui/color/toolbarBackground"));
-		anObject->setAttributeValue(kTTSym_type, kTTSym_array);
-		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
-		anObject->setAttributeValue(kTTSym_description, TTSymbol("The background color of the module's toolbar in the format RGBA where values range [0.0, 1.0]."));
-		
-		// ui/color/toolbarText
-		ui_data_create(obj, &anObject, gensym("return_color_toolbarText"), kTTSym_message, TTSymbol("ui/color/toolbarText"));
-		anObject->setAttributeValue(kTTSym_type, kTTSym_array);
-		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
-		anObject->setAttributeValue(kTTSym_description, TTSymbol("The color of the module's toolbar text in the format RGBA where values range [0.0, 1.0]."));
-		
-		// ui/color/border
-		ui_data_create(obj, &anObject, gensym("return_color_border"), kTTSym_message, TTSymbol("ui/color/border"));
-		anObject->setAttributeValue(kTTSym_type, kTTSym_array);
-		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
-		anObject->setAttributeValue(kTTSym_description, TTSymbol("The border color of the module in the format RGBA where values range [0.0, 1.0]."));
-		
-		obj->memo_bordercolor = obj->bordercolor;
-		
-		// ui/freeze
-		ui_data_create(obj, &anObject, gensym("return_ui_freeze"), kTTSym_parameter, TTSymbol("ui/freeze"));
-		anObject->setAttributeValue(kTTSym_type, kTTSym_boolean);
-		anObject->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		anObject->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
-		anObject->setAttributeValue(kTTSym_description, TTSymbol("Freeze each j.remote in the patch"));
-	}
-}
-
-void ui_data_destroy_all(t_ui *obj)
-{
-	TTValue			hk, v;
-	TTSymbol		key;
-	TTUInt8			i;
-	
-	// delete all datas
-	if (obj->hash_datas) {
-		
-		if (!obj->hash_datas->isEmpty()) {
-			
-			obj->hash_datas->getKeys(hk);
-			for (i=0; i<obj->hash_datas->getSize(); i++) {
-				
-				hk.get(i, key);
-				ui_data_destroy(obj, key);
-			}
-		}
-		delete obj->hash_datas;
 	}
     
+    // keep current bordercolor in mind
+    obj->memo_bordercolor = obj->bordercolor;
+}
+
+void ui_unregister_info(t_ui *obj)
+{
     // unregister the ui info object
     if (obj->uiSubscriber)
         TTObjectBaseRelease(&obj->uiSubscriber);
@@ -540,7 +485,7 @@ void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 				obj->patcher_panel = o;
 				obj->has_panel = true;
 				
-				// view/panel
+				// ui/panel
 				ui_data_create(obj, &aData, gensym("return_view_panel"), kTTSym_message, TTSymbol("panel"));
 				
 				// Set attribute of the data
@@ -557,17 +502,6 @@ void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		name = NULL;
 		connecteds = connecteds->d_next;
 	}
-}
-
-void ui_view_panel_return(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	t_ui* obj = (t_ui*)self;
-	Atom		a;
-	
-	// open view panel and set title
-	atom_setsym(&a, gensym((char*)obj->viewAddress.c_str()));
-	object_attr_setvalueof(obj->patcher_panel, _sym_title, 1, &a);
-	object_method(obj->patcher_panel, _sym_vis);
 }
 
 void ui_return_metersdefeated(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -673,65 +607,6 @@ void ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	}
 	
 	jbox_redraw(&obj->box);
-}
-
-void ui_return_ui_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	t_ui* obj = (t_ui*)self;
-    TTNodePtr   modelNode;
-    TTErr       err;
-	
-	if (argc == 1)
-		obj->ui_freeze = atom_getlong(argv);
-	
-	// get the TTContainer object of the view patch
-    err = JamomaDirectory->getTTNode(obj->viewAddress, &modelNode);
-    
-    if (!err) {
-        
-        if (modelNode->getObject()) {
-            
-            // set freeze attribute to all j.remote (on 3 levels only as we don't have the // operator)
-            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*:freeze"), argc, argv);
-            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*/*.*:freeze"), argc, argv);
-            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*/*.*/*.*:freeze"), argc, argv);
-        }
-    }
-}
-
-void ui_return_color_contentBackground(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	t_ui* obj = (t_ui*)self;
-	
-	// Colors default to "0". If default value is passed, we avoid setting the color, in order to stick to object defaults.
-	if (argc>1)
-		object_attr_setvalueof(obj, _sym_bgcolor, argc, argv);
-}
-
-void ui_return_color_toolbarBackground(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	t_ui* obj = (t_ui*)self;
-	
-	if (argc>1)
-		object_attr_setvalueof(obj, gensym("headercolor"), argc, argv);
-}
-
-void ui_return_color_toolbarText(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	t_ui* obj = (t_ui*)self;
-	
-	if (argc>1)
-		object_attr_setvalueof(obj, _sym_textcolor, argc, argv);
-}
-
-void ui_return_color_border(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	t_ui* obj = (t_ui*)self;
-	
-	if (argc>1) {
-		object_attr_setvalueof(obj, gensym("bordercolor"), argc, argv);
-		obj->memo_bordercolor = obj->bordercolor;
-	}
 }
 
 void ui_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)

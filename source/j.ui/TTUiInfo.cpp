@@ -19,7 +19,8 @@
 #define thisTTClassName		"UiInfo"
 #define thisTTClassTags		"ui info"
 
-TT_MODULAR_CONSTRUCTOR
+TT_MODULAR_CONSTRUCTOR,
+mFreeze(NO)
 {
     TT_ASSERT("Correct number of args to create TTUiInfo", arguments.size() == 1);
     
@@ -28,6 +29,13 @@ TT_MODULAR_CONSTRUCTOR
             mObject = (t_ui*)(TTPtr(arguments[0]));
     
     addAttributeWithGetterAndSetter(Size, kTypeLocalValue);
+    addAttributeWithSetter(Freeze, kTypeBoolean);
+    
+    addMessageWithArguments(ColorContentBackground);
+    addMessageWithArguments(ColorToolbarBackground);
+    addMessageWithArguments(ColorToolbarText);
+    addMessageWithArguments(ColorBorder);
+    addMessage(Panel);
 }
 
 
@@ -60,4 +68,116 @@ TTErr TTUiInfo::getSize(TTValue& value)
     value.append(TTUInt32(mObject->box.b_presentation_rect.height));
     
     return kTTErrNone;
+}
+
+TTErr TTUiInfo::setFreeze(const TTValue& newValue)
+{
+    long		argc = 0;
+	AtomPtr		argv = NULL;
+    TTNodePtr   modelNode;
+    TTErr       err;
+	
+    mFreeze = newValue;
+    
+	// get the TTContainer object of the view patch
+    err = JamomaDirectory->getTTNode(mObject->viewAddress, &modelNode);
+    
+    if (!err) {
+        
+        if (modelNode->getObject()) {
+            
+            jamoma_ttvalue_to_Atom(mFreeze, &argc, &argv);
+            
+            // set freeze attribute to all j.remote (on 3 levels only as we don't have the // operator)
+            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*:freeze"), argc, argv);
+            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*/*.*:freeze"), argc, argv);
+            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*/*.*/*.*:freeze"), argc, argv);
+            
+            return kTTErrNone;
+        }
+    }
+    
+    return kTTErrGeneric;
+}
+
+TTErr TTUiInfo::ColorContentBackground(const TTValue& inputValue, TTValue& outputValue)
+{
+    long		argc = 0;
+	AtomPtr		argv = NULL;
+    
+    jamoma_ttvalue_to_Atom(inputValue, &argc, &argv);
+    
+	// Colors default to "0". If default value is passed, we avoid setting the color, in order to stick to object defaults.
+	if (argc > 1) {
+        
+		object_attr_setvalueof(mObject, _sym_bgcolor, argc, argv);
+        return kTTErrNone;
+    }
+    
+    return kTTErrGeneric;
+}
+
+TTErr TTUiInfo::ColorToolbarBackground(const TTValue& inputValue, TTValue& outputValue)
+{
+    long		argc = 0;
+	AtomPtr		argv = NULL;
+    
+    jamoma_ttvalue_to_Atom(inputValue, &argc, &argv);
+    
+	if (argc > 1) {
+        
+		object_attr_setvalueof(mObject, gensym("headercolor"), argc, argv);
+        return kTTErrNone;
+    }
+    
+    return kTTErrGeneric;
+}
+
+TTErr TTUiInfo::ColorToolbarText(const TTValue& inputValue, TTValue& outputValue)
+{
+    long		argc = 0;
+	AtomPtr		argv = NULL;
+    
+    jamoma_ttvalue_to_Atom(inputValue, &argc, &argv);
+    
+	if (argc > 1) {
+        
+		object_attr_setvalueof(mObject, _sym_textcolor, argc, argv);
+        return kTTErrNone;
+    }
+    
+    return kTTErrGeneric;
+}
+
+TTErr TTUiInfo::ColorBorder(const TTValue& inputValue, TTValue& outputValue)
+{
+    long		argc = 0;
+	AtomPtr		argv = NULL;
+    
+    jamoma_ttvalue_to_Atom(inputValue, &argc, &argv);
+    
+	if (argc > 1) {
+        
+		object_attr_setvalueof(mObject, gensym("bordercolor"), argc, argv);
+		mObject->memo_bordercolor = mObject->bordercolor;
+        return kTTErrNone;
+	}
+    
+    return kTTErrGeneric;
+}
+
+TTErr TTUiInfo::Panel()
+{
+	t_atom a;
+    
+    if (mObject->patcher_panel) {
+	
+        // open ui panel and set title
+        atom_setsym(&a, gensym((char*)mObject->viewAddress.c_str()));
+        object_attr_setvalueof(mObject->patcher_panel, _sym_title, 1, &a);
+        object_method(mObject->patcher_panel, _sym_vis);
+        return kTTErrNone;
+    }
+    
+    return kTTErrGeneric;
 }

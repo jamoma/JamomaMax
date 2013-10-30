@@ -19,6 +19,10 @@
 
   <entry App="clear" TT="Clear"/>
   <entry App="copy" TT="Copy"/>
+  <entry App="color/contentBackground" TT="ColorContentBackground"/>
+  <entry App="color/toolbarBackground" TT="ColorToolbarBackground"/>
+  <entry App="color/toolbarText" TT="ColorToolbarText"/>
+  <entry App="color/border" TT="ColorBorder"/>
   <entry App="dec" TT="Dec"/>
   <entry App="namespace/build" TT="DirectoryBuild"/>
   <entry App="namespace/observe" TT="DirectoryObserve"/>
@@ -30,6 +34,7 @@
   <entry App="mix" TT="Mix"/>
   <entry App="move" TT="Move"/>
   <entry App="new" TT="New"/>
+  <entry App="panel" TT="Panel"/>
   <entry App="recall" TT="Recall"/>
   <entry App="reference/open" TT="ReferenceOpen"/>
   <entry App="refresh" TT="Refresh"/>
