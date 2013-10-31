@@ -53,6 +53,8 @@ TTErr TTUiInfo::setSize(const TTValue& newValue)
 	rect->height = TTUInt32(newValue[1]);
     
 	object_attr_set_rect((ObjectPtr)mObject, _sym_presentation_rect, rect);
+    
+    ui_build(mObject);
 	
 	jbox_redraw(&mObject->box);
 	free(rect);
