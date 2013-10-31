@@ -174,28 +174,6 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="namespace/append">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
-		<method name="namespace/clear">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
 		<method name="namespace/select">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -207,7 +185,18 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="namespace/remove">
+		<method name="namespace/unselect">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+		<method name="namespace/update">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
