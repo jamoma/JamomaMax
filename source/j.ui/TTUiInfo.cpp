@@ -20,7 +20,8 @@
 #define thisTTClassTags		"ui info"
 
 TT_MODULAR_CONSTRUCTOR,
-mFreeze(NO)
+mFreeze(NO),
+mHighlight(kTTSym_none)
 {
     TT_ASSERT("Correct number of args to create TTUiInfo", arguments.size() == 1);
     
@@ -30,11 +31,8 @@ mFreeze(NO)
     
     addAttributeWithGetterAndSetter(Size, kTypeLocalValue);
     addAttributeWithSetter(Freeze, kTypeBoolean);
+    addAttributeWithSetter(Highlight, kTypeSymbol);
     
-    addMessageWithArguments(ColorContentBackground);
-    addMessageWithArguments(ColorToolbarBackground);
-    addMessageWithArguments(ColorToolbarText);
-    addMessageWithArguments(ColorBorder);
     addMessage(Panel);
 }
 
@@ -100,70 +98,106 @@ TTErr TTUiInfo::setFreeze(const TTValue& newValue)
     return kTTErrGeneric;
 }
 
-TTErr TTUiInfo::ColorContentBackground(const TTValue& inputValue, TTValue& outputValue)
+TTErr TTUiInfo::setHighlight(const TTValue& inputValue)
 {
-    long		argc = 0;
-	AtomPtr		argv = NULL;
+	TTSymbol newHighlight = inputValue;
     
-    jamoma_ttvalue_to_Atom(inputValue, &argc, &argv);
-    
-	// Colors default to "0". If default value is passed, we avoid setting the color, in order to stick to object defaults.
-	if (argc > 1) {
+    // Filter repetitions
+    if (newHighlight != mHighlight) {
         
-		object_attr_setvalueof(mObject, _sym_bgcolor, argc, argv);
-        return kTTErrNone;
+        if (newHighlight == TTSymbol("none")) {
+            mHighlight = newHighlight;
+            TTLogMessage("none\n");
+        }
+        else if (newHighlight == TTSymbol("red")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 1., 0., 0., 1.);
+            TTLogMessage("red\n");
+        }
+        else if (newHighlight == TTSymbol("orange")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 1., 0.5, 0., 1.);
+            TTLogMessage("orange\n");
+        }
+        else if (newHighlight == TTSymbol("yellow")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 1., 1., 0., 1.);
+            TTLogMessage("yellow\n");
+        }
+        else if (newHighlight == TTSymbol("chartreuseGreen")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 0.5, 1., 0., 1.);
+            TTLogMessage("chartreuseGreen\n");
+        }
+        else if (newHighlight == TTSymbol("green")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 0., 1., 0., 1.);
+            TTLogMessage("green\n");
+        }
+        else if (newHighlight == TTSymbol("springGreen")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 0., 1., 0.5, 1.);
+            TTLogMessage("springGreen\n");
+        }
+        else if (newHighlight == TTSymbol("cyan")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 0., 1., 1., 1.);
+            TTLogMessage("cyan\n");
+        }
+        else if (newHighlight == TTSymbol("azure")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 0., 0.5, 1., 1.);
+            TTLogMessage("azure\n");
+        }
+        else if (newHighlight == TTSymbol("blue")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 0., 0., 1., 1.);
+            TTLogMessage("blue\n");
+        }
+        else if (newHighlight == TTSymbol("violet")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 0.5, 0., 1., 1.);
+            TTLogMessage("violet\n");
+        }
+        else if (newHighlight == TTSymbol("magenta")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 1., 0., 1., 1.);
+            TTLogMessage("magenta\n");
+        }
+        else if (newHighlight == TTSymbol("rose")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 1., 0., 0.5, 1.);
+            TTLogMessage("rose\n");
+        }
+        else if (newHighlight == TTSymbol("black")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 0., 0., 0., 1.);
+            TTLogMessage("black\n");
+        }
+        else if (newHighlight == TTSymbol("white")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 1., 1., 1., 1.);
+            TTLogMessage("white\n");
+        }
+        else if (newHighlight == TTSymbol("jamoma")) {
+            mHighlight = newHighlight;
+            jrgba_set(&mObject->highlightcolor, 0.62, 0., 0.36, 1.);
+            TTLogMessage("jamoma\n");
+        }
+        else {
+            TTLogWarning("j.ui - unknown color used for highlighting.\n");
+            return kTTErrGeneric;
+        }
+    }
+    else {
+        TTLogWarning("j.ui - Missing argument when attempting to set highlight color.");
+        return kTTErrGeneric;
     }
     
-    return kTTErrGeneric;
-}
-
-TTErr TTUiInfo::ColorToolbarBackground(const TTValue& inputValue, TTValue& outputValue)
-{
-    long		argc = 0;
-	AtomPtr		argv = NULL;
+    // Redraw
+	jbox_redraw(&mObject->box);
     
-    jamoma_ttvalue_to_Atom(inputValue, &argc, &argv);
-    
-	if (argc > 1) {
-        
-		object_attr_setvalueof(mObject, gensym("headercolor"), argc, argv);
-        return kTTErrNone;
-    }
-    
-    return kTTErrGeneric;
-}
-
-TTErr TTUiInfo::ColorToolbarText(const TTValue& inputValue, TTValue& outputValue)
-{
-    long		argc = 0;
-	AtomPtr		argv = NULL;
-    
-    jamoma_ttvalue_to_Atom(inputValue, &argc, &argv);
-    
-	if (argc > 1) {
-        
-		object_attr_setvalueof(mObject, _sym_textcolor, argc, argv);
-        return kTTErrNone;
-    }
-    
-    return kTTErrGeneric;
-}
-
-TTErr TTUiInfo::ColorBorder(const TTValue& inputValue, TTValue& outputValue)
-{
-    long		argc = 0;
-	AtomPtr		argv = NULL;
-    
-    jamoma_ttvalue_to_Atom(inputValue, &argc, &argv);
-    
-	if (argc > 1) {
-        
-		object_attr_setvalueof(mObject, gensym("bordercolor"), argc, argv);
-		mObject->memo_bordercolor = mObject->bordercolor;
-        return kTTErrNone;
-	}
-    
-    return kTTErrGeneric;
+    return kTTErrNone;
 }
 
 TTErr TTUiInfo::Panel()
@@ -171,7 +205,7 @@ TTErr TTUiInfo::Panel()
 	t_atom a;
     
     if (mObject->patcher_panel) {
-	
+        
         // open ui panel and set title
         atom_setsym(&a, gensym((char*)mObject->viewAddress.c_str()));
         object_attr_setvalueof(mObject->patcher_panel, _sym_title, 1, &a);

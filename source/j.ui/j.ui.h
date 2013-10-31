@@ -76,7 +76,7 @@ typedef struct _ui{
 	t_jrgba				bordercolor;
 	t_jrgba				headercolor;
 	t_jrgba				textcolor;
-	t_jrgba				selectcolor;
+    t_jrgba             highlightcolor;
     
     TTString            *text;                  // the text of the editor to read after edclose
 	ObjectPtr           textEditor;             // the text editor window

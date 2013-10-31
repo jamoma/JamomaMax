@@ -91,32 +91,36 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	
 	class_addmethod(c, (method)ui_return_signal,					"return_signal",					A_CANT, 0);
 	
-	CLASS_ATTR_DEFAULT(c,					"patching_rect",	0, "0. 0. 300. 70.");
-	CLASS_ATTR_DEFAULT(c,					"fontname",			0, JAMOMA_DEFAULT_FONT);
-	CLASS_ATTR_DEFAULT(c,					"fontsize",			0, "11");
+	CLASS_ATTR_DEFAULT(c,                                           "patching_rect",            0,      "0. 0. 300. 70.");
+	CLASS_ATTR_DEFAULT(c,					                        "fontname",                 0,      JAMOMA_DEFAULT_FONT);
+	CLASS_ATTR_DEFAULT(c,					                        "fontsize",                 0,      "11");
 	
-	CLASS_STICKY_ATTR(c,					"category",			0, "Color");
+	CLASS_STICKY_ATTR(c,					                        "category",                 0,      "Color");
 	
-	CLASS_ATTR_RGBA(c,						"bgcolor",			0,	t_ui,	bgcolor);
-	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	"bgcolor",			0,	"0.93 0.93 0.93 1.0");
-	CLASS_ATTR_STYLE(c,						"bgcolor",			0,	"rgba");
+	CLASS_ATTR_RGBA(c,						                        "bgcolor",                  0,      t_ui,	bgcolor);
+	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	                        "bgcolor",                  0,      "0.93 0.93 0.93 1.0");
+	CLASS_ATTR_STYLE(c,						                        "bgcolor",                  0,      "rgba");
 	
-	CLASS_ATTR_RGBA(c,						"bordercolor",		0,	t_ui,	bordercolor);
-	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	"bordercolor",		0,	"0.6 0.6 0.6 1.0");
-	CLASS_ATTR_STYLE(c,						"bordercolor",		0,	"rgba");
+	CLASS_ATTR_RGBA(c,						                        "bordercolor",              0,      t_ui,	bordercolor);
+	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	                        "bordercolor",              0,      "0.6 0.6 0.6 1.0");
+	CLASS_ATTR_STYLE(c,						                        "bordercolor",              0,      "rgba");
 	
-	CLASS_ATTR_RGBA(c,						"headercolor",		0,	t_ui,	headercolor);
-	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	"headercolor",		0,	"0.82 0.82 0.82 1.0");
-	CLASS_ATTR_STYLE(c,						"headercolor",		0,	"rgba");
+	CLASS_ATTR_RGBA(c,						                        "headercolor",              0,      t_ui,	headercolor);
+	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	                        "headercolor",              0,      "0.82 0.82 0.82 1.0");
+	CLASS_ATTR_STYLE(c,						                        "headercolor",              0,      "rgba");
 	
-	CLASS_ATTR_RGBA(c,						"textcolor",		0,	t_ui,	textcolor);
-	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	"textcolor",		0,	"0. 0. 0. 1.0");
-	CLASS_ATTR_STYLE(c,						"textcolor",		0,	"rgba");
+	CLASS_ATTR_RGBA(c,						                        "textcolor",                0,      t_ui,	textcolor);
+	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	                        "textcolor",                0,      "0. 0. 0. 1.0");
+	CLASS_ATTR_STYLE(c,						                        "textcolor",                0,      "rgba");
+    
+    CLASS_ATTR_RGBA(c,						                        "highlightcolor",           0,      t_ui,	highlightcolor);
+	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	                        "highlightcolor",           0,      "0. 0. 0. 1.0");
+	CLASS_ATTR_STYLE(c,						                        "highlightcolor",           0,      "rgba");
 	
-	CLASS_STICKY_ATTR_CLEAR(c,				"category");
-	CLASS_STICKY_ATTR(c,					"category",			0, "Jamoma");
+	CLASS_STICKY_ATTR_CLEAR(c,				                        "category");
+	CLASS_STICKY_ATTR(c,					                        "category",                 0,      "Jamoma");
 	
-	CLASS_STICKY_ATTR_CLEAR(c,				"category");
+	CLASS_STICKY_ATTR_CLEAR(c,				                        "category");
 	
 	class_register(CLASS_BOX, c);
 	s_ui_class = c;
@@ -470,14 +474,48 @@ ObjectPtr ui_get_model_object(t_ui *x)
 
 void ui_paint(t_ui *x, t_object *view)
 {
+    TTSymbol    highlight = kTTSym_none;
+    TTValue     v;
 	t_rect 		rect;
 	t_jgraphics *g;
 	double 		border_thickness = 0.5;
 	double 		cornersize = 12.0;
 	double		middle;
+    t_jrgba		headercolor;
+    t_jrgba		bgcolor;
+	t_jrgba		bordercolor;
+	t_jrgba		textcolor;
 	
 	g = (t_jgraphics*) patcherview_get_jgraphics(view);
 	jbox_get_rect_for_view((t_object*) &x->box, view, &rect);
+    
+    // process highlight
+    if (x->uiInfo) {
+        x->uiInfo->getAttributeValue(TTSymbol("highlight"), v);
+        highlight = v[0];
+    }
+
+    if (highlight == kTTSym_none) {
+		headercolor = x->headercolor;
+		bgcolor		= x->bgcolor;
+		bordercolor = x->bordercolor;
+	}
+	else {
+		headercolor.red = 0.8*x->headercolor.red + 0.2*x->highlightcolor.red;
+		headercolor.green = 0.8*x->headercolor.green + 0.2*x->highlightcolor.green;
+		headercolor.blue = 0.8*x->headercolor.blue + 0.2*x->highlightcolor.blue;
+		headercolor.alpha = x->headercolor.alpha;
+		
+		bgcolor.red = 0.8*x->bgcolor.red + 0.2*x->highlightcolor.red;
+		bgcolor.green = 0.8*x->bgcolor.green + 0.2*x->highlightcolor.green;
+		bgcolor.blue = 0.8*x->bgcolor.blue + 0.2*x->highlightcolor.blue;
+		bgcolor.alpha = x->bgcolor.alpha;
+		
+		bordercolor.red = 0.8*x->bordercolor.red + 0.2*x->highlightcolor.red;
+		bordercolor.green = 0.8*x->bordercolor.green + 0.2*x->highlightcolor.green;
+		bordercolor.blue = 0.8*x->bordercolor.blue + 0.2*x->highlightcolor.blue;
+		bordercolor.alpha = x->bordercolor.alpha;
+	}
 	
 	// clear the background
 	jgraphics_rectangle_rounded(g,  border_thickness, 
@@ -485,7 +523,7 @@ void ui_paint(t_ui *x, t_object *view)
 								rect.width - ((border_thickness) * 2.0), 
 								rect.height - ((border_thickness) * 2.0), 
 								cornersize, cornersize); 
-	jgraphics_set_source_jrgba(g,	&x->bgcolor);
+	jgraphics_set_source_jrgba(g, &bgcolor);
 	jgraphics_fill(g);
 	
 	// draw the titlebar
@@ -494,7 +532,7 @@ void ui_paint(t_ui *x, t_object *view)
 								rect.width - (border_thickness * 2.0 + 1.0), 
 								18.0, 
 								cornersize, cornersize); 
-	jgraphics_set_source_jrgba(g,	&x->headercolor);
+	jgraphics_set_source_jrgba(g, &headercolor);
 	jgraphics_fill(g);
 	
 	jgraphics_rectangle_fill_fast(g, border_thickness, 
@@ -508,7 +546,7 @@ void ui_paint(t_ui *x, t_object *view)
 								rect.width - (border_thickness * 2.0), 
 								rect.height - (border_thickness * 2.0), 
 								cornersize, cornersize); 
-	jgraphics_set_source_jrgba(g,	&x->bordercolor);
+	jgraphics_set_source_jrgba(g, &bordercolor);
 	jgraphics_set_line_width(g, 1.0);
 	jgraphics_stroke(g);
 	
@@ -1029,10 +1067,6 @@ void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 		// Is the mouse wasn't hover the j.ui panel
 		if (!x->hover) {
 			x->hover = true;
-			atom_setfloat(&selected_color[0], 0.62);
-			atom_setfloat(&selected_color[1], 0.);
-			atom_setfloat(&selected_color[2], 0.36);
-			atom_setfloat(&selected_color[3], 0.70);
 			object_attr_setvalueof(x, gensym("bordercolor"), 4, selected_color);
 		}
 	}
@@ -1536,4 +1570,3 @@ void ui_doedit(t_ui *x)
     x->text = NULL;
     x->textEditor = NULL;
 }
-

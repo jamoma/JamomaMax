@@ -27,6 +27,7 @@ class TTMODULAR_EXPORT TTUiInfo : public TTDataObjectBase
     
     TTValue             mSize;                  ///< ATTRIBUTE : the size of the j.ui
     TTBoolean           mFreeze;                ///< ATTRIBUTE : freeze all j.remote
+    TTSymbol            mHighlight;             ///< ATTRIBUTE : highlight the j.ui using a template color : none, red, orange, yellow, chartreuseGreen, green, springGreen, cyan, azure, blue, violet, magenta, rose, black, white, jamoma)
    
     t_ui*               mObject;                ///< cache the j.ui object
     
@@ -50,37 +51,13 @@ public:
      */
     TTErr setFreeze(const TTValue& newValue);
     
-    /** Set content background color
-     @param     inputValue  a new color
-     @param     outputValue nothing
+    /** Set highlight color
+     @param     newValue    a new highlight color
      @return	TTErr		kTTErrNone
      */
-    TTErr ColorContentBackground(const TTValue& inputValue, TTValue& outputValue);
-    
-    /** Set toolbar background color
-     @param     inputValue  a new color
-     @param     outputValue nothing
-     @return	TTErr		kTTErrNone
-     */
-    TTErr ColorToolbarBackground(const TTValue& inputValue, TTValue& outputValue);
-    
-    /** Set toolbar text color
-     @param     inputValue  a new color
-     @param     outputValue nothing
-     @return	TTErr		kTTErrNone
-     */
-    TTErr ColorToolbarText(const TTValue& inputValue, TTValue& outputValue);
-    
-    /** Set border color
-     @param     inputValue  a new color
-     @param     outputValue nothing
-     @return	TTErr		kTTErrNone
-     */
-    TTErr ColorBorder(const TTValue& inputValue, TTValue& outputValue);
+    TTErr setHighlight(const TTValue& inputValue);
     
     /** Open the ui panel
-     @param     inputValue  a new color
-     @param     outputValue nothing
      @return	TTErr		kTTErrNone
      */
     TTErr Panel();
