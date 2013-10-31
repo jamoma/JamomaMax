@@ -627,7 +627,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 529.0, 632.0, 36.0, 17.0 ],
-									"text" : "reset",
+									"text" : "init",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 
@@ -1805,7 +1805,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 195.0, 584.0, 411.0, 19.0 ],
-									"text" : "- defines the  default value to which it will be set at init and reset "
+									"text" : "- defines the  default value to which it will be set at init"
 								}
 
 							}

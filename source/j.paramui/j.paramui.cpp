@@ -519,7 +519,7 @@ void paramui_menu_qfn(t_paramui *x)
 	t_symobject *item = (t_symobject *)linklist_getindex(x->menu_items, x->menu_selection);
 	
 	if (item->sym == gensym("Set Parameter to Default Value"))
-		object_method(x->obj_parameter, gensym("reset"));
+		object_method(x->obj_parameter, gensym("init"));
 }
 
 

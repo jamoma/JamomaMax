@@ -139,7 +139,7 @@
 				Increment the value by the amount defined by the @value/stepsize attribute
 			</description>
 		</method>
-		<method name="reset">
+		<method name="init">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>

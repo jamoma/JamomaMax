@@ -268,7 +268,7 @@ void data_subscribe(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, AtomP
 #ifndef JMOD_RETURN
         // if a j.parameter is registered under the root : reset to the default value our self
         if (returnedContextNode == JamomaDirectory->getRoot())
-            x->wrappedObject->sendMessage(kTTSym_Reset);
+            x->wrappedObject->sendMessage(kTTSym_Init);
 #endif
 #endif
 	}

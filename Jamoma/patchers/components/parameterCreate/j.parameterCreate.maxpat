@@ -90,7 +90,7 @@
 									"patching_rect" : [ 129.0, 99.0, 371.0, 19.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 58.0, 57.0, 440.0, 19.0 ],
-									"text" : "your variable will be inited or reset to this value"
+									"text" : "your variable will be initialized to this value"
 								}
 
 							}

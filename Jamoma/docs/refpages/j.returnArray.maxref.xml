@@ -214,15 +214,15 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="reset">
+		<method name="init">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Reset the selected j.return instance to its default state
 			</digest>
 			<description>
-				TEXT_HERE
+				Reset the selected j.return instance to its default state
 			</description>
 		</method>
 	</methodlist>

@@ -874,7 +874,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 767.001831, 348.0, 20.0 ],
-									"text" : "j.test.assert.equal reset-test @input reset @compareTo bar"
+									"text" : "j.test.assert.equal init-test @input init @compareTo bar"
 								}
 
 							}
