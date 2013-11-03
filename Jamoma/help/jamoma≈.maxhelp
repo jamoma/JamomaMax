@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 19.0, 54.0, 632.0, 418.0 ],
+		"rect" : [ 413.0, 471.0, 632.0, 418.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -61,11 +61,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 19.0, 80.0, 632.0, 392.0 ],
+						"rect" : [ 413.0, 497.0, 632.0, 392.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -106,10 +106,11 @@
 									"fontsize" : 12.0,
 									"id" : "obj-3",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
-									"patching_rect" : [ 321.0, 253.0, 93.0, 21.0 ],
-									"text" : "jamoma≈ limiter"
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "audio.connect", "" ],
+									"patching_rect" : [ 321.0, 253.0, 53.0, 21.0 ],
+									"text" : "j≈ limiter"
 								}
 
 							}
@@ -119,10 +120,11 @@
 									"fontsize" : 12.0,
 									"id" : "obj-2",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
-									"patching_rect" : [ 211.0, 253.0, 72.0, 21.0 ],
-									"text" : "jamoma≈ fft"
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "audio.connect", "" ],
+									"patching_rect" : [ 211.0, 253.0, 33.0, 21.0 ],
+									"text" : "j≈ fft"
 								}
 
 							}
@@ -132,16 +134,17 @@
 									"fontsize" : 12.0,
 									"id" : "obj-1",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
-									"patching_rect" : [ 76.0, 253.0, 98.0, 21.0 ],
-									"text" : "jamoma≈ allpass"
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "audio.connect", "" ],
+									"patching_rect" : [ 76.0, 253.0, 59.0, 21.0 ],
+									"text" : "j≈ allpass"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "jamoma≈", "@description", "The jamoma≈ object will wrap any class currently registered with the Jamoma Foundation." ],
+									"args" : [ "@name", "j≈", "@description", "The jamoma≈ object will wrap any class currently registered with the Jamoma Foundation." ],
 									"bgmode" : 1,
 									"id" : "obj-12",
 									"maxclass" : "bpatcher",
@@ -204,11 +207,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
+						"rect" : [ 0.0, 26.0, 632.0, 392.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -294,6 +297,18 @@
 				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "j.route.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
