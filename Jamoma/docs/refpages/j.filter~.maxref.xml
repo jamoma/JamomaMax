@@ -174,9 +174,9 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.filter≈"/>
-		<seealso name="equalizer~.model"
-		<seealso name="biquad~"
-		<seealso name="filtergraph~">
+		<seealso name="j.filter≈" />
+		<seealso name="equalizer~.model" />
+		<seealso name="biquad~" />
+		<seealso name="filtergraph~" />
 	</seealsolist>
 </c74object>
