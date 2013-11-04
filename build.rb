@@ -158,10 +158,10 @@ puts
 puts "	Building Jamoma #{git_tag} (rev. #{git_rev})"
 puts
 puts "	configuration = #{configuration}"
-puts "	clean				 = #{clean}"
+puts "	clean         = #{clean}"
 # puts "	compiler			= #{compiler}"
-puts "	postLog			 = #{postLog}"
-puts "	runTests			= #{runTests}"
+puts "	postLog       = #{postLog}"
+puts "	runTests      = #{runTests}"
 puts
 if git_dirty_commits != '0'
 	puts "	!!! WARNING !!!"
