@@ -220,7 +220,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 197.0, 508.0, 102.0, 20.0 ],
-					"text" : "jamoma~ allpass"
+					"text" : "j~ allpass"
 				}
 
 			}
@@ -234,7 +234,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 197.0, 536.0, 97.0, 19.0 ],
-					"text" : "jamoma≈ allpass"
+					"text" : "j≈ allpass"
 				}
 
 			}
