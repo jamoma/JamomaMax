@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
@@ -61,7 +61,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -87,7 +87,7 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"args" : [ "@name", "jamoma~", "@description", "the jamoma~ object will wrap any class currently registered with the Jamoma Foundation." ],
+									"args" : [ "@name", "j~", "@description", "the jamoma~ object will wrap any class currently registered with the Jamoma Foundation." ],
 									"bgmode" : 1,
 									"id" : "obj-12",
 									"maxclass" : "bpatcher",
@@ -134,10 +134,11 @@
 									"fontsize" : 12.0,
 									"id" : "obj-3",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
-									"patching_rect" : [ 295.0, 207.0, 107.0, 20.0 ],
-									"text" : "jamoma~ limiter 4"
+									"numinlets" : 4,
+									"numoutlets" : 5,
+									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
+									"patching_rect" : [ 295.0, 207.0, 73.0, 20.0 ],
+									"text" : "j~ limiter 4"
 								}
 
 							}
@@ -147,10 +148,11 @@
 									"fontsize" : 12.0,
 									"id" : "obj-2",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
-									"patching_rect" : [ 185.0, 207.0, 74.0, 20.0 ],
-									"text" : "jamoma~ fft"
+									"numinlets" : 2,
+									"numoutlets" : 3,
+									"outlettype" : [ "signal", "signal", "" ],
+									"patching_rect" : [ 185.0, 207.0, 46.0, 20.0 ],
+									"text" : "j~ fft"
 								}
 
 							}
@@ -160,10 +162,11 @@
 									"fontsize" : 12.0,
 									"id" : "obj-1",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 207.0, 102.0, 20.0 ],
-									"text" : "jamoma~ allpass"
+									"numinlets" : 2,
+									"numoutlets" : 3,
+									"outlettype" : [ "signal", "signal", "" ],
+									"patching_rect" : [ 50.0, 207.0, 61.0, 20.0 ],
+									"text" : "j~ allpass"
 								}
 
 							}
@@ -219,11 +222,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
+						"rect" : [ 0.0, 26.0, 632.0, 392.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
