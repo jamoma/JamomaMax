@@ -10,15 +10,15 @@
     <item name='factors' type='array' priority='0'>1.000000 2.000000 3.000000 4.000000 5.000000 6.000000 7.000000 8.000000 9.000000 10.000000 </item>
     <item name='frequency' type='decimal' priority='0'>100.000000</item>
     <item name='harmonic.1/gain' type='decimal' priority='0'>0.000000</item>
-    <item name='harmonic.10/gain' type='decimal' priority='0'>-60.000000</item>
-    <item name='harmonic.2/gain' type='decimal' priority='0'>-60.000000</item>
-    <item name='harmonic.3/gain' type='decimal' priority='0'>-60.000000</item>
-    <item name='harmonic.4/gain' type='decimal' priority='0'>-60.000000</item>
-    <item name='harmonic.5/gain' type='decimal' priority='0'>-60.000000</item>
-    <item name='harmonic.6/gain' type='decimal' priority='0'>-60.000000</item>
-    <item name='harmonic.7/gain' type='decimal' priority='0'>-60.000000</item>
-    <item name='harmonic.8/gain' type='decimal' priority='0'>-60.000000</item>
-    <item name='harmonic.9/gain' type='decimal' priority='0'>-60.000000</item>
+    <item name='harmonic.2/gain' type='decimal' priority='0'>-6.000000</item>
+    <item name='harmonic.3/gain' type='decimal' priority='0'>-12.000000</item>
+    <item name='harmonic.4/gain' type='decimal' priority='0'>-18.000000</item>
+    <item name='harmonic.5/gain' type='decimal' priority='0'>-24.000000</item>
+    <item name='harmonic.6/gain' type='decimal' priority='0'>-30.000000</item>
+    <item name='harmonic.7/gain' type='decimal' priority='0'>-36.000000</item>
+    <item name='harmonic.8/gain' type='decimal' priority='0'>-42.000000</item>
+    <item name='harmonic.9/gain' type='decimal' priority='0'>-48.000000</item>
+    <item name='harmonic.10/gain' type='decimal' priority='0'>-54.000000</item>
     <item name='view/freeze' type='boolean' priority='0'>0</item>
 
   </preset>
