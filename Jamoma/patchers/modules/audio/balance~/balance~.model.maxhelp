@@ -396,7 +396,7 @@
 									"args" : [ "/position" ],
 									"id" : "obj-2",
 									"maxclass" : "bpatcher",
-									"name" : "jmod.attr_params.maxpat",
+									"name" : "j.attrParameters.helper.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -491,7 +491,7 @@
 									"args" : [ "jmod.crossfade~" ],
 									"id" : "obj-4",
 									"maxclass" : "bpatcher",
-									"name" : "jmod.preset_params.maxpat",
+									"name" : "j.presetParameters.helper.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -586,7 +586,7 @@
 								"box" : 								{
 									"id" : "obj-6",
 									"maxclass" : "bpatcher",
-									"name" : "jmod.gain_params.maxpat",
+									"name" : "j.gainParameters.helper.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -1052,21 +1052,21 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.gain_params.maxpat",
+				"name" : "j.gainParameters.helper.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/help",
 				"patcherrelativepath" : "../../../../help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.preset_params.maxpat",
+				"name" : "j.presetParameters.helper.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/help",
 				"patcherrelativepath" : "../../../../help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.attr_params.maxpat",
+				"name" : "j.attrParameters.helper.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/help",
 				"patcherrelativepath" : "../../../../help",
 				"type" : "JSON",
