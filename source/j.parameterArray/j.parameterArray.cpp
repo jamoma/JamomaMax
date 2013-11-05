@@ -272,9 +272,9 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
             wrappedModularClass_ArraySelect(self, gensym("*"), 0, NULL);
             
 #ifndef JMOD_MESSAGE
-            // reset all datas created dynamically
+            // init all datas created dynamically
             if (!EXTRA->firstArray)
-                defer((ObjectPtr)x, (method)wrappedModularClass_anything, _sym_reset, 0, NULL);
+                defer((ObjectPtr)x, (method)wrappedModularClass_anything, _sym_init, 0, NULL);
 #endif
         }
         else if (number > MAX_ARRAY_SIZE)
