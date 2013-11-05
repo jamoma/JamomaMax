@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 386.0, 76.0, 667.0, 590.0 ],
+		"rect" : [ 339.0, 74.0, 1020.0, 712.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 667.0, 564.0 ],
+						"rect" : [ 0.0, 26.0, 1020.0, 686.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -357,7 +357,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 667.0, 564.0 ],
+						"rect" : [ 339.0, 100.0, 1020.0, 686.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -386,21 +386,21 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 81.0, 237.0, 131.0, 20.0 ],
+									"patching_rect" : [ 33.0, 563.0, 131.0, 20.0 ],
 									"text" : "s balance~.model.cmd"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "/position" ],
+									"args" : [ "position" ],
 									"id" : "obj-2",
 									"maxclass" : "bpatcher",
 									"name" : "j.attrParameters.helper.maxpat",
-									"numinlets" : 1,
+									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 81.0, 64.0, 378.0, 155.0 ]
+									"patching_rect" : [ 33.0, 24.0, 929.0, 627.0 ]
 								}
 
 							}
@@ -452,7 +452,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 667.0, 564.0 ],
+						"rect" : [ 0.0, 26.0, 1020.0, 686.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -548,7 +548,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 667.0, 564.0 ],
+						"rect" : [ 0.0, 26.0, 1020.0, 686.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -678,7 +678,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 667.0, 564.0 ],
+						"rect" : [ 0.0, 26.0, 1020.0, 686.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -701,13 +701,28 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
-									"fontsize" : 13.0,
+									"fontsize" : 12.0,
+									"hidden" : 1,
+									"id" : "obj-13",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 61.0, 357.0, 81.0, 20.0 ],
+									"text" : "loadmess set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
 									"id" : "obj-5",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 82.5, 244.0, 139.0, 21.0 ],
+									"patching_rect" : [ 61.0, 244.0, 129.0, 20.0 ],
 									"text" : "r balance~.model.cmd"
 								}
 
@@ -802,7 +817,7 @@
 									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 667.0, 70.0 ],
+									"patching_rect" : [ 0.0, 0.0, 945.0, 70.0 ],
 									"prototypename" : "bphelp",
 									"varname" : "maxhelpui"
 								}
@@ -818,7 +833,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 61.0, 386.0, 182.0, 18.0 ],
-									"text" : "position 0.555556"
+									"text" : "position -1."
 								}
 
 							}
@@ -829,6 +844,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-24", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-13", 0 ]
 								}
 
 							}
@@ -943,7 +967,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 667.0, 564.0 ],
+						"rect" : [ 0.0, 26.0, 1020.0, 686.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
