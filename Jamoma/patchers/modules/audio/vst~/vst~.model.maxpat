@@ -5640,7 +5640,7 @@
             291.0,
             31.0
           ],
-          "text": "j.parameter vst/program @priority 2 @ramp/drive none @repetitions/allow 1 @description \"VST program.\"",
+          "text": "j.parameter vst/program @priority 2 @ramp/drive none @repetitions/filter 0 @description \"VST program.\"",
           "varname": "vst/program"
         }
       },
@@ -5688,7 +5688,7 @@
             397.0,
             43.0
           ],
-          "text": "j.parameter vst/plug @type generic @priority 1 @repetitions/allow 0 @description \"Load a VST effect.  An optional argument define what VST plug-in to open. The plug-in has to be in the Max search path.\"",
+          "text": "j.parameter vst/plug @type generic @priority 1 @repetitions/filter 1 @description \"Load a VST effect.  An optional argument define what VST plug-in to open. The plug-in has to be in the Max search path.\"",
           "varname": "vst/plug"
         }
       }

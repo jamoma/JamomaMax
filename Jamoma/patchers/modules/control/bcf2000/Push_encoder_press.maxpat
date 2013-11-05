@@ -291,7 +291,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 46.0, 149.0, 502.0, 31.0 ],
-					"text" : "j.parameter press @type boolean @range/clipmode both @repetitions/allow 1 @priority 3 @description \"Push encoder turn.\"",
+					"text" : "j.parameter press @type boolean @range/clipmode both @repetitions/filter 0 @priority 3 @description \"Push encoder turn.\"",
 					"varname" : "8/push_encoder/3/turn"
 				}
 

@@ -453,7 +453,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 43.0, 580.0, 179.0, 29.0 ],
-					"text" : "model/address /remoteArrayMaxhelp"
+					"text" : "model:address /remoteArrayMaxhelp"
 				}
 
 			}

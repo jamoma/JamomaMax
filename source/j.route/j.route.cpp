@@ -1,13 +1,13 @@
 /** 
  * \file j.route.cpp
  * External for Jamoma: route messages to an outlet if they meet our criteria
- * By Tim Place, Copyright © 2005
+ * By Tim Place, Copyright ï¿½ 2005
  * 
  * License: This code is licensed under the terms of the "New BSD License"
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 #define MAX_LIST_LENGTH 100
 

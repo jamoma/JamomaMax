@@ -50,7 +50,7 @@ void		send_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 /** Associate j.send(~) with NodeLib. This is a prerequisit for communication with other Jamoma object in the module and beyond.  */
 void		send_subscribe(TTPtr self);
 
-/** Internal method called when the model/address parameter changed. It allows relative address binding.
+/** Internal method called when the model:address parameter changed. It allows relative address binding.
  @param self		Pointer to this object.
  @param msg			The message sent to this object.
  @param argc		The number of arguments passed to the object.
@@ -192,6 +192,11 @@ void WrappedSenderClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 		address = _sym_nothing;
 	
 	x->address = TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+    
+    // if the j.send tries to bind an Input object : bind the signal attribute
+    if (x->address.getName() == TTSymbol("in"))
+        x->address = x->address.appendAttribute(kTTSym_signal);
+    
 	x->argc = 0; // the argc member is usefull to count how many time the external tries to bind
 
 #ifdef JCOM_SEND_TILDE
@@ -255,17 +260,13 @@ void send_subscribe(TTPtr self)
 	if (x->address == kTTAdrsEmpty)
 		return;
 	
-	// if the j.send tries to bind an Input object : bind the signal attribute
-	if (x->address.getName() == TTSymbol("in"))
-		x->address = x->address.appendAttribute(kTTSym_signal);
-	
 	// for relative address
 	jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
 	
-	if (!jamoma_subscriber_create((ObjectPtr)x, NULL, TTAddress("model/address"), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((ObjectPtr)x, NULL, TTAddress("model"), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
 		// get the context address to make
-		// a viewer on the contextAddress/model/address parameter
+		// a viewer on the contextAddress/model:address attribute
 		x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
 		contextAddress = v[0];
         
@@ -275,8 +276,8 @@ void send_subscribe(TTPtr self)
 		
 		if (x->patcherContext != kTTSymEmpty) {
             
-            // observe model/address data (in view patcher : deferlow return_model_address)
-			makeInternals_receiver(x, contextAddress, TTSymbol("/model/address"), gensym("return_model_address"), &anObject, x->patcherContext == kTTSym_view);
+            // observe model:address attribute (in view patcher : deferlow return_model_address)
+			makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), &anObject, x->patcherContext == kTTSym_view);
 			anObject->sendMessage(kTTSym_Get);
 			return;
 		}
@@ -457,7 +458,7 @@ t_int *send_perform(t_int *w)
     TTUInt16					n;
 	t_float*					envelope;
 	TTFloat32					sum, mean;
-	TTValue						v;
+	TTValue						v, none;
     
     if (x->obj.z_disabled)
         return w + 4;
@@ -500,7 +501,7 @@ t_int *send_perform(t_int *w)
 						
 						// DATA case : send the mean value of the sample
 						else if (anObject->getName() == kTTSym_Data)
-							anObject->sendMessage(kTTSym_Command, v, kTTValNONE);
+							anObject->sendMessage(kTTSym_Command, v, none);
 						
 					}
 				}
@@ -523,7 +524,7 @@ void send_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doub
     TTUInt16					n;
 	TTSampleValue*              envelope;
 	TTFloat32					sum, mean;
-	TTValue						v;
+	TTValue						v, none;
     
     if (x->obj.z_disabled)
         return;
@@ -561,12 +562,12 @@ void send_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doub
 					if (anObject) {
 						
 						// INPUT case : cache the signal into the input
-						if (anObject->getName() == kTTSym_Input)
+						if (anObject->getName() == kTTSym_InputAudio)
 							TTInputPtr(anObject)->mSignalCache->appendUnique(aSender->mSignal);
 						
 						// DATA case : send the mean value of the sample
 						else if (anObject->getName() == kTTSym_Data)
-							anObject->sendMessage(kTTSym_Command, v, kTTValNONE);
+							anObject->sendMessage(kTTSym_Command, v, none);
 					}
 				}
 			}

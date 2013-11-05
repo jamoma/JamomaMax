@@ -198,7 +198,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 26.0, 128.0, 118.0, 18.0 ],
-									"text" : "prepend model/address"
+									"text" : "prepend model:address"
 								}
 
 							}
@@ -508,7 +508,7 @@
 						"default_fontsize" : 10.0
 					}
 ,
-					"text" : "p model/address"
+					"text" : "p model:address"
 				}
 
 			}

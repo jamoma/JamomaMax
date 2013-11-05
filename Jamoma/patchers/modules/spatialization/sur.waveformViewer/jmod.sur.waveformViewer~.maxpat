@@ -252,7 +252,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 460.0, 100.0, 596.0, 31.0 ],
-					"text" : "j.parameter numberOfChannels @type integer @repetitions/allow 0 @range/bounds 1 8 @range/clipmode both @ramp/drive none @description \"The number of channels to monitor.\""
+					"text" : "j.parameter numberOfChannels @type integer @repetitions/filter 1 @range/bounds 1 8 @range/clipmode both @ramp/drive none @description \"The number of channels to monitor.\""
 				}
 
 			}

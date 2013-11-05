@@ -85,11 +85,12 @@ StencilObjectPtr StencilNew(void)
 {
 	StencilObjectPtr	self = (StencilObjectPtr)jit_object_alloc(sStencilClass);
 	TTErr				err;
+	TTValue				none;
 	
 	if (self) {
-		err = TTObjectBaseInstantiate(kTTSym_matrix, (TTObjectBasePtr*)&self->x, kTTValNONE);
-		err = TTObjectBaseInstantiate(kTTSym_matrix, (TTObjectBasePtr*)&self->y, kTTValNONE);
-		err = TTObjectBaseInstantiate(TT("matrix.stencil"), (TTObjectBasePtr*)&self->stencilObject, kTTValNONE);
+		err = TTObjectBaseInstantiate(kTTSym_matrix, (TTObjectBasePtr*)&self->x, none);
+		err = TTObjectBaseInstantiate(kTTSym_matrix, (TTObjectBasePtr*)&self->y, none);
+		err = TTObjectBaseInstantiate(TT("matrix.stencil"), (TTObjectBasePtr*)&self->stencilObject, none);
 	} 
 	return self;
 }

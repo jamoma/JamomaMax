@@ -2632,7 +2632,7 @@
             567.0,
             43.0
           ],
-          "text": "j.message.array 32 speaker position @type decimalArray @repetitions/allow 1 @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+          "text": "j.message.array 32 speaker position @type decimalArray @repetitions/filter 0 @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
         }
       },
       {
@@ -2678,7 +2678,7 @@
             599.0,
             43.0
           ],
-          "text": "j.message numSpeakers @type integer @repetitions/allow 0 @range/bounds 2 32 @range/clipmode both @description \"The number of loudspeaker channels that a soundscape is diffused to. Changes only take effect when audio is off.\"",
+          "text": "j.message numSpeakers @type integer @repetitions/filter 1 @range/bounds 2 32 @range/clipmode both @description \"The number of loudspeaker channels that a soundscape is diffused to. Changes only take effect when audio is off.\"",
           "varname": "voices"
         }
       },

@@ -270,7 +270,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 274.0, 111.0, 20.0 ],
-									"text" : "@repetitions/allow"
+									"text" : "@repetitions/filter"
 								}
 
 							}
@@ -440,7 +440,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 146.0, 274.0, 288.0, 20.0 ],
-									"text" : "1 (default)/0 --- 1 means that repetitions are allowed"
+									"text" : "0 (default)/0 --- 1 means that repetitions are filtered"
 								}
 
 							}

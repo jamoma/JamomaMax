@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 4,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 295.0, 124.0, 1050.0, 634.0 ],
+		"rect" : [ 380.0, 131.0, 1050.0, 634.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
@@ -101,11 +101,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1050.0, 608.0 ],
+						"rect" : [ 380.0, 157.0, 1050.0, 608.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -151,7 +151,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 602.75, 452.0, 108.5, 18.0 ],
-									"text" : "angle"
+									"text" : "position"
 								}
 
 							}
@@ -252,7 +252,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 36.0, 500.0, 125.0, 18.0 ],
-									"text" : "0. 89.498672 16."
+									"text" : "-1. -0.03 -1."
 								}
 
 							}
@@ -435,7 +435,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-22",
-									"items" : [ "deg", ",", "degree", ",", "rad", ",", "radian" ],
+									"items" : [ "daz", ",", "cylindrical", ",", "openGL", ",", "ad", ",", "polar", ",", "aed", ",", "spherical", ",", "xy", ",", "cart2D", ",", "xyz", ",", "cart3D" ],
 									"labelclick" : 1,
 									"maxclass" : "umenu",
 									"numinlets" : 1,
@@ -521,7 +521,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-28",
-									"items" : [ "deg", ",", "degree", ",", "rad", ",", "radian" ],
+									"items" : [ "daz", ",", "cylindrical", ",", "openGL", ",", "ad", ",", "polar", ",", "aed", ",", "spherical", ",", "xy", ",", "cart2D", ",", "xyz", ",", "cart3D" ],
 									"labelclick" : 1,
 									"maxclass" : "umenu",
 									"numinlets" : 1,
@@ -1026,11 +1026,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 404.0, 196.0, 567.0, 477.0 ],
+						"rect" : [ 0.0, 26.0, 1050.0, 608.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1050,7 +1050,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -1368,7 +1367,6 @@
 									"fontsize" : 12.0,
 									"hidden" : 1,
 									"id" : "obj-2",
-									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
@@ -1652,11 +1650,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 553.0, 111.0, 582.0, 493.0 ],
+						"rect" : [ 0.0, 26.0, 1050.0, 608.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1676,7 +1674,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-5",
@@ -1724,7 +1721,6 @@
 									"fontsize" : 12.0,
 									"hidden" : 1,
 									"id" : "obj-2",
-									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
@@ -2171,11 +2167,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 376.0, 403.0, 398.0, 328.0 ],
+						"rect" : [ 0.0, 26.0, 1050.0, 608.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2195,7 +2191,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -2394,11 +2389,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 443.0, 129.0, 484.0, 585.0 ],
+						"rect" : [ 0.0, 26.0, 1050.0, 608.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2418,7 +2413,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -2885,7 +2879,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x86"
 										}
 ,

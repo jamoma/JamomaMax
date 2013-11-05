@@ -114,7 +114,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 14.5, 70.001831, 263.0, 33.0 ],
+									"patching_rect" : [ 14.5, 70.001831, 264.0, 33.0 ],
 									"text" : "j.test.assert.equal list-test @input 1 2.5 foo \"bar thing\" @compareTo 1 2.5 foo \"bar thing\""
 								}
 
@@ -270,8 +270,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 8.0, 156.0, 101.0, 20.0 ],
-					"text" : "j.send in.test"
+					"patching_rect" : [ 8.0, 156.0, 103.0, 20.0 ],
+					"text" : "j.send data/in.test"
 				}
 
 			}

@@ -137,7 +137,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 248.0, 146.0, 150.0, 118.0 ],
-									"text" : "Set the view to bind to /mySimpleModel using the model/address attribute, then double-click this subpatch to control the parameter within myModelParameter"
+									"text" : "Set the view to bind to /mySimpleModel using the model:address attribute, then double-click this subpatch to control the parameter within myModelParameter"
 								}
 
 							}
@@ -151,7 +151,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 51.5, 193.5, 181.0, 18.0 ],
-									"text" : "model/address /mySimpleModel"
+									"text" : "model:address /mySimpleModel"
 								}
 
 							}
@@ -1031,7 +1031,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 270.0, 130.5, 161.0, 118.0 ],
-									"text" : "Set the view to bind to /mySuperModel using the model/address attribute, then double-click this subpatch to control the parameter within myModelParameter"
+									"text" : "Set the view to bind to /mySuperModel using the model:address attribute, then double-click this subpatch to control the parameter within myModelParameter"
 								}
 
 							}
@@ -1045,7 +1045,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 44.5, 130.5, 177.0, 18.0 ],
-									"text" : "model/address /mySuperModel"
+									"text" : "model:address /mySuperModel"
 								}
 
 							}

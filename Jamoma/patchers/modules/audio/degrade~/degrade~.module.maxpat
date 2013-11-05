@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 432.0, 402.0, 814.0, 242.0 ],
+		"rect" : [ 20.0, 683.0, 746.0, 208.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -37,7 +37,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 0.0, -1.0, 300.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
@@ -50,7 +50,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 127.0, 180.0, 25.0, 25.0 ]
+					"patching_rect" : [ 140.0, 168.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 127.0, 97.0, 25.0, 25.0 ]
+					"patching_rect" : [ 140.0, 85.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -73,7 +73,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 69.0, 180.0, 25.0, 25.0 ]
+					"patching_rect" : [ 82.0, 168.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -85,7 +85,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 69.0, 97.0, 25.0, 25.0 ]
+					"patching_rect" : [ 82.0, 85.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -98,7 +98,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 11.0, 141.0, 135.0, 20.0 ],
+					"patching_rect" : [ 24.0, 129.0, 135.0, 20.0 ],
 					"text" : "degrade~.model #1"
 				}
 
@@ -110,7 +110,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 11.0, 180.0, 25.0, 25.0 ]
+					"patching_rect" : [ 24.0, 168.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -122,7 +122,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 11.0, 97.0, 25.0, 25.0 ]
+					"patching_rect" : [ 24.0, 85.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -184,14 +184,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -210,10 +210,6 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{

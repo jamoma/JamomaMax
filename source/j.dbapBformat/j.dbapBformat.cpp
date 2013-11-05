@@ -13,7 +13,7 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 #include "j.dbapBformat.h"
 
 // Globals

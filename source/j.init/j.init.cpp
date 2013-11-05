@@ -14,7 +14,7 @@
  */
 
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 
 #define start_out 0
@@ -134,7 +134,7 @@ void init_assist(t_init *x, void *b, long msg, long arg, char *dst)
 
 void init_subscribe(t_init *x)
 {
-	TTValue			v, args;
+	TTValue			v, args, none;
 	TTAddress       contextAddress = kTTAdrsEmpty;
     TTAddress       returnedAddress;
     TTNodePtr       returnedNode = NULL;
@@ -148,24 +148,24 @@ void init_subscribe(t_init *x)
 		if (!jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
             
 			// get the context address to make
-			// a receiver on the contextAddress/model/address parameter
+			// a receiver on the contextAddress:initialized attribute
 			x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
 			contextAddress = v[0];
 		}
 		
-		// bind on the /model/address parameter (view patch) or return (model patch)
+		// bind on the /model:address parameter (view patch) or return (model patch)
 		if (contextAddress != kTTAdrsEmpty) {
 			
 			// Make a TTReceiver object
 			returnAddressCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-			TTObjectBaseInstantiate(TTSymbol("callback"), &returnAddressCallback, kTTValNONE);
+			TTObjectBaseInstantiate(TTSymbol("callback"), &returnAddressCallback, none);
 			returnAddressBaton = new TTValue(TTPtr(x));
 			returnAddressCallback->setAttributeValue(kTTSym_baton, TTPtr(returnAddressBaton));
 			returnAddressCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_address));
 			args.append(returnAddressCallback);
 			
 			returnValueCallback = NULL;				// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-			TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+			TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
 			returnValueBaton = new TTValue(TTPtr(x));
 			returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
 			returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));

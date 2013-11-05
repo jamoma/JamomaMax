@@ -140,12 +140,12 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	CLASS_ATTR_SAVE(c,			"range/bounds",		0);
 	CLASS_ATTR_ACCESSORS(c,		"range/bounds",		paramui_getRange, paramui_setRange);
 
-	CLASS_ATTR_LONG(c,			"repetitions/allow",		0, t_paramui, attr_repetitions);
-	CLASS_ATTR_LABEL(c,			"repetitions/allow",		0, "Allow Repeated Values");
-	CLASS_ATTR_STYLE(c,			"repetitions/allow",		0, "onoff");
-	CLASS_ATTR_DEFAULT(c,		"repetitions/allow",		0, "0");
-	CLASS_ATTR_SAVE(c,			"repetitions/allow",		0);
-	CLASS_ATTR_ACCESSORS(c,		"repetitions/allow",		paramui_getRepetitions, paramui_setRepetitions);
+	CLASS_ATTR_LONG(c,			"repetitions/filter",		0, t_paramui, attr_repetitions);
+	CLASS_ATTR_LABEL(c,			"repetitions/filter",		0, "Filter Repeated Values");
+	CLASS_ATTR_STYLE(c,			"repetitions/filter",		0, "onoff");
+	CLASS_ATTR_DEFAULT(c,		"repetitions/filter",		0, "0");
+	CLASS_ATTR_SAVE(c,			"repetitions/filter",		0);
+	CLASS_ATTR_ACCESSORS(c,		"repetitions/filter",		paramui_getRepetitions, paramui_setRepetitions);
 
 	CLASS_ATTR_SYM(c,			"range/clipmode",	0, t_paramui, attr_clipmode);
 	CLASS_ATTR_LABEL(c,			"range/clipmode",	0, "Mode for Clipping to Range");
@@ -248,7 +248,7 @@ t_paramui* paramui_new(t_symbol *s, long argc, t_atom *argv)
 		atom_setsym(a+12, gensym("@range/bounds"));
 		atom_setfloat(a+13, x->attr_range[0]);
 		atom_setfloat(a+14, x->attr_range[1]);
-		atom_setsym(a+15, gensym("@repetitions/allow"));
+		atom_setsym(a+15, gensym("@repetitions/filter"));
 		atom_setlong(a+16, x->attr_repetitions);
 		atom_setsym(a+17, gensym("@range/clipmode"));
 		atom_setsym(a+18, x->attr_clipmode);
@@ -519,7 +519,7 @@ void paramui_menu_qfn(t_paramui *x)
 	t_symobject *item = (t_symobject *)linklist_getindex(x->menu_items, x->menu_selection);
 	
 	if (item->sym == gensym("Set Parameter to Default Value"))
-		object_method(x->obj_parameter, gensym("reset"));
+		object_method(x->obj_parameter, gensym("init"));
 }
 
 

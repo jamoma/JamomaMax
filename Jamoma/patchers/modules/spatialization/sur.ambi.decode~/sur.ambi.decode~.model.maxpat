@@ -8442,7 +8442,7 @@
             296.0,
             43.0
           ],
-          "text": "j.parameter orderWeights @type decimalArray @description \"manually set weights for given number of orders.\" @repetitions/allow 0 @ramp/drive Max"
+          "text": "j.parameter orderWeights @type decimalArray @description \"manually set weights for given number of orders.\" @repetitions/filter 1 @ramp/drive Max"
         }
       },
       {
@@ -8488,7 +8488,7 @@
             403.0,
             31.0
           ],
-          "text": "j.parameter flavor @repetitions/allow 0 @type string @description \"Ambisonics type of decoding and encoding. Furse-Malham, N3D or SN3D\"",
+          "text": "j.parameter flavor @repetitions/filter 1 @type string @description \"Ambisonics type of decoding and encoding. Furse-Malham, N3D or SN3D\"",
           "varname": "destination/voices[5]"
         }
       },
@@ -8558,7 +8558,7 @@
             604.0,
             31.0
           ],
-          "text": "j.message report @repetitions/allow 1 @type generic @description \"reports the state of the ambiencode external in the max window\""
+          "text": "j.message report @repetitions/filter 0 @type generic @description \"reports the state of the ambiencode external in the max window\""
         }
       },
       {
@@ -8602,7 +8602,7 @@
             601.0,
             31.0
           ],
-          "text": "j.parameter order @type integer @repetitions/allow 0 @range/bounds 1 3 @range/clipmode both @description \"Order of decoding for ambisonic signal.  Changes only take effect when audio is off.\"",
+          "text": "j.parameter order @type integer @repetitions/filter 1 @range/bounds 1 3 @range/clipmode both @description \"Order of decoding for ambisonic signal.  Changes only take effect when audio is off.\"",
           "varname": "order"
         }
       },
@@ -8626,7 +8626,7 @@
             600.0,
             43.0
           ],
-          "text": "j.parameter numSpeakers @type integer @repetitions/allow 0 @range/bounds 1 32 @range/clipmode both @description \"The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.\"",
+          "text": "j.parameter numSpeakers @type integer @repetitions/filter 1 @range/bounds 1 32 @range/clipmode both @description \"The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.\"",
           "varname": "voices"
         }
       }

@@ -89,6 +89,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 	long				attrstart 			= attr_args_offset(argc, argv);		// support normal arguments
 	TTString			name 				= "/";
 	TTPtr				context;
+	TTValue				none;
 	
 	object_obex_lookup(x, gensym("#P"), (t_object**)&context);
 	
@@ -125,7 +126,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 		TTValue		message_args;
 		TTValuePtr	message_baton = new TTValue(TTPtr(x));
 
-		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&x->callback_clear), kTTValNONE);
+		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&x->callback_clear), none);
 		x->callback_clear->setAttributeValue(TTSymbol("baton"),	message_baton);
 		x->callback_clear->setAttributeValue(TTSymbol("function"),	TTPtr(allpassmod_parameter_clear_callback));
 		message_args.append(x->callback_clear);
@@ -144,7 +145,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 		TTValue 		parameter_args;
 		TTValuePtr		parameter_baton = new TTValue(TTPtr(x));
 		
-		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&x->callback_coefficient), kTTValNONE);
+		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&x->callback_coefficient), none);
 		x->callback_coefficient->setAttributeValue(TTSymbol("baton"), parameter_baton);
 		x->callback_coefficient->setAttributeValue(TTSymbol("function"),	TTPtr(allpassmod_parameter_coefficient_callback));
 		parameter_args.append(x->callback_coefficient);
@@ -164,7 +165,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 		TTValue 		parameter_args;
 		TTValuePtr		parameter_baton = new TTValue(TTPtr(x));
 		
-		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&x->callback_delay), kTTValNONE);
+		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&x->callback_delay), none);
 		x->callback_delay->setAttributeValue(TTSymbol("baton"),	parameter_baton);
 		x->callback_delay->setAttributeValue(TTSymbol("function"),	TTPtr(allpassmod_parameter_delay_callback));
 		parameter_args.append(x->callback_delay);

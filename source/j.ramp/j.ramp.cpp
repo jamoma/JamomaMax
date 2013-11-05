@@ -169,9 +169,9 @@ void ramp_int(TTPtr self, long value)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
-    TTValue     v = TTFloat64(value);
+    TTValue     v = TTFloat64(value), none;
     
-    aRamp->sendMessage(TTSymbol("Set"), v, kTTValNONE);
+    aRamp->sendMessage(TTSymbol("Set"), v, none);
 
     outlet_float(x->outlets[k_outlet_value], value);
 }
@@ -182,9 +182,9 @@ void ramp_float(TTPtr self, double value)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
-    TTValue     v = TTFloat64(value);
+    TTValue     v = TTFloat64(value), none;
     
-    aRamp->sendMessage(TTSymbol("Set"), v, kTTValNONE);
+    aRamp->sendMessage(TTSymbol("Set"), v, none);
     
     outlet_float(x->outlets[k_outlet_value], value);
 }
@@ -195,11 +195,11 @@ void ramp_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
-    TTValue     v;
+    TTValue     v, none;
     
     jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
     
-    aRamp->sendMessage(TTSymbol("Set"), v, kTTValNONE);
+    aRamp->sendMessage(TTSymbol("Set"), v, none);
 }
 
 
@@ -220,7 +220,7 @@ void ramp_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
     short       i;
     short       ramp_keyword_index = -1;
-    TTValue     v;
+    TTValue     v, none;
     
     // parse the incoming atom
     for (i = 0; i < argc; i++) {
@@ -239,7 +239,7 @@ void ramp_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     
     if (ramp_keyword_index == -1) { // just a list w/o ramp information
         
-        aRamp->sendMessage(TTSymbol("Set"), v, kTTValNONE);
+        aRamp->sendMessage(TTSymbol("Set"), v, none);
         
         outlet_anything(x->outlets[k_outlet_value], _sym_list, argc, argv);
     }
@@ -252,11 +252,11 @@ void ramp_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         }
         else { // "ramp" is the second last list member, so we start ramping
             
-            aRamp->sendMessage(TTSymbol("Target"), v, kTTValNONE);
+            aRamp->sendMessage(TTSymbol("Target"), v, none);
             
             // get time
             v = TTValue(TTFloat64(atom_getfloat(argv+argc-1)));
-            aRamp->sendMessage(TTSymbol("Go"), v, kTTValNONE);
+            aRamp->sendMessage(TTSymbol("Go"), v, none);
         }
     }
 }

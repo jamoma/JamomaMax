@@ -70,7 +70,7 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<!-- 	<method name="audio.connect">
+		<method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -83,7 +83,7 @@
 			</description>
 		</method>
  -->
-		<!-- <method name="calculate">
+	<method name="calculate">
 	<arglist>
 		<arg name="ARG_NAME_0" type="list" optional="0" />
 	</arglist>
@@ -94,7 +94,7 @@
 		TEXT_HERE
 	</description>
 </method> -->
-		<!-- 		<method name="getProcessingBenchmark">
+	<method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -106,7 +106,7 @@
 			</description>
 		</method>
  -->
-		<!-- 				<method name="graph.connect">
+				<method name="graph.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -119,7 +119,7 @@
 			</description>
 		</method>
  -->
-		<!-- 						<method name="resetBenchmarking">
+		<method name="resetBenchmarking">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -131,7 +131,7 @@
 			</description>
 		</method>
  -->
-		<!-- 								<method name="test">
+		<method name="test">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -259,8 +259,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.wavetable≈"/>
-		<seealso name="noise~"/>
-		<seealso name="pink~/">
+		<seealso name="j.wavetable≈" />
+		<seealso name="noise~" />
+		<seealso name="pink~" />
 	</seealsolist>
 </c74object>

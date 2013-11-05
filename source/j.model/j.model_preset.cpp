@@ -9,22 +9,29 @@
 
 #include "j.model.h"
 
-void model_preset_subscribe(TTPtr self, TTAddress modelAddress)
+void model_preset_amenities(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTAddress                   modelAdrs;
 	TTValue						v, a, args;
-	TTDataPtr					aData;
 	TTXmlHandlerPtr				aXmlHandler;
-    TTTextHandlerPtr			aTextHandler;
     TTAddress                   presetAddress;
     TTNodePtr                   aNode;
     TTBoolean                   newInstanceCreated;
+
+    // get model:address
+    EXTRA->modelInfo->getAttributeValue(kTTSym_address, v);
+    modelAdrs = v[0];
     
-    presetAddress = modelAddress.appendAddress(TTAddress("preset"));
+    // create the preset manager
+	jamoma_presetManager_create((ObjectPtr)x, &EXTRA->presetManager);
+    
+    // suscribe it under a preset node 
+    presetAddress = modelAdrs.appendAddress(TTAddress("preset"));
     
     if (!JamomaDirectory->TTNodeCreate(presetAddress, EXTRA->presetManager, x->patcherPtr,  &aNode, &newInstanceCreated)) {
 	
-        EXTRA->presetManager->setAttributeValue(kTTSym_address, modelAddress);
+        EXTRA->presetManager->setAttributeValue(kTTSym_address, modelAdrs);
         
         // create internal TTXmlHandler
         aXmlHandler = NULL;
@@ -33,12 +40,6 @@ void model_preset_subscribe(TTPtr self, TTAddress modelAddress)
         x->internals->append(kTTSym_XmlHandler, v);
         v = TTValue(EXTRA->presetManager);
         aXmlHandler->setAttributeValue(kTTSym_object, v);
-        
-        // create internal TTTextHandler
-        aTextHandler = NULL;
-        TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&aTextHandler), args);
-        v = TTValue(aTextHandler);
-        x->internals->append(kTTSym_TextHandler, v);
         
         // if desired, load default modelClass.patcherContext.xml file preset
         if (EXTRA->attr_load_default)
@@ -73,7 +74,7 @@ void model_preset_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void model_preset_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			o, v;
+	TTValue			o, v, none;
 	TTSymbol		fullpath;
 	TTXmlHandlerPtr	aXmlHandler = NULL;
 	TTErr			tterr;
@@ -90,7 +91,7 @@ void model_preset_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv
 			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_Read, v, kTTValNONE);
+			tterr = aXmlHandler->sendMessage(kTTSym_Read, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -140,7 +141,7 @@ void model_preset_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char 			filename[MAX_FILENAME_CHARS];
 	TTSymbol		fullpath;
-	TTValue			o, v;
+	TTValue			o, v, none;
 	TTXmlHandlerPtr	aXmlHandler;
 	TTErr			tterr;
 	
@@ -161,7 +162,7 @@ void model_preset_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_Write, v, kTTValNONE);
+			tterr = aXmlHandler->sendMessage(kTTSym_Write, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -280,14 +281,14 @@ void model_preset_filechanged(TTPtr self, char *filename, short path)
 void model_preset_dorecall(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue		v;
+	TTValue		v, none;
 
 	if (argc && argv)
 		if (atom_gettype(argv) == A_SYM)
 			v = TTValue(TTSymbol(atom_getsym(argv)->s_name));
 	
 	// recall the preset
-	EXTRA->presetManager->sendMessage(kTTSym_Recall, v, kTTValNONE);
+	EXTRA->presetManager->sendMessage(kTTSym_Recall, v, none);
 }
 
 void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -297,7 +298,7 @@ void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	char				title[MAX_FILENAME_CHARS];
 	TTTextHandlerPtr	aTextHandler = NULL;
 	TTHashPtr			allPresets;
-	TTValue				v, o, args;
+	TTValue				v, o, args, none;
 	TTSymbol			name;
     Atom                a;
 	TTErr				tterr;
@@ -365,7 +366,7 @@ void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 			o = TTValue(EXTRA->toEdit);
 			aTextHandler->setAttributeValue(kTTSym_object, o);
 			args = TTValue((TTPtr)buffer);
-			tterr = aTextHandler->sendMessage(kTTSym_Write, args, kTTValNONE);
+			tterr = aTextHandler->sendMessage(kTTSym_Write, args, none);
 			critical_exit(0);
 		}
 		
@@ -400,7 +401,7 @@ void model_preset_doedit(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTTextHandlerPtr	aTextHandler = NULL;
-	TTValue				o, args;
+	TTValue				o, args, none;
     Atom                a;
 	TTErr				tterr;
 	
@@ -413,7 +414,7 @@ void model_preset_doedit(TTPtr self)
 		
 		critical_enter(0);
 		args = TTValue((TTPtr)EXTRA->text);
-		tterr = aTextHandler->sendMessage(kTTSym_Read, args, kTTValNONE);
+		tterr = aTextHandler->sendMessage(kTTSym_Read, args, none);
 		critical_exit(0);
 		
         // output a flag

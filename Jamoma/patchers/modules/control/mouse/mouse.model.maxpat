@@ -52,20 +52,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 317.0, 221.0, 37.0, 20.0 ],
-					"text" : "sel 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"color" : [ 0.239216, 0.643137, 0.709804, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -74,7 +60,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 317.0, 191.0, 55.0, 20.0 ],
+					"patching_rect" : [ 311.0, 224.0, 55.0, 20.0 ],
 					"text" : "j.init"
 				}
 
@@ -1101,10 +1087,21 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"color" : [ 0.545098, 0.545098, 0.545098, 1.0 ],
+					"destination" : [ "obj-18", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-20", 0 ]
+					"source" : [ "obj-20", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"color" : [ 0.545098, 0.545098, 0.545098, 1.0 ],
+					"destination" : [ "obj-19", 2 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-20", 1 ]
 				}
 
 			}
@@ -1220,26 +1217,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"color" : [ 0.545098, 0.545098, 0.545098, 1.0 ],
-					"destination" : [ "obj-18", 2 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"color" : [ 0.545098, 0.545098, 0.545098, 1.0 ],
-					"destination" : [ "obj-19", 2 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1292,23 +1269,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

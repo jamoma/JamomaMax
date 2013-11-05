@@ -122,7 +122,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 284.0, 548.0, 588.0, 43.0 ],
-					"text" : "j.message source.1/distance/mode @repetitions/allow 0 @type integer @range/bounds 0 2 @range/clipmode both @description \"sets one of the three distance attenuation models. 0-off, 1-Exponential Decay, 2-Inverse Proportional Decay\"",
+					"text" : "j.message source.1/distance/mode @repetitions/filter 1 @type integer @range/bounds 0 2 @range/clipmode both @description \"sets one of the three distance attenuation models. 0-off, 1-Exponential Decay, 2-Inverse Proportional Decay\"",
 					"varname" : "destination/voices[2]"
 				}
 

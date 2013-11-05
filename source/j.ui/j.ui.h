@@ -7,6 +7,9 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
+#ifndef __J_UI__
+#define __J_UI__
+
 #include "ext.h"
 #include "ext_obex.h"
 #include "ext_user.h"
@@ -14,11 +17,10 @@
 #include "jpatcher_api.h"			// jpatcher_api.h must come before z_dsp.h (in Jamoma.h)
 #include "jgraphics.h"
 #include "TTModular.h"				// Jamoma Modular API
-#include "ModularForMax.h"			// Jamoma Modular for Max
-#include "MaxObjectTypes.h"
+#include "JamomaForMax.h"			// Jamoma for Max
 #include "ext_symobject.h"
 
-#define NO_MODEL_STRING "waiting for a model/address"
+#define NO_MODEL_STRING "waiting for a model:address"
 
 #define preview_out 0
 #define panel_out 1
@@ -47,15 +49,14 @@ typedef struct inlet {
 typedef struct _ui{
 	t_jbox				box;
 	TTHandle			outlets;
+    TTObjectBasePtr     uiInfo;
+    TTObjectBasePtr		uiSubscriber;			///< internal TTSubscriber object to bind on the ui node
 	TTHashPtr			hash_datas;				///< hash table of TTData
 	TTHashPtr			hash_viewers;			///< hash table of TTViewer
 	TTHashPtr			hash_receivers;			///< hash table of TTReceiver
-	TTObjectBasePtr		nmspcExplorer;			///< internal TTExplorer object to observe the entire namespace
-	TTObjectBasePtr		modelExplorer;			///< internal TTExplorer object to observe the model namespace
 	TTObjectBasePtr		modelMessExplorer;		///< internal TTExplorer object to observe messages
 	TTObjectBasePtr		modelParamExplorer;		///< internal TTExplorer object to observe parameters
 	TTObjectBasePtr		modelRetExplorer;		///< internal TTExplorer object to observe returns
-	TTSubscriberPtr		uiSubscriber;			///< internal TTSubscriber object to create a /ui node
 	TTCallbackPtr		previewSignal;			///< internal TTCallback to get back preview signal
 	TTOutputPtr			modelOutput;			///< a pointer to TTOutput object of the binded model
 	
@@ -75,7 +76,12 @@ typedef struct _ui{
 	t_jrgba				bordercolor;
 	t_jrgba				headercolor;
 	t_jrgba				textcolor;
-	t_jrgba				selectcolor;
+    t_jrgba             highlightcolor;
+    
+    TTString            *text;                  // the text of the editor to read after edclose
+	ObjectPtr           textEditor;             // the text editor window
+    TTObjectBasePtr		textHandler;            ///< internal TTTextHandler to fill the max text editor
+    TTObjectBasePtr     state;                  ///< internal TTPreset to get the current state of the binded model
 	
 	long				ui_freeze;				// freeze all viewers of the view
 	
@@ -138,13 +144,13 @@ typedef struct _ui{
 	float				anchorValue;		//	...
 } t_ui;
 
-
 // prototypes: general
 t_ui*		ui_new(t_symbol *s, long argc, t_atom *argv);
 void 		ui_free(t_ui *x);
 t_max_err	ui_notify(t_ui *x, t_symbol *s, t_symbol *msg, void *sender, void *data);
 void		ui_subscribe(t_ui *x, SymbolPtr address);
 void		ui_build(t_ui *x);
+ObjectPtr   ui_get_model_object(t_ui *x);
 void 		ui_bang(t_ui *x);
 
 // prototypes: drawing/ui
@@ -166,15 +172,17 @@ void		ui_refmenu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers);
 void 		ui_refmenu_qfn(t_ui *x);
 void 		ui_refmenu_build(t_ui *x);
 
+// prototypes: TTUiInfo registration
+void		ui_register_info(t_ui* obj);
+void		ui_unregister_info(t_ui* obj);
+
 // prototypes: internal TTData and TTViewer
 void		ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbackMethod, TTSymbol service, TTSymbol name, TTBoolean deferlow = NO);
-void		ui_data_create_all(t_ui* obj);
 void		ui_data_destroy(t_ui *obj, TTSymbol name);
-void		ui_data_destroy_all(t_ui* obj);
 void		ui_data_send(t_ui *obj, TTSymbol name, TTValue v);
 void		ui_data_interface(t_ui *x, TTSymbol name);
 
-void		ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow = NO);
+void		ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow = NO, TTBoolean appendNameAsAttribute = NO);
 void		ui_receiver_destroy(t_ui *obj, TTSymbol name);
 void		ui_receiver_destroy_all(t_ui *obj);
 
@@ -186,23 +194,15 @@ void		ui_viewer_highlight(t_ui *obj, TTSymbol name, TTBoolean s);
 void		ui_viewer_freeze(t_ui *obj, TTSymbol name, TTBoolean f);
 
 void		ui_explorer_create(ObjectPtr x, TTObjectBasePtr *returnedExplorer, SymbolPtr method);
-void		ui_modelExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_modelMessExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_modelParamExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_modelRetExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void		ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-void		ui_view_panel_return(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-void		ui_return_color_contentBackground(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_color_toolbarBackground(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_color_toolbarText(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_color_border(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_ui_size(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_ui_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void		ui_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void		ui_return_metersdefeated(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_return_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
@@ -214,8 +214,15 @@ void		ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 
 void		ui_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
+// prototype : text editor
+void		ui_edit(t_ui *x);
+void		ui_edclose(t_ui *x, char **text, long size);
+void		ui_doedit(t_ui *x);
+
 // prototype: ui handling for preset features
 void		ui_preset_store_next(t_ui *x);
 void		ui_preset_doread(t_ui *x);
 void		ui_preset_dowrite(t_ui *x);
 void		ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+#endif // __J_UI__

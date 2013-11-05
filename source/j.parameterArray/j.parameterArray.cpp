@@ -36,7 +36,7 @@ void		WrappedDataClass_free(TTPtr self);
 void		data_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst);
 
 void		data_new_address(TTPtr self, SymbolPtr msg);
-void		data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt8 index);
+void		data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt32 index);
 void		data_address(TTPtr self, SymbolPtr name);
 
 #ifndef JMOD_RETURN
@@ -107,6 +107,7 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	SymbolPtr					relativeAddress;
 	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
+	TTValue						none;
 	
 	// check address argument
 	relativeAddress = _sym_nothing;
@@ -140,7 +141,7 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->arraySize = 0;
 	x->arrayIndex = 0;
 	x->arrayAddress = kTTAdrsEmpty;
-	x->arrayArgs = kTTValNONE;
+	x->arrayArgs = none;
 	x->arrayAttrFormat = gensym("single");
 	
 	// Prepare extra data for parameters and messages
@@ -176,7 +177,7 @@ void WrappedDataClass_free(TTPtr self)
 #ifndef JMOD_RETURN
 	// delete array
 	if (x->extra && EXTRA->arrayValue) {
-		for (TTUInt8 i = 0; i < x->arraySize; i++)
+		for (TTUInt32 i = 0; i < x->arraySize; i++)
 			if (EXTRA->arrayValue[i])
 				delete EXTRA->arrayValue[i];
 		
@@ -193,7 +194,7 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
 	AtomCount					argc = 0; 
 	AtomPtr						argv = NULL;
 	TTUInt32					number;
-	TTUInt8						i, j;
+	TTUInt32					i, j;
 	TTAddress					newAddress = relativeAddress->s_name;
     TTAddress                   returnedAddress;
     TTNodePtr                   returnedNode = NULL;
@@ -214,7 +215,7 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
         number = jamoma_parse_bracket(relativeAddress, x->arrayFormatInteger, x->arrayFormatString);
         
         // don't resize to 0
-        if (number && number <= 255) {
+        if (number && number <= MAX_ARRAY_SIZE) {
             
             // Starts iteration on internals
             x->iterateInternals = YES;
@@ -271,11 +272,13 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
             wrappedModularClass_ArraySelect(self, gensym("*"), 0, NULL);
             
 #ifndef JMOD_MESSAGE
-            // reset all datas created dynamically
+            // init all datas created dynamically
             if (!EXTRA->firstArray)
-                defer((ObjectPtr)x, (method)wrappedModularClass_anything, _sym_reset, 0, NULL);
+                defer((ObjectPtr)x, (method)wrappedModularClass_anything, _sym_init, 0, NULL);
 #endif
         }
+        else if (number > MAX_ARRAY_SIZE)
+            object_error((ObjectPtr)x, "the size is greater than the maximum array size (%d)", MAX_ARRAY_SIZE);
         
         EXTRA->firstArray = NO;
     }
@@ -283,16 +286,16 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
         object_error((ObjectPtr)x, "can't register because %s is not a relative address", relativeAddress->s_name);
 }
 
-void data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt8 index)
+void data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt32 index)
 {
-	TTValue			args;
+	TTValue			args, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	
 	// prepare arguments
 	
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, kTTValNONE);
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
 #ifndef JMOD_RETURN
 	returnValueBaton = new TTValue(self);
 	returnValueBaton->append(index);
@@ -328,7 +331,7 @@ void data_address(TTPtr self, SymbolPtr address)
 #ifndef JMOD_RETURN
                 // delete array
                 if (EXTRA->arrayValue) {
-                    for (TTUInt8 i = 0; i < x->arraySize; i++)
+                    for (TTUInt32 i = 0; i < x->arraySize; i++)
                         if (EXTRA->arrayValue[i])
                             delete EXTRA->arrayValue[i];
                     
@@ -514,19 +517,19 @@ void data_array(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue v;
+	TTValue v, none;
 	
 	jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
-	selectedObject->sendMessage(TTSymbol("Inc"), v, kTTValNONE);
+	selectedObject->sendMessage(TTSymbol("Inc"), v, none);
 }
 
 void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue v;
+	TTValue v, none;
 	
 	jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
-	selectedObject->sendMessage(TTSymbol("Dec"), v, kTTValNONE);
+	selectedObject->sendMessage(TTSymbol("Dec"), v, none);
 }
 #endif
 
@@ -538,7 +541,7 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 	TTValuePtr					b, m;
 	TTSymbol					type;
 	SymbolPtr					msg, iAdrs;
-	TTUInt8						i; 
+	TTUInt32					i;
 	long						argc = 0;
 	AtomPtr						argv = NULL;
 	TTBoolean					shifted = NO;
@@ -589,7 +592,7 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 					type = t[0];
 					
 					// if there is no default value
-					if (g == kTTValNONE) {
+					if (g.size() == 0) {
 						
 						if (type == kTTSym_string)
 							m = new TTValue(kTTSym_none);

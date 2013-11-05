@@ -1137,7 +1137,7 @@
                             352.0,
                             31.0
                           ],
-                          "text": "j.parameter foot/switch @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Foot Pedal: Switch.\"",
+                          "text": "j.parameter foot/switch @type boolean @repetitions/filter 0 @ramp/drive none @priority 2 @description \"Foot Pedal: Switch.\"",
                           "varname": "foot/switch"
                         }
                       },
@@ -1510,7 +1510,7 @@
                             337.0,
                             31.0
                           ],
-                          "text": "j.parameter button.4 @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Button 4.\"",
+                          "text": "j.parameter button.4 @type boolean @repetitions/filter 0 @ramp/drive none @priority 2 @description \"Button 4.\"",
                           "varname": "button/4"
                         }
                       },
@@ -1883,7 +1883,7 @@
                             340.0,
                             31.0
                           ],
-                          "text": "j.parameter button.2 @priority 2 @type boolean @repetitions/allow 1 @ramp/drive none @description \"Button 2.\"",
+                          "text": "j.parameter button.2 @priority 2 @type boolean @repetitions/filter 0 @ramp/drive none @description \"Button 2.\"",
                           "varname": "button/2"
                         }
                       },
@@ -2601,7 +2601,7 @@
                             355.0,
                             43.0
                           ],
-                          "text": "j.parameter foot/control @type integer @range/bounds 0 127 @range/clipmode both @repetitions/allow 1 @ramp/drive Max @priority 2 @description \"Foot Pedal: Continuous Controller.\"",
+                          "text": "j.parameter foot/control @type integer @range/bounds 0 127 @range/clipmode both @repetitions/filter 0 @ramp/drive Max @priority 2 @description \"Foot Pedal: Continuous Controller.\"",
                           "varname": "foot/control"
                         }
                       },
@@ -3026,7 +3026,7 @@
                             337.0,
                             31.0
                           ],
-                          "text": "j.parameter button.3 @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Button 3.\"",
+                          "text": "j.parameter button.3 @type boolean @repetitions/filter 0 @ramp/drive none @priority 2 @description \"Button 3.\"",
                           "varname": "button/3"
                         }
                       },
@@ -3399,7 +3399,7 @@
                             337.0,
                             31.0
                           ],
-                          "text": "j.parameter button.1 @type boolean @repetitions/allow 1 @ramp/drive none @priority 2 @description \"Button 1.\"",
+                          "text": "j.parameter button.1 @type boolean @repetitions/filter 0 @ramp/drive none @priority 2 @description \"Button 1.\"",
                           "varname": "button/1"
                         }
                       },

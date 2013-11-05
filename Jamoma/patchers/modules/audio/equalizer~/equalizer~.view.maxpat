@@ -50,7 +50,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "model/address" ],
+					"outlettype" : [ "model:address" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -87,9 +87,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "model/address" ],
+									"outlettype" : [ "model:address" ],
 									"patching_rect" : [ 50.0, 141.0, 94.0, 20.0 ],
-									"text" : "t model/address"
+									"text" : "t model:address"
 								}
 
 							}

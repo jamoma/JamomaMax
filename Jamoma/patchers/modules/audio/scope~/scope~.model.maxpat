@@ -152,7 +152,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 739.0, 103.0, 140.0, 127.0 ],
-					"text" : "j.parameter range @type decimal @range/bounds 0 100 @range/clipmode low @repetitions/allow 0 @ramp/drive Max @description \"range of values above and below the zero line to display.\"",
+					"text" : "j.parameter range @type decimal @range/bounds 0 100 @range/clipmode low @repetitions/filter 1 @ramp/drive Max @description \"range of values above and below the zero line to display.\"",
 					"varname" : "j.parameter.mxb"
 				}
 

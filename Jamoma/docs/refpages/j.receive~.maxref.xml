@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.receive~" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		value or signal observer
 	</digest>
 	<description>
-		TEXT_HERE
+		listening value from parameter or return and signal from out using their address
 	</description>
 	<!--METADATA-->
 	<metadatalist>

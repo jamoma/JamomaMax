@@ -262,7 +262,7 @@ void cue_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void cue_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			o, v;
+	TTValue			o, v, none;
 	TTSymbol		fullpath;
 	TTXmlHandlerPtr	aXmlHandler = NULL;
 	TTErr			tterr;
@@ -279,7 +279,7 @@ void cue_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_Read, v, kTTValNONE);
+			tterr = aXmlHandler->sendMessage(kTTSym_Read, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -298,7 +298,7 @@ void cue_read_again(TTPtr self)
 void cue_doread_again(TTPtr self)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			o, v;
+	TTValue			o, v, none;
 	TTXmlHandlerPtr	aXmlHandler = NULL;
 	TTErr			tterr;
 	
@@ -311,7 +311,7 @@ void cue_doread_again(TTPtr self)
 			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_ReadAgain, v, kTTValNONE);
+			tterr = aXmlHandler->sendMessage(kTTSym_ReadAgain, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -332,7 +332,7 @@ void cue_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char 			filename[MAX_FILENAME_CHARS];
 	TTSymbol		fullpath;
-	TTValue			o, v;
+	TTValue			o, v, none;
 	TTXmlHandlerPtr	aXmlHandler;
 	TTErr			tterr;
 	
@@ -350,7 +350,7 @@ void cue_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_Write, v, kTTValNONE);
+			tterr = aXmlHandler->sendMessage(kTTSym_Write, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -369,7 +369,7 @@ void cue_write_again(TTPtr self)
 void cue_dowrite_again(TTPtr self)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			o, v;
+	TTValue			o, v, none;
 	TTXmlHandlerPtr	aXmlHandler = NULL;
 	TTErr			tterr;
 	
@@ -382,7 +382,7 @@ void cue_dowrite_again(TTPtr self)
 			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_WriteAgain, v, kTTValNONE);
+			tterr = aXmlHandler->sendMessage(kTTSym_WriteAgain, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -396,15 +396,15 @@ void cue_dowrite_again(TTPtr self)
 void cue_dorecall(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue		v;
-	TTNodePtr	contextNode;
+	TTValue			v, none;
+	TTNodePtr		contextNode;
 	TTObjectBasePtr	o;
-	TTBoolean	initialized;
+	TTBoolean		initialized;
 	
 	if (argc && argv) {
 		if (atom_gettype(argv) == A_SYM) {
 			v = TTValue((TTPtr)atom_getsym(argv));
-			x->wrappedObject->sendMessage(kTTSym_Recall, v, kTTValNONE);
+			x->wrappedObject->sendMessage(kTTSym_Recall, v, none);
 		}
 		
 		// Check Context Node
@@ -437,7 +437,7 @@ void cue_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	char				title[MAX_FILENAME_CHARS];
 	TTTextHandlerPtr	aTextHandler = NULL;
 	TTHashPtr			allCues;
-	TTValue				v, o, args;
+	TTValue				v, o, args, none;
 	TTSymbol			name = kTTSymEmpty;
     t_atom				a;
 	TTErr				tterr;
@@ -504,7 +504,7 @@ void cue_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 			o = TTValue(EXTRA->toEdit);
 			aTextHandler->setAttributeValue(kTTSym_object, o);
 			args = TTValue((TTPtr)buffer);
-			tterr = aTextHandler->sendMessage(kTTSym_Write, args, kTTValNONE);
+			tterr = aTextHandler->sendMessage(kTTSym_Write, args, none);
 			critical_exit(0);
 		}
 		
@@ -539,7 +539,7 @@ void cue_doedit(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTTextHandlerPtr	aTextHandler = NULL;
-	TTValue				o, args;
+	TTValue				o, args, none;
     t_atom				a;
 	TTErr				tterr;
 	
@@ -552,7 +552,7 @@ void cue_doedit(TTPtr self)
 		
 		critical_enter(0);
 		args = TTValue((TTPtr)EXTRA->text);
-		tterr = aTextHandler->sendMessage(kTTSym_Read, args, kTTValNONE);
+		tterr = aTextHandler->sendMessage(kTTSym_Read, args, none);
 		critical_exit(0);
 		
 		// output a flag

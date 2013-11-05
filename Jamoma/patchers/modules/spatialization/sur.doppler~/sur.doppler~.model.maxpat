@@ -961,7 +961,7 @@
             594.0,
             31.0
           ],
-          "text": "j.parameter metersPerUnit @type decimal @repetitions/allow 0 @range/bounds 0. 10. @range/clipmode low @description \"Meters per unit lengt as provided by the /aed messages.\"",
+          "text": "j.parameter metersPerUnit @type decimal @repetitions/filter 1 @range/bounds 0. 10. @range/clipmode low @description \"Meters per unit lengt as provided by the /aed messages.\"",
           "varname": "meters_per_unit"
         }
       },
@@ -985,7 +985,7 @@
             574.0,
             31.0
           ],
-          "text": "j.parameter numSources @type integer @repetitions/allow 0 @range/bounds 1 32 @range/clipmode both @description \"The number of input audio channels. Changes only take effect when audio is off.\"",
+          "text": "j.parameter numSources @type integer @repetitions/filter 1 @range/bounds 1 32 @range/clipmode both @description \"The number of input audio channels. Changes only take effect when audio is off.\"",
           "varname": "voices"
         }
       }

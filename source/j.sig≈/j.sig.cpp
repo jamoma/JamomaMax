@@ -16,8 +16,8 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	
 	TTAudioGraphInit();
 	
-	options->append(TT("generator"), kTTBoolYes);
-	options->append(TT("userCanSetNumChannels"), kTTBoolYes);
+	options->append(TT("generator"), YES);
+	options->append(TT("userCanSetNumChannels"), YES);
 	wrapAsMaxAudioGraph(TT("audio.sig"), "j.sig≈", &c, options);
 	wrapAsMaxAudioGraph(TT("audio.sig"), "sig≈", &c, options);
 	

@@ -1438,7 +1438,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 488.0, 592.0, 31.0 ],
-					"text" : "j.messageArray source.[32]/active @type boolean @repetitions/allow 1 @description \"Mute or unmute the nth source.\""
+					"text" : "j.messageArray source.[32]/active @type boolean @repetitions/filter 0 @description \"Mute or unmute the nth source.\""
 				}
 
 			}

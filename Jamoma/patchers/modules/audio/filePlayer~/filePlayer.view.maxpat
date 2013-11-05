@@ -1128,7 +1128,7 @@
 					"patching_rect" : [ 0.0, -0.5, 300.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "waiting for a model/address"
+					"text" : "waiting for a model:address"
 				}
 
 			}

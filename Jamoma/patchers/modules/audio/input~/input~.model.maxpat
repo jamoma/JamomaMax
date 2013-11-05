@@ -1854,7 +1854,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 120.0, 23.0, 562.0, 33.0 ],
-													"text" : "j.parameter soundfile/open @type generic @repetitions/allow 1 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\" @value bang",
+													"text" : "j.parameter soundfile/open @type generic @repetitions/filter 0 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\" @value bang",
 													"varname" : "j.parameter.mxb[10]"
 												}
 
@@ -1870,7 +1870,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 276.0, 95.0, 595.0, 33.0 ],
-													"text" : "j.message soundfile/direct @type none @repetitions/allow 1 @description container for various messages sent directly to the sfplay~ object. Refer to the MSP documentation for further details.",
+													"text" : "j.message soundfile/direct @type none @repetitions/filter 0 @description container for various messages sent directly to the sfplay~ object. Refer to the MSP documentation for further details.",
 													"varname" : "j.parameter.mxb[9]"
 												}
 
@@ -1885,7 +1885,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 184.0, 67.0, 527.0, 20.0 ],
-													"text" : "j.parameter soundfile/play @type boolean @repetitions/allow 1 @description \"Play sound file.\"",
+													"text" : "j.parameter soundfile/play @type boolean @repetitions/filter 0 @description \"Play sound file.\"",
 													"varname" : "play"
 												}
 
@@ -2209,7 +2209,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 687.0, 445.0, 290.0, 47.0 ],
-													"text" : "j.return soundfile/report @type none @description \"Report when sound file reach end point and loop to start point.\" @repetitions/allow 1"
+													"text" : "j.return soundfile/report @type none @description \"Report when sound file reach end point and loop to start point.\" @repetitions/filter 0"
 												}
 
 											}

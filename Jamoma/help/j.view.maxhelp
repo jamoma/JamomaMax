@@ -73,7 +73,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 241.0, 110.0, 193.0, 60.0 ],
-									"text" : "The most important internal parameter of the j.view is the model/address parameter which exposed the address to bind"
+									"text" : "The most important internal parameter of the j.view is the model:address parameter which exposed the address to bind"
 								}
 
 							}
@@ -116,7 +116,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 254.0, 360.0, 197.0, 33.0 ],
-									"text" : "j.receive /viewMaxhelp(view)/model/address"
+									"text" : "j.receive /viewMaxhelp(view)/model:address"
 								}
 
 							}
@@ -141,7 +141,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 254.0, 170.0, 89.0, 18.0 ],
-									"text" : "model/address"
+									"text" : "model:address"
 								}
 
 							}
@@ -375,7 +375,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 913.0, 414.0, 171.0, 17.0 ],
-					"text" : "mymessage:repetitionsAllow $1"
+					"text" : "mymessage:repetitionsFilter $1"
 				}
 
 			}

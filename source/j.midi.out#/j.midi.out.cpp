@@ -120,13 +120,13 @@ void MidiOutAssist(MidiOutPtr self, void* b, long msg, long arg, char* dst)
 
 void MidiOutGetDeviceNames(MidiOutPtr self)
 {
-	TTValue		v;
+	TTValue		v, none;
 	TTErr		err;
 	AtomCount	ac;
 	AtomPtr		ap;
 	TTSymbol	name;
 	
-	err = self->graphObject->mKernel->sendMessage(TT("getAvailableDeviceNames"), kTTValNONE, v);
+	err = self->graphObject->mKernel->sendMessage(TT("getAvailableDeviceNames"), none, v);
 	if (!err) {
 		ac = v.getSize();
 		ap = new Atom[ac];

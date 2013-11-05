@@ -451,7 +451,7 @@
             593.0,
             19.0
           ],
-          "text": "j.message show @type none @repetitions/allow 1 @description \"Open the text buffer to view the content\"",
+          "text": "j.message show @type none @repetitions/filter 0 @description \"Open the text buffer to view the content\"",
           "varname": "j.parameter[2]"
         }
       },
@@ -475,7 +475,7 @@
             313.0,
             31.0
           ],
-          "text": "j.message write @type generic @repetitions/allow 1 @description \"Write the text buffer to a file\"",
+          "text": "j.message write @type generic @repetitions/filter 0 @description \"Write the text buffer to a file\"",
           "varname": "j.parameter[1]"
         }
       },
@@ -498,7 +498,7 @@
             490.0,
             19.0
           ],
-          "text": "j.message clear @type none @repetitions/allow 1 @description \"Clear the text buffer\"",
+          "text": "j.message clear @type none @repetitions/filter 0 @description \"Clear the text buffer\"",
           "varname": "j.parameter[3]"
         }
       },

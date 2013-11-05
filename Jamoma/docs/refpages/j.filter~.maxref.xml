@@ -20,7 +20,7 @@
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
-	<!-- <inletlist>
+	<inletlist>
 		<inlet id="0" type="signal">
 			<digest>
 				input 1, control messages
@@ -56,7 +56,7 @@
 	</inletlist> -->
 	<!--OUTLETS-->
 	<outletlist>
-		<!-- <outlet id="0" type="signal">
+		<outlet id="0" type="signal">
 			<digest>
 				Filtered output 1
 			</digest>

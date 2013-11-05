@@ -452,7 +452,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 147.0, 614.0, 208.0, 18.0 ],
-									"text" : "model/address /Basic"
+									"text" : "model:address /Basic"
 								}
 
 							}

@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 175.0, 381.0, 288.0, 493.0 ],
+		"rect" : [ 175.0, 381.0, 568.0, 493.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -37,8 +37,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 140.0, 177.0, 92.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"patching_rect" : [ 140.0, 177.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.2"
 				}
 
 			}
@@ -51,8 +51,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 101.75, 128.5, 92.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"patching_rect" : [ 101.75, 128.5, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.1"
 				}
 
 			}
@@ -121,7 +121,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -324,7 +324,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -579,7 +579,7 @@
 					"patching_rect" : [ 0.0, -1.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
-					"text" : "/balance~"
+					"text" : "waiting for a model:address"
 				}
 
 			}
@@ -676,6 +676,27 @@
 					"source" : [ "obj-4", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.meter~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

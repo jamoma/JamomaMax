@@ -2499,7 +2499,7 @@
             262.0,
             67.0
           ],
-          "text": "j.return cues @type string @description \"When a new cue script is loaded, all cues are dumped one ata time. The symbols ---START and ---END indicates the start and end of the list of cues.\" @repetitions/allow 1"
+          "text": "j.return cues @type string @description \"When a new cue script is loaded, all cues are dumped one ata time. The symbols ---START and ---END indicates the start and end of the list of cues.\" @repetitions/filter 0"
         }
       },
       {
@@ -7359,7 +7359,7 @@
             598.0,
             43.0
           ],
-          "text": "j.message saveScript @repetitions/allow 1 @description \"Save cue script to a file. An argument determines the path and name of the file.  No argument will bring up a file dialog (like saveas) or save the script to the existing file that is in use.\""
+          "text": "j.message saveScript @repetitions/filter 0 @description \"Save cue script to a file. An argument determines the path and name of the file.  No argument will bring up a file dialog (like saveas) or save the script to the existing file that is in use.\""
         }
       },
       {
@@ -7404,7 +7404,7 @@
             321.0,
             31.0
           ],
-          "text": "j.message cue @repetitions/allow 1 @type generic @description \"Recall cue event from cue script.\""
+          "text": "j.message cue @repetitions/filter 0 @type generic @description \"Recall cue event from cue script.\""
         }
       },
       {
@@ -7427,7 +7427,7 @@
             590.0,
             43.0
           ],
-          "text": "j.message loadScript @repetitions/allow 1 @description \"Load cue script from file. <br>NOTE: j.cueScript will be watching the file and automatically update if the content of the file is changed. This way you can use an external editor to work on the cue script while Jamoma is running.\""
+          "text": "j.message loadScript @repetitions/filter 0 @description \"Load cue script from file. <br>NOTE: j.cueScript will be watching the file and automatically update if the content of the file is changed. This way you can use an external editor to work on the cue script while Jamoma is running.\""
         }
       },
       {

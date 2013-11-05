@@ -125,7 +125,7 @@
 				Opens a text editor with all current values of all parameters of the model
 			</digest>
 		</method>
-		<method name="model/help">
+		<method name="model:help/open">
 			<digest>
 				Opens the model's help patcher
 			</digest>

@@ -221,12 +221,12 @@ Lower and upper boundaries defining the range of possible message values			</des
 				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
 			</description>
 		</attribute>
-		<attribute name="repetitions/allow" get="1" set="1" type="int" size="1">
+		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
 			<digest>
-				Determines whether repeated message values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)
+				Determines whether repeated message values will be filtered: when this attribute is enabled, repetitions are filtered out (like [change] object in Max)
 			</digest>
 			<description>
-				Determines whether repeated message values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)
+				Determines whether repeated message values will be filtered: when this attribute is enabled, repetitions are filtered out (like [change] object in Max)
 			</description>
 		</attribute>
 		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">

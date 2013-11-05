@@ -1843,7 +1843,7 @@
             510.0,
             19.0
           ],
-          "text": "j.message clear @repetitions/allow 1 @description \"Reset by removing all existing mappings. \""
+          "text": "j.message clear @repetitions/filter 0 @description \"Reset by removing all existing mappings. \""
         }
       },
       {
@@ -1866,7 +1866,7 @@
             350.0,
             31.0
           ],
-          "text": "j.message view @type none @repetitions/allow 1 @description \"View current mappings in a text window.\""
+          "text": "j.message view @type none @repetitions/filter 0 @description \"View current mappings in a text window.\""
         }
       },
       {
@@ -1912,7 +1912,7 @@
             589.0,
             31.0
           ],
-          "text": "j.message modify @repetitions/allow 1 @description \"Remove an existing mapping.  the required argument is the mapping_name.\""
+          "text": "j.message modify @repetitions/filter 0 @description \"Remove an existing mapping.  the required argument is the mapping_name.\""
         }
       },
       {
@@ -1935,7 +1935,7 @@
             593.0,
             31.0
           ],
-          "text": "j.message remove @repetitions/allow 1 @description \"Remove an existing mapping.  the required argument is the mapping_name.\""
+          "text": "j.message remove @repetitions/filter 0 @description \"Remove an existing mapping.  the required argument is the mapping_name.\""
         }
       },
       {
@@ -1958,7 +1958,7 @@
             595.0,
             31.0
           ],
-          "text": "j.message create @repetitions/allow 1 @description \"Create a new mapping. Arguments are: [mapping_name] [mapping_source (OSC)] [optionalorithm to apply][ ->][mapping_destination (OSC)].\""
+          "text": "j.message create @repetitions/filter 0 @description \"Create a new mapping. Arguments are: [mapping_name] [mapping_source (OSC)] [optionalorithm to apply][ ->][mapping_destination (OSC)].\""
         }
       }
     ],

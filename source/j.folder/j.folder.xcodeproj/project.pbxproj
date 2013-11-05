@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		469BD9DE180B53D500A023B3 /* j.folder.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.folder.yml; sourceTree = "<group>"; };
 		A7BD808315188C5400272BB0 /* j.folder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.folder.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -22,6 +23,7 @@
 		A7D5FC5E15188B9F00B3F1CC = {
 			isa = PBXGroup;
 			children = (
+				469BD9DE180B53D500A023B3 /* j.folder.yml */,
 				A7BD808215188C3C00272BB0 /* Sources */,
 			);
 			sourceTree = "<group>";

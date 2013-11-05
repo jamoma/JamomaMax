@@ -284,7 +284,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 539.5, 178.0, 172.0, 114.0 ],
-									"text" : "j.return audio/amplitude.2 @type decimal @range/bounds 0. 1. @repetitions/allow 1 @dataspace gain @description \"instant amplitude of the signal number 2\""
+									"text" : "j.return audio/amplitude.2 @type decimal @range/bounds 0. 1. @repetitions/filter 0 @dataspace gain @description \"instant amplitude of the signal number 2\""
 								}
 
 							}
@@ -299,7 +299,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 324.0, 178.0, 172.0, 114.0 ],
-									"text" : "j.return audio/amplitude.1 @type decimal @range/bounds 0. 1. @repetitions/allow 1 @dataspace gain @description \"instant amplitude of the signal number 1\""
+									"text" : "j.return audio/amplitude.1 @type decimal @range/bounds 0. 1. @repetitions/filter 0 @dataspace gain @description \"instant amplitude of the signal number 1\""
 								}
 
 							}

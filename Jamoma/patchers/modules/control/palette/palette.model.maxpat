@@ -5753,7 +5753,7 @@
             597.0,
             43.0
           ],
-          "text": "j.parameter random/stepSize @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 1. @range/clipmode both @description \"Set how much next color can deviate from the current when random mode is walk.\"",
+          "text": "j.parameter random/stepSize @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 1. @range/clipmode both @description \"Set how much next color can deviate from the current when random mode is walk.\"",
           "varname": "random/step_size"
         }
       },
@@ -5799,7 +5799,7 @@
             571.0,
             19.0
           ],
-          "text": "j.message generateColor @repetitions/allow 1 @type none @description \"Generate new color triplet.\"",
+          "text": "j.message generateColor @repetitions/filter 0 @type none @description \"Generate new color triplet.\"",
           "varname": "j.parameter[4]"
         }
       },
@@ -5823,7 +5823,7 @@
             584.0,
             31.0
           ],
-          "text": "j.parameter interpolate/stepSize @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @repetitions/allow 1 @description \"Step size when interpolating.\"",
+          "text": "j.parameter interpolate/stepSize @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @repetitions/filter 0 @description \"Step size when interpolating.\"",
           "varname": "interpolate/step_size"
         }
       },

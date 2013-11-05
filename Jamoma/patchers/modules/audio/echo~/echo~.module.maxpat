@@ -29,7 +29,6 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "#1" ],
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
 					"name" : "echo~.view.maxpat",
@@ -217,10 +216,6 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{

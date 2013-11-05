@@ -213,7 +213,7 @@ t_max_err ramp_setMode(t_ramp *x, void *attr, long argc, t_atom *argv)
 void ramp_perform64(t_ramp *x, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
 	x->ramp->process(*x->audioOut);
-	x->audioOut->getVector(0, x->vs, outs[0]);
+	x->audioOut->getVector(0, x->vs, (t_float *)(outs[0]));
 }
 
 void ramp_dsp64(t_ramp *x, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags)

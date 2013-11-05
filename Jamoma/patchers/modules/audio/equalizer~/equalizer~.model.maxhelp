@@ -37,7 +37,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 138.0, 105.0, 117.0, 18.0 ],
-					"text" : "model/address /eqM"
+					"text" : "model:address /eqM"
 				}
 
 			}
@@ -51,7 +51,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 33.0, 104.0, 107.0, 18.0 ],
-					"text" : "model/address /eq"
+					"text" : "model:address /eq"
 				}
 
 			}

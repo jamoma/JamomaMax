@@ -8,12 +8,13 @@
  */
 
 #include "TTModularClassWrapperMax.h"
+#include "TTModelInfo.h"
 
 // This is used to store extra data
 typedef struct extra {
-	ObjectPtr			modelInternal;		// store an internal model patcher
-	TTAddress           modelAddress;		// store the /model/address parameter
-	TTBoolean			component;			// is the model a simple component ?
+	TTObjectBasePtr     modelInfo;
+    TTAddress           containerAddress;   // store the address of the container (see in model_subscribe and model_free)
+    TTAddress           argAddress;         // store the address from the argument (see in model_upper_view_model_address)
     
     TTString            *text;				// the text of the editor to read after edclose
 	ObjectPtr           textEditor;			// the text editor window
@@ -23,6 +24,12 @@ typedef struct extra {
 	TTPtr               filewatcher;		// a preset filewather
 	TTObjectBasePtr     toEdit;				// the object to edit (a preset or all the preset list)
 	TTSymbol            presetName;			// the name of the edited preset
+    
+    TTBoolean           readingContent;     // a flag to avoid infinite loop in model_return_content
+    
+    TTHashPtr           attr_amenities;
+    TTBoolean           all_amenities;
+    TTBoolean           no_amenities;
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
 
@@ -46,22 +53,18 @@ void		model_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv
 void		model_subscribe(TTPtr self);
 void		model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
+void        model_return_upper_view_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
 void		model_init(TTPtr self);
 
 void		model_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-void		model_help(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_reference(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		model_open(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-//void		model_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);		// only in view patch
 
 void		model_autodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		model_doautodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-//void		model_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-//void		model_edclose(TTPtr self, char **text, long size);
-//void		model_doedit(TTPtr self);
+void		model_preset_amenities(TTPtr self);
 
 //void		model_preset_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		model_preset_return_names(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
@@ -82,7 +85,22 @@ void		model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void		model_preset_edclose(TTPtr self, char **text, long size);
 void		model_preset_doedit(TTPtr self);
 
-void		model_preset_subscribe(TTPtr self, TTAddress modelAddress);
-
 t_max_err	model_preset_get_load_default(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av);
 t_max_err	model_preset_set_load_default(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av);
+
+t_max_err	model_get_amenities(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av);
+t_max_err	model_set_amenities(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av);
+TTBoolean   model_test_amenities(TTPtr self, TTSymbol name);
+
+void        model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+void        model_signal_return_data_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_data_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_data_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_data_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+void        model_signal_return_audio_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_audio_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_audio_mix(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_audio_gain(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+

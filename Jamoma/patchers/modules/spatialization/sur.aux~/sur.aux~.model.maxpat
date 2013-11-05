@@ -2244,7 +2244,7 @@
             705.0,
             31.0
           ],
-          "text": "j.parameter aux.3/gain @repetitions/allow 0 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to all aux bus 3\"",
+          "text": "j.parameter aux.3/gain @repetitions/filter 1 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to all aux bus 3\"",
           "varname": "aux.3/gain"
         }
       },
@@ -2268,7 +2268,7 @@
             690.0,
             31.0
           ],
-          "text": "j.parameter aux.2/gain @repetitions/allow 0 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to aux bus 2\"",
+          "text": "j.parameter aux.2/gain @repetitions/filter 1 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to aux bus 2\"",
           "varname": "aux.2/gain"
         }
       },
@@ -2292,7 +2292,7 @@
             690.0,
             31.0
           ],
-          "text": "j.parameter aux.1/gain @repetitions/allow 0 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to aux bus 1\"",
+          "text": "j.parameter aux.1/gain @repetitions/filter 1 @type decimal @range/bounds 0 127 @range/clipmode both @ramp/drive Max @dataspace gain @dataspace/unit midi @description \"gain of the input cable applied to aux bus 1\"",
           "varname": "aux.1/gain"
         }
       },

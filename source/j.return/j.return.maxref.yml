@@ -47,9 +47,9 @@ attributes:
    desc: "Define clipping behaviour at the boundaries of the parameter range. Options are: none, low, high, wrap, fold"
    unit:
    default: none
- - name: repetitions/allow
+ - name: repetitions/filter
    type: boolean
-   desc: "Determines whether repeated parameter values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)"
+   desc: "Determines whether repeated parameter values will be filtered: when this attribute is enabled, repetitions are filtered out (like [change] object in Max)"
    unit:
    default: 0
  - name: dataspace

@@ -12,7 +12,7 @@
 	
 
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 #include "TTDSP.h"	// use the Jamoma DSP clipping functions
 
 

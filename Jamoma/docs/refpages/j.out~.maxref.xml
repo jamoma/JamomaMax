@@ -8,7 +8,7 @@
 		Module conduit for audio output
 	</digest>
 	<description>
-		Module conduit for audio output
+		j.out~ is an output conduits for audio signals in a jamoma model, much like j.out for control signals
 	</description>
 	<!--METADATA-->
 	<metadatalist>

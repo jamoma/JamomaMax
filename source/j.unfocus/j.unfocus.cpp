@@ -5,7 +5,7 @@
  Copyright (c) 2009 by Timothy Place
 */
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 
 // Data Structure for this object

@@ -31,12 +31,15 @@
 #include "TTClassWrapperMax.h"
 
 #include "TTModular.h"				// Jamoma Modular API
+#include "JamomaForMax.h"           // Jamoma for Max
 #include "TTInputAudio.h"
 #include "TTOutputAudio.h"
-#include "ModularForMax.h"			// Jamoma Modular for Max
+
 
 #define selectedObject getSelectedObject(x)
 #define selectedAddress x->cursor
+
+#define MAX_ARRAY_SIZE 256
 
 
 /** Definition for specific TT class things. TODO: This description is non-informative.
@@ -138,8 +141,8 @@ typedef struct _wrappedModularInstance {
 	TTAddress								patcherAddress;				///< the patcher address in which the external is
 	
 #ifdef ARRAY_EXTERNAL
-	TTUInt8									arraySize;					// the size of the array size for iteration
-	TTUInt8									arrayIndex;					// the index number for array selection
+	TTUInt32								arraySize;					// the size of the array size for iteration
+	TTUInt32								arrayIndex;					// the index number for array selection
 	TTAddress								arrayAddress;				// keep the address in memory to filter repetitions
 	TTValue									arrayArgs;					// keep attributes argument of the external for dynamic creation
 	
@@ -179,8 +182,11 @@ TTErr		makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, Symbol
 
 /**
  */
-TTErr		makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedReceiver, TTBoolean deferlow = NO);
+TTErr		makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedReceiver, TTBoolean deferlow = NO, TTBoolean appendNameAsAttribute = NO);
 
+/**
+ */
+TTErr       makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObjectBasePtr *returnedSender, TTBoolean appendNameAsAttribute = NO);
 
 /**
  */

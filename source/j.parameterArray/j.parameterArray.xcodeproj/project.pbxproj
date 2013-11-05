@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		467A25CE1805650900DA28C7 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
+		467A25CF1805650900DA28C7 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
+		469BD9F0180B56BA00A023B3 /* j.parameterArray.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.parameterArray.yml; sourceTree = "<group>"; };
 		D2661D4C153AD7FF0003EE67 /* j.parameterArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.parameterArray.cpp; sourceTree = "<group>"; };
-		D2661D67153AD82B0003EE67 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../../../../../Core/Shared/max/TTModularClassWrapperMax.h; sourceTree = SOURCE_ROOT; };
-		D2661D68153AD82B0003EE67 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../../../../../Core/Shared/max/TTModularClassWrapperMax.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		08FB7794FE84155DC02AAC07 /* j.parameterArray */ = {
 			isa = PBXGroup;
 			children = (
+				469BD9F0180B56BA00A023B3 /* j.parameterArray.yml */,
 				D2661D4C153AD7FF0003EE67 /* j.parameterArray.cpp */,
-				D2661D67153AD82B0003EE67 /* TTModularClassWrapperMax.h */,
-				D2661D68153AD82B0003EE67 /* TTModularClassWrapperMax.cpp */,
+				467A25CF1805650900DA28C7 /* TTModularClassWrapperMax.h */,
+				467A25CE1805650900DA28C7 /* TTModularClassWrapperMax.cpp */,
 			);
 			name = j.parameterArray;
 			sourceTree = "<group>";

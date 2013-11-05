@@ -170,7 +170,7 @@ t_max_err paramui_setRepetitions(t_paramui *x, void *attr, long argc, t_atom *ar
 	if (argc)
 		x->attr_repetitions = atom_getfloat(argv);
 	
-	object_attr_setvalueof(x->obj_parameter, gensym("repetitions/allow"), argc, argv);
+	object_attr_setvalueof(x->obj_parameter, gensym("repetitions/filter"), argc, argv);
 	return MAX_ERR_NONE;
 }
 

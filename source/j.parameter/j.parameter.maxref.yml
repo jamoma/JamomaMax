@@ -56,9 +56,9 @@ attributes:
    desc: "Optional parameters for the chosen ramping function."
    unit:
    default: NULL
- - name: repetitions/allow
+ - name: repetitions/filter
    type: toggle
-   desc: "Determines whether repeated parameter values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)"
+   desc: "Determines whether repeated parameter values will be filtered: when this attribute is enabled, repetitions are filtered out (like [change] object in Max)"
    unit:
    default: 0
  - name: dataspace

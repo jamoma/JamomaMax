@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
-			"architecture" : "x64"
+			"revision" : 5,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 133.0, 170.0, 1070.0, 689.0 ],
@@ -35,8 +35,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 181.0, 270.0, 26.0, 26.0 ],
-					"presentation_rect" : [ 178.0, 265.0, 0.0, 0.0 ]
+					"patching_rect" : [ 181.0, 270.0, 26.0, 26.0 ]
 				}
 
 			}
@@ -66,7 +65,6 @@
 					"outlettype" : [ "", "signal" ],
 					"patching_rect" : [ 16.0, 224.0, 184.0, 20.0 ],
 					"text" : "10harmonics~.model #1",
-					"textcolor" : [ 0.95, 0.95, 0.95, 1.0 ],
 					"varname" : "j.model"
 				}
 
@@ -121,6 +119,68 @@
 					"source" : [ "obj-14", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "10harmonics~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/10harmonics~",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "10harmonics~.view.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/10harmonics~",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.list2parameter.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/list2parameter",
+				"patcherrelativepath" : "../../../components/list2parameter",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameterArray.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.meter~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remoteArray.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

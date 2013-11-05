@@ -1964,7 +1964,7 @@
                     465.0,
                     31.0
                   ],
-                  "text": "j.parameter contraction/slide @type decimal @range/bounds 0. 10. @range/clipmode low @repetitions/allow 0 @description \"The level of smoothing for contraction box.\"",
+                  "text": "j.parameter contraction/slide @type decimal @range/bounds 0. 10. @range/clipmode low @repetitions/filter 1 @description \"The level of smoothing for contraction box.\"",
                   "varname": "contraction/slide"
                 }
               },

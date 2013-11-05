@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		469BD9DD180B53A600A023B3 /* j.envexp.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.envexp.yml; sourceTree = "<group>"; };
 		A7D5FC5D15188B3E00B3F1CC /* j.envexp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.envexp.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -14,6 +15,7 @@
 		A7D5FC4B15188AF500B3F1CC = {
 			isa = PBXGroup;
 			children = (
+				469BD9DD180B53A600A023B3 /* j.envexp.yml */,
 				A7D5FC5C15188B3000B3F1CC /* Sources */,
 			);
 			sourceTree = "<group>";

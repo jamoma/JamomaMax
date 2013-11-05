@@ -7,9 +7,9 @@
 	<digest>
 		Module conduit for non-audio output
 	</digest>
-	<!-- <description>
-		TEXT_HERE
-	</description> -->
+	<description>
+		j.out is an output conduits for control signals in a jamoma model (most often these are Jitter matrices), much like j.out~ is for audio signals
+	</description>
 	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">

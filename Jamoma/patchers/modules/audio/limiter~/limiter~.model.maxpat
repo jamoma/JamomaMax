@@ -188,7 +188,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1402.5, 22.0, 149.0, 114.0 ],
-					"text" : "j.parameter mode @repetitions/allow 0 @type string @description \"Set the function to be used for calculating the scaling. Possible values: exponential | linear\"",
+					"text" : "j.parameter mode @repetitions/filter 1 @type string @description \"Set the function to be used for calculating the scaling. Possible values: exponential | linear\"",
 					"varname" : "mode"
 				}
 
@@ -220,7 +220,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1050.5, 22.0, 171.0, 154.0 ],
-					"text" : "j.parameter lookahead @type integer @range/bounds 0 256 @range/clipmode both @ramp/drive Max @repetitions/allow 0 @dataspace time @dataspace/unit sample @description \"The number of samples (up to 256) to look ahead into the signal to see what is coming.\"",
+					"text" : "j.parameter lookahead @type integer @range/bounds 0 256 @range/clipmode both @ramp/drive Max @repetitions/filter 1 @dataspace time @dataspace/unit sample @description \"The number of samples (up to 256) to look ahead into the signal to see what is coming.\"",
 					"varname" : "lookahead"
 				}
 

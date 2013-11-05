@@ -6177,7 +6177,7 @@
             543.0,
             43.0
           ],
-          "text": "j.message record/active @type generic @repetitions/allow 1 @description \"record to a sound file, a value of 1 opens save-as dialog and will start recording afterwards; a string value will start the recording and will save the recording under the provided  string; a value of 0 stops recording\"",
+          "text": "j.message record/active @type generic @repetitions/filter 0 @description \"record to a sound file, a value of 1 opens save-as dialog and will start recording afterwards; a string value will start the recording and will save the recording under the provided  string; a value of 0 stops recording\"",
           "varname": "record"
         }
       },
@@ -6245,7 +6245,7 @@
             540.0,
             31.0
           ],
-          "text": "j.parameter offset @type integer @repetitions/allow 0 @range/bounds 0 32 @range/clipmode both @description \"Set channel offset for the multicable. Changes only take effect when audio is off.\"",
+          "text": "j.parameter offset @type integer @repetitions/filter 1 @range/bounds 0 32 @range/clipmode both @description \"Set channel offset for the multicable. Changes only take effect when audio is off.\"",
           "varname": "offset"
         }
       },
@@ -6269,7 +6269,7 @@
             581.0,
             31.0
           ],
-          "text": "j.parameter numSpeakers @type integer @repetitions/allow 0 @range/bounds 2 32 @range/clipmode both @description \"Set number of output channels to use. Changes only take effect when audio is off.\"",
+          "text": "j.parameter numSpeakers @type integer @repetitions/filter 1 @range/bounds 2 32 @range/clipmode both @description \"Set number of output channels to use. Changes only take effect when audio is off.\"",
           "varname": "voices"
         }
       }

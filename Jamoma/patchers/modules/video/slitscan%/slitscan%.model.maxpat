@@ -1476,7 +1476,7 @@
             596.0,
             31.0
           ],
-          "text": "j.parameter mode @repetitions/allow 0 @type integer @range/bounds 0 2 @range/clipmode both @description \"modes: 0 - vertical, 1 - horizontal, 2 - map\" @ramp/drive Max",
+          "text": "j.parameter mode @repetitions/filter 1 @type integer @range/bounds 0 2 @range/clipmode both @description \"modes: 0 - vertical, 1 - horizontal, 2 - map\" @ramp/drive Max",
           "varname": "hue_angle[2]"
         }
       },
@@ -1500,7 +1500,7 @@
             563.0,
             31.0
           ],
-          "text": "j.parameter framedelay @repetitions/allow 0 @type integer @range/bounds 0 200 @range/clipmode low @description \"what is the maximum delay in frames\" @ramp/drive Max",
+          "text": "j.parameter framedelay @repetitions/filter 1 @type integer @range/bounds 0 200 @range/clipmode low @description \"what is the maximum delay in frames\" @ramp/drive Max",
           "varname": "hue_angle[1]"
         }
       },

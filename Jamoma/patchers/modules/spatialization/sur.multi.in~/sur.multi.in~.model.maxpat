@@ -502,7 +502,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 294.379944, 366.0, 557.0, 31.0 ],
-					"text" : "j.parameter channel_offset @type integer @repetitions/allow 1 @range/bounds 0 64 @range/clipmode low @description \"Set channel offset for signals. Only take effect the next time audio is started.\"",
+					"text" : "j.parameter channel_offset @type integer @repetitions/filter 0 @range/bounds 0 64 @range/clipmode low @description \"Set channel offset for signals. Only take effect the next time audio is started.\"",
 					"varname" : "channel_offset"
 				}
 

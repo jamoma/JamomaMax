@@ -390,7 +390,7 @@
             478.0,
             30.0
           ],
-          "text": "j.parameter saturation @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 4. @range/clipmode none @description \"Saturation of image - 1 is default\"",
+          "text": "j.parameter saturation @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 4. @range/clipmode none @description \"Saturation of image - 1 is default\"",
           "varname": "saturation[1]"
         }
       },
@@ -414,7 +414,7 @@
             468.0,
             30.0
           ],
-          "text": "j.parameter contrast @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 4. @range/clipmode none @description \"Contrast of image - 1 is default\"",
+          "text": "j.parameter contrast @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 4. @range/clipmode none @description \"Contrast of image - 1 is default\"",
           "varname": "contrast[1]"
         }
       },
@@ -438,7 +438,7 @@
             478.0,
             30.0
           ],
-          "text": "j.parameter brightness @type decimal @ramp/drive Max @repetitions/allow 0 @range/bounds 0. 4. @range/clipmode none @description \"Brightness of image - 1 is default\"",
+          "text": "j.parameter brightness @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 4. @range/clipmode none @description \"Brightness of image - 1 is default\"",
           "varname": "brightness[1]"
         }
       }

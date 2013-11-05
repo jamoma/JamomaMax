@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		469BD9D9180B52E000A023B3 /* j.cubicInterpolate.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.cubicInterpolate.yml; sourceTree = "<group>"; };
 		A72590D015188823004FBDF3 /* j.cubicInterpolate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.cubicInterpolate.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -22,6 +23,7 @@
 		A7768C571518865B00D38CC4 = {
 			isa = PBXGroup;
 			children = (
+				469BD9D9180B52E000A023B3 /* j.cubicInterpolate.yml */,
 				A72590CE15188814004FBDF3 /* Sources */,
 			);
 			sourceTree = "<group>";

@@ -79,7 +79,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1040.0, 88.0, 152.0, 19.0 ],
-					"text" : "j.receive model/address"
+					"text" : "j.receive model:address"
 				}
 
 			}

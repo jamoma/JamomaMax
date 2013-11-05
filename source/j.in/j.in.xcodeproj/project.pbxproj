@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		469BD9E1180B546800A023B3 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
+		469BD9E2180B546800A023B3 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
+		469BD9E3180B548600A023B3 /* j.in.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.in.yml; sourceTree = "<group>"; };
 		A72D874415188F5D001DA7C1 /* j.in.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.in.cpp; sourceTree = "<group>"; };
-		D240435B15ADE0F500D5CCD5 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../../../../../Core/Shared/max/TTModularClassWrapperMax.cpp; sourceTree = SOURCE_ROOT; };
-		D240435C15ADE0F500D5CCD5 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../../../../../Core/Shared/max/TTModularClassWrapperMax.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		A72D873215188DFD001DA7C1 = {
 			isa = PBXGroup;
 			children = (
+				469BD9E3180B548600A023B3 /* j.in.yml */,
 				A72D874415188F5D001DA7C1 /* j.in.cpp */,
-				D240435C15ADE0F500D5CCD5 /* TTModularClassWrapperMax.h */,
-				D240435B15ADE0F500D5CCD5 /* TTModularClassWrapperMax.cpp */,
+				469BD9E2180B546800A023B3 /* TTModularClassWrapperMax.h */,
+				469BD9E1180B546800A023B3 /* TTModularClassWrapperMax.cpp */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +52,7 @@
 			};
 			buildConfigurationList = A72D873715188DFD001DA7C1 /* Build configuration list for PBXProject "j.in" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

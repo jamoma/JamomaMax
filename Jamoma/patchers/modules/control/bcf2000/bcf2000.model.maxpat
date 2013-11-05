@@ -1265,7 +1265,7 @@
             362.0,
             31.0
           ],
-          "text": "j.parameter midiIn @priority 1 @type generic @repetitions/allow 1 @description \"Port to receive MIDI messages on.\"",
+          "text": "j.parameter midiIn @priority 1 @type generic @repetitions/filter 0 @description \"Port to receive MIDI messages on.\"",
           "varname": "midi_in"
         }
       },
@@ -1289,7 +1289,7 @@
             370.0,
             31.0
           ],
-          "text": "j.parameter midiOut @priority 1 @type generic @repetitions/allow 1 @description \"Port to send MIDI messages to.\"",
+          "text": "j.parameter midiOut @priority 1 @type generic @repetitions/filter 0 @description \"Port to send MIDI messages to.\"",
           "varname": "midi_out"
         }
       }

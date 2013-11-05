@@ -28,9 +28,9 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	
 	TTAudioGraphInit();
 	
-	options->append(TT("generator"), kTTBoolYes);
+	options->append(TT("generator"), YES);
 	
-	options->append(TT("userCanSetNumChannels"), kTTBoolYes);
+	options->append(TT("userCanSetNumChannels"), YES);
 	
 	wrapAsMaxAudioGraph(TT("adsr"), "j.adsr≈", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "exponential hybrid linear");

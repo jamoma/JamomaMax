@@ -153,18 +153,18 @@ void nmspc_subscribe(TTPtr self)
 	if (!jamoma_subscriber_create((ObjectPtr)x, NULL, kTTAdrsEmpty, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
         
 		// get the context address to make
-		// a receiver on the contextAddress/model/address parameter
+		// a receiver on the contextAddress/model:address attribute
 		x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
 		contextAddress = v[0];
 	}
 	
-	// bind on the /model/address parameter (view patch) or return (model patch)
+	// bind on the model:address attribute
 	if (contextAddress != kTTAdrsEmpty) {
 		
 		absoluteAddress = contextAddress.appendAddress(x->address);
 		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
 		
-		makeInternals_receiver(x, contextAddress, TTSymbol("/model/address"), gensym("return_model_address"), &anObject, YES); // YES : we want to deferlow this method
+		makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), &anObject, YES); // YES : we want to deferlow this method
 		anObject->sendMessage(kTTSym_Get);
 	}
 	
