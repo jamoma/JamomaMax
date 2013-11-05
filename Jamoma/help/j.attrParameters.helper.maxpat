@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 144.0, 1680.0, 956.0 ],
+		"rect" : [ 31.0, 44.0, 1680.0, 956.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -442,7 +442,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 769.0, 366.0, 93.0, 20.0 ],
+					"patching_rect" : [ 298.0, 355.0, 93.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -469,7 +469,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 491.0, 366.0, 272.0, 20.0 ],
+					"patching_rect" : [ 20.0, 355.0, 272.0, 20.0 ],
 					"text" : "prepend #1:ramp/function "
 				}
 
@@ -483,7 +483,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 476.0, 299.0, 303.0, 20.0 ],
+					"patching_rect" : [ 5.0, 288.0, 303.0, 20.0 ],
 					"text" : "@ramp/function controlles the ramping (easing) curve"
 				}
 
@@ -499,7 +499,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 243.0, 317.5, 123.0, 37.0 ],
+					"patching_rect" : [ 785.0, 335.5, 123.0, 37.0 ],
 					"text" : "The step size can be controlled"
 				}
 
@@ -513,8 +513,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 189.0, 372.0, 20.0 ],
-					"text" : "The value of the parameter can be changed incrementally:"
+					"patching_rect" : [ 545.0, 178.0, 372.0, 20.0 ],
+					"text" : "Change value in incremental steps:"
 				}
 
 			}
@@ -757,7 +757,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 420.0, 334.0, 62.0, 20.0 ],
+					"patching_rect" : [ -51.0, 323.0, 62.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -787,7 +787,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 491.0, 334.0, 100.0, 20.0 ]
+					"patching_rect" : [ 20.0, 323.0, 100.0, 20.0 ]
 				}
 
 			}
@@ -800,8 +800,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 476.0, 189.0, 437.0, 20.0 ],
-					"text" : "Many parameters can change gradually (ramp or ease) to a new value over time"
+					"patching_rect" : [ 5.0, 178.0, 437.0, 20.0 ],
+					"text" : "Change to a new value over time (ramp or ease):"
 				}
 
 			}
@@ -815,7 +815,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 491.0, 228.0, 42.0, 20.0 ],
+					"patching_rect" : [ 20.0, 217.0, 42.0, 20.0 ],
 					"triscale" : 0.9
 				}
 
@@ -829,7 +829,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 491.0, 257.0, 272.0, 18.0 ],
+					"patching_rect" : [ 20.0, 246.0, 272.0, 18.0 ],
 					"text" : "#1 $1 ramp 5000"
 				}
 
@@ -844,7 +844,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 33.5, 299.0, 42.0, 20.0 ],
+					"patching_rect" : [ 575.5, 317.0, 42.0, 20.0 ],
 					"triscale" : 0.9
 				}
 
@@ -858,7 +858,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.5, 327.0, 197.0, 18.0 ],
+					"patching_rect" : [ 575.5, 345.0, 197.0, 18.0 ],
 					"text" : "#1:value/stepsize $1"
 				}
 
@@ -871,7 +871,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 102.0, 653.0, 25.0, 25.0 ]
+					"patching_rect" : [ 691.0, 520.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -898,7 +898,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.5, 253.0, 197.0, 18.0 ],
+					"patching_rect" : [ 575.5, 271.0, 197.0, 18.0 ],
 					"text" : "#1:dec"
 				}
 
@@ -912,7 +912,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.5, 228.0, 197.0, 18.0 ],
+					"patching_rect" : [ 575.5, 246.0, 197.0, 18.0 ],
 					"text" : "#1:inc"
 				}
 
@@ -926,7 +926,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 491.0, 402.5, 400.0, 212.0 ],
+					"patching_rect" : [ 20.0, 391.5, 400.0, 212.0 ],
 					"srcrect" : [ 0, 0, 400, 240 ]
 				}
 
