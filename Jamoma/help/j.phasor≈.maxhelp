@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 774.0, 152.0, 456.0, 600.0 ],
+		"rect" : [ 2427.0, 219.0, 694.0, 616.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -58,11 +58,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 456.0, 574.0 ],
+						"rect" : [ 0.0, 26.0, 694.0, 590.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -117,11 +117,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 774.0, 178.0, 456.0, 574.0 ],
+						"rect" : [ 2427.0, 245.0, 694.0, 590.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -143,6 +143,22 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"border" : 0,
+									"filename" : "helpdetails.js",
+									"id" : "obj-7",
+									"ignoreclick" : 1,
+									"jsarguments" : [ "j.phasor≈" ],
+									"maxclass" : "jsui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 0.0, 0.0, 381.0, 98.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"attr" : "mute",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -152,7 +168,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 178.0, 250.0, 154.0, 20.0 ]
+									"patching_rect" : [ 188.0, 262.0, 154.0, 20.0 ]
 								}
 
 							}
@@ -167,7 +183,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 178.0, 230.0, 154.0, 20.0 ]
+									"patching_rect" : [ 188.0, 242.0, 154.0, 20.0 ]
 								}
 
 							}
@@ -182,7 +198,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 150.0, 120.0, 155.0, 20.0 ]
+									"patching_rect" : [ 160.0, 132.0, 155.0, 20.0 ]
 								}
 
 							}
@@ -192,7 +208,7 @@
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 89.0, 434.0, 45.0, 45.0 ]
+									"patching_rect" : [ 99.0, 446.0, 45.0, 45.0 ]
 								}
 
 							}
@@ -204,7 +220,7 @@
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 150.0, 349.0, 130.0, 130.0 ],
+									"patching_rect" : [ 160.0, 361.0, 130.0, 130.0 ],
 									"trigger" : 1,
 									"triglevel" : 0.5
 								}
@@ -219,7 +235,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
-									"patching_rect" : [ 150.0, 324.0, 91.0, 20.0 ],
+									"patching_rect" : [ 160.0, 336.0, 91.0, 20.0 ],
 									"text" : "j.unpack≈ 1"
 								}
 
@@ -233,7 +249,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
-									"patching_rect" : [ 150.0, 299.0, 68.0, 20.0 ],
+									"patching_rect" : [ 160.0, 311.0, 68.0, 20.0 ],
 									"text" : "j.gain≈"
 								}
 
@@ -248,7 +264,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
-									"patching_rect" : [ 150.0, 154.0, 170.0, 20.0 ],
+									"patching_rect" : [ 160.0, 166.0, 170.0, 20.0 ],
 									"text" : "j.phasor≈ @frequency 220."
 								}
 
@@ -264,7 +280,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 150.0, 98.0, 155.0, 20.0 ]
+									"patching_rect" : [ 160.0, 110.0, 155.0, 20.0 ]
 								}
 
 							}
@@ -279,7 +295,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 178.0, 210.0, 154.0, 20.0 ]
+									"patching_rect" : [ 188.0, 222.0, 154.0, 20.0 ]
 								}
 
 							}
@@ -307,7 +323,7 @@
 									"destination" : [ "obj-11", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 187.5, 264.0, 159.5, 264.0 ],
+									"midpoints" : [ 197.5, 276.0, 169.5, 276.0 ],
 									"source" : [ "obj-13", 0 ]
 								}
 
@@ -317,7 +333,7 @@
 									"destination" : [ "obj-11", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 187.5, 274.0, 159.5, 274.0 ],
+									"midpoints" : [ 197.5, 286.0, 169.5, 286.0 ],
 									"source" : [ "obj-14", 0 ]
 								}
 
@@ -327,7 +343,7 @@
 									"destination" : [ "obj-11", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 187.5, 284.0, 159.5, 284.0 ],
+									"midpoints" : [ 197.5, 296.0, 169.5, 296.0 ],
 									"source" : [ "obj-15", 0 ]
 								}
 
@@ -385,7 +401,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

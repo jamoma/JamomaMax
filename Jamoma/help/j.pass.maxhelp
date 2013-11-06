@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 1179.0, 173.0, 672.0, 453.0 ],
+		"rect" : [ 2327.0, 308.0, 672.0, 453.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -90,8 +90,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 258.0, 271.0, 59.0, 18.0 ],
-									"text" : "whateva"
+									"patching_rect" : [ 258.0, 271.0, 59.0, 18.0 ]
 								}
 
 							}
@@ -222,7 +221,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 248.0, 17.0, 144.0, 79.0 ],
+									"patching_rect" : [ 248.0, 17.0, 147.0, 79.0 ],
 									"text" : "The strip attribute (which is on by default) will strip any leading slashes from the messages"
 								}
 
@@ -333,7 +332,6 @@
 					}
 ,
 					"patching_rect" : [ 164.0, 142.0, 88.0, 18.0 ],
-					"presentation_rect" : [ 164.0, 142.0, 0.0, 0.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -364,7 +362,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -393,7 +391,6 @@
 					}
 ,
 					"patching_rect" : [ 353.0, 131.0, 24.0, 18.0 ],
-					"presentation_rect" : [ 173.0, 58.0, 0.0, 0.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -424,11 +421,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1179.0, 199.0, 672.0, 427.0 ],
+						"rect" : [ 2327.0, 334.0, 672.0, 427.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -488,7 +485,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 426.0, 157.0, 75.0, 18.0 ],
+									"patching_rect" : [ 426.0, 153.0, 75.0, 18.0 ],
 									"text" : "/a 87 51 goo"
 								}
 
@@ -502,7 +499,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 348.0, 157.0, 79.0, 18.0 ],
+									"patching_rect" : [ 348.0, 153.0, 79.0, 18.0 ],
 									"text" : "/bubba gump"
 								}
 
@@ -516,7 +513,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 264.0, 157.0, 81.0, 18.0 ],
+									"patching_rect" : [ 264.0, 153.0, 81.0, 18.0 ],
 									"text" : "I don't match!"
 								}
 
@@ -530,7 +527,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 193.0, 157.0, 70.0, 18.0 ],
+									"patching_rect" : [ 193.0, 153.0, 70.0, 18.0 ],
 									"text" : "6.7 decimal"
 								}
 
@@ -544,7 +541,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 151.0, 157.0, 39.0, 18.0 ],
+									"patching_rect" : [ 151.0, 153.0, 39.0, 18.0 ],
 									"text" : "1 uno"
 								}
 
@@ -558,8 +555,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 335.0, 265.0, 81.0, 18.0 ],
-									"text" : "/bubba gump"
+									"patching_rect" : [ 335.0, 265.0, 81.0, 18.0 ]
 								}
 
 							}
@@ -572,8 +568,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 245.0, 265.0, 72.0, 18.0 ],
-									"text" : "6.7 decimal"
+									"patching_rect" : [ 245.0, 265.0, 72.0, 18.0 ]
 								}
 
 							}
@@ -586,8 +581,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 177.0, 265.0, 41.0, 18.0 ],
-									"text" : "1 uno"
+									"patching_rect" : [ 177.0, 265.0, 41.0, 18.0 ]
 								}
 
 							}
@@ -600,8 +594,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 45.0, 265.0, 74.0, 18.0 ],
-									"text" : "a 87 51 goo"
+									"patching_rect" : [ 45.0, 265.0, 74.0, 18.0 ]
 								}
 
 							}
@@ -614,7 +607,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 100.0, 157.0, 50.0, 18.0 ],
+									"patching_rect" : [ 100.0, 153.0, 50.0, 18.0 ],
 									"text" : "a 21 34"
 								}
 
@@ -806,7 +799,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
