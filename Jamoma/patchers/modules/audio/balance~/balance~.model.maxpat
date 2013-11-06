@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 76.0, 221.0, 1248.0, 629.0 ],
+		"rect" : [ 76.0, 221.0, 1140.0, 629.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -79,8 +79,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 869.0, 63.5, 179.0, 100.0 ],
-					"text" : "j.parameter Mode @type string @value/default FastMode @description \"Choose internal calculation mode for panning: FastMode uses a lookup table while PrecisionMode performs trigonometric calculations\"",
+					"patching_rect" : [ 869.0, 63.5, 205.0, 100.0 ],
+					"text" : "j.parameter mode @type string @value/default FastMode @description \"Choose internal calculation mode for panning: FastMode uses a lookup table while PrecisionMode performs trigonometric calculations\"",
 					"varname" : "mode[1]"
 				}
 

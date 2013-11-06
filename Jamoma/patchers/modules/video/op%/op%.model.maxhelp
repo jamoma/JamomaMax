@@ -97,7 +97,7 @@
 					"id" : "obj-5",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.video_params.maxpat",
+					"name" : "j.videoParameters.helper.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
