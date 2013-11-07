@@ -5,7 +5,7 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.cue" module="" category="Jamoma">
 	<digest>
-		Store and recall the state of several model	</digest>
+		Store and recall the state of several models	</digest>
 	<description>
 		<!-- TEXT_HERE -->
 	</description>
@@ -15,7 +15,13 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			cue
+		</metadata>
+		<metadata name="tag">
+			preset management
+		</metadata>
+		<metadata name="tag">
+			saving
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
