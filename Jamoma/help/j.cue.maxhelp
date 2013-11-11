@@ -1788,7 +1788,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
+						"rect" : [ 100.0, 126.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2795,10 +2795,10 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 770.5, 153.0, 228.0, 18.0 ],
+									"patching_rect" : [ 770.5, 153.0, 224.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 9.0, 166.0, 228.0, 18.0 ],
-									"text" : "namespace/select /degrade~/out.*/gain"
+									"text" : "namespace/select /degrade~/audio/gain"
 								}
 
 							}
@@ -4239,7 +4239,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1012.0, 622.0 ],
+						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
