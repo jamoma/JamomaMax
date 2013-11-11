@@ -4350,12 +4350,12 @@
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-65",
-									"linecount" : 5,
+									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 679.0, 193.0, 186.0, 74.0 ],
-									"text" : "The 'update' message will grab the namespace of the specified cue (in that case the cue named \"init\") and update the values of each j.parameter.",
+									"patching_rect" : [ 679.0, 193.0, 192.0, 33.0 ],
+									"text" : "The 'update' message will update the values in the specified cue.",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 								}
 
