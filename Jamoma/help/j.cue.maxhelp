@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 250.0, 149.0, 1157.0, 730.0 ],
+		"rect" : [ 100.0, 100.0, 1012.0, 648.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -1134,7 +1134,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1157.0, 704.0 ],
+						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1788,7 +1788,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1157.0, 704.0 ],
+						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1839,34 +1839,6 @@
 									"presentation_linecount" : 2,
 									"presentation_rect" : [ 626.0, 204.5, 228.0, 33.0 ],
 									"text" : "'namespace/update' will grab the addresses selection from a specific cue."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-59",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 519.0, 612.0, 108.0, 18.0 ],
-									"text" : "select degrade~"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-58",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 247.25, 647.0, 108.0, 18.0 ],
-									"text" : "select degrade~"
 								}
 
 							}
@@ -2040,7 +2012,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 399.0, 589.0, 67.0, 20.0 ],
+									"patching_rect" : [ 396.0, 566.0, 67.0, 20.0 ],
 									"text" : "sprintf /%s"
 								}
 
@@ -2164,7 +2136,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 530.0, 551.0, 79.0, 20.0 ],
+									"patching_rect" : [ 527.0, 528.0, 79.0, 20.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
@@ -2210,7 +2182,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 421.0, 381.0, 72.0, 18.0 ],
+									"patching_rect" : [ 418.0, 358.0, 72.0, 18.0 ],
 									"text" : "select/none"
 								}
 
@@ -2224,7 +2196,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 363.0, 381.0, 57.0, 18.0 ],
+									"patching_rect" : [ 360.0, 358.0, 57.0, 18.0 ],
 									"text" : "select/all"
 								}
 
@@ -2244,7 +2216,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 421.0, 362.0, 34.0, 16.0 ],
+									"patching_rect" : [ 418.0, 339.0, 34.0, 16.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 45.0, 586.0, 34.0, 16.0 ],
 									"text" : "none"
@@ -2266,7 +2238,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 363.0, 362.0, 34.0, 16.0 ],
+									"patching_rect" : [ 360.0, 339.0, 34.0, 16.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 10.0, 586.0, 34.0, 16.0 ],
 									"text" : "all"
@@ -2282,7 +2254,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 673.0, 378.0, 72.0, 18.0 ],
+									"patching_rect" : [ 670.0, 355.0, 72.0, 18.0 ],
 									"text" : "select/none"
 								}
 
@@ -2296,7 +2268,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 615.0, 378.0, 57.0, 18.0 ],
+									"patching_rect" : [ 612.0, 355.0, 57.0, 18.0 ],
 									"text" : "select/all"
 								}
 
@@ -2316,7 +2288,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 673.0, 359.0, 34.0, 16.0 ],
+									"patching_rect" : [ 670.0, 336.0, 34.0, 16.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 231.0, 586.0, 34.0, 16.0 ],
 									"text" : "none"
@@ -2338,7 +2310,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 615.0, 359.0, 34.0, 16.0 ],
+									"patching_rect" : [ 612.0, 336.0, 34.0, 16.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 196.0, 586.0, 34.0, 16.0 ],
 									"text" : "all"
@@ -2354,7 +2326,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 256.0, 544.0, 48.0, 20.0 ],
+									"patching_rect" : [ 253.0, 521.0, 48.0, 20.0 ],
 									"text" : "route 0"
 								}
 
@@ -2368,7 +2340,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 256.0, 525.0, 32.5, 18.0 ],
+									"patching_rect" : [ 253.0, 502.0, 32.5, 18.0 ],
 									"text" : "$3"
 								}
 
@@ -2385,7 +2357,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 748.5, 525.0, 181.0, 62.0 ],
+									"patching_rect" : [ 745.5, 502.0, 181.0, 62.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 4,
 									"presentation_rect" : [ 10.0, 354.0, 172.0, 76.0 ],
@@ -2403,7 +2375,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 285.0, 590.0, 59.0, 18.0 ],
+									"patching_rect" : [ 282.0, 567.0, 59.0, 18.0 ],
 									"text" : "select $1"
 								}
 
@@ -2527,7 +2499,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 285.0, 612.0, 79.0, 20.0 ],
+									"patching_rect" : [ 282.0, 589.0, 79.0, 20.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
@@ -2555,7 +2527,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 256.0, 378.0, 56.0, 20.0 ],
+									"patching_rect" : [ 253.0, 355.0, 56.0, 20.0 ],
 									"text" : "deferlow"
 								}
 
@@ -2570,7 +2542,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 256.0, 357.0, 69.0, 20.0 ],
+									"patching_rect" : [ 253.0, 334.0, 69.0, 20.0 ],
 									"text" : "loadmess /"
 								}
 
@@ -2584,7 +2556,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 530.0, 525.0, 59.0, 18.0 ],
+									"patching_rect" : [ 527.0, 502.0, 59.0, 18.0 ],
 									"text" : "select $3"
 								}
 
@@ -2600,7 +2572,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 530.0, 407.0, 228.0, 33.0 ],
+									"patching_rect" : [ 527.0, 384.0, 228.0, 33.0 ],
 									"text" : "j.namespace mySelection @filter/list parameter @format jit.cellblock"
 								}
 
@@ -2614,7 +2586,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 285.0, 567.0, 132.5, 20.0 ],
+									"patching_rect" : [ 282.0, 544.0, 132.5, 20.0 ],
 									"text" : "t l l"
 								}
 
@@ -2629,7 +2601,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 468.0, 357.0, 91.0, 20.0 ],
+									"patching_rect" : [ 465.0, 334.0, 91.0, 20.0 ],
 									"text" : "loadmess clear"
 								}
 
@@ -2645,7 +2617,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 256.0, 407.0, 209.0, 33.0 ],
+									"patching_rect" : [ 253.0, 384.0, 209.0, 33.0 ],
 									"text" : "j.namespace mySelection @filter/list model @format jit.cellblock"
 								}
 
@@ -2671,7 +2643,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
 									"outmode" : 1,
-									"patching_rect" : [ 530.0, 445.0, 188.0, 78.0 ],
+									"patching_rect" : [ 527.0, 422.0, 188.0, 78.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 196.0, 374.0, 188.0, 211.0 ],
 									"rowheight" : 20,
@@ -2704,7 +2676,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
 									"outmode" : 1,
-									"patching_rect" : [ 256.0, 445.0, 184.0, 78.0 ],
+									"patching_rect" : [ 253.0, 422.0, 184.0, 78.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 10.0, 374.0, 184.0, 211.0 ],
 									"rowheight" : 20,
@@ -2871,7 +2843,7 @@
 									"destination" : [ "obj-35", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 408.5, 612.0, 508.75, 612.0, 508.75, 399.0, 539.5, 399.0 ],
+									"midpoints" : [ 405.5, 589.0, 505.75, 589.0, 505.75, 376.0, 536.5, 376.0 ],
 									"source" : [ "obj-12", 0 ]
 								}
 
@@ -2901,7 +2873,7 @@
 									"destination" : [ "obj-39", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 430.5, 402.5, 265.5, 402.5 ],
+									"midpoints" : [ 427.5, 379.5, 262.5, 379.5 ],
 									"source" : [ "obj-20", 0 ]
 								}
 
@@ -2911,7 +2883,7 @@
 									"destination" : [ "obj-39", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 372.5, 402.5, 265.5, 402.5 ],
+									"midpoints" : [ 369.5, 379.5, 262.5, 379.5 ],
 									"source" : [ "obj-21", 0 ]
 								}
 
@@ -2939,7 +2911,7 @@
 									"destination" : [ "obj-35", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 682.5, 399.5, 539.5, 399.5 ],
+									"midpoints" : [ 679.5, 376.5, 536.5, 376.5 ],
 									"source" : [ "obj-24", 0 ]
 								}
 
@@ -2949,7 +2921,7 @@
 									"destination" : [ "obj-35", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 624.5, 399.5, 539.5, 399.5 ],
+									"midpoints" : [ 621.5, 376.5, 536.5, 376.5 ],
 									"source" : [ "obj-25", 0 ]
 								}
 
@@ -3005,17 +2977,7 @@
 									"destination" : [ "obj-39", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 294.5, 635.0, 248.5, 635.0, 248.5, 402.0, 265.5, 402.0 ],
-									"source" : [ "obj-31", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-58", 1 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"midpoints" : [ 294.5, 636.0, 345.75, 636.0 ],
+									"midpoints" : [ 291.5, 612.0, 245.5, 612.0, 245.5, 379.0, 262.5, 379.0 ],
 									"source" : [ "obj-31", 0 ]
 								}
 
@@ -3061,17 +3023,7 @@
 									"destination" : [ "obj-35", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 539.5, 580.0, 520.0, 580.0, 520.0, 399.0, 539.5, 399.0 ],
-									"source" : [ "obj-36", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-59", 1 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"midpoints" : [ 539.5, 579.0, 617.5, 579.0 ],
+									"midpoints" : [ 536.5, 557.0, 517.0, 557.0, 517.0, 376.0, 536.5, 376.0 ],
 									"source" : [ "obj-36", 0 ]
 								}
 
@@ -3099,7 +3051,7 @@
 									"destination" : [ "obj-43", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 477.5, 444.5, 539.5, 444.5 ],
+									"midpoints" : [ 474.5, 421.5, 536.5, 421.5 ],
 									"source" : [ "obj-38", 0 ]
 								}
 
@@ -3109,7 +3061,7 @@
 									"destination" : [ "obj-44", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 477.5, 444.5, 265.5, 444.5 ],
+									"midpoints" : [ 474.5, 421.5, 262.5, 421.5 ],
 									"source" : [ "obj-38", 0 ]
 								}
 
@@ -3249,7 +3201,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1157.0, 704.0 ],
+						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3278,7 +3230,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 235.5, 597.0, 89.0, 20.0 ],
+									"patching_rect" : [ 240.5, 549.0, 89.0, 20.0 ],
 									"text" : "Act I - Scene II",
 									"textcolor" : [ 0.0, 0.0, 0.0, 0.8 ]
 								}
@@ -3293,7 +3245,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 235.5, 543.0, 86.0, 20.0 ],
+									"patching_rect" : [ 240.5, 495.0, 86.0, 20.0 ],
 									"text" : "Act I - Scene I",
 									"textcolor" : [ 0.0, 0.0, 0.0, 0.8 ]
 								}
@@ -3308,7 +3260,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 235.5, 493.0, 26.0, 20.0 ],
+									"patching_rect" : [ 240.5, 445.0, 26.0, 20.0 ],
 									"text" : "init",
 									"textcolor" : [ 0.0, 0.0, 0.0, 0.8 ]
 								}
@@ -3325,7 +3277,7 @@
 									"orientation" : 0,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 228.0, 478.0, 104.0, 150.0 ],
+									"patching_rect" : [ 233.0, 430.0, 104.0, 150.0 ],
 									"setminmax" : [ 0.0, 1.0 ],
 									"size" : 3,
 									"slidercolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
@@ -3343,7 +3295,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 714.0, 261.0, 127.0, 114.0 ],
+									"patching_rect" : [ 719.0, 213.0, 127.0, 114.0 ],
 									"text" : "'mix' followed by 2 or more pairs of cue names or position + ratio allows to interpolate parameters value between multiple cues."
 								}
 
@@ -3358,7 +3310,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 660.0, 84.0, 139.0, 74.0 ],
+									"patching_rect" : [ 665.0, 36.0, 139.0, 74.0 ],
 									"text" : "'interpolate' followed by 2 cue names or position allows to interpolate parameters value from one cue to another."
 								}
 
@@ -3374,7 +3326,7 @@
 									"orientation" : 0,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 228.0, 113.0, 151.0, 16.0 ],
+									"patching_rect" : [ 233.0, 65.0, 151.0, 16.0 ],
 									"setminmax" : [ 0.0, 1.0 ],
 									"slidercolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 									"spacing" : 1
@@ -3392,7 +3344,7 @@
 									"orientation" : 0,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 484.0, 113.0, 151.0, 16.0 ],
+									"patching_rect" : [ 489.0, 65.0, 151.0, 16.0 ],
 									"setminmax" : [ 0.0, 1.0 ],
 									"slidercolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 									"spacing" : 1
@@ -3408,7 +3360,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 333.0, 44.0, 35.0, 18.0 ],
+									"patching_rect" : [ 338.0, 20.0, 35.0, 18.0 ],
 									"text" : "read"
 								}
 
@@ -3422,7 +3374,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 198.0, 44.0, 134.0, 18.0 ],
+									"patching_rect" : [ 203.0, 20.0, 134.0, 18.0 ],
 									"text" : "read j.cue.example.xml"
 								}
 
@@ -3444,7 +3396,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 165.0, 44.0, 24.0, 24.0 ],
+									"patching_rect" : [ 170.0, 20.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "1",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -3462,7 +3414,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 198.0, 639.0, 36.0, 20.0 ],
+									"patching_rect" : [ 203.0, 591.0, 36.0, 20.0 ],
 									"text" : "j.cue"
 								}
 
@@ -3477,7 +3429,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 484.0, 412.0, 109.0, 18.0 ],
+									"patching_rect" : [ 489.0, 364.0, 109.0, 18.0 ],
 									"text" : "mix 1 $1 2 $2 3 $3"
 								}
 
@@ -3496,7 +3448,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 484.0, 220.0, 190.0, 182.0 ],
+									"patching_rect" : [ 489.0, 172.0, 190.0, 182.0 ],
 									"xplace" : [ 0.41, 0.23, 0.935897 ],
 									"yplace" : [ 0.2, 0.77, 0.615385 ]
 								}
@@ -3512,7 +3464,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 484.0, 141.0, 103.0, 18.0 ],
+									"patching_rect" : [ 489.0, 93.0, 103.0, 18.0 ],
 									"text" : "interpolate 1 2 $1"
 								}
 
@@ -3528,7 +3480,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 228.0, 412.0, 170.0, 31.0 ],
+									"patching_rect" : [ 233.0, 364.0, 170.0, 31.0 ],
 									"text" : "mix init $1 \"Act I - Scene I\" $2 \"Act I - Scene II\" $3"
 								}
 
@@ -3547,7 +3499,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 228.0, 220.0, 190.0, 182.0 ],
+									"patching_rect" : [ 233.0, 172.0, 190.0, 182.0 ],
 									"xplace" : [ 0.41, 0.23, 0.935897 ],
 									"yplace" : [ 0.2, 0.77, 0.615385 ]
 								}
@@ -3563,7 +3515,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 228.0, 141.0, 190.0, 18.0 ],
+									"patching_rect" : [ 233.0, 93.0, 190.0, 18.0 ],
 									"text" : "interpolate Init \"Act I - Scene I\" $1"
 								}
 
@@ -3574,7 +3526,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 237.5, 194.5, 207.5, 194.5 ],
+									"midpoints" : [ 242.5, 146.5, 212.5, 146.5 ],
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -3593,7 +3545,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 237.5, 457.0, 207.5, 457.0 ],
+									"midpoints" : [ 242.5, 409.0, 212.5, 409.0 ],
 									"source" : [ "obj-28", 0 ]
 								}
 
@@ -3603,7 +3555,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 493.5, 194.0, 207.5, 194.0 ],
+									"midpoints" : [ 498.5, 146.0, 212.5, 146.0 ],
 									"source" : [ "obj-3", 0 ]
 								}
 
@@ -3613,7 +3565,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 493.5, 457.5, 207.5, 457.5 ],
+									"midpoints" : [ 498.5, 409.5, 212.5, 409.5 ],
 									"source" : [ "obj-4", 0 ]
 								}
 
@@ -3659,7 +3611,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 342.5, 74.5, 207.5, 74.5 ],
+									"midpoints" : [ 347.5, 50.5, 212.5, 50.5 ],
 									"source" : [ "obj-56", 0 ]
 								}
 
@@ -3721,7 +3673,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1157.0, 704.0 ],
+						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3751,7 +3703,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 207.0, 442.0, 135.0, 100.0 ],
+									"patching_rect" : [ 207.0, 401.0, 135.0, 100.0 ],
 									"text" : "Now click one of these messages then open again j.cue editor window. Notice how unchanged parameters from one cue to another are deleted."
 								}
 
@@ -3773,7 +3725,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 339.0, 442.0, 24.0, 24.0 ],
+									"patching_rect" : [ 339.0, 401.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "4",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -3791,7 +3743,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 248.0, 349.0, 91.0, 60.0 ],
+									"patching_rect" : [ 248.0, 308.0, 91.0, 60.0 ],
 									"text" : "Open j.cue editor and see what your cue list looks like."
 								}
 
@@ -3813,7 +3765,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 339.0, 349.0, 24.0, 24.0 ],
+									"patching_rect" : [ 339.0, 308.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "3",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -3831,7 +3783,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 248.0, 252.0, 91.0, 74.0 ],
+									"patching_rect" : [ 248.0, 211.0, 91.0, 74.0 ],
 									"text" : "Change some values in your models then store these values in j.cue."
 								}
 
@@ -3853,7 +3805,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 339.0, 252.0, 24.0, 24.0 ],
+									"patching_rect" : [ 339.0, 211.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "2",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -3870,7 +3822,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 373.0, 158.0, 96.0, 18.0 ],
+									"patching_rect" : [ 373.0, 117.0, 96.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 253.0, 168.0, 336.0, 18.0 ],
 									"text" : "store initialState"
@@ -3887,7 +3839,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 248.0, 158.0, 91.0, 33.0 ],
+									"patching_rect" : [ 248.0, 117.0, 91.0, 33.0 ],
 									"text" : "First, let's start a new cue list."
 								}
 
@@ -3909,7 +3861,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 339.0, 158.0, 24.0, 24.0 ],
+									"patching_rect" : [ 339.0, 117.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "1",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -3942,7 +3894,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 373.0, 558.0, 36.0, 20.0 ],
+									"patching_rect" : [ 373.0, 517.0, 36.0, 20.0 ],
 									"text" : "j.cue"
 								}
 
@@ -3958,7 +3910,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 373.0, 489.0, 267.0, 18.0 ],
+									"patching_rect" : [ 373.0, 448.0, 267.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 302.0, 434.0, 267.0, 18.0 ],
 									"text" : "sequence initialState anotherState optionalState"
@@ -3976,7 +3928,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 373.0, 466.0, 195.0, 18.0 ],
+									"patching_rect" : [ 373.0, 425.0, 195.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 302.0, 411.0, 195.0, 18.0 ],
 									"text" : "sequence initialState optionalState"
@@ -3992,7 +3944,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 373.0, 273.0, 111.0, 18.0 ],
+									"patching_rect" : [ 373.0, 232.0, 111.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 302.0, 299.0, 111.0, 18.0 ],
 									"text" : "store optionalState"
@@ -4008,7 +3960,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 373.0, 232.0, 109.0, 18.0 ],
+									"patching_rect" : [ 373.0, 191.0, 109.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 302.0, 258.0, 109.0, 18.0 ],
 									"text" : "store anotherState"
@@ -4026,7 +3978,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 373.0, 443.0, 193.0, 18.0 ],
+									"patching_rect" : [ 373.0, 402.0, 193.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 302.0, 388.0, 193.0, 18.0 ],
 									"text" : "sequence initialState anotherState"
@@ -4287,7 +4239,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 250.0, 175.0, 1157.0, 704.0 ],
+						"rect" : [ 100.0, 126.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4317,7 +4269,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 778.5, 551.0, 172.0, 60.0 ],
+									"patching_rect" : [ 739.5, 488.0, 172.0, 60.0 ],
 									"prototypename" : "Jamoma.light",
 									"text" : "Note that j.cue's content is not saved within the patch. Be sure to save its content as a file.",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
@@ -4334,7 +4286,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 778.5, 414.0, 167.0, 127.0 ],
+									"patching_rect" : [ 739.5, 351.0, 167.0, 127.0 ],
 									"text" : "Once you're happy with the collection of states saved in the various cues, you can save them to disk.\n\nThe text file containing all cues can then be loaded back using the 'read' message."
 								}
 
@@ -4356,7 +4308,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 754.5, 414.0, 24.0, 24.0 ],
+									"patching_rect" : [ 715.5, 351.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "3",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -4373,7 +4325,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 694.5, 414.0, 36.0, 18.0 ],
+									"patching_rect" : [ 655.5, 351.0, 36.0, 18.0 ],
 									"text" : "write"
 								}
 
@@ -4387,7 +4339,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 694.5, 443.0, 35.0, 18.0 ],
+									"patching_rect" : [ 655.5, 380.0, 35.0, 18.0 ],
 									"text" : "read"
 								}
 
@@ -4402,7 +4354,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 718.0, 256.0, 186.0, 74.0 ],
+									"patching_rect" : [ 679.0, 193.0, 186.0, 74.0 ],
 									"text" : "The 'update' message will grab the namespace of the specified cue (in that case the cue named \"init\") and update the values of each j.parameter.",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 								}
@@ -4418,7 +4370,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 379.0, 277.0, 168.0, 74.0 ],
+									"patching_rect" : [ 340.0, 214.0, 168.0, 74.0 ],
 									"text" : "By default, j.cue will store the content of all modules or models in opened patches (that is, from the root of the namespace '/').",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 								}
@@ -4434,7 +4386,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 111.5, 288.0, 160.0, 33.0 ],
+									"patching_rect" : [ 72.5, 225.0, 160.0, 33.0 ],
 									"text" : "Recall some previsouly stored states"
 								}
 
@@ -4449,7 +4401,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 111.5, 206.0, 160.0, 74.0 ],
+									"patching_rect" : [ 72.5, 143.0, 160.0, 74.0 ],
 									"text" : "Change some values in the provided modules, then store this state under a specific name and optional position."
 								}
 
@@ -4471,7 +4423,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 87.5, 288.0, 24.0, 24.0 ],
+									"patching_rect" : [ 48.5, 225.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "2",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -4496,7 +4448,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 87.5, 206.0, 24.0, 24.0 ],
+									"patching_rect" : [ 48.5, 143.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "1",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -4521,7 +4473,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 531.5, 231.0, 24.0, 24.0 ],
+									"patching_rect" : [ 492.5, 168.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "2",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -4546,7 +4498,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 335.0, 231.0, 24.0, 24.0 ],
+									"patching_rect" : [ 296.0, 168.0, 24.0, 24.0 ],
 									"prototypename" : "Jamoma.step",
 									"rounded" : 180.0,
 									"text" : "1",
@@ -4564,7 +4516,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 694.5, 223.0, 66.0, 18.0 ],
+									"patching_rect" : [ 655.5, 160.0, 66.0, 18.0 ],
 									"text" : "update init"
 								}
 
@@ -4578,7 +4530,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 386.0, 502.0, 32.5, 18.0 ],
+									"patching_rect" : [ 347.0, 439.0, 32.5, 18.0 ],
 									"text" : "edit"
 								}
 
@@ -4595,7 +4547,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 435.0, 502.0, 175.0, 146.0 ],
+									"patching_rect" : [ 396.0, 439.0, 175.0, 146.0 ],
 									"prototypename" : "Jamoma.bubble",
 									"text" : "Double click j.cue object to open a text window displaying the stored namespace and corresponding values. \n\nAlternatively, you can use the 'edit' message to display only specific cue.",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -4611,7 +4563,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 562.5, 248.0, 105.0, 18.0 ],
+									"patching_rect" : [ 523.5, 185.0, 105.0, 18.0 ],
 									"text" : "recall anotherCue"
 								}
 
@@ -4625,7 +4577,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 562.5, 223.0, 58.0, 18.0 ],
+									"patching_rect" : [ 523.5, 160.0, 58.0, 18.0 ],
 									"text" : "recall init"
 								}
 
@@ -4640,7 +4592,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 87.5, 379.0, 184.0, 141.0 ],
+									"patching_rect" : [ 48.5, 316.0, 184.0, 141.0 ],
 									"prototypename" : "Jamoma.bold",
 									"text" : "Without any argument, the 'store', 'recall' and 'update' message will work from the last stored, recalled or updated cue.\n\nie. Sending 'store' to j.cue will erase the lastly stored or recalled cue and store the new content of the models or modules.",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
@@ -4656,7 +4608,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 362.5, 248.0, 103.0, 18.0 ],
+									"patching_rect" : [ 323.5, 185.0, 103.0, 18.0 ],
 									"text" : "store anotherCue"
 								}
 
@@ -4671,7 +4623,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 362.5, 558.0, 36.0, 20.0 ],
+									"patching_rect" : [ 323.5, 495.0, 36.0, 20.0 ],
 									"text" : "j.cue"
 								}
 
@@ -4685,7 +4637,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 386.0, 522.0, 49.0, 18.0 ],
+									"patching_rect" : [ 347.0, 459.0, 49.0, 18.0 ],
 									"text" : "edit init"
 								}
 
@@ -4699,7 +4651,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 362.5, 223.0, 56.0, 18.0 ],
+									"patching_rect" : [ 323.5, 160.0, 56.0, 18.0 ],
 									"text" : "store init"
 								}
 
@@ -4716,7 +4668,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 0.0, 0.0, 455.5, 100.0 ]
+									"patching_rect" : [ 0.0, 0.0, 530.5, 115.0 ]
 								}
 
 							}
@@ -4726,7 +4678,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 372.0, 355.5, 372.0, 355.5 ],
+									"midpoints" : [ 333.0, 292.5, 333.0, 292.5 ],
 									"source" : [ "obj-11", 0 ]
 								}
 
@@ -4736,7 +4688,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 395.5, 553.0, 372.0, 553.0 ],
+									"midpoints" : [ 356.5, 490.0, 333.0, 490.0 ],
 									"source" : [ "obj-35", 0 ]
 								}
 
@@ -4746,7 +4698,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 704.0, 391.5, 372.0, 391.5 ],
+									"midpoints" : [ 665.0, 328.5, 333.0, 328.5 ],
 									"source" : [ "obj-40", 0 ]
 								}
 
@@ -4756,7 +4708,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 372.0, 368.0, 372.0, 368.0 ],
+									"midpoints" : [ 333.0, 305.0, 333.0, 305.0 ],
 									"source" : [ "obj-45", 0 ]
 								}
 
@@ -4766,7 +4718,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 572.0, 387.0, 372.0, 387.0 ],
+									"midpoints" : [ 533.0, 324.0, 333.0, 324.0 ],
 									"source" : [ "obj-52", 0 ]
 								}
 
@@ -4776,7 +4728,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 572.0, 378.5, 372.0, 378.5 ],
+									"midpoints" : [ 533.0, 315.5, 333.0, 315.5 ],
 									"source" : [ "obj-53", 0 ]
 								}
 
@@ -4786,7 +4738,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 395.5, 547.5, 372.0, 547.5 ],
+									"midpoints" : [ 356.5, 484.5, 333.0, 484.5 ],
 									"source" : [ "obj-57", 0 ]
 								}
 
@@ -4796,7 +4748,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 704.0, 483.5, 372.0, 483.5 ],
+									"midpoints" : [ 665.0, 420.5, 333.0, 420.5 ],
 									"source" : [ "obj-67", 0 ]
 								}
 
@@ -4806,7 +4758,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 704.0, 469.0, 372.0, 469.0 ],
+									"midpoints" : [ 665.0, 406.0, 333.0, 406.0 ],
 									"source" : [ "obj-68", 0 ]
 								}
 
@@ -4850,7 +4802,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1157.0, 704.0 ],
+						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
