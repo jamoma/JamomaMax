@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.remoteArray" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Define an array of remote access
 	</digest>
 	<description>
-		TEXT_HERE
+		This component is a utility for creating an array of remote access to several parameter in one go
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			view
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
