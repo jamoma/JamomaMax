@@ -354,6 +354,14 @@
 				The 'current/ramp' attribute alows to get or set a ramp time length specified as milliseconds for the current cue
 			</description>
 		</attribute>
+		<attribute name="names" get="0" set="1" type="atom" size="1">
+			<digest>
+				Get the names of the cues stored in j.cue
+			</digest>
+			<description>
+				The 'names' attribute allows to get a list of all cues stored in j.cue
+			</description>
+		</attribute>
 		<attribute name="namespace" get="1" set="1" type="symbol" size="1">
 			<digest>
 				Bind to a specific namespace
