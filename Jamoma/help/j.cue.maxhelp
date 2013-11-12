@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 5.0, 44.0, 1012.0, 648.0 ],
+		"rect" : [ 10.0, 44.0, 1012.0, 648.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -1134,7 +1134,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 5.0, 70.0, 1012.0, 622.0 ],
+						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1433,7 +1433,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-17",
-									"items" : "<empty>",
+									"items" : [ "Outro", ",", "\"\"\"\"\"\"Act I - Scene II\"\"\"\"\"\"", ",", "\"\"\"\"\"\"Act I - Scene I\"\"\"\"\"\"", ",", "init" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1869,7 +1869,7 @@
 									"presentation" : 1,
 									"presentation_linecount" : 2,
 									"presentation_rect" : [ 626.0, 204.5, 228.0, 33.0 ],
-									"text" : "'namespace/update' will grab the addresses selection from a specific cue."
+									"text" : "'namespace/grab' will grab the addresses selection from a specific cue."
 								}
 
 							}
@@ -2762,10 +2762,10 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 539.5, 225.5, 131.0, 18.0 ],
+									"patching_rect" : [ 539.5, 225.5, 119.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 9.0, 195.0, 137.0, 18.0 ],
-									"text" : "namespace/update init"
+									"text" : "namespace/grab init"
 								}
 
 							}
@@ -3704,7 +3704,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
+						"rect" : [ 10.0, 70.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3910,8 +3910,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 10.0, 10.0, 386.0, 47.0 ],
-									"text" : "The 'sequence' message allows to optimize a cue list by filtering out redundant addresses and values from a cue to another. This can be seen as a kind of built-in change function between cues."
+									"patching_rect" : [ 9.0, 10.0, 436.0, 47.0 ],
+									"text" : "The 'optimize' message allows to slim down a cue list by removing redundant addresses and values from consecutive cues. This can be seen as a kind of built-in change function between cues."
 								}
 
 							}
@@ -3941,10 +3941,10 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 373.0, 448.0, 267.0, 18.0 ],
+									"patching_rect" : [ 373.0, 448.0, 259.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 302.0, 434.0, 267.0, 18.0 ],
-									"text" : "sequence initialState anotherState optionalState"
+									"text" : "optimize initialState anotherState optionalState"
 								}
 
 							}
@@ -3959,10 +3959,10 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 373.0, 425.0, 195.0, 18.0 ],
+									"patching_rect" : [ 373.0, 425.0, 187.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 302.0, 411.0, 195.0, 18.0 ],
-									"text" : "sequence initialState optionalState"
+									"text" : "optimize initialState optionalState"
 								}
 
 							}
@@ -4009,10 +4009,10 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 373.0, 402.0, 193.0, 18.0 ],
+									"patching_rect" : [ 373.0, 402.0, 186.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 302.0, 388.0, 193.0, 18.0 ],
-									"text" : "sequence initialState anotherState"
+									"text" : "optimize initialState anotherState"
 								}
 
 							}

@@ -202,15 +202,15 @@
 				When using j.cue along with j.namespace, the message 'namespace/unselect' will unselect one or many addresses specified as argument in the namespace
 			</description>
 		</method>
-		<method name="namespace/update">
+		<method name="namespace/grab">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Select the namespace of an existant cue
+				Select the namespace of an existing cue
 			</digest>
 			<description>
-				When using j.cue along with j.namespace, the message 'namespace/update' will select addresses in an existant cue specified as argument
+				When using j.cue along with j.namespace, the message 'namespace/grab' will select addresses in an existing cue specified as argument
 			</description>
 		</method>
 		<method name="mix">
@@ -255,15 +255,15 @@
 				The message 'recall' followed by a cue name or index will set models values back to a previously saved state
 			</description>
 		</method>
-		<method name="sequence">
+		<method name="optimize">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Remove redundant values between consecutive cues
 			</digest>
 			<description>
-				TEXT_HERE
+				The 'optimize' message allows to filter out and delete redundant values between consecutive cues
 			</description>
 		</method>
 		<method name="store">
