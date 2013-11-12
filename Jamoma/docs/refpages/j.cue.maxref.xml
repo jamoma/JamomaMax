@@ -277,6 +277,17 @@
 				The message 'store' followed by an optional cue name or index will store some models parameters' value in j.cue
 			</description>
 		</method>
+		<method name="order">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Order of the cues stored in j.cue
+			</digest>
+			<description>
+				The 'order' attribute follwoed by an optionnal list of cue name or index will reorder the spcified cues with j.cue list of cues
+			</description>
+		</method>
 		<method name="remove">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -368,14 +379,6 @@
 			</digest>
 			<description>
 				The 'namespace' attribute followed by a j.namespace's named selection will set j.cue to use this namespace selection
-			</description>
-		</attribute>
-		<attribute name="order" get="1" set="1" type="atom" size="1">
-			<digest>
-				Order of the cues stored in j.cue
-			</digest>
-			<description>
-				The 'order' attribute follwoed by an optionnal list of cue name or index will reorder the spcified cues with j.cue list of cues
 			</description>
 		</attribute>
 	</attributelist>
