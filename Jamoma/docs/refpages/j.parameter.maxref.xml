@@ -8,7 +8,7 @@
 		Declaring parameter of a patcher
 	</digest>
 	<description>
-		j.parameter allows to declare a parameter within a patche of model
+		j.parameter allows to declare a parameter within a patch or a model
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			model
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -181,15 +181,15 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="reset">
+		<method name="init">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Reset the j.parameter to its default state
 			</digest>
 			<description>
-				TEXT_HERE
+				Reset the j.parameter to its default state
 			</description>
 		</method>
 	</methodlist>
@@ -286,7 +286,7 @@
 				TEXT_HERE
 			</description>
 		</attribute>
-		<attribute name="repetitions/allow" get="1" set="1" type="int" size="1">
+		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>

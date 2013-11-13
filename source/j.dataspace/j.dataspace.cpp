@@ -62,8 +62,8 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	c = class_new("j.dataspace",(method)dataspace_new, (method)dataspace_free, sizeof(t_dataspace), (method)0L, A_GIMME, 0);
 	
 	// Make methods accessible for our class:
-	class_addmethod(c, (method)dataspace_int,			"int",				A_GIMME, 0);
-	class_addmethod(c, (method)dataspace_float,			"float",			A_GIMME, 0);
+	class_addmethod(c, (method)dataspace_int,			"int",				A_LONG, 0);
+	class_addmethod(c, (method)dataspace_float,			"float",			A_FLOAT, 0);
 	class_addmethod(c, (method)dataspace_list,			"list",				A_GIMME, 0);
 	class_addmethod(c, (method)dataspace_getDataspaces,	"dataspaces.get",	0);
  	class_addmethod(c, (method)dataspace_getUnits,		"units.get",		A_GIMME, 0);
@@ -95,6 +95,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 void *dataspace_new(t_symbol *name, long argc, t_atom *argv)
 {
 	t_dataspace *self;
+	TTValue		none;
 	
 	self = (t_dataspace *)object_alloc(dataspace_class);
 	if (self) {
@@ -106,7 +107,7 @@ void *dataspace_new(t_symbol *name, long argc, t_atom *argv)
         ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
         
         self->outlet_native = outlet_new(self, 0);
-		TTObjectBaseInstantiate(TT("dataspace"), &self->dataspace, kTTValNONE);
+		TTObjectBaseInstantiate(TT("dataspace"), &self->dataspace, none);
 		
 		attr_args_process(self, argc, argv);
 		if (!self->dataspace)

@@ -21,7 +21,7 @@ void ui_preset_store_next(t_ui *x)
 	if (result != 1)
 		return;
 	
-	ui_viewer_send(x, TTSymbol("preset/store"), TTSymbol(text));
+	ui_viewer_send(x, TTSymbol("preset:store"), TTSymbol(text));
 	
 	// TODO: do we not have to free text?
 }
@@ -31,16 +31,26 @@ void ui_preset_doread(t_ui *x)
 	char 			filename[MAX_FILENAME_CHARS];	// for storing the name of the file locally
 	char 			fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
 	char			posixpath[MAX_PATH_CHARS];
-	short 			path;					// pathID#
-    t_fourcc		filetype = 'TEXT', outtype;  // the file type that is actually true
+	short 			path;                           // pathID#
+    t_fourcc		filetype = 'TEXT', outtype;     // the file type that is actually true
+    ObjectPtr       modelObject;
+    t_atom          a[1];
 	
 	if (open_dialog(filename, &path, &outtype, &filetype, 1))		// Returns 0 if successful
 		return;														// User Cancelled
 
 	path_topathname(path, filename, fullpath);
 	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
-	
-	ui_viewer_send(x, TTSymbol("preset/read"), TTSymbol(posixpath));
+    
+    // get model object
+    modelObject = ui_get_model_object(x);
+    if (modelObject) {
+            
+        atom_setsym(a, gensym(posixpath));
+            
+        // send a preset:read path message
+        object_method_typed(modelObject, gensym("preset:read"), 1, a, NULL);
+	}
 }
 
 void ui_preset_dowrite(t_ui *x)
@@ -52,9 +62,11 @@ void ui_preset_dowrite(t_ui *x)
 	short 			path, err;					// pathID#, error number
 	t_fourcc		outtype;					// the file type that is actually true
 	t_filehandle	file_handle;				// a reference to our file (for opening it, closing it, etc.)
-	TTNodePtr		patcherNode;
-	ObjectPtr		modelPatcher = NULL;
-	TTSymbol		modelClass;
+    TTNodePtr       patcherNode;
+    TTSymbol        modelClass;
+    ObjectPtr       modelPatcher = NULL;
+	ObjectPtr       modelObject;
+    t_atom          a[1];
 	
 	// get model patcher class for preset file name
 	JamomaDirectory->getTTNode(x->modelAddress, &patcherNode);
@@ -66,10 +78,10 @@ void ui_preset_dowrite(t_ui *x)
 		if (modelClass)
 			snprintf(filename, MAX_FILENAME_CHARS, "%s.model.xml", modelClass.c_str());	// Default File Name
 		else
-			snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");		// Default File Name
+			snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");               // Default File Name
 	}
 	else
-		snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");		// Default File Name
+		snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");                   // Default File Name
 	
 	
 	saveas_promptset("Save Preset...");											// Instructional Text in the dialog
@@ -79,30 +91,37 @@ void ui_preset_dowrite(t_ui *x)
 	
 	// NOW ATTEMPT TO CREATE THE FILE...
 	err = path_createsysfile(filename, path, type, &file_handle);
-	if (err) {																// Handle any errors that occur
+	if (err) {                                                                  // Handle any errors that occur
 		object_error((t_object*)x, "%s - error %d creating file", filename, err);
 		return;	
 	}
 	
-	// ... AND WE SAVE THE fullpath IN THE HUB ATTRIBUTE user_path.
 	path_topathname(path, filename, fullpath);
 	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
-	
-	ui_viewer_send(x, TTSymbol("preset/write"), TTSymbol(posixpath));
+    
+    // get model object
+    modelObject = ui_get_model_object(x);
+    if (modelObject) {
+        
+        atom_setsym(a, gensym(posixpath));
+        
+        // send a preset:write path message
+        object_method_typed(modelObject, gensym("preset:write"), 1, a, NULL);
+	}
 }
 
-void ui_return_preset_order(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
 	obj->preset_num = argc;
 	
-	if (obj->preset_order)
-		sysmem_freeptr(obj->preset_order);
-	obj->preset_order = (AtomPtr)sysmem_newptr(sizeof(t_atom) * argc);
+	if (obj->preset_names)
+		sysmem_freeptr(obj->preset_names);
+	obj->preset_names = (AtomPtr)sysmem_newptr(sizeof(t_atom) * argc);
 	
 	for (int i=0; i<argc; i++) {
-		atom_setsym(&obj->preset_order[i], atom_getsym(&argv[i]));
+		atom_setsym(&obj->preset_names[i], atom_getsym(&argv[i]));
 	}
 }
 

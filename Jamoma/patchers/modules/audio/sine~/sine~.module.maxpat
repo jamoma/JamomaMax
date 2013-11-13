@@ -51,7 +51,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 395.0, 31.0, 163.0, 20.0 ],
-					"text" : "j.remote out.1/amplitude"
+					"text" : "j.receive~ out.1"
 				}
 
 			}
@@ -282,7 +282,7 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "waiting for a model/address"
+					"text" : "waiting for a model:address"
 				}
 
 			}

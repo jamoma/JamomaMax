@@ -1,7 +1,7 @@
 /** 
  THIS IS A TEMPORARY CODE TO NOTIFY USERS THAT A HUB REMAIN IN THEIR PATCH
  */
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 // Data Structure for this object
 typedef struct _hub{

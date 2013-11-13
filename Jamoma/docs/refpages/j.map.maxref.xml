@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.map" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Scaling and mapping input to output using the Jamoma function library
 	</digest>
 	<description>
-		TEXT_HERE
+		Scaling and mapping input to output using the Jamoma function library
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			scale
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -25,14 +25,14 @@
 			<digest>
 			</digest>
 			<description>
-				TEXT_HERE
+				Input value
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
 			</digest>
 			<description>
-				TEXT_HERE
+				Input value
 			</description>
 		</inlet>
 	</inletlist>
@@ -40,23 +40,23 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				mapping output
+				Mapping output
 			</digest>
 			<description>
-				TEXT_HERE
+				Mapping output
 			</description>
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
 			<digest>
-				dumpout
+				Dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				Dumpout
 			</description>
 		</outlet>
 	</outletlist>
 	<!--ARGUMENTS-->
-	<objarglist>
+	<!-- <objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
 				TEXT_HERE
@@ -65,7 +65,7 @@
 				TEXT_HERE
 			</description>
 		</objarg>
-	</objarglist>
+	</objarglist> -->
 	<!--MESSAGES-->
 	<methodlist>
 		<method name="int">
@@ -73,10 +73,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Value to be mapped
 			</digest>
 			<description>
-				TEXT_HERE
+				Value to be mapped
 			</description>
 		</method>
 		<method name="float">
@@ -84,10 +84,10 @@
 				<arg name="ARG_NAME_0" type="float" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Value to be mapped
 			</digest>
 			<description>
-				TEXT_HERE
+				Value to be mapped
 			</description>
 		</method>
 		<method name="list">
@@ -95,10 +95,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Values to be mapped
 			</digest>
 			<description>
-				TEXT_HERE
+				Values to be mapped
 			</description>
 		</method>
 		<method name="anything">
@@ -106,11 +106,11 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
-			</digest>
+				Value to be mapped			
+				</digest>
 			<description>
-				TEXT_HERE
-			</description>
+				Value to be mapped			
+				</description>
 		</method>
 		<method name="dump">
 			<arglist>
@@ -126,10 +126,10 @@
 		<method name="reset">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Reset j.map to initial arguments and attributes
 			</digest>
 			<description>
-				TEXT_HERE
+				Reset j.map to initial arguments and attributes
 			</description>
 		</method>
 	</methodlist>
@@ -148,66 +148,66 @@
 		</attribute>
 		<attribute name="function" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set the transfert function to be used for mapping
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the transfert function to be used for mapping
 			</description>
 		</attribute>
 		<attribute name="function/library" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Output all available functions
 			</digest>
 			<description>
-				TEXT_HERE
+				Output all available functions
 			</description>
 		</attribute>
 		<attribute name="function/parameters" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Output the parametersfor the current defined function
 			</digest>
 			<description>
-				TEXT_HERE
+				Output the parametersfor the current defined function
 			</description>
 		</attribute>
 		<attribute name="function/samples" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Output a list of value as a reference for the defined function
 			</digest>
 			<description>
-				TEXT_HERE
+				Output a list of value as a reference for the defined function
 			</description>
 		</attribute>
 		<attribute name="input" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Address of a j.parameter or j.return to listen to
 			</digest>
 			<description>
-				TEXT_HERE
+				Address of a j.parameter or j.return to be used for mapping to another j.parameter or j.message
 			</description>
 		</attribute>
 		<attribute name="input/max" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Maximum input value
 			</digest>
 			<description>
-				TEXT_HERE
+				Maximum input value
 			</description>
 		</attribute>
 		<attribute name="input/min" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Minimum input value
 			</digest>
 			<description>
-				TEXT_HERE
+				Minimum input value
 			</description>
 		</attribute>
 		<attribute name="inverse" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Switch minimum and maximum values
 			</digest>
 			<description>
-				TEXT_HERE
+				Switch minimum and maximum values
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -215,34 +215,35 @@
 		</attribute>
 		<attribute name="output" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Address of a j.parameter or j.message to send the value to
 			</digest>
 			<description>
-				TEXT_HERE
+				Address of a j.parameter or j.message to be used as the destination of the mapping
+				
 			</description>
 		</attribute>
 		<attribute name="output/max" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Maximum output value
 			</digest>
 			<description>
-				TEXT_HERE
+				Maximum output value
 			</description>
 		</attribute>
 		<attribute name="output/min" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Minimum output value
 			</digest>
 			<description>
-				TEXT_HERE
+				Minimum output value
 			</description>
 		</attribute>
 		<attribute name="ramp" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Smoothing function
 			</digest>
 			<description>
-				TEXT_HERE
+				Smoothing function
 			</description>
 		</attribute>
 	</attributelist>
@@ -252,8 +253,9 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.function"/>
+		<seealso name="j.ramp"/>
+		<seealso name="ezmap"/>
+		<seealso name="scale"/>
 	</seealsolist>
 </c74object>

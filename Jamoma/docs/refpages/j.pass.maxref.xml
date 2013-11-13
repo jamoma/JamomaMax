@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.pass" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Direct messages and numbers to different outlets
 	</digest>
 	<description>
-		TEXT_HERE
+		Route messages and numbers without stripping first item
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			routing
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -53,7 +53,7 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				Item to route
 			</digest>
 			<description>
 				TEXT_HERE
@@ -111,18 +111,18 @@
 	<attributelist>
 		<attribute name="strip" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Set whether j.pass will remove any leading slash
 			</digest>
 			<description>
-				TEXT_HERE
+				Set whether j.pass will remove any leading slash
 			</description>
 		</attribute>
 		<attribute name="stripnonmatches" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Set whether j.pass will remove any leading slash in non-matching messages
 			</digest>
 			<description>
-				TEXT_HERE
+				Set whether j.pass will remove any leading slash in non-matching messages
 			</description>
 		</attribute>
 	</attributelist>
@@ -132,8 +132,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.route"/>
+		<seealso name="j.oscroute"/>
+		<seealso name="route"/>
 	</seealsolist>
 </c74object>

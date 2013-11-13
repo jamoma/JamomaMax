@@ -373,7 +373,7 @@
             523.0,
             19.0
           ],
-          "text": "j.parameter a_menu @repetitions/allow 1 @type string @description \"a menu\" @priority 1",
+          "text": "j.parameter a_menu @repetitions/filter 0 @type string @description \"a menu\" @priority 1",
           "varname": "module_in[1]"
         }
       },
@@ -468,7 +468,7 @@
             601.0,
             31.0
           ],
-          "text": "j.parameter this_parameter @repetitions/allow 1 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+          "text": "j.parameter this_parameter @repetitions/filter 0 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
           "varname": "hue_angle"
         }
       },

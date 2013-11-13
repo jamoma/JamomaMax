@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 2,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 787.0, 301.0, 462.0, 296.0 ],
+		"rect" : [ 467.0, 44.0, 462.0, 296.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -35,7 +36,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 94.0, 75.0, 172.0, 19.0 ],
+					"patching_rect" : [ 93.0, 109.0, 176.0, 20.0 ],
 					"text" : "change destination dynamically"
 				}
 
@@ -50,7 +51,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 94.0, 95.0, 123.0, 17.0 ],
+					"patching_rect" : [ 93.0, 129.0, 129.0, 18.0 ],
 					"text" : "address other/address",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -65,7 +66,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 32.0, 95.0, 54.0, 19.0 ],
+					"patching_rect" : [ 31.0, 129.0, 54.0, 20.0 ],
 					"text" : "cycle~ 1"
 				}
 
@@ -80,7 +81,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 228.0, 148.0, 50.0, 19.0 ]
+					"patching_rect" : [ 227.0, 182.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -93,7 +94,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 228.0, 121.0, 162.0, 19.0 ],
+					"patching_rect" : [ 227.0, 155.0, 162.0, 20.0 ],
 					"text" : "j.parameter myParameter"
 				}
 
@@ -108,7 +109,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 32.0, 121.0, 141.0, 19.0 ],
+					"patching_rect" : [ 31.0, 155.0, 141.0, 20.0 ],
 					"text" : "j.send~ myParameter"
 				}
 
@@ -119,7 +120,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 411.0, 75.0, 45.0, 45.0 ]
+					"patching_rect" : [ 410.0, 109.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -132,7 +133,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 34.0, 186.0, 54.0, 19.0 ],
+					"patching_rect" : [ 33.0, 204.0, 54.0, 20.0 ],
 					"text" : "cycle~ 1"
 				}
 
@@ -143,7 +144,7 @@
 					"maxclass" : "scope~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 228.0, 238.0, 76.0, 37.0 ]
+					"patching_rect" : [ 227.0, 256.0, 76.0, 37.0 ]
 				}
 
 			}
@@ -157,8 +158,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 34.0, 211.0, 133.0, 19.0 ],
-					"text" : "j.send~ in.mySignal"
+					"patching_rect" : [ 33.0, 229.0, 148.0, 20.0 ],
+					"text" : "j.send~ audio/in.mySignal"
 				}
 
 			}
@@ -171,21 +172,24 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 228.0, 211.0, 106.0, 19.0 ],
+					"patching_rect" : [ 227.0, 229.0, 106.0, 20.0 ],
 					"text" : "j.in~ mySignal"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.send~", "@description", "sending audio signal to a j.in~" ],
-					"bgmode" : 1,
+					"border" : 0,
+					"filename" : "helpdetails.js",
 					"id" : "obj-2",
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "j.send~" ],
+					"maxclass" : "jsui",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 462.0, 70.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 0.0, 0.0, 455.0, 98.0 ],
 					"varname" : "maxhelpui"
 				}
 
@@ -205,7 +209,7 @@
 					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 103.5, 117.0, 41.5, 117.0 ],
+					"midpoints" : [ 102.5, 151.0, 40.5, 151.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -239,44 +243,11 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../Max/library/components/maxhelpui",
+				"name" : "helpdetails.js",
+				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
-				"patcherrelativepath" : "../../../Max/library/components/jamomaPath",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.route.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.in~.mxo",

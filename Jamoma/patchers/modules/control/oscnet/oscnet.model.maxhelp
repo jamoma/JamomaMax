@@ -162,7 +162,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 433.0, 176.0, 178.0, 31.0 ],
-					"text" : "/send:/repetitions/allow $1, /receive:/repetitions/allow $1"
+					"text" : "/send:/repetitions/filter $1, /receive:/repetitions/filter $1"
 				}
 
 			}

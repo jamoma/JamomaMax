@@ -175,7 +175,7 @@
 									"args" : [ "input~.module" ],
 									"id" : "obj-2",
 									"maxclass" : "bpatcher",
-									"name" : "jmod.preset_params.maxpat",
+									"name" : "j.presetParameters.helper.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],

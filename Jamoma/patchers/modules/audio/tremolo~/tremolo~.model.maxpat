@@ -87,28 +87,14 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-32",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 96.0, 274.0, 73.0, 20.0 ],
-					"text" : "j.preset"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-28",
 					"linecount" : 8,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 929.0, 70.0, 170.0, 114.0 ],
-					"text" : "j.parameter lfo/depth @type decimal @range/bounds 0. 100. @range/clipmode both @ramp/drive Max @repetitions/allow 0 @description \"LFO depth (0-100%).\"",
+					"patching_rect" : [ 929.0, 70.0, 156.0, 114.0 ],
+					"text" : "j.parameter lfo/depth @type decimal @range/bounds 0. 100. @range/clipmode both @ramp/drive Max @repetitions/filter 1 @description \"LFO depth (0-100%).\"",
 					"varname" : "#1/lfo/depth"
 				}
 
@@ -124,7 +110,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 558.5, 70.0, 171.0, 141.0 ],
-					"text" : "j.parameter lfo/frequency @type decimal @range/bounds 0. 100. @range/clipmode low @ramp/drive Max @repetitions/allow 0 @dataspace time @dataspace/unit Hz @description \"LFO frequency (Hz).\"",
+					"text" : "j.parameter lfo/frequency @type decimal @range/bounds 0. 100. @range/clipmode low @ramp/drive Max @repetitions/filter 1 @dataspace time @dataspace/unit Hz @description \"LFO frequency (Hz).\"",
 					"varname" : "#1/lfo/frequency"
 				}
 
@@ -139,7 +125,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 743.0, 70.0, 167.0, 114.0 ],
+					"patching_rect" : [ 743.0, 70.0, 157.0, 114.0 ],
 					"text" : "j.parameter lfo/phase @type decimal @range/bounds 0. 1. @range/clipmode wrap @ramp/drive Max @description \"LFO phase offset between left and right channels (0-1).\"",
 					"varname" : "tremolo/phase_offset"
 				}
@@ -155,7 +141,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 60.0, 199.0, 159.0, 47.0 ],
+					"patching_rect" : [ 60.0, 199.0, 157.0, 47.0 ],
 					"text" : "j.model @description \"Apply tremolo to incoming signal.\"",
 					"varname" : "j.model"
 				}
@@ -673,10 +659,6 @@
 			}
 , 			{
 				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{

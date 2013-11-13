@@ -5,22 +5,22 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.gain~" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Control level as well as dry/wet mix
 	</digest>
-	<description>
-		TEXT_HERE
-	</description>
+	<!-- <description>
+		Control level as well as dry/wet mix
+	</description> -->
 	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			gain
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
-	<inletlist>
+	<!-- <inletlist>
 		<inlet id="0" type="signal">
 			<digest>
 				raw audio (ch. 1), control messages
@@ -37,10 +37,10 @@
 				TEXT_HERE
 			</description>
 		</inlet>
-	</inletlist>
+	</inletlist> -->
 	<!--OUTLETS-->
-	<outletlist>
-		<outlet id="0" type="signal">
+	<!-- <outletlist> -->
+		<!-- <outlet id="0" type="signal">
 			<digest>
 				processed audio (ch. 1)
 			</digest>
@@ -56,15 +56,15 @@
 				TEXT_HERE
 			</description>
 		</outlet>
-	</outletlist>
+	</outletlist> -->
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<objarg id="0" name="channels" type="int" optional="0">
 			<digest>
-				TEXT_HERE
+				Number of audio channels
 			</digest>
 			<description>
-				TEXT_HERE
+				Number of audio channels
 			</description>
 		</objarg>
 	</objarglist>
@@ -73,10 +73,10 @@
 		<method name="signal">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				audio in
 			</digest>
 			<description>
-				TEXT_HERE
+				audio input
 			</description>
 		</method>
 	</methodlist>
@@ -113,8 +113,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.gain≈"/>
+		<seealso name="gain~"/>
 	</seealsolist>
 </c74object>

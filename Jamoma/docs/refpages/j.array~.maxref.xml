@@ -78,7 +78,18 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="calculate">
+		<!-- <method name="calculate">
+	<arglist>
+		<arg name="ARG_NAME_0" type="list" optional="0" />
+	</arglist>
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+</method> -->
+		<!-- 		<method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -89,17 +100,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="getProcessingBenchmark">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
+ -->
 		<method name="set">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
@@ -111,7 +112,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="resetBenchmarking">
+		<!-- 						<method name="resetBenchmarking">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -122,7 +123,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="test">
+ -->
+		<!-- 								<method name="test">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -133,6 +135,7 @@
 				TEXT_HERE
 			</description>
 		</method>
+ -->
 		<method name="signal">
 			<arglist />
 			<digest>
@@ -198,8 +201,6 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="bogus"/>
 	</seealsolist>
 </c74object>

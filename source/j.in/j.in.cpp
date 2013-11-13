@@ -127,7 +127,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 #endif
 
 #ifdef JCOM_IN_TILDE
-	return wrapTTModularClassAsMaxClass(kTTSym_Input, "j.in~", NULL, spec);
+	return wrapTTModularClassAsMaxClass(kTTSym_InputAudio, "j.in~", NULL, spec);
 #else
 	return wrapTTModularClassAsMaxClass(kTTSym_Input, "j.in", NULL, spec);
 #endif
@@ -226,18 +226,24 @@ void WrappedInputClass_free(TTPtr self)
 void in_subscribe(TTPtr self)
 {
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
+    TTAddress   signalAddress;
 	TTAddress   inputAddress;
 	TTAddress   outputAddress;
 	TTValue		v, args;
 	TTNodePtr	returnedNode = NULL;
     TTNodePtr   returnedContextNode = NULL;
 	TTAddress   returnedAddress, parentAddress;
-	TTDataPtr	aData;
 	TTString	formatDescription, sInstance;
-	SymbolPtr	inDescription;
 	
-	inputAddress = TTAddress("in").appendInstance(EXTRA->instance);
-	
+#ifdef JCOM_IN_TILDE
+    signalAddress = TTAddress("audio");
+#else
+    signalAddress = TTAddress("data");
+#endif
+
+    // edit "signal/in.instance" address
+    inputAddress = signalAddress.appendAddress(TTAddress("in")).appendInstance(EXTRA->instance);
+
 	// if the subscription is successful
 	if (!jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, inputAddress, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
@@ -251,21 +257,6 @@ void in_subscribe(TTPtr self)
 		returnedNode->getParent()->getAddress(parentAddress);
 		outputAddress = parentAddress.appendAddress(TTAddress("out")).appendInstance(EXTRA->instance);
 		x->wrappedObject->setAttributeValue(TTSymbol("outputAddress"), outputAddress);
-		
-		// expose bypass and mute attributes of TTInput as TTData in the tree structure
-		x->subscriberObject->exposeAttribute(x->wrappedObject, kTTSym_bypass, kTTSym_parameter, &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this attribute bypasses the model's processing algtorithm, letting incoming signal pass through unaffected"));
-		v = TTValue(0);
-		aData->setAttributeValue(kTTSym_valueDefault, v);			
-		
-		x->subscriberObject->exposeAttribute(x->wrappedObject, kTTSym_mute, kTTSym_parameter, &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this attribute turns off model's inputs."));
-		v = TTValue(0);
-		aData->setAttributeValue(kTTSym_valueDefault, v);
 	}
 }
 

@@ -57,7 +57,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 329.0, 44.0, 587.0, 451.0 ],
+						"rect" : [ 329.0, 44.0, 607.0, 447.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -170,8 +170,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 328.0, 320.001862, 273.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel.deferlow-test @input input/address @compareTo /tester/in.test"
+									"patching_rect" : [ 328.0, 320.001862, 263.0, 33.0 ],
+									"text" : "j.test.assert.equal toplevel.deferlow-test @input input/address @compareTo /tester/data/in.test"
 								}
 
 							}
@@ -254,8 +254,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 328.0, 123.001862, 239.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel-test @input input/address @compareTo /tester/in.test"
+									"patching_rect" : [ 328.0, 123.001862, 256.0, 33.0 ],
+									"text" : "j.test.assert.equal toplevel-test @input input/address @compareTo /tester/data/in.test"
 								}
 
 							}
@@ -339,8 +339,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 29.0, 320.001862, 287.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel.deferlow-test @input output/address @compareTo /tester/out.test"
+									"patching_rect" : [ 29.0, 320.001862, 267.0, 33.0 ],
+									"text" : "j.test.assert.equal toplevel.deferlow-test @input output/address @compareTo /tester/data/out.test"
 								}
 
 							}
@@ -423,8 +423,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 29.0, 123.001862, 243.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel-test @input output/address @compareTo /tester/out.test"
+									"patching_rect" : [ 29.0, 123.001862, 271.0, 33.0 ],
+									"text" : "j.test.assert.equal toplevel-test @input output/address @compareTo /tester/data/out.test"
 								}
 
 							}

@@ -181,7 +181,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.32 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.32 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -221,7 +221,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.28 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.28 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -261,7 +261,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.24 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.24 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -301,7 +301,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.20 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.20 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -341,7 +341,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.16 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.16 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -381,7 +381,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.12 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.12 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -421,7 +421,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.8 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.8 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -461,7 +461,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.4 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.4 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -501,7 +501,7 @@
                     114.0,
                     128.0
                   ],
-                  "text": "j.return audio/amplitude.31 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.31 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -541,7 +541,7 @@
                     114.0,
                     128.0
                   ],
-                  "text": "j.return audio/amplitude.27 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.27 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -581,7 +581,7 @@
                     114.0,
                     128.0
                   ],
-                  "text": "j.return audio/amplitude.23 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.23 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -621,7 +621,7 @@
                     114.0,
                     128.0
                   ],
-                  "text": "j.return audio/amplitude.19 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.19 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -661,7 +661,7 @@
                     114.0,
                     128.0
                   ],
-                  "text": "j.return audio/amplitude.15 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.15 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -701,7 +701,7 @@
                     114.0,
                     128.0
                   ],
-                  "text": "j.return audio/amplitude.11 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.11 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -741,7 +741,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.7 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.7 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -781,7 +781,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.3 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.3 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -821,7 +821,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.30 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.30 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -861,7 +861,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.26 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.26 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -901,7 +901,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.22 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.22 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -941,7 +941,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.18 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.18 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -981,7 +981,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.14 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.14 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -1021,7 +1021,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.10 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.10 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -1061,7 +1061,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.6 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.6 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -1101,7 +1101,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.2 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.2 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -1141,7 +1141,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.29 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.29 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -1181,7 +1181,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.25 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.25 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -1221,7 +1221,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.21 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.21 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -1261,7 +1261,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.17 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.17 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -1301,7 +1301,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.13 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.13 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -1341,7 +1341,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.9 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.9 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -1381,7 +1381,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.5 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.5 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               },
               {
@@ -1421,7 +1421,7 @@
                     121.0,
                     116.0
                   ],
-                  "text": "j.return audio/amplitude.1 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/allow 1"
+                  "text": "j.return audio/amplitude.1 @type decimal @range/bounds 0. 1. @enable 0 @description \"amplitude of the Nth multichannel cable\" @repetitions/filter 0"
                 }
               }
             ],

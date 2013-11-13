@@ -67,7 +67,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 849.0, 624.0, 159.0, 55.0 ],
+					"patching_rect" : [ 849.0, 624.0, 159.0, 60.0 ],
 					"text" : "j.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
 				}
 
@@ -144,7 +144,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 385.5, 147.0, 74.0 ],
-					"text" : "j.parameter thisMenu @repetitions/allow 1 @type string @description \"a menu\" @priority 1",
+					"text" : "j.parameter thisMenu @repetitions/filter 0 @type string @description \"a menu\" @priority 1",
 					"varname" : "module_in[1]"
 				}
 
@@ -191,23 +191,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 849.0, 151.0, 151.0, 127.0 ],
-					"text" : "j.parameter thisParameter @repetitions/allow 1 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"patching_rect" : [ 849.0, 151.0, 145.0, 127.0 ],
+					"text" : "j.parameter thisParameter @repetitions/filter 0 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 11.0,
-					"id" : "obj-22",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 102.5, 298.0, 82.0, 20.0 ],
-					"text" : "j.preset"
 				}
 
 			}
@@ -221,7 +207,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 76.0, 251.0, 241.0, 33.0 ],
+					"patching_rect" : [ 76.0, 251.0, 241.0, 31.0 ],
 					"text" : "j.model @description \"Provide a brief description of this model.\""
 				}
 
@@ -552,7 +538,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.parameterCreate.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/parameterCreate",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/parameterCreate",
 				"patcherrelativepath" : "../../../components/parameterCreate",
 				"type" : "JSON",
 				"implicit" : 1
@@ -567,10 +553,6 @@
 			}
 , 			{
 				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{

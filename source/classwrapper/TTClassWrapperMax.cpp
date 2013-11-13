@@ -26,7 +26,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 	WrappedClass*		wrappedMaxClass = NULL;
     WrappedInstancePtr	x = NULL;
 	TTValue				sr(sys_getsr());
-	TTValue				v;
+	TTValue				v, none;
  	long				attrstart = attr_args_offset(argc, argv);		// support normal arguments
 	TTErr				err = kTTErrNone;
 	
@@ -119,7 +119,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
             
             x->controlOutlet = outlet_new((t_pxobject*)x, NULL);
             
-            err = TTObjectBaseInstantiate(TT("callback"), &x->controlCallback, kTTValNONE);
+            err = TTObjectBaseInstantiate(TT("callback"), &x->controlCallback, none);
             x->controlCallback->setAttributeValue(TT("function"), TTPtr(&wrappedClass_receiveNotificationForOutlet));
             x->controlCallback->setAttributeValue(TT("baton"), TTPtr(x));	
  

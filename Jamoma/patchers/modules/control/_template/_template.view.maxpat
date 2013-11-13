@@ -326,7 +326,7 @@
                     105.0,
                     19.0
                   ],
-                  "text": "@repetitions/allow"
+                  "text": "@repetitions/filter"
                 }
               },
               {
@@ -532,7 +532,7 @@
                     282.0,
                     19.0
                   ],
-                  "text": "1 (default)/0 --- 1 means that repetitions are allowed"
+                  "text": "0 (default)/0 --- 1 means that repetitions are filtered"
                 }
               },
               {
@@ -824,7 +824,7 @@
                     436.0,
                     31.0
                   ],
-                  "text": "j.parameter a_bang @type generic @repetitions/allow 1 @ramp/drive none @priority 1 @description \"a bang\"",
+                  "text": "j.parameter a_bang @type generic @repetitions/filter 0 @ramp/drive none @priority 1 @description \"a bang\"",
                   "varname": "foot/switch"
                 }
               },
@@ -1807,7 +1807,7 @@
             121.0,
             19.0
           ],
-          "text": "j.receive in.2/amplitude"
+          "text": "j.receive~ out.2"
         }
       },
       {
@@ -1827,7 +1827,7 @@
             121.0,
             19.0
           ],
-          "text": "j.receive in.1/amplitude"
+          "text": "j.receive~ out.1"
         }
       },
       {

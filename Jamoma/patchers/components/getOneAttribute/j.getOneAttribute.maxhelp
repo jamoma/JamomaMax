@@ -62,7 +62,7 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1",
-					"items" : [ "value", ",", "type", ",", "range/bounds", ",", "range/clipmode", ",", "ramp/drive", ",", "repetitions/allow" ],
+					"items" : [ "value", ",", "type", ",", "range/bounds", ",", "range/clipmode", ",", "ramp/drive", ",", "repetitions/filter" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,

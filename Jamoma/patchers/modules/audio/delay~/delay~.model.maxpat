@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x86"
 		}
 ,
@@ -36,22 +36,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1202.0, 215.0, 104.0, 18.0 ],
-					"text" : "range/bunds 0 $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-22",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 56.0, 246.0, 73.0, 20.0 ],
-					"text" : "j.preset"
+					"patching_rect" : [ 1202.0, 215.0, 111.0, 18.0 ],
+					"text" : "range/bounds 0 $1"
 				}
 
 			}
@@ -122,7 +108,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1328.0, 44.0, 161.0, 154.0 ],
-					"text" : "j.parameter delay/maxSize @type integer @value/default 1000000 @ramp/drive none @repetitions/allow 0 @range/bounds 0 1000000 @range/clipmode low @dataspace time @dataspace/unit sample @description \"Maximum delay size in samples.\"",
+					"text" : "j.parameter delay/maxSize @type integer @value/default 1000000 @ramp/drive none @repetitions/filter 1 @range/bounds 0 1000000 @range/clipmode low @dataspace time @dataspace/unit sample @description \"Maximum delay size in samples.\"",
 					"varname" : "delay/right[1]"
 				}
 
@@ -138,7 +124,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 884.0, 44.0, 159.0, 127.0 ],
-					"text" : "j.message delay @type integer @ramp/drive Max @repetitions/allow 1 @range/bounds 0 1000000 @dataspace time @dataspace/unit sample @description \"Delay time in samples to be applied to both channels.\"",
+					"text" : "j.message delay @type integer @ramp/drive Max @repetitions/filter 0 @range/bounds 0 1000000 @dataspace time @dataspace/unit sample @description \"Delay time in samples to be applied to both channels.\"",
 					"varname" : "j.parameter.mxb[9]"
 				}
 
@@ -153,8 +139,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1048.0, 244.0, 157.0, 127.0 ],
-					"text" : "j.parameter delay/right @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for right channel.\"",
+					"patching_rect" : [ 1048.0, 244.0, 159.0, 127.0 ],
+					"text" : "j.parameter delay/right @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for right channel.\"",
 					"varname" : "delay/right"
 				}
 
@@ -168,7 +154,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 25.0, 188.0, 390.0, 20.0 ],
+					"patching_rect" : [ 25.0, 188.0, 365.0, 20.0 ],
 					"text" : "j.model @type audio @description \"Sample-accurate stereo delay.\"",
 					"varname" : "j.hub"
 				}
@@ -185,7 +171,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 884.0, 244.0, 150.0, 167.0 ],
-					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for left channel.\"",
+					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for left channel.\"",
 					"varname" : "delay/left"
 				}
 
@@ -256,7 +242,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 536.0, 34.0, 26.0, 26.0 ]
 				}
 
@@ -268,14 +254,13 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 401.0, 34.0, 26.0, 26.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.866667, 0.866667, 0.866667, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"htextcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
@@ -292,7 +277,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.866667, 0.866667, 0.866667, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"htextcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
@@ -537,31 +521,6 @@
 					"source" : [ "obj-8", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

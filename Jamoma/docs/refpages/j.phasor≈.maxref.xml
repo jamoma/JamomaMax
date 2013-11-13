@@ -5,11 +5,11 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.phasor≈" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Generate a cyclic ramp wave
 	</digest>
-	<description>
-		TEXT_HERE
-	</description>
+	<!-- <description>
+		Generate a cyclic ramp wave
+	</description> -->
 	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
@@ -23,7 +23,7 @@
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				multichannel input and control messages
+				Multichannel input and control messages
 			</digest>
 			<description>
 				TEXT_HERE
@@ -31,7 +31,7 @@
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				multichannel input 2
+				Multichannel input 2
 			</digest>
 			<description>
 				TEXT_HERE
@@ -42,7 +42,7 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				multichannel output 1
+				Multichannel output 1
 			</digest>
 			<description>
 				TEXT_HERE
@@ -70,7 +70,7 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="audio.connect">
+		<!-- 	<method name="audio.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -82,7 +82,19 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="calculate">
+ -->
+		<!-- <method name="calculate">
+	<arglist>
+		<arg name="ARG_NAME_0" type="list" optional="0" />
+	</arglist>
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+</method> -->
+		<!-- 		<method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -93,18 +105,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="getProcessingBenchmark">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
-		<method name="graph.connect">
+ -->
+		<!-- 				<method name="graph.connect">
 			<arglist>
 				<arg name="ARG_NAME_0" type="" optional="0" />
 				<arg name="ARG_NAME_1" type="int" optional="0" />
@@ -116,7 +118,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="resetBenchmarking">
+ -->
+		<!-- 						<method name="resetBenchmarking">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -127,7 +130,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="test">
+ -->
+		<!-- 								<method name="test">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -138,23 +142,24 @@
 				TEXT_HERE
 			</description>
 		</method>
+ -->
 	</methodlist>
 	<!--ATTRIBUTES-->
 	<attributelist>
 		<attribute name="frequency" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Set ramp wave frequency
 			</digest>
 			<description>
-				TEXT_HERE
+				Set ramp wave frequency
 			</description>
 		</attribute>
 		<attribute name="gain" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Set gain
 			</digest>
 			<description>
-				TEXT_HERE
+				Set gain in dB
 			</description>
 		</attribute>
 		<attribute name="mute" get="1" set="1" type="int" size="1">
@@ -170,7 +175,7 @@
 		</attribute>
 		<attribute name="offset" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Set an offset value
 			</digest>
 			<description>
 				TEXT_HERE
@@ -178,10 +183,10 @@
 		</attribute>
 		<attribute name="phase" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Set phase of the ramp wave
 			</digest>
 			<description>
-				TEXT_HERE
+				Set phase of the ramp wave between 0 and 1
 			</description>
 		</attribute>
 		<attribute name="sampleRate" get="1" set="1" type="int" size="1">
@@ -199,8 +204,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.wavetable≈"/>
+		<seealso name="phasor~"/>
 	</seealsolist>
 </c74object>

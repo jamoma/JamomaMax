@@ -427,7 +427,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 4.0, 418.0, 334.0, 43.0 ],
-					"text" : "j.parameter prefix @type string @repetitions/allow 0 @description \"Define a string to concatenate to the beginning of all Open Sound Control strings sent by this module.\"",
+					"text" : "j.parameter prefix @type string @repetitions/filter 1 @description \"Define a string to concatenate to the beginning of all Open Sound Control strings sent by this module.\"",
 					"varname" : "osc_prefix"
 				}
 
@@ -610,7 +610,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 378.0, 324.0, 408.0, 43.0 ],
-					"text" : "j.parameter multicast/ip @type string @repetitions/allow 0 @description \"Define the multicast host to for Open Sound Control messages to which you would like to join. This may be symbolic or an ip address.\"",
+					"text" : "j.parameter multicast/ip @type string @repetitions/filter 1 @description \"Define the multicast host to for Open Sound Control messages to which you would like to join. This may be symbolic or an ip address.\"",
 					"varname" : "multicast_ip"
 				}
 
@@ -766,7 +766,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 366.0, 41.0, 374.0, 43.0 ],
-					"text" : "j.parameter send/host @type string @repetitions/allow 0 @description \"Set the host to which Open Sound Control messages should be sent. This may be symbolic or an ip address.\"",
+					"text" : "j.parameter send/host @type string @repetitions/filter 1 @description \"Set the host to which Open Sound Control messages should be sent. This may be symbolic or an ip address.\"",
 					"varname" : "send_host"
 				}
 

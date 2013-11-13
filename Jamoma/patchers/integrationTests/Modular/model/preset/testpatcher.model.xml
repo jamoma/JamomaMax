@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
+ <preset name="default">
+  <!--"edit a comment"-->
+  <command address="p.1">0</command>
+  <command address="p.2">0.000000</command>
+  <command address="p.3">none</command>
+  <command address="p">0 0 0</command>
+ </preset>
+ <preset name="first">
+  <!--"edit a comment"-->
+  <command address="p.1">1</command>
+  <command address="p.2">1.200000</command>
+  <command address="p.3">foo</command>
+  <command address="p">1 2.500000</command>
+ </preset>
+ <preset name="second">
+  <!--"edit a comment"-->
+  <command address="p.1">2</command>
+  <command address="p.2">2.300000</command>
+  <command address="p.3">bar</command>
+  <command address="p">3 3.400000</command>
+ </preset>
+</jamoma>

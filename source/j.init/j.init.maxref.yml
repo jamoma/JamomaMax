@@ -6,7 +6,7 @@ tags: [initialization, loadbang]
 brief: Utility for initialization of module
 
 desc: >
- j.init is a kind of #loadbang that outputs a @bang@ when a module is initialized. It connects to j.hub in order to link to all other instances of j.init within the same module. It also makes j.hub reset all parameters to the default preset.
+ j.init is a kind of #loadbang that outputs a @bang@ when a module is initialized. It connects to j.model in order to link to all other instances of j.init within the same module. It also makes j.model reset all parameters to the default preset.
 
 outputs:
  - name: 1
@@ -26,11 +26,11 @@ attributes:
 messages:
  - name: bang
    type: generic
-   desc: Make j.hub reset all parameters to the default preset.
+   desc: Make j.model reset all parameters to the default preset.
  - name: name/get
    type: generic
-   desc: Make j.hub to output its name out of its right-most outlet.
+   desc: Make j.model to output its name out of its right-most outlet.
 
 seealso:
- - jmod.initialized
- - j.hub
+ - j.initialized
+ - j.model

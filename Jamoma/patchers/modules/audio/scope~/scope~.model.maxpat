@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
@@ -131,27 +131,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-11",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 176.5, 236.0, 73.0, 20.0 ],
-					"text" : "j.preset"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-3",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 310.0, 103.0, 198.0, 18.0 ],
-					"text" : "/preset/store 1 default, /preset/write"
+					"patching_rect" : [ 310.0, 103.0, 182.0, 18.0 ],
+					"text" : "preset:store default, preset:write"
 				}
 
 			}
@@ -165,8 +151,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 739.0, 103.0, 158.0, 127.0 ],
-					"text" : "j.parameter range @type decimal @range/bounds 0 100 @range/clipmode low @repetitions/allow 0 @ramp/drive Max @description \"range of values above and below the zero line to display.\"",
+					"patching_rect" : [ 739.0, 103.0, 140.0, 127.0 ],
+					"text" : "j.parameter range @type decimal @range/bounds 0 100 @range/clipmode low @repetitions/filter 1 @ramp/drive Max @description \"range of values above and below the zero line to display.\"",
 					"varname" : "j.parameter.mxb"
 				}
 
@@ -181,7 +167,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 904.0, 103.0, 174.0, 87.0 ],
+					"patching_rect" : [ 904.0, 103.0, 176.0, 87.0 ],
 					"text" : "j.parameter buffer/samples @type integer @range/bounds 8 256 @range/clipmode both @description \"samples per buffer, control the scope display\"",
 					"varname" : "j.parameter.mxb[2]"
 				}
@@ -196,8 +182,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 133.0, 104.0, 141.0, 18.0 ],
-					"text" : "/documentation/generate"
+					"patching_rect" : [ 126.0, 94.0, 176.0, 18.0 ],
+					"text" : "model/documentation/generate"
 				}
 
 			}
@@ -226,8 +212,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 273.0, 104.0, 29.0, 18.0 ],
-					"text" : "/init"
+					"patching_rect" : [ 273.0, 121.0, 32.5, 18.0 ],
+					"text" : "init"
 				}
 
 			}
@@ -287,7 +273,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 142.5, 137.0, 107.5, 137.0 ],
+					"midpoints" : [ 135.5, 137.0, 107.5, 137.0 ],
 					"source" : [ "obj-17", 0 ]
 				}
 
@@ -363,10 +349,6 @@
 			}
 , 			{
 				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

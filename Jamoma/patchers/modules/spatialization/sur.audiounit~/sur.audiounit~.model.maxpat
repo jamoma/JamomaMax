@@ -8402,7 +8402,7 @@
             555.0,
             31.0
           ],
-          "text": "j.parameter numInputs @repetitions/allow 0 @type integer @range/bounds 1 8 @range/clipmode both @description \"Number of AU input signals.\" @priority 3",
+          "text": "j.parameter numInputs @repetitions/filter 1 @type integer @range/bounds 1 8 @range/clipmode both @description \"Number of AU input signals.\" @priority 3",
           "varname": "destination/voices"
         }
       },
@@ -8426,7 +8426,7 @@
             563.0,
             31.0
           ],
-          "text": "j.parameter numOutputs @repetitions/allow 0 @type integer @range/bounds 1 8 @range/clipmode both @description \"Number of AU output signals\" @priority 1",
+          "text": "j.parameter numOutputs @repetitions/filter 1 @type integer @range/bounds 1 8 @range/clipmode both @description \"Number of AU output signals\" @priority 1",
           "varname": "source/voices"
         }
       },
@@ -8471,7 +8471,7 @@
             479.0,
             31.0
           ],
-          "text": "j.message au/preset/save @repetitions/allow 1 @type generic @ramp/drive none @description \"Write current settings to an AU User preset file to ~/Library/Audio/Presets\""
+          "text": "j.message au/preset/save @repetitions/filter 0 @type generic @ramp/drive none @description \"Write current settings to an AU User preset file to ~/Library/Audio/Presets\""
         }
       },
       {
@@ -8494,7 +8494,7 @@
             564.0,
             31.0
           ],
-          "text": "j.message au/view @type string @description \"Open the plug-in's edit window. \\\"editor\\\" or \\\"controls\\\" specifies what interface will be shown.\" @repetitions/allow 1"
+          "text": "j.message au/view @type string @description \"Open the plug-in's edit window. \\\"editor\\\" or \\\"controls\\\" specifies what interface will be shown.\" @repetitions/filter 0"
         }
       },
       {
@@ -8537,7 +8537,7 @@
             573.0,
             19.0
           ],
-          "text": "j.message au/preset/read @type string @ramp/drive none @repetitions/allow 1 @description \"AU presets.\"",
+          "text": "j.message au/preset/read @type string @ramp/drive none @repetitions/filter 0 @description \"AU presets.\"",
           "varname": "vst/program"
         }
       },
@@ -8561,7 +8561,7 @@
             422.0,
             31.0
           ],
-          "text": "j.parameter au/plug @type string @priority 1 @repetitions/allow 1 @description \"Load an AU plugin. must work with 2 audio ins and 2 audio outs.\"",
+          "text": "j.parameter au/plug @type string @priority 1 @repetitions/filter 0 @description \"Load an AU plugin. must work with 2 audio ins and 2 audio outs.\"",
           "varname": "vst/plug"
         }
       }

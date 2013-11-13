@@ -50,8 +50,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 8.0, 189.0, 121.0, 20.0 ],
-					"text" : "j.receive out.test"
+					"patching_rect" : [ 8.0, 189.0, 123.0, 20.0 ],
+					"text" : "j.receive data/out.test"
 				}
 
 			}

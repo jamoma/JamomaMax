@@ -231,7 +231,7 @@
             141.0,
             19.0
           ],
-          "text": "j.receive in.2/amplitude"
+          "text": "j.receive~ out.2"
         }
       },
       {
@@ -251,7 +251,7 @@
             141.0,
             19.0
           ],
-          "text": "j.receive in.1/amplitude"
+          "text": "j.receive~ out.1"
         }
       },
       {

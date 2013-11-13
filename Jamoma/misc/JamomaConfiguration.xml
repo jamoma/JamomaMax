@@ -6,7 +6,7 @@
   <entry App="value/stepsize" TT="valueStepsize"/>
   <entry App="range/clipmode" TT="rangeClipmode"/>
   <entry App="ramp/drive" TT="rampDrive"/>
-  <entry App="repetitions/allow" TT="repetitionsAllow"/>
+  <entry App="repetitions/filter" TT="repetitionsFilter"/>
   <entry App="ramp/function" TT="rampFunction"/>
   <entry App="ramp/function/parameters" TT="rampFunctionParameters"/>
   <entry App="range/bounds" TT="rangeBounds"/>
@@ -17,15 +17,29 @@
   <entry App="activity/in" TT="activityIn"/>
   <entry App="activity/out" TT="activityOut"/>
 
+  <entry App="clear" TT="Clear"/>
+  <entry App="copy" TT="Copy"/>
+  <entry App="color/contentBackground" TT="ColorContentBackground"/>
+  <entry App="color/toolbarBackground" TT="ColorToolbarBackground"/>
+  <entry App="color/toolbarText" TT="ColorToolbarText"/>
+  <entry App="color/border" TT="ColorBorder"/>
   <entry App="dec" TT="Dec"/>
   <entry App="namespace/build" TT="DirectoryBuild"/>
   <entry App="namespace/observe" TT="DirectoryObserve"/>
+  <entry App="help/open" TT="HelpOpen"/>
   <entry App="inc" TT="Inc"/>
   <entry App="init" TT="Init"/>
+  <entry App="internal/open" TT="InternalOpen"/>
+  <entry App="interpolate" TT="Interpolate"/>
+  <entry App="mix" TT="Mix"/>
+  <entry App="move" TT="Move"/>
   <entry App="new" TT="New"/>
+  <entry App="panel" TT="Panel"/>
   <entry App="recall" TT="Recall"/>
+  <entry App="reference/open" TT="ReferenceOpen"/>
   <entry App="refresh" TT="Refresh"/>
   <entry App="remove" TT="Remove"/>
+  <entry App="rename" TT="Rename"/>
   <entry App="reset" TT="Reset"/>
   <entry App="send" TT="Send"/>
   <entry App="store" TT="Store"/>

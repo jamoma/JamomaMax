@@ -65,15 +65,6 @@ void		out_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doub
 /** j.out~ 64-bit DSP method (for Max 6). Only defined for j.out~. */
 void		out_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags);
 
-/** Method used to notify that a j.in is linked/unlinked to the j.out
- @param self		Pointer to this object.
- @param msg			The message sent to this object.
- @param argc		The number of arguments passed to the object.
- @param argv		Pointer to an array of atoms passed to the object.
- @see				out_subscribe
- */
-void		out_return_link(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
 #else
 
 /** Method used to pass messages from the module outlet. */
@@ -133,7 +124,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 #endif
 	
 #ifdef JCOM_OUT_TILDE
-	return wrapTTModularClassAsMaxClass(kTTSym_Output, "j.out~", NULL, spec);
+	return wrapTTModularClassAsMaxClass(kTTSym_OutputAudio, "j.out~", NULL, spec);
 #else
 	return wrapTTModularClassAsMaxClass(kTTSym_Output, "j.out", NULL, spec);
 #endif
@@ -146,8 +137,6 @@ void WrapTTOutputClass(WrappedClassPtr c)
 	
 #ifdef JCOM_OUT_TILDE
 	class_addmethod(c->maxClass, (method)out_dsp64,							"dsp64",				A_CANT, 0);
-	
-	class_addmethod(c->maxClass, (method)out_return_link,					"return_link",			A_CANT, 0);
 	
 #else
 	class_addmethod(c->maxClass, (method)out_return_signal,					"return_signal",		A_CANT, 0);
@@ -235,17 +224,23 @@ void WrappedOutputClass_free(TTPtr self)
 void out_subscribe(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTAddress   signalAddress;
 	TTAddress	outputAddress;
 	TTAddress	inputAddress;
 	TTValue		v, args;
 	TTNodePtr	returnedNode = NULL;
     TTNodePtr   returnedContextNode = NULL;
 	TTAddress	returnedAddress, parentAddress;
-	TTDataPtr	aData;
 	TTString	formatDescription, sInstance;
-	SymbolPtr	outDescription;
 	
-	outputAddress = TTAddress("out").appendInstance(EXTRA->instance);
+#ifdef JCOM_OUT_TILDE
+	signalAddress = TTAddress("audio");
+#else
+    signalAddress = TTAddress("data");
+#endif
+    
+    // edit "signal/out.instance" address
+    outputAddress = signalAddress.appendAddress(TTAddress("out")).appendInstance(EXTRA->instance);
 	
 	// if the subscription is successful
 	if (!jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, outputAddress, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
@@ -260,47 +255,6 @@ void out_subscribe(TTPtr self)
 		returnedNode->getParent()->getAddress(parentAddress);
 		inputAddress = parentAddress.appendAddress(TTAddress("in")).appendInstance(EXTRA->instance);
 		x->wrappedObject->setAttributeValue(TTSymbol("inputAddress"), inputAddress);
-		
-		// expose attributes of TTOutput as TTData in the tree structure
-		x->subscriberObject->exposeAttribute(x->wrappedObject, kTTSym_mute, kTTSym_parameter, &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this attribute turns off model's outputs."));
-		v = TTValue(NO);
-		aData->setAttributeValue(kTTSym_valueDefault, v);
-
-#ifdef JCOM_OUT_TILDE
-		
-		// note : the mix attribute is exposed only there is a j.in : see out_return_in method
-		
-		x->subscriberObject->exposeAttribute(x->wrappedObject, kTTSym_gain, kTTSym_parameter, &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_decimal);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		v = TTValue(0., 127.);
-		aData->setAttributeValue(kTTSym_rangeBounds, v);
-		aData->setAttributeValue(kTTSym_rangeClipmode, kTTSym_both);
-		v = TTValue(100.);
-		aData->setAttributeValue(kTTSym_valueDefault, v);
-		aData->setAttributeValue(kTTSym_rampDrive, TTSymbol("Max"));
-		aData->setAttributeValue(kTTSym_rampFunction, TTSymbol("linear"));
-		aData->setAttributeValue(kTTSym_description, TTSymbol("Set gain of model's outputs (as MIDI value by default)."));
-#endif
-		
-#ifndef JCOM_OUT_TILDE		
-		x->subscriberObject->exposeAttribute(x->wrappedObject, kTTSym_freeze, kTTSym_parameter, &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("Freezes the last state of model's outputs from the  processing algorithm."));
-		v = TTValue(NO);
-		aData->setAttributeValue(kTTSym_valueDefault, v);
-		
-		x->subscriberObject->exposeAttribute(x->wrappedObject, kTTSym_preview, kTTSym_parameter, &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("Turns on/off preview display of model's outputs from the  processing algorithm."));
-		v = TTValue(NO);
-		aData->setAttributeValue(kTTSym_valueDefault, v);
-#endif
 	}
 }
 
@@ -310,8 +264,6 @@ void out_subscribe(TTPtr self)
 // Method for Assistance Messages
 void out_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst)
 {
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
 	if (msg==1)				// Inlets
 		strcpy(dst, "(signal) connect to the algorithm");
 	else if (msg==2) {		// Outlets
@@ -398,30 +350,6 @@ void out_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, lon
 		anOutput->setupAudioSignals(maxvectorsize, samplerate);
 		object_method(dsp64, gensym("dsp_add64"), x, out_perform64, 0, NULL); 
 	}
-}
-
-void out_return_link(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTDataPtr		aData;
-	TTValue			v;
-	
-	if (atom_getlong(argv) == 1) {
-		
-		x->subscriberObject->exposeAttribute(x->wrappedObject, kTTSym_mix, kTTSym_parameter, &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_decimal);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		v = TTValue(0., 100.);
-		aData->setAttributeValue(kTTSym_rangeBounds, v);
-		aData->setAttributeValue(kTTSym_rangeClipmode, kTTSym_both);
-		v = TTValue(100.);
-		aData->setAttributeValue(kTTSym_valueDefault, v);							// Assume 100%, so that processed signal is passed through
-		aData->setAttributeValue(kTTSym_rampDrive, TTSymbol("Max"));
-		aData->setAttributeValue(kTTSym_rampFunction, TTSymbol("linear"));
-		aData->setAttributeValue(kTTSym_description, TTSymbol("Controls the wet/dry mix in percent."));
-	}
-	else 
-		x->subscriberObject->unexposeAttribute(kTTSym_mix);
 }
 
 #endif // JCOM_OUT_TILDE

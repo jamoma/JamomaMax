@@ -7,7 +7,7 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 #define MAX_MESS_SIZE 2048
 

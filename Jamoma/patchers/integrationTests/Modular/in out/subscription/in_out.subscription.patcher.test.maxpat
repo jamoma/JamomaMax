@@ -57,7 +57,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 329.0, 44.0, 587.0, 451.0 ],
+						"rect" : [ 329.0, 44.0, 602.0, 444.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -170,8 +170,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 328.0, 320.001862, 245.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel.deferlow-test @input input/address @compareTo /in.test"
+									"patching_rect" : [ 328.0, 320.001862, 268.0, 33.0 ],
+									"text" : "j.test.assert.equal toplevel.deferlow-test @input input/address @compareTo /data/in.test"
 								}
 
 							}
@@ -254,8 +254,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 328.0, 123.001862, 237.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel-test @input input/address @compareTo /in.test"
+									"patching_rect" : [ 328.0, 123.001862, 220.0, 33.0 ],
+									"text" : "j.test.assert.equal toplevel-test @input input/address @compareTo /data/in.test"
 								}
 
 							}
@@ -339,8 +339,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 29.0, 320.001862, 250.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel.deferlow-test @input output/address @compareTo /out.test"
+									"patching_rect" : [ 29.0, 320.001862, 283.0, 33.0 ],
+									"text" : "j.test.assert.equal toplevel.deferlow-test @input output/address @compareTo /data/out.test"
 								}
 
 							}
@@ -423,8 +423,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 29.0, 123.001862, 251.0, 33.0 ],
-									"text" : "j.test.assert.equal toplevel-test @input output/address @compareTo /out.test"
+									"patching_rect" : [ 29.0, 123.001862, 234.0, 33.0 ],
+									"text" : "j.test.assert.equal toplevel-test @input output/address @compareTo /data/out.test"
 								}
 
 							}

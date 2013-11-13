@@ -1903,7 +1903,7 @@
             483.0,
             19.0
           ],
-          "text": "j.return raw/voice.* @description \"generic output for midiin module\" @repetitions/allow 1"
+          "text": "j.return raw/voice.* @description \"generic output for midiin module\" @repetitions/filter 0"
         }
       },
       {

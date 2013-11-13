@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.send" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		value or signal sender
 	</digest>
 	<description>
-		TEXT_HERE
+		sending value to parameter or message and signal to in using their address
 	</description>
 	<!--METADATA-->
 	<metadatalist>

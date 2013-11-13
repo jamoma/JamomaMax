@@ -131,7 +131,7 @@
             603.0,
             33.0
           ],
-          "text": "j.return clientMenu @repetitions/allow 1 @type generic @description \"connect this to a menu for a list of clients\""
+          "text": "j.return clientMenu @repetitions/filter 0 @type generic @description \"connect this to a menu for a list of clients\""
         }
       },
       {
@@ -182,7 +182,7 @@
             393.0,
             33.0
           ],
-          "text": "j.return received @repetitions/allow 1 @type generic @description \"stuff received from the network\""
+          "text": "j.return received @repetitions/filter 0 @type generic @description \"stuff received from the network\""
         }
       },
       {
@@ -2059,7 +2059,7 @@
             303.0,
             31.0
           ],
-          "text": "j.parameter port @repetitions/allow 0 @type integer @description \"port number for this multicast core\"",
+          "text": "j.parameter port @repetitions/filter 1 @type integer @description \"port number for this multicast core\"",
           "varname": "port"
         }
       }

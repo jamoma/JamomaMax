@@ -53,9 +53,9 @@ attributes:
    desc: "The mapping function determining the curve of the ramping to new message value." # For an extensive description of all available functions, see
    unit:
    default: linear
- - name: repetitions/allow
+ - name: repetitions/filter
    type: toggle
-   desc: "Determines whether repeated message values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)"
+   desc: "Determines whether repeated message values will be filtered: when this attribute is enabled, repetitions are filtered out (like [change] object in Max)"
    unit:
    default: 0
  - name: dataspace

@@ -8,6 +8,8 @@
 
 /* Begin PBXFileReference section */
 		22AD15EE16597E8C002FD7E3 /* j.remoteArray.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.remoteArray.yml; sourceTree = "<group>"; };
+		467A25D01805651900DA28C7 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
+		467A25D11805651900DA28C7 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
 		D2A79C3C15C55EAA00D14111 /* j.remoteArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.remoteArray.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -17,6 +19,8 @@
 			children = (
 				22AD15EE16597E8C002FD7E3 /* j.remoteArray.yml */,
 				D2A79C3C15C55EAA00D14111 /* j.remoteArray.cpp */,
+				467A25D11805651900DA28C7 /* TTModularClassWrapperMax.h */,
+				467A25D01805651900DA28C7 /* TTModularClassWrapperMax.cpp */,
 			);
 			name = j.remoteArray;
 			sourceTree = "<group>";

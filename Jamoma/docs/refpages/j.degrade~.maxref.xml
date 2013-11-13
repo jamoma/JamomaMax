@@ -77,7 +77,18 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="calculate">
+		<!-- <method name="calculate">
+	<arglist>
+		<arg name="ARG_NAME_0" type="list" optional="0" />
+	</arglist>
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+</method> -->
+		<!-- 		<method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -88,7 +99,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="getProcessingBenchmark">
+ -->
+		<!-- 						<method name="resetBenchmarking">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -99,7 +111,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="resetBenchmarking">
+ -->
+		<!-- 								<method name="test">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -110,17 +123,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="test">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
+ -->
 		<method name="signal">
 			<arglist />
 			<digest>
@@ -189,5 +192,6 @@
 		<seealso name="degrade~"/>
 		<seealso name="j.degrade≈"/>
 		<seealso name="j.overdrive~"/>
+		<seealso name="degrade~.model"/>
 	</seealsolist>
 </c74object>

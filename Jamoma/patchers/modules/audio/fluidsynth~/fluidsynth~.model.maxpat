@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 1.0, 47.0, 1159.0, 543.0 ],
+		"rect" : [ 572.0, 169.0, 654.0, 322.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,26 +29,12 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-6",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 122.0, 228.0, 90.0, 20.0 ],
-					"text" : "j.preset"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "",
 					"id" : "obj-16",
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 81.0, 440.0, 25.0, 25.0 ]
+					"patching_rect" : [ 29.0, 229.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -60,7 +46,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 81.0, 127.0, 25.0, 25.0 ]
+					"patching_rect" : [ 29.0, 111.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -69,13 +55,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-7",
-					"linecount" : 2,
+					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 81.0, 173.0, 238.0, 33.0 ],
-					"text" : "j.model @description \"A wrapper for the Ircam fluidsynt~ soundfont soft synth.\""
+					"patching_rect" : [ 29.0, 148.0, 130.0, 60.0 ],
+					"text" : "j.model @description \"A wrapper for the Ircam fluidsynth~ soundfont soft synth.\""
 				}
 
 			}
@@ -88,7 +74,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 472.0, 335.0, 73.0, 20.0 ],
+					"patching_rect" : [ 213.0, 188.0, 73.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -102,7 +88,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 431.0, 364.0, 73.0, 20.0 ],
+					"patching_rect" : [ 172.0, 217.0, 73.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -271,7 +257,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 619.5, 76.0, 47.0, 20.0 ],
+					"patching_rect" : [ 383.5, 67.0, 47.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1393,7 +1379,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 666.862061, 231.0, 123.0, 20.0 ],
+					"patching_rect" : [ 494.862061, 67.0, 123.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1416,13 +1402,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-52",
-					"linecount" : 6,
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 722.362061, 76.0, 145.0, 87.0 ],
-					"text" : "j.message direct @type string @repetitions/allow 1 @description \"direct access to fluidsynth~ external\"",
+					"patching_rect" : [ 172.0, 22.0, 448.0, 33.0 ],
+					"text" : "j.message direct @type string @repetitions/filter 0 @description \"direct access to fluidsynth~ external\"",
 					"varname" : "midiin[2]"
 				}
 
@@ -1817,7 +1803,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 676.5, 76.0, 40.0, 20.0 ],
+					"patching_rect" : [ 440.5, 67.0, 40.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1883,7 +1869,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 860.0, 37.0, 171.0, 114.0 ],
-									"text" : "j.parameter reverb/width @type decimal @repetitions/allow 0 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @description \"width parameter of fluidsynth~.\"",
+									"text" : "j.parameter reverb/width @type decimal @repetitions/filter 1 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @description \"width parameter of fluidsynth~.\"",
 									"varname" : "reverb[5]"
 								}
 
@@ -1899,7 +1885,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 670.5, 37.0, 188.0, 114.0 ],
-									"text" : "j.parameter reverb/damping @type decimal @repetitions/allow 0 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @description \"damping parameter of fluidsynth~.\"",
+									"text" : "j.parameter reverb/damping @type decimal @repetitions/filter 1 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @description \"damping parameter of fluidsynth~.\"",
 									"varname" : "reverb[4]"
 								}
 
@@ -1915,7 +1901,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 481.0, 37.0, 188.0, 114.0 ],
-									"text" : "j.parameter reverb/roomsize @type decimal @repetitions/allow 0 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @description \"room size parameter of fluidsynth~.\"",
+									"text" : "j.parameter reverb/roomsize @type decimal @repetitions/filter 1 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @description \"room size parameter of fluidsynth~.\"",
 									"varname" : "reverb[2]"
 								}
 
@@ -1925,13 +1911,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-11",
-									"linecount" : 9,
+									"linecount" : 8,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 291.5, 37.0, 180.0, 127.0 ],
-									"text" : "j.parameter reverb/level @type decimal @repetitions/allow 0 @range/bounds 0 1 @range/clipmode low @dataspace gain @dataspace/unit linear @description \"level of the reverb.\"",
+									"text" : "j.parameter reverb/level @type decimal @repetitions/filter 1 @range/bounds 0 1 @range/clipmode low @dataspace gain @dataspace/unit linear @description \"level of the reverb.\"",
 									"varname" : "reverb[3]"
 								}
 
@@ -1947,7 +1933,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 45.0, 37.0, 179.0, 87.0 ],
-									"text" : "j.parameter reverb/active @type boolean @value 0 @repetitions/allow 0 @range/bounds 0 1 @range/clipmode both @description \"Turn on reverb.\"",
+									"text" : "j.parameter reverb/active @type boolean @value 0 @repetitions/filter 1 @range/bounds 0 1 @range/clipmode both @description \"Turn on reverb.\"",
 									"varname" : "reverb[1]"
 								}
 
@@ -2147,7 +2133,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 553.5, 76.0, 55.0, 20.0 ],
+					"patching_rect" : [ 317.5, 67.0, 55.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2207,13 +2193,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-2",
-									"linecount" : 8,
+									"linecount" : 7,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1062.666748, 19.0, 175.0, 114.0 ],
-									"text" : "j.parameter chorus/units @type integer @repetitions/allow 0 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @description \"number of units?? \"",
+									"text" : "j.parameter chorus/units @type integer @repetitions/filter 1 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @description \"number of units?? \"",
 									"varname" : "chorus[5]"
 								}
 
@@ -2229,7 +2215,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 863.833374, 19.0, 171.0, 127.0 ],
-									"text" : "j.parameter chorus/type @type integer @repetitions/allow 0 @range/bounds 0 1 @range/clipmode none @ramp/drive Max @description \"type-parameter of the fluidsynth~: 0 - sine 1 - triangle.\"",
+									"text" : "j.parameter chorus/type @type integer @repetitions/filter 1 @range/bounds 0 1 @range/clipmode none @ramp/drive Max @description \"type-parameter of the fluidsynth~: 0 - sine 1 - triangle.\"",
 									"varname" : "chorus[4]"
 								}
 
@@ -2239,13 +2225,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
-									"linecount" : 11,
+									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 665.000061, 19.0, 186.0, 154.0 ],
-									"text" : "j.parameter chorus/depth @type decimal @repetitions/allow 0 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @range/clipmode low @dataspace time @dataspace/unit ms @description \"depth-parameter of the fluidsynth~.\"",
+									"text" : "j.parameter chorus/depth @type decimal @repetitions/filter 1 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @range/clipmode low @dataspace time @dataspace/unit ms @description \"depth-parameter of the fluidsynth~.\"",
 									"varname" : "chorus[3]"
 								}
 
@@ -2255,13 +2241,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-11",
-									"linecount" : 11,
+									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 466.166687, 19.0, 186.0, 154.0 ],
-									"text" : "j.parameter chorus/speed @type decimal @repetitions/allow 0 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @range/clipmode low @dataspace time @dataspace/unit Hz @description \"speed-parameter of the fluidsynth~.\"",
+									"text" : "j.parameter chorus/speed @type decimal @repetitions/filter 1 @range/bounds 0 1 @range/clipmode low @ramp/drive Max @range/clipmode low @dataspace time @dataspace/unit Hz @description \"speed-parameter of the fluidsynth~.\"",
 									"varname" : "chorus[2]"
 								}
 
@@ -2271,13 +2257,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-13",
-									"linecount" : 10,
+									"linecount" : 9,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 267.333344, 19.0, 175.0, 141.0 ],
-									"text" : "j.parameter chorus/level @type decimal @repetitions/allow 0 @range/bounds 0 1 @range/clipmode low @dataspace gain @dataspace/unit linear @ramp/drive Max @description \"level of the chorus.\"",
+									"text" : "j.parameter chorus/level @type decimal @repetitions/filter 1 @range/bounds 0 1 @range/clipmode low @dataspace gain @dataspace/unit linear @ramp/drive Max @description \"level of the chorus.\"",
 									"varname" : "chorus[6]"
 								}
 
@@ -2293,7 +2279,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 68.5, 19.0, 176.0, 87.0 ],
-									"text" : "j.parameter chorus/active @type boolean @value 0 @repetitions/allow 0 @range/bounds 0 1 @range/clipmode both @description \"Turn on chorus.\"",
+									"text" : "j.parameter chorus/active @type boolean @value 0 @repetitions/filter 1 @range/bounds 0 1 @range/clipmode both @description \"Turn on chorus.\"",
 									"varname" : "chorus[1]"
 								}
 
@@ -2502,7 +2488,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 486.5, 76.0, 57.0, 20.0 ],
+					"patching_rect" : [ 250.5, 67.0, 57.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2568,7 +2554,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 68.0, 29.0, 144.0, 74.0 ],
-									"text" : "j.message notein @repetitions/allow 1 @type generic @description \"Receive midi information\"",
+									"text" : "j.message notein @repetitions/filter 0 @type generic @description \"Receive midi information\"",
 									"varname" : "midiin"
 								}
 
@@ -3176,7 +3162,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 431.0, 76.0, 43.0, 20.0 ],
+					"patching_rect" : [ 195.0, 67.0, 43.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3202,7 +3188,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 562.0, 298.0, 131.0, 20.0 ],
+					"patching_rect" : [ 303.0, 181.0, 131.0, 20.0 ],
 					"text" : "print fluidsynth~.model"
 				}
 
@@ -3216,7 +3202,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 513.0, 270.0, 68.0, 20.0 ],
+					"patching_rect" : [ 254.0, 153.0, 68.0, 20.0 ],
 					"text" : "route bang"
 				}
 
@@ -3230,7 +3216,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "anything" ],
-					"patching_rect" : [ 431.0, 231.0, 101.0, 20.0 ],
+					"patching_rect" : [ 172.0, 114.0, 101.0, 20.0 ],
 					"text" : "fluidsynth~"
 				}
 
@@ -3244,7 +3230,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 513.0, 476.0, 91.0, 20.0 ],
+					"patching_rect" : [ 303.0, 217.0, 91.0, 20.0 ],
 					"text" : "bang after load"
 				}
 
@@ -3256,7 +3242,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 472.0, 440.0, 25.0, 25.0 ]
+					"patching_rect" : [ 213.0, 257.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -3267,7 +3253,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 431.0, 440.0, 25.0, 25.0 ]
+					"patching_rect" : [ 172.0, 257.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -3286,6 +3272,7 @@
 					"destination" : [ "obj-48", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 204.5, 98.5, 181.5, 98.5 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -3313,6 +3300,7 @@
 					"destination" : [ "obj-48", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 450.0, 98.5, 181.5, 98.5 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -3322,6 +3310,7 @@
 					"destination" : [ "obj-48", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 327.0, 98.5, 181.5, 98.5 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -3331,6 +3320,7 @@
 					"destination" : [ "obj-48", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 260.0, 98.5, 181.5, 98.5 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -3385,7 +3375,7 @@
 					"destination" : [ "obj-48", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 676.362061, 260.0, 576.0, 260.0, 576.0, 221.0, 440.5, 221.0 ],
+					"midpoints" : [ 504.362061, 98.5, 181.5, 98.5 ],
 					"source" : [ "obj-67", 0 ]
 				}
 
@@ -3395,6 +3385,7 @@
 					"destination" : [ "obj-48", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 393.0, 98.5, 181.5, 98.5 ],
 					"source" : [ "obj-69", 0 ]
 				}
 
@@ -3427,10 +3418,6 @@
 			}
 , 			{
 				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -42,7 +42,7 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				set: connect to ui object
+				set: connect to ui object + speedlimed
 			</digest>
 			<description>
 				TEXT_HERE

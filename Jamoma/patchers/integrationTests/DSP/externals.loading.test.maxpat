@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 4
+			"minor" : 1,
+			"revision" : 5,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 558.0, 162.0, 722.0, 527.0 ],
+		"rect" : [ 558.0, 162.0, 1050.0, 805.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -30,12 +31,94 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 583.0, 32.0, 114.5, 19.0 ],
+					"text" : "j~ allpass"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-39",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 706.0, 336.23999, 150.0, 23.0 ],
+					"text" : "j.meter~ is deprecated"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-36",
+					"maxclass" : "j.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 583.0, 338.23999, 113.5, 19.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-35",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
+					"patching_rect" : [ 583.0, 399.679993, 114.5, 19.0 ],
+					"text" : "j.out~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-33",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "", "" ],
+					"patching_rect" : [ 584.0, 481.600006, 114.5, 19.0 ],
+					"text" : "j.receive~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-32",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 584.0, 502.079987, 114.5, 19.0 ],
+					"text" : "j.send~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"id" : "obj-25",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 526.0, 351.0, 107.0, 19.0 ],
+					"patching_rect" : [ 584.0, 543.040039, 113.5, 19.0 ],
 					"text" : "j.waveshaper~"
 				}
 
@@ -49,7 +132,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 313.0, 100.0, 19.0 ],
+					"patching_rect" : [ 583.0, 440.640015, 114.5, 19.0 ],
 					"text" : "j.panorama~"
 				}
 
@@ -63,7 +146,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 49.0, 100.0, 19.0 ],
+					"patching_rect" : [ 583.0, 112.959999, 114.5, 19.0 ],
 					"text" : "j.average~"
 				}
 
@@ -74,10 +157,9 @@
 					"fontsize" : 10.0,
 					"id" : "obj-20",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 30.0, 100.0, 19.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 583.0, 92.479996, 114.5, 19.0 ],
 					"text" : "j.array~"
 				}
 
@@ -91,7 +173,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 181.0, 102.0, 19.0 ],
+					"patching_rect" : [ 583.0, 256.320007, 116.5, 19.0 ],
 					"text" : "j.function~"
 				}
 
@@ -105,7 +187,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 8,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal" ],
-					"patching_rect" : [ 526.0, 370.0, 113.5, 19.0 ],
+					"patching_rect" : [ 584.0, 522.559998, 113.5, 19.0 ],
 					"text" : "j.vimic~"
 				}
 
@@ -119,7 +201,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 256.0, 99.0, 19.0 ],
+					"patching_rect" : [ 583.0, 358.720001, 113.5, 19.0 ],
 					"text" : "j.onepole~"
 				}
 
@@ -133,7 +215,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 143.0, 102.0, 19.0 ],
+					"patching_rect" : [ 583.0, 215.360001, 116.5, 19.0 ],
 					"text" : "j.delay~"
 				}
 
@@ -147,7 +229,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 86.0, 100.0, 19.0 ],
+					"patching_rect" : [ 583.0, 153.919998, 114.5, 19.0 ],
 					"text" : "j.clip~"
 				}
 
@@ -158,10 +240,9 @@
 					"fontsize" : 10.0,
 					"id" : "obj-11",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 11.0, 100.0, 19.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 583.0, 72.0, 114.5, 19.0 ],
 					"text" : "j.allpass~"
 				}
 
@@ -175,7 +256,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 526.0, 408.0, 100.0, 19.0 ],
+					"patching_rect" : [ 584.0, 584.0, 113.5, 19.0 ],
 					"text" : "j.zerox~"
 				}
 
@@ -189,7 +270,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 526.0, 389.0, 100.0, 19.0 ],
+					"patching_rect" : [ 584.0, 563.52002, 113.5, 19.0 ],
 					"text" : "j.xfade~"
 				}
 
@@ -203,7 +284,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 526.0, 332.0, 100.0, 19.0 ],
+					"patching_rect" : [ 584.0, 461.119995, 114.5, 19.0 ],
 					"text" : "j.ramp~"
 				}
 
@@ -214,10 +295,10 @@
 					"fontsize" : 10.0,
 					"id" : "obj-29",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 294.0, 100.0, 19.0 ],
+					"patching_rect" : [ 583.0, 420.160004, 114.5, 19.0 ],
 					"text" : "j.overdrive~"
 				}
 
@@ -231,7 +312,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 275.0, 100.0, 19.0 ],
+					"patching_rect" : [ 583.0, 379.200012, 114.5, 19.0 ],
 					"text" : "j.op~"
 				}
 
@@ -245,7 +326,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 237.0, 100.0, 19.0 ],
+					"patching_rect" : [ 583.0, 317.76001, 114.5, 19.0 ],
 					"text" : "j.limiter~"
 				}
 
@@ -259,7 +340,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 218.0, 100.0, 19.0 ],
+					"patching_rect" : [ 583.0, 297.279999, 114.5, 19.0 ],
 					"text" : "j.hmlshelf~"
 				}
 
@@ -271,9 +352,9 @@
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 525.0, 200.0, 100.0, 19.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 583.0, 276.799988, 114.5, 19.0 ],
 					"text" : "j.gain~"
 				}
 
@@ -287,7 +368,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 162.0, 100.0, 19.0 ],
+					"patching_rect" : [ 583.0, 235.839996, 114.5, 19.0 ],
 					"text" : "j.filter~"
 				}
 
@@ -301,7 +382,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 124.0, 100.0, 19.0 ],
+					"patching_rect" : [ 583.0, 194.880005, 114.5, 19.0 ],
 					"text" : "j.degrade~"
 				}
 
@@ -315,7 +396,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 525.0, 105.0, 100.0, 19.0 ],
+					"patching_rect" : [ 583.0, 174.399994, 114.5, 19.0 ],
 					"text" : "j.dcblock~"
 				}
 
@@ -329,7 +410,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 525.0, 68.0, 100.0, 19.0 ],
+					"patching_rect" : [ 583.0, 133.440002, 114.5, 19.0 ],
 					"text" : "j.balance~"
 				}
 
@@ -340,9 +421,10 @@
 					"fontsize" : 10.0,
 					"id" : "obj-14",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 195.0, 325.0, 310.0, 19.0 ],
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 195.0, 325.0, 334.0, 19.0 ],
 					"text" : "j.test.assert.equal.old \"TEST DSP AllExternalsLoadingProperly\" 1"
 				}
 
@@ -482,6 +564,7 @@
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 245.0, 215.0, 104.0, 19.0 ],
 					"saved_object_attributes" : 					{
+						"filename" : "patchdescribe.js",
 						"parameter_enable" : 0
 					}
 ,
@@ -601,9 +684,23 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "patchdescribe.js",
-				"bootpath" : "/Applications/Max6/examples/javascript/patcher-scripting",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max6/examples/javascript/patcher-scripting",
+				"bootpath" : "/Applications/Max 6.1/examples/javascript/patcher-scripting",
+				"patcherrelativepath" : "../../../../../../../../../../Applications/Max 6.1/examples/javascript/patcher-scripting",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.test.finished.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../MaxTest/JamomaTest/patchers/components",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.test.assert.equal.old.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../MaxTest/JamomaTest/patchers/components",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -655,10 +752,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.allpass~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.clip~.mxo",
 				"type" : "iLaX"
 			}
@@ -679,10 +772,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.array~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.average~.mxo",
 				"type" : "iLaX"
 			}
@@ -692,6 +781,22 @@
 			}
 , 			{
 				"name" : "j.waveshaper~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
  ]

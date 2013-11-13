@@ -226,8 +226,8 @@ void remote_subscribe(TTPtr self)
                 x->address.getAttribute() != NO_ATTRIBUTE)
                 toSubscribe = NULL;
             
-             // if the address refer to the model/address don't subscribe the Viewer (to not have model/address.1)
-            else if (x->address == TTAddress("model/address"))
+             // if the address refer to the "model" node don't subscribe the Viewer (to not have model.1)
+            else if (x->address.getName() == TTSymbol("model"))
                 toSubscribe = NULL;
             
             // else try to subscribe the Viewer
@@ -247,12 +247,12 @@ void remote_subscribe(TTPtr self)
         if (!jamoma_subscriber_create((ObjectPtr)x, toSubscribe, x->address, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
             
             // get the context address to make
-            // a viewer on the contextAddress/model/address parameter
+            // a viewer on the contextAddress/model:address attribute
             x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
             contextAddress = v[0];
             
-            // observe model/address data (in view patcher : deferlow return_model_address)
-            makeInternals_receiver(x, contextAddress, TTSymbol("/model/address"), gensym("return_model_address"), &anObject, x->patcherContext == kTTSym_view);
+            // observe model:address attribute (in view patcher : deferlow return_model_address)
+            makeInternals_receiver(x, contextAddress, TTSymbol("model:address"), gensym("return_model_address"), &anObject, x->patcherContext == kTTSym_view);
             anObject->sendMessage(kTTSym_Get);
                 
             // attach the j.remote to connected ui object

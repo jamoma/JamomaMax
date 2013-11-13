@@ -5,7 +5,7 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.panorama~" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		A swiss-army panpot
 	</digest>
 	<description>
 		TEXT_HERE
@@ -23,7 +23,7 @@
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				signal input, control messages
+				Signal input, control messages
 			</digest>
 			<description>
 				TEXT_HERE
@@ -31,7 +31,7 @@
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				signal input
+				Signal input
 			</digest>
 			<description>
 				TEXT_HERE
@@ -42,7 +42,7 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				signal output
+				Signal output
 			</digest>
 			<description>
 				TEXT_HERE
@@ -50,7 +50,7 @@
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
 			<digest>
-				signal output
+				Signal output
 			</digest>
 			<description>
 				TEXT_HERE
@@ -67,9 +67,9 @@
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<objarg id="0" name="Channels" type="int" optional="0">
 			<digest>
-				TEXT_HERE
+				Number of inputs
 			</digest>
 			<description>
 				TEXT_HERE
@@ -78,7 +78,18 @@
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="calculate">
+		<!-- <method name="calculate">
+	<arglist>
+		<arg name="ARG_NAME_0" type="list" optional="0" />
+	</arglist>
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+</method> -->
+		<!-- 		<method name="getProcessingBenchmark">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -89,7 +100,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="getProcessingBenchmark">
+ -->
+		<!-- 						<method name="resetBenchmarking">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -100,7 +112,8 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="resetBenchmarking">
+ -->
+		<!-- 								<method name="test">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -111,17 +124,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="test">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
+ -->
 		<method name="signal">
 			<arglist />
 			<digest>
@@ -147,7 +150,7 @@
 		</attribute>
 		<attribute name="mode" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set whether j.panorama~ uses an internal lookup table or compute the shape on the fly
 			</digest>
 			<description>
 				TEXT_HERE
@@ -157,15 +160,15 @@
 					<enumlist>
 						<enum name="calculate">
 							<digest>
-								TEXT_HERE
+								Calculate the panoramic on the fly
 							</digest>
 							<description>
-								TEXT_HERE
+								Calculate the panoramic on the fly
 							</description>
 						</enum>
 						<enum name="lookup">
 							<digest>
-								TEXT_HERE
+								Use an internal lookup table
 							</digest>
 							<description>
 								TEXT_HERE
@@ -189,10 +192,10 @@
 		</attribute>
 		<attribute name="position" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Set the source position in the stereo field
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the source position in the stereo field
 			</description>
 		</attribute>
 		<attribute name="sampleRate" get="1" set="1" type="int" size="1">
@@ -205,7 +208,7 @@
 		</attribute>
 		<attribute name="shape" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Curve of the panorama spread
 			</digest>
 			<description>
 				TEXT_HERE
@@ -249,8 +252,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.array~"/>
+		<seealso name="j.dbap"/>
+		<seealso name="M4L.bal2~"/>
 	</seealsolist>
 </c74object>

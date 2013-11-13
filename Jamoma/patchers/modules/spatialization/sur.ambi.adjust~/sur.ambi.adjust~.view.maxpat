@@ -1033,7 +1033,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter r/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter r/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "r/gain"
                 }
               },
@@ -1057,7 +1057,7 @@
                     706.0,
                     31.0
                   ],
-                  "text": "j.parameter w/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter w/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "w/gain"
                 }
               },
@@ -1081,7 +1081,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter x/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter x/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "x/gain"
                 }
               },
@@ -1105,7 +1105,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter y/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter y/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "y/gain"
                 }
               },
@@ -1129,7 +1129,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter z/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter z/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "z/gain"
                 }
               },
@@ -1153,7 +1153,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter s/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter s/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "s/gain"
                 }
               },
@@ -1177,7 +1177,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter t/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter t/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "t/gain"
                 }
               },
@@ -1201,7 +1201,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter u/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter u/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "u/gain"
                 }
               },
@@ -1225,7 +1225,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter v/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter v/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "v/gain"
                 }
               },
@@ -1249,7 +1249,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter k/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter k/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "k/gain"
                 }
               },
@@ -1273,7 +1273,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter l/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter l/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "l/gain"
                 }
               },
@@ -1297,7 +1297,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter m/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter m/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "m/gain"
                 }
               },
@@ -1321,7 +1321,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter n/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter n/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "n/gain"
                 }
               },
@@ -1345,7 +1345,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter o/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter o/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "o/gain"
                 }
               },
@@ -1369,7 +1369,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter p/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter p/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "p/gain"
                 }
               },
@@ -1393,7 +1393,7 @@
                     705.0,
                     31.0
                   ],
-                  "text": "j.parameter q/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/allow 0 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
+                  "text": "j.parameter q/gain @type decimal @range/bounds -24 24 @range/clipmode both @repetitions/filter 1 @ramp/drive Max @description \"Adjustment of volume for Nth component of ambisonic signal.\" @value/default -24",
                   "varname": "q/gain"
                 }
               }

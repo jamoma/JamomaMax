@@ -2,7 +2,7 @@
 <jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
  <application author="jamoma team" version="v1" name="remoteOSCApp" type="proxy">
   <!--"an audio playback model"-->
-  <player object="Container" tag="model" priority="0">
+  <player object="Container" service="model" priority="0">
    <!--"play the soundfile"-->
    <play object="Data" service="parameter" type="boolean" rangeBounds="0 1" priority="1" />
    <!--"audio level"-->
@@ -11,7 +11,7 @@
    <end object="Data" service="return" type="none" />
   </player>
   <!--"a filter model"-->
-  <filter object="Container" tag="model" priority="0">
+  <filter object="Container" service="model" priority="0">
    <!--"filter type"-->
    <type object="Data" service="parameter" type="string" priority="1" />
    <!--"frequency of the filter"-->

@@ -36,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 705.0, 511.0, 73.0, 19.0 ],
+					"patching_rect" : [ 705.0, 511.0, 73.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -50,7 +50,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 705.0, 254.0, 66.0, 19.0 ],
+					"patching_rect" : [ 705.0, 254.0, 66.0, 20.0 ],
 					"text" : "j.in~ 2"
 				}
 
@@ -65,7 +65,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 866.0, 511.0, 267.0, 43.0 ],
+					"patching_rect" : [ 866.0, 511.0, 267.0, 47.0 ],
 					"text" : "j.return status @type boolean @description \"Indicates if the input signal is currently gated or not.\""
 				}
 
@@ -79,7 +79,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 626.0, 511.0, 73.0, 19.0 ],
+					"patching_rect" : [ 626.0, 511.0, 73.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -93,22 +93,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 626.0, 254.0, 66.0, 19.0 ],
+					"patching_rect" : [ 626.0, 254.0, 66.0, 20.0 ],
 					"text" : "j.in~ 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-27",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 75.0, 380.0, 70.0, 19.0 ],
-					"text" : "j.preset"
 				}
 
 			}
@@ -122,8 +108,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 491.0, 140.5, 569.0, 43.0 ],
-					"text" : "j.parameter threshold @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds -90 24 @range/clipmode both @description \"The threshold sets the level at which the Noise Gate opens and closes..\" @dataspace gain @dataspace/unit dB",
+					"patching_rect" : [ 491.0, 140.5, 569.0, 47.0 ],
+					"text" : "j.parameter threshold @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds -90 24 @range/clipmode both @description \"The threshold sets the level at which the Noise Gate opens and closes..\" @dataspace gain @dataspace/unit dB",
 					"varname" : "threshold"
 				}
 
@@ -138,8 +124,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 361.0, 91.5, 593.0, 43.0 ],
-					"text" : "j.parameter release @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000 @range/clipmode both @description \"When the gate closes, this parameter sets how many milliseconds it will take to fade out.\" @dataspace time @dataspace/unit ms",
+					"patching_rect" : [ 361.0, 91.5, 594.0, 47.0 ],
+					"text" : "j.parameter release @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 1000 @range/clipmode both @description \"When the gate closes, this parameter sets how many milliseconds it will take to fade out.\" @dataspace time @dataspace/unit ms",
 					"varname" : "release"
 				}
 
@@ -154,8 +140,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 281.0, 34.0, 600.0, 43.0 ],
-					"text" : "j.parameter attack @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 1000 @range/clipmode low @description \"When the gate opens, this parameter sets how many milliseconds it will take to fade in.\" @dataspace time @dataspace/unit ms",
+					"patching_rect" : [ 281.0, 34.0, 600.0, 47.0 ],
+					"text" : "j.parameter attack @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 1000 @range/clipmode low @description \"When the gate opens, this parameter sets how many milliseconds it will take to fade in.\" @dataspace time @dataspace/unit ms",
 					"varname" : "attack"
 				}
 
@@ -170,8 +156,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 855.0, 242.0, 412.0, 43.0 ],
-					"text" : "j.parameter lookahead @type integer @ramp/drive Max @repetitions/allow 0 @range/bounds 0 100 @range/clipmode low @description \"How many samples to look ahead while monitoring incoming signal.\"",
+					"patching_rect" : [ 855.0, 242.0, 412.0, 47.0 ],
+					"text" : "j.parameter lookahead @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 100 @range/clipmode low @description \"How many samples to look ahead while monitoring incoming signal.\"",
 					"varname" : "lookahead"
 				}
 
@@ -185,7 +171,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 30.0, 336.0, 207.0, 19.0 ],
+					"patching_rect" : [ 30.0, 336.0, 207.0, 20.0 ],
 					"text" : "j.model @description \"Noise gate.\"",
 					"varname" : "j.model"
 				}
@@ -269,7 +255,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "int", "int" ],
-					"patching_rect" : [ 866.0, 481.0, 45.0, 19.0 ],
+					"patching_rect" : [ 866.0, 481.0, 49.0, 20.0 ],
 					"text" : "change"
 				}
 
@@ -283,7 +269,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 705.0, 309.0, 60.0, 19.0 ],
+					"patching_rect" : [ 705.0, 309.0, 62.0, 20.0 ],
 					"text" : "delay~ 10"
 				}
 
@@ -297,7 +283,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 705.0, 479.0, 27.0, 19.0 ],
+					"patching_rect" : [ 705.0, 479.0, 27.0, 20.0 ],
 					"text" : "*~"
 				}
 
@@ -311,7 +297,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 866.0, 459.0, 78.0, 19.0 ],
+					"patching_rect" : [ 866.0, 459.0, 82.0, 20.0 ],
 					"text" : "snapshot~ 40"
 				}
 
@@ -325,7 +311,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 626.0, 309.0, 60.0, 19.0 ],
+					"patching_rect" : [ 626.0, 309.0, 62.0, 20.0 ],
 					"text" : "delay~ 10"
 				}
 
@@ -339,7 +325,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 626.0, 479.0, 27.0, 19.0 ],
+					"patching_rect" : [ 626.0, 479.0, 27.0, 20.0 ],
 					"text" : "*~"
 				}
 
@@ -353,7 +339,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 491.0, 309.0, 37.0, 19.0 ],
+					"patching_rect" : [ 491.0, 309.0, 39.0, 20.0 ],
 					"text" : "dbtoa"
 				}
 
@@ -367,7 +353,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 782.0, 377.0, 107.0, 19.0 ],
+					"patching_rect" : [ 782.0, 377.0, 107.0, 20.0 ],
 					"text" : ">~ 0."
 				}
 
@@ -381,7 +367,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 782.0, 309.0, 132.0, 19.0 ],
+					"patching_rect" : [ 782.0, 309.0, 138.0, 20.0 ],
 					"text" : "average~ 1000 absolute"
 				}
 
@@ -395,7 +381,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "float" ],
-					"patching_rect" : [ 361.0, 309.0, 74.0, 19.0 ],
+					"patching_rect" : [ 361.0, 309.0, 78.0, 20.0 ],
 					"text" : "mstosamps~"
 				}
 
@@ -409,7 +395,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "float" ],
-					"patching_rect" : [ 281.0, 309.0, 74.0, 19.0 ],
+					"patching_rect" : [ 281.0, 309.0, 78.0, 20.0 ],
 					"text" : "mstosamps~"
 				}
 
@@ -423,7 +409,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 416.0, 349.0, 78.0, 17.0 ],
+					"patching_rect" : [ 416.0, 349.0, 82.0, 18.0 ],
 					"text" : "rampdown $1"
 				}
 
@@ -437,7 +423,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 336.0, 349.0, 63.0, 17.0 ],
+					"patching_rect" : [ 336.0, 349.0, 67.0, 18.0 ],
 					"text" : "rampup $1"
 				}
 
@@ -451,7 +437,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 782.0, 430.0, 80.0, 19.0 ],
+					"patching_rect" : [ 782.0, 430.0, 82.0, 20.0 ],
 					"text" : "rampsmooth~"
 				}
 
@@ -465,7 +451,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 30.0, 45.0, 131.0, 21.0 ],
+					"patching_rect" : [ 30.0, 45.0, 131.0, 20.0 ],
 					"text" : "Noise gate - stereo"
 				}
 
@@ -761,10 +747,6 @@
 			}
 , 			{
 				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{

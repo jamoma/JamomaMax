@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		469BD9FE180B590F00A023B3 /* j.textslider.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.textslider.yml; sourceTree = "<group>"; };
 		A7FD863715189A5D00FAD6D7 /* j.textslider.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.textslider.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -14,6 +15,7 @@
 		A72D873215188DFD001DA7C1 = {
 			isa = PBXGroup;
 			children = (
+				469BD9FE180B590F00A023B3 /* j.textslider.yml */,
 				A7FD863615189A5300FAD6D7 /* Sources */,
 			);
 			sourceTree = "<group>";

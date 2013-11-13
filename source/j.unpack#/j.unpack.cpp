@@ -64,8 +64,8 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 UnpackPtr UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
     UnpackPtr	self;
-	TTValue	v;
-	TTErr	err;
+	TTValue		v, none;
+	TTErr		err;
 	
     self = UnpackPtr(object_alloc(sUnpackClass));
     if (self) {
@@ -82,7 +82,7 @@ UnpackPtr UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 			return NULL;
 		}
 		
-		err = TTObjectBaseInstantiate(TT("callback"), (TTObjectBasePtr*)&self->callback, kTTValNONE);
+		err = TTObjectBaseInstantiate(TT("callback"), (TTObjectBasePtr*)&self->callback, none);
 		self->callback->setAttributeValue(TT("function"), TTPtr(&UnpackGraphCallback));
 		self->callback->setAttributeValue(TT("baton"), TTPtr(self));	
 		// dynamically add a message to the callback object so that it can handle the 'dictionaryReceived' notification

@@ -25,8 +25,8 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();
 
 //	options->append(TT("generator"), value);
-	options->append(TT("generator"), kTTBoolYes);
-	options->append(TT("userCanSetNumChannels"), kTTBoolYes);
+	options->append(TT("generator"), YES);
+	options->append(TT("userCanSetNumChannels"), YES);
 	wrapAsMaxAudioGraph(TT("noise"), "j.noise≈", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "white pink brown blue gauss");
 	wrapAsMaxAudioGraph(TT("noise"), "noise≈", &c, options);

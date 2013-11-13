@@ -233,7 +233,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 386.0, 1080.0, 133.0, 18.0 ],
-									"text" : "/test:repetitions/allow 0"
+									"text" : "/test:repetitions/filter 1"
 								}
 
 							}
@@ -260,7 +260,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 324.0, 993.0, 127.0, 20.0 ],
-									"text" : "route repetitions/allow"
+									"text" : "route repetitions/filter"
 								}
 
 							}
@@ -289,7 +289,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 324.0, 1017.001831, 241.0, 33.0 ],
-									"text" : "j.test.assert.equal repetitions/allow-test @input repetitions/allow @compareTo 0"
+									"text" : "j.test.assert.equal repetitions/filter-test @input repetitions/filter @compareTo 1"
 								}
 
 							}

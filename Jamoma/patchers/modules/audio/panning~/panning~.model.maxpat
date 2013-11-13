@@ -67,7 +67,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 599.0, 23.5, 146.0, 87.0 ],
+					"patching_rect" : [ 599.0, 23.5, 147.0, 87.0 ],
 					"text" : "j.parameter shape @type string @description \"Choose the panning function: linear, squareroot, or equal-power\"",
 					"varname" : "shape[1]"
 				}
@@ -83,7 +83,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 416.0, 23.5, 170.0, 127.0 ],
+					"patching_rect" : [ 416.0, 23.5, 166.0, 127.0 ],
 					"text" : "j.parameter position @type decimal @range/bounds -1 1. @ramp/drive Max @value/default 0. @range/clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
 					"varname" : "position"
 				}
@@ -632,7 +632,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 24.0, 282.0, 192.0, 47.0 ],
+					"patching_rect" : [ 24.0, 282.0, 180.0, 47.0 ],
 					"text" : "j.model @description \"APanning  a mono sound source to stereo.\""
 				}
 

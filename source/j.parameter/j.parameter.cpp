@@ -174,6 +174,22 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 		object_error((ObjectPtr)x, "needs a name as first argument");
 		return;
 	}
+    
+    // check for reserved address
+    if (relativeAddress == gensym("data/mute")      ||
+        relativeAddress == gensym("data/bypass")    ||
+        relativeAddress == gensym("data/freeze")    ||
+        relativeAddress == gensym("data/preview")   ||
+        relativeAddress == gensym("audio/mute")     ||
+        relativeAddress == gensym("audio/bypass")   ||
+        relativeAddress == gensym("audio/mix")      ||
+        relativeAddress == gensym("audio/gain")     ||
+        relativeAddress == gensym("model")          ||
+        relativeAddress == gensym("preset")         ) {
+        
+        object_error((ObjectPtr)x, "%s address is reserved by j.model", relativeAddress->s_name);
+		return;
+    }
 	
 	// Make outlets (before attr_args_process)
 	/////////////////////////////////////////////////////////////////////////////////
@@ -247,7 +263,14 @@ void data_subscribe(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, AtomP
 	if (TTAddress(relativeAddress->s_name).getType() == kAddressRelative) {
         
 		jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, TTAddress(jamoma_parse_dieze((ObjectPtr)x, relativeAddress)->s_name), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
-		
+        
+#ifndef JMOD_MESSAGE
+#ifndef JMOD_RETURN
+        // if a j.parameter is registered under the root : reset to the default value our self
+        if (returnedContextNode == JamomaDirectory->getRoot())
+            x->wrappedObject->sendMessage(kTTSym_Init);
+#endif
+#endif
 	}
 	else
 		object_error((ObjectPtr)x, "can't register because %s is not a relative address", relativeAddress->s_name);
@@ -349,19 +372,19 @@ void data_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue v;
+	TTValue v, none;
 
 	jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
-	selectedObject->sendMessage(TTSymbol("Inc"), v, kTTValNONE);
+	selectedObject->sendMessage(TTSymbol("Inc"), v, none);
 }
 
 
 void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue v;
+	TTValue v, none;
 	
 	jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
-	selectedObject->sendMessage(TTSymbol("Dec"), v, kTTValNONE);
+	selectedObject->sendMessage(TTSymbol("Dec"), v, none);
 }
 #endif

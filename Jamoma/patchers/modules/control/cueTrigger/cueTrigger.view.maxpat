@@ -1331,7 +1331,7 @@
                     204.0,
                     67.0
                   ],
-                  "text": "j.message go @type generic @repetitions/allow 1 @description \"Trigger selected cue. If a number is provided e.g. /go 2, then the Nth cue in the cuelist is immediately triggered\""
+                  "text": "j.message go @type generic @repetitions/filter 0 @description \"Trigger selected cue. If a number is provided e.g. /go 2, then the Nth cue in the cuelist is immediately triggered\""
                 }
               },
               {

@@ -81,14 +81,14 @@ public:
 		TTCallback*	callback = NULL;
 		TTValuePtr	baton = new TTValue(TTPtr(aBaton));
 		TTData*		parameter = NULL;
-		TTValue		parameter_args;
+		TTValue		parameter_args, none;
 		TTString	name("/");
 		TTNodePtr	returnedNode = NULL;
 		TTBoolean	newInstanceCreated = NO;
 		
 		name += aName.string();
 		
-		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&callback), kTTValNONE);
+		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&callback), none);
 		callback->setAttributeValue(TTSymbol("baton"),	baton);
 		callback->setAttributeValue(TTSymbol("function"), TTPtr(aCallbackFunction));
 		

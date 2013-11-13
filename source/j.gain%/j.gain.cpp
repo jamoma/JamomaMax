@@ -72,12 +72,13 @@ t_jit_err GainClassInit(void)
 GainObjectPtr GainNew(void)
 {
 	GainObjectPtr	self = (GainObjectPtr)jit_object_alloc(sGainClass);
+	TTValue 		none;
 	TTErr			err;
 	
 	if (self) {
-		err = TTObjectBaseInstantiate(kTTSym_matrix, (TTObjectBasePtr*)&self->x, kTTValNONE);
-		err = TTObjectBaseInstantiate(kTTSym_matrix, (TTObjectBasePtr*)&self->y, kTTValNONE);
-		err = TTObjectBaseInstantiate(TT("matrix.gain"), (TTObjectBasePtr*)&self->gainObject, kTTValNONE);
+		err = TTObjectBaseInstantiate(kTTSym_matrix, (TTObjectBasePtr*)&self->x, none);
+		err = TTObjectBaseInstantiate(kTTSym_matrix, (TTObjectBasePtr*)&self->y, none);
+		err = TTObjectBaseInstantiate(TT("matrix.gain"), (TTObjectBasePtr*)&self->gainObject, none);
 	} 
 	return self;
 }

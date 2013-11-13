@@ -44,7 +44,7 @@
 * Trond Lossius 2000-06-26														
 ********************************************************************************/
 
-#include "Jamoma.h"									// include Jamoma lib
+#include "JamomaForMax.h"							// include Jamoma lib
 
 
 #define NUM_OF_POINTS 128							///< maximum number of points that line~ accepts

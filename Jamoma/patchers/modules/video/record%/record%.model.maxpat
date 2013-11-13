@@ -824,7 +824,7 @@
             428.0,
             31.0
           ],
-          "text": "j.parameter framerate @type decimal @ramp/drive none @repetitions/allow 0 @range/bounds 1. 25 @range/clipmode low @description Framerate.",
+          "text": "j.parameter framerate @type decimal @ramp/drive none @repetitions/filter 1 @range/bounds 1. 25 @range/clipmode low @description Framerate.",
           "varname": "framerate"
         }
       },

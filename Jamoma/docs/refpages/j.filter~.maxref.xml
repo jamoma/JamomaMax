@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.filter~" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		A collection of audio filters
 	</digest>
 	<description>
-		TEXT_HERE
+		A collection of audio filters
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			filter
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -53,7 +53,7 @@
 				TEXT_HERE
 			</description>
 		</inlet>
-	</inletlist>
+	</inletlist> -->
 	<!--OUTLETS-->
 	<outletlist>
 		<outlet id="0" type="signal">
@@ -79,16 +79,16 @@
 			<description>
 				TEXT_HERE
 			</description>
-		</outlet>
+		</outlet> -->
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<objarg id="0" name="channels" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				Number of audio channels
 			</digest>
 			<description>
-				TEXT_HERE
+				Number of audio channels
 			</description>
 		</objarg>
 	</objarglist>
@@ -97,28 +97,28 @@
 		<method name="clear">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Clear the filter
 			</digest>
 			<description>
-				TEXT_HERE
+				Clear the filter in case it exploded
 			</description>
 		</method>
 		<method name="getTypes">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Output a list of available filters
 			</digest>
 			<description>
-				TEXT_HERE
+				Output a list of available filters
 			</description>
 		</method>
 		<method name="signal">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Audio input
 			</digest>
 			<description>
-				TEXT_HERE
+				Audio input
 			</description>
 		</method>
 	</methodlist>
@@ -126,10 +126,10 @@
 	<attributelist>
 		<attribute name="bypass" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				BYpass the j.filter~
 			</digest>
 			<description>
-				TEXT_HERE
+				BYpass the j.filter~
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -137,34 +137,34 @@
 		</attribute>
 		<attribute name="frequency" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Set the filter cutoff frequency
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the filter cutoff frequency
 			</description>
 		</attribute>
 		<attribute name="mode" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set the filter mode: lowpass, highpass, bandpass or notch
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the filter mode: lowpass, highpass, bandpass or notch
 			</description>
 		</attribute>
 		<attribute name="q" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Set the filter gain
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the filter gain
 			</description>
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set the type of the filter
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the type of the filter
 			</description>
 		</attribute>
 	</attributelist>
@@ -174,8 +174,9 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.filter≈"/>
+		<seealso name="equalizer~.model"/>
+		<seealso name="biquad~"/>
+		<seealso name="filtergraph~"/>
 	</seealsolist>
 </c74object>
