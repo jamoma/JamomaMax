@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
@@ -37,8 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 285.0, 303.0, 43.0, 20.0 ],
-					"presentation_rect" : [ 284.0, 303.0, 0.0, 0.0 ],
-					"text" : "j.in~ 2"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -52,8 +51,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 285.0, 396.0, 50.0, 20.0 ],
-					"presentation_rect" : [ 285.0, 396.0, 0.0, 0.0 ],
-					"text" : "j.out~ 2"
+					"text" : "j.out~ 1"
 				}
 
 			}
