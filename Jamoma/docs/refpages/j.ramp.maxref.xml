@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.ramp" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Ramping from a value to a value
 	</digest>
 	<description>
-		TEXT_HERE
+		j.ramp provides a number of features to ramp to a value
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -229,8 +229,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.parameter"/>
+		<seealso name="slide"/>
 	</seealsolist>
 </c74object>

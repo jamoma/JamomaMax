@@ -259,8 +259,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.wavetable≈"/>
-		<seealso name="noise~"/>
-		<seealso name="pink~/">
+		<seealso name="j.wavetable≈" />
+		<seealso name="noise~" />
+		<seealso name="pink~" />
 	</seealsolist>
 </c74object>

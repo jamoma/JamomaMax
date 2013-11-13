@@ -55,18 +55,12 @@ void		ramp_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 /** Return the ramped values out */
 void		ramp_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
+/** Get or set value of scheduler parameter */
+void		ramp_schedulerParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-/** Get value of an additional parameter used for the function. */
-//void		ramp_getFunctionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+/** Get or set value of function parameter */
+void		ramp_functionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-/** Set additional parameters for the function currently used. */
-//void		ramp_setFunctionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-
-/** Set attribute value. */
-//void 		ramp_attrset(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-
-/** Get attribute value. */
-//void 		ramp_attrget(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 #pragma mark -
 #pragma mark main
@@ -97,13 +91,9 @@ void WrapTTRampClass(WrappedClassPtr c)
     
 	class_addmethod(c->maxClass, (method)ramp_set,					"set",						A_GIMME,	0);
 	class_addmethod(c->maxClass, (method)ramp_stop,					"stop",						0);
-/*
-	class_addmethod(c->maxClass, (method)ramp_attrset,				"attrset",					A_GIMME, 	0);
-	class_addmethod(c->maxClass, (method)ramp_attrget,				"attrget",					A_GIMME,	0);
-    
-	class_addmethod(c->maxClass, (method)ramp_getFunctionParameter,	"function.parameter.get",	A_GIMME,	0);
-	class_addmethod(c->maxClass, (method)ramp_setFunctionParameter,	"function.parameter",		A_GIMME,	0);
- */
+
+    class_addmethod(c->maxClass, (method)ramp_schedulerParameter,	"scheduler/parameter/value",A_GIMME,	0);
+	class_addmethod(c->maxClass, (method)ramp_functionParameter,	"function/parameter/value",	A_GIMME,	0);
 }
 
 
@@ -272,148 +262,64 @@ void ramp_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 #pragma mark attributes of attributes
 /************************************************************************************/
 // Attributes of attributes
-/*
-void ramp_getFunctionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void ramp_schedulerParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
-    t_atom*		a;
-    TTSymbol	parameterName;
-    TTValue		parameterValue;
-    int			numValues;
-    int			i;
-    TTSymbol	tempSymbol;
-    double		tempValue;
-    TTValue		v;
+    TTValue     v;
+    long        ac = 0;
+    t_atom*		av = NULL;
     
     if (!argc) {
-        error("j.ramp: not enough arguments to function.parameter.get");
+        error("j.ramp: not enough arguments to get or set scheduler/parameter/value");
         return;
     }
     
-    // get the correct TT name for the parameter given the Max name
-    parameterName = TTSymbol(atom_getsym(argv)->s_name);
-    obj->parameterNames->lookup(parameterName, v);
-    v.get(0, parameterName);
-    
-    obj->rampUnit->getFunctionParameterValue(parameterName, parameterValue);
-    numValues = parameterValue.getSize();
-    if (numValues) {
-        a = (t_atom *)sysmem_newptr(sizeof(t_atom) * (numValues+1));
-        // First list item is name of parameter
-        atom_setsym(a, gensym((char*)parameterName.c_str()));
-        // Next the whole shebang is copied
-        for (i=0; i<numValues; i++) {
-            if (parameterValue.getType(i) == kTypeSymbol) {
-                parameterValue.get(i, tempSymbol);
-                atom_setsym(a+i+1, gensym((char*)tempSymbol.c_str()));
-            }
-            else {
-                parameterValue.get(i, tempValue);
-                atom_setfloat(a+i+1, tempValue);
-            }
-        }
-        object_obex_dumpout(obj, gensym("function.parameter.get"), numValues+1, a);
+    // 1 argument : get the value
+    if (argc == 1) {
         
-        // The pointer to an atom assign in the getParameter method needs to be freed.
-        sysmem_freeptr(a);
-    }
-}
-
-
-void ramp_setFunctionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
-{
-    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
-    TTSymbol	parameterName;
-    TTValue		newValue;
-    int			i;
-    TTValue		v;
-    
-    if (argc < 2) {
-        error("j.map: not enough arguments to setParameter");
+        v = TTSymbol(atom_getsym(argv)->s_name);
+        x->wrappedObject->getAttributeValue(TTSymbol("schedulerParameterValue"), v);
+        
+        v.prepend(TTSymbol(atom_getsym(argv)->s_name));
+        jamoma_ttvalue_to_Atom(v, &ac, &av);
+        
+        object_obex_dumpout(x, gensym("scheduler/parameter/value"), ac, av);
         return;
     }
     
-    // get the correct TT name for the parameter given the Max name
-    parameterName = TTSymbol(atom_getsym(argv)->s_name);
-    obj->parameterNames->lookup(parameterName, v);
-    v.get(0, parameterName);
+    // 2 or more arguments : set the value
+    jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
     
-    for (i=1; i<=(argc-1); i++) {
-        if (argv[i].a_type == A_SYM)
-            newValue.append(TTSymbol(atom_getsym(argv+1)->s_name));
-        else
-            newValue.append(atom_getfloat(argv+i));
-    }
-    obj->rampUnit->setFunctionParameterValue(parameterName, newValue);
+    x->wrappedObject->setAttributeValue(TTSymbol("schedulerParameterValue"), v);
 }
 
-
-void ramp_attrset(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void ramp_functionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
-    TTSymbol	parameterName;
-    TTValue		newValue;
-    int			i;
-    
-    if (argc < 2) {
-        error("j.ramp: not enough arguments to setParameter");
-        return;
-    }
-    
-    parameterName = TTSymbol(atom_getsym(argv)->s_name);
-    for (i=1; i<=(argc-1); i++) {
-        if (argv[i].a_type == A_SYM)
-            newValue.append(TTSymbol(atom_getsym(argv+1)->s_name));
-        else
-            newValue.append(atom_getfloat(argv+i));
-    }
-    x->rampUnit->setAttributeValue(parameterName, newValue);
-}
-
-
-void ramp_attrget(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
-{
-    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
-    t_atom*		a;
-    TTSymbol	parameterName;
-    TTValue		parameterValue;
-    int			numValues;
-    int			i;
-    TTSymbol	tempSymbol;
-    double		tempValue;
+    TTValue     v;
+    long        ac = 0;
+    t_atom*		av = NULL;
     
     if (!argc) {
-        error("j.ramp: not enough arguments to parameter.get");
+        error("j.ramp: not enough arguments to get or set function/parameter/value");
         return;
     }
     
-    parameterName = TTSymbol(atom_getsym(argv)->s_name);
-    x->rampUnit->getAttributeValue(parameterName, parameterValue);
-    numValues = parameterValue.getSize();
-    
-    if (numValues) {
-        a = (t_atom *)sysmem_newptr(sizeof(t_atom) * (numValues+1));
-        // First list item is name of parameter
-        atom_setsym(a, gensym((char*)parameterName.c_str()));
-        // Next the whole shebang is copied
-        for (i=0; i<numValues; i++) {
-            if (parameterValue.getType(i) == kTypeSymbol) {
-                parameterValue.get(i, tempSymbol);
-                atom_setsym(a+i+1, gensym((char*)tempSymbol.c_str()));
-            }
-            else {
-                parameterValue.get(i, tempValue);
-                atom_setfloat(a+i+1, tempValue);
-            }
-        }
-        object_obex_dumpout(x, gensym("current.parameter"), numValues+1, a);
+    // 1 argument : get the value
+    if (argc == 1) {
         
-        // The pointer to an atom assign in the getParameter method needs to be freed.
-        sysmem_freeptr(a);
+        v = TTSymbol(atom_getsym(argv)->s_name);
+        x->wrappedObject->getAttributeValue(TTSymbol("functionParameterValue"), v);
+        
+        v.prepend(TTSymbol(atom_getsym(argv)->s_name));
+        jamoma_ttvalue_to_Atom(v, &ac, &av);
+        
+        object_obex_dumpout(x, gensym("function/parameter/value"), ac, av);
+        return;
     }
+    
+    // 2 or more arguments : set the value
+    jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
+    
+    x->wrappedObject->setAttributeValue(TTSymbol("functionParameterValue"), v);
 }
-*/

@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 175.0, 381.0, 288.0, 493.0 ],
+		"rect" : [ 175.0, 381.0, 568.0, 493.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -37,8 +37,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 140.0, 177.0, 92.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"patching_rect" : [ 140.0, 177.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.2"
 				}
 
 			}
@@ -51,8 +51,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 101.75, 128.5, 92.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"patching_rect" : [ 101.75, 128.5, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.1"
 				}
 
 			}
@@ -121,7 +121,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -324,11 +324,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 50.0, 94.0, 217.0, 81.0 ],
+						"rect" : [ 50.0, 94.0, 219.0, 80.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -347,6 +347,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"title" : "/balance(view).2",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -356,10 +357,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 22.0, 265.0, 67.0, 19.0 ],
+									"patching_rect" : [ 22.0, 265.0, 67.0, 20.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 41.0, 15.0, 42.0, 19.0 ],
-									"text" : "Mode:"
+									"presentation_rect" : [ 28.0, 15.0, 44.0, 20.0 ],
+									"text" : "Mode"
 								}
 
 							}
@@ -372,7 +373,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 212.0, 258.0, 106.0, 19.0 ],
+									"patching_rect" : [ 212.0, 258.0, 106.0, 20.0 ],
 									"text" : "j.remote mode",
 									"varname" : "mode[1]"
 								}
@@ -387,7 +388,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 212.0, 223.0, 108.0, 19.0 ],
+									"patching_rect" : [ 212.0, 223.0, 108.0, 20.0 ],
 									"text" : "j.remote shape",
 									"varname" : "shape[1]"
 								}
@@ -402,11 +403,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 22.0, 223.0, 55.0, 19.0 ],
+									"patching_rect" : [ 22.0, 223.0, 55.0, 20.0 ],
 									"presentation" : 1,
-									"presentation_linecount" : 2,
-									"presentation_rect" : [ 35.0, 41.0, 46.0, 19.0 ],
-									"text" : "Shape:"
+									"presentation_rect" : [ 28.0, 41.0, 49.0, 20.0 ],
+									"text" : "Shape"
 								}
 
 							}
@@ -422,9 +422,9 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 83.0, 265.0, 101.0, 19.0 ],
+									"patching_rect" : [ 83.0, 265.0, 101.0, 20.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 77.0, 15.0, 101.0, 19.0 ],
+									"presentation_rect" : [ 77.0, 15.0, 112.0, 20.0 ],
 									"varname" : "mode"
 								}
 
@@ -441,9 +441,9 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 83.0, 223.0, 101.0, 19.0 ],
+									"patching_rect" : [ 83.0, 223.0, 101.0, 20.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 77.0, 41.0, 101.0, 19.0 ],
+									"presentation_rect" : [ 77.0, 41.0, 112.0, 20.0 ],
 									"varname" : "shape"
 								}
 
@@ -579,7 +579,7 @@
 					"patching_rect" : [ 0.0, -1.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
-					"text" : "/balance~"
+					"text" : "/noM..ess"
 				}
 
 			}
@@ -676,6 +676,27 @@
 					"source" : [ "obj-4", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.meter~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
