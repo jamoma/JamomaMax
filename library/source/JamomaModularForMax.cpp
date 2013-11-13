@@ -942,7 +942,7 @@ void jamoma_ttvalue_to_typed_Atom(const TTValue& v, SymbolPtr *msg, AtomCount *a
 	if (!(*argv)) // otherwise use memory passed in
 		*argv = (AtomPtr)sysmem_newptr(sizeof(t_atom) * (*argc));
 	
-	if (*argc && !(v == kTTValNONE)) {
+	if (*argc && v.size() > 0) {
 		
 		for (i = 0; i < *argc; i++) {
 			
@@ -997,7 +997,7 @@ void jamoma_ttvalue_to_Atom(const TTValue& v, AtomCount *argc, AtomPtr *argv)
 	
 	*argc = v.size();
 	
-	if (*argc == 0 || v == kTTValNONE)
+	if (*argc == 0 || v.size() == 0)
 		return;
 	
 	if (!(*argv)) // otherwise use memory passed in
