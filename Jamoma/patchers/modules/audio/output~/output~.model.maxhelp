@@ -211,7 +211,7 @@
 													"args" : [ "input~.module" ],
 													"id" : "obj-2",
 													"maxclass" : "bpatcher",
-													"name" : "jmod.preset_params.maxpat",
+													"name" : "j.presetParameters.helper.maxpat",
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
@@ -858,7 +858,7 @@
 								"box" : 								{
 									"id" : "obj-51",
 									"maxclass" : "bpatcher",
-									"name" : "jmod.gain_params.maxpat",
+									"name" : "j.gainParameters.helper.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -1539,14 +1539,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.gain_params.maxpat",
+				"name" : "j.gainParameters.helper.maxpat",
 				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/help",
 				"patcherrelativepath" : "../../../../help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.preset_params.maxpat",
+				"name" : "j.presetParameters.helper.maxpat",
 				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/help",
 				"patcherrelativepath" : "../../../../help",
 				"type" : "JSON",

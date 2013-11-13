@@ -2180,7 +2180,7 @@
 					"id" : "obj-48",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.gain_params.maxpat",
+					"name" : "j.gainParameters.helper.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -2848,7 +2848,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jmod.gain_params.maxpat",
+				"name" : "j.gainParameters.helper.maxpat",
 				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/documentation/jamoma-help",
 				"patcherrelativepath" : "../../../documentation/jamoma-help",
 				"type" : "JSON",

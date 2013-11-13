@@ -286,7 +286,7 @@
 									"args" : [  ],
 									"id" : "obj-27",
 									"maxclass" : "bpatcher",
-									"name" : "jmod.gain_params.maxpat",
+									"name" : "j.gainParameters.helper.maxpat",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],

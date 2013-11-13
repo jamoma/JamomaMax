@@ -5,9 +5,9 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.cue" module="" category="Jamoma">
 	<digest>
-		Store and recall the state of several model	</digest>
+		Store and recall the state of several models	</digest>
 	<description>
-		<!-- TEXT_HERE -->
+		j.cue allows to store states of multiple models within a patch and offers various options to manage, recall or sequence these cue as  needed.
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -15,7 +15,13 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			cue
+		</metadata>
+		<metadata name="tag">
+			preset management
+		</metadata>
+		<metadata name="tag">
+			saving
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -78,7 +84,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="append">
+		<!-- <method name="append">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -88,16 +94,16 @@
 			<description>
 				TEXT_HERE
 			</description>
-		</method>
+		</method> -->
 		<method name="clear">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Clear content of j.cue
 			</digest>
 			<description>
-				TEXT_HERE
+				Clear the various cues stored in j.cue
 			</description>
 		</method>
 		<method name="copy">
@@ -105,10 +111,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Copy a cue to another position in list of cues
 			</digest>
 			<description>
-				TEXT_HERE
+				The 'copy' message followed by a cue name or index and an index will copy the specified cue to a new position in j.cue list of cues
 			</description>
 		</method>
 		<method name="(mouse)">
@@ -124,10 +130,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Open one or all cues as text in j.cue editor window
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'edit' followed by an optional cue name will respectively open the relevant cue in j.cue's editor window. Without any argument, 'edit' will open all cues stored in j.cue
 			</description>
 		</method>
 		<method name="dump">
@@ -135,10 +141,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Dump j.cue attributes value in j.cue right-most output
 			</digest>
 			<description>
-				TEXT_HERE
+				Dump j.cue attributes value in j.cue right-most output
 			</description>
 		</method>
 		<method name="interpolate">
@@ -146,10 +152,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Interpolate between two cues
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'interpolate' followed by 2 cue names or indexs and a ratio value (between 0 and 1) will interpolate between all j.parameters' value
 			</description>
 		</method>
 		<method name="move">
@@ -157,10 +163,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Move a cue to a specified index
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'move' followed by a cue name or index and a index will move this specified cue to a new position
 			</description>
 		</method>
 		<method name="output">
@@ -168,10 +174,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Output a cue content out of the left output
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'output' followed by a node address in the namespace (be it a model address or one of its parameters) will output its value(s) out of j.cue's left output
 			</description>
 		</method>
 		<method name="namespace/select">
@@ -179,10 +185,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Select an address within an indentified namespace
 			</digest>
 			<description>
-				TEXT_HERE
+				When using j.cue along with j.namespace, the message 'namespace/select' will select one or many addresses specified as argument in the namespace 
 			</description>
 		</method>
 		<method name="namespace/unselect">
@@ -190,21 +196,21 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Unselect an address within an indentified namespace
 			</digest>
 			<description>
-				TEXT_HERE
+				When using j.cue along with j.namespace, the message 'namespace/unselect' will unselect one or many addresses specified as argument in the namespace
 			</description>
 		</method>
-		<method name="namespace/update">
+		<method name="namespace/grab">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Select the namespace of an existing cue
 			</digest>
 			<description>
-				TEXT_HERE
+				When using j.cue along with j.namespace, the message 'namespace/grab' will select addresses in an existing cue specified as argument
 			</description>
 		</method>
 		<method name="mix">
@@ -212,10 +218,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Mix between two or more cues
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'mix' followed by pairs of cue name or index and amount value will mix between multiple cue's parameters value
 			</description>
 		</method>
 		<method name="read">
@@ -223,19 +229,19 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Read a list of cues stored in a text file
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'read' followed by an optional path to disk will open a list of cues stored in a text file
 			</description>
 		</method>
 		<method name="read/again">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Re-read a list of cues stored in a text file
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'read/again' followed by an optional path to disk will re-open a list of cues stored in a text file
 			</description>
 		</method>
 		<method name="recall">
@@ -243,21 +249,21 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Recall the state of many models
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'recall' followed by a cue name or index will set models values back to a previously saved state
 			</description>
 		</method>
-		<method name="sequence">
+		<method name="optimize">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Remove redundant values between consecutive cues
 			</digest>
 			<description>
-				TEXT_HERE
+				The 'optimize' message allows to filter out and delete redundant values between consecutive cues
 			</description>
 		</method>
 		<method name="store">
@@ -265,10 +271,21 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Store the state of one or many models in a cue
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'store' followed by an optional cue name or index will store some models parameters' value in j.cue
+			</description>
+		</method>
+		<method name="order">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Order of the cues stored in j.cue
+			</digest>
+			<description>
+				The 'order' attribute follwoed by an optionnal list of cue name or index will reorder the spcified cues with j.cue list of cues
 			</description>
 		</method>
 		<method name="remove">
@@ -276,10 +293,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Remove a cue from j.cue's list of cue
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'remove' followed by a cue name or index will remove the specified state from j.cue
 			</description>
 		</method>
 		<method name="rename">
@@ -287,10 +304,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Rename of cue
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'rename' followed by a cue name or index and new name will rename the specified state from j.cue
 			</description>
 		</method>
 		<method name="write">
@@ -298,19 +315,19 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Write j.cue's list of cue as a text file
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'write' followed by an optional file path will write j.cue's list of cue as a text file
 			</description>
 		</method>
 		<method name="write/again">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Write again j.cue's list of cues as a text file
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'write/again' will re-write j.cue's list of cue as a text file
 			</description>
 		</method>
 	</methodlist>
@@ -318,50 +335,50 @@
 	<attributelist>
 		<attribute name="current" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Current cue in j.cue
 			</digest>
 			<description>
-				TEXT_HERE
+				The 'current' attribute define the lastly stored, recalled or updated cue in j.cue
 			</description>
 		</attribute>
 		<attribute name="current/description" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Description of the current cue
 			</digest>
 			<description>
-				TEXT_HERE
+				The 'current/description' attribute allows to get or set a description of the current cue
 			</description>
 		</attribute>
 		<attribute name="current/position" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Position of the current cue
 			</digest>
 			<description>
-				TEXT_HERE
+				The 'current/position' attribute allows to get or set the position of the current cue
 			</description>
 		</attribute>
 		<attribute name="current/ramp" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Ramp time of the current cue
 			</digest>
 			<description>
-				TEXT_HERE
+				The 'current/ramp' attribute alows to get or set a ramp time length specified as milliseconds for the current cue
+			</description>
+		</attribute>
+		<attribute name="names" get="0" set="1" type="atom" size="1">
+			<digest>
+				Get the names of the cues stored in j.cue
+			</digest>
+			<description>
+				The 'names' attribute allows to get a list of all cues stored in j.cue
 			</description>
 		</attribute>
 		<attribute name="namespace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Bind to a specific namespace
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
-		</attribute>
-		<attribute name="order" get="1" set="1" type="atom" size="1">
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
+				The 'namespace' attribute followed by a j.namespace's named selection will set j.cue to use this namespace selection
 			</description>
 		</attribute>
 	</attributelist>
@@ -371,8 +388,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.preset">
-			<!-- TEXT_HERE -->
-		</seealso>
+		<seealso name="j.preset"/>
+		<seealso name="j.namespace"/>
+		<seealso name="pattrstorage"/>
 	</seealsolist>
 </c74object>

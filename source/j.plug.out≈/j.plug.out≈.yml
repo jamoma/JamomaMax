@@ -1,4 +1,3 @@
-
 sources:
   - j.plug.out.cpp
   - PlugtasticProgressWindow.mm		
@@ -29,10 +28,6 @@ frameworks:
 prefix: ../c74support/max-includes/macho-prefix.pch
 
 postbuilds:
-  - "rm -rf ../../../../../Builds/MaxMSP/$(NAME).mxo/Contents/Resources/"
-  - "mkdir -p ../../../../../Builds/MaxMSP/$(NAME).mxo/Contents/Resources/"
-  - "cp -r AudioUnits/ ../../../../../Builds/MaxMSP/$(NAME).mxo/Contents/Resources/"	
-  - "cp Info.plist ../../../../../Builds/MaxMSP/$(NAME).mxo/Contents/" 
-  
-compiler: clang  
+ - "cp -r AudioUnits/ ../../Jamoma/externals/$(NAME).mxo/Contents/Resources/"	
+ - "cp Info.plist ../../Jamoma/externals/$(NAME).mxo/Contents/"
 
