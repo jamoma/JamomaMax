@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
@@ -36,7 +36,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 401.0, 326.0, 186.0, 20.0 ],
+					"patching_rect" : [ 454.0, 326.0, 186.0, 20.0 ],
 					"text" : "<- replace by j.limiter~when fixed",
 					"textcolor" : [ 0.658824, 0.101348, 0.0, 1.0 ]
 				}
@@ -65,7 +65,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 331.5, 326.0, 44.0, 20.0 ],
+					"patching_rect" : [ 401.0, 326.0, 44.0, 20.0 ],
 					"text" : "j.thru~"
 				}
 
@@ -298,7 +298,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 317.0, 374.0, 73.0, 20.0 ],
+					"patching_rect" : [ 401.0, 374.0, 73.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -312,7 +312,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 233.0, 374.0, 73.0, 20.0 ],
+					"patching_rect" : [ 223.5, 374.0, 73.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -353,9 +353,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 272.0, 326.0, 44.0, 20.0 ],
-					"text" : "j.thru~"
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 514.0, 287.0, 37.0, 20.0 ],
+					"text" : "j.thru"
 				}
 
 			}
@@ -390,7 +390,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 233.0, 405.0, 25.0, 25.0 ]
+					"patching_rect" : [ 223.5, 405.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -401,7 +401,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 317.0, 405.0, 25.0, 25.0 ]
+					"patching_rect" : [ 401.0, 405.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -606,8 +606,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "j.thru.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
+				"patcherrelativepath" : "../../../components/thru",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.thru~.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
 				"patcherrelativepath" : "../../../components/thru",
 				"type" : "JSON",
 				"implicit" : 1
