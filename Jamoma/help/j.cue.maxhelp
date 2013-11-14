@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 2006.0, 162.0, 1012.0, 648.0 ],
+		"rect" : [ 2304.0, 118.0, 1012.0, 648.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -2690,7 +2690,7 @@
 									"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"border" : 0,
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 1, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 2, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 3, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 4, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 5, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 6, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 7, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 8, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 9, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 10, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ] ],
+									"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 1, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ] ],
 									"cols" : 1,
 									"colwidth" : 200,
 									"fgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -2710,7 +2710,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 10.0, 374.0, 184.0, 211.0 ],
 									"rowheight" : 20,
-									"rows" : 11,
+									"rows" : 2,
 									"sccolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"selmode" : 3,
 									"sgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
@@ -3253,6 +3253,128 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"bubble" : 1,
+									"bubbletextmargin" : 10,
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-36",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 124.0, 475.0, 181.0, 62.0 ],
+									"text" : "Change some parameters value in the models then recall the Outro cue",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-31",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 38.0, 497.0, 73.0, 18.0 ],
+									"presentation_rect" : [ 37.0, 395.0, 0.0, 0.0 ],
+									"text" : "recall Outro"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-30",
+									"linecount" : 5,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 112.0, 381.0, 129.0, 74.0 ],
+									"presentation_rect" : [ 114.0, 287.0, 0.0, 0.0 ],
+									"text" : "Now open j.cue's editor and see a ramp message has been added to each parameter"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-29",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 38.0, 381.0, 63.0, 18.0 ],
+									"presentation_rect" : [ 40.0, 291.0, 0.0, 0.0 ],
+									"text" : "edit Outro"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-26",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 38.0, 328.0, 109.0, 18.0 ],
+									"text" : "current/ramp 2000"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-24",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 156.0, 285.0, 129.0, 60.0 ],
+									"text" : "let's recall the cue we want to work with and set a ramp time for this cue."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-22",
+									"linecount" : 7,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 38.0, 173.0, 150.0, 100.0 ],
+									"text" : "You can add a ramp time to a state so that when recalling the corresponding cue, each value will ramp from their current state to the state stored in j.cue"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-15",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 38.0, 285.0, 73.0, 18.0 ],
+									"text" : "recall Outro"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
@@ -3260,7 +3382,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 240.5, 549.0, 89.0, 20.0 ],
+									"patching_rect" : [ 437.5, 550.0, 89.0, 20.0 ],
 									"text" : "Act I - Scene II",
 									"textcolor" : [ 0.0, 0.0, 0.0, 0.8 ]
 								}
@@ -3275,7 +3397,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 240.5, 495.0, 86.0, 20.0 ],
+									"patching_rect" : [ 437.5, 496.0, 86.0, 20.0 ],
 									"text" : "Act I - Scene I",
 									"textcolor" : [ 0.0, 0.0, 0.0, 0.8 ]
 								}
@@ -3290,7 +3412,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 240.5, 445.0, 26.0, 20.0 ],
+									"patching_rect" : [ 437.5, 446.0, 26.0, 20.0 ],
 									"text" : "init",
 									"textcolor" : [ 0.0, 0.0, 0.0, 0.8 ]
 								}
@@ -3307,7 +3429,7 @@
 									"orientation" : 0,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 233.0, 430.0, 104.0, 150.0 ],
+									"patching_rect" : [ 430.0, 431.0, 104.0, 150.0 ],
 									"setminmax" : [ 0.0, 1.0 ],
 									"size" : 3,
 									"slidercolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
@@ -3325,7 +3447,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 719.0, 213.0, 127.0, 114.0 ],
+									"patching_rect" : [ 854.0, 215.0, 127.0, 114.0 ],
 									"text" : "'mix' followed by 2 or more pairs of cue names or position + ratio allows to interpolate parameters value between multiple cues."
 								}
 
@@ -3340,7 +3462,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 665.0, 36.0, 139.0, 74.0 ],
+									"patching_rect" : [ 803.0, 66.0, 139.0, 74.0 ],
 									"text" : "'interpolate' followed by 2 cue names or position allows to interpolate parameters value from one cue to another."
 								}
 
@@ -3356,7 +3478,7 @@
 									"orientation" : 0,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 233.0, 65.0, 151.0, 16.0 ],
+									"patching_rect" : [ 430.0, 66.0, 151.0, 16.0 ],
 									"setminmax" : [ 0.0, 1.0 ],
 									"slidercolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 									"spacing" : 1
@@ -3374,7 +3496,7 @@
 									"orientation" : 0,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 489.0, 65.0, 151.0, 16.0 ],
+									"patching_rect" : [ 633.0, 66.0, 151.0, 16.0 ],
 									"setminmax" : [ 0.0, 1.0 ],
 									"slidercolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 									"spacing" : 1
@@ -3390,7 +3512,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 338.0, 20.0, 35.0, 18.0 ],
+									"patching_rect" : [ 175.0, 16.0, 35.0, 18.0 ],
 									"text" : "read"
 								}
 
@@ -3404,7 +3526,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 203.0, 20.0, 134.0, 18.0 ],
+									"patching_rect" : [ 40.0, 16.0, 134.0, 18.0 ],
 									"text" : "read j.cue.example.xml"
 								}
 
@@ -3426,7 +3548,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 170.0, 20.0, 24.0, 24.0 ],
+									"patching_rect" : [ 7.0, 16.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "1",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -3444,7 +3566,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 203.0, 591.0, 36.0, 20.0 ],
+									"patching_rect" : [ 400.0, 592.0, 36.0, 20.0 ],
 									"text" : "j.cue"
 								}
 
@@ -3459,7 +3581,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 489.0, 364.0, 109.0, 18.0 ],
+									"patching_rect" : [ 633.0, 365.0, 109.0, 18.0 ],
 									"text" : "mix 1 $1 2 $2 3 $3"
 								}
 
@@ -3478,7 +3600,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 489.0, 172.0, 190.0, 182.0 ],
+									"patching_rect" : [ 633.0, 173.0, 190.0, 182.0 ],
 									"xplace" : [ 0.41, 0.23, 0.935897 ],
 									"yplace" : [ 0.2, 0.77, 0.615385 ]
 								}
@@ -3494,7 +3616,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 489.0, 93.0, 103.0, 18.0 ],
+									"patching_rect" : [ 633.0, 94.0, 103.0, 18.0 ],
 									"text" : "interpolate 1 2 $1"
 								}
 
@@ -3510,7 +3632,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 233.0, 364.0, 170.0, 31.0 ],
+									"patching_rect" : [ 430.0, 365.0, 170.0, 31.0 ],
 									"text" : "mix init $1 \"Act I - Scene I\" $2 \"Act I - Scene II\" $3"
 								}
 
@@ -3529,7 +3651,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 233.0, 172.0, 190.0, 182.0 ],
+									"patching_rect" : [ 430.0, 173.0, 190.0, 182.0 ],
 									"xplace" : [ 0.41, 0.23, 0.935897 ],
 									"yplace" : [ 0.2, 0.77, 0.615385 ]
 								}
@@ -3545,7 +3667,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 233.0, 93.0, 190.0, 18.0 ],
+									"patching_rect" : [ 430.0, 94.0, 190.0, 18.0 ],
 									"text" : "interpolate Init \"Act I - Scene I\" $1"
 								}
 
@@ -3556,7 +3678,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 242.5, 146.5, 212.5, 146.5 ],
+									"midpoints" : [ 439.5, 147.5, 409.5, 147.5 ],
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -3566,6 +3688,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 49.5, 51.5, 409.5, 51.5 ],
 									"source" : [ "obj-11", 0 ]
 								}
 
@@ -3575,7 +3698,27 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 242.5, 409.0, 212.5, 409.0 ],
+									"midpoints" : [ 47.5, 580.0, 409.5, 580.0 ],
+									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 47.5, 580.5, 409.5, 580.5 ],
+									"source" : [ "obj-26", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 439.5, 410.0, 409.5, 410.0 ],
 									"source" : [ "obj-28", 0 ]
 								}
 
@@ -3585,8 +3728,8 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 498.5, 146.0, 212.5, 146.0 ],
-									"source" : [ "obj-3", 0 ]
+									"midpoints" : [ 47.5, 581.0, 409.5, 581.0 ],
+									"source" : [ "obj-29", 0 ]
 								}
 
 							}
@@ -3595,7 +3738,27 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 498.5, 409.5, 212.5, 409.5 ],
+									"midpoints" : [ 642.5, 147.0, 409.5, 147.0 ],
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"midpoints" : [ 47.5, 581.0, 409.5, 581.0 ],
+									"source" : [ "obj-31", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 642.5, 410.5, 409.5, 410.5 ],
 									"source" : [ "obj-4", 0 ]
 								}
 
@@ -3641,7 +3804,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 347.5, 50.5, 212.5, 50.5 ],
+									"midpoints" : [ 184.5, 51.5, 409.5, 51.5 ],
 									"source" : [ "obj-56", 0 ]
 								}
 
@@ -3667,7 +3830,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 470.0, 82.0, 55.0, 20.0 ],
+					"patching_rect" : [ 470.0, 82.0, 93.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3681,7 +3844,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p Mixing",
+					"text" : "p Interpolations",
 					"varname" : "basic_tab[4]"
 				}
 
@@ -3703,7 +3866,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 2006.0, 188.0, 1012.0, 622.0 ],
+						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4109,7 +4272,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1145.0, 168.0, 535.0, 275.0 ],
+						"rect" : [ 1742.0, 294.0, 535.0, 275.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4269,7 +4432,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
+						"rect" : [ 2304.0, 144.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4856,7 +5019,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 549.0, 95.0, 50.0, 20.0 ],
+					"patching_rect" : [ 563.0, 82.0, 50.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
