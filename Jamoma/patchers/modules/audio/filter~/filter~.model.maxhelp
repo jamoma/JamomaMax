@@ -367,7 +367,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "position" ],
+									"args" : [ "frequency" ],
 									"id" : "obj-2",
 									"maxclass" : "bpatcher",
 									"name" : "j.attrParameters.helper.maxpat",
@@ -773,12 +773,11 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-22",
-									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 199.0, 417.0, 147.0, 31.0 ],
+									"patching_rect" : [ 200.0, 433.0, 199.5, 18.0 ],
 									"text" : "/view/color/border 0.62 0. 0.36 1."
 								}
 
@@ -815,6 +814,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-22", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-26", 0 ]
 								}
 
 							}

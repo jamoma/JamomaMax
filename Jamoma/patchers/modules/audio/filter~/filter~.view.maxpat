@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
@@ -111,7 +111,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -474,7 +474,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -811,8 +811,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 43.0, 120.0, 103.0, 20.0 ],
-					"text" : "j.remote filtertype",
+					"patching_rect" : [ 43.0, 120.0, 80.0, 20.0 ],
+					"text" : "j.remote type",
 					"varname" : "filtertype"
 				}
 
@@ -826,8 +826,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 198.0, 431.0, 103.0, 20.0 ],
-					"text" : "j.remote filtergain",
+					"patching_rect" : [ 198.0, 431.0, 80.0, 20.0 ],
+					"text" : "j.remote gain",
 					"varname" : "filtergain"
 				}
 
@@ -1022,7 +1022,7 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/filter~.view"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -1079,7 +1079,7 @@
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 80.5, 156.0, 304.5, 156.0 ],
+					"midpoints" : [ 72.833336, 156.0, 304.5, 156.0 ],
 					"source" : [ "obj-22", 1 ]
 				}
 
