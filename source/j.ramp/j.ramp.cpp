@@ -125,16 +125,15 @@ void WrappedRampClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr));
     x->outlets[k_outlet_value] = outlet_new(x, 0L);
     
-    // Set default attributes
+    // Set default scheduler
     x->wrappedObject->setAttributeValue(TTSymbol("scheduler"), TTSymbol("Max"));
-    x->wrappedObject->setAttributeValue(TTSymbol("function"), TTSymbol("linear"));
     
     // Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
 	EXTRA->currentValue = new TTValue(0.);
     
     // Now set specified attributes, if any
-    //attr_args_process(x, argc, argv);
+    attr_args_process(x, argc, argv);
 }
 
 void WrappedRampClass_free(TTPtr self)
@@ -142,6 +141,8 @@ void WrappedRampClass_free(TTPtr self)
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
     delete EXTRA->currentValue;
+    EXTRA->currentValue = NULL;
+    
     free(EXTRA);
 }
 
@@ -171,10 +172,8 @@ void ramp_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 void ramp_bang(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
     
-    // TODO
-    //x->rampUnit->tick();
+    x->wrappedObject->sendMessage(kTTSym_Tick);
 }
 
 
@@ -282,7 +281,8 @@ void ramp_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
     // keep current value in memory
-    jamoma_ttvalue_from_Atom(*(EXTRA->currentValue), msg, argc, argv);
+    if (EXTRA->currentValue != NULL)
+        jamoma_ttvalue_from_Atom(*(EXTRA->currentValue), msg, argc, argv);
     
     outlet_anything(x->outlets[k_outlet_value], msg, argc, argv);
 }
