@@ -15,6 +15,12 @@ enum outlets {
 	num_outlets
 };
 
+// This is used to store extra data
+typedef struct extra {
+	TTValuePtr         currentValue;
+} t_extra;
+#define EXTRA ((t_extra*)x->extra)
+
 // Prototypes
 
 /** Wrap the TTRamp class as a Max object.
@@ -27,9 +33,15 @@ void		WrapTTRampClass(WrappedClassPtr c);
  @param self		Pointer to this object.
  @param argc		The number of arguments passed to the object.
  @param argv		Pointer to an array of atoms passed to the object.
- @see				WrappedInputClass_free, in_subscribe
+ @see				WrappedInputClass_free
  */
 void		WrappedRampClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
+
+/** Wrapper for the j.ramp destructor class, called when an instance is deleted.
+ @param self		Pointer to this object.
+ @see				WrappedInputClass_new
+ */
+void		WrappedRampClass_free(TTPtr self);
 
 /** Method for Assistance Messages */
 void		ramp_assist(TTPtr self, void *b, long msg, long arg, char *dst);
@@ -72,7 +84,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	ModularSpec *spec = new ModularSpec;
 	spec->_wrap = &WrapTTRampClass;
 	spec->_new = &WrappedRampClass_new;
-	spec->_free = NULL;
+	spec->_free = &WrappedRampClass_free;
     spec->_any = NULL;
     
 	return wrapTTModularClassAsMaxClass(kTTSym_Ramp, "j.ramp", NULL, spec);
@@ -117,8 +129,20 @@ void WrappedRampClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
     x->wrappedObject->setAttributeValue(TTSymbol("scheduler"), TTSymbol("Max"));
     x->wrappedObject->setAttributeValue(TTSymbol("function"), TTSymbol("linear"));
     
+    // Prepare extra data
+	x->extra = (t_extra*)malloc(sizeof(t_extra));
+	EXTRA->currentValue = new TTValue(0.);
+    
     // Now set specified attributes, if any
     //attr_args_process(x, argc, argv);
+}
+
+void WrappedRampClass_free(TTPtr self)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    delete EXTRA->currentValue;
+    free(EXTRA);
 }
 
 #pragma mark -
@@ -242,6 +266,8 @@ void ramp_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         }
         else { // "ramp" is the second last list member, so we start ramping
             
+            aRamp->sendMessage(TTSymbol("Set"), *(EXTRA->currentValue), none);
+            
             aRamp->sendMessage(TTSymbol("Target"), v, none);
             
             // get time
@@ -254,6 +280,9 @@ void ramp_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 void ramp_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    // keep current value in memory
+    jamoma_ttvalue_from_Atom(*(EXTRA->currentValue), msg, argc, argv);
     
     outlet_anything(x->outlets[k_outlet_value], msg, argc, argv);
 }
