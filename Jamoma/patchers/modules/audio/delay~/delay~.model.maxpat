@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
@@ -102,13 +102,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-14",
-					"linecount" : 11,
+					"linecount" : 12,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1328.0, 44.0, 161.0, 154.0 ],
-					"text" : "j.parameter delay/maxSize @type integer @value/default 1000000 @ramp/drive none @repetitions/filter 1 @range/bounds 0 1000000 @range/clipmode low @dataspace time @dataspace/unit sample @description \"Maximum delay size in samples.\"",
+					"patching_rect" : [ 1328.0, 34.0, 162.0, 167.0 ],
+					"text" : "j.parameter delay/maxSize @type integer @value/default 1000000 @ramp/drive none @repetitions/filter 1 @range/bounds 0 1000000 @range/clipmode low @dataspace time @dataspace/unit sample @priority 1 @description \"Maximum delay size in samples.\"",
 					"varname" : "delay/right[1]"
 				}
 
@@ -123,7 +123,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 884.0, 44.0, 159.0, 127.0 ],
+					"patching_rect" : [ 884.0, 34.0, 159.0, 127.0 ],
 					"text" : "j.message delay @type integer @ramp/drive Max @repetitions/filter 0 @range/bounds 0 1000000 @dataspace time @dataspace/unit sample @description \"Delay time in samples to be applied to both channels.\"",
 					"varname" : "j.parameter.mxb[9]"
 				}
@@ -154,8 +154,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 25.0, 188.0, 365.0, 20.0 ],
-					"text" : "j.model @type audio @description \"Sample-accurate stereo delay.\"",
+					"patching_rect" : [ 25.0, 188.0, 296.0, 20.0 ],
+					"text" : "j.model @description \"Sample-accurate stereo delay.\"",
 					"varname" : "j.hub"
 				}
 
@@ -242,7 +242,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 536.0, 34.0, 26.0, 26.0 ]
 				}
 
@@ -254,7 +254,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 401.0, 34.0, 26.0, 26.0 ]
 				}
 
@@ -521,6 +521,27 @@
 					"source" : [ "obj-8", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
