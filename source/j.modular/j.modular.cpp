@@ -64,7 +64,7 @@ void WrappedApplicationClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	TTSymbol					applicationName;
 	TTSymbol					protocolName;
 	TTXmlHandlerPtr             anXmlHandler;
-	TTValue						v, args;
+	TTValue						v, args, none;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
 		
 	// j.modular can handle the local application (1 argument to declare a protocol to use)
@@ -120,10 +120,10 @@ void WrappedApplicationClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
             
             // register the application to the protocol
             v = TTValue(applicationName);
-            getProtocol(protocolName)->sendMessage(TTSymbol("registerApplication"), v, kTTValNONE);
+            getProtocol(protocolName)->sendMessage(TTSymbol("registerApplication"), v, none);
             
             // run this protocol
-            TTModularApplications->sendMessage(TTSymbol("ProtocolRun"), protocolName, kTTValNONE);
+            TTModularApplications->sendMessage(TTSymbol("ProtocolRun"), protocolName, none);
         }
 	}
 	
@@ -176,7 +176,7 @@ void modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
 	TTSymbol    applicationName, parameterName;
 	TTObjectBasePtr	aProtocol = NULL;
 	TTHashPtr	hashParameters;
-	TTValue		v, keys, parameterValue;
+	TTValue		v, keys, parameterValue, none;
 	AtomCount	ac;
 	AtomPtr		av;
 	TTErr		err;
@@ -218,7 +218,7 @@ void modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
                         
                         // stop the protocol for the distant application
                         else
-                            aProtocol->sendMessage(TTSymbol("Stop"), applicationName, kTTValNONE);
+                            aProtocol->sendMessage(TTSymbol("Stop"), applicationName, none);
                             
 						// set parameters
 						v = TTValue(applicationName);
@@ -231,7 +231,7 @@ void modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
                         
                         // run the protocol for the distant application
                         else
-                            aProtocol->sendMessage(TTSymbol("Run"), applicationName, kTTValNONE);
+                            aProtocol->sendMessage(TTSymbol("Run"), applicationName, none);
 					}
 					else
 						object_error((ObjectPtr)x, "%s is not a parameter of %s protocol", parameterName.c_str(), EXTRA->protocolName.c_str());
@@ -268,7 +268,7 @@ void modular_namespace_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
 void modular_namespace_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue				o, v;
+	TTValue				o, v, none;
 	TTSymbol			fullpath;
 	TTXmlHandlerPtr     anXmlHandler = NULL;
 	TTErr				tterr;
@@ -285,7 +285,7 @@ void modular_namespace_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr
 			anXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
 			
 			critical_enter(0);
-			tterr = anXmlHandler->sendMessage(kTTSym_Read, v, kTTValNONE);
+			tterr = anXmlHandler->sendMessage(kTTSym_Read, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -306,7 +306,7 @@ void	modular_namespace_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char 			filename[MAX_FILENAME_CHARS];
 	TTSymbol		fullpath;
-	TTValue			o, v;
+	TTValue			o, v, none;
 	TTXmlHandlerPtr anXmlHandler;
 	TTErr			tterr;
 	
@@ -323,7 +323,7 @@ void	modular_namespace_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 			anXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
 			
 			critical_enter(0);
-			tterr = anXmlHandler->sendMessage(kTTSym_Write, v, kTTValNONE);
+			tterr = anXmlHandler->sendMessage(kTTSym_Write, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
