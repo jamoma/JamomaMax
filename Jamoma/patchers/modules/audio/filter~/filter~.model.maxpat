@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
@@ -37,8 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 285.0, 303.0, 43.0, 20.0 ],
-					"presentation_rect" : [ 284.0, 303.0, 0.0, 0.0 ],
-					"text" : "j.in~ 2"
+					"text" : "j.in~ 1"
 				}
 
 			}
@@ -52,8 +51,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 285.0, 396.0, 50.0, 20.0 ],
-					"presentation_rect" : [ 285.0, 396.0, 0.0, 0.0 ],
-					"text" : "j.out~ 2"
+					"text" : "j.out~ 1"
 				}
 
 			}
@@ -173,7 +171,7 @@
 					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 37.85714, 257.0, 160.0, 66.0 ],
-					"setfilter" : [ 0, 5, 1, 0, 0, 40.0, 1.0, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+					"setfilter" : [ 0, 1, 1, 0, 0, 1548.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 				}
 
 			}
@@ -257,8 +255,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 87.5, 53.0, 482.0, 33.0 ],
-					"text" : "j.parameter filtertype @type string @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf\"",
+					"patching_rect" : [ 87.5, 53.0, 586.0, 33.0 ],
+					"text" : "j.parameter type @type string @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf\"",
 					"varname" : "filtertype"
 				}
 
@@ -273,8 +271,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 159.0, 144.0, 579.0, 33.0 ],
-					"text" : "j.parameter filtergain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive Max @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
+					"patching_rect" : [ 159.0, 144.0, 532.0, 33.0 ],
+					"text" : "j.parameter gain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive Max @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
 					"varname" : "filtergain"
 				}
 

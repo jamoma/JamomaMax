@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
@@ -80,7 +80,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 869.0, 173.0, 151.0, 127.0 ],
+					"patching_rect" : [ 869.0, 173.0, 154.0, 127.0 ],
 					"text" : "j.parameter preamp @ramp/drive Max @repetitions/filter 1 @type decimal @range/bounds -12 48 @range/clipmode none @description \"Preamp (dB).\" @dataspace gain @dataspace/unit dB",
 					"varname" : "preamp"
 				}
@@ -182,7 +182,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 695.0, 173.0, 154.0, 114.0 ],
+					"patching_rect" : [ 695.0, 173.0, 148.0, 114.0 ],
 					"text" : "j.parameter depth @ramp/drive Max @repetitions/filter 1 @type decimal @range/bounds 0 99 @range/clipmode both @description \"Saturation: Depth.\"",
 					"varname" : "depth"
 				}
@@ -235,9 +235,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 654.0, 442.0, 44.0, 20.0 ],
-					"text" : "j.thru~"
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 695.0, 398.0, 37.0, 20.0 ],
+					"text" : "j.thru"
 				}
 
 			}
@@ -511,8 +511,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "j.thru.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
+				"patcherrelativepath" : "../../../components/thru",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.thru~.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
 				"patcherrelativepath" : "../../../components/thru",
 				"type" : "JSON",
 				"implicit" : 1
