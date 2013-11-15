@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
- <cue name="init">
+ <cue name="Init">
   <flag name="description">"Initialisation. Models are ready to play."</flag>
   <!---->
   <script address="mouse">
@@ -19,7 +19,7 @@
    </script>
   </script>
  </cue>
- <cue name="&quot;Act I - Scene I&quot;">
+ <cue name="Act I - Scene I">
   <flag name="description">"Mouse mapping activated + audio FX applied"</flag>
   <!---->
   <script address="mouse">
@@ -38,7 +38,7 @@
    </script>
   </script>
  </cue>
- <cue name="&quot;Act I - Scene II&quot;">
+ <cue name="Act I - Scene II">
   <flag name="description">"audio degrade get harsher"</flag>
   <!---->
   <script address="mouse">
