@@ -216,8 +216,13 @@ void model_subscribe(TTPtr self)
                 object_error((ObjectPtr)x, "can't subscribe model object");
             
             // In model patcher : set model:address with the model address
-			if (x->patcherContext == kTTSym_model)
+			if (x->patcherContext == kTTSym_model) {
+                
 				EXTRA->modelInfo->setAttributeValue(kTTSym_address, returnedAddress);
+                
+                // then set the address attribute readOnly
+                TTModelInfoPtr(EXTRA->modelInfo)->setAddressReadOnly(YES);
+            }
             
             // Get patcher arguments
 			ac = 0;

@@ -55,6 +55,11 @@ TTErr TTModelInfo::setAddress(const TTValue& newValue)
     return kTTErrNone;
 }
 
+void TTModelInfo::setAddressReadOnly(TTBoolean readOnly)
+{
+    addressAttribute->setreadOnly(readOnly);
+}
+
 TTErr TTModelInfo::InternalOpen()
 {	
 	ObjectPtr p = jamoma_patcher_get(mObject);

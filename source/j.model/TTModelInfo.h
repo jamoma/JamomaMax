@@ -39,6 +39,8 @@ public:
      */
     TTErr setAddress(const TTValue& newValue);
     
+    void setAddressReadOnly(TTBoolean readOnly);
+    
     /** Open the internal patcher
      @return    TTErr       kTTErrNone load was successful
      */
