@@ -95,13 +95,13 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	if (attrstart && argv)
 		if (atom_gettype(argv) == A_SYM)
 			address = atom_getsym(argv);
-	
+	/*
 	if (address == _sym_nothing) {
 		object_error((ObjectPtr)x, "needs an address as first argument");
 		x->extra = NULL;
 		return;
 	}
-
+*/
 	// add an inlet for the index
 	x->inlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 1);
 	x->inlets[0] = proxy_new(x, 1, &x->index);
