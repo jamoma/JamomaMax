@@ -364,7 +364,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 295.0, 55.0, 220.0, 82.0 ],
+						"rect" : [ 295.0, 55.0, 220.0, 81.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -383,7 +383,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"title" : "/panning~(view).1",
+						"title" : "/panning~(view).3",
 						"boxes" : [ 							{
 								"box" : 								{
 									"annotation" : "choose internal calculation mode for panning: fast uses a lookup table while precession performs trigonometric calculations",
@@ -419,32 +419,6 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 77.0, 41.0, 112.0, 20.0 ],
 									"varname" : "shape"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-4",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 326.0, 265.0, 111.0, 20.0 ],
-									"text" : "print j.remoteMode"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-3",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 326.0, 223.0, 115.0, 20.0 ],
-									"text" : "print j.remoteShape"
 								}
 
 							}
@@ -547,15 +521,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-10", 1 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-9", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -578,15 +543,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-9", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-9", 1 ]
 								}
 
 							}
