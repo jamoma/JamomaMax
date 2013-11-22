@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -29,25 +29,16 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-33",
-					"maxclass" : "live.meter~",
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-6",
+					"maxclass" : "comment",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 822.0, 347.0, 56.0, 11.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-34",
-					"maxclass" : "live.meter~",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 721.0, 347.0, 56.0, 11.0 ]
+					"numoutlets" : 0,
+					"patching_rect" : [ 890.0, 273.0, 150.0, 24.0 ],
+					"text" : "Contains j.out objects"
 				}
 
 			}
@@ -157,7 +148,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 195.0, 15.0, 139.0, 31.0 ],
+					"patching_rect" : [ 293.0, 78.0, 139.0, 31.0 ],
 					"text" : "/preset/store 1 default, /preset/write"
 				}
 
@@ -171,7 +162,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 15.0, 15.0, 141.0, 18.0 ],
+					"patching_rect" : [ 113.0, 78.0, 141.0, 18.0 ],
 					"text" : "/documentation/generate"
 				}
 
@@ -185,7 +176,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 155.0, 15.0, 39.0, 18.0 ],
+					"patching_rect" : [ 253.0, 78.0, 39.0, 18.0 ],
 					"text" : "/init"
 				}
 
@@ -214,7 +205,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 604.0, 232.0, 256.0, 20.0 ],
+					"patching_rect" : [ 601.0, 232.0, 259.0, 20.0 ],
 					"text" : "balance~.model balance @amenities none"
 				}
 
@@ -228,7 +219,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 604.0, 187.0, 256.0, 20.0 ],
+					"patching_rect" : [ 601.0, 187.0, 259.0, 20.0 ],
 					"text" : "limiter~.model limiter @amenities none"
 				}
 
@@ -354,7 +345,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -607,7 +598,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 722.5, 423.0, 137.5, 20.0 ],
+					"patching_rect" : [ 722.5, 341.0, 137.5, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -663,7 +654,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -832,7 +823,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1256,7 +1247,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 722.5, 320.0, 137.5, 20.0 ],
+					"patching_rect" : [ 601.0, 341.0, 55.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1313,28 +1304,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-33", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-12", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-4", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-12", 1 ]
+					"source" : [ "obj-11", 1 ]
 				}
 
 			}
@@ -1343,7 +1316,7 @@
 					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-12", 0 ]
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -1536,13 +1509,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.thru~.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../../components/thru",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "limiter~.model.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
 				"patcherrelativepath" : "../limiter~",
@@ -1578,6 +1544,14 @@
 			}
 , 			{
 				"name" : "j.in~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.overdrive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
