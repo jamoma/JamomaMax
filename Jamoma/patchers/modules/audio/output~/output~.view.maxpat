@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -80,7 +80,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -453,7 +453,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 45.0, 100.0, 190.0, 30.0 ],
+					"patching_rect" : [ 2.0, 62.0, 226.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 2.0, 62.0, 226.0, 24.0 ]
 				}
@@ -510,8 +510,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 63.0, 442.0, 122.0, 20.0 ],
-					"text" : "j.remote balance"
+					"patching_rect" : [ 63.0, 442.0, 144.0, 20.0 ],
+					"text" : "j.remote balance/position"
 				}
 
 			}
@@ -538,8 +538,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 144.0, 281.0, 175.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"patching_rect" : [ 144.0, 281.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.2"
 				}
 
 			}
@@ -552,8 +552,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 144.0, 225.0, 175.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"patching_rect" : [ 144.0, 225.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.1"
 				}
 
 			}
@@ -704,7 +704,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1572,7 +1572,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2069,7 +2069,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 45.0, 95.0, 190.0, 30.0 ],
+					"patching_rect" : [ 5.0, 90.0, 290.0, 45.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 5.0, 90.0, 290.0, 45.0 ]
 				}
@@ -2081,7 +2081,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 45.0, 25.0, 190.0, 40.0 ],
+					"patching_rect" : [ 2.0, 23.0, 225.0, 37.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 2.0, 23.0, 225.0, 37.0 ]
 				}
@@ -2098,7 +2098,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "/output~"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -2576,6 +2576,53 @@
 					"source" : [ "obj-95", 1 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.js_systeminfo.js",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/javascript",
+				"patcherrelativepath" : "../../../../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "",
+				"bootpath" : "/",
+				"patcherrelativepath" : "../../../../../../../../../../..",
+				"type" : "fold",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.meter~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.textslider.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

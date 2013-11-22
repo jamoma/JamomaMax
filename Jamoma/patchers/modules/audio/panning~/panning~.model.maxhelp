@@ -123,8 +123,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 45.0, 212.0, 131.0, 20.0 ],
-									"text" : "s balance~.model.cmd"
+									"patching_rect" : [ 45.0, 212.0, 132.0, 20.0 ],
+									"text" : "s panning~.model.cmd"
 								}
 
 							}
@@ -331,7 +331,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 620.0, 123.0, 1020.0, 686.0 ],
+						"rect" : [ 0.0, 26.0, 1020.0, 686.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -360,8 +360,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 33.0, 660.0, 131.0, 20.0 ],
-									"text" : "s balance~.model.cmd"
+									"patching_rect" : [ 33.0, 660.0, 132.0, 20.0 ],
+									"text" : "s panning~.model.cmd"
 								}
 
 							}
@@ -455,8 +455,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 55.0, 420.0, 131.0, 20.0 ],
-									"text" : "s balance~.model.cmd"
+									"patching_rect" : [ 55.0, 421.0, 132.0, 20.0 ],
+									"text" : "s panning~.model.cmd"
 								}
 
 							}
@@ -551,8 +551,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 72.0, 271.0, 131.0, 20.0 ],
-									"text" : "s balance~.model.cmd"
+									"patching_rect" : [ 72.0, 271.0, 132.0, 20.0 ],
+									"text" : "s panning~.model.cmd"
 								}
 
 							}
@@ -606,13 +606,13 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "balance~.model" ],
+					"jsarguments" : [ "panning~.model" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 10.0, 10.0, 345.242188, 53.625 ]
+					"patching_rect" : [ 10.0, 10.0, 347.9375, 53.625 ]
 				}
 
 			}
@@ -652,7 +652,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1020.0, 686.0 ],
+						"rect" : [ 620.0, 123.0, 1020.0, 686.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -696,8 +696,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 68.0, 251.0, 129.0, 20.0 ],
-									"text" : "r balance~.model.cmd"
+									"patching_rect" : [ 68.0, 251.0, 130.0, 20.0 ],
+									"text" : "r panning~.model.cmd"
 								}
 
 							}
@@ -720,7 +720,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 255.0, 169.0, 32.5, 18.0 ],
+									"patching_rect" : [ 320.5, 190.0, 32.5, 18.0 ],
 									"text" : "0"
 								}
 
@@ -734,7 +734,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 296.5, 169.0, 157.0, 18.0 ],
+									"patching_rect" : [ 362.0, 190.0, 157.0, 18.0 ],
 									"text" : "open drumloop.aif, loop 1, 1"
 								}
 
@@ -748,7 +748,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 296.5, 143.0, 58.0, 20.0 ],
+									"patching_rect" : [ 362.0, 164.0, 58.0, 20.0 ],
 									"text" : "loadbang"
 								}
 
@@ -760,21 +760,21 @@
 									"id" : "obj-4",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
-									"numoutlets" : 3,
-									"outlettype" : [ "signal", "signal", "bang" ],
-									"patching_rect" : [ 296.5, 197.0, 150.0, 20.0 ],
-									"save" : [ "#N", "sfplay~", "", 2, 120960, 0, "", ";" ],
-									"text" : "sfplay~ 2"
+									"numoutlets" : 2,
+									"outlettype" : [ "signal", "bang" ],
+									"patching_rect" : [ 362.0, 218.0, 59.0, 20.0 ],
+									"save" : [ "#N", "sfplay~", "", 1, 120960, 0, "", ";" ],
+									"text" : "sfplay~ 1"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "balance~" ],
+									"args" : [ "panning~" ],
 									"id" : "obj-3",
 									"maxclass" : "bpatcher",
-									"name" : "balance~.module.maxpat",
-									"numinlets" : 3,
+									"name" : "panning~.module.maxpat",
+									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
 									"patching_rect" : [ 231.0, 293.0, 150.0, 70.0 ],
@@ -784,7 +784,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@description", "A balance for stereo sources" ],
+									"args" : [ "@description", "Panning mono sources" ],
 									"bgmode" : 1,
 									"id" : "obj-1",
 									"maxclass" : "bpatcher",
@@ -807,7 +807,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 68.0, 393.0, 182.0, 18.0 ],
-									"text" : "shape EqualPower"
+									"text" : "shape Linear"
 								}
 
 							}
@@ -854,15 +854,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-3", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-3", 2 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-4", 1 ]
 								}
 
 							}
@@ -1015,22 +1006,22 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "balance~.module.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
+				"name" : "panning~.module.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/panning~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "balance~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
+				"name" : "panning~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/panning~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "balance~view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
+				"name" : "panning~.view.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/panning~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -1103,10 +1094,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
@@ -1116,6 +1103,10 @@
 			}
 , 			{
 				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
