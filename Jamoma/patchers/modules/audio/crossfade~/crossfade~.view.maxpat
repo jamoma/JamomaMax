@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 835.0, 98.0, 502.0, 520.0 ],
+		"rect" : [ 778.0, 98.0, 502.0, 520.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -334,7 +334,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 322.0, 337.0, 160.0, 20.0 ],
+					"patching_rect" : [ 281.0, 147.0, 160.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.0, 31.0, 268.0, 28.0 ],
 					"range" : [ 1.0, 2.0 ],
@@ -429,7 +429,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 322.0, 360.0, 117.0, 20.0 ],
+					"patching_rect" : [ 281.0, 170.0, 117.0, 20.0 ],
 					"text" : "j.remote position",
 					"varname" : "position"
 				}
@@ -464,7 +464,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 331.5, 383.0, 313.5, 383.0, 313.5, 333.0, 331.5, 333.0 ],
+					"midpoints" : [ 290.5, 193.0, 272.5, 193.0, 272.5, 143.0, 290.5, 143.0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -511,6 +511,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
