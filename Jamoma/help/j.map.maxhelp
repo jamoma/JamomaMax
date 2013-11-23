@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ -1.0, 44.0, 1681.0, 729.0 ],
+		"rect" : [ -1.0, 100.0, 1681.0, 729.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -312,7 +312,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ -1.0, 70.0, 1681.0, 703.0 ],
+						"rect" : [ -1.0, 126.0, 1681.0, 703.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -361,7 +361,7 @@
 									"attr" : "threshold/up",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-13",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -378,7 +378,7 @@
 									"attr" : "threshold/down",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-19",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -395,7 +395,7 @@
 									"attr" : "threshold/up",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-33",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -412,7 +412,7 @@
 									"attr" : "threshold/down",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-36",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -693,7 +693,7 @@
 									"attr" : "output/max",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-8",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -710,7 +710,7 @@
 									"attr" : "output/min",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-18",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -727,7 +727,7 @@
 									"attr" : "input/max",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-3",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -1411,7 +1411,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 252.0, 355.0, 167.0, 74.0 ],
+									"patching_rect" : [ 252.0, 355.0, 169.0, 74.0 ],
 									"text" : "j.map @function exponential @input/threshold/down 0.25 @input/threshold/up 0.75 @output/threshold/down 0.25 @output/threshold/up 0.75"
 								}
 
@@ -1497,7 +1497,7 @@
 									"attr" : "input/min",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-2",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -1578,7 +1578,7 @@
 									"destination" : [ "obj-34", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 409.5, 429.0, 502.5, 429.0, 502.5, 353.0, 595.5, 353.0 ],
+									"midpoints" : [ 411.5, 429.0, 502.5, 429.0, 502.5, 353.0, 595.5, 353.0 ],
 									"source" : [ "obj-175", 1 ]
 								}
 
@@ -2360,7 +2360,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 1418.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 1681.0, 70.0 ],
 					"varname" : "maxhelpui"
 				}
 
