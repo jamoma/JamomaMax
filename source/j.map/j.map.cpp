@@ -26,6 +26,8 @@ void WrappedMapperClass_free(TTPtr self);
 void map_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 
 void map_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void map_return_going_down(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void map_return_going_up(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 void map_int(TTPtr self, long value);
 void map_float(TTPtr self, double value);
@@ -51,6 +53,8 @@ void WrapTTMapperClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)map_assist, "assist", A_CANT, 0L);
 	
 	class_addmethod(c->maxClass, (method)map_return_value, "return_value", A_CANT, 0);
+    class_addmethod(c->maxClass, (method)map_return_going_down, "return_going_down", A_CANT, 0);
+    class_addmethod(c->maxClass, (method)map_return_going_up, "return_going_up", A_CANT, 0);
 	
 	class_addmethod(c->maxClass, (method)map_int, "int", A_LONG, 0L);
 	class_addmethod(c->maxClass, (method)map_float, "float", A_FLOAT, 0L);
@@ -168,6 +172,16 @@ void map_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
 	outlet_atoms(x->outlets[data_out], argc, argv);
+}
+
+void map_return_going_down(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+    object_obex_dumpout(self, gensym("going/down"), argc, argv);
+}
+
+void map_return_going_up(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+    object_obex_dumpout(self, gensym("going/up"), argc, argv);
 }
 
 void map_bang(TTPtr self)

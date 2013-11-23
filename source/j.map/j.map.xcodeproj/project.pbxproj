@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		468AD2A218402DCA00644131 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
+		468AD2A318402DCA00644131 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
 		469BD9E7180B552400A023B3 /* j.map.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.map.yml; sourceTree = "<group>"; };
 		D289EB19150F6B7300FC7F7E /* j.map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.map.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -17,6 +19,8 @@
 			children = (
 				469BD9E7180B552400A023B3 /* j.map.yml */,
 				D289EB19150F6B7300FC7F7E /* j.map.cpp */,
+				468AD2A318402DCA00644131 /* TTModularClassWrapperMax.h */,
+				468AD2A218402DCA00644131 /* TTModularClassWrapperMax.cpp */,
 			);
 			name = j.map;
 			sourceTree = "<group>";

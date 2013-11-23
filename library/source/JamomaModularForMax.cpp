@@ -531,8 +531,8 @@ TTErr jamoma_output_send(TTOutputPtr anOutput, SymbolPtr msg, AtomCount argc, At
 TTErr jamoma_mapper_create(ObjectPtr x, TTObjectBasePtr *returnedMapper)
 {
 	TTValue			args, none;
-	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
+	TTObjectBasePtr	returnValueCallback, returnGoingDownCallback, returnGoingUpCallback;
+	TTValuePtr		returnValueBaton, returnGoingDownBaton, returnGoingUpBaton;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
@@ -541,6 +541,22 @@ TTErr jamoma_mapper_create(ObjectPtr x, TTObjectBasePtr *returnedMapper)
 	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
+    
+    returnGoingDownCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnGoingDownCallback, none);
+	returnGoingDownBaton = new TTValue(TTPtr(x));
+    returnGoingDownBaton->append(TTPtr(gensym("return_going_down")));
+	returnGoingDownCallback->setAttributeValue(kTTSym_baton, TTPtr(returnGoingDownBaton));
+	returnGoingDownCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+	args.append(returnGoingDownCallback);
+    
+    returnGoingUpCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnGoingUpCallback, none);
+	returnGoingUpBaton = new TTValue(TTPtr(x));
+    returnGoingUpBaton->append(TTPtr(gensym("return_going_up")));
+	returnGoingUpCallback->setAttributeValue(kTTSym_baton, TTPtr(returnGoingUpBaton));
+	returnGoingUpCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+	args.append(returnGoingUpCallback);
 	
 	*returnedMapper = NULL;
 	TTObjectBaseInstantiate(kTTSym_Mapper, TTObjectBaseHandle(returnedMapper), args);
