@@ -1279,10 +1279,10 @@
 					"id" : "obj-15",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 932.0, 492.0, 372.0, 20.0 ],
-					"text" : "j.message dspStatus @description \" Open DSP Status window.\""
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 932.0, 496.0, 111.0, 20.0 ],
+					"text" : "j.remote dspStatus"
 				}
 
 			}
@@ -2112,7 +2112,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "waiting for a model:address"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -2617,15 +2617,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
