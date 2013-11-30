@@ -558,7 +558,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 544.0, 296.0, 948.0, 603.0 ],
+						"rect" : [ 544.0, 296.0, 945.0, 533.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -601,22 +601,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 273.0, 240.0, 113.0, 18.0 ],
+									"patching_rect" : [ 273.0, 212.0, 113.0, 18.0 ],
 									"text" : "/filter/frequency $1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-60",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 273.0, 185.0, 50.0, 18.0 ],
-									"text" : "set $1"
 								}
 
 							}
@@ -695,49 +681,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-42",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 447.0, 348.0, 86.0, 18.0 ],
-									"text" : "-43.495998"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-31",
-									"linecount" : 2,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 447.0, 310.0, 160.0, 33.0 ],
-									"text" : "j.receive remoteOSCApp:/player/gain"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-11",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 185.5, 318.0, 74.0, 20.0 ],
-									"text" : "prepend set"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
 									"id" : "obj-8",
 									"maxclass" : "message",
 									"numinlets" : 2,
@@ -757,7 +700,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 447.0, 492.5, 224.0, 20.0 ],
+									"patching_rect" : [ 447.0, 428.5, 224.0, 20.0 ],
 									"text" : "Attributes can be changed dynamically "
 								}
 
@@ -771,7 +714,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 447.0, 381.0, 393.0, 20.0 ],
+									"patching_rect" : [ 447.0, 326.0, 393.0, 20.0 ],
 									"text" : "Feedbacks from remoteOSCApp are handled too."
 								}
 
@@ -864,7 +807,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 447.0, 405.0, 20.0, 20.0 ]
+									"patching_rect" : [ 447.0, 350.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -878,7 +821,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 447.0, 433.0, 180.0, 33.0 ],
+									"patching_rect" : [ 447.0, 378.0, 180.0, 33.0 ],
 									"text" : "j.send remoteOSCApp:/player/play"
 								}
 
@@ -960,7 +903,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 532.0, 524.0, 60.0, 18.0 ],
+									"patching_rect" : [ 532.0, 460.0, 60.0, 18.0 ],
 									"text" : "-90. 0."
 								}
 
@@ -972,7 +915,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 660.0, 446.0, 20.0, 20.0 ]
+									"patching_rect" : [ 660.0, 391.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -986,7 +929,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 660.0, 405.0, 180.0, 33.0 ],
+									"patching_rect" : [ 660.0, 350.0, 180.0, 33.0 ],
 									"text" : "j.receive remoteOSCApp:/player/end"
 								}
 
@@ -1027,10 +970,10 @@
 									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 660.0, 271.0, 180.0, 33.0 ],
-									"text" : "j.send remoteOSCApp:/filter/frequency"
+									"text" : "j.remote remoteOSCApp:/filter/frequency"
 								}
 
 							}
@@ -1086,7 +1029,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 447.0, 524.0, 65.0, 18.0 ],
+									"patching_rect" : [ 447.0, 460.0, 65.0, 18.0 ],
 									"text" : "-100. 12."
 								}
 
@@ -1101,37 +1044,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 447.0, 550.0, 239.0, 33.0 ],
+									"patching_rect" : [ 447.0, 486.0, 239.0, 33.0 ],
 									"text" : "j.remote remoteOSCApp:/player/gain:range/bounds"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-44",
-									"maxclass" : "flonum",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "float", "bang" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 660.0, 347.0, 50.0, 20.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-41",
-									"linecount" : 2,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 660.0, 310.0, 180.0, 33.0 ],
-									"text" : "j.receive remoteOSCApp:/filter/frequency"
 								}
 
 							}
@@ -1172,10 +1086,10 @@
 									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 447.0, 271.0, 160.0, 33.0 ],
-									"text" : "j.send remoteOSCApp:/player/gain"
+									"text" : "j.remote remoteOSCApp:/player/gain"
 								}
 
 							}
@@ -1277,7 +1191,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 273.0, 212.0, 50.0, 20.0 ]
+									"patching_rect" : [ 273.0, 185.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -1376,7 +1290,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 3.0, 97.5, 404.0, 20.0 ],
-									"text" : "/player/gain -43.50",
+									"text" : "/filter/frequency 220.00",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 
@@ -1486,15 +1400,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-19", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-11", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-52", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1588,6 +1493,16 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-30", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 456.5, 307.0, 442.5, 307.0, 442.5, 239.0, 456.5, 239.0 ],
+									"source" : [ "obj-20", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-29", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1625,6 +1540,16 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-28", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 669.5, 308.0, 655.5, 308.0, 655.5, 239.0, 669.5, 239.0 ],
+									"source" : [ "obj-29", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-20", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1634,20 +1559,10 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-42", 1 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"midpoints" : [ 456.5, 345.0, 523.5, 345.0 ],
-									"source" : [ "obj-31", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-6", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 541.5, 545.5, 456.5, 545.5 ],
+									"midpoints" : [ 541.5, 481.5, 456.5, 481.5 ],
 									"source" : [ "obj-33", 0 ]
 								}
 
@@ -1745,15 +1660,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-44", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-41", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-40", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1799,20 +1705,20 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-21", 1 ],
+									"destination" : [ "obj-13", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 205.0, 182.5, 258.0, 182.5 ],
-									"source" : [ "obj-5", 0 ]
+									"source" : [ "obj-5", 1 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-60", 0 ],
+									"destination" : [ "obj-21", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-5", 1 ]
+									"midpoints" : [ 205.0, 182.5, 258.0, 182.5 ],
+									"source" : [ "obj-5", 0 ]
 								}
 
 							}
@@ -1839,17 +1745,8 @@
 									"destination" : [ "obj-18", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 456.5, 588.0, 441.5, 588.0, 441.5, 518.0, 456.5, 518.0 ],
+									"midpoints" : [ 456.5, 524.0, 441.5, 524.0, 441.5, 454.0, 456.5, 454.0 ],
 									"source" : [ "obj-6", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-13", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-60", 0 ]
 								}
 
 							}
@@ -1903,10 +1800,10 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-11", 0 ],
+									"destination" : [ "obj-19", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 74.5, 214.5, 195.0, 214.5 ],
+									"midpoints" : [ 74.5, 218.5, 195.0, 218.5 ],
 									"source" : [ "obj-9", 0 ]
 								}
 
@@ -2445,11 +2342,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.map.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remote.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
