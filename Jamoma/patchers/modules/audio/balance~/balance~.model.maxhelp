@@ -331,7 +331,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 620.0, 123.0, 1020.0, 686.0 ],
+						"rect" : [ 0.0, 26.0, 1020.0, 686.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -652,7 +652,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1020.0, 686.0 ],
+						"rect" : [ 620.0, 123.0, 1020.0, 686.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -784,7 +784,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@description", "A balance for stereo sources" ],
+									"args" : [ "@name", "balance~.model", "@description", "A balance for stereo sources" ],
 									"bgmode" : 1,
 									"id" : "obj-1",
 									"maxclass" : "bpatcher",

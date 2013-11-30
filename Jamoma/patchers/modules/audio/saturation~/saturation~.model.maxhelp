@@ -531,7 +531,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "saturation~.module", "@description", "Stereo saturation/distortion effect" ],
+									"args" : [ "@name", "saturation~.model", "@description", "Stereo saturation/distortion effect" ],
 									"bgmode" : 1,
 									"id" : "obj-1",
 									"maxclass" : "bpatcher",
@@ -948,7 +948,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 60.0, 379.0, 195.0, 18.0 ],
-									"text" : "/mode s-shaped"
+									"text" : "preamp 0."
 								}
 
 							}

@@ -784,7 +784,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@description", "Panning mono sources" ],
+									"args" : [ "@name", "panning~.model", "@description", "Panning mono sources" ],
 									"bgmode" : 1,
 									"id" : "obj-1",
 									"maxclass" : "bpatcher",
@@ -807,7 +807,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 68.0, 393.0, 182.0, 18.0 ],
-									"text" : "shape Linear"
+									"text" : "shape EqualPower"
 								}
 
 							}
