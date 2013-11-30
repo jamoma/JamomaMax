@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -36,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 272.0, 390.0, 73.0, 20.0 ],
+					"patching_rect" : [ 272.0, 390.0, 52.0, 20.0 ],
 					"text" : "j.in~ R2"
 				}
 
@@ -50,7 +50,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 228.0, 366.0, 71.0, 20.0 ],
+					"patching_rect" : [ 228.0, 366.0, 50.0, 20.0 ],
 					"text" : "j.in~ L2"
 				}
 
@@ -64,7 +64,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 184.0, 342.0, 73.0, 20.0 ],
+					"patching_rect" : [ 184.0, 342.0, 52.0, 20.0 ],
 					"text" : "j.in~ R1"
 				}
 
@@ -78,8 +78,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 228.0, 464.0, 74.0, 20.0 ],
-					"text" : "j.out~ R"
+					"patching_rect" : [ 228.0, 464.0, 59.0, 20.0 ],
+					"text" : "j.out~ R1"
 				}
 
 			}
@@ -170,7 +170,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 140.0, 319.0, 71.0, 20.0 ],
+					"patching_rect" : [ 140.0, 319.0, 50.0, 20.0 ],
 					"text" : "j.in~ L1"
 				}
 
@@ -184,8 +184,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 140.0, 464.0, 72.0, 20.0 ],
-					"text" : "j.out~ L"
+					"patching_rect" : [ 140.0, 464.0, 57.0, 20.0 ],
+					"text" : "j.out~ L1"
 				}
 
 			}
@@ -256,7 +256,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 3.0, 109.0, 395.0, 47.0 ],
+					"patching_rect" : [ 3.0, 109.0, 396.0, 47.0 ],
 					"text" : "j.model @description \"Allows crossfades between 2 stereo sources. The first two inputs are the first source while the second 2 inputs are the second source\""
 				}
 
@@ -323,7 +323,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -378,7 +378,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 86.0, 169.0, 55.0, 17.0 ],
+									"patching_rect" : [ 86.0, 169.0, 55.0, 18.0 ],
 									"text" : "mode $1"
 								}
 
@@ -392,7 +392,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 156.0, 111.0, 24.0, 19.0 ],
+									"patching_rect" : [ 163.5, 111.0, 24.0, 20.0 ],
 									"text" : "t 1"
 								}
 
@@ -406,7 +406,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 86.0, 111.0, 24.0, 19.0 ],
+									"patching_rect" : [ 86.0, 111.0, 24.0, 20.0 ],
 									"text" : "t 0"
 								}
 
@@ -416,12 +416,11 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-5",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "" ],
-									"patching_rect" : [ 86.0, 85.0, 150.0, 19.0 ],
+									"patching_rect" : [ 86.0, 85.0, 174.0, 20.0 ],
 									"text" : "sel FastMode PrecisionMode"
 								}
 
@@ -516,7 +515,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -555,12 +554,11 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-9",
-									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 40.0, 181.0, 56.0, 17.0 ],
+									"patching_rect" : [ 40.0, 181.0, 68.0, 18.0 ],
 									"text" : "shape $1"
 								}
 
@@ -574,7 +572,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 129.0, 123.0, 24.0, 19.0 ],
+									"patching_rect" : [ 147.0, 123.0, 24.0, 20.0 ],
 									"text" : "t 1"
 								}
 
@@ -588,7 +586,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 40.0, 123.0, 24.0, 19.0 ],
+									"patching_rect" : [ 40.0, 123.0, 24.0, 20.0 ],
 									"text" : "t 0"
 								}
 
@@ -598,12 +596,11 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-5",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "" ],
-									"patching_rect" : [ 40.0, 85.0, 197.0, 19.0 ],
+									"patching_rect" : [ 40.0, 85.0, 233.0, 20.0 ],
 									"text" : "sel EqualPowerFade LinearPowerFade"
 								}
 

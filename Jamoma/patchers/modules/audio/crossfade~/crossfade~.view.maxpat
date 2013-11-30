@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 778.0, 98.0, 502.0, 520.0 ],
+		"rect" : [ 449.0, 95.0, 502.0, 520.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -352,8 +352,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 308.0, 50.0, 94.0, 20.0 ],
-					"text" : "j.receive~ out.R"
+					"patching_rect" : [ 308.0, 50.0, 134.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R1"
 				}
 
 			}
@@ -366,8 +366,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 308.0, 3.0, 92.0, 20.0 ],
-					"text" : "j.receive~ out.L"
+					"patching_rect" : [ 308.0, 3.0, 132.0, 20.0 ],
+					"text" : "j.receive~ audio/out.L1"
 				}
 
 			}
