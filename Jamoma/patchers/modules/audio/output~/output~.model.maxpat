@@ -93,8 +93,8 @@
 					"linecount" : 6,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 262.799988, 335.0, 147.0, 87.0 ],
 					"text" : "j.return cpu @range/bounds 0. 100. @type decimal @description \"reports the cpu usage of the dsp processing\""
 				}
@@ -731,7 +731,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1680.0, 44.0, 1092.0, 739.0 ],
+						"rect" : [ 588.0, 44.0, 1092.0, 739.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -750,7 +750,6 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -1448,8 +1447,8 @@
 													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 161.0, 409.0, 33.0 ],
 													"text" : "j.return file/time @type decimal @dataspace time @dataspace/unit s @description \"Elapsed time for current recording, expressed in seconds.\""
 												}
@@ -1673,8 +1672,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 296.0, 105.0, 250.0, 47.0 ],
-									"text" : "j.parameter record/active @type boolean @description \"1: Select a file to record to, and start recording. 0: Stop recording.\"",
+									"patching_rect" : [ 296.0, 105.0, 279.0, 47.0 ],
+									"text" : "j.message record/active @type boolean @description \"1: Select a file to record to, and start recording. 0: Stop recording.\"",
 									"varname" : "record"
 								}
 
@@ -2138,11 +2137,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.parameter.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
