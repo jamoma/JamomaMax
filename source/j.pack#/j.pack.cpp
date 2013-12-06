@@ -1,11 +1,18 @@
-/* 
- *	pack#
- *	External object for Max/MSP to bring Max values into a Jamoma Graph.
- *	Copyright © 2010 by Timothy Place
+/** @file
  * 
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMaxExternalsGraph
+ *
+ * @brief pack# - External object for Max/MSP to bring Max values into a Jamoma Graph.
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2010 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxGraph.h"
 #include "TTGraphInput.h"
