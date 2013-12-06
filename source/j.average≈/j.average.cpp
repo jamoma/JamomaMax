@@ -1,12 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
-<<<<<<< HEAD:source/j.average≈/j.average.cpp
- * @brief j.average≈ : Signal average analysis object for Jamoma AudioGraph.
-=======
  * @brief average≈ : wraps the #TTAverage class as an average analysis object for AudioGraph
->>>>>>> dev:source/j.average≈/j.average.cpp
  *
  * @details
  *

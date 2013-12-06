@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
  * @brief hilbert≈ : wraps the #TTHilbertLinear33 class as a hilbert filter external for AudioGraph
  *

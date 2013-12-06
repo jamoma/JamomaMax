@@ -1,12 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
-<<<<<<< HEAD:source/j.array≈/j.array.cpp
- * @brief j.array≈ : Array object for Jamoma AudioGraph.
-=======
  * @brief array≈ : wraps the #TTAudioObjectBaseArray class as an AudioGraph array external for Jamoma AudioGraph.
->>>>>>> dev:source/j.array≈/j.array.cpp
  *
  * @details
  *

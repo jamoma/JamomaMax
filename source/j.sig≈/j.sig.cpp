@@ -1,11 +1,18 @@
-/* 
- *	sig≈
- *	Object to generate a signal from a constant for Jamoma Audio Graph
- *	Copyright © 2010 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsAudioGraph
+ *
+ * @brief sig≈ : wraps the #TTAudioSignal class as constant signal generator for AudioGraph
+ *
+ * @details 
+ *
+ * @authors Timothy Place, Trond Lossius
+ *
+ * @copyright © 2010 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 

@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxLibrary
  *
  * @brief Data types for Max objects that fit more naturally with the Jamoma coding style.
  *

@@ -1,12 +1,12 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief jamoma~ : creates an AudioGraph external that is able to wrap any Jamoma class
+ * @brief j≈ : Creates an AudioGraph external that is able to wrap any Jamoma class
  *
  * @details
  *
- * @authors Tim Place
+ * @authors Tim Place, Trond Lossius
  *
  * @copyright © 2012 by Timothy Place @n
  * This code is licensed under the terms of the "New BSD License" @n

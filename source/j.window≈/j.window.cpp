@@ -1,11 +1,18 @@
-/* 
- *	window≈
- *	Jamoma AudioGraph external object for Max
- *	Copyright © 2010 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsAudioGraph
+ *
+ * @brief window≈ : wraps the #TTWindowFunction class for AudioGraph
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2010, Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 

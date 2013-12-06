@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
  * @brief gain≈ : wraps the #TTGain class as an audio gain regulating external for AudioGraph
  *

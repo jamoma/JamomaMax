@@ -1,11 +1,18 @@
-/** 
- * \file j.receivemaster.cpp
- * Manage j.receive instances.
- * By Tim Place, Copyright � 2007
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxLibrary
+ *
+ * @brief Jamoma For Max Shared Library
+ *
+ * @details Manage j.receive instances.
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2007, Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "Jamoma.h"
 

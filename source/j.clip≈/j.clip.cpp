@@ -1,12 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
-<<<<<<< HEAD:source/j.clip≈/j.clip.cpp
- * @brief j.clip≈ : Range clipping external for Jamoma AudioGraph.
-=======
  * @brief clip≈ : wraps the #Clipper class as a range clipping external for AudioGraph
->>>>>>> dev:source/j.clip≈/j.clip.cpp
  *
  * @details
  *

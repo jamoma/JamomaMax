@@ -1,11 +1,18 @@
-/** 
- * \file j.send.cpp
- * External for Jamoma: send messages from remote
- * By Trond Lossius & Tim Place, Copyright � 2006
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxLibrary
+ *
+ * @brief Jamoma For Max Shared Library
+ *
+ * @details Send messages to remote
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2006, Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "Jamoma.h"
 

@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
  * @brief op≈ : wraps the #TTOperator class as an external for AudioGraph performing basic mathematical operations on multichannel signals
  *

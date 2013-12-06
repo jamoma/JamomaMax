@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
  * @brief multimixer≈ : wraps the #TTMultiMixer class as an external for AudioGraph that mix multiple incoming multichannel signals to multiple multichannel outlets
  *

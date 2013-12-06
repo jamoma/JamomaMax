@@ -1,12 +1,12 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxLibrary
  *
  * @brief Jamoma For Max Shared Library
  *
  * @details Functions and resources used by Max objects.
  *
- * @authors Tim Place, Théo de la Hogue
+ * @authors Tim Place, Théo de la Hogue, Trond Lossius
  *
  * @copyright Copyright © 2013, Tim Place & Théo de la Hogue @n
  * This code is licensed under the terms of the "New BSD License" @n

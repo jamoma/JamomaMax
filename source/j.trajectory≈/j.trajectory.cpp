@@ -1,17 +1,18 @@
 /** @file
  *
- * @ingroup audioGraphMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.trajectory≈ - a 2D/3D trajectory generator at signal rate
+ * @brief trajectory≈ : wraps the #TTTrajectory class as a trajectory generator for AudioGraph
  *
- * @details 
+ * @details A 2D/3D trajectory generator at signal rate
  *
- * @authors Nils Peters, Tim Place 
+ * @authors Nils Peters, Tim Place, Trond Lossius
  *
- * @copyright Copyright © 2010, Nils Peters, Tim Place @n
+ * @copyright © 2010, Nils Peters, Tim Place @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 

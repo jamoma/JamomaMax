@@ -1,11 +1,18 @@
-/* 
- *	matrix≈
- *	External object for Jamoma AudioGraph
- *	Copyright © 2009 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsAudioGraph
+ *
+ * @brief spat≈ : wraps the #TTSpat class as a spatialisation mixer for AudioGraph
+ *
+ * @details 
+ *
+ * @authors Timothy Place, Trond Lossius, Nils Peters
+ *
+ * @copyright © 2009 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 

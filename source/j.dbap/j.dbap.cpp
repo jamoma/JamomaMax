@@ -37,6 +37,9 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	ps_dimensions		= gensym("dimensions");
 	ps_num_sources		= gensym("num_sources");
 	ps_num_destinations = gensym("num_destinations");
+	ps_jit_matrix		= gensym("jit_matrix");
+	ps_getdata			= gensym("getdata");
+	ps_setinfo			= gensym("setinfo");
 
 
 	// Define our class
@@ -128,7 +131,7 @@ void *dbap_new(t_symbol *msg, long argc, t_atom *argv)
 		x->view_info.dimcount = 2;
 		x->view_info.dim[0] = 80;						// x size of the view matrix
 		x->view_info.dim[1] = 60;						// y size of the view matrix
-		x->view_matrix = jit_object_new(_jit_sym_jit_matrix, &x->view_info);
+		x->view_matrix = jit_object_new(ps_jit_matrix, &x->view_info);
 		x->view_name = jit_symbol_unique();
 		x->view_matrix = jit_object_register(x->view_matrix, x->view_name);
 		
@@ -473,7 +476,7 @@ void dbap_view_size(t_dbap *x, long sizeX, long sizeY) {
 		x->view_info.dim[1] = sizeY;
 		
 		// prepare the jit_matrix with the new jit_matrix_info
-		jit_object_method(x->view_matrix, _jit_sym_setinfo, &x->view_info);
+		jit_object_method(x->view_matrix, ps_setinfo, &x->view_info);
 		
 		dbap_update_view(x);
 	}
@@ -1166,7 +1169,7 @@ void dbap_calculate_view2D(t_dbap *x, long dst, long src)
 	char *bp, *p;
 	
 	// get the data of the view matrix
-	jit_object_method(x->view_matrix,_jit_sym_getdata, &bp);
+	jit_object_method(x->view_matrix,ps_getdata, &bp);
 	if (!bp)
 		return;
 	

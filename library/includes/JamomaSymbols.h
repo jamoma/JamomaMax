@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxLibrary
  *
  * @brief Jamoma symbols cached to avoid repeated calls to the expensive SymbolGen() function.
  *

@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
  * @brief phasor≈ : wraps the #TTPhasor class as an sawtooth signal generating external for AudioGraph
  *

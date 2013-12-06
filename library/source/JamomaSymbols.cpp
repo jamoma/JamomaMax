@@ -1,12 +1,12 @@
 /** @file
  *
- * @ingroup modularLibrary
+ * @ingroup implementationMaxLibrary
  *
  * @brief Jamoma symbols cached to avoid repeated calls to the expensive SymbolGen() function.
  *
  * @details
  *
- * @authors Tim Place
+ * @authors Tim Place, Trond Lossius
  *
  * @copyright Copyright © 2006, Tim Place @n
  * This code is licensed under the terms of the "New BSD License" @n
