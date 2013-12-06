@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.netsend - network communication sender
+ * @brief j.net.send - network communication sender
  *
  * @details
  *

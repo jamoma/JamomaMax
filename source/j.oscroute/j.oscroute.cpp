@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.oscinstance - parse and pass OSC messages
+ * @brief j.oscroute - parse and pass OSC messages
  *
  * @details
  *

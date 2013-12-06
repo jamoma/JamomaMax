@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.netreceive - network communication receiver
+ * @brief j.net.receive - network communication receiver
  *
  * @details
  *

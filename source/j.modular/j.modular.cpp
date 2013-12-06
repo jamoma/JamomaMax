@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.model - external to manage local and distant application
+ * @brief j.modular - external to manage local and distant application
  *
  * @details
  *

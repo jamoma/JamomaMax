@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.model - deal with the Jamoma Namespace
+ * @brief j.namespace - deal with the Jamoma Namespace
  *
  * @details
  *
