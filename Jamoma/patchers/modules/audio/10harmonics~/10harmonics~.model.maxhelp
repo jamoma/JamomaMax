@@ -320,13 +320,13 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "j.adsr≈" ],
+					"jsarguments" : [ "10harmonics~.model" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 10.0, 10.0, 148.71875, 53.625 ]
+					"patching_rect" : [ 10.0, 10.0, 451.906219, 53.625 ]
 				}
 
 			}
@@ -366,7 +366,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 563.0, 70.0, 992.0, 687.0 ],
+						"rect" : [ 0.0, 26.0, 992.0, 687.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -465,7 +465,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 296.0, 430.0, 255.0, 18.0 ],
-									"text" : "harmonic.10/gain -27.540983"
+									"text" : "harmonic.10/gain -54."
 								}
 
 							}
