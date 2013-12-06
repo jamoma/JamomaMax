@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsDSP
  *
  * @brief degrade~ : Max AudioGraph external that degrades the audio quality of a signal
  *

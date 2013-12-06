@@ -1,13 +1,18 @@
-/* 
- *	tt.op~
- *	External object for Max/MSP
- *	
- *	Example project for TTBlue
- *	Copyright © 2008 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsDSP
+ *
+ * @brief op~ : wraps the #TTOperator class as a Jamoma external for MSP
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2008 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTClassWrapperMax.h"
 #include "ext.h"					// Max Header

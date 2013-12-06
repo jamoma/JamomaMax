@@ -1,12 +1,17 @@
-/* 
-	allpass~.model
-	A simple Jamoma 0.6 model, created in C++ rather than in Max.
+/** @file
+ * @ingroup implementationMaxModels
+ *
+ * @brief Wraps the #TTAllpass1 class as Jamoma model in the form of a C++ external
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2013, Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
+ */
 
-	By Tim Place, Copyright © 2013
-
-	License: This code is licensed under the terms of the "New BSD License"
-	http://creativecommons.org/licenses/BSD/
-*/
 
 #include "TTModularClassWrapperMax.h"
 #include "ext.h"						// Max Header

@@ -1,13 +1,18 @@
-/* 
- 	tt.onepole~
- 	External object for Max/MSP
-
- 	Simple One Pole Filter Object
- 	Copyright © 2010 by Timothy Place
-  
-	License: This code is licensed under the terms of the GNU LGPL
-	http://www.gnu.org/licenses/lgpl.html 
+/** @file
+ *
+ * @ingroup implementationMaxExternalsDSP
+ *
+ * @brief highmidlowshelf~ : wraps the #TTOnePole class as a Jamoma external for MSP
+ *
+ * @details Simple One Pole Filter Object
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2010 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTClassWrapperMax.h"
 

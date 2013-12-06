@@ -1,13 +1,18 @@
-/** 
-	\file j.meter~.cpp
-	External for Jamoma: signal level meter
-	By Tim Place, Copyright � 2005
-	Modifications for Compiling on Windows by Thomas Grill, 2005
-	Re-write for Max 5 by Tim Place, 2008
-	
-	License: This code is licensed under the terms of the GNU LGPL
-	http://www.gnu.org/licenses/lgpl.html 
-  */
+/** @file
+ *
+ * @ingroup implementationMaxExternalsDSP
+ *
+ * @brief meter~ : Audio signal level meter GUI.
+ *
+ * @details This external is deprecated, use live.meter~ instead.
+ *
+ * @authors Tim Place, Thomas Grill, Trond Lossius
+ *
+ * @copyright © 2005 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
+ */
+
 
 #include "ext.h"
 #include "ext_obex.h"

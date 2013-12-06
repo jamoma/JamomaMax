@@ -1,11 +1,15 @@
-/* 
- *	tt.filter~
- *	External object for Max/MSP
- *	Wannabe Max wrapper (external) for all filter units in ttblue
- *	Example project for TTBlue
- *	Copyright © 2008 by Timothy Place & Trond Lossius
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsDSP
+ *
+ * @brief filter~ : wraps the #TTFilter class as a a Jamoma external for MSP
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2008 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
 

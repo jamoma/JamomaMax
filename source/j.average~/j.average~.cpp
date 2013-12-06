@@ -1,10 +1,10 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsDSP
  *
- * @brief j.average≈ : Signal average analysis object for Jamoma AudioGraph.
+ * @brief average~ : wrapping the #TTAverage class as an MSP external
  *
- * @details This wraps the Jamoma DSP class #TTAverage as a Jamoma AudioGraph external for Max.
+ * @details
  *
  * @authors Tim Place, Trond Lossius
  *

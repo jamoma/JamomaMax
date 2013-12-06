@@ -1,11 +1,18 @@
-/* 
- * tt.zerox~
- * External for Jamoma: zero-crossing counter
- * By Tim Place, Copyright © 2006
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsDSP
+ *
+ * @brief zerox~ : wraps the #TTZerocrossing class as a Jamoma external for MSP
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2006 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTClassWrapperMax.h"
 #include "ext.h"						// Max Header

@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsDSP
  *
  * @brief balance~ : The amplitude envelope of one audio signal imitates that of another
  *
