@@ -1,7 +1,7 @@
 /**
  @file
  
- @ingroup implementationMax
+ @ingroup implementationMaxExternals
  
  @brief 2D implementation on convex hull.
  

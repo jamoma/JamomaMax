@@ -1,11 +1,18 @@
-/**
- * \file j.map.cpp
- * External for Jamoma: map input to output: y=f(x)
- * Copyright © 2010 by Théo de la Hogue
+/** @file
  *
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.map - map input to output: y=f(x)
+ *
+ * @details
+ *
+ * @authors Théo de la Hogue, Trond Lossius
+ *
+ * @copyright Copyright © 2010 by Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTModularClassWrapperMax.h"
 

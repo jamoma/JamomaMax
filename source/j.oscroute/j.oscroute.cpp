@@ -1,11 +1,18 @@
-/** 
- * \file j.oscroute.cpp
- * External for Jamoma: parse and pass OpenSoundControl messages
- * By Tim Place, Copyright � 2006
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.oscinstance - parse and pass OSC messages
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2006 Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "JamomaForMax.h"
 

@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.folder - Perform operations on folders in the filesystem.
+ * @brief j.folder - Perform operations on folders in the filesystem.
  *
  * @details
  *

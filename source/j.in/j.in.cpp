@@ -1,12 +1,12 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief Externals for Jamoma: j.in & j.in~ - Manage control and audio inputs for a module
+ * @brief j.in & j.in~ - Manage control and audio inputs for a module
  *
  * @details
  *
- * @authors Tim Place, Nils Peters, Trond Lossius
+ * @authors Tim Place, Théo de la Hogue, Nils Peters, Trond Lossius
  *
  * @copyright Copyright © 2006 by Tim Place @n
  * This code is licensed under the terms of the "New BSD License" @n

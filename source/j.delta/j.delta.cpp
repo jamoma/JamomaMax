@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.delta - Calculate 1st/2nd order differences and velocity.
+ * @brief j.delta - External for Jamoma: j.delta - Calculate 1st/2nd order differences and velocity.
  *
  * @details This object replaces tl.delta, tl.delta2 and tl.velocity from the tl.objects distribution.
  *

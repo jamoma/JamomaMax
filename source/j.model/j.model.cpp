@@ -1,11 +1,18 @@
-/* 
- * j.model | view
- * External for Jamoma : the main control center of a model | view patcher
- * By Tim Place and Théo de la Hogue, Copyright � 2010
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.model / j.view - The main control center of Jamoma model and view patcher
+ *
+ * @details
+ *
+ * @authors Tim Place, Théo de la Hogue, Trond Lossius
+ *
+ * @copyright Copyright © 2010 by Tim Place and Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "j.model.h"
 

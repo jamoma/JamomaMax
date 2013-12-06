@@ -1,6 +1,19 @@
-/** 
- THIS IS A TEMPORARY CODE TO NOTIFY USERS THAT A HUB REMAIN IN THEIR PATCH
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.hub - DEPRECATED: This externals does nothing but warns that a hub object remains in the patch.
+ *
+ * @details
+ *
+ * @authors Théo de la Hogue
+ *
+ * @copyright Copyright © 2010 by Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
+
+
 #include "JamomaForMax.h"
 
 // Data Structure for this object

@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.envexp - Create envelope with linear attack and exponential decay.
+ * @brief j.envexp - Create envelope with linear attack and exponential decay.
  *
  * @details This object replaces tl.envexp, previously a part of the tl.objects distribution.
  *

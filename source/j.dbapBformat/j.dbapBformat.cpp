@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.dbapBformat - Distance Based Amplitude Panning using 4-channel ambisonic Bformat signals as sources.
+ * @brief j.dbapBformat - Distance Based Amplitude Panning using 4-channel ambisonic Bformat signals as sources.
  *
  * @details
  *

@@ -1,8 +1,8 @@
 /** @file
  * 
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.cubicInterpolate - Cubic interpolation on a stream of floats
+ * @brief j.cubicInterpolate - External for Jamoma: j.cubicInterpolate - Cubic interpolation on a stream of floats
  *
  * @details
  *

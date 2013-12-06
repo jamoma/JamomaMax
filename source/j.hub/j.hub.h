@@ -1,14 +1,14 @@
 /** @file
  *
->  * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.hub - The main control center of a Jamoma module
+ * @brief j.hub - DEPRECATED: This externals does nothing but warns that a hub object remains in the patch.
  *
  * @details
  *
- * @authors Tim Place, Trond Lossius, Nils Peters, Diemo Schwarz
+ * @authors Tim Place, Trond Lossius, Nils Peters, Diemo Schwarz, Théo de la Hogue
  *
- * @copyright Copyright © 2006 by Tim Place @n
+ * @copyright Copyright © 2010 by Théo de la Hogue @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
