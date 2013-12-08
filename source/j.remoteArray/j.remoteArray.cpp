@@ -1,11 +1,18 @@
-/* 
- *	j.remoteArray
- *	External object
- *	Copyright © 2011 by Théo de la Hogue
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.remoteArray : An array of j.remote objects
+ *
+ * @details Useful when designing views and more.
+ *
+ * @authors Théo de la Hogue, Trond Lossius
+ *
+ * @copyright © 2011 by Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTModularClassWrapperMax.h"
 

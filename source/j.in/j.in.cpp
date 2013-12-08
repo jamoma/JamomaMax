@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.in & j.in~ - Manage control and audio inputs for a module
+ * @brief j.in & j.in~ - Manage control and audio inputs for a Jamoma model
  *
  * @details
  *

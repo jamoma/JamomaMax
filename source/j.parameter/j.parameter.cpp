@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief j.parameter : Jamoma model parameter definition
+ * @brief j.parameter / j.message / j.return : Jamoma model parameter definition
  *
  * @details
  *
