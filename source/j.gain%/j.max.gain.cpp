@@ -1,10 +1,18 @@
-/* 
- *	External object for Max/MSP/Jitter -- Max Wrapper
- *	Copyright © 2011 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsJitter
+ *
+ * @brief j.gain% : Scale values in a matrix
+ *
+ * @details This is the Max wrapper
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2011 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "jit.common.h"
 #include "max.jit.mop.h"
