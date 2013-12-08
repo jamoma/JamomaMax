@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief filter~ : wraps the #TTFilter class as a a Jamoma external for MSP
+ * @brief j.filter~ : wraps the #TTFilter class as a a Jamoma external for MSP
  *
  * @details
  *

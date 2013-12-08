@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief highmidlowshelf~ : wraps the #TTHighMidLowShelf class as a a Jamoma external for MSP
+ * @brief j.highmidlowshelf~ : wraps the #TTHighMidLowShelf class as a a Jamoma external for MSP
  *
  * @details
  *

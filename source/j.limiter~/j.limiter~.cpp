@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief limiter~ : wraps the #TTLimiter class as a Jamoma external for MSP
+ * @brief j.limiter~ : wraps the #TTLimiter class as a Jamoma external for MSP
  *
  * @details
  *

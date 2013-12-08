@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief soundfile.recorder≈ : wraps the #TTSoundfileRecorder class as generator for AudioGraph
+ * @brief j.soundfile.recorder≈ : wraps the #TTSoundfileRecorder class as generator for AudioGraph
  *
  * @details 
  *

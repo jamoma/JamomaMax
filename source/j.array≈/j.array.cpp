@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief array≈ : wraps the #TTAudioObjectBaseArray class as an AudioGraph array external for Jamoma AudioGraph.
+ * @brief j.array≈ : wraps the #TTAudioObjectBaseArray class as an AudioGraph array external for Jamoma AudioGraph.
  *
  * @details
  *

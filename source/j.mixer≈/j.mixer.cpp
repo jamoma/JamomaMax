@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief mixer≈ : wraps the #TTMixer class as a matrix mixing external for AudioGraph
+ * @brief j.mixer≈ : wraps the #TTMixer class as a matrix mixing external for AudioGraph
  *
  * @details
  *

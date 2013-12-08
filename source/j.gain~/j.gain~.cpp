@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief gain~ : wraps the #TTGain class as a a Jamoma external for MSP
+ * @brief j.gain~ : wraps the #TTGain class as a a Jamoma external for MSP
  *
  * @details
  *

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief average≈ : wraps the #TTAverage class as an average analysis object for AudioGraph
+ * @brief j.average≈ : wraps the #TTAverage class as an average analysis object for AudioGraph
  *
  * @details
  *

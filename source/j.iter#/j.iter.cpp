@@ -2,7 +2,7 @@
  * 
  * @ingroup implementationMaxExternalsGraph
  *
- * @brief iter# - Iterate key/value pairs from a dictionary to a sequence of Max messages.
+ * @brief j.iter# - Iterate key/value pairs from a dictionary to a sequence of Max messages.
  *
  * @details
  *

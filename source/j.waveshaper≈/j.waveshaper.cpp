@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief waveshaper≈ : wraps the #TTWaveshaper class for AudioGraph
+ * @brief j.waveshaper≈ : wraps the #TTWaveshaper class for AudioGraph
  *
  * @details
  *

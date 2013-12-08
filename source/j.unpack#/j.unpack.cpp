@@ -2,7 +2,7 @@
  * 
  * @ingroup implementationMaxExternalsGraph
  *
- * @brief unpack# - External object for Max/MSP to get Max values from a Jamoma Graph.
+ * @brief j.unpack# - External object for Max/MSP to get Max values from a Jamoma Graph.
  *
  * @details
  *

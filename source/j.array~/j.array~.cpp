@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief array~ : wrapping the #TTArray class as an MSP external
+ * @brief j.array~ : wrapping the #TTArray class as an MSP external
  *
  * @details This wraps the Jamoma DSP class #TTAudioObjectBaseArray as a Jamoma DSP external for Max.
  *

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief trajectory≈ : wraps the #TTTrajectory class as a trajectory generator for AudioGraph
+ * @brief j.trajectory≈ : wraps the #TTTrajectory class as a trajectory generator for AudioGraph
  *
  * @details A 2D/3D trajectory generator at signal rate
  *

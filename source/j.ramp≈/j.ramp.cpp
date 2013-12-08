@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief ramp≈ : wraps the #TTRamp class as a linear ramp generator for AudioGraph
+ * @brief j.ramp≈ : wraps the #TTRamp class as a linear ramp generator for AudioGraph
  *
  * @details
  *

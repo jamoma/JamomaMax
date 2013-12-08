@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief op~ : wraps the #TTOperator class as a Jamoma external for MSP
+ * @brief j.op~ : wraps the #TTOperator class as a Jamoma external for MSP
  *
  * @details
  *

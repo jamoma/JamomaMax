@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief zerox~ : wraps the #TTZerocrossing class as a Jamoma external for MSP
+ * @brief j.zerox~ : wraps the #TTZerocrossing class as a Jamoma external for MSP
  *
  * @details
  *

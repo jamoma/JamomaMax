@@ -2,7 +2,7 @@
  * 
  * @ingroup implementationMaxExternalsGraph
  *
- * @brief midi.in# - Jamoma Graph external object for Max
+ * @brief j.midi.in# - Jamoma Graph external object for Max
  *
  * @details
  *

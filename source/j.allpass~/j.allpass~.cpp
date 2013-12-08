@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief allpass~ : wrapping the #TTAllpass class as an MSP external
+ * @brief j.allpass~ : wrapping the #TTAllpass class as an MSP external
  *
  * @details
  *

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief unsig≈ - converts Jamoma AudioGraph signal to a Max message list.
+ * @brief j.unsig≈ - converts Jamoma AudioGraph signal to a Max message list.
  *
  * @details 
  *

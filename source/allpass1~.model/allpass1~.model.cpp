@@ -1,7 +1,7 @@
 /** @file
  * @ingroup implementationMaxModels
  *
- * @brief Wraps the #TTAllpass1 class as Jamoma model in the form of a C++ external
+ * @brief allpass~.model: Wraps the #TTAllpass1 class as a Jamoma model in the form of a C++ external
  *
  * @details
  *

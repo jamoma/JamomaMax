@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief pick≈ : wraps the #TTAudioGraphPick class as an external that extracts N specific audio signals from a Jamoma AudioGraph signal
+ * @brief j.pick≈ : wraps the #TTAudioGraphPick class as an external that extracts N specific audio signals from a Jamoma AudioGraph signal
  *
  * @details
  *

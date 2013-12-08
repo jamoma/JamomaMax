@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief spat≈ : wraps the #TTSpat class as a spatialisation mixer for AudioGraph
+ * @brief j.spat≈ : wraps the #TTSpat class as a spatialisation mixer for AudioGraph
  *
  * @details 
  *

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief sig≈ : wraps the #TTAudioSignal class as constant signal generator for AudioGraph
+ * @brief j.sig≈ : wraps the #TTAudioSignal class as constant signal generator for AudioGraph
  *
  * @details 
  *

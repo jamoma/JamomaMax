@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief delay~ : Delays a signal using several interpolation methods
+ * @brief j.delay~ : Delays a signal using several interpolation methods
  *
  * @details This wraps the Jamoma DSP class #TTDelay as a a Jamoma external for MSP
  *

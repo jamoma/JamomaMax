@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief pulsesub≈ : wraps the #TTPulseSub class as a periodic envelope ring modulator for AudioGraph
+ * @brief j.pulsesub≈ : wraps the #TTPulseSub class as a periodic envelope ring modulator for AudioGraph
  *
  * @details
  *

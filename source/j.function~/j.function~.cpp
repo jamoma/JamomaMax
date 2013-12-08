@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief function~ : wraps the #TTFunctiom class as a a Jamoma external for MSP
+ * @brief j.function~ : wraps the #TTFunctiom class as a a Jamoma external for MSP
  *
  * @details
  *

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief noise≈ : wraps the #TTNoise class as a audio noise genrator external for AudioGraph
+ * @brief j.noise≈ : wraps the #TTNoise class as a audio noise genrator external for AudioGraph
  *
  * @details
  *

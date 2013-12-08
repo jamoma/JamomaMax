@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief xfade~ : wraps the #TTCrossfade class as a Jamoma external for MSP
+ * @brief j.xfade~ : wraps the #TTCrossfade class as a Jamoma external for MSP
  *
  * @details
  *

@@ -2,7 +2,7 @@
  * 
  * @ingroup implementationMaxExternalsGraph
  *
- * @brief midi.format# - Format MIDI message as dictionary being passed in a Jamoma Graph
+ * @brief j.midi.format# - Format MIDI message as dictionary being passed in a Jamoma Graph
  *
  * @details
  *

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief adsr≈ : wraps the #TTAdsr class as an envelope following external for AudioGraph
+ * @brief j.adsr≈ : wraps the #TTAdsr class as an envelope following external for AudioGraph
  *
  * @details
  *

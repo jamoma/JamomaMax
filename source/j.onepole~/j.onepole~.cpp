@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief onepole~ : wraps the #TTOnePole class as a Jamoma external for MSP
+ * @brief j.onepole~ : wraps the #TTOnePole class as a Jamoma external for MSP
  *
  * @details Simple One Pole Filter Object
  *

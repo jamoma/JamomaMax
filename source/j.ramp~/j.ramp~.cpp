@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief ramp~ : wraps the #TTRamp class as a Jamoma external for MSP
+ * @brief j.ramp~ : wraps the #TTRamp class as a Jamoma external for MSP
  *
  * @details
  *

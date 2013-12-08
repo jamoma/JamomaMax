@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief soundfile.player≈ : wraps the #TTSoundfilePlayer class as generator for AudioGraph
+ * @brief j.soundfile.player≈ : wraps the #TTSoundfilePlayer class as generator for AudioGraph
  *
  * @details 
  *

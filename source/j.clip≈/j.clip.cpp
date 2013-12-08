@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief clip≈ : wraps the #Clipper class as a range clipping external for AudioGraph
+ * @brief j.clip≈ : wraps the #Clipper class as a range clipping external for AudioGraph
  *
  * @details
  *

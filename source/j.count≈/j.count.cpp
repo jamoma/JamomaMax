@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief count≈ : wraps the #TTCounter class as a sample counting signal generator external for AudioGraph
+ * @brief j.count≈ : wraps the #TTCounter class as a sample counting signal generator external for AudioGraph
  *
  * @details
  *

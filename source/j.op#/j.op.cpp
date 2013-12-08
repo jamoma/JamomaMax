@@ -2,7 +2,7 @@
  * 
  * @ingroup implementationMaxExternalsGraph
  *
- * @brief midi.op# - Wraps the #TTOperator class as a Jamoma Graph external object for Max
+ * @brief j.midi.op# - Wraps the #TTOperator class as a Jamoma Graph external object for Max
  *
  * @details
  *

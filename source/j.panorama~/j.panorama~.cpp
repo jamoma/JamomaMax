@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief panorama~ : wraps the #TTPanorama class as a Jamoma external for MSP
+ * @brief j.panorama~ : wraps the #TTPanorama class as a Jamoma external for MSP
  *
  * @details Panpot
  *

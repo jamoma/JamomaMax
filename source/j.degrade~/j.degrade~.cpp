@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief degrade~ : Max AudioGraph external that degrades the audio quality of a signal
+ * @brief j.degrade~ : Max AudioGraph external that degrades the audio quality of a signal
  *
  * @details This wraps the Jamoma DSP class #TTDegrade as a Jamoma AudioGraph external for Max MSP
  *

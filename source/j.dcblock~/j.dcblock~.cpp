@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief dcblock~ : Remove DC Offsets from a signal
+ * @brief j.dcblock~ : Remove DC Offsets from a signal
  *
  * @details This wraps the Jamoma DSP class #TTDCBlock as a a Jamoma external for MSP
  *

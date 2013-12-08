@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief unpack≈ : Unpack AudioGraph multichannel signal to several MSP audio signals
+ * @brief j.unpack≈ : Unpack AudioGraph multichannel signal to several MSP audio signals
  *
  * @details A 2D/3D trajectory generator at signal rate
  *

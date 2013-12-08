@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.model - preset features
+ * @brief j.model / j.view -  - preset features
  *
  * @details
  *

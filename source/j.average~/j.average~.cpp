@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief average~ : wrapping the #TTAverage class as an MSP external
+ * @brief j.average~ : wrapping the #TTAverage class as an MSP external
  *
  * @details
  *

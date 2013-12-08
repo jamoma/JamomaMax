@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief split≈ : wraps the #TTAudioGraphSplit class as a multichannel signal splitter for AudioGraph
+ * @brief j.split≈ : wraps the #TTAudioGraphSplit class as a multichannel signal splitter for AudioGraph
  *
  * @details 
  *

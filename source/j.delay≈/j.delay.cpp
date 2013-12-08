@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief delay≈ : wraps the #TTDelay class as audio delay external for AudioGraph with several options for interpolation method
+ * @brief j.delay≈ : wraps the #TTDelay class as audio delay external for AudioGraph with several options for interpolation method
  *
  * @details
  *

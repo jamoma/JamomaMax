@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief overdrive~ : wraps the #TTOverdrive class as a Jamoma external for MSP
+ * @brief j.overdrive~ : wraps the #TTOverdrive class as a Jamoma external for MSP
  *
  * @details
  *

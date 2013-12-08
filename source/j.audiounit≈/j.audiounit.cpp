@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief audiounit≈ : wraps the #TTAudioUnit class as an AudioUnit plugin host for AudioGraph
+ * @brief j.audiounit≈ : wraps the #TTAudioUnit class as an AudioUnit plugin host for AudioGraph
  *
  * @details
  *

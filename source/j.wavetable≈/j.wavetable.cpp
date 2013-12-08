@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief wavetable≈ : wraps the #TTWavetable class as oscillation generator for AudioGraph
+ * @brief j.wavetable≈ : wraps the #TTWavetable class as oscillation generator for AudioGraph
  *
  * @details
  *

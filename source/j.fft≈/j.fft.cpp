@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief fft≈ : wraps the #TTfft class as an external for AudioGraph performing Fourier and Inverse Fourier Transforms
+ * @brief j.fft≈ : wraps the #TTfft class as an external for AudioGraph performing Fourier and Inverse Fourier Transforms
  *
  * @details
  *

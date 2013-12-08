@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief window≈ : wraps the #TTWindowFunction class for AudioGraph
+ * @brief j.window≈ : wraps the #TTWindowFunction class for AudioGraph
  *
  * @details
  *

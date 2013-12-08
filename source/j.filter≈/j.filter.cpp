@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief filter≈ : wraps the #TTFilter class as generic filter external for AudioGraph providing access to a wide variety of filters
+ * @brief j.filter≈ : wraps the #TTFilter class as generic filter external for AudioGraph providing access to a wide variety of filters
  *
  * @details The filters have a unified interface for setting filter frequency and Q
  *

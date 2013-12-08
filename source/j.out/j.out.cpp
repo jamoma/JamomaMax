@@ -6,9 +6,9 @@
  *
  * @details
  *
- * @authors Tim Place, Théo de la Hogue, Trond Lossius
+ * @authors  Timothy Place, Théo de la Hogue, Trond Lossius
  *
- * @copyright Copyright © 2010 Tim Place and Théo de la Hogue @n
+ * @copyright © 2008 by Timothy Place and Théo de la Hogue @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */

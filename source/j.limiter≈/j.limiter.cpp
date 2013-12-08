@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief limiter≈ : wraps the #TTLimiter class as a gain limiting external for AudioGraph
+ * @brief j.limiter≈ : wraps the #TTLimiter class as a gain limiting external for AudioGraph
  *
  * @details
  *

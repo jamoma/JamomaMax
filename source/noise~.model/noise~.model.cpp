@@ -1,7 +1,7 @@
 /** @file
  * @ingroup implementationMaxModels
  *
- * @brief Jamoma model for synthesising audio noise, Implmented in C++ rather than in Max.
+ * @brief noise~.model: Wraps the #TTNoise class as a Jamoma model in the form of a C++ external
  *
  * @details
  *

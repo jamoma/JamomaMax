@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief waveshaper~ : wraps the #TTWaveshaper class as a Jamoma external for MSP
+ * @brief j.waveshaper~ : wraps the #TTWaveshaper class as a Jamoma external for MSP
  *
  * @details
  *

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.model - signal features
+ * @brief j.model / j.view - signal features
  *
  * @details
  *

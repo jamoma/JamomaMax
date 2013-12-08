@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsDSP
  *
- * @brief meter~ : Audio signal level meter GUI.
+ * @brief j.meter~ : Audio signal level meter GUI.
  *
  * @details This external is deprecated, use live.meter~ instead.
  *
