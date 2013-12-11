@@ -58,7 +58,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
     if (self){
 
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("argumentDefinesNumInlets"), v)) {
-			long argumentOffsetToDefineTheNumberOfInlets = v;
+			int argumentOffsetToDefineTheNumberOfInlets = v;
 			if ((attrstart-argumentOffsetToDefineTheNumberOfInlets > 0) && argv+argumentOffsetToDefineTheNumberOfInlets)
 				numInputs = atom_getlong(argv+argumentOffsetToDefineTheNumberOfInlets);
 		}
@@ -67,7 +67,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 		
     	object_obex_store((void*)self, _sym_dumpout, (object*)outlet_new(self, NULL));	// dumpout
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("argumentDefinesNumOutlets"), v)) {
-			long argumentOffsetToDefineTheNumberOfOutlets = v;
+			int argumentOffsetToDefineTheNumberOfOutlets = v;
 			if ((attrstart-argumentOffsetToDefineTheNumberOfOutlets > 0) && argv+argumentOffsetToDefineTheNumberOfOutlets)
 				numOutputs = atom_getlong(argv+argumentOffsetToDefineTheNumberOfOutlets);
 		}
@@ -173,11 +173,11 @@ t_max_err wrappedClass_attrGet(WrappedInstancePtr self, ObjectPtr attr, AtomCoun
 	
 	self->graphObject->mKernel->getAttributeValue(ttAttrName, v);
 
-	*argc = v.getSize();
+	*argc = v.size();
 	if (!(*argv)) // otherwise use memory passed in
-		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.getSize());
+		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.size());
 
-	for (i=0; i<v.getSize(); i++) {
+	for (i=0; i<v.size(); i++) {
 		if(v.getType(i) == kTypeFloat32 || v.getType(i) == kTypeFloat64){
 			TTFloat64	value;
 			v.get(i, value);
@@ -261,7 +261,7 @@ void wrappedClass_anything(WrappedInstancePtr self, SymbolPtr s, AtomCount argc,
 		
 		// process the returned value for the dumpout outlet
 		{
-			AtomCount	ac = v.getSize();
+			AtomCount	ac = v.size();
 
 			if (ac) {
 				AtomPtr		av = (AtomPtr)malloc(sizeof(t_atom) * ac);
@@ -352,7 +352,7 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 	TTObjectBaseInstantiate(ttClassName, &o, numChannels);
 
 	o->getMessageNames(v);
-	for (TTUInt16 i=0; i<v.getSize(); i++) {
+	for (TTUInt16 i=0; i<v.size(); i++) {
 		v.get(i, name);
 		nameSize = strlen(name.c_str());
 		nameCString = new char[nameSize+1];
@@ -367,7 +367,7 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 	}
 	
 	o->getAttributeNames(v);
-	for (TTUInt16 i=0; i<v.getSize(); i++) {
+	for (TTUInt16 i=0; i<v.size(); i++) {
 		TTAttributePtr	attr = NULL;
 		SymbolPtr		maxType = _sym_long;
 		
