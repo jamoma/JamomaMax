@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief info≈ : creates an external for AudioGraph that provides information about the incoming multichannel signal
+ * @brief j.info≈ : creates an external for AudioGraph that provides information about the incoming multichannel signal
  *
  * @details
  *

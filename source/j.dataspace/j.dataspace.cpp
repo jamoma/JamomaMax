@@ -1,8 +1,8 @@
 /** @file
  * 
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief dataspace - Max external that converts values from one kind of unit to another kind of unit
+ * @brief j.dataspace - Max external that converts values from one kind of unit to another kind of unit
  *
  * @details The convertions make use of the DataspaceLib
  *

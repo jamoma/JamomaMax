@@ -1,11 +1,18 @@
-/* 
- *	midi.format#
- *	External object for Max wrapping a class for the Jamoma Graph
- *	Copyright © 2011 by Timothy Place
+/** @file
  * 
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMaxExternalsGraph
+ *
+ * @brief j.midi.format# - Format MIDI message as dictionary being passed in a Jamoma Graph
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2010 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxGraph.h"
 

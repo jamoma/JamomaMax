@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsGraph
  *
- * @brief append# - External object for Max to append keys to a dictionary being passed in a Jamoma Graph
+ * @brief j.append# - External object for Max to append keys to a dictionary being passed in a Jamoma Graph
  *
  * @details
  *

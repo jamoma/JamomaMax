@@ -1,11 +1,18 @@
-/* 
- * j.paramui
- * External for Jamoma: provide standard user interface component for parameters
- * By Tim Place, Copyright © 2007
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.paramui : A j.parameter object with a standardised interface
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2007 by Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "j.paramui.h"
 

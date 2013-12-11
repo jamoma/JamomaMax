@@ -1,16 +1,18 @@
-/** 
-	\file j.textslider.cpp
-	A slider displaying text and value
-	By Trond Lossius, Copyright � 2008
-	Inspired by a GUI widget from radiaL by jhno
-	
-	License: This code is licensed under the terms of the GNU LGPL
-	http://www.gnu.org/licenses/lgpl.html 
-  */
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.textslider : A slider displaying text and value
+ *
+ * @details Inspired by a GUI widget from radiaL by jhno
+ *
+ * @authors Trond Lossius, Nils Peters
+ *
+ * @copyright © 2008 by Trond Lossius @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
+ */
 
-
-// TODO: Integrate Dataspace Lib and Function Lib.
-// Would like to add 2nd inlet and outlet for communiting units to/from umenu
 
 #include "ext.h"
 #include "ext_obex.h"

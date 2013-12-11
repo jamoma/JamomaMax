@@ -1,11 +1,18 @@
-/*
- *	j.receive
- *	External object
- *	Copyright © 2010 by Théo de la Hogue
- * 
- * License: This code is licensed under the terms of the GNU LGPL
- * http://www.gnu.org/licenses/lgpl.html 
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.receive / j.receive~ : Receive messages and audio through remote communication
+ *
+ * @details
+ *
+ * @authors Théo de la Hogue, Trond Lossius
+ *
+ * @copyright © 2011 by Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTModularClassWrapperMax.h"
 

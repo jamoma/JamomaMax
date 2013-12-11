@@ -1,11 +1,18 @@
-/** 
- * \file j.oscinstance.cpp
- * External for Jamoma: retrieve instance numbers or ids from osc messages
- * By Trond Lossius, Copyright � 2005
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.oscinstance - retrieve instance numbers or ids from OSC messages
+ *
+ * @details
+ *
+ * @authors Trond Lossius
+ *
+ * @copyright Copyright © 2005 Trond Lossius @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "JamomaForMax.h"
 

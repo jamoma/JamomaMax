@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief Max external packing several MSP audio signals onto one AudioGraph multichannel audio signal.
+ * @brief j.pack≈ : Max external packing several MSP audio signals onto one AudioGraph multichannel audio signal.
  *
  * @details This object functions as a source (generator) for #TTAudioSignal usable by a Jamoma AudioGraph dsp chain.
  *

@@ -1,11 +1,18 @@
-/* 
- *	midi.out#
- *	Jamoma Graph external object for Max
- *	Copyright © 2011 by Timothy Place
+/** @file
  * 
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMaxExternalsGraph
+ *
+ * @brief j.midi.out# - Jamoma Graph external object for Max
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2011 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxGraph.h"
 

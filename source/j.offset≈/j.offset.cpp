@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief offset≈ : wraps the #TTAudioGraphOffset class as an envelope following external for AudioGraph
+ * @brief j.offset≈ : wraps the #TTAudioGraphOffset class as an envelope following external for AudioGraph
  *
  * @details
  *

@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief join≈ : wraps the #TTAudioGraphJoin class as external for AudioGraph that joins several multichannel signals
+ * @brief j.join≈ : wraps the #TTAudioGraphJoin class as external for AudioGraph that joins several multichannel signals
  *
  * @details
  *

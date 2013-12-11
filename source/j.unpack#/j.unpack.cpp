@@ -1,11 +1,18 @@
-/* 
- *	unpack#
- *	External object for Max/MSP to perform basic mathematical operations on objects in a Jamoma Graph.
- *	Copyright © 2010 by Timothy Place
+/** @file
  * 
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMaxExternalsGraph
+ *
+ * @brief j.unpack# - External object for Max/MSP to get Max values from a Jamoma Graph.
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2010 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxGraph.h"
 #include "TTCallback.h"

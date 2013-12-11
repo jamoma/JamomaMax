@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief degrade≈ : wraps the #TTDegrade class as an audio signal quality degrading external for AudioGraph
+ * @brief j.degrade≈ : wraps the #TTDegrade class as an audio signal quality degrading external for AudioGraph
  *
  * @details
  *

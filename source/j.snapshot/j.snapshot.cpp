@@ -1,11 +1,18 @@
-/*
- * j.snapshot
- * External for Jamoma: capture, recall, transform, and manipulate global snapshots
- * By Timothy Place, Copyright 2009
+/** @file
  *
- * License: This code is licensed under the terms of the GNU LGPL
- * http://www.gnu.org/licenses/lgpl.html
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.snapshot : Capture, recall, transform, and manipulate global snapshots
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2009 by Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "Jamoma.h"
 

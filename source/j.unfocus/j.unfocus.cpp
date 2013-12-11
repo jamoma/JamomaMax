@@ -1,9 +1,18 @@
-/**
- \file j.unfocus.cpp
- Remove the focus from any specific object in a patcher
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.unfocus : Remove the focus from any specific object in a patcher
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2009 by Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
+ */
 
- Copyright (c) 2009 by Timothy Place
-*/
 
 #include "JamomaForMax.h"
 

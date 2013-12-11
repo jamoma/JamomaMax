@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief j.parameter : Jamoma model parameter definition
+ * @brief j.parameter / j.message / j.return : Jamoma model parameter definition
  *
  * @details
  *
@@ -47,11 +47,9 @@ void		data_new_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		data_subscribe(TTPtr self, SymbolPtr address, AtomCount argc, AtomPtr argv);
 void		data_address(TTPtr self, SymbolPtr name);
 
-#ifndef JMOD_RETURN
 void		data_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-#endif
 
-#ifndef JMOD_MESSAGE
+
 void		WrappedDataClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 
@@ -104,7 +102,6 @@ void		data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
  @see	param_inc
  */
 void		data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-#endif
 
 
 
@@ -114,11 +111,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	spec->_wrap = &WrapTTDataClass;
 	spec->_new = &WrappedDataClass_new;
 	spec->_free = &WrappedDataClass_free;
-#ifndef JMOD_MESSAGE
 	spec->_any = &WrappedDataClass_anything;
-#else
-	spec->_any = NULL;
-#endif
 	
 #ifdef JMOD_MESSAGE
 	return wrapTTModularClassAsMaxClass(kTTSym_Data, "j.message", NULL, spec);
@@ -140,11 +133,8 @@ void WrapTTDataClass(WrappedClassPtr c)
 {
 	class_addmethod(c->maxClass, (method)data_assist,						"assist",				A_CANT, 0L);
 	
-#ifndef JMOD_RETURN
 	class_addmethod(c->maxClass, (method)data_return_value,					"return_value",			A_CANT, 0);
-#endif
-	
-#ifndef JMOD_MESSAGE	
+		
 	class_addmethod(c->maxClass, (method)data_bang,							"bang",					0L);
 	class_addmethod(c->maxClass, (method)data_int,							"int",					A_LONG, 0);
 	class_addmethod(c->maxClass, (method)data_float,						"float",				A_FLOAT, 0);
@@ -152,7 +142,6 @@ void WrapTTDataClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)data_inc,							"+",					A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)data_dec,							"-",					A_GIMME, 0);
-#endif
 	
 	class_addmethod(c->maxClass, (method)data_address,						"address",				A_SYM,0);
 }
@@ -193,13 +182,10 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	
 	// Make outlets (before attr_args_process)
 	/////////////////////////////////////////////////////////////////////////////////
-#ifndef JMOD_RETURN
-	
-	// Don't create outlets during dynamic changes
-		x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
-		x->outlets[data_out] = outlet_new(x, NULL);						// anything outlet to output data
 
-#endif
+	// Don't create outlets during dynamic changes
+    x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
+    x->outlets[data_out] = outlet_new(x, NULL);						// anything outlet to output data
     
     // Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
@@ -312,7 +298,6 @@ void data_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst)
 }
 
 
-#ifndef JMOD_MESSAGE
 void data_bang(TTPtr self)
 {
 	data_list(self, _sym_bang, 0, NULL);
@@ -351,10 +336,8 @@ void WrappedDataClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 	
 	jamoma_data_command((TTDataPtr)selectedObject, msg, argc, argv);
 }
-#endif
 
 
-#ifndef JMOD_RETURN
 void data_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -365,10 +348,8 @@ void data_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	else
 		outlet_anything(x->outlets[data_out], msg, argc, argv);
 }
-#endif
 
 
-#ifndef JMOD_MESSAGE
 void data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -387,4 +368,3 @@ void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
 	selectedObject->sendMessage(TTSymbol("Dec"), v, none);
 }
-#endif

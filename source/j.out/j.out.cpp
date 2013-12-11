@@ -1,11 +1,18 @@
-/* 
- * j.out (~) (TODO %)
- * External for Jamoma: manage any signal outputs
- * By Tim Place and ThŽo de la Hogue, Copyright © 2010
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.out / j.out~ - Manage control and audio outputs for a Jamoma model
+ *
+ * @details
+ *
+ * @authors  Timothy Place, Théo de la Hogue, Trond Lossius
+ *
+ * @copyright © 2008 by Timothy Place and Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTModularClassWrapperMax.h"
 

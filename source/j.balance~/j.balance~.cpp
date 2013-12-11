@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsDSP
  *
- * @brief balance~ : The amplitude envelope of one audio signal imitates that of another
+ * @brief j.balance~ : The amplitude envelope of one audio signal imitates that of another
  *
  * @details The code is based on an algorithm from Dodge & Jerse (1997): Computer Music: Synthesis, Composition, and Performance.
  *

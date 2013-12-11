@@ -1,11 +1,18 @@
-/* 
- *	j.unpack≈
- *	External object for Max/MSP to output TTAudioSignals from a Jamoma AudioGraph dsp chain.
- *	Copyright © 2008 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsAudioGraph
+ *
+ * @brief j.unpack≈ : Unpack AudioGraph multichannel signal to several MSP audio signals
+ *
+ * @details A 2D/3D trajectory generator at signal rate
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2008, Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxAudioGraph.h"
 #include "jpatcher_api.h"

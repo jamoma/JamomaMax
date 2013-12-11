@@ -1,7 +1,7 @@
 /** @file
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.dbap - Distance Based Amplitude Panning
+ * @brief j.dbap - Distance Based Amplitude Panning
  *
  * @details
  *
@@ -34,7 +34,10 @@ t_symbol		*ps_rollloff,
 				*ps_src_position,
 				*ps_src_gain,
 				*ps_src_mute,
-				*ps_src_blur;
+				*ps_src_blur,
+				*ps_jit_matrix,
+				*ps_getdata,
+				*ps_setinfo;
 
 /** Data structure for storing a 1,2 or 3 dimensional space data */
 typedef struct _xyz{

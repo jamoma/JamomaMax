@@ -1,11 +1,18 @@
-/* 
- *	iter#
- *	Iterate key/value pairs from a dictionary to a sequence of Max messages.
- *	Copyright © 2011 by Timothy Place
+/** @file
  * 
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMaxExternalsGraph
+ *
+ * @brief j.iter# - Iterate key/value pairs from a dictionary to a sequence of Max messages.
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2011 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxGraph.h"
 #include "TTCallback.h"

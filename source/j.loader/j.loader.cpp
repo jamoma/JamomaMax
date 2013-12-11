@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.loader - Simply used to load the framework when Max is launched
+ * @brief j.loader - Simply used to load the framework when Max is launched
  *
  * @details
  *

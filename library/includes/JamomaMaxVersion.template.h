@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxLibrary
  *
  * @brief Jamoma For Max Shared Library
  *

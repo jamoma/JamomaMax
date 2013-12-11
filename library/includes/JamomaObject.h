@@ -1,6 +1,6 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxLibrary
  *
  * @brief The global jamoma object.
  *

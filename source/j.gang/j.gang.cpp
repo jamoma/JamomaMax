@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.gang - Gang multiple objects together
+ * @brief j.gang - Gang multiple objects together
  *
  * @details
  *

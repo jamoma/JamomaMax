@@ -1,11 +1,18 @@
-/* 
- *	op!
- *	External object for Max/MSP to perform basic mathematical operations on objects in a Jamoma Graph.
- *	Copyright © 2010 by Timothy Place
+/** @file
  * 
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMaxExternalsGraph
+ *
+ * @brief j.midi.op# - Wraps the #TTOperator class as a Jamoma Graph external object for Max
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright Copyright © 2010 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "maxGraph.h"
 

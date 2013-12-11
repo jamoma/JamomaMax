@@ -1,11 +1,18 @@
-/* 
- *	j.parameter/message/return
- *	External object
- *	Copyright © 2010 by Théo de la Hogue
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.parameterArray / j.messageArray / j.returnArray : An array of nodes in a model
+ *
+ * @details
+ *
+ * @authors Théo de la Hogue, Trond Lossius
+ *
+ * @copyright © 2010 by Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTModularClassWrapperMax.h"
 

@@ -1,12 +1,12 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxLibrary
  *
  * @brief The global jamoma object.
  *
  * @details Functions and resources used by Max objects.
  *
- * @authors Tim Place
+ * @authors Tim Place, Trond Lossius
  *
  * @copyright Copyright © 2007, Tim Place @n
  * This code is licensed under the terms of the "New BSD License" @n

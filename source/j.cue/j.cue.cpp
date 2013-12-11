@@ -1,8 +1,8 @@
 /** @file
  * 
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief cue - store and recall the state of several models
+ * @brief j.cue - store and recall the state of several models
  *
  * @details
  *

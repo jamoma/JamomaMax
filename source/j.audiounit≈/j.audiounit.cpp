@@ -1,12 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
-<<<<<<< HEAD:source/j.audiounit≈/j.audiounit.cpp
- * @brief j.audiounit≈ : Jamoma AudioGraph external for Max for hosting AudioUnit plugins
-=======
- * @brief audiounit≈ : wraps the #TTAudioUnit class as an AudioUnit plugin host for AudioGraph
->>>>>>> dev:source/j.audiounit≈/j.audiounit.cpp
+ * @brief j.audiounit≈ : wraps the #TTAudioUnit class as an AudioUnit plugin host for AudioGraph
  *
  * @details
  *

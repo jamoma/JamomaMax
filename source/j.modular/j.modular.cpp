@@ -1,12 +1,18 @@
-/* 
- * j.modular
- * External for Jamoma : to manage local and distant application
+/** @file
  *
- * By Theo de la Hogue, Copyright 2010
- * 
- * License: This code is licensed under the terms of the GNU LGPL
- * http://www.gnu.org/licenses/lgpl.html
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.modular - external to manage local and distant application
+ *
+ * @details
+ *
+ * @authors Théo de la Hogue, Trond Lossius
+ *
+ * @copyright Copyright © 2010 Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTModularClassWrapperMax.h"
 

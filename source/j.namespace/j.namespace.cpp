@@ -1,11 +1,18 @@
-/* 
- * j.namespace
- * External to deal with the Jamoma Namespace
- * By Théo de la Hogue, Copyright 2010
- * 
- * License: This code is licensed under the terms of the GNU LGPL
- * http://www.gnu.org/licenses/lgpl.html 
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.namespace - deal with the Jamoma Namespace
+ *
+ * @details
+ *
+ * @authors Théo de la Hogue, Trond Lossius
+ *
+ * @copyright Copyright © 2010 Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTModularClassWrapperMax.h"
 

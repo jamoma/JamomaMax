@@ -1,11 +1,18 @@
-/**
- * \file /Modular/implementations/MaxMSP/j.ramp.cpp
- * External for Jamoma: ramp values using Jamoma's RampLib library
- * By Tim Place, Copyright � 2006
+/** @file
  *
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.ramp : Ramp values using Jamoma's RampLib library
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2006 by Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTModularClassWrapperMax.h"
 

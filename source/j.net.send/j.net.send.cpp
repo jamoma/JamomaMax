@@ -1,10 +1,18 @@
-/* 
- *	External object for Max/MSP
- *	Copyright © 2010 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.net.send - network communication sender
+ *
+ * @details
+ *
+ * @authors Timothy Place, Trond Lossius
+ *
+ * @copyright Copyright © 2010 Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTClassWrapperMax.h"
 

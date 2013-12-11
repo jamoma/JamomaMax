@@ -1,12 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
-<<<<<<< HEAD:source/j.adsr≈/j.adsr.cpp
- * @brief j.adsr~ : Envelope Generator object for Jamoma Audio Graph
-=======
- * @brief adsr≈ : wraps the #TTAdsr class as an envelope following external for AudioGraph
->>>>>>> dev:source/j.adsr≈/j.adsr.cpp
+ * @brief j.adsr≈ : wraps the #TTAdsr class as an envelope following external for AudioGraph
  *
  * @details
  *

@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.init - Send bang to initialize something.
+ * @brief j.init - Send bang to initialize something.
  *
  * @details Bang source may be global or for just one module
  *

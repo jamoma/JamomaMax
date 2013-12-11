@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief dcblock≈ : wraps the #TTDCBlock class as DC offset removing filter external for AudioGraph
+ * @brief j.dcblock≈ : wraps the #TTDCBlock class as DC offset removing filter external for AudioGraph
  *
  * @details
  *

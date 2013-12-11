@@ -1,11 +1,18 @@
-/** 
- * \file j.route.cpp
- * External for Jamoma: route messages to an outlet if they meet our criteria
- * By Tim Place, Copyright � 2005
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.route : Route messages to an outlet if they meet our criteria
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2005 by Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "JamomaForMax.h"
 

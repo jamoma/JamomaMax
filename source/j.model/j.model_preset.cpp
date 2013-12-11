@@ -1,11 +1,18 @@
-/* 
- *	j.model preset features
- *	External object functions
- *	Copyright © 2010 by Théo de la Hogue
- * 
- * License: This code is licensed under the terms of the GNU LGPL
- * http://www.gnu.org/licenses/lgpl.html 
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.model / j.view -  - preset features
+ *
+ * @details
+ *
+ * @authors Théo de la Hogue, Trond Lossius
+ *
+ * @copyright Copyright © 2010 Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "j.model.h"
 

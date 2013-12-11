@@ -1,13 +1,18 @@
-/* 
- *	j.panorama~
- *	External object for Max/MSP
- *	A panpot
+/** @file
  *
- *	Copyright © 2008-2011 by Timothy Place, Nils Peters
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMaxExternalsDSP
+ *
+ * @brief j.panorama~ : wraps the #TTPanorama class as a Jamoma external for MSP
+ *
+ * @details Panpot
+ *
+ * @authors Tim Place, Nils Peters, Trond Lossius
+ *
+ * @copyright © 2008 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTClassWrapperMax.h"
 

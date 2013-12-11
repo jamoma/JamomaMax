@@ -1,12 +1,12 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxLibrary
  *
  * @brief JamomaModular For Max Shared Library
  *
  * @details Functions and resources based on Modular framework used by Max objects
  *
- * @authors Théo de la Hogue, Tim Place
+ * @authors Théo de la Hogue, Tim Place, Trond Lossius
  *
  * @copyright © 2013, Théo de la Hogue & Tim Place @n
  * This code is licensed under the terms of the "New BSD License" @n
@@ -531,8 +531,8 @@ TTErr jamoma_output_send(TTOutputPtr anOutput, SymbolPtr msg, AtomCount argc, At
 TTErr jamoma_mapper_create(ObjectPtr x, TTObjectBasePtr *returnedMapper)
 {
 	TTValue			args, none;
-	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
+	TTObjectBasePtr	returnValueCallback, returnInputGoingDownCallback, returnInputGoingUpCallback, returnOutputGoingDownCallback, returnOutputGoingUpCallback;
+	TTValuePtr		returnValueBaton, returnInputGoingDownBaton, returnInputGoingUpBaton, returnOutputGoingDownBaton, returnOutputGoingUpBaton;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
@@ -541,6 +541,38 @@ TTErr jamoma_mapper_create(ObjectPtr x, TTObjectBasePtr *returnedMapper)
 	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
+    
+    returnInputGoingDownCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnInputGoingDownCallback, none);
+	returnInputGoingDownBaton = new TTValue(TTPtr(x));
+    returnInputGoingDownBaton->append(TTPtr(gensym("return_input_going_down")));
+	returnInputGoingDownCallback->setAttributeValue(kTTSym_baton, TTPtr(returnInputGoingDownBaton));
+	returnInputGoingDownCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+	args.append(returnInputGoingDownCallback);
+    
+    returnInputGoingUpCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnInputGoingUpCallback, none);
+	returnInputGoingUpBaton = new TTValue(TTPtr(x));
+    returnInputGoingUpBaton->append(TTPtr(gensym("return_input_going_up")));
+	returnInputGoingUpCallback->setAttributeValue(kTTSym_baton, TTPtr(returnInputGoingUpBaton));
+	returnInputGoingUpCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+	args.append(returnInputGoingUpCallback);
+    
+    returnOutputGoingDownCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnOutputGoingDownCallback, none);
+	returnOutputGoingDownBaton = new TTValue(TTPtr(x));
+    returnOutputGoingDownBaton->append(TTPtr(gensym("return_output_going_down")));
+	returnOutputGoingDownCallback->setAttributeValue(kTTSym_baton, TTPtr(returnOutputGoingDownBaton));
+	returnOutputGoingDownCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+	args.append(returnOutputGoingDownCallback);
+    
+    returnOutputGoingUpCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
+	TTObjectBaseInstantiate(TTSymbol("callback"), &returnOutputGoingUpCallback, none);
+	returnOutputGoingUpBaton = new TTValue(TTPtr(x));
+    returnOutputGoingUpBaton->append(TTPtr(gensym("return_output_going_up")));
+	returnOutputGoingUpCallback->setAttributeValue(kTTSym_baton, TTPtr(returnOutputGoingUpBaton));
+	returnOutputGoingUpCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+	args.append(returnOutputGoingUpCallback);
 	
 	*returnedMapper = NULL;
 	TTObjectBaseInstantiate(kTTSym_Mapper, TTObjectBaseHandle(returnedMapper), args);
