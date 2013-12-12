@@ -400,7 +400,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 5.0, 117.0, 110.0, 18.0 ],
-					"text" : "preset 1"
+					"text" : "preset:recall 1"
 				}
 
 			}
