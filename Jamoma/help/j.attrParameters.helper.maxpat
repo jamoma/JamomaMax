@@ -38,7 +38,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 432.5, 419.0, 197.0, 18.0 ],
-					"presentation_rect" : [ 444.0, 397.5, 0.0, 0.0 ],
 					"text" : "#1:inc ramp 2000"
 				}
 
@@ -53,7 +52,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 442.5, 387.0, 148.0, 20.0 ],
-					"presentation_rect" : [ 453.0, 361.5, 0.0, 0.0 ],
 					"text" : "increments can also ramp"
 				}
 
@@ -1035,7 +1033,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
-					"hidden" : 0,
+					"hidden" : 1,
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -1044,7 +1042,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
-					"hidden" : 0,
+					"hidden" : 1,
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -1062,7 +1060,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
-					"hidden" : 0,
+					"hidden" : 1,
 					"source" : [ "obj-20", 0 ]
 				}
 
