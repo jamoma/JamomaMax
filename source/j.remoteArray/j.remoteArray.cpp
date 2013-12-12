@@ -172,6 +172,7 @@ void WrappedViewerClass_free(TTPtr self)
                     delete EXTRA->arrayValue[i];
             
             free(EXTRA->arrayValue);
+            EXTRA->arrayValue = NULL;
         }
         
         qelem_free(EXTRA->ui_qelem);
@@ -497,6 +498,7 @@ void remote_address(TTPtr self, SymbolPtr address)
                     
                     x->arraySize = 0;
                     free(EXTRA->arrayValue);
+                    EXTRA->arrayValue = NULL;
                 }
                 
                 // rebuild internals
