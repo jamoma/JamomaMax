@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 197.0, 44.0, 1418.0, 866.0 ],
+		"rect" : [ -13.0, 44.0, 1418.0, 866.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -29,6 +29,34 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "live.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"orientation" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 80.333344, 613.0, 140.0, 15.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 37.0, 49.0, 190.0, 13.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "live.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"orientation" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 80.333344, 555.0, 140.0, 15.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 37.0, 31.0, 190.0, 13.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -133,6 +161,7 @@
 					"annotation" : "Control soundfile playback speed/transposition as MIDI transposition.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"hint" : "Playback rate as MIDI transposition",
 					"id" : "obj-80",
 					"maxclass" : "flonum",
@@ -207,6 +236,7 @@
 , 			{
 				"box" : 				{
 					"clickjump" : 0,
+					"hidden" : 1,
 					"id" : "obj-79",
 					"ignoreclick" : 1,
 					"maxclass" : "j.textslider",
@@ -227,6 +257,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-40",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -244,6 +275,7 @@
 					"annotation" : "The Frequency of the test tone. in [Hz] by default.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-22",
 					"maxclass" : "number",
 					"numinlets" : 1,
@@ -278,6 +310,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-63",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -295,6 +328,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"hint" : "",
 					"id" : "obj-60",
 					"maxclass" : "comment",
@@ -315,6 +349,7 @@
 					"cantchange" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
+					"hidden" : 1,
 					"id" : "obj-31",
 					"ignoreclick" : 1,
 					"maxclass" : "number",
@@ -338,6 +373,7 @@
 					"cantchange" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
+					"hidden" : 1,
 					"id" : "obj-43",
 					"ignoreclick" : 1,
 					"maxclass" : "number",
@@ -361,6 +397,7 @@
 					"cantchange" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
+					"hidden" : 1,
 					"id" : "obj-46",
 					"ignoreclick" : 1,
 					"maxclass" : "number",
@@ -391,7 +428,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -692,7 +729,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -1042,6 +1079,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "Loop soundfile.",
+					"hidden" : 1,
 					"id" : "obj-8",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1074,6 +1112,7 @@
 					"annotation" : " Set logical input for right channel.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"hint" : "logical input for right channel",
 					"id" : "obj-75",
 					"maxclass" : "number",
@@ -1097,6 +1136,7 @@
 					"annotation" : " Set logical input for left channel.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"hint" : "logical input for left channel",
 					"id" : "obj-6",
 					"maxclass" : "number",
@@ -1158,6 +1198,7 @@
 					"bgoncolor" : [ 0.0, 0.54902, 0.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-84",
 					"maxclass" : "textbutton",
 					"mode" : 1,
@@ -1180,6 +1221,7 @@
 					"annotation" : "Open sound file using file dialog ",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-83",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -1572,34 +1614,6 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "amplitude of output signal 1",
-					"id" : "obj-37",
-					"maxclass" : "j.meter~",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 80.333344, 556.0, 123.0, 12.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 50.0, 30.0, 170.0, 15.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "amplitude of output signal 2",
-					"id" : "obj-3",
-					"maxclass" : "j.meter~",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 80.333344, 607.0, 123.0, 12.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 50.0, 46.0, 170.0, 14.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"border" : 0.0,
 					"id" : "obj-38",
 					"maxclass" : "dropfile",
@@ -1654,6 +1668,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-76",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1689,14 +1704,14 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/input~"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
@@ -1788,7 +1803,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-37", 0 ],
+					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-2", 0 ]
@@ -2125,35 +2140,6 @@
 					"source" : [ "obj-95", 1 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.textslider.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
