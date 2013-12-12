@@ -251,9 +251,10 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 2",
 					"id" : "obj-19",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 509.5, 527.0, 80.0, 4.0 ],
 					"presentation" : 1,
@@ -265,9 +266,10 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-20",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 509.5, 482.0, 80.0, 4.0 ],
 					"presentation" : 1,

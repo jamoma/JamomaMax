@@ -374,9 +374,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 308.0, 73.0, 80.0, 4.0 ],
 					"presentation" : 1,
@@ -387,9 +388,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-4",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 308.0, 28.0, 80.0, 4.0 ],
 					"presentation" : 1,

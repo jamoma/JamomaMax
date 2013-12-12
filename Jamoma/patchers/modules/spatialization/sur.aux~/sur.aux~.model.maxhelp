@@ -313,9 +313,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-2",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 31.0, 368.0, 8.0, 87.0 ]
 				}
@@ -324,9 +325,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-5",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 49.0, 368.0, 8.0, 87.0 ]
 				}
@@ -335,9 +337,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-6",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 40.0, 368.0, 8.0, 87.0 ]
 				}
@@ -346,9 +349,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 651.0, 368.0, 8.0, 87.0 ]
 				}
@@ -357,9 +361,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-9",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 642.0, 368.0, 8.0, 87.0 ]
 				}
@@ -368,9 +373,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-10",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 350.0, 368.0, 8.0, 87.0 ]
 				}
@@ -379,9 +385,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-11",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 341.0, 368.0, 8.0, 87.0 ]
 				}
@@ -447,9 +454,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-17",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 633.0, 368.0, 8.0, 87.0 ]
 				}
@@ -458,9 +466,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-18",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 332.0, 368.0, 8.0, 87.0 ]
 				}

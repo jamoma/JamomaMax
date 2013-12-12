@@ -1614,9 +1614,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-59",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 265.0, 505.0, 100.0, 12.0 ]
 				}
@@ -1625,9 +1626,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-58",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 265.0, 490.0, 100.0, 12.0 ]
 				}
@@ -1636,9 +1638,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-57",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 265.0, 475.0, 100.0, 12.0 ]
 				}
@@ -1647,9 +1650,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-56",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 265.0, 460.0, 100.0, 12.0 ]
 				}
@@ -1658,9 +1662,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-54",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 265.0, 445.0, 100.0, 12.0 ]
 				}
@@ -1669,9 +1674,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-52",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 265.0, 430.0, 100.0, 12.0 ]
 				}
@@ -1680,9 +1686,10 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-51",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 265.0, 415.0, 100.0, 12.0 ]
 				}

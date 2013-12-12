@@ -647,9 +647,10 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-26",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 330.0, 57.0, 100.0, 8.0 ],
 					"presentation" : 1,

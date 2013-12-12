@@ -1731,9 +1731,10 @@
 				"box" : 				{
 					"annotation" : "instant amplitude of the signal number 2",
 					"id" : "obj-3",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 144.0, 316.0, 84.0, 13.0 ],
 					"presentation" : 1,
@@ -1745,9 +1746,10 @@
 				"box" : 				{
 					"annotation" : "instant amplitude of the signal number 1",
 					"id" : "obj-2",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 144.0, 252.5, 84.0, 13.0 ],
 					"presentation" : 1,
