@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
+ <preset name="default">
+  <!--"edit a comment"-->
+  <command address="audio/gain">93.000000</command>
+  <command address="thisParameter">1.000000</command>
+ </preset>
+ <preset name="crunchy">
+  <!--"edit a comment"-->
+  <command address="thisMenu">linear</command>
+  <command address="audio/gain">93.000000</command>
+  <command address="thisParameter">0.390000</command>
+  <command address="thisToggle">0</command>
+ </preset>
+ <preset name="funky">
+  <!--"edit a comment"-->
+  <command address="thisMenu">linear</command>
+  <command address="audio/gain">93.000000</command>
+  <command address="thisParameter">0.830000</command>
+  <command address="thisToggle">0</command>
+ </preset>
+</jamoma>
