@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 450.0, 240.0, 1185.0, 691.0 ],
+		"rect" : [ 100.0, 100.0, 1185.0, 691.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -102,11 +102,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
+						"rect" : [ 100.0, 126.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -567,7 +567,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 592.5, 318.0, 79.0, 20.0 ],
+									"patching_rect" : [ 592.5, 302.0, 79.0, 20.0 ],
 									"text" : "loadmess set"
 								}
 
@@ -609,8 +609,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 592.5, 338.0, 229.0, 18.0 ],
-									"text" : "model:address /Basic"
+									"patching_rect" : [ 592.5, 338.0, 229.0, 18.0 ]
 								}
 
 							}
@@ -640,7 +639,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 552.5, 196.0, 96.0, 20.0 ],
+									"patching_rect" : [ 584.0, 209.0, 96.0, 20.0 ],
 									"text" : "Command input"
 								}
 
@@ -697,7 +696,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 552.5, 176.0, 25.0, 25.0 ]
+									"patching_rect" : [ 552.5, 209.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -890,11 +889,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 450.0, 266.0, 1185.0, 665.0 ],
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -925,7 +924,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 196.0, 495.0, 309.0, 108.0 ],
-									"presentation_rect" : [ 194.0, 495.0, 0.0, 0.0 ],
 									"text" : "Patching a model. \n\nNote that j.model embed a way to manage default attribute values in a similar way to patcherargs. Hence, attributes values defined as argument to j.model may be overwritten when instanciating a model in your patch.",
 									"textcolor" : [ 0.5, 0.5, 0.5, 1.0 ]
 								}
@@ -988,11 +986,11 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+										"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 11.0,
@@ -1355,7 +1353,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -2089,7 +2087,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -3750,7 +3748,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -3881,7 +3879,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 133.0, 396.0, 182.0, 33.0 ],
+									"patching_rect" : [ 133.0, 396.0, 210.0, 33.0 ],
 									"text" : "j.remote /modelMaxhelp/model:reference/open"
 								}
 
@@ -3910,7 +3908,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 129.0, 171.0, 73.0, 18.0 ],
+									"patching_rect" : [ 129.0, 171.0, 115.0, 18.0 ],
 									"text" : "model:internal/open"
 								}
 
@@ -3968,7 +3966,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 129.0, 153.0, 97.0, 18.0 ],
+									"patching_rect" : [ 129.0, 153.0, 125.0, 18.0 ],
 									"text" : "model:reference/open"
 								}
 
@@ -3982,7 +3980,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 129.0, 135.0, 69.0, 18.0 ],
+									"patching_rect" : [ 129.0, 135.0, 97.0, 18.0 ],
 									"text" : "model:help/open"
 								}
 
@@ -4053,7 +4051,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -4365,7 +4363,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -4706,7 +4704,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -4958,7 +4956,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -5181,7 +5179,7 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
