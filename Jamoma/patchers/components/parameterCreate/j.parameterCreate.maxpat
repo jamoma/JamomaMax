@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 322.0, 737.0 ],
+		"rect" : [ 4.0, 44.0, 324.0, 738.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -2461,15 +2461,15 @@
 									"fontsize" : 10.0,
 									"frgb" : 0.0,
 									"id" : "obj-11",
-									"linecount" : 8,
+									"linecount" : 5,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 129.0, 99.0, 371.0, 104.0 ],
+									"patching_rect" : [ 129.0, 99.0, 371.0, 67.0 ],
 									"presentation" : 1,
-									"presentation_linecount" : 6,
-									"presentation_rect" : [ 58.0, 57.0, 440.0, 79.0 ],
-									"text" : "Determines the mechanism used to drive ramping to new parameter values. \nPossible values are :\n• none : no ramp happens\n• scheduler : ramps are driven by Max's scheduler (similar to [line] object)\n• queue : ramps are drive at low priority\n• async : ramps are event-driven (similar to [bline] object)"
+									"presentation_linecount" : 4,
+									"presentation_rect" : [ 58.0, 57.0, 440.0, 55.0 ],
+									"text" : "Determines the mechanism used to drive ramping to new parameter values. \nPossible values are :\n• none : no ramp happens\n• Max : ramps are driven by Max's scheduler (similar to [line] object)"
 								}
 
 							}
@@ -7481,7 +7481,7 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-51",
-					"items" : [ ",", "none", ",", "scheduler", ",", "queue", ",", "async" ],
+					"items" : [ ",", "none", ",", "Max" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -8882,7 +8882,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 139.0, 764.0, 170.0, 17.0 ],
-					"text" : "model:documentation/generate"
+					"text" : "model:reference/generate"
 				}
 
 			}
