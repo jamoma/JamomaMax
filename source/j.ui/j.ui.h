@@ -75,9 +75,8 @@ typedef struct _ui{
 	TTSymbol			patcherName;
 	
 	TTBoolean			hover;					// is the mouse hover the j.ui panel ?
-	TTBoolean			selection;				// is the user selecting things ?
-	TTBoolean			selectAll;				// to select/unselect all j.remote
-	t_jrgba				memo_bordercolor;		// to keep the choosen border color during selection
+	TTBoolean			highlight;				// is the user selecting things ?
+	TTBoolean			highlightAll;			// to highlight or not all j.remotes
 
 	t_jrgba				bgcolor;
 	t_jrgba				bordercolor;
@@ -117,33 +116,33 @@ typedef struct _ui{
 
 	long				has_mute;				// is the binded model have a mute ?
 	long				is_muted;
-	long				sel_mute;				// selection state of mute
+	bool				highlight_mute;			// selection state of mute
 	t_rect				rect_mute;
 
 	long				has_bypass;				// is the binded model have a bypass ?
 	long				is_bypassed;
-	long				sel_bypass;				// selection state of bypass
+	bool				highlight_bypass;		// selection state of bypass
 	t_rect				rect_bypass;
 
 	long				has_freeze;				// is the binded model have a freeze ?
 	long				is_frozen;
-	long				sel_freeze;				// selection state of freeze
+	bool				highlight_freeze;		// selection state of freeze
 	t_rect				rect_freeze;
 
 	long				has_preview;			// is the binded model have a preview ?
 	long				is_previewing;
-	long				sel_preview;			// selection state of preview
+	bool				highlight_preview;		// selection state of preview
 	t_rect				rect_preview;
 
 	long				has_gain;				// is the binded model have a gain ?
 	float				gain;
-	long				sel_gain;				// selection state of gain
+	bool				highlight_gain;			// selection state of gain
 	t_rect				rect_gain;
 	bool				gainDragging;
 	
 	long				has_mix;				// is the binded model have a mix ?
 	float				mix;
-	long				sel_mix;				// selection state of mix
+	bool				highlight_mix;			// selection state of mix
 	t_rect				rect_mix;
 	bool				mixDragging;
 	

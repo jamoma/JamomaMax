@@ -41,9 +41,6 @@ void ui_register_info(t_ui* obj)
 		// make a receiver on contextAddress/model:address attribute
 		ui_receiver_create(obj, &anObject, gensym("return_model_address"), TTSymbol("model:address"), obj->viewAddress, YES); // YES : we want to deferlow this method
 	}
-    
-    // keep current bordercolor in mind
-    obj->memo_bordercolor = obj->bordercolor;
 }
 
 void ui_unregister_info(t_ui *obj)

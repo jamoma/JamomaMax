@@ -104,6 +104,11 @@ TTErr TTUiInfo::setHighlight(const TTValue& inputValue)
 {
 	TTSymbol newHighlight = inputValue;
     
+    if (inputValue.size() == 0) {
+        TTLogWarning("j.ui - Missing argument when attempting to set highlight color.");
+        return kTTErrGeneric;
+    }
+    
     // Filter repetitions
     if (newHighlight != mHighlight) {
         
@@ -190,14 +195,10 @@ TTErr TTUiInfo::setHighlight(const TTValue& inputValue)
             TTLogWarning("j.ui - unknown color used for highlighting.\n");
             return kTTErrGeneric;
         }
+        
+        // Redraw
+        jbox_redraw(&mObject->box);
     }
-    else {
-        TTLogWarning("j.ui - Missing argument when attempting to set highlight color.");
-        return kTTErrGeneric;
-    }
-    
-    // Redraw
-	jbox_redraw(&mObject->box);
     
     return kTTErrNone;
 }

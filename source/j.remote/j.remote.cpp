@@ -428,7 +428,7 @@ void remote_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers
 	ObjectPtr	patcher;
 	AtomCount	ac;
 	AtomPtr		av;
-	Atom		a;
+	t_atom		a;
 	
 	if (EXTRA->connected) {
 		
@@ -445,7 +445,7 @@ void remote_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers
 				ac = 0;
 				av = NULL;
 				object_obex_lookup(x, gensym("#P"), &patcher);
-				EXTRA->label = newobject_sprintf(patcher, "@maxclass comment @presentation 1");
+				EXTRA->label = newobject_sprintf(patcher, "@maxclass comment @presentation 1 @textcolor 1. 1. 1. 1.");
 				object_attr_getvalueof(EXTRA->connected, _sym_presentation_rect , &ac, &av);
 				if (ac && av && EXTRA->label) {
 					object_method_long(EXTRA->label, _sym_fontsize, 10, &a);
@@ -486,7 +486,7 @@ void remote_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers
 void remote_mouseleave(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	Atom		a;
+	t_atom		a;
 	
 	// if mouse leaves j.ui maybe it is on our object
 	if (pt.x > EXTRA->x && pt.x < EXTRA->x+EXTRA->w && pt.y > EXTRA->y && pt.y < EXTRA->y+EXTRA->h)

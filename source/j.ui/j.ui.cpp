@@ -189,8 +189,8 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
         x->patcherClass = kTTSymEmpty;
         x->patcherName = kTTSymEmpty;
 		
+        x->highlight = false;
 		x->hover = false;
-		x->selectAll = false;
 		
 		x->has_preset = false;
 		x->has_model = false;
@@ -202,12 +202,12 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		x->has_preview = false;
 		x->has_freeze = false;
 		
-		x->sel_mute = true;
-		x->sel_gain = true;
-		x->sel_bypass = true;
-		x->sel_mix = true;
-		x->sel_preview = true;
-		x->sel_freeze = true;
+		x->highlight_mute = false;
+		x->highlight_gain = false;
+		x->highlight_bypass = false;
+		x->highlight_mix = false;
+		x->highlight_preview = false;
+		x->highlight_freeze = false;
 		
 		x->modelOutput = NULL;
 		x->previewSignal = NULL;
@@ -265,6 +265,9 @@ void ui_free(t_ui *x)
 			TTObjectBaseRelease(TTObjectBaseHandle(&x->previewSignal));
 		}
 	}
+    
+    if (x->preset_names)
+		sysmem_freeptr(x->preset_names);
 	
 	ui_unregister_info(x);
 	ui_viewer_destroy_all(x);
@@ -318,6 +321,11 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 		x->has_mix = false;
 		x->has_preview = false;
 		x->has_freeze = false;
+        
+        if (x->preset_names) {
+            sysmem_freeptr(x->preset_names);
+            x->preset_names = NULL;
+        }
 		
 		// reset output object and preview signal
 		if (x->previewSignal && x->modelOutput) {
@@ -606,7 +614,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_gain)
+		if (x->highlight && x->highlight_gain)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -655,7 +663,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_mix)
+		if (x->highlight && x->highlight_mix)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -703,7 +711,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_mute)
+		if (x->highlight && x->highlight_mute)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -746,7 +754,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_bypass)
+		if (x->highlight && x->highlight_bypass)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -786,7 +794,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_freeze)
+		if (x->highlight && x->highlight_freeze)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -824,7 +832,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_preview)
+		if (x->highlight && x->highlight_preview)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -931,14 +939,14 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
                     // instead we should pass two doubles (one for the x coordinate and one for the y coordinate)
                     // so in j.remote : that function should change its prototype,
                     // and then the arguments to object_method should change too object_method() is much more picky now
-                    //> object_method(object_attr_getobj(obj, _sym_object), gensym("mousedown"), patcherview, px, modifiers);
+                    object_method(object_attr_getobj(obj, _sym_object), gensym("mousedown"), patcherview, px.x, px.y, modifiers);
 					
 				}
 				obj = object_attr_getobj(obj, _sym_nextobject);
 			}
 			
 			// update the mouse position to display
-			//ui_mousemove(x, patcherview, px, modifiers);
+			ui_mousemove(x, patcherview, px, modifiers);
 		}
 		
 		return;
@@ -947,9 +955,9 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 	if (px.x > 18 && px.y < 20.0) {//(rect.width - 112)) {
 		// we check the gain and mix knobs first because they are continuous datas and should run as fast as possible
 		if (x->has_gain && px.x >= x->rect_gain.x && px.x <= (x->rect_gain.x + x->rect_gain.width)) {
-			if (x->selection) {
-				x->sel_gain = !x->sel_gain;
-				ui_viewer_highlight(x, TTSymbol("audio/gain"), x->sel_gain);
+			if (x->highlight) {
+				x->highlight_gain = !x->highlight_gain;
+				ui_viewer_highlight(x, TTSymbol("audio/gain"), x->highlight_gain);
 			}
 			else {
 				x->gainDragging = true;
@@ -959,9 +967,9 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 			}
 		}
 		else if (x->has_mix && px.x >= x->rect_mix.x && px.x <= (x->rect_mix.x + x->rect_mix.width)) {
-			if (x->selection) {
-				x->sel_mix = !x->sel_mix;
-				ui_viewer_highlight(x, TTSymbol("audio/mix"), x->sel_mix);
+			if (x->highlight) {
+				x->highlight_mix = !x->highlight_mix;
+				ui_viewer_highlight(x, TTSymbol("audio/mix"), x->highlight_mix);
 			}
 			else {
 				x->mixDragging = true;
@@ -974,33 +982,33 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 			x->uiInfo->sendMessage(TTSymbol("Panel"));
 		
 		else if (x->has_preview && px.x >= x->rect_preview.x && px.x <= (x->rect_preview.x + x->rect_preview.width)) {
-			if (x->selection) {
-				x->sel_preview = !x->sel_preview;
-				ui_viewer_highlight(x, TTSymbol("data/preview"), x->sel_preview);
+			if (x->highlight) {
+				x->highlight_preview = !x->highlight_preview;
+				ui_viewer_highlight(x, TTSymbol("data/preview"), x->highlight_preview);
 			}
 			else
 				ui_viewer_send(x, TTSymbol("data/preview"), TTValue(!x->is_previewing));
 		}
 		else if (x->has_freeze && px.x >= x->rect_freeze.x && px.x <= (x->rect_freeze.x + x->rect_freeze.width)) {
-			if (x->selection) {
-				x->sel_freeze = !x->sel_freeze;
-				ui_viewer_highlight(x, TTSymbol("data/freeze"), x->sel_freeze);
+			if (x->highlight) {
+				x->highlight_freeze = !x->highlight_freeze;
+				ui_viewer_highlight(x, TTSymbol("data/freeze"), x->highlight_freeze);
 			}
 			else
 				ui_viewer_send(x, TTSymbol("data/freeze"), TTValue(!x->is_frozen));
 		}
 		else if (x->has_bypass && px.x >= x->rect_bypass.x && px.x <= (x->rect_bypass.x + x->rect_bypass.width)) {
-			if (x->selection) {
-				x->sel_bypass = !x->sel_bypass;
-				ui_viewer_highlight(x, TTSymbol("*.*/bypass"), x->sel_bypass);
+			if (x->highlight) {
+				x->highlight_bypass = !x->highlight_bypass;
+				ui_viewer_highlight(x, TTSymbol("*.*/bypass"), x->highlight_bypass);
 			}
 			else
 				ui_viewer_send(x, TTSymbol("*.*/bypass"), TTValue(!x->is_bypassed));
 		}
 		else if (x->has_mute && px.x >= x->rect_mute.x && px.x <= (x->rect_mute.x + x->rect_mute.width)) {
-			if (x->selection) {
-				x->sel_mute = !x->sel_mute;
-				ui_viewer_highlight(x, TTSymbol("*.*/mute"), x->sel_mute);
+			if (x->highlight) {
+				x->highlight_mute = !x->highlight_mute;
+				ui_viewer_highlight(x, TTSymbol("*.*/mute"), x->highlight_mute);
 			}
 			else
 				ui_viewer_send(x, TTSymbol("*.*/mute"), TTValue(!x->is_muted));
@@ -1064,26 +1072,25 @@ void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 {
 	SymbolPtr	objclass;
 	ObjectPtr	obj = object_attr_getobj(jamoma_patcher_get((ObjectPtr)x), _sym_firstobject);
-	Atom		selected_color[4];
 	
 	// if the control key is pressed
 	if (modifiers & eShiftKey) {
 		
-		x->selection = true;
+		x->highlight = true;
 		
 		// Is the mouse wasn't hover the j.ui panel
 		if (!x->hover) {
 			x->hover = true;
-			object_attr_setvalueof(x, gensym("bordercolor"), 4, selected_color);
+            x->uiInfo->setAttributeValue(TTSymbol("highlight"), TTSymbol("jamoma"));
 		}
 	}
 	else {
 		
-		x->selection = false;
+		x->highlight = false;
 		
 		if (x->hover) {
 			x->hover = false;
-			object_attr_setcolor((ObjectPtr)x, gensym("bordercolor"), &x->memo_bordercolor);
+			x->uiInfo->setAttributeValue(TTSymbol("highlight"), kTTSym_none);
 		}
 	}
 	
@@ -1095,7 +1102,7 @@ void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
             // instead we should pass two doubles (one for the x coordinate and one for the y coordinate)
             // so in j.remote : that function should change its prototype,
             // and then the arguments to object_method should change too object_method() is much more picky now
-			//> object_method(object_attr_getobj(obj, _sym_object), gensym("mousemove"), patcherview, pt, modifiers);
+			object_method(object_attr_getobj(obj, _sym_object), gensym("mousemove"), patcherview, pt.x, pt.y, modifiers);
 
 		}
 		obj = object_attr_getobj(obj, _sym_nextobject);
@@ -1110,8 +1117,10 @@ void ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 	// Is the mouse leave outside the j.ui (not hover an ui object)
 	if (	pt.x <= x->box.b_presentation_rect.x || pt.x >= (x->box.b_presentation_rect.x + x->box.b_presentation_rect.width)
 		||	pt.y <= x->box.b_presentation_rect.y || pt.y >= (x->box.b_presentation_rect.y + x->box.b_presentation_rect.height)) {
+        
+        x->highlight = false;
 		x->hover = false;
-		object_attr_setcolor((ObjectPtr)x, gensym("bordercolor"), &x->memo_bordercolor);
+		x->uiInfo->setAttributeValue(TTSymbol("highlight"), kTTSym_none);
 	}
 
 	while (obj) {
@@ -1122,7 +1131,7 @@ void ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
             // instead we should pass two doubles (one for the x coordinate and one for the y coordinate)
             // so in j.remote : that function should change its prototype,
             // and then the arguments to object_method should change too object_method() is much more picky now
-			//> object_method(object_attr_getobj(obj, _sym_object), gensym("mouseleave"), patcherview, pt, modifiers*x->hover); // * hover allows to return to a normal display
+			object_method(object_attr_getobj(obj, _sym_object), gensym("mouseleave"), patcherview, pt.x, pt.y, modifiers*x->hover); // * hover allows to return to a normal display
 			
 		}
 		obj = object_attr_getobj(obj, _sym_nextobject);
