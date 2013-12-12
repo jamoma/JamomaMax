@@ -2,9 +2,8 @@
 <jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
  <preset name="default">
   <!--"edit a comment"-->
-  <command address="audio/gain">100.000000</command>
-  <command address="audio/mute">0</command>
-  <command address="note">69.00000</command>
-  <command address="oscillator">sine</command>
+  <command address="buffer/pixel">128</command>
+  <command address="buffer/samples">128</command>
+  <command address="range">-0.000002</command>
  </preset>
 </jamoma>

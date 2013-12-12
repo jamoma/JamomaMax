@@ -69,12 +69,12 @@ ObjectPtr MaxAudioGraphWrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr 
 		self->numInputs = 1;
 		self->numOutputs = 1;
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("argumentDefinesNumInlets"), v)) {
-			long argumentOffsetToDefineTheNumberOfInlets = v;
+			int argumentOffsetToDefineTheNumberOfInlets = v;
 			if ((attrstart-argumentOffsetToDefineTheNumberOfInlets > 0) && argv+argumentOffsetToDefineTheNumberOfInlets)
 				self->numInputs = atom_getlong(argv+argumentOffsetToDefineTheNumberOfInlets);
 		}
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("wrapperDefinesNumInlets"), v)) {
-			long wrapperDefinedNumberOfInlets = v;
+			int wrapperDefinedNumberOfInlets = v;
 			if (wrapperDefinedNumberOfInlets > 0)
 				self->numInputs = wrapperDefinedNumberOfInlets;
 		}
@@ -86,12 +86,12 @@ ObjectPtr MaxAudioGraphWrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr 
 		
     	object_obex_store((void*)self, _sym_dumpout, (object*)outlet_new(self, NULL));	// dumpout
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("argumentDefinesNumOutlets"), v)) {
-			long argumentOffsetToDefineTheNumberOfOutlets = v;
+			int argumentOffsetToDefineTheNumberOfOutlets = v;
 			if ((attrstart-argumentOffsetToDefineTheNumberOfOutlets > 0) && argv+argumentOffsetToDefineTheNumberOfOutlets)
 				self->numOutputs = atom_getlong(argv+argumentOffsetToDefineTheNumberOfOutlets);
 		}
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("wrapperDefinesNumOutlets"), v)) {
-			long wrapperDefinedNumberOfOutlets = v;
+			int wrapperDefinedNumberOfOutlets = v;
 			if (wrapperDefinedNumberOfOutlets > 0) 
 				self->numOutputs = wrapperDefinedNumberOfOutlets;
 		}		
