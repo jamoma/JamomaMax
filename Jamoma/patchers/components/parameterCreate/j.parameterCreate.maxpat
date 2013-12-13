@@ -50,8 +50,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 74.0, 788.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 53.0, 788.0, 0.0, 0.0 ]
+					"patching_rect" : [ 74.0, 788.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -2469,7 +2468,7 @@
 									"presentation" : 1,
 									"presentation_linecount" : 4,
 									"presentation_rect" : [ 58.0, 57.0, 440.0, 55.0 ],
-									"text" : "Determines the mechanism used to drive ramping to new parameter values. \nPossible values are :\n• none : no ramp happens\n• Max : ramps are driven by Max's scheduler (similar to [line] object)"
+									"text" : "Determines the mechanism used to drive ramping to new parameter values. \nPossible values are :\n• None : no ramp happens\n• Max : ramps are driven by Max's scheduler (similar to [line] object)"
 								}
 
 							}
@@ -7481,7 +7480,7 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-51",
-					"items" : [ ",", "none", ",", "Max" ],
+					"items" : [ ",", "None", ",", "Max" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -11178,8 +11177,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 86.0, 563.0, 158.0, 44.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 135.0, 300.0, 158.0, 44.0 ],
-					"text" : "tata yoyo"
+					"presentation_rect" : [ 135.0, 300.0, 158.0, 44.0 ]
 				}
 
 			}
@@ -11244,8 +11242,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 84.0, 75.0, 158.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 135.0, 110.0, 158.0, 22.0 ],
-					"text" : "yoyo"
+					"presentation_rect" : [ 135.0, 110.0, 158.0, 22.0 ]
 				}
 
 			}
