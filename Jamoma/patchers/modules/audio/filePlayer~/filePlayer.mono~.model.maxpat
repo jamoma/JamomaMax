@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
@@ -36,8 +36,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "bang" ],
-					"patching_rect" : [ 28.0, 319.0, 133.0, 20.0 ],
-					"save" : [ "#N", "sfplay~", "$0__sflist", 1, 120960, 1, "", ";" ],
+					"patching_rect" : [ 80.0, 319.0, 145.0, 20.0 ],
+					"save" : [ "#N", "sfplay~", "1073__sflist", 1, 120960, 1, "", ";" ],
 					"text" : "sfplay~ #0__sflist 1 0 1"
 				}
 
@@ -49,7 +49,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 28.0, 412.5, 25.0, 25.0 ]
+					"patching_rect" : [ 80.0, 412.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 28.0, 370.5, 73.0, 20.0 ],
+					"patching_rect" : [ 80.0, 370.5, 73.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -76,7 +76,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 281.0, 155.0, 20.0 ],
+					"patching_rect" : [ 80.0, 281.0, 155.0, 20.0 ],
 					"text" : "filePlayer.algorithm"
 				}
 
@@ -216,7 +216,7 @@
 					"destination" : [ "obj-91", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 151.5, 351.0, 185.0, 351.0, 185.0, 269.0, 173.5, 269.0 ],
+					"midpoints" : [ 215.5, 351.0, 237.0, 351.0, 237.0, 269.0, 225.5, 269.0 ],
 					"source" : [ "obj-92", 2 ]
 				}
 
@@ -226,7 +226,7 @@
 					"destination" : [ "obj-91", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 94.5, 363.0, 198.0, 363.0, 198.0, 255.0, 37.5, 255.0 ],
+					"midpoints" : [ 152.5, 363.0, 250.0, 363.0, 250.0, 255.0, 89.5, 255.0 ],
 					"source" : [ "obj-92", 1 ]
 				}
 
@@ -248,42 +248,6 @@
 					"source" : [ "obj-94", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "filePlayer.algorithm.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

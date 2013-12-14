@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 54.0, 72.0, 309.0, 474.0 ],
+		"rect" : [ 880.0, 91.0, 309.0, 474.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 281.0, 155.0, 20.0 ],
+					"patching_rect" : [ 80.0, 284.0, 155.0, 20.0 ],
 					"text" : "filePlayer.algorithm"
 				}
 
@@ -50,7 +50,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 81.5, 375.5, 73.0, 20.0 ],
+					"patching_rect" : [ 133.5, 378.5, 73.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -107,8 +107,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "signal", "bang" ],
-					"patching_rect" : [ 28.0, 321.0, 133.0, 20.0 ],
-					"save" : [ "#N", "sfplay~", "$0__sflist", 2, 120960, 1, "", ";" ],
+					"patching_rect" : [ 80.0, 324.0, 145.0, 20.0 ],
+					"save" : [ "#N", "sfplay~", "1053__sflist", 2, 120960, 1, "", ";" ],
 					"text" : "sfplay~ #0__sflist 2 0 1"
 				}
 
@@ -120,7 +120,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 81.5, 412.5, 25.0, 25.0 ]
+					"patching_rect" : [ 133.5, 415.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -131,7 +131,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 27.0, 412.5, 25.0, 25.0 ]
+					"patching_rect" : [ 79.0, 415.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -144,7 +144,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 28.0, 375.5, 50.0, 20.0 ],
+					"patching_rect" : [ 80.0, 378.5, 50.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -268,7 +268,7 @@
 					"destination" : [ "obj-91", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 151.5, 351.0, 185.0, 351.0, 185.0, 269.0, 173.5, 269.0 ],
+					"midpoints" : [ 215.5, 354.0, 237.0, 354.0, 237.0, 272.0, 225.5, 272.0 ],
 					"source" : [ "obj-6", 3 ]
 				}
 
@@ -278,7 +278,7 @@
 					"destination" : [ "obj-91", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 113.5, 363.0, 198.0, 363.0, 198.0, 255.0, 37.5, 255.0 ],
+					"midpoints" : [ 173.5, 366.0, 250.0, 366.0, 250.0, 258.0, 89.5, 258.0 ],
 					"source" : [ "obj-6", 2 ]
 				}
 
@@ -291,42 +291,6 @@
 					"source" : [ "obj-91", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "filePlayer.algorithm.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
