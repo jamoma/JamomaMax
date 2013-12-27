@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -28,6 +28,35 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-30",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "clear" ],
+					"patching_rect" : [ 378.0, 261.0, 43.0, 20.0 ],
+					"text" : "t clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-29",
+					"linecount" : 7,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 378.0, 154.0, 130.0, 100.0 ],
+					"text" : "j.message clear @type none @description \"Clears the history of previous samles used by the limiter and it's internal DC filter.\""
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -110,7 +139,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 191.0, 317.0, 123.0, 20.0 ],
+					"patching_rect" : [ 191.0, 345.0, 123.0, 20.0 ],
 					"text" : "j.limiter~"
 				}
 
@@ -206,7 +235,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 18.0, 402.0, 25.0, 25.0 ]
+					"patching_rect" : [ 18.0, 430.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -343,7 +372,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 243.0, 377.0, 50.0, 20.0 ],
+					"patching_rect" : [ 243.0, 405.0, 50.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -357,7 +386,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 191.0, 377.0, 50.0, 20.0 ],
+					"patching_rect" : [ 191.0, 405.0, 50.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -421,7 +450,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 191.0, 408.0, 25.0, 25.0 ]
+					"patching_rect" : [ 191.0, 436.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -432,7 +461,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 243.0, 408.0, 25.0, 25.0 ]
+					"patching_rect" : [ 243.0, 436.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -619,10 +648,28 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-13", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-30", 0 ]
 				}
 
 			}
@@ -699,6 +746,10 @@
 			}
 , 			{
 				"name" : "j.limiter~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]
