@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -28,6 +28,20 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-33",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 866.0, 529.0, 41.0, 20.0 ],
+					"text" : "round"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -63,9 +77,9 @@
 					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 866.0, 511.0, 267.0, 47.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 866.0, 563.5, 267.0, 47.0 ],
 					"text" : "j.return status @type boolean @description \"Indicates if the input signal is currently gated or not.\""
 				}
 
@@ -108,8 +122,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 491.0, 140.5, 569.0, 47.0 ],
-					"text" : "j.parameter threshold @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds -90 24 @range/clipmode both @description \"The threshold sets the level at which the Noise Gate opens and closes..\" @dataspace gain @dataspace/unit dB",
+					"patching_rect" : [ 491.0, 140.5, 601.0, 47.0 ],
+					"text" : "j.parameter threshold @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds -90 24 @range/clipmode both @description \"The threshold sets the level at which the Noise Gate opens and closes..\" @dataspace gain @dataspace/unit dB",
 					"varname" : "threshold"
 				}
 
@@ -156,7 +170,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 855.0, 242.0, 412.0, 47.0 ],
+					"patching_rect" : [ 855.0, 242.0, 415.0, 47.0 ],
 					"text" : "j.parameter lookahead @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 100 @range/clipmode low @description \"How many samples to look ahead while monitoring incoming signal.\"",
 					"varname" : "lookahead"
 				}
@@ -255,8 +269,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "int", "int" ],
-					"patching_rect" : [ 866.0, 481.0, 49.0, 20.0 ],
-					"text" : "change"
+					"patching_rect" : [ 866.0, 490.0, 63.0, 20.0 ],
+					"text" : "change 0."
 				}
 
 			}
@@ -679,6 +693,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-33", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-12", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -724,7 +747,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-31", 0 ],
+					"destination" : [ "obj-33", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-8", 0 ]
