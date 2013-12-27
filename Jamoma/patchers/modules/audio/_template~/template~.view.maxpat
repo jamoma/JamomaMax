@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -112,7 +112,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 136.0, 187.0, 44.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 214.0, 26.0, 44.0, 20.0 ],
+					"presentation_rect" : [ 214.0, 24.0, 44.0, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -130,7 +130,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -297,7 +297,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
@@ -591,7 +591,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 71.0, 284.0, 109.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 73.0, 49.0, 94.0, 20.0 ]
+					"presentation_rect" : [ 73.0, 47.0, 94.0, 20.0 ]
 				}
 
 			}
@@ -638,7 +638,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 162.0, 248.0, 18.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 216.0, 49.0, 18.0, 18.0 ],
+					"presentation_rect" : [ 216.0, 47.0, 18.0, 18.0 ],
 					"size" : 1,
 					"values" : [ 1 ]
 				}
@@ -655,7 +655,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 71.0, 187.0, 59.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 151.0, 26.0, 70.0, 20.0 ],
+					"presentation_rect" : [ 151.0, 24.0, 70.0, 20.0 ],
 					"text" : "Message"
 				}
 
@@ -687,7 +687,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 136.0, 147.0, 43.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 73.0, 25.0, 38.0, 20.0 ],
+					"presentation_rect" : [ 73.0, 23.0, 38.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "ParameterA"
@@ -705,7 +705,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 71.0, 147.0, 67.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 25.0, 68.0, 20.0 ],
+					"presentation_rect" : [ 8.0, 23.0, 68.0, 20.0 ],
 					"text" : "Parameter"
 				}
 
@@ -734,7 +734,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ -1.0, 0.0, 300.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1.0, 3.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"text" : "/noModelAddress"
 				}
 
@@ -853,6 +853,27 @@
 					"source" : [ "obj-93", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscroute.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
