@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -29,6 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"args" : [ "#1" ],
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
 					"name" : "echo~.view.maxpat",
@@ -50,8 +51,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 37.0, 172.0, 87.0, 20.0 ],
-					"text" : "echo~.model"
+					"patching_rect" : [ 37.0, 172.0, 96.0, 20.0 ],
+					"text" : "echo~.model #1"
 				}
 
 			}
@@ -75,7 +76,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 71.0, 112.0, 25.0, 25.0 ]
+					"patching_rect" : [ 75.5, 112.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -86,7 +87,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 71.0, 226.0, 25.0, 25.0 ]
+					"patching_rect" : [ 75.5, 226.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -98,7 +99,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 105.0, 112.0, 25.0, 25.0 ]
+					"patching_rect" : [ 114.0, 112.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -120,7 +121,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 105.0, 226.0, 25.0, 25.0 ]
+					"patching_rect" : [ 114.0, 226.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -182,21 +183,31 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "echo~.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/echo~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/echo~",
 				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"patcherrelativepath" : "../limiter~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "filter~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filter~",
+				"patcherrelativepath" : "../filter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "echo~.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/echo~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/echo~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "j.limiter~.mxo",
-				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.parameter.mxo",
@@ -219,6 +230,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.limiter~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
@@ -228,10 +243,6 @@
 			}
 , 			{
 				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
