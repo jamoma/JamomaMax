@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 54.0, 72.0, 320.0, 522.0 ],
+		"rect" : [ 54.0, 72.0, 511.0, 522.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 161.5, 396.5, 50.0, 20.0 ],
+					"patching_rect" : [ 254.833313, 375.5, 50.0, 20.0 ],
 					"text" : "j.out~ 4"
 				}
 
@@ -50,7 +50,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 135.5, 360.5, 50.0, 20.0 ],
+					"patching_rect" : [ 198.166656, 375.5, 50.0, 20.0 ],
 					"text" : "j.out~ 3"
 				}
 
@@ -64,7 +64,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 107.5, 396.5, 50.0, 20.0 ],
+					"patching_rect" : [ 140.833313, 375.5, 50.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -78,7 +78,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 83.833336, 431.5, 96.666664, 20.0 ],
+					"patching_rect" : [ 83.833336, 412.5, 189.999969, 20.0 ],
 					"text" : "j.pack≈ 4"
 				}
 
@@ -92,7 +92,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 6,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "bang" ],
-					"patching_rect" : [ 83.5, 315.0, 149.0, 20.0 ],
+					"patching_rect" : [ 83.5, 315.0, 305.666626, 20.0 ],
 					"save" : [ "#N", "sfplay~", "$0__sflist", 4, 120960, 1, "", ";" ],
 					"text" : "sfplay~ #0__sflist 4 0 1"
 				}
@@ -118,7 +118,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 83.5, 360.5, 50.0, 20.0 ],
+					"patching_rect" : [ 83.499992, 375.5, 50.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -272,7 +272,7 @@
 					"destination" : [ "obj-91", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 223.0, 347.0, 240.5, 347.0, 240.5, 271.0, 229.0, 271.0 ],
+					"midpoints" : [ 379.666626, 347.0, 395.5, 347.0, 395.5, 271.0, 229.0, 271.0 ],
 					"source" : [ "obj-6", 5 ]
 				}
 
@@ -282,7 +282,7 @@
 					"destination" : [ "obj-91", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 197.0, 358.0, 253.5, 358.0, 253.5, 257.0, 93.0, 257.0 ],
+					"midpoints" : [ 322.333313, 358.0, 401.5, 358.0, 401.5, 264.0, 93.0, 264.0 ],
 					"source" : [ "obj-6", 4 ]
 				}
 
@@ -371,7 +371,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "filePlayer.algorithm.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
