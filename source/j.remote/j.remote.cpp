@@ -98,11 +98,12 @@ void WrapTTViewerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)remote_return_value,			"return_value",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)remote_return_model_address,	"return_model_address",	A_CANT, 0);
-	
-	class_addmethod(c->maxClass, (method)remote_bang,					"bang",					0L);
+    
+    class_addmethod(c->maxClass, (method)remote_bang,					"bang",					0L);
 	class_addmethod(c->maxClass, (method)remote_int,					"int",					A_LONG, 0L);
 	class_addmethod(c->maxClass, (method)remote_float,					"float",				A_FLOAT, 0L);
 	class_addmethod(c->maxClass, (method)remote_list,					"list",					A_GIMME, 0L);
+    
     class_addmethod(c->maxClass, (method)remote_set,					"set",					A_GIMME, 0L);
 }
 
@@ -366,13 +367,12 @@ void remote_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	jamoma_viewer_send((TTViewerPtr)x->wrappedObject, msg, argc, argv);
 }
 
-
 void remote_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
     EXTRA->setting = YES;
-	jamoma_viewer_send((TTViewerPtr)x->wrappedObject, msg, argc, argv);
+	remote_list(self, _sym_nothing, argc, argv);
 }
 
 void WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
