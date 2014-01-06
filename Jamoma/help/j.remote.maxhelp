@@ -961,16 +961,19 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"fontname" : "Arial",
+									"bubble" : 1,
+									"bubbletextmargin" : 10,
+									"fontname" : "Helvetica Neue",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-15",
-									"linecount" : 2,
+									"linecount" : 4,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 594.0, 231.0, 118.0, 33.0 ],
-									"text" : "use set message to not output the value"
+									"patching_rect" : [ 667.0, 252.0, 175.0, 76.0 ],
+									"text" : "use 'set' message to update j.parameter's value without causing output from j.remote",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
 
 							}
@@ -1041,16 +1044,18 @@
 , 							{
 								"box" : 								{
 									"bubble" : 1,
-									"fontname" : "Arial",
+									"bubbletextmargin" : 10,
+									"fontname" : "Helvetica Neue",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-6",
-									"linecount" : 6,
+									"linecount" : 7,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 323.0, 375.0, 198.0, 91.0 ],
-									"text" : "j.remote's first outlet prepend a \"set\" message to the returned value. It is then straightforward to connect a gui object. You can use the second outlet to receive direct value."
+									"patching_rect" : [ 311.0, 349.0, 181.0, 118.0 ],
+									"text" : "j.remote's first outlet prepend a \"set\" message to the returned value. It is then straightforward to connect a gui object. You can use the second outlet to receive direct value.",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
 
 							}
