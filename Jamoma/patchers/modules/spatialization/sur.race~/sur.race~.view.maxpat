@@ -73,7 +73,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-14",
           "linecount": 3,
           "maxclass": "newobj",
@@ -96,7 +96,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-1",
           "maxclass": "newobj",
           "numinlets": 3,
@@ -118,7 +118,7 @@
         "box": {
           "annotation": "Mid High X-over Frequency",
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-10",
           "maxclass": "number",
           "numinlets": 1,
@@ -147,7 +147,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frozen_object_attributes": {
             "range/bounds": [
               5.0,
@@ -202,7 +202,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frozen_object_attributes": {
             "value/stepsize": 0.01,
             "range/bounds": [
@@ -239,7 +239,7 @@
         "box": {
           "annotation": "delaytime for the crosstalk cancelling [µseconds]",
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-15",
           "maxclass": "flonum",
           "numinlets": 1,
@@ -269,7 +269,7 @@
         "box": {
           "annotation": "attenation value for the crosstalk frequency",
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-16",
           "maxclass": "flonum",
           "numinlets": 1,
@@ -298,7 +298,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frozen_object_attributes": {
             "range/bounds": [
               -10.0,
@@ -333,7 +333,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "hidden": 1,
           "id": "obj-19",
           "maxclass": "message",
@@ -354,7 +354,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-2",
           "maxclass": "newobj",
           "numinlets": 2,
@@ -376,7 +376,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -406,7 +406,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -436,7 +436,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "hidden": 1,
           "id": "obj-22",
           "maxclass": "newobj",
@@ -478,7 +478,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "hidden": 1,
           "id": "obj-25",
           "maxclass": "message",
@@ -499,7 +499,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -529,7 +529,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -565,7 +565,7 @@
             1.0
           ],
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-28",
           "maxclass": "message",
           "numinlets": 2,
@@ -585,7 +585,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-3",
           "maxclass": "newobj",
           "numinlets": 2,
@@ -679,7 +679,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frozen_object_attributes": {
             "range/bounds": [
               5.0,
@@ -735,7 +735,7 @@
         "box": {
           "annotation": "",
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-9",
           "maxclass": "number",
           "numinlets": 1,

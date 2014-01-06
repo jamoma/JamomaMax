@@ -40,7 +40,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-2",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -61,7 +61,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-7",
           "linecount": 3,
           "maxclass": "newobj",
@@ -84,7 +84,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-1",
           "linecount": 2,
           "maxclass": "newobj",
@@ -107,7 +107,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-3",
           "linecount": 3,
           "maxclass": "newobj",
@@ -231,7 +231,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-5",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -252,7 +252,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -309,7 +309,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -333,7 +333,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-15",
           "maxclass": "newobj",
           "numinlets": 2,
@@ -360,7 +360,7 @@
             1.0
           ],
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-16",
           "maxclass": "message",
           "numinlets": 2,
@@ -386,7 +386,7 @@
             1.0
           ],
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-17",
           "maxclass": "message",
           "numinlets": 2,
@@ -406,7 +406,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "id": "obj-19",
           "linecount": 2,
           "maxclass": "newobj",
@@ -477,7 +477,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -501,7 +501,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
