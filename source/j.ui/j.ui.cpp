@@ -1120,7 +1120,9 @@ void ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
         
         x->highlight = false;
 		x->hover = false;
-		x->uiInfo->setAttributeValue(TTSymbol("highlight"), kTTSym_none);
+        
+        if (x->uiInfo)
+            x->uiInfo->setAttributeValue(TTSymbol("highlight"), kTTSym_none);
 	}
 
 	while (obj) {
