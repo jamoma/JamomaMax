@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 5
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 276.0, 72.0, 1004.0, 524.0 ],
@@ -28,14 +29,14 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-38",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 13.0, 178.0, 61.0, 19.0 ],
+					"patching_rect" : [ 13.0, 178.0, 63.0, 20.0 ],
 					"text" : "j.view",
 					"varname" : "j.model"
 				}
@@ -55,23 +56,23 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-44",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 312.0, 113.0, 151.0, 19.0 ],
-					"text" : "j.remote channel_offset",
+					"patching_rect" : [ 312.0, 113.0, 133.0, 20.0 ],
+					"text" : "j.remote channelOffset",
 					"varname" : "channel_offset"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-45",
 					"maxclass" : "number",
 					"maximum" : 31,
@@ -80,9 +81,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 312.0, 142.0, 35.0, 19.0 ],
+					"patching_rect" : [ 312.0, 142.0, 35.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 265.0, 0.0, 35.0, 19.0 ],
+					"presentation_rect" : [ 265.0, 0.0, 35.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Offset"
@@ -91,16 +92,16 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
 					"id" : "obj-46",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 35.0, 83.0, 31.0 ],
+					"patching_rect" : [ 178.0, 0.0, 93.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 178.0, 0.0, 87.0, 19.0 ],
+					"presentation_rect" : [ 178.0, 0.0, 93.0, 20.0 ],
 					"text" : "Channel offset:"
 				}
 
@@ -118,6 +119,8 @@
 			}
 , 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-52",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -126,7 +129,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 35.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 35.0 ],
-					"text" : "waiting for a model:address"
+					"text" : "/noModelAddress"
 				}
 
 			}
