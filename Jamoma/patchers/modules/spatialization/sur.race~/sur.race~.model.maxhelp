@@ -89,14 +89,14 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"hidden" : 1,
-					"id" : "obj-10",
+					"id" : "obj-"fontsize": 12.0",
 					"linecount" : 4,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 126.0, 446.0, 284.0, 53.0 ],
-					"text" : ";\rmax launchbrowser http://www.ambiophonics.org/papers/RG-RACE_AES123NYC0710.pdf"
+					"text" : ";\rmax launchbrowser http://www.ambiophonics.org/papers/RG-RACE_AES123NYC07"fontsize": 12.0.pdf"
 				}
 
 			}
@@ -256,7 +256,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
+					"destination" : [ "obj-"fontsize": 12.0", 0 ],
 					"hidden" : 1,
 					"midpoints" : [  ],
 					"source" : [ "obj-12", 0 ]

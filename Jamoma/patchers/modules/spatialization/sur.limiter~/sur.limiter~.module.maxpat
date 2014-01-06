@@ -36,9 +36,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+					"patching_rect" : [ 0.0, 0.0, 300.0, "fontsize": 12.05.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 300.0, "fontsize": 12.05.0 ]
 				}
 
 			}

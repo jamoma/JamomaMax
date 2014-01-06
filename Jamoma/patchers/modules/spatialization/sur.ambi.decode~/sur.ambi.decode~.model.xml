@@ -5,19 +5,19 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset number='1' name='default'>
-    <item name='audio/gain' type='decimal' priority='0' mixweight='1'>100.000000</item>
+    <item name='audio/gain' type='decimal' priority='0' mixweight='1'>"fontsize": 12.00.000000</item>
     <item name='audio/mute' type='boolean' priority='0' mixweight='1'>0</item>
     <item name='flavor' type='string' priority='0' mixweight='1'>Furse-Malham</item>
     <item name='numSpeakers' type='integer' priority='0' mixweight='1'>8</item>
     <item name='order' type='integer' priority='0' mixweight='1'>3</item>
-    <item name='orderWeights' type='array' priority='0' mixweight='1'>1.000000 0.500000 0.100000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </item>
+    <item name='orderWeights' type='array' priority='0' mixweight='1'>1.000000 0.500000 0."fontsize": 12.00000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </item>
     <item name='view/freeze' type='boolean' priority='0' mixweight='1'>0</item>
     <item name='view/highlight' type='string' priority='0' mixweight='1'>none</item>
   </preset>
   <preset number='2' name='malham'>
     <item name='order' type='integer' priority='0' mixweight='1'>3</item>
     <item name='flavor' type='string' priority='0' mixweight='1'>Furse-Malham</item>
-    <item name='orderWeights' type='array' priority='0' mixweight='1'>0.823242 1.000000 0.442259 0.079101 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </item>
+    <item name='orderWeights' type='array' priority='0' mixweight='1'>0.823242 1.000000 0.442259 0.079"fontsize": 12.01 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </item>
   </preset>
   <preset number='3' name='furse'>
     <item name='order' type='integer' priority='0' mixweight='1'>3</item>

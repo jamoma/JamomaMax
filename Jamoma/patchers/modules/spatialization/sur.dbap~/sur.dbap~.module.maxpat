@@ -33,7 +33,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 103.0, 165.0, 25.0, 25.0 ]
+					"patching_rect" : [ "fontsize": 12.03.0, 165.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -45,7 +45,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 103.0, 105.0, 25.0, 25.0 ]
+					"patching_rect" : [ "fontsize": 12.03.0, "fontsize": 12.05.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -60,7 +60,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 232.0, 422.0, 68.0, 32.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 15.0, 25.5, 103.0, 19.0 ],
+					"presentation_rect" : [ 15.0, 25.5, "fontsize": 12.03.0, 19.0 ],
 					"text" : "Number of sources"
 				}
 
@@ -76,7 +76,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 232.0, 360.0, 68.0, 32.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 45.5, 110.0, 19.0 ],
+					"presentation_rect" : [ 8.0, 45.5, 1"fontsize": 12.0.0, 19.0 ],
 					"text" : "Number of speakers"
 				}
 
@@ -130,7 +130,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 15.0, 105.0, 25.0, 25.0 ]
+					"patching_rect" : [ 15.0, "fontsize": 12.05.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -143,7 +143,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 15.0, 135.0, 107.0, 19.0 ],
+					"patching_rect" : [ 15.0, 135.0, "fontsize": 12.07.0, 19.0 ],
 					"text" : "sur.dbap~.model #1"
 				}
 
@@ -185,7 +185,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 315.0, 195.0, 101.0, 19.0 ],
+					"patching_rect" : [ 315.0, 195.0, "fontsize": 12.01.0, 19.0 ],
 					"text" : "j.remote rolloff"
 				}
 
@@ -199,7 +199,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 315.0, 105.0, 130.0, 19.0 ],
+					"patching_rect" : [ 315.0, "fontsize": 12.05.0, 130.0, 19.0 ],
 					"text" : "j.remote dimensions"
 				}
 
@@ -247,7 +247,7 @@
 					"annotation" : "The number of speakers to diffuse to.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-10",
+					"id" : "obj-"fontsize": 12.0",
 					"maxclass" : "number",
 					"maximum" : 32,
 					"minimum" : 1,
@@ -316,7 +316,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 324.5, 381.0, 300.0, 381.0, 300.0, 327.0, 324.5, 327.0 ],
-					"source" : [ "obj-10", 0 ]
+					"source" : [ "obj-"fontsize": 12.0", 0 ]
 				}
 
 			}
@@ -325,7 +325,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 324.5, 156.0, 300.0, 156.0, 300.0, 102.0, 324.5, 102.0 ],
+					"midpoints" : [ 324.5, 156.0, 300.0, 156.0, 300.0, "fontsize": 12.02.0, 324.5, "fontsize": 12.02.0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -387,7 +387,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
+					"destination" : [ "obj-"fontsize": 12.0", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-5", 1 ]
@@ -396,7 +396,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
+					"destination" : [ "obj-"fontsize": 12.0", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-5", 0 ]

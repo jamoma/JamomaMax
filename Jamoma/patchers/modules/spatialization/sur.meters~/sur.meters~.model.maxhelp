@@ -156,7 +156,7 @@
 				"box" : 				{
 					"args" : [ "@name", "jmod.sur.meters~", "@description", "A multichannel meterbridge" ],
 					"bgmode" : 1,
-					"id" : "obj-10",
+					"id" : "obj-"fontsize": 12.0",
 					"maxclass" : "bpatcher",
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,

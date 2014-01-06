@@ -5,7 +5,7 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset number='1' name='default'>
-    <item name='audio/gain' type='decimal' priority='0'>100.000000</item>
+    <item name='audio/gain' type='decimal' priority='0'>"fontsize": 12.00.000000</item>
     <item name='audio/mute' type='boolean' priority='0'>0</item>
     <item name='center/curve' type='decimal' priority='0'>0</item>
     <item name='center/decay' type='decimal' priority='0'>0</item>
@@ -16,9 +16,9 @@
     <item name='source.1/distance/attenuationFactor' type='decimal' priority='0'>0</item>
     <item name='source.1/distance/dbUnit' type='decimal' priority='0'>0</item>
     <item name='source.1/order' type='decimal' priority='0'>3.0</item>
-    <item name='source.10/distance/attenuationFactor' type='decimal' priority='0'>0</item>
-    <item name='source.10/distance/dbUnit' type='decimal' priority='0'>0</item>
-    <item name='source.10/order' type='decimal' priority='0'>3.0</item>
+    <item name='source."fontsize": 12.0/distance/attenuationFactor' type='decimal' priority='0'>0</item>
+    <item name='source."fontsize": 12.0/distance/dbUnit' type='decimal' priority='0'>0</item>
+    <item name='source."fontsize": 12.0/order' type='decimal' priority='0'>3.0</item>
     <item name='source.11/distance/attenuationFactor' type='decimal' priority='0'>0</item>
     <item name='source.11/distance/dbUnit' type='decimal' priority='0'>0</item>
     <item name='source.11/order' type='decimal' priority='0'>3.0</item>

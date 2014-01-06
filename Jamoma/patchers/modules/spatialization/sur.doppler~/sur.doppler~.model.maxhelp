@@ -82,7 +82,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 110.0, 102.0, 100.0, 19.0 ],
+					"patching_rect" : [ 1"fontsize": 12.0.0, "fontsize": 12.02.0, "fontsize": 12.00.0, 19.0 ],
 					"text" : "See help file for"
 				}
 

@@ -43,7 +43,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 102.0, 151.0, 31.0 ],
+					"patching_rect" : [ 20.0, "fontsize": 12.02.0, 151.0, 31.0 ],
 					"text" : "j.position2ambimonitor @prefix source @radius 50"
 				}
 
@@ -319,7 +319,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 319.0, 610.0, 150.0, 19.0 ],
+					"patching_rect" : [ 319.0, 6"fontsize": 12.0.0, 150.0, 19.0 ],
 					"text" : "disable/enables doppler"
 				}
 
@@ -333,7 +333,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 164.0, 610.0, 159.0, 17.0 ],
+					"patching_rect" : [ 164.0, 6"fontsize": 12.0.0, 159.0, 17.0 ],
 					"text" : "/doppler~/source.1/active $1"
 				}
 
@@ -345,7 +345,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 136.0, 610.0, 20.0, 20.0 ]
+					"patching_rect" : [ 136.0, 6"fontsize": 12.0.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -404,7 +404,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 643.0, 525.0, 100.0, 31.0 ],
+					"patching_rect" : [ 643.0, 525.0, "fontsize": 12.00.0, 31.0 ],
 					"text" : "Multicable to the DAC"
 				}
 
@@ -434,7 +434,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 643.0, 362.0, 100.0, 19.0 ],
+					"patching_rect" : [ 643.0, 362.0, "fontsize": 12.00.0, 19.0 ],
 					"text" : "Doppler effect"
 				}
 
@@ -443,7 +443,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-10",
+					"id" : "obj-"fontsize": 12.0",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -476,7 +476,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 37.0, 245.0, 109.0, 19.0 ],
+									"patching_rect" : [ 37.0, 245.0, "fontsize": 12.09.0, 19.0 ],
 									"text" : "pack 0. 0. 0."
 								}
 
@@ -613,7 +613,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 38.0, 86.0, 105.0, 17.0 ],
+									"patching_rect" : [ 38.0, 86.0, "fontsize": 12.05.0, 17.0 ],
 									"text" : "0, 6.283185 20000"
 								}
 
@@ -651,7 +651,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-14", 0 ],
 									"hidden" : 0,
-									"midpoints" : [ 161.5, 107.0, 47.5, 107.0 ],
+									"midpoints" : [ 161.5, "fontsize": 12.07.0, 47.5, "fontsize": 12.07.0 ],
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -862,7 +862,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 643.0, 239.0, 100.0, 31.0 ],
+					"patching_rect" : [ 643.0, 239.0, "fontsize": 12.00.0, 31.0 ],
 					"text" : "Pack signal on multicable"
 				}
 
@@ -887,7 +887,7 @@
 					"destination" : [ "obj-17", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ],
-					"source" : [ "obj-10", 0 ]
+					"source" : [ "obj-"fontsize": 12.0", 0 ]
 				}
 
 			}

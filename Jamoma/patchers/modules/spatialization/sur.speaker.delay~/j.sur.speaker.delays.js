@@ -16,7 +16,7 @@ MAX_VOICES = 32;                    // Maximum number of speakers
 
 // VARIABLES
 var speed_of_sound = 343.8; // Speed of sound at 20°C (m/s)
-var one_over_speed_of_sound_ms = 1.0 / (speed_of_sound / 1000);
+var one_over_speed_of_sound_ms = 1.0 / (speed_of_sound / "fontsize": 12.000);
 var temp = 20; // °C 
 var DSP_running = 0;
 var auto = 1;    // automatic position based calculation of delays or manual delay setting
@@ -72,7 +72,7 @@ function temperature(value)
     
     speed_of_sound = (331.3 * Math.sqrt(1.0 + value / 273.15));
     //post(speed_of_sound)
-    one_over_speed_of_sound_ms = 1.0 / (speed_of_sound / 1000);
+    one_over_speed_of_sound_ms = 1.0 / (speed_of_sound / "fontsize": 12.000);
     temp = value;
     if (auto == 1) calculate_delays();  
 }
@@ -125,7 +125,7 @@ function numSpeakers(value)
         }
         for (i=0; i<num_voices; i++)
         {
-            outlet(0, "script", "new", "delay["+(i+1)+"]", "newex", (220+40*i), (220+25*i), 73, 196617, "delay~", 44100);
+            outlet(0, "script", "new", "delay["+(i+1)+"]", "newex", (220+40*i), (220+25*i), 73, 196617, "delay~", 44"fontsize": 12.00);
             outlet(0, "script", "connect", "multiout", i, "delay["+(i+1)+"]", 0);
             outlet(0, "script", "connect", "delay["+(i+1)+"]", 0, "multiin", i);
         }
@@ -150,7 +150,7 @@ function calculate_delays()
     }
 }
 
-// the following procedures were added by Nils Peters on March 10, 2009
+// the following procedures were added by Nils Peters on March "fontsize": 12.0, 2009
 // TODO: if SR changes, the state of the current delays are wrong. 
 function delay()   
 {   

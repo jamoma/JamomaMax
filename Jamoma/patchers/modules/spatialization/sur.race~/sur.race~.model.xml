@@ -8,7 +8,7 @@
     <item name='attenation' type='decimal' priority='0'>-2.500000</item>
     <item name='bypass' type='boolean' priority='0'>0</item>
     <item name='delay' type='decimal' priority='0'>70.000000</item>
-    <item name='gain' type='decimal' priority='0'>100.000000</item>
+    <item name='gain' type='decimal' priority='0'>"fontsize": 12.00.000000</item>
     <item name='lowMid' type='integer' priority='0'>250</item>
     <item name='midHigh' type='integer' priority='0'>7000</item>
     <item name='mute' type='boolean' priority='0'>0</item>

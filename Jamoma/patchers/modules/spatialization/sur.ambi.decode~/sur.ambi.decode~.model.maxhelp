@@ -93,7 +93,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 148.0, 410.0, 113.0, 19.0 ],
+					"patching_rect" : [ 148.0, 4"fontsize": 12.0.0, 113.0, 19.0 ],
 					"text" : "s jmod.encoder.cmd"
 				}
 
@@ -107,7 +107,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 34.0, 410.0, 109.0, 19.0 ],
+					"patching_rect" : [ 34.0, 4"fontsize": 12.0.0, "fontsize": 12.09.0, 19.0 ],
 					"text" : "s jmod.decode.cmd"
 				}
 
@@ -137,9 +137,9 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 185.0, 357.744507, 100.0, 19.0 ],
+					"patching_rect" : [ 185.0, 357.744507, "fontsize": 12.00.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 164.0, 35.744507, 100.0, 19.0 ]
+					"presentation_rect" : [ 164.0, 35.744507, "fontsize": 12.00.0, 19.0 ]
 				}
 
 			}
@@ -168,7 +168,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 13.0, 494.0, 200.0, 200.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 100.0, 100.0 ]
+					"presentation_rect" : [ 0.0, 0.0, "fontsize": 12.00.0, "fontsize": 12.00.0 ]
 				}
 
 			}
@@ -181,7 +181,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 521.0, 426.0, 106.0, 19.0 ],
+					"patching_rect" : [ 521.0, 426.0, "fontsize": 12.06.0, 19.0 ],
 					"text" : "r jmod.decode.cmd"
 				}
 
@@ -230,7 +230,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 3.0, 105.0, 24.0, 19.0 ],
+									"patching_rect" : [ 3.0, "fontsize": 12.05.0, 24.0, 19.0 ],
 									"text" : "t 1"
 								}
 
@@ -258,7 +258,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 75.0, 55.0, 66.0, 19.0 ],
-									"text" : "delay 1000"
+									"text" : "delay "fontsize": 12.000"
 								}
 
 							}
@@ -273,7 +273,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 75.0, 90.0, 194.0, 41.0 ],
-									"text" : "/output~/audio/active 1, /output~/audio/gain 70, /input~/audio/gain 100. ramp 2000"
+									"text" : "/output~/audio/active 1, /output~/audio/gain 70, /input~/audio/gain "fontsize": 12.00. ramp 2000"
 								}
 
 							}
@@ -281,14 +281,14 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-10",
+									"id" : "obj-"fontsize": 12.0",
 									"linecount" : 8,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 276.0, 59.5, 159.0, 102.0 ],
-									"text" : "/output~/audio/active 0, /input~/source testtone, /doppler~/numSources 1, /doppler~/metersPerUnit 1., /encodeM~/order 1, /decode~/order 1, /decode~/audio/gain 100, /setup/preset/recall 2"
+									"patching_rect" : [ 276.0, 59.5, 159.0, "fontsize": 12.02.0 ],
+									"text" : "/output~/audio/active 0, /input~/source testtone, /doppler~/numSources 1, /doppler~/metersPerUnit 1., /encodeM~/order 1, /decode~/order 1, /decode~/audio/gain "fontsize": 12.00, /setup/preset/recall 2"
 								}
 
 							}
@@ -345,7 +345,7 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"midpoints" : [ 285.5, 169.0, 84.5, 169.0 ],
-									"source" : [ "obj-10", 0 ]
+									"source" : [ "obj-"fontsize": 12.0", 0 ]
 								}
 
 							}
@@ -369,7 +369,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-10", 0 ],
+									"destination" : [ "obj-"fontsize": 12.0", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"midpoints" : [ 84.5, 45.5, 285.5, 45.5 ],
@@ -480,7 +480,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 101.0, 334.0, 25.0, 25.0 ]
+									"patching_rect" : [ "fontsize": 12.01.0, 334.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -493,7 +493,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 101.0, 122.0, 132.0, 19.0 ],
+									"patching_rect" : [ "fontsize": 12.01.0, 122.0, 132.0, 19.0 ],
 									"text" : "j.pass /numSources"
 								}
 
@@ -506,7 +506,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 101.0, 89.0, 25.0, 25.0 ]
+									"patching_rect" : [ "fontsize": 12.01.0, 89.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -581,7 +581,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 268.0, 502.0, 159.0, 31.0 ],
-					"text" : "j.ambimonitor2position @prefix speaker @radius 10"
+					"text" : "j.ambimonitor2position @prefix speaker @radius "fontsize": 12.0"
 				}
 
 			}
@@ -729,7 +729,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 263.0, 140.0, 210.0, 19.0 ],
+									"patching_rect" : [ 263.0, 140.0, 2"fontsize": 12.0.0, 19.0 ],
 									"text" : "route /speaker/position /speaker/active"
 								}
 
@@ -785,7 +785,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 620.0, 145.0, 100.0, 17.0 ],
+									"patching_rect" : [ 620.0, 145.0, "fontsize": 12.00.0, 17.0 ],
 									"text" : "/numSpeakers $1"
 								}
 
@@ -798,7 +798,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 616.5, 542.0, 107.0, 19.0 ],
+									"patching_rect" : [ 616.5, 542.0, "fontsize": 12.07.0, 19.0 ],
 									"text" : "s jmod.decode.cmd"
 								}
 
@@ -1153,7 +1153,7 @@
 									"destination" : [ "obj-28", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 366.5, 207.0, 534.0, 207.0, 534.0, 210.0, 557.5, 210.0 ],
+									"midpoints" : [ 366.5, 207.0, 534.0, 207.0, 534.0, 2"fontsize": 12.0.0, 557.5, 2"fontsize": 12.0.0 ],
 									"source" : [ "obj-56", 0 ]
 								}
 
@@ -1350,7 +1350,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 101.0, 122.0, 138.0, 19.0 ],
+									"patching_rect" : [ "fontsize": 12.01.0, 122.0, 138.0, 19.0 ],
 									"text" : "j.pass /numSpeakers"
 								}
 
@@ -1363,7 +1363,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 101.0, 89.0, 25.0, 25.0 ]
+									"patching_rect" : [ "fontsize": 12.01.0, 89.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -1647,7 +1647,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 64.0, 279.0, 108.0, 19.0 ],
+									"patching_rect" : [ 64.0, 279.0, "fontsize": 12.08.0, 19.0 ],
 									"text" : "pack 0. 0. 0."
 								}
 
@@ -1675,7 +1675,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 10.0, 347.0, 71.0, 19.0 ],
+									"patching_rect" : [ "fontsize": 12.0.0, 347.0, 71.0, 19.0 ],
 									"text" : "r #0_start"
 								}
 
@@ -1768,7 +1768,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 330.0, 272.0, 42.0, 19.0 ],
-									"text" : "* 10."
+									"text" : "* "fontsize": 12.0."
 								}
 
 							}
@@ -1782,7 +1782,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 383.0, 272.0, 42.0, 19.0 ],
-									"text" : "* 10."
+									"text" : "* "fontsize": 12.0."
 								}
 
 							}
@@ -1810,7 +1810,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 64.0, 207.0, 35.0, 19.0 ],
-									"text" : "* 10."
+									"text" : "* "fontsize": 12.0."
 								}
 
 							}
@@ -1837,7 +1837,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 109.0, 206.0, 33.0, 19.0 ],
+									"patching_rect" : [ "fontsize": 12.09.0, 206.0, 33.0, 19.0 ],
 									"text" : "* -8."
 								}
 
@@ -1851,7 +1851,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 106.0, 179.0, 25.0, 19.0 ],
+									"patching_rect" : [ "fontsize": 12.06.0, 179.0, 25.0, 19.0 ],
 									"text" : "cos"
 								}
 
@@ -2194,7 +2194,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 275.0, 102.0, 107.0, 19.0 ],
+					"patching_rect" : [ 275.0, "fontsize": 12.02.0, "fontsize": 12.07.0, 19.0 ],
 					"text" : "s jmod.decode.cmd"
 				}
 
@@ -2278,22 +2278,22 @@
 				"box" : 				{
 					"bkgndpict" : "SliderDefaultBkgnd.pct",
 					"bottommargin" : 4,
-					"bottomvalue" : -100,
+					"bottomvalue" : -"fontsize": 12.00,
 					"id" : "obj-66",
 					"imagemask" : 1,
 					"knobpict" : "SliderDefaultKnob.pct",
 					"leftmargin" : 4,
-					"leftvalue" : -100,
+					"leftvalue" : -"fontsize": 12.00,
 					"maxclass" : "pictslider",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 478.0, 102.0, 140.0, 140.0 ],
+					"patching_rect" : [ 478.0, "fontsize": 12.02.0, 140.0, 140.0 ],
 					"rightmargin" : 4,
-					"rightvalue" : 100,
+					"rightvalue" : "fontsize": 12.00,
 					"topmargin" : 4,
-					"topvalue" : 100
+					"topvalue" : "fontsize": 12.00
 				}
 
 			}
@@ -2374,7 +2374,7 @@
 					"destination" : [ "obj-66", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 487.5, 100.0, 487.5, 100.0 ],
+					"midpoints" : [ 487.5, "fontsize": 12.00.0, 487.5, "fontsize": 12.00.0 ],
 					"source" : [ "obj-14", 1 ]
 				}
 

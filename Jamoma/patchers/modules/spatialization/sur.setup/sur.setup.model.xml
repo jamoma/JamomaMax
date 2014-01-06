@@ -45,8 +45,8 @@
     <item name='speaker.1/position' type='array' priority='3' mixweight='1'>-2.500000 4.330127 0.000000 </item>
     <item name='speaker.2/position' type='array' priority='4' mixweight='1'>0.000000 5.000000 0.000000 </item>
     <item name='speaker.3/position' type='array' priority='5' mixweight='1'>2.500000 4.330127 0.000000 </item>
-    <item name='speaker.4/position' type='array' priority='6' mixweight='1'>4.698463 -1.710101 0.000000 </item>
-    <item name='speaker.5/position' type='array' priority='7' mixweight='1'>-4.698463 -1.710101 0.000000 </item>
+    <item name='speaker.4/position' type='array' priority='6' mixweight='1'>4.698463 -1.7"fontsize": 12.0"fontsize": 12.01 0.000000 </item>
+    <item name='speaker.5/position' type='array' priority='7' mixweight='1'>-4.698463 -1.7"fontsize": 12.0"fontsize": 12.01 0.000000 </item>
   </preset>
   <preset number='6' name='ITU 7 (3-4) channel surround'>
     <item name='type' type='string' priority='1' mixweight='0'>speaker</item>
@@ -90,7 +90,7 @@
     <item name='speaker.5/position' type='array' priority='7' mixweight='1'>-2.500000 -4.330127 0.000000 </item>
     <item name='speaker.6/position' type='array' priority='8' mixweight='1'>-5.000000 0.000000 0.000000 </item>
   </preset>
-  <preset number='10' name='Rig 2D 8 channels 1'>
+  <preset number='"fontsize": 12.0' name='Rig 2D 8 channels 1'>
     <item name='type' type='string' priority='1' mixweight='0'>speaker</item>
     <item name='view/freeze' type='boolean' priority='0' mixweight='1'>0</item>
     <item name='numChannels' type='integer' priority='2' mixweight='1'>8</item>
@@ -101,7 +101,7 @@
     <item name='speaker.5/position' type='array' priority='7' mixweight='1'>1.913416 -4.619398 0.000000 </item>
     <item name='speaker.6/position' type='array' priority='8' mixweight='1'>-1.913416 -4.619398 0.000000 </item>
     <item name='speaker.7/position' type='array' priority='9' mixweight='1'>-4.619398 -1.913417 0.000000 </item>
-    <item name='speaker.8/position' type='array' priority='10' mixweight='1'>-4.619398 1.913417 0.000000 </item>
+    <item name='speaker.8/position' type='array' priority='"fontsize": 12.0' mixweight='1'>-4.619398 1.913417 0.000000 </item>
   </preset>
   <preset number='11' name='Rig 2D 8 channels 2'>
     <item name='type' type='string' priority='1' mixweight='0'>speaker</item>
@@ -114,7 +114,7 @@
     <item name='speaker.5/position' type='array' priority='7' mixweight='1'>-0.000000 -5.000000 0.000000 </item>
     <item name='speaker.6/position' type='array' priority='8' mixweight='1'>-3.535534 -3.535534 0.000000 </item>
     <item name='speaker.7/position' type='array' priority='9' mixweight='1'>-5.000000 0.000000 0.000000 </item>
-    <item name='speaker.8/position' type='array' priority='10' mixweight='1'>-3.535534 3.535534 0.000000 </item>
+    <item name='speaker.8/position' type='array' priority='"fontsize": 12.0' mixweight='1'>-3.535534 3.535534 0.000000 </item>
   </preset>
   <preset number='12' name='Rig 2D 12 channels'>
     <item name='type' type='string' priority='1' mixweight='0'>speaker</item>
@@ -127,9 +127,9 @@
     <item name='speaker.5/position' type='array' priority='7' mixweight='1'>4.330127 -2.500000 0.000000 </item>
     <item name='speaker.6/position' type='array' priority='8' mixweight='1'>2.500000 -4.330127 0.000000 </item>
     <item name='speaker.7/position' type='array' priority='9' mixweight='1'>0.000000 -5.000000 0.000000 </item>
-    <item name='speaker.8/position' type='array' priority='10' mixweight='1'>-2.500000 -4.330127 0.000000 </item>
+    <item name='speaker.8/position' type='array' priority='"fontsize": 12.0' mixweight='1'>-2.500000 -4.330127 0.000000 </item>
     <item name='speaker.9/position' type='array' priority='11' mixweight='1'>-4.330127 -2.500000 0.000000 </item>
-    <item name='speaker.10/position' type='array' priority='12' mixweight='1'>-5.000000 -0.000000 0.000000 </item>
+    <item name='speaker."fontsize": 12.0/position' type='array' priority='12' mixweight='1'>-5.000000 -0.000000 0.000000 </item>
     <item name='speaker.11/position' type='array' priority='13' mixweight='1'>-4.330127 2.500000 0.000000 </item>
     <item name='speaker.12/position' type='array' priority='14' mixweight='1'>-2.500000 4.330127 0.000000 </item>
     <item name='view/freeze' type='boolean' priority='0' mixweight='1'>0</item>
@@ -145,9 +145,9 @@
     <item name='speaker.5/position' type='array' priority='7' mixweight='1'>5.000000 0.000000 0.000000 </item>
     <item name='speaker.6/position' type='array' priority='8' mixweight='1'>4.619398 -1.913417 0.000000 </item>
     <item name='speaker.7/position' type='array' priority='9' mixweight='1'>3.535534 -3.535534 0.000000 </item>
-    <item name='speaker.8/position' type='array' priority='10' mixweight='1'>1.913417 -4.619398 0.000000 </item>
+    <item name='speaker.8/position' type='array' priority='"fontsize": 12.0' mixweight='1'>1.913417 -4.619398 0.000000 </item>
     <item name='speaker.9/position' type='array' priority='11' mixweight='1'>0.000000 -5.000000 0.000000 </item>
-    <item name='speaker.10/position' type='array' priority='12' mixweight='1'>-1.913417 -4.619398 0.000000 </item>
+    <item name='speaker."fontsize": 12.0/position' type='array' priority='12' mixweight='1'>-1.913417 -4.619398 0.000000 </item>
     <item name='speaker.11/position' type='array' priority='13' mixweight='1'>-3.535534 -3.535534 0.000000 </item>
     <item name='speaker.12/position' type='array' priority='14' mixweight='1'>-4.619398 -1.913417 0.000000 </item>
     <item name='speaker.13/position' type='array' priority='15' mixweight='1'>-5.000000 -0.000000 0.000000 </item>
@@ -166,7 +166,7 @@
     <item name='speaker.5/position' type='array' priority='7' mixweight='1'>-2.896140 2.896140 -2.867882 </item>
     <item name='speaker.6/position' type='array' priority='8' mixweight='1'>2.896140 2.896140 -2.867882 </item>
     <item name='speaker.7/position' type='array' priority='9' mixweight='1'>2.896140 -2.896140 -2.867882 </item>
-    <item name='speaker.8/position' type='array' priority='10' mixweight='1'>-2.896140 -2.896140 -2.867882 </item>
+    <item name='speaker.8/position' type='array' priority='"fontsize": 12.0' mixweight='1'>-2.896140 -2.896140 -2.867882 </item>
   </preset>
   <preset number='15' name='Rig 3D 12 channels (Dodecahedron1)'>
     <item name='type' type='string' priority='1' mixweight='0'>speaker</item>
@@ -179,9 +179,9 @@
     <item name='speaker.5/position' type='array' priority='7' mixweight='1'>2.630147 3.620085 2.230989 </item>
     <item name='speaker.6/position' type='array' priority='8' mixweight='1'>-2.630147 -3.620086 -2.230989 </item>
     <item name='speaker.7/position' type='array' priority='9' mixweight='1'>-4.255666 -1.382750 2.230989 </item>
-    <item name='speaker.8/position' type='array' priority='10' mixweight='1'>4.255666 1.382748 -2.230989 </item>
+    <item name='speaker.8/position' type='array' priority='"fontsize": 12.0' mixweight='1'>4.255666 1.382748 -2.230989 </item>
     <item name='speaker.9/position' type='array' priority='11' mixweight='1'>4.255666 -1.382750 2.230989 </item>
-    <item name='speaker.10/position' type='array' priority='12' mixweight='1'>-4.255666 1.382749 -2.230989 </item>
+    <item name='speaker."fontsize": 12.0/position' type='array' priority='12' mixweight='1'>-4.255666 1.382749 -2.230989 </item>
     <item name='speaker.11/position' type='array' priority='13' mixweight='1'>-0.000000 -4.474672 2.230989 </item>
     <item name='speaker.12/position' type='array' priority='14' mixweight='1'>0.000000 4.474672 -2.230989 </item>
   </preset>
@@ -196,9 +196,9 @@
     <item name='speaker.5/position' type='array' priority='7' mixweight='1'>-4.263248 2.219306 -1.378187 </item>
     <item name='speaker.6/position' type='array' priority='8' mixweight='1'>4.263247 -2.219306 1.378187 </item>
     <item name='speaker.7/position' type='array' priority='9' mixweight='1'>4.263247 2.219306 -1.378187 </item>
-    <item name='speaker.8/position' type='array' priority='10' mixweight='1'>-4.263247 -2.219306 1.378187 </item>
+    <item name='speaker.8/position' type='array' priority='"fontsize": 12.0' mixweight='1'>-4.263247 -2.219306 1.378187 </item>
     <item name='speaker.9/position' type='array' priority='11' mixweight='1'>-2.617144 2.235253 3.626872 </item>
-    <item name='speaker.10/position' type='array' priority='12' mixweight='1'>2.617144 -2.235253 -3.626872 </item>
+    <item name='speaker."fontsize": 12.0/position' type='array' priority='12' mixweight='1'>2.617144 -2.235253 -3.626872 </item>
     <item name='speaker.11/position' type='array' priority='13' mixweight='1'>2.617144 2.235253 3.626872 </item>
     <item name='speaker.12/position' type='array' priority='14' mixweight='1'>-2.617144 -2.235253 -3.626872 </item>
   </preset>

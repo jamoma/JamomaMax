@@ -426,7 +426,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-10",
+					"id" : "obj-"fontsize": 12.0",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -502,7 +502,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 260.0, 195.0, 116.0, 19.0 ],
-					"text" : "expr ($f2/$f1)*1000."
+					"text" : "expr ($f2/$f1)*"fontsize": 12.000."
 				}
 
 			}
@@ -529,7 +529,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 264.0, 249.0, 210.0, 19.0 ],
+					"patching_rect" : [ 264.0, 249.0, 2"fontsize": 12.0.0, 19.0 ],
 					"text" : "adding the duration of one signal vector"
 				}
 
@@ -569,7 +569,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
+					"destination" : [ "obj-"fontsize": 12.0", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ],
 					"source" : [ "obj-29", 0 ]
@@ -596,7 +596,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
+					"destination" : [ "obj-"fontsize": 12.0", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ],
 					"source" : [ "obj-7", 0 ]
@@ -662,7 +662,7 @@
 					"destination" : [ "obj-9", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ],
-					"source" : [ "obj-10", 0 ]
+					"source" : [ "obj-"fontsize": 12.0", 0 ]
 				}
 
 			}
@@ -733,7 +733,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"hidden" : 0,
-					"midpoints" : [ 106.5, 345.0, 34.5, 345.0 ],
+					"midpoints" : [ "fontsize": 12.06.5, 345.0, 34.5, 345.0 ],
 					"source" : [ "obj-25", 0 ]
 				}
 

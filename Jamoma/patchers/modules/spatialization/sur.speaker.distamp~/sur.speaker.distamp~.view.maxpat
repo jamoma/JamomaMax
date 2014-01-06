@@ -21,7 +21,7 @@
       0.0
     ],
     "openinpresentation": 1,
-    "default_fontsize": 10.0,
+    "default_fontsize": "fontsize": 12.0.0,
     "default_fontface": 0,
     "default_fontname": "Arial",
     "gridonopen": 0,
@@ -40,7 +40,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "id": "obj-2",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -61,7 +61,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "id": "obj-7",
           "linecount": 3,
           "maxclass": "newobj",
@@ -84,7 +84,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "id": "obj-1",
           "linecount": 2,
           "maxclass": "newobj",
@@ -107,7 +107,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "id": "obj-3",
           "linecount": 3,
           "maxclass": "newobj",
@@ -231,7 +231,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "id": "obj-5",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -241,7 +241,7 @@
             ""
           ],
           "patching_rect": [
-            210.0,
+            2"fontsize": 12.0.0,
             200.0,
             54.0,
             19.0
@@ -252,7 +252,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "frgb": [
             0.0,
             0.0,
@@ -291,7 +291,7 @@
       {
         "box": {
           "comment": "W - omni",
-          "id": "obj-10",
+          "id": "obj-"fontsize": 12.0",
           "maxclass": "inlet",
           "numinlets": 0,
           "numoutlets": 1,
@@ -309,7 +309,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "frgb": [
             0.0,
             0.0,
@@ -333,7 +333,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "id": "obj-15",
           "maxclass": "newobj",
           "numinlets": 2,
@@ -343,7 +343,7 @@
             "audio.connect"
           ],
           "patching_rect": [
-            210.0,
+            2"fontsize": 12.0.0,
             305.0,
             196.0,
             19.0
@@ -360,7 +360,7 @@
             1.0
           ],
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "id": "obj-16",
           "maxclass": "message",
           "numinlets": 2,
@@ -386,7 +386,7 @@
             1.0
           ],
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "id": "obj-17",
           "maxclass": "message",
           "numinlets": 2,
@@ -396,7 +396,7 @@
           ],
           "patching_rect": [
             80.0,
-            110.0,
+            1"fontsize": 12.0.0,
             160.0,
             17.0
           ],
@@ -406,7 +406,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "id": "obj-19",
           "linecount": 2,
           "maxclass": "newobj",
@@ -417,7 +417,7 @@
             ""
           ],
           "patching_rect": [
-            10.0,
+            "fontsize": 12.0.0,
             150.0,
             295.0,
             31.0
@@ -437,7 +437,7 @@
             ""
           ],
           "patching_rect": [
-            10.0,
+            "fontsize": 12.0.0,
             90.0,
             30.0,
             30.0
@@ -452,7 +452,7 @@
           "numinlets": 1,
           "numoutlets": 0,
           "patching_rect": [
-            10.0,
+            "fontsize": 12.0.0,
             345.0,
             30.0,
             30.0
@@ -477,7 +477,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "frgb": [
             0.0,
             0.0,
@@ -501,7 +501,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": 10.0,
+          "fontsize": "fontsize": 12.0.0,
           "frgb": [
             0.0,
             0.0,
@@ -556,7 +556,7 @@
 
           ],
           "source": [
-            "obj-10",
+            "obj-"fontsize": 12.0",
             0
           ]
         }

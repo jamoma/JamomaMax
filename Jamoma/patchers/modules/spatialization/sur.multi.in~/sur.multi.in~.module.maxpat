@@ -167,7 +167,7 @@
 , 			{
 				"box" : 				{
 					"comment" : "Ch 23",
-					"id" : "obj-10",
+					"id" : "obj-"fontsize": 12.0",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -322,7 +322,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 10",
+					"comment" : "Ch "fontsize": 12.0",
 					"id" : "obj-26",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -489,7 +489,7 @@
 					"destination" : [ "obj-18", 23 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-10", 0 ]
+					"source" : [ "obj-"fontsize": 12.0", 0 ]
 				}
 
 			}
@@ -630,7 +630,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-18", 10 ],
+					"destination" : [ "obj-18", "fontsize": 12.0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-26", 0 ]

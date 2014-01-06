@@ -1,9 +1,9 @@
 {
 	"patcher" : 	{
 		"fileversion" : 1,
-		"rect" : [ 450.0, 100.0, 649.0, 461.0 ],
+		"rect" : [ 450.0, "fontsize": 12.00.0, 649.0, 461.0 ],
 		"bglocked" : 0,
-		"defrect" : [ 450.0, 100.0, 649.0, 461.0 ],
+		"defrect" : [ 450.0, "fontsize": 12.00.0, 649.0, 461.0 ],
 		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -111,7 +111,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 109.0, 337.0, 102.0, 19.0 ],
+					"patching_rect" : [ "fontsize": 12.09.0, 337.0, "fontsize": 12.02.0, 19.0 ],
 					"text" : "SoundFileMerger 2",
 					"textcolor" : [ 0.4, 0.4, 0.8, 1.0 ]
 				}
@@ -120,12 +120,12 @@
 , 			{
 				"box" : 				{
 					"handoff" : "",
-					"id" : "obj-10",
+					"id" : "obj-"fontsize": 12.0",
 					"maxclass" : "ubutton",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "bang", "bang", "", "int" ],
-					"patching_rect" : [ 108.0, 335.0, 94.0, 15.0 ]
+					"patching_rect" : [ "fontsize": 12.08.0, 335.0, 94.0, 15.0 ]
 				}
 
 			}
@@ -199,7 +199,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 112.0, 128.0, 107.0, 31.0 ],
+					"patching_rect" : [ 112.0, 128.0, "fontsize": 12.07.0, 31.0 ],
 					"text" : "loops the soundfile when finished"
 				}
 
@@ -378,7 +378,7 @@
 					"destination" : [ "obj-11", 0 ],
 					"hidden" : 1,
 					"midpoints" : [  ],
-					"source" : [ "obj-10", 0 ]
+					"source" : [ "obj-"fontsize": 12.0", 0 ]
 				}
 
 			}

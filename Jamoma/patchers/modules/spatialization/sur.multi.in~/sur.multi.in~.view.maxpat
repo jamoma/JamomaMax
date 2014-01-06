@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 276.0, 72.0, 1004.0, 524.0 ],
+		"rect" : [ 276.0, 72.0, "fontsize": 12.004.0, 524.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -174,7 +174,7 @@
 					"destination" : [ "obj-44", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 321.5, 166.0, 297.0, 166.0, 297.0, 109.0, 321.5, 109.0 ],
+					"midpoints" : [ 321.5, 166.0, 297.0, 166.0, 297.0, "fontsize": 12.09.0, 321.5, "fontsize": 12.09.0 ],
 					"source" : [ "obj-45", 0 ]
 				}
 

@@ -6,7 +6,7 @@
 >
   <preset number='1' name='default'>
     <item name='active' type='boolean' priority='0' mixweight='1'>1</item>
-    <item name='downSample' type='integer' priority='0' mixweight='1'>100</item>
+    <item name='downSample' type='integer' priority='0' mixweight='1'>"fontsize": 12.00</item>
     <item name='numberOfChannels' type='integer' priority='0' mixweight='1'>2</item>
     <item name='view/freeze' type='boolean' priority='0' mixweight='1'>0</item>
 
