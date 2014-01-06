@@ -21,7 +21,7 @@
       0.0
     ],
     "openinpresentation": 0,
-    "default_fontsize": 10.0,
+    "default_fontsize": 12.0,
     "default_fontface": 0,
     "default_fontname": "Arial",
     "gridonopen": 0,
@@ -70,7 +70,7 @@
               0.0
             ],
             "openinpresentation": 0,
-            "default_fontsize": 10.0,
+            "default_fontsize": 12.0,
             "default_fontface": 0,
             "default_fontname": "Arial",
             "gridonopen": 0,
@@ -278,7 +278,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -523,7 +523,7 @@
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0
+                    "default_fontsize": 12.0
                   },
                   "text": "p source_gain"
                 }
@@ -561,7 +561,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -804,7 +804,7 @@
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0
+                    "default_fontsize": 12.0
                   },
                   "text": "p _activeactive"
                 }
@@ -1976,7 +1976,7 @@
             "default_fontface": 0,
             "default_fontname": "Arial",
             "fontname": "Arial",
-            "default_fontsize": 10.0
+            "default_fontsize": 12.0
           },
           "text": "p messages",
           "varname": "messages"

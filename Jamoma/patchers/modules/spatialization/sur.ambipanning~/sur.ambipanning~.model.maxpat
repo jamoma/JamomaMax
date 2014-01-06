@@ -21,7 +21,7 @@
       0.0
     ],
     "openinpresentation": 0,
-    "default_fontsize": 10.0,
+    "default_fontsize": 12.0,
     "default_fontface": 0,
     "default_fontname": "Arial",
     "gridonopen": 0,
@@ -182,7 +182,7 @@
               0.0
             ],
             "openinpresentation": 0,
-            "default_fontsize": 10.0,
+            "default_fontsize": 12.0,
             "default_fontface": 0,
             "default_fontname": "Arial",
             "gridonopen": 0,
@@ -312,7 +312,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -677,7 +677,7 @@
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0
+                    "default_fontsize": 12.0
                   },
                   "text": "p center"
                 }
@@ -806,7 +806,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -993,7 +993,7 @@
                               0.0
                             ],
                             "openinpresentation": 0,
-                            "default_fontsize": 10.0,
+                            "default_fontsize": 12.0,
                             "default_fontface": 0,
                             "default_fontname": "Arial",
                             "gridonopen": 0,
@@ -1453,7 +1453,7 @@
                             "default_fontface": 0,
                             "default_fontname": "Arial",
                             "fontname": "Arial",
-                            "default_fontsize": 10.0
+                            "default_fontsize": 12.0
                           },
                           "text": "p init"
                         }
@@ -1491,7 +1491,7 @@
                               0.0
                             ],
                             "openinpresentation": 0,
-                            "default_fontsize": 10.0,
+                            "default_fontsize": 12.0,
                             "default_fontface": 0,
                             "default_fontname": "Arial",
                             "gridonopen": 0,
@@ -1806,7 +1806,7 @@
                             "default_fontface": 0,
                             "default_fontname": "Arial",
                             "fontname": "Arial",
-                            "default_fontsize": 10.0
+                            "default_fontsize": 12.0
                           },
                           "text": "p creating_gain"
                         }
@@ -1930,7 +1930,7 @@
                               0.0
                             ],
                             "openinpresentation": 0,
-                            "default_fontsize": 10.0,
+                            "default_fontsize": 12.0,
                             "default_fontface": 0,
                             "default_fontname": "Arial",
                             "gridonopen": 0,
@@ -2763,7 +2763,7 @@
                             "default_fontface": 0,
                             "default_fontname": "Arial",
                             "fontname": "Arial",
-                            "default_fontsize": 10.0
+                            "default_fontsize": 12.0
                           },
                           "text": "p createMuteMessgage"
                         }
@@ -4192,7 +4192,7 @@
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0
+                    "default_fontsize": 12.0
                   },
                   "text": "p source"
                 }
@@ -4230,7 +4230,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -4301,7 +4301,7 @@
                               0.0
                             ],
                             "openinpresentation": 0,
-                            "default_fontsize": 10.0,
+                            "default_fontsize": 12.0,
                             "default_fontface": 0,
                             "default_fontname": "Arial",
                             "gridonopen": 0,
@@ -5134,7 +5134,7 @@
                             "default_fontface": 0,
                             "default_fontname": "Arial",
                             "fontname": "Arial",
-                            "default_fontsize": 10.0
+                            "default_fontsize": 12.0
                           },
                           "text": "p createMuteMessgage"
                         }
@@ -5720,7 +5720,7 @@
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0
+                    "default_fontsize": 12.0
                   },
                   "text": "p loudspeaker"
                 }
@@ -6164,7 +6164,7 @@
             "default_fontface": 0,
             "default_fontname": "Arial",
             "fontname": "Arial",
-            "default_fontsize": 10.0
+            "default_fontsize": 12.0
           },
           "text": "p messages",
           "varname": "messages"
@@ -6221,7 +6221,7 @@
               0.0
             ],
             "openinpresentation": 0,
-            "default_fontsize": 10.0,
+            "default_fontsize": 12.0,
             "default_fontface": 0,
             "default_fontname": "Arial",
             "gridonopen": 0,
@@ -6308,7 +6308,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -6834,7 +6834,7 @@
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0
+                    "default_fontsize": 12.0
                   },
                   "text": "p create_pass"
                 }
@@ -6872,7 +6872,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -7259,7 +7259,7 @@
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0
+                    "default_fontsize": 12.0
                   },
                   "text": "p delete_pass"
                 }
@@ -7464,7 +7464,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -8059,7 +8059,7 @@
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0
+                    "default_fontsize": 12.0
                   },
                   "text": "p connect_from_ambipan"
                 }
@@ -8097,7 +8097,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -8405,7 +8405,7 @@
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0
+                    "default_fontsize": 12.0
                   },
                   "text": "p connect_to_ambipan"
                 }
@@ -8443,7 +8443,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -8778,7 +8778,7 @@
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0
+                    "default_fontsize": 12.0
                   },
                   "text": "p new_external"
                 }
@@ -9629,7 +9629,7 @@
             "default_fontface": 0,
             "default_fontname": "Arial",
             "fontname": "Arial",
-            "default_fontsize": 10.0
+            "default_fontsize": 12.0
           },
           "text": "p scripting"
         }

@@ -21,7 +21,7 @@
       0.0
     ],
     "openinpresentation": 1,
-    "default_fontsize": 10.0,
+    "default_fontsize": 12.0,
     "default_fontface": 0,
     "default_fontname": "Arial",
     "gridonopen": 0,
@@ -270,7 +270,7 @@
               0.0
             ],
             "openinpresentation": 1,
-            "default_fontsize": 10.0,
+            "default_fontsize": 12.0,
             "default_fontface": 0,
             "default_fontname": "Arial",
             "gridonopen": 0,
@@ -319,7 +319,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -801,7 +801,7 @@
                   "saved_object_attributes": {
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "fontface": 0,
                     "fontsize": 12.0,
                     "globalpatchername": "",
@@ -992,7 +992,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -1232,7 +1232,7 @@
                   "saved_object_attributes": {
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "fontface": 0,
                     "fontsize": 12.0,
                     "globalpatchername": "",
@@ -1314,7 +1314,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -1702,7 +1702,7 @@
                   "saved_object_attributes": {
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "fontface": 0,
                     "fontsize": 12.0,
                     "globalpatchername": "",
@@ -1811,7 +1811,7 @@
                       0.0
                     ],
                     "openinpresentation": 0,
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "default_fontface": 0,
                     "default_fontname": "Arial",
                     "gridonopen": 0,
@@ -2120,7 +2120,7 @@
                   "saved_object_attributes": {
                     "default_fontname": "Arial",
                     "fontname": "Arial",
-                    "default_fontsize": 10.0,
+                    "default_fontsize": 12.0,
                     "fontface": 0,
                     "fontsize": 12.0,
                     "globalpatchername": "",
@@ -2960,7 +2960,7 @@
           "saved_object_attributes": {
             "default_fontname": "Arial",
             "fontname": "Arial",
-            "default_fontsize": 10.0,
+            "default_fontsize": 12.0,
             "fontface": 0,
             "fontsize": 12.0,
             "globalpatchername": "",
