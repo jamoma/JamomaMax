@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 31.0, 44.0, 1680.0, 956.0 ],
+		"rect" : [ 94.0, 265.0, 1680.0, 956.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -29,6 +29,76 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-20",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 432.5, 419.0, 197.0, 18.0 ],
+					"text" : "#1:inc ramp 2000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-16",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 442.5, 387.0, 148.0, 20.0 ],
+					"text" : "increments can also ramp"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-8",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 432.5, 305.5, 146.0, 20.0 ],
+					"text" : "shorthand for inc and dec"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-14",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 432.5, 347.0, 197.0, 18.0 ],
+					"text" : "#1:-"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-15",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 432.5, 325.0, 200.0, 18.0 ],
+					"text" : "#1:+"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -442,7 +512,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 298.0, 355.0, 93.0, 20.0 ],
+					"patching_rect" : [ 289.0, 269.0, 93.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -469,7 +539,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 355.0, 272.0, 20.0 ],
+					"patching_rect" : [ 11.0, 269.0, 272.0, 20.0 ],
 					"text" : "prepend #1:ramp/function "
 				}
 
@@ -483,7 +553,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 288.0, 303.0, 20.0 ],
+					"patching_rect" : [ -4.0, 202.0, 303.0, 20.0 ],
 					"text" : "@ramp/function controlles the ramping (easing) curve"
 				}
 
@@ -499,7 +569,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 785.0, 335.5, 123.0, 37.0 ],
+					"patching_rect" : [ 499.0, 228.5, 123.0, 37.0 ],
 					"text" : "The step size can be controlled"
 				}
 
@@ -513,7 +583,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 545.0, 178.0, 372.0, 20.0 ],
+					"patching_rect" : [ 422.0, 131.0, 198.0, 20.0 ],
 					"text" : "Change value in incremental steps:"
 				}
 
@@ -787,7 +857,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 20.0, 323.0, 100.0, 20.0 ]
+					"patching_rect" : [ 11.0, 237.0, 100.0, 20.0 ]
 				}
 
 			}
@@ -800,7 +870,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 178.0, 437.0, 20.0 ],
+					"patching_rect" : [ 63.0, 131.0, 271.0, 20.0 ],
 					"text" : "Change to a new value over time (ramp or ease):"
 				}
 
@@ -815,7 +885,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 20.0, 217.0, 42.0, 20.0 ],
+					"patching_rect" : [ 11.0, 131.0, 42.0, 20.0 ],
 					"triscale" : 0.9
 				}
 
@@ -829,7 +899,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 246.0, 272.0, 18.0 ],
+					"patching_rect" : [ 11.0, 160.0, 272.0, 18.0 ],
 					"text" : "#1 $1 ramp 5000"
 				}
 
@@ -844,7 +914,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 575.5, 317.0, 42.0, 20.0 ],
+					"patching_rect" : [ 432.5, 242.0, 42.0, 20.0 ],
 					"triscale" : 0.9
 				}
 
@@ -858,7 +928,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 575.5, 345.0, 197.0, 18.0 ],
+					"patching_rect" : [ 432.5, 270.0, 197.0, 18.0 ],
 					"text" : "#1:value/stepsize $1"
 				}
 
@@ -871,7 +941,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 691.0, 520.0, 25.0, 25.0 ]
+					"patching_rect" : [ 691.0, 472.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -898,7 +968,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 575.5, 271.0, 197.0, 18.0 ],
+					"patching_rect" : [ 432.5, 196.0, 197.0, 18.0 ],
 					"text" : "#1:dec"
 				}
 
@@ -912,7 +982,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 575.5, 246.0, 197.0, 18.0 ],
+					"patching_rect" : [ 432.5, 171.0, 197.0, 18.0 ],
 					"text" : "#1:inc"
 				}
 
@@ -926,7 +996,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 20.0, 391.5, 400.0, 212.0 ],
+					"patching_rect" : [ 11.0, 305.5, 379.0, 176.0 ],
 					"srcrect" : [ 0, 0, 400, 240 ]
 				}
 
@@ -964,7 +1034,34 @@
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
 					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-20", 0 ]
 				}
 
 			}
@@ -1030,11 +1127,6 @@
 					"source" : [ "obj-69", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.map.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

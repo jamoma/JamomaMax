@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -55,11 +55,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 174.0, 48.0 ],
+						"rect" : [ 25.0, 69.0, 172.0, 97.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -79,8 +79,38 @@
 						"digest" : "",
 						"tags" : "",
 						"title" : "/limiter~(view)",
-						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-3",
+									"maxclass" : "textbutton",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 21.0, 126.0, 100.0, 20.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 21.0, 51.0, 129.0, 27.0 ],
+									"text" : "Clear"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 21.0, 154.0, 83.0, 20.0 ],
+									"text" : "j.remote clear"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -117,7 +147,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 40.0, 14.0, 150.0, 20.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 40.0, 14.0, 150.0, 20.0 ],
+									"presentation_rect" : [ 40.0, 14.0, 110.0, 20.0 ],
 									"text" : "DC blocking active"
 								}
 
@@ -142,6 +172,24 @@
 							}
  ],
 						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
 								"patchline" : 								{
 									"destination" : [ "obj-8", 0 ],
 									"disabled" : 0,
@@ -236,10 +284,11 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 2",
 					"id" : "obj-50",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"orientation" : 1,
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 110.0, 227.0, 80.0, 4.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 136.0, 10.0, 80.0, 4.0 ]
@@ -250,10 +299,11 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-49",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"orientation" : 1,
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 115.0, 187.0, 80.0, 4.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 136.0, 5.0, 80.0, 4.0 ]
@@ -907,10 +957,6 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{

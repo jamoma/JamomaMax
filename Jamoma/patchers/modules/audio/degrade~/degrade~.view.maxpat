@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 20.0, 464.0, 745.0, 196.0 ],
+		"rect" : [ 75.0, 392.0, 745.0, 196.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -46,10 +46,11 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal out.2",
 					"id" : "obj-11",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"orientation" : 1,
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 250.0, 154.0, 100.0, 12.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 133.0, 10.0, 100.0, 4.0 ]
@@ -60,10 +61,11 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal out.1",
 					"id" : "obj-4",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"orientation" : 1,
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 105.0, 154.0, 100.0, 12.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 133.0, 5.0, 100.0, 4.0 ]
@@ -178,19 +180,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "j.ui",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "",
 					"id" : "obj-16",
 					"maxclass" : "outlet",
@@ -223,6 +212,21 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 22.0, 119.0, 46.0, 20.0 ],
 					"text" : "j.view"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"highlightcolor" : [ 0.62, 0.0, 0.36, 1.0 ],
+					"id" : "obj-2",
+					"maxclass" : "j.ui",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -286,8 +290,28 @@
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 503.5, 148.0, 569.5, 148.0, 569.5, 84.0, 413.5, 84.0 ],
+					"source" : [ "obj-8", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
 					"midpoints" : [ 413.5, 150.0, 395.5, 150.0, 395.5, 84.0, 413.5, 84.0 ],
 					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 662.5, 150.0, 714.0, 150.0, 714.0, 84.0, 604.5, 84.0 ],
+					"source" : [ "obj-9", 2 ]
 				}
 
 			}
@@ -303,11 +327,11 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.view.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.ui.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -316,10 +340,6 @@
 			}
 , 			{
 				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
  ]

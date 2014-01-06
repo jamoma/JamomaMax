@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 603.0, 263.0, 492.0, 256.0 ],
+		"rect" : [ 1077.0, 190.0, 492.0, 256.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -36,8 +36,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 339.0, 66.0, 92.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"patching_rect" : [ 339.0, 66.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.2"
 				}
 
 			}
@@ -50,8 +50,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 339.0, 14.0, 92.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"patching_rect" : [ 339.0, 14.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.1"
 				}
 
 			}
@@ -59,10 +59,11 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 2",
 					"id" : "obj-50",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"orientation" : 1,
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 339.0, 94.0, 80.0, 4.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 152.0, 10.0, 80.0, 4.0 ]
@@ -73,10 +74,11 @@
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-49",
-					"maxclass" : "j.meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"orientation" : 1,
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 339.0, 42.0, 80.0, 4.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 152.0, 5.0, 80.0, 4.0 ]
@@ -240,7 +242,7 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/#1"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -348,10 +350,6 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{

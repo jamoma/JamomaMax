@@ -14,9 +14,9 @@
     ],
     "bglocked": 0,
     "openinpresentation": 1,
-    "default_fontsize": 10.0,
+    "default_fontsize": 12.0,
     "default_fontface": 0,
-    "default_fontname": "Verdana",
+    "default_fontname": "Arial",
     "gridonopen": 0,
     "gridsize": [
       5.0,
@@ -36,8 +36,8 @@
     "boxes": [
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-7",
           "linecount": 2,
           "maxclass": "newobj",
@@ -59,8 +59,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-45",
           "linecount": 2,
           "maxclass": "newobj",
@@ -82,8 +82,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-43",
           "linecount": 2,
           "maxclass": "newobj",
@@ -105,8 +105,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-42",
           "linecount": 2,
           "maxclass": "newobj",
@@ -128,8 +128,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -151,8 +151,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -175,8 +175,8 @@
       {
         "box": {
           "annotation": "Sets the interpolation time in [ms] for the maitrix~ object. default value is 10 ms",
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-35",
           "maxclass": "number",
           "numinlets": 1,
@@ -204,8 +204,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -234,8 +234,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -257,8 +257,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-6",
           "linecount": 2,
           "maxclass": "newobj",
@@ -280,8 +280,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-30",
           "linecount": 2,
           "maxclass": "newobj",
@@ -303,8 +303,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-5",
           "linecount": 3,
           "maxclass": "newobj",
@@ -327,8 +327,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -357,8 +357,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-2",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -379,8 +379,8 @@
       {
         "box": {
           "annotation": "Number of incomming mono sources to pan.",
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-40",
           "maxclass": "number",
           "maximum": 32,
@@ -412,8 +412,8 @@
       {
         "box": {
           "annotation": "Number of speakers that signals are distributed to.",
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-39",
           "maxclass": "number",
           "maximum": 32,
@@ -445,8 +445,8 @@
       {
         "box": {
           "annotation": "Dimension of the loudspeaker setup (2D or 3D).",
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-38",
           "maxclass": "number",
           "numinlets": 1,
@@ -474,8 +474,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-1",
           "maxclass": "message",
           "numinlets": 2,
@@ -494,8 +494,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-3",
           "linecount": 2,
           "maxclass": "newobj",
@@ -518,8 +518,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -566,8 +566,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-14",
           "linecount": 2,
           "maxclass": "newobj",
@@ -605,8 +605,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-21",
           "maxclass": "newobj",
           "numinlets": 2,
@@ -626,8 +626,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "frgb": [
             0.0,
             0.0,
@@ -656,8 +656,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-24",
           "maxclass": "message",
           "numinlets": 2,
@@ -709,8 +709,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-33",
           "linecount": 2,
           "maxclass": "newobj",

@@ -207,8 +207,8 @@
 , 			{
 				"box" : 				{
 					"annotation" : "Rolloff in dB with doubling of distance.",
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-17",
 					"maxclass" : "flonum",
 					"minimum" : 1.0,
@@ -225,8 +225,8 @@
 , 			{
 				"box" : 				{
 					"annotation" : "Dimensions of the space spanned by loudspeakers.",
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-12",
 					"maxclass" : "number",
 					"maximum" : 3,
@@ -245,8 +245,8 @@
 , 			{
 				"box" : 				{
 					"annotation" : "The number of speakers to diffuse to.",
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-10",
 					"maxclass" : "number",
 					"maximum" : 32,
@@ -265,8 +265,8 @@
 , 			{
 				"box" : 				{
 					"annotation" : "The number of sources to process.",
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-9",
 					"maxclass" : "number",
 					"maximum" : 32,
