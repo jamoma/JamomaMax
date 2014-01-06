@@ -41,6 +41,7 @@ typedef struct extra {
 	ObjectPtr	label;			// label to display selection state
 	AtomPtr		color0;			// label color for selection state == 0
 	AtomPtr		color1;			// label color for selection state == 1
+    TTBoolean   setting;        // a flag to know if the remote is updated by a set message
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
 
@@ -64,6 +65,8 @@ void	remote_bang(TTPtr self);
 void	remote_int(TTPtr self, long value);
 void	remote_float(TTPtr self, double value);
 void	remote_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+void	remote_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void	remote_attach(TTPtr self);
 void 	remote_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
@@ -100,6 +103,7 @@ void WrapTTViewerClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)remote_int,					"int",					A_LONG, 0L);
 	class_addmethod(c->maxClass, (method)remote_float,					"float",				A_FLOAT, 0L);
 	class_addmethod(c->maxClass, (method)remote_list,					"list",					A_GIMME, 0L);
+    class_addmethod(c->maxClass, (method)remote_set,					"set",					A_GIMME, 0L);
 }
 
 void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
@@ -133,6 +137,8 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	atom_setfloat(EXTRA->color1+1, 0.);
 	atom_setfloat(EXTRA->color1+2, 0.36);
 	atom_setfloat(EXTRA->color1+3, 0.70);
+    
+    EXTRA->setting = NO;
 	
 	jamoma_viewer_create((ObjectPtr)x, &x->wrappedObject);
 	
@@ -305,6 +311,12 @@ void remote_subscribe(TTPtr self)
 void remote_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    // a gate to not output the value if it have been set by this j.remote
+    if (EXTRA->setting) {
+        EXTRA->setting = NO;
+        return;
+    }
 	
 	// avoid blank before data
 	if (msg == _sym_nothing)
@@ -351,6 +363,15 @@ void remote_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
+	jamoma_viewer_send((TTViewerPtr)x->wrappedObject, msg, argc, argv);
+}
+
+
+void remote_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+	
+    EXTRA->setting = YES;
 	jamoma_viewer_send((TTViewerPtr)x->wrappedObject, msg, argc, argv);
 }
 

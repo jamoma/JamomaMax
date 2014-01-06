@@ -938,7 +938,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 819.0, 509.0 ],
+						"rect" : [ 825.0, 286.0, 819.0, 509.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -959,6 +959,49 @@
 						"tags" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-15",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 594.0, 231.0, 118.0, 33.0 ],
+									"text" : "use set message to not output the value"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 594.0, 298.0, 73.0, 20.0 ],
+									"text" : "prepend set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-2",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "float", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 594.0, 272.0, 50.0, 20.0 ]
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-13",
 									"maxclass" : "button",
@@ -1020,7 +1063,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 373.0, 154.5, 187.0, 141.0 ],
+									"patching_rect" : [ 323.0, 138.0, 187.0, 141.0 ],
 									"text" : "j.remote allows to bind to a parameter value. It can be useful to build user interfaces for example.\n\nHere we set our j.remote to bind to a parameter called \"myParameter\" and situated at the root of our namespace (defined as \"/\")."
 								}
 
@@ -1065,7 +1108,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 161.5, 138.0, 50.0, 20.0 ]
+									"patching_rect" : [ 151.5, 138.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -1074,12 +1117,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 130.5, 205.0, 50.0, 18.0 ],
-									"text" : "8.15"
+									"patching_rect" : [ 120.5, 205.0, 50.0, 31.0 ],
+									"text" : "set 1.32"
 								}
 
 							}
@@ -1092,7 +1136,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 161.5, 171.0, 168.0, 20.0 ],
+									"patching_rect" : [ 151.5, 171.0, 154.0, 20.0 ],
 									"text" : "j.parameter myParameter"
 								}
 
@@ -1136,7 +1180,7 @@
 									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 161.0, 378.0, 138.5, 378.0, 138.5, 325.0, 161.0, 325.0 ],
+									"midpoints" : [ 161.0, 378.0, 138.5, 378.0, 138.5, 323.0, 161.0, 323.0 ],
 									"source" : [ "obj-10", 0 ]
 								}
 
@@ -1148,6 +1192,25 @@
 									"hidden" : 0,
 									"midpoints" : [ 161.0, 375.0 ],
 									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 603.5, 323.5, 161.0, 323.5 ],
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
 								}
 
 							}
