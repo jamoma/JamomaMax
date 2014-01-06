@@ -16,7 +16,7 @@
     "openinpresentation": 1,
     "default_fontsize": 10.0,
     "default_fontface": 0,
-    "default_fontname": "Verdana",
+    "default_fontname": "Arial",
     "gridonopen": 0,
     "gridsize": [
       5.0,
@@ -72,7 +72,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "id": "obj-14",
           "linecount": 3,
@@ -95,7 +95,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "id": "obj-1",
           "maxclass": "newobj",
@@ -117,7 +117,7 @@
       {
         "box": {
           "annotation": "Mid High X-over Frequency",
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "id": "obj-10",
           "maxclass": "number",
@@ -146,7 +146,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "frozen_object_attributes": {
             "range/bounds": [
@@ -201,7 +201,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "frozen_object_attributes": {
             "value/stepsize": 0.01,
@@ -238,7 +238,7 @@
       {
         "box": {
           "annotation": "delaytime for the crosstalk cancelling [µseconds]",
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "id": "obj-15",
           "maxclass": "flonum",
@@ -268,7 +268,7 @@
       {
         "box": {
           "annotation": "attenation value for the crosstalk frequency",
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "id": "obj-16",
           "maxclass": "flonum",
@@ -297,7 +297,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "frozen_object_attributes": {
             "range/bounds": [
@@ -332,7 +332,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "hidden": 1,
           "id": "obj-19",
@@ -353,7 +353,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "id": "obj-2",
           "maxclass": "newobj",
@@ -375,7 +375,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "frgb": [
             0.0,
@@ -405,7 +405,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "frgb": [
             0.0,
@@ -435,7 +435,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "hidden": 1,
           "id": "obj-22",
@@ -477,7 +477,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "hidden": 1,
           "id": "obj-25",
@@ -498,7 +498,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "frgb": [
             0.0,
@@ -528,7 +528,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "frgb": [
             0.0,
@@ -564,7 +564,7 @@
             0.54902,
             1.0
           ],
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "id": "obj-28",
           "maxclass": "message",
@@ -584,7 +584,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "id": "obj-3",
           "maxclass": "newobj",
@@ -678,7 +678,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "frozen_object_attributes": {
             "range/bounds": [
@@ -734,7 +734,7 @@
       {
         "box": {
           "annotation": "",
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 10.0,
           "id": "obj-9",
           "maxclass": "number",
