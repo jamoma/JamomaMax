@@ -34,7 +34,7 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-"fontsize": 12.0",
+					"id" : "obj-10",
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
@@ -81,7 +81,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 395.0, 275.0, 74.0, 19.0 ],
-					"text" : "Default: "fontsize": 12.00"
+					"text" : "Default: 100"
 				}
 
 			}
@@ -177,9 +177,9 @@
 					"outlettype" : [ "signal", "signal", "signal", "signal" ],
 					"patcher" : 					{
 						"fileversion" : 1,
-						"rect" : [ 307.0, "fontsize": 12.07.0, 536.0, 241.0 ],
+						"rect" : [ 307.0, 107.0, 536.0, 241.0 ],
 						"bglocked" : 0,
-						"defrect" : [ 307.0, "fontsize": 12.07.0, 536.0, 241.0 ],
+						"defrect" : [ 307.0, 107.0, 536.0, 241.0 ],
 						"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -223,7 +223,7 @@
 , 							{
 								"box" : 								{
 									"comment" : "",
-									"id" : "obj-"fontsize": 12.0",
+									"id" : "obj-10",
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
@@ -276,7 +276,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-"fontsize": 12.0", 0 ],
+									"destination" : [ "obj-10", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
 									"source" : [ "obj-18", 0 ]
@@ -351,7 +351,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, "fontsize": 12.05.0, 79.0, 17.0 ],
+					"patching_rect" : [ 25.0, 105.0, 79.0, 17.0 ],
 					"text" : "xyz 1 0. 0. 0."
 				}
 
@@ -393,8 +393,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 340.0, 255.0, "fontsize": 12.00.0, 19.0 ],
-					"text" : "loadmess set "fontsize": 12.00"
+					"patching_rect" : [ 340.0, 255.0, 100.0, 19.0 ],
+					"text" : "loadmess set 100"
 				}
 
 			}
@@ -433,7 +433,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 340.0, 385.0, 1"fontsize": 12.0.0, 17.0 ],
+					"patching_rect" : [ 340.0, 385.0, 110.0, 17.0 ],
 					"text" : "/source.1/active $1"
 				}
 
@@ -462,7 +462,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 340.0, 300.0, "fontsize": 12.01.0, 17.0 ],
+					"patching_rect" : [ 340.0, 300.0, 101.0, 17.0 ],
 					"text" : "/source.1/gain $1"
 				}
 
@@ -505,7 +505,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 35.0, 120.0, 141.0, 19.0 ],
-									"text" : "j.initialized /vbap "fontsize": 12.00"
+									"text" : "j.initialized /vbap 100"
 								}
 
 							}

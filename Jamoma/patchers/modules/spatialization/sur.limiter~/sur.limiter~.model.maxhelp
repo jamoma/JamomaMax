@@ -74,7 +74,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 45.0, 212.0, "fontsize": 12.04.0, 20.0 ],
+									"patching_rect" : [ 45.0, 212.0, 104.0, 20.0 ],
 									"text" : "s sur.limiter~.cmd"
 								}
 
@@ -161,7 +161,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 33.0, 538.0, "fontsize": 12.04.0, 20.0 ],
+									"patching_rect" : [ 33.0, 538.0, 104.0, 20.0 ],
 									"text" : "s sur.limiter~.cmd"
 								}
 
@@ -256,7 +256,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 55.0, 420.0, "fontsize": 12.04.0, 20.0 ],
+									"patching_rect" : [ 55.0, 420.0, 104.0, 20.0 ],
 									"text" : "s sur.limiter~.cmd"
 								}
 
@@ -352,7 +352,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 72.0, 271.0, "fontsize": 12.04.0, 20.0 ],
+									"patching_rect" : [ 72.0, 271.0, 104.0, 20.0 ],
 									"text" : "s sur.limiter~.cmd"
 								}
 
@@ -413,7 +413,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ "fontsize": 12.0.0, "fontsize": 12.0.0, 305.09375, 53.625 ]
+					"patching_rect" : [ 10.0, 10.0, 305.09375, 53.625 ]
 				}
 
 			}
@@ -553,7 +553,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 78.0, 314.0, "fontsize": 12.02.0, 20.0 ],
+									"patching_rect" : [ 78.0, 314.0, 102.0, 20.0 ],
 									"text" : "r sur.limiter~.cmd"
 								}
 
@@ -567,8 +567,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "audio.connect" ],
-									"patching_rect" : [ 78.0, 339.0, 300.0, "fontsize": 12.05.0 ],
-									"presentation_rect" : [ 15.0, 15.0, 300.0, "fontsize": 12.05.0 ],
+									"patching_rect" : [ 78.0, 339.0, 300.0, 105.0 ],
+									"presentation_rect" : [ 15.0, 15.0, 300.0, 105.0 ],
 									"varname" : "/limiter~"
 								}
 
@@ -640,7 +640,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ "fontsize": 12.0.0, 85.0, 50.0, 20.0 ],
+					"patching_rect" : [ 10.0, 85.0, 50.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",

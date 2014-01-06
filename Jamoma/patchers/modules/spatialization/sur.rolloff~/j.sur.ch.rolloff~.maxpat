@@ -202,7 +202,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ "fontsize": 12.07.0, 70.0, 96.0, 31.0 ],
+					"patching_rect" : [ 107.0, 70.0, 96.0, 31.0 ],
 					"text" : "distance from cart. coordinates"
 				}
 
@@ -328,7 +328,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 4"fontsize": 12.0.0, 143.0, 52.0, 19.0 ],
+					"patching_rect" : [ 410.0, 143.0, 52.0, 19.0 ],
 					"text" : "clip 1. 6."
 				}
 
@@ -370,7 +370,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 430.0, "fontsize": 12.05.0, 66.0, 19.0 ],
+					"patching_rect" : [ 430.0, 105.0, 66.0, 19.0 ],
 					"text" : "loadmess 6"
 				}
 
@@ -384,7 +384,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 4"fontsize": 12.0.0, 165.0, 92.0, 19.0 ],
+					"patching_rect" : [ 410.0, 165.0, 92.0, 19.0 ],
 					"text" : "scale 0. 6. 0. -1."
 				}
 
@@ -436,7 +436,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"id" : "obj-"fontsize": 12.0",
+					"id" : "obj-10",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -453,7 +453,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 4"fontsize": 12.0.0, 55.0, 24.0, 24.0 ]
+					"patching_rect" : [ 410.0, 55.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -542,7 +542,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 250.0, 247.0, "fontsize": 12.00.0, 19.0 ],
+					"patching_rect" : [ 250.0, 247.0, 100.0, 19.0 ],
 					"text" : "smoothing"
 				}
 

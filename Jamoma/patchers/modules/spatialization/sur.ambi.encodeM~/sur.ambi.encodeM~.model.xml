@@ -5,7 +5,7 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset number='1' name='default'>
-    <item name='audio/gain' type='decimal' priority='0'>"fontsize": 12.00.000000</item>
+    <item name='audio/gain' type='decimal' priority='0'>100.000000</item>
     <item name='audio/mute' type='boolean' priority='0'>0</item>
     <item name='center/curve' type='decimal' priority='0'>0.000000</item>
     <item name='center/decay' type='decimal' priority='0'>0.000000</item>
@@ -15,7 +15,7 @@
     <item name='numSources' type='integer' priority='1'>3</item>
     <item name='order' type='integer' priority='0'>3</item>
     <item name='source.1/order' type='integer' priority='0'>3</item>
-    <item name='source."fontsize": 12.0/order' type='integer' priority='0'>3</item>
+    <item name='source.10/order' type='integer' priority='0'>3</item>
     <item name='source.11/order' type='integer' priority='0'>3</item>
     <item name='source.12/order' type='integer' priority='0'>3</item>
     <item name='source.13/order' type='integer' priority='0'>3</item>

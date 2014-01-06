@@ -81,7 +81,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 460.0, 118.0, "fontsize": 12.00.0, 17.0 ],
+									"patching_rect" : [ 460.0, 118.0, 100.0, 17.0 ],
 									"text" : "/numSpeakers $1"
 								}
 
@@ -90,7 +90,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-"fontsize": 12.0",
+									"id" : "obj-10",
 									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -109,7 +109,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 50.0, "fontsize": 12.0.0, 25.0, 25.0 ]
+									"patching_rect" : [ 50.0, 10.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -134,7 +134,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 40.0, 55.0, 19.0 ],
-									"text" : "qlim "fontsize": 12.00"
+									"text" : "qlim 100"
 								}
 
 							}
@@ -245,7 +245,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "int" ],
-									"patching_rect" : [ 50.0, 1"fontsize": 12.0.0, 51.0, 19.0 ],
+									"patching_rect" : [ 50.0, 110.0, 51.0, 19.0 ],
 									"text" : "uzi 8 1"
 								}
 
@@ -265,7 +265,7 @@
 									"destination" : [ "obj-4", 1 ],
 									"hidden" : 0,
 									"midpoints" : [ 279.5, 267.5, 117.5, 267.5 ],
-									"source" : [ "obj-"fontsize": 12.0", 0 ]
+									"source" : [ "obj-10", 0 ]
 								}
 
 							}
@@ -334,7 +334,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-"fontsize": 12.0", 0 ],
+									"destination" : [ "obj-10", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
 									"source" : [ "obj-5", 0 ]
@@ -389,7 +389,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ "fontsize": 12.04.0, 304.0, 138.0, 19.0 ],
+					"patching_rect" : [ 104.0, 304.0, 138.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"fontface" : 0,
 						"fontsize" : 12.0,
@@ -415,7 +415,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
-					"patching_rect" : [ "fontsize": 12.04.0, 282.0, 37.0, 19.0 ],
+					"patching_rect" : [ 104.0, 282.0, 37.0, 19.0 ],
 					"triscale" : 0.9
 				}
 
@@ -502,7 +502,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 245.0, "fontsize": 12.00.0, "fontsize": 12.01.0, 19.0 ],
+									"patching_rect" : [ 245.0, 100.0, 101.0, 19.0 ],
 									"text" : "sel /numSpeakers"
 								}
 
@@ -531,8 +531,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, "fontsize": 12.04.0, 165.0, 31.0 ],
-									"text" : "j.position2ambimonitor @prefix speaker @radius "fontsize": 12.0."
+									"patching_rect" : [ 50.0, 104.0, 165.0, 31.0 ],
+									"text" : "j.position2ambimonitor @prefix speaker @radius 10."
 								}
 
 							}
@@ -644,7 +644,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ "fontsize": 12.04.0, 404.0, 49.0, 19.0 ],
+					"patching_rect" : [ 104.0, 404.0, 49.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"fontface" : 0,
 						"fontsize" : 12.0,
@@ -668,8 +668,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ "fontsize": 12.04.0, 432.0, 151.0, 151.0 ],
-					"presentation_rect" : [ 30.0, 30.0, "fontsize": 12.00.0, "fontsize": 12.00.0 ]
+					"patching_rect" : [ 104.0, 432.0, 151.0, 151.0 ],
+					"presentation_rect" : [ 30.0, 30.0, 100.0, 100.0 ]
 				}
 
 			}
@@ -927,7 +927,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "bang", "bang", "", "int" ],
-					"patching_rect" : [ 18.0, "fontsize": 12.05.5, 212.0, 16.0 ]
+					"patching_rect" : [ 18.0, 105.5, 212.0, 16.0 ]
 				}
 
 			}
@@ -976,7 +976,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, "fontsize": 12.00.0, 236.0, 41.0 ],
+									"patching_rect" : [ 50.0, 100.0, 236.0, 41.0 ],
 									"text" : ";\rmax launchbrowser http://www.zoom.co.jp/english/products/h2/"
 								}
 
@@ -1136,13 +1136,13 @@
 , 			{
 				"box" : 				{
 					"args" : [  ],
-					"id" : "obj-"fontsize": 12.0",
+					"id" : "obj-10",
 					"maxclass" : "bpatcher",
 					"name" : "jmod.sur.setup.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ "fontsize": 12.04.0, 325.0, 150.0, 70.0 ],
+					"patching_rect" : [ 104.0, 325.0, 150.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ]
 				}
 
@@ -1246,7 +1246,7 @@
 					"destination" : [ "obj-46", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ],
-					"source" : [ "obj-"fontsize": 12.0", 0 ]
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -1297,7 +1297,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-"fontsize": 12.0", 0 ],
+					"destination" : [ "obj-10", 0 ],
 					"hidden" : 1,
 					"midpoints" : [  ],
 					"source" : [ "obj-40", 0 ]
@@ -1333,7 +1333,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-"fontsize": 12.0", 0 ],
+					"destination" : [ "obj-10", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ],
 					"source" : [ "obj-47", 0 ]

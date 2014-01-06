@@ -182,7 +182,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-"fontsize": 12.0",
+									"id" : "obj-10",
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
@@ -229,7 +229,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 187.0, 379.0, 165.0, 31.0 ],
-									"text" : "j.position2ambimonitor @prefix speaker @radius "fontsize": 12.0."
+									"text" : "j.position2ambimonitor @prefix speaker @radius 10."
 								}
 
 							}
@@ -259,7 +259,7 @@
 									"destination" : [ "obj-12", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
-									"source" : [ "obj-"fontsize": 12.0", 0 ]
+									"source" : [ "obj-10", 0 ]
 								}
 
 							}
@@ -283,7 +283,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-"fontsize": 12.0", 0 ],
+									"destination" : [ "obj-10", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
 									"source" : [ "obj-5", 0 ]
@@ -388,7 +388,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 441.0, 169.0, 126.0, 126.0 ],
-					"presentation_rect" : [ 30.0, 30.0, "fontsize": 12.00.0, "fontsize": 12.00.0 ]
+					"presentation_rect" : [ 30.0, 30.0, 100.0, 100.0 ]
 				}
 
 			}
@@ -416,7 +416,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 282.0, 218.0, 74.0, 19.0 ],
-					"text" : "Default: "fontsize": 12.00"
+					"text" : "Default: 100"
 				}
 
 			}
@@ -457,7 +457,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 50.0, "fontsize": 12.00.0, 44.0, 19.0 ],
+									"patching_rect" : [ 50.0, 100.0, 44.0, 19.0 ],
 									"text" : "pink~"
 								}
 
@@ -535,9 +535,9 @@
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal" ],
 					"patcher" : 					{
 						"fileversion" : 1,
-						"rect" : [ 307.0, "fontsize": 12.07.0, 536.0, 241.0 ],
+						"rect" : [ 307.0, 107.0, 536.0, 241.0 ],
 						"bglocked" : 0,
-						"defrect" : [ 307.0, "fontsize": 12.07.0, 536.0, 241.0 ],
+						"defrect" : [ 307.0, 107.0, 536.0, 241.0 ],
 						"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -625,7 +625,7 @@
 , 							{
 								"box" : 								{
 									"comment" : "",
-									"id" : "obj-"fontsize": 12.0",
+									"id" : "obj-10",
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
@@ -678,7 +678,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-"fontsize": 12.0", 0 ],
+									"destination" : [ "obj-10", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
 									"source" : [ "obj-18", 0 ]
@@ -777,7 +777,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 25.0, 265.0, 151.0, 31.0 ],
-					"text" : "j.ambimonitor2position @prefix source @radius "fontsize": 12.0."
+					"text" : "j.ambimonitor2position @prefix source @radius 10."
 				}
 
 			}
@@ -789,7 +789,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 26.0, 97.0, 158.0, 158.0 ],
-					"presentation_rect" : [ 0.0, 0.0, "fontsize": 12.00.0, "fontsize": 12.00.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 100.0, 100.0 ],
 					"varname" : "monitor"
 				}
 
@@ -819,8 +819,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 227.0, 198.0, "fontsize": 12.00.0, 19.0 ],
-					"text" : "loadmess set "fontsize": 12.00"
+					"patching_rect" : [ 227.0, 198.0, 100.0, 19.0 ],
+					"text" : "loadmess set 100"
 				}
 
 			}
@@ -844,7 +844,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 243.0, 318.0, 1"fontsize": 12.0.0, 17.0 ],
+					"patching_rect" : [ 243.0, 318.0, 110.0, 17.0 ],
 					"text" : "/source.1/active $1"
 				}
 
@@ -873,7 +873,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 227.0, 243.0, "fontsize": 12.01.0, 17.0 ],
+					"patching_rect" : [ 227.0, 243.0, 101.0, 17.0 ],
 					"text" : "/source.1/gain $1"
 				}
 
@@ -888,7 +888,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 28.0, 485.0, 273.0, 17.0 ],
-					"text" : "/source.1/position 0. 7.848"fontsize": 12.01 0."
+					"text" : "/source.1/position 0. 7.848101 0."
 				}
 
 			}
@@ -962,8 +962,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 25.0, 370.0, 300.0, "fontsize": 12.05.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, "fontsize": 12.05.0 ]
+					"patching_rect" : [ 25.0, 370.0, 300.0, 105.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ]
 				}
 
 			}
@@ -1205,7 +1205,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"hidden" : 0,
-					"midpoints" : [ "fontsize": 12.05.0, 259.5, 34.5, 259.5 ],
+					"midpoints" : [ 105.0, 259.5, 34.5, 259.5 ],
 					"source" : [ "obj-9", 1 ]
 				}
 

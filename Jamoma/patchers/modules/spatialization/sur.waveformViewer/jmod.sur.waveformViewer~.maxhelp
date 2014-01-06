@@ -75,7 +75,7 @@
 				"box" : 				{
 					"args" : [ "@description", "View waveform of real-time multichannel signal as jitter matrix" ],
 					"bgmode" : 1,
-					"id" : "obj-"fontsize": 12.0",
+					"id" : "obj-10",
 					"maxclass" : "bpatcher",
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,

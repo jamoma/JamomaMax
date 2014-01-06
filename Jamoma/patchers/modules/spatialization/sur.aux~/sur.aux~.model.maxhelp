@@ -7,7 +7,7 @@
 			"revision" : 4
 		}
 ,
-		"rect" : [ "fontsize": 12.00.0, "fontsize": 12.00.0, 997.0, 475.0 ],
+		"rect" : [ 100.0, 100.0, 997.0, 475.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -372,7 +372,7 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-"fontsize": 12.0",
+					"id" : "obj-10",
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -547,7 +547,7 @@
 					"numinlets" : 33,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 17.0, "fontsize": 12.08.0, 300.0, 35.0 ],
+					"patching_rect" : [ 17.0, 108.0, 300.0, 35.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 35.0 ],
 					"varname" : "jmod.sur.aux~[1]"
 				}
@@ -664,7 +664,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-"fontsize": 12.0", 0 ],
+					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-20", 3 ]

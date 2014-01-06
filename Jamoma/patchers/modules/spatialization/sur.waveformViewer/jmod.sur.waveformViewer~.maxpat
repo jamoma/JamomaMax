@@ -1,9 +1,9 @@
 {
 	"patcher" : 	{
 		"fileversion" : 1,
-		"rect" : [ 120.0, 46.0, "fontsize": 12.084.0, 428.0 ],
+		"rect" : [ 120.0, 46.0, 1084.0, 428.0 ],
 		"bglocked" : 0,
-		"defrect" : [ 120.0, 46.0, "fontsize": 12.084.0, 428.0 ],
+		"defrect" : [ 120.0, 46.0, 1084.0, 428.0 ],
 		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -70,7 +70,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 60.0, "fontsize": 12.00.0, 187.0, 17.0 ],
+					"patching_rect" : [ 60.0, 100.0, 187.0, 17.0 ],
 					"text" : "preset/store 1 default, preset/write"
 				}
 
@@ -98,9 +98,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ "fontsize": 12.0.0, 45.0, 145.0, 19.0 ],
+					"patching_rect" : [ 10.0, 45.0, 145.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ "fontsize": 12.0.0, 45.0, 140.0, 19.0 ],
+					"presentation_rect" : [ 10.0, 45.0, 140.0, 19.0 ],
 					"text" : "Downsampling for vewing"
 				}
 
@@ -114,9 +114,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ "fontsize": 12.0.0, 25.0, 116.0, 19.0 ],
+					"patching_rect" : [ 10.0, 25.0, 116.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ "fontsize": 12.0.0, 25.0, 116.0, 19.0 ],
+					"presentation_rect" : [ 10.0, 25.0, 116.0, 19.0 ],
 					"text" : "Number of channels"
 				}
 
@@ -251,7 +251,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 460.0, "fontsize": 12.00.0, 596.0, 31.0 ],
+					"patching_rect" : [ 460.0, 100.0, 596.0, 31.0 ],
 					"text" : "j.parameter numberOfChannels @type integer @repetitions/filter 1 @range/bounds 1 8 @range/clipmode both @ramp/drive none @description \"The number of channels to monitor.\""
 				}
 
@@ -267,9 +267,9 @@
 					"outlettype" : [ "", "jit_matrix" ],
 					"patcher" : 					{
 						"fileversion" : 1,
-						"rect" : [ 237.0, 247.0, "fontsize": 12.028.0, 776.0 ],
+						"rect" : [ 237.0, 247.0, 1028.0, 776.0 ],
 						"bglocked" : 0,
-						"defrect" : [ 237.0, 247.0, "fontsize": 12.028.0, 776.0 ],
+						"defrect" : [ 237.0, 247.0, 1028.0, 776.0 ],
 						"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -347,7 +347,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-"fontsize": 12.0",
+									"id" : "obj-10",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
@@ -421,7 +421,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 115.0, 3"fontsize": 12.0.0, 25.0, 25.0 ]
+													"patching_rect" : [ 115.0, 310.0, 25.0, 25.0 ]
 												}
 
 											}
@@ -566,7 +566,7 @@
 																	"numinlets" : 2,
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
-																	"patching_rect" : [ 725.0, 190.0, "fontsize": 12.04.0, 29.0 ],
+																	"patching_rect" : [ 725.0, 190.0, 104.0, 29.0 ],
 																	"text" : "script connect catch 0 unpack 0"
 																}
 
@@ -824,9 +824,9 @@
 													"outlettype" : [ "" ],
 													"patcher" : 													{
 														"fileversion" : 1,
-														"rect" : [ 58.0, 1"fontsize": 12.0.0, 883.0, 572.0 ],
+														"rect" : [ 58.0, 110.0, 883.0, 572.0 ],
 														"bglocked" : 0,
-														"defrect" : [ 58.0, 1"fontsize": 12.0.0, 883.0, 572.0 ],
+														"defrect" : [ 58.0, 110.0, 883.0, 572.0 ],
 														"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -878,8 +878,8 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
-																	"patching_rect" : [ 600.0, 160.0, "fontsize": 12.05.0, 19.0 ],
-																	"text" : "expr 350+$i1*1"fontsize": 12.0"
+																	"patching_rect" : [ 600.0, 160.0, 105.0, 19.0 ],
+																	"text" : "expr 350+$i1*110"
 																}
 
 															}
@@ -893,7 +893,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 405.0, 195.0, 405.0, 19.0 ],
-																	"text" : "sprintf script newdefault graph[%ld] %ld 3"fontsize": 12.0 jit.graph @mode 3 @height %ld"
+																	"text" : "sprintf script newdefault graph[%ld] %ld 310 jit.graph @mode 3 @height %ld"
 																}
 
 															}
@@ -906,7 +906,7 @@
 																	"numinlets" : 2,
 																	"numoutlets" : 3,
 																	"outlettype" : [ "bang", "bang", "int" ],
-																	"patching_rect" : [ 380.0, "fontsize": 12.00.0, 46.0, 19.0 ],
+																	"patching_rect" : [ 380.0, 100.0, 46.0, 19.0 ],
 																	"text" : "uzi 4 0"
 																}
 
@@ -1095,7 +1095,7 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
-																	"patching_rect" : [ 50.0, "fontsize": 12.05.0, 24.0, 19.0 ],
+																	"patching_rect" : [ 50.0, 105.0, 24.0, 19.0 ],
 																	"text" : "t b"
 																}
 
@@ -1137,7 +1137,7 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 2,
 																	"outlettype" : [ "int", "bang" ],
-																	"patching_rect" : [ 220.0, "fontsize": 12.00.0, 32.5, 19.0 ],
+																	"patching_rect" : [ 220.0, 100.0, 32.5, 19.0 ],
 																	"text" : "t i b"
 																}
 
@@ -1315,7 +1315,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 75.0, 3"fontsize": 12.0.0, 25.0, 25.0 ]
+													"patching_rect" : [ 75.0, 310.0, 25.0, 25.0 ]
 												}
 
 											}
@@ -1538,7 +1538,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 350.0, 3"fontsize": 12.0.0, 170.0, 19.0 ],
+									"patching_rect" : [ 350.0, 310.0, 170.0, 19.0 ],
 									"text" : "jit.graph @mode 3 @height 121",
 									"varname" : "graph[0]"
 								}
@@ -1553,7 +1553,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 460.0, 3"fontsize": 12.0.0, 170.0, 19.0 ],
+									"patching_rect" : [ 460.0, 310.0, 170.0, 19.0 ],
 									"text" : "jit.graph @mode 3 @height 121",
 									"varname" : "graph[1]"
 								}
@@ -1568,7 +1568,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
-									"patching_rect" : [ 350.0, 200.0, "fontsize": 12.00.0, 19.0 ],
+									"patching_rect" : [ 350.0, 200.0, 100.0, 19.0 ],
 									"text" : "j.unpack≈ 2",
 									"varname" : "unpack≈"
 								}
@@ -1598,7 +1598,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
-									"patching_rect" : [ 350.0, 260.0, "fontsize": 12.00.0, 19.0 ],
+									"patching_rect" : [ 350.0, 260.0, 100.0, 19.0 ],
 									"text" : "jit.unpack 2",
 									"varname" : "unpack"
 								}
@@ -1613,7 +1613,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 350.0, 360.0, "fontsize": 12.00.0, 19.0 ],
+									"patching_rect" : [ 350.0, 360.0, 100.0, 19.0 ],
 									"text" : "jit.glue @rows 2",
 									"varname" : "glue"
 								}
@@ -1793,7 +1793,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-"fontsize": 12.0", 0 ],
+									"destination" : [ "obj-10", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
 									"source" : [ "obj-9", 0 ]

@@ -17,7 +17,7 @@ MAX_VOICES = 32;                        // Maximum number of speakers
 
 // VARIABLES
 
-var sample_rate = 44"fontsize": 12.00;
+var sample_rate = 44100;
 var DSP_running = 0;
 var distance = new Array(MAX_VOICES);
 var num_voices = 0;                    // Current number of voices

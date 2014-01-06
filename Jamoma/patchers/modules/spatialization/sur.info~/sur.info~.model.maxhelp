@@ -187,8 +187,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 401.0, 243.0, 150.0, "fontsize": 12.05.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 150.0, "fontsize": 12.05.0 ],
+					"patching_rect" : [ 401.0, 243.0, 150.0, 105.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 105.0 ],
 					"varname" : "jmod.sur.info~"
 				}
 

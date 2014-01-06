@@ -130,7 +130,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "stop" ],
-									"patching_rect" : [ 45.0, "fontsize": 12.05.0, "fontsize": 12.06.0, 20.0 ],
+									"patching_rect" : [ 45.0, 105.0, 106.0, 20.0 ],
 									"text" : "t b stop"
 								}
 
@@ -286,7 +286,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-"fontsize": 12.0",
+					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -758,7 +758,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 25.0, 172.0, 55.0, 20.0 ],
-					"text" : "qlim "fontsize": 12.00"
+					"text" : "qlim 100"
 				}
 
 			}
@@ -788,7 +788,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 199.0, "fontsize": 12.01.0, 18.0 ],
+					"patching_rect" : [ 25.0, 199.0, 101.0, 18.0 ],
 					"text" : "channelOffset $1"
 				}
 
@@ -808,7 +808,7 @@
 					"destination" : [ "obj-14", 4 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-"fontsize": 12.0", 0 ]
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -1061,7 +1061,7 @@
 					"destination" : [ "obj-37", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-6", "fontsize": 12.0 ]
+					"source" : [ "obj-6", 10 ]
 				}
 
 			}

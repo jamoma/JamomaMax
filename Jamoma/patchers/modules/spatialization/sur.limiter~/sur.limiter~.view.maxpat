@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 665.0, "fontsize": 12.07.0, 702.0, 352.0 ],
+		"rect" : [ 665.0, 107.0, 702.0, 352.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -89,7 +89,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 21.0, 126.0, "fontsize": 12.00.0, 20.0 ],
+									"patching_rect" : [ 21.0, 126.0, 100.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 21.0, 51.0, 129.0, 27.0 ],
 									"text" : "Clear"
@@ -147,7 +147,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 40.0, 14.0, 150.0, 20.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 40.0, 14.0, 1"fontsize": 12.0.0, 20.0 ],
+									"presentation_rect" : [ 40.0, 14.0, 110.0, 20.0 ],
 									"text" : "DC blocking active"
 								}
 
@@ -301,7 +301,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 511.0, 211.0, 1"fontsize": 12.0.0, 20.0 ],
+					"patching_rect" : [ 511.0, 211.0, 110.0, 20.0 ],
 					"text" : "j.remote mode",
 					"varname" : "mode"
 				}
@@ -472,7 +472,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 333.0, "fontsize": 12.05.0, 48.0, 20.0 ],
+					"patching_rect" : [ 333.0, 105.0, 48.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 65.0, 55.0, 48.0, 20.0 ],
 					"triangle" : 0,
@@ -671,9 +671,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 0.0, 0.0, 300.0, "fontsize": 12.05.0 ],
+					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, "fontsize": 12.05.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"text" : "/noModelAddress"
 				}
 
@@ -721,7 +721,7 @@
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 520.5, 162.0, 495.0, 162.0, 495.0, "fontsize": 12.07.0, 520.5, "fontsize": 12.07.0 ],
+					"midpoints" : [ 520.5, 162.0, 495.0, 162.0, 495.0, 107.0, 520.5, 107.0 ],
 					"source" : [ "obj-17", 0 ]
 				}
 
@@ -778,7 +778,7 @@
 					"destination" : [ "obj-26", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 342.5, 161.0, 317.0, 161.0, 317.0, "fontsize": 12.02.0, 342.5, "fontsize": 12.02.0 ],
+					"midpoints" : [ 342.5, 161.0, 317.0, 161.0, 317.0, 102.0, 342.5, 102.0 ],
 					"source" : [ "obj-20", 0 ]
 				}
 

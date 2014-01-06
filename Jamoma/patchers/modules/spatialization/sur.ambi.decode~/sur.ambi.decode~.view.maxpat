@@ -14,7 +14,7 @@
     ],
     "bglocked": 0,
     "openinpresentation": 1,
-    "default_fontsize": "fontsize": 12.0.0,
+    "default_fontsize": 10.0,
     "default_fontface": 0,
     "default_fontname": "Arial",
     "gridonopen": 0,
@@ -37,7 +37,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-41",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -57,7 +57,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-37",
           "maxclass": "newobj",
           "numinlets": 2,
@@ -139,7 +139,7 @@
               {
                 "box": {
                   "fontname": "Arial",
-                  "fontsize": "fontsize": 12.0.0,
+                  "fontsize": 10.0,
                   "id": "obj-1",
                   "maxclass": "newobj",
                   "numinlets": 1,
@@ -159,7 +159,7 @@
               {
                 "box": {
                   "fontname": "Arial",
-                  "fontsize": "fontsize": 12.0.0,
+                  "fontsize": 10.0,
                   "id": "obj-29",
                   "maxclass": "newobj",
                   "numinlets": 1,
@@ -179,7 +179,7 @@
               {
                 "box": {
                   "fontname": "Arial",
-                  "fontsize": "fontsize": 12.0.0,
+                  "fontsize": 10.0,
                   "id": "obj-19",
                   "maxclass": "newobj",
                   "numinlets": 1,
@@ -199,7 +199,7 @@
               {
                 "box": {
                   "fontname": "Arial",
-                  "fontsize": "fontsize": 12.0.0,
+                  "fontsize": 10.0,
                   "id": "obj-18",
                   "maxclass": "newobj",
                   "numinlets": 2,
@@ -210,7 +210,7 @@
                   ],
                   "patching_rect": [
                     50.0,
-                    "fontsize": 12.00.0,
+                    100.0,
                     56.0,
                     19.0
                   ],
@@ -220,7 +220,7 @@
               {
                 "box": {
                   "fontname": "Arial",
-                  "fontsize": "fontsize": 12.0.0,
+                  "fontsize": 10.0,
                   "id": "obj-17",
                   "maxclass": "newobj",
                   "numinlets": 2,
@@ -446,7 +446,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-20",
           "maxclass": "newobj",
           "numinlets": 3,
@@ -766,7 +766,7 @@
                           ],
                           "patching_rect": [
                             59.0,
-                            "fontsize": 12.06.0,
+                            106.0,
                             46.0,
                             20.0
                           ],
@@ -786,7 +786,7 @@
                           ],
                           "patching_rect": [
                             123.0,
-                            "fontsize": 12.00.0,
+                            100.0,
                             87.0,
                             20.0
                           ],
@@ -826,7 +826,7 @@
                           ],
                           "patching_rect": [
                             217.0,
-                            "fontsize": 12.00.0,
+                            100.0,
                             50.0,
                             18.0
                           ],
@@ -1098,7 +1098,7 @@
                   "patching_rect": [
                     165.0,
                     76.0,
-                    "fontsize": 12.01.0,
+                    101.0,
                     38.0
                   ],
                   "presentation": 1,
@@ -1106,7 +1106,7 @@
                     5.0,
                     32.0,
                     490.0,
-                    "fontsize": 12.05.0
+                    105.0
                   ],
                   "setminmax": [
                     0.0,
@@ -1523,7 +1523,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-16",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -1543,7 +1543,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-15",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -1563,7 +1563,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-13",
           "maxclass": "newobj",
           "numinlets": 2,
@@ -1575,7 +1575,7 @@
           "patching_rect": [
             23.0,
             318.0,
-            "fontsize": 12.00.0,
+            100.0,
             19.0
           ],
           "text": "route /view/panel"
@@ -1584,7 +1584,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-14",
           "maxclass": "message",
           "numinlets": 2,
@@ -1604,7 +1604,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-11",
           "maxclass": "newobj",
           "numinlets": 2,
@@ -1661,7 +1661,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-9",
           "maxclass": "message",
           "numinlets": 2,
@@ -1681,7 +1681,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-5",
           "linecount": 3,
           "maxclass": "newobj",
@@ -1704,7 +1704,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-4",
           "linecount": 2,
           "maxclass": "newobj",
@@ -1727,7 +1727,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-61",
           "maxclass": "message",
           "numinlets": 2,
@@ -1738,7 +1738,7 @@
           "patching_rect": [
             907.0,
             324.0,
-            "fontsize": 12.00.0,
+            100.0,
             17.0
           ],
           "text": "range/bounds 1 4"
@@ -1747,7 +1747,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-57",
           "maxclass": "message",
           "numinlets": 2,
@@ -1758,7 +1758,7 @@
           "patching_rect": [
             738.0,
             327.0,
-            "fontsize": 12.00.0,
+            100.0,
             17.0
           ],
           "text": "range/bounds 1 3"
@@ -1767,7 +1767,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-53",
           "maxclass": "newobj",
           "numinlets": 4,
@@ -1790,7 +1790,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-52",
           "linecount": 2,
           "maxclass": "newobj",
@@ -1815,7 +1815,7 @@
         "box": {
           "annotation": "Ambisonics type of decoding and encoding. Furse-Malham, N3D or SN3D",
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-38",
           "items": [
             "Furse-Malham",
@@ -1836,14 +1836,14 @@
           "patching_rect": [
             495.0,
             265.744507,
-            "fontsize": 12.00.0,
+            100.0,
             19.0
           ],
           "presentation": 1,
           "presentation_rect": [
             149.0,
             0.744507,
-            "fontsize": 12.00.0,
+            100.0,
             19.0
           ]
         }
@@ -1851,7 +1851,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-12",
           "linecount": 2,
           "maxclass": "newobj",
@@ -1874,8 +1874,8 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
-          "id": "obj-"fontsize": 12.0",
+          "fontsize": 10.0,
+          "id": "obj-10",
           "linecount": 3,
           "maxclass": "newobj",
           "numinlets": 2,
@@ -1897,7 +1897,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-6",
           "linecount": 2,
           "maxclass": "newobj",
@@ -1920,7 +1920,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-8",
           "maxclass": "message",
           "numinlets": 2,
@@ -1930,7 +1930,7 @@
           ],
           "patching_rect": [
             300.0,
-            "fontsize": 12.06.0,
+            106.0,
             196.0,
             17.0
           ],
@@ -1941,7 +1941,7 @@
         "box": {
           "annotation": "Order of decoding for ambisonic signal.  Changes only take effect when audio is off.",
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-32",
           "maxclass": "number",
           "mouseup": 1,
@@ -1972,7 +1972,7 @@
         "box": {
           "annotation": "The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.",
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-28",
           "maxclass": "number",
           "mouseup": 1,
@@ -2002,7 +2002,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-1",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -2023,7 +2023,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
@@ -2046,7 +2046,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-3",
           "maxclass": "message",
           "numinlets": 2,
@@ -2056,7 +2056,7 @@
           ],
           "patching_rect": [
             135.0,
-            "fontsize": 12.06.0,
+            106.0,
             160.0,
             17.0
           ],
@@ -2066,7 +2066,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
@@ -2129,7 +2129,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
@@ -2152,7 +2152,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-31",
           "maxclass": "newobj",
           "numinlets": 2,
@@ -2173,7 +2173,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-34",
           "linecount": 2,
           "maxclass": "newobj",
@@ -2196,7 +2196,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
@@ -2209,8 +2209,8 @@
           "numoutlets": 0,
           "patching_rect": [
             30.0,
-            "fontsize": 12.06.0,
-            "fontsize": 12.00.0,
+            106.0,
+            100.0,
             19.0
           ],
           "text": "command input"
@@ -2228,7 +2228,7 @@
           ],
           "patching_rect": [
             0.0,
-            "fontsize": 12.06.0,
+            106.0,
             25.0,
             25.0
           ]
@@ -2237,7 +2237,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-39",
           "linecount": 2,
           "maxclass": "newobj",
@@ -2261,7 +2261,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
@@ -2306,7 +2306,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-44",
           "linecount": 3,
           "maxclass": "newobj",

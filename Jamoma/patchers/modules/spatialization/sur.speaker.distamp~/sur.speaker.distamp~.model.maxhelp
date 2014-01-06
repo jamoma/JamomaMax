@@ -141,7 +141,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-"fontsize": 12.0",
+									"id" : "obj-10",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
@@ -189,7 +189,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 16.0, 206.0, 298.0, 19.0 ],
-									"text" : "j.ambimonitor2position @prefix speaker @radius "fontsize": 12.0."
+									"text" : "j.ambimonitor2position @prefix speaker @radius 10."
 								}
 
 							}
@@ -225,7 +225,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-"fontsize": 12.0", 0 ],
+									"destination" : [ "obj-10", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
 									"source" : [ "obj-12", 0 ]
@@ -243,7 +243,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-"fontsize": 12.0", 1 ],
+									"destination" : [ "obj-10", 1 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
 									"source" : [ "obj-15", 0 ]
@@ -264,7 +264,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
-									"source" : [ "obj-"fontsize": 12.0", 0 ]
+									"source" : [ "obj-10", 0 ]
 								}
 
 							}
@@ -442,7 +442,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "clear" ],
-									"patching_rect" : [ 52.0, "fontsize": 12.01.0, 42.0, 19.0 ],
+									"patching_rect" : [ 52.0, 101.0, 42.0, 19.0 ],
 									"text" : "t clear"
 								}
 
@@ -471,7 +471,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 148.0, 97.0, 294.0, 19.0 ],
-									"text" : "j.position2ambimonitor @prefix speaker @radius "fontsize": 12.0"
+									"text" : "j.position2ambimonitor @prefix speaker @radius 10"
 								}
 
 							}
@@ -581,7 +581,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 36.0, 233.0, 200.0, 200.0 ],
-					"presentation_rect" : [ 0.0, 0.0, "fontsize": 12.00.0, "fontsize": 12.00.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 100.0, 100.0 ]
 				}
 
 			}
@@ -791,8 +791,8 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 279.0, 198.0, "fontsize": 12.03.0, 19.0 ],
-									"text" : "scale 0. "fontsize": 12.00. 4. 8."
+									"patching_rect" : [ 279.0, 198.0, 103.0, 19.0 ],
+									"text" : "scale 0. 100. 4. 8."
 								}
 
 							}
@@ -806,7 +806,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 279.0, 172.0, 72.0, 19.0 ],
-									"text" : "random "fontsize": 12.01"
+									"text" : "random 101"
 								}
 
 							}
@@ -819,7 +819,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 573.0, 123.0, "fontsize": 12.00.0, 17.0 ],
+									"patching_rect" : [ 573.0, 123.0, 100.0, 17.0 ],
 									"text" : "/numSpeakers $1"
 								}
 
@@ -870,7 +870,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-"fontsize": 12.0",
+									"id" : "obj-10",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
@@ -889,7 +889,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "int" ],
-									"patching_rect" : [ 140.0, 1"fontsize": 12.0.0, 44.0, 19.0 ],
+									"patching_rect" : [ 140.0, 110.0, 44.0, 19.0 ],
 									"text" : "uzi 8"
 								}
 
@@ -940,7 +940,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-13", 0 ],
 									"hidden" : 0,
-									"midpoints" : [ 582.5, 319.0, "fontsize": 12.07.5, 319.0 ],
+									"midpoints" : [ 582.5, 319.0, 107.5, 319.0 ],
 									"source" : [ "obj-6", 0 ]
 								}
 
@@ -950,7 +950,7 @@
 									"destination" : [ "obj-9", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
-									"source" : [ "obj-"fontsize": 12.0", 0 ]
+									"source" : [ "obj-10", 0 ]
 								}
 
 							}
@@ -967,7 +967,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-7", 0 ],
 									"hidden" : 0,
-									"midpoints" : [ 161.5, "fontsize": 12.01.0, 277.5, "fontsize": 12.01.0 ],
+									"midpoints" : [ 161.5, 101.0, 277.5, 101.0 ],
 									"source" : [ "obj-8", 1 ]
 								}
 
@@ -1048,7 +1048,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-16", 0 ],
 									"hidden" : 0,
-									"midpoints" : [ 231.5, 293.5, "fontsize": 12.07.5, 293.5 ],
+									"midpoints" : [ 231.5, 293.5, 107.5, 293.5 ],
 									"source" : [ "obj-17", 0 ]
 								}
 
@@ -1073,7 +1073,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-"fontsize": 12.0", 0 ],
+									"destination" : [ "obj-10", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ],
 									"source" : [ "obj-24", 1 ]
@@ -1142,7 +1142,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 80.0, 145.0, 1"fontsize": 12.0.0, 19.0 ],
+					"patching_rect" : [ 80.0, 145.0, 110.0, 19.0 ],
 					"text" : "Number of speakers"
 				}
 

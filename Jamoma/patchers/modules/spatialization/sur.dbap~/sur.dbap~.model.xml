@@ -5,7 +5,7 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset number='1' name='default'>
-    <item name='audio/gain' type='decimal' priority='0'>"fontsize": 12.00.000000</item>
+    <item name='audio/gain' type='decimal' priority='0'>100.000000</item>
     <item name='audio/mute' type='boolean' priority='0'>0</item>
     <item name='dimensions' type='integer' priority='1'>2</item>
     <item name='numSources' type='generic' priority='2'>3</item>

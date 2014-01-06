@@ -7,7 +7,7 @@
 			"revision" : 4
 		}
 ,
-		"rect" : [ "fontsize": 12.03.0, 44.0, "fontsize": 12.029.0, 7"fontsize": 12.0.0 ],
+		"rect" : [ 103.0, 44.0, 1029.0, 710.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -139,7 +139,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 180.0, 558.0, "fontsize": 12.00.0, 19.0 ],
+					"patching_rect" : [ 180.0, 558.0, 100.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 290.0, 5.0, 29.0, 19.0 ],
 					"truncate" : 0
@@ -204,7 +204,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 309.0, 482.0, 432.0, 43.0 ],
-					"text" : "j.message source.1/attenuationFactor @type decimal @range/bounds 0. "fontsize": 12.00. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the distance unit for the inverse proportional decrease distance model.\""
+					"text" : "j.message source.1/attenuationFactor @type decimal @range/bounds 0. 100. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the distance unit for the inverse proportional decrease distance model.\""
 				}
 
 			}
@@ -251,8 +251,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 308.0, 4"fontsize": 12.0.0, 584.0, 43.0 ],
-					"text" : "j.message source.1/distance/dBUnit @type decimal @range/bounds 0. "fontsize": 12.00. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the distance unit for the exponential distance model.\" @dataspace gain @dataspace/unit dB"
+					"patching_rect" : [ 308.0, 410.0, 584.0, 43.0 ],
+					"text" : "j.message source.1/distance/dBUnit @type decimal @range/bounds 0. 100. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the distance unit for the exponential distance model.\" @dataspace gain @dataspace/unit dB"
 				}
 
 			}
@@ -288,7 +288,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-"fontsize": 12.0",
+					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -317,7 +317,7 @@
 			}
 , 			{
 				"box" : 				{
-					"defaultvalue" : "fontsize": 12.00.0,
+					"defaultvalue" : 100.0,
 					"id" : "obj-36",
 					"maxclass" : "j.textslider",
 					"numinlets" : 1,
@@ -395,7 +395,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 370.0, 188.0, 560.0, 31.0 ],
-					"text" : "j.parameter source.1/order @type decimal @range/bounds 0. "fontsize": 12.00. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the ambisonics order of the nth source.\""
+					"text" : "j.parameter source.1/order @type decimal @range/bounds 0. 100. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the ambisonics order of the nth source.\""
 				}
 
 			}
@@ -408,7 +408,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 480.0, 25.0, "fontsize": 12.07.0, 19.0 ],
+					"patching_rect" : [ 480.0, 25.0, 107.0, 19.0 ],
 					"text" : "prepend set source"
 				}
 
@@ -466,7 +466,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 340.0, 55.0, "fontsize": 12.04.0, 19.0 ],
+					"patching_rect" : [ 340.0, 55.0, 104.0, 19.0 ],
 					"text" : "if $i1 != 0 then $i1"
 				}
 
@@ -580,7 +580,7 @@
 					"destination" : [ "obj-42", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-"fontsize": 12.0", 0 ]
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -634,7 +634,7 @@
 					"destination" : [ "obj-2", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 274.5, 188.0, 122.0, 188.0, 122.0, "fontsize": 12.08.0, 181.5, "fontsize": 12.08.0 ],
+					"midpoints" : [ 274.5, 188.0, 122.0, 188.0, 122.0, 108.0, 181.5, 108.0 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -700,7 +700,7 @@
 					"destination" : [ "obj-22", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-2", "fontsize": 12.0 ]
+					"source" : [ "obj-2", 10 ]
 				}
 
 			}
@@ -733,7 +733,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", "fontsize": 12.0 ],
+					"destination" : [ "obj-2", 10 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-22", 0 ]
@@ -760,7 +760,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-"fontsize": 12.0", 0 ],
+					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-24", 0 ]
@@ -997,7 +997,7 @@
 					"destination" : [ "", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-2", "fontsize": 12.0 ]
+					"source" : [ "obj-2", 10 ]
 				}
 
 			}

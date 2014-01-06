@@ -87,7 +87,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "bang" ],
-									"patching_rect" : [ 50.0, "fontsize": 12.00.0, "fontsize": 12.08.381256, 20.0 ],
+									"patching_rect" : [ 50.0, 100.0, 108.381256, 20.0 ],
 									"text" : "t b b"
 								}
 
@@ -210,7 +210,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 155.0, 170.0, 56."fontsize": 12.00006, 33.0 ],
+					"patching_rect" : [ 155.0, 170.0, 56.100006, 33.0 ],
 					"text" : "phasor~ 2"
 				}
 
@@ -316,13 +316,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-"fontsize": 12.0",
+					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 40.0, 176.5, 57.0, 20.0 ],
-					"text" : "qlim "fontsize": 12.00"
+					"text" : "qlim 100"
 				}
 
 			}
@@ -352,7 +352,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 40.0, 215.0, "fontsize": 12.01.0, 18.0 ],
+					"patching_rect" : [ 40.0, 215.0, 101.0, 18.0 ],
 					"text" : "channelOffset $1"
 				}
 
@@ -541,13 +541,13 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-"fontsize": 12.0", 0 ]
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-"fontsize": 12.0", 0 ],
+					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-11", 0 ]
@@ -676,7 +676,7 @@
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-6", "fontsize": 12.0 ]
+					"source" : [ "obj-6", 10 ]
 				}
 
 			}

@@ -22,7 +22,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-"fontsize": 12.0",
+					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -69,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "tapconnect" ],
-					"patching_rect" : [ 180.0, 2"fontsize": 12.0.0, 54.0, 19.0 ],
+					"patching_rect" : [ 180.0, 210.0, 54.0, 19.0 ],
 					"text" : "tapin~ 2"
 				}
 
@@ -242,13 +242,13 @@
 					"destination" : [ "obj-20", 1 ],
 					"hidden" : 0,
 					"midpoints" : [  ],
-					"source" : [ "obj-"fontsize": 12.0", 0 ]
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-"fontsize": 12.0", 0 ],
+					"destination" : [ "obj-10", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ],
 					"source" : [ "obj-11", 0 ]
@@ -257,7 +257,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-"fontsize": 12.0", 0 ],
+					"destination" : [ "obj-10", 0 ],
 					"hidden" : 0,
 					"midpoints" : [ 449.0, 232.0, 75.5, 232.0 ],
 					"source" : [ "obj-13", 0 ]
@@ -340,7 +340,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-14", 1 ],
 					"hidden" : 0,
-					"midpoints" : [ 368.0, 143.75, "fontsize": 12.06.5, 143.75 ],
+					"midpoints" : [ 368.0, 143.75, 106.5, 143.75 ],
 					"source" : [ "obj-28", 0 ]
 				}
 

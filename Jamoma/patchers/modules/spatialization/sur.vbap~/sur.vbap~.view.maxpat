@@ -9,12 +9,12 @@
     "rect": [
       49.0,
       60.0,
-      1"fontsize": 12.04.0,
+      1104.0,
       525.0
     ],
     "bglocked": 0,
     "openinpresentation": 1,
-    "default_fontsize": "fontsize": 12.0.0,
+    "default_fontsize": 10.0,
     "default_fontface": 0,
     "default_fontname": "Arial",
     "gridonopen": 0,
@@ -37,7 +37,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-7",
           "linecount": 2,
           "maxclass": "newobj",
@@ -60,7 +60,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-45",
           "linecount": 2,
           "maxclass": "newobj",
@@ -83,7 +83,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-43",
           "linecount": 2,
           "maxclass": "newobj",
@@ -106,7 +106,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-42",
           "linecount": 2,
           "maxclass": "newobj",
@@ -129,7 +129,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
@@ -152,7 +152,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
@@ -174,9 +174,9 @@
       },
       {
         "box": {
-          "annotation": "Sets the interpolation time in [ms] for the maitrix~ object. default value is "fontsize": 12.0 ms",
+          "annotation": "Sets the interpolation time in [ms] for the maitrix~ object. default value is 10 ms",
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-35",
           "maxclass": "number",
           "numinlets": 1,
@@ -188,7 +188,7 @@
           "parameter_enable": 0,
           "patching_rect": [
             352.0,
-            "fontsize": 12.00.0,
+            100.0,
             34.0,
             19.0
           ],
@@ -205,7 +205,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
@@ -219,14 +219,14 @@
           "patching_rect": [
             155.0,
             46.0,
-            "fontsize": 12.07.0,
+            107.0,
             19.0
           ],
           "presentation": 1,
           "presentation_rect": [
             155.0,
             46.0,
-            "fontsize": 12.07.0,
+            107.0,
             19.0
           ],
           "text": "Matrix interp (ms)"
@@ -235,7 +235,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
@@ -258,7 +258,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-6",
           "linecount": 2,
           "maxclass": "newobj",
@@ -281,7 +281,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-30",
           "linecount": 2,
           "maxclass": "newobj",
@@ -292,7 +292,7 @@
             ""
           ],
           "patching_rect": [
-            "fontsize": 12.0.0,
+            10.0,
             140.0,
             303.0,
             31.0
@@ -304,7 +304,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-5",
           "linecount": 3,
           "maxclass": "newobj",
@@ -328,7 +328,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
@@ -358,7 +358,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-2",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -380,7 +380,7 @@
         "box": {
           "annotation": "Number of incomming mono sources to pan.",
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-40",
           "maxclass": "number",
           "maximum": 32,
@@ -413,7 +413,7 @@
         "box": {
           "annotation": "Number of speakers that signals are distributed to.",
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-39",
           "maxclass": "number",
           "maximum": 32,
@@ -446,7 +446,7 @@
         "box": {
           "annotation": "Dimension of the loudspeaker setup (2D or 3D).",
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-38",
           "maxclass": "number",
           "numinlets": 1,
@@ -475,7 +475,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-1",
           "maxclass": "message",
           "numinlets": 2,
@@ -485,7 +485,7 @@
           ],
           "patching_rect": [
             70.0,
-            "fontsize": 12.05.0,
+            105.0,
             198.0,
             17.0
           ],
@@ -495,7 +495,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-3",
           "linecount": 2,
           "maxclass": "newobj",
@@ -519,14 +519,14 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
             0.0,
             1.0
           ],
-          "id": "obj-"fontsize": 12.0",
+          "id": "obj-10",
           "maxclass": "comment",
           "numinlets": 1,
           "numoutlets": 0,
@@ -567,7 +567,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-14",
           "linecount": 2,
           "maxclass": "newobj",
@@ -606,7 +606,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-21",
           "maxclass": "newobj",
           "numinlets": 2,
@@ -627,7 +627,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "frgb": [
             0.0,
             0.0,
@@ -657,7 +657,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-24",
           "maxclass": "message",
           "numinlets": 2,
@@ -685,7 +685,7 @@
             ""
           ],
           "patching_rect": [
-            "fontsize": 12.0.0,
+            10.0,
             90.0,
             25.0,
             25.0
@@ -700,7 +700,7 @@
           "numinlets": 1,
           "numoutlets": 0,
           "patching_rect": [
-            "fontsize": 12.0.0,
+            10.0,
             350.0,
             25.0,
             25.0
@@ -710,7 +710,7 @@
       {
         "box": {
           "fontname": "Arial",
-          "fontsize": "fontsize": 12.0.0,
+          "fontsize": 10.0,
           "id": "obj-33",
           "linecount": 2,
           "maxclass": "newobj",
