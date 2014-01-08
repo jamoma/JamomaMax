@@ -1379,7 +1379,11 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
             s_toParse += "Maxhelp";
 		}
 		
-		returnedClass = TTSymbol(s_toParse);	// TODO : replace each "." by the Uppercase of the letter after the "."
+        // TODO : replace each '.' by the Uppercase of the letter after the '.'
+        // for the moment we replace '.' by '_'
+        std::replace(s_toParse.begin(), s_toParse.end(), '.', '_');
+        
+		returnedClass = TTSymbol(s_toParse);
 	}
 	else {
 		
