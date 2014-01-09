@@ -24,10 +24,6 @@
 // This is used to store extra data
 typedef struct extra {
 	
-#ifndef JMOD_RETURN
-	TTValuePtr			*arrayValue;		// store each value in an array to output them together
-#endif
-	
 	TTBoolean			changingAddress;	// a flag to protect from succession of address changes
 	TTBoolean			firstArray;			// a flag to know if it is the first instanciation (do not init data)
 
@@ -154,9 +150,6 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// Prepare extra data for parameters and messages
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
 	
-#ifndef JMOD_RETURN
-	EXTRA->arrayValue = NULL;
-#endif
 	EXTRA->changingAddress = NO;
 	EXTRA->firstArray = YES;
 	
@@ -180,17 +173,6 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 void WrappedDataClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-#ifndef JMOD_RETURN
-	// delete array
-	if (x->extra && EXTRA->arrayValue) {
-		for (TTUInt32 i = 0; i < x->arraySize; i++)
-			if (EXTRA->arrayValue[i])
-				delete EXTRA->arrayValue[i];
-		
-		free(EXTRA->arrayValue);
-	}
-#endif
 	
 	free(EXTRA);
 }
@@ -228,13 +210,6 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
             x->iterateInternals = YES;
             
             x->arraySize = number;
-            
-#ifndef JMOD_RETURN
-            // prepare arrayValue
-            EXTRA->arrayValue = (TTValuePtr*)malloc(sizeof(TTValuePtr)*number);
-            for (j = 0 ; j < x->arraySize; j++)
-                EXTRA->arrayValue[j] = NULL;
-#endif
             
             for (i = 1; i <= x->arraySize; i++) {
                 
@@ -335,18 +310,8 @@ void data_address(TTPtr self, SymbolPtr address)
                 // unregister internals
                 wrappedModularClass_unregister(x);
                 
-#ifndef JMOD_RETURN
-                // delete array
-                if (EXTRA->arrayValue) {
-                    for (TTUInt32 i = 0; i < x->arraySize; i++)
-                        if (EXTRA->arrayValue[i])
-                            delete EXTRA->arrayValue[i];
-                    
-                    x->arraySize = 0;
-                    free(EXTRA->arrayValue);
-                }
-#endif
-                
+                x->arraySize = 0;
+
                 // rebuild internals
                 defer(self,(method)data_new_address, address, 0, NULL);
             }
@@ -544,15 +509,15 @@ void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void data_array_return_value(TTPtr baton, TTValue& v)
 {
 	WrappedModularInstancePtr	x;
-	TTValue						array, g, t;
-	TTValuePtr					b, m;
+	TTValue						array, object, grab, t;
+	TTValuePtr					b;
 	TTSymbol					type;
 	SymbolPtr					msg, iAdrs;
-	TTUInt32					i;
+	TTUInt32					i, j;
 	long						argc = 0;
 	AtomPtr						argv = NULL;
 	TTBoolean					shifted = NO;
-	TTSymbol					memoCursor;
+	TTObjectBasePtr             aData;
 	
 	// unpack baton (a t_object* and the index of the value)
 	b = (TTValuePtr)baton;
@@ -567,62 +532,43 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 	
 	outlet_int(x->outlets[index_out], i);
 	
-	// store value
-	if (EXTRA->arrayValue) {
-		
-		// delete former value
-		if (EXTRA->arrayValue[i-1])
-			delete EXTRA->arrayValue[i-1];
-		
-		// store new value
-		m = new TTValue(v);
-		EXTRA->arrayValue[i-1] = m;
-	}
-	
 	// in array output mode 
 	// edit a value containing all values
 	if (x->arrayAttrFormat == gensym("array")) {
-		
-		if (EXTRA->arrayValue)
-			for (i = 0; i < x->arraySize; i++) {
-				
-				// if the data have not been updated yet
-				m = EXTRA->arrayValue[i];
-				if (m == NULL) {
-					
-					memoCursor = x->cursor;
-					jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, i+1);
-					x->cursor = TTSymbol(iAdrs->s_name);
-					selectedObject->getAttributeValue(kTTSym_valueDefault, g);
-					selectedObject->getAttributeValue(kTTSym_type, t);
-					
-					type = t[0];
-					
-					// if there is no default value
-					if (g.size() == 0) {
-						
-						if (type == kTTSym_string)
-							m = new TTValue(kTTSym_none);
-						else
-							m = new TTValue(0);
-					}
-					else		
-						m = new TTValue(g);
-					
-					EXTRA->arrayValue[i] = m;
-					x->cursor = memoCursor;
-				}
-				
-                if (m->size()) {
+        
+        for (j = x->arraySize; j > 0; j--) {
+            
+            if (j != i) {
+                
+                // grab the other value from the data object itself
+                jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, j);
+                if (!x->internals->lookup(TTSymbol(iAdrs->s_name), object)) {
                     
-                    TTValue e = *m;
-                    e.prepend(array);
-                    array = e;
+                    aData = object[0];
                     
-                    // TODO : a real append method for value !
-                    //array.append((TTValuePtr)m);
+                    // try to get the value or the value default
+                    if (aData->getAttributeValue(kTTSym_value, grab))
+                        aData->getAttributeValue(kTTSym_valueDefault, grab);
+                    
+                    // if there is no value
+                    if (grab.size() == 0) {
+                        
+                        aData->getAttributeValue(kTTSym_type, t);
+                        
+                        type = t[0];
+                        
+                        if (type == kTTSym_string)
+                            grab = kTTSym_none;
+                        else
+                            grab = 0;
+                    }
+                        
+                    array.prepend(grab);
                 }
-			}
+            }
+            else
+                array.prepend(v);
+        }
 		
 		jamoma_ttvalue_to_typed_Atom(array, &msg, &argc, &argv, shifted);
 	}
