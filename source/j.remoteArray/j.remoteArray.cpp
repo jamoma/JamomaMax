@@ -729,9 +729,9 @@ void remote_array_return_value(TTPtr baton, TTValue& v)
 				
                 if (m->size()) {
                     
-                    TTValue v = *m;
-                    v.prepend(array);
-                    array = v;
+                    TTValue e = *m;
+                    e.prepend(array);
+                    array = e;
                     
                     // TODO : a real append method for value !
                     //array.append((TTValuePtr)m);
