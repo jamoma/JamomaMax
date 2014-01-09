@@ -509,7 +509,7 @@ void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void data_array_return_value(TTPtr baton, TTValue& v)
 {
 	WrappedModularInstancePtr	x;
-	TTValue						array, object, grab, t;
+	TTValue						keys, array, object, grab, t;
 	TTValuePtr					b;
 	TTSymbol					type;
 	SymbolPtr					msg, iAdrs;
@@ -517,6 +517,7 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 	long						argc = 0;
 	AtomPtr						argv = NULL;
 	TTBoolean					shifted = NO;
+    TTSymbol                    key;
 	TTObjectBasePtr             aData;
 	
 	// unpack baton (a t_object* and the index of the value)
@@ -538,11 +539,14 @@ void data_array_return_value(TTPtr baton, TTValue& v)
         
         for (j = x->arraySize; j > 0; j--) {
             
+            x->internals->getKeysSorted(keys);
+            
+            // grab the other value from the data object itself
             if (j != i) {
                 
-                // grab the other value from the data object itself
-                jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, j);
-                if (!x->internals->lookup(TTSymbol(iAdrs->s_name), object)) {
+                key = keys[j-1];
+                
+                if (!x->internals->lookup(key, object)) {
                     
                     aData = object[0];
                     

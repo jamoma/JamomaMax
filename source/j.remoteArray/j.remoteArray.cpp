@@ -646,13 +646,14 @@ void remote_array(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void remote_array_return_value(TTPtr baton, TTValue& v)
 {
     WrappedModularInstancePtr	x;
-	TTValue						array, object, grab, none;
+	TTValue						keys, array, object, grab, none;
 	TTValuePtr					b;
 	SymbolPtr					msg, iAdrs;
 	long						argc = 0;
 	TTUInt32					i, j;
 	AtomPtr						argv = NULL;
 	TTBoolean					shifted = NO;
+    TTSymbol                    key;
     TTObjectBasePtr             aViewer;
 	
 	// unpack baton (a t_object* and the index of the value)
@@ -672,13 +673,16 @@ void remote_array_return_value(TTPtr baton, TTValue& v)
 	// edit a value containing all values
 	if (x->arrayAttrFormat == gensym("array")) {
 		
-        for (j = x->arraySize; j > 0; j--) {
+        x->internals->getKeysSorted(keys);
+        
+        for (j = keys.size(); j > 0; j--) {
             
+            // grab the other value from the viewer object itself
             if (j != i) {
                 
-                // grab the other value from the viewer object itself
-                jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, j);
-                if (!x->internals->lookup(TTSymbol(iAdrs->s_name), object)) {
+                key = keys[j-1];
+                
+                if (!x->internals->lookup(key, object)) {
                     
                     aViewer = object[0];
                     aViewer->sendMessage(kTTSym_Grab, none, grab);
