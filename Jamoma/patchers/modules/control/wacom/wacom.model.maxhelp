@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 4,
-			"architecture" : "x86"
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 82.0, 127.0, 645.0, 678.0 ],
+		"rect" : [ 100.0, 100.0, 645.0, 678.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -117,7 +117,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.wacom", "@description", "Use Wacom graphic tablets" ],
+					"args" : [ "@name", "j.wacom", "@description", "Use Wacom graphic tablets" ],
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
@@ -144,8 +144,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
-							"architecture" : "x86"
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 707.0, 67.0, 733.0, 677.0 ],
@@ -1543,42 +1543,42 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../../../components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "wacom.model.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/wacom",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/wacom",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "wacom.view.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/wacom",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/wacom",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -1592,15 +1592,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.route.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
