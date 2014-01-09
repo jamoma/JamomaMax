@@ -554,7 +554,7 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 	TTBoolean					shifted = NO;
 	TTSymbol					memoCursor;
 	
-	// unpack baton (a t_object* and the name of the method to call (default : jps_return_value))
+	// unpack baton (a t_object* and the index of the value)
 	b = (TTValuePtr)baton;
 	x = WrappedModularInstancePtr((TTPtr)(*b)[0]);
 	i = (*b)[1];
@@ -613,12 +613,15 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 					x->cursor = memoCursor;
 				}
 				
-				TTValue v = *m;
-				v.prepend(array);
-				array = v;
-				
-				// TODO : a real append method for value !
-				// array.append((TTValuePtr)m);
+                if (m->size()) {
+                    
+                    TTValue v = *m;
+                    v.prepend(array);
+                    array = v;
+                    
+                    // TODO : a real append method for value !
+                    //array.append((TTValuePtr)m);
+                }
 			}
 		
 		jamoma_ttvalue_to_typed_Atom(array, &msg, &argc, &argv, shifted);

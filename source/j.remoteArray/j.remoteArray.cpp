@@ -681,7 +681,7 @@ void remote_array(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void remote_array_return_value(TTPtr baton, TTValue& v)
 {
 	WrappedModularInstancePtr	x;
-	TTValue						array, g;
+	TTValue						array, g, none;
 	TTValuePtr					b, m;
 	SymbolPtr					msg, iAdrs;
 	long						argc = 0;
@@ -690,7 +690,7 @@ void remote_array_return_value(TTPtr baton, TTValue& v)
 	TTBoolean					shifted = NO;
 	TTSymbol					memoCursor;
 	
-	// unpack baton (a t_object* and the name of the method to call (default : jps_return_value))
+	// unpack baton (a t_object* and the index of the value)
 	b = (TTValuePtr)baton;
 	x = WrappedModularInstancePtr((TTPtr)(*b)[0]);
 	i = (*b)[1];
@@ -724,25 +724,18 @@ void remote_array_return_value(TTPtr baton, TTValue& v)
 				
 				// if the view have not been updated yet
 				m = EXTRA->arrayValue[i];
-				if (m == NULL) {
-					
-					memoCursor = x->cursor;
-					jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, i+1);
-					x->cursor = TTSymbol(iAdrs->s_name);
-					selectedObject->getAttributeValue(kTTSym_valueDefault, g);
-					
-					m = new TTValue(g);
-					
-					EXTRA->arrayValue[i] = m;
-					x->cursor = memoCursor;
-				}
+				if (m == NULL)
+                    continue;
 				
-				TTValue v = *m;
-				v.prepend(array);
-				array = v;
-				
-				// TODO : a real append method for value !
-				//array.append((TTValuePtr)m);
+                if (m->size()) {
+                    
+                    TTValue v = *m;
+                    v.prepend(array);
+                    array = v;
+                    
+                    // TODO : a real append method for value !
+                    //array.append((TTValuePtr)m);
+                }
 			}
         
 		// output array value
