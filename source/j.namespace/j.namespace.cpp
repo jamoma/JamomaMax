@@ -238,11 +238,13 @@ void nmspc_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 			
 			// prepare umenu prefix 
 			if (address.getName() == S_SEPARATOR) {
+                
+                TTString prefix = address.c_str();
 				
 				if(output == kTTSym_attributes)
-					atom_setsym(a, gensym("/:"));
-				else
-					atom_setsym(a, gensym("/"));
+					prefix += ":";
+                
+                atom_setsym(a, gensym((char*)prefix.data()));
 			}
 			else {
 				TTString prefix = address.c_str();
