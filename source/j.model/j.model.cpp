@@ -155,7 +155,7 @@ void WrappedContainerClass_free(TTPtr self)
         // remove the model node
         JamomaDirectory->TTNodeRemove(modelAddress);
         
-        // delete the model
+        // delete the model info
         TTObjectBaseRelease(&EXTRA->modelInfo);
     }
     
@@ -290,9 +290,9 @@ void model_subscribe(TTPtr self)
 			if (x->patcherContext == kTTSym_view)
                 model_subscribe_view(self, _sym_nothing, ac, av);
 
-			// output ContextNode address
+			// output node address
 			t_atom a;
-			x->subscriberObject->getAttributeValue(TTSymbol("contextNodeAddress"), v);
+			x->subscriberObject->getAttributeValue(TTSymbol("nodeAddress"), v);
             
             if (v.size() == 1) {
                 returnedAddress = v[0];
@@ -321,7 +321,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
     
     // if args exists, the first argument of the patcher is the model:address value
     if (argc > 0 && atom_gettype(argv) == A_SYM) {
-        
+
         argAdrs = TTAddress(atom_getsym(argv)->s_name);
         
         // if the address is absolute : use it directly
@@ -347,7 +347,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
             }
             // use the argument address as an absolute address
             else {
-                
+
                 // set the model:address attribute to notify all observers
                 EXTRA->modelInfo->setAttributeValue(kTTSym_address, kTTAdrsRoot.appendAddress(argAdrs));
                 return;
@@ -369,7 +369,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
         
         // if a model exists
         if (aPatcher) {
-            
+
             // is there a container (e.g. a j.model) registered with the same context in this model patcher ?
             whereToSearch.append(JamomaDirectory->getRoot());
             JamomaDirectory->IsThere(&whereToSearch, &testNodeContext, (TTPtr)aPatcher, &isThere, &firstTTNode);
@@ -385,6 +385,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
             
             // deferlow to try another time because the model patcher is maybe not ready
             else {
+
                 defer_low((ObjectPtr)x, (method)model_subscribe_view, _sym_nothing, argc, argv);
                 return;
             }

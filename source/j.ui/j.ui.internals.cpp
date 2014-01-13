@@ -30,7 +30,7 @@ void ui_register_info(t_ui* obj)
 	
 	// create a ui node with our patcher as context
 	if (!jamoma_subscriber_create((ObjectPtr)obj, obj->uiInfo, TTAddress("ui"), (TTSubscriberPtr*)&obj->uiSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
-		
+        
 		// get info relative to our patcher
 		jamoma_patcher_get_info((ObjectPtr)obj, &obj->patcherPtr, obj->patcherContext, obj->patcherClass, obj->patcherName);
 		
@@ -489,15 +489,6 @@ void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 				obj->patcher_panel = o;
 				obj->has_panel = true;
 				
-				// ui/panel
-				ui_data_create(obj, &aData, gensym("return_view_panel"), kTTSym_message, TTSymbol("panel"));
-				
-				// Set attribute of the data
-				aData->setAttributeValue(kTTSym_type, kTTSym_none);
-				aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-				aData->setAttributeValue(kTTSym_description, TTSymbol("Open a control panel if one is present."));
-				aData->setAttributeValue(kTTSym_rampDrive, kTTSym_none);
-				
 				jbox_redraw(&obj->box);
 				return;
 			}
@@ -808,12 +799,12 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 				ui_viewer_create(obj, &anObject, gensym("return_preset_names"), TTSymbol("preset:names"), obj->modelAddress, NO); // don't subscribe this viewer
 			}
 			else {
-				ui_viewer_destroy(obj, TTSymbol("recall"));
-				obj->hash_viewers->remove(TTSymbol("recall"));
-				ui_viewer_destroy(obj, TTSymbol("store"));
-				obj->hash_viewers->remove(TTSymbol("store"));
-				ui_viewer_destroy(obj, TTSymbol("names"));
-				obj->hash_viewers->remove(TTSymbol("names"));
+				ui_viewer_destroy(obj, TTSymbol("preset:recall"));
+				obj->hash_viewers->remove(TTSymbol("preset:recall"));
+				ui_viewer_destroy(obj, TTSymbol("preset:store"));
+				obj->hash_viewers->remove(TTSymbol("preset:store"));
+				ui_viewer_destroy(obj, TTSymbol("preset:names"));
+				obj->hash_viewers->remove(TTSymbol("preset:names"));
 			}
 			
 			change = true;
