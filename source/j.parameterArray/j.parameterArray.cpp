@@ -26,6 +26,7 @@ typedef struct extra {
 	
 	TTBoolean			changingAddress;	// a flag to protect from succession of address changes
 	TTBoolean			firstArray;			// a flag to know if it is the first instanciation (do not init data)
+    TTListPtr           objectsSorted;      // all objects sorted by index
 
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
@@ -152,6 +153,7 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	
 	EXTRA->changingAddress = NO;
 	EXTRA->firstArray = YES;
+    EXTRA->objectsSorted = new TTList();
 	
 	// handle args
 	if (argc && argv) {
@@ -173,6 +175,8 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 void WrappedDataClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    delete EXTRA->objectsSorted;
 	
 	free(EXTRA);
 }
@@ -183,7 +187,7 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
 	AtomCount					argc = 0; 
 	AtomPtr						argv = NULL;
 	TTUInt32					number;
-	TTUInt32					i, j;
+	TTUInt32					i;
 	TTAddress					newAddress = relativeAddress->s_name;
     TTAddress                   returnedAddress;
     TTNodePtr                   returnedNode = NULL;
@@ -211,6 +215,8 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
             
             x->arraySize = number;
             
+            EXTRA->objectsSorted->clear();
+            
             for (i = 1; i <= x->arraySize; i++) {
                 
                 jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
@@ -233,11 +239,15 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
                 if (!jamoma_subscriber_create((ObjectPtr)x, anObject, TTAddress(instanceAddress->s_name),  &aSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
                     
                     if (aSubscriber) {
+                        
                         // append the data to the internals table
                         v = TTValue(anObject);
                         v.append(TTSymbol(instanceAddress->s_name));
                         v.append(TTObjectBasePtr(aSubscriber));
                         x->internals->append(TTSymbol(instanceAddress->s_name), v);
+                        
+                        // inverse objects order for iteration purpose (see in data_array_return_value : array mode)
+                        EXTRA->objectsSorted->insert(0, anObject);
                     }
                 }
             }
@@ -537,41 +547,35 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 	// edit a value containing all values
 	if (x->arrayAttrFormat == gensym("array")) {
         
-        for (j = x->arraySize; j > 0; j--) {
+        // don't output array when changing address
+        if (EXTRA->changingAddress)
+            return;
+        
+        // get each value from the data object itself
+        for (EXTRA->objectsSorted->begin();
+             EXTRA->objectsSorted->end();
+             EXTRA->objectsSorted->next()) {
             
-            x->internals->getKeysSorted(keys);
+            aData = EXTRA->objectsSorted->current()[0];
             
-            // grab the other value from the data object itself
-            if (j != i) {
+            // try to get the value or the value default
+            if (aData->getAttributeValue(kTTSym_value, grab))
+                aData->getAttributeValue(kTTSym_valueDefault, grab);
+            
+            // if there is no value
+            if (grab.size() == 0) {
                 
-                key = keys[j-1];
+                aData->getAttributeValue(kTTSym_type, t);
                 
-                if (!x->internals->lookup(key, object)) {
-                    
-                    aData = object[0];
-                    
-                    // try to get the value or the value default
-                    if (aData->getAttributeValue(kTTSym_value, grab))
-                        aData->getAttributeValue(kTTSym_valueDefault, grab);
-                    
-                    // if there is no value
-                    if (grab.size() == 0) {
-                        
-                        aData->getAttributeValue(kTTSym_type, t);
-                        
-                        type = t[0];
-                        
-                        if (type == kTTSym_string)
-                            grab = kTTSym_none;
-                        else
-                            grab = 0;
-                    }
-                        
-                    array.prepend(grab);
-                }
+                type = t[0];
+                
+                if (type == kTTSym_string)
+                    grab = kTTSym_none;
+                else
+                    grab = 0;
             }
-            else
-                array.prepend(v);
+            
+            array.prepend(grab);
         }
 		
 		jamoma_ttvalue_to_typed_Atom(array, &msg, &argc, &argv, shifted);
