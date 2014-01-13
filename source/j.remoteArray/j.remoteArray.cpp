@@ -199,6 +199,8 @@ void remote_new_address(TTPtr self, SymbolPtr address)
         x->iterateInternals = YES;
         
         x->arraySize = number;
+        
+        EXTRA->objectsSorted->clear();
 
         for (i = 1; i <= x->arraySize; i++) {
             
