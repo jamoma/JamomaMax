@@ -44,7 +44,7 @@ setoutletassist(0,  "messages for j.mixer≈");
 function msg_int(i)
 {
     if (inlet==1)
-    currentChannel = i-1;
+    currentChannel = i-1;   // While messageArray counts from 1, javascript counts from 0
 }
 
 function sourceactive(value)
@@ -57,10 +57,11 @@ function sourceposition()
 {
     distance[currentChannel] = 0.;
     for (i=0; i<arguments.length; i++) {
-        distance[currentChannel] = arguments[i] * arguments[i];
+        distance[currentChannel] = distance[currentChannel] + arguments[i] * arguments[i];
     }
     distance[currentChannel] = Math.sqrt(distance[currentChannel]);
     calculateGain(currentChannel);
+    
 }
 
 function setreferencedistance(value)
@@ -86,14 +87,14 @@ function setnumsources(value)
 function calculateGain(channel) {
     var relativeDistance;
     
-    if (active[i]==0)
-        outlet(0, "setLinearGain", i, i, 1.)
+    if (active[channel]==0)
+        outlet(0, "setLinearGain", channel, channel, 1.)
     else {
         if (distance[channel] < referenceDistance)
             relativeDistance = 1.;
         else
             relativeDistance = distance[channel] / referenceDistance;
-        outlet(0, "setLinearGain", i, i, Math.pow(relativeDistance,rollOffExponent));
+        outlet(0, "setLinearGain", channel, channel, Math.pow(relativeDistance,rollOffExponent));
     }
 }
 calculateGain.local=1 // keep private
