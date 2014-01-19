@@ -20,13 +20,12 @@ MAX_VOICES = 32;                        // Maximum number of speakers
 var sample_rate = 44100;
 var DSP_running = 0;
 var distance = new Array(MAX_VOICES);
-var num_voices = 0;                    // Current number of voices
-var num_voices_prev = 0;            // Previous number of voices
-var hold_voices = 0;                // If audio is running, voices will not be changed
-                                    // Instead the message is held until audio is turned off
-var hold_flag = 0;                    // Flag indicating if change in number of voices 
-                                    // is currently on hold
-var i                                // A counter
+var num_voices = 0;                     // Current number of voices
+var num_voices_prev = 0;                // Previous number of voices
+var hold_voices = 0;                    // If audio is running, voices will not be changed
+                                        // Instead the message is held until audio is turned off
+var hold_flag = 0;                      // Flag indicating if change in number of voices is currently on hold
+var i                                   // A counter
 
 
 // INLETS AND OUTLETS
@@ -47,7 +46,7 @@ function dspstate(value)
     }
 }
 
-// CamelCase don't work well with JavaScript functin names in Max.
+// CamelCase don't work well with JavaScript function names in Max.
 function numsources(value)
 {
     // Put change in number of voices on hold if audio is running
@@ -81,11 +80,12 @@ function numsources(value)
         }
         for (i=0; i<num_voices; i++)
         {            
-            outlet(0, "script", "newdefault", "doppler["+(i+1)+"]", (80+40*i), (120+20*i), "j.sur.ch.doppler~");
-            outlet(0, "script", "connect", "multiout", i, "doppler["+(i+1)+"]", 0);
-            outlet(0, "script", "connect", "doppler["+(i+1)+"]", 0, "multiin", i);
-            outlet(0, "script", "connect", "route", i, "doppler["+(i+1)+"]", 1);
-            outlet(0, "script", "connect", "oscroute", 0, "doppler["+(i+1)+"]", 2);
+            outlet(0, "script", "newdefault", "doppler["+(i+1)+"]", (80+30*i), (330+22*i), "j.sur.ch.doppler~");
+            outlet(0, "script", "connect", "unpack≈",               i, "doppler["+(i+1)+"]",    0);
+            outlet(0, "script", "connect", "doppler["+(i+1)+"]",    0, "pack≈",                 i);
+            outlet(0, "script", "connect", "active_gate",           i, "doppler["+(i+1)+"]",    1);
+            outlet(0, "script", "connect", "position_gate",         i, "doppler["+(i+1)+"]",    2);
+            outlet(0, "script", "connect", "meters_per_unit",       0, "doppler["+(i+1)+"]",    3);
         }
         outlet(0, "done");
     }
