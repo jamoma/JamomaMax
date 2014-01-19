@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 58.0, 64.0, 896.0, 616.0 ],
+		"rect" : [ 176.0, 218.0, 896.0, 616.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 58.0, 90.0, 896.0, 590.0 ],
+						"rect" : [ 0.0, 26.0, 896.0, 590.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -812,7 +812,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 70.0, 69.0, 996.0, 327.0 ],
+						"rect" : [ 0.0, 26.0, 896.0, 590.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -832,7 +832,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -1446,7 +1445,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 70.0, 69.0, 859.0, 330.0 ],
+						"rect" : [ 0.0, 26.0, 896.0, 590.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -1466,7 +1465,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -2454,7 +2452,7 @@
 									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 726.0, 70.0 ],
+									"patching_rect" : [ 0.0, 0.0, 896.0, 70.0 ],
 									"varname" : "maxhelpui"
 								}
 
