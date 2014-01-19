@@ -39,15 +39,15 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 57.5, 174.0, 487.0, 25.0 ],
-					"text" : "j.message.array is deprecated. Use j.messageArray instead",
+					"patching_rect" : [ 49.0, 174.0, 504.0, 25.0 ],
+					"text" : "j.parameter.array is deprecated. Use j.parameterArray instead",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.message.array", "@description", "This component is deprecated." ],
+					"args" : [ "@name", "j.parameter.array", "@description", "This component is deprecated." ],
 					"bgmode" : 1,
 					"id" : "obj-19",
 					"maxclass" : "bpatcher",
