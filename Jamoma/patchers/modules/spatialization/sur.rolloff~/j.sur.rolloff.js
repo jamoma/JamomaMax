@@ -1,13 +1,13 @@
-// Javascript for Jamoma: scripting algorithm for creating free-field amplitude roll-of with distance.
+// Javascript for Jamoma: 
+// Calculate gain values associated with free-field amplitude roll-of with distance
 // Number of instances changed dynamically depending on number of voices used.
 //
-// By Trond Lossius, ©2007
-// License: GNU LGPL
+// By Trond Lossius, (c) 2007-2014
+// This code is licensed under the terms of the "New BSD License"
 
 
-/*******************************************************************
- * SETUP
- *******************************************************************/
+
+// SETUP
 
 //autowatch = 1;
 
@@ -16,77 +16,91 @@
 MAX_VOICES = 32;                        // Maximum number of speakers
 
 // VARIABLES
+var numSources = 0;                     // Current number of sources to process
+var referenceDistance   = 1;            // Reference distance for rolloff
+var rollOffExponent     = -1.;          // Exponent used for rolloff calculation
+var currentChannel      = 0;          // Current channel addressed by position and active messages
 
-var sample_rate = 44100;
-var DSP_running = 0;
-var distance = new Array(MAX_VOICES);
-var num_voices = 0;                    // Current number of voices
-var num_voices_prev = 0;            // Previous number of voices
-var hold_voices = 0;                // If audio is running, voices will not be changed
-                                    // Instead the message is held until audio is turned off
-var hold_flag = 0;                    // Flag indicating if change in number of voices 
-                                    // is currently on hold
-var i                                // A counter
+var distance = new Array(MAX_VOICES);   // Array of per channel distance values
+var active = new Array(MAX_VOICES);     // Array of per chanel flags indicating if rolloff processing is active
+
+var i                                   // A counter
+
+for (i=0; i<MAX_VOICES; i++) {
+    active[i] = 1;
+    distance[i] = 0.;
+}
 
 
 // INLETS AND OUTLETS
 
-outlets = 0;
+inlets = 2;
+outlets = 1;
 
-setinletassist(0,"Number of voices, DSP state");
-setoutletassist(0,"Scripting messages");
+setinletassist (1,  "Channel number for channel-specific messages")
+setinletassist (0,  "Various messages");
+setoutletassist(0,  "messages for j.mixer≈");
 
-function dspstate(value)
+function msg_int(i)
 {
-    DSP_running = value;
-    
-    if (value==0)
-    {
-        if (hold_flag==1)
-            numSources(hold_voices);
-    }
+    if (inlet==1)
+    currentChannel = i-1;
 }
 
-function numSources(value)
+function sourceactive(value)
 {
-    // Put change in number of voices on hold if audio is running
-    if (DSP_running==1)
-    {
-        hold_voices = value;
-        hold_flag = 1;
-        
-        post("jmod.sur.rolloff~: Audio is currently running.");
-        post();
-        post("Number of voices will be updated next time audio is turned off.");
-        post();
+    active[currentChannel] = value;
+    calculateGain(currentChannel);
+}
+
+function sourceposition()
+{
+    distance[currentChannel] = 0.;
+    for (i=0; i<arguments.length; i++) {
+        distance[currentChannel] = arguments[i] * arguments[i];
     }
+    distance[currentChannel] = Math.sqrt(distance[currentChannel]);
+    calculateGain(currentChannel);
+}
+
+function setreferencedistance(value)
+{
+    referenceDistance = value;
+    updateAllValues();
+}
+
+function setrolloff(value)
+{
+    rollOffExponent = -value / 6.;
+    updateAllValues();
+}
+
+function setnumsources(value)
+{
+    numSources = value;
+    outlet(0, "numInputs", numSources);
+    outlet(0, "numOutputs", numSources);
+    updateAllValues();
+}
+
+function calculateGain(channel) {
+    var relativeDistance;
     
-    else
-    {    
-        num_voices_prev = num_voices;
-        num_voices = value;
-        
-        if (num_voices > MAX_VOICES)
-            num_voices = MAX_VOICES;
-        if (num_voices < 0)
-            num_voices = 0;
-        
-        // Only perform scripting if the number of voices actually change
-        if (num_voices==num_voices_prev) return;
-        
-        for (i=0; i<num_voices_prev; i++)
-        {
-            outlet(0, "script", "delete", "rollof["+(i+1)+"]");
-        }
-        for (i=0; i<num_voices; i++)
-        {
-            outlet(0, "script", "newdefault", "rollof["+(i+1)+"]", (80+40*i), (120+20*i), "j.sur.ch.rolloff~");
-            outlet(0, "script", "connect", "multiout", i, "rollof["+(i+1)+"]", 0);
-            outlet(0, "script", "connect", "rollof["+(i+1)+"]", 0, "multiin", i);
-            outlet(0, "script", "connect", "route", i, "rollof["+(i+1)+"]", 1);
-            outlet(0, "script", "connect", "oscroute", 0, "rollof["+(i+1)+"]", 2);
-            outlet(0, "script", "connect", "oscroute", 1, "rollof["+(i+1)+"]", 3);
-        }
-        outlet(0, "done");
+    if (active[i]==0)
+        outlet(0, "setLinearGain", i, i, 1.)
+    else {
+        if (distance[channel] < referenceDistance)
+            relativeDistance = 1.;
+        else
+            relativeDistance = distance[channel] / referenceDistance;
+        outlet(0, "setLinearGain", i, i, Math.pow(relativeDistance,rollOffExponent));
     }
 }
+calculateGain.local=1 // keep private
+
+function updateAllValues()
+{
+    for (i=0; i<numSources; i++)
+        calculateGain(i);
+}
+updateAllValues.local=1; // keep private
