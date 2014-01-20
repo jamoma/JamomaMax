@@ -230,8 +230,8 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
 		defer_low((ObjectPtr)x, (method)ui_build, NULL, 0, 0);
-		
-		// The following must be deferred because we have to interrogate our box,
+        
+        // The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
 		defer_low((ObjectPtr)x, (method)ui_view_panel_attach, NULL, 0, 0);
@@ -304,7 +304,7 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 	TTAttributePtr	anAttribute;
 	TTObjectBasePtr	aReceiver;
 	TTErr			err;
-
+    
 	if ((x->modelAddress == kTTAdrsEmpty && adrs != kTTAdrsEmpty) || adrs != x->modelAddress) {
 		
 		x->modelAddress = adrs;

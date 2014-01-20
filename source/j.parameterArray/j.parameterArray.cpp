@@ -24,12 +24,9 @@
 // This is used to store extra data
 typedef struct extra {
 	
-#ifndef JMOD_RETURN
-	TTValuePtr			*arrayValue;		// store each value in an array to output them together
-#endif
-	
 	TTBoolean			changingAddress;	// a flag to protect from succession of address changes
 	TTBoolean			firstArray;			// a flag to know if it is the first instanciation (do not init data)
+    TTListPtr           objectsSorted;      // all objects sorted by index
 
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
@@ -154,11 +151,9 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// Prepare extra data for parameters and messages
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
 	
-#ifndef JMOD_RETURN
-	EXTRA->arrayValue = NULL;
-#endif
 	EXTRA->changingAddress = NO;
 	EXTRA->firstArray = YES;
+    EXTRA->objectsSorted = new TTList();
 	
 	// handle args
 	if (argc && argv) {
@@ -180,17 +175,8 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 void WrappedDataClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-#ifndef JMOD_RETURN
-	// delete array
-	if (x->extra && EXTRA->arrayValue) {
-		for (TTUInt32 i = 0; i < x->arraySize; i++)
-			if (EXTRA->arrayValue[i])
-				delete EXTRA->arrayValue[i];
-		
-		free(EXTRA->arrayValue);
-	}
-#endif
+    
+    delete EXTRA->objectsSorted;
 	
 	free(EXTRA);
 }
@@ -201,7 +187,7 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
 	AtomCount					argc = 0; 
 	AtomPtr						argv = NULL;
 	TTUInt32					number;
-	TTUInt32					i, j;
+	TTUInt32					i;
 	TTAddress					newAddress = relativeAddress->s_name;
     TTAddress                   returnedAddress;
     TTNodePtr                   returnedNode = NULL;
@@ -229,12 +215,7 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
             
             x->arraySize = number;
             
-#ifndef JMOD_RETURN
-            // prepare arrayValue
-            EXTRA->arrayValue = (TTValuePtr*)malloc(sizeof(TTValuePtr)*number);
-            for (j = 0 ; j < x->arraySize; j++)
-                EXTRA->arrayValue[j] = NULL;
-#endif
+            EXTRA->objectsSorted->clear();
             
             for (i = 1; i <= x->arraySize; i++) {
                 
@@ -258,11 +239,15 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
                 if (!jamoma_subscriber_create((ObjectPtr)x, anObject, TTAddress(instanceAddress->s_name),  &aSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
                     
                     if (aSubscriber) {
+                        
                         // append the data to the internals table
                         v = TTValue(anObject);
                         v.append(TTSymbol(instanceAddress->s_name));
                         v.append(TTObjectBasePtr(aSubscriber));
                         x->internals->append(TTSymbol(instanceAddress->s_name), v);
+                        
+                        // inverse objects order for iteration purpose (see in data_array_return_value : array mode)
+                        EXTRA->objectsSorted->insert(0, anObject);
                     }
                 }
             }
@@ -335,18 +320,8 @@ void data_address(TTPtr self, SymbolPtr address)
                 // unregister internals
                 wrappedModularClass_unregister(x);
                 
-#ifndef JMOD_RETURN
-                // delete array
-                if (EXTRA->arrayValue) {
-                    for (TTUInt32 i = 0; i < x->arraySize; i++)
-                        if (EXTRA->arrayValue[i])
-                            delete EXTRA->arrayValue[i];
-                    
-                    x->arraySize = 0;
-                    free(EXTRA->arrayValue);
-                }
-#endif
-                
+                x->arraySize = 0;
+
                 // rebuild internals
                 defer(self,(method)data_new_address, address, 0, NULL);
             }
@@ -544,17 +519,18 @@ void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void data_array_return_value(TTPtr baton, TTValue& v)
 {
 	WrappedModularInstancePtr	x;
-	TTValue						array, g, t;
-	TTValuePtr					b, m;
+	TTValue						keys, array, object, grab, t;
+	TTValuePtr					b;
 	TTSymbol					type;
 	SymbolPtr					msg, iAdrs;
-	TTUInt32					i;
+	TTUInt32					i, j;
 	long						argc = 0;
 	AtomPtr						argv = NULL;
 	TTBoolean					shifted = NO;
-	TTSymbol					memoCursor;
+    TTSymbol                    key;
+	TTObjectBasePtr             aData;
 	
-	// unpack baton (a t_object* and the name of the method to call (default : jps_return_value))
+	// unpack baton (a t_object* and the index of the value)
 	b = (TTValuePtr)baton;
 	x = WrappedModularInstancePtr((TTPtr)(*b)[0]);
 	i = (*b)[1];
@@ -567,59 +543,40 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 	
 	outlet_int(x->outlets[index_out], i);
 	
-	// store value
-	if (EXTRA->arrayValue) {
-		
-		// delete former value
-		if (EXTRA->arrayValue[i-1])
-			delete EXTRA->arrayValue[i-1];
-		
-		// store new value
-		m = new TTValue(v);
-		EXTRA->arrayValue[i-1] = m;
-	}
-	
 	// in array output mode 
 	// edit a value containing all values
 	if (x->arrayAttrFormat == gensym("array")) {
-		
-		if (EXTRA->arrayValue)
-			for (i = 0; i < x->arraySize; i++) {
-				
-				// if the data have not been updated yet
-				m = EXTRA->arrayValue[i];
-				if (m == NULL) {
-					
-					memoCursor = x->cursor;
-					jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, i+1);
-					x->cursor = TTSymbol(iAdrs->s_name);
-					selectedObject->getAttributeValue(kTTSym_valueDefault, g);
-					selectedObject->getAttributeValue(kTTSym_type, t);
-					
-					type = t[0];
-					
-					// if there is no default value
-					if (g.size() == 0) {
-						
-						if (type == kTTSym_string)
-							m = new TTValue(kTTSym_none);
-						else
-							m = new TTValue(0);
-					}
-					else		
-						m = new TTValue(g);
-					
-					EXTRA->arrayValue[i] = m;
-					x->cursor = memoCursor;
-				}
-				
-				TTValue v = *m;
-				v.prepend(array);
-				array = v;
-				
-				// TODO : a real append method for value !
-				// array.append((TTValuePtr)m);
-			}
+        
+        // don't output array when changing address
+        if (EXTRA->changingAddress)
+            return;
+        
+        // get each value from the data object itself
+        for (EXTRA->objectsSorted->begin();
+             EXTRA->objectsSorted->end();
+             EXTRA->objectsSorted->next()) {
+            
+            aData = EXTRA->objectsSorted->current()[0];
+            
+            // try to get the value or the value default
+            if (aData->getAttributeValue(kTTSym_value, grab))
+                aData->getAttributeValue(kTTSym_valueDefault, grab);
+            
+            // if there is no value
+            if (grab.size() == 0) {
+                
+                aData->getAttributeValue(kTTSym_type, t);
+                
+                type = t[0];
+                
+                if (type == kTTSym_string)
+                    grab = kTTSym_none;
+                else
+                    grab = 0;
+            }
+            
+            array.prepend(grab);
+        }
 		
 		jamoma_ttvalue_to_typed_Atom(array, &msg, &argc, &argv, shifted);
 	}

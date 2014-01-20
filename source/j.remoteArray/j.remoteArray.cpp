@@ -26,11 +26,11 @@
 typedef struct extra {
     
     TTObjectBasePtr	modelAddressReceiver;	// the internal model:address receiver (not registered inside internals)
-	TTValuePtr		*arrayValue;            // store each value in an array to output them together
 	TTBoolean		changingAddress;        // a flag to protect from succession of address changes
 	TTPtr			ui_qelem;               // to output "qlim'd" data for ui object
     TTListPtr       ui_qelem_list;          // a list of defered value to output
 	TTUInt32		countSubscription;      // to count how many time we try to subscribe
+    TTListPtr       objectsSorted;          // all objects sorted by index
 
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
@@ -130,11 +130,11 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
 
     EXTRA->modelAddressReceiver = NULL;
-	EXTRA->arrayValue = NULL;
 	EXTRA->changingAddress = NO;
 	EXTRA->ui_qelem = qelem_new(x, (method)remote_ui_queuefn);
     EXTRA->ui_qelem_list = new TTList();
 	EXTRA->countSubscription = 0;
+    EXTRA->objectsSorted = new TTList();
     
     // create model:address receiver
     remote_create_model_address_receiver(self);
@@ -165,19 +165,11 @@ void WrappedViewerClass_free(TTPtr self)
         // delete model:address receiver
         remote_free_model_address_receiver(self);
         
-        // delete array
-        if (EXTRA->arrayValue) {
-            for (TTUInt32 i = 0; i < x->arraySize; i++)
-                if (EXTRA->arrayValue[i])
-                    delete EXTRA->arrayValue[i];
-            
-            free(EXTRA->arrayValue);
-            EXTRA->arrayValue = NULL;
-        }
-        
         qelem_free(EXTRA->ui_qelem);
         
         delete EXTRA->ui_qelem_list;
+        
+        delete EXTRA->objectsSorted;
         
         free(EXTRA);
     }
@@ -189,7 +181,7 @@ void remote_new_address(TTPtr self, SymbolPtr address)
 	AtomCount					argc = 0; 
 	AtomPtr						argv = NULL;
 	TTUInt32					number;
-	TTUInt32					i, j;
+	TTUInt32					i;
 	TTAddress                   newAddress = TTAddress(address->s_name);
 	SymbolPtr					instanceAddress;
 	TTObjectBasePtr				anObject;
@@ -206,22 +198,10 @@ void remote_new_address(TTPtr self, SymbolPtr address)
         // Starts iteration on internals
         x->iterateInternals = YES;
         
-        // clear former arrayValue
-        if (EXTRA->arrayValue) {
-            for (j = 0; j < x->arraySize; j++)
-                if (EXTRA->arrayValue[j])
-                    delete EXTRA->arrayValue[j];
-            
-            free(EXTRA->arrayValue);
-            EXTRA->arrayValue = NULL;
-        }
-        
-        // prepare new arrayValue
         x->arraySize = number;
-        EXTRA->arrayValue = (TTValuePtr*)malloc(sizeof(TTValuePtr)*number);
-        for (j = 0; j < x->arraySize; j++)
-            EXTRA->arrayValue[j] = NULL;
         
+        EXTRA->objectsSorted->clear();
+
         for (i = 1; i <= x->arraySize; i++) {
             
             jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
@@ -234,6 +214,9 @@ void remote_new_address(TTPtr self, SymbolPtr address)
             v.append((TTPtr)NULL);
             
             x->internals->append(TTSymbol(instanceAddress->s_name), v);
+            
+            // inverse objects order for iteration purpose (see in remote_array_return_value : array mode)
+            EXTRA->objectsSorted->insert(0, anObject);
         }
         
         // Ends iteration on internals
@@ -490,17 +473,8 @@ void remote_address(TTPtr self, SymbolPtr address)
                 // Ends iteration on internals
                 x->iterateInternals = NO;
                 
-                // delete array
-                if (EXTRA->arrayValue) {
-                    for (TTUInt32 i = 0; i < x->arraySize; i++)
-                        if (EXTRA->arrayValue[i])
-                            delete EXTRA->arrayValue[i];
-                    
-                    x->arraySize = 0;
-                    free(EXTRA->arrayValue);
-                    EXTRA->arrayValue = NULL;
-                }
-                
+                x->arraySize = 0;
+
                 // rebuild internals
                 EXTRA->countSubscription = 0;
                 x->internals->clear();
@@ -680,17 +654,17 @@ void remote_array(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 
 void remote_array_return_value(TTPtr baton, TTValue& v)
 {
-	WrappedModularInstancePtr	x;
-	TTValue						array, g;
-	TTValuePtr					b, m;
+    WrappedModularInstancePtr	x;
+	TTValue						keys, array, object, grab, none;
+	TTValuePtr					b;
 	SymbolPtr					msg, iAdrs;
 	long						argc = 0;
 	TTUInt32					i;
 	AtomPtr						argv = NULL;
 	TTBoolean					shifted = NO;
-	TTSymbol					memoCursor;
-	
-	// unpack baton (a t_object* and the name of the method to call (default : jps_return_value))
+    TTObjectBasePtr             aViewer;
+    
+	// unpack baton (a t_object* and the index of the value)
 	b = (TTValuePtr)baton;
 	x = WrappedModularInstancePtr((TTPtr)(*b)[0]);
 	i = (*b)[1];
@@ -700,51 +674,31 @@ void remote_array_return_value(TTPtr baton, TTValue& v)
 		jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, i);
 		x->cursor = TTSymbol(iAdrs->s_name);
 	}
-
+    
 	outlet_int(x->outlets[index_out], i);
-	
-	// store value
-	if (EXTRA->arrayValue) {
 		
-		// delete former value
-		if (EXTRA->arrayValue[i-1])
-			delete EXTRA->arrayValue[i-1];
-		
-		// store new value
-		m = new TTValue(v);
-		EXTRA->arrayValue[i-1] = m;
-	}
-	
-	// in array output mode 
+	// in array output mode
 	// edit a value containing all values
 	if (x->arrayAttrFormat == gensym("array")) {
-		
-		if (EXTRA->arrayValue)
-			for (i = 0; i < x->arraySize; i++) {
-				
-				// if the view have not been updated yet
-				m = EXTRA->arrayValue[i];
-				if (m == NULL) {
-					
-					memoCursor = x->cursor;
-					jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, i+1);
-					x->cursor = TTSymbol(iAdrs->s_name);
-					selectedObject->getAttributeValue(kTTSym_valueDefault, g);
-					
-					m = new TTValue(g);
-					
-					EXTRA->arrayValue[i] = m;
-					x->cursor = memoCursor;
-				}
-				
-				TTValue v = *m;
-				v.prepend(array);
-				array = v;
-				
-				// TODO : a real append method for value !
-				//array.append((TTValuePtr)m);
-			}
         
+        // don't output array when changing address
+        if (EXTRA->changingAddress)
+            return;
+
+        // grab each value from the viewer object itself
+        for (EXTRA->objectsSorted->begin();
+             EXTRA->objectsSorted->end();
+             EXTRA->objectsSorted->next()) {
+            
+            // use 0. as default value
+            grab = 0.;
+            
+            aViewer = EXTRA->objectsSorted->current()[0];
+            aViewer->sendMessage(kTTSym_Grab, none, grab);
+            
+            array.prepend(grab);
+        }
+    
 		// output array value
 		jamoma_ttvalue_to_typed_Atom(array, &msg, &argc, &argv, shifted);
         
