@@ -71,7 +71,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.sur.ambi.adjust~", "@description", "Display levels and adjust relative weight for ambisonic components" ],
+					"args" : [ "@name", "sur.ambi.adjust~.module", "@description", "Display levels and adjust relative weight for ambisonic components" ],
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
@@ -275,7 +275,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 230.0, 75.0, 159.0, 19.0 ],
-									"text" : "route jmod.sur.ambi.decode~"
+									"text" : "route sur.ambi.decode~.module"
 								}
 
 							}
@@ -1100,7 +1100,7 @@
 					"args" : [ "speaker" ],
 					"id" : "obj-76",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.sur.setup.maxpat",
+					"name" : "sur.setup.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1115,7 +1115,7 @@
 					"id" : "obj-3",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.sur.ambi.adjust~.maxpat",
+					"name" : "sur.ambi.adjust~.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
@@ -1144,7 +1144,7 @@
 					"id" : "obj-5",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.sur.output~.maxpat",
+					"name" : "sur.output~.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -1736,7 +1736,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 30.0, 659.0, 322.0, 31.0 ],
-					"text" : "Loudspeaker positions are not stored as part of this module. They will be maintained e.g. by jmod.sur.speaker.setup"
+					"text" : "Loudspeaker positions are not stored as part of this module. They will be maintained e.g. by sur.speaker.setup.module"
 				}
 
 			}
@@ -2025,7 +2025,7 @@
 					"id" : "obj-36",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.sur.ambi.decode~.maxpat",
+					"name" : "sur.ambi.decode~.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
@@ -2040,7 +2040,7 @@
 					"id" : "obj-37",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.sur.ambi.encodeM~.maxpat",
+					"name" : "sur.ambi.encodeM~.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
@@ -2060,7 +2060,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 278.0, 108.0, 107.0, 19.0 ],
-					"text" : "s jmod.decode.cmd"
+					"text" : "s decode.cmd"
 				}
 
 			}
@@ -2074,7 +2074,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 280.0, 331.0, 107.0, 19.0 ],
-					"text" : "s jmod.decode.cmd"
+					"text" : "s decode.cmd"
 				}
 
 			}
@@ -2088,7 +2088,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 280.0, 478.0, 107.0, 19.0 ],
-					"text" : "s jmod.decode.cmd"
+					"text" : "s decode.cmd"
 				}
 
 			}
@@ -2103,7 +2103,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 464.0, 536.0, 106.0, 19.0 ],
-					"text" : "r jmod.decode.cmd"
+					"text" : "r decode.cmd"
 				}
 
 			}
