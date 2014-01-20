@@ -78,9 +78,19 @@ function numsources(value)
         {
             outlet(0, "script", "delete", "doppler["+(i+1)+"]");
         }
+        // Script recreate j.pack≈ and j.unpack≈ to prevent processing of redundant channels
+        outlet(0, "script", "delete", "pack≈");
+        outlet(0, "script", "delete", "unpack≈");
+        outlet(0, "script", "newobject", "newobj", "@varname", "unpack≈", "@text", "j.unpack≈ " + num_voices, "@patching_position", 80, 288, "@fixwidth", 1);
+        outlet(0, "script", "newobject", "newobj", "@varname", "pack≈",   "@text", "j.pack≈ "   + num_voices, "@patching_position", 80, 880, "@fixwidth", 1);
+        
+        outlet(0, "script", "connect", "signalin",  0, "unpack≈",   0);
+        outlet(0, "script", "connect", "pack≈",     0, "signalout", 0);
+        
+        // Create and connect doppler subpatches
         for (i=0; i<num_voices; i++)
         {            
-            outlet(0, "script", "newdefault", "doppler["+(i+1)+"]", (80+30*i), (330+22*i), "j.sur.ch.doppler~");
+            outlet(0, "script", "newdefault", "doppler["+(i+1)+"]", (80+30*i), (330+25*i), "j.sur.ch.doppler~");
             outlet(0, "script", "connect", "unpack≈",               i, "doppler["+(i+1)+"]",    0);
             outlet(0, "script", "connect", "doppler["+(i+1)+"]",    0, "pack≈",                 i);
             outlet(0, "script", "connect", "active_gate",           i, "doppler["+(i+1)+"]",    1);
