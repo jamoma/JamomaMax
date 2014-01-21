@@ -23,12 +23,12 @@ extern "C" JAMOMA_EXPORT t_symbol *jps_done,
 				*jps_linear,
 				*jps_linear_q,
 			    *jps_slash_ramp_slash_update,
-				*jps_low,							// clip stuff
-				*jps_high, 
-				*jps_both,
-				*jps_wrap,
-				*jps_fold,
-				*jps_inc,							// increase, decrease
+				*jps_low,						///< Pointer to the symbol "low", used in clipping
+				*jps_high,						///< Pointer to the symbol "high", used in clipping
+				*jps_both,						///< Pointer to the symbol "both", used in clipping
+				*jps_wrap,						///< Pointer to the symbol "wrap", used in clipping
+				*jps_fold,						///< Pointer to the symbol "fold", used in clipping
+				*jps_inc,						///< Pointer to the symbol " increase, decrease
 				*jps_dec,
 				*jps_generic,					// DATA TYPES FOR THE PARAMETER / MESSAGE
 				*jps_integer,

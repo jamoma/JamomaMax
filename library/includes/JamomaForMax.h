@@ -6,7 +6,7 @@
  *
  * @details Functions and resources used by Max objects.
  *
- * @authors Tim Place, Théo de la Hogue
+ * @authors Tim Place, Théo de la Hogue, Trond Lossius
  *
  * @copyright Copyright © 2013, Tim Place & Théo de la Hogue @n
  * This code is licensed under the terms of the "New BSD License" @n
@@ -94,42 +94,53 @@
 
 void JAMOMA_EXPORT jamoma_init(void);
 
+
 /** Utility function to perform an atom copy.
- * @param dst the destination t_atom
- * @param src the t_atom to be copied
+ @param dst				The destination t_atom.
+ @param src				The t_atom to be copied.
  */
 void JAMOMA_EXPORT jamoma_atom_copy(t_atom *dst, t_atom *src);
 
-/** Utility function to compare two t_atom's.
- * @param type the atom type of a1
- * @param a1 a t_atom
- * @param a2 the t_atom to compare against
- * @return true if the t_atom's are the same
+
+/** Utility function to compare two t_atoms.
+ @param type			The	atom type of a1.
+ @param a1				A t_atom.
+ @param a2				The t_atom to compare against.
+ @return				true if the t_atom's are the same.
  */
 bool JAMOMA_EXPORT jamoma_atom_compare(t_symbol *type, t_atom *a1, t_atom *a2);
 
-/** Utility for writing newline terminated text to a file with the Max API
+
+/** Utility for writing newline terminated text to a file with the Max API.
+ @param fh				Pointer to the file handler.
+ @param the_eof			Pointer to the end of the file.
+ @param the _text		Pointer to the text line that we want to write.
  */
 void JAMOMA_EXPORT jamoma_file_writeline(t_filehandle *fh, long *the_eof, char *the_text);
 
-/** Compares two strings
- * @return true if the strings are the same
+
+/** Compare two strings.
+ @param s1				Pointer to the first of the two strings to compare-
+ @param s2				Pointer to the second of the two strings to compare.
+ @return				true if the strings are the same.
  */
 bool JAMOMA_EXPORT jamoma_string_compare(char *s1, char *s2);
 
-/** Load obex externals for use within other externals
- * @param objectname the object name (i.e. SymbolGen("j.send"))
- * @param argc number of arguments to the external to be loaded
- * @param argv pointer to the first of an array of atom arguments to the external that is to be loaded
- * @param object if successful pointer to the object pointer
- * @return true if successfully loaded, otherwise false
+
+/** Load obex externals for use within other externals.
+ @param objectname		The object name (i.e. SymbolGen("j.send")).
+ @param argc			Number of arguments to the external to be loaded.
+ @param argv			Pointer to the first of an array of atom arguments to the external that is to be loaded.
+ @param object			If the object is loaded successfully, this will be a pointer to the object pointer.
+ @return				true if successfully loaded, otherwise false.
  */
 bool JAMOMA_EXPORT jamoma_loadextern(t_symbol *objectname, long argc, t_atom *argv, t_object **object);
 
+
 /** Translates a Max path+filename combo into a correct absolutepath.
- * @param in_path
- * @param in_filename the filename
- * @param filepath the path
+ @param in_path			The path of the file.
+ @param in_filename		The name of the file.
+ @param out_filepath	The resulting combined path and file
  */
 void JAMOMA_EXPORT jamoma_getfilepath(short in_path, char *in_filename, char *out_filepath);
 
