@@ -51,31 +51,31 @@ typedef struct extra {
 #define	dump_out 3
 
 // Definitions
-void	WrapTTViewerClass(WrappedClassPtr c);
-void	WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
-void	WrappedViewerClass_free(TTPtr self);
-void	WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        WrapTTViewerClass(WrappedClassPtr c);
+void        WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
+void        WrappedViewerClass_free(TTPtr self);
+void        WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-void	remote_assist(TTPtr self, void *b, long msg, long arg, char *dst);
+void        remote_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 
-void	remote_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void	remote_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        remote_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        remote_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-void	remote_bang(TTPtr self);
-void	remote_int(TTPtr self, long value);
-void	remote_float(TTPtr self, double value);
-void	remote_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        remote_bang(TTPtr self);
+void        remote_int(TTPtr self, long value);
+void        remote_float(TTPtr self, double value);
+TTErr       remote_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-void	remote_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        remote_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-void	remote_attach(TTPtr self);
-void 	remote_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
-void	remote_mouseleave(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
-void	remote_mousedown(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
+void        remote_attach(TTPtr self);
+void        remote_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
+void        remote_mouseleave(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
+void        remote_mousedown(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
 
-void	remote_subscribe(TTPtr self);
+void        remote_subscribe(TTPtr self);
 
-void	remote_ui_queuefn(TTPtr self);
+void        remote_ui_queuefn(TTPtr self);
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
@@ -127,13 +127,13 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	EXTRA->connected = NULL;
 	EXTRA->label = NULL;
 	
-	EXTRA->color0 = (AtomPtr)sysmem_newptr(sizeof(Atom) * 4);
+	EXTRA->color0 = (AtomPtr)sysmem_newptr(sizeof(t_atom) * 4);
 	atom_setfloat(EXTRA->color0, 0);
 	atom_setfloat(EXTRA->color0+1, 0.);
 	atom_setfloat(EXTRA->color0+2, 0.);
 	atom_setfloat(EXTRA->color0+3, 1.);
 	
-	EXTRA->color1 = (AtomPtr)sysmem_newptr(sizeof(Atom) * 4);
+	EXTRA->color1 = (AtomPtr)sysmem_newptr(sizeof(t_atom) * 4);
 	atom_setfloat(EXTRA->color1, 0.62);
 	atom_setfloat(EXTRA->color1+1, 0.);
 	atom_setfloat(EXTRA->color1+2, 0.36);
@@ -207,7 +207,7 @@ void remote_subscribe(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue						v;
-	Atom						a[1];
+	t_atom						a[1];
 	TTAddress                   contextAddress = kTTAdrsEmpty;
 	TTAddress                   absoluteAddress, returnedAddress;
     TTNodePtr                   returnedNode = NULL;
@@ -360,11 +360,11 @@ void remote_float(TTPtr self, double value)
 	remote_list(self, _sym_float, 1, &a);
 }
 
-void remote_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+TTErr remote_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
-	jamoma_viewer_send((TTViewerPtr)x->wrappedObject, msg, argc, argv);
+	return jamoma_viewer_send((TTViewerPtr)x->wrappedObject, msg, argc, argv);
 }
 
 void remote_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -372,7 +372,10 @@ void remote_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
     EXTRA->setting = YES;
-	remote_list(self, _sym_nothing, argc, argv);
+    
+    if (remote_list(self, _sym_nothing, argc, argv))
+        
+        EXTRA->setting = NO;
 }
 
 void WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -387,7 +390,7 @@ void remote_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTAddress           absoluteAddress;
-	Atom				a[1];
+	t_atom				a[1];
 	TTSymbol			service;
 	TTValue				v;
 	
@@ -412,7 +415,7 @@ void remote_attach(TTPtr self)
 	t_dll*		connecteds = NULL;
 	ObjectPtr	o, box;
 	AtomCount	ac;
-	AtomPtr		av;
+	t_atom*		av;
 	
 	// get the first object connected to the select_out
 	object_obex_lookup(x, _sym_pound_B, &box);
