@@ -124,6 +124,8 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	spec->_free = &WrappedInputClass_free;
 #ifndef JCOM_IN_TILDE
 	spec->_any = &WrappedInputClass_anything;
+#else
+    spec->_any = NULL;
 #endif
 
 #ifdef JCOM_IN_TILDE
