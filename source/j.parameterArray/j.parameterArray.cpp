@@ -43,9 +43,7 @@ void		data_new_address(TTPtr self, SymbolPtr msg);
 void		data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt32 index);
 void		data_address(TTPtr self, SymbolPtr name);
 
-#ifndef JMOD_RETURN
 void		data_array_return_value(TTPtr baton, TTValue& v);
-#endif
 
 void		WrappedDataClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		data_bang(TTPtr self);
@@ -124,12 +122,10 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// Make outlets (before attr_args_process)
 	/////////////////////////////////////////////////////////////////////////////////
 	
-#ifndef JMOD_RETURN
 	// Don't create outlets during dynamic changes
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
 	x->outlets[index_out] = outlet_new(x, NULL);					// long outlet to output data index
 	x->outlets[data_out] = outlet_new(x, NULL);						// anything outlet to output data
-#endif
 	
 	x->arraySize = 0;
 	x->arrayIndex = 0;
@@ -279,12 +275,11 @@ void data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol servi
 	
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-#ifndef JMOD_RETURN
+
 	returnValueBaton = new TTValue(self);
 	returnValueBaton->append(index);
 	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&data_array_return_value));
-#endif
 	
 	args.append(returnValueCallback);
 	
@@ -502,7 +497,6 @@ void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	selectedObject->sendMessage(TTSymbol("Dec"), v, none);
 }
 
-#ifndef JMOD_RETURN
 void data_array_return_value(TTPtr baton, TTValue& v)
 {
 	WrappedModularInstancePtr	x;
@@ -614,4 +608,3 @@ t_max_err data_set_format(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av)
 	}
 	return MAX_ERR_NONE;
 }
-#endif
