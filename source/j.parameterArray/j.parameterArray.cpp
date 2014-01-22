@@ -176,9 +176,11 @@ void WrappedDataClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
-    delete EXTRA->objectsSorted;
-	
-	free(EXTRA);
+    if (EXTRA) {
+        
+        delete EXTRA->objectsSorted;
+        free(EXTRA);
+    }
 }
 
 void data_new_address(TTPtr self, SymbolPtr relativeAddress)
