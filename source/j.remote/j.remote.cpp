@@ -68,6 +68,8 @@ TTErr       remote_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 
 void        remote_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
+void        remote_address(TTPtr self, SymbolPtr address);
+
 void        remote_attach(TTPtr self);
 void        remote_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
 void        remote_mouseleave(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
@@ -105,6 +107,8 @@ void WrapTTViewerClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)remote_list,					"list",					A_GIMME, 0L);
     
     class_addmethod(c->maxClass, (method)remote_set,					"set",					A_GIMME, 0L);
+    
+    class_addmethod(c->maxClass, (method)remote_address,				"address",				A_SYM, 0);
 }
 
 void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
@@ -213,6 +217,9 @@ void remote_subscribe(TTPtr self)
     TTNodePtr                   returnedNode = NULL;
     TTNodePtr                   returnedContextNode = NULL;
 	TTObjectBasePtr				toSubscribe, anObject;
+    
+    if (x->address == kTTAdrsEmpty)
+		return;
 	
 	// for absolute address
 	if (x->address.getType() == kAddressAbsolute) {
@@ -406,6 +413,19 @@ void remote_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
 		
 		JamomaDebug object_post((ObjectPtr)x, "binds on %s", absoluteAddress.c_str());
 	}
+}
+
+void remote_address(TTPtr self, SymbolPtr address)
+{
+	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+	x->address =  TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+    
+    // unsubscribe the remote before
+    if (x->subscriberObject)
+        TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
+    
+    remote_subscribe(self);
 }
 
 void remote_attach(TTPtr self)
