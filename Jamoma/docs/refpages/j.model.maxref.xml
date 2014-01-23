@@ -57,14 +57,6 @@
 	</outletlist> -->
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="component" type="symbol" optional="1">
-			<digest>
-				Hide j.model's inner services to the minimum (i.e. hides all model/* parameters and messages)
-			</digest>
-			<description>
-				When the "component" argument is specified, j.model restricts its inner services to the minimum (i.e. hides all model/* parameters and messages)
-			</description>
-		</objarg>
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
@@ -148,6 +140,61 @@
 			<description>
 				Provide the model with an OSC alias. This can be used for future remote OSC communication to the model
 			</description>
+		</attribute>
+		<attribute name="amenities" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Allow to select j.model's provided services
+			</digest>
+			<description>
+				Select j.model's provided services to specific needs.
+			</description>
+			<attributelist>
+				<attribute name="enumvals" get="1" set="1" type="atom" size="5">
+					<enumlist>
+						<enum name="all">
+							<digest>
+								Enable all j.model's services
+							</digest>
+							<description>
+								Enable all j.model's services
+							</description>
+						</enum>
+						<enum name="none">
+							<digest>
+								Disable all j.model's services
+							</digest>
+							<description>
+								Disable all j.model's services
+							</description>
+						</enum>
+						<enum name="preset">
+							<digest>
+								Enable preset service
+							</digest>
+							<description>
+								Enable preset service
+							</description>
+						</enum>
+						<enum name="audio">
+							<digest>
+								Enable audio signal service
+							</digest>
+							<description>
+								Enable audio signal service
+							</description>
+						</enum>
+						<enum name="data">
+							<digest>
+								Enable data signal service
+							</digest>
+							<description>
+								Enable data signal service
+							</description>
+						</enum>
+					</enumlist>
+				</attribute>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
+			</attributelist>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>
