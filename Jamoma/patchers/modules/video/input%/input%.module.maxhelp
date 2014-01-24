@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 10.0, 56.0, 1012.0, 518.0 ],
+		"rect" : [ 0.0, 44.0, 1012.0, 518.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -85,7 +85,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.input%", "@description", "Generic video input module" ],
+					"args" : [ "@name", "input%.module", "@description", "Generic video input module" ],
 					"bgmode" : 1,
 					"id" : "obj-18",
 					"maxclass" : "bpatcher",
@@ -240,7 +240,6 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"hidden" : 1,
 					"id" : "obj-9",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -348,12 +347,12 @@
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-21",
-					"linecount" : 28,
+					"linecount" : 26,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 660.0, 141.0, 303.0, 347.0 ],
-					"text" : "The module has four different modes, which can be selected from the top menu:\r\r- Camera: this can be used with any web/DV camera connected to the system. Choose device in the list, and click the on/off button to start sampling. The size of the video can be changed on the fly, allowing to reduce the size to get better performance.\r\r- Video file: this is for playing back any QuickTime compatible video file. Files may be loaded by just dropping them on top of the module. Looping can be turned on or off, and the looping section can be defined in the upper scroll bar. The file can be scrubbed in the lower scroll bar. Audio playback can be turned on or off, and the playback rate can be changed by dragging on the number (notice that negative values will play the file backwards. The size of the video can be changed on the fly to improve performance.\r\r- Synthesis: this is mainly for testing purposes in case you have no camera or video files around, but still want to send some video. It generates white noise in either 1 or 4 planes.\n\n- Desktop: the content of the computer screen can be captured into MaxMSP. The size and location of the captured region can be modified. "
+					"patching_rect" : [ 660.0, 141.0, 315.0, 322.0 ],
+					"text" : "The module has four different modes, which can be selected from the top menu:\r\r- Camera: this can be used with any web/DV camera connected to the system. Choose device in the list, and click the on/off button to start sampling. The size of the video can be changed on the fly, allowing to reduce the size to get better performance.\r\r- Video file: this is for playing back any QuickTime compatible video file. Files may be loaded by just dropping them on top of the module. Looping can be turned on or off, and the looping section can be defined in the upper scroll bar. The file can be scrubbed in the lower scroll bar. Audio playback can be turned on or off, and the playback rate can be changed by dragging on the number (notice that negative values will play the file backwards. The size of the video can be changed on the fly to improve performance.\r\r- Synthesis: this is mainly for testing purposes in case you have no camera or video files around, but still want to send some video. It generates white noise in either 1 or 4 planes.\n\n- Desktop: the content of the computer screen can be captured into MaxMSP. The size and location of the captured region can be modified. (Works only in 32 Bits Mode)"
 				}
 
 			}
@@ -619,10 +618,6 @@
 			}
 , 			{
 				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
