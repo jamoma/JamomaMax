@@ -23,27 +23,27 @@ extern "C" JAMOMA_EXPORT t_symbol *jps_done,
 				*jps_linear,
 				*jps_linear_q,
 			    *jps_slash_ramp_slash_update,
-				*jps_low,						///< Pointer to the symbol "low", used in clipping
-				*jps_high,						///< Pointer to the symbol "high", used in clipping
-				*jps_both,						///< Pointer to the symbol "both", used in clipping
-				*jps_wrap,						///< Pointer to the symbol "wrap", used in clipping
-				*jps_fold,						///< Pointer to the symbol "fold", used in clipping
-				*jps_inc,						///< Pointer to the symbol " increase, decrease
-				*jps_dec,
-				*jps_generic,					// DATA TYPES FOR THE PARAMETER / MESSAGE
-				*jps_integer,
-				*jps_decimal,
-				*jps_string,
-				*jps_array,						// This is deprecated, but required for backwards compatibility
-				*jps_decimalArray,
-				*jps_integerArray,
-				*jps_boolean,
+				*jps_low,						///< Pointer to the symbol "low", used in clipping.
+				*jps_high,						///< Pointer to the symbol "high", used in clipping.
+				*jps_both,						///< Pointer to the symbol "both", used in clipping.
+				*jps_wrap,						///< Pointer to the symbol "wrap", used in clipping.
+				*jps_fold,						///< Pointer to the symbol "fold", used in clipping.
+				*jps_inc,						///< Pointer to the symbol "inc", used for stepwise increment of parameter value.
+				*jps_dec,						///< Pointer to the symbol "dec", used for stepwise decrement of parameter value.
+				*jps_generic,					///< Pointer to the symbol "generic", one of the parameter and message data types.
+				*jps_integer,					///< Pointer to the symbol "integer", one of the parameter and message data types.
+				*jps_decimal,					///< Pointer to the symbol "decimal", one of the parameter and message data types.
+				*jps_string,					///< Pointer to the symbol "string", one of the parameter and message data types.
+				*jps_array,						///< This is deprecated, please use #jps_list, #jps_decimalArray or #jps_integerArray instead.
+				*jps_decimalArray,				///< Pointer to the symbol "decimalArray", one of the parameter and message data types. Used for arrays of decimal values.
+				*jps_integerArray,				///< Pointer to the symbol "integerArray", one of the parameter and message data types. Used for arrays of decimal values.
+				*jps_boolean,					///< Pointer to the symbol "boolean", one of the parameter and message data types.
                 //*jps_list_int,
                 //*jps_list_float,
-				*jps_none,						// this type only used by j.message
-				*jps_jcom_hub, 
+				*jps_none,						///< Pointer to the symbol "none", a data type that is only applicable to j.message.
+				*jps_jcom_hub,
 				*jps_feedback,
-				*jps_alias,
+				*jps_alias,						///< Pointer to the symbol "alias". A model can have an alias in addition to the regularly assigned name. This can be used to address models with descriptive and content-related names that might change over time.
 				*jps_module_name_get,
 				*jps_core_module_name_get,
 				*jps_dumpout,
