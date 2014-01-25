@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 492.0, 68.0, 676.0, 404.0 ],
+		"rect" : [ 32.0, 50.0, 676.0, 404.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 273.0, 311.0 ],
+						"rect" : [ 517.0, 381.0, 273.0, 311.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -266,8 +266,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 138.0, 28.0, 84.0, 19.0 ],
-									"text" : "input%.model"
+									"patching_rect" : [ 113.0, 28.0, 121.0, 19.0 ],
+									"text" : "input%.model input%"
 								}
 
 							}
@@ -357,7 +357,7 @@
 									"destination" : [ "obj-7", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 212.5, 132.5, 87.0, 132.5 ],
+									"midpoints" : [ 224.5, 132.5, 87.0, 132.5 ],
 									"source" : [ "obj-4", 1 ]
 								}
 
@@ -429,7 +429,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 677.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 676.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -444,7 +444,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 351.0, 281.0, 17.0 ]
+					"patching_rect" : [ 30.0, 351.0, 281.0, 17.0 ],
+					"text" : "GL/render/context foo"
 				}
 
 			}
@@ -462,7 +463,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "/videoplane%" ],
+					"args" : [ "videoplane%" ],
 					"id" : "obj-11",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
@@ -478,7 +479,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "/input%" ],
+					"args" : [ "input%" ],
 					"id" : "obj-12",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
