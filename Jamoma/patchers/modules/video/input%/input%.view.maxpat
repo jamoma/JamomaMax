@@ -29,6 +29,21 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"args" : [ "#1" ],
+					"id" : "obj-3",
+					"maxclass" : "bpatcher",
+					"name" : "input%.ui.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, -20.0 ],
+					"patching_rect" : [ 377.666656, 82.5, 249.0, 49.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 4.0, 19.0, 231.0, 49.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
@@ -157,7 +172,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 354.0, 64.0, 90.0, 19.0 ],
+					"patching_rect" : [ 354.0, 52.0, 90.0, 19.0 ],
 					"text" : "j.remote source",
 					"varname" : "source_mode[1]"
 				}
@@ -180,24 +195,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 121.0, 0.0, 67.0, 19.0 ],
 					"varname" : "source_mode"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "#0_" ],
-					"frozen_box_attributes" : [ "args" ],
-					"id" : "obj-9",
-					"lockeddragscroll" : 1,
-					"maxclass" : "bpatcher",
-					"name" : "input%.ui.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, -120.0 ],
-					"patching_rect" : [ 377.666656, 87.0, 246.0, 46.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 1.0, 21.0, 240.0, 47.0 ],
-					"varname" : "jalg.input%.ui"
 				}
 
 			}
@@ -292,20 +289,20 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 363.5, 96.0, 312.0, 96.0, 312.0, 14.0, 335.0, 14.0 ],
-					"source" : [ "obj-5", 0 ]
+					"source" : [ "obj-5", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-5", 1 ]
+					"midpoints" : [ 363.5, 86.0, 312.0, 86.0, 312.0, 14.0, 335.0, 14.0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}

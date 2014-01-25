@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 6.0, 44.0, 889.0, 924.0 ],
+		"rect" : [ 721.0, 44.0, 889.0, 924.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -29,6 +29,20 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-54",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 33.5, 575.0, 35.0, 17.0 ],
+					"text" : "clear"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
@@ -1382,8 +1396,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 122.0, 709.0, 136.0, 19.0 ],
-					"text" : "j.remote camera/camera",
+					"patching_rect" : [ 162.5, 709.0, 136.0, 19.0 ],
+					"text" : "j.remote camera/input",
 					"varname" : "camera/camera"
 				}
 
@@ -1398,7 +1412,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 121.0, 635.0, 131.0, 19.0 ],
+					"patching_rect" : [ 162.5, 632.0, 131.0, 19.0 ],
 					"text" : "j.remote camera/device",
 					"varname" : "camera/device"
 				}
@@ -1427,7 +1441,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 122.0, 584.0, 86.0, 19.0 ],
+					"patching_rect" : [ 122.0, 579.0, 86.0, 19.0 ],
 					"text" : "r #1_device"
 				}
 
@@ -2150,7 +2164,7 @@
 					"fontsize" : 10.0,
 					"hint" : "Choose which video grabber driver to use",
 					"id" : "obj-73",
-					"items" : [ "DV Video", ",", "IIDC FireWire Video", ",", "USB Video Class Video" ],
+					"items" : "<empty>",
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -2848,6 +2862,24 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-72", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-54", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-73", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-54", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-52", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2943,7 +2975,7 @@
 					"destination" : [ "obj-72", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 131.5, 735.0, 103.0, 735.0, 103.0, 679.0, 131.5, 679.0 ],
+					"midpoints" : [ 172.0, 735.0, 103.0, 735.0, 103.0, 679.0, 131.5, 679.0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -3118,7 +3150,7 @@
 					"destination" : [ "obj-73", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 130.5, 656.0, 103.0, 656.0, 103.0, 606.0, 131.5, 606.0 ],
+					"midpoints" : [ 172.0, 656.0, 103.0, 656.0, 103.0, 606.0, 131.5, 606.0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
