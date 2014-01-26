@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 270.0, 209.0, 762.0, 500.0 ],
@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "qmetro.module", "@description", "A qmetro module (like metro, but can drop frames)" ],
+					"args" : [ "@name", "qmetro.model", "@description", "A qmetro module (like metro, but can drop frames)" ],
 					"bgmode" : 1,
 					"id" : "obj-10",
 					"maxclass" : "bpatcher",
@@ -66,7 +66,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 487.0, 236.0, 215.0, 17.0 ],
+					"patching_rect" : [ 487.0, 232.0, 215.0, 17.0 ],
 					"text" : "time:/dataspace/unit millisecond"
 				}
 
@@ -80,7 +80,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 487.0, 211.0, 194.0, 17.0 ],
+					"patching_rect" : [ 487.0, 207.0, 194.0, 17.0 ],
 					"text" : "time:/dataspace/unit second"
 				}
 
@@ -304,7 +304,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 337.0, 140.0, 117.0, 17.0 ],
+					"patching_rect" : [ 353.0, 140.0, 129.0, 17.0 ],
 					"text" : "time 300 ramp 5000"
 				}
 
@@ -318,7 +318,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 224.0, 140.0, 110.0, 17.0 ],
+					"patching_rect" : [ 224.0, 140.0, 122.0, 17.0 ],
 					"text" : "time 40 ramp 4000"
 				}
 
@@ -443,6 +443,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 121.5, 171.0, 56.5, 171.0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -452,6 +453,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 56.5, 159.0, 56.5, 159.0 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -489,6 +491,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 676.5, 171.0, 56.5, 171.0 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -498,6 +501,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 496.5, 171.0, 56.5, 171.0 ],
 					"source" : [ "obj-25", 0 ]
 				}
 
@@ -507,6 +511,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 556.5, 171.0, 56.5, 171.0 ],
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -544,6 +549,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 496.5, 228.0, 207.0, 228.0, 207.0, 171.0, 56.5, 171.0 ],
 					"source" : [ "obj-35", 0 ]
 				}
 
@@ -553,6 +559,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 496.5, 255.0, 474.0, 255.0, 474.0, 255.0, 207.0, 255.0, 207.0, 171.0, 56.5, 171.0 ],
 					"source" : [ "obj-38", 0 ]
 				}
 
@@ -589,6 +596,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 362.5, 171.0, 56.5, 171.0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -598,6 +606,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 233.5, 171.0, 56.5, 171.0 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
