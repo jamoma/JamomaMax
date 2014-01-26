@@ -59,7 +59,7 @@ class MaxAudioGraphWrappedClassOptions;
 typedef struct _MaxAudioGraphWrappedClass {
 	ClassPtr							maxClass;					///< The Max class pointer.
 	SymbolPtr							maxClassName;				///< The name to give the Max class.
-	TTSymbol							ttClassName;				///< The name of the class as registered with the TTBlue framework.
+	TTSymbol							ttClassName;				///< The name of the class as registered with the Jamoma framework.
 	TTValidityCheckFunction				validityCheck;				///< A function to call to validate the context for an object before it is instantiated.
 	TTPtr								validityCheckArgument;		///< An argument to pass to the validityCheck function when it is called.
 	MaxAudioGraphWrappedClassOptions*	options;					///< Additional configuration options specified for the class.

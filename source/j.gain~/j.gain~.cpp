@@ -26,8 +26,8 @@
 // Data Structure for this object
 typedef struct _gain {
 	t_pxobject 		obj;
-	TTAudioObject*	xfade;				// crossfade object from the ttblue library
-	TTAudioObject*	gain;				// gain control object the ttblue library
+	TTAudioObject*	xfade;				// crossfade object from the Jamoma DSP library
+	TTAudioObject*	gain;				// gain control object the Jamoma DSP library
 	TTAudio*		signalIn;
 	TTAudio*		signalOut;
 	TTAudio*		signalTemp;

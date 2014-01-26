@@ -20,7 +20,7 @@
 #include "commonsyms.h"					// Common symbols used by the Max 4.5 API
 #include "ext_obex.h"					// Max Object Extensions (attributes) Header
 
-#include "TTDSP.h"						// TTBlue Interfaces...
+#include "TTDSP.h"						// Jamoma Interfaces...
 
 #define DEFAULT_F 1000
 #define DEFAULT_Q 18
@@ -29,9 +29,9 @@
 /** Data structure for the tt.filter~ object. */
 typedef struct _filter	{
     t_pxobject 				obj;						///< REQUIRED: The MSP 'base class'
-	TTAudioObjectBasePtr	filter;						///< The TTBlue filter unit used
-	TTAudioSignalPtr		audioIn;					///< The TTBlue audio signal object that is used for filter input
-	TTAudioSignalPtr		audioOut;					///< The TTBlue audio signal object that us used for filter output
+	TTAudioObjectBasePtr	filter;						///< The Jamoma DSP filter unit used
+	TTAudioSignalPtr		audioIn;					///< The Jamoma audio signal object that is used for filter input
+	TTAudioSignalPtr		audioOut;					///< The Jamoma audio signal object that us used for filter output
 	TTUInt16				maxNumChannels;				///< The maximum number of audio channels permitted
 	TTUInt16				numChannels;				///< The actual number of audio channels used
 	TTUInt16				vs;							///< The vector size (number of samples per processing block)
