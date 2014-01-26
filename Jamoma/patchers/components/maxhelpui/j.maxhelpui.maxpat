@@ -1905,7 +1905,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 260.0, 126.5, 480.0, 19.0 ],
-									"text" : "sprintf http://redmine.jamoma.org/search/index/jamoma?q=%s&scope=all&&issues=1"
+									"text" : "sprintf sprintf https://github.com/jamoma/JamomaMax/search?q=%s&type=Issues"
 								}
 
 							}
