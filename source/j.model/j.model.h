@@ -46,7 +46,7 @@ typedef struct extra {
 #define dump_out 1
 
 
-/** Set up the wrapped class, and all methods that it is to respond to.
+/** Set up what methods (Max messages) that the wrapped class is to respond to.
  @param c			Pointer to the wrapped class.
  */
 void		WrapTTContainerClass(WrappedClassPtr c);

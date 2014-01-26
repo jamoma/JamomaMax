@@ -249,11 +249,11 @@ t_max_err	wrappedModularClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* arg
 t_max_err	wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomPtr argv);
 
 
-/**
+/** This method handles "anything" messages to the Max object that wraps the #TTModularClass.
  @param self		This object
  @param s			Message passed to this object
- @param argc		Atom array count (length)
- @param argv		Pointer to the atom array
+ @param argc		Number of arguments for the message.
+ @param argv		The arguments of the message as a pointer to an atom array
 */
 void		wrappedModularClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
 

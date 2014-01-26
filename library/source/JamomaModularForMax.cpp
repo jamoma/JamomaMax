@@ -191,7 +191,7 @@ TTErr jamoma_container_create(ObjectPtr x, TTObjectBasePtr *returnedContainer)
 	return kTTErrNone;
 }
 
-/**	Send Max data using a container object */
+/**	Send Max data to a node (e.g., a j.parameter object) using a container object. */
 TTErr jamoma_container_send(TTContainerPtr aContainer, SymbolPtr relativeAddressAndAttribute, AtomCount argc, AtomPtr argv)
 {
 	TTAddress anAddress;
@@ -206,6 +206,7 @@ TTErr jamoma_container_send(TTContainerPtr aContainer, SymbolPtr relativeAddress
 			return kTTErrGeneric;
 		}
 		
+		// Are we to send a message to an attribute of the node? If not we'll send the message to the value attribute of the node, so that the node value gets updated.
 		if (anAddress.getAttribute() == NO_ATTRIBUTE)
 			anAddress = anAddress.appendAttribute(kTTSym_value);
 		else
@@ -216,8 +217,8 @@ TTErr jamoma_container_send(TTContainerPtr aContainer, SymbolPtr relativeAddress
 		jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
 		data.append((TTPtr)&v);
 		
-		return aContainer->sendMessage(kTTSym_Send, data, none); // data is [address, attribute, [x, x, ,x , ...]]
-	}
+		// data is [address, attribute, [x, x, ,x , ...]]
+		return aContainer->sendMessage(kTTSym_Send, data, none); 	}
 	
 	return kTTErrGeneric;
 }
