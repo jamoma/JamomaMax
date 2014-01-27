@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 307.0, 367.0, 704.0, 277.0 ],
+						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -66,7 +66,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -340,7 +339,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 512.0, 85.0, 74.0, 20.0 ],
+					"patching_rect" : [ 180.0, 85.0, 55.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -354,7 +353,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p Relativity"
+					"text" : "p Scope"
 				}
 
 			}
@@ -3524,7 +3523,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 170.0, 85.0, 144.0, 20.0 ],
+					"patching_rect" : [ 245.0, 85.0, 144.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -4156,7 +4155,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 419.0, 85.0, 93.0, 20.0 ],
+					"patching_rect" : [ 494.0, 85.0, 93.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -4562,7 +4561,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 314.0, 85.0, 105.0, 20.0 ],
+					"patching_rect" : [ 389.0, 85.0, 105.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
