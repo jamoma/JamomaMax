@@ -318,9 +318,8 @@ void receive_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, Ato
 		
 		JamomaDebug object_post((ObjectPtr)x, "binds on %s", absoluteAddress.c_str());
         
-        // in view patcher, get the value to refresh it
-		if (x->patcherContext == kTTSym_view)
-			x->wrappedObject->sendMessage(kTTSym_Get);
+        // get the value to refresh it
+		x->wrappedObject->sendMessage(kTTSym_Get);
 	}
 }
 
