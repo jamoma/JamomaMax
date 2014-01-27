@@ -30,7 +30,7 @@ typedef struct extra {
 	TTPtr			ui_qelem;               // to output "qlim'd" data for ui object
     TTListPtr       ui_qelem_list;          // a list of defered value to output
 	TTUInt32		countSubscription;      // to count how many time we try to subscribe
-    TTListPtr       objectsSorted;          // all objects sorted by index
+    TTListPtr       values;                 // store all values in a list for array format
     TTBoolean       setting;                // a flag to know if the remote array is updated by a set message
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
@@ -140,7 +140,7 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	EXTRA->ui_qelem = qelem_new(x, (method)remote_ui_queuefn);
     EXTRA->ui_qelem_list = new TTList();
 	EXTRA->countSubscription = 0;
-    EXTRA->objectsSorted = new TTList();
+    EXTRA->values = new TTList();
     
     // create model:address receiver
     remote_create_model_address_receiver(self);
@@ -175,7 +175,7 @@ void WrappedViewerClass_free(TTPtr self)
         
         delete EXTRA->ui_qelem_list;
         
-        delete EXTRA->objectsSorted;
+        delete EXTRA->values;
         
         free(EXTRA);
     }
@@ -206,7 +206,7 @@ void remote_new_address(TTPtr self, SymbolPtr address)
         
         x->arraySize = number;
         
-        EXTRA->objectsSorted->clear();
+        EXTRA->values->clear();
 
         for (i = 1; i <= x->arraySize; i++) {
             
@@ -221,8 +221,9 @@ void remote_new_address(TTPtr self, SymbolPtr address)
             
             x->internals->append(TTSymbol(instanceAddress->s_name), v);
             
-            // inverse objects order for iteration purpose (see in remote_array_return_value : array mode)
-            EXTRA->objectsSorted->insert(0, anObject);
+            // inverse values order for iteration purpose (see in remote_array_return_value : array mode)
+            v.clear();
+            EXTRA->values->insert(0, v);
         }
         
         // Ends iteration on internals
@@ -699,14 +700,13 @@ void remote_set_array(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void remote_array_return_value(TTPtr baton, TTValue& v)
 {
     WrappedModularInstancePtr	x;
-	TTValue						keys, array, object, grab, none;
+	TTValue						array;
 	TTValuePtr					b;
 	SymbolPtr					msg, iAdrs;
 	long						argc = 0;
-	TTUInt32					i;
+	TTUInt32					i, j;
 	AtomPtr						argv = NULL;
 	TTBoolean					shifted = NO;
-    TTObjectBasePtr             aViewer;
     
 	// unpack baton (a t_object* and the index of the value)
 	b = (TTValuePtr)baton;
@@ -735,18 +735,26 @@ void remote_array_return_value(TTPtr baton, TTValue& v)
         if (EXTRA->changingAddress)
             return;
 
-        // grab each value from the viewer object itself
-        for (EXTRA->objectsSorted->begin();
-             EXTRA->objectsSorted->end();
-             EXTRA->objectsSorted->next()) {
+        // get each values in reverse order
+        j = EXTRA->values->getSize();
+        
+        for (EXTRA->values->begin();
+             EXTRA->values->end();
+             EXTRA->values->next()) {
+            
+            // store the incoming value at the right index
+            if (j == i)
+                EXTRA->values->current() = v;
+            
+            // add the stored value
+            if (EXTRA->values->current().size())
+                array.prepend(EXTRA->values->current());
             
             // use 0. as default value
-            grab = 0.;
+            else
+                array.prepend(0.);
             
-            aViewer = EXTRA->objectsSorted->current()[0];
-            aViewer->sendMessage(kTTSym_Grab, none, grab);
-            
-            array.prepend(grab);
+            j--;
         }
     
 		// output array value
