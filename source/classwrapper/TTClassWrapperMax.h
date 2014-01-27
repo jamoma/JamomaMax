@@ -1,6 +1,6 @@
 /* 
  *	TTClassWrapperMax
- *	An automated class wrapper to make TTBlue object's available as objects for Max/MSP
+ *	An automated class wrapper to make Jamoma object's available as objects for Max/MSP
  *	Copyright © 2008 by Timothy Place
  * 
  * License: This code is licensed under the terms of the "New BSD License"
@@ -132,7 +132,7 @@ void wrappedClass_assist(WrappedInstancePtr self, void *b, long msg, long arg, c
 
 // public:
 
-// Wrap a TTBlue class as a Max class.
+// Wrap a Jamoma class as a Max class.
 TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, WrappedClassPtr* c);
 
 // This version can be passed a method that is called to make sure it is legit to instantiate the class.

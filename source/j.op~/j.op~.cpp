@@ -21,7 +21,7 @@
 #include "commonsyms.h"				// Common symbols used by the Max 4.5 API
 #include "ext_obex.h"				// Max Object Extensions (attributes) Header
 
-#include "TTDSP.h"					// TTBlue Interfaces...
+#include "TTDSP.h"					// Jamoma DSP Interfaces...
 
 
 // Data Structure for this object

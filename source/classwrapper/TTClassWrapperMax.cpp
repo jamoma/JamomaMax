@@ -1,6 +1,6 @@
 /* 
  *	TTClassWrapperMax
- *	An automated class wrapper to make TTBlue object's available as objects for Max/MSP
+ *	An automated class wrapper to make Jamoma objects available as objects for Max/MSP
  *	Copyright � 2008 by Timothy Place
  * 
  * License: This code is licensed under the terms of the "New BSD License"

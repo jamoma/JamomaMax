@@ -86,10 +86,10 @@ void JAMOMA_EXPORT jamoma_subscriber_get_patcher_list(ObjectPtr x, TTList& aCont
 
 
 
-// Method to deal with TTContainer
+// Method to deal with #TTContainer
 ///////////////////////////////////////////////////////////////////////
 
-/**	Create a container object.
+/**	Create a #TTContainer object.
  @param x
  @param returnedContainer
  @return						#TTErr error message if the method does not execute as expected.
@@ -97,9 +97,9 @@ void JAMOMA_EXPORT jamoma_subscriber_get_patcher_list(ObjectPtr x, TTList& aCont
 TTErr JAMOMA_EXPORT jamoma_container_create(ObjectPtr x, TTObjectBasePtr *returnedContainer);
 
 
-/**	Send Max data using a container object.
+/**	Send Max data to a node (e.g., a j.parameter object) using a #TTContainer object.
  @param aContainer
- @param relativeAddressAndAttribute
+ @param relativeAddressAndAttribute	The relative address and attribute of the node that the message is to be sent to.
  @param argc					The number of arguments of the message.
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
