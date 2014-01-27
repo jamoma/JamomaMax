@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1012.0, 648.0 ],
+		"rect" : [ 100.0, 100.0, 1012.0, 648.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -65,6 +65,8 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"showontab" : 1,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -75,7 +77,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 378.5, 161.0, 139.0, 33.0 ],
+									"patching_rect" : [ 502.5, 283.0, 139.0, 33.0 ],
 									"text" : "j.parameter aParameter @value/default 123"
 								}
 
@@ -89,7 +91,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 378.5, 127.0, 53.0, 20.0 ],
+									"patching_rect" : [ 502.5, 249.0, 53.0, 20.0 ],
 									"text" : "j.model"
 								}
 
@@ -104,8 +106,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 328.5, 5.0, 339.0, 47.0 ],
-									"text" : "The @relative attribute is particularly use full in case the j.cue is embedded inside a model. if acctive the @address will be automatically set to the model address"
+									"patching_rect" : [ 452.5, 127.0, 339.0, 47.0 ],
+									"text" : "The @relative attribute is particularly useful in case the j.cue is embedded inside a model. if active the @address will be automatically set to the model address"
 								}
 
 							}
@@ -119,7 +121,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 23.0, 5.0, 231.0, 33.0 ],
+									"patching_rect" : [ 147.0, 127.0, 231.0, 33.0 ],
 									"text" : "It is possible to select an address from where the storage will start"
 								}
 
@@ -141,7 +143,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 23.0, 127.0, 24.0, 24.0 ],
+									"patching_rect" : [ 147.0, 249.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "3",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -158,7 +160,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 160.5, 52.0, 113.0, 18.0 ],
+									"patching_rect" : [ 284.5, 174.0, 113.0, 18.0 ],
 									"text" : "address /degrade~"
 								}
 
@@ -172,7 +174,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 63.5, 52.0, 96.0, 18.0 ],
+									"patching_rect" : [ 187.5, 174.0, 96.0, 18.0 ],
 									"text" : "address /mouse"
 								}
 
@@ -194,7 +196,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 23.0, 88.0, 24.0, 24.0 ],
+									"patching_rect" : [ 147.0, 210.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"text" : "2",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
@@ -219,7 +221,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 23.0, 49.0, 24.0, 24.0 ],
+									"patching_rect" : [ 147.0, 171.0, 24.0, 24.0 ],
 									"prototypename" : "Jamoma.step",
 									"rounded" : 180.0,
 									"text" : "1",
@@ -237,7 +239,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 107.0, 130.0, 32.5, 18.0 ],
+									"patching_rect" : [ 231.0, 252.0, 32.5, 18.0 ],
 									"text" : "edit"
 								}
 
@@ -252,7 +254,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 63.5, 228.0, 36.0, 20.0 ],
+									"patching_rect" : [ 187.5, 350.0, 36.0, 20.0 ],
 									"text" : "j.cue"
 								}
 
@@ -266,7 +268,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 83.5, 91.0, 56.0, 18.0 ],
+									"patching_rect" : [ 207.5, 213.0, 56.0, 18.0 ],
 									"text" : "store init"
 								}
 
@@ -281,7 +283,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 328.5, 52.0, 150.0, 20.0 ]
+									"patching_rect" : [ 452.5, 174.0, 150.0, 20.0 ]
 								}
 
 							}
@@ -300,7 +302,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 93.0, 220.5, 73.0, 220.5 ],
+									"midpoints" : [ 217.0, 342.5, 197.0, 342.5 ],
 									"source" : [ "obj-11", 0 ]
 								}
 
@@ -310,7 +312,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 170.0, 220.0, 73.0, 220.0 ],
+									"midpoints" : [ 294.0, 342.0, 197.0, 342.0 ],
 									"source" : [ "obj-2", 0 ]
 								}
 
@@ -320,7 +322,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 116.5, 220.5, 73.0, 220.5 ],
+									"midpoints" : [ 240.5, 342.5, 197.0, 342.5 ],
 									"source" : [ "obj-57", 0 ]
 								}
 
@@ -330,7 +332,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 338.0, 220.0, 73.0, 220.0 ],
+									"midpoints" : [ 462.0, 342.0, 197.0, 342.0 ],
 									"source" : [ "obj-6", 0 ]
 								}
 
@@ -369,7 +371,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -406,7 +408,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -555,7 +557,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -684,7 +686,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -1457,7 +1459,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2141,7 +2143,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2388,7 +2390,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -2751,7 +2753,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -3554,7 +3556,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -4186,7 +4188,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -4592,7 +4594,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -4752,11 +4754,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 70.0, 1012.0, 622.0 ],
+						"rect" : [ 100.0, 126.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5315,7 +5317,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -5385,62 +5387,62 @@
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpstarter.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpname.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.module.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.module.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
 				"patcherrelativepath" : "../patchers/modules/control/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
 				"patcherrelativepath" : "../patchers/modules/control/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
 				"patcherrelativepath" : "../patchers/modules/control/mouse",
 				"type" : "JSON",
 				"implicit" : 1
