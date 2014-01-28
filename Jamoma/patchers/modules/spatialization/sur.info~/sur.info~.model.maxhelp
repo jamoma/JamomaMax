@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 67.0, 66.0, 997.0, 475.0 ],
+		"rect" : [ 67.0, 66.0, 1086.0, 668.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,26 +29,27 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "toggle",
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-10",
+					"linecount" : 2,
+					"maxclass" : "comment",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 493.0, 396.0, 20.0, 20.0 ]
+					"numoutlets" : 0,
+					"patching_rect" : [ 564.0, 306.0, 133.0, 37.0 ],
+					"text" : "Update to display current values"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-2",
-					"maxclass" : "newobj",
+					"id" : "obj-5",
+					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 532.0, 404.0, 56.0, 19.0 ],
-					"text" : "dac~"
+					"patching_rect" : [ 532.0, 417.0, 56.0, 56.0 ]
 				}
 
 			}
@@ -60,7 +62,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 532.0, 371.0, 93.0, 19.0 ],
+					"patching_rect" : [ 532.0, 371.0, 93.0, 20.0 ],
 					"text" : "j.unpack≈ 2"
 				}
 
@@ -75,7 +77,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 319.0, 417.0, 50.0, 19.0 ]
+					"patching_rect" : [ 289.0, 435.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -89,7 +91,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 232.0, 417.0, 50.0, 19.0 ]
+					"patching_rect" : [ 217.0, 435.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -103,7 +105,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 145.0, 417.0, 50.0, 19.0 ]
+					"patching_rect" : [ 145.0, 435.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -113,11 +115,11 @@
 					"fontsize" : 12.0,
 					"id" : "obj-12",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 4,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 145.0, 393.0, 280.0, 19.0 ],
-					"text" : "j.oscroute /samplerate /vectorsize /numChannels"
+					"patching_rect" : [ 145.0, 393.0, 235.0, 20.0 ],
+					"text" : "route samplerate vectorsize numChannels"
 				}
 
 			}
@@ -130,7 +132,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 642.0, 157.0, 89.0, 17.0 ],
+					"patching_rect" : [ 642.0, 136.0, 93.0, 18.0 ],
 					"text" : "numChannels 1"
 				}
 
@@ -144,7 +146,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 532.0, 157.0, 89.0, 17.0 ],
+					"patching_rect" : [ 532.0, 136.0, 93.0, 18.0 ],
 					"text" : "numChannels 2"
 				}
 
@@ -158,21 +160,21 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 532.0, 204.0, 129.0, 19.0 ],
-					"text" : "j.noise≈ @gain -40"
+					"patching_rect" : [ 532.0, 183.0, 210.0, 20.0 ],
+					"text" : "j.noise≈ @gain -40 @numChannels 4"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.sur.info~", "@description", "A module providing information on a JAG audio signal" ],
+					"args" : [ "@name", "sur.info~", "@description", "A module providing information on a JAG audio signal" ],
 					"bgmode" : 1,
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 997.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 1086.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -183,20 +185,20 @@
 					"id" : "obj-24",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.sur.info~.maxpat",
+					"name" : "sur.info~.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 401.0, 243.0, 150.0, 105.0 ],
+					"patching_rect" : [ 401.0, 230.0, 150.0, 105.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 105.0 ],
-					"varname" : "jmod.sur.info~"
+					"varname" : "sur.info~"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 1 ],
+					"destination" : [ "obj-5", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 1 ]
@@ -205,7 +207,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
@@ -284,62 +286,53 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-9", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jmod.sur.info~.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/spatialization/sur.info~",
-				"patcherrelativepath" : "",
+				"name" : "sur.info~.module.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.info~",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jalg.sur.info~.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/spatialization/sur.info~",
-				"patcherrelativepath" : "",
+				"name" : "sur.info~.view.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.info~",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "sur.info~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.info~",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../library/components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../library/components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../../library/components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
-				"patcherrelativepath" : "../../../library/components/jamomaPath",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.thru.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
-				"patcherrelativepath" : "../../../library/components/thru",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"patcherrelativepath" : "../../../components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -348,11 +341,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.hub.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.oscroute.mxo",
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -364,23 +361,19 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.in.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.route.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.loader.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.loader.mxo",
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{

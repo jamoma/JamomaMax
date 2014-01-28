@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxLibrary
  *
- * @brief The global jamoma object.
+ * @brief The global Jamoma object.
  *
  * @details Functions and resources used by Max objects.
  *
@@ -19,7 +19,8 @@
 #include "JamomaForMax.h"
 
 /** Data Structure for the global jamoma object.
- This object is instantiated once when the jamoma_init() method is first called and the Jamoma environment is loaded.
+ *
+ * @details This object is instantiated once when the jamoma_init() method is first called and the Jamoma environment is loaded.
  */
 typedef struct _jamoma_object
 {
@@ -33,17 +34,19 @@ extern "C" {
 /** Set up the class.
  */
 void		jamoma_object_initclass(void);
-	
+
+
 /** Object instantiation.
- @return		Pointer to the object.
+ @return		Pointer to the instantiated object.
  */
 t_object*	jamoma_object_new();
-	
-/**
- Called when the object is freed.
+
+
+/** Called when the object is freed.
  @param obj		Pointer to the object.
  */
 void		jamoma_object_free(t_jamoma_object *obj);
+
 
 #ifdef __cplusplus
 }

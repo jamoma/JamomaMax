@@ -21,7 +21,7 @@
 #include "commonsyms.h"				// Common symbols used by the Max 4.5 API
 #include "ext_obex.h"				// Max Object Extensions (attributes) Header
 
-#include "TTDSP.h"					// TTBlue Interfaces...
+#include "TTDSP.h"					// Jamoma DSP Interfaces...
 
 #define MAX_NUM_CHANNELS 32
 
@@ -32,7 +32,7 @@ typedef struct _fade{
 	long				attr_mode;
 	float				attr_position;
 	TTUInt16			numChannels;
-	TTAudioObjectBase*		xfade;			// crossfade object from the TTBlue library
+	TTAudioObjectBase*		xfade;			// crossfade object from the Jamoma DSP library
 	TTAudioSignal*		audioIn1;
 	TTAudioSignal*		audioIn2;
 	TTAudioSignal*		audioInControl;

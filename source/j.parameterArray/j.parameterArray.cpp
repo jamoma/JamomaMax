@@ -43,11 +43,8 @@ void		data_new_address(TTPtr self, SymbolPtr msg);
 void		data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt32 index);
 void		data_address(TTPtr self, SymbolPtr name);
 
-#ifndef JMOD_RETURN
 void		data_array_return_value(TTPtr baton, TTValue& v);
-#endif
 
-#ifndef JMOD_MESSAGE
 void		WrappedDataClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		data_bang(TTPtr self);
 void		data_int(TTPtr self, long value);
@@ -58,7 +55,6 @@ void		data_array(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 void		data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-#endif
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
@@ -66,11 +62,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	spec->_wrap = &WrapTTDataClass;
 	spec->_new = &WrappedDataClass_new;
 	spec->_free = &WrappedDataClass_free;
-#ifndef JMOD_MESSAGE
 	spec->_any = &WrappedDataClass_anything;
-#else
-	spec->_any = NULL;
-#endif
 	
 #ifdef JMOD_MESSAGE
 	return wrapTTModularClassAsMaxClass(kTTSym_Data, "j.messageArray", NULL, spec);
@@ -90,8 +82,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 void WrapTTDataClass(WrappedClassPtr c)
 {
 	class_addmethod(c->maxClass, (method)data_assist,						"assist",				A_CANT, 0L);
-	
-#ifndef JMOD_MESSAGE	
+		
 	class_addmethod(c->maxClass, (method)data_bang,							"bang",					0L);
 	class_addmethod(c->maxClass, (method)data_int,							"int",					A_LONG, 0);
 	class_addmethod(c->maxClass, (method)data_float,						"float",				A_FLOAT, 0);
@@ -101,7 +92,6 @@ void WrapTTDataClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)data_inc,							"+",					A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)data_dec,							"-",					A_GIMME, 0);
-#endif
 	
 	class_addmethod(c->maxClass, (method)data_address,						"address",				A_SYM,0);
 }
@@ -125,22 +115,17 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 		return;
 	}
 	
-#ifndef JMOD_MESSAGE
 	// add an inlet for the index
 	x->inlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 1);
 	x->inlets[0] = proxy_new(x, 1, &x->index);	// use this member to store index (because index is used for data array)
 	
-#endif
-	
 	// Make outlets (before attr_args_process)
 	/////////////////////////////////////////////////////////////////////////////////
 	
-#ifndef JMOD_RETURN
 	// Don't create outlets during dynamic changes
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
 	x->outlets[index_out] = outlet_new(x, NULL);					// long outlet to output data index
 	x->outlets[data_out] = outlet_new(x, NULL);						// anything outlet to output data
-#endif
 	
 	x->arraySize = 0;
 	x->arrayIndex = 0;
@@ -176,9 +161,11 @@ void WrappedDataClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
-    delete EXTRA->objectsSorted;
-	
-	free(EXTRA);
+    if (EXTRA) {
+        
+        delete EXTRA->objectsSorted;
+        free(EXTRA);
+    }
 }
 
 void data_new_address(TTPtr self, SymbolPtr relativeAddress)
@@ -288,12 +275,11 @@ void data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol servi
 	
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-#ifndef JMOD_RETURN
+
 	returnValueBaton = new TTValue(self);
 	returnValueBaton->append(index);
 	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&data_array_return_value));
-#endif
 	
 	args.append(returnValueCallback);
 	
@@ -362,7 +348,6 @@ void data_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst)
  	}
 }
 
-#ifndef JMOD_MESSAGE
 void data_bang(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -493,9 +478,7 @@ void data_array(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	else
 		object_error((ObjectPtr)x, "array : the array is empty");
 }
-#endif
 
-#ifndef JMOD_MESSAGE
 void data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -513,9 +496,7 @@ void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
 	selectedObject->sendMessage(TTSymbol("Dec"), v, none);
 }
-#endif
 
-#ifndef JMOD_RETURN
 void data_array_return_value(TTPtr baton, TTValue& v)
 {
 	WrappedModularInstancePtr	x;
@@ -523,7 +504,7 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 	TTValuePtr					b;
 	TTSymbol					type;
 	SymbolPtr					msg, iAdrs;
-	TTUInt32					i, j;
+	TTUInt32					i;
 	long						argc = 0;
 	AtomPtr						argv = NULL;
 	TTBoolean					shifted = NO;
@@ -604,7 +585,7 @@ t_max_err data_get_format(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av)
 	} else {
 		//otherwise allocate memory
 		*ac = 1;
-		if (!(*av = (AtomPtr)getbytes(sizeof(Atom)*(*ac)))) {
+		if (!(*av = (t_atom*)getbytes(sizeof(t_atom)*(*ac)))) {
 			*ac = 0;
 			return MAX_ERR_OUT_OF_MEM;
 		}
@@ -627,4 +608,3 @@ t_max_err data_set_format(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av)
 	}
 	return MAX_ERR_NONE;
 }
-#endif

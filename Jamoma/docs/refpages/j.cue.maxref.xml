@@ -333,6 +333,14 @@
 	</methodlist>
 	<!--ATTRIBUTES-->
 	<attributelist>
+		<attribute name="address" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Select a node in the namespace to store values
+			</digest>
+			<description>
+				Select a node in the namespace to store and recall values. When setting the address attribute, all models and below will get their state stored.
+			</description>
+		</attribute>
 		<attribute name="current" get="1" set="1" type="symbol" size="1">
 			<digest>
 				Current cue in j.cue
@@ -379,6 +387,14 @@
 			</digest>
 			<description>
 				The 'namespace' attribute followed by a j.namespace's named selection will set j.cue to use this namespace selection
+			</description>
+		</attribute>
+		<attribute name="relative" get="1" set="1" type="boolean" size="1">
+			<digest>
+				Automatically set the address attribute to the containing model address
+			</digest>
+			<description>
+				Automatically set the address attribute to the containing model address. Note that setting the address attribute will overide the relative state
 			</description>
 		</attribute>
 	</attributelist>

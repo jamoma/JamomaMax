@@ -14,7 +14,7 @@
   <command address="limiter/preamp">6.000000</command>
   <command address="limiter/release">300.00000</command>
   <command address="limiter/threshold">-1.000000</command>
-  <command address="record/filetype">aiff</command>
+  <command address="record/file/type">aiff</command>
   <command address="record/samptype">int24</command>
   <command address="saturation/depth">10.000000</command>
  </preset>

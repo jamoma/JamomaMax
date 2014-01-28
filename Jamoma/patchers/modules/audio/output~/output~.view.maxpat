@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 340.0, 96.0, 1533.0, 763.0 ],
+		"rect" : [ 147.0, 96.0, 1533.0, 763.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -271,7 +271,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -606,7 +606,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1216,7 +1216,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1735,7 +1735,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"orientation" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 144.0, 316.0, 84.0, 13.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 57.0, 42.0, 165.0, 15.0 ]
@@ -1750,7 +1750,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"orientation" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 144.0, 252.5, 84.0, 13.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 57.0, 26.0, 165.0, 15.0 ]
@@ -2066,8 +2066,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 566.0, 247.0, 155.0, 20.0 ],
-					"text" : "j.remote record/filetype",
+					"patching_rect" : [ 566.0, 247.0, 136.0, 20.0 ],
+					"text" : "j.remote record/file/type",
 					"varname" : "record/filetype"
 				}
 
@@ -2086,7 +2086,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -2612,7 +2612,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "/noModelAddress"
+					"text" : "waiting for a model:address"
 				}
 
 			}
@@ -3224,10 +3224,6 @@
 			}
 , 			{
 				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{

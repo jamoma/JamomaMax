@@ -122,7 +122,7 @@ typedef struct _wrappedModularInstance {
 	WrappedClassPtr							wrappedClassDefinition;		///< A pointer to the class definition
 
 #ifndef ARRAY_EXTERNAL
-	TTObjectBasePtr							wrappedObject;				///< The instance of the TTBlue object we are wrapping
+	TTObjectBasePtr							wrappedObject;				///< The instance of the Jamoma object we are wrapping
 	TTSubscriberPtr							subscriberObject;			///< The instance of a TTSubscriber object used to 
 																		///< register the wrapped object in the tree structure
 #endif
@@ -198,7 +198,7 @@ TTErr		removeInternals_data(TTPtr self, TTAddress address, TTSymbol name);
 TTObjectBasePtr	getSelectedObject(WrappedModularInstancePtr x);
 
 
-/** Wrap a TTBlue class as a Max class.
+/** Wrap a Jamoma class as a Max class.
 */
 TTErr		wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxClassName, WrappedClassPtr* c, ModularSpec* specificities);
 
@@ -249,11 +249,11 @@ t_max_err	wrappedModularClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* arg
 t_max_err	wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomPtr argv);
 
 
-/**
+/** This method handles "anything" messages to the Max object that wraps the #TTModularClass.
  @param self		This object
  @param s			Message passed to this object
- @param argc		Atom array count (length)
- @param argv		Pointer to the atom array
+ @param argc		Number of arguments for the message.
+ @param argv		The arguments of the message as a pointer to an atom array
 */
 void		wrappedModularClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
 
