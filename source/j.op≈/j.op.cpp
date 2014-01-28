@@ -21,7 +21,7 @@
 // Data Structure for this object
 struct Op {
    	Object					obj;
-	TTAudioGraphObjectPtr	audioGraphObject;
+	TTAudioGraphObjectBasePtr	audioGraphObject;
 	TTPtr					outlet;
 	TTPtr					unused;				// NULL pointer to signal end of JAG outlets to the class wrapper functions
 	TTPtr					inlet;				// proxy for the right inlet
@@ -39,7 +39,7 @@ void   	OpAssist		(OpPtr self, void* b, long msg, long arg, char* dst);
 TTErr  	OpResetAudio	(OpPtr self, long vectorSize);
 TTErr  	OpSetupAudio	(OpPtr self);
 //TTErr	OpSetup			(OpPtr self);
-TTErr  	OpConnectAudio	(OpPtr self, TTAudioGraphObjectPtr audioSourceObject, long sourceOutletNumber);
+TTErr  	OpConnectAudio	(OpPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
 TTErr	OpDropAudio		(OpPtr self, long inletNumber, ObjectPtr sourceMaxObject, long sourceOutletNumber);
 MaxErr 	OpSetOperator	(OpPtr self, void* attr, AtomCount argc, AtomPtr argv);
 MaxErr	OpGetOperator	(OpPtr self, ObjectPtr attr, AtomCount* argc, AtomPtr* argv);
@@ -182,7 +182,7 @@ TTErr OpSetup(OpPtr self)
  */
 
 
-TTErr OpConnectAudio(OpPtr self, TTAudioGraphObjectPtr audioSourceObject, long sourceOutletNumber)
+TTErr OpConnectAudio(OpPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
 {
 	long inletNumber = proxy_getinlet(SELF);
 	
@@ -194,7 +194,7 @@ TTErr OpConnectAudio(OpPtr self, TTAudioGraphObjectPtr audioSourceObject, long s
 
 TTErr OpDropAudio(OpPtr self, long inletNumber, ObjectPtr sourceMaxObject, long sourceOutletNumber)
 {
-	TTAudioGraphObjectPtr	sourceObject = NULL;
+	TTAudioGraphObjectBasePtr	sourceObject = NULL;
 	TTErr 					err;
 	
 	if (inletNumber == 1)

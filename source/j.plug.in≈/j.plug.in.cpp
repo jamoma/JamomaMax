@@ -15,7 +15,7 @@
 // Data Structure for this object
 typedef struct PlugIn {
     Object					obj;
-	TTAudioGraphObjectPtr	audioGraphObject;
+	TTAudioGraphObjectBasePtr	audioGraphObject;
 	TTPtr					audioGraphOutlet;
 	long					attrSidechain;
 };

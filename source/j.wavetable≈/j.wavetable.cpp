@@ -20,7 +20,7 @@
 // Data Structure for this object
 typedef struct Oscil {
     t_object				obj;
-	TTAudioGraphObjectPtr	audioGraphObject;
+	TTAudioGraphObjectBasePtr	audioGraphObject;
 	TTPtr					audioGraphOutlet;
 	SymbolPtr				attrWaveform;
 	SymbolPtr				attrInterpolation;
@@ -37,7 +37,7 @@ void		OscilFree(OscilPtr self);
 void		OscilAssist(OscilPtr self, void* b, long msg, long arg, char* dst);
 TTErr		OscilReset(OscilPtr self);
 TTErr		OscilSetup(OscilPtr self);
-TTErr		OscilConnectAudio(OscilPtr self, TTAudioGraphObjectPtr audioSourceObject, long sourceOutletNumber);
+TTErr		OscilConnectAudio(OscilPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
 TTErr		OscilDropAudio(OscilPtr self, long inletNumber, ObjectPtr sourceMaxObject, long sourceOutletNumber);
 MaxErr		OscilSetMode(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv);
 MaxErr		OscilSetInterpolation(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv);
@@ -163,7 +163,7 @@ TTErr OscilSetup(OscilPtr self)
 }
 
 
-TTErr OscilConnectAudio(OscilPtr self, TTAudioGraphObjectPtr audioSourceObject, long sourceOutletNumber)
+TTErr OscilConnectAudio(OscilPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
 {
 	self->audioGraphObject->removeAudioFlag(kTTAudioGraphGenerator);
 	self->audioGraphObject->setAttributeValue(TT("numAudioInlets"), 1);
@@ -173,7 +173,7 @@ TTErr OscilConnectAudio(OscilPtr self, TTAudioGraphObjectPtr audioSourceObject, 
 
 TTErr OscilDropAudio(OscilPtr self, long inletNumber, ObjectPtr sourceMaxObject, long sourceOutletNumber)
 {
-	TTAudioGraphObjectPtr	sourceObject = NULL;
+	TTAudioGraphObjectBasePtr	sourceObject = NULL;
 	TTErr 					err;
 	
 	self->audioGraphObject->setAttributeValue(TT("numAudioInlets"), 0);

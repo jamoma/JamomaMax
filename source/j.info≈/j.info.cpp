@@ -20,7 +20,7 @@
 // Data Structure for this object
 struct Info {
     t_object				obj;
-	TTAudioGraphObjectPtr	audioGraphObject;	// we wrap a simple 'thru' audiograph object
+	TTAudioGraphObjectBasePtr	audioGraphObject;	// we wrap a simple 'thru' audiograph object
 	TTPtr					outletSmartSignal;	// outlet for passing the input to the output, and so we can be pulled
 	TTPtr					unused;				// this is an unused ptr, always set to NULL, to signal the end of the JAG outlets
 	TTPtr					outletSampleRate;
@@ -41,7 +41,7 @@ void	InfoFree(InfoPtr self);
 void	InfoAssist(InfoPtr self, void* b, long msg, long arg, char* dst);
 void	InfoBang(InfoPtr self);
 void	InfoQfn(InfoPtr self);
-TTErr	InfoConnect(InfoPtr self, TTAudioGraphObjectPtr audioSourceObject, long sourceOutletNumber);
+TTErr	InfoConnect(InfoPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
 
 
 // Globals
@@ -153,7 +153,7 @@ void InfoQfn(InfoPtr self)
 }
 
 
-TTErr InfoConnect(InfoPtr self, TTAudioGraphObjectPtr newAudioSourceObject, long sourceOutletNumber)
+TTErr InfoConnect(InfoPtr self, TTAudioGraphObjectBasePtr newAudioSourceObject, long sourceOutletNumber)
 {
 	TTErr err = MaxAudioGraphConnect(ObjectPtr(self), newAudioSourceObject, sourceOutletNumber);
 	

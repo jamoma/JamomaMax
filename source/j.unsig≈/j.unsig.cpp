@@ -20,7 +20,7 @@
 // Data Structure for this object
 struct Out {
     t_pxobject					obj;
-	TTAudioGraphObjectPtr		audioGraphObject;
+	TTAudioGraphObjectBasePtr		audioGraphObject;
 	TTAudioSignalPtr			audioSignal;
 	TTUInt16					maxNumChannels;	// the number of inlets or outlets, which is an argument at instantiation
 	TTUInt16					numChannels;	// the actual number of channels to use, set by the dsp method
@@ -47,7 +47,7 @@ MaxErr	OutNotify(OutPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPt
 void	OutQFn(OutPtr self);
 void	OutAssist(OutPtr self, void* b, long msg, long arg, char* dst);
 TTErr	OutReset(OutPtr self, long vectorSize);
-TTErr	OutConnect(OutPtr self, TTAudioGraphObjectPtr audioSourceObject, long sourceOutletNumber);
+TTErr	OutConnect(OutPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
 void	OutIterateResetCallback(OutPtr self, ObjectPtr obj);
 void	OutIterateSetupCallback(OutPtr self, ObjectPtr obj);
 void	OutAttachToPatchlinesForPatcher(OutPtr self, ObjectPtr patcher);
@@ -246,7 +246,7 @@ TTErr OutReset(OutPtr self, long vectorSize)
 }
 
 
-TTErr OutConnect(OutPtr self, TTAudioGraphObjectPtr audioSourceObject, long sourceOutletNumber)
+TTErr OutConnect(OutPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
 {
 	self->hasConnections = true;
 	return self->audioGraphObject->connectAudio(audioSourceObject, sourceOutletNumber);

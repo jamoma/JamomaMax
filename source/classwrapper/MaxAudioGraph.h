@@ -219,7 +219,7 @@ TTErr MaxAudioGraphDrop(ObjectPtr self, long inletNumber, ObjectPtr sourceMaxObj
  * @param returnedAudioGraphObject	Pointer to the wrapped Jamoma Audio Graph object.
  * @return						#TTErr error code if the method fails to execute, else #kTTErrNone.
  */
-TTErr MaxAudioGraphObject(ObjectPtr self, TTAudioGraphObjectPtr* returnedAudioGraphObject);
+TTErr MaxAudioGraphObject(ObjectPtr self, TTAudioGraphObjectBasePtr* returnedAudioGraphObject);
 
 
 /** 
@@ -229,7 +229,7 @@ TTErr MaxAudioGraphObject(ObjectPtr self, TTAudioGraphObjectPtr* returnedAudioGr
  * @param sourceOutletNumber    What outlet of the upstream object that is now connecting to this object.
  * @return						#TTErr error code if the method fails to execute, else #kTTErrNone.
  */
-TTErr MaxAudioGraphConnect(ObjectPtr x, TTAudioGraphObjectPtr audioSourceObject, TTUInt16 sourceOutletNumber);
+TTErr MaxAudioGraphConnect(ObjectPtr x, TTAudioGraphObjectBasePtr audioSourceObject, TTUInt16 sourceOutletNumber);
 
 
 /** 
