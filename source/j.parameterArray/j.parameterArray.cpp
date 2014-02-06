@@ -44,6 +44,7 @@ void		data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol serv
 void		data_address(TTPtr self, SymbolPtr name);
 
 void		data_array_return_value(TTPtr baton, TTValue& v);
+void		data_edit_array(TTPtr self, TTValue& array);
 
 void		WrappedDataClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		data_bang(TTPtr self);
@@ -310,6 +311,30 @@ void data_address(TTPtr self, SymbolPtr address)
 
                 // rebuild internals
                 defer(self,(method)data_new_address, address, 0, NULL);
+                
+                // for array mode : output the array once afterward
+                if (x->arrayAttrFormat == gensym("array")) {
+                    
+                    TTValue     array;
+                    SymbolPtr	msg;
+                    long		argc = 0;
+                    AtomPtr		argv = NULL;
+                    TTBoolean	shifted = NO;
+                    
+                    data_edit_array(self, array);
+                    
+                    jamoma_ttvalue_to_typed_Atom(array, &msg, &argc, &argv, shifted);
+                    
+                    // avoid blank before data
+                    if (msg == _sym_nothing)
+                        outlet_atoms(x->outlets[data_out], argc, argv);
+                    else
+                        outlet_anything(x->outlets[data_out], msg, argc, argv);
+                    
+                    if (shifted)
+                        argv--;
+                    sysmem_freeptr(argv);
+                }
             }
         }
         
@@ -500,16 +525,14 @@ void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void data_array_return_value(TTPtr baton, TTValue& v)
 {
 	WrappedModularInstancePtr	x;
-	TTValue						keys, array, object, grab, t;
+	TTValue                     array;
 	TTValuePtr					b;
-	TTSymbol					type;
 	SymbolPtr					msg, iAdrs;
 	TTUInt32					i;
 	long						argc = 0;
 	AtomPtr						argv = NULL;
 	TTBoolean					shifted = NO;
-    TTSymbol                    key;
-	TTObjectBasePtr             aData;
+
 	
 	// unpack baton (a t_object* and the index of the value)
 	b = (TTValuePtr)baton;
@@ -532,32 +555,7 @@ void data_array_return_value(TTPtr baton, TTValue& v)
         if (EXTRA->changingAddress)
             return;
         
-        // get each value from the data object itself
-        for (EXTRA->objectsSorted->begin();
-             EXTRA->objectsSorted->end();
-             EXTRA->objectsSorted->next()) {
-            
-            aData = EXTRA->objectsSorted->current()[0];
-            
-            // try to get the value or the value default
-            if (aData->getAttributeValue(kTTSym_value, grab))
-                aData->getAttributeValue(kTTSym_valueDefault, grab);
-            
-            // if there is no value
-            if (grab.size() == 0) {
-                
-                aData->getAttributeValue(kTTSym_type, t);
-                
-                type = t[0];
-                
-                if (type == kTTSym_string)
-                    grab = kTTSym_none;
-                else
-                    grab = 0;
-            }
-            
-            array.prepend(grab);
-        }
+        data_edit_array(x, array);
 		
 		jamoma_ttvalue_to_typed_Atom(array, &msg, &argc, &argv, shifted);
 	}
@@ -574,6 +572,41 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 	if (shifted)
 		argv--;
 	sysmem_freeptr(argv);
+}
+
+void data_edit_array(TTPtr self, TTValue& array)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTValue						keys, object, grab, t;
+    TTSymbol                    key, type;
+	TTObjectBasePtr             aData;
+    
+    // get each value from the data object itself
+    for (EXTRA->objectsSorted->begin();
+         EXTRA->objectsSorted->end();
+         EXTRA->objectsSorted->next()) {
+        
+        aData = EXTRA->objectsSorted->current()[0];
+        
+        // try to get the value or the value default
+        if (aData->getAttributeValue(kTTSym_value, grab))
+            aData->getAttributeValue(kTTSym_valueDefault, grab);
+        
+        // if there is no value
+        if (grab.size() == 0) {
+            
+            aData->getAttributeValue(kTTSym_type, t);
+            
+            type = t[0];
+            
+            if (type == kTTSym_string)
+                grab = kTTSym_none;
+            else
+                grab = 0;
+        }
+        
+        array.prepend(grab);
+    }
 }
 
 t_max_err data_get_format(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av)
