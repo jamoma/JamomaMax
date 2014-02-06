@@ -20,9 +20,9 @@
 
 // Data Structure for this object
 struct Unpack {
-   	Object				obj;
-	TTGraphObjectPtr	graphObject;
-	TTPtr				graphOutlets[16];	// this _must_ be third (for the setup call)
+   	Object				    obj;
+	TTGraphObjectBasePtr	graphObject;
+	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
 	TTObjectBasePtr			callback;		// TTCallback object that attaches to the graphObject to be notified when there is new data to output.
 };
 typedef Unpack* UnpackPtr;

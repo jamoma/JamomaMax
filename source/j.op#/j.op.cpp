@@ -19,11 +19,11 @@
 
 // Data Structure for this object
 struct Op {
-   	Object				obj;
-	TTGraphObjectPtr	graphObject;
-	TTPtr				graphOutlets[16];	// this _must_ be third (for the setup call)
-	SymbolPtr			attrOperator;
-	TTFloat32			attrOperand;
+   	Object				    obj;
+	TTGraphObjectBasePtr	graphObject;
+	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
+	SymbolPtr			    attrOperator;
+	TTFloat32			    attrOperand;
 };
 typedef Op* OpPtr;
 

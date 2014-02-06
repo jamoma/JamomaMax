@@ -19,11 +19,11 @@
 
 // Data Structure for this object
 struct MidiOut {
-   	Object				obj;
-	TTGraphObjectPtr	graphObject;
-	TTPtr				graphOutlets[16];	// this _must_ be third (for the setup call)
-	SymbolPtr			attrKey;
-	SymbolPtr			attrValue;
+   	Object				    obj;
+	TTGraphObjectBasePtr	graphObject;
+	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
+	SymbolPtr			    attrKey;
+    SymbolPtr			    attrValue;
 };
 typedef MidiOut* MidiOutPtr;
 
