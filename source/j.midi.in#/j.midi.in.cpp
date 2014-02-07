@@ -19,13 +19,13 @@
 
 // Data Structure for this object
 struct MidiIn {
-    Object				obj;
-	TTGraphObjectPtr	graphObject;		// this _must_ be second
-	TTPtr				graphOutlets[2];	// this _must_ be third (for the setup call) : null-terminated array
-	TTDictionaryPtr		graphDictionary;
-	ObjectPtr			patcher;			// the patcher -- cached for iterating to make connections
-	ObjectPtr			patcherview;		// first view of the top-level patcher (for dirty notifications)
-	TTPtr				qelem;				// for clumping patcher dirty notifications
+    Object				    obj;
+	TTGraphObjectBasePtr	graphObject;		// this _must_ be second
+	TTPtr				    graphOutlets[2];	// this _must_ be third (for the setup call) : null-terminated array
+	TTDictionaryPtr		    graphDictionary;
+	ObjectPtr			    patcher;			// the patcher -- cached for iterating to make connections
+    ObjectPtr			    patcherview;		// first view of the top-level patcher (for dirty notifications)
+    TTPtr				    qelem;				// for clumping patcher dirty notifications
 };
 typedef MidiIn* MidiInPtr;
 

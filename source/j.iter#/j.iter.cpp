@@ -21,7 +21,7 @@
 // Data Structure for this object
 struct Iter {
    	Object				obj;
-	TTGraphObjectPtr	graphObject;
+	TTGraphObjectBasePtr	graphObject;
 	TTPtr				graphOutlets[16];	// this _must_ be third (for the setup call)
 	TTObjectBasePtr			callback;			// TTCallback object that attaches to the graphObject to be notified when there is new data to output.
 };

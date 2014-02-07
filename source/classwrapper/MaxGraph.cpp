@@ -16,7 +16,7 @@
 // Data Structure for this object
 typedef struct _wrappedInstance {
     t_object				obj;						///< Max audio object header
-	TTGraphObjectPtr		graphObject;				///< ** must be second **
+	TTGraphObjectBasePtr	graphObject;				///< ** must be second **
 	TTPtr					graphOutlets[MAX_NUM_INLETS];			///< Array of outlets, may eventually want this to be more dynamic
 	TTPtr					inlets[MAX_NUM_INLETS];					///< Array of proxy inlets beyond the first inlet
 	WrappedClassPtr			wrappedClassDefinition;		///< A pointer to the class definition
@@ -126,7 +126,7 @@ TTErr MaxGraphSetup(ObjectPtr x)
 }
 
 
-TTErr MaxGraphConnect(ObjectPtr x, TTGraphObjectPtr audioSourceObject, TTUInt16 sourceOutletNumber)
+TTErr MaxGraphConnect(ObjectPtr x, TTGraphObjectBasePtr audioSourceObject, TTUInt16 sourceOutletNumber)
 {
 	WrappedInstancePtr	self = WrappedInstancePtr(x);
 	long				inletNumber = proxy_getinlet(SELF);
@@ -137,9 +137,9 @@ TTErr MaxGraphConnect(ObjectPtr x, TTGraphObjectPtr audioSourceObject, TTUInt16 
 
 TTErr MaxGraphDrop(ObjectPtr x, long inletNumber, ObjectPtr sourceMaxObject, long sourceOutletNumber)
 {
-	WrappedInstancePtr	self = WrappedInstancePtr(x);
-	TTGraphObjectPtr	sourceObject = NULL;
-	TTErr 				err;
+	WrappedInstancePtr	    self            = WrappedInstancePtr(x);
+	TTGraphObjectBasePtr    sourceObject    = NULL;
+	TTErr 				    err;
 	
 	err = (TTErr)long(object_method(sourceMaxObject, GENSYM("graph.object"), &sourceObject));
 	if (self->graphObject && sourceObject && !err)
@@ -148,7 +148,7 @@ TTErr MaxGraphDrop(ObjectPtr x, long inletNumber, ObjectPtr sourceMaxObject, lon
 }
 
 
-TTErr MaxGraphObject(ObjectPtr x, TTGraphObjectPtr* returnedGraphObject)
+TTErr MaxGraphObject(ObjectPtr x, TTGraphObjectBasePtr* returnedGraphObject)
 {
 	WrappedInstancePtr	self = WrappedInstancePtr(x);
 	
