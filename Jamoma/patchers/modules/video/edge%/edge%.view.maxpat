@@ -381,8 +381,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 6.0, 153.0, 310.0, 19.0 ],
-					"text" : "j.view #1",
+					"patching_rect" : [ 6.0, 153.0, 40.0, 19.0 ],
+					"text" : "j.view",
 					"varname" : "j.model"
 				}
 
@@ -419,7 +419,7 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/edge%_view.1"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -508,7 +508,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.pwindow.mouse.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/pwindow.mouse",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/pwindow.mouse",
 				"patcherrelativepath" : "../../../components/pwindow.mouse",
 				"type" : "JSON",
 				"implicit" : 1
