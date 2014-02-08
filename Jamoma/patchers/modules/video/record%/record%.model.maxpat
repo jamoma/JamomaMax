@@ -120,7 +120,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 28.0, 314.0, 486.0, 19.0 ],
-					"text" : "j.model #1 @description \"Record video to QuickTime movie.\""
+					"text" : "j.model @description \"Record video to QuickTime movie.\""
 				}
 
 			}

@@ -65,7 +65,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 27.0, 292.0, 496.0, 19.0 ],
-					"text" : "j.model #1 @description \"Output to an OpenGL window\""
+					"text" : "j.model @description \"Output to an OpenGL window\""
 				}
 
 			}

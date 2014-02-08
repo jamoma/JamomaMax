@@ -60,7 +60,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 350.0, 238.0, 222.0, 19.0 ],
-					"text" : "j.model #1 @description \"simple qmetro\""
+					"text" : "j.model @description \"simple qmetro\""
 				}
 
 			}

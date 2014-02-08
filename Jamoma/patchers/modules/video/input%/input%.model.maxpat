@@ -51,7 +51,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 7.25, 380.0, 370.75, 19.0 ],
-					"text" : "j.model #1 @tag video"
+					"text" : "j.model @tag video"
 				}
 
 			}

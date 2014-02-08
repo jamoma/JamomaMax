@@ -38,7 +38,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 30.0, 282.0, 102.0, 55.0 ],
-					"text" : "j.model #1 @description \"Simple image controls\""
+					"text" : "j.model @description \"Simple image controls\""
 				}
 
 			}

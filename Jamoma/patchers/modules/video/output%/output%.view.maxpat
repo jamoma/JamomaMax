@@ -191,7 +191,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 90.0, 118.0, 235.0, 19.0 ],
-					"text" : "j.view #1",
+					"text" : "j.view",
 					"varname" : "j.model"
 				}
 
