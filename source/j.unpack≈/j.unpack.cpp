@@ -21,7 +21,7 @@
 // Data Structure for this object
 struct Unpack {
     t_pxobject					obj;
-	TTAudioGraphObjectPtr		audioGraphObject;
+	TTAudioGraphObjectBasePtr		audioGraphObject;
 	TTAudioSignalPtr			audioSignal;
 	TTUInt16					maxNumChannels;	// the number of inlets or outlets, which is an argument at instantiation
 	TTUInt16					numChannels;	// the actual number of channels to use, set by the dsp method
@@ -45,7 +45,7 @@ MaxErr	UnpackNotify(UnpackPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender
 void	UnpackQFn(UnpackPtr self);
 void	UnpackAssist(UnpackPtr self, void* b, long msg, long arg, char* dst);
 TTErr	UnpackReset(UnpackPtr self, long vectorSize);
-TTErr	UnpackConnect(UnpackPtr self, TTAudioGraphObjectPtr audioSourceObject, long sourceOutletNumber);
+TTErr	UnpackConnect(UnpackPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
 void	UnpackIterateResetCallback(UnpackPtr self, ObjectPtr obj);
 void	UnpackIterateSetupCallback(UnpackPtr self, ObjectPtr obj);
 void	UnpackAttachToPatchlinesForPatcher(UnpackPtr self, ObjectPtr patcher);
@@ -235,7 +235,7 @@ TTErr UnpackReset(UnpackPtr self, long vectorSize)
 }
 
 
-TTErr UnpackConnect(UnpackPtr self, TTAudioGraphObjectPtr audioSourceObject, long sourceOutletNumber)
+TTErr UnpackConnect(UnpackPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
 {
 	self->hasConnections = true;
 	return self->audioGraphObject->connectAudio(audioSourceObject, sourceOutletNumber);

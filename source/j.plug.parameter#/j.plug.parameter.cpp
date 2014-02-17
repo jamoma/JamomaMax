@@ -14,18 +14,18 @@
 
 // Data Structure for this object
 typedef struct PlugParameter {
-   	Object				obj;
-	TTGraphObjectPtr	graphObject;		// this _must_ be second
-	TTPtr				graphOutlets[16];	// this _must_ be third (for the setup call)
-	TTDictionaryPtr		graphDictionary;
-	ObjectPtr			patcher;
-	ObjectPtr			patcherview;
-	TTPtr				qelem;				// for clumping dirty events together
+   	Object				    obj;
+	TTGraphObjectBasePtr	graphObject;		// this _must_ be second
+	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
+	TTDictionaryPtr		    graphDictionary;
+	ObjectPtr			    patcher;
+	ObjectPtr			    patcherview;
+	TTPtr				    qelem;				// for clumping dirty events together
 	
-	SymbolPtr			name;
-	double				range[2];
-	SymbolPtr			style;
-	double				defaultValue;
+	SymbolPtr			    name;
+	double				    range[2];
+    SymbolPtr   			style;
+	double				    defaultValue;
 };
 typedef PlugParameter* PlugParameterPtr;
 

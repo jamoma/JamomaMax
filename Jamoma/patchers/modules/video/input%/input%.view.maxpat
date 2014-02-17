@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 121.0, 106.0, 703.0, 289.0 ],
+		"rect" : [ 694.0, 116.0, 703.0, 289.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -29,6 +29,22 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"args" : [ "#1" ],
+					"id" : "obj-3",
+					"maxclass" : "bpatcher",
+					"name" : "input%.ui.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, -20.0 ],
+					"patching_rect" : [ 377.666656, 82.5, 249.0, 49.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 4.0, 19.0, 231.0, 49.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-15",
@@ -59,6 +75,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-99",
@@ -94,6 +111,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-96",
@@ -146,6 +164,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-5",
@@ -153,7 +172,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 354.0, 64.0, 90.0, 19.0 ],
+					"patching_rect" : [ 354.0, 52.0, 90.0, 19.0 ],
 					"text" : "j.remote source",
 					"varname" : "source_mode[1]"
 				}
@@ -172,7 +191,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 354.0, 29.0, 76.0, 19.0 ],
+					"patching_rect" : [ 325.5, 25.5, 76.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 121.0, 0.0, 67.0, 19.0 ],
 					"varname" : "source_mode"
@@ -181,33 +200,14 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "#0_" ],
-					"frozen_box_attributes" : [ "args" ],
-					"id" : "obj-9",
-					"lockeddragscroll" : 1,
-					"maxclass" : "bpatcher",
-					"name" : "input%.ui.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, -120.0 ],
-					"patching_rect" : [ 377.666656, 99.0, 246.0, 46.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 1.0, 21.0, 240.0, 47.0 ],
-					"varname" : "jalg.input%.ui"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-17",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 16.0, 141.0, 294.0, 31.0 ],
+					"patching_rect" : [ 16.0, 141.0, 584.0, 19.0 ],
 					"text" : "j.view @description \"Input from either a camera - video file - noise synthesis - or a real time screen capture.\"",
 					"varname" : "j.model"
 				}
@@ -239,7 +239,6 @@
 , 			{
 				"box" : 				{
 					"background" : 1,
-					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
 					"id" : "obj-34",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -247,7 +246,7 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/input%.view"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -290,20 +289,20 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 363.5, 96.0, 340.0, 96.0, 340.0, 23.0, 363.5, 23.0 ],
-					"source" : [ "obj-5", 0 ]
+					"source" : [ "obj-5", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-5", 1 ]
+					"midpoints" : [ 363.5, 86.0, 312.0, 86.0, 312.0, 14.0, 335.0, 14.0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
@@ -346,7 +345,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "input%.ui.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -360,19 +359,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.textslider.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]

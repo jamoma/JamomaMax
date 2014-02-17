@@ -20,7 +20,7 @@
  */
 struct Pack {
     t_pxobject				obj;					///< Pointer to Max object struct, this alwasy needs to be the first member of the struct.
-	TTAudioGraphObjectPtr	audioGraphObject;		///< Pointer to an embedded Jamoma AudioGraph object serving as a generator for the downstream AudioGraph.
+	TTAudioGraphObjectBasePtr	audioGraphObject;		///< Pointer to an embedded Jamoma AudioGraph object serving as a generator for the downstream AudioGraph.
 	TTPtr					audioGraphObjectOutlet; ///< Pointer to an embedded Jamoma AudioGraph outlet used to interface sith downstream AudioGraph objects.
 	TTUInt32				maxNumChannels;			///< The maximum number of MSP audio channels this object can pack onto an AudioGraph signal, set as an argument at object instantiation time.
 	TTUInt32				numChannels;			///< The actual number of channels to use. This is set by the #PackDsp64 method when the MSP processing chain is being compiled, based on what inlets of j.pack≈ that have incoming MSP audio signals connected.
@@ -79,7 +79,7 @@ TTErr	PackSetup(PackPtr self);
 /** TODO: Do this method exist at all? It is lacking from j.pack.cpp...
  @param self				Pointer to this instance of j.in≈.
  */
-TTErr	PackObject(PackPtr self, TTAudioGraphObjectPtr audioSourceObject);
+TTErr	PackObject(PackPtr self, TTAudioGraphObjectBasePtr audioSourceObject);
 
 
 /** Performs the actual DSP processing on incomming MSP audio signals, packing them into a multichannel source for AudioGraph.

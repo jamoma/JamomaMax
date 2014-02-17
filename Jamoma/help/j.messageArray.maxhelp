@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 161.0, 181.0, 1038.0, 771.0 ],
+		"rect" : [ 2185.0, 198.0, 1038.0, 771.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -101,11 +101,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 161.0, 207.0, 1038.0, 745.0 ],
+						"rect" : [ 2185.0, 224.0, 1038.0, 745.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -128,6 +128,53 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"bubble" : 1,
+									"bubbletextmargin" : 10,
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-23",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 463.0, 475.0, 175.0, 76.0 ],
+									"text" : "You may directly send values to specific instance using object inlet.",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-16",
+									"maxclass" : "number",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "int", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 392.0, 503.0, 50.0, 20.0 ],
+									"presentation_rect" : [ 392.0, 504.0, 0.0, 0.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-9",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "float", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 335.0, 503.0, 50.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"frgb" : 0.0,
@@ -136,7 +183,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 724.0, 573.0, 182.0, 40.0 ],
+									"patching_rect" : [ 799.0, 334.0, 174.0, 40.0 ],
 									"text" : "This also applies to j.send"
 								}
 
@@ -151,7 +198,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 574.0, 562.0, 50.0, 20.0 ]
+									"patching_rect" : [ 649.0, 323.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -164,7 +211,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 574.0, 583.0, 112.0, 20.0 ],
+									"patching_rect" : [ 649.0, 344.0, 112.0, 20.0 ],
 									"text" : "j.send /object.*"
 								}
 
@@ -180,7 +227,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 724.0, 473.0, 167.0, 54.0 ],
+									"patching_rect" : [ 799.0, 234.0, 167.0, 54.0 ],
 									"text" : "Of course, all instances can be addressed using a wildcard symbol."
 								}
 
@@ -196,7 +243,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 724.0, 343.0, 188.0, 69.0 ],
+									"patching_rect" : [ 799.0, 104.0, 188.0, 69.0 ],
 									"text" : "Specific instances can be addressed using the parameter name + instance number as below"
 								}
 
@@ -211,7 +258,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 574.0, 472.0, 50.0, 20.0 ]
+									"patching_rect" : [ 649.0, 233.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -224,7 +271,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 574.0, 490.5, 123.0, 20.0 ],
+									"patching_rect" : [ 649.0, 251.5, 123.0, 20.0 ],
 									"text" : "j.remote /object.*"
 								}
 
@@ -239,7 +286,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 580.5, 349.5, 50.0, 20.0 ]
+									"patching_rect" : [ 655.5, 110.5, 50.0, 20.0 ]
 								}
 
 							}
@@ -252,7 +299,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 580.5, 369.5, 125.0, 20.0 ],
+									"patching_rect" : [ 655.5, 130.5, 125.0, 20.0 ],
 									"text" : "j.remote /object.2"
 								}
 
@@ -266,8 +313,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 179.0, 520.0, 73.0, 20.0 ],
-									"presentation_rect" : [ 100.0, 374.0, 0.0, 0.0 ],
+									"patching_rect" : [ 106.0, 611.0, 73.0, 20.0 ],
 									"text" : "single value"
 								}
 
@@ -281,8 +327,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 347.5, 520.0, 38.0, 20.0 ],
-									"presentation_rect" : [ 266.5, 374.0, 0.0, 0.0 ],
+									"patching_rect" : [ 274.5, 611.0, 38.0, 20.0 ],
 									"text" : "index"
 								}
 
@@ -297,8 +342,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 128.0, 520.0, 50.0, 20.0 ],
-									"presentation_rect" : [ 49.0, 374.0, 0.0, 0.0 ]
+									"patching_rect" : [ 55.0, 611.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -312,8 +356,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 296.5, 520.0, 50.0, 20.0 ],
-									"presentation_rect" : [ 215.5, 374.0, 0.0, 0.0 ]
+									"patching_rect" : [ 223.5, 611.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -327,7 +370,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 128.0, 412.0, 50.0, 20.0 ]
+									"patching_rect" : [ 55.0, 503.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -341,7 +384,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 128.0, 440.0, 89.0, 18.0 ],
+									"patching_rect" : [ 55.0, 531.0, 89.0, 18.0 ],
 									"text" : "array/resize $1",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -370,10 +413,10 @@
 									"fontsize" : 12.0,
 									"id" : "obj-1",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 128.0, 468.0, 356.0, 20.0 ],
+									"patching_rect" : [ 55.0, 559.0, 356.0, 20.0 ],
 									"text" : "j.messageArray object.[6] @type decimal @description Hello"
 								}
 
@@ -441,7 +484,7 @@
 									"fontsize" : 12.0,
 									"id" : "obj-2",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 55.0, 266.0, 400.0, 20.0 ],
@@ -470,6 +513,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-1", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-16", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-27", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -491,7 +543,7 @@
 									"destination" : [ "obj-24", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 583.5, 514.0, 564.0, 514.0, 564.0, 469.0, 583.5, 469.0 ],
+									"midpoints" : [ 658.5, 275.0, 639.0, 275.0, 639.0, 230.0, 658.5, 230.0 ],
 									"source" : [ "obj-25", 0 ]
 								}
 
@@ -501,7 +553,7 @@
 									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 137.5, 461.0, 137.5, 461.0 ],
+									"midpoints" : [ 64.5, 552.0, 64.5, 552.0 ],
 									"source" : [ "obj-26", 0 ]
 								}
 
@@ -511,7 +563,7 @@
 									"destination" : [ "obj-19", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 590.0, 389.5, 570.5, 389.5, 570.5, 344.5, 590.0, 344.5 ],
+									"midpoints" : [ 665.0, 150.5, 645.5, 150.5, 645.5, 105.5, 665.0, 105.5 ],
 									"source" : [ "obj-27", 0 ]
 								}
 
@@ -531,6 +583,16 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 344.5, 554.5, 64.5, 554.5 ],
+									"source" : [ "obj-9", 0 ]
 								}
 
 							}
@@ -568,7 +630,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -771,7 +833,7 @@
 									"fontsize" : 12.0,
 									"id" : "obj-1",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 66.0, 357.0, 343.0, 20.0 ],
@@ -896,7 +958,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1136,7 +1198,7 @@
 									"fontsize" : 12.0,
 									"id" : "obj-25",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 733.0, 301.5, 270.0, 20.0 ],
@@ -1252,7 +1314,7 @@
 									"fontsize" : 12.0,
 									"id" : "obj-1",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 326.0, 276.0, 20.0 ],
@@ -1441,7 +1503,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

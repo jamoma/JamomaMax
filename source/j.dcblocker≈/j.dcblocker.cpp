@@ -20,7 +20,7 @@
 // Data Structure for this object
 typedef struct DCBlocker {
     t_object				obj;
-	TTAudioGraphObjectPtr	audioGraphObject;
+	TTAudioGraphObjectBasePtr	audioGraphObject;
 	TTPtr					audioGraphOutlet;
 	long					attrBypass;
 };
@@ -34,7 +34,7 @@ void			DCBlockerAssist(DCBlockerPtr self, void* b, long msg, long arg, char* dst
 void			DCBlockerClear(DCBlockerPtr self);
 TTErr			DCBlockerReset(DCBlockerPtr self);
 TTErr			DCBlockerSetup(DCBlockerPtr self);
-TTErr			DCBlockerConnect(DCBlockerPtr self, TTAudioGraphObjectPtr audioSourceObject, long sourceOutletNumber);
+TTErr			DCBlockerConnect(DCBlockerPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
 MaxErr			DCBlockerSetBypass(DCBlockerPtr self, void* attr, AtomCount argc, AtomPtr argv);
 
 
@@ -154,7 +154,7 @@ TTErr DCBlockerSetup(DCBlockerPtr self)
 }
 
 
-TTErr DCBlockerConnect(DCBlockerPtr self, TTAudioGraphObjectPtr audioSourceObject, long sourceOutletNumber)
+TTErr DCBlockerConnect(DCBlockerPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
 {
 	return self->audioGraphObject->connectAudio(audioSourceObject, sourceOutletNumber);
 }

@@ -9,6 +9,7 @@
 		}
 ,
 		"rect" : [ 251.0, 67.0, 1458.0, 675.0 ],
+		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -44,7 +45,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 876.0, 208.0, 253.0, 356.0 ],
+						"rect" : [ 2675.0, 28.0, 253.0, 356.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -63,7 +64,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"title" : "/spacenavigator(view).2",
+						"title" : "/spacenavigator(view)",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -860,6 +861,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-33",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -870,6 +872,7 @@
 									"peakcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 149.351898, 164.0, 16.0, 82.0 ],
+									"signed" : 1,
 									"slidercolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 								}
 
@@ -900,6 +903,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-35",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -910,6 +914,7 @@
 									"peakcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 120.868286, 164.0, 16.0, 82.0 ],
+									"signed" : 1,
 									"slidercolor" : [ 0.0, 1.0, 0.0, 1.0 ]
 								}
 
@@ -940,6 +945,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-36",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -950,6 +956,7 @@
 									"peakcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 92.384674, 164.0, 16.0, 82.0 ],
+									"signed" : 1,
 									"slidercolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 								}
 
@@ -980,6 +987,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-38",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -990,6 +998,7 @@
 									"peakcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 63.901073, 164.0, 16.0, 82.0 ],
+									"signed" : 1,
 									"slidercolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 								}
 
@@ -1020,6 +1029,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-40",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -1030,6 +1040,7 @@
 									"peakcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 35.417458, 164.0, 16.0, 82.0 ],
+									"signed" : 1,
 									"slidercolor" : [ 0.0, 1.0, 0.0, 1.0 ]
 								}
 
@@ -1060,6 +1071,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-42",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -1070,6 +1082,7 @@
 									"peakcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 6.933838, 164.0, 16.0, 82.0 ],
+									"signed" : 1,
 									"slidercolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 								}
 
@@ -1318,6 +1331,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-59",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -1330,6 +1344,7 @@
 									"presentation_rect" : [ 120.150337, 26.0, 16.0, 82.0 ],
 									"setminmax" : [ -200.0, 200.0 ],
 									"settype" : 0,
+									"signed" : 1,
 									"slidercolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 								}
 
@@ -1365,6 +1380,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-61",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -1377,6 +1393,7 @@
 									"presentation_rect" : [ 97.175743, 26.0, 16.0, 82.0 ],
 									"setminmax" : [ -200.0, 200.0 ],
 									"settype" : 0,
+									"signed" : 1,
 									"slidercolor" : [ 0.0, 1.0, 0.0, 1.0 ]
 								}
 
@@ -1412,6 +1429,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-63",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -1424,6 +1442,7 @@
 									"presentation_rect" : [ 74.201157, 26.0, 16.0, 82.0 ],
 									"setminmax" : [ -200.0, 200.0 ],
 									"settype" : 0,
+									"signed" : 1,
 									"slidercolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 								}
 
@@ -1459,6 +1478,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-65",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -1471,6 +1491,7 @@
 									"presentation_rect" : [ 51.226582, 26.0, 16.0, 82.0 ],
 									"setminmax" : [ -200.0, 200.0 ],
 									"settype" : 0,
+									"signed" : 1,
 									"slidercolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 								}
 
@@ -1506,6 +1527,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-67",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -1518,6 +1540,7 @@
 									"presentation_rect" : [ 28.251987, 26.0, 16.0, 82.0 ],
 									"setminmax" : [ -200.0, 200.0 ],
 									"settype" : 0,
+									"signed" : 1,
 									"slidercolor" : [ 0.0, 1.0, 0.0, 1.0 ]
 								}
 
@@ -1553,6 +1576,7 @@
 									"candicane6" : [ 0.733333, 0.035294, 0.788235, 1.0 ],
 									"candicane7" : [ 0.878431, 0.243137, 0.145098, 1.0 ],
 									"candicane8" : [ 0.027451, 0.447059, 0.501961, 1.0 ],
+									"ghostbar" : 30,
 									"id" : "obj-69",
 									"maxclass" : "multislider",
 									"numinlets" : 1,
@@ -1565,6 +1589,7 @@
 									"presentation_rect" : [ 5.277393, 26.0, 16.0, 82.0 ],
 									"setminmax" : [ -200.0, 200.0 ],
 									"settype" : 0,
+									"signed" : 1,
 									"slidercolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 								}
 
@@ -2518,7 +2543,7 @@
 					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/spacenavigator.help"
 				}
 
 			}
@@ -2605,27 +2630,6 @@
 					"source" : [ "obj-7", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "ambimonitor.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

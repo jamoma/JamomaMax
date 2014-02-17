@@ -57,6 +57,10 @@ void		cue_doedit(TTPtr self);
 
 void		cue_subscribe(TTPtr self);
 
+void		cue_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+t_max_err	cue_get_relative(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av);
+t_max_err	cue_set_relative(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av);
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
@@ -72,11 +76,13 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 void WrapTTCueManagerClass(WrappedClassPtr c)
 {
 	class_addmethod(c->maxClass, (method)cue_assist,				"assist",				A_CANT, 0L);
+    
+    class_addmethod(c->maxClass, (method)cue_return_model_address,  "return_model_address", A_CANT, 0);
 	
 	class_addmethod(c->maxClass, (method)cue_return_value,			"return_value",			A_CANT, 0);
 	
 	class_addmethod(c->maxClass, (method)cue_return_order,			"return_order",			A_CANT, 0);
-	
+    
 	class_addmethod(c->maxClass, (method)cue_read,					"cue_read",				A_CANT, 0);
 	class_addmethod(c->maxClass, (method)cue_write,					"cue_write",			A_CANT, 0);
 	
@@ -89,15 +95,25 @@ void WrapTTCueManagerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)cue_read_again,			"read/again",			0);
 	class_addmethod(c->maxClass, (method)cue_write_again,			"write/again",			0);
+    
+    CLASS_ATTR_LONG(c->maxClass,		"relative",	0,		WrappedModularInstance,	index);	// use index member to store relative
+	CLASS_ATTR_ACCESSORS(c->maxClass,	"relative",	cue_get_relative,	cue_set_relative);
+	CLASS_ATTR_STYLE(c->maxClass,		"relative",	0,		"onoff");
 }
 
 void WrappedCueManagerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	SymbolPtr					name;
+    TTValue                     v, args;
+    TTXmlHandlerPtr				aXmlHandler;
+	TTTextHandlerPtr			aTextHandler;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
 	
-	// read first argument to know if the cue binds a namespace
+	// create the cue manager
+	jamoma_cueManager_create((ObjectPtr)x, &x->wrappedObject);
+    
+    // read first argument to know if the cue binds a namespace
 	if (attrstart && argv) {
 		
 		if (atom_gettype(argv) == A_SYM) {
@@ -109,20 +125,26 @@ void WrappedCueManagerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 			object_error((ObjectPtr)x, "argument not expected");
 	}
 	
-	// create the cue manager
-	jamoma_cueManager_create((ObjectPtr)x, &x->wrappedObject);
-	
-	// The following must be deferred because we have to interrogate our box,
-	// and our box is not yet valid until we have finished instantiating the object.
-	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-	defer_low((ObjectPtr)x, (method)cue_subscribe, NULL, 0, 0);
-	
 	// Make two outlets
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 1);
 	x->outlets[line_out] = outlet_new(x, NULL);						// anything outlet to output data
 	
 	// Prepare Internals hash to store XmlHanler and TextHandler object
 	x->internals = new TTHash();
+    
+    // create internal TTXmlHandler and internal messages for Read and Write
+    aXmlHandler = NULL;
+    TTObjectBaseInstantiate(kTTSym_XmlHandler, TTObjectBaseHandle(&aXmlHandler), args);
+    v = TTValue(aXmlHandler);
+    x->internals->append(kTTSym_XmlHandler, v);
+    v = TTValue(x->wrappedObject);
+    aXmlHandler->setAttributeValue(kTTSym_object, v);
+    
+    // create internal TTTextHandler
+    aTextHandler = NULL;
+    TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&aTextHandler), args);
+    v = TTValue(aTextHandler);
+    x->internals->append(kTTSym_TextHandler, v);
 	
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
@@ -145,79 +167,62 @@ void WrappedCueManageClass_free(TTPtr self)
 void cue_subscribe(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue						v, n, args;
-	TTAddress                   returnedAddress;
-	TTNodePtr					returnedNode = NULL;
-    TTNodePtr                   returnedContextNode = NULL;
-	TTDataPtr					aData;
-	TTXmlHandlerPtr				aXmlHandler;
-	TTTextHandlerPtr			aTextHandler;
-/*
-	// if the subscription is successful
-	if (!jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, TTAddress("cue"), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
-		
-		// get patcher
-		x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
-		
-		// expose messages of TTCue as TTData in the tree structure
-		x->subscriberObject->exposeMessage(x->wrappedObject, TTSymbol("Store"), &aData);
-        aData->setAttributeValue(kTTSym_type, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("Store a cue giving his name"));
-		
-		x->subscriberObject->exposeMessage(x->wrappedObject, TTSymbol("Recall"), &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("Recall a cue using his name"));
-		
-		x->subscriberObject->exposeMessage(x->wrappedObject, TTSymbol("Interpolate"), &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("Interpolate 2 cues using their names and a ratio"));
-		
-		x->subscriberObject->exposeMessage(x->wrappedObject, TTSymbol("Mix"), &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("Mix several cues using their names followed by a factor"));
-		
-		x->subscriberObject->exposeMessage(x->wrappedObject, TTSymbol("Remove"), &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("Remove a cue using his name"));
-		
-		// expose attributes of TTCueManager as TTData in the tree structure
-		x->subscriberObject->exposeAttribute(x->wrappedObject, kTTSym_order, kTTSym_return, &aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_array);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("The order of the cue list"));
-*/		
-		// create internal TTXmlHandler and internal messages for Read and Write
-		aXmlHandler = NULL;
-		TTObjectBaseInstantiate(kTTSym_XmlHandler, TTObjectBaseHandle(&aXmlHandler), args);
-		v = TTValue(aXmlHandler);
-		x->internals->append(kTTSym_XmlHandler, v);
-		v = TTValue(x->wrappedObject);
-		aXmlHandler->setAttributeValue(kTTSym_object, v);
-		
-		// create internal TTTextHandler
-		aTextHandler = NULL;
-		TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&aTextHandler), args);
-		v = TTValue(aTextHandler);
-		x->internals->append(kTTSym_TextHandler, v);
-/*
-		//x->subscriberObject->exposeMessage(aXmlHandler, TTSymbol("Read"), &aData);
-		makeInternals_data(self, returnedAddress, TTSymbol("read"), gensym("cue_read"), x->patcherPtr, kTTSym_message, (TTObjectBasePtr*)&aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_string);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("Read a xml cue file"));
-		
-		//x->subscriberObject->exposeMessage(aXmlHandler, TTSymbol("Write"), &aData);
-		makeInternals_data(self, returnedAddress, TTSymbol("write"), gensym("cue_write"), x->patcherPtr, kTTSym_message, (TTObjectBasePtr*)&aData);
-		aData->setAttributeValue(kTTSym_type, kTTSym_string);
-		aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-		aData->setAttributeValue(kTTSym_description, TTSymbol("Write a xml cue file"));
+	TTValue						v;
+	TTAddress                   contextAddress = kTTAdrsEmpty;
+	TTAddress                   absoluteAddress, returnedAddress;
+    TTNodePtr                   returnedNode;
+    TTNodePtr                   returnedContextNode;
+	TTObjectBasePtr				anObject;
+	
+	jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
+	
+	if (!jamoma_subscriber_create((ObjectPtr)x, NULL, kTTAdrsEmpty, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+        
+		// get the context address to make
+		// a receiver on the contextAddress/model:address attribute
+		x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
+		contextAddress = v[0];
 	}
-*/
+	
+	// bind on the model:address attribute
+	if (contextAddress != kTTAdrsEmpty) {
+		
+		absoluteAddress = contextAddress.appendAddress(x->address);
+		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
+		
+		makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), &anObject, YES); // YES : we want to deferlow this method
+		anObject->sendMessage(kTTSym_Get);
+	}
+	
+	// while the context node is not registered : try to binds again :(
+	// (to -- this is not a good way todo. For binding we should make a subscription
+	// to a notification mechanism and each time an TTObjet subscribes to the namespace
+	// using jamoma_subscriber_create we notify all the externals which have used
+	// jamoma_subscriber_create with NULL object to bind)
+	else {
+		
+		// release the subscriber
+		TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
+		x->subscriberObject = NULL;
+		
+		// The following must be deferred because we have to interrogate our box,
+		// and our box is not yet valid until we have finished instantiating the object.
+		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
+		defer_low((ObjectPtr)x, (method)cue_subscribe, NULL, 0, 0);
+	}
+}
+
+void cue_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+	TTAddress   absoluteAddress;
+	
+	if (argc && argv) {
+		
+		// set address attribute of the wrapped Receiver object
+		absoluteAddress = TTAddress(atom_getsym(argv)->s_name).appendAddress(x->address);
+		x->wrappedObject->setAttributeValue(kTTSym_address, absoluteAddress);
+	}
 }
 
 // Method for Assistance Messages
@@ -568,4 +573,45 @@ void cue_doedit(TTPtr self)
 	EXTRA->textEditor = NULL;
 	EXTRA->toEdit = x->wrappedObject;
 	EXTRA->cueName = kTTSymEmpty;
+}
+
+t_max_err cue_get_relative(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av)
+{
+	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+	
+	if ((*ac)&&(*av)) {
+		//memory passed in, use it
+	} else {
+		//otherwise allocate memory
+		*ac = 1;
+		if (!(*av = (AtomPtr)getbytes(sizeof(Atom)*(*ac)))) {
+			*ac = 0;
+			return MAX_ERR_OUT_OF_MEM;
+		}
+	}
+	
+	atom_setlong(*av, x->index);
+	
+	return MAX_ERR_NONE;
+}
+
+t_max_err cue_set_relative(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av)
+{
+	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+	
+	if (ac&&av) {
+		x->index = atom_getlong(av);
+		
+		if (x->index) {
+			// The following must be deferred because we have to interrogate our box,
+			// and our box is not yet valid until we have finished instantiating the object.
+			// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
+			defer_low((ObjectPtr)x, (method)cue_subscribe, NULL, 0, 0);
+		}
+		
+	} else {
+		// no args
+		x->index = 0;
+	}
+	return MAX_ERR_NONE;
 }

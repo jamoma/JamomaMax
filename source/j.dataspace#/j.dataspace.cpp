@@ -19,12 +19,12 @@
 
 // Data Structure for this object
 struct Dataspace {
-   	Object				obj;
-	TTGraphObjectPtr	graphObject;
-	TTPtr				graphOutlets[16];	// this _must_ be third (for the setup call)
-	SymbolPtr			attrDataspace;
-	SymbolPtr			attrInput;
-	SymbolPtr			attrOutput;
+   	Object				    obj;
+	TTGraphObjectBasePtr	graphObject;
+	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
+	SymbolPtr			    attrDataspace;
+	SymbolPtr			    attrInput;
+    SymbolPtr			    attrOutput;
 };
 typedef Dataspace* DataspacePtr;
 

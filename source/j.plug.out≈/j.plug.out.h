@@ -14,7 +14,7 @@
 // Data Structure for this object
 struct PlugOut {
     Object					obj;
-	TTAudioGraphObjectPtr	audioGraphObject;
+	TTAudioGraphObjectBasePtr	audioGraphObject;
 	ObjectPtr				patcher;			// the patcher -- cached for iterating to make connections
 	ObjectPtr				patcherview;		// first view of the top-level patcher (for dirty notifications)
 	TTPtr					qelem;				// for clumping patcher dirty notifications
