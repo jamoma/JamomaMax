@@ -74,7 +74,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 21.0, 371.0, 413.0, 19.0 ],
-					"text" : "j.model #1@description \"Video feedback with convolution for trippy effects\""
+					"text" : "j.model @description \"Video feedback with convolution for trippy effects\""
 				}
 
 			}

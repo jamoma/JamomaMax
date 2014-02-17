@@ -208,7 +208,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 16.0, 141.0, 584.0, 19.0 ],
-					"text" : "j.view #1 @description \"Input from either a camera - video file - noise synthesis - or a real time screen capture.\"",
+					"text" : "j.view @description \"Input from either a camera - video file - noise synthesis - or a real time screen capture.\"",
 					"varname" : "j.model"
 				}
 

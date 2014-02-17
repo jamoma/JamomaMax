@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 201.0, 230.0, 912.0, 489.0 ],
+		"rect" : [ 54.0, 163.0, 912.0, 489.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -47,8 +47,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 24.0, 58.0, 419.0, 19.0 ],
-					"text" : "j.model @type video @algorithm_type jitter @description \"Glowing Edges Effect\""
+					"patching_rect" : [ 24.0, 58.0, 235.0, 19.0 ],
+					"text" : "j.model @description \"Glowing Edges Effect\""
 				}
 
 			}
@@ -89,7 +89,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 433.0, 247.0, 24.0, 19.0 ],
+					"patching_rect" : [ 432.5, 253.0, 24.0, 19.0 ],
 					"text" : "t 1"
 				}
 
@@ -103,7 +103,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 407.0, 246.0, 24.0, 19.0 ],
+					"patching_rect" : [ 406.5, 252.0, 24.0, 19.0 ],
 					"text" : "t 2"
 				}
 
@@ -146,7 +146,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 351.0, 248.0, 56.0, 17.0 ],
+					"patching_rect" : [ 350.5, 254.0, 56.0, 17.0 ],
 					"text" : "mode $1"
 				}
 

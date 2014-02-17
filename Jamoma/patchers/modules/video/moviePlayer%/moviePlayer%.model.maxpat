@@ -1007,7 +1007,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 14.5, 330.0, 505.0, 19.0 ],
-					"text" : "j.model #1 @description \"Read QT movie film.\""
+					"text" : "j.model @description \"Read QT movie film.\""
 				}
 
 			}
