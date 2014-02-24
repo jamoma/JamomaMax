@@ -35,7 +35,7 @@ void*	noisemod_new(t_symbol *s, long argc, t_atom *argv);
 void	noisemod_free(t_noisemod *x);
 void	noisemod_dsp64(t_noisemod *x, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags);
 void	noisemod_assist(t_noisemod *x, void *b, long m, long a, char *s);
-void	noisemod_parameter_mode_callback(TTValuePtr baton, TTValue& v);
+void	noisemod_parameter_mode_callback(const TTValue& baton, const TTValue& v);
 
 
 // Globals
@@ -131,7 +131,7 @@ void noisemod_assist(t_noisemod *x, void *b, long msg, long arg, char *dst)
 
 
 // Callback we receive when the parameter value changes
-void noisemod_parameter_mode_callback(TTValuePtr baton, TTValue& v)
+void noisemod_parameter_mode_callback(const TTValue& baton, const TTValue& v)
 {
 	t_noisemod *x = (t_noisemod*)TTPtr(baton->at(0));
 	x->noise->setAttributeValue("mode", v);

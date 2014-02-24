@@ -129,10 +129,9 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 	// 3. Create the "clear" message
 	{
 		TTValue		message_args;
-		TTValuePtr	message_baton = new TTValue(TTPtr(x));
 
 		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&x->callback_clear), none);
-		x->callback_clear->setAttributeValue(TTSymbol("baton"),	message_baton);
+		x->callback_clear->setAttributeValue(TTSymbol("baton"),	TTPtr(x));
 		x->callback_clear->setAttributeValue(TTSymbol("function"),	TTPtr(allpassmod_parameter_clear_callback));
 		message_args.append(x->callback_clear);
 		message_args.append(kTTSym_message);
@@ -148,10 +147,9 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 	// 4. Create the "gain" parameter (linear)
 	{
 		TTValue 		parameter_args;
-		TTValuePtr		parameter_baton = new TTValue(TTPtr(x));
 		
 		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&x->callback_coefficient), none);
-		x->callback_coefficient->setAttributeValue(TTSymbol("baton"), parameter_baton);
+		x->callback_coefficient->setAttributeValue(TTSymbol("baton"), TTPtr(x));
 		x->callback_coefficient->setAttributeValue(TTSymbol("function"),	TTPtr(allpassmod_parameter_coefficient_callback));
 		parameter_args.append(x->callback_coefficient);
 		parameter_args.append(kTTSym_parameter);
@@ -168,10 +166,9 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 	// 5. Create the "delay" parameter (milliseconds)
 	{
 		TTValue 		parameter_args;
-		TTValuePtr		parameter_baton = new TTValue(TTPtr(x));
 		
 		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&x->callback_delay), none);
-		x->callback_delay->setAttributeValue(TTSymbol("baton"),	parameter_baton);
+		x->callback_delay->setAttributeValue(TTSymbol("baton"),	TTPtr(x));
 		x->callback_delay->setAttributeValue(TTSymbol("function"),	TTPtr(allpassmod_parameter_delay_callback));
 		parameter_args.append(x->callback_delay);
 		parameter_args.append(kTTSym_parameter);
@@ -301,7 +298,7 @@ void allpassmod_assist(t_allpassmod *x, void *b, long msg, long arg, char *dst)
 
 
 // Callback we receive when the parameter value changes
-void allpassmod_parameter_coefficient_callback(TTValuePtr baton, TTValue& v)
+void allpassmod_parameter_coefficient_callback(const TTValue& baton, const TTValue& v)
 {
 	t_allpassmod *x = (t_allpassmod*)TTPtr(baton->at(0));
 	x->allpass->setAttributeValue(TT("linearGain"), v);
@@ -309,14 +306,14 @@ void allpassmod_parameter_coefficient_callback(TTValuePtr baton, TTValue& v)
 
 
 // Callback we receive when the parameter value changes
-void allpassmod_parameter_delay_callback(TTValuePtr baton, TTValue& v)
+void allpassmod_parameter_delay_callback(const TTValue& baton, const TTValue& v)
 {
 	t_allpassmod *x = (t_allpassmod*)TTPtr(baton->at(0));
 	x->allpass->setAttributeValue(TT("delay"), v);
 }
 
 
-void allpassmod_parameter_clear_callback(TTValuePtr baton, TTValue& v)
+void allpassmod_parameter_clear_callback(const TTValue& baton, const TTValue& v)
 {
 	t_allpassmod *x = (t_allpassmod*)TTPtr(baton->at(0));
 	x->allpass->sendMessage(TT("clear"));

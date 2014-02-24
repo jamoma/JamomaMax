@@ -48,7 +48,7 @@ void		remote_array_subscribe(TTPtr self, SymbolPtr address);
 void		remote_array_select(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		remote_address(TTPtr self, SymbolPtr name);
 
-void		remote_array_return_value(TTPtr baton, TTValue& v);
+void		remote_array_return_value(const TTValue& baton, const TTValue& v);
 
 void        remote_create_model_address_receiver(TTPtr self);
 void        remote_free_model_address_receiver(TTPtr self);
@@ -250,17 +250,15 @@ void remote_new_address(TTPtr self, SymbolPtr address)
 
 void remote_array_create(TTPtr self, TTObjectBasePtr *returnedViewer, TTUInt32 index)
 {
-	TTValue			args, none;
+	TTValue			args, baton, none;
 	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
 
-	returnValueBaton = new TTValue(self);
-	returnValueBaton->append(index);
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	baton = TTValue(self, index);
+	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&remote_array_return_value));
 	
 	args.append(returnValueCallback);
@@ -697,11 +695,10 @@ void remote_set_array(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
         EXTRA->setting = NO;
 }
 
-void remote_array_return_value(TTPtr baton, TTValue& v)
+void remote_array_return_value(const TTValue& baton, const TTValue& v)
 {
     WrappedModularInstancePtr	x;
 	TTValue						array;
-	TTValuePtr					b;
 	SymbolPtr					msg, iAdrs;
 	long						argc = 0;
 	TTUInt32					i, j;
@@ -709,9 +706,8 @@ void remote_array_return_value(TTPtr baton, TTValue& v)
 	TTBoolean					shifted = NO;
     
 	// unpack baton (a t_object* and the index of the value)
-	b = (TTValuePtr)baton;
-	x = WrappedModularInstancePtr((TTPtr)(*b)[0]);
-	i = (*b)[1];
+	x = WrappedModularInstancePtr((TTPtr)baton[0]);
+	i = baton[1];
     
     // a gate to not output the value if it have been set by this j.remoteArray
     if (EXTRA->setting) {
@@ -815,9 +811,8 @@ void remote_ui_queuefn(TTPtr self)
 void remote_create_model_address_receiver(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args, none;
+	TTValue			args, baton, none;
 	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
 	
     // don't need to get the receiver address back
 	args.append(NULL);
@@ -825,11 +820,8 @@ void remote_create_model_address_receiver(TTPtr self)
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
-	returnValueBaton = new TTValue(TTPtr(x));
-    returnValueBaton->append(TTPtr(gensym("return_model_address")));
-    returnValueBaton->append(YES);    // YES : we want to deferlow this method
-    
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	baton = TTValue(TTPtr(x), TTPtr(gensym("return_model_address")), YES);  // YES : we want to deferlow this method
+	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
 	args.append(returnValueCallback);
 	

@@ -43,7 +43,7 @@ void		data_new_address(TTPtr self, SymbolPtr msg);
 void		data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt32 index);
 void		data_address(TTPtr self, SymbolPtr name);
 
-void		data_array_return_value(TTPtr baton, TTValue& v);
+void		data_array_return_value(const TTValue& baton, const TTValue& v);
 void		data_edit_array(TTPtr self, TTValue& array);
 
 void		WrappedDataClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
@@ -268,18 +268,16 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress)
 
 void data_array_create(TTPtr self, TTObjectBasePtr *returnedData, TTSymbol service, TTUInt32 index)
 {
-	TTValue			args, none;
+	TTValue			args, baton, none;
 	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
 	
 	// prepare arguments
 	
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
 
-	returnValueBaton = new TTValue(self);
-	returnValueBaton->append(index);
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	baton = TTValue(self, index);
+	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&data_array_return_value));
 	
 	args.append(returnValueCallback);
@@ -522,11 +520,10 @@ void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	selectedObject->sendMessage(TTSymbol("Dec"), v, none);
 }
 
-void data_array_return_value(TTPtr baton, TTValue& v)
+void data_array_return_value(const TTValue& baton, const TTValue& v)
 {
 	WrappedModularInstancePtr	x;
 	TTValue                     array;
-	TTValuePtr					b;
 	SymbolPtr					msg, iAdrs;
 	TTUInt32					i;
 	long						argc = 0;
@@ -535,9 +532,8 @@ void data_array_return_value(TTPtr baton, TTValue& v)
 
 	
 	// unpack baton (a t_object* and the index of the value)
-	b = (TTValuePtr)baton;
-	x = WrappedModularInstancePtr((TTPtr)(*b)[0]);
-	i = (*b)[1];
+	x = WrappedModularInstancePtr((TTPtr)baton[0]);
+	i = baton[1];
 	
 	// output index
 	if (x->arrayIndex == 0) {

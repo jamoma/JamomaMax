@@ -32,7 +32,7 @@ TTErr jamoma_directory_dump_observers(void)
 	TTSymbol key, owner;
 	
 	post("--- JamomaDirectory Observers ---");
-	JamomaDirectory->dumpObservers(v);
+	accessApplicationLocalDirectory->dumpObservers(v);
 	
 	s = v.size();
 	for (i = 0; i < s; i++) {
@@ -168,20 +168,17 @@ TTErr jamoma_container_create(ObjectPtr x, TTObjectBasePtr *returnedContainer)
 {
 	TTValue			args, none;
 	TTObjectBasePtr	returnAddressCallback, returnValueCallback;
-	TTValuePtr		returnAddressBaton, returnValueBaton;
 	
 	// prepare arguments
 	returnAddressCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnAddressCallback, none);
-	returnAddressBaton = new TTValue(TTPtr(x));
-	returnAddressCallback->setAttributeValue(kTTSym_baton, TTPtr(returnAddressBaton));
+	returnAddressCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
 	returnAddressCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_address));
 	args.append(returnAddressCallback);
 	
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-	returnValueBaton = new TTValue(TTPtr(x));
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
 	
@@ -231,13 +228,11 @@ TTErr jamoma_data_create(ObjectPtr x, TTObjectBasePtr *returnedData, TTSymbol se
 {
 	TTValue			args, none;
 	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-	returnValueBaton = new TTValue(TTPtr(x));
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
 	args.append(returnValueCallback);
 	
@@ -316,19 +311,16 @@ TTErr jamoma_receiver_create(ObjectPtr x, TTObjectBasePtr *returnedReceiver)
 {
 	TTValue			args, none;
 	TTObjectBasePtr	returnAddressCallback, returnValueCallback;
-	TTValuePtr		returnAddressBaton, returnValueBaton;
 	
 	returnAddressCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnAddressCallback, none);
-	returnAddressBaton = new TTValue(TTPtr(x));
-	returnAddressCallback->setAttributeValue(kTTSym_baton, TTPtr(returnAddressBaton));
+	returnAddressCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
 	returnAddressCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_address));
 	args.append(returnAddressCallback);
 	
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-	returnValueBaton = new TTValue(TTPtr(x));
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
 	args.append(returnValueCallback);
 	
@@ -343,14 +335,12 @@ TTErr jamoma_receiver_create_audio(ObjectPtr x, TTObjectBasePtr *returnedReceive
 {
 	TTValue             args, none;
 	TTObjectBasePtr     returnAddressCallback;
-	TTValuePtr          returnAddressBaton;
 	TTAudioSignalPtr    audio = NULL;
 	
 	// prepare arguments
 	returnAddressCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnAddressCallback, none);
-	returnAddressBaton = new TTValue(TTPtr(x));
-	returnAddressCallback->setAttributeValue(kTTSym_baton, TTPtr(returnAddressBaton));
+	returnAddressCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
 	returnAddressCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_address));
 	args.append(returnAddressCallback);
 	
@@ -373,14 +363,12 @@ TTErr jamoma_presetManager_create(ObjectPtr x, TTObjectBasePtr *returnedPresetMa
 {
 	TTValue         args, none;
     TTObjectBasePtr	returnLineCallback;
-	TTValuePtr		returnLineBaton;
 	
 	// prepare arguments
 	returnLineCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnLineCallback, none);
-	returnLineBaton = new TTValue(TTPtr(x));
     
-	returnLineCallback->setAttributeValue(kTTSym_baton, TTPtr(returnLineBaton));
+	returnLineCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
 	returnLineCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnLineCallback);
 	
@@ -395,14 +383,12 @@ TTErr jamoma_cueManager_create(ObjectPtr x, TTObjectBasePtr *returnedCueManager)
 {
 	TTValue			args, none;
 	TTObjectBasePtr	returnLineCallback;
-	TTValuePtr		returnLineBaton;
 	
 	// prepare arguments
 	returnLineCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnLineCallback, none);
-	returnLineBaton = new TTValue(TTPtr(x));
     
-	returnLineCallback->setAttributeValue(kTTSym_baton, TTPtr(returnLineBaton));
+	returnLineCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
 	returnLineCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnLineCallback);
 	
@@ -418,17 +404,15 @@ TTErr jamoma_cueManager_create(ObjectPtr x, TTObjectBasePtr *returnedCueManager)
 /**	Create an input object for any signal */
 TTErr jamoma_input_create(ObjectPtr x, TTObjectBasePtr *returnedInput)
 {	
-	TTValue			args, none;
+	TTValue			args, baton, none;
 	TTObjectBasePtr	signalOutCallback = NULL;
-	TTValuePtr		signalOutBaton;
 	
 	// prepare arguments
 	args.append(TTSymbol("control"));
 	
 	TTObjectBaseInstantiate(TTSymbol("callback"), &signalOutCallback, none);
-	signalOutBaton = new TTValue(TTPtr(x));
-	signalOutBaton->append(TTPtr(jps_return_signal));
-	signalOutCallback->setAttributeValue(kTTSym_baton, TTPtr(signalOutBaton));
+	baton = TTValue(TTPtr(x), TTPtr(jps_return_signal));
+	signalOutCallback->setAttributeValue(kTTSym_baton, baton);
 	signalOutCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
 	args.append(signalOutCallback);
 	
@@ -470,17 +454,15 @@ TTErr jamoma_input_send(TTInputPtr anInput, SymbolPtr msg, AtomCount argc, AtomP
 /**	Create an output object for signal */
 TTErr jamoma_output_create(ObjectPtr x, TTObjectBasePtr *returnedOutput)
 {	
-	TTValue			args, none;
+	TTValue			args, baton, none;
 	TTObjectBasePtr	signalOutCallback = NULL;
-	TTValuePtr		signalOutBaton;
 	
 	// prepare arguments
 	args.append(TTSymbol("control"));
 	
 	TTObjectBaseInstantiate(TTSymbol("callback"), &signalOutCallback, none);
-	signalOutBaton = new TTValue(TTPtr(x));
-	signalOutBaton->append(TTPtr(jps_return_signal));
-	signalOutCallback->setAttributeValue(kTTSym_baton, TTPtr(signalOutBaton));
+	baton = TTValue(TTPtr(x), TTPtr(jps_return_signal));
+	signalOutCallback->setAttributeValue(kTTSym_baton, baton);
 	signalOutCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
 	args.append(signalOutCallback);
 	
@@ -493,14 +475,12 @@ TTErr jamoma_output_create(ObjectPtr x, TTObjectBasePtr *returnedOutput)
 /**	Create an output object for audio signal */
 TTErr jamoma_output_create_audio(ObjectPtr x, TTObjectBasePtr *returnedOutput)
 {
-	TTValue				args, none;
+	TTValue				args, baton, none;
 	TTObjectBasePtr     inputLinkCallback = NULL;
-	TTValuePtr          inputLinkBaton;
 		
 	TTObjectBaseInstantiate(TTSymbol("callback"), &inputLinkCallback, none);
-	inputLinkBaton = new TTValue(TTPtr(x));
-	inputLinkBaton->append(TTPtr(gensym("return_link")));
-	inputLinkCallback->setAttributeValue(kTTSym_baton, TTPtr(inputLinkBaton));
+	baton = TTValue(TTPtr(x), TTPtr(gensym("return_link")));
+	inputLinkCallback->setAttributeValue(kTTSym_baton, baton);
 	inputLinkCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(inputLinkCallback);
 	
@@ -531,47 +511,41 @@ TTErr jamoma_output_send(TTOutputPtr anOutput, SymbolPtr msg, AtomCount argc, At
 /**	Create a mapper object */
 TTErr jamoma_mapper_create(ObjectPtr x, TTObjectBasePtr *returnedMapper)
 {
-	TTValue			args, none;
+	TTValue			args, baton, none;
 	TTObjectBasePtr	returnValueCallback, returnInputGoingDownCallback, returnInputGoingUpCallback, returnOutputGoingDownCallback, returnOutputGoingUpCallback;
-	TTValuePtr		returnValueBaton, returnInputGoingDownBaton, returnInputGoingUpBaton, returnOutputGoingDownBaton, returnOutputGoingUpBaton;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-	returnValueBaton = new TTValue(TTPtr(x));
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
     
     returnInputGoingDownCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnInputGoingDownCallback, none);
-	returnInputGoingDownBaton = new TTValue(TTPtr(x));
-    returnInputGoingDownBaton->append(TTPtr(gensym("return_input_going_down")));
-	returnInputGoingDownCallback->setAttributeValue(kTTSym_baton, TTPtr(returnInputGoingDownBaton));
+    baton = TTValue(TTPtr(x), TTPtr(gensym("return_input_going_down")));
+	returnInputGoingDownCallback->setAttributeValue(kTTSym_baton, baton);
 	returnInputGoingDownCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnInputGoingDownCallback);
     
     returnInputGoingUpCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnInputGoingUpCallback, none);
-	returnInputGoingUpBaton = new TTValue(TTPtr(x));
-    returnInputGoingUpBaton->append(TTPtr(gensym("return_input_going_up")));
-	returnInputGoingUpCallback->setAttributeValue(kTTSym_baton, TTPtr(returnInputGoingUpBaton));
+    baton = TTValue(TTPtr(x), TTPtr(gensym("return_input_going_up")));
+	returnInputGoingUpCallback->setAttributeValue(kTTSym_baton, baton);
 	returnInputGoingUpCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnInputGoingUpCallback);
     
     returnOutputGoingDownCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnOutputGoingDownCallback, none);
-	returnOutputGoingDownBaton = new TTValue(TTPtr(x));
-    returnOutputGoingDownBaton->append(TTPtr(gensym("return_output_going_down")));
-	returnOutputGoingDownCallback->setAttributeValue(kTTSym_baton, TTPtr(returnOutputGoingDownBaton));
+    baton = TTValue(TTPtr(x), TTPtr(gensym("return_output_going_down")));
+	returnOutputGoingDownCallback->setAttributeValue(kTTSym_baton, baton);
 	returnOutputGoingDownCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnOutputGoingDownCallback);
     
     returnOutputGoingUpCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnOutputGoingUpCallback, none);
-	returnOutputGoingUpBaton = new TTValue(TTPtr(x));
-    returnOutputGoingUpBaton->append(TTPtr(gensym("return_output_going_up")));
-	returnOutputGoingUpCallback->setAttributeValue(kTTSym_baton, TTPtr(returnOutputGoingUpBaton));
+    baton = TTValue(TTPtr(x), TTPtr(gensym("return_output_going_up")));
+	returnOutputGoingUpCallback->setAttributeValue(kTTSym_baton, baton);
 	returnOutputGoingUpCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnOutputGoingUpCallback);
 	
@@ -590,13 +564,11 @@ TTErr jamoma_viewer_create(ObjectPtr x, TTObjectBasePtr *returnedViewer)
 {
 	TTValue			args, none;
 	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-	returnValueBaton = new TTValue(TTPtr(x));
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
 	args.append(returnValueCallback);
 	
@@ -628,15 +600,13 @@ TTErr jamoma_viewer_send(TTViewerPtr aViewer, SymbolPtr msg, AtomCount argc, Ato
 /**	Create an explorer object */
 TTErr jamoma_explorer_create(ObjectPtr x, TTObjectBasePtr *returnedExplorer)
 {
-	TTValue			args, none;
+	TTValue			args, baton, none;
 	TTObjectBasePtr	returnValueCallback, returnSelectionCallback;
-	TTValuePtr		returnValueBaton, returnSelectionBaton;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-	returnValueBaton = new TTValue(TTPtr(x));
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
 	
@@ -644,9 +614,8 @@ TTErr jamoma_explorer_create(ObjectPtr x, TTObjectBasePtr *returnedExplorer)
 
 	returnSelectionCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnSelectionCallback, none);
-	returnSelectionBaton = new TTValue(TTPtr(x));
-	returnSelectionBaton->append((TTPtr)gensym("return_selection"));
-	returnSelectionCallback->setAttributeValue(kTTSym_baton, TTPtr(returnSelectionBaton));
+    baton = TTValue(TTPtr(x), (TTPtr)gensym("return_selection"));
+	returnSelectionCallback->setAttributeValue(kTTSym_baton, baton);
 	returnSelectionCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnSelectionCallback);
 	
@@ -790,15 +759,13 @@ void JAMOMA_EXPORT jamoma_callback_return_ramped_value(void *o, TTUInt32 n, TTFl
 // Method to return data
 ///////////////////////////////////////////////////////////////////////
 
-void jamoma_callback_return_address(TTPtr baton, TTValue& v)
+void jamoma_callback_return_address(const TTValue& baton, const TTValue& v)
 {
-	TTValuePtr	b;
 	ObjectPtr	x;
 	TTSymbol	address;
 	
 	// unpack baton (a t_object* and the name of the method to call)
-	b = (TTValuePtr)baton;
-	x = ObjectPtr((TTPtr)b[0]);
+	x = ObjectPtr((TTPtr)baton[0]);
     
     if (v.size() == 1) {
         
@@ -814,9 +781,8 @@ void jamoma_callback_return_address(TTPtr baton, TTValue& v)
 }
 
 /** Return the value to a j. external as _sym_nothing, argc, argv */
-void jamoma_callback_return_value(TTPtr baton, TTValue& v)
+void jamoma_callback_return_value(const TTValue& baton, const TTValue& v)
 {
-	TTValuePtr	b;
 	ObjectPtr	x;
 	SymbolPtr	s_method;
     TTBoolean   deferlow = NO;
@@ -825,22 +791,21 @@ void jamoma_callback_return_value(TTPtr baton, TTValue& v)
     method      p_method = NULL;
 	
 	// unpack baton (a t_object* and the name of the method to call (default : jps_return_value))
-	b = (TTValuePtr)baton;
     
     // get object
-	x = ObjectPtr((TTPtr)b[0]);
+	x = ObjectPtr((TTPtr)baton[0]);
 	
     // get method
-	if (b->size() >= 2) {
+	if (baton.size() >= 2) {
         
-		s_method = SymbolPtr((TTPtr)(*b)[1]);
+		s_method = SymbolPtr((TTPtr)baton[1]);
         
 		if (s_method == NULL || s_method == _sym_nothing)
 			return;
         
         // do we need to deferlow it ?
-        if (b->size() == 3)
-            deferlow = (*b)[2];
+        if (baton.size() == 3)
+            deferlow = baton[2];
     }
 	else
 		s_method = jps_return_value;
@@ -863,9 +828,8 @@ void jamoma_callback_return_value(TTPtr baton, TTValue& v)
 }
 
 /** Return the value to a j. external as msg, argc, argv */
-void jamoma_callback_return_value_typed(TTPtr baton, TTValue& v)
+void jamoma_callback_return_value_typed(const TTValue& baton, const TTValue& v)
 {
-	TTValuePtr	b;
 	ObjectPtr	x;
 	SymbolPtr	msg, s_method;
     TTBoolean   deferlow = NO;
@@ -875,22 +839,21 @@ void jamoma_callback_return_value_typed(TTPtr baton, TTValue& v)
 	TTBoolean	shifted = false;
 	
 	// unpack baton (a t_object* and the name of the method to call (default : jps_return_value))
-	b = (TTValuePtr)baton;
     
     // get object
-	x = ObjectPtr((TTPtr)b[0]);
+	x = ObjectPtr((TTPtr)baton[0]);
 	
     // get method
-	if (b->size() >= 2) {
+	if (baton.size() >= 2) {
         
-		s_method = SymbolPtr((TTPtr)(*b)[1]);
+		s_method = SymbolPtr((TTPtr)baton[1]);
         
 		if (s_method == NULL || s_method == _sym_nothing)
 			return;
         
         // do we need to deferlow it ?
-        if (b->size() == 3)
-            deferlow = (*b)[2];
+        if (baton.size() == 3)
+            deferlow = baton[2];
     }
 	else
 		s_method = jps_return_value;
@@ -916,16 +879,14 @@ void jamoma_callback_return_value_typed(TTPtr baton, TTValue& v)
 }
 
 /** Return any signal */
-void jamoma_callback_return_signal(TTPtr baton, TTValue& v)
+void jamoma_callback_return_signal(const TTValue& baton, const TTValue& v)
 {
-	TTValuePtr	b;
 	ObjectPtr	x;
 	long		argc = 0;
 	AtomPtr		argv = NULL;
 	
 	// unpack baton (a t_object*)
-	b = (TTValuePtr)baton;
-	x = ObjectPtr((TTPtr)b[0]);
+	x = ObjectPtr((TTPtr)baton[0]);
 	
 	jamoma_ttvalue_to_Atom(v, &argc, &argv);
 	
@@ -936,17 +897,15 @@ void jamoma_callback_return_signal(TTPtr baton, TTValue& v)
 }
 
 /** Return audio signal */
-void jamoma_callback_return_signal_audio(TTPtr baton, TTValue& v)
+void jamoma_callback_return_signal_audio(const TTValue& baton, const TTValue& v)
 {
-	TTValuePtr	b;
 	ObjectPtr	x;
 	TTPtr		signal;
 	long		i, argc = 0;
 	AtomPtr		argv = NULL;
 	
 	// unpack baton (a t_object*)
-	b = (TTValuePtr)baton;
-	x = ObjectPtr((TTPtr)b[0]);
+	x = ObjectPtr((TTPtr)baton[0]);
 	
 	// unpack data (signal)
 	argc = v.size();

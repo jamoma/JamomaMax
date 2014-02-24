@@ -79,7 +79,6 @@ public:
 	TTErr createThing(TTSymbol aServiceName, TTSymbol aName, TTSymbol aType, TTFunctionWithBatonAndValue aCallbackFunction, TTPtr aBaton, TTSymbol aDescription)
 	{
 		TTCallback*	callback = NULL;
-		TTValuePtr	baton = new TTValue(TTPtr(aBaton));
 		TTData*		parameter = NULL;
 		TTValue		parameter_args, none;
 		TTString	name("/");
@@ -89,7 +88,7 @@ public:
 		name += aName.string();
 		
 		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&callback), none);
-		callback->setAttributeValue(TTSymbol("baton"),	baton);
+		callback->setAttributeValue(TTSymbol("baton"),	aBaton);
 		callback->setAttributeValue(TTSymbol("function"), TTPtr(aCallbackFunction));
 		
 		parameter_args.append(callback);

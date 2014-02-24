@@ -26,8 +26,8 @@
 #include "TTOutput.h"
 
 extern JAMOMA_EXPORT	TTSymbol			kTTSym_Jamoma;			///<
-extern JAMOMA_EXPORT	TTApplicationPtr	JamomaApplication;		///<
-extern JAMOMA_EXPORT	TTNodeDirectoryPtr	JamomaDirectory;		///<
+extern JAMOMA_EXPORT	TTObject            JamomaApplicationManager;///<
+extern JAMOMA_EXPORT	TTObject            JamomaApplication;		///<
 
 extern JAMOMA_EXPORT	TTRegex*			ttRegexForJmod;			///< A global regex to parse jmod. (usefull to detect a 0.5 module)
 extern JAMOMA_EXPORT	TTRegex*			ttRegexForJcom;			///< A global regex to parse j.
@@ -48,7 +48,7 @@ extern JAMOMA_EXPORT	TTString*			DocumentationFormat;	///<
 #define ModelPatcher "model" 
 #define ViewPatcher "view"
 
-#define JamomaDebug if (getLocalApplicationDebug)
+#define JamomaDebug if (accessApplicationLocalDebug)
 
 
 // Method to deal with the jamoma directory
@@ -339,31 +339,31 @@ void JAMOMA_EXPORT jamoma_callback_return_ramped_value(void *o, TTUInt32 n, TTFl
  @param baton
  @param v
  */
-void JAMOMA_EXPORT jamoma_callback_return_address(TTPtr baton, TTValue& v);
+void JAMOMA_EXPORT jamoma_callback_return_address(const TTValue& baton, const TTValue& v);
 
 /** Return the value to a j. external as _sym_nothing, argc, argv.
  @param baton
  @param v
  */
-void JAMOMA_EXPORT jamoma_callback_return_value(TTPtr baton, TTValue& v);
+void JAMOMA_EXPORT jamoma_callback_return_value(const TTValue& baton, const TTValue& v);
 
 /** Return the value to a j. external as msg, argc, argv.
  @param baton
  @param v
  */
-void JAMOMA_EXPORT jamoma_callback_return_value_typed(TTPtr baton, TTValue& v);
+void JAMOMA_EXPORT jamoma_callback_return_value_typed(const TTValue& baton, const TTValue& v);
 
 /** Return any signal.
  @param baton
  @param v
  */
-void JAMOMA_EXPORT jamoma_callback_return_signal(TTPtr baton, TTValue& v);
+void JAMOMA_EXPORT jamoma_callback_return_signal(const TTValue& baton, const TTValue& v);
 
 /** Return audio signal.
  @param baton
  @param v
  */
-void JAMOMA_EXPORT jamoma_callback_return_signal_audio(TTPtr baton, TTValue& v);
+void JAMOMA_EXPORT jamoma_callback_return_signal_audio(const TTValue& baton, const TTValue& v);
 
 
 

@@ -56,9 +56,8 @@ void ui_unregister_info(t_ui *obj)
 
 void ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbackMethod, TTSymbol service, TTSymbol name, TTBoolean deferlow)
 {
-	TTValue			args, v, none;
+	TTValue			args, baton, v, none;
 	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
 	TTAddress       viewAddress, dataAddress;
 	TTNodePtr		aNode;
 	TTBoolean		nodeCreated;
@@ -67,11 +66,9 @@ void ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbac
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
-	returnValueBaton = new TTValue(TTPtr(obj));
-	returnValueBaton->append(TTPtr(aCallbackMethod));
-    returnValueBaton->append(deferlow);
+	baton = TTValue(TTPtr(obj), TTPtr(aCallbackMethod), deferlow);
     
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
 	
@@ -166,7 +163,7 @@ void ui_data_interface(t_ui *x, TTSymbol name)
 
 void ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
 {
-	TTValue			v, args, none;
+	TTValue			v, baton, args, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	TTAddress adrs;
@@ -177,11 +174,8 @@ void ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr 
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
-	returnValueBaton = new TTValue(TTPtr(obj));
-	returnValueBaton->append(TTPtr(aCallbackMethod));
-    returnValueBaton->append(deferlow);  
-    
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	baton = TTValue(TTPtr(obj), TTPtr(aCallbackMethod), deferlow);
+	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
 	
@@ -247,9 +241,8 @@ void ui_receiver_destroy_all(t_ui *obj)
 
 void ui_viewer_create(t_ui *obj, TTObjectBasePtr *returnedViewer, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean subscribe, TTBoolean deferlow)
 {
-	TTValue			v, args, none;
+	TTValue			v, baton, args, none;
 	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
 	TTAddress       viewAddress, viewerAddress, adrs;
 	TTNodePtr		aNode;
 	TTBoolean		nodeCreated;
@@ -258,11 +251,8 @@ void ui_viewer_create(t_ui *obj, TTObjectBasePtr *returnedViewer, SymbolPtr aCal
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
-	returnValueBaton = new TTValue(TTPtr(obj));
-	returnValueBaton->append(TTPtr(aCallbackMethod));
-    returnValueBaton->append(deferlow);
-    
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	baton = TTValue(TTPtr(obj), TTPtr(aCallbackMethod), deferlow);
+	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
 	
@@ -394,16 +384,14 @@ void ui_viewer_freeze(t_ui *obj, TTSymbol name, TTBoolean f)
 
 void ui_explorer_create(ObjectPtr x, TTObjectBasePtr *returnedExplorer, SymbolPtr method)
 {
-	TTValue			args, none;
+	TTValue			args, baton, none;
 	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-	returnValueBaton = new TTValue(TTPtr(x));
-	returnValueBaton->append(TTPtr(method));
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
+	baton = TTValue(TTPtr(x), TTPtr(method));
+	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
 	
@@ -553,7 +541,6 @@ void ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	TTAddress 		outAdrs;
 	TTValue			v, none;
 	TTNodePtr		aNode;
-	TTValuePtr		newBaton;
 	TTAttributePtr	anAttribute = NULL;
 	TTErr			err;
 	
@@ -583,8 +570,7 @@ void ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 				
 				TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&obj->previewSignal), none);
 				
-				newBaton = new TTValue(TTPtr(self));
-				obj->previewSignal->setAttributeValue(kTTSym_baton, TTPtr(newBaton));
+				obj->previewSignal->setAttributeValue(kTTSym_baton, TTPtr(self));
 				obj->previewSignal->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_signal));
 				obj->previewSignal->setAttributeValue(TTSymbol("owner"), TTSymbol("j.ui"));					// this is usefull only to debug
 				

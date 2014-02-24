@@ -24,8 +24,8 @@ bool                        max5 = false;					///< Is Jamoma currently running i
 bool                        max6 = false;					///< Is Jamoma currently running in Max 6 or newer?
 
 TTSymbol					kTTSym_Jamoma;
-TTApplicationPtr			JamomaApplication = NULL;
-JAMOMA_EXPORT               TTNodeDirectoryPtr			JamomaDirectory = NULL;
+TTObject                    JamomaApplicationManager;
+TTObject                    JamomaApplication;
 
 TTRegex*					ttRegexForJmod = NULL;
 TTRegex*					ttRegexForJcom = NULL;
@@ -58,7 +58,8 @@ void jamoma_init(void)
 		ObjectPtr	max = SymbolGen("max")->s_thing;
         TTString    JamomaConfigurationFilePath;
 		t_atom		a[4];
-		TTValue		v;
+		TTValue		v, out;
+        TTErr       err;
  
 		if (maxversion() >= 0x0519)
 			max5 = true;
@@ -69,6 +70,22 @@ void jamoma_init(void)
 		// Init the Modular library
         TTModularInit();
         
+        // prepare a symbol for Jamoma
+        kTTSym_Jamoma = TTSymbol(JAMOMA);
+        
+        // Create an application manager
+        JamomaApplicationManager = TTObject("ApplicationManager");
+        
+        // Create a local application called "Jamoma" and get it back
+        err = JamomaApplicationManager.send("ApplicationInstantiateLocal", kTTSym_Jamoma, out);
+        
+        if (err) {
+            TTLogError("Error : can't create Jamoma application \n");
+            return;
+        }
+        else
+            JamomaApplication = out[0];
+        
         // Edit the path to the JamomaConfiguration.xml file
         strncpy_zero(name, TTFoundationBinaryPath.data(), TTFoundationBinaryPath.size()-6);
         JamomaConfigurationFilePath = name;
@@ -78,12 +95,6 @@ void jamoma_init(void)
         strncpy_zero(name, JamomaConfigurationFilePath.data(), MAX_PATH_CHARS);
         if (locatefile_extended(name, &outvol, &outtype, &filetype, 1))
             return error("Jamoma not loaded : can't find %s", JamomaConfigurationFilePath.data());
-        
-		// Create a local application named Jamoma and get it
-		TTModularCreateLocalApplication(JAMOMA, JamomaConfigurationFilePath);
-		JamomaApplication = getLocalApplication;
-		JamomaDirectory = getLocalDirectory;
-		kTTSym_Jamoma = TTSymbol(JAMOMA);
 		
 		// DEBUG
 		//jamoma_application_dump_configuration();
