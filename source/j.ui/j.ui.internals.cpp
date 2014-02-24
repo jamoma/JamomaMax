@@ -57,25 +57,18 @@ void ui_unregister_info(t_ui *obj)
 void ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbackMethod, TTSymbol service, TTSymbol name, TTBoolean deferlow)
 {
 	TTValue			args, baton, v, none;
-	TTObjectBasePtr	returnValueCallback;
 	TTAddress       viewAddress, dataAddress;
 	TTNodePtr		aNode;
 	TTBoolean		nodeCreated;
 	
-	// Prepare arguments to create a TTData object
-	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
+    // Create data
+	*returnedData = NULL;
+    TTObjectBaseInstantiate(TTSymbol("Data"), TTObjectBaseHandle(returnedData), service);
     
 	baton = TTValue(TTPtr(obj), TTPtr(aCallbackMethod), deferlow);
     
-	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
-	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
-	args.append(returnValueCallback);
-	
-	args.append(service);
-	
-	*returnedData = NULL;
-	TTObjectBaseInstantiate(kTTSym_Data, TTObjectBaseHandle(returnedData), args);
+	(*returnedData)->setAttributeValue(kTTSym_baton, baton);
+	(*returnedData)->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	
 	// Register data
 	obj->uiSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);

@@ -226,20 +226,13 @@ TTErr jamoma_container_send(TTContainerPtr aContainer, SymbolPtr relativeAddress
 /**	Create a data object */
 TTErr jamoma_data_create(ObjectPtr x, TTObjectBasePtr *returnedData, TTSymbol service)
 {
-	TTValue			args, none;
-	TTObjectBasePtr	returnValueCallback;
-	
-	// prepare arguments
-	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
-	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
-	args.append(returnValueCallback);
-	
-	args.append(service);
-	
+	// create a data
 	*returnedData = NULL;
-	TTObjectBaseInstantiate(kTTSym_Data, TTObjectBaseHandle(returnedData), args);
+	TTObjectBaseInstantiate(kTTSym_Data, TTObjectBaseHandle(returnedData), service);
+    
+    // prepare its callback
+    (*returnedData)->setAttributeValue(kTTSym_baton, TTPtr(x));
+	(*returnedData)->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
 	
 	return kTTErrNone;
 }
