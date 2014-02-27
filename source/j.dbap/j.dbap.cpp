@@ -87,7 +87,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	this_class = c;
 	
 	// Initialize Jitter by creating a dummy matrix
-	jamoma_loadextern(_sym_jit_matrix, 0, NULL, &dummy);
+	jamoma_loadextern(gensym("jit.matrix"), 0, NULL, &dummy);
 	
 	return 0;
 }
