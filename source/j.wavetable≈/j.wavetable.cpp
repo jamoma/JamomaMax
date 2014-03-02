@@ -194,7 +194,7 @@ MaxErr OscilSetMode(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv)
 		
 		v.setSize(argc);
 		for (int i=0; i<argc; i++)
-				v.set(i, atom_getsym(argv+i));
+				v[i] = atom_getsym(argv+i)->s_name;
 		
 		self->attrWaveform = atom_getsym(argv);
 		self->audioGraphObject->getUnitGenerator()->setAttributeValue(TT("mode"), v);
