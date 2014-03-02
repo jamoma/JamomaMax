@@ -188,9 +188,16 @@ TTErr OscilDropAudio(OscilPtr self, long inletNumber, ObjectPtr sourceMaxObject,
 
 MaxErr OscilSetMode(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv)
 {
+	
 	if (argc) {
+		TTValue v;
+		
+		v.setSize(argc);
+		for (int i=0; i<argc; i++)
+				v.set(i, atom_getfloat(argv+i));
+		
 		self->attrWaveform = atom_getsym(argv);
-		self->audioGraphObject->getUnitGenerator()->setAttributeValue(TT("mode"), TT(self->attrWaveform->s_name));
+		self->audioGraphObject->getUnitGenerator()->setAttributeValue(TT("mode"), v);
 	}
 	return MAX_ERR_NONE;
 }
