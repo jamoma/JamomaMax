@@ -1353,7 +1353,6 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 			begin = s_toParse.begin();
 			end = s_toParse.end();
 		}
-
 		
 		// parse .module or if not parse context (model or view)
 		if (!ttRegexForModule->parse(begin, end)) {
@@ -1644,7 +1643,7 @@ TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbo
         // for the moment we replace '.' and ' ' by '_'
         TTString s_toParse = returnedName.c_str();
         std::replace(s_toParse.begin(), s_toParse.end(), '.', '_');
-        //std::replace(s_toParse.begin(), s_toParse.end(), ' ', '_');
+        std::replace(s_toParse.begin(), s_toParse.end(), ' ', '_');
         returnedName = TTSymbol(s_toParse);
 	}
 		// if no patcher : stop the subscription process
