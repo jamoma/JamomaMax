@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 308.0, 44.0, 1105.0, 806.0 ],
+		"rect" : [ 308.0, 44.0, 1115.0, 793.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -31,40 +31,24 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-81",
-					"maxclass" : "newobj",
+					"frgb" : 0.0,
+					"id" : "obj-84",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 827.0, 714.0, 236.0, 20.0 ],
+					"text" : "get the highlight state of a j.remote"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-82",
+					"maxclass" : "button",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 830.0, 734.0, 29.0, 20.0 ],
-					"text" : "t b"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-80",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 768.0, 778.0, 81.0, 18.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-68",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 830.0, 756.0, 182.0, 20.0 ],
-					"text" : "j.receive /interface/rate:address"
+					"patching_rect" : [ 809.0, 715.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -76,7 +60,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 809.0, 734.0, 20.0, 20.0 ]
+					"patching_rect" : [ 809.0, 757.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -89,7 +73,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 809.0, 713.0, 182.0, 20.0 ],
+					"patching_rect" : [ 809.0, 736.0, 203.0, 20.0 ],
 					"text" : "j.receive /interface/rate:highlight"
 				}
 
@@ -119,7 +103,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 921.0, 144.0, 180.0, 18.0 ],
-					"text" : "rate 1."
+					"text" : "fps 33.376759"
 				}
 
 			}
@@ -356,7 +340,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 340.0, 353.0, 495.0, 47.0 ],
+					"patching_rect" : [ 340.0, 353.0, 489.0, 47.0 ],
 					"text" : "Here is an intantiation of a movie view : \nthe first argument specifies the model to bind to (equivalent to the model:address attribute) \nthe second (optional) argument defines the address of the view  (here /interface)"
 				}
 
@@ -443,7 +427,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 809.0, 605.0, 265.0, 100.0 ],
-					"text" : "If you press the shift key when you are on a j.ui this would show the highlight state of each ui object. If you click on the highlight label this would change his highlight state.\n\nThis can be used to facilitate parameter selection from a client."
+					"text" : "If you press the shift key when you are on a j.ui this would show the highlight state of each ui object. If you click on the highlight label this would change his highlight state.\n\nThis can be used to facilitate parameter selection from a client"
 				}
 
 			}
@@ -510,7 +494,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 809.0, 521.0, 269.0, 47.0 ],
+					"patching_rect" : [ 809.0, 521.0, 265.0, 47.0 ],
 					"text" : "Here the movie.model have a j.out so it provides internals data/mute, data/freeze and data/preview parameter."
 				}
 
@@ -555,7 +539,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 479.0, 585.0, 153.0, 18.0 ],
-					"text" : "file/path oh.mov"
+					"text" : "fps 33.439121"
 				}
 
 			}
@@ -584,7 +568,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 629.0, 441.0, 139.0, 18.0 ],
-					"text" : "model:address /player.B"
+					"text" : "model:address /player.B",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
 			}
@@ -599,7 +584,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 479.0, 441.0, 139.0, 18.0 ],
-					"text" : "model:address /player.A"
+					"text" : "model:address /player.A",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
 			}
@@ -638,7 +624,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 681.0, 155.0, 96.0, 18.0 ],
-					"text" : "rate 1."
+					"text" : "fps 33.376759"
 				}
 
 			}
@@ -740,7 +726,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.913725, 0.913725, 0.913725, 0.0 ],
 					"id" : "obj-44",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -852,7 +837,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.913725, 0.913725, 0.913725, 0.0 ],
 					"id" : "obj-64",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -895,7 +879,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.913725, 0.913725, 0.913725, 0.0 ],
 					"id" : "obj-60",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -1298,7 +1281,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 386.0, 155.0, 96.0, 18.0 ],
-					"text" : "rate 1."
+					"text" : "fps 33.279354"
 				}
 
 			}
@@ -1834,29 +1817,11 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-80", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-68", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 626.5, 110.0, 683.5, 110.0 ],
 					"source" : [ "obj-7", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-81", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-75", 0 ]
 				}
 
 			}
@@ -1890,10 +1855,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-68", 0 ],
+					"destination" : [ "obj-50", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-81", 0 ]
+					"source" : [ "obj-82", 0 ]
 				}
 
 			}

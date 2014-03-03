@@ -18,7 +18,8 @@
 #include "j.dbap.h"
 
 // Globals
-t_class		*this_class;								// Required. Global pointing to this class 
+t_class		*this_class;								// Required. Global pointing to this class
+t_object	*dummy = NULL;
 
 /************************************************************************************/
 // Main() Function
@@ -83,7 +84,11 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	
 	// Finalize our class
 	class_register(CLASS_BOX, c);
-	this_class = c;	
+	this_class = c;
+	
+	// Initialize Jitter by creating a dummy matrix
+	jamoma_loadextern(gensym("jit.matrix"), 0, NULL, &dummy);
+	
 	return 0;
 }
 
