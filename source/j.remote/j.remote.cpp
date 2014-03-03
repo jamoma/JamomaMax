@@ -232,7 +232,15 @@ void remote_subscribe(TTPtr self)
 		remote_attach(self, set_out);
         
         // observe :description attribute
-        makeInternals_receiver(x, x->address, TTSymbol(":description"), gensym("return_description"), &anObject, YES);
+        if (x->internals->lookup(TTSymbol(":description"), v))
+            
+            makeInternals_receiver(x, absoluteAddress, TTSymbol(":description"), gensym("return_description"), &anObject, YES);
+        
+        else {
+            anObject = v[0];
+            anObject->setAttributeValue(kTTSym_address, absoluteAddress.appendAttribute(kTTSym_description));
+        }
+        
         anObject->sendMessage(kTTSym_Get);
         
         return;
@@ -303,7 +311,15 @@ void remote_subscribe(TTPtr self)
 		remote_attach(self, set_out);
         
         // observe :description attribute
-        makeInternals_receiver(x, absoluteAddress, TTSymbol(":description"), gensym("return_description"), &anObject, YES);
+        if (x->internals->lookup(TTSymbol(":description"), v))
+            
+            makeInternals_receiver(x, absoluteAddress, TTSymbol(":description"), gensym("return_description"), &anObject, YES);
+        
+        else {
+            anObject = v[0];
+            anObject->setAttributeValue(kTTSym_address, absoluteAddress.appendAttribute(kTTSym_description));
+        }
+        
         anObject->sendMessage(kTTSym_Get);
         
         return;
