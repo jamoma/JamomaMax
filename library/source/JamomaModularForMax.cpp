@@ -1297,7 +1297,7 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 			s_toParse = TTString(ttRegexForJmod->end(), end);
 			begin = s_toParse.begin();
 			end = s_toParse.end();
-		} 
+		}
 		// parse j.
 		else if (!ttRegexForJcom->parse(begin, end)) {
 			
@@ -1305,6 +1305,7 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 			begin = s_toParse.begin();
 			end = s_toParse.end();
 		}
+
 		
 		// parse .module or if not parse context (model or view)
 		if (!ttRegexForModule->parse(begin, end)) {
@@ -1344,10 +1345,6 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
             // append Maxhelp to the class to clarify the namespace
             s_toParse += "Maxhelp";
 		}
-		
-        // TODO : replace each '.' by the Uppercase of the letter after the '.'
-        // for the moment we replace '.' by '_'
-        std::replace(s_toParse.begin(), s_toParse.end(), '.', '_');
         
 		returnedClass = TTSymbol(s_toParse);
 	}
@@ -1594,6 +1591,13 @@ TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbo
 				returnedName = TTSymbol(viewName.data());
 			}
 		}
+        
+        // TODO : replace each '.' by the Uppercase of the letter after the '.'
+        // for the moment we replace '.' and ' ' by '_'
+        TTString s_toParse = returnedName.c_str();
+        std::replace(s_toParse.begin(), s_toParse.end(), '.', '_');
+        //std::replace(s_toParse.begin(), s_toParse.end(), ' ', '_');
+        returnedName = TTSymbol(s_toParse);
 	}
 		// if no patcher : stop the subscription process
 	else {
