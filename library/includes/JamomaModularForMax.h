@@ -108,6 +108,18 @@ TTErr JAMOMA_EXPORT jamoma_container_send(TTContainerPtr aContainer, SymbolPtr r
 
 
 
+// Method to deal with #TTNodeInfo
+///////////////////////////////////////////////////////////////////////
+
+/**	Create a #TTNodeInfo object.
+ @param x
+ @param returnedNodeInfo
+ @return						#TTErr error message if the method does not execute as expected.
+ */
+TTErr JAMOMA_EXPORT jamoma_node_info_create(ObjectPtr x, TTObjectBasePtr *returnedNodeInfo);
+
+
+
 // Method to deal with #TTData
 ///////////////////////////////////////////////////////////////////////
 

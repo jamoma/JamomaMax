@@ -223,6 +223,19 @@ TTErr jamoma_container_send(TTContainerPtr aContainer, SymbolPtr relativeAddress
 	return kTTErrGeneric;
 }
 
+// Method to deal with #TTNodeInfo
+///////////////////////////////////////////////////////////////////////
+
+TTErr JAMOMA_EXPORT jamoma_node_info_create(ObjectPtr x, TTObjectBasePtr *returnedNodeInfo)
+{
+    TTValue			args;
+	
+	*returnedNodeInfo = NULL;
+	TTObjectBaseInstantiate(kTTSym_NodeInfo, TTObjectBaseHandle(returnedNodeInfo), args);
+	
+	return kTTErrNone;
+}
+
 // Method to deal with TTData
 ///////////////////////////////////////////////////////////////////////
 
