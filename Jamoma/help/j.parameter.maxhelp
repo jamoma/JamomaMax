@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 118.0, 44.0, 1058.0, 782.0 ],
+		"rect" : [ 123.0, 52.0, 1058.0, 782.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 118.0, 70.0, 1058.0, 756.0 ],
+						"rect" : [ 0.0, 26.0, 1058.0, 756.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -76,7 +76,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 562.5, 719.5, 351.0, 20.0 ],
-									"presentation_rect" : [ 447.0, 729.5, 0.0, 0.0 ],
 									"text" : "this way, we can define the priority at the “something\" node level"
 								}
 
@@ -121,7 +120,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 336.0, 661.5, 413.0, 52.0 ],
-									"presentation_rect" : [ 348.0, 695.5, 0.0, 0.0 ],
 									"text" : "the solution to handle this kind of case is to use the j.node object, which allow to explicitly declare properties of implicitly-created nodes"
 								}
 
@@ -136,7 +134,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 336.0, 637.5, 552.0, 20.0 ],
-									"presentation_rect" : [ 336.0, 681.0, 0.0, 0.0 ],
 									"text" : "they won't even work between them, because priorities work recursively, each node level after another"
 								}
 
@@ -179,7 +176,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 58.0, 611.0, 701.0, 20.0 ],
-									"presentation_rect" : [ 57.0, 660.0, 0.0, 0.0 ],
 									"text" : "i.e.: these two parameters' priorities below won't be working within the same \"scope\" than the \"simple\" parameters' priorities above"
 								}
 
@@ -194,7 +190,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 58.0, 584.0, 409.0, 20.0 ],
-									"presentation_rect" : [ 58.0, 632.0, 0.0, 0.0 ],
 									"text" : "priorities are handled only at the parameter level, not for higher-level nodes"
 								}
 
@@ -210,7 +205,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 310.5, 524.0, 507.0, 47.0 ],
-									"presentation_rect" : [ 366.0, 596.0, 0.0, 0.0 ],
 									"text" : "here, for example, a sub-node of this patcher's model is created, called \"some\"\nthen a sub-node to this node, called \"sub\", is also created, and then a third one called \"node\"\nfinally, the parameter \"param\" exists at the end of this sub-tree"
 								}
 
@@ -225,7 +219,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 58.0, 501.0, 458.0, 20.0 ],
-									"presentation_rect" : [ 59.5, 560.0, 0.0, 0.0 ],
 									"text" : "It is possible to implicitly declare nodes in a j.parameter's address (by using slashes)"
 								}
 
@@ -254,7 +247,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 24.5, 465.0, 789.0, 20.0 ],
-									"presentation_rect" : [ 37.5, 534.0, 0.0, 0.0 ],
 									"text" : "Working with subnodes is possible within parameters, but requires some knowledge about the way nodes work (in particular in relation to priorities)"
 								}
 
@@ -272,7 +264,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 574.0, 164.0, 272.0, 37.0 ],
-									"presentation_rect" : [ 413.0, 120.0, 0.0, 0.0 ],
 									"text" : "create a cue and look at the order in which \nthe parameters are stored (and recalled)"
 								}
 
@@ -329,15 +320,40 @@
 										"tags" : "",
 										"boxes" : [ 											{
 												"box" : 												{
+													"id" : "obj-6",
+													"maxclass" : "button",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 63.0, 54.0, 20.0, 20.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-4",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 87.0, 104.0, 75.0, 20.0 ],
+													"text" : "j.send */*/*/*"
+												}
+
+											}
+, 											{
+												"box" : 												{
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"frgb" : 0.0,
 													"id" : "obj-3",
-													"linecount" : 3,
+													"linecount" : 2,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 160.0, 71.0, 150.0, 47.0 ],
+													"patching_rect" : [ 98.0, 54.0, 169.0, 33.0 ],
 													"text" : "this sets all parameters of this model to 0. once it is ready"
 												}
 
@@ -426,10 +442,28 @@
 												}
 
 											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-4", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-18", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-18", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-6", 0 ]
+												}
+
+											}
  ]
 									}
 ,
-									"patching_rect" : [ 574.0, 38.0, 48.0, 17.0 ],
+									"patching_rect" : [ 574.0, 39.0, 48.0, 17.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
@@ -757,7 +791,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 790.0, 348.5, 18.0, 17.0 ],
+									"patching_rect" : [ 899.5, 315.0, 18.0, 17.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
@@ -785,7 +819,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 574.5, 348.5, 263.0, 33.0 ],
+									"patching_rect" : [ 684.0, 315.0, 263.0, 33.0 ],
 									"text" : "Using j.namespace (see in subpatcher) \nalso allows to see how parameters are ordered:"
 								}
 
@@ -913,7 +947,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 574.0, 386.0, 260.0, 20.0 ],
+									"patching_rect" : [ 683.5, 352.5, 260.0, 20.0 ],
 									"prefix" : "/Priorities/"
 								}
 
@@ -938,7 +972,7 @@
 									"destination" : [ "obj-13", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 799.5, 382.0, 583.5, 382.0 ],
+									"midpoints" : [ 909.0, 348.5, 693.0, 348.5 ],
 									"source" : [ "obj-17", 0 ]
 								}
 
@@ -1775,7 +1809,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1058.0, 756.0 ],
+						"rect" : [ 123.0, 78.0, 1058.0, 756.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
