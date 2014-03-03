@@ -35,12 +35,29 @@ require "#{glibdir}/../../Core/Shared/jamomalib.rb"
 create_logs(@projectName)
 zero_count
 
+if mac?
 `mkdir -p "#{glibdir}"/Jamoma/externals`
 `mkdir -p "#{glibdir}"/Jamoma/extensions`
 `mkdir -p "#{glibdir}"/Jamoma/support`
 `rm -rf "#{glibdir}"/Jamoma/externals/*`
 `rm -rf "#{glibdir}"/Jamoma/extensions/*`
 `rm -rf "#{glibdir}"/Jamoma/support/*`
+else
+    winglibdir = glibdir
+    winglibdir.gsub!(/\//, '\\')
+
+    mydir = "#{winglibdir}\\Jamoma\\externals"
+    `mkdir #{mydir}` if !FileTest.exist?(mydir)
+    `del #{mydir}/*`
+
+    mydir = "#{winglibdir}\\Jamoma\\extensions"
+    `mkdir #{mydir}` if !FileTest.exist?(mydir)
+    `del #{mydir}/*`
+
+    mydir = "#{winglibdir}\\Jamoma\\support"
+    `mkdir #{mydir}` if !FileTest.exist?(mydir)
+    `del #{mydir}/*`
+end
 
 # build Max project
 load "build.rb"
