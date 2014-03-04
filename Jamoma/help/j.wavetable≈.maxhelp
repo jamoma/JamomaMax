@@ -20,7 +20,7 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "j.wavetable≈", "@description", "wavetablelator with multicore output" ],
+					"args" : [ "@name", "j.wavetable=", "@description", "wavetablelator with multicore output" ],
 					"bgmode" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
@@ -109,7 +109,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 195.0, 222.0, 169.0, 19.0 ],
-					"text" : "j.info≈"
+					"text" : "j.info="
 				}
 
 			}
@@ -192,7 +192,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 43.0, 160.0, 150.0, 31.0 ],
-					"text" : "wavetable≈ produces a single-channel signal."
+					"text" : "wavetable= produces a single-channel signal."
 				}
 
 			}
@@ -234,7 +234,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 195.0, 346.0, 91.0, 19.0 ],
-					"text" : "j.unpack≈ 1"
+					"text" : "j.unpack= 1"
 				}
 
 			}
@@ -249,7 +249,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 195.0, 162.0, 208.0, 31.0 ],
-					"text" : "j.wavetable≈ @waveform sine @interpolation linear @frequency 220."
+					"text" : "j.wavetable= @waveform sine @interpolation linear @frequency 220."
 				}
 
 			}

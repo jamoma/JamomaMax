@@ -49,7 +49,7 @@
 					"patching_rect" : [ 160.0, 520.0, 308.0, 38.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "Audio objects in the chain that follow j.plug.in≈ will adapt to the number of channels they are passed.",
+					"text" : "Audio objects in the chain that follow j.plug.in= will adapt to the number of channels they are passed.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -101,7 +101,7 @@
 					"patching_rect" : [ 50.0, 520.0, 104.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "j.dcblocker≈",
+					"text" : "j.dcblocker=",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -124,7 +124,7 @@
 					"patching_rect" : [ 50.0, 550.0, 95.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "j.plug.out≈",
+					"text" : "j.plug.out=",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -151,7 +151,7 @@
 					"patching_rect" : [ 65.0, 400.0, 370.0, 38.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "Output from j.plug.in≈ is a SmartSignal containing the number of audio channels provided by the plug-in host.",
+					"text" : "Output from j.plug.in= is a SmartSignal containing the number of audio channels provided by the plug-in host.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -179,7 +179,7 @@
 					"patching_rect" : [ 135.5, 202.0, 451.0, 38.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "The pack≈ object creates a SmartSignal containing N channels of audio.  The number of channels is defined by the optional argument (default 2, for stereo)",
+					"text" : "The pack= object creates a SmartSignal containing N channels of audio.  The number of channels is defined by the optional argument (default 2, for stereo)",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -207,7 +207,7 @@
 					"patching_rect" : [ 180.0, 330.0, 199.0, 38.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "Use the abbreviated name of the object, in≈, for convenience.",
+					"text" : "Use the abbreviated name of the object, in=, for convenience.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -262,7 +262,7 @@
 					"patching_rect" : [ 60.0, 270.0, 361.0, 38.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "Input to j.plug.in≈ is a SmartSignal, which is passed to the object's output in Max, but ignored when the plug-in is built.",
+					"text" : "Input to j.plug.in= is a SmartSignal, which is passed to the object's output in Max, but ignored when the plug-in is built.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"underline" : 0
 				}
@@ -286,7 +286,7 @@
 					"patching_rect" : [ 50.0, 335.0, 115.0, 28.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "j.plug.in≈",
+					"text" : "j.plug.in=",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -397,7 +397,7 @@
 					"patching_rect" : [ 50.0, 210.0, 85.5, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "j.pack≈ 4",
+					"text" : "j.pack= 4",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -580,19 +580,19 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.plug.in≈.mxo",
+				"name" : "j.plug.in=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.plug.out≈.mxo",
+				"name" : "j.plug.out=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dcblocker≈.mxo",
+				"name" : "j.dcblocker=.mxo",
 				"type" : "iLaX"
 			}
  ]

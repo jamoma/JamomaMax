@@ -149,7 +149,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 408.0, 164.0, 167.0, 19.0 ],
-					"text" : "'bang' to refresh all j.info≈"
+					"text" : "'bang' to refresh all j.info="
 				}
 
 			}
@@ -389,7 +389,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 162.0, 470.0, 199.0, 19.0 ],
-					"text" : "j.info≈"
+					"text" : "j.info="
 				}
 
 			}
@@ -445,7 +445,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 162.0, 263.0, 199.0, 19.0 ],
-					"text" : "j.info≈"
+					"text" : "j.info="
 				}
 
 			}
@@ -459,7 +459,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 162.0, 443.0, 166.0, 19.0 ],
-					"text" : "j.resample≈ @direction up"
+					"text" : "j.resample= @direction up"
 				}
 
 			}
@@ -473,7 +473,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 162.0, 238.0, 180.0, 19.0 ],
-					"text" : "j.resample≈ @direction down"
+					"text" : "j.resample= @direction down"
 				}
 
 			}
@@ -501,7 +501,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 162.0, 398.0, 253.0, 19.0 ],
-					"text" : "j.filter≈ @type mirror.5 @frequency 20000."
+					"text" : "j.filter= @type mirror.5 @frequency 20000."
 				}
 
 			}
@@ -568,7 +568,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 162.0, 163.0, 199.0, 19.0 ],
-					"text" : "j.info≈"
+					"text" : "j.info="
 				}
 
 			}
@@ -594,13 +594,13 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "audio.connect", "audio.connect", "" ],
 					"patching_rect" : [ 162.0, 133.0, 509.0, 19.0 ],
-					"text" : "j.soundfile.player≈ @loop 1 @filePath /Applications/Max5/examples/sounds/jongly.aif @play 1"
+					"text" : "j.soundfile.player= @loop 1 @filePath /Applications/Max5/examples/sounds/jongly.aif @play 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.resample≈", "@description", "Resample an input signal at a different sample rate or block size." ],
+					"args" : [ "@name", "j.resample=", "@description", "Resample an input signal at a different sample rate or block size." ],
 					"bgmode" : 1,
 					"id" : "obj-18",
 					"maxclass" : "bpatcher",
@@ -634,7 +634,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 162.0, 548.0, 93.0, 19.0 ],
-					"text" : "j.unpack≈ 1"
+					"text" : "j.unpack= 1"
 				}
 
 			}
@@ -1307,7 +1307,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1323,19 +1323,19 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.soundfile.player≈.mxo",
+				"name" : "j.soundfile.player=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.info≈.mxo",
+				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.filter≈.mxo",
+				"name" : "j.filter=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.resample≈.mxo",
+				"name" : "j.resample=.mxo",
 				"type" : "iLaX"
 			}
  ]

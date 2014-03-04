@@ -86,7 +86,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 273.0, 170.0, 208.0, 19.0 ],
-					"text" : "j.unpack≈ 3"
+					"text" : "j.unpack= 3"
 				}
 
 			}
@@ -100,7 +100,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 273.0, 140.0, 153.0, 19.0 ],
-					"text" : "j.sig≈ @numChannels 3"
+					"text" : "j.sig= @numChannels 3"
 				}
 
 			}
@@ -133,7 +133,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.sig≈", "@description", "signal generator" ],
+					"args" : [ "@name", "j.sig=", "@description", "signal generator" ],
 					"bgmode" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
@@ -169,7 +169,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 115.0, 170.0, 91.0, 19.0 ],
-					"text" : "j.unpack≈ 1"
+					"text" : "j.unpack= 1"
 				}
 
 			}
@@ -183,7 +183,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 115.0, 140.0, 61.0, 19.0 ],
-					"text" : "j.sig≈"
+					"text" : "j.sig="
 				}
 
 			}

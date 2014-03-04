@@ -35,7 +35,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "j.audiounit≈" ],
+					"jsarguments" : [ "j.audiounit=" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -125,7 +125,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 166.0, 216.0, 465.0, 22.0 ],
-									"text" : "without setting @class,  j.array≈ will process a gain stage by default"
+									"text" : "without setting @class,  j.array= will process a gain stage by default"
 								}
 
 							}
@@ -183,7 +183,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 81.0, 609.0, 883.0, 20.0 ],
-									"text" : "j.unpack≈ 4"
+									"text" : "j.unpack= 4"
 								}
 
 							}
@@ -306,7 +306,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "audio.connect", "", "", "", "" ],
 									"patching_rect" : [ 81.0, 241.0, 65.0, 20.0 ],
-									"text" : "j.info≈"
+									"text" : "j.info="
 								}
 
 							}
@@ -320,7 +320,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 81.0, 577.0, 151.0, 22.0 ],
-									"text" : "j.array≈ @class filter"
+									"text" : "j.array= @class filter"
 								}
 
 							}
@@ -334,7 +334,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 236.0, 577.0, 294.0, 22.0 ],
-									"text" : "use j.array≈ with any JamomaDSP class"
+									"text" : "use j.array= with any JamomaDSP class"
 								}
 
 							}
@@ -434,7 +434,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 80.0, 105.0, 186.0, 22.0 ],
-									"text" : "j.noise≈ @numChannels 4"
+									"text" : "j.noise= @numChannels 4"
 								}
 
 							}
@@ -495,13 +495,13 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 80.0, 216.0, 77.0, 22.0 ],
-									"text" : "j.array≈"
+									"text" : "j.array="
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "j.array≈", "@description", "An audio swiss army knife" ],
+									"args" : [ "@name", "j.array=", "@description", "An audio swiss army knife" ],
 									"bgmode" : 1,
 									"id" : "obj-32",
 									"maxclass" : "bpatcher",
@@ -532,7 +532,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 101.0, 306.0, 883.0, 20.0 ],
-									"text" : "j.unpack≈ 4"
+									"text" : "j.unpack= 4"
 								}
 
 							}
@@ -903,7 +903,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -919,15 +919,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.array≈.mxo",
+				"name" : "j.array=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.noise≈.mxo",
+				"name" : "j.noise=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.info≈.mxo",
+				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -36,7 +36,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 155.0, 425.0, 119.0, 19.0 ],
-					"text" : "j.unpack≈"
+					"text" : "j.unpack="
 				}
 
 			}
@@ -50,7 +50,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 155.0, 205.0, 119.0, 19.0 ],
-					"text" : "j.pack≈"
+					"text" : "j.pack="
 				}
 
 			}
@@ -219,7 +219,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 155.0, 347.0, 107.0, 19.0 ],
-					"text" : "j.waveshaper≈"
+					"text" : "j.waveshaper="
 				}
 
 			}
@@ -426,15 +426,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.waveshaper≈.mxo",
+				"name" : "j.waveshaper=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
  ]

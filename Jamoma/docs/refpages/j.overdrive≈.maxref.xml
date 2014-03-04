@@ -3,7 +3,7 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="j.overdrive≈" module="" category="Jamoma">
+<c74object name="j.overdrive=" module="" category="Jamoma">
 	<digest>
 		Overdrive multichannels signal
 	</digest>
@@ -233,7 +233,7 @@
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="j.overdrive~"/>
-		<seealso name="jamoma≈"/>
-		<seealso name="j.array≈"/>
+		<seealso name="jamoma="/>
+		<seealso name="j.array="/>
 	</seealsolist>
 </c74object>

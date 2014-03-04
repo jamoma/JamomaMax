@@ -1717,13 +1717,13 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 424.0, 150.0, 96.0, 19.0 ],
-					"text" : "j.trajectory≈"
+					"text" : "j.trajectory="
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.trajectory≈", "@description", "trajectory generator" ],
+					"args" : [ "@name", "j.trajectory=", "@description", "trajectory generator" ],
 					"bgmode" : 1,
 					"id" : "obj-44",
 					"maxclass" : "bpatcher",
@@ -1754,7 +1754,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "list", "" ],
 					"patching_rect" : [ 424.0, 173.0, 85.0, 19.0 ],
-					"text" : "j.unsig≈ 3"
+					"text" : "j.unsig= 3"
 				}
 
 			}
@@ -2343,7 +2343,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.unsig≈.mxo",
+				"name" : "j.unsig=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -2359,7 +2359,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.trajectory≈.mxo",
+				"name" : "j.trajectory=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

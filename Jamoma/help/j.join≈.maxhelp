@@ -135,7 +135,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 357.0, 436.0, 80.0, 20.0 ],
-									"text" : "j.pack≈ 2"
+									"text" : "j.pack= 2"
 								}
 
 							}
@@ -149,7 +149,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 537.0, 436.0, 80.0, 20.0 ],
-									"text" : "j.pack≈ 2"
+									"text" : "j.pack= 2"
 								}
 
 							}
@@ -235,7 +235,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 267.0, 461.0, 289.0, 20.0 ],
-									"text" : "j.join≈ 4"
+									"text" : "j.join= 4"
 								}
 
 							}
@@ -263,7 +263,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "audio.connect", "", "", "", "" ],
 									"patching_rect" : [ 267.0, 486.0, 64.5, 20.0 ],
-									"text" : "j.info≈"
+									"text" : "j.info="
 								}
 
 							}
@@ -333,7 +333,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 447.0, 436.0, 80.0, 20.0 ],
-									"text" : "j.pack≈ 2"
+									"text" : "j.pack= 2"
 								}
 
 							}
@@ -463,7 +463,7 @@
 									"numoutlets" : 9,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 267.0, 526.0, 499.0, 20.0 ],
-									"text" : "j.unpack≈ 8"
+									"text" : "j.unpack= 8"
 								}
 
 							}
@@ -477,7 +477,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 267.0, 436.0, 80.0, 20.0 ],
-									"text" : "j.pack≈ 2"
+									"text" : "j.pack= 2"
 								}
 
 							}
@@ -580,7 +580,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 267.0, 231.0, 314.0, 20.0 ],
-									"text" : "j.join≈ 2"
+									"text" : "j.join= 2"
 								}
 
 							}
@@ -608,7 +608,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "audio.connect", "", "", "", "" ],
 									"patching_rect" : [ 267.0, 256.0, 64.5, 20.0 ],
-									"text" : "j.info≈"
+									"text" : "j.info="
 								}
 
 							}
@@ -636,7 +636,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "audio.connect", "", "", "", "" ],
 									"patching_rect" : [ 562.0, 196.0, 64.5, 20.0 ],
-									"text" : "j.info≈"
+									"text" : "j.info="
 								}
 
 							}
@@ -664,7 +664,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "audio.connect", "", "", "", "" ],
 									"patching_rect" : [ 267.0, 196.0, 64.5, 20.0 ],
-									"text" : "j.info≈"
+									"text" : "j.info="
 								}
 
 							}
@@ -706,7 +706,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 562.0, 171.0, 89.0, 20.0 ],
-									"text" : "j.pack≈ 2"
+									"text" : "j.pack= 2"
 								}
 
 							}
@@ -846,7 +846,7 @@
 									"numoutlets" : 9,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 267.0, 296.0, 499.0, 20.0 ],
-									"text" : "j.unpack≈ 8"
+									"text" : "j.unpack= 8"
 								}
 
 							}
@@ -860,7 +860,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 267.0, 171.0, 229.5, 20.0 ],
-									"text" : "j.pack≈ 4"
+									"text" : "j.pack= 4"
 								}
 
 							}
@@ -870,7 +870,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-29",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.join≈" ],
+									"jsarguments" : [ "j.join=" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1368,19 +1368,19 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.info≈.mxo",
+				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.join≈.mxo",
+				"name" : "j.join=.mxo",
 				"type" : "iLaX"
 			}
  ]

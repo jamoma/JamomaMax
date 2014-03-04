@@ -151,7 +151,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 575.0, 307.0, 129.0, 20.0 ],
-									"text" : "j.op≈ @operator +"
+									"text" : "j.op= @operator +"
 								}
 
 							}
@@ -208,7 +208,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
 									"patching_rect" : [ 575.0, 337.0, 93.0, 20.0 ],
-									"text" : "j.unpack≈ 1"
+									"text" : "j.unpack= 1"
 								}
 
 							}
@@ -222,7 +222,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 685.0, 177.0, 80.0, 20.0 ],
-									"text" : "j.pack≈ 1"
+									"text" : "j.pack= 1"
 								}
 
 							}
@@ -236,7 +236,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 575.0, 177.0, 80.0, 20.0 ],
-									"text" : "j.pack≈ 1"
+									"text" : "j.pack= 1"
 								}
 
 							}
@@ -381,7 +381,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 220.0, 330.0, 258.0, 20.0 ],
-									"text" : "j.unpack≈ 4"
+									"text" : "j.unpack= 4"
 								}
 
 							}
@@ -395,7 +395,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 220.0, 205.0, 229.0, 20.0 ],
-									"text" : "j.pack≈ 4"
+									"text" : "j.pack= 4"
 								}
 
 							}
@@ -436,7 +436,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 220.0, 255.0, 177.0, 20.0 ],
-									"text" : "j.op≈ @operator + @operand 5"
+									"text" : "j.op= @operator + @operand 5"
 								}
 
 							}
@@ -462,7 +462,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-13",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.op≈" ],
+									"jsarguments" : [ "j.op=" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -678,15 +678,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.op≈.mxo",
+				"name" : "j.op=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
  ]

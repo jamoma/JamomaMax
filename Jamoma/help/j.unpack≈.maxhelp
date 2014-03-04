@@ -117,7 +117,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 64.0, 297.0, 68.0, 20.0 ],
-									"text" : "j.gain≈"
+									"text" : "j.gain="
 								}
 
 							}
@@ -131,7 +131,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 489.0, 297.0, 68.0, 20.0 ],
-									"text" : "j.gain≈"
+									"text" : "j.gain="
 								}
 
 							}
@@ -201,7 +201,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 489.0, 152.0, 229.5, 20.0 ],
-									"text" : "j.pack≈ 4"
+									"text" : "j.pack= 4"
 								}
 
 							}
@@ -275,7 +275,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 489.0, 505.0, 259.0, 20.0 ],
-									"text" : "j.unpack≈ 4"
+									"text" : "j.unpack= 4"
 								}
 
 							}
@@ -458,7 +458,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 64.0, 505.0, 259.0, 20.0 ],
-									"text" : "j.unpack≈ 4"
+									"text" : "j.unpack= 4"
 								}
 
 							}
@@ -473,7 +473,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 64.0, 425.0, 80.0, 47.0 ],
-									"text" : "j.op≈ @operator + @operand 5"
+									"text" : "j.op= @operator + @operand 5"
 								}
 
 							}
@@ -487,7 +487,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 64.0, 152.0, 229.5, 20.0 ],
-									"text" : "j.pack≈ 4"
+									"text" : "j.pack= 4"
 								}
 
 							}
@@ -902,7 +902,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 617.0, 484.0, 259.0, 20.0 ],
-									"text" : "j.unpack≈ 4"
+									"text" : "j.unpack= 4"
 								}
 
 							}
@@ -976,7 +976,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 333.0, 484.0, 259.0, 20.0 ],
-									"text" : "j.unpack≈ 4"
+									"text" : "j.unpack= 4"
 								}
 
 							}
@@ -1159,7 +1159,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 63.25, 484.0, 259.0, 20.0 ],
-									"text" : "j.unpack≈ 4"
+									"text" : "j.unpack= 4"
 								}
 
 							}
@@ -1174,7 +1174,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 63.25, 368.5, 81.0, 47.0 ],
-									"text" : "j.op≈ @operator + @operand 5"
+									"text" : "j.op= @operator + @operand 5"
 								}
 
 							}
@@ -1188,7 +1188,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 63.25, 150.0, 229.5, 20.0 ],
-									"text" : "j.pack≈ 4"
+									"text" : "j.pack= 4"
 								}
 
 							}
@@ -1575,7 +1575,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 478.0, 322.0, 87.0, 47.0 ],
-									"text" : "j.op≈ @operator + @operand 5"
+									"text" : "j.op= @operator + @operand 5"
 								}
 
 							}
@@ -1589,7 +1589,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 478.0, 199.0, 229.5, 20.0 ],
-									"text" : "j.pack≈ 4"
+									"text" : "j.pack= 4"
 								}
 
 							}
@@ -1758,7 +1758,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 77.0, 436.0, 259.0, 20.0 ],
-									"text" : "j.unpack≈ 4"
+									"text" : "j.unpack= 4"
 								}
 
 							}
@@ -1773,7 +1773,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 77.0, 322.0, 84.0, 47.0 ],
-									"text" : "j.op≈ @operator + @operand 5"
+									"text" : "j.op= @operator + @operand 5"
 								}
 
 							}
@@ -1787,7 +1787,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 77.0, 199.0, 229.5, 20.0 ],
-									"text" : "j.pack≈ 4"
+									"text" : "j.pack= 4"
 								}
 
 							}
@@ -2014,7 +2014,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "j.unpack≈" ],
+					"jsarguments" : [ "j.unpack=" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -2039,7 +2039,7 @@
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js helpstarter.js j.unpack≈"
+					"text" : "js helpstarter.js j.unpack="
 				}
 
 			}
@@ -2230,7 +2230,7 @@
 									"numoutlets" : 7,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 73.0, 453.0, 589.0, 20.0 ],
-									"text" : "j.unpack≈ 6"
+									"text" : "j.unpack= 6"
 								}
 
 							}
@@ -2244,7 +2244,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 73.0, 429.0, 386.5, 20.0 ],
-									"text" : "j.pack≈ 6"
+									"text" : "j.pack= 6"
 								}
 
 							}
@@ -2369,7 +2369,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 73.0, 191.0, 219.0, 20.0 ],
-									"text" : "j.unpack≈ 4"
+									"text" : "j.unpack= 4"
 								}
 
 							}
@@ -2383,7 +2383,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 73.0, 144.0, 169.0, 20.0 ],
-									"text" : "j.pack≈ 4"
+									"text" : "j.pack= 4"
 								}
 
 							}
@@ -2445,7 +2445,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "j.unpack≈", "@description", "Unpack Jamoma AudioGraph multichannel signal as several MSP signals." ],
+									"args" : [ "@name", "j.unpack=", "@description", "Unpack Jamoma AudioGraph multichannel signal as several MSP signals." ],
 									"bgmode" : 1,
 									"id" : "obj-1",
 									"maxclass" : "bpatcher",
@@ -2786,19 +2786,19 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.op≈.mxo",
+				"name" : "j.op=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.gain≈.mxo",
+				"name" : "j.gain=.mxo",
 				"type" : "iLaX"
 			}
  ]

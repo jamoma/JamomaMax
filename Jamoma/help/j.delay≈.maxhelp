@@ -131,7 +131,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-1",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.delay≈" ],
+									"jsarguments" : [ "j.delay=" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -277,7 +277,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 243.0, 409.0, 150.0, 114.0 ],
-									"text" : "be sure to check the inspector for delay≈.  the delay time is limited by an attribute that sets the maximum delay (which controls the amount of memory assigned to the delay."
+									"text" : "be sure to check the inspector for delay=.  the delay time is limited by an attribute that sets the maximum delay (which controls the amount of memory assigned to the delay."
 								}
 
 							}
@@ -360,7 +360,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 116.5, 402.0, 74.0, 20.0 ],
-									"text" : "j.delay≈"
+									"text" : "j.delay="
 								}
 
 							}
@@ -374,7 +374,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 116.5, 431.0, 93.0, 20.0 ],
-									"text" : "j.unpack≈ 2"
+									"text" : "j.unpack= 2"
 								}
 
 							}
@@ -388,7 +388,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 116.5, 327.0, 80.0, 20.0 ],
-									"text" : "j.pack≈ 2"
+									"text" : "j.pack= 2"
 								}
 
 							}
@@ -813,15 +813,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.delay≈.mxo",
+				"name" : "j.delay=.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -3,7 +3,7 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="j.pick≈" module="" category="Jamoma">
+<c74object name="j.pick=" module="" category="Jamoma">
 	<digest>
 		Extracts N audio signals from a multichannel signal
 	</digest>
@@ -191,7 +191,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.pack≈"/>
-		<seealso name="j.matrix≈"/>
+		<seealso name="j.pack="/>
+		<seealso name="j.matrix="/>
 		</seealsolist>
 </c74object>

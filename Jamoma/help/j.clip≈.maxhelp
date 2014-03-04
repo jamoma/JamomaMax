@@ -35,7 +35,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "j.clip≈" ],
+					"jsarguments" : [ "j.clip=" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -107,7 +107,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-1",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.clip≈" ],
+									"jsarguments" : [ "j.clip=" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -243,7 +243,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 85.0, 392.0, 101.0, 47.0 ],
-									"text" : "j.clip≈ @lowBound -1 @highBound 1"
+									"text" : "j.clip= @lowBound -1 @highBound 1"
 								}
 
 							}
@@ -257,7 +257,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 85.0, 465.0, 141.0, 20.0 ],
-									"text" : "j.unpack≈ 2"
+									"text" : "j.unpack= 2"
 								}
 
 							}
@@ -271,7 +271,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 85.0, 235.0, 81.0, 20.0 ],
-									"text" : "j.pack≈ 2"
+									"text" : "j.pack= 2"
 								}
 
 							}
@@ -485,15 +485,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.clip≈.mxo",
+				"name" : "j.clip=.mxo",
 				"type" : "iLaX"
 			}
  ]

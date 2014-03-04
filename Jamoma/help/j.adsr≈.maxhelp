@@ -35,7 +35,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "j.adsr≈" ],
+					"jsarguments" : [ "j.adsr=" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -368,7 +368,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "audio.connect", "", "", "", "" ],
 									"patching_rect" : [ 163.0, 230.0, 146.0, 20.0 ],
-									"text" : "j.info≈"
+									"text" : "j.info="
 								}
 
 							}
@@ -386,7 +386,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "j.adsr≈", "@description", "ADSR envelope generator" ],
+									"args" : [ "@name", "j.adsr=", "@description", "ADSR envelope generator" ],
 									"bgmode" : 1,
 									"id" : "obj-3",
 									"maxclass" : "bpatcher",
@@ -422,7 +422,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
 									"patching_rect" : [ 163.0, 304.0, 95.0, 20.0 ],
-									"text" : "j.unpack≈ 1"
+									"text" : "j.unpack= 1"
 								}
 
 							}
@@ -437,7 +437,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 163.0, 202.0, 70.0, 20.0 ],
-									"text" : "j.adsr≈"
+									"text" : "j.adsr="
 								}
 
 							}
@@ -693,11 +693,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.adsr≈.mxo",
+				"name" : "j.adsr=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -713,7 +713,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.info≈.mxo",
+				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
  ]

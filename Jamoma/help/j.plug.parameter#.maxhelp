@@ -441,7 +441,7 @@
 					"patching_rect" : [ 20.0, 105.0, 86.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "j.plug.in≈",
+					"text" : "j.plug.in=",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -487,7 +487,7 @@
 					"patching_rect" : [ 20.0, 520.0, 72.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "j.filter≈",
+					"text" : "j.filter=",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -510,7 +510,7 @@
 					"patching_rect" : [ 20.0, 550.0, 95.0, 22.0 ],
 					"presentation" : 0,
 					"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"text" : "j.plug.out≈",
+					"text" : "j.plug.out=",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 

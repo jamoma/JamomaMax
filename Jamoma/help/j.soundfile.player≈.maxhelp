@@ -545,7 +545,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 90.0, 297.0, 184.0, 19.0 ],
-					"text" : "j.info≈"
+					"text" : "j.info="
 				}
 
 			}
@@ -590,7 +590,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.soundfile.player≈", "@description", "Play back sound files." ],
+					"args" : [ "@name", "j.soundfile.player=", "@description", "Play back sound files." ],
 					"bgmode" : 1,
 					"id" : "obj-44",
 					"maxclass" : "bpatcher",
@@ -635,7 +635,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 90.0, 345.0, 311.0, 19.0 ],
-					"text" : "j.unpack≈ 2"
+					"text" : "j.unpack= 2"
 				}
 
 			}
@@ -649,7 +649,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "audio.connect", "audio.connect", "" ],
 					"patching_rect" : [ 90.0, 266.0, 127.0, 19.0 ],
-					"text" : "j.soundfile.player≈"
+					"text" : "j.soundfile.player="
 				}
 
 			}

@@ -679,7 +679,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 37.5, 176.0, 204.333344, 19.0 ],
-					"text" : "j.info≈"
+					"text" : "j.info="
 				}
 
 			}
@@ -735,13 +735,13 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 40.0, 510.0, 185.666672, 19.0 ],
-					"text" : "j.info≈"
+					"text" : "j.info="
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.spat≈", "@description", "Jamoma's Spatialization Lib" ],
+					"args" : [ "@name", "j.spat=", "@description", "Jamoma's Spatialization Lib" ],
 					"bgmode" : 1,
 					"id" : "obj-44",
 					"maxclass" : "bpatcher",
@@ -772,7 +772,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 40.0, 570.0, 93.0, 19.0 ],
-					"text" : "j.unpack≈ 4"
+					"text" : "j.unpack= 4"
 				}
 
 			}
@@ -786,7 +786,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 37.5, 127.0, 74.333336, 19.0 ],
-					"text" : "j.pack≈"
+					"text" : "j.pack="
 				}
 
 			}
@@ -800,7 +800,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 40.0, 460.0, 227.0, 19.0 ],
-					"text" : "j.spat≈ @sourceCount 2 @sinkCount 4"
+					"text" : "j.spat= @sourceCount 2 @sinkCount 4"
 				}
 
 			}
@@ -1231,15 +1231,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.spat≈.mxo",
+				"name" : "j.spat=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1255,7 +1255,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.info≈.mxo",
+				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

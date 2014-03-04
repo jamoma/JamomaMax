@@ -51,7 +51,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 225.0, 135.0, 55.0, 20.0 ],
-					"text" : "j.limiter≈"
+					"text" : "j.limiter="
 				}
 
 			}
@@ -176,7 +176,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.limiter≈.mxo",
+				"name" : "j.limiter=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

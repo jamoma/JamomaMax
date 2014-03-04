@@ -131,7 +131,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-8",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.degrade≈" ],
+									"jsarguments" : [ "j.degrade=" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -242,7 +242,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 67.5, 282.0, 89.0, 20.0 ],
-									"text" : "j.degrade≈"
+									"text" : "j.degrade="
 								}
 
 							}
@@ -256,7 +256,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
 									"patching_rect" : [ 67.5, 312.0, 93.0, 20.0 ],
-									"text" : "j.unpack≈ 1"
+									"text" : "j.unpack= 1"
 								}
 
 							}
@@ -270,7 +270,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 67.5, 142.0, 176.0, 20.0 ],
-									"text" : "j.phasor≈ @frequency 220."
+									"text" : "j.phasor= @frequency 220."
 								}
 
 							}
@@ -560,15 +560,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.phasor≈.mxo",
+				"name" : "j.phasor=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.degrade≈.mxo",
+				"name" : "j.degrade=.mxo",
 				"type" : "iLaX"
 			}
  ]

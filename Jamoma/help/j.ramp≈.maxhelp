@@ -250,7 +250,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 110.0, 230.0, 352.0, 19.0 ],
-					"text" : "j.unpack≈ 2"
+					"text" : "j.unpack= 2"
 				}
 
 			}
@@ -264,7 +264,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 110.0, 155.0, 164.0, 19.0 ],
-					"text" : "j.ramp≈ @numChannels 2"
+					"text" : "j.ramp= @numChannels 2"
 				}
 
 			}

@@ -152,7 +152,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 235.0, 393.0, 141.0, 20.0 ],
-					"text" : "j.mixer≈ @interpolated 1"
+					"text" : "j.mixer= @interpolated 1"
 				}
 
 			}
@@ -446,7 +446,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.mixer≈.mxo",
+				"name" : "j.mixer=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

@@ -143,7 +143,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 106.0, 392.0, 147.0, 20.0 ],
-									"text" : "j.unpack≈"
+									"text" : "j.unpack="
 								}
 
 							}
@@ -185,7 +185,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 106.0, 176.0, 83.0, 20.0 ],
-									"text" : "j.pack≈"
+									"text" : "j.pack="
 								}
 
 							}
@@ -201,7 +201,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 106.0, 306.5, 108.0, 47.0 ],
-									"text" : "j.mixer≈ @numInputs 2 @numOutputs 2"
+									"text" : "j.mixer= @numInputs 2 @numOutputs 2"
 								}
 
 							}
@@ -537,7 +537,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "audio.connect", "", "", "", "" ],
 									"patching_rect" : [ 61.0, 483.0, 236.0, 20.0 ],
-									"text" : "j.info≈"
+									"text" : "j.info="
 								}
 
 							}
@@ -547,7 +547,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-8",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.mixer≈" ],
+									"jsarguments" : [ "j.mixer=" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -809,7 +809,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "audio.connect", "", "", "", "" ],
 									"patching_rect" : [ 61.0, 265.0, 236.0, 20.0 ],
-									"text" : "j.info≈"
+									"text" : "j.info="
 								}
 
 							}
@@ -833,7 +833,7 @@
 									"numoutlets" : 9,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 61.0, 545.0, 499.0, 20.0 ],
-									"text" : "j.unpack≈ 8"
+									"text" : "j.unpack= 8"
 								}
 
 							}
@@ -847,7 +847,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 61.0, 210.0, 69.0, 20.0 ],
-									"text" : "j.pack≈"
+									"text" : "j.pack="
 								}
 
 							}
@@ -893,7 +893,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 61.0, 430.0, 247.0, 20.0 ],
-									"text" : "j.mixer≈ @numInputs 2 @numOutputs 8"
+									"text" : "j.mixer= @numInputs 2 @numOutputs 8"
 								}
 
 							}
@@ -1180,19 +1180,19 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.mixer≈.mxo",
+				"name" : "j.mixer=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.info≈.mxo",
+				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -117,7 +117,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 87.0, 114.0, 279.0, 33.0 ],
-									"text" : "Using the gaussian mode, j.noise≈ accepts mean and std additionnal parameters"
+									"text" : "Using the gaussian mode, j.noise= accepts mean and std additionnal parameters"
 								}
 
 							}
@@ -131,7 +131,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
 									"patching_rect" : [ 87.0, 284.0, 94.0, 20.0 ],
-									"text" : "j.unpack≈ 1"
+									"text" : "j.unpack= 1"
 								}
 
 							}
@@ -146,7 +146,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 87.0, 256.0, 255.0, 20.0 ],
-									"text" : "j.noise≈ @numChannels 1 @mode gauss"
+									"text" : "j.noise= @numChannels 1 @mode gauss"
 								}
 
 							}
@@ -310,7 +310,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-3",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.noise≈" ],
+									"jsarguments" : [ "j.noise=" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -427,7 +427,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 196.0, 316.0, 243.0, 20.0 ],
-									"text" : "j.unpack≈ 2"
+									"text" : "j.unpack= 2"
 								}
 
 							}
@@ -446,7 +446,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 196.0, 288.0, 73.0, 20.0 ],
-									"text" : "j.noise≈"
+									"text" : "j.noise="
 								}
 
 							}
@@ -620,11 +620,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.noise≈.mxo",
+				"name" : "j.noise=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

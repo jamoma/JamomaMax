@@ -75,8 +75,8 @@
     </method>
   </methodlist>
   <seealsolist>
-    <seealso name='plug.in≈'/>
-    <seealso name='plug.out≈'/>
+    <seealso name='plug.in='/>
+    <seealso name='plug.out='/>
   </seealsolist>
   <misc name='Output'/>
 </c74object>

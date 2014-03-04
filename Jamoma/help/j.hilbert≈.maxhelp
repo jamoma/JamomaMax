@@ -175,7 +175,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 270.0, 397.0, 217.0, 20.0 ],
-									"text" : "j.join≈ 3"
+									"text" : "j.join= 3"
 								}
 
 							}
@@ -310,7 +310,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "audio.connect", "", "", "", "" ],
 									"patching_rect" : [ 270.0, 293.0, 184.0, 20.0 ],
-									"text" : "j.info≈"
+									"text" : "j.info="
 								}
 
 							}
@@ -325,7 +325,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 270.0, 220.0, 125.0, 60.0 ],
-									"text" : "j.wavetable≈ @waveform sine @interpolation linear @frequency 5000."
+									"text" : "j.wavetable= @waveform sine @interpolation linear @frequency 5000."
 								}
 
 							}
@@ -351,7 +351,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 270.0, 420.0, 274.0, 20.0 ],
-									"text" : "j.unpack≈ 3"
+									"text" : "j.unpack= 3"
 								}
 
 							}
@@ -396,7 +396,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "audio.connect", "audio.connect", "" ],
 									"patching_rect" : [ 270.0, 337.0, 78.0, 20.0 ],
-									"text" : "j.hilbert≈"
+									"text" : "j.hilbert="
 								}
 
 							}
@@ -430,7 +430,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-9",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.hilbert≈" ],
+									"jsarguments" : [ "j.hilbert=" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -717,7 +717,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 212.0, 340.0, 187.0, 20.0 ],
-									"text" : "j.join≈ 3"
+									"text" : "j.join= 3"
 								}
 
 							}
@@ -745,7 +745,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 212.0, 235.0, 408.0, 20.0 ],
-									"text" : "j.wavetable≈ @waveform sine @interpolation linear @frequency 5000."
+									"text" : "j.wavetable= @waveform sine @interpolation linear @frequency 5000."
 								}
 
 							}
@@ -817,7 +817,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "signal", "signal", "signal", "" ],
 									"patching_rect" : [ 212.0, 380.0, 274.0, 20.0 ],
-									"text" : "j.unpack≈ 3"
+									"text" : "j.unpack= 3"
 								}
 
 							}
@@ -861,7 +861,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "audio.connect", "audio.connect", "" ],
 									"patching_rect" : [ 212.0, 280.0, 151.0, 20.0 ],
-									"text" : "j.hilbert≈"
+									"text" : "j.hilbert="
 								}
 
 							}
@@ -1288,7 +1288,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p \"j.hilbert≈ vs hilbert~\""
+					"text" : "p \"j.hilbert= vs hilbert~\""
 				}
 
 			}
@@ -1302,23 +1302,23 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.hilbert≈.mxo",
+				"name" : "j.hilbert=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.wavetable≈.mxo",
+				"name" : "j.wavetable=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.join≈.mxo",
+				"name" : "j.join=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.info≈.mxo",
+				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
  ]

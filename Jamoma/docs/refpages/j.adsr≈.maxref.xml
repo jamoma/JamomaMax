@@ -3,11 +3,11 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="j.adsr≈" module="" category="Jamoma">
+<c74object name="j.adsr=" module="" category="Jamoma">
 	<digest>
 		ADSR envelope generator	</digest>
 	<description>
-		j.adsr≈ generates multichannel envelopes
+		j.adsr= generates multichannel envelopes
 	</description>
 	<!--METADATA-->
 	<metadatalist>

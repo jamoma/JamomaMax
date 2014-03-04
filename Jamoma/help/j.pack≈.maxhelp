@@ -136,7 +136,7 @@
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 125.5, 179.0, 385.0, 52.0 ],
-									"text" : "Please refer to j.unpack≈ for further details"
+									"text" : "Please refer to j.unpack= for further details"
 								}
 
 							}
@@ -151,7 +151,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 125.5, 239.0, 88.0, 18.0 ],
-									"text" : "help j.unpack≈"
+									"text" : "help j.unpack="
 								}
 
 							}
@@ -172,7 +172,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "j.pack≈", "@description", "Pack several MSP signals as a Jamoma AudioGraph multichannel signal." ],
+									"args" : [ "@name", "j.pack=", "@description", "Pack several MSP signals as a Jamoma AudioGraph multichannel signal." ],
 									"bgmode" : 1,
 									"id" : "obj-1",
 									"maxclass" : "bpatcher",

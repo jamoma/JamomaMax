@@ -188,7 +188,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
 									"patching_rect" : [ 183.0, 291.0, 91.0, 20.0 ],
-									"text" : "j.unpack≈ 1"
+									"text" : "j.unpack= 1"
 								}
 
 							}
@@ -202,7 +202,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 183.0, 263.0, 94.0, 20.0 ],
-									"text" : "j.overdrive≈"
+									"text" : "j.overdrive="
 								}
 
 							}
@@ -216,7 +216,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 183.0, 96.0, 170.0, 20.0 ],
-									"text" : "j.phasor≈ @frequency 220."
+									"text" : "j.phasor= @frequency 220."
 								}
 
 							}
@@ -240,7 +240,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-5",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.overdrive≈" ],
+									"jsarguments" : [ "j.overdrive=" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -339,15 +339,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.phasor≈.mxo",
+				"name" : "j.phasor=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.overdrive≈.mxo",
+				"name" : "j.overdrive=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
  ]
