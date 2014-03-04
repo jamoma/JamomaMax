@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 131.0, 103.0, 1185.0, 691.0 ],
+		"rect" : [ 100.0, 100.0, 1185.0, 691.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -27,8 +27,7 @@
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
-		"showrootpatcherontab" : 0,
-		"showontab" : 0,
+		"showontab" : 1,
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
@@ -1172,9 +1171,8 @@
 									"fontsize" : 12.0,
 									"id" : "obj-12",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "signal", "signal" ],
+									"numinlets" : 0,
+									"numoutlets" : 0,
 									"patching_rect" : [ 73.0, 283.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities all"
 								}
@@ -1258,9 +1256,8 @@
 									"fontsize" : 12.0,
 									"id" : "obj-5",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "signal", "signal" ],
+									"numinlets" : 0,
+									"numoutlets" : 0,
 									"patching_rect" : [ 532.0, 431.5, 237.0, 20.0 ],
 									"text" : "degrade~.model @amenities preset model"
 								}
@@ -1272,9 +1269,8 @@
 									"fontsize" : 12.0,
 									"id" : "obj-4",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "signal", "signal" ],
+									"numinlets" : 0,
+									"numoutlets" : 0,
 									"patching_rect" : [ 532.0, 280.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities data"
 								}
@@ -1286,9 +1282,8 @@
 									"fontsize" : 12.0,
 									"id" : "obj-3",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "signal", "signal" ],
+									"numinlets" : 0,
+									"numoutlets" : 0,
 									"patching_rect" : [ 532.0, 199.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities audio"
 								}
@@ -1300,9 +1295,8 @@
 									"fontsize" : 12.0,
 									"id" : "obj-2",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "signal", "signal" ],
+									"numinlets" : 0,
+									"numoutlets" : 0,
 									"patching_rect" : [ 532.0, 145.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities preset"
 								}
@@ -1314,9 +1308,8 @@
 									"fontsize" : 12.0,
 									"id" : "obj-1",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "signal", "signal" ],
+									"numinlets" : 0,
+									"numoutlets" : 0,
 									"patching_rect" : [ 73.0, 338.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities none"
 								}
@@ -1388,7 +1381,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
+						"rect" : [ 100.0, 126.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1410,11 +1403,97 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"annotation" : "Controls the wet/dry mix in percent",
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-42",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "float", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 269.0, 365.0, 50.0, 20.0 ],
+									"presentation_rect" : [ 306.0, 405.0, 0.0, 0.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-43",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 269.0, 391.0, 113.0, 20.0 ],
+									"text" : "j.remote audio/mix"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"annotation" : "When active, this parameter bypasses the model's audio processing algorithm, letting incoming signal pass through unaffected",
+									"id" : "obj-40",
+									"maxclass" : "toggle",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 269.0, 464.0, 20.0, 20.0 ],
+									"presentation_rect" : [ 427.75, 524.0, 0.0, 0.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-41",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 269.0, 484.0, 128.0, 20.0 ],
+									"text" : "j.remote audio/bypass"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"annotation" : "When active, this parameter turns off model's audio processing",
+									"id" : "obj-36",
+									"maxclass" : "toggle",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 269.0, 416.0, 20.0, 20.0 ],
+									"presentation_rect" : [ 269.0, 523.0, 0.0, 0.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-37",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 269.0, 436.0, 120.0, 20.0 ],
+									"text" : "j.remote audio/mute"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-29",
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 383.0, 404.0, 66.0, 20.0 ]
+									"patching_rect" : [ 342.0, 277.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -1424,7 +1503,7 @@
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 383.0, 292.0, 66.0, 20.0 ]
+									"patching_rect" : [ 358.0, 165.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -1434,7 +1513,7 @@
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 383.0, 345.0, 66.0, 20.0 ]
+									"patching_rect" : [ 358.0, 218.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -1447,7 +1526,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 383.0, 265.0, 48.0, 20.0 ],
+									"patching_rect" : [ 342.0, 138.0, 48.0, 20.0 ],
 									"text" : "rect~ 1"
 								}
 
@@ -1461,7 +1540,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
-									"patching_rect" : [ 383.0, 373.0, 52.0, 20.0 ],
+									"patching_rect" : [ 342.0, 246.0, 52.0, 20.0 ],
 									"text" : "j.out~ D"
 								}
 
@@ -1475,7 +1554,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
-									"patching_rect" : [ 383.0, 319.0, 45.0, 20.0 ],
+									"patching_rect" : [ 342.0, 192.0, 45.0, 20.0 ],
 									"text" : "j.in~ D"
 								}
 
@@ -1490,7 +1569,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 162.0, 404.0, 50.0, 20.0 ]
+									"patching_rect" : [ 121.0, 277.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -1504,7 +1583,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 162.0, 345.0, 50.0, 20.0 ]
+									"patching_rect" : [ 121.0, 218.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -1518,7 +1597,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 162.0, 265.0, 50.0, 20.0 ]
+									"patching_rect" : [ 121.0, 138.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -1531,7 +1610,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 162.0, 373.0, 45.0, 20.0 ],
+									"patching_rect" : [ 121.0, 246.0, 45.0, 20.0 ],
 									"text" : "j.out B"
 								}
 
@@ -1545,7 +1624,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 162.0, 319.0, 37.0, 20.0 ],
+									"patching_rect" : [ 121.0, 192.0, 37.0, 20.0 ],
 									"text" : "j.in B"
 								}
 
@@ -1559,7 +1638,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 94.5, 78.0, 49.0, 20.0 ],
+									"patching_rect" : [ 53.5, 38.0, 49.0, 20.0 ],
 									"text" : "j.model"
 								}
 
@@ -1570,7 +1649,7 @@
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 434.0, 67.0, 31.0, 31.0 ]
+									"patching_rect" : [ 393.0, 27.0, 31.0, 31.0 ]
 								}
 
 							}
@@ -1580,7 +1659,7 @@
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 302.0, 404.0, 66.0, 20.0 ]
+									"patching_rect" : [ 261.0, 277.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -1590,7 +1669,7 @@
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 302.0, 292.0, 66.0, 20.0 ]
+									"patching_rect" : [ 276.0, 165.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -1600,7 +1679,7 @@
 									"maxclass" : "scope~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 302.0, 345.0, 66.0, 20.0 ]
+									"patching_rect" : [ 276.0, 218.0, 66.0, 20.0 ]
 								}
 
 							}
@@ -1613,13 +1692,14 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 302.0, 265.0, 55.0, 20.0 ],
+									"patching_rect" : [ 261.0, 138.0, 55.0, 20.0 ],
 									"text" : "cycle~ 1"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "Set gain of model's outputs (as MIDI value by default).",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-23",
@@ -1628,7 +1708,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 302.0, 458.0, 50.0, 20.0 ]
+									"patching_rect" : [ 269.0, 312.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -1641,7 +1721,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 302.0, 484.0, 113.0, 20.0 ],
+									"patching_rect" : [ 269.0, 338.0, 113.0, 20.0 ],
 									"text" : "j.remote audio/gain"
 								}
 
@@ -1656,7 +1736,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 97.0, 404.0, 50.0, 20.0 ]
+									"patching_rect" : [ 56.0, 277.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -1670,7 +1750,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 97.0, 345.0, 50.0, 20.0 ]
+									"patching_rect" : [ 56.0, 218.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -1684,19 +1764,20 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 97.0, 265.0, 50.0, 20.0 ]
+									"patching_rect" : [ 56.0, 138.0, 50.0, 20.0 ]
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "When active, this parameter bypasses the model's data processing algorithm, letting incoming signal pass through unaffected",
 									"id" : "obj-16",
 									"maxclass" : "toggle",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 97.0, 458.0, 20.0, 20.0 ]
+									"patching_rect" : [ 56.0, 418.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -1709,7 +1790,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 97.0, 484.0, 120.0, 20.0 ],
+									"patching_rect" : [ 56.0, 444.0, 120.0, 20.0 ],
 									"text" : "j.remote data/bypass"
 								}
 
@@ -1723,7 +1804,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 302.0, 217.0, 66.0, 18.0 ],
+									"patching_rect" : [ 269.0, 583.0, 66.0, 18.0 ],
 									"text" : "audio/gain"
 								}
 
@@ -1737,7 +1818,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 302.0, 199.0, 62.0, 18.0 ],
+									"patching_rect" : [ 269.0, 565.0, 62.0, 18.0 ],
 									"text" : "audio/mix"
 								}
 
@@ -1751,7 +1832,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 302.0, 181.0, 81.0, 18.0 ],
+									"patching_rect" : [ 269.0, 547.0, 81.0, 18.0 ],
 									"text" : "audio/bypass"
 								}
 
@@ -1765,7 +1846,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 302.0, 163.0, 70.0, 18.0 ],
+									"patching_rect" : [ 269.0, 529.0, 70.0, 18.0 ],
 									"text" : "audio/mute"
 								}
 
@@ -1779,7 +1860,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 97.0, 199.0, 69.0, 18.0 ],
+									"patching_rect" : [ 64.0, 583.0, 69.0, 18.0 ],
 									"text" : "data/freeze"
 								}
 
@@ -1793,7 +1874,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 97.0, 181.0, 73.0, 18.0 ],
+									"patching_rect" : [ 64.0, 565.0, 73.0, 18.0 ],
 									"text" : "data/bypass"
 								}
 
@@ -1807,7 +1888,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 97.0, 163.0, 62.0, 18.0 ],
+									"patching_rect" : [ 64.0, 547.0, 62.0, 18.0 ],
 									"text" : "data/mute"
 								}
 
@@ -1821,7 +1902,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
-									"patching_rect" : [ 302.0, 373.0, 52.0, 20.0 ],
+									"patching_rect" : [ 261.0, 246.0, 52.0, 20.0 ],
 									"text" : "j.out~ C"
 								}
 
@@ -1835,7 +1916,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
-									"patching_rect" : [ 302.0, 319.0, 45.0, 20.0 ],
+									"patching_rect" : [ 261.0, 192.0, 45.0, 20.0 ],
 									"text" : "j.in~ C"
 								}
 
@@ -1849,7 +1930,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 97.0, 373.0, 44.0, 20.0 ],
+									"patching_rect" : [ 56.0, 246.0, 44.0, 20.0 ],
 									"text" : "j.out A"
 								}
 
@@ -1863,7 +1944,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 97.0, 319.0, 44.0, 20.0 ],
+									"patching_rect" : [ 56.0, 192.0, 44.0, 20.0 ],
 									"text" : "j.in A"
 								}
 
@@ -1878,7 +1959,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 94.5, 104.0, 370.5, 47.0 ],
+									"patching_rect" : [ 53.5, 64.0, 370.5, 47.0 ],
 									"text" : "Some features relative to model signal management are automatically exposed as j.parameters under a data or audio level to control all inputs/outputs relative to a signal type in a row."
 								}
 
@@ -2075,10 +2156,64 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-37", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-36", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-36", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-37", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-28", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-41", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-40", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-40", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-41", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-43", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-42", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-42", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-43", 0 ]
 								}
 
 							}
@@ -2099,7 +2234,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p \"Signal and data input/output\"",
+					"text" : "p \"Signal and data input-output\"",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
 				}
 
@@ -4086,7 +4221,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 131.0, 129.0, 1185.0, 665.0 ],
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4117,7 +4252,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 264.0, 454.0, 219.5, 47.0 ],
-									"presentation_rect" : [ 217.5, 454.0, 0.0, 0.0 ],
 									"text" : "messages can also be sent directly to the model, which will dispatch them to its parameters"
 								}
 
@@ -4132,7 +4266,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 114.0, 486.0, 105.0, 18.0 ],
-									"presentation_rect" : [ 143.5, 462.0, 0.0, 0.0 ],
 									"text" : "myMessage bbye"
 								}
 
@@ -4147,7 +4280,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 80.0, 454.0, 104.0, 18.0 ],
-									"presentation_rect" : [ 82.0, 462.0, 0.0, 0.0 ],
 									"text" : "myMessage hello"
 								}
 
@@ -5063,7 +5195,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 112.5, 427.0, 172.0, 20.0 ],
-									"presentation_rect" : [ 116.5, 427.0, 0.0, 0.0 ],
 									"text" : "or locally without leading slash"
 								}
 
@@ -5079,8 +5210,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 281.5, 427.0, 50.0, 20.0 ],
-									"presentation_rect" : [ 285.5, 427.0, 0.0, 0.0 ]
+									"patching_rect" : [ 281.5, 427.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -5745,13 +5875,6 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
 				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
