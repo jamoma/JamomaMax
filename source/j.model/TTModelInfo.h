@@ -56,6 +56,11 @@ public:
      */
     TTErr ReferenceOpen();
     
+    /** Generate html documentation file
+     @return    TTErr       kTTErrNone documentation genration success
+     */
+    TTErr Document();
+    
     /** Mute the patcher
      @return    TTErr       kTTErrNone load was successful
      */
