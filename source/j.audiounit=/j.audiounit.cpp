@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.audiounit≈ : wraps the #TTAudioUnit class as an AudioUnit plugin host for AudioGraph
+ * @brief j.audiounit= : wraps the #TTAudioUnit class as an AudioUnit plugin host for AudioGraph
  *
  * @details
  *
@@ -19,7 +19,7 @@
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	TTAudioGraphInit();
-	wrapAsMaxAudioGraph(TT("audiounit"), "j.audiounit≈", NULL);
+	wrapAsMaxAudioGraph(TT("audiounit"), "j.audiounit=", NULL);
 	return 0;
 }
 

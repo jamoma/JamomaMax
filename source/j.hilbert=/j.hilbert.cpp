@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.hilbert≈ : wraps the #TTHilbertLinear33 class as a hilbert filter external for AudioGraph
+ * @brief j.hilbert= : wraps the #TTHilbertLinear33 class as a hilbert filter external for AudioGraph
  *
  * @details
  *
@@ -25,9 +25,9 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();
     
 	options->append(TT("wrapperDefinesNumOutlets"), value);
-//	wrapAsMaxAudioGraph(TT("hilbert.9"), "j.hilbert≈", &c, options);
-	wrapAsMaxAudioGraph(TT("hilbert.linear.33"), "j.hilbert≈", &c, options);
-	wrapAsMaxAudioGraph(TT("hilbert.linear.33"), "hilbert≈", &c, options);
+//	wrapAsMaxAudioGraph(TT("hilbert.9"), "j.hilbert=", &c, options);
+	wrapAsMaxAudioGraph(TT("hilbert.linear.33"), "j.hilbert=", &c, options);
+	wrapAsMaxAudioGraph(TT("hilbert.linear.33"), "hilbert=", &c, options);
 		
 	return 0;
 }

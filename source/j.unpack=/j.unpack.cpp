@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.unpack≈ : Unpack AudioGraph multichannel signal to several MSP audio signals
+ * @brief j.unpack= : Unpack AudioGraph multichannel signal to several MSP audio signals
  *
  * @details A 2D/3D trajectory generator at signal rate
  *
@@ -67,7 +67,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();	
 	common_symbols_init();
 
-	c = class_new("j.unpack≈", (method)UnpackNew, (method)UnpackFree, sizeof(Unpack), (method)0L, A_GIMME, 0);
+	c = class_new("j.unpack=", (method)UnpackNew, (method)UnpackFree, sizeof(Unpack), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)UnpackNotify,		"notify",			A_CANT, 0);
 	class_addmethod(c, (method)UnpackReset,			"audio.reset",		A_CANT, 0);

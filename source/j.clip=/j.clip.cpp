@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.clip≈ : wraps the #Clipper class as a range clipping external for AudioGraph
+ * @brief j.clip= : wraps the #Clipper class as a range clipping external for AudioGraph
  *
  * @details
  *
@@ -19,8 +19,8 @@
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	TTAudioGraphInit();
-	wrapAsMaxAudioGraph(TT("clipper"), "j.clip≈", NULL);
-	wrapAsMaxAudioGraph(TT("clipper"), "clip≈", NULL);
+	wrapAsMaxAudioGraph(TT("clipper"), "j.clip=", NULL);
+	wrapAsMaxAudioGraph(TT("clipper"), "clip=", NULL);
 	return 0;
 }
 

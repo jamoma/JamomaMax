@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j≈ : Creates an AudioGraph external that is able to wrap any Jamoma class
+ * @brief j= : Creates an AudioGraph external that is able to wrap any Jamoma class
  *
  * @details
  *
@@ -29,7 +29,7 @@ static t_hashtab*	s_jamoma_class_hash = NULL;
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	s_jamoma_class = class_new("j≈", (method)jamoma_new, (method)NULL, 0 /*sizeof(t_object)*/, (method)0L, A_GIMME, 0);
+	s_jamoma_class = class_new("j=", (method)jamoma_new, (method)NULL, 0 /*sizeof(t_object)*/, (method)0L, A_GIMME, 0);
 	class_register(CLASS_BOX, s_jamoma_class);
 
 	common_symbols_init();
@@ -63,7 +63,7 @@ ObjectPtr jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 		i++;
 	}
 	
-	snprintf(maxClassName, 256, "j.%s≈", className->s_name);
+	snprintf(maxClassName, 256, "j.%s=", className->s_name);
 
 	if (!s_jamoma_class_hash)
 		s_jamoma_class_hash = hashtab_new(0);

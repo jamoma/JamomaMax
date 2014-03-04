@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.degrade≈ : wraps the #TTDegrade class as an audio signal quality degrading external for AudioGraph
+ * @brief j.degrade= : wraps the #TTDegrade class as an audio signal quality degrading external for AudioGraph
  *
  * @details
  *
@@ -19,8 +19,8 @@
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	TTAudioGraphInit();
-	wrapAsMaxAudioGraph(TT("degrade"), "j.degrade≈", NULL);
-	wrapAsMaxAudioGraph(TT("degrade"), "degrade≈", NULL);
+	wrapAsMaxAudioGraph(TT("degrade"), "j.degrade=", NULL);
+	wrapAsMaxAudioGraph(TT("degrade"), "degrade=", NULL);
 	return 0;
 }
 

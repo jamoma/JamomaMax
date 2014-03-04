@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.window≈ : wraps the #TTWindowFunction class for AudioGraph
+ * @brief j.window= : wraps the #TTWindowFunction class for AudioGraph
  *
  * @details
  *
@@ -19,8 +19,8 @@
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	TTAudioGraphInit();
-	wrapAsMaxAudioGraph(TT("WindowFunction"), "j.window≈", NULL);
-	wrapAsMaxAudioGraph(TT("WindowFunction"), "window≈", NULL);
+	wrapAsMaxAudioGraph(TT("WindowFunction"), "j.window=", NULL);
+	wrapAsMaxAudioGraph(TT("WindowFunction"), "window=", NULL);
 	return 0;
 }
 

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.phasor≈ : wraps the #TTPhasor class as an sawtooth signal generating external for AudioGraph
+ * @brief j.phasor= : wraps the #TTPhasor class as an sawtooth signal generating external for AudioGraph
  *
  * @details
  *
@@ -24,8 +24,8 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();
 
 	options->append(TT("generator"), value);
-	wrapAsMaxAudioGraph(TT("phasor"), "j.phasor≈", NULL, options);
-	wrapAsMaxAudioGraph(TT("phasor"), "phasor≈", NULL, options);
+	wrapAsMaxAudioGraph(TT("phasor"), "j.phasor=", NULL, options);
+	wrapAsMaxAudioGraph(TT("phasor"), "phasor=", NULL, options);
 	return 0;
 }
 

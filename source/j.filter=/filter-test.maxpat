@@ -78,7 +78,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 245.0, 277.0, 169.0, 19.0 ],
-					"text" : "j.info≈"
+					"text" : "j.info="
 				}
 
 			}
@@ -131,7 +131,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 245.0, 150.0, 175.0, 19.0 ],
-					"text" : "j.info≈"
+					"text" : "j.info="
 				}
 
 			}
@@ -315,7 +315,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 245.0, 120.0, 78.0, 19.0 ],
-					"text" : "j.pack≈ 1"
+					"text" : "j.pack= 1"
 				}
 
 			}
@@ -399,7 +399,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 245.0, 250.0, 70.0, 19.0 ],
-					"text" : "j.filter≈"
+					"text" : "j.filter="
 				}
 
 			}
@@ -426,7 +426,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 245.0, 330.0, 91.0, 19.0 ],
-					"text" : "j.unpack≈ 1"
+					"text" : "j.unpack= 1"
 				}
 
 			}

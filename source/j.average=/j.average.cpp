@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.average≈ : wraps the #TTAverage class as an average analysis object for AudioGraph
+ * @brief j.average= : wraps the #TTAverage class as an average analysis object for AudioGraph
  *
  * @details
  *
@@ -24,10 +24,10 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	
 	TTAudioGraphInit();
 	
-	wrapAsMaxAudioGraph(TT("average"), "j.average≈", &c, options);
+	wrapAsMaxAudioGraph(TT("average"), "j.average=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "absolute bipolar rms");
 
-	wrapAsMaxAudioGraph(TT("average"), "average≈", &c, options);
+	wrapAsMaxAudioGraph(TT("average"), "average=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "absolute bipolar rms");
 
 	return 0;

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.resample≈ : wraps the #TTResample class as a resampler for AudioGraph
+ * @brief j.resample= : wraps the #TTResample class as a resampler for AudioGraph
  *
  * @details Convert input to an output with different block size, sample rate, or other characteristics.
  *
@@ -19,8 +19,8 @@
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	TTAudioGraphInit();
-	wrapAsMaxAudioGraph(TT("resample"), "j.resample≈", NULL);
-	wrapAsMaxAudioGraph(TT("resample"), "resample≈", NULL);
+	wrapAsMaxAudioGraph(TT("resample"), "j.resample=", NULL);
+	wrapAsMaxAudioGraph(TT("resample"), "resample=", NULL);
 	return 0;
 }
 

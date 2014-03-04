@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.adsr≈ : wraps the #TTAdsr class as an envelope following external for AudioGraph
+ * @brief j.adsr= : wraps the #TTAdsr class as an envelope following external for AudioGraph
  *
  * @details
  *
@@ -28,10 +28,10 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	
 	options->append(TT("userCanSetNumChannels"), YES);
 	
-	wrapAsMaxAudioGraph(TT("adsr"), "j.adsr≈", &c, options);
+	wrapAsMaxAudioGraph(TT("adsr"), "j.adsr=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "exponential hybrid linear");
 
-	wrapAsMaxAudioGraph(TT("adsr"), "adsr≈", &c, options);
+	wrapAsMaxAudioGraph(TT("adsr"), "adsr=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "exponential hybrid linear");
 	
 	return 0;

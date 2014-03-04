@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.fft≈ : wraps the #TTfft class as an external for AudioGraph performing Fourier and Inverse Fourier Transforms
+ * @brief j.fft= : wraps the #TTfft class as an external for AudioGraph performing Fourier and Inverse Fourier Transforms
  *
  * @details
  *
@@ -18,7 +18,7 @@
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	wrapAsMaxAudioGraph(TT("fft"), "j.fft≈", NULL);
-	wrapAsMaxAudioGraph(TT("fft"), "fft≈", NULL);
+	wrapAsMaxAudioGraph(TT("fft"), "j.fft=", NULL);
+	wrapAsMaxAudioGraph(TT("fft"), "fft=", NULL);
 	return 0;
 }

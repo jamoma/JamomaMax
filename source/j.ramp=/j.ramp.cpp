@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.ramp≈ : wraps the #TTRamp class as a linear ramp generator for AudioGraph
+ * @brief j.ramp= : wraps the #TTRamp class as a linear ramp generator for AudioGraph
  *
  * @details
  *
@@ -27,8 +27,8 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 //	options->append(TT("generator"), value);
 	options->append(TT("generator"), YES);
 	options->append(TT("userCanSetNumChannels"), YES);
-	wrapAsMaxAudioGraph(TT("ramp"), "j.ramp≈", &c, options);
-	wrapAsMaxAudioGraph(TT("ramp"), "ramp≈", &c, options);
+	wrapAsMaxAudioGraph(TT("ramp"), "j.ramp=", &c, options);
+	wrapAsMaxAudioGraph(TT("ramp"), "ramp=", &c, options);
 
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "vector sample");
 	return 0;

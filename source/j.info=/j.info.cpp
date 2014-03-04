@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.info≈ : creates an external for AudioGraph that provides information about the incoming multichannel signal
+ * @brief j.info= : creates an external for AudioGraph that provides information about the incoming multichannel signal
  *
  * @details
  *
@@ -58,7 +58,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();	
 	common_symbols_init();
 
-	c = class_new("j.info≈", (method)InfoNew, (method)InfoFree, sizeof(Info), (method)0L, A_GIMME, 0);
+	c = class_new("j.info=", (method)InfoNew, (method)InfoFree, sizeof(Info), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)InfoBang,			"bang",					0);
 	class_addmethod(c, (method)MaxAudioGraphReset,	"graph.reset",		A_CANT, 0);

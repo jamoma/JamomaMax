@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.op≈ : wraps the #TTOperator class as an external for AudioGraph performing basic mathematical operations on multichannel signals
+ * @brief j.op= : wraps the #TTOperator class as an external for AudioGraph performing basic mathematical operations on multichannel signals
  *
  * @details
  *
@@ -61,7 +61,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();	
 	common_symbols_init();
 	
-	c = class_new("j.op≈", (method)OpNew, (method)OpFree, sizeof(Op), (method)0L, A_GIMME, 0);
+	c = class_new("j.op=", (method)OpNew, (method)OpFree, sizeof(Op), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)OpResetAudio,		"audio.reset",		A_CANT, 0);
 	class_addmethod(c, (method)OpSetupAudio,		"audio.setup",		A_CANT, 0);

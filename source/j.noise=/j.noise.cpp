@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.noise≈ : wraps the #TTNoise class as a audio noise genrator external for AudioGraph
+ * @brief j.noise= : wraps the #TTNoise class as a audio noise genrator external for AudioGraph
  *
  * @details
  *
@@ -27,9 +27,9 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 //	options->append(TT("generator"), value);
 	options->append(TT("generator"), YES);
 	options->append(TT("userCanSetNumChannels"), YES);
-	wrapAsMaxAudioGraph(TT("noise"), "j.noise≈", &c, options);
+	wrapAsMaxAudioGraph(TT("noise"), "j.noise=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "white pink brown blue gauss");
-	wrapAsMaxAudioGraph(TT("noise"), "noise≈", &c, options);
+	wrapAsMaxAudioGraph(TT("noise"), "noise=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "white pink brown blue gauss");
 	return 0;
 }

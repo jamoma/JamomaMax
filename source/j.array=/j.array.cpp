@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.array≈ : wraps the #TTAudioObjectBaseArray class as an AudioGraph array external for Jamoma AudioGraph.
+ * @brief j.array= : wraps the #TTAudioObjectBaseArray class as an AudioGraph array external for Jamoma AudioGraph.
  *
  * @details
  *
@@ -20,6 +20,6 @@
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	TTAudioGraphInit();
-	wrapAsMaxAudioGraph(TT("array"), "j.array≈", NULL);
-	return wrapAsMaxAudioGraph(TT("array"), "array≈", NULL);
+	wrapAsMaxAudioGraph(TT("array"), "j.array=", NULL);
+	return wrapAsMaxAudioGraph(TT("array"), "array=", NULL);
 }

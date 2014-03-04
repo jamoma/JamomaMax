@@ -5,13 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>j.plug.out≈</string>
+	<string>j.plug.out=</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.jamoma.j.plug.out</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleLongVersionString</key>
-	<string>j.plug.out≈ 0.5.6, Copyright 2011</string>
+	<string>j.plug.out= 0.5.6, Copyright 2011</string>
 	<key>CFBundlePackageType</key>
 	<string>iLaX</string>
 	<key>CFBundleShortVersionString</key>

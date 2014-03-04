@@ -1,5 +1,5 @@
 /* 
- *	j.plug.in≈
+ *	j.plug.in=
  *	Plugtastic Input External
  *	Copyright © 2010 by Timothy Place
  * 
@@ -44,7 +44,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();	
 	common_symbols_init();
 
-	c = class_new((char*)"j.plug.in≈", (method)PlugInNew, (method)PlugInFree, sizeof(PlugIn), (method)0L, A_GIMME, 0);
+	c = class_new((char*)"j.plug.in=", (method)PlugInNew, (method)PlugInFree, sizeof(PlugIn), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)PlugInSetup,				"audio.setup",		A_CANT,	0);
 	class_addmethod(c, (method)MaxAudioGraphReset,		"audio.reset",		A_CANT, 0);

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.unsig≈ - converts Jamoma AudioGraph signal to a Max message list.
+ * @brief j.unsig= - converts Jamoma AudioGraph signal to a Max message list.
  *
  * @details 
  *
@@ -71,7 +71,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();	
 	common_symbols_init();
 
-	c = class_new("j.unsig≈", (method)OutNew, (method)OutFree, sizeof(Out), (method)0L, A_GIMME, 0);
+	c = class_new("j.unsig=", (method)OutNew, (method)OutFree, sizeof(Out), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)OutNotify,			"notify",				A_CANT, 0);
 	class_addmethod(c, (method)OutReset,			"audio.reset",		A_CANT, 0);

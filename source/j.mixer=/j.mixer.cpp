@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.mixer≈ : wraps the #TTMixer class as a matrix mixing external for AudioGraph
+ * @brief j.mixer= : wraps the #TTMixer class as a matrix mixing external for AudioGraph
  *
  * @details
  *
@@ -25,7 +25,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();
 
 	options->append(TT("nonadapting"), value); // don't change the number of out-channels in response to changes in the number of in-channels
-	wrapAsMaxAudioGraph(TT("mixer"), "j.mixer≈", NULL, options);
-	wrapAsMaxAudioGraph(TT("mixer"), "mixer≈", NULL, options);
+	wrapAsMaxAudioGraph(TT("mixer"), "j.mixer=", NULL, options);
+	wrapAsMaxAudioGraph(TT("mixer"), "mixer=", NULL, options);
 	return 0;
 }

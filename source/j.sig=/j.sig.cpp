@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.sig≈ : wraps the #TTAudioSignal class as constant signal generator for AudioGraph
+ * @brief j.sig= : wraps the #TTAudioSignal class as constant signal generator for AudioGraph
  *
  * @details 
  *
@@ -25,8 +25,8 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	
 	options->append(TT("generator"), YES);
 	options->append(TT("userCanSetNumChannels"), YES);
-	wrapAsMaxAudioGraph(TT("audio.sig"), "j.sig≈", &c, options);
-	wrapAsMaxAudioGraph(TT("audio.sig"), "sig≈", &c, options);
+	wrapAsMaxAudioGraph(TT("audio.sig"), "j.sig=", &c, options);
+	wrapAsMaxAudioGraph(TT("audio.sig"), "sig=", &c, options);
 	
 	return 0;
 }

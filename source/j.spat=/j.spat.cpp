@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.spat≈ : wraps the #TTSpat class as a spatialisation mixer for AudioGraph
+ * @brief j.spat= : wraps the #TTSpat class as a spatialisation mixer for AudioGraph
  *
  * @details 
  *
@@ -25,7 +25,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();
 
 	options->append(TT("nonadapting"), value); // don't change the number of out-channels in response to changes in the number of in-channels
-	wrapAsMaxAudioGraph(TT("spat"), "j.spat≈", NULL, options);
-	wrapAsMaxAudioGraph(TT("spat"), "spat≈", NULL, options);
+	wrapAsMaxAudioGraph(TT("spat"), "j.spat=", NULL, options);
+	wrapAsMaxAudioGraph(TT("spat"), "spat=", NULL, options);
 	return 0;
 }

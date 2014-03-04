@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.dcblock≈ : wraps the #TTDCBlock class as DC offset removing filter external for AudioGraph
+ * @brief j.dcblock= : wraps the #TTDCBlock class as DC offset removing filter external for AudioGraph
  *
  * @details
  *
@@ -52,7 +52,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();	
 	common_symbols_init();
 	
-	c = class_new("j.dcblocker≈", (method)DCBlockerNew, (method)DCBlockerFree, sizeof(DCBlocker), (method)0L, A_GIMME, 0);
+	c = class_new("j.dcblocker=", (method)DCBlockerNew, (method)DCBlockerFree, sizeof(DCBlocker), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)DCBlockerClear,		"clear",				0);
 	class_addmethod(c, (method)DCBlockerReset,		"audio.reset",		A_CANT, 0);

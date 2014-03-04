@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.delay≈ : wraps the #TTDelay class as audio delay external for AudioGraph with several options for interpolation method
+ * @brief j.delay= : wraps the #TTDelay class as audio delay external for AudioGraph with several options for interpolation method
  *
  * @details
  *
@@ -24,10 +24,10 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	
 	TTAudioGraphInit();
 	
-	wrapAsMaxAudioGraph(TT("delay"), "j.delay≈", &c, options);
+	wrapAsMaxAudioGraph(TT("delay"), "j.delay=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "interpolation", 0, "none linear cubic");
 
-	wrapAsMaxAudioGraph(TT("delay"), "delay≈", &c, options);
+	wrapAsMaxAudioGraph(TT("delay"), "delay=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "interpolation", 0, "none linear cubic");
 
 	return 0;

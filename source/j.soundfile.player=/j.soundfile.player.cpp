@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.soundfile.player≈ : wraps the #TTSoundfilePlayer class as generator for AudioGraph
+ * @brief j.soundfile.player= : wraps the #TTSoundfilePlayer class as generator for AudioGraph
  *
  * @details 
  *
@@ -28,10 +28,10 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	value = 2;
 	options->append(TT("wrapperDefinesNumOutlets"), value);
 	
-	wrapAsMaxAudioGraph(TT("soundfile.player"), "j.soundfile.player≈", &c, options);
+	wrapAsMaxAudioGraph(TT("soundfile.player"), "j.soundfile.player=", &c, options);
 	CLASS_ATTR_STYLE(c->maxClass,		"filePath", 0,	"file");
 	
-	wrapAsMaxAudioGraph(TT("soundfile.player"), "soundfile.player≈", &c, options);
+	wrapAsMaxAudioGraph(TT("soundfile.player"), "soundfile.player=", &c, options);
 	CLASS_ATTR_STYLE(c->maxClass,		"filePath", 0,	"file");
 	
 	return 0;

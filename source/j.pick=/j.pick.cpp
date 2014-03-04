@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.pick≈ : wraps the #TTAudioGraphPick class as an external that extracts N specific audio signals from a Jamoma AudioGraph signal
+ * @brief j.pick= : wraps the #TTAudioGraphPick class as an external that extracts N specific audio signals from a Jamoma AudioGraph signal
  *
  * @details
  *
@@ -25,13 +25,13 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();
 	options->append(TT("nonadapting"), value); // don't change the number of out-channels in response to changes in the number of in-channels
 	options->append(TT("userCanSetNumChannels"), NO);
-	wrapAsMaxAudioGraph(TT("audio.pick"), "j.pick≈", NULL, options);
-	return wrapAsMaxAudioGraph(TT("audio.pick"), "pick≈", NULL, options);
+	wrapAsMaxAudioGraph(TT("audio.pick"), "j.pick=", NULL, options);
+	return wrapAsMaxAudioGraph(TT("audio.pick"), "pick=", NULL, options);
 	
 	
 		//TTAudioGraphInit();
-		//wrapAsMaxAudioGraph(TT("audio.pick"), "j.pick≈", NULL);
-		//wrapAsMaxAudioGraph(TT("audio.pick"), "pick≈", NULL);
+		//wrapAsMaxAudioGraph(TT("audio.pick"), "j.pick=", NULL);
+		//wrapAsMaxAudioGraph(TT("audio.pick"), "pick=", NULL);
 		//return 0;
 	
 	

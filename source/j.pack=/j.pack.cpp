@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.pack≈ : Max external packing several MSP audio signals onto one AudioGraph multichannel audio signal.
+ * @brief j.pack= : Max external packing several MSP audio signals onto one AudioGraph multichannel audio signal.
  *
  * @details This object functions as a source (generator) for #TTAudioSignal usable by a Jamoma AudioGraph dsp chain.
  *
@@ -28,7 +28,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();	
 	common_symbols_init();
 	
-	c = class_new("j.pack≈", (method)PackNew, (method)PackFree, sizeof(Pack), (method)0L, A_GIMME, 0);
+	c = class_new("j.pack=", (method)PackNew, (method)PackFree, sizeof(Pack), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)PackReset,				"audio.reset",		A_CANT, 0);
 	class_addmethod(c, (method)PackSetup,				"audio.setup",		A_CANT, 0);
@@ -150,7 +150,7 @@ void PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, l
 {
 	self->vectorSize = maxvectorsize;
 	
-	// COMMENT: In the following commented out code we attempted to reduce the number of channels of the generated AudioGraph signal in the case that the rightmost inlets of j.pack≈ did not have any audio signals connected. This would save us some CPU. However it also introduced a bug logged as issue #16 at github.com/jamoma/JamomaCore. It might be that instead of considering this a bug in j.pack≈, we rather should consider it a bug when combining several AudioGraph signals, to be resolved elsewhere. But this fixes the issue for now. [TL-2013-08-04]
+	// COMMENT: In the following commented out code we attempted to reduce the number of channels of the generated AudioGraph signal in the case that the rightmost inlets of j.pack= did not have any audio signals connected. This would save us some CPU. However it also introduced a bug logged as issue #16 at github.com/jamoma/JamomaCore. It might be that instead of considering this a bug in j.pack=, we rather should consider it a bug when combining several AudioGraph signals, to be resolved elsewhere. But this fixes the issue for now. [TL-2013-08-04]
 	/*
 	// Find the rightmost inlet that an audio signal is connected to.
 	TTUInt16	highestIndexForConnectedSignal = 0;
@@ -165,7 +165,7 @@ void PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, l
 	self->audioGraphObject->setOutputNumChannels(0, highestIndexForConnectedSignal+1);
 	*/
 	
-	// We always set j.pack≈ to process all channels:
+	// We always set j.pack= to process all channels:
 	self->numChannels = self->maxNumChannels;
 	self->audioGraphObject->setOutputNumChannels(0, self->numChannels);
 	

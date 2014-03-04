@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.pulsesub≈ : wraps the #TTPulseSub class as a periodic envelope ring modulator for AudioGraph
+ * @brief j.pulsesub= : wraps the #TTPulseSub class as a periodic envelope ring modulator for AudioGraph
  *
  * @details
  *
@@ -19,8 +19,8 @@
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	TTAudioGraphInit();
-	wrapAsMaxAudioGraph(TT("pulsesub"), "j.pulsesub≈", NULL);
-	wrapAsMaxAudioGraph(TT("pulsesub"), "pulsesub≈", NULL);
+	wrapAsMaxAudioGraph(TT("pulsesub"), "j.pulsesub=", NULL);
+	wrapAsMaxAudioGraph(TT("pulsesub"), "pulsesub=", NULL);
 	return 0;
 }
 

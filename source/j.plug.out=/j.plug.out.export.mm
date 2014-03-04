@@ -1,5 +1,5 @@
 /* 
- *	j.plug.out≈
+ *	j.plug.out=
  *	Plugtastic Output External
  *	Copyright © 2010 by Timothy Place
  * 
@@ -295,7 +295,7 @@ public:
 			}
 		}
 		
-		if (!isPlugtasticInput) { // <-- ignore anything feeding the input from the patcher (output is ignored by virtual of starting at plug.out≈
+		if (!isPlugtasticInput) { // <-- ignore anything feeding the input from the patcher (output is ignored by virtual of starting at plug.out=
 			int inletNum = 0;
 			
 			for (TTAudioGraphDescriptionVectorsIter inlet = mAudioDescriptionsForInlets.begin(); inlet != mAudioDescriptionsForInlets.end(); inlet++) {

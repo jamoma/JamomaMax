@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.waveshaper≈ : wraps the #TTWaveshaper class for AudioGraph
+ * @brief j.waveshaper= : wraps the #TTWaveshaper class for AudioGraph
  *
  * @details
  *
@@ -19,8 +19,8 @@
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	TTAudioGraphInit();
-	wrapAsMaxAudioGraph(TT("waveshaper"), "j.waveshaper≈", NULL);
-	wrapAsMaxAudioGraph(TT("waveshaper"), "waveshaper≈", NULL);
+	wrapAsMaxAudioGraph(TT("waveshaper"), "j.waveshaper=", NULL);
+	wrapAsMaxAudioGraph(TT("waveshaper"), "waveshaper=", NULL);
 	return 0;
 }
 

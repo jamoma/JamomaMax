@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.split≈ : wraps the #TTAudioGraphSplit class as a multichannel signal splitter for AudioGraph
+ * @brief j.split= : wraps the #TTAudioGraphSplit class as a multichannel signal splitter for AudioGraph
  *
  * @details 
  *
@@ -24,7 +24,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();
 	
 	options->append(TT("argumentDefinesNumOutlets"), value);
-	wrapAsMaxAudioGraph(TT("audio.split"), "j.split≈", NULL, options);
-	return wrapAsMaxAudioGraph(TT("audio.split"), "split≈", NULL, options);
+	wrapAsMaxAudioGraph(TT("audio.split"), "j.split=", NULL, options);
+	return wrapAsMaxAudioGraph(TT("audio.split"), "split=", NULL, options);
 }
 

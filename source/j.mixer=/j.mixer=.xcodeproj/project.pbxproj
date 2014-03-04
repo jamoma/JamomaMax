@@ -8,7 +8,7 @@
 
 /* Begin PBXFileReference section */
 		A79D072C1655C88900D02D46 /* j.mixer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.mixer.cpp; sourceTree = "<group>"; };
-		A79D072E1655C88E00D02D46 /* j.mixer≈.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.mixer≈.yml"; sourceTree = "<group>"; };
+		A79D072E1655C88E00D02D46 /* j.mixer=.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.mixer=.yml"; sourceTree = "<group>"; };
 		A79D075D1655D73F00D02D46 /* MaxAudioGraph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MaxAudioGraph.cpp; path = ../classwrapper/MaxAudioGraph.cpp; sourceTree = "<group>"; };
 		A79D075E1655D73F00D02D46 /* MaxAudioGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MaxAudioGraph.h; path = ../classwrapper/MaxAudioGraph.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -17,7 +17,7 @@
 		A79D071C1655C87200D02D46 = {
 			isa = PBXGroup;
 			children = (
-				A79D072E1655C88E00D02D46 /* j.mixer≈.yml */,
+				A79D072E1655C88E00D02D46 /* j.mixer=.yml */,
 				A79D072C1655C88900D02D46 /* j.mixer.cpp */,
 				A79D075D1655D73F00D02D46 /* MaxAudioGraph.cpp */,
 				A79D075E1655D73F00D02D46 /* MaxAudioGraph.h */,
@@ -27,18 +27,18 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		A79D07231655C87200D02D46 /* j.mixer≈ */ = {
+		A79D07231655C87200D02D46 /* j.mixer= */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION)";
-			buildConfigurationList = A79D07261655C87200D02D46 /* Build configuration list for PBXLegacyTarget "j.mixer≈" */;
+			buildConfigurationList = A79D07261655C87200D02D46 /* Build configuration list for PBXLegacyTarget "j.mixer=" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			dependencies = (
 			);
-			name = "j.mixer≈";
+			name = "j.mixer=";
 			passBuildSettingsInEnvironment = 1;
-			productName = "j.mixer≈";
+			productName = "j.mixer=";
 		};
 /* End PBXLegacyTarget section */
 
@@ -49,7 +49,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = org.jamoma;
 			};
-			buildConfigurationList = A79D07211655C87200D02D46 /* Build configuration list for PBXProject "j.mixer≈" */;
+			buildConfigurationList = A79D07211655C87200D02D46 /* Build configuration list for PBXProject "j.mixer=" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -60,7 +60,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A79D07231655C87200D02D46 /* j.mixer≈ */,
+				A79D07231655C87200D02D46 /* j.mixer= */,
 			);
 		};
 /* End PBXProject section */
@@ -141,7 +141,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A79D07211655C87200D02D46 /* Build configuration list for PBXProject "j.mixer≈" */ = {
+		A79D07211655C87200D02D46 /* Build configuration list for PBXProject "j.mixer=" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A79D07241655C87200D02D46 /* Debug */,
@@ -150,7 +150,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A79D07261655C87200D02D46 /* Build configuration list for PBXLegacyTarget "j.mixer≈" */ = {
+		A79D07261655C87200D02D46 /* Build configuration list for PBXLegacyTarget "j.mixer=" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A79D07271655C87200D02D46 /* Debug */,

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.gain≈ : wraps the #TTGain class as an audio gain regulating external for AudioGraph
+ * @brief j.gain= : wraps the #TTGain class as an audio gain regulating external for AudioGraph
  *
  * @details
  *
@@ -19,8 +19,8 @@
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
 	TTAudioGraphInit();
-	wrapAsMaxAudioGraph(TT("gain"), "j.gain≈", NULL);
-	wrapAsMaxAudioGraph(TT("gain"), "gain≈", NULL);
+	wrapAsMaxAudioGraph(TT("gain"), "j.gain=", NULL);
+	wrapAsMaxAudioGraph(TT("gain"), "gain=", NULL);
 	return 0;
 }
 

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.count≈ : wraps the #TTCounter class as a sample counting signal generator external for AudioGraph
+ * @brief j.count= : wraps the #TTCounter class as a sample counting signal generator external for AudioGraph
  *
  * @details
  *
@@ -28,9 +28,9 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	
 	options->append(TT("userCanSetNumChannels"), YES);
 	
-	wrapAsMaxAudioGraph(TT("count"), "j.count≈", &c, options);
+	wrapAsMaxAudioGraph(TT("count"), "j.count=", &c, options);
 
-	wrapAsMaxAudioGraph(TT("count"), "count≈", &c, options);
+	wrapAsMaxAudioGraph(TT("count"), "count=", &c, options);
 	
 	return 0;
 }

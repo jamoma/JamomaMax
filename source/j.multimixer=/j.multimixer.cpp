@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.multimixer≈ : wraps the #TTMultiMixer class as an external for AudioGraph that mix multiple incoming multichannel signals to multiple multichannel outlets
+ * @brief j.multimixer= : wraps the #TTMultiMixer class as an external for AudioGraph that mix multiple incoming multichannel signals to multiple multichannel outlets
  *
  * @details
  *
@@ -26,7 +26,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	options->append(TT("argumentDefinesNumInlets"), value);
 	value = 1;
 	options->append(TT("argumentDefinesNumOutlets"), value);
-	wrapAsMaxAudioGraph(TT("multimixer"), "j.multimixer≈", NULL, options);
-	wrapAsMaxAudioGraph(TT("multimixer"), "multimixer≈", NULL, options);
+	wrapAsMaxAudioGraph(TT("multimixer"), "j.multimixer=", NULL, options);
+	wrapAsMaxAudioGraph(TT("multimixer"), "multimixer=", NULL, options);
 	return 0;
 }

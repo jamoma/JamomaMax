@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.join≈ : wraps the #TTAudioGraphJoin class as external for AudioGraph that joins several multichannel signals
+ * @brief j.join= : wraps the #TTAudioGraphJoin class as external for AudioGraph that joins several multichannel signals
  *
  * @details
  *
@@ -26,6 +26,6 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	
 	options->append(TT("argumentDefinesNumInlets"), value);
 	options->append(TT("nonadapting"), value); // don't change the number of out-channels in response to changes in the number of in-channels
-	wrapAsMaxAudioGraph(TT("audio.join"), "j.join≈", NULL, options);
-	return wrapAsMaxAudioGraph(TT("audio.join"), "join≈", NULL, options);
+	wrapAsMaxAudioGraph(TT("audio.join"), "j.join=", NULL, options);
+	return wrapAsMaxAudioGraph(TT("audio.join"), "join=", NULL, options);
 }

@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternalsAudioGraph
  *
- * @brief j.wavetable≈ : wraps the #TTWavetable class as oscillation generator for AudioGraph
+ * @brief j.wavetable= : wraps the #TTWavetable class as oscillation generator for AudioGraph
  *
  * @details
  *
@@ -60,7 +60,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();	
 	common_symbols_init();
 
-	c = class_new("j.wavetable≈", (method)OscilNew, (method)OscilFree, sizeof(Oscil), (method)0L, A_GIMME, 0);
+	c = class_new("j.wavetable=", (method)OscilNew, (method)OscilFree, sizeof(Oscil), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)OscilReset,			"audio.reset",		A_CANT, 0);
 	class_addmethod(c, (method)OscilSetup,			"audio.setup",		A_CANT,	0);

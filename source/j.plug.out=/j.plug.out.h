@@ -1,5 +1,5 @@
 /* 
- *	j.plug.out≈
+ *	j.plug.out=
  *	Plugtastic Output External
  *	Copyright © 2010 by Timothy Place
  * 
