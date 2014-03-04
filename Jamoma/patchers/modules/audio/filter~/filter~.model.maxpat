@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 164.0, 56.0, 920.0, 716.0 ],
+		"rect" : [ 164.0, 56.0, 1340.0, 716.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -48,9 +48,9 @@
 					"id" : "obj-29",
 					"linecount" : 6,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 622.571411, 206.0, 110.0, 87.0 ],
 					"text" : "j.message clear @type none @description \"Clears the history of previous samle values.\""
 				}
@@ -63,8 +63,8 @@
 					"id" : "obj-15",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 285.0, 303.0, 43.0, 20.0 ],
 					"text" : "j.in~ 1"
 				}
@@ -77,8 +77,8 @@
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 285.0, 396.0, 50.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
@@ -91,10 +91,10 @@
 					"id" : "obj-12",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 37.85714, 401.0, 200.0, 33.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 622.571411, 364.0, 200.0, 33.0 ],
 					"text" : "j.model @description \"stereo 2nd order iir filter based on biquad~\""
 				}
 
@@ -106,7 +106,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 37.85714, 438.0, 25.0, 25.0 ]
+					"patching_rect" : [ 622.571411, 444.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -129,18 +129,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 285.0, 444.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-4",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 37.85714, 358.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -239,8 +227,8 @@
 					"id" : "obj-1003",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 385.0, 396.0, 50.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
@@ -253,8 +241,8 @@
 					"id" : "obj-1004",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 385.0, 303.0, 43.0, 20.0 ],
 					"text" : "j.in~ 2"
 				}
@@ -266,9 +254,9 @@
 					"fontsize" : 12.0,
 					"id" : "obj-1020",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 38.5, 15.0, 557.0, 20.0 ],
 					"text" : "j.message filtergraph @description \"Messages to filtergraph. See the MSP reference for further details\""
 				}
@@ -281,9 +269,9 @@
 					"id" : "obj-1022",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 87.5, 53.0, 589.0, 33.0 ],
 					"text" : "j.parameter type @type string @priority 1 @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf\"",
 					"varname" : "filtertype"
@@ -297,9 +285,9 @@
 					"id" : "obj-1023",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 159.0, 144.0, 532.0, 33.0 ],
 					"text" : "j.parameter gain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive Max @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
 					"varname" : "filtergain"
@@ -313,9 +301,9 @@
 					"id" : "obj-1024",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 179.0, 206.0, 412.0, 33.0 ],
 					"text" : "j.parameter q @type decimal @ramp/drive Max @range/bounds 0. 100. @range/clipmode both @repetitions/filter 1 @description \"Resonance (Q)\"",
 					"varname" : "q"
@@ -329,9 +317,9 @@
 					"id" : "obj-1025",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 138.571426, 103.0, 594.0, 33.0 ],
 					"text" : "j.parameter frequency @type decimal @range/bounds 30. 11025. @range/clipmode both @ramp/drive Max @repetitions/filter 1 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
 					"varname" : "cf"
@@ -479,15 +467,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1004", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -533,27 +512,7 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
- ]
+		"dependency_cache" : [  ]
 	}
 
 }

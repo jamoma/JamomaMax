@@ -678,24 +678,6 @@
       {
         "box": {
           "comment": "",
-          "id": "obj-44",
-          "maxclass": "inlet",
-          "numinlets": 0,
-          "numoutlets": 1,
-          "outlettype": [
-            ""
-          ],
-          "patching_rect": [
-            45.0,
-            26.0,
-            25.0,
-            25.0
-          ]
-        }
-      },
-      {
-        "box": {
-          "comment": "",
           "id": "obj-46",
           "maxclass": "inlet",
           "numinlets": 0,
@@ -719,7 +701,7 @@
           "numinlets": 1,
           "numoutlets": 0,
           "patching_rect": [
-            276.0,
+            1476,
             380.0,
             25.0,
             25.0
@@ -1673,22 +1655,6 @@
           ],
           "source": [
             "obj-42",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "destination": [
-            "obj-3",
-            0
-          ],
-          "hidden": 0,
-          "midpoints": [
-
-          ],
-          "source": [
-            "obj-44",
             0
           ]
         }

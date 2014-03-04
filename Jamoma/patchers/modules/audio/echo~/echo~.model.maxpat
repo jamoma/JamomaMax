@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -35,8 +35,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 634.5, 723.5, 48.0, 136.0 ],
-					"presentation_rect" : [ 635.5, 720.5, 0.0, 0.0 ],
+					"patching_rect" : [ 387.5, 711.5, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.gain~[2]",
@@ -62,8 +61,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 586.5, 723.5, 48.0, 136.0 ],
-					"presentation_rect" : [ 693.0, 680.5, 0.0, 0.0 ],
+					"patching_rect" : [ 339.5, 711.5, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.gain~[1]",
@@ -89,7 +87,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 538.5, 723.5, 48.0, 136.0 ],
+					"patching_rect" : [ 291.5, 711.5, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.gain~",
@@ -117,7 +115,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "float" ],
-					"patching_rect" : [ 814.785706, 693.0, 56.0, 20.0 ],
+					"patching_rect" : [ 567.785706, 681.0, 56.0, 20.0 ],
 					"sig" : 0.0
 				}
 
@@ -136,7 +134,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -181,8 +179,8 @@
 									"linecount" : 4,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 128.0, 105.0, 60.0 ],
 									"text" : "j.dataspace @dataspace gain @input db @output linear"
 								}
@@ -298,7 +296,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 814.785706, 573.0, 127.0, 20.0 ],
+					"patching_rect" : [ 567.785706, 561.0, 127.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -324,8 +322,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 329.0, 484.0, 240.0, 20.0 ],
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 82.0, 472.0, 240.0, 20.0 ],
 					"text" : "filter~.model filter @amenities none"
 				}
 
@@ -338,8 +336,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 329.0, 563.0, 240.0, 20.0 ],
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 82.0, 551.0, 240.0, 20.0 ],
 					"text" : "limiter~.model limiter @amenities none"
 				}
 
@@ -351,9 +349,9 @@
 					"id" : "obj-37",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 550.0, 79.0, 71.0, 19.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 303.0, 67.0, 71.0, 19.0 ],
 					"text" : "j.in~ 2"
 				}
 
@@ -365,9 +363,9 @@
 					"id" : "obj-38",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 430.5, 742.0, 79.0, 19.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 183.5, 730.0, 79.0, 19.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -379,9 +377,9 @@
 					"id" : "obj-39",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 330.0, 742.0, 79.0, 19.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 83.0, 730.0, 79.0, 19.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -393,19 +391,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 58.0, 779.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-40",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 58.0, 43.0, 25.0, 25.0 ]
+					"patching_rect" : [ 567.785706, 767.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -416,9 +402,9 @@
 					"id" : "obj-42",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 439.5, 79.0, 71.0, 19.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 192.5, 67.0, 71.0, 19.0 ],
 					"text" : "j.in~ 1"
 				}
 
@@ -430,10 +416,10 @@
 					"id" : "obj-1",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 58.0, 352.5, 161.0, 31.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 567.785706, 701.5, 161.0, 31.0 ],
 					"text" : "j.model @description \"Stereo echo module.\""
 				}
 
@@ -445,10 +431,10 @@
 					"id" : "obj-25",
 					"linecount" : 11,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 662.0, 56.5, 121.0, 154.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 415.0, 44.5, 121.0, 154.0 ],
 					"text" : "j.message clear @type none @description \"Clear the feedback, filter, and limiter histories to return to a clean slate.  Useful in the event that some rogue samples wound up stuck in the feedback loops.\""
 				}
 
@@ -460,10 +446,10 @@
 					"id" : "obj-27",
 					"linecount" : 15,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1015.285706, 411.0, 133.0, 208.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 768.285706, 399.0, 133.0, 208.0 ],
 					"text" : "j.parameter feedback/mode @type string @description \"Feedback mode. 'pingpong': crossed-over feedback between the two delays. 'stereo': two mono delay lines each with independent feedback paths.'pingleft' and 'pingright' feed the left or the right delay outputs back.\"",
 					"varname" : "feedback[2]"
 				}
@@ -476,10 +462,10 @@
 					"id" : "obj-29",
 					"linecount" : 11,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 814.785706, 411.0, 153.0, 154.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 567.785706, 399.0, 153.0, 154.0 ],
 					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds -70. 0. @range/clipmode both @description Feedback. @dataspace gain @dataspace/unit db @description \"Feedback gain in dB.\"",
 					"varname" : "feedback"
 				}
@@ -492,10 +478,10 @@
 					"id" : "obj-30",
 					"linecount" : 11,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 977.285706, 155.5, 151.0, 154.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 730.285706, 143.5, 151.0, 154.0 ],
 					"text" : "j.parameter delay/right @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 10000 @range/clipmode both @dataspace time @dataspace/unit ms @description \"Delay time in milliseconds for right channel.\"",
 					"varname" : "right"
 				}
@@ -508,10 +494,10 @@
 					"id" : "obj-41",
 					"linecount" : 11,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 814.785706, 155.5, 146.0, 154.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 567.785706, 143.5, 146.0, 154.0 ],
 					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 10000 @range/clipmode both @dataspace time @dataspace/unit ms @description \"Delay time in milliseconds for left channel.\"",
 					"varname" : "left"
 				}
@@ -526,7 +512,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 662.0, 218.0, 38.0, 18.0 ],
+					"patching_rect" : [ 415.0, 206.0, 38.0, 18.0 ],
 					"text" : "clear"
 				}
 
@@ -540,7 +526,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "list" ],
-					"patching_rect" : [ 439.5, 672.0, 129.5, 20.0 ],
+					"patching_rect" : [ 192.5, 660.0, 129.5, 20.0 ],
 					"text" : "matrix~ 2 2"
 				}
 
@@ -559,7 +545,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -764,7 +750,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1015.285706, 625.0, 52.0, 20.0 ],
+					"patching_rect" : [ 768.285706, 613.0, 52.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -791,7 +777,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 550.0, 637.0, 34.0, 20.0 ],
+					"patching_rect" : [ 303.0, 625.0, 34.0, 20.0 ],
 					"text" : "*~ 0."
 				}
 
@@ -805,7 +791,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 439.5, 637.0, 34.0, 20.0 ],
+					"patching_rect" : [ 192.5, 625.0, 34.0, 20.0 ],
 					"text" : "*~ 0."
 				}
 
@@ -818,7 +804,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 439.5, 39.0, 25.0, 25.0 ]
+					"patching_rect" : [ 192.5, 27.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -829,7 +815,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 430.5, 779.0, 25.0, 25.0 ]
+					"patching_rect" : [ 183.5, 767.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -840,7 +826,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 330.0, 779.0, 25.0, 25.0 ]
+					"patching_rect" : [ 83.0, 767.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -852,7 +838,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 550.0, 37.0, 25.0, 25.0 ]
+					"patching_rect" : [ 303.0, 25.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -865,7 +851,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 550.0, 351.0, 72.0, 20.0 ],
+					"patching_rect" : [ 303.0, 339.0, 72.0, 20.0 ],
 					"text" : "tapout~ 750"
 				}
 
@@ -879,7 +865,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "tapconnect" ],
-					"patching_rect" : [ 550.0, 283.0, 78.0, 20.0 ],
+					"patching_rect" : [ 303.0, 271.0, 78.0, 20.0 ],
 					"text" : "tapin~ 10001"
 				}
 
@@ -893,7 +879,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 439.5, 351.0, 72.0, 20.0 ],
+					"patching_rect" : [ 192.5, 339.0, 72.0, 20.0 ],
 					"text" : "tapout~ 250"
 				}
 
@@ -907,7 +893,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "tapconnect" ],
-					"patching_rect" : [ 439.5, 283.0, 78.0, 20.0 ],
+					"patching_rect" : [ 192.5, 271.0, 78.0, 20.0 ],
 					"text" : "tapin~ 10001"
 				}
 
@@ -1065,7 +1051,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 671.5, 551.75, 338.5, 551.75 ],
+					"midpoints" : [ 424.5, 539.75, 91.5, 539.75 ],
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -1076,7 +1062,7 @@
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 671.5, 477.0, 338.5, 477.0 ],
+					"midpoints" : [ 424.5, 465.0, 91.5, 465.0 ],
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -1132,15 +1118,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-39", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-40", 0 ]
 				}
 
 			}
@@ -1257,7 +1234,7 @@
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 504.25, 715.0, 287.75, 715.0, 287.75, 259.0, 559.5, 259.0 ],
+					"midpoints" : [ 257.25, 703.0, 40.75, 703.0, 40.75, 247.0, 312.5, 247.0 ],
 					"source" : [ "obj-9", 1 ]
 				}
 
@@ -1285,61 +1262,19 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 449.0, 709.0, 295.5, 709.0, 295.5, 268.0, 449.0, 268.0 ],
+					"midpoints" : [ 202.0, 697.0, 48.5, 697.0, 48.5, 256.0, 202.0, 256.0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
-			"obj-12" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-13" : [ "live.gain~[1]", "live.gain~", 0 ],
-			"obj-14" : [ "live.gain~[2]", "live.gain~", 0 ]
+			"obj-14" : [ "live.gain~[2]", "live.gain~", 0 ],
+			"obj-12" : [ "live.gain~", "live.gain~", 0 ]
 		}
 ,
-		"dependency_cache" : [ 			{
-				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../limiter~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "filter~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filter~",
-				"patcherrelativepath" : "../filter~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.limiter~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.dataspace.mxo",
-				"type" : "iLaX"
-			}
- ]
+		"dependency_cache" : [  ]
 	}
 
 }
