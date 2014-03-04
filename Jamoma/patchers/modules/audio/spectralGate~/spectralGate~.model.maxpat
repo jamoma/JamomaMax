@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -38,7 +38,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1126.0, 157.5, 273.0, 51.0 ],
+					"patching_rect" : [ 997.0, 135.5, 273.0, 51.0 ],
 					"text" : "This compensates for the delay introduced by the spectral processing, ensuring that dry and wet signals are properly synced when mixed."
 				}
 
@@ -53,7 +53,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1049.0, 166.5, 67.0, 33.0 ],
+					"patching_rect" : [ 920.0, 144.5, 67.0, 33.0 ],
 					"text" : "delay~ 3072 3072"
 				}
 
@@ -68,7 +68,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 955.0, 166.5, 67.0, 33.0 ],
+					"patching_rect" : [ 826.0, 144.5, 67.0, 33.0 ],
 					"text" : "delay~ 3072 3072"
 				}
 
@@ -82,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 585.0, 271.0, 87.0, 20.0 ],
+					"patching_rect" : [ 456.0, 249.0, 87.0, 20.0 ],
 					"text" : "prepend invert"
 				}
 
@@ -94,10 +94,10 @@
 					"id" : "obj-64",
 					"linecount" : 7,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 585.0, 106.5, 129.0, 100.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 456.0, 84.5, 129.0, 100.0 ],
 					"text" : "j.parameter invert @type boolean @description \"Sets the threshold below which a bin of the spectrum is attenuated.\""
 				}
 
@@ -109,10 +109,10 @@
 					"id" : "obj-63",
 					"linecount" : 11,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 434.0, 106.5, 134.0, 154.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 305.0, 84.5, 136.0, 154.0 ],
 					"text" : "j.parameter response/decay @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
 
@@ -124,10 +124,10 @@
 					"id" : "obj-62",
 					"linecount" : 12,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 307.0, 106.5, 124.0, 167.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 178.0, 84.5, 124.0, 167.0 ],
 					"text" : "j.parameter response/attack @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
 
@@ -139,10 +139,10 @@
 					"id" : "obj-61",
 					"linecount" : 10,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 142.0, 106.5, 143.0, 141.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 13.0, 84.5, 143.0, 141.0 ],
 					"text" : "j.parameter threshold @type decimal @range/bounds -48. 18. @range/clipmode none @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
 
@@ -154,9 +154,9 @@
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 25.0, 296.0, 72.0, 20.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 867.0, 423.0, 72.0, 20.0 ],
 					"text" : "j.model"
 				}
 
@@ -168,7 +168,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 25.0, 485.0, 25.0, 25.0 ]
+					"patching_rect" : [ 867.0, 463.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -179,9 +179,9 @@
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 731.0, 437.0, 73.0, 20.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 602.0, 415.0, 73.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -193,9 +193,8 @@
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 955.0, 213.0, 66.0, 20.0 ],
+					"numoutlets" : 0,
+					"patching_rect" : [ 826.0, 191.0, 66.0, 20.0 ],
 					"text" : "j.in~ 1"
 				}
 
@@ -207,9 +206,9 @@
 					"id" : "obj-37",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 891.0, 437.0, 74.0, 20.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 762.0, 415.0, 74.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -221,9 +220,8 @@
 					"id" : "obj-38",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 1049.0, 213.0, 67.0, 20.0 ],
+					"numoutlets" : 0,
+					"patching_rect" : [ 920.0, 191.0, 67.0, 20.0 ],
 					"text" : "j.in~ 2"
 				}
 
@@ -242,7 +240,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -273,8 +271,8 @@
 									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 95.0, 150.0, 502.0, 19.0 ],
 									"text" : "j.map @function exponential @input/min 0. @input/max 1. @output/min 1. @output/max 10000."
 								}
@@ -303,8 +301,8 @@
 									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 140.0, 125.0, 502.0, 19.0 ],
 									"text" : "j.map @function exponential @input/min 0. @input/max 1. @output/min 1. @output/max 10000."
 								}
@@ -429,7 +427,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 307.0, 282.5, 146.0, 20.0 ],
+					"patching_rect" : [ 178.0, 260.5, 146.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -456,7 +454,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 142.0, 281.5, 39.0, 20.0 ],
+					"patching_rect" : [ 13.0, 259.5, 39.0, 20.0 ],
 					"text" : "dbtoa"
 				}
 
@@ -470,7 +468,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 142.0, 256.5, 33.0, 20.0 ],
+					"patching_rect" : [ 13.0, 234.5, 33.0, 20.0 ],
 					"text" : "* -1"
 				}
 
@@ -484,7 +482,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 142.0, 311.5, 76.0, 18.0 ],
+					"patching_rect" : [ 13.0, 289.5, 76.0, 18.0 ],
 					"text" : "threshold $1"
 				}
 
@@ -497,8 +495,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 570.5, 391.0, 339.5, 20.0 ],
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 441.5, 369.0, 339.5, 20.0 ],
 					"text" : "limiter~.model"
 				}
 
@@ -512,20 +510,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 731.0, 348.0, 179.0, 20.0 ],
+					"patching_rect" : [ 602.0, 326.0, 179.0, 20.0 ],
 					"text" : "pfft~ j.spectralGate~.lib 4096 4"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-51",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 731.0, 43.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -537,7 +523,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 891.0, 43.0, 25.0, 25.0 ]
+					"patching_rect" : [ 762.0, 21.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -549,7 +535,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 35.0, 25.0, 25.0 ]
+					"patching_rect" : [ 867.0, 334.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -560,7 +546,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 731.0, 485.0, 25.0, 25.0 ]
+					"patching_rect" : [ 602.0, 463.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -571,7 +557,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 891.0, 485.0, 25.0, 25.0 ]
+					"patching_rect" : [ 762.0, 463.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -599,7 +585,7 @@
 					"destination" : [ "obj-39", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 316.5, 334.25, 740.5, 334.25 ],
+					"midpoints" : [ 187.5, 312.25, 611.5, 312.25 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -627,7 +613,7 @@
 					"destination" : [ "obj-39", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 151.5, 344.0, 740.5, 344.0 ],
+					"midpoints" : [ 22.5, 322.0, 611.5, 322.0 ],
 					"source" : [ "obj-33", 0 ]
 				}
 
@@ -688,19 +674,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-51", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-39", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-51", 0 ]
+					"source" : [ "", 0 ]
 				}
 
 			}
@@ -781,7 +758,7 @@
 					"destination" : [ "obj-39", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 594.5, 325.0, 740.5, 325.0 ],
+					"midpoints" : [ 465.5, 303.0, 611.5, 303.0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -789,49 +766,9 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.spectralGate~.lib.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectralGate~",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Users/hems/Desktop//max/_yamoma/JamomaMax/Jamoma/patchers/modules/audio/spectralGate~",
 				"type" : "JSON",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../limiter~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.xfade~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.limiter~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.map.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
