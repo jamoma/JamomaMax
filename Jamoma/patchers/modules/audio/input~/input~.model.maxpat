@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 752.0, 44.0, 674.0, 400.0 ],
+		"rect" : [ 752.0, 44.0, 461.0, 289.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,7 +37,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 350.0, 254.0, 202.0, 24.0 ],
+					"patching_rect" : [ 222.0, 168.0, 202.0, 24.0 ],
 					"text" : "Provides gain and level metering"
 				}
 
@@ -52,7 +52,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 156.5, 176.0, 148.0, 33.0 ],
+					"patching_rect" : [ 33.5, 92.0, 148.0, 33.0 ],
 					"text" : "balance~.model balance @amenities none"
 				}
 
@@ -64,7 +64,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 72.0, 163.5, 25.0, 25.0 ]
+					"patching_rect" : [ 250.0, 107.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -76,7 +76,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 72.0, 64.0, 25.0, 25.0 ]
+					"patching_rect" : [ 250.0, 31.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -89,7 +89,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 72.0, 117.0, 49.0, 20.0 ],
+					"patching_rect" : [ 250.0, 70.0, 49.0, 20.0 ],
 					"text" : "j.model"
 				}
 
@@ -103,7 +103,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 285.5, 256.0, 50.0, 20.0 ],
+					"patching_rect" : [ 162.5, 172.0, 50.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -117,7 +117,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 221.0, 256.0, 50.0, 20.0 ],
+					"patching_rect" : [ 98.0, 172.0, 50.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -136,7 +136,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -286,7 +286,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -815,7 +815,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -954,7 +954,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 5,
+															"revision" : 6,
 															"architecture" : "x86"
 														}
 ,
@@ -1260,7 +1260,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 5,
+															"revision" : 6,
 															"architecture" : "x86"
 														}
 ,
@@ -2026,7 +2026,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -2366,7 +2366,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -2542,7 +2542,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -3087,7 +3087,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 221.0, 105.0, 104.0, 20.0 ],
+					"patching_rect" : [ 98.0, 20.0, 104.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3114,7 +3114,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 221.0, 321.0, 107.0, 20.0 ],
+					"patching_rect" : [ 98.0, 237.0, 107.0, 20.0 ],
 					"text" : "---signal outputs---"
 				}
 
@@ -3126,7 +3126,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 285.5, 292.0, 25.0, 25.0 ]
+					"patching_rect" : [ 162.5, 208.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -3137,7 +3137,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 221.0, 292.0, 25.0, 25.0 ]
+					"patching_rect" : [ 98.0, 208.0, 25.0, 25.0 ]
 				}
 
 			}
