@@ -45,7 +45,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "j.iter#",
+					"text" : "j.iter-",
 					"fontsize" : 13.0,
 					"patching_rect" : [ 50.0, 375.0, 67.0, 22.0 ],
 					"numinlets" : 1,
@@ -156,7 +156,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "j.midi.in#",
+					"text" : "j.midi.in-",
 					"fontsize" : 13.0,
 					"patching_rect" : [ 50.0, 195.0, 89.0, 22.0 ],
 					"numinlets" : 1,

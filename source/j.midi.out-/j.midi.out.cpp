@@ -51,7 +51,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 	TTGraphInit();	
 	common_symbols_init();
 	
-	c = class_new("j.midi.out#", (method)MidiOutNew, (method)MidiOutFree, sizeof(MidiOut), (method)0L, A_GIMME, 0);
+	c = class_new("j.midi.out-", (method)MidiOutNew, (method)MidiOutFree, sizeof(MidiOut), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)MidiOutGetDeviceNames,	"getAvailableDeviceNames",	0);
 	class_addmethod(c, (method)MaxGraphReset,			"graph.reset",				A_CANT, 0);

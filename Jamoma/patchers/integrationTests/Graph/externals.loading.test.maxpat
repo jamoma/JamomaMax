@@ -36,7 +36,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 603.0, 266.700012, 105.0, 19.0 ],
-					"text" : "j.plug.parameter#"
+					"text" : "j.plug.parameter-"
 				}
 
 			}
@@ -49,7 +49,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 603.0, 190.800003, 105.0, 19.0 ],
-					"text" : "j.midi.out#"
+					"text" : "j.midi.out-"
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 603.0, 165.5, 105.0, 19.0 ],
-					"text" : "j.midi.in#"
+					"text" : "j.midi.in-"
 				}
 
 			}
@@ -75,7 +75,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 603.0, 140.199997, 105.0, 19.0 ],
-					"text" : "j.midi.format#"
+					"text" : "j.midi.format-"
 				}
 
 			}
@@ -88,7 +88,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 603.0, 114.900002, 105.0, 19.0 ],
-					"text" : "j.midi.filter#"
+					"text" : "j.midi.filter-"
 				}
 
 			}
@@ -101,7 +101,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 603.0, 89.599998, 105.0, 19.0 ],
-					"text" : "j.iter#"
+					"text" : "j.iter-"
 				}
 
 			}
@@ -114,7 +114,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 603.0, 39.0, 105.0, 19.0 ],
-					"text" : "j.append#"
+					"text" : "j.append-"
 				}
 
 			}
@@ -127,7 +127,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 603.0, 64.300003, 105.0, 19.0 ],
-					"text" : "j.dataspace#"
+					"text" : "j.dataspace-"
 				}
 
 			}
@@ -140,7 +140,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 603.0, 216.100006, 105.0, 19.0 ],
-					"text" : "j.op#"
+					"text" : "j.op-"
 				}
 
 			}
@@ -153,7 +153,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 603.0, 292.0, 105.0, 19.0 ],
-					"text" : "j.unpack#"
+					"text" : "j.unpack-"
 				}
 
 			}
@@ -166,7 +166,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 603.0, 241.399994, 105.0, 19.0 ],
-					"text" : "j.pack#"
+					"text" : "j.pack-"
 				}
 
 			}

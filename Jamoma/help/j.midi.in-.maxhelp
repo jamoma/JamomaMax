@@ -113,7 +113,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 140.0, 175.0, 64.0, 19.0 ],
-									"text" : "j.iter#"
+									"text" : "j.iter-"
 								}
 
 							}
@@ -153,7 +153,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 340.0, 125.0, 64.0, 19.0 ],
-									"text" : "j.iter#"
+									"text" : "j.iter-"
 								}
 
 							}
@@ -181,7 +181,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "graph.connect", "" ],
 									"patching_rect" : [ 165.0, 60.0, 81.0, 19.0 ],
-									"text" : "j.midi.in#"
+									"text" : "j.midi.in-"
 								}
 
 							}
@@ -431,7 +431,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 420.0, 480.0, 95.0, 22.0 ],
-					"text" : "j.midi.out#"
+					"text" : "j.midi.out-"
 				}
 
 			}
@@ -553,7 +553,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 50.0, 375.0, 67.0, 22.0 ],
-					"text" : "j.log#"
+					"text" : "j.log-"
 				}
 
 			}
@@ -664,7 +664,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 50.0, 195.0, 89.0, 22.0 ],
-					"text" : "j.midi.in#"
+					"text" : "j.midi.in-"
 				}
 
 			}

@@ -60,7 +60,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "j.pack#",
+					"text" : "j.pack-",
 					"fontsize" : 13.0,
 					"numinlets" : 1,
 					"patching_rect" : [ 90.0, 195.0, 78.0, 22.0 ],
@@ -89,7 +89,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "j.midi.format#",
+					"text" : "j.midi.format-",
 					"fontsize" : 13.0,
 					"numinlets" : 1,
 					"patching_rect" : [ 90.0, 330.0, 114.0, 22.0 ],
@@ -213,7 +213,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "j.midi.out#",
+					"text" : "j.midi.out-",
 					"fontsize" : 13.0,
 					"numinlets" : 1,
 					"patching_rect" : [ 90.0, 445.0, 95.0, 22.0 ],

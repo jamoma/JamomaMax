@@ -59,7 +59,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();	
 	common_symbols_init();
 
-	c = class_new((char*)"j.plug.parameter#", (method)PlugParameterNew, (method)PlugParameterFree, sizeof(PlugParameter), (method)0L, A_GIMME, 0);
+	c = class_new((char*)"j.plug.parameter-", (method)PlugParameterNew, (method)PlugParameterFree, sizeof(PlugParameter), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)PlugParameterInt,		"int",			A_LONG, 0);
 	class_addmethod(c, (method)PlugParameterFloat,		"float",		A_LONG, 0);

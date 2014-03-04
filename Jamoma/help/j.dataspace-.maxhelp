@@ -92,7 +92,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 370.0, 260.0, 81.0, 19.0 ],
-					"text" : "j.unpack#"
+					"text" : "j.unpack-"
 				}
 
 			}
@@ -106,7 +106,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 370.0, 175.0, 68.0, 19.0 ],
-					"text" : "j.pack#"
+					"text" : "j.pack-"
 				}
 
 			}
@@ -140,7 +140,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.op#", "@description", "A multi-operator graph object" ],
+					"args" : [ "@name", "j.op-", "@description", "A multi-operator graph object" ],
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
@@ -161,7 +161,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 30.0, 260.0, 81.0, 19.0 ],
-					"text" : "j.unpack#"
+					"text" : "j.unpack-"
 				}
 
 			}
@@ -189,7 +189,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 30.0, 175.0, 70.0, 19.0 ],
-					"text" : "j.pack#"
+					"text" : "j.pack-"
 				}
 
 			}

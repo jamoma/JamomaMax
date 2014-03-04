@@ -49,7 +49,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 	TTGraphInit();	
 	common_symbols_init();
 	
-	c = class_new("j.iter#", (method)IterNew, (method)IterFree, sizeof(Iter), (method)0L, A_GIMME, 0);
+	c = class_new("j.iter-", (method)IterNew, (method)IterFree, sizeof(Iter), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)MaxGraphReset,		"graph.reset",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphConnect,		"graph.connect",	A_OBJ, A_LONG, 0);

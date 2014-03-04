@@ -62,7 +62,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 	TTGraphInit();	
 	common_symbols_init();
 	
-	c = class_new("j.pack#", (method)PackNew, (method)PackFree, sizeof(Pack), (method)0L, A_GIMME, 0);
+	c = class_new("j.pack-", (method)PackNew, (method)PackFree, sizeof(Pack), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)PackInt,				"int",				A_LONG, 0);
 	class_addmethod(c, (method)PackFloat,			"float",			A_LONG, 0);

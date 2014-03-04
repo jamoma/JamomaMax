@@ -35,7 +35,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "j.append#" ],
+					"jsarguments" : [ "j.append-" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -103,7 +103,7 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"args" : [ "@name", "j.append#", "@description", "Not yet documented" ],
+									"args" : [ "@name", "j.append-", "@description", "Not yet documented" ],
 									"bgmode" : 1,
 									"id" : "obj-21",
 									"maxclass" : "bpatcher",

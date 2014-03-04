@@ -48,7 +48,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 	TTGraphInit();	
 	common_symbols_init();
 	
-	c = class_new("j.midi.filter#", (method)MidiFilterNew, (method)MidiFilterFree, sizeof(MidiFilter), (method)0L, A_GIMME, 0);
+	c = class_new("j.midi.filter-", (method)MidiFilterNew, (method)MidiFilterFree, sizeof(MidiFilter), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)MaxGraphReset,		"graph.reset",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphSetup,		"graph.setup",		A_CANT, 0);
