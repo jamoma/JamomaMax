@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.emboss%", "@description", "Cheesy embossing effect" ],
+					"args" : [ "@name", "emboss%", "@description", "Cheesy embossing effect" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -201,7 +201,7 @@
 					"id" : "obj-10",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 335.0, 122.0, 300.0, 70.0 ],
@@ -271,7 +271,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 60.0, 456.0, 120.0, 19.0 ],
-					"text" : "s jmod.emboss%.cmd"
+					"text" : "s emboss%.module.cmd"
 				}
 
 			}
@@ -285,7 +285,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 335.0, 205.0, 119.0, 19.0 ],
-					"text" : "r jmod.emboss%.cmd"
+					"text" : "r emboss%.module.cmd"
 				}
 
 			}
@@ -299,7 +299,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 13.0, 235.0, 120.0, 19.0 ],
-					"text" : "s jmod.emboss%.cmd"
+					"text" : "s emboss%.module.cmd"
 				}
 
 			}
@@ -345,7 +345,7 @@
 					"id" : "obj-23",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.emboss%.maxpat",
+					"name" : "emboss%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 335.0, 230.0, 300.0, 70.0 ],

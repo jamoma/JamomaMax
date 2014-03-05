@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 76.0, 235.0, 1200.0, 582.0 ],
+		"rect" : [ 76.0, 235.0, 959.0, 509.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,7 +37,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 45.0, 165.0, 158.0, 47.0 ],
+					"patching_rect" : [ 645.0, 388.0, 158.0, 47.0 ],
 					"text" : "j.model @description \"One-sided ring modulator using Hilbert filter.\""
 				}
 
@@ -51,7 +51,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 535.0, 114.0, 67.0, 20.0 ],
+					"patching_rect" : [ 276.0, 73.0, 67.0, 20.0 ],
 					"text" : "j.in~ 2"
 				}
 
@@ -65,7 +65,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 535.0, 466.0, 74.0, 20.0 ],
+					"patching_rect" : [ 276.0, 425.0, 74.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -79,7 +79,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 300.0, 466.0, 74.0, 20.0 ],
+					"patching_rect" : [ 41.0, 425.0, 74.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -93,7 +93,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 300.0, 114.0, 67.0, 20.0 ],
+					"patching_rect" : [ 41.0, 73.0, 67.0, 20.0 ],
 					"text" : "j.in~ 1"
 				}
 
@@ -105,7 +105,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 45.0, 500.0, 25.0, 25.0 ]
+					"patching_rect" : [ 645.0, 466.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -119,7 +119,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 805.0, 310.0, 308.0, 33.0 ],
+					"patching_rect" : [ 546.0, 269.0, 308.0, 33.0 ],
 					"text" : "j.parameter lowerSideband/active @type boolean @description \"Enable and disable lower sideband.\""
 				}
 
@@ -134,7 +134,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 664.333313, 63.0, 525.0, 47.0 ],
+					"patching_rect" : [ 405.333313, 22.0, 525.0, 47.0 ],
 					"text" : "j.parameter modulatingFrequency @type decimal @range/bounds -200. 1000. @range/clipmode none @ramp/function linear @ramp/drive Max @description \"Modulator frequency (Hz). \" @dataspace time @dataspace/unit Hz"
 				}
 
@@ -148,7 +148,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 805.0, 355.0, 42.0, 18.0 ],
+					"patching_rect" : [ 546.0, 314.0, 42.0, 18.0 ],
 					"text" : "$1 10"
 				}
 
@@ -162,20 +162,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "bang" ],
-					"patching_rect" : [ 805.0, 380.0, 37.0, 20.0 ],
+					"patching_rect" : [ 546.0, 339.0, 37.0, 20.0 ],
 					"text" : "line~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-13",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 45.0, 65.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -186,7 +174,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 535.0, 500.0, 25.0, 25.0 ]
+					"patching_rect" : [ 276.0, 459.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -197,7 +185,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 300.0, 500.0, 25.0, 25.0 ]
+					"patching_rect" : [ 41.0, 459.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -210,7 +198,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 729.0, 422.0, 36.0, 20.0 ],
+					"patching_rect" : [ 470.0, 381.0, 36.0, 20.0 ],
 					"text" : "*~ 0"
 				}
 
@@ -224,7 +212,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 664.333313, 117.0, 42.0, 18.0 ],
+					"patching_rect" : [ 405.333313, 76.0, 42.0, 18.0 ],
 					"text" : "$1 10"
 				}
 
@@ -238,7 +226,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "bang" ],
-					"patching_rect" : [ 664.333313, 142.0, 37.0, 20.0 ],
+					"patching_rect" : [ 405.333313, 101.0, 37.0, 20.0 ],
 					"text" : "line~"
 				}
 
@@ -251,7 +239,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 535.0, 65.0, 25.0, 25.0 ]
+					"patching_rect" : [ 276.0, 24.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -263,7 +251,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 300.0, 65.0, 25.0, 25.0 ]
+					"patching_rect" : [ 41.0, 24.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -281,7 +269,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -650,7 +638,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 535.0, 285.0, 213.0, 20.0 ],
+					"patching_rect" : [ 276.0, 244.0, 213.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -677,7 +665,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 535.0, 260.0, 83.0, 20.0 ],
+					"patching_rect" : [ 276.0, 219.0, 83.0, 20.0 ],
 					"text" : "hilbert~"
 				}
 
@@ -691,7 +679,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 492.0, 422.0, 36.0, 20.0 ],
+					"patching_rect" : [ 233.0, 381.0, 36.0, 20.0 ],
 					"text" : "*~ 0"
 				}
 
@@ -711,7 +699,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -924,7 +912,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 664.333313, 172.0, 83.666687, 33.0 ],
+					"patching_rect" : [ 405.333313, 131.0, 83.666687, 33.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -956,7 +944,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1325,7 +1313,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 300.0, 285.0, 211.0, 20.0 ],
+					"patching_rect" : [ 41.0, 244.0, 211.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1352,7 +1340,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 300.0, 260.0, 83.0, 20.0 ],
+					"patching_rect" : [ 41.0, 219.0, 83.0, 20.0 ],
 					"text" : "hilbert~"
 				}
 
@@ -1382,15 +1370,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-10", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-21", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-13", 0 ]
 				}
 
 			}
@@ -1516,7 +1495,7 @@
 					"destination" : [ "obj-28", 3 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 738.5, 247.5, 501.5, 247.5 ],
+					"midpoints" : [ 479.5, 206.5, 242.5, 206.5 ],
 					"source" : [ "obj-26", 1 ]
 				}
 
@@ -1526,7 +1505,7 @@
 					"destination" : [ "obj-28", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 673.833313, 241.5, 437.5, 241.5 ],
+					"midpoints" : [ 414.833313, 200.5, 178.5, 200.5 ],
 					"source" : [ "obj-26", 0 ]
 				}
 

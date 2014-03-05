@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.foregroundMask%", "@description", "Create mask based on image foreground." ],
+					"args" : [ "@name", "foregroundMask%", "@description", "Create mask based on image foreground." ],
 					"bgmode" : 1,
 					"id" : "obj-15",
 					"maxclass" : "bpatcher",
@@ -150,7 +150,7 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.foregroundMask%.maxpat",
+					"name" : "foregroundMask%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 215.0, 300.0, 70.0 ],

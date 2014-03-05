@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.chromakey%", "@description", "Choke chromakey 2 sources" ],
+					"args" : [ "@name", "chromakey%", "@description", "Choke chromakey 2 sources" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -85,7 +85,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 240.0, 390.0, 387.0, 237.0 ],
-					"text" : "Possible to choose the color with the R G and B values or by a click in the left screen (which will make the image appear) or using the color swatch.\n\njmod.chromakey% measures the chromatic distance of all of the left input's cells(pixels) with a reference color. the total distance is calculated by summing the absolute value of each color channel's distance from the reference color's corresponding color channel. if the distance is less than or equal to the tolerated distance(tol), the right input cell is multiplied by maxkey. if the distance is greater than tol, but less than tol + fade, some value between minkey and maxkey is applied. any values of greater distance, and the right input cell is multiplied by minkey. the left input is always multiplied by the additive inverse of the left input's multiplicand.\n\njmod.chromakey% works with all data types, any number of planes, but the planecount of all inputs and outputs must be equal.\n\nfor char data, the floating point input 0-1 is scaled to the range 0 to 255, for long data, the floating point input is converted to int(truncated) for color, tol, and fade. long mode 0 output is in the range 0-255."
+					"text" : "Possible to choose the color with the R G and B values or by a click in the left screen (which will make the image appear) or using the color swatch.\n\nchromakey% measures the chromatic distance of all of the left input's cells(pixels) with a reference color. the total distance is calculated by summing the absolute value of each color channel's distance from the reference color's corresponding color channel. if the distance is less than or equal to the tolerated distance(tol), the right input cell is multiplied by maxkey. if the distance is greater than tol, but less than tol + fade, some value between minkey and maxkey is applied. any values of greater distance, and the right input cell is multiplied by minkey. the left input is always multiplied by the additive inverse of the left input's multiplicand.\n\njmod.chromakey%.module works with all data types, any number of planes, but the planecount of all inputs and outputs must be equal.\n\nfor char data, the floating point input 0-1 is scaled to the range 0 to 255, for long data, the floating point input is converted to int(truncated) for color, tol, and fade. long mode 0 output is in the range 0-255."
 				}
 
 			}
@@ -235,7 +235,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 574.0, 94.0, 19.0 ],
-					"text" : "s jmod.op%.cmd"
+					"text" : "s op%.module.cmd"
 				}
 
 			}
@@ -258,7 +258,7 @@
 					"id" : "obj-20",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 623.0, 104.0, 300.0, 70.0 ],
@@ -272,7 +272,7 @@
 					"id" : "obj-21",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 314.0, 104.0, 300.0, 70.0 ],
@@ -291,7 +291,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 454.0, 182.0, 93.0, 19.0 ],
-					"text" : "r jmod.op%.cmd"
+					"text" : "r op%.module.cmd"
 				}
 
 			}
@@ -305,7 +305,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 11.0, 297.0, 94.0, 19.0 ],
-					"text" : "s jmod.op%.cmd"
+					"text" : "s op%.module.cmd"
 				}
 
 			}
@@ -366,7 +366,7 @@
 					"id" : "obj-30",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.chromakey%.maxpat",
+					"name" : "chromakey%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 454.0, 205.0, 300.0, 140.0 ],

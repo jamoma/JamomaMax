@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.rgb2gray%", "@description", "Convert rgb video to grayscale" ],
+					"args" : [ "@name", "rgb2gray%", "@description", "Convert rgb video to grayscale" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -47,7 +47,7 @@
 					"id" : "obj-6",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 144.0, 100.0, 300.0, 70.0 ],
@@ -85,7 +85,7 @@
 					"id" : "obj-21",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.rgb2gray%.maxpat",
+					"name" : "rgb2gray%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 144.0, 201.0, 300.0, 70.0 ],
