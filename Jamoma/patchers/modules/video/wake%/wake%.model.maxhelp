@@ -266,7 +266,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 120.0, 449.0, 108.0, 19.0 ],
-					"text" : "s jmod.wake%.cmd"
+					"text" : "s wake%.module.cmd"
 				}
 
 			}
@@ -281,7 +281,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 373.0, 166.0, 107.0, 19.0 ],
-					"text" : "r jmod.wake%.cmd"
+					"text" : "r wake%.module.cmd"
 				}
 
 			}
@@ -295,7 +295,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 69.0, 254.0, 108.0, 19.0 ],
-					"text" : "s jmod.wake%.cmd"
+					"text" : "s wake%.module.cmd"
 				}
 
 			}

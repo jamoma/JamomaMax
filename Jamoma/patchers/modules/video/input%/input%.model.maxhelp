@@ -232,7 +232,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 51.0, 439.0, 107.0, 19.0 ],
-					"text" : "s jmod.input%.cmd"
+					"text" : "s input%.module.cmd"
 				}
 
 			}
@@ -246,7 +246,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 254.0, 116.0, 107.0, 19.0 ],
-					"text" : "r jmod.input%.cmd"
+					"text" : "r input%.module.cmd"
 				}
 
 			}
@@ -260,7 +260,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 263.0, 107.0, 19.0 ],
-					"text" : "s jmod.input%.cmd"
+					"text" : "s input%.module.cmd"
 				}
 
 			}

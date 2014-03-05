@@ -35,7 +35,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.avg4%", "@description", "Average 4 pixels of input for each pixel of output" ],
+					"args" : [ "@name", "avg4%.module", "@description", "Average 4 pixels of input for each pixel of output" ],
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
@@ -68,7 +68,7 @@
 					"id" : "obj-3",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -122,7 +122,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 134.0, 342.0, 106.0, 19.0 ],
-					"text" : "s jmod.avg4%.cmd"
+					"text" : "s avg4%.module.cmd"
 				}
 
 			}
@@ -136,7 +136,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 317.0, 183.0, 105.0, 19.0 ],
-					"text" : "r jmod.avg4%.cmd"
+					"text" : "r avg4%.module.cmd"
 				}
 
 			}
@@ -150,7 +150,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 13.0, 235.0, 106.0, 19.0 ],
-					"text" : "s jmod.avg4%.cmd"
+					"text" : "s avg4%.module.cmd"
 				}
 
 			}
@@ -199,7 +199,7 @@
 					"id" : "obj-16",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.avg4%.maxpat",
+					"name" : "avg4%.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],

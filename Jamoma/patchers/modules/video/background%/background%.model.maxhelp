@@ -39,7 +39,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 71.0, 419.0, 106.0, 17.0 ],
-					"text" : "jmod.chromakey%"
+					"text" : "chromakey%.module"
 				}
 
 			}
@@ -75,7 +75,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.background%", "@description", "Background video substraction" ],
+					"args" : [ "@name", "background%.module", "@description", "Background video substraction" ],
 					"bgmode" : 1,
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",
@@ -153,7 +153,7 @@
 					"id" : "obj-5",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -208,13 +208,13 @@
 					"id" : "obj-12",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.background%.maxpat",
+					"name" : "background%.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 243.0, 204.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"varname" : "jmod.background%"
+					"varname" : "background%.module"
 				}
 
 			}

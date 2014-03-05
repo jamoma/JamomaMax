@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.plur%", "@description", "Video feedback/washout effect" ],
+					"args" : [ "@name", "plur%.module", "@description", "Video feedback/washout effect" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -62,7 +62,7 @@
 					"id" : "obj-6",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 322.0, 104.0, 300.0, 70.0 ],
@@ -82,7 +82,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 322.0, 185.0, 101.0, 19.0 ],
-					"text" : "r jmod.plur%.cmd"
+					"text" : "r plur%.module.cmd"
 				}
 
 			}
@@ -96,7 +96,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 73.0, 251.0, 102.0, 19.0 ],
-					"text" : "s jmod.plur%.cmd"
+					"text" : "s plur%.module.cmd"
 				}
 
 			}
@@ -142,7 +142,7 @@
 					"id" : "obj-21",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.plur%.maxpat",
+					"name" : "plur%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 322.0, 205.0, 300.0, 70.0 ],

@@ -2607,7 +2607,7 @@
             "default_fontsize": 10.0,
             "fontname": "Verdana"
           },
-          "text": "p more_jmod.box%_features",
+          "text": "p more_box%.module_features",
           "varname": "inspector"
         }
       },

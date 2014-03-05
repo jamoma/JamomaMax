@@ -46,7 +46,7 @@
 				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.brcosa%.maxpat",
+					"name" : "brcosa%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 31.0, 188.0, 300.0, 70.0 ],
@@ -82,7 +82,7 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 31.0, 108.0, 300.0, 70.0 ],
@@ -92,7 +92,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.television%", "@description", "'Bad TV' effect" ],
+					"args" : [ "@name", "television%.module", "@description", "'Bad TV' effect" ],
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
@@ -108,7 +108,7 @@
 					"id" : "obj-8",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.television%.maxpat",
+					"name" : "television%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 31.0, 269.0, 300.0, 70.0 ],

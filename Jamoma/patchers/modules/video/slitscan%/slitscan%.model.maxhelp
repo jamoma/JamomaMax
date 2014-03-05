@@ -642,7 +642,7 @@
 					"args" : [  ],
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.blur%.maxpat",
+					"name" : "blur%.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -670,7 +670,7 @@
 					"args" : [  ],
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.slitscan%.maxpat",
+					"name" : "slitscan%.module.maxpat",
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -709,7 +709,7 @@
 					"args" : [  ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -720,7 +720,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.slitscan%", "@description", "Slit-scanning effect based on xray.jit.timecube" ],
+					"args" : [ "@name", "slitscan%.module", "@description", "Slit-scanning effect based on xray.jit.timecube" ],
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",

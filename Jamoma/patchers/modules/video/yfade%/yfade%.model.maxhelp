@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.yfade%", "@description", "Crossfade (Pan) a source to two outputs" ],
+					"args" : [ "@name", "yfade%.module", "@description", "Crossfade (Pan) a source to two outputs" ],
 					"bgmode" : 1,
 					"id" : "obj-9",
 					"maxclass" : "bpatcher",
@@ -111,7 +111,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 78.0, 362.0, 94.0, 19.0 ],
-					"text" : "s jmod.op%.cmd"
+					"text" : "s op%.module.cmd"
 				}
 
 			}
@@ -172,7 +172,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 324.5, 158.0, 93.0, 19.0 ],
-					"text" : "r jmod.op%.cmd"
+					"text" : "r op%.module.cmd"
 				}
 
 			}
@@ -186,7 +186,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 59.0, 234.0, 94.0, 19.0 ],
-					"text" : "s jmod.op%.cmd"
+					"text" : "s op%.module.cmd"
 				}
 
 			}

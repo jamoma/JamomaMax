@@ -17,7 +17,7 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.blur%", "@description", "Video blur effect" ],
+					"args" : [ "@name", "blur%.module", "@description", "Video blur effect" ],
 					"bgmode" : 1,
 					"id" : "obj-15",
 					"maxclass" : "bpatcher",
@@ -70,7 +70,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 115.0, 394.0, 76.0, 17.0 ],
-					"text" : "jmod.wake%"
+					"text" : "wake%.module"
 				}
 
 			}
@@ -113,7 +113,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 31.0, 394.0, 80.0, 17.0 ],
-					"text" : "jmod.mblur%"
+					"text" : "mblur%.module"
 				}
 
 			}
@@ -138,7 +138,7 @@
 					"id" : "obj-8",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -157,7 +157,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 26.0, 325.0, 103.0, 19.0 ],
-					"text" : "s jmod.blur%.cmd"
+					"text" : "s blur%.module.cmd"
 				}
 
 			}
@@ -171,7 +171,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 296.0, 169.0, 103.0, 19.0 ],
-					"text" : "r jmod.blur%.cmd"
+					"text" : "r blur%.module.cmd"
 				}
 
 			}
@@ -185,7 +185,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 17.0, 237.0, 103.0, 19.0 ],
-					"text" : "s jmod.blur%.cmd"
+					"text" : "s blur%.module.cmd"
 				}
 
 			}
@@ -324,7 +324,7 @@
 					"id" : "obj-22",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.blur%.maxpat",
+					"name" : "blur%.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
