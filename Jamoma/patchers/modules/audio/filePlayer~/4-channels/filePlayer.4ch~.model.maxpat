@@ -90,8 +90,8 @@
 					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 36.833336, 254.5, 189.999969, 20.0 ],
-					"text" : "j.pack≈ 4"
+					"patching_rect" : [ 35.833336, 254.5, 190.999969, 20.0 ],
+					"text" : "j.pack= 4"
 				}
 
 			}
@@ -117,7 +117,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.833336, 303.5, 25.0, 25.0 ]
+					"patching_rect" : [ 35.833336, 303.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -367,6 +367,46 @@
 					"source" : [ "obj-97", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "filePlayer.algorithm.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~/shared",
+				"patcherrelativepath" : "../shared",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.pack=.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

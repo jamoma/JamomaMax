@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 150.0, 496.0, 881.0, 388.0 ],
+		"rect" : [ 157.0, 320.0, 888.0, 331.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -104,7 +104,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -383,7 +383,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -655,7 +655,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1006,7 +1006,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 14.5, 330.0, 505.0, 19.0 ],
+					"patching_rect" : [ 522.0, 243.0, 232.0, 19.0 ],
 					"text" : "j.model @description \"Read QT movie film.\""
 				}
 
@@ -1019,7 +1019,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 14.5, 301.0, 25.0, 25.0 ]
+					"patching_rect" : [ 522.0, 214.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -1116,7 +1116,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.5, 359.0, 25.0, 25.0 ]
+					"patching_rect" : [ 522.0, 272.0, 25.0, 25.0 ]
 				}
 
 			}

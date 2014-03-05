@@ -4,11 +4,12 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 810.0, 235.0, 718.0, 574.0 ],
+		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -34,7 +35,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 162.0, 176.0, 25.0, 25.0 ]
+					"patching_rect" : [ 208.0, 176.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -46,7 +47,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 162.0, 121.0, 25.0, 25.0 ]
+					"patching_rect" : [ 208.0, 121.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -74,7 +75,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 6.0, 151.0, 175.0, 19.0 ],
+					"patching_rect" : [ 6.0, 151.0, 220.0, 19.0 ],
 					"text" : "moviePlayer%.model #1"
 				}
 
@@ -138,64 +139,6 @@
 					"source" : [ "obj-6", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "moviePlayer%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/moviePlayer%",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "moviePlayer%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/moviePlayer%",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/list2parameter",
-				"patcherrelativepath" : "../../../components/list2parameter",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

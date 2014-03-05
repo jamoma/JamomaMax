@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 405.0, 171.0, 748.0, 463.0 ],
+		"rect" : [ 37.0, 65.0, 748.0, 463.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 285.0, 216.0, 79.0, 18.0 ],
+					"patching_rect" : [ 172.0, 129.0, 79.0, 18.0 ],
 					"text" : "clickjump $1"
 				}
 
@@ -50,7 +50,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 285.0, 186.0, 20.0, 20.0 ],
+					"patching_rect" : [ 172.0, 99.0, 20.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 67.0, 2.0, 16.0, 16.0 ]
 				}
@@ -65,7 +65,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 285.0, 250.0, 160.0, 20.0 ],
+					"patching_rect" : [ 172.0, 163.0, 160.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 4.0, 26.0, 81.0, 34.0 ],
 					"text" : "xfade",
@@ -83,7 +83,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 285.0, 273.0, 82.0, 31.0 ],
+					"patching_rect" : [ 172.0, 186.0, 82.0, 31.0 ],
 					"text" : "j.remote xfade",
 					"varname" : "xfade[1]"
 				}
@@ -98,8 +98,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 16.0, 143.0, 281.0, 19.0 ],
-					"text" : "j.view #1",
+					"patching_rect" : [ 16.0, 143.0, 40.0, 19.0 ],
+					"text" : "j.view",
 					"varname" : "j.model"
 				}
 
@@ -160,7 +160,7 @@
 					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 294.5, 306.0, 270.0, 306.0, 270.0, 246.0, 294.5, 246.0 ],
+					"midpoints" : [ 181.5, 219.0, 157.0, 219.0, 157.0, 159.0, 181.5, 159.0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 

@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -74,7 +74,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
+					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 17.0, 128.654083, 121.0, 20.0 ],
 					"text" : "fluidsynth~.model #1"
 				}
@@ -180,10 +180,6 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{

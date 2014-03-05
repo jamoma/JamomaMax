@@ -3,7 +3,7 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
+			"minor" : 1,
 			"revision" : 6,
 			"architecture" : "x86"
 		}
@@ -82,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"orientation" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 335.0, 49.0, 80.0, 4.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 135.0, 5.0, 80.0, 4.0 ]
@@ -172,16 +172,6 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 155.166672, 138.0, 70.5, 138.0, 70.5, 17.0, 94.5, 17.0 ],
-					"source" : [ "obj-12", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
 					"midpoints" : [ 94.5, 123.0, 76.5, 123.0, 76.5, 26.0, 94.5, 26.0 ],
 					"source" : [ "obj-12", 0 ]
 				}
@@ -221,10 +211,6 @@
 			}
 , 			{
 				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{

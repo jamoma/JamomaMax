@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -41,7 +41,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -798,7 +798,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 18.0, 182.0, 183.0, 19.0 ],
+					"patching_rect" : [ 18.0, 182.0, 40.0, 19.0 ],
 					"text" : "j.view",
 					"varname" : "j.model"
 				}
@@ -852,7 +852,7 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/wake%_view"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -1027,7 +1027,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.pwindow.mouse.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/pwindow.mouse",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/pwindow.mouse",
 				"patcherrelativepath" : "../../../components/pwindow.mouse",
 				"type" : "JSON",
 				"implicit" : 1

@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 161.0, 137.0, 1010.0, 824.0 ],
+		"rect" : [ 0.0, 44.0, 830.0, 689.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -34,9 +34,9 @@
 					"id" : "obj-14",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 90.0, 652.0, 43.0, 20.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 90.0, 576.0, 43.0, 20.0 ],
 					"text" : "j.out 2"
 				}
 
@@ -48,9 +48,9 @@
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 652.0, 43.0, 20.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 25.0, 576.0, 43.0, 20.0 ],
 					"text" : "j.out 1"
 				}
 
@@ -62,7 +62,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 243.0, 692.0, 25.0, 25.0 ]
+					"patching_rect" : [ 243.0, 616.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -74,9 +74,9 @@
 					"linecount" : 5,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 243.0, 576.0, 116.0, 74.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 243.0, 500.0, 116.0, 74.0 ],
 					"text" : "j.model @description \"Spectrogram display of input audio.\""
 				}
 
@@ -194,9 +194,9 @@
 									"id" : "obj-1029",
 									"linecount" : 10,
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 228.267426, 59.0, 139.0, 141.0 ],
 									"text" : "j.parameter colors @type decimalArray @range/bounds 0. 1. @range/clipmode none @ramp/drive none @dataspace color @dataspace/unit rgb @description \"Color adjustments to spectrogram\"",
 									"varname" : "threshold[2]"
@@ -210,9 +210,9 @@
 									"id" : "obj-1023",
 									"linecount" : 4,
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 56.0, 59.0, 142.0, 60.0 ],
 									"text" : "j.parameter scaling @type decimal @description \"Scaling of the luminosity\"",
 									"varname" : "threshold[4]"
@@ -568,7 +568,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 90.0, 520.0, 124.0, 20.0 ],
+					"patching_rect" : [ 90.0, 444.0, 124.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -630,9 +630,9 @@
 									"id" : "obj-1020",
 									"linecount" : 6,
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 80.0, 101.0, 114.0, 87.0 ],
 									"text" : "j.message save @type none @description \"Saves an image file of the motiongram.\"",
 									"varname" : "jmod.parameter.mxb[2]"
@@ -731,7 +731,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 90.0, 609.0, 92.0, 20.0 ],
+					"patching_rect" : [ 90.0, 533.0, 92.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -821,9 +821,9 @@
 									"id" : "obj-1037",
 									"linecount" : 4,
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 226.0, 58.0, 156.0, 60.0 ],
 									"text" : "j.parameter metro/speed @type decimal @description \"Speed of metro\"",
 									"varname" : "threshold[3]"
@@ -837,9 +837,9 @@
 									"id" : "obj-1005",
 									"linecount" : 4,
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 76.0, 58.0, 138.0, 60.0 ],
 									"text" : "j.parameter metro/on @type boolean @description \"Turn metro on\"",
 									"varname" : "noise[1]"
@@ -867,9 +867,9 @@
 									"id" : "obj-1024",
 									"linecount" : 4,
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 394.0, 58.0, 116.0, 60.0 ],
 									"text" : "j.message clear @type none @description \"Clears the image.\"",
 									"varname" : "jmod.parameter.mxb[1]"
@@ -1058,7 +1058,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 25.0, 482.0, 84.0, 20.0 ],
+					"patching_rect" : [ 25.0, 406.0, 84.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1148,9 +1148,9 @@
 									"id" : "obj-1040",
 									"linecount" : 7,
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 175.0, 135.5, 134.0, 100.0 ],
 									"text" : "j.parameter color @type boolean @description \"Decide whether spectrogram should be in greyscale (0) or color (1) (default = 0)\"",
 									"varname" : "noise[3]"
@@ -1283,7 +1283,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 90.0, 548.0, 116.0, 20.0 ],
+					"patching_rect" : [ 90.0, 472.0, 116.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1345,9 +1345,9 @@
 									"id" : "obj-1043",
 									"linecount" : 7,
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 55.0, 72.0, 127.0, 100.0 ],
 									"text" : "j.parameter inverse @type boolean @description \"Decide whether spectrogram should be black on white (0) or white on black (1) (default = 0)\"",
 									"varname" : "noise[5]"
@@ -1494,7 +1494,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 90.0, 576.0, 110.0, 20.0 ],
+					"patching_rect" : [ 90.0, 500.0, 110.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1633,7 +1633,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 90.0, 692.0, 23.0, 23.0 ]
+					"patching_rect" : [ 90.0, 616.0, 23.0, 23.0 ]
 				}
 
 			}
@@ -1644,7 +1644,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 25.0, 692.0, 23.0, 23.0 ]
+					"patching_rect" : [ 25.0, 616.0, 23.0, 23.0 ]
 				}
 
 			}
@@ -1656,7 +1656,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 243.0, 421.0, 23.0, 23.0 ]
+					"patching_rect" : [ 243.0, 444.0, 23.0, 23.0 ]
 				}
 
 			}
@@ -1667,9 +1667,9 @@
 					"id" : "obj-1051",
 					"linecount" : 4,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 512.0, 20.0, 134.0, 60.0 ],
 					"text" : "j.parameter speed @type integer @description \"Drawing speed of spectrogram\"",
 					"varname" : "threshold[5]"
@@ -1683,9 +1683,9 @@
 					"id" : "obj-1026",
 					"linecount" : 9,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 323.0, 22.0, 137.0, 127.0 ],
 					"text" : "j.parameter dimensions/height @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
 					"varname" : "dimensions/height"
@@ -1699,9 +1699,9 @@
 					"id" : "obj-1028",
 					"linecount" : 9,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 671.0, 20.0, 137.0, 127.0 ],
 					"text" : "j.parameter dimensions/width @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
 					"varname" : "dimensions/width"
@@ -1715,9 +1715,9 @@
 					"id" : "obj-1007",
 					"linecount" : 3,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 170.0, 22.0, 140.0, 47.0 ],
 					"text" : "j.parameter threshold @type decimal @description Threshold.",
 					"varname" : "threshold[1]"
@@ -1730,9 +1730,9 @@
 					"fontsize" : 12.0,
 					"id" : "obj-1042",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 25.0, 66.0, 66.0, 20.0 ],
 					"text" : "j.in~ 1"
 				}
@@ -2040,7 +2040,27 @@
 
 			}
  ],
-		"dependency_cache" : [  ]
+		"dependency_cache" : [ 			{
+				"name" : "j.in~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+ ]
 	}
 
 }

@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 574.0, 146.0, 668.0, 397.0 ],
+		"rect" : [ 673.0, 67.0, 656.0, 367.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -35,8 +35,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 314.0, 50.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 338.0, 107.0, 0.0, 0.0 ]
+					"patching_rect" : [ 227.0, 67.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -49,7 +48,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 264.0, 87.0, 32.5, 19.0 ],
+					"patching_rect" : [ 177.0, 104.0, 32.5, 19.0 ],
 					"text" : "j.in"
 				}
 
@@ -62,7 +61,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 264.0, 50.0, 25.0, 25.0 ]
+					"patching_rect" : [ 177.0, 67.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -75,7 +74,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 394.0, 243.0, 225.0, 19.0 ],
+					"patching_rect" : [ 311.0, 188.0, 225.0, 19.0 ],
 					"text" : "j.oscroute /genframe /direct /op_value"
 				}
 
@@ -88,8 +87,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 18.0, 270.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 35.0, 323.0, 0.0, 0.0 ]
+					"patching_rect" : [ 276.0, 206.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -102,7 +100,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 18.0, 312.0, 323.0, 19.0 ],
+					"patching_rect" : [ 276.0, 248.0, 323.0, 19.0 ],
 					"text" : "j.model @description \"Crossfade between two video sources.\"",
 					"varname" : "xfade[2]"
 				}
@@ -115,8 +113,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 126.0, 270.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 207.0, 264.0, 0.0, 0.0 ]
+					"patching_rect" : [ 39.0, 287.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -129,7 +126,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 126.0, 118.0, 82.0, 19.0 ],
+					"patching_rect" : [ 39.0, 135.0, 82.0, 19.0 ],
 					"text" : "prepend xfade"
 				}
 
@@ -149,7 +146,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -521,7 +518,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 214.0, 118.0, 119.0, 21.0 ],
+					"patching_rect" : [ 127.0, 135.0, 119.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -548,7 +545,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 151.0, 273.0, 87.0, 19.0 ],
+					"patching_rect" : [ 64.0, 290.0, 87.0, 19.0 ],
 					"text" : "VIDEO OUTPUT"
 				}
 
@@ -560,7 +557,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 18.0, 351.0, 25.0, 25.0 ]
+					"patching_rect" : [ 276.0, 287.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -573,7 +570,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 126.0, 163.0, 157.0, 19.0 ],
+					"patching_rect" : [ 39.0, 180.0, 157.0, 19.0 ],
 					"text" : "jit.xfade"
 				}
 
@@ -587,7 +584,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 126.0, 236.0, 53.0, 19.0 ],
+					"patching_rect" : [ 39.0, 253.0, 53.0, 19.0 ],
 					"text" : "j.out"
 				}
 
@@ -601,7 +598,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 314.0, 87.0, 100.0, 19.0 ],
+					"patching_rect" : [ 227.0, 104.0, 100.0, 19.0 ],
 					"text" : "j.in 2"
 				}
 
@@ -617,7 +614,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 214.0, 13.0, 430.0, 31.0 ],
+					"patching_rect" : [ 127.0, 30.0, 430.0, 31.0 ],
 					"text" : "j.parameter xfade @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 1. @range/clipmode both @description \"Crossfade value\"",
 					"varname" : "xfade[1]"
 				}
@@ -629,7 +626,7 @@
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 135.5, 155.0, 135.5, 155.0 ],
+					"midpoints" : [ 48.5, 172.0, 48.5, 172.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -675,7 +672,7 @@
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 223.5, 71.0, 223.5, 71.0 ],
+					"midpoints" : [ 136.5, 88.0, 136.5, 88.0 ],
 					"source" : [ "obj-1012", 0 ]
 				}
 
@@ -739,7 +736,7 @@
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 223.5, 149.0, 135.5, 149.0 ],
+					"midpoints" : [ 136.5, 166.0, 48.5, 166.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -749,7 +746,7 @@
 					"destination" : [ "obj-1001", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 323.5, 193.0, 135.5, 193.0 ],
+					"midpoints" : [ 236.5, 210.0, 48.5, 210.0 ],
 					"source" : [ "obj-2", 2 ]
 				}
 

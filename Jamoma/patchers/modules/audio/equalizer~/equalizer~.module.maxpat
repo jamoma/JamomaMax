@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -63,25 +63,12 @@
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-5",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 203.0, 175.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
 					"id" : "obj-4",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 114.5, 175.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 116.0, 204.0, 0.0, 0.0 ]
+					"patching_rect" : [ 114.5, 175.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -103,9 +90,9 @@
 					"fontsize" : 12.0,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
+					"numinlets" : 2,
 					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
+					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 26.0, 208.0, 196.0, 20.0 ],
 					"text" : "equalizer~.model #1"
 				}
@@ -172,15 +159,6 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 2 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "equalizer~.view.maxpat",
@@ -223,19 +201,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.meter~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -248,10 +218,6 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{

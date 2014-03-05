@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 144.0, 459.0, 861.0, 480.0 ],
+		"rect" : [ 55.0, 289.0, 887.0, 422.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -49,7 +49,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 342.0, 25.0, 25.0 ]
+					"patching_rect" : [ 404.0, 290.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -60,7 +60,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 396.0, 25.0, 25.0 ]
+					"patching_rect" : [ 404.0, 344.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -73,7 +73,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 21.0, 371.0, 413.0, 19.0 ],
+					"patching_rect" : [ 404.0, 319.0, 413.0, 19.0 ],
 					"text" : "j.model @description \"Video feedback with convolution for trippy effects\""
 				}
 
@@ -519,6 +519,23 @@
 					"source" : [ "obj-6", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
