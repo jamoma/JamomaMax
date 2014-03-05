@@ -929,6 +929,8 @@ void jamoma_callback_return_value(TTPtr baton, TTValue& v)
 }
 
 /** Return the value to a j. external as msg, argc, argv */
+// TODO #556 : merge this function into jamoma_callback_return_value
+// TODO : why don't we pass a #TTDictionary into the baton
 void jamoma_callback_return_value_typed(TTPtr baton, TTValue& v)
 {
 	TTValuePtr	b;
@@ -940,13 +942,13 @@ void jamoma_callback_return_value_typed(TTPtr baton, TTValue& v)
     method      p_method = NULL;
 	TTBoolean	shifted = false;
 	
-	// unpack baton (a t_object* and the name of the method to call (default : jps_return_value))
+	// unpack baton (a t_object* and the name of the method to call (default : "return_value"))
 	b = (TTValuePtr)baton;
     
-    // get object
+    // get Max wrapper object that was passed in
 	x = ObjectPtr((TTPtr)b[0]);
 	
-    // get method
+    // get name of the method to call
 	if (b->size() >= 2) {
         
 		s_method = SymbolPtr((TTPtr)(*b)[1]);
@@ -958,6 +960,7 @@ void jamoma_callback_return_value_typed(TTPtr baton, TTValue& v)
         if (b->size() == 3)
             deferlow = (*b)[2];
     }
+    // by default we call "return_value" method
 	else
 		s_method = jps_return_value;
 	
