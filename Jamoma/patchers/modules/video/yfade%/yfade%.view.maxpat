@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 531.0, 143.0, 1036.0, 491.0 ],
+		"rect" : [ 141.0, 213.0, 337.0, 246.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 10.0, 123.0, 79.0, 18.0 ],
+					"patching_rect" : [ 99.0, 119.0, 79.0, 18.0 ],
 					"text" : "clickjump $1"
 				}
 
@@ -50,7 +50,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 12.0, 97.0, 20.0, 20.0 ],
+					"patching_rect" : [ 101.0, 93.0, 20.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 68.0, 1.0, 16.0, 16.0 ]
 				}
@@ -64,7 +64,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 10.0, 151.0, 161.0, 52.0 ],
+					"patching_rect" : [ 98.0, 146.0, 160.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 6.0, 26.0, 81.0, 34.0 ],
 					"text" : "yfade",
@@ -90,28 +90,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-10",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 224.0, 134.0, 81.0, 31.0 ],
+					"patching_rect" : [ 98.0, 180.0, 85.0, 19.0 ],
 					"text" : "j.remote yfade",
 					"varname" : "yfade"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-19",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 346.0, 88.0, 88.0, 19.0 ],
-					"text" : "command input"
 				}
 
 			}
@@ -124,7 +109,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 322.0, 134.0, 40.0, 19.0 ],
+					"patching_rect" : [ 4.0, 132.0, 40.0, 19.0 ],
 					"text" : "j.view",
 					"varname" : "j.model"
 				}
@@ -137,7 +122,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 322.0, 196.0, 25.0, 25.0 ]
+					"patching_rect" : [ 4.0, 194.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -149,7 +134,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 322.0, 88.0, 25.0, 25.0 ]
+					"patching_rect" : [ 4.0, 86.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -163,7 +148,7 @@
 					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
-					"text" : "/yfa..iew"
+					"text" : "/yfa..w.1"
 				}
 
 			}
