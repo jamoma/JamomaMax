@@ -44,7 +44,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "similarity%.module", "@description", "Create a similarity matrix from a video stream" ],
+					"args" : [ "@name", "similarity%", "@description", "Create a similarity matrix from a video stream" ],
 					"bgmode" : 1,
 					"id" : "obj-9",
 					"maxclass" : "bpatcher",

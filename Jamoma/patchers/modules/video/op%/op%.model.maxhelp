@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "op%.module", "@description", "Mathematical operations on one or two matrices" ],
+					"args" : [ "@name", "op%", "@description", "Mathematical operations on one or two matrices" ],
 					"bgmode" : 1,
 					"id" : "obj-6",
 					"maxclass" : "bpatcher",

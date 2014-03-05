@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "orsize%.module", "@description", "Change orientation and size of video" ],
+					"args" : [ "@name", "orsize%", "@description", "Change orientation and size of video" ],
 					"bgmode" : 1,
 					"id" : "obj-27",
 					"maxclass" : "bpatcher",

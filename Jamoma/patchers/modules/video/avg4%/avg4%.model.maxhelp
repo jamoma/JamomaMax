@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 589.0, 56.0, 668.0, 602.0 ],
+		"rect" : [ 223.0, 57.0, 668.0, 602.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -47,7 +47,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "avg4%.module", "@description", "Average 4 pixels of input for each pixel of output" ],
+					"args" : [ "@name", "avg4%", "@description", "Average 4 pixels of input for each pixel of output" ],
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
@@ -70,7 +70,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 317.0, 89.0, 61.0, 17.0 ],
-					"text" : "/genframe"
+					"text" : "genframe"
 				}
 
 			}
@@ -134,7 +134,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 134.0, 342.0, 118.0, 19.0 ],
+					"patching_rect" : [ 89.0, 347.0, 118.0, 19.0 ],
 					"text" : "s avg4%.module.cmd"
 				}
 
@@ -229,7 +229,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 89.0, 320.0, 61.0, 17.0 ],
-					"text" : "/mode $1"
+					"text" : "mode $1"
 				}
 
 			}
@@ -243,7 +243,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 89.0, 296.0, 44.0, 17.0 ],
-					"text" : "/y $1"
+					"text" : "y $1"
 				}
 
 			}
@@ -257,7 +257,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 89.0, 271.0, 43.0, 17.0 ],
-					"text" : "/x $1"
+					"text" : "x $1"
 				}
 
 			}

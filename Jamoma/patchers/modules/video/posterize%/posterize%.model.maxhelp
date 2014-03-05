@@ -65,7 +65,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "posterize%.module", "@description", "Posterize effect filter" ],
+					"args" : [ "@name", "posterize%", "@description", "Posterize effect filter" ],
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",

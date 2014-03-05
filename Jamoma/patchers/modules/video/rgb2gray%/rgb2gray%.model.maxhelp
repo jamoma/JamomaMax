@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "rgb2gray%.module", "@description", "Convert rgb video to grayscale" ],
+					"args" : [ "@name", "rgb2gray%", "@description", "Convert rgb video to grayscale" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",

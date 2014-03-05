@@ -33,7 +33,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "keyscreen%.module", "@description", "Choke chromakey 3 sources" ],
+					"args" : [ "@name", "keyscreen%", "@description", "Choke chromakey 3 sources" ],
 					"bgmode" : 1,
 					"id" : "obj-9",
 					"maxclass" : "bpatcher",

@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "emboss%.module", "@description", "Cheesy embossing effect" ],
+					"args" : [ "@name", "emboss%", "@description", "Cheesy embossing effect" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",

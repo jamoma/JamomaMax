@@ -87,7 +87,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "background%.module", "@description", "Background video substraction" ],
+					"args" : [ "@name", "background%", "@description", "Background video substraction" ],
 					"bgmode" : 1,
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",

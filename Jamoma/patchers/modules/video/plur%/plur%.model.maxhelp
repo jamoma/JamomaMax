@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "plur%.module", "@description", "Video feedback/washout effect" ],
+					"args" : [ "@name", "plur%", "@description", "Video feedback/washout effect" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",

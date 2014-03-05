@@ -664,7 +664,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "motiongram%.module", "@description", "Create motiongrams from video stream" ],
+					"args" : [ "@name", "motiongram%", "@description", "Create motiongrams from video stream" ],
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",

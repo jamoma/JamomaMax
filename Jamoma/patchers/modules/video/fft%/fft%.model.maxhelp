@@ -72,7 +72,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "fft%.module", "@description", "Perform FFT on single plane image." ],
+					"args" : [ "@name", "fft%", "@description", "Perform FFT on single plane image." ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",

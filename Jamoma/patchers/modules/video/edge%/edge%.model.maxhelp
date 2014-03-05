@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "edge%.module", "@description", "Edge detection" ],
+					"args" : [ "@name", "edge%", "@description", "Edge detection" ],
 					"bgmode" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",

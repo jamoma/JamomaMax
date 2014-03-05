@@ -720,7 +720,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "slitscan%.module", "@description", "Slit-scanning effect based on xray.jit.timecube" ],
+					"args" : [ "@name", "slitscan%", "@description", "Slit-scanning effect based on xray.jit.timecube" ],
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",

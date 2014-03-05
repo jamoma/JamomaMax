@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "chromakey%.module", "@description", "Choke chromakey 2 sources" ],
+					"args" : [ "@name", "chromakey%", "@description", "Choke chromakey 2 sources" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",

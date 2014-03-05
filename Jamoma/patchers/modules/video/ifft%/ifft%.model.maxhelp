@@ -64,7 +64,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "ifft%.module", "@description", "perform inverse FFT on matrix." ],
+					"args" : [ "@name", "ifft%", "@description", "perform inverse FFT on matrix." ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",

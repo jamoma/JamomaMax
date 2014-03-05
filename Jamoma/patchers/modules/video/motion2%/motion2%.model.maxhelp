@@ -44,7 +44,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "motion2%.module", "@description", "A simplified motion module" ],
+					"args" : [ "@name", "motion2%.module", "@description", "A simplified motion" ],
 					"bgmode" : 1,
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",

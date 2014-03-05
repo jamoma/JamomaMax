@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "yfade%.module", "@description", "Crossfade (Pan) a source to two outputs" ],
+					"args" : [ "@name", "yfade%", "@description", "Crossfade (Pan) a source to two outputs" ],
 					"bgmode" : 1,
 					"id" : "obj-9",
 					"maxclass" : "bpatcher",

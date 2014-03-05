@@ -17,7 +17,7 @@
 		"imprint" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "box%.module", "@description", "Add boxes around objects in the video" ],
+					"args" : [ "@name", "box%", "@description", "Add boxes around objects in the video" ],
 					"bgmode" : 1,
 					"id" : "obj-19",
 					"maxclass" : "bpatcher",

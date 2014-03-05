@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "mblur%.module", "@description", "Motion blur effect" ],
+					"args" : [ "@name", "mblur%", "@description", "Motion blur effect" ],
 					"bgmode" : 1,
 					"id" : "obj-13",
 					"maxclass" : "bpatcher",

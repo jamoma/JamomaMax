@@ -85,7 +85,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "input%.module", "@description", "Generic video input module" ],
+					"args" : [ "@name", "input%.module", "@description", "Generic video input" ],
 					"bgmode" : 1,
 					"id" : "obj-18",
 					"maxclass" : "bpatcher",

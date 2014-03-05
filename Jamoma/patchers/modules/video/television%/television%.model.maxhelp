@@ -92,7 +92,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "television%.module", "@description", "'Bad TV' effect" ],
+					"args" : [ "@name", "television%", "@description", "'Bad TV' effect" ],
 					"bgmode" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",

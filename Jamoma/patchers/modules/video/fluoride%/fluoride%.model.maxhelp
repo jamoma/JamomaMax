@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "fluoride%.module", "@description", "Neon glow effect" ],
+					"args" : [ "@name", "fluoride%", "@description", "Neon glow effect" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",

@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "foregroundMask%.module", "@description", "Create mask based on image foreground." ],
+					"args" : [ "@name", "foregroundMask%", "@description", "Create mask based on image foreground." ],
 					"bgmode" : 1,
 					"id" : "obj-15",
 					"maxclass" : "bpatcher",

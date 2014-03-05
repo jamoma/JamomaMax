@@ -44,7 +44,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "motion%.module", "@description", "Display a motion image" ],
+					"args" : [ "@name", "motion%", "@description", "Display a motion image" ],
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
