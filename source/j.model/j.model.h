@@ -15,6 +15,7 @@
 
 
 #include "TTModularClassWrapperMax.h"
+#include "jpatcher_api.h"
 #include "TTModelInfo.h"
 
 /** Data structure for storing extra data.
