@@ -54,7 +54,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 383.0, 73.0, 378.0, 25.0 ],
-					"text" : "j.multi.out~ is deprecated. Use j.pack≈ instead",
+					"text" : "j.multi.out~ is deprecated. Use j.pack= instead",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -478,7 +478,7 @@
 					"numoutlets" : 33,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 63.0, 156.0, 979.0, 20.0 ],
-					"text" : "j.unpack≈ 32"
+					"text" : "j.unpack= 32"
 				}
 
 			}
@@ -800,7 +800,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -450,6 +450,11 @@ void JAMOMA_EXPORT jamoma_patcher_share_node(ObjectPtr obj, TTNodePtr *patcherNo
  */
 TTErr JAMOMA_EXPORT jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass,  TTSymbol& returnedName);
 
+/** Get j.model or j.view of a patcher 
+ @param patcher
+ @param returnedModelOrView
+ */
+void JAMOMA_EXPORT jamoma_patcher_get_model_or_view(ObjectPtr patcher, ObjectPtr *returnedModelOrView);
 
 /** Get the "aClass.model" external in the patcher.
  @param patcher

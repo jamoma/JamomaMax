@@ -323,7 +323,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 350.0, 170.0, 136.0, 19.0 ],
-									"text" : "j.op≈ @operator abs",
+									"text" : "j.op= @operator abs",
 									"varname" : "abs"
 								}
 
@@ -478,7 +478,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 840.0, 190.0, 93.0, 29.0 ],
-																	"text" : "script connect abs 0 unpack≈ 0"
+																	"text" : "script connect abs 0 unpack= 0"
 																}
 
 															}
@@ -582,7 +582,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 500.0, 190.0, 119.0, 29.0 ],
-																	"text" : "script connect unpack≈ $1 catch $1"
+																	"text" : "script connect unpack= $1 catch $1"
 																}
 
 															}
@@ -922,7 +922,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 50.0, 130.0, 301.0, 53.0 ],
-																	"text" : "script newdefault unpack≈ 350 200 j.unpack≈ $1, script newdefault catch 350 230 jit.catch~ $1 @mode 3, script newdefault unpack 350 260 jit.unpack $1, script newdefault glue 350 360 jit.glue @rows $1"
+																	"text" : "script newdefault unpack= 350 200 j.unpack= $1, script newdefault catch 350 230 jit.catch~ $1 @mode 3, script newdefault unpack 350 260 jit.unpack $1, script newdefault glue 350 360 jit.glue @rows $1"
 																}
 
 															}
@@ -1167,7 +1167,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 50.0, 180.0, 128.0, 53.0 ],
-																	"text" : "script delete unpack≈, script delete catch, script delete unpack, script delete glue"
+																	"text" : "script delete unpack=, script delete catch, script delete unpack, script delete glue"
 																}
 
 															}
@@ -1569,8 +1569,8 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 350.0, 200.0, 100.0, 19.0 ],
-									"text" : "j.unpack≈ 2",
-									"varname" : "unpack≈"
+									"text" : "j.unpack= 2",
+									"varname" : "unpack="
 								}
 
 							}

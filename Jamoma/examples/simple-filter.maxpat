@@ -179,7 +179,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "j.gain≈",
+					"text" : "j.gain=",
 					"fontsize" : 10.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -193,7 +193,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "j.gain≈",
+					"text" : "j.gain=",
 					"fontsize" : 10.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -207,7 +207,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "j.noise≈",
+					"text" : "j.noise=",
 					"fontsize" : 10.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -221,7 +221,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "j.delay≈ @delayInSamples 1",
+					"text" : "j.delay= @delayInSamples 1",
 					"fontsize" : 10.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -235,7 +235,7 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "j.unpack≈",
+					"text" : "j.unpack=",
 					"fontsize" : 10.0,
 					"numinlets" : 1,
 					"numoutlets" : 3,

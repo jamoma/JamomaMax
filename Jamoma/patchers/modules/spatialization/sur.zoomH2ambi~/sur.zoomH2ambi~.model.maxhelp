@@ -1467,11 +1467,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.info≈.mxo",
+				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1487,11 +1487,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.gain≈.mxo",
+				"name" : "j.gain=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.limiter≈.mxo",
+				"name" : "j.limiter=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

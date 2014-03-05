@@ -154,15 +154,6 @@ void		model_init(TTPtr self);
  @param argc
  @param argv
  */
-void		model_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-
-/**
- @param self
- @param msg
- @param argc
- @param argv
- */
 void		model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);		// only in view patch
 
 

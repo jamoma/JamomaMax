@@ -743,7 +743,7 @@
 					"numoutlets" : 33,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 124.0625, 479.0, 659.0, 20.0 ],
-					"text" : "j.unpack≈ 32"
+					"text" : "j.unpack= 32"
 				}
 
 			}
@@ -1233,15 +1233,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.offset≈.mxo",
+				"name" : "j.offset=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

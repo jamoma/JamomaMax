@@ -113,7 +113,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.gain≈"/>
+		<seealso name="j.gain="/>
 		<seealso name="gain~"/>
 	</seealsolist>
 </c74object>

@@ -523,7 +523,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 422.0, 515.5, 94.0, 33.0 ],
-					"text" : "j.gain≈ @interpolated 1"
+					"text" : "j.gain= @interpolated 1"
 				}
 
 			}
@@ -538,7 +538,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 321.0, 515.5, 94.0, 33.0 ],
-					"text" : "j.gain≈ @interpolated 1"
+					"text" : "j.gain= @interpolated 1"
 				}
 
 			}
@@ -597,7 +597,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 218.0, 515.5, 94.0, 33.0 ],
-					"text" : "j.gain≈ @interpolated 1"
+					"text" : "j.gain= @interpolated 1"
 				}
 
 			}
@@ -1044,7 +1044,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.gain≈.mxo",
+				"name" : "j.gain=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

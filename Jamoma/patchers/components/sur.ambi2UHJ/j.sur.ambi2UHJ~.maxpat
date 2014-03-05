@@ -49,7 +49,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 157.0, 31.0, 93.0, 19.0 ],
-					"text" : "j.unpack≈ 3"
+					"text" : "j.unpack= 3"
 				}
 
 			}
