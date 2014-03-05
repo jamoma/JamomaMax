@@ -56,7 +56,7 @@
 					"args" : [ "#1" ],
 					"id" : "obj-5",
 					"maxclass" : "bpatcher",
-					"name" : "brcosa%.view.maxpat",
+					"name" : "chromakey%.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -76,7 +76,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 6.0, 129.0, 178.0, 19.0 ],
-					"text" : "brcosa%.model #1"
+					"text" : "chromakey%.model #1"
 				}
 
 			}
@@ -142,15 +142,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "brcosa%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/brcosa%",
+				"name" : "chromakey%.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/chromakey%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "brcosa%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/brcosa%",
+				"name" : "chromakey%.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/chromakey%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
