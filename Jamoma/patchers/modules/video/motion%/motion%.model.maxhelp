@@ -44,7 +44,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.motion%", "@description", "Display a motion image" ],
+					"args" : [ "@name", "motion%.module", "@description", "Display a motion image" ],
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
@@ -67,7 +67,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 809.0, 628.0, 69.0, 17.0 ],
-					"text" : "jmod.box%"
+					"text" : "box%.module"
 				}
 
 			}
@@ -95,7 +95,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 712.0, 628.0, 92.0, 17.0 ],
-					"text" : "jmod.motion2%"
+					"text" : "motion2%.module"
 				}
 
 			}
@@ -317,7 +317,7 @@
 					"id" : "obj-24",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 228.0, 97.0, 300.0, 70.0 ],
@@ -1209,7 +1209,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 70.0, 445.0, 119.0, 19.0 ],
-					"text" : "s jmod.motion%.cmd"
+					"text" : "s motion%.module.cmd"
 				}
 
 			}
@@ -1224,7 +1224,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 553.0, 76.0, 116.0, 19.0 ],
-					"text" : "r jmod.motion%.cmd"
+					"text" : "r motion%.module.cmd"
 				}
 
 			}
@@ -1238,7 +1238,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 11.0, 227.0, 117.0, 19.0 ],
-					"text" : "s jmod.motion%.cmd"
+					"text" : "s motion%.module.cmd"
 				}
 
 			}
@@ -1271,7 +1271,7 @@
 					"id" : "obj-57",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.motion%.maxpat",
+					"name" : "motion%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 553.0, 97.0, 300.0, 70.0 ],

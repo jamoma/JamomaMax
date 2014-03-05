@@ -64,7 +64,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 92.0, 184.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"varname" : "/jmod.edge%"
+					"varname" : "/edge%.module"
 				}
 
 			}

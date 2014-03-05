@@ -44,7 +44,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.motion2%", "@description", "A simplified motion module" ],
+					"args" : [ "@name", "motion2%.module", "@description", "A simplified motion module" ],
 					"bgmode" : 1,
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
@@ -296,7 +296,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 66.0, 469.0, 119.0, 19.0 ],
-					"text" : "s jmod.motion%.cmd"
+					"text" : "s motion%.module.cmd"
 				}
 
 			}
@@ -871,7 +871,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 935.0, 102.0, 200.0, 67.0 ],
-					"text" : "This module can be used instead of jmod.motion%. The main difference is that motion2% does not do any of the extra drawing (trails, edges, contraction box, etc.) in the image."
+					"text" : "This module can be used instead of motion%. The main difference is that motion2%.module does not do any of the extra drawing (trails, edges, contraction box, etc.) in the image."
 				}
 
 			}
@@ -885,7 +885,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 813.0, 494.0, 69.0, 17.0 ],
-					"text" : "jmod.box%"
+					"text" : "box%.module"
 				}
 
 			}
@@ -913,7 +913,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 725.0, 494.0, 85.0, 17.0 ],
-					"text" : "jmod.motion%"
+					"text" : "motion%.module"
 				}
 
 			}
@@ -1120,7 +1120,7 @@
 					"id" : "obj-2",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 243.0, 101.0, 300.0, 70.0 ],
@@ -1224,7 +1224,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 568.0, 76.0, 133.0, 19.0 ],
-					"text" : "r jmod.motion%.cmd"
+					"text" : "r motion%.module.cmd"
 				}
 
 			}
@@ -1238,7 +1238,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 8.0, 247.0, 117.0, 19.0 ],
-					"text" : "s jmod.motion%.cmd"
+					"text" : "s motion%.module.cmd"
 				}
 
 			}
@@ -1271,7 +1271,7 @@
 					"id" : "obj-33",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.motion2%.maxpat",
+					"name" : "motion2%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 568.0, 101.0, 300.0, 70.0 ],

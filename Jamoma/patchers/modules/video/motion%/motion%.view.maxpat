@@ -2848,7 +2848,7 @@
             "fontface": 0,
             "fontsize": 10.0
           },
-          "text": "p more_jmod.motion%_features",
+          "text": "p more_motion%.module_features",
           "varname": "inspector[1]"
         }
       },

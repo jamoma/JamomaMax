@@ -44,7 +44,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.alphablend%", "@description", "Alpha blending of two video layers" ],
+					"args" : [ "@name", "alphablend%.module", "@description", "Alpha blending of two video layers" ],
 					"bgmode" : 1,
 					"id" : "obj-15",
 					"maxclass" : "bpatcher",

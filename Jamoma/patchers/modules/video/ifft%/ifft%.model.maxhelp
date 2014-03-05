@@ -28,7 +28,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"patching_rect" : [ 90.0, 100.0, 188.0, 30.0 ],
-					"text" : "Open help patch for jmod.fft%"
+					"text" : "Open help patch for fft%.module"
 				}
 
 			}
@@ -43,7 +43,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 90.0, 145.0, 86.0, 17.0 ],
-					"text" : "help jmod.fft%"
+					"text" : "help fft%.module"
 				}
 
 			}
@@ -64,7 +64,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.ifft%", "@description", "perform inverse FFT on matrix." ],
+					"args" : [ "@name", "ifft%.module", "@description", "perform inverse FFT on matrix." ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
