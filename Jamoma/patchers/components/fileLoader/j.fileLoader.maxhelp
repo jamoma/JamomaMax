@@ -34,7 +34,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "j.fileLoader≈" ],
+					"jsarguments" : [ "j.fileLoader=" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,

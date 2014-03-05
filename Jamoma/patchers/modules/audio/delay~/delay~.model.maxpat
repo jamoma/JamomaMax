@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 47.0, 56.0, 1622.0, 901.0 ],
+		"rect" : [ 0.0, 44.0, 1157.0, 695.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -48,8 +48,8 @@
 					"id" : "obj-20",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 159.0, 535.0, 73.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
@@ -62,8 +62,8 @@
 					"id" : "obj-19",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 24.0, 535.0, 73.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
@@ -76,8 +76,8 @@
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 159.0, 65.0, 66.0, 20.0 ],
 					"text" : "j.in~ 2"
 				}
@@ -90,8 +90,8 @@
 					"id" : "obj-17",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 24.0, 65.0, 66.0, 20.0 ],
 					"text" : "j.in~ 1"
 				}
@@ -104,9 +104,9 @@
 					"id" : "obj-14",
 					"linecount" : 12,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 951.0, 22.0, 162.0, 167.0 ],
 					"text" : "j.parameter delay/maxSize @type integer @value/default 1000000 @ramp/drive none @repetitions/filter 1 @range/bounds 0 1000000 @range/clipmode low @dataspace time @dataspace/unit sample @priority 1 @description \"Maximum delay size in samples.\"",
 					"varname" : "delay/right[1]"
@@ -120,7 +120,7 @@
 					"id" : "obj-12",
 					"linecount" : 9,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
+					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 507.0, 22.0, 159.0, 127.0 ],
@@ -137,8 +137,8 @@
 					"linecount" : 9,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 671.0, 232.0, 159.0, 127.0 ],
 					"text" : "j.parameter delay/right @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for right channel.\"",
 					"varname" : "delay/right"
@@ -151,9 +151,9 @@
 					"fontsize" : 12.0,
 					"id" : "obj-16",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 507.0, 514.0, 296.0, 20.0 ],
 					"text" : "j.model @description \"Sample-accurate stereo delay.\"",
 					"varname" : "j.hub"
@@ -168,8 +168,8 @@
 					"linecount" : 12,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 507.0, 232.0, 150.0, 167.0 ],
 					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for left channel.\"",
 					"varname" : "delay/left"
@@ -502,7 +502,27 @@
 
 			}
  ],
-		"dependency_cache" : [  ]
+		"dependency_cache" : [ 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+ ]
 	}
 
 }

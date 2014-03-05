@@ -87,7 +87,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 161.0, 530.0, 130.0, 19.0 ],
-					"text" : "j.pack≈ 3"
+					"text" : "j.pack= 3"
 				}
 
 			}

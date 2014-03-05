@@ -40,7 +40,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 128.0, 169.0, 367.0, 25.0 ],
-					"text" : "j.multi.in~ is deprecated. Use j.pack≈ instead",
+					"text" : "j.multi.in~ is deprecated. Use j.pack= instead",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 

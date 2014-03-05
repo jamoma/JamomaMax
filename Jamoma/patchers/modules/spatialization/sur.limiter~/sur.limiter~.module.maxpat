@@ -166,7 +166,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.limiter≈.mxo",
+				"name" : "j.limiter=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

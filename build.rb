@@ -72,15 +72,26 @@ load "build.rb"
 `rm "#{glibdir}"/Jamoma/support/*-i386.ttdylib` if mac?
 `rm "#{glibdir}"/Jamoma/support/*-x86_64.ttdylib` if mac?
 
-`copy -r "#{glibdir}"/source/*/build/*.mxe "#{glibdir}"/Jamoma/externals/` if win?
+if win?
+    Dir.foreach("#{glibdir}\\source") do |item|
+        if (item.match(/.*\.mxe/)) 
+            puts "ITEM #{item}"
+            FileUtils.cp "#{glibdir}\\source\\#{item}\\build\\#{item}.mxe", "#{glibdir}\\Jamoma\\externals"
+        end
+    end
+end
 
 `mv "#{glibdir}"/Jamoma/externals/j.loader.mxo "#{glibdir}"/Jamoma/extensions/` if mac?
-`move "#{glibdir}"/Jamoma/externals/j.loader.mxe "#{glibdir}"/Jamoma/extensions/` if win?
+FileUtils.move("#{glibdir}\\Jamoma\\externals\\j.loader.mxe", "#{glibdir}\\Jamoma\\extensions") if win? && File.exists?("#{glibdir}\\Jamoma\\externals\\j.loader.mxe")
 
 # dlls needed at running on windows, should be in support folder ?
-`copy -r "#{glibdir}"/../../Core/Foundation/library/libxml2/win32/bin/libxml2.dll "#{glibdir}"/Jamoma/support` if win?
-`copy -r "#{glibdir}"/../../Core/Foundation/library/libiconv/bin/iconv.dll "#{glibdir}"/Jamoma/support` if win?
-`copy -r "#{glibdir}"/../../Core/DSP/library/portaudio/Debug/PortAudio.dll "#{glibdir}"/Jamoma/support` if win?
+begin
+    FileUtils.cp "#{glibdir}/../../Core/Foundation/library/libxml2/win32/bin/libxml2.dll", "#{glibdir}/Jamoma/support" if win?
+    FileUtils.cp "#{glibdir}/../../Core/Foundation/library/libiconv/bin/iconv.dll", "#{glibdir}/Jamoma/support" if win?
+    FileUtils.cp "#{glibdir}/../../Core/DSP/extensions/AudioEngine/portaudio/Debug/PortAudio.dll", "#{glibdir}/Jamoma/support" if win?
+rescue
+    puts "there were problems copying DLLs for dependencies (libxml, iconv, and/or portaudio)"
+end
 
 # Making sure that twin projects build on Mac
 if win?

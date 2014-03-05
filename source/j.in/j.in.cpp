@@ -21,7 +21,8 @@
 // This is used to store extra data
 typedef struct extra {
 	
-	TTSymbol instance;		///< Input instance symbol
+	TTSymbol    instance;		///< Input instance symbol
+    ObjectPtr   modelOrView;    ///< the j.model or j.view object of our patcher
 	
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
@@ -71,9 +72,6 @@ void		in_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, lon
 
 #else
 
-/** Method used to pass messages from the module outlet. */
-void		in_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
 /** bang handler for j.in 
  @param self		Pointer to this object.
  @see				in_int, in_float, in_list, WrappedInputClass_anything
@@ -103,7 +101,12 @@ void		in_float(TTPtr self, double value);
  */
 void		in_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-/** anything else handler for j.in 
+/** Method used to pass messages from the module outlet. */
+void		in_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+#endif
+
+/** anything else handler for j.in
  @param self		Pointer to this object.
  @param msg			The message sent to this object.
  @param argc		The number of arguments passed to the object.
@@ -111,7 +114,7 @@ void		in_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
  @see				in_bang, in_int, in_float, in_list
  */
 void		WrappedInputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-#endif
+
 
 #pragma mark -
 #pragma mark main
@@ -122,11 +125,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	spec->_wrap = &WrapTTInputClass;
 	spec->_new = &WrappedInputClass_new;
 	spec->_free = &WrappedInputClass_free;
-#ifndef JCOM_IN_TILDE
 	spec->_any = &WrappedInputClass_anything;
-#else
-    spec->_any = NULL;
-#endif
 
 #ifdef JCOM_IN_TILDE
 	return wrapTTModularClassAsMaxClass(kTTSym_InputAudio, "j.in~", NULL, spec);
@@ -179,6 +178,9 @@ void WrappedInputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	}
 	else
 		EXTRA->instance = kTTSymEmpty;
+    
+    // set no model or view by default
+    EXTRA->modelOrView = NULL;
 		
 	// Create Input Object and one outlet
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr));
@@ -310,15 +312,6 @@ void in_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		jamoma_input_send(anInput, msg, argc, argv);
 }
 
-void WrappedInputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputPtr	anInput = (TTInputPtr)x->wrappedObject;
-	
-	if (!anInput->mMute)
-		jamoma_input_send(anInput, msg, argc, argv);
-}
-
 void in_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -330,6 +323,28 @@ void in_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		outlet_anything(x->outlets[signal_out], msg, argc, argv);
 }
 #endif
+
+void WrappedInputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+	TTInputPtr	anInput = (TTInputPtr)x->wrappedObject;
+    
+    // route any message to the model
+    if (msg != _sym_nothing && msg != gensym("jit_matrix")) {
+        
+        if (!EXTRA->modelOrView) {
+            
+            // get model or view object
+            jamoma_patcher_get_model_or_view(x->patcherPtr, &EXTRA->modelOrView);
+        }
+        
+        object_method_typed(EXTRA->modelOrView, msg, argc, argv, NULL);
+        return;
+    }
+	
+	if (!anInput->mMute)
+		jamoma_input_send(anInput, msg, argc, argv);
+}
 
 #pragma mark -
 #pragma mark Methods relating to audio processing

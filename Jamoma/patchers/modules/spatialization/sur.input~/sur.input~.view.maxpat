@@ -3933,7 +3933,7 @@
             437.5,
             19.0
           ],
-          "text": "j.pack≈ 32",
+          "text": "j.pack= 32",
           "varname": "multi"
         }
       },
@@ -5271,7 +5271,7 @@
         "type": "iLaX"
       },
       {
-        "name": "j.pack≈.mxo",
+        "name": "j.pack=.mxo",
         "type": "iLaX"
       },
       {

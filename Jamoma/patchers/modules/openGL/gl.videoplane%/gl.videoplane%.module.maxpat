@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 4,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 938.0, 103.0, 640.0, 480.0 ],
+		"rect" : [ 208.0, 95.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -35,8 +35,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 155.0, 163.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 224.0, 234.0, 0.0, 0.0 ]
+					"patching_rect" : [ 29.0, 152.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -47,8 +46,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 155.0, 225.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 225.0, 302.0, 0.0, 0.0 ]
+					"patching_rect" : [ 29.0, 231.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -59,7 +57,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 225.0, 25.0, 25.0 ]
+					"patching_rect" : [ 155.0, 231.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -71,7 +69,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 29.0, 163.0, 25.0, 25.0 ]
+					"patching_rect" : [ 155.0, 152.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -112,7 +110,7 @@
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
+					"source" : [ "obj-1", 1 ]
 				}
 
 			}
@@ -121,13 +119,13 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 1 ]
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-1", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-3", 0 ]
@@ -136,7 +134,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
+					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-7", 0 ]
@@ -146,28 +144,28 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "gl.videoplane%.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/openGL/gl.videoplane%",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl.videoplane%",
 				"patcherrelativepath" : ".",
-				"type" : "JSON",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/list2parameter",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/list2parameter",
 				"patcherrelativepath" : "../../../components/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl.videoplane%.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/openGL/gl.videoplane%",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl.videoplane%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.class.gl_group.parameters.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/class.gl_group.parameters",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/class.gl_group.parameters",
 				"patcherrelativepath" : "../../../components/class.gl_group.parameters",
 				"type" : "JSON",
 				"implicit" : 1
@@ -194,10 +192,6 @@
 			}
 , 			{
 				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{

@@ -8685,7 +8685,7 @@
             941.0,
             19.0
           ],
-          "text": "j.unpack≈ 32",
+          "text": "j.unpack= 32",
           "varname": "multiout"
         }
       },
@@ -8707,7 +8707,7 @@
             734.5,
             19.0
           ],
-          "text": "j.pack≈ 32",
+          "text": "j.pack= 32",
           "varname": "multiin"
         }
       },

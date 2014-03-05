@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 1542.0, 521.0 ],
+		"rect" : [ 0.0, 44.0, 1095.0, 486.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -64,8 +64,8 @@
 					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 866.0, 122.0, 117.0, 60.0 ],
 					"text" : "j.dataspace @dataspace time @input midi @output hz"
 				}
@@ -89,8 +89,8 @@
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 12.0, 367.0, 73.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
@@ -103,9 +103,9 @@
 					"id" : "obj-8",
 					"linecount" : 4,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 12.0, 17.0, 148.0, 60.0 ],
 					"text" : "j.parameter oscillator @type string @description \"choose the waveform type.\"",
 					"varname" : "mode[1]"
@@ -119,9 +119,9 @@
 					"id" : "obj-1",
 					"linecount" : 5,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 866.0, 23.0, 204.0, 74.0 ],
 					"text" : "j.parameter note @type decimal @range/bounds 0. 20000. @ramp/drive Max @dataspace time @dataspace/unit midi @description \"Frequency used.\"",
 					"varname" : "frequency"
@@ -135,10 +135,10 @@
 					"id" : "obj-19",
 					"linecount" : 3,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 231.0, 315.0, 164.0, 47.0 ],
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 231.0, 340.0, 164.0, 47.0 ],
 					"text" : "j.model @description \"Play sine tones - square - triangle waves etc.\"",
 					"varname" : "j.model"
 				}
@@ -1362,7 +1362,23 @@
 
 			}
  ],
-		"dependency_cache" : [  ]
+		"dependency_cache" : [ 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.dataspace.mxo",
+				"type" : "iLaX"
+			}
+ ]
 	}
 
 }

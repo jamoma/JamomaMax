@@ -71,7 +71,7 @@
             229.5,
             19.0
           ],
-          "text": "j.pack≈ 32",
+          "text": "j.pack= 32",
           "varname": "multiin2"
         }
       },
@@ -124,7 +124,7 @@
             451.0,
             19.0
           ],
-          "text": "j.unpack≈ 32",
+          "text": "j.unpack= 32",
           "varname": "multiout2"
         }
       },
@@ -232,7 +232,7 @@
             451.0,
             19.0
           ],
-          "text": "j.unpack≈ 32",
+          "text": "j.unpack= 32",
           "varname": "multiout"
         }
       },
@@ -254,7 +254,7 @@
             573.5,
             19.0
           ],
-          "text": "j.pack≈ 32",
+          "text": "j.pack= 32",
           "varname": "multiin"
         }
       },

@@ -2424,7 +2424,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 139.5, 491.0, 96.0, 31.0 ],
-					"text" : "j.matrix≈ @interpolated 1",
+					"text" : "j.matrix= @interpolated 1",
 					"varname" : "matrix"
 				}
 

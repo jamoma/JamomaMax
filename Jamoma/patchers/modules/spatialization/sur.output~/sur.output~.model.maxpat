@@ -39,7 +39,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1028.5, 70.0, 182.0, 37.0 ],
-					"text" : "Need to do this as we don't yet have support for j.out≈"
+					"text" : "Need to do this as we don't yet have support for j.out="
 				}
 
 			}
@@ -153,7 +153,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 933.5, 254.0, 72.0, 20.0 ],
-					"text" : "j.unpack≈ 2"
+					"text" : "j.unpack= 2"
 				}
 
 			}
@@ -622,7 +622,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 757.0, 382.0, 152.0, 20.0 ],
-					"text" : "j.gain≈ @interpolated 1",
+					"text" : "j.gain= @interpolated 1",
 					"varname" : "limiter[2]"
 				}
 
@@ -2986,7 +2986,7 @@
 					"numoutlets" : 33,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 757.0, 415.0, 451.0, 20.0 ],
-					"text" : "j.unpack≈ 32",
+					"text" : "j.unpack= 32",
 					"varname" : "unpack"
 				}
 
@@ -3600,11 +3600,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.gain≈.mxo",
+				"name" : "j.gain=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -3612,7 +3612,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.limiter≈.mxo",
+				"name" : "j.limiter=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

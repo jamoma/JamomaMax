@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 54.0, 72.0, 511.0, 522.0 ],
+		"rect" : [ 54.0, 72.0, 675.0, 357.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,13 +29,25 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-2",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 387.0, 157.0, 25.0, 25.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-97",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 207.833313, 217.5, 50.0, 20.0 ],
 					"text" : "j.out~ 4"
 				}
@@ -48,8 +60,8 @@
 					"id" : "obj-96",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 151.166656, 217.5, 50.0, 20.0 ],
 					"text" : "j.out~ 3"
 				}
@@ -62,8 +74,8 @@
 					"id" : "obj-95",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 93.833313, 217.5, 50.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
@@ -76,10 +88,10 @@
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 4,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.833336, 254.5, 189.999969, 20.0 ],
-					"text" : "j.pack≈ 4"
+					"numoutlets" : 2,
+					"outlettype" : [ "audio.connect", "" ],
+					"patching_rect" : [ 35.833336, 254.5, 190.999969, 20.0 ],
+					"text" : "j.pack= 4"
 				}
 
 			}
@@ -93,7 +105,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "bang" ],
 					"patching_rect" : [ 36.5, 157.0, 305.666626, 20.0 ],
-					"save" : [ "#N", "sfplay~", "$0__sflist", 4, 120960, 1, "", ";" ],
+					"save" : [ "#N", "sfplay~", "1378__sflist", 4, 120960, 1, "", ";" ],
 					"text" : "sfplay~ #0__sflist 4 0 1"
 				}
 
@@ -105,7 +117,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.833336, 303.5, 25.0, 25.0 ]
+					"patching_rect" : [ 35.833336, 303.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -116,8 +128,8 @@
 					"id" : "obj-94",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 36.499992, 217.5, 50.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
@@ -145,9 +157,9 @@
 					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 354.0, 225.0, 245.0, 47.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 387.0, 225.0, 245.0, 47.0 ],
 					"text" : "j.model @description \"Sound file playback module with preloading of files. 4 channel version.\""
 				}
 
@@ -161,7 +173,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 383.0, 167.0, 192.0, 18.0 ],
+					"patching_rect" : [ 449.0, 166.0, 192.0, 18.0 ],
 					"text" : "preset:store default, preset:write"
 				}
 
@@ -175,7 +187,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 399.0, 190.5, 176.0, 18.0 ],
+					"patching_rect" : [ 465.0, 189.5, 176.0, 18.0 ],
 					"text" : "model/documentation/generate"
 				}
 
@@ -187,7 +199,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 354.0, 303.5, 25.0, 25.0 ]
+					"patching_rect" : [ 387.0, 303.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -234,6 +246,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -348,7 +369,46 @@
 
 			}
  ],
-		"dependency_cache" : [  ]
+		"dependency_cache" : [ 			{
+				"name" : "filePlayer.algorithm.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~/shared",
+				"patcherrelativepath" : "../shared",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.pack=.mxo",
+				"type" : "iLaX"
+			}
+ ]
 	}
 
 }
