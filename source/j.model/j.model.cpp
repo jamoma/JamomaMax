@@ -484,14 +484,6 @@ void model_share_patcher_node(TTPtr self, TTNodePtr *patcherNode)
 	}
 }
 
-void model_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-	// the msg have to contains a relative address
-	jamoma_container_send((TTContainerPtr)x->wrappedObject, msg, argc, argv);
-}
-
 void WrappedContainerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
