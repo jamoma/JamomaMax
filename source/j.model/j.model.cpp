@@ -47,7 +47,7 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)model_address,                     "model_address",		A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_documention_write,           "documentation_write",  A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_reference_write,             "reference_write",      A_CANT, 0);
     
     class_addmethod(c->maxClass, (method)model_preset_return_names,         "return_names",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_preset_filechanged,          "filechanged",			A_CANT, 0);
@@ -516,12 +516,12 @@ void model_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	outlet_anything(x->outlets[data_out], x->msg, argc, argv);
 }
 
-void model_documention_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_reference_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
-	defer(self, (method)model_documentation_dowrite, msg, argc, argv);
+	defer(self, (method)model_reference_dowrite, msg, argc, argv);
 }
 
-void model_documentation_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_reference_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char				filename[MAX_FILENAME_CHARS];
