@@ -259,9 +259,9 @@ void WrappedInputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 
 void WrappedInputClass_free(TTPtr self)
 {
+#ifdef J_IN_TILDE
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
-#ifdef J_IN_TILDE
 	dsp_free((t_pxobject *)x);					// Always call dsp_free first in this routine
 #endif
 }
@@ -367,8 +367,27 @@ void in_reset(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTInputAudioPtr	anInput = (TTInputAudioPtr)x->wrappedObject;
+ 
+    // NOTE FOR TIM : all the code below is a try and it's also a way to show you how to access to #TTInputAudio members
+    // fell free to change everything if needed !
     
+    // clear the internal signal in used to get signal from outside the model
+    TTAudioGraphObjectBasePtr(anInput->mSignalIn)->resetAudio();
     
+    /* ??? : do we clear each internal signal cached or do we supposed they are cleared by their owner ?
+    if (anInput->mSignalCache) {
+        
+        for (anInput->mSignalCache->begin(); anInput->mSignalCache->end(); anInput->mSignalCache->next()) {
+            TTAudioGraphObjectBasePtr sentSignal = TTAudioSignalPtr((TTObjectBasePtr)anInput->mSignalCache->current()[0]);
+            
+            if (sentSignal)
+                sentSignal->resetAudio();
+        }
+    }
+    */
+    
+    // clear the internal signal out used to forward signal into the model
+    TTAudioGraphObjectBasePtr(anInput->mSignalOut)->resetAudio();
 }
 
 void in_setup(TTPtr self)
@@ -376,7 +395,15 @@ void in_setup(TTPtr self)
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTInputAudioPtr	anInput = (TTInputAudioPtr)x->wrappedObject;
     
+    // NOTE FOR TIM : all the code below is a try and it's also a way to show you how to access to #TTInputAudio members
+    // fell free to change everything if needed !
     
+    t_atom a[2];
+    
+    // forward the internal signal out to connect it to any audiograph object below the j.in=
+    atom_setobj(a+0, ObjectPtr(anInput->mSignalOut));
+    atom_setlong(a+1, 0);
+    outlet_anything(x->outlets[signal_out], gensym("audio.connect"), 2, a);
 }
 
 void in_connect(TTPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
@@ -384,7 +411,26 @@ void in_connect(TTPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long so
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTInputAudioPtr	anInput = (TTInputAudioPtr)x->wrappedObject;
     
+    // NOTE FOR TIM : all the code below is a try and it's also a way to show you how to access to #TTInputAudio members
+    // fell free to change everything if needed !
+
+    // connect the source to the internal signal in
+    TTAudioGraphObjectBasePtr(anInput->mSignalIn)->connectAudio(audioSourceObject, sourceOutletNumber);
     
+    /* ??? : do we need to connect each internal signal cache to the signal in
+    if (anInput->mSignalCache) {
+        
+        for (anInput->mSignalCache->begin(); anInput->mSignalCache->end(); anInput->mSignalCache->next()) {
+            TTAudioGraphObjectBasePtr sentSignal = TTAudioSignalPtr((TTObjectBasePtr)anInput->mSignalCache->current()[0]);
+            
+            if (sentSignal)
+                anInput->mSignalIn->connectAudio(sentSignal, ?);
+        }
+    }
+    */
+    
+    // ??? : do we need to connect the internal signal in to the internal signal out
+    //TTAudioGraphObjectBasePtr(anInput->mSignalOut)->connectAudio(anInput->mSignalIn, ?);
 }
 #endif
 

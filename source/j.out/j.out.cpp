@@ -268,9 +268,9 @@ void WrappedOutputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 
 void WrappedOutputClass_free(TTPtr self)
 {
+#ifdef J_OUT_TILDE
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
-#ifdef J_OUT_TILDE
 	dsp_free((t_pxobject *)x);				// Always call dsp_free first in this routine
 #endif
 }
@@ -377,7 +377,14 @@ void out_reset(TTPtr self)
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTOutputAudioPtr	anOutput = (TTOutputAudioPtr)x->wrappedObject;
     
+    // NOTE FOR TIM : all the code below is a try and it's also a way to show you how to access to #TTOutputAudio members
+    // fell free to change everything if needed !
     
+    // clear the internal signal in used to get signal from inside the model
+    TTAudioGraphObjectBasePtr(anOutput->mSignalIn)->resetAudio();
+    
+    // clear the internal signal out used to forward signal outside the model
+    TTAudioGraphObjectBasePtr(anOutput->mSignalOut)->resetAudio();
 }
 
 void out_setup(TTPtr self)
@@ -385,7 +392,15 @@ void out_setup(TTPtr self)
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTOutputAudioPtr	anOutput = (TTOutputAudioPtr)x->wrappedObject;
     
+    // NOTE FOR TIM : all the code below is a try and it's also a way to show you how to access to #TTOutputAudio members
+    // fell free to change everything if needed !
     
+    t_atom a[2];
+    
+    // forward the internal signal out to connect it to any audiograph object below the j.out=
+    atom_setobj(a+0, ObjectPtr(anOutput->mSignalOut));
+    atom_setlong(a+1, 0);
+    outlet_anything(x->outlets[signal_out], gensym("audio.connect"), 2, a);
 }
 
 void out_connect(TTPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
@@ -393,7 +408,14 @@ void out_connect(TTPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long s
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTOutputAudioPtr	anOutput = (TTOutputAudioPtr)x->wrappedObject;
     
+    // NOTE FOR TIM : all the code below is a try and it's also a way to show you how to access to #TTOutputAudio members
+    // fell free to change everything if needed !
     
+    // connect the source to the internal signal in
+    TTAudioGraphObjectBasePtr(anOutput->mSignalIn)->connectAudio(audioSourceObject, sourceOutletNumber);
+    
+    // ??? : do we need to connect the internal signal in to the internal signal out
+    //TTAudioGraphObjectBasePtr(anOutput->mSignalOut)->connectAudio(anOutput->mSignalIn, ?);
 }
 #endif
 
