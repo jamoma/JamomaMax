@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
 
-<jamoma version='0.4'
+<jamoma version='0.6'
 		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
@@ -20,7 +20,7 @@
     <item name='view/freeze' type='boolean' priority='0'>0</item>
     <item name='time/wait' type='decimal' priority='0'>0.000000</item>
   </preset>
-  <preset number='1' name='toggle limiter modes'>
+  <preset name='toggle limiter modes'>
     <item name='in/action' type='integer' priority='0'>3</item>
     <item name='in/message' type='generic' priority='0'>0</item>
     <item name='in/module/parameter' type='string' priority='5'>/button</item>
