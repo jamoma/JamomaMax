@@ -121,7 +121,7 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
 	
 	// read the address to bind from the first argument
-	if (attrstart == 1 && argv)
+	if (attrstart > 0 && argv)
 		address = atom_getsym(argv);
 	else
 		address = _sym_nothing;
