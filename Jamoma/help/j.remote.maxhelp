@@ -31,6 +31,7 @@
 		"showontab" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-5",
@@ -431,6 +432,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-18",
@@ -448,7 +450,7 @@
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 193.0, 133.0, 746.0, 307.0 ],
+										"rect" : [ 188.0, 217.0, 746.0, 307.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -472,13 +474,56 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"frgb" : 0.0,
+													"id" : "obj-12",
+													"linecount" : 5,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 333.0, 207.0, 198.0, 74.0 ],
+													"text" : "if no second argument is provided, the j.remote is registered into the view using the address + name of the ui object it is attach too between parenthesis"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-9",
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 83.0, 228.0, 241.0, 18.0 ],
+													"text" : "content model myModelParameter(flonum)"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-7",
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 108.0, 42.5, 50.0, 18.0 ],
+													"text" : "content"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"frgb" : 0.0,
 													"id" : "obj-6",
 													"linecount" : 7,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 494.0, 104.5, 205.0, 100.0 ],
-													"text" : "When used inside a view containing a j.view object, j.remote belongs to the node in the namespace j.view is binding to. Here, j.remote automatically binds to the parameter \"myModelParameter\" placed in the moddel called \"myModelParameter\""
+													"patching_rect" : [ 494.0, 70.5, 205.0, 100.0 ],
+													"text" : "When used inside a view containing a j.view object, j.remote belongs to the node in the namespace j.view is binding to. Here, j.remote automatically binds to the parameter \"myModelParameter\" placed in the model called \"myModelParameter\""
 												}
 
 											}
@@ -521,6 +566,7 @@
 											}
 , 											{
 												"box" : 												{
+													"annotation" : "this parameter is only useful for this help patcher",
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-10",
@@ -529,7 +575,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "float", "bang" ],
 													"parameter_enable" : 0,
-													"patching_rect" : [ 259.0, 176.5, 50.0, 20.0 ]
+													"patching_rect" : [ 259.0, 135.5, 50.0, 20.0 ]
 												}
 
 											}
@@ -543,7 +589,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
-													"patching_rect" : [ 259.0, 151.5, 185.0, 20.0 ],
+													"patching_rect" : [ 259.0, 110.5, 185.0, 20.0 ],
 													"text" : "j.remote myModelParameter"
 												}
 
@@ -563,7 +609,7 @@
 													"destination" : [ "obj-1", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [ 268.5, 199.5, 246.0, 199.5, 246.0, 146.5, 268.5, 146.5 ],
+													"midpoints" : [ 268.5, 158.5, 246.0, 158.5, 246.0, 105.5, 268.5, 105.5 ],
 													"source" : [ "obj-10", 0 ]
 												}
 
@@ -579,10 +625,29 @@
 											}
 , 											{
 												"patchline" : 												{
+													"destination" : [ "obj-9", 1 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"midpoints" : [ 136.5, 220.25, 314.5, 220.25 ],
+													"source" : [ "obj-2", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
 													"destination" : [ "obj-2", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-3", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-7", 0 ]
 												}
 
 											}
@@ -665,6 +730,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-2",
@@ -940,7 +1006,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 100.0, 126.0, 819.0, 509.0 ],
+						"rect" : [ 0.0, 26.0, 819.0, 509.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1286,7 +1352,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 819.0, 509.0 ],
+						"rect" : [ 100.0, 126.0, 819.0, 509.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1395,6 +1461,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-18",
@@ -1678,6 +1745,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-2",

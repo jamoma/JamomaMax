@@ -190,8 +190,10 @@ void model_subscribe(TTPtr self)
 	TTTextHandlerPtr			aTextHandler;
 	TTBoolean					isSubModel, newInstanceCreated;
 	TTAddress                   returnedAddress, adrs;
+    TTSymbol                    description;
 	AtomCount					ac;
 	AtomPtr						av;
+    t_atom                      a;
 	ObjectPtr					aPatcher = jamoma_patcher_get((ObjectPtr)x);
 
 	// if the subscription is successful
@@ -205,6 +207,12 @@ void model_subscribe(TTPtr self)
         
         // keep the address for model_free (because the wrappedObject will be freed before)
         EXTRA->containerAddress = returnedAddress;
+        
+        // set annotation attribute of the patcher using description attribute
+        x->wrappedObject->getAttributeValue(kTTSym_description, v);
+        description = v[0];
+        atom_setsym(&a, gensym(description.c_str()));
+        object_attr_setvalueof(jpatcher_get_box(x->patcherPtr), _sym_annotation , 1, &a);
         
 		// if the j.model|j.view is well subscribed
 		if (aPatcher == x->patcherPtr && x->patcherContext != kTTSymEmpty) {
@@ -495,6 +503,8 @@ void WrappedContainerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, A
 void model_return_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    // store the address temporary into msg member to use it into model_return_value()
 	x->msg = msg;
 }
 
@@ -502,6 +512,7 @@ void model_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
+    // using the temporay address stored previously into msg member in model_return_address()
 	outlet_anything(x->outlets[data_out], x->msg, argc, argv);
 }
 
