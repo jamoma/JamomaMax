@@ -118,7 +118,7 @@
 						"default_fontface" : 0
 					}
 ,
-					"text" : "p j.rebuffer≈ @inSize 4096 @outSize 512 @offset 1024"
+					"text" : "p j.rebuffer= @inSize 4096 @outSize 512 @offset 1024"
 				}
 
 			}
@@ -164,7 +164,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 35.0, 30.0, 80.0, 19.0 ],
-					"text" : "j.pack≈ 2"
+					"text" : "j.pack= 2"
 				}
 
 			}
@@ -178,7 +178,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 35.0, 460.0, 93.0, 19.0 ],
-					"text" : "j.unpack≈ 2"
+					"text" : "j.unpack= 2"
 				}
 
 			}
@@ -280,7 +280,7 @@
 						"default_fontface" : 0
 					}
 ,
-					"text" : "p j.rebuffer≈ @inSize 4096 @outSize 512 @offset 0"
+					"text" : "p j.rebuffer= @inSize 4096 @outSize 512 @offset 0"
 				}
 
 			}
@@ -294,7 +294,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 35.0, 415.0, 753.0, 19.0 ],
-					"text" : "j.matrix≈ 4 1"
+					"text" : "j.matrix= 4 1"
 				}
 
 			}
@@ -309,7 +309,7 @@
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 335.0, 235.0, 85.0, 19.0 ],
 					"presentation_rect" : [ 389.0, 337.0, 0.0, 0.0 ],
-					"text" : "j.window≈"
+					"text" : "j.window="
 				}
 
 			}
@@ -324,7 +324,7 @@
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 235.0, 235.0, 85.0, 19.0 ],
 					"presentation_rect" : [ 289.0, 337.0, 0.0, 0.0 ],
-					"text" : "j.window≈"
+					"text" : "j.window="
 				}
 
 			}
@@ -339,7 +339,7 @@
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 135.0, 235.0, 85.0, 19.0 ],
 					"presentation_rect" : [ 189.0, 337.0, 0.0, 0.0 ],
-					"text" : "j.window≈"
+					"text" : "j.window="
 				}
 
 			}
@@ -354,7 +354,7 @@
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 35.0, 235.0, 85.0, 19.0 ],
 					"presentation_rect" : [ 89.0, 337.0, 0.0, 0.0 ],
-					"text" : "j.window≈"
+					"text" : "j.window="
 				}
 
 			}
@@ -369,7 +369,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 335.0, 200.0, 70.0, 31.0 ],
-					"text" : "j.fft≈ @inverse 1"
+					"text" : "j.fft= @inverse 1"
 				}
 
 			}
@@ -384,7 +384,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 235.0, 200.0, 70.0, 31.0 ],
-					"text" : "j.fft≈ @inverse 1"
+					"text" : "j.fft= @inverse 1"
 				}
 
 			}
@@ -399,7 +399,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 135.0, 200.0, 70.0, 31.0 ],
-					"text" : "j.fft≈ @inverse 1"
+					"text" : "j.fft= @inverse 1"
 				}
 
 			}
@@ -414,7 +414,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 35.0, 200.0, 70.0, 31.0 ],
-					"text" : "j.fft≈ @inverse 1"
+					"text" : "j.fft= @inverse 1"
 				}
 
 			}
@@ -797,7 +797,7 @@
 						"default_fontface" : 0
 					}
 ,
-					"text" : "p j.overlap≈ 4"
+					"text" : "p j.overlap= 4"
 				}
 
 			}
@@ -811,7 +811,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 335.0, 125.0, 85.0, 19.0 ],
-					"text" : "j.window≈"
+					"text" : "j.window="
 				}
 
 			}
@@ -825,7 +825,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 335.0, 150.0, 58.0, 19.0 ],
-					"text" : "j.fft≈"
+					"text" : "j.fft="
 				}
 
 			}
@@ -839,7 +839,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 235.0, 125.0, 85.0, 19.0 ],
-					"text" : "j.window≈"
+					"text" : "j.window="
 				}
 
 			}
@@ -853,7 +853,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 235.0, 150.0, 58.0, 19.0 ],
-					"text" : "j.fft≈"
+					"text" : "j.fft="
 				}
 
 			}
@@ -867,7 +867,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 135.0, 125.0, 85.0, 19.0 ],
-					"text" : "j.window≈"
+					"text" : "j.window="
 				}
 
 			}
@@ -881,7 +881,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 135.0, 150.0, 58.0, 19.0 ],
-					"text" : "j.fft≈"
+					"text" : "j.fft="
 				}
 
 			}
@@ -895,7 +895,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 35.0, 125.0, 85.0, 19.0 ],
-					"text" : "j.window≈"
+					"text" : "j.window="
 				}
 
 			}
@@ -909,7 +909,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 35.0, 150.0, 58.0, 19.0 ],
-					"text" : "j.fft≈"
+					"text" : "j.fft="
 				}
 
 			}

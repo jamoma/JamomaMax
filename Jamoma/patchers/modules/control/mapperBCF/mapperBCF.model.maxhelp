@@ -20,7 +20,6 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "/BCF" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
 					"name" : "mapperBCF.view.maxpat",
@@ -541,7 +540,6 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "/movie" ],
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
 					"name" : "movie.view.maxpat",

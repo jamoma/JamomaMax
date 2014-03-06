@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 659.0, 131.0, 814.0, 457.0 ],
+		"rect" : [ 88.0, 344.0, 849.0, 373.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -46,12 +46,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-20",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 7.25, 380.0, 370.75, 19.0 ],
-					"text" : "j.model @tag video"
+					"patching_rect" : [ 603.25, 234.0, 180.0, 31.0 ],
+					"text" : "j.model @tag video @description \"Multiple source video player\""
 				}
 
 			}
@@ -87,7 +88,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -127,6 +128,7 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-14",
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
@@ -227,6 +229,7 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-3",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -427,7 +430,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.25, 345.0, 84.0, 19.0 ],
+					"patching_rect" : [ 632.25, 199.0, 84.0, 19.0 ],
 					"text" : "control input"
 				}
 
@@ -551,7 +554,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -994,7 +997,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 732.5, 175.0, 70.0, 21.0 ],
+					"patching_rect" : [ 525.5, 231.0, 70.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1021,7 +1024,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.25, 415.0, 81.0, 19.0 ],
+					"patching_rect" : [ 632.25, 269.0, 81.0, 19.0 ],
 					"text" : "control output"
 				}
 
@@ -1041,7 +1044,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1284,7 +1287,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 641.5, 175.0, 78.0, 21.0 ],
+					"patching_rect" : [ 434.5, 231.0, 78.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1317,7 +1320,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1611,7 +1614,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -1710,6 +1713,7 @@
 													"fontname" : "Verdana",
 													"fontsize" : 10.0,
 													"id" : "obj-2",
+													"linecount" : 3,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 0,
@@ -1752,6 +1756,7 @@
 													"fontname" : "Verdana",
 													"fontsize" : 10.0,
 													"id" : "obj-20",
+													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
@@ -1942,6 +1947,7 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-41",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -2702,7 +2708,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 592.5, 175.0, 40.0, 21.0 ],
+					"patching_rect" : [ 385.5, 231.0, 40.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -2735,7 +2741,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2773,7 +2779,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -2947,6 +2953,7 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-33",
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
@@ -2962,6 +2969,7 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-9",
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
@@ -3280,6 +3288,7 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-4",
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
@@ -3294,6 +3303,7 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-5",
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
@@ -3464,7 +3474,7 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-24",
-									"items" : "<empty>",
+									"items" : "FaceTime HD Camera",
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -3575,7 +3585,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -3864,7 +3874,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -4258,7 +4268,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 135.0, 318.0, 150.0, 18.0 ],
+									"patching_rect" : [ 119.0, 311.0, 150.0, 0.0 ],
 									"text" : "jit.qt.grab 320 240 @unique 1",
 									"varname" : "grabber"
 								}
@@ -4715,7 +4725,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 519.5, 175.0, 67.0, 21.0 ],
+					"patching_rect" : [ 312.5, 231.0, 67.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -4741,7 +4751,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 7.25, 342.0, 25.0, 25.0 ]
+					"patching_rect" : [ 603.25, 196.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -4754,7 +4764,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 556.0, 252.0, 73.0, 19.0 ],
+					"patching_rect" : [ 345.0, 305.0, 73.0, 19.0 ],
 					"text" : "Video output"
 				}
 
@@ -4766,7 +4776,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 519.5, 249.0, 25.0, 25.0 ]
+					"patching_rect" : [ 312.5, 305.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -4777,7 +4787,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 7.25, 415.0, 25.0, 25.0 ]
+					"patching_rect" : [ 603.25, 269.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -4824,7 +4834,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 519.5, 222.0, 44.0, 19.0 ],
+					"patching_rect" : [ 312.5, 278.0, 44.0, 19.0 ],
 					"text" : "j.out 1"
 				}
 
@@ -4920,7 +4930,7 @@
 					"destination" : [ "obj-1002", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 742.0, 208.0, 529.0, 208.0 ],
+					"midpoints" : [ 535.0, 264.0, 322.0, 264.0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -5031,7 +5041,7 @@
 					"destination" : [ "obj-1002", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 651.0, 208.0, 529.0, 208.0 ],
+					"midpoints" : [ 444.0, 264.0, 322.0, 264.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -5041,7 +5051,7 @@
 					"destination" : [ "obj-1002", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 602.0, 208.0, 529.0, 208.0 ],
+					"midpoints" : [ 395.0, 264.0, 322.0, 264.0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -5051,7 +5061,7 @@
 					"destination" : [ "obj-1002", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 529.0, 208.0, 529.0, 208.0 ],
+					"midpoints" : [ 322.0, 264.0, 322.0, 264.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -5064,38 +5074,6 @@
 					"source" : [ "obj-7", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

@@ -46,7 +46,8 @@ void WrapTTContainerClass(WrappedClassPtr c)
     class_addmethod(c->maxClass, (method)model_return_upper_view_model_address,"return_upper_view_model_address", A_CANT, 0);
 	
 	class_addmethod(c->maxClass, (method)model_address,                     "model_address",		A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_autodoc,                     "doc_generate",			A_CANT, 0);
+    
+    class_addmethod(c->maxClass, (method)model_documention_write,           "documentation_write",  A_CANT, 0);
     
     class_addmethod(c->maxClass, (method)model_preset_return_names,         "return_names",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_preset_filechanged,          "filechanged",			A_CANT, 0);
@@ -93,7 +94,6 @@ void WrapTTContainerClass(WrappedClassPtr c)
 void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
- 	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
 	TTValue						none;
 		
 	// create a container
@@ -190,8 +190,10 @@ void model_subscribe(TTPtr self)
 	TTTextHandlerPtr			aTextHandler;
 	TTBoolean					isSubModel, newInstanceCreated;
 	TTAddress                   returnedAddress, adrs;
+    TTSymbol                    description;
 	AtomCount					ac;
 	AtomPtr						av;
+    t_atom                      a;
 	ObjectPtr					aPatcher = jamoma_patcher_get((ObjectPtr)x);
 
 	// if the subscription is successful
@@ -205,6 +207,12 @@ void model_subscribe(TTPtr self)
         
         // keep the address for model_free (because the wrappedObject will be freed before)
         EXTRA->containerAddress = returnedAddress;
+        
+        // set annotation attribute of the patcher using description attribute
+        x->wrappedObject->getAttributeValue(kTTSym_description, v);
+        description = v[0];
+        atom_setsym(&a, gensym(description.c_str()));
+        object_attr_setvalueof(jpatcher_get_box(x->patcherPtr), _sym_annotation , 1, &a);
         
 		// if the j.model|j.view is well subscribed
 		if (aPatcher == x->patcherPtr && x->patcherContext != kTTSymEmpty) {
@@ -484,14 +492,6 @@ void model_share_patcher_node(TTPtr self, TTNodePtr *patcherNode)
 	}
 }
 
-void model_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-	// the msg have to contains a relative address
-	jamoma_container_send((TTContainerPtr)x->wrappedObject, msg, argc, argv);
-}
-
 void WrappedContainerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -503,6 +503,8 @@ void WrappedContainerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, A
 void model_return_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    // store the address temporary into msg member to use it into model_return_value()
 	x->msg = msg;
 }
 
@@ -510,15 +512,16 @@ void model_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
+    // using the temporay address stored previously into msg member in model_return_address()
 	outlet_anything(x->outlets[data_out], x->msg, argc, argv);
 }
 
-void model_autodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_documention_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
-	defer(self, (method)model_doautodoc, msg, argc, argv);
+	defer(self, (method)model_documentation_dowrite, msg, argc, argv);
 }
 
-void model_doautodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_documentation_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char				filename[MAX_FILENAME_CHARS];
@@ -534,13 +537,15 @@ void model_doautodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		fullpath = jamoma_file_write((ObjectPtr)x, argc, argv, filename);
 		v.append(fullpath);
 		
-		tterr = x->internals->lookup(TTSymbol("TextHandler"), o);
+		tterr = x->internals->lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
 			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
 			
 			critical_enter(0);
-			aTextHandler->sendMessage(TTSymbol("Write"), v, none);
+            o = TTValue(x->wrappedObject);
+			aTextHandler->setAttributeValue(kTTSym_object, o);
+			aTextHandler->sendMessage(kTTSym_Write, v, none);
 			critical_exit(0);
 		}
 	}
@@ -576,7 +581,7 @@ t_max_err model_get_amenities(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av
         
 		//otherwise allocate memory
 		*ac = keys.size();
-		if (!(*av = (AtomPtr)getbytes(sizeof(Atom)*(*ac)))) {
+		if (!(*av = (AtomPtr)getbytes(sizeof(t_atom)*(*ac)))) {
 			*ac = 0;
 			return MAX_ERR_OUT_OF_MEM;
 		}

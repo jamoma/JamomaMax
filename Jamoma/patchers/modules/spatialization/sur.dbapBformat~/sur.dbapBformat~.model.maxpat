@@ -2068,7 +2068,7 @@
             79.0,
             19.0
           ],
-          "text": "j.mixer≈",
+          "text": "j.mixer=",
           "varname": "matrix"
         }
       },

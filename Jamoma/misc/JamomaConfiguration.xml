@@ -24,6 +24,7 @@
   <entry App="color/toolbarText" TT="ColorToolbarText"/>
   <entry App="color/border" TT="ColorBorder"/>
   <entry App="dec" TT="Dec"/>
+  <entry App="document" TT="Document"/>
   <entry App="namespace/build" TT="DirectoryBuild"/>
   <entry App="namespace/clear" TT="DirectoryClear"/>
   <entry App="namespace/observe" TT="DirectoryObserve"/>

@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 98.0, 118.0, 1142.0, 602.0 ],
+		"rect" : [ 98.0, 118.0, 903.0, 593.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 449.0, 493.0, 73.0, 20.0 ],
+					"patching_rect" : [ 219.0, 475.0, 73.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -50,7 +50,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 326.25, 493.0, 73.0, 20.0 ],
+					"patching_rect" : [ 96.25, 475.0, 73.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -64,7 +64,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 449.0, 138.0, 66.0, 20.0 ],
+					"patching_rect" : [ 219.0, 120.0, 66.0, 20.0 ],
 					"text" : "j.in~ 2"
 				}
 
@@ -78,7 +78,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 329.0, 138.0, 66.0, 20.0 ],
+					"patching_rect" : [ 99.0, 120.0, 66.0, 20.0 ],
 					"text" : "j.in~ 1"
 				}
 
@@ -93,7 +93,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 929.0, 70.0, 156.0, 114.0 ],
+					"patching_rect" : [ 699.0, 52.0, 156.0, 114.0 ],
 					"text" : "j.parameter lfo/depth @type decimal @range/bounds 0. 100. @range/clipmode both @ramp/drive Max @repetitions/filter 1 @description \"LFO depth (0-100%).\"",
 					"varname" : "#1/lfo/depth"
 				}
@@ -109,7 +109,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 558.5, 70.0, 171.0, 141.0 ],
+					"patching_rect" : [ 328.5, 52.0, 171.0, 141.0 ],
 					"text" : "j.parameter lfo/frequency @type decimal @range/bounds 0. 100. @range/clipmode low @ramp/drive Max @repetitions/filter 1 @dataspace time @dataspace/unit Hz @description \"LFO frequency (Hz).\"",
 					"varname" : "#1/lfo/frequency"
 				}
@@ -120,12 +120,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-30",
-					"linecount" : 8,
+					"linecount" : 7,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 743.0, 70.0, 157.0, 114.0 ],
+					"patching_rect" : [ 513.0, 52.0, 163.0, 100.0 ],
 					"text" : "j.parameter lfo/phase @type decimal @range/bounds 0. 1. @range/clipmode wrap @ramp/drive Max @description \"LFO phase offset between left and right channels (0-1).\"",
 					"varname" : "tremolo/phase_offset"
 				}
@@ -141,7 +141,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 60.0, 199.0, 157.0, 47.0 ],
+					"patching_rect" : [ 528.0, 461.5, 157.0, 47.0 ],
 					"text" : "j.model @description \"Apply tremolo to incoming signal.\"",
 					"varname" : "j.model"
 				}
@@ -156,7 +156,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 701.0, 304.0, 45.0, 20.0 ],
+					"patching_rect" : [ 471.0, 286.0, 45.0, 20.0 ],
 					"text" : "cycle~"
 				}
 
@@ -170,7 +170,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 701.0, 397.0, 38.0, 20.0 ],
+					"patching_rect" : [ 471.0, 379.0, 38.0, 20.0 ],
 					"text" : "+~ 1."
 				}
 
@@ -184,7 +184,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 701.0, 340.0, 32.5, 20.0 ],
+					"patching_rect" : [ 471.0, 322.0, 32.5, 20.0 ],
 					"text" : "*~"
 				}
 
@@ -198,7 +198,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 724.0, 279.0, 42.0, 20.0 ],
+					"patching_rect" : [ 494.0, 261.0, 42.0, 20.0 ],
 					"text" : "%~ 1."
 				}
 
@@ -212,7 +212,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 724.0, 255.0, 38.0, 20.0 ],
+					"patching_rect" : [ 494.0, 237.0, 38.0, 20.0 ],
 					"text" : "+~ 0."
 				}
 
@@ -226,7 +226,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 558.5, 226.0, 54.0, 20.0 ],
+					"patching_rect" : [ 328.5, 208.0, 54.0, 20.0 ],
 					"text" : "phasor~"
 				}
 
@@ -240,7 +240,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 449.0, 448.0, 32.5, 20.0 ],
+					"patching_rect" : [ 219.0, 430.0, 32.5, 20.0 ],
 					"text" : "*~"
 				}
 
@@ -254,7 +254,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 326.25, 448.0, 32.5, 20.0 ],
+					"patching_rect" : [ 96.25, 430.0, 32.5, 20.0 ],
 					"text" : "*~"
 				}
 
@@ -268,7 +268,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 929.0, 304.0, 49.0, 20.0 ],
+					"patching_rect" : [ 699.0, 286.0, 49.0, 20.0 ],
 					"text" : "* 0.005"
 				}
 
@@ -282,7 +282,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 929.0, 355.0, 32.5, 20.0 ],
+					"patching_rect" : [ 699.0, 337.0, 32.5, 20.0 ],
 					"text" : "!- 1."
 				}
 
@@ -296,7 +296,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 532.5, 397.0, 38.0, 20.0 ],
+					"patching_rect" : [ 302.5, 379.0, 38.0, 20.0 ],
 					"text" : "+~ 1."
 				}
 
@@ -310,7 +310,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 532.5, 340.0, 32.5, 20.0 ],
+					"patching_rect" : [ 302.5, 322.0, 32.5, 20.0 ],
 					"text" : "*~"
 				}
 
@@ -324,20 +324,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 532.5, 304.0, 45.0, 20.0 ],
+					"patching_rect" : [ 302.5, 286.0, 45.0, 20.0 ],
 					"text" : "cycle~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "osc messages to algorithm",
-					"id" : "obj-17",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 60.0, 70.0, 27.0, 27.0 ]
 				}
 
 			}
@@ -348,7 +336,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 60.0, 543.0, 27.0, 27.0 ]
+					"patching_rect" : [ 528.0, 538.5, 27.0, 27.0 ]
 				}
 
 			}
@@ -359,7 +347,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 449.0, 543.0, 27.0, 27.0 ]
+					"patching_rect" : [ 219.0, 525.0, 27.0, 27.0 ]
 				}
 
 			}
@@ -370,7 +358,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 326.25, 543.0, 27.0, 27.0 ]
+					"patching_rect" : [ 96.25, 525.0, 27.0, 27.0 ]
 				}
 
 			}
@@ -382,7 +370,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 449.0, 70.0, 27.0, 27.0 ]
+					"patching_rect" : [ 219.0, 52.0, 27.0, 27.0 ]
 				}
 
 			}
@@ -394,7 +382,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 329.0, 70.0, 27.0, 27.0 ]
+					"patching_rect" : [ 99.0, 52.0, 27.0, 27.0 ]
 				}
 
 			}
@@ -450,15 +438,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-31", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-17", 0 ]
 				}
 
 			}
@@ -593,7 +572,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 568.0, 249.0, 733.5, 249.0 ],
+					"midpoints" : [ 338.0, 231.0, 503.5, 231.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 

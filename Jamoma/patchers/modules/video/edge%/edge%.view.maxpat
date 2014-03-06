@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 98.0, 44.0, 959.0, 481.0 ],
+		"rect" : [ 98.0, 44.0, 362.0, 274.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -41,7 +41,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -87,7 +87,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 42.0, 77.0, 46.0, 18.0 ],
+									"patching_rect" : [ 42.0, 77.0, 46.0, 19.0 ],
 									"text" : "route 1"
 								}
 
@@ -101,7 +101,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 42.0, 192.0, 76.0, 18.0 ],
+									"patching_rect" : [ 42.0, 192.0, 76.0, 19.0 ],
 									"text" : "clip -200 200"
 								}
 
@@ -115,7 +115,7 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 42.0, 222.0, 116.0, 18.0 ],
+									"patching_rect" : [ 42.0, 222.0, 116.0, 19.0 ],
 									"text" : "scale -200 200 -3. 5."
 								}
 
@@ -129,7 +129,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 42.0, 102.0, 56.0, 18.0 ],
+									"patching_rect" : [ 42.0, 102.0, 56.0, 19.0 ],
 									"text" : "route 2 4"
 								}
 
@@ -143,7 +143,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 42.0, 51.0, 118.0, 18.0 ],
+									"patching_rect" : [ 42.0, 51.0, 118.0, 19.0 ],
 									"text" : "j.pwindow.mouse"
 								}
 
@@ -238,7 +238,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 457.0, 92.0, 79.0, 19.0 ],
+					"patching_rect" : [ 146.0, 157.0, 79.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -263,7 +263,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 457.0, 39.0, 60.0, 45.0 ],
+					"patching_rect" : [ 146.0, 104.0, 60.0, 45.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 236.0, 22.0, 60.0, 45.0 ]
 				}
@@ -280,7 +280,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 457.0, 230.0, 60.0, 19.0 ],
+					"patching_rect" : [ 145.0, 218.0, 60.0, 19.0 ],
 					"pattrmode" : 1,
 					"presentation" : 1,
 					"presentation_rect" : [ 89.0, 44.0, 97.0, 19.0 ],
@@ -293,12 +293,11 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-8",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 525.0, 226.0, 101.0, 31.0 ],
+					"patching_rect" : [ 213.0, 214.0, 105.0, 19.0 ],
 					"text" : "j.remote algorithm",
 					"varname" : "algorithm"
 				}
@@ -309,12 +308,11 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-9",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 525.0, 146.0, 86.0, 31.0 ],
+					"patching_rect" : [ 214.0, 185.0, 89.0, 19.0 ],
 					"text" : "j.remote thresh",
 					"varname" : "thresh"
 				}
@@ -330,7 +328,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 457.0, 156.0, 35.0, 19.0 ],
+					"patching_rect" : [ 146.0, 185.0, 35.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 89.0, 22.0, 35.0, 19.0 ],
 					"triangle" : 0,
@@ -345,11 +343,10 @@
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-12",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 406.0, 157.0, 41.0, 31.0 ],
+					"patching_rect" : [ 79.0, 185.0, 58.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 23.0, 22.0, 58.0, 19.0 ],
 					"text" : "threshold"
@@ -365,7 +362,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 391.0, 230.0, 57.0, 19.0 ],
+					"patching_rect" : [ 79.0, 218.0, 57.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 21.0, 44.0, 57.0, 19.0 ],
 					"text" : "algorithm"
@@ -508,7 +505,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.pwindow.mouse.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/pwindow.mouse",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/pwindow.mouse",
 				"patcherrelativepath" : "../../../components/pwindow.mouse",
 				"type" : "JSON",
 				"implicit" : 1

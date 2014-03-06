@@ -68,7 +68,7 @@
             437.5,
             19.0
           ],
-          "text": "j.pack≈ 32",
+          "text": "j.pack= 32",
           "varname": "multiin"
         }
       },
@@ -121,7 +121,7 @@
             451.0,
             19.0
           ],
-          "text": "j.unpack≈ 32",
+          "text": "j.unpack= 32",
           "varname": "multiout"
         }
       },
@@ -9212,11 +9212,11 @@
         "type": "iLaX"
       },
       {
-        "name": "j.unpack≈.mxo",
+        "name": "j.unpack=.mxo",
         "type": "iLaX"
       },
       {
-        "name": "j.pack≈.mxo",
+        "name": "j.pack=.mxo",
         "type": "iLaX"
       }
     ]

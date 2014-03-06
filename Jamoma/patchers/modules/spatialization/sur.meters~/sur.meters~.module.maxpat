@@ -179,11 +179,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.info≈.mxo",
+				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
  ]

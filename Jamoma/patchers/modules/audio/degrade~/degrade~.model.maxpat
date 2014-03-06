@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -36,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 349.0, 46.0, 53.0, 19.0 ],
+					"patching_rect" : [ 141.0, 44.0, 53.0, 19.0 ],
 					"text" : "j.in~ 2"
 				}
 
@@ -50,7 +50,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 349.0, 338.0, 53.0, 19.0 ],
+					"patching_rect" : [ 141.0, 336.0, 53.0, 19.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -64,7 +64,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 269.0, 338.0, 48.0, 19.0 ],
+					"patching_rect" : [ 61.0, 336.0, 48.0, 19.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -76,19 +76,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 25.0, 366.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-15",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 15.0, 25.0, 25.0 ]
+					"patching_rect" : [ 266.0, 357.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -99,7 +87,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 349.0, 366.0, 25.0, 25.0 ]
+					"patching_rect" : [ 141.0, 364.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -110,8 +98,8 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 349.0, 15.0, 25.0, 25.0 ]
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 141.0, 13.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -122,7 +110,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 269.0, 366.0, 25.0, 25.0 ]
+					"patching_rect" : [ 61.0, 364.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -134,7 +122,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 269.0, 15.0, 25.0, 25.0 ]
+					"patching_rect" : [ 61.0, 13.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -147,7 +135,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 349.0, 279.0, 69.0, 19.0 ],
+					"patching_rect" : [ 141.0, 277.0, 69.0, 19.0 ],
 					"text" : "degrade~"
 				}
 
@@ -161,7 +149,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 269.0, 46.0, 48.0, 19.0 ],
+					"patching_rect" : [ 61.0, 44.0, 48.0, 19.0 ],
 					"text" : "j.in~ 1"
 				}
 
@@ -175,7 +163,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 269.0, 279.0, 69.0, 19.0 ],
+					"patching_rect" : [ 61.0, 277.0, 69.0, 19.0 ],
 					"text" : "degrade~"
 				}
 
@@ -190,7 +178,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 459.0, 142.0, 226.0, 80.0 ],
+					"patching_rect" : [ 251.0, 140.0, 228.0, 80.0 ],
 					"text" : "j.parameter bitdepth @type integer @range/bounds 1 24 @range/clipmode both @ramp/drive Max @repetitions/filter 1 @description \"The number of bits that will be retained in each sample - use this for bit crunching effects\" @priority 2"
 				}
 
@@ -205,7 +193,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 425.0, 46.0, 226.0, 80.0 ],
+					"patching_rect" : [ 217.0, 44.0, 226.0, 80.0 ],
 					"text" : "j.parameter samplerateRatio @type decimal @range/bounds 0. 1. @repetitions/filter 0 @range/clipmode both @ramp/drive Max @description \"A ratio of the emulated sample-rate to the global sample-rate.\" @priority 1"
 				}
 
@@ -220,7 +208,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 25.0, 46.0, 212.0, 31.0 ],
+					"patching_rect" : [ 266.0, 295.0, 213.0, 31.0 ],
 					"text" : "j.model @description \"Emulate the use of lower sample-rates and bit-resolution.\""
 				}
 
@@ -264,19 +252,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-15", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-10", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 434.5, 249.0, 383.5, 249.0 ],
+					"midpoints" : [ 226.5, 247.0, 175.5, 247.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -286,7 +265,7 @@
 					"destination" : [ "obj-8", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 434.5, 249.0, 303.5, 249.0 ],
+					"midpoints" : [ 226.5, 247.0, 95.5, 247.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -296,7 +275,7 @@
 					"destination" : [ "obj-10", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 468.5, 264.5, 408.5, 264.5 ],
+					"midpoints" : [ 260.5, 262.5, 200.5, 262.5 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -306,7 +285,7 @@
 					"destination" : [ "obj-8", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 468.5, 264.5, 328.5, 264.5 ],
+					"midpoints" : [ 260.5, 262.5, 120.5, 262.5 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -355,23 +334,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

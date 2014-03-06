@@ -908,14 +908,14 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTPtr context, TTSymbol service, TTObjectBasePtr *returnedData, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args, none;
+	TTValue			args, v, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	TTNodePtr		aNode;
 	TTBoolean		nodeCreated;
 	TTAddress       dataAddress, dataName;
 	TTValue			storedObject;
-	
+    
 	// Prepare arguments to create a TTData object
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
@@ -957,6 +957,12 @@ TTErr makeInternals_explorer(TTPtr self, TTSymbol name, SymbolPtr callbackMethod
 	TTValue			args, storedObject, none;
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
+    
+    // check the internals do not exist yet
+    if (!x->internals->lookup(name, args)) {
+        object_post((ObjectPtr)x, "makeInternals_explorer : \"%s\" internal already exists", name.c_str());
+        return kTTErrGeneric;
+    }
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
@@ -992,6 +998,12 @@ TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolP
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	TTAddress       adrs;
+    
+    // check the internals do not exist yet
+    if (!x->internals->lookup(name, args)) {
+        object_post((ObjectPtr)x, "makeInternals_viewer : \"%s\" internal already exists", name.c_str());
+        return kTTErrGeneric;
+    }
 	
 	// prepare arguments
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
@@ -1030,6 +1042,12 @@ TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, Symbo
 	TTObjectBasePtr	returnValueCallback;
 	TTValuePtr		returnValueBaton;
 	TTAddress       adrs;
+    
+    // check the internals do not exist yet
+    if (!x->internals->lookup(name, args)) {
+        object_post((ObjectPtr)x, "makeInternals_receiver : \"%s\" internal already exists", name.c_str());
+        return kTTErrGeneric;
+    }
 	
 	// prepare arguments
 	
@@ -1072,6 +1090,12 @@ TTErr makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObjec
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			args, storedObject;
 	TTAddress       adrs;
+    
+    // check the internals do not exist yet
+    if (!x->internals->lookup(name, args)) {
+        object_post((ObjectPtr)x, "makeInternals_sender : \"%s\" internal already exists", name.c_str());
+        return kTTErrGeneric;
+    }
 	
 	// no arguments
 	
