@@ -196,7 +196,7 @@ void remote_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 				strcpy(dst, "value");
 				break;
 			case attach_out:
-				strcpy(dst, "attach: to connect to ui object if the set or the value outlets are not directly connected it");
+				strcpy(dst, "attach: connect this outlet to ui object if the set or the value outlets are not directly connected to it");
 				break;
 			case dump_out:
 				strcpy(dst, "dumpout");
