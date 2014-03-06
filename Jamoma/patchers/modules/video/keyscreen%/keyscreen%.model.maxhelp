@@ -33,7 +33,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.keyscreen%", "@description", "Choke chromakey 3 sources" ],
+					"args" : [ "@name", "keyscreen%", "@description", "Choke chromakey 3 sources" ],
 					"bgmode" : 1,
 					"id" : "obj-9",
 					"maxclass" : "bpatcher",
@@ -149,7 +149,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 51.0, 562.0, 94.0, 19.0 ],
-					"text" : "s jmod.op%.cmd"
+					"text" : "s op%.module.cmd"
 				}
 
 			}
@@ -267,7 +267,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 308.0, 385.0, 267.0, 164.0 ],
-					"text" : "jmod.keyscreen% does three-source chroma-keying. The \"Mask\" defines contours. Then you chose the color you want with the \"R\", \"G\" and \"B\" values or with a click in the left screen or in the color swatch and this part of the picture will be filled with the \"Key\" signal. The rest of the picture will be filled with the \"Target\" signal.\n\nMode is the ON/OFF Switch. Off position equal only the Target out.\n\nIt'possible to change the order of your inlet by changing numbers of the Key, Target and Mask."
+					"text" : "keyscreen%.module does three-source chroma-keying. The \"Mask\" defines contours. Then you chose the color you want with the \"R\", \"G\" and \"B\" values or with a click in the left screen or in the color swatch and this part of the picture will be filled with the \"Key\" signal. The rest of the picture will be filled with the \"Target\" signal.\n\nMode is the ON/OFF Switch. Off position equal only the Target out.\n\nIt'possible to change the order of your inlet by changing numbers of the Key, Target and Mask."
 				}
 
 			}
@@ -307,7 +307,7 @@
 					"id" : "obj-23",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -323,7 +323,7 @@
 					"id" : "obj-24",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -339,7 +339,7 @@
 					"id" : "obj-25",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -359,7 +359,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 308.0, 167.0, 93.0, 19.0 ],
-					"text" : "r jmod.op%.cmd"
+					"text" : "r op%.module.cmd"
 				}
 
 			}
@@ -373,7 +373,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 42.0, 232.0, 94.0, 19.0 ],
-					"text" : "s jmod.op%.cmd"
+					"text" : "s op%.module.cmd"
 				}
 
 			}
@@ -452,7 +452,7 @@
 					"id" : "obj-34",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.keyscreen%.maxpat",
+					"name" : "keyscreen%.module.maxpat",
 					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],

@@ -176,7 +176,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 326.0, 162.0, 300.0, 105.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
-					"varname" : "jmod.moviePlayer%"
+					"varname" : "moviePlayer%.module"
 				}
 
 			}
@@ -220,7 +220,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 3.0, 72.0, 552.0, 31.0 ],
-					"text" : "Compared to jmod.input% this is a module for playback of Quick Time movies only, with additional control parameters, and external clocking."
+					"text" : "Compared to input%.module this is a module for playback of Quick Time movies only, with additional control parameters, and external clocking."
 				}
 
 			}

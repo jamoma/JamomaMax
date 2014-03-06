@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 25.0, 69.0, 590.0, 481.0 ],
+		"rect" : [ 25.0, 69.0, 476.0, 475.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.foregroundMask%", "@description", "Create mask based on image foreground." ],
+					"args" : [ "@name", "foregroundMask%", "@description", "Create mask based on image foreground." ],
 					"bgmode" : 1,
 					"id" : "obj-15",
 					"maxclass" : "bpatcher",
@@ -51,7 +51,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 430.0, 140.0, 86.0, 17.0 ],
+					"patching_rect" : [ 169.0, 129.0, 86.0, 17.0 ],
 					"text" : "read bball.mov"
 				}
 
@@ -63,7 +63,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 155.0, 315.0, 160.0, 120.0 ]
+					"patching_rect" : [ 34.0, 312.0, 160.0, 120.0 ]
 				}
 
 			}
@@ -74,7 +74,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 330.0, 215.0, 80.0, 60.0 ]
+					"patching_rect" : [ 350.0, 215.0, 80.0, 60.0 ]
 				}
 
 			}
@@ -87,7 +87,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 405.0, 115.0, 96.0, 17.0 ],
+					"patching_rect" : [ 144.0, 104.0, 96.0, 17.0 ],
 					"text" : "read redball.mov"
 				}
 
@@ -101,7 +101,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 370.0, 115.0, 31.0, 17.0 ],
+					"patching_rect" : [ 109.0, 104.0, 31.0, 17.0 ],
 					"text" : "read"
 				}
 
@@ -115,7 +115,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 295.0, 175.0, 171.0, 19.0 ],
+					"patching_rect" : [ 34.0, 164.0, 171.0, 19.0 ],
 					"text" : "jit.qt.movie 320 240 @unique 1"
 				}
 
@@ -129,7 +129,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 295.0, 140.0, 64.0, 19.0 ],
+					"patching_rect" : [ 34.0, 129.0, 64.0, 19.0 ],
 					"text" : "qmetro 40"
 				}
 
@@ -142,7 +142,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 295.0, 110.0, 20.0, 20.0 ]
+					"patching_rect" : [ 34.0, 99.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -150,10 +150,11 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.foregroundMask%.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 215.0, 300.0, 70.0 ],
+					"name" : "foregroundMask%.module.maxpat",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 34.0, 215.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
 
@@ -161,9 +162,28 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 43.5, 198.5, 359.5, 198.5 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -173,7 +193,7 @@
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 379.5, 165.0, 304.5, 165.0 ],
+					"midpoints" : [ 118.5, 154.0, 43.5, 154.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -183,7 +203,7 @@
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 414.5, 165.5, 304.5, 165.5 ],
+					"midpoints" : [ 153.5, 154.5, 43.5, 154.5 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -193,7 +213,7 @@
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 439.5, 165.0, 304.5, 165.0 ],
+					"midpoints" : [ 178.5, 154.0, 43.5, 154.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -218,32 +238,96 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "foregroundMask%.module.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/foregroundMask%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "foregroundMask%.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/foregroundMask%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.noiseremoval%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/noiseremoval%",
+				"patcherrelativepath" : "../../../components/noiseremoval%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "foregroundMask%.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/foregroundMask%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../../../components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "cv.jit.ravg.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.receive.mxo",

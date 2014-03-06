@@ -83,7 +83,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 283.0, 162.0, 93.0, 19.0 ],
-					"text" : "r jmod.op%.cmd"
+					"text" : "r op%.module.cmd"
 				}
 
 			}
@@ -97,7 +97,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 33.0, 237.0, 94.0, 19.0 ],
-					"text" : "s jmod.op%.cmd"
+					"text" : "s op%.module.cmd"
 				}
 
 			}

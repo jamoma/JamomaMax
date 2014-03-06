@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.mblur%", "@description", "Motion blur effect" ],
+					"args" : [ "@name", "mblur%", "@description", "Motion blur effect" ],
 					"bgmode" : 1,
 					"id" : "obj-13",
 					"maxclass" : "bpatcher",
@@ -99,7 +99,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 701.0, 534.0, 74.0, 17.0 ],
-					"text" : "jmod.wake%"
+					"text" : "wake%.module"
 				}
 
 			}
@@ -142,7 +142,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 628.0, 534.0, 68.0, 17.0 ],
-					"text" : "jmod.blur%"
+					"text" : "blur%.module"
 				}
 
 			}
@@ -166,7 +166,7 @@
 					"id" : "obj-6",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 309.0, 84.0, 300.0, 70.0 ],
@@ -185,7 +185,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 65.0, 378.0, 111.0, 19.0 ],
-					"text" : "s jmod.mblur%.cmd"
+					"text" : "s mblur%.module.cmd"
 				}
 
 			}
@@ -199,7 +199,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 309.0, 156.0, 110.0, 19.0 ],
-					"text" : "r jmod.mblur%.cmd"
+					"text" : "r mblur%.module.cmd"
 				}
 
 			}
@@ -213,7 +213,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 17.0, 237.0, 111.0, 19.0 ],
-					"text" : "s jmod.mblur%.cmd"
+					"text" : "s mblur%.module.cmd"
 				}
 
 			}
@@ -338,7 +338,7 @@
 					"id" : "obj-20",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.mblur%.maxpat",
+					"name" : "mblur%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 309.0, 177.0, 300.0, 70.0 ],

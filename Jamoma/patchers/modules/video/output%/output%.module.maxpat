@@ -45,7 +45,7 @@
 					"args" : [ "#1" ],
 					"id" : "obj-5",
 					"maxclass" : "bpatcher",
-					"name" : "OUTput%.view.maxpat",
+					"name" : "output%.view.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
@@ -128,7 +128,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "OUTput%.view.maxpat",
+				"name" : "output%.view.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
