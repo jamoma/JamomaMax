@@ -5,32 +5,32 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="colormode' type='string">argb</command>
-    <command address="deinterlace' type='boolean">1</command>
-    <command address="dim' type='array">320.000000 240.000000 </command>
-    <command address="highquality' type='boolean">1</command>
-    <command address="loop' type='string">normal</command>
-    <command address="singlefield' type='boolean">0</command>
-    <command address="view/freeze' type='boolean">0</command>
-    <command address="unique' type='boolean">0</command>
-    <command address="video/bypass' type='boolean">0</command>
-    <command address="video/freeze' type='boolean">0</command>
-    <command address="video/mute' type='boolean">0</command>
-    <command address="video/preview' type='boolean">0</command>
+    <command address="colormode">argb</command>
+    <command address="deinterlace">1</command>
+    <command address="dim">320.000000 240.000000 </command>
+    <command address="highquality">1</command>
+    <command address="loop">normal</command>
+    <command address="singlefield">0</command>
+    <command address="view/freeze">0</command>
+    <command address="unique">0</command>
+    <command address="video/bypass">0</command>
+    <command address="video/freeze">0</command>
+    <command address="video/mute">0</command>
+    <command address="video/preview">0</command>
   </preset>
   <preset number='2' name='320x240'>
-    <command address="dim' type='array">320.000000 240.000000 </command>
+    <command address="dim">320.000000 240.000000 </command>
   </preset>
   <preset number='3' name='640x480 (NTSC)'>
-    <command address="dim' type='array">640.000000 320.000000 </command>
+    <command address="dim">640.000000 320.000000 </command>
   </preset>
   <preset number='4' name='720 480 (PAL)'>
-    <command address="dim' type='array">720.000000 480.000000 </command>
+    <command address="dim">720.000000 480.000000 </command>
   </preset>
   <preset number='5' name='Colormode ARGB'>
-    <command address="colormode' type='string">argb</command>
+    <command address="colormode">argb</command>
   </preset>
   <preset number='6' name='Colormode uyvy'>
-    <command address="colormode' type='string">uyvy</command>
+    <command address="colormode">uyvy</command>
   </preset>
 </jamoma>

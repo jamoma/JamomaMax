@@ -5,201 +5,201 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="numChannels' type='integer' priority='2">4</command>
-    <command address="type' type='string' priority='1">source</command>
-    <command address="source.1/position' type='array' priority='3">4 4 0.000000 </command>
-    <command address="source.2/position' type='array' priority='4">4 -4 0.000000 </command>
-    <command address="source.3/position' type='array' priority='5">-4 -4 0.000000 </command>
-    <command address="source.4/position' type='array' priority='6">-4 4 0.000000 </command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="view/highlight' type='string' priority='0">none</command>
+    <command address="numChannels">4</command>
+    <command address="type">source</command>
+    <command address="source.1/position">4 4 0.000000 </command>
+    <command address="source.2/position">4 -4 0.000000 </command>
+    <command address="source.3/position">-4 -4 0.000000 </command>
+    <command address="source.4/position">-4 4 0.000000 </command>
+    <command address="view/freeze">0</command>
+    <command address="view/highlight">none</command>
   </preset>
   <preset number='2' name='2 (2-0) channel stereo'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">2</command>
-    <command address="speaker.1/position' type='array' priority='3">-2.500000 4.330127 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">2.500000 4.330127 0.000000 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">2</command>
+    <command address="speaker.1/position">-2.500000 4.330127 0.000000 </command>
+    <command address="speaker.2/position">2.500000 4.330127 0.000000 </command>
   </preset>
   <preset number='3' name='3 (3-0) channel stereo'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">3</command>
-    <command address="speaker.1/position' type='array' priority='3">-2.500000 4.330127 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">0.000000 5.000000 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">2.500000 4.330127 0.000000 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">3</command>
+    <command address="speaker.1/position">-2.500000 4.330127 0.000000 </command>
+    <command address="speaker.2/position">0.000000 5.000000 0.000000 </command>
+    <command address="speaker.3/position">2.500000 4.330127 0.000000 </command>
   </preset>
   <preset number='4' name='4 (3-1) channel surround'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">4</command>
-    <command address="speaker.1/position' type='array' priority='3">-2.500000 4.330127 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">0.000000 5.000000 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">2.500000 4.330127 0.000000 </command>
-    <command address="speaker.4/position' type='array' priority='6">-0.000000 -5.000000 0.000000 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">4</command>
+    <command address="speaker.1/position">-2.500000 4.330127 0.000000 </command>
+    <command address="speaker.2/position">0.000000 5.000000 0.000000 </command>
+    <command address="speaker.3/position">2.500000 4.330127 0.000000 </command>
+    <command address="speaker.4/position">-0.000000 -5.000000 0.000000 </command>
   </preset>
   <preset number='5' name='ITU 5 (3-2) channel surround'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">5</command>
-    <command address="speaker.1/position' type='array' priority='3">-2.500000 4.330127 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">0.000000 5.000000 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">2.500000 4.330127 0.000000 </command>
-    <command address="speaker.4/position' type='array' priority='6">4.698463 -1.710101 0.000000 </command>
-    <command address="speaker.5/position' type='array' priority='7">-4.698463 -1.710101 0.000000 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">5</command>
+    <command address="speaker.1/position">-2.500000 4.330127 0.000000 </command>
+    <command address="speaker.2/position">0.000000 5.000000 0.000000 </command>
+    <command address="speaker.3/position">2.500000 4.330127 0.000000 </command>
+    <command address="speaker.4/position">4.698463 -1.710101 0.000000 </command>
+    <command address="speaker.5/position">-4.698463 -1.710101 0.000000 </command>
   </preset>
   <preset number='6' name='ITU 7 (3-4) channel surround'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">7</command>
-    <command address="speaker.1/position' type='array' priority='3">-2.500000 4.330127 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">0.000000 5.000000 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">2.500000 4.330127 0.000000 </command>
-    <command address="speaker.4/position' type='array' priority='6">5.000000 0.000000 0.000000 </command>
-    <command address="speaker.5/position' type='array' priority='7">2.500000 -4.330127 0.000000 </command>
-    <command address="speaker.6/position' type='array' priority='8">-2.500000 -4.330127 0.000000 </command>
-    <command address="speaker.7/position' type='array' priority='9">-5.000000 0.000000 0.000000 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">7</command>
+    <command address="speaker.1/position">-2.500000 4.330127 0.000000 </command>
+    <command address="speaker.2/position">0.000000 5.000000 0.000000 </command>
+    <command address="speaker.3/position">2.500000 4.330127 0.000000 </command>
+    <command address="speaker.4/position">5.000000 0.000000 0.000000 </command>
+    <command address="speaker.5/position">2.500000 -4.330127 0.000000 </command>
+    <command address="speaker.6/position">-2.500000 -4.330127 0.000000 </command>
+    <command address="speaker.7/position">-5.000000 0.000000 0.000000 </command>
   </preset>
   <preset number='7' name='Rig 2D 4 channels'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">4</command>
-    <command address="speaker.1/position' type='array' priority='3">-3.535534 3.535534 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">3.535534 3.535534 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">3.535534 -3.535534 0.000000 </command>
-    <command address="speaker.4/position' type='array' priority='6">-3.535534 -3.535534 0.000000 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">4</command>
+    <command address="speaker.1/position">-3.535534 3.535534 0.000000 </command>
+    <command address="speaker.2/position">3.535534 3.535534 0.000000 </command>
+    <command address="speaker.3/position">3.535534 -3.535534 0.000000 </command>
+    <command address="speaker.4/position">-3.535534 -3.535534 0.000000 </command>
   </preset>
   <preset number='8' name='Rig 2D 5 channels'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">5</command>
-    <command address="speaker.1/position' type='array' priority='3">-2.938926 4.045085 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">2.938926 4.045085 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">4.755282 -1.545085 0.000000 </command>
-    <command address="speaker.4/position' type='array' priority='6">-0.000000 -5.000000 0.000000 </command>
-    <command address="speaker.5/position' type='array' priority='7">-4.755282 -1.545085 0.000000 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">5</command>
+    <command address="speaker.1/position">-2.938926 4.045085 0.000000 </command>
+    <command address="speaker.2/position">2.938926 4.045085 0.000000 </command>
+    <command address="speaker.3/position">4.755282 -1.545085 0.000000 </command>
+    <command address="speaker.4/position">-0.000000 -5.000000 0.000000 </command>
+    <command address="speaker.5/position">-4.755282 -1.545085 0.000000 </command>
   </preset>
   <preset number='9' name='Rig 2D 6 channels'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">6</command>
-    <command address="speaker.1/position' type='array' priority='3">-2.500000 4.330127 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">2.500000 4.330127 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">5.000000 0.000000 0.000000 </command>
-    <command address="speaker.4/position' type='array' priority='6">2.500000 -4.330127 0.000000 </command>
-    <command address="speaker.5/position' type='array' priority='7">-2.500000 -4.330127 0.000000 </command>
-    <command address="speaker.6/position' type='array' priority='8">-5.000000 0.000000 0.000000 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">6</command>
+    <command address="speaker.1/position">-2.500000 4.330127 0.000000 </command>
+    <command address="speaker.2/position">2.500000 4.330127 0.000000 </command>
+    <command address="speaker.3/position">5.000000 0.000000 0.000000 </command>
+    <command address="speaker.4/position">2.500000 -4.330127 0.000000 </command>
+    <command address="speaker.5/position">-2.500000 -4.330127 0.000000 </command>
+    <command address="speaker.6/position">-5.000000 0.000000 0.000000 </command>
   </preset>
   <preset number='10' name='Rig 2D 8 channels 1'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">8</command>
-    <command address="speaker.1/position' type='array' priority='3">-1.913416 4.619398 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">1.913416 4.619398 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">4.619398 1.913417 0.000000 </command>
-    <command address="speaker.4/position' type='array' priority='6">4.619398 -1.913417 0.000000 </command>
-    <command address="speaker.5/position' type='array' priority='7">1.913416 -4.619398 0.000000 </command>
-    <command address="speaker.6/position' type='array' priority='8">-1.913416 -4.619398 0.000000 </command>
-    <command address="speaker.7/position' type='array' priority='9">-4.619398 -1.913417 0.000000 </command>
-    <command address="speaker.8/position' type='array' priority='10">-4.619398 1.913417 0.000000 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">8</command>
+    <command address="speaker.1/position">-1.913416 4.619398 0.000000 </command>
+    <command address="speaker.2/position">1.913416 4.619398 0.000000 </command>
+    <command address="speaker.3/position">4.619398 1.913417 0.000000 </command>
+    <command address="speaker.4/position">4.619398 -1.913417 0.000000 </command>
+    <command address="speaker.5/position">1.913416 -4.619398 0.000000 </command>
+    <command address="speaker.6/position">-1.913416 -4.619398 0.000000 </command>
+    <command address="speaker.7/position">-4.619398 -1.913417 0.000000 </command>
+    <command address="speaker.8/position">-4.619398 1.913417 0.000000 </command>
   </preset>
   <preset number='11' name='Rig 2D 8 channels 2'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">8</command>
-    <command address="speaker.1/position' type='array' priority='3">0.000000 5.000000 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">3.535534 3.535534 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">5.000000 0.000000 0.000000 </command>
-    <command address="speaker.4/position' type='array' priority='6">3.535534 -3.535534 0.000000 </command>
-    <command address="speaker.5/position' type='array' priority='7">-0.000000 -5.000000 0.000000 </command>
-    <command address="speaker.6/position' type='array' priority='8">-3.535534 -3.535534 0.000000 </command>
-    <command address="speaker.7/position' type='array' priority='9">-5.000000 0.000000 0.000000 </command>
-    <command address="speaker.8/position' type='array' priority='10">-3.535534 3.535534 0.000000 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">8</command>
+    <command address="speaker.1/position">0.000000 5.000000 0.000000 </command>
+    <command address="speaker.2/position">3.535534 3.535534 0.000000 </command>
+    <command address="speaker.3/position">5.000000 0.000000 0.000000 </command>
+    <command address="speaker.4/position">3.535534 -3.535534 0.000000 </command>
+    <command address="speaker.5/position">-0.000000 -5.000000 0.000000 </command>
+    <command address="speaker.6/position">-3.535534 -3.535534 0.000000 </command>
+    <command address="speaker.7/position">-5.000000 0.000000 0.000000 </command>
+    <command address="speaker.8/position">-3.535534 3.535534 0.000000 </command>
   </preset>
   <preset number='12' name='Rig 2D 12 channels'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numSpeakers' type='integer' priority='1">12</command>
-    <command address="speaker.1/position' type='array' priority='3">0.000000 5.000000 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">2.500000 4.330127 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">4.330127 2.500000 0.000000 </command>
-    <command address="speaker.4/position' type='array' priority='6">5.000000 0.000000 0.000000 </command>
-    <command address="speaker.5/position' type='array' priority='7">4.330127 -2.500000 0.000000 </command>
-    <command address="speaker.6/position' type='array' priority='8">2.500000 -4.330127 0.000000 </command>
-    <command address="speaker.7/position' type='array' priority='9">0.000000 -5.000000 0.000000 </command>
-    <command address="speaker.8/position' type='array' priority='10">-2.500000 -4.330127 0.000000 </command>
-    <command address="speaker.9/position' type='array' priority='11">-4.330127 -2.500000 0.000000 </command>
-    <command address="speaker.10/position' type='array' priority='12">-5.000000 -0.000000 0.000000 </command>
-    <command address="speaker.11/position' type='array' priority='13">-4.330127 2.500000 0.000000 </command>
-    <command address="speaker.12/position' type='array' priority='14">-2.500000 4.330127 0.000000 </command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numSpeakers">12</command>
+    <command address="speaker.1/position">0.000000 5.000000 0.000000 </command>
+    <command address="speaker.2/position">2.500000 4.330127 0.000000 </command>
+    <command address="speaker.3/position">4.330127 2.500000 0.000000 </command>
+    <command address="speaker.4/position">5.000000 0.000000 0.000000 </command>
+    <command address="speaker.5/position">4.330127 -2.500000 0.000000 </command>
+    <command address="speaker.6/position">2.500000 -4.330127 0.000000 </command>
+    <command address="speaker.7/position">0.000000 -5.000000 0.000000 </command>
+    <command address="speaker.8/position">-2.500000 -4.330127 0.000000 </command>
+    <command address="speaker.9/position">-4.330127 -2.500000 0.000000 </command>
+    <command address="speaker.10/position">-5.000000 -0.000000 0.000000 </command>
+    <command address="speaker.11/position">-4.330127 2.500000 0.000000 </command>
+    <command address="speaker.12/position">-2.500000 4.330127 0.000000 </command>
+    <command address="view/freeze">0</command>
   </preset>
   <preset number='13' name='Rig 2D 16 channels'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numSpeakers' type='integer' priority='1">16</command>
-    <command address="speaker.1/position' type='array' priority='3">0.000000 5.000000 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">1.913417 4.619398 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">3.535534 3.535534 0.000000 </command>
-    <command address="speaker.4/position' type='array' priority='6">4.619398 1.913417 0.000000 </command>
-    <command address="speaker.5/position' type='array' priority='7">5.000000 0.000000 0.000000 </command>
-    <command address="speaker.6/position' type='array' priority='8">4.619398 -1.913417 0.000000 </command>
-    <command address="speaker.7/position' type='array' priority='9">3.535534 -3.535534 0.000000 </command>
-    <command address="speaker.8/position' type='array' priority='10">1.913417 -4.619398 0.000000 </command>
-    <command address="speaker.9/position' type='array' priority='11">0.000000 -5.000000 0.000000 </command>
-    <command address="speaker.10/position' type='array' priority='12">-1.913417 -4.619398 0.000000 </command>
-    <command address="speaker.11/position' type='array' priority='13">-3.535534 -3.535534 0.000000 </command>
-    <command address="speaker.12/position' type='array' priority='14">-4.619398 -1.913417 0.000000 </command>
-    <command address="speaker.13/position' type='array' priority='15">-5.000000 -0.000000 0.000000 </command>
-    <command address="speaker.14/position' type='array' priority='16">-4.619398 1.913417 0.000000 </command>
-    <command address="speaker.15/position' type='array' priority='17">-3.535534 3.535534 0.000000 </command>
-    <command address="speaker.16/position' type='array' priority='18">-1.913417 4.619398 0.000000 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numSpeakers">16</command>
+    <command address="speaker.1/position">0.000000 5.000000 0.000000 </command>
+    <command address="speaker.2/position">1.913417 4.619398 0.000000 </command>
+    <command address="speaker.3/position">3.535534 3.535534 0.000000 </command>
+    <command address="speaker.4/position">4.619398 1.913417 0.000000 </command>
+    <command address="speaker.5/position">5.000000 0.000000 0.000000 </command>
+    <command address="speaker.6/position">4.619398 -1.913417 0.000000 </command>
+    <command address="speaker.7/position">3.535534 -3.535534 0.000000 </command>
+    <command address="speaker.8/position">1.913417 -4.619398 0.000000 </command>
+    <command address="speaker.9/position">0.000000 -5.000000 0.000000 </command>
+    <command address="speaker.10/position">-1.913417 -4.619398 0.000000 </command>
+    <command address="speaker.11/position">-3.535534 -3.535534 0.000000 </command>
+    <command address="speaker.12/position">-4.619398 -1.913417 0.000000 </command>
+    <command address="speaker.13/position">-5.000000 -0.000000 0.000000 </command>
+    <command address="speaker.14/position">-4.619398 1.913417 0.000000 </command>
+    <command address="speaker.15/position">-3.535534 3.535534 0.000000 </command>
+    <command address="speaker.16/position">-1.913417 4.619398 0.000000 </command>
   </preset>
   <preset number='14' name='Rig 3D 8 channels (Cube)'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">8</command>
-    <command address="speaker.1/position' type='array' priority='3">-2.896140 2.896140 2.867882 </command>
-    <command address="speaker.2/position' type='array' priority='4">2.896140 2.896140 2.867882 </command>
-    <command address="speaker.3/position' type='array' priority='5">2.896140 -2.896140 2.867882 </command>
-    <command address="speaker.4/position' type='array' priority='6">-2.896140 -2.896140 2.867882 </command>
-    <command address="speaker.5/position' type='array' priority='7">-2.896140 2.896140 -2.867882 </command>
-    <command address="speaker.6/position' type='array' priority='8">2.896140 2.896140 -2.867882 </command>
-    <command address="speaker.7/position' type='array' priority='9">2.896140 -2.896140 -2.867882 </command>
-    <command address="speaker.8/position' type='array' priority='10">-2.896140 -2.896140 -2.867882 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">8</command>
+    <command address="speaker.1/position">-2.896140 2.896140 2.867882 </command>
+    <command address="speaker.2/position">2.896140 2.896140 2.867882 </command>
+    <command address="speaker.3/position">2.896140 -2.896140 2.867882 </command>
+    <command address="speaker.4/position">-2.896140 -2.896140 2.867882 </command>
+    <command address="speaker.5/position">-2.896140 2.896140 -2.867882 </command>
+    <command address="speaker.6/position">2.896140 2.896140 -2.867882 </command>
+    <command address="speaker.7/position">2.896140 -2.896140 -2.867882 </command>
+    <command address="speaker.8/position">-2.896140 -2.896140 -2.867882 </command>
   </preset>
   <preset number='15' name='Rig 3D 12 channels (Dodecahedron1)'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">12</command>
-    <command address="speaker.1/position' type='array' priority='3">-0.000000 0.000000 5.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">-0.000000 0.000000 -5.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">-2.630147 3.620085 2.230989 </command>
-    <command address="speaker.4/position' type='array' priority='6">2.630147 -3.620086 -2.230989 </command>
-    <command address="speaker.5/position' type='array' priority='7">2.630147 3.620085 2.230989 </command>
-    <command address="speaker.6/position' type='array' priority='8">-2.630147 -3.620086 -2.230989 </command>
-    <command address="speaker.7/position' type='array' priority='9">-4.255666 -1.382750 2.230989 </command>
-    <command address="speaker.8/position' type='array' priority='10">4.255666 1.382748 -2.230989 </command>
-    <command address="speaker.9/position' type='array' priority='11">4.255666 -1.382750 2.230989 </command>
-    <command address="speaker.10/position' type='array' priority='12">-4.255666 1.382749 -2.230989 </command>
-    <command address="speaker.11/position' type='array' priority='13">-0.000000 -4.474672 2.230989 </command>
-    <command address="speaker.12/position' type='array' priority='14">0.000000 4.474672 -2.230989 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">12</command>
+    <command address="speaker.1/position">-0.000000 0.000000 5.000000 </command>
+    <command address="speaker.2/position">-0.000000 0.000000 -5.000000 </command>
+    <command address="speaker.3/position">-2.630147 3.620085 2.230989 </command>
+    <command address="speaker.4/position">2.630147 -3.620086 -2.230989 </command>
+    <command address="speaker.5/position">2.630147 3.620085 2.230989 </command>
+    <command address="speaker.6/position">-2.630147 -3.620086 -2.230989 </command>
+    <command address="speaker.7/position">-4.255666 -1.382750 2.230989 </command>
+    <command address="speaker.8/position">4.255666 1.382748 -2.230989 </command>
+    <command address="speaker.9/position">4.255666 -1.382750 2.230989 </command>
+    <command address="speaker.10/position">-4.255666 1.382749 -2.230989 </command>
+    <command address="speaker.11/position">-0.000000 -4.474672 2.230989 </command>
+    <command address="speaker.12/position">0.000000 4.474672 -2.230989 </command>
   </preset>
   <preset number='16' name='Rig 3D 12 channels 2 (Dodecahedron 2)'>
-    <command address="type' type='string' priority='1">speaker</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="numChannels' type='integer' priority='2">12</command>
-    <command address="speaker.1/position' type='array' priority='3">0.000000 5.000000 0.000000 </command>
-    <command address="speaker.2/position' type='array' priority='4">-0.000000 -5.000000 0.000000 </command>
-    <command address="speaker.3/position' type='array' priority='5">0.000000 2.230989 -4.474672 </command>
-    <command address="speaker.4/position' type='array' priority='6">-0.000000 -2.230989 4.474672 </command>
-    <command address="speaker.5/position' type='array' priority='7">-4.263248 2.219306 -1.378187 </command>
-    <command address="speaker.6/position' type='array' priority='8">4.263247 -2.219306 1.378187 </command>
-    <command address="speaker.7/position' type='array' priority='9">4.263247 2.219306 -1.378187 </command>
-    <command address="speaker.8/position' type='array' priority='10">-4.263247 -2.219306 1.378187 </command>
-    <command address="speaker.9/position' type='array' priority='11">-2.617144 2.235253 3.626872 </command>
-    <command address="speaker.10/position' type='array' priority='12">2.617144 -2.235253 -3.626872 </command>
-    <command address="speaker.11/position' type='array' priority='13">2.617144 2.235253 3.626872 </command>
-    <command address="speaker.12/position' type='array' priority='14">-2.617144 -2.235253 -3.626872 </command>
+    <command address="type">speaker</command>
+    <command address="view/freeze">0</command>
+    <command address="numChannels">12</command>
+    <command address="speaker.1/position">0.000000 5.000000 0.000000 </command>
+    <command address="speaker.2/position">-0.000000 -5.000000 0.000000 </command>
+    <command address="speaker.3/position">0.000000 2.230989 -4.474672 </command>
+    <command address="speaker.4/position">-0.000000 -2.230989 4.474672 </command>
+    <command address="speaker.5/position">-4.263248 2.219306 -1.378187 </command>
+    <command address="speaker.6/position">4.263247 -2.219306 1.378187 </command>
+    <command address="speaker.7/position">4.263247 2.219306 -1.378187 </command>
+    <command address="speaker.8/position">-4.263247 -2.219306 1.378187 </command>
+    <command address="speaker.9/position">-2.617144 2.235253 3.626872 </command>
+    <command address="speaker.10/position">2.617144 -2.235253 -3.626872 </command>
+    <command address="speaker.11/position">2.617144 2.235253 3.626872 </command>
+    <command address="speaker.12/position">-2.617144 -2.235253 -3.626872 </command>
   </preset>
 </jamoma>

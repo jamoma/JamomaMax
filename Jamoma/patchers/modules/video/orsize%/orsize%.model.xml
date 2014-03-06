@@ -5,20 +5,20 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="angle' type='integer">0</command>
-    <command address="boundmode' type='string">clip</command>
-    <command address="mirror' type='boolean">1</command>
-    <command address="offsetX' type='decimal">0.000000</command>
-    <command address="offsetY' type='decimal">0.000000</command>
-    <command address="rotate1' type='boolean">0</command>
-    <command address="rotate2' type='boolean">0</command>
-    <command address="video/bypass' type='boolean">0</command>
-    <command address="video/freeze' type='boolean">0</command>
-    <command address="video/mute' type='boolean">0</command>
-    <command address="video/preview' type='boolean">0</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="angle">0</command>
+    <command address="boundmode">clip</command>
+    <command address="mirror">1</command>
+    <command address="offsetX">0.000000</command>
+    <command address="offsetY">0.000000</command>
+    <command address="rotate1">0</command>
+    <command address="rotate2">0</command>
+    <command address="video/bypass">0</command>
+    <command address="video/freeze">0</command>
+    <command address="video/mute">0</command>
+    <command address="video/preview">0</command>
+    <command address="view/freeze">0</command>
 
-    <command address="zoomX' type='decimal">1.000000</command>
-    <command address="zoomY' type='decimal">1.000000</command>
+    <command address="zoomX">1.000000</command>
+    <command address="zoomY">1.000000</command>
   </preset>
 </jamoma>

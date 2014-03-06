@@ -5,21 +5,21 @@
         xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="edit' type='string">edit</command>
-    <command address="in/action' type='integer">0</command>
-    <command address="in/direct' type='generic">0</command>
-    <command address="in/message' type='generic">0</command>
-    <command address="in/module/derivative' type='integer">0</command>
-    <command address="in/module/listindex' type='integer">0</command>
-    <command address="in/value' type='decimal">0.000000</command>
-    <command address="in/value/variation' type='decimal">0</command>
-    <command address="out/action' type='integer">0</command>
-    <command address="out/direct' type='generic">0</command>  
-    <command address="out/message' type='generic">0</command>
-    <command address="out/ramp' type='integer">0</command>
-    <command address="out/value' type='decimal">0.000000</command>
-    <command address="time/repeat' type='decimal">0.000000</command>
-    <command address="time/wait' type='decimal">0</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="edit">edit</command>
+    <command address="in/action">0</command>
+    <command address="in/direct">0</command>
+    <command address="in/message">0</command>
+    <command address="in/module/derivative">0</command>
+    <command address="in/module/listindex">0</command>
+    <command address="in/value">0.000000</command>
+    <command address="in/value/variation">0</command>
+    <command address="out/action">0</command>
+    <command address="out/direct">0</command>  
+    <command address="out/message">0</command>
+    <command address="out/ramp">0</command>
+    <command address="out/value">0.000000</command>
+    <command address="time/repeat">0.000000</command>
+    <command address="time/wait">0</command>
+    <command address="view/freeze">0</command>
   </preset>
 </jamoma>

@@ -5,32 +5,32 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="port' type='integer">0</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="port">0</command>
+    <command address="view/freeze">0</command>
   </preset>
   <preset number='2' name='Max0'>
-    <command address="port' type='integer">4000</command>
-    <command address="service_name' type='string">Max</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="port">4000</command>
+    <command address="service_name">Max</command>
+    <command address="view/freeze">0</command>
   </preset>
   <preset number='3' name='Bob1'>
-    <command address="port' type='integer">4001</command>
-    <command address="service_name' type='string">Bob</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="port">4001</command>
+    <command address="service_name">Bob</command>
+    <command address="view/freeze">0</command>
   </preset>
   <preset number='4' name='Joe0'>
-    <command address="port' type='integer">4000</command>
-    <command address="service_name' type='string">Joe</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="port">4000</command>
+    <command address="service_name">Joe</command>
+    <command address="view/freeze">0</command>
   </preset>
   <preset number='5' name='Bill1'>
-    <command address="port' type='integer">4001</command>
-    <command address="service_name' type='string">Bill</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="port">4001</command>
+    <command address="service_name">Bill</command>
+    <command address="view/freeze">0</command>
   </preset>
   <preset number='6' name='Joe2'>
-    <command address="port' type='integer">4002</command>
-    <command address="service_name' type='string">Joe</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="port">4002</command>
+    <command address="service_name">Joe</command>
+    <command address="view/freeze">0</command>
   </preset>
 </jamoma>

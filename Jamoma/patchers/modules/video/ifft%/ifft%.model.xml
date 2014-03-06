@@ -5,14 +5,14 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="clear/auto' type='boolean' priority='0">1</command>
-    <command address="dim' type='array">128.000000 128.000000 </command>
-    <command address="stripImaginaryPlane' type='boolean' priority='0">0</command>
-    <command address="video/bypass' type='boolean' priority='0">0</command>
-    <command address="video/freeze' type='boolean' priority='0">0</command>
-    <command address="video/mute' type='boolean' priority='0">0</command>
-    <command address="video/preview' type='boolean' priority='0">0</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
+    <command address="clear/auto">1</command>
+    <command address="dim">128.000000 128.000000 </command>
+    <command address="stripImaginaryPlane">0</command>
+    <command address="video/bypass">0</command>
+    <command address="video/freeze">0</command>
+    <command address="video/mute">0</command>
+    <command address="video/preview">0</command>
+    <command address="view/freeze">0</command>
 
   </preset>
 </jamoma>

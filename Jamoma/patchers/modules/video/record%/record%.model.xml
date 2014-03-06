@@ -5,16 +5,16 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="codec' type='string' priority='0">0</command>
-    <command address="framerate' type='decimal' priority='0">1.000000</command>
-    <command address="interp' type='boolean' priority='0">0</command>
-    <command address="quality' type='string' priority='0">0</command>
-    <command address="realtime' type='boolean' priority='0">0</command>
-    <command address="video/bypass' type='boolean' priority='0">0</command>
-    <command address="video/freeze' type='boolean' priority='0">0</command>
-    <command address="video/mute' type='boolean' priority='0">0</command>
-    <command address="video/preview' type='boolean' priority='0">0</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="view/highlight' type='string' priority='0">none</command>
+    <command address="codec">0</command>
+    <command address="framerate">1.000000</command>
+    <command address="interp">0</command>
+    <command address="quality">0</command>
+    <command address="realtime">0</command>
+    <command address="video/bypass">0</command>
+    <command address="video/freeze">0</command>
+    <command address="video/mute">0</command>
+    <command address="video/preview">0</command>
+    <command address="view/freeze">0</command>
+    <command address="view/highlight">none</command>
   </preset>
 </jamoma>

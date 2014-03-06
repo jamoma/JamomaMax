@@ -6,7 +6,7 @@
 >
 	
 	<preset number="1" name="default">
-    	<command address="view/freeze' type='boolean">0</command>
+    	<command address="view/freeze">0</command>
 		<item name="toggle" type="integer">0</item>
 		<item name="time" type="integer">40</item>
 		<item name="randomness" type="integer">0</item>

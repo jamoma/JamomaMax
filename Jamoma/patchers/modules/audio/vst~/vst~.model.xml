@@ -5,10 +5,10 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="audio/bypass' type='boolean">0</command>
-    <command address="audio/gain' type='decimal">0</command>
-    <command address="audio/mix' type='decimal">100.</command>
-    <command address="audio/mute' type='boolean">1</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="audio/bypass">0</command>
+    <command address="audio/gain">0</command>
+    <command address="audio/mix">100.</command>
+    <command address="audio/mute">1</command>
+    <command address="view/freeze">0</command>
   </preset>
 </jamoma>

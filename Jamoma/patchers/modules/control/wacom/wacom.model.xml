@@ -5,13 +5,13 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="bgrd' type='boolean">0</command>
-    <command address="flusheventqueue' type='boolean">1</command>
-    <command address="menu' type='generic">0</command>
-    <command address="nopointer' type='boolean">1</command>
-    <command address="on' type='boolean">1</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="bgrd">0</command>
+    <command address="flusheventqueue">1</command>
+    <command address="menu">0</command>
+    <command address="nopointer">1</command>
+    <command address="on">1</command>
+    <command address="view/freeze">0</command>
 
-    <command address="xyrange' type='generic">1</command>
+    <command address="xyrange">1</command>
   </preset>
 </jamoma>

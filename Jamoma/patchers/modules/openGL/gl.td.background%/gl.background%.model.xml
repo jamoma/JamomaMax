@@ -5,39 +5,39 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="3D/position' type='array">0.000000 0.000000 0.000000 </command>
-    <command address="3D/rotate' type='array">0.000000 0.000000 1.000000 0.000000 </command>
-    <command address="3D/scale' type='array">1.000000 1.000000 1.000000 </command>
-    <command address="blend/enable' type='boolean">0</command>
-    <command address="blend/mode' type='array">6 7 </command>
-    <command address="bypass' type='boolean">0</command>
-    <command address="color/alpha' type='decimal">1.000000</command>
-    <command address="color/inherit' type='boolean">0</command>
-    <command address="color/rgb' type='array">1.000000 1.000000 1.000000 </command>
-    <command address="depth/clear' type='boolean">0</command>
-    <command address="depth/enable' type='boolean">1</command>
-    <command address="depth/inherit' type='boolean">0</command>
-    <command address="fog/amount' type='decimal">0</command>
-    <command address="fog/inherit' type='boolean">0</command>
-    <command address="fog/params' type='array">0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </command>
-    <command address="freeze' type='boolean">0</command>
-    <command address="material/automatic' type='boolean">1</command>
-    <command address="material/inherit' type='boolean">0</command>
-    <command address="material/light/ambient' type='array">0.000000 0.000000 0.000000 0.000000 </command>
-    <command address="material/light/diffuse' type='array">0.000000 0.000000 0.000000 0.000000 </command>
-    <command address="material/light/emission' type='array">0.000000 0.000000 0.000000 0.000000 </command>
-    <command address="material/light/enable' type='boolean">0</command>
-    <command address="material/light/specular' type='array">0.000000 0.000000 0.000000 0.000000 </command>
-    <command address="material/shininess' type='decimal">16.000000</command>
-    <command address="mute' type='boolean">0</command>
-    <command address="preview' type='boolean">0</command>
-    <command address="render/antialias' type='boolean">0</command>
-    <command address="render/automatic' type='boolean">1</command>
-    <command address="render/context' type='string">none</command>
-    <command address="render/enable' type='boolean">1</command>
-    <command address="render/layer' type='integer">0</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="3D/position">0.000000 0.000000 0.000000 </command>
+    <command address="3D/rotate">0.000000 0.000000 1.000000 0.000000 </command>
+    <command address="3D/scale">1.000000 1.000000 1.000000 </command>
+    <command address="blend/enable">0</command>
+    <command address="blend/mode">6 7 </command>
+    <command address="bypass">0</command>
+    <command address="color/alpha">1.000000</command>
+    <command address="color/inherit">0</command>
+    <command address="color/rgb">1.000000 1.000000 1.000000 </command>
+    <command address="depth/clear">0</command>
+    <command address="depth/enable">1</command>
+    <command address="depth/inherit">0</command>
+    <command address="fog/amount">0</command>
+    <command address="fog/inherit">0</command>
+    <command address="fog/params">0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </command>
+    <command address="freeze">0</command>
+    <command address="material/automatic">1</command>
+    <command address="material/inherit">0</command>
+    <command address="material/light/ambient">0.000000 0.000000 0.000000 0.000000 </command>
+    <command address="material/light/diffuse">0.000000 0.000000 0.000000 0.000000 </command>
+    <command address="material/light/emission">0.000000 0.000000 0.000000 0.000000 </command>
+    <command address="material/light/enable">0</command>
+    <command address="material/light/specular">0.000000 0.000000 0.000000 0.000000 </command>
+    <command address="material/shininess">16.000000</command>
+    <command address="mute">0</command>
+    <command address="preview">0</command>
+    <command address="render/antialias">0</command>
+    <command address="render/automatic">1</command>
+    <command address="render/context">none</command>
+    <command address="render/enable">1</command>
+    <command address="render/layer">0</command>
+    <command address="view/freeze">0</command>
 
-    <command address="weight' type='decimal">0.995000</command>
+    <command address="weight">0.995000</command>
   </preset>
 </jamoma>

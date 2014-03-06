@@ -5,16 +5,16 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="filter/active' type='boolean">0</command>
-    <command address="filter/threshold' type='decimal">0</command>
-    <command address="mode' type='integer">2</command>
-    <command address="noise/active' type='boolean">1</command>
-    <command address="noise/threshold' type='decimal">100.000000</command>
-    <command address="record' type='integer">0</command>
-    <command address="view/freeze' type='boolean">0</command>
-    <command address="video/bypass' type='boolean">0</command>
-    <command address="video/freeze' type='boolean">0</command>
-    <command address="video/mute' type='boolean">0</command>
-    <command address="video/preview' type='boolean">0</command>
+    <command address="filter/active">0</command>
+    <command address="filter/threshold">0</command>
+    <command address="mode">2</command>
+    <command address="noise/active">1</command>
+    <command address="noise/threshold">100.000000</command>
+    <command address="record">0</command>
+    <command address="view/freeze">0</command>
+    <command address="video/bypass">0</command>
+    <command address="video/freeze">0</command>
+    <command address="video/mute">0</command>
+    <command address="video/preview">0</command>
   </preset>
 </jamoma>

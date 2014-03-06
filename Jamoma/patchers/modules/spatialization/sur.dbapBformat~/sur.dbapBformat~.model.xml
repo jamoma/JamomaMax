@@ -5,20 +5,20 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="audio/gain' type='decimal' priority='0">100.000000</command>
-    <command address="audio/mute' type='boolean' priority='0">0</command>
-    <command address="numSources' type='integer' priority='2">8</command>
-    <command address="numSpeakers' type='integer' priority='3">8</command>
-    <command address="rolloff' type='decimal' priority='0">6.000000</command>
-    <command address="source.1/weight' type='array' priority='0">1.000000</command>
-    <command address="source.2/weight' type='array' priority='0">1.000000</command>
-    <command address="source.3/weight' type='array' priority='0">1.000000</command>
-    <command address="source.4/weight' type='array' priority='0">1.000000</command>
-    <command address="source.5/weight' type='array' priority='0">1.000000</command>
-    <command address="source.6/weight' type='array' priority='0">1.000000</command>
-    <command address="source.7/weight' type='array' priority='0">1.000000</command>
-    <command address="source.8/weight' type='array' priority='0">1.000000</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
+    <command address="audio/gain">100.000000</command>
+    <command address="audio/mute">0</command>
+    <command address="numSources">8</command>
+    <command address="numSpeakers">8</command>
+    <command address="rolloff">6.000000</command>
+    <command address="source.1/weight">1.000000</command>
+    <command address="source.2/weight">1.000000</command>
+    <command address="source.3/weight">1.000000</command>
+    <command address="source.4/weight">1.000000</command>
+    <command address="source.5/weight">1.000000</command>
+    <command address="source.6/weight">1.000000</command>
+    <command address="source.7/weight">1.000000</command>
+    <command address="source.8/weight">1.000000</command>
+    <command address="view/freeze">0</command>
 
   </preset>
 </jamoma>

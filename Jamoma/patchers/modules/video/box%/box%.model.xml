@@ -5,23 +5,23 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="/centroid/size' type='integer">1</command>
-    <command address="/contraction/window/on' type='boolean">0</command>
-    <command address="/contraction/window/size' type='integer">0</command>
-    <command address="centroid/color' type='array">147 224 0 </command>
-    <command address="centroid/on' type='boolean">1</command>
-    <command address="centroid/size/on' type='boolean">0</command>
-    <command address="contraction/color' type='array">255 126 31 </command>
-    <command address="contraction/max/color' type='array">0 255 252 </command>
-    <command address="contraction/max/on' type='boolean">1</command>
-    <command address="contraction/on' type='boolean">1</command>
-    <command address="contraction/slide' type='decimal">0.000000</command>
-    <command address="data/smoothing' type='decimal">0.000000</command>
-    <command address="video/bypass' type='boolean">0</command>
-    <command address="video/freeze' type='boolean">0</command>
-    <command address="video/mute' type='boolean">0</command>
-    <command address="video/preview' type='boolean">0</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="/centroid/size">1</command>
+    <command address="/contraction/window/on">0</command>
+    <command address="/contraction/window/size">0</command>
+    <command address="centroid/color">147 224 0 </command>
+    <command address="centroid/on">1</command>
+    <command address="centroid/size/on">0</command>
+    <command address="contraction/color">255 126 31 </command>
+    <command address="contraction/max/color">0 255 252 </command>
+    <command address="contraction/max/on">1</command>
+    <command address="contraction/on">1</command>
+    <command address="contraction/slide">0.000000</command>
+    <command address="data/smoothing">0.000000</command>
+    <command address="video/bypass">0</command>
+    <command address="video/freeze">0</command>
+    <command address="video/mute">0</command>
+    <command address="video/preview">0</command>
+    <command address="view/freeze">0</command>
 
   </preset>
 </jamoma>

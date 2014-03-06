@@ -5,15 +5,15 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="audio/bypass' type='boolean' priority='0">0</command>
-    <command address="audio/gain' type='decimal' priority='0">64.000000</command>
-    <command address="audio/mute' type='boolean' priority='0">0</command>
-    <command address="harmonicsteps' type='decimal' priority='0">50.000000</command>
-    <command address="offset' type='decimal' priority='0">0.000000</command>
-    <command address="scaling' type='decimal' priority='0">1.000000</command>
-    <command address="smooth/frequency' type='decimal' priority='0">100.000000</command>
-    <command address="smooth/magnitude' type='decimal' priority='0">100.000000</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
+    <command address="audio/bypass">0</command>
+    <command address="audio/gain">64.000000</command>
+    <command address="audio/mute">0</command>
+    <command address="harmonicsteps">50.000000</command>
+    <command address="offset">0.000000</command>
+    <command address="scaling">1.000000</command>
+    <command address="smooth/frequency">100.000000</command>
+    <command address="smooth/magnitude">100.000000</command>
+    <command address="view/freeze">0</command>
 
   </preset>
 </jamoma>

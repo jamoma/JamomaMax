@@ -5,9 +5,9 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="active' type='boolean">0</command>
-    <command address="device' type='string">0</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="active">0</command>
+    <command address="device">0</command>
+    <command address="view/freeze">0</command>
 
   </preset>
 </jamoma>

@@ -5,14 +5,14 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="normalize' type='boolean">0</command>
-    <command address="bleed' type='decimal">0.15</command>
-    <command address="gain' type='decimal">1.</command>
-    <command address="feedback' type='decimal">0.6</command>
-    <command address="feedforward' type='decimal">0.1</command>
-    <command address="video/mute' type='boolean">0</command>
-    <command address="video/freeze' type='boolean">0</command>
-    <command address="video/bypass' type='boolean">0</command>
-    <command address="video/preview' type='boolean">0</command>
+    <command address="normalize">0</command>
+    <command address="bleed">0.15</command>
+    <command address="gain">1.</command>
+    <command address="feedback">0.6</command>
+    <command address="feedforward">0.1</command>
+    <command address="video/mute">0</command>
+    <command address="video/freeze">0</command>
+    <command address="video/bypass">0</command>
+    <command address="video/preview">0</command>
   </preset>
 </jamoma>

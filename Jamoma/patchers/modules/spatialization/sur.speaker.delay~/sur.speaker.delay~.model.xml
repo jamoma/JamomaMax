@@ -5,10 +5,10 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="audio/bypass' type='boolean">0</command>
-    <command address="automatic' type='boolean">1</command>
-    <command address="numSpeakers' type='integer">0</command>
-    <command address="temperature' type='decimal">20.000000</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="audio/bypass">0</command>
+    <command address="automatic">1</command>
+    <command address="numSpeakers">0</command>
+    <command address="temperature">20.000000</command>
+    <command address="view/freeze">0</command>
   </preset>
 </jamoma>

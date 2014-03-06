@@ -5,13 +5,13 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="algorithm' type='generic">1</command>
-    <command address="mode' type='generic">2</command>
-    <command address="video/bypass' type='boolean">0</command>
-    <command address="video/freeze' type='boolean">0</command>
-    <command address="video/mute' type='boolean">0</command>
-    <command address="video/preview' type='boolean">0</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="algorithm">1</command>
+    <command address="mode">2</command>
+    <command address="video/bypass">0</command>
+    <command address="video/freeze">0</command>
+    <command address="video/mute">0</command>
+    <command address="video/preview">0</command>
+    <command address="view/freeze">0</command>
 
   </preset>
 </jamoma>

@@ -5,9 +5,9 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="depth' type='integer">1</command>
-    <command address="folder' type='string">0</command>
-    <command address="type' type='string">all</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="depth">1</command>
+    <command address="folder">0</command>
+    <command address="type">all</command>
+    <command address="view/freeze">0</command>
   </preset>
 </jamoma>

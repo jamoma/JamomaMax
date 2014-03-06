@@ -5,11 +5,11 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="display.1' type='string">Jamoma</command>
-    <command address="display.2' type='string">Message Display Module</command>
-    <command address="display.3' type='string">Welcome...</command>
-    <command address="display.4' type='string">...</command>
-    <command address="display.5' type='string">...</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="display.1">Jamoma</command>
+    <command address="display.2">Message Display Module</command>
+    <command address="display.3">Welcome...</command>
+    <command address="display.4">...</command>
+    <command address="display.5">...</command>
+    <command address="view/freeze">0</command>
   </preset>
 </jamoma>

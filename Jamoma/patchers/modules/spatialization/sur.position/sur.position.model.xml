@@ -5,24 +5,24 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="offset' type='integer">0</command>
-    <command address="source.1/blur' type='decimal">0.000000</command>
-    <command address="source.1/position' type='array">0.000000 0.000000 0.000000 </command>
-    <command address="source.2/blur' type='decimal">0.000000</command>
-    <command address="source.2/position' type='array">0.000000 0.000000 0.000000 </command>
-    <command address="source.3/blur' type='decimal">0.000000</command>
-    <command address="source.3/position' type='array">0.000000 0.000000 0.000000 </command>
-    <command address="source.4/blur' type='decimal">0.000000</command>
-    <command address="source.4/position' type='array">0.000000 0.000000 0.000000 </command>
-    <command address="source.5/blur' type='decimal">0.000000</command>
-    <command address="source.5/position' type='array">0.000000 0.000000 0.000000 </command>
-    <command address="source.6/blur' type='decimal">0.000000</command>
-    <command address="source.6/position' type='array">0.000000 0.000000 0.000000 </command>
-    <command address="source.7/blur' type='decimal">0.000000</command>
-    <command address="source.7/position' type='array">0.000000 0.000000 0.000000 </command>
-    <command address="source.8/blur' type='decimal">0.000000</command>
-    <command address="source.8/position' type='array">0.000000 0.000000 0.000000 </command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="offset">0</command>
+    <command address="source.1/blur">0.000000</command>
+    <command address="source.1/position">0.000000 0.000000 0.000000 </command>
+    <command address="source.2/blur">0.000000</command>
+    <command address="source.2/position">0.000000 0.000000 0.000000 </command>
+    <command address="source.3/blur">0.000000</command>
+    <command address="source.3/position">0.000000 0.000000 0.000000 </command>
+    <command address="source.4/blur">0.000000</command>
+    <command address="source.4/position">0.000000 0.000000 0.000000 </command>
+    <command address="source.5/blur">0.000000</command>
+    <command address="source.5/position">0.000000 0.000000 0.000000 </command>
+    <command address="source.6/blur">0.000000</command>
+    <command address="source.6/position">0.000000 0.000000 0.000000 </command>
+    <command address="source.7/blur">0.000000</command>
+    <command address="source.7/position">0.000000 0.000000 0.000000 </command>
+    <command address="source.8/blur">0.000000</command>
+    <command address="source.8/position">0.000000 0.000000 0.000000 </command>
+    <command address="view/freeze">0</command>
 
   </preset>
 </jamoma>

@@ -5,10 +5,10 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="audio/gain' type='decimal">100.000000</command>
-    <command address="audio/mute' type='boolean">0</command>
-    <command address="countdown' type='boolean">0</command>
-    <command address="loop' type='boolean">0</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="audio/gain">100.000000</command>
+    <command address="audio/mute">0</command>
+    <command address="countdown">0</command>
+    <command address="loop">0</command>
+    <command address="view/freeze">0</command>
   </preset>
 </jamoma>

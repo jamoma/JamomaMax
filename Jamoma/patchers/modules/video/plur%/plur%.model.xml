@@ -5,19 +5,19 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="colormode' type='string">wrap</command>
-    <command address="gang' type='boolean">1</command>
-    <command address="mode' type='integer">0</command>
-    <command address="scale' type='integer">8</command>
-    <command address="video/bypass' type='boolean">0</command>
-    <command address="video/freeze' type='boolean">0</command>
-    <command address="video/mute' type='boolean">0</command>
-    <command address="video/preview' type='boolean">0</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="colormode">wrap</command>
+    <command address="gang">1</command>
+    <command address="mode">0</command>
+    <command address="scale">8</command>
+    <command address="video/bypass">0</command>
+    <command address="video/freeze">0</command>
+    <command address="video/mute">0</command>
+    <command address="video/preview">0</command>
+    <command address="view/freeze">0</command>
 
-    <command address="x/range' type='integer">25</command>
-    <command address="x/step' type='integer">30</command>
-    <command address="y/range' type='integer">25</command>
-    <command address="y/step' type='integer">30</command>
+    <command address="x/range">25</command>
+    <command address="x/step">30</command>
+    <command address="y/range">25</command>
+    <command address="y/step">30</command>
   </preset>
 </jamoma>

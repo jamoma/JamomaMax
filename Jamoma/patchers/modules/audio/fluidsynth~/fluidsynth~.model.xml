@@ -5,19 +5,19 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="audio/gain' type='decimal">0.000000</command>
-    <command address="audio/mute' type='boolean">1</command>
-    <command address="chorus/active' type='boolean">0</command>
-    <command address="chorus/depth' type='decimal">40</command>
-    <command address="chorus/level' type='decimal">10</command>
-    <command address="chorus/speed' type='decimal">0.5</command>
-    <command address="chorus/type' type='integer">0</command>
-    <command address="chorus/units' type='integer">10</command>
-    <command address="reverb/active' type='boolean">0</command>
-    <command address="reverb/damping' type='decimal">0.5</command>
-    <command address="reverb/level' type='decimal">1.</command>
-    <command address="reverb/roomsize' type='decimal">0.8</command>
-    <command address="reverb/width' type='decimal">0.7</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="audio/gain">0.000000</command>
+    <command address="audio/mute">1</command>
+    <command address="chorus/active">0</command>
+    <command address="chorus/depth">40</command>
+    <command address="chorus/level">10</command>
+    <command address="chorus/speed">0.5</command>
+    <command address="chorus/type">0</command>
+    <command address="chorus/units">10</command>
+    <command address="reverb/active">0</command>
+    <command address="reverb/damping">0.5</command>
+    <command address="reverb/level">1.</command>
+    <command address="reverb/roomsize">0.8</command>
+    <command address="reverb/width">0.7</command>
+    <command address="view/freeze">0</command>
   </preset>
 </jamoma>

@@ -5,15 +5,15 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="clip' type='boolean">1</command>
-    <command address="repetitions' type='boolean">0</command>
-    <command address="scale/input/max' type='decimal">0</command>
-    <command address="scale/input/min' type='decimal">0</command>
-    <command address="scale/output/max' type='decimal">127.000000</command>
-    <command address="scale/output/min' type='decimal">0</command>
-    <command address="scale' type='generic">2</command>
-    <command address="smooth' type='boolean">1</command>
-    <command address="smooth/value' type='decimal">2.000000</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="clip">1</command>
+    <command address="repetitions">0</command>
+    <command address="scale/input/max">0</command>
+    <command address="scale/input/min">0</command>
+    <command address="scale/output/max">127.000000</command>
+    <command address="scale/output/min">0</command>
+    <command address="scale">2</command>
+    <command address="smooth">1</command>
+    <command address="smooth/value">2.000000</command>
+    <command address="view/freeze">0</command>
   </preset>
 </jamoma>

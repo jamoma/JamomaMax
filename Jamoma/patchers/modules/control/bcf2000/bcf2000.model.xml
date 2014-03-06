@@ -5,403 +5,403 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="button.1' type='boolean">0</command>
-    <command address="button.2' type='boolean">0</command>
-    <command address="button.3' type='boolean">0</command>
-    <command address="button.4' type='boolean">0</command>
-    <command address="foot/control' type='integer">0</command>
-    <command address="foot/switch' type='boolean">0</command>
-    <command address="midiIn' type='string">BCF2000</command>
-    <command address="midiOut' type='string">BCF2000</command>
-    <command address="track.1/fader' type='integer">0</command>
-    <command address="track.1/key.lower' type='boolean">0</command>
-    <command address="track.1/key.upper' type='boolean">0</command>
-    <command address="track.1/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.1/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.1/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.1/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.2/fader' type='integer">0</command>
-    <command address="track.2/key.lower' type='boolean">0</command>
-    <command address="track.2/key.upper' type='boolean">0</command>
-    <command address="track.2/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.2/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.2/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.2/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.3/fader' type='integer">0</command>
-    <command address="track.3/key.lower' type='boolean">0</command>
-    <command address="track.3/key.upper' type='boolean">0</command>
-    <command address="track.3/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.3/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.3/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.3/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.4/fader' type='integer">0</command>
-    <command address="track.4/key.lower' type='boolean">0</command>
-    <command address="track.4/key.upper' type='boolean">0</command>
-    <command address="track.4/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.4/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.4/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.4/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.5/fader' type='integer">0</command>
-    <command address="track.5/key.lower' type='boolean">0</command>
-    <command address="track.5/key.upper' type='boolean">0</command>
-    <command address="track.5/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.5/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.5/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.5/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.6/fader' type='integer">0</command>
-    <command address="track.6/key.lower' type='boolean">0</command>
-    <command address="track.6/key.upper' type='boolean">0</command>
-    <command address="track.6/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.6/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.6/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.6/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.7/fader' type='integer">0</command>
-    <command address="track.7/key.lower' type='boolean">0</command>
-    <command address="track.7/key.upper' type='boolean">0</command>
-    <command address="track.7/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.7/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.7/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.7/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.8/fader' type='integer">0</command>
-    <command address="track.8/key.lower' type='boolean">0</command>
-    <command address="track.8/key.upper' type='boolean">0</command>
-    <command address="track.8/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.8/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.8/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.8/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.4/turn' type='integer">0</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="button.1">0</command>
+    <command address="button.2">0</command>
+    <command address="button.3">0</command>
+    <command address="button.4">0</command>
+    <command address="foot/control">0</command>
+    <command address="foot/switch">0</command>
+    <command address="midiIn">BCF2000</command>
+    <command address="midiOut">BCF2000</command>
+    <command address="track.1/fader">0</command>
+    <command address="track.1/key.lower">0</command>
+    <command address="track.1/key.upper">0</command>
+    <command address="track.1/pushEncoder.1/press">0</command>
+    <command address="track.1/pushEncoder.1/turn">0</command>
+    <command address="track.1/pushEncoder.2/press">0</command>
+    <command address="track.1/pushEncoder.2/turn">0</command>
+    <command address="track.1/pushEncoder.3/press">0</command>
+    <command address="track.1/pushEncoder.3/turn">0</command>
+    <command address="track.1/pushEncoder.4/press">0</command>
+    <command address="track.1/pushEncoder.4/turn">0</command>
+    <command address="track.2/fader">0</command>
+    <command address="track.2/key.lower">0</command>
+    <command address="track.2/key.upper">0</command>
+    <command address="track.2/pushEncoder.1/press">0</command>
+    <command address="track.2/pushEncoder.1/turn">0</command>
+    <command address="track.2/pushEncoder.2/press">0</command>
+    <command address="track.2/pushEncoder.2/turn">0</command>
+    <command address="track.2/pushEncoder.3/press">0</command>
+    <command address="track.2/pushEncoder.3/turn">0</command>
+    <command address="track.2/pushEncoder.4/press">0</command>
+    <command address="track.2/pushEncoder.4/turn">0</command>
+    <command address="track.3/fader">0</command>
+    <command address="track.3/key.lower">0</command>
+    <command address="track.3/key.upper">0</command>
+    <command address="track.3/pushEncoder.1/press">0</command>
+    <command address="track.3/pushEncoder.1/turn">0</command>
+    <command address="track.3/pushEncoder.2/press">0</command>
+    <command address="track.3/pushEncoder.2/turn">0</command>
+    <command address="track.3/pushEncoder.3/press">0</command>
+    <command address="track.3/pushEncoder.3/turn">0</command>
+    <command address="track.3/pushEncoder.4/press">0</command>
+    <command address="track.3/pushEncoder.4/turn">0</command>
+    <command address="track.4/fader">0</command>
+    <command address="track.4/key.lower">0</command>
+    <command address="track.4/key.upper">0</command>
+    <command address="track.4/pushEncoder.1/press">0</command>
+    <command address="track.4/pushEncoder.1/turn">0</command>
+    <command address="track.4/pushEncoder.2/press">0</command>
+    <command address="track.4/pushEncoder.2/turn">0</command>
+    <command address="track.4/pushEncoder.3/press">0</command>
+    <command address="track.4/pushEncoder.3/turn">0</command>
+    <command address="track.4/pushEncoder.4/press">0</command>
+    <command address="track.4/pushEncoder.4/turn">0</command>
+    <command address="track.5/fader">0</command>
+    <command address="track.5/key.lower">0</command>
+    <command address="track.5/key.upper">0</command>
+    <command address="track.5/pushEncoder.1/press">0</command>
+    <command address="track.5/pushEncoder.1/turn">0</command>
+    <command address="track.5/pushEncoder.2/press">0</command>
+    <command address="track.5/pushEncoder.2/turn">0</command>
+    <command address="track.5/pushEncoder.3/press">0</command>
+    <command address="track.5/pushEncoder.3/turn">0</command>
+    <command address="track.5/pushEncoder.4/press">0</command>
+    <command address="track.5/pushEncoder.4/turn">0</command>
+    <command address="track.6/fader">0</command>
+    <command address="track.6/key.lower">0</command>
+    <command address="track.6/key.upper">0</command>
+    <command address="track.6/pushEncoder.1/press">0</command>
+    <command address="track.6/pushEncoder.1/turn">0</command>
+    <command address="track.6/pushEncoder.2/press">0</command>
+    <command address="track.6/pushEncoder.2/turn">0</command>
+    <command address="track.6/pushEncoder.3/press">0</command>
+    <command address="track.6/pushEncoder.3/turn">0</command>
+    <command address="track.6/pushEncoder.4/press">0</command>
+    <command address="track.6/pushEncoder.4/turn">0</command>
+    <command address="track.7/fader">0</command>
+    <command address="track.7/key.lower">0</command>
+    <command address="track.7/key.upper">0</command>
+    <command address="track.7/pushEncoder.1/press">0</command>
+    <command address="track.7/pushEncoder.1/turn">0</command>
+    <command address="track.7/pushEncoder.2/press">0</command>
+    <command address="track.7/pushEncoder.2/turn">0</command>
+    <command address="track.7/pushEncoder.3/press">0</command>
+    <command address="track.7/pushEncoder.3/turn">0</command>
+    <command address="track.7/pushEncoder.4/press">0</command>
+    <command address="track.7/pushEncoder.4/turn">0</command>
+    <command address="track.8/fader">0</command>
+    <command address="track.8/key.lower">0</command>
+    <command address="track.8/key.upper">0</command>
+    <command address="track.8/pushEncoder.1/press">0</command>
+    <command address="track.8/pushEncoder.1/turn">0</command>
+    <command address="track.8/pushEncoder.2/press">0</command>
+    <command address="track.8/pushEncoder.2/turn">0</command>
+    <command address="track.8/pushEncoder.3/press">0</command>
+    <command address="track.8/pushEncoder.3/turn">0</command>
+    <command address="track.8/pushEncoder.4/press">0</command>
+    <command address="track.8/pushEncoder.4/turn">0</command>
+    <command address="view/freeze">0</command>
 
   </preset>
   <preset number='2' name='All_turns_at_0'>
-    <command address="button.1' type='boolean">0</command>
-    <command address="button.2' type='boolean">0</command>
-    <command address="button.3' type='boolean">0</command>
-    <command address="button.4' type='boolean">0</command>
-    <command address="foot/control' type='integer">0</command>
-    <command address="foot/switch' type='boolean">0</command>
-    <command address="midiIn' type='string">BCF2000</command>
-    <command address="midiOut' type='string">BCF2000</command>
-    <command address="track.1/fader' type='integer">0</command>
-    <command address="track.1/key.lower' type='boolean">0</command>
-    <command address="track.1/key.upper' type='boolean">0</command>
-    <command address="track.1/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.1/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.1/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.1/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.2/fader' type='integer">0</command>
-    <command address="track.2/key.lower' type='boolean">0</command>
-    <command address="track.2/key.upper' type='boolean">0</command>
-    <command address="track.2/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.2/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.2/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.2/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.3/fader' type='integer">0</command>
-    <command address="track.3/key.lower' type='boolean">0</command>
-    <command address="track.3/key.upper' type='boolean">0</command>
-    <command address="track.3/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.3/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.3/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.3/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.4/fader' type='integer">0</command>
-    <command address="track.4/key.lower' type='boolean">0</command>
-    <command address="track.4/key.upper' type='boolean">0</command>
-    <command address="track.4/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.4/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.4/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.4/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.5/fader' type='integer">0</command>
-    <command address="track.5/key.lower' type='boolean">0</command>
-    <command address="track.5/key.upper' type='boolean">0</command>
-    <command address="track.5/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.5/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.5/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.5/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.6/fader' type='integer">0</command>
-    <command address="track.6/key.lower' type='boolean">0</command>
-    <command address="track.6/key.upper' type='boolean">0</command>
-    <command address="track.6/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.6/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.6/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.6/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.7/fader' type='integer">0</command>
-    <command address="track.7/key.lower' type='boolean">0</command>
-    <command address="track.7/key.upper' type='boolean">0</command>
-    <command address="track.7/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.7/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.7/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.7/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.8/fader' type='integer">0</command>
-    <command address="track.8/key.lower' type='boolean">0</command>
-    <command address="track.8/key.upper' type='boolean">0</command>
-    <command address="track.8/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.8/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.8/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.8/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.4/turn' type='integer">0</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="button.1">0</command>
+    <command address="button.2">0</command>
+    <command address="button.3">0</command>
+    <command address="button.4">0</command>
+    <command address="foot/control">0</command>
+    <command address="foot/switch">0</command>
+    <command address="midiIn">BCF2000</command>
+    <command address="midiOut">BCF2000</command>
+    <command address="track.1/fader">0</command>
+    <command address="track.1/key.lower">0</command>
+    <command address="track.1/key.upper">0</command>
+    <command address="track.1/pushEncoder.1/press">0</command>
+    <command address="track.1/pushEncoder.1/turn">0</command>
+    <command address="track.1/pushEncoder.2/press">0</command>
+    <command address="track.1/pushEncoder.2/turn">0</command>
+    <command address="track.1/pushEncoder.3/press">0</command>
+    <command address="track.1/pushEncoder.3/turn">0</command>
+    <command address="track.1/pushEncoder.4/press">0</command>
+    <command address="track.1/pushEncoder.4/turn">0</command>
+    <command address="track.2/fader">0</command>
+    <command address="track.2/key.lower">0</command>
+    <command address="track.2/key.upper">0</command>
+    <command address="track.2/pushEncoder.1/press">0</command>
+    <command address="track.2/pushEncoder.1/turn">0</command>
+    <command address="track.2/pushEncoder.2/press">0</command>
+    <command address="track.2/pushEncoder.2/turn">0</command>
+    <command address="track.2/pushEncoder.3/press">0</command>
+    <command address="track.2/pushEncoder.3/turn">0</command>
+    <command address="track.2/pushEncoder.4/press">0</command>
+    <command address="track.2/pushEncoder.4/turn">0</command>
+    <command address="track.3/fader">0</command>
+    <command address="track.3/key.lower">0</command>
+    <command address="track.3/key.upper">0</command>
+    <command address="track.3/pushEncoder.1/press">0</command>
+    <command address="track.3/pushEncoder.1/turn">0</command>
+    <command address="track.3/pushEncoder.2/press">0</command>
+    <command address="track.3/pushEncoder.2/turn">0</command>
+    <command address="track.3/pushEncoder.3/press">0</command>
+    <command address="track.3/pushEncoder.3/turn">0</command>
+    <command address="track.3/pushEncoder.4/press">0</command>
+    <command address="track.3/pushEncoder.4/turn">0</command>
+    <command address="track.4/fader">0</command>
+    <command address="track.4/key.lower">0</command>
+    <command address="track.4/key.upper">0</command>
+    <command address="track.4/pushEncoder.1/press">0</command>
+    <command address="track.4/pushEncoder.1/turn">0</command>
+    <command address="track.4/pushEncoder.2/press">0</command>
+    <command address="track.4/pushEncoder.2/turn">0</command>
+    <command address="track.4/pushEncoder.3/press">0</command>
+    <command address="track.4/pushEncoder.3/turn">0</command>
+    <command address="track.4/pushEncoder.4/press">0</command>
+    <command address="track.4/pushEncoder.4/turn">0</command>
+    <command address="track.5/fader">0</command>
+    <command address="track.5/key.lower">0</command>
+    <command address="track.5/key.upper">0</command>
+    <command address="track.5/pushEncoder.1/press">0</command>
+    <command address="track.5/pushEncoder.1/turn">0</command>
+    <command address="track.5/pushEncoder.2/press">0</command>
+    <command address="track.5/pushEncoder.2/turn">0</command>
+    <command address="track.5/pushEncoder.3/press">0</command>
+    <command address="track.5/pushEncoder.3/turn">0</command>
+    <command address="track.5/pushEncoder.4/press">0</command>
+    <command address="track.5/pushEncoder.4/turn">0</command>
+    <command address="track.6/fader">0</command>
+    <command address="track.6/key.lower">0</command>
+    <command address="track.6/key.upper">0</command>
+    <command address="track.6/pushEncoder.1/press">0</command>
+    <command address="track.6/pushEncoder.1/turn">0</command>
+    <command address="track.6/pushEncoder.2/press">0</command>
+    <command address="track.6/pushEncoder.2/turn">0</command>
+    <command address="track.6/pushEncoder.3/press">0</command>
+    <command address="track.6/pushEncoder.3/turn">0</command>
+    <command address="track.6/pushEncoder.4/press">0</command>
+    <command address="track.6/pushEncoder.4/turn">0</command>
+    <command address="track.7/fader">0</command>
+    <command address="track.7/key.lower">0</command>
+    <command address="track.7/key.upper">0</command>
+    <command address="track.7/pushEncoder.1/press">0</command>
+    <command address="track.7/pushEncoder.1/turn">0</command>
+    <command address="track.7/pushEncoder.2/press">0</command>
+    <command address="track.7/pushEncoder.2/turn">0</command>
+    <command address="track.7/pushEncoder.3/press">0</command>
+    <command address="track.7/pushEncoder.3/turn">0</command>
+    <command address="track.7/pushEncoder.4/press">0</command>
+    <command address="track.7/pushEncoder.4/turn">0</command>
+    <command address="track.8/fader">0</command>
+    <command address="track.8/key.lower">0</command>
+    <command address="track.8/key.upper">0</command>
+    <command address="track.8/pushEncoder.1/press">0</command>
+    <command address="track.8/pushEncoder.1/turn">0</command>
+    <command address="track.8/pushEncoder.2/press">0</command>
+    <command address="track.8/pushEncoder.2/turn">0</command>
+    <command address="track.8/pushEncoder.3/press">0</command>
+    <command address="track.8/pushEncoder.3/turn">0</command>
+    <command address="track.8/pushEncoder.4/press">0</command>
+    <command address="track.8/pushEncoder.4/turn">0</command>
+    <command address="view/freeze">0</command>
 
   </preset>
   <preset number='3' name='All_turns_at_64'>
-    <command address="button.1' type='boolean">0</command>
-    <command address="button.2' type='boolean">0</command>
-    <command address="button.3' type='boolean">0</command>
-    <command address="button.4' type='boolean">0</command>
-    <command address="foot/control' type='integer">0</command>
-    <command address="foot/switch' type='boolean">0</command>
-    <command address="midiIn' type='string">BCF2000</command>
-    <command address="midiOut' type='string">BCF2000</command>
-    <command address="track.1/fader' type='integer">0</command>
-    <command address="track.1/key.lower' type='boolean">0</command>
-    <command address="track.1/key.upper' type='boolean">0</command>
-    <command address="track.1/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.1/turn' type='integer">64</command>
-    <command address="track.1/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.2/turn' type='integer">64</command>
-    <command address="track.1/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.3/turn' type='integer">64</command>
-    <command address="track.1/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.4/turn' type='integer">64</command>
-    <command address="track.2/fader' type='integer">0</command>
-    <command address="track.2/key.lower' type='boolean">0</command>
-    <command address="track.2/key.upper' type='boolean">0</command>
-    <command address="track.2/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.1/turn' type='integer">64</command>
-    <command address="track.2/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.2/turn' type='integer">64</command>
-    <command address="track.2/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.3/turn' type='integer">64</command>
-    <command address="track.2/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.4/turn' type='integer">64</command>
-    <command address="track.3/fader' type='integer">0</command>
-    <command address="track.3/key.lower' type='boolean">0</command>
-    <command address="track.3/key.upper' type='boolean">0</command>
-    <command address="track.3/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.1/turn' type='integer">64</command>
-    <command address="track.3/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.2/turn' type='integer">64</command>
-    <command address="track.3/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.3/turn' type='integer">64</command>
-    <command address="track.3/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.4/turn' type='integer">64</command>
-    <command address="track.4/fader' type='integer">0</command>
-    <command address="track.4/key.lower' type='boolean">0</command>
-    <command address="track.4/key.upper' type='boolean">0</command>
-    <command address="track.4/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.1/turn' type='integer">64</command>
-    <command address="track.4/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.2/turn' type='integer">64</command>
-    <command address="track.4/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.3/turn' type='integer">64</command>
-    <command address="track.4/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.4/turn' type='integer">64</command>
-    <command address="track.5/fader' type='integer">0</command>
-    <command address="track.5/key.lower' type='boolean">0</command>
-    <command address="track.5/key.upper' type='boolean">0</command>
-    <command address="track.5/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.1/turn' type='integer">64</command>
-    <command address="track.5/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.2/turn' type='integer">64</command>
-    <command address="track.5/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.3/turn' type='integer">64</command>
-    <command address="track.5/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.4/turn' type='integer">64</command>
-    <command address="track.6/fader' type='integer">0</command>
-    <command address="track.6/key.lower' type='boolean">0</command>
-    <command address="track.6/key.upper' type='boolean">0</command>
-    <command address="track.6/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.1/turn' type='integer">64</command>
-    <command address="track.6/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.2/turn' type='integer">64</command>
-    <command address="track.6/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.3/turn' type='integer">64</command>
-    <command address="track.6/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.4/turn' type='integer">64</command>
-    <command address="track.7/fader' type='integer">0</command>
-    <command address="track.7/key.lower' type='boolean">0</command>
-    <command address="track.7/key.upper' type='boolean">0</command>
-    <command address="track.7/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.1/turn' type='integer">64</command>
-    <command address="track.7/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.2/turn' type='integer">64</command>
-    <command address="track.7/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.3/turn' type='integer">64</command>
-    <command address="track.7/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.4/turn' type='integer">64</command>
-    <command address="track.8/fader' type='integer">0</command>
-    <command address="track.8/key.lower' type='boolean">0</command>
-    <command address="track.8/key.upper' type='boolean">0</command>
-    <command address="track.8/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.1/turn' type='integer">64</command>
-    <command address="track.8/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.2/turn' type='integer">64</command>
-    <command address="track.8/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.3/turn' type='integer">64</command>
-    <command address="track.8/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.4/turn' type='integer">64</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="button.1">0</command>
+    <command address="button.2">0</command>
+    <command address="button.3">0</command>
+    <command address="button.4">0</command>
+    <command address="foot/control">0</command>
+    <command address="foot/switch">0</command>
+    <command address="midiIn">BCF2000</command>
+    <command address="midiOut">BCF2000</command>
+    <command address="track.1/fader">0</command>
+    <command address="track.1/key.lower">0</command>
+    <command address="track.1/key.upper">0</command>
+    <command address="track.1/pushEncoder.1/press">0</command>
+    <command address="track.1/pushEncoder.1/turn">64</command>
+    <command address="track.1/pushEncoder.2/press">0</command>
+    <command address="track.1/pushEncoder.2/turn">64</command>
+    <command address="track.1/pushEncoder.3/press">0</command>
+    <command address="track.1/pushEncoder.3/turn">64</command>
+    <command address="track.1/pushEncoder.4/press">0</command>
+    <command address="track.1/pushEncoder.4/turn">64</command>
+    <command address="track.2/fader">0</command>
+    <command address="track.2/key.lower">0</command>
+    <command address="track.2/key.upper">0</command>
+    <command address="track.2/pushEncoder.1/press">0</command>
+    <command address="track.2/pushEncoder.1/turn">64</command>
+    <command address="track.2/pushEncoder.2/press">0</command>
+    <command address="track.2/pushEncoder.2/turn">64</command>
+    <command address="track.2/pushEncoder.3/press">0</command>
+    <command address="track.2/pushEncoder.3/turn">64</command>
+    <command address="track.2/pushEncoder.4/press">0</command>
+    <command address="track.2/pushEncoder.4/turn">64</command>
+    <command address="track.3/fader">0</command>
+    <command address="track.3/key.lower">0</command>
+    <command address="track.3/key.upper">0</command>
+    <command address="track.3/pushEncoder.1/press">0</command>
+    <command address="track.3/pushEncoder.1/turn">64</command>
+    <command address="track.3/pushEncoder.2/press">0</command>
+    <command address="track.3/pushEncoder.2/turn">64</command>
+    <command address="track.3/pushEncoder.3/press">0</command>
+    <command address="track.3/pushEncoder.3/turn">64</command>
+    <command address="track.3/pushEncoder.4/press">0</command>
+    <command address="track.3/pushEncoder.4/turn">64</command>
+    <command address="track.4/fader">0</command>
+    <command address="track.4/key.lower">0</command>
+    <command address="track.4/key.upper">0</command>
+    <command address="track.4/pushEncoder.1/press">0</command>
+    <command address="track.4/pushEncoder.1/turn">64</command>
+    <command address="track.4/pushEncoder.2/press">0</command>
+    <command address="track.4/pushEncoder.2/turn">64</command>
+    <command address="track.4/pushEncoder.3/press">0</command>
+    <command address="track.4/pushEncoder.3/turn">64</command>
+    <command address="track.4/pushEncoder.4/press">0</command>
+    <command address="track.4/pushEncoder.4/turn">64</command>
+    <command address="track.5/fader">0</command>
+    <command address="track.5/key.lower">0</command>
+    <command address="track.5/key.upper">0</command>
+    <command address="track.5/pushEncoder.1/press">0</command>
+    <command address="track.5/pushEncoder.1/turn">64</command>
+    <command address="track.5/pushEncoder.2/press">0</command>
+    <command address="track.5/pushEncoder.2/turn">64</command>
+    <command address="track.5/pushEncoder.3/press">0</command>
+    <command address="track.5/pushEncoder.3/turn">64</command>
+    <command address="track.5/pushEncoder.4/press">0</command>
+    <command address="track.5/pushEncoder.4/turn">64</command>
+    <command address="track.6/fader">0</command>
+    <command address="track.6/key.lower">0</command>
+    <command address="track.6/key.upper">0</command>
+    <command address="track.6/pushEncoder.1/press">0</command>
+    <command address="track.6/pushEncoder.1/turn">64</command>
+    <command address="track.6/pushEncoder.2/press">0</command>
+    <command address="track.6/pushEncoder.2/turn">64</command>
+    <command address="track.6/pushEncoder.3/press">0</command>
+    <command address="track.6/pushEncoder.3/turn">64</command>
+    <command address="track.6/pushEncoder.4/press">0</command>
+    <command address="track.6/pushEncoder.4/turn">64</command>
+    <command address="track.7/fader">0</command>
+    <command address="track.7/key.lower">0</command>
+    <command address="track.7/key.upper">0</command>
+    <command address="track.7/pushEncoder.1/press">0</command>
+    <command address="track.7/pushEncoder.1/turn">64</command>
+    <command address="track.7/pushEncoder.2/press">0</command>
+    <command address="track.7/pushEncoder.2/turn">64</command>
+    <command address="track.7/pushEncoder.3/press">0</command>
+    <command address="track.7/pushEncoder.3/turn">64</command>
+    <command address="track.7/pushEncoder.4/press">0</command>
+    <command address="track.7/pushEncoder.4/turn">64</command>
+    <command address="track.8/fader">0</command>
+    <command address="track.8/key.lower">0</command>
+    <command address="track.8/key.upper">0</command>
+    <command address="track.8/pushEncoder.1/press">0</command>
+    <command address="track.8/pushEncoder.1/turn">64</command>
+    <command address="track.8/pushEncoder.2/press">0</command>
+    <command address="track.8/pushEncoder.2/turn">64</command>
+    <command address="track.8/pushEncoder.3/press">0</command>
+    <command address="track.8/pushEncoder.3/turn">64</command>
+    <command address="track.8/pushEncoder.4/press">0</command>
+    <command address="track.8/pushEncoder.4/turn">64</command>
+    <command address="view/freeze">0</command>
 
   </preset>
   <preset number='4' name='All_faders_at_64'>
-    <command address="button.1' type='boolean">0</command>
-    <command address="button.2' type='boolean">0</command>
-    <command address="button.3' type='boolean">0</command>
-    <command address="button.4' type='boolean">0</command>
-    <command address="foot/control' type='integer">0</command>
-    <command address="foot/switch' type='boolean">0</command>
-    <command address="midiIn' type='string">BCF2000</command>
-    <command address="midiOut' type='string">BCF2000</command>
-    <command address="track.1/fader' type='integer">64</command>
-    <command address="track.1/key.lower' type='boolean">0</command>
-    <command address="track.1/key.upper' type='boolean">0</command>
-    <command address="track.1/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.1/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.1/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.1/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.1/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.2/fader' type='integer">64</command>
-    <command address="track.2/key.lower' type='boolean">0</command>
-    <command address="track.2/key.upper' type='boolean">0</command>
-    <command address="track.2/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.2/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.2/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.2/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.2/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.3/fader' type='integer">64</command>
-    <command address="track.3/key.lower' type='boolean">0</command>
-    <command address="track.3/key.upper' type='boolean">0</command>
-    <command address="track.3/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.3/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.3/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.3/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.3/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.4/fader' type='integer">64</command>
-    <command address="track.4/key.lower' type='boolean">0</command>
-    <command address="track.4/key.upper' type='boolean">0</command>
-    <command address="track.4/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.4/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.4/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.4/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.4/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.5/fader' type='integer">64</command>
-    <command address="track.5/key.lower' type='boolean">0</command>
-    <command address="track.5/key.upper' type='boolean">0</command>
-    <command address="track.5/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.5/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.5/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.5/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.5/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.6/fader' type='integer">64</command>
-    <command address="track.6/key.lower' type='boolean">0</command>
-    <command address="track.6/key.upper' type='boolean">0</command>
-    <command address="track.6/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.6/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.6/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.6/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.6/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.7/fader' type='integer">64</command>
-    <command address="track.7/key.lower' type='boolean">0</command>
-    <command address="track.7/key.upper' type='boolean">0</command>
-    <command address="track.7/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.7/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.7/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.7/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.7/pushEncoder.4/turn' type='integer">0</command>
-    <command address="track.8/fader' type='integer">64</command>
-    <command address="track.8/key.lower' type='boolean">0</command>
-    <command address="track.8/key.upper' type='boolean">0</command>
-    <command address="track.8/pushEncoder.1/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.1/turn' type='integer">0</command>
-    <command address="track.8/pushEncoder.2/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.2/turn' type='integer">0</command>
-    <command address="track.8/pushEncoder.3/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.3/turn' type='integer">0</command>
-    <command address="track.8/pushEncoder.4/press' type='boolean">0</command>
-    <command address="track.8/pushEncoder.4/turn' type='integer">0</command>
-    <command address="view/freeze' type='boolean">1</command>
+    <command address="button.1">0</command>
+    <command address="button.2">0</command>
+    <command address="button.3">0</command>
+    <command address="button.4">0</command>
+    <command address="foot/control">0</command>
+    <command address="foot/switch">0</command>
+    <command address="midiIn">BCF2000</command>
+    <command address="midiOut">BCF2000</command>
+    <command address="track.1/fader">64</command>
+    <command address="track.1/key.lower">0</command>
+    <command address="track.1/key.upper">0</command>
+    <command address="track.1/pushEncoder.1/press">0</command>
+    <command address="track.1/pushEncoder.1/turn">0</command>
+    <command address="track.1/pushEncoder.2/press">0</command>
+    <command address="track.1/pushEncoder.2/turn">0</command>
+    <command address="track.1/pushEncoder.3/press">0</command>
+    <command address="track.1/pushEncoder.3/turn">0</command>
+    <command address="track.1/pushEncoder.4/press">0</command>
+    <command address="track.1/pushEncoder.4/turn">0</command>
+    <command address="track.2/fader">64</command>
+    <command address="track.2/key.lower">0</command>
+    <command address="track.2/key.upper">0</command>
+    <command address="track.2/pushEncoder.1/press">0</command>
+    <command address="track.2/pushEncoder.1/turn">0</command>
+    <command address="track.2/pushEncoder.2/press">0</command>
+    <command address="track.2/pushEncoder.2/turn">0</command>
+    <command address="track.2/pushEncoder.3/press">0</command>
+    <command address="track.2/pushEncoder.3/turn">0</command>
+    <command address="track.2/pushEncoder.4/press">0</command>
+    <command address="track.2/pushEncoder.4/turn">0</command>
+    <command address="track.3/fader">64</command>
+    <command address="track.3/key.lower">0</command>
+    <command address="track.3/key.upper">0</command>
+    <command address="track.3/pushEncoder.1/press">0</command>
+    <command address="track.3/pushEncoder.1/turn">0</command>
+    <command address="track.3/pushEncoder.2/press">0</command>
+    <command address="track.3/pushEncoder.2/turn">0</command>
+    <command address="track.3/pushEncoder.3/press">0</command>
+    <command address="track.3/pushEncoder.3/turn">0</command>
+    <command address="track.3/pushEncoder.4/press">0</command>
+    <command address="track.3/pushEncoder.4/turn">0</command>
+    <command address="track.4/fader">64</command>
+    <command address="track.4/key.lower">0</command>
+    <command address="track.4/key.upper">0</command>
+    <command address="track.4/pushEncoder.1/press">0</command>
+    <command address="track.4/pushEncoder.1/turn">0</command>
+    <command address="track.4/pushEncoder.2/press">0</command>
+    <command address="track.4/pushEncoder.2/turn">0</command>
+    <command address="track.4/pushEncoder.3/press">0</command>
+    <command address="track.4/pushEncoder.3/turn">0</command>
+    <command address="track.4/pushEncoder.4/press">0</command>
+    <command address="track.4/pushEncoder.4/turn">0</command>
+    <command address="track.5/fader">64</command>
+    <command address="track.5/key.lower">0</command>
+    <command address="track.5/key.upper">0</command>
+    <command address="track.5/pushEncoder.1/press">0</command>
+    <command address="track.5/pushEncoder.1/turn">0</command>
+    <command address="track.5/pushEncoder.2/press">0</command>
+    <command address="track.5/pushEncoder.2/turn">0</command>
+    <command address="track.5/pushEncoder.3/press">0</command>
+    <command address="track.5/pushEncoder.3/turn">0</command>
+    <command address="track.5/pushEncoder.4/press">0</command>
+    <command address="track.5/pushEncoder.4/turn">0</command>
+    <command address="track.6/fader">64</command>
+    <command address="track.6/key.lower">0</command>
+    <command address="track.6/key.upper">0</command>
+    <command address="track.6/pushEncoder.1/press">0</command>
+    <command address="track.6/pushEncoder.1/turn">0</command>
+    <command address="track.6/pushEncoder.2/press">0</command>
+    <command address="track.6/pushEncoder.2/turn">0</command>
+    <command address="track.6/pushEncoder.3/press">0</command>
+    <command address="track.6/pushEncoder.3/turn">0</command>
+    <command address="track.6/pushEncoder.4/press">0</command>
+    <command address="track.6/pushEncoder.4/turn">0</command>
+    <command address="track.7/fader">64</command>
+    <command address="track.7/key.lower">0</command>
+    <command address="track.7/key.upper">0</command>
+    <command address="track.7/pushEncoder.1/press">0</command>
+    <command address="track.7/pushEncoder.1/turn">0</command>
+    <command address="track.7/pushEncoder.2/press">0</command>
+    <command address="track.7/pushEncoder.2/turn">0</command>
+    <command address="track.7/pushEncoder.3/press">0</command>
+    <command address="track.7/pushEncoder.3/turn">0</command>
+    <command address="track.7/pushEncoder.4/press">0</command>
+    <command address="track.7/pushEncoder.4/turn">0</command>
+    <command address="track.8/fader">64</command>
+    <command address="track.8/key.lower">0</command>
+    <command address="track.8/key.upper">0</command>
+    <command address="track.8/pushEncoder.1/press">0</command>
+    <command address="track.8/pushEncoder.1/turn">0</command>
+    <command address="track.8/pushEncoder.2/press">0</command>
+    <command address="track.8/pushEncoder.2/turn">0</command>
+    <command address="track.8/pushEncoder.3/press">0</command>
+    <command address="track.8/pushEncoder.3/turn">0</command>
+    <command address="track.8/pushEncoder.4/press">0</command>
+    <command address="track.8/pushEncoder.4/turn">0</command>
+    <command address="view/freeze">1</command>
 
   </preset>
 </jamoma>

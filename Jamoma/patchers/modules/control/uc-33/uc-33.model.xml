@@ -5,8 +5,8 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="midiIn' type='generic">UC-33</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="midiIn">UC-33</command>
+    <command address="view/freeze">0</command>
 
   </preset>
 </jamoma>

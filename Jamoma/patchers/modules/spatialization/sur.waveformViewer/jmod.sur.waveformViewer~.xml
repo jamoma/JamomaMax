@@ -5,10 +5,10 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="active' type='boolean' priority='0">1</command>
-    <command address="downSample' type='integer' priority='0">100</command>
-    <command address="numberOfChannels' type='integer' priority='0">2</command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
+    <command address="active">1</command>
+    <command address="downSample">100</command>
+    <command address="numberOfChannels">2</command>
+    <command address="view/freeze">0</command>
 
   </preset>
 </jamoma>

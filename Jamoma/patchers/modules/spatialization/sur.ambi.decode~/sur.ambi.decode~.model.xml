@@ -5,28 +5,28 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="audio/gain' type='decimal' priority='0">100.000000</command>
-    <command address="audio/mute' type='boolean' priority='0">0</command>
-    <command address="flavor' type='string' priority='0">Furse-Malham</command>
-    <command address="numSpeakers' type='integer' priority='0">8</command>
-    <command address="order' type='integer' priority='0">3</command>
-    <command address="orderWeights' type='array' priority='0">1.000000 0.500000 0.100000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </command>
-    <command address="view/freeze' type='boolean' priority='0">0</command>
-    <command address="view/highlight' type='string' priority='0">none</command>
+    <command address="audio/gain">100.000000</command>
+    <command address="audio/mute">0</command>
+    <command address="flavor">Furse-Malham</command>
+    <command address="numSpeakers">8</command>
+    <command address="order">3</command>
+    <command address="orderWeights">1.000000 0.500000 0.100000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </command>
+    <command address="view/freeze">0</command>
+    <command address="view/highlight">none</command>
   </preset>
   <preset number='2' name='malham'>
-    <command address="order' type='integer' priority='0">3</command>
-    <command address="flavor' type='string' priority='0">Furse-Malham</command>
-    <command address="orderWeights' type='array' priority='0">0.823242 1.000000 0.442259 0.079101 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </command>
+    <command address="order">3</command>
+    <command address="flavor">Furse-Malham</command>
+    <command address="orderWeights">0.823242 1.000000 0.442259 0.079101 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </command>
   </preset>
   <preset number='3' name='furse'>
-    <command address="order' type='integer' priority='0">3</command>
-    <command address="flavor' type='string' priority='0">Furse-Malham</command>
-    <command address="orderWeights' type='array' priority='0">0.707017 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </command>
+    <command address="order">3</command>
+    <command address="flavor">Furse-Malham</command>
+    <command address="orderWeights">0.707017 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </command>
   </preset>
   <preset number='4' name='inphase'>
-    <command address="order' type='integer' priority='0">3</command>
-    <command address="flavor' type='string' priority='0">Furse-Malham</command>
-    <command address="orderWeights' type='array' priority='0">1.944000 1.296000 0.324000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </command>
+    <command address="order">3</command>
+    <command address="flavor">Furse-Malham</command>
+    <command address="orderWeights">1.944000 1.296000 0.324000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </command>
   </preset>
 </jamoma>

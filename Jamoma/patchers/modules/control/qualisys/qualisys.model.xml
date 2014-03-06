@@ -5,10 +5,10 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="connect' type='integer">0</command>
-    <command address="host' type='string">192.168.0.146</command>
-    <command address="port' type='integer">7000</command>
-    <command address="view/freeze' type='boolean">0</command>
+    <command address="connect">0</command>
+    <command address="host">192.168.0.146</command>
+    <command address="port">7000</command>
+    <command address="view/freeze">0</command>
 
   </preset>
 </jamoma>
