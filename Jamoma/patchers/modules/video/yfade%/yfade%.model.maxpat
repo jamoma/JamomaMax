@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 712.0, 218.0, 1035.0, 611.0 ],
+		"rect" : [ 242.0, 145.0, 765.0, 568.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -87,13 +87,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-20",
-					"linecount" : 4,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 580.0, 92.0, 150.0, 55.0 ],
-					"text" : "j.model @algorithm_type jitter @description \"crossfade a source to two outputs\"",
+					"patching_rect" : [ 580.0, 92.0, 163.0, 43.0 ],
+					"text" : "j.model @tag video @description \"crossfade a source to two outputs\"",
 					"varname" : "j.model"
 				}
 
