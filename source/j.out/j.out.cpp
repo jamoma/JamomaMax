@@ -2,13 +2,13 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.out / j.out~ - Manage control and audio outputs for a Jamoma model
+ * @brief j.out & j.out~ & j.out= - Manage control and audio outputs for a Jamoma model
  *
  * @details
  *
- * @authors  Timothy Place, Théo de la Hogue, Trond Lossius
+ * @authors  Timothy Place, ThŽo de la Hogue, Trond Lossius
  *
- * @copyright © 2008 by Timothy Place and Théo de la Hogue @n
+ * @copyright © 2008 by Timothy Place and ThŽo de la Hogue @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
@@ -64,7 +64,7 @@ void		out_subscribe(TTPtr self);
 
 //TODO :	void out_register_preview(t_out *x, void *preview_object){ x->preview_object = preview_object; }
 
-#ifdef JCOM_OUT_TILDE
+#ifdef J_OUT_TILDE
 
 /** j.out~ 64-bit MSP perform method (for Max 6). Only defined for j.out~. */
 void		out_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam);
@@ -72,10 +72,30 @@ void		out_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doub
 /** j.out~ 64-bit DSP method (for Max 6). Only defined for j.out~. */
 void		out_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags);
 
-#else
+#endif
 
-/** Method used to pass messages from the module outlet. */
-void		out_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+#ifdef J_OUT_MULTI
+
+/** reset audiogrpaph setup of the wrapped object
+ @param self		Pointer to this object.
+ */
+void        out_reset(TTPtr self);
+
+/** reset audiogrpaph setup of the wrapped object
+ @param self		Pointer to this object.
+ */
+void        out_setup(TTPtr self);
+
+/** reset audiogrpaph setup of the wrapped audiograph object
+ @param self                Pointer to this audiograph object.
+ @param audioSourceObject	The audiograph object to connect with.
+ @param sourceOutletNumber	The number of channel the source audiograph object have.
+ */
+void       out_connect(TTPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
+#endif
+
+#ifndef J_OUT_TILDE
+#ifndef J_OUT_MULTI
 
 /** bang handler for j.out 
  @param self		Pointer to this object.
@@ -115,6 +135,15 @@ void		out_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
  */
 void		WrappedOutputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
+/** Method used to pass message to the module outlet
+ @param self		Pointer to this object.
+ @param msg			The message sent to this object.
+ @param argc		The number of arguments passed to the object.
+ @param argv		Pointer to an array of atoms passed to the object.
+ */
+void		out_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
+#endif
 #endif
 
 #pragma mark -
@@ -126,34 +155,48 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	spec->_wrap = &WrapTTOutputClass;
 	spec->_new = &WrappedOutputClass_new;
 	spec->_free = &WrappedOutputClass_free;
-#ifndef JCOM_OUT_TILDE
-	spec->_any = &WrappedOutputClass_anything;
-#else
+    
+#ifdef J_OUT_TILDE
     spec->_any = NULL;
+    return wrapTTModularClassAsMaxClass(kTTSym_OutputAudio, "j.out~", NULL, spec);
 #endif
-	
-#ifdef JCOM_OUT_TILDE
-	return wrapTTModularClassAsMaxClass(kTTSym_OutputAudio, "j.out~", NULL, spec);
-#else
-	return wrapTTModularClassAsMaxClass(kTTSym_Output, "j.out", NULL, spec);
+    
+#ifdef J_OUT_MULTI
+    spec->_any = NULL;
+    return wrapTTModularClassAsMaxClass(kTTSym_OutputAudio, "j.out=", NULL, spec);
 #endif
-	
+    
+#ifndef J_OUT_TILDE
+#ifndef J_OUT_MULTI
+    spec->_any = &WrappedOutputClass_anything;
+    return wrapTTModularClassAsMaxClass(kTTSym_Output, "j.out", NULL, spec);
+#endif
+#endif
 }
 
 void WrapTTOutputClass(WrappedClassPtr c)
 {
 	class_addmethod(c->maxClass, (method)out_assist,						"assist",				A_CANT, 0L);
 	
-#ifdef JCOM_OUT_TILDE
+#ifdef J_OUT_TILDE
 	class_addmethod(c->maxClass, (method)out_dsp64,							"dsp64",				A_CANT, 0);
-	
-#else
+#endif
+    
+#ifdef J_OUT_MULTI
+    class_addmethod(c->maxClass, (method)out_reset,                          "audio.reset",          A_CANT, 0);
+	class_addmethod(c->maxClass, (method)out_setup,                          "audio.setup",          A_CANT, 0);
+	class_addmethod(c->maxClass, (method)out_connect,                        "audio.connect",        A_OBJ, A_LONG, 0);
+#endif
+    
+#ifndef J_OUT_TILDE
+#ifndef J_OUT_MULTI
 	class_addmethod(c->maxClass, (method)out_return_signal,					"return_signal",		A_CANT, 0);
 	
 	class_addmethod(c->maxClass, (method)out_bang,							"bang", 				0L);
 	class_addmethod(c->maxClass, (method)out_int,							"int", 					A_LONG, 0L);
 	class_addmethod(c->maxClass, (method)out_float,							"float", 				A_FLOAT, 0L);
 	class_addmethod(c->maxClass, (method)out_list,							"list", 				A_GIMME, 0L);
+#endif
 #endif
 		
     // no class_dspinit : it is done in wrapTTModularClassAsMaxClass for AUDIO_EXTERNAL
@@ -188,8 +231,7 @@ void WrappedOutputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// Create Input Object and one outlet
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr));
 	
-#ifdef JCOM_OUT_TILDE
-	
+#ifdef J_OUT_TILDE
 	jamoma_output_create_audio((ObjectPtr)x, &x->wrappedObject);
 	
 	dsp_setup((t_pxobject *)x, 1);	
@@ -199,13 +241,20 @@ void WrappedOutputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	
 	// Prepare memory to store internal datas
 	x->internals = new TTHash();
+#endif
+    
+#ifdef J_IN_MULTI
+    jamoma_output_create_audio((ObjectPtr)x, &x->wrappedObject);
 	
-#else
-	
+	x->outlets[0] = outlet_new(x, 0L);
+#endif
+
+#ifndef J_OUT_TILDE
+#ifndef J_OUT_MULTI
 	jamoma_output_create((ObjectPtr)x, &x->wrappedObject);
 	
 	x->outlets[0] = outlet_new(x, 0L);
-	
+#endif
 #endif
 	
 	// handle attribute args
@@ -221,9 +270,8 @@ void WrappedOutputClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
-#ifdef JCOM_OUT_TILDE
+#ifdef J_OUT_TILDE
 	dsp_free((t_pxobject *)x);				// Always call dsp_free first in this routine
-	
 #endif
 }
 
@@ -242,10 +290,18 @@ void out_subscribe(TTPtr self)
 	TTAddress	returnedAddress, parentAddress;
 	TTString	formatDescription, sInstance;
 	
-#ifdef JCOM_OUT_TILDE
+#ifdef J_OUT_TILDE
 	signalAddress = TTAddress("audio");
-#else
+#endif
+    
+#ifdef J_OUT_MULTI
+	signalAddress = TTAddress("audio");
+#endif
+ 
+#ifndef J_OUT_TILDE
+#ifndef J_OUT_MULTI
     signalAddress = TTAddress("data");
+#endif
 #endif
     
     // edit "signal/out.instance" address
@@ -283,7 +339,69 @@ void out_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst)
 	}
 }
 
-#ifndef JCOM_OUT_TILDE
+#ifdef J_OUT_TILDE
+#pragma mark -
+#pragma mark Methods relating to audio processing
+
+// Perform Method 64 bit - just pass the whole vector straight through
+// (the work is all done in the dsp 64 bit method)
+void out_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTOutputAudioPtr			anOutput = (TTOutputAudioPtr)x->wrappedObject;
+    
+    if (anOutput)
+        anOutput->process(ins[0], outs[0], sampleframes);
+}
+
+
+// DSP64 method
+void out_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags)
+{
+	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+	TTOutputAudioPtr			anOutput = (TTOutputAudioPtr)x->wrappedObject;
+    
+	if (anOutput) {
+		anOutput->setupAudioSignals(maxvectorsize, samplerate);
+		object_method(dsp64, gensym("dsp_add64"), x, out_perform64, 0, NULL);
+	}
+}
+#endif
+
+#ifdef J_OUT_MULTI
+#pragma mark -
+#pragma mark Methods relating to audiograph processing
+
+void out_reset(TTPtr self)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+	TTOutputAudioPtr	anOutput = (TTOutputAudioPtr)x->wrappedObject;
+    
+    
+}
+
+void out_setup(TTPtr self)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+	TTOutputAudioPtr	anOutput = (TTOutputAudioPtr)x->wrappedObject;
+    
+    
+}
+
+void out_connect(TTPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+	TTOutputAudioPtr	anOutput = (TTOutputAudioPtr)x->wrappedObject;
+    
+    
+}
+#endif
+
+#ifndef J_OUT_TILDE
+#ifndef J_OUT_MULTI
+#pragma mark -
+#pragma mark Methods relating to any data processing
+
 void out_bang(TTPtr self)
 {
 	out_list(self, _sym_bang, 0, NULL);
@@ -330,35 +448,4 @@ void out_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		outlet_anything(x->outlets[signal_out], msg, argc, argv);
 }
 #endif
-
-#pragma mark -
-#pragma mark Methods relating to audio processing
-
-#ifdef JCOM_OUT_TILDE
-
-
-// Perform Method 64 bit - just pass the whole vector straight through
-// (the work is all done in the dsp 64 bit method)
-void out_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
-{
-    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTOutputAudioPtr			anOutput = (TTOutputAudioPtr)x->wrappedObject;
-
-    if (anOutput)
-        anOutput->process(ins[0], outs[0], sampleframes);
-}
-
-
-// DSP64 method
-void out_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTOutputAudioPtr			anOutput = (TTOutputAudioPtr)x->wrappedObject;
-
-	if (anOutput) {
-		anOutput->setupAudioSignals(maxvectorsize, samplerate);
-		object_method(dsp64, gensym("dsp_add64"), x, out_perform64, 0, NULL); 
-	}
-}
-
-#endif // JCOM_OUT_TILDE
+#endif

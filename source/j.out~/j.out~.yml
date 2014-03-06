@@ -1,6 +1,6 @@
 defines:
   - AUDIO_EXTERNAL
-  - JCOM_OUT_TILDE
+  - J_OUT_TILDE
   
 sources:
   - ../j.out/j.out.cpp		
