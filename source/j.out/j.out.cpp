@@ -243,7 +243,7 @@ void WrappedOutputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->internals = new TTHash();
 #endif
     
-#ifdef J_IN_MULTI
+#ifdef J_OUT_MULTI
     jamoma_output_create_audio((ObjectPtr)x, &x->wrappedObject);
 	
 	x->outlets[0] = outlet_new(x, 0L);
