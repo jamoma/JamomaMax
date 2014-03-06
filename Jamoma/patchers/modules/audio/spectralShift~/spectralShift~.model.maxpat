@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 130.0, 51.0, 1321.0, 871.0 ],
+		"rect" : [ 0.0, 44.0, 1188.0, 433.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,7 +38,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1061.0, 172.5, 273.0, 51.0 ],
+					"patching_rect" : [ 899.0, 127.5, 273.0, 51.0 ],
 					"text" : "This compensates for the delay introduced by the spectral processing, ensuring that dry and wet signals are properly synced when mixed."
 				}
 
@@ -52,7 +52,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 941.0, 188.0, 93.0, 20.0 ],
+					"patching_rect" : [ 779.0, 143.0, 93.0, 20.0 ],
 					"text" : "delay~ 768 768"
 				}
 
@@ -66,7 +66,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 842.0, 188.0, 93.0, 20.0 ],
+					"patching_rect" : [ 680.0, 143.0, 93.0, 20.0 ],
 					"text" : "delay~ 768 768"
 				}
 
@@ -85,7 +85,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -478,7 +478,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 617.5, 323.0, 69.0, 20.0 ],
+					"patching_rect" : [ 260.0, 269.0, 69.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -505,7 +505,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 131.0, 378.0, 297.0, 20.0 ],
+					"patching_rect" : [ 779.0, 339.0, 297.0, 20.0 ],
 					"text" : "j.model @description \"Spectral shifting with feedback\""
 				}
 
@@ -517,7 +517,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 131.0, 463.0, 25.0, 25.0 ]
+					"patching_rect" : [ 779.0, 383.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -530,7 +530,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 365.0, 167.5, 86.0, 20.0 ],
+					"patching_rect" : [ 203.0, 122.5, 86.0, 20.0 ],
 					"text" : "prepend scale"
 				}
 
@@ -544,7 +544,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 179.0, 167.5, 80.0, 20.0 ],
+					"patching_rect" : [ 17.0, 122.5, 80.0, 20.0 ],
 					"text" : "prepend shift"
 				}
 
@@ -555,10 +555,10 @@
 					"fontsize" : 12.0,
 					"id" : "obj-25",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
+					"numinlets" : 2,
 					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 372.0, 267.0, 391.0, 20.0 ],
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 210.0, 222.0, 391.0, 20.0 ],
 					"text" : "limiter~.model limiter @amenities none"
 				}
 
@@ -572,7 +572,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 842.0, 225.0, 43.0, 20.0 ],
+					"patching_rect" : [ 680.0, 180.0, 43.0, 20.0 ],
 					"text" : "j.in~ 1"
 				}
 
@@ -586,20 +586,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 558.0, 396.0, 50.0, 20.0 ],
+					"patching_rect" : [ 210.0, 339.0, 50.0, 20.0 ],
 					"text" : "j.out~ 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-13",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 131.0, 61.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -610,7 +598,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 744.0, 463.0, 25.0, 25.0 ]
+					"patching_rect" : [ 396.0, 380.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -622,7 +610,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 744.0, 61.0, 25.0, 25.0 ]
+					"patching_rect" : [ 582.0, 16.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -633,7 +621,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 558.0, 463.0, 25.0, 25.0 ]
+					"patching_rect" : [ 210.0, 380.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -645,7 +633,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 558.0, 61.0, 25.0, 25.0 ]
+					"patching_rect" : [ 396.0, 16.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -658,7 +646,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 558.0, 219.0, 205.0, 20.0 ],
+					"patching_rect" : [ 396.0, 174.0, 205.0, 20.0 ],
 					"text" : "pfft~ j.spectralShiftVoice~ 1024 4"
 				}
 
@@ -673,7 +661,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 179.0, 72.0, 171.0, 87.0 ],
+					"patching_rect" : [ 17.0, 27.0, 171.0, 87.0 ],
 					"text" : "j.parameter frequency/shift @type decimal @range/bounds -500 500 \"Slide all frequency bins up or down (Hz).\" @dataspace time @dataspace/unit Hz"
 				}
 
@@ -688,7 +676,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 365.0, 72.0, 168.0, 74.0 ],
+					"patching_rect" : [ 203.0, 27.0, 168.0, 74.0 ],
 					"text" : "j.parameter frequency/scale @type decimal @range/bounds -48. 48. @description \"Pitch shift in semitones.\""
 				}
 
@@ -702,7 +690,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 744.0, 396.0, 50.0, 20.0 ],
+					"patching_rect" : [ 396.0, 339.0, 50.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -716,7 +704,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 941.0, 225.0, 43.0, 20.0 ],
+					"patching_rect" : [ 779.0, 180.0, 43.0, 20.0 ],
 					"text" : "j.in~ 2"
 				}
 
@@ -724,7 +712,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 2 ],
+					"destination" : [ "obj-25", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 1 ]
@@ -733,7 +721,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 1 ],
+					"destination" : [ "obj-25", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
@@ -778,15 +766,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-29", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -817,7 +796,7 @@
 					"destination" : [ "obj-1011", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-25", 2 ]
+					"source" : [ "obj-25", 1 ]
 				}
 
 			}
@@ -826,7 +805,7 @@
 					"destination" : [ "obj-22", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-25", 1 ]
+					"source" : [ "obj-25", 0 ]
 				}
 
 			}
@@ -835,7 +814,7 @@
 					"destination" : [ "obj-34", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-25", 2 ]
+					"source" : [ "obj-25", 1 ]
 				}
 
 			}
@@ -844,7 +823,7 @@
 					"destination" : [ "obj-34", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-25", 1 ]
+					"source" : [ "obj-25", 0 ]
 				}
 
 			}
@@ -880,7 +859,7 @@
 					"destination" : [ "obj-1", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 677.0, 352.0, 777.25, 352.0, 777.25, 209.0, 753.5, 209.0 ],
+					"midpoints" : [ 319.5, 307.0, 615.25, 307.0, 615.25, 164.0, 591.5, 164.0 ],
 					"source" : [ "obj-34", 1 ]
 				}
 
@@ -890,7 +869,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 627.0, 360.0, 786.25, 360.0, 786.25, 202.0, 567.5, 202.0 ],
+					"midpoints" : [ 269.5, 315.0, 624.25, 315.0, 624.25, 157.0, 405.5, 157.0 ],
 					"source" : [ "obj-34", 0 ]
 				}
 
@@ -925,14 +904,21 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.spectralShiftVoice~.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectralShift~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectralShift~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"patcherrelativepath" : "../limiter~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter.parametersAndMessages.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
 				"patcherrelativepath" : "../limiter~",
 				"type" : "JSON",
 				"implicit" : 1

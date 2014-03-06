@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.op%", "@description", "Mathematical operations on one or two matrices" ],
+					"args" : [ "@name", "op%", "@description", "Mathematical operations on one or two matrices" ],
 					"bgmode" : 1,
 					"id" : "obj-6",
 					"maxclass" : "bpatcher",
@@ -48,7 +48,7 @@
 					"id" : "obj-1",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 612.0, 92.0, 300.0, 70.0 ],
@@ -63,7 +63,7 @@
 					"id" : "obj-2",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 308.0, 91.0, 300.0, 70.0 ],
@@ -83,7 +83,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 308.0, 161.0, 93.0, 19.0 ],
-					"text" : "r jmod.op%.cmd"
+					"text" : "r op%.module.cmd"
 				}
 
 			}
@@ -97,7 +97,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 17.0, 257.0, 94.0, 19.0 ],
-					"text" : "s jmod.op%.cmd"
+					"text" : "s op%.module.cmd"
 				}
 
 			}
@@ -158,7 +158,7 @@
 					"id" : "obj-11",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.op%.maxpat",
+					"name" : "op%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 308.0, 182.0, 150.0, 70.0 ],

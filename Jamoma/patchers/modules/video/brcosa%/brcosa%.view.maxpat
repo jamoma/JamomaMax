@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 61.0, 44.0, 1042.0, 548.0 ],
+		"rect" : [ 61.0, 44.0, 367.0, 415.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -34,7 +34,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 357.0, 80.0, 60.0, 45.0 ],
+					"patching_rect" : [ 8.0, 93.0, 60.0, 45.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 237.0, 22.0, 60.0, 45.0 ]
 				}
@@ -54,7 +54,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -431,7 +431,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 398.0, 136.0, 80.0, 19.0 ],
+					"patching_rect" : [ 49.0, 149.0, 80.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -459,7 +459,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 516.0, 457.0, 123.0, 19.0 ],
+					"patching_rect" : [ 167.0, 351.0, 123.0, 19.0 ],
 					"text" : "j.remote monochrome",
 					"varname" : "monochrome[1]"
 				}
@@ -474,7 +474,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 367.0, 457.0, 80.0, 19.0 ],
+					"patching_rect" : [ 18.0, 351.0, 80.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 109.0, 42.0, 80.0, 19.0 ],
 					"text" : "monochrome"
@@ -489,7 +489,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 461.0, 457.0, 20.0, 20.0 ],
+					"patching_rect" : [ 112.0, 351.0, 20.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 185.0, 43.0, 17.0, 17.0 ]
 				}
@@ -505,7 +505,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 516.0, 375.0, 108.0, 19.0 ],
+					"patching_rect" : [ 167.0, 317.0, 108.0, 19.0 ],
 					"text" : "j.remote saturation",
 					"varname" : "saturation[1]"
 				}
@@ -521,7 +521,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 461.0, 375.0, 35.0, 19.0 ],
+					"patching_rect" : [ 112.0, 317.0, 35.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 71.0, 43.0, 35.0, 19.0 ],
 					"triangle" : 0,
@@ -540,7 +540,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 461.0, 293.0, 35.0, 19.0 ],
+					"patching_rect" : [ 112.0, 271.0, 35.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 167.0, 23.0, 35.0, 19.0 ],
 					"triangle" : 0,
@@ -560,7 +560,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 461.0, 216.0, 35.0, 19.0 ],
+					"patching_rect" : [ 112.0, 229.0, 35.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 71.0, 23.0, 35.0, 19.0 ],
 					"triangle" : 0,
@@ -578,7 +578,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 389.0, 375.0, 63.0, 19.0 ],
+					"patching_rect" : [ 40.0, 317.0, 63.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 9.0, 42.0, 63.0, 19.0 ],
 					"text" : "saturation"
@@ -594,7 +594,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 389.0, 293.0, 56.0, 19.0 ],
+					"patching_rect" : [ 40.0, 271.0, 56.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 109.0, 24.0, 56.0, 19.0 ],
 					"text" : "contrast"
@@ -610,7 +610,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 389.0, 216.0, 64.0, 19.0 ],
+					"patching_rect" : [ 40.0, 229.0, 64.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 8.0, 24.0, 140.0, 19.0 ],
 					"text" : "brightness"
@@ -627,7 +627,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 516.0, 293.0, 98.0, 19.0 ],
+					"patching_rect" : [ 167.0, 271.0, 98.0, 19.0 ],
 					"text" : "j.remote contrast",
 					"varname" : "contrast[1]"
 				}
@@ -643,7 +643,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 516.0, 216.0, 109.0, 19.0 ],
+					"patching_rect" : [ 167.0, 229.0, 109.0, 19.0 ],
 					"text" : "j.remote brightness",
 					"varname" : "brightness[1]"
 				}
@@ -658,7 +658,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 7.0, 133.0, 264.0, 19.0 ],
+					"patching_rect" : [ 185.0, 119.0, 40.0, 19.0 ],
 					"text" : "j.view",
 					"varname" : "j.model"
 				}
@@ -671,7 +671,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 7.0, 171.0, 25.0, 25.0 ]
+					"patching_rect" : [ 185.0, 149.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -683,7 +683,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 7.0, 99.0, 25.0, 25.0 ]
+					"patching_rect" : [ 185.0, 85.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -696,7 +696,7 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/brcosa%_view"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -706,7 +706,7 @@
 					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 468.5, 180.0, 1014.0, 180.0, 1014.0, 360.0, 470.5, 360.0 ],
+					"midpoints" : [ 119.5, 193.0, 298.0, 193.0, 298.0, 301.0, 121.5, 301.0 ],
 					"source" : [ "obj-1", 2 ]
 				}
 
@@ -716,7 +716,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 438.0, 192.0, 1003.0, 192.0, 1003.0, 274.0, 470.5, 274.0 ],
+					"midpoints" : [ 89.0, 205.0, 285.0, 205.0, 285.0, 259.0, 121.5, 259.0 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -726,7 +726,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 407.5, 201.0, 470.5, 201.0 ],
+					"midpoints" : [ 58.5, 214.0, 121.5, 214.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -826,7 +826,7 @@
 					"destination" : [ "obj-37", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 9.5, 81.0, 342.0, 81.0, 342.0, 75.0, 366.5, 75.0 ],
+					"midpoints" : [ 9.5, 79.0, 17.5, 79.0 ],
 					"source" : [ "obj-36", 0 ]
 				}
 
@@ -843,7 +843,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.pwindow.mouse.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/pwindow.mouse",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/pwindow.mouse",
 				"patcherrelativepath" : "../../../components/pwindow.mouse",
 				"type" : "JSON",
 				"implicit" : 1

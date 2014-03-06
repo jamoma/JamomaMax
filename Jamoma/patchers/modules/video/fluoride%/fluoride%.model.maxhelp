@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.fluoride%", "@description", "Neon glow effect" ],
+					"args" : [ "@name", "fluoride%", "@description", "Neon glow effect" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -94,7 +94,7 @@
 					"id" : "obj-3",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 329.0, 92.0, 300.0, 70.0 ],
@@ -193,7 +193,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 105.0, 457.0, 120.0, 19.0 ],
-					"text" : "s jmod.fluoride%.cmd"
+					"text" : "s fluoride%.module.cmd"
 				}
 
 			}
@@ -207,7 +207,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 329.0, 170.0, 119.0, 19.0 ],
-					"text" : "r jmod.fluoride%.cmd"
+					"text" : "r fluoride%.module.cmd"
 				}
 
 			}
@@ -221,7 +221,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 63.0, 259.0, 108.0, 19.0 ],
-					"text" : "s jmod.wake%.cmd"
+					"text" : "s wake%.module.cmd"
 				}
 
 			}
@@ -267,7 +267,7 @@
 					"id" : "obj-18",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.fluoride%.maxpat",
+					"name" : "fluoride%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 329.0, 194.0, 300.0, 70.0 ],

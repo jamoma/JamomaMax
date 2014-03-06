@@ -132,10 +132,10 @@ TTErr JAMOMA_EXPORT jamoma_node_info_create(ObjectPtr x, TTObjectBasePtr *return
 TTErr JAMOMA_EXPORT jamoma_data_create(ObjectPtr x, TTObjectBasePtr *returnedData, TTSymbol service);
 
 
-/**	Send a Max #TTData command.
- @param aData
- @param msg
- @param argc					The number of arguments of the message.
+/**	Set the #TTData value attribute using the #TTData::Command method.
+ @param aData                   #TTData instance (the Modular class which handles parameter, message or return)
+ @param msg                     A symbol describing the Max type (_sym_bang, _sym_float, ...)
+ @param argc					The number of arguments of the command
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
@@ -450,6 +450,11 @@ void JAMOMA_EXPORT jamoma_patcher_share_node(ObjectPtr obj, TTNodePtr *patcherNo
  */
 TTErr JAMOMA_EXPORT jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass,  TTSymbol& returnedName);
 
+/** Get j.model or j.view of a patcher 
+ @param patcher
+ @param returnedModelOrView
+ */
+void JAMOMA_EXPORT jamoma_patcher_get_model_or_view(ObjectPtr patcher, ObjectPtr *returnedModelOrView);
 
 /** Get the "aClass.model" external in the patcher.
  @param patcher

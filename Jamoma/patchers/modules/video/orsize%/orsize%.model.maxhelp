@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.orsize%", "@description", "Change orientation and size of video" ],
+					"args" : [ "@name", "orsize%", "@description", "Change orientation and size of video" ],
 					"bgmode" : 1,
 					"id" : "obj-27",
 					"maxclass" : "bpatcher",
@@ -47,7 +47,7 @@
 					"id" : "obj-1",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
+					"name" : "input%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 59.0, 104.0, 300.0, 70.0 ],
@@ -66,7 +66,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 59.0, 179.0, 110.0, 19.0 ],
-					"text" : "r jmod.orsize%.cmd"
+					"text" : "r orsize%.module.cmd"
 				}
 
 			}
@@ -114,12 +114,12 @@
 					"id" : "obj-29",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.orsize%.maxpat",
+					"name" : "orsize%.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 59.0, 204.0, 300.0, 105.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
-					"varname" : "jmod.orsize%"
+					"varname" : "orsize%.module"
 				}
 
 			}

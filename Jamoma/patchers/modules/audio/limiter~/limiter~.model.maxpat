@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 569.0, 506.0 ],
+		"rect" : [ 0.0, 44.0, 445.0, 371.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 341.0, 241.0, 182.0, 20.0 ],
+					"patching_rect" : [ 147.0, 43.0, 182.0, 20.0 ],
 					"text" : "limiter.parametersAndMessages"
 				}
 
@@ -50,7 +50,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 191.0, 345.0, 123.0, 20.0 ],
+					"patching_rect" : [ 67.0, 182.0, 123.0, 20.0 ],
 					"text" : "j.limiter~"
 				}
 
@@ -62,19 +62,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 18.0, 430.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-7",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 18.0, 25.0, 25.0, 25.0 ]
+					"patching_rect" : [ 224.5, 273.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -88,7 +76,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 18.0, 79.0, 150.0, 33.0 ],
+					"patching_rect" : [ 224.5, 175.5, 150.0, 33.0 ],
 					"text" : "j.model @description \"A stereo limiter\"",
 					"varname" : "j.hub"
 				}
@@ -103,7 +91,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 243.0, 405.0, 50.0, 20.0 ],
+					"patching_rect" : [ 119.0, 242.0, 50.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -117,7 +105,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 191.0, 405.0, 50.0, 20.0 ],
+					"patching_rect" : [ 67.0, 242.0, 50.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -131,7 +119,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 295.0, 79.0, 66.0, 20.0 ],
+					"patching_rect" : [ 171.0, 136.0, 66.0, 20.0 ],
 					"text" : "j.in~ 2"
 				}
 
@@ -145,7 +133,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 191.0, 79.0, 66.0, 20.0 ],
+					"patching_rect" : [ 67.0, 136.0, 66.0, 20.0 ],
 					"text" : "j.in~ 1"
 				}
 
@@ -158,7 +146,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 191.0, 25.0, 25.0, 25.0 ]
+					"patching_rect" : [ 67.0, 82.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -170,7 +158,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 295.0, 25.0, 25.0, 25.0 ]
+					"patching_rect" : [ 171.0, 82.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -181,7 +169,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 191.0, 436.0, 25.0, 25.0 ]
+					"patching_rect" : [ 67.0, 273.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -192,7 +180,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 243.0, 436.0, 25.0, 25.0 ]
+					"patching_rect" : [ 119.0, 273.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -256,6 +244,7 @@
 					"destination" : [ "obj-13", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 156.5, 174.0, 76.5, 174.0 ],
 					"source" : [ "obj-32", 0 ]
 				}
 
@@ -287,19 +276,10 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-41", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
