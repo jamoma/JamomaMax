@@ -5,68 +5,68 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset number='0' name='defalt'>
-    <item name='in/message' type='generic' priority='0'>0</item>
-    <item name='in/value' type='decimal' priority='0'>0.200000</item>
-    <item name='in/action' type='integer' priority='0'>0</item>
-    <item name='in/module/parameter' type='generic' priority='0'>/sf_report</item>
-    <item name='in/module/instance' type='integer' priority='0'>0</item>
-    <item name='in/module/name' type='generic' priority='0'>/input~</item>
-    <item name='out/action' type='integer' priority='0'>0</item>
-    <item name='out/module/parameter' type='generic' priority='0'>/audio/gain/midi</item>
-    <item name='out/module/name' type='generic' priority='0'>/input~</item>
-    <item name='out/message' type='generic' priority='0'>0</item>
-    <item name='out/value' type='decimal' priority='0'>1.000000</item>
-    <item name='time/repeat' type='decimal' priority='0'>0.000000</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
-    <item name='time/wait' type='decimal' priority='0'>0.000000</item>
+    <command address="in/message' type='generic">0</command>
+    <command address="in/value' type='decimal">0.200000</command>
+    <command address="in/action' type='integer">0</command>
+    <command address="in/module/parameter' type='generic">/sf_report</command>
+    <command address="in/module/instance' type='integer">0</command>
+    <command address="in/module/name' type='generic">/input~</command>
+    <command address="out/action' type='integer">0</command>
+    <command address="out/module/parameter' type='generic">/audio/gain/midi</command>
+    <command address="out/module/name' type='generic">/input~</command>
+    <command address="out/message' type='generic">0</command>
+    <command address="out/value' type='decimal">1.000000</command>
+    <command address="time/repeat' type='decimal">0.000000</command>
+    <command address="view/freeze' type='boolean">0</command>
+    <command address="time/wait' type='decimal">0.000000</command>
   </preset>
   <preset name='toggle limiter modes'>
-    <item name='in/action' type='integer' priority='0'>3</item>
-    <item name='in/message' type='generic' priority='0'>0</item>
-    <item name='in/module/parameter' type='string' priority='5'>/button</item>
-    <item name='in/module/name' type='string' priority='1'>/mouse</item>
-    <item name='in/value' type='decimal' priority='0'>0.200000</item>
-    <item name='out/action' type='integer' priority='0'>2</item>
-    <item name='out/message' type='generic' priority='0'>linear</item>
-    <item name='out/module/parameter' type='string' priority='6'>/mode</item>
-    <item name='out/module/name' type='string' priority='3'>/limiter~</item>
-    <item name='out/module/instance' type='integer' priority='4'>0</item>
-    <item name='out/value' type='decimal' priority='0'>1.000000</item>
-    <item name='time/repeat' type='decimal' priority='0'>0.000000</item>
-    <item name='time/wait' type='decimal' priority='0'>0.000000</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="in/action' type='integer">3</command>
+    <command address="in/message' type='generic">0</command>
+    <command address="in/module/parameter' type='string">/button</command>
+    <command address="in/module/name' type='string">/mouse</command>
+    <command address="in/value' type='decimal">0.200000</command>
+    <command address="out/action' type='integer">2</command>
+    <command address="out/message' type='generic">linear</command>
+    <command address="out/module/parameter' type='string">/mode</command>
+    <command address="out/module/name' type='string">/limiter~</command>
+    <command address="out/module/instance' type='integer">0</command>
+    <command address="out/value' type='decimal">1.000000</command>
+    <command address="time/repeat' type='decimal">0.000000</command>
+    <command address="time/wait' type='decimal">0.000000</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
   <preset number='2' name='ramp audio gain'>
-    <item name='in/action' type='integer' priority='0'>3</item>
-    <item name='in/message' type='generic' priority='0'>0</item>
-    <item name='in/module/parameter' type='string' priority='5'>/position/x</item>
-    <item name='in/module/name' type='string' priority='1'>/mouse</item>
-    <item name='in/value' type='decimal' priority='0'>0.500000</item>
-    <item name='out/action' type='integer' priority='0'>1</item>
-    <item name='out/message' type='generic' priority='0'>100.000000</item>
-    <item name='out/module/parameter' type='string' priority='6'>/audio/gain</item>
-    <item name='out/module/name' type='string' priority='3'>/limiter~</item>
-    <item name='out/ramp' type='decimal' priority='0'>100.000000</item>
-    <item name='out/value' type='decimal' priority='0'>100.000000</item>
-    <item name='time/repeat' type='decimal' priority='0'>2.000000</item>
-    <item name='time/wait' type='decimal' priority='0'>0.000000</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="in/action' type='integer">3</command>
+    <command address="in/message' type='generic">0</command>
+    <command address="in/module/parameter' type='string">/position/x</command>
+    <command address="in/module/name' type='string">/mouse</command>
+    <command address="in/value' type='decimal">0.500000</command>
+    <command address="out/action' type='integer">1</command>
+    <command address="out/message' type='generic">100.000000</command>
+    <command address="out/module/parameter' type='string">/audio/gain</command>
+    <command address="out/module/name' type='string">/limiter~</command>
+    <command address="out/ramp' type='decimal">100.000000</command>
+    <command address="out/value' type='decimal">100.000000</command>
+    <command address="time/repeat' type='decimal">2.000000</command>
+    <command address="time/wait' type='decimal">0.000000</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
   <preset number='3' name='limiter modes w/delay'>
-    <item name='edit' type='string' priority='0'>edit</item>
-    <item name='in/action' type='integer' priority='0'>3</item>
-    <item name='in/message' type='generic' priority='0'>0</item>
-    <item name='in/module/parameter' type='string' priority='5'>/button</item>
-    <item name='in/module/name' type='string' priority='1'>/mouse</item>
-    <item name='in/value' type='decimal' priority='0'>0.200000</item>
-    <item name='out/action' type='integer' priority='0'>2</item>
-    <item name='out/message' type='generic' priority='0'>linear</item>
-    <item name='out/module/parameter' type='string' priority='6'>/mode</item>
-    <item name='out/module/name' type='string' priority='3'>/limiter~</item>
-    <item name='out/ramp' type='decimal' priority='0'>1.000000</item>
-    <item name='out/value' type='decimal' priority='0'>1.000000</item>
-    <item name='time/repeat' type='decimal' priority='0'>0.000000</item>
-    <item name='time/wait' type='decimal' priority='0'>2.000000</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="edit' type='string">edit</command>
+    <command address="in/action' type='integer">3</command>
+    <command address="in/message' type='generic">0</command>
+    <command address="in/module/parameter' type='string">/button</command>
+    <command address="in/module/name' type='string">/mouse</command>
+    <command address="in/value' type='decimal">0.200000</command>
+    <command address="out/action' type='integer">2</command>
+    <command address="out/message' type='generic">linear</command>
+    <command address="out/module/parameter' type='string">/mode</command>
+    <command address="out/module/name' type='string">/limiter~</command>
+    <command address="out/ramp' type='decimal">1.000000</command>
+    <command address="out/value' type='decimal">1.000000</command>
+    <command address="time/repeat' type='decimal">0.000000</command>
+    <command address="time/wait' type='decimal">2.000000</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
 </jamoma>

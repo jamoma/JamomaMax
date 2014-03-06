@@ -5,17 +5,17 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='bypass' type='boolean' priority='0'>0</item>
-    <item name='fade' type='decimal' priority='0'>0.350000</item>
-    <item name='freeze' type='boolean' priority='0'>0</item>
-    <item name='mute' type='boolean' priority='0'>0</item>
-    <item name='noise/granularity.x' type='integer' priority='0'>5</item>
-    <item name='noise/granularity.y' type='integer' priority='0'>5</item>
-    <item name='noise/probability' type='decimal' priority='0'>0.100000</item>
-    <item name='preview' type='boolean' priority='0'>0</item>
-    <item name='stability' type='integer' priority='0'>100</item>
-    <item name='updaterate' type='integer' priority='0'>33</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="bypass' type='boolean">0</command>
+    <command address="fade' type='decimal">0.350000</command>
+    <command address="freeze' type='boolean">0</command>
+    <command address="mute' type='boolean">0</command>
+    <command address="noise/granularity.x' type='integer">5</command>
+    <command address="noise/granularity.y' type='integer">5</command>
+    <command address="noise/probability' type='decimal">0.100000</command>
+    <command address="preview' type='boolean">0</command>
+    <command address="stability' type='integer">100</command>
+    <command address="updaterate' type='integer">33</command>
+    <command address="view/freeze' type='boolean">0</command>
 
   </preset>
 </jamoma>

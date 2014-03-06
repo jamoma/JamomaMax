@@ -5,32 +5,32 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='port' type='integer' priority='0'>0</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="port' type='integer">0</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
   <preset number='2' name='Max0'>
-    <item name='port' type='integer' priority='0'>4000</item>
-    <item name='service_name' type='string' priority='0'>Max</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="port' type='integer">4000</command>
+    <command address="service_name' type='string">Max</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
   <preset number='3' name='Bob1'>
-    <item name='port' type='integer' priority='0'>4001</item>
-    <item name='service_name' type='string' priority='0'>Bob</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="port' type='integer">4001</command>
+    <command address="service_name' type='string">Bob</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
   <preset number='4' name='Joe0'>
-    <item name='port' type='integer' priority='0'>4000</item>
-    <item name='service_name' type='string' priority='0'>Joe</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="port' type='integer">4000</command>
+    <command address="service_name' type='string">Joe</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
   <preset number='5' name='Bill1'>
-    <item name='port' type='integer' priority='0'>4001</item>
-    <item name='service_name' type='string' priority='0'>Bill</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="port' type='integer">4001</command>
+    <command address="service_name' type='string">Bill</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
   <preset number='6' name='Joe2'>
-    <item name='port' type='integer' priority='0'>4002</item>
-    <item name='service_name' type='string' priority='0'>Joe</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="port' type='integer">4002</command>
+    <command address="service_name' type='string">Joe</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
 </jamoma>

@@ -5,19 +5,19 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='audio/gain' type='decimal' priority='0'>0.000000</item>
-    <item name='audio/mute' type='boolean' priority='0'>1</item>
-    <item name='chorus/active' type='boolean' priority='0'>0</item>
-    <item name='chorus/depth' type='decimal' priority='0'>40</item>
-    <item name='chorus/level' type='decimal' priority='0'>10</item>
-    <item name='chorus/speed' type='decimal' priority='0'>0.5</item>
-    <item name='chorus/type' type='integer' priority='0'>0</item>
-    <item name='chorus/units' type='integer' priority='0'>10</item>
-    <item name='reverb/active' type='boolean' priority='0'>0</item>
-    <item name='reverb/damping' type='decimal' priority='0'>0.5</item>
-    <item name='reverb/level' type='decimal' priority='0'>1.</item>
-    <item name='reverb/roomsize' type='decimal' priority='0'>0.8</item>
-    <item name='reverb/width' type='decimal' priority='0'>0.7</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="audio/gain' type='decimal">0.000000</command>
+    <command address="audio/mute' type='boolean">1</command>
+    <command address="chorus/active' type='boolean">0</command>
+    <command address="chorus/depth' type='decimal">40</command>
+    <command address="chorus/level' type='decimal">10</command>
+    <command address="chorus/speed' type='decimal">0.5</command>
+    <command address="chorus/type' type='integer">0</command>
+    <command address="chorus/units' type='integer">10</command>
+    <command address="reverb/active' type='boolean">0</command>
+    <command address="reverb/damping' type='decimal">0.5</command>
+    <command address="reverb/level' type='decimal">1.</command>
+    <command address="reverb/roomsize' type='decimal">0.8</command>
+    <command address="reverb/width' type='decimal">0.7</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
 </jamoma>

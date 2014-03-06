@@ -5,21 +5,21 @@
         xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='edit' type='string' priority='0'>edit</item>
-    <item name='in/action' type='integer' priority='0'>0</item>
-    <item name='in/direct' type='generic' priority='0'>0</item>
-    <item name='in/message' type='generic' priority='0'>0</item>
-    <item name='in/module/derivative' type='integer' priority='0'>0</item>
-    <item name='in/module/listindex' type='integer' priority='0'>0</item>
-    <item name='in/value' type='decimal' priority='0'>0.000000</item>
-    <item name='in/value/variation' type='decimal' priority='0'>0</item>
-    <item name='out/action' type='integer' priority='0'>0</item>
-    <item name='out/direct' type='generic' priority='0'>0</item>  
-    <item name='out/message' type='generic' priority='0'>0</item>
-    <item name='out/ramp' type='integer' priority='0'>0</item>
-    <item name='out/value' type='decimal' priority='0'>0.000000</item>
-    <item name='time/repeat' type='decimal' priority='0'>0.000000</item>
-    <item name='time/wait' type='decimal' priority='0'>0</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="edit' type='string">edit</command>
+    <command address="in/action' type='integer">0</command>
+    <command address="in/direct' type='generic">0</command>
+    <command address="in/message' type='generic">0</command>
+    <command address="in/module/derivative' type='integer">0</command>
+    <command address="in/module/listindex' type='integer">0</command>
+    <command address="in/value' type='decimal">0.000000</command>
+    <command address="in/value/variation' type='decimal">0</command>
+    <command address="out/action' type='integer">0</command>
+    <command address="out/direct' type='generic">0</command>  
+    <command address="out/message' type='generic">0</command>
+    <command address="out/ramp' type='integer">0</command>
+    <command address="out/value' type='decimal">0.000000</command>
+    <command address="time/repeat' type='decimal">0.000000</command>
+    <command address="time/wait' type='decimal">0</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
 </jamoma>

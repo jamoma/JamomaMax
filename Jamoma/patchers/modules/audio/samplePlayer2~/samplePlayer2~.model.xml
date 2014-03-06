@@ -5,19 +5,19 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='audio/gain' type='decimal' priority='0'>100.000000</item>
-    <item name='audio/mute' type='boolean' priority='0'>0</item>
-    <item name='loop' type='boolean' priority='0'>0</item>
-    <item name='loopsync/active' type='boolean' priority='0'>0</item>
-    <item name='loopsync/mode' type='string' priority='0'>loop_time</item>
-    <item name='reverse' type='boolean' priority='0'>0</item>
-    <item name='sample/start' type='decimal' priority='0'>0</item>
-    <item name='sample/stop' type='decimal' priority='0'>0</item>
-    <item name='sample/vzoom' type='decimal' priority='0'>1.</item>
-    <item name='speed/active' type='boolean' priority='0'>0</item>
-    <item name='speed/ratio' type='decimal' priority='0'>1.000000</item>  
-    <item name='pitch/ratio' type='decimal' priority='0'>0.0000</item>  
-    <item name='pitch/active' type='boolean' priority='0'>0</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="audio/gain' type='decimal">100.000000</command>
+    <command address="audio/mute' type='boolean">0</command>
+    <command address="loop' type='boolean">0</command>
+    <command address="loopsync/active' type='boolean">0</command>
+    <command address="loopsync/mode' type='string">loop_time</command>
+    <command address="reverse' type='boolean">0</command>
+    <command address="sample/start' type='decimal">0</command>
+    <command address="sample/stop' type='decimal">0</command>
+    <command address="sample/vzoom' type='decimal">1.</command>
+    <command address="speed/active' type='boolean">0</command>
+    <command address="speed/ratio' type='decimal">1.000000</command>  
+    <command address="pitch/ratio' type='decimal">0.0000</command>  
+    <command address="pitch/active' type='boolean">0</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
 </jamoma>

@@ -5,15 +5,15 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='attenation' type='decimal' priority='0'>-2.500000</item>
-    <item name='bypass' type='boolean' priority='0'>0</item>
-    <item name='delay' type='decimal' priority='0'>70.000000</item>
-    <item name='gain' type='decimal' priority='0'>100.000000</item>
-    <item name='lowMid' type='integer' priority='0'>250</item>
-    <item name='midHigh' type='integer' priority='0'>7000</item>
-    <item name='mute' type='boolean' priority='0'>0</item>
-    <item name='sidechain' type='decimal' priority='0'>0.000000</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="attenation' type='decimal">-2.500000</command>
+    <command address="bypass' type='boolean">0</command>
+    <command address="delay' type='decimal">70.000000</command>
+    <command address="gain' type='decimal">100.000000</command>
+    <command address="lowMid' type='integer">250</command>
+    <command address="midHigh' type='integer">7000</command>
+    <command address="mute' type='boolean">0</command>
+    <command address="sidechain' type='decimal">0.000000</command>
+    <command address="view/freeze' type='boolean">0</command>
 
   </preset>
 </jamoma>

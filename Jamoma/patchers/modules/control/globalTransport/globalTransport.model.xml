@@ -5,13 +5,13 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='beats' type='integer' priority='3'>4</item>
-    <item name='unit' type='integer' priority='4'>4</item>
-    <item name='mute' type='boolean' priority='0'>1</item>
-    <item name='position/bars' type='integer' priority='10'>1</item>
-    <item name='position/beats' type='integer' priority='11'>1</item>
-    <item name='position/units' type='decimal' priority='12'>0.000000</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="beats' type='integer">4</command>
+    <command address="unit' type='integer">4</command>
+    <command address="mute' type='boolean">1</command>
+    <command address="position/bars' type='integer">1</command>
+    <command address="position/beats' type='integer">1</command>
+    <command address="position/units' type='decimal">0.000000</command>
+    <command address="view/freeze' type='boolean">0</command>
 
   </preset>
 </jamoma>

@@ -5,16 +5,16 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='codec' type='string' priority='0' mixweight='1'>0</item>
-    <item name='framerate' type='decimal' priority='0' mixweight='1'>1.000000</item>
-    <item name='interp' type='boolean' priority='0' mixweight='1'>0</item>
-    <item name='quality' type='string' priority='0' mixweight='1'>0</item>
-    <item name='realtime' type='boolean' priority='0' mixweight='1'>0</item>
-    <item name='video/bypass' type='boolean' priority='0' mixweight='1'>0</item>
-    <item name='video/freeze' type='boolean' priority='0' mixweight='1'>0</item>
-    <item name='video/mute' type='boolean' priority='0' mixweight='1'>0</item>
-    <item name='video/preview' type='boolean' priority='0' mixweight='1'>0</item>
-    <item name='view/freeze' type='boolean' priority='0' mixweight='1'>0</item>
-    <item name='view/highlight' type='string' priority='0' mixweight='1'>none</item>
+    <command address="codec' type='string' priority='0">0</command>
+    <command address="framerate' type='decimal' priority='0">1.000000</command>
+    <command address="interp' type='boolean' priority='0">0</command>
+    <command address="quality' type='string' priority='0">0</command>
+    <command address="realtime' type='boolean' priority='0">0</command>
+    <command address="video/bypass' type='boolean' priority='0">0</command>
+    <command address="video/freeze' type='boolean' priority='0">0</command>
+    <command address="video/mute' type='boolean' priority='0">0</command>
+    <command address="video/preview' type='boolean' priority='0">0</command>
+    <command address="view/freeze' type='boolean' priority='0">0</command>
+    <command address="view/highlight' type='string' priority='0">none</command>
   </preset>
 </jamoma>

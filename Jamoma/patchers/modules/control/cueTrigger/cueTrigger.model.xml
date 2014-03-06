@@ -5,8 +5,8 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='repeat' type='string' priority='0'>0</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="repeat' type='string">0</command>
+    <command address="view/freeze' type='boolean">0</command>
 
   </preset>
 </jamoma>

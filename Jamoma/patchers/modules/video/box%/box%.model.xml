@@ -5,23 +5,23 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='/centroid/size' type='integer' priority='0'>1</item>
-    <item name='/contraction/window/on' type='boolean' priority='0'>0</item>
-    <item name='/contraction/window/size' type='integer' priority='0'>0</item>
-    <item name='centroid/color' type='array' priority='0'>147 224 0 </item>
-    <item name='centroid/on' type='boolean' priority='0'>1</item>
-    <item name='centroid/size/on' type='boolean' priority='0'>0</item>
-    <item name='contraction/color' type='array' priority='0'>255 126 31 </item>
-    <item name='contraction/max/color' type='array' priority='0'>0 255 252 </item>
-    <item name='contraction/max/on' type='boolean' priority='0'>1</item>
-    <item name='contraction/on' type='boolean' priority='0'>1</item>
-    <item name='contraction/slide' type='decimal' priority='0'>0.000000</item>
-    <item name='data/smoothing' type='decimal' priority='0'>0.000000</item>
-    <item name='video/bypass' type='boolean' priority='0'>0</item>
-    <item name='video/freeze' type='boolean' priority='0'>0</item>
-    <item name='video/mute' type='boolean' priority='0'>0</item>
-    <item name='video/preview' type='boolean' priority='0'>0</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="/centroid/size' type='integer">1</command>
+    <command address="/contraction/window/on' type='boolean">0</command>
+    <command address="/contraction/window/size' type='integer">0</command>
+    <command address="centroid/color' type='array">147 224 0 </command>
+    <command address="centroid/on' type='boolean">1</command>
+    <command address="centroid/size/on' type='boolean">0</command>
+    <command address="contraction/color' type='array">255 126 31 </command>
+    <command address="contraction/max/color' type='array">0 255 252 </command>
+    <command address="contraction/max/on' type='boolean">1</command>
+    <command address="contraction/on' type='boolean">1</command>
+    <command address="contraction/slide' type='decimal">0.000000</command>
+    <command address="data/smoothing' type='decimal">0.000000</command>
+    <command address="video/bypass' type='boolean">0</command>
+    <command address="video/freeze' type='boolean">0</command>
+    <command address="video/mute' type='boolean">0</command>
+    <command address="video/preview' type='boolean">0</command>
+    <command address="view/freeze' type='boolean">0</command>
 
   </preset>
 </jamoma>

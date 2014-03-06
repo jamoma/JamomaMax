@@ -5,16 +5,16 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='filter/active' type='boolean' priority='0'>0</item>
-    <item name='filter/threshold' type='decimal' priority='0'>0</item>
-    <item name='mode' type='integer' priority='0'>2</item>
-    <item name='noise/active' type='boolean' priority='0'>1</item>
-    <item name='noise/threshold' type='decimal' priority='0'>100.000000</item>
-    <item name='record' type='integer' priority='0'>0</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
-    <item name='video/bypass' type='boolean' priority='0'>0</item>
-    <item name='video/freeze' type='boolean' priority='0'>0</item>
-    <item name='video/mute' type='boolean' priority='0'>0</item>
-    <item name='video/preview' type='boolean' priority='0'>0</item>
+    <command address="filter/active' type='boolean">0</command>
+    <command address="filter/threshold' type='decimal">0</command>
+    <command address="mode' type='integer">2</command>
+    <command address="noise/active' type='boolean">1</command>
+    <command address="noise/threshold' type='decimal">100.000000</command>
+    <command address="record' type='integer">0</command>
+    <command address="view/freeze' type='boolean">0</command>
+    <command address="video/bypass' type='boolean">0</command>
+    <command address="video/freeze' type='boolean">0</command>
+    <command address="video/mute' type='boolean">0</command>
+    <command address="video/preview' type='boolean">0</command>
   </preset>
 </jamoma>

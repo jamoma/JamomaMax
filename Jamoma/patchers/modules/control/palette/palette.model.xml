@@ -5,9 +5,9 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='random/stepSize' type='decimal'>0.2</item>
-    <item name='random/mode' type='string'>random</item>
-    <item name='interpolate' type='boolean'>1</item>
-    <item name='interpolate/stepSize' type='decimal'>0.05</item>
+    <command address="random/stepSize">0.2</command>
+    <command address="random/mode">random</command>
+    <command address="interpolate">1</command>
+    <command address="interpolate/stepSize">0.05</command>
   </preset>
 </jamoma>

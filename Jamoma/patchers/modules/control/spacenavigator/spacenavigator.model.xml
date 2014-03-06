@@ -5,9 +5,9 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='active' type='boolean' priority='0' mixweight='1'>0</item>
-    <item name='model' type='string' priority='0' mixweight='1'>SpaceNavigator</item>
-    <item name='view/freeze' type='boolean' priority='0' mixweight='1'>0</item>
+    <command address="active' type='boolean' priority='0">0</command>
+    <command address="model' type='string' priority='0">SpaceNavigator</command>
+    <command address="view/freeze' type='boolean' priority='0">0</command>
 
   </preset>
 </jamoma>

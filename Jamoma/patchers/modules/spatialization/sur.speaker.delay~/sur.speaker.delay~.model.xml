@@ -5,10 +5,10 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='audio/bypass' type='boolean' priority='0'>0</item>
-    <item name='automatic' type='boolean' priority='2'>1</item>
-    <item name='numSpeakers' type='integer' priority='8'>0</item>
-    <item name='temperature' type='decimal' priority='0'>20.000000</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="audio/bypass' type='boolean">0</command>
+    <command address="automatic' type='boolean">1</command>
+    <command address="numSpeakers' type='integer">0</command>
+    <command address="temperature' type='decimal">20.000000</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
 </jamoma>

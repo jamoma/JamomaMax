@@ -5,14 +5,14 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='audio/gain' type='decimal' priority='0' mixweight='1'>0.000000</item>
-    <item name='audio/mute' type='boolean' priority='0' mixweight='1'>0</item>
-    <item name='loop' type='boolean' priority='0' mixweight='1'>1</item>
-    <item name='nextFile/loop/end' type='decimal' priority='3' mixweight='1'>0.000000</item>
-    <item name='nextFile/loop/start' type='decimal' priority='2' mixweight='1'>0.000000</item>
-    <item name='nextFile/rate' type='decimal' priority='4' mixweight='1'>1.000000</item>
-    <item name='play' type='boolean' priority='0' mixweight='1'>0</item>
-    <item name='view/freeze' type='boolean' priority='0' mixweight='1'>0</item>
-    <item name='view/highlight' type='string' priority='0' mixweight='1'>0</item>
+    <command address="audio/gain' type='decimal' priority='0">0.000000</command>
+    <command address="audio/mute' type='boolean' priority='0">0</command>
+    <command address="loop' type='boolean' priority='0">1</command>
+    <command address="nextFile/loop/end' type='decimal' priority='3">0.000000</command>
+    <command address="nextFile/loop/start' type='decimal' priority='2">0.000000</command>
+    <command address="nextFile/rate' type='decimal' priority='4">1.000000</command>
+    <command address="play' type='boolean' priority='0">0</command>
+    <command address="view/freeze' type='boolean' priority='0">0</command>
+    <command address="view/highlight' type='string' priority='0">0</command>
   </preset>
 </jamoma>

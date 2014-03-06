@@ -5,7 +5,7 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="view/freeze' type='boolean">0</command>
 
   </preset>
 </jamoma>

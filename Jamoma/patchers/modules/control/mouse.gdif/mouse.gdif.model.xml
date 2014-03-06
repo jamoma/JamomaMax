@@ -5,17 +5,17 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='gdif/body/on' type='boolean' priority='0'>0</item>
-    <item name='gdif/cooked/on' type='boolean' priority='0'>0</item>
-    <item name='gdif/device/on' type='boolean' priority='0'>0</item>
-    <item name='gdif/emotion/on' type='boolean' priority='0'>0</item>
-    <item name='gdif/environment/on' type='boolean' priority='0'>0</item>
-    <item name='gdif/performance/on' type='boolean' priority='0'>0</item>
-    <item name='gdif/raw/on' type='boolean' priority='0'>0</item>
-    <item name='mode' type='string' priority='0'>poll</item>
-    <item name='mouse_on' type='boolean' priority='0'>0</item>
-    <item name='reference' type='string' priority='0'>screen</item>
-    <item name='sample_rate' type='integer' priority='0'>0</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="gdif/body/on' type='boolean">0</command>
+    <command address="gdif/cooked/on' type='boolean">0</command>
+    <command address="gdif/device/on' type='boolean">0</command>
+    <command address="gdif/emotion/on' type='boolean">0</command>
+    <command address="gdif/environment/on' type='boolean">0</command>
+    <command address="gdif/performance/on' type='boolean">0</command>
+    <command address="gdif/raw/on' type='boolean">0</command>
+    <command address="mode' type='string">poll</command>
+    <command address="mouse_on' type='boolean">0</command>
+    <command address="reference' type='string">screen</command>
+    <command address="sample_rate' type='integer">0</command>
+    <command address="view/freeze' type='boolean">0</command>
   </preset>
 </jamoma>

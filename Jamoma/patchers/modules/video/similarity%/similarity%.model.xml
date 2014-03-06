@@ -5,13 +5,13 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <item name='algorithm' type='generic' priority='0'>1</item>
-    <item name='mode' type='generic' priority='0'>2</item>
-    <item name='video/bypass' type='boolean' priority='0'>0</item>
-    <item name='video/freeze' type='boolean' priority='0'>0</item>
-    <item name='video/mute' type='boolean' priority='0'>0</item>
-    <item name='video/preview' type='boolean' priority='0'>0</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+    <command address="algorithm' type='generic">1</command>
+    <command address="mode' type='generic">2</command>
+    <command address="video/bypass' type='boolean">0</command>
+    <command address="video/freeze' type='boolean">0</command>
+    <command address="video/mute' type='boolean">0</command>
+    <command address="video/preview' type='boolean">0</command>
+    <command address="view/freeze' type='boolean">0</command>
 
   </preset>
 </jamoma>
