@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 25.0, 44.0, 1138.0, 662.0 ],
+		"rect" : [ 25.0, 44.0, 1141.0, 658.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -37,7 +37,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 897.0, 95.0, 211.0, 371.0 ],
+					"patching_rect" : [ 897.0, 95.0, 214.0, 371.0 ],
 					"text" : "FUNCTIONALITY\nThe motion% module is designed as an all-purpose motion image generator/analyzer, and has the following core features:\n\n- threshold: a simple low-pass filter that will cut off all pixels below the value given\n- noise: the noise reduction algorithm is based on removing \"single\" pixels, i.e. only keeping \"blobs\" of a certain size. \n- color: dependent on the video stream, using colours can be either useful or creatively interesting. \n- inverse: will give you an inverted motion image, i.e. active pixels are black on a white background.\n- trails: adds some video feedback into the stream, and you can choose how many frames the feedback should last\n- edge: it may useful/interesting to do add edges to the image, to more clearly see the original contours.\n\nIn addition, by clicking on the + in the upper right corner you get access to settings for plotting centre of motion, and the contraction box of the motion on top of the image."
 				}
 
@@ -66,7 +66,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 809.0, 628.0, 69.0, 17.0 ],
+					"patching_rect" : [ 809.0, 628.0, 79.0, 17.0 ],
 					"text" : "box%.module"
 				}
 
@@ -94,7 +94,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 712.0, 628.0, 92.0, 17.0 ],
+					"patching_rect" : [ 712.0, 628.0, 102.0, 17.0 ],
 					"text" : "motion2%.module"
 				}
 
@@ -157,7 +157,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -318,8 +318,9 @@
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "input%.module.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 228.0, 97.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"varname" : "/input%[1]"
@@ -350,7 +351,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -533,7 +534,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 553.0, 110.0, 157.0, 19.0 ],
-									"text" : "j.oscroute /height /width"
+									"text" : "j.oscroute height width"
 								}
 
 							}
@@ -547,7 +548,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 39.0, 205.0, 39.0, 17.0 ],
-									"text" : "/clear"
+									"text" : "clear"
 								}
 
 							}
@@ -668,7 +669,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 27.0, 110.0, 159.0, 19.0 ],
-									"text" : "j.oscroute /quantity /x /y"
+									"text" : "j.oscroute quantity x y"
 								}
 
 							}
@@ -704,7 +705,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 27.0, 72.0, 189.0, 19.0 ],
-									"text" : "j.oscroute /motion /contraction"
+									"text" : "j.oscroute motion contraction"
 								}
 
 							}
@@ -879,7 +880,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 553.0, 178.0, 100.0, 19.0 ],
+					"patching_rect" : [ 574.0, 178.0, 87.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -992,7 +993,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 70.0, 425.0, 69.0, 17.0 ],
-					"text" : "/color $1"
+					"text" : "color $1"
 				}
 
 			}
@@ -1034,7 +1035,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 70.0, 405.0, 72.0, 17.0 ],
-					"text" : "/trails $1"
+					"text" : "trails $1"
 				}
 
 			}
@@ -1065,7 +1066,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 70.0, 365.0, 107.0, 17.0 ],
-					"text" : "/edge/threshold $1"
+					"text" : "edge/threshold $1"
 				}
 
 			}
@@ -1079,7 +1080,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 70.0, 345.0, 108.0, 17.0 ],
-					"text" : "/edge/algorithm $1"
+					"text" : "edge/algorithm $1"
 				}
 
 			}
@@ -1150,7 +1151,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 70.0, 325.0, 65.0, 17.0 ],
-					"text" : "/slide $1"
+					"text" : "slide $1"
 				}
 
 			}
@@ -1181,7 +1182,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 70.0, 305.0, 92.0, 17.0 ],
-					"text" : "/threshold $1"
+					"text" : "threshold $1"
 				}
 
 			}
@@ -1195,7 +1196,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 70.0, 385.0, 69.0, 17.0 ],
-					"text" : "/noise $1"
+					"text" : "noise $1"
 				}
 
 			}
@@ -1208,7 +1209,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 70.0, 445.0, 119.0, 19.0 ],
+					"patching_rect" : [ 70.0, 445.0, 129.0, 19.0 ],
 					"text" : "s motion%.module.cmd"
 				}
 
@@ -1223,7 +1224,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 553.0, 76.0, 116.0, 19.0 ],
+					"patching_rect" : [ 553.0, 75.0, 128.0, 19.0 ],
 					"text" : "r motion%.module.cmd"
 				}
 
@@ -1237,7 +1238,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 11.0, 227.0, 117.0, 19.0 ],
+					"patching_rect" : [ 11.0, 227.0, 129.0, 19.0 ],
 					"text" : "s motion%.module.cmd"
 				}
 
@@ -1272,8 +1273,9 @@
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "motion%.module.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 553.0, 97.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"varname" : "/motion%"
@@ -1290,8 +1292,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 653.0, 178.0, 188.0, 19.0 ],
-					"text" : "j.oscroute /motion/x /motion/y"
+					"patching_rect" : [ 661.0, 178.0, 188.0, 19.0 ],
+					"text" : "j.oscroute motion/x motion/y"
 				}
 
 			}
@@ -1344,6 +1346,25 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-57", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 237.5, 177.0, 540.0, 177.0, 540.0, 93.0, 562.5, 93.0 ],
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-65", 0 ],
 					"disabled" : 0,
@@ -1498,10 +1519,46 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-57", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
 					"source" : [ "obj-52", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-28", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-57", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-56", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-57", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-60", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-57", 1 ]
 				}
 
 			}
@@ -1543,50 +1600,148 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.videoParameters.helper.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/help",
-				"patcherrelativepath" : "../../../../help",
+				"name" : "motion%.module.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/motion%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "motion%.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/motion%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.motion%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/motion%",
+				"patcherrelativepath" : "../../../components/motion%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.checkplanes%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/checkplanes%",
+				"patcherrelativepath" : "../../../components/checkplanes%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.absdiff.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/absdiff",
+				"patcherrelativepath" : "../../../components/absdiff",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.autoscale.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/autoscale",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/autoscale",
 				"patcherrelativepath" : "../../../components/autoscale",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "j.passmatrixinfo%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/passmatrixinfo%",
+				"patcherrelativepath" : "../../../components/passmatrixinfo%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.rgb2luma%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/rgb2luma%",
+				"patcherrelativepath" : "../../../components/rgb2luma%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.sum%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/sum%",
+				"patcherrelativepath" : "../../../components/sum%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "motion%.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/motion%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.videoParameters.helper.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/help",
+				"patcherrelativepath" : "../../../../help",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input%.module.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input%.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input%.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input%.ui.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "aashild_strip.jpg",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/media",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/media",
 				"patcherrelativepath" : "../../../../media",
 				"type" : "JPEG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../../../components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
@@ -1596,11 +1751,51 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.stats.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.pass.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{

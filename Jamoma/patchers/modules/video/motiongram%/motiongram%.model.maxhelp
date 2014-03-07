@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 31.0, 44.0, 918.0, 696.0 ],
+		"rect" : [ 22.0, 166.0, 918.0, 696.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -72,7 +72,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -105,7 +105,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 154.0, 49.0, 17.0 ],
-									"text" : "/line $1"
+									"text" : "line $1"
 								}
 
 							}
@@ -144,7 +144,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 178.0, 154.0, 49.0, 17.0 ],
-									"text" : "/line $1"
+									"text" : "line $1"
 								}
 
 							}
@@ -162,7 +162,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -317,7 +317,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 50.0, 140.0, 59.0, 20.0 ],
+													"patching_rect" : [ 50.0, 140.0, 59.0, 19.0 ],
 													"text" : "route dim"
 												}
 
@@ -703,7 +703,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 15.0, 432.0, 68.0, 17.0 ],
-					"text" : "/direction 1"
+					"text" : "direction 1"
 				}
 
 			}
@@ -717,7 +717,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 621.0, 473.0, 251.0, 177.0 ],
+					"patching_rect" : [ 621.0, 481.0, 251.0, 177.0 ],
 					"text" : "A motiongram is a way of displaying motion (e.g. human motion) in the time-domain, somehow similar to how we are used to working with time-representations of audio (spectrograms).\r\rThe method is based on creating a motion image, doing a matrix reduction on it and plotting the resultant 1xn or nx1 matrices over time either horizontally or vertically.\n\nThe module supports creating motiongrams based on either the average of each column/row, or one specific column."
 				}
 
@@ -735,7 +735,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -904,8 +904,9 @@
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "input%.module.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 271.0, 86.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"varname" : "/input%"
@@ -931,8 +932,9 @@
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "motiongram%.module.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 584.0, 168.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
@@ -968,8 +970,9 @@
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "motiongram%.module.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 15.0, 455.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
@@ -1030,8 +1033,9 @@
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "motion2%.module.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 271.0, 168.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"varname" : "/motion%"
@@ -1040,6 +1044,73 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-28", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-14", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 24.5, 531.0, 327.0, 531.0, 327.0, 450.0, 348.5, 450.0 ],
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 165.0, 537.0, 336.0, 537.0, 336.0, 477.0, 348.5, 477.0 ],
+					"source" : [ "obj-17", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 631.5, 475.0, 651.0, 475.0, 651.0, 475.0, 894.0, 475.0, 894.0, 165.0, 874.5, 165.0 ],
+					"source" : [ "obj-20", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 589.5, 471.0, 590.0, 471.0, 590.0, 675.0, 315.0, 675.0, 315.0, 450.0, 305.5, 450.0 ],
+					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-22", 0 ],
 					"disabled" : 0,
@@ -1070,6 +1141,45 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 280.5, 249.0, 579.0, 249.0, 579.0, 165.0, 593.5, 165.0 ],
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 280.5, 449.0, 24.5, 449.0 ],
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 280.5, 249.5, 348.5, 249.5 ],
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -1077,79 +1187,271 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "motion2%.module.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/motion2%",
+				"patcherrelativepath" : "../motion2%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "motion2%.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/motion2%",
+				"patcherrelativepath" : "../motion2%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.motion%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/motion%",
+				"patcherrelativepath" : "../../../components/motion%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.noiseremoval%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/noiseremoval%",
+				"patcherrelativepath" : "../../../components/noiseremoval%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.rgb2luma%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/rgb2luma%",
+				"patcherrelativepath" : "../../../components/rgb2luma%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.sum%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/sum%",
+				"patcherrelativepath" : "../../../components/sum%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "motion2%.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/motion2%",
+				"patcherrelativepath" : "../motion2%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.videoParameters.helper.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/help",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/help",
 				"patcherrelativepath" : "../../../../help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "motiongram%.module.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/motiongram%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "motiongram%.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/motiongram%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.mean%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/mean%",
+				"patcherrelativepath" : "../../../components/mean%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.thru.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
+				"patcherrelativepath" : "../../../components/thru",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.float2char%.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/float2char%",
+				"patcherrelativepath" : "../../../components/float2char%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "motiongram%.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/motiongram%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input%.module.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input%.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input%.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input%.ui.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "visualization.gif",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/media",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/media",
 				"patcherrelativepath" : "../../../../media",
 				"type" : "GIFf",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tri_bw2.jpg",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/media",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/media",
 				"patcherrelativepath" : "../../../../media",
 				"type" : "JPEG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "aashild_full4_lines.jpg",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/media",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/media",
 				"patcherrelativepath" : "../../../../media",
 				"type" : "JPEG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "dancers_t005_brcosa2.jpg",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/media",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/media",
 				"patcherrelativepath" : "../../../../media",
 				"type" : "JPEG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/initialized",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/initialized",
 				"patcherrelativepath" : "../../../components/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../../../components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "xray.jit.mean.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.pass.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{
