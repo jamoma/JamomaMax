@@ -19,7 +19,7 @@
 //#define DEBUG_NOTIFICATIONS
 
 // Data Structure for this object
-struct Unpack {
+typedef struct _unpack {
     t_pxobject					obj;
 	TTAudioGraphObjectBasePtr		audioGraphObject;
 	TTAudioSignalPtr			audioSignal;
@@ -34,23 +34,22 @@ struct Unpack {
 	TTPtr						qelem;			// for clumping patcher dirty notifications
 	TTAudioGraphPreprocessData	initData;		// for the preprocess method
 	TTUInt64					sampleStamp;	// current count of samples processed since DSP was started
-};
-typedef Unpack* UnpackPtr;
+} t_unpack;
 
 
 // Prototypes for methods
-UnpackPtr	UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void	UnpackFree(UnpackPtr self);
-MaxErr	UnpackNotify(UnpackPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data);
-void	UnpackQFn(UnpackPtr self);
-void	UnpackAssist(UnpackPtr self, void* b, long msg, long arg, char* dst);
-TTErr	UnpackReset(UnpackPtr self, long vectorSize);
-TTErr	UnpackConnect(UnpackPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
-void	UnpackIterateResetCallback(UnpackPtr self, ObjectPtr obj);
-void	UnpackIterateSetupCallback(UnpackPtr self, ObjectPtr obj);
-void	UnpackAttachToPatchlinesForPatcher(UnpackPtr self, ObjectPtr patcher);
-void	UnpackDsp64(UnpackPtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags);
-//MaxErr	UnpackSetGain(UnpackPtr self, void* attr, AtomCount argc, AtomPtr argv);
+t_unpack*	UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void	UnpackFree(t_unpack* self);
+MaxErr	UnpackNotify(t_unpack* self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data);
+void	UnpackQFn(t_unpack* self);
+void	UnpackAssist(t_unpack* self, void* b, long msg, long arg, char* dst);
+TTErr	UnpackReset(t_unpack* self, long vectorSize);
+TTErr	UnpackConnect(t_unpack* self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
+void	UnpackIterateResetCallback(t_unpack* self, ObjectPtr obj);
+void	UnpackIterateSetupCallback(t_unpack* self, ObjectPtr obj);
+void	UnpackAttachToPatchlinesForPatcher(t_unpack* self, ObjectPtr patcher);
+void	UnpackDsp64(t_unpack* self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags);
+//MaxErr	UnpackSetGain(t_unpack* self, void* attr, AtomCount argc, AtomPtr argv);
 
 
 // Globals
@@ -67,7 +66,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();	
 	common_symbols_init();
 
-	c = class_new("j.unpack=", (method)UnpackNew, (method)UnpackFree, sizeof(Unpack), (method)0L, A_GIMME, 0);
+	c = class_new("j.unpack=", (method)UnpackNew, (method)UnpackFree, sizeof(t_unpack), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)UnpackNotify,		"notify",			A_CANT, 0);
 	class_addmethod(c, (method)UnpackReset,			"audio.reset",		A_CANT, 0);
@@ -91,16 +90,16 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-UnpackPtr UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+t_unpack* UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
-    UnpackPtr	self;
+    t_unpack*	self;
 	TTValue		sr(sys_getsr());
  	long		attrstart = attr_args_offset(argc, argv);		// support normal arguments
 	short		i;
 	TTValue	v;
 	TTErr		err;
    
-    self = UnpackPtr(object_alloc(sUnpackClass));
+    self = (t_unpack*)object_alloc(sUnpackClass);
     if (self) {
 		self->maxNumChannels = 2;		// An initial argument to this object will set the maximum number of channels
 		if(attrstart && argv)
@@ -108,7 +107,7 @@ UnpackPtr UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
 		
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("thru"));
 		v.set(1, 1); // arg is the number of inlets
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
@@ -128,7 +127,7 @@ UnpackPtr UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 }
 
 // Memory Deallocation
-void UnpackFree(UnpackPtr self)
+void UnpackFree(t_unpack* self)
 {
 	dsp_free((t_pxobject*)self);
 	if (self->patcherview) {
@@ -143,7 +142,7 @@ void UnpackFree(UnpackPtr self)
 /************************************************************************************/
 // Methods bound to input/inlets
 
-MaxErr UnpackNotify(UnpackPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data)
+MaxErr UnpackNotify(t_unpack* self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
@@ -198,7 +197,7 @@ MaxErr UnpackNotify(UnpackPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender
 
 
 // Qelem function, which clumps together dirty notifications before making the new connections
-void UnpackQFn(UnpackPtr self)
+void UnpackQFn(t_unpack* self)
 {
 	t_atom result;
 
@@ -215,7 +214,7 @@ void UnpackQFn(UnpackPtr self)
 
 
 // Method for Assistance Messages
-void UnpackAssist(UnpackPtr self, void* b, long msg, long arg, char* dst)
+void UnpackAssist(t_unpack* self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
 		strcpy(dst, "multichannel audio connection and control messages");		
@@ -227,7 +226,7 @@ void UnpackAssist(UnpackPtr self, void* b, long msg, long arg, char* dst)
 	}
 }
 
-TTErr UnpackReset(UnpackPtr self, long vectorSize)
+TTErr UnpackReset(t_unpack* self, long vectorSize)
 {
 	self->hasReset = true;
 	self->hasConnections = false;
@@ -235,14 +234,14 @@ TTErr UnpackReset(UnpackPtr self, long vectorSize)
 }
 
 
-TTErr UnpackConnect(UnpackPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
+TTErr UnpackConnect(t_unpack* self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
 {
 	self->hasConnections = true;
 	return self->audioGraphObject->connectAudio(audioSourceObject, sourceOutletNumber);
 }
 
 
-void UnpackIterateResetCallback(UnpackPtr self, ObjectPtr obj)
+void UnpackIterateResetCallback(t_unpack* self, ObjectPtr obj)
 {
 	MaxErr err = MAX_ERR_NONE;
 	method audioResetMethod = zgetfn(obj, gensym("audio.reset"));
@@ -252,7 +251,7 @@ void UnpackIterateResetCallback(UnpackPtr self, ObjectPtr obj)
 }
 
 
-void UnpackIterateSetupCallback(UnpackPtr self, ObjectPtr obj)
+void UnpackIterateSetupCallback(t_unpack* self, ObjectPtr obj)
 {
 	MaxErr err = MAX_ERR_NONE;
 	method audioSetupMethod = zgetfn(obj, gensym("audio.setup"));
@@ -262,7 +261,7 @@ void UnpackIterateSetupCallback(UnpackPtr self, ObjectPtr obj)
 }
 
 
-void UnpackAttachToPatchlinesForPatcher(UnpackPtr self, ObjectPtr patcher)
+void UnpackAttachToPatchlinesForPatcher(t_unpack* self, ObjectPtr patcher)
 {
 	ObjectPtr	patchline = object_attr_getobj(patcher, _sym_firstline);
 	ObjectPtr	box = jpatcher_get_firstobject(patcher);
@@ -286,7 +285,7 @@ void UnpackAttachToPatchlinesForPatcher(UnpackPtr self, ObjectPtr patcher)
 
 
 // Perform (signal) Method
-void UnpackPerform64(UnpackPtr self, ObjectPtr dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
+void UnpackPerform64(t_unpack* self, ObjectPtr dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
 	TTUInt16	numChannels;
 	
@@ -319,7 +318,7 @@ void UnpackPerform64(UnpackPtr self, ObjectPtr dsp64, double **ins, long numins,
 
 
 // DSP Method
-void UnpackDsp64(UnpackPtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags)
+void UnpackDsp64(t_unpack* self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
 	TTUInt16	i;
 	MaxErr		err;
@@ -331,6 +330,19 @@ void UnpackDsp64(UnpackPtr self, ObjectPtr dsp64, short *count, double samplerat
 	object_post(SELF, "dsp method called");
 #endif // DEBUG_NOTIFICATIONS
 	
+	ObjectPtr	patcher = NULL;
+	ObjectPtr	parent = NULL;
+	ObjectPtr	patcherview = NULL;
+	
+	// first find the top-level patcher
+	err = object_obex_lookup(self, gensym("#P"), &patcher);
+	parent = patcher;
+	while (parent) {
+		patcher = parent;
+		parent = object_attr_getobj(patcher, _sym_parentpatcher);
+	}
+	
+
 	/*	We need to figure out what objects are connected to what inlets to build the graph:
 	 
 	 1. Broadcast 'audio.reset' to every object in the patcher, to remove all existing connections.
@@ -353,33 +365,21 @@ void UnpackDsp64(UnpackPtr self, ObjectPtr dsp64, short *count, double samplerat
 	 */ 
 	
 	if (!self->hasReset) {
-		ObjectPtr	patcher = NULL;
-		ObjectPtr	parent = NULL;
-		ObjectPtr	patcherview = NULL;
-		
-		// first find the top-level patcher
-		err = object_obex_lookup(self, gensym("#P"), &patcher);
-		parent = patcher;
-		while (parent) {
-			patcher = parent;
-			parent = object_attr_getobj(patcher, _sym_parentpatcher);
-		}
-		
 		// now iterate recursively from the top-level patcher down through all of the subpatchers
 		object_method(patcher, gensym("iterate"), (method)UnpackIterateResetCallback, self, PI_DEEP, &result);
 		object_method(patcher, gensym("iterate"), (method)UnpackIterateSetupCallback, self, PI_DEEP, &result);
-		
-		// now let's attach to the patcherview to get notifications about any further changes to the patch cords
-		// the patcher 'dirty' attribute is not modified for each change, but the patcherview 'dirty' attribute is
-		if (!self->patcherview) {
-			patcherview = jpatcher_get_firstview(patcher);
-			self->patcherview = patcherview;
-			self->patcher = patcher;
-			object_attach_byptr_register(self, patcherview, _sym_nobox);			
-		}
 	}
 	
-	// now we want to go a step further and attach to all of the patch cords 
+	// now let's attach to the patcherview to get notifications about any further changes to the patch cords
+	// the patcher 'dirty' attribute is not modified for each change, but the patcherview 'dirty' attribute is
+	if (!self->patcherview) {
+		patcherview = jpatcher_get_firstview(patcher);
+		self->patcherview = patcherview;
+		self->patcher = patcher;
+		object_attach_byptr_register(self, patcherview, _sym_nobox);
+	}
+	
+	// now we want to go a step further and attach to all of the patch cords
 	// this is how we will know if one is deleted
 	UnpackAttachToPatchlinesForPatcher(self, self->patcher);
 		
@@ -399,7 +399,7 @@ void UnpackDsp64(UnpackPtr self, ObjectPtr dsp64, short *count, double samplerat
 }
 
 
-/*MaxErr UnpackSetGain(UnpackPtr self, void* attr, AtomCount argc, AtomPtr argv)
+/*MaxErr UnpackSetGain(t_unpack* self, void* attr, AtomCount argc, AtomPtr argv)
 {
 	if (argc) {
 		self->gain = atom_getfloat(argv); 
