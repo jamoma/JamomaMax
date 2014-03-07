@@ -1,9 +1,9 @@
 defines:
-  - AUDIO_EXTERNAL
-  - JCOM_IN_TILDE
+  - AUDIO_GRAPH_EXTERNAL
+  - J_IN_MULTI
   
 sources:
-  - j.in=.cpp
+  - ../j.in/j.in.cpp
   - ../classwrapper/TTModularClassWrapperMax.cpp
   - ../c74support/max-includes/common/commonsyms.cpp
     
@@ -16,13 +16,17 @@ includes:
   - ../../../../Core/Modular/library/SchedulerLib
   - ../../../../Core/Modular/library/ProtocolLib
   - ../../../../Core/DSP/library/includes
+  - ../../../../Core/Graph/library/includes
+  - ../../../../Core/AudioGraph/library/includes
   - ../classwrapper
   - C74-INCLUDES
   
 libraries:
   - FOUNDATION
-  - MODULAR 
+  - MODULAR
   - DSP
+  - GRAPH
+  - AUDIOGRAPH
   - C74
   - JAMOMA_FOR_MAX
 

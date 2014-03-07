@@ -101,12 +101,14 @@ else
     
     cleanAndBuildExternal glibdir, "j.in"
     cleanAndBuildExternal glibdir, "j.in~"
+    cleanAndBuildExternal glibdir, "j.in="
     
     cleanAndBuildExternal glibdir, "j.message"
     cleanAndBuildExternal glibdir, "j.parameter"
     
     cleanAndBuildExternal glibdir, "j.out"
     cleanAndBuildExternal glibdir, "j.out~"
+    cleanAndBuildExternal glibdir, "j.out="
     
     cleanAndBuildExternal glibdir, "j.messageArray"
     cleanAndBuildExternal glibdir, "j.parameterArray"
