@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 182.0, 227.0, 875.0, 397.0 ],
+		"rect" : [ 241.0, 381.0, 480.0, 296.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -48,8 +48,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 149.0, 85.0, 32.5, 19.0 ],
-					"text" : "j.in"
+					"patching_rect" : [ 149.0, 85.0, 37.0, 19.0 ],
+					"text" : "j.in 1"
 				}
 
 			}
@@ -82,11 +82,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-12",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 278.0, 161.0, 323.0, 19.0 ],
+					"patching_rect" : [ 278.0, 94.0, 181.0, 31.0 ],
 					"text" : "j.model @description \"Crossfade between two video sources.\"",
 					"varname" : "xfade[2]"
 				}
@@ -99,7 +100,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 11.0, 268.0, 25.0, 25.0 ]
+					"patching_rect" : [ 11.0, 244.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -531,7 +532,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.0, 271.0, 87.0, 19.0 ],
+					"patching_rect" : [ 36.0, 247.0, 87.0, 19.0 ],
 					"text" : "VIDEO OUTPUT"
 				}
 
@@ -543,7 +544,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 278.0, 271.0, 25.0, 25.0 ]
+					"patching_rect" : [ 278.0, 134.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -570,8 +571,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 11.0, 234.0, 53.0, 19.0 ],
-					"text" : "j.out"
+					"patching_rect" : [ 11.0, 210.0, 53.0, 19.0 ],
+					"text" : "j.out 1"
 				}
 
 			}
@@ -736,23 +737,6 @@
 					"source" : [ "obj-2", 2 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

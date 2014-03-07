@@ -154,7 +154,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 578.0, 91.0, 299.0, 164.0 ],
+					"patching_rect" : [ 578.0, 91.0, 302.0, 164.0 ],
 					"text" : "In computer vision it is common to talk about the \"background\" and \"foreground\" of an image. The foreground is typically an object or a person in the focus of the analysis, while the background may be considered \"noise\" that should be removed to enhance the foreground.\r\rBackground subtraction is still a hot research topic, and much work still has to be done before it is properly understood. While there are several techniques that work fairly well for static backgrounds, it is far more difficult to be able to subtract the background when it is changing over time. "
 				}
 
@@ -298,7 +298,7 @@
 					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 252.5, 165.0, 558.5, 165.0 ],
+					"midpoints" : [ 252.5, 169.0, 558.5, 169.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
