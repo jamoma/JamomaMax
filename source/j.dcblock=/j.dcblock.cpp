@@ -18,28 +18,28 @@
 
 
 // Data Structure for this object
-typedef struct DCBlocker {
+typedef struct DCBlock {
     t_object				obj;
 	TTAudioGraphObjectBasePtr	audioGraphObject;
 	TTPtr					audioGraphOutlet;
 	long					attrBypass;
 };
-typedef DCBlocker* DCBlockerPtr;
+typedef DCBlock* DCBlockPtr;
 
 
 // Prototypes for methods
-DCBlockerPtr	DCBlockerNew(SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void			DCBlockerFree(DCBlockerPtr self);
-void			DCBlockerAssist(DCBlockerPtr self, void* b, long msg, long arg, char* dst);
-void			DCBlockerClear(DCBlockerPtr self);
-TTErr			DCBlockerReset(DCBlockerPtr self);
-TTErr			DCBlockerSetup(DCBlockerPtr self);
-TTErr			DCBlockerConnect(DCBlockerPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
-MaxErr			DCBlockerSetBypass(DCBlockerPtr self, void* attr, AtomCount argc, AtomPtr argv);
+DCBlockPtr	DCBlockNew(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		DCBlockFree(DCBlockPtr self);
+void		DCBlockAssist(DCBlockPtr self, void* b, long msg, long arg, char* dst);
+void		DCBlockClear(DCBlockPtr self);
+TTErr		DCBlockReset(DCBlockPtr self);
+TTErr		DCBlockSetup(DCBlockPtr self);
+TTErr		DCBlockConnect(DCBlockPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
+MaxErr		DCBlockSetBypass(DCBlockPtr self, void* attr, AtomCount argc, AtomPtr argv);
 
 
 // Globals
-static ClassPtr sDCBlockerClass;
+static ClassPtr sDCBlockClass;
 
 
 /************************************************************************************/
@@ -52,23 +52,23 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	TTAudioGraphInit();	
 	common_symbols_init();
 	
-	c = class_new("j.dcblocker=", (method)DCBlockerNew, (method)DCBlockerFree, sizeof(DCBlocker), (method)0L, A_GIMME, 0);
+	c = class_new("j.dcblock=", (method)DCBlockNew, (method)DCBlockFree, sizeof(DCBlock), (method)0L, A_GIMME, 0);
 	
-	class_addmethod(c, (method)DCBlockerClear,		"clear",				0);
-	class_addmethod(c, (method)DCBlockerReset,		"audio.reset",		A_CANT, 0);
-	class_addmethod(c, (method)DCBlockerSetup,		"audio.setup",		A_CANT, 0);
-	class_addmethod(c, (method)DCBlockerConnect,	"audio.connect",	A_OBJ, A_LONG, 0);
+	class_addmethod(c, (method)DCBlockClear,		"clear",				0);
+	class_addmethod(c, (method)DCBlockReset,		"audio.reset",		A_CANT, 0);
+	class_addmethod(c, (method)DCBlockSetup,		"audio.setup",		A_CANT, 0);
+	class_addmethod(c, (method)DCBlockConnect,	"audio.connect",	A_OBJ, A_LONG, 0);
  	class_addmethod(c, (method)MaxAudioGraphDrop,	"audio.drop",		A_CANT, 0);
 	class_addmethod(c, (method)MaxAudioGraphObject,	"audio.object",		A_CANT, 0);
-	class_addmethod(c, (method)DCBlockerAssist,		"assist",				A_CANT, 0); 
+	class_addmethod(c, (method)DCBlockAssist,		"assist",				A_CANT, 0); 
     class_addmethod(c, (method)object_obex_dumpout,	"dumpout",				A_CANT, 0);  
 	
-	CLASS_ATTR_LONG(c,		"bypass",	0,		DCBlocker,	attrBypass);
+	CLASS_ATTR_LONG(c,		"bypass",	0,		DCBlock,	attrBypass);
 	CLASS_ATTR_STYLE(c,		"bypass",	0,		"onoff");
-	CLASS_ATTR_ACCESSORS(c,	"bypass",	NULL,	DCBlockerSetBypass);
+	CLASS_ATTR_ACCESSORS(c,	"bypass",	NULL,	DCBlockSetBypass);
 	
 	class_register(_sym_box, c);
-	sDCBlockerClass = c;
+	sDCBlockClass = c;
 	return 0;
 }
 
@@ -76,13 +76,13 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-DCBlockerPtr DCBlockerNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+DCBlockPtr DCBlockNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
-    DCBlockerPtr	self;
+    DCBlockPtr	self;
 	TTValue			v;
 	TTErr			err;
 	
-    self = (DCBlockerPtr)object_alloc(sDCBlockerClass);
+    self = (DCBlockPtr)object_alloc(sDCBlockClass);
     if (self) {
     	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));
 		self->audioGraphOutlet = outlet_new(self, "audio.connect");
@@ -105,7 +105,7 @@ DCBlockerPtr DCBlockerNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 }
 
 // Memory Deallocation
-void DCBlockerFree(DCBlockerPtr self)
+void DCBlockFree(DCBlockPtr self)
 {
 	if (self->audioGraphObject)
 		TTObjectBaseRelease((TTObjectBasePtr*)&self->audioGraphObject);
@@ -116,7 +116,7 @@ void DCBlockerFree(DCBlockerPtr self)
 // Methods bound to input/inlets
 
 // Method for Assistance Messages
-void DCBlockerAssist(DCBlockerPtr self, void* b, long msg, long arg, char* dst)
+void DCBlockAssist(DCBlockPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
 		strcpy(dst, "multichannel input and control messages");		
@@ -129,7 +129,7 @@ void DCBlockerAssist(DCBlockerPtr self, void* b, long msg, long arg, char* dst)
 }
 
 
-void DCBlockerClear(DCBlockerPtr self)
+void DCBlockClear(DCBlockPtr self)
 {
 	self->audioGraphObject->getUnitGenerator()->sendMessage(TT("clear"));
 }
@@ -137,13 +137,13 @@ void DCBlockerClear(DCBlockerPtr self)
 
 // METHODS SPECIFIC TO AUDIO GRAPH EXTERNALS
 
-TTErr DCBlockerReset(DCBlockerPtr self)
+TTErr DCBlockReset(DCBlockPtr self)
 {
 	return self->audioGraphObject->resetAudio();
 }
 
 
-TTErr DCBlockerSetup(DCBlockerPtr self)
+TTErr DCBlockSetup(DCBlockPtr self)
 {
 	Atom a[2];
 	
@@ -154,7 +154,7 @@ TTErr DCBlockerSetup(DCBlockerPtr self)
 }
 
 
-TTErr DCBlockerConnect(DCBlockerPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
+TTErr DCBlockConnect(DCBlockPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
 {
 	return self->audioGraphObject->connectAudio(audioSourceObject, sourceOutletNumber);
 }
@@ -162,7 +162,7 @@ TTErr DCBlockerConnect(DCBlockerPtr self, TTAudioGraphObjectBasePtr audioSourceO
 
 // ATTRIBUTE SETTERS
 
-MaxErr DCBlockerSetBypass(DCBlockerPtr self, void* attr, AtomCount argc, AtomPtr argv)
+MaxErr DCBlockSetBypass(DCBlockPtr self, void* attr, AtomCount argc, AtomPtr argv)
 {
 	if (argc) {
 		self->attrBypass = atom_getlong(argv);
