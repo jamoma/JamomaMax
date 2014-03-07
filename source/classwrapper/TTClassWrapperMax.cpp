@@ -153,11 +153,9 @@ void wrappedClass_free(WrappedInstancePtr x)
 
 void wrappedClass_receiveNotificationForOutlet(WrappedInstancePtr self, TTValue& arg)
 {
-    TTString    string = "";
-    SymbolPtr   s;
+    TTString	string = arg[0];
+    SymbolPtr   s = gensym((char*)string.c_str());
     
-    arg.get(0, string);
-    s = gensym((char*)string.c_str());
     outlet_anything(self->controlOutlet, s, 0, NULL);
 }
 
@@ -340,8 +338,12 @@ void wrappedClass_perform64(WrappedInstancePtr self, ObjectPtr dsp64, double **i
 	
 	self->numChannels = numouts; // <-- this is kinda lame, but for the time being I think we can get away with this assumption...
 	
-	for (i=0; i < self->numControlSignals; i++)
-		self->wrappedObject->setAttributeValue(self->controlSignalNames[i], *ins[self->numInputs - self->numControlSignals + i]);
+	for (i=0; i < self->numControlSignals; i++) {
+		int signal_index = self->numInputs - self->numControlSignals + i;
+		
+		if (self->signals_connected[signal_index])
+			self->wrappedObject->setAttributeValue(self->controlSignalNames[i], *ins[signal_index]);
+	}
 	
 	self->audioIn->setNumChannelsWithInt(self->numInputs-self->numControlSignals);
 	self->audioOut->setNumChannelsWithInt(self->numOutputs);
@@ -360,6 +362,9 @@ void wrappedClass_perform64(WrappedInstancePtr self, ObjectPtr dsp64, double **i
 
 void wrappedClass_dsp64(WrappedInstancePtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
+	for (int i=0; i < (self->numInputs + self->numOutputs); i++)
+		self->signals_connected[i] = count[i];
+	
 	ttEnvironment->setAttributeValue(kTTSym_sampleRate, samplerate);
 	self->wrappedObject->setAttributeValue(TT("sampleRate"), samplerate);
 	

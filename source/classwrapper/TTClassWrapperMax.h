@@ -108,7 +108,9 @@ typedef struct _wrappedInstance {
 	TTSymbol*		controlSignalNames;			///< An array of attribute names for the control signals.
     
     TTPtr           controlOutlet;              ///< for output from a notification
-    TTObjectBasePtr     controlCallback;            ///< for output from a notification
+    TTObjectBasePtr	controlCallback;            ///< for output from a notification
+	
+	t_bool			signals_connected[256];		///< which inlets and outlets are actually connected to audio signals
 } WrappedInstance;
 
 typedef WrappedInstance* WrappedInstancePtr;	///< Pointer to a wrapped instance of our object.
