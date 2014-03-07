@@ -164,7 +164,7 @@ void		model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);		/
  @param argc
  @param argv
  */
-void		model_documention_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		model_reference_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 
 /**
@@ -173,7 +173,7 @@ void		model_documention_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr
  @param argc
  @param argv
  */
-void		model_documentation_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		model_reference_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 
 /**

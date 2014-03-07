@@ -35,6 +35,10 @@
 #include "TTInputAudio.h"
 #include "TTOutputAudio.h"
 
+#ifdef AUDIO_GRAPH_EXTERNAL
+#include "TTAudioGraphAPI.h"		// Definitions for Jamoma AudioGraph
+#endif
+
 
 #define selectedObject getSelectedObject(x)
 #define selectedAddress x->cursor

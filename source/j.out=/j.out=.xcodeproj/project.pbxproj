@@ -7,29 +7,27 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		4625724618C8E21300D9B617 /* j.in=.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.in=.yml"; sourceTree = "<group>"; };
-		4625724718C8E21300D9B617 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		4625724818C8E21B00D9B617 /* j.in.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = j.in.cpp; path = ../j.in/j.in.cpp; sourceTree = "<group>"; };
-		4625724918C8E22800D9B617 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
-		4625724A18C8E22800D9B617 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
+		4625723018C8D40500D9B617 /* j.out.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = j.out.cpp; path = ../j.out/j.out.cpp; sourceTree = "<group>"; };
+		4625723118C8D41000D9B617 /* j.out=.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.out=.yml"; sourceTree = "<group>"; };
+		4625723218C8D41E00D9B617 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
+		4625723318C8D41E00D9B617 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		4625723518C8DB7100D9B617 = {
+		4625722518C8D3DC00D9B617 = {
 			isa = PBXGroup;
 			children = (
-				4625724618C8E21300D9B617 /* j.in=.yml */,
-				4625724718C8E21300D9B617 /* Makefile */,
-				4625724518C8DF5900D9B617 /* sources */,
+				4625723118C8D41000D9B617 /* j.out=.yml */,
+				4625723418C8D42900D9B617 /* sources */,
 			);
 			sourceTree = "<group>";
 		};
-		4625724518C8DF5900D9B617 /* sources */ = {
+		4625723418C8D42900D9B617 /* sources */ = {
 			isa = PBXGroup;
 			children = (
-				4625724818C8E21B00D9B617 /* j.in.cpp */,
-				4625724A18C8E22800D9B617 /* TTModularClassWrapperMax.h */,
-				4625724918C8E22800D9B617 /* TTModularClassWrapperMax.cpp */,
+				4625723018C8D40500D9B617 /* j.out.cpp */,
+				4625723318C8D41E00D9B617 /* TTModularClassWrapperMax.h */,
+				4625723218C8D41E00D9B617 /* TTModularClassWrapperMax.cpp */,
 			);
 			name = sources;
 			sourceTree = "<group>";
@@ -37,47 +35,47 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		4625723A18C8DB7100D9B617 /* j.in= */ = {
+		4625722A18C8D3DC00D9B617 /* j.out= */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION) $(Configuration)";
-			buildConfigurationList = 4625723D18C8DB7100D9B617 /* Build configuration list for PBXLegacyTarget "j.in=" */;
+			buildConfigurationList = 4625722D18C8D3DC00D9B617 /* Build configuration list for PBXLegacyTarget "j.out=" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			buildWorkingDirectory = "";
 			dependencies = (
 			);
-			name = "j.in=";
+			name = "j.out=";
 			passBuildSettingsInEnvironment = 1;
-			productName = "j.in=";
+			productName = "j.out=";
 		};
 /* End PBXLegacyTarget section */
 
 /* Begin PBXProject section */
-		4625723618C8DB7100D9B617 /* Project object */ = {
+		4625722618C8D3DC00D9B617 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Jamoma;
 			};
-			buildConfigurationList = 4625723918C8DB7100D9B617 /* Build configuration list for PBXProject "j.in=" */;
+			buildConfigurationList = 4625722918C8D3DC00D9B617 /* Build configuration list for PBXProject "j.out=" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 4625723518C8DB7100D9B617;
+			mainGroup = 4625722518C8D3DC00D9B617;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4625723A18C8DB7100D9B617 /* j.in= */,
+				4625722A18C8D3DC00D9B617 /* j.out= */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin XCBuildConfiguration section */
-		4625723B18C8DB7100D9B617 /* Debug */ = {
+		4625722B18C8D3DC00D9B617 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -114,7 +112,7 @@
 			};
 			name = Debug;
 		};
-		4625723C18C8DB7100D9B617 /* Release */ = {
+		4625722C18C8D3DC00D9B617 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -145,7 +143,7 @@
 			};
 			name = Release;
 		};
-		4625723E18C8DB7100D9B617 /* Debug */ = {
+		4625722E18C8D3DC00D9B617 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUGGING_SYMBOLS = YES;
@@ -157,7 +155,7 @@
 			};
 			name = Debug;
 		};
-		4625723F18C8DB7100D9B617 /* Release */ = {
+		4625722F18C8D3DC00D9B617 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_CFLAGS = "";
@@ -169,25 +167,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4625723918C8DB7100D9B617 /* Build configuration list for PBXProject "j.in=" */ = {
+		4625722918C8D3DC00D9B617 /* Build configuration list for PBXProject "j.out=" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4625723B18C8DB7100D9B617 /* Debug */,
-				4625723C18C8DB7100D9B617 /* Release */,
+				4625722B18C8D3DC00D9B617 /* Debug */,
+				4625722C18C8D3DC00D9B617 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4625723D18C8DB7100D9B617 /* Build configuration list for PBXLegacyTarget "j.in=" */ = {
+		4625722D18C8D3DC00D9B617 /* Build configuration list for PBXLegacyTarget "j.out=" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4625723E18C8DB7100D9B617 /* Debug */,
-				4625723F18C8DB7100D9B617 /* Release */,
+				4625722E18C8D3DC00D9B617 /* Debug */,
+				4625722F18C8D3DC00D9B617 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4625723618C8DB7100D9B617 /* Project object */;
+	rootObject = 4625722618C8D3DC00D9B617 /* Project object */;
 }
