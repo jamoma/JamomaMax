@@ -5,12 +5,12 @@
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
   <preset name='default'>
-    <command address="chromakey/tolerance">0.200000</command>
-    <command address="chromakey/minkey">0.0000</command>
-    <command address="chromakey/maxkey">1.0000</command>
-	<command address="chromakey/color">0.247059 0.419608 0.100000</command>
-    <command address="chromakey/fade">0.100000</command>
-    <command address="chromakey/alphaignore">1</command>
+    <command address="tolerance">0.200000</command>
+    <command address="minkey">0.0000</command>
+    <command address="maxkey">1.0000</command>
+	<command address="color">0.247059 0.419608 0.100000</command>
+    <command address="fade">0.100000</command>
+    <command address="alphaignore">1</command>
     <command address="video/preview">0</command>
     <command address="video/mute">0</command>
     <command address="video/freeze">0</command>
