@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 472.0, 527.0, 968.0, 375.0 ],
@@ -28,6 +29,20 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 120.0, 70.0, 32.5, 19.0 ],
+					"text" : "qlim"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -49,8 +64,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 99.0, 523.0, 640.0, 480.0 ],
@@ -81,7 +97,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 247.0, 164.0, 360.0, 31.0 ],
 									"text" : "j.test.assert.equal.old TEST::ICC_bug /source/orientation/active @issue 1220"
 								}
@@ -178,17 +194,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 120.0, 60.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-4",
@@ -205,26 +210,10 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"id" : "obj-53",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 120.0, 220.0, 67.0, 19.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
-					"text" : "thispatcher"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-54",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 0,
 					"patching_rect" : [ 120.0, 195.0, 100.0, 19.0 ],
 					"text" : "j.test.finished"
 				}
@@ -261,7 +250,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 120.0, 85.0, 56.0, 19.0 ],
+					"patching_rect" : [ 120.0, 35.0, 56.0, 19.0 ],
 					"text" : "loadbang"
 				}
 
@@ -278,8 +267,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 923.0, 78.0, 441.0, 292.0 ],
@@ -313,8 +303,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 0,
-											"revision" : 8
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 50.0, 94.0, 1095.0, 636.0 ],
@@ -358,7 +349,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 245.0, 290.0, 540.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST1/j.oscinstance/osc_int_instance_no_subbranch:ARGUMENTS 1. 1. 2."
 												}
@@ -467,7 +458,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 70.0, 353.5, 500.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST3/j.oscinstance/osc_int_instance_no_subbranch:OSC /source"
 												}
@@ -481,7 +472,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 135.0, 320.0, 505.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST2/j.oscinstance/osc_int_instance_no_subbranch:INSTANCE 47"
 												}
@@ -687,8 +678,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 0,
-											"revision" : 8
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 50.0, 94.0, 886.0, 499.0 ],
@@ -732,7 +724,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 250.0, 305.0, 546.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST1/j.oscinstance/osc_int_instance_and_subbranch:ARGUMENTS 1. 1. 2."
 												}
@@ -760,7 +752,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 155.0, 335.0, 511.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST2/j.oscinstance/osc_int_instance_and_subbranch:INSTANCE 72"
 												}
@@ -855,7 +847,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 75.0, 373.5, 526.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST3/j.oscinstance/osc_int_instance_and_subbranch:OSC /source/xyz"
 												}
@@ -1060,8 +1052,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 0,
-											"revision" : 8
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 50.0, 94.0, 968.0, 506.0 ],
@@ -1105,7 +1098,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 330.0, 310.0, 563.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST1/j.oscinstance/osc_symbol_instance_no_subbranch:ARGUMENTS 1. 1. 2."
 												}
@@ -1133,7 +1126,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 155.0, 350.0, 531.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST2/j.oscinstance/osc_symbol_instance_no_subbranch:INSTANCE left"
 												}
@@ -1214,7 +1207,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 80.0, 398.5, 527.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST3/j.oscinstance/osc_symbol_instance_no_subbranch:OSC /channel"
 												}
@@ -1411,8 +1404,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 0,
-											"revision" : 8
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 50.0, 94.0, 1004.0, 545.0 ],
@@ -1456,7 +1450,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 340.0, 315.0, 558.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST1/j.oscinstance/osc_symbol_instance_and_subbranch:ARGUMENTS 1 2 3"
 												}
@@ -1484,7 +1478,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 185.0, 365.0, 544.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST2/j.oscinstance/osc_symbol_instance_and_subbranch:INSTANCE then"
 												}
@@ -1565,7 +1559,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 75.0, 405.0, 542.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST3/j.oscinstance/osc_symbol_instance_and_subbranch:OSC /dot/slash"
 												}
@@ -1761,8 +1755,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 0,
-											"revision" : 8
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -1859,7 +1854,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 75.0, 221.5, 517.0, 19.0 ],
 													"text" : "j.test.assert.equal.old TEST/j.oscinstance/osc_subbranch_has_instance /slah/then.dot 1 2 3"
 												}
@@ -2062,8 +2057,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 1106.0, 444.0 ],
@@ -2149,7 +2145,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 900.0, 250.0, 209.0, 19.0 ],
 									"text" : "j.test.assert.equal.old TESTbang 10"
 								}
@@ -2234,7 +2230,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 50.0, 250.0, 209.0, 31.0 ],
 									"text" : "j.test.assert.equal.old TESTnon_osc_symbol no_slash 1 2 3"
 								}
@@ -2304,7 +2300,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 265.0, 250.0, 214.0, 19.0 ],
 									"text" : "j.test.assert.equal.old TESTlist 1 2 3"
 								}
@@ -2360,7 +2356,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 700.0, 250.0, 199.0, 19.0 ],
 									"text" : "j.test.assert.equal.old TESTint 10"
 								}
@@ -2416,7 +2412,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 480.0, 250.0, 218.0, 19.0 ],
 									"text" : "j.test.assert.equal.old TESTfloat 3.14"
 								}
@@ -2779,8 +2775,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 1107.0, 437.0 ],
@@ -2881,7 +2878,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 90.0, 265.0, 215.0, 43.0 ],
 									"text" : "j.test.assert.equal.old TESTosc_several_branches_no_instance /two/branches 1 2 3"
 								}
@@ -2952,7 +2949,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 315.0, 265.0, 194.0, 43.0 ],
 									"text" : "j.test.assert.equal.old TESTosc_one_branch_no_instance /one_branch 1 2 3"
 								}
@@ -3143,7 +3140,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
@@ -3228,19 +3225,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-53", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-54", 0 ]
 				}
 
 			}
@@ -3256,20 +3244,46 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.test.assert.equal.old.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Test/components/test.assert.equal.old",
-				"patcherrelativepath" : "../../../../Test/components/test.assert.equal.old",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "test.string.equals.maxpat",
+				"bootpath" : "/Applications/Max 6.1/packages/testpackage02/misc",
+				"patcherrelativepath" : "../../../../../../../../../../Applications/Max 6.1/packages/testpackage02/misc",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "test.string.equals.js",
+				"bootpath" : "/Applications/Max 6.1/packages/testpackage02/misc",
+				"patcherrelativepath" : "../../../../../../../../../../Applications/Max 6.1/packages/testpackage02/misc",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.test.finished.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Test/components/test.finished",
-				"patcherrelativepath" : "../../../../Test/components/test.finished",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "oscar.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "oscar.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.oscinstance.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "oscar.mxo",
 				"type" : "iLaX"
 			}
  ]
