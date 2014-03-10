@@ -353,23 +353,27 @@ void JAMOMA_EXPORT jamoma_callback_return_ramped_value(void *o, TTUInt32 n, TTFl
  */
 void JAMOMA_EXPORT jamoma_callback_return_address(TTPtr baton, TTValue& v);
 
-/** Return the value to a j. external as _sym_nothing, argc, argv.
- @param baton
- @param v
+
+/** Return the value to a j.* external as msg, argc, argv.
+ @param baton       The Max wrapper object
+ @param v           The value(s) being passed back. This is passed back as an array of three argumens: msg, argc and argv
  */
 void JAMOMA_EXPORT jamoma_callback_return_value(TTPtr baton, TTValue& v);
 
-/** Return the value to a j. external as msg, argc, argv.
- @param baton
- @param v
+
+/** Return the value to a j.* external as msg, argc, argv. The msg part carries information about what type of atom(s) we are getting, 
+ @param baton       The Max wrapper object
+ @param v           The value(s) being passed back. This is passed back as an array of three argumens: msg, argc and argv
  */
 void JAMOMA_EXPORT jamoma_callback_return_value_typed(TTPtr baton, TTValue& v);
+
 
 /** Return any signal.
  @param baton
  @param v
  */
 void JAMOMA_EXPORT jamoma_callback_return_signal(TTPtr baton, TTValue& v);
+
 
 /** Return audio signal.
  @param baton
