@@ -72,7 +72,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 567.0, 128.0, 153.0, 18.0 ],
-									"text" : "j.trajectory≈ messages"
+									"text" : "j.trajectory= messages"
 								}
 
 							}
@@ -136,7 +136,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 0,
 									"patching_rect" : [ 447.333313, 343.0, 575.0, 31.0 ],
-									"text" : "j.test.assert.equal.old j.trajectory≈:messages:getTypes bean.2D butterfly.2D circular.2D epitrochoid.2D gear.2D hypocycloid.2D limacon.2D viviani.3D"
+									"text" : "j.test.assert.equal.old j.trajectory=:messages:getTypes bean.2D butterfly.2D circular.2D epitrochoid.2D gear.2D hypocycloid.2D limacon.2D viviani.3D"
 								}
 
 							}
@@ -192,7 +192,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 0,
 									"patching_rect" : [ 259.0, 404.0, 367.0, 19.0 ],
-									"text" : "j.test.assert.equal.old j.trajectory≈:messages:getCurrentType linear.2D"
+									"text" : "j.test.assert.equal.old j.trajectory=:messages:getCurrentType linear.2D"
 								}
 
 							}
@@ -262,7 +262,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
 									"patching_rect" : [ 83.0, 195.0, 95.0, 20.0 ],
-									"text" : "j.trajectory≈"
+									"text" : "j.trajectory="
 								}
 
 							}
@@ -275,7 +275,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 0,
 									"patching_rect" : [ 159.0, 433.0, 384.0, 19.0 ],
-									"text" : "j.test.assert.equal.old j.trajectory≈:messages:getCurrentAttributeNames a"
+									"text" : "j.test.assert.equal.old j.trajectory=:messages:getCurrentAttributeNames a"
 								}
 
 							}
@@ -582,7 +582,7 @@
 								"implicit" : 1
 							}
 , 							{
-								"name" : "j.trajectory≈.mxo",
+								"name" : "j.trajectory=.mxo",
 								"type" : "iLaX"
 							}
  ]
@@ -602,7 +602,7 @@
 						"default_fontname" : "Arial"
 					}
 ,
-					"text" : "p j.trajectory≈ messages"
+					"text" : "p j.trajectory= messages"
 				}
 
 			}
@@ -713,7 +713,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.trajectory≈.mxo",
+				"name" : "j.trajectory=.mxo",
 				"type" : "iLaX"
 			}
  ]

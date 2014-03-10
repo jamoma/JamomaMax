@@ -87,7 +87,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	this_class = c;
 	
 	// Initialize Jitter by creating a dummy matrix
-	jamoma_loadextern(_sym_jit_matrix, 0, NULL, &dummy);
+	jamoma_loadextern(gensym("jit.matrix"), 0, NULL, &dummy);
 	
 	return 0;
 }
@@ -475,7 +475,11 @@ void dbap_view_update(t_dbap *x, long io)
 /** Set the size of hitmap view window */
 void dbap_view_size(t_dbap *x, long sizeX, long sizeY) {
 	
-	if ((sizeX > 0)&&(sizeY > 0)&&(sizeX <= MAX_SIZE_VIEW_X)&&(sizeY <= MAX_SIZE_VIEW_Y)) {
+	if ((sizeX > 0)&&(sizeY > 0)) {
+        
+        // warn the user that large dimension while take a long to render
+        if ((sizeX > MAX_SIZE_VIEW_X)||(sizeY > MAX_SIZE_VIEW_Y))
+            object_warn(ObjectPtr(x), "size over %d x %d takes time to render", MAX_SIZE_VIEW_X, MAX_SIZE_VIEW_Y);
 		
 		x->view_info.dim[0] = sizeX;
 		x->view_info.dim[1] = sizeY;

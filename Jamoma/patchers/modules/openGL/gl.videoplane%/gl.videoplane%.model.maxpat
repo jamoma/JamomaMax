@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 4,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 33.0, 98.0, 1494.0, 710.0 ],
+		"rect" : [ 109.0, 45.0, 1041.0, 686.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -31,12 +31,26 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
+					"id" : "obj-35",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 14.5, 13.0, 576.0, 19.0 ],
+					"text" : "j.message video/genframe @type none @description \"generate a video frame (send a bang to the jitter object)\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 77.0, 134.0, 126.0, 19.0 ],
+					"patching_rect" : [ 59.0, 92.0, 126.0, 19.0 ],
 					"text" : "prepend client_storage"
 				}
 
@@ -50,7 +64,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 95.0, 185.0, 103.0, 19.0 ],
+					"patching_rect" : [ 77.0, 143.0, 103.0, 19.0 ],
 					"text" : "prepend displaylist"
 				}
 
@@ -64,7 +78,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 111.0, 236.0, 103.0, 19.0 ],
+					"patching_rect" : [ 93.0, 194.0, 103.0, 19.0 ],
 					"text" : "prepend gridmode"
 				}
 
@@ -78,7 +92,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 138.5, 282.0, 100.0, 19.0 ],
+					"patching_rect" : [ 119.5, 273.0, 100.0, 19.0 ],
 					"text" : "prepend nudge"
 				}
 
@@ -92,7 +106,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 159.0, 326.0, 100.0, 19.0 ],
+					"patching_rect" : [ 140.0, 317.0, 100.0, 19.0 ],
 					"text" : "prepend dim"
 				}
 
@@ -106,7 +120,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 60.0, 83.0, 454.0, 19.0 ],
+					"patching_rect" : [ 42.0, 41.0, 454.0, 19.0 ],
 					"text" : "j.message video/genframe @type none @description \"bang to generate the next frame\"",
 					"varname" : "videoplane/client_storage[1]"
 				}
@@ -121,7 +135,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 60.0, 613.0, 63.0, 19.0 ],
+					"patching_rect" : [ 41.0, 604.0, 63.0, 19.0 ],
 					"text" : "j.out 1"
 				}
 
@@ -134,7 +148,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 129.0, 502.0, 18.0, 18.0 ]
+					"patching_rect" : [ 110.0, 493.0, 18.0, 18.0 ]
 				}
 
 			}
@@ -148,7 +162,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 147.0, 489.0, 48.0, 31.0 ],
+					"patching_rect" : [ 128.0, 480.0, 48.0, 31.0 ],
 					"text" : "VIDEO INPUT"
 				}
 
@@ -162,7 +176,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 129.0, 526.0, 37.0, 19.0 ],
+					"patching_rect" : [ 110.0, 517.0, 37.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
@@ -176,7 +190,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 95.0, 653.0, 86.0, 19.0 ],
+					"patching_rect" : [ 110.0, 614.0, 86.0, 19.0 ],
 					"text" : "VIDEO OUTPUT"
 				}
 
@@ -188,7 +202,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 60.0, 653.0, 25.0, 25.0 ]
+					"patching_rect" : [ 41.0, 638.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -197,11 +211,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-57",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 12.5, 50.0, 629.0, 19.0 ],
+					"patching_rect" : [ 625.5, 604.0, 250.0, 31.0 ],
 					"text" : "j.model @tag gl @description \"Apply incoming video matrix as texture to OpenGL videoplane.\"",
 					"varname" : "j.model"
 				}
@@ -214,7 +229,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 12.5, 84.0, 25.0, 25.0 ]
+					"patching_rect" : [ 625.5, 638.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -226,7 +241,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 12.5, 14.0, 25.0, 25.0 ]
+					"patching_rect" : [ 625.5, 568.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -239,7 +254,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 179.0, 346.5, 174.0, 19.0 ],
+					"patching_rect" : [ 156.0, 342.5, 174.0, 19.0 ],
 					"text" : "j.class.gl_group.parameters GL"
 				}
 
@@ -253,7 +268,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 60.0, 587.0, 126.0, 19.0 ],
+					"patching_rect" : [ 41.0, 578.0, 126.0, 19.0 ],
 					"text" : "jit.gl.videoplane"
 				}
 
@@ -267,7 +282,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 111.0, 215.0, 642.0, 19.0 ],
+					"patching_rect" : [ 93.0, 173.0, 642.0, 19.0 ],
 					"text" : "j.parameter videoplane/gridmode @type string @description \"Grid mode (0 = quadrilated, 1 = triangular).\" @value/default 0",
 					"varname" : "videoplane/gridmode"
 				}
@@ -282,7 +297,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 463.5, 438.0, 471.0, 19.0 ],
+					"patching_rect" : [ 444.5, 429.0, 471.0, 19.0 ],
 					"text" : "j.parameter videoplane/colormode @type string @description \"Color mode (argb or uyvy).\"",
 					"varname" : "videoplane/colormode"
 				}
@@ -298,7 +313,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 637.5, 468.0, 275.0, 31.0 ],
+					"patching_rect" : [ 618.5, 459.0, 275.0, 31.0 ],
 					"text" : "j.parameter videoplane/interpolate @type boolean @description \\\"Interpolation.\\\"",
 					"varname" : "videoplane/interpolate"
 				}
@@ -313,7 +328,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 95.0, 165.0, 755.0, 19.0 ],
+					"patching_rect" : [ 77.0, 123.0, 755.0, 19.0 ],
 					"text" : "j.parameter videoplane/displaylist @type boolean @description \"Cache in displaylist (might speed up rendering on graphic card).\" @value/default 0",
 					"varname" : "videoplane/displaylist"
 				}
@@ -328,7 +343,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 77.0, 113.0, 925.0, 19.0 ],
+					"patching_rect" : [ 59.0, 71.0, 925.0, 19.0 ],
 					"text" : "j.parameter videoplane/client_storage @type boolean @description \"When set jit.videoplane use incoming matrix's storage rather than allocating texture memory.\" @value/default 1",
 					"varname" : "videoplane/client_storage"
 				}
@@ -339,11 +354,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1021",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 138.5, 263.0, 1318.0, 19.0 ],
+					"patching_rect" : [ 119.5, 227.0, 675.0, 31.0 ],
 					"text" : "j.parameter videoplane/nudge @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Amount of the texture that is nudged from boundary to accomodate for boundary errors when mapping the texture to the plane.\" @value/default 0.0001",
 					"varname" : "videoplane/nudge"
 				}
@@ -358,7 +374,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 159.0, 306.0, 859.0, 19.0 ],
+					"patching_rect" : [ 140.0, 297.0, 859.0, 19.0 ],
 					"text" : "j.parameter videoplane/dim @type generic @range/bounds 1 1000 @range/clipmode low @description \"Dimension of the grid (x, y coordinates).\" @value/default 20 20",
 					"varname" : "videoplane/dim"
 				}
@@ -373,7 +389,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 328.5, 408.0, 546.0, 19.0 ],
+					"patching_rect" : [ 309.5, 399.0, 546.0, 19.0 ],
 					"text" : "j.parameter videoplane/texture/scale @type decimalArray @description \"Texture scale (x, y coordinates).\"",
 					"varname" : "videoplane/texture/scale"
 				}
@@ -388,7 +404,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 201.5, 377.5, 550.0, 19.0 ],
+					"patching_rect" : [ 182.5, 368.5, 550.0, 19.0 ],
 					"text" : "j.parameter videoplane/texture/offset @type generic @description \"Texture offset (x, y coordinates).\"",
 					"varname" : "videoplane/texture/offset"
 				}
@@ -403,7 +419,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 637.5, 501.0, 91.0, 19.0 ],
+					"patching_rect" : [ 618.5, 492.0, 91.0, 19.0 ],
 					"text" : "prepend interp"
 				}
 
@@ -418,7 +434,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 463.5, 501.0, 65.0, 31.0 ],
+					"patching_rect" : [ 444.5, 492.0, 65.0, 31.0 ],
 					"text" : "prepend colormode"
 				}
 
@@ -432,7 +448,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 463.5, 468.0, 96.0, 19.0 ],
+					"patching_rect" : [ 444.5, 459.0, 96.0, 19.0 ],
 					"text" : "j.pass argb uyvy"
 				}
 
@@ -446,7 +462,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "float" ],
-					"patching_rect" : [ 328.5, 468.0, 80.0, 19.0 ],
+					"patching_rect" : [ 309.5, 459.0, 80.0, 19.0 ],
 					"text" : "unpack 0. 0."
 				}
 
@@ -461,7 +477,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 389.5, 501.0, 61.0, 43.0 ],
+					"patching_rect" : [ 370.5, 492.0, 61.0, 43.0 ],
 					"text" : "prepend tex_scale_y"
 				}
 
@@ -476,7 +492,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 328.5, 501.0, 61.0, 43.0 ],
+					"patching_rect" : [ 309.5, 492.0, 61.0, 43.0 ],
 					"text" : "prepend tex_scale_x"
 				}
 
@@ -491,7 +507,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 262.5, 501.0, 60.0, 43.0 ],
+					"patching_rect" : [ 243.5, 492.0, 60.0, 43.0 ],
 					"text" : "prepend tex_offset_y"
 				}
 
@@ -506,7 +522,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 201.5, 501.0, 60.0, 43.0 ],
+					"patching_rect" : [ 182.5, 492.0, 60.0, 43.0 ],
 					"text" : "prepend tex_offset_x"
 				}
 
@@ -520,7 +536,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "float" ],
-					"patching_rect" : [ 201.5, 468.0, 80.0, 19.0 ],
+					"patching_rect" : [ 182.5, 459.0, 80.0, 19.0 ],
 					"text" : "unpack 0. 0."
 				}
 
@@ -535,7 +551,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 201.5, 579.0, 180.0, 19.0 ]
+					"patching_rect" : [ 182.5, 570.0, 180.0, 19.0 ]
 				}
 
 			}
@@ -581,7 +597,7 @@
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 647.0, 485.5, 647.0, 485.5 ],
+					"midpoints" : [ 628.0, 476.5, 628.0, 476.5 ],
 					"source" : [ "obj-1015", 0 ]
 				}
 
@@ -663,7 +679,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 138.5, 561.5, 69.5, 561.5 ],
+					"midpoints" : [ 119.5, 552.5, 50.5, 552.5 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -673,7 +689,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 647.0, 561.5, 69.5, 561.5 ],
+					"midpoints" : [ 628.0, 552.5, 50.5, 552.5 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -683,7 +699,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 473.0, 561.5, 69.5, 561.5 ],
+					"midpoints" : [ 454.0, 552.5, 50.5, 552.5 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -747,7 +763,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 338.0, 561.5, 69.5, 561.5 ],
+					"midpoints" : [ 319.0, 552.5, 50.5, 552.5 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
@@ -793,6 +809,15 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -820,7 +845,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 399.0, 561.5, 69.5, 561.5 ],
+					"midpoints" : [ 380.0, 552.5, 50.5, 552.5 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -848,7 +873,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 272.0, 561.5, 69.5, 561.5 ],
+					"midpoints" : [ 253.0, 552.5, 50.5, 552.5 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
@@ -858,7 +883,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 211.0, 561.5, 69.5, 561.5 ],
+					"midpoints" : [ 192.0, 552.5, 50.5, 552.5 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -866,7 +891,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.class.gl_group.parameters.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/class.gl_group.parameters",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/class.gl_group.parameters",
 				"patcherrelativepath" : "../../../components/class.gl_group.parameters",
 				"type" : "JSON",
 				"implicit" : 1

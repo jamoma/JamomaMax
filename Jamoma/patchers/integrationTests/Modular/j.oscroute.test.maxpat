@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 5
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 57.0, 60.0, 1031.0, 369.0 ],
+		"rect" : [ 57.0, 60.0, 1051.0, 456.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -30,25 +31,28 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"id" : "obj-5",
+					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 13.0, 339.0, 59.0, 18.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
-					"text" : "thispatcher"
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 113.0, 65.0, 32.5, 18.0 ],
+					"text" : "qlim"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "button",
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-5",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 58.0, 3.0, 20.0, 20.0 ]
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 68.0, 393.0, 59.0, 18.0 ],
+					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+					"text" : "thispatcher"
 				}
 
 			}
@@ -64,8 +68,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 264.0, 83.0, 872.0, 537.0 ],
@@ -164,8 +169,9 @@
 									"id" : "obj-22",
 									"linecount" : 2,
 									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 491.0, 456.5, 158.0, 31.0 ],
 									"text" : "j.test.assert.equal.old Wildcard 1. @issue 52"
 								}
@@ -206,9 +212,11 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-10",
+									"linecount" : 2,
 									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 86.0, 389.0, 226.0, 19.0 ],
 									"text" : "j.test.assert.equal.old Wildcard 1 2 3 @issue 52"
 								}
@@ -248,8 +256,9 @@
 									"fontsize" : 10.0,
 									"id" : "obj-15",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 295.0, 283.0, 294.0, 19.0 ],
 									"text" : "j.test.assert.equal.old Wildcard/*/ /finger 0.2"
 								}
@@ -261,8 +270,9 @@
 									"fontsize" : 10.0,
 									"id" : "obj-9",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 221.0, 251.0, 329.0, 19.0 ],
 									"text" : "j.test.assert.equal.old Wildcard.n/ /param 0.1"
 								}
@@ -274,8 +284,9 @@
 									"fontsize" : 10.0,
 									"id" : "obj-6",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 111.0, 217.0, 302.0, 19.0 ],
 									"text" : "j.test.assert.equal.old Wildcard. 0.5"
 								}
@@ -287,8 +298,9 @@
 									"fontsize" : 10.0,
 									"id" : "obj-7",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 37.0, 183.0, 294.0, 19.0 ],
 									"text" : "j.test.assert.equal.old Wildcard/ 0.5"
 								}
@@ -385,7 +397,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 36.0, 40.0, 25.0, 25.0 ]
 								}
 
@@ -635,26 +647,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "j.oscroute.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
-					"patching_rect" : [ 29.0, 63.0, 118.0, 27.0 ],
+					"patching_rect" : [ 84.0, 117.0, 118.0, 27.0 ],
 					"saved_object_attributes" : 					{
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"fontname" : "Arial",
-						"tags" : "",
 						"default_fontsize" : 10.0,
 						"description" : "",
-						"globalpatchername" : "",
+						"digest" : "",
 						"fontface" : 0,
+						"fontname" : "Arial",
 						"fontsize" : 10.0,
-						"default_fontface" : 0
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p wildcards"
@@ -667,9 +674,10 @@
 					"fontsize" : 10.0,
 					"id" : "obj-16",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 544.0, 206.0, 391.0, 19.0 ],
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 599.0, 260.0, 391.0, 19.0 ],
 					"text" : "j.test.assert.equal.old TESTdumpoutlet /meat/chicken roasted"
 				}
 
@@ -680,9 +688,10 @@
 					"fontsize" : 10.0,
 					"id" : "obj-10",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 628.0, 321.0, 329.0, 19.0 ],
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 683.0, 375.0, 329.0, 19.0 ],
 					"text" : "j.test.assert.equal.old TEST/adress /beans"
 				}
 
@@ -693,9 +702,10 @@
 					"fontsize" : 10.0,
 					"id" : "obj-14",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 554.0, 290.0, 302.0, 19.0 ],
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 609.0, 344.0, 302.0, 19.0 ],
 					"text" : "j.test.assert.equal.old TESTlist 1 2 3"
 				}
 
@@ -706,9 +716,10 @@
 					"fontsize" : 10.0,
 					"id" : "obj-15",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 480.0, 262.0, 294.0, 19.0 ],
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 535.0, 316.0, 294.0, 19.0 ],
 					"text" : "j.test.assert.equal.old TESTfloat 7.8"
 				}
 
@@ -719,9 +730,10 @@
 					"fontsize" : 10.0,
 					"id" : "obj-9",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 205.0, 313.0, 329.0, 19.0 ],
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 260.0, 367.0, 329.0, 19.0 ],
 					"text" : "j.test.assert.equal.old TEST/adress+int /banana 3"
 				}
 
@@ -732,9 +744,10 @@
 					"fontsize" : 10.0,
 					"id" : "obj-3",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 131.0, 283.0, 302.0, 19.0 ],
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 186.0, 337.0, 302.0, 19.0 ],
 					"text" : "j.test.assert.equal.old TESTbang bang"
 				}
 
@@ -748,7 +761,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 58.0, 28.0, 58.0, 19.0 ],
+					"patching_rect" : [ 113.0, 40.0, 58.0, 19.0 ],
 					"text" : "loadbang"
 				}
 
@@ -762,7 +775,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 150.0, 96.0, 74.0, 17.0 ],
+					"patching_rect" : [ 205.0, 150.0, 74.0, 17.0 ],
 					"text" : "/fruit/orange"
 				}
 
@@ -776,7 +789,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 58.0, 163.0, 862.0, 19.0 ],
+					"patching_rect" : [ 113.0, 217.0, 862.0, 19.0 ],
 					"text" : "j.oscroute /fruit /vegetable"
 				}
 
@@ -794,8 +807,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 44.0, 74.0, 600.0, 426.0 ],
@@ -850,22 +864,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
-					"patching_rect" : [ 58.0, 133.0, 46.0, 19.0 ],
+					"patching_rect" : [ 113.0, 187.0, 46.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
-						"fontname" : "Verdana",
-						"tags" : "",
 						"default_fontsize" : 10.0,
 						"description" : "",
-						"globalpatchername" : "",
+						"digest" : "",
 						"fontface" : 0,
+						"fontname" : "Verdana",
 						"fontsize" : 10.0,
-						"default_fontface" : 0
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p thru"
@@ -881,7 +894,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 480.0, 234.0, 166.0, 19.0 ],
+					"patching_rect" : [ 535.0, 288.0, 166.0, 19.0 ],
 					"text" : "j.oscroute /potato /carrots"
 				}
 
@@ -895,7 +908,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 58.0, 227.0, 165.0, 19.0 ],
+					"patching_rect" : [ 113.0, 281.0, 165.0, 19.0 ],
 					"text" : "j.oscroute /apple /orange"
 				}
 
@@ -909,7 +922,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 473.0, 96.0, 159.0, 17.0 ],
+					"patching_rect" : [ 528.0, 150.0, 159.0, 17.0 ],
 					"text" : "/vegetable/carrots 1 2 3"
 				}
 
@@ -923,7 +936,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 637.0, 96.0, 122.0, 17.0 ],
+					"patching_rect" : [ 692.0, 150.0, 122.0, 17.0 ],
 					"text" : "/vegetable/beans"
 				}
 
@@ -937,7 +950,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 326.0, 96.0, 139.0, 17.0 ],
+					"patching_rect" : [ 381.0, 150.0, 139.0, 17.0 ],
 					"text" : "/vegetable/potato 7.8"
 				}
 
@@ -951,7 +964,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 233.0, 96.0, 86.0, 17.0 ],
+					"patching_rect" : [ 288.0, 150.0, 86.0, 17.0 ],
 					"text" : "/fruit/banana 3"
 				}
 
@@ -965,7 +978,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 58.0, 96.0, 87.0, 17.0 ],
+					"patching_rect" : [ 113.0, 150.0, 87.0, 17.0 ],
 					"text" : "/fruit/apple red"
 				}
 
@@ -979,7 +992,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 766.0, 96.0, 123.0, 17.0 ],
+					"patching_rect" : [ 821.0, 150.0, 123.0, 17.0 ],
 					"text" : "/meat/chicken roasted"
 				}
 
@@ -991,9 +1004,8 @@
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 13.0, 314.0, 100.0, 19.0 ],
+					"numoutlets" : 0,
+					"patching_rect" : [ 68.0, 368.0, 100.0, 19.0 ],
 					"text" : "j.test.finished"
 				}
 
@@ -1004,9 +1016,10 @@
 					"fontsize" : 10.0,
 					"id" : "obj-6",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 58.0, 254.0, 294.0, 19.0 ],
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 113.0, 308.0, 294.0, 19.0 ],
 					"text" : "j.test.assert.equal.old TESTsymbol red"
 				}
 
@@ -1014,10 +1027,93 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 122.5, 109.0, 93.5, 109.0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-51", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-52", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-53", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-56", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-57", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 122.5, 109.0, 77.5, 109.0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 159.5, 120.0, 67.5, 120.0 ],
+					"midpoints" : [ 214.5, 174.0, 122.5, 174.0 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -1027,7 +1123,7 @@
 					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 910.5, 192.0, 553.5, 192.0 ],
+					"midpoints" : [ 965.5, 246.0, 608.5, 246.0 ],
 					"source" : [ "obj-17", 2 ]
 				}
 
@@ -1037,7 +1133,7 @@
 					"destination" : [ "obj-49", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 489.0, 203.0, 489.5, 203.0 ],
+					"midpoints" : [ 544.0, 257.0, 544.5, 257.0 ],
 					"source" : [ "obj-17", 1 ]
 				}
 
@@ -1062,93 +1158,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-13", 0 ],
+					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 67.5, 55.0, 38.5, 55.0 ],
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-51", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-52", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-53", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-54", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-56", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-57", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 67.5, 55.0, 22.5, 55.0 ],
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -1211,7 +1224,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 482.5, 120.0, 67.5, 120.0 ],
+					"midpoints" : [ 537.5, 174.0, 122.5, 174.0 ],
 					"source" : [ "obj-51", 0 ]
 				}
 
@@ -1221,7 +1234,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 646.5, 120.0, 67.5, 120.0 ],
+					"midpoints" : [ 701.5, 174.0, 122.5, 174.0 ],
 					"source" : [ "obj-52", 0 ]
 				}
 
@@ -1231,7 +1244,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 335.5, 120.0, 67.5, 120.0 ],
+					"midpoints" : [ 390.5, 174.0, 122.5, 174.0 ],
 					"source" : [ "obj-53", 0 ]
 				}
 
@@ -1241,7 +1254,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 242.5, 121.0, 67.5, 121.0 ],
+					"midpoints" : [ 297.5, 175.0, 122.5, 175.0 ],
 					"source" : [ "obj-54", 0 ]
 				}
 
@@ -1251,7 +1264,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 67.5, 121.0, 67.5, 121.0 ],
+					"midpoints" : [ 122.5, 175.0, 122.5, 175.0 ],
 					"source" : [ "obj-56", 0 ]
 				}
 
@@ -1261,22 +1274,53 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 775.5, 121.0, 67.5, 121.0 ],
+					"midpoints" : [ 830.5, 175.0, 122.5, 175.0 ],
 					"source" : [ "obj-57", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 0 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "j.test.assert.equal.old.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../MaxTest/JamomaTest/patchers/components",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "test.string.equals.maxpat",
+				"bootpath" : "/Applications/Max 6.1/packages/testpackage02/misc",
+				"patcherrelativepath" : "../../../../../../../../../../Applications/Max 6.1/packages/testpackage02/misc",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "test.string.equals.js",
+				"bootpath" : "/Applications/Max 6.1/packages/testpackage02/misc",
+				"patcherrelativepath" : "../../../../../../../../../../Applications/Max 6.1/packages/testpackage02/misc",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.test.finished.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../MaxTest/JamomaTest/patchers/components",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "oscar.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "oscar.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "oscar.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}

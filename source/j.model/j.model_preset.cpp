@@ -268,7 +268,7 @@ void model_preset_filechanged(TTPtr self, char *filename, short path)
 	char		posixpath[MAX_PATH_CHARS];
 	TTValue		v;
 	TTSymbol    current;
-	Atom		a;
+	t_atom		a;
 	
 	// get current preset
 	EXTRA->presetManager->getAttributeValue(TTSymbol("current"), v);
@@ -307,7 +307,7 @@ void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	TTHashPtr			allPresets;
 	TTValue				v, o, args, none;
 	TTSymbol			name;
-    Atom                a;
+    t_atom                a;
 	TTErr				tterr;
 	
 	// choose object to edit : default the cuelist
@@ -409,7 +409,7 @@ void model_preset_doedit(TTPtr self)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTTextHandlerPtr	aTextHandler = NULL;
 	TTValue				o, args, none;
-    Atom                a;
+    t_atom                a;
 	TTErr				tterr;
 	
 	// get the buffer handler
@@ -463,7 +463,7 @@ t_max_err model_preset_get_load_default(TTPtr self, TTPtr attr, AtomCount *ac, A
 	} else {
 		//otherwise allocate memory
 		*ac = 1;
-		if (!(*av = (AtomPtr)getbytes(sizeof(Atom)*(*ac)))) {
+		if (!(*av = (AtomPtr)getbytes(sizeof(t_atom)*(*ac)))) {
 			*ac = 0;
 			return MAX_ERR_OUT_OF_MEM;
 		}

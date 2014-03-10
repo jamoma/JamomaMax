@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 150.0, 496.0, 881.0, 388.0 ],
+		"rect" : [ 71.0, 89.0, 847.0, 332.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -54,7 +54,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 225.0, 283.0, 159.0, 19.0 ],
-					"text" : "j.return lenght @type decimal",
+					"text" : "j.return length @type decimal",
 					"varname" : "dim[3]"
 				}
 
@@ -104,7 +104,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -383,11 +383,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 599.0, 301.0 ],
+						"rect" : [ 25.0, 69.0, 557.0, 283.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -415,7 +415,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 162.0, 123.0, 107.0, 19.0 ],
+									"patching_rect" : [ 173.0, 88.0, 107.0, 19.0 ],
 									"text" : "prepend looppoints",
 									"varname" : "loop[2]"
 								}
@@ -431,7 +431,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 162.0, 93.0, 370.0, 19.0 ],
+									"patching_rect" : [ 173.0, 58.0, 370.0, 19.0 ],
 									"text" : "j.parameter loop/points @type string @description \"Set loop attribute.\"",
 									"varname" : "loop[3]"
 								}
@@ -446,7 +446,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 19.0, 87.0, 76.0, 19.0 ],
+									"patching_rect" : [ 30.0, 52.0, 76.0, 19.0 ],
 									"text" : "prepend loop",
 									"varname" : "loop[1]"
 								}
@@ -461,7 +461,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 19.0, 193.0, 51.0, 19.0 ],
+									"patching_rect" : [ 30.0, 158.0, 51.0, 19.0 ],
 									"text" : "zl join"
 								}
 
@@ -475,7 +475,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 19.0, 130.0, 53.0, 19.0 ],
+									"patching_rect" : [ 30.0, 95.0, 53.0, 19.0 ],
 									"text" : "zl slice 1"
 								}
 
@@ -492,7 +492,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 51.0, 173.0, 100.0, 19.0 ]
+									"patching_rect" : [ 62.0, 138.0, 100.0, 19.0 ]
 								}
 
 							}
@@ -505,7 +505,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 51.0, 152.0, 90.0, 19.0 ],
+									"patching_rect" : [ 62.0, 117.0, 90.0, 19.0 ],
 									"text" : "prepend symbol"
 								}
 
@@ -520,7 +520,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 19.0, 57.0, 452.0, 19.0 ],
+									"patching_rect" : [ 30.0, 22.0, 452.0, 19.0 ],
 									"text" : "j.parameter loop @type string @description \"Set loop attribute.\" @value/default normal",
 									"varname" : "loop"
 								}
@@ -533,7 +533,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 162.0, 272.0, 25.0, 25.0 ]
+									"patching_rect" : [ 173.0, 237.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -655,7 +655,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1006,7 +1006,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 14.5, 330.0, 505.0, 19.0 ],
+					"patching_rect" : [ 509.0, 252.0, 232.0, 19.0 ],
 					"text" : "j.model @description \"Read QT movie film.\""
 				}
 
@@ -1019,7 +1019,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 14.5, 301.0, 25.0, 25.0 ]
+					"patching_rect" : [ 509.0, 223.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -1047,8 +1047,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 438.0, 93.0, 417.0, 19.0 ],
-					"text" : "j.message getlength @type none @description \"Get movie length in ms\""
+					"patching_rect" : [ 438.0, 93.0, 380.0, 19.0 ],
+					"text" : "j.message length/get @type none @description \"Get movie length in ms\""
 				}
 
 			}
@@ -1116,7 +1116,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.5, 359.0, 25.0, 25.0 ]
+					"patching_rect" : [ 509.0, 281.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -1336,6 +1336,35 @@
 					"source" : [ "obj-6", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

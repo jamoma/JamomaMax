@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 137.0, 405.0, 962.0, 430.0 ],
+		"rect" : [ 137.0, 405.0, 605.0, 414.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 314.0, 328.0, 50.0, 20.0 ],
+					"patching_rect" : [ 107.0, 337.0, 50.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -50,7 +50,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 255.0, 328.0, 50.0, 20.0 ],
+					"patching_rect" : [ 48.0, 337.0, 50.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -64,7 +64,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 416.0, 237.0, 69.0, 18.0 ],
+					"patching_rect" : [ 85.0, 246.0, 69.0, 18.0 ],
 					"text" : "position $1"
 				}
 
@@ -79,7 +79,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 763.0, 23.5, 139.0, 154.0 ],
+					"patching_rect" : [ 432.0, 32.5, 139.0, 154.0 ],
 					"text" : "j.parameter mode @type string @value/default FastMode @description \"Choose internal calculation mode for panning: fast uses a lookup table while precision performs trigonometric calculations.\"",
 					"varname" : "mode[1]"
 				}
@@ -95,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 599.0, 23.5, 137.0, 114.0 ],
+					"patching_rect" : [ 268.0, 32.5, 137.0, 114.0 ],
 					"text" : "j.parameter shape @type string @value/default EqualPower @description \"Choose the panning function: linear, squareroot, or equal-power.\"",
 					"varname" : "shape[1]"
 				}
@@ -111,7 +111,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 416.0, 23.5, 149.0, 141.0 ],
+					"patching_rect" : [ 85.0, 32.5, 149.0, 141.0 ],
 					"text" : "j.parameter position @type decimal @range/bounds -1 1. @ramp/drive Max @value/default 0. @range/clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
 					"varname" : "position"
 				}
@@ -291,7 +291,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 763.0, 237.0, 72.0, 20.0 ],
+					"patching_rect" : [ 432.0, 246.0, 72.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -316,7 +316,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 24.0, 341.5, 24.0, 24.0 ]
+					"patching_rect" : [ 257.0, 353.5, 24.0, 24.0 ]
 				}
 
 			}
@@ -526,7 +526,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 599.0, 237.0, 74.0, 20.0 ],
+					"patching_rect" : [ 268.0, 246.0, 74.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -547,24 +547,12 @@
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-3",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.0, 23.5, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
 					"id" : "obj-6",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 255.0, 23.5, 24.0, 24.0 ]
+					"patching_rect" : [ 48.0, 32.5, 24.0, 24.0 ]
 				}
 
 			}
@@ -575,7 +563,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 314.0, 363.0, 24.0, 24.0 ]
+					"patching_rect" : [ 107.0, 372.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -586,7 +574,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 255.0, 363.0, 24.0, 24.0 ]
+					"patching_rect" : [ 48.0, 372.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -599,7 +587,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 255.0, 282.0, 137.0, 20.0 ],
+					"patching_rect" : [ 48.0, 291.0, 137.0, 20.0 ],
 					"text" : "j.panorama~ 1"
 				}
 
@@ -614,7 +602,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 24.0, 282.0, 184.0, 33.0 ],
+					"patching_rect" : [ 257.0, 291.0, 184.0, 33.0 ],
 					"text" : "j.model @description \"Panning  a mono sound source to stereo.\""
 				}
 
@@ -661,7 +649,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 772.5, 269.0, 264.5, 269.0 ],
+					"midpoints" : [ 441.5, 278.0, 57.5, 278.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -680,7 +668,7 @@
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 264.5, 314.0, 264.5, 314.0 ],
+					"midpoints" : [ 57.5, 323.0, 57.5, 323.0 ],
 					"source" : [ "obj-18", 0 ]
 				}
 
@@ -699,17 +687,8 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 608.5, 269.0, 264.5, 269.0 ],
+					"midpoints" : [ 277.5, 278.0, 57.5, 278.0 ],
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -718,7 +697,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 425.5, 268.0, 264.5, 268.0 ],
+					"midpoints" : [ 94.5, 277.0, 57.5, 277.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 

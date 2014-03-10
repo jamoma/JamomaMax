@@ -94,7 +94,7 @@ void jamoma_init(void)
 		
 		// Initialize common regex
 		ttRegexForJmod = new TTRegex("(jmod.)");
-		ttRegexForJcom = new TTRegex("(j.)");
+		ttRegexForJcom = new TTRegex("(j\\.)");
 		ttRegexForModel = new TTRegex("(.model)");
 		ttRegexForModule = new TTRegex("(.module)");
 		ttRegexForView = new TTRegex("(.view)");

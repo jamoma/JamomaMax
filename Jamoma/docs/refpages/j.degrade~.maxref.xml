@@ -190,7 +190,7 @@
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="degrade~"/>
-		<seealso name="j.degrade≈"/>
+		<seealso name="j.degrade="/>
 		<seealso name="j.overdrive~"/>
 		<seealso name="degrade~.model"/>
 	</seealsolist>

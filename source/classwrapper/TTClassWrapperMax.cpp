@@ -153,11 +153,9 @@ void wrappedClass_free(WrappedInstancePtr x)
 
 void wrappedClass_receiveNotificationForOutlet(WrappedInstancePtr self, TTValue& arg)
 {
-    TTString    string = "";
-    SymbolPtr   s;
+    TTString	string = arg[0];
+    SymbolPtr   s = gensym((char*)string.c_str());
     
-    arg.get(0, string);
-    s = gensym((char*)string.c_str());
     outlet_anything(self->controlOutlet, s, 0, NULL);
 }
 
@@ -333,34 +331,6 @@ void wrappedClass_assist(WrappedInstancePtr self, void *b, long msg, long arg, c
 }
 
 
-// Perform (signal) Method
-t_int *wrappedClass_perform(t_int *w)
-{
-   	WrappedInstancePtr	x = (WrappedInstancePtr)(w[1]);
-	short				i, j;
-
-	for(i=0; i < x->numControlSignals; i++){
-		t_float* value = (t_float*)(w[x->numChannels+i]);
-		x->wrappedObject->setAttributeValue(x->controlSignalNames[i], *value);
-	}
-	
-	for(i=0; i<x->numChannels; i++){
-		j = (i*2) + 1;
-		x->audioIn->setVector(i, x->vs, (TTFloat32*)w[j+1]);
-	}
-	
-	if(!x->obj.z_disabled)										// if we are not muted...
-		x->wrappedObject->process(x->audioIn, x->audioOut);		// Actual process
-	
-	for(i=0; i<x->numChannels; i++){
-		j = (i*2) + 1;
-		x->audioOut->getVector(i, x->vs, (TTFloat32*)w[j+2]);
-	}
-	
-	return w + ((x->numChannels*2)+2);				// +2 = +1 for the x pointer and +1 to point to the next object
-}
-
-
 void wrappedClass_perform64(WrappedInstancePtr self, ObjectPtr dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
 	TTUInt16 i;
@@ -368,8 +338,12 @@ void wrappedClass_perform64(WrappedInstancePtr self, ObjectPtr dsp64, double **i
 	
 	self->numChannels = numouts; // <-- this is kinda lame, but for the time being I think we can get away with this assumption...
 	
-	for (i=0; i < self->numControlSignals; i++)
-		self->wrappedObject->setAttributeValue(self->controlSignalNames[i], *ins[self->numInputs - self->numControlSignals + i]);
+	for (i=0; i < self->numControlSignals; i++) {
+		int signal_index = self->numInputs - self->numControlSignals + i;
+		
+		if (self->signals_connected[signal_index])
+			self->wrappedObject->setAttributeValue(self->controlSignalNames[i], *ins[signal_index]);
+	}
 	
 	self->audioIn->setNumChannelsWithInt(self->numInputs-self->numControlSignals);
 	self->audioOut->setNumChannelsWithInt(self->numOutputs);
@@ -386,58 +360,11 @@ void wrappedClass_perform64(WrappedInstancePtr self, ObjectPtr dsp64, double **i
 }
 
 
-// DSP Method
-void wrappedClass_dsp(WrappedInstancePtr x, t_signal **sp, short *count)
-{
-	short		i, j, k=0;
-	void		**audioVectors = NULL;
-	
-	// make sure that the global sample rate used by the environment is updated, in case it has changed
-	ttEnvironment->setAttributeValue(kTTSym_sampleRate, sys_getsr());
-		
-	audioVectors = (void**)sysmem_newptr(sizeof(void*) * ((x->maxNumChannels * 2) + 1 + x->numControlSignals));
-	audioVectors[k] = x;
-	k++;
-	
-	x->numChannels = 0;
-	x->vs = 0;
-	for(i=0; i < x->maxNumChannels; i++){
-		j = x->maxNumChannels + x->numControlSignals + i;
-		if(count[i] && count[j]){
-			x->numChannels++;
-			if(sp[i]->s_n > x->vs)
-				x->vs = sp[i]->s_n;
-			
-			audioVectors[k] = sp[i]->s_vec;
-			k++;
-			audioVectors[k] = sp[j]->s_vec;
-			k++;
-		}
-	}
-	
-	x->audioIn->setAttributeValue(kTTSym_numChannels, x->numChannels);
-	x->audioOut->setAttributeValue(kTTSym_numChannels, x->numChannels);
-	x->audioIn->setAttributeValue(kTTSym_vectorSize, x->vs);
-	x->audioOut->setAttributeValue(kTTSym_vectorSize, x->vs);
-	//audioIn will be set in the perform method
-	x->audioOut->sendMessage(kTTSym_alloc);
-	
-	x->wrappedObject->setAttributeValue(kTTSym_sampleRate, sp[0]->s_sr);
-	
-	j=i;
-	for(i=0; i < x->numControlSignals; i++){
-		audioVectors[k] = sp[j]->s_vec;
-		j++;
-		k++;
-	}
-	
-	dsp_addv(wrappedClass_perform, k, audioVectors);
-	sysmem_freeptr(audioVectors);
-}
-
-
 void wrappedClass_dsp64(WrappedInstancePtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
+	for (int i=0; i < (self->numInputs + self->numOutputs); i++)
+		self->signals_connected[i] = count[i];
+	
 	ttEnvironment->setAttributeValue(kTTSym_sampleRate, samplerate);
 	self->wrappedObject->setAttributeValue(TT("sampleRate"), samplerate);
 	
@@ -554,7 +481,6 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 	
 	TTObjectBaseRelease(&o);
 		
- 	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_dsp, 		"dsp",			A_CANT, 0L);
  	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_dsp64, 		"dsp64",		A_CANT, 0L);
     class_addmethod(wrappedMaxClass->maxClass, (method)object_obex_dumpout, 	"dumpout",		A_CANT, 0); 
 	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_assist, 	"assist",		A_CANT, 0L);

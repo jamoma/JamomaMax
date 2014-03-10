@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 214.0, 143.0, 819.0, 535.0 ],
+		"rect" : [ 100.0, 100.0, 819.0, 535.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -31,6 +31,7 @@
 		"showontab" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-5",
@@ -431,6 +432,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-18",
@@ -448,7 +450,7 @@
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 193.0, 133.0, 746.0, 307.0 ],
+										"rect" : [ 188.0, 217.0, 746.0, 307.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -472,13 +474,56 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"frgb" : 0.0,
+													"id" : "obj-12",
+													"linecount" : 5,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 333.0, 207.0, 198.0, 74.0 ],
+													"text" : "if no second argument is provided, the j.remote is registered into the view using the address + name of the ui object it is attach too between parenthesis"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-9",
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 83.0, 228.0, 241.0, 18.0 ],
+													"text" : "content model myModelParameter(flonum)"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-7",
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 108.0, 42.5, 50.0, 18.0 ],
+													"text" : "content"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"frgb" : 0.0,
 													"id" : "obj-6",
 													"linecount" : 7,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 494.0, 104.5, 205.0, 100.0 ],
-													"text" : "When used inside a view containing a j.view object, j.remote belongs to the node in the namespace j.view is binding to. Here, j.remote automatically binds to the parameter \"myModelParameter\" placed in the moddel called \"myModelParameter\""
+													"patching_rect" : [ 494.0, 70.5, 205.0, 100.0 ],
+													"text" : "When used inside a view containing a j.view object, j.remote belongs to the node in the namespace j.view is binding to. Here, j.remote automatically binds to the parameter \"myModelParameter\" placed in the model called \"myModelParameter\""
 												}
 
 											}
@@ -521,6 +566,7 @@
 											}
 , 											{
 												"box" : 												{
+													"annotation" : "this parameter is only useful for this help patcher",
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-10",
@@ -529,7 +575,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "float", "bang" ],
 													"parameter_enable" : 0,
-													"patching_rect" : [ 259.0, 176.5, 50.0, 20.0 ]
+													"patching_rect" : [ 259.0, 135.5, 50.0, 20.0 ]
 												}
 
 											}
@@ -543,7 +589,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
-													"patching_rect" : [ 259.0, 151.5, 185.0, 20.0 ],
+													"patching_rect" : [ 259.0, 110.5, 185.0, 20.0 ],
 													"text" : "j.remote myModelParameter"
 												}
 
@@ -563,7 +609,7 @@
 													"destination" : [ "obj-1", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [ 268.5, 199.5, 246.0, 199.5, 246.0, 146.5, 268.5, 146.5 ],
+													"midpoints" : [ 268.5, 158.5, 246.0, 158.5, 246.0, 105.5, 268.5, 105.5 ],
 													"source" : [ "obj-10", 0 ]
 												}
 
@@ -579,10 +625,29 @@
 											}
 , 											{
 												"patchline" : 												{
+													"destination" : [ "obj-9", 1 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"midpoints" : [ 136.5, 220.25, 314.5, 220.25 ],
+													"source" : [ "obj-2", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
 													"destination" : [ "obj-2", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-3", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-7", 0 ]
 												}
 
 											}
@@ -665,6 +730,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-2",
@@ -761,7 +827,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 211.0, 228.0, 50.0, 18.0 ],
+													"patching_rect" : [ 211.0, 246.0, 50.0, 18.0 ],
 													"text" : "34."
 												}
 
@@ -771,12 +837,13 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-1",
+													"linecount" : 4,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 242.0, 170.0, 285.0, 20.0 ],
-													"text" : "j.parameter myModelParameter @type decimal"
+													"patching_rect" : [ 242.0, 170.0, 203.0, 60.0 ],
+													"text" : "j.parameter myModelParameter @type decimal @description \"this parameter is only useful for this help patcher\""
 												}
 
 											}
@@ -939,7 +1006,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 214.0, 169.0, 819.0, 509.0 ],
+						"rect" : [ 0.0, 26.0, 819.0, 509.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -971,7 +1038,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 667.0, 252.0, 175.0, 76.0 ],
+									"patching_rect" : [ 615.0, 252.0, 175.0, 76.0 ],
 									"text" : "use 'set' message to update j.parameter's value without causing output from j.remote",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
@@ -986,7 +1053,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 594.0, 298.0, 73.0, 20.0 ],
+									"patching_rect" : [ 542.0, 298.0, 73.0, 20.0 ],
 									"text" : "prepend set"
 								}
 
@@ -1001,7 +1068,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 594.0, 272.0, 50.0, 20.0 ]
+									"patching_rect" : [ 542.0, 272.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -1069,7 +1136,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 323.0, 138.0, 187.0, 141.0 ],
+									"patching_rect" : [ 328.0, 138.0, 187.0, 141.0 ],
 									"text" : "j.remote allows to bind to a parameter value. It can be useful to build user interfaces for example.\n\nHere we set our j.remote to bind to a parameter called \"myParameter\" and situated at the root of our namespace (defined as \"/\")."
 								}
 
@@ -1127,7 +1194,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 120.5, 205.0, 50.0, 18.0 ],
+									"patching_rect" : [ 120.5, 228.0, 50.0, 18.0 ],
 									"text" : "0."
 								}
 
@@ -1137,12 +1204,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-4",
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 151.5, 171.0, 154.0, 20.0 ],
-									"text" : "j.parameter myParameter"
+									"patching_rect" : [ 151.5, 171.0, 162.0, 47.0 ],
+									"text" : "j.parameter myParameter @description \"something to tell about this parameter\""
 								}
 
 							}
@@ -1205,7 +1273,7 @@
 									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 603.5, 323.5, 161.0, 323.5 ],
+									"midpoints" : [ 551.5, 323.5, 161.0, 323.5 ],
 									"source" : [ "obj-11", 0 ]
 								}
 
@@ -1284,7 +1352,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 819.0, 509.0 ],
+						"rect" : [ 100.0, 126.0, 819.0, 509.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1341,7 +1409,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 514.5, 368.0, 101.0, 18.0 ],
+									"patching_rect" : [ 514.5, 389.0, 101.0, 18.0 ],
 									"text" : "130."
 								}
 
@@ -1351,12 +1419,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-1",
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 514.5, 319.0, 205.0, 20.0 ],
-									"text" : "j.parameter myLonelyParameter"
+									"patching_rect" : [ 514.5, 319.0, 208.0, 47.0 ],
+									"text" : "j.parameter myLonelyParameter @description \"anything useful to described how this parameter works\""
 								}
 
 							}
@@ -1392,6 +1461,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-18",
@@ -1675,6 +1745,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-2",
@@ -1781,12 +1852,13 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-1",
+													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 242.0, 170.0, 285.0, 20.0 ],
-													"text" : "j.parameter myModelParameter @type decimal"
+													"patching_rect" : [ 242.0, 170.0, 297.0, 33.0 ],
+													"text" : "j.parameter myModelParameter @type decimal @description \"something to tell about this parameter\""
 												}
 
 											}
@@ -1854,7 +1926,7 @@
 									"destination" : [ "obj-4", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 524.0, 353.0, 606.0, 353.0 ],
+									"midpoints" : [ 524.0, 376.0, 606.0, 376.0 ],
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -1950,7 +2022,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

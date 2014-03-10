@@ -177,7 +177,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 162.666672, 141.0, 185.583328, 41.0 ],
-					"text" : "append# dataspace# iter# midi.filter# midi.format# midi.in# midi.out# op# pack# unpack#"
+					"text" : "append# dataspace# iter# midi.filter# midi.format# midi.in# midi.out# op# pack# unpack-"
 				}
 
 			}

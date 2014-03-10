@@ -38,6 +38,7 @@
   <entry App="panel" TT="Panel"/>
   <entry App="recall" TT="Recall"/>
   <entry App="reference/open" TT="ReferenceOpen"/>
+  <entry App="reference/write" TT="ReferenceWrite"/>
   <entry App="refresh" TT="Refresh"/>
   <entry App="remove" TT="Remove"/>
   <entry App="rename" TT="Rename"/>

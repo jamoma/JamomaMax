@@ -192,7 +192,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.mixer≈.mxo",
+				"name" : "j.mixer=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

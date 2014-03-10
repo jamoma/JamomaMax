@@ -362,7 +362,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 457.0, 365.0, 79.0, 20.0 ],
-									"text" : "prepend type"
+									"text" : "prepend function"
 								}
 
 							}

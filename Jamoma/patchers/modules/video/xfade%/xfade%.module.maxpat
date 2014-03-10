@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 60.0, 76.0, 425.0, 214.0 ],
+		"rect" : [ 60.0, 76.0, 849.0, 379.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -36,8 +36,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 165.0, 99.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 162.5, 97.0, 0.0, 0.0 ]
+					"patching_rect" : [ 165.0, 99.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -89,7 +88,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 6.0, 129.0, 178.0, 19.0 ],
-					"text" : "xfade%.model #1"
+					"text" : "xfade%.model"
 				}
 
 			}
@@ -165,14 +164,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "xfade%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/xfade%",
+				"bootpath" : "/Users/hems/git/jamoma/JamomaMax/Jamoma/patchers/modules/video/xfade%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "xfade%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/xfade%",
+				"bootpath" : "/Users/hems/git/jamoma/JamomaMax/Jamoma/patchers/modules/video/xfade%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -190,7 +189,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.oscroute.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{

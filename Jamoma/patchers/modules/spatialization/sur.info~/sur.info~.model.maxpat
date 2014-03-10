@@ -166,7 +166,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
 					"patching_rect" : [ 284.0, 172.0, 649.0, 20.0 ],
-					"text" : "j.info≈"
+					"text" : "j.info="
 				}
 
 			}
@@ -327,7 +327,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.info≈.mxo",
+				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

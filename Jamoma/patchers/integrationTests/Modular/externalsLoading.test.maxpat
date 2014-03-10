@@ -230,7 +230,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 197.0, 536.0, 107.0, 19.0 ],
-					"text" : "j≈ allpass"
+					"text" : "j= allpass"
 				}
 
 			}

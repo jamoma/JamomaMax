@@ -225,7 +225,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.delay≈"/>
+		<seealso name="j.delay="/>
 		<seealso name="delay~"/>
 		<seealso name="tapin~"/>
 		<seealso name="tapout~"/>

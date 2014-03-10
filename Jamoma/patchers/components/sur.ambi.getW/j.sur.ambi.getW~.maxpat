@@ -36,7 +36,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 65.0, 149.0, 93.0, 19.0 ],
-					"text" : "j.unpack≈ 1"
+					"text" : "j.unpack= 1"
 				}
 
 			}
@@ -112,7 +112,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
  ]
