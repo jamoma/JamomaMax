@@ -1,6 +1,6 @@
 
 sources:
-  - j.dbapBformat.cpp		
+  - j.dbap_bformat.cpp		
   - ../c74support/max-includes/common/commonsyms.cpp
     
 includes:

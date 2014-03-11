@@ -507,7 +507,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 470.0, 115.0, 291.0, 65.0 ],
-									"text" : "In this test the source is positioned at the center of a ring of 8 speakers. In this case j.dbapBformat is ending up as a plain ambisonic in-phase decoding."
+									"text" : "In this test the source is positioned at the center of a ring of 8 speakers. In this case j.dbap_bformat is ending up as a plain ambisonic in-phase decoding."
 								}
 
 							}
@@ -793,7 +793,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 165.0, 274.0, 137.0, 43.0 ],
-													"text" : "j.dbapBformat @num_sources 1 @num_destinations 8"
+													"text" : "j.dbap_bformat @num_sources 1 @num_destinations 8"
 												}
 
 											}
@@ -2597,7 +2597,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p TESTj.dbapBformat:compareToAmbisonicDecoding"
+					"text" : "p TESTj.dbap_bformat:compareToAmbisonicDecoding"
 				}
 
 			}
@@ -2624,7 +2624,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 670.0, 315.0, 321.0, 19.0 ],
-					"text" : "test.assert TESTj.dbapBformat:compareToAmbisonicDecoding"
+					"text" : "test.assert TESTj.dbap_bformat:compareToAmbisonicDecoding"
 				}
 
 			}
@@ -3300,7 +3300,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 310.0, 290.0, 137.0, 43.0 ],
-													"text" : "j.dbapBformat @num_sources 1 @num_destinations 8"
+													"text" : "j.dbap_bformat @num_sources 1 @num_destinations 8"
 												}
 
 											}
@@ -3872,7 +3872,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 165.0, 290.0, 137.0, 43.0 ],
-													"text" : "j.dbapBformat @num_sources 1 @num_destinations 8"
+													"text" : "j.dbap_bformat @num_sources 1 @num_destinations 8"
 												}
 
 											}
@@ -5203,7 +5203,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p TESTj.dbapBformat:polarity"
+					"text" : "p TESTj.dbap_bformat:polarity"
 				}
 
 			}
@@ -5230,7 +5230,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 443.0, 315.0, 207.0, 19.0 ],
-					"text" : "test.assert TESTj.dbapBformat:polarity"
+					"text" : "test.assert TESTj.dbap_bformat:polarity"
 				}
 
 			}
@@ -5344,7 +5344,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dbapBformat.mxo",
+				"name" : "j.dbap_bformat.mxo",
 				"type" : "iLaX"
 			}
 , 			{

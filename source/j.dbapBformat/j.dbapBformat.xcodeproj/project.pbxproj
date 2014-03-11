@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		469BD9DB180B535500A023B3 /* j.dbapBformat.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.dbapBformat.yml; sourceTree = "<group>"; };
-		A75C3E0E151889BB00774BD7 /* j.dbapBformat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = j.dbapBformat.h; sourceTree = "<group>"; };
-		A75C3E0F151889BB00774BD7 /* j.dbapBformat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.dbapBformat.cpp; sourceTree = "<group>"; };
+		469BD9DB180B535500A023B3 /* j.dbap_bformat.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.dbap_bformat.yml; sourceTree = "<group>"; };
+		A75C3E0E151889BB00774BD7 /* j.dbap_bformat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = j.dbap_bformat.h; sourceTree = "<group>"; };
+		A75C3E0F151889BB00774BD7 /* j.dbap_bformat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.dbap_bformat.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		A75C3DFC1518897F00774BD7 = {
 			isa = PBXGroup;
 			children = (
-				469BD9DB180B535500A023B3 /* j.dbapBformat.yml */,
+				469BD9DB180B535500A023B3 /* j.dbap_bformat.yml */,
 				A75C3E0D151889AC00774BD7 /* Sources */,
 			);
 			sourceTree = "<group>";
@@ -24,8 +24,8 @@
 		A75C3E0D151889AC00774BD7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A75C3E0E151889BB00774BD7 /* j.dbapBformat.h */,
-				A75C3E0F151889BB00774BD7 /* j.dbapBformat.cpp */,
+				A75C3E0E151889BB00774BD7 /* j.dbap_bformat.h */,
+				A75C3E0F151889BB00774BD7 /* j.dbap_bformat.cpp */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -33,17 +33,17 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		A75C3E031518897F00774BD7 /* j.dbapBformat */ = {
+		A75C3E031518897F00774BD7 /* j.dbap_bformat */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION) $(CONFIGURATION)";
-			buildConfigurationList = A75C3E061518897F00774BD7 /* Build configuration list for PBXLegacyTarget "j.dbapBformat" */;
+			buildConfigurationList = A75C3E061518897F00774BD7 /* Build configuration list for PBXLegacyTarget "j.dbap_bformat" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			buildWorkingDirectory = "";
 			dependencies = (
 			);
-			name = j.dbapBformat;
+			name = j.dbap_bformat;
 			passBuildSettingsInEnvironment = 1;
 			productName = jcom;
 		};
@@ -56,7 +56,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "BEK - Bergen senter for elektronisk kunst";
 			};
-			buildConfigurationList = A75C3E011518897F00774BD7 /* Build configuration list for PBXProject "j.dbapBformat" */;
+			buildConfigurationList = A75C3E011518897F00774BD7 /* Build configuration list for PBXProject "j.dbap_bformat" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -67,7 +67,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A75C3E031518897F00774BD7 /* j.dbapBformat */,
+				A75C3E031518897F00774BD7 /* j.dbap_bformat */,
 			);
 		};
 /* End PBXProject section */
@@ -129,7 +129,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.dbapBformat;
+				PRODUCT_NAME = j.dbap_bformat;
 			};
 			name = Debug;
 		};
@@ -139,14 +139,14 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.dbapBformat;
+				PRODUCT_NAME = j.dbap_bformat;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A75C3E011518897F00774BD7 /* Build configuration list for PBXProject "j.dbapBformat" */ = {
+		A75C3E011518897F00774BD7 /* Build configuration list for PBXProject "j.dbap_bformat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A75C3E041518897F00774BD7 /* Debug */,
@@ -155,7 +155,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A75C3E061518897F00774BD7 /* Build configuration list for PBXLegacyTarget "j.dbapBformat" */ = {
+		A75C3E061518897F00774BD7 /* Build configuration list for PBXLegacyTarget "j.dbap_bformat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A75C3E071518897F00774BD7 /* Debug */,

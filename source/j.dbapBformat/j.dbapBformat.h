@@ -1,7 +1,7 @@
 /** @file
  * @ingroup implementationMaxExternals
  *
- * @brief j.dbapBformat - Distance Based Amplitude Panning using 4-channel ambisonic Bformat signals as sources.
+ * @brief j.dbap_bformat - Distance Based Amplitude Panning using 4-channel ambisonic Bformat signals as sources.
  *
  * @details
  *
@@ -48,10 +48,10 @@ typedef struct _decodeCoefficients{
 	float		z;												///< First order Z coefficient
 } t_decodeCoefficients;
 
-/** Structure for the j.dbapBformat Max object.
+/** Structure for the j.dbap_bformat Max object.
  @ingroup typedefs
  */
-typedef struct _dbapBformat{									///< Data structure for this object
+typedef struct _dbap_bformat{									///< Data structure for this object
 	// Max stuff
 	t_object	ob;												///< Must always be the first field; used by Max
 	void		*outlet;										////< Pointer to outlets. Need one for each outlet
@@ -83,91 +83,91 @@ typedef struct _dbapBformat{									///< Data structure for this object
 	float		attrRollOff;									///< Set rolloff with distance in dB
 	float		attrVicinity;									///< Set radius of field of vicinity around speaker where decoding gets increasingly omni
 	float		a;												///< Constant: Exponent controlling amplitude dependance on distance. Depends on attrRollOff
-	} t_dbapBformat;
+	} t_dbap_bformat;
 
 
 // Prototypes for methods: need a method for each incoming message
 
-void *dbapBformatNew(t_symbol *msg, long argc, t_atom *argv);
-t_max_err dbapBformat_setstep(t_dbapBformat *x, void *attr, long argc, t_atom *argv);
+void *dbap_bformatNew(t_symbol *msg, long argc, t_atom *argv);
+t_max_err dbap_bformat_setstep(t_dbap_bformat *x, void *attr, long argc, t_atom *argv);
 
 /** Set spatial blur for nth source. */
-void dbapBformatBlur(t_dbapBformat *x, t_symbol *msg, long argc, t_atom *argv);
+void dbap_bformatBlur(t_dbap_bformat *x, t_symbol *msg, long argc, t_atom *argv);
 
 /** Set spatial blur for all sources. */
-void dbapBformatBlurAll(t_dbapBformat *x, double f);
+void dbap_bformatBlurAll(t_dbap_bformat *x, double f);
 
 /** Set polarity of the nth virtual source */
-void dbapBformatPolarity(t_dbapBformat *x, t_symbol *msg, long argc, t_atom *argv);
+void dbap_bformatPolarity(t_dbap_bformat *x, t_symbol *msg, long argc, t_atom *argv);
 
 /** Set polarity for all sources */
-void dbapBformatPolarityAll(t_dbapBformat *x, double f);
+void dbap_bformatPolarityAll(t_dbap_bformat *x, double f);
 
 /** Set radius of vicinity field around speaker where decoding will converge towards omni */
-t_max_err dbapBformatAttrSetVicinity(t_dbapBformat *x, void *attr, long argc, t_atom *argv);
+t_max_err dbap_bformatAttrSetVicinity(t_dbap_bformat *x, void *attr, long argc, t_atom *argv);
 
 /** Set the position of the nth virtual source. */
-void dbapBformatSource(t_dbapBformat *x, void *msg, long argc, t_atom *argv);
+void dbap_bformatSource(t_dbap_bformat *x, void *msg, long argc, t_atom *argv);
 
 /** Set the position of the nth speaker. */
-void dbapBformatDestination(t_dbapBformat *x, void *msg, long argc, t_atom *argv);
+void dbap_bformatDestination(t_dbap_bformat *x, void *msg, long argc, t_atom *argv);
 
 /** Set input gain for nth source. */
-void dbapBformatSourceGain(t_dbapBformat *x, void *msg, long argc, t_atom *argv);
+void dbap_bformatSourceGain(t_dbap_bformat *x, void *msg, long argc, t_atom *argv);
 
 /** Set master gain for all values passed from the object to matrix~. */
-void dbapBformatMasterGain(t_dbapBformat *x, double f);
+void dbap_bformatMasterGain(t_dbap_bformat *x, double f);
 
 /** Set weight for nth source by passing a list to balance each destination. */
-void dbapBformatSourceWeight(t_dbapBformat *x, t_symbol *msg, long argc, t_atom *argv);
+void dbap_bformatSourceWeight(t_dbap_bformat *x, t_symbol *msg, long argc, t_atom *argv);
 
 /** Mute and unmute sources */
-void dbapBformatSourceMute(t_dbapBformat *x, void *msg, long argc, t_atom *argv);
+void dbap_bformatSourceMute(t_dbap_bformat *x, void *msg, long argc, t_atom *argv);
 
 /** Get info on destination setup ++ */
-void dbapBformatInfo(t_dbapBformat *x);
+void dbap_bformatInfo(t_dbap_bformat *x);
 
 /** Display assist strings while patching. */
-void dbapBformatAssist(t_dbapBformat *x, void *b, long msg, long arg, char *dst);
+void dbap_bformatAssist(t_dbap_bformat *x, void *b, long msg, long arg, char *dst);
 
 /** Set the number of sources of the system. */
-t_max_err dbapBformatAttrSetNumberOfSources(t_dbapBformat *x, void *attr, long argc, t_atom *argv);
+t_max_err dbap_bformatAttrSetNumberOfSources(t_dbap_bformat *x, void *attr, long argc, t_atom *argv);
 
 /** Set the number of destinations of the system. */
-t_max_err dbapBformatAttrSetNumberOfDestinations(t_dbapBformat *x, void *attr, long argc, t_atom *argv);
+t_max_err dbap_bformatAttrSetNumberOfDestinations(t_dbap_bformat *x, void *attr, long argc, t_atom *argv);
 
 /** Set spatial blur coefficient */
-t_max_err dbapBformatAttrSetBlur(t_dbapBformat *x, void *attr, long argc, t_atom *argv);
+t_max_err dbap_bformatAttrSetBlur(t_dbap_bformat *x, void *attr, long argc, t_atom *argv);
 
 /** Set rolloff in dB */
-t_max_err dbapBformatAttrSetRollOff(t_dbapBformat *x, void *attr, long argc, t_atom *argv);
+t_max_err dbap_bformatAttrSetRollOff(t_dbap_bformat *x, void *attr, long argc, t_atom *argv);
 
 /** Calculation of exponent coefficient based on rolloff */
-void dbapBformatCalculateA(t_dbapBformat *x);
+void dbap_bformatCalculateA(t_dbap_bformat *x);
 
 /** General method for calculation of matrix coefficient for nth source. */
-void dbapBformatCalculate(t_dbapBformat *x, long n);
+void dbap_bformatCalculate(t_dbap_bformat *x, long n);
 
 /** Calculate mean position of the destination points. */
-void dbapBformatCalculateMeanDestinationPosition(t_dbapBformat *x);
+void dbap_bformatCalculateMeanDestinationPosition(t_dbap_bformat *x);
 
 /** Calculate bias-corrected variance of distance from destination points to mean destination point. */
-void dbapBformatCalculateVariance(t_dbapBformat *x);
+void dbap_bformatCalculateVariance(t_dbap_bformat *x);
 
 /** Calculate the view (2D-matrix) */
-void dbapBformatCalculateView(t_dbapBformat *x, long dst, long src);
+void dbap_bformatCalculateView(t_dbap_bformat *x, long dst, long src);
 
 /** If the attrViewMatrixUpdate is true : calculate the last view */
-void dbapBformatUpdateView(t_dbapBformat *x);
+void dbap_bformatUpdateView(t_dbap_bformat *x);
 
 /** Calculate the view (2D-matrix) : 1D */
-void dbapBformatCalculateView1D(t_dbapBformat *x, long dst, long src);
+void dbap_bformatCalculateView1D(t_dbap_bformat *x, long dst, long src);
 
 /** Calculate the view (2D-matrix) : 2D */
-void dbapBformatCalculateView2D(t_dbapBformat *x, long dst, long src);
+void dbap_bformatCalculateView2D(t_dbap_bformat *x, long dst, long src);
 
 /** Calculate the view (2D-matrix) : 3D */
-void dbapBformatCalculateView3D(t_dbapBformat *x, long dst, long src);
+void dbap_bformatCalculateView3D(t_dbap_bformat *x, long dst, long src);
 
 /** Output the calculated view */
-void dbapBformatOutputView(t_dbapBformat *x);
+void dbap_bformatOutputView(t_dbap_bformat *x);

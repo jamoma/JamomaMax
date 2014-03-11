@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9,00"
-	Name="j.dbapBformat"
+	Name="j.dbap_bformat"
 	ProjectGUID="{3DBF9BCD-66D4-4487-848B-1423B0528C5A}"
 	RootNamespace="j.ramp"
 	Keyword="Win32Proj"
@@ -188,7 +188,7 @@
 			>
 		</File>
 		<File
-			RelativePath=".\j.dbapBformat.cpp"
+			RelativePath=".\j.dbap_bformat.cpp"
 			>
 		</File>
 	</Files>

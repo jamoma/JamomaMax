@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.dbapBformat - Distance Based Amplitude Panning using 4-channel ambisonic Bformat signals as sources.
+ * @brief j.dbap_bformat - Distance Based Amplitude Panning using 4-channel ambisonic Bformat signals as sources.
  *
  * @details
  *
@@ -14,7 +14,7 @@
  */
 
 #include "JamomaForMax.h"
-#include "j.dbapBformat.h"
+#include "j.dbap_bformat.h"
 
 // Globals
 t_class		*this_class;				// Required. Global pointing to this class 
@@ -37,37 +37,37 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	psNumberOfDestinations	= gensym("num_destinations");
 	
 	// Define our class
-	c = class_new("j.dbapBformat",(method)dbapBformatNew, (method)0L, sizeof(t_dbapBformat), 
+	c = class_new("j.dbap_bformat",(method)dbap_bformatNew, (method)0L, sizeof(t_dbap_bformat), 
 		(method)0L, A_GIMME, 0);		
 
 	// Make methods accessible for our class: 
-	class_addmethod(c, (method)dbapBformatBlur,				"blur",				A_GIMME,	0);
-	class_addmethod(c, (method)dbapBformatBlurAll,			"blurall",			A_FLOAT,	0);
-	class_addmethod(c, (method)dbapBformatPolarity,			"polarity",			A_GIMME,	0);
-	class_addmethod(c, (method)dbapBformatPolarityAll,		"polarityall",		A_FLOAT,	0);
-	class_addmethod(c, (method)dbapBformatSource,			"src_position",		A_GIMME,	0);
-	class_addmethod(c, (method)dbapBformatDestination,		"dst_position",		A_GIMME,	0);
-	class_addmethod(c, (method)dbapBformatSourceGain,		"src_gain",			A_GIMME,	0);
-	class_addmethod(c, (method)dbapBformatSourceWeight,		"src_weight",		A_GIMME,	0);
-	class_addmethod(c, (method)dbapBformatMasterGain,		"master_gain",		A_FLOAT,	0);
-	class_addmethod(c, (method)dbapBformatSourceMute,		"src_mute",			A_GIMME,	0);
+	class_addmethod(c, (method)dbap_bformatBlur,				"blur",				A_GIMME,	0);
+	class_addmethod(c, (method)dbap_bformatBlurAll,			"blurall",			A_FLOAT,	0);
+	class_addmethod(c, (method)dbap_bformatPolarity,			"polarity",			A_GIMME,	0);
+	class_addmethod(c, (method)dbap_bformatPolarityAll,		"polarityall",		A_FLOAT,	0);
+	class_addmethod(c, (method)dbap_bformatSource,			"src_position",		A_GIMME,	0);
+	class_addmethod(c, (method)dbap_bformatDestination,		"dst_position",		A_GIMME,	0);
+	class_addmethod(c, (method)dbap_bformatSourceGain,		"src_gain",			A_GIMME,	0);
+	class_addmethod(c, (method)dbap_bformatSourceWeight,		"src_weight",		A_GIMME,	0);
+	class_addmethod(c, (method)dbap_bformatMasterGain,		"master_gain",		A_FLOAT,	0);
+	class_addmethod(c, (method)dbap_bformatSourceMute,		"src_mute",			A_GIMME,	0);
 
-	class_addmethod(c, (method)dbapBformatAssist,			"assist",			A_CANT,		0);
-	class_addmethod(c, (method)dbapBformatInfo,				"info",				0);
+	class_addmethod(c, (method)dbap_bformatAssist,			"assist",			A_CANT,		0);
+	class_addmethod(c, (method)dbap_bformatInfo,				"info",				0);
 	class_addmethod(c, (method)object_obex_dumpout,			"dumpout",			0);
 
 	// Add attributes to our class:	
-	CLASS_ATTR_LONG(c,		"num_sources",		0,		t_dbapBformat,	attrNumberOfSources);
-	CLASS_ATTR_ACCESSORS(c,	"num_sources",		NULL,	dbapBformatAttrSetNumberOfSources);
+	CLASS_ATTR_LONG(c,		"num_sources",		0,		t_dbap_bformat,	attrNumberOfSources);
+	CLASS_ATTR_ACCESSORS(c,	"num_sources",		NULL,	dbap_bformatAttrSetNumberOfSources);
 	
-	CLASS_ATTR_LONG(c,		"num_destinations",	0,		t_dbapBformat,	attrNumberOfDestinations);
-	CLASS_ATTR_ACCESSORS(c,	"num_destinations",	NULL,	dbapBformatAttrSetNumberOfDestinations);
+	CLASS_ATTR_LONG(c,		"num_destinations",	0,		t_dbap_bformat,	attrNumberOfDestinations);
+	CLASS_ATTR_ACCESSORS(c,	"num_destinations",	NULL,	dbap_bformatAttrSetNumberOfDestinations);
 
-	CLASS_ATTR_FLOAT(c,		"rolloff",			0,		t_dbapBformat,	attrRollOff);
-	CLASS_ATTR_ACCESSORS(c,	"rolloff",			NULL,	dbapBformatAttrSetRollOff);
+	CLASS_ATTR_FLOAT(c,		"rolloff",			0,		t_dbap_bformat,	attrRollOff);
+	CLASS_ATTR_ACCESSORS(c,	"rolloff",			NULL,	dbap_bformatAttrSetRollOff);
 	
-	CLASS_ATTR_FLOAT(c,		"vicinity",			0,		t_dbapBformat,	attrVicinity);
-	CLASS_ATTR_ACCESSORS(c,	"vicinity",			NULL,	dbapBformatAttrSetVicinity);
+	CLASS_ATTR_FLOAT(c,		"vicinity",			0,		t_dbap_bformat,	attrVicinity);
+	CLASS_ATTR_ACCESSORS(c,	"vicinity",			NULL,	dbap_bformatAttrSetVicinity);
 	
 	// Finalize our class
 	class_register(CLASS_BOX, c);
@@ -81,12 +81,12 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 #pragma mark -
 #pragma mark object life
 
-void *dbapBformatNew(t_symbol *msg, long argc, t_atom *argv)
+void *dbap_bformatNew(t_symbol *msg, long argc, t_atom *argv)
 {
-	t_dbapBformat *x;
+	t_dbap_bformat *x;
 	long i,j;
 	
-	x = (t_dbapBformat *)object_alloc(this_class);	// create the new instance and return a pointer to it
+	x = (t_dbap_bformat *)object_alloc(this_class);	// create the new instance and return a pointer to it
 	
 	if (x) {
     	object_obex_store(x, _sym_dumpout, (object *)outlet_new(x,NULL));	// dumpout
@@ -127,8 +127,8 @@ void *dbapBformatNew(t_symbol *msg, long argc, t_atom *argv)
 		}
 		
 		attr_args_process(x, argc, argv);			// Handle attribute args
-		dbapBformatCalculateA(x);					// Calculate expo0nent coefficiant used for rolloff
-		dbapBformatCalculateVariance(x);			// This implisitly also calculate all matrix values
+		dbap_bformatCalculateA(x);					// Calculate expo0nent coefficiant used for rolloff
+		dbap_bformatCalculateVariance(x);			// This implisitly also calculate all matrix values
 	}
 	return (x);										// Return the pointer
 }
@@ -143,7 +143,7 @@ void *dbapBformatNew(t_symbol *msg, long argc, t_atom *argv)
 
 
 // set spatial blur for nth source
-void dbapBformatBlur(t_dbapBformat *x, t_symbol *msg, long argc, t_atom *argv)
+void dbap_bformatBlur(t_dbap_bformat *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	long n;
 	float f;
@@ -159,14 +159,14 @@ void dbapBformatBlur(t_dbapBformat *x, t_symbol *msg, long argc, t_atom *argv)
 		if (f<0.000001) 
 			f = 0.000001;	
 		x->blur[n] = f;
-		dbapBformatCalculate(x, n);
+		dbap_bformatCalculate(x, n);
 	}
 	else
 		error("Invalid argument(s) for blur");
 }
 
 // set spatial blur for all sources
-void dbapBformatBlurAll(t_dbapBformat *x, double f)
+void dbap_bformatBlurAll(t_dbap_bformat *x, double f)
 {
 	long i;
 
@@ -174,12 +174,12 @@ void dbapBformatBlurAll(t_dbapBformat *x, double f)
 		f = 0.000001;		
 	for (i=0; i<x->attrNumberOfSources; i++) {
 		x->blur[i] = f;
-		dbapBformatCalculate(x, i);
+		dbap_bformatCalculate(x, i);
 	}
 }
 
 // set polarity for nth source
-void dbapBformatPolarity(t_dbapBformat *x, t_symbol *msg, long argc, t_atom *argv)
+void dbap_bformatPolarity(t_dbap_bformat *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	long n;
 	float f;
@@ -197,7 +197,7 @@ void dbapBformatPolarity(t_dbapBformat *x, t_symbol *msg, long argc, t_atom *arg
 		if (f>1.0)
 			f = 1.0;
 		x->polarity[n] = f;
-		dbapBformatCalculate(x, n);
+		dbap_bformatCalculate(x, n);
 	}
 	else
 		error("Invalid argument(s) for blur");
@@ -205,7 +205,7 @@ void dbapBformatPolarity(t_dbapBformat *x, t_symbol *msg, long argc, t_atom *arg
 
 
 // Set polarity for all sources
-void dbapBformatPolarityAll(t_dbapBformat *x, double f)
+void dbap_bformatPolarityAll(t_dbap_bformat *x, double f)
 {
 	long i;
 	
@@ -215,12 +215,12 @@ void dbapBformatPolarityAll(t_dbapBformat *x, double f)
 		f = 1.0;		
 	for (i=0; i<x->attrNumberOfSources; i++) {
 		x->polarity[i] = f;
-		dbapBformatCalculate(x, i);
+		dbap_bformatCalculate(x, i);
 	}
 }
 
 // set source position and calculate output
-void dbapBformatSource(t_dbapBformat *x, void *msg, long argc, t_atom *argv)
+void dbap_bformatSource(t_dbap_bformat *x, void *msg, long argc, t_atom *argv)
 {
 	long n;
 	
@@ -235,7 +235,7 @@ void dbapBformatSource(t_dbapBformat *x, void *msg, long argc, t_atom *argv)
 		x->sourcePosition[n].y = atom_getfloat(argv+2);
 		x->sourcePosition[n].z = atom_getfloat(argv+3);
 
-		dbapBformatCalculate(x, n);
+		dbap_bformatCalculate(x, n);
 	}
 	else
 		error("Invalid arguments for source.");
@@ -243,7 +243,7 @@ void dbapBformatSource(t_dbapBformat *x, void *msg, long argc, t_atom *argv)
 
 
 // set position of a destination
-void dbapBformatDestination(t_dbapBformat *x, void *msg, long argc, t_atom *argv)
+void dbap_bformatDestination(t_dbap_bformat *x, void *msg, long argc, t_atom *argv)
 {
 	long n;
 	
@@ -258,14 +258,14 @@ void dbapBformatDestination(t_dbapBformat *x, void *msg, long argc, t_atom *argv
 		x->destinationPosition[n].z = atom_getfloat(argv+3);
 		
 		// The set of destination points has been changed - recalculate variance.
-		dbapBformatCalculateVariance(x);					// implicitely updates all matrix values
+		dbap_bformatCalculateVariance(x);					// implicitely updates all matrix values
 	}
 	else
 		error("Invalid arguments for speaker.");
 }
 
 
-void dbapBformatSourceGain(t_dbapBformat *x, void *msg, long argc, t_atom *argv)
+void dbap_bformatSourceGain(t_dbap_bformat *x, void *msg, long argc, t_atom *argv)
 {
 	long n;
 	float f;
@@ -281,7 +281,7 @@ void dbapBformatSourceGain(t_dbapBformat *x, void *msg, long argc, t_atom *argv)
 		if (f<0.0) 
 			f = 0.0;	
 		x->sourceGain[n] = f;
-		dbapBformatCalculate(x, n);
+		dbap_bformatCalculate(x, n);
 	}
 	else
 		error("Invalid argument(s) for source_gain");
@@ -289,7 +289,7 @@ void dbapBformatSourceGain(t_dbapBformat *x, void *msg, long argc, t_atom *argv)
 
 
 
-void dbapBformatMasterGain(t_dbapBformat *x, double f)
+void dbap_bformatMasterGain(t_dbap_bformat *x, double f)
 {
 	long i;
 	
@@ -299,10 +299,10 @@ void dbapBformatMasterGain(t_dbapBformat *x, double f)
 	
 	// Update all matrix values
 	for (i=0; i<x->attrNumberOfSources; i++)
-		dbapBformatCalculate(x, i);
+		dbap_bformatCalculate(x, i);
 }
 
-void dbapBformatSourceWeight(t_dbapBformat *x, t_symbol *msg, long argc, t_atom *argv)
+void dbap_bformatSourceWeight(t_dbap_bformat *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	long source, i;
 	float weight;
@@ -340,13 +340,13 @@ void dbapBformatSourceWeight(t_dbapBformat *x, t_symbol *msg, long argc, t_atom 
 			x->sourceWeight[source][i] = weight;
 		}
 		
-		dbapBformatCalculate(x, source);
+		dbap_bformatCalculate(x, source);
 	}
 	else
 		object_error((t_object*)x, "sourceWeight : needs arguments");
 }
 
-void dbapBformatSourceMute(t_dbapBformat *x, void *msg, long argc, t_atom *argv)
+void dbap_bformatSourceMute(t_dbap_bformat *x, void *msg, long argc, t_atom *argv)
 {
 	long n;
 	
@@ -358,13 +358,13 @@ void dbapBformatSourceMute(t_dbapBformat *x, void *msg, long argc, t_atom *argv)
 		}
 		argv++;	
 		x->sourceNotMuted[n] = (atom_getfloat(argv)==0.0);
-		dbapBformatCalculate(x, n);
+		dbap_bformatCalculate(x, n);
 	}
 	else
 		error("Invalid argument(s) for source_gain");
 }
 
-void dbapBformatInfo(t_dbapBformat *x)
+void dbap_bformatInfo(t_dbap_bformat *x)
 {
 	t_atom		a[4];
 	long i;
@@ -403,7 +403,7 @@ void dbapBformatInfo(t_dbapBformat *x)
 
 
 // Method for Assistance Messages
-void dbapBformatAssist(t_dbapBformat *x, void *b, long msg, long arg, char *dst)	// Display assistance messages
+void dbap_bformatAssist(t_dbap_bformat *x, void *b, long msg, long arg, char *dst)	// Display assistance messages
 {
 	if (msg==1)
 	{ 
@@ -436,7 +436,7 @@ void dbapBformatAssist(t_dbapBformat *x, void *b, long msg, long arg, char *dst)
 
 
 // ATTRIBUTE: number of sources
-t_max_err dbapBformatAttrSetNumberOfSources(t_dbapBformat *x, void *attr, long argc, t_atom *argv)
+t_max_err dbap_bformatAttrSetNumberOfSources(t_dbap_bformat *x, void *attr, long argc, t_atom *argv)
 {
 	long n;
 	
@@ -453,7 +453,7 @@ t_max_err dbapBformatAttrSetNumberOfSources(t_dbapBformat *x, void *attr, long a
 }
 
 // ATTRIBUTE: number of destinations
-t_max_err dbapBformatAttrSetNumberOfDestinations(t_dbapBformat *x, void *attr, long argc, t_atom *argv)
+t_max_err dbap_bformatAttrSetNumberOfDestinations(t_dbap_bformat *x, void *attr, long argc, t_atom *argv)
 {
 	long n;
 	
@@ -465,14 +465,14 @@ t_max_err dbapBformatAttrSetNumberOfDestinations(t_dbapBformat *x, void *attr, l
 			n = MAX_NUM_DESTINATIONS;		
 		x->attrNumberOfDestinations = n;
 		// The set of destination points has been changed - recalculate blur radius.
-		dbapBformatCalculateVariance(x);
+		dbap_bformatCalculateVariance(x);
 	}	
 	return MAX_ERR_NONE;
 }
 
 
 // ATTRIBUTE: rolloff
-t_max_err dbapBformatAttrSetRollOff(t_dbapBformat *x, void *attr, long argc, t_atom *argv)
+t_max_err dbap_bformatAttrSetRollOff(t_dbap_bformat *x, void *attr, long argc, t_atom *argv)
 {
 	float f;
 	long i;
@@ -484,16 +484,16 @@ t_max_err dbapBformatAttrSetRollOff(t_dbapBformat *x, void *attr, long argc, t_a
 			return MAX_ERR_NONE;;
 		}	
 		x->attrRollOff = f;
-		dbapBformatCalculateA(x);
+		dbap_bformatCalculateA(x);
 		// Update all matrix values
 		for (i=0; i<x->attrNumberOfSources; i++)
-			dbapBformatCalculate(x, i);
+			dbap_bformatCalculate(x, i);
 	}
 	return MAX_ERR_NONE;
 }
 
 // ATTRIBUTE: vicinity
-t_max_err dbapBformatAttrSetVicinity(t_dbapBformat *x, void *attr, long argc, t_atom *argv)
+t_max_err dbap_bformatAttrSetVicinity(t_dbap_bformat *x, void *attr, long argc, t_atom *argv)
 {
 	float f;
 	long i;
@@ -507,7 +507,7 @@ t_max_err dbapBformatAttrSetVicinity(t_dbapBformat *x, void *attr, long argc, t_
 		x->attrVicinity = f;
 		// Update all matrix values
 		for (i=0; i<x->attrNumberOfSources; i++)
-			dbapBformatCalculate(x, i);
+			dbap_bformatCalculate(x, i);
 	}
 	return MAX_ERR_NONE;
 }
@@ -519,7 +519,7 @@ t_max_err dbapBformatAttrSetVicinity(t_dbapBformat *x, void *attr, long argc, t_
 #pragma mark calculations
 
 
-void dbapBformatCalculate(t_dbapBformat *x, long n)
+void dbap_bformatCalculate(t_dbap_bformat *x, long n)
 {
 	float scalingCoefficient;			// Scaling coefficient
 	float scalingCoefficientSquareInverse;	// Inverse square of the scaling coefficient
@@ -644,13 +644,13 @@ void dbapBformatCalculate(t_dbapBformat *x, long n)
 }
 
 
-void dbapBformatCalculateA(t_dbapBformat *x)
+void dbap_bformatCalculateA(t_dbap_bformat *x)
 {
 	x->a = log(pow(10., (x->attrRollOff / 20.)))/log(2.);
 }
 
 
-void dbapBformatCalculateMeanDestinationPosition(t_dbapBformat *x)
+void dbap_bformatCalculateMeanDestinationPosition(t_dbap_bformat *x)
 {
 	long i;
 	float a,b,c;
@@ -669,14 +669,14 @@ void dbapBformatCalculateMeanDestinationPosition(t_dbapBformat *x)
 }
 
 
-void dbapBformatCalculateVariance(t_dbapBformat *x)
+void dbap_bformatCalculateVariance(t_dbap_bformat *x)
 {
 	long i;
 	float dx, dy, dz;
 	float d2=0;
 	
 
-	dbapBformatCalculateMeanDestinationPosition(x);
+	dbap_bformatCalculateMeanDestinationPosition(x);
 
 	for (i=0; i<x->attrNumberOfDestinations; i++) {
 		dx = x->destinationPosition[i].x - x->meanDestinationPosition.x;
@@ -689,5 +689,5 @@ void dbapBformatCalculateVariance(t_dbapBformat *x)
 	
 	// Update all matrix values
 	for (i=0; i<x->attrNumberOfSources; i++)
-			dbapBformatCalculate(x, i);
+			dbap_bformatCalculate(x, i);
 }
