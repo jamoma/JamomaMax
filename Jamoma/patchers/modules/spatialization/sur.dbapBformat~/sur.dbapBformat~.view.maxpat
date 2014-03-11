@@ -694,7 +694,7 @@
             124.0,
             19.0
           ],
-          "text": "jalg.sur.dbapBformat~"
+          "text": "jalg.sur.dbap_bformat~"
         }
       },
       {
@@ -1048,8 +1048,8 @@
     ],
     "dependency_cache": [
       {
-        "name": "jalg.sur.dbapBformat~.maxpat",
-        "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/spatialization/sur.dbapBformat~",
+        "name": "jalg.sur.dbap_bformat~.maxpat",
+        "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/spatialization/sur.dbap_bformat~",
         "patcherrelativepath": "",
         "type": "JSON",
         "implicit": 1
@@ -1106,7 +1106,7 @@
         "type": "iLaX"
       },
       {
-        "name": "j.dbapBformat.mxo",
+        "name": "j.dbap_bformat.mxo",
         "type": "iLaX"
       },
       {

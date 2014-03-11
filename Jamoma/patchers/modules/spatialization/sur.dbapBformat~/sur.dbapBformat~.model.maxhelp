@@ -795,7 +795,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 305.0, 25.0, 167.0, 19.0 ],
-									"text" : "j.initialized /dbapBformat~"
+									"text" : "j.initialized /dbap_bformat~"
 								}
 
 							}
@@ -1814,7 +1814,7 @@
 				"box" : 				{
 					"id" : "obj-47",
 					"maxclass" : "bpatcher",
-					"name" : "sur.dbapBformat~.module.maxpat",
+					"name" : "sur.dbap_bformat~.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 62.0, 290.0, 300.0, 70.0 ],

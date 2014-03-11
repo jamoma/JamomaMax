@@ -202,7 +202,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 530.0, 155.0, 104.0, 19.0 ],
-					"text" : "j.dbapBformat"
+					"text" : "j.dbap_bformat"
 				}
 
 			}
@@ -1153,7 +1153,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dbapBformat.mxo",
+				"name" : "j.dbap_bformat.mxo",
 				"type" : "iLaX"
 			}
 , 			{

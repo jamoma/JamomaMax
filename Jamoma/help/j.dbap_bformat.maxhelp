@@ -132,7 +132,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-14",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.dbapBformat" ],
+									"jsarguments" : [ "j.dbap_bformat" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1429,7 +1429,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 493.0, 394.0, 323.0, 20.0 ],
-									"text" : "j.dbapBformat @num_sources 1 @num_destinations 7"
+									"text" : "j.dbap_bformat @num_sources 1 @num_destinations 7"
 								}
 
 							}
@@ -3159,7 +3159,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dbapBformat.mxo",
+				"name" : "j.dbap_bformat.mxo",
 				"type" : "iLaX"
 			}
 , 			{
