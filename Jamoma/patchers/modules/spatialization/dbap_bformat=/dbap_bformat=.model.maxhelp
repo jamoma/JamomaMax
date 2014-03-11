@@ -1814,7 +1814,7 @@
 				"box" : 				{
 					"id" : "obj-47",
 					"maxclass" : "bpatcher",
-					"name" : "sur.dbap_bformat~.module.maxpat",
+					"name" : "bformat=.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 62.0, 290.0, 300.0, 70.0 ],
