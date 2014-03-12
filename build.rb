@@ -27,6 +27,19 @@ def cleanAndBuildExternal(glibdir, external)
     `xcodebuild build`
 end
 
+# Process arguments loooking for "notest"
+# This argument determines whether integration tests will run (default) or not
+# and is only used with the JamomaMax implementation
+
+runTests = true
+
+ARGV.each do |arg|
+	if ( arg == "notest" )
+		runTests = false
+	end
+end
+
+
 # move to Core/Shared directory to include jamomalib.rb
 Dir.chdir "#{glibdir}/../../Core/Shared"
 require "#{glibdir}/../../Core/Shared/jamomalib.rb"
@@ -121,4 +134,27 @@ else
     cleanAndBuildExternal glibdir, "j.send"
     cleanAndBuildExternal glibdir, "j.send~"
     
+    if (runTests)
+    	puts
+    	puts "Running integration tests in Max"
+    	puts
+      # Testing in 32-bit max seem to require custom install of 32-bit version of the sqlite3 gem, so we hold that of for now
+      #puts "Testing in 32bit Max"
+      #puts "==================================================="
+      #Dir.chdir "/Applications/Max 6.1/packages/testpackage/ruby"
+      #puts `arch -arch i386 ruby test.rb "/Applications/Max 6.1"`
+      #puts
+      #puts "=================DONE===================="
+      #puts
+      puts "Testing in 64bit Max"
+      puts "==================================================="
+      Dir.chdir "/Applications/Max 6.1/packages/testpackage/ruby"
+      puts `arch -arch x86_64 ruby test.rb "/Applications/Max 6.1"`
+      puts
+      puts "=================DONE===================="
+      puts
+    else
+    	puts "Not running integration tests"
+    end
+
 end
