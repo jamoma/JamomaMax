@@ -96,9 +96,9 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 			}
 		}
 		
-		TTObjectBaseInstantiate(wrappedMaxClass->ttblueClassName, &x->wrappedObject, x->maxNumChannels);		
-		TTObjectBaseInstantiate(TT("audiosignal"), &x->audioIn, x->numInputs);
-		TTObjectBaseInstantiate(TT("audiosignal"), &x->audioOut,x->numOutputs);
+		x->wrappedObject = new TTAudioObject(wrappedMaxClass->ttblueClassName, x->maxNumChannels);
+		x->audioIn = new TTAudio(x->numInputs);
+		x->audioOut = new TTAudio(x->numOutputs);
 		attr_args_process(x,argc,argv);				// handle attribute args			
     	object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x,NULL));	// dumpout
 		
@@ -119,12 +119,12 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
             
             x->controlOutlet = outlet_new((t_pxobject*)x, NULL);
             
-            err = TTObjectBaseInstantiate(TT("callback"), &x->controlCallback, none);
-            x->controlCallback->setAttributeValue(TT("function"), TTPtr(&wrappedClass_receiveNotificationForOutlet));
-            x->controlCallback->setAttributeValue(TT("baton"), TTPtr(x));	
+            x->controlCallback = new TTObject("callback");
+            x->controlCallback->set("function", TTPtr(&wrappedClass_receiveNotificationForOutlet));
+            x->controlCallback->set("baton", TTPtr(x));	
  
         	// dynamically add a message to the callback object so that it can handle the 'objectFreeing' notification
-            x->controlCallback->registerMessage(notificationName, (TTMethod)&TTCallback::notify, kTTMessagePassValue);
+            x->controlCallback->instance()->registerMessage(notificationName, (TTMethod)&TTCallback::notify, kTTMessagePassValue);
             
             // tell the source that is passed in that we want to watch it
             x->wrappedObject->registerObserverForNotifications(*x->controlCallback);            
@@ -144,9 +144,9 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 void wrappedClass_free(WrappedInstancePtr x)
 {
 	dsp_free((t_pxobject *)x);
-	TTObjectBaseRelease(&x->wrappedObject);
-	TTObjectBaseRelease(&x->audioIn);
-	TTObjectBaseRelease(&x->audioOut);
+	delete x->wrappedObject;
+	delete x->audioIn;
+	delete x->audioOut;
 	delete[] x->controlSignalNames;
 }
 
@@ -175,7 +175,7 @@ t_max_err wrappedClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, Atom
 
 	TTSymbol	ttAttrName(rawpointer);
 	
-	x->wrappedObject->getAttributeValue(ttAttrName, v);
+	x->wrappedObject->get(ttAttrName, v);
 
 	*argc = v.size();
 	if (!(*argv)) // otherwise use memory passed in
@@ -241,7 +241,7 @@ t_max_err wrappedClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomP
 			else
 				object_error(ObjectPtr(x), "bad type for attribute setter");
 		}
-		x->wrappedObject->setAttributeValue(ttAttrName, v);
+		x->wrappedObject->set(ttAttrName, v);
 		return MAX_ERR_NONE;
 	}
 	return MAX_ERR_GENERIC;
@@ -275,7 +275,7 @@ void wrappedClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv
 				object_error(ObjectPtr(x), "bad type for message arg");
 		}
 	}
-	x->wrappedObject->sendMessage(ttName, v_in, v_out);
+	x->wrappedObject->send(ttName, v_in, v_out);
 		
 	// process the returned value for the dumpout outlet
 	{
@@ -342,11 +342,11 @@ void wrappedClass_perform64(WrappedInstancePtr self, ObjectPtr dsp64, double **i
 		int signal_index = self->numInputs - self->numControlSignals + i;
 		
 		if (self->signals_connected[signal_index])
-			self->wrappedObject->setAttributeValue(self->controlSignalNames[i], *ins[signal_index]);
+			self->wrappedObject->set(self->controlSignalNames[i], *ins[signal_index]);
 	}
 	
-	self->audioIn->setNumChannelsWithInt(self->numInputs-self->numControlSignals);
-	self->audioOut->setNumChannelsWithInt(self->numOutputs);
+	self->audioIn->setNumChannels(self->numInputs-self->numControlSignals);
+	self->audioOut->setNumChannels(self->numOutputs);
 	self->audioOut->allocWithVectorSize(sampleframes);
 	
 	for (i=0; i < self->numInputs-self->numControlSignals; i++)
@@ -366,12 +366,12 @@ void wrappedClass_dsp64(WrappedInstancePtr self, ObjectPtr dsp64, short *count, 
 		self->signals_connected[i] = count[i];
 	
 	ttEnvironment->setAttributeValue(kTTSym_sampleRate, samplerate);
-	self->wrappedObject->setAttributeValue(TT("sampleRate"), samplerate);
+	self->wrappedObject->set(TT("sampleRate"), samplerate);
 	
 	self->vs = maxvectorsize;
 	
-	self->audioIn->setAttributeValue(TT("vectorSize"), self->vs);
-	self->audioOut->setAttributeValue(TT("vectorSize"), self->vs);
+	self->audioIn->setVectorSizeWithInt(self->vs);
+	self->audioOut->setVectorSizeWithInt(self->vs);
 	
 	object_method(dsp64, gensym("dsp_add64"), self, wrappedClass_perform64, 0, NULL);
 }
@@ -384,9 +384,8 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 
 TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, WrappedClassPtr* c, WrappedClassOptionsPtr options)
 {
-	TTObjectBase*		o = NULL;
+	TTObject		o(ttblueClassName, 1);	// Create a temporary instance of the class so that we can query it.
 	TTValue			v;
-	TTUInt16		numChannels = 1;
 	WrappedClass*	wrappedMaxClass = NULL;
 	TTSymbol		name;
 	TTCString		nameCString = NULL;
@@ -413,16 +412,13 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 	wrappedMaxClass->validityCheckArgument = NULL;
 	wrappedMaxClass->options = options;
 	wrappedMaxClass->maxNamesToTTNames = hashtab_new(0);
-	
-	// Create a temporary instance of the class so that we can query it.
-	TTObjectBaseInstantiate(ttblueClassName, &o, numChannels);
-	
-	if (!o) {
+		
+	if (!o.valid()) {
 		error("Jamoma ClassWrapper failed to load %s", ttblueClassName.c_str());
 		return kTTErrAllocFailed;
 	}
 
-	o->getMessageNames(v);
+	o.messages(v);
 	for (TTUInt16 i=0; i<v.size(); i++) {
 		v.get(i, name);
 		//nameSize = name->getString().length();	// to -- this crash on Windows...
@@ -438,7 +434,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 		nameCString = NULL;
 	}
 	
-	o->getAttributeNames(v);
+	o.attributes(v);
 	for (TTUInt16 i=0; i<v.size(); i++) {
 		TTAttributePtr	attr = NULL;
 		SymbolPtr		maxType = _sym_long;
@@ -457,7 +453,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 				continue;					// generators don't have inputs, and so don't really provide a bypass
 		}
 		
-		o->findAttribute(name, &attr);
+		o.instance()->findAttribute(name, &attr);
 		
 		if (attr->type == kTypeFloat32)
 			maxType = _sym_float32;
@@ -478,9 +474,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 		delete nameCString;
 		nameCString = NULL;
 	}
-	
-	TTObjectBaseRelease(&o);
-		
+			
  	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_dsp64, 		"dsp64",		A_CANT, 0L);
     class_addmethod(wrappedMaxClass->maxClass, (method)object_obex_dumpout, 	"dumpout",		A_CANT, 0); 
 	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_assist, 	"assist",		A_CANT, 0L);
