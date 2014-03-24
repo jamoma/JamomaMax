@@ -132,10 +132,10 @@ TTErr JAMOMA_EXPORT jamoma_node_info_create(ObjectPtr x, TTObjectBasePtr *return
 TTErr JAMOMA_EXPORT jamoma_data_create(ObjectPtr x, TTObjectBasePtr *returnedData, TTSymbol service);
 
 
-/**	Send a Max #TTData command.
- @param aData
- @param msg
- @param argc					The number of arguments of the message.
+/**	Set the #TTData value attribute using the #TTData::Command method.
+ @param aData                   #TTData instance (the Modular class which handles parameter, message or return)
+ @param msg                     A symbol describing the Max type (_sym_bang, _sym_float, ...)
+ @param argc					The number of arguments of the command
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
@@ -353,23 +353,27 @@ void JAMOMA_EXPORT jamoma_callback_return_ramped_value(void *o, TTUInt32 n, TTFl
  */
 void JAMOMA_EXPORT jamoma_callback_return_address(const TTValue& baton, const TTValue& v);
 
-/** Return the value to a j. external as _sym_nothing, argc, argv.
- @param baton
- @param v
+
+/** Return the value to a j.* external as msg, argc, argv.
+ @param baton       The Max wrapper object
+ @param v           The value(s) being passed back. This is passed back as an array of three argumens: msg, argc and argv
  */
 void JAMOMA_EXPORT jamoma_callback_return_value(const TTValue& baton, const TTValue& v);
 
-/** Return the value to a j. external as msg, argc, argv.
- @param baton
- @param v
+
+/** Return the value to a j.* external as msg, argc, argv. The msg part carries information about what type of atom(s) we are getting, 
+ @param baton       The Max wrapper object
+ @param v           The value(s) being passed back. This is passed back as an array of three argumens: msg, argc and argv
  */
 void JAMOMA_EXPORT jamoma_callback_return_value_typed(const TTValue& baton, const TTValue& v);
+
 
 /** Return any signal.
  @param baton
  @param v
  */
 void JAMOMA_EXPORT jamoma_callback_return_signal(const TTValue& baton, const TTValue& v);
+
 
 /** Return audio signal.
  @param baton
@@ -450,6 +454,11 @@ void JAMOMA_EXPORT jamoma_patcher_share_node(ObjectPtr obj, TTNodePtr *patcherNo
  */
 TTErr JAMOMA_EXPORT jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass,  TTSymbol& returnedName);
 
+/** Get j.model or j.view of a patcher 
+ @param patcher
+ @param returnedModelOrView
+ */
+void JAMOMA_EXPORT jamoma_patcher_get_model_or_view(ObjectPtr patcher, ObjectPtr *returnedModelOrView);
 
 /** Get the "aClass.model" external in the patcher.
  @param patcher

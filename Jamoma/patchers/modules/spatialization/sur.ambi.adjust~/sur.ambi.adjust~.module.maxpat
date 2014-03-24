@@ -162,7 +162,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "ambiAdjust≈.gain.helper.maxpat",
+				"name" : "ambiAdjust=.gain.helper.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.ambi.adjust~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -185,11 +185,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

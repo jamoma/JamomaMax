@@ -35,6 +35,10 @@
 #include "TTInputAudio.h"
 #include "TTOutputAudio.h"
 
+#ifdef AUDIO_GRAPH_EXTERNAL
+#include "TTAudioGraphAPI.h"		// Definitions for Jamoma AudioGraph
+#endif
+
 
 #define selectedObject getSelectedObject(x)
 #define selectedAddress x->cursor
@@ -51,7 +55,7 @@ typedef void (*Spec_WrapTTModularClass)(WrappedClassPtr c);
 
 /** Wrapper for the new method, called when a new obejct is being instantiated.
  @param self		This object
- @param argc		Atom array count (length) for the array of arguments
+ @param argc		t_atomarray count (length) for the array of arguments
  @param argv		Pointer to the atom array of arguments
  @ingroup typedefs
 */
@@ -70,7 +74,7 @@ typedef void (*Spec_WrappedClass_free)(TTPtr self);
  @details This wrapped method catches all messages to the object that have not been declared on and associated with their own specific methods.
  @param self		This object
  @param msg			Message passed to this object
- @param argc		Atom array count (length) for the array of arguments
+ @param argc		t_atomarray count (length) for the array of arguments
  @param argv		Pointer to the atom array of arguments
 */
 typedef void (*Spec_WrappedClass_anything)(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
@@ -205,7 +209,7 @@ TTErr		wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCl
 
 /** Wrapped methods ('self' has to be TTPtr because different wrappers (such as the ui wrapper) have different implementations)
  @param name		Message passed to this object
- @param argc		Atom array count (length)
+ @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
 ObjectPtr	wrappedModularClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv);
@@ -234,7 +238,7 @@ void		wrappedModularClass_shareContextNode(TTPtr self, TTNodePtr *contextNode);
 /**
  @param self		This object
  @param s			Message passed to this object
- @param argc		Atom array count (length)
+ @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
 t_max_err	wrappedModularClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, AtomPtr* argv);
@@ -243,7 +247,7 @@ t_max_err	wrappedModularClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* arg
 /**
  @param self		This object
  @param s			Message passed to this object
- @param argc		Atom array count (length)
+ @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
 t_max_err	wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomPtr argv);
@@ -261,7 +265,7 @@ void		wrappedModularClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, Atom
 /**
  @param self		This object
  @param s			Message passed to this object
- @param argc		Atom array count (length)
+ @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
 TTErr		wrappedModularClass_sendMessage(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
@@ -270,7 +274,7 @@ TTErr		wrappedModularClass_sendMessage(TTPtr self, SymbolPtr s, AtomCount argc, 
 /**
  @param self		This object
  @param s			Message passed to this object
- @param argc		Atom array count (length)
+ @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
 TTErr		wrappedModularClass_setAttribute(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
@@ -335,7 +339,7 @@ int			convertModifiersFromMaxToTTGraphics(int maxModifiers);
 /**
  @param attr		The name of the attribute to get
  @param s			Message passed to this object
- @param argc		Atom array count (length)
+ @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
 t_max_err	wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av);
@@ -344,7 +348,7 @@ t_max_err	wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, AtomCount *ac, A
 /**
  @param self		This object
  @param attr		The name of the attribute to set
- @param argc		Atom array count (length)
+ @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
 t_max_err	wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av);
@@ -353,7 +357,7 @@ t_max_err	wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, AtomCount ac, At
 /**
  @param self		This object
  @param msg			Message passed to this object
- @param argc		Atom array count (length)
+ @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
 void		wrappedModularClass_ArraySelect(TTPtr self, SymbolPtr msg, AtomCount ac, AtomPtr av);

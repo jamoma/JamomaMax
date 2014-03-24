@@ -96,9 +96,9 @@ typedef WrappedClassOptions* WrappedClassOptionsPtr;			///< A pointer to Wrapped
 typedef struct _wrappedInstance {
     t_pxobject 		obj;						///< Max audio object header
 	WrappedClassPtr	wrappedClassDefinition;		///< A pointer to the class definition
-	TTAudioObjectBase*	wrappedObject;				///< The instance of the TTBlue object we are wrapping
-	TTAudioSignal*	audioIn;					///< Audio input signal
-	TTAudioSignal*	audioOut;					///< Audio output signal
+	TTAudioObject*	wrappedObject;				///< The instance of the TTBlue object we are wrapping
+	TTAudio*		audioIn;					///< Audio input signal
+	TTAudio*		audioOut;					///< Audio output signal
 	TTUInt16		vs;
 	TTUInt16		maxNumChannels;				///< The number of channels for which this object is initialized to operate upon
 	TTUInt16		numChannels;				///< The actual number of channels in use
@@ -108,7 +108,9 @@ typedef struct _wrappedInstance {
 	TTSymbol*		controlSignalNames;			///< An array of attribute names for the control signals.
     
     TTPtr           controlOutlet;              ///< for output from a notification
-    TTObjectBasePtr     controlCallback;            ///< for output from a notification
+    TTObject*		controlCallback;            ///< for output from a notification
+	
+	t_bool			signals_connected[256];		///< which inlets and outlets are actually connected to audio signals
 } WrappedInstance;
 
 typedef WrappedInstance* WrappedInstancePtr;	///< Pointer to a wrapped instance of our object.

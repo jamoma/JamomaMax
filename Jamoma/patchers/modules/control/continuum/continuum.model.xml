@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
 
-<jamoma version='0.4'
+<jamoma version='0.6'
 		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
 >
-  <preset number='1' name='default'>
-    <item name='gdif/body/on' type='boolean' priority='0'>0</item>
-    <item name='gdif/cooked/on' type='boolean' priority='0'>1</item>
-    <item name='gdif/device/on' type='boolean' priority='0'>0</item>
-    <item name='gdif/emotion/on' type='boolean' priority='0'>0</item>
-    <item name='gdif/environment/on' type='boolean' priority='0'>0</item>
-    <item name='gdif/performance/on' type='boolean' priority='0'>0</item>
-    <item name='gdif/raw/on' type='boolean' priority='0'>0</item>
-    <item name='midiIn' type='generic' priority='0'>continuum</item>
-    <item name='view/freeze' type='boolean' priority='0'>0</item>
+  <preset name='default'>
+    <command address="gdif/body/on">0</command>
+    <command address="gdif/cooked/on">1</command>
+    <command address="gdif/device/on">0</command>
+    <command address="gdif/emotion/on">0</command>
+    <command address="gdif/environment/on">0</command>
+    <command address="gdif/performance/on">0</command>
+    <command address="gdif/raw/on">0</command>
+    <command address="midiIn">continuum</command>
+    <command address="view/freeze">0</command>
   </preset>
 </jamoma>

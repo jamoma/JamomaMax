@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 56.0, 44.0, 1363.0, 729.0 ],
+		"rect" : [ 56.0, 44.0, 885.0, 435.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,6 +29,19 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-7",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 34.0, 135.0, 25.0, 25.0 ],
+					"presentation_rect" : [ 429.0, 90.0, 0.0, 0.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-19",
@@ -36,7 +49,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 1123.0, 300.0, 35.0, 20.0 ],
+					"patching_rect" : [ 725.0, 144.0, 35.0, 20.0 ],
 					"text" : "== 0"
 				}
 
@@ -50,7 +63,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1123.0, 336.0, 96.0, 20.0 ],
+					"patching_rect" : [ 725.0, 180.0, 96.0, 20.0 ],
 					"text" : "prepend bypass"
 				}
 
@@ -65,7 +78,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1123.0, 173.0, 124.0, 87.0 ],
+					"patching_rect" : [ 725.0, 17.0, 124.0, 87.0 ],
 					"text" : "j.parameter active @type boolean @description \"When not active, the saturation effect is bypassed.\"",
 					"varname" : "mode[1]"
 				}
@@ -80,7 +93,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 794.0, 336.0, 99.0, 20.0 ],
+					"patching_rect" : [ 396.0, 180.0, 99.0, 20.0 ],
 					"text" : "prepend preamp"
 				}
 
@@ -91,10 +104,10 @@
 					"fontsize" : 12.0,
 					"id" : "obj-3",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 432.0, 398.0, 96.0, 20.0 ],
+					"patching_rect" : [ 34.0, 242.0, 173.0, 20.0 ],
 					"text" : "j.overdrive~"
 				}
 
@@ -109,7 +122,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 794.0, 173.0, 154.0, 127.0 ],
+					"patching_rect" : [ 396.0, 17.0, 154.0, 127.0 ],
 					"text" : "j.parameter preamp @ramp/drive Max @repetitions/filter 1 @type decimal @range/bounds -12 48 @range/clipmode none @description \"Preamp (dB).\" @dataspace gain @dataspace/unit dB",
 					"varname" : "preamp"
 				}
@@ -124,7 +137,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 88.0, 167.0, 309.0, 20.0 ],
+					"patching_rect" : [ 368.0, 327.0, 309.0, 20.0 ],
 					"text" : "j.model @description \"Saturation (distortion) effect.\""
 				}
 
@@ -138,7 +151,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 509.0, 475.0, 74.0, 20.0 ],
+					"patching_rect" : [ 111.0, 319.0, 74.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -152,7 +165,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 432.0, 475.0, 74.0, 20.0 ],
+					"patching_rect" : [ 34.0, 319.0, 74.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -166,7 +179,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 509.0, 138.0, 67.0, 20.0 ],
+					"patching_rect" : [ 111.0, 180.0, 67.0, 20.0 ],
 					"text" : "j.in~ 2"
 				}
 
@@ -180,7 +193,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 432.0, 138.0, 67.0, 20.0 ],
+					"patching_rect" : [ 34.0, 180.0, 67.0, 20.0 ],
 					"text" : "j.in~ 1"
 				}
 
@@ -195,7 +208,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 968.0, 173.0, 137.0, 74.0 ],
+					"patching_rect" : [ 570.0, 17.0, 137.0, 74.0 ],
 					"text" : "j.parameter mode @type generic @description \"Mode: Table used for waveshaping.\"",
 					"varname" : "mode"
 				}
@@ -211,7 +224,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 620.0, 173.0, 148.0, 114.0 ],
+					"patching_rect" : [ 222.0, 17.0, 148.0, 114.0 ],
 					"text" : "j.parameter depth @ramp/drive Max @repetitions/filter 1 @type decimal @range/bounds 0 99 @range/clipmode both @description \"Saturation: Depth.\"",
 					"varname" : "depth"
 				}
@@ -226,7 +239,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 620.0, 300.0, 106.0, 20.0 ],
+					"patching_rect" : [ 222.0, 144.0, 106.0, 20.0 ],
 					"text" : "scale 0. 99. 1. 10."
 				}
 
@@ -240,7 +253,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 620.0, 336.0, 85.0, 20.0 ],
+					"patching_rect" : [ 222.0, 180.0, 85.0, 20.0 ],
 					"text" : "prepend drive"
 				}
 
@@ -252,19 +265,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 88.0, 315.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-7",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 432.0, 93.0, 25.0, 25.0 ]
+					"patching_rect" : [ 368.0, 373.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -276,19 +277,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 509.0, 93.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-15",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 88.0, 93.0, 25.0, 25.0 ]
+					"patching_rect" : [ 111.0, 135.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -299,7 +288,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 432.0, 532.0, 25.0, 25.0 ]
+					"patching_rect" : [ 34.0, 376.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -310,7 +299,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 509.0, 532.0, 25.0, 25.0 ]
+					"patching_rect" : [ 111.0, 376.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -323,7 +312,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 968.0, 336.0, 89.0, 20.0 ],
+					"patching_rect" : [ 570.0, 180.0, 89.0, 20.0 ],
 					"text" : "prepend mode"
 				}
 
@@ -340,7 +329,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 968.0, 311.0, 95.0, 20.0 ],
+					"patching_rect" : [ 570.0, 155.0, 95.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 605.0, 371.0, 89.0, 20.0 ],
 					"varname" : "Mode[1]"
@@ -356,7 +345,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 968.0, 286.0, 106.0, 20.0 ],
+					"patching_rect" : [ 570.0, 130.0, 106.0, 20.0 ],
 					"text" : "prepend symbol"
 				}
 
@@ -413,15 +402,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-15", 0 ]
 				}
 
 			}

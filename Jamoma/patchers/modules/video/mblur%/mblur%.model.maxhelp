@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.mblur%", "@description", "Motion blur effect" ],
+					"args" : [ "@name", "mblur%", "@description", "Motion blur effect" ],
 					"bgmode" : 1,
 					"id" : "obj-13",
 					"maxclass" : "bpatcher",
@@ -98,8 +98,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 701.0, 534.0, 74.0, 17.0 ],
-					"text" : "jmod.wake%"
+					"patching_rect" : [ 701.0, 534.0, 86.0, 17.0 ],
+					"text" : "wake%.module"
 				}
 
 			}
@@ -141,8 +141,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 628.0, 534.0, 68.0, 17.0 ],
-					"text" : "jmod.blur%"
+					"patching_rect" : [ 628.0, 534.0, 80.0, 17.0 ],
+					"text" : "blur%.module"
 				}
 
 			}
@@ -166,9 +166,10 @@
 					"id" : "obj-6",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.input%.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"name" : "input%.module.maxpat",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 309.0, 84.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"varname" : "/input%1"
@@ -184,8 +185,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 65.0, 378.0, 111.0, 19.0 ],
-					"text" : "s jmod.mblur%.cmd"
+					"patching_rect" : [ 65.0, 378.0, 123.0, 19.0 ],
+					"text" : "s mblur%.module.cmd"
 				}
 
 			}
@@ -198,8 +199,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 309.0, 156.0, 110.0, 19.0 ],
-					"text" : "r jmod.mblur%.cmd"
+					"patching_rect" : [ 331.5, 160.0, 122.0, 19.0 ],
+					"text" : "r mblur%.module.cmd"
 				}
 
 			}
@@ -212,8 +213,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 237.0, 111.0, 19.0 ],
-					"text" : "s jmod.mblur%.cmd"
+					"patching_rect" : [ 17.0, 237.0, 123.0, 19.0 ],
+					"text" : "s mblur%.module.cmd"
 				}
 
 			}
@@ -258,7 +259,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 65.0, 344.0, 82.0, 17.0 ],
-					"text" : "/slideDown $1"
+					"text" : "slideDown $1"
 				}
 
 			}
@@ -290,7 +291,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 65.0, 324.0, 67.0, 17.0 ],
-					"text" : "/slideUp $1"
+					"text" : "slideUp $1"
 				}
 
 			}
@@ -304,7 +305,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 442.0, 256.0, 74.0, 19.0 ],
+					"patching_rect" : [ 408.0, 262.0, 74.0, 19.0 ],
 					"text" : "loadmess set"
 				}
 
@@ -318,7 +319,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 309.0, 259.0, 127.0, 17.0 ]
+					"patching_rect" : [ 482.0, 262.0, 127.0, 17.0 ],
+					"text" : "slide/down 2.65"
 				}
 
 			}
@@ -338,10 +340,11 @@
 					"id" : "obj-20",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.mblur%.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 309.0, 177.0, 300.0, 70.0 ],
+					"name" : "mblur%.module.maxpat",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 309.0, 183.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"varname" : "/mblur%"
 				}
@@ -440,8 +443,26 @@
 					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
-					"midpoints" : [ 451.5, 256.0, 318.5, 256.0 ],
+					"midpoints" : [ 417.5, 262.0, 491.5, 262.0 ],
 					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-20", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-20", 0 ]
 				}
 
 			}
@@ -463,41 +484,162 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "mblur%.module.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/mblur%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mblur%.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/mblur%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mblur%.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/mblur%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.pwindow.mouse.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/pwindow.mouse",
+				"patcherrelativepath" : "../../../components/pwindow.mouse",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.videoParameters.helper.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/help",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/help",
 				"patcherrelativepath" : "../../../../help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "input%.module.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input%.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input%.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input%.ui.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : "../input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../../../components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.textslider.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.receive.mxo",

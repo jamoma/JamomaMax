@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 5
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 34.0, 48.0, 1401.0, 789.0 ],
@@ -30,6 +31,20 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-19",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 364.0, 54.0, 33.0, 20.0 ],
+					"text" : "qlim"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -43,6 +58,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-7",
+					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -62,8 +78,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 919.0, 277.0, 55.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"ftm_scope" : 1,
-						"ftm_objref_conv" : 0
+						"ftm_objref_conv" : 0,
+						"ftm_scope" : 1
 					}
 ,
 					"text" : "ftm.print"
@@ -83,8 +99,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 66.0, 345.0, 463.0, 290.0 ],
@@ -161,8 +178,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 70.0, 150.0, 228.423538, 16.0 ],
-									"presentation_rect" : [ 70.0, 150.0, 228.423538, 16.0 ],
+									"patching_rect" : [ 70.0, 150.0, 228.329102, 15.171875 ],
+									"presentation_rect" : [ 70.0, 150.0, 228.329102, 15.171875 ],
 									"text" : [ "_(((typeof $1) == (typeof $*2))  &&  ($1 equals $*2))" ]
 								}
 
@@ -266,26 +283,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "ftm.mess.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 246.75, 669.0, 62.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Geneva",
-						"fontface" : 0,
-						"fontsize" : 10.0,
 						"default_fontsize" : 10.0,
 						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
 						"fontname" : "Geneva",
-						"tags" : "",
-						"default_fontface" : 0,
-						"globalpatchername" : ""
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p test-ftm"
@@ -305,8 +317,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 66.0, 345.0, 463.0, 290.0 ],
@@ -383,8 +396,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 70.0, 150.0, 315.179138, 16.0 ],
-									"presentation_rect" : [ 70.0, 150.0, 315.179138, 16.0 ],
+									"patching_rect" : [ 70.0, 150.0, 315.047852, 15.171875 ],
+									"presentation_rect" : [ 70.0, 150.0, 315.047852, 15.171875 ],
 									"text" : [ "_(((typeof $1) == (typeof $*2))  &&  ($1 equals $*2) && ($2 equals $*2))" ]
 								}
 
@@ -488,26 +501,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "ftm.mess.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 915.5, 669.0, 62.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Geneva",
-						"fontface" : 0,
-						"fontsize" : 10.0,
 						"default_fontsize" : 10.0,
 						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
 						"fontname" : "Geneva",
-						"tags" : "",
-						"default_fontface" : 0,
-						"globalpatchername" : ""
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p test-ftm"
@@ -527,8 +535,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 66.0, 345.0, 463.0, 290.0 ],
@@ -605,8 +614,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 70.0, 150.0, 228.423538, 16.0 ],
-									"presentation_rect" : [ 70.0, 150.0, 228.423538, 16.0 ],
+									"patching_rect" : [ 70.0, 150.0, 228.329102, 15.171875 ],
+									"presentation_rect" : [ 70.0, 150.0, 228.329102, 15.171875 ],
 									"text" : [ "_(((typeof $1) == (typeof $*2))  &&  ($1 equals $*2))" ]
 								}
 
@@ -710,26 +719,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "ftm.mess.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 740.5, 669.0, 62.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Geneva",
-						"fontface" : 0,
-						"fontsize" : 10.0,
 						"default_fontsize" : 10.0,
 						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
 						"fontname" : "Geneva",
-						"tags" : "",
-						"default_fontface" : 0,
-						"globalpatchername" : ""
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p test-ftm"
@@ -749,8 +753,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 895.0, 521.0, 463.0, 290.0 ],
@@ -827,8 +832,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 70.0, 150.0, 90.537849, 16.0 ],
-									"presentation_rect" : [ 70.0, 150.0, 90.537849, 16.0 ],
+									"patching_rect" : [ 70.0, 150.0, 90.501953, 15.171875 ],
+									"presentation_rect" : [ 70.0, 150.0, 90.501953, 15.171875 ],
 									"text" : [ "_$1  ($2 equals $*2)" ]
 								}
 
@@ -932,26 +937,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "ftm.mess.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 1248.253418, 669.0, 62.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Geneva",
-						"fontface" : 0,
-						"fontsize" : 10.0,
 						"default_fontsize" : 10.0,
 						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
 						"fontname" : "Geneva",
-						"tags" : "",
-						"default_fontface" : 0,
-						"globalpatchername" : ""
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p test-ftm"
@@ -971,8 +971,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 66.0, 345.0, 463.0, 290.0 ],
@@ -1049,8 +1050,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 70.0, 150.0, 90.537849, 16.0 ],
-									"presentation_rect" : [ 70.0, 150.0, 90.537849, 16.0 ],
+									"patching_rect" : [ 70.0, 150.0, 90.501953, 15.171875 ],
+									"presentation_rect" : [ 70.0, 150.0, 90.501953, 15.171875 ],
 									"text" : [ "_$1  ($2 equals $*2)" ]
 								}
 
@@ -1154,26 +1155,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "ftm.mess.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 406.0, 669.0, 62.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Geneva",
-						"fontface" : 0,
-						"fontsize" : 10.0,
 						"default_fontsize" : 10.0,
 						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
 						"fontname" : "Geneva",
-						"tags" : "",
-						"default_fontface" : 0,
-						"globalpatchername" : ""
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p test-ftm"
@@ -1215,8 +1211,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 1009.753357, 87.0, 116.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"ftm_scope" : 0,
-						"ftm_objref_conv" : 0
+						"ftm_objref_conv" : 0,
+						"ftm_scope" : 0
 					}
 ,
 					"text" : "ftm.print"
@@ -1289,8 +1285,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 243.0, 259.0, 640.0, 480.0 ],
@@ -1327,8 +1324,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 100.0, 93.8349, 18.0 ],
-									"presentation_rect" : [ 50.0, 100.0, 93.8349, 18.0 ],
+									"patching_rect" : [ 50.0, 100.0, 93.802734, 16.5 ],
+									"presentation_rect" : [ 50.0, 100.0, 93.802734, 16.5 ],
 									"text" : [ "_(new fmat 10 10)" ]
 								}
 
@@ -1340,7 +1337,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ]
 								}
 
@@ -1375,26 +1372,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "ftm.mess.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 364.0, 80.0, 126.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Geneva",
-						"fontface" : 0,
-						"fontsize" : 10.0,
 						"default_fontsize" : 10.0,
 						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
 						"fontname" : "Geneva",
-						"tags" : "",
-						"default_fontface" : 0,
-						"globalpatchername" : ""
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p generate-ftm-object"
@@ -1410,7 +1402,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 364.0, 57.0, 63.0, 20.0 ],
+					"patching_rect" : [ 364.0, 23.0, 63.0, 20.0 ],
 					"text" : "loadbang"
 				}
 
@@ -1432,17 +1424,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 364.0, 27.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-23",
@@ -1453,8 +1434,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 189.0, 83.0, 676.0, 347.0 ],
@@ -1513,8 +1495,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 0,
-											"revision" : 5
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 895.0, 521.0, 463.0, 290.0 ],
@@ -1591,8 +1574,8 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 70.0, 150.0, 90.537849, 16.0 ],
-													"presentation_rect" : [ 70.0, 150.0, 90.537849, 16.0 ],
+													"patching_rect" : [ 70.0, 150.0, 90.501953, 15.171875 ],
+													"presentation_rect" : [ 70.0, 150.0, 90.501953, 15.171875 ],
 													"text" : [ "_$1  ($2 equals $*2)" ]
 												}
 
@@ -1696,26 +1679,21 @@
 												}
 
 											}
- ],
-										"dependency_cache" : [ 											{
-												"name" : "ftm.mess.mxo",
-												"type" : "iLaX"
-											}
  ]
 									}
 ,
 									"patching_rect" : [ 275.0, 285.0, 52.0, 18.0 ],
 									"saved_object_attributes" : 									{
-										"digest" : "",
+										"default_fontface" : 0,
 										"default_fontname" : "Geneva",
-										"fontface" : 0,
-										"fontsize" : 10.0,
 										"default_fontsize" : 10.0,
 										"description" : "",
+										"digest" : "",
+										"fontface" : 0,
 										"fontname" : "Geneva",
-										"tags" : "",
-										"default_fontface" : 0,
-										"globalpatchername" : ""
+										"fontsize" : 10.0,
+										"globalpatchername" : "",
+										"tags" : ""
 									}
 ,
 									"text" : "p test-ftm"
@@ -1729,7 +1707,8 @@
 									"id" : "obj-15",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
-									"numoutlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 295.0, 315.0, 294.0, 19.0 ],
 									"text" : "j.test.assert.equal.old Wildcard/*/ /finger 1"
 								}
@@ -1742,7 +1721,8 @@
 									"id" : "obj-9",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
-									"numoutlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 221.0, 251.0, 329.0, 19.0 ],
 									"text" : "j.test.assert.equal.old Wildcard.n/ /param 0.1"
 								}
@@ -1755,7 +1735,8 @@
 									"id" : "obj-6",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
-									"numoutlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 111.0, 217.0, 302.0, 19.0 ],
 									"text" : "j.test.assert.equal.old Wildcard. 0.5"
 								}
@@ -1768,7 +1749,8 @@
 									"id" : "obj-7",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
-									"numoutlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 37.0, 183.0, 294.0, 19.0 ],
 									"text" : "j.test.assert.equal.old Wildcard/ 0.5"
 								}
@@ -1803,8 +1785,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 129.0, 111.0, 66.981445, 17.0 ],
-									"presentation_rect" : [ 129.0, 111.0, 66.981445, 17.0 ],
+									"patching_rect" : [ 129.0, 111.0, 66.981445, 16.148438 ],
+									"presentation_rect" : [ 129.0, 111.0, 66.981445, 16.148438 ],
 									"text" : [ "_/robot.1 0.5" ]
 								}
 
@@ -1824,8 +1806,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 336.0, 109.0, 109.383781, 17.0 ],
-									"presentation_rect" : [ 336.0, 109.0, 109.383781, 17.0 ],
+									"patching_rect" : [ 336.0, 109.0, 109.383781, 16.148438 ],
+									"presentation_rect" : [ 336.0, 109.0, 109.383781, 16.148438 ],
 									"text" : [ "_/foot/hand/finger $1" ]
 								}
 
@@ -1845,8 +1827,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 220.0, 110.0, 103.583008, 17.0 ],
-									"presentation_rect" : [ 220.0, 110.0, 103.583008, 17.0 ],
+									"patching_rect" : [ 220.0, 110.0, 103.583008, 16.148438 ],
+									"presentation_rect" : [ 220.0, 110.0, 103.583008, 16.148438 ],
 									"text" : [ "_/robot.2/param 0.1" ]
 								}
 
@@ -1866,8 +1848,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 37.0, 111.0, 75.765617, 17.0 ],
-									"presentation_rect" : [ 37.0, 111.0, 75.765617, 17.0 ],
+									"patching_rect" : [ 37.0, 111.0, 75.765617, 16.148438 ],
+									"presentation_rect" : [ 37.0, 111.0, 75.765617, 16.148438 ],
 									"text" : [ "_/fruit/barf 0.5" ]
 								}
 
@@ -2034,36 +2016,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "j.test.assert.equal.old.maxpat",
-								"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Test/components",
-								"type" : "JSON",
-								"implicit" : 1
-							}
-, 							{
-								"name" : "j.oscroute.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "ftm.mess.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 127.0, 352.0, 84.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"fontface" : 0,
-						"fontsize" : 10.0,
 						"default_fontsize" : 10.0,
 						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
 						"fontname" : "Arial",
-						"tags" : "",
-						"default_fontface" : 0,
-						"globalpatchername" : ""
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p wildcards"
@@ -2078,8 +2045,9 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1248.253418, 694.0, 201.0, 34.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1248.253418, 694.0, 201.0, 33.0 ],
 					"text" : "j.test.assert.equal.old TESTdumpoutlet /meat/chicken 1"
 				}
 
@@ -2092,8 +2060,9 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1085.945068, 694.0, 149.387543, 34.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1085.945068, 694.0, 149.387543, 33.0 ],
 					"text" : "j.test.assert.equal.old TEST/address /beans"
 				}
 
@@ -2106,8 +2075,9 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 915.5, 694.0, 150.0, 34.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 915.5, 694.0, 150.0, 33.0 ],
 					"text" : "j.test.assert.equal.old TESTlist 1"
 				}
 
@@ -2120,8 +2090,9 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 740.5, 694.0, 152.0, 34.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 740.5, 694.0, 152.0, 33.0 ],
 					"text" : "j.test.assert.equal.old TESTfloat 1"
 				}
 
@@ -2134,8 +2105,9 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 406.0, 694.0, 161.0, 34.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 406.0, 694.0, 161.0, 33.0 ],
 					"text" : "j.test.assert.equal.old TEST/adress+int /banana 1"
 				}
 
@@ -2148,8 +2120,9 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 576.0, 694.0, 150.0, 34.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 576.0, 694.0, 150.0, 33.0 ],
 					"text" : "j.test.assert.equal.old TESTbang bang"
 				}
 
@@ -2202,8 +2175,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 44.0, 74.0, 600.0, 426.0 ],
@@ -2258,22 +2232,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 298.0, 203.0, 48.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
-						"fontface" : 0,
-						"fontsize" : 10.0,
 						"default_fontsize" : 10.0,
 						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
 						"fontname" : "Verdana",
-						"tags" : "",
-						"default_fontface" : 0,
-						"globalpatchername" : ""
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p thru"
@@ -2441,8 +2414,7 @@
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 0,
 					"patching_rect" : [ 127.0, 623.0, 104.0, 20.0 ],
 					"text" : "j.test.finished"
 				}
@@ -2456,8 +2428,9 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 246.75, 694.0, 150.5, 34.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 246.75, 694.0, 150.5, 33.0 ],
 					"text" : "j.test.assert.equal.old TESTsymbol 1"
 				}
 
@@ -2465,7 +2438,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
+					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-11", 0 ]
@@ -2525,6 +2498,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-19", 0 ]
 				}
 
 			}
@@ -2844,15 +2826,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2983,29 +2956,46 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.test.assert.equal.old.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Test/components",
-				"patcherrelativepath" : "../../../Test/components",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "test.string.equals.maxpat",
+				"bootpath" : "/Applications/Max 6.1/packages/testpackage02/misc",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/packages/testpackage02/misc",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "test.string.equals.js",
+				"bootpath" : "/Applications/Max 6.1/packages/testpackage02/misc",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/packages/testpackage02/misc",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.test.finished.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Test/components",
-				"patcherrelativepath" : "../../../Test/components",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/MaxTest/JamomaTest/patchers/components",
+				"patcherrelativepath" : "../../../../../../MaxTest/JamomaTest/patchers/components",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "oscar.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "oscar.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "oscar.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "ftm.mess.mxo",

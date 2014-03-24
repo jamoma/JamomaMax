@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxLibrary
  *
- * @brief Jamoma For Max Shared Library
+ * @brief Various utilities for interfacing with Max that are not specific to JamomaModular as such.
  *
  * @details Functions and resources used by Max objects.
  *

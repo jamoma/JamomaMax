@@ -32,6 +32,7 @@ typedef struct outlet {
 
 // This is used to store extra data
 typedef struct extra {
+    TTAddress   name;           ///< the name to use for subscription
 	TTPtr		ui_qelem;		///< to output "qlim'd" data for ui object
 	ObjectPtr	connected;		// our ui object
 	long		x;				// our ui object x presentation
@@ -119,8 +120,8 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	SymbolPtr					address;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
 	
-	// read first argument
-	if (attrstart && argv) 
+	// read the address to bind from the first argument
+	if (attrstart > 0 && argv)
 		address = atom_getsym(argv);
 	else
 		address = _sym_nothing;
@@ -130,7 +131,14 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
-	EXTRA->connected = NULL;
+    
+    // read the name to use for subscription from the first argument
+	if (attrstart == 2 && argv)
+		EXTRA->name = TTAddress(atom_getsym(argv+1)->s_name);
+	else
+		EXTRA->name = kTTAdrsEmpty;
+    
+    EXTRA->connected = NULL;
 	EXTRA->label = NULL;
 	
 	EXTRA->color0 = (AtomPtr)sysmem_newptr(sizeof(t_atom) * 4);
@@ -188,7 +196,7 @@ void remote_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 				strcpy(dst, "value");
 				break;
 			case attach_out:
-				strcpy(dst, "attach: to connect to ui object if the set or the value outlets are not directly connected it");
+				strcpy(dst, "attach: connect this outlet to ui object if the set or the value outlets are not directly connected to it");
 				break;
 			case dump_out:
 				strcpy(dst, "dumpout");
@@ -222,15 +230,17 @@ void remote_subscribe(TTPtr self)
     
     if (x->address == kTTAdrsEmpty)
 		return;
-	
-	// for absolute address
+    
+    // attach the j.remote to connected ui object
+    // TODO : this should be done when the an object is connected to one of the j.remote outlet
+    // (but this means we need to unsubscribe then subscribe with the new name)
+    remote_attach(self, set_out);
+    
+	// for absolute address we only bind the given address but we don't subscribe the remote into the namespace
 	if (x->address.getType() == kAddressAbsolute) {
 		
 		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
 		
-		// attach the j.remote to connected ui object
-		remote_attach(self, set_out);
-        
         // observe :description attribute
         if (x->internals->lookup(TTSymbol(":description"), v))
             
@@ -248,6 +258,10 @@ void remote_subscribe(TTPtr self)
 	
 	// for relative address
 	jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
+    
+    // if no name is provided or can be edited in remote_attach() : use the address
+    if (EXTRA->name == kTTAdrsEmpty)
+        EXTRA->name = x->address;
 	
     // if there is a context
     if (x->patcherContext != kTTSymEmpty) {
@@ -281,15 +295,12 @@ void remote_subscribe(TTPtr self)
             return;
         
         // if the subscription is succesfull
-        if (!jamoma_subscriber_create((ObjectPtr)x, toSubscribe, x->address, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+        if (!jamoma_subscriber_create((ObjectPtr)x, toSubscribe, EXTRA->name, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
             
             // get the context address to make
             // a viewer on the contextAddress/model:address attribute
             x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
             contextAddress = v[0];
-            
-            // attach the j.remote to connected ui object (using set_out by default)
-            remote_attach(self, set_out);
             
             // observe model:address attribute (in view patcher : deferlow return_model_address)
             makeInternals_receiver(x, contextAddress, TTSymbol("model:address"), gensym("return_model_address"), &anObject, x->patcherContext == kTTSym_view);
@@ -306,9 +317,6 @@ void remote_subscribe(TTPtr self)
 		
 		atom_setsym(a, gensym((char*)absoluteAddress.c_str()));
 		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
-		
-		// attach the j.remote to connected ui object (using set_out by default)
-		remote_attach(self, set_out);
         
         // observe :description attribute
         if (x->internals->lookup(TTSymbol(":description"), v))
@@ -337,7 +345,7 @@ void remote_subscribe(TTPtr self)
 	
 	x->index++; // the index member is usefull to count how many time the external tries to bind
 	if (x->index > 100) {
-		object_error((ObjectPtr)x, "tries to bind too many times on %s", x->address.c_str());
+		object_error((ObjectPtr)x, "couldn't bind to j.parameter %s", x->address.c_str());
 		object_obex_dumpout((ObjectPtr)x, gensym("error"), 0, NULL);
 		return;
 	}
@@ -510,7 +518,7 @@ void remote_attach(TTPtr self, int attach_output_id)
            maxclass = object_attr_getsym(object, _sym_maxclass);
 
         EXTRA->connected = object;
-		if (EXTRA->connected) {
+		if (EXTRA->connected && maxclass) {
 			
             // get presentation object size
 			ac = 0;
@@ -522,6 +530,17 @@ void remote_attach(TTPtr self, int attach_output_id)
 				EXTRA->w = atom_getlong(av+2);
 				EXTRA->h = atom_getlong(av+3);
 			}
+            
+            // if no name is provided : edit the name.instance part of the address and the name of the ui object
+            if (EXTRA->name == kTTAdrsEmpty) {
+                
+                TTString editName = x->address.c_str();
+                editName += "(";
+                editName += maxclass->s_name;
+                editName += ")";
+                
+                EXTRA->name = TTAddress(editName);
+            }
 		}
 	}
     

@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -37,7 +37,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 564.0, 83.0, 208.0, 31.0 ],
+					"patching_rect" : [ 343.0, 83.0, 208.0, 31.0 ],
 					"text" : "The display of frames may be controlled by an external metro."
 				}
 
@@ -53,7 +53,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 513.0, 88.0, 50.0, 19.0 ]
+					"patching_rect" : [ 292.0, 88.0, 50.0, 19.0 ]
 				}
 
 			}
@@ -65,7 +65,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 475.0, 88.0, 20.0, 20.0 ]
+					"patching_rect" : [ 254.0, 88.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -78,14 +78,14 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 475.0, 111.0, 57.0, 19.0 ],
+					"patching_rect" : [ 254.0, 111.0, 57.0, 19.0 ],
 					"text" : "qmetro 2"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "input%.module", "@description", "Generic video input module" ],
+					"args" : [ "@name", "input%.module", "@description", "Generic video input" ],
 					"bgmode" : 1,
 					"id" : "obj-18",
 					"maxclass" : "bpatcher",
@@ -231,8 +231,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 51.0, 439.0, 107.0, 19.0 ],
-					"text" : "s jmod.input%.cmd"
+					"patching_rect" : [ 51.0, 439.0, 119.0, 19.0 ],
+					"text" : "s input%.module.cmd"
 				}
 
 			}
@@ -245,8 +245,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 254.0, 116.0, 107.0, 19.0 ],
-					"text" : "r jmod.input%.cmd"
+					"patching_rect" : [ 343.0, 111.0, 119.0, 19.0 ],
+					"text" : "r input%.module.cmd"
 				}
 
 			}
@@ -259,8 +259,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 263.0, 107.0, 19.0 ],
-					"text" : "s jmod.input%.cmd"
+					"patching_rect" : [ 15.0, 263.0, 119.0, 19.0 ],
+					"text" : "s input%.module.cmd"
 				}
 
 			}
@@ -312,7 +312,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 565.0, 180.0, 60.0, 35.0 ]
+					"patching_rect" : [ 234.0, 470.0, 60.0, 35.0 ]
 				}
 
 			}
@@ -323,7 +323,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 253.0, 217.0, 320.0, 240.0 ]
+					"patching_rect" : [ 254.0, 218.0, 320.0, 240.0 ]
 				}
 
 			}
@@ -351,7 +351,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 660.0, 141.0, 315.0, 322.0 ],
+					"patching_rect" : [ 660.0, 141.0, 317.0, 322.0 ],
 					"text" : "The module has four different modes, which can be selected from the top menu:\r\r- Camera: this can be used with any web/DV camera connected to the system. Choose device in the list, and click the on/off button to start sampling. The size of the video can be changed on the fly, allowing to reduce the size to get better performance.\r\r- Video file: this is for playing back any QuickTime compatible video file. Files may be loaded by just dropping them on top of the module. Looping can be turned on or off, and the looping section can be defined in the upper scroll bar. The file can be scrubbed in the lower scroll bar. Audio playback can be turned on or off, and the playback rate can be changed by dragging on the number (notice that negative values will play the file backwards. The size of the video can be changed on the fly to improve performance.\r\r- Synthesis: this is mainly for testing purposes in case you have no camera or video files around, but still want to send some video. It generates white noise in either 1 or 4 planes.\n\n- Desktop: the content of the computer screen can be captured into MaxMSP. The size and location of the captured region can be modified. (Works only in 32 Bits Mode)"
 				}
 
@@ -427,7 +427,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 1 ],
+					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-16", 0 ]
@@ -448,7 +448,8 @@
 					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-20", 1 ]
+					"midpoints" : [ 263.5, 213.0, 243.5, 213.0 ],
+					"source" : [ "obj-20", 0 ]
 				}
 
 			}
@@ -457,7 +458,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-20", 1 ]
+					"source" : [ "obj-20", 0 ]
 				}
 
 			}
@@ -536,14 +537,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "input%.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -551,55 +552,55 @@
 , 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.ui.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.videoParameters.helper.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/help",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/help",
 				"patcherrelativepath" : "../../../../help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../../../components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1

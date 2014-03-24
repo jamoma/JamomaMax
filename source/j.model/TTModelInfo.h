@@ -42,22 +42,27 @@ public:
     void setAddressReadOnly(TTBoolean readOnly);
     
     /** Open the internal patcher
-     @return    TTErr       kTTErrNone load was successful
+     @return    TTErr       kTTErrNone
      */
 	TTErr InternalOpen();
     
     /** Open the help page
-     @return    TTErr       kTTErrNone load was successful
+     @return    TTErr       kTTErrNone
      */
 	TTErr HelpOpen();
     
-    /** Open the help page
-     @return    TTErr       kTTErrNone load was successful
+    /** Open the reference file
+     @return    TTErr       kTTErrNone
      */
     TTErr ReferenceOpen();
     
+    /** Write the reference file
+     @return    TTErr       kTTErrNone
+     */
+    TTErr ReferenceWrite();
+    
     /** Mute the patcher
-     @return    TTErr       kTTErrNone load was successful
+     @return    TTErr       kTTErrNone
      */
     TTErr Mute();
 	

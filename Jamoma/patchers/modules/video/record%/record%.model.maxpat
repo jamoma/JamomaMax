@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 86.0, 543.0, 1387.0, 418.0 ],
+		"rect" : [ 29.0, 114.0, 1387.0, 418.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -119,7 +119,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 28.0, 314.0, 486.0, 19.0 ],
+					"patching_rect" : [ 1030.0, 73.0, 302.0, 19.0 ],
 					"text" : "j.model @description \"Record video to QuickTime movie.\""
 				}
 
@@ -131,7 +131,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 28.0, 345.0, 25.0, 25.0 ]
+					"patching_rect" : [ 1030.0, 104.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -231,7 +231,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -525,7 +525,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 56.0, 25.0, 25.0 ]
+					"patching_rect" : [ 1030.0, 39.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -1008,14 +1008,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.class.matrix.route.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/class.matrix.route",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/class.matrix.route",
 				"patcherrelativepath" : "../../../components/class.matrix.route",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.passmatrixinfo%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/passmatrixinfo%",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/passmatrixinfo%",
 				"patcherrelativepath" : "../../../components/passmatrixinfo%",
 				"type" : "JSON",
 				"implicit" : 1

@@ -244,7 +244,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.limiter≈"/>
+		<seealso name="j.limiter="/>
 		<seealso name="omx.comp~"/>
 	</seealsolist>
 </c74object>

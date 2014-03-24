@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1298.0, 746.0 ],
+		"rect" : [ 4.0, 44.0, 963.0, 591.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,6 +29,18 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-3",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 672.5, 398.5, 25.0, 25.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
@@ -37,7 +49,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 910.0, 147.0, 150.0, 33.0 ],
+					"patching_rect" : [ 712.0, 70.0, 150.0, 33.0 ],
 					"text" : "<- why isn't this one a parameterArray ?",
 					"textcolor" : [ 0.658824, 0.046517, 0.0, 1.0 ]
 				}
@@ -53,7 +65,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 111.0, 238.0, 364.0, 60.0 ],
+					"patching_rect" : [ 31.0, 164.0, 364.0, 60.0 ],
 					"text" : "j.parameterArray harmonic.[10]/gain @format single @type decimal @ramp/drive Max @ramp/function linear @dataspace gain @dataspace/unit dB @description \"Gain values (dB) for the 1st partial\""
 				}
 
@@ -68,7 +80,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 627.0, 106.5, 235.0, 100.0 ],
+					"patching_rect" : [ 429.0, 29.5, 235.0, 100.0 ],
 					"text" : "j.parameter factors @type array @value/default 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. @range/bounds 1. 100. @range/clipmode low @description \"list of factors that determines the frequencies of the 10 partials as a factor of the fundamental frequency, default is 1 2 3 4 5 6 7 8 9 10\""
 				}
 
@@ -83,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 766.5, 229.0, 331.0, 60.0 ],
+					"patching_rect" : [ 568.5, 152.0, 331.0, 60.0 ],
 					"text" : "j.parameter frequency @type decimal @range/bounds 20 20000 @range/clipmode none @ramp/drive Max @ramp/function linear @dataspace time @dataspace/unit Hz @description \"Fundamental frequency of the signal.\"",
 					"varname" : "frequency"
 				}
@@ -98,20 +110,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 627.0, 581.0, 76.0, 20.0 ],
+					"patching_rect" : [ 429.0, 504.0, 76.0, 20.0 ],
 					"text" : "j.out~ 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "OSC messages",
-					"id" : "obj-20",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 31.0, 23.0, 23.0 ]
 				}
 
 			}
@@ -120,11 +120,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-19",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 28.0, 74.0, 403.0, 20.0 ],
+					"patching_rect" : [ 672.5, 465.5, 229.0, 33.0 ],
 					"text" : "j.model @description \"Additive synthesis using 10 harmonic partials.\""
 				}
 
@@ -138,7 +139,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 283.5, 424.0, 36.0, 20.0 ],
+					"patching_rect" : [ 203.5, 350.0, 36.0, 20.0 ],
 					"text" : "- 1"
 				}
 
@@ -152,7 +153,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 627.0, 350.0, 60.0, 20.0 ],
+					"patching_rect" : [ 429.0, 273.0, 60.0, 20.0 ],
 					"text" : "zl reg"
 				}
 
@@ -166,7 +167,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 111.0, 448.0, 43.0, 20.0 ],
+					"patching_rect" : [ 31.0, 374.0, 43.0, 20.0 ],
 					"text" : "* 0.1"
 				}
 
@@ -178,7 +179,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 28.0, 152.0, 23.0, 23.0 ]
+					"patching_rect" : [ 672.5, 544.5, 23.0, 23.0 ]
 				}
 
 			}
@@ -189,7 +190,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 627.0, 621.0, 23.0, 23.0 ]
+					"patching_rect" : [ 429.0, 544.0, 23.0, 23.0 ]
 				}
 
 			}
@@ -202,7 +203,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 627.0, 429.0, 46.0, 20.0 ],
+					"patching_rect" : [ 429.0, 352.0, 46.0, 20.0 ],
 					"text" : "zl rev"
 				}
 
@@ -216,7 +217,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 111.0, 424.0, 39.0, 20.0 ],
+					"patching_rect" : [ 31.0, 350.0, 39.0, 20.0 ],
 					"text" : "dbtoa"
 				}
 
@@ -230,7 +231,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "int" ],
-					"patching_rect" : [ 627.0, 466.0, 76.0, 20.0 ],
+					"patching_rect" : [ 429.0, 389.0, 76.0, 20.0 ],
 					"text" : "unpack 0. 0"
 				}
 
@@ -244,7 +245,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 627.0, 400.0, 61.0, 20.0 ],
+					"patching_rect" : [ 429.0, 323.0, 61.0, 20.0 ],
 					"text" : "listfunnel"
 				}
 
@@ -258,7 +259,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 627.0, 377.0, 174.0, 20.0 ],
+					"patching_rect" : [ 429.0, 300.0, 174.0, 20.0 ],
 					"text" : "vexpr $f1*$f2 @scalarmode 1"
 				}
 
@@ -272,7 +273,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 627.0, 549.0, 161.0, 20.0 ],
+					"patching_rect" : [ 429.0, 472.0, 161.0, 20.0 ],
 					"text" : "ioscbank~ 10 64 512 4096"
 				}
 
@@ -286,7 +287,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "float" ],
-					"patching_rect" : [ 766.5, 300.0, 35.0, 20.0 ],
+					"patching_rect" : [ 568.5, 223.0, 35.0, 20.0 ],
 					"text" : "t b f"
 				}
 
@@ -297,7 +298,7 @@
 					"destination" : [ "obj-15", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 120.5, 501.0, 683.833313, 501.0 ],
+					"midpoints" : [ 40.5, 424.0, 485.833344, 424.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -316,7 +317,7 @@
 					"destination" : [ "obj-15", 3 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 293.0, 534.0, 778.5, 534.0 ],
+					"midpoints" : [ 213.0, 457.0, 580.5, 457.0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -377,15 +378,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-20", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -431,6 +423,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -452,7 +453,7 @@
 					"destination" : [ "obj-15", 3 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 693.5, 529.0, 778.5, 529.0 ],
+					"midpoints" : [ 495.5, 452.0, 580.5, 452.0 ],
 					"source" : [ "obj-9", 1 ]
 				}
 
@@ -465,23 +466,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameterArray.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

@@ -39,7 +39,7 @@ outlets = 1;
 
 setinletassist (1,  "Channel number for channel-specific messages")
 setinletassist (0,  "Various messages");
-setoutletassist(0,  "messages for j.mixer≈");
+setoutletassist(0,  "messages for j.mixer=");
 
 function msg_int(i)
 {

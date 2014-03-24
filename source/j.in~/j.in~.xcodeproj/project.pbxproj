@@ -9,6 +9,7 @@
 /* Begin PBXFileReference section */
 		46259865168457C40076E93F /* j.in.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = j.in.cpp; path = ../j.in/j.in.cpp; sourceTree = "<group>"; };
 		469BD9E5180B54E600A023B3 /* j.in~.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.in~.yml"; sourceTree = "<group>"; };
+		46BEF4EC18C8EF5C0071F8B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		46DEED0B1770671B003FC4F0 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
 		46DEED0C1770671B003FC4F0 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -18,10 +19,19 @@
 			isa = PBXGroup;
 			children = (
 				469BD9E5180B54E600A023B3 /* j.in~.yml */,
+				46BEF4EC18C8EF5C0071F8B7 /* Makefile */,
+				46BEF4ED18C8EFBE0071F8B7 /* sources */,
+			);
+			sourceTree = "<group>";
+		};
+		46BEF4ED18C8EFBE0071F8B7 /* sources */ = {
+			isa = PBXGroup;
+			children = (
 				46259865168457C40076E93F /* j.in.cpp */,
 				46DEED0C1770671B003FC4F0 /* TTModularClassWrapperMax.h */,
 				46DEED0B1770671B003FC4F0 /* TTModularClassWrapperMax.cpp */,
 			);
+			name = sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

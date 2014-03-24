@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 133.0, 318.0, 1056.0, 608.0 ],
+		"rect" : [ 126.0, 87.0, 333.0, 300.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -78,7 +78,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 35.0, 260.0, 25.0, 25.0 ]
+					"patching_rect" : [ 35.0, 240.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -101,7 +101,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 199.0, 260.0, 25.0, 25.0 ]
+					"patching_rect" : [ 199.0, 240.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -112,19 +112,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 117.0, 260.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-6",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 199.0, 140.0, 25.0, 25.0 ]
+					"patching_rect" : [ 117.0, 240.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -135,7 +123,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 117.0, 140.0, 25.0, 25.0 ]
 				}
 
@@ -146,10 +134,10 @@
 					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
+					"numinlets" : 2,
 					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 35.0, 193.0, 235.0, 20.0 ],
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 35.0, 193.0, 183.0, 20.0 ],
 					"text" : "hilbertModulator~.model #1"
 				}
 
@@ -200,14 +188,52 @@
 				}
 
 			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "hilbertModulator~.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/hilbertModulator~",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
 , 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 2 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-6", 0 ]
-				}
-
+				"name" : "hilbertModulator~.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/hilbertModulator~",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

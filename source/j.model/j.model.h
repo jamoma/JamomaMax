@@ -15,6 +15,7 @@
 
 
 #include "TTModularClassWrapperMax.h"
+#include "jpatcher_api.h"
 #include "TTModelInfo.h"
 
 /** Data structure for storing extra data.
@@ -154,15 +155,6 @@ void		model_init(TTPtr self);
  @param argc
  @param argv
  */
-void		model_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-
-/**
- @param self
- @param msg
- @param argc
- @param argv
- */
 void		model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);		// only in view patch
 
 
@@ -172,7 +164,7 @@ void		model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);		/
  @param argc
  @param argv
  */
-void		model_autodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		model_reference_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 
 /**
@@ -181,16 +173,13 @@ void		model_autodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
  @param argc
  @param argv
  */
-void		model_doautodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		model_reference_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 
 /**
  @param self
  */
 void		model_preset_amenities(TTPtr self);
-
-
-//void		model_preset_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 
 /**

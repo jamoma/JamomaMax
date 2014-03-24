@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 106.0, 65.0, 323.0, 479.0 ],
+		"rect" : [ 106.0, 65.0, 552.0, 346.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,6 +29,18 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-1",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 224.0, 139.0, 25.0, 25.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-92",
@@ -36,7 +48,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "bang" ],
-					"patching_rect" : [ 80.0, 319.0, 145.0, 20.0 ],
+					"patching_rect" : [ 31.0, 162.0, 145.0, 20.0 ],
 					"save" : [ "#N", "sfplay~", "1073__sflist", 1, 120960, 1, "", ";" ],
 					"text" : "sfplay~ #0__sflist 1 0 1"
 				}
@@ -49,7 +61,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 80.0, 412.5, 25.0, 25.0 ]
+					"patching_rect" : [ 31.0, 255.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -62,7 +74,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 80.0, 370.5, 73.0, 20.0 ],
+					"patching_rect" : [ 31.0, 213.5, 73.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -76,7 +88,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 80.0, 281.0, 155.0, 20.0 ],
+					"patching_rect" : [ 31.0, 124.0, 155.0, 20.0 ],
 					"text" : "filePlayer.algorithm"
 				}
 
@@ -91,7 +103,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 28.0, 112.5, 280.0, 33.0 ],
+					"patching_rect" : [ 224.0, 177.0, 280.0, 33.0 ],
 					"text" : "j.model @description \"Sound file playback module with preloading of files. Mono version.\""
 				}
 
@@ -103,19 +115,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 28.0, 191.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-27",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 23.0, 25.0, 25.0 ]
+					"patching_rect" : [ 224.0, 255.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -131,7 +131,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 64.0, 177.0, 218.0, 66.0 ],
+					"patching_rect" : [ 15.0, 20.0, 218.0, 66.0 ],
 					"text" : "The overall design philosophy of this model is documented in this subpatch.",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
@@ -140,19 +140,19 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-28", 0 ],
+					"destination" : [ "obj-25", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-25", 0 ]
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
+					"destination" : [ "obj-28", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-27", 0 ]
+					"source" : [ "obj-25", 0 ]
 				}
 
 			}
@@ -170,7 +170,7 @@
 					"destination" : [ "obj-91", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 215.5, 351.0, 237.0, 351.0, 237.0, 269.0, 225.5, 269.0 ],
+					"midpoints" : [ 166.5, 194.0, 188.0, 194.0, 188.0, 112.0, 176.5, 112.0 ],
 					"source" : [ "obj-92", 2 ]
 				}
 
@@ -180,7 +180,7 @@
 					"destination" : [ "obj-91", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 152.5, 363.0, 250.0, 363.0, 250.0, 255.0, 89.5, 255.0 ],
+					"midpoints" : [ 103.5, 206.0, 201.0, 206.0, 201.0, 98.0, 40.5, 98.0 ],
 					"source" : [ "obj-92", 1 ]
 				}
 
@@ -206,8 +206,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "filePlayer.algorithm.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~/shared",
+				"patcherrelativepath" : "../shared",
 				"type" : "JSON",
 				"implicit" : 1
 			}
