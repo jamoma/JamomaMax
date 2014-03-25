@@ -31,7 +31,7 @@ void model_preset_amenities(TTPtr self)
     modelAdrs = v[0];
     
     // create the preset manager
-	jamoma_presetManager_create((ObjectPtr)x, &EXTRA->presetManager);
+	jamoma_presetManager_create((t_object*)x, &EXTRA->presetManager);
     
     // suscribe it under a preset node 
     presetAddress = modelAdrs.appendAddress(TTAddress("preset"));
@@ -55,7 +55,7 @@ void model_preset_amenities(TTPtr self)
 }
 
 /*
-void model_preset_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_preset_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -67,18 +67,18 @@ void model_preset_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 }
 */
 
-void model_preset_return_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_preset_return_names(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	outlet_anything(x->outlets[dump_out], gensym("names"), argc, argv);
 }
 
-void model_preset_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_preset_read(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	defer(self, (method)model_preset_doread, msg, argc, argv);
 }
 
-void model_preset_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_preset_doread(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			o, v, none;
@@ -88,7 +88,7 @@ void model_preset_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv
 	
 	if (EXTRA->presetManager) {
 		
-		fullpath = jamoma_file_read((ObjectPtr)x, argc, argv, 'TEXT');
+		fullpath = jamoma_file_read((t_object*)x, argc, argv, 'TEXT');
 		v.append(fullpath);
 		
 		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
@@ -138,12 +138,12 @@ void model_preset_doread_again(TTPtr self)
 	}
 }
 
-void model_preset_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_preset_write(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	defer(self, (method)model_preset_dowrite, msg, argc, argv);
 }
 
-void model_preset_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_preset_dowrite(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char 			filename[MAX_FILENAME_CHARS];
@@ -160,7 +160,7 @@ void model_preset_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 		
 		// Default XML File Name
 		snprintf(filename, MAX_FILENAME_CHARS, "%s.%s.xml", x->patcherClass.c_str(), x->patcherContext.c_str());
-		fullpath = jamoma_file_write((ObjectPtr)x, argc, argv, filename);
+		fullpath = jamoma_file_write((t_object*)x, argc, argv, filename);
 		v.append(fullpath);
 		
 		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
@@ -221,7 +221,7 @@ void model_preset_default(TTPtr self)
 	char 		fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
 	char		posixpath[MAX_PATH_CHARS];
 	t_atom		a;
-	SymbolPtr	xmlfile;
+	t_symbol*	xmlfile;
 
 	if (x->patcherClass != kTTSymEmpty) {
 		
@@ -231,10 +231,10 @@ void model_preset_default(TTPtr self)
 		else if (x->patcherContext == kTTSym_view)
 			jamoma_edit_filename(*ViewPresetFormat, x->patcherClass, &xmlfile);
 		else
-			return object_error((ObjectPtr)x, "preset_default : can't get the context of the patcher");
+			return object_error((t_object*)x, "preset_default : can't get the context of the patcher");
 		
 		if (locatefile_extended((char*)xmlfile->s_name, &outvol, &outtype, &filetype, 1)) {
-			//object_warn((ObjectPtr)x, "preset_default : can't find %s file in the Max search path", xmlfile.data());
+			//object_warn((t_object*)x, "preset_default : can't find %s file in the Max search path", xmlfile.data());
 			return;
 		}
 		
@@ -246,7 +246,7 @@ void model_preset_default(TTPtr self)
 		
 		// recall the default preset if exists
         atom_setsym(&a, gensym("default"));
-		defer_low((ObjectPtr)x, (method)model_preset_dorecall, NULL, 1, &a);
+		defer_low((t_object*)x, (method)model_preset_dorecall, NULL, 1, &a);
 		
 		// replace filewatcher
 		if (EXTRA->filewatcher) {
@@ -254,11 +254,11 @@ void model_preset_default(TTPtr self)
 			object_free(EXTRA->filewatcher);
 		}
 		
-		EXTRA->filewatcher = filewatcher_new((ObjectPtr)x, outvol, (char*)xmlfile->s_name);
+		EXTRA->filewatcher = filewatcher_new((t_object*)x, outvol, (char*)xmlfile->s_name);
 		filewatcher_start(EXTRA->filewatcher);
 	}
 	else
-		object_error((ObjectPtr)x, "preset_default : can't get the class of the patcher");
+		object_error((t_object*)x, "preset_default : can't get the class of the patcher");
 }
 
 void model_preset_filechanged(TTPtr self, char *filename, short path)
@@ -282,10 +282,10 @@ void model_preset_filechanged(TTPtr self, char *filename, short path)
 	// try to recall last current preset
 	current = v[0];
 	atom_setsym(&a, gensym((char*)current.c_str()));
-	defer_low((ObjectPtr)x, (method)model_preset_dorecall, NULL, 1, &a);
+	defer_low((t_object*)x, (method)model_preset_dorecall, NULL, 1, &a);
 }
 
-void model_preset_dorecall(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_preset_dorecall(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue		v, none;
@@ -298,7 +298,7 @@ void model_preset_dorecall(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr ar
 	EXTRA->presetManager->sendMessage(kTTSym_Recall, v, none);
 }
 
-void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_preset_edit(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTString			*buffer;
@@ -325,7 +325,7 @@ void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 				name = v[atom_getlong(argv)-1];
 			
 			else {
-				object_error((ObjectPtr)x, "%d does'nt exist", atom_getlong(argv));
+				object_error((t_object*)x, "%d does'nt exist", atom_getlong(argv));
 				return;
 			}
 		}
@@ -348,7 +348,7 @@ void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 					EXTRA->presetName = name;
 				}
 				else {
-					object_error((ObjectPtr)x, "%s does'nt exist", atom_getsym(argv)->s_name);
+					object_error((t_object*)x, "%s does'nt exist", atom_getsym(argv)->s_name);
 					return;
 				}
 			}
@@ -401,7 +401,7 @@ void model_preset_edclose(TTPtr self, char **text, long size)
 	EXTRA->text = new TTString(*text);
 	EXTRA->textEditor = NULL;
 	
-	defer_low((ObjectPtr)x, (method)model_preset_doedit, NULL, 0, NULL);
+	defer_low((t_object*)x, (method)model_preset_doedit, NULL, 0, NULL);
 }
 
 void model_preset_doedit(TTPtr self)
@@ -441,7 +441,7 @@ void model_preset_doedit(TTPtr self)
 	EXTRA->presetName = kTTSymEmpty;
 }
 
-t_max_err model_preset_set_load_default(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av) 
+t_max_err model_preset_set_load_default(TTPtr self, TTPtr attr, long ac, t_atom* av) 
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -454,7 +454,7 @@ t_max_err model_preset_set_load_default(TTPtr self, TTPtr attr, AtomCount ac, At
 	return MAX_ERR_NONE;
 }
 
-t_max_err model_preset_get_load_default(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av)
+t_max_err model_preset_get_load_default(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -463,7 +463,7 @@ t_max_err model_preset_get_load_default(TTPtr self, TTPtr attr, AtomCount *ac, A
 	} else {
 		//otherwise allocate memory
 		*ac = 1;
-		if (!(*av = (AtomPtr)getbytes(sizeof(t_atom)*(*ac)))) {
+		if (!(*av = (t_atom*)getbytes(sizeof(t_atom)*(*ac)))) {
 			*ac = 0;
 			return MAX_ERR_OUT_OF_MEM;
 		}

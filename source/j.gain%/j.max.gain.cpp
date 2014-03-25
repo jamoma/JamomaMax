@@ -35,7 +35,7 @@ void		MaxGainFree		(MaxGainObjectPtr self);
 
 
 // globals
-static ClassPtr sMaxGainClass = NULL;
+static t_class* sMaxGainClass = NULL;
 
 
 /************************************************************************************/

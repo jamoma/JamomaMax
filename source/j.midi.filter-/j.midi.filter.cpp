@@ -22,20 +22,20 @@ struct MidiFilter {
    	Object				    obj;
 	TTGraphObjectBasePtr	graphObject;
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
-	SymbolPtr			    attrType;
+	t_symbol*			    attrType;
 };
 typedef MidiFilter* MidiFilterPtr;
 
 
 // Prototypes for methods
-MidiFilterPtr	MidiFilterNew		(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+MidiFilterPtr	MidiFilterNew		(t_symbol* msg, long argc, t_atom* argv);
 void			MidiFilterFree		(MidiFilterPtr self);
 void			MidiFilterAssist	(MidiFilterPtr self, void* b, long msg, long arg, char* dst);
-MaxErr			MidiFilterSetType	(MidiFilterPtr self, void* attr, AtomCount argc, AtomPtr argv);
+t_max_err			MidiFilterSetType	(MidiFilterPtr self, void* attr, long argc, t_atom* argv);
 
 
 // Globals
-static ClassPtr sMidiFilterClass;
+static t_class* sMidiFilterClass;
 
 
 /************************************************************************************/
@@ -43,7 +43,7 @@ static ClassPtr sMidiFilterClass;
 
 int TTGRAPH_EXTERNAL_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTGraphInit();	
 	common_symbols_init();
@@ -71,7 +71,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-MidiFilterPtr MidiFilterNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+MidiFilterPtr MidiFilterNew(t_symbol* msg, long argc, t_atom* argv)
 {
     MidiFilterPtr	self;
 	TTValue		v;
@@ -79,10 +79,10 @@ MidiFilterPtr MidiFilterNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
     self = MidiFilterPtr(object_alloc(sMidiFilterClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("midi.filter"));
 		v.set(1, TTUInt32(1));
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
@@ -113,7 +113,7 @@ void MidiFilterAssist(MidiFilterPtr self, void* b, long msg, long arg, char* dst
 {
 	if (msg==1)			// Inlets
 		strcpy (dst, "dictionary input and control messages");		
-	else if (msg==2){	// Outlets
+	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "dictionary output");
 		else
@@ -124,11 +124,11 @@ void MidiFilterAssist(MidiFilterPtr self, void* b, long msg, long arg, char* dst
 
 // ATTRIBUTE SETTERS
 
-MaxErr MidiFilterSetType(MidiFilterPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err MidiFilterSetType(MidiFilterPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrType = atom_getsym(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("type"), TT(self->attrType->s_name));
+		self->graphObject->mKernel.set(TT("type"), TT(self->attrType->s_name));
 	}
 	return MAX_ERR_NONE;
 }

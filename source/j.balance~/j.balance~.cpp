@@ -101,14 +101,14 @@ void* balance_new(t_symbol *msg, short argc, t_atom *argv)
 	short		i;
    
     x = (t_balance *)object_alloc(balance_class);
-    if(x){
+    if (x) {
 		// Default values
 		x->attrFrequency = 10;
 		x->attrBypass = 0;
 		// An initial argument to this object will set the maximum number of channels to process
 		// Two input channels are required for each processed channel (source and comperator)
 		x->maxNumChannels = 1;		
-		if(attrstart && argv)
+		if (attrstart && argv)
 			x->maxNumChannels = atom_getlong(argv);
 
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
@@ -120,7 +120,7 @@ void* balance_new(t_symbol *msg, short argc, t_atom *argv)
 				
     	object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x,NULL));	// dumpout	
 	    dsp_setup((t_pxobject *)x, x->maxNumChannels*2);							// inlets
-		for(i=0; i < x->maxNumChannels; i++)
+		for (i=0; i < x->maxNumChannels; i++)
 			outlet_new((t_pxobject *)x, "signal");									// outlets
 		
 		x->obj.z_misc = Z_NO_INPLACE;
@@ -144,16 +144,16 @@ void balance_free(t_balance *x)
 // Method for Assistance Messages
 void balance_assist(t_balance *x, void *b, long msg, long arg, char *dst)
 {   	
-	if(msg==1){ 	// Inlets
-		if(arg == 0)
+	if (msg==1) { 	// Inlets
+		if (arg == 0)
 			snprintf(dst, 256, "(signal) to balance (ch. %ld), control messages", arg+1);
-		else if(arg < x->maxNumChannels)
+		else if (arg < x->maxNumChannels)
 			snprintf(dst, 256, "(signal) to balance (ch. %ld)", arg+1);
-		else if(arg >= x->maxNumChannels)
+		else if (arg >= x->maxNumChannels)
 			snprintf(dst, 256, "(signal) Comperator (ch. %ld)", arg-x->maxNumChannels+1);
 	}
-	else if(msg==2) {// Outlets		
-		if(arg == x->maxNumChannels)
+	else if (msg==2) {// Outlets		
+		if (arg == x->maxNumChannels)
 			strcpy(dst, "dumpout");					
 		else 
 			snprintf(dst, 256, "(signal) Balanced output %ld", arg+1);  
@@ -175,17 +175,17 @@ t_int *balance_perform(t_int *w)
 	TTUInt16	vs = x->audioIn->getVectorSizeAsInt();
 
 	// We sort audioIn so that all channels of signalA comes first, then all channels of signalB
-	for(i=0; i < x->numChannels; i++){
+	for (i=0; i < x->numChannels; i++) {
 		j = (i*3) + 1;
 		k = i + x->numChannels;
 		x->audioIn->setVector(i, vs, (t_float *)w[j+1]);
 		x->audioIn->setVector(k, vs, (t_float *)w[j+2]);
 	}
 
-	if(!x->obj.z_disabled)									// if we are not muted...
+	if (!x->obj.z_disabled)									// if we are not muted...
 		x->balance->process(*x->audioIn, *x->audioOut);		// Actual balance process
 
-	for(i=0; i < x->numChannels; i++){
+	for (i=0; i < x->numChannels; i++) {
 		j = (i*3) + 1;
 		x->audioOut->getVector(i, vs, (t_float *)w[j+3]);
 	}
@@ -207,12 +207,12 @@ void balance_dsp(t_balance *x, t_signal **sp, short *count)
 	// audioVectors[] passed to balance_perform() as {x, audioInL[0], audioInR[0], audioOut[0], audioInL[1], audioInR[1], audioOut[1],...}
 	x->numChannels = 0;
 	x->vs = 0;
-	for(i=0; i < x->maxNumChannels; i++){
+	for (i=0; i < x->maxNumChannels; i++) {
 		j = x->maxNumChannels + i;
 		k = x->maxNumChannels*2 + i;
-		if(count[i] && count[j] && count[k]){
+		if (count[i] && count[j] && count[k]) {
 			x->numChannels++;
-			if(sp[i]->s_n > x->vs)
+			if (sp[i]->s_n > x->vs)
 				x->vs = sp[i]->s_n;
 
 			audioVectors[l] = sp[i]->s_vec;
@@ -240,7 +240,7 @@ void balance_dsp(t_balance *x, t_signal **sp, short *count)
 
 t_max_err balance_setBypass(t_balance *x, void *attr, long argc, t_atom *argv)
 {
-	if(argc){
+	if (argc) {
 		x->attrBypass = atom_getlong(argv);		
 		x->balance->setAttributeValue(kTTSym_bypass, (TTBoolean)x->attrBypass);
 	}
@@ -250,7 +250,7 @@ t_max_err balance_setBypass(t_balance *x, void *attr, long argc, t_atom *argv)
 
 t_max_err balance_setFrequency(t_balance *x, void *attr, long argc, t_atom *argv)
 {
-	if(argc){
+	if (argc) {
 		x->attrFrequency = atom_getfloat(argv);
 		x->balance->setAttributeValue(TT("frequency"), x->attrFrequency);
 	}
@@ -265,14 +265,14 @@ void balance_perform64(t_balance *x, t_object *dsp64, double **ins, long numins,
 	TTUInt16	vs = x->audioIn->getVectorSizeAsInt();
 	
 	// We sort audioIn so that all channels of signalA comes first, then all channels of signalB
-	for(i=0; i < numouts; i++){
+	for (i=0; i < numouts; i++) {
 		x->audioIn->setVector(i, vs, ins[i]);
 		x->audioIn->setVector(i+numouts, vs, ins[i+numouts]); 
 	}
 	
 		x->balance->process(*x->audioIn, *x->audioOut);		// Actual balance process
 	
-	for(i=0; i < x->numChannels; i++)
+	for (i=0; i < x->numChannels; i++)
 		x->audioOut->getVectorCopy(i, vs, outs[i]);
 	
 	
@@ -286,10 +286,10 @@ void balance_dsp64(t_balance *x, t_object *dsp64, short *count, double samplerat
 	
 	x->numChannels = 0;
 	x->vs = maxvectorsize;
-	for(i=0; i < x->maxNumChannels; i++){
+	for (i=0; i < x->maxNumChannels; i++) {
 		j = x->maxNumChannels + i;
 		k = x->maxNumChannels*2 + i;
-		if(count[i] && count[j] && count[k])
+		if (count[i] && count[j] && count[k])
 			x->numChannels++;			
 	}
 	

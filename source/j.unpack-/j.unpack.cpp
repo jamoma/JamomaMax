@@ -29,14 +29,14 @@ typedef Unpack* UnpackPtr;
 
 
 // Prototypes for methods
-UnpackPtr	UnpackNew			(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+UnpackPtr	UnpackNew			(SymbolPtr msg, long argc, t_atom* argv);
 void   		UnpackFree			(UnpackPtr self);
 void   		UnpackAssist		(UnpackPtr self, void* b, long msg, long arg, char* dst);
 void		UnpackGraphCallback	(UnpackPtr self, TTValue& arg);
 
 
 // Globals
-static ClassPtr sUnpackClass;
+static t_class* sUnpackClass;
 
 
 /************************************************************************************/
@@ -68,7 +68,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-UnpackPtr UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+UnpackPtr UnpackNew(SymbolPtr msg, long argc, t_atom* argv)
 {
     UnpackPtr	self;
 	TTValue		v, none;
@@ -76,10 +76,10 @@ UnpackPtr UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
     self = UnpackPtr(object_alloc(sUnpackClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
 		self->graphOutlets[0] = outlet_new(self, NULL);
 		
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("graph.output"));
 		v.set(1, TTUInt32(1));
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
@@ -118,7 +118,7 @@ void UnpackAssist(UnpackPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
 		strcpy (dst, "multichannel input and control messages");		
-	else if (msg==2){	// Outlets
+	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "multichannel output");
 		else
@@ -132,8 +132,8 @@ void UnpackGraphCallback(UnpackPtr self, TTValue& arg)
 {
 	TTDictionaryPtr aDictionary = NULL;
 	TTValue			v;
-	AtomCount		ac;
-	AtomPtr			ap;
+	long		ac;
+	t_atom*			ap;
 	TTBoolean		firstItemASymbol = NO;
 	TTSymbol		firstItem;
 	
@@ -141,7 +141,7 @@ void UnpackGraphCallback(UnpackPtr self, TTValue& arg)
 	aDictionary->getValue(v);
 	ac = v.getSize();
 	if (ac) {
-		ap = new Atom[ac];
+		ap = new t_atom[ac];
 		for (int i=0; i<ac; i++) {
 			if (v.getType() == kTypeInt8   ||
 				v.getType() == kTypeUInt8  ||

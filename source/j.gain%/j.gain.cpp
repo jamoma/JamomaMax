@@ -34,12 +34,12 @@ t_jit_err		GainClassInit	(void);
 GainObjectPtr	GainNew			(void);
 void			GainFree		(GainObjectPtr self);
 t_jit_err		GainMatrixCalc	(GainObjectPtr self, void *inputs, void *outputs);
-t_jit_err		GainGetGain		(GainObjectPtr self, Ptr attr, AtomCount* ac, AtomPtr* av);
-t_jit_err		GainSetGain		(GainObjectPtr self, Ptr attr, AtomCount ac, AtomPtr av);
+t_jit_err		GainGetGain		(GainObjectPtr self, Ptr attr, long* ac, t_atom** av);
+t_jit_err		GainSetGain		(GainObjectPtr self, Ptr attr, long ac, t_atom* av);
 
 
 // globals
-static ClassPtr sGainClass = NULL;
+static t_class* sGainClass = NULL;
 
 
 /************************************************************************************/
@@ -135,7 +135,7 @@ t_jit_err GainMatrixCalc(GainObjectPtr self, void *inputs, void *outputs)
 /************************************************************************************/
 // Attribute Accessors
 
-t_jit_err GainGetGain(GainObjectPtr self, Ptr attr, AtomCount* ac, AtomPtr* av)
+t_jit_err GainGetGain(GainObjectPtr self, Ptr attr, long* ac, t_atom** av)
 {
 	TTFloat64 gain;
 	
@@ -143,7 +143,7 @@ t_jit_err GainGetGain(GainObjectPtr self, Ptr attr, AtomCount* ac, AtomPtr* av)
 		; // memory passed-in, use it
 	}
 	else {
-		*av = (AtomPtr)sysmem_newptr(sizeof(Atom));
+		*av = (t_atom*)sysmem_newptr(sizeof(Atom));
 	}
 	*ac = 1;
 	
@@ -153,7 +153,7 @@ t_jit_err GainGetGain(GainObjectPtr self, Ptr attr, AtomCount* ac, AtomPtr* av)
 }
 
 
-t_jit_err GainSetGain(GainObjectPtr self, Ptr attr, AtomCount ac, AtomPtr av)
+t_jit_err GainSetGain(GainObjectPtr self, Ptr attr, long ac, t_atom* av)
 {
 	self->gainObject->setAttributeValue(kTTSym_gain, atom_getfloat(av));
 	return JIT_ERR_NONE;

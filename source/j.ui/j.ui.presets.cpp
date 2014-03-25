@@ -40,7 +40,7 @@ void ui_preset_doread(t_ui *x)
 	char			posixpath[MAX_PATH_CHARS];
 	short 			path;                           // pathID#
     t_fourcc		filetype = 'TEXT', outtype;     // the file type that is actually true
-    ObjectPtr       modelObject;
+    (t_object*)       modelObject;
     t_atom          a[1];
 	
 	if (open_dialog(filename, &path, &outtype, &filetype, 1))		// Returns 0 if successful
@@ -71,13 +71,13 @@ void ui_preset_dowrite(t_ui *x)
 	t_filehandle	file_handle;				// a reference to our file (for opening it, closing it, etc.)
     TTNodePtr       patcherNode;
     TTSymbol        modelClass;
-    ObjectPtr       modelPatcher = NULL;
+    (t_object*)       modelPatcher = NULL;
 	ObjectPtr       modelObject;
     t_atom          a[1];
 	
 	// get model patcher class for preset file name
 	JamomaDirectory->getTTNode(x->modelAddress, &patcherNode);
-	modelPatcher = (ObjectPtr)patcherNode->getContext();
+	modelPatcher = (t_object*)patcherNode->getContext();
 
 	if (modelPatcher) {
 		jamoma_patcher_get_class(modelPatcher, kTTSym_model, modelClass);
@@ -117,7 +117,7 @@ void ui_preset_dowrite(t_ui *x)
 	}
 }
 
-void ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_preset_names(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -125,7 +125,7 @@ void ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
 	
 	if (obj->preset_names)
 		sysmem_freeptr(obj->preset_names);
-	obj->preset_names = (AtomPtr)sysmem_newptr(sizeof(t_atom) * argc);
+	obj->preset_names = (t_atom*)sysmem_newptr(sizeof(t_atom) * argc);
 	
 	for (int i=0; i<argc; i++) {
 		atom_setsym(&obj->preset_names[i], atom_getsym(&argv[i]));
@@ -139,7 +139,7 @@ void ui_preset_interface(t_ui *x)
 	t_fourcc		type;
 	t_fourcc		filetype = 'JSON';
 	t_dictionary*	d;
-	ObjectPtr		p;
+	t_object*		p;
 	t_atom			a;
 	
 	strncpy_zero(filename, "j.preset_interface.maxpat", MAX_FILENAME_CHARS);

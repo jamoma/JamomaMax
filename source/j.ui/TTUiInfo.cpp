@@ -52,7 +52,7 @@ TTErr TTUiInfo::setSize(const TTValue& newValue)
 	rect->width = TTUInt32(newValue[0]);
 	rect->height = TTUInt32(newValue[1]);
     
-	object_attr_set_rect((ObjectPtr)mObject, _sym_presentation_rect, rect);
+	object_attr_set_rect((t_object*)mObject, _sym_presentation_rect, rect);
     
     ui_build(mObject);
 	
@@ -73,7 +73,7 @@ TTErr TTUiInfo::getSize(TTValue& value)
 TTErr TTUiInfo::setFreeze(const TTValue& newValue)
 {
     long		argc = 0;
-	AtomPtr		argv = NULL;
+	t_atom*		argv = NULL;
     TTNodePtr   modelNode;
     TTErr       err;
 	

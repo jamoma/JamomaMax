@@ -170,21 +170,21 @@ void HiMidLow::init()
     /* stability check */
 
     double discriminant = tempb1 * tempb1 + 4.0 * tempb2;
-    if(tempb1 <= -1.9999996)
+    if (tempb1 <= -1.9999996)
         tempb1 = -1.9999996;
-    else if(tempb1 >= 1.9999996)
+    else if (tempb1 >= 1.9999996)
         tempb1 = 1.9999996;
 
-    if(tempb2 <= -0.9999998)
+    if (tempb2 <= -0.9999998)
         tempb2 = -0.9999998;
-    else if(tempb2 >= 0.9999998)
+    else if (tempb2 >= 0.9999998)
         tempb2 = 0.9999998;
 
-    if(discriminant >= 0.0)
+    if (discriminant >= 0.0)
     {
-        if(0.9999998 - tempb1 - tempb2 < 0.0)
+        if (0.9999998 - tempb1 - tempb2 < 0.0)
             tempb2 = 0.9999998 - tempb1;
-        if(0.9999998 + tempb1 - tempb2 < 0.0)
+        if (0.9999998 + tempb1 - tempb2 < 0.0)
             tempb2 = 0.9999998 + tempb1;
     }
 

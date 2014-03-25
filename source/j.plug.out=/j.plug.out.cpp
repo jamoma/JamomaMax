@@ -11,21 +11,21 @@
 
 
 // Prototypes for methods
-PlugOutPtr	PlugOutNew(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+PlugOutPtr	PlugOutNew(t_symbol* msg, long argc, t_atom* argv);
 void	PlugOutFree(PlugOutPtr self);
-MaxErr	PlugOutNotify(PlugOutPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data);
+t_max_err	PlugOutNotify(PlugOutPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data);
 void	PlugOutQFn(PlugOutPtr self);
-void	PlugOutAttachToPatchlinesForPatcher(PlugOutPtr self, ObjectPtr patcher);
+void	PlugOutAttachToPatchlinesForPatcher(PlugOutPtr self, (t_object*) patcher);
 void	PlugOutAssist(PlugOutPtr self, void* b, long msg, long arg, char* dst);
 TTErr	PlugOutSetup(PlugOutPtr self);
-void	PlugOutIterateResetCallback(PlugOutPtr self, ObjectPtr obj);
-void	PlugOutIterateSetupCallback(PlugOutPtr self, ObjectPtr obj);
-MaxErr	PlugOutBuildAudioUnit(PlugOutPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
-MaxErr	PlugOutSetVersion(PlugOutPtr self, void* attr, AtomCount argc, AtomPtr argv);
+void	PlugOutIterateResetCallback(PlugOutPtr self, (t_object*) obj);
+void	PlugOutIterateSetupCallback(PlugOutPtr self, (t_object*) obj);
+t_max_err	PlugOutBuildAudioUnit(PlugOutPtr self, t_symbol* s, long argc, t_atom* argv);
+t_max_err	PlugOutSetVersion(PlugOutPtr self, void* attr, long argc, t_atom* argv);
 
 
 // Globals
-static ClassPtr sPlugOutClass;
+static t_class* sPlugOutClass;
 
 
 /************************************************************************************/
@@ -33,7 +33,7 @@ static ClassPtr sPlugOutClass;
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 
 	TTAudioGraphInit();	
 	common_symbols_init();
@@ -66,14 +66,14 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Life Cycle
 
-PlugOutPtr PlugOutNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+PlugOutPtr PlugOutNew(t_symbol* msg, long argc, t_atom* argv)
 {
     PlugOutPtr	self = PlugOutPtr(object_alloc(sPlugOutClass));
 	TTValue		v;
 	TTErr		err;
 
     if (self) {
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("plugtastic.output"));
 		v.set(1, 2);
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
@@ -113,11 +113,11 @@ void PlugOutFree(PlugOutPtr self)
 /************************************************************************************/
 // Methods bound to input/inlets
 
-MaxErr PlugOutNotify(PlugOutPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data)
+t_max_err PlugOutNotify(PlugOutPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
-			SymbolPtr name = (SymbolPtr)object_method((ObjectPtr)data, _sym_getname);
+			t_symbol* name = (t_symbol*)object_method((t_object*)data, _sym_getname);
 			if (name == _sym_dirty) {
 				qelem_set(self->qelem);
 			}
@@ -127,11 +127,11 @@ MaxErr PlugOutNotify(PlugOutPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr send
 	}
 	else {
 		if (msg == _sym_free) {
-			ObjectPtr	sourceBox;	
-			ObjectPtr	sourceObject;
+			t_object*	sourceBox;	
+			t_object*	sourceObject;
 			long		sourceOutlet;
-			ObjectPtr	destBox;		
-			ObjectPtr	destObject;	
+			t_object*	destBox;		
+			t_object*	destObject;	
 			long		destInlet;
 
 			if (self->patcherview)
@@ -186,10 +186,10 @@ void PlugOutQFn(PlugOutPtr self)
 }
 
 
-void PlugOutAttachToPatchlinesForPatcher(PlugOutPtr self, ObjectPtr patcher)
+void PlugOutAttachToPatchlinesForPatcher(PlugOutPtr self, (t_object*) patcher)
 {
-	ObjectPtr	patchline = object_attr_getobj(patcher, _sym_firstline);
-	ObjectPtr	box = jpatcher_get_firstobject(patcher);
+	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
+	t_object*	box = jpatcher_get_firstobject(patcher);
 
 	while (patchline) {
 		object_attach_byptr_register(self, patchline, _sym_nobox);
@@ -197,10 +197,10 @@ void PlugOutAttachToPatchlinesForPatcher(PlugOutPtr self, ObjectPtr patcher)
 	}
 
 	while (box) {
-		SymbolPtr	classname = jbox_get_maxclass(box);
+		t_symbol*	classname = jbox_get_maxclass(box);
 
 		if (classname == _sym_jpatcher) {
-			ObjectPtr	subpatcher = jbox_get_object(box);
+			t_object*	subpatcher = jbox_get_object(box);
 
 			PlugOutAttachToPatchlinesForPatcher(self, subpatcher);
 		}
@@ -214,8 +214,8 @@ void PlugOutAssist(PlugOutPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)				// Inlets
 		strcpy(dst, "multichannel audio connection and control messages");		
-	else if (msg==2){		// Outlets
-		if(arg == 0)
+	else if (msg==2) {		// Outlets
+		if (arg == 0)
 			strcpy(dst, "stats on DSP graph");
 		else
 			strcpy(dst, "dumpout");	
@@ -226,16 +226,16 @@ void PlugOutAssist(PlugOutPtr self, void* b, long msg, long arg, char* dst)
 
 TTErr PlugOutSetup(PlugOutPtr self)
 {
-	Atom a[2];
+	t_atom a[2];
 	
-	atom_setobj(a+0, ObjectPtr(self->audioGraphObject));
+	atom_setobj(a+0, (t_object*)(self->audioGraphObject));
 	atom_setlong(a+1, 0);
 	outlet_anything(self->audioGraphOutlet, GENSYM("audio.connect"), 2, a);
 	return kTTErrNone;
 }
 
 
-void PlugOutIterateResetCallback(PlugOutPtr self, ObjectPtr obj)
+void PlugOutIterateResetCallback(PlugOutPtr self, (t_object*) obj)
 {
 	TTUInt32	vectorSize;
 	method		audioResetMethod = zgetfn(obj, GENSYM("audio.reset"));
@@ -247,7 +247,7 @@ void PlugOutIterateResetCallback(PlugOutPtr self, ObjectPtr obj)
 }
 
 
-void PlugOutIterateSetupCallback(PlugOutPtr self, ObjectPtr obj)
+void PlugOutIterateSetupCallback(PlugOutPtr self, (t_object*) obj)
 {
 	method audioSetupMethod = zgetfn(obj, GENSYM("audio.setup"));
 
@@ -258,9 +258,9 @@ void PlugOutIterateSetupCallback(PlugOutPtr self, ObjectPtr obj)
 
 TTErr PlugOutBuildGraph(PlugOutPtr self)
 {
-	MaxErr					err;
-	ObjectPtr				patcher = NULL;
-	ObjectPtr				parent = NULL;
+	t_max_err					err;
+	t_object*				patcher = NULL;
+	t_object*				parent = NULL;
 	long					result = 0;
 	
 	err = object_obex_lookup(self, GENSYM("#P"), &patcher);
@@ -280,7 +280,7 @@ TTErr PlugOutBuildGraph(PlugOutPtr self)
 }
 
 
-MaxErr PlugOutDoBuildAudioUnit(PlugOutPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
+t_max_err PlugOutDoBuildAudioUnit(PlugOutPtr self, t_symbol* s, long argc, t_atom* argv)
 {
 	if (self->progressWindow) {
 		object_error(SELF, "Already building a plug-in.  Please wait until the process is complete and try again.");
@@ -294,14 +294,14 @@ MaxErr PlugOutDoBuildAudioUnit(PlugOutPtr self, SymbolPtr s, AtomCount argc, Ato
 }
 
 
-MaxErr PlugOutBuildAudioUnit(PlugOutPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
+t_max_err PlugOutBuildAudioUnit(PlugOutPtr self, t_symbol* s, long argc, t_atom* argv)
 {
 	defer(self, (method)PlugOutDoBuildAudioUnit, s, argc, argv);
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr PlugOutSetVersion(PlugOutPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err PlugOutSetVersion(PlugOutPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		char	str[16];

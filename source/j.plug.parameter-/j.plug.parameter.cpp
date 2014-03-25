@@ -18,8 +18,8 @@ typedef struct PlugParameter {
 	TTGraphObjectBasePtr	graphObject;		// this _must_ be second
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
 	TTDictionaryPtr		    graphDictionary;
-	ObjectPtr			    patcher;
-	ObjectPtr			    patcherview;
+	t_object*			    patcher;
+	t_object*			    patcherview;
 	TTPtr				    qelem;				// for clumping dirty events together
 	
 	SymbolPtr			    name;
@@ -31,22 +31,22 @@ typedef PlugParameter* PlugParameterPtr;
 
 
 // Prototypes for methods
-PlugParameterPtr PlugParameterNew	(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+PlugParameterPtr PlugParameterNew	(SymbolPtr msg, long argc, t_atom* argv);
 void   	PlugParameterFree			(PlugParameterPtr self);
 void	PlugParameterStartTracking	(PlugParameterPtr self);
-MaxErr	PlugParameterNotify			(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data);
+t_max_err	PlugParameterNotify			(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data);
 void	PlugParameterQFn			(PlugParameterPtr self);
 void   	PlugParameterAssist			(PlugParameterPtr self, void* b, long msg, long arg, char* dst);
 void	PlugParameterInt			(PlugParameterPtr self, long value);
 void	PlugParameterFloat			(PlugParameterPtr self, double value);
-MaxErr	PlugParameterSetName(PlugParameterPtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr	PlugParameterSetRange(PlugParameterPtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr	PlugParameterSetStyle(PlugParameterPtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr	PlugParameterSetDefault(PlugParameterPtr self, void* attr, AtomCount argc, AtomPtr argv);
+t_max_err	PlugParameterSetName(PlugParameterPtr self, void* attr, long argc, t_atom* argv);
+t_max_err	PlugParameterSetRange(PlugParameterPtr self, void* attr, long argc, t_atom* argv);
+t_max_err	PlugParameterSetStyle(PlugParameterPtr self, void* attr, long argc, t_atom* argv);
+t_max_err	PlugParameterSetDefault(PlugParameterPtr self, void* attr, long argc, t_atom* argv);
 
 
 // Globals
-static ClassPtr sPlugParameterClass;
+static t_class* sPlugParameterClass;
 
 
 /************************************************************************************/
@@ -96,7 +96,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-PlugParameterPtr PlugParameterNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+PlugParameterPtr PlugParameterNew(SymbolPtr msg, long argc, t_atom* argv)
 {
     PlugParameterPtr self = PlugParameterPtr(object_alloc(sPlugParameterClass));
 	TTValue	v;
@@ -104,10 +104,10 @@ PlugParameterPtr PlugParameterNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	long	attrStart = attr_args_offset(argc, argv);
 	
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("parameter"));
 		v.set(1, TTUInt32(1));
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
@@ -152,11 +152,11 @@ void PlugParameterFree(PlugParameterPtr self)
 
 /************************************************************************************/
 
-MaxErr PlugParameterNotify(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data)
+t_max_err PlugParameterNotify(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
-			SymbolPtr name = (SymbolPtr)object_method((ObjectPtr)data, _sym_getname);
+			SymbolPtr name = (SymbolPtr)object_method((t_object*)data, _sym_getname);
 			if (name == _sym_dirty) {
 				qelem_set(self->qelem);
 			}
@@ -166,11 +166,11 @@ MaxErr PlugParameterNotify(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg, Ob
 	}
 	else {
 		if (msg == _sym_free) {
-			ObjectPtr	sourceBox;  
-			ObjectPtr	sourceObject;
+			t_object*	sourceBox;  
+			t_object*	sourceObject;
 			long		sourceOutlet;
-			ObjectPtr	destBox;     
-			ObjectPtr	destObject;  
+			t_object*	destBox;     
+			t_object*	destObject;  
 			long		destInlet;		
 			
 #ifdef DEBUG_NOTIFICATIONS
@@ -206,30 +206,30 @@ MaxErr PlugParameterNotify(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg, Ob
 }
 
 
-void PlugParameterIterateResetCallback(PlugParameterPtr self, ObjectPtr obj)
+void PlugParameterIterateResetCallback(PlugParameterPtr self, (t_object*) obj)
 {
-	MaxErr err = MAX_ERR_NONE;
+	t_max_err err = MAX_ERR_NONE;
 	method graphResetMethod = zgetfn(obj, GENSYM("graph.reset"));
 	
 	if (graphResetMethod)
-		err = (MaxErr)graphResetMethod(obj);
+		err = (t_max_err)graphResetMethod(obj);
 }
 
 
-void PlugParameterIterateSetupCallback(PlugParameterPtr self, ObjectPtr obj)
+void PlugParameterIterateSetupCallback(PlugParameterPtr self, (t_object*) obj)
 {
-	MaxErr err = MAX_ERR_NONE;
+	t_max_err err = MAX_ERR_NONE;
 	method graphSetupMethod = zgetfn(obj, GENSYM("graph.setup"));
 	
 	if (graphSetupMethod)
-		err = (MaxErr)graphSetupMethod(obj);
+		err = (t_max_err)graphSetupMethod(obj);
 }
 
 
-void PlugParameterAttachToPatchlinesForPatcher(PlugParameterPtr self, ObjectPtr patcher)
+void PlugParameterAttachToPatchlinesForPatcher(PlugParameterPtr self, (t_object*) patcher)
 {
-	ObjectPtr	patchline = object_attr_getobj(patcher, _sym_firstline);
-	ObjectPtr	box = jpatcher_get_firstobject(patcher);
+	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
+	t_object*	box = jpatcher_get_firstobject(patcher);
 	
 	while (patchline) {
 		object_attach_byptr_register(self, patchline, _sym_nobox);
@@ -240,7 +240,7 @@ void PlugParameterAttachToPatchlinesForPatcher(PlugParameterPtr self, ObjectPtr 
 		SymbolPtr	classname = jbox_get_maxclass(box);
 		
 		if (classname == _sym_jpatcher) {
-			ObjectPtr	subpatcher = jbox_get_object(box);
+			t_object*	subpatcher = jbox_get_object(box);
 			
 			PlugParameterAttachToPatchlinesForPatcher(self, subpatcher);
 		}
@@ -269,11 +269,11 @@ void PlugParameterQFn(PlugParameterPtr self)
 // Start keeping track of edits and connections in the patcher
 void PlugParameterStartTracking(PlugParameterPtr self)
 {
-	ObjectPtr	patcher = NULL;
-	ObjectPtr	parent = NULL;
-	ObjectPtr	patcherview = NULL;
-	MaxErr		err;
-	Atom		result;
+	t_object*	patcher = NULL;
+	t_object*	parent = NULL;
+	t_object*	patcherview = NULL;
+	t_max_err		err;
+	t_atom		result;
 	
 	// first find the top-level patcher
 	err = object_obex_lookup(self, GENSYM("#P"), &patcher);
@@ -347,43 +347,43 @@ void PlugParameterFloat(PlugParameterPtr self, double value)
 }
 
 
-MaxErr PlugParameterSetName(PlugParameterPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err PlugParameterSetName(PlugParameterPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->name = atom_getsym(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("name"), TT(self->name->s_name));
+		self->graphObject->mKernel.set(TT("name"), TT(self->name->s_name));
 	}
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr PlugParameterSetRange(PlugParameterPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err PlugParameterSetRange(PlugParameterPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc == 2) {
 		self->range[0] = atom_getfloat(argv+0);
 		self->range[1] = atom_getfloat(argv+1);
-		self->graphObject->mKernel->setAttributeValue(TT("rangeBottom"), self->range[0]);
-		self->graphObject->mKernel->setAttributeValue(TT("rangeTop"), self->range[1]);
+		self->graphObject->mKernel.set(TT("rangeBottom"), self->range[0]);
+		self->graphObject->mKernel.set(TT("rangeTop"), self->range[1]);
 	}
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr PlugParameterSetStyle(PlugParameterPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err PlugParameterSetStyle(PlugParameterPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->style = atom_getsym(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("style"), TT(self->style->s_name));
+		self->graphObject->mKernel.set(TT("style"), TT(self->style->s_name));
 	}
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr PlugParameterSetDefault(PlugParameterPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err PlugParameterSetDefault(PlugParameterPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->defaultValue = atom_getfloat(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("default"), self->defaultValue);
+		self->graphObject->mKernel.set(TT("default"), self->defaultValue);
 	}
 	return MAX_ERR_NONE;
 }

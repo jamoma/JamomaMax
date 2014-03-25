@@ -95,9 +95,9 @@ void* op_new(t_symbol *msg, short argc, t_atom *argv)
 	short		i;
    
     x = (t_op *)object_alloc(s_op_class);
-    if(x){
+    if (x) {
 		x->maxNumChannels = 2;		// An initial argument to this object will set the maximum number of channels
-		if(attrstart && argv)
+		if (attrstart && argv)
 			x->maxNumChannels = atom_getlong(argv);
 
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
@@ -109,7 +109,7 @@ void* op_new(t_symbol *msg, short argc, t_atom *argv)
 				
     	object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x,NULL));	// dumpout	
 	    dsp_setup((t_pxobject *)x, x->maxNumChannels);								// inlets
-		for(i=0; i < x->maxNumChannels; i++)
+		for (i=0; i < x->maxNumChannels; i++)
 			outlet_new((t_pxobject *)x, "signal");									// outlets
 		
 		x->obj.z_misc = Z_NO_INPLACE;
@@ -133,14 +133,14 @@ void op_free(t_op *x)
 // Method for Assistance Messages
 void op_assist(t_op *x, void *b, long msg, long arg, char *dst)
 {
-	if(msg==1) {	// Inlets
-		if(arg == 0)
+	if (msg==1) {	// Inlets
+		if (arg == 0)
 			snprintf(dst, 256, "(signal) input %ld, control messages", arg+1);
 		else 
 			snprintf(dst, 256, "(signal) input %ld", arg+1);
 	}
-	else if(msg==2) // Outlets
-		if(arg == x->maxNumChannels)
+	else if (msg==2) // Outlets
+		if (arg == x->maxNumChannels)
 			strcpy(dst, "dumpout");					
 		else 
 			snprintf(dst, 256, "(signal) processed audio (ch. %ld)", arg+1);  
@@ -158,15 +158,15 @@ t_int *op_perform(t_int *w)
 	short		i, j;
 	TTUInt16	vs = x->audioIn->getVectorSizeAsInt();
 	
-	for(i=0; i<x->numChannels; i++){
+	for (i=0; i<x->numChannels; i++) {
 		j = (i*2) + 1;
 		x->audioIn->setVector(i, vs, (t_float *)w[j+1]);
 	}
 
-	if(!x->obj.z_disabled)
+	if (!x->obj.z_disabled)
 		x->op->process(x->audioIn, x->audioOut);
 
-	for(i=0; i<x->numChannels; i++){
+	for (i=0; i<x->numChannels; i++) {
 		j = (i*2) + 1;
 		x->audioOut->getVector(i, vs, (t_float *)w[j+2]);
 	}
@@ -187,11 +187,11 @@ void op_dsp(t_op *x, t_signal **sp, short *count)
 	
 	x->numChannels = 0;
 	x->vs = 0;
-	for(i=0; i < x->maxNumChannels; i++){
+	for (i=0; i < x->maxNumChannels; i++) {
 		j = x->maxNumChannels + i;
-		if(count[i] && count[j]){
+		if (count[i] && count[j]) {
 			x->numChannels++;
-			if(sp[i]->s_n > x->vs)
+			if (sp[i]->s_n > x->vs)
 				x->vs = sp[i]->s_n;
 				
 			audioVectors[k] = sp[i]->s_vec;
@@ -217,7 +217,7 @@ void op_dsp(t_op *x, t_signal **sp, short *count)
 
 t_max_err op_setOperator(t_op *x, void *attr, long argc, t_atom *argv)
 {
-	if(argc){
+	if (argc) {
 		x->attrOperator = atom_getsym(argv);
 		x->op->setAttributeValue(TT("operator"), TT(x->attrOperator->s_name));
 	}
@@ -227,7 +227,7 @@ t_max_err op_setOperator(t_op *x, void *attr, long argc, t_atom *argv)
 
 t_max_err op_setOperand(t_op *x, void *attr, long argc, t_atom *argv)
 {
-	if(argc){
+	if (argc) {
 		x->attrOperand = atom_getfloat(argv);
 		x->op->setAttributeValue(TT("operand"), x->attrOperand);
 	}
@@ -240,13 +240,13 @@ void op_perform64(t_op *x, t_object *dsp64, double **ins, long numins, double **
 	short		i;
 	TTUInt16	vs = x->audioIn->getVectorSizeAsInt();
 	
-	for(i=0; i<x->numChannels; i++)
+	for (i=0; i<x->numChannels; i++)
 		x->audioIn->setVector(i, vs, ins[i]);
 	
 	
 	x->op->process(x->audioIn, x->audioOut);
 	
-	for(i=0; i<x->numChannels; i++)		
+	for (i=0; i<x->numChannels; i++)		
 		x->audioOut->getVectorCopy(i, vs, outs[i]);
 }
 
@@ -260,9 +260,9 @@ void op_dsp64(t_op *x, t_object *dsp64, short *count, double samplerate, long ma
 	x->numChannels = 0;
 	x->vs = (TTUInt16)maxvectorsize;
 	
-	for(i=0; i < x->maxNumChannels; i++){
+	for (i=0; i < x->maxNumChannels; i++) {
 		j = x->maxNumChannels + i;
-		if(count[i] && count[j])
+		if (count[i] && count[j])
 			x->numChannels++;		
 	}
 	

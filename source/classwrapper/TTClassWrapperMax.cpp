@@ -21,7 +21,7 @@ extern "C" void wrappedClass_receiveNotificationForOutlet(WrappedInstancePtr sel
 static t_hashtab*	wrappedMaxClasses = NULL;
 
 
-ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
+t_object* wrappedClass_new(t_symbol* name, long argc, t_atom* argv)
 {	
 	WrappedClass*		wrappedMaxClass = NULL;
     WrappedInstancePtr	x = NULL;
@@ -31,12 +31,12 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 	TTErr				err = kTTErrNone;
 	
 	// Find the WrappedClass
-	hashtab_lookup(wrappedMaxClasses, name, (ObjectPtr*)&wrappedMaxClass);
+	hashtab_lookup(wrappedMaxClasses, name, (t_object**)&wrappedMaxClass);
 	
 	// If the WrappedClass has a validity check defined, then call the validity check function.
 	// If it returns an error, then we won't instantiate the object.
-	if(wrappedMaxClass){
-		if(wrappedMaxClass->validityCheck)
+	if (wrappedMaxClass) {
+		if (wrappedMaxClass->validityCheck)
 			err = wrappedMaxClass->validityCheck(wrappedMaxClass->validityCheckArgument);
 		else
 			err = kTTErrNone;
@@ -44,12 +44,12 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 	else
 		err = kTTErrGeneric;
 	
-	if(!err)
+	if (!err)
 		x = (WrappedInstancePtr)object_alloc(wrappedMaxClass->maxClass);
-    if(x){
+    if (x) {
 		x->wrappedClassDefinition = wrappedMaxClass;
 		x->maxNumChannels = 2;		// An initial argument to this object will set the maximum number of channels
-		if(attrstart && argv)
+		if (attrstart && argv)
 			x->maxNumChannels = atom_getlong(argv);
 		
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
@@ -90,7 +90,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("additionalSignalInputSetsAttribute"), v)) {
 			x->numControlSignals = v.size();
 			x->controlSignalNames = new TTSymbol[x->numControlSignals];
-			for(TTUInt16 i=0; i<x->numControlSignals; i++){
+			for (TTUInt16 i=0; i<x->numControlSignals; i++) {
 				x->numInputs++;
 				v.get(i, x->controlSignalNames[i]);
 			}
@@ -137,7 +137,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 		  
 		x->obj.z_misc = Z_NO_INPLACE;
 	}
-	return ObjectPtr(x);
+	return (t_object*)x;
 }
 
 
@@ -154,22 +154,22 @@ void wrappedClass_free(WrappedInstancePtr x)
 void wrappedClass_receiveNotificationForOutlet(WrappedInstancePtr self, TTValue& arg)
 {
     TTString	string = arg[0];
-    SymbolPtr   s = gensym((char*)string.c_str());
+    t_symbol*   s = gensym((char*)string.c_str());
     
     outlet_anything(self->controlOutlet, s, 0, NULL);
 }
 
 
-t_max_err wrappedClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, AtomPtr* argv)
+t_max_err wrappedClass_attrGet(TTPtr self, t_object* attr, long* argc, t_atom** argv)
 {
-	SymbolPtr	attrName = (SymbolPtr)object_method(attr, _sym_getname);
+	t_symbol*	attrName = (t_symbol*)object_method(attr, _sym_getname);
 	TTValue		v;
-	AtomCount	i;
+	long	i;
 	WrappedInstancePtr x = (WrappedInstancePtr)self;
 	TTPtr		rawpointer;
-	MaxErr		err;
+	t_max_err		err;
 	
-	err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (ObjectPtr*)&rawpointer);
+	err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (t_object**)&rawpointer);
 	if (err)
 		return err;
 
@@ -182,17 +182,17 @@ t_max_err wrappedClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, Atom
 		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.size());
 
 	for (i=0; i<v.size(); i++) {
-		if(v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64){
+		if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64) {
 			TTFloat64	value;
 			v.get(i, value);
 			atom_setfloat(*argv+i, value);
 		}
-		else if(v[i].type() == kTypeSymbol){
+		else if (v[i].type() == kTypeSymbol) {
 			TTSymbol	value;
 			v.get(i, value);
 			atom_setsym(*argv+i, gensym((char*)value.c_str()));
 		}
-		else{	// assume int
+		else {	// assume int
 			TTInt32		value;
 			v.get(i, value);
 			atom_setlong(*argv+i, value);
@@ -202,29 +202,29 @@ t_max_err wrappedClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, Atom
 }
 
 #ifdef __LP64__
-TTInt64	AtomGetInt(AtomPtr a)
+TTInt64	atom_getlong(t_atom* a)
 {
 	return (TTInt64)atom_getlong(a);
 }
 #else
-int AtomGetInt(AtomPtr a)
+int atom_getlong(t_atom* a)
 {
 	return (int)atom_getlong(a);
 }
 #endif
 
-t_max_err wrappedClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomPtr argv)
+t_max_err wrappedClass_attrSet(TTPtr self, t_object* attr, long argc, t_atom* argv)
 {
 	WrappedInstancePtr x = (WrappedInstancePtr)self;
 	
 	if (argc && argv) {
-		SymbolPtr	attrName = (SymbolPtr)object_method(attr, _sym_getname);
+		t_symbol*	attrName = (t_symbol*)object_method(attr, _sym_getname);
 		TTValue		v;
-		AtomCount	i;
-		MaxErr		err;
+		long	i;
+		t_max_err		err;
 		TTPtr		ptr = NULL;
 		
-		err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (ObjectPtr*)&ptr);
+		err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (t_object**)&ptr);
 		if (err)
 			return err;
 		
@@ -232,14 +232,14 @@ t_max_err wrappedClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomP
 		
 		v.resize(argc);
 		for (i=0; i<argc; i++) {
-			if(atom_gettype(argv+i) == A_LONG)
-				v.set(i, AtomGetInt(argv+i));
-			else if(atom_gettype(argv+i) == A_FLOAT)
+			if (atom_gettype(argv+i) == A_LONG)
+				v.set(i, atom_getlong(argv+i));
+			else if (atom_gettype(argv+i) == A_FLOAT)
 				v.set(i, atom_getfloat(argv+i));
-			else if(atom_gettype(argv+i) == A_SYM)
+			else if (atom_gettype(argv+i) == A_SYM)
 				v.set(i, TT(atom_getsym(argv+i)->s_name));
 			else
-				object_error(ObjectPtr(x), "bad type for attribute setter");
+				object_error((t_object*)x, "bad type for attribute setter");
 		}
 		x->wrappedObject->set(ttAttrName, v);
 		return MAX_ERR_NONE;
@@ -248,44 +248,44 @@ t_max_err wrappedClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomP
 }
 
 
-void wrappedClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
+void wrappedClass_anything(TTPtr self, t_symbol* s, long argc, t_atom* argv)
 {
 	WrappedInstancePtr	x = (WrappedInstancePtr)self;
 	TTSymbol			ttName;
-	MaxErr				err;
+	t_max_err				err;
 	TTValue				v_in;
 	TTValue				v_out;
 	
-	err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, s, (ObjectPtr*)&ttName);
+	err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, s, (t_object**)&ttName);
 	if (err) {
-		object_post(ObjectPtr(x), "no method found for %s", s->s_name);
+		object_post((t_object*)x, "no method found for %s", s->s_name);
 		return;
 	}
 
 	if (argc && argv) {
 		v_in.resize(argc);
-		for (AtomCount i=0; i<argc; i++) {
+		for (long i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v_in.set(i, AtomGetInt(argv+i));
+				v_in.set(i, atom_getlong(argv+i));
 			else if (atom_gettype(argv+i) == A_FLOAT)
 				v_in.set(i, atom_getfloat(argv+i));
 			else if (atom_gettype(argv+i) == A_SYM)
 				v_in.set(i, TT(atom_getsym(argv+i)->s_name));
 			else
-				object_error(ObjectPtr(x), "bad type for message arg");
+				object_error((t_object*)x, "bad type for message arg");
 		}
 	}
 	x->wrappedObject->send(ttName, v_in, v_out);
 		
 	// process the returned value for the dumpout outlet
 	{
-		AtomCount	ac = v_out.size();
+		long	ac = v_out.size();
 
 		if (ac) {
-			AtomPtr		av = (AtomPtr)malloc(sizeof(t_atom) * ac);
+			t_atom*		av = (t_atom*)malloc(sizeof(t_atom) * ac);
 			
-			for (AtomCount i=0; i<ac; i++) {
-				if (v_out[0].type() == kTypeSymbol){
+			for (long i=0; i<ac; i++) {
+				if (v_out[0].type() == kTypeSymbol) {
 					TTSymbol ttSym;
 					v_out.get(i, ttSym);
 					atom_setsym(av+i, gensym((char*)ttSym.c_str()));
@@ -311,10 +311,10 @@ void wrappedClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv
 // Method for Assistance Messages
 void wrappedClass_assist(WrappedInstancePtr self, void *b, long msg, long arg, char *dst)
 {
-	if(msg==1)	{		// Inlets
+	if (msg==1)	{		// Inlets
 		if (arg==0)
 			strcpy(dst, "signal input, control messages"); //leftmost inlet
-		else{ 
+		else { 
 			if (arg > self->numInputs-self->numControlSignals-1)
 				//strcpy(dst, "control signal input");		
 				snprintf(dst, 256, "control signal for \"%s\"", self->controlSignalNames[arg - self->numInputs+1].c_str());
@@ -322,7 +322,7 @@ void wrappedClass_assist(WrappedInstancePtr self, void *b, long msg, long arg, c
 				strcpy(dst, "signal input");		
 		}
 	}
-	else if(msg==2)	{	// Outlets
+	else if (msg==2)	{	// Outlets
 		if (arg < self->numOutputs)
 			strcpy(dst, "signal output");
 		else
@@ -331,7 +331,7 @@ void wrappedClass_assist(WrappedInstancePtr self, void *b, long msg, long arg, c
 }
 
 
-void wrappedClass_perform64(WrappedInstancePtr self, ObjectPtr dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
+void wrappedClass_perform64(WrappedInstancePtr self, t_object* dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
 	TTUInt16 i;
 	//TTUInt16 numChannels = numouts;
@@ -360,7 +360,7 @@ void wrappedClass_perform64(WrappedInstancePtr self, ObjectPtr dsp64, double **i
 }
 
 
-void wrappedClass_dsp64(WrappedInstancePtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags)
+void wrappedClass_dsp64(WrappedInstancePtr self, t_object* dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
 	for (int i=0; i < (self->numInputs + self->numOutputs); i++)
 		self->signals_connected[i] = count[i];
@@ -389,7 +389,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 	WrappedClass*	wrappedMaxClass = NULL;
 	TTSymbol		name;
 	TTCString		nameCString = NULL;
-	SymbolPtr		nameMaxSymbol = NULL;
+	t_symbol*		nameMaxSymbol = NULL;
 	TTUInt32		nameSize = 0;
 	
 	common_symbols_init();
@@ -427,7 +427,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 		strncpy_zero(nameCString, name.c_str(), nameSize+1);
 
 		nameMaxSymbol = gensym(nameCString);
-		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, ObjectPtr(name.rawpointer()));
+		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, (t_object*)name.rawpointer());
 		class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_anything, nameCString, A_GIMME, 0);
 		
 		delete nameCString;
@@ -437,7 +437,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 	o.attributes(v);
 	for (TTUInt16 i=0; i<v.size(); i++) {
 		TTAttributePtr	attr = NULL;
-		SymbolPtr		maxType = _sym_long;
+		t_symbol*		maxType = _sym_long;
 		
 		v.get(i, name);
 		//nameSize = name->getString().length();	// to -- this crash on Windows...
@@ -462,7 +462,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 		else if (attr->type == kTypeSymbol || attr->type == kTypeString)
 			maxType = _sym_symbol;
 		
-		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, ObjectPtr(name.rawpointer()));
+		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, (t_object*)name.rawpointer());
 		class_addattr(wrappedMaxClass->maxClass, attr_offset_new(nameCString, maxType, 0, (method)wrappedClass_attrGet, (method)wrappedClass_attrSet, 0));
 		
 		// Add display styles for the Max 5 inspector
@@ -485,7 +485,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 	if (c)
 		*c = wrappedMaxClass;
 	
-	hashtab_store(wrappedMaxClasses, wrappedMaxClass->maxClassName, ObjectPtr(wrappedMaxClass));
+	hashtab_store(wrappedMaxClasses, wrappedMaxClass->maxClassName, (t_object*)wrappedMaxClass);
 	return kTTErrNone;
 }
 
@@ -537,7 +537,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 
 
 
-TTErr TTValueFromAtoms(TTValue& v, AtomCount ac, AtomPtr av)
+TTErr TTValueFromAtoms(TTValue& v, long ac, t_atom* av)
 {
 	v.clear();
 	
@@ -547,7 +547,7 @@ TTErr TTValueFromAtoms(TTValue& v, AtomCount ac, AtomPtr av)
 	return kTTErrNone;
 }
 
-TTErr TTAtomsFromValue(const TTValue& v, AtomCount* ac, AtomPtr* av)
+TTErr TTAtomsFromValue(const TTValue& v, long* ac, t_atom** av)
 {
 	int	size = v.size();
 	

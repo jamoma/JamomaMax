@@ -203,7 +203,7 @@ void gang_list(t_gang *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	long inletnum = proxy_getinlet((object *)x);
 	short i,n;
-	Atom *ap;
+	t_atom *ap;
 	
 //	if (x->set_by_pp == false) return;	// this has already been set by pp, which takes precedance
 	

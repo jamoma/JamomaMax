@@ -14,7 +14,7 @@
 
 // Data Structure for this object
 typedef struct PlugIn {
-    Object					obj;
+    t_object					obj;
 	TTAudioGraphObjectBasePtr	audioGraphObject;
 	TTPtr					audioGraphOutlet;
 	long					attrSidechain;
@@ -23,15 +23,15 @@ typedef PlugIn* PlugInPtr;
 
 
 // Prototypes for methods
-PlugInPtr	PlugInNew(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+PlugInPtr	PlugInNew(t_symbol* msg, long argc, t_atom* argv);
 void		PlugInFree(PlugInPtr self);
 void		PlugInAssist(PlugInPtr self, void* b, long msg, long arg, char* dst);
 TTErr		PlugInSetup(PlugInPtr self);
-MaxErr		PlugInSetSidechain(PlugInPtr self, TTPtr attr, AtomCount ac, AtomPtr ap);
+t_max_err		PlugInSetSidechain(PlugInPtr self, TTPtr attr, long ac, t_atom* ap);
 
 
 // Globals
-static ClassPtr sPlugInClass;
+static t_class* sPlugInClass;
 
 
 /************************************************************************************/
@@ -39,7 +39,7 @@ static ClassPtr sPlugInClass;
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 
 	TTAudioGraphInit();	
 	common_symbols_init();
@@ -67,14 +67,14 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-PlugInPtr PlugInNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+PlugInPtr PlugInNew(t_symbol* msg, long argc, t_atom* argv)
 {
     PlugInPtr self = PlugInPtr(object_alloc(sPlugInClass));
 	TTValue		v;
 	TTErr		err;
 
     if (self) {
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("plugtastic.input"));
 		v.set(1, TTUInt32(1));
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
@@ -112,18 +112,18 @@ void PlugInAssist(PlugInPtr self, void* b, long msg, long arg, char* dst)
 
 TTErr PlugInSetup(PlugInPtr self)
 {
-	Atom a[2];
+	t_atom a[2];
 	
-	atom_setobj(a+0, ObjectPtr(self->audioGraphObject));
+	atom_setobj(a+0, (t_object*)(self->audioGraphObject));
 	atom_setlong(a+1, 0);
 	outlet_anything(self->audioGraphOutlet, GENSYM("audio.connect"), 2, a);
 	return kTTErrNone;
 }
 
 
-MaxErr PlugInSetSidechain(PlugInPtr self, TTPtr attr, AtomCount ac, AtomPtr ap)
+t_max_err PlugInSetSidechain(PlugInPtr self, TTPtr attr, long ac, t_atom* ap)
 {
 	self->attrSidechain = atom_getlong(ap);
-	self->audioGraphObject->mKernel->setAttributeValue(TT("sidechain"), TTBoolean(self->attrSidechain));
+	self->audioGraphObject->mKernel.set(TT("sidechain"), TTBoolean(self->attrSidechain));
 	return MAX_ERR_NONE;
 }

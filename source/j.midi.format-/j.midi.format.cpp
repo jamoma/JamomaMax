@@ -27,13 +27,13 @@ typedef MidiFormat* MidiFormatPtr;
 
 
 // Prototypes for methods
-MidiFormatPtr	MidiFormatNew		(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+MidiFormatPtr	MidiFormatNew		(t_symbol* msg, long argc, t_atom* argv);
 void			MidiFormatFree		(MidiFormatPtr self);
 void			MidiFormatAssist	(MidiFormatPtr self, void* b, long msg, long arg, char* dst);
 
 
 // Globals
-static ClassPtr sMidiFormatClass;
+static t_class* sMidiFormatClass;
 
 
 /************************************************************************************/
@@ -41,7 +41,7 @@ static ClassPtr sMidiFormatClass;
 
 int TTGRAPH_EXTERNAL_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTGraphInit();	
 	common_symbols_init();
@@ -66,7 +66,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-MidiFormatPtr MidiFormatNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+MidiFormatPtr MidiFormatNew(t_symbol* msg, long argc, t_atom* argv)
 {
     MidiFormatPtr	self;
 	TTValue		v;
@@ -74,10 +74,10 @@ MidiFormatPtr MidiFormatNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
     self = MidiFormatPtr(object_alloc(sMidiFormatClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("midi.format"));
 		v.set(1, TTUInt32(1));
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
@@ -108,7 +108,7 @@ void MidiFormatAssist(MidiFormatPtr self, void* b, long msg, long arg, char* dst
 {
 	if (msg==1)			// Inlets
 		strcpy (dst, "dictionary input and control messages");		
-	else if (msg==2){	// Outlets
+	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "dictionary output");
 		else

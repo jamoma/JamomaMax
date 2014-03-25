@@ -44,7 +44,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void);
  @param argv				Pointer to an array of atoms containing instantiation arguments.
  @return					Pointer to this instance if successfully instantiated.
  */
-PackPtr	PackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+PackPtr	PackNew(t_symbol* msg, long argc, t_atom* argv);
 
 
 /** Called when the object is freed (destroyed), ensuring that memory is properly freed up.
@@ -96,12 +96,12 @@ t_int*	PackPerform(t_int* w);
  @param maxvectorsize
  @param flags
  */
-void	PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags);
-//MaxErr	PackSetGain(PackPtr self, void* attr, AtomCount argc, AtomPtr argv);
+void	PackDsp64(PackPtr self, (t_object*) dsp64, short *count, double samplerate, long maxvectorsize, long flags);
+//t_max_err	PackSetGain(PackPtr self, void* attr, long argc, t_atom* argv);
 
 
 // Globals
-static ClassPtr sInClass;
+static t_class* sInClass;
 
 
 

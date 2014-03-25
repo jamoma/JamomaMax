@@ -22,7 +22,7 @@
 typedef struct extra {
 	
 	TTSymbol    instance;		///< Input instance symbol
-    ObjectPtr   modelOrView;    ///< the j.model or j.view object of our patcher
+    (t_object*)   modelOrView;    ///< the j.model or j.view object of our patcher
 	
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
@@ -42,7 +42,7 @@ void		WrapTTInputClass(WrappedClassPtr c);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				WrappedInputClass_free, in_subscribe
  */
-void		WrappedInputClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
+void		WrappedInputClass_new(TTPtr self, long argc, t_atom* argv);
 
 /** Wrapper for the j.in deconstructor class, called when an instance is destroyed. 
  @param self		Pointer to this object.
@@ -57,7 +57,7 @@ void		WrappedInputClass_free(TTPtr self);
  @param arg			
  @param dst			Pointer to the destination that assistance strings are passed to for display.
  */
-void		in_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst);
+void		in_assist(TTPtr self, TTPtr b, long msg, long arg, char *dst);
 
 /** Associate j.in(~) with NodeLib. This is a prerequisit for communication with other Jamoma object in the module and beyond.  */
 void		in_subscribe(TTPtr self);
@@ -118,10 +118,10 @@ void		in_float(TTPtr self, double value);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				in_bang, in_int, in_float, WrappedInputClass_anything
  */
-void		in_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		in_list(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
 
 /** Method used to pass messages from the module outlet. */
-void		in_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		in_return_signal(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
 #endif
 #endif
 
@@ -132,7 +132,7 @@ void		in_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				in_bang, in_int, in_float, in_list
  */
-void		WrappedInputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		WrappedInputClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
 
 
 #pragma mark -
@@ -193,7 +193,7 @@ void WrapTTInputClass(WrappedClassPtr c)
 #pragma mark -
 #pragma mark Object life
 
-void WrappedInputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
+void WrappedInputClass_new(TTPtr self, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
@@ -222,7 +222,7 @@ void WrappedInputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr));
 		
 #ifdef J_IN_TILDE
-	jamoma_input_create_audio((ObjectPtr)x, &x->wrappedObject);
+	jamoma_input_create_audio((t_object*)x, &x->wrappedObject);
 	 
 	dsp_setup((t_pxobject *)x, 1);	
 	x->obj.z_misc = Z_NO_INPLACE | Z_PUT_FIRST;
@@ -235,14 +235,14 @@ void WrappedInputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
     
 #ifdef J_IN_MULTI
     
-    jamoma_input_create_audio((ObjectPtr)x, &x->wrappedObject);
+    jamoma_input_create_audio((t_object*)x, &x->wrappedObject);
 	
 	x->outlets[0] = outlet_new(x, 0L);
 #endif
 
 #ifndef J_IN_TILDE
 #ifndef J_IN_MULTI
-	jamoma_input_create((ObjectPtr)x, &x->wrappedObject);
+	jamoma_input_create((t_object*)x, &x->wrappedObject);
 	
 	x->outlets[0] = outlet_new(x, 0L);
 #endif
@@ -254,7 +254,7 @@ void WrappedInputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
 	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-	defer_low((ObjectPtr)x, (method)in_subscribe, NULL, 0, NULL);
+	defer_low((t_object*)x, (method)in_subscribe, NULL, 0, NULL);
 }
 
 void WrappedInputClass_free(TTPtr self)
@@ -299,10 +299,10 @@ void in_subscribe(TTPtr self)
     inputAddress = signalAddress.appendAddress(TTAddress("in")).appendInstance(EXTRA->instance);
 
 	// if the subscription is successful
-	if (!jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, inputAddress, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((t_object*)x, x->wrappedObject, inputAddress, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
 		// get patcher
-		x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
+		x->patcherPtr = jamoma_patcher_get((t_object*)x);
 		
 		// update instance symbol in case of duplicate instance
 		EXTRA->instance = returnedAddress.getInstance();
@@ -318,7 +318,7 @@ void in_subscribe(TTPtr self)
 #pragma mark Methods bound to input/inlets
 
 // Method for Assistance Messages
-void in_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst)
+void in_assist(TTPtr self, TTPtr b, long msg, long arg, char *dst)
 {
 	if (msg==1)				// Inlets
 		strcpy(dst, "(signal) input of the model");
@@ -401,7 +401,7 @@ void in_setup(TTPtr self)
     t_atom a[2];
     
     // forward the internal signal out to connect it to any audiograph object below the j.in=
-    atom_setobj(a+0, ObjectPtr(anInput->mSignalOut));
+    atom_setobj(a+0, (t_object*)(anInput->mSignalOut));
     atom_setlong(a+1, 0);
     outlet_anything(x->outlets[signal_out], gensym("audio.connect"), 2, a);
 }
@@ -469,7 +469,7 @@ void in_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		jamoma_input_send(anInput, msg, argc, argv);
 }
 
-void in_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void in_return_signal(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -482,7 +482,7 @@ void in_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 #endif
 #endif
 
-void WrappedInputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void WrappedInputClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTInputPtr	anInput = (TTInputPtr)x->wrappedObject;

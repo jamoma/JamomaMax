@@ -24,32 +24,32 @@ struct Pack {
 	TTGraphObjectBasePtr	graphObject;		// this _must_ be second
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
 	TTDictionaryPtr		    graphDictionary;
-	ObjectPtr			    patcher;
-    ObjectPtr			    patcherview;
+	t_object*			    patcher;
+    t_object*			    patcherview;
 	TTPtr				    qelem;				// for clumping dirty events together
 };
 typedef Pack* PackPtr;
 
 
 // Prototypes for methods
-PackPtr	PackNew			(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+PackPtr	PackNew			(t_symbol* msg, long argc, t_atom* argv);
 void   	PackFree		(PackPtr self);
 void	PackStartTracking(PackPtr self);
-MaxErr	PackNotify		(PackPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data);
+t_max_err	PackNotify		(PackPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data);
 void	PackQFn			(PackPtr self);
 void   	PackAssist		(PackPtr self, void* b, long msg, long arg, char* dst);
 void	PackInt			(PackPtr self, long value);
 void	PackFloat		(PackPtr self, double value);
-void	PackList		(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap);
-void	PackAnything	(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap);
-void	PackMessage		(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap);
-void	PackAttribute	(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap);
+void	PackList		(PackPtr self, t_symbol* s, long ac, t_atom* ap);
+void	PackAnything	(PackPtr self, t_symbol* s, long ac, t_atom* ap);
+void	PackMessage		(PackPtr self, t_symbol* s, long ac, t_atom* ap);
+void	PackAttribute	(PackPtr self, t_symbol* s, long ac, t_atom* ap);
 TTErr  	PackReset		(PackPtr self, long vectorSize);
 TTErr  	PackSetup		(PackPtr self);
 
 
 // Globals
-static ClassPtr sPackClass;
+static t_class* sPackClass;
 
 
 /************************************************************************************/
@@ -57,7 +57,7 @@ static ClassPtr sPackClass;
 
 int TTGRAPH_EXTERNAL_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTGraphInit();	
 	common_symbols_init();
@@ -89,7 +89,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-PackPtr PackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+PackPtr PackNew(t_symbol* msg, long argc, t_atom* argv)
 {
     PackPtr	self;
 	TTValue	v;
@@ -97,10 +97,10 @@ PackPtr PackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
     self = PackPtr(object_alloc(sPackClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("graph.input"));
 		v.set(1, TTUInt32(1));
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
@@ -136,11 +136,11 @@ void PackFree(PackPtr self)
 
 /************************************************************************************/
 
-MaxErr PackNotify(PackPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data)
+t_max_err PackNotify(PackPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
-			SymbolPtr name = (SymbolPtr)object_method((ObjectPtr)data, _sym_getname);
+			t_symbol* name = (t_symbol*)object_method((t_object*)data, _sym_getname);
 			if (name == _sym_dirty) {
 				qelem_set(self->qelem);
 			}
@@ -150,11 +150,11 @@ MaxErr PackNotify(PackPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TT
 	}
 	else {
 		if (msg == _sym_free) {
-			ObjectPtr	sourceBox;  
-			ObjectPtr	sourceObject;
+			t_object*	sourceBox;  
+			t_object*	sourceObject;
 			long		sourceOutlet;
-			ObjectPtr	destBox;     
-			ObjectPtr	destObject;  
+			t_object*	destBox;     
+			t_object*	destObject;  
 			long		destInlet;		
 
 			#ifdef DEBUG_NOTIFICATIONS
@@ -190,30 +190,30 @@ MaxErr PackNotify(PackPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TT
 }
 
 
-void PackIterateResetCallback(PackPtr self, ObjectPtr obj)
+void PackIterateResetCallback(PackPtr self, (t_object*) obj)
 {
-	MaxErr err = MAX_ERR_NONE;
+	t_max_err err = MAX_ERR_NONE;
 	method graphResetMethod = zgetfn(obj, gensym("graph.reset"));
 	
 	if (graphResetMethod)
-		err = (MaxErr)graphResetMethod(obj);
+		err = (t_max_err)graphResetMethod(obj);
 }
 
 
-void PackIterateSetupCallback(PackPtr self, ObjectPtr obj)
+void PackIterateSetupCallback(PackPtr self, (t_object*) obj)
 {
-	MaxErr err = MAX_ERR_NONE;
+	t_max_err err = MAX_ERR_NONE;
 	method graphSetupMethod = zgetfn(obj, gensym("graph.setup"));
 	
 	if (graphSetupMethod)
-		err = (MaxErr)graphSetupMethod(obj);
+		err = (t_max_err)graphSetupMethod(obj);
 }
 
 
-void PackAttachToPatchlinesForPatcher(PackPtr self, ObjectPtr patcher)
+void PackAttachToPatchlinesForPatcher(PackPtr self, (t_object*) patcher)
 {
-	ObjectPtr	patchline = object_attr_getobj(patcher, _sym_firstline);
-	ObjectPtr	box = jpatcher_get_firstobject(patcher);
+	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
+	t_object*	box = jpatcher_get_firstobject(patcher);
 	
 	while (patchline) {
 		object_attach_byptr_register(self, patchline, _sym_nobox);
@@ -221,10 +221,10 @@ void PackAttachToPatchlinesForPatcher(PackPtr self, ObjectPtr patcher)
 	}
 	
 	while (box) {
-		SymbolPtr	classname = jbox_get_maxclass(box);
+		t_symbol*	classname = jbox_get_maxclass(box);
 		
 		if (classname == _sym_jpatcher) {
-			ObjectPtr	subpatcher = jbox_get_object(box);
+			t_object*	subpatcher = jbox_get_object(box);
 			
 			PackAttachToPatchlinesForPatcher(self, subpatcher);
 		}
@@ -253,11 +253,11 @@ void PackQFn(PackPtr self)
 // Start keeping track of edits and connections in the patcher
 void PackStartTracking(PackPtr self)
 {
-	ObjectPtr	patcher = NULL;
-	ObjectPtr	parent = NULL;
-	ObjectPtr	patcherview = NULL;
-	MaxErr		err;
-	Atom		result;
+	t_object*	patcher = NULL;
+	t_object*	parent = NULL;
+	t_object*	patcherview = NULL;
+	t_max_err		err;
+	t_atom		result;
 	
 	// first find the top-level patcher
 	err = object_obex_lookup(self, gensym("#P"), &patcher);
@@ -295,7 +295,7 @@ void PackAssist(PackPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
 		strcpy (dst, "multichannel input and control messages");		
-	else if (msg==2){	// Outlets
+	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "multichannel output");
 		else
@@ -324,11 +324,11 @@ void PackFloat(PackPtr self, double value)
 }
 
 
-void PackList(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap)
+void PackList(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 {
 	TTValue v;
 	
-	v.setSize(ac);
+	v.resize(ac);
 	for (int i=0; i<ac; i++) {
 		switch (atom_gettype(ap+i)) {
 			case A_LONG:
@@ -350,11 +350,11 @@ void PackList(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap)
 }
 
 
-void PackAnything(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap)
+void PackAnything(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 {
 	TTValue v;
 	
-	v.setSize(ac+1);
+	v.resize(ac+1);
 	if (ac > 0) {
 		self->graphDictionary->setSchema(TT("array"));
 		v.set(0, TT(s->s_name));
@@ -384,7 +384,7 @@ void PackAnything(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap)
 }
 
 
-void PackMessage(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap)
+void PackMessage(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 {
 	TTValue v;
 	
@@ -394,7 +394,7 @@ void PackMessage(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap)
 	self->graphDictionary->setSchema(TT("message"));
 	self->graphDictionary->append(TT("name"), TT(atom_getsym(ap)->s_name));
 	
-	v.setSize(ac-1);
+	v.resize(ac-1);
 	if (ac > 2) {
 		
 		for (int i=0; i < ac-1; i++) {
@@ -425,7 +425,7 @@ void PackMessage(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap)
 }
 
 
-void PackAttribute(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap)
+void PackAttribute(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 {
 	TTValue v;
 	
@@ -435,7 +435,7 @@ void PackAttribute(PackPtr self, SymbolPtr s, AtomCount ac, AtomPtr ap)
 	self->graphDictionary->setSchema(TT("attribute"));
 	self->graphDictionary->append(TT("name"), TT(atom_getsym(ap)->s_name));
 	
-	v.setSize(ac-1);
+	v.resize(ac-1);
 	if (ac > 2) {
 		
 		for (int i=0; i < ac-1; i++) {

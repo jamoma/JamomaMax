@@ -18,12 +18,12 @@
 #include "TTDSP.h"
 
 // Prototypes for methods
-ObjectPtr	jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv);
-ObjectPtr	wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv);
+ObjectPtr	jamoma_new(SymbolPtr s, long argc, t_atom* argv);
+ObjectPtr	wrappedClass_new(SymbolPtr name, long argc, t_atom* argv);
 void		wrappedClass_free(WrappedInstancePtr x);
 
 // Globals
-static ClassPtr		s_jamoma_class;
+static t_class*		s_jamoma_class;
 static t_hashtab*	s_jamoma_class_hash = NULL;
 
 /************************************************************************************/
@@ -45,7 +45,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 // Then we wrap that class as a Max class.
 // Finally, we proceed to then instantiate the new Max class instead of the jamoma~ Max class.
 
-ObjectPtr jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
+ObjectPtr jamoma_new(SymbolPtr s, long argc, t_atom* argv)
 {
 	int				attrstart = attr_args_offset(argc, argv);
 	int				i = 0;
@@ -74,7 +74,7 @@ ObjectPtr jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 
 	if (!classWrapper) {
 		wrapTTClassAsMaxClass(className->s_name, maxClassName, &classWrapper);
-		hashtab_store(s_jamoma_class_hash, className, ObjectPtr(classWrapper));
+		hashtab_store(s_jamoma_class_hash, className, (t_object*)(classWrapper));
 	}
 
 	return wrappedClass_new(gensym(maxClassName), argc-1, argv+1);

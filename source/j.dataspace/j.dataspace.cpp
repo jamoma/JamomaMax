@@ -22,9 +22,9 @@ typedef struct _dataspace{
 	Object			ob;
 	TTPtr			outlet_native;
 	TTObjectBasePtr	dataspace;
-	SymbolPtr		attr_dataspace;			// name of the dataspace -- e.g. "temperature"
-	SymbolPtr		attr_dataspace_active;	// name of the current unit within the dataspace -- e.g. "celsius"
-	SymbolPtr		attr_dataspace_native;	// name of the desired native unit within the dataspace -- e.g. "celsius"
+	t_symbol*		attr_dataspace;			// name of the dataspace -- e.g. "temperature"
+	t_symbol*		attr_dataspace_active;	// name of the current unit within the dataspace -- e.g. "celsius"
+	t_symbol*		attr_dataspace_native;	// name of the desired native unit within the dataspace -- e.g. "celsius"
 } t_dataspace;
 
 
@@ -43,7 +43,7 @@ t_max_err	dataspace_setDataspaceNative(t_dataspace *self, void *attr, long argc,
 
 
 // Globals
-static ClassPtr dataspace_class;
+static t_class* dataspace_class;
 
 
 #pragma mark -
@@ -53,7 +53,7 @@ static ClassPtr dataspace_class;
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTFoundationInit();
 	common_symbols_init();
@@ -162,7 +162,7 @@ void dataspace_list(t_dataspace *self, t_symbol *msg, long argc, t_atom *argv)
 {   
 	TTValue v;
 	
-	v.setSize(argc);
+	v.resize(argc);
 	for (int i=0; i<argc; i++)
 		v.set(i, atom_getfloat(argv+i));
 	
@@ -170,7 +170,7 @@ void dataspace_list(t_dataspace *self, t_symbol *msg, long argc, t_atom *argv)
 	self->dataspace->sendMessage(TT("convert"), v, v);
 	
 	argc = v.getSize(); // in case the output list is longer than the input list (e.g. quaternions)
-	AtomPtr rv = new Atom[argc];
+	t_atom* rv = new t_atom[argc];
 	
 	for (int i=0; i<argc; i++)
 		atom_setfloat(rv+i, v.getFloat64(i));
@@ -181,7 +181,7 @@ void dataspace_list(t_dataspace *self, t_symbol *msg, long argc, t_atom *argv)
 
 void dataspace_getDataspaces(t_dataspace *self)
 {
-	Atom	a[2];
+	t_atom	a[2];
 	TTValue	v;
 	
 	atom_setsym(a+0, gensym("clear"));
@@ -201,7 +201,7 @@ void dataspace_getDataspaces(t_dataspace *self)
 
 void dataspace_getUnits(t_dataspace *self)
 {
-	Atom	a[2];
+	t_atom	a[2];
 	TTValue	v;
 	
 	atom_setsym(a+0, gensym("clear"));

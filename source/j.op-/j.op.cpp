@@ -22,22 +22,22 @@ struct Op {
    	Object				    obj;
 	TTGraphObjectBasePtr	graphObject;
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
-	SymbolPtr			    attrOperator;
+	t_symbol*			    attrOperator;
 	TTFloat32			    attrOperand;
 };
 typedef Op* OpPtr;
 
 
 // Prototypes for methods
-OpPtr	OpNew			(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+OpPtr	OpNew			(t_symbol* msg, long argc, t_atom* argv);
 void   	OpFree			(OpPtr self);
 void   	OpAssist		(OpPtr self, void* b, long msg, long arg, char* dst);
-MaxErr 	OpSetOperator	(OpPtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr 	OpSetOperand	(OpPtr self, void* attr, AtomCount argc, AtomPtr argv);
+t_max_err 	OpSetOperator	(OpPtr self, void* attr, long argc, t_atom* argv);
+t_max_err 	OpSetOperand	(OpPtr self, void* attr, long argc, t_atom* argv);
 
 
 // Globals
-static ClassPtr sOpClass;
+static t_class* sOpClass;
 
 
 /************************************************************************************/
@@ -45,7 +45,7 @@ static ClassPtr sOpClass;
 
 int TTGRAPH_EXTERNAL_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTGraphInit();	
 	common_symbols_init();
@@ -77,7 +77,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-OpPtr OpNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+OpPtr OpNew(t_symbol* msg, long argc, t_atom* argv)
 {
     OpPtr	self;
 	TTValue	v;
@@ -85,10 +85,10 @@ OpPtr OpNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
     self = OpPtr(object_alloc(sOpClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("operator"));
 		v.set(1, TTUInt32(1));
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
@@ -119,7 +119,7 @@ void OpAssist(OpPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
 		strcpy (dst, "multichannel input and control messages");		
-	else if (msg==2){	// Outlets
+	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "multichannel output");
 		else
@@ -130,21 +130,21 @@ void OpAssist(OpPtr self, void* b, long msg, long arg, char* dst)
 
 // ATTRIBUTE SETTERS
 
-MaxErr OpSetOperator(OpPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err OpSetOperator(OpPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrOperator = atom_getsym(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("operator"), TT(self->attrOperator->s_name));
+		self->graphObject->mKernel.set(TT("operator"), TT(self->attrOperator->s_name));
 	}
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr OpSetOperand(OpPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err OpSetOperand(OpPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrOperand = atom_getfloat(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("operand"), self->attrOperand);
+		self->graphObject->mKernel.set(TT("operand"), self->attrOperand);
 	}
 	return MAX_ERR_NONE;
 }

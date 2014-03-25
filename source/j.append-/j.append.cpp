@@ -19,25 +19,25 @@
 
 // Data Structure for this object
 struct Append {
-   	Object				    obj;
+   	t_object				   obj;
 	TTGraphObjectBasePtr	graphObject;
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
-	SymbolPtr			    attrKey;
-    SymbolPtr			    attrValue;
+	t_symbol*			    attrKey;
+    t_symbol*			    attrValue;
 };
 typedef Append* AppendPtr;
 
 
 // Prototypes for methods
-AppendPtr	AppendNew		(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+AppendPtr	AppendNew		(t_symbol* msg, long argc, t_atom* argv);
 void		AppendFree		(AppendPtr self);
 void		AppendAssist	(AppendPtr self, void* b, long msg, long arg, char* dst);
-MaxErr		AppendSetKey	(AppendPtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr		AppendSetValue	(AppendPtr self, void* attr, AtomCount argc, AtomPtr argv);
+t_max_err		AppendSetKey	(AppendPtr self, void* attr, long argc, t_atom* argv);
+t_max_err		AppendSetValue	(AppendPtr self, void* attr, long argc, t_atom* argv);
 
 
 // Globals
-static ClassPtr sAppendClass;
+static t_class* sAppendClass;
 
 
 /************************************************************************************/
@@ -45,7 +45,7 @@ static ClassPtr sAppendClass;
 
 int TTGRAPH_EXTERNAL_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTGraphInit();	
 	common_symbols_init();
@@ -76,7 +76,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-AppendPtr AppendNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+AppendPtr AppendNew(t_symbol* msg, long argc, t_atom* argv)
 {
     AppendPtr	self;
 	TTValue		v;
@@ -84,15 +84,15 @@ AppendPtr AppendNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
     self = AppendPtr(object_alloc(sAppendClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("dictionary.append"));
 		v.set(1, TTUInt32(1));
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 
-		if (!self->graphObject->mKernel) {
+		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
@@ -118,7 +118,7 @@ void AppendAssist(AppendPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
 		strcpy (dst, "dictionary input and control messages");		
-	else if (msg==2){	// Outlets
+	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "dictionary output");
 		else
@@ -129,21 +129,21 @@ void AppendAssist(AppendPtr self, void* b, long msg, long arg, char* dst)
 
 // ATTRIBUTE SETTERS
 
-MaxErr AppendSetKey(AppendPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err AppendSetKey(AppendPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrKey = atom_getsym(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("key"), TT(self->attrKey->s_name));
+		self->graphObject->mKernel.set(TT("key"), TT(self->attrKey->s_name));
 	}
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr AppendSetValue(AppendPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err AppendSetValue(AppendPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrValue = atom_getsym(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("value"), TT(self->attrValue->s_name));
+		self->graphObject->mKernel.set(TT("value"), TT(self->attrValue->s_name));
 	}
 	return MAX_ERR_NONE;
 }

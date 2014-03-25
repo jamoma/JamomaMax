@@ -34,7 +34,7 @@ void		WrapTTReceiverClass(WrappedClassPtr c);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				WrappedReceiverClass_free, receive_subscribe
  */
-void		WrappedReceiverClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
+void		WrappedReceiverClass_new(TTPtr self, long argc, t_atom* argv);
 
 /** Wrapper for the j.receive deconstructor class, called when an instance is destroyed. 
  @param self		Pointer to this object.
@@ -54,7 +54,7 @@ void		receive_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 /** Associate j.receive(~) with NodeLib. This is a prerequisit for communication with other Jamoma object in the module and beyond.  */
 void		receive_subscribe(TTPtr self);
 
-void		receive_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		receive_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
 
 #ifdef JCOM_RECEIVE_TILDE
 
@@ -72,8 +72,8 @@ void		receive_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate
 
 #else
 
-void		receive_return_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		receive_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		receive_return_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		receive_return_value(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
 
 /** bang handler for j.receive
  @param self		Pointer to this object
@@ -130,7 +130,7 @@ void WrapTTReceiverClass(WrappedClassPtr c)
 #pragma mark -
 #pragma mark Object life
 
-void WrappedReceiverClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
+void WrappedReceiverClass_new(TTPtr self, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	SymbolPtr					address;
@@ -143,7 +143,7 @@ void WrappedReceiverClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	else
 		address = _sym_nothing;
 	
-	x->address = TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+	x->address = TTAddress(jamoma_parse_dieze((t_object*)x, address)->s_name);
     
     // if the j.receive tries to bind an Output object : bind the signal attribute
 	if (x->address.getName() == TTSymbol("out") || x->address.getName() == TTSymbol("in"))
@@ -154,7 +154,7 @@ void WrappedReceiverClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
 		
 #ifdef JCOM_RECEIVE_TILDE
-		jamoma_receiver_create_audio((ObjectPtr)x, &x->wrappedObject);
+		jamoma_receiver_create_audio((t_object*)x, &x->wrappedObject);
 		
 		dsp_setup((t_pxobject *)x, 1);	
 		x->obj.z_misc = Z_NO_INPLACE | Z_PUT_FIRST;
@@ -162,7 +162,7 @@ void WrappedReceiverClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 		x->outlets[address_out] = outlet_new(x, NULL);					// anything outlet to output address
 		x->outlets[data_out] = outlet_new((t_pxobject *)x, "signal");	// signal outlet to output audio
 #else
-		jamoma_receiver_create((ObjectPtr)x, &x->wrappedObject);
+		jamoma_receiver_create((t_object*)x, &x->wrappedObject);
 		
 		x->outlets[address_out] = outlet_new(x, NULL);					// anything outlet to output address
 		x->outlets[data_out] = outlet_new(x, NULL);						// anything outlet to output data
@@ -179,9 +179,9 @@ void WrappedReceiverClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 		
 		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
 		atom_setsym(a, gensym((char*)x->address.c_str()));
-		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
+		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
         
-        JamomaDebug object_post((ObjectPtr)x, "binds on %s", x->address.c_str());
+        JamomaDebug object_post((t_object*)x, "binds on %s", x->address.c_str());
         
         x->wrappedObject->sendMessage(kTTSym_Get);
         
@@ -191,7 +191,7 @@ void WrappedReceiverClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
 	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-	defer_low((ObjectPtr)x, (method)receive_subscribe, NULL, 0, 0);
+	defer_low((t_object*)x, (method)receive_subscribe, NULL, 0, 0);
 }
 
 void WrappedReceiverClass_free(TTPtr self)
@@ -222,9 +222,9 @@ void receive_subscribe(TTPtr self)
 		return;
 	
 	// for relative address
-	jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
+	jamoma_patcher_get_info((t_object*)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
 	
-	if (!jamoma_subscriber_create((ObjectPtr)x, NULL, TTAddress("model"), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((t_object*)x, NULL, TTAddress("model"), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
 		// get the context address to make
 		// a receiver on the contextAddress/model:address attribute
@@ -241,9 +241,9 @@ void receive_subscribe(TTPtr self)
                 
                 x->wrappedObject->setAttributeValue(kTTSym_address, contextAddress.appendAddress(x->address));
                 atom_setsym(a, gensym((char*)x->address.c_str()));
-                object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
+                object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
                 
-                JamomaDebug object_post((ObjectPtr)x, "binds on %s", contextAddress.appendAddress(x->address).c_str());
+                JamomaDebug object_post((t_object*)x, "binds on %s", contextAddress.appendAddress(x->address).c_str());
                 
                 x->wrappedObject->sendMessage(kTTSym_Get);
                 return;
@@ -270,7 +270,7 @@ void receive_subscribe(TTPtr self)
 		x->wrappedObject->setAttributeValue(kTTSym_address, absoluteAddress);
 		
 		atom_setsym(a, gensym((char*)absoluteAddress.c_str()));
-		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
+		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
         
         x->wrappedObject->sendMessage(kTTSym_Get);
         
@@ -289,18 +289,18 @@ void receive_subscribe(TTPtr self)
 	
 	x->index++; // the index member is usefull to count how many time the external tries to bind
 	if (x->index > 100) {
-		object_error((ObjectPtr)x, "tries to bind too many times on %s", x->address.c_str());
-		object_obex_dumpout((ObjectPtr)x, gensym("error"), 0, NULL);
+		object_error((t_object*)x, "tries to bind too many times on %s", x->address.c_str());
+		object_obex_dumpout((t_object*)x, gensym("error"), 0, NULL);
 		return;
 	}
 	
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
 	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-	defer_low((ObjectPtr)x, (method)receive_subscribe, NULL, 0, 0);
+	defer_low((t_object*)x, (method)receive_subscribe, NULL, 0, 0);
 }
 
-void receive_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void receive_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTAddress                   absoluteAddress;
@@ -314,9 +314,9 @@ void receive_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, Ato
 		x->index = 0; // the index member is usefull to count how many time the external tries to bind
 		
 		atom_setsym(a, gensym((char*)absoluteAddress.c_str()));
-		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
+		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
 		
-		JamomaDebug object_post((ObjectPtr)x, "binds on %s", absoluteAddress.c_str());
+		JamomaDebug object_post((t_object*)x, "binds on %s", absoluteAddress.c_str());
         
         // get the value to refresh it
 		x->wrappedObject->sendMessage(kTTSym_Get);
@@ -324,14 +324,14 @@ void receive_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, Ato
 }
 
 #ifndef JCOM_RECEIVE_TILDE
-void receive_return_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void receive_return_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
 	outlet_anything(x->outlets[address_out], msg, argc, argv);
 }
 
-void receive_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void receive_return_value(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue		v;
@@ -385,16 +385,16 @@ void receive_address(TTPtr self, SymbolPtr address)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     t_atom						a[1];
     
-	x->address =  TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+	x->address =  TTAddress(jamoma_parse_dieze((t_object*)x, address)->s_name);
     
     // for absolute address
 	if (x->address.getType() == kAddressAbsolute) {
 		
 		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
 		atom_setsym(a, gensym((char*)x->address.c_str()));
-		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
+		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
         
-        JamomaDebug object_post((ObjectPtr)x, "binds on %s", x->address.c_str());
+        JamomaDebug object_post((t_object*)x, "binds on %s", x->address.c_str());
         
         x->wrappedObject->sendMessage(kTTSym_Get);
         

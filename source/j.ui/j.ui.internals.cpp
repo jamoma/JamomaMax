@@ -29,10 +29,10 @@ void ui_register_info(t_ui* obj)
     TTObjectBaseInstantiate(TTSymbol("UiInfo"), &(obj->uiInfo), args);
 	
 	// create a ui node with our patcher as context
-	if (!jamoma_subscriber_create((ObjectPtr)obj, obj->uiInfo, TTAddress("ui"), (TTSubscriberPtr*)&obj->uiSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((t_object*)obj, obj->uiInfo, TTAddress("ui"), (TTSubscriberPtr*)&obj->uiSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
         
 		// get info relative to our patcher
-		jamoma_patcher_get_info((ObjectPtr)obj, &obj->patcherPtr, obj->patcherContext, obj->patcherClass, obj->patcherName);
+		jamoma_patcher_get_info((t_object*)obj, &obj->patcherPtr, obj->patcherContext, obj->patcherClass, obj->patcherName);
 		
 		// get the view address from the ui address
 		obj->uiSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
@@ -82,7 +82,7 @@ void ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbac
 	args.append(dataAddress);
 	obj->hash_datas->append(name, args);
 	
-	JamomaDebug object_post((ObjectPtr)obj, "Make internal ui/%s object at : %s", name.c_str(), dataAddress.c_str());
+	JamomaDebug object_post((t_object*)obj, "Make internal ui/%s object at : %s", name.c_str(), dataAddress.c_str());
 }								   
 
 void ui_data_destroy(t_ui *obj, TTSymbol name)
@@ -125,7 +125,7 @@ void ui_data_interface(t_ui *x, TTSymbol name)
 	short			path;
 	t_fourcc		type, filetype = 'JSON';
 	t_dictionary*	d;
-	ObjectPtr		p;
+	t_object*		p;
 	TTAddress address;
 	t_atom			a;
 	
@@ -394,7 +394,7 @@ void ui_explorer_create(ObjectPtr x, TTObjectBasePtr *returnedExplorer, SymbolPt
 	TTObjectBaseInstantiate(kTTSym_Explorer, TTObjectBaseHandle(returnedExplorer), args);
 }
 
-void ui_modelParamExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_modelParamExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	t_symobject	*item = NULL;
@@ -410,7 +410,7 @@ void ui_modelParamExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, A
 	}
 }
 
-void ui_modelMessExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_modelMessExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	t_symobject	*item = NULL;
@@ -426,7 +426,7 @@ void ui_modelMessExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, At
 	}
 }
 
-void ui_modelRetExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_modelRetExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	t_symobject	*item = NULL;
@@ -445,10 +445,10 @@ void ui_modelRetExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, Ato
 void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	t_ui* obj = (t_ui*)self;
-	ObjectPtr	box;
+	t_object*	box;
 	t_outlet*	myoutlet = NULL;
 	t_dll*		connecteds = NULL;
-	ObjectPtr	o;
+	t_object*	o;
 	SymbolPtr	name;
 	TTObjectBasePtr aData;
 	TTValue		v;
@@ -480,7 +480,7 @@ void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	}
 }
 
-void ui_return_metersdefeated(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_metersdefeated(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -488,7 +488,7 @@ void ui_return_metersdefeated(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_mute(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -496,7 +496,7 @@ void ui_return_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_bypass(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -504,7 +504,7 @@ void ui_return_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_mix(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_mix(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -512,7 +512,7 @@ void ui_return_mix(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_gain(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_gain(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -520,7 +520,7 @@ void ui_return_gain(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_freeze(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -528,7 +528,7 @@ void ui_return_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_preview(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui*			obj = (t_ui*)self;
 	TTAddress 		outAdrs;
@@ -583,9 +583,9 @@ void ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
-    ObjectPtr obj = (ObjectPtr)self;
+    (t_object*) obj = (t_object*)self;
     
     // The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
@@ -593,7 +593,7 @@ void ui_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 	defer_low(obj, (method)ui_subscribe, atom_getsym(argv), 0, 0);
 }
 
-void ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_model_init(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui*           obj = (t_ui*)self;
 	long            init = atom_getlong(argv);
@@ -618,7 +618,7 @@ void ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 	}
 }
 
-void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
     t_ui* obj = (t_ui*)self;
 	TTObjectBasePtr anObject;
@@ -815,7 +815,7 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 	}
 }
 
-void ui_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_signal(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	

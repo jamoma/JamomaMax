@@ -16,7 +16,7 @@
 
 #include "j.model.h"
 
-void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_content(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTAddress   modelAdrs;
@@ -214,7 +214,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
     EXTRA->readingContent = NO;
 }
 
-void model_signal_return_data_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_data_mute(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObjectBasePtr aSender;
@@ -230,7 +230,7 @@ void model_signal_return_data_mute(TTPtr self, SymbolPtr msg, AtomCount argc, At
     }
 }
 
-void model_signal_return_data_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_data_bypass(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObjectBasePtr aSender;
@@ -246,7 +246,7 @@ void model_signal_return_data_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, 
     }
 }
 
-void model_signal_return_data_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_data_freeze(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObjectBasePtr aSender;
@@ -262,12 +262,12 @@ void model_signal_return_data_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, 
     }
 }
 
-void model_signal_return_data_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_data_preview(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     // do nothing
 }
 
-void model_signal_return_audio_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_audio_mute(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObjectBasePtr aSender;
@@ -283,7 +283,7 @@ void model_signal_return_audio_mute(TTPtr self, SymbolPtr msg, AtomCount argc, A
     }
 }
 
-void model_signal_return_audio_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_audio_bypass(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObjectBasePtr aSender;
@@ -299,7 +299,7 @@ void model_signal_return_audio_bypass(TTPtr self, SymbolPtr msg, AtomCount argc,
     }
 }
 
-void model_signal_return_audio_mix(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_audio_mix(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObjectBasePtr aSender;
@@ -315,7 +315,7 @@ void model_signal_return_audio_mix(TTPtr self, SymbolPtr msg, AtomCount argc, At
     }
 }
 
-void model_signal_return_audio_gain(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_signal_return_audio_gain(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObjectBasePtr aSender;

@@ -112,18 +112,18 @@ void *fade_new(t_symbol *s, long argc, t_atom *argv)
 	short i;
 	
 	t_fade *x = (t_fade *)object_alloc(s_fade_class);
-	if(x){
+	if (x) {
 		object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x, NULL));	// dumpout
 		
 		x->numChannels = 1;
-		if(attrstart && argv){
+		if (attrstart && argv) {
 			int argument = atom_getlong(argv);
 			x->numChannels = TTClip(argument, 1, MAX_NUM_CHANNELS);
 		}
 		
 		dsp_setup((t_pxobject *)x, (x->numChannels * 2) + 1);	// Create Object and N Inlets (last argument)
 		x->x_obj.z_misc = Z_NO_INPLACE;  					// ESSENTIAL!   		
-		for(i=0; i< (x->numChannels); i++)
+		for (i=0; i< (x->numChannels); i++)
 			outlet_new((t_pxobject *)x, "signal");			// Create a signal Outlet   		
 		
 		//x->xfade = new TTCrossfade(x->numChannels);			// Constructors
@@ -161,16 +161,16 @@ void fade_free(t_fade *x)
 // Method for Assistance Messages
 void fade_assist(t_fade *x, void *b, long msg, long arg, char *dst)
 {
-	if(msg==1){ 	// Inlets
-		if(arg < x->numChannels) 
+	if (msg==1) { 	// Inlets
+		if (arg < x->numChannels) 
 			snprintf(dst, 256, "(signal) Input A - channel %ld", arg + 1); 		
-		else if(arg < x->numChannels*2) 
+		else if (arg < x->numChannels*2) 
 			snprintf(dst, 256, "(signal) Input B - channel %ld", arg - x->numChannels + 1); 
 		else 
 			strcpy(dst, "(float/signal) Crossfade Position");
 	}
-	else if(msg==2){ // Outlets
-		if(arg < x->numChannels) 
+	else if (msg==2) { // Outlets
+		if (arg < x->numChannels) 
 			snprintf(dst, 256, "(signal) Mix between A and B - channel %ld", arg + 1);
 		else 
 			strcpy(dst, "dumpout");
@@ -198,9 +198,9 @@ t_max_err attr_set_position(t_fade *x, void *attr, long argc, t_atom *argv)
 t_max_err attr_set_shape(t_fade *x, void *attr, long argc, t_atom *argv)
 {
 	x->attr_shape = atom_getlong(argv);
-	if(x->attr_shape == 0) 
+	if (x->attr_shape == 0) 
 		x->xfade->setAttributeValue(TT("shape"), TT("equalPower"));
-	else if(x->attr_shape == 2)  
+	else if (x->attr_shape == 2)  
 	    x->xfade->setAttributeValue(TT("shape"), TT("squareRoot"));
 	else
 		x->xfade->setAttributeValue(TT("shape"), TT("linear"));
@@ -213,7 +213,7 @@ t_max_err attr_set_shape(t_fade *x, void *attr, long argc, t_atom *argv)
 t_max_err attr_set_mode(t_fade *x, void *attr, long argc, t_atom *argv)
 {
 	x->attr_mode = atom_getlong(argv);
-	if(x->attr_mode == 0) 
+	if (x->attr_mode == 0) 
 		x->xfade->setAttributeValue(TT("Mode"), TT("lookup"));
 	else 
 		x->xfade->setAttributeValue(TT("Mode"), TT("calculate"));
@@ -230,7 +230,7 @@ t_int *fade_perform1(t_int *w)
 	TTUInt8		numChannels = x->audioIn1->getNumChannelsAsInt();
 	TTUInt16	vs = x->audioIn1->getVectorSizeAsInt();
 	
-	for(i=0; i<numChannels; i++){
+	for (i=0; i<numChannels; i++) {
 		j = (i*3) + 1;
 		x->audioIn1->setVector(i, vs, (t_float *)(w[j+1]));
 		x->audioIn2->setVector(i, vs, (t_float *)(w[j+2]));
@@ -238,7 +238,7 @@ t_int *fade_perform1(t_int *w)
 	
 	x->xfade->process(*x->audioIn1, *x->audioIn2, *x->audioOut);
 	
-	for(i=0; i<numChannels; i++){
+	for (i=0; i<numChannels; i++) {
 		j = (i*3) + 1;
 		x->audioOut->getVector(i, vs, (t_float *)(w[j+3]));
 	}
@@ -252,14 +252,14 @@ void fade_perform64_1(t_fade *x, t_object *dsp64, double **ins, long numins, dou
 	TTUInt8		numChannels = x->audioIn1->getNumChannelsAsInt();
 	TTUInt16	vs = x->audioIn1->getVectorSizeAsInt();
 	
-	for(i=0; i<numChannels; i++){		
+	for (i=0; i<numChannels; i++) {		
 		x->audioIn1->setVector(i, vs, ins[i]);
 		x->audioIn2->setVector(i, vs, ins[i+numChannels]);
 	}
 	
 	x->xfade->process(*x->audioIn1, *x->audioIn2, *x->audioOut);
 	
-	for(i=0; i<numChannels; i++)
+	for (i=0; i<numChannels; i++)
 		x->audioOut->getVectorCopy(i, vs, outs[i]);
 }
 
@@ -271,7 +271,7 @@ t_int *fade_perform2(t_int *w)
 	TTUInt16	numChannels = x->audioIn1->getNumChannelsAsInt();
 	TTUInt16	vs = x->audioIn1->getVectorSizeAsInt();
 	
-	for(i=0; i<numChannels; i++){
+	for (i=0; i<numChannels; i++) {
 		j = (i*3) + 1;
 		x->audioIn1->setVector(i, vs, (t_float *)(w[j+1]));
 		x->audioIn2->setVector(i, vs, (t_float *)(w[j+2]));
@@ -280,7 +280,7 @@ t_int *fade_perform2(t_int *w)
 	
 	x->xfade->process(*x->audioIn1, *x->audioIn2, *x->audioOut);
 	
-	for(i=0; i<numChannels; i++){
+	for (i=0; i<numChannels; i++) {
 		j = (i*3) + 1;
 		x->audioOut->getVector(i, vs, (t_float *)(w[j+3]));
 	}
@@ -295,7 +295,7 @@ void fade_perform64_2(t_fade *x, t_object *dsp64, double **ins, long numins, dou
 	TTUInt16	numChannels = x->audioIn1->getNumChannelsAsInt();
 	TTUInt16	vs = x->audioIn1->getVectorSizeAsInt();
 	
-	for(i=0; i<numChannels; i++){
+	for (i=0; i<numChannels; i++) {
 		x->audioIn1->setVector(i, vs, ins[i]);
 		x->audioIn2->setVector(i, vs, ins[i+numChannels]);
 	}
@@ -304,7 +304,7 @@ void fade_perform64_2(t_fade *x, t_object *dsp64, double **ins, long numins, dou
 	
 	x->xfade->process(*x->audioIn1, *x->audioIn2, *x->audioOut);
 	
-	for(i=0; i<numChannels; i++)
+	for (i=0; i<numChannels; i++)
 		x->audioOut->getVectorCopy(i, vs, outs[i]);
 }
 
@@ -316,7 +316,7 @@ void fade_dsp(t_fade *x, t_signal **sp, short *count)
 	TTUInt8		numChannels = 0;
 	TTUInt16	vs = 0;
 	
-	if(count[x->numChannels * 2])			// SIGNAL RATE CROSSFADE CONNECTED
+	if (count[x->numChannels * 2])			// SIGNAL RATE CROSSFADE CONNECTED
 		audioVectors = (void**)sysmem_newptr(sizeof(void*) * ((x->numChannels * 3) + 2));
 	else									// CONTROL RATE CROSSFADE
 		audioVectors = (void**)sysmem_newptr(sizeof(void*) * ((x->numChannels * 3) + 1));
@@ -324,12 +324,12 @@ void fade_dsp(t_fade *x, t_signal **sp, short *count)
 	l++;
 	
 	// audioVectors[] passed to balance_perform() as {x, audioInL[0], audioInR[0], audioOut[0], audioInL[1], audioInR[1], audioOut[1],...}
-	for(i=0; i < x->numChannels; i++){
+	for (i=0; i < x->numChannels; i++) {
 		j = x->numChannels + i;
 		k = x->numChannels*2 + i + 1;	// + 1 to account for the position input
-		if(count[i] && count[j] && count[k]){
+		if (count[i] && count[j] && count[k]) {
 			numChannels++;
-			if(sp[i]->s_n > vs)
+			if (sp[i]->s_n > vs)
 				vs = sp[i]->s_n;
 			
 			audioVectors[l] = sp[i]->s_vec;
@@ -341,7 +341,7 @@ void fade_dsp(t_fade *x, t_signal **sp, short *count)
 		}
 	}
 	
-	if(count[x->numChannels * 2]){		// SIGNAL RATE CROSSFADE CONNECTED
+	if (count[x->numChannels * 2]) {		// SIGNAL RATE CROSSFADE CONNECTED
 		audioVectors[l] = sp[x->numChannels*2]->s_vec;
 		l++;
 	}
@@ -357,7 +357,7 @@ void fade_dsp(t_fade *x, t_signal **sp, short *count)
 	
 	x->xfade->setAttributeValue(kTTSym_sampleRate, sp[0]->s_sr);
 	
-	if(count[x->numChannels * 2])		// SIGNAL RATE CROSSFADE CONNECTED
+	if (count[x->numChannels * 2])		// SIGNAL RATE CROSSFADE CONNECTED
 		dsp_addv(fade_perform2, l, audioVectors);
 	else
 		dsp_addv(fade_perform1, l, audioVectors);
@@ -371,10 +371,10 @@ void fade_dsp64(t_fade *x, t_object *dsp64, short *count, double samplerate, lon
 	TTUInt8		numChannels = 0;	
 	
 	// audioVectors[] passed to balance_perform() as {x, audioInL[0], audioInR[0], audioOut[0], audioInL[1], audioInR[1], audioOut[1],...}
-	for(i=0; i < x->numChannels; i++){
+	for (i=0; i < x->numChannels; i++) {
 		j = x->numChannels + i;
 		k = x->numChannels*2 + i + 1;	// + 1 to account for the position input
-		if(count[i] && count[j] && count[k])
+		if (count[i] && count[j] && count[k])
 			numChannels++;			
 	}
 	x->audioIn1->setNumChannels(numChannels);
@@ -392,7 +392,7 @@ void fade_dsp64(t_fade *x, t_object *dsp64, short *count, double samplerate, lon
 	
 	x->xfade->setAttributeValue(kTTSym_sampleRate, samplerate);
 	
-	if(count[x->numChannels * 2])		// SIGNAL RATE CROSSFADE CONNECTED
+	if (count[x->numChannels * 2])		// SIGNAL RATE CROSSFADE CONNECTED
 		object_method(dsp64, gensym("dsp_add64"), x, fade_perform64_2, 0, NULL);
 	else
 		object_method(dsp64, gensym("dsp_add64"), x, fade_perform64_1, 0, NULL);

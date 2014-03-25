@@ -52,7 +52,7 @@
 typedef struct _envExp {							///< Data structure for this object
 	t_object 	ob;									///< REQUIRED: Our object
 	void 		*outlet;							///< pointer to outlet. Need one for each outlet
-	Atom 		envelope[NUM_OF_POINTS * 2];		///< array of envelope points in line~ format
+	t_atom 		envelope[NUM_OF_POINTS * 2];		///< array of envelope points in line~ format
 	double 		attr_coeff;							///< exponential coeffisient. Depends on threshold, decay rate and number of points that envelope is made from
 	double 		attr_amplitude;						///< ATTRIBUTE: peak amplitude
 	double 		attr_attack;						///< ATTRIBUTE: attack time in ms

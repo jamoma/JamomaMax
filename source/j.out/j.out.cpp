@@ -42,7 +42,7 @@ void		WrapTTOutputClass(WrappedClassPtr c);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				WrappedOutputClass_free, out_subscribe
  */
-void		WrappedOutputClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
+void		WrappedOutputClass_new(TTPtr self, long argc, t_atom* argv);
 
 /** Wrapper for the j.out deconstructor class, called when an instance is destroyed. 
  @param self		Pointer to this object.
@@ -57,12 +57,12 @@ void		WrappedOutputClass_free(TTPtr self);
  @param arg			
  @param dst			Pointer to the destination that assistance strings are passed to for display.
  */
-void		out_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst);
+void		out_assist(TTPtr self, TTPtr b, long msg, long arg, char *dst);
 
 /** Associate j.out(~) with NodeLib. This is a prerequisit for communication with other Jamoma object in the module and beyond.  */
 void		out_subscribe(TTPtr self);
 
-//TODO :	void out_register_preview(t_out *x, void *preview_object){ x->preview_object = preview_object; }
+//TODO :	void out_register_preview(t_out *x, void *preview_object) { x->preview_object = preview_object; }
 
 #ifdef J_OUT_TILDE
 
@@ -124,7 +124,7 @@ void		out_float(TTPtr self, double value);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				out_bang, out_int, out_float, WrappedOutputClass_anything
  */
-void		out_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		out_list(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
 
 /** anything else handler for j.out 
  @param self		Pointer to this object.
@@ -133,7 +133,7 @@ void		out_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				out_bang, out_int, out_float, out_list
  */
-void		WrappedOutputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		WrappedOutputClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
 
 /** Method used to pass message to the module outlet
  @param self		Pointer to this object.
@@ -141,7 +141,7 @@ void		WrappedOutputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, Ato
  @param argc		The number of arguments passed to the object.
  @param argv		Pointer to an array of atoms passed to the object.
  */
-void		out_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		out_return_signal(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
 
 #endif
 #endif
@@ -206,7 +206,7 @@ void WrapTTOutputClass(WrappedClassPtr c)
 #pragma mark -
 #pragma mark Object life
 
-void WrappedOutputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
+void WrappedOutputClass_new(TTPtr self, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
@@ -232,7 +232,7 @@ void WrappedOutputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr));
 	
 #ifdef J_OUT_TILDE
-	jamoma_output_create_audio((ObjectPtr)x, &x->wrappedObject);
+	jamoma_output_create_audio((t_object*)x, &x->wrappedObject);
 	
 	dsp_setup((t_pxobject *)x, 1);	
 	x->obj.z_misc = Z_NO_INPLACE | Z_PUT_FIRST;
@@ -244,14 +244,14 @@ void WrappedOutputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 #endif
     
 #ifdef J_OUT_MULTI
-    jamoma_output_create_audio((ObjectPtr)x, &x->wrappedObject);
+    jamoma_output_create_audio((t_object*)x, &x->wrappedObject);
 	
 	x->outlets[0] = outlet_new(x, 0L);
 #endif
 
 #ifndef J_OUT_TILDE
 #ifndef J_OUT_MULTI
-	jamoma_output_create((ObjectPtr)x, &x->wrappedObject);
+	jamoma_output_create((t_object*)x, &x->wrappedObject);
 	
 	x->outlets[0] = outlet_new(x, 0L);
 #endif
@@ -263,7 +263,7 @@ void WrappedOutputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
 	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-	defer_low((ObjectPtr)x, (method)out_subscribe, NULL, 0, NULL);
+	defer_low((t_object*)x, (method)out_subscribe, NULL, 0, NULL);
 }
 
 void WrappedOutputClass_free(TTPtr self)
@@ -308,10 +308,10 @@ void out_subscribe(TTPtr self)
     outputAddress = signalAddress.appendAddress(TTAddress("out")).appendInstance(EXTRA->instance);
 	
 	// if the subscription is successful
-	if (!jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, outputAddress, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((t_object*)x, x->wrappedObject, outputAddress, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
 		// get patcher
-		x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
+		x->patcherPtr = jamoma_patcher_get((t_object*)x);
 		
 		// update instance symbol in case of duplicate instance
 		EXTRA->instance = returnedAddress.getInstance();
@@ -327,7 +327,7 @@ void out_subscribe(TTPtr self)
 #pragma mark Methods bound to input/inlets
 
 // Method for Assistance Messages
-void out_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst)
+void out_assist(TTPtr self, TTPtr b, long msg, long arg, char *dst)
 {
 	if (msg==1)				// Inlets
 		strcpy(dst, "(signal) connect to the algorithm");
@@ -398,7 +398,7 @@ void out_setup(TTPtr self)
     t_atom a[2];
     
     // forward the internal signal out to connect it to any audiograph object below the j.out=
-    atom_setobj(a+0, ObjectPtr(anOutput->mSignalOut));
+    atom_setobj(a+0, (t_object*)(anOutput->mSignalOut));
     atom_setlong(a+1, 0);
     outlet_anything(x->outlets[signal_out], gensym("audio.connect"), 2, a);
 }
@@ -452,14 +452,14 @@ void out_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	jamoma_output_send((TTOutputPtr)x->wrappedObject, msg, argc, argv);
 }
 
-void WrappedOutputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void WrappedOutputClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
 	jamoma_output_send((TTOutputPtr)x->wrappedObject, msg, argc, argv);
 }
 
-void out_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void out_return_signal(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
