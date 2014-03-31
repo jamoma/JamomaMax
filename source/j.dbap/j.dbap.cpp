@@ -421,7 +421,7 @@ void dbap_hull(t_dbap *x, long f)
 /** Display a hitmap view of the dbap for a destination and a source weight config or all (on the info outlet ?) */
 void dbap_view(t_dbap *x, void *msg, long argc, t_atom *argv)
 {
-	long dst, src,i ,j;
+	long dst, src,i;
 	t_symbol *all;
 	
 	// clear the view matrix

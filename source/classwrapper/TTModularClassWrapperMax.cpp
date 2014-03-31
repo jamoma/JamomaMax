@@ -111,7 +111,7 @@ t_object* wrappedModularClass_new(t_symbol* name, long argc, t_atom* argv)
 			// handle attribute args
 			attr_args_process(x, argc, argv);
 	}
-	return t_object*(x);
+	return (t_object*)x;
 }
 
 
@@ -224,7 +224,7 @@ t_max_err wrappedModularClass_notify(TTPtr self, t_symbol *s, t_symbol *msg, voi
     
 	if (x->subscriberObject) {
 		x->subscriberObject->getAttributeValue(TTSymbol("context"), v);
-		context = t_object*((TTPtr)v[0]);
+		context = (t_object*)((TTPtr)v[0]);
 		
 		// if the patcher is deleted
 		if (sender == context) {
@@ -817,7 +817,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
                 TTName == TTSymbol("resetBenchmarking"))
                 continue;
             else if ((MaxName = jamoma_TTName_To_MaxName(TTName))) {
-                hashtab_store(wrappedMaxClass->maxNamesToTTNames, MaxName, t_object*(TTName.rawpointer()));
+                hashtab_store(wrappedMaxClass->maxNamesToTTNames, MaxName, (t_object*)(TTName.rawpointer()));
                 class_addmethod(wrappedMaxClass->maxClass, (method)wrappedModularClass_anything, MaxName->s_name, A_GIMME, 0);
             }
 	}
@@ -852,7 +852,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 			else if (attr->type == kTypeLocalValue)
 				maxType = _sym_atom;
 			
-			hashtab_store(wrappedMaxClass->maxNamesToTTNames, MaxName, t_object*(TTName.rawpointer()));
+			hashtab_store(wrappedMaxClass->maxNamesToTTNames, MaxName, (t_object*)(TTName.rawpointer()));
 			class_addattr(wrappedMaxClass->maxClass, attr_offset_new(MaxName->s_name, maxType, 0, (method)wrappedModularClass_attrGet, (method)wrappedModularClass_attrSet, NULL));
 			
 			// Add display styles for the Max 5 inspector
@@ -900,7 +900,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 	if (c)
 		*c = wrappedMaxClass;
 	
-	hashtab_store(wrappedMaxClasses, wrappedMaxClass->maxClassName, t_object*(wrappedMaxClass));
+	hashtab_store(wrappedMaxClasses, wrappedMaxClass->maxClassName, (t_object*)(wrappedMaxClass));
 	return kTTErrNone;
 }
 
@@ -1050,7 +1050,7 @@ TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, t_sym
 	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
 	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
     
-	baton = TValue(TTPtr(x), TTPtr(callbackMethod), deferlow);
+	baton = TTValue(TTPtr(x), TTPtr(callbackMethod), deferlow);
     
 	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
 	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));

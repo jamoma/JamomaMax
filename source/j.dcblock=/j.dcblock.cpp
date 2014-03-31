@@ -94,7 +94,7 @@ DCBlockPtr DCBlockNew(t_symbol* msg, long argc, t_atom* argv)
 		v.set(1, 1.);
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 
-		if (!self->audioGraphObject->getUnitGenerator()) {
+		if (!self->audioGraphObject->getUnitGenerator().valid()) {
 			object_error(SELF, "cannot load JamomaDSP object");
 			return NULL;
 		}
@@ -131,7 +131,7 @@ void DCBlockAssist(DCBlockPtr self, void* b, long msg, long arg, char* dst)
 
 void DCBlockClear(DCBlockPtr self)
 {
-	self->audioGraphObject->getUnitGenerator()->sendMessage(TT("clear"));
+	self->audioGraphObject->getUnitGenerator().send("clear");
 }
 
 
@@ -166,7 +166,7 @@ t_max_err DCBlockSetBypass(DCBlockPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrBypass = atom_getlong(argv);
-		self->audioGraphObject->getUnitGenerator()->setAttributeValue(TT("bypass"), (TTBoolean)self->attrBypass);
+		self->audioGraphObject->getUnitGenerator().set("bypass", (TTBoolean)self->attrBypass);
 	}
 	return MAX_ERR_NONE;
 }

@@ -44,15 +44,12 @@
 
 #else // TT_PLATFORM_MAC
 
-    #define TT_PLATFORM_MAC
     #define JAMOMA_EXPORT_MAXOBJ __attribute__((visibility("default")))
 
     #ifdef JAMOMA_EXPORTS
         #define JAMOMA_EXPORT __attribute__((visibility("default")))
-
     #else
         #define JAMOMA_EXPORT
-
     #endif
 
 #endif
