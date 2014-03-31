@@ -586,7 +586,7 @@ TTErr TTAtomsFromValue(const TTValue& v, long* ac, t_atom** av)
 	than the input matrix, and the Jamoma object cannot change the size of a Jitter matrix.
 */
 
-long TTMatrixReferenceJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix, TTBoolean copy)
+long TTMatrixReferenceJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix, TTBoolean copy)
 {
 	t_jit_matrix_info	jitterMatrixInfo;
 	TTBytePtr			jitterMatrixData;
@@ -598,18 +598,18 @@ long TTMatrixReferenceJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix, T
 	jit_object_method(aJitterMatrix, _sym_getdata, &jitterMatrixData);
 	
 	if (!copy)
-		aTTMatrix->referenceExternalData(jitterMatrixData);
+		aMatrix.referenceExternalData(jitterMatrixData);
 	
 	if (jitterMatrixInfo.type == _sym_char)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_uint8);
+		aMatrix.set(kTTSym_type, kTTSym_uint8);
 	else if (jitterMatrixInfo.type == _sym_long)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_int32);
+		aMatrix.set(kTTSym_type, kTTSym_int32);
 	else if (jitterMatrixInfo.type == _sym_float32)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_float32);
+		aMatrix.set(kTTSym_type, kTTSym_float32);
 	else if (jitterMatrixInfo.type == _sym_float64)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_float64);
+		aMatrix.set(kTTSym_type, kTTSym_float64);
 	
-	aTTMatrix->setAttributeValue(kTTSym_elementCount, (int)jitterMatrixInfo.planecount);
+	aMatrix.set(kTTSym_elementCount, (int)jitterMatrixInfo.planecount);
 	
 	jitterDimensionCount = jitterMatrixInfo.dimcount;
 	dimensions.resize(jitterDimensionCount);
@@ -624,20 +624,20 @@ long TTMatrixReferenceJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix, T
 			dimensions.set(d, (int)jitterMatrixInfo.dim[d]);
 	}
 	
-	aTTMatrix->setAttributeValue(kTTSym_dimensions, dimensions);
-		
+	aMatrix.set(kTTSym_dimensions, dimensions);
+	
 	return jitterMatrixLock;
 }
 
 
 // Assumes jitter matrix is locked, matrix dimensions agree , and we're ready to go 
-TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix)
+TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix)
 {
 	t_jit_matrix_info	jitterMatrixInfo;
 	TTBytePtr			jitterMatrixData;
 	TTValue				dimensions;
 	int					dimcount;
-	TTBytePtr			data = aTTMatrix->getLockedPointer();
+	TTBytePtr			data = aMatrix.getLockedPointer();
 	
 	jit_object_method(aJitterMatrix, _sym_getinfo, &jitterMatrixInfo);
 	jit_object_method(aJitterMatrix, _sym_getdata, &jitterMatrixData);
@@ -649,27 +649,29 @@ TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatri
 	}
 	else if (dimcount == 2) {
 		for (int i=0; i<jitterMatrixInfo.dim[1]; i++) { // step through the jitter matrix by row
-			memcpy(data+(i*jitterMatrixInfo.dim[0] * aTTMatrix->getComponentStride()),
+			memcpy(data+(i*jitterMatrixInfo.dim[0] * aMatrix.getComponentStride()),
 				   jitterMatrixData+(i*jitterMatrixInfo.dimstride[1]), 
 				   jitterMatrixInfo.dimstride[0] * jitterMatrixInfo.dim[0]);
 		}
 	}
 	else {
 		// not supporting other dimcounts yet...
+		aMatrix.releaseLockedPointer();
 		return kTTErrInvalidType;
 	}
+	aMatrix.releaseLockedPointer();
 	return kTTErrNone;
 }
 
 
 // Assumes jitter matrix is locked, matrix dimensions agree , and we're ready to go 
-TTErr TTMatrixCopyDataToJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix)
+TTErr TTMatrixCopyDataToJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix)
 {
 	t_jit_matrix_info	jitterMatrixInfo;
 	TTBytePtr			jitterMatrixData;
 	TTValue				dimensions;
 	int					dimcount;
-	TTBytePtr			data = aTTMatrix->getLockedPointer();
+	TTBytePtr			data = aMatrix.getLockedPointer();
 	
 	jit_object_method(aJitterMatrix, _sym_getinfo, &jitterMatrixInfo);
 	jit_object_method(aJitterMatrix, _sym_getdata, &jitterMatrixData);
@@ -684,13 +686,15 @@ TTErr TTMatrixCopyDataToJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix)
 	else if (dimcount == 2) {
 		for (int i=0; i<jitterMatrixInfo.dim[1]; i++) {  // step through the jitter matrix by row
 			memcpy(jitterMatrixData+(i*jitterMatrixInfo.dimstride[1]), 
-				   data+(i*jitterMatrixInfo.dim[0] * aTTMatrix->getComponentStride()), 
+				   data+(i*jitterMatrixInfo.dim[0] * aMatrix.getComponentStride()), 
 				   jitterMatrixInfo.dimstride[0] * jitterMatrixInfo.dim[0]);
 		}
 	}
 	else {
 		// not supporting other dimcounts yet...
+		aMatrix.releaseLockedPointer();
 		return kTTErrInvalidType;
 	}
+	aMatrix.releaseLockedPointer();
 	return kTTErrNone;
 }
