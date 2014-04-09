@@ -397,9 +397,8 @@ ObjectPtr JAMOMA_EXPORT jamoma_patcher_get(ObjectPtr obj);
  @param patcher
  @param argc					The number of arguments of the message.
  @param argv					Pointer to the array of arguments.
- @return
  */
-long JAMOMA_EXPORT jamoma_patcher_get_args(t_object *patcher, long *argc, t_atom **argv);
+void JAMOMA_EXPORT jamoma_patcher_get_args(t_object *patcher, long *argc, t_atom **argv);
 
 
 /** Get the hierarchy of the patcher : bpatcher, subpatcher or toplevel.
