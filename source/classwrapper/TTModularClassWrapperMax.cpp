@@ -1190,7 +1190,8 @@ void copy_msg_argc_argv(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
     // or resize memory if needed
     else if (x->argc != argc + copyMsg) {
         x->argc = argc + copyMsg;
-        x->argv = (AtomPtr)sysmem_resizeptr(&x->argv, sizeof(t_atom) * x->argc);
+        sysmem_freeptr(x->argv);
+        x->argv = (AtomPtr)sysmem_newptr(sizeof(t_atom) * x->argc);
     }
     
     // copy
