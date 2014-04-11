@@ -960,8 +960,9 @@ TTErr makeInternals_explorer(TTPtr self, TTSymbol name, SymbolPtr callbackMethod
     
     // check the internals do not exist yet
     if (!x->internals->lookup(name, args)) {
-        object_post((ObjectPtr)x, "makeInternals_explorer : \"%s\" internal already exists", name.c_str());
-        return kTTErrGeneric;
+        *returnedExplorer = args[0];
+        JamomaDebug object_post((ObjectPtr)x, "makeInternals_explorer : \"%s\" internal already exists", name.c_str());
+        return kTTErrNone;
     }
 	
 	// prepare arguments
@@ -1001,8 +1002,9 @@ TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolP
     
     // check the internals do not exist yet
     if (!x->internals->lookup(name, args)) {
-        object_post((ObjectPtr)x, "makeInternals_viewer : \"%s\" internal already exists", name.c_str());
-        return kTTErrGeneric;
+        *returnedViewer = args[0];
+        JamomaDebug object_post((ObjectPtr)x, "makeInternals_viewer : \"%s\" internal already exists", name.c_str());
+        return kTTErrNone;
     }
 	
 	// prepare arguments
@@ -1045,8 +1047,9 @@ TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, Symbo
     
     // check the internals do not exist yet
     if (!x->internals->lookup(name, args)) {
-        object_post((ObjectPtr)x, "makeInternals_receiver : \"%s\" internal already exists", name.c_str());
-        return kTTErrGeneric;
+        *returnedReceiver = args[0];
+        JamomaDebug object_post((ObjectPtr)x, "makeInternals_receiver : \"%s\" internal already exists", name.c_str());
+        return kTTErrNone;
     }
 	
 	// prepare arguments
@@ -1093,8 +1096,9 @@ TTErr makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObjec
     
     // check the internals do not exist yet
     if (!x->internals->lookup(name, args)) {
-        object_post((ObjectPtr)x, "makeInternals_sender : \"%s\" internal already exists", name.c_str());
-        return kTTErrGeneric;
+        *returnedSender = args[0];
+        JamomaDebug object_post((ObjectPtr)x, "makeInternals_sender : \"%s\" internal already exists", name.c_str());
+        return kTTErrNone;
     }
 	
 	// no arguments
