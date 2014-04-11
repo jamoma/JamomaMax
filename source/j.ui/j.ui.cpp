@@ -355,8 +355,10 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
         }
         
         // create internal TTPreset to handle model's state
-        if (!x->state)
+        if (!x->state) {
             TTObjectBaseInstantiate(kTTSym_Preset, TTObjectBaseHandle(&x->state), args);
+            x->state->setAttributeValue(kTTSym_Flatten, YES);
+        }
         
         // create internal TTTextHandler to edit model's state via the Max text editor
         if (!x->textHandler) {
