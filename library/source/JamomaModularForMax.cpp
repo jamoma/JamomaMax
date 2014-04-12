@@ -101,7 +101,7 @@ TTErr jamoma_subscriber_create(ObjectPtr x, TTObjectBasePtr aTTObjectBase, TTAdd
                 
 				(*returnedSubscriber)->getAttributeValue(TTSymbol("relativeAddress"), v);
 				newRelativeAddress = v[0];
-				object_warn(x, "Jamoma cannot registers multiple object with the same OSC identifier (%s).  Using %s instead.", relativeAddress.c_str(), newRelativeAddress.c_str());
+				object_warn(x, "Jamoma cannot register multiple objects with the same OSC identifier (%s).  Using %s instead.", relativeAddress.c_str(), newRelativeAddress.c_str());
 			}
             
             // check why a new context instance have been created
