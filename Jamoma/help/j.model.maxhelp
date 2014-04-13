@@ -27,7 +27,8 @@
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
-		"showontab" : 1,
+		"showrootpatcherontab" : 0,
+		"showontab" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
@@ -89,6 +90,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "this model doesn't do anything",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-15",
@@ -105,7 +107,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
+						"rect" : [ 100.0, 126.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -1167,12 +1169,14 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "Emulate the use of lower sample-rates and bit-resolution.",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-12",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 3,
+									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 73.0, 283.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities all"
 								}
@@ -1252,12 +1256,14 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "Emulate the use of lower sample-rates and bit-resolution.",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-5",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 3,
+									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 532.0, 431.5, 237.0, 20.0 ],
 									"text" : "degrade~.model @amenities preset model"
 								}
@@ -1265,12 +1271,14 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "Emulate the use of lower sample-rates and bit-resolution.",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-4",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 3,
+									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 532.0, 280.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities data"
 								}
@@ -1278,12 +1286,14 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "Emulate the use of lower sample-rates and bit-resolution.",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-3",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 3,
+									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 532.0, 199.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities audio"
 								}
@@ -1291,12 +1301,14 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "Emulate the use of lower sample-rates and bit-resolution.",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-2",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 3,
+									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 532.0, 145.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities preset"
 								}
@@ -1304,12 +1316,14 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "Emulate the use of lower sample-rates and bit-resolution.",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-1",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 3,
+									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 73.0, 338.0, 219.0, 20.0 ],
 									"text" : "degrade~.model @amenities none"
 								}
@@ -1365,6 +1379,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"color" : [ 0.619608, 0.0, 0.360784, 0.7 ],
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
@@ -1381,7 +1396,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1185.0, 665.0 ],
+						"rect" : [ 0.0, 26.0, 1185.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1412,8 +1427,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 269.0, 365.0, 50.0, 20.0 ],
-									"presentation_rect" : [ 306.0, 405.0, 0.0, 0.0 ]
+									"patching_rect" : [ 269.0, 365.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -1440,8 +1454,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 269.0, 464.0, 20.0, 20.0 ],
-									"presentation_rect" : [ 427.75, 524.0, 0.0, 0.0 ]
+									"patching_rect" : [ 269.0, 464.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -1468,8 +1481,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 269.0, 416.0, 20.0, 20.0 ],
-									"presentation_rect" : [ 269.0, 523.0, 0.0, 0.0 ]
+									"patching_rect" : [ 269.0, 416.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -3940,6 +3952,35 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"bubble" : 1,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-31",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 228.0, 344.0, 156.0, 24.0 ],
+									"text" : "what does that one do ?"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-29",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 129.0, 347.0, 89.0, 18.0 ],
+									"text" : "model:bypass"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-17",
@@ -3947,8 +3988,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 133.0, 544.0, 180.0, 18.0 ],
-									"text" : "/modelMaxhelp"
+									"patching_rect" : [ 133.0, 609.0, 180.0, 18.0 ],
+									"text" : "/Basic"
 								}
 
 							}
@@ -3961,7 +4002,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 133.0, 478.0, 180.0, 18.0 ],
+									"patching_rect" : [ 133.0, 547.0, 180.0, 18.0 ],
 									"text" : "modelMaxhelp"
 								}
 
@@ -3971,13 +4012,12 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-14",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 133.0, 502.0, 180.0, 33.0 ],
-									"text" : "j.receive /modelMaxhelp/model:address"
+									"patching_rect" : [ 133.0, 578.0, 180.0, 20.0 ],
+									"text" : "j.receive /Basic/model:address"
 								}
 
 							}
@@ -3988,7 +4028,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 133.0, 369.0, 20.0, 20.0 ]
+									"patching_rect" : [ 133.0, 445.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -4015,7 +4055,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 133.0, 287.0, 89.0, 18.0 ],
+									"patching_rect" : [ 129.0, 320.0, 89.0, 18.0 ],
 									"text" : "model:address"
 								}
 
@@ -4025,13 +4065,12 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-3",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 133.0, 436.0, 180.0, 33.0 ],
-									"text" : "j.receive /modelMaxhelp/model:class"
+									"patching_rect" : [ 133.0, 512.0, 180.0, 20.0 ],
+									"text" : "j.receive /Basic/model:class"
 								}
 
 							}
@@ -4040,13 +4079,12 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-11",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 133.0, 396.0, 210.0, 33.0 ],
-									"text" : "j.remote /modelMaxhelp/model:reference/open"
+									"patching_rect" : [ 133.0, 472.0, 210.0, 20.0 ],
+									"text" : "j.remote /Basic/model:reference/open"
 								}
 
 							}
@@ -4056,12 +4094,12 @@
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-10",
-									"linecount" : 3,
+									"linecount" : 5,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 120.0, 222.0, 191.0, 47.0 ],
-									"text" : "Some informations about a model are automatically exposed as j.return under a model level"
+									"patching_rect" : [ 120.0, 222.0, 191.0, 74.0 ],
+									"text" : "Some informations about a model are automatically exposed as read-only attributes (similar to messages in the services world) under a model node"
 								}
 
 							}
@@ -4089,8 +4127,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 120.0, 320.0, 235.0, 47.0 ],
-									"text" : "So it is possible to address them like any other message|return of your model (via j.model or j.send, j.receive or j.remote)"
+									"patching_rect" : [ 120.0, 398.0, 235.0, 47.0 ],
+									"text" : "So it is possible to address them like any other attribute of your model (via j.model or j.send, j.receive or j.remote)"
 								}
 
 							}
@@ -4103,7 +4141,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 133.0, 269.0, 74.0, 18.0 ],
+									"patching_rect" : [ 129.0, 302.0, 74.0, 18.0 ],
 									"text" : "model:class"
 								}
 
@@ -4114,12 +4152,12 @@
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-74",
-									"linecount" : 3,
+									"linecount" : 4,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 120.0, 88.0, 191.0, 47.0 ],
-									"text" : "Some features relative to a model are automatically exposed as j.message under a model level"
+									"patching_rect" : [ 120.0, 66.0, 216.0, 60.0 ],
+									"text" : "Some features relative to a model are automatically exposed as write-only attributes (similar to messages in the services world) under a model node"
 								}
 
 							}
@@ -4157,7 +4195,7 @@
 									"destination" : [ "obj-17", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 142.5, 539.0, 303.5, 539.0 ],
+									"midpoints" : [ 142.5, 603.5, 303.5, 603.5 ],
 									"source" : [ "obj-14", 0 ]
 								}
 
@@ -4167,7 +4205,7 @@
 									"destination" : [ "obj-16", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 142.5, 473.0, 303.5, 473.0 ],
+									"midpoints" : [ 142.5, 540.0, 303.5, 540.0 ],
 									"source" : [ "obj-3", 0 ]
 								}
 
@@ -4205,6 +4243,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"color" : [ 0.619608, 0.0, 0.360784, 0.7 ],
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
@@ -4665,6 +4704,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"color" : [ 0.619608, 0.0, 0.360784, 0.7 ],
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
@@ -5149,6 +5189,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"color" : [ 0.619608, 0.0, 0.360784, 0.7 ],
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
@@ -5459,6 +5500,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"fontname" : "Arial",
 									"fontsize" : 18.0,
 									"id" : "obj-1",
@@ -5496,6 +5538,7 @@
 										"tags" : "",
 										"boxes" : [ 											{
 												"box" : 												{
+													"annotation" : "none",
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-5",
@@ -5875,6 +5918,13 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
+				"name" : "degrade~.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
 				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
