@@ -226,7 +226,8 @@ void remote_subscribe(TTPtr self)
 	TTAddress                   absoluteAddress, returnedAddress;
     TTNodePtr                   returnedNode = NULL;
     TTNodePtr                   returnedContextNode = NULL;
-	TTObjectBasePtr				toSubscribe, anObject;
+	TTObjectBasePtr				anObject;
+    TTErr                       err;
     
     if (x->address == kTTAdrsEmpty)
 		return;
@@ -275,27 +276,28 @@ void remote_subscribe(TTPtr self)
                 x->address.getName() == NO_NAME &&
                 x->address.getInstance() == NO_INSTANCE &&
                 x->address.getAttribute() != NO_ATTRIBUTE)
-                toSubscribe = NULL;
+                err = jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
             
              // if the address refer to the "model" node don't subscribe the Viewer (to not have model.1)
             else if (x->address.getName() == TTSymbol("model"))
-                toSubscribe = NULL;
+                err = jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
             
-            // else try to subscribe the Viewer
-            else toSubscribe = x->wrappedObject;
+            // else try to subscribe the Viewer with its name
+            else
+                err = jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, EXTRA->name, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
             
         }
         // Model patcher case :
         // try to binds on the parameter|message|return of the model without subscribing the Viewer
         else if (x->patcherContext == kTTSym_model)
-            toSubscribe = NULL;
+            err = jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
         
         // Any other case : give up
         else 
             return;
         
         // if the subscription is succesfull
-        if (!jamoma_subscriber_create((ObjectPtr)x, toSubscribe, EXTRA->name, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+        if (!err) {
             
             // get the context address to make
             // a viewer on the contextAddress/model:address attribute

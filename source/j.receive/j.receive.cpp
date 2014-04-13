@@ -384,8 +384,25 @@ void receive_address(TTPtr self, SymbolPtr address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     t_atom						a[1];
+    TTAddress                   newAddress = TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
     
-	x->address =  TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+    // if the former address was relative and the new one is absolute :
+    // we don't need model:address receiver anymore
+    if (x->address.getType() == kAddressRelative &&
+        newAddress.getType() == kAddressAbsolute) {
+        
+        TTValue v;
+        TTErr   err = x->internals->lookup(TTSymbol("/model:address"), v);
+        
+        if (!err) {
+            TTObjectBasePtr aReceiver = v[0];
+            TTObjectBaseRelease(&aReceiver);
+            x->internals->remove(TTSymbol("/model:address"));
+        }
+    }
+    
+    // assign the new address
+	x->address = newAddress;
     
     // for absolute address
 	if (x->address.getType() == kAddressAbsolute) {
