@@ -1,0 +1,193 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red217\green11\blue0;\red255\green39\blue18;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20840\viewh16600\viewkind0
+\deftab720
+\pard\pardeftab720\qj
+
+\f0\i\fs24 \cf0 This document gathers any new features, changes or regressions that each version implies. The 
+\b CURRENT
+\b0  tag concerns the released version currently available online.The 
+\b COMING SOON
+\b0  tag concerns the development version in order to warn you about what is coming next. The versions without tag are old versions to get an history of the changes and to allow you to easily update your work even if you missed some released versions.\
+
+\i0 ________________________________________________________________________________\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+
+\b \cf0 \ul \ulc0 COMING SOON
+\b0  : 0.6.0.a33\
+\
+\pard\pardeftab720\qj
+\cf0 \ulnone ________________________________________________________________________________\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+
+\b \cf0 \ul \ulc0 COMING SOON
+\b0  : 0.6.0.a32\
+\ulnone 	- fixing bug introduces during the workshop\ul \
+\pard\pardeftab720\qj
+\cf0 \ulnone ________________________________________________________________________________\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+
+\b \cf0 \ul \ulc0 COMING SOON
+\b0  : 0.6.0.a31\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+\cf0 \ulnone 	- many modules porting
+\i \
+\pard\pardeftab720\qj
+
+\i0 \cf0 ________________________________________________________________________________\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+
+\b \cf0 \ul \ulc0 COMING SOON
+\b0  : 0.6.0.a30\ulnone \
+	- j.model : setting patcher annotation using model description.\
+	- j.remote : now the j.remote subscribe into the namspace using an optional second argument or using the name of the attached ui object.\
+	- j.remote : attach the ui object using the first, the second or the third outlet.\
+	- j.in(~) : routing j.in(~) incoming messages to the j.model.\
+	- replacing . by _ when using the model name to edit the address. example : if my model is called 
+\b \cf2 foo.bar
+\b0 \cf0 .model it address will be 
+\b \cf2 foo_bar
+\b0 \cf0 .
+\b \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+
+\b0 \cf0 	- \cf2 j.node\cf0  : this is a new external useful to manage the priority of intermediate node that does't refers to any external.\
+\pard\pardeftab720\qj
+\cf0 ________________________________________________________________________________\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+
+\b \cf0 \ul CURRENT
+\b0  : 0.6.0.a29\
+\ulnone \
+	- j.messageArray : now have the same behavior for incoming values than j.parameterArray and j.returnArray.\
+	- \cf2 j.returnArray : now have 3 outlets\cf0 , outputs values on the leftmost outlet and output index on the middle outlet.\
+	- j.receive : when binding on /any/address, the returned address is not anymore /any/address\cf2 :value\cf0  but simply /any/address.\
+	- j.remoteArray : adding a set and a setArray messages in order to only update the parameters but not outputs.\
+	- j.cue : adding a @relative 0|1 attribute to allow cue management relatively to a model address.\
+	- j.map : adding a @input/index to select an index to map into the input value (e.g. the y coordinate of a position parameter).\
+	- j.___Array : in @format array, outputs the @value/default after a array/resize message.\
+	- j.dbap : the external doesn't crash anymore if jitter have not been initialized before.
+\i \
+\
+\pard\pardeftab720\qj
+
+\i0 \cf0 ________________________________________________________________________________\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+\cf0 \ul 0.6.0.a28\
+\ulnone \
+	- j.message : now have the same behavior for incoming values than j.parameter and j.return.\
+	- \cf2 j.return : now have 2 outlets\cf0  and outputs values on the leftmost outlet.\
+	- j.modular for OSC : echo filtering.\
+	- j.cue : namespace selection management now works for remote applications too.\
+	- j.cue : interpolation sends symbol value of the second preset when the position is not 0.\
+	- j.fileLoader : this new abstraction allows to declare a set of standard message/parameter to handle media file loading.\
+	- j.map : improving j.map by adding input and output going down and up notifications (!!! those names will change in a next version !!!).\
+	- j.remote : allowing creation without argument like j.send and j.receive.\
+	- j.remote : highlight state can be handled by a shift+click on the ui object.\
+	- j.remote : adding a set message in order to only update the parameter but not outputs.\
+	- j.namespace : fixing selection for remoteApp:/ address case.\
+	- j.parameterArray : improving the @format array mechanism.\
+	- j.remoteArray : improving the @format array mechanism.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+
+\i \cf0 \
+\pard\pardeftab720\qj
+
+\i0 \cf0 ________________________________________________________________________________\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+\cf0 \ul 0.6.0.a27\
+\ulnone \
+	- j.cue : some renaming have been done :\
+		- 
+\b namespace/grab
+\b0  instead of \cf2 \strike \strikec2 namespace/update\cf0 \strike0\striked0 \
+		- 
+\b optimize
+\b0  instead of \cf2 \strike \strikec2 sequence\cf0 \strike0\striked0 \
+		- to reorder the cue : use 
+\b order 
+\b0 message
+\b  
+\b0 instead of names attribute (even if this attribute is still readable to know the effective order of the cue)\
+	- j.preset : the content is stored by priority then alphabetically.\
+	- j.ramp : function library and parameters and scheduler library and parameters are available.\
+\
+\pard\pardeftab720\qj
+\cf0 ________________________________________________________________________________\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+\cf0 \ul 0.6.0.a26\ulnone \
+	\
+	- j.parameter | j.message | j.return :\
+		- the 
+\b @repetitions/allow 1/0
+\b0  have been replaced by 
+\b @repetitions/filter 0/1
+\b0 \
+\pard\pardeftab720\qj
+\cf0 		
+\i \cf3 Be careful when you'll do massive find and replace, you'll need to do 2 operations :\
+			replace\'a0
+\b @repetitions/allow 0
+\b0 \'a0into 
+\b @repetitions/filter 1
+\b0 \
+\pard\pardeftab720\qj
+
+\b \cf3 			AND
+\b0 \
+			replace\'a0
+\b @repetitions/allow 1
+\b0 \'a0into\'a0
+\b @repetitions/filter 0
+\i0\b0 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+\cf0 		- the 
+\b reset
+\b0  message have been replaced by 
+\b init
+\b0  message for more consistency with j.model.\
+		- a j.parameter initializes himself properly if it is placed under no j.model.\
+	- j.model : initializes himself properly if it placed inside a sub patcher and under no other j.model.\
+	- j.ui : creates a 
+\b ui
+\b0  node with 
+\b :size
+\b0 , 
+\b :freeze
+\b0  and 
+\b :highlight
+\b0  attributes.\
+	- j.cue : the namespace management have been completely redesigned :\
+		- 
+\b namespace/select
+\b0  address1 address2 \'85\
+		- 
+\b namespace/unselect
+\b0  address1 address2 \'85\
+		- 
+\b namespace/update
+\b0  cueName (\cf2 this message was called namespace/select before\cf0 )\
+		- \cf2 \strike \strikec2 namespace/clear\cf0 \strike0\striked0 \
+		- \cf2 \strike \strikec2 namespace/remove\cf0 \strike0\striked0 \
+	- j.cue : allowing a cue to have a name with an "integer" or "decimal" number (the number needs to be quoted)\
+\
+\pard\pardeftab720\qj
+\cf0 ________________________________________________________________________________\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\qj
+\cf0 \ul 0.6.0.a25\
+\ulnone \
+	- j.cue : new update message to update j.parameter's value without reordering a cue.\
+	- j.namespace : fixing strange behavior of the namespace/remove message.\
+	- j.modular : \
+		- new directory/clear message for distant application.\
+		- writing local application namespace only exports node name and object type.\
+	- Minuit protocol : fixing crash and adding a try count mechanism.\
+	- System scheduler : the speed attribute allow to have time stretchable ramp unit.\
+	- JamomaMax.dylib : allow a real dependency of the JamomaModular framework. The JamomaMax.dylib should be copied into the support folder.\
+\
+\
+\
+\
+\
+}
