@@ -123,10 +123,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Ramp to target value
 			</digest>
 			<description>
-				TEXT_HERE
+				Ramp to target value in the defined amount of time
 			</description>
 		</method>
 		<method name="set">
@@ -134,10 +134,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Set to value (without output)
+				Set value (without output)
 			</digest>
 			<description>
-				Set to value (without output)
+				Set j.ramp to value without causing output
 			</description>
 		</method>
 		<method name="slide">
@@ -145,10 +145,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Manually ramp to a target value
 			</digest>
 			<description>
-				TEXT_HERE
+				Manually ramp from last output value to the value defined by the target message
 			</description>
 		</method>
 		<method name="stop">
@@ -165,10 +165,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Set value to be reached by ramp
 			</digest>
 			<description>
-				TEXT_HERE
+				Set value to be reached by ramp when using the slide message
 			</description>
 		</method>
 	</methodlist>
