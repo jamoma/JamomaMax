@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -103,7 +103,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 921.0, 144.0, 180.0, 18.0 ],
-					"text" : "fps 33.376759"
+					"text" : "play 0"
 				}
 
 			}
@@ -311,7 +311,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 141.0, 735.0, 167.0, 41.0 ],
-					"text" : ";\rmax launchbrowser http://jamoma.org/forum.html"
+					"text" : ";\rmax launchbrowser http://jamoma.org/forum"
 				}
 
 			}
@@ -340,7 +340,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 340.0, 353.0, 489.0, 47.0 ],
+					"patching_rect" : [ 340.0, 353.0, 495.0, 47.0 ],
 					"text" : "Here is an intantiation of a movie view : \nthe first argument specifies the model to bind to (equivalent to the model:address attribute) \nthe second (optional) argument defines the address of the view  (here /interface)"
 				}
 
@@ -494,7 +494,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 809.0, 521.0, 265.0, 47.0 ],
+					"patching_rect" : [ 809.0, 521.0, 269.0, 47.0 ],
 					"text" : "Here the movie.model have a j.out so it provides internals data/mute, data/freeze and data/preview parameter."
 				}
 
@@ -539,7 +539,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 479.0, 585.0, 153.0, 18.0 ],
-					"text" : "fps 33.439121"
+					"text" : "play(textbutton) 0"
 				}
 
 			}
@@ -591,6 +591,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "an interface for a movie model",
 					"args" : [ "/player.A", "/interface" ],
 					"id" : "obj-51",
 					"maxclass" : "bpatcher",
@@ -624,7 +625,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 681.0, 155.0, 96.0, 18.0 ],
-					"text" : "fps 33.376759"
+					"text" : "play 0"
 				}
 
 			}
@@ -698,6 +699,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "a movie playback model",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-12",
@@ -904,7 +906,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1281,7 +1283,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 386.0, 155.0, 96.0, 18.0 ],
-					"text" : "fps 33.279354"
+					"text" : "play 0"
 				}
 
 			}
@@ -1355,6 +1357,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "a movie playback model",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-31",
@@ -1865,28 +1868,31 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "movie.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
-				"patcherrelativepath" : "../movie",
+				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/movie",
+				"patcherrelativepath" : "../../../../../../../JamomaUserLibs/GMEA/Max/Picture/movie",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.render.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/renderComponents",
+				"patcherrelativepath" : "../../../../../../../JamomaUserLibs/GMEA/Max/Picture/renderComponents",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "movie.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
-				"patcherrelativepath" : "../movie",
+				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/movie",
+				"patcherrelativepath" : "../../../../../../../JamomaUserLibs/GMEA/Max/Picture/movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "basicView.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/patches",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/patches",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.model.mxo",
@@ -1909,6 +1915,14 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
@@ -1917,15 +1931,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
  ]
