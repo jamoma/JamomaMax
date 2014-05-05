@@ -2,14 +2,14 @@
 <jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
  <!--Conversion table-->
  <conversionTable>
-  <entry App="value/default" TT="valueDefault"/>
-  <entry App="value/stepsize" TT="valueStepsize"/>
-  <entry App="range/clipmode" TT="rangeClipmode"/>
+  <entry App="default" TT="valueDefault"/>
+  <entry App="stepsize" TT="valueStepsize"/>
+  <entry App="rclipmode" TT="rangeClipmode"/>
   <entry App="ramp/drive" TT="rampDrive"/>
   <entry App="repetitions/filter" TT="repetitionsFilter"/>
   <entry App="ramp/function" TT="rampFunction"/>
   <entry App="ramp/function/parameters" TT="rampFunctionParameters"/>
-  <entry App="range/bounds" TT="rangeBounds"/>
+  <entry App="range" TT="rangeBounds"/>
   <entry App="ramp/status" TT="rampStatus"/>
   <entry App="dataspace/unit" TT="dataspaceUnit"/>
   <entry App="j.parameter" TT="Data service parameter"/>
