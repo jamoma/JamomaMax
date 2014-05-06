@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 134.0, 69.0, 969.0, 827.0 ],
+		"rect" : [ 100.0, 100.0, 969.0, 827.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -27,7 +27,8 @@
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
-		"showontab" : 1,
+		"showrootpatcherontab" : 0,
+		"showontab" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Verdana",
@@ -104,7 +105,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 134.0, 95.0, 969.0, 801.0 ],
+						"rect" : [ 100.0, 126.0, 969.0, 801.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -471,20 +472,6 @@
 								}
 
 							}
-, 							{
-								"box" : 								{
-									"attr" : "mute",
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-2",
-									"maxclass" : "attrui",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 156.0, 481.0, 150.0, 20.0 ]
-								}
-
-							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
@@ -639,15 +626,6 @@
 									"hidden" : 0,
 									"midpoints" : [ 165.5, 442.5, 376.5, 442.5 ],
 									"source" : [ "obj-19", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-2", 0 ]
 								}
 
 							}
@@ -976,10 +954,10 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-22::obj-8" : [ "radiogroup", "radiogroup", 0 ],
-			"obj-22::obj-17" : [ "radiogroup[1]", "radiogroup[1]", 0 ],
+			"obj-22::obj-27" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-22::obj-28" : [ "live.gain~[1]", "live.gain~", 0 ],
-			"obj-22::obj-27" : [ "live.gain~", "live.gain~", 0 ]
+			"obj-22::obj-17" : [ "radiogroup[1]", "radiogroup[1]", 0 ],
+			"obj-22::obj-8" : [ "radiogroup", "radiogroup", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{

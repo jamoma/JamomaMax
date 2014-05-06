@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		A7AB3C941918BFD900BB07F8 /* j.mutesolo~.maxref.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.mutesolo~.maxref.yml"; sourceTree = "<group>"; };
 		A7F595E1183EB6E2004B4C73 /* j.mutesolo~.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.mutesolo~.yml"; sourceTree = "<group>"; };
 		A7F595E2183EB6E7004B4C73 /* j.mutesolo~.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "j.mutesolo~.cpp"; sourceTree = "<group>"; };
 		A7F595E3183EB6F7004B4C73 /* classwrapper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = classwrapper; path = ../classwrapper; sourceTree = "<group>"; };
@@ -17,6 +18,7 @@
 			isa = PBXGroup;
 			children = (
 				A7F595E1183EB6E2004B4C73 /* j.mutesolo~.yml */,
+				A7AB3C941918BFD900BB07F8 /* j.mutesolo~.maxref.yml */,
 				A7F595E2183EB6E7004B4C73 /* j.mutesolo~.cpp */,
 				A7F595E3183EB6F7004B4C73 /* classwrapper */,
 			);
