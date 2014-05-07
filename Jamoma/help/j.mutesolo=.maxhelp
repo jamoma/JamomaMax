@@ -129,13 +129,29 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-9",
+									"hidden" : 1,
+									"id" : "obj-30",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 615.0, 180.0, 60.0, 20.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"hidden" : 1,
+									"id" : "obj-13",
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 79.0, 569.0, 239.0, 18.0 ],
-									"text" : "getChannelSolo 1. 1. 1. 1. 1. 1. 1. 1."
+									"patching_rect" : [ 615.0, 208.0, 107.0, 18.0 ],
+									"text" : "set 0 0 0 0 0 0 0 0"
 								}
 
 							}
@@ -439,7 +455,7 @@
 									}
 ,
 									"size" : 8,
-									"values" : [ 1, 1, 1, 1, 1, 1, 1, 1 ],
+									"values" : [ 0, 0, 0, 0, 0, 0, 0, 0 ],
 									"varname" : "radiogroup[1]"
 								}
 
@@ -495,7 +511,7 @@
 									}
 ,
 									"size" : 8,
-									"values" : [ 1, 1, 1, 1, 1, 1, 1, 1 ],
+									"values" : [ 0, 0, 0, 0, 0, 0, 0, 0 ],
 									"varname" : "radiogroup"
 								}
 
@@ -535,15 +551,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-9", 1 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-1", 1 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-12", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -557,6 +564,24 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-12", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-13", 0 ]
 								}
 
 							}
@@ -965,6 +990,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-30", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-14", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1023,9 +1057,9 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-22::obj-17" : [ "radiogroup[1]", "radiogroup[1]", 0 ],
 			"obj-22::obj-27" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-22::obj-28" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-22::obj-17" : [ "radiogroup[1]", "radiogroup[1]", 0 ],
 			"obj-22::obj-8" : [ "radiogroup", "radiogroup", 0 ]
 		}
 ,
