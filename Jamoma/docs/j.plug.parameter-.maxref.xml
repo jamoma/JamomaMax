@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<c74object name='j.plug.parameter'>
+  <digest>
+    Define a parameter to be controlled in the host environment
+  </digest>
+  <description>
+    The <o>plug.parameter#</o> defines a parameter to be controlled in the host
+    environment. It outputs a Jamoma dictionary to be connected other Graph or
+    AudioGraph objects. 
+  </description>
+  <metadatalist>
+    <metadata name='author'>
+      74 Objects
+    </metadata>
+    <metadata name='tag'>
+      Jamoma
+    </metadata>
+    <metadata name='tag'>
+      Plugtastic
+    </metadata>
+    <metadata name='tag'>
+      Environment
+    </metadata>
+  </metadatalist>
+  <attributelist>
+    <attribute get='1' name='name' size='1' set='1' type='symbol'>
+      <digest>
+        The name of the parameter.
+      </digest>
+      <description>
+        The name of the parameter.
+      </description>
+    </attribute>
+    <attribute get='1' name='range' size='1' set='1' type='list'>
+      <digest>
+        The numerical range covered by the parameter.
+      </digest>
+      <description>
+        The numerical range covered by the parameter.
+      </description>
+    </attribute>
+    <attribute get='1' name='style' size='1' set='1' type='symbol'>
+      <digest>
+        Indicates special treatment for the parameter for ui generation
+      </digest>
+      <description>
+        Indicates special treatment for the parameter for ui generation
+      </description>
+    </attribute>
+    <attribute get='1' name='default' size='1' set='1' type='float'>
+      <digest>
+        Specifies a default value for the parameter.
+      </digest>
+      <description>
+        Specifies a default value for the parameter.
+      </description>
+    </attribute>
+  </attributelist>
+  <methodlist>
+    <method name='int'>
+      <digest>
+        Set the value of the parameter.
+      </digest>
+      <description>
+        Set the value of the parameter.
+      </description>
+    </method>
+    <method name='float'>
+      <digest>
+        Set the value of the parameter.
+      </digest>
+      <description>
+        Set the value of the parameter.
+      </description>
+    </method>
+  </methodlist>
+  <seealsolist>
+    <seealso name='plug.in='/>
+    <seealso name='plug.out='/>
+  </seealsolist>
+  <misc name='Output'/>
+</c74object>

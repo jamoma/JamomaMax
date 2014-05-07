@@ -60,8 +60,8 @@ TTErr jamoma_subscriber_create(ObjectPtr x, TTObjectBasePtr aTTObjectBase, TTAdd
 {
 	TTValue			v, args;
 	TTList			aContextList;
-	TTAddress		newRelativeAddress;
-	TTBoolean		newInstance;
+	TTAddress		newRelativeAddress, newContextAddress;
+	TTBoolean		newInstance, newContextInstance;
     TTErr           err;
 		
 	// prepare arguments
@@ -91,11 +91,64 @@ TTErr jamoma_subscriber_create(ObjectPtr x, TTObjectBasePtr aTTObjectBase, TTAdd
 			// Is a new instance have been created ?
 			(*returnedSubscriber)->getAttributeValue(TTSymbol("newInstanceCreated"), v);
 			newInstance = v[0];
+            
+            // Is a new context instance have been created ?
+			(*returnedSubscriber)->getAttributeValue(TTSymbol("newContextInstanceCreated"), v);
+			newContextInstance = v[0];
 			
+            // warn the user he has an object with duplicate instance
 			if (newInstance) {
+                
 				(*returnedSubscriber)->getAttributeValue(TTSymbol("relativeAddress"), v);
 				newRelativeAddress = v[0];
-				object_warn(x, "Jamoma cannot registers multiple object with the same OSC identifier (%s).  Using %s instead.", relativeAddress.c_str(), newRelativeAddress.c_str());
+				object_warn(x, "Jamoma cannot register multiple objects with the same OSC identifier (%s).  Using %s instead.", relativeAddress.c_str(), newRelativeAddress.c_str());
+			}
+            
+            // check why a new context instance have been created
+            if (newContextInstance) {
+                
+				(*returnedSubscriber)->getAttributeValue(TTSymbol("contextAddress"), v);
+				newContextAddress = v[0];
+
+                ObjectPtr patcher;
+                TTSymbol  patcherContext;
+                TTSymbol  patcherClass;
+                TTSymbol  patcherName;
+                TTAddress patcherArg;
+                TTString  newPatcherArgument;
+                AtomCount argc = 0;
+                AtomPtr   argv = NULL;
+                
+                // get patcher info
+                jamoma_patcher_get_info(x, &patcher, patcherContext, patcherClass, patcherName);
+                
+                // get patcher argument (dedicated for the name)
+                jamoma_patcher_get_args(patcher, &argc, &argv);
+                
+                if (patcherContext == kTTSym_model && argc == 1) {
+                    
+                    if (atom_gettype(argv+1) == A_SYM)
+                        patcherArg = TTAddress(atom_getsym(argv+1)->s_name);
+                }
+                else if (patcherContext == kTTSym_view && argc == 2) {
+                    
+                    if (atom_gettype(argv+2) == A_SYM)
+                        patcherArg = TTAddress(atom_getsym(argv+2)->s_name);
+                }
+                
+                // free args
+                sysmem_freeptr(argv);
+                
+                // warn the user that it should provide unique name
+                
+                // if no name has been provided
+                if (patcherArg == kTTAdrsEmpty)
+                    object_warn(patcher, "No name provided to %s %s. Using %s.", patcherClass.c_str(), patcherContext.c_str(), newContextAddress.getNameInstance().c_str());
+
+                // if a duplicate name.instance was passed in argument
+                else
+                    object_warn(patcher, "Duplicate name provided to %s %s (%s). Using %s.", patcherClass.c_str(), patcherContext.c_str(), patcherArg.c_str(), newContextAddress.getNameInstance().c_str());
+
 			}
             
             (*returnedSubscriber)->getAttributeValue(kTTSym_nodeAddress, v);
@@ -834,6 +887,8 @@ void jamoma_callback_return_value(const TTValue& baton, const TTValue& v)
 }
 
 /** Return the value to a j. external as msg, argc, argv */
+// TODO #556 : merge this function into jamoma_callback_return_value
+// TODO : why don't we pass a #TTDictionary into the baton
 void jamoma_callback_return_value_typed(const TTValue& baton, const TTValue& v)
 {
 	ObjectPtr	x;
@@ -861,6 +916,7 @@ void jamoma_callback_return_value_typed(const TTValue& baton, const TTValue& v)
         if (baton.size() == 3)
             deferlow = baton[2];
     }
+    // by default we call "return_value" method
 	else
 		s_method = jps_return_value;
 	
@@ -1124,7 +1180,7 @@ ObjectPtr jamoma_patcher_get(ObjectPtr obj)
 
 // Don't pass memory in for this function!  It will allocate what it needs
 // -- then the caller is responsible for freeing
-long jamoma_patcher_get_args(ObjectPtr patcher, AtomCount *argc, AtomPtr *argv)
+void jamoma_patcher_get_args(ObjectPtr patcher, AtomCount *argc, AtomPtr *argv)
 {
 	SymbolPtr	hierarchy = jamoma_patcher_get_hierarchy(patcher);
 	ObjectPtr	box = object_attr_getobj(patcher, _sym_box);
@@ -1133,7 +1189,6 @@ long jamoma_patcher_get_args(ObjectPtr patcher, AtomCount *argc, AtomPtr *argv)
 	char		*text = NULL;
 	unsigned    long	textlen = 0;
 	method		m = NULL;
-	long		index = -1;
 	
 	if (hierarchy == _sym_bpatcher)
 		object_attr_getvalueof(box, SymbolGen("args"), argc, argv);
@@ -1146,24 +1201,13 @@ long jamoma_patcher_get_args(ObjectPtr patcher, AtomCount *argc, AtomPtr *argv)
 	else if (hierarchy == gensym("poly")){
 	
 		object_method(patcher, gensym("getassoc"), &assoc);
-		if (assoc) {
-
+		if (assoc)
 			object_attr_getvalueof(assoc, SymbolGen("args"), argc, argv);
-			
-			// for poly, return the index to edit an instance
-			// according to the voice number of the poly~ 
-			// (see in jamoma_patcher_get_name)
-			m = zgetfn(assoc, gensym("getindex"));
-			if(m)
-				return index = (long)(*m)(assoc, patcher);
-		}
 	}
 	else {
 		*argc = 0;
 		*argv = NULL;
 	}
-	
-	return 0;
 }
 
 /** Get the hierarchy of the patcher : bpatcher, subpatcher or top level one*/
@@ -1305,7 +1349,6 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 			begin = s_toParse.begin();
 			end = s_toParse.end();
 		}
-
 		
 		// parse .module or if not parse context (model or view)
 		if (!ttRegexForModule->parse(begin, end)) {
@@ -1371,14 +1414,12 @@ void jamoma_patcher_get_name(ObjectPtr patcher, TTSymbol context, TTSymbol& retu
 	AtomCount		ac = 0;
 	AtomPtr			av = NULL;
 	SymbolPtr		hierarchy, argName = _sym_nothing;
-	TTString		voiceFormat;
-	long			index;
 	
 	returnedName = kTTSymEmpty;
 	
 	// try to get context name from the patcher arguments
 	hierarchy = jamoma_patcher_get_hierarchy(patcher);
-	index = jamoma_patcher_get_args(patcher, &ac, &av);
+	jamoma_patcher_get_args(patcher, &ac, &av);
 	
 	// ignore the first argument for subpatcher
 	if (hierarchy == _sym_subpatcher) {
@@ -1405,19 +1446,8 @@ void jamoma_patcher_get_name(ObjectPtr patcher, TTSymbol context, TTSymbol& retu
 		if (argName->s_name[0] == '@')
 			argName = _sym_nothing;
 		
-		if (argName != _sym_nothing) {
-			
-			// in poly case, the index is used to edit an instance
-			// according to the voice number of the poly~ 
-			// (see in jamoma_patcher_get_args)
-			if (index) {
-				voiceFormat = argName->s_name;
-				voiceFormat += ".%d";
-				jamoma_edit_numeric_instance(voiceFormat, &argName, index);
-			}
-			
+		if (argName != _sym_nothing)
 			returnedName = TTSymbol(jamoma_parse_dieze(patcher, argName)->s_name);
-		}
 	}
 }
 
@@ -1448,6 +1478,31 @@ void jamoma_patcher_share_info(ObjectPtr patcher, ObjectPtr *returnedPatcher, TT
                 returnedName = patcherInfo[3];
 				break;
 			}
+		}
+		obj = object_attr_getobj(obj, _sym_nextobject);
+	}
+}
+
+/** Get j.model or j.view of a patcher */
+void jamoma_patcher_get_model_or_view(ObjectPtr patcher, ObjectPtr *returnedModelOrView)
+{
+	TTValue		patcherInfo;
+	ObjectPtr	obj;
+	SymbolPtr	_sym_jcommodel, _sym_jcomview, _sym_jcomcontext;
+    
+    *returnedModelOrView = NULL;
+	
+	obj = object_attr_getobj(patcher, _sym_firstobject);
+	
+	// TODO : cache those t_symbol else where ...
+	_sym_jcommodel = gensym("j.model");
+	_sym_jcomview = gensym("j.view");
+	while (obj) {
+		_sym_jcomcontext = object_attr_getsym(obj, _sym_maxclass);
+		if (_sym_jcomcontext == _sym_jcommodel || _sym_jcomcontext == _sym_jcomview) {
+            
+            *returnedModelOrView = object_attr_getobj(obj, _sym_object);
+            break;
 		}
 		obj = object_attr_getobj(obj, _sym_nextobject);
 	}
@@ -1590,14 +1645,43 @@ TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbo
 				viewName += "(view)";
 				returnedName = TTSymbol(viewName.data());
 			}
+            
+            // format name coming from class name in case the class name contains . or _
+            // TODO : replace each '.' by the Uppercase of the letter after the '.'
+            // for the moment we replace '.' and ' ' by '_'
+            TTString s_toParse = returnedName.c_str();
+            std::replace(s_toParse.begin(), s_toParse.end(), '.', '_');
+            std::replace(s_toParse.begin(), s_toParse.end(), ' ', '_');
+            
+            // in poly case, the index is used to edit an instance
+			// according to the voice index of the poly~
+            if (jamoma_patcher_get_hierarchy(patcher) == gensym("poly")) {
+                
+                ObjectPtr	assoc = NULL;
+                method		m = NULL;
+                
+                object_method(patcher, gensym("getassoc"), &assoc);
+                if (assoc) {
+
+                    m = zgetfn(assoc, gensym("getindex"));
+                    if(m) {
+                        
+                        char    *s_num;
+                        long    index = (long)(*m)(assoc, patcher);
+                        TTInt32 len;
+                        
+                        s_toParse += ".%d";
+                        len = s_toParse.size() + (TTInt32)log10((TTFloat32)index); // note : %d (lenght = 2) is replaced by 1 character (0::9), 2 charecters (10 :: 99), 3 char...
+                        s_num = (char *)malloc(sizeof(char)*len);
+                        snprintf(s_num, len, s_toParse.c_str(), index);
+                        s_toParse = s_num;
+                        free(s_num);
+                    }
+                }
+            }
+            
+            returnedName = TTSymbol(s_toParse);
 		}
-        
-        // TODO : replace each '.' by the Uppercase of the letter after the '.'
-        // for the moment we replace '.' and ' ' by '_'
-        TTString s_toParse = returnedName.c_str();
-        std::replace(s_toParse.begin(), s_toParse.end(), '.', '_');
-        //std::replace(s_toParse.begin(), s_toParse.end(), ' ', '_');
-        returnedName = TTSymbol(s_toParse);
 	}
 		// if no patcher : stop the subscription process
 	else {

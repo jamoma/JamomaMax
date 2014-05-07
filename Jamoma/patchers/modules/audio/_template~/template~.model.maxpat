@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 158.0, 157.0, 1258.0, 772.0 ],
+		"rect" : [ 140.0, 44.0, 1049.0, 703.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -30,6 +30,21 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-4",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 45.0, 532.0, 351.0, 20.0 ],
+					"text" : "Audio outputs always have to be placed at the left of the patcher",
+					"textcolor" : [ 0.709804, 0.101961, 0.101961, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
 					"fontsize" : 14.0,
 					"id" : "obj-44",
 					"maxclass" : "newobj",
@@ -40,7 +55,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -479,7 +494,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -548,7 +563,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 196.0, 264.0, 69.0, 20.0 ],
+					"patching_rect" : [ 594.0, 267.0, 69.0, 20.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
@@ -564,7 +579,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 114.0, 116.0, 217.0, 74.0 ],
+					"patching_rect" : [ 496.0, 126.0, 217.0, 74.0 ],
 					"text" : "In order to create all j.parameters/messages/returns, you can use the j.parameterCreate utility below : just double-click on it and choose the desired attributes",
 					"textcolor" : [ 0.709804, 0.101961, 0.101961, 1.0 ]
 				}
@@ -579,7 +594,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 106.0, 232.0, 109.0, 20.0 ],
+					"patching_rect" : [ 504.0, 235.0, 109.0, 20.0 ],
 					"text" : "j.parameterCreate"
 				}
 
@@ -610,7 +625,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 570.0, 310.5, 171.0, 37.0 ],
+					"patching_rect" : [ 258.0, 323.5, 171.0, 37.0 ],
 					"text" : "Example of audio processing in model"
 				}
 
@@ -641,22 +656,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 67.0, 500.0, 177.0, 20.0 ],
+					"patching_rect" : [ 496.0, 498.0, 177.0, 20.0 ],
 					"text" : "osc communication from model"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-25",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 67.0, 75.0, 169.0, 20.0 ],
-					"text" : "osc communication to model"
 				}
 
 			}
@@ -713,12 +714,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-29",
-					"linecount" : 8,
+					"linecount" : 7,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 849.0, 151.0, 147.0, 114.0 ],
+					"patching_rect" : [ 849.0, 151.0, 154.0, 100.0 ],
 					"text" : "j.parameter thisParameter @repetitions/filter 0 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
@@ -734,7 +735,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 76.0, 310.5, 189.0, 31.0 ],
+					"patching_rect" : [ 504.0, 315.5, 169.0, 31.0 ],
 					"text" : "j.model @description \"Provide a brief description of this model.\""
 				}
 
@@ -748,7 +749,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 491.0, 190.0, 67.0, 20.0 ],
+					"patching_rect" : [ 173.0, 203.0, 67.0, 20.0 ],
 					"text" : "j.in~ 2"
 				}
 
@@ -762,7 +763,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 491.0, 412.0, 74.0, 20.0 ],
+					"patching_rect" : [ 173.0, 425.0, 74.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
 
@@ -776,7 +777,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 368.0, 412.0, 74.0, 20.0 ],
+					"patching_rect" : [ 50.0, 425.0, 74.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
 
@@ -790,7 +791,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 368.0, 190.0, 67.0, 20.0 ],
+					"patching_rect" : [ 50.0, 203.0, 67.0, 20.0 ],
 					"text" : "j.in~ 1"
 				}
 
@@ -804,7 +805,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 476.0, 75.0, 79.0, 20.0 ],
+					"patching_rect" : [ 158.0, 88.0, 79.0, 20.0 ],
 					"text" : "signal inlet 2"
 				}
 
@@ -818,20 +819,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 473.0, 483.0, 87.0, 20.0 ],
+					"patching_rect" : [ 155.0, 496.0, 87.0, 20.0 ],
 					"text" : "signal outlet 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "osc messages to algorithm",
-					"id" : "obj-4",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 76.0, 103.0, 26.0, 26.0 ]
 				}
 
 			}
@@ -842,7 +831,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 76.0, 452.0, 26.0, 26.0 ]
+					"patching_rect" : [ 505.0, 450.0, 26.0, 26.0 ]
 				}
 
 			}
@@ -853,7 +842,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 491.0, 452.0, 26.0, 26.0 ]
+					"patching_rect" : [ 173.0, 465.0, 26.0, 26.0 ]
 				}
 
 			}
@@ -864,7 +853,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 368.0, 452.0, 26.0, 26.0 ]
+					"patching_rect" : [ 50.0, 465.0, 26.0, 26.0 ]
 				}
 
 			}
@@ -875,8 +864,8 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 491.0, 103.0, 26.0, 26.0 ]
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 173.0, 116.0, 26.0, 26.0 ]
 				}
 
 			}
@@ -887,8 +876,8 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 368.0, 103.0, 26.0, 26.0 ]
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 50.0, 116.0, 26.0, 26.0 ]
 				}
 
 			}
@@ -901,7 +890,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 491.0, 319.0, 63.0, 20.0 ],
+					"patching_rect" : [ 173.0, 332.0, 63.0, 20.0 ],
 					"text" : "degrade~"
 				}
 
@@ -915,7 +904,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 368.0, 319.0, 63.0, 20.0 ],
+					"patching_rect" : [ 50.0, 332.0, 63.0, 20.0 ],
 					"text" : "degrade~"
 				}
 
@@ -943,7 +932,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 363.0, 483.0, 87.0, 20.0 ],
+					"patching_rect" : [ 45.0, 496.0, 87.0, 20.0 ],
 					"text" : "signal outlet 1"
 				}
 
@@ -957,7 +946,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 355.0, 75.0, 79.0, 20.0 ],
+					"patching_rect" : [ 37.0, 88.0, 79.0, 20.0 ],
 					"text" : "signal inlet 1"
 				}
 
@@ -1046,15 +1035,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1070,6 +1050,46 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.parameterCreate.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/parameterCreate",
+				"patcherrelativepath" : "../../../components/parameterCreate",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.in~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.map.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.dataspace.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

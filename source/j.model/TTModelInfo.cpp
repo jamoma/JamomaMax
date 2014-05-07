@@ -34,6 +34,7 @@ mClass(kTTSymEmpty)
     addMessage(InternalOpen);
     addMessage(HelpOpen);
     addMessage(ReferenceOpen);
+    addMessage(ReferenceWrite);
     
     // cache some attribute for observer notification
     this->findAttribute(kTTSym_address, &addressAttribute);
@@ -97,6 +98,13 @@ TTErr TTModelInfo::ReferenceOpen()
 	}
     
     return kTTErrGeneric;
+}
+
+TTErr TTModelInfo::ReferenceWrite()
+{
+    object_method(mObject, gensym("reference_write"));
+    
+    return kTTErrNone;
 }
 
 TTErr TTModelInfo::Mute()

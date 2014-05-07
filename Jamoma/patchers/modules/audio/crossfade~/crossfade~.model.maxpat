@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 258.0, 108.0, 710.0, 551.0 ],
+		"rect" : [ 18.0, 108.0, 986.0, 429.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,6 +29,19 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-6",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 142.0, 143.0, 25.0, 25.0 ],
+					"presentation_rect" : [ 146.0, 139.0, 0.0, 0.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
@@ -36,7 +49,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 272.0, 390.0, 52.0, 20.0 ],
+					"patching_rect" : [ 142.0, 247.0, 52.0, 20.0 ],
 					"text" : "j.in~ R2"
 				}
 
@@ -50,7 +63,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 228.0, 366.0, 50.0, 20.0 ],
+					"patching_rect" : [ 98.0, 223.0, 50.0, 20.0 ],
 					"text" : "j.in~ L2"
 				}
 
@@ -64,7 +77,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 184.0, 342.0, 52.0, 20.0 ],
+					"patching_rect" : [ 54.0, 199.0, 52.0, 20.0 ],
 					"text" : "j.in~ R1"
 				}
 
@@ -78,20 +91,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 228.0, 464.0, 59.0, 20.0 ],
+					"patching_rect" : [ 98.0, 321.0, 59.0, 20.0 ],
 					"text" : "j.out~ R1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-57",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 272.0, 286.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -103,7 +104,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 228.0, 286.0, 25.0, 25.0 ]
+					"patching_rect" : [ 98.0, 143.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -115,7 +116,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 184.0, 286.0, 25.0, 25.0 ]
+					"patching_rect" : [ 54.0, 143.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -128,7 +129,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 83.0, 27.0, 142.0, 18.0 ],
+					"patching_rect" : [ 617.0, 223.0, 142.0, 18.0 ],
 					"text" : "/documentation/generate"
 				}
 
@@ -142,7 +143,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.0, 7.0, 198.0, 18.0 ],
+					"patching_rect" : [ 567.0, 203.0, 198.0, 18.0 ],
 					"text" : "/preset/store 1 default, /preset/write"
 				}
 
@@ -156,7 +157,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 48.0, 27.0, 29.0, 18.0 ],
+					"patching_rect" : [ 582.0, 223.0, 29.0, 18.0 ],
 					"text" : "/init"
 				}
 
@@ -170,7 +171,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 140.0, 319.0, 50.0, 20.0 ],
+					"patching_rect" : [ 10.0, 176.0, 50.0, 20.0 ],
 					"text" : "j.in~ L1"
 				}
 
@@ -184,7 +185,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 140.0, 464.0, 57.0, 20.0 ],
+					"patching_rect" : [ 10.0, 321.0, 57.0, 20.0 ],
 					"text" : "j.out~ L1"
 				}
 
@@ -196,7 +197,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 228.0, 502.0, 25.0, 25.0 ]
+					"patching_rect" : [ 98.0, 359.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -207,7 +208,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 140.0, 502.0, 25.0, 25.0 ]
+					"patching_rect" : [ 10.0, 359.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -218,7 +219,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 3.0, 163.0, 25.0, 25.0 ]
+					"patching_rect" : [ 537.0, 359.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -230,19 +231,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 140.0, 286.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-53",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 3.0, 6.0, 25.0, 25.0 ]
+					"patching_rect" : [ 10.0, 143.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -256,7 +245,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 3.0, 109.0, 396.0, 47.0 ],
+					"patching_rect" : [ 537.0, 305.0, 396.0, 47.0 ],
 					"text" : "j.model @description \"Allows crossfades between 2 stereo sources. The first two inputs are the first source while the second 2 inputs are the second source\""
 				}
 
@@ -271,7 +260,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 372.0, 240.0, 253.0, 60.0 ],
+					"patching_rect" : [ 242.0, 97.0, 253.0, 60.0 ],
 					"text" : "j.parameter mode @type string @description \"Choose the calculation mode for the crossfade: fast uses a lookup table while precisision performs trig calculations\"",
 					"varname" : "mode[1]"
 				}
@@ -287,7 +276,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 442.0, 323.0, 208.0, 47.0 ],
+					"patching_rect" : [ 312.0, 180.0, 208.0, 47.0 ],
 					"text" : "j.parameter shape @type string @description \"Choose the shape of the crossfade: linear or equal-power\"",
 					"varname" : "shape[1]"
 				}
@@ -303,7 +292,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 316.0, 169.0, 376.0, 60.0 ],
+					"patching_rect" : [ 186.0, 26.0, 376.0, 60.0 ],
 					"text" : "j.parameter position @type decimal @range/bounds 1. 2. @ramp/drive Max @description \"Set the position of the crossfade.  1 is entirely source 1 - 2 is entirely source 2 - positions in the middle are a location between source one and two.\"",
 					"varname" : "position"
 				}
@@ -483,7 +472,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 372.0, 388.0, 72.0, 20.0 ],
+					"patching_rect" : [ 242.0, 245.0, 72.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -675,7 +664,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 442.0, 388.0, 74.0, 20.0 ],
+					"patching_rect" : [ 312.0, 245.0, 74.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -702,7 +691,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 316.0, 316.0, 33.0, 18.0 ],
+					"patching_rect" : [ 186.0, 173.0, 33.0, 18.0 ],
 					"text" : "$1 5"
 				}
 
@@ -716,7 +705,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "bang" ],
-					"patching_rect" : [ 316.0, 341.0, 34.0, 20.0 ],
+					"patching_rect" : [ 186.0, 198.0, 34.0, 20.0 ],
 					"text" : "line~"
 				}
 
@@ -730,7 +719,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 316.0, 286.0, 36.0, 20.0 ],
+					"patching_rect" : [ 186.0, 143.0, 36.0, 20.0 ],
 					"text" : "- 1."
 				}
 
@@ -744,7 +733,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 140.0, 437.0, 195.0, 20.0 ],
+					"patching_rect" : [ 10.0, 294.0, 195.0, 20.0 ],
 					"text" : "j.xfade~ 2"
 				}
 
@@ -755,7 +744,7 @@
 					"destination" : [ "obj-26", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 451.5, 427.0, 149.5, 427.0 ],
+					"midpoints" : [ 321.5, 284.0, 19.5, 284.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -792,7 +781,7 @@
 					"destination" : [ "obj-26", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 381.5, 427.5, 149.5, 427.5 ],
+					"midpoints" : [ 251.5, 284.5, 19.5, 284.5 ],
 					"source" : [ "obj-18", 0 ]
 				}
 
@@ -820,7 +809,7 @@
 					"destination" : [ "obj-26", 4 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 325.5, 395.5, 325.5, 395.5 ],
+					"midpoints" : [ 195.5, 252.5, 195.5, 252.5 ],
 					"source" : [ "obj-23", 0 ]
 				}
 
@@ -884,7 +873,7 @@
 					"destination" : [ "obj-54", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 57.5, 90.0, 12.5, 90.0 ],
+					"midpoints" : [ 591.5, 286.0, 546.5, 286.0 ],
 					"source" : [ "obj-47", 0 ]
 				}
 
@@ -894,7 +883,7 @@
 					"destination" : [ "obj-54", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 42.5, 87.0, 12.5, 87.0 ],
+					"midpoints" : [ 576.5, 283.0, 546.5, 283.0 ],
 					"source" : [ "obj-48", 0 ]
 				}
 
@@ -904,7 +893,7 @@
 					"destination" : [ "obj-54", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 92.5, 93.0, 12.5, 93.0 ],
+					"midpoints" : [ 626.5, 289.0, 546.5, 289.0 ],
 					"source" : [ "obj-49", 0 ]
 				}
 
@@ -924,15 +913,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-51", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-54", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-53", 0 ]
 				}
 
 			}
@@ -968,7 +948,7 @@
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-57", 0 ]
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
@@ -980,27 +960,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.xfade~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in~.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

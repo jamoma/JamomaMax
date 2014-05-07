@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 189.0, 121.0, 1420.0, 744.0 ],
+		"rect" : [ 20.0, 121.0, 1420.0, 744.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -67,7 +67,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 859.5, 553.0, 465.0, 27.0 ],
+					"patching_rect" : [ 856.5, 579.0, 465.0, 27.0 ],
 					"text" : "j.parameter sample/vzoom @type decimal @range/clipmode non @description @repetitions/filter 1 @ramp/drive none \"set vertical zoom\"",
 					"varname" : "sample/vzoom"
 				}
@@ -84,7 +84,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 859.5, 594.0, 457.0, 27.0 ],
+					"patching_rect" : [ 856.5, 620.0, 457.0, 27.0 ],
 					"text" : "j.message sample/displaystart @type decimal @range/bounds 0. 1000000. @range/clipmode low @description @repetitions/filter 1 @ramp/drive Max \"display start  time in ms\"",
 					"varname" : "sample/displaystart"
 				}
@@ -101,7 +101,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 859.5, 632.0, 464.0, 27.0 ],
+					"patching_rect" : [ 856.5, 658.0, 464.0, 27.0 ],
 					"text" : "j.message sample/displaylength @type decimal @range/bounds 0. 1000000. @range/clipmode low @description @repetitions/filter 1 @ramp/drive Max @description \"display length in ms\"",
 					"varname" : "sample/displaylength"
 				}
@@ -149,21 +149,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 38.5, 53.5, 172.0, 33.0 ],
+					"patching_rect" : [ 823.0, 470.0, 172.0, 33.0 ],
 					"text" : "j.model @description \"simple monophonic sampleplayer\"",
 					"varname" : "j.model"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-19",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 38.5, 24.5, 20.0, 20.0 ]
 				}
 
 			}
@@ -174,7 +162,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.5, 98.5, 23.0, 23.0 ]
+					"patching_rect" : [ 823.0, 521.5, 23.0, 23.0 ]
 				}
 
 			}
@@ -414,7 +402,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -704,7 +692,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -795,7 +783,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -1681,7 +1669,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1974,7 +1962,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2222,7 +2210,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 449.5, 137.0, 92.0, 100.0 ],
+					"patching_rect" : [ 449.5, 137.0, 95.0, 100.0 ],
 					"text" : "j.message sample/buffername @type string @description \"Name of buffer used\"",
 					"varname" : "sample/buffername"
 				}
@@ -2236,8 +2224,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 285.0, 591.0, 461.0, 33.0 ],
 					"text" : "j.return info/filename @type string @description \"returns the name of the loaded file\" @repetitions/filter 0"
 				}
@@ -2251,8 +2239,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 195.0, 636.0, 477.0, 33.0 ],
 					"text" : "j.return info/length @type integer @description \"returns the length in [ms] of the internal buffer\" @repetitions/filter 0 @dataspace time @dataspace/unit ms"
 				}
@@ -2266,8 +2254,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 64.0, 682.0, 459.0, 33.0 ],
 					"text" : "j.return info/playername @type string @description \"returns the name of the internal buffer\" @repetitions/filter 0"
 				}
@@ -2380,7 +2368,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 91.0, 113.0, 131.0, 127.0 ],
+					"patching_rect" : [ 91.0, 113.0, 135.0, 127.0 ],
 					"text" : "j.message open @type generic @repetitions/filter 0 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\"",
 					"varname" : "j.parameter.mxb[10]"
 				}
@@ -2604,15 +2592,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-18", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-51", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-19", 0 ]
 				}
 
 			}

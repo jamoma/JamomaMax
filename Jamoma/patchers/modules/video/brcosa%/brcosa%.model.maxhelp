@@ -179,7 +179,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 74.0, 414.0, 115.0, 19.0 ],
-					"text" : "s jmod.brcosa%.cmd"
+					"text" : "s brcosa%.module.cmd"
 				}
 
 			}
@@ -222,7 +222,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 254.0, 162.0, 114.0, 19.0 ],
-					"text" : "r jmod.brcosa%.cmd"
+					"text" : "r brcosa%.module.cmd"
 				}
 
 			}
@@ -236,7 +236,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 25.0, 234.0, 115.0, 19.0 ],
-					"text" : "s jmod.brcosa%.cmd"
+					"text" : "s brcosa%.module.cmd"
 				}
 
 			}

@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 15.0, 58.0, 946.0, 702.0 ],
+		"rect" : [ 531.0, 286.0, 946.0, 702.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -29,6 +29,23 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"annotation" : "the path to a movie",
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-5",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 468.0, 375.0, 238.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 6.0, 42.0, 150.0, 20.0 ],
+					"text" : "oh.mov"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -63,6 +80,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "movie playback rate",
 					"bgcolor" : [ 0.239216, 0.643137, 0.709804, 0.8 ],
 					"bordercolor" : [ 0.239216, 0.643137, 0.709804, 0.0 ],
 					"floatoutput" : 1,
@@ -163,7 +181,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 789.0, 309.0, 111.0, 20.0 ],
+					"patching_rect" : [ 789.0, 320.0, 111.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 272.0, 82.0, 150.0, 20.0 ],
 					"text" : "fps"
@@ -172,6 +190,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "current fps",
 					"bgcolor" : [ 0.078431, 0.078431, 0.078431, 0.0 ],
 					"bordercolor" : [ 0.984314, 0.984314, 0.431373, 0.0 ],
 					"fontname" : "Arial",
@@ -182,7 +201,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 735.0, 309.0, 50.0, 20.0 ],
+					"patching_rect" : [ 735.0, 320.0, 50.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 245.0, 82.0, 34.0, 20.0 ],
 					"triangle" : 0
@@ -205,11 +224,13 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "play the movie",
 					"bgoncolor" : [ 0.239216, 0.643137, 0.709804, 0.8 ],
 					"bgoveroncolor" : [ 0.239216, 0.643137, 0.709804, 0.8 ],
 					"borderoncolor" : [ 0.239216, 0.643137, 0.709804, 0.8 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"hint" : "play the movie",
 					"id" : "obj-14",
 					"maxclass" : "textbutton",
 					"mode" : 1,
@@ -217,7 +238,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 468.0, 177.0, 61.0, 19.0 ],
+					"patching_rect" : [ 468.0, 154.0, 61.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 22.0, 61.0, 17.0 ],
 					"text" : "Play",
@@ -249,7 +270,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 468.0, 226.0, 169.0, 47.0 ],
+					"patching_rect" : [ 468.0, 219.0, 169.0, 47.0 ],
 					"text" : "Here we decided the play parameter can be highlighted but it will not by default"
 				}
 
@@ -264,7 +285,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 735.0, 331.0, 166.0, 33.0 ],
+					"patching_rect" : [ 735.0, 342.0, 166.0, 33.0 ],
 					"text" : "Here we decided the fps return cannot be highlighted"
 				}
 
@@ -320,12 +341,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-6",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 468.0, 199.0, 172.0, 20.0 ],
-					"text" : "j.remote play @highlight 0"
+					"patching_rect" : [ 468.0, 176.0, 172.0, 33.0 ],
+					"text" : "j.remote play @highlight 0 @description \"play the video\""
 				}
 
 			}
@@ -335,27 +357,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-9",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 735.0, 287.0, 166.0, 20.0 ],
-					"text" : "j.remote fps @highlight 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-5",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 468.0, 375.0, 238.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 6.0, 42.0, 150.0, 20.0 ]
+					"patching_rect" : [ 735.0, 272.0, 166.0, 33.0 ],
+					"text" : "j.remote fps @highlight 0 @description \"current fps\""
 				}
 
 			}
@@ -365,12 +373,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-8",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 468.0, 287.0, 122.0, 20.0 ],
-					"text" : "j.remote file/path"
+					"patching_rect" : [ 468.0, 274.0, 182.0, 33.0 ],
+					"text" : "j.remote file/path @description \"path of the video file\""
 				}
 
 			}
@@ -384,7 +393,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"outlinecolor" : [ 0.239216, 0.643137, 0.709804, 1.0 ],
-					"patching_rect" : [ 735.0, 170.0, 20.0, 20.0 ],
+					"patching_rect" : [ 735.0, 147.0, 20.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 63.0, 20.0, 20.0, 20.0 ]
 				}
@@ -396,12 +405,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-13",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 735.0, 199.0, 191.0, 20.0 ],
-					"text" : "j.remote file/load @highlight 0"
+					"patching_rect" : [ 735.0, 176.0, 191.0, 33.0 ],
+					"text" : "j.remote file/load @highlight 0 @description \"load a file\""
 				}
 
 			}
@@ -450,7 +460,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -569,6 +579,7 @@
 , 			{
 				"box" : 				{
 					"background" : 1,
+					"highlightcolor" : [ 0.62, 0.0, 0.36, 1.0 ],
 					"id" : "obj-15",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -577,7 +588,7 @@
 					"patching_rect" : [ 461.0, 539.0, 300.0, 105.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/player.A"
 				}
 
 			}
@@ -597,6 +608,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-13", 2 ]
 				}
 
 			}
@@ -656,16 +676,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"color" : [ 1.0, 1.0, 0.0, 1.0 ],
-					"destination" : [ "obj-56", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-46", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-56", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -685,20 +695,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"color" : [ 1.0, 1.0, 0.0, 1.0 ],
 					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-6", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 477.5, 221.0, 463.5, 221.0, 463.5, 172.0, 477.5, 172.0 ],
+					"midpoints" : [ 477.5, 215.0, 463.5, 215.0, 463.5, 149.0, 477.5, 149.0 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -739,19 +739,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

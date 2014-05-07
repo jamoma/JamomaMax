@@ -54,7 +54,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 300.0, 187.0, 369.0, 25.0 ],
-					"text" : "j.multi.in~ is deprecated. Use j.pack≈ instead",
+					"text" : "j.multi.in~ is deprecated. Use j.pack= instead",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -509,7 +509,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 50.0, 108.0, 794.0, 20.0 ],
-					"text" : "j.pack≈ 32"
+					"text" : "j.pack= 32"
 				}
 
 			}
@@ -831,7 +831,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
  ]

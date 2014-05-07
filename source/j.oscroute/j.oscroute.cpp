@@ -192,7 +192,7 @@ void oscroute_list(t_oscroute *x, t_symbol *msg, long argc, t_atom *argv)
 void output_msg(t_oscroute *x, char *msg, int outlet, long argc, t_atom *argv)
 {
 	t_symbol *output;
-	if (msg == '\0') {
+	if (msg == 0) {
 		
 		if (argc == 0) {
 			outlet_bang(x->outlets[outlet]);

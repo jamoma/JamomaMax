@@ -4,11 +4,12 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 694.0, 116.0, 703.0, 289.0 ],
+		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -35,10 +36,10 @@
 					"name" : "input%.ui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"offset" : [ 0.0, -20.0 ],
+					"offset" : [ 0.0, -120.0 ],
 					"patching_rect" : [ 377.666656, 82.5, 249.0, 49.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 19.0, 231.0, 49.0 ]
+					"presentation_rect" : [ 4.0, 21.0, 231.0, 49.0 ]
 				}
 
 			}
@@ -60,6 +61,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Turn video noise on or off",
 					"hint" : "toggle metro on and off",
 					"id" : "obj-11",
 					"maxclass" : "toggle",
@@ -91,6 +93,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Update rate in milliseconds",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"hint" : "updaterate",
@@ -180,6 +183,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Choose between 'camera', 'file' , 'synthesis' or 'desktop' as input",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"hint" : "Choose mode",
@@ -246,7 +250,7 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/input%"
 				}
 
 			}
@@ -341,30 +345,6 @@
 					"source" : [ "obj-99", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "input%.ui.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.textslider.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

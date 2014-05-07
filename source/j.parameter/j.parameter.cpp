@@ -73,7 +73,7 @@ void		data_int(TTPtr self, long value);
 void		data_float(TTPtr self, double value);
 
 
-/** Process an incoming message containing a list.
+/** Process an incoming message containing a list. When the object receives a bang, int, float or anything, it is fornatted as a list and frwarded to this method.
  @param self		The parameter instance.
  @param msg			The dec symbol pointer
  @param argc		Atom array count (length)
@@ -309,6 +309,7 @@ void data_int(TTPtr self, long value)
 	t_atom a;
 	
 	atom_setlong(&a, value);
+    // Forwards to data_float
 	data_list(self, _sym_int, 1, &a);
 }
 

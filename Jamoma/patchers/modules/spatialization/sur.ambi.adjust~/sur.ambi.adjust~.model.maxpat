@@ -2015,7 +2015,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 1442.0, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2031,7 +2031,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 1346.466675, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2047,7 +2047,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 1250.93335, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2063,7 +2063,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 1155.400024, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2079,7 +2079,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 1059.866699, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2095,7 +2095,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 964.333252, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2111,7 +2111,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 868.799988, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2127,7 +2127,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 773.266663, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2143,7 +2143,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 677.733337, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2159,7 +2159,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 582.200012, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2175,7 +2175,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 486.666687, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2191,7 +2191,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 391.133331, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2207,7 +2207,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 295.600006, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2223,7 +2223,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 200.06665, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2239,7 +2239,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 104.53334, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -2254,7 +2254,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 9.0, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust≈.gain.helper"
+									"text" : "ambiAdjust=.gain.helper"
 								}
 
 							}
@@ -3715,7 +3715,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 1167.0, 231.5, 203.0, 31.0 ],
-													"text" : "script connect signalin 0 unpack≈ 0, script connect pack≈ 0 signalout 0"
+													"text" : "script connect signalin 0 unpack= 0, script connect pack= 0 signalout 0"
 												}
 
 											}
@@ -3757,7 +3757,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 77.0, 237.0, 231.0, 20.0 ],
-													"text" : "sprintf script connect *~[%ld] 0 pack≈ %ld"
+													"text" : "sprintf script connect *~[%ld] 0 pack= %ld"
 												}
 
 											}
@@ -3771,7 +3771,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 341.0, 237.0, 244.0, 20.0 ],
-													"text" : "sprintf script connect unpack≈ %ld *~[%ld] 0"
+													"text" : "sprintf script connect unpack= %ld *~[%ld] 0"
 												}
 
 											}
@@ -4050,7 +4050,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 264.5, 219.5, 129.0, 31.0 ],
-													"text" : "script delete unpack≈, script delete pack≈"
+													"text" : "script delete unpack=, script delete pack="
 												}
 
 											}
@@ -4298,7 +4298,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 893.0, 184.5, 347.0, 33.0 ],
-													"text" : "sprintf script newobject newobj @text \\\"j.unpack≈ %ld\\\" @varname unpack≈ @patching_position 535. 155. @fixwidth 1"
+													"text" : "sprintf script newobject newobj @text \\\"j.unpack= %ld\\\" @varname unpack= @patching_position 535. 155. @fixwidth 1"
 												}
 
 											}
@@ -4313,7 +4313,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 548.0, 184.5, 339.0, 33.0 ],
-													"text" : "sprintf script newobject newobj @text \\\"j.pack≈ %ld\\\" @varname pack≈ @patching_position 535. 442. @fixwidth 1"
+													"text" : "sprintf script newobject newobj @text \\\"j.pack= %ld\\\" @varname pack= @patching_position 535. 442. @fixwidth 1"
 												}
 
 											}
@@ -4942,8 +4942,8 @@
 					"numoutlets" : 17,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 535.0, 155.0, 235.0, 20.0 ],
-					"text" : "j.unpack≈ 16",
-					"varname" : "unpack≈"
+					"text" : "j.unpack= 16",
+					"varname" : "unpack="
 				}
 
 			}
@@ -4957,8 +4957,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 535.0, 442.0, 221.5, 20.0 ],
-					"text" : "j.pack≈ 16",
-					"varname" : "pack≈"
+					"text" : "j.pack= 16",
+					"varname" : "pack="
 				}
 
 			}
@@ -5925,18 +5925,18 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "ambiAdjust≈.gain.helper.maxpat",
+				"name" : "ambiAdjust=.gain.helper.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.ambi.adjust~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.pack≈.mxo",
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

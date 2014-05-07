@@ -1899,7 +1899,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "bang", "" ],
 																	"patching_rect" : [ 216.0, 177.0, 113.0, 20.0 ],
-																	"text" : "sel j.audiounit≈"
+																	"text" : "sel j.audiounit="
 																}
 
 															}
@@ -2434,7 +2434,7 @@
 													"numoutlets" : 5,
 													"outlettype" : [ "", "", "", "", "" ],
 													"patching_rect" : [ 131.0, 391.0, 187.0, 19.0 ],
-													"text" : "regexp (≈.maxhelp) @substitute ≈"
+													"text" : "regexp (=.maxhelp) @substitute ="
 												}
 
 											}
@@ -2515,7 +2515,7 @@
 													"fontname" : "Verdana",
 													"fontsize" : 11.0,
 													"id" : "obj-59",
-													"items" : [ "j.adsr≈.maxhelp", ",", "j.allpass~.maxhelp", ",", "j.append#.maxhelp", ",", "j.array~.maxhelp", ",", "j.array≈.maxhelp", ",", "j.audiounit≈.maxhelp", ",", "j.average~.maxhelp", ",", "j.average≈.maxhelp", ",", "j.balance~.maxhelp", ",", "j.clip≈.maxhelp", ",", "j.count≈.maxhelp", ",", "j.cubicInterpolate.maxhelp", ",", "j.cuemanager.maxhelp", ",", "j.dataspace#.maxhelp", ",", "j.dataspace.maxhelp", ",", "j.dbap.maxhelp", ",", "j.dbapBformat.maxhelp", ",", "j.dcblocker≈.maxhelp", ",", "j.dcblock~.maxhelp", ",", "j.degrade~.maxhelp", ",", "j.degrade≈.maxhelp", ",", "j.delay~.maxhelp", ",", "j.delay≈.maxhelp", ",", "j.delta.maxhelp", ",", "j.envexp.maxhelp", ",", "j.fft≈.maxhelp", ",", "j.filter~.maxhelp", ",", "j.filter≈.maxhelp", ",", "j.folder.maxhelp", ",", "j.function~.maxhelp", ",", "j.gain%.maxhelp", ",", "j.gain~.maxhelp", ",", "j.gain≈.maxhelp", ",", "j.gang.maxhelp", ",", "j.hilbert≈.maxhelp", ",", "j.hmlshelf~.maxhelp", ",", "j.hub.maxhelp", ",", "j.in.maxhelp", ",", "j.info≈.maxhelp", ",", "j.init.maxhelp", ",", "j.in~.maxhelp", ",", "j.iter#.maxhelp", ",", "j.join≈.maxhelp", ",", "j.limiter~.maxhelp", ",", "j.limiter≈.maxhelp", ",", "j.map.maxhelp", ",", "j.message.maxhelp", ",", "j.meter~.maxhelp", ",", "j.midi.filter#.maxhelp", ",", "j.midi.format#.maxhelp", ",", "j.midi.in#.maxhelp", ",", "j.midi.out#.maxhelp", ",", "j.mixer≈.maxhelp", ",", "j.multimixer≈.maxhelp", ",", "j.net.receive.maxhelp", ",", "j.net.send.maxhelp", ",", "j.noise≈.maxhelp", ",", "j.offset≈.maxhelp", ",", "j.onepole~.maxhelp", ",", "j.op#.maxhelp", ",", "j.op~.maxhelp", ",", "j.op≈.maxhelp", ",", "j.oscinstance.maxhelp", ",", "j.oscroute.maxhelp", ",", "j.out.maxhelp", ",", "j.out~.maxhelp", ",", "j.overdrive~.maxhelp", ",", "j.overdrive≈.maxhelp", ",", "j.pack#.maxhelp", ",", "j.pack≈.maxhelp", ",", "j.panorama~.maxhelp", ",", "j.parameter.maxhelp", ",", "j.paramui.maxhelp", ",", "j.pass.maxhelp", ",", "j.phasor≈.maxhelp", ",", "j.pick≈.maxhelp", ",", "j.plug.in≈.maxhelp", ",", "j.plug.out≈.maxhelp", ",", "j.plug.parameter#.maxhelp", ",", "j.pulsesub≈.maxhelp", ",", "j.push.maxhelp", ",", "j.ramp.maxhelp", ",", "j.ramp~.maxhelp", ",", "j.ramp≈.maxhelp", ",", "j.remote.maxhelp", ",", "j.resample≈.maxhelp", ",", "j.return.maxhelp", ",", "j.route.maxhelp", ",", "j.savebang.maxhelp", ",", "j.sig≈.maxhelp", ",", "j.soundfile.player≈.maxhelp", ",", "j.soundfile.recorder≈.maxhelp", ",", "j.spat≈.maxhelp", ",", "j.split≈.maxhelp", ",", "j.stats.maxhelp", ",", "j.stencil%.maxhelp", ",", "j.test.sample~.maxhelp", ",", "j.textslider.maxhelp", ",", "j.trajectory≈.maxhelp", ",", "j.ui.maxhelp", ",", "j.unpack#.maxhelp", ",", "j.unpack≈.maxhelp", ",", "j.unsig≈.maxhelp", ",", "j.vimic~.maxhelp", ",", "j.waveshaper~.maxhelp", ",", "j.waveshaper≈.maxhelp", ",", "j.wavetable≈.maxhelp", ",", "j.window≈.maxhelp", ",", "j.xfade~.maxhelp", ",", "j.zerox~.maxhelp" ],
+													"items" : [ "j.adsr=.maxhelp", ",", "j.allpass~.maxhelp", ",", "j.append#.maxhelp", ",", "j.array~.maxhelp", ",", "j.array=.maxhelp", ",", "j.audiounit=.maxhelp", ",", "j.average~.maxhelp", ",", "j.average=.maxhelp", ",", "j.balance~.maxhelp", ",", "j.clip=.maxhelp", ",", "j.count=.maxhelp", ",", "j.cubicInterpolate.maxhelp", ",", "j.cuemanager.maxhelp", ",", "j.dataspace#.maxhelp", ",", "j.dataspace.maxhelp", ",", "j.dbap.maxhelp", ",", "j.dbap_bformat.maxhelp", ",", "j.dcblocker=.maxhelp", ",", "j.dcblock~.maxhelp", ",", "j.degrade~.maxhelp", ",", "j.degrade=.maxhelp", ",", "j.delay~.maxhelp", ",", "j.delay=.maxhelp", ",", "j.delta.maxhelp", ",", "j.envexp.maxhelp", ",", "j.fft=.maxhelp", ",", "j.filter~.maxhelp", ",", "j.filter=.maxhelp", ",", "j.folder.maxhelp", ",", "j.function~.maxhelp", ",", "j.gain%.maxhelp", ",", "j.gain~.maxhelp", ",", "j.gain=.maxhelp", ",", "j.gang.maxhelp", ",", "j.hilbert=.maxhelp", ",", "j.hmlshelf~.maxhelp", ",", "j.hub.maxhelp", ",", "j.in.maxhelp", ",", "j.info=.maxhelp", ",", "j.init.maxhelp", ",", "j.in~.maxhelp", ",", "j.iter#.maxhelp", ",", "j.join=.maxhelp", ",", "j.limiter~.maxhelp", ",", "j.limiter=.maxhelp", ",", "j.map.maxhelp", ",", "j.message.maxhelp", ",", "j.meter~.maxhelp", ",", "j.midi.filter#.maxhelp", ",", "j.midi.format#.maxhelp", ",", "j.midi.in#.maxhelp", ",", "j.midi.out#.maxhelp", ",", "j.mixer=.maxhelp", ",", "j.multimixer=.maxhelp", ",", "j.net.receive.maxhelp", ",", "j.net.send.maxhelp", ",", "j.noise=.maxhelp", ",", "j.offset=.maxhelp", ",", "j.onepole~.maxhelp", ",", "j.op#.maxhelp", ",", "j.op~.maxhelp", ",", "j.op=.maxhelp", ",", "j.oscinstance.maxhelp", ",", "j.oscroute.maxhelp", ",", "j.out.maxhelp", ",", "j.out~.maxhelp", ",", "j.overdrive~.maxhelp", ",", "j.overdrive=.maxhelp", ",", "j.pack#.maxhelp", ",", "j.pack=.maxhelp", ",", "j.panorama~.maxhelp", ",", "j.parameter.maxhelp", ",", "j.paramui.maxhelp", ",", "j.pass.maxhelp", ",", "j.phasor=.maxhelp", ",", "j.pick=.maxhelp", ",", "j.plug.in=.maxhelp", ",", "j.plug.out=.maxhelp", ",", "j.plug.parameter#.maxhelp", ",", "j.pulsesub=.maxhelp", ",", "j.push.maxhelp", ",", "j.ramp.maxhelp", ",", "j.ramp~.maxhelp", ",", "j.ramp=.maxhelp", ",", "j.remote.maxhelp", ",", "j.resample=.maxhelp", ",", "j.return.maxhelp", ",", "j.route.maxhelp", ",", "j.savebang.maxhelp", ",", "j.sig=.maxhelp", ",", "j.soundfile.player=.maxhelp", ",", "j.soundfile.recorder=.maxhelp", ",", "j.spat=.maxhelp", ",", "j.split=.maxhelp", ",", "j.stats.maxhelp", ",", "j.stencil%.maxhelp", ",", "j.test.sample~.maxhelp", ",", "j.textslider.maxhelp", ",", "j.trajectory=.maxhelp", ",", "j.ui.maxhelp", ",", "j.unpack#.maxhelp", ",", "j.unpack=.maxhelp", ",", "j.unsig=.maxhelp", ",", "j.vimic~.maxhelp", ",", "j.waveshaper~.maxhelp", ",", "j.waveshaper=.maxhelp", ",", "j.wavetable=.maxhelp", ",", "j.window=.maxhelp", ",", "j.xfade~.maxhelp", ",", "j.zerox~.maxhelp" ],
 													"maxclass" : "umenu",
 													"numinlets" : 1,
 													"numoutlets" : 3,
@@ -2921,7 +2921,7 @@
 									"rounded" : 10.0,
 									"spacing_y" : 6.0,
 									"tabcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
-									"tabs" : [ "*j.adsr≈", "*j.array≈", "*j.average≈", "*j.clip≈", "*j.count≈", "*j.dcblocker≈", "*j.degrade≈", "*j.delay≈", "*j.fft≈", "*j.filter≈", "*j.gain≈", "*j.hilbert≈", "*j.info≈", "*j.join≈", "*j.limiter≈", "*j.mixer≈", "*j.multimixer≈", "*j.noise≈", "*j.offset≈", "*j.op≈", "*j.overdrive≈", "*j.pack≈", "*j.phasor≈", "*j.pick≈", "*j.plug.in≈", "*j.plug.out≈", "*j.pulsesub≈", "*j.ramp≈", "*j.resample≈", "*j.sig≈", "*j.soundfile.player≈", "*j.soundfile.recorder≈", "*j.spat≈", "*j.split≈", "*j.trajectory≈", "*j.unpack≈", "*j.unsig≈", "*j.waveshaper≈", "*j.wavetable≈", "*j.window≈" ]
+									"tabs" : [ "*j.adsr=", "*j.array=", "*j.average=", "*j.clip=", "*j.count=", "*j.dcblocker=", "*j.degrade=", "*j.delay=", "*j.fft=", "*j.filter=", "*j.gain=", "*j.hilbert=", "*j.info=", "*j.join=", "*j.limiter=", "*j.mixer=", "*j.multimixer=", "*j.noise=", "*j.offset=", "*j.op=", "*j.overdrive=", "*j.pack=", "*j.phasor=", "*j.pick=", "*j.plug.in=", "*j.plug.out=", "*j.pulsesub=", "*j.ramp=", "*j.resample=", "*j.sig=", "*j.soundfile.player=", "*j.soundfile.recorder=", "*j.spat=", "*j.split=", "*j.trajectory=", "*j.unpack=", "*j.unsig=", "*j.waveshaper=", "*j.wavetable=", "*j.window=" ]
 								}
 
 							}
@@ -3081,7 +3081,7 @@
 									"patching_rect" : [ 1172.0, 640.0, 112.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 927.0, 600.0, 132.0, 17.0 ],
-									"text" : "j.dbapBformat"
+									"text" : "j.dbap_bformat"
 								}
 
 							}
@@ -7497,8 +7497,8 @@
 									"patching_rect" : [ 390.0, 570.0, 151.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 390.0, 570.0, 150.0, 17.0 ],
-									"text" : "jmod.sur.dbapBformat~",
-									"varname" : "jmod.sur.dbapBformat~"
+									"text" : "jmod.sur.dbap_bformat~",
+									"varname" : "jmod.sur.dbap_bformat~"
 								}
 
 							}

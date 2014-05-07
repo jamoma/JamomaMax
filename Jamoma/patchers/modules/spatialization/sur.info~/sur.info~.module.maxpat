@@ -171,7 +171,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.info≈.mxo",
+				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

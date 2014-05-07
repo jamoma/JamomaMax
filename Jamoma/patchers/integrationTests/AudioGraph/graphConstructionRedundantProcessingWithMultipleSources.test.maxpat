@@ -262,7 +262,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 441.0, 203.0, 86.0, 33.0 ],
-					"text" : "j.unpack≈ 1"
+					"text" : "j.unpack= 1"
 				}
 
 			}
@@ -291,7 +291,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 341.0, 152.0, 86.0, 20.0 ],
-					"text" : "j.count≈"
+					"text" : "j.count="
 				}
 
 			}
@@ -306,7 +306,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 341.0, 203.0, 86.0, 33.0 ],
-					"text" : "j.unpack≈ 1"
+					"text" : "j.unpack= 1"
 				}
 
 			}
@@ -349,7 +349,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 66.0, 152.0, 86.0, 20.0 ],
-					"text" : "j.count≈"
+					"text" : "j.count="
 				}
 
 			}
@@ -363,7 +363,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 66.0, 203.0, 94.0, 20.0 ],
-					"text" : "j.unpack≈ 1"
+					"text" : "j.unpack= 1"
 				}
 
 			}
@@ -601,11 +601,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.unpack≈.mxo",
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.count≈.mxo",
+				"name" : "j.count=.mxo",
 				"type" : "iLaX"
 			}
  ]
