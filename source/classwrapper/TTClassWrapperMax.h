@@ -168,8 +168,8 @@ int AtomGetInt(AtomPtr a);
 TTErr TTValueFromAtoms(TTValue& v, AtomCount ac, AtomPtr av);
 TTErr TTAtomsFromValue(const TTValue& v, AtomCount* ac, AtomPtr* av); // NOTE: allocates memory
 
-long TTMatrixReferenceJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix, TTBoolean copy = true);
-TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix);
-TTErr TTMatrixCopyDataToJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix);
+long TTMatrixReferenceJitterMatrix(TTMatrix* aTTMatrix, TTPtr aJitterMatrix, TTBoolean copy = true);
+TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrix* aTTMatrix, TTPtr aJitterMatrix);
+TTErr TTMatrixCopyDataToJitterMatrix(TTMatrix* aTTMatrix, TTPtr aJitterMatrix);
 
 #endif // __TT_CLASS_WRAPPER_MAX_H__

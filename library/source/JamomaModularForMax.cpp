@@ -21,37 +21,6 @@
 *
 ************************************************************************************/
 
-// Method to deal with the jamoma directory
-/////////////////////////////////////////
-
-TTErr jamoma_directory_dump_observers(void)
-{
-	unsigned int i, j, s;
-	TTValue v;
-	TTValuePtr pv;
-	TTSymbol key, owner;
-	
-	post("--- JamomaDirectory Observers ---");
-	accessApplicationLocalDirectory->dumpObservers(v);
-	
-	s = v.size();
-	for (i = 0; i < s; i++) {
-		
-        pv = TTValuePtr((TTPtr)v[i]);
-		key = (*pv)[0];
-		post("%s :", key.c_str());
-		
-		for (j = 1; j < ((TTValuePtr)pv)->size(); j++) {
-		
-            owner = (*pv)[j];
-			post("    %s", owner.c_str());
-		}
-	}
-	
-	post("----------------------------------------------");
-	
-	return kTTErrNone;
-}
 
 // Method to deal with TTSubscriber
 ///////////////////////////////////////////////////////////////////////
@@ -291,6 +260,7 @@ TTErr jamoma_data_create(ObjectPtr x, TTObject& returnedData, TTSymbol service)
     // prepare its callback
     returnedData.set(kTTSym_baton, TTPtr(x));
 	returnedData.set(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
+    returnedData.set(TTSymbol("rampDriveDefault"), TTSymbol("Max"));
 	
 	return kTTErrNone;
 }
@@ -386,7 +356,7 @@ TTErr jamoma_receiver_create_audio(ObjectPtr x, TTObject& returnedReceiver)
 	
 	args.append(NULL);	// no return value callback
 	
-	audio = TTObjecte(kTTSym_audiosignal, 1);
+	audio = TTObject(kTTSym_audiosignal, 1);
 	args.append(audio);
 	
 	returnedReceiver = TTObject(kTTSym_Receiver, args);
@@ -448,6 +418,7 @@ TTErr jamoma_input_create(ObjectPtr x, TTObject& returnedInput)
 TTErr jamoma_input_create_audio(ObjectPtr x, TTObject& returnedInput)
 {
 	returnedInput = TTObject("Input.audio");
+    return kTTErrNone;
 }
 
 /**	Send any signal to an input object */
@@ -569,14 +540,10 @@ TTErr jamoma_mapper_create(ObjectPtr x, TTObject& returnedMapper)
 /**	Create a viewer object */
 TTErr jamoma_viewer_create(ObjectPtr x, TTObject& returnedViewer)
 {
-	TTObject returnValueCallback;
-	
-	// prepare arguments
-	returnValueCallback = TTObject("callback");
-	returnValueCallback.set(kTTSym_baton, TTPtr(x));
-	returnValueCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
-	
-	returnedViewer = TTObject(kTTSym_Viewer, returnValueCallback);
+	returnedViewer = TTObject(kTTSym_Viewer);
+    
+    returnedViewer.set(kTTSym_baton, TTPtr(x));
+	returnedViewer.set(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
 	
 	return kTTErrNone;
 }
@@ -1129,7 +1096,6 @@ void jamoma_patcher_get_args(ObjectPtr patcher, AtomCount *argc, AtomPtr *argv)
 	ObjectPtr	assoc = NULL;
 	char		*text = NULL;
 	unsigned    long	textlen = 0;
-	method		m = NULL;
 	
 	if (hierarchy == _sym_bpatcher)
 		object_attr_getvalueof(box, SymbolGen("args"), argc, argv);

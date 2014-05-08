@@ -126,13 +126,13 @@ typedef struct _wrappedModularInstance {
 	WrappedClassPtr							wrappedClassDefinition;		///< A pointer to the class definition
 
 #ifndef ARRAY_EXTERNAL
-	TTObjectBasePtr							wrappedObject;				///< The instance of the Jamoma object we are wrapping
-	TTSubscriberPtr							subscriberObject;			///< The instance of a TTSubscriber object used to 
+	TTObject                                wrappedObject;				///< The instance of the Jamoma object we are wrapping
+	TTObject                                subscriberObject;			///< The instance of a TTSubscriber object used to
 																		///< register the wrapped object in the tree structure
 #endif
 	
 	TTBoolean								useInternals;				///< The hash table can be used as an array of wrappedObject
-	TTHashPtr								internals;					///< An hash table to store any internal TTObjectBases (like TTData, TTViewer, ...)
+	TTHash                                  internals;					///< An hash table to store any internal TTObjectBases (like TTData, TTViewer, ...)
 	TTBoolean								iterateInternals;			///< The flag is true when an iteration is done on the internals
 	TTSymbol								cursor;						///< to select an entry in x->internals
 	
@@ -175,22 +175,22 @@ void		copy_msg_argc_argv(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv
 
 /**
  */
-TTErr		makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTPtr context, TTSymbol service, TTObjectBasePtr *returnedData, TTBoolean deferlow = NO);
-TTErr		makeInternals_explorer(TTPtr self, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedExplorer, TTBoolean deferlow = NO);
+TTErr		makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTPtr context, TTSymbol service, TTObject& returnedData, TTBoolean deferlow = NO);
+TTErr		makeInternals_explorer(TTPtr self, TTSymbol name, SymbolPtr callbackMethod, TTObject& returnedExplorer, TTBoolean deferlow = NO);
 
 
 /**
  */
-TTErr		makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedViewer, TTBoolean deferlow = NO);
+TTErr		makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObject& returnedViewer, TTBoolean deferlow = NO);
 
 
 /**
  */
-TTErr		makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedReceiver, TTBoolean deferlow = NO, TTBoolean appendNameAsAttribute = NO);
+TTErr		makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObject& returnedReceiver, TTBoolean deferlow = NO, TTBoolean appendNameAsAttribute = NO);
 
 /**
  */
-TTErr       makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObjectBasePtr *returnedSender, TTBoolean appendNameAsAttribute = NO);
+TTErr       makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObject& returnedSender, TTBoolean appendNameAsAttribute = NO);
 
 /**
  */

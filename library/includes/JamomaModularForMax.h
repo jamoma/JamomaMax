@@ -51,15 +51,6 @@ extern JAMOMA_EXPORT	TTString*			DocumentationFormat;	///<
 #define JamomaDebug if (accessApplicationLocalDebug)
 
 
-// Method to deal with the jamoma directory
-/////////////////////////////////////////
-
-/** Dump all the OSC address of the directory in the max window.
- @return						#TTErr error message if the method does not execute as expected.
- */
-TTErr JAMOMA_EXPORT jamoma_directory_dump_observers(void);
-
-
 // Methods to deal with TTSubscriber
 ///////////////////////////////////////////////////////////////////////
 

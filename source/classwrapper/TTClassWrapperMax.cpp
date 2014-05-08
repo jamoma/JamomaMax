@@ -592,7 +592,7 @@ TTErr TTAtomsFromValue(const TTValue& v, AtomCount* ac, AtomPtr* av)
 	than the input matrix, and the Jamoma object cannot change the size of a Jitter matrix.
 */
 
-long TTMatrixReferenceJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix, TTBoolean copy)
+long TTMatrixReferenceJitterMatrix(TTMatrix* aTTMatrix, TTPtr aJitterMatrix, TTBoolean copy)
 {
 	t_jit_matrix_info	jitterMatrixInfo;
 	TTBytePtr			jitterMatrixData;
@@ -637,7 +637,7 @@ long TTMatrixReferenceJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix, T
 
 
 // Assumes jitter matrix is locked, matrix dimensions agree , and we're ready to go 
-TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix)
+TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrix* aTTMatrix, TTPtr aJitterMatrix)
 {
 	t_jit_matrix_info	jitterMatrixInfo;
 	TTBytePtr			jitterMatrixData;
@@ -669,7 +669,7 @@ TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatri
 
 
 // Assumes jitter matrix is locked, matrix dimensions agree , and we're ready to go 
-TTErr TTMatrixCopyDataToJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix)
+TTErr TTMatrixCopyDataToJitterMatrix(TTMatrix* aTTMatrix, TTPtr aJitterMatrix)
 {
 	t_jit_matrix_info	jitterMatrixInfo;
 	TTBytePtr			jitterMatrixData;
