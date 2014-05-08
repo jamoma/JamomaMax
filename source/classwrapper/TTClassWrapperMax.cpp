@@ -127,7 +127,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
             x->controlCallback->registerMessage(notificationName, (TTMethod)&TTCallback::notify, kTTMessagePassValue);
             
             // tell the source that is passed in that we want to watch it
-            x->wrappedObject->registerObserverForNotifications(*x->controlCallback);            
+            x->wrappedObject->registerObserverForNotifications(x->controlCallback);
 
         }
         
@@ -607,15 +607,15 @@ long TTMatrixReferenceJitterMatrix(TTMatrix* aTTMatrix, TTPtr aJitterMatrix, TTB
 		aTTMatrix->referenceExternalData(jitterMatrixData);
 	
 	if (jitterMatrixInfo.type == _sym_char)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_uint8);
+		aTTMatrix->set(kTTSym_type, kTTSym_uint8);
 	else if (jitterMatrixInfo.type == _sym_long)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_int32);
+		aTTMatrix->set(kTTSym_type, kTTSym_int32);
 	else if (jitterMatrixInfo.type == _sym_float32)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_float32);
+		aTTMatrix->set(kTTSym_type, kTTSym_float32);
 	else if (jitterMatrixInfo.type == _sym_float64)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_float64);
+		aTTMatrix->set(kTTSym_type, kTTSym_float64);
 	
-	aTTMatrix->setAttributeValue(kTTSym_elementCount, (int)jitterMatrixInfo.planecount);
+	aTTMatrix->set(kTTSym_elementCount, (int)jitterMatrixInfo.planecount);
 	
 	jitterDimensionCount = jitterMatrixInfo.dimcount;
 	dimensions.resize(jitterDimensionCount);
@@ -630,7 +630,7 @@ long TTMatrixReferenceJitterMatrix(TTMatrix* aTTMatrix, TTPtr aJitterMatrix, TTB
 			dimensions.set(d, (int)jitterMatrixInfo.dim[d]);
 	}
 	
-	aTTMatrix->setAttributeValue(kTTSym_dimensions, dimensions);
+	aTTMatrix->set(kTTSym_dimensions, dimensions);
 		
 	return jitterMatrixLock;
 }

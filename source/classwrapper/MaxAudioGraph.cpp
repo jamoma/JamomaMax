@@ -198,7 +198,7 @@ t_max_err MaxAudioGraphWrappedClass_attrGet(WrappedInstancePtr self, ObjectPtr a
 	
 	TTSymbol	ttAttrName(attrName->s_name);
 
-	self->audioGraphObject->getUnitGenerator()->getAttributeValue(ttAttrName, v);
+	self->audioGraphObject->getUnitGenerator().get(ttAttrName, v);
 
 	*argc = v.size();
 	if (!(*argv)) // otherwise use memory passed in
@@ -246,7 +246,7 @@ t_max_err MaxAudioGraphWrappedClass_attrSet(WrappedInstancePtr self, ObjectPtr a
 			else
 				object_error(SELF, "bad type for attribute setter");
 		}
-		self->audioGraphObject->getUnitGenerator()->setAttributeValue(ttAttrName, v);
+		self->audioGraphObject->getUnitGenerator().set(ttAttrName, v);
 		return MAX_ERR_NONE;
 	}
 	return MAX_ERR_GENERIC;
@@ -297,7 +297,7 @@ void MaxAudioGraphWrappedClass_anything(WrappedInstancePtr self, SymbolPtr s, At
 		}
 	}
 	// Now that we know that the message is OK we send it on to the wrapped class
-	self->audioGraphObject->getUnitGenerator()->sendMessage(ttName, v_in, v_out);
+	self->audioGraphObject->getUnitGenerator().send(ttName, v_in, v_out);
 		
 		// process the returned value for the dumpout outlet
 		{
