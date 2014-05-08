@@ -351,7 +351,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 144.5, 331.0, 850.0, 19.0 ],
-									"text" : "j.parameter material/shininess @type decimal @range/bounds 0. 255. @range/clipmode both @ramp/drive Max @description \"Material shininess.\" @value/default 10.",
+									"text" : "j.parameter material/shininess @type decimal @range 0. 255. @clipmode both @ramp/drive Max @description \"Material shininess.\" @default 10.",
 									"varname" : "material/shininess"
 								}
 
@@ -366,7 +366,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 198.0, 450.0, 605.0, 19.0 ],
-									"text" : "j.parameter material/inherit @type boolean @description \"Inherit material properties from context.\" @value/default 0",
+									"text" : "j.parameter material/inherit @type boolean @description \"Inherit material properties from context.\" @default 0",
 									"varname" : "material/inherit"
 								}
 
@@ -381,7 +381,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 174.0, 392.0, 570.0, 19.0 ],
-									"text" : "j.parameter material/automatic @type boolean @description \"Automatic material attributes.\" @value/default 1",
+									"text" : "j.parameter material/automatic @type boolean @description \"Automatic material attributes.\" @default 1",
 									"varname" : "material/automatic"
 								}
 
@@ -396,7 +396,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 25.5, 62.0, 518.0, 19.0 ],
-									"text" : "j.parameter material/light/enable @type boolean @description \"Calculate lighting.\" @value/default 0",
+									"text" : "j.parameter material/light/enable @type boolean @description \"Calculate lighting.\" @default 0",
 									"varname" : "material/light/enable"
 								}
 
@@ -411,7 +411,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 117.0, 265.0, 954.0, 19.0 ],
-									"text" : "j.parameter material/light/specular @type decimalArray @ramp/drive Max @description \"The specular light material property as red, green, blue, alpha (0.-1.).\" @value/default 0. 0. 0. 0.",
+									"text" : "j.parameter material/light/specular @type decimalArray @ramp/drive Max @description \"The specular light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/specular"
 								}
 
@@ -426,7 +426,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 103.0, 219.0, 933.0, 19.0 ],
-									"text" : "j.parameter material/light/emission @type decimalArray @ramp/drive Max @description \"The material emission property as red, green, blue, alpha (0.-1.).\" @value/default 0. 0. 0. 0.",
+									"text" : "j.parameter material/light/emission @type decimalArray @ramp/drive Max @description \"The material emission property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/emission"
 								}
 
@@ -441,7 +441,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 83.0, 172.0, 937.0, 19.0 ],
-									"text" : "j.parameter material/light/diffuse @type decimalArray @ramp/drive Max @description \"The diffuse light material property as red, green, blue, alpha (0.-1.).\" @value/default 0. 0. 0. 0.",
+									"text" : "j.parameter material/light/diffuse @type decimalArray @ramp/drive Max @description \"The diffuse light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/diffuse"
 								}
 
@@ -456,7 +456,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 123.0, 952.0, 19.0 ],
-									"text" : "j.parameter material/light/ambient @type decimalArray @ramp/drive Max @description \"The ambient light material property as red, green, blue, alpha (0.-1.).\" @value/default 0. 0. 0. 0.",
+									"text" : "j.parameter material/light/ambient @type decimalArray @ramp/drive Max @description \"The ambient light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/ambient"
 								}
 
@@ -751,7 +751,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 278.5, 726.0, 1056.0, 19.0 ],
-					"text" : "j.parameter render/layer @type integer @range/bounds 0 255 @range/clipmode none @ramp/drive none @description \"Object layer number. Only valid when /render/automatic is enabled.\" @value/default 0",
+					"text" : "j.parameter render/layer @type integer @range 0 255 @clipmode none @ramp/drive none @description \"Object layer number. Only valid when /render/automatic is enabled.\" @default 0",
 					"varname" : "render/layer"
 				}
 
@@ -781,7 +781,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 84.0, 154.0, 655.0, 19.0 ],
-					"text" : "j.parameter blend/mode @type integerArray @description \"Blend modes for source and destination planes.\" @value/default 6 7",
+					"text" : "j.parameter blend/mode @type integerArray @description \"Blend modes for source and destination planes.\" @default 6 7",
 					"varname" : "blend/mode"
 				}
 
@@ -796,7 +796,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 236.0, 632.0, 474.0, 19.0 ],
-					"text" : "j.parameter render/enable @type boolean @description \"Enable drawing.\" @value/default 1",
+					"text" : "j.parameter render/enable @type boolean @description \"Enable drawing.\" @default 1",
 					"varname" : "render/enable"
 				}
 
@@ -811,7 +811,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 217.5, 587.0, 538.0, 19.0 ],
-					"text" : "j.parameter render/automatic @type boolean @description \"Automatic rendering flag.\" @value/default 1",
+					"text" : "j.parameter render/automatic @type boolean @description \"Automatic rendering flag.\" @default 1",
 					"varname" : "render/automatic"
 				}
 
@@ -826,7 +826,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 258.5, 679.0, 466.0, 19.0 ],
-					"text" : "j.parameter render/antialias @type boolean @description \"Aliasing flag.\" @value/default 0",
+					"text" : "j.parameter render/antialias @type boolean @description \"Aliasing flag.\" @default 0",
 					"varname" : "render/antialias"
 				}
 
@@ -842,7 +842,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 963.5, 338.0, 323.0, 31.0 ],
-					"text" : "j.parameter fog/amount @type decimal @range/bounds 0. 1. @description \"The amount of fog effect.\" @value/default 0.",
+					"text" : "j.parameter fog/amount @type decimal @range 0. 1. @description \"The amount of fog effect.\" @default 0.",
 					"varname" : "fog/amount"
 				}
 
@@ -872,7 +872,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 217.5, 511.0, 580.0, 19.0 ],
-					"text" : "j.parameter depth/inherit @type boolean @description \"Inherit depth properties from context.\" @value/default 0",
+					"text" : "j.parameter depth/inherit @type boolean @description \"Inherit depth properties from context.\" @default 0",
 					"varname" : "depth/inherit"
 				}
 
@@ -887,7 +887,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 186.5, 428.0, 507.0, 19.0 ],
-					"text" : "j.parameter depth/enable @type boolean @description \"Enable depth buffering.\" @value/default 1",
+					"text" : "j.parameter depth/enable @type boolean @description \"Enable depth buffering.\" @default 1",
 					"varname" : "depth/enable"
 				}
 
@@ -902,7 +902,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 201.5, 471.0, 616.0, 19.0 ],
-					"text" : "j.parameter depth/clear @type boolean @description \"Clear depth buffer before rendering the object.\" @value/default 0",
+					"text" : "j.parameter depth/clear @type boolean @description \"Clear depth buffer before rendering the object.\" @default 0",
 					"varname" : "depth/clear"
 				}
 
@@ -917,7 +917,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 113.0, 268.0, 571.0, 19.0 ],
-					"text" : "j.parameter color/inherit @type boolean @description \"Inherit color properties from context.\" @value/default 0",
+					"text" : "j.parameter color/inherit @type boolean @description \"Inherit color properties from context.\" @default 0",
 					"varname" : "color/inherit"
 				}
 
@@ -932,7 +932,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 302.0, 773.0, 471.0, 19.0 ],
-					"text" : "j.parameter blend/enable @type boolean @description \"Enable blending.\" @value/default 0",
+					"text" : "j.parameter blend/enable @type boolean @description \"Enable blending.\" @default 0",
 					"varname" : "blend/enable"
 				}
 
@@ -947,7 +947,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 146.0, 338.0, 788.0, 19.0 ],
-					"text" : "j.parameter fog/params @type decimalArray @ramp/drive Max @description \"Fog color (RGBA), density,start and end.\" @value/default 0. 0. 0. 0. 0. 0. 0.",
+					"text" : "j.parameter fog/params @type decimalArray @ramp/drive Max @description \"Fog color (RGBA), density,start and end.\" @default 0. 0. 0. 0. 0. 0. 0.",
 					"varname" : "fog/params"
 				}
 
@@ -962,7 +962,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 135.5, 222.0, 883.5, 19.0 ],
-					"text" : "j.parameter color/alpha @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @description \"Object alpha transparency (0.-1.).\" @value/default 1.",
+					"text" : "j.parameter color/alpha @type decimal @range 0. 1. @clipmode both @ramp/drive Max @description \"Object alpha transparency (0.-1.).\" @default 1.",
 					"varname" : "color/alpha"
 				}
 
@@ -977,7 +977,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 119.0, 200.0, 717.0, 19.0 ],
-					"text" : "j.parameter color/rgb @type decimalArray @ramp/drive Max @description \"Object color as red, green, blue (0.-1.).\" @value/default 1. 1. 1.",
+					"text" : "j.parameter color/rgb @type decimalArray @ramp/drive Max @description \"Object color as red, green, blue (0.-1.).\" @default 1. 1. 1.",
 					"varname" : "color/rgb"
 				}
 
@@ -992,7 +992,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 61.0, 110.0, 701.0, 19.0 ],
-					"text" : "j.parameter 3D/scale @ramp/drive Max @type decimalArray @description \"3D scaling factor as xyz coordinates.\" @value/default 1. 1. 1.",
+					"text" : "j.parameter 3D/scale @ramp/drive Max @type decimalArray @description \"3D scaling factor as xyz coordinates.\" @default 1. 1. 1.",
 					"varname" : "3D/scale"
 				}
 
@@ -1007,7 +1007,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 43.0, 64.0, 811.0, 19.0 ],
-					"text" : "j.parameter 3D/rotate @type decimalArray @ramp/drive Max @description \"3D rotation as angle and xyz rotation axis coordinates.\" @value/default 0. 0. 0. 1.",
+					"text" : "j.parameter 3D/rotate @type decimalArray @ramp/drive Max @description \"3D rotation as angle and xyz rotation axis coordinates.\" @default 0. 0. 0. 1.",
 					"varname" : "3D/rotate"
 				}
 
@@ -1022,7 +1022,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 25.0, 22.0, 677.0, 19.0 ],
-					"text" : "j.parameter 3D/position @type decimalArray @ramp/drive Max @description \"3D origin as xyz coordinates.\" @value/default 0. 0. 0.",
+					"text" : "j.parameter 3D/position @type decimalArray @ramp/drive Max @description \"3D origin as xyz coordinates.\" @default 0. 0. 0.",
 					"varname" : "3D/position"
 				}
 

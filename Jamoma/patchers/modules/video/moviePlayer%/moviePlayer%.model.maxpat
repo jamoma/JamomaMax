@@ -194,7 +194,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 388.5, 110.0, 472.0, 19.0 ],
-									"text" : "j.parameter unique @type boolean @description \"unique frame playback\" @value/default 0",
+									"text" : "j.parameter unique @type boolean @description \"unique frame playback\" @default 0",
 									"varname" : "unique"
 								}
 
@@ -210,7 +210,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 24.0, 19.0, 510.0, 19.0 ],
-									"text" : "j.parameter deinterlace @type boolean @description \"deinterlace movie.\" @value/default 1",
+									"text" : "j.parameter deinterlace @type boolean @description \"deinterlace movie.\" @default 1",
 									"varname" : "deinterlace"
 								}
 
@@ -226,7 +226,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 266.0, 81.0, 471.0, 19.0 ],
-									"text" : "j.parameter singlefield @type boolean @description \"singlefield playback\" @value/default 1",
+									"text" : "j.parameter singlefield @type boolean @description \"singlefield playback\" @default 1",
 									"varname" : "singlefield"
 								}
 
@@ -242,7 +242,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 144.0, 48.0, 498.0, 19.0 ],
-									"text" : "j.parameter highquality @type boolean @description \"High quality option.\" @value/default 1",
+									"text" : "j.parameter highquality @type boolean @description \"High quality option.\" @default 1",
 									"varname" : "highquality"
 								}
 
@@ -363,7 +363,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 229.0, 21.0, 360.0, 19.0 ],
-					"text" : "j.parameter colormode @type string Colormode. @value/default argb",
+					"text" : "j.parameter colormode @type string Colormode. @default argb",
 					"varname" : "dim[1]"
 				}
 
@@ -521,7 +521,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 30.0, 22.0, 452.0, 19.0 ],
-									"text" : "j.parameter loop @type string @description \"Set loop attribute.\" @value/default normal",
+									"text" : "j.parameter loop @type string @description \"Set loop attribute.\" @default normal",
 									"varname" : "loop"
 								}
 
@@ -1132,7 +1132,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 347.0, 53.0, 394.0, 31.0 ],
-					"text" : "j.parameter dim @type Array @range/bounds 1 1000 @range/clipmode low @ramp/drive none @description \"Image size\" @value/default 320 240",
+					"text" : "j.parameter dim @type Array @range 1 1000 @clipmode low @ramp/drive none @description \"Image size\" @default 320 240",
 					"varname" : "dim"
 				}
 

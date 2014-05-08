@@ -204,7 +204,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 157.0, 117.0, 589.0, 43.0 ],
-					"text" : "j.parameter randomness @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 5000 @range/clipmode low @description \"Defines a range of randomness in milliseconds to be applied to the metro interval\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter randomness @type integer @ramp/drive Max @repetitions/filter 1 @range 0 5000 @clipmode low @description \"Defines a range of randomness in milliseconds to be applied to the metro interval\" @dataspace time @dataspace/unit ms",
 					"varname" : "randomness"
 				}
 
@@ -234,7 +234,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 87.0, 74.0, 606.0, 31.0 ],
-					"text" : "j.parameter time @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 1 5000 @range/clipmode low @dataspace time @dataspace/unit ms @description \"Metro interval (ms)\" @value/default 25",
+					"text" : "j.parameter time @type integer @ramp/drive Max @repetitions/filter 1 @range 1 5000 @clipmode low @dataspace time @dataspace/unit ms @description \"Metro interval (ms)\" @default 25",
 					"varname" : "time"
 				}
 
@@ -250,7 +250,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 19.0, 32.0, 584.0, 31.0 ],
-					"text" : "j.parameter toggle @type boolean @ramp/drive none @repetitions/filter 1 @range/bounds 0 1 @range/clipmode both @description \"Toggle qmetro on/off\" @value/default 0",
+					"text" : "j.parameter toggle @type boolean @ramp/drive none @repetitions/filter 1 @range 0 1 @clipmode both @description \"Toggle qmetro on/off\" @default 0",
 					"varname" : "toggle"
 				}
 

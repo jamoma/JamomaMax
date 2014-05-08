@@ -2092,7 +2092,7 @@
             601.0,
             31.0
           ],
-          "text": "j.parameter.array 8 source weight @type decimalArray @range/bounds 0. 1. @description \"Set spatial weight of the nth source.\""
+          "text": "j.parameter.array 8 source weight @type decimalArray @range 0. 1. @description \"Set spatial weight of the nth source.\""
         }
       },
       {
@@ -2161,7 +2161,7 @@
             592.0,
             31.0
           ],
-          "text": "j.message.array 8 source blur @type decimal @range/bounds 0. 100. @description \"Set spatial blur of the nth source.\""
+          "text": "j.message.array 8 source blur @type decimal @range 0. 100. @description \"Set spatial blur of the nth source.\""
         }
       },
       {
@@ -2257,7 +2257,7 @@
             592.0,
             31.0
           ],
-          "text": "j.parameter rolloff @type decimal @range/bounds 1 6 @range/clipmode low @description \"Rolloff in dB with doubling of distance.\"",
+          "text": "j.parameter rolloff @type decimal @range 1 6 @clipmode low @description \"Rolloff in dB with doubling of distance.\"",
           "varname": "voices[3]"
         }
       },
@@ -2281,7 +2281,7 @@
             605.0,
             31.0
           ],
-          "text": "j.parameter numSpeakers @type integer @range/bounds 1 32 @range/clipmode both @description \"The number of speakers to diffuse to.\" @priority 3",
+          "text": "j.parameter numSpeakers @type integer @range 1 32 @clipmode both @description \"The number of speakers to diffuse to.\" @priority 3",
           "varname": "voices[1]"
         }
       },
@@ -2326,7 +2326,7 @@
             605.0,
             31.0
           ],
-          "text": "j.parameter numSources @type integer @range/bounds 1 8 @range/clipmode both @description \"The number of sources to process.\" @priority 2",
+          "text": "j.parameter numSources @type integer @range 1 8 @clipmode both @description \"The number of sources to process.\" @priority 2",
           "varname": "voices"
         }
       }

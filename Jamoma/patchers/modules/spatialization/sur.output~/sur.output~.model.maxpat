@@ -320,7 +320,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 557.0, 78.0, 128.0, 114.0 ],
-					"text" : "j.parameter setup @type integerArray @range/bounds 1 32 @range/clipmode low @description \"List of output channels that multicable signal is routed to.\"",
+					"text" : "j.parameter setup @type integerArray @range 1 32 @clipmode low @description \"List of output channels that multicable signal is routed to.\"",
 					"varname" : "setup"
 				}
 
@@ -432,7 +432,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 437.800049, 228.0, 147.0, 87.0 ],
-									"text" : "j.return cpu @range/bounds 0. 100. @type decimal @description \"reports the cpu usage of the dsp processing\""
+									"text" : "j.return cpu @range 0. 100. @type decimal @description \"reports the cpu usage of the dsp processing\""
 								}
 
 							}
@@ -3041,7 +3041,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 415.0, 78.0, 133.0, 141.0 ],
-					"text" : "j.parameter offset @type integer @repetitions/filter 1 @range/bounds 0 32 @range/clipmode both @description \"Set channel offset for the multicable. Changes only take effect when audio is off.\"",
+					"text" : "j.parameter offset @type integer @repetitions/filter 1 @range 0 32 @clipmode both @description \"Set channel offset for the multicable. Changes only take effect when audio is off.\"",
 					"varname" : "offset"
 				}
 
@@ -3057,7 +3057,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 227.0, 78.0, 177.0, 127.0 ],
-					"text" : "j.parameter numSpeakers @type integer @repetitions/filter 1 @range/bounds 2 32 @range/clipmode both @description \"Set number of output channels to use. Changes only take effect when audio is off.\"",
+					"text" : "j.parameter numSpeakers @type integer @repetitions/filter 1 @range 2 32 @clipmode both @description \"Set number of output channels to use. Changes only take effect when audio is off.\"",
 					"varname" : "voices"
 				}
 

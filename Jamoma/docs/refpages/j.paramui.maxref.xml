@@ -449,7 +449,7 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
 			</attributelist>
 		</attribute>
-		<attribute name="range/bounds" get="1" set="1" type="float" size="2">
+		<attribute name="range" get="1" set="1" type="float" size="2">
 			<digest>
 				Range
 			</digest>
@@ -463,7 +463,7 @@
 				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
 			</attributelist>
 		</attribute>
-		<attribute name="range/clipmode" get="1" set="1" type="symbol" size="1">
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
 				Mode for Clipping to Range
 			</digest>
@@ -580,7 +580,7 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
 			</attributelist>
 		</attribute>
-		<attribute name="value/default" get="1" set="1" type="float" size="512">
+		<attribute name="default" get="1" set="1" type="float" size="512">
 			<digest>
 				Default Value
 			</digest>
@@ -594,7 +594,7 @@
 				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
 			</attributelist>
 		</attribute>
-		<attribute name="value/stepsize" get="1" set="1" type="float" size="1">
+		<attribute name="stepsize" get="1" set="1" type="float" size="1">
 			<digest>
 				Step Size for inc/dec
 			</digest>

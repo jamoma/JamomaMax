@@ -81,7 +81,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 429.0, 29.5, 235.0, 100.0 ],
-					"text" : "j.parameter factors @type array @value/default 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. @range/bounds 1. 100. @range/clipmode low @description \"list of factors that determines the frequencies of the 10 partials as a factor of the fundamental frequency, default is 1 2 3 4 5 6 7 8 9 10\""
+					"text" : "j.parameter factors @type array @default 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. @range 1. 100. @clipmode low @description \"list of factors that determines the frequencies of the 10 partials as a factor of the fundamental frequency, default is 1 2 3 4 5 6 7 8 9 10\""
 				}
 
 			}
@@ -96,7 +96,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 568.5, 152.0, 331.0, 60.0 ],
-					"text" : "j.parameter frequency @type decimal @range/bounds 20 20000 @range/clipmode none @ramp/drive Max @ramp/function linear @dataspace time @dataspace/unit Hz @description \"Fundamental frequency of the signal.\"",
+					"text" : "j.parameter frequency @type decimal @range 20 20000 @clipmode none @ramp/drive Max @ramp/function linear @dataspace time @dataspace/unit Hz @description \"Fundamental frequency of the signal.\"",
 					"varname" : "frequency"
 				}
 

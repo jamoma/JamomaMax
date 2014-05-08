@@ -310,7 +310,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 27.5, 404.0, 312.0, 20.0 ],
-					"text" : "j.parameter fxw @type decimal @value/default 0.5"
+					"text" : "j.parameter fxw @type decimal @default 0.5"
 				}
 
 			}

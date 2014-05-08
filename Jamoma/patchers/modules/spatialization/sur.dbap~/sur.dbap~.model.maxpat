@@ -38,7 +38,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 548.0, 30.0, 548.0, 31.0 ],
-					"text" : "j.parameter audio/gain @type integer @range/bounds 0 127 @range/clipmode both @dataspace gain @dataspace/unit midi",
+					"text" : "j.parameter audio/gain @type integer @range 0 127 @clipmode both @dataspace gain @dataspace/unit midi",
 					"varname" : "voices[5]"
 				}
 
@@ -53,7 +53,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 548.0, 5.0, 451.0, 19.0 ],
-					"text" : "j.parameter audio/mute @type boolean @range/bounds 0 1 @range/clipmode both",
+					"text" : "j.parameter audio/mute @type boolean @range 0 1 @clipmode both",
 					"varname" : "voices[4]"
 				}
 
@@ -1423,7 +1423,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 588.0, 596.0, 31.0 ],
-					"text" : "j.parameterArray source.[32]/weight @type array @range/bounds 0. 1. @description \"Set spatial weight of the nth source.\""
+					"text" : "j.parameterArray source.[32]/weight @type array @range 0. 1. @description \"Set spatial weight of the nth source.\""
 				}
 
 			}
@@ -1468,7 +1468,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 313.0, 606.0, 31.0 ],
-					"text" : "j.messageArray source.[32]/blur @type decimal @range/bounds 0. 100. @description \"Set spatial blur of the nth source.\""
+					"text" : "j.messageArray source.[32]/blur @type decimal @range 0. 100. @description \"Set spatial blur of the nth source.\""
 				}
 
 			}
@@ -1559,7 +1559,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 425.0, 99.0, 592.0, 31.0 ],
-					"text" : "j.parameter rolloff @type decimal @range/bounds 1 6 @range/clipmode low @description \"Rolloff in dB with doubling of distance.\"",
+					"text" : "j.parameter rolloff @type decimal @range 1 6 @clipmode low @description \"Rolloff in dB with doubling of distance.\"",
 					"varname" : "voices[3]"
 				}
 
@@ -1575,7 +1575,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 425.0, 68.0, 606.0, 31.0 ],
-					"text" : "j.parameter dimensions @type integer @range/bounds 1 3 @range/clipmode both @description \"Dimensions of the space spanned by loudspeakers.\"",
+					"text" : "j.parameter dimensions @type integer @range 1 3 @clipmode both @description \"Dimensions of the space spanned by loudspeakers.\"",
 					"varname" : "voices[2]"
 				}
 
@@ -1591,7 +1591,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 425.0, 130.0, 568.0, 31.0 ],
-					"text" : "j.parameter numSpeakers @type integer @range/bounds 1 32 @range/clipmode both @description \"The number of speakers to diffuse to.\" @priority 3",
+					"text" : "j.parameter numSpeakers @type integer @range 1 32 @clipmode both @description \"The number of speakers to diffuse to.\" @priority 3",
 					"varname" : "voices[1]"
 				}
 
@@ -1697,7 +1697,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 425.0, 158.0, 557.0, 31.0 ],
-					"text" : "j.parameter numSources @type integer @range/bounds 1 32 @range/clipmode both @description \"The number of sources to process.\" @priority 2",
+					"text" : "j.parameter numSources @type integer @range 1 32 @clipmode both @description \"The number of sources to process.\" @priority 2",
 					"varname" : "voices"
 				}
 

@@ -265,7 +265,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 164.0, 59.0, 149.0, 141.0 ],
-													"text" : "j.parameter clicktrain/rate @type decimal @ramp/drive Max @description \"How often a click is generated. in [Hz] by default.\" @range/bounds 0.01 100. @range/clipmode both @dataspace time @dataspace/unit Hz",
+													"text" : "j.parameter clicktrain/rate @type decimal @ramp/drive Max @description \"How often a click is generated. in [Hz] by default.\" @range 0.01 100. @clipmode both @dataspace time @dataspace/unit Hz",
 													"varname" : "ch_1[1]"
 												}
 
@@ -947,7 +947,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 47.0, 271.0, 87.0 ],
-																	"text" : "j.parameter file/transpose @type decimal @range/bounds -12. 12. @range/clipmode none @dataspace time @dataspace/unit midi @ramp/drive Max @ramp/function linear @description \"Control soundfile playback speed/transposition as MIDI transposition.\""
+																	"text" : "j.parameter file/transpose @type decimal @range -12. 12. @clipmode none @dataspace time @dataspace/unit midi @ramp/drive Max @ramp/function linear @description \"Control soundfile playback speed/transposition as MIDI transposition.\""
 																}
 
 															}
@@ -1252,7 +1252,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 337.0, 233.0, 114.0, 18.0 ],
-																	"text" : "range/bounds 0. $1"
+																	"text" : "range 0. $1"
 																}
 
 															}
@@ -1267,7 +1267,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 97.0, 363.0, 157.0, 100.0 ],
-																	"text" : "j.return file/time/relative @type decimal @range/bounds 0. 1. @description \"Current relative position in sound file, expressed in the range (0, 1).\""
+																	"text" : "j.return file/time/relative @type decimal @range 0. 1. @description \"Current relative position in sound file, expressed in the range (0, 1).\""
 																}
 
 															}
@@ -2345,7 +2345,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 48.0, 104.0, 186.0, 114.0 ],
-													"text" : "j.parameter testtone/frequency @type integer @ramp/drive Max @range/bounds 0.2 16000. @range/clipmode both @dataspace time @dataspace/unit Hz @description \"The Frequency of the test tone. in [Hz] by default.\"",
+													"text" : "j.parameter testtone/frequency @type integer @ramp/drive Max @range 0.2 16000. @clipmode both @dataspace time @dataspace/unit Hz @description \"The Frequency of the test tone. in [Hz] by default.\"",
 													"varname" : "ch_1[2]"
 												}
 

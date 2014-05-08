@@ -169,7 +169,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 20.0, 30.0, 173.0, 29.0 ],
-					"text" : "j.parameter enable @priority 1 @value/default 0"
+					"text" : "j.parameter enable @priority 1 @default 0"
 				}
 
 			}
@@ -211,7 +211,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 191.0, 168.0, 118.0, 18.0 ],
-									"text" : "prepend range/clipmode"
+									"text" : "prepend clipmode"
 								}
 
 							}
@@ -253,7 +253,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 191.0, 102.0, 142.0, 18.0 ],
-									"text" : "sprintf set %s:range/clipmode"
+									"text" : "sprintf set %s:clipmode"
 								}
 
 							}
@@ -267,7 +267,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 62.0, 170.0, 111.0, 18.0 ],
-									"text" : "prepend range/bounds"
+									"text" : "prepend range"
 								}
 
 							}
@@ -309,7 +309,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 100.0, 134.0, 18.0 ],
-									"text" : "sprintf set %s:range/bounds"
+									"text" : "sprintf set %s:range"
 								}
 
 							}
@@ -586,7 +586,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 191.0, 168.0, 118.0, 18.0 ],
-									"text" : "prepend range/clipmode"
+									"text" : "prepend clipmode"
 								}
 
 							}
@@ -628,7 +628,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 191.0, 102.0, 142.0, 18.0 ],
-									"text" : "sprintf set %s:range/clipmode"
+									"text" : "sprintf set %s:clipmode"
 								}
 
 							}
@@ -642,7 +642,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 62.0, 170.0, 111.0, 18.0 ],
-									"text" : "prepend range/bounds"
+									"text" : "prepend range"
 								}
 
 							}
@@ -684,7 +684,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 100.0, 134.0, 18.0 ],
-									"text" : "sprintf set %s:range/bounds"
+									"text" : "sprintf set %s:range"
 								}
 
 							}

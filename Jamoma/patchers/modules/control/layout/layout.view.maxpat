@@ -3729,7 +3729,7 @@
           "fontname": "Verdana",
           "fontsize": 10.0,
           "frozen_object_attributes": {
-            "value/default": [
+            "default": [
               "/temp",
               100,
               100,

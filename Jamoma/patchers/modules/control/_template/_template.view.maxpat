@@ -360,7 +360,7 @@
                     101.0,
                     19.0
                   ],
-                  "text": "@range/clipmode"
+                  "text": "@clipmode"
                 }
               },
               {
@@ -377,7 +377,7 @@
                     91.0,
                     19.0
                   ],
-                  "text": "@range/bounds"
+                  "text": "@range"
                 }
               },
               {

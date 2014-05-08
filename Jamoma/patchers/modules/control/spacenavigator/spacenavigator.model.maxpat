@@ -824,7 +824,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 188.0, 574.0, 31.0 ],
-									"text" : "j.return cooked/motion/quantity @range/bounds 0. 1. @type decimal @range/clipmode none @description \"Quantity of motion from 3D Connexion Space Navigator\""
+									"text" : "j.return cooked/motion/quantity @range 0. 1. @type decimal @clipmode none @description \"Quantity of motion from 3D Connexion Space Navigator\""
 								}
 
 							}
@@ -1033,7 +1033,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 448.0, 113.0, 418.0, 31.0 ],
-									"text" : "j.return cooked/button/right @range/bounds 0 1 @type boolean @range/clipmode both @description \"Cooked right button activity on-off (1-0)\""
+									"text" : "j.return cooked/button/right @range 0 1 @type boolean @clipmode both @description \"Cooked right button activity on-off (1-0)\""
 								}
 
 							}
@@ -1048,7 +1048,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 426.0, 70.0, 408.0, 31.0 ],
-									"text" : "j.return raw/rightButton @range/bounds 0 1 @type boolean @range/clipmode both @description \"Raw right button activity on-off (1-0)\""
+									"text" : "j.return raw/rightButton @range 0 1 @type boolean @clipmode both @description \"Raw right button activity on-off (1-0)\""
 								}
 
 							}
@@ -1063,7 +1063,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 30.0, 111.0, 412.0, 31.0 ],
-									"text" : "j.return cooked/button/left @range/bounds 0 1 @type boolean @range/clipmode both @description \"Cooked left button activity on-off (1-0)\""
+									"text" : "j.return cooked/button/left @range 0 1 @type boolean @clipmode both @description \"Cooked left button activity on-off (1-0)\""
 								}
 
 							}
@@ -1078,7 +1078,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 13.0, 68.0, 411.0, 31.0 ],
-									"text" : "j.return raw/leftButton @range/bounds 0 1 @type boolean @range/clipmode both @description \"Raw left button activity on-off (1-0)\""
+									"text" : "j.return raw/leftButton @range 0 1 @type boolean @clipmode both @description \"Raw left button activity on-off (1-0)\""
 								}
 
 							}
@@ -1211,7 +1211,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 239.0, 333.0, 603.0, 31.0 ],
-									"text" : "j.return cooked/rotation/roll @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Z rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
+									"text" : "j.return cooked/rotation/roll @range -1. 1. @type decimal @clipmode none @description \"Cooked Z rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
@@ -1226,7 +1226,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 226.0, 288.0, 593.0, 31.0 ],
-									"text" : "j.return raw/Rz @range/bounds -225 221 @type integer @range/clipmode none @description \"Raw Z rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
+									"text" : "j.return raw/Rz @range -225 221 @type integer @clipmode none @description \"Raw Z rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
@@ -1241,7 +1241,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 156.0, 236.0, 562.0, 31.0 ],
-									"text" : "j.return cooked/rotation/yaw @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Yaw rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
+									"text" : "j.return cooked/rotation/yaw @range -1. 1. @type decimal @clipmode none @description \"Cooked Yaw rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
@@ -1256,7 +1256,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 133.0, 191.0, 593.0, 31.0 ],
-									"text" : "j.return raw/Ry @range/bounds -294 175 @type integer @range/clipmode none @description \"Raw Y rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
+									"text" : "j.return raw/Ry @range -294 175 @type integer @clipmode none @description \"Raw Y rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
@@ -1271,7 +1271,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 60.0, 139.0, 566.0, 31.0 ],
-									"text" : "j.return cooked/rotation/pitch @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked X rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
+									"text" : "j.return cooked/rotation/pitch @range -1. 1. @type decimal @clipmode none @description \"Cooked X rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
@@ -1286,7 +1286,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 94.0, 594.0, 31.0 ],
-									"text" : "j.return raw/Rx @range/bounds -207 208 @type integer @range/clipmode none @description \"Raw X rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
+									"text" : "j.return raw/Rx @range -207 208 @type integer @clipmode none @description \"Raw X rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
@@ -1532,7 +1532,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 258.0, 395.0, 637.0, 31.0 ],
-									"text" : "j.return cooked/position @range/bounds -1. 1. @type decimalArray @range/clipmode none @repetitions/filter 1 @dataspace position @dataspace/unit xyz @description \"XYZ position\" @enable 0 @dataspace position @dataspace/unit xyz"
+									"text" : "j.return cooked/position @range -1. 1. @type decimalArray @clipmode none @repetitions/filter 1 @dataspace position @dataspace/unit xyz @description \"XYZ position\" @enable 0 @dataspace position @dataspace/unit xyz"
 								}
 
 							}
@@ -1547,7 +1547,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 151.0, 333.0, 602.0, 31.0 ],
-									"text" : "j.return cooked/position/z @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Z position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
+									"text" : "j.return cooked/position/z @range -1. 1. @type decimal @clipmode none @description \"Cooked Z position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
 								}
 
 							}
@@ -1562,7 +1562,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 212.0, 292.0, 592.0, 31.0 ],
-									"text" : "j.return raw/Tz @range/bounds -243 232 @type integer @range/clipmode none @description \"Raw Z position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
+									"text" : "j.return raw/Tz @range -243 232 @type integer @clipmode none @description \"Raw Z position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
@@ -1577,7 +1577,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 233.0, 242.0, 602.0, 31.0 ],
-									"text" : "j.return cooked/position/y @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked Y position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
+									"text" : "j.return cooked/position/y @range -1. 1. @type decimal @clipmode none @description \"Cooked Y position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
 								}
 
 							}
@@ -1592,7 +1592,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 120.0, 195.0, 592.0, 31.0 ],
-									"text" : "j.return raw/Ty @range/bounds -241 255 @type integer @range/clipmode none @description \"Raw Y position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
+									"text" : "j.return raw/Ty @range -241 255 @type integer @clipmode none @description \"Raw Y position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
@@ -1607,7 +1607,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 60.0, 143.0, 603.0, 31.0 ],
-									"text" : "j.return cooked/position/x @range/bounds -1. 1. @type decimal @range/clipmode none @description \"Cooked X position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
+									"text" : "j.return cooked/position/x @range -1. 1. @type decimal @clipmode none @description \"Cooked X position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
 								}
 
 							}
@@ -1664,7 +1664,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 98.0, 593.0, 31.0 ],
-									"text" : "j.return raw/Tx @range/bounds -214 281 @type integer @range/clipmode none @description \"Raw X position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
+									"text" : "j.return raw/Tx @range -214 281 @type integer @clipmode none @description \"Raw X position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
@@ -1869,7 +1869,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 155.0, 102.0, 283.0, 31.0 ],
-					"text" : "j.parameter active @type boolean @range/clipmode none @description \"Turn polling on\"",
+					"text" : "j.parameter active @type boolean @clipmode none @description \"Turn polling on\"",
 					"varname" : "on[1]"
 				}
 

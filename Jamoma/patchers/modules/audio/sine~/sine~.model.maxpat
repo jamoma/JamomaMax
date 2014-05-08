@@ -123,7 +123,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 866.0, 23.0, 204.0, 74.0 ],
-					"text" : "j.parameter note @type decimal @range/bounds 0. 20000. @ramp/drive Max @dataspace time @dataspace/unit midi @description \"Frequency used.\"",
+					"text" : "j.parameter note @type decimal @range 0. 20000. @ramp/drive Max @dataspace time @dataspace/unit midi @description \"Frequency used.\"",
 					"varname" : "frequency"
 				}
 

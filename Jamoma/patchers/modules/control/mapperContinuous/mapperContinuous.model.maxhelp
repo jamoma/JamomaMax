@@ -1141,7 +1141,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 13.0, 10.0, 365.0, 92.0 ],
-									"text" : "Notice there are three different edit modes (upper-right menu):\n- bypass : the mapper is made inactive;\r- edit : range and clipmode are set automatically according to the parameter/return settings, changing the curve coef will update the display below;\r- active : automatic range/clipmode setting, and curve display are disabled (to improve performance)"
+									"text" : "Notice there are three different edit modes (upper-right menu):\n- bypass : the mapper is made inactive;\r- edit : range and clipmode are set automatically according to the parameter/return settings, changing the curve coef will update the display below;\r- active : automatic clipmode setting, and curve display are disabled (to improve performance)"
 								}
 
 							}

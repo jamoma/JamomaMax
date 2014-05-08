@@ -1124,7 +1124,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 503.0, 239.0, 576.0, 31.0 ],
-					"text" : "j.message this_message @type integer @range/bounds 0. 1. @range/clipmode none @repetitions/filter 1 @ramp/drive none @description \"Document what this message does...\"",
+					"text" : "j.message this_message @type integer @range 0. 1. @clipmode none @repetitions/filter 1 @ramp/drive none @description \"Document what this message does...\"",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -1173,7 +1173,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 503.0, 204.0, 577.0, 31.0 ],
-					"text" : "j.parameter this_parameter @type decimal @range/bounds 0. 1. @range/clipmode none @repetitions/filter 1 @ramp/drive Max @description \"Document what this parameter does...\"",
+					"text" : "j.parameter this_parameter @type decimal @range 0. 1. @clipmode none @repetitions/filter 1 @ramp/drive Max @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
 
@@ -1189,7 +1189,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 11.0, 422.0, 284.0, 31.0 ],
-					"text" : "j.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
+					"text" : "j.return return_c @range 0. 1. @description \"Document what this return does...\""
 				}
 
 			}

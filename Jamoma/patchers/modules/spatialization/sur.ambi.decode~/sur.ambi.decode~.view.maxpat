@@ -1741,7 +1741,7 @@
             100.0,
             17.0
           ],
-          "text": "range/bounds 1 4"
+          "text": "range 1 4"
         }
       },
       {
@@ -1761,7 +1761,7 @@
             100.0,
             17.0
           ],
-          "text": "range/bounds 1 3"
+          "text": "range 1 3"
         }
       },
       {

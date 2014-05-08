@@ -38,7 +38,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 635.0, 208.5, 139.0, 154.0 ],
-					"text" : "j.parameter rolloff @type decimal @range/bounds -96 0. @range/clipmode high @ramp/drive Max @ramp/function linear @description \"Rolloff in dB for the Gaussian windowing function.\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter rolloff @type decimal @range -96 0. @clipmode high @ramp/drive Max @ramp/function linear @description \"Rolloff in dB for the Gaussian windowing function.\" @dataspace gain @dataspace/unit dB",
 					"varname" : "rolloff"
 				}
 
@@ -54,7 +54,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 602.0, 12.5, 162.0, 154.0 ],
-					"text" : "j.parameter oscillators @type integer @range/bounds 1 64 @range/clipmode both @ramp/drive none @description \"Maximum number of oscillators to use. Tha actual number of oscillators used might be lower, depending on range and spacing.\"",
+					"text" : "j.parameter oscillators @type integer @range 1 64 @clipmode both @ramp/drive none @description \"Maximum number of oscillators to use. Tha actual number of oscillators used might be lower, depending on range and spacing.\"",
 					"varname" : "oscillators"
 				}
 
@@ -70,7 +70,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 170.0, 12.5, 195.0, 100.0 ],
-					"text" : "j.parameter rate @type decimal @range/bounds -12 12 @range/clipmode none @ramp/drive Max @ramp/function linear @description \"Rate of the glissando movement as MIDI pitch difference per second.\"",
+					"text" : "j.parameter rate @type decimal @range -12 12 @clipmode none @ramp/drive Max @ramp/function linear @description \"Rate of the glissando movement as MIDI pitch difference per second.\"",
 					"varname" : "rate"
 				}
 
@@ -86,7 +86,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 375.5, 12.5, 216.0, 87.0 ],
-					"text" : "j.parameter spacing @type decimal @range/bounds 0 12 @range/clipmode low @ramp/drive Max @ramp/function linear @description \"Spacing between adjecent oscillators (as MIDI values).\"",
+					"text" : "j.parameter spacing @type decimal @range 0 12 @clipmode low @ramp/drive Max @ramp/function linear @description \"Spacing between adjecent oscillators (as MIDI values).\"",
 					"varname" : "spacing"
 				}
 

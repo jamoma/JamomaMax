@@ -556,7 +556,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 379.0, 349.0, 119.0, 18.0 ],
-					"text" : "rate:value/default $1"
+					"text" : "rate:default $1"
 				}
 
 			}

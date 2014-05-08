@@ -37,7 +37,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 825.0, 203.0, 111.0, 18.0 ],
-					"text" : "range/bounds 0 $1"
+					"text" : "range 0 $1"
 				}
 
 			}
@@ -108,7 +108,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 951.0, 22.0, 162.0, 167.0 ],
-					"text" : "j.parameter delay/maxSize @type integer @value/default 1000000 @ramp/drive none @repetitions/filter 1 @range/bounds 0 1000000 @range/clipmode low @dataspace time @dataspace/unit sample @priority 1 @description \"Maximum delay size in samples.\"",
+					"text" : "j.parameter delay/maxSize @type integer @default 1000000 @ramp/drive none @repetitions/filter 1 @range 0 1000000 @clipmode low @dataspace time @dataspace/unit sample @priority 1 @description \"Maximum delay size in samples.\"",
 					"varname" : "delay/right[1]"
 				}
 
@@ -124,7 +124,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 507.0, 22.0, 159.0, 127.0 ],
-					"text" : "j.message delay @type integer @ramp/drive Max @repetitions/filter 0 @range/bounds 0 1000000 @dataspace time @dataspace/unit sample @description \"Delay time in samples to be applied to both channels.\"",
+					"text" : "j.message delay @type integer @ramp/drive Max @repetitions/filter 0 @range 0 1000000 @dataspace time @dataspace/unit sample @description \"Delay time in samples to be applied to both channels.\"",
 					"varname" : "j.parameter.mxb[9]"
 				}
 
@@ -140,7 +140,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 671.0, 232.0, 159.0, 127.0 ],
-					"text" : "j.parameter delay/right @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for right channel.\"",
+					"text" : "j.parameter delay/right @type integer @ramp/drive Max @repetitions/filter 1 @range 0 1000000 @clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for right channel.\"",
 					"varname" : "delay/right"
 				}
 
@@ -171,7 +171,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 507.0, 232.0, 150.0, 167.0 ],
-					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 1000000 @range/clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for left channel.\"",
+					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/filter 1 @range 0 1000000 @clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for left channel.\"",
 					"varname" : "delay/left"
 				}
 

@@ -929,7 +929,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 432.5, 270.0, 197.0, 18.0 ],
-					"text" : "#1:value/stepsize $1"
+					"text" : "#1:stepsize $1"
 				}
 
 			}

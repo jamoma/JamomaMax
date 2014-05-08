@@ -2158,7 +2158,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 38.0, 143.0, 120.0, 18.0 ],
-									"text" : "prepend range/bounds 1"
+									"text" : "prepend range 1"
 								}
 
 							}
@@ -2364,7 +2364,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 447.0, 169.0, 221.0, 29.0 ],
-					"text" : "j.parameter mapperInstance @type integer @range/bounds 0 10 @priority 2"
+					"text" : "j.parameter mapperInstance @type integer @range 0 10 @priority 2"
 				}
 
 			}

@@ -231,7 +231,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 579.0, 267.0, 452.0, 31.0 ],
-					"text" : "j.parameter a_slider @repetitions/filter 1 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter a_slider @repetitions/filter 1 @type decimal @range 0. 1. @clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle[2]"
 				}
 
@@ -566,7 +566,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 314.0, 101.0, 19.0 ],
-									"text" : "@range/clipmode"
+									"text" : "@clipmode"
 								}
 
 							}
@@ -580,7 +580,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 294.0, 91.0, 19.0 ],
-									"text" : "@range/bounds"
+									"text" : "@range"
 								}
 
 							}
@@ -1299,7 +1299,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 579.0, 148.0, 438.0, 31.0 ],
-					"text" : "j.message this_message @repetitions/filter 1 @type integer @range/bounds 0. 1. @range/clipmode none @description \"Document what this message does...\"",
+					"text" : "j.message this_message @repetitions/filter 1 @type integer @range 0. 1. @clipmode none @description \"Document what this message does...\"",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -1348,7 +1348,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 578.0, 113.0, 456.0, 31.0 ],
-					"text" : "j.parameter this_parameter @repetitions/filter 1 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter this_parameter @repetitions/filter 1 @type decimal @range 0. 1. @clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
 
@@ -1364,7 +1364,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 60.0, 475.0, 284.0, 31.0 ],
-					"text" : "j.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
+					"text" : "j.return return_c @range 0. 1. @description \"Document what this return does...\""
 				}
 
 			}

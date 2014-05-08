@@ -125,7 +125,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 302.0, 12.5, 136.0, 154.0 ],
-					"text" : "j.parameter response/decay @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
+					"text" : "j.parameter response/decay @type decimal @range 0. 1. @clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
 
 			}
@@ -140,7 +140,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 175.0, 12.5, 124.0, 167.0 ],
-					"text" : "j.parameter response/attack @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
+					"text" : "j.parameter response/attack @type decimal @range 0. 1. @clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
 
 			}
@@ -155,7 +155,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 10.0, 12.5, 143.0, 141.0 ],
-					"text" : "j.parameter threshold @type decimal @range/bounds -48. 18. @range/clipmode none @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
+					"text" : "j.parameter threshold @type decimal @range -48. 18. @clipmode none @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
 
 			}

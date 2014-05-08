@@ -237,7 +237,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 54.0, 144.0, 141.0 ],
-									"text" : "j.parameter numSources @type integer @repetitions/filter 1 @range/bounds 1 32 @range/clipmode both @priority 1 @description \"The number of input audio channels. Changes only take effect when audio is off.\"",
+									"text" : "j.parameter numSources @type integer @repetitions/filter 1 @range 1 32 @clipmode both @priority 1 @description \"The number of input audio channels. Changes only take effect when audio is off.\"",
 									"varname" : "voices"
 								}
 
@@ -450,7 +450,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 791.0, 12.0, 139.0, 141.0 ],
-					"text" : "j.messageArray source.[32]/active @type boolean @value/default 1 @value 1 @format single @description \"Control whether doppler delay is being applied to this individual channel.\""
+					"text" : "j.messageArray source.[32]/active @type boolean @default 1 @value 1 @format single @description \"Control whether doppler delay is being applied to this individual channel.\""
 				}
 
 			}
@@ -465,7 +465,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1244.0, 20.0, 136.0, 154.0 ],
-					"text" : "j.messageArray source.[32]/position @type decimalArray @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
+					"text" : "j.messageArray source.[32]/position @type decimalArray @dataspace position @dataspace/unit xyz @default 0. 0. 0. @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -480,7 +480,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1447.0, 194.0, 163.0, 114.0 ],
-					"text" : "j.parameter metersPerUnit @type decimal @repetitions/filter 1 @range/bounds 0. 10. @range/clipmode low @description \"Meters per unit lengt as provided by the /aed messages.\"",
+					"text" : "j.parameter metersPerUnit @type decimal @repetitions/filter 1 @range 0. 10. @clipmode low @description \"Meters per unit lengt as provided by the /aed messages.\"",
 					"varname" : "meters_per_unit"
 				}
 

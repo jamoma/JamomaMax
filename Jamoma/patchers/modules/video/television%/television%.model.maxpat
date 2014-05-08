@@ -1088,7 +1088,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 601.5, 276.0, 366.0, 43.0 ],
-					"text" : "j.parameter stability @repetitions/filter 1 @type integer @range/bounds 1 100 @range/clipmode none @description \"stability of the picture in horizontal and vertical dimension\" @ramp/drive Max",
+					"text" : "j.parameter stability @repetitions/filter 1 @type integer @range 1 100 @clipmode none @description \"stability of the picture in horizontal and vertical dimension\" @ramp/drive Max",
 					"varname" : "hue_angle[5]"
 				}
 
@@ -1104,7 +1104,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 439.0, 122.0, 306.5, 43.0 ],
-					"text" : "j.parameter updaterate @repetitions/filter 1 @type integer @range/bounds 1 100 @range/clipmode low @description \"update rate for changes in the effect\" @ramp/drive Max",
+					"text" : "j.parameter updaterate @repetitions/filter 1 @type integer @range 1 100 @clipmode low @description \"update rate for changes in the effect\" @ramp/drive Max",
 					"varname" : "hue_angle[4]"
 				}
 
@@ -1120,7 +1120,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 194.0, 134.5, 215.0, 67.0 ],
-					"text" : "j.parameter fade @repetitions/filter 1 @type decimal @range/bounds 0. 1. @range/clipmode both @description \"over saturation effect\" @ramp/drive Max",
+					"text" : "j.parameter fade @repetitions/filter 1 @type decimal @range 0. 1. @clipmode both @description \"over saturation effect\" @ramp/drive Max",
 					"varname" : "hue_angle[3]"
 				}
 
@@ -1136,7 +1136,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 155.960266, 87.0, 588.0, 31.0 ],
-					"text" : "j.parameter noise/granularity.y @repetitions/filter 1 @type integer @range/bounds 0. 100. @range/clipmode low @description \"Size of the noise particles in y dimension\" @ramp/drive Max",
+					"text" : "j.parameter noise/granularity.y @repetitions/filter 1 @type integer @range 0. 100. @clipmode low @description \"Size of the noise particles in y dimension\" @ramp/drive Max",
 					"varname" : "hue_angle[2]"
 				}
 
@@ -1152,7 +1152,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 82.579529, 56.0, 588.0, 31.0 ],
-					"text" : "j.parameter noise/granularity.x @repetitions/filter 1 @type integer @range/bounds 0. 100. @range/clipmode low @description \"Size of the noise particles in x dimension\" @ramp/drive Max",
+					"text" : "j.parameter noise/granularity.x @repetitions/filter 1 @type integer @range 0. 100. @clipmode low @description \"Size of the noise particles in x dimension\" @ramp/drive Max",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -1182,7 +1182,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 29.0, 25.0, 594.0, 31.0 ],
-					"text" : "j.parameter noise/probability @repetitions/filter 1 @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Set the amount of 'snow' on the TV \" @ramp/drive Max",
+					"text" : "j.parameter noise/probability @repetitions/filter 1 @type decimal @range 0. 1. @clipmode both @description \"Set the amount of 'snow' on the TV \" @ramp/drive Max",
 					"varname" : "hue_angle"
 				}
 

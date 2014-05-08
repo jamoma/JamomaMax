@@ -158,7 +158,7 @@
                     106.0,
                     17.0
                   ],
-                  "text": "range/bounds 1 11"
+                  "text": "range 1 11"
                 }
               },
               {
@@ -178,7 +178,7 @@
                     100.0,
                     17.0
                   ],
-                  "text": "range/bounds 1 3"
+                  "text": "range 1 3"
                 }
               },
               {
@@ -693,7 +693,7 @@
             182.0,
             17.0
           ],
-          "text": "/source. $1 /order:/range/bounds"
+          "text": "/source. $1 /order:/range"
         }
       },
       {
@@ -842,7 +842,7 @@
                     185.0,
                     18.0
                   ],
-                  "text": "/source. $1 /order:/range/bounds"
+                  "text": "/source. $1 /order:/range"
                 }
               },
               {

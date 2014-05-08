@@ -2788,7 +2788,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 215.0, 318.0, 33.0 ],
-									"text" : "j.parameter p.2 @type decimal @range/bounds -5. 5. @ramp/drive Max"
+									"text" : "j.parameter p.2 @type decimal @range -5. 5. @ramp/drive Max"
 								}
 
 							}
@@ -2816,7 +2816,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 183.0, 236.0, 20.0 ],
-									"text" : "j.parameter p.1 @range/bounds 0. 10."
+									"text" : "j.parameter p.1 @range 0. 10."
 								}
 
 							}
