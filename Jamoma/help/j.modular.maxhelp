@@ -418,7 +418,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 38.0, 107.0, 146.0, 60.0 ],
-									"text" : "j.parameter myFloat @type decimal @ramp/drive Max @range/bounds -10. 10.",
+									"text" : "j.parameter myFloat @type decimal @ramp/drive Max @range -10. 10.",
 									"varname" : "myFloat"
 								}
 
@@ -1045,7 +1045,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 447.0, 486.0, 239.0, 33.0 ],
-									"text" : "j.remote remoteOSCApp:/player/gain:range/bounds"
+									"text" : "j.remote remoteOSCApp:/player/gain:range"
 								}
 
 							}

@@ -315,7 +315,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 314.0, 101.0, 19.0 ],
-									"text" : "@range/clipmode"
+									"text" : "@clipmode"
 								}
 
 							}
@@ -329,7 +329,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 294.0, 91.0, 19.0 ],
-									"text" : "@range/bounds"
+									"text" : "@range"
 								}
 
 							}
@@ -1078,7 +1078,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 639.0, 300.0, 584.0, 31.0 ],
-					"text" : "j.parameter a_slider @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter a_slider @type decimal @range 0. 1. @clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle[2]"
 				}
 
@@ -1330,7 +1330,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 626.0, 176.0, 596.0, 31.0 ],
-					"text" : "j.message this_message @type integer @range/bounds 0. 1. @range/clipmode none @description \"Document what this message does...\"",
+					"text" : "j.message this_message @type integer @range 0. 1. @clipmode none @description \"Document what this message does...\"",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -1380,7 +1380,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 626.0, 136.0, 601.0, 31.0 ],
-					"text" : "j.parameter this_parameter @repetitions/filter 0 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter this_parameter @repetitions/filter 0 @type decimal @range 0. 1. @clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
 
@@ -1417,7 +1417,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 30.0, 480.0, 269.0, 31.0 ],
-					"text" : "j.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
+					"text" : "j.return return_c @range 0. 1. @description \"Document what this return does...\""
 				}
 
 			}

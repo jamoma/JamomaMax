@@ -1776,7 +1776,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 217.0, 435.0, 421.0, 20.0 ],
-									"text" : "j.parameter myLine @value/default 0. @ramp/function linear"
+									"text" : "j.parameter myLine @default 0. @ramp/function linear"
 								}
 
 							}
@@ -1835,7 +1835,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 374.0, 774.0, 102.0, 17.0 ],
-									"text" : "value/stepsize 0.1",
+									"text" : "stepsize 0.1",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 
@@ -1852,7 +1852,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 374.0, 754.0, 98.0, 17.0 ],
-									"text" : "value/stepsize 10",
+									"text" : "stepsize 10",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 

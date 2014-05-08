@@ -48,7 +48,7 @@ ________________________________________________________________________________
 
 - j.map : adding a @input/index to select an index to map into the input value (e.g. the y coordinate of a position parameter).
 
-- j.___Array : in @format array, outputs the @value/default after a array/resize message.
+- j.___Array : in @format array, outputs the @default after a array/resize message.
 
 - j.dbap : the external doesn't crash anymore if jitter have not been initialized before.
 

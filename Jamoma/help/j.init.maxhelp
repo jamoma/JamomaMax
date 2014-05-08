@@ -91,7 +91,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 197.0, 335.0, 208.0, 20.0 ],
-									"text" : "j.parameter bar @value/default 2",
+									"text" : "j.parameter bar @default 2",
 									"varname" : "foo[1]"
 								}
 
@@ -140,7 +140,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 197.0, 261.0, 209.0, 20.0 ],
-									"text" : "j.parameter foo @value/default 1.",
+									"text" : "j.parameter foo @default 1.",
 									"varname" : "foo"
 								}
 
@@ -583,7 +583,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 160.0, 105.0, 210.0, 20.0 ],
-													"text" : "j.parameter bar @value/default 1.",
+													"text" : "j.parameter bar @default 1.",
 													"varname" : "foo"
 												}
 
@@ -869,7 +869,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 154.0, 104.0, 216.0, 20.0 ],
-													"text" : "j.parameter kuru @value/default 1.",
+													"text" : "j.parameter kuru @default 1.",
 													"varname" : "foo"
 												}
 
@@ -1074,7 +1074,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 207.0, 296.0, 209.0, 20.0 ],
-									"text" : "j.parameter foo @value/default 1.",
+									"text" : "j.parameter foo @default 1.",
 									"varname" : "foo"
 								}
 
