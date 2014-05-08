@@ -204,7 +204,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 827.0, 83.5, 107.0, 127.0 ],
-					"text" : "j.messageArray source.[32]/active @type boolean @value/default 1 @value 1 @format single @description \"active 0 will mute the Nth source.\""
+					"text" : "j.messageArray source.[32]/active @type boolean @default 1 @value 1 @format single @description \"active 0 will mute the Nth source.\""
 				}
 
 			}
@@ -219,7 +219,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 953.0, 83.5, 135.0, 154.0 ],
-					"text" : "j.messageArray source.[32]/position @type decimalArray @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
+					"text" : "j.messageArray source.[32]/position @type decimalArray @dataspace position @dataspace/unit xyz @default 0. 0. 0. @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -234,7 +234,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 651.666748, 83.5, 134.0, 141.0 ],
-					"text" : "j.parameter rollOff @type decimal @repetitions/filter 1 @range/bounds 1. 6. @range/clipmode both @dataspace gain @dataspace/unit dB @description \"Roll-off in dB per doubling of distance.\"",
+					"text" : "j.parameter rollOff @type decimal @repetitions/filter 1 @range 1. 6. @clipmode both @dataspace gain @dataspace/unit dB @description \"Roll-off in dB per doubling of distance.\"",
 					"varname" : "meters_per_unit[1]"
 				}
 
@@ -250,7 +250,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 453.0, 83.5, 150.0, 114.0 ],
-					"text" : "j.parameter referenceDistance @type decimal @repetitions/filter 1 @range/bounds 0.15 10. @range/clipmode low @description \"Reference distance used to calculate roll-off.\"",
+					"text" : "j.parameter referenceDistance @type decimal @repetitions/filter 1 @range 0.15 10. @clipmode low @description \"Reference distance used to calculate roll-off.\"",
 					"varname" : "meters_per_unit"
 				}
 
@@ -266,7 +266,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 297.0, 83.5, 145.0, 141.0 ],
-					"text" : "j.parameter numSources @type integer @repetitions/filter 1 @range/bounds 1 32 @range/clipmode both @description \"The number of sound sources. Changes only take effect when audio is off.\"",
+					"text" : "j.parameter numSources @type integer @repetitions/filter 1 @range 1 32 @clipmode both @description \"The number of sound sources. Changes only take effect when audio is off.\"",
 					"varname" : "voices"
 				}
 

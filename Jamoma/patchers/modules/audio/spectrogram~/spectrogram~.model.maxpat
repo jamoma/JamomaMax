@@ -198,7 +198,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 228.267426, 59.0, 139.0, 141.0 ],
-									"text" : "j.parameter colors @type decimalArray @range/bounds 0. 1. @range/clipmode none @ramp/drive none @dataspace color @dataspace/unit rgb @description \"Color adjustments to spectrogram\"",
+									"text" : "j.parameter colors @type decimalArray @range 0. 1. @clipmode none @ramp/drive none @dataspace color @dataspace/unit rgb @description \"Color adjustments to spectrogram\"",
 									"varname" : "threshold[2]"
 								}
 
@@ -1687,7 +1687,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 323.0, 22.0, 137.0, 127.0 ],
-					"text" : "j.parameter dimensions/height @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
+					"text" : "j.parameter dimensions/height @type integer @range 0 2000 @clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
 					"varname" : "dimensions/height"
 				}
 
@@ -1703,7 +1703,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 671.0, 20.0, 137.0, 127.0 ],
-					"text" : "j.parameter dimensions/width @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
+					"text" : "j.parameter dimensions/width @type integer @range 0 2000 @clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
 					"varname" : "dimensions/width"
 				}
 

@@ -1045,7 +1045,7 @@
             603.0,
             43.0
           ],
-          "text": "j.parameter temperature @type decimal @repetitions/filter 1 @range/bounds -273. 40. @range/clipmode low @description \"temperature to calculate speed of sound.\" @dataspace temperature @dataspace/unit Celsius",
+          "text": "j.parameter temperature @type decimal @repetitions/filter 1 @range -273. 40. @clipmode low @description \"temperature to calculate speed of sound.\" @dataspace temperature @dataspace/unit Celsius",
           "varname": "voices[1]"
         }
       },
@@ -1069,7 +1069,7 @@
             589.0,
             43.0
           ],
-          "text": "j.parameter.array 32 speaker delay @type decimal @repetitions/filter 0 @value/default 0. @range/bounds 0. 1000. @range/clipmode both @dataspace time @dataspace/unit ms @description \"delay to be applied on the Nth speaker  in [ms] by default\""
+          "text": "j.parameter.array 32 speaker delay @type decimal @repetitions/filter 0 @default 0. @range 0. 1000. @clipmode both @dataspace time @dataspace/unit ms @description \"delay to be applied on the Nth speaker  in [ms] by default\""
         }
       },
       {
@@ -1092,7 +1092,7 @@
             567.0,
             43.0
           ],
-          "text": "j.message.array 32 speaker position @type decimalArray @repetitions/filter 0 @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+          "text": "j.message.array 32 speaker position @type decimalArray @repetitions/filter 0 @dataspace position @dataspace/unit xyz @default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
         }
       },
       {
@@ -1136,7 +1136,7 @@
             466.0,
             43.0
           ],
-          "text": "j.parameter numSpeakers @type integer @repetitions/filter 1 @range/bounds 2 32 @range/clipmode both @description \"The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.\" @priority 1",
+          "text": "j.parameter numSpeakers @type integer @repetitions/filter 1 @range 2 32 @clipmode both @description \"The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.\" @priority 1",
           "varname": "voices"
         }
       }

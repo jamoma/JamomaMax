@@ -207,7 +207,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 222.363159, 233.0, 213.0, 55.0 ],
-					"text" : "j.parameter /contraction/window/size @type integer @range/bounds 0 20 @range/clipmode low @description \"Size of the contraction window border.\"",
+					"text" : "j.parameter /contraction/window/size @type integer @range 0 20 @clipmode low @description \"Size of the contraction window border.\"",
 					"varname" : "centroid/size/on[1]"
 				}
 
@@ -223,7 +223,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 20.0, 21.0, 403.0, 31.0 ],
-					"text" : "j.parameter data/smoothing @type decimal @range/bounds 0. 12. @range/clipmode low @description \"Level of smoothing for the returned data\"",
+					"text" : "j.parameter data/smoothing @type decimal @range 0. 12. @clipmode low @description \"Level of smoothing for the returned data\"",
 					"varname" : "data/smoothing"
 				}
 
@@ -765,7 +765,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 105.0, 303.436279, 595.0, 31.0 ],
-									"text" : "j.return motion/y @range/bounds 0. 1. @type decimal @description \"The center of gravity for the y-axis of the motion in the frame in a range of 0. to 1. (zero is bottom - one is top).\""
+									"text" : "j.return motion/y @range 0. 1. @type decimal @description \"The center of gravity for the y-axis of the motion in the frame in a range of 0. to 1. (zero is bottom - one is top).\""
 								}
 
 							}
@@ -794,7 +794,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 93.0, 354.0, 595.0, 31.0 ],
-									"text" : "j.return motion/x @range/bounds 0. 1. @type decimal @description \"The center of gravity for the x-axis of the motion in the frame in a range of 0. to 1. (zero is left - one is right).\""
+									"text" : "j.return motion/x @range 0. 1. @type decimal @description \"The center of gravity for the x-axis of the motion in the frame in a range of 0. to 1. (zero is left - one is right).\""
 								}
 
 							}
@@ -808,7 +808,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 83.0, 389.0, 718.0, 19.0 ],
-									"text" : "j.return motion/quantity @type decimal @range/bounds 0. 1. @description \"The amount of motion in the frame in a range of 0. to 1.\""
+									"text" : "j.return motion/quantity @type decimal @range 0. 1. @description \"The amount of motion in the frame in a range of 0. to 1.\""
 								}
 
 							}
@@ -4221,7 +4221,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 244.0, 82.0, 209.0, 67.0 ],
-													"text" : "j.parameter contraction/max/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of max contraction box.\"",
+													"text" : "j.parameter contraction/max/color @type decimalArray @range 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of max contraction box.\"",
 													"varname" : "contraction/max/color"
 												}
 
@@ -4804,7 +4804,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 381.0, 117.0, 279.0, 55.0 ],
-													"text" : "j.parameter contraction/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of local contraction box.\"",
+													"text" : "j.parameter contraction/color @type decimalArray @range 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of local contraction box.\"",
 													"varname" : "contraction/color"
 												}
 
@@ -4820,7 +4820,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 324.0, 55.0, 342.0, 43.0 ],
-													"text" : "j.parameter contraction/slide @type decimal @range/bounds 0. 10. @range/clipmode low @repetitions/filter 1 @description \"The level of smoothing for contraction box.\"",
+													"text" : "j.parameter contraction/slide @type decimal @range 0. 10. @clipmode low @repetitions/filter 1 @description \"The level of smoothing for contraction box.\"",
 													"varname" : "contraction/slide"
 												}
 
@@ -4863,7 +4863,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 113.0, 460.0, 617.0, 19.0 ],
-													"text" : "j.return contraction/height @range/bounds 0. 1. @type decimal @description \"Contraction_height in a range of 0. to 1.\""
+													"text" : "j.return contraction/height @range 0. 1. @type decimal @description \"Contraction_height in a range of 0. to 1.\""
 												}
 
 											}
@@ -4877,7 +4877,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 98.0, 500.0, 606.0, 19.0 ],
-													"text" : "j.return contraction/width @range/bounds 0. 1. @type decimal @description \"Contraction width in a range of 0. to 1.\""
+													"text" : "j.return contraction/width @range 0. 1. @type decimal @description \"Contraction width in a range of 0. to 1.\""
 												}
 
 											}
@@ -6280,7 +6280,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 398.0, 75.0, 348.0, 31.0 ],
-													"text" : "j.parameter /centroid/size @type integer @range/bounds 0 20 @range/clipmode low @description \"Size of the centre of mass.\"",
+													"text" : "j.parameter /centroid/size @type integer @range 0 20 @clipmode low @description \"Size of the centre of mass.\"",
 													"varname" : "centroid/size/on[2]"
 												}
 
@@ -6296,7 +6296,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 398.0, 151.0, 217.0, 55.0 ],
-													"text" : "j.parameter centroid/color @type decimalArray @range/bounds 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of centroid.\"",
+													"text" : "j.parameter centroid/color @type decimalArray @range 0 255 @dataspace color @dataspace/unit rgb8 @description \"Change color of centroid.\"",
 													"varname" : "centroid/color"
 												}
 

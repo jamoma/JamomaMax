@@ -395,7 +395,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 215.0, 13.0, 610.0, 19.0 ],
-					"text" : "j.parameter chromakey/fade @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Fade amount.\"",
+					"text" : "j.parameter chromakey/fade @type decimal @range 0. 1. @clipmode both @description \"Fade amount.\"",
 					"varname" : "fade"
 				}
 
@@ -411,7 +411,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 470.0, 145.0, 407.0, 31.0 ],
-					"text" : "j.parameter chromakey/tolerance @type decimal @range/bounds 0. 1. @range/clipmode both @description Tolerance.",
+					"text" : "j.parameter chromakey/tolerance @type decimal @range 0. 1. @clipmode both @description Tolerance.",
 					"varname" : "tolerance"
 				}
 
@@ -427,7 +427,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 379.0, 108.0, 603.0, 31.0 ],
-					"text" : "j.parameter chromakey/color @type decimalArray @range/bounds 0. 255. @range/clipmode both @dataspace color @dataspace/unit rgb8 @description \"Color target (RGB).\"",
+					"text" : "j.parameter chromakey/color @type decimalArray @range 0. 255. @clipmode both @dataspace color @dataspace/unit rgb8 @description \"Color target (RGB).\"",
 					"varname" : "color"
 				}
 

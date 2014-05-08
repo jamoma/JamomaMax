@@ -449,7 +449,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 807.5, 163.0, 110.0, 18.0 ],
-					"text" : "range/bounds 0 $1"
+					"text" : "range 0 $1"
 				}
 
 			}

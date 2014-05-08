@@ -250,7 +250,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 387.0, 272.0, 584.0, 31.0 ],
-					"text" : "j.parameter a_slider @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter a_slider @type decimal @range 0. 1. @clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle[2]"
 				}
 
@@ -281,7 +281,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 374.0, 148.0, 596.0, 31.0 ],
-					"text" : "j.message this_message @type integer @range/bounds 0. 1. @range/clipmode none @description \"Document what this message does...\"",
+					"text" : "j.message this_message @type integer @range 0. 1. @clipmode none @description \"Document what this message does...\"",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -297,7 +297,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 374.0, 108.0, 601.0, 31.0 ],
-					"text" : "j.parameter this_parameter @repetitions/filter 0 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter this_parameter @repetitions/filter 0 @type decimal @range 0. 1. @clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
 
@@ -313,7 +313,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ -222.0, 452.0, 269.0, 31.0 ],
-					"text" : "j.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
+					"text" : "j.return return_c @range 0. 1. @description \"Document what this return does...\""
 				}
 
 			}

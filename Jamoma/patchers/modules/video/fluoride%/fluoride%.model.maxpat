@@ -273,7 +273,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 266.5, 187.0, 240.0, 92.0 ],
-					"text" : "j.parameter glow @type decimalArray @repetitions/filter 1 @dataspace color @dataspace/unit rgb @range/bounds 0. 1. @description \"Specify the red green and blue components for the glowing color (RGB). The range for each component should be between 0.0 and 1.0.\"",
+					"text" : "j.parameter glow @type decimalArray @repetitions/filter 1 @dataspace color @dataspace/unit rgb @range 0. 1. @description \"Specify the red green and blue components for the glowing color (RGB). The range for each component should be between 0.0 and 1.0.\"",
 					"varname" : "glow"
 				}
 
@@ -289,7 +289,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 90.0, 71.0, 355.0, 31.0 ],
-					"text" : "j.parameter luminance @type decimal @ramp/drive Max @range/bounds 0. 1. @description \"Sets the luminance.\"",
+					"text" : "j.parameter luminance @type decimal @ramp/drive Max @range 0. 1. @description \"Sets the luminance.\"",
 					"varname" : "lum"
 				}
 
@@ -305,7 +305,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 151.0, 110.0, 350.0, 31.0 ],
-					"text" : "j.parameter tolerance @type decimal @ramp/drive Max @range/bounds 0. 1. @description \"Sets the tolerance.\"",
+					"text" : "j.parameter tolerance @type decimal @ramp/drive Max @range 0. 1. @description \"Sets the tolerance.\"",
 					"varname" : "tol"
 				}
 

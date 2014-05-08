@@ -2546,7 +2546,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 380.0, 296.0, 225.0, 24.0 ],
-					"text" : "sprintf address %s:range/bounds"
+					"text" : "sprintf address %s:range"
 				}
 
 			}
@@ -2616,7 +2616,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 377.0, 130.0, 235.0, 24.0 ],
-					"text" : "sprintf address %s:range/clipmode"
+					"text" : "sprintf address %s:clipmode"
 				}
 
 			}

@@ -16150,7 +16150,7 @@
                                     250.0,
                                     17.0
                                   ],
-                                  "text": "script send moduleListindex range/bounds 1 32"
+                                  "text": "script send moduleListindex range 1 32"
                                 }
                               },
                               {
@@ -16170,7 +16170,7 @@
                                     413.0,
                                     17.0
                                   ],
-                                  "text": "script send moduleListindex range/bounds 1 $1, script send moduleListindex $1"
+                                  "text": "script send moduleListindex range 1 $1, script send moduleListindex $1"
                                 }
                               },
                               {
@@ -20834,7 +20834,7 @@
                             189.0,
                             19.0
                           ],
-                          "text": "j.oscroute /range/bounds /type"
+                          "text": "j.oscroute /range /type"
                         }
                       },
                       {
@@ -25513,7 +25513,7 @@
                             308.0,
                             19.0
                           ],
-                          "text": "j.oscroute /range/bounds /range/clipmode /ramp/drive"
+                          "text": "j.oscroute /range /clipmode /ramp/drive"
                         }
                       },
                       {

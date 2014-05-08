@@ -651,7 +651,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 440.0, 492.0, 557.0, 33.0 ],
-					"text" : "j.message counter @type integer @range/bounds 0 1024 @range/clipmode low @ramp/drive Max @description \"The counter that runs through the matrix.\""
+					"text" : "j.message counter @type integer @range 0 1024 @clipmode low @ramp/drive Max @description \"The counter that runs through the matrix.\""
 				}
 
 			}
@@ -666,7 +666,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 440.0, 402.0, 584.0, 33.0 ],
-					"text" : "j.parameter smooth/magnitude @type decimal @range/bounds 0. 1000. @range/clipmode low @ramp/drive none @description \"Smoothing the magnitude values.\"",
+					"text" : "j.parameter smooth/magnitude @type decimal @range 0. 1000. @clipmode low @ramp/drive none @description \"Smoothing the magnitude values.\"",
 					"varname" : "dimensions/width[4]"
 				}
 
@@ -682,7 +682,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 439.0, 368.0, 606.0, 33.0 ],
-					"text" : "j.parameter smooth/frequency @type decimal @range/bounds 0. 1000. @range/clipmode low @ramp/drive none @description \"Smoothing the frequency values.\"",
+					"text" : "j.parameter smooth/frequency @type decimal @range 0. 1000. @clipmode low @ramp/drive none @description \"Smoothing the frequency values.\"",
 					"varname" : "dimensions/width[2]"
 				}
 
@@ -698,7 +698,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 439.0, 223.0, 545.0, 33.0 ],
-					"text" : "j.parameter offset @type decimal @range/bounds 0. 1000. @range/clipmode low @ramp/drive none @description \"Pitch offset.\"",
+					"text" : "j.parameter offset @type decimal @range 0. 1000. @clipmode low @ramp/drive none @description \"Pitch offset.\"",
 					"varname" : "dimensions/width[3]"
 				}
 
@@ -714,7 +714,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 440.0, 542.0, 582.0, 33.0 ],
-					"text" : "j.parameter harmonicsteps @type decimal @range/bounds 0. 100. @range/clipmode low @ramp/drive none @description \"Harmonic steps in the range.\"",
+					"text" : "j.parameter harmonicsteps @type decimal @range 0. 100. @clipmode low @ramp/drive none @description \"Harmonic steps in the range.\"",
 					"varname" : "dimensions/width[1]"
 				}
 
@@ -745,7 +745,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 440.0, 445.0, 598.0, 33.0 ],
-					"text" : "j.parameter scaling @type decimal @range/bounds 0. 1. @range/clipmode low @ramp/drive none @description \"Exponential scaling of the range.\"",
+					"text" : "j.parameter scaling @type decimal @range 0. 1. @clipmode low @ramp/drive none @description \"Exponential scaling of the range.\"",
 					"varname" : "dimensions/width"
 				}
 

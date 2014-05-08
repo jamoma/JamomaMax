@@ -742,11 +742,11 @@
                   "fontname": "Arial",
                   "fontsize": 12.0,
                   "frozen_object_attributes": {
-                    "range/bounds": [
+                    "range": [
                       0.0,
                       1.0
                     ],
-                    "range/clipmode": "both"
+                    "clipmode": "both"
                   },
                   "id": "obj-15",
                   "linecount": 6,
@@ -6708,7 +6708,7 @@
             565.0,
             31.0
           ],
-          "text": "j.parameter open @type string @priority 1 @repetitions/filter 0 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\" @value/default NULL"
+          "text": "j.parameter open @type string @priority 1 @repetitions/filter 0 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\" @default NULL"
         }
       },
       {

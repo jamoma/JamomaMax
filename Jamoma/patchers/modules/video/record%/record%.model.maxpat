@@ -671,7 +671,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 203.0, 96.85714, 519.0, 31.0 ],
-					"text" : "j.parameter framerate @type decimal @ramp/drive none @repetitions/filter 1 @range/bounds 1. 25 @range/clipmode low @description Framerate. @value/default 30",
+					"text" : "j.parameter framerate @type decimal @ramp/drive none @repetitions/filter 1 @range 1. 25 @clipmode low @description Framerate. @default 30",
 					"varname" : "framerate"
 				}
 
@@ -703,7 +703,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 244.5, 134.0, 418.0, 19.0 ],
-					"text" : "j.parameter codec @type string @description \"Codec type.\" @value/default jpeg",
+					"text" : "j.parameter codec @type string @description \"Codec type.\" @default jpeg",
 					"varname" : "codec"
 				}
 

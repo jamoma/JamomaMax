@@ -193,7 +193,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 460.0, 185.0, 533.0, 31.0 ],
-					"text" : "j.parameter downSample @type integer @range/bounds 1 250 @range/clipmode low @description \"Downsampling for slower scrolling\""
+					"text" : "j.parameter downSample @type integer @range 1 250 @clipmode low @description \"Downsampling for slower scrolling\""
 				}
 
 			}
@@ -252,7 +252,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 460.0, 100.0, 596.0, 31.0 ],
-					"text" : "j.parameter numberOfChannels @type integer @repetitions/filter 1 @range/bounds 1 8 @range/clipmode both @ramp/drive none @description \"The number of channels to monitor.\""
+					"text" : "j.parameter numberOfChannels @type integer @repetitions/filter 1 @range 1 8 @clipmode both @ramp/drive none @description \"The number of channels to monitor.\""
 				}
 
 			}

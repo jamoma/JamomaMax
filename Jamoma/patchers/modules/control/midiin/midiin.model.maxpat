@@ -537,7 +537,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 286.0, 123.0, 112.0, 29.0 ],
-													"text" : "type decimal, range/bounds -1. 1."
+													"text" : "type decimal, range -1. 1."
 												}
 
 											}
@@ -552,7 +552,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 168.0, 123.0, 104.0, 41.0 ],
-													"text" : "type decimal, range/bounds 0. 1."
+													"text" : "type decimal, range 0. 1."
 												}
 
 											}
@@ -567,7 +567,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 50.0, 122.0, 105.0, 41.0 ],
-													"text" : "type integer, range/bounds 0 127"
+													"text" : "type integer, range 0 127"
 												}
 
 											}
@@ -1347,7 +1347,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 286.0, 123.0, 112.0, 29.0 ],
-													"text" : "type decimal, range/bounds -1. 1."
+													"text" : "type decimal, range -1. 1."
 												}
 
 											}
@@ -1362,7 +1362,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 168.0, 123.0, 104.0, 41.0 ],
-													"text" : "type decimal, range/bounds 0. 1."
+													"text" : "type decimal, range 0. 1."
 												}
 
 											}
@@ -1377,7 +1377,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 50.0, 122.0, 105.0, 41.0 ],
-													"text" : "type integer, range/bounds 0 127"
+													"text" : "type integer, range 0 127"
 												}
 
 											}
@@ -2626,7 +2626,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1041.5, 35.0, 568.0, 31.0 ],
-					"text" : "j.parameter midiChannel @type integer @priority 1 @range/clipmode both @range/bounds 0 16 @description \"Choose which MIDI channel to listen on. 0 == all \"",
+					"text" : "j.parameter midiChannel @type integer @priority 1 @clipmode both @range 0 16 @description \"Choose which MIDI channel to listen on. 0 == all \"",
 					"varname" : "device_menu[2]"
 				}
 
@@ -2641,7 +2641,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 576.0, 505.399994, 499.0, 19.0 ],
-					"text" : "j.return program @type integer @range/bounds 0 127 @description \"Program change message.\"",
+					"text" : "j.return program @type integer @range 0 127 @description \"Program change message.\"",
 					"varname" : "pgmin_connect"
 				}
 
@@ -2656,7 +2656,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 408.0, 529.400024, 440.0, 19.0 ],
-					"text" : "j.return pitchbend @type decimal @range/bounds -24. 24. @description \"Pitch bend\""
+					"text" : "j.return pitchbend @type decimal @range -24. 24. @description \"Pitch bend\""
 				}
 
 			}
@@ -2910,7 +2910,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 927.0, 457.0, 541.0, 19.0 ],
-					"text" : "j.return monoAftertouch @type integer @range/bounds 0 127 @description \"Mono (channel) aftertouch.\""
+					"text" : "j.return monoAftertouch @type integer @range 0 127 @description \"Mono (channel) aftertouch.\""
 				}
 
 			}
@@ -3366,7 +3366,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 286.0, 123.0, 112.0, 29.0 ],
-													"text" : "type decimal, range/bounds -1. 1."
+													"text" : "type decimal, range -1. 1."
 												}
 
 											}
@@ -3381,7 +3381,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 168.0, 123.0, 104.0, 41.0 ],
-													"text" : "type decimal, range/bounds 0. 1."
+													"text" : "type decimal, range 0. 1."
 												}
 
 											}
@@ -3396,7 +3396,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 50.0, 122.0, 105.0, 41.0 ],
-													"text" : "type integer, range/bounds 0 127"
+													"text" : "type integer, range 0 127"
 												}
 
 											}
@@ -4189,7 +4189,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 286.0, 123.0, 112.0, 29.0 ],
-													"text" : "type decimal, range/bounds -1. 1."
+													"text" : "type decimal, range -1. 1."
 												}
 
 											}
@@ -4204,7 +4204,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 168.0, 123.0, 104.0, 41.0 ],
-													"text" : "type decimal, range/bounds 0. 1."
+													"text" : "type decimal, range 0. 1."
 												}
 
 											}
@@ -4219,7 +4219,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 50.0, 122.0, 105.0, 41.0 ],
-													"text" : "type integer, range/bounds 0 127"
+													"text" : "type integer, range 0 127"
 												}
 
 											}
@@ -4648,7 +4648,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 344.5, 142.5, 593.0, 43.0 ],
-					"text" : "j.parameter normalization @type string @range/clipmode none @description \"Choose whether data MIDI CC, pitch bend,  aftertouch, and poly-aftertouch should be scaled to [0. 1.] (normalize), [-1. 1.] (s-normalize) or passed unscaled (none)\"",
+					"text" : "j.parameter normalization @type string @clipmode none @description \"Choose whether data MIDI CC, pitch bend,  aftertouch, and poly-aftertouch should be scaled to [0. 1.] (normalize), [-1. 1.] (s-normalize) or passed unscaled (none)\"",
 					"varname" : "midi_normalize[1]"
 				}
 
@@ -4663,7 +4663,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 161.0, 106.0, 520.0, 19.0 ],
-					"text" : "j.message initDevice @type none @range/clipmode none @description \"Initialization of midi devices\"",
+					"text" : "j.message initDevice @type none @clipmode none @description \"Initialization of midi devices\"",
 					"varname" : "j.parameter[3]"
 				}
 
@@ -4678,7 +4678,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 38.833328, 83.0, 601.0, 19.0 ],
-					"text" : "j.parameter device @type string @priority 2 @range/clipmode none @description \"Choose which MIDI device to use\"",
+					"text" : "j.parameter device @type string @priority 2 @clipmode none @description \"Choose which MIDI device to use\"",
 					"varname" : "device_menu[1]"
 				}
 

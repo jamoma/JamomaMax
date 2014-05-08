@@ -1111,7 +1111,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 730.0, 310.0, 227.0, 67.0 ],
-					"text" : "j.parameter zoomY @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 10. @range/clipmode none @description \"Zoom image in Y-direction.\"",
+					"text" : "j.parameter zoomY @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 10. @clipmode none @description \"Zoom image in Y-direction.\"",
 					"varname" : "zoom[4]"
 				}
 
@@ -1170,7 +1170,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 191.0, 245.0, 206.0, 67.0 ],
-					"text" : "j.parameter angle @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 90 @range/clipmode none @description \"Rotate image - in degrees\"",
+					"text" : "j.parameter angle @type integer @ramp/drive Max @repetitions/filter 1 @range 0 90 @clipmode none @description \"Rotate image - in degrees\"",
 					"varname" : "angle[1]"
 				}
 
@@ -1186,7 +1186,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 49.5, 46.0, 455.0, 31.0 ],
-					"text" : "j.parameter offsetY @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds -1. 1. @range/clipmode none @description \"Offset image in Y-direction\"",
+					"text" : "j.parameter offsetY @type decimal @ramp/drive Max @repetitions/filter 1 @range -1. 1. @clipmode none @description \"Offset image in Y-direction\"",
 					"varname" : "offset_y"
 				}
 
@@ -1218,7 +1218,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 6.5, 8.0, 456.0, 31.0 ],
-					"text" : "j.parameter offsetX @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds -1. 1. @range/clipmode none @description \"Offset image in X-direction\"",
+					"text" : "j.parameter offsetX @type decimal @ramp/drive Max @repetitions/filter 1 @range -1. 1. @clipmode none @description \"Offset image in X-direction\"",
 					"varname" : "offset_x"
 				}
 
@@ -1265,7 +1265,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 706.0, 245.0, 251.0, 55.0 ],
-					"text" : "j.parameter zoomX @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 10. @range/clipmode none @description \"Zoom image in X-direction.\"",
+					"text" : "j.parameter zoomX @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 10. @clipmode none @description \"Zoom image in X-direction.\"",
 					"varname" : "zoom[1]"
 				}
 

@@ -377,7 +377,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 146.0, 89.0, 336.0, 31.0 ],
-					"text" : "j.parameter key/blue @repetitions/filter 1 @type decimal @range/bounds 0. 1. @description \"blue level of the chromakey\"",
+					"text" : "j.parameter key/blue @repetitions/filter 1 @type decimal @range 0. 1. @description \"blue level of the chromakey\"",
 					"varname" : "key/blue"
 				}
 
@@ -393,7 +393,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 85.0, 55.0, 343.0, 31.0 ],
-					"text" : "j.parameter key/green @repetitions/filter 1 @type decimal @range/bounds 0. 1. @description \"green level of the chromakey\"",
+					"text" : "j.parameter key/green @repetitions/filter 1 @type decimal @range 0. 1. @description \"green level of the chromakey\"",
 					"varname" : "key/green"
 				}
 
@@ -409,7 +409,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 23.0, 18.0, 331.0, 31.0 ],
-					"text" : "j.parameter key/red @repetitions/filter 1 @type decimal @range/bounds 0. 1. @description \"red level of the chromakey\"",
+					"text" : "j.parameter key/red @repetitions/filter 1 @type decimal @range 0. 1. @description \"red level of the chromakey\"",
 					"varname" : "key/red"
 				}
 
@@ -425,7 +425,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 456.0, 305.0, 312.0, 31.0 ],
-					"text" : "j.parameter mode @repetitions/filter 1 @type boolean @range/bounds 0 1 @description \"keying mode\"",
+					"text" : "j.parameter mode @repetitions/filter 1 @type boolean @range 0 1 @description \"keying mode\"",
 					"varname" : "mode"
 				}
 
@@ -441,7 +441,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 394.0, 266.0, 388.0, 31.0 ],
-					"text" : "j.parameter mask @repetitions/filter 1 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as mask\"",
+					"text" : "j.parameter mask @repetitions/filter 1 @type integer @range 1 3 @clipmode both @description \"input used as mask\"",
 					"varname" : "mask[1]"
 				}
 
@@ -457,7 +457,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 333.0, 225.0, 391.0, 31.0 ],
-					"text" : "j.parameter target @repetitions/filter 1 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as target\"",
+					"text" : "j.parameter target @repetitions/filter 1 @type integer @range 1 3 @clipmode both @description \"input used as target\"",
 					"varname" : "target[1]"
 				}
 
@@ -473,7 +473,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 271.0, 172.0, 253.0, 43.0 ],
-					"text" : "j.parameter key @repetitions/filter 1 @type integer @range/bounds 1 3 @range/clipmode both @description \"input used as key\"",
+					"text" : "j.parameter key @repetitions/filter 1 @type integer @range 1 3 @clipmode both @description \"input used as key\"",
 					"varname" : "key[1]"
 				}
 
@@ -489,7 +489,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 195.0, 128.0, 416.0, 31.0 ],
-					"text" : "j.parameter tolerance @repetitions/filter 1 @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Tolerance of the chromakey\"",
+					"text" : "j.parameter tolerance @repetitions/filter 1 @type decimal @range 0. 1. @clipmode both @description \"Tolerance of the chromakey\"",
 					"varname" : "tolerance"
 				}
 

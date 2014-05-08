@@ -212,7 +212,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 380.0, 15.0, 219.0, 55.0 ],
-									"text" : "j.parameter line @type integer @range/bounds 1 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis scanline in pixels.\"",
+									"text" : "j.parameter line @type integer @range 1 2000 @clipmode low @ramp/drive none @description \"Specify the x-axis scanline in pixels.\"",
 									"varname" : "dimensions/width[1]"
 								}
 
@@ -1126,7 +1126,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 630.0, 69.0, 320.0, 43.0 ],
-									"text" : "j.parameter dimensions/height @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the y-axis offset in pixels.\"",
+									"text" : "j.parameter dimensions/height @type integer @range 0 2000 @clipmode low @ramp/drive none @description \"Specify the y-axis offset in pixels.\"",
 									"varname" : "dimensions/height"
 								}
 
@@ -1142,7 +1142,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 562.0, 18.0, 313.0, 43.0 ],
-									"text" : "j.parameter dimensions/width @type integer @range/bounds 0 2000 @range/clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
+									"text" : "j.parameter dimensions/width @type integer @range 0 2000 @clipmode low @ramp/drive none @description \"Specify the x-axis offset in pixels.\"",
 									"varname" : "dimensions/width"
 								}
 
@@ -1158,7 +1158,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 16.0, 239.0, 160.0, 79.0 ],
-									"text" : "j.return counter @type integer @range/bounds 0 1024 @description \"Returns the number of the counter running through the motiongram\"",
+									"text" : "j.return counter @type integer @range 0 1024 @description \"Returns the number of the counter running through the motiongram\"",
 									"varname" : "xraymean[2]"
 								}
 

@@ -38,7 +38,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 154.5, 12.5, 145.0, 141.0 ],
-					"text" : "j.parameter range @type decimal @range/bounds -36 36 @range/clipmode low @repetitions/filter 1 @ramp/drive Max @dataspace gain @dataspace/unit db @description \"range of values above and below the zero line to display.\"",
+					"text" : "j.parameter range @type decimal @range -36 36 @clipmode low @repetitions/filter 1 @ramp/drive Max @dataspace gain @dataspace/unit db @description \"range of values above and below the zero line to display.\"",
 					"varname" : "j.parameter.mxb[4]"
 				}
 
@@ -69,7 +69,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 309.0, 12.5, 139.0, 100.0 ],
-					"text" : "j.parameter buffer/pixel @type integer @range/bounds 2 8092 @range/clipmode both @description \"buffers per pixel, control the scope display\"",
+					"text" : "j.parameter buffer/pixel @type integer @range 2 8092 @clipmode both @description \"buffers per pixel, control the scope display\"",
 					"varname" : "j.parameter.mxb[1]"
 				}
 
@@ -85,7 +85,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 465.5, 12.5, 155.0, 100.0 ],
-					"text" : "j.parameter buffer/samples @type integer @range/bounds 8 256 @range/clipmode both @description \"samples per buffer, control the scope display\"",
+					"text" : "j.parameter buffer/samples @type integer @range 8 256 @clipmode both @description \"samples per buffer, control the scope display\"",
 					"varname" : "j.parameter.mxb[5]"
 				}
 

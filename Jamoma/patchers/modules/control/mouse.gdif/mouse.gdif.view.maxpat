@@ -332,7 +332,7 @@
                     271.0,
                     30.0
                   ],
-                  "text": "j.parameter gdif/emotion/on @type boolean @range/clipmode none @description \"Turn data on\"",
+                  "text": "j.parameter gdif/emotion/on @type boolean @clipmode none @description \"Turn data on\"",
                   "varname": "gdif/emotion/on"
                 }
               },
@@ -357,7 +357,7 @@
                     294.0,
                     30.0
                   ],
-                  "text": "j.parameter gdif/performance/on @type boolean @range/clipmode none @description \"Turn data on\"",
+                  "text": "j.parameter gdif/performance/on @type boolean @clipmode none @description \"Turn data on\"",
                   "varname": "gdif/performance/on"
                 }
               },
@@ -382,7 +382,7 @@
                     294.0,
                     30.0
                   ],
-                  "text": "j.parameter gdif/environment/on @type boolean @range/clipmode none @description \"Turn data on\"",
+                  "text": "j.parameter gdif/environment/on @type boolean @clipmode none @description \"Turn data on\"",
                   "varname": "gdif/environment/on"
                 }
               },
@@ -407,7 +407,7 @@
                     267.0,
                     30.0
                   ],
-                  "text": "j.parameter gdif/device/on @type boolean @range/clipmode none @description \"Turn data on\"",
+                  "text": "j.parameter gdif/device/on @type boolean @clipmode none @description \"Turn data on\"",
                   "varname": "gdif/device/on"
                 }
               },
@@ -432,7 +432,7 @@
                     267.0,
                     30.0
                   ],
-                  "text": "j.parameter gdif/body/on @type boolean @range/clipmode none @description \"Turn data on\"",
+                  "text": "j.parameter gdif/body/on @type boolean @clipmode none @description \"Turn data on\"",
                   "varname": "gdif/body/on"
                 }
               },
@@ -457,7 +457,7 @@
                     267.0,
                     30.0
                   ],
-                  "text": "j.parameter gdif/cooked/on @type boolean @range/clipmode none @description \"Turn data on\"",
+                  "text": "j.parameter gdif/cooked/on @type boolean @clipmode none @description \"Turn data on\"",
                   "varname": "gdif/cooked/on"
                 }
               },
@@ -482,7 +482,7 @@
                     267.0,
                     30.0
                   ],
-                  "text": "j.parameter gdif/raw/on @type boolean @range/clipmode none @description \"Turn data on\"",
+                  "text": "j.parameter gdif/raw/on @type boolean @clipmode none @description \"Turn data on\"",
                   "varname": "gdif/raw/on"
                 }
               },

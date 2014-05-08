@@ -1093,7 +1093,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 106.0, 233.0, 443.5, 47.0 ],
-					"text" : "j.parameterArray filter.[6]/gain @type decimal @range/bounds -24 24 @range/clipmode both @ramp/drive scheduler @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB @priority 3 @value/default 0."
+					"text" : "j.parameterArray filter.[6]/gain @type decimal @range -24 24 @clipmode both @ramp/drive scheduler @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB @priority 3 @default 0."
 				}
 
 			}
@@ -1108,7 +1108,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 163.75, 178.0, 466.25, 47.0 ],
-					"text" : "j.parameterArray filter.[6]/frequency @type decimal @range/bounds 30. 11025. @range/clipmode both @ramp/drive scheduler @repetitions/filter 1 @description \"Center frequency (Hz)\" @dataspace pitch @dataspace/unit Hz @priority 2"
+					"text" : "j.parameterArray filter.[6]/frequency @type decimal @range 30. 11025. @clipmode both @ramp/drive scheduler @repetitions/filter 1 @description \"Center frequency (Hz)\" @dataspace pitch @dataspace/unit Hz @priority 2"
 				}
 
 			}
@@ -1123,7 +1123,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 48.25, 290.0, 391.75, 47.0 ],
-					"text" : "j.parameterArray filter.[6]/q @type decimal @ramp/drive scheduler @range/bounds 0. 100. @range/clipmode both @repetitions/filter 1 @description \"Resonance (Q)\" @priority 4 @value/default 2."
+					"text" : "j.parameterArray filter.[6]/q @type decimal @ramp/drive scheduler @range 0. 100. @clipmode both @repetitions/filter 1 @description \"Resonance (Q)\" @priority 4 @default 2."
 				}
 
 			}
@@ -1168,7 +1168,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 48.25, 30.0, 521.0, 33.0 ],
-					"text" : "j.parameter bands @type integer @priority -1 @description \"Number of bands of the filter\" @tag setup @repetitions/filter 1 @range/clipmode both @value/default #2 @range/bounds 1 24",
+					"text" : "j.parameter bands @type integer @priority -1 @description \"Number of bands of the filter\" @tag setup @repetitions/filter 1 @clipmode both @default #2 @range 1 24",
 					"varname" : "bands[1]"
 				}
 

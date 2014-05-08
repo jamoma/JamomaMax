@@ -103,7 +103,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 361.0, 235.0, 208.0, 29.0 ],
-									"text" : "j.parameter #1/dir @priority 4 @type integer @value/default 0"
+									"text" : "j.parameter #1/dir @priority 4 @type integer @default 0"
 								}
 
 							}
@@ -230,7 +230,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 288.0, 138.0, 228.0, 29.0 ],
-									"text" : "j.parameter #1/power @priority 30 @type decimal @value/default 0."
+									"text" : "j.parameter #1/power @priority 30 @type decimal @default 0."
 								}
 
 							}
@@ -259,7 +259,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 99.0, 9.0, 167.0, 40.0 ],
-									"text" : "j.parameter #1/enable @priority 1 @value/default 1 @type boolean"
+									"text" : "j.parameter #1/enable @priority 1 @default 1 @type boolean"
 								}
 
 							}
@@ -273,7 +273,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 208.0, 72.0, 353.0, 18.0 ],
-									"text" : "j.parameter #1/address @priority 3 @type string @value/default /"
+									"text" : "j.parameter #1/address @priority 3 @type string @default /"
 								}
 
 							}
@@ -587,7 +587,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 167.0, 155.0, 310.0, 29.0 ],
-					"text" : "j.parameter #1/value @type float @range/bounds 0. 1. @range/clipmode both @repetitions/filter 1 @value/default 0."
+					"text" : "j.parameter #1/value @type float @range 0. 1. @clipmode both @repetitions/filter 1 @default 0."
 				}
 
 			}

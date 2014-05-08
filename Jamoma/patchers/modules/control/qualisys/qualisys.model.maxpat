@@ -4625,7 +4625,7 @@
             451.0,
             20.0
           ],
-          "text": "j.parameter connect @type integer @range/bounds 0 1 @range/clipmode both"
+          "text": "j.parameter connect @type integer @range 0 1 @clipmode both"
         }
       },
       {
@@ -4714,7 +4714,7 @@
             451.0,
             20.0
           ],
-          "text": "j.parameter port @type integer @range/bounds 0 10000 @range/clipmode low"
+          "text": "j.parameter port @type integer @range 0 10000 @clipmode low"
         }
       }
     ],

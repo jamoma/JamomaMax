@@ -243,7 +243,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 314.0, 108.0, 20.0 ],
-									"text" : "@range/clipmode"
+									"text" : "@clipmode"
 								}
 
 							}
@@ -257,7 +257,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 294.0, 98.0, 20.0 ],
-									"text" : "@range/bounds"
+									"text" : "@range"
 								}
 
 							}
@@ -610,7 +610,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 624.0, 159.0, 60.0 ],
-					"text" : "j.return return_c @range/bounds 0. 1. @description \"Document what this return does...\""
+					"text" : "j.return return_c @range 0. 1. @description \"Document what this return does...\""
 				}
 
 			}
@@ -704,7 +704,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 489.0, 165.0, 87.0 ],
-					"text" : "j.message thisMessage @type integer @range/bounds 0. 1. @range/clipmode none @description \"Document what this message does...\"",
+					"text" : "j.message thisMessage @type integer @range 0. 1. @clipmode none @description \"Document what this message does...\"",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -720,7 +720,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 849.0, 151.0, 154.0, 100.0 ],
-					"text" : "j.parameter thisParameter @repetitions/filter 0 @type decimal @range/bounds 0. 1. @range/clipmode none @description \"Document what this parameter does...\"",
+					"text" : "j.parameter thisParameter @repetitions/filter 0 @type decimal @range 0. 1. @clipmode none @description \"Document what this parameter does...\"",
 					"varname" : "hue_angle"
 				}
 

@@ -125,7 +125,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 723.0, 1079.0, 123.0, 18.0 ],
-									"text" : "/test:value/stepsize 2"
+									"text" : "/test:stepsize 2"
 								}
 
 							}
@@ -152,7 +152,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 661.0, 992.0, 117.0, 20.0 ],
-									"text" : "route value/stepsize"
+									"text" : "route stepsize"
 								}
 
 							}
@@ -181,7 +181,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 661.0, 1019.001892, 232.0, 33.0 ],
-									"text" : "j.test.assert.equal value/stepsize-test @input value/stepsize @compareTo 2"
+									"text" : "j.test.assert.equal stepsize-test @input stepsize @compareTo 2"
 								}
 
 							}
@@ -464,7 +464,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 722.0, 876.0, 115.0, 18.0 ],
-									"text" : "/test:value/default 1"
+									"text" : "/test:default 1"
 								}
 
 							}
@@ -491,7 +491,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 660.0, 789.0, 109.0, 20.0 ],
-									"text" : "route value/default"
+									"text" : "route default"
 								}
 
 							}
@@ -520,7 +520,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 660.0, 816.001892, 223.0, 33.0 ],
-									"text" : "j.test.assert.equal value/default-test @input value/default @compareTo 1"
+									"text" : "j.test.assert.equal default-test @input default @compareTo 1"
 								}
 
 							}
@@ -926,7 +926,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 385.0, 883.0, 141.0, 18.0 ],
-									"text" : "/test:range/clipmode fold"
+									"text" : "/test:clipmode fold"
 								}
 
 							}
@@ -953,7 +953,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 323.0, 796.0, 123.0, 20.0 ],
-									"text" : "route range/clipmode"
+									"text" : "route clipmode"
 								}
 
 							}
@@ -982,7 +982,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 323.0, 823.001892, 237.0, 33.0 ],
-									"text" : "j.test.assert.equal range/clipmode-test @input range/clipmode @compareTo fold"
+									"text" : "j.test.assert.equal clipmode-test @input clipmode @compareTo fold"
 								}
 
 							}
@@ -1034,7 +1034,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 386.0, 695.0, 141.0, 18.0 ],
-									"text" : "/test:range/bounds -1. 1."
+									"text" : "/test:range -1. 1."
 								}
 
 							}
@@ -1061,7 +1061,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 324.0, 608.0, 115.0, 20.0 ],
-									"text" : "route range/bounds"
+									"text" : "route range"
 								}
 
 							}
@@ -1090,7 +1090,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 324.0, 635.001892, 234.0, 33.0 ],
-									"text" : "j.test.assert.equal range/bounds-test @input range/bounds @compareTo -1. 1."
+									"text" : "j.test.assert.equal range-test @input range @compareTo -1. 1."
 								}
 
 							}

@@ -1197,7 +1197,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 35.0, 130.0, 540.0, 31.0 ],
-									"text" : "j.parameter numberOfColors @type integer @range/bounds 1 12 @range/clipmode both @priority 1 @repetitions/filter 0 @description \"Number of active colors.\""
+									"text" : "j.parameter numberOfColors @type integer @range 1 12 @clipmode both @priority 1 @repetitions/filter 0 @description \"Number of active colors.\""
 								}
 
 							}

@@ -789,7 +789,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 272.0, 320.0, 349.0, 31.0 ],
-					"text" : "j.return delta/angle @type decimal @range/bounds -3.14 3.14 @description \"Angle (in radians) of relative position of mouse.\""
+					"text" : "j.return delta/angle @type decimal @range -3.14 3.14 @description \"Angle (in radians) of relative position of mouse.\""
 				}
 
 			}
@@ -833,7 +833,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 235.0, 355.0, 486.0, 31.0 ],
-					"text" : "j.return delta/magnitude @type decimal @range/bounds 0. 0.4 @description \"Mangitude (in screen percentage) of relative position of mouse (sum of horizontal and vertical).\""
+					"text" : "j.return delta/magnitude @type decimal @range 0. 0.4 @description \"Mangitude (in screen percentage) of relative position of mouse (sum of horizontal and vertical).\""
 				}
 
 			}
@@ -849,7 +849,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 317.0, 285.0, 289.0, 31.0 ],
-					"text" : "j.return delta/y @type decimal @range/bounds -0.2 0.2 @description \"Vertical delta position of mouse\""
+					"text" : "j.return delta/y @type decimal @range -0.2 0.2 @description \"Vertical delta position of mouse\""
 				}
 
 			}
@@ -865,7 +865,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 220.0, 391.0, 303.0, 31.0 ],
-					"text" : "j.return delta/x @type decimal @range/bounds -0.2 0.2 @description \"Horizontal delta position of mouse\""
+					"text" : "j.return delta/x @type decimal @range -0.2 0.2 @description \"Horizontal delta position of mouse\""
 				}
 
 			}
@@ -881,7 +881,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 221.0, 465.0, 293.0, 31.0 ],
-					"text" : "j.return position/y @type decimal @range/bounds 0. 1. @description \"Vertical position of mouse\""
+					"text" : "j.return position/y @type decimal @range 0. 1. @description \"Vertical position of mouse\""
 				}
 
 			}
@@ -897,7 +897,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 121.0, 502.0, 293.0, 31.0 ],
-					"text" : "j.return position/x @type decimal @range/bounds 0. 1. @description \"Horizontal position of mouse\""
+					"text" : "j.return position/x @type decimal @range 0. 1. @description \"Horizontal position of mouse\""
 				}
 
 			}
@@ -928,7 +928,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 72.0, 541.0, 261.0, 31.0 ],
-					"text" : "j.return button @type toggle @range/bounds 0 1 @description \"Mouse button\""
+					"text" : "j.return button @type toggle @range 0 1 @description \"Mouse button\""
 				}
 
 			}
@@ -943,7 +943,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 72.0, 100.0, 658.0, 19.0 ],
-					"text" : "j.parameter reference @type string @range/clipmode none @description \"Choose reference mode\" @value/default screen",
+					"text" : "j.parameter reference @type string @clipmode none @description \"Choose reference mode\" @default screen",
 					"varname" : "reference"
 				}
 

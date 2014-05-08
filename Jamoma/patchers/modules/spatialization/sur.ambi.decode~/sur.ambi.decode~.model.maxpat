@@ -8465,7 +8465,7 @@
             560.0,
             31.0
           ],
-          "text": "j.message.array 32 speaker gain @type decimal @value/default 1 @value 1 @description \"gain value of loudspeaker channel\""
+          "text": "j.message.array 32 speaker gain @type decimal @default 1 @value 1 @description \"gain value of loudspeaker channel\""
         }
       },
       {
@@ -8512,7 +8512,7 @@
             573.0,
             31.0
           ],
-          "text": "j.message.array 32 speaker active @type boolean @value/default 1 @value 1 @description \"active 0 will mute the Nth speaker.\""
+          "text": "j.message.array 32 speaker active @type boolean @default 1 @value 1 @description \"active 0 will mute the Nth speaker.\""
         }
       },
       {
@@ -8535,7 +8535,7 @@
             598.0,
             43.0
           ],
-          "text": "j.message.array 32 speaker position @type decimalArray @dataspace position @dataspace/unit xyz @value/default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+          "text": "j.message.array 32 speaker position @type decimalArray @dataspace position @dataspace/unit xyz @default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
         }
       },
       {
@@ -8602,7 +8602,7 @@
             601.0,
             31.0
           ],
-          "text": "j.parameter order @type integer @repetitions/filter 1 @range/bounds 1 3 @range/clipmode both @description \"Order of decoding for ambisonic signal.  Changes only take effect when audio is off.\"",
+          "text": "j.parameter order @type integer @repetitions/filter 1 @range 1 3 @clipmode both @description \"Order of decoding for ambisonic signal.  Changes only take effect when audio is off.\"",
           "varname": "order"
         }
       },
@@ -8626,7 +8626,7 @@
             600.0,
             43.0
           ],
-          "text": "j.parameter numSpeakers @type integer @repetitions/filter 1 @range/bounds 1 32 @range/clipmode both @description \"The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.\"",
+          "text": "j.parameter numSpeakers @type integer @repetitions/filter 1 @range 1 32 @clipmode both @description \"The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.\"",
           "varname": "voices"
         }
       }
