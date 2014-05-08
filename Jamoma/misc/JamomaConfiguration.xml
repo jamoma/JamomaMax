@@ -4,7 +4,7 @@
  <conversionTable>
   <entry App="default" TT="valueDefault"/>
   <entry App="stepsize" TT="valueStepsize"/>
-  <entry App="rclipmode" TT="rangeClipmode"/>
+  <entry App="clipmode" TT="rangeClipmode"/>
   <entry App="ramp/drive" TT="rampDrive"/>
   <entry App="repetitions/filter" TT="repetitionsFilter"/>
   <entry App="ramp/function" TT="rampFunction"/>
