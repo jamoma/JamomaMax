@@ -69,7 +69,7 @@ typedef struct _ui{
 	
 	TTAddress           viewAddress;
 	TTAddress           modelAddress;
-	ObjectPtr			patcherPtr;				///< the patcher in which the external is (ignoring subpatcher)
+	t_object*			patcherPtr;				///< the patcher in which the external is (ignoring subpatcher)
 	TTSymbol			patcherContext;			///< the patcher context in which the external is (model, view)
 	TTSymbol			patcherClass;			///< the patcher class in which the external is
 	TTSymbol			patcherName;
@@ -95,8 +95,8 @@ typedef struct _ui{
 	void				*menu_qelem;			// ...
 	long				menu_selection;			// ...
 	t_linklist			*menu_items;			// ...
-	AtomPtr				preset_names;
-	AtomCount			preset_num;
+	t_atom*				preset_names;
+	long			preset_num;
 
 	t_jpopupmenu		*refmenu;				// reference menu
 	void				*refmenu_qelem;			// ...
@@ -108,7 +108,7 @@ typedef struct _ui{
 	
 	long				has_panel;				// is the binded model have a panel ?
 	t_rect				rect_panel;
-	ObjectPtr			patcher_panel;
+	t_object*			patcher_panel;
 
 	long				has_meters;				// is the binded model have meters ? (set number of meters, not just a toggle)
 	long				is_metersdefeated;
@@ -200,25 +200,25 @@ void		ui_viewer_highlight(t_ui *obj, TTSymbol name, TTBoolean s);
 void		ui_viewer_freeze(t_ui *obj, TTSymbol name, TTBoolean f);
 
 void		ui_explorer_create(ObjectPtr x, TTObjectBasePtr *returnedExplorer, SymbolPtr method);
-void		ui_modelMessExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_modelParamExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_modelRetExplorer_callback(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		ui_modelMessExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_modelParamExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_modelRetExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
 
 void		ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-void		ui_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		ui_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_model_init(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
 
-void		ui_return_metersdefeated(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_mix(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_gain(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void		ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		ui_return_metersdefeated(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_mute(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_bypass(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_mix(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_gain(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_freeze(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_preview(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
 
-void		ui_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		ui_return_signal(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
 
 // prototype : text editor
 void		ui_edit(t_ui *x);
@@ -229,6 +229,6 @@ void		ui_doedit(t_ui *x);
 void		ui_preset_store_next(t_ui *x);
 void		ui_preset_doread(t_ui *x);
 void		ui_preset_dowrite(t_ui *x);
-void		ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		ui_return_preset_names(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
 
 #endif // __J_UI__

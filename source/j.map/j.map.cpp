@@ -27,7 +27,7 @@ typedef struct extra {
 
 // Definitions
 void WrapTTMapperClass(WrappedClassPtr c);
-void WrappedMapperClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
+void WrappedMapperClass_new(TTPtr self, long argc, t_atom* argv);
 void WrappedMapperClass_free(TTPtr self);
 
 void map_assist(TTPtr self, void *b, long msg, long arg, char *dst);
@@ -40,7 +40,7 @@ void map_return_output_going_up(TTPtr self, t_symbol *msg, long argc, t_atom *ar
 
 void map_int(TTPtr self, long value);
 void map_float(TTPtr self, double value);
-void map_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void map_list(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
 
 void map_reset(TTPtr self);
 
@@ -74,10 +74,10 @@ void WrapTTMapperClass(WrappedClassPtr c)
     class_addmethod(c->maxClass, (method)map_reset, "reset", 0L);
 }
 
-void WrappedMapperClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
+void WrappedMapperClass_new(TTPtr self, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
-	SymbolPtr relativeAddress;
+	t_symbol* relativeAddress;
 	long attrstart = attr_args_offset(argc, argv); // support normal arguments
 	
 	// possible relativeAddress
@@ -86,9 +86,9 @@ void WrappedMapperClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	else
 		relativeAddress = _sym_nothing;
 	
-	x->address = TTAddress(jamoma_parse_dieze((ObjectPtr)x, relativeAddress)->s_name);
+	x->address = TTAddress(jamoma_parse_dieze((t_object*)x, relativeAddress)->s_name);
 	
-	jamoma_mapper_create((ObjectPtr)x, x->wrappedObject);
+	jamoma_mapper_create((t_object*)x, x->wrappedObject);
 	
 	// Make two outlets
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 1);
@@ -105,7 +105,7 @@ void WrappedMapperClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
 	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-	defer_low((ObjectPtr)x, (method)map_subscribe, NULL, 0, 0);
+	defer_low((t_object*)x, (method)map_subscribe, NULL, 0, 0);
 }
 
 void WrappedMapperClass_free(TTPtr self)
@@ -180,28 +180,28 @@ void map_subscribe(TTPtr self)
 	 */
 }
 
-void map_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void map_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
 	outlet_atoms(x->outlets[data_out], argc, argv);
 }
 
-void map_return_input_going_down(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void map_return_input_going_down(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     object_obex_dumpout(self, gensym("input/going/down"), argc, argv);
 }
 
-void map_return_input_going_up(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void map_return_input_going_up(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     object_obex_dumpout(self, gensym("input/going/up"), argc, argv);
 }
 
-void map_return_output_going_down(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void map_return_output_going_down(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     object_obex_dumpout(self, gensym("output/going/down"), argc, argv);
 }
 
-void map_return_output_going_up(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void map_return_output_going_up(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     object_obex_dumpout(self, gensym("output/going/up"), argc, argv);
 }
@@ -227,7 +227,7 @@ void map_float(TTPtr self, double value)
 	map_list(self, _sym_float, 1, &a);
 }
 
-void map_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void map_list(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
 	TTValue inputValue, outputValue;
@@ -242,8 +242,8 @@ void map_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void map_reset(TTPtr self)
 {
     WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
-    AtomCount   argc = 0;
-    AtomPtr     argv = NULL;
+    long   argc = 0;
+    t_atom*     argv = NULL;
     
     jamoma_ttvalue_to_Atom(*EXTRA->arguments, &argc, &argv);
     

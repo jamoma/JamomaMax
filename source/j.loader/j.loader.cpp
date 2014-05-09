@@ -35,16 +35,16 @@ static t_class *loader_class;
 
 #ifdef STUFF_INHERITED_FROM_PLUGTASTIC
 
-static ClassPtr		sPlugtasticClass;
-static ObjectPtr	sPlugtasticObject;
-static SymbolPtr	ps_plugtastic;
+static t_class*		sPlugtasticClass;
+static (t_object*)	sPlugtasticObject;
+static t_symbol*	ps_plugtastic;
 static long			sPlugtasticSplash = 1;
 
 
 typedef struct _plugtastic {
 	Object		obj;
 	long*		openSplash;
-	ObjectPtr	forward;
+	t_object*	forward;
 } t_plugtastic;
 
 

@@ -26,7 +26,7 @@ mClass(kTTSymEmpty)
     
     if (arguments.size() == 1)
         if (arguments[0].type() == kTypePointer)
-            mObject = ObjectPtr(TTPtr(arguments[0]));
+            mObject = (t_object*)(TTPtr(arguments[0]));
     
     addAttributeWithSetter(Address, kTypeSymbol);
     addAttribute(Class, kTypeSymbol);
@@ -75,7 +75,7 @@ TTErr TTModelInfo::HelpOpen()
 	// opening the model helpfile
 	if (mClass != kTTSymEmpty) {
 		
-		SymbolPtr helpfileName;
+		t_symbol* helpfileName;
 		jamoma_edit_filename(*HelpPatcherFormat, mClass, &helpfileName);
 		classname_openhelp((char*)helpfileName->s_name);
         
@@ -90,7 +90,7 @@ TTErr TTModelInfo::ReferenceOpen()
     // opening the model reference
     if (mClass != kTTSymEmpty) {
         
-		SymbolPtr refpagefileName;
+		t_symbol* refpagefileName;
 		jamoma_edit_filename(*RefpageFormat, mClass, &refpagefileName);
 		classname_openrefpage((char*)refpagefileName->s_name);
         
@@ -111,7 +111,7 @@ TTErr TTModelInfo::Mute()
 {
     /*
      WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-     ObjectPtr					patcher = jamoma_patcher_get((ObjectPtr)x);
+     t_object*					patcher = jamoma_patcher_get((t_object*)x);
      long						mute;
      t_atom						a[2];
      

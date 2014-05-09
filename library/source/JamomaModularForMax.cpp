@@ -809,10 +809,10 @@ void jamoma_callback_return_value_typed(const TTValue& baton, const TTValue& v)
 	
 	// unpack baton (a t_object* and the name of the method to call (default : jps_return_value))
     
-    // get object
+     // get Max wrapper object that was passed in
 	x = ObjectPtr((TTPtr)baton[0]);
 	
-    // get method
+     // get name of the method to call
 	if (baton.size() >= 2) {
         
 		s_method = SymbolPtr((TTPtr)baton[1]);

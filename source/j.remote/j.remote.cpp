@@ -34,14 +34,14 @@ typedef struct outlet {
 typedef struct extra {
     TTAddress   name;           ///< the name to use for subscription
 	TTPtr		ui_qelem;		///< to output "qlim'd" data for ui object
-	ObjectPtr	connected;		// our ui object
+	t_object*	connected;		// our ui object
 	long		x;				// our ui object x presentation
 	long		y;				// our ui object y presentation
 	long		w;				// our ui object width presentation
 	long		h;				// our ui object heigth presentation
-	ObjectPtr	label;			// label to display selection state
-	AtomPtr		color0;			// label color for selection state == 0
-	AtomPtr		color1;			// label color for selection state == 1
+	t_object*	label;			// label to display selection state
+	t_atom*		color0;			// label color for selection state == 0
+	t_atom*		color1;			// label color for selection state == 1
     TTBoolean   setting;        // a flag to know if the remote is updated by a set message
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
@@ -53,22 +53,22 @@ typedef struct extra {
 
 // Definitions
 void        WrapTTViewerClass(WrappedClassPtr c);
-void        WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
+void        WrappedViewerClass_new(TTPtr self, long argc, t_atom* argv);
 void        WrappedViewerClass_free(TTPtr self);
-void        WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
 
 void        remote_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 
-void        remote_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void        remote_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void        remote_return_description(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        remote_return_value(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void        remote_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void        remote_return_description(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
 
 void        remote_bang(TTPtr self);
 void        remote_int(TTPtr self, long value);
 void        remote_float(TTPtr self, double value);
-TTErr       remote_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+TTErr       remote_list(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
 
-void        remote_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        remote_set(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
 
 void        remote_address(TTPtr self, SymbolPtr address);
 
@@ -114,7 +114,7 @@ void WrapTTViewerClass(WrappedClassPtr c)
     class_addmethod(c->maxClass, (method)remote_address,				"address",				A_SYM, 0);
 }
 
-void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
+void WrappedViewerClass_new(TTPtr self, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	SymbolPtr					address;
@@ -126,7 +126,7 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	else
 		address = _sym_nothing;
 	
-	x->address = TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+	x->address = TTAddress(jamoma_parse_dieze((t_object*)x, address)->s_name);
 	x->index = 0; // the index member is usefull to count how many time the external tries to bind
 	
 	// Prepare extra data
@@ -141,13 +141,13 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
     EXTRA->connected = NULL;
 	EXTRA->label = NULL;
 	
-	EXTRA->color0 = (AtomPtr)sysmem_newptr(sizeof(t_atom) * 4);
+	EXTRA->color0 = (t_atom*)sysmem_newptr(sizeof(t_atom) * 4);
 	atom_setfloat(EXTRA->color0, 0);
 	atom_setfloat(EXTRA->color0+1, 0.);
 	atom_setfloat(EXTRA->color0+2, 0.);
 	atom_setfloat(EXTRA->color0+3, 1.);
 	
-	EXTRA->color1 = (AtomPtr)sysmem_newptr(sizeof(t_atom) * 4);
+	EXTRA->color1 = (t_atom*)sysmem_newptr(sizeof(t_atom) * 4);
 	atom_setfloat(EXTRA->color1, 0.62);
 	atom_setfloat(EXTRA->color1+1, 0.);
 	atom_setfloat(EXTRA->color1+2, 0.36);
@@ -155,7 +155,7 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
     
     EXTRA->setting = NO;
 	
-	jamoma_viewer_create((ObjectPtr)x, x->wrappedObject);
+	jamoma_viewer_create((t_object*)x, x->wrappedObject);
 	
 	// Make two outlets
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 3);
@@ -176,7 +176,7 @@ void WrappedViewerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
 	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-	defer_low((ObjectPtr)x, (method)remote_subscribe, NULL, 0, 0);
+	defer_low((t_object*)x, (method)remote_subscribe, NULL, 0, 0);
 }
 
 // Method for Assistance Messages
@@ -255,7 +255,7 @@ void remote_subscribe(TTPtr self)
 	}
 	
 	// for relative address
-	jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
+	jamoma_patcher_get_info((t_object*)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
     
     // if no name is provided or can be edited in remote_attach() : use the address
     if (EXTRA->name == kTTAdrsEmpty)
@@ -273,21 +273,21 @@ void remote_subscribe(TTPtr self)
                 x->address.getName() == NO_NAME &&
                 x->address.getInstance() == NO_INSTANCE &&
                 x->address.getAttribute() != NO_ATTRIBUTE)
-                err = jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
+                err = jamoma_subscriber_create((t_object*)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
             
              // if the address refer to the "model" node don't subscribe the Viewer (to not have model.1)
             else if (x->address.getName() == TTSymbol("model"))
-                err = jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
+                err = jamoma_subscriber_create((t_object*)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
             
             // else try to subscribe the Viewer with its name
             else
-                err = jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, EXTRA->name, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
+                err = jamoma_subscriber_create((t_object*)x, x->wrappedObject, EXTRA->name, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
             
         }
         // Model patcher case :
         // try to binds on the parameter|message|return of the model without subscribing the Viewer
         else if (x->patcherContext == kTTSym_model)
-            err = jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
+            err = jamoma_subscriber_create((t_object*)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
         
         // Any other case : give up
         else 
@@ -315,7 +315,7 @@ void remote_subscribe(TTPtr self)
 		x->wrappedObject.set(kTTSym_address, absoluteAddress);
 		
 		atom_setsym(a, gensym((char*)absoluteAddress.c_str()));
-		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
+		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
         
         // observe :description attribute
         if (x->internals.lookup(TTSymbol(":description"), v))
@@ -343,18 +343,18 @@ void remote_subscribe(TTPtr self)
 	
 	x->index++; // the index member is usefull to count how many time the external tries to bind
 	if (x->index > 100) {
-		object_error((ObjectPtr)x, "couldn't bind to j.parameter %s", x->address.c_str());
-		object_obex_dumpout((ObjectPtr)x, gensym("error"), 0, NULL);
+		object_error((t_object*)x, "couldn't bind to j.parameter %s", x->address.c_str());
+		object_obex_dumpout((t_object*)x, gensym("error"), 0, NULL);
 		return;
 	}
 	
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
 	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-	defer_low((ObjectPtr)x, (method)remote_subscribe, NULL, 0, 0);
+	defer_low((t_object*)x, (method)remote_subscribe, NULL, 0, 0);
 }
 
-void remote_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void remote_return_value(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
@@ -405,14 +405,14 @@ void remote_float(TTPtr self, double value)
 	remote_list(self, _sym_float, 1, &a);
 }
 
-TTErr remote_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+TTErr remote_list(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
 	return jamoma_viewer_send(x->wrappedObject, msg, argc, argv);
 }
 
-void remote_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void remote_set(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -423,7 +423,7 @@ void remote_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
         EXTRA->setting = NO;
 }
 
-void WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue		v;
@@ -431,7 +431,7 @@ void WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
 	jamoma_viewer_send(x->wrappedObject, msg, argc, argv);
 }
 
-void remote_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void remote_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTAddress           absoluteAddress;
@@ -460,13 +460,13 @@ void remote_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
         anObject.send(kTTSym_Get);
 		
 		atom_setsym(a, gensym((char*)absoluteAddress.c_str()));
-		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
+		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
 		
-		JamomaDebug object_post((ObjectPtr)x, "binds on %s", absoluteAddress.c_str());
+		JamomaDebug object_post((t_object*)x, "binds on %s", absoluteAddress.c_str());
 	}
 }
 
-void remote_return_description(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void remote_return_description(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -481,7 +481,7 @@ void remote_address(TTPtr self, SymbolPtr address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
-	x->address =  TTAddress(jamoma_parse_dieze((ObjectPtr)x, address)->s_name);
+	x->address =  TTAddress(jamoma_parse_dieze((t_object*)x, address)->s_name);
     
     // unsubscribe the remote before
     if (x->subscriberObject.valid())
@@ -495,9 +495,9 @@ void remote_attach(TTPtr self, int attach_output_id)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	t_outlet*	myoutlet = NULL;
 	t_dll*		connecteds = NULL;
-	ObjectPtr	object, box;
+	t_object*	object, box;
     t_symbol*   maxclass = NULL;
-	AtomCount	ac;
+	long	ac;
 	t_atom*		av;
 	
 	// get the first object connected to the given outlet
@@ -571,9 +571,9 @@ void remote_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue		v;
 	TTBoolean	selected;
-	ObjectPtr	patcher;
-	AtomCount	ac;
-	AtomPtr		av;
+	t_object*	patcher;
+	long	ac;
+	t_atom*		av;
 	t_atom		a;
 	
 	if (EXTRA->connected) {
@@ -586,7 +586,7 @@ void remote_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers
 			object_attr_setvalueof(EXTRA->connected, _sym_hidden, 1, &a);
 			
 			// create a comment object
-			if(!EXTRA->label) {
+			if (!EXTRA->label) {
 				patcher = NULL;
 				ac = 0;
 				av = NULL;
@@ -606,9 +606,9 @@ void remote_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers
 			
 			if (EXTRA->label) {
 				if (selected)
-					object_attr_setvalueof(EXTRA->label, _sym_bgcolor, 4, (AtomPtr)EXTRA->color1);
+					object_attr_setvalueof(EXTRA->label, _sym_bgcolor, 4, (t_atom*)EXTRA->color1);
 				else
-					object_attr_setvalueof(EXTRA->label, _sym_bgcolor, 4, (AtomPtr)EXTRA->color0);
+					object_attr_setvalueof(EXTRA->label, _sym_bgcolor, 4, (t_atom*)EXTRA->color0);
             }
 		}
 		// else set default color

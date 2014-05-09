@@ -42,7 +42,7 @@ void		WrapTTRampClass(WrappedClassPtr c);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				WrappedInputClass_free
  */
-void		WrappedRampClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
+void		WrappedRampClass_new(TTPtr self, long argc, t_atom* argv);
 
 /** Wrapper for the j.ramp destructor class, called when an instance is deleted.
  @param self		Pointer to this object.
@@ -121,12 +121,12 @@ void WrapTTRampClass(WrappedClassPtr c)
 /************************************************************************************/
 // Object Life
 
-void WrappedRampClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
+void WrappedRampClass_new(TTPtr self, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr   x = (WrappedModularInstancePtr)self;
     
     // create the wrapped TTRamp instance
-    jamoma_ramp_create((ObjectPtr)x, &x->wrappedObject);
+    jamoma_ramp_create((t_object*)x, &x->wrappedObject);
     
     // create an outlet for ramped value
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr));

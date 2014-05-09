@@ -29,18 +29,18 @@ typedef struct extra {
 
 // Definitions
 void	WrapTTApplicationClass(WrappedClassPtr c);
-void	WrappedApplicationClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
+void	WrappedApplicationClass_new(TTPtr self, long argc, t_atom* argv);
 void	WrappedApplicationClass_free(TTPtr self);
 
 void	modular_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 
-void	modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void	modular_protocol_setup(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
 
-void	modular_namespace_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void	modular_namespace_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void	modular_namespace_read(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void	modular_namespace_doread(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
 
-void	modular_namespace_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void	modular_namespace_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void	modular_namespace_write(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void	modular_namespace_dowrite(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
@@ -64,7 +64,7 @@ void WrapTTApplicationClass(WrappedClassPtr c)
     class_addmethod(c->maxClass, (method)modular_namespace_write,			"namespace/write",				A_GIMME, 0);
 }
 
-void WrappedApplicationClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
+void WrappedApplicationClass_new(TTPtr self, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTSymbol					applicationName;
@@ -120,7 +120,7 @@ void WrappedApplicationClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 		// check if the protocol has been loaded
 		if (!getProtocol(protocolName)) {
             
-			object_error((ObjectPtr)x, "the %s protocol is not available", protocolName.c_str());
+			object_error((t_object*)x, "the %s protocol is not available", protocolName.c_str());
 		}
         else {
             
@@ -176,15 +176,15 @@ void modular_assist(TTPtr self, void *b, long msg, long arg, char *dst)
  	}
 }
 
-void modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void modular_protocol_setup(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTSymbol    applicationName, parameterName;
 	TTObjectBasePtr	aProtocol = NULL;
 	TTHashPtr	hashParameters;
 	TTValue		v, keys, parameterValue, none;
-	AtomCount	ac;
-	AtomPtr		av;
+	long	ac;
+	t_atom*		av;
 	TTErr		err;
 	
 	// get the protocol object
@@ -240,7 +240,7 @@ void modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
                             aProtocol->sendMessage(TTSymbol("Run"), applicationName, none);
 					}
 					else
-						object_error((ObjectPtr)x, "%s is not a parameter of %s protocol", parameterName.c_str(), EXTRA->protocolName.c_str());
+						object_error((t_object*)x, "%s is not a parameter of %s protocol", parameterName.c_str(), EXTRA->protocolName.c_str());
 					
 				}
 				// or if no arg : dumpout the current setup
@@ -262,16 +262,16 @@ void modular_protocol_setup(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr a
 			}
 		}
 		else
-			object_error((ObjectPtr)x, "doesn't handle any application");
+			object_error((t_object*)x, "doesn't handle any application");
 	}
 }
 
-void modular_namespace_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void modular_namespace_read(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
 	defer(self, (method)modular_namespace_doread, msg, argc, argv);
 }
 
-void modular_namespace_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void modular_namespace_doread(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue				o, v, none;
@@ -281,7 +281,7 @@ void modular_namespace_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr
 	
 	if (x->wrappedObject) {
 		
-		fullpath = jamoma_file_read((ObjectPtr)x, argc, argv, NULL);
+		fullpath = jamoma_file_read((t_object*)x, argc, argv, NULL);
 		v.append(fullpath);
 		
 		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
@@ -302,12 +302,12 @@ void modular_namespace_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr
 	}
 }
 
-void	modular_namespace_write(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void	modular_namespace_write(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     defer(self, (method)modular_namespace_dowrite, msg, argc, argv);
 }
 
-void	modular_namespace_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void	modular_namespace_dowrite(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char 			filename[MAX_FILENAME_CHARS];
@@ -320,7 +320,7 @@ void	modular_namespace_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 		
 		// Default XML File Name
 		snprintf(filename, MAX_FILENAME_CHARS, "namespace.xml");
-		fullpath = jamoma_file_write((ObjectPtr)x, argc, argv, filename);
+		fullpath = jamoma_file_write((t_object*)x, argc, argv, filename);
 		v.append(fullpath);
 		
 		tterr = x->internals->lookup(kTTSym_XmlHandler, o);

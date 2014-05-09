@@ -34,14 +34,14 @@ t_jit_err			StencilClassInit	(void);
 StencilObjectPtr	StencilNew			(void);
 void				StencilFree			(StencilObjectPtr self);
 t_jit_err			StencilMatrixCalc	(StencilObjectPtr self, void *inputs, void *outputs);
-t_jit_err			StencilGetStepSize	(StencilObjectPtr self, Ptr attr, AtomCount* ac, AtomPtr* av);
-t_jit_err			StencilSetStepSize	(StencilObjectPtr self, Ptr attr, AtomCount ac, AtomPtr av);
-t_jit_err			StencilGetEdges		(StencilObjectPtr self, Ptr attr, AtomCount* ac, AtomPtr* av);
-t_jit_err			StencilSetEdges		(StencilObjectPtr self, Ptr attr, AtomCount ac, AtomPtr av);
+t_jit_err			StencilGetStepSize	(StencilObjectPtr self, Ptr attr, long* ac, t_atom** av);
+t_jit_err			StencilSetStepSize	(StencilObjectPtr self, Ptr attr, long ac, t_atom* av);
+t_jit_err			StencilGetEdges		(StencilObjectPtr self, Ptr attr, long* ac, t_atom** av);
+t_jit_err			StencilSetEdges		(StencilObjectPtr self, Ptr attr, long ac, t_atom* av);
 
 
 // globals
-static ClassPtr sStencilClass = NULL;
+static t_class* sStencilClass = NULL;
 
 
 /************************************************************************************/
@@ -149,7 +149,7 @@ t_jit_err StencilMatrixCalc(StencilObjectPtr self, void *inputs, void *outputs)
 /************************************************************************************/
 // Attribute Accessors
 
-t_jit_err StencilGetStepSize(StencilObjectPtr self, Ptr attr, AtomCount* ac, AtomPtr* av)
+t_jit_err StencilGetStepSize(StencilObjectPtr self, Ptr attr, long* ac, t_atom** av)
 {
 	TTValue		v;
 	
@@ -157,12 +157,12 @@ t_jit_err StencilGetStepSize(StencilObjectPtr self, Ptr attr, AtomCount* ac, Ato
 		; // memory passed-in, use it
 	}
 	else {
-		*av = (AtomPtr)sysmem_newptr(sizeof(Atom)*2);
+		*av = (t_atom*)sysmem_newptr(sizeof(Atom)*2);
 	}
 	*ac = 2;
 	
 	self->stencilObject->getAttributeValue(TT("stepSize"), v);
-	for (AtomCount k=0; k < *ac; k++) {
+	for (long k=0; k < *ac; k++) {
 		TTInt32 step;
 		
 		v.get(k, step);
@@ -172,12 +172,12 @@ t_jit_err StencilGetStepSize(StencilObjectPtr self, Ptr attr, AtomCount* ac, Ato
 }
 
 
-t_jit_err StencilSetStepSize(StencilObjectPtr self, Ptr attr, AtomCount ac, AtomPtr av)
+t_jit_err StencilSetStepSize(StencilObjectPtr self, Ptr attr, long ac, t_atom* av)
 {
 	TTValue v;
 	
-	v.setSize(ac);
-	for (AtomCount k=0; k<ac; k++)
+	v.resize(ac);
+	for (long k=0; k<ac; k++)
 		v.set(k, (int)atom_getlong(av+k));
 	
 	self->stencilObject->setAttributeValue(TT("stepSize"), v);
@@ -185,7 +185,7 @@ t_jit_err StencilSetStepSize(StencilObjectPtr self, Ptr attr, AtomCount ac, Atom
 }
 
 
-t_jit_err StencilGetEdges(StencilObjectPtr self, Ptr attr, AtomCount* ac, AtomPtr* av)
+t_jit_err StencilGetEdges(StencilObjectPtr self, Ptr attr, long* ac, t_atom** av)
 {
 	TTValue		v;
 	TTSymbol	s;
@@ -194,7 +194,7 @@ t_jit_err StencilGetEdges(StencilObjectPtr self, Ptr attr, AtomCount* ac, AtomPt
 		; // memory passed-in, use it
 	}
 	else {
-		*av = (AtomPtr)sysmem_newptr(sizeof(Atom));
+		*av = (t_atom*)sysmem_newptr(sizeof(Atom));
 	}
 	*ac = 1;
 	
@@ -205,7 +205,7 @@ t_jit_err StencilGetEdges(StencilObjectPtr self, Ptr attr, AtomCount* ac, AtomPt
 }
 
 
-t_jit_err StencilSetEdges(StencilObjectPtr self, Ptr attr, AtomCount ac, AtomPtr av)
+t_jit_err StencilSetEdges(StencilObjectPtr self, Ptr attr, long ac, t_atom* av)
 {
 	self->stencilObject->setAttributeValue(TT("edges"), TT(atom_getsym(av)->s_name));
 	return JIT_ERR_NONE;

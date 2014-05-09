@@ -32,22 +32,22 @@ typedef Oscil* OscilPtr;
 
 
 // Prototypes for methods
-OscilPtr	OscilNew(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+OscilPtr	OscilNew(SymbolPtr msg, long argc, t_atom* argv);
 void		OscilFree(OscilPtr self);
 void		OscilAssist(OscilPtr self, void* b, long msg, long arg, char* dst);
 TTErr		OscilReset(OscilPtr self);
 TTErr		OscilSetup(OscilPtr self);
 TTErr		OscilConnectAudio(OscilPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
-TTErr		OscilDropAudio(OscilPtr self, long inletNumber, ObjectPtr sourceMaxObject, long sourceOutletNumber);
-MaxErr		OscilSetMode(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr		OscilSetInterpolation(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr		OscilSetFrequency(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr		OscilSetGain(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr		OscilSetNumChannels(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv);
+TTErr		OscilDropAudio(OscilPtr self, long inletNumber, (t_object*) sourceMaxObject, long sourceOutletNumber);
+t_max_err		OscilSetMode(OscilPtr self, void* attr, long argc, t_atom* argv);
+t_max_err		OscilSetInterpolation(OscilPtr self, void* attr, long argc, t_atom* argv);
+t_max_err		OscilSetFrequency(OscilPtr self, void* attr, long argc, t_atom* argv);
+t_max_err		OscilSetGain(OscilPtr self, void* attr, long argc, t_atom* argv);
+t_max_err		OscilSetNumChannels(OscilPtr self, void* attr, long argc, t_atom* argv);
 
 
 // Globals
-static ClassPtr sOscilClass;
+static t_class* sOscilClass;
 
 
 /************************************************************************************/
@@ -101,14 +101,14 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-OscilPtr OscilNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+OscilPtr OscilNew(SymbolPtr msg, long argc, t_atom* argv)
 {
     OscilPtr	self = OscilPtr(object_alloc(sOscilClass));
 	TTValue		v;
 	TTErr		err;
 
     if (self) {
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("wavetable"));
 		v.set(1, TTUInt32(0));
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
@@ -116,7 +116,7 @@ OscilPtr OscilNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		self->audioGraphObject->addAudioFlag(kTTAudioGraphGenerator);
 
 		attr_args_process(self, argc, argv);
-    	object_obex_store((TTPtr)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));
+    	object_obex_store((TTPtr)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));
 		self->audioGraphOutlet = outlet_new((t_pxobject*)self, "audio.connect");
 	}
 	return self;
@@ -154,9 +154,9 @@ TTErr OscilReset(OscilPtr self)
 
 TTErr OscilSetup(OscilPtr self)
 {
-	Atom a[2];
+	t_atom a[2];
 	
-	atom_setobj(a+0, ObjectPtr(self->audioGraphObject));
+	atom_setobj(a+0, (t_object*)(self->audioGraphObject));
 	atom_setlong(a+1, 0);
 	outlet_anything(self->audioGraphOutlet, gensym("audio.connect"), 2, a);
 	return kTTErrNone;
@@ -171,7 +171,7 @@ TTErr OscilConnectAudio(OscilPtr self, TTAudioGraphObjectBasePtr audioSourceObje
 }
 
 
-TTErr OscilDropAudio(OscilPtr self, long inletNumber, ObjectPtr sourceMaxObject, long sourceOutletNumber)
+TTErr OscilDropAudio(OscilPtr self, long inletNumber, (t_object*) sourceMaxObject, long sourceOutletNumber)
 {
 	TTAudioGraphObjectBasePtr	sourceObject = NULL;
 	TTErr 					err;
@@ -186,13 +186,13 @@ TTErr OscilDropAudio(OscilPtr self, long inletNumber, ObjectPtr sourceMaxObject,
 
 
 
-MaxErr OscilSetMode(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err OscilSetMode(OscilPtr self, void* attr, long argc, t_atom* argv)
 {
 	
 	if (argc) {
 		TTValue v;
 		
-		v.setSize(argc);
+		v.resize(argc);
 		for (int i=0; i<argc; i++)
 				v[i] = TT(atom_getsym(argv+i)->s_name);
 		
@@ -203,7 +203,7 @@ MaxErr OscilSetMode(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv)
 }
 
 
-MaxErr OscilSetInterpolation(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err OscilSetInterpolation(OscilPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrInterpolation = atom_getsym(argv);
@@ -213,7 +213,7 @@ MaxErr OscilSetInterpolation(OscilPtr self, void* attr, AtomCount argc, AtomPtr 
 }
 
 
-MaxErr OscilSetFrequency(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err OscilSetFrequency(OscilPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrFrequency = atom_getfloat(argv);
@@ -223,7 +223,7 @@ MaxErr OscilSetFrequency(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv
 }
 
 
-MaxErr OscilSetGain(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err OscilSetGain(OscilPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrGain	= atom_getfloat(argv);
@@ -233,7 +233,7 @@ MaxErr OscilSetGain(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv)
 }
 
 
-MaxErr OscilSetNumChannels(OscilPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err OscilSetNumChannels(OscilPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrNumChannels = atom_getlong(argv);

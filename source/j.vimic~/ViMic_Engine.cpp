@@ -28,7 +28,7 @@ void vimic_mirrors(double *sensi,
                       int distModel) 
 {
     int n;
-    for(n = 0; n < NumOfRefl; n++)		
+    for (n = 0; n < NumOfRefl; n++)		
         vimic_sensitivity(sensi + n, delay + n, mic, mirror + n, source, invSpeedofsound, mode, oldDelay, reflGains, fades, n, Polarity, distModel);
 }
 
@@ -57,7 +57,7 @@ void vimic_sensitivity(double *sensi, double *del, Mic *mic, Mirror *mirror, Sou
 
 		newSensi =  pow((mic->dirGainA() + (mic->dirGainB() * cosAng)), mic->dirPow());
         
-		if (distModel == 1){
+		if (distModel == 1) {
 			newSensi *= pow(distance, mic->distPow()); // inverse proportional decrease
         } else { //if (distModel == 2)
 			//exponential decrease
@@ -110,7 +110,7 @@ void vimic_sensitivity(double *sensi, double *del, Mic *mic, Mirror *mirror, Sou
 #endif
 		TTLimit(newSensi, Polarity, 1.0);
 		
-        /*if(newSensi > 1.0)
+        /*if (newSensi > 1.0)
         {
             if (globWarningFlag)
                 post("Sensitivity %f capped at 1.0", newSensi);
@@ -205,7 +205,7 @@ double vimic_findMinDelayValue(double *delay, long size)
 {
 	double minDelayValue = delay[0];
 	
-	for (int i = 1; i < size; i++){
+	for (int i = 1; i < size; i++) {
 		if (delay[i] < minDelayValue)
 			minDelayValue = delay[i];
 	}

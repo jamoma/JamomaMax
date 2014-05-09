@@ -28,8 +28,8 @@ struct Out {
 	//TTFloat32					gain;			// gain multiplier
 	TTBoolean					hasReset;		// flag indicating that reset has been called already, so we don't need to reset again
 	TTBoolean					hasConnections;	// flag indicating that we have connections so we can mute MSP output
-	ObjectPtr					patcher;		// the patcher -- cached for iterating to make connections
-	ObjectPtr					patcherview;	// first view of the top-level patcher (for dirty notifications)
+	t_object*					patcher;		// the patcher -- cached for iterating to make connections
+	t_object*					patcherview;	// first view of the top-level patcher (for dirty notifications)
 	void						*s_out;          // for the list outlet
 	TTPtr						qelem;			// for clumping patcher dirty notifications
 	TTAudioGraphPreprocessData	initData;		// for the preprocess method
@@ -41,24 +41,24 @@ typedef Out* OutPtr;
 
 
 // Prototypes for methods
-OutPtr	OutNew(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+OutPtr	OutNew(SymbolPtr msg, long argc, t_atom* argv);
 void	OutFree(OutPtr self);
-MaxErr	OutNotify(OutPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data);
+t_max_err	OutNotify(OutPtr self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data);
 void	OutQFn(OutPtr self);
 void	OutAssist(OutPtr self, void* b, long msg, long arg, char* dst);
 TTErr	OutReset(OutPtr self, long vectorSize);
 TTErr	OutConnect(OutPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
-void	OutIterateResetCallback(OutPtr self, ObjectPtr obj);
-void	OutIterateSetupCallback(OutPtr self, ObjectPtr obj);
-void	OutAttachToPatchlinesForPatcher(OutPtr self, ObjectPtr patcher);
+void	OutIterateResetCallback(OutPtr self, (t_object*) obj);
+void	OutIterateSetupCallback(OutPtr self, (t_object*) obj);
+void	OutAttachToPatchlinesForPatcher(OutPtr self, (t_object*) patcher);
 t_int*	OutPerform(t_int* w);
 void	OutTick(OutPtr self);
 void	OutDsp(OutPtr self, t_signal** sp, short* count);
-//MaxErr	OutSetGain(OutPtr self, void* attr, AtomCount argc, AtomPtr argv);
+//t_max_err	OutSetGain(OutPtr self, void* attr, long argc, t_atom* argv);
 
 
 // Globals
-static ClassPtr sOutClass;
+static t_class* sOutClass;
 
 
 /************************************************************************************/
@@ -95,7 +95,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-OutPtr OutNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+OutPtr OutNew(SymbolPtr msg, long argc, t_atom* argv)
 {
     OutPtr		self;
 	TTValue		sr(sys_getsr());
@@ -107,14 +107,14 @@ OutPtr OutNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
     self = OutPtr(object_alloc(sOutClass));
     if (self) {
 		self->maxNumChannels = 2;		// An initial argument to this object will set the maximum number of channels
-		if(attrstart && argv)
+		if (attrstart && argv)
 			self->maxNumChannels = atom_getlong(argv);
 
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
 		// setup the output_buffer according to channnel number 
 		self->output_buffer = (t_atom *)malloc(self->maxNumChannels * sizeof(t_atom));
 		
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("thru"));
 		v.set(1, 1); // arg is the number of inlets
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
@@ -153,11 +153,11 @@ void OutFree(OutPtr self)
 /************************************************************************************/
 // Methods bound to input/inlets
 
-MaxErr OutNotify(OutPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data)
+t_max_err OutNotify(OutPtr self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
-			SymbolPtr name = (SymbolPtr)object_method((ObjectPtr)data, _sym_getname);
+			SymbolPtr name = (SymbolPtr)object_method((t_object*)data, _sym_getname);
 			if (name == _sym_dirty) {
 				qelem_set(self->qelem);
 			}
@@ -167,11 +167,11 @@ MaxErr OutNotify(OutPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPt
 	}
 	else {
 		if (msg == _sym_free) {
-			ObjectPtr	sourceBox;	
-			ObjectPtr	sourceObject;
+			t_object*	sourceBox;	
+			t_object*	sourceObject;
 			long		sourceOutlet;
-			ObjectPtr	destBox;		
-			ObjectPtr	destObject;	
+			t_object*	destBox;		
+			t_object*	destObject;	
 			long		destInlet;			
 			
 			#ifdef DEBUG_NOTIFICATIONS
@@ -228,7 +228,7 @@ void OutAssist(OutPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
 		strcpy(dst, "multichannel audio connection");		
-	else if (msg==2){	// Outlets
+	else if (msg==2) {	// Outlets
 		if (arg == 1)
 			strcpy(dst, "dumpout");
 		else if (arg == 0)
@@ -253,30 +253,30 @@ TTErr OutConnect(OutPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long 
 }
 
 
-void OutIterateResetCallback(OutPtr self, ObjectPtr obj)
+void OutIterateResetCallback(OutPtr self, (t_object*) obj)
 {
-	MaxErr err = MAX_ERR_NONE;
+	t_max_err err = MAX_ERR_NONE;
 	method audioResetMethod = zgetfn(obj, gensym("audio.reset"));
 	
 	if (audioResetMethod)
-		err = (MaxErr)audioResetMethod(obj, self->vectorSize);
+		err = (t_max_err)audioResetMethod(obj, self->vectorSize);
 }
 
 
-void OutIterateSetupCallback(OutPtr self, ObjectPtr obj)
+void OutIterateSetupCallback(OutPtr self, (t_object*) obj)
 {
-	MaxErr err = MAX_ERR_NONE;
+	t_max_err err = MAX_ERR_NONE;
 	method audioSetupMethod = zgetfn(obj, gensym("audio.setup"));
 	
 	if (audioSetupMethod)
-		err = (MaxErr)audioSetupMethod(obj);
+		err = (t_max_err)audioSetupMethod(obj);
 }
 
 
-void OutAttachToPatchlinesForPatcher(OutPtr self, ObjectPtr patcher)
+void OutAttachToPatchlinesForPatcher(OutPtr self, (t_object*) patcher)
 {
-	ObjectPtr	patchline = object_attr_getobj(patcher, _sym_firstline);
-	ObjectPtr	box = jpatcher_get_firstobject(patcher);
+	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
+	t_object*	box = jpatcher_get_firstobject(patcher);
 	
 	while (patchline) {
 		object_attach_byptr_register(self, patchline, _sym_nobox);
@@ -287,7 +287,7 @@ void OutAttachToPatchlinesForPatcher(OutPtr self, ObjectPtr patcher)
 		SymbolPtr	classname = jbox_get_maxclass(box);
 		
 		if (classname == _sym_jpatcher) {
-			ObjectPtr	subpatcher = jbox_get_object(box);
+			t_object*	subpatcher = jbox_get_object(box);
 			
 			OutAttachToPatchlinesForPatcher(self, subpatcher);
 		}
@@ -312,7 +312,7 @@ t_int* OutPerform(t_int* w)
 			
 			numChannels = TTClip<TTUInt16>(self->maxNumChannels, 0, self->audioSignal->getNumChannelsAsInt());	
 			
-			for(TTUInt16 channel=0; channel<numChannels; channel++) {
+			for (TTUInt16 channel=0; channel<numChannels; channel++) {
 			    atom_setfloat(self->output_buffer+channel, self->audioSignal->getSample(channel, 0));
 			}
 			self->numChannels = numChannels;
@@ -337,7 +337,7 @@ void OutDsp(OutPtr self, t_signal** sp, short* count)
 	//TTUInt16	i; 
 	TTUInt16	k=0;
 	void		**audioVectors = NULL;
-	MaxErr		err;
+	t_max_err		err;
 	long		result = 0;
 	
 	self->vectorSize = sp[0]->s_n;
@@ -368,9 +368,9 @@ void OutDsp(OutPtr self, t_signal** sp, short* count)
 	 */ 
 
 	if (!self->hasReset) {
-		ObjectPtr	patcher = NULL;
-		ObjectPtr	parent = NULL;
-		ObjectPtr	patcherview = NULL;
+		t_object*	patcher = NULL;
+		t_object*	parent = NULL;
+		t_object*	patcherview = NULL;
 
 		// first find the top-level patcher
 		err = object_obex_lookup(self, gensym("#P"), &patcher);

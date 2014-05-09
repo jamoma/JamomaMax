@@ -23,7 +23,7 @@
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTAudioGraphInit();	
 	common_symbols_init();
@@ -48,7 +48,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-PackPtr PackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+PackPtr PackNew(t_symbol* msg, long argc, t_atom* argv)
 {
    PackPtr	self;
 	TTValue	sr(sys_getsr());
@@ -132,21 +132,21 @@ TTErr PackSetup(PackPtr self)
 {
 	t_atom a[2];
 	
-	atom_setobj(a+0, ObjectPtr(self->audioGraphObject));
+	atom_setobj(a+0, (t_object*)(self->audioGraphObject));
 	atom_setlong(a+1, 0);
 	outlet_anything(self->audioGraphObjectOutlet, gensym("audio.connect"), 2, a);
 	return kTTErrNone;
 }
 
 
-void PackPerform64(PackPtr self, ObjectPtr dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
+void PackPerform64(PackPtr self, (t_object*) dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {	
 	for (TTUInt32 i=0; i < self->numChannels; i++)
 		TTAudioGraphGeneratorPtr(self->audioGraphObject->getUnitGenerator())->mBuffer->setVector64Copy(i, self->vectorSize, ins[i]);
 }
 
 
-void PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags)
+void PackDsp64(PackPtr self, (t_object*) dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
 	self->vectorSize = maxvectorsize;
 	
@@ -174,5 +174,5 @@ void PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, l
 	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_sampleRate, samplerate);
 	
 	object_method(dsp64, gensym("dsp_add64"), self,PackPerform64, 0, NULL); 
-	//dsp_add64(dsp64, (ObjectPtr)self, (t_perfroutine64)PackPerform64, 0, NULL);
+	//dsp_add64(dsp64, (t_object*)self, (t_perfroutine64)PackPerform64, 0, NULL);
 }

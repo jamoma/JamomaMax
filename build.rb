@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby -wKU
+#!/usr/bin/env ruby -wU
 # encoding: utf-8
 
 # move to Max directory

@@ -19,32 +19,32 @@
 
 // Data Structure for this object
 struct MidiIn {
-    Object				    obj;
+    t_object				    obj;
 	TTGraphObjectBasePtr	graphObject;		// this _must_ be second
 	TTPtr				    graphOutlets[2];	// this _must_ be third (for the setup call) : null-terminated array
 	TTDictionaryPtr		    graphDictionary;
-	ObjectPtr			    patcher;			// the patcher -- cached for iterating to make connections
-    ObjectPtr			    patcherview;		// first view of the top-level patcher (for dirty notifications)
+	t_object*			    patcher;			// the patcher -- cached for iterating to make connections
+    t_object*			    patcherview;		// first view of the top-level patcher (for dirty notifications)
     TTPtr				    qelem;				// for clumping patcher dirty notifications
 };
 typedef MidiIn* MidiInPtr;
 
 
 // Prototypes for methods
-MidiInPtr	MidiInNew				(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+MidiInPtr	MidiInNew				(t_symbol* msg, long argc, t_atom* argv);
 void		MidiInFree				(MidiInPtr self);
 void		PackStartTracking		(MidiInPtr self);
-MaxErr		PackNotify				(MidiInPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data);
+t_max_err		PackNotify				(MidiInPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data);
 void		PackQFn					(MidiInPtr self);
 void		MidiInAssist			(MidiInPtr self, void* b, long msg, long arg, char* dst);
 void		MidiInGetDeviceNames	(MidiInPtr self);
 // Prototypes for attribute accessors
-MaxErr		MidiInSetDevice			(MidiInPtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr		MidiInGetDevice			(MidiInPtr self, void* attr, AtomCount* argc, AtomPtr* argv);
+t_max_err		MidiInSetDevice			(MidiInPtr self, void* attr, long argc, t_atom* argv);
+t_max_err		MidiInGetDevice			(MidiInPtr self, void* attr, long* argc, t_atom** argv);
 
 
 // Globals
-static ClassPtr sMidiInClass;
+static t_class* sMidiInClass;
 
 
 /************************************************************************************/
@@ -52,7 +52,7 @@ static ClassPtr sMidiInClass;
 
 int TTGRAPH_EXTERNAL_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTGraphInit();	
 	common_symbols_init();
@@ -80,21 +80,21 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Life Cycle
 
-MidiInPtr MidiInNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+MidiInPtr MidiInNew(t_symbol* msg, long argc, t_atom* argv)
 {
     MidiInPtr	self = MidiInPtr(object_alloc(sMidiInClass));
 	TTValue		v;
 	TTErr		err;
 	
     if (self) {
-		object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));
+		object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("midi.in"));
 		v.set(1, TTUInt32(1));
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
-		self->graphObject->mKernel->setAttributeValue(TT("owner"), TTPtr(self->graphObject));
+		self->graphObject->mKernel.set(TT("owner"), TTPtr(self->graphObject));
 
 		if (!self->graphObject->mKernel) {
 			object_error(SELF, "cannot load Jamoma object");
@@ -127,11 +127,11 @@ void MidiInFree(MidiInPtr self)
 
 // TODO: This section has lots of ugly duplication from the pack# object because this object is the source for a graph
 
-MaxErr PackNotify(MidiInPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, TTPtr data)
+t_max_err PackNotify(MidiInPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
-			SymbolPtr name = (SymbolPtr)object_method((ObjectPtr)data, _sym_getname);
+			t_symbol* name = (t_symbol*)object_method((t_object*)data, _sym_getname);
 			if (name == _sym_dirty) {
 				qelem_set(self->qelem);
 			}
@@ -141,11 +141,11 @@ MaxErr PackNotify(MidiInPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, 
 	}
 	else {
 		if (msg == _sym_free) {
-			ObjectPtr	sourceBox;  
-			ObjectPtr	sourceObject;
+			t_object*	sourceBox;  
+			t_object*	sourceObject;
 			long		sourceOutlet;
-			ObjectPtr	destBox;     
-			ObjectPtr	destObject;  
+			t_object*	destBox;     
+			t_object*	destObject;  
 			long		destInlet;		
 			
 #ifdef DEBUG_NOTIFICATIONS
@@ -181,30 +181,30 @@ MaxErr PackNotify(MidiInPtr self, SymbolPtr s, SymbolPtr msg, ObjectPtr sender, 
 }
 
 
-void PackIterateResetCallback(MidiInPtr self, ObjectPtr obj)
+void PackIterateResetCallback(MidiInPtr self, (t_object*) obj)
 {
-	MaxErr err = MAX_ERR_NONE;
+	t_max_err err = MAX_ERR_NONE;
 	method graphResetMethod = zgetfn(obj, gensym("graph.reset"));
 	
 	if (graphResetMethod)
-		err = (MaxErr)graphResetMethod(obj);
+		err = (t_max_err)graphResetMethod(obj);
 }
 
 
-void PackIterateSetupCallback(MidiInPtr self, ObjectPtr obj)
+void PackIterateSetupCallback(MidiInPtr self, (t_object*) obj)
 {
-	MaxErr err = MAX_ERR_NONE;
+	t_max_err err = MAX_ERR_NONE;
 	method graphSetupMethod = zgetfn(obj, gensym("graph.setup"));
 	
 	if (graphSetupMethod)
-		err = (MaxErr)graphSetupMethod(obj);
+		err = (t_max_err)graphSetupMethod(obj);
 }
 
 
-void PackAttachToPatchlinesForPatcher(MidiInPtr self, ObjectPtr patcher)
+void PackAttachToPatchlinesForPatcher(MidiInPtr self, (t_object*) patcher)
 {
-	ObjectPtr	patchline = object_attr_getobj(patcher, _sym_firstline);
-	ObjectPtr	box = jpatcher_get_firstobject(patcher);
+	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
+	t_object*	box = jpatcher_get_firstobject(patcher);
 	
 	while (patchline) {
 		object_attach_byptr_register(self, patchline, _sym_nobox);
@@ -212,10 +212,10 @@ void PackAttachToPatchlinesForPatcher(MidiInPtr self, ObjectPtr patcher)
 	}
 	
 	while (box) {
-		SymbolPtr	classname = jbox_get_maxclass(box);
+		t_symbol*	classname = jbox_get_maxclass(box);
 		
 		if (classname == _sym_jpatcher) {
-			ObjectPtr	subpatcher = jbox_get_object(box);
+			t_object*	subpatcher = jbox_get_object(box);
 			
 			PackAttachToPatchlinesForPatcher(self, subpatcher);
 		}
@@ -244,11 +244,11 @@ void PackQFn(MidiInPtr self)
 // Start keeping track of edits and connections in the patcher
 void PackStartTracking(MidiInPtr self)
 {
-	ObjectPtr	patcher = NULL;
-	ObjectPtr	parent = NULL;
-	ObjectPtr	patcherview = NULL;
-	MaxErr		err;
-	Atom		result;
+	t_object*	patcher = NULL;
+	t_object*	parent = NULL;
+	t_object*	patcherview = NULL;
+	t_max_err		err;
+	t_atom		result;
 	
 	// first find the top-level patcher
 	err = object_obex_lookup(self, gensym("#P"), &patcher);
@@ -285,8 +285,8 @@ void MidiInAssist(MidiInPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)				// Inlets
 		strcpy(dst, "multichannel audio connection and control messages");		
-	else if (msg==2){		// Outlets
-		if(arg == 0)
+	else if (msg==2) {		// Outlets
+		if (arg == 0)
 			strcpy(dst, "stats on DSP graph");
 		else
 			strcpy(dst, "dumpout");	
@@ -299,16 +299,16 @@ void MidiInGetDeviceNames(MidiInPtr self)
 {
 	TTValue		v, none;
 	TTErr		err;
-	AtomCount	ac;
-	AtomPtr		ap;
+	long	ac;
+	t_atom*		ap;
 	TTSymbol	name;
 	
-	err = self->graphObject->mKernel->sendMessage(TT("getAvailableDeviceNames"), none, v);
+	err = self->graphObject->mKernel.send(TT("getAvailableDeviceNames"), none, v);
 	if (!err) {
 		ac = v.getSize();
-		ap = new Atom[ac];
+		ap = new t_atom[ac];
 		
-		for (AtomCount i=0; i<ac; i++) {
+		for (long i=0; i<ac; i++) {
 			v.get(i, name);
 			atom_setsym(ap+i, gensym((char*)name.c_str()));
 		}
@@ -318,22 +318,22 @@ void MidiInGetDeviceNames(MidiInPtr self)
 }
 
 
-MaxErr MidiInSetDevice(MidiInPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err MidiInSetDevice(MidiInPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
-		SymbolPtr s = atom_getsym(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("device"), TT(s->s_name));
+		t_symbol* s = atom_getsym(argv);
+		self->graphObject->mKernel.set(TT("device"), TT(s->s_name));
 	}
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr MidiInGetDevice(MidiInPtr self, void* attr, AtomCount* argc, AtomPtr* argv)
+t_max_err MidiInGetDevice(MidiInPtr self, void* attr, long* argc, t_atom** argv)
 {
 	TTValue		v;
 	TTSymbol	s;
 	
-	self->graphObject->mKernel->getAttributeValue(TT("device"), v);
+	self->graphObject->mKernel.get(TT("device"), v);
 	v.get(0, s);
 	if (!s)
 		return MAX_ERR_GENERIC;

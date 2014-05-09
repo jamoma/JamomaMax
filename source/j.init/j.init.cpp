@@ -31,12 +31,12 @@ typedef struct _init{
 } t_init;
 
 // Prototypes for methods
-void *init_new(SymbolPtr s, AtomCount argc, AtomPtr argv);			// New Object Creation Method
+void *init_new(t_symbol* s, long argc, t_atom* argv);			// New Object Creation Method
 void init_free(t_init *x);
 void init_assist(t_init *x, void *b, long m, long a, char *s);		// Assistance Method
 void init_subscribe(t_init *x);
-void init_return_address(t_init *x, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void init_return_value(t_init *x, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void init_return_address(t_init *x, t_symbol* msg, long argc, t_atom* argv);
+void init_return_value(t_init *x, t_symbol* msg, long argc, t_atom* argv);
 //void init_bang(t_init *x);
 
 // Globals
@@ -74,11 +74,11 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 // Object Life
 
 // Create
-void *init_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
+void *init_new(t_symbol* s, long argc, t_atom* argv)
 {
 	long 		attrstart = attr_args_offset(argc, argv);						// support normal arguments
 	t_init 		*x = (t_init *)object_alloc(g_init_class);
-	SymbolPtr	relativeAddress = _sym_nothing;											// could be used to binds on a sub level j.hub
+	t_symbol*	relativeAddress = _sym_nothing;											// could be used to binds on a sub level j.hub
 
 	if (attrstart && argv)
 		atom_arg_getsym(&relativeAddress, 0, attrstart, argv);
@@ -90,14 +90,14 @@ void *init_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 		x->outlets[start_out] = bangout(x);
 
 		x->patcherNode = NULL;
-		x->address = TTAddress(jamoma_parse_dieze((ObjectPtr)x, relativeAddress)->s_name);
+		x->address = TTAddress(jamoma_parse_dieze((t_object*)x, relativeAddress)->s_name);
 		
 		attr_args_process(x, argc, argv);										// handle attribute args				
 
 		// The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-		defer_low((ObjectPtr)x, (method)init_subscribe, NULL, 0, 0);
+		defer_low((t_object*)x, (method)init_subscribe, NULL, 0, 0);
 	}
 	
 	return (x);																	// Return the pointer
@@ -138,7 +138,7 @@ void init_subscribe(t_init *x)
 	// for relative address
 	if (x->address.getType() == kAddressRelative) {
 
-		if (!jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+		if (!jamoma_subscriber_create((t_object*)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
             
 			// get the context address to make
 			// a receiver on the contextAddress:initialized attribute
@@ -178,20 +178,20 @@ void init_subscribe(t_init *x)
 			// The following must be deferred because we have to interrogate our box,
 			// and our box is not yet valid until we have finished instantiating the object.
 			// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-			defer_low((ObjectPtr)x, (method)init_subscribe, NULL, 0, 0);
+			defer_low((t_object*)x, (method)init_subscribe, NULL, 0, 0);
 		}
 	}
 	else
-		object_error((ObjectPtr)x, "can't bind because %s is not a relative address", x->address.c_str());
+		object_error((t_object*)x, "can't bind because %s is not a relative address", x->address.c_str());
 }
 
-void init_return_address(t_init *x, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void init_return_address(t_init *x, t_symbol* msg, long argc, t_atom* argv)
 {
 	;
 }
 
 // GO !
-void init_return_value(t_init *x, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void init_return_value(t_init *x, t_symbol* msg, long argc, t_atom* argv)
 {
 	if (atom_gettype(argv) == A_LONG) {
         

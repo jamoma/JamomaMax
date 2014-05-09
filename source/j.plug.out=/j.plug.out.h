@@ -13,20 +13,20 @@
 
 // Data Structure for this object
 struct PlugOut {
-    Object					obj;
+    t_object					obj;
 	TTAudioGraphObjectBasePtr	audioGraphObject;
-	ObjectPtr				patcher;			// the patcher -- cached for iterating to make connections
-	ObjectPtr				patcherview;		// first view of the top-level patcher (for dirty notifications)
+	t_object*				patcher;			// the patcher -- cached for iterating to make connections
+	t_object*				patcherview;		// first view of the top-level patcher (for dirty notifications)
 	TTPtr					qelem;				// for clumping patcher dirty notifications
 	TTPtr					audioGraphOutlet;	// pass audio through, or to the host
 	
-	SymbolPtr				pluginName;
-	SymbolPtr				pluginVersion;
-	SymbolPtr				pluginManufacturer;
+	t_symbol*				pluginName;
+	t_symbol*				pluginVersion;
+	t_symbol*				pluginManufacturer;
 	
-	SymbolPtr				pluginVersionHex;
-	SymbolPtr				pluginID;
-	SymbolPtr				pluginManufacturerCode;
+	t_symbol*				pluginVersionHex;
+	t_symbol*				pluginID;
+	t_symbol*				pluginManufacturerCode;
 	
 	TTThreadPtr				buildThread;
 	TTPtr					progressWindow;

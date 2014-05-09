@@ -35,7 +35,7 @@ void		MaxStencilFree		(MaxStencilObjectPtr self);
 
 
 // globals
-static ClassPtr sMaxStencilClass = NULL;
+static t_class* sMaxStencilClass = NULL;
 
 
 /************************************************************************************/

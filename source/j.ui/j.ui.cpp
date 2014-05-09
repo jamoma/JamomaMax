@@ -224,17 +224,17 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		// The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-		defer_low((ObjectPtr)x, (method)ui_register_info, NULL, 0, 0);
+		defer_low((t_object*)x, (method)ui_register_info, NULL, 0, 0);
 		
 		// The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-		defer_low((ObjectPtr)x, (method)ui_build, NULL, 0, 0);
+		defer_low((t_object*)x, (method)ui_build, NULL, 0, 0);
         
         // The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-		defer_low((ObjectPtr)x, (method)ui_view_panel_attach, NULL, 0, 0);
+		defer_low((t_object*)x, (method)ui_view_panel_attach, NULL, 0, 0);
 	}
 	return x;
 }
@@ -375,25 +375,25 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 	
 	// The following must be deferred because 
 	// we have to wait each component of the model are registered
-	defer_low((ObjectPtr)x, (method)ui_build, NULL, 0, 0);
+	defer_low((t_object*)x, (method)ui_build, NULL, 0, 0);
 }
 
 void ui_build(t_ui *x)
 {
 	TTValue			v, n, p, args;
 	SymbolPtr		hierarchy, moduleHierarchy;
-	ObjectPtr		box, textfield;
-    ObjectPtr       modulePatcher, moduleBox;
+	t_object*		box, textfield;
+    (t_object*)       modulePatcher, moduleBox;
 	t_rect			boxRect;
 	t_rect			uiRect;
 	
 	// Examine the context to resize the view, set textfield, ...
     
-    x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
+    x->patcherPtr = jamoma_patcher_get((t_object*)x);
 	hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
 	
 	box = object_attr_getobj(x->patcherPtr, gensym("box"));
-	object_attr_get_rect((ObjectPtr)x, _sym_presentation_rect, &uiRect);
+	object_attr_get_rect((t_object*)x, _sym_presentation_rect, &uiRect);
 	
 	if (hierarchy == _sym_bpatcher) {
         
@@ -458,8 +458,8 @@ void ui_build(t_ui *x)
 ObjectPtr ui_get_model_object(t_ui *x)
 {
     TTNodePtr   patcherNode;
-    ObjectPtr   obj;
-    ObjectPtr   modelObject = NULL;
+    (t_object*)   obj;
+    (t_object*)   modelObject = NULL;
 	SymbolPtr   _sym_jclass, _sym_jmodel = gensym("j.model");
 
     // get model patcher
@@ -468,7 +468,7 @@ ObjectPtr ui_get_model_object(t_ui *x)
         if (patcherNode->getContext()) {
     
             // find the j.model object inside the model patcher
-            obj = object_attr_getobj((ObjectPtr)patcherNode->getContext(), _sym_firstobject);
+            obj = object_attr_getobj((t_object*)patcherNode->getContext(), _sym_firstobject);
     
             while (obj) {
                 
@@ -891,7 +891,7 @@ void ui_paint_address(t_ui *x, t_object *textfield)
         double r,t,l,b;
         t_rect uiRect;
         
-        object_attr_get_rect((ObjectPtr)x, _sym_presentation_rect, &uiRect);
+        object_attr_get_rect((t_object*)x, _sym_presentation_rect, &uiRect);
         textfield_get_textmargins(textfield, &r, &t, &l, &b);
         
         TTUInt32 maxLetter = (uiRect.width - l - r) / 6; // assuming a letter is 6 pixels max
@@ -916,7 +916,7 @@ void ui_paint_address(t_ui *x, t_object *textfield)
 
 void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 {
-	ObjectPtr	obj;
+	t_object*	obj;
 	SymbolPtr	objclass;
 	t_rect		rect;
 	TTValue		none;
@@ -932,7 +932,7 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		// if the control key is pressed
 		if (modifiers & eShiftKey) {
 
-			obj = object_attr_getobj(jamoma_patcher_get((ObjectPtr)x), _sym_firstobject);
+			obj = object_attr_getobj(jamoma_patcher_get((t_object*)x), _sym_firstobject);
 			while (obj) {
 				objclass = object_attr_getsym(obj, _sym_maxclass);
 				if (objclass == gensym("j.remote")) {
@@ -1026,7 +1026,7 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 // mousedragdelta sends the amount the mouse moved in t_pt
 void ui_mousedragdelta(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 {
-	ObjectPtr	textfield = jbox_get_textfield((t_object*) x);
+	t_object*	textfield = jbox_get_textfield((t_object*) x);
 	t_rect		rect;
 	char		str[5];
 	double		factor = 1.0;	// factor determines how much precision (vs. immediacy) you have when dragging the knob
@@ -1073,7 +1073,7 @@ void ui_mouseup(t_ui *x, t_object *patcherview)
 void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 {
 	SymbolPtr	objclass;
-	ObjectPtr	obj = object_attr_getobj(jamoma_patcher_get((ObjectPtr)x), _sym_firstobject);
+	t_object*	obj = object_attr_getobj(jamoma_patcher_get((t_object*)x), _sym_firstobject);
 	
 	// if the control key is pressed
 	if (modifiers & eShiftKey) {
@@ -1114,7 +1114,7 @@ void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 void ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 {	
 	SymbolPtr objclass;
-	ObjectPtr obj = object_attr_getobj(jamoma_patcher_get((ObjectPtr)x), _sym_firstobject);
+	ObjectPtr obj = object_attr_getobj(jamoma_patcher_get((t_object*)x), _sym_firstobject);
 	
 	// Is the mouse leave outside the j.ui (not hover an ui object)
 	if (	pt.x <= x->box.b_presentation_rect.x || pt.x >= (x->box.b_presentation_rect.x + x->box.b_presentation_rect.width)
@@ -1208,7 +1208,7 @@ void ui_menu_qfn(t_ui *x)
     TTValue     none;
     
     // get model object
-    ObjectPtr modelObject = ui_get_model_object(x);
+    (t_object*) modelObject = ui_get_model_object(x);
     if (!modelObject)
         return;
     
@@ -1408,7 +1408,7 @@ void ui_refmenu_build(t_ui *x)
 	linklist_append(x->refmenu_items, item);
 	item->flags = 1;	// mark to disable this item (we use it as a label)
 	
-	ui_explorer_create((ObjectPtr)x, &x->modelParamExplorer, gensym("return_modelParamExploration"));
+	ui_explorer_create((t_object*)x, &x->modelParamExplorer, gensym("return_modelParamExploration"));
 	
 	filters = TTValue(kTTSym_parameter);
 	filters.append(TTSymbol("noGenericTag"));
@@ -1424,7 +1424,7 @@ void ui_refmenu_build(t_ui *x)
 	linklist_append(x->refmenu_items, item);
 	item->flags = 1;	// mark to disable this item (we use it as a label)
 	
-	ui_explorer_create((ObjectPtr)x, &x->modelMessExplorer, gensym("return_modelMessExploration"));
+	ui_explorer_create((t_object*)x, &x->modelMessExplorer, gensym("return_modelMessExploration"));
 	
 	filters = TTValue(kTTSym_message);
 	filters.append(TTSymbol("noGenericTag"));
@@ -1440,7 +1440,7 @@ void ui_refmenu_build(t_ui *x)
 	linklist_append(x->refmenu_items, item);
 	item->flags = 1;	// mark to disable this item (we use it as a label)
 	
-	ui_explorer_create((ObjectPtr)x, &x->modelRetExplorer, gensym("return_modelRetExploration"));
+	ui_explorer_create((t_object*)x, &x->modelRetExplorer, gensym("return_modelRetExploration"));
 	
 	filters = TTValue(kTTSym_return);
 	filters.append(TTSymbol("noGenericTag"));
@@ -1571,7 +1571,7 @@ void ui_edclose(t_ui *x, char **text, long size)
     x->text = new TTString(*text);
     x->textEditor = NULL;
     
-    defer_low((ObjectPtr)x, (method)ui_doedit, NULL, 0, NULL);
+    defer_low((t_object*)x, (method)ui_doedit, NULL, 0, NULL);
 }
 
 void ui_doedit(t_ui *x)

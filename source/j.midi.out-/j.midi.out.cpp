@@ -22,23 +22,23 @@ struct MidiOut {
    	Object				    obj;
 	TTGraphObjectBasePtr	graphObject;
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
-	SymbolPtr			    attrKey;
-    SymbolPtr			    attrValue;
+	t_symbol*			    attrKey;
+    t_symbol*			    attrValue;
 };
 typedef MidiOut* MidiOutPtr;
 
 
 // Prototypes for methods
-MidiOutPtr	MidiOutNew				(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+MidiOutPtr	MidiOutNew				(t_symbol* msg, long argc, t_atom* argv);
 void		MidiOutFree				(MidiOutPtr self);
 void		MidiOutAssist			(MidiOutPtr self, void* b, long msg, long arg, char* dst);
 void		MidiOutGetDeviceNames	(MidiOutPtr self);
-MaxErr		MidiOutSetDevice		(MidiOutPtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr		MidiOutGetDevice		(MidiOutPtr self, void* attr, AtomCount* argc, AtomPtr* argv);
+t_max_err		MidiOutSetDevice		(MidiOutPtr self, void* attr, long argc, t_atom* argv);
+t_max_err		MidiOutGetDevice		(MidiOutPtr self, void* attr, long* argc, t_atom** argv);
 
 
 // Globals
-static ClassPtr sMidiOutClass;
+static t_class* sMidiOutClass;
 
 
 /************************************************************************************/
@@ -46,7 +46,7 @@ static ClassPtr sMidiOutClass;
 
 int TTGRAPH_EXTERNAL_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTGraphInit();	
 	common_symbols_init();
@@ -74,7 +74,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-MidiOutPtr MidiOutNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+MidiOutPtr MidiOutNew(t_symbol* msg, long argc, t_atom* argv)
 {
     MidiOutPtr	self;
 	TTValue		v;
@@ -82,10 +82,10 @@ MidiOutPtr MidiOutNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
     self = MidiOutPtr(object_alloc(sMidiOutClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("midi.out"));
 		v.set(1, TTUInt32(1));
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
@@ -116,7 +116,7 @@ void MidiOutAssist(MidiOutPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
 		strcpy (dst, "dictionary input and control messages");		
-	else if (msg==2){	// Outlets
+	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "dictionary output");
 		else
@@ -129,16 +129,16 @@ void MidiOutGetDeviceNames(MidiOutPtr self)
 {
 	TTValue		v, none;
 	TTErr		err;
-	AtomCount	ac;
-	AtomPtr		ap;
+	long	ac;
+	t_atom*		ap;
 	TTSymbol	name;
 	
-	err = self->graphObject->mKernel->sendMessage(TT("getAvailableDeviceNames"), none, v);
+	err = self->graphObject->mKernel.send(TT("getAvailableDeviceNames"), none, v);
 	if (!err) {
 		ac = v.getSize();
-		ap = new Atom[ac];
+		ap = new t_atom[ac];
 		
-		for (AtomCount i=0; i<ac; i++) {
+		for (long i=0; i<ac; i++) {
 			v.get(i, name);
 			atom_setsym(ap+i, gensym((char*)name.c_str()));
 		}
@@ -148,22 +148,22 @@ void MidiOutGetDeviceNames(MidiOutPtr self)
 }
 
 
-MaxErr MidiOutSetDevice(MidiOutPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err MidiOutSetDevice(MidiOutPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
-		SymbolPtr s = atom_getsym(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("device"), TT(s->s_name));
+		t_symbol* s = atom_getsym(argv);
+		self->graphObject->mKernel.set(TT("device"), TT(s->s_name));
 	}
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr MidiOutGetDevice(MidiOutPtr self, void* attr, AtomCount* argc, AtomPtr* argv)
+t_max_err MidiOutGetDevice(MidiOutPtr self, void* attr, long* argc, t_atom** argv)
 {
 	TTValue		v;
 	TTSymbol	s;
 	
-	self->graphObject->mKernel->getAttributeValue(TT("device"), v);
+	self->graphObject->mKernel.get(TT("device"), v);
 	v.get(0, s);
 	if (!s)
 		return MAX_ERR_GENERIC;

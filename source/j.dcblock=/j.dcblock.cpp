@@ -28,18 +28,18 @@ typedef DCBlock* DCBlockPtr;
 
 
 // Prototypes for methods
-DCBlockPtr	DCBlockNew(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+DCBlockPtr	DCBlockNew(t_symbol* msg, long argc, t_atom* argv);
 void		DCBlockFree(DCBlockPtr self);
 void		DCBlockAssist(DCBlockPtr self, void* b, long msg, long arg, char* dst);
 void		DCBlockClear(DCBlockPtr self);
 TTErr		DCBlockReset(DCBlockPtr self);
 TTErr		DCBlockSetup(DCBlockPtr self);
 TTErr		DCBlockConnect(DCBlockPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
-MaxErr		DCBlockSetBypass(DCBlockPtr self, void* attr, AtomCount argc, AtomPtr argv);
+t_max_err		DCBlockSetBypass(DCBlockPtr self, void* attr, long argc, t_atom* argv);
 
 
 // Globals
-static ClassPtr sDCBlockClass;
+static t_class* sDCBlockClass;
 
 
 /************************************************************************************/
@@ -47,7 +47,7 @@ static ClassPtr sDCBlockClass;
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTAudioGraphInit();	
 	common_symbols_init();
@@ -76,7 +76,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-DCBlockPtr DCBlockNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+DCBlockPtr DCBlockNew(t_symbol* msg, long argc, t_atom* argv)
 {
     DCBlockPtr	self;
 	TTValue			v;
@@ -84,17 +84,17 @@ DCBlockPtr DCBlockNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
     self = (DCBlockPtr)object_alloc(sDCBlockClass);
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));
 		self->audioGraphOutlet = outlet_new(self, "audio.connect");
 		
 		// TODO: we need to update objects to work with the correct number of channels when the network is configured
 		// Either that, or when we pull we just up the number of channels if when we need to ???
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("dcblock"));
 		v.set(1, 1.);
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 
-		if (!self->audioGraphObject->getUnitGenerator()) {
+		if (!self->audioGraphObject->getUnitGenerator().valid()) {
 			object_error(SELF, "cannot load JamomaDSP object");
 			return NULL;
 		}
@@ -131,7 +131,7 @@ void DCBlockAssist(DCBlockPtr self, void* b, long msg, long arg, char* dst)
 
 void DCBlockClear(DCBlockPtr self)
 {
-	self->audioGraphObject->getUnitGenerator()->sendMessage(TT("clear"));
+	self->audioGraphObject->getUnitGenerator().send("clear");
 }
 
 
@@ -145,9 +145,9 @@ TTErr DCBlockReset(DCBlockPtr self)
 
 TTErr DCBlockSetup(DCBlockPtr self)
 {
-	Atom a[2];
+	t_atom a[2];
 	
-	atom_setobj(a+0, ObjectPtr(self->audioGraphObject));
+	atom_setobj(a+0, (t_object*)(self->audioGraphObject));
 	atom_setlong(a+1, 0);
 	outlet_anything(self->audioGraphOutlet, gensym("audio.connect"), 2, a);
 	return kTTErrNone;
@@ -162,11 +162,11 @@ TTErr DCBlockConnect(DCBlockPtr self, TTAudioGraphObjectBasePtr audioSourceObjec
 
 // ATTRIBUTE SETTERS
 
-MaxErr DCBlockSetBypass(DCBlockPtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err DCBlockSetBypass(DCBlockPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrBypass = atom_getlong(argv);
-		self->audioGraphObject->getUnitGenerator()->setAttributeValue(TT("bypass"), (TTBoolean)self->attrBypass);
+		self->audioGraphObject->getUnitGenerator().set("bypass", (TTBoolean)self->attrBypass);
 	}
 	return MAX_ERR_NONE;
 }

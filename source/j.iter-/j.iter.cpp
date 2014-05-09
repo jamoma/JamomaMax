@@ -29,14 +29,14 @@ typedef Iter* IterPtr;
 
 
 // Prototypes for methods
-IterPtr	IterNew				(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+IterPtr	IterNew				(t_symbol* msg, long argc, t_atom* argv);
 void   	IterFree			(IterPtr self);
 void   	IterAssist			(IterPtr self, void* b, long msg, long arg, char* dst);
 void	IterGraphCallback	(IterPtr self, TTValue& arg);
 
 
 // Globals
-static ClassPtr sIterClass;
+static t_class* sIterClass;
 
 
 /************************************************************************************/
@@ -44,7 +44,7 @@ static ClassPtr sIterClass;
 
 int TTGRAPH_EXTERNAL_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTGraphInit();	
 	common_symbols_init();
@@ -68,7 +68,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-IterPtr IterNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+IterPtr IterNew(t_symbol* msg, long argc, t_atom* argv)
 {
     IterPtr	self;
 	TTValue	v, none;
@@ -76,10 +76,10 @@ IterPtr IterNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
     self = IterPtr(object_alloc(sIterClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
 		self->graphOutlets[0] = outlet_new(self, NULL);
 		
-		v.setSize(2);
+		v.resize(2);
 		v.set(0, TT("graph.output"));
 		v.set(1, TTUInt32(1));
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
@@ -118,7 +118,7 @@ void IterAssist(IterPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
 		strcpy (dst, "multichannel input and control messages");		
-	else if (msg==2){	// Outlets
+	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "multichannel output");
 		else
@@ -143,15 +143,15 @@ void IterGraphCallback(IterPtr self, TTValue& arg)
 	
 	for (TTUInt32 k=0; k<numKeys; k++) {
 		TTSymbol	key;
-		AtomCount	ac = 0;
-		AtomPtr		ap = NULL;
+		long	ac = 0;
+		t_atom*		ap = NULL;
 		
 		keys.get(k, key);
 		aDictionary->lookup(key, v);
 		
 		ac = v.getSize();
 		if (ac) {
-			ap = new Atom[ac];
+			ap = new t_atom[ac];
 			for (int i=0; i<ac; i++) {
 				if (v.getType() == kTypeInt8   ||
 					v.getType() == kTypeUInt8  ||

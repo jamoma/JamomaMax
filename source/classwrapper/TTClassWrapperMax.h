@@ -26,13 +26,6 @@
 
 // TYPE DEFINITIONS
 
-typedef t_class*	ClassPtr;
-typedef t_object*	ObjectPtr;
-typedef t_symbol*	SymbolPtr;
-typedef t_atom*		AtomPtr;
-typedef long		AtomCount;
-typedef t_max_err	MaxErr;
-
 typedef TTErr (*TTValidityCheckFunction)(const TTPtr data);		///< A type that can be used to store a pointer to a validity checking function.
 
 
@@ -44,8 +37,8 @@ typedef TTErr (*TTValidityCheckFunction)(const TTPtr data);		///< A type that ca
 class WrappedClassOptions;
 
 typedef struct _wrappedClass {
-	ClassPtr				maxClass;							///< The Max class pointer.
-	SymbolPtr				maxClassName;						///< The name to give the Max class.
+	t_class*				maxClass;							///< The Max class pointer.
+	t_symbol*				maxClassName;						///< The name to give the Max class.
 	TTSymbol				ttblueClassName;					///< The name of the class as registered with the TTBlue framework.
 	TTValidityCheckFunction validityCheck;						///< A function to call to validate the context for an object before it is instantiated.
 	TTPtr					validityCheckArgument;				///< An argument to pass to the validityCheck function when it is called.
@@ -124,9 +117,9 @@ typedef WrappedInstance* WrappedInstancePtr;	///< Pointer to a wrapped instance 
 
 // private:
 // self has to be TTPtr because different wrappers (such as the ui wrapper) have different implementations.
-t_max_err wrappedClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, AtomPtr* argv);
-t_max_err wrappedClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomPtr argv);
-void wrappedClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
+t_max_err wrappedClass_attrGet(TTPtr self, t_object* attr, long* argc, t_atom** argv);
+t_max_err wrappedClass_attrSet(TTPtr self, t_object* attr, long argc, t_atom* argv);
+void wrappedClass_anything(TTPtr self, t_symbol* s, long argc, t_atom* argv);
 void wrappedClass_assist(WrappedInstancePtr self, void *b, long msg, long arg, char *dst);
 
 
@@ -155,9 +148,9 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 // UTILS
 
 #ifdef __LP64__
-TTInt64	AtomGetInt(AtomPtr a);
+TTInt64	atom_getlong(t_atom* a);
 #else
-int AtomGetInt(AtomPtr a);
+int atom_getlong(t_atom* a);
 #endif
 
 
@@ -165,11 +158,11 @@ int AtomGetInt(AtomPtr a);
 
 
 
-TTErr TTValueFromAtoms(TTValue& v, AtomCount ac, AtomPtr av);
-TTErr TTAtomsFromValue(const TTValue& v, AtomCount* ac, AtomPtr* av); // NOTE: allocates memory
+TTErr TTValueFromAtoms(TTValue& v, long ac, t_atom* av);
+TTErr TTAtomsFromValue(const TTValue& v, long* ac, t_atom** av); // NOTE: allocates memory
 
-long TTMatrixReferenceJitterMatrix(TTMatrix* aTTMatrix, TTPtr aJitterMatrix, TTBoolean copy = true);
-TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrix* aTTMatrix, TTPtr aJitterMatrix);
-TTErr TTMatrixCopyDataToJitterMatrix(TTMatrix* aTTMatrix, TTPtr aJitterMatrix);
+long TTMatrixReferenceJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix, TTBoolean copy = true);
+TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix);
+TTErr TTMatrixCopyDataToJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix);
 
 #endif // __TT_CLASS_WRAPPER_MAX_H__
