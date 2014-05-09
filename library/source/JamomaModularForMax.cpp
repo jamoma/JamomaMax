@@ -594,7 +594,7 @@ TTErr jamoma_explorer_create(t_object *x, TTObject& returnedExplorer)
 
 TTHashPtr jamoma_explorer_default_filter_bank(void)
 {
-	TTHashPtr		defaultFilterBank = new TTHash();
+	TTHashPtr defaultFilterBank = new TTHash();
 	TTDictionaryBasePtr aFilter;
 	
 	// Create some ready-made filters
@@ -703,7 +703,7 @@ void JAMOMA_EXPORT jamoma_callback_return_ramped_value(void *o, TTUInt32 n, TTFl
 {
     t_object	*x = (t_object*)o;
     long		i, argc = n;
-	t_atom	*	argv = NULL;
+	t_atom      *argv = NULL;
     
     if (!argc)
         return;
@@ -754,7 +754,7 @@ void jamoma_callback_return_value(const TTValue& baton, const TTValue& v)
 	t_symbol	*s_method;
     TTBoolean   deferlow = NO;
 	long		argc = 0;
-	t_atom	*	argv = NULL;
+	t_atom      *argv = NULL;
     method      p_method = NULL;
 	
 	// unpack baton (a t_object *and the name of the method to call (default : jps_return_value))
@@ -803,7 +803,7 @@ void jamoma_callback_return_value_typed(const TTValue& baton, const TTValue& v)
 	t_symbol	*msg, *s_method;
     TTBoolean   deferlow = NO;
 	long		argc = 0;
-	t_atom	*	argv = NULL;
+	t_atom      *argv = NULL;
     method      p_method = NULL;
 	TTBoolean	shifted = false;
 	
@@ -853,7 +853,7 @@ void jamoma_callback_return_signal(const TTValue& baton, const TTValue& v)
 {
 	t_object	*x;
 	long		argc = 0;
-	t_atom	*	argv = NULL;
+	t_atom      *argv = NULL;
 	
 	// unpack baton (a t_object*)
 	x = (t_object*)((TTPtr)baton[0]);
@@ -872,7 +872,7 @@ void jamoma_callback_return_signal_audio(const TTValue& baton, const TTValue& v)
 	t_object	*x;
 	TTPtr		signal;
 	long		i, argc = 0;
-	t_atom	*	argv = NULL;
+	t_atom      *argv = NULL;
 	
 	// unpack baton (a t_object*)
 	x = (t_object*)((TTPtr)baton[0]);
@@ -897,7 +897,7 @@ void jamoma_callback_return_signal_audio(const TTValue& baton, const TTValue& v)
 /** Make a typed Atom array from a TTValue (!!! this method allocate memory for the Atom array ! free it after ! */
 void jamoma_ttvalue_to_typed_Atom(const TTValue& v, t_symbol **msg, long *argc, t_atom **argv, TTBoolean& shifted)
 {
-	long	i;
+	long        i;
 	TTFloat64	f;
 	TTSymbol	s;
 	TTInt32		t;
@@ -956,7 +956,7 @@ void jamoma_ttvalue_to_typed_Atom(const TTValue& v, t_symbol **msg, long *argc, 
 /** Make an Atom array from a TTValue (!!! this method allocate memory for the Atom array ! free it after ! */
 void jamoma_ttvalue_to_Atom(const TTValue& v, long *argc, t_atom **argv)
 {
-	long	i;
+	long        i;
 	TTFloat64	f;
 	TTSymbol	s;
 	TTInt32		t;
@@ -1319,7 +1319,7 @@ void jamoma_patcher_get_class(t_object *patcher, TTSymbol context, TTSymbol& ret
 void jamoma_patcher_get_name(t_object *patcher, TTSymbol context, TTSymbol& returnedName)
 {
 	long		ac = 0;
-	t_atom	*	av = NULL;
+	t_atom      *av = NULL;
 	t_symbol	*hierarchy, *argName = _sym_nothing;
 	
 	returnedName = kTTSymEmpty;
@@ -1695,8 +1695,8 @@ t_symbol *jamoma_parse_dieze(t_object *x, t_symbol *address)
 	long		i, sd, sa;
      */
     long		i;
-	long	ac = 0;
-	t_atom	*	av = NULL;
+	long        ac = 0;
+	t_atom      *av = NULL;
 	
 	// If x is in a bpatcher, the patcher is NULL
 	if (!patcher){
@@ -1773,7 +1773,7 @@ TTSymbol jamoma_file_write(t_object *x, long argc, const t_atom *argv, char* def
 	short 			err, path;						// pathID#, error number
 	t_filehandle	file_handle;					// a reference to our file (for opening it, closing it, etc.)
 	t_fourcc		filetype = 'TEXT', outtype;		// the file type that is actually true
-	t_symbol	*	userpath;
+	t_symbol        *userpath;
 	TTSymbol		result = kTTSymEmpty;
 	
 	// Give a path ...
@@ -1823,7 +1823,7 @@ TTSymbol jamoma_file_read(t_object *x, long argc, const t_atom *argv, t_fourcc f
 	char 			fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
 	short 			path;							// pathID#
 	t_fourcc		outtype;
-	t_symbol	*	userpath;
+	t_symbol        *userpath;
 	TTSymbol		result = kTTSymEmpty;
 	
 	// Give a path ...
