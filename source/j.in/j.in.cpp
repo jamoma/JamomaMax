@@ -222,27 +222,25 @@ void WrappedInputClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr));
 		
 #ifdef J_IN_TILDE
-	jamoma_input_create_audio((ObjectPtr)x, &x->wrappedObject);
+	jamoma_input_create_audio((ObjectPtr)x, x->wrappedObject);
 	 
 	dsp_setup((t_pxobject *)x, 1);	
 	x->obj.z_misc = Z_NO_INPLACE | Z_PUT_FIRST;
 	
 	outlet_new((t_pxobject *)x, "signal");
 	
-	// Prepare memory to store internal datas
-	x->internals = new TTHash();
 #endif
     
 #ifdef J_IN_MULTI
     
-    jamoma_input_create_audio((ObjectPtr)x, &x->wrappedObject);
+    jamoma_input_create_audio((ObjectPtr)x, x->wrappedObject);
 	
 	x->outlets[0] = outlet_new(x, 0L);
 #endif
 
 #ifndef J_IN_TILDE
 #ifndef J_IN_MULTI
-	jamoma_input_create((ObjectPtr)x, &x->wrappedObject);
+	jamoma_input_create((ObjectPtr)x, x->wrappedObject);
 	
 	x->outlets[0] = outlet_new(x, 0L);
 #endif
@@ -299,7 +297,7 @@ void in_subscribe(TTPtr self)
     inputAddress = signalAddress.appendAddress(TTAddress("in")).appendInstance(EXTRA->instance);
 
 	// if the subscription is successful
-	if (!jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, inputAddress, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, inputAddress, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
 		// get patcher
 		x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
@@ -310,7 +308,7 @@ void in_subscribe(TTPtr self)
 		// observe /parent/out address in order to link/unlink with an Input object below
 		returnedNode->getParent()->getAddress(parentAddress);
 		outputAddress = parentAddress.appendAddress(TTAddress("out")).appendInstance(EXTRA->instance);
-		x->wrappedObject->setAttributeValue(TTSymbol("outputAddress"), outputAddress);
+		x->wrappedObject.set(TTSymbol("outputAddress"), outputAddress);
 	}
 }
 
@@ -339,7 +337,7 @@ void in_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst)
 void in_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputAudioPtr				anInput = (TTInputAudioPtr)x->wrappedObject;
+	TTInputAudioPtr				anInput = (TTInputAudioPtr)x->wrappedObject.instance();
     
 	if (anInput)
 		anInput->process(ins[0], outs[0], sampleframes);
@@ -350,7 +348,7 @@ void in_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, double
 void in_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputAudioPtr				anInput = (TTInputAudioPtr)x->wrappedObject;
+	TTInputAudioPtr				anInput = (TTInputAudioPtr)x->wrappedObject.instance();
 	
 	if (anInput) {
 		anInput->setupAudioSignals(maxvectorsize);
@@ -366,13 +364,13 @@ void in_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, long
 void in_reset(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputAudioPtr	anInput = (TTInputAudioPtr)x->wrappedObject;
+	TTInputAudioPtr	anInput = (TTInputAudioPtr)x->wrappedObject.instance();
  
     // NOTE FOR TIM : all the code below is a try and it's also a way to show you how to access to #TTInputAudio members
     // fell free to change everything if needed !
     
     // clear the internal signal in used to get signal from outside the model
-    TTAudioGraphObjectBasePtr(anInput->mSignalIn)->resetAudio();
+    TTAudioGraphObjectBasePtr(anInput->mSignalIn.instance())->resetAudio();
     
     /* ??? : do we clear each internal signal cached or do we supposed they are cleared by their owner ?
     if (anInput->mSignalCache) {
@@ -387,13 +385,13 @@ void in_reset(TTPtr self)
     */
     
     // clear the internal signal out used to forward signal into the model
-    TTAudioGraphObjectBasePtr(anInput->mSignalOut)->resetAudio();
+    TTAudioGraphObjectBasePtr(anInput->mSignalOut.instance())->resetAudio();
 }
 
 void in_setup(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputAudioPtr	anInput = (TTInputAudioPtr)x->wrappedObject;
+	TTInputAudioPtr	anInput = (TTInputAudioPtr)x->wrappedObject.instance();
     
     // NOTE FOR TIM : all the code below is a try and it's also a way to show you how to access to #TTInputAudio members
     // fell free to change everything if needed !
@@ -401,7 +399,7 @@ void in_setup(TTPtr self)
     t_atom a[2];
     
     // forward the internal signal out to connect it to any audiograph object below the j.in=
-    atom_setobj(a+0, ObjectPtr(anInput->mSignalOut));
+    atom_setobj(a+0, ObjectPtr(anInput->mSignalOut.instance()));
     atom_setlong(a+1, 0);
     outlet_anything(x->outlets[signal_out], gensym("audio.connect"), 2, a);
 }
@@ -409,13 +407,13 @@ void in_setup(TTPtr self)
 void in_connect(TTPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputAudioPtr	anInput = (TTInputAudioPtr)x->wrappedObject;
+	TTInputAudioPtr	anInput = (TTInputAudioPtr)x->wrappedObject.instance();
     
     // NOTE FOR TIM : all the code below is a try and it's also a way to show you how to access to #TTInputAudio members
     // fell free to change everything if needed !
 
     // connect the source to the internal signal in
-    TTAudioGraphObjectBasePtr(anInput->mSignalIn)->connectAudio(audioSourceObject, sourceOutletNumber);
+    TTAudioGraphObjectBasePtr(anInput->mSignalIn.instance())->connectAudio(audioSourceObject, sourceOutletNumber);
     
     /* ??? : do we need to connect each internal signal cache to the signal in
     if (anInput->mSignalCache) {
@@ -463,10 +461,8 @@ void in_float(TTPtr self, double value)
 void in_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputPtr	anInput = (TTInputPtr)x->wrappedObject;
-	
-	if (!anInput->mMute)
-		jamoma_input_send(anInput, msg, argc, argv);
+
+    jamoma_input_send(x->wrappedObject, msg, argc, argv);
 }
 
 void in_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -485,8 +481,7 @@ void in_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void WrappedInputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTInputPtr	anInput = (TTInputPtr)x->wrappedObject;
-    
+
     // route any message to the model
     if (msg != _sym_nothing && msg != gensym("jit_matrix")) {
         
@@ -500,6 +495,5 @@ void WrappedInputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomP
         return;
     }
 	
-	if (!anInput->mMute)
-		jamoma_input_send(anInput, msg, argc, argv);
+    jamoma_input_send(x->wrappedObject, msg, argc, argv);
 }

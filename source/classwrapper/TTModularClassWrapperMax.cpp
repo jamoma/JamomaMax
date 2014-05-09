@@ -1143,7 +1143,7 @@ t_max_err wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, AtomCount *ac, A
 	} else {
 		//otherwise allocate memory
 		*ac = 1;
-		if (!(*av = (AtomPtr)getbytes(sizeof(Atom)*(*ac)))) {
+		if (!(*av = (t_atom*)getbytes(sizeof(t_atom)*(*ac)))) {
 			*ac = 0;
 			return MAX_ERR_OUT_OF_MEM;
 		}
@@ -1176,7 +1176,7 @@ void wrappedModularClass_ArraySelect(TTPtr self, SymbolPtr msg, AtomCount ac, At
 	TTUInt8						i;
 	TTValue						v;
 	
-	if (x->internals) {
+	if (!x->internals.isEmpty()) {
 		
 		if (ac && av) {
 			if (atom_gettype(av) == A_LONG) {

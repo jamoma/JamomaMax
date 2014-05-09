@@ -304,7 +304,7 @@ TTErr jamoma_sender_create_audio(ObjectPtr x, TTObject& returnedSender)
 }
 
 /**	Send Max data using a sender object */
-TTErr jamoma_sender_send(TTObject& aSender, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+TTErr jamoma_sender_send(TTObject aSender, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	TTValue v, none;
 	

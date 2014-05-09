@@ -20,7 +20,7 @@
 
 /** A base class for Jamoma models
  */
-class TTMODULAR_EXPORT TTModelInfo : public TTDataObjectBase
+class TTMODULAR_EXPORT TTModelInfo : public TTObjectBase
 {
 	TTCLASS_SETUP(TTModelInfo)
     

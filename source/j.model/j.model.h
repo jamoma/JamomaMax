@@ -22,17 +22,17 @@
  @ingroup typedefs
  */
 typedef struct extra {
-	TTObjectBasePtr     modelInfo;
+	TTObject            modelInfo;
     TTAddress           containerAddress;   ///< Store the address of the container (see in model_subscribe and model_free).
     TTAddress           argAddress;         ///< Store the address from the argument (see in model_upper_view_model_address).
     
     TTString            *text;				///< The text of the editor to read after edclose.
 	ObjectPtr           textEditor;			///< The text editor window.
     
-    TTObjectBasePtr     presetManager;		///< The preset manager object.
+    TTObject            presetManager;		///< The preset manager object.
     TTBoolean           attr_load_default;
 	TTPtr               filewatcher;		///< A preset filewatcher.
-	TTObjectBasePtr     toEdit;				///< The object to edit (a preset or all the preset list).
+	TTObject            toEdit;				///< The object to edit (a preset or all the preset list).
 	TTSymbol            presetName;			///< The name of the edited preset.
     
     TTBoolean           readingContent;     ///< A flag to avoid infinite loop in model_return_content.

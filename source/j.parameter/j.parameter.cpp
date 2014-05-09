@@ -179,6 +179,8 @@ void WrappedDataClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
         object_error((ObjectPtr)x, "%s address is reserved by j.model", relativeAddress->s_name);
 		return;
     }
+    
+    x->useInternals = false;
 	
 	// Make outlets (before attr_args_process)
 	/////////////////////////////////////////////////////////////////////////////////
@@ -211,20 +213,18 @@ void data_new_address(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, Ato
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
-	x->useInternals = false;
-	
 	// create the data
 #ifdef JMOD_MESSAGE
-	jamoma_data_create((ObjectPtr)x, &x->wrappedObject, kTTSym_message);
+	jamoma_data_create((ObjectPtr)x, x->wrappedObject, kTTSym_message);
 #endif
 	
 #if JMOD_RETURN
-	jamoma_data_create((ObjectPtr)x, &x->wrappedObject, kTTSym_return);
+	jamoma_data_create((ObjectPtr)x, x->wrappedObject, kTTSym_return);
 #endif
 	
 #ifndef JMOD_MESSAGE
 #ifndef JMOD_RETURN
-	jamoma_data_create((ObjectPtr)x, &x->wrappedObject, kTTSym_parameter);
+	jamoma_data_create((ObjectPtr)x, x->wrappedObject, kTTSym_parameter);
 #endif
 #endif
     
@@ -248,13 +248,13 @@ void data_subscribe(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, AtomP
 	// for relative address
 	if (TTAddress(relativeAddress->s_name).getType() == kAddressRelative) {
         
-		jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, TTAddress(jamoma_parse_dieze((ObjectPtr)x, relativeAddress)->s_name), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
+		jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, TTAddress(jamoma_parse_dieze((ObjectPtr)x, relativeAddress)->s_name), x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
         
 #ifndef JMOD_MESSAGE
 #ifndef JMOD_RETURN
         // if a j.parameter is registered under the root : reset to the default value our self
-        if (returnedContextNode == JamomaDirectory->getRoot())
-            x->wrappedObject->sendMessage(kTTSym_Init);
+        if (returnedContextNode == accessApplicationLocalDirectory->getRoot())
+            x->wrappedObject.send(kTTSym_Init);
 #endif
 #endif
 	}
@@ -327,7 +327,7 @@ void data_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 
-	jamoma_data_command((TTDataPtr)selectedObject, msg, argc, argv);
+	jamoma_data_command(x->wrappedObject, msg, argc, argv);
 }
 
 
@@ -335,7 +335,7 @@ void WrappedDataClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
-	jamoma_data_command((TTDataPtr)selectedObject, msg, argc, argv);
+	jamoma_data_command(x->wrappedObject, msg, argc, argv);
 }
 
 
@@ -357,7 +357,7 @@ void data_inc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	TTValue v, none;
 
 	jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
-	selectedObject->sendMessage(TTSymbol("Inc"), v, none);
+	x->wrappedObject.send("Inc", v, none);
 }
 
 
@@ -367,5 +367,5 @@ void data_dec(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	TTValue v, none;
 	
 	jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
-	selectedObject->sendMessage(TTSymbol("Dec"), v, none);
+	x->wrappedObject.send("Dec", v, none);
 }

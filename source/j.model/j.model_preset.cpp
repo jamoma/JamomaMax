@@ -20,33 +20,30 @@ void model_preset_amenities(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTAddress                   modelAdrs;
-	TTValue						v, a, args;
-	TTXmlHandlerPtr				aXmlHandler;
+	TTValue						v, a, args, none;
+	TTObject                    aXmlHandler;
     TTAddress                   presetAddress;
-    TTNodePtr                   aNode;
-    TTBoolean                   newInstanceCreated;
 
     // get model:address
-    EXTRA->modelInfo->getAttributeValue(kTTSym_address, v);
+    EXTRA->modelInfo.get(kTTSym_address, v);
     modelAdrs = v[0];
     
     // create the preset manager
-	jamoma_presetManager_create((ObjectPtr)x, &EXTRA->presetManager);
+	jamoma_presetManager_create((ObjectPtr)x, EXTRA->presetManager);
     
     // suscribe it under a preset node 
     presetAddress = modelAdrs.appendAddress(TTAddress("preset"));
     
-    if (!JamomaDirectory->TTNodeCreate(presetAddress, EXTRA->presetManager, x->patcherPtr,  &aNode, &newInstanceCreated)) {
+    args = TTValue(presetAddress, EXTRA->presetManager, x->patcherPtr);
+
+    if (!JamomaApplication.send("ObjectRegister", args, none)) {
 	
-        EXTRA->presetManager->setAttributeValue(kTTSym_address, modelAdrs);
+        EXTRA->presetManager.set(kTTSym_address, modelAdrs);
         
         // create internal TTXmlHandler
-        aXmlHandler = NULL;
-        TTObjectBaseInstantiate(kTTSym_XmlHandler, TTObjectBaseHandle(&aXmlHandler), args);
-        v = TTValue(aXmlHandler);
-        x->internals->append(kTTSym_XmlHandler, v);
-        v = TTValue(EXTRA->presetManager);
-        aXmlHandler->setAttributeValue(kTTSym_object, v);
+        aXmlHandler = TTObject(kTTSym_XmlHandler);
+        x->internals.append(kTTSym_XmlHandler, aXmlHandler);
+        aXmlHandler.set(kTTSym_object, EXTRA->presetManager);
         
         // if desired, load default modelClass.patcherContext.xml file preset
         if (EXTRA->attr_load_default)
@@ -83,22 +80,22 @@ void model_preset_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			o, v, none;
 	TTSymbol		fullpath;
-	TTXmlHandlerPtr	aXmlHandler = NULL;
+	TTObject        aXmlHandler;
 	TTErr			tterr;
 	
-	if (EXTRA->presetManager) {
+	if (EXTRA->presetManager.valid()) {
 		
 		fullpath = jamoma_file_read((ObjectPtr)x, argc, argv, 'TEXT');
 		v.append(fullpath);
 		
-		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals.lookup(kTTSym_XmlHandler, o);
 		
 		if (!tterr) {
 			
-			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+			aXmlHandler = o[0];
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_Read, v, none);
+			tterr = aXmlHandler.send(kTTSym_Read, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -117,18 +114,18 @@ void model_preset_read_again(TTPtr self)
 void model_preset_doread_again(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTXmlHandlerPtr	aXmlHandler = NULL;
+	TTObject        aXmlHandler;
 	TTValue			o;
 	TTErr			tterr;
 	
-	tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+	tterr = x->internals.lookup(kTTSym_XmlHandler, o);
 	
 	if (!tterr) {
 		
-		aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+		aXmlHandler = o[0];
 		
 		critical_enter(0);
-		tterr = aXmlHandler->sendMessage(kTTSym_ReadAgain);
+		tterr = aXmlHandler.send(kTTSym_ReadAgain);
 		critical_exit(0);
 		
 		if (!tterr)
@@ -149,27 +146,27 @@ void model_preset_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 	char 			filename[MAX_FILENAME_CHARS];
 	TTSymbol		fullpath;
 	TTValue			o, v, none;
-	TTXmlHandlerPtr	aXmlHandler;
+	TTObject        aXmlHandler;
 	TTErr			tterr;
 	
 	// stop filewatcher
 	if (EXTRA->filewatcher)
 		filewatcher_stop(EXTRA->filewatcher);
 	
-	if (EXTRA->presetManager) {
+	if (EXTRA->presetManager.valid()) {
 		
 		// Default XML File Name
 		snprintf(filename, MAX_FILENAME_CHARS, "%s.%s.xml", x->patcherClass.c_str(), x->patcherContext.c_str());
 		fullpath = jamoma_file_write((ObjectPtr)x, argc, argv, filename);
 		v.append(fullpath);
 		
-		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals.lookup(kTTSym_XmlHandler, o);
 		
 		if (!tterr) {
-			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+			aXmlHandler = o[0];
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_Write, v, none);
+			tterr = aXmlHandler.send(kTTSym_Write, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -192,18 +189,18 @@ void model_preset_write_again(TTPtr self)
 void model_preset_dowrite_again(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTXmlHandlerPtr	aXmlHandler = NULL;
+	TTObject        aXmlHandler;
 	TTValue			o;
 	TTErr			tterr;
 	
-	tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+	tterr = x->internals.lookup(kTTSym_XmlHandler, o);
 	
 	if (!tterr) {
 		
-		aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+		aXmlHandler = o[0];
 		
 		critical_enter(0);
-		tterr = aXmlHandler->sendMessage(kTTSym_WriteAgain);
+		tterr = aXmlHandler.send(kTTSym_WriteAgain);
 		critical_exit(0);
 		
 		if (!tterr)
@@ -271,7 +268,7 @@ void model_preset_filechanged(TTPtr self, char *filename, short path)
 	t_atom		a;
 	
 	// get current preset
-	EXTRA->presetManager->getAttributeValue(TTSymbol("current"), v);
+	EXTRA->presetManager.get("current", v);
 	
 	path_topathname(path, filename, fullpath);
 	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
@@ -295,7 +292,7 @@ void model_preset_dorecall(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr ar
 			v = TTValue(TTSymbol(atom_getsym(argv)->s_name));
 	
 	// recall the preset
-	EXTRA->presetManager->sendMessage(kTTSym_Recall, v, none);
+	EXTRA->presetManager.send(kTTSym_Recall, v, none);
 }
 
 void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -303,11 +300,11 @@ void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTString			*buffer;
 	char				title[MAX_FILENAME_CHARS];
-	TTTextHandlerPtr	aTextHandler = NULL;
+	TTObject            aTextHandler;
 	TTHashPtr			allPresets;
 	TTValue				v, o, args, none;
 	TTSymbol			name;
-    t_atom                a;
+    t_atom              a;
 	TTErr				tterr;
 	
 	// choose object to edit : default the cuelist
@@ -319,7 +316,7 @@ void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		if (atom_gettype(argv) == A_LONG) {
 			
 			// get presets names
-			EXTRA->presetManager->getAttributeValue(TTSymbol("names"), v);
+			EXTRA->presetManager.get("names", v);
 			
 			if (atom_getlong(argv) <= v.size())
 				name = v[atom_getlong(argv)-1];
@@ -335,7 +332,7 @@ void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		if (name != kTTSymEmpty) {
 			
 			// get preset object table
-			EXTRA->presetManager->getAttributeValue(TTSymbol("presets"), v);
+			EXTRA->presetManager.get("presets", v);
 			allPresets = TTHashPtr((TTPtr)v[0]);
 			
 			if (allPresets) {
@@ -363,17 +360,15 @@ void model_preset_edit(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		buffer = new TTString();
 		
 		// get the buffer handler
-		tterr = x->internals->lookup(kTTSym_TextHandler, o);
+		tterr = x->internals.lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
 			
-			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+			aTextHandler = o[0];
 			
 			critical_enter(0);
-			o = TTValue(EXTRA->toEdit);
-			aTextHandler->setAttributeValue(kTTSym_object, o);
-			args = TTValue((TTPtr)buffer);
-			tterr = aTextHandler->sendMessage(kTTSym_Write, args, none);
+			aTextHandler.set(kTTSym_object, EXTRA->toEdit);
+			tterr = aTextHandler.send(kTTSym_Write, (TTPtr)buffer, none);
 			critical_exit(0);
 		}
 		
@@ -407,21 +402,20 @@ void model_preset_edclose(TTPtr self, char **text, long size)
 void model_preset_doedit(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTTextHandlerPtr	aTextHandler = NULL;
-	TTValue				o, args, none;
-    t_atom                a;
+	TTObject            aTextHandler;
+	TTValue				o, none;
+    t_atom              a;
 	TTErr				tterr;
 	
 	// get the buffer handler
-	tterr = x->internals->lookup(kTTSym_TextHandler, o);
+	tterr = x->internals.lookup(kTTSym_TextHandler, o);
 	
 	if (!tterr) {
 		
-		aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+		aTextHandler = o[0];
 		
 		critical_enter(0);
-		args = TTValue((TTPtr)EXTRA->text);
-		tterr = aTextHandler->sendMessage(kTTSym_Read, args, none);
+		tterr = aTextHandler.send(kTTSym_Read, (TTPtr)EXTRA->text, none);
 		critical_exit(0);
 		
         // output a flag

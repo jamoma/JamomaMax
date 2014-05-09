@@ -22,10 +22,10 @@
 
 // Data Structure for this object
 typedef struct _init{
-	Object				obj;
+	t_object            obj;
 	TTNodePtr			patcherNode;
-	TTReceiverPtr		initReceiver;
-	TTSubscriberPtr		subscriberObject;
+	TTObject            initReceiver;
+	TTObject            subscriberObject;
 	TTAddress           address;
 	TTHandle            outlets;
 } t_init;
@@ -90,8 +90,6 @@ void *init_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 		x->outlets[start_out] = bangout(x);
 
 		x->patcherNode = NULL;
-		x->initReceiver = NULL;
-		x->subscriberObject = NULL;
 		x->address = TTAddress(jamoma_parse_dieze((ObjectPtr)x, relativeAddress)->s_name);
 		
 		attr_args_process(x, argc, argv);										// handle attribute args				
@@ -107,11 +105,7 @@ void *init_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 
 void init_free(t_init *x)
 {	
-	if (x->initReceiver)
-		TTObjectBaseRelease(TTObjectBaseHandle(&x->initReceiver));
-	
-	if (x->subscriberObject)
-		TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
+    ;
 }
 
 
@@ -134,21 +128,21 @@ void init_assist(t_init *x, void *b, long msg, long arg, char *dst)
 
 void init_subscribe(t_init *x)
 {
-	TTValue			v, args, none;
-	TTAddress       contextAddress = kTTAdrsEmpty;
-    TTAddress       returnedAddress;
-    TTNodePtr       returnedNode = NULL;
-    TTNodePtr       returnedContextNode = NULL;
-	TTObjectBasePtr	returnAddressCallback, returnValueCallback;
+	TTValue     v, args, none;
+	TTAddress   contextAddress = kTTAdrsEmpty;
+    TTAddress   returnedAddress;
+    TTNodePtr   returnedNode = NULL;
+    TTNodePtr   returnedContextNode = NULL;
+	TTObject    returnAddressCallback, returnValueCallback;
 	
 	// for relative address
 	if (x->address.getType() == kAddressRelative) {
 
-		if (!jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+		if (!jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
             
 			// get the context address to make
 			// a receiver on the contextAddress:initialized attribute
-			x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
+			x->subscriberObject.get("contextAddress", v);
 			contextAddress = v[0];
 		}
 		
@@ -156,22 +150,19 @@ void init_subscribe(t_init *x)
 		if (contextAddress != kTTAdrsEmpty) {
 			
 			// Make a TTReceiver object
-			returnAddressCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-			TTObjectBaseInstantiate(TTSymbol("callback"), &returnAddressCallback, none);
-			returnAddressCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
-			returnAddressCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_address));
+			returnAddressCallback = TTObject("callback");
+			returnAddressCallback.set(kTTSym_baton, TTPtr(x));
+			returnAddressCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_address));
 			args.append(returnAddressCallback);
 			
-			returnValueCallback = NULL;				// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-			TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-			returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(x));
-			returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+			returnValueCallback = TTObject("callback");
+			returnValueCallback.set(kTTSym_baton, TTPtr(x));
+			returnValueCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 			args.append(returnValueCallback);
 			
-			x->initReceiver = NULL;
-			TTObjectBaseInstantiate(kTTSym_Receiver, TTObjectBaseHandle(&x->initReceiver), args);
+			x->initReceiver = TTObject(kTTSym_Receiver, args);
 			
-			x->initReceiver->setAttributeValue(kTTSym_address, contextAddress.appendAttribute(kTTSym_initialized));
+			x->initReceiver.set(kTTSym_address, contextAddress.appendAttribute(kTTSym_initialized));
 		}
 		
 		// while the context node is not registered : try to binds again :(
@@ -182,8 +173,7 @@ void init_subscribe(t_init *x)
 		else {
 			
 			// release the subscriber
-			TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
-			x->subscriberObject = NULL;
+			x->subscriberObject = TTObject();
 			
 			// The following must be deferred because we have to interrogate our box,
 			// and our box is not yet valid until we have finished instantiating the object.

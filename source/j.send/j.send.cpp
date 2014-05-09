@@ -208,18 +208,15 @@ void WrappedSenderClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 
 #ifdef JCOM_SEND_TILDE
 	// create a sender to handle an audio signal
-	jamoma_sender_create_audio((ObjectPtr)x, &x->wrappedObject);
+	jamoma_sender_create_audio((ObjectPtr)x, x->wrappedObject);
 	
 	// create an inlet to handle audio signal
 	dsp_setup((t_pxobject *)x, 1);
 	x->obj.z_misc = Z_NO_INPLACE | Z_PUT_FIRST;
 #else
 	// create a sender to handle any data signal
-	jamoma_sender_create((ObjectPtr)x, &x->wrappedObject);
+	jamoma_sender_create((ObjectPtr)x, x->wrappedObject);
 #endif
-
-	// Prepare memory to store internal objects
-	x->internals = new TTHash();
 	
 	// handle attribute args
 	attr_args_process(x, argc, argv);
@@ -227,7 +224,7 @@ void WrappedSenderClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// for absolute address
 	if (x->address.getType() == kAddressAbsolute) {
 		
-		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
+		x->wrappedObject.set(kTTSym_address, x->address);
 		
 		atom_setsym(a, gensym((char*)x->address.c_str()));
 		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
@@ -262,7 +259,7 @@ void send_subscribe(TTPtr self)
 	TTAddress                   absoluteAddress, returnedAddress;
     TTNodePtr                   returnedNode = NULL;
     TTNodePtr                   returnedContextNode = NULL;
-	TTObjectBasePtr				anObject;
+	TTObject                    anObject;
 	
 	if (x->address == kTTAdrsEmpty)
 		return;
@@ -270,22 +267,21 @@ void send_subscribe(TTPtr self)
 	// for relative address
 	jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
 	
-	if (!jamoma_subscriber_create((ObjectPtr)x, NULL, TTAddress("model"), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((ObjectPtr)x, NULL, TTAddress("model"), x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
 		// get the context address to make
 		// a viewer on the contextAddress/model:address attribute
-		x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
+		x->subscriberObject.get("contextAddress", v);
 		contextAddress = v[0];
         
         // release the subscriber
-        TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
-        x->subscriberObject = NULL;
+        x->subscriberObject = TTObject();
 		
 		if (x->patcherContext != kTTSymEmpty) {
             
             // observe model:address attribute (in view patcher : deferlow return_model_address)
-			makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), &anObject, x->patcherContext == kTTSym_view);
-			anObject->sendMessage(kTTSym_Get);
+			makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), anObject, x->patcherContext == kTTSym_view);
+			anObject.send(kTTSym_Get);
 			return;
 		}
 	}
@@ -294,12 +290,11 @@ void send_subscribe(TTPtr self)
 	else if (x->patcherContext == kTTSymEmpty) {
         
         // release the subscriber
-        TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
-        x->subscriberObject = NULL;
+        x->subscriberObject = TTObject();
         
 		contextAddress = kTTAdrsRoot;
 		absoluteAddress = contextAddress.appendAddress(x->address);
-		x->wrappedObject->setAttributeValue(kTTSym_address, absoluteAddress);
+		x->wrappedObject.set(kTTSym_address, absoluteAddress);
 		
 		atom_setsym(a, gensym((char*)absoluteAddress.c_str()));
 		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
@@ -313,8 +308,7 @@ void send_subscribe(TTPtr self)
 	// jamoma_subscriber_create with NULL object to bind)
 		
 	// release the subscriber
-	TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
-	x->subscriberObject = NULL;
+	x->subscriberObject = TTObject();
 	
 	x->argc++; // the index member is usefull to count how many time the external tries to bind
 	if (x->argc > 100) {
@@ -335,11 +329,11 @@ void send_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPt
 	TTAddress                   absoluteAddress;
 	t_atom						a[1];
 	
-	if (argc && argv && x->wrappedObject) {
+	if (argc && argv && x->wrappedObject.valid()) {
 		
 		// set address attribute of the wrapped Receiver object
 		absoluteAddress = TTAddress(atom_getsym(argv)->s_name).appendAddress(x->address);
-		x->wrappedObject->setAttributeValue(kTTSym_address, absoluteAddress);
+		x->wrappedObject.set(kTTSym_address, absoluteAddress);
 		x->argc = 0; // the index member is usefull to count how many time the external tries to bind
 		
 		atom_setsym(a, gensym((char*)absoluteAddress.c_str()));
@@ -401,7 +395,7 @@ void send_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 			// send only to absolute address
 			if (anAddress.getType() == kAddressAbsolute) {
 				
-				x->wrappedObject->setAttributeValue(kTTSym_address, anAddress);
+				x->wrappedObject.set(kTTSym_address, anAddress);
 				
 				// edit message type
 				if (argc == 0)
@@ -414,12 +408,14 @@ void send_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 					newMsg = _sym_float;
 				else if (atom_gettype(argv) == A_SYM)
 					newMsg = _sym_symbol;
+                else
+                    return;
 				
-				jamoma_sender_send((TTSenderPtr)x->wrappedObject, newMsg, argc, argv);
+				jamoma_sender_send(x->wrappedObject, newMsg, argc, argv);
 			}
 	}
 	else
-		jamoma_sender_send((TTSenderPtr)x->wrappedObject, msg, argc, argv);
+		jamoma_sender_send(x->wrappedObject, msg, argc, argv);
 }
 
 void WrappedSenderClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -439,7 +435,7 @@ void send_address(TTPtr self, SymbolPtr address)
     // for absolute address
 	if (x->address.getType() == kAddressAbsolute) {
 		
-		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
+		x->wrappedObject.set(kTTSym_address, x->address);
 		
 		atom_setsym(a, gensym((char*)x->address.c_str()));
 		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
@@ -458,13 +454,13 @@ void send_address(TTPtr self, SymbolPtr address)
 t_int *send_perform(t_int *w)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)(w[1]);
-	TTSenderPtr					aSender = (TTSenderPtr)x->wrappedObject;
+	TTSenderPtr					aSender = (TTSenderPtr)x->wrappedObject.instance();
 	TTListPtr					objectCache = NULL;
-	TTObjectBasePtr				anObject;
+	TTObject                    anObject;
 	TTUInt16					vectorSize = 0;
     TTUInt16					n;
 	t_float*					envelope;
-	TTFloat32					sum, mean;
+	TTFloat32					sum = 0, mean;
 	TTValue						v, none;
     
     if (x->obj.z_disabled)
@@ -480,10 +476,10 @@ t_int *send_perform(t_int *w)
 			if (objectCache) {
 				
 				// get signal vectorSize
-				aSender->mSignal->getAttributeValue(kTTSym_vectorSize, vectorSize);
+				aSender->mSignal.get(kTTSym_vectorSize, vectorSize);
 				
 				// store the input from the inlet
-				TTAudioSignalPtr(aSender->mSignal)->setVector(0, vectorSize, (TTFloat32*)w[2]);
+				TTAudioSignalPtr(aSender->mSignal.instance())->setVector(0, vectorSize, (TTFloat32*)w[2]);
 				
 				// process the mean value
 				envelope = (t_float *)(w[3]);
@@ -500,15 +496,15 @@ t_int *send_perform(t_int *w)
 					
 					anObject = objectCache->current()[0];
 					
-					if (anObject) {
+					if (anObject.valid()) {
 						
 						// INPUT AUDIO case : cache the signal into the input
-						if (anObject->getName() == kTTSym_InputAudio)
-							TTInputPtr(anObject)->mSignalCache->appendUnique(aSender->mSignal);
+						if (anObject.name() == kTTSym_InputAudio)
+							TTInputPtr(anObject.instance())->mSignalCache.appendUnique(aSender->mSignal);
 						
 						// DATA case : send the mean value of the sample
-						else if (anObject->getName() == kTTSym_Data)
-							anObject->sendMessage(kTTSym_Command, v, none);
+						else if (anObject.name() == kTTSym_Data)
+							anObject.send(kTTSym_Command, v, none);
 						
 					}
 				}
@@ -524,13 +520,13 @@ t_int *send_perform(t_int *w)
 void send_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTSenderPtr					aSender = (TTSenderPtr)x->wrappedObject;
+	TTSenderPtr					aSender = (TTSenderPtr)x->wrappedObject.instance();
 	TTListPtr					objectCache = NULL;
-	TTObjectBasePtr				anObject;
+	TTObject                    anObject;
 	TTUInt16					vectorSize = 0;
     TTUInt16					n;
 	TTSampleValue*              envelope;
-	TTFloat32					sum, mean;
+	TTFloat32					sum = 0, mean;
 	TTValue						v, none;
     
     if (x->obj.z_disabled)
@@ -546,10 +542,10 @@ void send_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doub
 			if (objectCache) {
 				
 				// get signal vectorSize
-				aSender->mSignal->getAttributeValue(kTTSym_vectorSize, vectorSize);
+				aSender->mSignal.get(kTTSym_vectorSize, vectorSize);
 				
 				// store the input from the inlet
-				TTAudioSignalPtr(aSender->mSignal)->setVector64Copy(0, vectorSize, ins[0]);
+				TTAudioSignalPtr(aSender->mSignal.instance())->setVector64Copy(0, vectorSize, ins[0]);
 				
 				// process the mean value
 				envelope = ins[0];
@@ -566,15 +562,15 @@ void send_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doub
 					
 					anObject = objectCache->current()[0];
 					
-					if (anObject) {
+					if (anObject.valid()) {
 						
 						// INPUT case : cache the signal into the input
-						if (anObject->getName() == kTTSym_InputAudio)
-							TTInputPtr(anObject)->mSignalCache->appendUnique(aSender->mSignal);
+						if (anObject.name() == kTTSym_InputAudio)
+							TTInputPtr(anObject.instance())->mSignalCache.appendUnique(aSender->mSignal);
 						
 						// DATA case : send the mean value of the sample
-						else if (anObject->getName() == kTTSym_Data)
-							anObject->sendMessage(kTTSym_Command, v, none);
+						else if (anObject.name() == kTTSym_Data)
+							anObject.send(kTTSym_Command, v, none);
 					}
 				}
 			}
@@ -586,7 +582,7 @@ void send_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doub
 void send_dsp(TTPtr self, t_signal **sp, short *count)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTSenderPtr					aSender = (TTSenderPtr)x->wrappedObject;
+	TTSenderPtr					aSender = (TTSenderPtr)x->wrappedObject.instance();
 	void**						audioVectors = NULL;
 	TTUInt16					vectorSize = 0;
 	
@@ -604,8 +600,8 @@ void send_dsp(TTPtr self, t_signal **sp, short *count)
 		}
 		
 		// set signal numChannels and vectorSize
-		aSender->mSignal->setAttributeValue(kTTSym_numChannels, 1);
-		aSender->mSignal->setAttributeValue(kTTSym_vectorSize, vectorSize);
+		aSender->mSignal.set(kTTSym_numChannels, 1);
+		aSender->mSignal.set(kTTSym_vectorSize, vectorSize);
 		
 		dsp_addv(send_perform, 3, audioVectors);
 		sysmem_freeptr(audioVectors);
@@ -616,13 +612,13 @@ void send_dsp(TTPtr self, t_signal **sp, short *count)
 void send_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTSenderPtr					aSender = (TTSenderPtr)x->wrappedObject;
+	TTSenderPtr					aSender = (TTSenderPtr)x->wrappedObject.instance();
 	
 	if (aSender) {
 		
         // set signal numChannels and vectorSize
-        aSender->mSignal->setAttributeValue(kTTSym_numChannels, 1);
-        aSender->mSignal->setAttributeValue(kTTSym_vectorSize, (TTUInt16)maxvectorsize);
+        aSender->mSignal.set(kTTSym_numChannels, 1);
+        aSender->mSignal.set(kTTSym_vectorSize, (TTUInt16)maxvectorsize);
    
         // mSignal will be set in the perform method
         object_method(dsp64, gensym("dsp_add64"), x, send_perform64, 0, NULL);
