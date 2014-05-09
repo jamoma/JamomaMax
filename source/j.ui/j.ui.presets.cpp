@@ -40,7 +40,7 @@ void ui_preset_doread(t_ui *x)
 	char			posixpath[MAX_PATH_CHARS];
 	short 			path;                           // pathID#
     t_fourcc		filetype = 'TEXT', outtype;     // the file type that is actually true
-    (t_object*)       modelObject;
+    t_object        *modelObject;
     t_atom          a[1];
 	
 	if (open_dialog(filename, &path, &outtype, &filetype, 1))		// Returns 0 if successful
@@ -71,12 +71,12 @@ void ui_preset_dowrite(t_ui *x)
 	t_filehandle	file_handle;				// a reference to our file (for opening it, closing it, etc.)
     TTNodePtr       patcherNode;
     TTSymbol        modelClass;
-    (t_object*)       modelPatcher = NULL;
-	ObjectPtr       modelObject;
+    t_object        *modelPatcher = NULL;
+	t_object        *modelObject;
     t_atom          a[1];
 	
 	// get model patcher class for preset file name
-	JamomaDirectory->getTTNode(x->modelAddress, &patcherNode);
+	accessApplicationLocalDirectory->getTTNode(x->modelAddress, &patcherNode);
 	modelPatcher = (t_object*)patcherNode->getContext();
 
 	if (modelPatcher) {
@@ -117,7 +117,7 @@ void ui_preset_dowrite(t_ui *x)
 	}
 }
 
-void ui_return_preset_names(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_preset_names(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	

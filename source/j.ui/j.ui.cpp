@@ -144,7 +144,8 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 	if (!(d=object_dictionaryarg(argc, argv)))
 		return NULL;	
 	
-	if (x = (t_ui*)object_alloc(s_ui_class)) {
+    x = (t_ui*)object_alloc(s_ui_class);
+	if (x) {
 		flags = 0 
 		| JBOX_DRAWFIRSTIN
 		| JBOX_NODRAWBOX
@@ -251,19 +252,11 @@ void ui_free(t_ui *x)
 	x->refmenu_qelem = NULL;
 	object_free(x->refmenu_items);
     
-    if (x->textHandler)
-        TTObjectBaseRelease(TTObjectBaseHandle(&x->textHandler));
-    
-    if (x->state)
-        TTObjectBaseRelease(TTObjectBaseHandle(&x->state));
-	
-	if (x->previewSignal && x->modelOutput) {
-		if (x->modelOutput->valid) {
-			TTAttributePtr	anAttribute = NULL;
-			x->modelOutput->findAttribute(TTSymbol("signal"), &anAttribute);
-			anAttribute->unregisterObserverForNotifications(*(x->previewSignal));
-			TTObjectBaseRelease(TTObjectBaseHandle(&x->previewSignal));
-		}
+	if (x->previewSignal.valid() && x->modelOutput.valid()) {
+		
+        TTAttributePtr	anAttribute = NULL;
+        x->modelOutput.instance()->findAttribute(TTSymbol("signal"), &anAttribute);
+        anAttribute->unregisterObserverForNotifications(x->previewSignal);
 	}
     
     if (x->preset_names)
@@ -271,7 +264,7 @@ void ui_free(t_ui *x)
 	
 	ui_unregister_info(x);
 	ui_viewer_destroy_all(x);
-	ui_receiver_destroy_all(x);
+	x->hash_receivers->clear();
 }
 
 
@@ -297,12 +290,12 @@ t_max_err ui_notify(t_ui *x, t_symbol *s, t_symbol *msg, void *sender, void *dat
 	return jbox_notify((t_jbox*)x, s, msg, sender, data);
 }
 
-void ui_subscribe(t_ui *x, SymbolPtr address)
+void ui_subscribe(t_ui *x, t_symbol *address)
 {
-	TTAddress adrs = TTAddress(address->s_name);
+	TTAddress       adrs = TTAddress(address->s_name);
 	TTValue			v, args;
 	TTAttributePtr	anAttribute;
-	TTObjectBasePtr	aReceiver;
+	TTObject        aReceiver;
 	TTErr			err;
     
 	if ((x->modelAddress == kTTAdrsEmpty && adrs != kTTAdrsEmpty) || adrs != x->modelAddress) {
@@ -328,49 +321,43 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
         }
 		
 		// reset output object and preview signal
-		if (x->previewSignal && x->modelOutput) {
-			if (x->modelOutput->valid) {
-				err = x->modelOutput->findAttribute(kTTSym_signal, &anAttribute);
-				if (!err) {
-					anAttribute->unregisterObserverForNotifications(*(x->previewSignal));
-					TTObjectBaseRelease(TTObjectBaseHandle(&x->previewSignal));
-					x->previewSignal = NULL;
-				}
-			}
+		if (x->previewSignal.valid() && x->modelOutput.valid()) {
+
+            err = x->modelOutput.instance()->findAttribute(kTTSym_signal, &anAttribute);
+            if (!err) {
+                anAttribute->unregisterObserverForNotifications(x->previewSignal);
+                x->previewSignal = TTObject();
+            }
 		}
-		x->modelOutput = NULL;
+		x->modelOutput = TTObject();
 		
         if (x->hash_receivers->lookup(kTTSym_initialized, v))
             
             // observe model initialisation to explore (the method also get the value)
-            ui_receiver_create(x, &aReceiver, gensym("return_model_init"), kTTSym_initialized, x->modelAddress, NO, YES);
+            ui_receiver_create(x, aReceiver, gensym("return_model_init"), kTTSym_initialized, x->modelAddress, NO, YES);
         
         else {
             
             // update the model address and get the initialized state
             aReceiver = v[0];
-            
-            aReceiver->setAttributeValue(kTTSym_address, x->modelAddress.appendAttribute(kTTSym_initialized));
-            aReceiver->sendMessage(kTTSym_Get);
+            aReceiver.set(kTTSym_address, x->modelAddress.appendAttribute(kTTSym_initialized));
+            aReceiver.send(kTTSym_Get);
         }
         
         // create internal TTPreset to handle model's state
-        if (!x->state) {
-            TTObjectBaseInstantiate(kTTSym_Preset, TTObjectBaseHandle(&x->state), args);
-            x->state->setAttributeValue(kTTSym_Flatten, YES);
+        if (!x->state.valid()) {
+            x->state = TTObject(kTTSym_Preset);
+            x->state.set(kTTSym_Flatten, YES);
         }
         
         // create internal TTTextHandler to edit model's state via the Max text editor
-        if (!x->textHandler) {
-            
-            TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&x->textHandler), args);
-            
-            args = TTValue(x->state);
-            x->textHandler->setAttributeValue(kTTSym_object, args);
+        if (!x->textHandler.valid()) {
+            x->textHandler = TTObject(kTTSym_TextHandler);
+            x->textHandler.set(kTTSym_object, x->state);
         }
         
         // set the model address
-        x->state->setAttributeValue(kTTSym_address, x->modelAddress);
+        x->state.set(kTTSym_address, x->modelAddress);
 	}
 	
 	// The following must be deferred because 
@@ -381,9 +368,9 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 void ui_build(t_ui *x)
 {
 	TTValue			v, n, p, args;
-	SymbolPtr		hierarchy, moduleHierarchy;
-	t_object*		box, textfield;
-    (t_object*)       modulePatcher, moduleBox;
+	t_symbol		*hierarchy, *moduleHierarchy;
+	t_object        *box, *textfield;
+    t_object        *modulePatcher, *moduleBox;
 	t_rect			boxRect;
 	t_rect			uiRect;
 	
@@ -455,15 +442,15 @@ void ui_build(t_ui *x)
 	jbox_redraw(&x->box);
 }
 
-ObjectPtr ui_get_model_object(t_ui *x)
+t_object *ui_get_model_object(t_ui *x)
 {
     TTNodePtr   patcherNode;
-    (t_object*)   obj;
-    (t_object*)   modelObject = NULL;
-	SymbolPtr   _sym_jclass, _sym_jmodel = gensym("j.model");
+    t_object    *obj;
+    t_object    *modelObject = NULL;
+	t_symbol    *_sym_jclass, *_sym_jmodel = gensym("j.model");
 
     // get model patcher
-	if (!JamomaDirectory->getTTNode(x->modelAddress, &patcherNode)) {
+	if (!accessApplicationLocalDirectory->getTTNode(x->modelAddress, &patcherNode)) {
 	
         if (patcherNode->getContext()) {
     
@@ -501,14 +488,13 @@ void ui_paint(t_ui *x, t_object *view)
     t_jrgba		headercolor;
     t_jrgba		bgcolor;
 	t_jrgba		bordercolor;
-	t_jrgba		textcolor;
 	
 	g = (t_jgraphics*) patcherview_get_jgraphics(view);
 	jbox_get_rect_for_view((t_object*) &x->box, view, &rect);
     
     // process highlight
-    if (x->uiInfo) {
-        x->uiInfo->getAttributeValue(TTSymbol("highlight"), v);
+    if (x->uiInfo.valid()) {
+        x->uiInfo.get("highlight", v);
         highlight = v[0];
     }
 
@@ -916,8 +902,8 @@ void ui_paint_address(t_ui *x, t_object *textfield)
 
 void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 {
-	t_object*	obj;
-	SymbolPtr	objclass;
+	t_object	*obj;
+	t_symbol	*objclass;
 	t_rect		rect;
 	TTValue		none;
 	
@@ -981,7 +967,7 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 			}
 		}
 		else if (x->has_panel && px.x >= x->rect_panel.x && px.x <= (x->rect_panel.x + x->rect_panel.width))
-			x->uiInfo->sendMessage(TTSymbol("Panel"));
+			x->uiInfo.send("Panel");
 		
 		else if (x->has_preview && px.x >= x->rect_preview.x && px.x <= (x->rect_preview.x + x->rect_preview.width)) {
 			if (x->highlight) {
@@ -1063,7 +1049,7 @@ void ui_mouseup(t_ui *x, t_object *patcherview)
 	x->gainDragging = false;
     
     // Set the textfield to display the address after dragging widget
-	ObjectPtr textfield = jbox_get_textfield((t_object*) x);
+	t_object *textfield = jbox_get_textfield((t_object*) x);
 	if (textfield)
         ui_paint_address(x, textfield);
 	
@@ -1072,8 +1058,8 @@ void ui_mouseup(t_ui *x, t_object *patcherview)
 
 void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 {
-	SymbolPtr	objclass;
-	t_object*	obj = object_attr_getobj(jamoma_patcher_get((t_object*)x), _sym_firstobject);
+	t_symbol    *objclass;
+	t_object    *obj = object_attr_getobj(jamoma_patcher_get((t_object*)x), _sym_firstobject);
 	
 	// if the control key is pressed
 	if (modifiers & eShiftKey) {
@@ -1083,7 +1069,7 @@ void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 		// Is the mouse wasn't hover the j.ui panel
 		if (!x->hover) {
 			x->hover = true;
-            x->uiInfo->setAttributeValue(TTSymbol("highlight"), TTSymbol("jamoma"));
+            x->uiInfo.set("highlight", TTSymbol("jamoma"));
 		}
 	}
 	else {
@@ -1092,7 +1078,7 @@ void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 		
 		if (x->hover) {
 			x->hover = false;
-			x->uiInfo->setAttributeValue(TTSymbol("highlight"), kTTSym_none);
+			x->uiInfo.set("highlight", kTTSym_none);
 		}
 	}
 	
@@ -1113,8 +1099,8 @@ void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 
 void ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 {	
-	SymbolPtr objclass;
-	ObjectPtr obj = object_attr_getobj(jamoma_patcher_get((t_object*)x), _sym_firstobject);
+	t_symbol *objclass;
+	t_object *obj = object_attr_getobj(jamoma_patcher_get((t_object*)x), _sym_firstobject);
 	
 	// Is the mouse leave outside the j.ui (not hover an ui object)
 	if (	pt.x <= x->box.b_presentation_rect.x || pt.x >= (x->box.b_presentation_rect.x + x->box.b_presentation_rect.width)
@@ -1123,8 +1109,8 @@ void ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
         x->highlight = false;
 		x->hover = false;
         
-        if (x->uiInfo)
-            x->uiInfo->setAttributeValue(TTSymbol("highlight"), kTTSym_none);
+        if (x->uiInfo.valid())
+            x->uiInfo.set("highlight", kTTSym_none);
 	}
 
 	while (obj) {
@@ -1208,7 +1194,7 @@ void ui_menu_qfn(t_ui *x)
     TTValue     none;
     
     // get model object
-    (t_object*) modelObject = ui_get_model_object(x);
+    t_object *modelObject = ui_get_model_object(x);
     if (!modelObject)
         return;
     
@@ -1408,14 +1394,14 @@ void ui_refmenu_build(t_ui *x)
 	linklist_append(x->refmenu_items, item);
 	item->flags = 1;	// mark to disable this item (we use it as a label)
 	
-	ui_explorer_create((t_object*)x, &x->modelParamExplorer, gensym("return_modelParamExploration"));
+	ui_explorer_create((t_object*)x, x->modelParamExplorer, gensym("return_modelParamExploration"));
 	
 	filters = TTValue(kTTSym_parameter);
 	filters.append(TTSymbol("noGenericTag"));
-	x->modelParamExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelParamExplorer.set("filterList", filters);
 	
-	x->modelParamExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelParamExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelParamExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelParamExplorer.send("Explore");
 	
 	// Look for User-Defined Messages into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1424,14 +1410,14 @@ void ui_refmenu_build(t_ui *x)
 	linklist_append(x->refmenu_items, item);
 	item->flags = 1;	// mark to disable this item (we use it as a label)
 	
-	ui_explorer_create((t_object*)x, &x->modelMessExplorer, gensym("return_modelMessExploration"));
+	ui_explorer_create((t_object*)x, x->modelMessExplorer, gensym("return_modelMessExploration"));
 	
 	filters = TTValue(kTTSym_message);
 	filters.append(TTSymbol("noGenericTag"));
-	x->modelMessExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelMessExplorer.set("filterList", filters);
 	
-	x->modelMessExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelMessExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelMessExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelMessExplorer.send("Explore");
 	
 	// Look for User-Defined Returns into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1440,14 +1426,14 @@ void ui_refmenu_build(t_ui *x)
 	linklist_append(x->refmenu_items, item);
 	item->flags = 1;	// mark to disable this item (we use it as a label)
 	
-	ui_explorer_create((t_object*)x, &x->modelRetExplorer, gensym("return_modelRetExploration"));
+	ui_explorer_create((t_object*)x, x->modelRetExplorer, gensym("return_modelRetExploration"));
 	
 	filters = TTValue(kTTSym_return);
 	filters.append(TTSymbol("noGenericTag"));
-	x->modelRetExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelRetExplorer.set("filterList", filters);
 	
-	x->modelRetExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelRetExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelRetExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelRetExplorer.send("Explore");
 
 	// Look for Generic Parameters into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1458,10 +1444,10 @@ void ui_refmenu_build(t_ui *x)
 	
 	filters = TTValue(kTTSym_parameter);
 	filters.append(TTSymbol("genericTag"));
-	x->modelParamExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelParamExplorer.set("filterList", filters);
 	
-	x->modelParamExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelParamExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelParamExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelParamExplorer.send("Explore");
 	
 	// Look for Generic Messages into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1472,10 +1458,10 @@ void ui_refmenu_build(t_ui *x)
 	
 	filters = TTValue(kTTSym_message);
 	filters.append(TTSymbol("genericTag"));
-	x->modelMessExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelMessExplorer.set("filterList", filters);
 	
-	x->modelMessExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelMessExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelMessExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelMessExplorer.send("Explore");
 	
 	// Look for Generic Returns into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1486,14 +1472,14 @@ void ui_refmenu_build(t_ui *x)
 	
 	filters = TTValue(kTTSym_return);
 	filters.append(TTSymbol("genericTag"));
-	x->modelRetExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelRetExplorer.set("filterList", filters);
 	
-	x->modelRetExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelRetExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelRetExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelRetExplorer.send("Explore");
 	
-	TTObjectBaseRelease(TTObjectBaseHandle(&x->modelParamExplorer));
-	TTObjectBaseRelease(TTObjectBaseHandle(&x->modelMessExplorer));
-	TTObjectBaseRelease(TTObjectBaseHandle(&x->modelRetExplorer));
+	x->modelParamExplorer = TTObject();
+    x->modelMessExplorer = TTObject();
+    x->modelRetExplorer = TTObject();
 }
 
 void* ui_oksize(t_ui *x, t_rect *rect)
@@ -1536,7 +1522,7 @@ void ui_edit(t_ui *x)
 {
     TTString    *buffer;
     char        title[MAX_FILENAME_CHARS];
-    TTValue     args, none;
+    TTValue     none;
     TTSymbol    name;
     
     // only one editor can be open in the same time
@@ -1546,11 +1532,10 @@ void ui_edit(t_ui *x)
         buffer = new TTString();
         
         // Store the preset
-        x->state->sendMessage(TTSymbol("Store"));
+        x->state.send("Store");
         
         critical_enter(0);
-        args = TTValue((TTPtr)buffer);
-        x->textHandler->sendMessage(kTTSym_Write, args, none);
+        x->textHandler.send(kTTSym_Write, (TTPtr)buffer, none);
         critical_exit(0);
         
         // pass the buffer to the editor
@@ -1576,15 +1561,14 @@ void ui_edclose(t_ui *x, char **text, long size)
 
 void ui_doedit(t_ui *x)
 {
-    TTValue args, none;
+    TTValue none;
     
     critical_enter(0);
-    args = TTValue((TTPtr)x->text);
-    x->textHandler->sendMessage(kTTSym_Read, args, none);
+    x->textHandler.send(kTTSym_Read, (TTPtr)x->text, none);
     critical_exit(0);
     
     // recall the preset
-    x->state->sendMessage(kTTSym_Recall, none, none);
+    x->state.send(kTTSym_Recall);
     
     delete x->text;
     x->text = NULL;

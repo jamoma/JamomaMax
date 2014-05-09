@@ -18,105 +18,39 @@
 
 void ui_register_info(t_ui* obj)
 {
-	TTObjectBasePtr	anObject = NULL;
+	TTObject        anObject;
     TTAddress       returnedAddress;
     TTNodePtr       returnedNode = NULL;
     TTNodePtr       returnedContextNode = NULL;
 	TTValue			v, args;
     
     // create a ui info object
-    args = (TTPtr)obj;
-    TTObjectBaseInstantiate(TTSymbol("UiInfo"), &(obj->uiInfo), args);
+    obj->uiInfo = TTObject("UiInfo", (TTPtr)obj);
 	
 	// create a ui node with our patcher as context
-	if (!jamoma_subscriber_create((t_object*)obj, obj->uiInfo, TTAddress("ui"), (TTSubscriberPtr*)&obj->uiSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((t_object*)obj, obj->uiInfo, TTAddress("ui"), obj->uiSubscriber, returnedAddress, &returnedNode, &returnedContextNode)) {
         
 		// get info relative to our patcher
 		jamoma_patcher_get_info((t_object*)obj, &obj->patcherPtr, obj->patcherContext, obj->patcherClass, obj->patcherName);
 		
 		// get the view address from the ui address
-		obj->uiSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
+		obj->uiSubscriber.get("contextAddress", v);
 		obj->viewAddress = v[0];
 		
 		// make a receiver on contextAddress/model:address attribute
-		ui_receiver_create(obj, &anObject, gensym("return_model_address"), TTSymbol("model:address"), obj->viewAddress, YES); // YES : we want to deferlow this method
+		ui_receiver_create(obj, anObject, gensym("return_model_address"), TTSymbol("model:address"), obj->viewAddress, YES); // YES : we want to deferlow this method
 	}
 }
 
 void ui_unregister_info(t_ui *obj)
 {
     // unregister the ui info object
-    if (obj->uiSubscriber)
-        TTObjectBaseRelease(&obj->uiSubscriber);
+    if (obj->uiSubscriber.valid())
+        obj->uiSubscriber = TTObject();
     
     // delete the ui info object
-    if (obj->uiInfo)
-        TTObjectBaseRelease(&obj->uiInfo);
-}
-
-void ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbackMethod, TTSymbol service, TTSymbol name, TTBoolean deferlow)
-{
-	TTValue			args, baton, v, none;
-	TTAddress       viewAddress, dataAddress;
-	TTNodePtr		aNode;
-	TTBoolean		nodeCreated;
-	
-    // Create data
-	*returnedData = NULL;
-    TTObjectBaseInstantiate(TTSymbol("Data"), TTObjectBaseHandle(returnedData), service);
-    
-	baton = TTValue(TTPtr(obj), TTPtr(aCallbackMethod), deferlow);
-    
-	(*returnedData)->setAttributeValue(kTTSym_baton, baton);
-	(*returnedData)->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
-	
-	// Register data
-	obj->uiSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
-	viewAddress = v[0];
-    
-	dataAddress = viewAddress.appendAddress(TTAddress(name.c_str()));
-	JamomaDirectory->TTNodeCreate(dataAddress, *returnedData, obj->patcherPtr, &aNode, &nodeCreated);
-	
-	// Store data
-	args = TTValue(*returnedData);
-	args.append(dataAddress);
-	obj->hash_datas->append(name, args);
-	
-	JamomaDebug object_post((t_object*)obj, "Make internal ui/%s object at : %s", name.c_str(), dataAddress.c_str());
-}								   
-
-void ui_data_destroy(t_ui *obj, TTSymbol name)
-{
-	TTValue			storedObject;
-	TTObjectBasePtr	aData;
-	TTAddress       dataAddress;
-	
-	if (obj->hash_datas)
-		if (!obj->hash_datas->lookup(name, storedObject)) {
-			
-			// Unregister data
-			storedObject.get(1, dataAddress);
-			JamomaDirectory->TTNodeRemove(dataAddress);
-			
-			// Delete data
-			aData = storedObject[0];
-			if (aData)
-				if (aData->valid)	// to -- should be better to understand why the data is not valid
-					TTObjectBaseRelease(&aData);
-			
-			// don't remove from the hash_table here !
-		}
-}
-
-void ui_data_send(t_ui *obj, TTSymbol name, TTValue v)
-{
-	TTValue			storedObject;
-	TTObjectBasePtr	anObject;
-	
-	obj->hash_datas->lookup(name, storedObject);
-    anObject = storedObject[0];
-	
-	anObject->setAttributeValue(kTTSym_value, v);
+    if (obj->uiInfo.valid())
+        obj->uiInfo = TTObject();
 }
 
 void ui_data_interface(t_ui *x, TTSymbol name)
@@ -154,26 +88,23 @@ void ui_data_interface(t_ui *x, TTSymbol name)
 	object_method(p, _sym_loadbang);
 }
 
-void ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
+void ui_receiver_create(t_ui *obj, TTObject& returnedReceiver, t_symbol *aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
 {
-	TTValue			v, baton, args, none;
-	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
-	TTAddress adrs;
+	TTValue		baton, args;
+	TTObject    returnValueCallback;
+	TTAddress   adrs;
 	
 	// prepare arguments
 	args.append(NULL);
 	
-	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
+	returnValueCallback = TTObject("callback");
     
 	baton = TTValue(TTPtr(obj), TTPtr(aCallbackMethod), deferlow);
-	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
-	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+	returnValueCallback.set(kTTSym_baton, baton);
+	returnValueCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
 	
-	*returnedReceiver = NULL;
-	TTObjectBaseInstantiate(kTTSym_Receiver, TTObjectBaseHandle(returnedReceiver), args);
+	returnedReceiver = TTObject(kTTSym_Receiver, args);
 	
 	// Set address to bind
     if (appendNameAsAttribute)
@@ -181,128 +112,68 @@ void ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr 
     else
         adrs = address.appendAddress(TTAddress(name.c_str()));
         
-	(*returnedReceiver)->setAttributeValue(kTTSym_address, adrs);
+	returnedReceiver.set(kTTSym_address, adrs);
     
     // refresh receiver
-	(*returnedReceiver)->sendMessage(kTTSym_Get);
+	returnedReceiver.send(kTTSym_Get);
 	
 	// Store receiver
-	args = TTValue(*returnedReceiver);
-	obj->hash_receivers->append(name, args);
+	obj->hash_receivers->append(name, returnedReceiver);
 }
 
-void ui_receiver_destroy(t_ui *obj, TTSymbol name)
+void ui_viewer_create(t_ui *obj, TTObject& returnedViewer, t_symbol *aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean subscribe, TTBoolean deferlow)
 {
-	TTValue			storedObject;
-	TTObjectBasePtr	aReceiver;
+	TTValue		v, baton, args, none;
+	TTAddress   viewAddress, viewerAddress, adrs;
 	
-	if (obj->hash_receivers)
-		if (!obj->hash_receivers->lookup(name, storedObject)) {
-			
-			// delete
-            aReceiver = storedObject[0];
-			if (aReceiver)
-				if (aReceiver->valid)	// to -- should be better to understand why the receiver is not valid
-					TTObjectBaseRelease(&aReceiver);
-			
-			// don't remove from the hash_table here !
-		}
-}
-
-void ui_receiver_destroy_all(t_ui *obj)
-{
-	TTValue			hk, v;
-	TTSymbol		key;
-	TTUInt8			i;
-	
-	// delete all viewers
-	if (obj->hash_receivers) {
-		
-		if (!obj->hash_receivers->isEmpty()) {
-			
-			obj->hash_receivers->getKeys(hk);
-			
-			for (i=0; i<obj->hash_receivers->getSize(); i++) {
-				
-				hk.get(i, key);
-				ui_receiver_destroy(obj, key);
-			}
-		}
-		delete obj->hash_receivers;
-	}
-}
-
-void ui_viewer_create(t_ui *obj, TTObjectBasePtr *returnedViewer, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean subscribe, TTBoolean deferlow)
-{
-	TTValue			v, baton, args, none;
-	TTObjectBasePtr	returnValueCallback;
-	TTAddress       viewAddress, viewerAddress, adrs;
-	TTNodePtr		aNode;
-	TTBoolean		nodeCreated;
-	
-	// prepare arguments
-	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
+	returnedViewer = TTObject(kTTSym_Viewer);
     
 	baton = TTValue(TTPtr(obj), TTPtr(aCallbackMethod), deferlow);
-	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
-	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
-	args.append(returnValueCallback);
-	
-	*returnedViewer = NULL;
-	TTObjectBaseInstantiate(kTTSym_Viewer, TTObjectBaseHandle(returnedViewer), args);
+	returnedViewer.set(kTTSym_baton, baton);
+	returnedViewer.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	
 	if (subscribe) {
 		// Register viewer
-		obj->uiSubscriber->getAttributeValue(TTSymbol("contextAddress"), v);
+		obj->uiSubscriber.get("contextAddress", v);
 		viewAddress = v[0];
         
 		viewerAddress = viewAddress.appendAddress(TTAddress(name.c_str()));
-		
-		JamomaDirectory->TTNodeCreate(viewerAddress, *returnedViewer, obj->patcherPtr, &aNode, &nodeCreated);
+		args = TTValue(viewerAddress, returnedViewer, (TTPtr)obj->patcherPtr);
+		JamomaApplication.send("ObjectRegister", args, none);
 	}
 	else
 		viewerAddress = kTTAdrsEmpty;
 	
 	// Set address to bind
 	adrs = address.appendAddress(TTAddress(name.c_str()));
-	(*returnedViewer)->setAttributeValue(kTTSym_address, adrs);
+	returnedViewer.set(kTTSym_address, adrs);
 	
 	// Store viewer
-	args = TTValue(*returnedViewer);
+	args = TTValue(returnedViewer);
 	args.append(viewerAddress);
 	obj->hash_viewers->append(name, args);
 }
 
 void ui_viewer_destroy(t_ui *obj, TTSymbol name)
 {
-	TTValue			storedObject;
-	TTObjectBasePtr		aViewer;
-	TTAddress viewerAddress;
+	TTValue     v, none;
+	TTAddress   viewerAddress;
 	
 	if (obj->hash_viewers)
-		if (!obj->hash_viewers->lookup(name, storedObject)) {
+		if (!obj->hash_viewers->lookup(name, v)) {
 			
-			// Unregister data
-			storedObject.get(1, viewerAddress);
-			if (viewerAddress != kTTAdrsEmpty)
-				JamomaDirectory->TTNodeRemove(viewerAddress);
-			
-			// delete
-			aViewer = storedObject[0];
-			if (aViewer)
-				if (aViewer->valid)	// to -- should be better to understand why the viewer is not valid
-					TTObjectBaseRelease(&aViewer);
-			
-			// don't remove from the hash_table here !
+			// Unregister viewer
+			viewerAddress = v[1];
+            JamomaApplication.send("ObjectUnregister", viewerAddress, none);
+			obj->hash_viewers->remove(name);
 		}
 }
 
 void ui_viewer_destroy_all(t_ui *obj)
 {
-	TTValue			hk, v;
-	TTSymbol		key;
-	TTUInt8			i;
+	TTValue		hk, v, none;
+	TTSymbol	key, viewerAddress;
+	TTUInt8		i;
 	
 	// delete all viewers
 	if (obj->hash_viewers) {
@@ -314,7 +185,12 @@ void ui_viewer_destroy_all(t_ui *obj)
 			for (i=0; i<obj->hash_viewers->getSize(); i++) {
 				
 				hk.get(i, key);
-				ui_viewer_destroy(obj, key);
+				if (!obj->hash_viewers->lookup(key, v)) {
+                    
+                    // Unregister viewer
+                    viewerAddress = v[1];
+                    JamomaApplication.send("ObjectUnregister", viewerAddress, none);
+                }
 			}
 		}
 		delete obj->hash_viewers;
@@ -323,49 +199,51 @@ void ui_viewer_destroy_all(t_ui *obj)
 
 void ui_viewer_send(t_ui *obj, TTSymbol name, TTValue v)
 {
-	TTValue			storedObject, none;
-	TTObjectBasePtr	anObject;
-	TTErr			err;
+	TTValue		storedObject, none;
+	TTObject	anObject;
+	TTErr		err;
 	
 	if (obj->hash_viewers) {
 		err = obj->hash_viewers->lookup(name, storedObject);
 		
 		if (!err) {
 			anObject = storedObject[0];
-			if (anObject)
-				anObject->sendMessage(kTTSym_Send, v, none);
+			if (anObject.valid())
+				anObject.send(kTTSym_Send, v, none);
 		}
 	}
 }
 
 void ui_viewer_highlight(t_ui *obj, TTSymbol name, TTBoolean s)
 {
-	TTValue			storedObject;
-	TTObjectBasePtr	anObject;
-	TTErr			err;
+	TTValue		storedObject;
+	TTObject	anObject;
+	TTErr		err;
+    
 	if (obj->hash_viewers) {
 		err = obj->hash_viewers->lookup(name, storedObject);
 		
 		if (!err) {
 			anObject = storedObject[0];
-			if (anObject)
-				anObject->setAttributeValue(kTTSym_highlight, s);
+			if (anObject.valid())
+				anObject.set(kTTSym_highlight, s);
 		}
 	}
 }
 
 void ui_viewer_freeze(t_ui *obj, TTSymbol name, TTBoolean f)
 {
-	TTValue			storedObject;
-	TTObjectBasePtr		anObject;
-	TTErr			err;
+	TTValue		storedObject;
+	TTObject	anObject;
+	TTErr		err;
+    
 	if (obj->hash_viewers) {
 		err = obj->hash_viewers->lookup(name, storedObject);
 		
 		if (!err) {
 			anObject = storedObject[0];
-			if (anObject)
-				anObject->setAttributeValue(kTTSym_freeze, f);
+			if (anObject.valid())
+				anObject.set(kTTSym_freeze, f);
 		}
 	}
 }
@@ -375,26 +253,24 @@ void ui_viewer_freeze(t_ui *obj, TTSymbol name, TTBoolean f)
 #pragma mark message handlers
 #endif
 
-void ui_explorer_create(ObjectPtr x, TTObjectBasePtr *returnedExplorer, SymbolPtr method)
+void ui_explorer_create(t_object *x, TTObject&  returnedExplorer, t_symbol *method)
 {
-	TTValue			args, baton, none;
-	TTObjectBasePtr	returnValueCallback;
+	TTValue		args, baton, none;
+	TTObject	returnValueCallback;
 	
 	// prepare arguments
-	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
+	returnValueCallback = TTObject("callback");
 	baton = TTValue(TTPtr(x), TTPtr(method));
-	returnValueCallback->setAttributeValue(kTTSym_baton, baton);
-	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+	returnValueCallback.set(kTTSym_baton, baton);
+	returnValueCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
 	
 	args.append((TTPtr)jamoma_explorer_default_filter_bank());
 	
-	*returnedExplorer = NULL;
-	TTObjectBaseInstantiate(kTTSym_Explorer, TTObjectBaseHandle(returnedExplorer), args);
+	returnedExplorer = TTObject(kTTSym_Explorer, args);
 }
 
-void ui_modelParamExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_modelParamExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	t_symobject	*item = NULL;
@@ -410,7 +286,7 @@ void ui_modelParamExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom
 	}
 }
 
-void ui_modelMessExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_modelMessExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	t_symobject	*item = NULL;
@@ -426,7 +302,7 @@ void ui_modelMessExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom*
 	}
 }
 
-void ui_modelRetExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_modelRetExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	t_symobject	*item = NULL;
@@ -444,13 +320,12 @@ void ui_modelRetExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* 
 
 void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
-	t_ui* obj = (t_ui*)self;
-	t_object*	box;
-	t_outlet*	myoutlet = NULL;
-	t_dll*		connecteds = NULL;
-	t_object*	o;
-	SymbolPtr	name;
-	TTObjectBasePtr aData;
+	t_ui        *obj = (t_ui*)self;
+	t_object    *box;
+	t_outlet    *myoutlet = NULL;
+	t_dll       *connecteds = NULL;
+	t_object    *o;
+	t_symbol	*name;
 	TTValue		v;
 	
 	// search through all connected objects for a patcher object
@@ -480,7 +355,7 @@ void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	}
 }
 
-void ui_return_metersdefeated(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_metersdefeated(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -488,7 +363,7 @@ void ui_return_metersdefeated(TTPtr self, SymbolPtr msg, long argc, t_atom* argv
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_mute(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_mute(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -496,7 +371,7 @@ void ui_return_mute(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_bypass(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_bypass(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -504,7 +379,7 @@ void ui_return_bypass(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_mix(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_mix(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -512,7 +387,7 @@ void ui_return_mix(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_gain(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_gain(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -520,7 +395,7 @@ void ui_return_gain(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_freeze(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_freeze(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	
@@ -528,7 +403,7 @@ void ui_return_freeze(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_preview(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_preview(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui*			obj = (t_ui*)self;
 	TTAddress 		outAdrs;
@@ -540,41 +415,38 @@ void ui_return_preview(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 	obj->is_previewing = atom_getlong(argv);
 	
 	// get the TTOutput object
-	if (!obj->modelOutput) {
+	if (!obj->modelOutput.valid()) {
 		outAdrs = obj->modelAddress.appendAddress(TTAddress("data/out"));
 		
-		if (!JamomaDirectory->getTTNode(outAdrs, &aNode))
-            obj->modelOutput = (TTOutputPtr)aNode->getObject();
+		if (!accessApplicationLocalDirectory->getTTNode(outAdrs, &aNode))
+            obj->modelOutput = aNode->getObject();
 	}
 	
-	if (obj->modelOutput) {
+	if (obj->modelOutput.valid()) {
 		
-		err = obj->modelOutput->findAttribute(TTSymbol("signal"), &anAttribute);
+		err = obj->modelOutput.instance()->findAttribute(TTSymbol("signal"), &anAttribute);
 		if (!err) {
 			
 			if (obj->is_previewing) {
 				
 				// reset preview signal
-				if (obj->previewSignal) {
-					anAttribute->unregisterObserverForNotifications(*(obj->previewSignal));
-					TTObjectBaseRelease(TTObjectBaseHandle(&obj->previewSignal));
-					obj->previewSignal = NULL;
+				if (obj->previewSignal.valid()) {
+					anAttribute->unregisterObserverForNotifications(obj->previewSignal);
+					obj->previewSignal = TTObject();
 				}
 				
-				TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&obj->previewSignal), none);
+				obj->previewSignal = TTObject("callback");
 				
-				obj->previewSignal->setAttributeValue(kTTSym_baton, TTPtr(self));
-				obj->previewSignal->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_signal));
-				obj->previewSignal->setAttributeValue(TTSymbol("owner"), TTSymbol("j.ui"));					// this is usefull only to debug
+				obj->previewSignal.set(kTTSym_baton, TTPtr(self));
+				obj->previewSignal.set(kTTSym_function, TTPtr(&jamoma_callback_return_signal));
 				
-				anAttribute->registerObserverForNotifications(*(obj->previewSignal));
+				anAttribute->registerObserverForNotifications(obj->previewSignal);
 			}
 			else {
 				
-				if (obj->previewSignal) {
-					anAttribute->unregisterObserverForNotifications(*(obj->previewSignal));
-					TTObjectBaseRelease(TTObjectBaseHandle(&obj->previewSignal));
-					obj->previewSignal = NULL;
+				if (obj->previewSignal.valid()) {
+					anAttribute->unregisterObserverForNotifications(obj->previewSignal);
+					obj->previewSignal = TTObject();
 				}
 			}
 		}
@@ -583,9 +455,9 @@ void ui_return_preview(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
-    (t_object*) obj = (t_object*)self;
+    t_object *obj = (t_object*)self;
     
     // The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
@@ -593,12 +465,12 @@ void ui_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 	defer_low(obj, (method)ui_subscribe, atom_getsym(argv), 0, 0);
 }
 
-void ui_return_model_init(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_model_init(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
-	t_ui*           obj = (t_ui*)self;
-	long            init = atom_getlong(argv);
-	TTValue         v;
-    TTObjectBasePtr aReceiver;
+	t_ui*     obj = (t_ui*)self;
+	long      init = atom_getlong(argv);
+	TTValue   v;
+    TTObject   aReceiver;
 	
     // if the model is initialized and no content observer have been created
 	if (init) {
@@ -607,21 +479,21 @@ void ui_return_model_init(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
             
             // observe the content of the model
             // by this way, the creation of any widgets depends on the existence of the data
-            ui_receiver_create(obj, &aReceiver, gensym("return_model_content"), kTTSym_content, obj->modelAddress, NO, YES);
+            ui_receiver_create(obj, aReceiver, gensym("return_model_content"), kTTSym_content, obj->modelAddress, NO, YES);
         
         else {
             
             // get the content of the model
             aReceiver = v[0];
-            aReceiver->sendMessage(kTTSym_Get);
+            aReceiver.send(kTTSym_Get);
         }
 	}
 }
 
-void ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_model_content(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
     t_ui* obj = (t_ui*)self;
-	TTObjectBasePtr anObject;
+	TTObject    anObject;
 	TTBoolean	gain = NO;
 	TTBoolean	mix = NO;
 	TTBoolean	bypass = NO;
@@ -697,22 +569,18 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 		if (gain != obj->has_gain) {
 			obj->has_gain = gain;
 			if (gain)
-				ui_viewer_create(obj, &anObject, gensym("return_gain"), TTSymbol("audio/gain"), obj->modelAddress, NO); // don't subscribe this viewer
-			else {
+				ui_viewer_create(obj, anObject, gensym("return_gain"), TTSymbol("audio/gain"), obj->modelAddress, NO); // don't subscribe this viewer
+			else
 				ui_viewer_destroy(obj, TTSymbol("audio/gain"));
-				obj->hash_viewers->remove(TTSymbol("audio/gain"));
-			}
 		}
 		
 		// mix
 		if (mix != obj->has_mix) {
 			obj->has_mix = mix;
 			if (mix)
-				ui_viewer_create(obj, &anObject, gensym("return_mix"), TTSymbol("audio/mix"), obj->modelAddress, NO); // don't subscribe this viewer
-			else {
+				ui_viewer_create(obj, anObject, gensym("return_mix"), TTSymbol("audio/mix"), obj->modelAddress, NO); // don't subscribe this viewer
+			else
 				ui_viewer_destroy(obj, TTSymbol("audio/mix"));
-				obj->hash_viewers->remove(TTSymbol("audio/mix"));
-			}
 			
 			change = true;
 		}
@@ -721,11 +589,9 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 		if (bypass != obj->has_bypass) {
 			obj->has_bypass = bypass;
 			if (bypass)
-				ui_viewer_create(obj, &anObject, gensym("return_bypass"), TTSymbol("*.*/bypass"), obj->modelAddress, NO); // don't subscribe this viewer
-			else {
+				ui_viewer_create(obj, anObject, gensym("return_bypass"), TTSymbol("*.*/bypass"), obj->modelAddress, NO); // don't subscribe this viewer
+			else
 				ui_viewer_destroy(obj, TTSymbol("*.*/bypass"));
-				obj->hash_viewers->remove(TTSymbol("*.*/bypass"));
-			}
 			
 			change = true;
 		}
@@ -734,11 +600,9 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 		if (freeze != obj->has_freeze) {
 			obj->has_freeze = freeze;
 			if (freeze)
-				ui_viewer_create(obj, &anObject, gensym("return_freeze"), TTSymbol("data/freeze"), obj->modelAddress, NO); // don't subscribe this viewer
-			else {
+				ui_viewer_create(obj, anObject, gensym("return_freeze"), TTSymbol("data/freeze"), obj->modelAddress, NO); // don't subscribe this viewer
+			else
 				ui_viewer_destroy(obj, TTSymbol("data/freeze"));
-				obj->hash_viewers->remove(TTSymbol("data/freeze"));
-			}
 			
 			change = true;
 		}
@@ -747,11 +611,9 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 		if (preview != obj->has_preview) {
 			obj->has_preview = preview;
 			if (preview)
-				ui_viewer_create(obj, &anObject, gensym("return_preview"), TTSymbol("data/preview"), obj->modelAddress, NO); // don't subscribe this viewer
-			else {
+				ui_viewer_create(obj, anObject, gensym("return_preview"), TTSymbol("data/preview"), obj->modelAddress, NO); // don't subscribe this viewer
+			else
 				ui_viewer_destroy(obj, TTSymbol("data/preview"));
-				obj->hash_viewers->remove(TTSymbol("data/preview"));
-			}
 			
 			change = true;
 		}
@@ -760,11 +622,9 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 		if (mute != obj->has_mute) {
 			obj->has_mute = mute;
 			if (mute)
-				ui_viewer_create(obj, &anObject, gensym("return_mute"), TTSymbol("*.*/mute"), obj->modelAddress, NO); // don't subscribe this viewer
-			else {
+				ui_viewer_create(obj, anObject, gensym("return_mute"), TTSymbol("*.*/mute"), obj->modelAddress, NO); // don't subscribe this viewer
+			else
 				ui_viewer_destroy(obj, TTSymbol("*.*/mute"));
-				obj->hash_viewers->remove(TTSymbol("*.*/mute"));
-			}
 			
 			change = true;
 		}
@@ -773,17 +633,14 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 		if (preset != obj->has_preset) {
 			obj->has_preset = preset;
 			if (preset) {
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:recall"), obj->modelAddress, NO); // don't subscribe this viewer
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:store"), obj->modelAddress, NO); // don't subscribe this viewer
-				ui_viewer_create(obj, &anObject, gensym("return_preset_names"), TTSymbol("preset:names"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, anObject, NULL, TTSymbol("preset:recall"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, anObject, NULL, TTSymbol("preset:store"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, anObject, gensym("return_preset_names"), TTSymbol("preset:names"), obj->modelAddress, NO); // don't subscribe this viewer
 			}
 			else {
 				ui_viewer_destroy(obj, TTSymbol("preset:recall"));
-				obj->hash_viewers->remove(TTSymbol("preset:recall"));
 				ui_viewer_destroy(obj, TTSymbol("preset:store"));
-				obj->hash_viewers->remove(TTSymbol("preset:store"));
 				ui_viewer_destroy(obj, TTSymbol("preset:names"));
-				obj->hash_viewers->remove(TTSymbol("preset:names"));
 			}
 			
 			change = true;
@@ -793,17 +650,14 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 		if (model != obj->has_model) {
 			obj->has_model = model;
 			if (model) {
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:internal/open"), obj->modelAddress, NO); // don't subscribe this viewer
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:help/open"), obj->modelAddress, NO); // don't subscribe this viewer
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:reference/open"), obj->modelAddress, NO); // don't subscribe this viewer
+                ui_viewer_create(obj, anObject, NULL, TTSymbol("model:internal/open"), obj->modelAddress, NO); // don't subscribe this viewer
+				ui_viewer_create(obj, anObject, NULL, TTSymbol("model:help/open"), obj->modelAddress, NO); // don't subscribe this viewer
+                ui_viewer_create(obj, anObject, NULL, TTSymbol("model:reference/open"), obj->modelAddress, NO); // don't subscribe this viewer
             }
 			else {
                 ui_viewer_destroy(obj, TTSymbol("model:internal/open"));
-				obj->hash_viewers->remove(TTSymbol("model:internal/open"));
 				ui_viewer_destroy(obj, TTSymbol("model:help/open"));
-				obj->hash_viewers->remove(TTSymbol("model:help/open"));
                 ui_viewer_destroy(obj, TTSymbol("model:reference/open"));
-				obj->hash_viewers->remove(TTSymbol("model:reference/open"));
 			}
 			
 			change = true;
@@ -815,7 +669,7 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 	}
 }
 
-void ui_return_signal(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void ui_return_signal(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
 	t_ui* obj = (t_ui*)self;
 	

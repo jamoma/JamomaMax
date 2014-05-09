@@ -80,7 +80,7 @@ TTErr TTUiInfo::setFreeze(const TTValue& newValue)
     mFreeze = newValue;
     
 	// get the TTContainer object of the view patch
-    err = JamomaDirectory->getTTNode(mObject->viewAddress, &modelNode);
+    err = accessApplicationLocalDirectory->getTTNode(mObject->viewAddress, &modelNode);
     
     if (!err) {
         

@@ -56,20 +56,20 @@ typedef struct inlet {
 typedef struct _ui{
 	t_jbox				box;
 	TTHandle			outlets;
-    TTObjectBasePtr     uiInfo;
-    TTObjectBasePtr		uiSubscriber;			///< internal TTSubscriber object to bind on the ui node
+    TTObject            uiInfo;
+    TTObject            uiSubscriber;			///< internal TTSubscriber object to bind on the ui node
 	TTHashPtr			hash_datas;				///< hash table of TTData
 	TTHashPtr			hash_viewers;			///< hash table of TTViewer
 	TTHashPtr			hash_receivers;			///< hash table of TTReceiver
-	TTObjectBasePtr		modelMessExplorer;		///< internal TTExplorer object to observe messages
-	TTObjectBasePtr		modelParamExplorer;		///< internal TTExplorer object to observe parameters
-	TTObjectBasePtr		modelRetExplorer;		///< internal TTExplorer object to observe returns
-	TTCallbackPtr		previewSignal;			///< internal TTCallback to get back preview signal
-	TTOutputPtr			modelOutput;			///< a pointer to TTOutput object of the binded model
+	TTObject            modelMessExplorer;		///< internal TTExplorer object to observe messages
+	TTObject            modelParamExplorer;		///< internal TTExplorer object to observe parameters
+	TTObject            modelRetExplorer;		///< internal TTExplorer object to observe returns
+	TTObject            previewSignal;			///< internal TTCallback to get back preview signal
+	TTObject			modelOutput;			///< a pointer to TTOutput object of the binded model
 	
 	TTAddress           viewAddress;
 	TTAddress           modelAddress;
-	t_object*			patcherPtr;				///< the patcher in which the external is (ignoring subpatcher)
+	t_object            *patcherPtr;			///< the patcher in which the external is (ignoring subpatcher)
 	TTSymbol			patcherContext;			///< the patcher context in which the external is (model, view)
 	TTSymbol			patcherClass;			///< the patcher class in which the external is
 	TTSymbol			patcherName;
@@ -85,9 +85,9 @@ typedef struct _ui{
     t_jrgba             highlightcolor;
     
     TTString            *text;                  // the text of the editor to read after edclose
-	ObjectPtr           textEditor;             // the text editor window
-    TTObjectBasePtr		textHandler;            ///< internal TTTextHandler to fill the max text editor
-    TTObjectBasePtr     state;                  ///< internal TTPreset to get the current state of the binded model
+	t_object            *textEditor;             // the text editor window
+    TTObject            textHandler;            ///< internal TTTextHandler to fill the max text editor
+    TTObject            state;                  ///< internal TTPreset to get the current state of the binded model
 	
 	long				ui_freeze;				// freeze all viewers of the view
 	
@@ -95,8 +95,8 @@ typedef struct _ui{
 	void				*menu_qelem;			// ...
 	long				menu_selection;			// ...
 	t_linklist			*menu_items;			// ...
-	t_atom*				preset_names;
-	long			preset_num;
+	t_atom				*preset_names;
+	long                preset_num;
 
 	t_jpopupmenu		*refmenu;				// reference menu
 	void				*refmenu_qelem;			// ...
@@ -108,7 +108,7 @@ typedef struct _ui{
 	
 	long				has_panel;				// is the binded model have a panel ?
 	t_rect				rect_panel;
-	t_object*			patcher_panel;
+	t_object			*patcher_panel;
 
 	long				has_meters;				// is the binded model have meters ? (set number of meters, not just a toggle)
 	long				is_metersdefeated;
@@ -151,12 +151,12 @@ typedef struct _ui{
 } t_ui;
 
 // prototypes: general
-t_ui*		ui_new(t_symbol *s, long argc, t_atom *argv);
+t_ui		*ui_new(t_symbol *s, long argc, t_atom *argv);
 void 		ui_free(t_ui *x);
 t_max_err	ui_notify(t_ui *x, t_symbol *s, t_symbol *msg, void *sender, void *data);
-void		ui_subscribe(t_ui *x, SymbolPtr address);
+void		ui_subscribe(t_ui *x, t_symbol *address);
 void		ui_build(t_ui *x);
-ObjectPtr   ui_get_model_object(t_ui *x);
+t_object    *ui_get_model_object(t_ui *x);
 void 		ui_bang(t_ui *x);
 
 // prototypes: drawing/ui
@@ -166,7 +166,7 @@ void		ui_mousedragdelta(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 void		ui_mouseup(t_ui *x, t_object *patcherview);
 void 		ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers);
 void 		ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers);
-void*		ui_oksize(t_ui *x, t_rect *rect);
+void		*ui_oksize(t_ui *x, t_rect *rect);
 void		ui_preset_interface(t_ui *x);
 void 		ui_paint_address(t_ui *x, t_object *textfield);
 
@@ -182,43 +182,38 @@ void 		ui_refmenu_build(t_ui *x);
 void		ui_register_info(t_ui* obj);
 void		ui_unregister_info(t_ui* obj);
 
-// prototypes: internal TTData and TTViewer
-void		ui_data_create(t_ui *obj, TTObjectBasePtr *returnedData, SymbolPtr aCallbackMethod, TTSymbol service, TTSymbol name, TTBoolean deferlow = NO);
-void		ui_data_destroy(t_ui *obj, TTSymbol name);
-void		ui_data_send(t_ui *obj, TTSymbol name, TTValue v);
+// prototypes: internal TTViewer
 void		ui_data_interface(t_ui *x, TTSymbol name);
 
-void		ui_receiver_create(t_ui *obj, TTObjectBasePtr *returnedReceiver, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow = NO, TTBoolean appendNameAsAttribute = NO);
-void		ui_receiver_destroy(t_ui *obj, TTSymbol name);
-void		ui_receiver_destroy_all(t_ui *obj);
+void		ui_receiver_create(t_ui *obj, TTObject& returnedReceiver, t_symbol *aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow = NO, TTBoolean appendNameAsAttribute = NO);
 
-void		ui_viewer_create(t_ui *obj, TTObjectBasePtr *returnedViewer, SymbolPtr aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean subscribe, TTBoolean deferlow = NO);
+void		ui_viewer_create(t_ui *obj, TTObject& returnedViewer, t_symbol *aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean subscribe, TTBoolean deferlow = NO);
 void		ui_viewer_destroy(t_ui *obj, TTSymbol name);
 void		ui_viewer_destroy_all(t_ui *obj);
 void		ui_viewer_send(t_ui *obj, TTSymbol name, TTValue v);
 void		ui_viewer_highlight(t_ui *obj, TTSymbol name, TTBoolean s);
 void		ui_viewer_freeze(t_ui *obj, TTSymbol name, TTBoolean f);
 
-void		ui_explorer_create(ObjectPtr x, TTObjectBasePtr *returnedExplorer, SymbolPtr method);
-void		ui_modelMessExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		ui_modelParamExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		ui_modelRetExplorer_callback(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_explorer_create(t_object *x, TTObject& returnedExplorer, t_symbol *method);
+void		ui_modelMessExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_modelParamExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_modelRetExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
 void		ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-void		ui_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		ui_return_model_init(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		ui_return_model_content(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_return_model_init(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_return_model_content(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
-void		ui_return_metersdefeated(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		ui_return_mute(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		ui_return_bypass(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		ui_return_mix(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		ui_return_gain(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		ui_return_freeze(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		ui_return_preview(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_metersdefeated(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_return_mute(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_return_bypass(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_return_mix(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_return_gain(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_return_freeze(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_return_preview(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
-void		ui_return_signal(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_signal(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
 // prototype : text editor
 void		ui_edit(t_ui *x);
@@ -229,6 +224,6 @@ void		ui_doedit(t_ui *x);
 void		ui_preset_store_next(t_ui *x);
 void		ui_preset_doread(t_ui *x);
 void		ui_preset_dowrite(t_ui *x);
-void		ui_return_preset_names(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		ui_return_preset_names(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
 #endif // __J_UI__
