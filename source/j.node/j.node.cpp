@@ -62,8 +62,8 @@ void WrapTTNodeInfoClass(WrappedClassPtr c)
 void WrappedNodeInfoClass_new(TTPtr self, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	t_symbol*					relativeAddress;
-	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
+	t_symbol *relativeAddress;
+	long      attrstart = attr_args_offset(argc, argv);			// support normal arguments
 	
 	// check address argument
 	relativeAddress = _sym_nothing;
@@ -92,7 +92,7 @@ void WrappedNodeInfoClass_new(TTPtr self, long argc, t_atom* argv)
 		return;
     }
     
-    jamoma_node_info_create((t_object*)x, &x->wrappedObject);
+    jamoma_node_info_create((t_object*)x, x->wrappedObject);
 	
 	if (argc && argv)
         attr_args_process(x, argc, argv);
@@ -113,7 +113,7 @@ void node_subscribe(TTPtr self, t_symbol* relativeAddress, long argc, t_atom* ar
 	// for relative address
 	if (TTAddress(relativeAddress->s_name).getType() == kAddressRelative) {
         
-		jamoma_subscriber_create((t_object*)x, x->wrappedObject, TTAddress(jamoma_parse_dieze((t_object*)x, relativeAddress)->s_name), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
+		jamoma_subscriber_create((t_object*)x, x->wrappedObject, TTAddress(jamoma_parse_dieze((t_object*)x, relativeAddress)->s_name), x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
 	}
 	else
 		object_error((t_object*)x, "can't register because %s is not a relative address", relativeAddress->s_name);
