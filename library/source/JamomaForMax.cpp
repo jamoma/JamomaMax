@@ -55,7 +55,7 @@ void jamoma_init(void)
     
 	if (!initialized) {
         
-		ObjectPtr	max = SymbolGen("max")->s_thing;
+		t_object	*max = SymbolGen("max")->s_thing;
         TTString    JamomaConfigurationFilePath;
 		t_atom		a[4];
 		TTValue		v, out;
@@ -199,7 +199,7 @@ void jamoma_init(void)
 		
 		// now the jamoma object
 		{
-			t_symbol* jamomaSymbol = SymbolGen("jamoma");
+			t_symbol *jamomaSymbol = SymbolGen("jamoma");
 		
 			jamoma_object_initclass();
 			jamomaSymbol->s_thing = jamoma_object_new();

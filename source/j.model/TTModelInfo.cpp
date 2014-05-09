@@ -63,7 +63,7 @@ void TTModelInfo::setAddressReadOnly(TTBoolean readOnly)
 
 TTErr TTModelInfo::InternalOpen()
 {	
-	ObjectPtr p = jamoma_patcher_get(mObject);
+	t_object *p = jamoma_patcher_get(mObject);
 	
 	object_method(p, _sym_vis);
     
@@ -75,7 +75,7 @@ TTErr TTModelInfo::HelpOpen()
 	// opening the model helpfile
 	if (mClass != kTTSymEmpty) {
 		
-		t_symbol* helpfileName;
+		t_symbol *helpfileName;
 		jamoma_edit_filename(*HelpPatcherFormat, mClass, &helpfileName);
 		classname_openhelp((char*)helpfileName->s_name);
         
@@ -90,7 +90,7 @@ TTErr TTModelInfo::ReferenceOpen()
     // opening the model reference
     if (mClass != kTTSymEmpty) {
         
-		t_symbol* refpagefileName;
+		t_symbol *refpagefileName;
 		jamoma_edit_filename(*RefpageFormat, mClass, &refpagefileName);
 		classname_openrefpage((char*)refpagefileName->s_name);
         

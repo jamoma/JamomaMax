@@ -37,33 +37,33 @@ typedef struct extra {
 
 // Definitions
 void		WrapTTViewerClass(WrappedClassPtr c);
-void		WrappedViewerClass_new(TTPtr self, long argc, t_atom* argv);
+void		WrappedViewerClass_new(TTPtr self, long argc, t_atom *argv);
 void		WrappedViewerClass_free(TTPtr self);
 
 void		remote_assist(TTPtr self, TTPtr b, long msg, long arg, char *dst);
 
-void		remote_new_address(TTPtr self, SymbolPtr address);
+void		remote_new_address(TTPtr self, t_symbol *address);
 void		remote_array_create(TTPtr self, TTObject& returnedViewer, TTUInt32 index);
-void		remote_array_subscribe(TTPtr self, SymbolPtr address);
-void		remote_array_select(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		remote_address(TTPtr self, SymbolPtr name);
+void		remote_array_subscribe(TTPtr self, t_symbol *address);
+void		remote_array_select(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		remote_address(TTPtr self, t_symbol *name);
 
 void		remote_array_return_value(const TTValue& baton, const TTValue& v);
 
 void        remote_create_model_address_receiver(TTPtr self);
 void        remote_free_model_address_receiver(TTPtr self);
-void		remote_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		remote_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-void		WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		WrappedViewerClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 void		remote_bang(TTPtr self);
 void		remote_int(TTPtr self, long value);
 void		remote_float(TTPtr self, double value);
-TTErr       remote_list(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+TTErr       remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-TTErr		remote_array(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+TTErr		remote_array(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-void		remote_set(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		remote_set_array(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		remote_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		remote_set_array(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 void		remote_ui_queuefn(TTPtr self);
 
@@ -96,11 +96,11 @@ void WrapTTViewerClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)remote_address,					"address",				A_SYM,0);
 }
 
-void WrappedViewerClass_new(TTPtr self, long argc, t_atom* argv)
+void WrappedViewerClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
-	SymbolPtr					address;
+	t_symbol					*address;
 	TTValue						none;
 	
 	// check address argument
@@ -179,7 +179,7 @@ void WrappedViewerClass_free(TTPtr self)
     }
 }
 
-void remote_new_address(TTPtr self, SymbolPtr address)
+void remote_new_address(TTPtr self, t_symbol *address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	long					argc = 0; 
@@ -187,7 +187,7 @@ void remote_new_address(TTPtr self, SymbolPtr address)
 	TTUInt32					number;
 	TTUInt32					i;
 	TTAddress                   newAddress = TTAddress(address->s_name);
-	SymbolPtr					instanceAddress;
+	t_symbol					*instanceAddress;
 	TTObject                    anObject;
 	TTValue						v;
 		
@@ -257,10 +257,10 @@ void remote_array_create(TTPtr self, TTObject& returnedViewer, TTUInt32 index)
 	returnedViewer.set(kTTSym_function, TTPtr(&remote_array_return_value));
 }
 
-void remote_array_subscribe(TTPtr self, SymbolPtr address)
+void remote_array_subscribe(TTPtr self, t_symbol *address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	SymbolPtr					instanceAddress;
+	t_symbol					*instanceAddress;
 	TTAddress                   contextAddress = kTTAdrsEmpty;
 	TTAddress                   absoluteAddress, returnedAddress;
     TTNodePtr                   returnedNode = NULL;
@@ -416,11 +416,11 @@ void remote_array_subscribe(TTPtr self, SymbolPtr address)
 	defer_low((t_object*)x, (method)remote_array_subscribe, address, 0, NULL);
 }
 
-void remote_address(TTPtr self, SymbolPtr address)
+void remote_address(TTPtr self, t_symbol *address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObject        anObject, aSubscriber;
-	SymbolPtr		instanceAddress;
+	t_symbol		*instanceAddress;
 	TTValue			v;
 	TTUInt32		i;
 	
@@ -576,7 +576,7 @@ TTErr remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     return kTTErrGeneric;
 }
 
-void WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void WrappedViewerClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -602,11 +602,11 @@ void WrappedViewerClass_anything(TTPtr self, SymbolPtr msg, long argc, t_atom* a
 	}
 }
 
-TTErr remote_array(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+TTErr remote_array(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTInt32     d, i;
-    SymbolPtr	instanceAddress;
+    t_symbol	*instanceAddress;
     TTSymbol	memoCursor;
     TTErr       err = kTTErrNone;
     
@@ -645,7 +645,7 @@ TTErr remote_array(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
     return kTTErrGeneric;
 }
 
-void remote_set(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void remote_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -656,7 +656,7 @@ void remote_set(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
         EXTRA->setting = NO;
 }
 
-void remote_set_array(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void remote_set_array(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -671,7 +671,7 @@ void remote_array_return_value(const TTValue& baton, const TTValue& v)
 {
     WrappedModularInstancePtr	x;
 	TTValue						array;
-	SymbolPtr					msg, iAdrs;
+	t_symbol					*msg, *iAdrs;
 	long						argc = 0;
 	TTUInt32					i, j;
 	t_atom*						argv = NULL;
@@ -806,10 +806,10 @@ void remote_free_model_address_receiver(TTPtr self)
     EXTRA->modelAddressReceiver = TTObject();
 }
 
-void remote_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void remote_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	SymbolPtr			instanceAddress;
+	t_symbol			*instanceAddress;
 	TTAddress           address;
 	TTSymbol			service;
 	TTList				returnedNodes;

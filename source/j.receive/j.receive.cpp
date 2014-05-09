@@ -34,7 +34,7 @@ void		WrapTTReceiverClass(WrappedClassPtr c);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				WrappedReceiverClass_free, receive_subscribe
  */
-void		WrappedReceiverClass_new(TTPtr self, long argc, t_atom* argv);
+void		WrappedReceiverClass_new(TTPtr self, long argc, t_atom *argv);
 
 /** Wrapper for the j.receive deconstructor class, called when an instance is destroyed. 
  @param self		Pointer to this object.
@@ -54,7 +54,7 @@ void		receive_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 /** Associate j.receive(~) with NodeLib. This is a prerequisit for communication with other Jamoma object in the module and beyond.  */
 void		receive_subscribe(TTPtr self);
 
-void		receive_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		receive_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 #ifdef JCOM_RECEIVE_TILDE
 
@@ -72,8 +72,8 @@ void		receive_dsp64(TTPtr self, t_object *dsp64, short *count, double samplerate
 
 #else
 
-void		receive_return_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
-void		receive_return_value(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		receive_return_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		receive_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 /** bang handler for j.receive
  @param self		Pointer to this object
@@ -87,7 +87,7 @@ void		receive_bang(TTPtr self);
  @param address		The address to bind
  @see				receive_subscribe
  */
-void		receive_address(TTPtr self, SymbolPtr address);
+void		receive_address(TTPtr self, t_symbol *address);
 
 #pragma mark -
 #pragma mark main
@@ -130,10 +130,10 @@ void WrapTTReceiverClass(WrappedClassPtr c)
 #pragma mark -
 #pragma mark Object life
 
-void WrappedReceiverClass_new(TTPtr self, long argc, t_atom* argv)
+void WrappedReceiverClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	SymbolPtr					address;
+	t_symbol                    *address;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
     t_atom						a[1];
 	
@@ -294,7 +294,7 @@ void receive_subscribe(TTPtr self)
 	defer_low((t_object*)x, (method)receive_subscribe, NULL, 0, 0);
 }
 
-void receive_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void receive_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTAddress                   absoluteAddress;
@@ -318,14 +318,14 @@ void receive_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* 
 }
 
 #ifndef JCOM_RECEIVE_TILDE
-void receive_return_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void receive_return_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
 	outlet_anything(x->outlets[address_out], msg, argc, argv);
 }
 
-void receive_return_value(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void receive_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue		v;
@@ -374,7 +374,7 @@ void receive_bang(TTPtr self)
 
 #endif
 
-void receive_address(TTPtr self, SymbolPtr address)
+void receive_address(TTPtr self, t_symbol *address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     t_atom						a[1];

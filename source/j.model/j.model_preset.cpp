@@ -52,7 +52,7 @@ void model_preset_amenities(TTPtr self)
 }
 
 /*
-void model_preset_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_preset_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -64,18 +64,18 @@ void model_preset_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* arg
 }
 */
 
-void model_preset_return_names(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_preset_return_names(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	outlet_anything(x->outlets[dump_out], gensym("names"), argc, argv);
 }
 
-void model_preset_read(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_preset_read(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	defer(self, (method)model_preset_doread, msg, argc, argv);
 }
 
-void model_preset_doread(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_preset_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			o, v, none;
@@ -135,12 +135,12 @@ void model_preset_doread_again(TTPtr self)
 	}
 }
 
-void model_preset_write(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_preset_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	defer(self, (method)model_preset_dowrite, msg, argc, argv);
 }
 
-void model_preset_dowrite(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_preset_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char 			filename[MAX_FILENAME_CHARS];
@@ -282,7 +282,7 @@ void model_preset_filechanged(TTPtr self, char *filename, short path)
 	defer_low((t_object*)x, (method)model_preset_dorecall, NULL, 1, &a);
 }
 
-void model_preset_dorecall(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_preset_dorecall(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue		v, none;
@@ -295,7 +295,7 @@ void model_preset_dorecall(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 	EXTRA->presetManager.send(kTTSym_Recall, v, none);
 }
 
-void model_preset_edit(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_preset_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTString			*buffer;
@@ -435,7 +435,7 @@ void model_preset_doedit(TTPtr self)
 	EXTRA->presetName = kTTSymEmpty;
 }
 
-t_max_err model_preset_set_load_default(TTPtr self, TTPtr attr, long ac, t_atom* av) 
+t_max_err model_preset_set_load_default(TTPtr self, TTPtr attr, long ac, const t_atom *av) 
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -448,7 +448,7 @@ t_max_err model_preset_set_load_default(TTPtr self, TTPtr attr, long ac, t_atom*
 	return MAX_ERR_NONE;
 }
 
-t_max_err model_preset_get_load_default(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
+t_max_err model_preset_get_load_default(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	

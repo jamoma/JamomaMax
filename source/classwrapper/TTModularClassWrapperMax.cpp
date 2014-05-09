@@ -15,7 +15,7 @@
 static t_hashtab*	wrappedMaxClasses = NULL;
 
 
-t_object* wrappedModularClass_new(t_symbol* name, long argc, t_atom* argv)
+t_object *wrappedModularClass_new(t_symbol *name, long argc, t_atom *argv)
 {
 	WrappedClass*				wrappedMaxClass = NULL;
     WrappedModularInstancePtr	x = NULL;
@@ -189,7 +189,7 @@ t_max_err wrappedModularClass_notify(TTPtr self, t_symbol *s, t_symbol *msg, voi
 	TTAddress                   contextAddress;
     
 #ifndef ARRAY_EXTERNAL
-	t_object*					context;
+	t_object	*				context;
     
 	if (x->subscriberObject.valid()) {
         
@@ -248,12 +248,12 @@ void wrappedModularClass_shareContextNode(TTPtr self, TTNodePtr *contextNode)
 }
 
 
-t_max_err wrappedModularClass_attrGet(TTPtr self, t_object* attr, long* argc, t_atom** argv)
+t_max_err wrappedModularClass_attrGet(TTPtr self, t_object *attr, long* argc, t_atom** argv)
 {
-	t_symbol*	attrName = (t_symbol*)object_method(attr, _sym_getname);
+	t_symbol	*attrName = (t_symbol*)object_method(attr, _sym_getname);
 	TTValue		v;
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
-	t_max_err		err;
+	t_max_err	err;
 	TTPtr		ptr;
 	
 	err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (t_object**)&ptr);
@@ -271,14 +271,14 @@ t_max_err wrappedModularClass_attrGet(TTPtr self, t_object* attr, long* argc, t_
 }
 
 
-t_max_err wrappedModularClass_attrSet(TTPtr self, t_object* attr, long argc, t_atom* argv)
+t_max_err wrappedModularClass_attrSet(TTPtr self, t_object *attr, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
-	t_symbol*	attrName = (t_symbol*)object_method(attr, _sym_getname);
+	t_symbol	*attrName = (t_symbol*)object_method(attr, _sym_getname);
 	TTValue		v;
-	long	ac = 0;
-	t_atom*		av = NULL;
-	t_max_err		m_err;
+	long        ac = 0;
+	t_atom		*av = NULL;
+	t_max_err	m_err;
 	TTErr		err;
 	TTPtr		ptr;
 	
@@ -346,7 +346,7 @@ t_max_err wrappedModularClass_attrSet(TTPtr self, t_object* attr, long argc, t_a
 }
 
 
-void wrappedModularClass_anything(TTPtr self, t_symbol* s, long argc, t_atom* argv)
+void wrappedModularClass_anything(TTPtr self, t_symbol *s, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	ModularSpec*				spec = (ModularSpec*)x->wrappedClassDefinition->specificities;
@@ -416,15 +416,15 @@ void wrappedModularClass_anything(TTPtr self, t_symbol* s, long argc, t_atom* ar
 }
 
 
-TTErr wrappedModularClass_sendMessage(TTPtr self, t_symbol* s, long argc, t_atom* argv)
+TTErr wrappedModularClass_sendMessage(TTPtr self, t_symbol *s, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			inputValue, outputValue;
 	TTSymbol		ttName;
 	TTMessagePtr	aMessage = NULL;
-	long		ac = 0;
-	t_atom*			av = NULL;
-	t_max_err			m_err;
+	long            ac = 0;
+	t_atom			*av = NULL;
+	t_max_err		m_err;
 	TTErr			err;
     TTPtr           ptr;
 	
@@ -456,14 +456,14 @@ TTErr wrappedModularClass_sendMessage(TTPtr self, t_symbol* s, long argc, t_atom
 }
 
 
-TTErr wrappedModularClass_setAttribute(TTPtr self, t_symbol* s, long argc, t_atom* argv)
+TTErr wrappedModularClass_setAttribute(TTPtr self, t_symbol *s, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			inputValue, outputValue;
 	TTSymbol		ttName;
 	TTAttributePtr	anAttribute= NULL;
-	long		ac = 0;
-	t_atom*			av = NULL;
+	long            ac = 0;
+	t_atom			*av = NULL;
 	TTErr			err;
 	
 	err = selectedObject->findAttribute(TTSymbol(s->s_name), &anAttribute);
@@ -494,9 +494,9 @@ void wrappedModularClass_dump(TTPtr self)
     TTValue			names, v;
     TTUInt32		i;
     TTSymbol		aName, address;
-    t_symbol*		s;
-    long		ac;
-    t_atom*			av;
+    t_symbol		*s;
+    long            ac;
+    t_atom			*av;
 	
 #ifndef ARRAY_EXTERNAL
     t_atom			a;
@@ -535,8 +535,8 @@ void wrappedModularClass_paint(WrappedModularInstancePtr x, t_object *view)
 {
 	t_rect			rect;
 	t_rect			r;
-	t_jgraphics*	g;
-	t_jsurface*		jsurface;
+	t_jgraphics     *g;
+	t_jsurface		*jsurface;
 	unsigned char*	data;
 	TTValue			v;
 	TTErr			err;
@@ -590,7 +590,7 @@ TTPtr wrappedModularClass_oksize(TTPtr self, t_rect *newrect)
 }
 
 
-void wrappedModularClass_mousedblclick(TTPtr self, t_object* patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mousedblclick(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -604,7 +604,7 @@ void wrappedModularClass_mousedblclick(TTPtr self, t_object* patcherview, t_pt p
 }
 
 
-void wrappedModularClass_mousedown(TTPtr self, t_object* patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mousedown(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -618,7 +618,7 @@ void wrappedModularClass_mousedown(TTPtr self, t_object* patcherview, t_pt pt, l
 }
 
 
-void wrappedModularClass_mousedrag(TTPtr self, t_object* patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mousedrag(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -632,7 +632,7 @@ void wrappedModularClass_mousedrag(TTPtr self, t_object* patcherview, t_pt pt, l
 }
 
 
-void wrappedModularClass_mouseup(TTPtr self, t_object* patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mouseup(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -646,7 +646,7 @@ void wrappedModularClass_mouseup(TTPtr self, t_object* patcherview, t_pt pt, lon
 }
 
 
-void wrappedModularClass_mouseenter(TTPtr self, t_object* patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mouseenter(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -660,7 +660,7 @@ void wrappedModularClass_mouseenter(TTPtr self, t_object* patcherview, t_pt pt, 
 }
 
 
-void wrappedModularClass_mousemove(TTPtr self, t_object* patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -674,7 +674,7 @@ void wrappedModularClass_mousemove(TTPtr self, t_object* patcherview, t_pt pt, l
 }
 
 
-void wrappedModularClass_mouseleave(TTPtr self, t_object* patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mouseleave(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -714,7 +714,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 	TTValue			v, args;
 	WrappedClass*	wrappedMaxClass = NULL;
 	TTSymbol		TTName;
-	t_symbol*		MaxName = NULL;
+	t_symbol		*MaxName = NULL;
     TTUInt16        i;
 	
 	jamoma_init();
@@ -796,7 +796,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 	o.attributes(v);
 	for (i = 0; i < v.size(); i++) {
 		TTAttributePtr	attr = NULL;
-		t_symbol*		maxType = _sym_long;
+		t_symbol		*maxType = _sym_long;
 		
 		TTName = v[i];
         
@@ -873,7 +873,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 }
 
 
-TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, t_symbol* callbackMethod, TTPtr context, TTSymbol service, TTObject& returnedData, TTBoolean deferlow)
+TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, t_symbol *callbackMethod, TTPtr context, TTSymbol service, TTObject& returnedData, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			baton, v, out;
@@ -905,7 +905,7 @@ TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, t_symbol*
 }
 
 
-TTErr makeInternals_explorer(TTPtr self, TTSymbol name, t_symbol* callbackMethod, TTObject& returnedExplorer, TTBoolean deferlow)
+TTErr makeInternals_explorer(TTPtr self, TTSymbol name, t_symbol *callbackMethod, TTObject& returnedExplorer, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue		v, args, baton;
@@ -940,7 +940,7 @@ TTErr makeInternals_explorer(TTPtr self, TTSymbol name, t_symbol* callbackMethod
 }
 
 
-TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, t_symbol* callbackMethod, TTObject& returnedViewer, TTBoolean deferlow)
+TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, t_symbol *callbackMethod, TTObject& returnedViewer, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			v, baton;
@@ -973,7 +973,7 @@ TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, t_symbo
 }
 
 
-TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, t_symbol* callbackMethod, TTObject& returnedReceiver, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
+TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, t_symbol *callbackMethod, TTObject& returnedReceiver, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			v, args, baton;
@@ -1095,7 +1095,7 @@ TTObjectBasePtr	getSelectedObject(WrappedModularInstancePtr x)
 }
 
 
-void copy_msg_argc_argv(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void copy_msg_argc_argv(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTBoolean	copyMsg = false;
@@ -1115,7 +1115,7 @@ void copy_msg_argc_argv(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
     else if (x->argc != argc + copyMsg) {
         x->argc = argc + copyMsg;
         sysmem_freeptr(x->argv);
-        x->argv = (t_object*)sysmem_newptr(sizeof(t_atom) * x->argc);
+        x->argv = (t_atom*)sysmem_newptr(sizeof(t_atom) * x->argc);
     }
     
     // copy
@@ -1134,7 +1134,7 @@ void copy_msg_argc_argv(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 
 
 #ifdef ARRAY_EXTERNAL
-t_max_err wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
+t_max_err wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -1155,7 +1155,7 @@ t_max_err wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, long *ac, t_atom
 }
 
 
-t_max_err wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, long ac, t_atom* av)
+t_max_err wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, long ac, const t_atom *av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -1169,10 +1169,10 @@ t_max_err wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, long ac, t_atom*
 }
 
 
-void wrappedModularClass_ArraySelect(TTPtr self, t_symbol* msg, long ac, t_atom* av)
+void wrappedModularClass_ArraySelect(TTPtr self, t_symbol *msg, long ac, const t_atom *av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	t_symbol*					instanceAddress;
+	t_symbol					*instanceAddress;
 	TTUInt8						i;
 	TTValue						v;
 	
@@ -1218,7 +1218,7 @@ void wrappedModularClass_ArraySelect(TTPtr self, t_symbol* msg, long ac, t_atom*
 void wrappedModularClass_ArrayResize(TTPtr self, long newSize)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    t_symbol*	instanceAddress;
+    t_symbol	*instanceAddress;
     TTString    s_bracket;
     TTValue     v;
     

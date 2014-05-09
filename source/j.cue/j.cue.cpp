@@ -31,36 +31,36 @@ typedef struct extra {
 
 // Definitions
 void		WrapTTCueManagerClass(WrappedClassPtr c);
-void		WrappedCueManagerClass_new(TTPtr self, long argc, t_atom* argv);
+void		WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv);
 void		WrappedCueManageClass_free(TTPtr self);
 
 void		cue_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 
-void		cue_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		cue_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 void		cue_return_order(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-void		cue_read(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
-void		cue_doread(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		cue_read(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		cue_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 void		cue_read_again(TTPtr self);
 void		cue_doread_again(TTPtr self);
 
-void		cue_write(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
-void		cue_dowrite(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		cue_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		cue_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 void		cue_write_again(TTPtr self);
 void		cue_dowrite_again(TTPtr self);
 
-void		cue_dorecall(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		cue_dorecall(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
 
-void		cue_edit(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
 void		cue_edclose(TTPtr self, char **text, long size);
 void		cue_doedit(TTPtr self);
 
 void		cue_subscribe(TTPtr self);
 
-void		cue_return_model_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		cue_return_model_address(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
 
-t_max_err	cue_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom* *av);
-t_max_err	cue_set_relative(TTPtr self, TTPtr attr, long ac, t_atom* av);
+t_max_err	cue_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom **av);
+t_max_err	cue_set_relative(TTPtr self, TTPtr attr, long ac, const t_atom *av);
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
@@ -101,7 +101,7 @@ void WrapTTCueManagerClass(WrappedClassPtr c)
 	CLASS_ATTR_STYLE(c->maxClass,		"relative",	0,		"onoff");
 }
 
-void WrappedCueManagerClass_new(TTPtr self, long argc, t_atom* argv)
+void WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	t_symbol*					name;
@@ -205,7 +205,7 @@ void cue_subscribe(TTPtr self)
 	}
 }
 
-void cue_return_model_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void cue_return_model_address(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTAddress   absoluteAddress;
@@ -235,7 +235,7 @@ void cue_assist(TTPtr self, void *b, long msg, long arg, char *dst)
  	}
 }
 
-void cue_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void cue_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -246,18 +246,18 @@ void cue_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 		outlet_anything(x->outlets[line_out], msg, argc, argv);
 }
 
-void cue_return_order(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void cue_return_order(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	outlet_anything(x->outlets[dump_out], gensym("order"), argc, argv);
 }
 
-void cue_read(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void cue_read(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	defer(self, (method)cue_doread, msg, argc, argv);
 }
 
-void cue_doread(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void cue_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue		o, v, none;
@@ -320,12 +320,12 @@ void cue_doread_again(TTPtr self)
 	}
 }
 
-void cue_write(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void cue_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	defer(self, (method)cue_dowrite, msg, argc, argv);
 }
 
-void cue_dowrite(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void cue_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char 			filename[MAX_FILENAME_CHARS];
@@ -391,7 +391,7 @@ void cue_dowrite_again(TTPtr self)
 	}
 }
 
-void cue_dorecall(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void cue_dorecall(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			v, none;
@@ -428,7 +428,7 @@ void cue_dorecall(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 	}
 }
 
-void cue_edit(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTString			*buffer;
@@ -565,7 +565,7 @@ void cue_doedit(TTPtr self)
 	EXTRA->cueName = kTTSymEmpty;
 }
 
-t_max_err cue_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
+t_max_err cue_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -585,7 +585,7 @@ t_max_err cue_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
 	return MAX_ERR_NONE;
 }
 
-t_max_err cue_set_relative(TTPtr self, TTPtr attr, long ac, t_atom* av)
+t_max_err cue_set_relative(TTPtr self, TTPtr attr, long ac, const t_atom *av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	

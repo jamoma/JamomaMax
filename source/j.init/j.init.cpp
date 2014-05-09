@@ -35,8 +35,8 @@ void *init_new(t_symbol* s, long argc, t_atom* argv);			// New Object Creation M
 void init_free(t_init *x);
 void init_assist(t_init *x, void *b, long m, long a, char *s);		// Assistance Method
 void init_subscribe(t_init *x);
-void init_return_address(t_init *x, t_symbol* msg, long argc, t_atom* argv);
-void init_return_value(t_init *x, t_symbol* msg, long argc, t_atom* argv);
+void init_return_address(t_init *x, t_symbol *msg, long argc, t_atom *argv);
+void init_return_value(t_init *x, t_symbol *msg, long argc, t_atom *argv);
 //void init_bang(t_init *x);
 
 // Globals
@@ -74,11 +74,11 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 // Object Life
 
 // Create
-void *init_new(t_symbol* s, long argc, t_atom* argv)
+void *init_new(t_symbol *s, long argc, t_atom *argv)
 {
 	long 		attrstart = attr_args_offset(argc, argv);						// support normal arguments
 	t_init 		*x = (t_init *)object_alloc(g_init_class);
-	t_symbol*	relativeAddress = _sym_nothing;											// could be used to binds on a sub level j.hub
+	t_symbol	*relativeAddress = _sym_nothing;											// could be used to binds on a sub level j.hub
 
 	if (attrstart && argv)
 		atom_arg_getsym(&relativeAddress, 0, attrstart, argv);
@@ -185,13 +185,13 @@ void init_subscribe(t_init *x)
 		object_error((t_object*)x, "can't bind because %s is not a relative address", x->address.c_str());
 }
 
-void init_return_address(t_init *x, t_symbol* msg, long argc, t_atom* argv)
+void init_return_address(t_init *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	;
 }
 
 // GO !
-void init_return_value(t_init *x, t_symbol* msg, long argc, t_atom* argv)
+void init_return_value(t_init *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	if (atom_gettype(argv) == A_LONG) {
         

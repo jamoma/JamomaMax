@@ -91,7 +91,7 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	CLASS_ATTR_STYLE(c->maxClass,		"amenities",	0,		"text");
 }
 
-void WrappedContainerClass_new(TTPtr self, long argc, t_atom* argv)
+void WrappedContainerClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue						none;
@@ -303,7 +303,7 @@ void model_subscribe(TTPtr self)
 	}
 }
 
-void model_subscribe_view(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTObject        aReceiver;
@@ -400,7 +400,7 @@ void model_subscribe_view(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
     EXTRA->modelInfo.set(kTTSym_address, modelAdrs);
 }
 
-void model_return_upper_view_model_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_return_upper_view_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTAddress       upperViewModelAddress;
@@ -480,7 +480,7 @@ void model_share_patcher_node(TTPtr self, TTNodePtr *patcherNode)
 	}
 }
 
-void WrappedContainerClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void WrappedContainerClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -488,7 +488,7 @@ void WrappedContainerClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom
 	jamoma_container_send(x->wrappedObject, msg, argc, argv);
 }
 
-void model_return_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_return_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
@@ -496,7 +496,7 @@ void model_return_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 	x->msg = msg;
 }
 
-void model_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -504,12 +504,12 @@ void model_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 	outlet_anything(x->outlets[data_out], x->msg, argc, argv);
 }
 
-void model_reference_write(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_reference_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	defer(self, (method)model_reference_dowrite, msg, argc, argv);
 }
 
-void model_reference_dowrite(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_reference_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char				filename[MAX_FILENAME_CHARS];
@@ -538,7 +538,7 @@ void model_reference_dowrite(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 	}
 }
 
-void model_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -555,7 +555,7 @@ void model_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 	}
 }
 
-t_max_err model_get_amenities(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
+t_max_err model_get_amenities(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTValue keys;
@@ -579,7 +579,7 @@ t_max_err model_get_amenities(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
 	return MAX_ERR_NONE;
 }
 
-t_max_err model_set_amenities(TTPtr self, TTPtr attr, long ac, t_atom* av)
+t_max_err model_set_amenities(TTPtr self, TTPtr attr, long ac, t_atom *av)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTValue     keys, none;

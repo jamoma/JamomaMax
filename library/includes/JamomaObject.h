@@ -39,7 +39,7 @@ void		jamoma_object_initclass(void);
 /** Object instantiation.
  @return		Pointer to the instantiated object.
  */
-t_object*	jamoma_object_new();
+t_object	*jamoma_object_new();
 
 
 /** Called when the object is freed.

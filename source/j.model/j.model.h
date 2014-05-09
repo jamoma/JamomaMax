@@ -27,7 +27,7 @@ typedef struct extra {
     TTAddress           argAddress;         ///< Store the address from the argument (see in model_upper_view_model_address).
     
     TTString            *text;				///< The text of the editor to read after edclose.
-	ObjectPtr           textEditor;			///< The text editor window.
+	t_object            *textEditor;		///< The text editor window.
     
     TTObject            presetManager;		///< The preset manager object.
     TTBoolean           attr_load_default;
@@ -58,7 +58,7 @@ void		WrapTTContainerClass(WrappedClassPtr c);
  @param argc		The number of arguments to the new object instance
  @param argv		Pointer to the array of atoms containing the arguments to the object instance.
  */
-void		WrappedContainerClass_new(TTPtr self, long argc, t_atom* argv);
+void		WrappedContainerClass_new(TTPtr self, long argc, t_atom *argv);
 
 
 /** Deconstructor: Destroy the object and free memory assigned to it.
@@ -73,7 +73,7 @@ void		WrappedContainerClass_free(TTPtr self);
  @param argc		The number of arguments of the message.
  @param argv		The arguments of the message as an array of atoms.
  */
-void		WrappedContainerClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		WrappedContainerClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /** Display assist messages for inlets and outlets in Max.
@@ -106,7 +106,7 @@ void		model_share_patcher_node(TTPtr self, TTNodePtr *patcherNode);
  @param argc
  @param argv
  */
-void		model_return_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		model_return_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 
@@ -116,7 +116,7 @@ void		model_return_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
  @param argc
  @param argv
  */
-void		model_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		model_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -131,7 +131,7 @@ void		model_subscribe(TTPtr self);
  @param argc
  @param argv
  */
-void		model_subscribe_view(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -140,7 +140,7 @@ void		model_subscribe_view(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
  @param argc
  @param argv
  */
-void        model_return_upper_view_model_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void        model_return_upper_view_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -155,7 +155,7 @@ void		model_init(TTPtr self);
  @param argc
  @param argv
  */
-void		model_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv);		// only in view patch
+void		model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv);		// only in view patch
 
 
 /**
@@ -164,7 +164,7 @@ void		model_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv);		// onl
  @param argc
  @param argv
  */
-void		model_reference_write(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		model_reference_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -173,7 +173,7 @@ void		model_reference_write(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
  @param argc
  @param argv
  */
-void		model_reference_dowrite(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		model_reference_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -205,7 +205,7 @@ void		model_preset_filechanged(TTPtr self, char *filename, short path);
  @param argc
  @param argv
  */
-void		model_preset_read(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		model_preset_read(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -214,7 +214,7 @@ void		model_preset_read(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
  @param argc
  @param argv
  */
-void		model_preset_doread(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		model_preset_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -235,7 +235,7 @@ void		model_preset_doread_again(TTPtr self);
  @param argc
  @param argv
  */
-void		model_preset_write(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		model_preset_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -244,7 +244,7 @@ void		model_preset_write(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
  @param argc
  @param argv
  */
-void		model_preset_dowrite(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		model_preset_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -271,7 +271,7 @@ void		model_preset_default(TTPtr self);
  @param argc
  @param argv
  */
-void		model_preset_dorecall(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		model_preset_dorecall(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -280,7 +280,7 @@ void		model_preset_dorecall(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
  @param argc
  @param argv
  */
-void		model_preset_edit(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		model_preset_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
 
 
 /**
@@ -303,7 +303,7 @@ void		model_preset_doedit(TTPtr self);
  @param ac
  @param av
  */
-t_max_err	model_preset_get_load_default(TTPtr self, TTPtr attr, long *ac, t_atom* *av);
+t_max_err	model_preset_get_load_default(TTPtr self, TTPtr attr, long *ac, t_atom **av);
 
 
 /**
@@ -312,7 +312,7 @@ t_max_err	model_preset_get_load_default(TTPtr self, TTPtr attr, long *ac, t_atom
  @param ac
  @param av
  */
-t_max_err	model_preset_set_load_default(TTPtr self, TTPtr attr, long ac, t_atom* av);
+t_max_err	model_preset_set_load_default(TTPtr self, TTPtr attr, long ac, const t_atom *av);
 
 
 /**
@@ -321,7 +321,7 @@ t_max_err	model_preset_set_load_default(TTPtr self, TTPtr attr, long ac, t_atom*
  @param ac
  @param av
  */
-t_max_err	model_get_amenities(TTPtr self, TTPtr attr, long *ac, t_atom* *av);
+t_max_err	model_get_amenities(TTPtr self, TTPtr attr, long *ac, t_atom **av);
 
 
 /**
@@ -330,7 +330,7 @@ t_max_err	model_get_amenities(TTPtr self, TTPtr attr, long *ac, t_atom* *av);
  @param ac
  @param av
  */
-t_max_err	model_set_amenities(TTPtr self, TTPtr attr, long ac, t_atom* av);
+t_max_err	model_set_amenities(TTPtr self, TTPtr attr, long ac, t_atom *av);
 
 
 /**
@@ -346,7 +346,7 @@ TTBoolean   model_test_amenities(TTPtr self, TTSymbol name);
  @param argc
  @param argv
  */
-void        model_signal_return_content(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void        model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -355,7 +355,7 @@ void        model_signal_return_content(TTPtr self, t_symbol* msg, long argc, t_
  @param argc
  @param argv
  */
-void        model_signal_return_data_mute(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void        model_signal_return_data_mute(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -364,7 +364,7 @@ void        model_signal_return_data_mute(TTPtr self, t_symbol* msg, long argc, 
  @param argc
  @param argv
  */
-void        model_signal_return_data_bypass(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void        model_signal_return_data_bypass(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -373,7 +373,7 @@ void        model_signal_return_data_bypass(TTPtr self, t_symbol* msg, long argc
  @param argc
  @param argv
  */
-void        model_signal_return_data_freeze(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void        model_signal_return_data_freeze(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -382,7 +382,7 @@ void        model_signal_return_data_freeze(TTPtr self, t_symbol* msg, long argc
  @param argc
  @param argv
  */
-void        model_signal_return_data_preview(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void        model_signal_return_data_preview(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -391,7 +391,7 @@ void        model_signal_return_data_preview(TTPtr self, t_symbol* msg, long arg
  @param argc
  @param argv
  */
-void        model_signal_return_audio_mute(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void        model_signal_return_audio_mute(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -400,7 +400,7 @@ void        model_signal_return_audio_mute(TTPtr self, t_symbol* msg, long argc,
  @param argc
  @param argv
  */
-void        model_signal_return_audio_bypass(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void        model_signal_return_audio_bypass(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -409,7 +409,7 @@ void        model_signal_return_audio_bypass(TTPtr self, t_symbol* msg, long arg
  @param argc
  @param argv
  */
-void        model_signal_return_audio_mix(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void        model_signal_return_audio_mix(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -418,5 +418,5 @@ void        model_signal_return_audio_mix(TTPtr self, t_symbol* msg, long argc, 
  @param argc
  @param argv
  */
-void        model_signal_return_audio_gain(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void        model_signal_return_audio_gain(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 

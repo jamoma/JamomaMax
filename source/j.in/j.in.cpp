@@ -22,7 +22,7 @@
 typedef struct extra {
 	
 	TTSymbol    instance;		///< Input instance symbol
-    (t_object*)   modelOrView;    ///< the j.model or j.view object of our patcher
+    t_object    *modelOrView;   ///< the j.model or j.view object of our patcher
 	
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
@@ -42,7 +42,7 @@ void		WrapTTInputClass(WrappedClassPtr c);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				WrappedInputClass_free, in_subscribe
  */
-void		WrappedInputClass_new(TTPtr self, long argc, t_atom* argv);
+void		WrappedInputClass_new(TTPtr self, long argc, t_atom *argv);
 
 /** Wrapper for the j.in deconstructor class, called when an instance is destroyed. 
  @param self		Pointer to this object.
@@ -118,10 +118,10 @@ void		in_float(TTPtr self, double value);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				in_bang, in_int, in_float, WrappedInputClass_anything
  */
-void		in_list(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		in_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 /** Method used to pass messages from the module outlet. */
-void		in_return_signal(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		in_return_signal(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 #endif
 #endif
 
@@ -132,7 +132,7 @@ void		in_return_signal(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				in_bang, in_int, in_float, in_list
  */
-void		WrappedInputClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		WrappedInputClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 #pragma mark -
@@ -193,7 +193,7 @@ void WrapTTInputClass(WrappedClassPtr c)
 #pragma mark -
 #pragma mark Object life
 
-void WrappedInputClass_new(TTPtr self, long argc, t_atom* argv)
+void WrappedInputClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
@@ -465,7 +465,7 @@ void in_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     jamoma_input_send(x->wrappedObject, msg, argc, argv);
 }
 
-void in_return_signal(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void in_return_signal(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -478,7 +478,7 @@ void in_return_signal(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 #endif
 #endif
 
-void WrappedInputClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void WrappedInputClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 

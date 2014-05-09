@@ -479,7 +479,7 @@ void dbap_view_size(t_dbap *x, long sizeX, long sizeY) {
         
         // warn the user that large dimension while take a long to render
         if ((sizeX > MAX_SIZE_VIEW_X)||(sizeY > MAX_SIZE_VIEW_Y))
-            object_warn(ObjectPtr(x), "size over %d x %d takes time to render", MAX_SIZE_VIEW_X, MAX_SIZE_VIEW_Y);
+            object_warn((t_object*)x, "size over %d x %d takes time to render", MAX_SIZE_VIEW_X, MAX_SIZE_VIEW_Y);
 		
 		x->view_info.dim[0] = sizeX;
 		x->view_info.dim[1] = sizeY;

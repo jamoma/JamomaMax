@@ -34,28 +34,28 @@ typedef struct extra {
 
 // Definitions
 void		WrapTTDataClass(WrappedClassPtr c);
-void		WrappedDataClass_new(TTPtr self, long argc, t_atom* argv);
+void		WrappedDataClass_new(TTPtr self, long argc, t_atom *argv);
 void		WrappedDataClass_free(TTPtr self);
 
 void		data_assist(TTPtr self, TTPtr b, long msg, long arg, char *dst);
 
-void		data_new_address(TTPtr self, t_symbol* msg);
+void		data_new_address(TTPtr self, t_symbol *msg);
 void		data_array_create(TTPtr self, TTObject& returnedData, TTSymbol service, TTUInt32 index);
-void		data_address(TTPtr self, t_symbol* name);
+void		data_address(TTPtr self, t_symbol *name);
 
 void		data_array_return_value(const TTValue& baton, const TTValue& v);
 void		data_edit_array(TTPtr self, TTValue& array);
 
-void		WrappedDataClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		WrappedDataClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 void		data_bang(TTPtr self);
 void		data_int(TTPtr self, long value);
 void		data_float(TTPtr self, double value);
-void		data_list(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		data_list(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
 
-void		data_array(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		data_array(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
 
-void		data_inc(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
-void		data_dec(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		data_inc(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
+void		data_dec(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
@@ -97,10 +97,10 @@ void WrapTTDataClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)data_address,						"address",				A_SYM,0);
 }
 
-void WrappedDataClass_new(TTPtr self, long argc, t_atom* argv)
+void WrappedDataClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	t_symbol*					relativeAddress;
+	t_symbol					*relativeAddress;
 	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
 	TTValue						none;
 	
@@ -169,21 +169,21 @@ void WrappedDataClass_free(TTPtr self)
     }
 }
 
-void data_new_address(TTPtr self, t_symbol* relativeAddress)
+void data_new_address(TTPtr self, t_symbol *relativeAddress)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	long					argc = 0; 
-	t_atom*						argv = NULL;
-	TTUInt32					number;
-	TTUInt32					i;
-	TTAddress					newAddress = relativeAddress->s_name;
-    TTAddress                   returnedAddress;
-    TTNodePtr                   returnedNode = NULL;
-    TTNodePtr                   returnedContextNode = NULL;
-	t_symbol*					instanceAddress;
-	TTObject                    anObject;
-	TTObject                    aSubscriber;
-	TTValue						v;
+	long		argc = 0; 
+	t_atom		*argv = NULL;
+	TTUInt32	number;
+	TTUInt32	i;
+	TTAddress	newAddress = relativeAddress->s_name;
+    TTAddress   returnedAddress;
+    TTNodePtr   returnedNode = NULL;
+    TTNodePtr   returnedContextNode = NULL;
+	t_symbol    *instanceAddress;
+	TTObject    anObject;
+	TTObject    aSubscriber;
+	TTValue		v;
     
     x->useInternals = YES;
     x->internals.clear();
@@ -277,7 +277,7 @@ void data_array_create(TTPtr self, TTObject& returnedData, TTSymbol service, TTU
 	returnedData.set(kTTSym_function, TTPtr(&data_array_return_value));
 }
 
-void data_address(TTPtr self, t_symbol* address)
+void data_address(TTPtr self, t_symbol *address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -303,9 +303,9 @@ void data_address(TTPtr self, t_symbol* address)
                 if (x->arrayAttrFormat == gensym("array")) {
                     
                     TTValue     array;
-                    t_symbol*	msg;
+                    t_symbol	*msg;
                     long		argc = 0;
-                    t_atom*		argv = NULL;
+                    t_atom		*argv = NULL;
                     TTBoolean	shifted = NO;
                     
                     data_edit_array(self, array);
@@ -403,7 +403,7 @@ void data_float(TTPtr self, double value)
 		object_error((t_object*)x, "float : the array is empty");
 }
 
-void data_list(TTPtr self, t_symbol* msg, long argc, t_atom *argv)
+void data_list(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -429,7 +429,7 @@ void data_list(TTPtr self, t_symbol* msg, long argc, t_atom *argv)
 		object_error((t_object*)x, "list : the array is empty");
 }
 
-void WrappedDataClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void WrappedDataClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -455,11 +455,11 @@ void WrappedDataClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* arg
 	}
 }
 
-void data_array(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void data_array(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTInt32     d, i;
-    t_symbol*	instanceAddress;
+    t_symbol	*instanceAddress;
     TTSymbol    memoCursor;
     
 	if (!x->internals.isEmpty()) {
@@ -488,7 +488,7 @@ void data_array(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 		object_error((t_object*)x, "array : the array is empty");
 }
 
-void data_inc(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void data_inc(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue v, none;
@@ -497,7 +497,7 @@ void data_inc(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 	selectedObject->sendMessage(TTSymbol("Inc"), v, none);
 }
 
-void data_dec(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void data_dec(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue v, none;
@@ -510,14 +510,14 @@ void data_array_return_value(const TTValue& baton, const TTValue& v)
 {
 	WrappedModularInstancePtr	x;
 	TTValue                     array;
-	t_symbol*					msg, iAdrs;
+	t_symbol					*msg, *iAdrs;
 	TTUInt32					i;
 	long						argc = 0;
-	t_atom*						argv = NULL;
+	t_atom						*argv = NULL;
 	TTBoolean					shifted = NO;
 
 	
-	// unpack baton (a t_object* and the index of the value)
+	// unpack baton (a t_object *and the index of the value)
 	x = WrappedModularInstancePtr((TTPtr)baton[0]);
 	i = baton[1];
 	
@@ -591,7 +591,7 @@ void data_edit_array(TTPtr self, TTValue& array)
     }
 }
 
-t_max_err data_get_format(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
+t_max_err data_get_format(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -611,7 +611,7 @@ t_max_err data_get_format(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
 	return MAX_ERR_NONE;
 }
 
-t_max_err data_set_format(TTPtr self, TTPtr attr, long ac, t_atom* av) 
+t_max_err data_set_format(TTPtr self, TTPtr attr, long ac, const t_atom *av) 
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	

@@ -37,7 +37,7 @@ void		WrapTTSenderClass(WrappedClassPtr c);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				WrappedSenderClass_free, send_subscribe
  */
-void		WrappedSenderClass_new(TTPtr self, long argc, t_atom* argv);
+void		WrappedSenderClass_new(TTPtr self, long argc, t_atom *argv);
 
 /** Wrapper for the j.send deconstructor class, called when an instance is destroyed. 
  @param self		Pointer to this object.
@@ -64,7 +64,7 @@ void		send_subscribe(TTPtr self);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				send_subscribe
   */
-void		send_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		send_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 #ifdef JCOM_SEND_TILDE
 
@@ -109,7 +109,7 @@ void		send_float(TTPtr self, double value);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				send_bang, send_int, send_float, WrappedSenderClass_anything
  */
-void		send_list(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		send_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 /** anything else handler for j.send 
  @param self		Pointer to this object.
@@ -118,7 +118,7 @@ void		send_list(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
  @param argv		Pointer to an array of atoms passed to the object.
  @see				send_bang, send_int, send_float, send_list
  */
-void		WrappedSenderClass_anything(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		WrappedSenderClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 /** Internal method used to send data to a j.in. 
  @param self		Pointer to this object.
@@ -127,7 +127,7 @@ void		WrappedSenderClass_anything(TTPtr self, SymbolPtr msg, long argc, t_atom* 
  @param argv		Pointer to an array of atoms passed to the object.
  @see				send_list
  */
-void		send_input(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
+void		send_input(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 #endif
 
@@ -136,7 +136,7 @@ void		send_input(TTPtr self, SymbolPtr msg, long argc, t_atom* argv);
  @param address		The address to bind
  @see				send_subscribe
  */
-void		send_address(TTPtr self, SymbolPtr address);
+void		send_address(TTPtr self, t_symbol *address);
 
 #pragma mark -
 #pragma mark main
@@ -185,10 +185,10 @@ void WrapTTSenderClass(WrappedClassPtr c)
 #pragma mark -
 #pragma mark Object life
 
-void WrappedSenderClass_new(TTPtr self, long argc, t_atom* argv)
+void WrappedSenderClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	SymbolPtr					address;
+	t_symbol					*address;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
     t_atom						a[1];
 	
@@ -323,7 +323,7 @@ void send_subscribe(TTPtr self)
 	defer_low((t_object*)x, (method)send_subscribe, NULL, 0, 0);
 }
 
-void send_return_model_address(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void send_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTAddress                   absoluteAddress;
@@ -382,7 +382,7 @@ void send_float(TTPtr self, double value)
 	send_list(self, _sym_float, 1, &a);
 }
 
-void send_list(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void send_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -390,7 +390,7 @@ void send_list(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 	if (x->address == kTTAdrsEmpty) {
 			
 			TTAddress anAddress = TTAddress(msg->s_name);
-			SymbolPtr newMsg;
+			t_symbol *newMsg;
 			
 			// send only to absolute address
 			if (anAddress.getType() == kAddressAbsolute) {
@@ -418,14 +418,14 @@ void send_list(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
 		jamoma_sender_send(x->wrappedObject, msg, argc, argv);
 }
 
-void WrappedSenderClass_anything(TTPtr self, SymbolPtr msg, long argc, t_atom* argv)
+void WrappedSenderClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {	
 	send_list(self, msg, argc, argv);
 }
 
 #endif
 
-void send_address(TTPtr self, SymbolPtr address)
+void send_address(TTPtr self, t_symbol *address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     t_atom						a[1];

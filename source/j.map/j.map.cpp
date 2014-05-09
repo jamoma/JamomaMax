@@ -27,7 +27,7 @@ typedef struct extra {
 
 // Definitions
 void WrapTTMapperClass(WrappedClassPtr c);
-void WrappedMapperClass_new(TTPtr self, long argc, t_atom* argv);
+void WrappedMapperClass_new(TTPtr self, long argc, t_atom *argv);
 void WrappedMapperClass_free(TTPtr self);
 
 void map_assist(TTPtr self, void *b, long msg, long arg, char *dst);
@@ -40,7 +40,7 @@ void map_return_output_going_up(TTPtr self, t_symbol *msg, long argc, t_atom *ar
 
 void map_int(TTPtr self, long value);
 void map_float(TTPtr self, double value);
-void map_list(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void map_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 void map_reset(TTPtr self);
 
@@ -74,10 +74,10 @@ void WrapTTMapperClass(WrappedClassPtr c)
     class_addmethod(c->maxClass, (method)map_reset, "reset", 0L);
 }
 
-void WrappedMapperClass_new(TTPtr self, long argc, t_atom* argv)
+void WrappedMapperClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
-	t_symbol* relativeAddress;
+	t_symbol *relativeAddress;
 	long attrstart = attr_args_offset(argc, argv); // support normal arguments
 	
 	// possible relativeAddress
@@ -180,28 +180,28 @@ void map_subscribe(TTPtr self)
 	 */
 }
 
-void map_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void map_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
 	outlet_atoms(x->outlets[data_out], argc, argv);
 }
 
-void map_return_input_going_down(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void map_return_input_going_down(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     object_obex_dumpout(self, gensym("input/going/down"), argc, argv);
 }
 
-void map_return_input_going_up(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void map_return_input_going_up(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     object_obex_dumpout(self, gensym("input/going/up"), argc, argv);
 }
 
-void map_return_output_going_down(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void map_return_output_going_down(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     object_obex_dumpout(self, gensym("output/going/down"), argc, argv);
 }
 
-void map_return_output_going_up(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void map_return_output_going_up(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     object_obex_dumpout(self, gensym("output/going/up"), argc, argv);
 }
@@ -227,7 +227,7 @@ void map_float(TTPtr self, double value)
 	map_list(self, _sym_float, 1, &a);
 }
 
-void map_list(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void map_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
 	TTValue inputValue, outputValue;
@@ -243,7 +243,7 @@ void map_reset(TTPtr self)
 {
     WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
     long   argc = 0;
-    t_atom*     argv = NULL;
+    t_atom *argv = NULL;
     
     jamoma_ttvalue_to_Atom(*EXTRA->arguments, &argc, &argv);
     

@@ -30,7 +30,7 @@ typedef struct extra {
 
 // Definitions
 void		WrapTTDataClass(WrappedClassPtr c);
-void		WrappedDataClass_new(TTPtr self, long argc, t_atom* argv);
+void		WrappedDataClass_new(TTPtr self, long argc, t_atom *argv);
 void        WrappedDataClass_free(TTPtr self);
 
 
@@ -43,14 +43,14 @@ void        WrappedDataClass_free(TTPtr self);
  */
 void		data_assist(TTPtr self, TTPtr b, long msg, long arg, char *dst);
 
-void		data_new_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
-void		data_subscribe(TTPtr self, t_symbol* address, long argc, t_atom* argv);
-void		data_address(TTPtr self, t_symbol* name);
+void		data_new_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		data_subscribe(TTPtr self, t_symbol *address, long argc, t_atom *argv);
+void		data_address(TTPtr self, t_symbol *name);
 
-void		data_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		data_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
-void		WrappedDataClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		WrappedDataClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /** Process an incoming 'bang' message.
@@ -79,7 +79,7 @@ void		data_float(TTPtr self, double value);
  @param argc		t_atom array count (length)
  @param argv		Pointer to the atom array
  */
-void		data_list(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		data_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /** Increase parameter value in steps.
@@ -90,7 +90,7 @@ void		data_list(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
  @param argv		Pointer to the atom array
  @see	param_inc
  */
-void		data_inc(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		data_inc(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /** Decrease parameter value in steps.
@@ -101,7 +101,7 @@ void		data_inc(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
  @param argv	Pointer to the atom array
  @see	param_inc
  */
-void		data_dec(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		data_dec(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 
@@ -147,7 +147,7 @@ void WrapTTDataClass(WrappedClassPtr c)
 }
 
 
-void WrappedDataClass_new(TTPtr self, long argc, t_atom* argv)
+void WrappedDataClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	t_symbol*					relativeAddress;
@@ -209,7 +209,7 @@ void WrappedDataClass_free(TTPtr self)
 }
 
 
-void data_new_address(TTPtr self, t_symbol* relativeAddress, long argc, t_atom* argv)
+void data_new_address(TTPtr self, t_symbol *relativeAddress, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -238,7 +238,7 @@ void data_new_address(TTPtr self, t_symbol* relativeAddress, long argc, t_atom* 
 }
 
 
-void data_subscribe(TTPtr self, t_symbol* relativeAddress, long argc, t_atom* argv)
+void data_subscribe(TTPtr self, t_symbol *relativeAddress, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTAddress   returnedAddress;
@@ -263,11 +263,11 @@ void data_subscribe(TTPtr self, t_symbol* relativeAddress, long argc, t_atom* ar
 }
 
 
-void data_address(TTPtr self, t_symbol* address)
+void data_address(TTPtr self, t_symbol *address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    long					argc = 0;
-	t_atom*						argv = NULL;
+    long	argc = 0;
+	t_atom	*argv = NULL;
 	
 	// unregister wrapped object (or internals)
 	wrappedModularClass_unregister(x);
@@ -331,7 +331,7 @@ void data_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 }
 
 
-void WrappedDataClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void WrappedDataClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -339,7 +339,7 @@ void WrappedDataClass_anything(TTPtr self, t_symbol* msg, long argc, t_atom* arg
 }
 
 
-void data_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void data_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -351,7 +351,7 @@ void data_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 }
 
 
-void data_inc(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void data_inc(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue v, none;
@@ -361,7 +361,7 @@ void data_inc(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 }
 
 
-void data_dec(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void data_dec(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue v, none;

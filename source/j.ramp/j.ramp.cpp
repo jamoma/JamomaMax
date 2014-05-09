@@ -126,14 +126,14 @@ void WrappedRampClass_new(TTPtr self, long argc, t_atom* argv)
 	WrappedModularInstancePtr   x = (WrappedModularInstancePtr)self;
     
     // create the wrapped TTRamp instance
-    jamoma_ramp_create((t_object*)x, &x->wrappedObject);
+    jamoma_ramp_create((t_object*)x, x->wrappedObject);
     
     // create an outlet for ramped value
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr));
     x->outlets[k_outlet_value] = outlet_new(x, 0L);
     
     // Set default scheduler
-    x->wrappedObject->setAttributeValue(TTSymbol("scheduler"), TTSymbol("Max"));
+    x->wrappedObject.set("scheduler", TTSymbol("Max"));
     
     // Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
@@ -180,7 +180,7 @@ void ramp_bang(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
-    x->wrappedObject->sendMessage(kTTSym_Tick);
+    x->wrappedObject.send(kTTSym_Tick);
 }
 
 
@@ -188,10 +188,9 @@ void ramp_bang(TTPtr self)
 void ramp_int(TTPtr self, long value)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
-    TTValue     v = TTFloat64(value), none;
+    TTValue none;
     
-    aRamp->sendMessage(TTSymbol("Set"), v, none);
+    x->wrappedObject.send("Set", TTFloat64(value), none);
 
     outlet_float(x->outlets[k_outlet_value], value);
 }
@@ -201,10 +200,9 @@ void ramp_int(TTPtr self, long value)
 void ramp_float(TTPtr self, double value)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
-    TTValue     v = TTFloat64(value), none;
+    TTValue none;
     
-    aRamp->sendMessage(TTSymbol("Set"), v, none);
+    x->wrappedObject.send("Set", TTFloat64(value), none);
     
     outlet_float(x->outlets[k_outlet_value], value);
 }
@@ -214,12 +212,11 @@ void ramp_float(TTPtr self, double value)
 void ramp_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
-    TTValue     v, none;
+    TTValue v, none;
     
     jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
     
-    aRamp->sendMessage(TTSymbol("Set"), v, none);
+    x->wrappedObject.send("Set", v, none);
 }
 
 
@@ -227,9 +224,8 @@ void ramp_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 void ramp_stop(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
     
-    aRamp->sendMessage(TTSymbol("Stop"));
+    x->wrappedObject.send("Stop");
 }
 
 
@@ -237,7 +233,6 @@ void ramp_stop(TTPtr self)
 void ramp_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTRampPtr	aRamp = (TTRampPtr)x->wrappedObject;
     short       i;
     short       ramp_keyword_index = -1;
     TTValue     v, none;
@@ -259,7 +254,7 @@ void ramp_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     
     if (ramp_keyword_index == -1) { // just a list w/o ramp information
         
-        aRamp->sendMessage(TTSymbol("Set"), v, none);
+        x->wrappedObject.send("Set", v, none);
         
         outlet_anything(x->outlets[k_outlet_value], _sym_list, argc, argv);
     }
@@ -272,13 +267,9 @@ void ramp_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         }
         else { // "ramp" is the second last list member, so we start ramping
             
-            aRamp->sendMessage(TTSymbol("Set"), *(EXTRA->currentValue), none);
-            
-            aRamp->sendMessage(TTSymbol("Target"), v, none);
-            
-            // get time
-            v = TTValue(TTFloat64(atom_getfloat(argv+argc-1)));
-            aRamp->sendMessage(TTSymbol("Go"), v, none);
+            x->wrappedObject.send("Set", *(EXTRA->currentValue), none);
+            x->wrappedObject.send("Target", v, none);
+            x->wrappedObject.send("Go", TTFloat64(atom_getfloat(argv+argc-1)), none);
         }
     }
 }
@@ -303,7 +294,7 @@ void ramp_schedulerParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTValue     v;
     long        ac = 0;
-    t_atom*		av = NULL;
+    t_atom		*av = NULL;
     
     if (!argc) {
         error("j.ramp: not enough arguments to get or set scheduler/parameter/value");
@@ -314,7 +305,7 @@ void ramp_schedulerParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     if (argc == 1) {
         
         v = TTSymbol(atom_getsym(argv)->s_name);
-        x->wrappedObject->getAttributeValue(TTSymbol("schedulerParameterValue"), v);
+        x->wrappedObject.get("schedulerParameterValue", v);
         
         v.prepend(TTSymbol(atom_getsym(argv)->s_name));
         jamoma_ttvalue_to_Atom(v, &ac, &av);
@@ -326,7 +317,7 @@ void ramp_schedulerParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     // 2 or more arguments : set the value
     jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
     
-    x->wrappedObject->setAttributeValue(TTSymbol("schedulerParameterValue"), v);
+    x->wrappedObject.set("schedulerParameterValue", v);
 }
 
 void ramp_functionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
@@ -334,7 +325,7 @@ void ramp_functionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTValue     v;
     long        ac = 0;
-    t_atom*		av = NULL;
+    t_atom      *av = NULL;
     
     if (!argc) {
         error("j.ramp: not enough arguments to get or set function/parameter/value");
@@ -345,7 +336,7 @@ void ramp_functionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     if (argc == 1) {
         
         v = TTSymbol(atom_getsym(argv)->s_name);
-        x->wrappedObject->getAttributeValue(TTSymbol("functionParameterValue"), v);
+        x->wrappedObject.get("functionParameterValue", v);
         
         v.prepend(TTSymbol(atom_getsym(argv)->s_name));
         jamoma_ttvalue_to_Atom(v, &ac, &av);
@@ -357,5 +348,5 @@ void ramp_functionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     // 2 or more arguments : set the value
     jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
     
-    x->wrappedObject->setAttributeValue(TTSymbol("functionParameterValue"), v);
+    x->wrappedObject.set("functionParameterValue", v);
 }

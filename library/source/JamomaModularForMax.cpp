@@ -25,7 +25,7 @@
 // Method to deal with TTSubscriber
 ///////////////////////////////////////////////////////////////////////
 
-TTErr jamoma_subscriber_create(ObjectPtr x, TTObject anObject, TTAddress relativeAddress, TTObject& returnedSubscriber, TTSymbol& returnedAddress, TTNodePtr *returnedNode, TTNodePtr *returnedContextNode)
+TTErr jamoma_subscriber_create(t_object *x, TTObject anObject, TTAddress relativeAddress, TTObject& returnedSubscriber, TTSymbol& returnedAddress, TTNodePtr *returnedNode, TTNodePtr *returnedContextNode)
 {
 	TTValue		v, args;
 	TTList		aContextList;
@@ -78,14 +78,14 @@ TTErr jamoma_subscriber_create(ObjectPtr x, TTObject anObject, TTAddress relativ
 				returnedSubscriber.get("contextAddress", v);
 				newContextAddress = v[0];
 
-                ObjectPtr patcher;
+                t_object *patcher;
                 TTSymbol  patcherContext;
                 TTSymbol  patcherClass;
                 TTSymbol  patcherName;
                 TTAddress patcherArg;
                 TTString  newPatcherArgument;
-                AtomCount argc = 0;
-                AtomPtr   argv = NULL;
+                long argc = 0;
+                t_atom *  argv = NULL;
                 
                 // get patcher info
                 jamoma_patcher_get_info(x, &patcher, patcherContext, patcherClass, patcherName);
@@ -137,11 +137,11 @@ TTErr jamoma_subscriber_create(ObjectPtr x, TTObject anObject, TTAddress relativ
 	return kTTErrGeneric;
 }
 
-void jamoma_subscriber_get_patcher_list(ObjectPtr x, TTList& aContextListToFill)
+void jamoma_subscriber_get_patcher_list(t_object *x, TTList& aContextListToFill)
 {
 	TTValue		v;
-	ObjectPtr	objPtr = x;
-	ObjectPtr	patcherPtr = NULL;
+	t_object	*objPtr = x;
+	t_object	*patcherPtr = NULL;
 	TTSymbol	patcherContext;
 	TTSymbol	patcherName;
 	TTSymbol	patcherClass;
@@ -185,7 +185,7 @@ void jamoma_subscriber_get_patcher_list(ObjectPtr x, TTList& aContextListToFill)
 ///////////////////////////////////////////////////////////////////////
 
 /**	Create a container object */
-TTErr jamoma_container_create(ObjectPtr x, TTObject& returnedContainer)
+TTErr jamoma_container_create(t_object *x, TTObject& returnedContainer)
 {
 	TTValue     args, none;
 	TTObject	returnAddressCallback, returnValueCallback;
@@ -207,7 +207,7 @@ TTErr jamoma_container_create(ObjectPtr x, TTObject& returnedContainer)
 }
 
 /**	Send Max data to a node (e.g., a j.parameter object) using a container object. */
-TTErr jamoma_container_send(TTObject aContainer, SymbolPtr relativeAddressAndAttribute, AtomCount argc, AtomPtr argv)
+TTErr jamoma_container_send(TTObject aContainer, t_symbol *relativeAddressAndAttribute, long argc, const t_atom *argv)
 {
 	TTAddress anAddress;
 	TTValue	v, data, none;
@@ -242,7 +242,7 @@ TTErr jamoma_container_send(TTObject aContainer, SymbolPtr relativeAddressAndAtt
 // Method to deal with #TTNodeInfo
 ///////////////////////////////////////////////////////////////////////
 
-TTErr JAMOMA_EXPORT jamoma_node_info_create(ObjectPtr x, TTObject& returnedNodeInfo)
+TTErr JAMOMA_EXPORT jamoma_node_info_create(t_object *x, TTObject& returnedNodeInfo)
 {
 	returnedNodeInfo = TTObject(kTTSym_NodeInfo);
 	return kTTErrNone;
@@ -252,7 +252,7 @@ TTErr JAMOMA_EXPORT jamoma_node_info_create(ObjectPtr x, TTObject& returnedNodeI
 ///////////////////////////////////////////////////////////////////////
 
 /**	Create a data object */
-TTErr jamoma_data_create(ObjectPtr x, TTObject& returnedData, TTSymbol service)
+TTErr jamoma_data_create(t_object *x, TTObject& returnedData, TTSymbol service)
 {
 	// create a data
 	returnedData = TTObject(kTTSym_Data, service);
@@ -266,7 +266,7 @@ TTErr jamoma_data_create(ObjectPtr x, TTObject& returnedData, TTSymbol service)
 }
 
 /**	Send Max data command */
-TTErr jamoma_data_command(TTObject aData, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+TTErr jamoma_data_command(TTObject aData, t_symbol *msg, long argc, const t_atom *argv)
 {
 	TTValue v, none;
 	
@@ -285,14 +285,14 @@ TTErr jamoma_data_command(TTObject aData, SymbolPtr msg, AtomCount argc, AtomPtr
 ///////////////////////////////////////////////////////////////////////
 
 /**	Create a sender object */
-TTErr jamoma_sender_create(ObjectPtr x, TTObject& returnedSender)
+TTErr jamoma_sender_create(t_object *x, TTObject& returnedSender)
 {
 	returnedSender = TTObject(kTTSym_Sender);
 	return kTTErrNone;
 }
 
 /**	Create a sender object for audio signal */
-TTErr jamoma_sender_create_audio(ObjectPtr x, TTObject& returnedSender)
+TTErr jamoma_sender_create_audio(t_object *x, TTObject& returnedSender)
 {
 	TTObject audio;
 	
@@ -304,7 +304,7 @@ TTErr jamoma_sender_create_audio(ObjectPtr x, TTObject& returnedSender)
 }
 
 /**	Send Max data using a sender object */
-TTErr jamoma_sender_send(TTObject aSender, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+TTErr jamoma_sender_send(TTObject aSender, t_symbol *msg, long argc, const t_atom *argv)
 {
 	TTValue v, none;
 	
@@ -322,7 +322,7 @@ TTErr jamoma_sender_send(TTObject aSender, SymbolPtr msg, AtomCount argc, AtomPt
 ///////////////////////////////////////////////////////////////////////
 
 /**	Create a receiver object */
-TTErr jamoma_receiver_create(ObjectPtr x, TTObject& returnedReceiver)
+TTErr jamoma_receiver_create(t_object *x, TTObject& returnedReceiver)
 {
 	TTValue		args;
 	TTObject	returnAddressCallback, returnValueCallback;
@@ -343,7 +343,7 @@ TTErr jamoma_receiver_create(ObjectPtr x, TTObject& returnedReceiver)
 }
 
 /**	Create a receiver object for audio signal */
-TTErr jamoma_receiver_create_audio(ObjectPtr x, TTObject& returnedReceiver)
+TTErr jamoma_receiver_create_audio(t_object *x, TTObject& returnedReceiver)
 {
 	TTValue      args;
 	TTObject     returnAddressCallback, audio;
@@ -367,7 +367,7 @@ TTErr jamoma_receiver_create_audio(ObjectPtr x, TTObject& returnedReceiver)
 ///////////////////////////////////////////////////////////////////////
 
 /**	Create a preset manager object */
-TTErr jamoma_presetManager_create(ObjectPtr x, TTObject& returnedPresetManager)
+TTErr jamoma_presetManager_create(t_object *x, TTObject& returnedPresetManager)
 {
     TTObject returnLineCallback;
 	
@@ -381,7 +381,7 @@ TTErr jamoma_presetManager_create(ObjectPtr x, TTObject& returnedPresetManager)
 }
 
 /**	Create a cue manager object */
-TTErr jamoma_cueManager_create(ObjectPtr x, TTObject& returnedCueManager)
+TTErr jamoma_cueManager_create(t_object *x, TTObject& returnedCueManager)
 {
 	TTObject returnLineCallback;
 	
@@ -398,7 +398,7 @@ TTErr jamoma_cueManager_create(ObjectPtr x, TTObject& returnedCueManager)
 ///////////////////////////////////////////////////////////////////////
 
 /**	Create an input object for any signal */
-TTErr jamoma_input_create(ObjectPtr x, TTObject& returnedInput)
+TTErr jamoma_input_create(t_object *x, TTObject& returnedInput)
 {	
 	TTValue		baton;
 	TTObject	signalOutCallback;
@@ -415,14 +415,14 @@ TTErr jamoma_input_create(ObjectPtr x, TTObject& returnedInput)
 }
 
 /**	Create an input object for audio signal */
-TTErr jamoma_input_create_audio(ObjectPtr x, TTObject& returnedInput)
+TTErr jamoma_input_create_audio(t_object *x, TTObject& returnedInput)
 {
 	returnedInput = TTObject("Input.audio");
     return kTTErrNone;
 }
 
 /**	Send any signal to an input object */
-TTErr jamoma_input_send(TTObject anInput, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+TTErr jamoma_input_send(TTObject anInput, t_symbol *msg, long argc, const t_atom *argv)
 {	
 	TTValue v, none;
 	
@@ -441,7 +441,7 @@ TTErr jamoma_input_send(TTObject anInput, SymbolPtr msg, AtomCount argc, AtomPtr
 ///////////////////////////////////////////////////////////////////////
 
 /**	Create an output object for signal */
-TTErr jamoma_output_create(ObjectPtr x, TTObject& returnedOutput)
+TTErr jamoma_output_create(t_object *x, TTObject& returnedOutput)
 {	
 	TTValue		baton;
 	TTObject	signalOutCallback;
@@ -458,7 +458,7 @@ TTErr jamoma_output_create(ObjectPtr x, TTObject& returnedOutput)
 }
 
 /**	Create an output object for audio signal */
-TTErr jamoma_output_create_audio(ObjectPtr x, TTObject& returnedOutput)
+TTErr jamoma_output_create_audio(t_object *x, TTObject& returnedOutput)
 {
 	TTValue		baton;
 	TTObject    inputLinkCallback;
@@ -474,7 +474,7 @@ TTErr jamoma_output_create_audio(ObjectPtr x, TTObject& returnedOutput)
 }
 
 /**	Send any signal to an output object */
-TTErr jamoma_output_send(TTObject anOutput, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+TTErr jamoma_output_send(TTObject anOutput, t_symbol *msg, long argc, const t_atom *argv)
 {	
 	TTValue v, none;
 	
@@ -493,7 +493,7 @@ TTErr jamoma_output_send(TTObject anOutput, SymbolPtr msg, AtomCount argc, AtomP
 ///////////////////////////////////////////////////////////////////////
 
 /**	Create a mapper object */
-TTErr jamoma_mapper_create(ObjectPtr x, TTObject& returnedMapper)
+TTErr jamoma_mapper_create(t_object *x, TTObject& returnedMapper)
 {
 	TTValue		args, baton, none;
 	TTObject	returnValueCallback, returnInputGoingDownCallback, returnInputGoingUpCallback, returnOutputGoingDownCallback, returnOutputGoingUpCallback;
@@ -538,7 +538,7 @@ TTErr jamoma_mapper_create(ObjectPtr x, TTObject& returnedMapper)
 ///////////////////////////////////////////////////////////////////////
 
 /**	Create a viewer object */
-TTErr jamoma_viewer_create(ObjectPtr x, TTObject& returnedViewer)
+TTErr jamoma_viewer_create(t_object *x, TTObject& returnedViewer)
 {
 	returnedViewer = TTObject(kTTSym_Viewer);
     
@@ -549,7 +549,7 @@ TTErr jamoma_viewer_create(ObjectPtr x, TTObject& returnedViewer)
 }
 
 /**	Send Max data using a viewer object */
-TTErr jamoma_viewer_send(TTObject aViewer, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+TTErr jamoma_viewer_send(TTObject aViewer, t_symbol *msg, long argc, const t_atom *argv)
 {
 	TTValue v, none;
 	
@@ -568,7 +568,7 @@ TTErr jamoma_viewer_send(TTObject aViewer, SymbolPtr msg, AtomCount argc, AtomPt
 ///////////////////////////////////////////////////////////////////////
 
 /**	Create an explorer object */
-TTErr jamoma_explorer_create(ObjectPtr x, TTObject& returnedExplorer)
+TTErr jamoma_explorer_create(t_object *x, TTObject& returnedExplorer)
 {
 	TTValue		args, baton;
 	TTObject	returnValueCallback, returnSelectionCallback;
@@ -687,7 +687,7 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 
 // Method to deal with TTRamp
 ///////////////////////////////////////////////////////////////////////
-TTErr jamoma_ramp_create(ObjectPtr x, TTObject& returnedRamp)
+TTErr jamoma_ramp_create(t_object *x, TTObject& returnedRamp)
 {
     TTValue args;
     
@@ -701,15 +701,15 @@ TTErr jamoma_ramp_create(ObjectPtr x, TTObject& returnedRamp)
 
 void JAMOMA_EXPORT jamoma_callback_return_ramped_value(void *o, TTUInt32 n, TTFloat64 *v)
 {
-    ObjectPtr	x = (ObjectPtr)o;
+    t_object	*x = (t_object*)o;
     long		i, argc = n;
-	AtomPtr		argv = NULL;
+	t_atom	*	argv = NULL;
     
     if (!argc)
         return;
     
     // copy the array of ramped float value into an atom
-    argv = (AtomPtr)sysmem_newptr(sizeof(t_atom) * argc);
+    argv = (t_atom*)sysmem_newptr(sizeof(t_atom) * argc);
 	
 	for (i = 0; i < argc; i++)
 			atom_setfloat(argv+i, v[i]);
@@ -728,11 +728,11 @@ void JAMOMA_EXPORT jamoma_callback_return_ramped_value(void *o, TTUInt32 n, TTFl
 
 void jamoma_callback_return_address(const TTValue& baton, const TTValue& v)
 {
-	ObjectPtr	x;
+	t_object	*x;
 	TTSymbol	address;
 	
-	// unpack baton (a t_object* and the name of the method to call)
-	x = ObjectPtr((TTPtr)baton[0]);
+	// unpack baton (a t_object *and the name of the method to call)
+	x = (t_object*)((TTPtr)baton[0]);
     
     if (v.size() == 1) {
         
@@ -750,22 +750,22 @@ void jamoma_callback_return_address(const TTValue& baton, const TTValue& v)
 /** Return the value to a j. external as _sym_nothing, argc, argv */
 void jamoma_callback_return_value(const TTValue& baton, const TTValue& v)
 {
-	ObjectPtr	x;
-	SymbolPtr	s_method;
+	t_object	*x;
+	t_symbol	*s_method;
     TTBoolean   deferlow = NO;
 	long		argc = 0;
-	AtomPtr		argv = NULL;
+	t_atom	*	argv = NULL;
     method      p_method = NULL;
 	
-	// unpack baton (a t_object* and the name of the method to call (default : jps_return_value))
+	// unpack baton (a t_object *and the name of the method to call (default : jps_return_value))
     
     // get object
-	x = ObjectPtr((TTPtr)baton[0]);
+	x = (t_object*)((TTPtr)baton[0]);
 	
     // get method
 	if (baton.size() >= 2) {
         
-		s_method = SymbolPtr((TTPtr)baton[1]);
+		s_method = (t_symbol*)((TTPtr)baton[1]);
         
 		if (s_method == NULL || s_method == _sym_nothing)
 			return;
@@ -799,23 +799,23 @@ void jamoma_callback_return_value(const TTValue& baton, const TTValue& v)
 // TODO : why don't we pass a #TTDictionary into the baton
 void jamoma_callback_return_value_typed(const TTValue& baton, const TTValue& v)
 {
-	ObjectPtr	x;
-	SymbolPtr	msg, s_method;
+	t_object	*x;
+	t_symbol	*msg, *s_method;
     TTBoolean   deferlow = NO;
 	long		argc = 0;
-	AtomPtr		argv = NULL;
+	t_atom	*	argv = NULL;
     method      p_method = NULL;
 	TTBoolean	shifted = false;
 	
-	// unpack baton (a t_object* and the name of the method to call (default : jps_return_value))
+	// unpack baton (a t_object *and the name of the method to call (default : jps_return_value))
     
      // get Max wrapper object that was passed in
-	x = ObjectPtr((TTPtr)baton[0]);
+	x = (t_object*)((TTPtr)baton[0]);
 	
      // get name of the method to call
 	if (baton.size() >= 2) {
         
-		s_method = SymbolPtr((TTPtr)baton[1]);
+		s_method = (t_symbol*)((TTPtr)baton[1]);
         
 		if (s_method == NULL || s_method == _sym_nothing)
 			return;
@@ -851,12 +851,12 @@ void jamoma_callback_return_value_typed(const TTValue& baton, const TTValue& v)
 /** Return any signal */
 void jamoma_callback_return_signal(const TTValue& baton, const TTValue& v)
 {
-	ObjectPtr	x;
+	t_object	*x;
 	long		argc = 0;
-	AtomPtr		argv = NULL;
+	t_atom	*	argv = NULL;
 	
 	// unpack baton (a t_object*)
-	x = ObjectPtr((TTPtr)baton[0]);
+	x = (t_object*)((TTPtr)baton[0]);
 	
 	jamoma_ttvalue_to_Atom(v, &argc, &argv);
 	
@@ -869,17 +869,17 @@ void jamoma_callback_return_signal(const TTValue& baton, const TTValue& v)
 /** Return audio signal */
 void jamoma_callback_return_signal_audio(const TTValue& baton, const TTValue& v)
 {
-	ObjectPtr	x;
+	t_object	*x;
 	TTPtr		signal;
 	long		i, argc = 0;
-	AtomPtr		argv = NULL;
+	t_atom	*	argv = NULL;
 	
 	// unpack baton (a t_object*)
-	x = ObjectPtr((TTPtr)baton[0]);
+	x = (t_object*)((TTPtr)baton[0]);
 	
 	// unpack data (signal)
 	argc = v.size();
-	argv = (AtomPtr)sysmem_newptr(sizeof(t_atom) * argc);
+	argv = (t_atom*)sysmem_newptr(sizeof(t_atom) * argc);
 	for (i = 0; i < argc; i++) {
 		signal = v[i];
 		atom_setobj(argv+i, signal);
@@ -895,9 +895,9 @@ void jamoma_callback_return_signal_audio(const TTValue& baton, const TTValue& v)
 /////////////////////////////////////////
 
 /** Make a typed Atom array from a TTValue (!!! this method allocate memory for the Atom array ! free it after ! */
-void jamoma_ttvalue_to_typed_Atom(const TTValue& v, SymbolPtr *msg, AtomCount *argc, AtomPtr *argv, TTBoolean& shifted)
+void jamoma_ttvalue_to_typed_Atom(const TTValue& v, t_symbol **msg, long *argc, t_atom **argv, TTBoolean& shifted)
 {
-	AtomCount	i;
+	long	i;
 	TTFloat64	f;
 	TTSymbol	s;
 	TTInt32		t;
@@ -906,7 +906,7 @@ void jamoma_ttvalue_to_typed_Atom(const TTValue& v, SymbolPtr *msg, AtomCount *a
 	*argc = v.size();
 	
 	if (!(*argv)) // otherwise use memory passed in
-		*argv = (AtomPtr)sysmem_newptr(sizeof(t_atom) * (*argc));
+		*argv = (t_atom*)sysmem_newptr(sizeof(t_atom) * (*argc));
 	
 	if (*argc && v.size() > 0) {
 		
@@ -954,9 +954,9 @@ void jamoma_ttvalue_to_typed_Atom(const TTValue& v, SymbolPtr *msg, AtomCount *a
 }
 
 /** Make an Atom array from a TTValue (!!! this method allocate memory for the Atom array ! free it after ! */
-void jamoma_ttvalue_to_Atom(const TTValue& v, AtomCount *argc, AtomPtr *argv)
+void jamoma_ttvalue_to_Atom(const TTValue& v, long *argc, t_atom **argv)
 {
-	AtomCount	i;
+	long	i;
 	TTFloat64	f;
 	TTSymbol	s;
 	TTInt32		t;
@@ -967,7 +967,7 @@ void jamoma_ttvalue_to_Atom(const TTValue& v, AtomCount *argc, AtomPtr *argv)
 		return;
 	
 	if (!(*argv)) // otherwise use memory passed in
-		*argv = (AtomPtr)sysmem_newptr(sizeof(t_atom) * (*argc));
+		*argv = (t_atom*)sysmem_newptr(sizeof(t_atom) * (*argc));
 	
 	for (i = 0; i < *argc; i++) {
 		
@@ -990,9 +990,9 @@ void jamoma_ttvalue_to_Atom(const TTValue& v, AtomCount *argc, AtomPtr *argv)
 }
 
 /** Make a TTValue from Atom array */
-void jamoma_ttvalue_from_Atom(TTValue& v, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void jamoma_ttvalue_from_Atom(TTValue& v, t_symbol *msg, long argc, const t_atom *argv)
 {
-	AtomCount	i, start;
+	long	i, start;
 	
 	if ((msg == _sym_bang || msg == _sym_nothing) && argc == 0)
 		v.clear();
@@ -1022,9 +1022,9 @@ void jamoma_ttvalue_from_Atom(TTValue& v, SymbolPtr msg, AtomCount argc, AtomPtr
 	}
 }
 
-/** Convert a TTSymbol "MyObjectMessage" into a SymbolPtr "my/object/message" 
+/** Convert a TTSymbol "MyObjectMessage" into a t_symbol *"my/object/message" 
  or return NULL if the TTSymbol doesn't begin by an uppercase letter */
-SymbolPtr jamoma_TTName_To_MaxName(TTSymbol TTName)
+t_symbol *jamoma_TTName_To_MaxName(TTSymbol TTName)
 {
     TTSymbol    AppName;
     TTAddress   anAddress;
@@ -1044,7 +1044,7 @@ SymbolPtr jamoma_TTName_To_MaxName(TTSymbol TTName)
 }
 
 /** Load an external for internal use. Returns true if successful */
-TTBoolean jamoma_extern_load(SymbolPtr objectname, AtomCount argc, AtomPtr argv, ObjectPtr *object)
+TTBoolean jamoma_extern_load(t_symbol *objectname, long argc, t_atom *argv, t_object **object)
 {
 	t_class *c = NULL;
 	t_object *p = NULL;
@@ -1068,14 +1068,14 @@ TTBoolean jamoma_extern_load(SymbolPtr objectname, AtomCount argc, AtomPtr argv,
 		*object = NULL;
 	}
 	
-	*object = (t_object *)object_new_typed(CLASS_BOX, objectname, argc, argv);
+	*object = (t_object*)object_new_typed(CLASS_BOX, objectname, argc, argv);
 	return true;
 }
 
 /** Convenient method to get the patcher easily */
-ObjectPtr jamoma_patcher_get(ObjectPtr obj)
+t_object *jamoma_patcher_get(t_object *obj)
 {
-	ObjectPtr patcher = NULL;
+	t_object *patcher = NULL;
 	object_obex_lookup(obj, SymbolGen("#P"), &patcher);
 	
 	// If obj is in a bpatcher, the patcher is NULL
@@ -1088,12 +1088,12 @@ ObjectPtr jamoma_patcher_get(ObjectPtr obj)
 
 // Don't pass memory in for this function!  It will allocate what it needs
 // -- then the caller is responsible for freeing
-void jamoma_patcher_get_args(ObjectPtr patcher, AtomCount *argc, AtomPtr *argv)
+void jamoma_patcher_get_args(t_object *patcher, long *argc, t_atom **argv)
 {
-	SymbolPtr	hierarchy = jamoma_patcher_get_hierarchy(patcher);
-	ObjectPtr	box = object_attr_getobj(patcher, _sym_box);
-	ObjectPtr	textfield = NULL;
-	ObjectPtr	assoc = NULL;
+	t_symbol	*hierarchy = jamoma_patcher_get_hierarchy(patcher);
+	t_object	*box = object_attr_getobj(patcher, _sym_box);
+	t_object	*textfield = NULL;
+	t_object	*assoc = NULL;
 	char		*text = NULL;
 	unsigned    long	textlen = 0;
 	
@@ -1118,10 +1118,10 @@ void jamoma_patcher_get_args(ObjectPtr patcher, AtomCount *argc, AtomPtr *argv)
 }
 
 /** Get the hierarchy of the patcher : bpatcher, subpatcher or top level one*/
-SymbolPtr jamoma_patcher_get_hierarchy(ObjectPtr patcher)
+t_symbol *jamoma_patcher_get_hierarchy(t_object *patcher)
 {
-	ObjectPtr box = object_attr_getobj(patcher, _sym_box);
-	SymbolPtr objclass = NULL;
+	t_object *box = object_attr_getobj(patcher, _sym_box);
+	t_symbol *objclass = NULL;
 	
 	if (box)
 		objclass = object_classname(box);
@@ -1143,10 +1143,10 @@ SymbolPtr jamoma_patcher_get_hierarchy(ObjectPtr patcher)
 }
 
 /** Get the context from the upper jcom model|view in the patcher or from patcher's name */
-void jamoma_patcher_get_context(ObjectPtr *patcher, TTSymbol& returnedContext)
+void jamoma_patcher_get_context(t_object **patcher, TTSymbol& returnedContext)
 {
-	SymbolPtr	hierarchy, _sym_jcommodel, _sym_jcomview, _sym_context;
-	ObjectPtr	obj, upperPatcher;
+	t_symbol	*hierarchy, *_sym_jcommodel, *_sym_jcomview, *_sym_context;
+	t_object	*obj, *upperPatcher;
 	TTBoolean	found = NO;
 	
 	// Look for jcom model|view in the patcher
@@ -1180,7 +1180,7 @@ void jamoma_patcher_get_context(ObjectPtr *patcher, TTSymbol& returnedContext)
 	if (!found) {
 		
 		/*	to -- don't get the context from the filename anymore because it make two ways to set it...
-		SymbolPtr  patcherName;
+		t_symbol * patcherName;
          
 		// try to get it from the patcher name
 		patcherName = object_attr_getsym(*patcher, _sym_filename);
@@ -1223,10 +1223,10 @@ void jamoma_patcher_get_context(ObjectPtr *patcher, TTSymbol& returnedContext)
 }
 
 /** Get the class of the patcher from the file name (removing .model and .view convention name if they exist) */
-void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& returnedClass)
+void jamoma_patcher_get_class(t_object *patcher, TTSymbol context, TTSymbol& returnedClass)
 {
-	SymbolPtr	patcherName, hierarchy;
-	ObjectPtr	upperPatcher;
+	t_symbol	*patcherName, *hierarchy;
+	t_object	*upperPatcher;
 	TTString	s_toParse;
 	TTStringIter begin, end;
 	
@@ -1316,11 +1316,11 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 }
 
 /** Get the name of the patcher from his arguments */
-void jamoma_patcher_get_name(ObjectPtr patcher, TTSymbol context, TTSymbol& returnedName)
+void jamoma_patcher_get_name(t_object *patcher, TTSymbol context, TTSymbol& returnedName)
 {
-	AtomCount		ac = 0;
-	AtomPtr			av = NULL;
-	SymbolPtr		hierarchy, argName = _sym_nothing;
+	long		ac = 0;
+	t_atom	*	av = NULL;
+	t_symbol	*hierarchy, *argName = _sym_nothing;
 	
 	returnedName = kTTSymEmpty;
 	
@@ -1359,11 +1359,11 @@ void jamoma_patcher_get_name(ObjectPtr patcher, TTSymbol context, TTSymbol& retu
 }
 
 /** Get all context info from the root jcom model|view in the patcher */
-void jamoma_patcher_share_info(ObjectPtr patcher, ObjectPtr *returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass,  TTSymbol& returnedName)
+void jamoma_patcher_share_info(t_object *patcher, t_object **returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass,  TTSymbol& returnedName)
 {
 	TTValue		patcherInfo;
-	ObjectPtr	obj;
-	SymbolPtr	_sym_jcommodel, _sym_jcomview, _sym_jcomcontext, _sym_share;
+	t_object	*obj;
+	t_symbol	*_sym_jcommodel, *_sym_jcomview, *_sym_jcomcontext, *_sym_share;
 	
 	obj = object_attr_getobj(patcher, _sym_firstobject);
 	
@@ -1379,7 +1379,7 @@ void jamoma_patcher_share_info(ObjectPtr patcher, ObjectPtr *returnedPatcher, TT
 			object_method(object_attr_getobj(obj, _sym_object), _sym_share, &patcherInfo);
 			
 			if (patcherInfo.size() == 4) {
-				*returnedPatcher = ObjectPtr((TTPtr)patcherInfo[0]);
+				*returnedPatcher = (t_object*)((TTPtr)patcherInfo[0]);
 				returnedContext = patcherInfo[1];
 				returnedClass = patcherInfo[2];
                 returnedName = patcherInfo[3];
@@ -1391,11 +1391,11 @@ void jamoma_patcher_share_info(ObjectPtr patcher, ObjectPtr *returnedPatcher, TT
 }
 
 /** Get j.model or j.view of a patcher */
-void jamoma_patcher_get_model_or_view(ObjectPtr patcher, ObjectPtr *returnedModelOrView)
+void jamoma_patcher_get_model_or_view(t_object *patcher, t_object **returnedModelOrView)
 {
 	TTValue		patcherInfo;
-	ObjectPtr	obj;
-	SymbolPtr	_sym_jcommodel, _sym_jcomview, _sym_jcomcontext;
+	t_object	*obj;
+	t_symbol	*_sym_jcommodel, *_sym_jcomview, *_sym_jcomcontext;
     
     *returnedModelOrView = NULL;
 	
@@ -1416,10 +1416,10 @@ void jamoma_patcher_get_model_or_view(ObjectPtr patcher, ObjectPtr *returnedMode
 }
 
 /** Get the "aClass.model" external in the patcher */
-void jamoma_patcher_get_model_patcher(ObjectPtr patcher, TTSymbol modelClass, ObjectPtr *returnedModelPatcher)
+void jamoma_patcher_get_model_patcher(t_object *patcher, TTSymbol modelClass, t_object **returnedModelPatcher)
 {
-	ObjectPtr	obj;
-	SymbolPtr	_sym_modelfilename, _sym_objmaxclass, _sym_objfilename;
+	t_object	*obj;
+	t_symbol	*_sym_modelfilename, *_sym_objmaxclass, *_sym_objfilename;
 	
 	jamoma_edit_filename(*ModelPatcherFormat, modelClass, &_sym_modelfilename);
 	
@@ -1446,10 +1446,10 @@ void jamoma_patcher_get_model_patcher(ObjectPtr patcher, TTSymbol modelClass, Ob
 }
 
 /** Get patcher's node from the root jcom model|view in the patcher */
-void jamoma_patcher_share_node(ObjectPtr patcher, TTNodePtr *patcherNode)
+void jamoma_patcher_share_node(t_object *patcher, TTNodePtr *patcherNode)
 {
-	ObjectPtr	obj;
-	SymbolPtr	_sym_jcommodel, _sym_jcomview, _sym_jcomcontext, _sym_share;
+	t_object	*obj;
+	t_symbol	*_sym_jcommodel, *_sym_jcomview, *_sym_jcomcontext, *_sym_share;
 	
 	*patcherNode = NULL;
 	
@@ -1474,13 +1474,13 @@ void jamoma_patcher_share_node(ObjectPtr patcher, TTNodePtr *patcherNode)
 }
 
 /** Get all context info from an object (his patcher and the context, the class and the name of his patcher) */
-TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass, TTSymbol& returnedName)
+TTErr jamoma_patcher_get_info(t_object *obj, t_object **returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass, TTSymbol& returnedName)
 {
 	TTBoolean	canShare;
-	SymbolPtr	_sym_jcomcontext;
+	t_symbol	*_sym_jcomcontext;
 	TTString	viewName;
-	ObjectPtr	patcher;
-	ObjectPtr	sharedPatcher = NULL;
+	t_object	*patcher;
+	t_object	*sharedPatcher = NULL;
 	TTSymbol	sharedContext;
 	TTSymbol	sharedClass;
 	TTSymbol	sharedName;
@@ -1564,7 +1564,7 @@ TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbo
 			// according to the voice index of the poly~
             if (jamoma_patcher_get_hierarchy(patcher) == gensym("poly")) {
                 
-                ObjectPtr	assoc = NULL;
+                t_object	*assoc = NULL;
                 method		m = NULL;
                 
                 object_method(patcher, gensym("getassoc"), &assoc);
@@ -1600,7 +1600,7 @@ TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbo
 }
 
 /** returned the N inside "pp/xx.[N]/yyy" and a format string as "pp/xx.%d/yy" and a format string as "pp/xx.%s/yy" */
-TTUInt32 jamoma_parse_bracket(SymbolPtr s, TTString& si_format, TTString& ss_format)
+TTUInt32 jamoma_parse_bracket(t_symbol *s, TTString& si_format, TTString& ss_format)
 {
 	long		number = 0;
 	TTString	s_toParse = s->s_name;
@@ -1642,7 +1642,7 @@ TTUInt32 jamoma_parse_bracket(SymbolPtr s, TTString& si_format, TTString& ss_for
 }
 
 /** edit a new instance of the given format address using interger */
-void jamoma_edit_numeric_instance(TTString format, SymbolPtr *returnedName, long i)
+void jamoma_edit_numeric_instance(TTString format, t_symbol** returnedName, long i)
 {
 	char *s_num;
 	TTInt32 len;
@@ -1657,7 +1657,7 @@ void jamoma_edit_numeric_instance(TTString format, SymbolPtr *returnedName, long
 }
 
 /** edit a new instance of the given format address using string */
-void jamoma_edit_string_instance(TTString format, SymbolPtr *returnedName, TTString s)
+void jamoma_edit_string_instance(TTString format, t_symbol** returnedName, TTString s)
 {
     char *s_str;
 	long len;
@@ -1670,7 +1670,7 @@ void jamoma_edit_string_instance(TTString format, SymbolPtr *returnedName, TTStr
 }
 
 /** edit a file name from a given file format and a class name */
-void jamoma_edit_filename(TTString format, TTSymbol className, SymbolPtr *returnedFileName)
+void jamoma_edit_filename(TTString format, TTSymbol className, t_symbol **returnedFileName)
 {
 	char *s_str;
 	long len;
@@ -1683,11 +1683,11 @@ void jamoma_edit_filename(TTString format, TTSymbol className, SymbolPtr *return
 }
 
 /** Parse #N inside address and replace them by parent patcher arguments if there are */
-SymbolPtr jamoma_parse_dieze(ObjectPtr x, SymbolPtr address)
+t_symbol *jamoma_parse_dieze(t_object *x, t_symbol *address)
 {
 	TTString	diezeStr, argsStr, addressStr = address->s_name;
-	SymbolPtr	hierarchy;
-	ObjectPtr	patcher  = jamoma_patcher_get(x);
+	t_symbol	*hierarchy;
+	t_object	*patcher  = jamoma_patcher_get(x);
     /* TODO : use a TTRegex for this parsing
 	char		dieze[5];
 	char		args[64];
@@ -1695,8 +1695,8 @@ SymbolPtr jamoma_parse_dieze(ObjectPtr x, SymbolPtr address)
 	long		i, sd, sa;
      */
     long		i;
-	AtomCount	ac = 0;
-	AtomPtr		av = NULL;
+	long	ac = 0;
+	t_atom	*	av = NULL;
 	
 	// If x is in a bpatcher, the patcher is NULL
 	if (!patcher){
@@ -1767,13 +1767,13 @@ SymbolPtr jamoma_parse_dieze(ObjectPtr x, SymbolPtr address)
 
 
 /** Get BOOT style filepath from args or, if no args open a dialog to write a file */
-TTSymbol jamoma_file_write(ObjectPtr x, AtomCount argc, AtomPtr argv, char* default_filename)
+TTSymbol jamoma_file_write(t_object *x, long argc, const t_atom *argv, char* default_filename)
 {
 	char 			fullpath[MAX_PATH_CHARS];		// for storing the absolute path of the file
 	short 			err, path;						// pathID#, error number
 	t_filehandle	file_handle;					// a reference to our file (for opening it, closing it, etc.)
 	t_fourcc		filetype = 'TEXT', outtype;		// the file type that is actually true
-	SymbolPtr		userpath;
+	t_symbol	*	userpath;
 	TTSymbol		result = kTTSymEmpty;
 	
 	// Give a path ...
@@ -1817,13 +1817,13 @@ TTSymbol jamoma_file_write(ObjectPtr x, AtomCount argc, AtomPtr argv, char* defa
 }
 
 /** Get BOOT style filepath grom args or, if no args open a dialog to read a file */
-TTSymbol jamoma_file_read(ObjectPtr x, AtomCount argc, AtomPtr argv, t_fourcc filetype)
+TTSymbol jamoma_file_read(t_object *x, long argc, const t_atom *argv, t_fourcc filetype)
 {
 	char 			filepath[MAX_FILENAME_CHARS];	// for storing the name of the file locally
 	char 			fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
 	short 			path;							// pathID#
 	t_fourcc		outtype;
-	SymbolPtr		userpath;
+	t_symbol	*	userpath;
 	TTSymbol		result = kTTSymEmpty;
 	
 	// Give a path ...

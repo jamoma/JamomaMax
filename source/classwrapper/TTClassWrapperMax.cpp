@@ -127,7 +127,7 @@ t_object* wrappedClass_new(t_symbol* name, long argc, t_atom* argv)
             x->controlCallback->instance()->registerMessage(notificationName, (TTMethod)&TTCallback::notify, kTTMessagePassValue);
             
             // tell the source that is passed in that we want to watch it
-            x->wrappedObject->registerObserverForNotifications(x->controlCallback);
+            x->wrappedObject->registerObserverForNotifications(*x->controlCallback);
 
         }
         
