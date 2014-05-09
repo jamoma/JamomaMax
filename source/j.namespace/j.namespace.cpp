@@ -22,33 +22,33 @@
 
 // Definitions
 void		WrapTTExplorerClass(WrappedClassPtr c);
-void		WrappedExplorerClass_new(TTPtr self, long argc, t_atom* argv);
+void		WrappedExplorerClass_new(TTPtr self, long argc, t_atom *argv);
 
 void		nmspc_assist(TTPtr self, void *b, long m, long a, char *s);
 
-void		nmspc_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		nmspc_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-void		nmspc_return_selection(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		nmspc_return_selection(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 void		nmspc_bang(TTPtr self);
-void		nmspc_symbol(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		nmspc_symbol(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 void		nmspc_subscribe(TTPtr self);
 
-void		nmspc_return_model_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv);
+void		nmspc_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-t_max_err	nmspc_get_format(TTPtr self, TTPtr attr, long *ac, t_atom* *av);
-t_max_err	nmspc_set_format(TTPtr self, TTPtr attr, long ac, t_atom* av);
+t_max_err	nmspc_get_format(TTPtr self, TTPtr attr, long *ac, t_atom **av);
+t_max_err	nmspc_set_format(TTPtr self, TTPtr attr, long ac, t_atom *av);
 
-t_max_err	nmspc_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom* *av);
-t_max_err	nmspc_set_relative(TTPtr self, TTPtr attr, long ac, t_atom* av);
+t_max_err	nmspc_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom **av);
+t_max_err	nmspc_set_relative(TTPtr self, TTPtr attr, long ac, const t_atom *av);
 
 /*
 void		nmspc_add_max_namespace(TTPtr self);
 long		nmspc_myobject_iterator(TTPtr self, (t_object*) b);
 */
 
-//t_symbol* nmspc_filter_underscore_instance(t_symbol* a);
+//t_symbol *nmspc_filter_underscore_instance(t_symbol *a);
 
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
@@ -92,7 +92,7 @@ void WrapTTExplorerClass(WrappedClassPtr c)
 	CLASS_ATTR_STYLE(c->maxClass,		"relative",	0,		"onoff");
 }
 
-void WrappedExplorerClass_new(TTPtr self, long argc, t_atom* argv)
+void WrappedExplorerClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
@@ -101,7 +101,7 @@ void WrappedExplorerClass_new(TTPtr self, long argc, t_atom* argv)
 	TTValue						v, args;
 	
 	// create the explorer
-	jamoma_explorer_create((t_object*)x, &x->wrappedObject);
+	jamoma_explorer_create((t_object*)x, x->wrappedObject);
 	
 	// read first argument to know if the explorer handles a namespace
 	if (attrstart && argv) {
@@ -109,7 +109,7 @@ void WrappedExplorerClass_new(TTPtr self, long argc, t_atom* argv)
 		if (atom_gettype(argv) == A_SYM) {
 			
 			name = atom_getsym(argv);
-			x->wrappedObject->setAttributeValue(kTTSym_namespace, TTSymbol(name->s_name));
+			x->wrappedObject.set(kTTSym_namespace, TTSymbol(name->s_name));
 		}
 		else
 			object_error((t_object*)x, "argument not expected");
@@ -121,9 +121,6 @@ void WrappedExplorerClass_new(TTPtr self, long argc, t_atom* argv)
 	x->outlets[data_out] = outlet_new(x, NULL);
 	
 	x->msg = _sym_none;
-    
-    // Prepare memory to store internal objects
-	x->internals = new TTHash();
 	
 	// handle attribute args
 	attr_args_process(x, argc, argv);
@@ -156,15 +153,15 @@ void nmspc_subscribe(TTPtr self)
 	TTAddress                   absoluteAddress, returnedAddress;
     TTNodePtr                   returnedNode;
     TTNodePtr                   returnedContextNode;
-	TTObjectBasePtr				anObject;
+	TTObject                    anObject;
 	
 	jamoma_patcher_get_info((t_object*)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
 	
-	if (!jamoma_subscriber_create((t_object*)x, NULL, kTTAdrsEmpty, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((t_object*)x, NULL, kTTAdrsEmpty, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
         
 		// get the context address to make
 		// a receiver on the contextAddress/model:address attribute
-		x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
+		x->subscriberObject.get("contextAddress", v);
 		contextAddress = v[0];
 	}
 	
@@ -172,10 +169,10 @@ void nmspc_subscribe(TTPtr self)
 	if (contextAddress != kTTAdrsEmpty) {
 		
 		absoluteAddress = contextAddress.appendAddress(x->address);
-		x->wrappedObject->setAttributeValue(kTTSym_address, x->address);
+		x->wrappedObject.set(kTTSym_address, x->address);
 		
-		makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), &anObject, YES); // YES : we want to deferlow this method
-		anObject->sendMessage(kTTSym_Get);
+		makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), anObject, YES); // YES : we want to deferlow this method
+		anObject.send(kTTSym_Get);
 	}
 	
 	// while the context node is not registered : try to binds again :(
@@ -186,8 +183,7 @@ void nmspc_subscribe(TTPtr self)
 	else {
 		
 		// release the subscriber
-		TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
-		x->subscriberObject = NULL;
+		x->subscriberObject = TTObject();
 		
 		// The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
@@ -196,35 +192,35 @@ void nmspc_subscribe(TTPtr self)
 	}
 }
 
-void nmspc_return_model_address(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void nmspc_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTAddress			absoluteAddress;
+	TTAddress absoluteAddress;
 	
 	if (argc && argv) {
 		
 		// set address attribute of the wrapped Receiver object
 		absoluteAddress = TTAddress(atom_getsym(argv)->s_name).appendAddress(x->address);
-		x->wrappedObject->setAttributeValue(kTTSym_address, absoluteAddress);
-		x->wrappedObject->sendMessage(TTSymbol("Explore"));
+		x->wrappedObject.set(kTTSym_address, absoluteAddress);
+		x->wrappedObject.send("Explore");
 	}
 }
 
-void nmspc_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void nmspc_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue		v;
 	TTSymbol	output;
 	TTAddress   address;
-	t_symbol*	s;
+	t_symbol	*s;
 	TTInt32     i;
 	t_atom		a[1], c[2], j[3];
 	
 	// Ask Explorer object
-	x->wrappedObject->getAttributeValue(TTSymbol("output"), v);
+	x->wrappedObject.get("output", v);
 	output = v[0];
 	
-	x->wrappedObject->getAttributeValue(kTTSym_address, v);
+	x->wrappedObject.get(kTTSym_address, v);
 	address = v[0];
 	
 	// UMENU OR UMENU_PREFIX FORMAT
@@ -359,7 +355,7 @@ void nmspc_return_value(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 	outlet_anything(x->outlets[size_out], _sym_int, 1, a);
 }
 
-void nmspc_return_selection(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
+void nmspc_return_selection(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue		v;
@@ -368,7 +364,7 @@ void nmspc_return_selection(TTPtr self, t_symbol* msg, long argc, t_atom* argv)
 	t_atom		u[2], j[6];
 	
 	// Ask Explorer object
-	x->wrappedObject->getAttributeValue(TTSymbol("output"), v);
+	x->wrappedObject.get("output", v);
 	output = v[0];
 	
 	// UMENU OR UMENU_PREFIX FORMAT
@@ -431,7 +427,7 @@ void nmspc_bang(TTPtr self)
 	if (x->msg == gensym("umenu") || x->msg == gensym("umenu_prefix"))
 		outlet_anything(x->outlets[data_out], _sym_clear, 0, NULL);
 
-	x->wrappedObject->sendMessage(TTSymbol("Explore"));
+	x->wrappedObject.send("Explore");
 }
 
 void nmspc_symbol(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
@@ -458,13 +454,13 @@ void nmspc_symbol(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		}
 	}
 	
-	x->wrappedObject->setAttributeValue(kTTSym_address, v);
+	x->wrappedObject.set(kTTSym_address, v);
 	
 	// UMENU OR UMENU_PREFIX FORMAT : clear umenu
 	if (x->msg == gensym("umenu") || x->msg == gensym("umenu_prefix"))
 		outlet_anything(x->outlets[data_out], _sym_clear, 0, NULL);
 	
-	x->wrappedObject->sendMessage(TTSymbol("Explore"));
+	x->wrappedObject.send("Explore");
 }
 
 /*
@@ -518,7 +514,7 @@ long nmspc_myobject_iterator(t_nmspc *x, t_object *b)
 }
  */
 
-t_max_err nmspc_get_format(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
+t_max_err nmspc_get_format(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -527,7 +523,7 @@ t_max_err nmspc_get_format(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
 	} else {
 		//otherwise allocate memory
 		*ac = 1;
-		if (!(*av = (t_atom*)getbytes(sizeof(Atom)*(*ac)))) {
+		if (!(*av = (t_atom*)getbytes(sizeof(t_atom)*(*ac)))) {
 			*ac = 0;
 			return MAX_ERR_OUT_OF_MEM;
 		}
@@ -538,7 +534,7 @@ t_max_err nmspc_get_format(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
 	return MAX_ERR_NONE;
 }
 
-t_max_err nmspc_set_format(TTPtr self, TTPtr attr, long ac, t_atom* av) 
+t_max_err nmspc_set_format(TTPtr self, TTPtr attr, long ac, t_atom *av) 
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -551,7 +547,7 @@ t_max_err nmspc_set_format(TTPtr self, TTPtr attr, long ac, t_atom* av)
 	return MAX_ERR_NONE;
 }
 
-t_max_err nmspc_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
+t_max_err nmspc_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -560,7 +556,7 @@ t_max_err nmspc_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
 	} else {
 		//otherwise allocate memory
 		*ac = 1;
-		if (!(*av = (t_atom*)getbytes(sizeof(Atom)*(*ac)))) {
+		if (!(*av = (t_atom*)getbytes(sizeof(t_atom)*(*ac)))) {
 			*ac = 0;
 			return MAX_ERR_OUT_OF_MEM;
 		}
@@ -571,7 +567,7 @@ t_max_err nmspc_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom* *av)
 	return MAX_ERR_NONE;
 }
 
-t_max_err nmspc_set_relative(TTPtr self, TTPtr attr, long ac, t_atom* av) 
+t_max_err nmspc_set_relative(TTPtr self, TTPtr attr, long ac, const t_atom *av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
