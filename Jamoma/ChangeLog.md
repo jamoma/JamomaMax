@@ -1,14 +1,23 @@
 _This document gathers any new features, changes or regressions that each version implies. The _**_CURRENT_**_ tag concerns the released version currently available online.The _**_COMING SOON_**_ tag concerns the development version in order to warn you about what is coming next. The versions without tag are old versions to get an history of the changes and to allow you to easily update your work even if you missed some released versions._
+________________________________________________________________________________
+
+**COMING SOON** : 0.6.0.a34
 
 ________________________________________________________________________________
 
-**COMING SOON** : 0.6.0.a33
+**CURRENT** : 0.6.0.a33
+
+- some attributes have been renamed:
+range/bounds becomes range
+range/clipmode becomes clipmode
+value/default becomes default
+value/stepsize becomes stepsize
 
 ________________________________________________________________________________
 
-**CURRENT** : 0.6.0.a32
+0.6.0.a32
 
-- fixing bug introduces during the workshop
+- fixing bug introduced during the workshop
 
 ________________________________________________________________________________
 
