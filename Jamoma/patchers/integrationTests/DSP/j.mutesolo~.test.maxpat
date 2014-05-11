@@ -34,10 +34,10 @@
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 35.0, 409.0, 34.0, 20.0 ],
-					"text" : "t b 0"
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 35.0, 409.0, 24.0, 20.0 ],
+					"text" : "t b"
 				}
 
 			}
