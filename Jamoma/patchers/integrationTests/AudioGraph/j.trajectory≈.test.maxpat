@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 251.0, 71.0, 1183.0, 566.0 ],
+		"rect" : [ 70.0, 76.0, 1354.0, 566.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,21 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-4",
+					"linecount" : 22,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1153.0, 154.0, 95.0, 299.0 ],
+					"text" : "Bean2D Bspline2D Butterfly2D Catmullrom3D Circular2D CircularHelix3D Epitrochoid2D Gear2D Hypocycloid2D Limacon2D Linear2D Linear3D Lissajous2D Lissajous3D LogSpiral2D Rose2D Rose3D Scarabaeus2D Slinky3D Spiral3D Torus3D Viviani3D"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
