@@ -48,11 +48,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-20",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 367.0, 675.148132, 383.0, 20.0 ],
+					"patching_rect" : [ 367.0, 675.148132, 275.0, 33.0 ],
 					"text" : "test.assert NoErrorsRunningDSPinHelpPatchers @tags Jamoma DSP"
 				}
 
@@ -2252,10 +2253,6 @@
 			}
 , 			{
 				"name" : "j.zerox~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.allpass~.mxo",
 				"type" : "iLaX"
 			}
 , 			{

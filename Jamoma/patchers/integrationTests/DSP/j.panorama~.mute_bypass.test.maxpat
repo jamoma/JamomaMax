@@ -49,8 +49,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 666.5, 266.0, 20.0, 20.0 ],
-					"presentation_rect" : [ 664.5, 371.0, 0.0, 0.0 ]
+					"patching_rect" : [ 666.5, 266.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -60,11 +59,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-54",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 666.5, 300.5, 280.0, 20.0 ],
+					"patching_rect" : [ 666.5, 300.5, 183.0, 33.0 ],
 					"text" : "test.assert panoram~.bypass @tags Jamoma DSP"
 				}
 
@@ -80,7 +80,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 767.5, 159.0, 82.0, 20.0 ],
-					"presentation_rect" : [ 671.0, 286.0, 0.0, 0.0 ],
 					"text" : "test.equals 0."
 				}
 
@@ -123,7 +122,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 357.0, 159.0, 82.0, 20.0 ],
-					"presentation_rect" : [ 588.0, 398.0, 0.0, 0.0 ],
 					"text" : "test.equals 0."
 				}
 
@@ -229,11 +227,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-47",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 257.5, 300.5, 269.0, 20.0 ],
+					"patching_rect" : [ 257.5, 300.5, 171.0, 33.0 ],
 					"text" : "test.assert panoram~.mute @tags Jamoma DSP"
 				}
 

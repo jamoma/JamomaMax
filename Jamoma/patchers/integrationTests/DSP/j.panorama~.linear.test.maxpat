@@ -138,7 +138,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 607.5, 676.0, 193.0, 47.0 ],
+					"patching_rect" : [ 607.5, 676.0, 146.0, 47.0 ],
 					"text" : "test.assert lookup_linear_pan_right @tags Jamoma DSP"
 				}
 
@@ -199,7 +199,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 902.5, 676.0, 203.0, 47.0 ],
+					"patching_rect" : [ 902.5, 676.0, 165.0, 47.0 ],
 					"text" : "test.assert lookup_linear_pan_center @tags Jamoma DSP"
 				}
 
@@ -434,7 +434,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 312.5, 676.0, 186.0, 47.0 ],
+					"patching_rect" : [ 312.5, 676.0, 144.0, 47.0 ],
 					"text" : "test.assert lookup_linear_pan_left @tags Jamoma DSP"
 				}
 
@@ -537,7 +537,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 607.5, 296.0, 195.0, 47.0 ],
+					"patching_rect" : [ 607.5, 296.0, 165.0, 47.0 ],
 					"text" : "test.assert calculate_linear_pan_right @tags Jamoma DSP"
 				}
 
@@ -598,7 +598,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 902.5, 296.0, 205.0, 47.0 ],
+					"patching_rect" : [ 902.5, 296.0, 165.0, 47.0 ],
 					"text" : "test.assert calculate_linear_pan_center @tags Jamoma DSP"
 				}
 
@@ -885,7 +885,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 312.5, 296.0, 186.0, 47.0 ],
+					"patching_rect" : [ 312.5, 296.0, 165.0, 47.0 ],
 					"text" : "test.assert calculate_linear_pan_left @tags Jamoma DSP"
 				}
 

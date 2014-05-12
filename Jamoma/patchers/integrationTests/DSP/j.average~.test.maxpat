@@ -366,8 +366,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 650.5, 406.0, 314.0, 20.0 ],
-					"text" : "test.assert processing_two_channels @tags jamoma dsp"
+					"patching_rect" : [ 650.5, 406.0, 319.0, 20.0 ],
+					"text" : "test.assert processing_two_channels @tags jamoma DSP"
 				}
 
 			}
@@ -591,13 +591,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 644.5, 861.0, 173.0, 33.0 ],
-					"text" : "test.assert processing_bypass @tags jamoma dsp"
+					"patching_rect" : [ 644.5, 861.0, 284.0, 20.0 ],
+					"text" : "test.assert processing_bypass @tags jamoma DSP"
 				}
 
 			}
@@ -779,13 +778,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-28",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 314.5, 861.0, 172.0, 33.0 ],
-					"text" : "test.assert processing_muted @tags jamoma dsp"
+					"patching_rect" : [ 314.5, 861.0, 279.0, 20.0 ],
+					"text" : "test.assert processing_muted @tags jamoma DSP"
 				}
 
 			}
@@ -899,13 +897,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-122",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 314.5, 407.0, 169.0, 33.0 ],
-					"text" : "test.assert rms_one_channel @tags jamoma dsp"
+					"patching_rect" : [ 314.5, 407.0, 277.0, 20.0 ],
+					"text" : "test.assert rms_one_channel @tags jamoma DSP"
 				}
 
 			}

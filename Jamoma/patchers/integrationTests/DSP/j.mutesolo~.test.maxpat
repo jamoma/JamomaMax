@@ -29,6 +29,54 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-40",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 927.5, 459.0, 142.0, 47.0 ],
+					"text" : "test.assert \"default settings DSP\" @tags Jamoma DSP"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-30",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 779.5, 459.0, 137.0, 47.0 ],
+					"text" : "test.assert \"two channels soloed DSP\" @tags Jamoma DSP"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-26",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 624.5, 459.0, 146.0, 47.0 ],
+					"text" : "test.assert \"two channels muted DSP\" @tags Jamoma DSP"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-8",
@@ -47,13 +95,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-94",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 167.5, 459.0, 141.0, 33.0 ],
-					"text" : "test.assert \"mute differs from 0 and 1 DSP\""
+					"patching_rect" : [ 167.5, 459.0, 144.0, 47.0 ],
+					"text" : "test.assert \"mute differs from 0 and 1 DSP\" @tags Jamoma DSP"
 				}
 
 			}
@@ -189,13 +237,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-62",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 325.5, 459.0, 135.0, 33.0 ],
-					"text" : "test.assert \"solo differs from 0 and 1 DSP\""
+					"patching_rect" : [ 325.5, 459.0, 134.0, 47.0 ],
+					"text" : "test.assert \"solo differs from 0 and 1 DSP\" @tags Jamoma DSP"
 				}
 
 			}
@@ -811,13 +859,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-76",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1077.5, 459.0, 123.0, 33.0 ],
-					"text" : "test.assert \"default settings queried\""
+					"patching_rect" : [ 1077.5, 459.0, 157.0, 47.0 ],
+					"text" : "test.assert \"default settings queried\" @tags Jamoma DSP"
 				}
 
 			}
@@ -854,13 +902,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-50",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 470.5, 459.0, 131.0, 33.0 ],
-					"text" : "test.assert \"solo overrides mute DSP\""
+					"patching_rect" : [ 470.5, 459.0, 142.0, 47.0 ],
+					"text" : "test.assert \"solo overrides mute DSP\" @tags Jamoma DSP"
 				}
 
 			}
@@ -993,22 +1041,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-40",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 927.5, 459.0, 111.0, 33.0 ],
-					"text" : "test.assert \"default settings DSP\""
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-41",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1116,22 +1148,6 @@
 					"outlettype" : [ "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 927.5, 320.0, 82.0, 20.0 ],
 					"text" : "j.mutesolo~ 4"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-30",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 779.5, 459.0, 135.0, 33.0 ],
-					"text" : "test.assert \"two channels soloed DSP\""
 				}
 
 			}
@@ -1259,22 +1275,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 753.0, 144.0, 121.0, 31.0 ],
 					"text" : "setChannelSolo 1 1, setChannelSolo 2 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-26",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 624.5, 459.0, 133.0, 33.0 ],
-					"text" : "test.assert \"two channels muted DSP\""
 				}
 
 			}

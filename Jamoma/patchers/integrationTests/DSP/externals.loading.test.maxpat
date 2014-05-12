@@ -52,8 +52,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 195.0, 361.0, 298.0, 33.0 ],
-					"text" : "test.assert \"TEST DSP AllExternalsLoadingProperly\" @tags jamoma"
+					"patching_rect" : [ 195.0, 361.0, 223.0, 33.0 ],
+					"text" : "test.assert AllExternalsLoadingProperly @tags Jamoma DSP"
 				}
 
 			}
