@@ -132,7 +132,7 @@ typedef struct _wrappedModularInstance {
 #endif
 	
 	TTBoolean								useInternals;				///< The hash table can be used as an array of wrappedObject
-	TTHash                                  internals;					///< An hash table to store any internal TTObjectBases (like TTData, TTViewer, ...)
+	TTHashPtr                               internals;					///< An hash table to store any internal TTObjectBases (like TTData, TTViewer, ...)
 	TTBoolean								iterateInternals;			///< The flag is true when an iteration is done on the internals
 	TTSymbol								cursor;						///< to select an entry in x->internals
 	

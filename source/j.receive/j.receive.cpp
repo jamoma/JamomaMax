@@ -386,10 +386,10 @@ void receive_address(TTPtr self, t_symbol *address)
         newAddress.getType() == kAddressAbsolute) {
         
         TTValue v;
-        TTErr   err = x->internals.lookup(TTSymbol("/model:address"), v);
+        TTErr   err = x->internals->lookup(TTSymbol("/model:address"), v);
         
         if (!err)
-            x->internals.remove(TTSymbol("/model:address"));
+            x->internals->remove(TTSymbol("/model:address"));
     }
     
     // assign the new address

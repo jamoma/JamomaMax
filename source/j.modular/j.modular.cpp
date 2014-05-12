@@ -136,7 +136,7 @@ void WrappedApplicationClass_new(TTPtr self, long argc, t_atom *argv)
 	
 	// create internal TTXmlHandler
 	anXmlHandler = TTObject(kTTSym_XmlHandler);
-	x->internals.append(kTTSym_XmlHandler, anXmlHandler);
+	x->internals->append(kTTSym_XmlHandler, anXmlHandler);
 	anXmlHandler.set(kTTSym_object, x->wrappedObject);
 	
 	if (attrstart && argv) attr_args_process(x, argc, argv);
@@ -247,7 +247,7 @@ void modular_namespace_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv
 		fullpath = jamoma_file_read((t_object*)x, argc, argv, NULL);
 		v.append(fullpath);
 		
-		tterr = x->internals.lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
 		
 		if (!tterr) {
 			
@@ -286,7 +286,7 @@ void modular_namespace_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *arg
 		fullpath = jamoma_file_write((t_object*)x, argc, argv, filename);
 		v.append(fullpath);
 		
-		tterr = x->internals.lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
 		
 		if (!tterr) {
 			anXmlHandler = o[0];

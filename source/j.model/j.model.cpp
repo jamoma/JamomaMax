@@ -258,7 +258,7 @@ void model_subscribe(TTPtr self)
                 
                 // Create internal TTTextHandler (for documention and preset management)
                 aTextHandler = TTObject(kTTSym_TextHandler);
-                x->internals.append(kTTSym_TextHandler, aTextHandler);
+                x->internals->append(kTTSym_TextHandler, aTextHandler);
                 aTextHandler.set(kTTSym_object, x->wrappedObject);
                 
                 if (!EXTRA->attr_amenities->lookup(TTSymbol("all"), v))
@@ -525,7 +525,7 @@ void model_reference_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		fullpath = jamoma_file_write((t_object*)x, argc, argv, filename);
 		v.append(fullpath);
 		
-		tterr = x->internals.lookup(kTTSym_TextHandler, o);
+		tterr = x->internals->lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
 			aTextHandler = o[0];

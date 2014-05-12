@@ -133,12 +133,12 @@ void WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv)
 
     // create internal TTXmlHandler
     aXmlHandler = TTObject(kTTSym_XmlHandler);
-    x->internals.append(kTTSym_XmlHandler, aXmlHandler);
+    x->internals->append(kTTSym_XmlHandler, aXmlHandler);
     aXmlHandler.set(kTTSym_object, x->wrappedObject);
     
     // create internal TTTextHandler
     aTextHandler = TTObject(kTTSym_TextHandler);
-    x->internals.append(kTTSym_TextHandler, aTextHandler);
+    x->internals->append(kTTSym_TextHandler, aTextHandler);
 	
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
@@ -270,7 +270,7 @@ void cue_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		fullpath = jamoma_file_read((t_object*)x, argc, argv, (t_fourcc)'TEXT');
 		v.append(fullpath);
 		
-		tterr = x->internals.lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
 		
 		if (!tterr) {
 			
@@ -302,7 +302,7 @@ void cue_doread_again(TTPtr self)
 	
 	if (x->wrappedObject.valid()) {
 		
-		tterr = x->internals.lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
 		
 		if (!tterr) {
 			
@@ -342,7 +342,7 @@ void cue_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		fullpath = jamoma_file_write((t_object*)x, argc, argv, filename);
 		v.append(fullpath);
 		
-		tterr = x->internals.lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
 		
 		if (!tterr) {
 			aXmlHandler = o[0];
@@ -373,7 +373,7 @@ void cue_dowrite_again(TTPtr self)
 	
 	if (x->wrappedObject.valid()) {
 		
-		tterr = x->internals.lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
 		
 		if (!tterr) {
 			
@@ -492,7 +492,7 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 		buffer = new TTString();
 		
 		// get the buffer handler
-		tterr = x->internals.lookup(kTTSym_TextHandler, o);
+		tterr = x->internals->lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
 			
@@ -540,7 +540,7 @@ void cue_doedit(TTPtr self)
 	TTErr		tterr;
 	
 	// get the buffer handler
-	tterr = x->internals.lookup(kTTSym_TextHandler, o);
+	tterr = x->internals->lookup(kTTSym_TextHandler, o);
 	
 	if (!tterr) {
 		

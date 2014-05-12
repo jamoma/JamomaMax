@@ -123,7 +123,7 @@ void WrappedViewerClass_new(TTPtr self, long argc, t_atom *argv)
 	x->outlets[set_out] = outlet_new(x, NULL);						// anything outlet to output defered data prepend with a 'set'
 	
     x->useInternals = YES;
-    x->internals.setThreadProtection(YES);
+    x->internals->setThreadProtection(YES);
     
 	x->arraySize = 0;
 	x->arrayIndex = 0;
@@ -217,7 +217,7 @@ void remote_new_address(TTPtr self, t_symbol *address)
             v.append(TTSymbol(instanceAddress->s_name));
             v.append((TTPtr)NULL);
             
-            x->internals.append(TTSymbol(instanceAddress->s_name), v);
+            x->internals->append(TTSymbol(instanceAddress->s_name), v);
             
             // inverse values order for iteration purpose (see in remote_array_return_value : array mode)
             v.clear();
@@ -335,8 +335,8 @@ void remote_array_subscribe(TTPtr self, t_symbol *address)
 				v.append(aSubscriber);
 				
 				// replace the internal
-				x->internals.remove(x->cursor);
-				x->internals.append(x->cursor, v);
+				x->internals->remove(x->cursor);
+				x->internals->append(x->cursor, v);
 			}
 		}
 		
@@ -383,7 +383,7 @@ void remote_array_subscribe(TTPtr self, t_symbol *address)
 		jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
 		x->cursor = TTSymbol(instanceAddress->s_name);
 		
-		if (!x->internals.lookup(x->cursor, v)) {
+		if (!x->internals->lookup(x->cursor, v)) {
 			
 			aSubscriber = v[2];
 			
@@ -395,8 +395,8 @@ void remote_array_subscribe(TTPtr self, t_symbol *address)
 			v.set(2, (TTPtr)NULL);
 			
 			// replace the internal
-			x->internals.remove(x->cursor);
-			x->internals.append(x->cursor, v);
+			x->internals->remove(x->cursor);
+			x->internals->append(x->cursor, v);
 		}
 	}
 	
@@ -443,8 +443,8 @@ void remote_address(TTPtr self, t_symbol *address)
                     jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
                     x->cursor = TTSymbol(instanceAddress->s_name);
                     
-                    if (!x->internals.lookup(x->cursor, v))
-                        x->internals.remove(x->cursor);
+                    if (!x->internals->lookup(x->cursor, v))
+                        x->internals->remove(x->cursor);
                 }
                 
                 // Ends iteration on internals
@@ -454,7 +454,7 @@ void remote_address(TTPtr self, t_symbol *address)
 
                 // rebuild internals
                 EXTRA->countSubscription = 0;
-                x->internals.clear();
+                x->internals->clear();
                 defer(self,(method)remote_new_address, address, 0, NULL);
             }
         }
@@ -551,8 +551,8 @@ TTErr remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		if (x->arrayIndex == 0) {
 			TTValue     keys;
             
-			if (!x->internals.isEmpty()) {
-				x->internals.getKeys(keys);
+			if (!x->internals->isEmpty()) {
+				x->internals->getKeys(keys);
 				for (int i = 0; i < keys.size(); i++) {
                     
 					x->cursor = keys[i];
@@ -588,8 +588,8 @@ void WrappedViewerClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *a
 		// send to each view
 		if (x->arrayIndex == 0) {
 			TTValue keys;
-			if (!x->internals.isEmpty()) {
-				x->internals.getKeys(keys);
+			if (!x->internals->isEmpty()) {
+				x->internals->getKeys(keys);
 				for (int i = 0; i < keys.size(); i++) {
 					x->cursor = keys[i];
 					jamoma_viewer_send(selectedObject, msg, argc, argv);
@@ -618,7 +618,7 @@ TTErr remote_array(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
             
             memoCursor = x->cursor;
             
-            if (!x->internals.isEmpty()) {
+            if (!x->internals->isEmpty()) {
                 
                 for (i = 1; i <= x->arraySize; i++) {
                     

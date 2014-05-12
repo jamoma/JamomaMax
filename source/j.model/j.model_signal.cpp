@@ -69,7 +69,7 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
         if (dataInput || dataOutput) {
             
             // make internal parameter at data/mute address
-            if (x->internals.lookup(TTSymbol("data/mute"), v)) {
+            if (x->internals->lookup(TTSymbol("data/mute"), v)) {
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("data/mute"), gensym("return_data_mute"), x->patcherPtr, kTTSym_parameter, aData);
                 aData.set(kTTSym_type, kTTSym_boolean);
@@ -79,14 +79,14 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
             }
             
             // make an internal sender to access to all in|out instance mute attribute
-            if (x->internals.lookup(TTSymbol("data/*.*:mute"), v))
+            if (x->internals->lookup(TTSymbol("data/*.*:mute"), v))
                 makeInternals_sender(self, modelAdrs, TTSymbol("data/*.*:mute"), aSender);
         }
         
         if (dataInput && dataOutput) {
             
             // make internal parameter at data/bypass address
-            if (x->internals.lookup(TTSymbol("data/bypass"), v)) {
+            if (x->internals->lookup(TTSymbol("data/bypass"), v)) {
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("data/bypass"), gensym("return_data_bypass"), x->patcherPtr, kTTSym_parameter, aData);
                 aData.set(kTTSym_type, kTTSym_boolean);
@@ -96,14 +96,14 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
             }
             
             // make an internal sender to access to all in instance bypass attribute
-            if (x->internals.lookup(TTSymbol("data/in.*:bypass"), v))
+            if (x->internals->lookup(TTSymbol("data/in.*:bypass"), v))
                 makeInternals_sender(self, modelAdrs, TTSymbol("data/in.*:bypass"), aSender);
         }
         
         if (dataOutput) {
             
             // make internal parameter at data/freeze address
-            if (x->internals.lookup(TTSymbol("data/freeze"), v)) {
+            if (x->internals->lookup(TTSymbol("data/freeze"), v)) {
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("data/freeze"), gensym("return_data_freeze"), x->patcherPtr, kTTSym_parameter, aData);
                 aData.set(kTTSym_type, kTTSym_boolean);
@@ -113,13 +113,13 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
             }
             
             // make an internal sender to access to all out instance freeze attribute
-            if (x->internals.lookup(TTSymbol("data/out.*:freeze"), v))
+            if (x->internals->lookup(TTSymbol("data/out.*:freeze"), v))
                 makeInternals_sender(self, modelAdrs, TTSymbol("data/out.*:freeze"), aSender);
             
             
             // TODO : preview should not be inside the model
             // make internal parameter at data/preview address
-            if (x->internals.lookup(TTSymbol("data/preview"), v)) {
+            if (x->internals->lookup(TTSymbol("data/preview"), v)) {
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("data/preview"), gensym("return_data_preview"), x->patcherPtr, kTTSym_parameter, aData);
                 aData.set(kTTSym_type, kTTSym_boolean);
@@ -136,7 +136,7 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
         if (audioInput || audioOutput) {
             
             // make internal parameter at audio/mute address
-            if (x->internals.lookup(TTSymbol("audio/mute"), v)) {
+            if (x->internals->lookup(TTSymbol("audio/mute"), v)) {
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("audio/mute"), gensym("return_audio_mute"), x->patcherPtr, kTTSym_parameter, aData);
                 aData.set(kTTSym_type, kTTSym_boolean);
@@ -146,14 +146,14 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
             }
             
             // make an internal sender to access to all in|out instance mute attribute
-            if (x->internals.lookup(TTSymbol("audio/*.*:mute"), v))
+            if (x->internals->lookup(TTSymbol("audio/*.*:mute"), v))
                 makeInternals_sender(self, modelAdrs, TTSymbol("audio/*.*:mute"), aSender);
         }
         
         if (audioInput && audioOutput) {
             
             // make internal parameter at audio/bypass address
-            if (x->internals.lookup(TTSymbol("audio/bypass"), v)) {
+            if (x->internals->lookup(TTSymbol("audio/bypass"), v)) {
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("audio/bypass"), gensym("return_audio_bypass"), x->patcherPtr, kTTSym_parameter, aData);
                 aData.set(kTTSym_type, kTTSym_boolean);
@@ -163,11 +163,11 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
             }
             
             // make an internal sender to access to all in instance bypass attribute
-            if (x->internals.lookup(TTSymbol("audio/in.*:bypass"), v))
+            if (x->internals->lookup(TTSymbol("audio/in.*:bypass"), v))
                 makeInternals_sender(self, modelAdrs, TTSymbol("audio/in.*:bypass"), aSender);
             
             // make internal parameter at data/mix address
-            if (x->internals.lookup(TTSymbol("audio/mix"), v)) {
+            if (x->internals->lookup(TTSymbol("audio/mix"), v)) {
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("audio/mix"), gensym("return_audio_mix"), x->patcherPtr, kTTSym_parameter, aData);
                 aData.set(kTTSym_type, kTTSym_decimal);
@@ -183,14 +183,14 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
             }
             
             // make an internal sender to access to all out instance mix attribute
-            if (x->internals.lookup(TTSymbol("audio/out.*:mix"), v))
+            if (x->internals->lookup(TTSymbol("audio/out.*:mix"), v))
                 makeInternals_sender(self, modelAdrs, TTSymbol("audio/out.*:mix"), aSender);
         }
         
         if (audioOutput) {
             
             // make internal parameter at audio/gain address
-            if (x->internals.lookup(TTSymbol("audio/gain"), v)) {
+            if (x->internals->lookup(TTSymbol("audio/gain"), v)) {
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("audio/gain"), gensym("return_audio_gain"), x->patcherPtr, kTTSym_parameter, aData);
                 aData.set(kTTSym_type, kTTSym_decimal);
@@ -206,7 +206,7 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
             }
             
             // make an internal sender to access to all out instance gain attribute
-            if (x->internals.lookup(TTSymbol("audio/out.*:gain"), v))
+            if (x->internals->lookup(TTSymbol("audio/out.*:gain"), v))
                 makeInternals_sender(self, modelAdrs, TTSymbol("audio/out.*:gain"), aSender);
         }
     }
@@ -220,7 +220,7 @@ void model_signal_return_data_mute(TTPtr self, t_symbol *msg, long argc, t_atom 
 	TTObject    aSender;
     TTValue     v, out;
 	
-	if (!x->internals.lookup(TTSymbol("data/*.*:mute"), v)) {
+	if (!x->internals->lookup(TTSymbol("data/*.*:mute"), v)) {
         
         aSender = v[0];
         
@@ -236,7 +236,7 @@ void model_signal_return_data_bypass(TTPtr self, t_symbol *msg, long argc, t_ato
 	TTObject    aSender;
     TTValue     v, out;
 	
-	if (!x->internals.lookup(TTSymbol("data/in.*:bypass"), v)) {
+	if (!x->internals->lookup(TTSymbol("data/in.*:bypass"), v)) {
         
         aSender = v[0];
         
@@ -252,7 +252,7 @@ void model_signal_return_data_freeze(TTPtr self, t_symbol *msg, long argc, t_ato
 	TTObject    aSender;
     TTValue     v, out;
 	
-	if (!x->internals.lookup(TTSymbol("data/out.*:freeze"), v)) {
+	if (!x->internals->lookup(TTSymbol("data/out.*:freeze"), v)) {
         
         aSender = v[0];
         
@@ -273,7 +273,7 @@ void model_signal_return_audio_mute(TTPtr self, t_symbol *msg, long argc, t_atom
 	TTObject    aSender;
     TTValue     v, out;
 	
-	if (!x->internals.lookup(TTSymbol("audio/*.*:mute"), v)) {
+	if (!x->internals->lookup(TTSymbol("audio/*.*:mute"), v)) {
         
         aSender = v[0];
         
@@ -289,7 +289,7 @@ void model_signal_return_audio_bypass(TTPtr self, t_symbol *msg, long argc, t_at
 	TTObject    aSender;
     TTValue     v, out;
 	
-	if (!x->internals.lookup(TTSymbol("audio/in.*:bypass"), v)) {
+	if (!x->internals->lookup(TTSymbol("audio/in.*:bypass"), v)) {
         
         aSender = v[0];
         
@@ -305,7 +305,7 @@ void model_signal_return_audio_mix(TTPtr self, t_symbol *msg, long argc, t_atom 
 	TTObject    aSender;
     TTValue     v, out;
 	
-	if (!x->internals.lookup(TTSymbol("audio/out.*:mix"), v)) {
+	if (!x->internals->lookup(TTSymbol("audio/out.*:mix"), v)) {
         
         aSender = v[0];
         
@@ -321,7 +321,7 @@ void model_signal_return_audio_gain(TTPtr self, t_symbol *msg, long argc, t_atom
 	TTObject    aSender;
     TTValue     v, out;
 	
-	if (!x->internals.lookup(TTSymbol("audio/out.*:gain"), v)) {
+	if (!x->internals->lookup(TTSymbol("audio/out.*:gain"), v)) {
         
         aSender = v[0];
         

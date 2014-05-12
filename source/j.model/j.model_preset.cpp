@@ -42,7 +42,7 @@ void model_preset_amenities(TTPtr self)
         
         // create internal TTXmlHandler
         aXmlHandler = TTObject(kTTSym_XmlHandler);
-        x->internals.append(kTTSym_XmlHandler, aXmlHandler);
+        x->internals->append(kTTSym_XmlHandler, aXmlHandler);
         aXmlHandler.set(kTTSym_object, EXTRA->presetManager);
         
         // if desired, load default modelClass.patcherContext.xml file preset
@@ -88,7 +88,7 @@ void model_preset_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		fullpath = jamoma_file_read((t_object*)x, argc, argv, 'TEXT');
 		v.append(fullpath);
 		
-		tterr = x->internals.lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
 		
 		if (!tterr) {
 			
@@ -118,7 +118,7 @@ void model_preset_doread_again(TTPtr self)
 	TTValue			o;
 	TTErr			tterr;
 	
-	tterr = x->internals.lookup(kTTSym_XmlHandler, o);
+	tterr = x->internals->lookup(kTTSym_XmlHandler, o);
 	
 	if (!tterr) {
 		
@@ -160,7 +160,7 @@ void model_preset_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		fullpath = jamoma_file_write((t_object*)x, argc, argv, filename);
 		v.append(fullpath);
 		
-		tterr = x->internals.lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
 		
 		if (!tterr) {
 			aXmlHandler = o[0];
@@ -193,7 +193,7 @@ void model_preset_dowrite_again(TTPtr self)
 	TTValue			o;
 	TTErr			tterr;
 	
-	tterr = x->internals.lookup(kTTSym_XmlHandler, o);
+	tterr = x->internals->lookup(kTTSym_XmlHandler, o);
 	
 	if (!tterr) {
 		
@@ -360,7 +360,7 @@ void model_preset_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 		buffer = new TTString();
 		
 		// get the buffer handler
-		tterr = x->internals.lookup(kTTSym_TextHandler, o);
+		tterr = x->internals->lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
 			
@@ -408,7 +408,7 @@ void model_preset_doedit(TTPtr self)
 	TTErr				tterr;
 	
 	// get the buffer handler
-	tterr = x->internals.lookup(kTTSym_TextHandler, o);
+	tterr = x->internals->lookup(kTTSym_TextHandler, o);
 	
 	if (!tterr) {
 		

@@ -186,8 +186,8 @@ void data_new_address(TTPtr self, t_symbol *relativeAddress)
 	TTValue		v;
     
     x->useInternals = YES;
-    x->internals.clear();
-    x->internals.setThreadProtection(YES);
+    x->internals->clear();
+    x->internals->setThreadProtection(YES);
     x->cursor = kTTSymEmpty;
     x->arrayAddress = newAddress;
     
@@ -232,7 +232,7 @@ void data_new_address(TTPtr self, t_symbol *relativeAddress)
                         v = TTValue(anObject);
                         v.append(TTSymbol(instanceAddress->s_name));
                         v.append(aSubscriber);
-                        x->internals.append(TTSymbol(instanceAddress->s_name), v);
+                        x->internals->append(TTSymbol(instanceAddress->s_name), v);
                         
                         // inverse objects order for iteration purpose (see in data_array_return_value : array mode)
                         EXTRA->objectsSorted->insert(0, anObject);
@@ -364,7 +364,7 @@ void data_bang(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
-	if (!x->internals.isEmpty()) {
+	if (!x->internals->isEmpty()) {
 		data_list(self, _sym_bang, 0, NULL);
 	}
 	else
@@ -381,7 +381,7 @@ void data_int(TTPtr self, long value)
 		wrappedModularClass_ArraySelect(self, _sym_nothing, 1, &a);
 	}
 	else {
-		if (!x->internals.isEmpty()) {
+		if (!x->internals->isEmpty()) {
 			atom_setlong(&a, value);
 			data_list(self, _sym_int, 1, &a);
 		}
@@ -395,7 +395,7 @@ void data_float(TTPtr self, double value)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	t_atom a;
 	
-	if (!x->internals.isEmpty()) {
+	if (!x->internals->isEmpty()) {
 		atom_setfloat(&a, value);
 		data_list(self, _sym_float, 1, &a);
 	}
@@ -407,13 +407,13 @@ void data_list(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
-	if (!x->internals.isEmpty()) {
+	if (!x->internals->isEmpty()) {
 		
 		// send to each data
 		if (x->arrayIndex == 0) {
 			TTValue keys;
-			if (!x->internals.isEmpty()) {
-				x->internals.getKeys(keys);
+			if (!x->internals->isEmpty()) {
+				x->internals->getKeys(keys);
 				for (TTUInt32 i = 0; i < keys.size(); i++) {
 					x->cursor = keys[i];
 					jamoma_data_command(selectedObject, msg, argc, argv);
@@ -441,8 +441,8 @@ void WrappedDataClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *arg
 		// send to each data
 		if (x->arrayIndex == 0) {
 			TTValue keys;
-			if (!x->internals.isEmpty()) {
-				x->internals.getKeys(keys);
+			if (!x->internals->isEmpty()) {
+				x->internals->getKeys(keys);
 				for (TTUInt32 i=0; i<keys.size(); i++) {
 					x->cursor = keys[i];
 					jamoma_data_command(selectedObject, msg, argc, argv);
@@ -462,7 +462,7 @@ void data_array(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
     t_symbol	*instanceAddress;
     TTSymbol    memoCursor;
     
-	if (!x->internals.isEmpty()) {
+	if (!x->internals->isEmpty()) {
 		
 		// is the incoming data size is a multiple of the array size ?
         d = argc / x->arraySize;

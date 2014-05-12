@@ -240,7 +240,7 @@ void remote_subscribe(TTPtr self)
 		x->wrappedObject.set(kTTSym_address, x->address);
 		
         // observe :description attribute
-        if (x->internals.lookup(TTSymbol(":description"), v))
+        if (x->internals->lookup(TTSymbol(":description"), v))
             
             makeInternals_receiver(x, absoluteAddress, TTSymbol(":description"), gensym("return_description"), anObject, YES);
         
@@ -318,7 +318,7 @@ void remote_subscribe(TTPtr self)
 		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
         
         // observe :description attribute
-        if (x->internals.lookup(TTSymbol(":description"), v))
+        if (x->internals->lookup(TTSymbol(":description"), v))
             
             makeInternals_receiver(x, absoluteAddress, TTSymbol(":description"), gensym("return_description"), anObject, YES);
         
@@ -448,7 +448,7 @@ void remote_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *a
 		x->index = 0; // the index member is usefull to count how many time the external tries to bind
         
         // observe :description attribute
-        if (x->internals.lookup(TTSymbol(":description"), v))
+        if (x->internals->lookup(TTSymbol(":description"), v))
             
             makeInternals_receiver(x, absoluteAddress, TTSymbol(":description"), gensym("return_description"), anObject, YES);
         
