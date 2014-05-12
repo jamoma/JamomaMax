@@ -6,7 +6,12 @@
 
 - New external j.mutesolo~ mutes and soloes individual MSP channels.
 - New external j.mutesolo= mutes and soloes individual channels of an AudioGraph signal.
-
+- Updated several integration tests to use testpackage:
+    - All tests for Foundation (https://github.com/jamoma/JamomaMax/issues/541)
+    - All tests for DSP (https://github.com/jamoma/JamomaMax/issues/542)
+    - All tests for Graph (https://github.com/jamoma/JamomaMax/issues/544)
+    - All tests for AudioGraph (https://github.com/jamoma/JamomaMax/issues/543)
+- Fixed help pacth and ref page for j.dcblock=
 
 
 ### 0.6.0.a34 (2014-05-10)
