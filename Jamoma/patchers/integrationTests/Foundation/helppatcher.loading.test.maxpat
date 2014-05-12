@@ -37,7 +37,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 945.0, 251.226746, 234.0, 20.0 ],
-					"presentation_rect" : [ 1137.0, 333.71933, 0.0, 0.0 ],
 					"text" : "commenting out net.receive~ due to crash",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
@@ -192,13 +191,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-20",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 399.0, 675.148132, 275.0, 33.0 ],
-					"text" : "test.assert NoErrorsRunningDSPinHelpPatchers @tags Jamoma DSP"
+					"patching_rect" : [ 399.0, 675.148132, 209.0, 47.0 ],
+					"text" : "test.assert NoErrorsRunningDSPinHelpPatchers @tags Jamoma Foundation"
 				}
 
 			}

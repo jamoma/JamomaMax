@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 397.0, 44.0, 741.0, 417.0 ],
+		"rect" : [ 397.0, 44.0, 742.0, 433.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -188,11 +188,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-14",
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 146.0, 368.0, 344.0, 20.0 ],
+					"patching_rect" : [ 146.0, 368.0, 167.0, 47.0 ],
 					"text" : "test.assert AllExternalsLoadingProperly @tags Jamoma Graph"
 				}
 
