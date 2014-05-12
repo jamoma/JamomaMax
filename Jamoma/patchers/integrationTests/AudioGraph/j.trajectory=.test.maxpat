@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 70.0, 76.0, 1354.0, 566.0 ],
+		"rect" : [ 70.0, 76.0, 1503.0, 672.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,36 +28,6 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-4",
-					"linecount" : 22,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1153.0, 154.0, 95.0, 299.0 ],
-					"text" : "Bean2D Bspline2D Butterfly2D Catmullrom3D Circular2D CircularHelix3D Epitrochoid2D Gear2D Hypocycloid2D Limacon2D Linear2D Linear3D Lissajous2D Lissajous3D LogSpiral2D Rose2D Rose3D Scarabaeus2D Slinky3D Spiral3D Torus3D Viviani3D"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-1",
-					"linecount" : 18,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1022.25, 154.0, 111.0, 246.0 ],
-					"text" : "bean.2D butterfly.2D circular.2D circular.helix.3D epitrochoid.2D gear.2D hypocycloid.2D limacon.2D linear.2D linear.3D lissajous.2D lissajous.knot.3D log.spiral.2D rose.2D scarabaeus.2D slinky.3D spherical.spiral.3D torus.knot.3D viviani.3D"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-57",
 					"maxclass" : "toggle",
@@ -378,8 +348,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 899.0, 154.0, 111.0, 259.0 ],
-					"text" : "bean.2D butterfly.2D circular.2D epitrochoid.2D gear.2D hypocycloid.2D limacon.2D linear.2D lissajous.2D log.spiral.2D rose.2D scarabaeus.2D circular.helix.3D linear.3D lissajous.knot.3D slinky.3D spherical.spiral.3D torus.knot.3D viviani.3D"
+					"patching_rect" : [ 899.0, 154.0, 102.0, 259.0 ],
+					"text" : "bean.2D butterfly.2D circular.2D circular.helix.3D epitrochoid.2D gear.2D hypocycloid.2D limacon.2D linear.2D linear.3D lissajous.2D lissajous.knot.3D log.spiral.2D rose.2D scarabaeus.2D slinky.3D spherical.spiral.3D torus.knot.3D viviani.3D"
 				}
 
 			}
@@ -635,15 +605,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-59", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-6", 0 ]
 				}
 
 			}
