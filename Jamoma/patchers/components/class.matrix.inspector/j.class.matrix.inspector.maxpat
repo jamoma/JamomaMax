@@ -416,7 +416,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 270.0, 355.0, 445.0, 30.0 ],
-					"text" : "j.parameter #1/planecount @type integer @range/bounds 1 32 @range/clipmode both @repetitions/filter 0 @ramp/drive none @description \"The number of planes\"",
+					"text" : "j.parameter #1/planecount @type integer @range 1 32 @clipmode both @repetitions/filter 0 @ramp/drive none @description \"The number of planes\"",
 					"varname" : "#1/planecount"
 				}
 

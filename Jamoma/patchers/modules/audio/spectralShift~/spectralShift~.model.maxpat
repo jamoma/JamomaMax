@@ -259,7 +259,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 327.0, 100.0, 151.0, 141.0 ],
-									"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds -60 6 @range/clipmode both @description \"Feedback gain leven (dB).\" @dataspace gain @dataspace/unit linear",
+									"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range -60 6 @clipmode both @description \"Feedback gain leven (dB).\" @dataspace gain @dataspace/unit linear",
 									"varname" : "feedback"
 								}
 
@@ -275,7 +275,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 503.0, 100.0, 156.0, 141.0 ],
-									"text" : "j.parameter feedback/time @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0 200 @range/clipmode both @description \"Feedback delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
+									"text" : "j.parameter feedback/time @type decimal @ramp/drive Max @repetitions/filter 1 @range 0 200 @clipmode both @description \"Feedback delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
 									"varname" : "right"
 								}
 
@@ -662,7 +662,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 17.0, 27.0, 171.0, 87.0 ],
-					"text" : "j.parameter frequency/shift @type decimal @range/bounds -500 500 \"Slide all frequency bins up or down (Hz).\" @dataspace time @dataspace/unit Hz"
+					"text" : "j.parameter frequency/shift @type decimal @range -500 500 \"Slide all frequency bins up or down (Hz).\" @dataspace time @dataspace/unit Hz"
 				}
 
 			}
@@ -677,7 +677,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 203.0, 27.0, 168.0, 74.0 ],
-					"text" : "j.parameter frequency/scale @type decimal @range/bounds -48. 48. @description \"Pitch shift in semitones.\""
+					"text" : "j.parameter frequency/scale @type decimal @range -48. 48. @description \"Pitch shift in semitones.\""
 				}
 
 			}

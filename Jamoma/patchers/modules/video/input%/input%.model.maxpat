@@ -589,7 +589,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 143.0, 19.0, 597.0, 31.0 ],
-									"text" : "j.parameter desktop/offset/x @type integer @repetitions/filter 1 @ramp/drive Max @range/bounds 0 640 @range/clipmode low @description \"x value of the upper right corner of the desktop crop\"",
+									"text" : "j.parameter desktop/offset/x @type integer @repetitions/filter 1 @ramp/drive Max @range 0 640 @clipmode low @description \"x value of the upper right corner of the desktop crop\"",
 									"varname" : "synth/noise/size/x[2]"
 								}
 
@@ -606,7 +606,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 217.5, 58.0, 597.0, 31.0 ],
-									"text" : "j.parameter desktop/offset/y @type integer @repetitions/filter 1 @ramp/drive Max @range/bounds 0 480 @range/clipmode low @description \" y value of the upper right corner of the desktop crop\"",
+									"text" : "j.parameter desktop/offset/y @type integer @repetitions/filter 1 @ramp/drive Max @range 0 480 @clipmode low @description \" y value of the upper right corner of the desktop crop\"",
 									"varname" : "synth/noise/size/y[2]"
 								}
 
@@ -623,7 +623,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 285.0, 101.0, 588.0, 31.0 ],
-									"text" : "j.parameter desktop/size/x @type integer @repetitions/filter 1 @ramp/drive Max @range/bounds 1 640 @range/clipmode low @description \"y size of desktop crop\"",
+									"text" : "j.parameter desktop/size/x @type integer @repetitions/filter 1 @ramp/drive Max @range 1 640 @clipmode low @description \"y size of desktop crop\"",
 									"varname" : "synth/noise/size/x[1]"
 								}
 
@@ -640,7 +640,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 340.0, 139.0, 588.0, 31.0 ],
-									"text" : "j.parameter desktop/size/y @type integer @repetitions/filter 1 @ramp/drive Max @range/bounds 1 480 @range/clipmode low @description \"x size of desktop crop\"",
+									"text" : "j.parameter desktop/size/y @type integer @repetitions/filter 1 @ramp/drive Max @range 1 480 @clipmode low @description \"x size of desktop crop\"",
 									"varname" : "synth/noise/size/y[1]"
 								}
 
@@ -1095,7 +1095,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 341.0, 132.0, 585.0, 31.0 ],
-									"text" : "j.parameter synth/noise/size/y @type integer @repetitions/filter 1 @ramp/drive Max @range/bounds 1 480 @range/clipmode low @description \"y size of noise matrix\" @value/default 240",
+									"text" : "j.parameter synth/noise/size/y @type integer @repetitions/filter 1 @ramp/drive Max @range 1 480 @clipmode low @description \"y size of noise matrix\" @default 240",
 									"varname" : "synth/noise/size/y"
 								}
 
@@ -1112,7 +1112,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 275.5, 85.392822, 558.0, 31.0 ],
-									"text" : "j.parameter synth/noise/size/x @type integer @repetitions/filter 1 @ramp/drive Max @range/bounds 1 640 @range/clipmode low @description \"x size of noise matrix\" @value/default 320",
+									"text" : "j.parameter synth/noise/size/x @type integer @repetitions/filter 1 @ramp/drive Max @range 1 640 @clipmode low @description \"x size of noise matrix\" @default 320",
 									"varname" : "synth/noise/size/x"
 								}
 
@@ -1129,7 +1129,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 36.0, 40.0, 566.0, 31.0 ],
-									"text" : "j.parameter synth/noise/planes @type integer @range/bounds 1 4 @range/clipmode both @ramp/drive none @description \"Number of matrix planes\" @value/default 1",
+									"text" : "j.parameter synth/noise/planes @type integer @range 1 4 @clipmode both @ramp/drive none @description \"Number of matrix planes\" @default 1",
 									"varname" : "synth/noise/planes"
 								}
 
@@ -1146,7 +1146,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 194.0, 241.392822, 597.0, 31.0 ],
-									"text" : "j.parameter synth/color/active @type boolean @range/bounds 0 1 @range/clipmode both @repetitions/filter 1 @ramp/drive none @description \"Turn video color synth on or off\"",
+									"text" : "j.parameter synth/color/active @type boolean @range 0 1 @clipmode both @repetitions/filter 1 @ramp/drive none @description \"Turn video color synth on or off\"",
 									"varname" : "synth/color/on"
 								}
 
@@ -1383,7 +1383,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1019.0, 312.0, 318.0, 43.0 ],
-									"text" : "j.parameter file/loop/mode @type integer @range/bounds 0 2 @range/clipmode both @repetitions/filter 1 @description \"0: no looping | 1: looping on | 2: palindrom \"",
+									"text" : "j.parameter file/loop/mode @type integer @range 0 2 @clipmode both @repetitions/filter 1 @description \"0: no looping | 1: looping on | 2: palindrom \"",
 									"varname" : "file/framedump[3]"
 								}
 
@@ -1498,7 +1498,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 467.0, 146.0, 598.0, 31.0 ],
-									"text" : "j.parameter file/rate @type decimal @repetitions/filter 1 @ramp/drive Max @range/bounds -2. 2. @range/clipmode none @description \"Playback rate of video file\" @value/default 1",
+									"text" : "j.parameter file/rate @type decimal @repetitions/filter 1 @ramp/drive Max @range -2. 2. @clipmode none @description \"Playback rate of video file\" @default 1",
 									"varname" : "file/rate"
 								}
 
@@ -1546,7 +1546,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 535.0, 181.0, 744.0, 19.0 ],
-									"text" : "j.message file/counter @type integer @range/bounds 0 100000 @range/clipmode low @repetitions/filter 0 @description \"Video file time counter\"",
+									"text" : "j.message file/counter @type integer @range 0 100000 @clipmode low @repetitions/filter 0 @description \"Video file time counter\"",
 									"varname" : "file/counter"
 								}
 
@@ -2278,7 +2278,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 73.0, 31.0, 1042.0, 31.0 ],
-									"text" : "j.parameter file/autostart @type integer @range/bounds 0 2 @range/clipmode both @description \"Defines module's behavior when 'file/open' is received. When set to 0, reading of a video file is triggered with 'file/start'. When set to 1 (default), opening a video file automatically triggers 'file/start'. When set to 2, opening a video file automatically triggers 'file/start', only if a file was previously being read.\"",
+									"text" : "j.parameter file/autostart @type integer @range 0 2 @clipmode both @description \"Defines module's behavior when 'file/open' is received. When set to 0, reading of a video file is triggered with 'file/start'. When set to 1 (default), opening a video file automatically triggers 'file/start'. When set to 2, opening a video file automatically triggers 'file/start', only if a file was previously being read.\"",
 									"varname" : "camera/camera[1]"
 								}
 
@@ -3145,7 +3145,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 620.5, 255.5, 114.5, 128.0 ],
-									"text" : "j.parameter camera/updaterate @type integer @range/bounds 1 100 @range/clipmode low @description \"Update rate of the camera, in milliseconds\"",
+									"text" : "j.parameter camera/updaterate @type integer @range 1 100 @clipmode low @description \"Update rate of the camera, in milliseconds\"",
 									"varname" : "camera/camera[1]"
 								}
 
@@ -4803,7 +4803,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 115.0, 43.0, 580.0, 31.0 ],
-					"text" : "j.parameter active @type boolean @range/bounds 0 1 @range/clipmode both @repetitions/filter 1 @ramp/drive none @description \"Turn video noise on or off\" @value/default 0",
+					"text" : "j.parameter active @type boolean @range 0 1 @clipmode both @repetitions/filter 1 @ramp/drive none @description \"Turn video noise on or off\" @default 0",
 					"varname" : "synth/noise/on[2]"
 				}
 
@@ -4820,7 +4820,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 185.0, 85.0, 583.0, 31.0 ],
-					"text" : "j.parameter updaterate @type integer @range/bounds 1 100 @range/clipmode low @description \"Update rate in milliseconds\" @dataspace time @dataspace/unit ms @value/default 40",
+					"text" : "j.parameter updaterate @type integer @range 1 100 @clipmode low @description \"Update rate in milliseconds\" @dataspace time @dataspace/unit ms @default 40",
 					"varname" : "camera/camera[2]"
 				}
 
@@ -4864,7 +4864,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 47.0, 17.0, 717.0, 19.0 ],
-					"text" : "j.parameter source @type string @description \"Choose between 'camera', 'file' , 'synthesis' or 'desktop' as input\" @value/default camera",
+					"text" : "j.parameter source @type string @description \"Choose between 'camera', 'file' , 'synthesis' or 'desktop' as input\" @default camera",
 					"varname" : "source_mode[1]"
 				}
 

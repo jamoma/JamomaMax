@@ -930,7 +930,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 64.0, 120.0, 121.0, 128.0 ],
-					"text" : "j.parameter mode @repetitions/filter 1 @type integer @range/bounds 0 2 @range/clipmode both @description \"modes: 0 - vertical, 1 - horizontal, 2 - map\" @ramp/drive Max",
+					"text" : "j.parameter mode @repetitions/filter 1 @type integer @range 0 2 @clipmode both @description \"modes: 0 - vertical, 1 - horizontal, 2 - map\" @ramp/drive Max",
 					"varname" : "hue_angle[2]"
 				}
 
@@ -946,7 +946,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 224.0, 16.0, 311.0, 43.0 ],
-					"text" : "j.parameter framedelay @repetitions/filter 1 @type integer @range/bounds 0 200 @range/clipmode low @description \"what is the maximum delay in frames\" @ramp/drive Max",
+					"text" : "j.parameter framedelay @repetitions/filter 1 @type integer @range 0 200 @clipmode low @description \"what is the maximum delay in frames\" @ramp/drive Max",
 					"varname" : "hue_angle[1]"
 				}
 

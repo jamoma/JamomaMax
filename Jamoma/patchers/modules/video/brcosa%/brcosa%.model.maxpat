@@ -297,7 +297,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 98.0, 48.0, 555.0, 19.0 ],
-					"text" : "j.parameter monochrome @type boolean @description \"Monochrome image - 0 is default\" @value/default 0",
+					"text" : "j.parameter monochrome @type boolean @description \"Monochrome image - 0 is default\" @default 0",
 					"varname" : "monochrome[1]"
 				}
 
@@ -314,7 +314,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 520.0, 158.0, 514.0, 31.0 ],
-					"text" : "j.parameter saturation @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 4. @range/clipmode none @description \"Saturation of image - 1 is default\" @value/default 1",
+					"text" : "j.parameter saturation @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Saturation of image - 1 is default\" @default 1",
 					"varname" : "saturation[1]"
 				}
 
@@ -331,7 +331,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 411.0, 115.0, 504.0, 31.0 ],
-					"text" : "j.parameter contrast @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 4. @range/clipmode none @description \"Contrast of image - 1 is default\" @value/default 1",
+					"text" : "j.parameter contrast @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Contrast of image - 1 is default\" @default 1",
 					"varname" : "contrast[1]"
 				}
 
@@ -348,7 +348,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 285.0, 78.0, 515.0, 31.0 ],
-					"text" : "j.parameter brightness @type decimal @ramp/drive Max @repetitions/filter 1 @range/bounds 0. 4. @range/clipmode none @description \"Brightness of image - 1 is default\" @value/default 1",
+					"text" : "j.parameter brightness @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Brightness of image - 1 is default\" @default 1",
 					"varname" : "brightness[1]"
 				}
 

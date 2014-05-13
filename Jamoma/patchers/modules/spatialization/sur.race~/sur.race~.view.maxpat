@@ -149,14 +149,14 @@
           "fontname": "Arial",
           "fontsize": 12.0,
           "frozen_object_attributes": {
-            "range/bounds": [
+            "range": [
               5.0,
               20000.0
             ],
             "dataspace": "time",
-            "range/clipmode": "both",
+            "clipmode": "both",
             "dataspace/unit": "Hz",
-            "value/default": [
+            "default": [
               5000
             ],
             "type": "integer",
@@ -204,14 +204,14 @@
           "fontname": "Arial",
           "fontsize": 12.0,
           "frozen_object_attributes": {
-            "value/stepsize": 0.01,
-            "range/bounds": [
+            "stepsize": 0.01,
+            "range": [
               0.0,
               1.0
             ],
             "dataspace": "time",
-            "range/clipmode": "low",
-            "value/default": [
+            "clipmode": "low",
+            "default": [
               0.07
             ],
             "type": "decimal",
@@ -300,13 +300,13 @@
           "fontname": "Arial",
           "fontsize": 12.0,
           "frozen_object_attributes": {
-            "range/bounds": [
+            "range": [
               -10.0,
               0.0
             ],
             "ramp/drive": "none",
-            "range/clipmode": "both",
-            "value/default": [
+            "clipmode": "both",
+            "default": [
               -2.5
             ],
             "type": "decimal",
@@ -681,14 +681,14 @@
           "fontname": "Arial",
           "fontsize": 12.0,
           "frozen_object_attributes": {
-            "range/bounds": [
+            "range": [
               5.0,
               16000.0
             ],
             "dataspace": "time",
-            "range/clipmode": "both",
+            "clipmode": "both",
             "dataspace/unit": "Hz",
-            "value/default": [
+            "default": [
               250
             ],
             "type": "integer",

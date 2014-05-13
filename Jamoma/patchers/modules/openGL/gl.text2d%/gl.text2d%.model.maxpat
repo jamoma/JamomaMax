@@ -276,7 +276,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 344.0, 121.0, 690.0, 19.0 ],
-									"text" : "j.parameter fontsize @type integer @range/bounds 1 72 @range/clipmode low @description \"Specifies the size in which to draw.\"",
+									"text" : "j.parameter fontsize @type integer @range 1 72 @clipmode low @description \"Specifies the size in which to draw.\"",
 									"varname" : "fontsize"
 								}
 
@@ -307,7 +307,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 450.5, 260.0, 511.5, 31.0 ],
-									"text" : "j.parameter tracking @type decimal @range/bounds 0.5 2 @range/clipmode none @description \"The tracking (intra-character spacing) as a multiple of the standard tracking for the face. \"",
+									"text" : "j.parameter tracking @type decimal @range 0.5 2 @clipmode none @description \"The tracking (intra-character spacing) as a multiple of the standard tracking for the face. \"",
 									"varname" : "tracking"
 								}
 
@@ -338,7 +338,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 389.0, 183.0, 600.0, 31.0 ],
-									"text" : "j.parameter leadscale @type decimal @range/bounds 0.5 2 @range/clipmode none @description \"The leading between multiple rows of text as a multiple of the standard leading. \"",
+									"text" : "j.parameter leadscale @type decimal @range 0.5 2 @clipmode none @description \"The leading between multiple rows of text as a multiple of the standard leading. \"",
 									"varname" : "leadscale"
 								}
 
@@ -896,7 +896,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 189.5, 111.0, 495.0, 31.0 ],
-									"text" : "j.parameter shadow/color/alpha @type decimal @range/bounds 0. 1. @range/clipmode both @ramp/drive Max @description \"Object alpha transparency (0.-1.).\"",
+									"text" : "j.parameter shadow/color/alpha @type decimal @range 0. 1. @clipmode both @ramp/drive Max @description \"Object alpha transparency (0.-1.).\"",
 									"varname" : "shadow/color/alpha"
 								}
 
@@ -912,7 +912,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 154.0, 64.0, 442.0, 31.0 ],
-									"text" : "j.parameter shadow/color/rgb @type decimalArray @range/bounds 0. 1. @dataspace color @dataspace/unit rgb @description \"Object color as red, green, blue (0.-1.).\"",
+									"text" : "j.parameter shadow/color/rgb @type decimalArray @range 0. 1. @dataspace color @dataspace/unit rgb @description \"Object color as red, green, blue (0.-1.).\"",
 									"varname" : "shadow/color/rgb"
 								}
 

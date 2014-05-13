@@ -179,7 +179,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 251.0, 140.0, 228.0, 80.0 ],
-					"text" : "j.parameter bitdepth @type integer @range/bounds 1 24 @range/clipmode both @ramp/drive Max @repetitions/filter 1 @description \"The number of bits that will be retained in each sample - use this for bit crunching effects\" @priority 2"
+					"text" : "j.parameter bitdepth @type integer @range 1 24 @clipmode both @ramp/drive Max @repetitions/filter 1 @description \"The number of bits that will be retained in each sample - use this for bit crunching effects\" @priority 2"
 				}
 
 			}
@@ -194,7 +194,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 217.0, 44.0, 226.0, 80.0 ],
-					"text" : "j.parameter samplerateRatio @type decimal @range/bounds 0. 1. @repetitions/filter 0 @range/clipmode both @ramp/drive Max @description \"A ratio of the emulated sample-rate to the global sample-rate.\" @priority 1"
+					"text" : "j.parameter samplerateRatio @type decimal @range 0. 1. @repetitions/filter 0 @clipmode both @ramp/drive Max @description \"A ratio of the emulated sample-rate to the global sample-rate.\" @priority 1"
 				}
 
 			}

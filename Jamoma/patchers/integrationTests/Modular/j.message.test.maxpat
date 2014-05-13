@@ -104,7 +104,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 85.0, 566.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold1 @type integerArray @range/clipmode fold @range/bounds 0 10"
+									"text" : "j.message arrayFold1 @type integerArray @clipmode fold @range 0 10"
 								}
 
 							}
@@ -119,7 +119,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 492.0, 566.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold2 @type integerArray @range/clipmode fold @range/bounds -10 10"
+									"text" : "j.message arrayFold2 @type integerArray @clipmode fold @range -10 10"
 								}
 
 							}
@@ -134,7 +134,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 566.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold3 @type integerArray @range/clipmode fold @range/bounds -20 -10"
+									"text" : "j.message arrayFold3 @type integerArray @clipmode fold @range -20 -10"
 								}
 
 							}
@@ -240,7 +240,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 85.0, 727.0, 221.0, 47.0 ],
-									"text" : "j.message genericFold1 @type generic @range/clipmode fold @range/bounds 0 10"
+									"text" : "j.message genericFold1 @type generic @clipmode fold @range 0 10"
 								}
 
 							}
@@ -255,7 +255,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 492.0, 727.0, 221.0, 47.0 ],
-									"text" : "j.message genericFold2 @type generic @range/clipmode fold @range/bounds -10 10"
+									"text" : "j.message genericFold2 @type generic @clipmode fold @range -10 10"
 								}
 
 							}
@@ -270,7 +270,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 727.0, 221.0, 47.0 ],
-									"text" : "j.message genericFold3 @type generic @range/clipmode fold @range/bounds -20 -10"
+									"text" : "j.message genericFold3 @type generic @clipmode fold @range -20 -10"
 								}
 
 							}
@@ -329,7 +329,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 85.0, 410.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold1 @type decimalArray @range/clipmode fold @range/bounds 0 10"
+									"text" : "j.message arrayFold1 @type decimalArray @clipmode fold @range 0 10"
 								}
 
 							}
@@ -344,7 +344,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 492.0, 410.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold2 @type decimalArray @range/clipmode fold @range/bounds -10 10"
+									"text" : "j.message arrayFold2 @type decimalArray @clipmode fold @range -10 10"
 								}
 
 							}
@@ -359,7 +359,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 410.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold3 @type decimalArray @range/clipmode fold @range/bounds -20 -10"
+									"text" : "j.message arrayFold3 @type decimalArray @clipmode fold @range -20 -10"
 								}
 
 							}
@@ -431,7 +431,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 297.0, 224.0, 47.0 ],
-									"text" : "j.message decimalFold6 @type decimal @range/clipmode fold @range/bounds -20 -10"
+									"text" : "j.message decimalFold6 @type decimal @clipmode fold @range -20 -10"
 								}
 
 							}
@@ -489,7 +489,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 236.0, 224.0, 47.0 ],
-									"text" : "j.message decimalFold3 @type decimal @range/clipmode fold @range/bounds -20 -10"
+									"text" : "j.message decimalFold3 @type decimal @clipmode fold @range -20 -10"
 								}
 
 							}
@@ -519,7 +519,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 492.0, 297.0, 224.0, 47.0 ],
-									"text" : "j.message decimalFold5 @type decimal @range/clipmode fold @range/bounds -10 10"
+									"text" : "j.message decimalFold5 @type decimal @clipmode fold @range -10 10"
 								}
 
 							}
@@ -549,7 +549,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 85.0, 297.0, 224.0, 47.0 ],
-									"text" : "j.message decimalFold4 @type decimal @range/clipmode fold @range/bounds 0 10"
+									"text" : "j.message decimalFold4 @type decimal @clipmode fold @range 0 10"
 								}
 
 							}
@@ -579,7 +579,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 492.0, 236.0, 224.0, 47.0 ],
-									"text" : "j.message decimalFold2 @type decimal @range/clipmode fold @range/bounds -10 10"
+									"text" : "j.message decimalFold2 @type decimal @clipmode fold @range -10 10"
 								}
 
 							}
@@ -609,7 +609,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 85.0, 236.0, 224.0, 47.0 ],
-									"text" : "j.message decimalFold1 @type decimal @range/clipmode fold @range/bounds 0 10"
+									"text" : "j.message decimalFold1 @type decimal @clipmode fold @range 0 10"
 								}
 
 							}
@@ -639,7 +639,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 150.0, 213.0, 47.0 ],
-									"text" : "j.message intFold6 @type integer @range/clipmode fold @range/bounds -20 -10"
+									"text" : "j.message intFold6 @type integer @clipmode fold @range -20 -10"
 								}
 
 							}
@@ -739,7 +739,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 88.0, 213.0, 47.0 ],
-									"text" : "j.message intFold3 @type integer @range/clipmode fold @range/bounds -20 -10"
+									"text" : "j.message intFold3 @type integer @clipmode fold @range -20 -10"
 								}
 
 							}
@@ -769,7 +769,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 492.0, 150.0, 213.0, 47.0 ],
-									"text" : "j.message intFold5 @type integer @range/clipmode fold @range/bounds -10 10"
+									"text" : "j.message intFold5 @type integer @clipmode fold @range -10 10"
 								}
 
 							}
@@ -799,7 +799,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 85.0, 150.0, 213.0, 47.0 ],
-									"text" : "j.message intFold4 @type integer @range/clipmode fold @range/bounds 0 10"
+									"text" : "j.message intFold4 @type integer @clipmode fold @range 0 10"
 								}
 
 							}
@@ -829,7 +829,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 492.0, 88.0, 213.0, 47.0 ],
-									"text" : "j.message intFold2 @type integer @range/clipmode fold @range/bounds -10 10"
+									"text" : "j.message intFold2 @type integer @clipmode fold @range -10 10"
 								}
 
 							}
@@ -859,7 +859,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 85.0, 88.0, 213.0, 47.0 ],
-									"text" : "j.message intFold1 @type integer @range/clipmode fold @range/bounds 0 10"
+									"text" : "j.message intFold1 @type integer @clipmode fold @range 0 10"
 								}
 
 							}
@@ -1325,7 +1325,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 494.0, 583.0, 204.0, 47.0 ],
-									"text" : "j.message arrayWrap2 @type integerArray @range/clipmode wrap @range/bounds -10 10"
+									"text" : "j.message arrayWrap2 @type integerArray @clipmode wrap @range -10 10"
 								}
 
 							}
@@ -1340,7 +1340,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 123.0, 583.0, 204.0, 47.0 ],
-									"text" : "j.message arrayWrap1 @type integerArray @range/clipmode wrap @range/bounds 0 10"
+									"text" : "j.message arrayWrap1 @type integerArray @clipmode wrap @range 0 10"
 								}
 
 							}
@@ -1399,7 +1399,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 583.0, 204.0, 47.0 ],
-									"text" : "j.message arrayWrap3 @type integerArray @range/clipmode wrap @range/bounds -20 -10"
+									"text" : "j.message arrayWrap3 @type integerArray @clipmode wrap @range -20 -10"
 								}
 
 							}
@@ -1476,7 +1476,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 691.0, 201.0, 47.0 ],
-									"text" : "j.message genericWrap3 @type generic @range/clipmode wrap @range/bounds -20 -10"
+									"text" : "j.message genericWrap3 @type generic @clipmode wrap @range -20 -10"
 								}
 
 							}
@@ -1506,7 +1506,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 494.0, 691.0, 201.0, 47.0 ],
-									"text" : "j.message genericWrap2 @type generic @range/clipmode wrap @range/bounds -10 10"
+									"text" : "j.message genericWrap2 @type generic @clipmode wrap @range -10 10"
 								}
 
 							}
@@ -1521,7 +1521,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 123.0, 691.0, 201.0, 47.0 ],
-									"text" : "j.message genericWrap1 @type generic @range/clipmode wrap @range/bounds 0 10"
+									"text" : "j.message genericWrap1 @type generic @clipmode wrap @range 0 10"
 								}
 
 							}
@@ -1580,7 +1580,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 446.0, 201.0, 47.0 ],
-									"text" : "j.message arrayWrap3 @type decimalArray @range/clipmode wrap @range/bounds -20 -10"
+									"text" : "j.message arrayWrap3 @type decimalArray @clipmode wrap @range -20 -10"
 								}
 
 							}
@@ -1610,7 +1610,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 494.0, 446.0, 201.0, 47.0 ],
-									"text" : "j.message arrayWrap2 @type decimalArray @range/clipmode wrap @range/bounds -10 10"
+									"text" : "j.message arrayWrap2 @type decimalArray @clipmode wrap @range -10 10"
 								}
 
 							}
@@ -1625,7 +1625,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 123.0, 446.0, 201.0, 47.0 ],
-									"text" : "j.message arrayWrap1 @type decimalArray @range/clipmode wrap @range/bounds 0 10"
+									"text" : "j.message arrayWrap1 @type decimalArray @clipmode wrap @range 0 10"
 								}
 
 							}
@@ -1682,7 +1682,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 337.0, 201.0, 47.0 ],
-									"text" : "j.message decimalWrap6 @type decimal @range/clipmode wrap @range/bounds -20 -10"
+									"text" : "j.message decimalWrap6 @type decimal @clipmode wrap @range -20 -10"
 								}
 
 							}
@@ -1740,7 +1740,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 251.0, 201.0, 47.0 ],
-									"text" : "j.message decimalWrap3 @type decimal @range/clipmode wrap @range/bounds -20 -10"
+									"text" : "j.message decimalWrap3 @type decimal @clipmode wrap @range -20 -10"
 								}
 
 							}
@@ -1770,7 +1770,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 494.0, 337.0, 201.0, 47.0 ],
-									"text" : "j.message decimalWrap5 @type decimal @range/clipmode wrap @range/bounds -10 10"
+									"text" : "j.message decimalWrap5 @type decimal @clipmode wrap @range -10 10"
 								}
 
 							}
@@ -1800,7 +1800,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 123.0, 337.0, 201.0, 47.0 ],
-									"text" : "j.message floatWrap4 @type decimal @range/clipmode wrap @range/bounds 0 10"
+									"text" : "j.message floatWrap4 @type decimal @clipmode wrap @range 0 10"
 								}
 
 							}
@@ -1830,7 +1830,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 494.0, 251.0, 201.0, 47.0 ],
-									"text" : "j.message decimalWrap2 @type decimal @range/clipmode wrap @range/bounds -10 10"
+									"text" : "j.message decimalWrap2 @type decimal @clipmode wrap @range -10 10"
 								}
 
 							}
@@ -1860,7 +1860,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 123.0, 251.0, 201.0, 47.0 ],
-									"text" : "j.message floatWrap1 @type decimal @range/clipmode wrap @range/bounds 0 10"
+									"text" : "j.message floatWrap1 @type decimal @clipmode wrap @range 0 10"
 								}
 
 							}
@@ -1890,7 +1890,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 148.0, 201.0, 47.0 ],
-									"text" : "j.message intWrap6 @type integer @range/clipmode wrap @range/bounds -20 -10"
+									"text" : "j.message intWrap6 @type integer @clipmode wrap @range -20 -10"
 								}
 
 							}
@@ -1990,7 +1990,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 81.0, 201.0, 47.0 ],
-									"text" : "j.message intWrap3 @type integer @range/clipmode wrap @range/bounds -20 -10"
+									"text" : "j.message intWrap3 @type integer @clipmode wrap @range -20 -10"
 								}
 
 							}
@@ -2020,7 +2020,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 494.0, 148.0, 201.0, 47.0 ],
-									"text" : "j.message intWrap5 @type integer @range/clipmode wrap @range/bounds -10 10"
+									"text" : "j.message intWrap5 @type integer @clipmode wrap @range -10 10"
 								}
 
 							}
@@ -2050,7 +2050,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 123.0, 148.0, 201.0, 47.0 ],
-									"text" : "j.message intWrap4 @type integer @range/clipmode wrap @range/bounds 0 10"
+									"text" : "j.message intWrap4 @type integer @clipmode wrap @range 0 10"
 								}
 
 							}
@@ -2080,7 +2080,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 494.0, 81.0, 201.0, 47.0 ],
-									"text" : "j.message intWrap2 @type integer @range/clipmode wrap @range/bounds -10 10"
+									"text" : "j.message intWrap2 @type integer @clipmode wrap @range -10 10"
 								}
 
 							}
@@ -2110,7 +2110,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 123.0, 81.0, 201.0, 47.0 ],
-									"text" : "j.message intWrap1 @type integer @range/clipmode wrap @range/bounds 0 10"
+									"text" : "j.message intWrap1 @type integer @clipmode wrap @range 0 10"
 								}
 
 							}

@@ -206,14 +206,14 @@
 				Read-only attribute to get notification of the end of a ramp
 			</description>
 		</attribute>
-		<attribute name="range/bounds" get="1" set="1" type="atom" size="1">
+		<attribute name="range" get="1" set="1" type="atom" size="1">
 			<digest>
 				Lower and upper boundaries defining the range of possible message values
 			</digest>
 			<description>
 Lower and upper boundaries defining the range of possible message values			</description>
 		</attribute>
-		<attribute name="range/clipmode" get="1" set="1" type="symbol" size="1">
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
 				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
 			</digest>
@@ -261,7 +261,7 @@ Lower and upper boundaries defining the range of possible message values			</des
 				Current message value
 			</description>
 		</attribute>
-		<attribute name="value/default" get="1" set="1" type="int" size="1">
+		<attribute name="default" get="1" set="1" type="int" size="1">
 			<digest>
 				Default message value
 			</digest>
@@ -269,7 +269,7 @@ Lower and upper boundaries defining the range of possible message values			</des
 				Default message value
 			</description>
 		</attribute>
-		<attribute name="value/stepsize" get="1" set="1" type="int" size="1">
+		<attribute name="stepsize" get="1" set="1" type="int" size="1">
 			<digest>
 				Step by which the current value is being increased/decreased when a /value/inc or /value/dec message is received
 			</digest>

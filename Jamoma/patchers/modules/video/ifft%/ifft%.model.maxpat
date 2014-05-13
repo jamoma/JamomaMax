@@ -229,7 +229,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 42.5, 29.0, 269.0, 43.0 ],
-					"text" : "j.parameter dim @type generic @range/bounds 1 512 @range/clipmode low @description \"dimension of matrix to perform Fourier Transform on.\""
+					"text" : "j.parameter dim @type generic @range 1 512 @clipmode low @description \"dimension of matrix to perform Fourier Transform on.\""
 				}
 
 			}

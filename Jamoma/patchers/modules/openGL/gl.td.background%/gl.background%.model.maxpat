@@ -96,7 +96,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 92.0, 135.0, 373.0, 31.0 ],
-					"text" : "j.parameter weight @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Low pass filter coefficient.\"",
+					"text" : "j.parameter weight @type decimal @range 0. 1. @clipmode both @description \"Low pass filter coefficient.\"",
 					"varname" : "tolerance"
 				}
 

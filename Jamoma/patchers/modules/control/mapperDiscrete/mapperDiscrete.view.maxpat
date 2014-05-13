@@ -21471,7 +21471,7 @@
                                     250.0,
                                     17.0
                                   ],
-                                  "text": "script send moduleListindex range/bounds 1 32"
+                                  "text": "script send moduleListindex range 1 32"
                                 }
                               },
                               {
@@ -21491,7 +21491,7 @@
                                     413.0,
                                     17.0
                                   ],
-                                  "text": "script send moduleListindex range/bounds 1 $1, script send moduleListindex $1"
+                                  "text": "script send moduleListindex range 1 $1, script send moduleListindex $1"
                                 }
                               },
                               {

@@ -269,7 +269,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 601.0, 185.0, 302.0, 31.0 ],
-					"text" : "j.parameter normalize @type boolean @description \"Switches normalization on and off\" @value/default 0",
+					"text" : "j.parameter normalize @type boolean @description \"Switches normalization on and off\" @default 0",
 					"varname" : "normalize"
 				}
 
@@ -286,7 +286,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 503.0, 142.0, 435.0, 31.0 ],
-					"text" : "j.parameter bleed @type decimal @ramp/drive Max @description \"Sets convolution kernel value for all colors\" @value/default 0.",
+					"text" : "j.parameter bleed @type decimal @ramp/drive Max @description \"Sets convolution kernel value for all colors\" @default 0.",
 					"varname" : "bleed"
 				}
 
@@ -303,7 +303,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 408.0, 104.0, 486.0, 31.0 ],
-					"text" : "j.parameter gain @type decimal @ramp/drive Max @description \"The gain level for all colors\" @value/default 1",
+					"text" : "j.parameter gain @type decimal @ramp/drive Max @description \"The gain level for all colors\" @default 1",
 					"varname" : "gain"
 				}
 
@@ -320,7 +320,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 351.0, 64.0, 536.0, 31.0 ],
-					"text" : "j.parameter feedback @type decimal @ramp/drive Max @description \"The feedback value for all colors\" @value/default 0",
+					"text" : "j.parameter feedback @type decimal @ramp/drive Max @description \"The feedback value for all colors\" @default 0",
 					"varname" : "feedback"
 				}
 
@@ -337,7 +337,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 282.0, 25.0, 566.0, 31.0 ],
-					"text" : "j.parameter feedforward @type decimal @ramp/drive Max @description \"The feedforward value for all colors\" @value/default 1",
+					"text" : "j.parameter feedforward @type decimal @ramp/drive Max @description \"The feedforward value for all colors\" @default 1",
 					"varname" : "feedforward"
 				}
 

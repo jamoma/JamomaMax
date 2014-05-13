@@ -80,7 +80,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 173.666656, 89.0, 223.0, 19.0 ],
-					"text" : "j.parameter number @value/default 2"
+					"text" : "j.parameter number @default 2"
 				}
 
 			}

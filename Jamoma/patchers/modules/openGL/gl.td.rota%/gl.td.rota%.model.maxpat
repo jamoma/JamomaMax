@@ -1286,7 +1286,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 382.0, 90.0, 442.0, 31.0 ],
-					"text" : "j.parameter theta @type decimal @range/bounds -180. 180. @range/clipmode none @ramp/drive Max @description \"Rotation angle in degrees.\"",
+					"text" : "j.parameter theta @type decimal @range -180. 180. @clipmode none @ramp/drive Max @description \"Rotation angle in degrees.\"",
 					"varname" : "theta"
 				}
 

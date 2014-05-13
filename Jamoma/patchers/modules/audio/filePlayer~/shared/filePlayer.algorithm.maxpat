@@ -759,7 +759,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 179.0, 257.0, 493.0, 47.0 ],
-									"text" : "j.parameter nextFile/loop/start @type decimal @range/bounds 0 180000 @range/clipmode low @ramp/drive none @repetitions/filter 0 @dataspace time @dataspace/unit ms @priority 2 @description \"Playback start position. Use 0 for playback from start of file.\""
+									"text" : "j.parameter nextFile/loop/start @type decimal @range 0 180000 @clipmode low @ramp/drive none @repetitions/filter 0 @dataspace time @dataspace/unit ms @priority 2 @description \"Playback start position. Use 0 for playback from start of file.\""
 								}
 
 							}
@@ -774,7 +774,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 346.0, 149.0, 489.0, 47.0 ],
-									"text" : "j.parameter nextFile/loop/end @type decimal @range/bounds 0 180000 @range/clipmode low @ramp/drive none @repetitions/filter 0 @dataspace time @dataspace/unit ms @priority 3 @description \"Playback end position. Use 0 for playback to end of file.\""
+									"text" : "j.parameter nextFile/loop/end @type decimal @range 0 180000 @clipmode low @ramp/drive none @repetitions/filter 0 @dataspace time @dataspace/unit ms @priority 3 @description \"Playback end position. Use 0 for playback to end of file.\""
 								}
 
 							}
@@ -789,7 +789,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 314.0, 322.0, 497.0, 47.0 ],
-									"text" : "j.parameter nextFile/rate @type decimal @range/bounds -1. 1. @range/clipmode none @ramp/drive none @repetitions/filter 0 @dataspace time @dataspace/unit ms @priority 4 @description \"Playback start position. Use 0 for playback from start of file.\""
+									"text" : "j.parameter nextFile/rate @type decimal @range -1. 1. @clipmode none @ramp/drive none @repetitions/filter 0 @dataspace time @dataspace/unit ms @priority 4 @description \"Playback start position. Use 0 for playback from start of file.\""
 								}
 
 							}

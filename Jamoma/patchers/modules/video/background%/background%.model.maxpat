@@ -172,7 +172,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 38.0, 55.0, 221.0, 55.0 ],
-									"text" : "j.parameter filter/threshold @type decimal @range/bounds 0. 1. @range/clipmode both @description \"Set the threshold level for the lowpass filter\"",
+									"text" : "j.parameter filter/threshold @type decimal @range 0. 1. @clipmode both @description \"Set the threshold level for the lowpass filter\"",
 									"varname" : "filter/threshold"
 								}
 
@@ -449,7 +449,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 253.0, 85.0, 218.0, 55.0 ],
-									"text" : "j.parameter noise/threshold @type decimal @range/bounds 0. 100. @range/clipmode both @description \"Set threshold level for the noise reduction\"",
+									"text" : "j.parameter noise/threshold @type decimal @range 0. 100. @clipmode both @description \"Set threshold level for the noise reduction\"",
 									"varname" : "noise[2]"
 								}
 

@@ -126,7 +126,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 22.0, 135.0, 254.0, 43.0 ],
-									"text" : "j.parameter ramp/time @type decimal @range/bounds 0. 10. @range/clipmode low @value/default 0."
+									"text" : "j.parameter ramp/time @type decimal @range 0. 10. @clipmode low @default 0."
 								}
 
 							}
@@ -141,7 +141,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 72.0, 25.0, 238.0, 31.0 ],
-									"text" : "j.parameter ramp/active @type boolean @value/default 0"
+									"text" : "j.parameter ramp/active @type boolean @default 0"
 								}
 
 							}
@@ -705,7 +705,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 104.0, 177.0, 382.0, 31.0 ],
-									"text" : "j.parameter autofollow/time @type decimal @repetitions/filter 0 @description \"autofollow time (in seconds)\" @priority 1 @value/default 0."
+									"text" : "j.parameter autofollow/time @type decimal @repetitions/filter 0 @description \"autofollow time (in seconds)\" @priority 1 @default 0."
 								}
 
 							}
@@ -720,7 +720,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 105.0, 100.0, 370.0, 31.0 ],
-									"text" : "j.parameter autofollow/active @type boolean @repetitions/filter 0 @description \"enable autofollow mode\" @value/default 0 @priority 2"
+									"text" : "j.parameter autofollow/active @type boolean @repetitions/filter 0 @description \"enable autofollow mode\" @default 0 @priority 2"
 								}
 
 							}
@@ -921,7 +921,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 41.0, 23.0, 425.0, 27.0 ],
-					"text" : "j.parameter addresses @type array @description \"addresses to include in the cue\" @value/default / @priority 3 @repetitions/filter 1"
+					"text" : "j.parameter addresses @type array @description \"addresses to include in the cue\" @default / @priority 3 @repetitions/filter 1"
 				}
 
 			}
@@ -1536,7 +1536,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 194.0, 578.0, 224.0, 31.0 ],
-													"text" : "j.parameter addresses/ramp @value/default none"
+													"text" : "j.parameter addresses/ramp @default none"
 												}
 
 											}
@@ -2202,7 +2202,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 485.0, 308.0, 207.0, 38.0 ],
-													"text" : "j.parameter filter/addresses/excluded @type generic @description \"addresses to filter in/out  from the cue\" @value/default none @priority 3"
+													"text" : "j.parameter filter/addresses/excluded @type generic @description \"addresses to filter in/out  from the cue\" @default none @priority 3"
 												}
 
 											}
@@ -2820,7 +2820,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 558.0, 150.0, 139.0, 48.0 ],
-													"text" : "j.parameter filter/tags/mode @type boolean @description \"filter mode for tags\" @value/default 0 @priority 8"
+													"text" : "j.parameter filter/tags/mode @type boolean @description \"filter mode for tags\" @default 0 @priority 8"
 												}
 
 											}
@@ -2835,7 +2835,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 325.0, 114.0, 142.0, 48.0 ],
-													"text" : "j.parameter filter/keys/mode @type boolean @description \"filter mode for keys\" @value/default 0 @priority 6"
+													"text" : "j.parameter filter/keys/mode @type boolean @description \"filter mode for keys\" @default 0 @priority 6"
 												}
 
 											}
@@ -2850,7 +2850,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 104.0, 120.0, 132.0, 58.0 ],
-													"text" : "j.parameter filter/adresses/mode @type boolean @description \"filter mode for addresses\" @value/default 0 @priority 4"
+													"text" : "j.parameter filter/adresses/mode @type boolean @description \"filter mode for addresses\" @default 0 @priority 4"
 												}
 
 											}
@@ -4068,7 +4068,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 488.0, 76.0, 206.0, 38.0 ],
-													"text" : "j.parameter filter/tags @type array @description \"tags  to filter  addresses in/out  from the cue\" @value/default none @priority 9"
+													"text" : "j.parameter filter/tags @type array @description \"tags  to filter  addresses in/out  from the cue\" @default none @priority 9"
 												}
 
 											}
@@ -4083,7 +4083,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 257.0, 71.0, 201.0, 38.0 ],
-													"text" : "j.parameter filter/keys @type array @description \"keys in addresses to filter in/out  from the cue\" @value/default none @priority 7"
+													"text" : "j.parameter filter/keys @type array @description \"keys in addresses to filter in/out  from the cue\" @default none @priority 7"
 												}
 
 											}
@@ -4196,7 +4196,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 38.0, 74.0, 201.0, 38.0 ],
-													"text" : "j.parameter filter/adresses @type generic @description \"addresses to  filter in/out  from the cue\" @value/default none @priority 5"
+													"text" : "j.parameter filter/adresses @type generic @description \"addresses to  filter in/out  from the cue\" @default none @priority 5"
 												}
 
 											}

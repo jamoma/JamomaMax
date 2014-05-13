@@ -653,7 +653,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 384.0, 136.0, 532.0, 19.0 ],
-					"text" : "j.message initDevice @type generic @range/clipmode none @description \"Initialization of hi object\"",
+					"text" : "j.message initDevice @type generic @clipmode none @description \"Initialization of hi object\"",
 					"varname" : "j.parameter[3]"
 				}
 
@@ -669,7 +669,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 250.0, 109.0, 584.0, 19.0 ],
-					"text" : "j.parameter active @type boolean @range/clipmode none @description \"Turn polling on (10 ms interval)\"",
+					"text" : "j.parameter active @type boolean @clipmode none @description \"Turn polling on (10 ms interval)\"",
 					"varname" : "hi_on[1]"
 				}
 
@@ -685,7 +685,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 20.0, 42.0, 585.0, 19.0 ],
-					"text" : "j.parameter device @type string @range/clipmode none @description \"Choose which HI device to use\"",
+					"text" : "j.parameter device @type string @clipmode none @description \"Choose which HI device to use\"",
 					"varname" : "device_menu[1]"
 				}
 

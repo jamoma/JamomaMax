@@ -254,7 +254,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 60.0, 17.0, 561.0, 31.0 ],
-					"text" : "j.parameter key/color @repetitions/filter 1 @type decimalArray @dataspace color @dataspace/unit rgb @range/bounds 0. 1. @range/clipmode both @description \"Chroma keying color (RGB in the range 0-1).\"",
+					"text" : "j.parameter key/color @repetitions/filter 1 @type decimalArray @dataspace color @dataspace/unit rgb @range 0. 1. @clipmode both @description \"Chroma keying color (RGB in the range 0-1).\"",
 					"varname" : "key/blue[1]"
 				}
 
@@ -298,7 +298,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 283.5, 276.0, 400.0, 31.0 ],
-					"text" : "j.parameter alphaignore @repetitions/filter 1 @type boolean @range/bounds 0. 1. @description \"alpha of the chromakey\"",
+					"text" : "j.parameter alphaignore @repetitions/filter 1 @type boolean @range 0. 1. @description \"alpha of the chromakey\"",
 					"varname" : "alpha"
 				}
 
@@ -314,7 +314,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 210.0, 214.0, 420.0, 31.0 ],
-					"text" : "j.parameter key/max @repetitions/filter 1 @type decimal @range/bounds 0. 10. @description \"maxkey of the chromakey\"",
+					"text" : "j.parameter key/max @repetitions/filter 1 @type decimal @range 0. 10. @description \"maxkey of the chromakey\"",
 					"varname" : "maxkey[1]"
 				}
 
@@ -330,7 +330,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 176.0, 147.0, 420.0, 31.0 ],
-					"text" : "j.parameter key/min @repetitions/filter 1 @type decimal @range/bounds 0. 10. @description \"minkey of the chromakey\"",
+					"text" : "j.parameter key/min @repetitions/filter 1 @type decimal @range 0. 10. @description \"minkey of the chromakey\"",
 					"varname" : "minkey[1]"
 				}
 
@@ -346,7 +346,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 126.0, 113.0, 398.0, 31.0 ],
-					"text" : "j.parameter fade @repetitions/filter 1 @type decimal @range/bounds 0. 10. @description \"fade of the chromakey\"",
+					"text" : "j.parameter fade @repetitions/filter 1 @type decimal @range 0. 10. @description \"fade of the chromakey\"",
 					"varname" : "fade[1]"
 				}
 
@@ -362,7 +362,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 81.0, 77.0, 394.0, 31.0 ],
-					"text" : "j.parameter tolerance @repetitions/filter 1 @type decimal @range/bounds 0. 1. @description \"Tolerance of the chromakey\"",
+					"text" : "j.parameter tolerance @repetitions/filter 1 @type decimal @range 0. 1. @description \"Tolerance of the chromakey\"",
 					"varname" : "tolerance"
 				}
 

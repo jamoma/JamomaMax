@@ -80,7 +80,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 432.0, 32.5, 139.0, 154.0 ],
-					"text" : "j.parameter mode @type string @value/default FastMode @description \"Choose internal calculation mode for panning: fast uses a lookup table while precision performs trigonometric calculations.\"",
+					"text" : "j.parameter mode @type string @default FastMode @description \"Choose internal calculation mode for panning: fast uses a lookup table while precision performs trigonometric calculations.\"",
 					"varname" : "mode[1]"
 				}
 
@@ -96,7 +96,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 268.0, 32.5, 137.0, 114.0 ],
-					"text" : "j.parameter shape @type string @value/default EqualPower @description \"Choose the panning function: linear, squareroot, or equal-power.\"",
+					"text" : "j.parameter shape @type string @default EqualPower @description \"Choose the panning function: linear, squareroot, or equal-power.\"",
 					"varname" : "shape[1]"
 				}
 
@@ -112,7 +112,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 85.0, 32.5, 149.0, 141.0 ],
-					"text" : "j.parameter position @type decimal @range/bounds -1 1. @ramp/drive Max @value/default 0. @range/clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
+					"text" : "j.parameter position @type decimal @range -1 1. @ramp/drive Max @default 0. @clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
 					"varname" : "position"
 				}
 

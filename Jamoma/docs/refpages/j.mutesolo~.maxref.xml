@@ -182,5 +182,6 @@
 		<seealso name="j.gain=" />
 		<seealso name="j.mixer=" />
 		<seealso name="j.multimixer=" />
+		<seealso name="j.mutesolo=" />
 	</seealsolist>
 </c74object>

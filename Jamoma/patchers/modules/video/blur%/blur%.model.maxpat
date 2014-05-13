@@ -201,7 +201,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 78.5, 88.0, 377.5, 31.0 ],
-					"text" : "j.parameter center @type decimal @ramp/drive Max @range/clipmode none @range/bounds 0. 1. @description \"Weight of center cell\"",
+					"text" : "j.parameter center @type decimal @ramp/drive Max @clipmode none @range 0. 1. @description \"Weight of center cell\"",
 					"varname" : "center"
 				}
 
@@ -245,7 +245,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 299.0, 176.0, 275.0, 43.0 ],
-					"text" : "j.parameter ripple @type decimal @ramp/drive Max @range/clipmode none @range/bounds -1. 1. @description \"Scaling applied to outer ringing cells\"",
+					"text" : "j.parameter ripple @type decimal @ramp/drive Max @clipmode none @range -1. 1. @description \"Scaling applied to outer ringing cells\"",
 					"varname" : "ripple"
 				}
 
@@ -261,7 +261,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 185.0, 128.0, 389.0, 31.0 ],
-					"text" : "j.parameter ring @type decimal @ramp/drive Max @range/clipmode none @range/bounds 0. 1. @description \"Weight of cells adjoining the center\"",
+					"text" : "j.parameter ring @type decimal @ramp/drive Max @clipmode none @range 0. 1. @description \"Weight of cells adjoining the center\"",
 					"varname" : "ring"
 				}
 

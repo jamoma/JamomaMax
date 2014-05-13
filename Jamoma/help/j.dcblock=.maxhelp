@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -101,7 +101,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -226,8 +226,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "audio.connect", "" ],
-									"patching_rect" : [ 110.0, 285.0, 95.0, 20.0 ],
-									"text" : "j.dcblocker="
+									"patching_rect" : [ 110.0, 285.0, 64.0, 20.0 ],
+									"text" : "j.dcblock="
 								}
 
 							}
@@ -352,7 +352,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -365,7 +365,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dcblocker=.mxo",
+				"name" : "j.dcblock=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

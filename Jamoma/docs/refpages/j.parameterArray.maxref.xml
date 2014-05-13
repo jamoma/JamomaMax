@@ -334,7 +334,7 @@
 				TEXT_HERE
 			</description>
 		</attribute>
-		<attribute name="range/bounds" get="1" set="1" type="atom" size="1">
+		<attribute name="range" get="1" set="1" type="atom" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
@@ -342,7 +342,7 @@
 				TEXT_HERE
 			</description>
 		</attribute>
-		<attribute name="range/clipmode" get="1" set="1" type="symbol" size="1">
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
@@ -390,7 +390,7 @@
 				TEXT_HERE
 			</description>
 		</attribute>
-		<attribute name="value/default" get="1" set="1" type="int" size="1">
+		<attribute name="default" get="1" set="1" type="int" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
@@ -398,7 +398,7 @@
 				TEXT_HERE
 			</description>
 		</attribute>
-		<attribute name="value/stepsize" get="1" set="1" type="int" size="1">
+		<attribute name="stepsize" get="1" set="1" type="int" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>

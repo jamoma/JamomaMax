@@ -162,7 +162,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 347.0, 63.0, 139.0, 141.0 ],
-					"text" : "j.parameter dimensions @repetitions/filter 1 @type integer @range/bounds 2 3 @range/clipmode both @priority 2 @description \"Dimension of the loudspeaker setup (2D or 3D).\"",
+					"text" : "j.parameter dimensions @repetitions/filter 1 @type integer @range 2 3 @clipmode both @priority 2 @description \"Dimension of the loudspeaker setup (2D or 3D).\"",
 					"varname" : "destination/dimensions"
 				}
 
@@ -244,7 +244,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 462.0, 28.0, 133.0, 141.0 ],
-									"text" : "j.parameter numSources @repetitions/filter 1 @type integer @range/bounds 1 32 @range/clipmode both @priority 1 @description \"Number of incomming mono sources to pan.\"",
+									"text" : "j.parameter numSources @repetitions/filter 1 @type integer @range 1 32 @clipmode both @priority 1 @description \"Number of incomming mono sources to pan.\"",
 									"varname" : "source/voices"
 								}
 
@@ -467,7 +467,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 667.0, 64.0, 139.0, 114.0 ],
-													"text" : "j.messageArray source.[32]/active @type boolean @value/default 1 @description \"Mute ( /active 0) or unmute (/active 1) the nth source.\""
+													"text" : "j.messageArray source.[32]/active @type boolean @default 1 @description \"Mute ( /active 0) or unmute (/active 1) the nth source.\""
 												}
 
 											}
@@ -497,7 +497,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 278.0, 64.0, 121.0, 100.0 ],
-													"text" : "j.messageArray source.[32]/blur @type decimal @range/bounds 0. 100. @description \"Set spatial blur of the nth source.\""
+													"text" : "j.messageArray source.[32]/blur @type decimal @range 0. 100. @description \"Set spatial blur of the nth source.\""
 												}
 
 											}
@@ -2185,7 +2185,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 786.0, 93.0, 139.0, 141.0 ],
-									"text" : "j.parameter numSpeakers @repetitions/filter 1 @type integer @range/bounds 2 32 @range/clipmode both @priority 3 @description \"Number of speakers that signals are distributed to.\"",
+									"text" : "j.parameter numSpeakers @repetitions/filter 1 @type integer @range 2 32 @clipmode both @priority 3 @description \"Number of speakers that signals are distributed to.\"",
 									"varname" : "destination/voices"
 								}
 

@@ -123,7 +123,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 396.0, 17.0, 154.0, 127.0 ],
-					"text" : "j.parameter preamp @ramp/drive Max @repetitions/filter 1 @type decimal @range/bounds -12 48 @range/clipmode none @description \"Preamp (dB).\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter preamp @ramp/drive Max @repetitions/filter 1 @type decimal @range -12 48 @clipmode none @description \"Preamp (dB).\" @dataspace gain @dataspace/unit dB",
 					"varname" : "preamp"
 				}
 
@@ -225,7 +225,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 222.0, 17.0, 148.0, 114.0 ],
-					"text" : "j.parameter depth @ramp/drive Max @repetitions/filter 1 @type decimal @range/bounds 0 99 @range/clipmode both @description \"Saturation: Depth.\"",
+					"text" : "j.parameter depth @ramp/drive Max @repetitions/filter 1 @type decimal @range 0 99 @clipmode both @description \"Saturation: Depth.\"",
 					"varname" : "depth"
 				}
 

@@ -408,7 +408,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 27.0, 26.0, 367.0, 31.0 ],
-					"text" : "j.parameter repetitions @type boolean @range/clipmode none @description \"Select whether repetitions should be filtered out or not.\"",
+					"text" : "j.parameter repetitions @type boolean @clipmode none @description \"Select whether repetitions should be filtered out or not.\"",
 					"varname" : "repetitions[1]"
 				}
 
@@ -424,7 +424,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 75.5, 67.0, 290.0, 31.0 ],
-					"text" : "j.parameter clip @type boolean @range/clipmode none @description \"Turn clipping on.\"",
+					"text" : "j.parameter clip @type boolean @clipmode none @description \"Turn clipping on.\"",
 					"varname" : "clip[1]"
 				}
 
@@ -440,7 +440,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 165.0, 163.0, 298.0, 31.0 ],
-					"text" : "j.parameter smooth @type boolean @range/clipmode none @description \"Turn smoothing on\"",
+					"text" : "j.parameter smooth @type boolean @clipmode none @description \"Turn smoothing on\"",
 					"varname" : "smooth[1]"
 				}
 
@@ -456,7 +456,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 290.0, 231.0, 326.0, 31.0 ],
-					"text" : "j.parameter smooth/value @type decimal @range/clipmode none @description \"Smoothing value (slide).\"",
+					"text" : "j.parameter smooth/value @type decimal @clipmode none @description \"Smoothing value (slide).\"",
 					"varname" : "smooth/value"
 				}
 
@@ -472,7 +472,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 312.0, 463.0, 361.0, 31.0 ],
-					"text" : "j.parameter scale/output/max @type decimal @range/clipmode none @description \"Output maximum scaling value.\"",
+					"text" : "j.parameter scale/output/max @type decimal @clipmode none @description \"Output maximum scaling value.\"",
 					"varname" : "scale/output/max"
 				}
 
@@ -488,7 +488,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 232.0, 422.0, 352.0, 31.0 ],
-					"text" : "j.parameter scale/output/min @type decimal @range/clipmode none @description \"Input minimum scaling value.\"",
+					"text" : "j.parameter scale/output/min @type decimal @clipmode none @description \"Input minimum scaling value.\"",
 					"varname" : "scale/output/min"
 				}
 
@@ -504,7 +504,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 210.0, 382.0, 422.0, 31.0 ],
-					"text" : "j.parameter scale/input/max @type decimal @range/clipmode none @description \"Input maximum scaling value. Only works in manual scaling mode.\"",
+					"text" : "j.parameter scale/input/max @type decimal @clipmode none @description \"Input maximum scaling value. Only works in manual scaling mode.\"",
 					"varname" : "scale/input/max"
 				}
 
@@ -520,7 +520,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 165.0, 347.0, 419.0, 31.0 ],
-					"text" : "j.parameter scale/input/min @type decimal @range/clipmode none @description \"Input minimum scaling value. Only works in manual scaling mode.\"",
+					"text" : "j.parameter scale/input/min @type decimal @clipmode none @description \"Input minimum scaling value. Only works in manual scaling mode.\"",
 					"varname" : "scale/input/min"
 				}
 
@@ -550,7 +550,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 103.0, 115.0, 587.0, 31.0 ],
-					"text" : "j.parameter scale @type integer @range/clipmode none @description \"Choose scaling mode: none - manual - auto.\"",
+					"text" : "j.parameter scale @type integer @clipmode none @description \"Choose scaling mode: none - manual - auto.\"",
 					"varname" : "scale[1]"
 				}
 

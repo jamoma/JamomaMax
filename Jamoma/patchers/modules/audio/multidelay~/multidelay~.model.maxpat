@@ -231,7 +231,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 289.5, 102.0, 141.0, 20.0 ],
-					"text" : "prepend range/bounds 0"
+					"text" : "prepend range 0"
 				}
 
 			}
@@ -763,7 +763,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 62.25, 272.5, 159.25, 141.0 ],
-					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range/clipmode both @range/bounds -70. 0. @dataspace gain @dataspace/unit db @description \"Amount of delay feedback (dB).\"",
+					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @clipmode both @range -70. 0. @dataspace gain @dataspace/unit db @description \"Amount of delay feedback (dB).\"",
 					"varname" : "feedback[1]"
 				}
 
@@ -779,7 +779,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 602.0, 141.0, 245.0, 74.0 ],
-					"text" : "j.parameter delay/right @type decimalArray @repetitions/filter 1 @ramp/drive none @range/bounds 0 10000 @range/clipmode low @description \"Delay time in milliseconds for right channel.\"",
+					"text" : "j.parameter delay/right @type decimalArray @repetitions/filter 1 @ramp/drive none @range 0 10000 @clipmode low @description \"Delay time in milliseconds for right channel.\"",
 					"varname" : "right[1]"
 				}
 
@@ -795,7 +795,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 289.5, 148.0, 243.0, 74.0 ],
-					"text" : "j.parameter delay/left @type decimalArray @repetitions/filter 1 @ramp/drive none @range/bounds 0 10000 @range/clipmode low @description \"Delay time in milliseconds for left channel.\"",
+					"text" : "j.parameter delay/left @type decimalArray @repetitions/filter 1 @ramp/drive none @range 0 10000 @clipmode low @description \"Delay time in milliseconds for left channel.\"",
 					"varname" : "left[1]"
 				}
 
@@ -811,7 +811,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 272.0, 39.5, 596.0, 33.0 ],
-					"text" : "j.parameter delay/max @type integer @ramp/drive Max @repetitions/filter 1 @range/bounds 0 10000 @range/clipmode low @description \"Max delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter delay/max @type integer @ramp/drive Max @repetitions/filter 1 @range 0 10000 @clipmode low @description \"Max delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
 					"varname" : "maxdelay"
 				}
 

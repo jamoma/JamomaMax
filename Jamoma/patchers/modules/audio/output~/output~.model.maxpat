@@ -79,7 +79,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 555.799988, 204.0, 147.0, 87.0 ],
-					"text" : "j.return cpu @range/bounds 0. 100. @type decimal @description \"reports the cpu usage of the dsp processing\""
+					"text" : "j.return cpu @range 0. 100. @type decimal @description \"reports the cpu usage of the dsp processing\""
 				}
 
 			}

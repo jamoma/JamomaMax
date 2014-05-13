@@ -533,7 +533,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 118.0, 312.714294, 678.0, 31.0 ],
-					"text" : "j.parameter mode @type integer @range/bounds 0 15 @range/clipmode both @ramp/drive none @description \"the different modes represent different (highly arbitrary) variations on the classic linear interpolationorithm. there are 16 of them. try them all!\"",
+					"text" : "j.parameter mode @type integer @range 0 15 @clipmode both @ramp/drive none @description \"the different modes represent different (highly arbitrary) variations on the classic linear interpolationorithm. there are 16 of them. try them all!\"",
 					"varname" : "mode"
 				}
 

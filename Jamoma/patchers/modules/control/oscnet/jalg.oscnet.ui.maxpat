@@ -542,7 +542,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 378.0, 398.0, 426.0, 43.0 ],
-					"text" : "j.parameter multicast/port @range/bounds 1 9999 @range/clipmode low @type integer @description \"Set the network port number used for sending out multicast Open Sound Control messages.\"",
+					"text" : "j.parameter multicast/port @range 1 9999 @clipmode low @type integer @description \"Set the network port number used for sending out multicast Open Sound Control messages.\"",
 					"varname" : "multicast_port[1]"
 				}
 
@@ -884,7 +884,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 381.0, 232.0, 404.0, 43.0 ],
-					"text" : "j.parameter send/port @type integer @range/bounds 1 9999 @range/clipmode low @description \"Set the network port number used for sending out Open Sound Control messages.\"",
+					"text" : "j.parameter send/port @type integer @range 1 9999 @clipmode low @description \"Set the network port number used for sending out Open Sound Control messages.\"",
 					"varname" : "send_port"
 				}
 
@@ -917,7 +917,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 377.0, 147.0, 416.0, 43.0 ],
-					"text" : "j.parameter receive/port @type integer @range/bounds 1 9999 @range/clipmode low @description \"Set the network port number on which to receive Open Sound Control messages.\"",
+					"text" : "j.parameter receive/port @type integer @range 1 9999 @clipmode low @description \"Set the network port number on which to receive Open Sound Control messages.\"",
 					"varname" : "receive_port"
 				}
 

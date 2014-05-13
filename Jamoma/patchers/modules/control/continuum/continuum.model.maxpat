@@ -39,7 +39,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 211.0, 223.0, 275.0, 31.0 ],
-					"text" : "j.parameter gdif/emotion/on @type boolean @range/clipmode none @description \"Turn data on\"",
+					"text" : "j.parameter gdif/emotion/on @type boolean @clipmode none @description \"Turn data on\"",
 					"varname" : "gdif/emotion/on"
 				}
 
@@ -56,7 +56,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 204.0, 171.5, 298.0, 31.0 ],
-					"text" : "j.parameter gdif/environment/on @type boolean @range/clipmode none @description \"Turn data on\"",
+					"text" : "j.parameter gdif/environment/on @type boolean @clipmode none @description \"Turn data on\"",
 					"varname" : "gdif/environment/on"
 				}
 
@@ -434,7 +434,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 71.0, 241.0, 333.0, 33.0 ],
-													"text" : "j.return gdif/cooked/button @type boolean @range/bounds 0 1 @description \"Mouse button on or off\""
+													"text" : "j.return gdif/cooked/button @type boolean @range 0 1 @description \"Mouse button on or off\""
 												}
 
 											}
@@ -449,7 +449,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 657.0, 241.0, 358.0, 33.0 ],
-													"text" : "j.return gdif/cooked/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of mouse\""
+													"text" : "j.return gdif/cooked/location/vertical @type decimal @range 0. 1. @description \"Vertical position of mouse\""
 												}
 
 											}
@@ -464,7 +464,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 346.0, 241.0, 372.0, 33.0 ],
-													"text" : "j.return gdif/cooked/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of mouse\""
+													"text" : "j.return gdif/cooked/location/horizontal @type decimal @range 0. 1. @description \"Horizontal position of mouse\""
 												}
 
 											}
@@ -966,7 +966,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 69.0, 39.0, 271.0, 31.0 ],
-									"text" : "j.parameter gdif/cooked/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/cooked/on @type boolean @clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/cooked/on"
 								}
 
@@ -2439,7 +2439,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 19.0, 33.0, 275.0, 31.0 ],
-									"text" : "j.parameter gdif/meta/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/meta/on @type boolean @clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/emotion/on"
 								}
 
@@ -2803,7 +2803,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 307.0, 347.0, 33.0 ],
-									"text" : "j.return gdif/meta/flow @type decimal @range/bounds 0. 1. @description \"Fluidity of movements (legato-staccato)\""
+									"text" : "j.return gdif/meta/flow @type decimal @range 0. 1. @description \"Fluidity of movements (legato-staccato)\""
 								}
 
 							}
@@ -2818,7 +2818,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 256.0, 337.0, 33.0 ],
-									"text" : "j.return gdif/meta/dynamics @type decimal @range/bounds 0. 1. @description \"Dynamic level (pp-FF)\""
+									"text" : "j.return gdif/meta/dynamics @type decimal @range 0. 1. @description \"Dynamic level (pp-FF)\""
 								}
 
 							}
@@ -3609,7 +3609,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 18.5, 43.0, 271.0, 31.0 ],
-									"text" : "j.parameter gdif/device/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/device/on @type boolean @clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/device/on"
 								}
 
@@ -3749,7 +3749,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 71.0, 371.0, 344.0, 33.0 ],
-									"text" : "j.return gdif/device/mouse/button/2/press @type boolean @range/bounds 0 1 @description \"Button up or down\""
+									"text" : "j.return gdif/device/mouse/button/2/press @type boolean @range 0 1 @description \"Button up or down\""
 								}
 
 							}
@@ -3764,7 +3764,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 519.0, 422.0, 370.0, 33.0 ],
-									"text" : "j.return gdif/device/mouse/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\""
+									"text" : "j.return gdif/device/mouse/location/vertical @type decimal @range 0. 1. @description \"Vertical position of hand\""
 								}
 
 							}
@@ -3779,7 +3779,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 346.0, 371.0, 384.0, 33.0 ],
-									"text" : "j.return gdif/device/mouse/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\""
+									"text" : "j.return gdif/device/mouse/location/horizontal @type decimal @range 0. 1. @description \"Horizontal position of hand\""
 								}
 
 							}
@@ -4321,7 +4321,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 18.5, 42.0, 297.0, 31.0 ],
-									"text" : "j.parameter gdif/performance/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/performance/on @type boolean @clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/performance/on"
 								}
 
@@ -4685,7 +4685,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 307.0, 404.0, 33.0 ],
-									"text" : "j.return gdif/performance/fluidity @type decimal @range/bounds 0. 1. @description \"Fluidity of movements (legato-staccato)\""
+									"text" : "j.return gdif/performance/fluidity @type decimal @range 0. 1. @description \"Fluidity of movements (legato-staccato)\""
 								}
 
 							}
@@ -4700,7 +4700,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 256.0, 337.0, 33.0 ],
-									"text" : "j.return gdif/performance/dynamics @type decimal @range/bounds 0. 1. @description \"Dynamic level (pp-FF)\""
+									"text" : "j.return gdif/performance/dynamics @type decimal @range 0. 1. @description \"Dynamic level (pp-FF)\""
 								}
 
 							}
@@ -5491,7 +5491,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 19.0, 44.0, 271.0, 31.0 ],
-									"text" : "j.parameter gdif/body/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/body/on @type boolean @clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/body/on"
 								}
 
@@ -5827,7 +5827,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 270.0, 386.0, 33.0 ],
-									"text" : "j.return gdif/body/hand/right/motion/direction @type decimal @range/bounds 0. 1. @description \"Direction of motion in radians\""
+									"text" : "j.return gdif/body/hand/right/motion/direction @type decimal @range 0. 1. @description \"Direction of motion in radians\""
 								}
 
 							}
@@ -5842,7 +5842,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 790.0, 219.0, 401.0, 33.0 ],
-									"text" : "j.return gdif/body/hand/right/motion/quantity @type decimal @range/bounds 0. 1. @description \"Quantity of Motion (QoM) of hand\""
+									"text" : "j.return gdif/body/hand/right/motion/quantity @type decimal @range 0. 1. @description \"Quantity of Motion (QoM) of hand\""
 								}
 
 							}
@@ -5899,7 +5899,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 699.0, 371.0, 355.0, 33.0 ],
-									"text" : "j.return gdif/body/hand/right/orientation @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\""
+									"text" : "j.return gdif/body/hand/right/orientation @type decimal @range 0. 1. @description \"Vertical position of hand\""
 								}
 
 							}
@@ -5914,7 +5914,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 662.0, 327.0, 363.0, 33.0 ],
-									"text" : "j.return gdif/body/hand/right/distance @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\""
+									"text" : "j.return gdif/body/hand/right/distance @type decimal @range 0. 1. @description \"Horizontal position of hand\""
 								}
 
 							}
@@ -6067,7 +6067,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 71.0, 422.0, 345.0, 33.0 ],
-									"text" : "j.return gdif/body/hand/right/finger/2/press @type boolean @range/bounds 0 1 @description \"Finger up or down\""
+									"text" : "j.return gdif/body/hand/right/finger/2/press @type boolean @range 0 1 @description \"Finger up or down\""
 								}
 
 							}
@@ -6082,7 +6082,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 519.0, 422.0, 383.0, 33.0 ],
-									"text" : "j.return gdif/body/hand/right/location/vertical @type decimal @range/bounds 0. 1. @description \"Vertical position of hand\""
+									"text" : "j.return gdif/body/hand/right/location/vertical @type decimal @range 0. 1. @description \"Vertical position of hand\""
 								}
 
 							}
@@ -6097,7 +6097,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 346.0, 371.0, 398.0, 33.0 ],
-									"text" : "j.return gdif/body/hand/right/location/horizontal @type decimal @range/bounds 0. 1. @description \"Horizontal position of hand\""
+									"text" : "j.return gdif/body/hand/right/location/horizontal @type decimal @range 0. 1. @description \"Horizontal position of hand\""
 								}
 
 							}
@@ -6767,7 +6767,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.5, 40.0, 271.0, 31.0 ],
-									"text" : "j.parameter gdif/raw/on @type boolean @range/clipmode none @description \"Turn data on\"",
+									"text" : "j.parameter gdif/raw/on @type boolean @clipmode none @description \"Turn data on\"",
 									"varname" : "gdif/raw/on"
 								}
 
@@ -7744,7 +7744,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 249.5, 317.0, 263.0, 19.0 ],
-					"text" : "j.return return_c @range/bounds 0. 1."
+					"text" : "j.return return_c @range 0. 1."
 				}
 
 			}

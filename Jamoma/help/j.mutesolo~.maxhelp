@@ -127,6 +127,36 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"hidden" : 1,
+									"id" : "obj-9",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 615.0, 181.0, 60.0, 20.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"hidden" : 1,
+									"id" : "obj-6",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 615.0, 208.0, 107.0, 18.0 ],
+									"text" : "set 0 0 0 0 0 0 0 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"border" : 0,
 									"filename" : "helpdetails.js",
 									"id" : "obj-7",
@@ -397,7 +427,7 @@
 									}
 ,
 									"size" : 8,
-									"values" : [ 0, 0, 0, 0, 0, 0, 0, 0 ],
+									"values" : [ 0, 0, 0, 1, 0, 0, 0, 0 ],
 									"varname" : "radiogroup[1]"
 								}
 
@@ -923,10 +953,37 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-11", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-9", 0 ]
 								}
 
 							}
@@ -954,10 +1011,10 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-22::obj-27" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-22::obj-28" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-22::obj-8" : [ "radiogroup", "radiogroup", 0 ],
 			"obj-22::obj-17" : [ "radiogroup[1]", "radiogroup[1]", 0 ],
-			"obj-22::obj-8" : [ "radiogroup", "radiogroup", 0 ]
+			"obj-22::obj-27" : [ "live.gain~", "live.gain~", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
