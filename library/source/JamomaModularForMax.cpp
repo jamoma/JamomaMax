@@ -25,7 +25,7 @@
 // Method to deal with TTSubscriber
 ///////////////////////////////////////////////////////////////////////
 
-TTErr jamoma_subscriber_create(t_object *x, TTObject anObject, TTAddress relativeAddress, TTObject& returnedSubscriber, TTSymbol& returnedAddress, TTNodePtr *returnedNode, TTNodePtr *returnedContextNode)
+TTErr jamoma_subscriber_create(t_object *x, TTObject& anObject, TTAddress relativeAddress, TTObject& returnedSubscriber, TTSymbol& returnedAddress, TTNodePtr *returnedNode, TTNodePtr *returnedContextNode)
 {
 	TTValue		v, args;
 	TTList		aContextList;
@@ -207,7 +207,7 @@ TTErr jamoma_container_create(t_object *x, TTObject& returnedContainer)
 }
 
 /**	Send Max data to a node (e.g., a j.parameter object) using a container object. */
-TTErr jamoma_container_send(TTObject aContainer, t_symbol *relativeAddressAndAttribute, long argc, const t_atom *argv)
+TTErr jamoma_container_send(TTObject& aContainer, t_symbol *relativeAddressAndAttribute, long argc, const t_atom *argv)
 {
 	TTAddress anAddress;
 	TTValue	v, data, none;
@@ -266,7 +266,7 @@ TTErr jamoma_data_create(t_object *x, TTObject& returnedData, TTSymbol service)
 }
 
 /**	Send Max data command */
-TTErr jamoma_data_command(TTObject aData, t_symbol *msg, long argc, const t_atom *argv)
+TTErr jamoma_data_command(TTObject& aData, t_symbol *msg, long argc, const t_atom *argv)
 {
 	TTValue v, none;
 	
@@ -304,7 +304,7 @@ TTErr jamoma_sender_create_audio(t_object *x, TTObject& returnedSender)
 }
 
 /**	Send Max data using a sender object */
-TTErr jamoma_sender_send(TTObject aSender, t_symbol *msg, long argc, const t_atom *argv)
+TTErr jamoma_sender_send(TTObject& aSender, t_symbol *msg, long argc, const t_atom *argv)
 {
 	TTValue v, none;
 	
@@ -422,7 +422,7 @@ TTErr jamoma_input_create_audio(t_object *x, TTObject& returnedInput)
 }
 
 /**	Send any signal to an input object */
-TTErr jamoma_input_send(TTObject anInput, t_symbol *msg, long argc, const t_atom *argv)
+TTErr jamoma_input_send(TTObject& anInput, t_symbol *msg, long argc, const t_atom *argv)
 {	
 	TTValue v, none;
 	
@@ -474,7 +474,7 @@ TTErr jamoma_output_create_audio(t_object *x, TTObject& returnedOutput)
 }
 
 /**	Send any signal to an output object */
-TTErr jamoma_output_send(TTObject anOutput, t_symbol *msg, long argc, const t_atom *argv)
+TTErr jamoma_output_send(TTObject& anOutput, t_symbol *msg, long argc, const t_atom *argv)
 {	
 	TTValue v, none;
 	
@@ -549,7 +549,7 @@ TTErr jamoma_viewer_create(t_object *x, TTObject& returnedViewer)
 }
 
 /**	Send Max data using a viewer object */
-TTErr jamoma_viewer_send(TTObject aViewer, t_symbol *msg, long argc, const t_atom *argv)
+TTErr jamoma_viewer_send(TTObject& aViewer, t_symbol *msg, long argc, const t_atom *argv)
 {
 	TTValue v, none;
 	

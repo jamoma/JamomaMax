@@ -65,7 +65,7 @@ extern JAMOMA_EXPORT	TTString*			DocumentationFormat;	///<
  @param returnedContextNode
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_subscriber_create(t_object *x, TTObject anObject, TTAddress relativeAddress, TTObject& returnedSubscriber, TTSymbol& returnedAddress, TTNodePtr *returnedNode, TTNodePtr *returnedContextNode);
+TTErr JAMOMA_EXPORT jamoma_subscriber_create(t_object *x, TTObject& anObject, TTAddress relativeAddress, TTObject& returnedSubscriber, TTSymbol& returnedAddress, TTNodePtr *returnedNode, TTNodePtr *returnedContextNode);
 
 
 /** Get the <patcher name, patcher pointer> list above an external.
@@ -95,7 +95,7 @@ TTErr JAMOMA_EXPORT jamoma_container_create(t_object *x, TTObject& returnedConta
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_container_send(TTObject aContainer, t_symbol *relativeAddressAndAttribute, long argc, const t_atom *argv);
+TTErr JAMOMA_EXPORT jamoma_container_send(TTObject& aContainer, t_symbol *relativeAddressAndAttribute, long argc, const t_atom *argv);
 
 
 
@@ -130,7 +130,7 @@ TTErr JAMOMA_EXPORT jamoma_data_create(t_object *x, TTObject& returnedData, TTSy
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_data_command(TTObject aData, t_symbol *msg, long argc, const t_atom *argv);
+TTErr JAMOMA_EXPORT jamoma_data_command(TTObject& aData, t_symbol *msg, long argc, const t_atom *argv);
 
 
 
@@ -160,7 +160,7 @@ TTErr JAMOMA_EXPORT jamoma_sender_create_audio(t_object *x, TTObject& returnedSe
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_sender_send(TTObject aSender, t_symbol *msg, long argc, const t_atom *argv);
+TTErr JAMOMA_EXPORT jamoma_sender_send(TTObject& aSender, t_symbol *msg, long argc, const t_atom *argv);
 
 
 
@@ -230,7 +230,7 @@ TTErr JAMOMA_EXPORT jamoma_input_create_audio(t_object *x, TTObject& returnedInp
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_input_send(TTObject anInput, t_symbol *msg, long argc, const t_atom *argv);
+TTErr JAMOMA_EXPORT jamoma_input_send(TTObject& anInput, t_symbol *msg, long argc, const t_atom *argv);
 
 
 
@@ -260,7 +260,7 @@ TTErr JAMOMA_EXPORT jamoma_output_create_audio(t_object *x, TTObject& returnedOu
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_output_send(TTObject anOutput, t_symbol *msg, long argc, const t_atom *argv);
+TTErr JAMOMA_EXPORT jamoma_output_send(TTObject& anOutput, t_symbol *msg, long argc, const t_atom *argv);
 
 
 // Method to deal with TTMapper
@@ -293,7 +293,7 @@ TTErr JAMOMA_EXPORT jamoma_viewer_create(t_object *x, TTObject& returnedViewer);
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_viewer_send(TTObject aViewer, t_symbol *msg, long argc, const t_atom *argv);
+TTErr JAMOMA_EXPORT jamoma_viewer_send(TTObject& aViewer, t_symbol *msg, long argc, const t_atom *argv);
 
 
 
