@@ -406,6 +406,7 @@ void data_float(TTPtr self, double value)
 void data_list(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTObject o;
 	
 	if (!x->internals->isEmpty()) {
 		
@@ -416,13 +417,16 @@ void data_list(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 				x->internals->getKeys(keys);
 				for (TTUInt32 i = 0; i < keys.size(); i++) {
 					x->cursor = keys[i];
-					jamoma_data_command(selectedObject, msg, argc, argv);
+                    o = selectedObject;
+					jamoma_data_command(o, msg, argc, argv);
 				}
 			}
 			x->cursor = kTTSymEmpty;
 		}
-		else
-			jamoma_data_command(selectedObject, msg, argc, argv);
+		else {
+            o = selectedObject;
+			jamoma_data_command(o, msg, argc, argv);
+        }
 		
 	}
 	else
@@ -432,6 +436,7 @@ void data_list(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 void WrappedDataClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTObject o;
 	
 	if (proxy_getinlet((t_object*)x)) {
 		wrappedModularClass_ArraySelect(self, msg, argc, argv);
@@ -445,13 +450,16 @@ void WrappedDataClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *arg
 				x->internals->getKeys(keys);
 				for (TTUInt32 i=0; i<keys.size(); i++) {
 					x->cursor = keys[i];
-					jamoma_data_command(selectedObject, msg, argc, argv);
+                    o = selectedObject;
+					jamoma_data_command(o, msg, argc, argv);
 				}
 				x->cursor = kTTSymEmpty;
 			}
 		}
-		else
-			jamoma_data_command(selectedObject, msg, argc, argv);
+		else {
+            o = selectedObject;
+			jamoma_data_command(o, msg, argc, argv);
+        }
 	}
 }
 
@@ -474,8 +482,8 @@ void data_array(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
                 
                 jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
                 x->cursor = TTSymbol(instanceAddress->s_name);
-                
-                jamoma_data_command(selectedObject, _sym_nothing, d, argv+((i-1)*d));
+                TTObject o = selectedObject;
+                jamoma_data_command(o, _sym_nothing, d, argv+((i-1)*d));
             }
             
             x->cursor = memoCursor;

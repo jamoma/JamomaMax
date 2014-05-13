@@ -544,6 +544,7 @@ TTErr remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTErr err = kTTErrNone;
+    TTObject o;
 
 	if (x->arraySize > 0) {
 		
@@ -556,8 +557,8 @@ TTErr remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 				for (int i = 0; i < keys.size(); i++) {
                     
 					x->cursor = keys[i];
-                    
-					if (jamoma_viewer_send(selectedObject, msg, argc, argv))
+                    o = selectedObject;
+					if (jamoma_viewer_send(o, msg, argc, argv))
                         
                         err = kTTErrGeneric;
 				}
@@ -567,8 +568,10 @@ TTErr remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
             
             return err;
 		}
-		else
-			return jamoma_viewer_send((TTViewerPtr)selectedObject, msg, argc, argv);
+		else {
+            o = selectedObject;
+			jamoma_viewer_send(o, msg, argc, argv);
+        }
 	}
 	else
 		object_error((t_object*)x, "list : the array is empty");
@@ -579,6 +582,7 @@ TTErr remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 void WrappedViewerClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTObject o;
 	
 	if (proxy_getinlet((t_object*)x)) {
 		wrappedModularClass_ArraySelect(self, msg, argc, argv);
@@ -592,13 +596,16 @@ void WrappedViewerClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *a
 				x->internals->getKeys(keys);
 				for (int i = 0; i < keys.size(); i++) {
 					x->cursor = keys[i];
-					jamoma_viewer_send(selectedObject, msg, argc, argv);
+                    o = selectedObject;
+					jamoma_viewer_send(o, msg, argc, argv);
 				}
 				x->cursor = kTTSymEmpty;
 			}
 		}
-		else
-			jamoma_viewer_send(selectedObject, msg, argc, argv);
+		else {
+            o = selectedObject;
+			jamoma_viewer_send(o, msg, argc, argv);
+        }
 	}
 }
 
@@ -624,8 +631,8 @@ TTErr remote_array(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                     
                     jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
 					x->cursor = TTSymbol(instanceAddress->s_name);
-                    
-                    if (jamoma_viewer_send(selectedObject, _sym_nothing, d, argv+((i-1)*d)))
+                    TTObject o = selectedObject;
+                    if (jamoma_viewer_send(o, _sym_nothing, d, argv+((i-1)*d)))
                         
                         err = kTTErrGeneric;
                 }

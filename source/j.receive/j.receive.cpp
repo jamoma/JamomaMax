@@ -193,9 +193,9 @@ void WrappedReceiverClass_new(TTPtr self, long argc, t_atom *argv)
 
 void WrappedReceiverClass_free(TTPtr self)
 {
+#ifdef JCOM_RECEIVE_TILDE
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
-#ifdef JCOM_RECEIVE_TILDE
     // Always call dsp_free first in this routine
     dsp_free((t_pxobject *)x);
 #endif
@@ -213,7 +213,7 @@ void receive_subscribe(TTPtr self)
 	TTAddress                   absoluteAddress, returnedAddress;
     TTNodePtr                   returnedNode = NULL;
     TTNodePtr                   returnedContextNode = NULL;
-	TTObject                    anObject;
+	TTObject                    anObject, empty;
 	
 	if (x->address == kTTAdrsEmpty)
 		return;
@@ -221,7 +221,7 @@ void receive_subscribe(TTPtr self)
 	// for relative address
 	jamoma_patcher_get_info((t_object*)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
 	
-	if (!jamoma_subscriber_create((t_object*)x, NULL, TTAddress("model"), x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((t_object*)x, empty, TTAddress("model"), x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
 		// get the context address to make
 		// a receiver on the contextAddress/model:address attribute

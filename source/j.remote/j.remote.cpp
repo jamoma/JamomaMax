@@ -223,7 +223,7 @@ void remote_subscribe(TTPtr self)
 	TTAddress                   absoluteAddress, returnedAddress;
     TTNodePtr                   returnedNode = NULL;
     TTNodePtr                   returnedContextNode = NULL;
-	TTObject                    anObject;
+	TTObject                    anObject, empty;
     TTErr                       err;
     
     if (x->address == kTTAdrsEmpty)
@@ -273,11 +273,11 @@ void remote_subscribe(TTPtr self)
                 x->address.getName() == NO_NAME &&
                 x->address.getInstance() == NO_INSTANCE &&
                 x->address.getAttribute() != NO_ATTRIBUTE)
-                err = jamoma_subscriber_create((t_object*)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
+                err = jamoma_subscriber_create((t_object*)x, empty, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
             
              // if the address refer to the "model" node don't subscribe the Viewer (to not have model.1)
             else if (x->address.getName() == TTSymbol("model"))
-                err = jamoma_subscriber_create((t_object*)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
+                err = jamoma_subscriber_create((t_object*)x, empty, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
             
             // else try to subscribe the Viewer with its name
             else
@@ -287,7 +287,7 @@ void remote_subscribe(TTPtr self)
         // Model patcher case :
         // try to binds on the parameter|message|return of the model without subscribing the Viewer
         else if (x->patcherContext == kTTSym_model)
-            err = jamoma_subscriber_create((t_object*)x, NULL, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
+            err = jamoma_subscriber_create((t_object*)x, empty, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
         
         // Any other case : give up
         else 
