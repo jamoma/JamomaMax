@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1146.0, 888.0 ],
+		"rect" : [ 0.0, 44.0, 1554.0, 888.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,6 +29,102 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-109",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 312.5, 790.5, 315.0, 47.0 ],
+					"text" : "test.assert Jamoma/DSP/j.panorama/lookup_equal_power_pan_left @tags Jamoma DSP"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-47",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 312.5, 350.5, 327.5, 47.0 ],
+					"text" : "test.assert Jamoma/DSP/j.panorama/calculate_equal_power_pan_left @tags Jamoma DSP"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-89",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 660.5, 790.5, 330.0, 47.0 ],
+					"text" : "test.assert Jamoma/DSP/j.panorama/lookup_equal_power_pan_right @tags Jamoma DSP"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-60",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 660.5, 350.5, 341.0, 47.0 ],
+					"text" : "test.assert Jamoma/DSP/j.panorama/calculate_equal_power_pan_right @tags Jamoma DSP"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-93",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1015.5, 790.5, 346.0, 47.0 ],
+					"text" : "test.assert Jamoma/DSP/j.panorama/lookup_equal_power_pan_center @tags Jamoma DSP"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-69",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1015.5, 350.5, 346.0, 47.0 ],
+					"text" : "test.assert Jamoma/DSP/j.panorama/calculate_equal_power_pan_center @tags Jamoma DSP"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-17",
@@ -38,7 +134,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 433.25, 203.5, 381.0, 20.0 ]
+					"patching_rect" : [ 486.25, 203.5, 381.0, 20.0 ]
 				}
 
 			}
@@ -53,7 +149,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 649.0, 176.0, 168.0, 37.0 ],
+					"patching_rect" : [ 702.0, 176.0, 168.0, 37.0 ],
 					"text" : "This is a hack to prevent precision issues near zero"
 				}
 
@@ -67,7 +163,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 607.5, 184.5, 32.5, 20.0 ],
+					"patching_rect" : [ 660.5, 184.5, 32.5, 20.0 ],
 					"text" : "+ 1."
 				}
 
@@ -94,7 +190,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 902.5, 765.5, 20.0, 20.0 ]
+					"patching_rect" : [ 1015.5, 765.5, 20.0, 20.0 ]
 				}
 
 			}
@@ -106,7 +202,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 607.5, 765.5, 20.0, 20.0 ]
+					"patching_rect" : [ 660.5, 765.5, 20.0, 20.0 ]
 				}
 
 			}
@@ -130,7 +226,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 902.5, 322.5, 20.0, 20.0 ]
+					"patching_rect" : [ 1015.5, 322.5, 20.0, 20.0 ]
 				}
 
 			}
@@ -142,7 +238,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 607.5, 322.5, 20.0, 20.0 ]
+					"patching_rect" : [ 660.5, 322.5, 20.0, 20.0 ]
 				}
 
 			}
@@ -181,7 +277,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1051.5, 618.5, 24.0, 20.0 ],
+					"patching_rect" : [ 1164.5, 618.5, 24.0, 20.0 ],
 					"text" : "t b"
 				}
 
@@ -195,24 +291,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1051.5, 643.5, 71.0, 20.0 ],
+					"patching_rect" : [ 1164.5, 643.5, 71.0, 20.0 ],
 					"text" : "pv invSqrt2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-89",
-					"linecount" : 3,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 607.5, 790.5, 195.0, 47.0 ],
-					"text" : "test.assert lookup_square_root_pan_right @tags Jamoma DSP"
 				}
 
 			}
@@ -226,8 +306,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 607.5, 489.0, 105.0, 74.0 ],
-					"text" : "j.panorama~ 1 @position 1. @mode lookup @shape squareRoot"
+					"patching_rect" : [ 660.5, 489.0, 105.0, 74.0 ],
+					"text" : "j.panorama~ 1 @position 1. @mode lookup @shape equalPower"
 				}
 
 			}
@@ -241,7 +321,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 988.5, 673.0, 82.0, 20.0 ],
+					"patching_rect" : [ 1101.5, 673.0, 82.0, 20.0 ],
 					"text" : "test.equals 0."
 				}
 
@@ -256,24 +336,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 902.5, 673.0, 82.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 673.0, 82.0, 20.0 ],
 					"text" : "test.equals 1."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-93",
-					"linecount" : 3,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 902.5, 790.5, 205.0, 47.0 ],
-					"text" : "test.assert lookup_square_root_pan_center @tags Jamoma DSP"
 				}
 
 			}
@@ -286,7 +350,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 902.5, 459.5, 46.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 459.5, 46.0, 20.0 ],
 					"text" : "sig~ 1."
 				}
 
@@ -301,8 +365,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 902.5, 489.0, 117.0, 74.0 ],
-					"text" : "j.panorama~ 1 @position 0. @mode lookup @shape squareRoot"
+					"patching_rect" : [ 1015.5, 489.0, 117.0, 74.0 ],
+					"text" : "j.panorama~ 1 @position 0. @mode lookup @shape equalPower"
 				}
 
 			}
@@ -315,7 +379,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 902.5, 735.5, 105.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 735.5, 105.0, 20.0 ],
 					"text" : "&&"
 				}
 
@@ -329,7 +393,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 902.5, 703.0, 105.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 703.0, 105.0, 20.0 ],
 					"text" : "buddy 2"
 				}
 
@@ -344,7 +408,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 988.5, 582.0, 79.0, 20.0 ],
+					"patching_rect" : [ 1101.5, 582.0, 79.0, 20.0 ],
 					"text" : "test.sample~"
 				}
 
@@ -359,7 +423,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 902.5, 582.0, 79.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 582.0, 79.0, 20.0 ],
 					"text" : "test.sample~"
 				}
 
@@ -374,7 +438,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 693.5, 673.0, 82.0, 20.0 ],
+					"patching_rect" : [ 746.5, 673.0, 82.0, 20.0 ],
 					"text" : "test.equals 1."
 				}
 
@@ -389,7 +453,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 607.5, 673.0, 82.0, 20.0 ],
+					"patching_rect" : [ 660.5, 673.0, 82.0, 20.0 ],
 					"text" : "test.equals 0."
 				}
 
@@ -403,7 +467,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 607.5, 459.5, 46.0, 20.0 ],
+					"patching_rect" : [ 660.5, 459.5, 46.0, 20.0 ],
 					"text" : "sig~ 1."
 				}
 
@@ -417,7 +481,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 607.5, 735.5, 105.0, 20.0 ],
+					"patching_rect" : [ 660.5, 735.5, 105.0, 20.0 ],
 					"text" : "&&"
 				}
 
@@ -431,7 +495,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 607.5, 703.0, 105.0, 20.0 ],
+					"patching_rect" : [ 660.5, 703.0, 105.0, 20.0 ],
 					"text" : "buddy 2"
 				}
 
@@ -446,7 +510,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 693.5, 582.0, 79.0, 20.0 ],
+					"patching_rect" : [ 746.5, 582.0, 79.0, 20.0 ],
 					"text" : "test.sample~"
 				}
 
@@ -461,7 +525,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 607.5, 582.0, 79.0, 20.0 ],
+					"patching_rect" : [ 660.5, 582.0, 79.0, 20.0 ],
 					"text" : "test.sample~"
 				}
 
@@ -498,22 +562,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-109",
-					"linecount" : 3,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 312.5, 790.5, 186.0, 47.0 ],
-					"text" : "test.assert lookup_square_root_pan_left @tags Jamoma DSP"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-110",
@@ -537,7 +585,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 312.5, 489.0, 112.0, 74.0 ],
-					"text" : "j.panorama~ 1 @position -1. @mode lookup @shape squareRoot"
+					"text" : "j.panorama~ 1 @position -1. @mode lookup @shape equalPower"
 				}
 
 			}
@@ -608,7 +656,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1051.5, 178.5, 24.0, 20.0 ],
+					"patching_rect" : [ 1164.5, 178.5, 24.0, 20.0 ],
 					"text" : "t b"
 				}
 
@@ -622,7 +670,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1051.5, 203.5, 71.0, 20.0 ],
+					"patching_rect" : [ 1164.5, 203.5, 71.0, 20.0 ],
 					"text" : "pv invSqrt2"
 				}
 
@@ -657,22 +705,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-60",
-					"linecount" : 3,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 607.5, 350.5, 195.0, 47.0 ],
-					"text" : "test.assert calculate_square_root_pan_right @tags Jamoma DSP"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-62",
@@ -681,8 +713,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 607.5, 49.0, 105.0, 74.0 ],
-					"text" : "j.panorama~ 1 @position 1. @mode calculate @shape squareRoot"
+					"patching_rect" : [ 660.5, 49.0, 105.0, 74.0 ],
+					"text" : "j.panorama~ 1 @position 1. @mode calculate @shape equalPower"
 				}
 
 			}
@@ -696,7 +728,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 988.5, 233.0, 82.0, 20.0 ],
+					"patching_rect" : [ 1101.5, 233.0, 82.0, 20.0 ],
 					"text" : "test.equals 0."
 				}
 
@@ -711,24 +743,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 902.5, 233.0, 82.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 233.0, 82.0, 20.0 ],
 					"text" : "test.equals 1."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-69",
-					"linecount" : 3,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 902.5, 350.5, 205.0, 47.0 ],
-					"text" : "test.assert calculate_square_root_pan_center @tags Jamoma DSP"
 				}
 
 			}
@@ -741,7 +757,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 902.5, 21.5, 46.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 21.5, 46.0, 20.0 ],
 					"text" : "sig~ 1."
 				}
 
@@ -756,8 +772,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 902.5, 49.0, 117.0, 74.0 ],
-					"text" : "j.panorama~ 1 @position 0. @mode calculate @shape squareRoot"
+					"patching_rect" : [ 1015.5, 49.0, 117.0, 74.0 ],
+					"text" : "j.panorama~ 1 @position 0. @mode calculate @shape equalPower"
 				}
 
 			}
@@ -770,7 +786,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 902.5, 295.5, 105.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 295.5, 105.0, 20.0 ],
 					"text" : "&&"
 				}
 
@@ -784,7 +800,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 902.5, 263.0, 105.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 263.0, 105.0, 20.0 ],
 					"text" : "buddy 2"
 				}
 
@@ -799,7 +815,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 988.5, 142.0, 79.0, 20.0 ],
+					"patching_rect" : [ 1101.5, 142.0, 79.0, 20.0 ],
 					"text" : "test.sample~"
 				}
 
@@ -814,7 +830,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 902.5, 142.0, 79.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 142.0, 79.0, 20.0 ],
 					"text" : "test.sample~"
 				}
 
@@ -829,7 +845,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 693.5, 233.0, 82.0, 20.0 ],
+					"patching_rect" : [ 746.5, 233.0, 82.0, 20.0 ],
 					"text" : "test.equals 1."
 				}
 
@@ -844,7 +860,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 607.5, 233.0, 82.0, 20.0 ],
+					"patching_rect" : [ 660.5, 233.0, 82.0, 20.0 ],
 					"text" : "test.equals 1."
 				}
 
@@ -858,7 +874,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 607.5, 21.5, 46.0, 20.0 ],
+					"patching_rect" : [ 660.5, 21.5, 46.0, 20.0 ],
 					"text" : "sig~ 1."
 				}
 
@@ -872,7 +888,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 607.5, 295.5, 105.0, 20.0 ],
+					"patching_rect" : [ 660.5, 295.5, 105.0, 20.0 ],
 					"text" : "&&"
 				}
 
@@ -886,7 +902,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 607.5, 263.0, 105.0, 20.0 ],
+					"patching_rect" : [ 660.5, 263.0, 105.0, 20.0 ],
 					"text" : "buddy 2"
 				}
 
@@ -901,7 +917,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 693.5, 142.0, 79.0, 20.0 ],
+					"patching_rect" : [ 746.5, 142.0, 79.0, 20.0 ],
 					"text" : "test.sample~"
 				}
 
@@ -916,7 +932,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 607.5, 142.0, 79.0, 20.0 ],
+					"patching_rect" : [ 660.5, 142.0, 79.0, 20.0 ],
 					"text" : "test.sample~"
 				}
 
@@ -1005,22 +1021,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-47",
-					"linecount" : 3,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 312.5, 350.5, 186.0, 47.0 ],
-					"text" : "test.assert calculate_square_root_pan_left @tags Jamoma DSP"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-6",
@@ -1044,7 +1044,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 312.5, 49.0, 112.0, 74.0 ],
-					"text" : "j.panorama~ 1 @position -1. @mode calculate @shape squareRoot"
+					"text" : "j.panorama~ 1 @position -1. @mode calculate @shape equalPower"
 				}
 
 			}

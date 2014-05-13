@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 0.0, 44.0, 993.0, 363.0 ],
@@ -64,8 +64,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 666.5, 300.5, 183.0, 33.0 ],
-					"text" : "test.assert panoram~.bypass @tags Jamoma DSP"
+					"patching_rect" : [ 666.5, 300.5, 247.0, 33.0 ],
+					"text" : "test.assert Jamoma/DSP/j.panorama/bypass @tags Jamoma DSP"
 				}
 
 			}
@@ -232,8 +232,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 257.5, 300.5, 171.0, 33.0 ],
-					"text" : "test.assert panoram~.mute @tags Jamoma DSP"
+					"patching_rect" : [ 257.5, 300.5, 241.0, 33.0 ],
+					"text" : "test.assert Jamoma/DSP/j.panorama/mute @tags Jamoma DSP"
 				}
 
 			}
