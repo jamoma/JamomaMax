@@ -22,11 +22,11 @@
 // Data Structure for this object
 typedef struct _noisemod {
 	t_pxobject 			obj;
-	TTModel*			model;
-	TTOutputAudioPtr	out;	
-	TTAudioObjectBase*	noise;
-	TTAudioSignal*		signalIn;
-	TTAudioSignal*		signalOut;
+	TTModel             *model;
+	TTAudioObject       noise;
+	TTObject            signalIn;
+	TTObject            signalOut;
+    TTObject            out;
 } t_noisemod;
 
 
@@ -70,38 +70,41 @@ void* noisemod_new(t_symbol* s, long argc, t_atom* argv)
 {
 	t_noisemod*	x			= (t_noisemod*)object_alloc(s_noisemod_class);
 	long		attrstart	= attr_args_offset(argc, argv);
-	TTString	name 		= "/";
-	TTPtr		context;
+	TTString	name;
+    TTPtr       context;
 	
-	object_obex_lookup(x, gensym("#P"), (t_object**)&context);
-	
+    // Edit the name of our noise model using the first argument if exists
 	if (attrstart) {
 		if (atom_getsym(argv)->s_name[0] == '/')
 			name += atom_getsym(argv)->s_name + 1;
 		else
 			name += atom_getsym(argv)->s_name;
 	}
+    // Else call it "noise"
 	else
 		name += s->s_name;
+    
+    // Get the patcher as context pointer
+	object_obex_lookup(x, gensym("#P"), (t_object**)&context);
 	
 	// Create the actual DSP object
-	TTObjectBaseInstantiate(TT("noise"), &x->noise, 2);
-	assert(x->noise);
-	TTObjectBaseInstantiate(kTTSym_audiosignal, &x->signalOut, 2);
-	TTObjectBaseInstantiate(kTTSym_audiosignal, &x->signalIn, 2);
+	x->noise = TTObject("noise", 2);
+	assert(x->noise.valid());
+	x->signalOut = TTObject(kTTSym_audiosignal, 2);
+	x->signalIn = TTObject(kTTSym_audiosignal, 2);
 
 	// Create the "model" container
-	x->model = new TTModel(context, name);
+	x->model = new TTModel(name, context);
 	
 	// Add things to our model
-	x->model->createParameter("mode", "string", TT("white"), (TTFunctionWithBatonAndValue)noisemod_parameter_mode_callback, x, "");
-	x->out = x->model->createOutput("out");
+	x->model->createParameter("mode", (TTFunctionWithBatonAndValue)noisemod_parameter_mode_callback, x, "string", "set the mode of the noise generator",  TTSymbol("white"));
+	x->model->createOutput("", x->out);
 	x->model->createPresetManager();
 		
 	// Initialize the module (set default values, etc)
 	x->model->init();
 	
-	// 10. Do some final Max-specific stuff
+	// Do some final Max-specific stuff
 	dsp_setup((t_pxobject*)x, 1);
 	x->obj.z_misc = Z_NO_INPLACE;
 	outlet_new((t_pxobject*)x, "signal");
@@ -116,10 +119,6 @@ void noisemod_free(t_noisemod *x)
 	dsp_free((t_pxobject *)x);
 	
 	delete x->model;
-	
-	TTObjectBaseRelease(&x->noise);
-	TTObjectBaseRelease(&x->signalOut);
-	TTObjectBaseRelease(&x->signalIn);
 }
 
 
@@ -133,31 +132,31 @@ void noisemod_assist(t_noisemod *x, void *b, long msg, long arg, char *dst)
 // Callback we receive when the parameter value changes
 void noisemod_parameter_mode_callback(const TTValue& baton, const TTValue& v)
 {
-	t_noisemod *x = (t_noisemod*)TTPtr(baton->at(0));
-	x->noise->setAttributeValue("mode", v);
+	t_noisemod *x = (t_noisemod*)TTPtr(baton[0]);
+	x->noise.set("mode", v);
 }
 
 
 void noisemod_perform64(t_noisemod *x, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
 	// actually process the audio
-	x->noise->process(x->signalOut);
+	TTAudioObjectBasePtr(x->noise.instance())->process(TTAudioSignalPtr(x->signalOut.instance()));
 	
 	// we re-use the memory from ins[], which is safe because we set Z_NO_INPLACE in the object constructor
-	x->signalOut->getVectorCopy(0, sampleframes, ins[0]);
+	TTAudioSignalPtr(x->signalOut.instance())->getVectorCopy(0, sampleframes, ins[0]);
 	
-	x->out->process(ins[0], outs[0], sampleframes);
+	TTOutputAudioPtr(x->out.instance())->process(ins[0], outs[0], sampleframes);
 }
 
 
 void noisemod_dsp64(t_noisemod *x, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
-	x->signalOut->setNumChannels(1);
-	x->signalOut->setVectorSizeWithInt((TTUInt16)maxvectorsize);
-	x->signalOut->alloc();
+	x->signalOut.set(kTTSym_numChannels, 1);
+	x->signalOut.set(kTTSym_vectorSize, (TTUInt16)maxvectorsize);;
+	x->signalOut.send(kTTSym_alloc);
 	
-	x->noise->setAttributeValue(kTTSym_sampleRate, samplerate);
+	x->noise.set(kTTSym_sampleRate, samplerate);
 	object_method(dsp64, gensym("dsp_add64"), x, noisemod_perform64, 0, NULL);
 
-	x->out->setupAudioSignals(maxvectorsize, samplerate);
+	TTOutputAudioPtr(x->out.instance())->setupAudioSignals(maxvectorsize, samplerate);
 }
