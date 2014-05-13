@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 558.0, 162.0, 1050.0, 805.0 ],
@@ -29,6 +29,48 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 195.0, 468.0, 301.0, 20.0 ],
+					"text" : "prepend Jamoma/DSP/all_externals_loading_properly:"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-12",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 195.0, 503.40741, 49.0, 20.0 ],
+					"text" : "test.log"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 195.0, 434.0, 46.0, 20.0 ],
+					"text" : "error 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -47,13 +89,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-31",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 195.0, 361.0, 223.0, 33.0 ],
-					"text" : "test.assert AllExternalsLoadingProperly @tags Jamoma DSP"
+					"patching_rect" : [ 195.0, 361.0, 254.0, 47.0 ],
+					"text" : "test.assert Jamoma/DSP/all_externals_loading_properly @tags Jamoma DSP"
 				}
 
 			}
@@ -608,6 +650,24 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -806,6 +866,10 @@
 			}
 , 			{
 				"name" : "j.mutesolo~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "oscar.mxo",
 				"type" : "iLaX"
 			}
 , 			{
