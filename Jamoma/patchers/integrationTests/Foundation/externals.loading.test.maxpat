@@ -120,8 +120,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 186.0, 283.0, 173.0, 47.0 ],
-					"text" : "test.assert AllExternalsLoadingProperly @tags Jamoma Foundation"
+					"patching_rect" : [ 186.0, 283.0, 266.0, 47.0 ],
+					"text" : "test.assert Jamoma/Foundation/ExternalsLoadingProperly @tags Jamoma Foundation"
 				}
 
 			}
