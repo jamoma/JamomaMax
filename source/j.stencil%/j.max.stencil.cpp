@@ -49,7 +49,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	setup((t_messlist**)&sMaxStencilClass, (method)MaxStencilNew, (method)MaxStencilFree, sizeof(MaxStencilObject), 0, A_GIMME, 0);
 	
 	p = max_jit_classex_setup(calcoffset(MaxStencilObject, obex));
-	q = jit_class_findbyname(gensym("jcom_stencil"));    
+	q = jit_class_findbyname(gensym("j_stencil"));    
     max_jit_classex_mop_wrap(p, q, 0);							// attrs & methods for name, type, dim, planecount, bang, outputmatrix, etc
     max_jit_classex_standard_wrap(p, q, 0);						// attrs & methods for getattributes, dumpout, maxjitclassaddmethods, etc
     addmess((method)max_jit_mop_assist, (char*)"assist", A_CANT, 0);	// standard matrix-operator (mop) assist fn
@@ -66,9 +66,9 @@ void *MaxStencilNew(t_symbol *s, long argc, t_atom *argv)
 	MaxStencilObjectPtr	self;
 	void				*o;
 	
-	self = (MaxStencilObjectPtr)max_jit_obex_new(sMaxStencilClass, gensym("jcom_stencil"));
+	self = (MaxStencilObjectPtr)max_jit_obex_new(sMaxStencilClass, gensym("j_stencil"));
 	if (self) {
-		o = jit_object_new(gensym("jcom_stencil"));
+		o = jit_object_new(gensym("j_stencil"));
 		if (o) {
 			max_jit_mop_setup_simple(self, o, argc, argv);			
 			max_jit_attr_args(self, argc, argv);
