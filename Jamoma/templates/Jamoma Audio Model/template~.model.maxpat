@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 140.0, 44.0, 1049.0, 703.0 ],
+		"rect" : [ 140.0, 44.0, 1102.0, 716.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -55,7 +55,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -494,7 +494,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -609,7 +609,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 849.0, 624.0, 159.0, 60.0 ],
+					"patching_rect" : [ 849.0, 624.0, 153.0, 60.0 ],
 					"text" : "j.return return_c @range 0. 1. @description \"Document what this return does...\""
 				}
 
@@ -703,7 +703,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 849.0, 489.0, 165.0, 87.0 ],
+					"patching_rect" : [ 849.0, 489.0, 149.0, 87.0 ],
 					"text" : "j.message thisMessage @type integer @range 0. 1. @clipmode none @description \"Document what this message does...\"",
 					"varname" : "hue_angle[1]"
 				}
@@ -798,40 +798,12 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-2",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 158.0, 88.0, 79.0, 20.0 ],
-					"text" : "signal inlet 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-3",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 155.0, 496.0, 87.0, 20.0 ],
-					"text" : "signal outlet 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "osc messages from algorithm",
 					"id" : "obj-5",
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 505.0, 450.0, 26.0, 26.0 ]
+					"patching_rect" : [ 505.0, 465.0, 26.0, 26.0 ]
 				}
 
 			}
@@ -920,34 +892,6 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 32.0, 37.0, 257.0, 20.0 ],
 					"text" : "This is an algorithm for a stereo audio module."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-16",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 45.0, 496.0, 87.0, 20.0 ],
-					"text" : "signal outlet 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-17",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 37.0, 88.0, 79.0, 20.0 ],
-					"text" : "signal inlet 1"
 				}
 
 			}
@@ -1054,8 +998,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.parameterCreate.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/parameterCreate",
-				"patcherrelativepath" : "../../../components/parameterCreate",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/parameterCreate",
+				"patcherrelativepath" : "../../patchers/components/parameterCreate",
 				"type" : "JSON",
 				"implicit" : 1
 			}
