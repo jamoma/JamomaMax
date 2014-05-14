@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 100.0, 100.0, 339.0, 206.0 ],
@@ -28,6 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "a movie playback model",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1",
@@ -35,8 +37,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 75.0, 121.0, 79.0, 20.0 ],
-					"text" : "movie.model"
+					"patching_rect" : [ 75.0, 121.0, 95.0, 20.0 ],
+					"text" : "myMovie.model"
 				}
 
 			}
@@ -58,9 +60,9 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "movie.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/documentation/examples/Modular0.6_overview/movie",
-				"patcherrelativepath" : "",
+				"name" : "myMovie.model.maxpat",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -70,10 +72,6 @@
 			}
 , 			{
 				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
