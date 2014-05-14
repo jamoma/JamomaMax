@@ -346,7 +346,7 @@ TTErr jamoma_receiver_create(t_object *x, TTObject& returnedReceiver)
 TTErr jamoma_receiver_create_audio(t_object *x, TTObject& returnedReceiver)
 {
 	TTValue      args;
-	TTObject     returnAddressCallback, audio;
+	TTObject     returnAddressCallback, audio, empty;
 	
 	// prepare arguments
 	returnAddressCallback = TTObject("callback");
@@ -354,7 +354,7 @@ TTErr jamoma_receiver_create_audio(t_object *x, TTObject& returnedReceiver)
 	returnAddressCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_address));
 	args.append(returnAddressCallback);
 	
-	args.append(NULL);	// no return value callback
+	args.append(empty);	// no return value callback
 	
 	audio = TTObject(kTTSym_audiosignal, 1);
 	args.append(audio);
