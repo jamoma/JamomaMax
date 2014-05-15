@@ -29,6 +29,22 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-15",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1368.0, 664.0, 150.0, 51.0 ],
+					"text" : "This patch fails in Max 64bit with double-precision floats"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -39,7 +55,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 312.5, 790.5, 315.0, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/lookup_equal_power_pan_left @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/equal_power_pan/lookup/left @tags Jamoma DSP"
 				}
 
 			}
@@ -55,7 +71,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 312.5, 350.5, 327.5, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/calculate_equal_power_pan_left @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/equal_power_pan/calculate/left @tags Jamoma DSP"
 				}
 
 			}
@@ -71,7 +87,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 660.5, 790.5, 330.0, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/lookup_equal_power_pan_right @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/equal_power_pan/lookup/right @tags Jamoma DSP"
 				}
 
 			}
@@ -87,7 +103,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 660.5, 350.5, 341.0, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/calculate_equal_power_pan_right @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/equal_power_pan/calculate/right @tags Jamoma DSP"
 				}
 
 			}
@@ -103,7 +119,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1015.5, 790.5, 346.0, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/lookup_equal_power_pan_center @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/equal_power_pan/lookup/center @tags Jamoma DSP"
 				}
 
 			}
@@ -119,7 +135,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1015.5, 350.5, 346.0, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/calculate_equal_power_pan_center @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/equal_power_pan/calculate/center @tags Jamoma DSP"
 				}
 
 			}
@@ -277,7 +293,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1164.5, 618.5, 24.0, 20.0 ],
+					"patching_rect" : [ 1289.5, 619.5, 24.0, 20.0 ],
 					"text" : "t b"
 				}
 
@@ -291,7 +307,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1164.5, 643.5, 71.0, 20.0 ],
+					"patching_rect" : [ 1289.5, 644.5, 71.0, 20.0 ],
 					"text" : "pv invSqrt2"
 				}
 
@@ -317,12 +333,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-91",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1101.5, 673.0, 82.0, 20.0 ],
-					"text" : "test.equals 0."
+					"patching_rect" : [ 1164.5, 673.0, 144.0, 33.0 ],
+					"text" : "test.equals 0. @single_precision 1"
 				}
 
 			}
@@ -332,12 +349,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-92",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1015.5, 673.0, 82.0, 20.0 ],
-					"text" : "test.equals 1."
+					"patching_rect" : [ 1015.5, 673.0, 144.0, 33.0 ],
+					"text" : "test.equals 1. @single_precision 1"
 				}
 
 			}
@@ -379,7 +397,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 1015.5, 735.5, 105.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 740.5, 105.0, 20.0 ],
 					"text" : "&&"
 				}
 
@@ -393,7 +411,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1015.5, 703.0, 105.0, 20.0 ],
+					"patching_rect" : [ 1015.5, 715.5, 105.0, 20.0 ],
 					"text" : "buddy 2"
 				}
 
@@ -408,7 +426,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1101.5, 582.0, 79.0, 20.0 ],
+					"patching_rect" : [ 1164.5, 582.0, 79.0, 20.0 ],
 					"text" : "test.sample~"
 				}
 
@@ -481,7 +499,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 660.5, 735.5, 105.0, 20.0 ],
+					"patching_rect" : [ 660.5, 740.5, 105.0, 20.0 ],
 					"text" : "&&"
 				}
 
@@ -495,7 +513,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 660.5, 703.0, 105.0, 20.0 ],
+					"patching_rect" : [ 660.5, 715.5, 105.0, 20.0 ],
 					"text" : "buddy 2"
 				}
 
@@ -598,7 +616,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 312.5, 735.5, 105.0, 20.0 ],
+					"patching_rect" : [ 312.5, 740.5, 105.0, 20.0 ],
 					"text" : "&&"
 				}
 
@@ -612,7 +630,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 312.5, 703.0, 105.0, 20.0 ],
+					"patching_rect" : [ 312.5, 715.5, 105.0, 20.0 ],
 					"text" : "buddy 2"
 				}
 

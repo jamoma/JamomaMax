@@ -39,7 +39,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 312.5, 676.0, 277.0, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/lookup_linear_pan_left @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/linear/lookup/left @tags Jamoma DSP"
 				}
 
 			}
@@ -55,7 +55,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 312.5, 296.0, 289.0, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/calculate_linear_pan_left @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/linear/calculate/left @tags Jamoma DSP"
 				}
 
 			}
@@ -71,7 +71,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 607.5, 676.0, 277.0, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/lookup_linear_pan_right @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/linear/lookup/right @tags Jamoma DSP"
 				}
 
 			}
@@ -87,7 +87,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 607.5, 296.0, 289.0, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/calculate_linear_pan_right @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/linear/calculate/right @tags Jamoma DSP"
 				}
 
 			}
@@ -103,7 +103,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 902.5, 676.0, 309.0, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/lookup_linear_pan_center @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/linear/lookup/center @tags Jamoma DSP"
 				}
 
 			}
@@ -119,7 +119,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 902.5, 296.0, 309.0, 47.0 ],
-					"text" : "test.assert Jamoma/DSP/j.panorama/calculate_linear_pan_center @tags Jamoma DSP"
+					"text" : "test.assert Jamoma/DSP/j.panorama/linear/calculate/center @tags Jamoma DSP"
 				}
 
 			}
