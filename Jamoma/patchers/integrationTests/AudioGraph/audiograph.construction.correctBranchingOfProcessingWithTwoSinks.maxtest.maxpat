@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 154.0, 66.0, 768.0, 567.0 ],
@@ -217,8 +217,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 286.5, 437.0, 261.0, 47.0 ],
-					"text" : "test.assert correctBranchingOfProcessingWithTwoSinks @tags Jamoma AudioGraph"
+					"patching_rect" : [ 286.5, 437.0, 466.0, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/construnction/correct_branching_of_processing_with_two_sinks @tags Jamoma AudioGraph"
 				}
 
 			}

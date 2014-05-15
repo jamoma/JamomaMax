@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 283.0, 76.0, 979.0, 533.0 ],
+		"rect" : [ 283.0, 76.0, 1030.0, 643.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -96,7 +96,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
@@ -379,13 +379,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-44",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 733.0, 457.5, 160.0, 33.0 ],
-					"text" : "test.assert OneInputRight @tags Jamoma AudioGraph"
+					"patching_rect" : [ 733.0, 513.5, 278.309509, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/construnction/one_iput_right @tags Jamoma AudioGraph"
 				}
 
 			}
@@ -444,7 +444,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
@@ -727,13 +727,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-39",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 492.5, 457.5, 166.0, 33.0 ],
-					"text" : "test.assert OneInputLeft @tags Jamoma AudioGraph"
+					"patching_rect" : [ 492.5, 457.5, 276.309509, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/construnction/one_input_left @tags Jamoma AudioGraph"
 				}
 
 			}
@@ -821,7 +821,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
@@ -1142,13 +1142,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-71",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.285706, 457.5, 165.90477, 33.0 ],
-					"text" : "test.assert mixedInputs @tags Jamoma AudioGraph"
+					"patching_rect" : [ 240.285706, 513.5, 272.214294, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/construnction/mixed_inputs @tags Jamoma AudioGraph"
 				}
 
 			}

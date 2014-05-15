@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 155.0, 70.0, 451.0, 415.0 ],
+		"rect" : [ 155.0, 70.0, 582.0, 518.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -79,8 +79,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 133.5, 332.5, 177.0, 47.0 ],
-					"text" : "test.assert vectorIsProcessOnlyOneTime @tags Jamoma AudioGraph"
+					"patching_rect" : [ 133.5, 332.5, 399.0, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/construnction/vector_is_processed_only_one_time @tags Jamoma AudioGraph"
 				}
 
 			}
