@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 246.0, 207.0, 770.0, 560.0 ],
+		"rect" : [ 246.0, 207.0, 656.0, 610.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -252,12 +252,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-6",
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 215.0, 486.0, 226.0, 20.0 ],
-					"text" : "test.assert CorrectNumberOfInitialBangs"
+					"patching_rect" : [ 215.0, 486.0, 363.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/qmetro.model/correct_number_of_initial_bangs @tags Jamoma Modular model control"
 				}
 
 			}
@@ -270,7 +271,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 175.0, 522.0, 85.0, 20.0 ],
+					"patching_rect" : [ 175.0, 542.0, 85.0, 20.0 ],
 					"text" : "test.terminate"
 				}
 
@@ -461,22 +462,22 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "qmetro.module.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/qmetro",
-				"patcherrelativepath" : "../../modules/control/qmetro",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/qmetro",
+				"patcherrelativepath" : "../../../modules/control/qmetro",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "qmetro.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/qmetro",
-				"patcherrelativepath" : "../../modules/control/qmetro",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/qmetro",
+				"patcherrelativepath" : "../../../modules/control/qmetro",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "qmetro.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/qmetro",
-				"patcherrelativepath" : "../../modules/control/qmetro",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/qmetro",
+				"patcherrelativepath" : "../../../modules/control/qmetro",
 				"type" : "JSON",
 				"implicit" : 1
 			}
