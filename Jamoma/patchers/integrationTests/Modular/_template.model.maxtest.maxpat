@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 405.0, 103.0, 657.0, 550.0 ],
@@ -174,13 +174,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-10",
-					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 428.0, 141.0, 47.0 ],
-					"text" : "test.assert name_of_the_test @tags Jamoma Modular"
+					"patching_rect" : [ 160.0, 428.0, 445.0, 20.0 ],
+					"text" : "test.assert Jamoma/Modular/template/name_of_the_test @tags Jamoma Modular"
 				}
 
 			}
