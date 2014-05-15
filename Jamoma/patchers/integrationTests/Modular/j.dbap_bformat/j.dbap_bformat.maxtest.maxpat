@@ -5,15 +5,15 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1680.0, 956.0 ],
+		"rect" : [ 0.0, 44.0, 886.0, 365.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
-		"default_fontsize" : 10.0,
+		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Verdana",
+		"default_fontname" : "Arial",
 		"gridonopen" : 0,
 		"gridsize" : [ 5.0, 5.0 ],
 		"gridsnaponopen" : 0,
@@ -29,21 +29,37 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-1",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 201.0, 282.0, 269.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap_bformat/polarity @tags Jamoma Modular j.dbap_bformat spatialisation"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 483.0, 190.0, 69.0, 19.0 ],
+					"patching_rect" : [ 241.0, 157.0, 72.0, 20.0 ],
 					"text" : "s --initilaise"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-11",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -55,7 +71,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -328,7 +344,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 336.0, 190.0, 138.0, 19.0 ],
+					"patching_rect" : [ 94.0, 157.0, 145.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -348,42 +364,42 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 336.0, 156.0, 34.0, 19.0 ],
+					"patching_rect" : [ 94.0, 123.0, 35.0, 20.0 ],
 					"text" : "t b b"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 336.0, 127.0, 32.5, 19.0 ],
+					"patching_rect" : [ 94.0, 94.0, 35.0, 20.0 ],
 					"text" : "qlim"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-61",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 336.0, 82.0, 56.0, 19.0 ],
+					"patching_rect" : [ 94.0, 49.0, 61.0, 20.0 ],
 					"text" : "loadbang"
 				}
 
@@ -397,15 +413,15 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 315.0, 83.0, 20.0 ],
+					"patching_rect" : [ 94.0, 282.0, 85.0, 20.0 ],
 					"text" : "test.terminate"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-41",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -417,7 +433,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 1231.0, 902.0 ],
@@ -610,7 +626,7 @@
 											"major" : 6,
 											"minor" : 1,
 											"revision" : 7,
-											"architecture" : "x86"
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 25.0, 186.0, 784.0, 636.0 ],
@@ -812,7 +828,7 @@
 															"major" : 6,
 															"minor" : 1,
 															"revision" : 7,
-															"architecture" : "x86"
+															"architecture" : "x64"
 														}
 ,
 														"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -1776,20 +1792,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 4,
 									"numoutlets" : 8,
-									"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal" ],
+									"outlettype" : [ "", "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 785.0, 510.0, 229.0, 19.0 ],
-									"saved_object_attributes" : 									{
-										"active" : [ 1, 1, 1, 1, 1, 1, 1, 1 ],
-										"aed_scale" : 1.0,
-										"coord_angles" : 0,
-										"coord_system" : 0,
-										"gain" : 1.0,
-										"order" : 1,
-										"orderweight" : [ 1.0, 0.333333 ],
-										"type" : 0,
-										"xyz_scale" : 1.0
-									}
-,
 									"text" : "ambidecode~ 1 8 @type 0"
 								}
 
@@ -1926,28 +1930,10 @@
 									"fontsize" : 10.0,
 									"id" : "obj-36",
 									"maxclass" : "newobj",
-									"numinlets" : 4,
+									"numinlets" : 1,
 									"numoutlets" : 4,
-									"outlettype" : [ "signal", "signal", "signal", "signal" ],
+									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 475.0, 400.0, 257.0, 19.0 ],
-									"saved_object_attributes" : 									{
-										"active" : [ 1, 1, 1, 1 ],
-										"aed_scale" : 10.0,
-										"center_att_db" : 6.0,
-										"center_curve" : 0.2,
-										"center_size" : 1.0,
-										"coord_angles" : 0,
-										"coord_system" : 0,
-										"db_unit" : 1.5,
-										"dist_att" : 1.0,
-										"distance_mode" : 0,
-										"gain" : 1.0,
-										"interpolation" : 1,
-										"order" : 1,
-										"type" : 0,
-										"xyz_scale" : 10.0
-									}
-,
 									"text" : "ambiencode~ 1 4 @type 0 @distance_mode 0"
 								}
 
@@ -2320,7 +2306,7 @@
 									"destination" : [ "obj-18", 2 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 643.166687, 435.0, 934.5, 435.0 ],
+									"midpoints" : [ 643.166667, 435.0, 934.5, 435.0 ],
 									"source" : [ "obj-36", 2 ]
 								}
 
@@ -2330,7 +2316,7 @@
 									"destination" : [ "obj-18", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 563.833313, 442.0, 864.5, 442.0 ],
+									"midpoints" : [ 563.833333, 442.0, 864.5, 442.0 ],
 									"source" : [ "obj-36", 1 ]
 								}
 
@@ -2583,7 +2569,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 670.0, 260.0, 274.0, 19.0 ],
+					"patching_rect" : [ 481.0, 227.0, 298.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2609,29 +2595,30 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 670.0, 289.0, 20.0, 20.0 ]
+					"patching_rect" : [ 481.0, 256.0, 20.0, 20.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-72",
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 670.0, 315.0, 321.0, 19.0 ],
-					"text" : "test.assert TESTj.dbap_bformat:compareToAmbisonicDecoding"
+					"patching_rect" : [ 481.0, 282.0, 368.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap_bformat/compare_to_ambisonic_decoding @tags Jamoma Modular j.dbap_bformat spatialisation"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-16",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -2643,7 +2630,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 105.0, 44.0, 1310.0, 931.0 ],
@@ -3228,7 +3215,7 @@
 											"major" : 6,
 											"minor" : 1,
 											"revision" : 7,
-											"architecture" : "x86"
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 25.0, 69.0, 1153.0, 622.0 ],
@@ -3319,7 +3306,7 @@
 															"major" : 6,
 															"minor" : 1,
 															"revision" : 7,
-															"architecture" : "x86"
+															"architecture" : "x64"
 														}
 ,
 														"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -3412,7 +3399,7 @@
 																			"major" : 6,
 																			"minor" : 1,
 																			"revision" : 7,
-																			"architecture" : "x86"
+																			"architecture" : "x64"
 																		}
 ,
 																		"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -4292,28 +4279,10 @@
 									"fontsize" : 10.0,
 									"id" : "obj-36",
 									"maxclass" : "newobj",
-									"numinlets" : 4,
+									"numinlets" : 1,
 									"numoutlets" : 4,
-									"outlettype" : [ "signal", "signal", "signal", "signal" ],
+									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 335.0, 415.0, 257.0, 19.0 ],
-									"saved_object_attributes" : 									{
-										"active" : [ 1, 1, 1, 1 ],
-										"aed_scale" : 10.0,
-										"center_att_db" : 6.0,
-										"center_curve" : 0.2,
-										"center_size" : 1.0,
-										"coord_angles" : 0,
-										"coord_system" : 0,
-										"db_unit" : 1.5,
-										"dist_att" : 1.0,
-										"distance_mode" : 0,
-										"gain" : 1.0,
-										"interpolation" : 1,
-										"order" : 1,
-										"type" : 0,
-										"xyz_scale" : 10.0
-									}
-,
 									"text" : "ambiencode~ 1 4 @type 0 @distance_mode 0"
 								}
 
@@ -4953,7 +4922,7 @@
 									"destination" : [ "obj-20", 2 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 503.166656, 448.0, 988.833313, 448.0 ],
+									"midpoints" : [ 503.166667, 448.0, 988.833333, 448.0 ],
 									"source" : [ "obj-36", 2 ]
 								}
 
@@ -4963,7 +4932,7 @@
 									"destination" : [ "obj-20", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 423.833344, 454.0, 909.166687, 454.0 ],
+									"midpoints" : [ 423.833333, 454.0, 909.166667, 454.0 ],
 									"source" : [ "obj-36", 1 ]
 								}
 
@@ -5189,7 +5158,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 443.0, 260.0, 160.0, 19.0 ],
+					"patching_rect" : [ 201.0, 227.0, 171.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -5215,22 +5184,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 443.0, 289.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 443.0, 315.0, 207.0, 19.0 ],
-					"text" : "test.assert TESTj.dbap_bformat:polarity"
+					"patching_rect" : [ 201.0, 256.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -5336,14 +5290,6 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "oscar.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "ambiencode~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.dbap_bformat.mxo",
 				"type" : "iLaX"
 			}
@@ -5352,7 +5298,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ambidecode~.mxo",
+				"name" : "oscar.mxo",
 				"type" : "iLaX"
 			}
 , 			{
