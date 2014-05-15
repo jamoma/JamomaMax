@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 292.0, 145.0, 1246.0, 497.0 ],
+		"rect" : [ 81.0, 87.0, 1291.0, 632.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -155,13 +155,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-94",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 174.0, 422.0, 150.0, 33.0 ],
-					"text" : "test.assert \"mute differs from 0 and 1 AudioGraph\""
+					"patching_rect" : [ 174.0, 532.0, 344.0, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/j.mutesolo=/mute_differs_from_0_and_1 @tags Jamoma AudioGraph"
 				}
 
 			}
@@ -241,13 +241,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-62",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 332.0, 422.0, 153.0, 33.0 ],
-					"text" : "test.assert \"solo differs from 0 and 1 AudioGraph\""
+					"patching_rect" : [ 332.0, 478.0, 336.0, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/j.mutesolo=solo_differs_from_0_and_1 @tags Jamoma AudioGraph"
 				}
 
 			}
@@ -342,13 +342,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-50",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 491.0, 422.0, 149.0, 33.0 ],
-					"text" : "test.assert \"solo overrides mute AudioGraph\""
+					"patching_rect" : [ 491.0, 422.0, 306.0, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/j.mutesolo=/solo_overrides_mute @tags Jamoma AudioGraph"
 				}
 
 			}
@@ -429,13 +429,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-40",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 948.0, 422.0, 130.0, 33.0 ],
-					"text" : "test.assert \"default settings AudioGraph\""
+					"patching_rect" : [ 948.0, 422.0, 279.0, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/j.mutesolo=/default_settings @tags Jamoma AudioGraph"
 				}
 
 			}
@@ -501,13 +501,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-30",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 800.0, 422.0, 145.0, 33.0 ],
-					"text" : "test.assert \"two channels soloed AudioGraph\""
+					"patching_rect" : [ 800.0, 478.0, 310.0, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/j.mutesolo=/two_channels_soloed @tags Jamoma AudioGraph"
 				}
 
 			}
@@ -644,13 +644,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-26",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 645.0, 422.0, 146.0, 33.0 ],
-					"text" : "test.assert \"two channels muted AudioGraph\""
+					"patching_rect" : [ 645.0, 532.0, 307.0, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/j.mutesolo=/two_channels–muted @tags Jamoma AudioGraph"
 				}
 
 			}

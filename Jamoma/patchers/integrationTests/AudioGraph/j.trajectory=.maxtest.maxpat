@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 70.0, 76.0, 1503.0, 672.0 ],
@@ -88,13 +88,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-61",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 150.75, 488.0, 272.0, 33.0 ],
-					"text" : "test.assert messages_getCurrentAttribtueNames @tags Jamoma AudioGraph"
+					"patching_rect" : [ 150.75, 546.0, 389.0, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/j.trajectory=/messages/getCurrentAttribtueNames @tags Jamoma AudioGraph"
 				}
 
 			}
@@ -201,13 +201,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-51",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 489.25, 488.0, 216.0, 33.0 ],
-					"text" : "test.assert messages_getCurrentType @tags Jamoma AudioGraph"
+					"patching_rect" : [ 489.25, 488.0, 337.0, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/j.trajectory=/messages/getCurrentType @tags Jamoma AudioGraph"
 				}
 
 			}
@@ -328,13 +328,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-24",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 781.25, 488.0, 182.0, 33.0 ],
-					"text" : "test.assert messages_getTypes @tags Jamoma AudioGraph"
+					"patching_rect" : [ 781.25, 546.0, 297.0, 47.0 ],
+					"text" : "test.assert Jamoma/AudioGraph/j.trajectory=/messages/getTypes @tags Jamoma AudioGraph"
 				}
 
 			}
@@ -348,7 +348,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 899.0, 154.0, 102.0, 259.0 ],
+					"patching_rect" : [ 899.0, 154.0, 103.0, 259.0 ],
 					"text" : "bean.2D butterfly.2D circular.2D circular.helix.3D epitrochoid.2D gear.2D hypocycloid.2D limacon.2D linear.2D linear.3D lissajous.2D lissajous.knot.3D log.spiral.2D rose.2D scarabaeus.2D slinky.3D spherical.spiral.3D torus.knot.3D viviani.3D"
 				}
 
