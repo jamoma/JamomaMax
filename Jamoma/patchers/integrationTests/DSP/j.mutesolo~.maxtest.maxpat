@@ -32,13 +32,41 @@
 					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 493.0, 60.0, 49.0, 20.0 ],
+					"text" : "test.log"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-5",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 493.0, 38.0, 151.0, 18.0 ],
+					"text" : "logging just for the fun of it"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-94",
 					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 167.5, 573.0, 332.0, 47.0 ],
+					"patching_rect" : [ 167.5, 573.0, 335.0, 47.0 ],
 					"text" : "test.assert Jamoma/DSP/j.mutesolo~/mute_differs_from_0_and_1_DSP @tags Jamoma DSP"
 				}
 
@@ -54,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 325.5, 514.0, 327.0, 47.0 ],
+					"patching_rect" : [ 325.5, 514.0, 331.0, 47.0 ],
 					"text" : "test.assert Jamoma/DSP/j.mutesolo~/solo_differs_from_0_and_1_DSP @tags Jamoma DSP"
 				}
 
@@ -70,7 +98,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 470.5, 459.0, 294.0, 47.0 ],
+					"patching_rect" : [ 470.5, 459.0, 297.0, 47.0 ],
 					"text" : "test.assert Jamoma/DSP/j.mutesolo~/solo_overrides_mute_DSP @tags Jamoma DSP"
 				}
 
@@ -86,7 +114,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 624.5, 573.0, 296.0, 47.0 ],
+					"patching_rect" : [ 624.5, 573.0, 299.0, 47.0 ],
 					"text" : "test.assert Jamoma/DSP/j.mutesolo~/two_channels_muted_DSP @tags Jamoma DSP"
 				}
 
@@ -102,7 +130,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 779.5, 514.0, 298.0, 47.0 ],
+					"patching_rect" : [ 779.5, 514.0, 301.0, 47.0 ],
 					"text" : "test.assert Jamoma/DSP/j.mutesolo~/two_channels_soloed_DSP @tags Jamoma DSP"
 				}
 
@@ -118,7 +146,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 927.5, 459.0, 266.0, 47.0 ],
+					"patching_rect" : [ 927.5, 459.0, 269.0, 47.0 ],
 					"text" : "test.assert Jamoma/DSP/j.mutesolo~/default_settings_DSP @tags Jamoma DSP"
 				}
 
@@ -880,7 +908,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1077.5, 573.0, 282.0, 47.0 ],
+					"patching_rect" : [ 1077.5, 573.0, 285.0, 47.0 ],
 					"text" : "test.assert Jamoma/DSP/j.mutesolo~/default_settings_queried @tags Jamoma DSP"
 				}
 
@@ -1544,6 +1572,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-103", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1913,6 +1950,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-50", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2233,6 +2279,10 @@
 			}
 , 			{
 				"name" : "j.mutesolo~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "oscar.mxo",
 				"type" : "iLaX"
 			}
 , 			{
