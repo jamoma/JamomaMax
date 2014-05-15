@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 397.0, 44.0, 742.0, 433.0 ],
+		"rect" : [ 360.0, 44.0, 759.0, 508.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,13 +29,55 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-12",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 144.0, 415.0, 49.0, 20.0 ],
+					"text" : "test.log"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 144.0, 358.0, 46.0, 20.0 ],
+					"text" : "error 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 144.0, 386.0, 307.0, 20.0 ],
+					"text" : "prepend Jamoma/Graph/all_externals_loading_properly"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-29",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 146.0, 312.0, 20.0, 20.0 ]
+					"patching_rect" : [ 144.0, 230.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -193,8 +235,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 146.0, 368.0, 167.0, 47.0 ],
-					"text" : "test.assert AllExternalsLoadingProperly @tags Jamoma Graph"
+					"patching_rect" : [ 144.0, 286.0, 264.0, 47.0 ],
+					"text" : "test.assert Jamoma/Graph/all_externals_loading_properly @tags Jamoma Graph"
 				}
 
 			}
@@ -207,7 +249,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 47.0, 338.0, 24.0, 20.0 ],
+					"patching_rect" : [ 45.0, 256.0, 24.0, 20.0 ],
 					"text" : "t b"
 				}
 
@@ -221,7 +263,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 146.0, 282.0, 47.0, 20.0 ],
+					"patching_rect" : [ 144.0, 200.0, 47.0, 20.0 ],
 					"text" : "zl reg"
 				}
 
@@ -235,7 +277,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "int" ],
-					"patching_rect" : [ 146.0, 152.0, 47.0, 20.0 ],
+					"patching_rect" : [ 144.0, 70.0, 47.0, 20.0 ],
 					"text" : "t b b 1"
 				}
 
@@ -249,7 +291,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 241.0, 247.0, 25.0, 20.0 ],
+					"patching_rect" : [ 239.0, 165.0, 25.0, 20.0 ],
 					"text" : "t 0"
 				}
 
@@ -263,7 +305,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 241.0, 222.0, 78.0, 20.0 ],
+					"patching_rect" : [ 239.0, 140.0, 78.0, 20.0 ],
 					"text" : "route jbogus"
 				}
 
@@ -277,7 +319,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 196.0, 197.0, 110.0, 20.0 ],
+					"patching_rect" : [ 194.0, 115.0, 110.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "patchdescribe.js",
 						"parameter_enable" : 0
@@ -296,7 +338,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 146.0, 92.0, 60.0, 20.0 ],
+					"patching_rect" : [ 144.0, 35.300003, 60.0, 20.0 ],
 					"text" : "loadbang"
 				}
 
@@ -310,7 +352,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 47.0, 368.0, 83.0, 20.0 ],
+					"patching_rect" : [ 45.0, 286.0, 83.0, 20.0 ],
 					"text" : "test.terminate"
 				}
 
@@ -322,6 +364,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -415,6 +466,15 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "patchdescribe.js",
@@ -422,6 +482,10 @@
 				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/examples/javascript/patcher-scripting",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "oscar.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "oscar.mxo",
