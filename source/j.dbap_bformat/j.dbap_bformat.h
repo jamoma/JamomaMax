@@ -32,9 +32,9 @@ t_symbol		*psRollOff,
  @ingroup typedefs
  */
 typedef struct _xyz{
-	float		x;												///< x position
-	float		y;												///< y position
-	float		z;												///< z position
+	double		x;												///< x position
+	double		y;												///< y position
+	double		z;												///< z position
 } t_xyz;														///< Cartesian coordinate of a point
 
 
@@ -42,10 +42,10 @@ typedef struct _xyz{
  @ingroup typedefs
  */
 typedef struct _decodeCoefficients{
-	float		w;												///< Zero  order W coefficient
-	float		x;												///< First order X coefficient
-	float		y;												///< First order Y coefficient
-	float		z;												///< First order Z coefficient
+	double		w;												///< Zero  order W coefficient
+	double		x;												///< First order X coefficient
+	double		y;												///< First order Y coefficient
+	double		z;												///< First order Z coefficient
 } t_decodeCoefficients;
 
 /** Structure for the j.dbap_bformat Max object.
@@ -59,12 +59,12 @@ typedef struct _dbap_bformat{									///< Data structure for this object
 	// Sources
 	long		attrNumberOfSources;							///< number of active sources
 	t_xyz		sourcePosition[MAX_NUM_SOURCES];				///< Positions of the virtual source
-	float		blur[MAX_NUM_SOURCES];							///< Spatial bluriness ratio in percents for each source
-	float		polarity[MAX_NUM_SOURCES];						///< Polarity for each source, from 0 (omni) to 1 (in-phase) decoding
-	float		sourceGain[MAX_NUM_SOURCES];					///< Linear gain for each source, not yet used
-	float		sourceNotMuted[MAX_NUM_SOURCES];				///< Mute and unmute sources
+	double		blur[MAX_NUM_SOURCES];							///< Spatial bluriness ratio in percents for each source
+	double		polarity[MAX_NUM_SOURCES];						///< Polarity for each source, from 0 (omni) to 1 (in-phase) decoding
+	double		sourceGain[MAX_NUM_SOURCES];					///< Linear gain for each source, not yet used
+	double		sourceNotMuted[MAX_NUM_SOURCES];				///< Mute and unmute sources
 
-	float		sourceWeight
+	double		sourceWeight
 					[MAX_NUM_SOURCES]
 					[MAX_NUM_DESTINATIONS];						///< Weight for each source for each destination 
 	t_decodeCoefficients 
@@ -78,11 +78,11 @@ typedef struct _dbap_bformat{									///< Data structure for this object
 	t_xyz		meanDestinationPosition;						///< Mean position of the field of destination points
 	
 	// Globals
-	float		masterGain;										///< Mater gain for all of the algorithm
-	float		variance;										///< Bias-corrected variance of distance from destination points to mean destination point	
-	float		attrRollOff;									///< Set rolloff with distance in dB
-	float		attrVicinity;									///< Set radius of field of vicinity around speaker where decoding gets increasingly omni
-	float		a;												///< Constant: Exponent controlling amplitude dependance on distance. Depends on attrRollOff
+	double		masterGain;										///< Mater gain for all of the algorithm
+	double		variance;										///< Bias-corrected variance of distance from destination points to mean destination point
+	double		attrRollOff;									///< Set rolloff with distance in dB
+	double		attrVicinity;									///< Set radius of field of vicinity around speaker where decoding gets increasingly omni
+	double		a;												///< Constant: Exponent controlling amplitude dependance on distance. Depends on attrRollOff
 	} t_dbap_bformat;
 
 

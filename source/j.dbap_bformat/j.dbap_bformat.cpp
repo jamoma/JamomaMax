@@ -63,10 +63,10 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	CLASS_ATTR_LONG(c,		"num_destinations",	0,		t_dbap_bformat,	attrNumberOfDestinations);
 	CLASS_ATTR_ACCESSORS(c,	"num_destinations",	NULL,	dbap_bformatAttrSetNumberOfDestinations);
 
-	CLASS_ATTR_FLOAT(c,		"rolloff",			0,		t_dbap_bformat,	attrRollOff);
+	CLASS_ATTR_DOUBLE(c,		"rolloff",			0,		t_dbap_bformat,	attrRollOff);
 	CLASS_ATTR_ACCESSORS(c,	"rolloff",			NULL,	dbap_bformatAttrSetRollOff);
 	
-	CLASS_ATTR_FLOAT(c,		"vicinity",			0,		t_dbap_bformat,	attrVicinity);
+	CLASS_ATTR_DOUBLE(c,	"vicinity",			0,		t_dbap_bformat,	attrVicinity);
 	CLASS_ATTR_ACCESSORS(c,	"vicinity",			NULL,	dbap_bformatAttrSetVicinity);
 	
 	// Finalize our class
@@ -146,7 +146,7 @@ void *dbap_bformatNew(t_symbol *msg, long argc, t_atom *argv)
 void dbap_bformatBlur(t_dbap_bformat *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	long n;
-	float f;
+	double f;
 	
 	if ((argc>=2) && argv) {	
 		n = atom_getlong(argv)-1;							// we start counting from 1 for sources
@@ -182,7 +182,7 @@ void dbap_bformatBlurAll(t_dbap_bformat *x, double f)
 void dbap_bformatPolarity(t_dbap_bformat *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	long n;
-	float f;
+	double f;
 	
 	if ((argc>=2) && argv) {	
 		n = atom_getlong(argv)-1;							// we start counting from 1 for sources
@@ -268,7 +268,7 @@ void dbap_bformatDestination(t_dbap_bformat *x, void *msg, long argc, t_atom *ar
 void dbap_bformatSourceGain(t_dbap_bformat *x, void *msg, long argc, t_atom *argv)
 {
 	long n;
-	float f;
+	double f;
 	
 	if ((argc>=2) && argv) {	
 		n = atom_getlong(argv)-1;							// we start counting from 1 for sources
@@ -305,7 +305,7 @@ void dbap_bformatMasterGain(t_dbap_bformat *x, double f)
 void dbap_bformatSourceWeight(t_dbap_bformat *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	long source, i;
-	float weight;
+	double weight;
 	
 	if (argc && argv) {			
 		
@@ -474,7 +474,7 @@ t_max_err dbap_bformatAttrSetNumberOfDestinations(t_dbap_bformat *x, void *attr,
 // ATTRIBUTE: rolloff
 t_max_err dbap_bformatAttrSetRollOff(t_dbap_bformat *x, void *attr, long argc, t_atom *argv)
 {
-	float f;
+	double f;
 	long i;
 	
 	if (argc && argv) {	
@@ -495,7 +495,7 @@ t_max_err dbap_bformatAttrSetRollOff(t_dbap_bformat *x, void *attr, long argc, t
 // ATTRIBUTE: vicinity
 t_max_err dbap_bformatAttrSetVicinity(t_dbap_bformat *x, void *attr, long argc, t_atom *argv)
 {
-	float f;
+	double f;
 	long i;
 	
 	if (argc && argv) {	
@@ -521,26 +521,26 @@ t_max_err dbap_bformatAttrSetVicinity(t_dbap_bformat *x, void *attr, long argc, 
 
 void dbap_bformatCalculate(t_dbap_bformat *x, long n)
 {
-	float scalingCoefficient;			// Scaling coefficient
-	float scalingCoefficientSquareInverse;	// Inverse square of the scaling coefficient
-	float dx, dy, dz;					// Distance vector
-	float blurSquared;					// Bluriness ratio squared
-	float distanceAdjusted
+	double scalingCoefficient;			// Scaling coefficient
+	double scalingCoefficientSquareInverse;	// Inverse square of the scaling coefficient
+	double dx, dy, dz;					// Distance vector
+	double blurSquared;					// Bluriness ratio squared
+	double distanceAdjusted
 		[MAX_NUM_DESTINATIONS];			// Distance to ith speaker to the power of x->a, adjusted to prevent division by zero
 
-	float sourceSpeakerWeight;			// Calculated weight for current pair of source and speaker
+	double sourceSpeakerWeight;			// Calculated weight for current pair of source and speaker
 	
 	long i;
 	
 	// Required for ambisonic decoding
-	float horisontalDistance;			// Distance from source to destination in the horizontal plane
-	float distance;						// Distance from source to destination in 3D
-	float cosAzimuth;					// cos(azimuth)
-	float sinAzimuth;					// sin(azimuth)
-	float cosElevation;					// cos(elevation)
-	float sinElevation;					// sin(elevation)
-	float k0, k1;						// Polarity coefficients
-	float d;							// Distance relative to attrVicinity
+	double horisontalDistance;			// Distance from source to destination in the horizontal plane
+	double distance;						// Distance from source to destination in 3D
+	double cosAzimuth;					// cos(azimuth)
+	double sinAzimuth;					// sin(azimuth)
+	double cosElevation;					// cos(elevation)
+	double sinElevation;					// sin(elevation)
+	double k0, k1;						// Polarity coefficients
+	double d;							// Distance relative to attrVicinity
 	
 	t_atom a[3];						// Output array of atoms
 
@@ -653,7 +653,7 @@ void dbap_bformatCalculateA(t_dbap_bformat *x)
 void dbap_bformatCalculateMeanDestinationPosition(t_dbap_bformat *x)
 {
 	long i;
-	float a,b,c;
+	double a,b,c;
 
 	a = 0;
 	b = 0;
@@ -672,8 +672,8 @@ void dbap_bformatCalculateMeanDestinationPosition(t_dbap_bformat *x)
 void dbap_bformatCalculateVariance(t_dbap_bformat *x)
 {
 	long i;
-	float dx, dy, dz;
-	float d2=0;
+	double dx, dy, dz;
+	double d2=0;
 	
 
 	dbap_bformatCalculateMeanDestinationPosition(x);
