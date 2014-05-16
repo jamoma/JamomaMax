@@ -41,40 +41,40 @@ t_symbol		*ps_rollloff,
 
 /** Data structure for storing a 1,2 or 3 dimensional space data */
 typedef struct _xyz{
-	float		x;										///< x position
-	float		y;										///< y position
-	float		z;										///< z position
+	double		x;										///< x position
+	double		y;										///< y position
+	double		z;										///< z position
 } t_xyz;												///< Cartesian coordinate of a point
 
 /** Data structure for 1 dimensional convex hull */
 typedef struct _hull1{
-	float		min;									///< minimum x value
-	float		max;									///< maximum x value
+	double		min;									///< minimum x value
+	double		max;									///< maximum x value
 } t_hull1;												///< Convex hull in 1 dimension
 
 /** Data structure for 2 dimensional convex hull */
 typedef struct _hull2{
 	long		num_dst;								///< number dst in the convex hull
 	long		id_dst[MAX_NUM_DESTINATIONS];			///< index of dst in dst_position[]
-	float		dst2next[MAX_NUM_DESTINATIONS];			///< squared length of each border of the hull
+	double		dst2next[MAX_NUM_DESTINATIONS];			///< squared length of each border of the hull
 } t_hull2;												///< Convex hull in 2 dimensions
 	
 typedef struct _dbap{									///< Data structure for this object 
 	t_object	ob;										///< Must always be the first field; used by Max
 	t_xyz		src_position[MAX_NUM_SOURCES];			///< Positions of the virtual source
-	float		blur[MAX_NUM_SOURCES];					///< Spatial bluriness ratio in percents for each source
-	float		src_gain[MAX_NUM_SOURCES];				///< Linear gain for each source, not yet used
-	float		src_weight[MAX_NUM_WEIGHTED_SOURCES][MAX_NUM_WEIGHTED_DESTINATIONS];///< Weight for each source for each destination 
-	float		src_not_muted[MAX_NUM_SOURCES];			///< Mute and unmute sources
-	float		master_gain;							///< Mater gain for all of the algorithm
+	double		blur[MAX_NUM_SOURCES];					///< Spatial bluriness ratio in percents for each source
+	double		src_gain[MAX_NUM_SOURCES];				///< Linear gain for each source, not yet used
+	double		src_weight[MAX_NUM_WEIGHTED_SOURCES][MAX_NUM_WEIGHTED_DESTINATIONS];///< Weight for each source for each destination
+	double		src_not_muted[MAX_NUM_SOURCES];			///< Mute and unmute sources
+	double		master_gain;							///< Mater gain for all of the algorithm
 	t_xyz		dst_position[MAX_NUM_DESTINATIONS];		///< Array of speaker positions
 	t_xyz		mean_dst_position;						///< Mean position of the field of destination points
 	bool		hull_io;								///< On/off calculation of distances to hull
 	t_hull1		hull1;									///< Convex hull in 1 dimension
 	t_hull2		hull2;									///< Convex hull in 2 dimensions
-	float		variance;								///< Bias-corrected variance of distance from destination points to mean destination point
+	double		variance;								///< Bias-corrected variance of distance from destination points to mean destination point
 	long		attr_dimensions;						///< Number of dimensions of the speaker and source system
-	float		attr_rolloff;							///< Set rolloff with distance in dB.
+	double		attr_rolloff;							///< Set rolloff with distance in dB.
 	long		attr_num_sources;						///< number of active sources
 	long		attr_num_destinations;					///< number of active destinations
 
@@ -86,7 +86,7 @@ typedef struct _dbap{									///< Data structure for this object
 	bool		attr_view_update;						///< IO the view updating
 	t_atom		last_view[2];							///< memorize the last view [dst src]
 	
-	float		a;										///< Constant: Exponent controlling amplitude dependance on distance. Depends on attr_rolloff
+	double		a;										///< Constant: Exponent controlling amplitude dependance on distance. Depends on attr_rolloff
 	void		*outlet[3];								////< Pointer to outlets. Need one for each outlet
 } t_dbap;
 

@@ -13,7 +13,7 @@
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Ariel",
+		"default_fontname" : "Arial",
 		"gridonopen" : 0,
 		"gridsize" : [ 5.0, 5.0 ],
 		"gridsnaponopen" : 0,
@@ -72,21 +72,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 776.0, 663.0, 291.0, 33.0 ],
 					"text" : "test.assert Jamoma/Modular/j.dbap/getnum_sources @tags Jamoma Modular j.dbap spatialisation"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Ariel",
-					"fontsize" : 12.0,
-					"id" : "obj-12",
-					"maxclass" : "flonum",
-					"numdecimalplaces" : 21,
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "float", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1166.0, 179.0, 248.0, 21.0 ]
 				}
 
 			}
@@ -574,15 +559,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-18", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-19", 3 ]
 				}
 
 			}
