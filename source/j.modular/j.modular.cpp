@@ -181,7 +181,6 @@ void modular_protocol_setup(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	TTValue		v, out, parameterValue;
 	long        ac;
 	t_atom      *av;
-	TTErr		err;
 	
 	// get the protocol object
     aProtocol = accessProtocol(EXTRA->protocolName);
