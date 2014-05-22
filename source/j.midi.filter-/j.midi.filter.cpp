@@ -19,7 +19,7 @@
 
 // Data Structure for this object
 struct MidiFilter {
-   	Object				    obj;
+   	t_object				obj;
 	TTGraphObjectBasePtr	graphObject;
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
 	t_symbol*			    attrType;
@@ -87,7 +87,7 @@ MidiFilterPtr MidiFilterNew(t_symbol* msg, long argc, t_atom* argv)
 		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 
-		if (!self->graphObject->mKernel) {
+		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
