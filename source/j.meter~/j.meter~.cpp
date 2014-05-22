@@ -451,8 +451,8 @@ void meterCacheSurface(t_meter* x)
 			for (j=0; j < x->gradientRect.height; j++)
 				jgraphics_image_surface_set_pixel(x->gradientSurface, i, j, color);
 		}
-		
-else { {
+	}
+	else {
 		for (j=0; j < x->gradientRect.height; j++) {
 			color.red = 1. - (j / x->gradientRect.height);	
 			for (i=0; i < x->gradientRect.width; i++)
