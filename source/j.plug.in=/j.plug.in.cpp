@@ -75,8 +75,8 @@ PlugInPtr PlugInNew(t_symbol* msg, long argc, t_atom* argv)
 
     if (self) {
 		v.resize(2);
-		v.set(0, TT("plugtastic.input"));
-		v.set(1, TTUInt32(1));
+		v[0] = "plugtastic.input";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 
 		attr_args_process(self, argc, argv);
@@ -116,7 +116,7 @@ TTErr PlugInSetup(PlugInPtr self)
 	
 	atom_setobj(a+0, (t_object*)(self->audioGraphObject));
 	atom_setlong(a+1, 0);
-	outlet_anything(self->audioGraphOutlet, GENSYM("audio.connect"), 2, a);
+	outlet_anything(self->audioGraphOutlet, gensym("audio.connect"), 2, a);
 	return kTTErrNone;
 }
 
