@@ -14,7 +14,7 @@
 
 // Data Structure for this object
 typedef struct PlugParameter {
-   	Object				    obj;
+   	t_object				obj;
 	TTGraphObjectBasePtr	graphObject;		// this _must_ be second
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
 	TTDictionaryPtr		    graphDictionary;
@@ -34,7 +34,7 @@ typedef PlugParameter* PlugParameterPtr;
 PlugParameterPtr PlugParameterNew	(SymbolPtr msg, long argc, t_atom* argv);
 void   	PlugParameterFree			(PlugParameterPtr self);
 void	PlugParameterStartTracking	(PlugParameterPtr self);
-t_max_err	PlugParameterNotify			(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data);
+t_max_err	PlugParameterNotify		(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data);
 void	PlugParameterQFn			(PlugParameterPtr self);
 void   	PlugParameterAssist			(PlugParameterPtr self, void* b, long msg, long arg, char* dst);
 void	PlugParameterInt			(PlugParameterPtr self, long value);
