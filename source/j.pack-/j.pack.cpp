@@ -20,7 +20,7 @@
 
 // Data Structure for this object
 struct Pack {
-   	Object				    obj;
+   	t_object				    obj;
 	TTGraphObjectBasePtr	graphObject;		// this _must_ be second
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
 	TTDictionaryPtr		    graphDictionary;
@@ -101,12 +101,12 @@ PackPtr PackNew(t_symbol* msg, long argc, t_atom* argv)
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		
 		v.resize(2);
-		v.set(0, TT("graph.input"));
-		v.set(1, TTUInt32(1));
+		v[0] = "graph.input";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 		((TTGraphInput*)self->graphObject->mKernel)->setOwner(self->graphObject);
 
-		if (!self->graphObject->mKernel) {
+		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
