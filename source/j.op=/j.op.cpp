@@ -20,7 +20,7 @@
 
 // Data Structure for this object
 struct Op {
-   	Object					obj;
+   	t_object				obj;
 	TTAudioGraphObjectBasePtr	audioGraphObject;
 	TTPtr					outlet;
 	TTPtr					unused;				// NULL pointer to signal end of JAG outlets to the class wrapper functions
@@ -40,11 +40,11 @@ TTErr  	OpResetAudio	(OpPtr self, long vectorSize);
 TTErr  	OpSetupAudio	(OpPtr self);
 //TTErr	OpSetup			(OpPtr self);
 TTErr  	OpConnectAudio	(OpPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
-TTErr	OpDropAudio		(OpPtr self, long inletNumber, (t_object*) sourceMaxObject, long sourceOutletNumber);
+TTErr	OpDropAudio		(OpPtr self, long inletNumber, t_object* sourceMaxObject, long sourceOutletNumber);
 t_max_err 	OpSetOperator	(OpPtr self, void* attr, long argc, t_atom* argv);
-t_max_err	OpGetOperator	(OpPtr self, (t_object*) attr, long* argc, t_atom** argv);
+t_max_err	OpGetOperator	(OpPtr self, t_object* attr, long* argc, t_atom** argv);
 t_max_err 	OpSetOperand	(OpPtr self, void* attr, long argc, t_atom* argv);
-t_max_err	OpGetOperand	(OpPtr self, (t_object*) attr, long* argc, t_atom** argv);
+t_max_err	OpGetOperand	(OpPtr self, t_object* attr, long* argc, t_atom** argv);
 
 
 // Globals
@@ -192,14 +192,14 @@ TTErr OpConnectAudio(OpPtr self, TTAudioGraphObjectBasePtr audioSourceObject, lo
 }
 
 
-TTErr OpDropAudio(OpPtr self, long inletNumber, (t_object*) sourceMaxObject, long sourceOutletNumber)
+TTErr OpDropAudio(OpPtr self, long inletNumber, t_object* sourceMaxObject, long sourceOutletNumber)
 {
 	TTAudioGraphObjectBasePtr	sourceObject = NULL;
 	TTErr 					err;
 	
 	if (inletNumber == 1)
 		self->audioGraphObject->setAttributeValue(TT("numAudioInlets"), 1);
-	err = (TTErr)TTPtrSizedInt(object_method(sourceMaxObject, GENSYM("audio.object"), &sourceObject));
+	err = (TTErr)TTPtrSizedInt(object_method(sourceMaxObject, gensym("audio.object"), &sourceObject));
 	if (self->audioGraphObject && sourceObject && !err)
 		err = self->audioGraphObject->dropAudio(sourceObject, sourceOutletNumber, inletNumber);	
 	return err;
@@ -218,30 +218,30 @@ t_max_err OpSetOperator(OpPtr self, void* attr, long argc, t_atom* argv)
 }
 
 
-t_max_err OpGetOperator(OpPtr self, (t_object*) attr, long* argc, t_atom** argv)
+t_max_err OpGetOperator(OpPtr self, t_object* attr, long* argc, t_atom** argv)
 {
 	TTValue v;
 	
 	self->audioGraphObject->getUnitGenerator()->getAttributeValue(TT("operator"), v);
 	
-	*argc = v.getSize();
+	*argc = v.size();
 	if (!(*argv)) // otherwise use memory passed in
-		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.getSize());
+		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.size());
 	
-	for (int i=0; i<v.getSize(); i++) {
-		if (v.getType(i) == kTypeFloat32 || v.getType(i) == kTypeFloat64) {
+	for (int i=0; i<v.size(); i++) {
+		if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64) {
 			TTFloat64	value;
-			v.get(i, value);
+			value = v[i];
 			atom_setfloat(*argv+i, value);
 		}
-		else if (v.getType(i) == kTypeSymbol) {
+		else if (v[i].type() == kTypeSymbol) {
 			TTSymbol	value;
-			v.get(i, value);
+			value = v[i];
 			atom_setsym(*argv+i, gensym((char*)value.c_str()));
 		}
 		else {	// assume int
 			TTInt32		value;
-			v.get(i, value);
+			value = v[i];
 			atom_setlong(*argv+i, value);
 		}
 	}	
@@ -258,30 +258,30 @@ t_max_err OpSetOperand(OpPtr self, void* attr, long argc, t_atom* argv)
 }
 
 
-t_max_err OpGetOperand(OpPtr self, (t_object*) attr, long* argc, t_atom** argv)
+t_max_err OpGetOperand(OpPtr self, t_object* attr, long* argc, t_atom** argv)
 {
 	TTValue v;
 	
 	self->audioGraphObject->getUnitGenerator()->getAttributeValue(TT("operand"), v);
 	
-	*argc = v.getSize();
+	*argc = v.size();
 	if (!(*argv)) // otherwise use memory passed in
-		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.getSize());
+		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.size());
 	
-	for (int i=0; i<v.getSize(); i++) {
-		if (v.getType(i) == kTypeFloat32 || v.getType(i) == kTypeFloat64) {
+	for (int i=0; i<v.size(); i++) {
+		if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64) {
 			TTFloat64	value;
-			v.get(i, value);
+			value = v[i];
 			atom_setfloat(*argv+i, value);
 		}
-		else if (v.getType(i) == kTypeSymbol) {
+		else if (v[i].type() == kTypeSymbol) {
 			TTSymbol	value;
-			v.get(i, value);
+			value = v[i];
 			atom_setsym(*argv+i, gensym((char*)value.c_str()));
 		}
 		else {	// assume int
 			TTInt32		value;
-			v.get(i, value);
+			value = v[i];
 			atom_setlong(*argv+i, value);
 		}
 	}	
