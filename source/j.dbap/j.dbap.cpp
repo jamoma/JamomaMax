@@ -79,7 +79,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	CLASS_ATTR_LONG(c,		"num_destinations",	0,		t_dbap,	attr_num_destinations);
 	CLASS_ATTR_ACCESSORS(c,	"num_destinations",	NULL,	dbap_attr_setnum_destinations);
 
-	CLASS_ATTR_FLOAT(c,		"rolloff",			0,		t_dbap,	attr_rolloff);
+	CLASS_ATTR_DOUBLE(c,		"rolloff",			0,		t_dbap,	attr_rolloff);
 	CLASS_ATTR_ACCESSORS(c,	"rolloff",			NULL,	dbap_attr_setrolloff);
 	
 	// Finalize our class
@@ -116,7 +116,7 @@ void *dbap_new(t_symbol *msg, long argc, t_atom *argv)
 		x->attr_num_sources = 1;						// default value
 		x->attr_num_destinations = 1;					// default value
 		x->attr_dimensions = 2;							// two-dimensional by default
-		x->attr_rolloff = 6;							// 6 dB rolloff by default
+		x->attr_rolloff = 6.;							// 6 dB rolloff by default
 
 		x->attr_view_update = false;
 		atom_setsym(&x->last_view[0],gensym("all"));
@@ -195,7 +195,7 @@ void dbap_free(t_dbap *x)
 void dbap_blur(t_dbap *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	long n;
-	float f;
+	double f;
 	
 	if ((argc>=2) && argv) {	
 		n = atom_getlong(argv)-1;						// we start counting from 1 for sources
@@ -301,7 +301,7 @@ void dbap_destination(t_dbap *x, void *msg, long argc, t_atom *argv)
 void dbap_sourcegain(t_dbap *x, void *msg, long argc, t_atom *argv)
 {
 	long n;
-	float f;
+	double f;
 	
 	if ((argc>=2) && argv) {	
 		n = atom_getlong(argv)-1;						// we start counting from 1 for sources
@@ -338,7 +338,7 @@ void dbap_mastergain(t_dbap *x, double f)
 void dbap_sourceweight(t_dbap *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	long source, i;
-	float weight;
+	double weight;
 	
 	if (argc && argv) {			
 		
@@ -684,7 +684,7 @@ t_max_err dbap_attr_setnum_destinations(t_dbap *x, void *attr, long argc, t_atom
 // ATTRIBUTE: rolloff
 t_max_err dbap_attr_setrolloff(t_dbap *x, void *attr, long argc, t_atom *argv)
 {
-	float f;
+	double f;
 	long i;
 	
 	if (argc && argv) {	
@@ -779,17 +779,17 @@ void dbap_calculate1D(t_dbap *x, long n)
 
 void dbap_calculate2D(t_dbap *x, long n)
 {
-	float k;											// Scaling coefficient
-	float k2inv;										// Inverse square of the scaling constant k
-	float dx, dy;										// Distance vector
-	float r2;											// Bluriness ratio 
-	float dia[MAX_NUM_DESTINATIONS];					// Distance to ith speaker to the power of x->a.
-	float sdia[MAX_NUM_DESTINATIONS];					// Squared Distance to ith speaker (without bluriness ratio)
+	double k;											// Scaling coefficient
+	double k2inv;										// Inverse square of the scaling constant k
+	double dx, dy;										// Distance vector
+	double r2;											// Bluriness ratio
+	double dia[MAX_NUM_DESTINATIONS];					// Distance to ith speaker to the power of x->a.
+	double sdia[MAX_NUM_DESTINATIONS];					// Squared Distance to ith speaker (without bluriness ratio)
 	long iC,iN;											// index of the the dest C and N dest in dst_position[]
-	float sSC,sSN,sCN;									// squared Distance of the Source to C and N and [CN]
+	double sSC,sSN,sCN;									// squared Distance of the Source to C and N and [CN]
 	t_xyz P;											// Projection point of Source on [CN], pointer to coord of S, C and N
-	float kCN, dist, min_dist;
-	float v, out;										// is the source out of the hull ? (-1 inside, 1 outside)
+	double kCN, dist, min_dist;
+	double v, out;										// is the source out of the hull ? (-1 inside, 1 outside)
 	long id_min;										// id of the closest dest
 	long i,j;
 	t_atom a[3];										// Output array of atoms
@@ -800,7 +800,7 @@ void dbap_calculate2D(t_dbap *x, long n)
 	for (i=0; i<x->attr_num_destinations; i++) {
 		dx = x->src_position[n].x - x->dst_position[i].x;
 		dy = x->src_position[n].y - x->dst_position[i].y;
-		dia[i] = pow(double(dx*dx + dy*dy + r2), double(0.5*x->a));
+		dia[i] = pow((dx*dx + dy*dy + r2), (0.5*x->a));
 		if (x->hull_io) sdia[i] = dx*dx + dy*dy;
 		
 		k2inv = k2inv + (x->src_weight[n][i]*x->src_weight[n][i])/(dia[i]*dia[i]);
@@ -912,11 +912,11 @@ void dbap_calculate_a(t_dbap *x)
 void dbap_calculate_mean_dst_position(t_dbap *x)
 {
 	long i;
-	float a,b,c;
+	double a,b,c;
 
-	a = 0;
-	b = 0;
-	c = 0;
+	a = 0.;
+	b = 0.;
+	c = 0.;
 	for (i=0; i<x->attr_num_destinations; i++) {
 		a += x->dst_position[i].x;
 		b += x->dst_position[i].y;
@@ -931,8 +931,8 @@ void dbap_calculate_mean_dst_position(t_dbap *x)
 void dbap_calculate_variance(t_dbap *x)
 {
 	long i;
-	float dx, dy, dz;
-	float d2=0;
+	double dx, dy, dz;
+	double d2=0;
 	
 
 	dbap_calculate_mean_dst_position(x);
@@ -984,7 +984,7 @@ void dbap_calculate_hull(t_dbap *x, long n)
 void dbap_calculate_hull1D(t_dbap *x, long n)
 {
 	long i;
-	float min, max;
+	double min, max;
 	
 	min = x->dst_position[0].x;
 	max = x->dst_position[0].x;
@@ -1005,7 +1005,7 @@ void dbap_calculate_hull2D(t_dbap *x, long n)
 {
 	t_H2D h2;			// the data structure used to perform calculation
 	long i,j;
-	float dx,dy;		// to calculate the lenght of each border of the hull
+	double dx,dy;		// to calculate the lenght of each border of the hull
 	long m;				// Index of lowest so far
 
 	//post("h2D : Start ********************************************");
@@ -1165,13 +1165,13 @@ void dbap_calculate_view1D(t_dbap *x, long dst, long src)
 
 void dbap_calculate_view2D(t_dbap *x, long dst, long src)
 {
-	float k;														// Scaling coefficient
-	float k2inv;													// Inverse square of the scaling constant k
-	float dx, dy;													// Distance vector
-	float r2;														// Bluriness ratio 
-	float dia[MAX_NUM_DESTINATIONS];								// Distance to ith speaker to the power of x->a.
-	float div_x, div_y;	
-	float pix;
+	double k;														// Scaling coefficient
+	double k2inv;													// Inverse square of the scaling constant k
+	double dx, dy;													// Distance vector
+	double r2;														// Bluriness ratio
+	double dia[MAX_NUM_DESTINATIONS];								// Distance to ith speaker to the power of x->a.
+	double div_x, div_y;
+	double pix;
 	long i,j,d;
 	unsigned char val;
 	t_xyz temp_src;

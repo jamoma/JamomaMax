@@ -595,7 +595,7 @@
 					"args" : [ "/player.A", "/interface" ],
 					"id" : "obj-51",
 					"maxclass" : "bpatcher",
-					"name" : "movie.view.maxpat",
+					"name" : "myMovie.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -708,7 +708,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 674.0, 118.0, 155.0, 20.0 ],
-					"text" : "movie.model player.B"
+					"text" : "myMovie.model player.B"
 				}
 
 			}
@@ -1366,7 +1366,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 379.0, 118.0, 155.0, 20.0 ],
-					"text" : "movie.model player.A"
+					"text" : "myMovie.model player.A"
 				}
 
 			}
@@ -1439,7 +1439,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 4.0, 433.0, 167.0, 18.0 ],
-					"text" : "load movie.view.maxpat"
+					"text" : "load myMovie.view.maxpat"
 				}
 
 			}

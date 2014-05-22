@@ -8,7 +8,7 @@
 			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 44.0, 84.0, 1522.0, 835.0 ],
+		"rect" : [ 158.0, 82.0, 1522.0, 835.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,17 +29,102 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-32",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 54.0, 416.0, 343.0, 31.0 ],
+					"text" : "num_destinations 4, num_sources 7, rolloff 2., vicinity 0.08, getnum_destinations, getnum_sources, getrolloff, getvicinity"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 558.0, 560.0, 20.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-29",
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 558.0, 531.0, 95.0, 20.0 ],
+					"text" : "test.equals 0.08"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-23",
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 412.0, 663.0, 283.0, 33.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dbap/setdimensions @tags Jamoma Modular j.dbap spatialisation"
+					"patching_rect" : [ 558.0, 587.0, 315.0, 33.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap_bformat/setvicinity @tags Jamoma Modular j.dbap_bformat spatialisation"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1014.5, 239.0, 20.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1014.5, 210.0, 95.0, 20.0 ],
+					"text" : "test.equals 0.21"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-12",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1014.5, 283.5, 308.5, 33.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap_bformat/getvicinity @tags Jamoma Modular j.dbap_bformat spatialisation"
 				}
 
 			}
@@ -49,13 +134,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-28",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 570.0, 621.0, 315.0, 33.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dbap/setnum_destinations @tags Jamoma Modular j.dbap spatialisation"
+					"patching_rect" : [ 126.0, 737.0, 308.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap_bformat/setnum_destinations @tags Jamoma Modular j.dbap_bformat spatialisation"
 				}
 
 			}
@@ -65,29 +150,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-3",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 776.0, 663.0, 291.0, 33.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dbap/getnum_sources @tags Jamoma Modular j.dbap spatialisation"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-24",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 524.0, 361.0, 287.0, 33.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dbap/getdimensions @tags Jamoma Modular j.dbap spatialisation"
+					"patching_rect" : [ 270.0, 677.0, 308.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap_bformat/getnum_sources @tags Jamoma Modular j.dbap_bformat spatialisation"
 				}
 
 			}
@@ -102,8 +171,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 694.0, 319.0, 313.0, 33.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dbap/getnum_destinations @tags Jamoma Modular j.dbap spatialisation"
+					"patching_rect" : [ 530.0, 402.0, 364.5, 33.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap_bformat/getnum_destinations @tags Jamoma Modular j.dbap_bformat spatialisation"
 				}
 
 			}
@@ -118,8 +187,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 900.0, 361.0, 293.0, 33.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dbap/getnum_sources @tags Jamoma Modular j.dbap spatialisation"
+					"patching_rect" : [ 691.5, 361.0, 348.5, 33.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap_bformat/getnum_sources @tags Jamoma Modular j.dbap_bformat spatialisation"
 				}
 
 			}
@@ -173,7 +242,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 951.0, 519.0, 20.0, 20.0 ]
+					"patching_rect" : [ 414.0, 560.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -185,7 +254,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 776.0, 519.0, 20.0, 20.0 ]
+					"patching_rect" : [ 270.0, 560.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -197,33 +266,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 570.0, 519.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 412.0, 519.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-23",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 412.0, 490.0, 35.0, 20.0 ],
-					"text" : "== 1"
+					"patching_rect" : [ 126.0, 560.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -236,7 +279,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 570.0, 490.0, 35.0, 20.0 ],
+					"patching_rect" : [ 126.0, 531.0, 35.0, 20.0 ],
 					"text" : "== 4"
 				}
 
@@ -250,7 +293,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 776.0, 490.0, 35.0, 20.0 ],
+					"patching_rect" : [ 270.0, 531.0, 35.0, 20.0 ],
 					"text" : "== 7"
 				}
 
@@ -265,7 +308,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 951.0, 490.0, 82.0, 20.0 ],
+					"patching_rect" : [ 414.0, 531.0, 82.0, 20.0 ],
 					"text" : "test.equals 2."
 				}
 
@@ -278,7 +321,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1080.0, 290.0, 20.0, 20.0 ]
+					"patching_rect" : [ 853.0, 239.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -290,7 +333,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 900.0, 290.0, 20.0, 20.0 ]
+					"patching_rect" : [ 691.5, 239.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -302,33 +345,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 694.0, 290.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-11",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 524.0, 290.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 524.0, 261.0, 35.0, 20.0 ],
-					"text" : "== 3"
+					"patching_rect" : [ 530.0, 239.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -341,7 +358,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 694.0, 261.0, 41.0, 20.0 ],
+					"patching_rect" : [ 530.0, 210.0, 41.0, 20.0 ],
 					"text" : "== 12"
 				}
 
@@ -355,7 +372,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 900.0, 261.0, 40.0, 20.0 ],
+					"patching_rect" : [ 691.5, 210.0, 40.0, 20.0 ],
 					"text" : "== 11"
 				}
 
@@ -370,7 +387,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1080.0, 261.0, 89.0, 20.0 ],
+					"patching_rect" : [ 853.0, 210.0, 89.0, 20.0 ],
 					"text" : "test.equals 4.2"
 				}
 
@@ -386,8 +403,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 951.0, 621.0, 254.0, 33.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dbap/setrolloff @tags Jamoma Modular j.dbap spatialisation"
+					"patching_rect" : [ 414.0, 632.0, 307.0, 33.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap_bformat/setrolloff @tags Jamoma Modular j.dbap_bformat spatialisation"
 				}
 
 			}
@@ -400,23 +417,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 412.0, 452.0, 595.0, 20.0 ],
-					"text" : "route dimensions num_destinations num_sources rolloff"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-32",
-					"linecount" : 7,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 61.0, 272.0, 130.0, 98.0 ],
-					"text" : "dimensions 1, num_destinations 4, num_sources 7, rolloff 2., getdimensions, getnum_destinations, getnum_sources, getrolloff"
+					"patching_rect" : [ 126.0, 493.0, 595.0, 20.0 ],
+					"text" : "route num_destinations num_sources rolloff vicinity"
 				}
 
 			}
@@ -427,10 +429,10 @@
 					"id" : "obj-33",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 61.0, 416.0, 338.0, 20.0 ],
-					"text" : "j.dbap"
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 54.0, 466.0, 91.0, 20.0 ],
+					"text" : "j.dbap_bformat"
 				}
 
 			}
@@ -445,8 +447,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1080.0, 319.0, 260.0, 33.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dbap/getrolloff @tags Jamoma Modular j.dbap spatialisation"
+					"patching_rect" : [ 853.0, 321.0, 306.5, 33.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap_bformat/getrolloff @tags Jamoma Modular j.dbap_bformat spatialisation"
 				}
 
 			}
@@ -459,8 +461,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 524.0, 230.0, 639.0, 20.0 ],
-					"text" : "route dimensions num_destinations num_sources rolloff"
+					"patching_rect" : [ 530.0, 179.0, 665.0, 20.0 ],
+					"text" : "route num_destinations num_sources rolloff vicinity"
 				}
 
 			}
@@ -469,13 +471,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
-					"linecount" : 4,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 86.0, 126.0, 126.0, 58.0 ],
-					"text" : "getdimensions, getnum_sources, getnum_destinations, getrolloff"
+					"patching_rect" : [ 86.0, 90.0, 127.0, 45.0 ],
+					"text" : "getnum_sources, getnum_destinations, getrolloff, getvicinity"
 				}
 
 			}
@@ -486,10 +488,10 @@
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 86.0, 196.0, 423.0, 20.0 ],
-					"text" : "j.dbap @dimensions 3 @num_sources 11 @num_destinations 12 @rolloff 4.2"
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 86.0, 146.0, 463.0, 20.0 ],
+					"text" : "j.dbap_bformat @num_sources 11 @num_destinations 12 @rolloff 4.2 @vicinity 0.21"
 				}
 
 			}
@@ -519,7 +521,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
+					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-11", 0 ]
@@ -532,6 +534,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -564,7 +575,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
+					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-19", 3 ]
@@ -573,7 +584,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-19", 2 ]
@@ -582,7 +593,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
+					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-19", 1 ]
@@ -591,7 +602,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-19", 0 ]
@@ -618,19 +629,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-29", 0 ],
+					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-22", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-23", 0 ]
 				}
 
 			}
@@ -645,10 +647,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
+					"destination" : [ "obj-22", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-31", 0 ]
+					"source" : [ "obj-31", 3 ]
 				}
 
 			}
@@ -657,7 +659,7 @@
 					"destination" : [ "obj-30", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-31", 1 ]
+					"source" : [ "obj-31", 0 ]
 				}
 
 			}
@@ -666,7 +668,7 @@
 					"destination" : [ "obj-34", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-31", 2 ]
+					"source" : [ "obj-31", 1 ]
 				}
 
 			}
@@ -675,7 +677,7 @@
 					"destination" : [ "obj-35", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-31", 3 ]
+					"source" : [ "obj-31", 2 ]
 				}
 
 			}
@@ -693,7 +695,7 @@
 					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-33", 3 ]
+					"source" : [ "obj-33", 1 ]
 				}
 
 			}
@@ -720,7 +722,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-4", 3 ]
+					"source" : [ "obj-4", 1 ]
 				}
 
 			}
@@ -798,7 +800,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
+					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-9", 0 ]
@@ -811,7 +813,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dbap.mxo",
+				"name" : "j.dbap_bformat.mxo",
 				"type" : "iLaX"
 			}
 , 			{

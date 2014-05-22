@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1350.0, 430.0 ],
+		"rect" : [ 0.0, 44.0, 1350.0, 390.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,22 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-10",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 841.0, 288.0, 251.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap/roll_off/3D/6dB @tags Jamoma Modular j.dbap spatialisation"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -84,7 +100,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
@@ -649,7 +665,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 253.0, 175.0, 130.0, 20.0 ],
+					"patching_rect" : [ 255.0, 174.0, 130.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -682,7 +698,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
@@ -1288,7 +1304,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 253.0, 204.0, 20.0, 20.0 ]
+					"patching_rect" : [ 255.0, 203.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -1310,13 +1326,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-11",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 253.0, 233.0, 192.0, 33.0 ],
-					"text" : "test.assert TESTdbap::RollOff::1D::9.325dB"
+					"patching_rect" : [ 255.0, 232.0, 255.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap/roll_off/1D/9.325dB @tags Jamoma Modular j.dbap spatialisation"
 				}
 
 			}
@@ -1326,13 +1342,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-27",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 59.0, 233.0, 170.0, 33.0 ],
-					"text" : "test.assert TESTdbap::RollOff::1D::6dB"
+					"patching_rect" : [ 59.0, 288.0, 251.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap/roll_off/1D/6dB @tags Jamoma Modular j.dbap spatialisation"
 				}
 
 			}
@@ -1351,7 +1367,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 729.0, 683.0 ],
@@ -1931,7 +1947,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 487.0, 175.0, 171.0, 20.0 ],
+					"patching_rect" : [ 455.0, 174.0, 107.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1945,7 +1961,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p TESTdbap::RollOff::2D::6dB"
+					"text" : "p RollOff::2D::6dB"
 				}
 
 			}
@@ -1964,7 +1980,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
@@ -2529,7 +2545,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 687.0, 175.0, 194.0, 20.0 ],
+					"patching_rect" : [ 641.0, 174.0, 130.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2543,7 +2559,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p TESTdbap::RollOff::2D::9.325dB"
+					"text" : "p RollOff::2D::9.325dB"
 				}
 
 			}
@@ -2555,7 +2571,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 687.0, 204.0, 20.0, 20.0 ]
+					"patching_rect" : [ 641.0, 203.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -2567,7 +2583,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 487.0, 204.0, 20.0, 20.0 ]
+					"patching_rect" : [ 455.0, 203.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -2577,13 +2593,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-3",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 687.0, 233.0, 195.0, 33.0 ],
-					"text" : "test.assert TESTdbap::RollOff::2D::9.325dB"
+					"patching_rect" : [ 641.0, 232.0, 249.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap/roll_off/2D/9.325dB @tags Jamoma Modular j.dbap spatialisation"
 				}
 
 			}
@@ -2593,13 +2609,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 487.0, 233.0, 173.0, 33.0 ],
-					"text" : "test.assert TESTdbap::RollOff::2D::6dB"
+					"patching_rect" : [ 455.0, 288.0, 251.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap/roll_off/2D/6dB @tags Jamoma Modular j.dbap spatialisation"
 				}
 
 			}
@@ -2618,7 +2634,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
@@ -3183,7 +3199,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1104.0, 175.0, 194.0, 20.0 ],
+					"patching_rect" : [ 1033.0, 174.0, 130.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3197,7 +3213,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p TESTdbap::RollOff::3D::9.325dB"
+					"text" : "p RollOff::3D::9.325dB"
 				}
 
 			}
@@ -3216,7 +3232,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
@@ -3796,7 +3812,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 912.0, 175.0, 171.0, 20.0 ],
+					"patching_rect" : [ 841.0, 174.0, 107.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3810,7 +3826,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p TESTdbap::RollOff::3D::6dB"
+					"text" : "p RollOff::3D::6dB"
 				}
 
 			}
@@ -3822,7 +3838,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1104.0, 208.0, 20.0, 20.0 ]
+					"patching_rect" : [ 1033.0, 207.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -3834,7 +3850,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 912.0, 208.0, 20.0, 20.0 ]
+					"patching_rect" : [ 841.0, 207.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -3844,29 +3860,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-9",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1104.0, 239.0, 189.0, 33.0 ],
-					"text" : "test.assert TESTdbap::RollOff::3D::9.325dB"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-10",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 912.0, 239.0, 167.0, 33.0 ],
-					"text" : "test.assert TESTdbap::RollOff::3D::6dB"
+					"patching_rect" : [ 1033.0, 232.0, 257.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.dbap/roll_off/3D/9.325dB @tags Jamoma Modular j.dbap spatialisation"
 				}
 
 			}

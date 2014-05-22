@@ -19,7 +19,7 @@
 
 
 // types and structures
-typedef struct _jcom_stencil {
+typedef struct _j_stencil {
 	t_object		obj;
 	TTMatrixPtr		x;				// Jamoma matrix object for input
 	TTMatrixPtr		y;				// Jamoma matrix object for output
@@ -52,7 +52,7 @@ t_jit_err StencilClassInit(void)
 	t_jit_object	*attr;
 	t_jit_object	*mop;
 	
-	sStencilClass = (ClassPtr)jit_class_new((char*)"jcom_stencil", (method)StencilNew, (method)StencilFree, sizeof(StencilObject), 0);
+	sStencilClass = (ClassPtr)jit_class_new((char*)"j_stencil", (method)StencilNew, (method)StencilFree, sizeof(StencilObject), 0);
 
 	// add matrix operator (mop)
 	mop = (t_jit_object*)jit_object_new(_jit_sym_jit_mop, 1, 1); // args are  num inputs and num outputs

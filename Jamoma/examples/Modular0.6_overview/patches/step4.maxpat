@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -168,6 +168,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "a movie playback model",
 					"color" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -176,8 +177,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 379.0, 379.0, 159.0, 20.0 ],
-					"text" : "movie.model player.B"
+					"patching_rect" : [ 379.0, 379.0, 141.0, 20.0 ],
+					"text" : "myMovie.model player.B"
 				}
 
 			}
@@ -247,7 +248,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 967.0, 447.0, 136.0, 18.0 ],
-					"text" : "/player.A/play:value"
+					"text" : "/player.A/play"
 				}
 
 			}
@@ -427,7 +428,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 930.0, 525.0, 187.0, 18.0 ],
-					"text" : "out/mute 0"
+					"text" : "rate 1."
 				}
 
 			}
@@ -777,6 +778,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"color" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -960,7 +962,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1204,7 +1206,7 @@
 					"fontsize" : 12.0,
 					"framecolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"id" : "obj-47",
-					"items" : [ "channel.A/fps", ",", "channel.A/model:address", ",", "channel.A/model:class", ",", "channel.A/preset/order", ",", "channel.B/fps", ",", "channel.B/model:address", ",", "channel.B/model:class", ",", "channel.B/preset/order", ",", "model:address", ",", "model:class" ],
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1225,7 +1227,7 @@
 					"fontsize" : 12.0,
 					"framecolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"id" : "obj-19",
-					"items" : [ "channel.A/file/load", ",", "channel.A/model/documentation/generate", ",", "channel.A/model/edit", ",", "channel.A/model:help/open", ",", "channel.A/model:internal/open", ",", "channel.A/model:reference/open", ",", "channel.A/preset/interpolate", ",", "channel.A/preset/mix", ",", "channel.A/preset/read", ",", "channel.A/preset/read/again", ",", "channel.A/preset/recall", ",", "channel.A/preset/remove", ",", "channel.A/preset/store", ",", "channel.A/preset/write", ",", "channel.A/preset/write/again", ",", "channel.B/file/load", ",", "channel.B/model/documentation/generate", ",", "channel.B/model/edit", ",", "channel.B/model:help/open", ",", "channel.B/model:internal/open", ",", "channel.B/model:reference/open", ",", "channel.B/preset/interpolate", ",", "channel.B/preset/mix", ",", "channel.B/preset/read", ",", "channel.B/preset/read/again", ",", "channel.B/preset/recall", ",", "channel.B/preset/remove", ",", "channel.B/preset/store", ",", "channel.B/preset/write", ",", "channel.B/preset/write/again", ",", "model/documentation/generate", ",", "model/edit", ",", "model:help/open", ",", "model:internal/open", ",", "model:reference/open" ],
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1246,7 +1248,7 @@
 					"fontsize" : 12.0,
 					"framecolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"id" : "obj-14",
-					"items" : [ "channel.A/file/path", ",", "channel.A/out/freeze", ",", "channel.A/out/mute", ",", "channel.A/out/preview", ",", "channel.A/play", ",", "channel.A/rate", ",", "channel.B/file/path", ",", "channel.B/out/freeze", ",", "channel.B/out/mute", ",", "channel.B/out/preview", ",", "channel.B/play", ",", "channel.B/rate" ],
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1267,7 +1269,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 500.0, 142.0, 97.0, 18.0 ],
+					"patching_rect" : [ 500.0, 142.0, 125.0, 18.0 ],
 					"text" : "model:reference/open"
 				}
 
@@ -1281,7 +1283,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 500.0, 167.0, 69.0, 18.0 ],
+					"patching_rect" : [ 500.0, 167.0, 97.0, 18.0 ],
 					"text" : "model:help/open"
 				}
 
@@ -1307,7 +1309,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 306.0, 225.0, 96.0, 18.0 ],
-					"text" : "out/mute 0"
+					"text" : "rate 1."
 				}
 
 			}
@@ -1381,6 +1383,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "a movie playback model",
 					"color" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -1389,8 +1392,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 383.0, 200.0, 155.0, 20.0 ],
-					"text" : "movie.model player.A"
+					"patching_rect" : [ 383.0, 200.0, 141.0, 20.0 ],
+					"text" : "myMovie.model player.A"
 				}
 
 			}
@@ -1404,7 +1407,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 302.0, 405.0, 96.0, 18.0 ],
-					"text" : "out/mute 0"
+					"text" : "rate 1."
 				}
 
 			}
@@ -2086,15 +2089,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "movie.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
+				"name" : "myMovie.model.maxpat",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
 				"patcherrelativepath" : "../movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "track.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/track",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/track",
 				"patcherrelativepath" : "../track",
 				"type" : "JSON",
 				"implicit" : 1
@@ -2105,10 +2108,6 @@
 			}
 , 			{
 				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{

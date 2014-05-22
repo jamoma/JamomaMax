@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		A7F8BFCC192226380007A716 /* j.max.stencil.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.max.stencil.cpp; sourceTree = "<group>"; };
+		A7F8BFCE1922264C0007A716 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A7F8BFCF1922264C0007A716 /* j.stencil%.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.stencil%.yml"; sourceTree = "<group>"; };
 		D27A2E6D161AFD6400A79F00 /* j.stencil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.stencil.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -14,9 +17,20 @@
 		08FB7794FE84155DC02AAC07 /* j.stencil */ = {
 			isa = PBXGroup;
 			children = (
-				D27A2E6D161AFD6400A79F00 /* j.stencil.cpp */,
+				A7F8BFCE1922264C0007A716 /* Makefile */,
+				A7F8BFCF1922264C0007A716 /* j.stencil%.yml */,
+				A7F8BFCD1922263C0007A716 /* Sources */,
 			);
 			name = j.stencil;
+			sourceTree = "<group>";
+		};
+		A7F8BFCD1922263C0007A716 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D27A2E6D161AFD6400A79F00 /* j.stencil.cpp */,
+				A7F8BFCC192226380007A716 /* j.max.stencil.cpp */,
+			);
+			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

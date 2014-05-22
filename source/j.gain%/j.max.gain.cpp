@@ -45,11 +45,19 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	void *p, *q;
 	
 	TTFoundationInit();
-	GainClassInit();	
+	
+	// initialize the Jitter class
+	GainClassInit();
+	
+	// create the Max class
 	setup((t_messlist**)&sMaxGainClass, (method)MaxGainNew, (method)MaxGainFree, sizeof(MaxGainObject), 0, A_GIMME, 0);
 	
+	// specify a byte offset to keep additional information
 	p = max_jit_classex_setup(calcoffset(MaxGainObject, obex));
-	q = jit_class_findbyname(gensym("jcom_gain"));    
+	
+	// look up the Jitter class in the class registry
+	q = jit_class_findbyname(gensym("j_gain"));
+	
     max_jit_classex_mop_wrap(p, q, 0);							// attrs & methods for name, type, dim, planecount, bang, outputmatrix, etc
     max_jit_classex_standard_wrap(p, q, 0);						// attrs & methods for getattributes, dumpout, maxjitclassaddmethods, etc
     addmess((method)max_jit_mop_assist, (char*)"assist", A_CANT, 0);	// standard matrix-operator (mop) assist fn
@@ -66,9 +74,9 @@ void *MaxGainNew(t_symbol *s, long argc, t_atom *argv)
 	MaxGainObjectPtr	self;
 	void				*o;
 	
-	self = (MaxGainObjectPtr)max_jit_obex_new(sMaxGainClass, gensym("jcom_gain"));
+	self = (MaxGainObjectPtr)max_jit_obex_new(sMaxGainClass, gensym("j_gain"));
 	if (self) {
-		o = jit_object_new(gensym("jcom_gain"));
+		o = jit_object_new(gensym("j_gain"));
 		if (o) {
 			max_jit_mop_setup_simple(self, o, argc, argv);			
 			max_jit_attr_args(self, argc, argv);

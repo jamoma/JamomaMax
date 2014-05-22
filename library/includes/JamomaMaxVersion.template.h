@@ -8,7 +8,7 @@
  *
  * @authors Tim Place
  *
- * @copyright Copyright © 2009, Tim Place @n
+ * @copyright Copyright (c) 2009, Tim Place @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */

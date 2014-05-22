@@ -19,7 +19,7 @@
 
 
 // types and structures
-typedef struct _jcom_gain {
+typedef struct _j_gain {
 	t_object		obj;
 	TTMatrix*		m_x;		// Jamoma matrix object for input
 	TTMatrix*		m_y;		// Jamoma matrix object for output
@@ -48,7 +48,7 @@ t_jit_err GainClassInit(void)
 	t_jit_object	*attr;
 	t_jit_object	*mop;
 	
-	s_gain_class = (t_class*)jit_class_new((char*)"jcom_gain", (method)GainNew, (method)GainFree, sizeof(t_gain), 0);
+	s_gain_class = (t_class*)jit_class_new((char*)"j_gain", (method)GainNew, (method)GainFree, sizeof(t_gain), 0);
 
 	// add matrix operator (mop)
 	mop = (t_jit_object*)jit_object_new(_jit_sym_jit_mop, 1, 1); // args are  num inputs and num outputs

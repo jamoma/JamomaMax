@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 3.0, 44.0, 221.0, 324.0 ],
+		"rect" : [ 181.0, 44.0, 221.0, 324.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -110,8 +111,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 610.0, 117.0, 640.0, 480.0 ],
@@ -251,8 +253,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -356,8 +359,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 0,
-											"revision" : 8
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 339.0, 99.0, 701.0, 484.0 ],
@@ -1418,8 +1422,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 323.0, 44.0, 360.0, 237.0 ],
@@ -1559,8 +1564,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 191.0, 44.0, 293.0, 225.0 ],
@@ -1674,11 +1680,12 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 3.0, 44.0, 1275.0, 750.0 ],
+						"rect" : [ 3.0, 44.0, 1253.0, 747.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 10.0,
@@ -1697,6 +1704,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -1790,7 +1798,7 @@
 									"rounded" : 10.0,
 									"spacing_y" : 6.0,
 									"tabcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
-									"tabs" : [ "*j.allpass~", "*j.array~", "*j.average~", "*j.balance~", "*j.dcblock~", "*j.degrade~", "*j.delay~", "*j.filter~", "*j.function~", "*j.gain~", "*j.hmlshelf~", "*j.limiter~", "*j.meter~", "*j.onepole~", "*j.op~", "*j.overdrive~", "*j.panorama~", "*j.ramp~", "*j.waveshaper~", "*j.xfade~", "*j.zerox~", "j.thru~" ]
+									"tabs" : [ "*j.allpass~", "*j.array~", "*j.average~", "*j.balance~", "*j.clip~", "*j.dcblock~", "*j.degrade~", "*j.delay~", "*j.filter~", "*j.function~", "*j.gain~", "*j.hmlshelf~", "*j.limiter~", "*j.meter~", "*j.mutesolo~", "*j.onepole~", "*j.op~", "*j.overdrive~", "*j.panorama~", "*j.ramp~", "*j.receive~", "*j.send~", "*j.waveshaper~", "*j.xfade~", "*j.zerox~", "*j~", "j.thru~" ]
 								}
 
 							}
@@ -1807,8 +1815,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 0,
-											"revision" : 8
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 48.0, 44.0, 752.0, 692.0 ],
@@ -1843,8 +1852,9 @@
 														"fileversion" : 1,
 														"appversion" : 														{
 															"major" : 6,
-															"minor" : 0,
-															"revision" : 8
+															"minor" : 1,
+															"revision" : 7,
+															"architecture" : "x64"
 														}
 ,
 														"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -2026,8 +2036,9 @@
 														"fileversion" : 1,
 														"appversion" : 														{
 															"major" : 6,
-															"minor" : 0,
-															"revision" : 8
+															"minor" : 1,
+															"revision" : 7,
+															"architecture" : "x64"
 														}
 ,
 														"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -2162,8 +2173,9 @@
 														"fileversion" : 1,
 														"appversion" : 														{
 															"major" : 6,
-															"minor" : 0,
-															"revision" : 8
+															"minor" : 1,
+															"revision" : 7,
+															"architecture" : "x64"
 														}
 ,
 														"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -2515,14 +2527,14 @@
 													"fontname" : "Verdana",
 													"fontsize" : 11.0,
 													"id" : "obj-59",
-													"items" : [ "j.adsr=.maxhelp", ",", "j.allpass~.maxhelp", ",", "j.append#.maxhelp", ",", "j.array~.maxhelp", ",", "j.array=.maxhelp", ",", "j.audiounit=.maxhelp", ",", "j.average~.maxhelp", ",", "j.average=.maxhelp", ",", "j.balance~.maxhelp", ",", "j.clip=.maxhelp", ",", "j.count=.maxhelp", ",", "j.cubicInterpolate.maxhelp", ",", "j.cuemanager.maxhelp", ",", "j.dataspace#.maxhelp", ",", "j.dataspace.maxhelp", ",", "j.dbap.maxhelp", ",", "j.dbap_bformat.maxhelp", ",", "j.dcblocker=.maxhelp", ",", "j.dcblock~.maxhelp", ",", "j.degrade~.maxhelp", ",", "j.degrade=.maxhelp", ",", "j.delay~.maxhelp", ",", "j.delay=.maxhelp", ",", "j.delta.maxhelp", ",", "j.envexp.maxhelp", ",", "j.fft=.maxhelp", ",", "j.filter~.maxhelp", ",", "j.filter=.maxhelp", ",", "j.folder.maxhelp", ",", "j.function~.maxhelp", ",", "j.gain%.maxhelp", ",", "j.gain~.maxhelp", ",", "j.gain=.maxhelp", ",", "j.gang.maxhelp", ",", "j.hilbert=.maxhelp", ",", "j.hmlshelf~.maxhelp", ",", "j.hub.maxhelp", ",", "j.in.maxhelp", ",", "j.info=.maxhelp", ",", "j.init.maxhelp", ",", "j.in~.maxhelp", ",", "j.iter#.maxhelp", ",", "j.join=.maxhelp", ",", "j.limiter~.maxhelp", ",", "j.limiter=.maxhelp", ",", "j.map.maxhelp", ",", "j.message.maxhelp", ",", "j.meter~.maxhelp", ",", "j.midi.filter#.maxhelp", ",", "j.midi.format#.maxhelp", ",", "j.midi.in#.maxhelp", ",", "j.midi.out#.maxhelp", ",", "j.mixer=.maxhelp", ",", "j.multimixer=.maxhelp", ",", "j.net.receive.maxhelp", ",", "j.net.send.maxhelp", ",", "j.noise=.maxhelp", ",", "j.offset=.maxhelp", ",", "j.onepole~.maxhelp", ",", "j.op#.maxhelp", ",", "j.op~.maxhelp", ",", "j.op=.maxhelp", ",", "j.oscinstance.maxhelp", ",", "j.oscroute.maxhelp", ",", "j.out.maxhelp", ",", "j.out~.maxhelp", ",", "j.overdrive~.maxhelp", ",", "j.overdrive=.maxhelp", ",", "j.pack#.maxhelp", ",", "j.pack=.maxhelp", ",", "j.panorama~.maxhelp", ",", "j.parameter.maxhelp", ",", "j.paramui.maxhelp", ",", "j.pass.maxhelp", ",", "j.phasor=.maxhelp", ",", "j.pick=.maxhelp", ",", "j.plug.in=.maxhelp", ",", "j.plug.out=.maxhelp", ",", "j.plug.parameter#.maxhelp", ",", "j.pulsesub=.maxhelp", ",", "j.push.maxhelp", ",", "j.ramp.maxhelp", ",", "j.ramp~.maxhelp", ",", "j.ramp=.maxhelp", ",", "j.remote.maxhelp", ",", "j.resample=.maxhelp", ",", "j.return.maxhelp", ",", "j.route.maxhelp", ",", "j.savebang.maxhelp", ",", "j.sig=.maxhelp", ",", "j.soundfile.player=.maxhelp", ",", "j.soundfile.recorder=.maxhelp", ",", "j.spat=.maxhelp", ",", "j.split=.maxhelp", ",", "j.stats.maxhelp", ",", "j.stencil%.maxhelp", ",", "j.test.sample~.maxhelp", ",", "j.textslider.maxhelp", ",", "j.trajectory=.maxhelp", ",", "j.ui.maxhelp", ",", "j.unpack#.maxhelp", ",", "j.unpack=.maxhelp", ",", "j.unsig=.maxhelp", ",", "j.vimic~.maxhelp", ",", "j.waveshaper~.maxhelp", ",", "j.waveshaper=.maxhelp", ",", "j.wavetable=.maxhelp", ",", "j.window=.maxhelp", ",", "j.xfade~.maxhelp", ",", "j.zerox~.maxhelp" ],
+													"items" : [ "j.adsr=.maxhelp", ",", "j.allpass~.maxhelp", ",", "j.append-.maxhelp", ",", "j.array=.maxhelp", ",", "j.array~.maxhelp", ",", "j.attrParameters.helper.maxpat", ",", "j.audiounit=.maxhelp", ",", "j.average=.maxhelp", ",", "j.average~.maxhelp", ",", "j.balance~.maxhelp", ",", "j.clip=.maxhelp", ",", "j.clip~.maxhelp", ",", "j.count=.maxhelp", ",", "j.cubicInterpolate.maxhelp", ",", "j.cue.maxhelp", ",", "j.dataspace-.maxhelp", ",", "j.dataspace.maxhelp", ",", "j.dbap.maxhelp", ",", "j.dbap_bformat.maxhelp", ",", "j.dcblock=.maxhelp", ",", "j.dcblock~.maxhelp", ",", "j.degrade=.maxhelp", ",", "j.degrade~.maxhelp", ",", "j.delay=.maxhelp", ",", "j.delay~.maxhelp", ",", "j.delta.maxhelp", ",", "j.envexp.maxhelp", ",", "j.fft=.maxhelp", ",", "j.filter=.maxhelp", ",", "j.filter~-benchmark.maxpat", ",", "j.filter~.maxhelp", ",", "j.folder.maxhelp", ",", "j.function~.maxhelp", ",", "j.gain%.maxhelp", ",", "j.gain=.maxhelp", ",", "j.gainParameters.helper.maxpat", ",", "j.gain~.maxhelp", ",", "j.gang.maxhelp", ",", "j.hilbert=.maxhelp", ",", "j.hmlshelf~.maxhelp", ",", "j.hub.maxhelp", ",", "j.in.maxhelp", ",", "j.info=.maxhelp", ",", "j.init.maxhelp", ",", "j.in~.maxhelp", ",", "j.iter-.maxhelp", ",", "j.join=.maxhelp", ",", "j.js_systeminfo.maxhelp", ",", "j.jsui_multigain.maxhelp", ",", "j.limiter=.maxhelp", ",", "j.limiter~.maxhelp", ",", "j.map.functions.maxpat", ",", "j.map.maxhelp", ",", "j.maxhelp", ",", "j.message.maxhelp", ",", "j.messageArray.maxhelp", ",", "j.meter~.maxhelp", ",", "j.midi.filter-.maxhelp", ",", "j.midi.format-.maxhelp", ",", "j.midi.in-.maxhelp", ",", "j.midi.out-.maxhelp", ",", "j.mixer=.maxhelp", ",", "j.mkdir.maxpat", ",", "j.model.maxhelp", ",", "j.modular.maxhelp", ",", "j.multimixer=.maxhelp", ",", "j.mutesolo=.maxhelp", ",", "j.mutesolo~.maxhelp", ",", "j.namespace.maxhelp", ",", "j.net.receive.maxhelp", ",", "j.net.send.maxhelp", ",", "j.node.maxhelp", ",", "j.noise=.maxhelp", ",", "j.offset=.maxhelp", ",", "j.onepole~.maxhelp", ",", "j.op-.maxhelp", ",", "j.op=.maxhelp", ",", "j.op~.maxhelp", ",", "j.oscinstance.maxhelp", ",", "j.oscroute.maxhelp", ",", "j.out.maxhelp", ",", "j.out~.maxhelp", ",", "j.overdrive=.maxhelp", ",", "j.overdrive~.maxhelp", ",", "j.pack-.maxhelp", ",", "j.pack=.maxhelp", ",", "j.panorama~.maxhelp", ",", "j.parameter.maxhelp", ",", "j.parameterArray.maxhelp", ",", "j.pass.maxhelp", ",", "j.phasor=.maxhelp", ",", "j.pick=.maxhelp", ",", "j.plug.in=.maxhelp", ",", "j.plug.out=.maxhelp", ",", "j.plug.parameter-.maxhelp", ",", "j.presetParameters.helper.maxpat", ",", "j.pulsesub=.maxhelp", ",", "j.push.maxhelp", ",", "j.ramp.maxhelp", ",", "j.ramp=.maxhelp", ",", "j.ramp~.maxhelp", ",", "j.receive.maxhelp", ",", "j.receive~.maxhelp", ",", "j.remote.maxhelp", ",", "j.remoteArray.maxhelp", ",", "j.resample=.maxhelp", ",", "j.return.maxhelp", ",", "j.returnArray.maxhelp", ",", "j.route.maxhelp", ",", "j.savebang.maxhelp", ",", "j.scriptingUtilities.js.maxhelp", ",", "j.send.maxhelp", ",", "j.send~.maxhelp", ",", "j.sig=.maxhelp", ",", "j.soundfile.player=.maxhelp", ",", "j.soundfile.recorder=.maxhelp", ",", "j.spat=.maxhelp", ",", "j.SpatDIF.coordinates.maxpat", ",", "j.split=.maxhelp", ",", "j.stats.maxhelp", ",", "j.stencil%.maxhelp", ",", "j.stickyPatcherWindow.js.maxhelp", ",", "j.test.sample~.maxhelp", ",", "j.textslider.maxhelp", ",", "j.trajectory=.maxhelp", ",", "j.ui.maxhelp", ",", "j.unpack-.maxhelp", ",", "j.unpack=.maxhelp", ",", "j.unsig=.maxhelp", ",", "j.videoParameters.helper.maxpat", ",", "j.view.maxhelp", ",", "j.vimic~.maxhelp", ",", "j.waveshaper=.maxhelp", ",", "j.waveshaper~.maxhelp", ",", "j.wavetable=.maxhelp", ",", "j.window=.maxhelp", ",", "j.xfade~.maxhelp", ",", "j.zerox~.maxhelp", ",", "j=.maxhelp", ",", "j~.maxhelp" ],
 													"maxclass" : "umenu",
 													"numinlets" : 1,
 													"numoutlets" : 3,
 													"outlettype" : [ "int", "", "" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 50.0, 324.0, 224.0, 20.0 ],
-													"prefix" : "Macintosh HD:/Users/nilspeters/Documents/gits/Jamoma/Builds/MaxMSP/",
+													"prefix" : "Macintosh HD:/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/help/",
 													"types" : "JSON"
 												}
 
@@ -2921,7 +2933,7 @@
 									"rounded" : 10.0,
 									"spacing_y" : 6.0,
 									"tabcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
-									"tabs" : [ "*j.adsr=", "*j.array=", "*j.average=", "*j.clip=", "*j.count=", "*j.dcblocker=", "*j.degrade=", "*j.delay=", "*j.fft=", "*j.filter=", "*j.gain=", "*j.hilbert=", "*j.info=", "*j.join=", "*j.limiter=", "*j.mixer=", "*j.multimixer=", "*j.noise=", "*j.offset=", "*j.op=", "*j.overdrive=", "*j.pack=", "*j.phasor=", "*j.pick=", "*j.plug.in=", "*j.plug.out=", "*j.pulsesub=", "*j.ramp=", "*j.resample=", "*j.sig=", "*j.soundfile.player=", "*j.soundfile.recorder=", "*j.spat=", "*j.split=", "*j.trajectory=", "*j.unpack=", "*j.unsig=", "*j.waveshaper=", "*j.wavetable=", "*j.window=" ]
+									"tabs" : [ "*j.adsr=", "*j.array=", "*j.average=", "*j.clip=", "*j.count=", "*j.dcblock=", "*j.degrade=", "*j.delay=", "*j.fft=", "*j.filter=", "*j.gain=", "*j.hilbert=", "*j.info=", "*j.join=", "*j.limiter=", "*j.mixer=", "*j.multimixer=", "*j.mutesolo=", "*j.noise=", "*j.offset=", "*j.op=", "*j.overdrive=", "*j.pack=", "*j.phasor=", "*j.pick=", "*j.plug.in=", "*j.plug.out=", "*j.pulsesub=", "*j.ramp=", "*j.resample=", "*j.sig=", "*j.soundfile.player=", "*j.soundfile.recorder=", "*j.spat=", "*j.split=", "*j.trajectory=", "*j.unpack=", "*j.unsig=", "*j.waveshaper=", "*j.wavetable=", "*j.window=", "*j=" ]
 								}
 
 							}
@@ -3994,20 +4006,6 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 405.0, 121.0, 17.0 ],
 									"text" : "j.ui"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-92",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 445.0, 130.0, 17.0 ],
-									"text" : "j.paramui"
 								}
 
 							}
@@ -6701,15 +6699,6 @@
 									"destination" : [ "obj-96", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-92", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-96", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
 									"source" : [ "obj-94", 0 ]
 								}
 
@@ -6774,8 +6763,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 320.0, 44.0, 604.0, 402.0 ],
@@ -7394,8 +7384,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 164.0, 47.0, 959.0, 752.0 ],
@@ -7677,8 +7668,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 0,
-											"revision" : 8
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -11626,7 +11618,7 @@
 					"patching_rect" : [ 19.0, 300.0, 203.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 37.0, 230.0, 19.0 ],
-					"text" : "Overview of Jamoma 0.5.7",
+					"text" : "Overview of Jamoma 0.6.0 a17",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 				}
 
@@ -11902,63 +11894,52 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../library/components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../library/components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../library/components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
-				"patcherrelativepath" : "../library/components/jamomaPath",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.thru.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
-				"patcherrelativepath" : "../library/components/thru",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"patcherrelativepath" : "../../patchers/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.getDescriptionFromHtml.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/getDescriptionFromHtml",
-				"patcherrelativepath" : "../library/components/getDescriptionFromHtml",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/getDescriptionFromHtml",
+				"patcherrelativepath" : "../../patchers/components/_deprecated/getDescriptionFromHtml",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/javascript",
-				"patcherrelativepath" : "../library/javascript",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
+				"patcherrelativepath" : "../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.route.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.loader.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.loader.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{

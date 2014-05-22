@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		A7F8BFC8192223D30007A716 /* j.max.gain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.max.gain.cpp; sourceTree = "<group>"; };
+		A7F8BFCA192223E60007A716 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A7F8BFCB192223E60007A716 /* j.gain%.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.gain%.yml"; sourceTree = "<group>"; };
 		D27A2E40161AFD2200A79F00 /* j.gain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.gain.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -14,9 +17,20 @@
 		08FB7794FE84155DC02AAC07 /* j.gain */ = {
 			isa = PBXGroup;
 			children = (
-				D27A2E40161AFD2200A79F00 /* j.gain.cpp */,
+				A7F8BFCA192223E60007A716 /* Makefile */,
+				A7F8BFCB192223E60007A716 /* j.gain%.yml */,
+				A7F8BFC9192223D70007A716 /* Sources */,
 			);
 			name = j.gain;
+			sourceTree = "<group>";
+		};
+		A7F8BFC9192223D70007A716 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D27A2E40161AFD2200A79F00 /* j.gain.cpp */,
+				A7F8BFC8192223D30007A716 /* j.max.gain.cpp */,
+			);
+			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
