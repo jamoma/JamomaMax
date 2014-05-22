@@ -34,7 +34,7 @@ typedef MidiIn* MidiInPtr;
 MidiInPtr	MidiInNew				(t_symbol* msg, long argc, t_atom* argv);
 void		MidiInFree				(MidiInPtr self);
 void		PackStartTracking		(MidiInPtr self);
-t_max_err		PackNotify				(MidiInPtr self, t_symbol* s, t_symbol* msg, t_object* sender, TTPtr data);
+t_max_err	PackNotify				(MidiInPtr self, t_symbol* s, t_symbol* msg, t_object* sender, TTPtr data);
 void		PackQFn					(MidiInPtr self);
 void		MidiInAssist			(MidiInPtr self, void* b, long msg, long arg, char* dst);
 void		MidiInGetDeviceNames	(MidiInPtr self);
@@ -91,8 +91,8 @@ MidiInPtr MidiInNew(t_symbol* msg, long argc, t_atom* argv)
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 
 		v.resize(2);
-		v.set(0, TT("midi.in"));
-		v.set(1, TTUInt32(1));
+		v[0] = "midi.in";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 		self->graphObject->mKernel.set(TT("owner"), TTPtr(self->graphObject));
 
@@ -305,11 +305,11 @@ void MidiInGetDeviceNames(MidiInPtr self)
 	
 	err = self->graphObject->mKernel.send(TT("getAvailableDeviceNames"), none, v);
 	if (!err) {
-		ac = v.getSize();
+		ac = v.size();
 		ap = new t_atom[ac];
 		
 		for (long i=0; i<ac; i++) {
-			v.get(i, name);
+			name = v[i];
 			atom_setsym(ap+i, gensym((char*)name.c_str()));
 		}
 		object_obex_dumpout(self, gensym("getAvailableDeviceNames"), ac, ap);
@@ -334,7 +334,7 @@ t_max_err MidiInGetDevice(MidiInPtr self, void* attr, long* argc, t_atom** argv)
 	TTSymbol	s;
 	
 	self->graphObject->mKernel.get(TT("device"), v);
-	v.get(0, s);
+	s = v[0];
 	if (!s)
 		return MAX_ERR_GENERIC;
 	
