@@ -20,7 +20,7 @@
 
 // Data Structure for this object
 struct Unpack {
-   	Object				    obj;
+   	t_object				    obj;
 	TTGraphObjectBasePtr	graphObject;
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
 	TTObjectBasePtr			callback;		// TTCallback object that attaches to the graphObject to be notified when there is new data to output.
@@ -80,8 +80,8 @@ UnpackPtr UnpackNew(SymbolPtr msg, long argc, t_atom* argv)
 		self->graphOutlets[0] = outlet_new(self, NULL);
 		
 		v.resize(2);
-		v.set(0, TT("graph.output"));
-		v.set(1, TTUInt32(1));
+		v[0] = "graph.output";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 		
 		if (!self->graphObject->mKernel) {
@@ -139,7 +139,7 @@ void UnpackGraphCallback(UnpackPtr self, TTValue& arg)
 	
 	arg.get(0, (TTPtr*)(&aDictionary));
 	aDictionary->getValue(v);
-	ac = v.getSize();
+	ac = v.size();
 	if (ac) {
 		ap = new t_atom[ac];
 		for (int i=0; i<ac; i++) {
@@ -165,7 +165,7 @@ void UnpackGraphCallback(UnpackPtr self, TTValue& arg)
 			{
 				TTSymbol s;
 				
-				v.get(i, s);
+				s = v[i];
 				atom_setsym(ap+i, gensym((char*)s.c_str()));
 				if (i==0) {
 					firstItemASymbol = YES;
