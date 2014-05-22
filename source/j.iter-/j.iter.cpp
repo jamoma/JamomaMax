@@ -80,11 +80,11 @@ IterPtr IterNew(t_symbol* msg, long argc, t_atom* argv)
 		self->graphOutlets[0] = outlet_new(self, NULL);
 		
 		v.resize(2);
-		v.set(0, TT("graph.output"));
-		v.set(1, TTUInt32(1));
+		v[0] = "graph.output";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 		
-		if (!self->graphObject->mKernel) {
+		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
@@ -146,7 +146,7 @@ void IterGraphCallback(IterPtr self, TTValue& arg)
 		long	ac = 0;
 		t_atom*		ap = NULL;
 		
-		keys.get(k, key);
+		key = keys[k];
 		aDictionary->lookup(key, v);
 		
 		ac = v.getSize();
@@ -164,7 +164,7 @@ void IterGraphCallback(IterPtr self, TTValue& arg)
 				{
 					TTInt32 ival;
 					
-					v.get(i, ival);
+					ival = v[i];
 					atom_setlong(ap+i, ival);
 				}
 				else if (v.getType() == kTypeFloat32 || v.getType() == kTypeFloat64)
