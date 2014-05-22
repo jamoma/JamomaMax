@@ -98,7 +98,7 @@ InfoPtr InfoNew(t_symbol* msg, long argc, t_atom* argv)
 		v[0] = "thru";
 		v[1] = 1;		// we set it up with 1 inlet, and later modify to 2 inlets if the connection is made
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);		
-		if (!self->audioGraphObject->getUnitGenerator()) {
+		if (!self->audioGraphObject->getUnitGenerator().valid()) {
 			object_error(SELF, "cannot load Jamoma DSP object");
 			return NULL;
 		}
