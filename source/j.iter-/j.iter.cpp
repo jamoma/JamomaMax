@@ -140,7 +140,7 @@ void IterGraphCallback(IterPtr self, TTValue& arg)
 	//aDictionary->getValue(v);
 	
 	aDictionary->getKeys(keys);
-	numKeys = keys.getSize();
+	numKeys = keys.size();
 	
 	for (TTUInt32 k=0; k<numKeys; k++) {
 		TTSymbol	key;
@@ -160,19 +160,19 @@ void IterGraphCallback(IterPtr self, TTValue& arg)
 					v[i].type() == kTypeUInt16 ||
 					v[i].type() == kTypeInt32  ||
 					v[i].type() == kTypeUInt32 ||
-					v.getType() == kTypeInt64  ||
-					v.getType() == kTypeUInt64)
+					v[i].type() == kTypeInt64  ||
+					v[i].type() == kTypeUInt64)
 				{
 					TTInt32 ival;
 					
 					ival = v[i];
 					atom_setlong(ap+i, ival);
 				}
-				else if (v.getType() == kTypeFloat32 || v.getType() == kTypeFloat64)
+				else if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64)
 				{
-					atom_setfloat(ap+i, v.getFloat64(i));
+					atom_setfloat(ap+i, v[i]);
 				}
-				else if (v.getType() == kTypeSymbol)
+				else if (v[i].type() == kTypeSymbol)
 				{
 					TTSymbol s;
 					
