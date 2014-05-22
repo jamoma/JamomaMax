@@ -310,7 +310,7 @@ void MaxAudioGraphWrappedClass_anything(WrappedInstancePtr self, t_symbol* s, lo
 				}
 				else if (v_out[0].type() == kTypeFloat32 || v_out[0].type() == kTypeFloat64) {
 					TTFloat64 f = 0.0;
-					v_out.get(i, f);
+					f = v_out[i];
 					atom_setfloat(av+i, f);
 				}
 				else {
@@ -389,7 +389,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 
 	o->getMessageNames(v);
 	for (TTUInt16 i=0; i<v.size(); i++) {
-		v.get(i, name);
+		name = v[i];
 		nameSize = strlen(name.c_str());
 		nameCString = new char[nameSize+1];
 		strncpy_zero(nameCString, name.c_str(), nameSize+1);
@@ -407,7 +407,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 		t_symbol*		maxType = _sym_long;
 		TTValue			isGenerator = NO;
 		
-		v.get(i, name);
+		name = v[i];
 		nameSize = strlen(name.c_str());
 		nameCString = new char[nameSize+1];
 		strncpy_zero(nameCString, name.c_str(), nameSize+1);

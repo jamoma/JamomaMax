@@ -76,9 +76,9 @@ t_object* wrappedClass_new(t_symbol* name, long argc, t_atom* argv)
 
 		self->wrappedClassDefinition = wrappedMaxClass;
 		v.resize(3);
-		v.set(0, wrappedMaxClass->ttClassName);
-		v.set(1, numInputs);
-		v.set(2, numOutputs);
+		v[0] = wrappedMaxClass->ttClassName;
+		v[1] = numInputs;
+		v[2] = numOutputs;
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->graphObject, v);
 				
 		attr_args_process(self, argc, argv);
@@ -213,11 +213,11 @@ t_max_err wrappedClass_attrSet(WrappedInstancePtr self, t_object* attr, long arg
 		v.resize(argc);
 		for (i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v.set(i, atom_getlong(argv+i));
+				v[i] = atom_getlong(argv+i);
 			else if (atom_gettype(argv+i) == A_FLOAT)
-				v.set(i, atom_getfloat(argv+i));
+				v[i] = atom_getfloat(argv+i);
 			else if (atom_gettype(argv+i) == A_SYM)
-				v.set(i, TT(atom_getsym(argv+i)->s_name));
+				v[i] = TT(atom_getsym(argv+i)->s_name);
 			else
 				object_error(SELF, "bad type for attribute setter");
 		}
@@ -347,7 +347,7 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 
 	o->getMessageNames(v);
 	for (TTUInt16 i=0; i<v.size(); i++) {
-		v.get(i, name);
+		name = v[i];
 		nameSize = strlen(name.c_str());
 		nameCString = new char[nameSize+1];
 		strncpy_zero(nameCString, name.c_str(), nameSize+1);
@@ -365,7 +365,7 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 		TTAttributePtr	attr = NULL;
 		t_symbol*		maxType = _sym_long;
 		
-		v.get(i, name);
+		name = v[i];
 		nameSize = strlen(name.c_str());
 		nameCString = new char[nameSize+1];
 		strncpy_zero(nameCString, name.c_str(), nameSize+1);
