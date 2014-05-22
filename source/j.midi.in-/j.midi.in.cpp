@@ -34,7 +34,7 @@ typedef MidiIn* MidiInPtr;
 MidiInPtr	MidiInNew				(t_symbol* msg, long argc, t_atom* argv);
 void		MidiInFree				(MidiInPtr self);
 void		PackStartTracking		(MidiInPtr self);
-t_max_err		PackNotify				(MidiInPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data);
+t_max_err		PackNotify				(MidiInPtr self, t_symbol* s, t_symbol* msg, t_object* sender, TTPtr data);
 void		PackQFn					(MidiInPtr self);
 void		MidiInAssist			(MidiInPtr self, void* b, long msg, long arg, char* dst);
 void		MidiInGetDeviceNames	(MidiInPtr self);
@@ -96,7 +96,7 @@ MidiInPtr MidiInNew(t_symbol* msg, long argc, t_atom* argv)
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 		self->graphObject->mKernel.set(TT("owner"), TTPtr(self->graphObject));
 
-		if (!self->graphObject->mKernel) {
+		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
@@ -127,7 +127,7 @@ void MidiInFree(MidiInPtr self)
 
 // TODO: This section has lots of ugly duplication from the pack# object because this object is the source for a graph
 
-t_max_err PackNotify(MidiInPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data)
+t_max_err PackNotify(MidiInPtr self, t_symbol* s, t_symbol* msg, t_object* sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
@@ -181,7 +181,7 @@ t_max_err PackNotify(MidiInPtr self, t_symbol* s, t_symbol* msg, (t_object*) sen
 }
 
 
-void PackIterateResetCallback(MidiInPtr self, (t_object*) obj)
+void PackIterateResetCallback(MidiInPtr self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method graphResetMethod = zgetfn(obj, gensym("graph.reset"));
@@ -191,7 +191,7 @@ void PackIterateResetCallback(MidiInPtr self, (t_object*) obj)
 }
 
 
-void PackIterateSetupCallback(MidiInPtr self, (t_object*) obj)
+void PackIterateSetupCallback(MidiInPtr self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method graphSetupMethod = zgetfn(obj, gensym("graph.setup"));
@@ -201,7 +201,7 @@ void PackIterateSetupCallback(MidiInPtr self, (t_object*) obj)
 }
 
 
-void PackAttachToPatchlinesForPatcher(MidiInPtr self, (t_object*) patcher)
+void PackAttachToPatchlinesForPatcher(MidiInPtr self, t_object* patcher)
 {
 	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
 	t_object*	box = jpatcher_get_firstobject(patcher);

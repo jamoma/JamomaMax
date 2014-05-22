@@ -20,10 +20,10 @@
 
 // Data Structure for this object
 struct Iter {
-   	Object				obj;
+   	t_object				obj;
 	TTGraphObjectBasePtr	graphObject;
 	TTPtr				graphOutlets[16];	// this _must_ be third (for the setup call)
-	TTObjectBasePtr			callback;			// TTCallback object that attaches to the graphObject to be notified when there is new data to output.
+	TTObject*			callback;			// TTCallback object that attaches to the graphObject to be notified when there is new data to output.
 };
 typedef Iter* IterPtr;
 
@@ -89,13 +89,14 @@ IterPtr IterNew(t_symbol* msg, long argc, t_atom* argv)
 			return NULL;
 		}
 		
-		err = TTObjectBaseInstantiate(TT("callback"), (TTObjectBasePtr*)&self->callback, none);
-		self->callback->setAttributeValue(TT("function"), TTPtr(&IterGraphCallback));
-		self->callback->setAttributeValue(TT("baton"), TTPtr(self));	
+		self->callback = new TTObject("callback");
+		
+		self->callback->set(TT("function"), TTPtr(&IterGraphCallback));
+		self->callback->set(TT("baton"), TTPtr(self));
 		// dynamically add a message to the callback object so that it can handle the 'dictionaryReceived' notification
-		self->callback->registerMessage(TT("dictionaryReceived"), (TTMethod)&TTCallback::notify, kTTMessagePassValue);
+		self->callback->instance()->registerMessage(TT("dictionaryReceived"), (TTMethod)&TTCallback::notify, kTTMessagePassValue);
 		// tell the graph object that we want to watch it
-		self->graphObject->mKernel->registerObserverForNotifications(*self->callback);
+		self->graphObject->mKernel.registerObserverForNotifications(*self->callback);
 		
 		attr_args_process(self, argc, argv);
 	}
@@ -106,7 +107,7 @@ IterPtr IterNew(t_symbol* msg, long argc, t_atom* argv)
 // Memory Deallocation
 void IterFree(IterPtr self)
 {
-	TTObjectBaseRelease((TTObjectBasePtr*)&self->graphObject);
+	delete self->callback;
 }
 
 
@@ -135,8 +136,8 @@ void IterGraphCallback(IterPtr self, TTValue& arg)
 	TTValue			keys;
 	TTUInt32		numKeys;
 	
-	arg.get(0, (TTPtr*)(&aDictionary));
-	//aDictionary->getValue(v);	
+	aDictionary = (TTDictionaryPtr)(TTPtr)arg[0];
+	//aDictionary->getValue(v);
 	
 	aDictionary->getKeys(keys);
 	numKeys = keys.getSize();
@@ -149,16 +150,16 @@ void IterGraphCallback(IterPtr self, TTValue& arg)
 		key = keys[k];
 		aDictionary->lookup(key, v);
 		
-		ac = v.getSize();
+		ac = v.size();
 		if (ac) {
 			ap = new t_atom[ac];
 			for (int i=0; i<ac; i++) {
-				if (v.getType() == kTypeInt8   ||
-					v.getType() == kTypeUInt8  ||
-					v.getType() == kTypeInt16  ||
-					v.getType() == kTypeUInt16 ||
-					v.getType() == kTypeInt32  ||
-					v.getType() == kTypeUInt32 ||
+				if (v[i].type() == kTypeInt8   ||
+					v[i].type() == kTypeUInt8  ||
+					v[i].type() == kTypeInt16  ||
+					v[i].type() == kTypeUInt16 ||
+					v[i].type() == kTypeInt32  ||
+					v[i].type() == kTypeUInt32 ||
 					v.getType() == kTypeInt64  ||
 					v.getType() == kTypeUInt64)
 				{

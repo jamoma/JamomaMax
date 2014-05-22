@@ -155,7 +155,7 @@ void InfoQfn(InfoPtr self)
 
 TTErr InfoConnect(InfoPtr self, TTAudioGraphObjectBasePtr newAudioSourceObject, long sourceOutletNumber)
 {
-	TTErr err = MaxAudioGraphConnect(ObjectPtr(self), newAudioSourceObject, sourceOutletNumber);
+	TTErr err = MaxAudioGraphConnect((t_object*)self, newAudioSourceObject, sourceOutletNumber);
 	
 	self->audioSourceOutlet = sourceOutletNumber;
 	InfoBang(self);
