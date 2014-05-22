@@ -22,8 +22,8 @@ typedef struct Oscil {
     t_object				obj;
 	TTAudioGraphObjectBasePtr	audioGraphObject;
 	TTPtr					audioGraphOutlet;
-	SymbolPtr				attrWaveform;
-	SymbolPtr				attrInterpolation;
+	t_symbol				*attrWaveform;
+	t_symbol				*attrInterpolation;
 	float					attrFrequency;
 	float					attrGain;
 	long					attrNumChannels;
@@ -32,13 +32,13 @@ typedef Oscil* OscilPtr;
 
 
 // Prototypes for methods
-OscilPtr	OscilNew(SymbolPtr msg, long argc, t_atom* argv);
+OscilPtr	OscilNew(t_symbol *msg, long argc, t_atom* argv);
 void		OscilFree(OscilPtr self);
 void		OscilAssist(OscilPtr self, void* b, long msg, long arg, char* dst);
 TTErr		OscilReset(OscilPtr self);
 TTErr		OscilSetup(OscilPtr self);
 TTErr		OscilConnectAudio(OscilPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
-TTErr		OscilDropAudio(OscilPtr self, long inletNumber, (t_object*) sourceMaxObject, long sourceOutletNumber);
+TTErr		OscilDropAudio(OscilPtr self, long inletNumber, t_object* sourceMaxObject, long sourceOutletNumber);
 t_max_err		OscilSetMode(OscilPtr self, void* attr, long argc, t_atom* argv);
 t_max_err		OscilSetInterpolation(OscilPtr self, void* attr, long argc, t_atom* argv);
 t_max_err		OscilSetFrequency(OscilPtr self, void* attr, long argc, t_atom* argv);
@@ -55,7 +55,7 @@ static t_class* sOscilClass;
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class *c;
 
 	TTAudioGraphInit();	
 	common_symbols_init();
@@ -101,7 +101,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-OscilPtr OscilNew(SymbolPtr msg, long argc, t_atom* argv)
+OscilPtr OscilNew(t_symbol *msg, long argc, t_atom* argv)
 {
     OscilPtr	self = OscilPtr(object_alloc(sOscilClass));
 	TTValue		v;
@@ -109,8 +109,8 @@ OscilPtr OscilNew(SymbolPtr msg, long argc, t_atom* argv)
 
     if (self) {
 		v.resize(2);
-		v.set(0, TT("wavetable"));
-		v.set(1, TTUInt32(0));
+		v[0] = "wavetable";
+		v[1] = 0;
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 
 		self->audioGraphObject->addAudioFlag(kTTAudioGraphGenerator);
@@ -171,14 +171,14 @@ TTErr OscilConnectAudio(OscilPtr self, TTAudioGraphObjectBasePtr audioSourceObje
 }
 
 
-TTErr OscilDropAudio(OscilPtr self, long inletNumber, (t_object*) sourceMaxObject, long sourceOutletNumber)
+TTErr OscilDropAudio(OscilPtr self, long inletNumber, t_object* sourceMaxObject, long sourceOutletNumber)
 {
 	TTAudioGraphObjectBasePtr	sourceObject = NULL;
 	TTErr 					err;
 	
 	self->audioGraphObject->setAttributeValue(TT("numAudioInlets"), 0);
 	self->audioGraphObject->addAudioFlag(kTTAudioGraphGenerator);
-	err = (TTErr)(TTPtrSizedInt)(object_method(sourceMaxObject, GENSYM("audio.object"), &sourceObject));
+	err = (TTErr)(TTPtrSizedInt)(object_method(sourceMaxObject, gensym("audio.object"), &sourceObject));
 	if (self->audioGraphObject && sourceObject && !err)
 		err = self->audioGraphObject->dropAudio(sourceObject, sourceOutletNumber, inletNumber);	
 	return err;
