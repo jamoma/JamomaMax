@@ -95,8 +95,8 @@ InfoPtr InfoNew(t_symbol* msg, long argc, t_atom* argv)
 		self->qelem = qelem_new(self, (method)InfoQfn);
 		
 		v.resize(2);
-		v.set(0, TT("thru"));
-		v.set(1, TTUInt32(1));	// we set it up with 1 inlet, and later modify to 2 inlets if the connection is made
+		v[0] = "thru";
+		v[1] = 1;		// we set it up with 1 inlet, and later modify to 2 inlets if the connection is made
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);		
 		if (!self->audioGraphObject->getUnitGenerator()) {
 			object_error(SELF, "cannot load Jamoma DSP object");
