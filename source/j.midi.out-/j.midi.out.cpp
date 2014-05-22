@@ -19,7 +19,7 @@
 
 // Data Structure for this object
 struct MidiOut {
-   	Object				    obj;
+   	t_object				    obj;
 	TTGraphObjectBasePtr	graphObject;
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
 	t_symbol*			    attrKey;
@@ -86,11 +86,11 @@ MidiOutPtr MidiOutNew(t_symbol* msg, long argc, t_atom* argv)
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		
 		v.resize(2);
-		v.set(0, TT("midi.out"));
-		v.set(1, TTUInt32(1));
+		v[0] = "midi.out";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 
-		if (!self->graphObject->mKernel) {
+		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
@@ -135,11 +135,11 @@ void MidiOutGetDeviceNames(MidiOutPtr self)
 	
 	err = self->graphObject->mKernel.send(TT("getAvailableDeviceNames"), none, v);
 	if (!err) {
-		ac = v.getSize();
+		ac = v.size();
 		ap = new t_atom[ac];
 		
 		for (long i=0; i<ac; i++) {
-			v.get(i, name);
+			name = v[i];
 			atom_setsym(ap+i, gensym((char*)name.c_str()));
 		}
 		object_obex_dumpout(self, gensym("getAvailableDeviceNames"), ac, ap);
@@ -164,7 +164,7 @@ t_max_err MidiOutGetDevice(MidiOutPtr self, void* attr, long* argc, t_atom** arg
 	TTSymbol	s;
 	
 	self->graphObject->mKernel.get(TT("device"), v);
-	v.get(0, s);
+	s = v[0];
 	if (!s)
 		return MAX_ERR_GENERIC;
 	
