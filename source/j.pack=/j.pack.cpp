@@ -67,9 +67,9 @@ PackPtr PackNew(t_symbol* msg, long argc, t_atom* argv)
 		
 		// Create an embedded Jamoma AudioGraph object functioning as a signal generator.
 		v.resize(3);
-		v.set(0, TT("audio.generator"));
-		v.set(1, 0); // no audio graph inlets (only msp inlets)
-		v.set(2, 1); // one audio graph outlet
+		v[0] = "audio.generator";
+		v[1] = 0; // no audio graph inlets (only msp inlets)
+		v[2] = 1; // one audio graph outlet
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 		self->audioGraphObject->addAudioFlag(kTTAudioGraphGenerator);
 		// Self check and return error if this did not work out.
