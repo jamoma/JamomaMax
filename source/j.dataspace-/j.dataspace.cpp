@@ -96,8 +96,8 @@ DataspacePtr DataspaceNew(t_symbol* msg, long argc, t_atom* argv)
 		self->attrDataspace = _sym_none;
 		
 		v.resize(2);
-		v.set(0, TT("dataspace"));
-		v.set(1, TTUInt32(1));
+		v[0] = "dataspace";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);		
 
 		if (!self->graphObject->mKernel.valid()) {
@@ -164,7 +164,7 @@ t_max_err DataspaceGetInput(DataspacePtr self, void* attr, long* argc, t_atom** 
 	
 	if (*argc && *argv) {
 		self->graphObject->mKernel.get(TT("inputUnit"), v);
-		v.get(0, s);
+		s = v[0];
 		atom_setsym(*argv, gensym(s.c_str()));
 	}
 	return MAX_ERR_NONE;
@@ -188,7 +188,7 @@ t_max_err DataspaceGetOutput(DataspacePtr self, void* attr, long* argc, t_atom**
 	
 	if (*argc && *argv) {
 		self->graphObject->mKernel.get(TT("outputUnit"), v);
-		v.get(0, s);
+		s = v[0];
 		atom_setsym(*argv, gensym(s.c_str()));
 	}
 	return MAX_ERR_NONE;
