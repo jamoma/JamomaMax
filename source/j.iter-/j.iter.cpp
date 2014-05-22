@@ -175,7 +175,7 @@ void IterGraphCallback(IterPtr self, TTValue& arg)
 				{
 					TTSymbol s;
 					
-					v.get(i, s);
+					s = v[i];
 					atom_setsym(ap+i, gensym((char*)s.c_str()));
 				}
 			}
