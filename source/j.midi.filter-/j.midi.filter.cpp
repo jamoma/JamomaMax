@@ -83,8 +83,8 @@ MidiFilterPtr MidiFilterNew(t_symbol* msg, long argc, t_atom* argv)
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		
 		v.resize(2);
-		v.set(0, TT("midi.filter"));
-		v.set(1, TTUInt32(1));
+		v[0] = "midi.filter";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 
 		if (!self->graphObject->mKernel) {
