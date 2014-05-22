@@ -74,8 +74,8 @@ PlugOutPtr PlugOutNew(t_symbol* msg, long argc, t_atom* argv)
 
     if (self) {
 		v.resize(2);
-		v.set(0, TT("plugtastic.output"));
-		v.set(1, 2);
+		v[0] = "plugtastic.output";
+		v[1] = 2;
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 
 		v = TTPtr(self->audioGraphObject);
@@ -84,13 +84,13 @@ PlugOutPtr PlugOutNew(t_symbol* msg, long argc, t_atom* argv)
 		self->audioGraphOutlet = outlet_new(self, "audio.connect");
 		self->qelem = qelem_new(self, (method)PlugOutQFn);
 		
-		object_obex_lookup(self, GENSYM("#P"), &self->patcher);
+		object_obex_lookup(self, gensym("#P"), &self->patcher);
 		self->pluginName = object_attr_getsym(self->patcher, _sym_name);
-		self->pluginVersion = GENSYM("1.0");
-		self->pluginVersionHex = GENSYM("0x00010000");
-		self->pluginManufacturer = GENSYM("Plugtastic");
-		self->pluginManufacturerCode = GENSYM("74Ob");
-		self->pluginID = GENSYM("ftmp");
+		self->pluginVersion = gensym("1.0");
+		self->pluginVersionHex = gensym("0x00010000");
+		self->pluginManufacturer = gensym("Plugtastic");
+		self->pluginManufacturerCode = gensym("74Ob");
+		self->pluginID = gensym("ftmp");
 		
 		attr_args_process(self, argc, argv);
 	}
