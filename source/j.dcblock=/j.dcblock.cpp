@@ -90,8 +90,8 @@ DCBlockPtr DCBlockNew(t_symbol* msg, long argc, t_atom* argv)
 		// TODO: we need to update objects to work with the correct number of channels when the network is configured
 		// Either that, or when we pull we just up the number of channels if when we need to ???
 		v.resize(2);
-		v.set(0, TT("dcblock"));
-		v.set(1, 1.);
+		v[0] = "dcblock";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 
 		if (!self->audioGraphObject->getUnitGenerator().valid()) {
