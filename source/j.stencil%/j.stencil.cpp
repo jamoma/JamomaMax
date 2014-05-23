@@ -52,7 +52,7 @@ t_jit_err StencilClassInit(void)
 	t_jit_object	*attr;
 	t_jit_object	*mop;
 	
-	sStencilClass = (ClassPtr)jit_class_new((char*)"j_stencil", (method)StencilNew, (method)StencilFree, sizeof(StencilObject), 0);
+	sStencilClass = (t_class*)jit_class_new((char*)"j_stencil", (method)StencilNew, (method)StencilFree, sizeof(StencilObject), 0);
 
 	// add matrix operator (mop)
 	mop = (t_jit_object*)jit_object_new(_jit_sym_jit_mop, 1, 1); // args are  num inputs and num outputs
@@ -165,7 +165,7 @@ t_jit_err StencilGetStepSize(StencilObjectPtr self, Ptr attr, long* ac, t_atom**
 	for (long k=0; k < *ac; k++) {
 		TTInt32 step;
 		
-		v.get(k, step);
+		step = v[k];
 		atom_setlong((*av)+k, step);
 	}
 	return JIT_ERR_NONE;
@@ -178,7 +178,7 @@ t_jit_err StencilSetStepSize(StencilObjectPtr self, Ptr attr, long ac, t_atom* a
 	
 	v.resize(ac);
 	for (long k=0; k<ac; k++)
-		v.set(k, (int)atom_getlong(av+k));
+		v[k] = atom_getlong(av+k);
 	
 	self->stencilObject->setAttributeValue(TT("stepSize"), v);
 	return JIT_ERR_NONE;
@@ -199,7 +199,7 @@ t_jit_err StencilGetEdges(StencilObjectPtr self, Ptr attr, long* ac, t_atom** av
 	*ac = 1;
 	
 	self->stencilObject->getAttributeValue(TT("edges"), v);
-	v.get(0, s);
+	s = v[0];
 	atom_setsym(*av, gensym(s.c_str()));
 	return JIT_ERR_NONE;
 }
