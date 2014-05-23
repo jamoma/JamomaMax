@@ -18,8 +18,8 @@
 #include "TTDSP.h"
 
 // Prototypes for methods
-ObjectPtr	jamoma_new(SymbolPtr s, long argc, t_atom* argv);
-ObjectPtr	wrappedClass_new(SymbolPtr name, long argc, t_atom* argv);
+t_object*	jamoma_new(t_symbol *s, long argc, t_atom* argv);
+t_object*	wrappedClass_new(t_symbol *name, long argc, t_atom* argv);
 void		wrappedClass_free(WrappedInstancePtr x);
 
 // Globals
@@ -45,12 +45,12 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 // Then we wrap that class as a Max class.
 // Finally, we proceed to then instantiate the new Max class instead of the jamoma~ Max class.
 
-ObjectPtr jamoma_new(SymbolPtr s, long argc, t_atom* argv)
+t_object* jamoma_new(t_symbol *s, long argc, t_atom* argv)
 {
 	int				attrstart = attr_args_offset(argc, argv);
 	int				i = 0;
 	int				channelCount = 2;
-	SymbolPtr		className = gensym("gain");
+	t_symbol		*className = gensym("gain");
 	WrappedClassPtr	classWrapper = NULL;
 	char			maxClassName[256];
 

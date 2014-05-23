@@ -53,32 +53,27 @@ t_object* wrappedClass_new(t_symbol* name, long argc, t_atom* argv)
 			x->maxNumChannels = atom_getlong(argv);
 		
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
-
-		
-		
-		
-		
 		
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("numChannelsUseFixedRatioInputsToOutputs"), v)) {
 		   TTUInt16	inputs;
 		   TTUInt16	outputs;
 		   
-		   v.get(0, inputs);
-		   v.get(1, outputs);
+		   inputs = v[0];
+		   outputs = v[1];
 		   x->numInputs = x->maxNumChannels * inputs;
 		   x->numOutputs = x->maxNumChannels * outputs;
 		}
 		else if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("fixedNumChannels"), v)) {
 			TTUInt16 numChannels;
 			
-			v.get(0, numChannels);
+			numChannels = v[0];
 			x->numInputs = numChannels;
 			x->numOutputs = numChannels;
 		}
 		else if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("fixedNumOutputChannels"), v)) {
 			TTUInt16 numChannels;
 			
-			v.get(0, numChannels);
+			numChannels = v[0];
 			x->numInputs = x->maxNumChannels;
 			x->numOutputs = numChannels;
 		}
@@ -92,7 +87,7 @@ t_object* wrappedClass_new(t_symbol* name, long argc, t_atom* argv)
 			x->controlSignalNames = new TTSymbol[x->numControlSignals];
 			for (TTUInt16 i=0; i<x->numControlSignals; i++) {
 				x->numInputs++;
-				v.get(i, x->controlSignalNames[i]);
+				x->controlSignalNames[i] = v[i];
 			}
 		}
 		
@@ -111,8 +106,8 @@ t_object* wrappedClass_new(t_symbol* name, long argc, t_atom* argv)
             TTUInt16    outletIndex = 0;
             TTSymbol	notificationName;
             
- 			v.get(0, outletIndex);
- 			v.get(1, notificationName);
+ 			outletIndex = v[0];
+ 			notificationName = v[1];
             
             // TODO: to support more than one notification->outlet we need see how many args are actually passed-in
             // and then we need to track them in a hashtab or something...
@@ -184,17 +179,17 @@ t_max_err wrappedClass_attrGet(TTPtr self, t_object* attr, long* argc, t_atom** 
 	for (i=0; i<v.size(); i++) {
 		if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64) {
 			TTFloat64	value;
-			v.get(i, value);
+			value = v[i];
 			atom_setfloat(*argv+i, value);
 		}
 		else if (v[i].type() == kTypeSymbol) {
 			TTSymbol	value;
-			v.get(i, value);
+			value = v[i];
 			atom_setsym(*argv+i, gensym((char*)value.c_str()));
 		}
 		else {	// assume int
 			TTInt32		value;
-			v.get(i, value);
+			value = v[i];
 			atom_setlong(*argv+i, value);
 		}
 	}	
@@ -233,11 +228,11 @@ t_max_err wrappedClass_attrSet(TTPtr self, t_object* attr, long argc, t_atom* ar
 		v.resize(argc);
 		for (i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v.set(i, atom_getlong(argv+i));
+				v[i] = atom_getlong(argv+i);
 			else if (atom_gettype(argv+i) == A_FLOAT)
-				v.set(i, atom_getfloat(argv+i));
+				v[i] = atom_getfloat(argv+i);
 			else if (atom_gettype(argv+i) == A_SYM)
-				v.set(i, TT(atom_getsym(argv+i)->s_name));
+				v[i] = TT(atom_getsym(argv+i)->s_name);
 			else
 				object_error((t_object*)x, "bad type for attribute setter");
 		}
@@ -266,11 +261,11 @@ void wrappedClass_anything(TTPtr self, t_symbol* s, long argc, t_atom* argv)
 		v_in.resize(argc);
 		for (long i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v_in.set(i, atom_getlong(argv+i));
+				v_in[i] = atom_getlong(argv+i);
 			else if (atom_gettype(argv+i) == A_FLOAT)
-				v_in.set(i, atom_getfloat(argv+i));
+				v_in[i] = atom_getfloat(argv+i);
 			else if (atom_gettype(argv+i) == A_SYM)
-				v_in.set(i, TT(atom_getsym(argv+i)->s_name));
+				v_in[i] = TT(atom_getsym(argv+i)->s_name);
 			else
 				object_error((t_object*)x, "bad type for message arg");
 		}
@@ -287,17 +282,17 @@ void wrappedClass_anything(TTPtr self, t_symbol* s, long argc, t_atom* argv)
 			for (long i=0; i<ac; i++) {
 				if (v_out[0].type() == kTypeSymbol) {
 					TTSymbol ttSym;
-					v_out.get(i, ttSym);
+					ttSym = v_out[i];
 					atom_setsym(av+i, gensym((char*)ttSym.c_str()));
 				}
 				else if (v_out[0].type() == kTypeFloat32 || v_out[0].type() == kTypeFloat64) {
 					TTFloat64 f = 0.0;
-					v_out.get(i, f);
+					f = v_out[i];
 					atom_setfloat(av+i, f);
 				}
 				else {
 					TTInt32 l = 0;
-					v_out.get(i, l);
+					l = v_out[i];
 					atom_setfloat(av+i, l);
 				}
 			}
@@ -420,7 +415,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 
 	o.messages(v);
 	for (TTUInt16 i=0; i<v.size(); i++) {
-		v.get(i, name);
+		name = v[i];
 		//nameSize = name->getString().length();	// to -- this crash on Windows...
 		nameSize = strlen(name.c_str());
 		nameCString = new char[nameSize+1];
@@ -439,7 +434,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 		TTAttributePtr	attr = NULL;
 		t_symbol*		maxType = _sym_long;
 		
-		v.get(i, name);
+		name = v[i];
 		//nameSize = name->getString().length();	// to -- this crash on Windows...
 		nameSize = strlen(name.c_str());
 		nameCString = new char[nameSize+1];
@@ -617,11 +612,11 @@ long TTMatrixReferenceJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix, TTBool
 	for (int d=0; d < jitterDimensionCount; d++) {
 		// The first 2 dimensions (rows and columns) are reversed in Jitter as compared to Jamoma
 		if (d == 1)
-			dimensions.set(0, (int)jitterMatrixInfo.dim[d]);
+			dimensions[0] = (int)jitterMatrixInfo.dim[d];
 		else if (d==0 && jitterDimensionCount>1)
-			dimensions.set(1, (int)jitterMatrixInfo.dim[d]);			
+			dimensions[1] = (int)jitterMatrixInfo.dim[d];
 		else
-			dimensions.set(d, (int)jitterMatrixInfo.dim[d]);
+			dimensions[d] = (int)jitterMatrixInfo.dim[d];
 	}
 	
 	aMatrix.set(kTTSym_dimensions, dimensions);
