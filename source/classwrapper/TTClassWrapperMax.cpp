@@ -196,17 +196,6 @@ t_max_err wrappedClass_attrGet(TTPtr self, t_object* attr, long* argc, t_atom** 
 	return MAX_ERR_NONE;
 }
 
-#ifdef __LP64__
-TTInt64	atom_getlong(t_atom* a)
-{
-	return (TTInt64)atom_getlong(a);
-}
-#else
-int atom_getlong(t_atom* a)
-{
-	return (int)atom_getlong(a);
-}
-#endif
 
 t_max_err wrappedClass_attrSet(TTPtr self, t_object* attr, long argc, t_atom* argv)
 {
