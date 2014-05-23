@@ -96,7 +96,7 @@ t_int*	PackPerform(t_int* w);
  @param maxvectorsize
  @param flags
  */
-void	PackDsp64(PackPtr self, (t_object*) dsp64, short *count, double samplerate, long maxvectorsize, long flags);
+void	PackDsp64(PackPtr self, t_object* dsp64, short *count, double samplerate, long maxvectorsize, long flags);
 //t_max_err	PackSetGain(PackPtr self, void* attr, long argc, t_atom* argv);
 
 
