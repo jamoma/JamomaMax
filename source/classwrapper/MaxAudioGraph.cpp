@@ -235,7 +235,7 @@ t_max_err MaxAudioGraphWrappedClass_attrSet(WrappedInstancePtr self, t_object* a
 		v.resize(argc);
 		for (i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v[i] = atom_getlong(argv+i);
+				v[i] = (TTInt32)atom_getlong(argv+i);
 			else if (atom_gettype(argv+i) == A_FLOAT)
 				v[i] = atom_getfloat(argv+i);
 			else if (atom_gettype(argv+i) == A_SYM)
@@ -284,7 +284,7 @@ void MaxAudioGraphWrappedClass_anything(WrappedInstancePtr self, t_symbol* s, lo
 		// Typechecking - we only want ints, floats and symbols
 		for (long i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v_in[i] = atom_getlong(argv+i);
+				v_in[i] = (TTInt32)atom_getlong(argv+i);
 			else if (atom_gettype(argv+i) == A_FLOAT)
 				v_in[i] = atom_getfloat(argv+i);
 			else if (atom_gettype(argv+i) == A_SYM)
