@@ -208,7 +208,7 @@ void init_return_value(t_init *x, t_symbol *msg, long argc, t_atom *argv)
 void init_bang(t_init *x)
 {
 	if (x->contextNode)
-		if (x->contextNode->getObject())
-			x->contextNode->getObject()->sendMessage(TTSymbol("Init"));
+		if (x->contextNode->getObject().valid())
+			x->contextNode->getObject().send("Init");
 }
  */
