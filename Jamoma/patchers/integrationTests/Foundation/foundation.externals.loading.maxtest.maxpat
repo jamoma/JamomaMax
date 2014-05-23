@@ -31,6 +31,35 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-15",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 531.0, 220.0, 150.0, 20.0 ],
+					"presentation_rect" : [ 528.0, 244.0, 0.0, 0.0 ],
+					"text" : "j.stencil% is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-13",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 531.0, 141.25, 150.0, 20.0 ],
+					"text" : "j.gain% is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -85,26 +114,12 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 531.0, 215.0, 98.0, 20.0 ],
-					"text" : "j.stencil%"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 531.0, 190.0, 98.0, 20.0 ],
+					"patching_rect" : [ 531.0, 193.75, 98.0, 20.0 ],
 					"text" : "j.net.send"
 				}
 
@@ -118,22 +133,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 531.0, 165.0, 98.0, 20.0 ],
+					"patching_rect" : [ 531.0, 167.5, 98.0, 20.0 ],
 					"text" : "j.net.receive"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 531.0, 140.0, 98.0, 20.0 ],
-					"text" : "j.gain%"
 				}
 
 			}
@@ -423,19 +424,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.gain%.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.net.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.net.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.stencil%.mxo",
 				"type" : "iLaX"
 			}
 , 			{
