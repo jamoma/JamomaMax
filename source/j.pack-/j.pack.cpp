@@ -104,7 +104,7 @@ PackPtr PackNew(t_symbol* msg, long argc, t_atom* argv)
 		v[0] = "graph.input";
 		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
-		((TTGraphInput*)self->graphObject->mKernel)->setOwner(self->graphObject);
+		((TTGraphInput*)self->graphObject->mKernel.instance())->setOwner(self->graphObject);
 
 		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
@@ -310,7 +310,7 @@ void PackInt(PackPtr self, long value)
 
 	self->graphDictionary->setSchema(TT("number"));
 	self->graphDictionary->setValue(v);
-	((TTGraphInput*)self->graphObject->mKernel)->push(*self->graphDictionary);
+	((TTGraphInput*)self->graphObject->mKernel.instance())->push(*self->graphDictionary);
 }
 
 
@@ -320,7 +320,7 @@ void PackFloat(PackPtr self, double value)
 	
 	self->graphDictionary->setSchema(TT("number"));
 	self->graphDictionary->setValue(v);
-	((TTGraphInput*)self->graphObject->mKernel)->push(*self->graphDictionary);
+	((TTGraphInput*)self->graphObject->mKernel.instance())->push(*self->graphDictionary);
 }
 
 
@@ -346,7 +346,7 @@ void PackList(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 	}
 	self->graphDictionary->setSchema(TT("array"));
 	self->graphDictionary->setValue(v);
-	((TTGraphInput*)self->graphObject->mKernel)->push(*self->graphDictionary);
+	((TTGraphInput*)self->graphObject->mKernel.instance())->push(*self->graphDictionary);
 }
 
 
@@ -380,7 +380,7 @@ void PackAnything(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 	}
 	
 	self->graphDictionary->setValue(v);
-	((TTGraphInput*)self->graphObject->mKernel)->push(*self->graphDictionary);
+	((TTGraphInput*)self->graphObject->mKernel.instance())->push(*self->graphDictionary);
 }
 
 
@@ -421,7 +421,7 @@ void PackMessage(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 	}
 	
 	self->graphDictionary->setValue(v);
-	((TTGraphInput*)self->graphObject->mKernel)->push(*self->graphDictionary);
+	((TTGraphInput*)self->graphObject->mKernel.instance())->push(*self->graphDictionary);
 }
 
 
@@ -462,6 +462,6 @@ void PackAttribute(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 	}
 	
 	self->graphDictionary->setValue(v);
-	((TTGraphInput*)self->graphObject->mKernel)->push(*self->graphDictionary);
+	((TTGraphInput*)self->graphObject->mKernel.instance())->push(*self->graphDictionary);
 }
 
