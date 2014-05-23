@@ -51,7 +51,7 @@ long		nmspc_myobject_iterator(TTPtr self, (t_object*) b);
 //t_symbol *nmspc_filter_underscore_instance(t_symbol *a);
 
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	ModularSpec *spec = new ModularSpec;
 	spec->_wrap = &WrapTTExplorerClass;

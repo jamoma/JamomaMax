@@ -56,7 +56,7 @@ t_class *ramp_class;				// Required. Global pointing to this class
 /************************************************************************************/
 // Main() Function
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	long attrflags = 0;
 	t_class *c;

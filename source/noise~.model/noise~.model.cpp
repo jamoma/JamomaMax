@@ -45,7 +45,7 @@ static t_class*	s_noisemod_class;
 /************************************************************************************/
 // Define our class
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	t_class *c = class_new("noise~.model", (method)noisemod_new, (method)noisemod_free, sizeof(t_noisemod), (method)0L, A_GIMME, 0);
 	

@@ -39,7 +39,7 @@ static t_class* sMidiFormatClass;
 /************************************************************************************/
 // Main() Function
 
-int TTGRAPH_EXTERNAL_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	t_class* c;
 	

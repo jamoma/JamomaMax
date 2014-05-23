@@ -100,7 +100,7 @@ t_class *filter_class;				// Required. Global pointing to this class
 /************************************************************************************/
 // Main() Function
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	t_class *c;
 	

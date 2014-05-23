@@ -20,12 +20,6 @@
 
 #include "TTGraphAPI.h"				// Definitions for Jamoma Graph
 
-#ifdef TT_PLATFORM_WIN
-#define TTGRAPH_EXTERNAL_EXPORT __declspec(dllexport)
-#else
-#define TTGRAPH_EXTERNAL_EXPORT
-#endif
-
 // TYPE DEFINITIONS
 
 #ifndef SELF

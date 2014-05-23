@@ -60,7 +60,7 @@ static t_class*	s_allpassmod_class;
 /************************************************************************************/
 // Define our class
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	t_class *c = class_new("allpass1~.model", (method)allpassmod_new, (method)allpassmod_free, sizeof(t_allpassmod), (method)0L, A_GIMME, 0);
 	

@@ -63,7 +63,7 @@ static t_class	*s_fade_class;
 /************************************************************************************/
 // Main() Function
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)				// main recieves a copy of the Max function macros table
+int C74_EXPORT main(void)				// main recieves a copy of the Max function macros table
 {
 	t_class *c;
 	

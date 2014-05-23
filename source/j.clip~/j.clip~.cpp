@@ -16,7 +16,7 @@
 
 #include "TTClassWrapperMax.h"
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	TTDSPInit();
 	return wrapTTClassAsMaxClass(TT("clipper"), "j.clip~", NULL);

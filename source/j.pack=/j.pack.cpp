@@ -21,7 +21,7 @@
 /************************************************************************************/
 // Main() Function
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	t_class* c;
 	
@@ -142,7 +142,7 @@ TTErr PackSetup(PackPtr self)
 void PackPerform64(PackPtr self, t_object* dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {	
 	for (TTUInt32 i=0; i < self->numChannels; i++)
-		TTAudioGraphGeneratorPtr(self->audioGraphObject->getUnitGenerator().instance())->mBuffer->setVector64Copy(i, self->vectorSize, ins[i]);
+		TTAudioGraphGeneratorPtr(self->audioGraphObject->getUnitGenerator())->mBuffer->setVector64Copy(i, self->vectorSize, ins[i]);
 }
 
 

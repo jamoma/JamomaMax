@@ -42,7 +42,7 @@ void	modular_namespace_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv
 void	modular_namespace_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 void	modular_namespace_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	ModularSpec *spec = new ModularSpec;
 	spec->_wrap = &WrapTTApplicationClass;

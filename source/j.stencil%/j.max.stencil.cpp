@@ -40,7 +40,7 @@ static t_class* sMaxStencilClass = NULL;
 
 /************************************************************************************/
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	void *p, *q;
 	

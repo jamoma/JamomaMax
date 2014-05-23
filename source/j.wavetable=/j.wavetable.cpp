@@ -52,7 +52,7 @@ static t_class* s_oscil_class;
 /************************************************************************************/
 // Main() Function
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	t_class *c;
 

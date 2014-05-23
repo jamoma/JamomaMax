@@ -46,7 +46,7 @@ void map_reset(TTPtr self);
 
 void map_subscribe(TTPtr self);
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	ModularSpec *spec = new ModularSpec;
 	spec->_wrap = &WrapTTMapperClass;

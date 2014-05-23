@@ -27,15 +27,6 @@
 #include "TTAudioGraphAPI.h"		// Definitions for Jamoma AudioGraph
 #include "maxGraph.h"				// Max wrapper for Jamoma Graph. Located in Support/max
 
-
-
-#ifdef WIN_VERSION
-#define TTCLASSWRAPPERMAX_EXPORT __declspec(dllexport) 
-#else
-#define TTCLASSWRAPPERMAX_EXPORT __attribute__((visibility("default")))
-#endif
-
-
 // TYPE DEFINITIONS
 
 #ifndef SELF

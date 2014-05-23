@@ -86,7 +86,7 @@ void		ramp_functionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 /************************************************************************************/
 // Class Definition
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	ModularSpec *spec = new ModularSpec;
 	spec->_wrap = &WrapTTRampClass;

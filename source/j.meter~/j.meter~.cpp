@@ -102,7 +102,7 @@ static t_class*	s_meter_class;
 #pragma mark Class Definition
 #endif // 0
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	t_class *c = class_new("j.meter~", (method)meter_new, (method)meter_free, sizeof(t_meter), (method)NULL, A_GIMME, 0L);
 	

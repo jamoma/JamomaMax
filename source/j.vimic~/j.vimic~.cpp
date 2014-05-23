@@ -18,7 +18,7 @@ bool globWarningFlag;
 bool globReportFlag;
 
 /// Setup max class and bind messages to corresponding handlers.
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {   
 	t_class *c;
 	

@@ -62,7 +62,7 @@ void		cue_return_model_address(TTPtr self, t_symbol *msg, long argc, const t_ato
 t_max_err	cue_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom **av);
 t_max_err	cue_set_relative(TTPtr self, TTPtr attr, long ac, const t_atom *av);
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	ModularSpec *spec = new ModularSpec;
 	spec->_wrap = &WrapTTCueManagerClass;

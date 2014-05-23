@@ -18,12 +18,6 @@
 #include "TTFoundationAPI.h"		// Jamoma Foundation API
 #include "TTDSP.h"					// Jamoma DSP API
 
-#ifdef WIN_VERSION
-#define TTCLASSWRAPPERMAX_EXPORT __declspec(dllexport) 
-#else
-#define TTCLASSWRAPPERMAX_EXPORT __attribute__((visibility("default")))
-#endif
-
 // TYPE DEFINITIONS
 
 typedef TTErr (*TTValidityCheckFunction)(const TTPtr data);		///< A type that can be used to store a pointer to a validity checking function.

@@ -35,7 +35,7 @@ typedef Pack* PackPtr;								///< Pointer to a j.pack= instance.
 /** Set up this class as a Max external the first time an object of this kind is instantiated.
  @return				Error message if the object fails to load.
  */
-int TTCLASSWRAPPERMAX_EXPORT main(void);
+int C74_EXPORT main(void);
 
 
 /** Create a new instance of the j.in= object.
@@ -96,7 +96,7 @@ t_int*	PackPerform(t_int* w);
  @param maxvectorsize
  @param flags
  */
-void	PackDsp64(PackPtr self, t_object* dsp64, short *count, double samplerate, long maxvectorsize, long flags);
+void	PackDsp64(PackPtr self, (t_object*) dsp64, short *count, double samplerate, long maxvectorsize, long flags);
 //t_max_err	PackSetGain(PackPtr self, void* attr, long argc, t_atom* argv);
 
 

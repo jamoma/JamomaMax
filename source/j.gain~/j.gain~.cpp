@@ -56,7 +56,7 @@ static t_class*	s_gain_class;
 /************************************************************************************/
 // Define our class
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	t_class *c;
 	

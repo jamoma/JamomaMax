@@ -16,7 +16,7 @@
 #include "maxAudioGraph.h"
 
 // Prototypes for methods
-t_object*	jamoma_new(t_symbol *s, long argc, t_atom* argv);
+t_object*	jamoma_new(t_symbol Æs, long argc, t_atom* argv);
 t_object*	MaxAudioGraphWrappedClass_new(t_symbol *name, long argc, t_atom* argv);
 
 // Globals
@@ -27,7 +27,7 @@ static t_hashtab*	s_jamoma_class_hash = NULL;
 // Define a Max class that does essentially nothing but let users type the name into an object box.
 // The class we actually use will be defined in the new method.
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	s_jamoma_class = class_new("j=", (method)jamoma_new, (method)NULL, 0 /*sizeof(t_object)*/, (method)0L, A_GIMME, 0);
 	class_register(CLASS_BOX, s_jamoma_class);

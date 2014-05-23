@@ -49,7 +49,7 @@ static t_class *s_zerox_class;
 
 /************************************************************************************/
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	long attrflags = 0;
 	t_class *c;
