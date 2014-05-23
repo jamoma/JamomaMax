@@ -20,10 +20,10 @@
 
 // Data Structure for this object
 struct Unpack {
-   	t_object				    obj;
+   	t_object				obj;
 	TTGraphObjectBasePtr	graphObject;
-	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
-	TTObjectBasePtr			callback;		// TTCallback object that attaches to the graphObject to be notified when there is new data to output.
+	TTPtr				    graphOutlets[16];	///< this _must_ be third (for the setup call)
+	TTObject*				callback;			///< TTCallback object that attaches to the graphObject to be notified when there is new data to output.
 };
 typedef Unpack* UnpackPtr;
 
@@ -89,13 +89,14 @@ UnpackPtr UnpackNew(t_symbol *msg, long argc, t_atom* argv)
 			return NULL;
 		}
 		
-		err = TTObjectBaseInstantiate(TT("callback"), (TTObjectBasePtr*)&self->callback, none);
-		self->callback->setAttributeValue(TT("function"), TTPtr(&UnpackGraphCallback));
-		self->callback->setAttributeValue(TT("baton"), TTPtr(self));	
-		// dynamically add a message to the callback object so that it can handle the 'dictionaryReceived' notification
-		self->callback->registerMessage(TT("dictionaryReceived"), (TTMethod)&TTCallback::notify, kTTMessagePassValue);
-		// tell the graph object that we want to watch it
-		self->graphObject->mKernel->registerObserverForNotifications(*self->callback);
+		self->callback = new TTObject("callback");
+		self->callback->set(TT("function"), TTPtr(&UnpackGraphCallback));
+		self->callback->set(TT("baton"), TTPtr(self));
+		
+		// Dynamically add a message to the callback object so that it can handle the 'dictionaryReceived' notification
+		self->callback->instance()->registerMessage(TT("dictionaryReceived"), (TTMethod)&TTCallback::notify, kTTMessagePassValue);
+		// Tell the graph object that we want to watch it
+		self->graphObject->mKernel.registerObserverForNotifications(*self->callback);
 		
 		attr_args_process(self, argc, argv);
 	}
