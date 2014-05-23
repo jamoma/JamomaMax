@@ -142,22 +142,6 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, WrappedClassPtr* c, TTValidityCheckFunction validityCheck, WrappedClassOptionsPtr options);
 TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, WrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument, WrappedClassOptionsPtr options);
 
-
-
-
-// UTILS
-
-#ifdef __LP64__
-TTInt64	atom_getlong(t_atom* a);
-#else
-int atom_getlong(t_atom* a);
-#endif
-
-
-
-
-
-
 TTErr TTValueFromAtoms(TTValue& v, long ac, t_atom* av);
 TTErr TTAtomsFromValue(const TTValue& v, long* ac, t_atom** av); // NOTE: allocates memory
 
