@@ -94,15 +94,6 @@ TTErr wrapAsMaxGraph(TTSymbol& ttblueClassName, char* maxClassName, WrappedClass
 TTErr wrapAsMaxGraph(TTSymbol& ttblueClassName, char* maxClassName, WrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument, WrappedClassOptionsPtr options);
 
 
-// NOTE: DUPLICATIONS FROM THE MSP WRAPPER
-
-#ifdef __LP64__
-TTInt64	atom_getlong(t_atom* a);
-#else
-int atom_getlong(t_atom* a);
-#endif
-
-
 TTErr MaxGraphReset(t_object* self);
 TTErr MaxGraphSetup(t_object* self);
 TTErr MaxGraphConnect(t_object* self, TTGraphObjectBasePtr audioSourceObject, TTUInt16 sourceOutletNumber);

@@ -213,7 +213,7 @@ t_max_err wrappedClass_attrSet(WrappedInstancePtr self, t_object* attr, long arg
 		v.resize(argc);
 		for (i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v[i] = atom_getlong(argv+i);
+				v[i] = (TTInt32)atom_getlong(argv+i);
 			else if (atom_gettype(argv+i) == A_FLOAT)
 				v[i] = atom_getfloat(argv+i);
 			else if (atom_gettype(argv+i) == A_SYM)
@@ -246,7 +246,7 @@ void wrappedClass_anything(WrappedInstancePtr self, t_symbol* s, long argc, t_at
 		v.resize(argc);
 		for (long i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v[i] = atom_getlong(argv+i);
+				v[i] = (TTInt32)atom_getlong(argv+i);
 			else if (atom_gettype(argv+i) == A_FLOAT)
 				v[i] = atom_getfloat(argv+i);
 			else if (atom_gettype(argv+i) == A_SYM)
@@ -463,17 +463,3 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 	return err;
 }
 
-
-// NOTE: DUPLICATIONS FROM THE MSP WRAPPER
-
-#ifdef __LP64__
-TTInt64	atom_getlong(t_atom* a)
-{
-	return (TTInt64)atom_getlong(a);
-}
-#else
-int atom_getlong(t_atom* a)
-{
-	return (int)atom_getlong(a);
-}
-#endif
