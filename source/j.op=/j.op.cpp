@@ -109,7 +109,7 @@ OpPtr OpNew(t_symbol* msg, long argc, t_atom* argv)
 		v[1] = 1;	// we set it up with 1 inlet, and later modify to 2 inlets if the connection is made
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 
-		if (!self->audioGraphObject->getUnitGenerator()) {
+		if (!self->audioGraphObject->getUnitGenerator().valid()) {
 			object_error(SELF, "cannot load Jamoma DSP object");
 			return NULL;
 		}
@@ -212,7 +212,7 @@ t_max_err OpSetOperator(OpPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrOperator = atom_getsym(argv);
-		self->audioGraphObject->getUnitGenerator()->setAttributeValue(TT("operator"), TT(self->attrOperator->s_name));
+		self->audioGraphObject->getUnitGenerator().set(TT("operator"), TT(self->attrOperator->s_name));
 	}
 	return MAX_ERR_NONE;
 }
@@ -222,7 +222,7 @@ t_max_err OpGetOperator(OpPtr self, t_object* attr, long* argc, t_atom** argv)
 {
 	TTValue v;
 	
-	self->audioGraphObject->getUnitGenerator()->getAttributeValue(TT("operator"), v);
+	self->audioGraphObject->getUnitGenerator().get(TT("operator"), v);
 	
 	*argc = v.size();
 	if (!(*argv)) // otherwise use memory passed in
@@ -252,7 +252,7 @@ t_max_err OpSetOperand(OpPtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrOperand = atom_getfloat(argv);
-		self->audioGraphObject->getUnitGenerator()->setAttributeValue(TT("operand"), self->attrOperand);
+		self->audioGraphObject->getUnitGenerator().set(TT("operand"), self->attrOperand);
 	}
 	return MAX_ERR_NONE;
 }
@@ -262,7 +262,7 @@ t_max_err OpGetOperand(OpPtr self, t_object* attr, long* argc, t_atom** argv)
 {
 	TTValue v;
 	
-	self->audioGraphObject->getUnitGenerator()->getAttributeValue(TT("operand"), v);
+	self->audioGraphObject->getUnitGenerator().get(TT("operand"), v);
 	
 	*argc = v.size();
 	if (!(*argv)) // otherwise use memory passed in
