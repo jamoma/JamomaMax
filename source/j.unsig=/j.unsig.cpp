@@ -41,16 +41,16 @@ typedef Out* OutPtr;
 
 
 // Prototypes for methods
-OutPtr	OutNew(SymbolPtr msg, long argc, t_atom* argv);
+OutPtr	OutNew(t_symbol *msg, long argc, t_atom* argv);
 void	OutFree(OutPtr self);
-t_max_err	OutNotify(OutPtr self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data);
+t_max_err	OutNotify(OutPtr self, t_symbol *s, t_symbol *msg, t_object* sender, TTPtr data);
 void	OutQFn(OutPtr self);
 void	OutAssist(OutPtr self, void* b, long msg, long arg, char* dst);
 TTErr	OutReset(OutPtr self, long vectorSize);
 TTErr	OutConnect(OutPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
-void	OutIterateResetCallback(OutPtr self, (t_object*) obj);
-void	OutIterateSetupCallback(OutPtr self, (t_object*) obj);
-void	OutAttachToPatchlinesForPatcher(OutPtr self, (t_object*) patcher);
+void	OutIterateResetCallback(OutPtr self, t_object* obj);
+void	OutIterateSetupCallback(OutPtr self, t_object* obj);
+void	OutAttachToPatchlinesForPatcher(OutPtr self, t_object* patcher);
 t_int*	OutPerform(t_int* w);
 void	OutTick(OutPtr self);
 void	OutDsp(OutPtr self, t_signal** sp, short* count);
@@ -66,7 +66,7 @@ static t_class* sOutClass;
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class *c;
 
 	TTAudioGraphInit();	
 	common_symbols_init();
@@ -95,7 +95,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-OutPtr OutNew(SymbolPtr msg, long argc, t_atom* argv)
+OutPtr OutNew(t_symbol *msg, long argc, t_atom* argv)
 {
     OutPtr		self;
 	TTValue		sr(sys_getsr());
@@ -115,8 +115,8 @@ OutPtr OutNew(SymbolPtr msg, long argc, t_atom* argv)
 		self->output_buffer = (t_atom *)malloc(self->maxNumChannels * sizeof(t_atom));
 		
 		v.resize(2);
-		v.set(0, TT("thru"));
-		v.set(1, 1); // arg is the number of inlets
+		v[0] = "thru";
+		v[1] = 1; // arg is the number of inlets
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 		//self->audioGraphObject->getUnitGenerator()->setAttributeValue(TT("linearGain"), 1.0);
 		
@@ -153,11 +153,11 @@ void OutFree(OutPtr self)
 /************************************************************************************/
 // Methods bound to input/inlets
 
-t_max_err OutNotify(OutPtr self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data)
+t_max_err OutNotify(OutPtr self, t_symbol *s, t_symbol *msg, t_object* sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
-			SymbolPtr name = (SymbolPtr)object_method((t_object*)data, _sym_getname);
+			t_symbol *name = (t_symbol*)object_method((t_object*)data, _sym_getname);
 			if (name == _sym_dirty) {
 				qelem_set(self->qelem);
 			}
@@ -253,7 +253,7 @@ TTErr OutConnect(OutPtr self, TTAudioGraphObjectBasePtr audioSourceObject, long 
 }
 
 
-void OutIterateResetCallback(OutPtr self, (t_object*) obj)
+void OutIterateResetCallback(OutPtr self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method audioResetMethod = zgetfn(obj, gensym("audio.reset"));
@@ -263,7 +263,7 @@ void OutIterateResetCallback(OutPtr self, (t_object*) obj)
 }
 
 
-void OutIterateSetupCallback(OutPtr self, (t_object*) obj)
+void OutIterateSetupCallback(OutPtr self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method audioSetupMethod = zgetfn(obj, gensym("audio.setup"));
@@ -273,7 +273,7 @@ void OutIterateSetupCallback(OutPtr self, (t_object*) obj)
 }
 
 
-void OutAttachToPatchlinesForPatcher(OutPtr self, (t_object*) patcher)
+void OutAttachToPatchlinesForPatcher(OutPtr self, t_object* patcher)
 {
 	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
 	t_object*	box = jpatcher_get_firstobject(patcher);
@@ -284,7 +284,7 @@ void OutAttachToPatchlinesForPatcher(OutPtr self, (t_object*) patcher)
 	}
 		
 	while (box) {
-		SymbolPtr	classname = jbox_get_maxclass(box);
+		t_symbol *classname = jbox_get_maxclass(box);
 		
 		if (classname == _sym_jpatcher) {
 			t_object*	subpatcher = jbox_get_object(box);
@@ -412,7 +412,7 @@ void OutDsp(OutPtr self, t_signal** sp, short* count)
 		k++;
 	}*/
 	self->numChannels = self->maxNumChannels; //[np]
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_sampleRate, sp[0]->s_sr);
+	self->audioGraphObject->getUnitGenerator().get(kTTSym_sampleRate, sp[0]->s_sr);
 	self->audioGraphObject->resetSampleStamp();
 	self->sampleCount = 0;
 	
