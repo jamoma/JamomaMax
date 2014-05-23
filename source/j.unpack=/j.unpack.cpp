@@ -38,17 +38,17 @@ typedef struct _unpack {
 
 
 // Prototypes for methods
-t_unpack*	UnpackNew(SymbolPtr msg, long argc, t_atom* argv);
+t_unpack*	UnpackNew(t_symbol *msg, long argc, t_atom* argv);
 void	UnpackFree(t_unpack* self);
-t_max_err	UnpackNotify(t_unpack* self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data);
+t_max_err	UnpackNotify(t_unpack* self, t_symbol *s, t_symbol *msg, t_object* sender, TTPtr data);
 void	UnpackQFn(t_unpack* self);
 void	UnpackAssist(t_unpack* self, void* b, long msg, long arg, char* dst);
 TTErr	UnpackReset(t_unpack* self, long vectorSize);
 TTErr	UnpackConnect(t_unpack* self, TTAudioGraphObjectBasePtr audioSourceObject, long sourceOutletNumber);
-void	UnpackIterateResetCallback(t_unpack* self, (t_object*) obj);
-void	UnpackIterateSetupCallback(t_unpack* self, (t_object*) obj);
-void	UnpackAttachToPatchlinesForPatcher(t_unpack* self, (t_object*) patcher);
-void	UnpackDsp64(t_unpack* self, (t_object*) dsp64, short *count, double samplerate, long maxvectorsize, long flags);
+void	UnpackIterateResetCallback(t_unpack* self, t_object* obj);
+void	UnpackIterateSetupCallback(t_unpack* self, t_object* obj);
+void	UnpackAttachToPatchlinesForPatcher(t_unpack* self, t_object* patcher);
+void	UnpackDsp64(t_unpack* self, t_object* dsp64, short *count, double samplerate, long maxvectorsize, long flags);
 //t_max_err	UnpackSetGain(t_unpack* self, void* attr, long argc, t_atom* argv);
 
 
@@ -61,7 +61,7 @@ static t_class* sUnpackClass;
 
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class *c;
 
 	TTAudioGraphInit();	
 	common_symbols_init();
@@ -90,7 +90,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-t_unpack* UnpackNew(SymbolPtr msg, long argc, t_atom* argv)
+t_unpack* UnpackNew(t_symbol *msg, long argc, t_atom* argv)
 {
     t_unpack*	self;
 	TTValue		sr(sys_getsr());
@@ -108,8 +108,8 @@ t_unpack* UnpackNew(SymbolPtr msg, long argc, t_atom* argv)
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
 		
 		v.resize(2);
-		v.set(0, TT("thru"));
-		v.set(1, 1); // arg is the number of inlets
+		v[0] = "thru";
+		v[1] = 1; // arg is the number of inlets
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 		//self->audioGraphObject->getUnitGenerator()->setAttributeValue(TT("linearGain"), 1.0);
 		
@@ -142,11 +142,11 @@ void UnpackFree(t_unpack* self)
 /************************************************************************************/
 // Methods bound to input/inlets
 
-t_max_err UnpackNotify(t_unpack* self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data)
+t_max_err UnpackNotify(t_unpack* self, t_symbol *s, t_symbol *msg, t_object* sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
-			SymbolPtr name = (SymbolPtr)object_method((t_object*)data, _sym_getname);
+			t_symbol *name = (t_symbol*)object_method((t_object*)data, _sym_getname);
 			if (name == _sym_dirty) {
 				qelem_set(self->qelem);
 			}
@@ -241,7 +241,7 @@ TTErr UnpackConnect(t_unpack* self, TTAudioGraphObjectBasePtr audioSourceObject,
 }
 
 
-void UnpackIterateResetCallback(t_unpack* self, (t_object*) obj)
+void UnpackIterateResetCallback(t_unpack* self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method audioResetMethod = zgetfn(obj, gensym("audio.reset"));
@@ -251,7 +251,7 @@ void UnpackIterateResetCallback(t_unpack* self, (t_object*) obj)
 }
 
 
-void UnpackIterateSetupCallback(t_unpack* self, (t_object*) obj)
+void UnpackIterateSetupCallback(t_unpack* self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method audioSetupMethod = zgetfn(obj, gensym("audio.setup"));
@@ -261,7 +261,7 @@ void UnpackIterateSetupCallback(t_unpack* self, (t_object*) obj)
 }
 
 
-void UnpackAttachToPatchlinesForPatcher(t_unpack* self, (t_object*) patcher)
+void UnpackAttachToPatchlinesForPatcher(t_unpack* self, t_object* patcher)
 {
 	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
 	t_object*	box = jpatcher_get_firstobject(patcher);
@@ -272,7 +272,7 @@ void UnpackAttachToPatchlinesForPatcher(t_unpack* self, (t_object*) patcher)
 	}
 		
 	while (box) {
-		SymbolPtr	classname = jbox_get_maxclass(box);
+		t_symbol *classname = jbox_get_maxclass(box);
 		
 		if (classname == _sym_jpatcher) {
 			t_object*	subpatcher = jbox_get_object(box);
@@ -285,7 +285,7 @@ void UnpackAttachToPatchlinesForPatcher(t_unpack* self, (t_object*) patcher)
 
 
 // Perform (signal) Method
-void UnpackPerform64(t_unpack* self, (t_object*) dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
+void UnpackPerform64(t_unpack* self, t_object* dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
 	TTUInt16	numChannels;
 	
@@ -318,7 +318,7 @@ void UnpackPerform64(t_unpack* self, (t_object*) dsp64, double **ins, long numin
 
 
 // DSP Method
-void UnpackDsp64(t_unpack* self, (t_object*) dsp64, short *count, double samplerate, long maxvectorsize, long flags)
+void UnpackDsp64(t_unpack* self, t_object* dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
 	TTUInt16	i;
 	t_max_err		err;
@@ -388,7 +388,7 @@ void UnpackDsp64(t_unpack* self, (t_object*) dsp64, short *count, double sampler
 		self->numChannels++;
 	}
 	
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_sampleRate, samplerate);
+	self->audioGraphObject->getUnitGenerator().set(kTTSym_sampleRate, samplerate);
 	self->audioGraphObject->resetSampleStamp();
 	self->sampleStamp = 0;
 	
