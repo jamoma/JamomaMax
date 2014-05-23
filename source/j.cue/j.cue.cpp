@@ -19,7 +19,7 @@
 
 // This is used to store extra data
 typedef struct extra {
-	TTObject	toEdit;				// the object to edit (a cue or all the cuelist)
+	TTObject	*toEdit;				// the object to edit (a cue or all the cuelist)
 	TTSymbol	cueName;			// the name of the edited cue
 	TTString	*text;				// the text of the editor to read after edclose
 	t_object*	textEditor;			// the text editor window
@@ -142,7 +142,8 @@ void WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv)
 	
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
-	EXTRA->toEdit = x->wrappedObject;
+    EXTRA->toEdit = new TTObject();
+	*EXTRA->toEdit = x->wrappedObject;
 	EXTRA->cueName = kTTSymEmpty;
 	EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
@@ -155,6 +156,8 @@ void WrappedCueManageClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
+    delete EXTRA->toEdit;
+    
 	free(EXTRA);
 }
 
@@ -441,7 +444,7 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 	TTErr				tterr;
 	
 	// choose object to edit : default the cuelist
-	EXTRA->toEdit = x->wrappedObject;
+	*EXTRA->toEdit = x->wrappedObject;
 	EXTRA->cueName = kTTSymEmpty;
 	
 	if (argc && argv) {
@@ -473,7 +476,7 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 				if (!allCues->lookup(name, v)) {
 					
 					// edit a cue
-					EXTRA->toEdit = v[0];
+					*EXTRA->toEdit = v[0];
 					EXTRA->cueName = name;
 				}
 				else {
@@ -499,7 +502,7 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 			aTextHandler = o[0];
 			
 			critical_enter(0);
-			aTextHandler.set(kTTSym_object, EXTRA->toEdit);
+			aTextHandler.set(kTTSym_object, *EXTRA->toEdit);
 			tterr = aTextHandler.send(kTTSym_Write, (TTPtr)buffer, none);
 			critical_exit(0);
 		}
@@ -561,7 +564,7 @@ void cue_doedit(TTPtr self)
 	delete EXTRA->text;
 	EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
-	EXTRA->toEdit = x->wrappedObject;
+	*EXTRA->toEdit = x->wrappedObject;
 	EXTRA->cueName = kTTSymEmpty;
 }
 

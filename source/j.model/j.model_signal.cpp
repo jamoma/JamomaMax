@@ -23,7 +23,7 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
     TTValue     v;
     
     // get model:address
-    EXTRA->modelInfo.get(kTTSym_address, v);
+    EXTRA->modelInfo->get(kTTSym_address, v);
     modelAdrs = v[0];
     
     // to avoid infinite loop (as there are data registrations here)
