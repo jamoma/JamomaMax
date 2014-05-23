@@ -35,7 +35,7 @@ typedef Pack* PackPtr;
 PackPtr	PackNew			(t_symbol* msg, long argc, t_atom* argv);
 void   	PackFree		(PackPtr self);
 void	PackStartTracking(PackPtr self);
-t_max_err	PackNotify		(PackPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data);
+t_max_err	PackNotify		(PackPtr self, t_symbol* s, t_symbol* msg, t_object* sender, TTPtr data);
 void	PackQFn			(PackPtr self);
 void   	PackAssist		(PackPtr self, void* b, long msg, long arg, char* dst);
 void	PackInt			(PackPtr self, long value);
@@ -136,7 +136,7 @@ void PackFree(PackPtr self)
 
 /************************************************************************************/
 
-t_max_err PackNotify(PackPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data)
+t_max_err PackNotify(PackPtr self, t_symbol* s, t_symbol* msg, t_object* sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
@@ -190,7 +190,7 @@ t_max_err PackNotify(PackPtr self, t_symbol* s, t_symbol* msg, (t_object*) sende
 }
 
 
-void PackIterateResetCallback(PackPtr self, (t_object*) obj)
+void PackIterateResetCallback(PackPtr self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method graphResetMethod = zgetfn(obj, gensym("graph.reset"));
@@ -200,7 +200,7 @@ void PackIterateResetCallback(PackPtr self, (t_object*) obj)
 }
 
 
-void PackIterateSetupCallback(PackPtr self, (t_object*) obj)
+void PackIterateSetupCallback(PackPtr self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method graphSetupMethod = zgetfn(obj, gensym("graph.setup"));
@@ -210,7 +210,7 @@ void PackIterateSetupCallback(PackPtr self, (t_object*) obj)
 }
 
 
-void PackAttachToPatchlinesForPatcher(PackPtr self, (t_object*) patcher)
+void PackAttachToPatchlinesForPatcher(PackPtr self, t_object* patcher)
 {
 	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
 	t_object*	box = jpatcher_get_firstobject(patcher);
@@ -332,13 +332,13 @@ void PackList(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 	for (int i=0; i<ac; i++) {
 		switch (atom_gettype(ap+i)) {
 			case A_LONG:
-				v.set(i, (int)atom_getlong(ap+i));
+				v[i] = (int)atom_getlong(ap+i);
 				break;
 			case A_FLOAT:
-				v.set(i, atom_getfloat(ap+i));
+				v[i] = atom_getfloat(ap+i);
 				break;
 			case A_SYM:
-				v.set(i, TT(atom_getsym(ap+i)->s_name));
+				v[i] = TT(atom_getsym(ap+i)->s_name);
 				break;
 			default:
 				break;
@@ -357,17 +357,17 @@ void PackAnything(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 	v.resize(ac+1);
 	if (ac > 0) {
 		self->graphDictionary->setSchema(TT("array"));
-		v.set(0, TT(s->s_name));
+		v[0] = TT(s->s_name);
 		for (int i=0; i<ac; i++) {
 			switch (atom_gettype(ap+i)) {
 				case A_LONG:
-					v.set(i+1, (int)atom_getlong(ap+i));
+					v[i+1] = (int)atom_getlong(ap+i);
 					break;
 				case A_FLOAT:
-					v.set(i+1, atom_getfloat(ap+i));
+					v[i+1] = atom_getfloat(ap+i);
 					break;
 				case A_SYM:
-					v.set(i+1, TT(atom_getsym(ap+i)->s_name));
+					v[i+1] = TT(atom_getsym(ap+i)->s_name);
 					break;
 				default:
 					break;
@@ -376,7 +376,7 @@ void PackAnything(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 	}
 	else {
 		self->graphDictionary->setSchema(TT("symbol"));
-		v.set(0, TT(s->s_name));
+		v[0] = TT(s->s_name);
 	}
 	
 	self->graphDictionary->setValue(v);
@@ -400,13 +400,13 @@ void PackMessage(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 		for (int i=0; i < ac-1; i++) {
 			switch (atom_gettype(ap+i)) {
 				case A_LONG:
-					v.set(i+1, (int)atom_getlong(ap+i));
+					v[i+1] = (int)atom_getlong(ap+i);
 					break;
 				case A_FLOAT:
-					v.set(i+1, atom_getfloat(ap+i));
+					v[i+1] = atom_getfloat(ap+i);
 					break;
 				case A_SYM:
-					v.set(i+1, TT(atom_getsym(ap+i)->s_name));
+					v[i+1] = TT(atom_getsym(ap+i)->s_name);
 					break;
 				default:
 					break;
@@ -415,9 +415,9 @@ void PackMessage(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 	}
 	else if (ac > 1) {
 		if (atom_gettype(ap+1) == A_SYM)
-			v.set(0, TT(s->s_name));
+			v[0] = TT(s->s_name);
 		else if (atom_gettype(ap+1) == A_LONG || atom_gettype(ap+1) == A_FLOAT)
-			v.set(0, atom_getfloat(ap+1));
+			v[0] = atom_getfloat(ap+1);
 	}
 	
 	self->graphDictionary->setValue(v);
@@ -441,13 +441,13 @@ void PackAttribute(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 		for (int i=0; i < ac-1; i++) {
 			switch (atom_gettype(ap+i)) {
 				case A_LONG:
-					v.set(i+1, (int)atom_getlong(ap+i));
+					v[i+1] = (int)atom_getlong(ap+i);
 					break;
 				case A_FLOAT:
-					v.set(i+1, atom_getfloat(ap+i));
+					v[i+1] = atom_getfloat(ap+i);
 					break;
 				case A_SYM:
-					v.set(i+1, TT(atom_getsym(ap+i)->s_name));
+					v[i+1] = TT(atom_getsym(ap+i)->s_name);
 					break;
 				default:
 					break;
@@ -456,9 +456,9 @@ void PackAttribute(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 	}
 	else if (ac > 1) {
 		if (atom_gettype(ap+1) == A_SYM)
-			v.set(0, TT(s->s_name));
+			v[0] = TT(s->s_name);
 		else if (atom_gettype(ap+1) == A_LONG || atom_gettype(ap+1) == A_FLOAT)
-			v.set(0, atom_getfloat(ap+1));
+			v[0] = atom_getfloat(ap+1);
 	}
 	
 	self->graphDictionary->setValue(v);
