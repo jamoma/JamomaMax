@@ -113,15 +113,16 @@ void WrappedContainerClass_new(TTPtr self, long argc, t_atom *argv)
 	
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
-    EXTRA->modelInfo = NULL;
+    EXTRA->modelInfo = new TTObject();
     EXTRA->containerAddress = kTTAdrsEmpty;
     EXTRA->argAddress = kTTAdrsEmpty;
     EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
-    EXTRA->presetManager = NULL;
+    EXTRA->presetManager = new TTObject();
     EXTRA->attr_load_default = true;
 	EXTRA->filewatcher = NULL;
-	EXTRA->toEdit = x->wrappedObject;
+    EXTRA->toEdit = new TTObject();
+	*EXTRA->toEdit = x->wrappedObject;
 	EXTRA->presetName = kTTSymEmpty;
     EXTRA->readingContent = NO;
     EXTRA->attr_amenities = new TTHash();
@@ -145,21 +146,23 @@ void WrappedContainerClass_free(TTPtr self)
     TTAddress    modelAddress, presetAddress;
     TTValue      v, none;
     
-    if (EXTRA->modelInfo.valid()) {
+    if (EXTRA->modelInfo->valid()) {
         
         modelAddress = EXTRA->containerAddress.appendAddress(TTAddress("model"));
         
         // remove the model node
         JamomaApplication.send("ObjectUnregister", modelAddress, none);
     }
+    delete EXTRA->modelInfo;
     
-    if (EXTRA->presetManager.valid()) {
+    if (EXTRA->presetManager->valid()) {
         
         presetAddress = EXTRA->containerAddress.appendAddress(TTAddress("preset"));
         
         // remove the preset node
          JamomaApplication.send("ObjectUnregister", presetAddress, none);
     }
+    delete EXTRA->presetManager;
     
     // delete filewatcher
 	if (EXTRA->filewatcher) {
@@ -167,6 +170,8 @@ void WrappedContainerClass_free(TTPtr self)
 		object_free(EXTRA->filewatcher);
 	}
     
+    delete EXTRA->toEdit;
+
 	free(EXTRA);
 }
 
@@ -208,14 +213,14 @@ void model_subscribe(TTPtr self)
 		if (aPatcher == x->patcherPtr && x->patcherContext != kTTSymEmpty) {
             
             // create a model object (for j.view too !)
-            EXTRA->modelInfo = TTObject("ModelInfo", (TTPtr)x);
+            *EXTRA->modelInfo = TTObject("ModelInfo", (TTPtr)x);
             
             // set his class attribute
-            EXTRA->modelInfo.set("class", x->patcherClass);
+            EXTRA->modelInfo->set("class", x->patcherClass);
             
             // suscribe it under a model node
             adrs = returnedAddress.appendAddress(TTAddress("model"));
-            args = TTValue(adrs, EXTRA->modelInfo, x->patcherPtr);
+            args = TTValue(adrs, *EXTRA->modelInfo, x->patcherPtr);
             
             
             if (JamomaApplication.send("ObjectRegister", args, none))
@@ -224,10 +229,10 @@ void model_subscribe(TTPtr self)
             // In model patcher : set model:address with the model address
 			if (x->patcherContext == kTTSym_model) {
                 
-				EXTRA->modelInfo.set(kTTSym_address, returnedAddress);
+				EXTRA->modelInfo->set(kTTSym_address, returnedAddress);
                 
                 // then set the address attribute readOnly
-                TTModelInfoPtr(EXTRA->modelInfo.instance())->setAddressReadOnly(YES);
+                TTModelInfoPtr(EXTRA->modelInfo->instance())->setAddressReadOnly(YES);
             }
             
             // Get patcher arguments
@@ -324,7 +329,7 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         if (argAdrs.getType() == kAddressAbsolute) {
             
             // set the model:address attribute to notify all observers
-            EXTRA->modelInfo.set(kTTSym_address, argAdrs);
+            EXTRA->modelInfo->set(kTTSym_address, argAdrs);
             return;
         }
         
@@ -345,7 +350,7 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
             else {
 
                 // set the model:address attribute to notify all observers
-                EXTRA->modelInfo.set(kTTSym_address, kTTAdrsRoot.appendAddress(argAdrs));
+                EXTRA->modelInfo->set(kTTSym_address, kTTAdrsRoot.appendAddress(argAdrs));
                 return;
             }
         }
@@ -375,7 +380,7 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                 firstTTNode->getAddress(modelAdrs);
                 
                 // set the model:address attribute to notify all observers
-                EXTRA->modelInfo.set(kTTSym_address, modelAdrs);
+                EXTRA->modelInfo->set(kTTSym_address, modelAdrs);
                 return;
             }
             
@@ -389,7 +394,7 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     }
     
     // check if the model address have been filled or not (see in model_return_upper_view_model_address)
-    EXTRA->modelInfo.get(kTTSym_address, v);
+    EXTRA->modelInfo->get(kTTSym_address, v);
     modelAdrs = v[0];
     
     // if the model:address is still empty : the view is not binding a model for instant
@@ -397,7 +402,7 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         modelAdrs = TTAddress("/noModelAddress");
     
     // set the model:address attribute to notify all observers
-    EXTRA->modelInfo.set(kTTSym_address, modelAdrs);
+    EXTRA->modelInfo->set(kTTSym_address, modelAdrs);
 }
 
 void model_return_upper_view_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
@@ -416,7 +421,7 @@ void model_return_upper_view_model_address(TTPtr self, t_symbol *msg, long argc,
         upperViewModelAddress = kTTAdrsRoot.appendAddress(EXTRA->argAddress);
     
     // set the model:address attribute to notify all observers
-    EXTRA->modelInfo.set(kTTSym_address, upperViewModelAddress);
+    EXTRA->modelInfo->set(kTTSym_address, upperViewModelAddress);
 }
 
 void model_init(TTPtr self)
@@ -550,7 +555,7 @@ void model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 			TTAddress modelAdrs = TTAddress(atom_getsym(argv)->s_name);
             
             // set the model:address attribute to notify all observers
-            EXTRA->modelInfo.set(kTTSym_address, modelAdrs);
+            EXTRA->modelInfo->set(kTTSym_address, modelAdrs);
 		}
 	}
 }

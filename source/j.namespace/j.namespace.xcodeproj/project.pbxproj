@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		469BD9EB180B55E000A023B3 /* j.namespace.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.namespace.yml; sourceTree = "<group>"; };
+		46A94EB3192F9A4C00C32DA5 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		D24A23A81510B73A008A5F67 /* j.namespace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.namespace.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -16,6 +17,7 @@
 			isa = PBXGroup;
 			children = (
 				469BD9EB180B55E000A023B3 /* j.namespace.yml */,
+				46A94EB3192F9A4C00C32DA5 /* Makefile */,
 				D24A23A81510B73A008A5F67 /* j.namespace.cpp */,
 			);
 			name = j.namespace;

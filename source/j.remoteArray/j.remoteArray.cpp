@@ -25,7 +25,7 @@
 // This is used to store extra data
 typedef struct extra {
     
-    TTObject        modelAddressReceiver;	// the internal model:address receiver (not registered inside internals)
+    TTObject        *modelAddressReceiver;	// the internal model:address receiver (not registered inside internals)
 	TTBoolean		changingAddress;        // a flag to protect from succession of address changes
 	TTPtr			ui_qelem;               // to output "qlim'd" data for ui object
     TTListPtr       ui_qelem_list;          // a list of defered value to output
@@ -134,6 +134,7 @@ void WrappedViewerClass_new(TTPtr self, long argc, t_atom *argv)
 	// Prepare extra data for parameters and messages
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
 
+    EXTRA->modelAddressReceiver = NULL;
 	EXTRA->changingAddress = NO;
 	EXTRA->ui_qelem = qelem_new(x, (method)remote_ui_queuefn);
     EXTRA->ui_qelem_list = new TTList();
@@ -188,7 +189,7 @@ void remote_new_address(TTPtr self, t_symbol *address)
 	TTUInt32					i;
 	TTAddress                   newAddress = TTAddress(address->s_name);
 	t_symbol					*instanceAddress;
-	TTObject                    anObject;
+	TTObject                    anObject, empty;
 	TTValue						v;
 		
     x->cursor = kTTSymEmpty;
@@ -215,7 +216,7 @@ void remote_new_address(TTPtr self, t_symbol *address)
             // append the viewer to the internals table
             v = TTValue(anObject);
             v.append(TTSymbol(instanceAddress->s_name));
-            v.append((TTPtr)NULL);
+            v.append(empty);
             
             x->internals->append(TTSymbol(instanceAddress->s_name), v);
             
@@ -265,7 +266,7 @@ void remote_array_subscribe(TTPtr self, t_symbol *address)
 	TTAddress                   absoluteAddress, returnedAddress;
     TTNodePtr                   returnedNode = NULL;
     TTNodePtr                   returnedContextNode = NULL;
-	TTObject                    toSubscribe;
+	TTObject                    toSubscribe, empty;
 	TTBoolean					subscribe;
 	TTObject                    aSubscriber;
 	TTUInt32					i;
@@ -362,10 +363,10 @@ void remote_array_subscribe(TTPtr self, t_symbol *address)
 	if (contextAddress != kTTAdrsEmpty) {
 		
         // make the model:address receiver binds on the model:address attribute
-        EXTRA->modelAddressReceiver.set(kTTSym_address, contextAddress.appendAddress(TTAddress("model:address")));
+        EXTRA->modelAddressReceiver->set(kTTSym_address, contextAddress.appendAddress(TTAddress("model:address")));
         
 		// get the model:address value
-        EXTRA->modelAddressReceiver.send(kTTSym_Get);
+        EXTRA->modelAddressReceiver->send(kTTSym_Get);
         return;
 	}
 	
@@ -392,7 +393,8 @@ void remote_array_subscribe(TTPtr self, t_symbol *address)
 				aSubscriber = TTObject();
 			
 			// keep only the viewer object and his address
-			v.set(2, (TTPtr)NULL);
+            
+			v.set(2, empty);
 			
 			// replace the internal
 			x->internals->remove(x->cursor);
@@ -791,10 +793,10 @@ void remote_create_model_address_receiver(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue     args, baton, none;
-	TTObject    returnValueCallback;
+	TTObject    returnValueCallback, empty;
 	
     // don't need to get the receiver address back
-	args.append(NULL);
+	args.append(empty);
 	
 	returnValueCallback = TTObject("callback");
     
@@ -803,14 +805,14 @@ void remote_create_model_address_receiver(TTPtr self)
 	returnValueCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
 	args.append(returnValueCallback);
 	
-	EXTRA->modelAddressReceiver = TTObject(kTTSym_Receiver, args);
+	EXTRA->modelAddressReceiver = new TTObject(kTTSym_Receiver, args);
 }
 
 void remote_free_model_address_receiver(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
-    EXTRA->modelAddressReceiver = TTObject();
+    delete EXTRA->modelAddressReceiver;
 }
 
 void remote_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
