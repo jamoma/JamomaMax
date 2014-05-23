@@ -11,9 +11,8 @@
 #include "TTGraphInput.h"
 #include "TTAudioGraphAPI.h"
 
-
 // Data Structure for this object
-typedef struct PlugParameter {
+typedef struct _plugParameter {
    	t_object				obj;
 	TTGraphObjectBasePtr	graphObject;		// this _must_ be second
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
@@ -26,7 +25,8 @@ typedef struct PlugParameter {
 	double				    range[2];
     t_symbol				*style;
 	double				    defaultValue;
-};
+} PlugParameter;
+
 typedef PlugParameter* PlugParameterPtr;
 
 
@@ -51,7 +51,7 @@ static t_class* sPlugParameterClass;
 
 /************************************************************************************/
 // Main() Function
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int TTGRAPH_EXTERNAL_EXPORT main(void)
 {
 	t_class *c;
 
