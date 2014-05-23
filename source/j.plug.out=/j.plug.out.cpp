@@ -13,13 +13,13 @@
 // Prototypes for methods
 PlugOutPtr	PlugOutNew(t_symbol* msg, long argc, t_atom* argv);
 void	PlugOutFree(PlugOutPtr self);
-t_max_err	PlugOutNotify(PlugOutPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data);
+t_max_err	PlugOutNotify(PlugOutPtr self, t_symbol* s, t_symbol* msg, t_object* sender, TTPtr data);
 void	PlugOutQFn(PlugOutPtr self);
-void	PlugOutAttachToPatchlinesForPatcher(PlugOutPtr self, (t_object*) patcher);
+void	PlugOutAttachToPatchlinesForPatcher(PlugOutPtr self, t_object* patcher);
 void	PlugOutAssist(PlugOutPtr self, void* b, long msg, long arg, char* dst);
 TTErr	PlugOutSetup(PlugOutPtr self);
-void	PlugOutIterateResetCallback(PlugOutPtr self, (t_object*) obj);
-void	PlugOutIterateSetupCallback(PlugOutPtr self, (t_object*) obj);
+void	PlugOutIterateResetCallback(PlugOutPtr self, t_object* obj);
+void	PlugOutIterateSetupCallback(PlugOutPtr self, t_object* obj);
 t_max_err	PlugOutBuildAudioUnit(PlugOutPtr self, t_symbol* s, long argc, t_atom* argv);
 t_max_err	PlugOutSetVersion(PlugOutPtr self, void* attr, long argc, t_atom* argv);
 
@@ -113,7 +113,7 @@ void PlugOutFree(PlugOutPtr self)
 /************************************************************************************/
 // Methods bound to input/inlets
 
-t_max_err PlugOutNotify(PlugOutPtr self, t_symbol* s, t_symbol* msg, (t_object*) sender, TTPtr data)
+t_max_err PlugOutNotify(PlugOutPtr self, t_symbol* s, t_symbol* msg, t_object* sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
@@ -154,12 +154,12 @@ t_max_err PlugOutNotify(PlugOutPtr self, t_symbol* s, t_symbol* msg, (t_object*)
 			destInlet = jpatchline_get_inletnum(sender);
 
 			// if both boxes are audio graph objects 
-			if ( zgetfn(sourceObject, GENSYM("audio.object")) && zgetfn(destObject, GENSYM("audio.object")) ) {
+			if ( zgetfn(sourceObject, gensym("audio.object")) && zgetfn(destObject, gensym("audio.object")) ) {
 				#ifdef DEBUG_NOTIFICATIONS
 				object_post(SELF, "deleting audio graph patchline!");
 				#endif // DEBUG_NOTIFICATIONS
 
-				object_method(destObject, GENSYM("audio.drop"), destInlet, sourceObject, sourceOutlet);
+				object_method(destObject, gensym("audio.drop"), destInlet, sourceObject, sourceOutlet);
 			}
 		out:		
 			;
@@ -178,7 +178,7 @@ void PlugOutQFn(PlugOutPtr self)
 	object_post(SELF, "patcher dirtied");
 	#endif // DEBUG_NOTIFICATIONS
 
-	object_method(self->patcher, GENSYM("iterate"), (method)PlugOutIterateSetupCallback, self, PI_DEEP, &result);
+	object_method(self->patcher, gensym("iterate"), (method)PlugOutIterateSetupCallback, self, PI_DEEP, &result);
 
 	// attach to all of the patch cords so we will know if one is deleted
 	// we are not trying to detach first -- hopefully this is okay and multiple attachments will be filtered (?)
@@ -186,7 +186,7 @@ void PlugOutQFn(PlugOutPtr self)
 }
 
 
-void PlugOutAttachToPatchlinesForPatcher(PlugOutPtr self, (t_object*) patcher)
+void PlugOutAttachToPatchlinesForPatcher(PlugOutPtr self, t_object* patcher)
 {
 	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
 	t_object*	box = jpatcher_get_firstobject(patcher);
@@ -230,26 +230,26 @@ TTErr PlugOutSetup(PlugOutPtr self)
 	
 	atom_setobj(a+0, (t_object*)(self->audioGraphObject));
 	atom_setlong(a+1, 0);
-	outlet_anything(self->audioGraphOutlet, GENSYM("audio.connect"), 2, a);
+	outlet_anything(self->audioGraphOutlet, gensym("audio.connect"), 2, a);
 	return kTTErrNone;
 }
 
 
-void PlugOutIterateResetCallback(PlugOutPtr self, (t_object*) obj)
+void PlugOutIterateResetCallback(PlugOutPtr self, t_object* obj)
 {
 	TTUInt32	vectorSize;
-	method		audioResetMethod = zgetfn(obj, GENSYM("audio.reset"));
+	method		audioResetMethod = zgetfn(obj, gensym("audio.reset"));
 
 	if (audioResetMethod) {
-		self->audioGraphObject->getUnitGenerator()->getAttributeValue(TT("vectorSize"), vectorSize);
+		self->audioGraphObject->getUnitGenerator().get(TT("vectorSize"), vectorSize);
 		audioResetMethod(obj, vectorSize);
 	}
 }
 
 
-void PlugOutIterateSetupCallback(PlugOutPtr self, (t_object*) obj)
+void PlugOutIterateSetupCallback(PlugOutPtr self, t_object* obj)
 {
-	method audioSetupMethod = zgetfn(obj, GENSYM("audio.setup"));
+	method audioSetupMethod = zgetfn(obj, gensym("audio.setup"));
 
 	if (audioSetupMethod)
 		audioSetupMethod(obj);
@@ -263,10 +263,10 @@ TTErr PlugOutBuildGraph(PlugOutPtr self)
 	t_object*				parent = NULL;
 	long					result = 0;
 	
-	err = object_obex_lookup(self, GENSYM("#P"), &patcher);
+	err = object_obex_lookup(self, gensym("#P"), &patcher);
 	
 	// first find the top-level patcher
-	err = object_obex_lookup(self, GENSYM("#P"), &patcher);
+	err = object_obex_lookup(self, gensym("#P"), &patcher);
 	parent = patcher;
 	while (parent) {
 		patcher = parent;
@@ -274,7 +274,7 @@ TTErr PlugOutBuildGraph(PlugOutPtr self)
 	}
 	
 	//object_method(patcher, gensym("iterate"), (method)PlugOutIterateResetCallback, self, PI_DEEP, &result);
-	object_method(patcher, GENSYM("iterate"), (method)PlugOutIterateSetupCallback, self, PI_DEEP, &result);
+	object_method(patcher, gensym("iterate"), (method)PlugOutIterateSetupCallback, self, PI_DEEP, &result);
 	
 	return kTTErrNone;
 }
@@ -312,7 +312,7 @@ t_max_err PlugOutSetVersion(PlugOutPtr self, void* attr, long argc, t_atom* argv
 		self->pluginVersion = atom_getsym(argv);
 		sscanf(self->pluginVersion->s_name, "%i.%i.%i", &major, &minor, &revision);
 		snprintf(str, 16, "0x00%02i%02i%02i", major, minor, revision);
-		self->pluginVersionHex = GENSYM(str);
+		self->pluginVersionHex = gensym(str);
 	}
 	return MAX_ERR_NONE;
 }
