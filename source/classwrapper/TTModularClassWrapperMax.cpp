@@ -825,7 +825,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 				maxType = _sym_atom;
 			
 			hashtab_store(wrappedMaxClass->maxNamesToTTNames, MaxName, (t_object*)(TTName.rawpointer()));
-			class_addattr(wrappedMaxClass->maxClass, attr_offset_new(MaxName->s_name, maxType, 0, (method)wrappedModularClass_attrGet, (method)wrappedModularClass_attrSet, NULL));
+			class_addattr(wrappedMaxClass->maxClass, attr_offset_new(MaxName->s_name, maxType, 0, (method)wrappedModularClass_attrGet, (method)wrappedModularClass_attrSet, 0));
 			
 			// Add display styles for the Max 5 inspector
 			if (attr->type == kTypeBoolean)
