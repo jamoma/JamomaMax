@@ -91,11 +91,11 @@ void ui_data_interface(t_ui *x, TTSymbol name)
 void ui_receiver_create(t_ui *obj, TTObject& returnedReceiver, t_symbol *aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
 {
 	TTValue		baton, args;
-	TTObject    returnValueCallback;
+	TTObject    returnValueCallback, empty;
 	TTAddress   adrs;
 	
 	// prepare arguments
-	args.append(NULL);
+	args.append(empty);
 	
 	returnValueCallback = TTObject("callback");
     

@@ -49,9 +49,6 @@ t_object *wrappedModularClass_new(t_symbol *name, long argc, t_atom *argv)
 		
 		x->wrappedClassDefinition = wrappedMaxClass;
 		
-#ifndef ARRAY_EXTERNAL
-		x->subscriberObject = NULL;
-#endif
 		x->useInternals = NO;
         x->internals = new TTHash();
 		x->address = kTTAdrsEmpty;

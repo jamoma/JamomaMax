@@ -25,25 +25,25 @@ void model_preset_amenities(TTPtr self)
     TTAddress                   presetAddress;
 
     // get model:address
-    EXTRA->modelInfo.get(kTTSym_address, v);
+    EXTRA->modelInfo->get(kTTSym_address, v);
     modelAdrs = v[0];
     
     // create the preset manager
-	jamoma_presetManager_create((t_object*)x, EXTRA->presetManager);
+	jamoma_presetManager_create((t_object*)x, *EXTRA->presetManager);
     
     // suscribe it under a preset node 
     presetAddress = modelAdrs.appendAddress(TTAddress("preset"));
     
-    args = TTValue(presetAddress, EXTRA->presetManager, x->patcherPtr);
+    args = TTValue(presetAddress, *EXTRA->presetManager, x->patcherPtr);
 
     if (!JamomaApplication.send("ObjectRegister", args, none)) {
 	
-        EXTRA->presetManager.set(kTTSym_address, modelAdrs);
+        EXTRA->presetManager->set(kTTSym_address, modelAdrs);
         
         // create internal TTXmlHandler
         aXmlHandler = TTObject(kTTSym_XmlHandler);
         x->internals->append(kTTSym_XmlHandler, aXmlHandler);
-        aXmlHandler.set(kTTSym_object, EXTRA->presetManager);
+        aXmlHandler.set(kTTSym_object, *EXTRA->presetManager);
         
         // if desired, load default modelClass.patcherContext.xml file preset
         if (EXTRA->attr_load_default)
@@ -83,7 +83,7 @@ void model_preset_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	TTObject        aXmlHandler;
 	TTErr			tterr;
 	
-	if (EXTRA->presetManager.valid()) {
+	if (EXTRA->presetManager->valid()) {
 		
 		fullpath = jamoma_file_read((t_object*)x, argc, argv, 'TEXT');
 		v.append(fullpath);
@@ -153,7 +153,7 @@ void model_preset_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	if (EXTRA->filewatcher)
 		filewatcher_stop(EXTRA->filewatcher);
 	
-	if (EXTRA->presetManager.valid()) {
+	if (EXTRA->presetManager->valid()) {
 		
 		// Default XML File Name
 		snprintf(filename, MAX_FILENAME_CHARS, "%s.%s.xml", x->patcherClass.c_str(), x->patcherContext.c_str());
@@ -268,7 +268,7 @@ void model_preset_filechanged(TTPtr self, char *filename, short path)
 	t_atom		a;
 	
 	// get current preset
-	EXTRA->presetManager.get("current", v);
+	EXTRA->presetManager->get("current", v);
 	
 	path_topathname(path, filename, fullpath);
 	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
@@ -292,7 +292,7 @@ void model_preset_dorecall(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 			v = TTValue(TTSymbol(atom_getsym(argv)->s_name));
 	
 	// recall the preset
-	EXTRA->presetManager.send(kTTSym_Recall, v, none);
+	EXTRA->presetManager->send(kTTSym_Recall, v, none);
 }
 
 void model_preset_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
@@ -308,7 +308,7 @@ void model_preset_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 	TTErr				tterr;
 	
 	// choose object to edit : default the cuelist
-	EXTRA->toEdit = EXTRA->presetManager;
+	*EXTRA->toEdit = *EXTRA->presetManager;
 	EXTRA->presetName = kTTSymEmpty;
 	
 	if (argc && argv) {
@@ -316,7 +316,7 @@ void model_preset_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 		if (atom_gettype(argv) == A_LONG) {
 			
 			// get presets names
-			EXTRA->presetManager.get("names", v);
+			EXTRA->presetManager->get("names", v);
 			
 			if (atom_getlong(argv) <= v.size())
 				name = v[atom_getlong(argv)-1];
@@ -332,7 +332,7 @@ void model_preset_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 		if (name != kTTSymEmpty) {
 			
 			// get preset object table
-			EXTRA->presetManager.get("presets", v);
+			EXTRA->presetManager->get("presets", v);
 			allPresets = TTHashPtr((TTPtr)v[0]);
 			
 			if (allPresets) {
@@ -341,7 +341,7 @@ void model_preset_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 				if (!allPresets->lookup(name, v)) {
 					
 					// edit a preset
-					EXTRA->toEdit = v[0];
+					*EXTRA->toEdit = v[0];
 					EXTRA->presetName = name;
 				}
 				else {
@@ -367,7 +367,7 @@ void model_preset_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 			aTextHandler = o[0];
 			
 			critical_enter(0);
-			aTextHandler.set(kTTSym_object, EXTRA->toEdit);
+			aTextHandler.set(kTTSym_object, *EXTRA->toEdit);
 			tterr = aTextHandler.send(kTTSym_Write, (TTPtr)buffer, none);
 			critical_exit(0);
 		}
@@ -431,7 +431,7 @@ void model_preset_doedit(TTPtr self)
 	delete EXTRA->text;
 	EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
-	EXTRA->toEdit = EXTRA->presetManager;
+	*EXTRA->toEdit = *EXTRA->presetManager;
 	EXTRA->presetName = kTTSymEmpty;
 }
 

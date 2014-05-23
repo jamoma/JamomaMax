@@ -460,16 +460,8 @@ TTErr jamoma_output_create(t_object *x, TTObject& returnedOutput)
 /**	Create an output object for audio signal */
 TTErr jamoma_output_create_audio(t_object *x, TTObject& returnedOutput)
 {
-	TTValue		baton;
-	TTObject    inputLinkCallback;
-    
     // prepare arguments
-	inputLinkCallback = TTObject("callback");
-	baton = TTValue(TTPtr(x), TTPtr(gensym("return_link")));
-	inputLinkCallback.set(kTTSym_baton, baton);
-	inputLinkCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
-	
-	returnedOutput = TTObject("Output.audio", inputLinkCallback);
+	returnedOutput = TTObject("Output.audio");
     return kTTErrNone;
 }
 
