@@ -29,7 +29,7 @@ typedef Unpack* UnpackPtr;
 
 
 // Prototypes for methods
-UnpackPtr	UnpackNew			(SymbolPtr msg, long argc, t_atom* argv);
+UnpackPtr	UnpackNew			(t_symbol *msg, long argc, t_atom* argv);
 void   		UnpackFree			(UnpackPtr self);
 void   		UnpackAssist		(UnpackPtr self, void* b, long msg, long arg, char* dst);
 void		UnpackGraphCallback	(UnpackPtr self, TTValue& arg);
@@ -44,7 +44,7 @@ static t_class* sUnpackClass;
 
 int TTGRAPH_EXTERNAL_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class *c;
 	
 	TTGraphInit();	
 	common_symbols_init();
@@ -68,7 +68,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-UnpackPtr UnpackNew(SymbolPtr msg, long argc, t_atom* argv)
+UnpackPtr UnpackNew(t_symbol *msg, long argc, t_atom* argv)
 {
     UnpackPtr	self;
 	TTValue		v, none;
@@ -84,7 +84,7 @@ UnpackPtr UnpackNew(SymbolPtr msg, long argc, t_atom* argv)
 		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 		
-		if (!self->graphObject->mKernel) {
+		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
@@ -132,36 +132,37 @@ void UnpackGraphCallback(UnpackPtr self, TTValue& arg)
 {
 	TTDictionaryPtr aDictionary = NULL;
 	TTValue			v;
-	long		ac;
+	long			ac;
 	t_atom*			ap;
 	TTBoolean		firstItemASymbol = NO;
 	TTSymbol		firstItem;
 	
-	arg.get(0, (TTPtr*)(&aDictionary));
+	//arg.get(0, (TTPtr*)(&aDictionary));
+	aDictionary = (TTDictionaryPtr)(TTPtr)arg[0];
 	aDictionary->getValue(v);
 	ac = v.size();
 	if (ac) {
 		ap = new t_atom[ac];
 		for (int i=0; i<ac; i++) {
-			if (v.getType() == kTypeInt8   ||
-				v.getType() == kTypeUInt8  ||
-				v.getType() == kTypeInt16  ||
-				v.getType() == kTypeUInt16 ||
-				v.getType() == kTypeInt32  ||
-				v.getType() == kTypeUInt32 ||
-				v.getType() == kTypeInt64  ||
-				v.getType() == kTypeUInt64)
+			if (v[i].type() == kTypeInt8   ||
+				v[i].type() == kTypeUInt8  ||
+				v[i].type() == kTypeInt16  ||
+				v[i].type() == kTypeUInt16 ||
+				v[i].type() == kTypeInt32  ||
+				v[i].type() == kTypeUInt32 ||
+				v[i].type() == kTypeInt64  ||
+				v[i].type() == kTypeUInt64)
 			{
 				TTInt32 ival;
 				
-				v.get(i, ival);
+				ival = v[i];
 				atom_setlong(ap+i, ival);
 			}
-			else if (v.getType() == kTypeFloat32 || v.getType() == kTypeFloat64)
+			else if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64)
 			{
-				atom_setfloat(ap+i, v.getFloat64(i));
+				atom_setfloat(ap+i, v[i]);
 			}
-			else if (v.getType() == kTypeSymbol)
+			else if (v[i].type() == kTypeSymbol)
 			{
 				TTSymbol s;
 				
