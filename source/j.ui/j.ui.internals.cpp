@@ -184,7 +184,7 @@ void ui_viewer_destroy_all(t_ui *obj)
 			
 			for (i=0; i<obj->hash_viewers->getSize(); i++) {
 				
-				hk.get(i, key);
+				key = hk[i];
 				if (!obj->hash_viewers->lookup(key, v)) {
                     
                     // Unregister viewer
