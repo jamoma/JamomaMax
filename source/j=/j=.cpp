@@ -16,7 +16,7 @@
 #include "maxAudioGraph.h"
 
 // Prototypes for methods
-t_object*	jamoma_new(t_symbol Æs, long argc, t_atom* argv);
+t_object*	jamoma_new(t_symbol *s, long argc, t_atom* argv);
 t_object*	MaxAudioGraphWrappedClass_new(t_symbol *name, long argc, t_atom* argv);
 
 // Globals
