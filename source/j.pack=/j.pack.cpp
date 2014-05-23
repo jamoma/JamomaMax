@@ -73,7 +73,7 @@ PackPtr PackNew(t_symbol* msg, long argc, t_atom* argv)
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 		self->audioGraphObject->addAudioFlag(kTTAudioGraphGenerator);
 		// Self check and return error if this did not work out.
-		if (!self->audioGraphObject->getUnitGenerator()) {
+		if (!self->audioGraphObject->getUnitGenerator().valid()) {
 			object_error(SELF, "cannot load audio.generator");
 			return NULL;
 		}
@@ -139,14 +139,14 @@ TTErr PackSetup(PackPtr self)
 }
 
 
-void PackPerform64(PackPtr self, (t_object*) dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
+void PackPerform64(PackPtr self, t_object* dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {	
 	for (TTUInt32 i=0; i < self->numChannels; i++)
 		TTAudioGraphGeneratorPtr(self->audioGraphObject->getUnitGenerator())->mBuffer->setVector64Copy(i, self->vectorSize, ins[i]);
 }
 
 
-void PackDsp64(PackPtr self, (t_object*) dsp64, short *count, double samplerate, long maxvectorsize, long flags)
+void PackDsp64(PackPtr self, t_object* dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
 	self->vectorSize = maxvectorsize;
 	
@@ -169,9 +169,9 @@ void PackDsp64(PackPtr self, (t_object*) dsp64, short *count, double samplerate,
 	self->numChannels = self->maxNumChannels;
 	self->audioGraphObject->setOutputNumChannels(0, self->numChannels);
 	
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_vectorSize, self->vectorSize);
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_maxNumChannels, self->maxNumChannels);
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_sampleRate, samplerate);
+	self->audioGraphObject->getUnitGenerator().set(kTTSym_vectorSize, self->vectorSize);
+	self->audioGraphObject->getUnitGenerator().set(kTTSym_maxNumChannels, self->maxNumChannels);
+	self->audioGraphObject->getUnitGenerator().set(kTTSym_sampleRate, samplerate);
 	
 	object_method(dsp64, gensym("dsp_add64"), self,PackPerform64, 0, NULL); 
 	//dsp_add64(dsp64, (t_object*)self, (t_perfroutine64)PackPerform64, 0, NULL);
