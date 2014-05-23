@@ -217,7 +217,7 @@ t_max_err wrappedClass_attrSet(TTPtr self, t_object* attr, long argc, t_atom* ar
 		v.resize(argc);
 		for (i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v[i] = atom_getlong(argv+i);
+				v[i] = (TTInt32)atom_getlong(argv+i);
 			else if (atom_gettype(argv+i) == A_FLOAT)
 				v[i] = atom_getfloat(argv+i);
 			else if (atom_gettype(argv+i) == A_SYM)
@@ -250,7 +250,7 @@ void wrappedClass_anything(TTPtr self, t_symbol* s, long argc, t_atom* argv)
 		v_in.resize(argc);
 		for (long i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v_in[i] = atom_getlong(argv+i);
+				v_in[i] = (TTInt32)atom_getlong(argv+i);
 			else if (atom_gettype(argv+i) == A_FLOAT)
 				v_in[i] = atom_getfloat(argv+i);
 			else if (atom_gettype(argv+i) == A_SYM)
