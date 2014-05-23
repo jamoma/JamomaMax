@@ -22,23 +22,23 @@ typedef struct PlugParameter {
 	t_object*			    patcherview;
 	TTPtr				    qelem;				// for clumping dirty events together
 	
-	SymbolPtr			    name;
+	t_symbol			    *name;
 	double				    range[2];
-    SymbolPtr   			style;
+    t_symbol				*style;
 	double				    defaultValue;
 };
 typedef PlugParameter* PlugParameterPtr;
 
 
 // Prototypes for methods
-PlugParameterPtr PlugParameterNew	(SymbolPtr msg, long argc, t_atom* argv);
-void   	PlugParameterFree			(PlugParameterPtr self);
-void	PlugParameterStartTracking	(PlugParameterPtr self);
-t_max_err	PlugParameterNotify		(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data);
-void	PlugParameterQFn			(PlugParameterPtr self);
-void   	PlugParameterAssist			(PlugParameterPtr self, void* b, long msg, long arg, char* dst);
-void	PlugParameterInt			(PlugParameterPtr self, long value);
-void	PlugParameterFloat			(PlugParameterPtr self, double value);
+PlugParameterPtr PlugParameterNew		(t_symbol *msg, long argc, t_atom* argv);
+void		PlugParameterFree			(PlugParameterPtr self);
+void		PlugParameterStartTracking	(PlugParameterPtr self);
+t_max_err	PlugParameterNotify			(PlugParameterPtr self, t_symbol *s, t_symbol *msg, t_object* sender, TTPtr data);
+void		PlugParameterQFn			(PlugParameterPtr self);
+void		PlugParameterAssist			(PlugParameterPtr self, void* b, long msg, long arg, char* dst);
+void		PlugParameterInt			(PlugParameterPtr self, long value);
+void		PlugParameterFloat			(PlugParameterPtr self, double value);
 t_max_err	PlugParameterSetName(PlugParameterPtr self, void* attr, long argc, t_atom* argv);
 t_max_err	PlugParameterSetRange(PlugParameterPtr self, void* attr, long argc, t_atom* argv);
 t_max_err	PlugParameterSetStyle(PlugParameterPtr self, void* attr, long argc, t_atom* argv);
@@ -51,10 +51,9 @@ static t_class* sPlugParameterClass;
 
 /************************************************************************************/
 // Main() Function
-
 int TTCLASSWRAPPERMAX_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class *c;
 
 	TTAudioGraphInit();	
 	common_symbols_init();
@@ -91,12 +90,13 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	sPlugParameterClass = c;
 	return 0;
 }
+ 
 
 
 /************************************************************************************/
 // Object Creation Method
 
-PlugParameterPtr PlugParameterNew(SymbolPtr msg, long argc, t_atom* argv)
+PlugParameterPtr PlugParameterNew(t_symbol *msg, long argc, t_atom* argv)
 {
     PlugParameterPtr self = PlugParameterPtr(object_alloc(sPlugParameterClass));
 	TTValue	v;
@@ -108,12 +108,12 @@ PlugParameterPtr PlugParameterNew(SymbolPtr msg, long argc, t_atom* argv)
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		
 		v.resize(2);
-		v.set(0, TT("parameter"));
-		v.set(1, TTUInt32(1));
+		v[0] = "parameter";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 		((TTGraphInput*)self->graphObject->mKernel)->setOwner(self->graphObject);
 		
-		if (!self->graphObject->mKernel) {
+		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
@@ -124,14 +124,14 @@ PlugParameterPtr PlugParameterNew(SymbolPtr msg, long argc, t_atom* argv)
 		
 		self->range[0] = 0.0;
 		self->range[1] = 1.0;
-		self->style = GENSYM("generic");
+		self->style = gensym("generic");
 		attr_args_process(self, argc, argv);
 
 		if (!self->name) {
 			if (attrStart)
 				object_attr_setsym(self, _sym_name, atom_getsym(argv));
 			else
-				object_attr_setsym(self, _sym_name, GENSYM("A parameter"));		
+				object_attr_setsym(self, _sym_name, gensym("A parameter"));
 		}
 		
 		self->qelem = qelem_new(self, (method)PlugParameterQFn);
@@ -152,11 +152,11 @@ void PlugParameterFree(PlugParameterPtr self)
 
 /************************************************************************************/
 
-t_max_err PlugParameterNotify(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg, (t_object*) sender, TTPtr data)
+t_max_err PlugParameterNotify(PlugParameterPtr self, t_symbol *s, t_symbol *msg, t_object* sender, TTPtr data)
 {
 	if (sender == self->patcherview) {
 		if (msg == _sym_attr_modified) {
-			SymbolPtr name = (SymbolPtr)object_method((t_object*)data, _sym_getname);
+			t_symbol *name = (t_symbol*)object_method((t_object*)data, _sym_getname);
 			if (name == _sym_dirty) {
 				qelem_set(self->qelem);
 			}
@@ -191,12 +191,12 @@ t_max_err PlugParameterNotify(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg,
 			destInlet = jpatchline_get_inletnum(sender);
 			
 			// if both boxes are graph objects 
-			if ( zgetfn(sourceObject, GENSYM("graph.object")) && zgetfn(destObject, GENSYM("graph.object")) ) {
+			if ( zgetfn(sourceObject, gensym("graph.object")) && zgetfn(destObject, gensym("graph.object")) ) {
 #ifdef DEBUG_NOTIFICATIONS
 				object_post(SELF, "deleting graph patchline!");
 #endif // DEBUG_NOTIFICATIONS
 				
-				object_method(destObject, GENSYM("graph.drop"), destInlet, sourceObject, sourceOutlet);
+				object_method(destObject, gensym("graph.drop"), destInlet, sourceObject, sourceOutlet);
 			}
 		out:
 			;
@@ -206,27 +206,27 @@ t_max_err PlugParameterNotify(PlugParameterPtr self, SymbolPtr s, SymbolPtr msg,
 }
 
 
-void PlugParameterIterateResetCallback(PlugParameterPtr self, (t_object*) obj)
+void PlugParameterIterateResetCallback(PlugParameterPtr self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
-	method graphResetMethod = zgetfn(obj, GENSYM("graph.reset"));
+	method graphResetMethod = zgetfn(obj, gensym("graph.reset"));
 	
 	if (graphResetMethod)
 		err = (t_max_err)graphResetMethod(obj);
 }
 
 
-void PlugParameterIterateSetupCallback(PlugParameterPtr self, (t_object*) obj)
+void PlugParameterIterateSetupCallback(PlugParameterPtr self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
-	method graphSetupMethod = zgetfn(obj, GENSYM("graph.setup"));
+	method graphSetupMethod = zgetfn(obj, gensym("graph.setup"));
 	
 	if (graphSetupMethod)
 		err = (t_max_err)graphSetupMethod(obj);
 }
 
 
-void PlugParameterAttachToPatchlinesForPatcher(PlugParameterPtr self, (t_object*) patcher)
+void PlugParameterAttachToPatchlinesForPatcher(PlugParameterPtr self, t_object* patcher)
 {
 	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
 	t_object*	box = jpatcher_get_firstobject(patcher);
@@ -237,7 +237,7 @@ void PlugParameterAttachToPatchlinesForPatcher(PlugParameterPtr self, (t_object*
 	}
 	
 	while (box) {
-		SymbolPtr	classname = jbox_get_maxclass(box);
+		t_symbol *classname = jbox_get_maxclass(box);
 		
 		if (classname == _sym_jpatcher) {
 			t_object*	subpatcher = jbox_get_object(box);
@@ -258,7 +258,7 @@ void PlugParameterQFn(PlugParameterPtr self)
 	object_post(SELF, "patcher dirtied");
 #endif // DEBUG_NOTIFICATIONS
 	
-	object_method(self->patcher, GENSYM("iterate"), (method)PlugParameterIterateSetupCallback, self, PI_DEEP, &result);
+	object_method(self->patcher, gensym("iterate"), (method)PlugParameterIterateSetupCallback, self, PI_DEEP, &result);
 	
 	// attach to all of the patch cords so we will know if one is deleted
 	// we are not trying to detach first -- hopefully this is okay and multiple attachments will be filtered (?)
@@ -276,7 +276,7 @@ void PlugParameterStartTracking(PlugParameterPtr self)
 	t_atom		result;
 	
 	// first find the top-level patcher
-	err = object_obex_lookup(self, GENSYM("#P"), &patcher);
+	err = object_obex_lookup(self, gensym("#P"), &patcher);
 	parent = patcher;
 	while (parent) {
 		patcher = parent;
@@ -284,8 +284,8 @@ void PlugParameterStartTracking(PlugParameterPtr self)
 	}
 	
 	// now iterate recursively from the top-level patcher down through all of the subpatchers
-	object_method(patcher, GENSYM("iterate"), (method)PlugParameterIterateResetCallback, self, PI_DEEP, &result);
-	object_method(patcher, GENSYM("iterate"), (method)PlugParameterIterateSetupCallback, self, PI_DEEP, &result);
+	object_method(patcher, gensym("iterate"), (method)PlugParameterIterateResetCallback, self, PI_DEEP, &result);
+	object_method(patcher, gensym("iterate"), (method)PlugParameterIterateSetupCallback, self, PI_DEEP, &result);
 	
 	
 	// now let's attach to the patcherview to get notifications about any further changes to the patch cords
