@@ -106,7 +106,7 @@ public:
 						TTString	attributeValueString;
 						TTErr		err;
 						
-						v.get(i, attributeName);
+						attributeName = v[i];
 						err = mObjectInstance->getAttributeValue(attributeName, attributeValue);
 						if (!err) {
 							content += "		";
@@ -117,7 +117,7 @@ public:
 							if (attributeValue[0].type() == kTypeSymbol) {
 								TTSymbol	attributeValueSymbol;
 								
-								attributeValue.get(0, attributeValueSymbol);
+								attributeValueSymbol = attributeValue[0];
 								attributeValueString = "TT(\"";
 								attributeValueString += attributeValueSymbol.c_str();
 								attributeValueString += "\")";
@@ -245,7 +245,7 @@ public:
 					TTErr		err;
 					TTBoolean	isArray = NO;
 					
-					v.get(i, attributeName);
+					attributeName = v[i];
 					err = mObjectInstance->getAttributeValue(attributeName, attributeValue);
 					if (!err) {						
 						if (attributeValue.size() > 1) {
@@ -274,7 +274,7 @@ public:
 						else if (attributeValue[0].type() == kTypeSymbol) {
 							TTSymbol	attributeValueSymbol;
 							
-							attributeValue.get(0, attributeValueSymbol);
+							attributeValueSymbol = attributeValue[0];
 							attributeValueString = "TT(\"";
 							attributeValueString += attributeValueSymbol.c_str();
 							attributeValueString += "\")";
