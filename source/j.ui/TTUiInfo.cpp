@@ -73,9 +73,10 @@ TTErr TTUiInfo::getSize(TTValue& value)
 TTErr TTUiInfo::setFreeze(const TTValue& newValue)
 {
     long		argc = 0;
-	t_atom*		argv = NULL;
+	t_atom      *argv = NULL;
     TTNodePtr   modelNode;
     TTErr       err;
+    TTObject    modelObject;
 	
     mFreeze = newValue;
     
@@ -84,14 +85,16 @@ TTErr TTUiInfo::setFreeze(const TTValue& newValue)
     
     if (!err) {
         
-        if (modelNode->getObject()) {
+        modelObject = modelNode->getObject();
+        
+        if (modelObject.valid()) {
             
             jamoma_ttvalue_to_Atom(mFreeze, &argc, &argv);
             
             // set freeze attribute to all j.remote (on 3 levels only as we don't have the // operator)
-            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*:freeze"), argc, argv);
-            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*/*.*:freeze"), argc, argv);
-            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*/*.*/*.*:freeze"), argc, argv);
+            jamoma_container_send(modelObject, gensym("*.*:freeze"), argc, argv);
+            jamoma_container_send(modelObject, gensym("*.*/*.*:freeze"), argc, argv);
+            jamoma_container_send(modelObject, gensym("*.*/*.*/*.*:freeze"), argc, argv);
             
             return kTTErrNone;
         }
