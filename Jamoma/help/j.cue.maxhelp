@@ -1522,7 +1522,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 568.0, 547.0, 114.0, 18.0 ],
-									"text" : "set Init ramp 1000"
+									"text" : "set ramp Init 1000"
 								}
 
 							}
@@ -1536,7 +1536,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 568.0, 526.5, 227.0, 18.0 ],
-									"text" : "set Init description \"a better description\""
+									"text" : "set description Init \"a better description\""
 								}
 
 							}
@@ -1550,7 +1550,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 568.0, 506.5, 114.0, 18.0 ],
-									"text" : "get Init ramp"
+									"text" : "get ramp Init"
 								}
 
 							}
@@ -1564,7 +1564,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 568.0, 487.0, 114.0, 18.0 ],
-									"text" : "get Init description"
+									"text" : "get description Init"
 								}
 
 							}
@@ -1577,7 +1577,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 301.0, 475.0, 205.0, 18.0 ]
+									"patching_rect" : [ 301.0, 475.0, 205.0, 18.0 ],
+									"text" : "ramp Init 1000"
 								}
 
 							}

@@ -279,8 +279,8 @@ void cue_get(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
         
         if (atom_gettype(argv) == A_SYM && atom_gettype(argv+1) == A_SYM) {
             
-            name = TTSymbol((char*)atom_getsym(argv)->s_name);
-            attribute = TTSymbol((char*)atom_getsym(argv+1)->s_name);
+            attribute = TTSymbol((char*)atom_getsym(argv)->s_name);
+            name = TTSymbol((char*)atom_getsym(argv+1)->s_name);
             
             // get cue object table
             x->wrappedObject->getAttributeValue("cues", v);
@@ -294,16 +294,16 @@ void cue_get(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
                     cue = v[0];
                     if (!cue->getAttributeValue(attribute, v)) {
                         
-                        v.prepend(attribute);
+                        v.prepend(name);
                         jamoma_ttvalue_to_Atom(v, &ac, &av);
                         
                         object_obex_dumpout(self, atom_getsym(argv), ac, av);
                     }
                     else
-                        object_error((ObjectPtr)x, "%s attribute does'nt exist", atom_getsym(argv+1)->s_name);
+                        object_error((ObjectPtr)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
                 }
                 else
-                    object_error((ObjectPtr)x, "%s cue does'nt exist", atom_getsym(argv)->s_name);
+                    object_error((ObjectPtr)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
             }
         }
     }
@@ -321,8 +321,8 @@ void cue_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
         
         if (atom_gettype(argv) == A_SYM && atom_gettype(argv+1) == A_SYM) {
             
-            name = TTSymbol((char*)atom_getsym(argv)->s_name);
-            attribute = TTSymbol((char*)atom_getsym(argv+1)->s_name);
+            attribute = TTSymbol((char*)atom_getsym(argv)->s_name);
+            name = TTSymbol((char*)atom_getsym(argv+1)->s_name);
             
             // get cue object table
             x->wrappedObject->getAttributeValue("cues", v);
@@ -339,10 +339,10 @@ void cue_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
                     jamoma_ttvalue_from_Atom(v, _sym_nothing, argc-2, argv+2);
                     
                     if (cue->setAttributeValue(attribute, v))
-                        object_error((ObjectPtr)x, "%s attribute does'nt exist", atom_getsym(argv+1)->s_name);
+                        object_error((ObjectPtr)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
                 }
                 else
-                    object_error((ObjectPtr)x, "%s cue does'nt exist", atom_getsym(argv)->s_name);
+                    object_error((ObjectPtr)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
             }
         }
     }
