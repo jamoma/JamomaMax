@@ -37,7 +37,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 531.0, 220.0, 150.0, 20.0 ],
-					"presentation_rect" : [ 528.0, 244.0, 0.0, 0.0 ],
 					"text" : "j.stencil% is quarantined"
 				}
 
@@ -100,6 +99,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-16",
 					"maxclass" : "toggle",
 					"numinlets" : 1,

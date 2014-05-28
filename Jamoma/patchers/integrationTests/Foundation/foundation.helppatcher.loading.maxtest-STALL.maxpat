@@ -29,6 +29,17 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 142.0, 42.0, 20.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
@@ -37,7 +48,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 945.0, 309.072632, 234.0, 20.0 ],
-					"presentation_rect" : [ 948.0, 300.072632, 0.0, 0.0 ],
 					"text" : "j.stencil% is quarantined",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
@@ -53,7 +63,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 945.0, 231.018158, 235.0, 20.0 ],
-					"presentation_rect" : [ 945.0, 232.226746, 0.0, 0.0 ],
 					"text" : "j.gain% is quarantined",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
@@ -452,7 +461,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 945.0, 257.036316, 234.0, 20.0 ],
-					"text" : "commenting out net.receive~ due to crash",
+					"text" : "j.net.receive~ is quarantined",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -518,6 +527,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-17",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1706,7 +1717,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 945.0, 283.054474, 234.0, 20.0 ],
-					"text" : "commenting out net.send~ due to crash",
+					"text" : "j.net.send~ is quarantined",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -1980,6 +1991,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
