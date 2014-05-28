@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 882.0, 107.0, 693.0, 547.0 ],
+		"rect" : [ 100.0, 100.0, 693.0, 547.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -101,11 +101,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 882.0, 133.0, 693.0, 521.0 ],
+						"rect" : [ 100.0, 126.0, 693.0, 521.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -155,11 +155,11 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 521.0, 213.0, 640.0, 480.0 ],
+										"rect" : [ 521.0, 213.0, 189.0, 293.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -178,17 +178,17 @@
 										"description" : "",
 										"digest" : "",
 										"tags" : "",
+										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-21",
-													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 169.0, 56.0, 33.0 ],
+													"patching_rect" : [ 50.0, 153.0, 59.0, 20.0 ],
 													"text" : "tosymbol"
 												}
 
@@ -198,12 +198,11 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-18",
-													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 191.0, 83.0, 33.0 ],
+													"patching_rect" : [ 50.0, 191.0, 87.0, 20.0 ],
 													"text" : "prepend make"
 												}
 
@@ -213,12 +212,11 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-17",
-													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 122.0, 128.0, 33.0 ],
+													"patching_rect" : [ 50.0, 115.0, 131.0, 20.0 ],
 													"text" : "sprintf %smyTestfolder"
 												}
 
@@ -228,12 +226,11 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-16",
-													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 77.0, 102.0, 33.0 ],
+													"patching_rect" : [ 50.0, 77.0, 84.0, 20.0 ],
 													"text" : "j.jamomaPath"
 												}
 
@@ -356,7 +353,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
@@ -489,8 +486,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 61.0, 249.0, 402.0, 18.0 ],
-									"text" : "make \"Macintosh HD:/Jamoma-Dev/Modular/Jamoma/myTestfolder\""
+									"patching_rect" : [ 61.0, 249.0, 402.0, 18.0 ]
 								}
 
 							}
@@ -635,7 +631,7 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../patchers/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
@@ -643,7 +639,7 @@
 , 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
