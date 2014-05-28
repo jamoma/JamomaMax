@@ -39,6 +39,9 @@ void		cue_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 void		cue_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		cue_return_order(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
+void		cue_get(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		cue_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
 void		cue_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		cue_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		cue_read_again(TTPtr self);
@@ -88,6 +91,9 @@ void WrapTTCueManagerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)cue_edit,					"dblclick",				A_CANT, 0);
 	class_addmethod(c->maxClass, (method)cue_edclose,				"edclose",				A_CANT, 0);
+    
+    class_addmethod(c->maxClass, (method)cue_get,					"get",					A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)cue_set,					"set",                  A_GIMME, 0);
 	
 	class_addmethod(c->maxClass, (method)cue_read,					"read",					A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)cue_write,					"write",				A_GIMME, 0);
@@ -257,6 +263,89 @@ void cue_return_order(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	outlet_anything(x->outlets[dump_out], gensym("order"), argc, argv);
+}
+
+void cue_get(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTHashPtr   allCues;
+	TTValue     v;
+	TTSymbol    name, attribute;
+    TTObjectBasePtr cue;
+    AtomCount	ac = 0;
+	AtomPtr		av = NULL;
+    
+    if (argc == 2) {
+        
+        if (atom_gettype(argv) == A_SYM && atom_gettype(argv+1) == A_SYM) {
+            
+            name = TTSymbol((char*)atom_getsym(argv)->s_name);
+            attribute = TTSymbol((char*)atom_getsym(argv+1)->s_name);
+            
+            // get cue object table
+            x->wrappedObject->getAttributeValue("cues", v);
+            allCues = TTHashPtr((TTPtr)v[0]);
+            
+            if (allCues) {
+                
+                // get cue
+                if (!allCues->lookup(name, v)) {
+                    
+                    cue = v[0];
+                    if (!cue->getAttributeValue(attribute, v)) {
+                        
+                        v.prepend(attribute);
+                        jamoma_ttvalue_to_Atom(v, &ac, &av);
+                        
+                        object_obex_dumpout(self, atom_getsym(argv), ac, av);
+                    }
+                    else
+                        object_error((ObjectPtr)x, "%s attribute does'nt exist", atom_getsym(argv+1)->s_name);
+                }
+                else
+                    object_error((ObjectPtr)x, "%s cue does'nt exist", atom_getsym(argv)->s_name);
+            }
+        }
+    }
+}
+
+void cue_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTHashPtr   allCues;
+	TTValue     v;
+	TTSymbol    name, attribute;
+    TTObjectBasePtr cue;
+    
+    if (argc >= 2) {
+        
+        if (atom_gettype(argv) == A_SYM && atom_gettype(argv+1) == A_SYM) {
+            
+            name = TTSymbol((char*)atom_getsym(argv)->s_name);
+            attribute = TTSymbol((char*)atom_getsym(argv+1)->s_name);
+            
+            // get cue object table
+            x->wrappedObject->getAttributeValue("cues", v);
+            allCues = TTHashPtr((TTPtr)v[0]);
+            
+            if (allCues) {
+                
+                // get cue
+                if (!allCues->lookup(name, v)) {
+                    
+                    cue = v[0];
+                    
+                    // prepare value to set
+                    jamoma_ttvalue_from_Atom(v, _sym_nothing, argc-2, argv+2);
+                    
+                    if (cue->setAttributeValue(attribute, v))
+                        object_error((ObjectPtr)x, "%s attribute does'nt exist", atom_getsym(argv+1)->s_name);
+                }
+                else
+                    object_error((ObjectPtr)x, "%s cue does'nt exist", atom_getsym(argv)->s_name);
+            }
+        }
+    }
 }
 
 void cue_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
