@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 181.0, 44.0, 221.0, 324.0 ],
@@ -113,7 +113,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 610.0, 117.0, 640.0, 480.0 ],
@@ -255,7 +255,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -361,7 +361,7 @@
 											"major" : 6,
 											"minor" : 1,
 											"revision" : 7,
-											"architecture" : "x64"
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 339.0, 99.0, 701.0, 484.0 ],
@@ -1424,7 +1424,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 323.0, 44.0, 360.0, 237.0 ],
@@ -1566,7 +1566,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 191.0, 44.0, 293.0, 225.0 ],
@@ -1682,7 +1682,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 3.0, 44.0, 1253.0, 747.0 ],
@@ -1706,6 +1706,38 @@
 						"tags" : "",
 						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"frgb" : 0.0,
+									"id" : "obj-92",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 59.0, 305.0, 150.0, 19.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 7.0, 144.0, 18.0, 19.0 ],
+									"text" : "*"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-2",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 35.0, 639.0, 130.0, 17.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 17.0, 144.0, 120.0, 17.0 ],
+									"text" : "j.view"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -1762,7 +1794,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 84.0, 345.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 145.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 164.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -1817,7 +1849,7 @@
 											"major" : 6,
 											"minor" : 1,
 											"revision" : 7,
-											"architecture" : "x64"
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 48.0, 44.0, 752.0, 692.0 ],
@@ -1854,7 +1886,7 @@
 															"major" : 6,
 															"minor" : 1,
 															"revision" : 7,
-															"architecture" : "x64"
+															"architecture" : "x86"
 														}
 ,
 														"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -2038,7 +2070,7 @@
 															"major" : 6,
 															"minor" : 1,
 															"revision" : 7,
-															"architecture" : "x64"
+															"architecture" : "x86"
 														}
 ,
 														"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -2175,7 +2207,7 @@
 															"major" : 6,
 															"minor" : 1,
 															"revision" : 7,
-															"architecture" : "x64"
+															"architecture" : "x86"
 														}
 ,
 														"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -2534,7 +2566,7 @@
 													"outlettype" : [ "int", "", "" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 50.0, 324.0, 224.0, 20.0 ],
-													"prefix" : "Macintosh HD:/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/help/",
+													"prefix" : "data:/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/help/",
 													"types" : "JSON"
 												}
 
@@ -3780,7 +3812,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 285.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 405.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 424.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3796,7 +3828,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 265.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 385.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 404.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3828,7 +3860,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 225.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 365.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 384.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3844,7 +3876,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 205.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 345.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 364.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3860,7 +3892,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 185.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 325.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 344.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3876,7 +3908,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 165.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 305.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 324.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3892,7 +3924,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 145.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 285.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 304.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3908,7 +3940,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 125.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 265.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 284.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3924,7 +3956,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 105.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 245.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 264.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3940,7 +3972,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 85.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 225.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 244.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3956,7 +3988,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 65.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 205.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 224.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3972,7 +4004,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 59.0, 45.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 185.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 204.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3988,7 +4020,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 69.0, 330.0, 150.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 165.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 7.0, 184.0, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -4004,7 +4036,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 69.0, 605.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 405.0, 121.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 424.0, 121.0, 17.0 ],
 									"text" : "j.ui"
 								}
 
@@ -4020,7 +4052,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 35.0, 505.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 325.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 344.0, 120.0, 17.0 ],
 									"text" : "j.receive~"
 								}
 
@@ -4036,7 +4068,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 60.0, 585.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 385.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 404.0, 120.0, 17.0 ],
 									"text" : "j.send~"
 								}
 
@@ -4098,7 +4130,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 55.0, 565.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 365.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 384.0, 120.0, 17.0 ],
 									"text" : "j.send"
 								}
 
@@ -4114,7 +4146,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 69.0, 545.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 345.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 364.0, 120.0, 17.0 ],
 									"text" : "j.return"
 								}
 
@@ -4146,7 +4178,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 35.0, 485.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 305.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 324.0, 120.0, 17.0 ],
 									"text" : "j.receive"
 								}
 
@@ -4162,7 +4194,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 69.0, 465.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 285.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 304.0, 120.0, 17.0 ],
 									"text" : "j.ramp"
 								}
 
@@ -4178,7 +4210,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 69.0, 425.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 266.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 285.0, 120.0, 17.0 ],
 									"text" : "j.parameter"
 								}
 
@@ -4194,7 +4226,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 69.0, 405.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 246.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 265.0, 120.0, 17.0 ],
 									"text" : "j.out~"
 								}
 
@@ -4210,7 +4242,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 69.0, 385.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 225.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 244.0, 120.0, 17.0 ],
 									"text" : "j.out"
 								}
 
@@ -4226,7 +4258,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 69.0, 365.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 205.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 224.0, 120.0, 17.0 ],
 									"text" : "j.message"
 								}
 
@@ -4242,7 +4274,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 70.0, 345.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 185.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 204.0, 120.0, 17.0 ],
 									"text" : "j.init"
 								}
 
@@ -4258,7 +4290,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 70.0, 305.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 145.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 164.0, 120.0, 17.0 ],
 									"text" : "j.in"
 								}
 
@@ -4274,7 +4306,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 55.0, 625.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 165.0, 120.0, 17.0 ],
+									"presentation_rect" : [ 17.0, 184.0, 120.0, 17.0 ],
 									"text" : "j.in~"
 								}
 
@@ -4291,7 +4323,7 @@
 									"patching_rect" : [ 70.0, 285.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 125.0, 120.0, 17.0 ],
-									"text" : "j.hub"
+									"text" : "j.model"
 								}
 
 							}
@@ -4497,7 +4529,7 @@
 									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 1276.0, 70.0 ],
+									"patching_rect" : [ 0.0, 0.0, 1253.0, 70.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 0.0, 0.0, 1275.0, 68.0 ],
 									"prototypename" : "bphelp",
@@ -6084,6 +6116,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-96", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-37", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
@@ -6765,7 +6806,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 320.0, 44.0, 604.0, 402.0 ],
@@ -7386,7 +7427,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 164.0, 47.0, 959.0, 752.0 ],
@@ -7670,7 +7711,7 @@
 											"major" : 6,
 											"minor" : 1,
 											"revision" : 7,
-											"architecture" : "x64"
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -11894,42 +11935,42 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../../patchers/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.getDescriptionFromHtml.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/getDescriptionFromHtml",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/getDescriptionFromHtml",
 				"patcherrelativepath" : "../../patchers/components/_deprecated/getDescriptionFromHtml",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/javascript",
 				"patcherrelativepath" : "../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
