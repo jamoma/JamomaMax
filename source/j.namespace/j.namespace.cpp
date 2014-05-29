@@ -196,6 +196,10 @@ void nmspc_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *ar
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTAddress absoluteAddress;
+    
+    // the wrapped object is maybe destroyed
+    if (!x->wrappedObject.valid())
+        return;
 	
 	if (argc && argv) {
 		
@@ -215,6 +219,10 @@ void nmspc_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	t_symbol	*s;
 	TTInt32     i;
 	t_atom		a[1], c[2], j[3];
+    
+    // the wrapped object is maybe destroyed
+    if (!x->wrappedObject.valid())
+        return;
 	
 	// Ask Explorer object
 	x->wrappedObject.get("output", v);
@@ -362,6 +370,10 @@ void nmspc_return_selection(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	TTSymbol    output;
 	TTUInt32	i, state;
 	t_atom		u[2], j[6];
+    
+    // the wrapped object is maybe destroyed
+    if (!x->wrappedObject.valid())
+        return;
 	
 	// Ask Explorer object
 	x->wrappedObject.get("output", v);
