@@ -18,7 +18,7 @@
 #include "j.dbap.h"
 
 // Globals
-t_class		*this_class;								// Required. Global pointing to this class
+t_class		*this_class = 0;								// Required. Global pointing to this class
 t_object	*dummy = NULL;
 
 /************************************************************************************/
@@ -29,6 +29,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	t_class *c;
 
 	common_symbols_init();
+	
 	ps_rolloff			= gensym("rolloff");
 	ps_src_position		= gensym("src_position");
 	ps_src_gain			= gensym("src_gain");
@@ -44,7 +45,13 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 
 
 	// Define our class
-	c = class_new("j.dbap",(method)dbap_new, (method)dbap_free, sizeof(t_dbap), (method)0L, A_GIMME, 0);	
+	c = class_new("j.dbap",
+				  (method)dbap_new,
+				  (method)dbap_free,
+				  sizeof(t_dbap),
+				  (method)NULL,
+				  A_GIMME,
+				  0);
 
 	// Make methods accessible for our class: 
 	class_addmethod(c, (method)dbap_blur,				"blur",			A_GIMME,	0);
@@ -79,8 +86,8 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	CLASS_ATTR_LONG(c,		"num_destinations",	0,		t_dbap,	attr_num_destinations);
 	CLASS_ATTR_ACCESSORS(c,	"num_destinations",	NULL,	dbap_attr_setnum_destinations);
 
-	CLASS_ATTR_DOUBLE(c,		"rolloff",			0,		t_dbap,	attr_rolloff);
-	CLASS_ATTR_ACCESSORS(c,	"rolloff",			NULL,	dbap_attr_setrolloff);
+	CLASS_ATTR_DOUBLE(c,	"rolloff",			0,		t_dbap,	attr_rolloff);
+	CLASS_ATTR_ACCESSORS(c,	"rolloff",			(method)NULL,	(method)dbap_attr_setrolloff);
 	
 	// Finalize our class
 	class_register(CLASS_BOX, c);
