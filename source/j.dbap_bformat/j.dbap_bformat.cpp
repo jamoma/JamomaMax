@@ -17,7 +17,7 @@
 #include "j.dbap_bformat.h"
 
 // Globals
-t_class		*this_class;				// Required. Global pointing to this class 
+t_class		*this_class = 0;				// Required. Global pointing to this class
 
 /************************************************************************************/
 // Main() Function
