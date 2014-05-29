@@ -14,7 +14,7 @@
 
 
 // This is currently restricted if memory for struct is to be assigned using malloc
-const long MAX_NUM_SOURCES = 32;
+const long MAX_NUM_SOURCES = 16;
 const long MAX_NUM_DESTINATIONS = 32;
 
 
