@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 353.0, 234.0, 1180.0, 555.0 ],
+		"rect" : [ 93.0, 217.0, 1180.0, 555.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -85,6 +85,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-20",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -112,6 +114,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-18",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -139,6 +143,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-5",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -218,7 +224,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 215.0, 333.0, 292.0, 47.0 ],
+					"patching_rect" : [ 215.0, 333.0, 295.0, 47.0 ],
 					"text" : "test.assert Jamoma/Modular/j.dataspace/nonexisting_dataspace @tags Jamoma Modular j.dataspace"
 				}
 
@@ -277,7 +283,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 516.0, 333.0, 298.0, 47.0 ],
+					"patching_rect" : [ 516.0, 333.0, 299.0, 47.0 ],
 					"text" : "test.assert Jamoma/Modular/j.dataspace/input_unit_is_nonsense @tags Jamoma Modular j.dataspace"
 				}
 

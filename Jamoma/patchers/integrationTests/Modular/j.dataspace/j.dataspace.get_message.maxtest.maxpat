@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 270.0, 81.0, 1170.0, 704.0 ],
@@ -85,6 +85,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-30",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -112,6 +114,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-26",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -138,6 +142,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-25",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -164,6 +170,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-22",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -190,6 +198,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-19",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -301,7 +311,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 557.200012, 627.5, 260.0, 47.0 ],
+					"patching_rect" : [ 557.200012, 627.5, 261.0, 47.0 ],
 					"text" : "test.assert Jamoma/Modular/.jataspace/message/getinput @tags Jamoma Modular j.dataspace"
 				}
 

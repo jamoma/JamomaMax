@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 0.0, 83.0, 1223.0, 917.0 ],
@@ -39,7 +39,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 882.0, 281.5, 150.0, 37.0 ],
-					"presentation_rect" : [ 882.0, 280.0, 0.0, 0.0 ],
 					"text" : "Fails on 64-bit unless single-precision",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
@@ -320,6 +319,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-15",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -346,6 +347,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-40",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -373,6 +376,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-38",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -400,6 +405,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-36",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -427,6 +434,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-34",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -454,6 +463,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-32",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -481,6 +492,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-30",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -508,6 +521,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-28",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -535,6 +550,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-27",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
