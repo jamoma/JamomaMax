@@ -236,7 +236,7 @@ void filter_gettypes(t_filter *x)
 	TTGetRegisteredClassNamesForTags(v, TT("filter"));
 	for (TTUInt16 i=0; i<v.size(); i++) {
 		TTSymbol classname;
-		v.get(i, classname);
+		classname = v[i];
 		atom_setsym(a+1, gensym((char*)classname.c_str()));
 		object_obex_dumpout(x, gensym("types"), 2, a);
 	}
