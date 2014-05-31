@@ -25,8 +25,7 @@ typedef struct _oscroute{						///< Data Structure for this object.
 	t_symbol		*arguments[MAX_ARGCOUNT];	///< Symbols to match.
 	long unsigned	arglen[MAX_ARGCOUNT];		///< strlen of symbols to match,
 	short			num_args;
-	//long			attr_strip;					///< ATTRIBUTE: 1 = strip leading slash off any messages.
-	void			*proxy_inlet;				///< Pointer to the second inlet (when present).
+	void*			proxy_inlet[MAX_ARGCOUNT];	///< Array of pointers to inlets for changing what symbols to route.
 } t_oscroute;
 
 // Prototypes for our methods:
