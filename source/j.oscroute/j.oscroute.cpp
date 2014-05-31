@@ -14,36 +14,7 @@
  */
 
 
-#include "JamomaForMax.h"
-
-#define MAX_ARGCOUNT 100
-#define MAX_MESS_SIZE 2048
-
-typedef struct _oscroute{					// Data Structure for this object
-	t_object		ob;							// REQUIRED: Our object
-	void			*outlets[MAX_ARGCOUNT];		// my outlet array
-	void			*outlet_overflow;			// this outlet doubles as the dumpout outlet
-	t_symbol		*arguments[MAX_ARGCOUNT];	// symbols to match
-	long unsigned	arglen[MAX_ARGCOUNT];		// strlen of symbols to match
-	short			num_args;
-	//long			attr_strip;					// ATTRIBUTE: 1 = strip leading slash off any messages
-	void			*proxy_inlet;				// pointer to the second inlet (when present)
-} t_oscroute;
-
-// Prototypes for our methods:
-void *oscroute_new(t_symbol *s, long argc, t_atom *argv);
-void oscroute_free(t_oscroute *x);
-void oscroute_assist(t_oscroute *x, void *b, long msg, long arg, char *dst);
-void oscroute_bang(t_oscroute *x);
-void oscroute_int(t_oscroute *x, long n);
-void oscroute_float(t_oscroute *x, double f);
-void oscroute_list(t_oscroute *x, t_symbol *msg, long argc, t_atom *argv);
-void oscroute_symbol(t_oscroute *x, t_symbol *msg, long argc, t_atom *argv);
-//void oscroute_list(t_oscroute *x, t_symbol *msg, long argc, t_atom *argv);
-
-// Globals
-t_class		*oscroute_class;				// Required: Global pointer for our class
-
+#include "j.oscroute.h"
 
 /************************************************************************************/
 // Main() Function
