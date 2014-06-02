@@ -510,6 +510,10 @@ void ui_return_model_content(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
     TTBoolean   audioInput = NO;
     TTBoolean   audioOutput = NO;
     
+    // the viewers table must be still available
+    if (!obj->hash_viewers)
+        return;
+    
 	// model namespace observation
 	if (obj->modelAddress != kTTAdrsEmpty) {
         
