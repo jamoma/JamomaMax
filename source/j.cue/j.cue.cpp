@@ -268,8 +268,8 @@ void cue_get(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	TTValue     v;
 	TTSymbol    name, attribute;
     TTObject	cue;
-    AtomCount	ac = 0;
-	AtomPtr		av = NULL;
+    long        ac = 0;
+	t_atom      *av = NULL;
     
     if (argc == 2) {
         
@@ -296,10 +296,10 @@ void cue_get(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                         object_obex_dumpout(self, atom_getsym(argv), ac, av);
                     }
                     else
-                        object_error((ObjectPtr)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
+                        object_error((t_object*)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
                 }
                 else
-                    object_error((ObjectPtr)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
+                    object_error((t_object*)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
             }
         }
     }
@@ -335,16 +335,16 @@ void cue_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                     jamoma_ttvalue_from_Atom(v, _sym_nothing, argc-2, argv+2);
                     
                     if (cue.set(attribute, v))
-                        object_error((ObjectPtr)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
+                        object_error((t_object*)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
                 }
                 else
-                    object_error((ObjectPtr)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
+                    object_error((t_object*)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
             }
         }
     }
 }
 
-void cue_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void cue_read(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	defer(self, (method)cue_doread, msg, argc, argv);
 }
