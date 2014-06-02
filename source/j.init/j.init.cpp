@@ -104,8 +104,12 @@ void *init_new(t_symbol *s, long argc, t_atom *argv)
 }
 
 void init_free(t_init *x)
-{	
-    ;
+{
+    // release the receiver
+    x->initReceiver = TTObject();
+    
+    // release the subscriber
+    x->subscriberObject = TTObject();
 }
 
 
