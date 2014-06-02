@@ -194,6 +194,7 @@ void ui_viewer_destroy_all(t_ui *obj)
 			}
 		}
 		delete obj->hash_viewers;
+        obj->hash_viewers = NULL;
 	}
 }
 
