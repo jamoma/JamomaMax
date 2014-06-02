@@ -186,7 +186,7 @@ void model_subscribe(TTPtr self)
 	TTBoolean					isSubModel;
 	TTAddress                   returnedAddress, adrs;
     TTSymbol                    description;
-	long					ac;
+	long                        ac;
 	t_atom*						av;
     t_atom                      a;
 	t_object*					aPatcher = jamoma_patcher_get((t_object*)x);
@@ -221,7 +221,6 @@ void model_subscribe(TTPtr self)
             // suscribe it under a model node
             adrs = returnedAddress.appendAddress(TTAddress("model"));
             args = TTValue(adrs, *EXTRA->modelInfo, x->patcherPtr);
-            
             
             if (JamomaApplication.send("ObjectRegister", args, none))
                 object_error((t_object*)x, "can't subscribe model object");
@@ -282,7 +281,7 @@ void model_subscribe(TTPtr self)
                 if (model_test_amenities(self, TTSymbol("data")) || model_test_amenities(self, TTSymbol("audio"))) {
                     
                     // observe model's content to create signal in/out datas
-                    makeInternals_receiver(self, returnedAddress, kTTSym_content, gensym("return_content"), aReceiver, YES, YES); // we need to deferlow to avoid lock crash on TTContainer content
+                    makeInternals_receiver(self, returnedAddress, kTTSym_content, gensym("return_content"), aReceiver, YES, NO); // don't deferlow to not reset EXTRA->readingContent 
                     aReceiver.send(kTTSym_Get);
                 }
 			}
