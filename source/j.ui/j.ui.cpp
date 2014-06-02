@@ -262,9 +262,10 @@ void ui_free(t_ui *x)
     if (x->preset_names)
 		sysmem_freeptr(x->preset_names);
 	
+    x->hash_receivers->clear();
+    
 	ui_unregister_info(x);
 	ui_viewer_destroy_all(x);
-	x->hash_receivers->clear();
 }
 
 
