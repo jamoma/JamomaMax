@@ -12,6 +12,7 @@
     - All tests for Graph (https://github.com/jamoma/JamomaMax/issues/544)
     - All tests for AudioGraph (https://github.com/jamoma/JamomaMax/issues/543)
 - Fixed help pacth and ref page for j.dcblock=
+- j.oscroute: Routing arguments can be changed dynamically (https://github.com/jamoma/JamomaMax/issues/181)
 
 
 ### 0.6.0.a34 (2014-05-10)

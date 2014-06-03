@@ -81,7 +81,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1209.0, 319.0, 289.0, 37.0 ],
-					"presentation_rect" : [ 1281.0, 314.0, 0.0, 0.0 ],
 					"text" : "We need to decide on specifications: Are we to pass on OSC messages as absolute or relative?",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
@@ -588,6 +587,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-82",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -631,6 +632,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-79",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1526,21 +1529,21 @@
 		"dependency_cache" : [ 			{
 				"name" : "test.string.equals.maxpat",
 				"bootpath" : "/Applications/Max 6.1/packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/packages/testpackage/misc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "test.string.equals.js",
 				"bootpath" : "/Applications/Max 6.1/packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/packages/testpackage/misc",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../components/thru",
+				"patcherrelativepath" : "../../../components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
