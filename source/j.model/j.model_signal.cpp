@@ -22,6 +22,10 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
     TTAddress   modelAdrs;
     TTValue     v;
     
+    // don't do nothing while internals are processed or the internals table is not availalble
+    if (x->iterateInternals || x->internals == NULL)
+        return;
+    
     // get model:address
     EXTRA->modelInfo->get(kTTSym_address, v);
     modelAdrs = v[0];
