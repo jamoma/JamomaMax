@@ -281,7 +281,7 @@ void model_subscribe(TTPtr self)
                 if (model_test_amenities(self, TTSymbol("data")) || model_test_amenities(self, TTSymbol("audio"))) {
                     
                     // observe model's content to create signal in/out datas
-                    makeInternals_receiver(self, returnedAddress, kTTSym_content, gensym("return_content"), aReceiver, YES, NO); // don't deferlow to not reset EXTRA->readingContent 
+                    makeInternals_receiver(self, returnedAddress, kTTSym_content, gensym("return_content"), aReceiver, NO, YES); // don't deferlow to not reset EXTRA->readingContent
                     aReceiver.send(kTTSym_Get);
                 }
 			}
