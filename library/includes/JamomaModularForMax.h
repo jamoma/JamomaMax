@@ -457,6 +457,14 @@ void JAMOMA_EXPORT jamoma_patcher_get_model_or_view(t_object *patcher, t_object 
  */
 void JAMOMA_EXPORT jamoma_patcher_get_model_patcher(t_object *patcher, TTSymbol modelClass, t_object **returnedModelPatcher);
 
+/** Look into the given ptahcer to know if there are data or audio inputs and outputs
+ @param patcher
+ @param dataInput       is there a data input in the patcher ?
+ @param dataOutput      is there a data output in the patcher ?
+ @param audioInput      is there an audio input in the patcher ?
+ @param audioOutput     is there an audio output in the patcher ?
+ */
+void JAMOMA_EXPORT jamoma_patcher_get_input_output(t_object *patcher, TTBoolean& dataInput, TTBoolean& dataOutput, TTBoolean& audioInput, TTBoolean& audioOutput);
 
 
 // Tools

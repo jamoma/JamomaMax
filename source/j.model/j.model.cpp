@@ -103,6 +103,9 @@ void WrappedContainerClass_new(TTPtr self, long argc, t_atom *argv)
 #ifndef JCOM_VIEW
 	x->patcherContext = kTTSym_model;
 	x->wrappedObject.set(kTTSym_service, kTTSym_model);
+    
+    // DEBUG
+    x->wrappedObject.track(YES);
 #else
 	x->patcherContext = kTTSym_view;
 	x->wrappedObject.set(kTTSym_service, kTTSym_view);

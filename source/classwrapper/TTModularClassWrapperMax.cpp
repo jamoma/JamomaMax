@@ -121,10 +121,20 @@ void wrappedModularClass_unregister(WrappedModularInstancePtr x)
 	TTErr		err;
     
 #ifndef ARRAY_EXTERNAL
+    
 	x->subscriberObject = TTObject();
-	
-	if (x->wrappedObject.name() != kTTSym_Application)
+    
+	if (x->wrappedObject.name() != kTTSym_Application) {
+        
+        // DEBUG
+        TTObjectBasePtr objectInstance = x->wrappedObject.instance();
+        
         x->wrappedObject = TTObject();
+        
+        // DEBUG
+        TTUInt32 refCount = objectInstance->getReferenceCount();
+    }
+
 #endif
 	
     if (!x->internals->isEmpty()) {
