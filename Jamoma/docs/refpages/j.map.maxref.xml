@@ -70,7 +70,7 @@
 	<methodlist>
 		<method name="int">
 			<arglist>
-				<arg name="ARG_NAME_0" type="int" optional="0" />
+				<arg name="input value" type="int" optional="0" />
 			</arglist>
 			<digest>
 				Value to be mapped
@@ -81,7 +81,7 @@
 		</method>
 		<method name="float">
 			<arglist>
-				<arg name="ARG_NAME_0" type="float" optional="0" />
+				<arg name="input value" type="float" optional="0" />
 			</arglist>
 			<digest>
 				Value to be mapped
@@ -92,7 +92,7 @@
 		</method>
 		<method name="list">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="input value" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Values to be mapped
@@ -103,7 +103,7 @@
 		</method>
 		<method name="anything">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="input value" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Value to be mapped			
@@ -114,13 +114,13 @@
 		</method>
 		<method name="dump">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="Dump" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Dump j.map's current state
 			</digest>
 			<description>
-				TEXT_HERE
+				Dump j.map's current state
 			</description>
 		</method>
 		<method name="reset">
@@ -137,10 +137,10 @@
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Enable j.map
 			</digest>
 			<description>
-				TEXT_HERE
+				Enable j.map mapping
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
