@@ -68,7 +68,8 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)model_preset_read_again,           "preset:read/again",	0);
 	class_addmethod(c->maxClass, (method)model_preset_write_again,          "preset:write/again",	0);
     
-    class_addmethod(c->maxClass, (method)model_signal_return_content,       "return_content",		A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_amenities,            "input_created",		A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_amenities,            "output_created",		A_CANT, 0);
     
     class_addmethod(c->maxClass, (method)model_signal_return_data_mute,     "return_data_mute",		A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_signal_return_data_bypass,   "return_data_bypass",	A_CANT, 0);
@@ -124,7 +125,6 @@ void WrappedContainerClass_new(TTPtr self, long argc, t_atom *argv)
     EXTRA->toEdit = new TTObject();
 	*EXTRA->toEdit = x->wrappedObject;
 	EXTRA->presetName = kTTSymEmpty;
-    EXTRA->readingContent = NO;
     EXTRA->attr_amenities = new TTHash();
     EXTRA->all_amenities = NO;
     EXTRA->no_amenities = NO;
@@ -280,9 +280,9 @@ void model_subscribe(TTPtr self)
                 // Add amenities relative to signal informations
                 if (model_test_amenities(self, TTSymbol("data")) || model_test_amenities(self, TTSymbol("audio"))) {
                     
-                    // observe model's content to create signal in/out datas
-                    makeInternals_receiver(self, returnedAddress, kTTSym_content, gensym("return_content"), aReceiver, NO, YES); // don't deferlow to not reset EXTRA->readingContent
-                    aReceiver.send(kTTSym_Get);
+                    // look at model's content to create signal in/out datas
+                    model_signal_amenities(self, _sym_nothing, 0, NULL);
+                    
                 }
 			}
 			

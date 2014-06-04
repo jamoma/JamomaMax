@@ -287,6 +287,7 @@ void out_subscribe(TTPtr self)
     TTNodePtr   returnedContextNode = NULL;
 	TTAddress	returnedAddress, parentAddress;
 	TTString	formatDescription, sInstance;
+    t_object    *modelOrView = NULL;
 	
 #ifdef J_OUT_TILDE
 	signalAddress = TTAddress("audio");
@@ -318,6 +319,13 @@ void out_subscribe(TTPtr self)
 		returnedNode->getParent()->getAddress(parentAddress);
 		inputAddress = parentAddress.appendAddress(TTAddress("in")).appendInstance(EXTRA->instance);
 		x->wrappedObject.set("inputAddress", inputAddress);
+        
+        // get model or view object
+        jamoma_patcher_get_model_or_view(x->patcherPtr, &modelOrView);
+        
+        // notify the model there is something new concerning signal processing
+        if (modelOrView)
+            object_method_typed(modelOrView, gensym("output_created"), 0, NULL, NULL);
 	}
 }
 

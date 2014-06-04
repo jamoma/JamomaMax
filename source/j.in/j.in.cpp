@@ -309,6 +309,14 @@ void in_subscribe(TTPtr self)
 		returnedNode->getParent()->getAddress(parentAddress);
 		outputAddress = parentAddress.appendAddress(TTAddress("out")).appendInstance(EXTRA->instance);
 		x->wrappedObject.set(TTSymbol("outputAddress"), outputAddress);
+        
+        // get model or view object
+        if (!EXTRA->modelOrView)
+            jamoma_patcher_get_model_or_view(x->patcherPtr, &EXTRA->modelOrView);
+        
+        // notify the model there is something new concerning signal processing
+        if (EXTRA->modelOrView)
+            object_method_typed(EXTRA->modelOrView, gensym("input_created"), 0, NULL, NULL);
 	}
 }
 
@@ -485,11 +493,9 @@ void WrappedInputClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *ar
     // route any message to the model
     if (msg != _sym_nothing && msg != gensym("jit_matrix")) {
         
-        if (!EXTRA->modelOrView) {
-            
-            // get model or view object
+        // get model or view object
+        if (!EXTRA->modelOrView)
             jamoma_patcher_get_model_or_view(x->patcherPtr, &EXTRA->modelOrView);
-        }
         
         object_method_typed(EXTRA->modelOrView, msg, argc, argv, NULL);
         return;
