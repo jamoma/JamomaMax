@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 257.0, 195.0, 1179.0, 711.0 ],
+		"rect" : [ 61.0, 245.0, 1179.0, 711.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -92,8 +92,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 693.25, 476.5, 20.0, 20.0 ],
-									"presentation_rect" : [ 871.5, 395.5, 0.0, 0.0 ]
+									"patching_rect" : [ 693.25, 476.5, 20.0, 20.0 ]
 								}
 
 							}
@@ -105,8 +104,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 598.5, 476.5, 20.0, 20.0 ],
-									"presentation_rect" : [ 776.75, 396.5, 0.0, 0.0 ]
+									"patching_rect" : [ 598.5, 476.5, 20.0, 20.0 ]
 								}
 
 							}
@@ -118,8 +116,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 503.75, 476.5, 20.0, 20.0 ],
-									"presentation_rect" : [ 683.0, 398.5, 0.0, 0.0 ]
+									"patching_rect" : [ 503.75, 476.5, 20.0, 20.0 ]
 								}
 
 							}
@@ -229,7 +226,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
@@ -665,7 +662,6 @@
 					}
 ,
 					"patching_rect" : [ 418.5, 266.0, 63.0, 18.0 ],
-					"presentation_rect" : [ 418.5, 270.0, 0.0, 0.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -696,7 +692,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -902,7 +898,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -961,11 +957,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 257.0, 221.0, 1179.0, 685.0 ],
+						"rect" : [ 0.0, 26.0, 1179.0, 685.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1079,7 +1075,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
@@ -1391,7 +1387,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
@@ -2654,11 +2650,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1179.0, 685.0 ],
+						"rect" : [ 61.0, 271.0, 1179.0, 685.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2757,8 +2753,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 476.0, 201.0, 62.0, 18.0 ],
-									"text" : "enable $1"
+									"patching_rect" : [ 476.0, 201.0, 59.0, 18.0 ],
+									"text" : "active $1"
 								}
 
 							}
@@ -2929,7 +2925,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 1681.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 1179.0, 70.0 ],
 					"varname" : "maxhelpui"
 				}
 
@@ -2948,7 +2944,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
