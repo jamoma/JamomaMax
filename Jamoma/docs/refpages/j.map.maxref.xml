@@ -186,6 +186,14 @@
 				Address of a j.parameter or j.return to be used for mapping to another j.parameter or j.message
 			</description>
 		</attribute>
+		<attribute name="input/index" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Pick an item from source parameter
+			</digest>
+			<description>
+				Pick an item from source parameter, if it is of type array (default 0 = all)
+			</description>
+		</attribute>
 		<attribute name="input/max" get="1" set="1" type="float" size="1">
 			<digest>
 				Maximum input value
