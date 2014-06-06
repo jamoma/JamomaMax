@@ -174,6 +174,9 @@ void WrappedContainerClass_free(TTPtr self)
 	}
     
     delete EXTRA->toEdit;
+    
+    // unbind the container
+    x->wrappedObject.set(kTTSym_address, kTTSymEmpty);
 
 	free(EXTRA);
 }
