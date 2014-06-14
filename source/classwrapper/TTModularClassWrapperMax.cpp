@@ -175,6 +175,7 @@ void wrappedModularClass_free(WrappedModularInstancePtr x)
 	x->argv = NULL;
     
     delete x->internals;
+    x->internals = NULL;
 	
 	if (spec->_free)
 		spec->_free(x);

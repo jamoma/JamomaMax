@@ -16,52 +16,25 @@
 
 #include "j.model.h"
 
-void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void model_signal_amenities(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
-    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTAddress   modelAdrs;
+    WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
+
+    // don't do nothing while internals are processed or the internals table is not availalble
+    if (x->iterateInternals || x->internals == NULL)
+        return;
+    
+    TTAddress   modelAdrs, relativeAddress;
+    TTObject    aData, aSender;
+    TTBoolean   dataInput, dataOutput, audioInput, audioOutput;
     TTValue     v;
     
     // get model:address
     EXTRA->modelInfo->get(kTTSym_address, v);
     modelAdrs = v[0];
-    
-    // to avoid infinite loop (as there are data registrations here)
-    if (EXTRA->readingContent)
-        return;
-    
-    EXTRA->readingContent = YES;
-    
-    TTAddress       relativeAddress;
-    TTBoolean       dataInput = NO;
-    TTBoolean       dataOutput = NO;
-    TTBoolean       audioInput = NO;
-    TTBoolean       audioOutput = NO;
-    TTObject        aData, aSender;
-    
-    // look the content to know which object exist
-    for (long i=0; i<argc; i++) {
-        
-        relativeAddress = TTAddress(atom_getsym(argv+i)->s_name);
-        
-        if (relativeAddress.getName() == TTSymbol("in")) {
-            
-            if (relativeAddress.getParent() == TTAddress("data"))
-                dataInput = YES;
-            
-            else if (relativeAddress.getParent() == TTAddress("audio"))
-                audioInput = YES;
-            
-        }
-        else if (relativeAddress.getName() == TTSymbol("out")) {
-            
-            if (relativeAddress.getParent() == TTAddress("data"))
-                dataOutput = YES;
-            
-            else if (relativeAddress.getParent() == TTAddress("audio"))
-                audioOutput = YES;
-        }
-    }
+
+    // look into the patcher to know if there are data or audio input and output
+    jamoma_patcher_get_input_output(x->patcherPtr, dataInput, dataOutput, audioInput, audioOutput);
     
     if (model_test_amenities(self, TTSymbol("data"))) {
         
@@ -210,8 +183,6 @@ void model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *a
                 makeInternals_sender(self, modelAdrs, TTSymbol("audio/out.*:gain"), aSender);
         }
     }
-    
-    EXTRA->readingContent = NO;
 }
 
 void model_signal_return_data_mute(TTPtr self, t_symbol *msg, long argc, t_atom *argv)

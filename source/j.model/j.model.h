@@ -32,10 +32,8 @@ typedef struct extra {
     TTObject            *presetManager;		///< The preset manager object.
     TTBoolean           attr_load_default;
 	TTPtr               filewatcher;		///< A preset filewatcher.
-	TTObject            *toEdit;				///< The object to edit (a preset or all the preset list).
+	TTObject            *toEdit;			///< The object to edit (a preset or all the preset list).
 	TTSymbol            presetName;			///< The name of the edited preset.
-    
-    TTBoolean           readingContent;     ///< A flag to avoid infinite loop in model_return_content.
     
     TTHashPtr           attr_amenities;
     TTBoolean           all_amenities;
@@ -346,7 +344,7 @@ TTBoolean   model_test_amenities(TTPtr self, TTSymbol name);
  @param argc
  @param argv
  */
-void        model_signal_return_content(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void        model_signal_amenities(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
