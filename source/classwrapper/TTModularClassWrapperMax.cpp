@@ -121,10 +121,19 @@ void wrappedModularClass_unregister(WrappedModularInstancePtr x)
 	TTErr		err;
     
 #ifndef ARRAY_EXTERNAL
+    
 	x->subscriberObject = TTObject();
-	
-	if (x->wrappedObject.name() != kTTSym_Application)
+    
+	if (x->wrappedObject.name() != kTTSym_Application) {
+        
+        if (x->wrappedObject.instance()->getReferenceCount() > 1)
+            object_error((t_object*)x, "there are still unreleased reference of the wrappedObject (refcount = %d)", x->wrappedObject.instance()->getReferenceCount() - 1);
+        
+        // this line should release the last instance of the wrapped object
+        // otherwise there is something wrong
         x->wrappedObject = TTObject();
+    }
+
 #endif
 	
     if (!x->internals->isEmpty()) {
@@ -161,6 +170,10 @@ void wrappedModularClass_unregister(WrappedModularInstancePtr x)
 void wrappedModularClass_free(WrappedModularInstancePtr x)
 {
 	ModularSpec* spec = (ModularSpec*)x->wrappedClassDefinition->specificities;
+    
+    // call specific free method before freeing internal stuff
+	if (spec->_free)
+		spec->_free(x);
 	
 	wrappedModularClass_unregister(x);
 	
@@ -176,9 +189,6 @@ void wrappedModularClass_free(WrappedModularInstancePtr x)
     
     delete x->internals;
     x->internals = NULL;
-	
-	if (spec->_free)
-		spec->_free(x);
 }
 
 

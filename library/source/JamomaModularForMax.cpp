@@ -1407,6 +1407,37 @@ void jamoma_patcher_get_model_or_view(t_object *patcher, t_object **returnedMode
 	}
 }
 
+/** Look for input and output (data and audio) */
+void jamoma_patcher_get_input_output(t_object *patcher, TTBoolean& dataInput, TTBoolean& dataOutput, TTBoolean& audioInput, TTBoolean& audioOutput)
+{
+	TTValue		patcherInfo;
+	t_object	*obj;
+	t_symbol	*_sym_jcomcontext, *_sym_jin, *_sym_jout, *_sym_jintilda, *_sym_jouttilda;
+    
+    dataInput = NO;
+    dataOutput = NO;
+    audioInput = NO;
+    audioOutput = NO;
+	
+	obj = object_attr_getobj(patcher, _sym_firstobject);
+	
+	// TODO : cache those t_symbol else where ...
+	_sym_jin = gensym("j.in");
+	_sym_jout = gensym("j.out");
+    _sym_jintilda = gensym("j.in~");
+	_sym_jouttilda = gensym("j.out~");
+	while (obj) {
+		_sym_jcomcontext = object_attr_getsym(obj, _sym_maxclass);
+		
+        dataInput = dataInput || _sym_jcomcontext == _sym_jin;
+        dataOutput = dataOutput || _sym_jcomcontext == _sym_jout;
+        audioInput = audioInput || _sym_jcomcontext == _sym_jintilda;
+        audioOutput = audioOutput || _sym_jcomcontext == _sym_jouttilda;
+        
+		obj = object_attr_getobj(obj, _sym_nextobject);
+	}
+}
+
 /** Get the "aClass.model" external in the patcher */
 void jamoma_patcher_get_model_patcher(t_object *patcher, TTSymbol modelClass, t_object **returnedModelPatcher)
 {
