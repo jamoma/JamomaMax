@@ -119,9 +119,6 @@ void WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv)
 	// create the cue manager
 	jamoma_cueManager_create((t_object*)x, x->wrappedObject);
     
-    // DEBUG
-    x->wrappedObject.track(YES);
-    
     // read first argument to know if the cue binds a namespace
 	if (attrstart && argv) {
 		
