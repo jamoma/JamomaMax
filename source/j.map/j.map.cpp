@@ -112,6 +112,10 @@ void WrappedMapperClass_free(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     delete EXTRA->arguments;
+    
+    x->wrappedObject.set("input", kTTAdrsEmpty);
+    x->wrappedObject.set("output", kTTAdrsEmpty);
+    
 	free(EXTRA);
 }
 
