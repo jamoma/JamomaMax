@@ -239,8 +239,11 @@ void WrappedSenderClass_new(TTPtr self, long argc, t_atom *argv)
 
 void WrappedSenderClass_free(TTPtr self)
 {
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    x->wrappedObject.set(kTTSym_address, kTTAdrsEmpty);
+    
 #ifdef JCOM_SEND_TILDE
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 
 	// Always call dsp_free first in this routine
     dsp_free((t_pxobject *)x);
