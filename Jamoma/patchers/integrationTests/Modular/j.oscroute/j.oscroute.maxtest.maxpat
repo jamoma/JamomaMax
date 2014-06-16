@@ -116,6 +116,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-59",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -173,6 +175,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-47",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -230,6 +234,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-43",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -258,6 +264,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-39",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -330,6 +338,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-31",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -372,6 +382,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-27",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -429,6 +441,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-4",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1232,14 +1246,14 @@
 		"dependency_cache" : [ 			{
 				"name" : "test.string.equals.maxpat",
 				"bootpath" : "/Applications/Max 6.1/packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/packages/testpackage/misc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "test.string.equals.js",
 				"bootpath" : "/Applications/Max 6.1/packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/packages/testpackage/misc",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
