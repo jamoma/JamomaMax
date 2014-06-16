@@ -23,6 +23,7 @@
 // Definitions
 void		WrapTTExplorerClass(WrappedClassPtr c);
 void		WrappedExplorerClass_new(TTPtr self, long argc, t_atom *argv);
+void		WrappedExplorerClass_free(TTPtr self);
 
 void		nmspc_assist(TTPtr self, void *b, long m, long a, char *s);
 
@@ -56,7 +57,7 @@ int C74_EXPORT main(void)
 	ModularSpec *spec = new ModularSpec;
 	spec->_wrap = &WrapTTExplorerClass;
 	spec->_new = &WrappedExplorerClass_new;
-	spec->_free = NULL;
+	spec->_free = &WrappedExplorerClass_free;
 	spec->_any = NULL;
 	
 	return wrapTTModularClassAsMaxClass(kTTSym_Explorer, "j.namespace", NULL, spec);
@@ -124,6 +125,12 @@ void WrappedExplorerClass_new(TTPtr self, long argc, t_atom *argv)
 	
 	// handle attribute args
 	attr_args_process(x, argc, argv);
+}
+
+void WrappedExplorerClass_free(TTPtr self)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    x->wrappedObject.set(kTTSym_namespace, kTTSymEmpty);
 }
 
 void nmspc_assist(TTPtr self, void *b, long msg, long arg, char *dst)
