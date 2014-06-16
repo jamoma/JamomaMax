@@ -151,6 +151,11 @@ void wrappedModularClass_unregister(WrappedModularInstancePtr x)
                 
                 if (!err) {
                     
+                    TTObject o = v[0];
+                    
+                    if (o.name() == kTTSym_Sender || o.name() == kTTSym_Receiver || o.name() == kTTSym_Viewer)
+                        o.set(kTTSym_address, kTTAdrsEmpty);
+                    
                     // absolute registration case : remove the address
                     if (v.size() == 2) {
                         objectAddress = v[1];

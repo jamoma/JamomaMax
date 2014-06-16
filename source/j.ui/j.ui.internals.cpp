@@ -121,6 +121,33 @@ void ui_receiver_create(t_ui *obj, TTObject& returnedReceiver, t_symbol *aCallba
 	obj->hash_receivers->append(name, returnedReceiver);
 }
 
+void ui_receiver_destroy_all(t_ui *obj)
+{
+	TTValue		hk, v, none;
+	TTSymbol	key, receiverAddress;
+	TTUInt8		i;
+	
+	// delete all receivers
+	if (obj->hash_receivers) {
+		
+		if (!obj->hash_receivers->isEmpty()) {
+			
+			obj->hash_receivers->getKeys(hk);
+			
+			for (i=0; i<obj->hash_receivers->getSize(); i++) {
+				
+				key = hk[i];
+				if (!obj->hash_receivers->lookup(key, v)) {
+                    
+                    TTObject receiver = v[0];
+                    receiver.set(kTTSym_address, kTTAdrsEmpty);
+                }
+			}
+		}
+		obj->hash_receivers->clear();
+	}
+}
+
 void ui_viewer_create(t_ui *obj, TTObject& returnedViewer, t_symbol *aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean subscribe, TTBoolean deferlow)
 {
 	TTValue		v, baton, args, none;
@@ -161,6 +188,9 @@ void ui_viewer_destroy(t_ui *obj, TTSymbol name)
 	
 	if (obj->hash_viewers)
 		if (!obj->hash_viewers->lookup(name, v)) {
+            
+            TTObject viewer = v[0];
+            viewer.set(kTTSym_address, kTTAdrsEmpty);
 			
 			// Unregister viewer
 			viewerAddress = v[1];
@@ -186,6 +216,9 @@ void ui_viewer_destroy_all(t_ui *obj)
 				
 				key = hk[i];
 				if (!obj->hash_viewers->lookup(key, v)) {
+                    
+                    TTObject viewer = v[0];
+                    viewer.set(kTTSym_address, kTTAdrsEmpty);
                     
                     // Unregister viewer
                     viewerAddress = v[1];

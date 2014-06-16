@@ -211,6 +211,8 @@ void WrappedViewerClass_free(TTPtr self)
     if (x->argv)
         sysmem_freeptr(x->argv);
     
+    x->wrappedObject.set(kTTSym_address, kTTAdrsEmpty);
+    
 	free(EXTRA);
 }
 

@@ -186,6 +186,7 @@ void		ui_unregister_info(t_ui* obj);
 void		ui_data_interface(t_ui *x, TTSymbol name);
 
 void		ui_receiver_create(t_ui *obj, TTObject& returnedReceiver, t_symbol *aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean deferlow = NO, TTBoolean appendNameAsAttribute = NO);
+void		ui_receiver_destroy_all(t_ui *obj);
 
 void		ui_viewer_create(t_ui *obj, TTObject& returnedViewer, t_symbol *aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean subscribe, TTBoolean deferlow = NO);
 void		ui_viewer_destroy(t_ui *obj, TTSymbol name);

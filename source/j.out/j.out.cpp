@@ -266,11 +266,13 @@ void WrappedOutputClass_new(TTPtr self, long argc, t_atom* argv)
 
 void WrappedOutputClass_free(TTPtr self)
 {
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
 #ifdef J_OUT_TILDE
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
 	dsp_free((t_pxobject *)x);				// Always call dsp_free first in this routine
 #endif
+    
+    //x->wrappedObject.set("inputAddress", kTTAdrsEmpty);
 }
 
 #pragma mark -

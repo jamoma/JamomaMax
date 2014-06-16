@@ -163,7 +163,7 @@ void WrappedReceiverClass_new(TTPtr self, long argc, t_atom *argv)
 		x->outlets[data_out] = outlet_new((t_pxobject *)x, "signal");	// signal outlet to output audio
 #else
 		jamoma_receiver_create((t_object*)x, x->wrappedObject);
-		
+    
 		x->outlets[address_out] = outlet_new(x, NULL);					// anything outlet to output address
 		x->outlets[data_out] = outlet_new(x, NULL);						// anything outlet to output data
 #endif
@@ -193,8 +193,11 @@ void WrappedReceiverClass_new(TTPtr self, long argc, t_atom *argv)
 
 void WrappedReceiverClass_free(TTPtr self)
 {
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    x->wrappedObject.set(kTTSym_address, kTTAdrsEmpty);
+    
 #ifdef JCOM_RECEIVE_TILDE
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
     // Always call dsp_free first in this routine
     dsp_free((t_pxobject *)x);
