@@ -119,6 +119,9 @@ void WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv)
 	// create the cue manager
 	jamoma_cueManager_create((t_object*)x, x->wrappedObject);
     
+    // DEBUG
+    x->wrappedObject.track(YES);
+    
     // read first argument to know if the cue binds a namespace
 	if (attrstart && argv) {
 		
@@ -161,6 +164,12 @@ void WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv)
 void WrappedCueManageClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    TTValue o, empty;
+    x->internals->lookup(kTTSym_XmlHandler, o);
+    
+    TTObject aXmlHandler = o[0];
+    aXmlHandler.set(kTTSym_object, empty);
 	
     delete EXTRA->toEdit;
     
