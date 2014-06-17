@@ -208,9 +208,6 @@ void WrappedViewerClass_free(TTPtr self)
     
 	qelem_free(EXTRA->ui_qelem);
     
-    if (x->argv)
-        sysmem_freeptr(x->argv);
-    
     x->wrappedObject.set(kTTSym_address, kTTAdrsEmpty);
     
 	free(EXTRA);
