@@ -331,7 +331,7 @@ void remote_array_subscribe(TTPtr self, t_symbol *address)
 			// append the subscriber to the internal
 			if (aSubscriber.valid()) {
 				
-				v = TTValue(selectedObject);
+				v = TTObject(selectedObject);
 				v.append(x->cursor);
 				v.append(aSubscriber);
 				
