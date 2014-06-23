@@ -20,9 +20,9 @@
     ],
     "bglocked": 0,
     "openinpresentation": 1,
-    "default_fontsize": 10.0,
+    "default_fontsize": 12.0,
     "default_fontface": 0,
-    "default_fontname": "Verdana",
+    "default_fontname": "Arial",
     "gridonopen": 0,
     "gridsize": [
       5.0,
@@ -62,8 +62,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-14",
           "items": "<empty>",
           "labelclick": 1,
@@ -109,8 +109,8 @@
         "box": {
           "annotation": "editing the current cue script with an external editor",
           "border": 1,
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-8",
           "maxclass": "textbutton",
           "numinlets": 1,
@@ -141,8 +141,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-10",
           "linecount": 2,
           "maxclass": "newobj",
@@ -164,8 +164,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-7",
           "maxclass": "message",
           "numinlets": 2,
@@ -184,8 +184,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-15",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -205,7 +205,7 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
+          "fontname": "Arial",
           "fontsize": 11.0,
           "id": "obj-19",
           "maxclass": "newobj",
@@ -230,9 +230,9 @@
             ],
             "bglocked": 0,
             "openinpresentation": 0,
-            "default_fontsize": 10.0,
+            "default_fontsize": 12.0,
             "default_fontface": 0,
-            "default_fontname": "Verdana",
+            "default_fontname": "Arial",
             "gridonopen": 0,
             "gridsize": [
               5.0,
@@ -252,8 +252,8 @@
             "boxes": [
               {
                 "box": {
-                  "fontname": "Verdana",
-                  "fontsize": 10.0,
+                  "fontname": "Arial",
+                  "fontsize": 12.0,
                   "id": "obj-2",
                   "maxclass": "newobj",
                   "numinlets": 1,
@@ -287,7 +287,7 @@
               },
               {
                 "box": {
-                  "fontname": "Verdana",
+                  "fontname": "Arial",
                   "fontsize": 11.0,
                   "id": "obj-17",
                   "maxclass": "newobj",
@@ -307,7 +307,7 @@
               },
               {
                 "box": {
-                  "fontname": "Verdana",
+                  "fontname": "Arial",
                   "fontsize": 11.0,
                   "id": "obj-14",
                   "maxclass": "newobj",
@@ -327,7 +327,7 @@
               },
               {
                 "box": {
-                  "fontname": "Verdana",
+                  "fontname": "Arial",
                   "fontsize": 11.0,
                   "id": "obj-11",
                   "maxclass": "newobj",
@@ -520,24 +520,24 @@
             20.0
           ],
           "saved_object_attributes": {
-            "fontname": "Verdana",
-            "default_fontsize": 10.0,
+            "fontname": "Arial",
+            "default_fontsize": 12.0,
             "tags": "",
             "description": "",
             "globalpatchername": "",
             "fontface": 0,
-            "fontsize": 10.0,
+            "fontsize": 12.0,
             "default_fontface": 0,
             "digest": "",
-            "default_fontname": "Verdana"
+            "default_fontname": "Arial"
           },
           "text": "p set-stuff"
         }
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-5",
           "maxclass": "newobj",
           "numinlets": 0,
@@ -558,8 +558,8 @@
         "box": {
           "annotation": "displays the current cue script",
           "border": 1,
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-21",
           "maxclass": "textbutton",
           "numinlets": 1,
@@ -592,8 +592,8 @@
         "box": {
           "annotation": "Save cue script to a file using the file dialog.",
           "border": 1,
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-13",
           "maxclass": "textbutton",
           "numinlets": 1,
@@ -626,8 +626,8 @@
         "box": {
           "annotation": "to gather the state of all modules and display them in a text window",
           "border": 1,
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-2",
           "maxclass": "textbutton",
           "numinlets": 1,
@@ -658,8 +658,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-1",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -680,8 +680,8 @@
       {
         "box": {
           "annotation": "Recall cue event from loaded cue script",
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-3",
           "items": "<empty>",
           "labelclick": 1,
@@ -712,8 +712,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-4",
           "maxclass": "newobj",
           "numinlets": 0,
@@ -736,9 +736,9 @@
             ],
             "bglocked": 0,
             "openinpresentation": 0,
-            "default_fontsize": 10.0,
+            "default_fontsize": 12.0,
             "default_fontface": 0,
-            "default_fontname": "Verdana",
+            "default_fontname": "Arial",
             "gridonopen": 0,
             "gridsize": [
               5.0,
@@ -758,8 +758,8 @@
             "boxes": [
               {
                 "box": {
-                  "fontname": "Verdana",
-                  "fontsize": 10.0,
+                  "fontname": "Arial",
+                  "fontsize": 12.0,
                   "id": "obj-23",
                   "maxclass": "message",
                   "numinlets": 2,
@@ -778,8 +778,8 @@
               },
               {
                 "box": {
-                  "fontname": "Verdana",
-                  "fontsize": 10.0,
+                  "fontname": "Arial",
+                  "fontsize": 12.0,
                   "id": "obj-17",
                   "maxclass": "newobj",
                   "numinlets": 1,
@@ -799,8 +799,8 @@
               },
               {
                 "box": {
-                  "fontname": "Verdana",
-                  "fontsize": 10.0,
+                  "fontname": "Arial",
+                  "fontsize": 12.0,
                   "id": "obj-1",
                   "maxclass": "newobj",
                   "numinlets": 3,
@@ -836,8 +836,8 @@
               },
               {
                 "box": {
-                  "fontname": "Verdana",
-                  "fontsize": 10.0,
+                  "fontname": "Arial",
+                  "fontsize": 12.0,
                   "id": "obj-3",
                   "maxclass": "newobj",
                   "numinlets": 1,
@@ -856,8 +856,8 @@
               },
               {
                 "box": {
-                  "fontname": "Verdana",
-                  "fontsize": 10.0,
+                  "fontname": "Arial",
+                  "fontsize": 12.0,
                   "id": "obj-4",
                   "maxclass": "newobj",
                   "numinlets": 1,
@@ -878,8 +878,8 @@
               },
               {
                 "box": {
-                  "fontname": "Verdana",
-                  "fontsize": 10.0,
+                  "fontname": "Arial",
+                  "fontsize": 12.0,
                   "id": "obj-5",
                   "maxclass": "newobj",
                   "numinlets": 0,
@@ -1057,24 +1057,24 @@
             19.0
           ],
           "saved_object_attributes": {
-            "fontname": "Verdana",
-            "default_fontsize": 10.0,
+            "fontname": "Arial",
+            "default_fontsize": 12.0,
             "tags": "",
             "description": "",
             "globalpatchername": "",
             "fontface": 0,
-            "fontsize": 10.0,
+            "fontsize": 12.0,
             "default_fontface": 0,
             "digest": "",
-            "default_fontname": "Verdana"
+            "default_fontname": "Arial"
           },
           "text": "p cue_menu"
         }
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-6",
           "linecount": 3,
           "maxclass": "newobj",
@@ -1096,8 +1096,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-12",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -1118,8 +1118,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-16",
           "linecount": 2,
           "maxclass": "newobj",
@@ -1141,8 +1141,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-20",
           "maxclass": "message",
           "numinlets": 2,
@@ -1161,8 +1161,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-22",
           "linecount": 3,
           "maxclass": "newobj",
@@ -1184,8 +1184,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-25",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -1204,8 +1204,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-27",
           "maxclass": "newobj",
           "numinlets": 1,
@@ -1259,8 +1259,8 @@
       },
       {
         "box": {
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-30",
           "linecount": 2,
           "maxclass": "newobj",
@@ -1285,8 +1285,8 @@
         "box": {
           "annotation": "Load cue script from file.",
           "border": 1,
-          "fontname": "Verdana",
-          "fontsize": 10.0,
+          "fontname": "Arial",
+          "fontsize": 12.0,
           "id": "obj-9",
           "maxclass": "textbutton",
           "numinlets": 1,
