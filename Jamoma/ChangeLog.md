@@ -1,5 +1,13 @@
 ## 0.6
 
+### Beta releases
+
+### 0.6.0.b01
+
+- wacom.model
+	- position is now an array of x and y values
+	- flusheventqueue is removed since it is now deprecated
+
 ### Alpha releases
 
 ### 0.6.0.a35 (In development)
