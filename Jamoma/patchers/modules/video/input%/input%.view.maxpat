@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 694.0, 116.0, 703.0, 289.0 ],
+		"rect" : [ 998.0, 94.0, 703.0, 289.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -39,23 +39,7 @@
 					"offset" : [ 0.0, -120.0 ],
 					"patching_rect" : [ 377.666656, 82.5, 249.0, 49.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 21.0, 231.0, 49.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-15",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 223.5, 196.0, 122.0, 19.0 ],
-					"text" : "j.remote file/autostart",
-					"varname" : "camera/camera[1]"
+					"presentation_rect" : [ 4.0, 21.0, 289.0, 49.0 ]
 				}
 
 			}
@@ -93,43 +77,6 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Update rate in milliseconds",
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"hint" : "updaterate",
-					"id" : "obj-95",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "int", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 414.0, 188.0, 32.0, 19.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 203.0, 0.0, 32.0, 19.0 ],
-					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "synth_noise_rate[3]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-96",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 456.0, 188.0, 112.0, 19.0 ],
-					"text" : "j.remote updaterate",
-					"varname" : "camera/camera[2]"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-113",
 					"maxclass" : "panel",
 					"numinlets" : 1,
@@ -153,20 +100,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
-					"id" : "obj-14",
-					"maxclass" : "jit.pwindow",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 235.0, 20.0, 60.0, 45.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 238.0, 22.0, 60.0, 45.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
@@ -183,12 +116,12 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Choose between 'camera', 'file' , 'synthesis' or 'desktop' as input",
+					"annotation" : "Choose between 'camera', 'movie' , 'noise' as input",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"hint" : "Choose mode",
 					"id" : "obj-8",
-					"items" : [ "camera", ",", "file", ",", "synthesis", ",", "desktop" ],
+					"items" : [ "camera", ",", "movie", ",", "noise" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -250,7 +183,7 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/input%"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -284,15 +217,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-34", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -321,30 +245,36 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-96", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-95", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-95", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-96", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-99", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "input%.ui.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.textslider.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
