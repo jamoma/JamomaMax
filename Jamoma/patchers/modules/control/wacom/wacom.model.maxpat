@@ -541,7 +541,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 456.5, 418.0, 89.0, 92.0 ],
+					"patching_rect" : [ 456.5, 418.0, 93.0, 92.0 ],
 					"text" : "j.return tilt @type array @range 0. 1. @clipmode both @description \"Tilt of the Wacom tool\""
 				}
 
@@ -775,13 +775,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-32",
-					"linecount" : 9,
+					"linecount" : 7,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 267.0, 418.0, 107.0, 116.0 ],
-					"text" : "j.return position @type array @range 0. 1. @dataspace position @dataspace unit xy @description \"Position of the Wacom tool\""
+					"patching_rect" : [ 267.0, 418.0, 124.0, 92.0 ],
+					"text" : "j.return position @type array @range 0. 1. @dataspace position @dataspace/unit xy @description \"Position of the Wacom tool\""
 				}
 
 			}
