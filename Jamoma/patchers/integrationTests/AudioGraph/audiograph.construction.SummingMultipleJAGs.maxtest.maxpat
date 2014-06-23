@@ -71,6 +71,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-42",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -384,7 +386,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 733.0, 513.5, 278.309509, 47.0 ],
+					"patching_rect" : [ 733.0, 513.5, 279.0, 47.0 ],
 					"text" : "test.assert Jamoma/AudioGraph/construnction/one_iput_right @tags Jamoma AudioGraph"
 				}
 
@@ -419,6 +421,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-37",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -732,7 +736,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 492.5, 457.5, 276.309509, 47.0 ],
+					"patching_rect" : [ 492.5, 457.5, 279.0, 47.0 ],
 					"text" : "test.assert Jamoma/AudioGraph/construnction/one_input_left @tags Jamoma AudioGraph"
 				}
 
@@ -796,6 +800,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-18",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1147,7 +1153,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.285706, 513.5, 272.214294, 47.0 ],
+					"patching_rect" : [ 240.285706, 513.5, 274.0, 47.0 ],
 					"text" : "test.assert Jamoma/AudioGraph/construnction/mixed_inputs @tags Jamoma AudioGraph"
 				}
 
