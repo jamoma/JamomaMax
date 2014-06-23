@@ -488,7 +488,7 @@ void WrappedInputClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomP
 	TTInputPtr	anInput = (TTInputPtr)x->wrappedObject;
     
     // route any message to the model
-    if (msg != _sym_nothing && msg != gensym("jit_matrix")) {
+    if (msg != _sym_nothing && msg != _sym_jit_matrix && msg != _sym_jit_gl_texture && msg != _sym_dictionary) {
         
         if (!EXTRA->modelOrView) {
             
