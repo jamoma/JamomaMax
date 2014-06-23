@@ -85,6 +85,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-44",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -135,7 +137,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 864.0, 207.909088, 179.0, 20.0 ],
-					"text" : "not testing j.plug.out= for now",
+					"text" : " j.plug.out=  is quarantined",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -150,7 +152,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 864.0, 186.090912, 179.0, 20.0 ],
-					"text" : "not testing j.plug.in= for now",
+					"text" : " j.plug.in=  is quarantined",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -389,7 +391,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 639.0, 120.63636, 168.0, 20.0 ],
-					"text" : "not testing audiounit= for now",
+					"text" : "j.audiounit= is quarantined",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 

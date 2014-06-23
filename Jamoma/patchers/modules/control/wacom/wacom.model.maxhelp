@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 100.0, 100.0, 645.0, 678.0 ],
+		"rect" : [ 487.0, 187.0, 887.0, 762.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -29,6 +29,8 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "none",
+					"args" : [ "/wacom-maxhelp" ],
 					"id" : "obj-28",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
@@ -36,7 +38,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 23.0, 96.0, 300.0, 70.0 ],
+					"patching_rect" : [ 23.0, 100.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 15.0, 15.0, 300.0, 70.0 ],
 					"varname" : "/wacom"
 				}
@@ -44,6 +46,8 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
+					"color" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-24",
@@ -51,8 +55,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.0, 214.0, 123.0, 19.0 ],
-					"text" : "wacom.model /wacom"
+					"patching_rect" : [ 23.0, 206.0, 171.0, 19.0 ],
+					"text" : "wacom.model /wacom-maxhelp"
 				}
 
 			}
@@ -64,7 +68,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "bang", "bang", "", "int" ],
-					"patching_rect" : [ 522.122437, 208.69873, 93.0, 16.0 ]
+					"patching_rect" : [ 376.0, 515.0, 42.0, 21.0 ]
 				}
 
 			}
@@ -74,43 +78,29 @@
 					"fontsize" : 10.0,
 					"hidden" : 1,
 					"id" : "obj-34",
-					"linecount" : 6,
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 419.0, 384.0, 190.0, 77.0 ],
-					"text" : ";\rmax launchbrowser http://www.maxobjects.com/?v=objects&id_objet=1008&requested=wacom&operateur=AND&id_plateforme=0&id_format=0"
+					"patching_rect" : [ 376.0, 552.0, 351.0, 29.0 ],
+					"text" : ";\rmax launchbrowser http://metason.cnrs-mrs.fr/Resultats/MaxMSP/"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 11.0,
-					"frgb" : 0.0,
-					"id" : "obj-32",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 520.0, 206.0, 104.0, 20.0 ],
-					"text" : "maxobjects.com",
-					"underline" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 11.0,
+					"fontname" : "Arial",
+					"fontsize" : 16.0,
 					"frgb" : 0.0,
 					"id" : "obj-26",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 345.0, 193.0, 261.0, 33.0 ],
-					"text" : "NOTE: this module requieres the 3rd-party wacom external. get it through "
+					"patching_rect" : [ 376.0, 476.0, 250.0, 42.0 ],
+					"text" : "NOTE: this module requires the 3rd-party wacom external. get it ",
+					"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 				}
 
 			}
@@ -123,7 +113,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 645.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 887.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -143,7 +133,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -969,7 +959,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 33.0, 381.0, 259.5, 21.0 ],
+					"patching_rect" : [ 23.0, 403.0, 259.5, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -995,7 +985,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 33.0, 411.0, 320.0, 240.0 ],
+					"patching_rect" : [ 23.0, 433.0, 320.0, 240.0 ],
 					"presentation_rect" : [ 15.0, 15.0, 320.0, 240.0 ]
 				}
 
@@ -1009,7 +999,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 481.0, 354.0, 47.0, 19.0 ],
+					"patching_rect" : [ 525.0, 377.0, 47.0, 19.0 ],
 					"text" : "buttons"
 				}
 
@@ -1023,7 +1013,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 425.0, 333.0, 38.0, 19.0 ],
+					"patching_rect" : [ 460.0, 357.0, 38.0, 19.0 ],
 					"text" : "touch"
 				}
 
@@ -1037,7 +1027,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 350.0, 333.0, 58.0, 19.0 ],
+					"patching_rect" : [ 376.0, 357.0, 58.0, 19.0 ],
 					"text" : "proximity"
 				}
 
@@ -1051,7 +1041,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 283.0, 333.0, 54.0, 19.0 ],
+					"patching_rect" : [ 283.0, 357.0, 54.0, 19.0 ],
 					"text" : "direction"
 				}
 
@@ -1064,7 +1054,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 266.0, 333.0, 20.0, 20.0 ]
+					"patching_rect" : [ 264.0, 357.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -1077,7 +1067,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 206.0, 354.0, 22.0, 19.0 ],
+					"patching_rect" : [ 206.0, 378.0, 22.0, 19.0 ],
 					"text" : "tilt"
 				}
 
@@ -1091,7 +1081,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 137.0, 354.0, 54.0, 19.0 ],
+					"patching_rect" : [ 137.0, 378.0, 54.0, 19.0 ],
 					"text" : "pressure"
 				}
 
@@ -1105,7 +1095,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 33.0, 354.0, 61.0, 19.0 ],
+					"patching_rect" : [ 23.0, 376.0, 61.0, 19.0 ],
 					"text" : "position"
 				}
 
@@ -1118,7 +1108,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 408.0, 333.0, 20.0, 20.0 ]
+					"patching_rect" : [ 443.0, 357.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -1130,7 +1120,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 333.0, 333.0, 20.0, 20.0 ]
+					"patching_rect" : [ 359.0, 357.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -1144,7 +1134,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 521.0, 333.0, 35.0, 19.0 ],
+					"patching_rect" : [ 565.0, 356.0, 35.0, 19.0 ],
 					"triscale" : 0.9
 				}
 
@@ -1159,7 +1149,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 483.0, 333.0, 35.0, 19.0 ],
+					"patching_rect" : [ 527.0, 356.0, 35.0, 19.0 ],
 					"triscale" : 0.9
 				}
 
@@ -1170,11 +1160,11 @@
 					"fontsize" : 10.0,
 					"id" : "obj-13",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 483.0, 272.0, 109.0, 19.0 ],
-					"text" : "j.oscroute /raw"
+					"patching_rect" : [ 527.0, 295.0, 82.0, 19.0 ],
+					"text" : "j.oscroute raw"
 				}
 
 			}
@@ -1188,7 +1178,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 225.0, 333.0, 40.0, 19.0 ],
+					"patching_rect" : [ 215.399994, 355.0, 40.0, 19.0 ],
 					"triscale" : 0.9
 				}
 
@@ -1203,7 +1193,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 177.0, 333.0, 40.0, 19.0 ],
+					"patching_rect" : [ 167.300003, 355.0, 40.0, 19.0 ],
 					"triscale" : 0.9
 				}
 
@@ -1217,8 +1207,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 159.0, 273.0, 113.0, 19.0 ],
-					"text" : "j.oscroute x y"
+					"patching_rect" : [ 167.300003, 295.0, 46.0, 19.0 ],
+					"text" : "unjoin"
 				}
 
 			}
@@ -1232,7 +1222,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 129.0, 333.0, 35.0, 19.0 ],
+					"patching_rect" : [ 119.199997, 355.0, 35.0, 19.0 ],
 					"triscale" : 0.9
 				}
 
@@ -1247,7 +1237,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 76.0, 333.0, 43.0, 19.0 ],
+					"patching_rect" : [ 71.099998, 355.0, 43.0, 19.0 ],
 					"triscale" : 0.9
 				}
 
@@ -1262,7 +1252,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 33.0, 333.0, 43.0, 19.0 ],
+					"patching_rect" : [ 23.0, 355.0, 43.0, 19.0 ],
 					"triscale" : 0.9
 				}
 
@@ -1276,8 +1266,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 23.0, 273.0, 112.0, 19.0 ],
-					"text" : "j.oscroute x y"
+					"patching_rect" : [ 23.0, 295.0, 46.0, 19.0 ],
+					"text" : "unjoin"
 				}
 
 			}
@@ -1287,40 +1277,27 @@
 					"fontsize" : 10.0,
 					"id" : "obj-22",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 8,
 					"numoutlets" : 8,
 					"outlettype" : [ "", "", "", "", "", "", "", "" ],
-					"patching_rect" : [ 33.0, 248.0, 544.0, 19.0 ],
+					"patching_rect" : [ 23.0, 236.0, 607.0, 19.0 ],
 					"text" : "j.oscroute position pressure tilt direction proximity touch buttons"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-23",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 48.0, 187.0, 225.0, 17.0 ],
-					"text" : "direction 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 16.0,
 					"frgb" : 0.0,
-					"id" : "obj-29",
-					"linecount" : 8,
+					"id" : "obj-31",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 346.0, 79.0, 274.0, 104.0 ],
-					"text" : "USAGE\r1. Click on init to refresh the menu with the connected devices. \r2. Select device to use\r3. Click the off/on-button to start polling the device\n\nClick the pointer/nopointer button to disconect the mouse pointer from the tablet"
+					"patching_rect" : [ 376.0, 512.0, 238.0, 24.0 ],
+					"prototypename" : "Jamoma.light",
+					"text" : "here ",
+					"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 				}
 
 			}
@@ -1330,7 +1307,7 @@
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 582.5, 313.0, 530.5, 313.0 ],
+					"midpoints" : [ 599.5, 336.0, 574.5, 336.0 ],
 					"source" : [ "obj-13", 1 ]
 				}
 
@@ -1367,7 +1344,7 @@
 					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 215.5, 314.0, 234.5, 314.0 ],
+					"midpoints" : [ 190.300003, 338.0, 224.899994, 338.0 ],
 					"source" : [ "obj-16", 1 ]
 				}
 
@@ -1377,7 +1354,7 @@
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 168.5, 320.0, 186.5, 320.0 ],
+					"midpoints" : [ 176.800003, 344.0, 176.800003, 344.0 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -1414,7 +1391,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 79.0, 312.0, 85.5, 312.0 ],
+					"midpoints" : [ 46.0, 334.0, 80.599998, 334.0 ],
 					"source" : [ "obj-20", 1 ]
 				}
 
@@ -1424,7 +1401,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 32.5, 312.0, 42.5, 312.0 ],
+					"midpoints" : [ 32.5, 334.0, 32.5, 334.0 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
@@ -1461,7 +1438,7 @@
 					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 117.5, 270.5, 138.5, 270.5 ],
+					"midpoints" : [ 116.5, 294.5, 128.699997, 294.5 ],
 					"source" : [ "obj-22", 1 ]
 				}
 
@@ -1480,7 +1457,7 @@
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 267.5, 271.0, 275.5, 271.0 ],
+					"midpoints" : [ 284.5, 295.0, 273.5, 295.0 ],
 					"source" : [ "obj-22", 3 ]
 				}
 
@@ -1497,15 +1474,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-22", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-24", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-23", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-24", 0 ]
@@ -1542,42 +1510,42 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../../../components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../../../components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "wacom.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/wacom",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/control/wacom",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "wacom.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/wacom",
+				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/control/wacom",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -1612,6 +1580,10 @@
 			}
 , 			{
 				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "s2m.wacom.mxo",
 				"type" : "iLaX"
 			}
 , 			{

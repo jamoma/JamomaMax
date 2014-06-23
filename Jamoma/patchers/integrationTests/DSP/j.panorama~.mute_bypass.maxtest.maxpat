@@ -43,6 +43,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-53",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -64,7 +66,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 666.5, 300.5, 247.0, 33.0 ],
+					"patching_rect" : [ 666.5, 300.5, 249.0, 33.0 ],
 					"text" : "test.assert Jamoma/DSP/j.panorama/bypass @tags Jamoma DSP"
 				}
 
@@ -101,6 +103,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-39",
 					"maxclass" : "toggle",
 					"numinlets" : 1,

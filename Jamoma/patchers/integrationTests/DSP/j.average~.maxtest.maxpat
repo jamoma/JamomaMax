@@ -29,6 +29,22 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-10",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 683.0, 379.0, 446.0, 37.0 ],
+					"text" : "These tests sometimes pass, ando often one or both will produce NAN or INF\nhttps://github.com/jamoma/JamomaMax/issues/595"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-95",
@@ -297,7 +313,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 195.0, 376.0, 24.0, 20.0 ],
+					"patching_rect" : [ 195.0, 396.0, 24.0, 20.0 ],
 					"text" : "t b"
 				}
 
@@ -346,13 +362,14 @@
 			}
 , 			{
 				"box" : 				{
+					"bordercolor" : [ 1.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-58",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 650.5, 376.0, 20.0, 20.0 ]
+					"patching_rect" : [ 650.5, 387.5, 20.0, 20.0 ]
 				}
 
 			}
@@ -367,7 +384,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 650.5, 406.0, 289.0, 47.0 ],
+					"patching_rect" : [ 650.5, 426.0, 289.0, 47.0 ],
 					"text" : "test.assert Jamoma/DSP/j.average~/processing_two_channels @tags jamoma DSP"
 				}
 
@@ -576,6 +593,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.499965, 0.0, 1.0 ],
 					"id" : "obj-4",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -764,6 +783,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.499965, 0.0, 1.0 ],
 					"id" : "obj-41",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -905,20 +926,21 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 314.5, 407.0, 246.0, 47.0 ],
+					"patching_rect" : [ 314.5, 427.0, 246.0, 47.0 ],
 					"text" : "test.assert Jamoma/DSP/j.average~/rms_one_channel @tags jamoma DSP"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bordercolor" : [ 1.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-121",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 314.5, 376.0, 20.0, 20.0 ]
+					"patching_rect" : [ 314.5, 387.5, 20.0, 20.0 ]
 				}
 
 			}
@@ -1012,7 +1034,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 195.0, 407.0, 83.0, 20.0 ],
+					"patching_rect" : [ 195.0, 427.0, 83.0, 20.0 ],
 					"text" : "test.terminate"
 				}
 
