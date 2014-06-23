@@ -38,7 +38,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 312.5, 676.0, 277.0, 47.0 ],
+					"patching_rect" : [ 312.5, 676.0, 278.0, 47.0 ],
 					"text" : "test.assert Jamoma/DSP/j.panorama/linear/lookup/left @tags Jamoma DSP"
 				}
 
@@ -54,7 +54,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 312.5, 296.0, 289.0, 47.0 ],
+					"patching_rect" : [ 312.5, 296.0, 290.0, 47.0 ],
 					"text" : "test.assert Jamoma/DSP/j.panorama/linear/calculate/left @tags Jamoma DSP"
 				}
 
@@ -139,6 +139,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-24",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -151,6 +153,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-22",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -163,6 +167,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-16",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -175,6 +181,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-12",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -187,6 +195,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-5",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -199,6 +209,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-3",
 					"maxclass" : "toggle",
 					"numinlets" : 1,

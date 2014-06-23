@@ -167,6 +167,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-95",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -293,6 +295,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-63",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -915,6 +919,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-75",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -942,6 +948,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-51",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1069,6 +1077,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-41",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1181,6 +1191,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-31",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1308,6 +1320,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-25",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
