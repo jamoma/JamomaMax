@@ -29,6 +29,8 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-57",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -93,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 150.75, 546.0, 389.0, 47.0 ],
+					"patching_rect" : [ 150.75, 546.0, 392.0, 47.0 ],
 					"text" : "test.assert Jamoma/AudioGraph/j.trajectory=/messages/getCurrentAttribtueNames @tags Jamoma AudioGraph"
 				}
 
@@ -142,6 +144,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-47",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -255,6 +259,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-38",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
