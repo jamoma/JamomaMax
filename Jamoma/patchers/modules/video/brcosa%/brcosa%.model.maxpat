@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -268,7 +268,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 131.0, 309.0, 52.0, 19.0 ],
-					"text" : "j.out"
+					"text" : "j.out 1"
 				}
 
 			}
