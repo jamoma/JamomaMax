@@ -355,7 +355,7 @@ void        model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount arg
  @param argc
  @param argv
  */
-void        model_signal_return_data_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void        model_signal_return_data_active(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 
 /**
@@ -365,24 +365,6 @@ void        model_signal_return_data_mute(TTPtr self, SymbolPtr msg, AtomCount a
  @param argv
  */
 void        model_signal_return_data_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-
-/**
- @param self
- @param attr
- @param argc
- @param argv
- */
-void        model_signal_return_data_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-
-
-/**
- @param self
- @param attr
- @param argc
- @param argv
- */
-void        model_signal_return_data_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 
 /**

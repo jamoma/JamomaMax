@@ -70,10 +70,8 @@ void WrapTTContainerClass(WrappedClassPtr c)
     
     class_addmethod(c->maxClass, (method)model_signal_return_content,       "return_content",		A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_signal_return_data_mute,     "return_data_mute",		A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_data_active,   "return_data_active",	A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_signal_return_data_bypass,   "return_data_bypass",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_data_freeze,   "return_data_freeze",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_data_preview,  "return_data_preview",  A_CANT, 0);
     
     class_addmethod(c->maxClass, (method)model_signal_return_audio_mute,    "return_audio_mute",	A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_return_audio_bypass,  "return_audio_bypass",  A_CANT, 0);
@@ -94,7 +92,16 @@ void WrapTTContainerClass(WrappedClassPtr c)
 void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue						none;
+	TTValue     none;
+    ObjectPtr   aPatcher;
+    
+    // is there already a j.model or j.view in the patcher ?
+    jamoma_patcher_get_model_or_view(jamoma_patcher_get((ObjectPtr)x), &aPatcher);
+    
+    if (aPatcher) {
+        object_error((ObjectPtr)x, "can't have two models or views in the same patcher");
+        return;
+    }
 		
 	// create a container
 	jamoma_container_create((ObjectPtr)x, &x->wrappedObject);
