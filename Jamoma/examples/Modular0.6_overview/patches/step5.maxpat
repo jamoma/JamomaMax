@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -36,19 +36,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 827.0, 714.0, 236.0, 20.0 ],
-					"text" : "get the highlight state of a j.remote"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-82",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 809.0, 715.0, 20.0, 20.0 ]
+					"patching_rect" : [ 809.0, 713.0, 236.0, 20.0 ],
+					"text" : "observe the highlight state of a j.remote"
 				}
 
 			}
@@ -60,7 +49,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 809.0, 757.0, 20.0, 20.0 ]
+					"patching_rect" : [ 809.0, 771.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -69,12 +58,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-50",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 809.0, 736.0, 203.0, 20.0 ],
-					"text" : "j.receive /interface/rate:highlight"
+					"patching_rect" : [ 809.0, 736.0, 203.0, 33.0 ],
+					"text" : "j.receive /interface/rate(slider):highlight"
 				}
 
 			}
@@ -103,7 +93,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 921.0, 144.0, 180.0, 18.0 ],
-					"text" : "play 0"
+					"text" : "rate 1."
 				}
 
 			}
@@ -130,7 +120,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 349.0, 610.0, 20.0, 20.0 ]
+					"patching_rect" : [ 331.0, 610.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -143,8 +133,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 349.0, 632.0, 80.0, 18.0 ],
-					"text" : "fps:freeze $1"
+					"patching_rect" : [ 331.0, 632.0, 125.0, 18.0 ],
+					"text" : "fps(flonum):freeze $1"
 				}
 
 			}
@@ -368,7 +358,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 348.0, 563.0, 20.0, 20.0 ]
+					"patching_rect" : [ 330.0, 563.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -381,8 +371,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 348.0, 585.0, 78.0, 18.0 ],
-					"text" : "fps:active $1"
+					"patching_rect" : [ 330.0, 585.0, 120.0, 18.0 ],
+					"text" : "fps(flonum):active $1"
 				}
 
 			}
@@ -440,8 +430,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 345.0, 474.0, 52.0, 18.0 ],
-					"text" : "file/load"
+					"patching_rect" : [ 330.0, 473.0, 120.0, 18.0 ],
+					"text" : "file/load(button)"
 				}
 
 			}
@@ -453,7 +443,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 345.0, 419.0, 20.0, 20.0 ]
+					"patching_rect" : [ 330.0, 419.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -466,8 +456,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 345.0, 441.0, 49.0, 18.0 ],
-					"text" : "play $1"
+					"patching_rect" : [ 330.0, 441.0, 120.0, 18.0 ],
+					"text" : "play(textbutton) $1"
 				}
 
 			}
@@ -568,8 +558,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 629.0, 441.0, 139.0, 18.0 ],
-					"text" : "model:address /player.B",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"text" : "model:address /player.B"
 				}
 
 			}
@@ -584,8 +573,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 479.0, 441.0, 139.0, 18.0 ],
-					"text" : "model:address /player.A",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"text" : "model:address /player.A"
 				}
 
 			}
@@ -624,8 +612,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 681.0, 155.0, 96.0, 18.0 ],
-					"text" : "play 0"
+					"patching_rect" : [ 674.0, 155.0, 96.0, 18.0 ],
+					"text" : "rate 1."
 				}
 
 			}
@@ -906,7 +894,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1282,7 +1270,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 386.0, 155.0, 96.0, 18.0 ],
+					"patching_rect" : [ 379.0, 155.0, 96.0, 18.0 ],
 					"text" : "play 0"
 				}
 
@@ -1483,7 +1471,7 @@
 					"destination" : [ "obj-3", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 683.5, 146.0, 767.5, 146.0 ],
+					"midpoints" : [ 683.5, 146.0, 760.5, 146.0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -1502,7 +1490,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 354.5, 496.0, 421.5, 496.0, 421.5, 466.0, 488.5, 466.0 ],
+					"midpoints" : [ 339.5, 496.0, 472.5, 496.0, 472.5, 466.0, 488.5, 466.0 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -1512,7 +1500,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 354.5, 466.0, 488.5, 466.0 ],
+					"midpoints" : [ 339.5, 466.0, 488.5, 466.0 ],
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -1549,7 +1537,7 @@
 					"destination" : [ "obj-42", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 388.5, 146.0, 472.5, 146.0 ],
+					"midpoints" : [ 388.5, 146.0, 465.5, 146.0 ],
 					"source" : [ "obj-31", 0 ]
 				}
 
@@ -1694,7 +1682,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 358.5, 654.0, 472.5, 654.0, 472.5, 466.0, 488.5, 466.0 ],
+					"midpoints" : [ 340.5, 654.0, 472.5, 654.0, 472.5, 466.0, 488.5, 466.0 ],
 					"source" : [ "obj-53", 0 ]
 				}
 
@@ -1842,7 +1830,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 357.5, 607.0, 472.0, 607.0, 472.0, 466.0, 488.5, 466.0 ],
+					"midpoints" : [ 339.5, 607.0, 472.0, 607.0, 472.0, 466.0, 488.5, 466.0 ],
 					"source" : [ "obj-77", 0 ]
 				}
 
@@ -1856,43 +1844,31 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-82", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "movie.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/movie",
-				"patcherrelativepath" : "../../../../../../../JamomaUserLibs/GMEA/Max/Picture/movie",
+				"name" : "myMovie.model.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
+				"patcherrelativepath" : "../movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.render.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/renderComponents",
-				"patcherrelativepath" : "../../../../../../../JamomaUserLibs/GMEA/Max/Picture/renderComponents",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "movie.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/movie",
-				"patcherrelativepath" : "../../../../../../../JamomaUserLibs/GMEA/Max/Picture/movie",
+				"name" : "myMovie.view.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
+				"patcherrelativepath" : "../movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "basicView.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/patches",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/patches",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.model.mxo",
@@ -1915,14 +1891,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
@@ -1931,7 +1899,15 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
  ]
