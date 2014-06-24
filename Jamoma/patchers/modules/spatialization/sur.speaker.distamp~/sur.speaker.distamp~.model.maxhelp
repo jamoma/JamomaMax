@@ -155,7 +155,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 112.0, 136.0, 59.0, 19.0 ],
-									"text" : "j.thru"
+									"text" : "thru"
 								}
 
 							}
@@ -1321,7 +1321,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.thru.maxpat",
+				"name" : "thru.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
 				"patcherrelativepath" : "../../../components/thru",
 				"type" : "JSON",

@@ -179,7 +179,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "wrong-outlet-3" ],
 									"patching_rect" : [ 50.0, 100.0, 37.0, 20.0 ],
-									"text" : "j.thru"
+									"text" : "thru"
 								}
 
 							}
@@ -1541,7 +1541,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.thru.maxpat",
+				"name" : "thru.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
 				"patcherrelativepath" : "../../../components/thru",
 				"type" : "JSON",

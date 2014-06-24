@@ -468,7 +468,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.thru.maxpat",
+				"name" : "thru.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
 				"patcherrelativepath" : "../../../components/thru",
 				"type" : "JSON",

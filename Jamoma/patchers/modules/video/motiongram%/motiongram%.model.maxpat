@@ -37,7 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 18.0, 455.0, 44.0, 19.0 ],
-					"text" : "j.out 1"
+					"text" : "j.out 1 @type jit.matrix"
 				}
 
 			}
@@ -1875,7 +1875,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 96.0, 455.0, 44.0, 19.0 ],
-					"text" : "j.out 2"
+					"text" : "j.out 2 @type jit.matrix"
 				}
 
 			}
@@ -2193,7 +2193,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.thru.maxpat",
+				"name" : "thru.maxpat",
 				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
 				"patcherrelativepath" : "../../../components/thru",
 				"type" : "JSON",
