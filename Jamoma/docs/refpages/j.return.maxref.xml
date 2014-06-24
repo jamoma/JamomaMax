@@ -240,10 +240,10 @@
 		</attribute> -->
 		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Set the sceduler driving the ramp
+				Set the scheduler driving the ramp
 			</digest>
 			<description>
-				Set the sceduler driving the ramp: none, max
+				Set the scheduler driving the ramp: none, max
 			</description>
 		</attribute>
 		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
@@ -304,10 +304,10 @@
 		</attribute> -->
 		<attribute name="tag" get="1" set="1" type="atom" size="1">
 			<digest>
-				Some tag associated to the return
+				Some tags associated to the return
 			</digest>
 			<description>
-				Some tag associated to the return
+				Some tags associated to the return
 			</description>
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
