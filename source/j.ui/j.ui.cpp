@@ -93,10 +93,8 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_return_mix,						"return_mix",						A_CANT, 0);
 	class_addmethod(c, (method)ui_return_gain,						"return_gain",						A_CANT, 0);
 	class_addmethod(c, (method)ui_return_freeze,					"return_freeze",					A_CANT, 0);
-	class_addmethod(c, (method)ui_return_preview,					"return_preview",					A_CANT, 0);
+	class_addmethod(c, (method)ui_return_active,					"return_active",					A_CANT, 0);
 	class_addmethod(c, (method)ui_return_preset_names,				"return_preset_names",				A_CANT, 0);
-	
-	class_addmethod(c, (method)ui_return_signal,					"return_signal",					A_CANT, 0);
 	
 	CLASS_ATTR_DEFAULT(c,                                           "patching_rect",            0,      "0. 0. 300. 70.");
 	CLASS_ATTR_DEFAULT(c,					                        "fontname",                 0,      JAMOMA_DEFAULT_FONT);
@@ -160,10 +158,9 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		x->box.b_firstin = (t_object *)x;
 		
 		// Make two outlets
-		x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
+		x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 1);
 		x->outlets[panel_out] = outlet_new(x, NULL);						// outlet to open panel
-		x->outlets[preview_out] = outlet_new(x, NULL);						// outlet to output preview signal
-        
+
         x->uiInfo = NULL;
 		
 		x->menu_items = NULL;
@@ -199,18 +196,15 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		x->has_gain = false;
 		x->has_bypass = false;
 		x->has_mix = false;
-		x->has_preview = false;
+		x->has_active = false;
 		x->has_freeze = false;
 		
 		x->highlight_mute = false;
 		x->highlight_gain = false;
 		x->highlight_bypass = false;
 		x->highlight_mix = false;
-		x->highlight_preview = false;
+		x->highlight_active = false;
 		x->highlight_freeze = false;
-		
-		x->modelOutput = NULL;
-		x->previewSignal = NULL;
         
         x->text = NULL;
         x->textEditor = NULL;
@@ -257,15 +251,6 @@ void ui_free(t_ui *x)
     if (x->state)
         TTObjectBaseRelease(TTObjectBaseHandle(&x->state));
 	
-	if (x->previewSignal && x->modelOutput) {
-		if (x->modelOutput->valid) {
-			TTAttributePtr	anAttribute = NULL;
-			x->modelOutput->findAttribute(TTSymbol("signal"), &anAttribute);
-			anAttribute->unregisterObserverForNotifications(*(x->previewSignal));
-			TTObjectBaseRelease(TTObjectBaseHandle(&x->previewSignal));
-		}
-	}
-    
     if (x->preset_names)
 		sysmem_freeptr(x->preset_names);
 	
@@ -319,26 +304,13 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 		x->has_gain = false;
 		x->has_bypass = false;
 		x->has_mix = false;
-		x->has_preview = false;
+		x->has_active = false;
 		x->has_freeze = false;
         
         if (x->preset_names) {
             sysmem_freeptr(x->preset_names);
             x->preset_names = NULL;
         }
-		
-		// reset output object and preview signal
-		if (x->previewSignal && x->modelOutput) {
-			if (x->modelOutput->valid) {
-				err = x->modelOutput->findAttribute(kTTSym_signal, &anAttribute);
-				if (!err) {
-					anAttribute->unregisterObserverForNotifications(*(x->previewSignal));
-					TTObjectBaseRelease(TTObjectBaseHandle(&x->previewSignal));
-					x->previewSignal = NULL;
-				}
-			}
-		}
-		x->modelOutput = NULL;
 		
         if (x->hash_receivers->lookup(kTTSym_initialized, v))
             
@@ -602,7 +574,7 @@ void ui_paint(t_ui *x, t_object *view)
 			right_side -= 16.0;
 		if (x->has_freeze)
 			right_side -= 16.0;
-		if (x->has_preview)
+		if (x->has_active)
 			right_side -= 16.0;
 		if (x->has_panel)
 			right_side -= 16.0;
@@ -651,7 +623,7 @@ void ui_paint(t_ui *x, t_object *view)
 			right_side -= 16.0;
 		if (x->has_freeze)
 			right_side -= 16.0;
-		if (x->has_preview)
+		if (x->has_active)
 			right_side -= 16.0;
 		if (x->has_panel)
 			right_side -= 16.0;
@@ -696,7 +668,7 @@ void ui_paint(t_ui *x, t_object *view)
 			right_side -= 16.0;
 		if (x->has_freeze)
 			right_side -= 16.0;
-		if (x->has_preview)
+		if (x->has_active)
 			right_side -= 16.0;
 		if (x->has_panel)
 			right_side -= 16.0;
@@ -739,7 +711,7 @@ void ui_paint(t_ui *x, t_object *view)
 		
 		if (x->has_freeze)
 			right_side -= 16.0;
-		if (x->has_preview)
+		if (x->has_active)
 			right_side -= 16.0;
 		if (x->has_panel)
 			right_side -= 16.0;
@@ -779,7 +751,7 @@ void ui_paint(t_ui *x, t_object *view)
 	if (x->has_freeze) {
 		long right_side = rect.width - 16.0;
 		
-		if (x->has_preview)
+		if (x->has_active)
 			right_side -= 16.0;
 		if (x->has_panel)
 			right_side -= 16.0;
@@ -815,26 +787,26 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_show_text(g, "f");
 	}
 	
-	// draw the preview button
-	if (x->has_preview) {
+	// draw the active button
+	if (x->has_active) {
 		long right_side = rect.width - 16.0;
 		
 		if (x->has_panel)
 			right_side -= 16.0;
 		
-		if (x->is_previewing)
+		if (x->is_active)
 			jgraphics_set_source_jrgba(g, &s_color_green_button);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_background_button);
 		
-		x->rect_preview.x = right_side;
-		x->rect_preview.width = 13.0;
+		x->rect_active.x = right_side;
+		x->rect_active.width = 13.0;
 		
 		jgraphics_set_line_width(g, 1.5);
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->highlight && x->highlight_preview)
+		if (x->highlight && x->highlight_active)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -842,7 +814,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_stroke(g);
 		
 		// p
-		if (x->is_previewing)
+		if (x->is_active)
 			jgraphics_set_source_jrgba(g, &s_color_text_button_on);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_text_button_off);
@@ -850,7 +822,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_move_to(g, right_side + 4.0, 12.0);
 		jgraphics_select_font_face(g, JAMOMA_BUTTON_FONT, JGRAPHICS_FONT_SLANT_NORMAL, JGRAPHICS_FONT_WEIGHT_BOLD);
 		jgraphics_set_font_size(g, 7.0);
-		jgraphics_show_text(g, "p");
+		jgraphics_show_text(g, "a");
 	}
 	
 	// draw the panel button
@@ -983,13 +955,13 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		else if (x->has_panel && px.x >= x->rect_panel.x && px.x <= (x->rect_panel.x + x->rect_panel.width))
 			x->uiInfo->sendMessage(TTSymbol("Panel"));
 		
-		else if (x->has_preview && px.x >= x->rect_preview.x && px.x <= (x->rect_preview.x + x->rect_preview.width)) {
+		else if (x->has_active && px.x >= x->rect_active.x && px.x <= (x->rect_active.x + x->rect_active.width)) {
 			if (x->highlight) {
-				x->highlight_preview = !x->highlight_preview;
-				ui_viewer_highlight(x, TTSymbol("data/preview"), x->highlight_preview);
+				x->highlight_active = !x->highlight_active;
+				ui_viewer_highlight(x, TTSymbol("data/active"), x->highlight_active);
 			}
 			else
-				ui_viewer_send(x, TTSymbol("data/preview"), TTValue(!x->is_previewing));
+				ui_viewer_send(x, TTSymbol("data/active"), TTValue(!x->is_active));
 		}
 		else if (x->has_freeze && px.x >= x->rect_freeze.x && px.x <= (x->rect_freeze.x + x->rect_freeze.width)) {
 			if (x->highlight) {

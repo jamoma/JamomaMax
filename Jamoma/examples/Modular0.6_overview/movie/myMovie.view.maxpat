@@ -30,6 +30,36 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-22",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 813.0, 474.0, 110.0, 33.0 ],
+					"text" : "use j.receive to setup a preview"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-19",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 735.0, 448.0, 100.0, 20.0 ],
+					"text" : "j.receive data/out"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"annotation" : "the path to a movie",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -55,8 +85,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 461.0, 649.0, 294.0, 47.0 ],
-					"text" : "About panel, if a patcher is connected to his second outlet, the j.ui  will automatically create an internal ui/panel message and add the \"+\" widget."
+					"patching_rect" : [ 534.0, 649.0, 283.0, 47.0 ],
+					"text" : "About panel, if a patcher is connected to his outlet, the j.ui  will automatically create an internal ui/panel message and add the \"+\" widget."
 				}
 
 			}
@@ -254,7 +284,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 773.0, 572.0, 74.0, 52.0 ],
+					"patching_rect" : [ 735.0, 474.0, 74.0, 52.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 217.0, 40.0, 80.0, 60.0 ]
 				}
@@ -385,6 +415,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "load a movie",
 					"bgcolor" : [ 0.913725, 0.913725, 0.913725, 0.0 ],
 					"fgcolor" : [ 0.258824, 0.258824, 0.258824, 1.0 ],
 					"id" : "obj-12",
@@ -516,7 +547,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 742.0, 661.0, 67.0, 20.0 ],
+					"patching_rect" : [ 461.0, 662.5, 67.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -583,8 +614,8 @@
 					"id" : "obj-15",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 461.0, 539.0, 300.0, 105.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
@@ -634,7 +665,7 @@
 					"destination" : [ "obj-26", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-15", 1 ]
+					"source" : [ "obj-15", 0 ]
 				}
 
 			}
@@ -643,7 +674,7 @@
 					"destination" : [ "obj-29", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-15", 0 ]
+					"source" : [ "obj-19", 0 ]
 				}
 
 			}
