@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 998.0, 94.0, 703.0, 289.0 ],
+		"rect" : [ 977.0, 94.0, 703.0, 289.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -45,61 +45,6 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Turn video noise on or off",
-					"hint" : "toggle metro on and off",
-					"id" : "obj-11",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 75.5, 196.0, 20.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 186.0, 0.0, 19.0, 19.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-99",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 107.5, 196.0, 87.0, 19.0 ],
-					"text" : "j.remote active",
-					"varname" : "synth/noise/on[2]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-113",
-					"maxclass" : "panel",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 83.0, 95.0, 200.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"hint" : "audio fader is only relevant for file playback ",
-					"id" : "obj-1",
-					"maxclass" : "hint",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 478.0, 50.0, 100.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 235.0, 2.0, 16.0, 17.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
@@ -130,13 +75,14 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 325.5, 25.5, 76.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 121.0, 0.0, 67.0, 19.0 ],
+					"presentation_rect" : [ 166.0, 0.0, 67.0, 19.0 ],
 					"varname" : "source_mode"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-17",
@@ -190,15 +136,6 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-99", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -240,15 +177,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-8", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-99", 0 ]
 				}
 
 			}

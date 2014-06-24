@@ -29,6 +29,22 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-1",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 249.0, 113.0, 158.0, 31.0 ],
+					"presentation_rect" : [ 283.0, 114.0, 0.0, 0.0 ],
+					"text" : "dim 1 1, dim 40 40 ramp 2000"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"args" : [ "@name", "noise%.model", "@description", "Generate Noise" ],
 					"bgmode" : 1,
 					"id" : "obj-5",
@@ -110,6 +126,15 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,

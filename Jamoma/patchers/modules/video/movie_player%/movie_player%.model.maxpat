@@ -598,7 +598,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 505.0, 58.0, 692.0, 309.0 ],
+						"rect" : [ 505.0, 58.0, 408.0, 300.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -626,7 +626,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 173.0, 106.0, 107.0, 19.0 ],
+									"patching_rect" : [ 173.0, 137.0, 107.0, 19.0 ],
 									"text" : "prepend looppoints",
 									"varname" : "loop[2]"
 								}
@@ -638,11 +638,12 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-37",
+									"linecount" : 4,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 173.0, 76.0, 454.0, 19.0 ],
+									"patching_rect" : [ 173.0, 76.0, 145.0, 55.0 ],
 									"text" : "j.parameter loop/points @type array @description List of low and high loop point values",
 									"varname" : "loop[3]"
 								}
@@ -696,7 +697,7 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-3",
-									"items" : [ "none", ",", "normal", ",", "palindrome", ",", "looppoints" ],
+									"items" : [ "normal", ",", "palindrome", ",", "looppoints", ",", "one shot" ],
 									"labelclick" : 1,
 									"maxclass" : "umenu",
 									"numinlets" : 1,
@@ -1313,12 +1314,13 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 40.0, 26.0, 25.0, 25.0 ]
+					"patching_rect" : [ 30.5, 26.0, 25.0, 25.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-27",
@@ -1333,6 +1335,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-28",
@@ -1340,7 +1343,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 40.0, 55.0, 37.0, 19.0 ],
+					"patching_rect" : [ 30.5, 59.0, 37.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
@@ -1366,7 +1369,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 814.0, 346.0, 232.0, 19.0 ],
+					"patching_rect" : [ 855.0, 79.0, 232.0, 19.0 ],
 					"text" : "j.model @description \"Read QT movie film.\""
 				}
 
@@ -1562,7 +1565,7 @@
 					"destination" : [ "obj-44", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 49.5, 75.0, 40.0, 75.0 ],
+					"midpoints" : [ 40.0, 75.0, 40.0, 75.0 ],
 					"source" : [ "obj-28", 0 ]
 				}
 
