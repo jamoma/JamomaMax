@@ -84,7 +84,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 172.5, 66.5, 319.0, 33.0 ],
-					"text" : "j.parameter planes @type integer @range 1 4 @clipmode both @description \"Number of matrix planes\" @default 1",
+					"text" : "j.parameter planes @type integer @range 1 4 @clipmode both @description \"Number of matrix planes\" @default 4",
 					"varname" : "synth/noise/planes"
 				}
 
