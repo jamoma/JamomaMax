@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.resample=" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Resample an input signal at a different sample rate or block size
 	</digest>
 	<description>
-		TEXT_HERE
+		Resample an input signal at a different sample rate or block size
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,10 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			audio graph
+		</metadata>
+		<metadata name="tag">
+			multichannel
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -26,7 +29,7 @@
 				Multichannel input and control messages
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel input and control messages
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
@@ -34,7 +37,7 @@
 				Multichannel input 2
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel input 2
 			</description>
 		</inlet>
 	</inletlist>
@@ -45,7 +48,7 @@
 				Multichannel output 1
 			</digest>
 			<description>
-				TEXT_HERE
+				Multichannel output 1
 			</description>
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
@@ -53,12 +56,12 @@
 				dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				dumpout outlet
 			</description>
 		</outlet>
 	</outletlist>
 	<!--ARGUMENTS-->
-	<objarglist>
+	<!-- <objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
 				TEXT_HERE
@@ -67,7 +70,7 @@
 				TEXT_HERE
 			</description>
 		</objarg>
-	</objarglist>
+	</objarglist> -->
 	<!--MESSAGES-->
 	<methodlist>
 		<!-- 	<method name="audio.connect">
@@ -148,10 +151,10 @@
 	<attributelist>
 		<attribute name="bypass" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Bypass resampling
 			</digest>
 			<description>
-				TEXT_HERE
+				Bypass resampling
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -175,10 +178,10 @@
 		</attribute>
 		<attribute name="mute" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Mute the resampling
 			</digest>
 			<description>
-				TEXT_HERE
+				Mute the resampling
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -186,10 +189,10 @@
 		</attribute>
 		<attribute name="sampleRate" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Sampling rate
 			</digest>
 			<description>
-				TEXT_HERE
+				Sampling rate
 			</description>
 		</attribute>
 	</attributelist>
@@ -199,8 +202,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="j.degrade=">
 		</seealso>
 	</seealsolist>
 </c74object>

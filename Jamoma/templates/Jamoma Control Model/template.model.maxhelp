@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 743.0, 114.0, 830.0, 652.0 ],
+		"rect" : [ 62.0, 112.0, 830.0, 652.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -30,6 +30,20 @@
 		"showontab" : 1,
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 99.0, 537.0, 48.0, 19.0 ],
+					"text" : "j.model"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"border" : 0,
 					"filename" : "helpname.js",
 					"id" : "obj-4",
@@ -40,7 +54,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 10.0, 10.0, 333.171875, 53.625 ]
+					"patching_rect" : [ 10.0, 10.0, 448.171875, 88.5 ]
 				}
 
 			}
@@ -56,7 +70,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 73.0, 407.0, 175.0, 48.0 ],
+					"patching_rect" : [ 122.0, 374.0, 175.0, 48.0 ],
 					"text" : "this one should stay the last one",
 					"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 				}
@@ -73,7 +87,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 73.0, 98.5, 130.0, 51.0 ],
+					"patching_rect" : [ 72.0, 133.5, 130.0, 51.0 ],
 					"text" : "This is where main model's feature documentation go"
 				}
 
@@ -132,7 +146,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 12.0, 254.0, 81.0, 20.0 ],
+					"patching_rect" : [ 24.0, 253.0, 81.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -205,7 +219,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 12.0, 211.0, 60.0, 20.0 ],
+					"patching_rect" : [ 16.0, 209.0, 60.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -241,7 +255,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 743.0, 140.0, 830.0, 626.0 ],
+						"rect" : [ 0.0, 26.0, 830.0, 626.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -271,7 +285,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 60.0, 447.0, 50.0, 19.0 ],
-									"text" : "69."
+									"text" : "1."
 								}
 
 							}
@@ -354,7 +368,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 12.0, 114.0, 50.0, 20.0 ],
+					"patching_rect" : [ 9.0, 151.0, 50.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -414,7 +428,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 12.0, 421.0, 50.0, 20.0 ],
+					"patching_rect" : [ 61.0, 388.0, 50.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -437,43 +451,50 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "template.module.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/templates/Jamoma Control Model",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/templates/Jamoma Control Model",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "template.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/templates/Jamoma Control Model",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/templates/Jamoma Control Model",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "j.parameterCreate.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma-old/Implementations/Max/Jamoma/patchers/components/parameterCreate",
+				"patcherrelativepath" : "../../../../../../../@Jamoma-old/Implementations/Max/Jamoma/patchers/components/parameterCreate",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "template.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/templates/Jamoma Control Model",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/templates/Jamoma Control Model",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.presetParameters.helper.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/help",
-				"patcherrelativepath" : "../../help",
+				"bootpath" : "/Users/jln/@Jamoma-old/Implementations/Max/Jamoma/help",
+				"patcherrelativepath" : "../../../../../../../@Jamoma-old/Implementations/Max/Jamoma/help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.attrParameters.helper.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/help",
-				"patcherrelativepath" : "../../help",
+				"bootpath" : "/Users/jln/@Jamoma-old/Implementations/Max/Jamoma/help",
+				"patcherrelativepath" : "../../../../../../../@Jamoma-old/Implementations/Max/Jamoma/help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpname.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -506,6 +527,14 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.map.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.dataspace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
@@ -519,10 +548,6 @@
 			}
 , 			{
 				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
  ]

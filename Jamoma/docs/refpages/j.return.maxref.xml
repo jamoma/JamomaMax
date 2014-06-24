@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.return" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Declare an output node in the Jamoma namespace
 	</digest>
 	<description>
-		TEXT_HERE
+		Declare an output node in the Jamoma namespace
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			mvc
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -26,17 +26,17 @@
 				input
 			</digest>
 			<description>
-				TEXT_HERE
+				Value to propagate in Jamoma namespace
 			</description>
 		</inlet>
-		<inlet id="1" type="INLET_TYPE">
+		<!-- <inlet id="1" type="INLET_TYPE">
 			<digest>
 				input
 			</digest>
 			<description>
 				TEXT_HERE
-			</description>
-		</inlet>
+			</description> -->
+		<!-- </inlet> -->
 	</inletlist>
 	<!--OUTLETS-->
 	<outletlist>
@@ -45,7 +45,7 @@
 				direct: values
 			</digest>
 			<description>
-				TEXT_HERE
+				Direct out value
 			</description>
 		</outlet>
 	</outletlist>
@@ -53,10 +53,10 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				Node name
 			</digest>
 			<description>
-				TEXT_HERE
+				Node name
 			</description>
 		</objarg>
 	</objarglist>
@@ -65,10 +65,10 @@
 		<method name="bang">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Value to output
 			</digest>
 			<description>
-				TEXT_HERE
+				Value to output
 			</description>
 		</method>
 		<method name="int">
@@ -76,10 +76,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Value to output
 			</digest>
 			<description>
-				TEXT_HERE
+				Value to output
 			</description>
 		</method>
 		<method name="float">
@@ -87,10 +87,10 @@
 				<arg name="ARG_NAME_0" type="float" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Value to output
 			</digest>
 			<description>
-				TEXT_HERE
+				Value to output
 			</description>
 		</method>
 		<method name="list">
@@ -98,10 +98,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Value to output
 			</digest>
 			<description>
-				TEXT_HERE
+				Value to output
 			</description>
 		</method>
 		<method name="anything">
@@ -109,10 +109,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Value to output
 			</digest>
 			<description>
-				TEXT_HERE
+				Value to output
 			</description>
 		</method>
 		<method name="+">
@@ -120,10 +120,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Increment and output last received value
 			</digest>
 			<description>
-				TEXT_HERE
+				Increment and output last received value
 			</description>
 		</method>
 		<method name="-">
@@ -131,10 +131,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Decrement and output last received value
 			</digest>
 			<description>
-				TEXT_HERE
+				Decrement and output last received value
 			</description>
 		</method>
 		<method name="address">
@@ -142,10 +142,10 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Node address
 			</digest>
 			<description>
-				TEXT_HERE
+				Node address
 			</description>
 		</method>
 		<method name="dec">
@@ -153,10 +153,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Decrement and output last received value
 			</digest>
 			<description>
-				TEXT_HERE
+				Decrement and output last received value
 			</description>
 		</method>
 		<method name="dump">
@@ -175,10 +175,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Increment and output last received value			
 			</digest>
 			<description>
-				TEXT_HERE
+				Increment and output last received value			
 			</description>
 		</method>
 		<method name="init">
@@ -197,10 +197,10 @@
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Enable or disable return
 			</digest>
 			<description>
-				TEXT_HERE
+				Enable or disable return
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -208,138 +208,138 @@
 		</attribute>
 		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Dataspace of the return
 			</digest>
 			<description>
-				TEXT_HERE
+				Dataspace of the return
 			</description>
 		</attribute>
 		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Dataspace unit of the return
 			</digest>
 			<description>
-				TEXT_HERE
+				Dataspace unit of the return
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Node description
 			</digest>
 			<description>
-				TEXT_HERE
+				Node description
 			</description>
 		</attribute>
-		<attribute name="priority" get="1" set="1" type="int" size="1">
+		<!-- <attribute name="priority" get="1" set="1" type="int" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set the sceduler driving the ramp
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the sceduler driving the ramp: none, max
 			</description>
 		</attribute>
 		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Function to be used for ramping
 			</digest>
 			<description>
-				TEXT_HERE
+				Function to be used for ramping
 			</description>
 		</attribute>
 		<attribute name="ramp/function/parameters" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Parameters of the selected function used for ramping
 			</digest>
 			<description>
-				TEXT_HERE
+				Parameters of the selected function used for ramping
 			</description>
 		</attribute>
 		<attribute name="ramp/status" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Ramp status
 			</digest>
 			<description>
-				TEXT_HERE
+				Ramp status. THe attribute will be set to 1 when ramping or to 0 when done
 			</description>
 		</attribute>
 		<attribute name="range" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Value range
 			</digest>
 			<description>
-				TEXT_HERE
+				Value range
 			</description>
 		</attribute>
 		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set how values exceeding range will be clipped
 			</digest>
 			<description>
-				TEXT_HERE
+				Set how values exceeding range will be clipped (none, low, high, wrap, fold)
 			</description>
 		</attribute>
 		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Filtering of value repetitions
 			</digest>
 			<description>
-				TEXT_HERE
+				Set whether to filter out value repetitions or not
 			</description>
 		</attribute>
-		<attribute name="service" get="1" set="1" type="symbol" size="1">
+		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 		<attribute name="tag" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Some tag associated to the return
 			</digest>
 			<description>
-				TEXT_HERE
+				Some tag associated to the return
 			</description>
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Type of the return value
 			</digest>
 			<description>
-				TEXT_HERE
+				Type of the return value
 			</description>
 		</attribute>
 		<attribute name="value" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Last value emitted by the return
 			</digest>
 			<description>
-				TEXT_HERE
+				Last value emitted by the return
 			</description>
 		</attribute>
-		<attribute name="default" get="1" set="1" type="int" size="1">
+		<!-- <attribute name="default" get="1" set="1" type="int" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 		<attribute name="stepsize" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Size of the incrementation/decrementation messages
 			</digest>
 			<description>
-				TEXT_HERE
+				Size of the incrementation/decrementation messages
 			</description>
 		</attribute>
 	</attributelist>
@@ -349,8 +349,9 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="j.parameter">
+		</seealso>
+		<seealso name="j.message">
 		</seealso>
 	</seealsolist>
 </c74object>
