@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 58.0, 112.0, 527.0, 424.0 ],
+		"rect" : [ 895.0, 267.0, 527.0, 424.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -29,6 +29,53 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-7",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 244.0, 20.0, 37.0, 31.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 229.0, 21.0, 56.0, 19.0 ],
+					"text" : "autostart"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 306.0, 63.0, 20.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 280.0, 21.0, 20.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 311.695923, 104.331673, 103.0, 19.0 ],
+					"text" : "j.remote autostart",
+					"varname" : "unique[1]"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
@@ -63,7 +110,13 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgovercolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgoveroncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"border" : 1,
+					"bordercolor" : [ 0.101961, 0.101961, 0.101961, 1.0 ],
+					"borderoncolor" : [ 0.101961, 0.101961, 0.101961, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-30",
@@ -78,14 +131,24 @@
 					"prototypename" : "jamoma open",
 					"rounded" : 8.0,
 					"text" : "get length",
+					"textcolor" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
 					"texton" : "recording",
+					"textoncolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
+					"textovercolor" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
+					"textoveroncolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
 					"varname" : "GETLENGTH"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgovercolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgoveroncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"border" : 1,
+					"bordercolor" : [ 0.101961, 0.101961, 0.101961, 1.0 ],
+					"borderoncolor" : [ 0.101961, 0.101961, 0.101961, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-27",
@@ -100,14 +163,24 @@
 					"prototypename" : "jamoma open",
 					"rounded" : 8.0,
 					"text" : "dispose",
+					"textcolor" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
 					"texton" : "recording",
+					"textoncolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
+					"textovercolor" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
+					"textoveroncolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
 					"varname" : "DISPOSE"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgovercolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgoveroncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"border" : 1,
+					"bordercolor" : [ 0.101961, 0.101961, 0.101961, 1.0 ],
+					"borderoncolor" : [ 0.101961, 0.101961, 0.101961, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-19",
@@ -122,14 +195,24 @@
 					"prototypename" : "jamoma open",
 					"rounded" : 8.0,
 					"text" : "stop",
+					"textcolor" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
 					"texton" : "recording",
+					"textoncolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
+					"textovercolor" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
+					"textoveroncolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
 					"varname" : "STOP"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgovercolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgoveroncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"border" : 1,
+					"bordercolor" : [ 0.101961, 0.101961, 0.101961, 1.0 ],
+					"borderoncolor" : [ 0.101961, 0.101961, 0.101961, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-18",
@@ -144,14 +227,24 @@
 					"prototypename" : "jamoma open",
 					"rounded" : 8.0,
 					"text" : "start",
+					"textcolor" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
 					"texton" : "recording",
+					"textoncolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
+					"textovercolor" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
+					"textoveroncolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
 					"varname" : "START"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgovercolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgoveroncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"border" : 1,
+					"bordercolor" : [ 0.101961, 0.101961, 0.101961, 1.0 ],
+					"borderoncolor" : [ 0.101961, 0.101961, 0.101961, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-17",
@@ -166,21 +259,12 @@
 					"prototypename" : "jamoma open",
 					"rounded" : 8.0,
 					"text" : "read",
+					"textcolor" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
 					"texton" : "recording",
+					"textoncolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
+					"textovercolor" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
+					"textoveroncolor" : [ 0.14902, 0.14902, 0.14902, 1.0 ],
 					"varname" : "READ"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-63",
-					"maxclass" : "jit.pwindow",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 235.0, 20.0, 60.0, 45.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 235.0, 23.0, 60.0, 45.0 ]
 				}
 
 			}
@@ -226,7 +310,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-14",
 					"maxclass" : "number",
-					"minimum" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
@@ -372,7 +455,7 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-29",
-					"items" : [ "none", ",", "normal", ",", "palindrome", ",", "looppoints" ],
+					"items" : [ "normal", ",", "palindrome", ",", "one shot" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -753,6 +836,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -963,6 +1055,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-54", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -970,19 +1071,10 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-63", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-62", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/list2parameter",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/list2parameter",
 				"patcherrelativepath" : "../../../components/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
