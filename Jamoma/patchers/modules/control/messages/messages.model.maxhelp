@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 357.0, 110.0, 834.0, 466.0 ],
+		"rect" : [ 565.0, 44.0, 834.0, 466.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -85,7 +85,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -317,7 +317,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -956,7 +956,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1284,17 +1284,17 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"outlettype" : [ "", "clear" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 192.0, 200.0, 896.0, 480.0 ],
+						"rect" : [ 411.0, 332.0, 896.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -1407,7 +1407,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -2131,11 +2131,13 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Message Display",
 					"id" : "obj-74",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.messages.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"name" : "messages.view.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 18.0, 197.0, 450.0, 140.0 ],
 					"presentation_rect" : [ 15.0, 15.0, 450.0, 140.0 ]
 				}
@@ -2166,7 +2168,7 @@
 					"name" : "input~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
+					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 502.0, 130.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
 				}
@@ -2194,6 +2196,16 @@
 					"disabled" : 0,
 					"hidden" : 1,
 					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-74", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 254.5, 191.0, 27.5, 191.0 ],
+					"source" : [ "obj-13", 0 ]
 				}
 
 			}
@@ -2281,6 +2293,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-74", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-75", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-75", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2328,6 +2349,13 @@
 				"name" : "balance~.model.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
 				"patcherrelativepath" : "../../audio/balance~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "messages.view.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/messages",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
