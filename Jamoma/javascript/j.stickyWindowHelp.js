@@ -7,7 +7,7 @@ outlets = 1;
 autowatch = 1;
 
 var task = new Task(init, this);
-task.schedule(100);
+ task.schedule(100);
 
 
 // define CORNER enum
@@ -85,7 +85,7 @@ Location.prototype.setFromArray = function(array)
 	this.y1 = array[3];
 }
 
-// returns conrner coordinates as Point2D
+// returns corner coordinates as Point2D
 Location.prototype.getCorner = function(corner)
 {
 	if (corner == CORNER.TopLEFT) 
@@ -203,7 +203,7 @@ SlavePatcher.prototype.setLocation = function(newLocation)
 	this.patcher.wind.location = newLocation.getAsArray();
 }
 
-SlavePatcher.prototype.trackMasterPosition = function() {
+	SlavePatcher.prototype.trackMasterPosition = function() {
 	debugPost("this.patcher.name: " + this.patcher.name + "\n");
 	debugPost("this.stickyCornerSlave: " + this.stickyCornerSlave + "\n");
 	debugPost("this.stickyCornerMaster: " + this.stickyCornerMaster + "\n");
@@ -218,7 +218,7 @@ SlavePatcher.prototype.trackMasterPosition = function() {
 
 	debugPost("newSlaveLocation: " + slaveLocation.getAsArray() + "\n");
 
-	// correct for title bar hight 
+	// correct for title bar height 
 	if ((this.stickyCornerSlave == CORNER.TopLEFT || this.stickyCornerSlave == CORNER.TopRIGHT) &&
 		(this.stickyCornerMaster == CORNER.BottomLEFT || this.stickyCornerMaster == CORNER.BottomRIGHT))
 	{
@@ -373,9 +373,11 @@ debugPost.local = 1;
 
 function init()
 {
-	addSlaveSubPatcherByVarname(arguments[0]);
-	setStickyCornerSlaveForSlaveSubPatcherWithVarname(arguments[0], TopRIGHT); 
-	setStickyCornerMasterForSlaveSubPatcherWithVarname(arguments[0], TopLEFT); 
-	setIsStickyForSlaveSubPatcherWithVarname(arguments[0], 1);
-	setStickyCornerOffsetForSlaveSubPatcherWithVarname(arguments[0], 0);
-}	
+	var arg =  jsarguments[1];
+	addSlaveSubPatcherByVarname(arg);
+	setStickyCornerSlaveForSlaveSubPatcherWithVarname(arg, "TopRIGHT"); 
+	setStickyCornerMasterForSlaveSubPatcherWithVarname(arg, "TopLEFT"); 
+	setIsStickyForSlaveSubPatcherWithVarname(arg, 1);
+	setStickyCornerOffsetForSlaveSubPatcherWithVarname(arg, 0, 0);
+	
+}
