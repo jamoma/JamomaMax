@@ -749,7 +749,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 137.0, 341.0, 45.0, 20.0 ],
-					"text" : "j.out 1",
+					"text" : "j.out 1 @type jit.matrix",
 					"varname" : "thru1[1]"
 				}
 
