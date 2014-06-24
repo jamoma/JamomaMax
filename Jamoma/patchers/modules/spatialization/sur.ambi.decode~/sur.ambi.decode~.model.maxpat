@@ -8442,7 +8442,7 @@
             296.0,
             43.0
           ],
-          "text": "j.parameter orderWeights @type decimalArray @description \"manually set weights for given number of orders.\" @repetitions/filter 1 @ramp/drive Max"
+          "text": "j.parameter orderWeights @type array @description \"manually set weights for given number of orders.\" @repetitions/filter 1 @ramp/drive Max"
         }
       },
       {
@@ -8535,7 +8535,7 @@
             598.0,
             43.0
           ],
-          "text": "j.message.array 32 speaker position @type decimalArray @dataspace position @dataspace/unit xyz @default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+          "text": "j.message.array 32 speaker position @type array @dataspace position @dataspace/unit xyz @default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
         }
       },
       {

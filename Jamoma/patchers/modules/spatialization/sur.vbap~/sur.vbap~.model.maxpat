@@ -512,7 +512,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 50.0, 64.0, 147.0, 100.0 ],
-													"text" : "j.messageArray source.[32]/position @type decimalArray @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+													"text" : "j.messageArray source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 												}
 
 											}
@@ -2215,7 +2215,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 309.0, 85.0, 148.0, 100.0 ],
-									"text" : "j.messageArray speaker.[32]/position @type decimalArray @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+									"text" : "j.messageArray speaker.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 								}
 
 							}

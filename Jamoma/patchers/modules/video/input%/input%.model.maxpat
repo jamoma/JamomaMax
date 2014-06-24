@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 42.0, 93.0, 658.0, 342.0 ],
+		"rect" : [ 565.0, 403.0, 881.0, 331.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -29,6 +29,64 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 493.0, 262.416992, 73.0, 20.0 ],
+					"text" : "j.send */dim"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-7",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 493.0, 211.812744, 342.0, 33.0 ],
+					"text" : "j.parameter dim @type array @default 640 480 @dataspace xy @description \"dimension of the video stream\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.572549, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 322.5, 145.0, 36.0, 20.0 ],
+					"text" : "j.in 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-2",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 322.5, 113.0, 25.0, 25.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1",
@@ -36,32 +94,15 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 155.0, 133.0, 52.0, 19.0 ],
+					"patching_rect" : [ 155.0, 113.0, 52.0, 19.0 ],
 					"text" : "!/ 1000."
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "noise generator",
-					"color" : [ 0.0, 0.762517, 0.219121, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-3",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 322.5, 231.812744, 126.0, 33.0 ],
-					"text" : "noise%.model noise @amenities none"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"annotation" : "Multiple source video player",
-					"color" : [ 0.0, 0.762517, 0.219121, 1.0 ],
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
@@ -70,8 +111,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 13.0, 231.812744, 115.0, 33.0 ],
-					"text" : "grab%.model cam @amenities none"
+					"patching_rect" : [ 13.0, 211.812744, 112.0, 33.0 ],
+					"text" : "grab%.model grab @amenities none"
 				}
 
 			}
@@ -85,7 +126,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 333.0, 155.0, 283.0, 20.0 ],
+					"patching_rect" : [ 354.0, 184.208496, 283.0, 20.0 ],
 					"text" : "j.model @description \"Multiple source video player\""
 				}
 
@@ -95,7 +136,7 @@
 					"coll_data" : 					{
 						"count" : 3,
 						"data" : [ 							{
-								"key" : "camera",
+								"key" : "grab",
 								"value" : [ 1 ]
 							}
 , 							{
@@ -116,7 +157,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 13.0, 133.0, 66.0, 20.0 ],
+					"patching_rect" : [ 13.0, 113.0, 66.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 1
 					}
@@ -134,7 +175,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 81.0, 165.0, 93.0, 20.0 ],
+					"patching_rect" : [ 81.0, 145.0, 93.0, 20.0 ],
 					"text" : "qmetro 30"
 				}
 
@@ -148,7 +189,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 13.0, 204.208496, 328.5, 20.0 ],
+					"patching_rect" : [ 13.0, 184.208496, 328.5, 20.0 ],
 					"text" : "gate 3 1"
 				}
 
@@ -156,7 +197,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "Read QT movie film.",
-					"color" : [ 0.0, 0.762517, 0.219121, 1.0 ],
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-4",
@@ -165,8 +206,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 167.75, 231.812744, 149.0, 33.0 ],
-					"text" : "movie_player%.model file @amenities none"
+					"patching_rect" : [ 167.75, 211.812744, 126.0, 33.0 ],
+					"text" : "movie%.model movie @amenities none"
 				}
 
 			}
@@ -177,7 +218,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 13.0, 308.02124, 25.0, 25.0 ]
+					"patching_rect" : [ 13.0, 288.02124, 25.0, 25.0 ]
 				}
 
 			}
@@ -187,13 +228,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1099",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 81.0, 51.0, 275.0, 33.0 ],
-					"text" : "j.parameter active @type boolean @description \"Turn video noise on or off\" @default 1",
+					"patching_rect" : [ 81.0, 47.0, 252.0, 20.0 ],
+					"text" : "j.parameter active @type boolean @default 1",
 					"varname" : "synth/noise/on[2]"
 				}
 
@@ -209,8 +249,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 155.0, 93.0, 408.0, 33.0 ],
-					"text" : "j.parameter fps @type integer @range 0 120 @clipmode low @description \"frame rate desired\" @dataspace time @dataspace/unit ms @default 40",
+					"patching_rect" : [ 155.0, 73.0, 408.0, 33.0 ],
+					"text" : "j.parameter fps @type integer @range 0 120 @clipmode low @description \"frame rate desired\" @dataspace time @dataspace/unit ms @default 25",
 					"varname" : "camera/camera[2]"
 				}
 
@@ -225,7 +265,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 13.0, 282.416992, 134.0, 20.0 ],
+					"patching_rect" : [ 13.0, 262.416992, 134.0, 20.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -241,9 +281,26 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 13.0, 12.0, 603.0, 33.0 ],
-					"text" : "j.parameter source @type string @description \"Choose between 'camera', 'movie' , 'noise' as input\" @default noise @range camera movie noise",
+					"patching_rect" : [ 13.0, 9.0, 606.0, 33.0 ],
+					"text" : "j.parameter source @type string @description \"Choose between 'grab', 'movie' , 'noise' as input\" @default noise @range grab movie noise",
 					"varname" : "source_mode[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "noise generator",
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-3",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 322.5, 211.812744, 119.0, 33.0 ],
+					"text" : "noise%.model noise @amenities none"
 				}
 
 			}
@@ -325,7 +382,7 @@
 					"destination" : [ "obj-13", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 90.5, 194.104248, 332.0, 194.104248 ],
+					"midpoints" : [ 90.5, 174.104248, 332.0, 174.104248 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -341,10 +398,19 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1002", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 332.0, 275.0, 22.5, 275.0 ],
+					"midpoints" : [ 332.0, 255.0, 22.5, 255.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -354,7 +420,7 @@
 					"destination" : [ "obj-1002", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 177.25, 275.0, 22.5, 275.0 ],
+					"midpoints" : [ 177.25, 255.0, 22.5, 255.0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -364,8 +430,26 @@
 					"destination" : [ "obj-1002", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 22.5, 266.0, 22.5, 266.0 ],
+					"midpoints" : [ 22.5, 246.0, 22.5, 246.0 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}

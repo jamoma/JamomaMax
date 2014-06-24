@@ -570,7 +570,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 377.0, 124.0, 513.0, 31.0 ],
-					"text" : "j.message source.1/position @type decimalArray @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+					"text" : "j.message source.1/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 				}
 
 			}

@@ -5457,7 +5457,7 @@
             506.0,
             19.0
           ],
-          "text": "j.message raw/midievent @type decimalArray @description \"Send raw midi messages to the plug-in.\""
+          "text": "j.message raw/midievent @type array @description \"Send raw midi messages to the plug-in.\""
         }
       },
       {

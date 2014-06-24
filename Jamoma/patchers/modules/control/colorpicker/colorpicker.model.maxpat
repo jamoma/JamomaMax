@@ -1440,7 +1440,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 35.0, 270.0, 365.0, 31.0 ],
-									"text" : "j.message colors/in @type decimalArray @repetitions/filter 0 @description \"Shortcut for setting colors: List of 1 to 12 HSL triplets.\"",
+									"text" : "j.message colors/in @type array @repetitions/filter 0 @description \"Shortcut for setting colors: List of 1 to 12 HSL triplets.\"",
 									"varname" : "colors"
 								}
 

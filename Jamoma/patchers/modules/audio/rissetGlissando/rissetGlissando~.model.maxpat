@@ -102,7 +102,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 25.5, 12.5, 136.0, 100.0 ],
-					"text" : "j.parameter range @type decimalArray @ramp/drive Max @ramp/function linear @description \"The range of the sweeps as MIDI values.\"",
+					"text" : "j.parameter range @type array @ramp/drive Max @ramp/function linear @description \"The range of the sweeps as MIDI values.\"",
 					"varname" : "range"
 				}
 
