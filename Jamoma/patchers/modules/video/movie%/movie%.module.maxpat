@@ -33,7 +33,7 @@
 					"args" : [ "#1" ],
 					"id" : "obj-5",
 					"maxclass" : "bpatcher",
-					"name" : "movie_player%.view.maxpat",
+					"name" : "movie%.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -53,8 +53,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 151.0, 175.0, 19.0 ],
-					"text" : "movie_player%.model #1"
+					"patching_rect" : [ 6.0, 151.0, 194.0, 19.0 ],
+					"text" : "movie%.model #1"
 				}
 
 			}
@@ -102,15 +102,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "movie_player%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/moviePlayer%",
+				"name" : "movie%.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/movie%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "movie_player%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/moviePlayer%",
+				"name" : "movie%.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/movie%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

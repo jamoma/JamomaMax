@@ -1074,6 +1074,9 @@ void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 {
 	SymbolPtr	objclass;
 	ObjectPtr	obj = object_attr_getobj(jamoma_patcher_get((ObjectPtr)x), _sym_firstobject);
+    
+    // théo - we decide to mute this feature in june 2014 Albi workshop
+    return;
 	
 	// if the control key is pressed
 	if (modifiers & eShiftKey) {
@@ -1115,6 +1118,9 @@ void ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 {	
 	SymbolPtr objclass;
 	ObjectPtr obj = object_attr_getobj(jamoma_patcher_get((ObjectPtr)x), _sym_firstobject);
+    
+    // théo - we decide to mute this feature in june 2014 Albi workshop
+    return;
 	
 	// Is the mouse leave outside the j.ui (not hover an ui object)
 	if (	pt.x <= x->box.b_presentation_rect.x || pt.x >= (x->box.b_presentation_rect.x + x->box.b_presentation_rect.width)
