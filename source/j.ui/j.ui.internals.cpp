@@ -474,7 +474,7 @@ void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	
 	// search through all connected objects for a patcher object
 	object_obex_lookup(obj, _sym_pound_B, &box);
-	myoutlet = (t_outlet*)jbox_getoutlet((t_jbox*)box, 1);
+	myoutlet = (t_outlet*)jbox_getoutlet((t_jbox*)box, panel_out);
 	if (myoutlet)
 		connecteds = (t_dll*)myoutlet->o_dll;
 	
