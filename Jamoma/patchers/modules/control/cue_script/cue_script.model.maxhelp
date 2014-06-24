@@ -216,7 +216,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.cueScript", "@description", "A module for remote communication to modules by means of a text format cue script" ],
+					"args" : [ "@name", "cue_script.model", "@description", "A module for remote communication to modules by means of a text format cue script" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
@@ -381,7 +381,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 180.0, 110.0, 195.0, 17.0 ],
-					"text" : "/loadScript jmod.demo_cuescript.txt"
+					"text" : "/loadScript cue_script.demoscript.txt"
 				}
 
 			}
@@ -432,7 +432,7 @@
 					"id" : "obj-24",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.cueScript.maxpat",
+					"name" : "cue_script.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 35.0, 145.0, 300.0, 70.0 ],
@@ -482,7 +482,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 491.5, 99.0, 225.0, 31.0 ],
-					"text" : "Load jmod.demo_cuescript.txt and try passing through these cues one at a time."
+					"text" : "Load cue_script.demoscript.txt and try passing through these cues one at a time."
 				}
 
 			}
@@ -506,7 +506,7 @@
 					"id" : "obj-30",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "jmod.filter~.maxpat",
+					"name" : "filter~.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 34.0, 433.0, 300.0, 70.0 ],
