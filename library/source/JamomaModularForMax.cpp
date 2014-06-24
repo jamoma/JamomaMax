@@ -1957,12 +1957,13 @@ TTSymbol jamoma_file_write(ObjectPtr x, AtomCount argc, AtomPtr argv, char* defa
 	return result;
 }
 
-/** Get BOOT style filepath grom args or, if no args open a dialog to read a file */
+/** Get BOOT style filepath from args or, if no args open a dialog to read a file */
 TTSymbol jamoma_file_read(ObjectPtr x, AtomCount argc, AtomPtr argv, t_fourcc filetype)
 {
 	char 			filepath[MAX_FILENAME_CHARS];	// for storing the name of the file locally
 	char 			fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
-	short 			path;							// pathID#
+    char            posixpath[MAX_PATH_CHARS];
+	short 			path = 0;						// pathID#
 	t_fourcc		outtype;
 	SymbolPtr		userpath;
 	TTSymbol		result = kTTSymEmpty;
@@ -1973,24 +1974,27 @@ TTSymbol jamoma_file_read(ObjectPtr x, AtomCount argc, AtomPtr argv, t_fourcc fi
 			userpath = atom_getsym(argv);
 			
 			if (userpath != _sym_nothing && userpath != _sym_bang) {
-				// Use BOOT style path
-				path = 0;
-				path_nameconform(userpath->s_name, fullpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);// Copy symbol argument to a local string
-				
-				result = TTSymbol(fullpath);
+                
+                strcpy(filepath, userpath->s_name);    // must copy symbol before calling locatefile_extended
+                if (locatefile_extended(filepath, &path, &outtype, &filetype, 1)) {     // Returns 0 if successful
+                    
+                    object_error(x, "%s : not found", filepath);
+                    return result;
+                }
 			}
 		}
 	}
 	
 	// ... or open a dialog
-	if (result == kTTSymEmpty)
-		if (!open_dialog(filepath, &path, &outtype, &filetype, 1)) {	// Returns 0 if successful
-			char posixpath[MAX_PATH_CHARS];
-			
-			path_topathname(path, filepath, fullpath);
-			path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
-			result = TTSymbol(posixpath);
-		}
+	if (!path)
+		open_dialog(filepath, &path, &outtype, &filetype, 1);
+
+    if (path) {
+        
+        path_topathname(path, filepath, fullpath);
+        path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
+        result = TTSymbol(posixpath);
+    }
 	
 	return result;
 }
