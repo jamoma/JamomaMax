@@ -8,7 +8,7 @@
 			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1202.0, 802.0 ],
+		"rect" : [ 160.0, 102.0, 1202.0, 802.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -18,7 +18,7 @@
 		"gridsize" : [ 5.0, 5.0 ],
 		"gridsnaponopen" : 0,
 		"statusbarvisible" : 2,
-		"toolbarvisible" : 0,
+		"toolbarvisible" : 1,
 		"boxanimatetime" : 200,
 		"imprint" : 0,
 		"enablehscroll" : 1,
@@ -27,8 +27,7 @@
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
-		"showrootpatcherontab" : 0,
-		"showontab" : 0,
+		"showontab" : 1,
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
@@ -46,7 +45,7 @@
 							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
+						"rect" : [ 0.0, 26.0, 1202.0, 776.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -66,8 +65,49 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 128.0, 249.0, 133.0, 20.0 ],
+									"text" : "j.send /cue_script_help"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 18.0,
+									"frgb" : 0.0,
+									"id" : "obj-2",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 130.0, 105.0, 257.0, 27.0 ],
+									"text" : "View the cue script"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-23",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 128.0, 215.0, 67.0, 18.0 ],
+									"text" : "script/view"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -77,8 +117,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 169.0, 357.0, 302.0, 60.0 ],
-									"presentation_rect" : [ 170.0, 357.0, 0.0, 0.0 ],
+									"patching_rect" : [ 679.0, 290.0, 302.0, 60.0 ],
 									"text" : "This displays the current value of all parameters in all models in a text window.\n\nThis can be useful to develop and edit cues."
 								}
 
@@ -92,8 +131,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 169.0, 96.0, 216.0, 27.0 ],
-									"text" : "Get state"
+									"patching_rect" : [ 679.0, 105.0, 257.0, 27.0 ],
+									"text" : "Get current state of the system"
 								}
 
 							}
@@ -106,7 +145,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 252.0, 260.0, 60.0, 18.0 ],
+									"patching_rect" : [ 718.0, 215.0, 60.0, 18.0 ],
 									"text" : "get_state"
 								}
 
@@ -120,7 +159,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 252.0, 294.0, 133.0, 20.0 ],
+									"patching_rect" : [ 718.0, 249.0, 133.0, 20.0 ],
 									"text" : "j.send /cue_script_help"
 								}
 
@@ -135,13 +174,22 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 169.0, 156.0, 302.0, 33.0 ],
+									"patching_rect" : [ 679.0, 165.0, 302.0, 33.0 ],
 									"text" : "You can poll current state of all parameters using the \"get_state\" message."
 								}
 
 							}
  ],
 						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-23", 0 ]
+								}
+
+							}
+, 							{
 								"patchline" : 								{
 									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
@@ -153,7 +201,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 160.0, 241.0, 100.0, 20.0 ],
+					"patching_rect" : [ 160.0, 241.0, 180.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -167,7 +215,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p \"Current State\""
+					"text" : "p \"View script and current state\""
 				}
 
 			}
@@ -188,7 +236,7 @@
 							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
+						"rect" : [ 0.0, 26.0, 1202.0, 776.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -208,7 +256,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -218,7 +265,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 8.0, 4.5, 227.0, 20.0 ],
+									"patching_rect" : [ 8.0, 5.5, 227.0, 20.0 ],
 									"text" : "loadmess url http://vimeo.com/34349947"
 								}
 
@@ -233,7 +280,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 8.0, 35.5, 1175.0, 728.0 ],
+									"patching_rect" : [ 8.0, 32.0, 1185.0, 737.0 ],
+									"scrollbars" : 1,
 									"url" : "http://vimeo.com/34349947"
 								}
 
@@ -315,8 +363,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 196.5, 406.0, 133.0, 20.0 ],
-									"presentation_rect" : [ 67.5, 292.0, 0.0, 0.0 ],
+									"patching_rect" : [ 196.5, 445.0, 133.0, 20.0 ],
 									"text" : "j.send /cue_script_help"
 								}
 
@@ -330,7 +377,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 196.5, 292.0, 133.0, 20.0 ],
+									"patching_rect" : [ 196.5, 301.0, 133.0, 20.0 ],
 									"text" : "j.send /cue_script_help"
 								}
 
@@ -346,7 +393,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 361.0, 261.5, 158.0, 37.0 ],
+									"patching_rect" : [ 387.0, 252.0, 158.0, 37.0 ],
 									"text" : "You can start an exernal editor (e.g., Textmate)"
 								}
 
@@ -360,7 +407,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 196.5, 369.0, 93.0, 18.0 ],
+									"patching_rect" : [ 196.5, 408.0, 93.0, 18.0 ],
 									"text" : "/script/edit_with"
 								}
 
@@ -376,7 +423,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 361.0, 359.5, 199.0, 37.0 ],
+									"patching_rect" : [ 387.0, 398.5, 199.0, 37.0 ],
 									"text" : "Editing use TextEdit (Mac) and Notepad (Win) by default"
 								}
 
@@ -401,12 +448,12 @@
 									"fontsize" : 14.0,
 									"frgb" : 0.0,
 									"id" : "obj-10",
-									"linecount" : 4,
+									"linecount" : 5,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 182.0, 149.0, 420.0, 69.0 ],
-									"text" : "The cue script can be edited in an external program\n(e.g. TextWrangler on Mac or Notepad on Win).\n\ncue_script is autowatching for changes to the cue script."
+									"patching_rect" : [ 177.0, 75.0, 482.0, 85.0 ],
+									"text" : "The cue script can be edited in an external program such as TextWrangler on Mac or Notepad on Win.\n\nWhen using an external editor, cue_script will be autowatching for changes to the cue script."
 								}
 
 							}
@@ -432,7 +479,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 201.0, 268.0, 100.0, 20.0 ],
+					"patching_rect" : [ 201.0, 268.0, 77.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -446,7 +493,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p script/edit_with"
+					"text" : "p \"Edit With\""
 				}
 
 			}
@@ -549,6 +596,39 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"bubble" : 1,
+									"fontname" : "Arial",
+									"fontsize" : 14.0,
+									"frgb" : 0.0,
+									"id" : "obj-7",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 534.0, 501.666656, 170.0, 42.0 ],
+									"text" : "(2) Trigger the cues one by one",
+									"textcolor" : [ 0.0, 0.498039, 0.0, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontname" : "Arial",
+									"fontsize" : 14.0,
+									"frgb" : 0.0,
+									"id" : "obj-5",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 269.5, 207.0, 171.0, 26.0 ],
+									"text" : "(1) Load the cue script",
+									"textcolor" : [ 0.0, 0.498039, 0.0, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-3",
@@ -556,14 +636,15 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 449.0, 334.0, 129.0, 18.0 ],
-									"text" : "script/edit_with bang"
+									"patching_rect" : [ 46.0, 344.0, 129.0, 18.0 ],
+									"text" : "script/read 0."
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"bubble" : 1,
+									"bubbleside" : 2,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
@@ -572,8 +653,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 177.0, 500.166687, 177.0, 37.0 ],
-									"text" : "This ferature is not yet implemented in Jamoma 0.6"
+									"patching_rect" : [ 257.0, 452.666656, 186.0, 52.0 ],
+									"text" : "This feature is not yet implemented in Jamoma 0.6"
 								}
 
 							}
@@ -586,7 +667,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 46.0, 597.0, 156.0, 20.0 ],
+									"patching_rect" : [ 46.0, 565.0, 156.0, 20.0 ],
 									"text" : "j.send /cue_script_help/cue"
 								}
 
@@ -600,21 +681,21 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 65.0, 509.666687, 97.0, 18.0 ],
+									"patching_rect" : [ 297.0, 513.666626, 97.0, 18.0 ],
 									"text" : "dataspaceDemo"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "cue_script.model", "@description", "A module for remote communication to modules by means of a text format cue script" ],
+									"args" : [ "@name", "cue_script.model", "@description", "Remote communication with models using a text format cue script" ],
 									"bgmode" : 1,
 									"id" : "obj-1",
 									"maxclass" : "bpatcher",
 									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 1680.0, 70.0 ],
+									"patching_rect" : [ 0.0, 0.0, 1202.0, 70.0 ],
 									"prototypename" : "bphelp",
 									"varname" : "maxhelpui"
 								}
@@ -629,7 +710,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 65.0, 559.0, 59.0, 18.0 ],
+									"patching_rect" : [ 462.0, 513.666626, 59.0, 18.0 ],
 									"text" : "audio_off"
 								}
 
@@ -643,7 +724,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 65.0, 534.333313, 55.0, 18.0 ],
+									"patching_rect" : [ 401.0, 513.666626, 55.0, 18.0 ],
 									"text" : "fade_out"
 								}
 
@@ -657,7 +738,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 65.0, 485.0, 44.0, 18.0 ],
+									"patching_rect" : [ 245.0, 513.666626, 44.0, 18.0 ],
 									"text" : "sweep"
 								}
 
@@ -671,7 +752,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 65.0, 460.333313, 48.0, 18.0 ],
+									"patching_rect" : [ 191.0, 513.666626, 48.0, 18.0 ],
 									"text" : "fade_in"
 								}
 
@@ -685,7 +766,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 65.0, 435.666656, 59.0, 18.0 ],
+									"patching_rect" : [ 124.0, 513.666626, 59.0, 18.0 ],
 									"text" : "audio_on"
 								}
 
@@ -699,7 +780,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 65.0, 411.0, 71.0, 18.0 ],
+									"patching_rect" : [ 46.0, 513.666626, 71.0, 18.0 ],
 									"text" : "initialisation"
 								}
 
@@ -713,22 +794,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 191.0, 203.0, 203.0, 18.0 ],
+									"patching_rect" : [ 46.0, 211.0, 203.0, 18.0 ],
 									"text" : "script/read cue_script.demoscript.txt"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-23",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 46.0, 203.0, 67.0, 18.0 ],
-									"text" : "script/view"
 								}
 
 							}
@@ -757,7 +824,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 807.0, 398.666656, 300.0, 140.0 ],
+									"patching_rect" : [ 825.0, 465.0, 300.0, 140.0 ],
 									"presentation_rect" : [ 15.0, 15.0, 300.0, 140.0 ],
 									"varname" : "/output~"
 								}
@@ -773,38 +840,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
-									"patching_rect" : [ 807.0, 126.666664, 300.0, 140.0 ],
+									"patching_rect" : [ 825.0, 193.0, 300.0, 140.0 ],
 									"presentation_rect" : [ 15.0, 15.0, 300.0, 140.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-28",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 46.0, 367.0, 231.0, 33.0 ],
-									"text" : "Load cue_script.demoscript.txt and try passing through these cues one at a time."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-29",
-									"linecount" : 3,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 674.0, 615.0, 302.0, 47.0 ],
-									"text" : "jmod.cuelist sets up a remote communication with the modules. For this to work an unique OSC-aware name have to be assigned to each module as an argument."
 								}
 
 							}
@@ -818,7 +855,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
-									"patching_rect" : [ 807.0, 302.666656, 300.0, 70.0 ],
+									"patching_rect" : [ 825.0, 369.0, 300.0, 70.0 ],
 									"presentation_rect" : [ 15.0, 15.0, 300.0, 70.0 ]
 								}
 
@@ -829,7 +866,6 @@
 									"destination" : [ "obj-4", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 74.5, 581.500015, 55.5, 581.500015 ],
 									"source" : [ "obj-11", 0 ]
 								}
 
@@ -839,7 +875,6 @@
 									"destination" : [ "obj-4", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 74.5, 555.166679, 55.5, 555.166679 ],
 									"source" : [ "obj-12", 0 ]
 								}
 
@@ -849,7 +884,6 @@
 									"destination" : [ "obj-4", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 74.5, 507.500015, 55.5, 507.500015 ],
 									"source" : [ "obj-13", 0 ]
 								}
 
@@ -859,7 +893,6 @@
 									"destination" : [ "obj-4", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 74.5, 481.166679, 55.5, 481.166679 ],
 									"source" : [ "obj-14", 0 ]
 								}
 
@@ -869,7 +902,6 @@
 									"destination" : [ "obj-4", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 74.5, 457.833347, 55.5, 457.833347 ],
 									"source" : [ "obj-15", 0 ]
 								}
 
@@ -879,7 +911,6 @@
 									"destination" : [ "obj-4", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 74.5, 432.500015, 55.5, 432.500015 ],
 									"source" : [ "obj-16", 0 ]
 								}
 
@@ -890,15 +921,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-17", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-24", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-23", 0 ]
 								}
 
 							}
@@ -916,7 +938,6 @@
 									"destination" : [ "obj-4", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 74.5, 531.833351, 55.5, 531.833351 ],
 									"source" : [ "obj-25", 0 ]
 								}
 

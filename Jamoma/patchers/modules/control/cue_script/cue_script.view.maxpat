@@ -678,8 +678,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 355.0, 295.0, 99.0, 20.0 ],
-					"text" : "j.send scriptview"
+					"patching_rect" : [ 355.0, 295.0, 102.0, 20.0 ],
+					"text" : "j.send script/view"
 				}
 
 			}
