@@ -8633,7 +8633,7 @@
                             59.0,
                             19.0
                           ],
-                          "text": "j.thru"
+                          "text": "thru"
                         }
                       },
                       {
@@ -8674,7 +8674,7 @@
                             59.0,
                             19.0
                           ],
-                          "text": "j.thru"
+                          "text": "thru"
                         }
                       },
                       {
@@ -11390,7 +11390,7 @@
         "implicit": 1
       },
       {
-        "name": "j.thru.maxpat",
+        "name": "thru.maxpat",
         "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
         "patcherrelativepath": "../../../library/components/thru",
         "type": "JSON",

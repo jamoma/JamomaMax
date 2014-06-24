@@ -1312,8 +1312,8 @@
 			}
 , 			{
 				"name" : "j.thru.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/j.thru",
-				"patcherrelativepath" : "../../../components/_deprecated/j.thru",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/thru",
+				"patcherrelativepath" : "../../../components/_deprecated/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}

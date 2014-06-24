@@ -5528,7 +5528,7 @@
 									"patching_rect" : [ 490.0, 456.0, 57.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 539.0, 140.0, 17.0 ],
-									"text" : "j.thru"
+									"text" : "thru"
 								}
 
 							}
