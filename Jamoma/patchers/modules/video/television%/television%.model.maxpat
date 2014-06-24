@@ -360,7 +360,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 29.0, 288.0, 60.0, 20.0 ],
-					"text" : "j.thru"
+					"text" : "thru"
 				}
 
 			}

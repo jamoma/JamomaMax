@@ -248,7 +248,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 262.5, 274.0, 59.0, 20.0 ],
-									"text" : "j.thru"
+									"text" : "thru"
 								}
 
 							}

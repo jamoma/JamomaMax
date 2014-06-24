@@ -2282,7 +2282,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 164.0, 270.0, 61.0, 19.0 ],
-					"text" : "j.thru"
+					"text" : "thru"
 				}
 
 			}

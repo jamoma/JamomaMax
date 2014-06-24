@@ -179,7 +179,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "wrong-outlet-3" ],
 									"patching_rect" : [ 50.0, 100.0, 37.0, 20.0 ],
-									"text" : "j.thru"
+									"text" : "thru"
 								}
 
 							}

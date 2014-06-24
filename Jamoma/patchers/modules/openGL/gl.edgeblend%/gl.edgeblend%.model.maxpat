@@ -211,7 +211,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 140.0, 291.0, 38.0, 19.0 ],
-					"text" : "j.thru",
+					"text" : "thru",
 					"varname" : "THRU"
 				}
 

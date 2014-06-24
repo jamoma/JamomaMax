@@ -117,7 +117,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 100.0, 59.0, 19.0 ],
-									"text" : "j.thru"
+									"text" : "thru"
 								}
 
 							}
@@ -1159,7 +1159,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 301.0, 418.0, 59.0, 19.0 ],
-					"text" : "j.thru"
+					"text" : "thru"
 				}
 
 			}

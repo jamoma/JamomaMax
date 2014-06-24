@@ -3039,7 +3039,7 @@
                     57.0,
                     19.0
                   ],
-                  "text": "j.thru"
+                  "text": "thru"
                 }
               },
               {
@@ -5740,7 +5740,7 @@
             57.0,
             19.0
           ],
-          "text": "j.thru",
+          "text": "thru",
           "varname": "thru"
         }
       },

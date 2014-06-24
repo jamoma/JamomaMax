@@ -4812,7 +4812,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 16.0, 520.0, 59.0, 19.0 ],
-					"text" : "j.thru"
+					"text" : "thru"
 				}
 
 			}
