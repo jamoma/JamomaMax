@@ -900,7 +900,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 514.0, 329.0, 101.0, 19.0 ],
+									"patching_rect" : [ 514.0, 311.0, 101.0, 19.0 ],
 									"text" : "prepend autostart"
 								}
 
@@ -911,13 +911,13 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1015",
-									"linecount" : 4,
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 514.0, 256.0, 605.0, 55.0 ],
-									"text" : "j.parameter autostart @type boolean @description \"Defines module's behavior when 'file/open' is received. When set to 0, reading of a video file is triggered with 'file/start'. When set to 1 (default), opening a video file automatically triggers 'file/start'. When set to 2, opening a video file automatically triggers 'file/start', only if a file was previously being read.\"",
+									"patching_rect" : [ 514.0, 256.0, 469.0, 43.0 ],
+									"text" : "j.parameter autostart @type boolean @description \"Defines module's behavior when 'file' parameter is received. When set to 0, reading of a video file is triggered with 'start'. When set to 1 (default), opening a video file automatically triggers 'start'. \" @default 1",
 									"varname" : "camera/camera[1]"
 								}
 
@@ -933,8 +933,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 382.0, 176.0, 437.0, 31.0 ],
-									"text" : "j.parameter file/rate @type decimal @repetitions/filter 1 @ramp/drive Max @range -2. 2. @clipmode none @description \"Playback rate of video file\" @default 1",
+									"patching_rect" : [ 382.0, 176.0, 418.0, 31.0 ],
+									"text" : "j.parameter rate @type decimal @repetitions/filter 1 @ramp/drive Max @range -2. 2. @clipmode none @description \"Playback rate of video file\" @default 1",
 									"varname" : "file/rate"
 								}
 
@@ -950,8 +950,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 450.0, 211.0, 353.0, 31.0 ],
-									"text" : "j.message file/counter @type integer @range 0 100000 @clipmode low @repetitions/filter 0 @description \"Video file time counter\"",
+									"patching_rect" : [ 450.0, 211.0, 368.0, 31.0 ],
+									"text" : "j.message frame @type integer @range 0 100000 @clipmode low @repetitions/filter 0 @description \"Video frame direct access\"",
 									"varname" : "file/counter"
 								}
 
@@ -1125,7 +1125,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 19.0, 19.0, 369.0, 19.0 ],
-									"text" : "j.message read @type generic @description \"Playback control\""
+									"text" : "j.message file @type string @description \"video file\""
 								}
 
 							}
@@ -1429,8 +1429,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 347.0, 53.0, 394.0, 31.0 ],
-					"text" : "j.parameter dim @type array @range 1 1000 @clipmode low @ramp/drive none @dataspace xy @description \"Image size\" @default 320 240",
+					"patching_rect" : [ 347.0, 53.0, 393.0, 31.0 ],
+					"text" : "j.parameter dim @type array @range 1 1000 @clipmode low @ramp/drive none @dataspace xy @description \"Image size\" @default 640 480",
 					"varname" : "dim"
 				}
 
