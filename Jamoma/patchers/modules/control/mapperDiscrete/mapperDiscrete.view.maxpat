@@ -10827,7 +10827,7 @@
                     ],
                     "dependency_cache": [
                       {
-                        "name": "j.thru.maxpat",
+                        "name": "thru.maxpat",
                         "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
                         "type": "JSON",
                         "implicit": 1
@@ -16808,7 +16808,7 @@
                             ],
                             "dependency_cache": [
                               {
-                                "name": "j.thru.maxpat",
+                                "name": "thru.maxpat",
                                 "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
                                 "type": "JSON",
                                 "implicit": 1
@@ -17877,7 +17877,7 @@
                     ],
                     "dependency_cache": [
                       {
-                        "name": "j.thru.maxpat",
+                        "name": "thru.maxpat",
                         "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
                         "type": "JSON",
                         "implicit": 1
@@ -28375,7 +28375,7 @@
                     ],
                     "dependency_cache": [
                       {
-                        "name": "j.thru.maxpat",
+                        "name": "thru.maxpat",
                         "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
                         "type": "JSON",
                         "implicit": 1
@@ -29161,7 +29161,7 @@
             ],
             "dependency_cache": [
               {
-                "name": "j.thru.maxpat",
+                "name": "thru.maxpat",
                 "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
                 "type": "JSON",
                 "implicit": 1
@@ -31048,7 +31048,7 @@
     ],
     "dependency_cache": [
       {
-        "name": "j.thru.maxpat",
+        "name": "thru.maxpat",
         "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
         "patcherrelativepath": "../../../library/components/thru",
         "type": "JSON",

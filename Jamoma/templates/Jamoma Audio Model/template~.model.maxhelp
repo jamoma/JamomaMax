@@ -701,7 +701,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.thru.maxpat",
+				"name" : "thru.maxpat",
 				"bootpath" : "/Users/jln/@Jamoma-old/Implementations/Max/Jamoma/patchers/components/thru",
 				"patcherrelativepath" : "../../../../../../../@Jamoma-old/Implementations/Max/Jamoma/patchers/components/thru",
 				"type" : "JSON",
