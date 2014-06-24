@@ -390,7 +390,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 309.5, 399.0, 546.0, 19.0 ],
-					"text" : "j.parameter videoplane/texture/scale @type decimalArray @description \"Texture scale (x, y coordinates).\"",
+					"text" : "j.parameter videoplane/texture/scale @type array @description \"Texture scale (x, y coordinates).\"",
 					"varname" : "videoplane/texture/scale"
 				}
 

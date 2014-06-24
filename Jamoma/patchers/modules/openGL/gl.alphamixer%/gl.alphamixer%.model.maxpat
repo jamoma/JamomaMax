@@ -1688,7 +1688,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 244.0, 151.0, 385.0, 31.0 ],
-									"text" : "j.parameter layer.3 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 3 (backmost layer) as list of rgba values.\"",
+									"text" : "j.parameter layer.3 @type array @ramp/drive Max @description \"Blend coefficients for layer 3 (backmost layer) as list of rgba values.\"",
 									"varname" : "layer_3"
 								}
 
@@ -1704,7 +1704,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 174.0, 111.0, 375.0, 31.0 ],
-									"text" : "j.parameter layer.2 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 2 as list of rgba values.\"",
+									"text" : "j.parameter layer.2 @type array @ramp/drive Max @description \"Blend coefficients for layer 2 as list of rgba values.\"",
 									"varname" : "layer_2"
 								}
 
@@ -1720,7 +1720,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 109.0, 74.0, 375.0, 31.0 ],
-									"text" : "j.parameter layer.1 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 1 as list of rgba values.\"",
+									"text" : "j.parameter layer.1 @type array @ramp/drive Max @description \"Blend coefficients for layer 1 as list of rgba values.\"",
 									"varname" : "layer_1"
 								}
 
@@ -1736,7 +1736,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 39.0, 37.0, 386.0, 31.0 ],
-									"text" : "j.parameter layer.0 @type decimalArray @ramp/drive Max @description \"Blend coefficients for layer 0 (frontmost layer) as list of rgba values.\"",
+									"text" : "j.parameter layer.0 @type array @ramp/drive Max @description \"Blend coefficients for layer 0 (frontmost layer) as list of rgba values.\"",
 									"varname" : "layer_0"
 								}
 

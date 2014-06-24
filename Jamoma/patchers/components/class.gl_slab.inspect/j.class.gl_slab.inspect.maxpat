@@ -93,7 +93,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 234.0, 372.0, 518.0, 31.0 ],
-					"text" : "j.parameter slab/texrect @type decimalArray @ramp/drive none @description \"The extent or rectangular coordinates bounding the texture coordinates for the slab geometry (default = 0 0 1 1).\"",
+					"text" : "j.parameter slab/texrect @type array @ramp/drive none @description \"The extent or rectangular coordinates bounding the texture coordinates for the slab geometry (default = 0 0 1 1).\"",
 					"varname" : "slab/texrect"
 				}
 
@@ -123,7 +123,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 206.0, 270.0, 429.0, 31.0 ],
-					"text" : "j.parameter slab/rect @type decimalArray @ramp/drive none @description \"The extent or rectangular coordinates bounding the slab geometry (default = 0 0 1 1).\"",
+					"text" : "j.parameter slab/rect @type array @ramp/drive none @description \"The extent or rectangular coordinates bounding the slab geometry (default = 0 0 1 1).\"",
 					"varname" : "slab/rect"
 				}
 
@@ -169,7 +169,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 271.0, 126.0, 460.0, 31.0 ],
-					"text" : "j.parameter slab/dim @type decimalArray @ramp/drive none @description \"The dimensions of the output jit.gl.texture object when adapt is disabled (default = 720 480).\"",
+					"text" : "j.parameter slab/dim @type array @ramp/drive none @description \"The dimensions of the output jit.gl.texture object when adapt is disabled (default = 720 480).\"",
 					"varname" : "slab/dim"
 				}
 

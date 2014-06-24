@@ -779,7 +779,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 602.0, 141.0, 245.0, 74.0 ],
-					"text" : "j.parameter delay/right @type decimalArray @repetitions/filter 1 @ramp/drive none @range 0 10000 @clipmode low @description \"Delay time in milliseconds for right channel.\"",
+					"text" : "j.parameter delay/right @type array @repetitions/filter 1 @ramp/drive none @range 0 10000 @clipmode low @description \"Delay time in milliseconds for right channel.\"",
 					"varname" : "right[1]"
 				}
 
@@ -795,7 +795,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 289.5, 148.0, 243.0, 74.0 ],
-					"text" : "j.parameter delay/left @type decimalArray @repetitions/filter 1 @ramp/drive none @range 0 10000 @clipmode low @description \"Delay time in milliseconds for left channel.\"",
+					"text" : "j.parameter delay/left @type array @repetitions/filter 1 @ramp/drive none @range 0 10000 @clipmode low @description \"Delay time in milliseconds for left channel.\"",
 					"varname" : "left[1]"
 				}
 

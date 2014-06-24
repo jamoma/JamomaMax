@@ -66,7 +66,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 232.0, 481.0, 202.0, 33.0 ],
-					"text" : "j.return levels @type decimalArray @description \"Metered gain levels.\""
+					"text" : "j.return levels @type array @description \"Metered gain levels.\""
 				}
 
 			}

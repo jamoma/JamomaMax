@@ -1092,7 +1092,7 @@
             567.0,
             43.0
           ],
-          "text": "j.message.array 32 speaker position @type decimalArray @repetitions/filter 0 @dataspace position @dataspace/unit xyz @default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+          "text": "j.message.array 32 speaker position @type array @repetitions/filter 0 @dataspace position @dataspace/unit xyz @default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
         }
       },
       {

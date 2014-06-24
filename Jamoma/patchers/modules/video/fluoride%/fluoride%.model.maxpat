@@ -273,7 +273,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 266.5, 187.0, 240.0, 92.0 ],
-					"text" : "j.parameter glow @type decimalArray @repetitions/filter 1 @dataspace color @dataspace/unit rgb @range 0. 1. @description \"Specify the red green and blue components for the glowing color (RGB). The range for each component should be between 0.0 and 1.0.\"",
+					"text" : "j.parameter glow @type array @repetitions/filter 1 @dataspace color @dataspace/unit rgb @range 0. 1. @description \"Specify the red green and blue components for the glowing color (RGB). The range for each component should be between 0.0 and 1.0.\"",
 					"varname" : "glow"
 				}
 

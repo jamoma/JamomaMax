@@ -1301,7 +1301,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 349.0, 60.0, 466.0, 19.0 ],
-					"text" : "j.parameter anchor @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
+					"text" : "j.parameter anchor @type array @ramp/drive Max @description \\\"Zooming.\\\"",
 					"varname" : "anchor"
 				}
 
@@ -1316,7 +1316,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 321.0, 41.0, 460.0, 19.0 ],
-					"text" : "j.parameter offset @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
+					"text" : "j.parameter offset @type array @ramp/drive Max @description \\\"Zooming.\\\"",
 					"varname" : "offset"
 				}
 
@@ -1331,7 +1331,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 283.0, 22.0, 459.0, 19.0 ],
-					"text" : "j.parameter zoom @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
+					"text" : "j.parameter zoom @type array @ramp/drive Max @description \\\"Zooming.\\\"",
 					"varname" : "zoom"
 				}
 
