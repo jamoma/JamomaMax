@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 5
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 100.0, 100.0, 640.0, 480.0 ],
+		"rect" : [ 162.0, 196.0, 639.0, 513.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 9.0,
@@ -30,6 +31,49 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
+					"frgb" : 0.0,
+					"id" : "obj-20",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 26.0, 439.5, 565.0, 19.0 ],
+					"presentation_rect" : [ 27.0, 435.0, 0.0, 0.0 ],
+					"text" : "value attributes are selected by defaul, to the size of the bpatcher can be reduced if attribute access is not needed"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"args" : [ "parameter", "message", "return", "@exclude/tags", "generic" ],
+					"id" : "obj-19",
+					"maxclass" : "bpatcher",
+					"name" : "j.namespaceMenu.maxpat",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 26.0, 464.5, 403.5, 25.0 ],
+					"presentation_rect" : [ 20.0, 433.5, 0.0, 0.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 11.0,
+					"frgb" : 0.0,
+					"id" : "obj-7",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 60.0, 224.0, 522.0, 19.0 ],
+					"text" : "the rightmost menu allows to select which attribute to use (value by default)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 11.0,
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -38,8 +82,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 221.0, 411.0, 555.0, 306.0 ],
@@ -123,7 +168,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 11.0,
-									"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+									"frgb" : 0.0,
 									"id" : "obj-7",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -138,7 +183,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 11.0,
-									"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+									"frgb" : 0.0,
 									"id" : "obj-6",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -152,7 +197,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 11.0,
-									"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+									"frgb" : 0.0,
 									"id" : "obj-5",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -180,7 +225,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 11.0,
-									"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+									"frgb" : 0.0,
 									"id" : "obj-3",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -194,7 +239,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 11.0,
-									"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+									"frgb" : 0.0,
 									"id" : "obj-2",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -208,7 +253,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 11.0,
-									"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+									"frgb" : 0.0,
 									"id" : "obj-1",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -222,7 +267,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 11.0,
-									"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+									"frgb" : 0.0,
 									"id" : "obj-11",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -251,52 +296,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "j.namespaceMenu.maxpat",
-								"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespaceMenu",
-								"type" : "JSON",
-								"implicit" : 1
-							}
-, 							{
-								"name" : "j.oscroute.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.oscinstance.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.namespace.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.savebang.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.receive.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.init.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 460.5, 403.5, 113.0, 19.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
 						"default_fontsize" : 9.0,
 						"description" : "",
-						"fontname" : "Arial",
-						"globalpatchername" : "",
-						"fontface" : 0,
-						"tags" : "",
-						"default_fontface" : 0,
-						"fontsize" : 9.0,
 						"digest" : "",
-						"default_fontname" : "Arial"
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 9.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p filtering_arguments"
@@ -307,13 +321,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-17",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 26.0, 291.0, 341.0, 32.0 ],
+					"patching_rect" : [ 24.5, 315.0, 341.0, 31.0 ],
 					"text" : "when a parameter/message/return is selected, its address is outpu \nand the second menu will take all the width - click it to go back"
 				}
 
@@ -322,13 +336,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-16",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 60.0, 196.0, 522.0, 19.0 ],
-					"text" : "the rightmost menu allows to select  parameters/messages/returns at any level below the current location"
+					"patching_rect" : [ 60.0, 198.0, 522.0, 19.0 ],
+					"text" : "the fourth menu allows to select  parameters/messages/returns at any level below the current location"
 				}
 
 			}
@@ -336,7 +350,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-14",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -350,13 +364,14 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-13",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 59.0, 149.0, 362.0, 19.0 ],
-					"text" : "the second menu brings back to the node just above the current location"
+					"patching_rect" : [ 59.0, 149.0, 362.0, 31.0 ],
+					"text" : "the second menu/button brings back to the node just above the current location"
 				}
 
 			}
@@ -364,7 +379,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-12",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -378,7 +393,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-11",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -397,7 +412,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 27.0, 269.0, 404.0, 15.0 ]
+					"patching_rect" : [ 25.5, 293.0, 404.0, 15.0 ],
+					"text" : "/BCF/track.1/fader/value"
 				}
 
 			}
@@ -410,12 +426,13 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.5, 237.5, 402.0, 23.0 ]
+					"patching_rect" : [ 27.0, 261.5, 547.5, 24.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
 					"id" : "obj-1",
@@ -426,8 +443,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 406.0, 75.0, 486.0, 204.0 ],
@@ -453,7 +471,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 11.0,
-									"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+									"frgb" : 0.0,
 									"id" : "obj-2",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -561,64 +579,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "j.namespaceMenu.maxpat",
-								"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespaceMenu",
-								"type" : "JSON",
-								"implicit" : 1
-							}
-, 							{
-								"name" : "j.oscroute.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.oscinstance.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.namespace.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.savebang.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.receive.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.init.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.parameter.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.remote.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.model.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 460.5, 374.5, 114.0, 19.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
 						"default_fontsize" : 9.0,
 						"description" : "",
-						"fontname" : "Arial",
-						"globalpatchername" : "",
-						"fontface" : 0,
-						"tags" : "",
-						"default_fontface" : 0,
-						"fontsize" : 9.0,
 						"digest" : "",
-						"default_fontname" : "Arial"
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 9.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p in_a_model"
@@ -629,7 +604,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-8",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -656,13 +631,14 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Emulate the use of lower sample-rates and bit-resolution.",
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
 					"id" : "obj-6",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
+					"numinlets" : 2,
 					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
+					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 26.0, 400.0, 76.0, 17.0 ],
 					"text" : "degrade~.model"
 				}
@@ -670,6 +646,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Output information from mouse",
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
 					"id" : "obj-5",
@@ -684,6 +661,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Output information from mouse",
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
 					"id" : "obj-4",
@@ -702,7 +680,7 @@
 					"destination" : [ "obj-9", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 38.0, 264.25, 421.5, 264.25 ],
+					"midpoints" : [ 36.5, 288.25, 420.0, 288.25 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -710,50 +688,50 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/modules/control/mouse",
-				"patcherrelativepath" : "../../../modules/control/mouse",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"patcherrelativepath" : "../../modules/control/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/modules/audio/degrade~",
-				"patcherrelativepath" : "../../../modules/audio/degrade~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../../modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespaceMenu.maxpat",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespaceMenu",
-				"patcherrelativepath" : "",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/namespaceMenu",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -774,10 +752,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.preset.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
@@ -786,15 +760,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.route.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -807,10 +781,6 @@
 			}
 , 			{
 				"name" : "j.namespace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
