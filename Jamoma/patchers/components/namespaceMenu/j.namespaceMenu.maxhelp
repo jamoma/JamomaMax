@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 153.0, 338.0, 640.0, 480.0 ],
+		"rect" : [ 162.0, 196.0, 639.0, 513.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 9.0,
@@ -28,6 +28,35 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 11.0,
+					"frgb" : 0.0,
+					"id" : "obj-20",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 26.0, 439.5, 565.0, 19.0 ],
+					"presentation_rect" : [ 27.0, 435.0, 0.0, 0.0 ],
+					"text" : "value attributes are selected by defaul, to the size of the bpatcher can be reduced if attribute access is not needed"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"args" : [ "parameter", "message", "return", "@exclude/tags", "generic" ],
+					"id" : "obj-19",
+					"maxclass" : "bpatcher",
+					"name" : "j.namespaceMenu.maxpat",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 26.0, 464.5, 403.5, 25.0 ],
+					"presentation_rect" : [ 20.0, 433.5, 0.0, 0.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
@@ -337,11 +366,12 @@
 					"fontsize" : 11.0,
 					"frgb" : 0.0,
 					"id" : "obj-13",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 59.0, 149.0, 362.0, 19.0 ],
-					"text" : "the second menu brings back to the node just above the current location"
+					"patching_rect" : [ 59.0, 149.0, 362.0, 31.0 ],
+					"text" : "the second menu/button brings back to the node just above the current location"
 				}
 
 			}
@@ -383,7 +413,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 25.5, 293.0, 404.0, 15.0 ],
-					"text" : "/BCF/track.1/fader/value:ramp/function"
+					"text" : "/BCF/track.1/fader/value"
 				}
 
 			}
@@ -396,7 +426,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 27.0, 261.5, 540.0, 24.0 ]
+					"patching_rect" : [ 27.0, 261.5, 547.5, 24.0 ]
 				}
 
 			}
