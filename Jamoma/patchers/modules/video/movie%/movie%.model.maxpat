@@ -1125,7 +1125,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 19.0, 19.0, 369.0, 19.0 ],
-									"text" : "j.message file @type string @description \"video file\""
+									"text" : "j.parameter file @type string @description \"video file\""
 								}
 
 							}
@@ -1328,7 +1328,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 30.5, 220.0, 44.0, 19.0 ],
+					"patching_rect" : [ 30.5, 220.0, 128.0, 19.0 ],
 					"text" : "j.out 1 @type jit.matrix"
 				}
 

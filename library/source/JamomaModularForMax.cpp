@@ -1372,6 +1372,7 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 	ObjectPtr	upperPatcher;
 	TTString	s_toParse;
 	TTStringIter begin, end;
+    TTBoolean   intoHelp = NO;
 	
 	// extract class from the file name
 	patcherName =  object_attr_getsym(patcher, _sym_filename);
@@ -1382,6 +1383,21 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 	
 		begin = s_toParse.begin();
 		end = s_toParse.end();
+        
+        // parse .maxpat
+		if (!ttRegexForMaxpat->parse(begin, end)) {
+			s_toParse = TTString(begin, ttRegexForMaxpat->begin());
+			begin = s_toParse.begin();
+			end = s_toParse.end();
+		}
+		// parse .maxhelp
+		else if (!ttRegexForMaxhelp->parse(begin, end)) {
+			s_toParse = TTString(begin, ttRegexForMaxhelp->begin());
+			begin = s_toParse.begin();
+			end = s_toParse.end();
+            
+            intoHelp = YES;
+		}
 
 		// parse jmod.
 		if (!ttRegexForJmod->parse(begin, end)) {
@@ -1423,21 +1439,9 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 			}
 		}
 		
-		// parse .maxpat
-		if (!ttRegexForMaxpat->parse(begin, end)) {
-			s_toParse = TTString(begin, ttRegexForMaxpat->begin());
-			begin = s_toParse.begin();
-			end = s_toParse.end();
-		}
-		// parse .maxhelp
-		else if (!ttRegexForMaxhelp->parse(begin, end)) {
-			s_toParse = TTString(begin, ttRegexForMaxhelp->begin());
-			begin = s_toParse.begin();
-			end = s_toParse.end();
-            
-            // append _help to the class to clarify the namespace
+        // in help patcher : append _help to the class to clarify the namespace
+        if (intoHelp)
             s_toParse += "_help";
-		}
         
 		returnedClass = TTSymbol(s_toParse);
 	}
