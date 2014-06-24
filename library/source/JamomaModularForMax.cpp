@@ -186,13 +186,13 @@ void jamoma_subscriber_get_patcher_list(ObjectPtr x, TTList& aContextListToFill)
 		jamoma_patcher_get_info(objPtr, &patcherPtr, patcherContext, patcherClass, patcherName);
 		
 		if (patcherName && patcherPtr) {
-			
+		/* théo - when commenting this part we allow to subscribe view into model and model into view
 			// check if the patcher have the same context than lower patchers
 			if (patcherContext == lowerContext || lowerContext == kTTSymEmpty) {
-				
+		
 				// keep it as lowerContext
 				lowerContext = patcherContext;
-				
+		*/		
 				// insert the current patcher name and his pointer to the list
 				v = patcherName;
 				v.append((TTPtr)patcherPtr);
@@ -200,12 +200,14 @@ void jamoma_subscriber_get_patcher_list(ObjectPtr x, TTList& aContextListToFill)
 				
 				// replace current object by his parent patcher
 				objPtr = patcherPtr;
-			}
+		/*	théo - when commenting this part we allow to subscribe view into model and model into view
+            }
 			else {
 				
 				// skip the patcher to go directly to an upper one
 				objPtr = patcherPtr;
 			}
+        */
 		}
 		else
 			break;
