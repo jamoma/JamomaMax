@@ -1436,7 +1436,7 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 			end = s_toParse.end();
             
             // append Maxhelp to the class to clarify the namespace
-            s_toParse += "Maxhelp";
+            s_toParse += "_help";
 		}
         
 		returnedClass = TTSymbol(s_toParse);
