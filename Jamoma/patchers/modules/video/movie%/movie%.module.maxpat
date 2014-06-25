@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 41.0, 111.0, 323.0, 225.0 ],
+		"rect" : [ 41.0, 111.0, 323.0, 247.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -37,9 +37,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, -1.0, 300.0, 105.0 ]
+					"presentation_rect" : [ 0.0, -1.0, 300.0, 140.0 ]
 				}
 
 			}
@@ -53,7 +53,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 151.0, 194.0, 19.0 ],
+					"patching_rect" : [ 6.0, 176.0, 194.0, 19.0 ],
 					"text" : "movie%.model #1"
 				}
 
@@ -65,7 +65,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 6.0, 176.0, 25.0, 25.0 ]
+					"patching_rect" : [ 6.0, 201.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -77,7 +77,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 121.0, 25.0, 25.0 ]
+					"patching_rect" : [ 6.0, 146.0, 25.0, 25.0 ]
 				}
 
 			}
