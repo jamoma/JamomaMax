@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 19.0, 69.0, 762.0, 297.0 ],
+		"rect" : [ 24.0, 359.0, 762.0, 297.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -29,13 +29,40 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 216.0, 195.0, 83.0, 19.0 ],
+					"text" : "prepend name"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 216.0, 101.0, 132.0, 19.0 ],
+					"text" : "j.receive model:address"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "Returned messages",
 					"id" : "obj-10",
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 402.0, 253.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 401.0, 253.0, 0.0, 0.0 ]
+					"patching_rect" : [ 402.0, 253.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -86,20 +113,6 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"id" : "obj-21",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 185.0, 166.0, 83.0, 19.0 ],
-					"text" : "prepend name"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-20",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -141,13 +154,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-3",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 540.0, 225.0, 160.0, 31.0 ],
-					"text" : "jit.gl.videoplane #0_window @scale 1.333 1. 1."
+					"patching_rect" : [ 540.0, 225.0, 189.0, 19.0 ],
+					"text" : "jit.gl.videoplane @scale 1.333 1. 1."
 				}
 
 			}
@@ -186,8 +198,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 100.0, 225.0, 283.0, 19.0 ],
-					"text" : "jit.window #0_window @depthbuffer 1 @fsmenubar 0"
+					"patching_rect" : [ 100.0, 225.0, 221.0, 19.0 ],
+					"text" : "jit.window @depthbuffer 1 @fsmenubar 0"
 				}
 
 			}
@@ -214,8 +226,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 402.0, 225.0, 132.0, 19.0 ],
-					"text" : "jit.gl.render #0_window"
+					"patching_rect" : [ 402.0, 225.0, 70.0, 19.0 ],
+					"text" : "jit.gl.render"
 				}
 
 			}
@@ -227,22 +239,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 576.0, 101.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-15",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 185.0, 88.0, 256.0, 31.0 ],
-					"text" : "j.parameter context @type string @description \"Name of the window and rendering context\""
 				}
 
 			}
@@ -398,19 +394,28 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
+					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-15", 0 ]
+					"source" : [ "obj-13", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-21", 0 ],
+					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-15", 0 ]
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-16", 0 ]
 				}
 
 			}
@@ -449,16 +454,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 496.5, 187.0, 549.5, 187.0 ],
 					"source" : [ "obj-20", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 194.5, 191.0, 109.5, 191.0 ],
-					"source" : [ "obj-21", 0 ]
 				}
 
 			}
@@ -520,6 +515,10 @@
 			}
 , 			{
 				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 109.0, 45.0, 1041.0, 686.0 ],
+		"rect" : [ 15.0, 255.0, 1041.0, 686.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -31,13 +31,13 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"id" : "obj-35",
-					"maxclass" : "newobj",
+					"frgb" : 0.0,
+					"id" : "obj-22",
+					"maxclass" : "comment",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 14.5, 13.0, 576.0, 19.0 ],
-					"text" : "j.message video/genframe @type none @description \"generate a video frame (send a bang to the jitter object)\""
+					"numoutlets" : 0,
+					"patching_rect" : [ 110.0, 650.0, 193.5, 19.0 ],
+					"text" : "output geometry matrices"
 				}
 
 			}
@@ -135,8 +135,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 41.0, 604.0, 63.0, 19.0 ],
-					"text" : "j.out 1"
+					"patching_rect" : [ 41.0, 604.0, 213.0, 19.0 ],
+					"text" : "j.out geometry_matrix @type jit_matrix"
 				}
 
 			}
@@ -190,7 +190,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 110.0, 614.0, 86.0, 19.0 ],
+					"patching_rect" : [ 110.0, 631.0, 86.0, 19.0 ],
 					"text" : "VIDEO OUTPUT"
 				}
 
@@ -235,18 +235,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-64",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 625.5, 568.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-2",
@@ -809,15 +798,6 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-35", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -847,15 +827,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 380.0, 552.5, 50.5, 552.5 ],
 					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-57", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-64", 0 ]
 				}
 
 			}
@@ -891,7 +862,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.class.gl_group.parameters.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/class.gl_group.parameters",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/class.gl_group.parameters",
 				"patcherrelativepath" : "../../../components/class.gl_group.parameters",
 				"type" : "JSON",
 				"implicit" : 1
