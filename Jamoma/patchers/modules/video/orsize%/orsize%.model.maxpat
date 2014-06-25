@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -60,13 +60,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-42",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 631.5, 36.0, 259.0, 31.0 ],
-					"text" : "j.model @type video @algorithm_type jitter @description \"Orientation and size of video\"",
+					"patching_rect" : [ 631.5, 36.0, 274.0, 19.0 ],
+					"text" : "j.model @description \"Orientation and size of video\"",
 					"varname" : "j.model"
 				}
 
@@ -85,7 +84,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -246,7 +245,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -858,38 +857,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
-					"id" : "obj-12",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 690.5, 11.0, 87.0, 19.0 ],
-					"text" : "INSTRUCTIONS"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-13",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 631.5, 8.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
 					"id" : "obj-14",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 83.5, 192.0, 43.0, 31.0 ],
+					"patching_rect" : [ 83.5, 192.0, 45.0, 31.0 ],
 					"text" : "VIDEO INPUT"
 				}
 
@@ -1110,7 +1083,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 730.0, 310.0, 227.0, 67.0 ],
+					"patching_rect" : [ 730.0, 310.0, 221.0, 67.0 ],
 					"text" : "j.parameter zoomY @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 10. @clipmode none @description \"Zoom image in Y-direction.\"",
 					"varname" : "zoom[4]"
 				}
@@ -1140,7 +1113,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 154.0, 515.0, 53.0, 19.0 ],
+					"patching_rect" : [ 154.0, 515.0, 131.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -1185,7 +1158,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 49.5, 46.0, 455.0, 31.0 ],
+					"patching_rect" : [ 49.5, 46.0, 458.0, 31.0 ],
 					"text" : "j.parameter offsetY @type decimal @ramp/drive Max @repetitions/filter 1 @range -1. 1. @clipmode none @description \"Offset image in Y-direction\"",
 					"varname" : "offset_y"
 				}
@@ -1217,7 +1190,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 6.5, 8.0, 456.0, 31.0 ],
+					"patching_rect" : [ 6.5, 8.0, 459.0, 31.0 ],
 					"text" : "j.parameter offsetX @type decimal @ramp/drive Max @repetitions/filter 1 @range -1. 1. @clipmode none @description \"Offset image in X-direction\"",
 					"varname" : "offset_x"
 				}
@@ -1381,15 +1354,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 715.5, 310.0, 715.5, 310.0 ],
 					"source" : [ "obj-1036", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-13", 0 ]
 				}
 
 			}
@@ -1566,6 +1530,27 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
