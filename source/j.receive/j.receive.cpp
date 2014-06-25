@@ -145,9 +145,10 @@ void WrappedReceiverClass_new(TTPtr self, long argc, t_atom *argv)
 	
 	x->address = TTAddress(jamoma_parse_dieze((t_object*)x, address)->s_name);
     
-    // if the j.receive tries to bind an Output object : bind the signal attribute
-	if (x->address.getName() == TTSymbol("out") || x->address.getName() == TTSymbol("in"))
-		x->address = x->address.appendAttribute(kTTSym_signal);
+    // if the j.receive tries to bind an Output object : bind the signal attribute if no attribute is precised
+    if (x->address.getName() == TTSymbol("out") || x->address.getName() == TTSymbol("in"))
+        if (x->address.getAttribute() == kTTSymEmpty)
+            x->address = x->address.appendAttribute(kTTSym_signal);
     
 	x->index = 0; // the index member is usefull to count how many time the external tries to bind
 	
@@ -397,6 +398,11 @@ void receive_address(TTPtr self, t_symbol *address)
     
     // assign the new address
 	x->address = newAddress;
+    
+    // if the j.receive tries to bind an Output object : bind the signal attribute if no attribute is precised
+    if (x->address.getName() == TTSymbol("out") || x->address.getName() == TTSymbol("in"))
+        if (x->address.getAttribute() == kTTSymEmpty)
+            x->address = x->address.appendAttribute(kTTSym_signal);
     
     // for absolute address
 	if (x->address.getType() == kAddressAbsolute) {

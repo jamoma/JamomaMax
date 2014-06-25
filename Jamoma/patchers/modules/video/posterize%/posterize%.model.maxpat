@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -84,8 +84,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 58.0, 463.0, 54.0, 19.0 ],
-					"text" : "j.out 1"
+					"patching_rect" : [ 58.0, 463.0, 130.0, 19.0 ],
+					"text" : "j.out 1 @type jit_matrix"
 				}
 
 			}
@@ -100,18 +100,6 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 58.0, 102.428589, 37.0, 19.0 ],
 					"text" : "j.in 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-1",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 136.5, 24.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -139,7 +127,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 295.0, 110.0, 131.0, 128.0 ],
+					"patching_rect" : [ 295.0, 110.0, 125.0, 128.0 ],
 					"text" : "j.parameter levels @type decimal @range 1.001 15 @clipmode low @ramp/drive scheduler @ramp/function linear @description \"Amount of levels to flatten color information  towards.\""
 				}
 
@@ -342,15 +330,6 @@
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,

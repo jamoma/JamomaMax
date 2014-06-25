@@ -493,7 +493,7 @@ void WrappedInputClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *ar
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 
     // route any message to the model
-    if (msg != _sym_nothing && msg != gensym("jit_matrix")) {
+    if (msg != _sym_nothing && msg != _sym_jit_matrix && msg != _sym_jit_gl_texture && msg != _sym_dictionary) {
         
         // get model or view object
         if (!EXTRA->modelOrView)

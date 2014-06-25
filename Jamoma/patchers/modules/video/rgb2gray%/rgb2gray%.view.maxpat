@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -54,19 +54,6 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 70.0, 130.0, 123.0, 19.0 ],
 					"text" : "j.remote trackChannel"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-28",
-					"maxclass" : "jit.pwindow",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 235.0, 21.0, 60.0, 45.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 237.0, 22.0, 60.0, 45.0 ]
 				}
 
 			}
@@ -133,7 +120,7 @@
 					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/rgb2gray%_view"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -145,15 +132,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 79.5, 161.0, 63.0, 161.0, 63.0, 89.0, 79.5, 89.0 ],
 					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-28", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-34", 0 ]
 				}
 
 			}

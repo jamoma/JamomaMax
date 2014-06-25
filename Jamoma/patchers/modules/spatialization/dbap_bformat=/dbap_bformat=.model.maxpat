@@ -140,7 +140,7 @@
                     59.0,
                     19.0
                   ],
-                  "text": "j.thru"
+                  "text": "thru"
                 }
               },
               {
@@ -2092,7 +2092,7 @@
             601.0,
             31.0
           ],
-          "text": "j.parameter.array 8 source weight @type decimalArray @range 0. 1. @description \"Set spatial weight of the nth source.\""
+          "text": "j.parameter.array 8 source weight @type array @range 0. 1. @description \"Set spatial weight of the nth source.\""
         }
       },
       {
@@ -2184,7 +2184,7 @@
             602.0,
             31.0
           ],
-          "text": "j.message.array 32 speaker position @type decimalArray @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+          "text": "j.message.array 32 speaker position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
         }
       },
       {
@@ -2207,7 +2207,7 @@
             589.0,
             31.0
           ],
-          "text": "j.message.array 8 source position @type decimalArray @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+          "text": "j.message.array 8 source position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
         }
       },
       {

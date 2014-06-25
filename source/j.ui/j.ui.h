@@ -29,8 +29,7 @@
 
 #define NO_MODEL_STRING "waiting for a model:address"
 
-#define preview_out 0
-#define panel_out 1
+#define panel_out 0
 
 // those stuffes are needed for handling patchers without using the pcontrol object
 #include "jpatcher_api.h"
@@ -64,8 +63,6 @@ typedef struct _ui{
 	TTObject            modelMessExplorer;		///< internal TTExplorer object to observe messages
 	TTObject            modelParamExplorer;		///< internal TTExplorer object to observe parameters
 	TTObject            modelRetExplorer;		///< internal TTExplorer object to observe returns
-	TTObject            previewSignal;			///< internal TTCallback to get back preview signal
-	TTObject			modelOutput;			///< a pointer to TTOutput object of the binded model
 	
 	TTAddress           viewAddress;
 	TTAddress           modelAddress;
@@ -129,10 +126,10 @@ typedef struct _ui{
 	bool				highlight_freeze;		// selection state of freeze
 	t_rect				rect_freeze;
 
-	long				has_preview;			// is the binded model have a preview ?
-	long				is_previewing;
-	bool				highlight_preview;		// selection state of preview
-	t_rect				rect_preview;
+	long				has_active;			// is the binded model have a active ?
+	long				is_active;
+	bool				highlight_active;		// selection state of active
+	t_rect				rect_active;
 
 	long				has_gain;				// is the binded model have a gain ?
 	float				gain;
@@ -212,9 +209,7 @@ void		ui_return_bypass(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_mix(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_gain(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_freeze(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
-void		ui_return_preview(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
-
-void		ui_return_signal(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_return_active(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
 // prototype : text editor
 void		ui_edit(t_ui *x);

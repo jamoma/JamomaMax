@@ -353,7 +353,7 @@ void        model_signal_amenities(TTPtr self, t_symbol *msg, long argc, t_atom 
  @param argc
  @param argv
  */
-void        model_signal_return_data_mute(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void        model_signal_return_data_active(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
@@ -363,24 +363,6 @@ void        model_signal_return_data_mute(TTPtr self, t_symbol *msg, long argc, 
  @param argv
  */
 void        model_signal_return_data_bypass(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-
-
-/**
- @param self
- @param attr
- @param argc
- @param argv
- */
-void        model_signal_return_data_freeze(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-
-
-/**
- @param self
- @param attr
- @param argc
- @param argv
- */
-void        model_signal_return_data_preview(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**

@@ -1093,7 +1093,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 278.0, 324.0, 75.0, 19.0 ],
-					"text" : "j.thru"
+					"text" : "thru"
 				}
 
 			}
@@ -1107,7 +1107,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 458.0, 399.0, 75.0, 19.0 ],
-					"text" : "j.thru",
+					"text" : "thru",
 					"varname" : "THRU_0"
 				}
 
@@ -1301,7 +1301,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 349.0, 60.0, 466.0, 19.0 ],
-					"text" : "j.parameter anchor @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
+					"text" : "j.parameter anchor @type array @ramp/drive Max @description \\\"Zooming.\\\"",
 					"varname" : "anchor"
 				}
 
@@ -1316,7 +1316,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 321.0, 41.0, 460.0, 19.0 ],
-					"text" : "j.parameter offset @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
+					"text" : "j.parameter offset @type array @ramp/drive Max @description \\\"Zooming.\\\"",
 					"varname" : "offset"
 				}
 
@@ -1331,7 +1331,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 283.0, 22.0, 459.0, 19.0 ],
-					"text" : "j.parameter zoom @type decimalArray @ramp/drive Max @description \\\"Zooming.\\\"",
+					"text" : "j.parameter zoom @type array @ramp/drive Max @description \\\"Zooming.\\\"",
 					"varname" : "zoom"
 				}
 
@@ -1748,7 +1748,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.thru.maxpat",
+				"name" : "thru.maxpat",
 				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
 				"patcherrelativepath" : "../../../components/thru",
 				"type" : "JSON",

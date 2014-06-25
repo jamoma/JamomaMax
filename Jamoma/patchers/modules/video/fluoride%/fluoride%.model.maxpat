@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -37,7 +37,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 266.5, 297.0, 52.0, 31.0 ],
+					"patching_rect" : [ 266.5, 297.0, 53.0, 31.0 ],
 					"text" : "prepend glow"
 				}
 
@@ -93,8 +93,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 308.0, 474.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 466.0, 272.0, 0.0, 0.0 ]
+					"patching_rect" : [ 308.0, 474.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -136,7 +135,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 211.0, 272.0, 51.0, 31.0 ],
+					"patching_rect" : [ 211.0, 272.0, 53.0, 31.0 ],
 					"text" : "prepend mode"
 				}
 
@@ -164,18 +163,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 116.0, 348.0, 17.0, 17.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-5",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 308.0, 402.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -227,8 +214,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 90.0, 435.0, 53.0, 19.0 ],
-					"text" : "j.out 1"
+					"patching_rect" : [ 90.0, 435.0, 131.0, 19.0 ],
+					"text" : "j.out 1 @type jit_matrix"
 				}
 
 			}
@@ -272,8 +259,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 266.5, 187.0, 240.0, 92.0 ],
-					"text" : "j.parameter glow @type decimalArray @repetitions/filter 1 @dataspace color @dataspace/unit rgb @range 0. 1. @description \"Specify the red green and blue components for the glowing color (RGB). The range for each component should be between 0.0 and 1.0.\"",
+					"patching_rect" : [ 266.5, 187.0, 243.0, 92.0 ],
+					"text" : "j.parameter glow @type array @repetitions/filter 1 @dataspace color @dataspace/unit rgb @range 0. 1. @description \"Specify the red green and blue components for the glowing color (RGB). The range for each component should be between 0.0 and 1.0.\"",
 					"varname" : "glow"
 				}
 
@@ -442,15 +429,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
 				}
 
 			}

@@ -56,7 +56,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 650.0, 60.0, 361.0, 19.0 ],
-					"text" : "j.parameter color @type decimalArray @description \"Set a color as HSL.\""
+					"text" : "j.parameter color @type array @description \"Set a color as HSL.\""
 				}
 
 			}

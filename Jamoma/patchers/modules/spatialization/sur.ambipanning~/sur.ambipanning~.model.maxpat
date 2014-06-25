@@ -9902,7 +9902,7 @@
             537.0,
             31.0
           ],
-          "text": "j.message.array 32 speaker position @type decimalArray @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+          "text": "j.message.array 32 speaker position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
         }
       },
       {

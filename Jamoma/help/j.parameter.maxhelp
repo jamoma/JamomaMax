@@ -1131,7 +1131,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-13",
-									"items" : [ "EvenMoreThanFirstPriority", ",", "MoreThanFirstPriority", ",", "FirstPriority", ",", "something/completely/different/param", ",", "SecondPriority", ",", "yet/another/node/param", ",", "LessPriority", ",", "SamePriority", ",", "some/other/node/param", ",", "NoPriority", ",", "NoPriorityA", ",", "NoPriorityB", ",", "some/sub/node/param" ],
+									"items" : [ "EvenMoreThanFirstPriority", ",", "MoreThanFirstPriority", ",", "FirstPriority", ",", "something/completely/different/param", ",", "SecondPriority", ",", "LessPriority", ",", "yet/another/node/param", ",", "SamePriority", ",", "some/other/node/param", ",", "NoPriority", ",", "NoPriorityA", ",", "NoPriorityB", ",", "some/sub/node/param" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1537,7 +1537,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1058.0, 756.0 ],
+						"rect" : [ 100.0, 126.0, 1058.0, 756.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1560,7 +1560,6 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"bubble" : 1,
-									"bubbleside" : 2,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
@@ -1569,9 +1568,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 683.0, 329.0, 212.0, 52.0 ],
-									"presentation_rect" : [ 683.0, 333.0, 0.0, 0.0 ],
-									"text" : "access select parameters for the current function (doesn't work)"
+									"patching_rect" : [ 374.0, 416.0, 212.0, 37.0 ],
+									"text" : "access select parameters for the current function "
 								}
 
 							}
@@ -1586,8 +1584,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 414.0, 312.0, 164.0, 51.0 ],
-									"presentation_rect" : [ 411.0, 282.0, 0.0, 0.0 ],
+									"patching_rect" : [ 414.0, 312.0, 168.0, 51.0 ],
 									"text" : "get all available parameters for the current function"
 								}
 
@@ -1600,7 +1597,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 619.0, 475.0, 34.0, 20.0 ],
+									"patching_rect" : [ 619.0, 514.0, 34.0, 20.0 ],
 									"text" : "print"
 								}
 
@@ -1616,7 +1613,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 237.0, 329.0, 143.0, 17.0 ],
-									"presentation_rect" : [ 424.0, 392.0, 0.0, 0.0 ],
 									"text" : "ramp/function/parameters",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -1632,7 +1628,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 613.0, 364.0, 50.0, 20.0 ]
+									"patching_rect" : [ 237.0, 395.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -1646,9 +1642,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 613.0, 395.0, 221.0, 17.0 ],
-									"presentation_rect" : [ 446.0, 392.0, 0.0, 0.0 ],
-									"text" : "ramp/function/parameters powerValue $1",
+									"patching_rect" : [ 237.0, 426.0, 85.0, 17.0 ],
+									"text" : "powerValue $1",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 
@@ -1664,7 +1659,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 237.0, 285.0, 143.0, 17.0 ],
-									"presentation_rect" : [ 242.0, 395.0, 0.0, 0.0 ],
 									"text" : "ramp/function power",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -1756,7 +1750,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 217.0, 475.0, 380.0, 88.0 ],
+									"patching_rect" : [ 217.0, 514.0, 380.0, 88.0 ],
 									"setminmax" : [ 0.0, 1.0 ],
 									"setstyle" : 3
 								}
@@ -1775,7 +1769,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 217.0, 435.0, 421.0, 20.0 ],
+									"patching_rect" : [ 217.0, 474.0, 421.0, 20.0 ],
 									"text" : "j.parameter myLine @default 0. @ramp/function linear"
 								}
 
@@ -2028,7 +2022,7 @@
 									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 622.5, 423.0, 226.5, 423.0 ],
+									"midpoints" : [ 246.5, 462.0, 226.5, 462.0 ],
 									"source" : [ "obj-10", 0 ]
 								}
 
@@ -2954,7 +2948,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1058.0, 756.0 ],
+						"rect" : [ 0.0, 26.0, 1058.0, 756.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -2984,7 +2978,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 295.0, 403.0, 289.0, 19.0 ],
-									"presentation_rect" : [ 300.0, 401.0, 0.0, 0.0 ],
 									"text" : "- can be used with a list of symbols for the string type"
 								}
 

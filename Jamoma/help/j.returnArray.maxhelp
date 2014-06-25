@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 2250.0, 110.0, 952.0, 555.0 ],
+		"rect" : [ 333.0, 134.0, 952.0, 555.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -27,9 +27,22 @@
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
-		"showrootpatcherontab" : 0,
-		"showontab" : 0,
+		"showontab" : 1,
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 276.0, 230.0, 43.0, 18.0 ],
+					"text" : "j.model"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
@@ -42,7 +55,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -90,6 +103,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-1",
@@ -101,11 +115,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 2250.0, 136.0, 952.0, 529.0 ],
+						"rect" : [ 333.0, 160.0, 952.0, 529.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -125,7 +139,22 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
+						"title" : "Basic",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 578.0, 204.0, 49.0, 20.0 ],
+									"text" : "j.model"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -165,7 +194,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 2.0, 1.0, 595.0, 95.0 ]
+									"patching_rect" : [ 4.0, 2.0, 595.0, 95.0 ]
 								}
 
 							}
@@ -426,20 +455,6 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-3",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 578.0, 217.0, 154.0, 20.0 ],
-									"text" : "j.model"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-4",
 									"maxclass" : "j.ui",
 									"numinlets" : 1,
@@ -447,7 +462,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 578.0, 277.0, 300.0, 70.0 ],
 									"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-									"text" : "/returnArrayMaxhelp"
+									"text" : "/returnArray_help/Basic"
 								}
 
 							}
@@ -538,7 +553,7 @@
 									"destination" : [ "obj-5", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 587.5, 242.0, 803.5, 242.0 ],
+									"midpoints" : [ 587.5, 229.5, 803.5, 229.5 ],
 									"source" : [ "obj-3", 0 ]
 								}
 
@@ -548,17 +563,7 @@
 									"destination" : [ "obj-9", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 587.5, 242.0, 779.5, 242.0 ],
-									"source" : [ "obj-3", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-9", 1 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"midpoints" : [ 587.5, 242.0, 779.5, 242.0 ],
+									"midpoints" : [ 587.5, 235.0, 779.5, 235.0 ],
 									"source" : [ "obj-3", 0 ]
 								}
 
@@ -577,6 +582,7 @@
 									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 587.5, 198.5, 587.5, 198.5 ],
 									"source" : [ "obj-6", 0 ]
 								}
 
@@ -586,7 +592,7 @@
 									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 737.5, 205.0, 587.5, 205.0 ],
+									"midpoints" : [ 737.5, 198.5, 587.5, 198.5 ],
 									"source" : [ "obj-7", 0 ]
 								}
 
@@ -626,7 +632,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

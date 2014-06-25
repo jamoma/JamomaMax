@@ -6,6 +6,10 @@ inlets = 1;
 outlets = 1;
 autowatch = 1;
 
+var task = new Task(init, this);
+task.schedule(100);
+
+
 // define CORNER enum
 var CORNER = new function() {
   // this.TopLEFT = {value: 0, name: "top-left", code: "TL"}, 
@@ -366,3 +370,12 @@ function debugPost()
 }
 // make debugPost private
 debugPost.local = 1;
+
+function init()
+{
+	addSlaveSubPatcherByVarname(arguments[0]);
+	setStickyCornerSlaveForSlaveSubPatcherWithVarname(arguments[0], TopRIGHT); 
+	setStickyCornerMasterForSlaveSubPatcherWithVarname(arguments[0], TopLEFT); 
+	setIsStickyForSlaveSubPatcherWithVarname(arguments[0], 1);
+	setStickyCornerOffsetForSlaveSubPatcherWithVarname(arguments[0], 0);
+}	

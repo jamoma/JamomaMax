@@ -482,7 +482,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 270.0, 274.0, 289.0, 30.0 ],
-					"text" : "j.parameter #1/name @type decimalArray @description \"The input or output name (default = UID)\"",
+					"text" : "j.parameter #1/name @type array @description \"The input or output name (default = UID)\"",
 					"varname" : "#1/name"
 				}
 
@@ -606,7 +606,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 270.0, 191.0, 374.0, 18.0 ],
-					"text" : "j.parameter #1/dim @type decimalArray @description \"Matrix dimension\"",
+					"text" : "j.parameter #1/dim @type array @description \"Matrix dimension\"",
 					"varname" : "#1/dim"
 				}
 

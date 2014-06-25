@@ -71,10 +71,8 @@ void WrapTTContainerClass(WrappedClassPtr c)
     class_addmethod(c->maxClass, (method)model_signal_amenities,            "input_created",		A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_amenities,            "output_created",		A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_signal_return_data_mute,     "return_data_mute",		A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_data_active,   "return_data_active",	A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_signal_return_data_bypass,   "return_data_bypass",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_data_freeze,   "return_data_freeze",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_data_preview,  "return_data_preview",  A_CANT, 0);
     
     class_addmethod(c->maxClass, (method)model_signal_return_audio_mute,    "return_audio_mute",	A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_return_audio_bypass,  "return_audio_bypass",  A_CANT, 0);
@@ -95,7 +93,16 @@ void WrapTTContainerClass(WrappedClassPtr c)
 void WrappedContainerClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue						none;
+	TTValue     none;
+    ObjectPtr   aPatcher;
+    
+    // is there already a j.model or j.view in the patcher ?
+    jamoma_patcher_get_model_or_view(jamoma_patcher_get((ObjectPtr)x), &aPatcher);
+    
+    if (aPatcher) {
+        object_error((ObjectPtr)x, "can't have two models or views in the same patcher");
+        return;
+    }
 		
 	// create a container
 	jamoma_container_create((t_object*)x, x->wrappedObject);
@@ -401,7 +408,7 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     
     // if the model:address is still empty : the view is not binding a model for instant
     if (modelAdrs == kTTSymEmpty)
-        modelAdrs = TTAddress("/noModelAddress");
+        modelAdrs = TTAddress("/no_model_address");
     
     // set the model:address attribute to notify all observers
     EXTRA->modelInfo->set(kTTSym_address, modelAdrs);

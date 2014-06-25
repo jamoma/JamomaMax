@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -54,18 +54,6 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 33.5, 58.0, 210.0, 43.0 ],
 					"text" : "j.message direct @type generic @description \"directly access to the jitter object\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-15",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 412.5, 289.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -199,7 +187,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 308.0, 318.0, 87.0, 19.0 ],
+					"patching_rect" : [ 286.0, 343.0, 87.0, 19.0 ],
 					"text" : "VIDEO OUTPUT"
 				}
 
@@ -238,8 +226,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 242.0, 318.0, 53.0, 19.0 ],
-					"text" : "j.out"
+					"patching_rect" : [ 242.0, 318.0, 131.0, 19.0 ],
+					"text" : "j.out 1 @type jit_matrix"
 				}
 
 			}
@@ -452,15 +440,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 610.5, 274.0, 251.5, 274.0 ],
 					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-15", 0 ]
 				}
 
 			}

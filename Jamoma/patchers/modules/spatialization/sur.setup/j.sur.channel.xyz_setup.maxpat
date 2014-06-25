@@ -102,7 +102,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 213.0, 594.0, 43.0 ],
-									"text" : "j.message xyz.2 @type decimalArray @repetitions/filter 0 @description \"alternative description of position of voice #1 as xyz coodinate.\" @dataspace position @dataspace/unit xyz @ramp/drive Max",
+									"text" : "j.message xyz.2 @type array @repetitions/filter 0 @description \"alternative description of position of voice #1 as xyz coodinate.\" @dataspace position @dataspace/unit xyz @ramp/drive Max",
 									"varname" : "parameter[3]"
 								}
 
@@ -117,7 +117,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 100.0, 59.0, 19.0 ],
-									"text" : "j.thru"
+									"text" : "thru"
 								}
 
 							}
@@ -204,7 +204,7 @@
 							}
  ],
 						"dependency_cache" : [ 							{
-								"name" : "j.thru.maxpat",
+								"name" : "thru.maxpat",
 								"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/thru",
 								"type" : "JSON",
 								"implicit" : 1
@@ -1159,7 +1159,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 301.0, 418.0, 59.0, 19.0 ],
-					"text" : "j.thru"
+					"text" : "thru"
 				}
 
 			}
@@ -1332,7 +1332,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 301.0, 448.0, 570.0, 43.0 ],
-					"text" : "j.parameter xyz.0 @type decimalArray @repetitions/filter 0 @description \"Position of voice 0 as xyz coordinates.\" @dataspace position @dataspace/unit xyz @ramp/drive Max",
+					"text" : "j.parameter xyz.0 @type array @repetitions/filter 0 @description \"Position of voice 0 as xyz coordinates.\" @dataspace position @dataspace/unit xyz @ramp/drive Max",
 					"varname" : "parameter"
 				}
 
@@ -1720,7 +1720,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.thru.maxpat",
+				"name" : "thru.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/thru",
 				"patcherrelativepath" : "../../../library/components/thru",
 				"type" : "JSON",

@@ -4021,7 +4021,7 @@
                             60.0,
                             20.0
                           ],
-                          "text": "j.thru"
+                          "text": "thru"
                         }
                       },
                       {
@@ -4616,7 +4616,7 @@
                     ],
                     "dependency_cache": [
                       {
-                        "name": "j.thru.maxpat",
+                        "name": "thru.maxpat",
                         "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
                         "type": "JSON",
                         "implicit": 1
@@ -8105,7 +8105,7 @@
             ],
             "dependency_cache": [
               {
-                "name": "j.thru.maxpat",
+                "name": "thru.maxpat",
                 "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
                 "type": "JSON",
                 "implicit": 1
@@ -8442,7 +8442,7 @@
             296.0,
             43.0
           ],
-          "text": "j.parameter orderWeights @type decimalArray @description \"manually set weights for given number of orders.\" @repetitions/filter 1 @ramp/drive Max"
+          "text": "j.parameter orderWeights @type array @description \"manually set weights for given number of orders.\" @repetitions/filter 1 @ramp/drive Max"
         }
       },
       {
@@ -8535,7 +8535,7 @@
             598.0,
             43.0
           ],
-          "text": "j.message.array 32 speaker position @type decimalArray @dataspace position @dataspace/unit xyz @default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+          "text": "j.message.array 32 speaker position @type array @dataspace position @dataspace/unit xyz @default 0. 0. 0. @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
         }
       },
       {
@@ -9181,7 +9181,7 @@
     ],
     "dependency_cache": [
       {
-        "name": "j.thru.maxpat",
+        "name": "thru.maxpat",
         "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/library/components/thru",
         "patcherrelativepath": "../../../library/components/thru",
         "type": "JSON",

@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 116.0, 66.0, 634.0, 493.0 ],
+		"rect" : [ 116.0, 66.0, 685.0, 493.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.975348,
@@ -34,8 +34,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 186.0, 419.0, 15.0, 15.0 ],
-					"presentation_rect" : [ 416.0, 147.0, 0.0, 0.0 ]
+					"patching_rect" : [ 186.0, 419.0, 15.0, 15.0 ]
 				}
 
 			}
@@ -64,8 +63,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 27.0, 270.0, 105.0, 20.0 ],
-					"text" : "pak mask 0 0 0 0"
+					"patching_rect" : [ 12.75, 271.0, 131.0, 20.0 ],
+					"text" : "pak mask -2 0. 0. 0."
 				}
 
 			}
@@ -119,19 +118,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 62.0, 306.0, 19.0, 19.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-9",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 185.5, 331.5, 20.0, 20.0 ]
+					"patching_rect" : [ 47.75, 306.0, 19.0, 19.0 ]
 				}
 
 			}
@@ -144,7 +131,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 42.0, 439.0, 93.0, 20.0 ],
+					"patching_rect" : [ 27.75, 439.0, 93.0, 20.0 ],
 					"text" : "VIDEO OUTPUT"
 				}
 
@@ -156,7 +143,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 27.0, 439.0, 15.0, 15.0 ]
+					"patching_rect" : [ 12.75, 439.0, 15.0, 15.0 ]
 				}
 
 			}
@@ -169,7 +156,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 27.0, 376.0, 54.0, 20.0 ],
+					"patching_rect" : [ 12.75, 376.0, 54.0, 20.0 ],
 					"text" : "jit.brass"
 				}
 
@@ -183,8 +170,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 27.0, 409.0, 63.0, 20.0 ],
-					"text" : "j.out 1"
+					"patching_rect" : [ 12.75, 409.0, 143.0, 20.0 ],
+					"text" : "j.out 1 @type jit_matrix"
 				}
 
 			}
@@ -197,7 +184,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 62.0, 336.5, 39.0, 20.0 ],
+					"patching_rect" : [ 47.75, 336.5, 39.0, 20.0 ],
 					"text" : "j.in 1"
 				}
 
@@ -212,8 +199,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 113.0, 106.0, 347.0, 33.0 ],
-					"text" : "j.parameter mask/blue @type decimal @ramp/drive Max @description \"Sets the masking for the blue component.\"",
+					"patching_rect" : [ 117.75, 106.0, 398.0, 33.0 ],
+					"text" : "j.parameter mask/blue @type decimal @ramp/drive Max @description \"Sets the masking for the blue component.\" @default -1",
 					"varname" : "mask/blue"
 				}
 
@@ -228,8 +215,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 260.0, 228.0, 338.0, 33.0 ],
-					"text" : "j.parameter tint/blue @type decimal @ramp/drive Max @description \"Sets the tinting of the blue component.\"",
+					"patching_rect" : [ 260.0, 228.0, 391.0, 33.0 ],
+					"text" : "j.parameter tint/blue @type decimal @ramp/drive Max @description \"Sets the tinting of the blue component.\" @default 0.5",
 					"varname" : "tint/blue"
 				}
 
@@ -244,8 +231,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 70.0, 28.0, 343.0, 33.0 ],
-					"text" : "j.parameter mask/red @type decimal @ramp/drive Max @description \"Sets the masking for the red component.\"",
+					"patching_rect" : [ 65.25, 28.0, 407.0, 33.0 ],
+					"text" : "j.parameter mask/red @type decimal @ramp/drive Max @description \"Sets the masking for the red component.\" @default -1",
 					"varname" : "mask/red"
 				}
 
@@ -260,8 +247,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 91.5, 66.5, 355.0, 33.0 ],
-					"text" : "j.parameter mask/green @type decimal @ramp/drive Max @description \"Sets the masking for the green component.\"",
+					"patching_rect" : [ 91.5, 66.5, 415.0, 33.0 ],
+					"text" : "j.parameter mask/green @type decimal @ramp/drive Max @description \"Sets the masking for the green component.\" @default 0",
 					"varname" : "mask/green"
 				}
 
@@ -276,8 +263,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 139.0, 146.0, 333.0, 33.0 ],
-					"text" : "j.parameter tint/red @type decimal @ramp/drive Max @description \"Sets the tinting of the red component.\"",
+					"patching_rect" : [ 139.0, 146.0, 386.0, 33.0 ],
+					"text" : "j.parameter tint/red @type decimal @ramp/drive Max @description \"Sets the tinting of the red component.\" @default 0.5",
 					"varname" : "tint/red"
 				}
 
@@ -292,8 +279,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 202.0, 189.5, 345.0, 33.0 ],
-					"text" : "j.parameter tint/green @type decimal @ramp/drive Max @description \"Sets the tinting of the green component.\"",
+					"patching_rect" : [ 202.0, 189.5, 402.0, 33.0 ],
+					"text" : "j.parameter tint/green @type decimal @ramp/drive Max @description \"Sets the tinting of the green component.\" @default 0.5",
 					"varname" : "tint/green"
 				}
 
@@ -313,7 +300,7 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 71.5, 367.0, 36.5, 367.0 ],
+					"midpoints" : [ 57.25, 367.0, 22.25, 367.0 ],
 					"source" : [ "obj-1004", 0 ]
 				}
 
@@ -404,7 +391,7 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 211.5, 296.0, 36.5, 296.0 ],
+					"midpoints" : [ 211.5, 296.0, 22.25, 296.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -414,7 +401,7 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 148.5, 294.0, 36.5, 294.0 ],
+					"midpoints" : [ 148.5, 294.0, 22.25, 294.0 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -424,7 +411,7 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 269.5, 298.0, 36.5, 298.0 ],
+					"midpoints" : [ 269.5, 298.0, 22.25, 298.0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -435,15 +422,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-8", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-9", 0 ]
 				}
 
 			}

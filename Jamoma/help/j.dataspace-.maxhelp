@@ -310,8 +310,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.pack-.mxo",
-				"type" : "iLaX"
+				"name" : "thru.maxpat",
+				"bootpath" : "/code/Jamoma/Modules/Modular/Max/library/components/thru",
+				"patcherrelativepath" : "../../Modules/Modular/Max/library/components/thru",
+				"type" : "JSON",
+				"implicit" : 1
 			}
 , 			{
 				"name" : "j.dataspace-.mxo",
