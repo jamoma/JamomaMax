@@ -355,14 +355,14 @@ function testLocation()
 	post("location.getSize: " + location.getSize().getAsArray() + "\n");	
 }
 
-function setSlaveSubPatcherWindowNoCLoseFLoat(slavePatcherVarname) // send slave thispatcher "noclose" + "float"messages
+function setSlaveSubPatcherWindowNoCLose(slavePatcherVarname) // set slave thispatcher window to "noclose" 
 {
  		for (index in slavePatchers) 
  		{
  			if (slavePatchers[index].object !== null && slavePatchers[index].object.varname === slavePatcherVarname)
  			{
  				slavePatchers[index].patcher.window("flags", "noclose");
- 				slavePatchers[index].patcher.window("flags", "float");
+ 				//slavePatchers[index].patcher.window("flags", "float");
  				slavePatchers[index].patcher.window("exec");
  				return;
 
@@ -398,6 +398,6 @@ function init()
 	setStickyCornerMasterForSlaveSubPatcherWithVarname(arg, "TopLEFT"); 
 	setIsStickyForSlaveSubPatcherWithVarname(arg, 1);
 	setStickyCornerOffsetForSlaveSubPatcherWithVarname(arg, 0, 0);
-	setSlaveSubPatcherWindowNoCLoseFLoat(arg);
+	setSlaveSubPatcherWindowNoCLose(arg);
 	
 }
