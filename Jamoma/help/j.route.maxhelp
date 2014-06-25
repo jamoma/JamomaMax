@@ -1005,7 +1005,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-15",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "message" ],
+									"jsarguments" : [ "j.route" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,

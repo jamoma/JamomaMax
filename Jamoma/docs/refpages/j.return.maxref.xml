@@ -211,7 +211,7 @@
 				Dataspace of the return
 			</digest>
 			<description>
-				Dataspace of the return
+				Dataspace of the return (angle, color, distance, gain, none, orientation, position, speed, temperature, time)
 			</description>
 		</attribute>
 		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
