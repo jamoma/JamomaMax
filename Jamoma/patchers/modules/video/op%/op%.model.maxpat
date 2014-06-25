@@ -74,13 +74,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-13",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 239.0, 249.0, 267.0, 43.0 ],
-					"text" : "j.model @type video @algorithm_type jitter @description \"Perform mathematical operations using two video inputs as the operands\"",
+					"patching_rect" : [ 239.0, 249.0, 272.0, 31.0 ],
+					"text" : "j.model @description \"Perform mathematical operations using two video inputs as the operands\"",
 					"varname" : "j.model"
 				}
 
@@ -347,6 +347,27 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

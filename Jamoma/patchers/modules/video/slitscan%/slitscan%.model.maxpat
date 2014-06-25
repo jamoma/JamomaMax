@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -34,8 +34,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 399.0, 396.5, 25.0, 25.0 ],
-					"presentation_rect" : [ 464.0, 271.0, 0.0, 0.0 ]
+					"patching_rect" : [ 399.0, 396.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -49,7 +48,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 177.0, 62.0, 37.0, 19.0 ],
-					"presentation_rect" : [ 322.0, 109.0, 0.0, 0.0 ],
 					"text" : "j.in 1"
 				}
 
@@ -113,18 +111,6 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-2",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 399.0, 315.5, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-4",
@@ -137,7 +123,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -912,8 +898,8 @@
 					"id" : "obj-47",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 256.0, 318.0, 96.0, 20.0 ],
 					"text" : "xray.jit.timecube"
 				}
@@ -929,7 +915,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 64.0, 120.0, 121.0, 128.0 ],
+					"patching_rect" : [ 64.0, 120.0, 117.0, 128.0 ],
 					"text" : "j.parameter mode @repetitions/filter 1 @type integer @range 0 2 @clipmode both @description \"modes: 0 - vertical, 1 - horizontal, 2 - map\" @ramp/drive Max",
 					"varname" : "hue_angle[2]"
 				}
@@ -960,7 +946,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 256.0, 346.0, 44.0, 19.0 ],
+					"patching_rect" : [ 256.0, 346.0, 130.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -1023,15 +1009,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 46.5, 299.0, 342.5, 299.0 ],
 					"source" : [ "obj-1024", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-37", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -1139,10 +1116,6 @@
 			}
 , 			{
 				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "xray.jit.timecube.mxo",
 				"type" : "iLaX"
 			}
 , 			{

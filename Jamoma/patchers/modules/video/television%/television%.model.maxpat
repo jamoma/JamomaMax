@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -28,19 +28,6 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-43",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 986.0, 465.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 601.0, 577.0, 0.0, 0.0 ]
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
@@ -141,7 +128,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -494,7 +481,7 @@
 					"fontsize" : 12.0,
 					"id" : "obj-27",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 5,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 732.0, 344.0, 299.0, 20.0 ],
@@ -1087,7 +1074,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 601.5, 276.0, 366.0, 43.0 ],
+					"patching_rect" : [ 601.5, 276.0, 368.0, 43.0 ],
 					"text" : "j.parameter stability @repetitions/filter 1 @type integer @range 1 100 @clipmode none @description \"stability of the picture in horizontal and vertical dimension\" @ramp/drive Max",
 					"varname" : "hue_angle[5]"
 				}
@@ -1103,7 +1090,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 439.0, 122.0, 306.5, 43.0 ],
+					"patching_rect" : [ 439.0, 122.0, 308.0, 43.0 ],
 					"text" : "j.parameter updaterate @repetitions/filter 1 @type integer @range 1 100 @clipmode low @description \"update rate for changes in the effect\" @ramp/drive Max",
 					"varname" : "hue_angle[4]"
 				}
@@ -1119,7 +1106,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 194.0, 134.5, 215.0, 67.0 ],
+					"patching_rect" : [ 194.0, 134.5, 187.0, 67.0 ],
 					"text" : "j.parameter fade @repetitions/filter 1 @type decimal @range 0. 1. @clipmode both @description \"over saturation effect\" @ramp/drive Max",
 					"varname" : "hue_angle[3]"
 				}
@@ -1166,7 +1153,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 240.0, 516.0, 65.0, 19.0 ],
+					"patching_rect" : [ 240.0, 516.0, 131.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -1543,15 +1530,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-43", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-17", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1841,8 +1819,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../../components/thru",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
