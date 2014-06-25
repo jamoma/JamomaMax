@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 565.0, 403.0, 881.0, 331.0 ],
+		"rect" : [ 725.0, 71.0, 881.0, 331.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -28,6 +28,18 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"comment" : "video output",
+					"id" : "obj-11",
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 414.0, 161.812744, 25.0, 25.0 ],
+					"presentation_rect" : [ 373.0, 289.02124, 0.0, 0.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Arial",
@@ -126,7 +138,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 354.0, 184.208496, 283.0, 20.0 ],
+					"patching_rect" : [ 414.0, 134.208496, 283.0, 20.0 ],
 					"text" : "j.model @description \"Multiple source video player\""
 				}
 
@@ -265,8 +277,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 13.0, 262.416992, 134.0, 20.0 ],
-					"text" : "j.out 1 @type jit.matrix @type jit_matrix"
+					"patching_rect" : [ 13.0, 262.416992, 218.0, 20.0 ],
+					"text" : "j.out 1 @type jit_matrix @type jit_matrix"
 				}
 
 			}
@@ -402,6 +414,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-20", 0 ]
 				}
 
 			}

@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 359.0, 44.0, 416.0, 535.0 ],
+		"rect" : [ 359.0, 44.0, 367.0, 559.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -36,7 +36,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 416.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 367.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -75,7 +75,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 23.0, 270.0, 320.0, 240.0 ]
+					"patching_rect" : [ 23.0, 296.0, 320.0, 240.0 ]
 				}
 
 			}
@@ -88,8 +88,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 23.0, 147.0, 300.0, 105.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+					"patching_rect" : [ 23.0, 147.0, 300.0, 140.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"varname" : "movie%.module"
 				}
 
@@ -100,11 +100,10 @@
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-11",
-					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 84.0, 92.0, 107.0, 43.0 ],
+					"patching_rect" : [ 85.0, 118.0, 258.0, 19.0 ],
 					"text" : "Leftmost inlet can be used to feed bang as signal"
 				}
 

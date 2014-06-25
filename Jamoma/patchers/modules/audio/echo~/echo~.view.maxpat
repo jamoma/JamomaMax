@@ -570,11 +570,11 @@
 					"id" : "obj-48",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "waiting for a model:address"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -810,7 +810,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-48", 1 ]
+					"source" : [ "obj-48", 0 ]
 				}
 
 			}
@@ -826,7 +826,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "limiter~.panel.widget.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
 				"patcherrelativepath" : "../limiter~",
 				"type" : "JSON",
 				"implicit" : 1

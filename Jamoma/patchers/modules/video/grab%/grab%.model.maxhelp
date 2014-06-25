@@ -63,7 +63,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 38.0, 133.0, 119.0, 20.0 ],
+					"patching_rect" : [ 38.0, 134.0, 119.0, 20.0 ],
 					"text" : "qmetro 40 @active 1"
 				}
 
@@ -75,8 +75,8 @@
 					"maxclass" : "bpatcher",
 					"name" : "grab%.module.maxpat",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 38.0, 160.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}

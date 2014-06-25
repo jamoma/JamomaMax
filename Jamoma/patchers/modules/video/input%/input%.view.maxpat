@@ -216,7 +216,7 @@
 					"annotation" : "Choose between 'camera', 'movie' , 'noise' as input",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"hint" : "Choose mode",
+					"hint" : "",
 					"id" : "obj-8",
 					"items" : [ "grab", ",", "movie", ",", "noise" ],
 					"labelclick" : 1,
@@ -293,8 +293,8 @@
 					"id" : "obj-34",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"text" : "/noModelAddress"
@@ -458,15 +458,15 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
