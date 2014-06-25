@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 504.0, 115.0, 1225.0, 667.0 ],
+		"rect" : [ 455.0, 115.0, 1225.0, 667.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -255,7 +255,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"orientation" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 509.5, 527.0, 80.0, 4.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 135.0, 10.0, 80.0, 4.0 ]
@@ -270,7 +270,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"orientation" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 509.5, 482.0, 80.0, 4.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 135.0, 5.0, 80.0, 4.0 ]
@@ -290,7 +290,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1008,7 +1008,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 281.0, 83.0, 127.0, 20.0 ],
+					"patching_rect" : [ 0.0, 80.0, 127.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1068,11 +1068,11 @@
 					"id" : "obj-1",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/spectralShift~.view"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -1082,7 +1082,7 @@
 					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 1 ]
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
@@ -1245,10 +1245,6 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
