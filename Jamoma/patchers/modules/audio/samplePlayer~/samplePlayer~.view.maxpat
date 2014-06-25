@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -41,7 +41,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -512,7 +512,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"orientation" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 328.0, 45.0, 80.0, 4.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 165.0, 10.0, 80.0, 4.0 ]
@@ -527,7 +527,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"orientation" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 322.0, 21.0, 80.0, 4.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 165.0, 5.0, 80.0, 4.0 ]
@@ -746,7 +746,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -793,8 +793,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 506.5, 455.0, 15.0, 15.0 ],
-									"presentation_rect" : [ 468.0, 426.0, 0.0, 0.0 ]
+									"patching_rect" : [ 506.5, 455.0, 15.0, 15.0 ]
 								}
 
 							}
@@ -807,8 +806,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 30.0, 11.0, 20.0, 20.0 ],
-									"presentation_rect" : [ 213.0, 373.0, 0.0, 0.0 ]
+									"patching_rect" : [ 30.0, 11.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -819,8 +817,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 782.0, 188.0, 15.0, 15.0 ],
-									"presentation_rect" : [ 782.0, 184.0, 0.0, 0.0 ]
+									"patching_rect" : [ 782.0, 188.0, 15.0, 15.0 ]
 								}
 
 							}
@@ -831,8 +828,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 761.0, 129.0, 15.0, 15.0 ],
-									"presentation_rect" : [ 766.0, 124.0, 0.0, 0.0 ]
+									"patching_rect" : [ 761.0, 129.0, 15.0, 15.0 ]
 								}
 
 							}
@@ -906,7 +902,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
@@ -2003,8 +1999,6 @@
 								"box" : 								{
 									"bottomvalue" : 3,
 									"id" : "obj-61",
-									"imagemask" : 1,
-									"inactiveimage" : 0,
 									"maxclass" : "pictslider",
 									"movehorizontal" : 0,
 									"numinlets" : 2,
@@ -2035,7 +2029,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
@@ -3323,8 +3317,8 @@
 					"id" : "obj-62",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
@@ -3589,10 +3583,11 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-45", 1 ],
+					"destination" : [ "obj-45", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-62", 1 ]
+					"midpoints" : [ 9.5, 110.0, 261.5, 110.0 ],
+					"source" : [ "obj-62", 0 ]
 				}
 
 			}
@@ -3680,8 +3675,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../../components/thru",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -3695,10 +3690,6 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{

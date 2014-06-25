@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 272.0, 133.0, 712.0, 760.0 ],
+		"rect" : [ 729.0, 159.0, 712.0, 760.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -45,7 +45,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 172.0, 67.0 ],
+						"rect" : [ 258.0, 751.0, 172.0, 67.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -130,7 +130,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 281.0, 87.0, 47.0, 20.0 ],
+					"patching_rect" : [ 0.0, 79.0, 47.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -562,8 +562,8 @@
 					"id" : "obj-44",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"text" : "/noModelAddress"
@@ -737,7 +737,7 @@
 					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-44", 1 ]
+					"source" : [ "obj-44", 0 ]
 				}
 
 			}

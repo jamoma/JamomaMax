@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -95,34 +95,32 @@
 , 			{
 				"box" : 				{
 					"annotation" : "amplitude of output signal 2",
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-5",
 					"ignoreclick" : 1,
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"orientation" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 383.5, 54.5, 11.75, 57.0 ],
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 383.5, 54.5, 30.0, 25.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 140.145828, 21.5, 9.854167, 43.0 ]
+					"presentation_rect" : [ 140.145828, 21.5, 30.0, 25.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-7",
 					"ignoreclick" : 1,
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"orientation" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 218.0, 54.5, 11.75, 57.0 ],
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 218.0, 54.5, 30.0, 25.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 125.145821, 21.5, 9.854167, 43.0 ]
+					"presentation_rect" : [ 125.145821, 21.5, 30.0, 25.0 ]
 				}
 
 			}
@@ -159,7 +157,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -362,7 +360,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -551,7 +549,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 131.0, 91.5, 48.0, 20.0 ],
+					"patching_rect" : [ 0.0, 74.5, 48.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -575,8 +573,8 @@
 					"id" : "obj-34",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 0.0, -1.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
@@ -656,7 +654,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-34", 1 ]
+					"source" : [ "obj-34", 0 ]
 				}
 
 			}
@@ -685,10 +683,6 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
