@@ -30,13 +30,36 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-14",
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 10.0, 234.0, 25.0, 25.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-11",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 10.0, 170.0, 25.0, 25.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 213.0, 361.0, 80.0, 10.0 ],
+					"patching_rect" : [ 354.0, 363.0, 80.0, 10.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 134.0, 13.0, 80.0, 4.0 ]
 				}
@@ -50,7 +73,7 @@
 					"numoutlets" : 1,
 					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 29.0, 364.0, 80.0, 10.0 ],
+					"patching_rect" : [ 170.0, 366.0, 80.0, 10.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 134.0, 8.0, 80.0, 4.0 ]
 				}
@@ -65,7 +88,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 213.0, 334.0, 132.0, 20.0 ],
+					"patching_rect" : [ 354.0, 336.0, 132.0, 20.0 ],
 					"text" : "j.receive~ audio/out.2"
 				}
 
@@ -79,7 +102,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 29.0, 334.0, 132.0, 20.0 ],
+					"patching_rect" : [ 170.0, 336.0, 132.0, 20.0 ],
 					"text" : "j.receive~ audio/out.1"
 				}
 
@@ -95,7 +118,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 342.0, 63.0, 156.0, 64.0 ],
+					"patching_rect" : [ 56.0, 78.0, 156.0, 64.0 ],
 					"text" : "If you want a panel, make it a subpatch and connect to rightmost outlet of j.ui"
 				}
 
@@ -110,7 +133,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 136.0, 187.0, 44.0, 20.0 ],
+					"patching_rect" : [ 277.0, 189.0, 44.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 214.0, 24.0, 44.0, 20.0 ],
 					"triangle" : 0
@@ -326,7 +349,7 @@
 													"fontsize" : 12.0,
 													"id" : "obj-2",
 													"maxclass" : "newobj",
-													"numinlets" : 1,
+													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 65.0, 150.0, 20.0 ],
@@ -559,7 +582,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 280.0, 85.0, 50.0, 20.0 ],
+					"patching_rect" : [ -1.0, 100.0, 50.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -589,7 +612,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 71.0, 284.0, 109.0, 20.0 ],
+					"patching_rect" : [ 212.0, 286.0, 109.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 73.0, 47.0, 94.0, 20.0 ]
 				}
@@ -604,7 +627,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 213.0, 284.0, 129.0, 20.0 ],
+					"patching_rect" : [ 354.0, 286.0, 129.0, 20.0 ],
 					"text" : "j.remote thisMenu",
 					"varname" : "module_in[1]"
 				}
@@ -619,7 +642,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 213.0, 248.0, 134.0, 20.0 ],
+					"patching_rect" : [ 354.0, 250.0, 134.0, 20.0 ],
 					"text" : "j.remote thisToggle",
 					"varname" : "saturation/active"
 				}
@@ -636,7 +659,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 162.0, 248.0, 18.0, 18.0 ],
+					"patching_rect" : [ 303.0, 250.0, 18.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 216.0, 47.0, 18.0, 18.0 ],
 					"size" : 1,
@@ -653,7 +676,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 71.0, 187.0, 59.0, 20.0 ],
+					"patching_rect" : [ 212.0, 189.0, 59.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 151.0, 24.0, 70.0, 20.0 ],
 					"text" : "Message"
@@ -669,7 +692,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 213.0, 187.0, 147.0, 20.0 ],
+					"patching_rect" : [ 354.0, 189.0, 147.0, 20.0 ],
 					"text" : "j.remote thisMessage",
 					"varname" : "hue_angle[1]"
 				}
@@ -685,7 +708,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 136.0, 147.0, 43.0, 20.0 ],
+					"patching_rect" : [ 277.0, 149.0, 43.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 73.0, 23.0, 38.0, 20.0 ],
 					"triangle" : 0,
@@ -703,7 +726,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 71.0, 147.0, 67.0, 20.0 ],
+					"patching_rect" : [ 212.0, 149.0, 67.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 8.0, 23.0, 68.0, 20.0 ],
 					"text" : "Parameter"
@@ -719,7 +742,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 213.0, 147.0, 149.0, 20.0 ],
+					"patching_rect" : [ 354.0, 149.0, 149.0, 20.0 ],
 					"text" : "j.remote thisParameter",
 					"varname" : "hue_angle"
 				}
@@ -730,8 +753,8 @@
 					"id" : "obj-37",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ -1.0, 0.0, 300.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
@@ -748,7 +771,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 29.0, 85.0, 63.0, 20.0 ],
+					"patching_rect" : [ 10.0, 206.0, 63.0, 20.0 ],
 					"text" : "j.view",
 					"varname" : "j.model"
 				}
@@ -761,6 +784,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-10", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -802,10 +834,19 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-30", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-42", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-37", 1 ]
+					"source" : [ "obj-37", 0 ]
 				}
 
 			}

@@ -413,7 +413,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
     
     // if the model:address is still empty : the view is not binding a model for instant
     if (modelAdrs == kTTSymEmpty)
-        modelAdrs = TTAddress("/noModelAddress");
+        modelAdrs = TTAddress("/no_model_address");
     
     // set the model:address attribute to notify all observers
     EXTRA->modelInfo->setAttributeValue(kTTSym_address, modelAdrs);

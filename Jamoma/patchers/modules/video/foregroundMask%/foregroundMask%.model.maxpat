@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -85,18 +85,6 @@
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-8",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 311.5, 284.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
 					"id" : "obj-2",
 					"maxclass" : "outlet",
 					"numinlets" : 1,
@@ -159,7 +147,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -243,7 +231,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "jit_matrix" ],
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 140.0, 35.0, 25.0, 25.0 ]
 								}
 
@@ -423,8 +411,8 @@
 					"id" : "obj-89",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 185.0, 200.0, 140.0, 19.0 ],
 					"text" : "cv.jit.ravg @alpha 0.0005"
 				}
@@ -485,7 +473,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 80.0, 330.0, 65.0, 19.0 ],
+					"patching_rect" : [ 80.0, 330.0, 131.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -653,15 +641,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-37", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-125", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -682,7 +661,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.noiseremoval%.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/noiseremoval%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/noiseremoval%",
 				"patcherrelativepath" : "../../../components/noiseremoval%",
 				"type" : "JSON",
 				"implicit" : 1
@@ -701,10 +680,6 @@
 			}
 , 			{
 				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "cv.jit.ravg.mxo",
 				"type" : "iLaX"
 			}
 , 			{

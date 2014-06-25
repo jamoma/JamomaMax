@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -107,23 +107,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 313.857147, 421.714294, 176.0, 31.0 ],
+					"patching_rect" : [ 313.857147, 421.714294, 178.0, 31.0 ],
 					"text" : "j.model @tag video @description \"peace - love - unity - rave\"",
 					"varname" : "j.model"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-35",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 346.857147, 390.714294, 88.0, 19.0 ],
-					"text" : "command input"
 				}
 
 			}
@@ -135,18 +121,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 313.857147, 456.714294, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-37",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 313.857147, 387.714294, 25.0, 25.0 ]
 				}
 
 			}
@@ -192,7 +166,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -407,7 +381,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 52.0, 329.714294, 43.5, 31.0 ],
+					"patching_rect" : [ 52.0, 329.714294, 45.0, 31.0 ],
 					"text" : "VIDEO INPUT"
 				}
 
@@ -472,7 +446,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 88.0, 427.714294, 54.0, 19.0 ],
+					"patching_rect" : [ 88.0, 427.714294, 130.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -612,7 +586,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 249.857147, 146.0, 493.0, 31.0 ],
+					"patching_rect" : [ 249.857147, 146.0, 494.0, 31.0 ],
 					"text" : "j.parameter range/x @type integer @ramp/drive Max @description \"x/range and y/range range represent the distance between the actual points used for the 'interpolation' calculation.\"",
 					"varname" : "x_range"
 				}
@@ -806,15 +780,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 370.785706, 308.714294, 97.5, 308.714294 ],
 					"source" : [ "obj-24", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-37", 0 ]
 				}
 
 			}

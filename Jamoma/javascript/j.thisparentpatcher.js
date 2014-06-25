@@ -1,11 +1,7 @@
+//send messages to parent patcher
 
-var task = new Task(init, this);
-task.schedule(100);
-
-
-
-function init()
+function anything()
 {
-	
-	outlet(0, filename);
+    var a = arrayfromargs(messagename,arguments);
+	this.patcher.parentpatcher.message(a);
 }

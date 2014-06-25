@@ -54,7 +54,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 36.166656, 322.008606, 142.0, 19.0 ],
-					"text" : "j.send grab/getvdevicelist"
+					"text" : "j.send grab/getdevicelist"
 				}
 
 			}
@@ -339,22 +339,6 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
-					"id" : "obj-68",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 60.5, 225.0, 46.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 110.448227, 126.5, 43.0, 20.0 ],
-					"text" : "status"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-59",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -418,16 +402,21 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Status of the camera grabber",
+					"arrow" : 0,
+					"arrowframe" : 0,
+					"arrowlink" : 0,
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"id" : "obj-49",
-					"maxclass" : "toggle",
+					"items" : [ "close", ",", "open" ],
+					"maxclass" : "umenu",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 36.166656, 225.0, 20.0, 20.0 ],
+					"patching_rect" : [ 36.166656, 225.0, 100.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 118.948227, 143.5, 20.0, 20.0 ]
+					"presentation_rect" : [ 118.948227, 143.5, 57.0, 19.0 ]
 				}
 
 			}
@@ -545,23 +534,22 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Set loop attribute.",
 					"arrow" : 0,
 					"arrowframe" : 0,
 					"arrowlink" : 0,
-					"fontname" : "Arial",
+					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-29",
-					"items" : [ "normal", ",", "palindrome", ",", "one shot" ],
+					"items" : [ "one shot", ",", "normal", ",", "palindrome", ",", "playback-limits" ],
+					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 28.5, 35.0, 82.0, 18.0 ],
-					"pattrmode" : 1,
+					"patching_rect" : [ 28.5, 35.0, 100.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 30.802372, 23.0, 62.002674, 18.0 ],
+					"presentation_rect" : [ 30.802372, 23.0, 62.525711, 19.0 ],
 					"varname" : "LOOP"
 				}
 
@@ -853,8 +841,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 369.166656, 166.0, 93.0, 43.0 ],
-					"text" : "combine * /grab/tovdevicemenu"
+					"patching_rect" : [ 369.166656, 166.0, 80.833344, 43.0 ],
+					"text" : "combine * /grab/todevicemenu"
 				}
 
 			}
@@ -1086,7 +1074,7 @@
 					"destination" : [ "obj-36", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-49", 0 ]
+					"source" : [ "obj-49", 1 ]
 				}
 
 			}

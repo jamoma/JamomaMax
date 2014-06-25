@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -34,7 +34,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 580.0, 501.0, 25.0, 25.0 ]
+					"patching_rect" : [ 553.0, 501.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -77,7 +77,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 55.0, 438.0, 44.0, 19.0 ],
+					"patching_rect" : [ 55.0, 438.0, 130.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -92,8 +92,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 580.0, 92.0, 163.0, 43.0 ],
-					"text" : "j.model @tag video @description \"crossfade a source to two outputs\"",
+					"patching_rect" : [ 553.0, 92.0, 170.0, 43.0 ],
+					"text" : "j.model @description \"crossfade a source to two outputs\"",
 					"varname" : "j.model"
 				}
 
@@ -112,7 +112,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -473,18 +473,6 @@
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-7",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 580.0, 25.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
 					"id" : "obj-6",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -542,7 +530,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 191.0, 438.0, 44.0, 19.0 ],
+					"patching_rect" : [ 191.0, 438.0, 130.0, 19.0 ],
 					"text" : "j.out 2 @type jit_matrix"
 				}
 
@@ -557,7 +545,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 136.0, 145.0, 159.0, 92.0 ],
+					"patching_rect" : [ 136.0, 145.0, 133.0, 92.0 ],
 					"text" : "j.parameter yfade @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 1. @clipmode both @description \"Crossfade switch\"",
 					"varname" : "yfade"
 				}
@@ -731,15 +719,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-7", 0 ]
 				}
 
 			}
