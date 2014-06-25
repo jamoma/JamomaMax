@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -35,9 +35,9 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 548.0, 30.0, 548.0, 31.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 548.0, 30.0, 548.0, 33.0 ],
 					"text" : "j.parameter audio/gain @type integer @range 0 127 @clipmode both @dataspace gain @dataspace/unit midi",
 					"varname" : "voices[5]"
 				}
@@ -50,9 +50,9 @@
 					"id" : "obj-62",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 548.0, 5.0, 451.0, 19.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 548.0, 5.0, 451.0, 20.0 ],
 					"text" : "j.parameter audio/mute @type boolean @range 0 1 @clipmode both",
 					"varname" : "voices[4]"
 				}
@@ -72,7 +72,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -104,7 +104,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 177.0, 95.0, 19.0 ],
+									"patching_rect" : [ 50.0, 177.0, 95.0, 20.0 ],
 									"text" : "pack 1 2. 3."
 								}
 
@@ -118,7 +118,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 204.0, 116.0, 19.0 ],
+									"patching_rect" : [ 50.0, 204.0, 120.0, 20.0 ],
 									"text" : "prepend dst_position"
 								}
 
@@ -132,7 +132,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 50.0, 140.0, 32.5, 19.0 ],
+									"patching_rect" : [ 50.0, 140.0, 32.5, 20.0 ],
 									"text" : "i"
 								}
 
@@ -146,7 +146,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 50.0, 100.0, 57.0, 19.0 ],
+									"patching_rect" : [ 50.0, 100.0, 57.0, 20.0 ],
 									"text" : "t b l"
 								}
 
@@ -253,7 +253,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 425.0, 726.0, 81.0, 19.0 ],
+					"patching_rect" : [ 425.0, 726.0, 83.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -280,7 +280,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 172.0, 98.0, 50.0, 17.0 ],
+					"patching_rect" : [ 172.0, 98.0, 52.0, 18.0 ],
 					"text" : "speaker"
 				}
 
@@ -299,7 +299,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -345,7 +345,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 280.0, 110.0, 19.0 ],
+									"patching_rect" : [ 50.0, 280.0, 114.0, 20.0 ],
 									"text" : "prepend src_weight"
 								}
 
@@ -359,7 +359,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 50.0, 139.0, 32.5, 19.0 ],
+									"patching_rect" : [ 50.0, 139.0, 32.5, 20.0 ],
 									"text" : "i"
 								}
 
@@ -373,7 +373,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 50.0, 100.0, 32.5, 19.0 ],
+									"patching_rect" : [ 50.0, 100.0, 32.5, 20.0 ],
 									"text" : "t b l"
 								}
 
@@ -480,7 +480,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 425.0, 638.0, 75.0, 19.0 ],
+					"patching_rect" : [ 425.0, 638.0, 77.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -512,7 +512,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -544,7 +544,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 50.0, 131.0, 32.5, 19.0 ],
+									"patching_rect" : [ 50.0, 131.0, 32.5, 20.0 ],
 									"text" : "i"
 								}
 
@@ -558,7 +558,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "int" ],
-									"patching_rect" : [ 50.0, 100.0, 63.0, 19.0 ],
+									"patching_rect" : [ 50.0, 100.0, 63.0, 20.0 ],
 									"text" : "t b i"
 								}
 
@@ -572,7 +572,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 165.0, 63.0, 19.0 ],
+									"patching_rect" : [ 50.0, 165.0, 63.0, 20.0 ],
 									"text" : "pack 0 0"
 								}
 
@@ -586,7 +586,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 184.0, 102.0, 19.0 ],
+									"patching_rect" : [ 50.0, 184.0, 106.0, 20.0 ],
 									"text" : "prepend src_mute"
 								}
 
@@ -600,7 +600,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 94.0, 131.0, 37.0, 19.0 ],
+									"patching_rect" : [ 94.0, 131.0, 37.0, 20.0 ],
 									"text" : "== 0"
 								}
 
@@ -716,7 +716,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 425.0, 545.0, 67.0, 19.0 ],
+					"patching_rect" : [ 425.0, 545.0, 69.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -748,7 +748,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -781,7 +781,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 88.0, 129.0, 135.0, 44.0 ],
+									"patching_rect" : [ 88.0, 129.0, 138.0, 43.0 ],
 									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
@@ -795,7 +795,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 177.0, 57.0, 19.0 ],
+									"patching_rect" : [ 50.0, 177.0, 57.0, 20.0 ],
 									"text" : "pack 1 2."
 								}
 
@@ -809,7 +809,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 204.0, 98.0, 19.0 ],
+									"patching_rect" : [ 50.0, 204.0, 102.0, 20.0 ],
 									"text" : "prepend src_gain"
 								}
 
@@ -823,7 +823,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 50.0, 140.0, 32.5, 19.0 ],
+									"patching_rect" : [ 50.0, 140.0, 32.5, 20.0 ],
 									"text" : "i"
 								}
 
@@ -837,7 +837,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "int" ],
-									"patching_rect" : [ 50.0, 101.0, 57.0, 19.0 ],
+									"patching_rect" : [ 50.0, 101.0, 57.0, 20.0 ],
 									"text" : "t b i"
 								}
 
@@ -953,7 +953,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 425.0, 460.0, 63.0, 19.0 ],
+					"patching_rect" : [ 425.0, 460.0, 65.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -985,7 +985,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1017,7 +1017,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 177.0, 57.0, 19.0 ],
+									"patching_rect" : [ 50.0, 177.0, 57.0, 20.0 ],
 									"text" : "pack 1 2."
 								}
 
@@ -1031,7 +1031,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 204.0, 75.0, 19.0 ],
+									"patching_rect" : [ 50.0, 204.0, 77.0, 20.0 ],
 									"text" : "prepend blur"
 								}
 
@@ -1045,7 +1045,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 50.0, 140.0, 32.5, 19.0 ],
+									"patching_rect" : [ 50.0, 140.0, 32.5, 20.0 ],
 									"text" : "i"
 								}
 
@@ -1059,7 +1059,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 50.0, 100.0, 57.0, 19.0 ],
+									"patching_rect" : [ 50.0, 100.0, 57.0, 20.0 ],
 									"text" : "t b l"
 								}
 
@@ -1166,7 +1166,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 425.0, 361.0, 40.0, 19.0 ],
+					"patching_rect" : [ 425.0, 361.0, 40.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1198,7 +1198,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1230,7 +1230,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 177.0, 95.0, 19.0 ],
+									"patching_rect" : [ 50.0, 177.0, 95.0, 20.0 ],
 									"text" : "pack 1 2. 3."
 								}
 
@@ -1244,7 +1244,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 204.0, 116.0, 19.0 ],
+									"patching_rect" : [ 50.0, 204.0, 120.0, 20.0 ],
 									"text" : "prepend src_position"
 								}
 
@@ -1258,7 +1258,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 50.0, 140.0, 32.5, 19.0 ],
+									"patching_rect" : [ 50.0, 140.0, 32.5, 20.0 ],
 									"text" : "i"
 								}
 
@@ -1272,7 +1272,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 50.0, 100.0, 57.0, 19.0 ],
+									"patching_rect" : [ 50.0, 100.0, 57.0, 20.0 ],
 									"text" : "t b l"
 								}
 
@@ -1379,7 +1379,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 425.0, 273.0, 81.0, 19.0 ],
+					"patching_rect" : [ 425.0, 273.0, 83.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1404,10 +1404,10 @@
 					"id" : "obj-4",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 425.0, 684.0, 574.0, 31.0 ],
+					"patching_rect" : [ 425.0, 684.0, 574.0, 33.0 ],
 					"text" : "j.messageArray speaker.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 				}
 
@@ -1422,7 +1422,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 425.0, 588.0, 596.0, 31.0 ],
+					"patching_rect" : [ 425.0, 588.0, 596.0, 33.0 ],
 					"text" : "j.parameterArray source.[32]/weight @type array @range 0. 1. @description \"Set spatial weight of the nth source.\""
 				}
 
@@ -1434,10 +1434,10 @@
 					"id" : "obj-45",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 425.0, 488.0, 592.0, 31.0 ],
+					"patching_rect" : [ 425.0, 488.0, 592.0, 33.0 ],
 					"text" : "j.messageArray source.[32]/active @type boolean @repetitions/filter 0 @description \"Mute or unmute the nth source.\""
 				}
 
@@ -1449,10 +1449,10 @@
 					"id" : "obj-7",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 425.0, 409.0, 593.0, 31.0 ],
+					"patching_rect" : [ 425.0, 409.0, 593.0, 33.0 ],
 					"text" : "j.messageArray source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @description \"Input gain for the nth source.\""
 				}
 
@@ -1464,10 +1464,10 @@
 					"id" : "obj-14",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 425.0, 313.0, 606.0, 31.0 ],
+					"patching_rect" : [ 425.0, 313.0, 606.0, 33.0 ],
 					"text" : "j.messageArray source.[32]/blur @type decimal @range 0. 100. @description \"Set spatial blur of the nth source.\""
 				}
 
@@ -1481,7 +1481,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 425.0, 665.0, 61.0, 19.0 ],
+					"patching_rect" : [ 425.0, 665.0, 63.0, 20.0 ],
 					"text" : "Speakers:"
 				}
 
@@ -1495,7 +1495,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 425.0, 213.0, 50.0, 19.0 ],
+					"patching_rect" : [ 425.0, 213.0, 50.0, 20.0 ],
 					"text" : "Source:"
 				}
 
@@ -1507,10 +1507,10 @@
 					"id" : "obj-18",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 425.0, 232.0, 569.0, 31.0 ],
+					"patching_rect" : [ 425.0, 232.0, 569.0, 33.0 ],
 					"text" : "j.messageArray source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 				}
 
@@ -1524,7 +1524,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 425.0, 51.0, 90.0, 19.0 ],
+					"patching_rect" : [ 425.0, 51.0, 92.0, 20.0 ],
 					"text" : "Global settings:"
 				}
 
@@ -1543,7 +1543,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 425.0, 23.0, 105.0, 19.0 ],
+					"patching_rect" : [ 425.0, 23.0, 105.0, 20.0 ],
 					"text" : "j.message info"
 				}
 
@@ -1558,7 +1558,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 425.0, 99.0, 592.0, 31.0 ],
+					"patching_rect" : [ 425.0, 99.0, 592.0, 33.0 ],
 					"text" : "j.parameter rolloff @type decimal @range 1 6 @clipmode low @description \"Rolloff in dB with doubling of distance.\"",
 					"varname" : "voices[3]"
 				}
@@ -1574,7 +1574,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 425.0, 68.0, 606.0, 31.0 ],
+					"patching_rect" : [ 425.0, 68.0, 606.0, 33.0 ],
 					"text" : "j.parameter dimensions @type integer @range 1 3 @clipmode both @description \"Dimensions of the space spanned by loudspeakers.\"",
 					"varname" : "voices[2]"
 				}
@@ -1590,7 +1590,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 425.0, 130.0, 568.0, 31.0 ],
+					"patching_rect" : [ 425.0, 130.0, 568.0, 33.0 ],
 					"text" : "j.parameter numSpeakers @type integer @range 1 32 @clipmode both @description \"The number of speakers to diffuse to.\" @priority 3",
 					"varname" : "voices[1]"
 				}
@@ -1605,7 +1605,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 169.5, 543.0, 167.0, 19.0 ],
+					"patching_rect" : [ 169.5, 543.0, 167.0, 20.0 ],
 					"text" : "----multicable signal output----"
 				}
 
@@ -1642,7 +1642,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 169.5, 234.0, 207.0, 19.0 ],
+					"patching_rect" : [ 169.5, 234.0, 207.0, 20.0 ],
 					"text" : "----multicable signal input----"
 				}
 
@@ -1657,7 +1657,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 5.0, 150.0, 389.0, 31.0 ],
+					"patching_rect" : [ 5.0, 150.0, 389.0, 33.0 ],
 					"text" : "j.model @description \"Distance-based amplitude panning. <br>NOTE: The positions of the speakers are not maintained by this module.\"",
 					"varname" : "j.model"
 				}
@@ -1696,7 +1696,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 425.0, 158.0, 557.0, 31.0 ],
+					"patching_rect" : [ 425.0, 158.0, 557.0, 33.0 ],
 					"text" : "j.parameter numSources @type integer @range 1 32 @clipmode both @description \"The number of sources to process.\" @priority 2",
 					"varname" : "voices"
 				}
@@ -1717,7 +1717,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1766,11 +1766,11 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 29.0, 69.0, 640.0, 480.0 ],
+										"rect" : [ 368.0, 156.0, 640.0, 480.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 11.0,
@@ -1799,7 +1799,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 159.0, 126.0, 150.0, 44.0 ],
+													"patching_rect" : [ 159.0, 126.0, 150.0, 43.0 ],
 													"text" : "a simple workaround until j.oçscinstance can deal with relative addresses"
 												}
 
@@ -1813,7 +1813,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 126.0, 67.0, 19.0 ],
+													"patching_rect" : [ 50.0, 126.0, 67.0, 20.0 ],
 													"text" : "sprintf /%s"
 												}
 
@@ -1827,7 +1827,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 50.0, 155.0, 54.0, 19.0 ],
+													"patching_rect" : [ 50.0, 155.0, 54.0, 20.0 ],
 													"text" : "zl join"
 												}
 
@@ -1841,7 +1841,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 50.0, 100.0, 54.0, 19.0 ],
+													"patching_rect" : [ 50.0, 100.0, 56.0, 20.0 ],
 													"text" : "zl slice 1"
 												}
 
@@ -1918,7 +1918,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 51.0, 45.0, 91.0, 19.0 ],
+									"patching_rect" : [ 51.0, 45.0, 95.0, 20.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
@@ -1945,7 +1945,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 534.0, 185.0, 59.0, 19.0 ],
+									"patching_rect" : [ 534.0, 185.0, 59.0, 20.0 ],
 									"text" : "thru"
 								}
 
@@ -1959,7 +1959,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 534.0, 112.0, 95.0, 19.0 ],
+									"patching_rect" : [ 534.0, 112.0, 95.0, 20.0 ],
 									"text" : "j.pass /mute"
 								}
 
@@ -1970,10 +1970,10 @@
 									"fontsize" : 12.0,
 									"id" : "obj-6",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 610.0, 132.0, 111.0, 19.0 ],
+									"patching_rect" : [ 610.0, 132.0, 111.0, 20.0 ],
 									"text" : "j.oscroute /gain"
 								}
 
@@ -1987,7 +1987,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 280.0, 139.0, 110.0, 19.0 ],
+									"patching_rect" : [ 280.0, 139.0, 112.0, 20.0 ],
 									"text" : "prepend numInputs"
 								}
 
@@ -2001,7 +2001,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 400.0, 140.0, 117.0, 19.0 ],
+									"patching_rect" : [ 400.0, 140.0, 121.0, 20.0 ],
 									"text" : "prepend numOutputs"
 								}
 
@@ -2015,7 +2015,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 256.0, 503.0, 124.0, 19.0 ],
+									"patching_rect" : [ 256.0, 503.0, 132.0, 20.0 ],
 									"text" : "prepend setLinearGain"
 								}
 
@@ -2029,7 +2029,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 252.0, 111.0, 122.0, 19.0 ],
+									"patching_rect" : [ 252.0, 111.0, 128.0, 20.0 ],
 									"text" : "prepend num_sources"
 								}
 
@@ -2044,7 +2044,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 610.0, 155.0, 102.0, 55.0 ],
+									"patching_rect" : [ 610.0, 155.0, 105.0, 60.0 ],
 									"text" : "j.dataspace @dataspace gain @input midi @output linear"
 								}
 
@@ -2055,10 +2055,10 @@
 									"fontsize" : 12.0,
 									"id" : "obj-3",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 4,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 252.0, 72.0, 264.0, 19.0 ],
+									"patching_rect" : [ 252.0, 72.0, 264.0, 20.0 ],
 									"text" : "j.oscroute /numSources /numSpeakers /audio"
 								}
 
@@ -2072,7 +2072,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 610.0, 214.0, 118.0, 19.0 ],
+									"patching_rect" : [ 610.0, 214.0, 122.0, 20.0 ],
 									"text" : "prepend master_gain"
 								}
 
@@ -2085,7 +2085,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 285.333344, 480.0, 84.0, 19.0 ],
+									"patching_rect" : [ 285.333344, 480.0, 88.0, 20.0 ],
 									"text" : "print DBAPinfo"
 								}
 
@@ -2099,7 +2099,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 383.0, 111.0, 145.0, 19.0 ],
+									"patching_rect" : [ 383.0, 111.0, 151.0, 20.0 ],
 									"text" : "prepend num_destinations"
 								}
 
@@ -2113,7 +2113,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 51.0, 72.0, 190.0, 19.0 ],
+									"patching_rect" : [ 51.0, 72.0, 190.0, 20.0 ],
 									"text" : "j.pass /info /dimensions /rolloff"
 								}
 
@@ -2127,7 +2127,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 256.0, 454.0, 63.0, 19.0 ],
+									"patching_rect" : [ 256.0, 454.0, 63.0, 20.0 ],
 									"text" : "j.dbap"
 								}
 
@@ -2394,7 +2394,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 87.0, 426.0, 54.0, 43.0 ],
+					"patching_rect" : [ 87.0, 426.0, 54.0, 47.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2418,13 +2418,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-35",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 139.5, 491.0, 96.0, 31.0 ],
-					"text" : "j.matrix= @interpolated 1",
+					"numoutlets" : 2,
+					"outlettype" : [ "audio.connect", "" ],
+					"patching_rect" : [ 139.5, 488.0, 141.0, 20.0 ],
+					"text" : "j.mixer= @interpolated 1",
 					"varname" : "matrix"
 				}
 
@@ -2650,10 +2649,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../../components/thru",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "j.mixer=.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.dbap.mxo",
