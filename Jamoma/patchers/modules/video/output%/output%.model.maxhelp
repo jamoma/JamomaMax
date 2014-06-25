@@ -49,8 +49,8 @@
 					"maxclass" : "bpatcher",
 					"name" : "output%.module.maxpat",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 53.0, 189.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"varname" : "/output%"
