@@ -206,7 +206,7 @@
 				Dataspace used by the parameter
 			</digest>
 			<description>
-				Dataspace (ie gain, position, etc.) used by the parameter
+				Dataspace used by the parameter (angle, color, distance, gain, none, orientation, position, speed, temperature, time)
 			</description>
 		</attribute>
 		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">

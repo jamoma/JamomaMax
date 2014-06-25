@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 100.0, 100.0, 745.0, 572.0 ],
+		"rect" : [ 100.0, 100.0, 709.0, 572.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -31,6 +31,7 @@
 		"showontab" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-8",
@@ -42,11 +43,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 745.0, 546.0 ],
+						"rect" : [ 0.0, 26.0, 709.0, 546.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -125,8 +126,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 61.0, 205.0, 32.5, 18.0 ],
-									"text" : "init",
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+									"text" : "init"
 								}
 
 							}
@@ -236,11 +236,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 745.0, 546.0 ],
+						"rect" : [ 0.0, 26.0, 709.0, 546.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -284,6 +284,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-6",
@@ -295,11 +296,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 100.0, 126.0, 745.0, 546.0 ],
+						"rect" : [ 100.0, 126.0, 709.0, 546.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -342,7 +343,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 614.0, 325.0, 32.5, 16.0 ],
+									"patching_rect" : [ 615.0, 325.0, 32.5, 16.0 ],
 									"text" : "end"
 								}
 
@@ -354,7 +355,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 614.0, 296.0, 20.0, 20.0 ]
+									"patching_rect" : [ 615.0, 296.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -429,6 +430,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"color" : [ 0.694118, 0.694118, 0.694118, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -441,7 +443,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -557,8 +559,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 160.0, 38.0, 32.5, 18.0 ],
-													"text" : "init",
-													"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+													"text" : "init"
 												}
 
 											}
@@ -715,6 +716,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"color" : [ 0.694118, 0.694118, 0.694118, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -727,7 +729,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -843,8 +845,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 154.0, 41.0, 32.5, 18.0 ],
-													"text" : "init",
-													"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+													"text" : "init"
 												}
 
 											}
@@ -1059,8 +1060,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 71.0, 270.0, 32.5, 18.0 ],
-									"text" : "init",
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+									"text" : "init"
 								}
 
 							}
@@ -1107,11 +1107,11 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 2,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 811.0, 583.0, 375.0, 142.0 ],
+										"rect" : [ 810.0, 583.0, 375.0, 142.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1341,8 +1341,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 71.0, 381.0, 323.0, 47.0 ],
-									"text" : "Example illustrating that j.init works locally for sub levels of a model's namespace but it needs a hub around. Noticed that upper j.init are banging lowerones"
+									"patching_rect" : [ 71.0, 381.0, 327.0, 47.0 ],
+									"text" : "Example illustrating that j.init works locally for sub levels of a model's namespace but it needs a j.model around. Noticed that upper j.init are banging lowerones"
 								}
 
 							}
@@ -1459,7 +1459,7 @@
 									"destination" : [ "obj-5", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 623.5, 345.0, 579.5, 345.0 ],
+									"midpoints" : [ 624.5, 345.0, 579.5, 345.0 ],
 									"source" : [ "obj-29", 0 ]
 								}
 

@@ -18,6 +18,9 @@
 		<metadata name="tag">
 			model
 		</metadata>
+		<metadata name="tag">
+			mvc
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<!-- <inletlist>
@@ -147,7 +150,7 @@
 				Set what dataspace used internally by the message for unit conversions
 			</digest>
 			<description>
-				Set what dataspace used internally by the message for unit conversions
+				Set what dataspace used internally by the message for unit conversions (angle, color, distance, gain, none, orientation, position, speed, temperature, time)
 			</description>
 		</attribute>
 		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
