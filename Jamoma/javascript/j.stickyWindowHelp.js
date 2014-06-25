@@ -154,7 +154,7 @@ function SlavePatcher(masterPatcher, slavePatcher)
 	this.name = this.patcher.name;
 	this.object = this.patcher.box;
 
-	post("this.object: " + this.object + "\n");
+	//post("this.object: " + this.object + "\n");
 
 	if (this.object) {
 		debugPost("this slave patcher is a subpatcher.\n");
@@ -238,7 +238,7 @@ SlavePatcher.prototype.setLocation = function(newLocation)
 function setIsStickyForSlaveSubPatcherWithVarname(slavePatcherVarname, isSticky) 
 {
 	isSticky = !!isSticky;
-	post("isSticky: " + isSticky + "\n");
+	//post("isSticky: " + isSticky + "\n");
 	for (index in slavePatchers) 
 	{
 		if (slavePatchers[index].object !== null && slavePatchers[index].object.varname === slavePatcherVarname)
@@ -355,6 +355,25 @@ function testLocation()
 	post("location.getSize: " + location.getSize().getAsArray() + "\n");	
 }
 
+function setSlaveSubPatcherWindowNoCLoseFLoat(slavePatcherVarname) // send slave thispatcher "noclose" + "float"messages
+{
+ 		for (index in slavePatchers) 
+ 		{
+ 			if (slavePatchers[index].object !== null && slavePatchers[index].object.varname === slavePatcherVarname)
+ 			{
+ 				slavePatchers[index].patcher.window("flags", "noclose");
+ 				slavePatchers[index].patcher.window("flags", "float");
+ 				slavePatchers[index].patcher.window("exec");
+ 				return;
+
+ 			}
+ 		}
+ 		post("No SlaveSubPatcher with varname: " + slavePatcherVarname + " was found.\n");
+ 	
+ 	
+}
+
+
 
 // enable/disable debugging
 function debug(debug) 
@@ -379,5 +398,6 @@ function init()
 	setStickyCornerMasterForSlaveSubPatcherWithVarname(arg, "TopLEFT"); 
 	setIsStickyForSlaveSubPatcherWithVarname(arg, 1);
 	setStickyCornerOffsetForSlaveSubPatcherWithVarname(arg, 0, 0);
+	setSlaveSubPatcherWindowNoCLoseFLoat(arg);
 	
 }
