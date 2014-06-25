@@ -94,13 +94,13 @@ void WrappedContainerClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue     none;
-    ObjectPtr   aPatcher;
+    t_object    *aPatcher;
     
     // is there already a j.model or j.view in the patcher ?
-    jamoma_patcher_get_model_or_view(jamoma_patcher_get((ObjectPtr)x), &aPatcher);
+    jamoma_patcher_get_model_or_view(jamoma_patcher_get((t_object*)x), &aPatcher);
     
     if (aPatcher) {
-        object_error((ObjectPtr)x, "can't have two models or views in the same patcher");
+        object_error((t_object*)x, "can't have two models or views in the same patcher");
         return;
     }
 		
