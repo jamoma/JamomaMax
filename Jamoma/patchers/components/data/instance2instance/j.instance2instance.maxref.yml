@@ -1,0 +1,51 @@
+title: j.instance2instance
+author: [Jamoma]
+created_at: 2012/2/2
+tags: [mapping, max, OSC]
+
+brief: Convert an OSC instance into another
+
+desc: >
+ use j.instance2instance to convert Jamoma osc messages with instance numbers to each other.
+
+inlets:
+  - id: 0
+    type: OSC-message
+    desc: Jamoma's OSC-messages.
+
+outlets:
+ - id: 0
+   type: message
+   desc: The transformed osc message.
+ - id: 1
+   type: message
+   desc: Non-matching input messages.
+
+outputs:
+ - name: list
+   desc: osc messages.
+   
+args:
+
+attributes:
+ - name: fromPrefix
+   type: string
+   desc: The osc class name from which to convert (e.g. 'source' when the input osc message is '/source.1/position 1 2 3').
+   default: none1
+ - name: toPrefix
+   type: string
+   desc: The osc class name to which to convert (e.g. 'sink' when the desired osc message is '/sink.1/position 1 2 3').
+   default: none2
+ - name: offset
+   type: int
+   desc: Offset added to incomming instance number N. (default 0)
+   default: 0
+      
+messages:
+
+seealso:
+ - j.ambimonitor2position
+ - j.instance2instance
+ - j.oscinstance
+
+discussion: Jamoma is a free and open source project. http://www.jamoma.org.
