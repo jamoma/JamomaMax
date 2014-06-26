@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 116.0, 66.0, 685.0, 493.0 ],
+		"rect" : [ 116.0, 92.0, 685.0, 467.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.975348,
@@ -199,8 +199,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 117.75, 106.0, 398.0, 33.0 ],
-					"text" : "j.parameter mask/blue @type decimal @ramp/drive Max @description \"Sets the masking for the blue component.\" @default -1",
+					"patching_rect" : [ 117.75, 106.0, 401.0, 33.0 ],
+					"text" : "j.parameter mask/blue @type decimal @ramp/drive Max @description \"Sets the masking for the blue component.\"",
 					"varname" : "mask/blue"
 				}
 
@@ -216,7 +216,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 260.0, 228.0, 391.0, 33.0 ],
-					"text" : "j.parameter tint/blue @type decimal @ramp/drive Max @description \"Sets the tinting of the blue component.\" @default 0.5",
+					"text" : "j.parameter tint/blue @type decimal @ramp/drive Max @description \"Sets the tinting of the blue component.\"",
 					"varname" : "tint/blue"
 				}
 
@@ -232,7 +232,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 65.25, 28.0, 407.0, 33.0 ],
-					"text" : "j.parameter mask/red @type decimal @ramp/drive Max @description \"Sets the masking for the red component.\" @default -1",
+					"text" : "j.parameter mask/red @type decimal @ramp/drive Max @description \"Sets the masking for the red component.\"",
 					"varname" : "mask/red"
 				}
 
@@ -248,7 +248,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 91.5, 66.5, 415.0, 33.0 ],
-					"text" : "j.parameter mask/green @type decimal @ramp/drive Max @description \"Sets the masking for the green component.\" @default 0",
+					"text" : "j.parameter mask/green @type decimal @ramp/drive Max @description \"Sets the masking for the green component.\"",
 					"varname" : "mask/green"
 				}
 
@@ -264,7 +264,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 139.0, 146.0, 386.0, 33.0 ],
-					"text" : "j.parameter tint/red @type decimal @ramp/drive Max @description \"Sets the tinting of the red component.\" @default 0.5",
+					"text" : "j.parameter tint/red @type decimal @ramp/drive Max @description \"Sets the tinting of the red component.\"",
 					"varname" : "tint/red"
 				}
 
@@ -280,7 +280,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 202.0, 189.5, 402.0, 33.0 ],
-					"text" : "j.parameter tint/green @type decimal @ramp/drive Max @description \"Sets the tinting of the green component.\" @default 0.5",
+					"text" : "j.parameter tint/green @type decimal @ramp/drive Max @description \"Sets the tinting of the green component.\"",
 					"varname" : "tint/green"
 				}
 

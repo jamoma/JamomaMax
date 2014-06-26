@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 725.0, 71.0, 881.0, 331.0 ],
+		"rect" : [ 559.0, 97.0, 881.0, 305.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -65,7 +65,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 493.0, 211.812744, 342.0, 33.0 ],
-					"text" : "j.parameter dim @type array @default 640 480 @dataspace xy @description \"dimension of the video stream\""
+					"text" : "j.parameter dim @type array @dataspace xy @description \"dimension of the video stream\""
 				}
 
 			}
@@ -244,7 +244,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 81.0, 47.0, 252.0, 20.0 ],
-					"text" : "j.parameter active @type boolean @default 1",
+					"text" : "j.parameter active @type boolean",
 					"varname" : "synth/noise/on[2]"
 				}
 
@@ -261,7 +261,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 155.0, 73.0, 408.0, 33.0 ],
-					"text" : "j.parameter fps @type integer @range 0 120 @clipmode low @description \"frame rate desired\" @dataspace time @dataspace/unit ms @default 25",
+					"text" : "j.parameter fps @type integer @range 0 120 @clipmode low @description \"frame rate desired\" @dataspace time @dataspace/unit ms",
 					"varname" : "camera/camera[2]"
 				}
 
@@ -293,7 +293,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 13.0, 9.0, 606.0, 33.0 ],
-					"text" : "j.parameter source @type string @description \"Choose between 'grab', 'movie' , 'noise' as input\" @default noise @range grab movie noise",
+					"text" : "j.parameter source @type string @description \"Choose between 'grab', 'movie' , 'noise' as input\" @range grab movie noise",
 					"varname" : "source_mode[1]"
 				}
 
@@ -472,6 +472,64 @@
 					"source" : [ "obj-7", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "noise%.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
+				"patcherrelativepath" : "../noise%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "movie%.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
+				"patcherrelativepath" : "../movie%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "grab%.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
+				"patcherrelativepath" : "../grab%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

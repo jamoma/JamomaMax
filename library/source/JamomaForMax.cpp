@@ -328,25 +328,4 @@ bool jamoma_loadextern(t_symbol *objectname, long argc, t_atom *argv, t_object *
 	return true;
 }
 
-// Function the translates a Max path+filename combo into a correct absolutepath
-// TODO: remove this function once we've completed the transition to Max5, as path_topathname() is fixed for Max5
-void jamoma_getfilepath(short in_path, char *in_filename, char *out_filepath)
-{
-	char	path[4096];
-	
-	path_topathname(in_path, in_filename, path);
-    
-#ifdef MAC_VERSION
-	char *temppath;
-	temppath = strchr(path, ':');
-	*temppath = '\0';
-	temppath += 1;
-    
-	// at this point temppath points to the path after the volume, and out_filepath points to the volume
-	sprintf(out_filepath, "/Volumes/%s%s", path, temppath);
-#else // WIN_VERSION
-	strcpy(out_filepath, path);
-#endif
-}
-
 

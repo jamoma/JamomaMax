@@ -307,7 +307,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 252.0, 517.0, 50.0, 20.0 ],
+					"patching_rect" : [ 251.0, 517.0, 50.0, 20.0 ],
 					"text" : "Clear"
 				}
 
@@ -666,7 +666,7 @@
 									"patching_rect" : [ 129.0, 99.0, 374.0, 152.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 10,
-									"presentation_rect" : [ 58.0, 17.0, 440.0, 128.0 ],
+									"presentation_rect" : [ 58.0, 17.0, 442.0, 128.0 ],
 									"text" : "Pressing these buttons will automatically generate a documentation (html format)\nand a preset file\nThe documentation can be opened from the topleft menu of the module and will open in your favorite browser\nThe preset file (and the first preset that you will define by pressing this button) will load by default everytime this module will be instancied.\nHence, the current values of all parameters will be recalled when initializing the module or \"recalling default values\" from the topleft menu.\nIt is adviced to re-generate these files every time a new j.parameter/message/return is introduced in the module.\n"
 								}
 
@@ -859,7 +859,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 129.0, 99.0, 371.0, 31.0 ],
+									"patching_rect" : [ 129.0, 99.0, 371.0, 19.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 58.0, 57.0, 440.0, 19.0 ],
 									"text" : "once pressed it should appear under j.hub on the left of your patcher"
@@ -1206,7 +1206,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 328.0, 187.0, 508.0, 97.0 ],
+						"rect" : [ 328.0, 505.0, 508.0, 97.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -1247,14 +1247,13 @@
 									"fontsize" : 10.0,
 									"frgb" : 0.0,
 									"id" : "obj-11",
-									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 129.0, 99.0, 371.0, 31.0 ],
+									"patching_rect" : [ 129.0, 99.0, 371.0, 19.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 58.0, 57.0, 440.0, 19.0 ],
-									"text" : "Lower and upper boundaries defining the range of possible parameter values."
+									"text" : "(enabled by default)"
 								}
 
 							}
@@ -1270,7 +1269,7 @@
 									"patching_rect" : [ 67.0, 84.0, 442.0, 21.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 55.0, 16.0, 442.0, 21.0 ],
-									"text" : "choose the range of your variable here"
+									"text" : "enable (or disable) this parameter"
 								}
 
 							}
@@ -1402,7 +1401,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 326.0, 504.0, 531.0, 141.0 ],
+						"rect" : [ 328.0, 464.0, 531.0, 141.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -2684,8 +2683,8 @@
 									"patching_rect" : [ 129.0, 99.0, 371.0, 43.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 3,
-									"presentation_rect" : [ 57.0, 50.0, 352.0, 43.0 ],
-									"text" : "Determines whether repeated parameter values will be filtered :\nwhen this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)"
+									"presentation_rect" : [ 57.0, 50.0, 378.0, 43.0 ],
+									"text" : "Determines whether repeated parameter values will be filtered :\nwhen this attribute is enabled repetitions are  filtered out (like [change] object in Max) -  this attribute is disabled by default"
 								}
 
 							}
@@ -3814,9 +3813,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 5.0, 20.0, 173.0, 23.0 ],
+									"patching_rect" : [ 5.0, 20.0, 173.0, 22.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 5.0, 14.0, 28.0, 23.0 ],
+									"presentation_rect" : [ 5.0, 14.0, 28.0, 22.0 ],
 									"text" : "<--"
 								}
 
@@ -3992,10 +3991,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 155.0, 370.0, 43.0 ],
+									"patching_rect" : [ 50.0, 155.0, 370.0, 31.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ 88.0, 181.0, 370.0, 43.0 ],
+									"presentation_rect" : [ 88.0, 181.0, 370.0, 31.0 ],
 									"text" : "If you need to return messages from your algorithm to the rest of the world. you can specify type, range... etc as in j.parameter or j.message"
 								}
 
@@ -4092,9 +4091,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 157.0, 75.0, 173.0, 39.0 ],
+									"patching_rect" : [ 157.0, 75.0, 173.0, 38.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 51.0, 14.0, 312.0, 23.0 ],
+									"presentation_rect" : [ 51.0, 14.0, 312.0, 22.0 ],
 									"text" : "Choose with type of variable you want to use :"
 								}
 
@@ -4947,7 +4946,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 116.0, 399.0, 100.0, 19.0 ],
+					"patching_rect" : [ 116.0, 399.0, 108.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 198.0, 402.0, 100.0, 19.0 ]
 				}
@@ -5965,7 +5964,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 116.0, 360.0, 100.0, 19.0 ],
+					"patching_rect" : [ 116.0, 360.0, 108.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 183.0, 387.0, 100.0, 19.0 ]
 				}
@@ -7038,7 +7037,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 116.0, 320.0, 100.0, 19.0 ],
+					"patching_rect" : [ 116.0, 320.0, 108.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 149.0, 299.0, 100.0, 19.0 ]
 				}
@@ -7506,7 +7505,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 115.0, 283.0, 100.0, 19.0 ],
+					"patching_rect" : [ 115.0, 283.0, 108.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 134.0, 281.0, 100.0, 19.0 ]
 				}
@@ -7535,7 +7534,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 171.0, 158.0, 48.0, 20.0 ]
+					"patching_rect" : [ 177.0, 158.0, 48.0, 20.0 ]
 				}
 
 			}
@@ -8280,7 +8279,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 115.0, 201.0, 100.0, 19.0 ],
+					"patching_rect" : [ 115.0, 201.0, 108.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 136.0, 194.0, 100.0, 19.0 ]
 				}
@@ -8915,7 +8914,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 259.0, 565.0, 50.0, 20.0 ],
+					"patching_rect" : [ 251.0, 565.0, 50.0, 20.0 ],
 					"text" : "Clear"
 				}
 
@@ -11164,7 +11163,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 115.0, 120.0, 100.0, 19.0 ],
+					"patching_rect" : [ 115.0, 120.0, 108.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 135.0, 155.0, 100.0, 19.0 ]
 				}
@@ -11183,7 +11182,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 86.0, 563.0, 158.0, 44.0 ],
+					"patching_rect" : [ 86.0, 563.0, 156.0, 44.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 135.0, 300.0, 158.0, 44.0 ]
 				}
@@ -12652,7 +12651,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.thisparentpatcher.js",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/javascript",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/javascript",
 				"patcherrelativepath" : "../../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1

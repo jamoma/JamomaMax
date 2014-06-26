@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 304.0, 55.0, 242.0, 310.0 ],
+		"rect" : [ 558.0, 52.0, 242.0, 310.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 26.0, 266.0, 193.0, 18.0 ],
-					"text" : "BCFMapper.model #1/fader #0_"
+					"text" : "BCFMapper.model #1/fader #2"
 				}
 
 			}
@@ -49,7 +49,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 26.0, 230.0, 193.0, 18.0 ],
-					"text" : "BCFMapper.model #1/key.2 #0_"
+					"text" : "BCFMapper.model #1/key.2 #2"
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 26.0, 208.0, 193.0, 18.0 ],
-					"text" : "BCFMapper.model #1/key.1 #0_"
+					"text" : "BCFMapper.model #1/key.1 #2"
 				}
 
 			}
@@ -75,7 +75,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 26.0, 180.0, 193.0, 18.0 ],
-					"text" : "BCFMapper.model #1/press.4 #0_"
+					"text" : "BCFMapper.model #1/press.4 #2"
 				}
 
 			}
@@ -88,7 +88,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 26.0, 157.0, 193.0, 18.0 ],
-					"text" : "BCFMapper.model #1/press.3 #0_"
+					"text" : "BCFMapper.model #1/press.3 #2"
 				}
 
 			}
@@ -101,7 +101,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 26.0, 132.0, 193.0, 18.0 ],
-					"text" : "BCFMapper.model #1/press.2 #0_"
+					"text" : "BCFMapper.model #1/press.2 #2"
 				}
 
 			}
@@ -114,7 +114,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 26.0, 114.0, 193.0, 18.0 ],
-					"text" : "BCFMapper.model #1/press.1 #0_"
+					"text" : "BCFMapper.model #1/press.1 #2"
 				}
 
 			}
@@ -127,7 +127,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 26.0, 89.0, 193.0, 18.0 ],
-					"text" : "BCFMapper.model #1/turn.4 #0_"
+					"text" : "BCFMapper.model #1/turn.4 #2"
 				}
 
 			}
@@ -139,8 +139,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 26.0, 70.0, 193.0, 18.0 ],
-					"text" : "BCFMapper.model #1/turn.3 #0_"
+					"patching_rect" : [ 26.0, 68.0, 193.0, 18.0 ],
+					"text" : "BCFMapper.model #1/turn.3 #2"
 				}
 
 			}
@@ -153,7 +153,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 26.0, 50.0, 193.0, 18.0 ],
-					"text" : "BCFMapper.model #1/turn.2 #0_"
+					"text" : "BCFMapper.model #1/turn.2 #2"
 				}
 
 			}

@@ -142,7 +142,7 @@ TTErr jamoma_subscriber_create(ObjectPtr x, TTObjectBasePtr aTTObjectBase, TTAdd
                 // warn the user that it should provide unique name
                 
                 // if no name has been provided
-                if (patcherArg == kTTAdrsEmpty)
+                if (patcherArg == kTTAdrsEmpty && patcherContext == kTTSym_model)
                     object_warn(patcher, "No name provided to %s %s. Using %s.", patcherClass.c_str(), patcherContext.c_str(), newContextAddress.getNameInstance().c_str());
 
                 // if a duplicate name.instance was passed in argument

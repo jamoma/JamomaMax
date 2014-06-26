@@ -62,59 +62,15 @@ void ui_preset_doread(t_ui *x)
 
 void ui_preset_dowrite(t_ui *x)
 {
-	t_fourcc 		type = 'TEXT';				// four-char code for Mac file type
-	char 			filename[MAX_FILENAME_CHARS];	// for storing the name of the file locally
-	char 			fullpath[MAX_PATH_CHARS];	// for storing the absolute path of the file
-	char			posixpath[MAX_PATH_CHARS];
-	short 			path, err;					// pathID#, error number
-	t_fourcc		outtype;					// the file type that is actually true
-	t_filehandle	file_handle;				// a reference to our file (for opening it, closing it, etc.)
-    TTNodePtr       patcherNode;
-    TTSymbol        modelClass;
-    ObjectPtr       modelPatcher = NULL;
 	ObjectPtr       modelObject;
-    t_atom          a[1];
 	
-	// get model patcher class for preset file name
-	JamomaDirectory->getTTNode(x->modelAddress, &patcherNode);
-	modelPatcher = (ObjectPtr)patcherNode->getContext();
-
-	if (modelPatcher) {
-		jamoma_patcher_get_class(modelPatcher, kTTSym_model, modelClass);
-		
-		if (modelClass)
-			snprintf(filename, MAX_FILENAME_CHARS, "%s.model.xml", modelClass.c_str());	// Default File Name
-		else
-			snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");               // Default File Name
-	}
-	else
-		snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");                   // Default File Name
-	
-	
-	saveas_promptset("Save Preset...");											// Instructional Text in the dialog
-	err = saveasdialog_extended(filename, &path, &outtype, &type, 1);			// Returns 0 if successful
-	if (err)																	// User Cancelled
-		return;
-	
-	// NOW ATTEMPT TO CREATE THE FILE...
-	err = path_createsysfile(filename, path, type, &file_handle);
-	if (err) {                                                                  // Handle any errors that occur
-		object_error((t_object*)x, "%s - error %d creating file", filename, err);
-		return;	
-	}
-	
-	path_topathname(path, filename, fullpath);
-	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
-    
     // get model object
     modelObject = ui_get_model_object(x);
-    if (modelObject) {
-        
-        atom_setsym(a, gensym(posixpath));
-        
+    if (modelObject)
+
         // send a preset:write path message
-        object_method_typed(modelObject, gensym("preset:write"), 1, a, NULL);
-	}
+        object_method_typed(modelObject, gensym("preset:write"), 0, NULL, NULL);
+
 }
 
 void ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)

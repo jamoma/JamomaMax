@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 137.0, 405.0, 605.0, 414.0 ],
+		"rect" : [ 137.0, 431.0, 605.0, 388.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -74,13 +74,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-10",
-					"linecount" : 11,
+					"linecount" : 10,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 432.0, 32.5, 139.0, 154.0 ],
-					"text" : "j.parameter mode @type string @default FastMode @description \"Choose internal calculation mode for panning: fast uses a lookup table while precision performs trigonometric calculations.\"",
+					"patching_rect" : [ 432.0, 32.5, 127.0, 141.0 ],
+					"text" : "j.parameter mode @type string @description \"Choose internal calculation mode for panning: fast uses a lookup table while precision performs trigonometric calculations.\"",
 					"varname" : "mode[1]"
 				}
 
@@ -90,13 +90,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-12",
-					"linecount" : 8,
+					"linecount" : 7,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 268.0, 32.5, 137.0, 114.0 ],
-					"text" : "j.parameter shape @type string @default EqualPower @description \"Choose the panning function: linear, squareroot, or equal-power.\"",
+					"patching_rect" : [ 268.0, 32.5, 127.0, 100.0 ],
+					"text" : "j.parameter shape @type string @description \"Choose the panning function: linear, squareroot, or equal-power.\"",
 					"varname" : "shape[1]"
 				}
 
@@ -106,13 +106,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-9",
-					"linecount" : 10,
+					"linecount" : 9,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 85.0, 32.5, 149.0, 141.0 ],
-					"text" : "j.parameter position @type decimal @range -1 1. @ramp/drive Max @default 0. @clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
+					"patching_rect" : [ 85.0, 32.5, 133.0, 127.0 ],
+					"text" : "j.parameter position @type decimal @range -1 1. @ramp/drive Max @clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
 					"varname" : "position"
 				}
 
@@ -131,7 +131,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -334,7 +334,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,

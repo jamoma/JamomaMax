@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 963.0, 591.0 ],
+		"rect" : [ 4.0, 70.0, 963.0, 565.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -75,13 +75,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-22",
-					"linecount" : 7,
+					"linecount" : 6,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 429.0, 29.5, 235.0, 100.0 ],
-					"text" : "j.parameter factors @type array @default 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. @range 1. 100. @clipmode low @description \"list of factors that determines the frequencies of the 10 partials as a factor of the fundamental frequency, default is 1 2 3 4 5 6 7 8 9 10\""
+					"patching_rect" : [ 429.0, 29.5, 243.0, 87.0 ],
+					"text" : "j.parameter factors @type array @range 1. 100. @clipmode low @description \"list of factors that determines the frequencies of the 10 partials as a factor of the fundamental frequency, default is 1 2 3 4 5 6 7 8 9 10\""
 				}
 
 			}
@@ -466,6 +466,23 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameterArray.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
