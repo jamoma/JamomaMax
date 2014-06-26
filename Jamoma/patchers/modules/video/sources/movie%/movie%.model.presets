@@ -1,0 +1,20 @@
+
+
+- preset "default"
+# "edit a comment"
+data/active 1
+data/bypass 0
+adapt 0
+singlefield 1
+unique 0
+deinterlace 1
+highquality 1
+autostart 1
+colormode argb
+dim 640 480
+rate 1
+loop normal
+loop/notify 0
+loop/points 0 0
+vol 1
+framedump 0
