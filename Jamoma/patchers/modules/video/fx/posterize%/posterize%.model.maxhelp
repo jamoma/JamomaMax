@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 538.0, 51.0, 459.0, 557.0 ],
+		"rect" : [ 49.0, 44.0, 459.0, 557.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -56,7 +56,7 @@
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
 					"name" : "input%.module.maxpat",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 45.0, 108.0, 300.0, 70.0 ],
@@ -73,7 +73,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 517.0, 70.0 ]
+					"patching_rect" : [ 0.0, 0.0, 459.0, 70.0 ]
 				}
 
 			}
@@ -83,7 +83,7 @@
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "posterize%.module.maxpat",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 45.0, 189.0, 300.0, 70.0 ],
@@ -123,85 +123,106 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "posterize%.module.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/posterize%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/posterize%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "posterize%.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/posterize%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/posterize%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "posterize%.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/posterize%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/posterize%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
-				"patcherrelativepath" : "../../../components/jamomaPath",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"patcherrelativepath" : "../../../../components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.module.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
-				"patcherrelativepath" : "../input%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
+				"patcherrelativepath" : "../../sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
-				"patcherrelativepath" : "../input%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
+				"patcherrelativepath" : "../../sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"name" : "noise%.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
+				"patcherrelativepath" : "../../sources/noise%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "movie%.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
+				"patcherrelativepath" : "../../sources/movie%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "grab%.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
+				"patcherrelativepath" : "../../sources/grab%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
-				"patcherrelativepath" : "../input%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
+				"patcherrelativepath" : "../../sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.ui.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
-				"patcherrelativepath" : "../input%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
+				"patcherrelativepath" : "../../sources/input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.list2parameter.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"patcherrelativepath" : "../../../../components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -258,7 +279,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.textslider.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
  ]
