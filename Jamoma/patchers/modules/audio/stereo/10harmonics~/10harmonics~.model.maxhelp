@@ -432,12 +432,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-4",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 362.0, 127.0, 18.0 ],
-									"text" : "factor.2 0."
+									"patching_rect" : [ 212.0, 362.0, 127.0, 31.0 ],
+									"text" : "frequency 293.664768"
 								}
 
 							}

@@ -30,6 +30,20 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 582.299988, 578.0, 115.0, 20.0 ],
+					"text" : "substitute setlist set"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-12",
 					"maxclass" : "live.meter~",
@@ -65,22 +79,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 465.299988, 522.0, 103.0, 20.0 ],
+					"patching_rect" : [ 582.299988, 517.0, 103.0, 20.0 ],
 					"text" : "prepend setArray"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-6",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 514.0, 530.0, 454.0, 18.0 ],
-					"text" : "0. 0. 0. 0. 0. 0.053 0. 0. 0. 0."
 				}
 
 			}
@@ -645,7 +645,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 516.0, 488.0, 219.0, 20.0 ],
+					"patching_rect" : [ 582.299988, 547.0, 219.0, 20.0 ],
 					"text" : "j.remoteArray factor.[10] @format array"
 				}
 
@@ -659,7 +659,7 @@
 					"numinlets" : 11,
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
-					"patching_rect" : [ 92.299988, 488.0, 392.0, 20.0 ],
+					"patching_rect" : [ 92.299988, 488.0, 509.0, 20.0 ],
 					"text" : "j.list2parameter 10"
 				}
 
@@ -931,15 +931,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 10 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-66", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -989,6 +980,16 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-11", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 10 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 591.799988, 606.0, 819.799988, 606.0, 819.799988, 478.0, 591.799988, 478.0 ],
+					"source" : [ "obj-13", 0 ]
 				}
 
 			}
@@ -1219,7 +1220,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 10 ],
+					"destination" : [ "obj-13", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-4", 0 ]
