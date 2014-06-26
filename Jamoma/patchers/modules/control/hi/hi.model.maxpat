@@ -33,13 +33,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-31",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 428.0, 246.0, 459.0, 43.0 ],
-					"text" : "j.parameter elements @type interger @clipmode low @range 1 256 @default 8 @description \"number of elements (determines the number of returns created in returnArray)\"",
+					"patching_rect" : [ 428.0, 246.0, 459.0, 31.0 ],
+					"text" : "j.parameter elements @type interger @clipmode low @range 1 256 @description \"number of elements (determines the number of returns created in returnArray)\"",
 					"varname" : "device_menu[2]"
 				}
 
@@ -609,7 +609,7 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-12",
-					"items" : [ "Souris de axellebochelen", ",", "Apple Internal Keyboard / Trackpad", ",", "Apple Internal Keyboard / Trackpad 2", ",", "Apple Internal Keyboard / Trackpad 3", ",", "Apple Internal Keyboard / Trackpad 4", ",", "Apple IR", ",", "Apple Mikey HID Driver", ",", "OSCulator HID 1", ",", "OSCulator HID 4", ",", "OSCulator HID 3", ",", "OSCulator HID 2" ],
+					"items" : [ "Apple Internal Keyboard / Trackpad", ",", "Souris de Pascal BALTAZAR", ",", "Apple Internal Keyboard / Trackpad 2", ",", "Apple Internal Keyboard / Trackpad 3", ",", "Apple Internal Keyboard / Trackpad 4" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -1022,7 +1022,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/javascript",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/javascript",
 				"patcherrelativepath" : "../../../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1

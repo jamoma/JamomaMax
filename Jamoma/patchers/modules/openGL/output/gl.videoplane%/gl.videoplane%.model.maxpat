@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 15.0, 255.0, 1041.0, 686.0 ],
+		"rect" : [ 54.0, 116.0, 1041.0, 686.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -272,7 +272,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 93.0, 173.0, 642.0, 19.0 ],
-					"text" : "j.parameter videoplane/gridmode @type string @description \"Grid mode (0 = quadrilated, 1 = triangular).\" @default 0",
+					"text" : "j.parameter videoplane/gridmode @type string @description \"Grid mode (0 = quadrilated, 1 = triangular).\"",
 					"varname" : "videoplane/gridmode"
 				}
 
@@ -318,7 +318,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 77.0, 123.0, 755.0, 19.0 ],
-					"text" : "j.parameter videoplane/displaylist @type boolean @description \"Cache in displaylist (might speed up rendering on graphic card).\" @default 0",
+					"text" : "j.parameter videoplane/displaylist @type boolean @description \"Cache in displaylist (might speed up rendering on graphic card).\"",
 					"varname" : "videoplane/displaylist"
 				}
 
@@ -333,7 +333,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 59.0, 71.0, 925.0, 19.0 ],
-					"text" : "j.parameter videoplane/client_storage @type boolean @description \"When set jit.videoplane use incoming matrix's storage rather than allocating texture memory.\" @default 1",
+					"text" : "j.parameter videoplane/client_storage @type boolean @description \"When set jit.videoplane use incoming matrix's storage rather than allocating texture memory.\"",
 					"varname" : "videoplane/client_storage"
 				}
 
@@ -349,7 +349,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 119.5, 227.0, 675.0, 31.0 ],
-					"text" : "j.parameter videoplane/nudge @type decimal @range 0. 1. @clipmode both @description \"Amount of the texture that is nudged from boundary to accomodate for boundary errors when mapping the texture to the plane.\" @default 0.0001",
+					"text" : "j.parameter videoplane/nudge @type decimal @range 0. 1. @clipmode both @description \"Amount of the texture that is nudged from boundary to accomodate for boundary errors when mapping the texture to the plane.\"",
 					"varname" : "videoplane/nudge"
 				}
 
@@ -364,7 +364,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 140.0, 297.0, 859.0, 19.0 ],
-					"text" : "j.parameter videoplane/dim @type generic @range 1 1000 @clipmode low @description \"Dimension of the grid (x, y coordinates).\" @default 20 20",
+					"text" : "j.parameter videoplane/dim @type generic @range 1 1000 @clipmode low @description \"Dimension of the grid (x, y coordinates).\"",
 					"varname" : "videoplane/dim"
 				}
 
@@ -862,8 +862,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.class.gl_group.parameters.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/class.gl_group.parameters",
-				"patcherrelativepath" : "../../../components/class.gl_group.parameters",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/class.gl_group.parameters",
+				"patcherrelativepath" : "../../../../components/openGL/class.gl_group.parameters",
 				"type" : "JSON",
 				"implicit" : 1
 			}
