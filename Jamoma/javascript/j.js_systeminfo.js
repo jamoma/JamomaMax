@@ -13,8 +13,8 @@ inlets = 1;
 outlets = 1;
 
 // the following two variables are updated via the build script
-MODULAR_VERSION = "0.6.0 a17";
-MODULAR_REV = "4efda";
+MODULAR_VERSION = "dummy";
+MODULAR_REV = "dummy";
 
 function bang()
 {
@@ -25,8 +25,4 @@ function bang()
 	outlet(0, "jamoma_revision", MODULAR_REV);
 	outlet(0, "plugin", this.max.isplugin);
 	outlet(0, "runtime", this.max.isruntime);
-}
-
-function msg_int(value) {
-	bang();
 }

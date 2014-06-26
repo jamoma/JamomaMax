@@ -1,0 +1,52 @@
+title: j.absdiff
+author: [Jamoma, Julien Rabin]
+created_at: 2010/11/11
+tags: [operator, difference]
+
+brief: Calculate the absolute difference between two numbers.
+
+desc: >
+ j.absdiff calculates the absolute difference between whatever numbers coming in each of its inlets.
+
+input:
+ - name: 1
+   desc: First number to calculate the absolute difference with.
+ - name: 2
+   desc: Second number to calculate the absolute difference with.
+
+outputs:
+ - name: 1
+   desc: The absolute difference between the two numbers received at the inputs.
+
+args:
+
+attributes:
+
+messages:
+  - name: number
+    type: integer
+    desc: Integers received in any of the inlets are converted to decimals.
+    unit:
+    value: 0
+  - name: decimal
+    type: decimal
+    desc: A number sent to one inlet triggers the calculation of the absolute difference with the number sent to the other inlet. Note that BOTH inlets are _hot_.
+    unit:
+    value: 0
+  - name: bang
+    type: generic
+    desc: A bang sent to the first inlet recalculate the absolute difference and makes the result output out of the object.
+    unit:
+    value:
+  - name: set
+    type: list
+    desc: The message @set@ in the first inlet sets the number to be used for absolute difference but does not cause the j.absdiff to output the result.
+    unit:
+    value:
+
+useraction:
+
+seealso:
+ - j.op!
+ - abs
+ - expr
