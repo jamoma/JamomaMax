@@ -4,9 +4,18 @@
   <!--"edit a comment"-->
   <command address="audio/gain">100.000000</command>
   <command address="audio/mute">0</command>
-  <command address="factors">1.000000 2.000000 3.000000 4.000000 5.000000 6.000000 7.000000 8.000000 9.000000 10.000000</command>
+  <command address="factor.1">1.000000</command>
+  <command address="factor.2">2.000000</command>
+  <command address="factor.3">3.000000</command>
+  <command address="factor.4">4.000000</command>
+  <command address="factor.5">5.000000</command>
+  <command address="factor.6">6.000000</command>
+  <command address="factor.7">7.000000</command>
+  <command address="factor.8">8.000000</command>
+  <command address="factor.9">9.000000</command>
+  <command address="factor.10">10.000000</command>
   <command address="frequency">110.000000</command>
-  <command address="harmonic.1/gain">0.</command>
+  <command address="harmonic.1/gain">0.000000</command>
   <command address="harmonic.2/gain">-6.000000</command>
   <command address="harmonic.3/gain">-12.000000</command>
   <command address="harmonic.4/gain">-18.000000</command>
