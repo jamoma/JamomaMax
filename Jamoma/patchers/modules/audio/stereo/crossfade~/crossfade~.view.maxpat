@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 449.0, 95.0, 502.0, 520.0 ],
+		"rect" : [ 47.0, 44.0, 644.0, 520.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -43,7 +43,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 203.0, 122.0 ],
@@ -336,7 +336,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 281.0, 147.0, 160.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 15.0, 31.0, 268.0, 28.0 ],
+					"presentation_rect" : [ 15.0, 31.0, 259.0, 28.0 ],
 					"range" : [ 1.0, 2.0 ],
 					"text" : "Crossfade",
 					"textpos" : [ 130.0, 4.0 ]
@@ -352,7 +352,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 308.0, 50.0, 134.0, 20.0 ],
+					"patching_rect" : [ 463.0, 3.0, 134.0, 20.0 ],
 					"text" : "j.receive~ audio/out.R1"
 				}
 
@@ -377,11 +377,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 308.0, 73.0, 80.0, 4.0 ],
+					"patching_rect" : [ 463.0, 26.0, 22.0, 44.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 134.0, 10.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 288.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -391,11 +390,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 308.0, 28.0, 80.0, 4.0 ],
+					"patching_rect" : [ 308.0, 28.0, 22.0, 44.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 134.0, 5.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 281.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -447,7 +445,7 @@
 					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/no_model_address"
 				}
 
 			}

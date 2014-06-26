@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 175.0, 381.0, 568.0, 493.0 ],
+		"rect" : [ 610.0, 86.0, 568.0, 493.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -37,8 +37,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 140.0, 177.0, 125.0, 20.0 ],
-					"text" : "j.receive~ audio/out.2"
+					"patching_rect" : [ 237.0, 128.5, 127.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R"
 				}
 
 			}
@@ -52,7 +52,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
 					"patching_rect" : [ 101.75, 128.5, 125.0, 20.0 ],
-					"text" : "j.receive~ audio/out.1"
+					"text" : "j.receive~ audio/out.L"
 				}
 
 			}
@@ -64,11 +64,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 143.75, 207.0, 30.0, 25.0 ],
+					"patching_rect" : [ 240.75, 158.5, 12.0, 68.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 140.145828, 21.5, 30.0, 25.0 ]
+					"presentation_rect" : [ 141.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -80,11 +79,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 105.5, 158.5, 30.0, 25.0 ],
+					"patching_rect" : [ 105.5, 158.5, 12.0, 68.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 125.145821, 21.5, 30.0, 25.0 ]
+					"presentation_rect" : [ 134.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -122,7 +120,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -325,7 +323,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 219.0, 80.0 ],
@@ -579,7 +577,7 @@
 					"patching_rect" : [ 0.0, -1.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
-					"text" : "/noM..ess"
+					"text" : "/no_..ess"
 				}
 
 			}
