@@ -430,7 +430,7 @@ void cue_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	if (x->wrappedObject) {
 		
 		// Default TEXT File Name
-		snprintf(filename, MAX_FILENAME_CHARS, "cuelist.txt");
+		snprintf(filename, MAX_FILENAME_CHARS, "untitled.cues");
 		
 		fullpath = jamoma_file_write((ObjectPtr)x, argc, argv, filename);
 		v.append(fullpath);

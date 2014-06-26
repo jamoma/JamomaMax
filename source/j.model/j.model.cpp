@@ -277,8 +277,6 @@ void model_subscribe(TTPtr self)
                 TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&aTextHandler), args);
                 v = TTValue(aTextHandler);
                 x->internals->append(kTTSym_TextHandler, v);
-                v = TTValue(x->wrappedObject);
-                aTextHandler->setAttributeValue(kTTSym_object, v);
                 
                 if (!EXTRA->attr_amenities->lookup(TTSymbol("all"), v))
                     EXTRA->all_amenities = YES;
@@ -548,6 +546,9 @@ void model_reference_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		
 		if (!tterr) {
 			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+            
+            v = TTValue(x->wrappedObject);
+            aTextHandler->setAttributeValue(kTTSym_object, v);
 			
 			critical_enter(0);
             o = TTValue(x->wrappedObject);
