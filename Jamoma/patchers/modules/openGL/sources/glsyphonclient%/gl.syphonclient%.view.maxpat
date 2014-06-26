@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 1063.0, 506.0, 617.0, 223.0 ],
+		"rect" : [ 380.0, 188.0, 617.0, 223.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -30,23 +30,6 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"annotation" : "none",
-					"args" : [ "#1" ],
-					"bgmode" : 1,
-					"id" : "obj-1",
-					"maxclass" : "bpatcher",
-					"name" : "header.poly.view.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1.0, -3.5, 252.0, 27.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 0.0, -0.681824, 250.0, 26.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
@@ -54,7 +37,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1.0, 50.5, 41.0, 20.0 ],
+					"patching_rect" : [ 328.5, 89.5, 41.0, 20.0 ],
 					"text" : "j.view"
 				}
 
@@ -70,9 +53,9 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 188.5, 21.5, 126.0, 29.0 ],
+					"patching_rect" : [ 328.5, 145.5, 126.0, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 177.0, 27.318176, 56.0, 25.818176 ],
+					"presentation_rect" : [ 177.0, 27.318176, 107.0, 25.818176 ],
 					"text" : "refresh server list",
 					"texton" : "On"
 				}
@@ -88,7 +71,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.5, 62.318176, 96.0, 20.0 ],
+					"patching_rect" : [ 328.5, 186.318176, 96.0, 20.0 ],
 					"text" : "j.send getserver"
 				}
 
@@ -104,7 +87,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 39.5, 84.0, 74.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 49.318176, 74.0, 20.0 ],
+					"presentation_rect" : [ 0.0, 47.318176, 74.0, 20.0 ],
 					"text" : "servername"
 				}
 
@@ -120,7 +103,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 192.0, 84.0, 61.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 27.318176, 61.0, 20.0 ],
+					"presentation_rect" : [ 0.0, 25.318176, 61.0, 20.0 ],
 					"text" : "appname"
 				}
 
@@ -168,7 +151,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 192.0, 152.318176, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 71.0, 27.318176, 100.0, 20.0 ]
+					"presentation_rect" : [ 71.0, 25.318176, 100.0, 20.0 ]
 				}
 
 			}
@@ -200,7 +183,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 39.5, 150.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 71.0, 49.318176, 100.0, 20.0 ]
+					"presentation_rect" : [ 71.0, 47.318176, 100.0, 20.0 ]
 				}
 
 			}
@@ -233,17 +216,22 @@
 				}
 
 			}
- ],
-		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "j.ui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ -8.0, 1.0, 300.0, 70.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 1.0, 300.0, 70.0 ],
+					"text" : "/noModelAddress"
 				}
 
 			}
-, 			{
+ ],
+		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
@@ -328,11 +316,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "header.poly.view.maxpat",
-				"bootpath" : "/Volumes/data/RENAUD/GITs/RTVI/max-package/patchers",
-				"patcherrelativepath" : "..",
-				"type" : "JSON",
-				"implicit" : 1
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.receive.mxo",
@@ -348,10 +333,6 @@
 			}
 , 			{
 				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
  ]
