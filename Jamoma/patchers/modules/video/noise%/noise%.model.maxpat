@@ -34,8 +34,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 198.0, 188.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 199.0, 188.0, 0.0, 0.0 ]
+					"patching_rect" : [ 198.0, 188.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -96,7 +95,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 172.5, 66.5, 319.0, 33.0 ],
-					"text" : "j.parameter planes @type integer @range 1 4 @clipmode both @description \"Number of matrix planes\" @default 4",
+					"text" : "j.parameter planes @type integer @range 1 4 @clipmode both @description \"Number of matrix planes\"",
 					"varname" : "synth/noise/planes"
 				}
 
@@ -138,7 +137,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 67.0, 39.0, 354.0, 20.0 ],
-					"text" : "j.parameter dim @type array @default 640 480 @dataspace xy"
+					"text" : "j.parameter dim @type array @dataspace xy"
 				}
 
 			}

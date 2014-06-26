@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 177.0, 68.0, 1118.0, 473.0 ],
+		"rect" : [ 177.0, 94.0, 1118.0, 447.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -198,13 +198,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1012",
-					"linecount" : 9,
+					"linecount" : 8,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 827.0, 83.5, 107.0, 127.0 ],
-					"text" : "j.messageArray source.[32]/active @type boolean @default 1 @value 1 @format single @description \"active 0 will mute the Nth source.\""
+					"patching_rect" : [ 827.0, 83.5, 107.0, 114.0 ],
+					"text" : "j.messageArray source.[32]/active @type boolean @value 1 @format single @description \"active 0 will mute the Nth source.\""
 				}
 
 			}
@@ -213,13 +213,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1010",
-					"linecount" : 11,
+					"linecount" : 10,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 953.0, 83.5, 135.0, 154.0 ],
-					"text" : "j.messageArray source.[32]/position @type array @dataspace position @dataspace/unit xyz @default 0. 0. 0. @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
+					"patching_rect" : [ 953.0, 83.5, 135.0, 141.0 ],
+					"text" : "j.messageArray source.[32]/position @type array @dataspace position @dataspace/unit xyz @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -265,7 +265,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 297.0, 83.5, 145.0, 141.0 ],
+					"patching_rect" : [ 297.0, 83.5, 141.0, 141.0 ],
 					"text" : "j.parameter numSources @type integer @repetitions/filter 1 @range 1 32 @clipmode both @description \"The number of sound sources. Changes only take effect when audio is off.\"",
 					"varname" : "voices"
 				}
@@ -432,7 +432,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.sur.rolloff.js",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.rolloff~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.rolloff~",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1

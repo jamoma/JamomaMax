@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 98.0, 410.0, 1347.0, 525.0 ],
+		"rect" : [ 93.0, 436.0, 1347.0, 499.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -34,8 +34,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 855.0, 107.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 859.5, 107.0, 0.0, 0.0 ]
+					"patching_rect" : [ 855.0, 107.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -386,7 +385,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 877.0, 314.0 ],
+						"rect" : [ 25.0, 95.0, 877.0, 288.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -445,7 +444,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 404.5, 182.0, 265.0, 31.0 ],
-									"text" : "j.parameter adapt @type boolean @description \"use native dimension of media\" @default 0",
+									"text" : "j.parameter adapt @type boolean @description \"use native dimension of media\"",
 									"varname" : "unique[1]"
 								}
 
@@ -517,7 +516,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 388.5, 110.0, 472.0, 19.0 ],
-									"text" : "j.parameter unique @type boolean @description \"unique frame playback\" @default 0",
+									"text" : "j.parameter unique @type boolean @description \"unique frame playback\"",
 									"varname" : "unique"
 								}
 
@@ -533,7 +532,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 24.0, 19.0, 510.0, 19.0 ],
-									"text" : "j.parameter deinterlace @type boolean @description \"deinterlace movie.\" @default 1",
+									"text" : "j.parameter deinterlace @type boolean @description \"deinterlace movie.\"",
 									"varname" : "deinterlace"
 								}
 
@@ -549,7 +548,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 266.0, 81.0, 471.0, 19.0 ],
-									"text" : "j.parameter singlefield @type boolean @description \"singlefield playback\" @default 1",
+									"text" : "j.parameter singlefield @type boolean @description \"singlefield playback\"",
 									"varname" : "singlefield"
 								}
 
@@ -565,7 +564,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 144.0, 48.0, 498.0, 19.0 ],
-									"text" : "j.parameter highquality @type boolean @description \"High quality option.\" @default 1",
+									"text" : "j.parameter highquality @type boolean @description \"High quality option.\"",
 									"varname" : "highquality"
 								}
 
@@ -721,8 +720,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 229.0, 21.0, 360.0, 19.0 ],
-					"text" : "j.parameter colormode @type string Colormode. @default argb",
+					"patching_rect" : [ 229.0, 21.0, 258.0, 19.0 ],
+					"text" : "j.parameter colormode @type string Colormode.",
 					"varname" : "dim[1]"
 				}
 
@@ -746,7 +745,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 214.0, 82.0, 538.0, 268.0 ],
+						"rect" : [ 214.0, 108.0, 538.0, 242.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -886,7 +885,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 17.0, 16.0, 370.0, 31.0 ],
-									"text" : "j.parameter loop @type string @description \"Set loop attribute.\" @default normal @range \"one shot\" normal palindrome playback-limits",
+									"text" : "j.parameter loop @type string @description \"Set loop attribute.\" @range \"one shot\" normal palindrome playback-limits",
 									"varname" : "loop"
 								}
 
@@ -1015,7 +1014,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 1198.0, 408.0 ],
+						"rect" : [ 25.0, 95.0, 1198.0, 382.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1060,7 +1059,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 514.0, 256.0, 600.0, 43.0 ],
-									"text" : "j.parameter autostart @default 1 @type boolean @description \"Defines module's behavior when 'file' parameter is received. When set to 0, reading of a video file is triggered with 'start'. When set to 1 (default), opening a video file automatically triggers 'start'. \"",
+									"text" : "j.parameter autostart @type boolean @description \"Defines module's behavior when 'file' parameter is received. When set to 0, reading of a video file is triggered with 'start'. When set to 1 (default), opening a video file automatically triggers 'start'. \"",
 									"varname" : "camera/camera[1]"
 								}
 
@@ -1077,7 +1076,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 382.0, 176.0, 418.0, 31.0 ],
-									"text" : "j.parameter rate @type decimal @repetitions/filter 1 @ramp/drive Max @range -2. 2. @clipmode none @description \"Playback rate of video file\" @default 1",
+									"text" : "j.parameter rate @type decimal @repetitions/filter 1 @ramp/drive Max @range -2. 2. @clipmode none @description \"Playback rate of video file\"",
 									"varname" : "file/rate"
 								}
 
@@ -1573,7 +1572,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 347.0, 53.0, 393.0, 31.0 ],
-					"text" : "j.parameter dim @type array @range 1 1000 @clipmode low @ramp/drive none @dataspace xy @description \"Image size\" @default 640 480",
+					"text" : "j.parameter dim @type array @range 1 1000 @clipmode low @ramp/drive none @dataspace xy @description \"Image size\"",
 					"varname" : "dim"
 				}
 

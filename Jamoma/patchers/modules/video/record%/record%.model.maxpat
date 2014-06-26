@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 29.0, 114.0, 1387.0, 418.0 ],
+		"rect" : [ 29.0, 140.0, 1387.0, 392.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -659,7 +659,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 203.0, 96.85714, 519.0, 31.0 ],
-					"text" : "j.parameter framerate @type decimal @ramp/drive none @repetitions/filter 1 @range 1. 25 @clipmode low @description Framerate. @default 30",
+					"text" : "j.parameter framerate @type decimal @ramp/drive none @repetitions/filter 1 @range 1. 25 @clipmode low @description Framerate.",
 					"varname" : "framerate"
 				}
 
@@ -675,7 +675,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 286.0, 156.0, 392.0, 19.0 ],
-					"text" : "j.parameter quality @type string @description \"Codec quality.\" @value high",
+					"text" : "j.parameter quality @type string @description \"Codec quality.\"",
 					"varname" : "quality"
 				}
 
@@ -691,7 +691,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 244.5, 134.0, 418.0, 19.0 ],
-					"text" : "j.parameter codec @type string @description \"Codec type.\" @default jpeg",
+					"text" : "j.parameter codec @type string @description \"Codec type.\"",
 					"varname" : "codec"
 				}
 
@@ -987,14 +987,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.class.matrix.route.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/class.matrix.route",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/class.matrix.route",
 				"patcherrelativepath" : "../../../components/class.matrix.route",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.passmatrixinfo%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/passmatrixinfo%",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/passmatrixinfo%",
 				"patcherrelativepath" : "../../../components/passmatrixinfo%",
 				"type" : "JSON",
 				"implicit" : 1
