@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 746.0, 463.0, 837.0, 421.0 ],
+		"rect" : [ 277.0, 175.0, 837.0, 421.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -151,7 +151,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-2",
-									"items" : "Caméra FaceTime HD (intégrée)",
+									"items" : "FaceTime HD Camera",
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -923,7 +923,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 231.0, 185.0, 590.0, 20.0 ],
-					"text" : "j.parameter dim @type array @description \"Resolution of captured image\" @dataspace xy @default 640 480",
+					"text" : "j.parameter dim @type array @description \"Resolution of captured image\" @dataspace xy",
 					"varname" : "camera/size"
 				}
 

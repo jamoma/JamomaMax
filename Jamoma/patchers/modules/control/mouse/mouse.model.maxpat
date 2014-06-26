@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -220,7 +220,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -490,7 +490,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -786,8 +786,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 272.0, 320.0, 349.0, 31.0 ],
 					"text" : "j.return delta/angle @type decimal @range -3.14 3.14 @description \"Angle (in radians) of relative position of mouse.\""
 				}
@@ -830,8 +830,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 235.0, 355.0, 486.0, 31.0 ],
 					"text" : "j.return delta/magnitude @type decimal @range 0. 0.4 @description \"Mangitude (in screen percentage) of relative position of mouse (sum of horizontal and vertical).\""
 				}
@@ -846,8 +846,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 317.0, 285.0, 289.0, 31.0 ],
 					"text" : "j.return delta/y @type decimal @range -0.2 0.2 @description \"Vertical delta position of mouse\""
 				}
@@ -862,8 +862,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 220.0, 391.0, 303.0, 31.0 ],
 					"text" : "j.return delta/x @type decimal @range -0.2 0.2 @description \"Horizontal delta position of mouse\""
 				}
@@ -878,8 +878,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 221.0, 465.0, 293.0, 31.0 ],
 					"text" : "j.return position/y @type decimal @range 0. 1. @description \"Vertical position of mouse\""
 				}
@@ -894,8 +894,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 121.0, 502.0, 293.0, 31.0 ],
 					"text" : "j.return position/x @type decimal @range 0. 1. @description \"Horizontal position of mouse\""
 				}
@@ -925,8 +925,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 72.0, 541.0, 261.0, 31.0 ],
 					"text" : "j.return button @type toggle @range 0 1 @description \"Mouse button\""
 				}
@@ -942,8 +942,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 72.0, 100.0, 658.0, 19.0 ],
-					"text" : "j.parameter reference @type string @clipmode none @description \"Choose reference mode\" @default screen",
+					"patching_rect" : [ 72.0, 100.0, 475.0, 19.0 ],
+					"text" : "j.parameter reference @type string @clipmode none @description \"Choose reference mode\"",
 					"varname" : "reference"
 				}
 
@@ -958,7 +958,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 163.0, 122.0, 374.0, 19.0 ],
+					"patching_rect" : [ 163.0, 122.0, 337.0, 19.0 ],
 					"text" : "j.parameter active @type boolean @description \"Turn polling on\"",
 					"varname" : "mouse_on[1]"
 				}
@@ -1269,6 +1269,23 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

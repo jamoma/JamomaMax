@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 76.0, 221.0, 1140.0, 629.0 ],
+		"rect" : [ 76.0, 221.0, 842.0, 336.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -34,8 +34,8 @@
 					"id" : "obj-16",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 85.0, 264.0, 54.0, 20.0 ],
 					"text" : "j.out~ 2"
 				}
@@ -48,8 +48,8 @@
 					"id" : "obj-15",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 19.0, 264.0, 54.0, 20.0 ],
 					"text" : "j.out~ 1"
 				}
@@ -74,13 +74,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-10",
-					"linecount" : 7,
+					"linecount" : 6,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 629.0, 11.5, 205.0, 100.0 ],
-					"text" : "j.parameter mode @type string @default FastMode @description \"Choose internal calculation mode for panning: FastMode uses a lookup table while PrecisionMode performs trigonometric calculations\"",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 629.0, 11.5, 197.0, 87.0 ],
+					"text" : "j.parameter mode @type string @description \"Choose internal calculation mode for panning: FastMode uses a lookup table while PrecisionMode performs trigonometric calculations\"",
 					"varname" : "mode[1]"
 				}
 
@@ -90,13 +90,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-12",
-					"linecount" : 8,
+					"linecount" : 7,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 444.0, 11.5, 139.0, 114.0 ],
-					"text" : "j.parameter shape @type string @default EqualPower @description \"Choose the panning function: linear, squareroot, or equal-power\"",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 444.0, 11.5, 127.0, 100.0 ],
+					"text" : "j.parameter shape @type string @description \"Choose the panning function: linear, squareroot, or equal-power\"",
 					"varname" : "shape[1]"
 				}
 
@@ -108,11 +108,11 @@
 					"id" : "obj-9",
 					"linecount" : 8,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 262.0, 11.5, 170.0, 114.0 ],
-					"text" : "j.parameter position @type decimal @range -1 1. @ramp/drive Max @default 0. @clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 262.0, 11.5, 166.0, 114.0 ],
+					"text" : "j.parameter position @type decimal @range -1 1. @ramp/drive Max @clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
 					"varname" : "position"
 				}
 
@@ -131,7 +131,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -357,7 +357,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -643,8 +643,8 @@
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 19.0, 216.5, 109.0, 20.0 ],
 					"text" : "j.panorama~ 2"
 				}
@@ -657,9 +657,9 @@
 					"id" : "obj-1",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 232.0, 231.5, 215.0, 33.0 ],
 					"text" : "j.model @description \"Balancing the two channels of a stereo signal.\""
 				}
@@ -787,7 +787,23 @@
 
 			}
  ],
-		"dependency_cache" : [  ]
+		"dependency_cache" : [ 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.panorama~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+ ]
 	}
 
 }

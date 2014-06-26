@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -84,7 +84,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -132,7 +132,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
@@ -191,7 +191,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 6,
+															"revision" : 7,
 															"architecture" : "x86"
 														}
 ,
@@ -1093,7 +1093,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 106.0, 233.0, 443.5, 47.0 ],
-					"text" : "j.parameterArray filter.[6]/gain @type decimal @range -24 24 @clipmode both @ramp/drive scheduler @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB @priority 3 @default 0."
+					"text" : "j.parameterArray filter.[6]/gain @type decimal @range -24 24 @clipmode both @ramp/drive scheduler @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB @priority 3"
 				}
 
 			}
@@ -1122,8 +1122,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 48.25, 290.0, 391.75, 47.0 ],
-					"text" : "j.parameterArray filter.[6]/q @type decimal @ramp/drive scheduler @range 0. 100. @clipmode both @repetitions/filter 1 @description \"Resonance (Q)\" @priority 4 @default 2."
+					"patching_rect" : [ 48.25, 289.0, 391.75, 47.0 ],
+					"text" : "j.parameterArray filter.[6]/q @type decimal @ramp/drive scheduler @range 0. 100. @clipmode both @repetitions/filter 1 @description \"Resonance (Q)\" @priority 4"
 				}
 
 			}
@@ -1168,7 +1168,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 48.25, 30.0, 521.0, 33.0 ],
-					"text" : "j.parameter bands @type integer @priority -1 @description \"Number of bands of the filter\" @tag setup @repetitions/filter 1 @clipmode both @default #2 @range 1 24",
+					"text" : "j.parameter bands @type integer @priority -1 @description \"Number of bands of the filter\" @tag setup @repetitions/filter 1 @clipmode both @range 1 24",
 					"varname" : "bands[1]"
 				}
 

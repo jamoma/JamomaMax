@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1157.0, 695.0 ],
+		"rect" : [ 0.0, 70.0, 1157.0, 669.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -102,13 +102,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-14",
-					"linecount" : 12,
+					"linecount" : 11,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 951.0, 22.0, 162.0, 167.0 ],
-					"text" : "j.parameter delay/maxSize @type integer @default 1000000 @ramp/drive none @repetitions/filter 1 @range 0 1000000 @clipmode low @dataspace time @dataspace/unit sample @priority 1 @description \"Maximum delay size in samples.\"",
+					"patching_rect" : [ 951.0, 22.0, 150.0, 154.0 ],
+					"text" : "j.parameter delay/maxSize @type integer @ramp/drive none @repetitions/filter 1 @range 0 1000000 @clipmode low @dataspace time @dataspace/unit sample @priority 1 @description \"Maximum delay size in samples.\"",
 					"varname" : "delay/right[1]"
 				}
 
@@ -123,7 +123,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 507.0, 22.0, 159.0, 127.0 ],
+					"patching_rect" : [ 507.0, 22.0, 157.0, 127.0 ],
 					"text" : "j.message delay @type integer @ramp/drive Max @repetitions/filter 0 @range 0 1000000 @dataspace time @dataspace/unit sample @description \"Delay time in samples to be applied to both channels.\"",
 					"varname" : "j.parameter.mxb[9]"
 				}
@@ -170,7 +170,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 507.0, 232.0, 150.0, 167.0 ],
+					"patching_rect" : [ 507.0, 232.0, 128.0, 167.0 ],
 					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/filter 1 @range 0 1000000 @clipmode both @dataspace time @dataspace/unit sample @description \"Delay time in samples for left channel.\"",
 					"varname" : "delay/left"
 				}

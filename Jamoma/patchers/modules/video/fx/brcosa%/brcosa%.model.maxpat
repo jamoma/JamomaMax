@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 291.0, 83.0, 1041.0, 403.0 ],
+		"rect" : [ 291.0, 109.0, 1041.0, 377.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -271,7 +271,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 98.0, 48.0, 555.0, 19.0 ],
-					"text" : "j.parameter monochrome @type boolean @description \"Monochrome image - 0 is default\" @default 0",
+					"text" : "j.parameter monochrome @type boolean @description \"Monochrome image - 0 is default\"",
 					"varname" : "monochrome[1]"
 				}
 
@@ -288,7 +288,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 520.0, 158.0, 514.0, 31.0 ],
-					"text" : "j.parameter saturation @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Saturation of image - 1 is default\" @default 1",
+					"text" : "j.parameter saturation @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Saturation of image - 1 is default\"",
 					"varname" : "saturation[1]"
 				}
 
@@ -305,7 +305,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 411.0, 115.0, 504.0, 31.0 ],
-					"text" : "j.parameter contrast @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Contrast of image - 1 is default\" @default 1",
+					"text" : "j.parameter contrast @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Contrast of image - 1 is default\"",
 					"varname" : "contrast[1]"
 				}
 
@@ -316,13 +316,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1026",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 285.0, 78.0, 515.0, 31.0 ],
-					"text" : "j.parameter brightness @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Brightness of image - 1 is default\" @default 1",
+					"patching_rect" : [ 285.0, 78.0, 515.0, 19.0 ],
+					"text" : "j.parameter brightness @type decimal @ramp/drive Max @repetitions/filter 1 @range 0",
 					"varname" : "brightness[1]"
 				}
 
@@ -481,6 +480,27 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

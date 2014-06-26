@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 81.0, 535.0, 1232.0, 422.0 ],
+		"rect" : [ 76.0, 283.0, 1232.0, 422.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -38,7 +38,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 11.5, 19.0, 590.0, 20.0 ],
-					"text" : "j.parameter dim @type array @description \"Resolution of captured image\" @dataspace xy @default 640 480",
+					"text" : "j.parameter dim @type array @description \"Resolution of captured image\" @dataspace xy",
 					"varname" : "camera/size"
 				}
 
@@ -591,7 +591,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 407.5, 181.0, 329.0, 31.0 ],
-					"text" : "j.parameter realtime @type boolean @description \"Realtime (flag). When enabled internal clock is used.\" @default 0",
+					"text" : "j.parameter realtime @type boolean @description \"Realtime (flag). When enabled internal clock is used.\"",
 					"varname" : "realtime"
 				}
 
@@ -608,7 +608,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 515.0, 214.0, 236.0, 31.0 ],
-					"text" : "j.parameter interp @type boolean @description \"Interpolate (flag).\" @default 0",
+					"text" : "j.parameter interp @type boolean @description \"Interpolate (flag).\"",
 					"varname" : "interp"
 				}
 
@@ -654,7 +654,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 242.0, 97.85714, 509.0, 19.0 ],
-					"text" : "j.parameter framerate @type decimal @repetitions/filter 1 @description Framerate @default 25",
+					"text" : "j.parameter framerate @type decimal @repetitions/filter 1 @description Framerate",
 					"varname" : "framerate"
 				}
 
@@ -670,7 +670,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 325.0, 157.0, 401.0, 19.0 ],
-					"text" : "j.parameter quality @type string @description \"Codec quality.\" @default high",
+					"text" : "j.parameter quality @type string @description \"Codec quality.\"",
 					"varname" : "quality"
 				}
 
@@ -686,7 +686,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 283.5, 135.0, 418.0, 19.0 ],
-					"text" : "j.parameter codec @type string @description \"Codec type.\" @default photojpeg",
+					"text" : "j.parameter codec @type string @description \"Codec type.\"",
 					"varname" : "codec"
 				}
 
@@ -982,7 +982,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.passmatrixinfo%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/passmatrixinfo%",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/video/passmatrixinfo%",
 				"patcherrelativepath" : "../../../../components/video/passmatrixinfo%",
 				"type" : "JSON",
 				"implicit" : 1
