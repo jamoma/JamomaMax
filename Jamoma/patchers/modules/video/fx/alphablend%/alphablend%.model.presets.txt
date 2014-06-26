@@ -4,4 +4,4 @@
 # "edit a comment"
 data/active 1
 data/bypass 0
-alpha/mode normal
+alpha/mode inverse

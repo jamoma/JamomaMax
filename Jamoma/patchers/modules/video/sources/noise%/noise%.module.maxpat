@@ -35,8 +35,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 204.0, 154.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 203.0, 154.0, 0.0, 0.0 ]
+					"patching_rect" : [ 204.0, 154.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -51,7 +50,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, -2.0, 300.0, 70.0 ]
+					"presentation_rect" : [ 0.0, -2.0, 300.0, 75.0 ]
 				}
 
 			}
@@ -124,14 +123,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "noise%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/noise%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "noise%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/noise%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

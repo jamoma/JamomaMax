@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 25.0, 69.0, 419.0, 575.0 ],
+		"rect" : [ 25.0, 69.0, 387.0, 549.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -29,15 +29,15 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"annotation" : "Multiple source video player",
+					"annotation" : "",
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
-					"name" : "movie%.module.maxpat",
+					"name" : "noise%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 95.0, 205.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 113.0, 318.0, 300.0, 140.0 ]
+					"patching_rect" : [ 65.0, 191.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
 
 			}
@@ -142,7 +142,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 47.0, 279.0, 39.0, 19.0 ],
+					"patching_rect" : [ 17.0, 265.0, 39.0, 19.0 ],
 					"text" : "jit.pix"
 				}
 
@@ -156,7 +156,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 47.0, 172.0, 67.0, 19.0 ],
+					"patching_rect" : [ 17.0, 158.0, 67.0, 19.0 ],
 					"text" : "t l b"
 				}
 
@@ -170,7 +170,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 47.0, 78.0, 300.0, 70.0 ],
+					"patching_rect" : [ 17.0, 78.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
 
@@ -184,7 +184,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 419.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 387.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -199,7 +199,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 47.0, 355.0, 300.0, 70.0 ],
+					"patching_rect" : [ 17.0, 296.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
 
@@ -211,7 +211,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 47.0, 444.0, 160.0, 120.0 ]
+					"patching_rect" : [ 17.0, 382.0, 160.0, 120.0 ]
 				}
 
 			}
@@ -230,7 +230,7 @@
 					"destination" : [ "obj-21", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 104.5, 349.5, 337.5, 349.5 ],
+					"midpoints" : [ 74.5, 276.5, 307.5, 276.5 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -378,16 +378,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "movie%.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../sources/movie%",
+				"name" : "noise%.module.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
+				"patcherrelativepath" : "../../sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "movie%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../sources/movie%",
+				"name" : "noise%.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
+				"patcherrelativepath" : "../../sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
