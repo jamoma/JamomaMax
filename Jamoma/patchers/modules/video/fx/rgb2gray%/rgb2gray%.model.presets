@@ -1,12 +1,6 @@
 
-
-
 - preset "default"
-  trackChannel luminosity
-  video/bypass 0
-  video/freeze 0
-  video/mute 0
-  video/preview 0
-
-  
-
+# "edit a comment"
+data/active 1
+data/bypass 0
+trackChannel red

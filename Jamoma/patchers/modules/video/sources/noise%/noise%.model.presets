@@ -1,7 +1,8 @@
 
+
 - preset "default"
 # "edit a comment"
 data/active 1
 data/bypass 0
-dim 128.000000 128.000000
-mode phase
+dim 8 6
+planes 4

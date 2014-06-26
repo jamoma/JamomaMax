@@ -1,18 +1,10 @@
-
-
-
 - preset "default"
-  video/preview 0
-  video/mute 0
-  video/freeze 0
-  video/bypass 0
-  tolerance 0.5
-  target 2
-  mode 0
-  mask 3
-  key 1
-  key/red 0.5
-  key/green 0.5
-  key/blue 0.5
-  
-
+# "edit a comment"
+key/blue 0.168627
+key/green 0.701961
+key 1
+mask 3
+mode 1
+key/red 0.000000
+target 2
+tolerance 0.550000

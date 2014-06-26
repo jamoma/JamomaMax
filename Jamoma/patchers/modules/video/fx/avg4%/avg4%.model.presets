@@ -1,14 +1,9 @@
 
 
-
-	
 - preset "default"
-video/preview 0
-		video/bypass 0
-		video/freeze 0
-		video/mute 0
-		mode clip
-		x 10
-		y 6
-    
-
+# "edit a comment"
+data/active 1
+data/bypass 0
+mode clip
+x 1
+y 1

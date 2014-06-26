@@ -1,12 +1,9 @@
 
 
-
 - preset "default"
-  context this_context
-  fullscreen 0
-  interpolate 0
-  video/freeze 0
-  video/mute 0
-  video/preview 0
-  
-
+# "edit a comment"
+data/active 1
+data/bypass 0
+fullscreen 0
+interpolate 0
+ 

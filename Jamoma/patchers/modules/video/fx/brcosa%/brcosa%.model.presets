@@ -1,15 +1,10 @@
 
 
-
-	
 - preset "default"
-video/preview 0
-		video/bypass 0
-		video/freeze 0
-		video/mute 0
-		brightness 1.
-		contrast 1.
-		saturation 1.
-		monochrome 0
-    
-
+# "edit a comment"
+data/active 1
+data/bypass 0
+brightness 1.000000
+contrast 2.000000
+saturation 1.000000
+monochrome 1

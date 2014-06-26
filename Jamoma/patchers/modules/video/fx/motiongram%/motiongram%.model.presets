@@ -1,1 +1,1 @@
-	- preset "default"		<command address="video/preview"0		<command address="video/bypass"0		<command address="video/freeze"0		<command address="video/mute"0		<command address="dimensions/width"320		<command address="dimensions/height"240		<command address="line"160    
+- preset "default"# "edit a comment"data/active 1data/bypass 0line 160type 1dimensions/width 320dimensions/height 240

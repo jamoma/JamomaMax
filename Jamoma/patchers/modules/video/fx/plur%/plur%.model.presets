@@ -1,19 +1,11 @@
 
-
-
 - preset "default"
-  colormode wrap
-  gang 1
-  mode 0
-  scale 8
-  video/bypass 0
-  video/freeze 0
-  video/mute 0
-  video/preview 0
-
-  x/range 25
-  x/step 30
-  y/range 25
-  y/step 30
-  
-
+# "edit a comment"
+data/active 1
+data/bypass 0
+mode 1
+scale 2
+step/x 30
+range/x 25
+step/y 30
+range/y 25

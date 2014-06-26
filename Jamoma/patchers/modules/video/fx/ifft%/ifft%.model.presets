@@ -1,14 +1,7 @@
-
-
-
 - preset "default"
-  clear/auto 1
-  dim 128.000000 128.000000 
-  stripImaginaryPlane 0
-  video/bypass 0
-  video/freeze 0
-  video/mute 0
-  video/preview 0
-
-  
-
+# "edit a comment"
+data/active 1
+clear/auto 0
+data/bypass 0
+dim 64.000000 64.000000
+stripImaginaryPlane 0
