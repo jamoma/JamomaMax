@@ -117,7 +117,7 @@
         factor for all sources.
       </digest>
       <description>
-        The <m>blurall<m> message with a decimal argument can be used to set @blur</m>
+        The <m>blurall<m> message with a decimal argument can be used to set <m>@blur</m>
         factor for all sources.
       </description>
     </method>
