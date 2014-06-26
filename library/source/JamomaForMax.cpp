@@ -103,8 +103,8 @@ void jamoma_init(void)
 		ttRegexForBracket = new TTRegex("\\[(\\d|\\d\\d|\\d\\d\\d)\\]");	// parse until 999
 		
 		ModelPatcherFormat = new TTString("%s.model.maxpat");
-		ModelPresetFormat = new TTString("%s.model.presets");
-		ViewPresetFormat = new TTString("%s.view.presets");
+		ModelPresetFormat = new TTString("%s.model.presets.txt");
+		ViewPresetFormat = new TTString("%s.view.presets.txt");
 		HelpPatcherFormat = new TTString("%s.model");
 		RefpageFormat = new TTString("%s.model");
 		DocumentationFormat = new TTString("%s.model.html");
