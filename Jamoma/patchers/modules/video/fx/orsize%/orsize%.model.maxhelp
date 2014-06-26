@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 105.0, 44.0, 547.0, 640.0 ],
+		"rect" : [ 105.0, 44.0, 673.0, 339.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -36,7 +36,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 547.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 674.0, 82.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -48,55 +48,11 @@
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "input%.module.maxpat",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 59.0, 104.0, 300.0, 70.0 ],
+					"patching_rect" : [ 10.0, 82.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"hidden" : 1,
-					"id" : "obj-19",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 79.0, 180.0, 122.0, 19.0 ],
-					"text" : "r orsize%.module.cmd"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"hidden" : 1,
-					"id" : "obj-25",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 74.0, 319.0, 74.0, 19.0 ],
-					"text" : "loadmess set"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-26",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 161.0, 319.0, 198.0, 17.0 ],
-					"text" : "zoomX 2."
 				}
 
 			}
@@ -107,7 +63,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 59.0, 348.0, 320.0, 240.0 ]
+					"patching_rect" : [ 325.0, 82.0, 320.0, 240.0 ]
 				}
 
 			}
@@ -117,27 +73,12 @@
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "orsize%.module.maxpat",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 59.0, 204.0, 300.0, 105.0 ],
+					"patching_rect" : [ 10.0, 182.0, 300.0, 105.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"varname" : "orsize%.module"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-30",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 387.0, 221.0, 118.0, 55.0 ],
-					"text" : "Tip: click and drag in the preview window to change the offset. Shift-click to zoom."
 				}
 
 			}
@@ -153,28 +94,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-26", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"midpoints" : [ 83.5, 342.0, 156.0, 342.0, 156.0, 315.0, 170.5, 315.0 ],
-					"source" : [ "obj-25", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-26", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-29", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-28", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 19.5, 288.0, 6.0, 288.0, 6.0, 322.0, 318.0, 322.0, 318.0, 81.0, 334.5, 81.0 ],
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -182,92 +105,113 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "orsize%.module.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/orsize%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/orsize%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "orsize%.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/orsize%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/orsize%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "orsize%.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/orsize%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/orsize%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.pwindow.mouse.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/pwindow.mouse",
-				"patcherrelativepath" : "../../../components/pwindow.mouse",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/pwindow.mouse",
+				"patcherrelativepath" : "../../../../components/video/pwindow.mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.module.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
-				"patcherrelativepath" : "../input%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
+				"patcherrelativepath" : "../../sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
-				"patcherrelativepath" : "../input%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
+				"patcherrelativepath" : "../../sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"name" : "noise%.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
+				"patcherrelativepath" : "../../sources/noise%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "movie%.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
+				"patcherrelativepath" : "../../sources/movie%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "grab%.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
+				"patcherrelativepath" : "../../sources/grab%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
-				"patcherrelativepath" : "../input%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
+				"patcherrelativepath" : "../../sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.ui.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/input%",
-				"patcherrelativepath" : "../input%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
+				"patcherrelativepath" : "../../sources/input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.list2parameter.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"patcherrelativepath" : "../../../../components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
-				"patcherrelativepath" : "../../../components/jamomaPath",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"patcherrelativepath" : "../../../../components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -316,11 +260,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.textslider.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.send.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
