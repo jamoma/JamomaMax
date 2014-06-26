@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 0.0, 70.0, 1157.0, 669.0 ],
@@ -50,8 +50,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 159.0, 535.0, 73.0, 20.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 159.0, 535.0, 52.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -64,8 +64,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 24.0, 535.0, 73.0, 20.0 ],
-					"text" : "j.out~ 1"
+					"patching_rect" : [ 24.0, 535.0, 50.0, 20.0 ],
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -78,8 +78,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 159.0, 65.0, 66.0, 20.0 ],
-					"text" : "j.in~ 2"
+					"patching_rect" : [ 159.0, 65.0, 45.0, 20.0 ],
+					"text" : "j.in~ R"
 				}
 
 			}
@@ -92,8 +92,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 24.0, 65.0, 66.0, 20.0 ],
-					"text" : "j.in~ 1"
+					"patching_rect" : [ 24.0, 65.0, 43.0, 20.0 ],
+					"text" : "j.in~ L"
 				}
 
 			}
@@ -107,7 +107,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 951.0, 22.0, 150.0, 154.0 ],
+					"patching_rect" : [ 951.0, 22.0, 151.0, 154.0 ],
 					"text" : "j.parameter delay/maxSize @type integer @ramp/drive none @repetitions/filter 1 @range 0 1000000 @clipmode low @dataspace time @dataspace/unit sample @priority 1 @description \"Maximum delay size in samples.\"",
 					"varname" : "delay/right[1]"
 				}
@@ -118,12 +118,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-12",
-					"linecount" : 9,
+					"linecount" : 8,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 507.0, 22.0, 157.0, 127.0 ],
+					"patching_rect" : [ 507.0, 22.0, 159.0, 114.0 ],
 					"text" : "j.message delay @type integer @ramp/drive Max @repetitions/filter 0 @range 0 1000000 @dataspace time @dataspace/unit sample @description \"Delay time in samples to be applied to both channels.\"",
 					"varname" : "j.parameter.mxb[9]"
 				}

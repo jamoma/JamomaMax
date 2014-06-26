@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
-			"architecture" : "x86"
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 558.0, 145.0, 347.0, 552.0 ],
+		"rect" : [ 558.0, 145.0, 679.0, 679.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -34,10 +34,10 @@
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 123.0, 476.0, 163.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "", "" ],
+					"patching_rect" : [ 478.0, 18.0, 134.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R1"
 				}
 
 			}
@@ -48,10 +48,36 @@
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 123.0, 424.0, 163.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "", "" ],
+					"patching_rect" : [ 323.0, 18.0, 132.0, 20.0 ],
+					"text" : "j.receive~ audio/out.L1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "live.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 478.0, 41.0, 15.0, 42.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 288.0, 24.0, 5.0, 40.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "live.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 323.0, 43.0, 15.0, 42.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 281.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -66,7 +92,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 169.0, 25.0, 63.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 169.0, 25.0, 63.0, 20.0 ],
+					"presentation_rect" : [ 150.5, 25.0, 63.0, 20.0 ],
 					"text" : "Max delay"
 				}
 
@@ -85,7 +111,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 123.0, 168.0, 78.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 228.5, 25.0, 64.0, 20.0 ],
+					"presentation_rect" : [ 210.0, 25.0, 64.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Right[1]"
@@ -109,36 +135,6 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "amplitude of output signal 2",
-					"id" : "obj-50",
-					"maxclass" : "live.meter~",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 123.0, 503.0, 80.0, 4.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 180.0, 10.0, 50.0, 4.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "amplitude of output signal 1",
-					"id" : "obj-49",
-					"maxclass" : "live.meter~",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 123.0, 452.0, 80.0, 4.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 180.0, 5.0, 50.0, 4.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"annotation" : "Delay time in samples for right channel.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -151,7 +147,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 123.0, 350.0, 45.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 86.0, 45.0, 64.0, 20.0 ],
+					"presentation_rect" : [ 78.0, 45.0, 64.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Right"
@@ -187,7 +183,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 123.0, 260.0, 45.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 86.0, 25.0, 64.0, 20.0 ],
+					"presentation_rect" : [ 78.0, 25.0, 64.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Left"
@@ -205,7 +201,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 16.0, 45.0, 72.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 16.0, 45.0, 72.0, 20.0 ],
+					"presentation_rect" : [ 8.0, 45.0, 72.0, 20.0 ],
 					"text" : "Delay Right"
 				}
 
@@ -221,7 +217,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 16.0, 25.0, 63.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 16.0, 25.0, 63.0, 20.0 ],
+					"presentation_rect" : [ 8.0, 25.0, 63.0, 20.0 ],
 					"text" : "Delay Left"
 				}
 
@@ -299,18 +295,18 @@
 					"id" : "obj-34",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/#1"
+					"text" : "/no_model_address"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
@@ -384,7 +380,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-49", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-2", 0 ]
@@ -442,7 +438,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.meter~.mxo",
+				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
  ]
