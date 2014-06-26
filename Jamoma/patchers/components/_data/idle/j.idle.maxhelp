@@ -296,7 +296,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 99.0, 205.0, 125.0, 17.0 ]
+					"patching_rect" : [ 99.0, 205.0, 125.0, 17.0 ],
+					"text" : "0.015238"
 				}
 
 			}
@@ -317,7 +318,7 @@
 					"fontsize" : 10.0,
 					"id" : "obj-40",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 83.0, 177.0, 147.0, 19.0 ],
@@ -392,7 +393,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 83.0, 452.0, 74.0, 17.0 ]
+					"patching_rect" : [ 83.0, 452.0, 74.0, 17.0 ],
+					"text" : "2.130332"
 				}
 
 			}
@@ -671,7 +673,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 137.0, 275.0, 106.0, 19.0 ],
-					"text" : "j.idle @time 3."
+					"text" : "j.idle @time 2."
 				}
 
 			}
@@ -774,56 +776,56 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.idle.maxpat",
-				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/idle",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/idle",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.module.maxpat",
-				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
 				"patcherrelativepath" : "../../modules/control/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
 				"patcherrelativepath" : "../../modules/control/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.view.maxpat",
-				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
 				"patcherrelativepath" : "../../modules/control/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
 				"patcherrelativepath" : "../maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
 				"patcherrelativepath" : "../jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
