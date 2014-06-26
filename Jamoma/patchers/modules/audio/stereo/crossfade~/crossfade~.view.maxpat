@@ -378,7 +378,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 463.0, 26.0, 22.0, 44.0 ],
+					"patching_rect" : [ 463.0, 26.0, 15.0, 42.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 288.0, 24.0, 5.0, 40.0 ]
 				}
@@ -391,7 +391,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 308.0, 28.0, 22.0, 44.0 ],
+					"patching_rect" : [ 308.0, 28.0, 15.0, 42.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 281.0, 24.0, 5.0, 40.0 ]
 				}
