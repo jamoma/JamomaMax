@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 160.0, 159.0, 764.0, 451.0 ],
@@ -203,7 +203,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 157.0, 117.0, 589.0, 43.0 ],
+					"patching_rect" : [ 157.0, 117.0, 591.0, 43.0 ],
 					"text" : "j.parameter randomness @type integer @ramp/drive Max @repetitions/filter 1 @range 0 5000 @clipmode low @description \"Defines a range of randomness in milliseconds to be applied to the metro interval\" @dataspace time @dataspace/unit ms",
 					"varname" : "randomness"
 				}
@@ -234,7 +234,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 87.0, 74.0, 606.0, 31.0 ],
-					"text" : "j.parameter time @type integer @ramp/drive Max @repetitions/filter 1 @range 1 5000 @clipmode low @dataspace time @dataspace/unit ms @description \"Metro interval (ms)\" @default 25",
+					"text" : "j.parameter time @type integer @ramp/drive Max @repetitions/filter 1 @range 1 5000 @clipmode low @dataspace time @dataspace/unit ms @description \"Metro interval (ms)\"",
 					"varname" : "time"
 				}
 
@@ -250,7 +250,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 19.0, 32.0, 584.0, 31.0 ],
-					"text" : "j.parameter toggle @type boolean @ramp/drive none @repetitions/filter 1 @range 0 1 @clipmode both @description \"Toggle qmetro on/off\" @default 0",
+					"text" : "j.parameter toggle @type boolean @ramp/drive none @repetitions/filter 1 @range 0 1 @clipmode both @description \"Toggle qmetro on/off\"",
 					"varname" : "toggle"
 				}
 
@@ -410,6 +410,19 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

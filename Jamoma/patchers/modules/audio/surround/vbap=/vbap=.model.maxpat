@@ -161,7 +161,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 347.0, 63.0, 139.0, 141.0 ],
+					"patching_rect" : [ 347.0, 63.0, 131.0, 141.0 ],
 					"text" : "j.parameter dimensions @repetitions/filter 1 @type integer @range 2 3 @clipmode both @priority 2 @description \"Dimension of the loudspeaker setup (2D or 3D).\"",
 					"varname" : "destination/dimensions"
 				}
@@ -238,7 +238,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-1033",
-									"linecount" : 10,
+									"linecount" : 9,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
@@ -325,7 +325,7 @@
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 0.0, 44.0, 1680.0, 956.0 ],
+										"rect" : [ -46.0, 527.0, 1680.0, 930.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -461,13 +461,13 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-1045",
-													"linecount" : 8,
+													"linecount" : 7,
 													"maxclass" : "newobj",
-													"numinlets" : 1,
+													"numinlets" : 2,
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
-													"patching_rect" : [ 667.0, 64.0, 139.0, 114.0 ],
-													"text" : "j.messageArray source.[32]/active @type boolean @default 1 @description \"Mute ( /active 0) or unmute (/active 1) the nth source.\""
+													"patching_rect" : [ 667.0, 64.0, 139.0, 100.0 ],
+													"text" : "j.messageArray source.[32]/active @type boolean @description \"Mute ( /active 0) or unmute (/active 1) the nth source.\""
 												}
 
 											}
@@ -478,7 +478,7 @@
 													"id" : "obj-1043",
 													"linecount" : 8,
 													"maxclass" : "newobj",
-													"numinlets" : 1,
+													"numinlets" : 2,
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 468.5, 64.0, 151.0, 114.0 ],
@@ -493,10 +493,10 @@
 													"id" : "obj-1042",
 													"linecount" : 7,
 													"maxclass" : "newobj",
-													"numinlets" : 1,
+													"numinlets" : 2,
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
-													"patching_rect" : [ 278.0, 64.0, 121.0, 100.0 ],
+													"patching_rect" : [ 278.0, 64.0, 123.0, 100.0 ],
 													"text" : "j.messageArray source.[32]/blur @type decimal @range 0. 100. @description \"Set spatial blur of the nth source.\""
 												}
 
@@ -508,10 +508,10 @@
 													"id" : "obj-1006",
 													"linecount" : 7,
 													"maxclass" : "newobj",
-													"numinlets" : 1,
+													"numinlets" : 2,
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
-													"patching_rect" : [ 50.0, 64.0, 147.0, 100.0 ],
+													"patching_rect" : [ 50.0, 64.0, 148.0, 100.0 ],
 													"text" : "j.messageArray source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 												}
 
@@ -2179,7 +2179,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-1003",
-									"linecount" : 10,
+									"linecount" : 9,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
@@ -2211,7 +2211,7 @@
 									"id" : "obj-1007",
 									"linecount" : 7,
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 309.0, 85.0, 148.0, 100.0 ],
