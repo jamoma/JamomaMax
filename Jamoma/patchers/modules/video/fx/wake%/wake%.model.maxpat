@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 111.0, 316.0, 946.0, 399.0 ],
+		"rect" : [ 86.0, 399.0, 946.0, 399.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -257,7 +257,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 601.0, 185.0, 302.0, 31.0 ],
-					"text" : "j.parameter normalize @type boolean @description \"Switches normalization on and off\" @default 0",
+					"text" : "j.parameter normalize @type boolean @description \"Switches normalization on and off\"",
 					"varname" : "normalize"
 				}
 
@@ -274,7 +274,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 503.0, 142.0, 435.0, 31.0 ],
-					"text" : "j.parameter bleed @type decimal @ramp/drive Max @description \"Sets convolution kernel value for all colors\" @default 0.",
+					"text" : "j.parameter bleed @type decimal @ramp/drive Max @description \"Sets convolution kernel value for all colors\"",
 					"varname" : "bleed"
 				}
 
@@ -285,13 +285,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1016",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 408.0, 104.0, 486.0, 31.0 ],
-					"text" : "j.parameter gain @type decimal @ramp/drive Max @description \"The gain level for all colors\" @default 1",
+					"patching_rect" : [ 408.0, 104.0, 486.0, 19.0 ],
+					"text" : "j.parameter gain @type decimal @ramp/drive Max @description \"The gain level for all colors\"",
 					"varname" : "gain"
 				}
 
@@ -302,13 +301,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1021",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 351.0, 64.0, 536.0, 31.0 ],
-					"text" : "j.parameter feedback @type decimal @ramp/drive Max @description \"The feedback value for all colors\" @default 0",
+					"patching_rect" : [ 351.0, 64.0, 536.0, 19.0 ],
+					"text" : "j.parameter feedback @type decimal @ramp/drive Max @description \"The feedback value for all colors\"",
 					"varname" : "feedback"
 				}
 
@@ -319,13 +317,12 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1029",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 282.0, 25.0, 566.0, 31.0 ],
-					"text" : "j.parameter feedforward @type decimal @ramp/drive Max @description \"The feedforward value for all colors\" @default 1",
+					"patching_rect" : [ 282.0, 25.0, 566.0, 19.0 ],
+					"text" : "j.parameter feedforward @type decimal @ramp/drive Max @description \"The feedforward value for all colors\"",
 					"varname" : "feedforward"
 				}
 
