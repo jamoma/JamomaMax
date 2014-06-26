@@ -1,0 +1,16 @@
+
+
+
+- preset "default"
+  tolerance 0.200000
+  minkey 0.0000
+  maxkey 1.0000
+	<command address="color"0.247059 0.419608 0.100000
+  fade 0.100000
+  alphaignore 1
+  video/preview 0
+  video/mute 0
+  video/freeze 0
+  video/bypass 0
+  
+

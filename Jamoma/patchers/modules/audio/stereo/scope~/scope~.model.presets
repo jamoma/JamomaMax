@@ -1,0 +1,9 @@
+
+
+- preset "default"
+# "edit a comment"
+buffer/pixel 128
+buffer/samples 128
+range -0.000002
+ 
+

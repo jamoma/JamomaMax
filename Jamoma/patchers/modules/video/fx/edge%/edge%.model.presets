@@ -1,0 +1,13 @@
+
+
+
+	
+- preset "default"
+video/preview 0
+		video/bypass 0
+		video/freeze 0
+		video/mute 0
+		thresh 0.24
+		algorithm Sobel
+    
+

@@ -1,0 +1,13 @@
+
+
+
+- preset "default"
+  slide/down 1.000000
+  slide/up 1.000000
+  video/bypass 0
+  video/freeze 0
+  video/mute 0
+  video/preview 0
+
+  
+

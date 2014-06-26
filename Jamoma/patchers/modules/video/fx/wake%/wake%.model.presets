@@ -1,0 +1,15 @@
+
+
+
+- preset "default"
+  normalize 0
+  bleed 0.15
+  gain 1.
+  feedback 0.6
+  feedforward 0.1
+  video/mute 0
+  video/freeze 0
+  video/bypass 0
+  video/preview 0
+  
+

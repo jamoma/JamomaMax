@@ -1,0 +1,13 @@
+
+
+
+- preset "default"
+  levels 3.000000
+  video/bypass 0
+  video/freeze 0
+  video/mix 100.000000
+  video/mute 0
+  video/preview 0
+
+  
+

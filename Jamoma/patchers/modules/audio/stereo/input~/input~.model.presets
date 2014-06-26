@@ -1,0 +1,18 @@
+
+
+- preset "default"
+# "edit a comment"
+source soundfile
+audio/gain 100.
+balance/mode FastMode
+balance/position 0.000000
+balance/shape EqualPower
+clicktrain/rate 1.000000
+file/loop 1
+file/play 0
+file/transpose 0.000000
+input/ch.1 1
+input/ch.2 2
+testtone/frequency 1000
+ 
+

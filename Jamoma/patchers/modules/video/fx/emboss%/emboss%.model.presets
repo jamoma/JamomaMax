@@ -1,0 +1,17 @@
+
+
+
+	
+- preset "default"
+video/preview 0
+		video/bypass 0
+		video/freeze 0
+		video/mute 0
+		tint/green 0.4
+		tint/red 0.4
+		tint/blue 0.4
+		mask/green 0.
+		mask/red 11.
+		mask/blue 0.
+    
+

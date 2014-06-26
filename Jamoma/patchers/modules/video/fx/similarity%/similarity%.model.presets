@@ -1,0 +1,13 @@
+
+
+
+- preset "default"
+  algorithm 1
+  mode 2
+  video/bypass 0
+  video/freeze 0
+  video/mute 0
+  video/preview 0
+
+  
+

@@ -1,0 +1,20 @@
+
+
+
+- preset "default"
+  angle 0
+  boundmode clip
+  mirror 1
+  offsetX 0.000000
+  offsetY 0.000000
+  rotate1 0
+  rotate2 0
+  video/bypass 0
+  video/freeze 0
+  video/mute 0
+  video/preview 0
+
+  zoomX 1.000000
+  zoomY 1.000000
+  
+

@@ -1,0 +1,16 @@
+
+
+
+- preset "default"
+  filter/active 0
+  filter/threshold 0
+  mode 2
+  noise/active 1
+  noise/threshold 100.000000
+  record 0
+  video/bypass 0
+  video/freeze 0
+  video/mute 0
+  video/preview 0
+  
+

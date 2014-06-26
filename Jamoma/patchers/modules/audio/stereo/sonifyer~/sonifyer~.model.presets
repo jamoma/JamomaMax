@@ -1,0 +1,15 @@
+
+
+
+- preset "default"
+  audio/bypass 0
+  audio/gain 64.000000
+  audio/mute 0
+  harmonicsteps 50.000000
+  offset 0.000000
+  scaling 1.000000
+  smooth/frequency 100.000000
+  smooth/magnitude 100.000000
+
+  
+

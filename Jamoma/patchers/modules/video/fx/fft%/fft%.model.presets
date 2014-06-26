@@ -1,0 +1,13 @@
+
+
+
+- preset "default"
+  dim 128.000000 128.000000 
+  mode complex
+  video/bypass 0
+  video/freeze 0
+  video/mute 0
+  video/preview 0
+
+  
+

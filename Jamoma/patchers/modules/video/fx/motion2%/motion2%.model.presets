@@ -1,0 +1,18 @@
+
+
+
+
+- preset "default"
+  color 0
+  edge/algorithm 0
+  edge/threshold 0.100000
+  noise 1
+  slide 6.000000
+  threshold 0.100000
+  trails 0
+  video/bypass 0
+  video/freeze 0
+  video/mute 0
+  video/preview 0
+  
+

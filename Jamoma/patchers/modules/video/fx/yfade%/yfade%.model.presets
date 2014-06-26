@@ -1,0 +1,11 @@
+
+
+
+- preset "default"
+  yfade 0
+  video/preview 0
+  video/mute 0
+  video/freeze 0
+  video/bypass 0
+  
+

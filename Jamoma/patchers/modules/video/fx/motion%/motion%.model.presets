@@ -1,0 +1,26 @@
+
+
+
+- preset "default"
+  centroid/color 0
+  centroid/on 0
+  centroid/size/on 0
+  color 0
+  contraction/color 0
+  contraction/max/color 0
+  contraction/max/on 0
+  contraction/on 0
+  contraction/slide 0
+  data/smoothing 0
+  edge/algorithm 0
+  edge/threshold 0.100000
+  noise 1
+  slide 6.000000
+  threshold 0.100000
+  trails 0
+  video/bypass 0
+  video/freeze 0
+  video/mute 0
+  video/preview 0
+  
+

@@ -1,0 +1,15 @@
+
+
+
+	
+- preset "default"
+video/preview 0
+		video/bypass 0
+		video/freeze 0
+		video/mute 0
+		brightness 1.
+		contrast 1.
+		saturation 1.
+		monochrome 0
+    
+

@@ -1,0 +1,12 @@
+
+
+
+- preset "default"
+  alpha/mode normal
+  video/bypass 0
+  video/freeze 0
+  video/mute 0
+  video/preview 0
+
+  
+
