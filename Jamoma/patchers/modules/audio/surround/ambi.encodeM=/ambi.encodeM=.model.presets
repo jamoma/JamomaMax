@@ -1,0 +1,48 @@
+
+
+
+- preset "default"
+  audio/gain 100.000000
+  audio/mute 0
+  center/curve 0.000000
+  center/decay 0.000000
+  center/size 1.000000
+  flavor Furse-Malham
+  interpolation 1
+  numSources 3
+  order 3
+  source.1/order 3
+  source.10/order 3
+  source.11/order 3
+  source.12/order 3
+  source.13/order 3
+  source.14/order 3
+  source.15/order 3
+  source.16/order 3
+  source.17/order 3
+  source.18/order 3
+  source.19/order 3
+  source.2/order 3
+  source.20/order 3
+  source.21/order 3
+  source.22/order 3
+  source.23/order 3
+  source.24/order 3
+  source.25/order 3
+  source.26/order 3
+  source.27/order 3
+  source.28/order 3
+  source.29/order 3
+  source.3/order 3
+  source.30/order 3
+  source.31/order 3
+  source.32/order 3
+  source.4/order 3
+  source.5/order 3
+  source.6/order 3
+  source.7/order 3
+  source.8/order 3
+  source.9/order 3
+
+  
+

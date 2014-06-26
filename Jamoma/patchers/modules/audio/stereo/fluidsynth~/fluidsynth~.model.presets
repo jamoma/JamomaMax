@@ -1,0 +1,19 @@
+
+
+
+- preset "default"
+  audio/gain 0.000000
+  audio/mute 1
+  chorus/active 0
+  chorus/depth 40
+  chorus/level 10
+  chorus/speed 0.5
+  chorus/type 0
+  chorus/units 10
+  reverb/active 0
+  reverb/damping 0.5
+  reverb/level 1.
+  reverb/roomsize 0.8
+  reverb/width 0.7
+  
+

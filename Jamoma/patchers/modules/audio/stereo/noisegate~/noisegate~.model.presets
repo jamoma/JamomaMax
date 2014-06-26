@@ -1,0 +1,14 @@
+
+
+- preset "default"
+# "edit a comment"
+attack 10
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+lookahead 10
+release 300
+threshold -40.000000
+ 
+

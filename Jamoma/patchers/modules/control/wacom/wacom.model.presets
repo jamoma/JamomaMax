@@ -1,0 +1,12 @@
+
+
+
+- preset "default"
+  bgrd 0
+  flusheventqueue 1
+  menu 0
+  nopointer 1
+  on 1
+  xyrange 1
+  
+

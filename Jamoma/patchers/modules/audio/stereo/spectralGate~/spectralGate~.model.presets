@@ -1,0 +1,27 @@
+
+
+- preset "default"
+# "edit a comment"
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+invert 0
+limiter~/active 1
+limiter~/audio/bypass 0
+limiter~/audio/gain 100.000000
+limiter~/audio/mix 100.000000
+limiter~/audio/mute 0
+limiter~/dcblocker/active 1
+limiter~/lookahead 10
+limiter~/mode exponential
+limiter~/postamp 6.000000
+limiter~/preamp 6.000000
+limiter~/release 300.000000
+limiter~/threshold -6.000000
+response/attack 0.069620
+response/decay 0.563291
+threshold -9.00000
+
+ 
+

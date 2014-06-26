@@ -1,0 +1,39 @@
+
+
+
+- preset "default"
+  3D/position 0.000000 0.000000 0.000000 
+  3D/rotate 0.000000 0.000000 1.000000 0.000000 
+  3D/scale 1.000000 1.000000 1.000000 
+  blend/enable 0
+  blend/mode 6 7 
+  bypass 0
+  color/alpha 1.000000
+  color/inherit 0
+  color/rgb 1.000000 1.000000 1.000000 
+  depth/clear 0
+  depth/enable 1
+  depth/inherit 0
+  fog/amount 0
+  fog/inherit 0
+  fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 
+  freeze 0
+  material/automatic 1
+  material/inherit 0
+  material/light/ambient 0.000000 0.000000 0.000000 0.000000 
+  material/light/diffuse 0.000000 0.000000 0.000000 0.000000 
+  material/light/emission 0.000000 0.000000 0.000000 0.000000 
+  material/light/enable 0
+  material/light/specular 0.000000 0.000000 0.000000 0.000000 
+  material/shininess 16.000000
+  mute 0
+  preview 0
+  render/antialias 0
+  render/automatic 1
+  render/context none
+  render/enable 1
+  render/layer 0
+
+  weight 0.995000
+  
+

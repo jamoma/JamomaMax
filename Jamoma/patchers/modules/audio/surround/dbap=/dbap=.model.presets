@@ -1,0 +1,12 @@
+
+
+
+- preset "default"
+  audio/gain 100.000000
+  audio/mute 0
+  dimensions 2
+  numSources 3
+  numSpeakers 8
+  rolloff 6.000000
+  
+
