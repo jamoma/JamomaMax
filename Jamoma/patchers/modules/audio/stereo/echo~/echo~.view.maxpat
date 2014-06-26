@@ -346,13 +346,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-15",
-					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 30.0, 415.54541, 129.0, 47.0 ],
-					"text" : "j.remote delay/right @dataspace gain @dataspace/unit db",
+					"patching_rect" : [ 30.0, 415.54541, 113.0, 20.0 ],
+					"text" : "j.remote delay/right",
 					"varname" : "right"
 				}
 
@@ -826,7 +825,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "limiter~.panel.widget.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
 				"patcherrelativepath" : "../limiter~",
 				"type" : "JSON",
 				"implicit" : 1
