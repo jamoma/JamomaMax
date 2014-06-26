@@ -2,4 +2,4 @@
 # "edit a comment"
 data/active 1
 data/bypass 0
-xfade 0.582089
+xfade 0

@@ -7,5 +7,5 @@ data/bypass 0
 fullscreen 0
 fullscreen/shortcut 27
 interpolate 0
-position 5 25
+position 15 45
 size 320 240

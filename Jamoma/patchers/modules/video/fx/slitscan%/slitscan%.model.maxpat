@@ -48,7 +48,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 177.0, 62.0, 37.0, 19.0 ],
-					"text" : "j.in 1"
+					"text" : "j.in 2"
 				}
 
 			}

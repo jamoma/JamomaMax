@@ -1,8 +1,12 @@
 
+
 - preset "default"
 # "edit a comment"
 data/active 1
-colormode 0
-window 0
-window_position 5 25
+window 1
+window_position 891.000000 100.000000
 window_size 320 240
+monitoredModel /brcosa%
+in|out 0
+in|out_instance 0
+colormode 0

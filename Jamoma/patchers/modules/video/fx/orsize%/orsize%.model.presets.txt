@@ -1,14 +1,15 @@
 
+
 - preset "default"
 # "edit a comment"
 data/active 1
 angle 0
-boundmode clear
+boundmode fold
 data/bypass 0
-mirror 0
+mirror 1
 offsetX 0.000000
-offsetY 0.000000
-rotate1 0
-rotate2 0
-zoomX 1.000000
-zoomY 1.000000
+offsetY 57.900000
+rotate1 1
+rotate2 1
+zoomX 0.200000
+zoomY 0.200000

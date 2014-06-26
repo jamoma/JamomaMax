@@ -69,7 +69,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 98.0, 245.5, 58.0, 33.0 ],
-					"presentation_rect" : [ 109.0, 200.5, 0.0, 0.0 ],
 					"text" : "prepend set"
 				}
 
@@ -218,12 +217,12 @@
 					"id" : "obj-4",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ -4.0, 4.0, 300.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 1.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"presentation_rect" : [ 0.0, -1.0, 300.0, 70.0 ],
+					"text" : "/no_model_address"
 				}
 
 			}

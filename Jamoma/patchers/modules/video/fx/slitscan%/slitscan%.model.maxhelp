@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 442.0, 84.0, 757.0, 481.0 ],
+		"rect" : [ 442.0, 84.0, 700.0, 381.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -34,20 +34,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 572.0, 114.0, 160.0, 120.0 ],
-					"presentation_rect" : [ 572.0, 113.0, 160.0, 120.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "jit.pwindow",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 400.0, 114.0, 160.0, 120.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 160.0, 120.0 ]
+					"patching_rect" : [ 354.0, 108.0, 320.0, 240.0 ],
+					"presentation_rect" : [ 572.0, 113.0, 320.0, 240.0 ]
 				}
 
 			}
@@ -59,7 +47,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "bang", "bang", "", "int" ],
-					"patching_rect" : [ 44.0, 404.0, 147.0, 19.0 ]
+					"patching_rect" : [ 91.0, 354.0, 147.0, 19.0 ]
 				}
 
 			}
@@ -74,7 +62,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 44.0, 435.0, 194.0, 25.0 ],
+					"patching_rect" : [ 91.0, 385.0, 194.0, 25.0 ],
 					"text" : ";\rmax launchbrowser http://vimeo.com/1163538"
 				}
 
@@ -88,7 +76,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 44.0, 404.0, 150.0, 19.0 ],
+					"patching_rect" : [ 91.0, 354.0, 150.0, 19.0 ],
 					"text" : "http://vimeo.com/1163538",
 					"textcolor" : [ 0.0, 0.6, 1.0, 1.0 ],
 					"underline" : 1
@@ -105,15 +93,16 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 373.0, 201.0, 31.0 ],
+					"patching_rect" : [ 68.0, 323.0, 201.0, 31.0 ],
 					"text" : "what can you do with slit-scanning? \nwatch this:"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.615686, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 14.0,
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -624,7 +613,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 69.0, 205.0, 90.0, 19.0 ],
+					"patching_rect" : [ 38.0, 201.0, 122.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -644,39 +633,13 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "bpatcher",
-					"name" : "blur%.module.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 69.0, 306.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 15.0, 15.0, 300.0, 70.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-2",
-					"maxclass" : "jit.fpsgui",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 4.0, 319.0, 60.0, 35.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
 					"name" : "slitscan%.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 69.0, 229.0, 300.0, 70.0 ],
+					"patching_rect" : [ 38.0, 237.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
 
@@ -689,7 +652,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 69.0, 118.0, 300.0, 70.0 ],
+					"patching_rect" : [ 38.0, 108.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
 
@@ -703,7 +666,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 757.0, 70.0 ]
+					"patching_rect" : [ 0.0, 0.0, 700.0, 70.0 ]
 				}
 
 			}
@@ -713,7 +676,7 @@
 					"destination" : [ "obj-3", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 78.5, 201.0, 359.5, 201.0 ],
+					"midpoints" : [ 47.5, 191.0, 328.5, 191.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -729,16 +692,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 78.5, 195.0, 378.0, 195.0, 378.0, 104.0, 409.5, 104.0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -748,29 +701,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 78.5, 303.0, 13.5, 303.0 ],
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 78.5, 300.0, 54.0, 300.0, 54.0, 99.0, 581.5, 99.0 ],
+					"midpoints" : [ 47.5, 322.0, 23.0, 322.0, 23.0, 89.0, 363.5, 89.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -887,27 +821,6 @@
 				"name" : "slitscan%.view.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/slitscan%",
 				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "blur%.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/blur%",
-				"patcherrelativepath" : "../blur%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "blur%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/blur%",
-				"patcherrelativepath" : "../blur%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "blur%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/blur%",
-				"patcherrelativepath" : "../blur%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
