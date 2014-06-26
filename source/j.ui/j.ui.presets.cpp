@@ -83,12 +83,12 @@ void ui_preset_dowrite(t_ui *x)
 		jamoma_patcher_get_class(modelPatcher, kTTSym_model, modelClass);
 		
 		if (modelClass)
-			snprintf(filename, MAX_FILENAME_CHARS, "%s.model.xml", modelClass.c_str());	// Default File Name
+			snprintf(filename, MAX_FILENAME_CHARS, "%s.model.presets", modelClass.c_str());	// Default File Name
 		else
-			snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");               // Default File Name
+			snprintf(filename, MAX_FILENAME_CHARS, ".model.presets");               // Default File Name
 	}
 	else
-		snprintf(filename, MAX_FILENAME_CHARS, ".model.xml");                   // Default File Name
+		snprintf(filename, MAX_FILENAME_CHARS, ".model.presets");                   // Default File Name
 	
 	
 	saveas_promptset("Save Preset...");											// Instructional Text in the dialog
