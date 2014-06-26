@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 4
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 457.0, 102.0, 399.0, 549.0 ],
+		"rect" : [ 457.0, 102.0, 340.0, 367.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,16 +29,31 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "Emulate the use of lower sample-rates and bit-resolution.",
+					"color" : [ 0.215686, 0.215686, 0.215686, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 155.0, 245.5, 163.0, 20.0 ],
+					"text" : "degrade~.model degrade~.1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
 					"id" : "obj-12",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 59.0, 179.0, 302.0, 34.0 ],
-					"presentation_rect" : [ 58.0, 179.0, 0.0, 0.0 ],
+					"patching_rect" : [ 18.0, 164.0, 302.0, 33.0 ],
 					"text" : "Try changing the colors from the Options > Object Defaults menu while having this patch open."
 				}
 
@@ -46,14 +62,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-11",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 59.0, 122.0, 302.0, 48.0 ],
-					"presentation_rect" : [ 56.0, 121.0, 0.0, 0.0 ],
+					"patching_rect" : [ 18.0, 107.0, 302.0, 47.0 ],
 					"text" : "One advantage as compared to controling colors from the inspector of GUI objects, is that the highlight color do not interfere with \"Object default settings\"."
 				}
 
@@ -62,13 +77,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-10",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 59.0, 65.0, 300.0, 48.0 ],
+					"patching_rect" : [ 18.0, 50.0, 302.0, 47.0 ],
 					"text" : "Module highlighing can be used to temporarily give the module a color shade that sets it apart from other modules."
 				}
 
@@ -77,38 +92,27 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 18.0,
-					"frgb" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-8",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 59.0, 27.0, 221.0, 27.0 ],
+					"patching_rect" : [ 18.0, 12.0, 221.0, 27.0 ],
 					"text" : "Module highlighting"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "bpatcher",
-					"name" : "jmod.degrade~.maxpat",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 59.0, 440.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 112.0, 453.0, 300.0, 70.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"annotation" : "none",
+					"args" : [ "degrade~.1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "jmod.degrade~.maxpat",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "signal", "signal" ],
-					"patching_rect" : [ 59.0, 331.0, 300.0, 70.0 ],
+					"name" : "degrade~.view.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 18.0, 271.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 15.0, 15.0, 300.0, 70.0 ]
 				}
 
@@ -122,8 +126,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 59.0, 300.0, 102.0, 17.0 ],
-					"text" : "/view/highlight $1"
+					"patching_rect" : [ 18.0, 247.0, 102.0, 17.0 ],
+					"text" : "ui:highlight $1"
 				}
 
 			}
@@ -138,7 +142,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 59.0, 271.0, 100.0, 20.0 ]
+					"patching_rect" : [ 18.0, 211.0, 100.0, 20.0 ]
 				}
 
 			}
@@ -163,23 +167,16 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "jmod.degrade~.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/modules/audio/degrade~",
-				"patcherrelativepath" : "../../modules/audio/degrade~",
+				"name" : "degrade~.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jalg.degrade~.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/modules/audio/degrade~",
-				"patcherrelativepath" : "../../modules/audio/degrade~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.meter_receive.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Modules/Modular/Max/library/components/meter_receive",
-				"patcherrelativepath" : "../../library/components/meter_receive",
+				"name" : "degrade~.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -188,27 +185,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.hub.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscroute.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -216,7 +193,23 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.return.mxo",
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
  ]
