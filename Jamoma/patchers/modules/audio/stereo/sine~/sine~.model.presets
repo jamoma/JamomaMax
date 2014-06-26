@@ -1,0 +1,10 @@
+
+
+- preset "default"
+# "edit a comment"
+audio/gain 100.000000
+audio/mute 0
+note 69.00000
+oscillator sine
+ 
+

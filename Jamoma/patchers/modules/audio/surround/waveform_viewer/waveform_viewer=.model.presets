@@ -1,0 +1,10 @@
+
+
+
+- preset "default"
+  active 1
+  downSample 100
+  numberOfChannels 2
+
+  
+

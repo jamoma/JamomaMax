@@ -1,0 +1,7 @@
+- preset "default"
+# "edit a comment"
+data/active 1
+clear/auto 0
+data/bypass 0
+dim 64.000000 64.000000
+stripImaginaryPlane 0

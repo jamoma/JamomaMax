@@ -1,0 +1,23 @@
+
+
+
+- preset "default"
+  /centroid/size 1
+  /contraction/window/on 0
+  /contraction/window/size 0
+  centroid/color 147 224 0 
+  centroid/on 1
+  centroid/size/on 0
+  contraction/color 255 126 31 
+  contraction/max/color 0 255 252 
+  contraction/max/on 1
+  contraction/on 1
+  contraction/slide 0.000000
+  data/smoothing 0.000000
+  video/bypass 0
+  video/freeze 0
+  video/mute 0
+  video/preview 0
+
+  
+

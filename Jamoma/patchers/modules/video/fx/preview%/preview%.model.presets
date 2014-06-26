@@ -1,0 +1,8 @@
+
+- preset "default"
+# "edit a comment"
+data/active 1
+colormode 0
+window 0
+window_position 5 25
+window_size 320 240

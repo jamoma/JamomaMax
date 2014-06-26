@@ -1,0 +1,48 @@
+
+
+
+- preset "default"
+  3D/position 0.000000 0.000000 0.000000 
+  3D/rotate 0.000000 0.000000 1.000000 0.000000 
+  3D/scale 1.000000 1.000000 1.000000 
+  align center
+  blend/enable 1
+  blend/mode 8 7 
+  color/alpha 1.000000
+  color/inherit 0
+  color/rgb 1.000000 1.000000 1.000000 
+  depth/clear 0
+  depth/enable 1
+  depth/inherit 0
+  face normal
+  fog/amount 0.000000
+  fog/inherit 0
+  fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 
+  font Geneva
+  fontsize 48
+  interp 1
+  leadscale 1.000000
+  material/automatic 1
+  material/inherit 0
+  material/light/ambient 0.000000 0.000000 0.000000 0.000000 
+  material/light/diffuse 0.000000 0.000000 0.000000 0.000000 
+  material/light/emission 0.000000 0.000000 0.000000 0.000000 
+  material/light/enable 0
+  material/light/specular 0.000000 0.000000 0.000000 0.000000 
+  material/shininess 16.000000
+  render/antialias 1
+  render/automatic 0
+  render/context none
+  render/enable 1
+  render/layer 0
+  screenmode 1
+  shadow/color/alpha 1.000000
+  shadow/color/rgb 0.000000 0.000000 0.000000 
+  shadow/enable 1
+  shadow/offset 0.300000 0.300000 0.000000 
+  tracking 1.000000
+  video/freeze 0
+  video/mute 0
+
+  
+

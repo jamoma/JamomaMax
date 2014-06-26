@@ -1,0 +1,20 @@
+
+
+- preset "default"
+# "edit a comment"
+audio/gain 100.000000
+audio/mute 0
+factors 1.000000 2.000000 3.000000 4.000000 5.000000 6.000000 7.000000 8.000000 9.000000 10.000000
+frequency 110.000000
+harmonic.1/gain 0.
+harmonic.2/gain -6.000000
+harmonic.3/gain -12.000000
+harmonic.4/gain -18.000000
+harmonic.5/gain -24.000000
+harmonic.6/gain -30.000000
+harmonic.7/gain -36.000000
+harmonic.8/gain -42.000000
+harmonic.9/gain -48.000000
+harmonic.10/gain -54.000000
+ 
+

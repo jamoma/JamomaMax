@@ -1,0 +1,14 @@
+
+
+
+- preset "default"
+  audio/gain 0.000000
+  audio/mute 0
+  loop 1
+  nextFile/loop/end 0.000000
+  nextFile/loop/start 0.000000
+  nextFile/rate 1.000000
+  play 0
+  view/highlight 0
+  
+

@@ -1,0 +1,57 @@
+
+
+- preset "default"
+# "edit a comment"
+audio/gain 100.000000
+audio/mute 0
+oscillators 10
+range 24.000000 96.000000
+rate -1.000000
+rolloff -60.000000
+spacing 12.000000
+ 
+
+- preset "up"
+# "edit a comment"
+audio/gain 100.000000
+audio/mute 0
+oscillators 10
+range 24.000000 96.000000
+rate 1.000000
+rolloff -60.000000
+spacing 12.000000
+ 
+
+- preset "down"
+# "edit a comment"
+audio/gain 100.000000
+audio/mute 0
+oscillators 10
+range 24.000000 96.000000
+rate -1.000000
+rolloff -60.000000
+spacing 12.000000
+ 
+
+- preset "FalseAlarm"
+# "edit a comment"
+audio/gain 100.000000
+audio/mute 0
+oscillators 10
+range 24.000000 96.000000
+rate 24.000000
+rolloff -60.000000
+spacing 12.000000
+ 
+
+- preset "PsychedelicIdea"
+# "edit a comment"
+audio/gain 100.000000
+audio/mute 0
+oscillators 10
+range 24.000000 96.000000
+rate -1.000000
+rolloff -12.000000
+spacing 4.000000
+ 
+
