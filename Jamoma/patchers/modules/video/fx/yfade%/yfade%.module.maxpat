@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 520.0, 258.0, 1160.0, 446.0 ],
+		"rect" : [ 520.0, 258.0, 300.0, 269.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -51,7 +51,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 108.0, 168.0, 25.0, 25.0 ]
+					"patching_rect" : [ 150.0, 168.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 66.0, 168.0, 25.0, 25.0 ]
+					"patching_rect" : [ 79.5, 168.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -76,7 +76,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 24.0, 129.0, 103.0, 20.0 ],
+					"patching_rect" : [ 9.0, 129.0, 160.0, 20.0 ],
 					"text" : "yfade%.model #1"
 				}
 
@@ -88,7 +88,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 24.0, 168.0, 25.0, 25.0 ]
+					"patching_rect" : [ 9.0, 168.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -100,7 +100,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.0, 85.0, 25.0, 25.0 ]
+					"patching_rect" : [ 9.0, 85.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -144,14 +144,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "yfade%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/yfade%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/yfade%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "yfade%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/yfade%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/yfade%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

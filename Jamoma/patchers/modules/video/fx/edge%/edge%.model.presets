@@ -1,0 +1,8 @@
+
+- preset "default"
+# "edit a comment"
+data/active 1
+data/bypass 0
+algorithm Sobel
+data/bypass 0
+thresh 0.240000

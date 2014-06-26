@@ -1,0 +1,22 @@
+
+
+- preset "default"
+# "edit a comment"
+data/active 1
+data/bypass 0
+edge/algorithm 3
+contraction/max/color 0 175 134
+centroid/color 17 153 253
+color 0
+contraction/color 0 101 175
+inverse 0
+contraction/on 1
+contraction/max/on 1
+centroid/on 1
+centroid/size/on 1
+slide 0.000000
+contraction/slide 0.000000
+data/smoothing 0.000000
+edge/threshold 0.000000
+threshold 0.400000
+trails 0

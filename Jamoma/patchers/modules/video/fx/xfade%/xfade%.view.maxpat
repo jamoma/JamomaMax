@@ -29,35 +29,6 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 11.0,
-					"id" : "obj-7",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 194.0, 72.0, 79.0, 18.0 ],
-					"text" : "clickjump $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"hint" : "clickjump attribute for X-fader",
-					"id" : "obj-8",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 194.0, 42.0, 20.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 67.0, 2.0, 16.0, 16.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"clickjump" : 0,
 					"defaultvalue" : 0.5,
 					"id" : "obj-9",
@@ -67,7 +38,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 194.0, 106.0, 159.0, 40.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 26.0, 81.0, 34.0 ],
+					"presentation_rect" : [ 4.0, 26.0, 136.0, 34.0 ],
 					"text" : "xfade",
 					"textpos" : [ 10.0, 10.0 ]
 				}
@@ -132,12 +103,12 @@
 					"id" : "obj-16",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 3.0, 1.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
-					"text" : "/noM..ess"
+					"text" : "/no_..ess"
 				}
 
 			}
@@ -167,24 +138,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-23", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 0 ]
 				}
 
 			}
