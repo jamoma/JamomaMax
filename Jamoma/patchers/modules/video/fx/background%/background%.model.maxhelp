@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 59.0, 164.0, 910.0, 533.0 ],
+		"rect" : [ 59.0, 164.0, 755.0, 544.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -36,7 +36,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 1150.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 755.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -62,11 +62,11 @@
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-2",
-					"linecount" : 9,
+					"linecount" : 5,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 692.0, 85.0, 206.0, 116.0 ],
+					"patching_rect" : [ 329.0, 411.0, 411.0, 67.0 ],
 					"text" : "Note: Background subtraction rarely works well if you have a camera with autofocus or other types of automatic adjustments (e.g. lighting). This is because the image will change when a person is moving in or out of the camera. Sometimes it is possible to turn off the automatic features in the control panel."
 				}
 
@@ -77,11 +77,11 @@
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-3",
-					"linecount" : 20,
+					"linecount" : 17,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 574.0, 250.0, 324.0, 249.0 ],
+					"patching_rect" : [ 329.0, 198.0, 420.0, 213.0 ],
 					"text" : "MODES\n\nSimple: is a simple background removal based on recording the background as a single image and subtracting this from the input image. \n\nSlide: here a sliding window is applied when recording the background image, which may help to create a better result if for example the light in room is changing. \n\rMask: is the most advanced algorithm implemented, and is based on finding a \"foreground mask\" which is used for subtraction. This technique results in a better foreground/background separation. Unfortunately, this technique is much more computationally expensive than the other techniques. \n\nAll the above techqniues should be followed by proper filtering, and here is it possible to use either a low-pass filter and possibly also a noise removal algorithm."
 				}
 
@@ -92,11 +92,11 @@
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-4",
-					"linecount" : 13,
+					"linecount" : 9,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 349.0, 85.0, 302.0, 164.0 ],
+					"patching_rect" : [ 329.0, 85.0, 411.0, 116.0 ],
 					"text" : "In computer vision it is common to talk about the \"background\" and \"foreground\" of an image. The foreground is typically an object or a person in the focus of the analysis, while the background may be considered \"noise\" that should be removed to enhance the foreground.\r\rBackground subtraction is still a hot research topic, and much work still has to be done before it is properly understood. While there are several techniques that work fairly well for static backgrounds, it is far more difficult to be able to subtract the background when it is changing over time. "
 				}
 
@@ -171,17 +171,6 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"id" : "obj-14",
-					"maxclass" : "jit.pwindow",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 320.0, 300.0, 240.0, 180.0 ]
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -218,16 +207,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 23.5, 159.0, 23.5, 159.0 ],
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 23.5, 163.0, 329.5, 163.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
