@@ -60,7 +60,7 @@
 					"outlettype" : [ "list" ],
 					"patching_rect" : [ 354.0, 363.0, 10.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 292.0, 21.0, 3.0, 46.0 ]
+					"presentation_rect" : [ 284.0, 24.0, 10.0, 213.0 ]
 				}
 
 			}
@@ -73,7 +73,7 @@
 					"outlettype" : [ "list" ],
 					"patching_rect" : [ 170.0, 366.0, 10.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 288.0, 21.0, 3.0, 46.0 ]
+					"presentation_rect" : [ 270.0, 24.0, 10.0, 213.0 ]
 				}
 
 			}
@@ -174,7 +174,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"title" : "/template~(view)",
+						"title" : "/template(view)",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -452,7 +452,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 40.0, 287.327393, 67.0, 20.0 ],
-									"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "grow", "close", "zoom", "nofloat", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 400, 200, 1100, 752, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
+									"save" : [ "#N", "thispatcher", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
 									"text" : "thispatcher"
 								}
 
@@ -755,7 +755,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ -1.0, 0.0, 300.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 245.0 ],
 					"text" : "/noModelAddress"
 				}
 
