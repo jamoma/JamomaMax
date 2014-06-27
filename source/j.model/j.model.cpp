@@ -100,6 +100,7 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
     
     if (aPatcher) {
         object_error((ObjectPtr)x, "can't have two models or views in the same patcher");
+        x->wrappedObject = NULL;
         return;
     }
 		
@@ -154,6 +155,9 @@ void WrappedContainerClass_free(TTPtr self)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTAddress    modelAddress, presetAddress;
     TTValue      v;
+    
+    if (!x->wrappedObject)
+        return;
     
     if (EXTRA->modelInfo) {
         
