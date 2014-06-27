@@ -216,12 +216,12 @@ void		ui_return_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_return_active(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 // prototype : text editor
-void		ui_edit(t_ui *x);
+void		ui_edit_state(t_ui *x);
 void		ui_edclose(t_ui *x, char **text, long size);
 void		ui_doedit(t_ui *x);
 
 // prototype: ui handling for preset features
-void		ui_preset_store_next(t_ui *x);
+t_symbol*	ui_preset_ask_name(t_ui *x);
 void		ui_preset_doread(t_ui *x);
 void		ui_preset_dowrite(t_ui *x);
 void		ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);

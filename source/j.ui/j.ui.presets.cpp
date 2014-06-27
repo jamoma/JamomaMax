@@ -16,23 +16,6 @@
 
 #include "j.ui.h"
 
-void ui_preset_store_next(t_ui *x)	
-{
-	long result;
-	char *text;
-	char buf[512];
-	
-	strcpy(buf, "chateau de preset");
-	
-	result = jdialog_showtext("Provide a Name for This Preset", buf, 0, &text);
-	if (result != 1)
-		return;
-	
-	ui_viewer_send(x, TTSymbol("preset:store"), TTSymbol(text));
-	
-	// TODO: do we not have to free text?
-}
-
 void ui_preset_doread(t_ui *x)
 {
 	char 			filename[MAX_FILENAME_CHARS];	// for storing the name of the file locally

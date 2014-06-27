@@ -39,7 +39,7 @@ void model_preset_amenities(TTPtr self)
 	
         EXTRA->presetManager->setAttributeValue(kTTSym_address, modelAdrs);
         
-        // if desired, load default modelClass.patcherContext.preset file preset
+        // if desired, load default modelClass.patcherContext.presets.txt file preset
         if (EXTRA->attr_load_default)
             defer_low(x, (method)model_preset_default, 0, 0, 0L);
     }
@@ -155,7 +155,7 @@ void model_preset_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 	
 	if (EXTRA->presetManager) {
 		
-		// Default XML File Name
+		// Default TEXT File Name
 		snprintf(filename, MAX_FILENAME_CHARS, "%s.%s.presets.txt", x->patcherClass.c_str(), x->patcherContext.c_str());
 		fullpath = jamoma_file_write((ObjectPtr)x, argc, argv, filename);
 		v.append(fullpath);
@@ -224,24 +224,24 @@ void model_preset_default(TTPtr self)
 	char 		fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
 	char		posixpath[MAX_PATH_CHARS];
 	t_atom		a;
-	SymbolPtr	xmlfile;
+	SymbolPtr	textfile;
 
 	if (x->patcherClass != kTTSymEmpty) {
 		
 		if (x->patcherContext == kTTSym_model)
-			jamoma_edit_filename(*ModelPresetFormat, x->patcherClass, &xmlfile);
+			jamoma_edit_filename(*ModelPresetFormat, x->patcherClass, &textfile);
 		
 		else if (x->patcherContext == kTTSym_view)
-			jamoma_edit_filename(*ViewPresetFormat, x->patcherClass, &xmlfile);
+			jamoma_edit_filename(*ViewPresetFormat, x->patcherClass, &textfile);
 		else
 			return object_error((ObjectPtr)x, "preset_default : can't get the context of the patcher");
 		
-		if (locatefile_extended((char*)xmlfile->s_name, &outvol, &outtype, &filetype, 1)) {
-			//object_warn((ObjectPtr)x, "preset_default : can't find %s file in the Max search path", xmlfile.data());
+		if (locatefile_extended((char*)textfile->s_name, &outvol, &outtype, &filetype, 1)) {
+			//object_warn((ObjectPtr)x, "preset_default : can't find %s file in the Max search path", textfile.data());
 			return;
 		}
 		
-		path_topathname(outvol, (char*)xmlfile->s_name, fullpath);
+		path_topathname(outvol, (char*)textfile->s_name, fullpath);
 		path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
 		
 		atom_setsym(&a, gensym(posixpath));
@@ -257,7 +257,7 @@ void model_preset_default(TTPtr self)
 			object_free(EXTRA->filewatcher);
 		}
 		
-		EXTRA->filewatcher = filewatcher_new((ObjectPtr)x, outvol, (char*)xmlfile->s_name);
+		EXTRA->filewatcher = filewatcher_new((ObjectPtr)x, outvol, (char*)textfile->s_name);
 		filewatcher_start(EXTRA->filewatcher);
 	}
 	else
