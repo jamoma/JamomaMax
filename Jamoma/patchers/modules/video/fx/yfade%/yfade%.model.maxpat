@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 242.0, 145.0, 765.0, 568.0 ],
+		"rect" : [ 242.0, 145.0, 524.0, 424.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -34,37 +34,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 553.0, 501.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-14",
-					"linecount" : 4,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 359.0, 236.0, 189.0, 55.0 ],
-					"text" : "j.message genframe @type none@description \"generate a video frame ( send a bag to the jitter object)\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-13",
-					"linecount" : 3,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 55.0, 59.0, 210.0, 43.0 ],
-					"text" : "j.message direct @type generic @description \"directly access to the jitter object\""
+					"patching_rect" : [ 317.0, 373.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -77,13 +47,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 55.0, 438.0, 130.0, 19.0 ],
+					"patching_rect" : [ 31.0, 310.0, 130.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-20",
@@ -92,7 +63,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 553.0, 92.0, 170.0, 43.0 ],
+					"patching_rect" : [ 317.0, 310.0, 170.0, 43.0 ],
 					"text" : "j.model @description \"crossfade a source to two outputs\"",
 					"varname" : "j.model"
 				}
@@ -100,8 +71,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -413,7 +385,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 42.0, 317.0, 272.0, 19.0 ],
+					"patching_rect" : [ 18.0, 189.0, 317.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -438,7 +410,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 191.0, 501.0, 25.0, 25.0 ]
+					"patching_rect" : [ 167.0, 373.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -451,7 +423,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 191.0, 359.0, 113.0, 19.0 ],
+					"patching_rect" : [ 167.0, 231.0, 113.0, 19.0 ],
 					"text" : "jit.op @op * @val 1."
 				}
 
@@ -465,7 +437,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 149.0, 285.0, 30.0, 19.0 ],
+					"patching_rect" : [ 125.0, 157.0, 30.0, 19.0 ],
 					"text" : "!- 1."
 				}
 
@@ -478,7 +450,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 295.0, 25.0, 25.0, 25.0 ]
+					"patching_rect" : [ 272.0, 17.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -491,7 +463,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 81.0, 396.0, 87.0, 19.0 ],
+					"patching_rect" : [ 57.0, 268.0, 87.0, 19.0 ],
 					"text" : "VIDEO OUTPUT"
 				}
 
@@ -503,7 +475,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 55.0, 501.0, 25.0, 25.0 ]
+					"patching_rect" : [ 31.0, 373.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -516,7 +488,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 55.0, 359.0, 113.0, 19.0 ],
+					"patching_rect" : [ 31.0, 231.0, 113.0, 19.0 ],
 					"text" : "jit.op @op * @val 1."
 				}
 
@@ -530,22 +502,23 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 191.0, 438.0, 130.0, 19.0 ],
+					"patching_rect" : [ 167.0, 310.0, 130.0, 19.0 ],
 					"text" : "j.out 2 @type jit_matrix"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1010",
-					"linecount" : 7,
+					"linecount" : 6,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 136.0, 145.0, 133.0, 92.0 ],
+					"patching_rect" : [ 112.0, 17.0, 136.0, 79.0 ],
 					"text" : "j.parameter yfade @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 1. @clipmode both @description \"Crossfade switch\"",
 					"varname" : "yfade"
 				}
@@ -560,7 +533,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 295.0, 118.0, 78.0, 19.0 ],
+					"patching_rect" : [ 272.0, 52.0, 78.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
@@ -580,7 +553,7 @@
 					"destination" : [ "obj-1002", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 304.5, 387.0, 200.5, 387.0 ],
+					"midpoints" : [ 325.5, 259.0, 176.5, 259.0 ],
 					"source" : [ "obj-1", 2 ]
 				}
 
@@ -590,7 +563,7 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 51.5, 384.0, 64.5, 384.0 ],
+					"midpoints" : [ 27.5, 256.0, 40.5, 256.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -669,25 +642,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 64.5, 301.0, 64.5, 301.0 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -737,10 +691,6 @@
 			}
 , 			{
 				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]

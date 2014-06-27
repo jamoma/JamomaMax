@@ -31,34 +31,6 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"id" : "obj-21",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 513.0, 433.714294, 64.0, 19.0 ],
-					"text" : "prepend hi"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-20",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 513.0, 409.714294, 64.0, 19.0 ],
-					"text" : "prepend lo"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-19",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -92,13 +64,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 417.0, 285.714294, 80.0, 19.0 ],
+					"patching_rect" : [ 366.571411, 285.714294, 80.0, 19.0 ],
 					"text" : "prepend gang"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-18",
@@ -121,34 +94,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 313.857147, 456.714294, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 69.5, 49.0, 539.0, 19.0 ],
-					"text" : "j.message genframe @type none@description \"generate a video frame (send a bang to the jitter object)\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-10",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 27.0, 22.0, 419.0, 19.0 ],
-					"text" : "j.message direct @type generic @description \"directly access to the jitter object\""
 				}
 
 			}
@@ -297,7 +242,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 361.285706, 246.714294, 48.0, 19.0 ],
+					"patching_rect" : [ 310.857117, 246.714294, 48.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -324,7 +269,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 305.0, 271.714294, 68.0, 17.0 ],
+					"patching_rect" : [ 254.571426, 271.714294, 68.0, 17.0 ],
 					"text" : "y_range $1"
 				}
 
@@ -338,7 +283,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 249.857147, 246.714294, 68.0, 17.0 ],
+					"patching_rect" : [ 199.428574, 246.714294, 68.0, 17.0 ],
 					"text" : "x_range $1"
 				}
 
@@ -352,7 +297,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 193.0, 271.714294, 60.0, 17.0 ],
+					"patching_rect" : [ 142.571426, 271.714294, 60.0, 17.0 ],
 					"text" : "y_step $1"
 				}
 
@@ -366,23 +311,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 138.428574, 246.714294, 60.0, 17.0 ],
+					"patching_rect" : [ 88.0, 246.714294, 60.0, 17.0 ],
 					"text" : "x_step $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-3",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 52.0, 329.714294, 45.0, 31.0 ],
-					"text" : "VIDEO INPUT"
 				}
 
 			}
@@ -395,20 +325,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 27.0, 329.714294, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-6",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 118.0, 456.714294, 89.0, 19.0 ],
-					"text" : "VIDEO OUTPUT"
 				}
 
 			}
@@ -467,6 +383,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1005",
@@ -475,7 +392,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 361.285706, 215.714294, 440.0, 31.0 ],
+					"patching_rect" : [ 310.857117, 215.714294, 440.0, 31.0 ],
 					"text" : "j.parameter colormode @type string @description \"colormode determines how jit.plur handles values that exceed the hi and lo values. wrap | clip | bounce\"",
 					"varname" : "colormode"
 				}
@@ -483,6 +400,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1006",
@@ -498,6 +416,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1007",
@@ -514,6 +433,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1026",
@@ -522,7 +442,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 417.0, 250.714294, 439.0, 31.0 ],
+					"patching_rect" : [ 366.571411, 250.714294, 439.0, 31.0 ],
 					"text" : "j.parameter gang @type boolean @description \"when gang is on (default) x/range and y/range values are ignored - using the x/step  and y/step values instead.\"",
 					"varname" : "gang"
 				}
@@ -530,6 +450,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1027",
@@ -538,7 +459,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 138.428574, 75.0, 476.0, 31.0 ],
+					"patching_rect" : [ 88.0, 75.0, 476.0, 31.0 ],
 					"text" : "j.parameter step/x @type integer @ramp/drive Max @description \"x/step and y/step represent the distance between the 'corners' between which the 'interpolation' takes place.\"",
 					"varname" : "x_step"
 				}
@@ -546,6 +467,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1028",
@@ -554,7 +476,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 193.0, 111.714294, 476.0, 31.0 ],
+					"patching_rect" : [ 142.571426, 111.714294, 476.0, 31.0 ],
 					"text" : "j.parameter step/y @type integer @ramp/drive Max @description \"x/step and y/step represent the distance between the 'corners' between which the 'interpolation' takes place.\"",
 					"varname" : "y_step"
 				}
@@ -562,6 +484,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1031",
@@ -570,7 +493,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 305.0, 179.714294, 480.0, 31.0 ],
+					"patching_rect" : [ 254.571426, 179.714294, 480.0, 31.0 ],
 					"text" : "j.parameter range/y @type integer @ramp/drive Max @description \"x/range and y/range represent the distance between the actual points used for the 'interpolation' calculation.\"",
 					"varname" : "y_range"
 				}
@@ -578,6 +501,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1038",
@@ -586,7 +510,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 249.857147, 146.0, 494.0, 31.0 ],
+					"patching_rect" : [ 199.428574, 146.0, 494.0, 31.0 ],
 					"text" : "j.parameter range/x @type integer @ramp/drive Max @description \"x/range and y/range range represent the distance between the actual points used for the 'interpolation' calculation.\"",
 					"varname" : "x_range"
 				}
@@ -594,16 +518,6 @@
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 36.5, 318.5, 97.5, 318.5 ],
-					"source" : [ "obj-10", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
@@ -699,7 +613,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 147.928574, 308.714294, 97.5, 308.714294 ],
+					"midpoints" : [ 97.5, 308.714294, 97.5, 308.714294 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -709,7 +623,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 202.5, 310.214294, 97.5, 310.214294 ],
+					"midpoints" : [ 152.071426, 310.214294, 97.5, 310.214294 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -719,7 +633,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 259.357147, 307.714294, 97.5, 307.714294 ],
+					"midpoints" : [ 208.928574, 307.714294, 97.5, 307.714294 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -729,7 +643,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 314.5, 309.214294, 97.5, 309.214294 ],
+					"midpoints" : [ 264.071411, 309.214294, 97.5, 309.214294 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -739,7 +653,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 426.5, 308.714294, 97.5, 308.714294 ],
+					"midpoints" : [ 376.071411, 308.714294, 97.5, 308.714294 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -778,7 +692,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 370.785706, 308.714294, 97.5, 308.714294 ],
+					"midpoints" : [ 320.357117, 308.714294, 97.5, 308.714294 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -803,16 +717,6 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 79.0, 309.214294, 97.5, 309.214294 ],
-					"source" : [ "obj-9", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.parameter.mxo",
@@ -824,10 +728,6 @@
 			}
 , 			{
 				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
