@@ -87,7 +87,6 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
     
     class_addmethod(c, (method)ui_return_model_content,             "return_model_content",             A_CANT, 0);
 	
-	class_addmethod(c, (method)ui_return_metersdefeated,			"return_metersdefeated",			A_CANT, 0);
 	class_addmethod(c, (method)ui_return_mute,						"return_mute",						A_CANT, 0);
 	class_addmethod(c, (method)ui_return_bypass,					"return_bypass",					A_CANT, 0);
 	class_addmethod(c, (method)ui_return_mix,						"return_mix",						A_CANT, 0);

@@ -207,7 +207,6 @@ void		ui_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr
 void		ui_return_model_init(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
-void		ui_return_metersdefeated(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_return_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_return_bypass(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		ui_return_mix(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
@@ -221,9 +220,6 @@ void		ui_edclose(t_ui *x, char **text, long size);
 void		ui_doedit(t_ui *x);
 
 // prototype: ui handling for preset features
-t_symbol*	ui_preset_ask_name(t_ui *x);
-void		ui_preset_doread(t_ui *x);
-void		ui_preset_dowrite(t_ui *x);
 void		ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 
 #endif // __J_UI__
