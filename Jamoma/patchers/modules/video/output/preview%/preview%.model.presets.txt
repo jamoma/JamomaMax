@@ -7,6 +7,6 @@ window 1
 window_position 891.000000 100.000000
 window_size 320 240
 monitoredModel /brcosa%
-in|out 0
-in|out_instance 0
+in|out out
+in|out_instance 1
 colormode 0
