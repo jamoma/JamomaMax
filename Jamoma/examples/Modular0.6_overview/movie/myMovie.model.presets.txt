@@ -1,17 +1,17 @@
 - preset "default"
 # "edit a comment"
-/myMovie_help/myMovie/file/path wheel.mov
-/myMovie_help/myMovie/play 0
-/myMovie_help/myMovie/data/active 1
-/myMovie_help/myMovie/rate 1.000000
+file/path wheel.mov
+play 0
+data/active 1
+rate 1.000000
 
 
 - preset "another preset"
 # "edit a comment"
-/myMovie_help/myMovie/file/path bball.mov
-/myMovie_help/myMovie/play 1
-/myMovie_help/myMovie/data/active 1
-/myMovie_help/myMovie/rate 1.000000
+file/path bball.mov
+play 1
+data/active 1
+rate 1.000000
 
 
 - preset "the last preset"
