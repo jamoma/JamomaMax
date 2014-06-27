@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 36.0, 99.0, 1404.0, 860.0 ],
+		"rect" : [ 493.0, 144.0, 1404.0, 860.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -163,6 +163,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-38",
 					"maxclass" : "jit.pwindow",
 					"numinlets" : 1,
@@ -818,7 +819,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 49.5, 341.818176, 74.0, 31.0 ],
-					"text" : "window_size 320 240"
+					"text" : "in|out_instance 0"
 				}
 
 			}
@@ -832,7 +833,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 959.0, 462.409119, 115.0, 20.0 ],
-					"text" : "j.receive data/mute"
+					"text" : "j.receive data/active"
 				}
 
 			}
@@ -847,20 +848,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 581.909058, 608.318176, 59.0, 18.0 ],
 					"text" : "active $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-18",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 959.0, 487.409119, 35.0, 20.0 ],
-					"text" : "== 0"
 				}
 
 			}
@@ -976,7 +963,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 428.727264, 751.318176, 133.999939, 33.0 ],
+					"patching_rect" : [ 428.727264, 751.318176, 149.0, 33.0 ],
 					"text" : "jit.window #1 @visible 0"
 				}
 
@@ -1295,14 +1282,14 @@
 					"fontsize" : 12.0,
 					"hint" : "Choose what model to monitor",
 					"id" : "obj-5",
-					"items" : [ "cueManager.1", ",", "cue_script_help", ",", "deg", ",", "degrade~", ",", "filter_help", ",", "in", ",", "in/balance", ",", "input_help", ",", "input_help/balance", ",", "mouse", ",", "out", ",", "out/balance", ",", "out/limiter", ",", "out/record", ",", "out/saturation", ",", "output_help", ",", "output_help/balance", ",", "output_help/limiter", ",", "output_help/record", ",", "output_help/saturation", ",", "preview%", ",", "track", ",", "track/channel.A", ",", "track/channel.B" ],
+					"items" : [ "brcosa%", ",", "input%", ",", "input%/grab", ",", "input%/movie", ",", "input%/noise", ",", "preview%_help" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 425.227234, 120.0, 100.0, 20.0 ],
-					"prefix" : "Servo:/",
+					"prefix" : "work:/",
 					"presentation" : 1,
 					"presentation_rect" : [ 8.0, 26.363636, 156.545456, 20.0 ]
 				}
@@ -1360,7 +1347,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "/preview%"
+					"text" : "/preview%_help"
 				}
 
 			}
@@ -1534,15 +1521,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-17", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-110", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-18", 0 ]
 				}
 
 			}
@@ -1857,7 +1835,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
+					"destination" : [ "obj-110", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-56", 0 ]
@@ -2145,42 +2123,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/list2parameter",
-				"patcherrelativepath" : "../../../components/list2parameter",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.namespace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
