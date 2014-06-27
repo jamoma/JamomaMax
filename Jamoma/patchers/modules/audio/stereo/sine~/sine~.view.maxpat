@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -76,11 +76,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 395.0, 55.0, 80.0, 4.0 ],
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 395.0, 55.0, 4.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 152.0, 8.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 290.0, 23.5, 4.0, 41.0 ]
 				}
 
 			}
@@ -181,7 +180,7 @@
 					"patching_rect" : [ 395.0, 80.0, 144.0, 20.0 ],
 					"pattrmode" : 1,
 					"presentation" : 1,
-					"presentation_rect" : [ 179.0, 31.0, 110.0, 20.0 ],
+					"presentation_rect" : [ 180.0, 31.0, 77.0, 20.0 ],
 					"varname" : "Mode"
 				}
 
@@ -214,11 +213,11 @@
 					"id" : "obj-21",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -323,10 +322,6 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{

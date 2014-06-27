@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 455.0, 115.0, 1225.0, 667.0 ],
+		"rect" : [ 32.0, 338.0, 1225.0, 667.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,7 +39,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 515.0, 239.0, 50.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 140.0, 25.0, 45.0, 20.0 ]
+					"presentation_rect" : [ 131.0, 25.0, 45.0, 20.0 ]
 				}
 
 			}
@@ -54,8 +54,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 185.0, 45.0, 110.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 185.0, 45.0, 110.0, 20.0 ],
-					"text" : "Fb. delay gain (dB)"
+					"presentation_rect" : [ 176.0, 45.0, 86.0, 20.0 ],
+					"text" : "Fb. delay gain"
 				}
 
 			}
@@ -70,8 +70,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 185.0, 25.0, 112.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 185.0, 25.0, 112.0, 20.0 ],
-					"text" : "Fb. delay time (ms)"
+					"presentation_rect" : [ 176.0, 25.0, 89.0, 20.0 ],
+					"text" : "Fb. delay time "
 				}
 
 			}
@@ -86,8 +86,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 50.0, 45.0, 88.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 50.0, 45.0, 88.0, 20.0 ],
-					"text" : "Freq. shift (Hz)"
+					"presentation_rect" : [ 50.0, 45.0, 67.0, 20.0 ],
+					"text" : "Freq. shift "
 				}
 
 			}
@@ -102,7 +102,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 50.0, 25.0, 79.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 50.0, 25.0, 79.0, 20.0 ],
+					"presentation_rect" : [ 50.0, 25.0, 63.0, 20.0 ],
 					"text" : "Pitch shift"
 				}
 
@@ -154,7 +154,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 515.0, 323.0, 41.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 140.0, 45.0, 45.0, 20.0 ],
+					"presentation_rect" : [ 131.0, 45.0, 45.0, 20.0 ],
 					"triscale" : 0.9,
 					"varname" : "Feedback"
 				}
@@ -228,7 +228,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 509.5, 502.0, 141.0, 20.0 ],
+					"patching_rect" : [ 525.5, 500.0, 141.0, 20.0 ],
 					"text" : "j.receive~ out.2"
 				}
 
@@ -254,11 +254,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 509.5, 527.0, 80.0, 4.0 ],
+					"patching_rect" : [ 533.0, 526.0, 4.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 135.0, 10.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 290.0, 25.0, 4.0, 40.0 ]
 				}
 
 			}
@@ -269,11 +268,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 509.5, 482.0, 80.0, 4.0 ],
+					"patching_rect" : [ 509.5, 482.0, 4.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 135.0, 5.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 285.0, 25.0, 4.0, 40.0 ]
 				}
 
 			}
@@ -1072,7 +1070,7 @@
 					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/no_model_address"
 				}
 
 			}

@@ -4,11 +4,12 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 84.0, 185.0, 1596.0, 730.0 ],
+		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -29,6 +30,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "range of values above and below the zero line to display.",
 					"id" : "obj-40",
 					"maxclass" : "live.dial",
 					"numinlets" : 1,
@@ -37,11 +39,11 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 808.5, 113.0, 44.0, 47.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 262.0, 90.5, 44.0, 47.0 ],
+					"presentation_rect" : [ 12.0, 121.0, 44.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "Gain",
-							"parameter_shortname" : "Gain",
+							"parameter_longname" : " ",
+							"parameter_shortname" : " ",
 							"parameter_type" : 0,
 							"parameter_mmin" : -36.0,
 							"parameter_mmax" : 36.0,
@@ -98,7 +100,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 372.0, 20.0, 158.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 83.0, 0.0, 78.0, 19.0 ],
+					"presentation_rect" : [ 74.0, 21.0, 78.0, 19.0 ],
 					"text" : "Refresh list"
 				}
 
@@ -145,7 +147,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -351,21 +353,21 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Choose what model to monitor",
+					"annotation" : "Name of the model that is to be monitored.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"hint" : "Choose what model to monitor",
 					"id" : "obj-5",
-					"items" : "<empty>",
+					"items" : [ "degrade~", ",", "input~", ",", "input~/balance", ",", "output~", ",", "output~/balance", ",", "output~/limiter", ",", "output~/record", ",", "output~/saturation", ",", "saturation~", ",", "scope~" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 372.0, 149.0, 100.0, 20.0 ],
-					"prefix" : "Macintosh HD:/",
+					"prefix" : "Mac HD:/",
 					"presentation" : 1,
-					"presentation_rect" : [ 162.0, 0.0, 138.0, 20.0 ]
+					"presentation_rect" : [ 155.0, 21.0, 142.0, 20.0 ]
 				}
 
 			}
@@ -471,7 +473,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -723,7 +725,7 @@
 					"patching_rect" : [ 1.0, 22.0, 54.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 0.0, 22.0, 54.0, 33.0 ],
+					"presentation_rect" : [ 8.0, 19.0, 54.0, 33.0 ],
 					"text" : "buffers per pixel"
 				}
 
@@ -741,7 +743,7 @@
 					"patching_rect" : [ 1.0, 74.0, 60.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 0.0, 74.0, 60.0, 33.0 ],
+					"presentation_rect" : [ 8.0, 71.0, 60.0, 33.0 ],
 					"text" : "samples per buffer"
 				}
 
@@ -749,16 +751,15 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"bufsize" : 109,
-					"calccount" : 16,
+					"calccount" : 128,
 					"id" : "obj-15",
 					"maxclass" : "scope~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 361.0, 476.5, 210.0, 112.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 56.0, 21.0, 210.0, 112.0 ],
-					"range" : [ -28.888889, 28.888889 ],
+					"presentation_rect" : [ 74.0, 41.5, 223.0, 131.0 ],
+					"range" : [ -1.0, 1.0 ],
 					"rounded" : 15
 				}
 
@@ -804,6 +805,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "samples per buffer, control the scope display",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-13",
@@ -816,7 +818,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1278.5, 131.0, 43.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 104.0, 43.0, 20.0 ],
+					"presentation_rect" : [ 12.0, 101.0, 43.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9
 				}
@@ -824,6 +826,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "buffers per pixel, control the scope display",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-14",
@@ -836,7 +839,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1032.0, 131.0, 44.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 56.0, 44.0, 20.0 ],
+					"presentation_rect" : [ 12.0, 53.0, 44.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9
 				}
@@ -849,12 +852,12 @@
 					"id" : "obj-25",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "/noModelAddress"
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
+					"text" : "/scope~"
 				}
 
 			}
@@ -1136,42 +1139,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"parameters" : 		{
-			"obj-40" : [ "Gain", "Gain", 0 ]
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../../components/thru",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.dataspace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.namespace.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
