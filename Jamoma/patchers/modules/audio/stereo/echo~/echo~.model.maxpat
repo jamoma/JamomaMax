@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 0.0, 44.0, 955.0, 806.0 ],
@@ -41,8 +41,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -223,6 +223,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "stereo 2nd order iir filter based on biquad~",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-7",
@@ -237,6 +238,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "A stereo limiter",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-6",
@@ -252,42 +254,42 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 11.0,
+					"fontsize" : 12.0,
 					"id" : "obj-37",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 303.0, 67.0, 71.0, 19.0 ],
-					"text" : "j.in~ 2"
+					"patching_rect" : [ 303.0, 67.0, 46.0, 20.0 ],
+					"text" : "j.in~ R"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 11.0,
+					"fontsize" : 12.0,
 					"id" : "obj-38",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 183.5, 730.0, 79.0, 19.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 192.5, 730.0, 53.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 11.0,
+					"fontsize" : 12.0,
 					"id" : "obj-39",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 83.0, 730.0, 79.0, 19.0 ],
-					"text" : "j.out~ 1"
+					"patching_rect" : [ 83.0, 730.0, 51.0, 20.0 ],
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -305,28 +307,28 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 11.0,
+					"fontsize" : 12.0,
 					"id" : "obj-42",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 192.5, 67.0, 71.0, 19.0 ],
-					"text" : "j.in~ 1"
+					"patching_rect" : [ 192.5, 67.0, 44.0, 20.0 ],
+					"text" : "j.in~ L"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 11.0,
+					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 567.785706, 701.5, 161.0, 31.0 ],
+					"patching_rect" : [ 567.785706, 701.5, 134.0, 33.0 ],
 					"text" : "j.model @description \"Stereo echo module.\""
 				}
 
@@ -372,7 +374,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 567.785706, 399.0, 153.0, 154.0 ],
+					"patching_rect" : [ 567.785706, 399.0, 151.0, 154.0 ],
 					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range -70. 0. @clipmode both @description Feedback. @dataspace gain @dataspace/unit db @description \"Feedback gain in dB.\"",
 					"varname" : "feedback"
 				}
@@ -433,7 +435,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "list" ],
-					"patching_rect" : [ 192.5, 660.0, 129.5, 20.0 ],
+					"patching_rect" : [ 230.5, 660.0, 130.0, 20.0 ],
 					"text" : "matrix~ 2 2"
 				}
 
@@ -452,8 +454,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 566.0, 91.0, 402.0, 361.0 ],
@@ -684,7 +686,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 303.0, 625.0, 34.0, 20.0 ],
+					"patching_rect" : [ 341.0, 625.0, 34.0, 20.0 ],
 					"text" : "*~ 0."
 				}
 
@@ -698,7 +700,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 192.5, 625.0, 34.0, 20.0 ],
+					"patching_rect" : [ 230.5, 625.0, 34.0, 20.0 ],
 					"text" : "*~ 0."
 				}
 
@@ -722,7 +724,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 183.5, 767.0, 25.0, 25.0 ]
+					"patching_rect" : [ 192.5, 767.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -1096,7 +1098,7 @@
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 257.25, 703.0, 40.75, 703.0, 40.75, 247.0, 312.5, 247.0 ],
+					"midpoints" : [ 295.5, 703.0, 40.75, 703.0, 40.75, 247.0, 312.5, 247.0 ],
 					"source" : [ "obj-9", 1 ]
 				}
 
@@ -1106,7 +1108,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 202.0, 697.0, 48.5, 697.0, 48.5, 256.0, 202.0, 256.0 ],
+					"midpoints" : [ 240.0, 697.0, 48.5, 697.0, 48.5, 256.0, 202.0, 256.0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -1114,21 +1116,21 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
 				"patcherrelativepath" : "../limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
 				"patcherrelativepath" : "../limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "filter~.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filter~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/filter~",
 				"patcherrelativepath" : "../filter~",
 				"type" : "JSON",
 				"implicit" : 1

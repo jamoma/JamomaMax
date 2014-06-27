@@ -1,18 +1,22 @@
-
-
+#################################
 - preset "default"
-# "edit a comment"
-samplerateRatio"1.000000
-bitdepth"24
-audio/gain"100.000000
-audio/mix"100.000000
+- description "edit a description"
+#################################
+
+samplerateRatio 1.000000
+bitdepth 24
+audio/gain 100.000000
+audio/mix 100.000000
  
 
+#################################
 - preset "crunchy"
-# "edit a comment"
-samplerateRatio"0.050000
-bitdepth"5
-audio/gain"100.000000
-audio/mix"100.000000
+- description "edit a description"
+#################################
+
+samplerateRatio 0.050000
+bitdepth 5
+audio/gain 100.000000
+audio/mix 100.000000
  
 

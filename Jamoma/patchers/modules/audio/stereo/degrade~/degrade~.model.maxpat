@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 21.0, 44.0, 744.0, 397.0 ],
@@ -36,8 +36,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 141.0, 44.0, 53.0, 19.0 ],
-					"text" : "j.in~ 2"
+					"patching_rect" : [ 141.0, 44.0, 42.0, 19.0 ],
+					"text" : "j.in~ R"
 				}
 
 			}
@@ -50,8 +50,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 141.0, 336.0, 53.0, 19.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 141.0, 336.0, 49.0, 19.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -64,8 +64,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 61.0, 336.0, 48.0, 19.0 ],
-					"text" : "j.out~ 1"
+					"patching_rect" : [ 61.0, 336.0, 47.0, 19.0 ],
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -98,7 +98,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 141.0, 13.0, 25.0, 25.0 ]
 				}
 
@@ -149,8 +149,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 61.0, 44.0, 48.0, 19.0 ],
-					"text" : "j.in~ 1"
+					"patching_rect" : [ 61.0, 44.0, 40.0, 19.0 ],
+					"text" : "j.in~ L"
 				}
 
 			}
@@ -334,6 +334,23 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
