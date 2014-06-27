@@ -1572,7 +1572,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 347.0, 53.0, 393.0, 31.0 ],
-					"text" : "j.parameter dim @type array @range 1 1000 @clipmode low @ramp/drive none @dataspace xy @description \"Image size\"",
+					"text" : "j.parameter dim @type array @range 1 1000 @clipmode low @ramp/drive none  @description \"Image size\"",
 					"varname" : "dim"
 				}
 

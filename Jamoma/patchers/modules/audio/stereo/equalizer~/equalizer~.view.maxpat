@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 4,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 242.0, 349.0, 713.0, 387.0 ],
+		"rect" : [ 730.0, 333.0, 713.0, 387.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -34,11 +34,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 163.0, 242.0, 80.0, 10.0 ],
+					"patching_rect" : [ 163.0, 242.0, 10.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.0, 10.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 291.0, 41.0, 4.0, 93.0 ]
 				}
 
 			}
@@ -48,11 +47,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 158.0, 199.0, 80.0, 10.0 ],
+					"patching_rect" : [ 158.0, 199.0, 10.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.0, 5.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 286.0, 41.0, 4.0, 93.0 ]
 				}
 
 			}
@@ -84,7 +82,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -796,7 +794,7 @@
 					"patching_rect" : [ 573.0, 330.0, 93.0, 20.0 ],
 					"pattrmode" : 1,
 					"presentation" : 1,
-					"presentation_rect" : [ 203.0, 21.0, 93.0, 20.0 ],
+					"presentation_rect" : [ 163.0, 20.0, 93.0, 20.0 ],
 					"varname" : "mode[1]"
 				}
 
@@ -821,7 +819,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 382.0, 178.0, 284.0, 93.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 41.0, 284.0, 93.0 ],
+					"presentation_rect" : [ 10.0, 41.0, 271.0, 93.0 ],
 					"setfilter" : [ 4, 7, 1, 0, 0, 5652.589844, 0.539379, 1.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3, 5, 1, 0, 0, 2000.0, 0.707946, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2, 5, 1, 0, 0, 700.0, 1.412538, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 5, 1, 0, 0, 250.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 6, 1, 0, 0, 72.572098, 0.86863, 1.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
 					"varname" : "filter"
 				}
@@ -909,7 +907,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 135.0, 22.0, 65.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 141.0, 23.0, 67.0, 20.0 ],
+					"presentation_rect" : [ 96.0, 22.0, 67.0, 20.0 ],
 					"text" : "filter type :"
 				}
 
@@ -929,7 +927,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 407.0, 93.0, 35.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 104.0, 23.0, 35.0, 20.0 ],
+					"presentation_rect" : [ 55.0, 20.0, 35.0, 20.0 ],
 					"triscale" : 0.9,
 					"varname" : "voices"
 				}
@@ -960,8 +958,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 10.0, 22.0, 106.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.0, 23.0, 106.0, 20.0 ],
-					"text" : "number of bands :"
+					"presentation_rect" : [ 5.0, 20.0, 50.0, 20.0 ],
+					"text" : "bands :"
 				}
 
 			}
@@ -1009,12 +1007,12 @@
 					"id" : "obj-42",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "/track.2/eq"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -1197,6 +1195,41 @@
 					"source" : [ "obj-51", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "equalizer~views.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

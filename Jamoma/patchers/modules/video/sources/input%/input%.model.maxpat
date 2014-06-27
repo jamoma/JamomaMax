@@ -65,7 +65,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 493.0, 211.812744, 342.0, 33.0 ],
-					"text" : "j.parameter dim @type array @dataspace xy @description \"dimension of the video stream\""
+					"text" : "j.parameter dim @type array  @description \"dimension of the video stream\""
 				}
 
 			}

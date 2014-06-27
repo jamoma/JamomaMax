@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 76.0, 283.0, 1232.0, 422.0 ],
+		"rect" : [ 76.0, 283.0, 1124.0, 406.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -37,8 +37,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 11.5, 19.0, 590.0, 20.0 ],
-					"text" : "j.parameter dim @type array @description \"Resolution of captured image\" @dataspace xy",
+					"patching_rect" : [ 11.5, 9.0, 404.0, 20.0 ],
+					"text" : "j.parameter dim @type array @description \"Resolution of captured image\"",
 					"varname" : "camera/size"
 				}
 
@@ -52,7 +52,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 11.5, 74.0, 79.0, 20.0 ],
+					"patching_rect" : [ 11.5, 64.0, 79.0, 20.0 ],
 					"text" : "prepend dim"
 				}
 
@@ -66,7 +66,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 986.0, 187.0, 33.0, 19.0 ],
+					"patching_rect" : [ 888.0, 172.0, 33.0, 19.0 ],
 					"text" : "j.init"
 				}
 
@@ -80,7 +80,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 910.0, 194.0, 50.0, 17.0 ],
+					"patching_rect" : [ 812.0, 179.0, 50.0, 17.0 ],
 					"text" : "stop"
 				}
 
@@ -94,7 +94,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 910.0, 231.0, 50.0, 17.0 ],
+					"patching_rect" : [ 812.0, 216.0, 50.0, 17.0 ],
 					"text" : "write"
 				}
 
@@ -108,7 +108,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 806.0, 173.0, 96.0, 19.0 ],
+					"patching_rect" : [ 708.0, 158.0, 96.0, 19.0 ],
 					"text" : "route planecount"
 				}
 
@@ -123,7 +123,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 940.0, 379.0, 161.0, 19.0 ],
+					"patching_rect" : [ 842.0, 364.0, 161.0, 19.0 ],
 					"text" : "j.return codeclist @type array"
 				}
 
@@ -137,7 +137,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 515.0, 248.0, 85.0, 19.0 ],
+					"patching_rect" : [ 515.0, 233.0, 85.0, 19.0 ],
 					"text" : "prepend interp"
 				}
 
@@ -153,7 +153,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 976.0, 68.0, 161.0, 31.0 ],
+					"patching_rect" : [ 878.0, 53.0, 161.0, 31.0 ],
 					"text" : "j.model @description \"Record video to QuickTime movie.\""
 				}
 
@@ -165,7 +165,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 976.0, 105.0, 25.0, 25.0 ]
+					"patching_rect" : [ 878.0, 90.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -178,7 +178,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 940.0, 313.0, 84.0, 19.0 ],
+					"patching_rect" : [ 842.0, 298.0, 84.0, 19.0 ],
 					"text" : "route codeclist"
 				}
 
@@ -192,7 +192,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 986.0, 220.0, 71.0, 17.0 ],
+					"patching_rect" : [ 888.0, 205.0, 71.0, 17.0 ],
 					"text" : "getcodeclist"
 				}
 
@@ -206,7 +206,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 830.0, 213.0, 43.0, 17.0 ],
+					"patching_rect" : [ 732.0, 198.0, 43.0, 17.0 ],
 					"text" : "getdim"
 				}
 
@@ -220,7 +220,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 806.0, 147.0, 121.0, 19.0 ],
+					"patching_rect" : [ 708.0, 132.0, 121.0, 19.0 ],
 					"text" : "j.passmatrixinfo%"
 				}
 
@@ -234,7 +234,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 106.0, 213.0, 52.0, 19.0 ],
+					"patching_rect" : [ 106.0, 198.0, 52.0, 19.0 ],
 					"text" : "zl slice 1"
 				}
 
@@ -410,7 +410,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 183.0, 157.0, 60.0, 21.0 ],
+					"patching_rect" : [ 183.0, 142.0, 60.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -439,7 +439,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1005.0, 338.0, 210.0, 31.0 ],
+					"patching_rect" : [ 907.0, 323.0, 210.0, 31.0 ],
 					"text" : "j.return dump @description \"Messages dumped from jit.qt.record.\""
 				}
 
@@ -453,7 +453,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 407.5, 216.0, 97.0, 19.0 ],
+					"patching_rect" : [ 407.5, 201.0, 97.0, 19.0 ],
 					"text" : "prepend realtime"
 				}
 
@@ -467,7 +467,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 183.0, 213.0, 78.0, 19.0 ],
+					"patching_rect" : [ 183.0, 198.0, 78.0, 19.0 ],
 					"text" : "zl join"
 				}
 
@@ -481,7 +481,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 106.0, 74.0, 77.0, 19.0 ],
+					"patching_rect" : [ 106.0, 64.0, 77.0, 19.0 ],
 					"text" : "prepend stop"
 				}
 
@@ -495,7 +495,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 242.0, 181.0, 129.0, 19.0 ],
+					"patching_rect" : [ 242.0, 166.0, 129.0, 19.0 ],
 					"text" : "pak 30. photojpeg high"
 				}
 
@@ -508,7 +508,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 806.0, 74.0, 25.0, 25.0 ]
+					"patching_rect" : [ 708.0, 59.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -521,7 +521,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 719.0, 350.0, 87.0, 19.0 ],
+					"patching_rect" : [ 621.0, 335.0, 87.0, 19.0 ],
 					"text" : "VIDEO OUTPUT"
 				}
 
@@ -533,7 +533,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 806.0, 349.0, 25.0, 25.0 ]
+					"patching_rect" : [ 708.0, 334.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -546,7 +546,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 806.0, 284.0, 153.0, 19.0 ],
+					"patching_rect" : [ 708.0, 269.0, 153.0, 19.0 ],
 					"text" : "jit.qt.record"
 				}
 
@@ -560,7 +560,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 806.0, 313.0, 131.0, 19.0 ],
+					"patching_rect" : [ 708.0, 298.0, 131.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -574,7 +574,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 806.0, 121.0, 57.0, 19.0 ],
+					"patching_rect" : [ 708.0, 106.0, 57.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
@@ -590,7 +590,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 407.5, 181.0, 329.0, 31.0 ],
+					"patching_rect" : [ 407.5, 166.0, 292.5, 31.0 ],
 					"text" : "j.parameter realtime @type boolean @description \"Realtime (flag). When enabled internal clock is used.\"",
 					"varname" : "realtime"
 				}
@@ -607,7 +607,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 515.0, 214.0, 236.0, 31.0 ],
+					"patching_rect" : [ 515.0, 199.0, 185.0, 31.0 ],
 					"text" : "j.parameter interp @type boolean @description \"Interpolate (flag).\"",
 					"varname" : "interp"
 				}
@@ -623,7 +623,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 106.0, 51.0, 366.0, 19.0 ],
+					"patching_rect" : [ 106.0, 36.0, 336.0, 19.0 ],
 					"text" : "j.message stop @description \"Stop recording QuickTime movie.\""
 				}
 
@@ -638,7 +638,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 183.0, 74.0, 391.0, 19.0 ],
+					"patching_rect" : [ 183.0, 64.0, 341.0, 19.0 ],
 					"text" : "j.message write @description \"Start recording QuickTime movie.\""
 				}
 
@@ -653,7 +653,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 242.0, 97.85714, 509.0, 19.0 ],
+					"patching_rect" : [ 242.0, 88.85714, 428.0, 19.0 ],
 					"text" : "j.parameter framerate @type decimal @repetitions/filter 1 @description Framerate",
 					"varname" : "framerate"
 				}
@@ -669,7 +669,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 325.0, 157.0, 401.0, 19.0 ],
+					"patching_rect" : [ 352.0, 138.0, 327.0, 19.0 ],
 					"text" : "j.parameter quality @type string @description \"Codec quality.\"",
 					"varname" : "quality"
 				}
@@ -685,7 +685,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 283.5, 135.0, 418.0, 19.0 ],
+					"patching_rect" : [ 297.0, 114.0, 310.0, 19.0 ],
 					"text" : "j.parameter codec @type string @description \"Codec type.\"",
 					"varname" : "codec"
 				}
@@ -697,7 +697,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 839.5, 271.0, 815.5, 271.0 ],
+					"midpoints" : [ 741.5, 256.0, 717.5, 256.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -797,7 +797,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 995.5, 271.0, 815.5, 271.0 ],
+					"midpoints" : [ 897.5, 256.0, 717.5, 256.0 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -870,7 +870,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 524.5, 271.0, 815.5, 271.0 ],
+					"midpoints" : [ 524.5, 256.0, 717.5, 256.0 ],
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -880,7 +880,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 21.0, 271.75, 815.5, 271.75 ],
+					"midpoints" : [ 21.0, 256.75, 717.5, 256.75 ],
 					"source" : [ "obj-25", 0 ]
 				}
 
@@ -890,7 +890,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 892.5, 196.0, 815.5, 196.0 ],
+					"midpoints" : [ 794.5, 181.0, 717.5, 181.0 ],
 					"source" : [ "obj-26", 1 ]
 				}
 
@@ -909,7 +909,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 115.5, 271.0, 815.5, 271.0 ],
+					"midpoints" : [ 115.5, 256.0, 717.5, 256.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -955,7 +955,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 417.0, 271.0, 815.5, 271.0 ],
+					"midpoints" : [ 417.0, 256.0, 717.5, 256.0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -965,7 +965,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 192.5, 271.0, 815.5, 271.0 ],
+					"midpoints" : [ 192.5, 256.0, 717.5, 256.0 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
@@ -982,7 +982,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.passmatrixinfo%.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/video/passmatrixinfo%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/passmatrixinfo%",
 				"patcherrelativepath" : "../../../../components/video/passmatrixinfo%",
 				"type" : "JSON",
 				"implicit" : 1

@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -217,7 +217,7 @@
 					"outlettype" : [ "list" ],
 					"patching_rect" : [ 80.333344, 613.0, 140.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 37.0, 49.0, 190.0, 13.0 ]
+					"presentation_rect" : [ 37.0, 88.0, 190.0, 13.0 ]
 				}
 
 			}
@@ -231,7 +231,7 @@
 					"outlettype" : [ "list" ],
 					"patching_rect" : [ 80.333344, 555.0, 140.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 37.0, 31.0, 190.0, 13.0 ]
+					"presentation_rect" : [ 37.0, 70.0, 190.0, 13.0 ]
 				}
 
 			}
@@ -349,7 +349,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 824.0, 509.0, 50.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 241.0, 90.0, 43.0, 20.0 ],
+					"presentation_rect" : [ 241.0, 129.0, 43.0, 20.0 ],
 					"triangle" : 0,
 					"varname" : "transpose_disp"
 				}
@@ -422,7 +422,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 489.5, 737.0, 160.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 99.0, 110.0, 127.0, 20.0 ],
+					"presentation_rect" : [ 99.0, 149.0, 127.0, 20.0 ],
 					"showvalue" : 0,
 					"text" : "Drop soundfile here",
 					"varname" : "filetext"
@@ -441,7 +441,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 454.5, 297.0, 95.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 99.0, 109.0, 94.0, 20.0 ],
+					"presentation_rect" : [ 99.0, 148.0, 94.0, 20.0 ],
 					"text" : "Frequency [Hz]:",
 					"varname" : "toneText"
 				}
@@ -461,7 +461,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 395.5, 297.0, 50.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 190.0, 110.0, 35.0, 20.0 ],
+					"presentation_rect" : [ 190.0, 149.0, 35.0, 20.0 ],
 					"triangle" : 0,
 					"varname" : "toneFreq"
 				}
@@ -493,7 +493,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 471.166595, 588.0, 18.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 266.0, 111.0, 18.0, 20.0 ],
+					"presentation_rect" : [ 266.0, 150.0, 18.0, 20.0 ],
 					"text" : ":",
 					"varname" : "sep2_disp"
 				}
@@ -511,7 +511,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 409.833344, 588.0, 18.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 248.0, 111.0, 18.0, 20.0 ],
+					"presentation_rect" : [ 248.0, 150.0, 18.0, 20.0 ],
 					"text" : ":",
 					"varname" : "sep1_disp"
 				}
@@ -533,7 +533,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 489.166595, 588.0, 31.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 273.333313, 111.0, 23.0, 19.0 ],
+					"presentation_rect" : [ 273.333313, 150.0, 23.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "s_disp"
@@ -556,7 +556,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 433.166718, 588.0, 31.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 255.333344, 111.0, 23.0, 19.0 ],
+					"presentation_rect" : [ 255.333344, 150.0, 23.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "min_disp"
@@ -579,7 +579,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 375.833344, 588.0, 31.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 234.0, 111.0, 23.0, 19.0 ],
+					"presentation_rect" : [ 234.0, 150.0, 23.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "h_disp"
@@ -600,7 +600,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -867,7 +867,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 454.5, 181.0, 85.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 99.0, 109.0, 92.0, 20.0 ],
+					"presentation_rect" : [ 99.0, 148.0, 92.0, 20.0 ],
 					"text" : "Clickrate [Hz]:",
 					"varname" : "clicktrainText"
 				}
@@ -902,7 +902,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1172,7 +1172,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 395.5, 181.0, 50.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 190.0, 110.0, 35.0, 20.0 ],
+					"presentation_rect" : [ 190.0, 149.0, 35.0, 20.0 ],
 					"triangle" : 0,
 					"varname" : "clicktrainFreq"
 				}
@@ -1207,7 +1207,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 143.333344, 713.0, 50.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.0, 75.0, 35.0, 20.0 ],
+					"presentation_rect" : [ 7.0, 114.0, 35.0, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -1242,7 +1242,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 80.333344, 286.0, 70.833313, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 237.0, 1.0, 60.0, 17.0 ],
+					"presentation_rect" : [ 234.0, 33.0, 60.0, 17.0 ],
 					"rounded" : 8.0,
 					"text" : "Audio Off",
 					"texton" : "Audio On",
@@ -1261,7 +1261,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 824.0, 441.0, 20.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 241.0, 70.0, 18.0, 18.0 ],
+					"presentation_rect" : [ 241.0, 109.0, 18.0, 18.0 ],
 					"varname" : "loop_disp"
 				}
 
@@ -1297,7 +1297,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 395.5, 415.0, 30.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.0, 45.0, 23.0, 20.0 ],
+					"presentation_rect" : [ 7.0, 84.0, 23.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Channel_Right"
@@ -1321,7 +1321,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 395.5, 386.0, 30.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.0, 26.0, 23.0, 20.0 ],
+					"presentation_rect" : [ 7.0, 65.0, 23.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Channel_Left"
@@ -1343,7 +1343,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 80.333344, 772.0, 36.0, 36.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 45.0, 74.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 45.0, 113.0, 24.0, 24.0 ],
 					"size" : 2.0
 				}
 
@@ -1359,7 +1359,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 80.333344, 476.0, 160.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 71.0, 75.0, 156.0, 20.0 ],
+					"presentation_rect" : [ 71.0, 114.0, 156.0, 20.0 ],
 					"range" : [ 0.0, 127.0 ],
 					"text" : "Master Gain"
 				}
@@ -1380,7 +1380,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 824.0, 361.0, 50.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 237.0, 48.0, 55.0, 19.0 ],
+					"presentation_rect" : [ 237.0, 87.0, 55.0, 19.0 ],
 					"rounded" : 15.0,
 					"text" : "Play",
 					"texton" : "Play",
@@ -1401,7 +1401,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 854.0, 110.0, 50.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 237.0, 27.0, 55.0, 19.0 ],
+					"presentation_rect" : [ 237.0, 66.0, 55.0, 19.0 ],
 					"rounded" : 15.0,
 					"text" : "Open",
 					"texton" : "DSP",
@@ -1424,7 +1424,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 395.5, 79.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.0, 111.0, 90.0, 20.0 ],
+					"presentation_rect" : [ 7.0, 150.0, 90.0, 20.0 ],
 					"rounded" : 10,
 					"varname" : "input_menu"
 				}
@@ -1443,7 +1443,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 80.333344, 369.0, 50.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 200.0, 1.0, 35.0, 17.0 ],
+					"presentation_rect" : [ 190.0, 33.0, 35.0, 17.0 ],
 					"rounded" : 8.0,
 					"text" : "DSP",
 					"texton" : "DSP",
@@ -1793,7 +1793,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 697.0, 110.0, 127.0, 13.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 25.0, 300.0, 110.0 ],
+					"presentation_rect" : [ 0.0, 25.0, 300.0, 150.0 ],
 					"types" : [ "AIFF", "WAVE", "Sd2f" ]
 				}
 
@@ -1806,7 +1806,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 105.0, 190.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 105.0, 227.0, 30.0 ]
+					"presentation_rect" : [ 4.0, 144.0, 227.0, 30.0 ]
 				}
 
 			}
@@ -1818,7 +1818,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 70.0, 190.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 70.0, 226.0, 30.0 ]
+					"presentation_rect" : [ 4.0, 109.0, 226.0, 30.0 ]
 				}
 
 			}
@@ -1830,7 +1830,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 25.0, 190.0, 40.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 25.0, 226.0, 40.0 ]
+					"presentation_rect" : [ 4.0, 64.0, 226.0, 40.0 ]
 				}
 
 			}
@@ -1845,7 +1845,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 257.0, 69.0, 32.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 257.0, 70.0, 32.0, 20.0 ],
+					"presentation_rect" : [ 257.0, 109.0, 32.0, 20.0 ],
 					"text" : "loop",
 					"varname" : "loop_desc"
 				}
@@ -1859,7 +1859,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 234.0, 25.0, 61.0, 111.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 234.0, 25.0, 61.0, 111.0 ]
+					"presentation_rect" : [ 234.0, 64.0, 61.0, 111.0 ]
 				}
 
 			}
@@ -1869,12 +1869,12 @@
 					"id" : "obj-78",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "/input~"
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -2332,6 +2332,31 @@
 					"source" : [ "obj-95", 1 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.textslider.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
