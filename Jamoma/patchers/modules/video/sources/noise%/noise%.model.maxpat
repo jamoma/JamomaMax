@@ -136,8 +136,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 67.0, 39.0, 354.0, 20.0 ],
-					"text" : "j.parameter dim @type array @dataspace xy"
+					"patching_rect" : [ 67.0, 39.0, 163.0, 20.0 ],
+					"text" : "j.parameter dim @type array"
 				}
 
 			}

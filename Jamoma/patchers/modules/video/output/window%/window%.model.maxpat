@@ -67,7 +67,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 278.0, 256.0, 411.0, 33.0 ],
-					"text" : "j.parameter position @type array @dataspace xy @description \"position of the window\""
+					"text" : "j.parameter position @type array  @description \"position of the window\""
 				}
 
 			}
@@ -83,7 +83,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 278.0, 180.0, 382.0, 33.0 ],
-					"text" : "j.parameter size @type array @dataspace xy @description \"size of the window\""
+					"text" : "j.parameter size @type array  @description \"size of the window\""
 				}
 
 			}
