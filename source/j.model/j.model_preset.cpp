@@ -195,6 +195,10 @@ void model_preset_dowrite_again(TTPtr self)
 	TTTextHandlerPtr	aTextHandler = NULL;
 	TTValue			o;
 	TTErr			tterr;
+    
+    // stop filewatcher
+	if (EXTRA->filewatcher)
+		filewatcher_stop(EXTRA->filewatcher);
 	
 	tterr = x->internals->lookup(kTTSym_TextHandler, o);
 	
@@ -214,6 +218,10 @@ void model_preset_dowrite_again(TTPtr self)
 		else
 			object_obex_dumpout(self, _sym_error, 0, NULL);
 	}
+    
+    // start filewatcher
+	if (EXTRA->filewatcher)
+		filewatcher_start(EXTRA->filewatcher);
 }
 
 void model_preset_default(TTPtr self)
