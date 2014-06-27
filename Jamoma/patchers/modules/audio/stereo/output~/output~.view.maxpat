@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 605.0, 106.0, 1533.0, 763.0 ],
+		"rect" : [ 232.0, 115.0, 1533.0, 763.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -155,7 +155,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 987.999878, 610.0, 18.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 263.0, 25.0, 18.0, 20.0 ],
+					"presentation_rect" : [ 263.0, 53.0, 18.0, 20.0 ],
 					"text" : ":",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"varname" : "sep2_disp"
@@ -175,7 +175,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 926.666626, 610.0, 18.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 243.0, 25.0, 18.0, 20.0 ],
+					"presentation_rect" : [ 243.0, 53.0, 18.0, 20.0 ],
 					"text" : ":",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"varname" : "sep1_disp"
@@ -199,7 +199,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1005.999878, 610.0, 31.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 268.333313, 25.0, 23.0, 20.0 ],
+					"presentation_rect" : [ 268.333313, 53.0, 23.0, 20.0 ],
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
@@ -224,7 +224,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 950.0, 610.0, 31.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 250.333344, 25.0, 23.0, 20.0 ],
+					"presentation_rect" : [ 250.333344, 53.0, 23.0, 20.0 ],
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
@@ -249,7 +249,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 892.666626, 610.0, 31.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 229.0, 25.0, 23.0, 20.0 ],
+					"presentation_rect" : [ 229.0, 53.0, 23.0, 20.0 ],
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
@@ -564,7 +564,7 @@
 					"outlettype" : [ "bang", "bang", "", "int" ],
 					"patching_rect" : [ 616.0, 530.0, 69.0, 14.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 112.0, 2.0, 70.0, 17.0 ]
+					"presentation_rect" : [ 57.0, 27.0, 134.0, 17.0 ]
 				}
 
 			}
@@ -583,7 +583,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 616.0, 558.0, 77.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 112.0, 2.0, 70.0, 17.0 ],
+					"presentation_rect" : [ 57.0, 27.0, 134.0, 17.0 ],
 					"range" : [ 0.0, 100.0 ],
 					"showvalue" : 0,
 					"text" : "",
@@ -910,7 +910,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 533.0, 559.0, 77.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 112.0, 2.0, 70.0, 17.0 ],
+					"presentation_rect" : [ 57.0, 27.0, 134.0, 17.0 ],
 					"range" : [ 0.0, 100.0 ],
 					"showvalue" : 0,
 					"text" : "0.0000",
@@ -932,7 +932,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 126.0, 479.0, 50.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.0, 65.0, 35.0, 20.0 ],
+					"presentation_rect" : [ 5.0, 93.0, 35.0, 20.0 ],
 					"triangle" : 0
 				}
 
@@ -952,7 +952,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 63.0, 538.0, 36.0, 36.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 42.0, 62.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 42.0, 90.0, 24.0, 24.0 ],
 					"size" : 2.0
 				}
 
@@ -967,7 +967,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 497.0, 71.0, 160.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 67.0, 64.0, 156.0, 19.0 ],
+					"presentation_rect" : [ 67.0, 92.0, 156.0, 19.0 ],
 					"range" : [ 0.0, 127.0 ],
 					"text" : "Master Gain"
 				}
@@ -981,7 +981,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 2.0, 62.0, 226.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2.0, 62.0, 226.0, 24.0 ]
+					"presentation_rect" : [ 2.0, 90.0, 226.0, 24.0 ]
 				}
 
 			}
@@ -1129,7 +1129,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 281.0, 524.0, 74.0, 14.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 221.0, 2.0, 60.0, 16.0 ],
+					"presentation_rect" : [ 230.0, 27.0, 60.0, 16.0 ],
 					"rounded" : 8.0,
 					"text" : "Audio Off",
 					"texton" : "Audio On",
@@ -1150,7 +1150,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 932.0, 100.0, 50.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 85.0, 94.0, 40.0, 19.0 ]
+					"presentation_rect" : [ 85.0, 122.0, 40.0, 19.0 ]
 				}
 
 			}
@@ -1171,7 +1171,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 566.0, 368.0, 51.466908, 17.933016 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 230.0, 25.0, 61.0, 19.0 ],
+					"presentation_rect" : [ 230.0, 53.0, 61.0, 19.0 ],
 					"prototypename" : "jamoma on off",
 					"rounded" : 8.0,
 					"text" : "Record",
@@ -1194,7 +1194,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 932.0, 474.0, 35.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 184.0, 2.0, 35.0, 16.0 ],
+					"presentation_rect" : [ 193.0, 27.0, 35.0, 16.0 ],
 					"prototypename" : "jamoma open",
 					"rounded" : 8.0,
 					"text" : "DSP",
@@ -1738,7 +1738,7 @@
 					"outlettype" : [ "list" ],
 					"patching_rect" : [ 144.0, 316.0, 84.0, 13.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 57.0, 42.0, 165.0, 15.0 ]
+					"presentation_rect" : [ 57.0, 70.0, 165.0, 15.0 ]
 				}
 
 			}
@@ -1753,7 +1753,7 @@
 					"outlettype" : [ "list" ],
 					"patching_rect" : [ 144.0, 252.5, 84.0, 13.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 57.0, 26.0, 165.0, 15.0 ]
+					"presentation_rect" : [ 57.0, 54.0, 165.0, 15.0 ]
 				}
 
 			}
@@ -1825,7 +1825,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 793.0, 340.0, 81.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 155.0, 114.0, 81.0, 20.0 ],
+					"presentation_rect" : [ 155.0, 142.0, 81.0, 20.0 ],
 					"text" : "Release (ms)"
 				}
 
@@ -1841,7 +1841,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 793.0, 300.0, 78.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 155.0, 94.0, 78.0, 20.0 ],
+					"presentation_rect" : [ 155.0, 122.0, 78.0, 20.0 ],
 					"text" : "Preamp (dB)"
 				}
 
@@ -1876,7 +1876,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 868.0, 340.0, 39.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 230.0, 114.0, 60.0, 20.0 ],
+					"presentation_rect" : [ 230.0, 142.0, 60.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Release"
@@ -1898,7 +1898,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 868.0, 300.0, 36.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 230.0, 94.0, 60.0, 20.0 ],
+					"presentation_rect" : [ 230.0, 122.0, 60.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Preamp"
@@ -1961,7 +1961,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 818.0, 221.0, 61.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 25.0, 112.0, 61.0, 20.0 ],
+					"presentation_rect" : [ 25.0, 140.0, 61.0, 20.0 ],
 					"text" : "Limiter"
 				}
 
@@ -2037,7 +2037,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 987.0, 99.0, 19.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 125.0, 94.0, 19.0, 20.0 ],
+					"presentation_rect" : [ 125.0, 122.0, 19.0, 20.0 ],
 					"text" : "%"
 				}
 
@@ -2365,7 +2365,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 489.0, 247.0, 61.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 230.0, 45.0, 60.0, 20.0 ],
+					"presentation_rect" : [ 230.0, 73.0, 60.0, 20.0 ],
 					"varname" : "FiletypeMenu"
 				}
 
@@ -2384,7 +2384,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 489.0, 283.0, 61.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 230.0, 65.0, 60.0, 20.0 ],
+					"presentation_rect" : [ 230.0, 93.0, 60.0, 20.0 ],
 					"varname" : "SamptypeMenu"
 				}
 
@@ -2450,7 +2450,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 873.0, 437.0, 30.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.0, 42.0, 30.0, 20.0 ],
+					"presentation_rect" : [ 5.0, 70.0, 30.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Channel_Right"
@@ -2473,7 +2473,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 873.0, 408.0, 30.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.0, 22.0, 30.0, 20.0 ],
+					"presentation_rect" : [ 5.0, 50.0, 30.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Channel_Left"
@@ -2529,7 +2529,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 1017.0, 99.0, 63.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 25.0, 94.0, 63.0, 20.0 ],
+					"presentation_rect" : [ 25.0, 122.0, 63.0, 20.0 ],
 					"text" : "Saturation"
 				}
 
@@ -2548,7 +2548,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 888.0, 147.0, 18.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 94.0, 75.0, 18.0 ],
+					"presentation_rect" : [ 10.0, 122.0, 75.0, 18.0 ],
 					"size" : 1,
 					"values" : [ 1 ],
 					"varname" : "SaturationToggle"
@@ -2569,7 +2569,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 888.0, 221.0, 18.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 112.0, 75.0, 18.0 ],
+					"presentation_rect" : [ 10.0, 140.0, 75.0, 18.0 ],
 					"size" : 1,
 					"values" : [ 1 ],
 					"varname" : "LimiterToggle"
@@ -2585,7 +2585,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 90.0, 290.0, 45.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.0, 90.0, 290.0, 45.0 ]
+					"presentation_rect" : [ 5.0, 118.0, 290.0, 45.0 ]
 				}
 
 			}
@@ -2597,7 +2597,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 2.0, 23.0, 225.0, 37.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2.0, 23.0, 225.0, 37.0 ]
+					"presentation_rect" : [ 1.0, 50.0, 225.0, 37.0 ]
 				}
 
 			}
@@ -2611,8 +2611,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "/noModelAddress"
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -3202,8 +3202,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../javascript",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
+				"patcherrelativepath" : "../../../../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

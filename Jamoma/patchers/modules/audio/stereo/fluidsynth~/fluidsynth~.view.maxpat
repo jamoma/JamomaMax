@@ -37,7 +37,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 89.861969, 142.154083, 163.0, 20.0 ],
+					"patching_rect" : [ 113.0, 112.0, 163.0, 20.0 ],
 					"text" : "j.receive~ out.2"
 				}
 
@@ -51,8 +51,36 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 89.861969, 102.154083, 163.0, 20.0 ],
+					"patching_rect" : [ 101.0, 83.0, 163.0, 20.0 ],
 					"text" : "j.receive~ out.1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "amplitude of output signal 2",
+					"id" : "obj-50",
+					"maxclass" : "live.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 120.5, 132.0, 4.0, 77.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 293.0, 22.0, 4.0, 47.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "amplitude of output signal 1",
+					"id" : "obj-49",
+					"maxclass" : "live.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 108.5, 101.0, 4.0, 80.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 288.0, 22.0, 4.0, 47.0 ]
 				}
 
 			}
@@ -896,7 +924,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 178.862, 278.154083, 49.138031, 17.845917 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 6.034534, 45.0, 31.017475, 15.0 ],
+					"presentation_rect" : [ 4.034534, 45.0, 31.017475, 15.0 ],
 					"prototypename" : "jamoma open",
 					"rounded" : 8.0,
 					"text" : "info",
@@ -950,7 +978,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 335.861969, 38.384262, 54.138031, 16.615738 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 45.0, 25.0, 49.265553, 15.0 ],
+					"presentation_rect" : [ 38.0, 25.0, 46.265553, 15.0 ],
 					"prototypename" : "jamoma recording",
 					"rounded" : 8.0,
 					"text" : "chorus",
@@ -974,7 +1002,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 336.426453, 105.556656, 53.573547, 19.443344 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 45.0, 45.062508, 49.265553, 15.0 ],
+					"presentation_rect" : [ 38.0, 45.062508, 46.265553, 15.0 ],
 					"prototypename" : "jamoma recording",
 					"rounded" : 8.0,
 					"text" : "reverb",
@@ -996,42 +1024,12 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 40.862, 225.0, 49.138031, 17.845917 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 6.034534, 25.0, 31.017475, 15.0 ],
+					"presentation_rect" : [ 4.034534, 25.0, 31.017475, 15.0 ],
 					"prototypename" : "jamoma open",
 					"rounded" : 8.0,
 					"text" : "load",
 					"texton" : "recording",
 					"varname" : "load"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "amplitude of output signal 2",
-					"id" : "obj-50",
-					"maxclass" : "live.meter~",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 89.861969, 169.154083, 80.0, 4.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 170.0, 10.0, 80.0, 4.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "amplitude of output signal 1",
-					"id" : "obj-49",
-					"maxclass" : "live.meter~",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 89.861969, 131.154083, 80.0, 4.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 170.0, 5.0, 80.0, 4.0 ]
 				}
 
 			}
@@ -1093,7 +1091,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 336.0, 223.0, 189.0, 41.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 102.0, 24.0, 189.0, 41.0 ],
+					"presentation_rect" : [ 87.265549, 25.0, 189.0, 41.0 ],
 					"range" : 36,
 					"varname" : "keyboard"
 				}
@@ -1162,7 +1160,7 @@
 					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/no_model_address"
 				}
 
 			}

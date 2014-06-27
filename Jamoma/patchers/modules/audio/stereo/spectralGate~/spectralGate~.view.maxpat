@@ -4,11 +4,12 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 101.0, 81.0, 1163.0, 684.0 ],
+		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -62,11 +63,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 550.0, 545.0, 80.0, 4.0 ],
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 550.0, 545.0, 4.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.0, 10.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 290.555542, 25.0, 4.0, 38.0 ]
 				}
 
 			}
@@ -77,16 +77,16 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 550.0, 500.0, 80.0, 4.0 ],
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 550.0, 500.0, 4.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.0, 5.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 286.0, 25.0, 4.0, 38.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated..",
 					"defaultvalue" : 100.0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -97,7 +97,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 245.0, 173.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 45.0, 146.0, 18.0 ],
+					"presentation_rect" : [ 10.0, 45.0, 126.0, 18.0 ],
 					"text" : "Decay response",
 					"textpos" : [ 10.0, 3.0 ]
 				}
@@ -105,6 +105,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated..",
 					"defaultvalue" : 100.0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -115,7 +116,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 150.0, 171.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 25.0, 144.0, 18.0 ],
+					"presentation_rect" : [ 10.0, 25.0, 124.0, 18.0 ],
 					"text" : "Attack response",
 					"textpos" : [ 10.0, 3.0 ]
 				}
@@ -123,6 +124,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated..",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-66",
@@ -132,7 +134,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 65.0, 172.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 155.0, 25.0, 145.0, 18.0 ],
+					"presentation_rect" : [ 155.0, 25.0, 125.0, 18.0 ],
 					"range" : [ -48.0, 18.0 ],
 					"text" : "Threshold",
 					"textpos" : [ 10.0, 3.0 ],
@@ -142,6 +144,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-65",
@@ -153,7 +156,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 550.0, 345.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 155.0, 45.0, 135.0, 18.0 ],
+					"presentation_rect" : [ 155.0, 45.0, 115.0, 18.0 ],
 					"text" : "Invert Off",
 					"texton" : "Invert On"
 				}
@@ -235,11 +238,11 @@
 					"id" : "obj-50",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/#1"
+					"text" : "/spectralGate~"
 				}
 
 			}
@@ -392,31 +395,6 @@
 					"source" : [ "obj-69", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.textslider.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

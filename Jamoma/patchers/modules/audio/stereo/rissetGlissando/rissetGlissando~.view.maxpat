@@ -4,11 +4,12 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 52.0, 87.0, 505.0, 298.0 ],
+		"rect" : [ 52.0, 87.0, 878.0, 467.0 ],
+		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -31,27 +32,27 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-3",
+					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 319.0, 17.0, 142.0, 20.0 ],
+					"patching_rect" : [ 480.0, 30.0, 163.0, 20.0 ],
 					"text" : "j.receive~ out.1"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "amplitude of output signal 1",
 					"id" : "obj-49",
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 319.0, 42.0, 80.0, 4.0 ],
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 480.0, 59.0, 4.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 160.0, 5.0, 98.0, 8.0 ]
+					"presentation_rect" : [ 288.0, 21.5, 4.0, 74.0 ]
 				}
 
 			}
@@ -132,6 +133,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Maximum number of oscillators to use. Tha actual number of oscillators used might be lower, depending on range and spacing.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-12",
@@ -144,7 +146,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 334.5, 74.0, 38.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 245.0, 35.0, 49.0, 20.0 ],
+					"presentation_rect" : [ 245.0, 35.0, 37.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Oscillators"
@@ -153,6 +155,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Rolloff in dB for the Gaussian windowing function.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-13",
@@ -164,7 +167,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 369.0, 209.0, 49.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 245.0, 55.0, 49.0, 20.0 ],
+					"presentation_rect" : [ 245.0, 55.0, 37.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Rolloff"
@@ -173,6 +176,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Spacing between adjecent oscillators (as MIDI values).",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-14",
@@ -193,6 +197,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Rate of the glissando movement as MIDI pitch difference per second.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-15",
@@ -389,8 +394,8 @@
 					"id" : "obj-40",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
@@ -495,15 +500,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-49", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-28", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -527,6 +523,15 @@
 					"hidden" : 0,
 					"midpoints" : [ 344.0, 127.0, 321.5, 127.0, 321.5, 69.0, 344.0, 69.0 ],
 					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-49", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
@@ -558,34 +563,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/list2parameter",
-				"patcherrelativepath" : "../../../components/list2parameter",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
