@@ -110,13 +110,13 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Verdana",
-					"fontsize" : 18.0,
+					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-11",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 31.0, 354.0, 293.0, 28.0 ],
+					"patching_rect" : [ 31.0, 354.0, 199.0, 21.0 ],
 					"text" : "algorithm after Andrew Benson",
 					"textcolor" : [ 0.0, 0.6, 1.0, 1.0 ],
 					"underline" : 1
@@ -131,7 +131,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "bang", "bang", "", "int" ],
-					"patching_rect" : [ 32.0, 354.0, 292.0, 28.0 ]
+					"patching_rect" : [ 32.0, 354.0, 198.0, 21.0 ]
 				}
 
 			}
