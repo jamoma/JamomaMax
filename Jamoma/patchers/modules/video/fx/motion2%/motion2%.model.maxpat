@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 80.0, 121.0, 649.0, 470.0 ],
+		"rect" : [ 80.0, 121.0, 598.0, 422.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 360.0, 298.0, 57.0, 19.0 ],
+					"patching_rect" : [ 302.0, 250.0, 57.0, 19.0 ],
 					"text" : "pvar slide"
 				}
 
@@ -50,7 +50,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 360.0, 240.0, 59.0, 19.0 ],
+					"patching_rect" : [ 302.0, 192.0, 59.0, 19.0 ],
 					"text" : "pvar trails"
 				}
 
@@ -64,7 +64,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 223.0, 397.0, 112.0, 19.0 ],
+					"patching_rect" : [ 165.0, 349.0, 112.0, 19.0 ],
 					"text" : "pvar edge_threshold"
 				}
 
@@ -78,22 +78,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 223.0, 341.0, 123.0, 19.0 ],
+					"patching_rect" : [ 165.0, 293.0, 123.0, 19.0 ],
 					"text" : "pvar edge_algorithm 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 29.800003, 21.0, 539.0, 19.0 ],
-					"text" : "j.message genframe @type none@description \"generate a video frame ( send a bag to the jitter object)\""
 				}
 
 			}
@@ -104,12 +90,13 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 242.0, 240.0, 25.0, 25.0 ]
+					"patching_rect" : [ 184.0, 192.0, 25.0, 25.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-34",
@@ -117,7 +104,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 242.0, 213.0, 306.0, 19.0 ],
+					"patching_rect" : [ 184.0, 165.0, 306.0, 19.0 ],
 					"text" : "j.model @tag video @description \"Motion-related analysis\"",
 					"varname" : "j.model"
 				}
@@ -125,6 +112,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 12.0,
 					"id" : "obj-1",
@@ -313,7 +301,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 79.0, 332.0, 67.0, 21.0 ],
+					"patching_rect" : [ 21.0, 284.0, 66.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -333,8 +321,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -713,7 +702,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 105.0, 276.0, 76.0, 19.0 ],
+					"patching_rect" : [ 47.0, 228.0, 90.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -925,7 +914,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 79.0, 179.0, 49.0, 19.0 ],
+					"patching_rect" : [ 21.0, 131.0, 49.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -945,8 +934,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-16",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
@@ -1157,7 +1147,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 79.0, 300.0, 267.0, 19.0 ],
+					"patching_rect" : [ 21.0, 252.0, 256.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1179,26 +1169,12 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-18",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 105.0, 388.0, 87.0, 19.0 ],
-					"text" : "VIDEO OUTPUT"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-20",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 79.0, 213.0, 82.0, 19.0 ],
+					"patching_rect" : [ 21.0, 165.0, 82.0, 19.0 ],
 					"text" : "j.motion%"
 				}
 
@@ -1212,7 +1188,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 79.0, 239.0, 120.0, 19.0 ],
+					"patching_rect" : [ 21.0, 191.0, 120.0, 19.0 ],
 					"text" : "jit.op @op > @val 0.1"
 				}
 
@@ -1224,21 +1200,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 79.0, 383.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-26",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 137.0, 84.0, 76.0, 19.0 ],
-					"text" : "VIDEO INPUT"
+					"patching_rect" : [ 21.0, 335.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -1250,7 +1212,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 109.0, 84.0, 25.0, 25.0 ]
+					"patching_rect" : [ 51.0, 36.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -1263,7 +1225,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 79.0, 357.0, 131.0, 19.0 ],
+					"patching_rect" : [ 21.0, 309.0, 131.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -1277,13 +1239,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 109.0, 129.0, 37.0, 19.0 ],
+					"patching_rect" : [ 51.0, 81.0, 37.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1007",
@@ -1291,7 +1254,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 79.0, 57.0, 367.0, 19.0 ],
+					"patching_rect" : [ 21.0, 9.0, 367.0, 19.0 ],
 					"text" : "j.parameter color @type boolean @description \"Color or greyscale\"",
 					"varname" : "color[1]"
 				}
@@ -1299,6 +1262,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1013",
@@ -1306,7 +1270,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 223.0, 420.0, 402.0, 19.0 ],
+					"patching_rect" : [ 165.0, 372.0, 402.0, 19.0 ],
 					"text" : "j.parameter edge/threshold @type decimal @description \"Edge threshold\"",
 					"varname" : "edge/threshold"
 				}
@@ -1314,6 +1278,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1015",
@@ -1321,7 +1286,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 223.0, 366.0, 393.0, 19.0 ],
+					"patching_rect" : [ 165.0, 318.0, 393.0, 19.0 ],
 					"text" : "j.parameter edge/algorithm @type string @description \"Edge detection\"",
 					"varname" : "edge/algorithm"
 				}
@@ -1329,6 +1294,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1017",
@@ -1337,7 +1303,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 360.0, 317.0, 232.0, 31.0 ],
+					"patching_rect" : [ 302.0, 269.0, 232.0, 31.0 ],
 					"text" : "j.parameter slide @type decimal @description \"Level of slide for thre trails\"",
 					"varname" : "slide[1]"
 				}
@@ -1345,6 +1311,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1019",
@@ -1353,7 +1320,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 360.0, 259.0, 211.0, 31.0 ],
+					"patching_rect" : [ 302.0, 211.0, 211.0, 31.0 ],
 					"text" : "j.parameter trails @type boolean @description \"Trails - ghostlike image\"",
 					"varname" : "trails[1]"
 				}
@@ -1361,6 +1328,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1022",
@@ -1368,7 +1336,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 203.0, 144.0, 356.0, 19.0 ],
+					"patching_rect" : [ 145.0, 96.0, 356.0, 19.0 ],
 					"text" : "j.parameter noise @type boolean @description \"Noise reduction\"",
 					"varname" : "noise[1]"
 				}
@@ -1376,6 +1344,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1029",
@@ -1383,7 +1352,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 180.0, 109.0, 357.0, 19.0 ],
+					"patching_rect" : [ 122.0, 61.0, 357.0, 19.0 ],
 					"text" : "j.parameter threshold @type decimal @description \\\"Threshold\\\"",
 					"varname" : "threshold[1]"
 				}
@@ -1431,7 +1400,7 @@
 					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 232.5, 441.0, 210.0, 441.0, 210.0, 393.0, 232.5, 393.0 ],
+					"midpoints" : [ 174.5, 393.0, 152.0, 393.0, 152.0, 345.0, 174.5, 345.0 ],
 					"source" : [ "obj-1013", 0 ]
 				}
 
@@ -1441,7 +1410,7 @@
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 232.5, 387.0, 209.200012, 387.0, 209.200012, 336.0, 232.5, 336.0 ],
+					"midpoints" : [ 174.5, 339.0, 151.200012, 339.0, 151.200012, 288.0, 174.5, 288.0 ],
 					"source" : [ "obj-1015", 0 ]
 				}
 
@@ -1451,7 +1420,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 369.5, 352.0, 356.0, 352.0, 356.0, 293.0, 369.5, 293.0 ],
+					"midpoints" : [ 311.5, 304.0, 298.0, 304.0, 298.0, 245.0, 311.5, 245.0 ],
 					"source" : [ "obj-1017", 0 ]
 				}
 
@@ -1461,7 +1430,7 @@
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 369.5, 289.0, 357.0, 289.0, 357.0, 237.0, 369.5, 237.0 ],
+					"midpoints" : [ 311.5, 241.0, 299.0, 241.0, 299.0, 189.0, 311.5, 189.0 ],
 					"source" : [ "obj-1019", 0 ]
 				}
 
@@ -1471,7 +1440,7 @@
 					"destination" : [ "obj-16", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 212.5, 284.0, 212.5, 284.0 ],
+					"midpoints" : [ 154.5, 236.0, 149.0, 236.0 ],
 					"source" : [ "obj-1022", 0 ]
 				}
 
@@ -1517,7 +1486,7 @@
 					"destination" : [ "obj-13", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 88.5, 266.0, 114.5, 266.0 ],
+					"midpoints" : [ 30.5, 218.0, 56.5, 218.0 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -1537,16 +1506,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-27", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 39.300003, 205.5, 88.5, 205.5 ],
-					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -1594,6 +1553,55 @@
 					"source" : [ "obj-7", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.motion%.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/motion%",
+				"patcherrelativepath" : "../../../../components/video/motion%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.noiseremoval%.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/noiseremoval%",
+				"patcherrelativepath" : "../../../../components/video/noiseremoval%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.rgb2luma%.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/rgb2luma%",
+				"patcherrelativepath" : "../../../../components/video/rgb2luma%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.sum%.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/sum%",
+				"patcherrelativepath" : "../../../../components/video/sum%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
