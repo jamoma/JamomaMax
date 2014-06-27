@@ -36,8 +36,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 146.0, 124.0, 19.0 ],
-					"text" : "j.class.gl_group.panel"
+					"patching_rect" : [ 0.0, 146.0, 93.0, 19.0 ],
+					"text" : "j.gl_group.panel"
 				}
 
 			}
@@ -661,7 +661,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -981,22 +981,22 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/list2parameter",
-				"patcherrelativepath" : "../../../components/list2parameter",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"patcherrelativepath" : "../../../../components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.class.gl_group.panel.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/class.gl_group.remotes",
-				"patcherrelativepath" : "../../../components/class.gl_group.remotes",
+				"name" : "j.gl_group.panel.maxpat",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/class.gl_group.parameters",
+				"patcherrelativepath" : "../../../../components/openGL/class.gl_group.parameters",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.class.gl_group.remotes.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/class.gl_group.remotes",
-				"patcherrelativepath" : "../../../components/class.gl_group.remotes",
+				"name" : "j.gl_group.view.maxpat",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/class.gl_group.parameters",
+				"patcherrelativepath" : "../../../../components/openGL/class.gl_group.parameters",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1010,6 +1010,10 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
