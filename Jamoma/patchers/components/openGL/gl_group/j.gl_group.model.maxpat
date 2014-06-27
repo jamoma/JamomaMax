@@ -163,8 +163,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 122.5, 301.5, 329.0, 31.0 ],
-									"text" : "j.parameter render/context @type string @description \"The named drawing context in which to draw.\"",
+									"patching_rect" : [ 122.5, 301.5, 351.0, 31.0 ],
+									"text" : "j.parameter render/context @type string @description \"The named drawing context in which to draw.\" @default my_context",
 									"varname" : "render/context"
 								}
 
@@ -859,7 +859,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 8.0, 20.0, 655.0, 31.0 ],
+									"patching_rect" : [ 8.0, 20.0, 657.0, 31.0 ],
 									"text" : "j.parameter blend/mode @type array @description \"Blend modes for source and destination planes.\" @default 6 7 @range 0 10 @clipmode both",
 									"varname" : "blend/mode"
 								}
