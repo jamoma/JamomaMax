@@ -45,5 +45,6 @@
   <entry App="rename" TT="Rename"/>
   <entry App="reset" TT="Reset"/>
   <entry App="send" TT="Send"/>
+  <entry App="update" TT="Update"/>
  </conversionTable>
 </jamoma>
