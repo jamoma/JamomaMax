@@ -36,8 +36,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 146.0, 93.0, 19.0 ],
-					"text" : "j.gl_group.panel"
+					"patching_rect" : [ 0.0, 146.0, 110.0, 19.0 ],
+					"text" : "j.gl_group.panel GL"
 				}
 
 			}
@@ -988,15 +988,15 @@
 			}
 , 			{
 				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/class.gl_group.parameters",
-				"patcherrelativepath" : "../../../../components/openGL/class.gl_group.parameters",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/class.gl_group.parameters",
-				"patcherrelativepath" : "../../../../components/openGL/class.gl_group.parameters",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1014,6 +1014,10 @@
 			}
 , 			{
 				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
