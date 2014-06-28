@@ -1,10 +1,15 @@
 {
 	"patcher" : 	{
 		"fileversion" : 1,
-		"rect" : [ 44.0, 44.0, 834.0, 456.0 ],
+		"appversion" : 		{
+			"major" : 6,
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
+		}
+,
+		"rect" : [ 129.0, 195.0, 834.0, 456.0 ],
 		"bglocked" : 0,
-		"defrect" : [ 44.0, 44.0, 834.0, 456.0 ],
-		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
@@ -12,15 +17,33 @@
 		"gridonopen" : 0,
 		"gridsize" : [ 15.0, 15.0 ],
 		"gridsnaponopen" : 0,
+		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
 		"boxanimatetime" : 200,
 		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
+		"description" : "",
+		"digest" : "",
+		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [  ],
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 512.0, 381.0, 100.0, 18.0 ],
+					"text" : "j.map"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "a cue list module",
 					"id" : "obj-13",
 					"maxclass" : "bpatcher",
 					"name" : "cueManager.view.maxpat",
@@ -34,6 +57,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "a cue list module",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-11",
@@ -50,13 +74,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"hint" : "when edit is on, out/in - min/max bounds and climpde are set according to the addressed parameters values",
 					"id" : "obj-16",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 668.0, 127.0, 87.0, 18.0 ],
+					"patching_rect" : [ 701.0, 334.5, 87.0, 18.0 ],
 					"text" : "0 for optimization"
 				}
 
@@ -69,7 +93,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 647.0, 126.0, 19.0, 19.0 ]
+					"parameter_enable" : 0,
+					"patching_rect" : [ 684.0, 334.5, 19.0, 19.0 ]
 				}
 
 			}
@@ -83,13 +108,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 647.0, 152.0, 104.0, 29.0 ],
+					"patching_rect" : [ 684.0, 360.5, 104.0, 29.0 ],
 					"text" : "j.send /Multi.*/mapper.*/edit"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"args" : [ "/Multi" ],
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
@@ -97,8 +123,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 29.0, 114.0, 600.0, 70.0 ],
-					"presentation_rect" : [ 75.0, 75.0, 600.0, 70.0 ]
+					"patching_rect" : [ 29.0, 114.0, 750.0, 70.0 ],
+					"presentation_rect" : [ 75.0, 75.0, 750.0, 70.0 ]
 				}
 
 			}
@@ -106,7 +132,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-10",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -118,6 +144,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Output information from mouse",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-20",
@@ -132,6 +159,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"args" : [ "/mouse" ],
 					"border" : 1,
 					"id" : "obj-23",
@@ -157,10 +185,15 @@
 					"outlettype" : [ "" ],
 					"patcher" : 					{
 						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
+						}
+,
 						"rect" : [ 162.0, 555.0, 247.0, 194.0 ],
 						"bglocked" : 0,
-						"defrect" : [ 162.0, 555.0, 247.0, 194.0 ],
-						"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
 						"default_fontface" : 0,
@@ -168,19 +201,23 @@
 						"gridonopen" : 0,
 						"gridsize" : [ 15.0, 15.0 ],
 						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
 						"boxanimatetime" : 200,
 						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 10.0,
 									"id" : "obj-3",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 26.0, 73.0, 171.0, 18.0 ],
@@ -213,10 +250,15 @@
 									"outlettype" : [ "" ],
 									"patcher" : 									{
 										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x86"
+										}
+,
 										"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
 										"bglocked" : 0,
-										"defrect" : [ 25.0, 69.0, 640.0, 480.0 ],
-										"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 										"openinpresentation" : 0,
 										"default_fontsize" : 10.0,
 										"default_fontface" : 0,
@@ -224,12 +266,16 @@
 										"gridonopen" : 0,
 										"gridsize" : [ 15.0, 15.0 ],
 										"gridsnaponopen" : 0,
+										"statusbarvisible" : 2,
 										"toolbarvisible" : 1,
 										"boxanimatetime" : 200,
 										"imprint" : 0,
 										"enablehscroll" : 1,
 										"enablevscroll" : 1,
 										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
 										"boxes" : [ 											{
 												"box" : 												{
 													"fontname" : "Arial",
@@ -342,8 +388,8 @@
 										"lines" : [ 											{
 												"patchline" : 												{
 													"destination" : [ "obj-13", 1 ],
+													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [  ],
 													"source" : [ "obj-1", 0 ]
 												}
 
@@ -351,8 +397,8 @@
 , 											{
 												"patchline" : 												{
 													"destination" : [ "obj-1", 0 ],
+													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [  ],
 													"source" : [ "obj-2", 1 ]
 												}
 
@@ -360,8 +406,8 @@
 , 											{
 												"patchline" : 												{
 													"destination" : [ "obj-40", 0 ],
+													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [  ],
 													"source" : [ "obj-36", 0 ]
 												}
 
@@ -369,8 +415,8 @@
 , 											{
 												"patchline" : 												{
 													"destination" : [ "obj-36", 0 ],
+													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [  ],
 													"source" : [ "obj-37", 1 ]
 												}
 
@@ -378,8 +424,8 @@
 , 											{
 												"patchline" : 												{
 													"destination" : [ "obj-37", 0 ],
+													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [  ],
 													"source" : [ "obj-39", 0 ]
 												}
 
@@ -387,8 +433,8 @@
 , 											{
 												"patchline" : 												{
 													"destination" : [ "obj-2", 0 ],
+													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [  ],
 													"source" : [ "obj-45", 0 ]
 												}
 
@@ -398,13 +444,16 @@
 ,
 									"patching_rect" : [ 26.0, 103.0, 42.0, 18.0 ],
 									"saved_object_attributes" : 									{
-										"fontname" : "Arial",
 										"default_fontface" : 0,
-										"globalpatchername" : "",
-										"fontface" : 0,
-										"fontsize" : 10.0,
 										"default_fontname" : "Arial",
-										"default_fontsize" : 10.0
+										"default_fontsize" : 10.0,
+										"description" : "",
+										"digest" : "",
+										"fontface" : 0,
+										"fontname" : "Arial",
+										"fontsize" : 10.0,
+										"globalpatchername" : "",
+										"tags" : ""
 									}
 ,
 									"text" : "p slash"
@@ -417,7 +466,7 @@
 									"fontsize" : 10.0,
 									"id" : "obj-13",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 26.0, 46.0, 171.0, 18.0 ],
@@ -452,8 +501,8 @@
 						"lines" : [ 							{
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [  ],
 									"source" : [ "obj-13", 0 ]
 								}
 
@@ -461,8 +510,8 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-15", 0 ],
+									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [  ],
 									"source" : [ "obj-14", 0 ]
 								}
 
@@ -470,8 +519,8 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-17", 0 ],
+									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [  ],
 									"source" : [ "obj-15", 0 ]
 								}
 
@@ -479,8 +528,8 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-13", 0 ],
+									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [  ],
 									"source" : [ "obj-16", 0 ]
 								}
 
@@ -488,8 +537,8 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-14", 0 ],
+									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [  ],
 									"source" : [ "obj-3", 0 ]
 								}
 
@@ -499,13 +548,16 @@
 ,
 					"patching_rect" : [ 29.0, 197.0, 84.0, 18.0 ],
 					"saved_object_attributes" : 					{
-						"fontname" : "Arial",
 						"default_fontface" : 0,
-						"globalpatchername" : "",
-						"fontface" : 0,
-						"fontsize" : 10.0,
 						"default_fontname" : "Arial",
-						"default_fontsize" : 10.0
+						"default_fontsize" : 10.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p model:address"
@@ -514,7 +566,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [  ],
+					"annotation" : "an interface for a movie model",
 					"id" : "obj-9",
 					"maxclass" : "bpatcher",
 					"name" : "movie.view.maxpat",
@@ -543,6 +595,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-7",
@@ -557,6 +610,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "a movie playback model",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-6",
@@ -571,6 +625,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "a movie playback model",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-1",
@@ -585,6 +640,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-5",
@@ -599,6 +655,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-4",
@@ -613,12 +670,14 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-3",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 529.0, 278.0, 100.0, 18.0 ],
 					"text" : "wacom.model"
 				}
@@ -628,8 +687,8 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [  ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -637,8 +696,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
+					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [  ],
 					"source" : [ "obj-18", 0 ]
 				}
 
@@ -646,6 +705,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
+					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 527.5, 246.0, 515.0, 246.0, 515.0, 192.0, 38.5, 192.0 ],
 					"source" : [ "obj-4", 0 ]
@@ -655,11 +715,239 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
+					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 527.5, 270.0, 515.0, 270.0, 515.0, 192.0, 38.5, 192.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "wacom.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/wacom",
+				"patcherrelativepath" : "../wacom",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mapperMulti.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mapper.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "movie.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/movie",
+				"patcherrelativepath" : "../../../../../../../../JamomaUserLibs/GMEA/Max/Picture/movie",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.render.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/renderComponents",
+				"patcherrelativepath" : "../../../../../../../../JamomaUserLibs/GMEA/Max/Picture/renderComponents",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "track.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/track",
+				"patcherrelativepath" : "../../../../examples/Modular0.6_overview/track",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "myMovie.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
+				"patcherrelativepath" : "../../../../examples/Modular0.6_overview/movie",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../components/data/maxhelpui",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiResize.js",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../components/data/maxhelpui",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.jamomaPath.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"patcherrelativepath" : "../../../components/data/jamomaPath",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "movie.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/movie",
+				"patcherrelativepath" : "../../../../../../../../JamomaUserLibs/GMEA/Max/Picture/movie",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mouse.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"patcherrelativepath" : "../mouse",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mouse.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"patcherrelativepath" : "../mouse",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mapperMulti.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mapper.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.namespaceMenu.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespaceMenu",
+				"patcherrelativepath" : "../../../components/data/namespaceMenu",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mapperCollSetter.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cueManager.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/quarantined_package/patchers/models/control/cueManager",
+				"patcherrelativepath" : "../../../../../quarantined_package/patchers/models/control/cueManager",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.namespace+.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/quarantined/namespace+",
+				"patcherrelativepath" : "../../../components/quarantined/namespace+",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cueManager.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/quarantined_package/patchers/models/control/cueManager",
+				"patcherrelativepath" : "../../../../../quarantined_package/patchers/models/control/cueManager",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.viewMuter.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/quarantined/muters",
+				"patcherrelativepath" : "../../../components/quarantined/muters",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "s2m.wacom.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.map.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscroute.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.namespace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscinstance.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.cue.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

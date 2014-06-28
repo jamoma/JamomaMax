@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 5
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 378.0, 273.0, 884.0, 438.0 ],
+		"rect" : [ 663.0, 382.0, 884.0, 438.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -49,7 +50,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"outlettype" : [ "bang", "bang" ],
 					"patching_rect" : [ 690.0, 170.0, 47.0, 18.0 ],
 					"text" : "j.init"
 				}
@@ -136,11 +137,12 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1193.0, 69.0, 704.0, 471.0 ],
+						"rect" : [ 654.0, 59.0, 704.0, 471.0 ],
 						"bgcolor" : [ 0.690196, 0.690196, 0.690196, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
@@ -167,7 +169,7 @@
 									"fontsize" : 10.0,
 									"id" : "obj-2",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
+									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 106.0, 6.0, 56.0, 18.0 ],
@@ -181,7 +183,7 @@
 									"fontsize" : 10.0,
 									"id" : "obj-21",
 									"maxclass" : "newobj",
-									"numinlets" : 0,
+									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 66.0, 7.0, 37.0, 18.0 ],
@@ -253,7 +255,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 293.0, 219.0, 100.0, 18.0 ],
-									"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "grow", "close", "zoom", "nofloat", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 1193, 69, 1897, 540, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
+									"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "nogrow", "close", "zoom", "float", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 654, 59, 1358, 530, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
 									"text" : "thispatcher"
 								}
 
@@ -298,8 +300,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 0,
-											"revision" : 5
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 501.0, 577.0, 429.0, 299.0 ],
@@ -805,22 +808,21 @@
 												}
 
 											}
- ],
-										"dependency_cache" : [  ]
+ ]
 									}
 ,
 									"patching_rect" : [ 26.0, 6.0, 37.0, 18.0 ],
 									"saved_object_attributes" : 									{
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
 										"default_fontsize" : 10.0,
 										"description" : "",
-										"fontname" : "Arial",
-										"globalpatchername" : "",
-										"fontface" : 0,
-										"tags" : "",
-										"default_fontface" : 0,
-										"fontsize" : 10.0,
 										"digest" : "",
-										"default_fontname" : "Arial"
+										"fontface" : 0,
+										"fontname" : "Arial",
+										"fontsize" : 10.0,
+										"globalpatchername" : "",
+										"tags" : ""
 									}
 ,
 									"text" : "p set"
@@ -829,9 +831,9 @@
 							}
 , 							{
 								"box" : 								{
-									"coldef" : [ [ 0, 19, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ] ],
+									"coldef" : [ [ 0, 19, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 1, 16, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 2, 149, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 3, 40, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 4, 40, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 5, 149, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 6, 40, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 7, 40, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 8, 73, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 9, 76, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 10, 42, 1, 0.0, 0.0, 0.0, 1.0, 1, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ] ],
 									"colhead" : 1,
-									"cols" : 1,
+									"cols" : 11,
 									"fontname" : "Arial",
 									"fontsize" : 10.0,
 									"hscroll" : 0,
@@ -844,7 +846,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 1.0, 0.0, 702.0, 471.0 ],
 									"rowhead" : 1,
-									"rows" : 1,
+									"rows" : 16,
 									"selmode" : 3
 								}
 
@@ -964,22 +966,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 164.0, 190.0, 88.0, 18.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
 						"default_fontsize" : 10.0,
 						"description" : "",
-						"fontname" : "Arial",
-						"globalpatchername" : "",
-						"fontface" : 0,
-						"tags" : "",
-						"default_fontface" : 0,
-						"fontsize" : 10.0,
 						"digest" : "",
-						"default_fontname" : "Arial"
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p view_mappings"
@@ -999,8 +1000,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 75.0, 119.0, 287.0, 287.0 ],
@@ -1160,22 +1162,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 447.0, 204.0, 117.0, 18.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
 						"default_fontsize" : 10.0,
 						"description" : "",
-						"fontname" : "Arial",
-						"globalpatchername" : "",
-						"fontface" : 0,
-						"tags" : "",
-						"default_fontface" : 0,
-						"fontsize" : 10.0,
 						"digest" : "",
-						"default_fontname" : "Arial"
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p setMapper"
@@ -1194,8 +1195,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 103.0, 415.0, 1167.0, 316.0 ],
@@ -1408,8 +1410,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 0,
-											"revision" : 5
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 75.0, 521.0, 485.0, 322.0 ],
@@ -1703,22 +1706,21 @@
 												}
 
 											}
- ],
-										"dependency_cache" : [  ]
+ ]
 									}
 ,
 									"patching_rect" : [ 1080.0, 110.0, 41.0, 18.0 ],
 									"saved_object_attributes" : 									{
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
 										"default_fontsize" : 10.0,
 										"description" : "",
-										"fontname" : "Arial",
-										"globalpatchername" : "",
-										"fontface" : 0,
-										"tags" : "",
-										"default_fontface" : 0,
-										"fontsize" : 10.0,
 										"digest" : "",
-										"default_fontname" : "Arial"
+										"fontface" : 0,
+										"fontname" : "Arial",
+										"fontsize" : 10.0,
+										"globalpatchername" : "",
+										"tags" : ""
 									}
 ,
 									"text" : "p clear"
@@ -2013,40 +2015,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "mapperCollSetter.maxpat",
-								"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/modules/control/mapperMulti",
-								"type" : "JSON",
-								"implicit" : 1
-							}
-, 							{
-								"name" : "j.receive.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.oscroute.mxo",
-								"type" : "iLaX"
-							}
-, 							{
-								"name" : "j.oscinstance.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 503.0, 144.0, 48.0, 18.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
 						"default_fontsize" : 10.0,
 						"description" : "",
-						"fontname" : "Arial",
-						"globalpatchername" : "",
-						"fontface" : 0,
-						"tags" : "",
-						"default_fontface" : 0,
-						"fontsize" : 10.0,
 						"digest" : "",
-						"default_fontname" : "Arial"
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p visu"
@@ -2057,7 +2040,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-45",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -2073,7 +2056,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-44",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -2098,8 +2081,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 205.0, 216.0 ],
@@ -2313,26 +2297,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "j.receive.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 447.0, 144.0, 52.0, 18.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
 						"default_fontsize" : 10.0,
 						"description" : "",
-						"fontname" : "Arial",
-						"globalpatchername" : "",
-						"fontface" : 0,
-						"tags" : "",
-						"default_fontface" : 0,
-						"fontsize" : 10.0,
 						"digest" : "",
-						"default_fontname" : "Arial"
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p bounds"
@@ -2372,7 +2351,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-9",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -2388,7 +2367,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.658824, 0.658824, 0.658824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-8",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -2436,6 +2415,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"clickthrough" : 1,
 					"id" : "obj-4",
@@ -2472,13 +2452,14 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 84.0, 488.0, 230.0, 231.0 ],
@@ -2553,7 +2534,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 72.0, 85.0, 136.0, 48.0 ],
+									"patching_rect" : [ 72.0, 85.0, 136.0, 47.0 ],
 									"text" : "j.namespace @output brothers @format umenu_prefix"
 								}
 
@@ -2649,26 +2630,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [ 							{
-								"name" : "j.namespace.mxo",
-								"type" : "iLaX"
-							}
  ]
 					}
 ,
 					"patching_rect" : [ 202.0, 92.0, 51.0, 18.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
 						"default_fontsize" : 10.0,
 						"description" : "",
-						"fontname" : "Arial",
-						"globalpatchername" : "",
-						"fontface" : 0,
-						"tags" : "",
-						"default_fontface" : 0,
-						"fontsize" : 10.0,
 						"digest" : "",
-						"default_fontname" : "Arial"
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 10.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p models"
@@ -2721,7 +2697,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 37.0, 171.0, 119.0, 18.0 ],
+					"patching_rect" : [ 37.0, 171.0, 36.0, 18.0 ],
 					"text" : "j.view"
 				}
 
@@ -2732,12 +2708,12 @@
 					"id" : "obj-42",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 18.0, 9.0, 750.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 750.0, 70.0 ],
-					"text" : "/Multi.2"
+					"text" : "/Multi.1"
 				}
 
 			}
@@ -2941,15 +2917,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-42", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2974,72 +2941,6 @@
 					"source" : [ "obj-7", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "mapper.view.maxpat",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/modules/control/mapperMulti",
-				"patcherrelativepath" : "",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.namespaceMenu.maxpat",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/library/components/namespaceMenu",
-				"patcherrelativepath" : "../../../library/components/namespaceMenu",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mapperCollSetter.maxpat",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/modules/control/mapperMulti",
-				"patcherrelativepath" : "",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.namespace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.map.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscroute.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscinstance.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
