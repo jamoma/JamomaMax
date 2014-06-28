@@ -32,6 +32,20 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"patching_rect" : [ 729.0, 142.0, 69.0, 20.0 ],
+					"text" : "opendialog"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-49",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -253,21 +267,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 854.0, 199.0, 99.0, 20.0 ],
-					"text" : "j.remote file/load",
-					"varname" : "j.parameter.mxb[1]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-14",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -408,24 +407,6 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 489.5, 694.0, 104.0, 20.0 ],
 					"text" : "substitute set text"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"clickjump" : 0,
-					"id" : "obj-79",
-					"ignoreclick" : 1,
-					"maxclass" : "j.textslider",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 489.5, 737.0, 160.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 99.0, 149.0, 127.0, 20.0 ],
-					"showvalue" : 0,
-					"text" : "Drop soundfile here",
-					"varname" : "filetext"
 				}
 
 			}
@@ -1275,7 +1256,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "int" ],
-					"patching_rect" : [ 697.0, 166.0, 133.0, 20.0 ],
+					"patching_rect" : [ 697.0, 177.0, 133.0, 20.0 ],
 					"text" : "conformpath slash boot"
 				}
 
@@ -1399,7 +1380,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 854.0, 110.0, 50.0, 18.0 ],
+					"patching_rect" : [ 729.0, 110.0, 50.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 237.0, 66.0, 55.0, 19.0 ],
 					"rounded" : 15.0,
@@ -1694,7 +1675,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 697.0, 199.0, 99.0, 20.0 ],
+					"patching_rect" : [ 697.0, 206.0, 99.0, 20.0 ],
 					"text" : "j.remote file/path",
 					"varname" : "j.parameter.mxb[10]"
 				}
@@ -1791,7 +1772,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 697.0, 110.0, 127.0, 13.0 ],
+					"patching_rect" : [ 697.0, 82.5, 127.0, 13.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 25.0, 300.0, 150.0 ],
 					"types" : [ "AIFF", "WAVE", "Sd2f" ]
@@ -1860,6 +1841,24 @@
 					"patching_rect" : [ 234.0, 25.0, 61.0, 111.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 234.0, 64.0, 61.0, 111.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"clickjump" : 0,
+					"id" : "obj-79",
+					"ignoreclick" : 1,
+					"maxclass" : "j.textslider",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 489.5, 737.0, 160.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 99.0, 149.0, 127.0, 20.0 ],
+					"showvalue" : 0,
+					"text" : "Drop soundfile here",
+					"varname" : "filetext"
 				}
 
 			}
@@ -2029,6 +2028,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-57", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2107,7 +2115,7 @@
 					"destination" : [ "obj-61", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 706.5, 200.0, 706.5, 200.0 ],
+					"midpoints" : [ 706.5, 201.0, 706.5, 201.0 ],
 					"source" : [ "obj-57", 0 ]
 				}
 
@@ -2261,7 +2269,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-83", 0 ]
@@ -2339,6 +2347,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.textslider.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
@@ -2348,10 +2360,6 @@
 			}
 , 			{
 				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{
