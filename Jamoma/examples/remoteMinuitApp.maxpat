@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 2,
 			"architecture" : "x86"
 		}
 ,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 2,
 							"architecture" : "x86"
 						}
 ,
@@ -887,7 +887,6 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "none",
 					"args" : [ "/filter" ],
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",
@@ -906,7 +905,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 565.0, 45.0, 45.0 ]
+					"patching_rect" : [ 80.5, 542.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -919,7 +918,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 119.0, 486.0, 61.0, 19.0 ],
+					"patching_rect" : [ 119.0, 478.0, 61.0, 19.0 ],
 					"text" : "saw~ 330"
 				}
 
@@ -933,23 +932,22 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 486.0, 52.0, 19.0 ],
+					"patching_rect" : [ 67.0, 478.0, 52.0, 19.0 ],
 					"text" : "tri~ 220"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 3,
 					"numoutlets" : 3,
-					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 15.0, 513.5, 123.0, 33.0 ],
+					"outlettype" : [ "", "signal", "signal" ],
+					"patching_rect" : [ 15.0, 500.5, 123.0, 33.0 ],
 					"text" : "equalizer~.model filter"
 				}
 
@@ -979,7 +977,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 347.5, 241.0, 33.0 ],
+					"patching_rect" : [ 5.0, 347.5, 238.0, 33.0 ],
 					"text" : "This j.modular binds on myApplication (see in j.modular.maxhelp)"
 				}
 
@@ -1168,7 +1166,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-5", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-13", 0 ]
@@ -1236,7 +1234,7 @@
 					"destination" : [ "obj-15", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-5", 1 ]
+					"source" : [ "obj-5", 2 ]
 				}
 
 			}
@@ -1245,13 +1243,13 @@
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
+					"source" : [ "obj-5", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 1 ],
+					"destination" : [ "obj-5", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-9", 0 ]
@@ -1261,29 +1259,29 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "equalizer~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/equalizer~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/equalizer~",
+				"patcherrelativepath" : "../patchers/modules/audio/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/equalizer~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/equalizer~",
+				"patcherrelativepath" : "../patchers/modules/audio/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~views.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/equalizer~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/equalizer~",
+				"patcherrelativepath" : "../patchers/modules/audio/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
+				"patcherrelativepath" : "../patchers/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1301,6 +1299,10 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1332,11 +1334,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive~.mxo",
+				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 338.0, 44.0, 607.0, 424.0 ],
+		"rect" : [ 338.0, 44.0, 598.0, 428.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -29,7 +29,6 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-37",
@@ -38,7 +37,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 252.5, 320.0, 224.0, 31.0 ],
+					"patching_rect" : [ 311.5, 320.0, 224.0, 31.0 ],
 					"text" : "j.model @tag video @description \"Create mask based on image foreground.\"",
 					"varname" : "j.model"
 				}
@@ -53,7 +52,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 283.0, 251.0, 40.0, 19.0 ],
+					"patching_rect" : [ 342.0, 251.0, 40.0, 19.0 ],
 					"text" : "round"
 				}
 
@@ -67,7 +66,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 283.0, 221.0, 43.0, 19.0 ],
+					"patching_rect" : [ 342.0, 221.0, 43.0, 19.0 ],
 					"text" : "* 255."
 				}
 
@@ -79,7 +78,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 252.5, 357.0, 25.0, 25.0 ]
+					"patching_rect" : [ 311.5, 357.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -90,7 +89,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 372.0, 25.0, 25.0 ]
+					"patching_rect" : [ 80.0, 372.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -102,7 +101,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 25.0, 25.0, 25.0 ]
+					"patching_rect" : [ 80.0, 25.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -115,7 +114,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 21.0, 140.0, 73.0, 19.0 ],
+					"patching_rect" : [ 80.0, 140.0, 73.0, 19.0 ],
 					"text" : "jit.rgb2luma"
 				}
 
@@ -129,7 +128,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 21.0, 290.0, 116.0, 19.0 ],
+					"patching_rect" : [ 80.0, 290.0, 116.0, 19.0 ],
 					"text" : "j.noiseremoval%"
 				}
 
@@ -387,7 +386,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 126.0, 165.0, 48.0, 19.0 ],
+					"patching_rect" : [ 185.0, 165.0, 48.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -414,7 +413,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 126.0, 200.0, 140.0, 19.0 ],
+					"patching_rect" : [ 185.0, 200.0, 140.0, 19.0 ],
 					"text" : "cv.jit.ravg @alpha 0.0005"
 				}
 
@@ -428,14 +427,13 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 21.0, 240.0, 104.0, 19.0 ],
+					"patching_rect" : [ 80.0, 240.0, 104.0, 19.0 ],
 					"text" : "jit.op @op absdiff"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1013",
@@ -444,14 +442,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 141.0, 68.0, 267.0, 31.0 ],
+					"patching_rect" : [ 200.0, 68.0, 267.0, 31.0 ],
 					"text" : "j.message filter/clear @type none @description \"Reset filter used for background removal.\""
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"color" : [ 0.8, 0.839216, 0.709804, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1012",
@@ -460,7 +458,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 283.0, 116.0, 294.0, 67.0 ],
+					"patching_rect" : [ 342.0, 116.0, 294.0, 67.0 ],
 					"text" : "j.parameter threshold @type decimal @range 0 1 @clipmode both @ramp/drive Max @ramp/function linear @description \"Threshold level for masking, based on absolute difference between foreground and background.\"",
 					"varname" : "module_in[2]"
 				}
@@ -475,14 +473,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 21.0, 330.0, 131.0, 19.0 ],
+					"patching_rect" : [ 80.0, 330.0, 131.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"color" : [ 0.8, 0.839216, 0.709804, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1086",
@@ -491,7 +489,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 126.0, 22.0, 451.0, 43.0 ],
+					"patching_rect" : [ 185.0, 22.0, 451.0, 43.0 ],
 					"text" : "j.parameter filter/feedback @type decimal @range 0 1 @clipmode both @ramp/drive Max @ramp/function linear @description \"Feedback coefficient. Used for background removal by calculating running mean of incomming image.\"",
 					"varname" : "module_in[1]"
 				}
@@ -506,7 +504,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 21.0, 87.0, 58.0, 19.0 ],
+					"patching_rect" : [ 80.0, 87.0, 58.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
@@ -544,7 +542,7 @@
 					"destination" : [ "obj-125", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 150.5, 131.5, 150.0, 131.5 ],
+					"midpoints" : [ 209.5, 131.5, 209.0, 131.5 ],
 					"source" : [ "obj-1013", 0 ]
 				}
 
@@ -563,7 +561,7 @@
 					"destination" : [ "obj-125", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 135.5, 139.0, 135.5, 139.0 ],
+					"midpoints" : [ 194.5, 139.0, 194.5, 139.0 ],
 					"source" : [ "obj-1086", 0 ]
 				}
 
@@ -636,7 +634,7 @@
 					"destination" : [ "obj-20", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 292.5, 274.0, 127.5, 274.0 ],
+					"midpoints" : [ 351.5, 274.0, 186.5, 274.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -646,7 +644,7 @@
 					"destination" : [ "obj-125", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 135.5, 230.0, 276.0, 230.0, 276.0, 153.0, 164.5, 153.0 ],
+					"midpoints" : [ 194.5, 230.0, 335.0, 230.0, 335.0, 153.0, 223.5, 153.0 ],
 					"source" : [ "obj-89", 0 ]
 				}
 
@@ -663,8 +661,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.noiseremoval%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/noiseremoval%",
-				"patcherrelativepath" : "../../../../components/video/noiseremoval%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/noiseremoval%",
+				"patcherrelativepath" : "../../../components/noiseremoval%",
 				"type" : "JSON",
 				"implicit" : 1
 			}

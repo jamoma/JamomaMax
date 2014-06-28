@@ -163,8 +163,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 122.5, 301.5, 351.0, 31.0 ],
-									"text" : "j.parameter render/context @type string @description \"The named drawing context in which to draw.\" @default my_context",
+									"patching_rect" : [ 122.5, 301.5, 329.0, 31.0 ],
+									"text" : "j.parameter render/context @type string @description \"The named drawing context in which to draw.\"",
 									"varname" : "render/context"
 								}
 
@@ -610,7 +610,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 60.5, 207.0, 80.0, 19.0 ],
+									"patching_rect" : [ 59.0, 198.0, 80.0, 19.0 ],
 									"text" : "prepend scale"
 								}
 
@@ -624,7 +624,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 40.0, 139.600006, 85.0, 19.0 ],
+									"patching_rect" : [ 40.0, 134.600006, 85.0, 19.0 ],
 									"text" : "prepend rotate"
 								}
 
@@ -654,7 +654,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 60.5, 172.799988, 353.0, 31.0 ],
+									"patching_rect" : [ 59.0, 161.799988, 353.0, 31.0 ],
 									"text" : "j.parameter 3D/scale @ramp/drive Max @type array @description \"3D scaling factor as xyz coordinates.\" @default 1. 1. 1.",
 									"varname" : "3D/scale"
 								}
@@ -859,7 +859,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 8.0, 20.0, 657.0, 31.0 ],
+									"patching_rect" : [ 8.0, 20.0, 655.0, 31.0 ],
 									"text" : "j.parameter blend/mode @type array @description \"Blend modes for source and destination planes.\" @default 6 7 @range 0 10 @clipmode both",
 									"varname" : "blend/mode"
 								}

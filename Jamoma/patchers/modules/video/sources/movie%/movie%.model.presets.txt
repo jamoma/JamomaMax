@@ -16,5 +16,6 @@ dim 640 480
 rate 1
 loop normal
 loop/notify 0
+loop/points 0 0
 vol 1
 framedump 0

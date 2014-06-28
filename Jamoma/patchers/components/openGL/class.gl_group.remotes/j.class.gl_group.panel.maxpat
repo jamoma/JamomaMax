@@ -30,20 +30,6 @@
 		"title" : "/videoplane%/GL",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 26.0, 217.0, 100.0, 20.0 ],
-					"text" : "loadmess #1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-46",
@@ -51,7 +37,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 151.0, 273.0, 75.0, 19.0 ],
+					"patching_rect" : [ 142.0, 266.0, 75.0, 19.0 ],
 					"text" : "prepend title"
 				}
 
@@ -65,7 +51,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 151.0, 295.0, 67.0, 19.0 ],
+					"patching_rect" : [ 142.0, 288.0, 67.0, 19.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
@@ -134,7 +120,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 5.5, 192.0, 100.0, 20.0 ],
+					"patching_rect" : [ 5.5, 200.0, 100.0, 20.0 ],
 					"text" : "zl reg"
 				}
 
@@ -163,7 +149,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 137.0, 241.0, 125.0, 17.0 ],
+					"patching_rect" : [ 122.0, 232.0, 125.0, 17.0 ],
 					"text" : "/noModelAddress"
 				}
 
@@ -256,11 +242,11 @@
 					"fontsize" : 12.0,
 					"id" : "obj-23",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 5.5, 247.0, 100.0, 20.0 ],
-					"text" : "sprintf %s/%s"
+					"patching_rect" : [ 5.5, 232.0, 100.0, 20.0 ],
+					"text" : "sprintf %s/GL"
 				}
 
 			}
@@ -283,7 +269,7 @@
 					"annotation" : "none",
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
-					"name" : "j.gl_group.view.maxpat",
+					"name" : "j.class.gl_group.remotes.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.5, 382.0, 203.0, 130.0 ],
@@ -371,7 +357,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 116.5, 115.0, 231.0, 115.0, 231.0, 208.0, 146.5, 208.0 ],
+					"midpoints" : [ 116.5, 115.0, 231.0, 115.0, 231.0, 208.0, 131.5, 208.0 ],
 					"source" : [ "obj-18", 1 ]
 				}
 
@@ -382,15 +368,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-19", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-23", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -471,45 +448,10 @@
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 146.5, 307.0, 15.0, 307.0 ],
+					"midpoints" : [ 131.5, 307.0, 15.0, 307.0 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../data/list2parameter",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.dataspace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

@@ -1,0 +1,19 @@
+CUE initialization
+
+	/qmetro/toggle 1
+	/qmetro/time 40
+	
+	/moviePlayer/read sunset.jpg
+	/moviePlayer/start
+	
+	/textDisplay/render/context foo				# Set context to draw to
+	/textDisplay/3D/position 0. -1.15 0.	# Set position so that all text is below the edge of the screen
+	/textDisplay/fontsize 16							# font size
+	
+CUE read_text_file
+	
+	/textDisplay/read GNU-LGPL.txt
+	
+CUE scroll
+	
+	/textDisplay/3D/position 0. 20. 0. ramp 120000
