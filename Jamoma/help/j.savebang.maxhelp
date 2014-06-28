@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 785.0, 49.0, 449.0, 341.0 ],
+		"rect" : [ 100.0, 100.0, 449.0, 341.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -105,7 +105,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 785.0, 75.0, 449.0, 315.0 ],
+						"rect" : [ 100.0, 126.0, 449.0, 315.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -137,7 +137,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 214.0, 182.0, 120.0, 62.0 ],
+									"patching_rect" : [ 214.0, 182.0, 121.0, 62.0 ],
 									"text" : "This will send a bang when saving patch",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
@@ -155,7 +155,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 15.0, 9.0, 309.0, 138.0 ]
+									"patching_rect" : [ -2.0, 0.0, 451.0, 125.0 ]
 								}
 
 							}
@@ -181,8 +181,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 246.0, 34.0, 20.0 ],
-									"text" : "print"
+									"patching_rect" : [ 108.0, 246.0, 106.0, 20.0 ],
+									"text" : "print patch_saved"
 								}
 
 							}
@@ -242,7 +242,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

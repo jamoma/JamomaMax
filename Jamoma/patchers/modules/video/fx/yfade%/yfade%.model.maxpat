@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 242.0, 145.0, 524.0, 424.0 ],
+		"rect" : [ 242.0, 145.0, 502.0, 364.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -34,7 +34,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 317.0, 373.0, 25.0, 25.0 ]
+					"patching_rect" : [ 316.0, 312.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -47,7 +47,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 31.0, 310.0, 130.0, 19.0 ],
+					"patching_rect" : [ 30.0, 260.0, 130.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -63,7 +63,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 317.0, 310.0, 170.0, 43.0 ],
+					"patching_rect" : [ 316.0, 260.0, 170.0, 43.0 ],
 					"text" : "j.model @description \"crossfade a source to two outputs\"",
 					"varname" : "j.model"
 				}
@@ -385,7 +385,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 18.0, 189.0, 317.0, 21.0 ],
+					"patching_rect" : [ 17.0, 172.0, 317.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -410,7 +410,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 167.0, 373.0, 25.0, 25.0 ]
+					"patching_rect" : [ 166.0, 312.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -423,7 +423,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 167.0, 231.0, 113.0, 19.0 ],
+					"patching_rect" : [ 166.0, 214.0, 113.0, 19.0 ],
 					"text" : "jit.op @op * @val 1."
 				}
 
@@ -437,7 +437,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 125.0, 157.0, 30.0, 19.0 ],
+					"patching_rect" : [ 124.0, 140.0, 30.0, 19.0 ],
 					"text" : "!- 1."
 				}
 
@@ -450,21 +450,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 272.0, 17.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-8",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 57.0, 268.0, 87.0, 19.0 ],
-					"text" : "VIDEO OUTPUT"
+					"patching_rect" : [ 315.0, 18.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -475,7 +461,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 31.0, 373.0, 25.0, 25.0 ]
+					"patching_rect" : [ 30.0, 312.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -488,7 +474,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 31.0, 231.0, 113.0, 19.0 ],
+					"patching_rect" : [ 30.0, 214.0, 113.0, 19.0 ],
 					"text" : "jit.op @op * @val 1."
 				}
 
@@ -502,7 +488,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 167.0, 310.0, 130.0, 19.0 ],
+					"patching_rect" : [ 166.0, 260.0, 130.0, 19.0 ],
 					"text" : "j.out 2 @type jit_matrix"
 				}
 
@@ -518,7 +504,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 112.0, 17.0, 136.0, 79.0 ],
+					"patching_rect" : [ 17.0, 18.0, 138.0, 79.0 ],
 					"text" : "j.parameter yfade @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 1. @clipmode both @description \"Crossfade switch\"",
 					"varname" : "yfade"
 				}
@@ -533,7 +519,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 272.0, 52.0, 78.0, 19.0 ],
+					"patching_rect" : [ 315.0, 54.0, 78.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
@@ -553,7 +539,7 @@
 					"destination" : [ "obj-1002", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 325.5, 259.0, 176.5, 259.0 ],
+					"midpoints" : [ 324.5, 242.0, 175.5, 242.0 ],
 					"source" : [ "obj-1", 2 ]
 				}
 
@@ -563,7 +549,7 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 27.5, 256.0, 40.5, 256.0 ],
+					"midpoints" : [ 26.5, 239.0, 39.5, 239.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -618,6 +604,7 @@
 					"destination" : [ "obj-3", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 26.5, 118.0, 269.5, 118.0 ],
 					"source" : [ "obj-1010", 0 ]
 				}
 
@@ -627,6 +614,7 @@
 					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 26.5, 127.0, 133.5, 127.0 ],
 					"source" : [ "obj-1010", 0 ]
 				}
 
