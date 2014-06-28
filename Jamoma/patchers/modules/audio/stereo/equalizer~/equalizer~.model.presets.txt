@@ -1,5 +1,3 @@
-
-
 - preset "default"
 # ""edit a comment""
 bands 4
