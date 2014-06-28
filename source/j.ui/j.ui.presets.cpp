@@ -16,6 +16,63 @@
 
 #include "j.ui.h"
 
+void ui_preset_store_next(t_ui *x)	
+{
+	long result;
+	char *text;
+	char buf[512];
+	
+	strcpy(buf, "chateau de preset");
+	
+	result = jdialog_showtext("Provide a Name for This Preset", buf, 0, &text);
+	if (result != 1)
+		return;
+	
+	ui_viewer_send(x, TTSymbol("preset:store"), TTSymbol(text));
+	
+	// TODO: do we not have to free text?
+}
+
+void ui_preset_doread(t_ui *x)
+{
+	char 			filename[MAX_FILENAME_CHARS];	// for storing the name of the file locally
+	char 			fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
+	char			posixpath[MAX_PATH_CHARS];
+	short 			path;                           // pathID#
+    t_fourcc		filetype = 'TEXT', outtype;     // the file type that is actually true
+    ObjectPtr       modelObject;
+    t_atom          a[1];
+	
+	if (open_dialog(filename, &path, &outtype, &filetype, 1))		// Returns 0 if successful
+		return;														// User Cancelled
+
+	path_topathname(path, filename, fullpath);
+	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
+    
+    // get model object
+    modelObject = ui_get_model_object(x);
+    if (modelObject) {
+            
+        atom_setsym(a, gensym(posixpath));
+            
+        // send a preset:read path message
+        object_method_typed(modelObject, gensym("preset:read"), 1, a, NULL);
+	}
+}
+
+void ui_preset_dowrite(t_ui *x)
+{
+	ObjectPtr       modelObject;
+	
+    // get model object
+    modelObject = ui_get_model_object(x);
+    if (modelObject)
+
+        // send a preset:write path message
+        object_method_typed(modelObject, gensym("preset:write"), 0, NULL, NULL);
+
+}
+
 void ui_return_preset_names(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	t_ui* obj = (t_ui*)self;

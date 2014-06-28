@@ -1,5 +1,5 @@
 ##############################
-CUE initialisation # (fold)
+- cue initialisation # (fold)
 ##############################
 
     # Model input_help
@@ -47,7 +47,7 @@ CUE initialisation # (fold)
 
 
 ##############################
-CUE audio_on # (fold)
+- cue audio_on # (fold)
 ##############################
 
     # Model output_help
@@ -65,7 +65,7 @@ CUE audio_on # (fold)
 
 
 ##############################
-CUE fade_in # (fold)
+- cue fade_in # (fold)
 ##############################
 
     # Model output_help
@@ -76,13 +76,13 @@ CUE fade_in # (fold)
 
 
 ##############################
-CUE sweep # (fold)
+- cue sweep # (fold)
 ##############################
 
     # Model filter_help
     /filter_help/frequency 3000 ramp 3000
     
-    WAIT 6000                                   # The wait directive pauses us for 6 seconds
+    - wait 6000                                   # The - wait directive pauses us for 6 seconds
     
     /filter_help/frequency 200 ramp 3000
 
@@ -91,7 +91,7 @@ CUE sweep # (fold)
 
 
 ##############################
-CUE dataspaceDemo	# (fold)
+- cue dataspaceDemo	# (fold)
 ##############################
 
 	# This makes gain changes audible on cheap laptop speakers
@@ -100,17 +100,17 @@ CUE dataspaceDemo	# (fold)
     # Set gain using dB unit
 	/output_help/audio/gain 0 dB
 	
-	WAIT 2000
+	- wait 2000
 	
     # Set gain using the default unit (midi)
 	/output_help/audio/gain 0
 	
-	WAIT 2000
+	- wait 2000
 	
     # Ramp to new value specified using the linear unit
 	/output_help/audio/gain 0.5 linear ramp 2000
 		
-	WAIT 4000
+	- wait 4000
 	
 	# Change the ramp function from the default linear function to a cosince function
 	/output_help/audio/gain:/ramp/function cosine
@@ -125,10 +125,10 @@ CUE dataspaceDemo	# (fold)
 
 
 ##############################
-CUE fade_out	# (fold)
+- cue fade_out	# (fold)
 ##############################
 
-	# If you've been utilising the WAIT command, it is a good idea to make
+	# If you've been utilising the - wait command, it is a good idea to make
 	# sure that the next event sets all parameters to expected final state of
 	# previous cue. This prevents errouneous state in the case that the next cue
 	# is triggered before the previous one had finished executing.
@@ -142,7 +142,7 @@ CUE fade_out	# (fold)
 
 
 ##############################
-CUE audio_off	# (fold)
+- cue audio_off	# (fold)
 ##############################
     
     # Model input_help

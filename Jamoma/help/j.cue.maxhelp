@@ -269,7 +269,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 207.5, 213.0, 56.0, 18.0 ],
-									"text" : "new init"
+									"text" : "store init"
 								}
 
 							}
@@ -1463,7 +1463,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
+						"rect" : [ 91.0, 80.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1577,7 +1577,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 301.0, 475.0, 205.0, 18.0 ]
+									"patching_rect" : [ 301.0, 475.0, 205.0, 18.0 ],
+									"text" : "ramp Init 1000"
 								}
 
 							}
@@ -1791,8 +1792,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 251.0, 255.0, 69.0, 18.0 ],
-									"text" : "delete 2"
+									"patching_rect" : [ 251.0, 255.0, 61.0, 18.0 ],
+									"text" : "remove 2"
 								}
 
 							}
@@ -1806,7 +1807,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 251.0, 231.0, 69.0, 18.0 ],
-									"text" : "delete init"
+									"text" : "remove init"
 								}
 
 							}
@@ -4497,7 +4498,7 @@
 									"patching_rect" : [ 373.0, 117.0, 96.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 253.0, 168.0, 336.0, 18.0 ],
-									"text" : "new initialState"
+									"text" : "store initialState"
 								}
 
 							}
@@ -4619,7 +4620,7 @@
 									"patching_rect" : [ 373.0, 232.0, 111.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 302.0, 299.0, 111.0, 18.0 ],
-									"text" : "new optionalState"
+									"text" : "store optionalState"
 								}
 
 							}
@@ -4635,7 +4636,7 @@
 									"patching_rect" : [ 373.0, 191.0, 109.0, 18.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 302.0, 258.0, 109.0, 18.0 ],
-									"text" : "new anotherState"
+									"text" : "store anotherState"
 								}
 
 							}
@@ -4911,7 +4912,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 91.0, 80.0, 1012.0, 622.0 ],
+						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5281,7 +5282,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 323.5, 185.0, 103.0, 18.0 ],
-									"text" : "new anotherCue"
+									"text" : "store anotherCue"
 								}
 
 							}
@@ -5324,7 +5325,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 323.5, 160.0, 56.0, 18.0 ],
-									"text" : "new init"
+									"text" : "store init"
 								}
 
 							}
@@ -5560,22 +5561,22 @@
 			}
 , 			{
 				"name" : "degrade~.module.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/degrade~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/degrade~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/degrade~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}

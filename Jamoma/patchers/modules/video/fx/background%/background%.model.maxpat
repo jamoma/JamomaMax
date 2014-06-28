@@ -29,18 +29,45 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "Video output",
-					"id" : "obj-2",
-					"maxclass" : "outlet",
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-11",
+					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 338.5, 384.0, 25.0, 25.0 ]
+					"patching_rect" : [ 264.5, 99.0, 81.0, 19.0 ],
+					"text" : "un-connected"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-8",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 264.5, 80.0, 99.0, 19.0 ],
+					"text" : "there also was an"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "Video output",
+					"id" : "obj-2",
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 338.5, 367.0, 25.0, 25.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-31",
@@ -57,9 +84,8 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -306,7 +332,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 164.0, 296.0, 83.0, 21.0 ],
+					"patching_rect" : [ 164.0, 296.0, 69.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -326,6 +352,20 @@
 			}
 , 			{
 				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-5",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 189.5, 386.0, 90.0, 19.0 ],
+					"text" : "VIDEO OUTPUT"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "Video output",
 					"id" : "obj-6",
 					"maxclass" : "outlet",
@@ -337,9 +377,8 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -823,7 +862,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 164.0, 323.0, 120.0, 21.0 ],
+					"patching_rect" : [ 164.0, 323.0, 100.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -843,9 +882,8 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"id" : "obj-9",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -1042,7 +1080,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 22.0, 209.0, 62.0, 21.0 ],
+					"patching_rect" : [ 22.0, 197.0, 53.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1057,6 +1095,20 @@
 					}
 ,
 					"text" : "p simple"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-10",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 264.5, 119.0, 81.0, 19.0 ],
+					"text" : "IMAGE INPUT"
 				}
 
 			}
@@ -1084,7 +1136,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 65.0, 128.0, 30.0, 19.0 ],
+					"patching_rect" : [ 93.0, 130.0, 30.0, 19.0 ],
 					"triscale" : 0.9
 				}
 
@@ -1098,16 +1150,15 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 65.0, 159.0, 325.0, 19.0 ],
+					"patching_rect" : [ 93.0, 155.0, 244.0, 19.0 ],
 					"text" : "gate 3 2"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"id" : "obj-15",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -1921,7 +1972,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 312.0, 209.0, 78.0, 21.0 ],
+					"patching_rect" : [ 272.0, 197.0, 66.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1941,9 +1992,8 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"id" : "obj-16",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -2178,7 +2228,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 164.0, 209.0, 125.0, 21.0 ],
+					"patching_rect" : [ 119.0, 197.0, 106.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -2212,28 +2262,40 @@
 			}
 , 			{
 				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-21",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 175.0, 80.0, 80.0, 19.0 ],
+					"text" : "VIDEO INPUT"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "Video input",
 					"id" : "obj-22",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 371.0, 95.0, 25.0, 25.0 ]
+					"patching_rect" : [ 150.0, 80.0, 25.0, 25.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1020",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 22.0, 17.093468, 272.0, 31.0 ],
+					"patching_rect" : [ 22.0, 6.093468, 503.0, 19.0 ],
 					"text" : "j.parameter record @type boolean @description \"Turn on recording of the background image.\"",
 					"varname" : "record"
 				}
@@ -2241,7 +2303,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1027",
@@ -2250,7 +2311,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 65.0, 56.093468, 298.5, 31.0 ],
+					"patching_rect" : [ 93.0, 38.093468, 432.0, 31.0 ],
 					"text" : "j.parameter mode @type integer @description \"Choose between four different background subtraction models.\"",
 					"varname" : "mode"
 				}
@@ -2279,7 +2340,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 371.0, 128.0, 37.0, 19.0 ],
+					"patching_rect" : [ 150.0, 113.0, 37.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
@@ -2323,7 +2384,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"color" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2333,7 +2393,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"color" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2391,7 +2450,7 @@
 					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 321.5, 255.0, 173.5, 255.0 ],
+					"midpoints" : [ 281.5, 233.0, 173.5, 233.0 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -2401,7 +2460,7 @@
 					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 173.5, 233.0, 173.5, 233.0 ],
+					"midpoints" : [ 128.5, 233.0, 173.5, 233.0 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -2467,7 +2526,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}

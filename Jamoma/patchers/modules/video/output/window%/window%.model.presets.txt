@@ -1,19 +1,11 @@
 
+
 - preset "default"
 # "edit a comment"
 data/active 1
-border 1
-floating 0
+data/bypass 0
 fullscreen 0
 fullscreen/shortcut 27
-grow 1
-fsmenubar 1
-interp 0
-fsaa 0
-depthbuffer 1
-doublebuffer 1
-shared 0
-sync 0
+interpolate 0
+position 15 45
 size 320 240
-position 0.000000 45.000000
-

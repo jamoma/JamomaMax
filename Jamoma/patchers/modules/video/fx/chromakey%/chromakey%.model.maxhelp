@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 43.0, 52.0, 664.0, 625.0 ],
+		"rect" : [ 43.0, 52.0, 717.0, 641.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -43,6 +43,21 @@
 			}
 , 			{
 				"box" : 				{
+					"id" : "obj-3",
+					"lockeddragscroll" : 1,
+					"maxclass" : "bpatcher",
+					"name" : "brcosa%.module.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 387.0, 162.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 623.0, 191.0, 300.0, 70.0 ],
+					"varname" : "brcosa%"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"args" : [ "@name", "chromakey%", "@description", "Choke chromakey 2 sources" ],
 					"bgmode" : 1,
 					"id" : "obj-1",
@@ -50,7 +65,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 664.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 717.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -62,11 +77,11 @@
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-2",
-					"linecount" : 15,
+					"linecount" : 13,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 22.0, 411.5, 623.0, 189.0 ],
+					"patching_rect" : [ 11.0, 445.5, 699.0, 164.0 ],
 					"text" : "Possible to choose the color with the R G and B values or by a click in the left screen (which will make the image appear) or using the color swatch.\n\nchromakey% measures the chromatic distance of all of the left input's cells(pixels) with a reference color. the total distance is calculated by summing the absolute value of each color channel's distance from the reference color's corresponding color channel. if the distance is less than or equal to the tolerated distance(tol), the right input cell is multiplied by maxkey. if the distance is greater than tol, but less than tol + fade, some value between minkey and maxkey is applied. any values of greater distance, and the right input cell is multiplied by minkey. the left input is always multiplied by the additive inverse of the left input's multiplicand.\n\njmod.chromakey%.module works with all data types, any number of planes, but the planecount of all inputs and outputs must be equal.\n\nfor char data, the floating point input 0-1 is scaled to the range 0 to 255, for long data, the floating point input is converted to int(truncated) for color, tol, and fade. long mode 0 output is in the range 0-255."
 				}
 
@@ -80,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 341.0, 109.0, 300.0, 70.0 ],
+					"patching_rect" : [ 387.0, 83.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
 
@@ -107,7 +122,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 347.0, 207.0, 240.0, 180.0 ],
+					"patching_rect" : [ 387.0, 254.0, 240.0, 180.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 240.0, 180.0 ]
 				}
 
@@ -130,10 +145,9 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-30", 1 ],
+					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 350.5, 196.0, 312.5, 196.0 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
@@ -149,10 +163,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-30", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 396.5, 238.0, 334.0, 238.0, 334.0, 202.0, 312.5, 202.0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 31.5, 356.0, 329.5, 356.0, 329.5, 202.0, 356.5, 202.0 ],
+					"midpoints" : [ 31.5, 382.0, 373.0, 382.0, 373.0, 248.0, 396.5, 248.0 ],
 					"source" : [ "obj-30", 0 ]
 				}
 
@@ -162,7 +186,7 @@
 					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 112.5, 190.0, 331.0, 190.0, 331.0, 99.0, 350.5, 99.0 ],
+					"midpoints" : [ 112.5, 190.0, 372.0, 190.0, 372.0, 78.0, 396.5, 78.0 ],
 					"source" : [ "obj-4", 1 ]
 				}
 
@@ -216,7 +240,7 @@
 				"name" : "input%.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
 				"patcherrelativepath" : "../../sources/input%",
-				"type" : "TEXT",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -230,7 +254,7 @@
 				"name" : "movie%.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
 				"patcherrelativepath" : "../../sources/movie%",
-				"type" : "TEXT",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -293,6 +317,27 @@
 				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
 				"patcherrelativepath" : "../../../../components/data/jamomaPath",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "brcosa%.module.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/brcosa%",
+				"patcherrelativepath" : "../brcosa%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "brcosa%.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/brcosa%",
+				"patcherrelativepath" : "../brcosa%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "brcosa%.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/brcosa%",
+				"patcherrelativepath" : "../brcosa%",
 				"type" : "JSON",
 				"implicit" : 1
 			}

@@ -323,8 +323,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 356.0, 346.0, 125.0, 20.0 ],
-					"text" : "j.send script/edit_with"
+					"patching_rect" : [ 356.0, 346.0, 112.0, 20.0 ],
+					"text" : "j.send file/edit_with"
 				}
 
 			}
@@ -554,7 +554,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 375.333344, 541.0, 67.0, 19.0 ],
+					"patching_rect" : [ 386.0, 538.0, 67.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -664,8 +664,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 355.0, 210.0, 103.0, 20.0 ],
-					"text" : "j.send script/save"
+					"patching_rect" : [ 355.0, 210.0, 90.0, 20.0 ],
+					"text" : "j.send file/write"
 				}
 
 			}
@@ -678,8 +678,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 355.0, 295.0, 102.0, 20.0 ],
-					"text" : "j.send script/view"
+					"patching_rect" : [ 355.0, 295.0, 84.0, 20.0 ],
+					"text" : "j.send file/edit"
 				}
 
 			}
@@ -692,8 +692,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 356.0, 509.0, 77.0, 20.0 ],
-					"text" : "j.remote cue"
+					"patching_rect" : [ 356.0, 509.0, 109.0, 20.0 ],
+					"text" : "j.remote cue/recall"
 				}
 
 			}
@@ -720,8 +720,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 355.0, 132.0, 102.0, 20.0 ],
-					"text" : "j.send script/read"
+					"patching_rect" : [ 355.0, 132.0, 88.0, 20.0 ],
+					"text" : "j.send file/path"
 				}
 
 			}
@@ -804,11 +804,11 @@
 					"id" : "obj-32",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -897,7 +897,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 384.833344, 568.0, 346.5, 568.0, 346.5, 477.0, 365.5, 477.0 ],
+					"midpoints" : [ 395.5, 568.0, 346.5, 568.0, 346.5, 477.0, 365.5, 477.0 ],
 					"source" : [ "obj-19", 0 ]
 				}
 
