@@ -31,46 +31,19 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"id" : "obj-14",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 41.0, 28.0, 539.0, 19.0 ],
-					"text" : "j.message genframe @type none@description \"generate a video frame (send a bang to the jitter object)\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-10",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 25.0, 2.0, 419.0, 19.0 ],
-					"text" : "j.message direct @type generic @description \"directly access to the jitter object\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-9",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 57.0, 178.0, 37.0, 19.0 ],
+					"patching_rect" : [ 43.0, 127.0, 37.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-13",
@@ -79,7 +52,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 239.0, 249.0, 272.0, 31.0 ],
+					"patching_rect" : [ 225.0, 198.0, 272.0, 31.0 ],
 					"text" : "j.model @description \"Perform mathematical operations using two video inputs as the operands\"",
 					"varname" : "j.model"
 				}
@@ -92,7 +65,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 239.0, 302.0, 25.0, 25.0 ]
+					"patching_rect" : [ 225.0, 251.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -105,7 +78,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 57.0, 107.0, 83.0, 19.0 ],
+					"patching_rect" : [ 12.0, 57.0, 68.0, 19.0 ],
 					"text" : "prepend op"
 				}
 
@@ -118,7 +91,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 116.0, 143.0, 25.0, 25.0 ]
+					"patching_rect" : [ 102.0, 92.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -130,21 +103,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 57.0, 143.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-6",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 58.0, 302.0, 89.0, 19.0 ],
-					"text" : "VIDEO OUTPUT"
+					"patching_rect" : [ 43.0, 92.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -155,7 +114,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 26.0, 301.0, 25.0, 25.0 ]
+					"patching_rect" : [ 12.0, 250.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -168,7 +127,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 26.0, 227.0, 110.0, 19.0 ],
+					"patching_rect" : [ 12.0, 176.0, 110.0, 19.0 ],
 					"text" : "jit.op"
 				}
 
@@ -182,7 +141,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 26.0, 261.0, 130.0, 19.0 ],
+					"patching_rect" : [ 12.0, 210.0, 130.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -196,13 +155,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 116.0, 178.0, 37.0, 19.0 ],
+					"patching_rect" : [ 102.0, 127.0, 37.0, 19.0 ],
 					"text" : "j.in 2"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1007",
@@ -211,7 +171,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 172.0, 143.0, 348.0, 43.0 ],
+					"patching_rect" : [ 158.0, 92.0, 348.0, 43.0 ],
 					"text" : "j.parameter opValue @type decimal @ramp/drive Max @repetitions/filter 1 @description \"Number to associate with operation.\"",
 					"varname" : "op_value"
 				}
@@ -219,6 +179,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1016",
@@ -227,7 +188,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 57.0, 62.0, 368.0, 31.0 ],
+					"patching_rect" : [ 12.0, 12.0, 368.0, 31.0 ],
 					"text" : "j.parameter op @type string @description \"Chooses the type of operation to perform on the two video inputs to the module.\"",
 					"varname" : "op"
 				}
@@ -239,18 +200,8 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 66.5, 136.0, 35.5, 136.0 ],
+					"midpoints" : [ 21.5, 85.0, 21.5, 85.0 ],
 					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 34.5, 124.0, 35.5, 124.0 ],
-					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -286,7 +237,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 66.5, 110.5, 66.5, 110.5 ],
+					"midpoints" : [ 21.5, 60.5, 21.5, 60.5 ],
 					"source" : [ "obj-1016", 0 ]
 				}
 
@@ -302,20 +253,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 50.5, 129.5, 35.5, 129.5 ],
-					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1002", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 125.5, 172.5, 125.5, 172.5 ],
+					"midpoints" : [ 111.5, 121.5, 111.5, 121.5 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -325,7 +266,7 @@
 					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 66.5, 172.5, 66.5, 172.5 ],
+					"midpoints" : [ 52.5, 121.5, 52.5, 121.5 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -363,10 +304,6 @@
 			}
 , 			{
 				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]

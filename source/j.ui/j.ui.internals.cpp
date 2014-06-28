@@ -499,14 +499,6 @@ void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	}
 }
 
-void ui_return_metersdefeated(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	t_ui* obj = (t_ui*)self;
-	
-	obj->is_metersdefeated = atom_getlong(argv);
-	jbox_redraw(&obj->box);
-}
-
 void ui_return_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	t_ui* obj = (t_ui*)self;
@@ -740,15 +732,9 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (preset != obj->has_preset) {
 			obj->has_preset = preset;
 			if (preset) {
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:recall"), obj->modelAddress, NO); // don't subscribe this viewer
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:store"), obj->modelAddress, NO); // don't subscribe this viewer
 				ui_viewer_create(obj, &anObject, gensym("return_preset_names"), TTSymbol("preset:names"), obj->modelAddress, NO); // don't subscribe this viewer
 			}
 			else {
-				ui_viewer_destroy(obj, TTSymbol("preset:recall"));
-				obj->hash_viewers->remove(TTSymbol("preset:recall"));
-				ui_viewer_destroy(obj, TTSymbol("preset:store"));
-				obj->hash_viewers->remove(TTSymbol("preset:store"));
 				ui_viewer_destroy(obj, TTSymbol("preset:names"));
 				obj->hash_viewers->remove(TTSymbol("preset:names"));
 			}
@@ -757,24 +743,8 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		}
 		
 		// model
-		if (model != obj->has_model) {
+		if (model != obj->has_model)
 			obj->has_model = model;
-			if (model) {
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:internal/open"), obj->modelAddress, NO); // don't subscribe this viewer
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:help/open"), obj->modelAddress, NO); // don't subscribe this viewer
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:reference/open"), obj->modelAddress, NO); // don't subscribe this viewer
-            }
-			else {
-                ui_viewer_destroy(obj, TTSymbol("model:internal/open"));
-				obj->hash_viewers->remove(TTSymbol("model:internal/open"));
-				ui_viewer_destroy(obj, TTSymbol("model:help/open"));
-				obj->hash_viewers->remove(TTSymbol("model:help/open"));
-                ui_viewer_destroy(obj, TTSymbol("model:reference/open"));
-				obj->hash_viewers->remove(TTSymbol("model:reference/open"));
-			}
-			
-			change = true;
-		}
 		
 		if (change)
 			jbox_redraw(&obj->box);

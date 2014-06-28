@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 116.0, 92.0, 685.0, 467.0 ],
+		"rect" : [ 116.0, 92.0, 676.0, 482.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.975348,
@@ -34,12 +34,13 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 186.0, 419.0, 15.0, 15.0 ]
+					"patching_rect" : [ 185.5, 439.0, 25.0, 25.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-23",
@@ -77,7 +78,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 202.0, 271.0, 52.0, 18.0 ],
+					"patching_rect" : [ 212.0, 271.0, 52.0, 18.0 ],
 					"text" : "gtint $1"
 				}
 
@@ -91,7 +92,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 139.0, 271.0, 50.0, 18.0 ],
+					"patching_rect" : [ 149.0, 271.0, 50.0, 18.0 ],
 					"text" : "rtint $1"
 				}
 
@@ -105,7 +106,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 260.0, 272.0, 53.0, 18.0 ],
+					"patching_rect" : [ 270.0, 272.0, 53.0, 18.0 ],
 					"text" : "btint $1"
 				}
 
@@ -118,21 +119,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 47.75, 306.0, 19.0, 19.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.975348,
-					"frgb" : 0.0,
-					"id" : "obj-10",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 27.75, 439.0, 93.0, 20.0 ],
-					"text" : "VIDEO OUTPUT"
+					"patching_rect" : [ 47.75, 306.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -143,7 +130,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 12.75, 439.0, 15.0, 15.0 ]
+					"patching_rect" : [ 12.75, 439.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -191,6 +178,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.975348,
 					"id" : "obj-1007",
@@ -199,7 +187,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 117.75, 106.0, 401.0, 33.0 ],
+					"patching_rect" : [ 124.75, 106.0, 401.0, 33.0 ],
 					"text" : "j.parameter mask/blue @type decimal @ramp/drive Max @description \"Sets the masking for the blue component.\"",
 					"varname" : "mask/blue"
 				}
@@ -207,6 +195,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.975348,
 					"id" : "obj-1010",
@@ -215,7 +204,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 260.0, 228.0, 391.0, 33.0 ],
+					"patching_rect" : [ 270.0, 228.0, 391.0, 33.0 ],
 					"text" : "j.parameter tint/blue @type decimal @ramp/drive Max @description \"Sets the tinting of the blue component.\"",
 					"varname" : "tint/blue"
 				}
@@ -223,6 +212,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.975348,
 					"id" : "obj-1015",
@@ -231,7 +221,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 65.25, 28.0, 407.0, 33.0 ],
+					"patching_rect" : [ 68.75, 28.0, 407.0, 33.0 ],
 					"text" : "j.parameter mask/red @type decimal @ramp/drive Max @description \"Sets the masking for the red component.\"",
 					"varname" : "mask/red"
 				}
@@ -239,6 +229,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.975348,
 					"id" : "obj-1016",
@@ -247,7 +238,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 91.5, 66.5, 415.0, 33.0 ],
+					"patching_rect" : [ 96.75, 66.5, 415.0, 33.0 ],
 					"text" : "j.parameter mask/green @type decimal @ramp/drive Max @description \"Sets the masking for the green component.\"",
 					"varname" : "mask/green"
 				}
@@ -255,6 +246,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.975348,
 					"id" : "obj-1021",
@@ -263,7 +255,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 139.0, 146.0, 386.0, 33.0 ],
+					"patching_rect" : [ 149.0, 146.0, 386.0, 33.0 ],
 					"text" : "j.parameter tint/red @type decimal @ramp/drive Max @description \"Sets the tinting of the red component.\"",
 					"varname" : "tint/red"
 				}
@@ -271,6 +263,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.975348,
 					"id" : "obj-1022",
@@ -279,7 +272,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 202.0, 189.5, 402.0, 33.0 ],
+					"patching_rect" : [ 212.0, 189.5, 402.0, 33.0 ],
 					"text" : "j.parameter tint/green @type decimal @ramp/drive Max @description \"Sets the tinting of the green component.\"",
 					"varname" : "tint/green"
 				}
@@ -391,7 +384,7 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 211.5, 296.0, 22.25, 296.0 ],
+					"midpoints" : [ 221.5, 303.0, 22.25, 303.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -401,7 +394,7 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 148.5, 294.0, 22.25, 294.0 ],
+					"midpoints" : [ 158.5, 303.0, 22.25, 303.0 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -411,7 +404,7 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 269.5, 298.0, 22.25, 298.0 ],
+					"midpoints" : [ 279.5, 303.0, 22.25, 303.0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 

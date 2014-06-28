@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 113.0, 142.0, 640.0, 533.0 ],
+		"rect" : [ 590.0, 154.0, 640.0, 533.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -1090,8 +1090,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 559.0, 9.0, 302.0, 31.0 ],
-									"text" : "j.parameter dim @type array @range 0 2000 @clipmode low @description \"Specify the x-axis offset in pixels.\"",
+									"patching_rect" : [ 559.0, 9.0, 322.0, 31.0 ],
+									"text" : "j.parameter dim @type array @range 0 2000 @clipmode low @description \"Specify the xy axis offset in pixels.\"",
 									"varname" : "dimensions/width[1]"
 								}
 
@@ -1784,8 +1784,8 @@
 					"id" : "obj-24",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 83.0, 180.0, 325.0, 19.0 ],
 					"text" : "xray.jit.mean @out_name meanvector @meandim 0 @mean 1",
 					"varname" : "xraymean[5]"
@@ -2206,6 +2206,10 @@
 			}
 , 			{
 				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "xray.jit.mean.mxo",
 				"type" : "iLaX"
 			}
 , 			{

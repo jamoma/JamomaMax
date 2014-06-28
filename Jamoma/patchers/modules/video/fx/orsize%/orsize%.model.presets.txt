@@ -7,9 +7,7 @@ angle 0
 boundmode fold
 data/bypass 0
 mirror 1
-offsetX 0.000000
-offsetY 57.900000
+offset 0.000000 57.900000
 rotate1 1
 rotate2 1
-zoomX 0.200000
-zoomY 0.200000
+zoom 0.200000 0.200000
