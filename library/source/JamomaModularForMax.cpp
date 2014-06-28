@@ -1681,9 +1681,7 @@ TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbo
 				returnedName = TTSymbol(viewName.data());
 			}
             
-            // format name coming from class name in case the class name contains . or _
-            // TODO : replace each '.' by the Uppercase of the letter after the '.'
-            // for the moment we replace '.' and ' ' by '_'
+            // format name coming from class name replacing '.' and ' ' by '_'
             TTString s_toParse = returnedName.c_str();
             std::replace(s_toParse.begin(), s_toParse.end(), '.', '_');
             std::replace(s_toParse.begin(), s_toParse.end(), ' ', '_');
