@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 126.0, 44.0, 853.0, 449.0 ],
+		"rect" : [ 126.0, 44.0, 763.0, 306.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -31,27 +31,13 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"id" : "obj-14",
+					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 262.0, 138.0, 539.0, 19.0 ],
-					"text" : "j.message genframe @type none@description \"generate a video frame ( send a bag to the jitter object)\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-17",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 238.0, 108.0, 419.0, 19.0 ],
-					"text" : "j.message direct @type generic @description \"directly access to the jitter object\""
+					"outlettype" : [ "int", "int" ],
+					"patching_rect" : [ 113.0, 105.0, 98.0, 19.0 ],
+					"text" : "unpack i i"
 				}
 
 			}
@@ -64,7 +50,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 153.0, 108.0, 65.0, 19.0 ],
+					"patching_rect" : [ 192.0, 135.0, 65.0, 19.0 ],
 					"text" : "prepend y"
 				}
 
@@ -78,7 +64,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 74.0, 70.0, 65.0, 19.0 ],
+					"patching_rect" : [ 113.0, 135.0, 65.0, 19.0 ],
 					"text" : "prepend x"
 				}
 
@@ -90,20 +76,22 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 341.0, 398.0, 25.0, 25.0 ]
+					"patching_rect" : [ 330.0, 259.0, 25.0, 25.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-12",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 341.0, 353.0, 380.0, 19.0 ],
+					"patching_rect" : [ 330.0, 214.0, 209.0, 31.0 ],
 					"text" : "j.model @description \"averages 4 pixels of input for each pixel of output\"",
 					"varname" : "j.model"
 				}
@@ -118,7 +106,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 334.0, 219.0, 91.0, 19.0 ],
+					"patching_rect" : [ 263.5, 90.0, 91.0, 19.0 ],
 					"text" : "prepend symbol"
 				}
 
@@ -132,7 +120,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 334.0, 264.0, 83.0, 19.0 ],
+					"patching_rect" : [ 263.5, 135.0, 83.0, 19.0 ],
 					"text" : "prepend mode"
 				}
 
@@ -148,23 +136,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 334.0, 241.0, 101.0, 19.0 ],
+					"patching_rect" : [ 263.5, 112.0, 101.0, 19.0 ],
 					"pattrmode" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-3",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 52.0, 247.0, 49.0, 31.0 ],
-					"text" : "VIDEO INPUT"
 				}
 
 			}
@@ -176,21 +149,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 27.0, 247.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-6",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 153.0, 393.0, 88.0, 19.0 ],
-					"text" : "VIDEO OUTPUT"
+					"patching_rect" : [ 17.0, 122.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -201,7 +160,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 124.0, 393.0, 25.0, 25.0 ]
+					"patching_rect" : [ 113.0, 259.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -214,7 +173,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 124.0, 334.0, 49.0, 19.0 ],
+					"patching_rect" : [ 113.0, 195.0, 49.0, 19.0 ],
 					"text" : "jit.avg4"
 				}
 
@@ -228,7 +187,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 124.0, 365.0, 130.0, 19.0 ],
+					"patching_rect" : [ 113.0, 226.0, 130.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -242,45 +201,30 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 28.0, 292.0, 56.0, 19.0 ],
+					"patching_rect" : [ 17.0, 153.0, 56.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-1005",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 153.0, 70.0, 303.0, 31.0 ],
-					"text" : "j.parameter y @type integer @ramp/drive Max @description \"Specify the x-axis offset in pixels.\"",
-					"varname" : "y"
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1010",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 74.0, 22.0, 303.0, 31.0 ],
-					"text" : "j.parameter x @type integer @ramp/drive Max @description \"Specify the x-axis offset in pixels.\"",
+					"patching_rect" : [ 113.0, 15.0, 384.0, 19.0 ],
+					"text" : "j.parameter offset @type array @description \"Specify the offset in pixels.\"",
 					"varname" : "x"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1011",
@@ -289,7 +233,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 334.0, 173.0, 478.0, 31.0 ],
+					"patching_rect" : [ 263.5, 44.0, 478.0, 31.0 ],
 					"text" : "j.parameter mode @type string @description \"Determine what happens when an offset pixel is outside of the video frame's boundaries. Possible edgemodes are clip fold and wrap.\"",
 					"varname" : "mode"
 				}
@@ -329,25 +273,17 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 37.5, 325.0, 133.5, 325.0 ],
+					"midpoints" : [ 26.5, 186.0, 122.5, 186.0 ],
 					"source" : [ "obj-1002", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
+					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1005", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
+					"midpoints" : [ 122.5, 31.0, 122.5, 31.0 ],
 					"source" : [ "obj-1010", 0 ]
 				}
 
@@ -366,7 +302,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 343.5, 289.5, 133.5, 289.5 ],
+					"midpoints" : [ 273.0, 182.0, 122.5, 182.0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -385,16 +321,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 271.5, 288.5, 133.5, 288.5 ],
-					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
+					"midpoints" : [ 122.5, 174.0, 122.5, 174.0 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -404,17 +331,26 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 201.5, 182.0, 122.5, 182.0 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
+					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 247.5, 290.5, 133.5, 290.5 ],
-					"source" : [ "obj-17", 0 ]
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 1 ]
 				}
 
 			}
@@ -451,10 +387,6 @@
 			}
 , 			{
 				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
  ]

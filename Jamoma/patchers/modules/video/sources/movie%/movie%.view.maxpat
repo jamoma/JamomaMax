@@ -66,7 +66,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 243.5, 469.679565, 46.0, 17.0 ],
-					"presentation_rect" : [ 280.5, 470.679565, 0.0, 0.0 ],
 					"text" : "size $1"
 				}
 
@@ -81,7 +80,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 13.0, 332.443268, 146.5, 19.0 ],
-					"presentation_rect" : [ 163.0, 291.320404, 0.0, 0.0 ],
 					"text" : "zl join"
 				}
 
@@ -125,7 +123,6 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 140.5, 173.311966, 106.0, 19.0 ],
-					"presentation_rect" : [ 143.0, 226.120392, 0.0, 0.0 ],
 					"text" : "j.receive moviedim"
 				}
 
@@ -343,7 +340,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 66.5, 501.0, 167.0, 19.0 ],
+					"patching_rect" : [ 132.0, 537.0, 167.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 76.845703, 100.0, 217.853119, 19.0 ]
 				}
@@ -1121,7 +1118,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -1495,6 +1492,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-63", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-55", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-50", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1714,8 +1720,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/list2parameter",
-				"patcherrelativepath" : "../../../components/list2parameter",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"patcherrelativepath" : "../../../../components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}

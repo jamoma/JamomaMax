@@ -1,12 +1,12 @@
 
+
 - preset "default"
 # "edit a comment"
 data/active 1
-data/bypass 0
-tint/red 0.500000
-tint/green 0.500000
 tint/blue 0.500000
-mask/red -1.000000
-mask/green 0.000000
-mask/blue -1.000000
-
+mask/blue -25.000000
+data/bypass 0
+tint/green 0.500000
+mask/green -25.000000
+mask/red -25.000000
+tint/red 0.500000

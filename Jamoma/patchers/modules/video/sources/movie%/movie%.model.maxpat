@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 93.0, 436.0, 1347.0, 499.0 ],
+		"rect" : [ 225.0, 296.0, 1347.0, 499.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -28,6 +28,36 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 363.0, 416.0, 61.0, 19.0 ],
+					"text" : "prepend 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-37",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 363.0, 451.0, 113.0, 19.0 ],
+					"text" : "j.send loop/points",
+					"varname" : "loop[3]"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"comment" : "(texture)",
 					"id" : "obj-5",
@@ -62,7 +92,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 506.5, 435.0, 348.0, 19.0 ],
+					"patching_rect" : [ 636.0, 428.0, 348.0, 19.0 ],
 					"text" : "j.return moviedim @type array \"@native size of the current video\""
 				}
 
@@ -745,7 +775,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 214.0, 108.0, 538.0, 242.0 ],
+						"rect" : [ 214.0, 108.0, 562.0, 264.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1572,7 +1602,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 347.0, 53.0, 393.0, 31.0 ],
-					"text" : "j.parameter dim @type array @range 1 1000 @clipmode low @ramp/drive none @dataspace xy @description \"Image size\"",
+					"text" : "j.parameter dim @type array @range 1 1000 @clipmode low @ramp/drive none @description \"Image size\"",
 					"varname" : "dim"
 				}
 
@@ -1651,6 +1681,15 @@
 					"hidden" : 0,
 					"midpoints" : [ 168.5, 180.0, 40.0, 180.0 ],
 					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-37", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-17", 0 ]
 				}
 
 			}
@@ -1746,6 +1785,15 @@
 					"hidden" : 0,
 					"midpoints" : [ 259.0, 392.0, 6.0, 392.0, 6.0, 183.0, 40.0, 183.0 ],
 					"source" : [ "obj-31", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-32", 4 ]
 				}
 
 			}

@@ -1,0 +1,23 @@
+- preset "default"
+# "edit a comment"
+file/path wheel.mov
+play 0
+data/active 1
+rate 1.000000
+
+
+- preset "another preset"
+# "edit a comment"
+file/path bball.mov
+play 1
+data/active 1
+rate 1.000000
+
+
+- preset "the last preset"
+# "edit a comment"
+file/path countdown.mov
+play 1
+data/active 1
+rate 1.000000
+

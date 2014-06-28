@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 3.0, 44.0, 1125.0, 572.0 ],
+		"rect" : [ 485.0, 161.0, 1125.0, 572.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -92,11 +92,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 470.0, 102.0, 80.0, 4.0 ],
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 470.0, 102.0, 10.0, 57.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 152.0, 10.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 290.0, 22.0, 4.0, 44.0 ]
 				}
 
 			}
@@ -107,11 +106,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 470.0, 47.0, 80.0, 4.0 ],
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 470.0, 47.0, 10.0, 57.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 152.0, 5.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 284.0, 22.0, 4.0, 44.0 ]
 				}
 
 			}
@@ -126,8 +124,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 153.0, 25.0, 104.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.0, 25.0, 104.0, 20.0 ],
-					"text" : "Phase offset (0-1)"
+					"presentation_rect" : [ 143.0, 25.0, 77.0, 20.0 ],
+					"text" : "Phase  (0-1)"
 				}
 
 			}
@@ -158,7 +156,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 470.0, 175.0, 40.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 255.0, 25.0, 40.0, 20.0 ],
+					"presentation_rect" : [ 220.0, 25.0, 40.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "PhaseOffset"
@@ -278,11 +276,11 @@
 					"id" : "obj-31",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/#1"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -419,10 +417,6 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
