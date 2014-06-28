@@ -307,7 +307,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 35.0, 57.0, 226.0, 19.0 ],
 					"text" : "addressing modules using wildcards",
-					"textcolor" : [ 0.584314, 0.584314, 0.584314, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
 			}
@@ -322,7 +322,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 35.0, 30.0, 200.0, 28.0 ],
 					"text" : "wildcard demo",
-					"textcolor" : [ 0.584314, 0.584314, 0.584314, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
 			}
