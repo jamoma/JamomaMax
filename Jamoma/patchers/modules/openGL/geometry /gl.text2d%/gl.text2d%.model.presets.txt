@@ -15,28 +15,25 @@ GL/render/context my_context
 GL/material/light/diffuse 0.000000 0.000000 0.000000 0.000000
 GL/material/light/emission 0.000000 0.000000 0.000000 0.000000
 GL/depth/enable 1
-GL/blend/enable 0
-shadow/enable 1
+GL/blend/enable 1
 GL/render/enable 1
 GL/material/light/enable 0
-face normal
-font Geneva
-fontsize 48
 GL/material/inherit 0
 GL/depth/inherit 0
 GL/color/inherit 0
-interp 1
 GL/render/layer 0
-leadscale 1.000000
 GL/blend/mode 6 7
-shadow/offset 0.300000 0.300000 0.000000
 GL/fog/params 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000
 GL/3D/position 0.000000 0.000000 0.000000
 GL/color/rgb 1.000000 1.000000 1.000000
-shadow/color/rgb 0.000000 0.000000 0.000000
 GL/3D/rotate 0.000000 0.000000 0.000000 1.000000
 GL/3D/scale 1.000000 1.000000 1.000000
 screenmode 1
 GL/material/shininess 10.000000
 GL/material/light/specular 0.000000 0.000000 0.000000 0.000000
 tracking 1.000000
+face normal
+font Geneva
+fontsize 48
+interp 1
+leadscale 1.000000
