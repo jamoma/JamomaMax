@@ -103,8 +103,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 128.0, 215.0, 67.0, 18.0 ],
-									"text" : "script/view"
+									"patching_rect" : [ 128.0, 215.0, 49.0, 18.0 ],
+									"text" : "file/edit"
 								}
 
 							}
@@ -359,43 +359,13 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-3",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 196.5, 445.0, 133.0, 20.0 ],
-									"text" : "j.send /cue_script_help"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
 									"id" : "obj-1",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 196.5, 301.0, 133.0, 20.0 ],
+									"patching_rect" : [ 196.5, 329.0, 133.0, 20.0 ],
 									"text" : "j.send /cue_script_help"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bubble" : 1,
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-2",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 387.0, 252.0, 158.0, 37.0 ],
-									"text" : "You can start an exernal editor (e.g., Textmate)"
 								}
 
 							}
@@ -408,24 +378,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 196.5, 408.0, 93.0, 18.0 ],
-									"text" : "/script/edit_with"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bubble" : 1,
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-6",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 387.0, 398.5, 199.0, 37.0 ],
-									"text" : "Editing use TextEdit (Mac) and Notepad (Win) by default"
+									"patching_rect" : [ 370.5, 261.5, 146.0, 18.0 ],
+									"text" : "file/edit_with TextEdit.app"
 								}
 
 							}
@@ -438,8 +392,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 196.5, 261.5, 172.0, 18.0 ],
-									"text" : "script/edit_width TextMate.app"
+									"patching_rect" : [ 196.5, 261.5, 152.0, 18.0 ],
+									"text" : "file/edit_with TextMate.app"
 								}
 
 							}
@@ -470,7 +424,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
+									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-8", 0 ]
@@ -667,8 +621,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 47.0, 509.0, 156.0, 20.0 ],
-									"text" : "j.send /cue_script_help/cue"
+									"patching_rect" : [ 47.0, 509.0, 188.0, 20.0 ],
+									"text" : "j.send /cue_script_help/cue/recall"
 								}
 
 							}

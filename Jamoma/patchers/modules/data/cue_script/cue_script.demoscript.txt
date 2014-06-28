@@ -1,5 +1,5 @@
 ##############################
-CUE initialisation # (fold)
+- cue initialisation # (fold)
 ##############################
 
     # Model input_help
@@ -47,7 +47,7 @@ CUE initialisation # (fold)
 
 
 ##############################
-CUE audio_on # (fold)
+- cue audio_on # (fold)
 ##############################
 
     # Model output_help
@@ -65,7 +65,7 @@ CUE audio_on # (fold)
 
 
 ##############################
-CUE fade_in # (fold)
+- cue fade_in # (fold)
 ##############################
 
     # Model output_help
@@ -76,7 +76,7 @@ CUE fade_in # (fold)
 
 
 ##############################
-CUE sweep # (fold)
+- cue sweep # (fold)
 ##############################
 
     # Model filter_help
@@ -91,7 +91,7 @@ CUE sweep # (fold)
 
 
 ##############################
-CUE dataspaceDemo	# (fold)
+- cue dataspaceDemo	# (fold)
 ##############################
 
 	# This makes gain changes audible on cheap laptop speakers
@@ -125,7 +125,7 @@ CUE dataspaceDemo	# (fold)
 
 
 ##############################
-CUE fade_out	# (fold)
+- cue fade_out	# (fold)
 ##############################
 
 	# If you've been utilising the - wait command, it is a good idea to make
@@ -142,7 +142,7 @@ CUE fade_out	# (fold)
 
 
 ##############################
-CUE audio_off	# (fold)
+- cue audio_off	# (fold)
 ##############################
     
     # Model input_help
