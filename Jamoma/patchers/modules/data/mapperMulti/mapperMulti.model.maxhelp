@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 30.0, 55.0, 437.0, 489.0 ],
+		"rect" : [ 129.0, 195.0, 834.0, 456.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -29,15 +29,44 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"annotation" : "none",
-					"id" : "obj-1",
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 512.0, 381.0, 100.0, 18.0 ],
+					"text" : "j.map"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "a cue list module",
+					"id" : "obj-13",
 					"maxclass" : "bpatcher",
-					"name" : "mapperBCF.view.maxpat",
+					"name" : "cueManager.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 66.0, 110.0, 150.0, 70.0 ],
-					"presentation_rect" : [ 60.0, 60.0, 150.0, 70.0 ]
+					"patching_rect" : [ 29.0, 340.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "a cue list module",
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 530.0, 304.0, 100.0, 18.0 ],
+					"text" : "cueManager.model"
 				}
 
 			}
@@ -46,45 +75,26 @@
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
-					"id" : "obj-29",
+					"hint" : "when edit is on, out/in - min/max bounds and climpde are set according to the addressed parameters values",
+					"id" : "obj-16",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 218.0, 110.0, 150.0, 18.0 ],
-					"text" : "<- everything's in here"
+					"patching_rect" : [ 701.0, 334.5, 87.0, 18.0 ],
+					"text" : "0 for optimization"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-27",
-					"maxclass" : "jit.pwindow",
+					"hint" : "when edit is on, out/in - min/max bounds and climpde are set according to the addressed parameters values",
+					"id" : "obj-12",
+					"maxclass" : "toggle",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 217.5, 392.0, 58.0, 44.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-26",
-					"maxclass" : "jit.pwindow",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 141.5, 392.0, 58.0, 44.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-25",
-					"maxclass" : "jit.pwindow",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 66.0, 392.0, 58.0, 44.0 ]
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 684.0, 334.5, 19.0, 19.0 ]
 				}
 
 			}
@@ -92,7 +102,83 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"id" : "obj-24",
+					"id" : "obj-8",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 684.0, 360.5, 104.0, 29.0 ],
+					"text" : "j.send /Multi.*/mapper.*/edit"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "none",
+					"args" : [ "/Multi" ],
+					"id" : "obj-2",
+					"maxclass" : "bpatcher",
+					"name" : "mapperMulti.view.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 29.0, 114.0, 750.0, 70.0 ],
+					"presentation_rect" : [ 75.0, 75.0, 750.0, 70.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-10",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 64.0, 90.0, 561.0, 18.0 ],
+					"text" : "the first menu allows to choose which mapperMulti model is managed, the number box, which mapper of this model is edited"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "Output information from mouse",
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-20",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 365.0, 299.0, 121.0, 19.0 ],
+					"text" : "mouse.model /mouse"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "none",
+					"args" : [ "/mouse" ],
+					"border" : 1,
+					"id" : "obj-23",
+					"lockeddragscroll" : 1,
+					"maxclass" : "bpatcher",
+					"name" : "mouse.view.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 346.0, 220.0, 150.0, 70.0 ],
+					"presentation_rect" : [ 15.0, 15.0, 150.0, 70.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -106,7 +192,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 86.0, 429.0, 259.0, 260.0 ],
+						"rect" : [ 162.0, 555.0, 247.0, 194.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -129,13 +215,13 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 10.0,
-									"id" : "obj-7",
+									"id" : "obj-3",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.0, 122.0, 169.0, 18.0 ],
-									"text" : "j.oscroute /address"
+									"patching_rect" : [ 26.0, 73.0, 171.0, 18.0 ],
+									"text" : "j.oscroute /out/address"
 								}
 
 							}
@@ -143,26 +229,12 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 10.0,
-									"id" : "obj-6",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 51.0, 71.0, 169.0, 18.0 ],
-									"text" : "j.oscroute track.*"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 10.0,
-									"id" : "obj-20",
+									"id" : "obj-15",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 180.0, 118.0, 18.0 ],
+									"patching_rect" : [ 26.0, 128.0, 118.0, 18.0 ],
 									"text" : "prepend model:address"
 								}
 
@@ -171,7 +243,7 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 10.0,
-									"id" : "obj-21",
+									"id" : "obj-14",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -370,7 +442,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 50.0, 155.0, 42.0, 18.0 ],
+									"patching_rect" : [ 26.0, 103.0, 42.0, 18.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
@@ -392,43 +464,70 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 10.0,
-									"id" : "obj-16",
+									"id" : "obj-13",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.0, 97.0, 169.0, 18.0 ],
-									"text" : "j.oscroute /*"
+									"patching_rect" : [ 26.0, 46.0, 171.0, 18.0 ],
+									"text" : "j.oscroute mapper.*/out/address"
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"comment" : "",
-									"id" : "obj-22",
+									"id" : "obj-16",
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 51.0, 40.0, 25.0, 25.0 ]
+									"patching_rect" : [ 26.0, 10.0, 25.0, 25.0 ]
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"comment" : "",
-									"id" : "obj-23",
+									"id" : "obj-17",
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 49.0, 205.0, 25.0, 25.0 ]
+									"patching_rect" : [ 25.0, 155.0, 25.0, 25.0 ]
 								}
 
 							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-7", 0 ],
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-15", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-14", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-16", 0 ]
@@ -437,53 +536,17 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-23", 0 ],
+									"destination" : [ "obj-14", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-20", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-20", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-21", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-6", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-22", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-16", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-6", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-21", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-7", 0 ]
+									"source" : [ "obj-3", 0 ]
 								}
 
 							}
  ]
 					}
 ,
-					"patching_rect" : [ 66.0, 218.0, 54.0, 18.0 ],
+					"patching_rect" : [ 29.0, 197.0, 84.0, 18.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -497,36 +560,51 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p address"
+					"text" : "p model:address"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 10.0,
-					"id" : "obj-12",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 305.0, 362.0, 59.0, 18.0 ],
-					"text" : "route /fps"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 10.0,
-					"id" : "obj-11",
-					"linecount" : 2,
-					"maxclass" : "message",
-					"numinlets" : 2,
+					"annotation" : "an interface for a movie model",
+					"id" : "obj-9",
+					"maxclass" : "bpatcher",
+					"name" : "movie.view.maxpat",
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 305.0, 386.0, 61.0, 27.0 ],
-					"text" : "model:address"
+					"patching_rect" : [ 29.0, 222.0, 300.0, 105.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"args" : [ "@name", "mapperMulti", "@description", "A multiple mapper module" ],
+					"bgmode" : 1,
+					"id" : "obj-36",
+					"maxclass" : "bpatcher",
+					"name" : "j.maxhelpui.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 0.0, 0.0, 834.0, 70.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 15.0, 15.0, 945.0, 70.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "none",
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 678.0, 272.0, 100.0, 18.0 ],
+					"text" : "track.model"
 				}
 
 			}
@@ -540,7 +618,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 218.0, 363.0, 67.0, 18.0 ],
+					"patching_rect" : [ 678.0, 227.0, 100.0, 18.0 ],
 					"text" : "movie.model"
 				}
 
@@ -548,207 +626,121 @@
 , 			{
 				"box" : 				{
 					"annotation" : "a movie playback model",
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 678.0, 249.0, 100.0, 18.0 ],
+					"text" : "movie.model"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 142.0, 363.0, 67.0, 18.0 ],
-					"text" : "movie.model"
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 518.0, 252.0, 144.0, 18.0 ],
+					"text" : "mapperMulti.model /Multi.2 15"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "a movie playback model",
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 66.0, 362.0, 67.0, 18.0 ],
-					"text" : "movie.model"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "an interface for a movie model",
-					"args" : [ "movie" ],
-					"id" : "obj-3",
-					"maxclass" : "bpatcher",
-					"name" : "movie.view.maxpat",
-					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 66.0, 250.0, 300.0, 105.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ]
+					"patching_rect" : [ 518.0, 227.0, 144.0, 18.0 ],
+					"text" : "mapperMulti.model /Multi.1 15"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "A module interfacing with the Behringer BCF2000 motorized MIDI fader.",
+					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"id" : "obj-2",
+					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 66.0, 194.0, 124.0, 18.0 ],
-					"text" : "mapperBCF.model /BCF"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "@name", "mapperBCF", "@description", "A mapper module for the BCF 2000" ],
-					"bgmode" : 1,
-					"id" : "obj-36",
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 437.0, 70.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 30.0, 30.0, 945.0, 70.0 ]
+					"patching_rect" : [ 529.0, 278.0, 100.0, 18.0 ],
+					"text" : "wacom.model"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
+					"source" : [ "obj-12", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 1 ],
+					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-12", 1 ]
+					"source" : [ "obj-18", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
+					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 75.5, 211.0, 75.5, 211.0 ],
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-24", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 75.5, 358.0, 314.5, 358.0 ],
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
+					"midpoints" : [ 527.5, 246.0, 515.0, 246.0, 515.0, 192.0, 38.5, 192.0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-26", 0 ],
+					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 527.5, 270.0, 515.0, 270.0, 515.0, 192.0, 38.5, 192.0 ],
 					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-27", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-6", 0 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"name" : "wacom.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/wacom",
+				"patcherrelativepath" : "../wacom",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
-				"patcherrelativepath" : "../../../components/jamomaPath",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mapperBCF.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperBCF",
+				"name" : "mapperMulti.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bcfTrack.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperBCF",
+				"name" : "mapper.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
 				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "BCFMapper.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperBCF",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "movie.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/movie",
-				"patcherrelativepath" : "../../../../../../../../JamomaUserLibs/GMEA/Max/Picture/movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -767,96 +759,126 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "mapperBCF.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperBCF",
+				"name" : "track.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/track",
+				"patcherrelativepath" : "../../../../examples/Modular0.6_overview/track",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "myMovie.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
+				"patcherrelativepath" : "../../../../examples/Modular0.6_overview/movie",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../components/data/maxhelpui",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiResize.js",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../components/data/maxhelpui",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.jamomaPath.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"patcherrelativepath" : "../../../components/data/jamomaPath",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "movie.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/movie",
+				"patcherrelativepath" : "../../../../../../../../JamomaUserLibs/GMEA/Max/Picture/movie",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mouse.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"patcherrelativepath" : "../mouse",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mouse.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"patcherrelativepath" : "../mouse",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mapperMulti.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bcfMapper.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperBCF",
+				"name" : "mapper.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespaceMenu.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/namespaceMenu",
-				"patcherrelativepath" : "../../../components/namespaceMenu",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespaceMenu",
+				"patcherrelativepath" : "../../../components/data/namespaceMenu",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bcfTrack.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperBCF",
+				"name" : "mapperCollSetter.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bcfTurn.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperBCF",
-				"patcherrelativepath" : ".",
+				"name" : "cueManager.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/quarantined_package/patchers/models/control/cueManager",
+				"patcherrelativepath" : "../../../../../quarantined_package/patchers/models/control/cueManager",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bcfPress.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperBCF",
-				"patcherrelativepath" : ".",
+				"name" : "j.namespace+.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/quarantined/namespace+",
+				"patcherrelativepath" : "../../../components/quarantined/namespace+",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bcfFader.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperBCF",
-				"patcherrelativepath" : ".",
+				"name" : "cueManager.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/quarantined_package/patchers/models/control/cueManager",
+				"patcherrelativepath" : "../../../../../quarantined_package/patchers/models/control/cueManager",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
+				"name" : "j.viewMuter.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/quarantined/muters",
+				"patcherrelativepath" : "../../../components/quarantined/muters",
+				"type" : "JSON",
+				"implicit" : 1
 			}
 , 			{
 				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscinstance.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscroute.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.map.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -868,7 +890,31 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "s2m.wacom.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.map.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -876,7 +922,31 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscroute.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.namespace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscinstance.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.cue.mxo",
 				"type" : "iLaX"
 			}
  ]

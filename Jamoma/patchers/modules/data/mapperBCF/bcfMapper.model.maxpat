@@ -45,7 +45,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 723.0, 521.0, 568.0, 370.0 ],
+						"rect" : [ 443.0, 469.0, 568.0, 370.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -258,7 +258,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 99.0, 9.0, 167.0, 40.0 ],
+									"patching_rect" : [ 99.0, 9.0, 179.0, 29.0 ],
 									"text" : "j.parameter #1/enable @priority 1 @default 1 @type boolean"
 								}
 
@@ -272,7 +272,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 208.0, 72.0, 353.0, 18.0 ],
+									"patching_rect" : [ 208.0, 68.0, 353.0, 18.0 ],
 									"text" : "j.parameter #1/address @priority 3 @type string @default /"
 								}
 
@@ -586,7 +586,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 167.0, 155.0, 239.0, 29.0 ],
+					"patching_rect" : [ 167.0, 155.0, 242.0, 29.0 ],
 					"text" : "j.parameter #1/value @type float @range 0. 1. @clipmode both @repetitions/filter 1 "
 				}
 
@@ -1310,27 +1310,6 @@
 					"source" : [ "obj-8", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.oscinstance.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscroute.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.map.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
