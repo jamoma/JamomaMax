@@ -1,11 +1,16 @@
 {
 	"patcher" : 	{
 		"fileversion" : 1,
-		"rect" : [ 679.0, 52.0, 491.0, 720.0 ],
+		"appversion" : 		{
+			"major" : 6,
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
+		}
+,
+		"rect" : [ 155.0, 44.0, 491.0, 720.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
-		"defrect" : [ 679.0, 52.0, 491.0, 720.0 ],
-		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
@@ -13,12 +18,16 @@
 		"gridonopen" : 0,
 		"gridsize" : [ 15.0, 15.0 ],
 		"gridsnaponopen" : 0,
+		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
 		"boxanimatetime" : 200,
 		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
+		"description" : "",
+		"digest" : "",
+		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"args" : [ "#1/key.2", "#2" ],
@@ -141,7 +150,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 1.0, 479.0, 128.0, 128.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1.0, 395.0, 53.0, 222.0 ]
+					"presentation_rect" : [ 1.0, 395.0, 53.0, 223.0 ]
 				}
 
 			}
@@ -198,7 +207,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.188235, 0.188235, 0.188235, 1.0 ],
+					"bgcolor" : [ 0.188235, 0.188235, 0.188235, 0.22 ],
 					"border" : 1,
 					"bordercolor" : [ 0.517647, 0.517647, 0.517647, 1.0 ],
 					"id" : "obj-13",
@@ -207,7 +216,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 15.0, 51.0, 316.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, -1.0, 54.0, 620.0 ],
+					"presentation_rect" : [ 0.0, -1.0, 54.0, 619.0 ],
 					"rounded" : 0
 				}
 
