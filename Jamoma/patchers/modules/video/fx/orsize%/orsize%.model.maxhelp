@@ -37,7 +37,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 91.0, 181.0, 63.0, 17.0 ],
-					"text" : "offset:inc"
+					"text" : "offsetY:inc"
 				}
 
 			}
@@ -181,9 +181,9 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../../components/data/list2parameter",
+				"name" : "j.pwindow.mouse.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/pwindow.mouse",
+				"patcherrelativepath" : "../../../../components/video/pwindow.mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -198,7 +198,7 @@
 				"name" : "input%.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
 				"patcherrelativepath" : "../../sources/input%",
-				"type" : "TEXT",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -212,7 +212,7 @@
 				"name" : "movie%.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
 				"patcherrelativepath" : "../../sources/movie%",
-				"type" : "TEXT",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -233,6 +233,13 @@
 				"name" : "input%.ui.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
 				"patcherrelativepath" : "../../sources/input%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.list2parameter.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"patcherrelativepath" : "../../../../components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -281,6 +288,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
@@ -293,7 +304,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message.mxo",
+				"name" : "j.oscroute.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -306,10 +321,6 @@
 			}
 , 			{
 				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{

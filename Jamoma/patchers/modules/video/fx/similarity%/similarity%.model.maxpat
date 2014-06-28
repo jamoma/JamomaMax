@@ -40,7 +40,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-18",
@@ -260,7 +259,20 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-15",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 278.0, 88.0, 49.0, 19.0 ],
+					"text" : "Video in"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1001",
@@ -304,7 +316,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1015",

@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 295.0, 52.0, 647.0, 783.0 ],
+		"rect" : [ 295.0, 52.0, 651.0, 617.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -111,8 +111,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 207.0, 106.0, 17.0 ],
-					"text" : "/*.*/audio/gain $1"
+					"patching_rect" : [ 35.0, 207.0, 117.0, 17.0 ],
+					"text" : "/*/audio/gain $1"
 				}
 
 			}
@@ -274,8 +274,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 326.0, 597.0, 300.0, 175.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
+					"patching_rect" : [ 327.0, 460.0, 300.0, 140.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"varname" : "degrade~.module.mxt[6]"
 				}
 
@@ -290,8 +290,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 326.0, 7.0, 300.0, 175.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
+					"patching_rect" : [ 325.0, 20.0, 300.0, 140.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"varname" : "degrade~.module.mxt[5]"
 				}
 
@@ -336,8 +336,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 326.0, 479.5, 300.0, 105.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+					"patching_rect" : [ 326.0, 386.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"varname" : "jmod.degrade~.mxt[3]"
 				}
 
@@ -352,7 +352,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 326.0, 395.5, 300.0, 70.0 ],
+					"patching_rect" : [ 326.0, 313.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"varname" : "jmod.degrade~.mxt[2]"
 				}
@@ -368,8 +368,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 326.0, 277.0, 300.0, 105.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+					"patching_rect" : [ 326.0, 238.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"varname" : "jmod.degrade~.mxt[1]"
 				}
 
@@ -384,7 +384,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 326.0, 193.0, 300.0, 70.0 ],
+					"patching_rect" : [ 326.0, 163.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"varname" : "jmod.degrade~.mxt"
 				}
@@ -605,106 +605,113 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "degrade~.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/degrade~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/degrade~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/degrade~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/degrade~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/degrade~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/degrade~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../../patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "echo~.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/echo~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/echo~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/echo~",
+				"patcherrelativepath" : "../../patchers/modules/audio/echo~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "echo~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/echo~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/echo~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/echo~",
+				"patcherrelativepath" : "../../patchers/modules/audio/echo~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/limiter~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"patcherrelativepath" : "../../patchers/modules/audio/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/limiter~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"patcherrelativepath" : "../../patchers/modules/audio/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "filter~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/filter~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/filter~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filter~",
+				"patcherrelativepath" : "../../patchers/modules/audio/filter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "echo~.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/echo~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/echo~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/echo~",
+				"patcherrelativepath" : "../../patchers/modules/audio/echo~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.panel.widget.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/limiter~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"patcherrelativepath" : "../../patchers/modules/audio/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "filter~.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/filter~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/filter~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filter~",
+				"patcherrelativepath" : "../../patchers/modules/audio/filter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "filter~.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/filter~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/filter~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filter~",
+				"patcherrelativepath" : "../../patchers/modules/audio/filter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/input~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/input~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
+				"patcherrelativepath" : "../../patchers/modules/audio/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/input~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/input~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
+				"patcherrelativepath" : "../../patchers/modules/audio/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/input~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/input~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
+				"patcherrelativepath" : "../../patchers/modules/audio/input~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.fileLoader.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/fileLoader",
+				"patcherrelativepath" : "../../patchers/components/_deprecated/fileLoader",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -717,50 +724,50 @@
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/balance~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/balance~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
+				"patcherrelativepath" : "../../patchers/modules/audio/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/output~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/output~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
+				"patcherrelativepath" : "../../patchers/modules/audio/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/output~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/output~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
+				"patcherrelativepath" : "../../patchers/modules/audio/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "saturation~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/saturation~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/saturation~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/saturation~",
+				"patcherrelativepath" : "../../patchers/modules/audio/saturation~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/record~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/record~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
+				"patcherrelativepath" : "../../patchers/modules/audio/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/record~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/record~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
+				"patcherrelativepath" : "../../patchers/modules/audio/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/output~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/output~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
+				"patcherrelativepath" : "../../patchers/modules/audio/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -836,6 +843,10 @@
 			}
 , 			{
 				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{

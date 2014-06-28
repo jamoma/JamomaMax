@@ -1710,38 +1710,6 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"frgb" : 0.0,
-									"id" : "obj-138",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 437.0, 150.0, 19.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 442.0, 18.0, 19.0 ],
-									"text" : "*"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-135",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 84.0, 445.0, 130.0, 17.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 444.0, 120.0, 17.0 ],
-									"text" : "j.remote"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"frgb" : 0.0,
 									"id" : "obj-92",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -2591,14 +2559,14 @@
 													"fontname" : "Verdana",
 													"fontsize" : 11.0,
 													"id" : "obj-59",
-													"items" : [ "cue_conventions.maxpat", ",", "j.adsr=.maxhelp", ",", "j.allpass~.maxhelp", ",", "j.append-.maxhelp", ",", "j.array=.maxhelp", ",", "j.array~.maxhelp", ",", "j.attrParameters.helper.maxpat", ",", "j.average=.maxhelp", ",", "j.average~.maxhelp", ",", "j.balance~.maxhelp", ",", "j.clip=.maxhelp", ",", "j.clip~.maxhelp", ",", "j.count=.maxhelp", ",", "j.cubicInterpolate.maxhelp", ",", "j.cue.maxhelp", ",", "j.dataspace-.maxhelp", ",", "j.dataspace.maxhelp", ",", "j.dbap.maxhelp", ",", "j.dbap_bformat.maxhelp", ",", "j.dcblock=.maxhelp", ",", "j.dcblock~.maxhelp", ",", "j.degrade=.maxhelp", ",", "j.degrade~.maxhelp", ",", "j.delay=.maxhelp", ",", "j.delay~.maxhelp", ",", "j.delta.maxhelp", ",", "j.envexp.maxhelp", ",", "j.fft=.maxhelp", ",", "j.filter=.maxhelp", ",", "j.filter~-benchmark.maxpat", ",", "j.filter~.maxhelp", ",", "j.folder.maxhelp", ",", "j.function~.maxhelp", ",", "j.gain=.maxhelp", ",", "j.gainParameters.helper.maxpat", ",", "j.gain~.maxhelp", ",", "j.gang.maxhelp", ",", "j.hilbert=.maxhelp", ",", "j.hmlshelf~.maxhelp", ",", "j.in.maxhelp", ",", "j.info=.maxhelp", ",", "j.init.maxhelp", ",", "j.in~.maxhelp", ",", "j.iter-.maxhelp", ",", "j.join=.maxhelp", ",", "j.js_systeminfo.maxhelp", ",", "j.jsui_multigain.maxhelp", ",", "j.limiter=.maxhelp", ",", "j.limiter~.maxhelp", ",", "j.map.functions.maxpat", ",", "j.map.maxhelp", ",", "j.maxhelp", ",", "j.message.maxhelp", ",", "j.messageArray.maxhelp", ",", "j.meter~.maxhelp", ",", "j.midi.filter-.maxhelp", ",", "j.midi.format-.maxhelp", ",", "j.midi.in-.maxhelp", ",", "j.midi.out-.maxhelp", ",", "j.mixer=.maxhelp", ",", "j.mkdir.maxpat", ",", "j.model.maxhelp", ",", "j.modular.maxhelp", ",", "j.multimixer=.maxhelp", ",", "j.mutesolo=.maxhelp", ",", "j.mutesolo~.maxhelp", ",", "j.namespace.maxhelp", ",", "j.node.maxhelp", ",", "j.noise=.maxhelp", ",", "j.offset=.maxhelp", ",", "j.onepole~.maxhelp", ",", "j.op-.maxhelp", ",", "j.op=.maxhelp", ",", "j.op~.maxhelp", ",", "j.oscinstance.maxhelp", ",", "j.oscroute.maxhelp", ",", "j.out.maxhelp", ",", "j.out~.maxhelp", ",", "j.overdrive=.maxhelp", ",", "j.overdrive~.maxhelp", ",", "j.pack-.maxhelp", ",", "j.pack=.maxhelp", ",", "j.panorama~.maxhelp", ",", "j.parameter.maxhelp", ",", "j.parameterArray.maxhelp", ",", "j.pass.maxhelp", ",", "j.phasor=.maxhelp", ",", "j.pick=.maxhelp", ",", "j.presetParameters.helper.maxpat", ",", "j.pulsesub=.maxhelp", ",", "j.push.maxhelp", ",", "j.ramp.maxhelp", ",", "j.ramp=.maxhelp", ",", "j.ramp~.maxhelp", ",", "j.receive.maxhelp", ",", "j.receive~.maxhelp", ",", "j.remote.maxhelp", ",", "j.remoteArray.maxhelp", ",", "j.resample=.maxhelp", ",", "j.return.maxhelp", ",", "j.returnArray.maxhelp", ",", "j.route.maxhelp", ",", "j.savebang.maxhelp", ",", "j.scriptingUtilities.js.maxhelp", ",", "j.send.maxhelp", ",", "j.send~.maxhelp", ",", "j.sig=.maxhelp", ",", "j.soundfile.player=.maxhelp", ",", "j.soundfile.recorder=.maxhelp", ",", "j.spat=.maxhelp", ",", "j.SpatDIF.coordinates.maxpat", ",", "j.split=.maxhelp", ",", "j.stats.maxhelp", ",", "j.stickyPatcherWindow.js.maxhelp", ",", "j.test.sample~.maxhelp", ",", "j.textslider.maxhelp", ",", "j.trajectory=.maxhelp", ",", "j.ui.maxhelp", ",", "j.unpack-.maxhelp", ",", "j.unpack=.maxhelp", ",", "j.unsig=.maxhelp", ",", "j.videoParameters.helper.maxpat", ",", "j.view.maxhelp", ",", "j.vimic~.maxhelp", ",", "j.waveshaper=.maxhelp", ",", "j.waveshaper~.maxhelp", ",", "j.wavetable=.maxhelp", ",", "j.window=.maxhelp", ",", "j.xfade~.maxhelp", ",", "j.zerox~.maxhelp", ",", "j=.maxhelp", ",", "j~.maxhelp" ],
+													"items" : [ "j.adsr=.maxhelp", ",", "j.allpass~.maxhelp", ",", "j.append-.maxhelp", ",", "j.array=.maxhelp", ",", "j.array~.maxhelp", ",", "j.attrParameters.helper.maxpat", ",", "j.audiounit=.maxhelp", ",", "j.average=.maxhelp", ",", "j.average~.maxhelp", ",", "j.balance~.maxhelp", ",", "j.clip=.maxhelp", ",", "j.clip~.maxhelp", ",", "j.count=.maxhelp", ",", "j.cubicInterpolate.maxhelp", ",", "j.cue.maxhelp", ",", "j.dataspace-.maxhelp", ",", "j.dataspace.maxhelp", ",", "j.dbap.maxhelp", ",", "j.dbap_bformat.maxhelp", ",", "j.dcblock=.maxhelp", ",", "j.dcblock~.maxhelp", ",", "j.degrade=.maxhelp", ",", "j.degrade~.maxhelp", ",", "j.delay=.maxhelp", ",", "j.delay~.maxhelp", ",", "j.delta.maxhelp", ",", "j.envexp.maxhelp", ",", "j.fft=.maxhelp", ",", "j.filter=.maxhelp", ",", "j.filter~-benchmark.maxpat", ",", "j.filter~.maxhelp", ",", "j.folder.maxhelp", ",", "j.function~.maxhelp", ",", "j.gain%.maxhelp", ",", "j.gain=.maxhelp", ",", "j.gainParameters.helper.maxpat", ",", "j.gain~.maxhelp", ",", "j.gang.maxhelp", ",", "j.hilbert=.maxhelp", ",", "j.hmlshelf~.maxhelp", ",", "j.hub.maxhelp", ",", "j.in.maxhelp", ",", "j.info=.maxhelp", ",", "j.init.maxhelp", ",", "j.in~.maxhelp", ",", "j.iter-.maxhelp", ",", "j.join=.maxhelp", ",", "j.js_systeminfo.maxhelp", ",", "j.jsui_multigain.maxhelp", ",", "j.limiter=.maxhelp", ",", "j.limiter~.maxhelp", ",", "j.map.functions.maxpat", ",", "j.map.maxhelp", ",", "j.maxhelp", ",", "j.message.maxhelp", ",", "j.messageArray.maxhelp", ",", "j.meter~.maxhelp", ",", "j.midi.filter-.maxhelp", ",", "j.midi.format-.maxhelp", ",", "j.midi.in-.maxhelp", ",", "j.midi.out-.maxhelp", ",", "j.mixer=.maxhelp", ",", "j.mkdir.maxpat", ",", "j.model.maxhelp", ",", "j.modular.maxhelp", ",", "j.multimixer=.maxhelp", ",", "j.mutesolo=.maxhelp", ",", "j.mutesolo~.maxhelp", ",", "j.namespace.maxhelp", ",", "j.net.receive.maxhelp", ",", "j.net.send.maxhelp", ",", "j.node.maxhelp", ",", "j.noise=.maxhelp", ",", "j.offset=.maxhelp", ",", "j.onepole~.maxhelp", ",", "j.op-.maxhelp", ",", "j.op=.maxhelp", ",", "j.op~.maxhelp", ",", "j.oscinstance.maxhelp", ",", "j.oscroute.maxhelp", ",", "j.out.maxhelp", ",", "j.out~.maxhelp", ",", "j.overdrive=.maxhelp", ",", "j.overdrive~.maxhelp", ",", "j.pack-.maxhelp", ",", "j.pack=.maxhelp", ",", "j.panorama~.maxhelp", ",", "j.parameter.maxhelp", ",", "j.parameterArray.maxhelp", ",", "j.pass.maxhelp", ",", "j.phasor=.maxhelp", ",", "j.pick=.maxhelp", ",", "j.plug.in=.maxhelp", ",", "j.plug.out=.maxhelp", ",", "j.plug.parameter-.maxhelp", ",", "j.presetParameters.helper.maxpat", ",", "j.pulsesub=.maxhelp", ",", "j.push.maxhelp", ",", "j.ramp.maxhelp", ",", "j.ramp=.maxhelp", ",", "j.ramp~.maxhelp", ",", "j.receive.maxhelp", ",", "j.receive~.maxhelp", ",", "j.remote.maxhelp", ",", "j.remoteArray.maxhelp", ",", "j.resample=.maxhelp", ",", "j.return.maxhelp", ",", "j.returnArray.maxhelp", ",", "j.route.maxhelp", ",", "j.savebang.maxhelp", ",", "j.scriptingUtilities.js.maxhelp", ",", "j.send.maxhelp", ",", "j.send~.maxhelp", ",", "j.sig=.maxhelp", ",", "j.soundfile.player=.maxhelp", ",", "j.soundfile.recorder=.maxhelp", ",", "j.spat=.maxhelp", ",", "j.SpatDIF.coordinates.maxpat", ",", "j.split=.maxhelp", ",", "j.stats.maxhelp", ",", "j.stencil%.maxhelp", ",", "j.stickyPatcherWindow.js.maxhelp", ",", "j.test.sample~.maxhelp", ",", "j.textslider.maxhelp", ",", "j.trajectory=.maxhelp", ",", "j.ui.maxhelp", ",", "j.unpack-.maxhelp", ",", "j.unpack=.maxhelp", ",", "j.unsig=.maxhelp", ",", "j.videoParameters.helper.maxpat", ",", "j.view.maxhelp", ",", "j.vimic~.maxhelp", ",", "j.waveshaper=.maxhelp", ",", "j.waveshaper~.maxhelp", ",", "j.wavetable=.maxhelp", ",", "j.window=.maxhelp", ",", "j.xfade~.maxhelp", ",", "j.zerox~.maxhelp", ",", "j=.maxhelp", ",", "j~.maxhelp" ],
 													"maxclass" : "umenu",
 													"numinlets" : 1,
 													"numoutlets" : 3,
 													"outlettype" : [ "int", "", "" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 50.0, 324.0, 224.0, 20.0 ],
-													"prefix" : "work:/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/help/",
+													"prefix" : "data:/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/help/",
 													"types" : "JSON"
 												}
 
@@ -2997,7 +2965,7 @@
 									"rounded" : 10.0,
 									"spacing_y" : 6.0,
 									"tabcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
-									"tabs" : [ "*j.adsr=", "*j.array=", "*j.average=", "*j.clip=", "*j.count=", "*j.dcblock=", "*j.degrade=", "*j.delay=", "*j.fft=", "*j.filter=", "*j.gain=", "*j.hilbert=", "*j.info=", "*j.join=", "*j.limiter=", "*j.mixer=", "*j.multimixer=", "*j.mutesolo=", "*j.noise=", "*j.offset=", "*j.op=", "*j.overdrive=", "*j.pack=", "*j.phasor=", "*j.pick=", "*j.pulsesub=", "*j.ramp=", "*j.resample=", "*j.sig=", "*j.soundfile.player=", "*j.soundfile.recorder=", "*j.spat=", "*j.split=", "*j.trajectory=", "*j.unpack=", "*j.unsig=", "*j.waveshaper=", "*j.wavetable=", "*j.window=", "*j=" ]
+									"tabs" : [ "*j.adsr=", "*j.array=", "*j.average=", "*j.clip=", "*j.count=", "*j.dcblock=", "*j.degrade=", "*j.delay=", "*j.fft=", "*j.filter=", "*j.gain=", "*j.hilbert=", "*j.info=", "*j.join=", "*j.limiter=", "*j.mixer=", "*j.multimixer=", "*j.mutesolo=", "*j.noise=", "*j.offset=", "*j.op=", "*j.overdrive=", "*j.pack=", "*j.phasor=", "*j.pick=", "*j.plug.in=", "*j.plug.out=", "*j.pulsesub=", "*j.ramp=", "*j.resample=", "*j.sig=", "*j.soundfile.player=", "*j.soundfile.recorder=", "*j.spat=", "*j.split=", "*j.trajectory=", "*j.unpack=", "*j.unsig=", "*j.waveshaper=", "*j.wavetable=", "*j.window=", "*j=" ]
 								}
 
 							}
@@ -11691,7 +11659,7 @@
 					"patching_rect" : [ 19.0, 300.0, 203.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 37.0, 230.0, 19.0 ],
-					"text" : "Overview of Jamoma dummy",
+					"text" : "Overview of Jamoma 0.6.0 a17",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 				}
 
@@ -11967,42 +11935,42 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../patchers/components/data/maxhelpui",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../patchers/components/data/maxhelpui",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../patchers/components/data/maxhelpui",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../patchers/components/data/jamomaPath",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"patcherrelativepath" : "../../patchers/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.getDescriptionFromHtml.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/getDescriptionFromHtml",
-				"patcherrelativepath" : "../../patchers/components/deprecated/getDescriptionFromHtml",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/getDescriptionFromHtml",
+				"patcherrelativepath" : "../../patchers/components/_deprecated/getDescriptionFromHtml",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/javascript",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/javascript",
 				"patcherrelativepath" : "../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1

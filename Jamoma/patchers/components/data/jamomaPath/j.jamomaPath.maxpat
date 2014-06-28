@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 180.0, 228.0, 424.0, 208.0 ],
+		"rect" : [ 180.0, 228.0, 377.0, 207.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 170.25, 146.0, 52.0, 19.0 ],
+					"patching_rect" : [ 165.75, 154.0, 52.0, 19.0 ],
 					"text" : "zl slice 1"
 				}
 
@@ -50,8 +50,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 104.0, 114.0, 284.0, 19.0 ],
-					"text" : "regexp (.*)(patchers/components/data/jamomaPath/)"
+					"patching_rect" : [ 104.0, 114.0, 266.0, 19.0 ],
+					"text" : "regexp (.*)(patchers/components/jamomaPath/)"
 				}
 
 			}
@@ -92,7 +92,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 91.25, 169.0, 75.0, 19.0 ],
+					"patching_rect" : [ 86.75, 177.0, 75.0, 19.0 ],
 					"text" : "jamoma path"
 				}
 
@@ -145,7 +145,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 170.25, 168.0, 25.0, 25.0 ]
+					"patching_rect" : [ 165.75, 176.0, 25.0, 25.0 ]
 				}
 
 			}
