@@ -5,5 +5,4 @@
 data/active 1
 data/bypass 0
 mode clip
-x 12
-y 24
+offset 12 24

@@ -1,9 +1,0 @@
-
-
-
-- preset "default"
-
-  
-file/path none
-
-# TODO: Hindre innlesing av denne

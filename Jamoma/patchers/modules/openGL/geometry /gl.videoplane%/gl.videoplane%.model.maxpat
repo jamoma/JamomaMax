@@ -244,7 +244,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 156.0, 342.5, 174.0, 19.0 ],
-					"text" : "j.class.gl_group.parameters GL"
+					"text" : "j.gl_group.model GL"
 				}
 
 			}
@@ -861,8 +861,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.class.gl_group.parameters.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/class.gl_group.parameters",
+				"name" : "j.gl_group.model.maxpat",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/class.gl_group.parameters",
 				"patcherrelativepath" : "../../../../components/openGL/class.gl_group.parameters",
 				"type" : "JSON",
 				"implicit" : 1
@@ -873,6 +873,10 @@
 			}
 , 			{
 				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.node.mxo",
 				"type" : "iLaX"
 			}
 , 			{

@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 113.0, 44.0, 802.0, 721.0 ],
+		"rect" : [ 13.0, 44.0, 802.0, 721.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -33,12 +33,12 @@
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-10",
-					"linecount" : 12,
+					"linecount" : 5,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 366.0, 435.0, 257.0, 152.0 ],
-					"text" : "A similarity matrix is a matrix of scores which express the similarity between two data points. In this implementation the matrix is shifted 90 degrees and plotted on top of itself. The result is an image that may reveal interesting structural elements in the material. \n\nSuggestions for input to the module: \n\n- motiongrams (from jmod.motiongram~)\n- spectrograms (from jmod.spectrogram~)\n- anything else that you want to test :)"
+					"patching_rect" : [ 349.0, 424.0, 320.0, 67.0 ],
+					"text" : "A similarity matrix is a matrix of scores which express the similarity between two data points. In this implementation the matrix is shifted 90 degrees and plotted on top of itself. The result is an image that may reveal interesting structural elements in the material. "
 				}
 
 			}
@@ -51,7 +51,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 1149.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 802.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -208,7 +208,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 52.5, 503.0, 29.0, 503.0, 29.0, 76.0, 359.5, 76.0 ],
+					"midpoints" : [ 52.5, 518.0, 29.0, 518.0, 29.0, 76.0, 359.5, 76.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -315,6 +315,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "j.list2parameter.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"patcherrelativepath" : "../../../../components/data/list2parameter",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "input%.module.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
 				"patcherrelativepath" : "../../sources/input%",
@@ -325,7 +332,7 @@
 				"name" : "input%.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
 				"patcherrelativepath" : "../../sources/input%",
-				"type" : "JSON",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -339,7 +346,7 @@
 				"name" : "movie%.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
 				"patcherrelativepath" : "../../sources/movie%",
-				"type" : "JSON",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -360,13 +367,6 @@
 				"name" : "input%.ui.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
 				"patcherrelativepath" : "../../sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../../components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -440,10 +440,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
@@ -453,6 +449,14 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "xray.jit.mean.mxo",
 				"type" : "iLaX"
 			}
 , 			{
