@@ -1,41 +1,95 @@
-
-
 - preset "default"
 # ""edit a comment""
-bands 5
-filter.5/type highshelf
-filter.4/type peaknotch
-filter.3/type peaknotch
-filter.2/type peaknotch
-filter.1/type lowshelf
-filter.5/frequency 6000.000000
-filter.4/frequency 2000
-filter.3/frequency 700.000000
-filter.2/frequency 250
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
 filter.1/frequency 75
-filter.5/gain 6.000000
-filter.4/gain -3.000000
-filter.3/gain 3.000000
+filter.1/gain 0.000000
+filter.1/octave_bandwith 1.00000
+filter.1/type lowshelf
+filter.2/frequency 300
 filter.2/gain 0.000000
-filter.1/gain 12.000000
-filter.5/q 1.300000
-filter.4/q 2.000000
-filter.3/q 2.000000
-filter.2/q 2
-filter.1/q 1.300000
-in.2/mute 0
-in.2/bypass 0
-in.2/amplitude/active 0
-out.2/mix 100.000000
-out.2/gain 100.000000
-out.2/mute 0
-out.2/amplitude/active 150
-out.1/gain 100.000000
-out.1/mute 0
-in.1/mute 0
-out.1/amplitude/active 150
-in.1/bypass 0
-in.1/amplitude/active 0
-out.1/mix 100.000000
- 
+filter.2/octave_bandwith 1.000000
+filter.2/type peaknotch
+filter.3/frequency 1000.000000
+filter.3/gain 0.000000
+filter.3/octave_bandwith 1.000000
+filter.3/type peaknotch
+filter.4/frequency 5000
+filter.4/gain 0.000000
+filter.4/octave_bandwith 1.000000
+filter.4/type highshelf
 
+
+- preset "basic_11_band"
+# ""edit a comment""
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+filter.1/frequency 50
+filter.1/gain 0.000000
+filter.1/octave_bandwith 1.000000
+filter.1/type peaknotch
+filter.2/frequency 100
+filter.2/gain 0.000000
+filter.2/octave_bandwith 1.000000
+filter.2/type peaknotch
+filter.3/frequency 200
+filter.3/gain 0.000000
+filter.3/octave_bandwith 1.000000
+filter.3/type peaknotch
+filter.4/frequency 400
+filter.4/gain 0.000000
+filter.4/octave_bandwith 1.000000
+filter.4/type peaknotch
+filter.5/frequency 800
+filter.5/gain 0.000000
+filter.5/octave_bandwith 1.000000
+filter.5/type peaknotch
+filter.6/frequency 1500
+filter.6/gain 0.000000
+filter.6/octave_bandwith 1.000000
+filter.6/type peaknotch
+filter.7/frequency 3000
+filter.7/gain 0.000000
+filter.7/octave_bandwith 1.000000
+filter.7/type peaknotch
+filter.8/frequency 5000
+filter.8/gain 0.000000
+filter.8/octave_bandwith 1.000000
+filter.8/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 0.000000
+filter.9/octave_bandwith 1.000000
+filter.9/type peaknotch
+filter.10/frequency 10000
+filter.10/gain 0.000000
+filter.10/octave_bandwith 1.000000
+filter.10/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 0.000000
+filter.11/octave_bandwith 1.000000
+filter.11/type peaknotch
+
+
+- preset "intimate_female_voice"
+# ""edit a comment""
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+filter.1/frequency 80
+filter.1/gain 0.000000
+filter.1/octave_bandwith 2.000000
+filter.1/type highpass
+filter.2/frequency 420.
+filter.2/gain 1.800000
+filter.2/octave_bandwith 1.8
+filter.2/type peaknotch
+filter.3/frequency 1150.00000
+filter.3/gain -3.400000
+filter.3/octave_bandwith 1.000000
+filter.3/type peaknotch
+filter.4/frequency 2545
+filter.4/gain 3.300000
+filter.4/octave_bandwith 0.79
+filter.4/type peaknotch
