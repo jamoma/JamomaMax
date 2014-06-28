@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 70.0, 44.0, 524.0, 598.0 ],
+		"rect" : [ -18.0, 44.0, 616.0, 956.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -31,7 +31,7 @@
 				"box" : 				{
 					"fontface" : 1,
 					"fontname" : "Arial",
-					"fontsize" : 18.0,
+					"fontsize" : 12.0,
 					"id" : "obj-26",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -42,7 +42,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -74,7 +74,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 296.0, 370.0, 311.0, 20.0 ],
-									"presentation_rect" : [ 294.0, 368.0, 0.0, 0.0 ],
 									"text" : "<- command to wait before sending the following content"
 								}
 
@@ -89,7 +88,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 296.0, 323.0, 266.0, 20.0 ],
-									"presentation_rect" : [ 291.0, 319.0, 0.0, 0.0 ],
 									"text" : "<- some content"
 								}
 
@@ -104,7 +102,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 78.0, 323.0, 219.0, 20.0 ],
-									"presentation_rect" : [ 75.0, 323.0, 0.0, 0.0 ],
 									"text" : "/some/message 1 ramp 2000"
 								}
 
@@ -120,7 +117,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 296.0, 261.0, 266.0, 33.0 ],
-									"presentation_rect" : [ 311.0, 339.0, 0.0, 0.0 ],
 									"text" : "<- place this at the end of the \"header\" \n    (before the actual content of the cue)"
 								}
 
@@ -135,7 +131,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 78.0, 261.0, 219.0, 20.0 ],
-									"presentation_rect" : [ 93.0, 339.0, 0.0, 0.0 ],
 									"text" : "*********************************"
 								}
 
@@ -150,7 +145,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 78.0, 222.0, 219.0, 20.0 ],
-									"presentation_rect" : [ 91.0, 300.0, 0.0, 0.0 ],
 									"text" : "- tags "
 								}
 
@@ -165,7 +159,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 78.0, 195.0, 219.0, 20.0 ],
-									"presentation_rect" : [ 92.0, 273.0, 0.0, 0.0 ],
 									"text" : "- comment "
 								}
 
@@ -180,7 +173,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 78.0, 168.0, 219.0, 20.0 ],
-									"presentation_rect" : [ 87.0, 246.0, 0.0, 0.0 ],
 									"text" : "- description "
 								}
 
@@ -195,7 +187,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 36.0, 105.0, 266.0, 20.0 ],
-									"presentation_rect" : [ 52.0, 173.0, 0.0, 0.0 ],
 									"text" : "\"header\" infos of a cue:"
 								}
 
@@ -275,7 +266,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 29.0, 554.0, 86.0, 27.0 ],
+					"patching_rect" : [ 29.0, 755.0, 60.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -303,8 +294,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 97.0, 475.0, 257.0, 33.0 ],
-					"presentation_rect" : [ 97.0, 475.0, 0.0, 0.0 ],
+					"patching_rect" : [ 97.0, 676.0, 257.0, 33.0 ],
 					"text" : "cue/ramp/time : ramp time of the cue\n(no argument: for current - arg : for select cue)"
 				}
 
@@ -315,13 +305,12 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-20",
-					"linecount" : 7,
+					"linecount" : 11,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 97.0, 369.0, 225.0, 100.0 ],
-					"presentation_rect" : [ 92.0, 388.0, 0.0, 0.0 ],
-					"text" : "cue/store, cue/update, \ncue/recall, cue/recall/current, cue/recall/next, cue/recall/previous, \ncue/move, cue/remove, cue/remove/current, cue/remove/next, cue/remove/previous, \ncue/rename,"
+					"patching_rect" : [ 97.0, 369.0, 236.0, 154.0 ],
+					"text" : "cue/new\ncue/update,\ncue/recall\ncue/recall/next\ncue/recall/previous\ncue/move\ncue/delete\ncue/delete/current\ncue/delete/next\ncue/delete/previous\ncue/rename"
 				}
 
 			}
@@ -335,7 +324,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 71.0, 314.0, 219.0, 20.0 ],
-					"presentation_rect" : [ 66.0, 314.0, 0.0, 0.0 ],
 					"text" : "cue-related parameters/messages"
 				}
 
@@ -350,7 +338,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 97.0, 229.0, 309.0, 20.0 ],
-					"presentation_rect" : [ 95.0, 234.0, 0.0, 0.0 ],
 					"text" : "file/new (message) : creates a new cue"
 				}
 
@@ -366,7 +353,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 121.5, 165.0, 394.0, 33.0 ],
-					"presentation_rect" : [ 118.5, 164.0, 0.0, 0.0 ],
 					"text" : "opening a dialog window when no name is specified is not happening in the model - if such service is offered, this should be done by the view"
 				}
 
@@ -381,7 +367,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 121.5, 145.0, 275.0, 20.0 ],
-					"presentation_rect" : [ 120.0, 143.0, 0.0, 0.0 ],
 					"text" : "-> also reads the file when a name is specified"
 				}
 
@@ -396,7 +381,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 71.0, 99.0, 219.0, 20.0 ],
-					"presentation_rect" : [ 72.0, 102.0, 0.0, 0.0 ],
 					"text" : "file-related parameters/messages"
 				}
 
@@ -412,7 +396,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 71.0, 46.0, 435.0, 33.0 ],
-					"presentation_rect" : [ 68.0, 44.0, 0.0, 0.0 ],
 					"text" : "parameter names shoudl also be shared with the j.cue external, except that sub-nodes (such as cue or file) are added for specific  families of functions"
 				}
 
@@ -428,7 +411,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 71.0, 13.0, 435.0, 33.0 ],
-					"presentation_rect" : [ 87.0, 17.0, 0.0, 0.0 ],
 					"text" : "it has been decided that cue-related modules will, as much as possible, use the same naming conventions for shared parameters"
 				}
 
@@ -443,7 +425,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 97.0, 282.0, 411.0, 20.0 ],
-					"presentation_rect" : [ 84.0, 168.0, 0.0, 0.0 ],
 					"text" : "file/edit_with : edits current cuelist in external editor (specified as argument)"
 				}
 
@@ -458,7 +439,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 97.0, 262.0, 324.0, 20.0 ],
-					"presentation_rect" : [ 86.0, 154.0, 0.0, 0.0 ],
 					"text" : "file/edit : edits current cuelist in Max's (or j.cue's) text editor"
 				}
 
@@ -473,7 +453,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 97.0, 341.0, 219.0, 20.0 ],
-					"presentation_rect" : [ 69.0, 160.0, 0.0, 0.0 ],
 					"text" : "cue/current : (parameter) current cue"
 				}
 
@@ -488,7 +467,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 97.0, 208.0, 309.0, 20.0 ],
-					"presentation_rect" : [ 87.0, 130.0, 0.0, 0.0 ],
 					"text" : "file/write (message) : without argument, writes to current"
 				}
 
@@ -503,7 +481,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 97.0, 125.0, 275.0, 20.0 ],
-					"presentation_rect" : [ 69.0, 101.0, 0.0, 0.0 ],
 					"text" : "file/path (parameter) : path/name of the cuelist file"
 				}
 
@@ -517,7 +494,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 71.0, 516.0, 219.0, 20.0 ],
+					"patching_rect" : [ 71.0, 717.0, 219.0, 20.0 ],
 					"text" : "cues : (ordered) list of all cues"
 				}
 
