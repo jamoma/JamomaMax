@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 80.0, 256.0, 476.0, 480.0 ],
+		"rect" : [ 80.0, 256.0, 470.0, 557.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -36,7 +36,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 239.363159, 148.0, 225.0, 19.0 ],
+					"patching_rect" : [ 222.363159, 295.0, 225.0, 19.0 ],
 					"text" : "(couldn't find it in the original 0.5 module)"
 				}
 
@@ -50,16 +50,15 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 239.363159, 62.0, 168.0, 19.0 ],
+					"patching_rect" : [ 222.363159, 209.0, 168.0, 19.0 ],
 					"text" : "where is this one used ?"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"id" : "obj-34",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -74,7 +73,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 382.0, 284.0 ],
+						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -109,7 +108,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1039",
@@ -179,7 +177,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 112.0, 195.0, 80.0, 21.0 ],
+					"patching_rect" : [ 93.0, 239.0, 67.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -199,7 +197,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-39",
@@ -208,7 +205,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 239.363159, 86.0, 213.0, 55.0 ],
+					"patching_rect" : [ 222.363159, 233.0, 213.0, 55.0 ],
 					"text" : "j.parameter contraction/window/size @type integer @range 0 20 @clipmode low @description \"Size of the contraction window border.\"",
 					"varname" : "centroid/size/on[1]"
 				}
@@ -216,7 +213,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-25",
@@ -225,7 +221,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 10.0, 15.0, 403.0, 31.0 ],
+					"patching_rect" : [ 20.0, 21.0, 403.0, 31.0 ],
 					"text" : "j.parameter data/smoothing @type decimal @range 0. 12. @clipmode low @description \"Level of smoothing for the returned data\"",
 					"varname" : "data/smoothing"
 				}
@@ -233,7 +229,35 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-19",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 63.0, 62.0, 297.0, 31.0 ],
+					"text" : "j.message genframe @type none@description \"generate a video frame (send a bang to the jitter object)\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-18",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 280.363159, 515.0, 94.0, 19.0 ],
+					"text" : "command output"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-44",
@@ -242,7 +266,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 265.363159, 382.0, 178.0, 31.0 ],
+					"patching_rect" : [ 246.363159, 474.0, 178.0, 31.0 ],
 					"text" : "j.model @tag video @description \"Motion-related analysis\"",
 					"varname" : "j.model"
 				}
@@ -255,13 +279,12 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 265.363159, 423.0, 25.0, 25.0 ]
+					"patching_rect" : [ 246.363159, 515.0, 25.0, 25.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 12.0,
 					"id" : "obj-16",
@@ -299,7 +322,6 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1015",
@@ -308,7 +330,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.0, 27.0, 258.0, 31.0 ],
+									"patching_rect" : [ 50.0, 27.0, 257.0, 31.0 ],
 									"text" : "j.parameter inverse @type boolean @description \"Regular or inverse motion image\"",
 									"varname" : "color[2]"
 								}
@@ -454,7 +476,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 112.0, 354.718048, 67.0, 21.0 ],
+					"patching_rect" : [ 93.0, 445.0, 67.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -474,9 +496,8 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -708,7 +729,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-14",
@@ -717,7 +737,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 105.0, 308.436279, 595.0, 31.0 ],
+									"patching_rect" : [ 105.0, 303.436279, 595.0, 31.0 ],
 									"text" : "j.return motion/y @range 0. 1. @type decimal @description \"The center of gravity for the y-axis of the motion in the frame in a range of 0. to 1. (zero is bottom - one is top).\""
 								}
 
@@ -738,7 +758,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-16",
@@ -1055,7 +1074,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 10.0, 226.943604, 95.0, 21.0 ],
+					"patching_rect" : [ 20.0, 271.0, 80.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1075,9 +1094,8 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -1113,7 +1131,6 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1011",
@@ -1252,7 +1269,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 112.0, 124.0, 62.0, 21.0 ],
+					"patching_rect" : [ 93.0, 168.0, 53.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1272,9 +1289,8 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -1310,7 +1326,6 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1027",
@@ -1318,7 +1333,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 98.0, 54.0, 390.0, 19.0 ],
+									"patching_rect" : [ 98.0, 44.0, 390.0, 19.0 ],
 									"text" : "j.parameter slide @type decimal @description \"Level of slide for the trails\"",
 									"varname" : "slide[1]"
 								}
@@ -1326,7 +1341,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1029",
@@ -1349,7 +1363,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 174.0, 121.0, 85.0, 17.0 ],
+									"patching_rect" : [ 161.0, 116.0, 85.0, 17.0 ],
 									"text" : "slide_down $1"
 								}
 
@@ -1366,7 +1380,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 98.0, 94.0, 39.0, 19.0 ],
+									"patching_rect" : [ 85.0, 89.0, 39.0, 19.0 ],
 									"triscale" : 0.9
 								}
 
@@ -1380,7 +1394,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 98.0, 121.0, 71.0, 17.0 ],
+									"patching_rect" : [ 85.0, 116.0, 71.0, 17.0 ],
 									"text" : "slide_up $1"
 								}
 
@@ -1521,7 +1535,7 @@
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 107.5, 117.0, 183.5, 117.0 ],
+									"midpoints" : [ 94.5, 112.0, 170.5, 112.0 ],
 									"source" : [ "obj-3", 0 ]
 								}
 
@@ -1603,7 +1617,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 112.0, 258.887207, 98.0, 21.0 ],
+					"patching_rect" : [ 93.0, 330.0, 83.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1623,9 +1637,8 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -2062,7 +2075,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 112.0, 226.943604, 119.0, 21.0 ],
+					"patching_rect" : [ 93.0, 295.0, 100.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -2082,9 +2095,8 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -2120,7 +2132,6 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-35",
@@ -2137,7 +2148,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-36",
@@ -2154,7 +2164,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-37",
@@ -2171,7 +2180,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-38",
@@ -2202,7 +2210,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.572549, 0.0, 0.572549, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-3",
@@ -2217,9 +2224,8 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 									"fontname" : "Verdana",
-									"fontsize" : 12.0,
+									"fontsize" : 10.0,
 									"id" : "obj-4",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -4065,7 +4071,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 349.0, 91.0, 140.0, 21.0 ],
+									"patching_rect" : [ 349.0, 91.0, 117.0, 19.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Verdana",
@@ -4100,7 +4106,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.572549, 0.0, 0.572549, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-6",
@@ -4143,9 +4148,8 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 									"fontname" : "Verdana",
-									"fontsize" : 12.0,
+									"fontsize" : 10.0,
 									"id" : "obj-12",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -4655,7 +4659,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 216.0, 90.0, 120.0, 21.0 ],
+									"patching_rect" : [ 216.0, 90.0, 101.0, 19.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Verdana",
@@ -4727,9 +4731,8 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 									"fontname" : "Verdana",
-									"fontsize" : 12.0,
+									"fontsize" : 10.0,
 									"id" : "obj-17",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -6062,7 +6065,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 106.0, 57.0, 87.0, 21.0 ],
+									"patching_rect" : [ 106.0, 57.0, 74.0, 19.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Verdana",
@@ -6110,7 +6113,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.572549, 0.0, 0.572549, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-22",
@@ -6139,7 +6141,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.572549, 0.0, 0.572549, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-25",
@@ -6179,7 +6180,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.572549, 0.0, 0.572549, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-28",
@@ -6208,9 +6208,8 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 									"fontname" : "Verdana",
-									"fontsize" : 12.0,
+									"fontsize" : 10.0,
 									"id" : "obj-30",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
@@ -7077,7 +7076,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 540.0, 89.0, 102.0, 21.0 ],
+									"patching_rect" : [ 540.0, 89.0, 86.0, 19.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Verdana",
@@ -7112,7 +7111,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.572549, 0.0, 0.572549, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-32",
@@ -7142,7 +7140,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.572549, 0.0, 0.572549, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-34",
@@ -7150,7 +7147,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 106.0, 115.0, 110.0, 19.0 ],
+									"patching_rect" : [ 106.0, 90.0, 110.0, 19.0 ],
 									"text" : "pv draw-contraction"
 								}
 
@@ -7455,7 +7452,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 112.0, 322.774445, 87.0, 21.0 ],
+					"patching_rect" : [ 93.0, 400.0, 74.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -7475,9 +7472,22 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-6",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 119.0, 516.0, 90.0, 19.0 ],
+					"text" : "VIDEO OUTPUT"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -7492,7 +7502,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 248.0, 46.0, 722.0, 530.0 ],
+						"rect" : [ 248.0, 46.0, 1013.0, 552.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -7513,7 +7523,6 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1017",
@@ -7530,7 +7539,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1025",
@@ -8215,7 +8223,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 112.0, 290.830841, 137.0, 21.0 ],
+					"patching_rect" : [ 93.0, 357.0, 116.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -8242,7 +8250,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 112.0, 164.0, 63.0, 19.0 ],
+					"patching_rect" : [ 93.0, 208.0, 63.0, 19.0 ],
 					"text" : "j.motion%"
 				}
 
@@ -8254,7 +8262,21 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 112.0, 419.0, 25.0, 25.0 ]
+					"patching_rect" : [ 93.0, 511.0, 25.0, 25.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-14",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 121.0, 106.0, 80.0, 19.0 ],
+					"text" : "VIDEO INPUT"
 				}
 
 			}
@@ -8266,7 +8288,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 112.0, 62.0, 25.0, 25.0 ]
+					"patching_rect" : [ 93.0, 106.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -8279,7 +8301,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 112.0, 388.0, 131.0, 19.0 ],
+					"patching_rect" : [ 93.0, 480.0, 131.0, 19.0 ],
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -8293,7 +8315,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 112.0, 95.0, 37.0, 19.0 ],
+					"patching_rect" : [ 93.0, 139.0, 37.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
@@ -8337,10 +8359,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 72.5, 201.5, 102.5, 201.5 ],
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-7", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 121.5, 158.5, 239.5, 158.5 ],
+					"midpoints" : [ 102.5, 202.5, 199.5, 202.5 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -8368,7 +8400,7 @@
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 121.5, 281.837006, 121.5, 281.837006 ],
+					"midpoints" : [ 102.5, 351.0, 102.5, 351.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -8439,57 +8471,50 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.motion%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/motion%",
-				"patcherrelativepath" : "../../../../components/video/motion%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/motion%",
+				"patcherrelativepath" : "../../../components/motion%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.checkplanes%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/checkplanes%",
-				"patcherrelativepath" : "../../../../components/video/checkplanes%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/checkplanes%",
+				"patcherrelativepath" : "../../../components/checkplanes%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.absdiff.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/absdiff",
-				"patcherrelativepath" : "../../../../components/data/absdiff",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/absdiff",
+				"patcherrelativepath" : "../../../components/absdiff",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.autoscale.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/autoscale",
-				"patcherrelativepath" : "../../../../components/data/autoscale",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.initialized.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/initialized",
-				"patcherrelativepath" : "../../../../components/data/initialized",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/autoscale",
+				"patcherrelativepath" : "../../../components/autoscale",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.passmatrixinfo%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/passmatrixinfo%",
-				"patcherrelativepath" : "../../../../components/video/passmatrixinfo%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/passmatrixinfo%",
+				"patcherrelativepath" : "../../../components/passmatrixinfo%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.rgb2luma%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/rgb2luma%",
-				"patcherrelativepath" : "../../../../components/video/rgb2luma%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/rgb2luma%",
+				"patcherrelativepath" : "../../../components/rgb2luma%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.sum%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/sum%",
-				"patcherrelativepath" : "../../../../components/video/sum%",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/sum%",
+				"patcherrelativepath" : "../../../components/sum%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -8515,10 +8540,6 @@
 			}
 , 			{
 				"name" : "j.pass.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{

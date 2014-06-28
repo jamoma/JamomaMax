@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -31,21 +31,6 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"id" : "obj-5",
-					"linecount" : 2,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 99.5, 197.0, 50.0, 29.0 ],
-					"text" : "text bonjour"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-26",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -56,11 +41,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 850.0, 66.0, 343.0, 457.0 ],
+						"rect" : [ 277.0, 57.0, 208.0, 346.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -84,13 +69,13 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-5",
-									"linecount" : 6,
+									"linecount" : 9,
 									"maxclass" : "newobj",
-									"numinlets" : 11,
-									"numoutlets" : 11,
-									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
-									"patching_rect" : [ 22.0, 77.0, 145.0, 79.0 ],
-									"text" : "route rotate scale fog_params auto_material mat_ambient mat_diffuse mat_emission mat_specular shininess lighting_enable"
+									"numinlets" : 10,
+									"numoutlets" : 10,
+									"outlettype" : [ "", "", "", "", "", "", "", "", "", "" ],
+									"patching_rect" : [ 55.0, 95.0, 90.0, 116.0 ],
+									"text" : "route rotate scale fog_params auto_material mat_ambient mat_diffuse mat_emission mat_specular shininess"
 								}
 
 							}
@@ -101,7 +86,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 22.0, 238.0, 25.0, 25.0 ]
+									"patching_rect" : [ 55.0, 255.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -113,7 +98,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 22.0, 35.5, 25.0, 25.0 ]
+									"patching_rect" : [ 55.0, 52.5, 25.0, 25.0 ]
 								}
 
 							}
@@ -132,7 +117,7 @@
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-5", 10 ]
+									"source" : [ "obj-5", 9 ]
 								}
 
 							}
@@ -159,7 +144,6 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "none",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-30",
@@ -168,7 +152,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 63.0, 45.0, 174.0, 19.0 ],
-					"text" : "j.gl_group.model GL"
+					"text" : "j.class.gl_group.parameters GL"
 				}
 
 			}
@@ -180,17 +164,17 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "jit_matrix" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 484.0, 161.0, 1114.0, 686.0 ],
+						"rect" : [ 25.0, 69.0, 1092.0, 479.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -213,96 +197,12 @@
 								"box" : 								{
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
-									"id" : "obj-7",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 556.5, 468.0, 116.0, 19.0 ],
-									"text" : "prepend text"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-6",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 516.0, 421.0, 116.0, 19.0 ],
-									"text" : "prepend face"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-5",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 481.5, 373.0, 116.0, 19.0 ],
-									"text" : "prepend tracking"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-3",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 414.5, 305.0, 116.0, 19.0 ],
-									"text" : "prepend screenmode"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-2",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 366.5, 174.0, 94.0, 19.0 ],
-									"text" : "prepend interp"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-1",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 389.0, 226.0, 101.0, 19.0 ],
-									"text" : "prepend leadscale"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-1018",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 630.5, 509.0, 467.0, 19.0 ],
+									"patching_rect" : [ 558.5, 367.0, 467.0, 19.0 ],
 									"text" : "j.message direct @type generic @description \"direct access to the embedded jit.gl.text2d\""
 								}
 
@@ -316,7 +216,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 556.5, 449.0, 419.0, 19.0 ],
+									"patching_rect" : [ 526.5, 335.0, 419.0, 19.0 ],
 									"text" : "j.message text @type string @description \"provide a string to display\""
 								}
 
@@ -331,7 +231,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 414.5, 268.0, 581.0, 31.0 ],
+									"patching_rect" : [ 414.5, 218.0, 581.0, 31.0 ],
 									"text" : "j.parameter screenmode @type boolean @description \"If screenmode = 1, some 3D transformations are skipped so that pixel-accurate text can be drawn..\"",
 									"varname" : "screenmode"
 								}
@@ -360,7 +260,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 516.0, 402.0, 473.0, 19.0 ],
+									"patching_rect" : [ 489.0, 302.0, 473.0, 19.0 ],
 									"text" : "j.parameter face @type string @description \"Specifies the face variant of the current font..\"",
 									"varname" : "face"
 								}
@@ -406,7 +306,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 481.5, 335.0, 511.5, 31.0 ],
+									"patching_rect" : [ 450.5, 260.0, 511.5, 31.0 ],
 									"text" : "j.parameter tracking @type decimal @range 0.5 2 @clipmode none @description \"The tracking (intra-character spacing) as a multiple of the standard tracking for the face. \"",
 									"varname" : "tracking"
 								}
@@ -437,7 +337,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 389.0, 195.0, 600.0, 31.0 ],
+									"patching_rect" : [ 389.0, 183.0, 600.0, 31.0 ],
 									"text" : "j.parameter leadscale @type decimal @range 0.5 2 @clipmode none @description \"The leading between multiple rows of text as a multiple of the standard leading. \"",
 									"varname" : "leadscale"
 								}
@@ -472,7 +372,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -722,7 +622,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 302.5, 597.0, 25.0, 25.0 ]
+									"patching_rect" : [ 341.5, 411.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -730,15 +630,6 @@
 						"lines" : [ 							{
 								"patchline" : 								{
 									"destination" : [ "obj-24", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-1", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-7", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-1005", 0 ]
@@ -756,7 +647,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
+									"destination" : [ "obj-24", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-1031", 0 ]
@@ -783,7 +674,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-6", 0 ],
+									"destination" : [ "obj-24", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-1038", 0 ]
@@ -810,7 +701,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-5", 0 ],
+									"destination" : [ "obj-24", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-1049", 0 ]
@@ -819,7 +710,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-2", 0 ],
+									"destination" : [ "obj-24", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-1050", 0 ]
@@ -828,7 +719,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
+									"destination" : [ "obj-24", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-1055", 0 ]
@@ -882,55 +773,10 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-24", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-2", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-24", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-3", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-11", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-4", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-24", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-5", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-24", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-6", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-24", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-7", 0 ]
 								}
 
 							}
@@ -965,8 +811,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 272.5, 269.0, 210.0, 31.0 ],
-					"text" : "j.model @description \"Write bitmap text.\"",
+					"patching_rect" : [ 255.5, 147.0, 210.0, 31.0 ],
+					"text" : "j.model @type video @algorithm_type jitter @description \"Write bitmap text.\"",
 					"varname" : "jmod.hub"
 				}
 
@@ -985,11 +831,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 439.0, 396.0, 829.0, 574.0 ],
+						"rect" : [ 80.0, 67.0, 829.0, 574.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -1049,7 +895,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 189.5, 111.0, 498.0, 31.0 ],
+									"patching_rect" : [ 189.5, 111.0, 495.0, 31.0 ],
 									"text" : "j.parameter shadow/color/alpha @type decimal @range 0. 1. @clipmode both @ramp/drive Max @description \"Object alpha transparency (0.-1.).\"",
 									"varname" : "shadow/color/alpha"
 								}
@@ -1094,7 +940,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 174.0, 294.0, 59.0, 19.0 ],
+									"patching_rect" : [ 174.0, 294.0, 41.0, 19.0 ],
 									"text" : "zl join"
 								}
 
@@ -1615,7 +1461,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 90.5, 165.0, 119.0, 19.0 ],
+					"patching_rect" : [ 63.0, 185.0, 119.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1642,7 +1488,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 99.5, 137.0, 156.0, 19.0 ],
+					"patching_rect" : [ 63.0, 101.0, 156.0, 19.0 ],
 					"text" : "j.pass color position"
 				}
 
@@ -1654,7 +1500,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 272.5, 314.0, 25.0, 25.0 ]
+					"patching_rect" : [ 255.5, 192.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -1680,7 +1526,33 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 272.5, 178.0, 27.0, 27.0 ]
+					"patching_rect" : [ 163.0, 124.0, 19.0, 19.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-8",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 255.5, 111.0, 25.0, 25.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-9",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 63.0, 320.0, 86.0, 19.0 ],
+					"text" : "VIDEO OUTPUT"
 				}
 
 			}
@@ -1699,13 +1571,27 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-12",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 104.0, 287.0, 282.0, 19.0 ],
+					"text" : "Based on the SubTitle Jitter recipe by Andrew Benson"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"id" : "obj-1068",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 28.0, 287.0, 213.0, 19.0 ],
-					"text" : "j.out geometry_matrix @type jit_matrix"
+					"patching_rect" : [ 28.0, 287.0, 63.0, 19.0 ],
+					"text" : "j.out 1"
 				}
 
 			}
@@ -1718,13 +1604,23 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 272.5, 213.0, 37.0, 19.0 ],
+					"patching_rect" : [ 163.0, 153.0, 37.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 72.5, 231.5, 37.5, 231.5 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
@@ -1735,7 +1631,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
+					"destination" : [ "obj-1", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1069", 0 ]
@@ -1765,13 +1661,23 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-25", 0 ]
+					"midpoints" : [ 209.5, 234.5, 37.5, 234.5 ],
+					"source" : [ "obj-2", 2 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-26", 0 ]
@@ -1789,15 +1695,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1068", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1810,7 +1707,7 @@
 					"destination" : [ "obj-1069", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 282.0, 213.0, 282.0, 213.0 ],
+					"midpoints" : [ 172.5, 159.0, 172.5, 159.0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -1823,6 +1720,54 @@
 					"source" : [ "obj-71", 0 ]
 				}
 
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
+				"patcherrelativepath" : "../../../components/thru",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.class.gl_group.parameters.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/class.gl_group.parameters",
+				"patcherrelativepath" : "../../../components/class.gl_group.parameters",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.pass.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

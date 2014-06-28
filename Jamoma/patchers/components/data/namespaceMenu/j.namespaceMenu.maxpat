@@ -32,193 +32,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"id" : "obj-11",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patcher" : 					{
-						"fileversion" : 1,
-						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
-						}
-,
-						"rect" : [ 25.0, 69.0, 180.0, 265.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 10.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 0,
-						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"boxanimatetime" : 200,
-						"imprint" : 0,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"boxes" : [ 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 10.0,
-									"id" : "obj-45",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 50.0, 147.0, 38.0, 18.0 ],
-									"text" : "del 50"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 10.0,
-									"id" : "obj-44",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 173.0, 59.0, 16.0 ],
-									"text" : "settoggle 0"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 10.0,
-									"id" : "obj-42",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 50.0, 122.0, 100.0, 18.0 ],
-									"text" : "sel 1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 10.0,
-									"id" : "obj-41",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.0, 100.0, 100.0, 18.0 ],
-									"text" : "route toggle"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"comment" : "",
-									"id" : "obj-9",
-									"maxclass" : "inlet",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 535.0, 90.0, 25.0, 25.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"comment" : "",
-									"id" : "obj-10",
-									"maxclass" : "outlet",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 212.0, 25.0, 25.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 535.0, 299.0, 25.0, 25.0 ]
-								}
-
-							}
- ],
-						"lines" : [ 							{
-								"patchline" : 								{
-									"destination" : [ "obj-42", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-41", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-45", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-42", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-10", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-44", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-44", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-45", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-41", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-9", 0 ]
-								}
-
-							}
- ]
-					}
-,
-					"patching_rect" : [ 115.0, 184.0, 19.0, 18.0 ],
-					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 10.0,
-						"description" : "",
-						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 10.0,
-						"globalpatchername" : "",
-						"tags" : ""
-					}
-,
-					"text" : "p"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 10.0,
 					"id" : "obj-9",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -650,7 +463,7 @@
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 385.0, 77.0, 119.0, 20.0 ],
-					"prefix" : "/mouse/position/x:",
+					"prefix" : "/BCF/track.1/fader/value:",
 					"presentation" : 1,
 					"presentation_rect" : [ 403.0, 2.0, 145.0, 20.0 ]
 				}
@@ -658,6 +471,9 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bordercolor" : [ 0.5, 0.5, 0.5, 1.0 ],
+					"checkedcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"hidden" : 1,
 					"hint" : "",
 					"id" : "obj-84",
@@ -675,6 +491,7 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"fontname" : "Arial Bold Italic",
 					"fontsize" : 12.754706,
 					"frgb" : 0.0,
@@ -694,6 +511,9 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bordercolor" : [ 0.5, 0.5, 0.5, 1.0 ],
+					"checkedcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"hidden" : 1,
 					"hint" : "",
 					"id" : "obj-66",
@@ -711,6 +531,7 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"fontname" : "Arial Bold Italic",
 					"fontsize" : 12.754706,
 					"frgb" : 0.0,
@@ -730,6 +551,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"color" : [ 0.7, 0.7, 0.7, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 10.435669,
 					"id" : "obj-142",
@@ -738,13 +561,16 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 43.0, 68.0, 62.0, 18.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
-					"text" : "thispatcher"
+					"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "grow", "close", "zoom", "nofloat", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 480, 254, 1315, 774, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
+					"text" : "thispatcher",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"color" : [ 0.7, 0.7, 0.7, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 11.595187,
 					"id" : "obj-140",
@@ -1973,7 +1799,8 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p View"
+					"text" : "p View",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -2700,7 +2527,6 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -9137,8 +8963,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 445.0, 133.0, 59.0, 16.0 ],
-									"text" : "settoggle 0"
+									"patching_rect" : [ 445.0, 133.0, 50.0, 16.0 ],
+									"text" : "set 0"
 								}
 
 							}
@@ -9372,7 +9198,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 39.5, 155.0, 94.5, 20.0 ],
+					"patching_rect" : [ 39.5, 155.0, 69.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 2.0, 2.0, 17.0, 20.0 ],
 					"togcolor" : [ 0.643137, 0.643137, 0.643137, 1.0 ]
@@ -9395,7 +9221,7 @@
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 245.0, 137.0, 35.0, 20.0 ],
-					"prefix" : "/mouse/position/x.",
+					"prefix" : "/BCF/track.1/fader/value.",
 					"presentation" : 1,
 					"presentation_rect" : [ 354.0, 2.0, 35.0, 20.0 ]
 				}
@@ -9459,14 +9285,14 @@
 					"framecolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"hint" : "direct access to all descendant parameters/messages/returns",
 					"id" : "obj-5",
-					"items" : [ "<separator>", ",", "(", "returns", ":)", ",", "cueManager/cue/current/name", ",", "cueManager/cue/current/number", ",", "cueManager/cue/current/time", ",", "cueManager/cue/names", ",", "cueManager/cue/recalled", ",", "cueManager/preset/current", ",", "mouse/button", ",", "mouse/delta/angle", ",", "mouse/delta/magnitude", ",", "mouse/delta/x", ",", "mouse/delta/y", ",", "mouse/position/x", ",", "mouse/position/y", ",", "movie.1/fps", ",", "movie.1/loop/end", ",", "movie.2/fps", ",", "movie.2/loop/end", ",", "movie.3/fps", ",", "movie.3/loop/end", ",", "movie.4/fps", ",", "movie.4/loop/end", ",", "movie/fps", ",", "movie/loop/end", ",", "track/channel.A/fps", ",", "track/channel.B/fps", ",", "wacom/buttons", ",", "wacom/buttons/raw", ",", "wacom/direction", ",", "wacom/position", ",", "wacom/pressure", ",", "wacom/proximity", ",", "wacom/rotation", ",", "wacom/tilt", ",", "wacom/tools", ",", "wacom/touch", ",", "<separator>", ",", "(", "parameters", ":)", ",", "BCF/midiIn", ",", "BCF/midiOut", ",", "BCF/track.1/fader/address", ",", "BCF/track.1/fader/dir", ",", "BCF/track.1/fader/enable", ",", "BCF/track.1/fader/power", ",", "BCF/track.1/fader/value", ",", "BCF/track.1/key.1/address", ",", "BCF/track.1/key.1/dir", ",", "BCF/track.1/key.1/enable", ",", "BCF/track.1/key.1/power", ",", "BCF/track.1/key.1/value", ",", "BCF/track.1/key.2/address", ",", "BCF/track.1/key.2/dir", ",", "BCF/track.1/key.2/enable", ",", "BCF/track.1/key.2/power", ",", "BCF/track.1/key.2/value", ",", "BCF/track.1/press.1/address", ",", "BCF/track.1/press.1/dir", ",", "BCF/track.1/press.1/enable", ",", "BCF/track.1/press.1/power", ",", "BCF/track.1/press.1/value", ",", "BCF/track.1/press.2/address", ",", "BCF/track.1/press.2/dir", ",", "BCF/track.1/press.2/enable", ",", "BCF/track.1/press.2/power", ",", "BCF/track.1/press.2/value", ",", "BCF/track.1/press.3/address", ",", "BCF/track.1/press.3/dir", ",", "BCF/track.1/press.3/enable", ",", "BCF/track.1/press.3/power", ",", "BCF/track.1/press.3/value", ",", "BCF/track.1/press.4/address", ",", "BCF/track.1/press.4/dir", ",", "BCF/track.1/press.4/enable", ",", "BCF/track.1/press.4/power", ",", "BCF/track.1/press.4/value", ",", "BCF/track.1/turn.1/address", ",", "BCF/track.1/turn.1/dir", ",", "BCF/track.1/turn.1/enable", ",", "BCF/track.1/turn.1/power", ",", "BCF/track.1/turn.1/value", ",", "BCF/track.1/turn.2/address", ",", "BCF/track.1/turn.2/dir", ",", "BCF/track.1/turn.2/enable", ",", "BCF/track.1/turn.2/power", ",", "BCF/track.1/turn.2/value", ",", "BCF/track.1/turn.3/address", ",", "BCF/track.1/turn.3/dir", ",", "BCF/track.1/turn.3/enable", ",", "BCF/track.1/turn.3/power", ",", "BCF/track.1/turn.3/value", ",", "BCF/track.1/turn.4/address", ",", "BCF/track.1/turn.4/dir", ",", "BCF/track.1/turn.4/enable", ",", "BCF/track.1/turn.4/power", ",", "BCF/track.1/turn.4/value", ",", "BCF/track.2/fader/address", ",", "BCF/track.2/fader/dir", ",", "BCF/track.2/fader/enable", ",", "BCF/track.2/fader/power", ",", "BCF/track.2/fader/value", ",", "BCF/track.2/key.1/address", ",", "BCF/track.2/key.1/dir", ",", "BCF/track.2/key.1/enable", ",", "BCF/track.2/key.1/power", ",", "BCF/track.2/key.1/value", ",", "BCF/track.2/key.2/address", ",", "BCF/track.2/key.2/dir", ",", "BCF/track.2/key.2/enable", ",", "BCF/track.2/key.2/power", ",", "BCF/track.2/key.2/value", ",", "BCF/track.2/press.1/address", ",", "BCF/track.2/press.1/dir", ",", "BCF/track.2/press.1/enable", ",", "BCF/track.2/press.1/power", ",", "BCF/track.2/press.1/value", ",", "BCF/track.2/press.2/address", ",", "BCF/track.2/press.2/dir", ",", "BCF/track.2/press.2/enable", ",", "BCF/track.2/press.2/power", ",", "BCF/track.2/press.2/value", ",", "BCF/track.2/press.3/address", ",", "BCF/track.2/press.3/dir", ",", "BCF/track.2/press.3/enable", ",", "BCF/track.2/press.3/power", ",", "BCF/track.2/press.3/value", ",", "BCF/track.2/press.4/address", ",", "BCF/track.2/press.4/dir", ",", "BCF/track.2/press.4/enable", ",", "BCF/track.2/press.4/power", ",", "BCF/track.2/press.4/value", ",", "BCF/track.2/turn.1/address", ",", "BCF/track.2/turn.1/dir", ",", "BCF/track.2/turn.1/enable", ",", "BCF/track.2/turn.1/power", ",", "BCF/track.2/turn.1/value", ",", "BCF/track.2/turn.2/address", ",", "BCF/track.2/turn.2/dir", ",", "BCF/track.2/turn.2/enable", ",", "BCF/track.2/turn.2/power", ",", "BCF/track.2/turn.2/value", ",", "BCF/track.2/turn.3/address", ",", "BCF/track.2/turn.3/dir", ",", "BCF/track.2/turn.3/enable", ",", "BCF/track.2/turn.3/power", ",", "BCF/track.2/turn.3/value", ",", "BCF/track.2/turn.4/address", ",", "BCF/track.2/turn.4/dir", ",", "BCF/track.2/turn.4/enable", ",", "BCF/track.2/turn.4/power", ",", "BCF/track.2/turn.4/value", ",", "BCF/track.3/fader/address", ",", "BCF/track.3/fader/dir", ",", "BCF/track.3/fader/enable", ",", "BCF/track.3/fader/power", ",", "BCF/track.3/fader/value", ",", "BCF/track.3/key.1/address", ",", "BCF/track.3/key.1/dir", ",", "BCF/track.3/key.1/enable", ",", "BCF/track.3/key.1/power", ",", "BCF/track.3/key.1/value", ",", "BCF/track.3/key.2/address", ",", "BCF/track.3/key.2/dir", ",", "BCF/track.3/key.2/enable", ",", "BCF/track.3/key.2/power", ",", "BCF/track.3/key.2/value", ",", "BCF/track.3/press.1/address", ",", "BCF/track.3/press.1/dir", ",", "BCF/track.3/press.1/enable", ",", "BCF/track.3/press.1/power", ",", "BCF/track.3/press.1/value", ",", "BCF/track.3/press.2/address", ",", "BCF/track.3/press.2/dir", ",", "BCF/track.3/press.2/enable", ",", "BCF/track.3/press.2/power", ",", "BCF/track.3/press.2/value", ",", "BCF/track.3/press.3/address", ",", "BCF/track.3/press.3/dir", ",", "BCF/track.3/press.3/enable", ",", "BCF/track.3/press.3/power", ",", "BCF/track.3/press.3/value", ",", "BCF/track.3/press.4/address", ",", "BCF/track.3/press.4/dir", ",", "BCF/track.3/press.4/enable", ",", "BCF/track.3/press.4/power", ",", "BCF/track.3/press.4/value", ",", "BCF/track.3/turn.1/address", ",", "BCF/track.3/turn.1/dir", ",", "BCF/track.3/turn.1/enable", ",", "BCF/track.3/turn.1/power", ",", "BCF/track.3/turn.1/value", ",", "BCF/track.3/turn.2/address", ",", "BCF/track.3/turn.2/dir", ",", "BCF/track.3/turn.2/enable", ",", "BCF/track.3/turn.2/power", ",", "BCF/track.3/turn.2/value", ",", "BCF/track.3/turn.3/address", ",", "BCF/track.3/turn.3/dir", ",", "BCF/track.3/turn.3/enable", ",", "BCF/track.3/turn.3/power", ",", "BCF/track.3/turn.3/value", ",", "BCF/track.3/turn.4/address", ",", "BCF/track.3/turn.4/dir", ",", "BCF/track.3/turn.4/enable", ",", "BCF/track.3/turn.4/power", ",", "BCF/track.3/turn.4/value", ",", "BCF/track.4/fader/address", ",", "BCF/track.4/fader/dir", ",", "BCF/track.4/fader/enable", ",", "BCF/track.4/fader/power", ",", "BCF/track.4/fader/value", ",", "BCF/track.4/key.1/address", ",", "BCF/track.4/key.1/dir", ",", "BCF/track.4/key.1/enable", ",", "BCF/track.4/key.1/power", ",", "BCF/track.4/key.1/value", ",", "BCF/track.4/key.2/address", ",", "BCF/track.4/key.2/dir", ",", "BCF/track.4/key.2/enable", ",", "BCF/track.4/key.2/power", ",", "BCF/track.4/key.2/value", ",", "BCF/track.4/press.1/address", ",", "BCF/track.4/press.1/dir", ",", "BCF/track.4/press.1/enable", ",", "BCF/track.4/press.1/power", ",", "BCF/track.4/press.1/value", ",", "BCF/track.4/press.2/address", ",", "BCF/track.4/press.2/dir", ",", "BCF/track.4/press.2/enable", ",", "BCF/track.4/press.2/power", ",", "BCF/track.4/press.2/value", ",", "BCF/track.4/press.3/address", ",", "BCF/track.4/press.3/dir", ",", "BCF/track.4/press.3/enable", ",", "BCF/track.4/press.3/power", ",", "BCF/track.4/press.3/value", ",", "BCF/track.4/press.4/address", ",", "BCF/track.4/press.4/dir", ",", "BCF/track.4/press.4/enable", ",", "BCF/track.4/press.4/power", ",", "BCF/track.4/press.4/value", ",", "BCF/track.4/turn.1/address", ",", "BCF/track.4/turn.1/dir", ",", "BCF/track.4/turn.1/enable", ",", "BCF/track.4/turn.1/power", ",", "BCF/track.4/turn.1/value", ",", "BCF/track.4/turn.2/address", ",", "BCF/track.4/turn.2/dir", ",", "BCF/track.4/turn.2/enable", ",", "BCF/track.4/turn.2/power", ",", "BCF/track.4/turn.2/value", ",", "BCF/track.4/turn.3/address", ",", "BCF/track.4/turn.3/dir", ",", "BCF/track.4/turn.3/enable", ",", "BCF/track.4/turn.3/power", ",", "BCF/track.4/turn.3/value", ",", "BCF/track.4/turn.4/address", ",", "BCF/track.4/turn.4/dir", ",", "BCF/track.4/turn.4/enable", ",", "BCF/track.4/turn.4/power", ",", "BCF/track.4/turn.4/value", ",", "BCF/track.5/fader/address", ",", "BCF/track.5/fader/dir", ",", "BCF/track.5/fader/enable", ",", "BCF/track.5/fader/power", ",", "BCF/track.5/fader/value", ",", "BCF/track.5/key.1/address", ",", "BCF/track.5/key.1/dir", ",", "BCF/track.5/key.1/enable", ",", "BCF/track.5/key.1/power", ",", "BCF/track.5/key.1/value", ",", "BCF/track.5/key.2/address", ",", "BCF/track.5/key.2/dir", ",", "BCF/track.5/key.2/enable", ",", "BCF/track.5/key.2/power", ",", "BCF/track.5/key.2/value", ",", "BCF/track.5/press.1/address", ",", "BCF/track.5/press.1/dir", ",", "BCF/track.5/press.1/enable", ",", "BCF/track.5/press.1/power", ",", "BCF/track.5/press.1/value", ",", "BCF/track.5/press.2/address", ",", "BCF/track.5/press.2/dir", ",", "BCF/track.5/press.2/enable", ",", "BCF/track.5/press.2/power", ",", "BCF/track.5/press.2/value", ",", "BCF/track.5/press.3/address", ",", "BCF/track.5/press.3/dir", ",", "BCF/track.5/press.3/enable", ",", "BCF/track.5/press.3/power", ",", "BCF/track.5/press.3/value", ",", "BCF/track.5/press.4/address", ",", "BCF/track.5/press.4/dir", ",", "BCF/track.5/press.4/enable", ",", "BCF/track.5/press.4/power", ",", "BCF/track.5/press.4/value", ",", "BCF/track.5/turn.1/address", ",", "BCF/track.5/turn.1/dir", ",", "BCF/track.5/turn.1/enable", ",", "BCF/track.5/turn.1/power", ",", "BCF/track.5/turn.1/value", ",", "BCF/track.5/turn.2/address", ",", "BCF/track.5/turn.2/dir", ",", "BCF/track.5/turn.2/enable", ",", "BCF/track.5/turn.2/power", ",", "BCF/track.5/turn.2/value", ",", "BCF/track.5/turn.3/address", ",", "BCF/track.5/turn.3/dir", ",", "BCF/track.5/turn.3/enable", ",", "BCF/track.5/turn.3/power", ",", "BCF/track.5/turn.3/value", ",", "BCF/track.5/turn.4/address", ",", "BCF/track.5/turn.4/dir", ",", "BCF/track.5/turn.4/enable", ",", "BCF/track.5/turn.4/power", ",", "BCF/track.5/turn.4/value", ",", "BCF/track.6/fader/address", ",", "BCF/track.6/fader/dir", ",", "BCF/track.6/fader/enable", ",", "BCF/track.6/fader/power", ",", "BCF/track.6/fader/value", ",", "BCF/track.6/key.1/address", ",", "BCF/track.6/key.1/dir", ",", "BCF/track.6/key.1/enable", ",", "BCF/track.6/key.1/power", ",", "BCF/track.6/key.1/value", ",", "BCF/track.6/key.2/address", ",", "BCF/track.6/key.2/dir", ",", "BCF/track.6/key.2/enable", ",", "BCF/track.6/key.2/power", ",", "BCF/track.6/key.2/value", ",", "BCF/track.6/press.1/address", ",", "BCF/track.6/press.1/dir", ",", "BCF/track.6/press.1/enable", ",", "BCF/track.6/press.1/power", ",", "BCF/track.6/press.1/value", ",", "BCF/track.6/press.2/address", ",", "BCF/track.6/press.2/dir", ",", "BCF/track.6/press.2/enable", ",", "BCF/track.6/press.2/power", ",", "BCF/track.6/press.2/value", ",", "BCF/track.6/press.3/address", ",", "BCF/track.6/press.3/dir", ",", "BCF/track.6/press.3/enable", ",", "BCF/track.6/press.3/power", ",", "BCF/track.6/press.3/value", ",", "BCF/track.6/press.4/address", ",", "BCF/track.6/press.4/dir", ",", "BCF/track.6/press.4/enable", ",", "BCF/track.6/press.4/power", ",", "BCF/track.6/press.4/value", ",", "BCF/track.6/turn.1/address", ",", "BCF/track.6/turn.1/dir", ",", "BCF/track.6/turn.1/enable", ",", "BCF/track.6/turn.1/power", ",", "BCF/track.6/turn.1/value", ",", "BCF/track.6/turn.2/address", ",", "BCF/track.6/turn.2/dir", ",", "BCF/track.6/turn.2/enable", ",", "BCF/track.6/turn.2/power", ",", "BCF/track.6/turn.2/value", ",", "BCF/track.6/turn.3/address", ",", "BCF/track.6/turn.3/dir", ",", "BCF/track.6/turn.3/enable", ",", "BCF/track.6/turn.3/power", ",", "BCF/track.6/turn.3/value", ",", "BCF/track.6/turn.4/address", ",", "BCF/track.6/turn.4/dir", ",", "BCF/track.6/turn.4/enable", ",", "BCF/track.6/turn.4/power", ",", "BCF/track.6/turn.4/value", ",", "BCF/track.7/fader/address", ",", "BCF/track.7/fader/dir", ",", "BCF/track.7/fader/enable", ",", "BCF/track.7/fader/power", ",", "BCF/track.7/fader/value", ",", "BCF/track.7/key.1/address", ",", "BCF/track.7/key.1/dir", ",", "BCF/track.7/key.1/enable", ",", "BCF/track.7/key.1/power", ",", "BCF/track.7/key.1/value", ",", "BCF/track.7/key.2/address", ",", "BCF/track.7/key.2/dir", ",", "BCF/track.7/key.2/enable", ",", "BCF/track.7/key.2/power", ",", "BCF/track.7/key.2/value", ",", "BCF/track.7/press.1/address", ",", "BCF/track.7/press.1/dir", ",", "BCF/track.7/press.1/enable", ",", "BCF/track.7/press.1/power", ",", "BCF/track.7/press.1/value", ",", "BCF/track.7/press.2/address", ",", "BCF/track.7/press.2/dir", ",", "BCF/track.7/press.2/enable", ",", "BCF/track.7/press.2/power", ",", "BCF/track.7/press.2/value", ",", "BCF/track.7/press.3/address", ",", "BCF/track.7/press.3/dir", ",", "BCF/track.7/press.3/enable", ",", "BCF/track.7/press.3/power", ",", "BCF/track.7/press.3/value", ",", "BCF/track.7/press.4/address", ",", "BCF/track.7/press.4/dir", ",", "BCF/track.7/press.4/enable", ",", "BCF/track.7/press.4/power", ",", "BCF/track.7/press.4/value", ",", "BCF/track.7/turn.1/address", ",", "BCF/track.7/turn.1/dir", ",", "BCF/track.7/turn.1/enable", ",", "BCF/track.7/turn.1/power", ",", "BCF/track.7/turn.1/value", ",", "BCF/track.7/turn.2/address", ",", "BCF/track.7/turn.2/dir", ",", "BCF/track.7/turn.2/enable", ",", "BCF/track.7/turn.2/power", ",", "BCF/track.7/turn.2/value", ",", "BCF/track.7/turn.3/address", ",", "BCF/track.7/turn.3/dir", ",", "BCF/track.7/turn.3/enable", ",", "BCF/track.7/turn.3/power", ",", "BCF/track.7/turn.3/value", ",", "BCF/track.7/turn.4/address", ",", "BCF/track.7/turn.4/dir", ",", "BCF/track.7/turn.4/enable", ",", "BCF/track.7/turn.4/power", ",", "BCF/track.7/turn.4/value", ",", "BCF/track.8/fader/address", ",", "BCF/track.8/fader/dir", ",", "BCF/track.8/fader/enable", ",", "BCF/track.8/fader/power", ",", "BCF/track.8/fader/value", ",", "BCF/track.8/key.1/address", ",", "BCF/track.8/key.1/dir", ",", "BCF/track.8/key.1/enable", ",", "BCF/track.8/key.1/power", ",", "BCF/track.8/key.1/value", ",", "BCF/track.8/key.2/address", ",", "BCF/track.8/key.2/dir", ",", "BCF/track.8/key.2/enable", ",", "BCF/track.8/key.2/power", ",", "BCF/track.8/key.2/value", ",", "BCF/track.8/press.1/address", ",", "BCF/track.8/press.1/dir", ",", "BCF/track.8/press.1/enable", ",", "BCF/track.8/press.1/power", ",", "BCF/track.8/press.1/value", ",", "BCF/track.8/press.2/address", ",", "BCF/track.8/press.2/dir", ",", "BCF/track.8/press.2/enable", ",", "BCF/track.8/press.2/power", ",", "BCF/track.8/press.2/value", ",", "BCF/track.8/press.3/address", ",", "BCF/track.8/press.3/dir", ",", "BCF/track.8/press.3/enable", ",", "BCF/track.8/press.3/power", ",", "BCF/track.8/press.3/value", ",", "BCF/track.8/press.4/address", ",", "BCF/track.8/press.4/dir", ",", "BCF/track.8/press.4/enable", ",", "BCF/track.8/press.4/power", ",", "BCF/track.8/press.4/value", ",", "BCF/track.8/turn.1/address", ",", "BCF/track.8/turn.1/dir", ",", "BCF/track.8/turn.1/enable", ",", "BCF/track.8/turn.1/power", ",", "BCF/track.8/turn.1/value", ",", "BCF/track.8/turn.2/address", ",", "BCF/track.8/turn.2/dir", ",", "BCF/track.8/turn.2/enable", ",", "BCF/track.8/turn.2/power", ",", "BCF/track.8/turn.2/value", ",", "BCF/track.8/turn.3/address", ",", "BCF/track.8/turn.3/dir", ",", "BCF/track.8/turn.3/enable", ",", "BCF/track.8/turn.3/power", ",", "BCF/track.8/turn.3/value", ",", "BCF/track.8/turn.4/address", ",", "BCF/track.8/turn.4/dir", ",", "BCF/track.8/turn.4/enable", ",", "BCF/track.8/turn.4/power", ",", "BCF/track.8/turn.4/value", ",", "Multi.1/InstanceNumber", ",", "Multi.1/mapper.1/enable", ",", "Multi.1/mapper.1/function", ",", "Multi.1/mapper.1/function/parameter", ",", "Multi.1/mapper.1/function/parameter/value", ",", "Multi.1/mapper.1/in/address", ",", "Multi.1/mapper.1/in/max", ",", "Multi.1/mapper.1/in/min", ",", "Multi.1/mapper.1/out/address", ",", "Multi.1/mapper.1/out/max", ",", "Multi.1/mapper.1/out/min", ",", "Multi.1/mapper.10/enable", ",", "Multi.1/mapper.10/function", ",", "Multi.1/mapper.10/function/parameter", ",", "Multi.1/mapper.10/function/parameter/value", ",", "Multi.1/mapper.10/in/address", ",", "Multi.1/mapper.10/in/max", ",", "Multi.1/mapper.10/in/min", ",", "Multi.1/mapper.10/out/address", ",", "Multi.1/mapper.10/out/max", ",", "Multi.1/mapper.10/out/min", ",", "Multi.1/mapper.11/enable", ",", "Multi.1/mapper.11/function", ",", "Multi.1/mapper.11/function/parameter", ",", "Multi.1/mapper.11/function/parameter/value", ",", "Multi.1/mapper.11/in/address", ",", "Multi.1/mapper.11/in/max", ",", "Multi.1/mapper.11/in/min", ",", "Multi.1/mapper.11/out/address", ",", "Multi.1/mapper.11/out/max", ",", "Multi.1/mapper.11/out/min", ",", "Multi.1/mapper.12/enable", ",", "Multi.1/mapper.12/function", ",", "Multi.1/mapper.12/function/parameter", ",", "Multi.1/mapper.12/function/parameter/value", ",", "Multi.1/mapper.12/in/address", ",", "Multi.1/mapper.12/in/max", ",", "Multi.1/mapper.12/in/min", ",", "Multi.1/mapper.12/out/address", ",", "Multi.1/mapper.12/out/max", ",", "Multi.1/mapper.12/out/min", ",", "Multi.1/mapper.13/enable", ",", "Multi.1/mapper.13/function", ",", "Multi.1/mapper.13/function/parameter", ",", "Multi.1/mapper.13/function/parameter/value", ",", "Multi.1/mapper.13/in/address", ",", "Multi.1/mapper.13/in/max", ",", "Multi.1/mapper.13/in/min", ",", "Multi.1/mapper.13/out/address", ",", "Multi.1/mapper.13/out/max", ",", "Multi.1/mapper.13/out/min", ",", "Multi.1/mapper.14/enable", ",", "Multi.1/mapper.14/function", ",", "Multi.1/mapper.14/function/parameter", ",", "Multi.1/mapper.14/function/parameter/value", ",", "Multi.1/mapper.14/in/address", ",", "Multi.1/mapper.14/in/max", ",", "Multi.1/mapper.14/in/min", ",", "Multi.1/mapper.14/out/address", ",", "Multi.1/mapper.14/out/max", ",", "Multi.1/mapper.14/out/min", ",", "Multi.1/mapper.15/enable", ",", "Multi.1/mapper.15/function", ",", "Multi.1/mapper.15/function/parameter", ",", "Multi.1/mapper.15/function/parameter/value", ",", "Multi.1/mapper.15/in/address", ",", "Multi.1/mapper.15/in/max", ",", "Multi.1/mapper.15/in/min", ",", "Multi.1/mapper.15/out/address", ",", "Multi.1/mapper.15/out/max", ",", "Multi.1/mapper.15/out/min", ",", "Multi.1/mapper.2/enable", ",", "Multi.1/mapper.2/function", ",", "Multi.1/mapper.2/function/parameter", ",", "Multi.1/mapper.2/function/parameter/value", ",", "Multi.1/mapper.2/in/address", ",", "Multi.1/mapper.2/in/max", ",", "Multi.1/mapper.2/in/min", ",", "Multi.1/mapper.2/out/address", ",", "Multi.1/mapper.2/out/max", ",", "Multi.1/mapper.2/out/min", ",", "Multi.1/mapper.3/enable", ",", "Multi.1/mapper.3/function", ",", "Multi.1/mapper.3/function/parameter", ",", "Multi.1/mapper.3/function/parameter/value", ",", "Multi.1/mapper.3/in/address", ",", "Multi.1/mapper.3/in/max", ",", "Multi.1/mapper.3/in/min", ",", "Multi.1/mapper.3/out/address", ",", "Multi.1/mapper.3/out/max", ",", "Multi.1/mapper.3/out/min", ",", "Multi.1/mapper.4/enable", ",", "Multi.1/mapper.4/function", ",", "Multi.1/mapper.4/function/parameter", ",", "Multi.1/mapper.4/function/parameter/value", ",", "Multi.1/mapper.4/in/address", ",", "Multi.1/mapper.4/in/max", ",", "Multi.1/mapper.4/in/min", ",", "Multi.1/mapper.4/out/address", ",", "Multi.1/mapper.4/out/max", ",", "Multi.1/mapper.4/out/min", ",", "Multi.1/mapper.5/enable", ",", "Multi.1/mapper.5/function", ",", "Multi.1/mapper.5/function/parameter", ",", "Multi.1/mapper.5/function/parameter/value", ",", "Multi.1/mapper.5/in/address", ",", "Multi.1/mapper.5/in/max", ",", "Multi.1/mapper.5/in/min", ",", "Multi.1/mapper.5/out/address", ",", "Multi.1/mapper.5/out/max", ",", "Multi.1/mapper.5/out/min", ",", "Multi.1/mapper.6/enable", ",", "Multi.1/mapper.6/function", ",", "Multi.1/mapper.6/function/parameter", ",", "Multi.1/mapper.6/function/parameter/value", ",", "Multi.1/mapper.6/in/address", ",", "Multi.1/mapper.6/in/max", ",", "Multi.1/mapper.6/in/min", ",", "Multi.1/mapper.6/out/address", ",", "Multi.1/mapper.6/out/max", ",", "Multi.1/mapper.6/out/min", ",", "Multi.1/mapper.7/enable", ",", "Multi.1/mapper.7/function", ",", "Multi.1/mapper.7/function/parameter", ",", "Multi.1/mapper.7/function/parameter/value", ",", "Multi.1/mapper.7/in/address", ",", "Multi.1/mapper.7/in/max", ",", "Multi.1/mapper.7/in/min", ",", "Multi.1/mapper.7/out/address", ",", "Multi.1/mapper.7/out/max", ",", "Multi.1/mapper.7/out/min", ",", "Multi.1/mapper.8/enable", ",", "Multi.1/mapper.8/function", ",", "Multi.1/mapper.8/function/parameter", ",", "Multi.1/mapper.8/function/parameter/value", ",", "Multi.1/mapper.8/in/address", ",", "Multi.1/mapper.8/in/max", ",", "Multi.1/mapper.8/in/min", ",", "Multi.1/mapper.8/out/address", ",", "Multi.1/mapper.8/out/max", ",", "Multi.1/mapper.8/out/min", ",", "Multi.1/mapper.9/enable", ",", "Multi.1/mapper.9/function", ",", "Multi.1/mapper.9/function/parameter", ",", "Multi.1/mapper.9/function/parameter/value", ",", "Multi.1/mapper.9/in/address", ",", "Multi.1/mapper.9/in/max", ",", "Multi.1/mapper.9/in/min", ",", "Multi.1/mapper.9/out/address", ",", "Multi.1/mapper.9/out/max", ",", "Multi.1/mapper.9/out/min", ",", "Multi.2/InstanceNumber", ",", "Multi.2/mapper.1/enable", ",", "Multi.2/mapper.1/function", ",", "Multi.2/mapper.1/function/parameter", ",", "Multi.2/mapper.1/function/parameter/value", ",", "Multi.2/mapper.1/in/address", ",", "Multi.2/mapper.1/in/max", ",", "Multi.2/mapper.1/in/min", ",", "Multi.2/mapper.1/out/address", ",", "Multi.2/mapper.1/out/max", ",", "Multi.2/mapper.1/out/min", ",", "Multi.2/mapper.10/enable", ",", "Multi.2/mapper.10/function", ",", "Multi.2/mapper.10/function/parameter", ",", "Multi.2/mapper.10/function/parameter/value", ",", "Multi.2/mapper.10/in/address", ",", "Multi.2/mapper.10/in/max", ",", "Multi.2/mapper.10/in/min", ",", "Multi.2/mapper.10/out/address", ",", "Multi.2/mapper.10/out/max", ",", "Multi.2/mapper.10/out/min", ",", "Multi.2/mapper.11/enable", ",", "Multi.2/mapper.11/function", ",", "Multi.2/mapper.11/function/parameter", ",", "Multi.2/mapper.11/function/parameter/value", ",", "Multi.2/mapper.11/in/address", ",", "Multi.2/mapper.11/in/max", ",", "Multi.2/mapper.11/in/min", ",", "Multi.2/mapper.11/out/address", ",", "Multi.2/mapper.11/out/max", ",", "Multi.2/mapper.11/out/min", ",", "Multi.2/mapper.12/enable", ",", "Multi.2/mapper.12/function", ",", "Multi.2/mapper.12/function/parameter", ",", "Multi.2/mapper.12/function/parameter/value", ",", "Multi.2/mapper.12/in/address", ",", "Multi.2/mapper.12/in/max", ",", "Multi.2/mapper.12/in/min", ",", "Multi.2/mapper.12/out/address", ",", "Multi.2/mapper.12/out/max", ",", "Multi.2/mapper.12/out/min", ",", "Multi.2/mapper.13/enable", ",", "Multi.2/mapper.13/function", ",", "Multi.2/mapper.13/function/parameter", ",", "Multi.2/mapper.13/function/parameter/value", ",", "Multi.2/mapper.13/in/address", ",", "Multi.2/mapper.13/in/max", ",", "Multi.2/mapper.13/in/min", ",", "Multi.2/mapper.13/out/address", ",", "Multi.2/mapper.13/out/max", ",", "Multi.2/mapper.13/out/min", ",", "Multi.2/mapper.14/enable", ",", "Multi.2/mapper.14/function", ",", "Multi.2/mapper.14/function/parameter", ",", "Multi.2/mapper.14/function/parameter/value", ",", "Multi.2/mapper.14/in/address", ",", "Multi.2/mapper.14/in/max", ",", "Multi.2/mapper.14/in/min", ",", "Multi.2/mapper.14/out/address", ",", "Multi.2/mapper.14/out/max", ",", "Multi.2/mapper.14/out/min", ",", "Multi.2/mapper.15/enable", ",", "Multi.2/mapper.15/function", ",", "Multi.2/mapper.15/function/parameter", ",", "Multi.2/mapper.15/function/parameter/value", ",", "Multi.2/mapper.15/in/address", ",", "Multi.2/mapper.15/in/max", ",", "Multi.2/mapper.15/in/min", ",", "Multi.2/mapper.15/out/address", ",", "Multi.2/mapper.15/out/max", ",", "Multi.2/mapper.15/out/min", ",", "Multi.2/mapper.2/enable", ",", "Multi.2/mapper.2/function", ",", "Multi.2/mapper.2/function/parameter", ",", "Multi.2/mapper.2/function/parameter/value", ",", "Multi.2/mapper.2/in/address", ",", "Multi.2/mapper.2/in/max", ",", "Multi.2/mapper.2/in/min", ",", "Multi.2/mapper.2/out/address", ",", "Multi.2/mapper.2/out/max", ",", "Multi.2/mapper.2/out/min", ",", "Multi.2/mapper.3/enable", ",", "Multi.2/mapper.3/function", ",", "Multi.2/mapper.3/function/parameter", ",", "Multi.2/mapper.3/function/parameter/value", ",", "Multi.2/mapper.3/in/address", ",", "Multi.2/mapper.3/in/max", ",", "Multi.2/mapper.3/in/min", ",", "Multi.2/mapper.3/out/address", ",", "Multi.2/mapper.3/out/max", ",", "Multi.2/mapper.3/out/min", ",", "Multi.2/mapper.4/enable", ",", "Multi.2/mapper.4/function", ",", "Multi.2/mapper.4/function/parameter", ",", "Multi.2/mapper.4/function/parameter/value", ",", "Multi.2/mapper.4/in/address", ",", "Multi.2/mapper.4/in/max", ",", "Multi.2/mapper.4/in/min", ",", "Multi.2/mapper.4/out/address", ",", "Multi.2/mapper.4/out/max", ",", "Multi.2/mapper.4/out/min", ",", "Multi.2/mapper.5/enable", ",", "Multi.2/mapper.5/function", ",", "Multi.2/mapper.5/function/parameter", ",", "Multi.2/mapper.5/function/parameter/value", ",", "Multi.2/mapper.5/in/address", ",", "Multi.2/mapper.5/in/max", ",", "Multi.2/mapper.5/in/min", ",", "Multi.2/mapper.5/out/address", ",", "Multi.2/mapper.5/out/max", ",", "Multi.2/mapper.5/out/min", ",", "Multi.2/mapper.6/enable", ",", "Multi.2/mapper.6/function", ",", "Multi.2/mapper.6/function/parameter", ",", "Multi.2/mapper.6/function/parameter/value", ",", "Multi.2/mapper.6/in/address", ",", "Multi.2/mapper.6/in/max", ",", "Multi.2/mapper.6/in/min", ",", "Multi.2/mapper.6/out/address", ",", "Multi.2/mapper.6/out/max", ",", "Multi.2/mapper.6/out/min", ",", "Multi.2/mapper.7/enable", ",", "Multi.2/mapper.7/function", ",", "Multi.2/mapper.7/function/parameter", ",", "Multi.2/mapper.7/function/parameter/value", ",", "Multi.2/mapper.7/in/address", ",", "Multi.2/mapper.7/in/max", ",", "Multi.2/mapper.7/in/min", ",", "Multi.2/mapper.7/out/address", ",", "Multi.2/mapper.7/out/max", ",", "Multi.2/mapper.7/out/min", ",", "Multi.2/mapper.8/enable", ",", "Multi.2/mapper.8/function", ",", "Multi.2/mapper.8/function/parameter", ",", "Multi.2/mapper.8/function/parameter/value", ",", "Multi.2/mapper.8/in/address", ",", "Multi.2/mapper.8/in/max", ",", "Multi.2/mapper.8/in/min", ",", "Multi.2/mapper.8/out/address", ",", "Multi.2/mapper.8/out/max", ",", "Multi.2/mapper.8/out/min", ",", "Multi.2/mapper.9/enable", ",", "Multi.2/mapper.9/function", ",", "Multi.2/mapper.9/function/parameter", ",", "Multi.2/mapper.9/function/parameter/value", ",", "Multi.2/mapper.9/in/address", ",", "Multi.2/mapper.9/in/max", ",", "Multi.2/mapper.9/in/min", ",", "Multi.2/mapper.9/out/address", ",", "Multi.2/mapper.9/out/max", ",", "Multi.2/mapper.9/out/min", ",", "cueManager/address", ",", "cueManager/addresses/ramp", ",", "cueManager/autofollow/active", ",", "cueManager/autofollow/time", ",", "cueManager/filter/addresses/excluded", ",", "cueManager/filter/adresses", ",", "cueManager/filter/adresses/mode", ",", "cueManager/filter/keys", ",", "cueManager/filter/keys/mode", ",", "cueManager/filter/tags", ",", "cueManager/filter/tags/mode", ",", "cueManager/ramp/active", ",", "cueManager/ramp/time", ",", "mapperMulti(view)/mapperInstance", ",", "mapperMulti(view)/modelInstance", ",", "mouse/active", ",", "mouse/reference", ",", "movie.1/data/active", ",", "movie.1/file/path", ",", "movie.1/frame", ",", "movie.1/play", ",", "movie.1/rate", ",", "movie.2/data/active", ",", "movie.2/file/path", ",", "movie.2/frame", ",", "movie.2/play", ",", "movie.2/rate", ",", "movie.3/data/active", ",", "movie.3/file/path", ",", "movie.3/frame", ",", "movie.3/play", ",", "movie.3/rate", ",", "movie.4/data/active", ",", "movie.4/file/path", ",", "movie.4/frame", ",", "movie.4/play", ",", "movie.4/rate", ",", "movie/data/active", ",", "movie/file/path", ",", "movie/frame", ",", "movie/play", ",", "movie/rate", ",", "track/channel.A/data/active", ",", "track/channel.A/file/path", ",", "track/channel.A/play", ",", "track/channel.A/rate", ",", "track/channel.B/data/active", ",", "track/channel.B/file/path", ",", "track/channel.B/play", ",", "track/channel.B/rate", ",", "wacom/bgrd", ",", "wacom/menu", ",", "wacom/nopointer", ",", "wacom/on", ",", "wacom/xyrange", ",", "<separator>" ],
+					"items" : "<separator>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 360.0, 77.0, 25.0, 20.0 ],
-					"prefix" : "Servo:/",
+					"prefix" : "/BCF/track.1/fader/value/",
 					"presentation" : 1,
 					"presentation_rect" : [ 388.0, 2.0, 15.0, 20.0 ]
 				}
@@ -9479,16 +9305,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-81", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 124.5, 204.0, 144.0, 204.0, 144.0, 150.0, 49.0, 150.0 ],
-					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -9558,6 +9374,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"destination" : [ "obj-142", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -9713,6 +9530,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"destination" : [ "obj-140", 1 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -9759,15 +9577,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-81", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-133", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -9786,6 +9595,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"destination" : [ "obj-140", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -9801,6 +9611,31 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.oscroute.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscinstance.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.namespace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
