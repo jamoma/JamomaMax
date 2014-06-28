@@ -52,6 +52,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-9",
@@ -195,6 +196,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1003",
@@ -211,6 +213,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1010",
@@ -225,6 +228,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1034",
@@ -241,6 +245,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1043",
@@ -410,19 +415,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

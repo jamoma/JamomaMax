@@ -1,7 +1,8 @@
 
 - preset "default"
-# "edit a comment
-data/active 1
-data/bypass 0
-mode 2
-algorithm 1
+# "edit a commen"
+/similarity%/data/active 1
+/similarity%/data/bypass 0
+/similarity%/mode 2
+/similarity%/algorithm 1
+

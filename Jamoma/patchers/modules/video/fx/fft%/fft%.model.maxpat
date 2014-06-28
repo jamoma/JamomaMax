@@ -54,8 +54,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 87.5, 93.0, 183.0, 55.0 ],
-					"text" : "j.parameter dim @type array  @description \"dimension of matrix to perform Fourier Transform on.\""
+					"patching_rect" : [ 87.5, 93.0, 181.0, 55.0 ],
+					"text" : "j.parameter dim @type array @description \"dimension of matrix to perform Fourier Transform on.\""
 				}
 
 			}
@@ -185,15 +185,16 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 288.0, 395.0, 99.0, 19.0 ],
+					"patching_rect" : [ 288.0, 376.0, 109.0, 19.0 ],
 					"text" : "jit.pack 2"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-14",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -308,7 +309,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 288.0, 365.0, 70.0, 19.0 ],
+					"patching_rect" : [ 288.0, 341.0, 83.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -328,8 +329,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -521,7 +523,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 368.0, 365.0, 50.0, 19.0 ],
+					"patching_rect" : [ 378.0, 341.0, 59.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -541,8 +543,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -657,7 +660,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 78.0, 380.0, 70.0, 19.0 ],
+					"patching_rect" : [ 50.5, 341.0, 83.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -684,7 +687,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
-					"patching_rect" : [ 288.0, 310.0, 120.0, 19.0 ],
+					"patching_rect" : [ 288.0, 288.0, 120.0, 19.0 ],
 					"text" : "jit.unpack 2"
 				}
 
@@ -698,15 +701,16 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
-					"patching_rect" : [ 178.0, 310.0, 82.0, 19.0 ],
+					"patching_rect" : [ 152.0, 288.0, 97.0, 19.0 ],
 					"text" : "jit.unpack 2"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -898,7 +902,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 178.0, 380.0, 50.0, 19.0 ],
+					"patching_rect" : [ 152.0, 341.0, 58.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -939,7 +943,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
-					"patching_rect" : [ 78.0, 310.0, 70.0, 19.0 ],
+					"patching_rect" : [ 50.0, 288.0, 74.0, 19.0 ],
 					"text" : "jit.unpack 2"
 				}
 
