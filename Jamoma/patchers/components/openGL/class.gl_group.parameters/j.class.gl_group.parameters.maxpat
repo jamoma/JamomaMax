@@ -582,7 +582,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 503.0, 279.0 ],
+						"rect" : [ 567.0, 203.0, 683.0, 341.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -688,8 +688,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 19.0, 26.0, 327.0, 31.0 ],
-									"text" : "j.parameter 3D/position @type array @ramp/drive Max @description \"3D origin as xyz coordinates.\" @default 0. 0. 0.",
+									"patching_rect" : [ 19.0, 26.0, 453.0, 31.0 ],
+									"text" : "j.parameter 3D/position @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"3D origin as xyz coordinates.\" @default 0. 0. 0.",
 									"varname" : "3D/position"
 								}
 
@@ -1919,15 +1919,6 @@
 					"source" : [ "obj-6", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
