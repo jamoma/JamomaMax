@@ -98,11 +98,8 @@ void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
     // is there already a j.model or j.view in the patcher ?
     jamoma_patcher_get_model_or_view(jamoma_patcher_get((ObjectPtr)x), &aPatcher);
     
-    if (aPatcher) {
+    if (aPatcher)
         object_error((ObjectPtr)x, "can't have two models or views in the same patcher");
-        x->wrappedObject = NULL;
-        return;
-    }
 		
 	// create a container
 	jamoma_container_create((ObjectPtr)x, &x->wrappedObject);
@@ -156,7 +153,7 @@ void WrappedContainerClass_free(TTPtr self)
     TTAddress    modelAddress, presetAddress;
     TTValue      v;
     
-    if (!x->wrappedObject)
+    if (!EXTRA)
         return;
     
     if (EXTRA->modelInfo) {
