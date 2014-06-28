@@ -3865,7 +3865,7 @@
 							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 33.0, 59.0, 723.0, 414.0 ],
+						"rect" : [ 33.0, 59.0, 754.0, 468.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3888,13 +3888,27 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"id" : "obj-15",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 214.0, 125.0, 104.0, 20.0 ],
+									"text" : "route -"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-1",
 									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 105.0, 314.0, 86.0, 47.0 ],
+									"patching_rect" : [ 109.0, 368.0, 86.0, 47.0 ],
 									"text" : "cue events passed through"
 								}
 
@@ -3908,7 +3922,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "stop" ],
-									"patching_rect" : [ 395.0, 144.0, 40.0, 20.0 ],
+									"patching_rect" : [ 399.0, 198.0, 40.0, 20.0 ],
 									"text" : "t stop"
 								}
 
@@ -3922,7 +3936,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "resume" ],
-									"patching_rect" : [ 210.0, 264.0, 57.0, 20.0 ],
+									"patching_rect" : [ 214.0, 318.0, 57.0, 20.0 ],
 									"text" : "t resume"
 								}
 
@@ -3936,7 +3950,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 210.0, 239.0, 38.0, 20.0 ],
+									"patching_rect" : [ 214.0, 293.0, 38.0, 20.0 ],
 									"text" : "defer"
 								}
 
@@ -3950,7 +3964,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 210.0, 214.0, 64.5, 20.0 ],
+									"patching_rect" : [ 214.0, 268.0, 64.5, 20.0 ],
 									"text" : "del 0"
 								}
 
@@ -3964,7 +3978,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "int", "pause" ],
-									"patching_rect" : [ 210.0, 174.0, 110.0, 20.0 ],
+									"patching_rect" : [ 214.0, 228.0, 110.0, 20.0 ],
 									"text" : "t b i pause"
 								}
 
@@ -3978,8 +3992,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 210.0, 132.0, 71.0, 20.0 ],
-									"text" : "route WAIT"
+									"patching_rect" : [ 214.0, 186.0, 63.0, 20.0 ],
+									"text" : "route wait"
 								}
 
 							}
@@ -3991,7 +4005,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 210.0, 79.0, 25.0, 25.0 ]
+									"patching_rect" : [ 214.0, 75.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -4003,7 +4017,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 395.0, 79.0, 25.0, 25.0 ]
+									"patching_rect" : [ 399.0, 75.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -4014,7 +4028,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 75.0, 314.0, 25.0, 25.0 ]
+									"patching_rect" : [ 79.0, 368.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -4025,7 +4039,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 210.0, 314.0, 25.0, 25.0 ]
+									"patching_rect" : [ 214.0, 368.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -4039,7 +4053,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 210.0, 20.0, 301.0, 47.0 ],
+									"patching_rect" : [ 214.0, 16.0, 301.0, 47.0 ],
 									"text" : "If a WAIT message is received, uzi is paused for a while. Other messages are passed through to the right outlet."
 								}
 
@@ -4054,7 +4068,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 240.0, 314.0, 36.0, 33.0 ],
+									"patching_rect" : [ 244.0, 368.0, 36.0, 33.0 ],
 									"text" : "to uzi"
 								}
 
@@ -4070,7 +4084,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 446.0, 135.5, 254.0, 37.0 ],
+									"patching_rect" : [ 450.0, 189.5, 254.0, 37.0 ],
 									"text" : "If a new cue is triggered, we have to make sure that the previous one is cancelled."
 								}
 
@@ -4078,10 +4092,29 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 308.5, 215.0, 88.5, 215.0 ],
+									"source" : [ "obj-15", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-5", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 404.5, 201.0, 219.5, 201.0 ],
+									"midpoints" : [ 408.5, 255.0, 223.5, 255.0 ],
 									"source" : [ "obj-2", 0 ]
 								}
 
@@ -4118,7 +4151,7 @@
 									"destination" : [ "obj-11", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 310.5, 296.0, 219.5, 296.0 ],
+									"midpoints" : [ 314.5, 350.0, 223.5, 350.0 ],
 									"source" : [ "obj-6", 2 ]
 								}
 
@@ -4143,16 +4176,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-10", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"midpoints" : [ 271.5, 161.0, 84.5, 161.0 ],
-									"source" : [ "obj-7", 1 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-6", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -4162,7 +4185,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-7", 0 ],
+									"destination" : [ "obj-15", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-8", 0 ]
@@ -4195,7 +4218,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p WAIT_or_pass_on"
+					"text" : "p wait_or_pass_on"
 				}
 
 			}
