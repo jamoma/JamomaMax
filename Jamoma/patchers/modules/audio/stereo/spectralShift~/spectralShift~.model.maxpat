@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1188.0, 433.0 ],
+		"rect" : [ 397.0, 44.0, 1188.0, 433.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -85,11 +85,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 730.0, 559.0 ],
+						"rect" : [ 779.0, 225.0, 730.0, 559.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -258,7 +258,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 327.0, 100.0, 151.0, 141.0 ],
+									"patching_rect" : [ 327.0, 100.0, 145.0, 141.0 ],
 									"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range -60 6 @clipmode both @description \"Feedback gain leven (dB).\" @dataspace gain @dataspace/unit linear",
 									"varname" : "feedback"
 								}
@@ -274,7 +274,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 503.0, 100.0, 156.0, 141.0 ],
+									"patching_rect" : [ 503.0, 100.0, 150.0, 141.0 ],
 									"text" : "j.parameter feedback/time @type decimal @ramp/drive Max @repetitions/filter 1 @range 0 200 @clipmode both @description \"Feedback delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
 									"varname" : "right"
 								}
@@ -530,7 +530,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 203.0, 122.5, 86.0, 20.0 ],
+					"patching_rect" : [ 204.0, 122.5, 86.0, 20.0 ],
 					"text" : "prepend scale"
 				}
 
@@ -551,6 +551,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "A stereo limiter",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-25",
@@ -661,8 +662,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 17.0, 27.0, 171.0, 87.0 ],
-					"text" : "j.parameter frequency/shift @type decimal @range -500 500 \"Slide all frequency bins up or down (Hz).\" @dataspace time @dataspace/unit Hz"
+					"patching_rect" : [ 17.0, 27.0, 186.0, 87.0 ],
+					"text" : "j.parameter frequency/shift @type decimal @range -500 500 @dataspace time @dataspace/unit Hz @description \"Slide all frequency bins up or down (Hz).\""
 				}
 
 			}
@@ -676,7 +677,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 203.0, 27.0, 168.0, 74.0 ],
+					"patching_rect" : [ 204.0, 27.0, 156.0, 74.0 ],
 					"text" : "j.parameter frequency/scale @type decimal @range -48. 48. @description \"Pitch shift in semitones.\""
 				}
 
@@ -904,21 +905,21 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.spectralShiftVoice~.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectralShift~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/spectralShift~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
 				"patcherrelativepath" : "../limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
 				"patcherrelativepath" : "../limiter~",
 				"type" : "JSON",
 				"implicit" : 1

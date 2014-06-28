@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -91,11 +91,11 @@
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",
 					"name" : "output~.module.maxpat",
-					"numinlets" : 3,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 57.0, 280.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
+					"patching_rect" : [ 57.0, 280.0, 300.0, 175.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ]
 				}
 
 			}
@@ -118,26 +118,17 @@
 					"args" : [ "filePlayer" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "filePlayer.mono~.module.maxpat",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 57.0, 108.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
+					"name" : "fileplayer.mono~.module.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
+					"patching_rect" : [ 57.0, 84.0, 300.0, 175.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 2 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 2 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 1 ],
 					"disabled" : 0,
@@ -148,121 +139,142 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "filePlayer.mono~.module.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~",
-				"patcherrelativepath" : ".",
+				"name" : "fileplayer.mono~.module.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/filePlayer~/mono",
+				"patcherrelativepath" : "./mono",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "filePlayer~.view.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/filePlayer~/shared",
+				"patcherrelativepath" : "./shared",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "filePlayer.mono~.model.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/filePlayer~/mono",
+				"patcherrelativepath" : "./mono",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "filePlayer.algorithm.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/filePlayer~/shared",
+				"patcherrelativepath" : "./shared",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
-				"patcherrelativepath" : "../../../components/jamomaPath",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"patcherrelativepath" : "../../../../components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.module.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/output~",
 				"patcherrelativepath" : "../output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.model.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/output~",
 				"patcherrelativepath" : "../output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../../components/thru",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "saturation~.model.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/saturation~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/saturation~",
 				"patcherrelativepath" : "../saturation~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
+				"patcherrelativepath" : "../limiter~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter.parametersAndMessages.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
 				"patcherrelativepath" : "../limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/balance~",
 				"patcherrelativepath" : "../balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "record~.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/record~",
+				"patcherrelativepath" : "../record~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "record.parametersAndMessages.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/record~",
+				"patcherrelativepath" : "../record~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "output~.view.maxpat",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/output~",
 				"patcherrelativepath" : "../output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/tumble/dev/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../javascript",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
+				"patcherrelativepath" : "../../../../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "",
 				"bootpath" : "/",
-				"patcherrelativepath" : "../../../../../../../../../../..",
+				"patcherrelativepath" : "../../../../../../../../../../../..",
 				"type" : "fold",
 				"implicit" : 1
 			}
@@ -287,11 +299,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive~.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive.mxo",
+				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -316,10 +328,6 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.route.mxo",
 				"type" : "iLaX"
 			}
 , 			{

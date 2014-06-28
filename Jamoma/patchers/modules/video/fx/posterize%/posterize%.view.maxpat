@@ -38,7 +38,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 55.0, 45.0, 150.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 25.0, 35.0, 45.0, 19.0 ],
+					"presentation_rect" : [ 10.0, 35.0, 45.0, 19.0 ],
 					"text" : "Levels"
 				}
 
@@ -55,7 +55,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 82.5, 115.0, 95.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 70.0, 35.0, 70.0, 19.0 ]
+					"presentation_rect" : [ 55.0, 35.0, 55.0, 19.0 ]
 				}
 
 			}
@@ -78,11 +78,11 @@
 					"id" : "obj-34",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
+					"text" : "/no_model_address"
 				}
 
 			}

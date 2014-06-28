@@ -36,10 +36,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 67.0, 138.0, 44.0, 19.0 ],
+					"patching_rect" : [ 67.0, 138.0, 38.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 29.0, 46.0, 41.0, 19.0 ],
-					"text" : "Mode:"
+					"presentation_rect" : [ 4.0, 46.0, 41.0, 19.0 ],
+					"text" : "mode"
 				}
 
 			}
@@ -56,7 +56,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 117.0, 138.0, 100.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 71.0, 46.0, 100.0, 19.0 ]
+					"presentation_rect" : [ 45.0, 46.0, 100.0, 19.0 ]
 				}
 
 			}
@@ -88,7 +88,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 153.0, 99.0, 50.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 132.0, 24.0, 38.0, 19.0 ],
+					"presentation_rect" : [ 107.0, 24.0, 38.0, 19.0 ],
 					"triangle" : 0
 				}
 
@@ -102,10 +102,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 51.0, 99.0, 98.0, 19.0 ],
+					"patching_rect" : [ 86.0, 99.0, 67.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 29.0, 24.0, 97.0, 19.0 ],
-					"text" : "Max frame delay:"
+					"presentation_rect" : [ 4.0, 24.0, 67.0, 19.0 ],
+					"text" : "framedelay"
 				}
 
 			}
@@ -167,11 +167,11 @@
 					"id" : "obj-16",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -208,7 +208,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
+					"source" : [ "obj-3", 1 ]
 				}
 
 			}

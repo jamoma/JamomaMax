@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 25.0, 69.0, 476.0, 475.0 ],
+		"rect" : [ 25.0, 69.0, 600.0, 285.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -35,7 +35,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 34.0, 126.0, 300.0, 70.0 ],
+					"patching_rect" : [ 8.0, 86.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 34.0, 126.0, 300.0, 70.0 ]
 				}
 
@@ -49,7 +49,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 476.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 600.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -62,18 +62,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 34.0, 312.0, 160.0, 120.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "jit.pwindow",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 350.0, 215.0, 80.0, 60.0 ]
+					"patching_rect" : [ 331.0, 86.0, 240.0, 180.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 240.0, 180.0 ]
 				}
 
 			}
@@ -85,7 +75,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 34.0, 215.0, 300.0, 70.0 ],
+					"patching_rect" : [ 8.0, 170.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
 
@@ -96,6 +86,7 @@
 					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 17.5, 252.0, 321.0, 252.0, 321.0, 81.0, 340.5, 81.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -105,16 +96,6 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 43.5, 205.0, 359.5, 205.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 

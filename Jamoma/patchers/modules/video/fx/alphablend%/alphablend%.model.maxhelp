@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 25.0, 69.0, 387.0, 549.0 ],
+		"rect" : [ 25.0, 69.0, 732.0, 394.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 65.0, 191.0, 300.0, 70.0 ],
+					"patching_rect" : [ 54.0, 184.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
 
@@ -156,7 +156,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 17.0, 158.0, 67.0, 19.0 ],
+					"patching_rect" : [ 17.0, 158.0, 56.0, 19.0 ],
 					"text" : "t l b"
 				}
 
@@ -184,7 +184,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 387.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 375.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -211,7 +211,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 17.0, 382.0, 160.0, 120.0 ]
+					"patching_rect" : [ 395.0, 126.0, 320.0, 240.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 320.0, 240.0 ]
 				}
 
 			}
@@ -230,7 +231,7 @@
 					"destination" : [ "obj-21", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 74.5, 276.5, 307.5, 276.5 ],
+					"midpoints" : [ 63.5, 276.5, 307.5, 276.5 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -240,6 +241,7 @@
 					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 26.5, 378.0, 366.0, 378.0, 366.0, 117.0, 404.5, 117.0 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -332,7 +334,7 @@
 				"name" : "input%.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
 				"patcherrelativepath" : "../../sources/input%",
-				"type" : "JSON",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -346,7 +348,7 @@
 				"name" : "movie%.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
 				"patcherrelativepath" : "../../sources/movie%",
-				"type" : "JSON",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

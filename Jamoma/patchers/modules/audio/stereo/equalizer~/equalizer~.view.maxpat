@@ -1201,29 +1201,15 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "equalizer~views.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
 				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.octavebandwith2q.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwith2q",
-				"patcherrelativepath" : "../../../../components/audio/octavebandwith2q",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.q2octavebandwith.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
-				"patcherrelativepath" : "../../../../components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1240,11 +1226,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive.mxo",
+				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive~.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -29,6 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-3",
@@ -44,16 +45,17 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-12",
-					"linecount" : 3,
+					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 87.5, 69.0, 194.0, 43.0 ],
-					"text" : "j.parameter dim @type generic @description \"dimension of matrix to perform Fourier Transform on.\""
+					"patching_rect" : [ 87.5, 93.0, 181.0, 55.0 ],
+					"text" : "j.parameter dim @type array @description \"dimension of matrix to perform Fourier Transform on.\""
 				}
 
 			}
@@ -110,6 +112,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-6",
@@ -182,15 +185,16 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 288.0, 395.0, 99.0, 19.0 ],
+					"patching_rect" : [ 288.0, 376.0, 109.0, 19.0 ],
 					"text" : "jit.pack 2"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-14",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -305,7 +309,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 288.0, 365.0, 70.0, 19.0 ],
+					"patching_rect" : [ 288.0, 341.0, 83.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -325,8 +329,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -518,7 +523,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 368.0, 365.0, 50.0, 19.0 ],
+					"patching_rect" : [ 378.0, 341.0, 59.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -538,8 +543,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -654,7 +660,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 78.0, 380.0, 70.0, 19.0 ],
+					"patching_rect" : [ 50.5, 341.0, 83.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -681,7 +687,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
-					"patching_rect" : [ 288.0, 310.0, 120.0, 19.0 ],
+					"patching_rect" : [ 288.0, 288.0, 120.0, 19.0 ],
 					"text" : "jit.unpack 2"
 				}
 
@@ -695,15 +701,16 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
-					"patching_rect" : [ 178.0, 310.0, 82.0, 19.0 ],
+					"patching_rect" : [ 152.0, 288.0, 97.0, 19.0 ],
 					"text" : "jit.unpack 2"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -895,7 +902,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 178.0, 380.0, 50.0, 19.0 ],
+					"patching_rect" : [ 152.0, 341.0, 58.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -936,7 +943,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
-					"patching_rect" : [ 78.0, 310.0, 70.0, 19.0 ],
+					"patching_rect" : [ 50.0, 288.0, 74.0, 19.0 ],
 					"text" : "jit.unpack 2"
 				}
 
@@ -1226,6 +1233,23 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

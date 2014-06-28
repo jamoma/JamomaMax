@@ -48,9 +48,9 @@
 					"name" : "noise%.view.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
+					"patching_rect" : [ 0.0, -2.0, 300.0, 75.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, -2.0, 300.0, 75.0 ]
+					"presentation_rect" : [ 0.0, -2.0, 303.0, 77.0 ]
 				}
 
 			}

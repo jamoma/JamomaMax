@@ -32,6 +32,62 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "", "" ],
+					"patching_rect" : [ 497.0, 61.0, 163.0, 20.0 ],
+					"text" : "j.receive~ out.2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "", "" ],
+					"patching_rect" : [ 497.0, 17.0, 163.0, 20.0 ],
+					"text" : "j.receive~ out.1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "amplitude of output signal 2",
+					"id" : "obj-50",
+					"maxclass" : "live.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 509.0, 81.5, 4.0, 77.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 294.0, 22.0, 4.0, 74.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "amplitude of output signal 1",
+					"id" : "obj-49",
+					"maxclass" : "live.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 497.0, 46.0, 4.0, 80.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 289.0, 22.0, 4.0, 74.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -47,7 +103,7 @@
 				"box" : 				{
 					"annotation" : "Feedback mode. 'pingpong': crossed-over feedback between the two delays. 'stereo': two mono delay lines each with independent feedback paths.'pingleft' and 'pingright' feed the left or the right delay outputs back.",
 					"fontname" : "Arial",
-					"fontsize" : 9.0,
+					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"items" : [ "stereo", ",", "pingpong", ",", "pingright", ",", "pingleft" ],
 					"maxclass" : "umenu",
@@ -55,67 +111,9 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 316.0, 173.0, 100.0, 17.0 ],
+					"patching_rect" : [ 316.0, 173.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 229.0, 51.0, 69.0, 17.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-51",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 345.0, 55.0, 141.0, 20.0 ],
-					"text" : "j.receive~ audio/out.2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 345.0, 10.0, 141.0, 20.0 ],
-					"text" : "j.receive~ audio/out.1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "amplitude of output signal 2",
-					"id" : "obj-50",
-					"maxclass" : "live.meter~",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 346.0, 80.0, 80.0, 4.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 152.0, 10.0, 80.0, 4.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "amplitude of output signal 1",
-					"id" : "obj-49",
-					"maxclass" : "live.meter~",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"orientation" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 346.0, 35.0, 80.0, 4.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 152.0, 5.0, 80.0, 4.0 ]
+					"presentation_rect" : [ 0.0, 76.0, 181.0, 20.0 ]
 				}
 
 			}
@@ -150,7 +148,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 327.5, 106.0, 50.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 240.0, 34.0, 50.0, 20.0 ],
+					"presentation_rect" : [ 237.0, 43.0, 50.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "feedback"
@@ -168,7 +166,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 184.0, 45.0, 58.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 184.0, 36.0, 58.0, 20.0 ],
+					"presentation_rect" : [ 181.0, 44.0, 58.0, 20.0 ],
 					"text" : "feedback"
 				}
 
@@ -679,7 +677,7 @@
 					"patching_rect" : [ 253.0, 271.0, 87.0, 44.0 ],
 					"peakcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 94.0, 22.0, 87.0, 44.0 ],
+					"presentation_rect" : [ 94.0, 22.0, 87.0, 51.0 ],
 					"setminmax" : [ 0.0, 10000.0 ],
 					"setstyle" : 1,
 					"size" : 5,
@@ -707,7 +705,7 @@
 					"patching_rect" : [ 121.0, 271.0, 87.0, 44.0 ],
 					"peakcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.0, 22.0, 87.0, 44.0 ],
+					"presentation_rect" : [ 5.0, 22.0, 87.0, 51.0 ],
 					"setminmax" : [ 0.0, 10000.0 ],
 					"setstyle" : 1,
 					"size" : 5,
@@ -730,7 +728,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 90.0, 116.0, 50.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 240.0, 18.0, 50.0, 20.0 ],
+					"presentation_rect" : [ 237.0, 22.0, 50.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "max-delay"
@@ -748,7 +746,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 184.0, 25.0, 58.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 184.0, 19.0, 58.0, 20.0 ],
+					"presentation_rect" : [ 181.0, 22.0, 58.0, 20.0 ],
 					"text" : "max [ms]"
 				}
 
@@ -826,11 +824,11 @@
 					"id" : "obj-35",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -919,6 +917,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-50", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -968,16 +975,7 @@
 					"destination" : [ "obj-49", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-51", 0 ]
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}

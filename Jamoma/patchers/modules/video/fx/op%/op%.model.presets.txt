@@ -1,7 +1,8 @@
 
+
 - preset "default"
 # "edit a comment"
 data/active 1
 data/bypass 0
-op avg
-opValue 1.000000
+op min
+opValue 0.600000
