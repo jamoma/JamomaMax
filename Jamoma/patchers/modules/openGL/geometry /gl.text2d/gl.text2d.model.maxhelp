@@ -122,13 +122,13 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 9.0, 295.0, 165.0, 19.0 ],
-					"text" : "gl.text2d%.model text2d_help"
+					"text" : "gl.text2d.model text2d_help"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.gl.text2d%", "@description", "Read text file and display as OpenGL bitmap text" ],
+					"args" : [ "@name", "jmod.gl.text2d", "@description", "Read text file and display as OpenGL bitmap text" ],
 					"bgmode" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
@@ -148,7 +148,7 @@
 					"id" : "obj-11",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.text2d%.view.maxpat",
+					"name" : "gl.text2d.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -207,8 +207,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "gl.text2d%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.text2d%",
+				"name" : "gl.text2d.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.text2d",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -263,8 +263,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.text2d%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.text2d%",
+				"name" : "gl.text2d.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.text2d",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

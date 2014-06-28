@@ -267,7 +267,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 168.5, 178.0, 126.0, 31.0 ],
-									"text" : "gl.videoplane%.model videoplane%"
+									"text" : "gl.videoplane.model videoplane"
 								}
 
 							}
@@ -283,7 +283,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 168.5, 137.0, 137.0, 31.0 ],
-									"text" : "gl.syphonclient%.model syphonclient%"
+									"text" : "gl.syphonclient.model syphonclient"
 								}
 
 							}
@@ -415,7 +415,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "gl.syphonclient%.model", "@description", "catch a syphon texture and publish it in jitter GL world" ],
+					"args" : [ "@name", "gl.syphonclient.model", "@description", "catch a syphon texture and publish it in jitter GL world" ],
 					"bgmode" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
@@ -443,28 +443,28 @@
 , 			{
 				"box" : 				{
 					"annotation" : "none",
-					"args" : [ "videoplane%" ],
+					"args" : [ "videoplane" ],
 					"id" : "obj-11",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.videoplane%.view.maxpat",
+					"name" : "gl.videoplane.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.5, 180.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"varname" : "gl.videoplane%"
+					"varname" : "gl.videoplane"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"annotation" : "none",
-					"args" : [ "syphonclient%" ],
+					"args" : [ "syphonclient" ],
 					"id" : "obj-12",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.syphonclient%.view.maxpat",
+					"name" : "gl.syphonclient.view.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 20.5, 95.0, 300.0, 70.0 ],
@@ -476,16 +476,16 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "gl.syphonclient%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/sources/glsyphonclient%",
+				"name" : "gl.syphonclient.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/sources/glsyphonclient",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.videoplane%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/output/gl.videoplane%",
-				"patcherrelativepath" : "../../output/gl.videoplane%",
+				"name" : "gl.videoplane.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/output/gl.videoplane",
+				"patcherrelativepath" : "../../output/gl.videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -539,16 +539,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.syphonclient%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/sources/glsyphonclient%",
+				"name" : "gl.syphonclient.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/sources/glsyphonclient",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.videoplane%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/output/gl.videoplane%",
-				"patcherrelativepath" : "../../output/gl.videoplane%",
+				"name" : "gl.videoplane.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/output/gl.videoplane",
+				"patcherrelativepath" : "../../output/gl.videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}

@@ -37,7 +37,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.5, 174.0, 181.0, 17.0 ],
-					"text" : "model:address /videoplane%"
+					"text" : "model:address /videoplane"
 				}
 
 			}
@@ -51,7 +51,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.5, 198.0, 181.0, 17.0 ],
-					"text" : "model:address /videoplane%.2"
+					"text" : "model:address /videoplane.2"
 				}
 
 			}
@@ -115,7 +115,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 180.5, 171.0, 153.5, 31.0 ],
-									"text" : "gl.videoplane%.model videoplane%.2"
+									"text" : "gl.videoplane.model videoplane.2"
 								}
 
 							}
@@ -308,7 +308,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 16.5, 171.0, 153.5, 31.0 ],
-									"text" : "gl.videoplane%.model videoplane%"
+									"text" : "gl.videoplane.model videoplane"
 								}
 
 							}
@@ -453,7 +453,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "gl.videoplane%.model", "@description", "Map incoming video as texture to OpenGL videoplane" ],
+					"args" : [ "@name", "gl.videoplane.model", "@description", "Map incoming video as texture to OpenGL videoplane" ],
 					"bgmode" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
@@ -481,17 +481,17 @@
 , 			{
 				"box" : 				{
 					"annotation" : "none",
-					"args" : [ "videoplane%" ],
+					"args" : [ "videoplane" ],
 					"id" : "obj-11",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.videoplane%.view.maxpat",
+					"name" : "gl.videoplane.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.5, 221.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"varname" : "gl.videoplane%"
+					"varname" : "gl.videoplane"
 				}
 
 			}
@@ -554,8 +554,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.videoplane%.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.videoplane%",
+				"name" : "gl.videoplane.view.maxpat",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.videoplane",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -631,8 +631,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.videoplane%.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.videoplane%",
+				"name" : "gl.videoplane.model.maxpat",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.videoplane",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
