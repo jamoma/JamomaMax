@@ -4,6 +4,7 @@
 data/active 1
 border 1
 floating 0
+name my_context
 fullscreen 0
 fullscreen/shortcut 27
 grow 1

@@ -1,7 +1,7 @@
 
-
 - preset "default"
-# "edit a comment"
+- description "the default preset"
+# ###########################################
 data/active 1
 data/bypass 0
 file countdown.mov
@@ -18,3 +18,4 @@ loop normal
 loop/notify 0
 vol 1
 framedump 0
+
