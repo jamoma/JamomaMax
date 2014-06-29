@@ -5,7 +5,7 @@
 # 
 data/active 1
 data/bypass 0
-file countdown.mov
+path countdown.mov
 rate 1
 adapt 0
 singlefield 1
