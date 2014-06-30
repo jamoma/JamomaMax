@@ -8,7 +8,7 @@
 			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 729.0, 159.0, 712.0, 760.0 ],
+		"rect" : [ 82.0, 215.0, 712.0, 760.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -65,8 +65,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 387.0, 75.0, 163.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"patching_rect" : [ 464.5, 22.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.2"
 				}
 
 			}
@@ -79,8 +79,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 387.0, 31.0, 163.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"patching_rect" : [ 331.0, 22.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.1"
 				}
 
 			}
@@ -92,9 +92,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 399.0, 95.5, 4.0, 77.0 ],
+					"patching_rect" : [ 472.0, 60.0, 4.0, 77.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 293.0, 22.0, 4.0, 77.0 ]
+					"presentation_rect" : [ 288.0, 24.0, 5.0, 75.0 ]
 				}
 
 			}
@@ -106,9 +106,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 387.0, 60.0, 4.0, 80.0 ],
+					"patching_rect" : [ 338.5, 60.0, 4.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 288.0, 22.0, 4.0, 77.0 ]
+					"presentation_rect" : [ 281.0, 24.0, 5.0, 75.0 ]
 				}
 
 			}
@@ -262,7 +262,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 524.5, 142.0, 81.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 113.0, 22.0, 169.0, 20.0 ],
+					"presentation_rect" : [ 113.0, 22.0, 162.0, 20.0 ],
 					"rounded" : 15,
 					"varname" : "FilterType[1]"
 				}
@@ -492,7 +492,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 15.0, 255.0, 224.0, 45.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 113.0, 43.0, 169.0, 56.0 ],
+					"presentation_rect" : [ 113.0, 43.0, 162.0, 56.0 ],
 					"setfilter" : [ 0, 3, 1, 0, 0, 1064.395874, 1.982152, 0.297615, 30.0, 11025.0, 0.0625, 16.0, 0.0, 25.0 ],
 					"varname" : "FilterGraph"
 				}

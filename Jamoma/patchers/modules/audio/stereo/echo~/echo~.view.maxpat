@@ -64,7 +64,7 @@
 					"outlettype" : [ "list" ],
 					"patching_rect" : [ 493.0, 56.0, 15.0, 42.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 288.0, 25.0, 5.0, 70.0 ]
+					"presentation_rect" : [ 288.0, 25.0, 5.0, 75.0 ]
 				}
 
 			}
@@ -77,7 +77,7 @@
 					"outlettype" : [ "list" ],
 					"patching_rect" : [ 338.0, 58.0, 15.0, 42.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 281.0, 25.0, 5.0, 70.0 ]
+					"presentation_rect" : [ 281.0, 25.0, 5.0, 75.0 ]
 				}
 
 			}
@@ -469,7 +469,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 464.694427, 239.635651, 123.054108, 39.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 163.0, 42.5, 109.0, 52.5 ],
+					"presentation_rect" : [ 163.0, 42.5, 109.0, 57.5 ],
 					"setfilter" : [ 0, 1, 1, 0, 0, 8571.957031, 0.938949, 0.80165, 30.0, 11025.0, 0.0625, 16.0, 0.0, 25.0 ],
 					"varname" : "FilterGraph"
 				}
@@ -481,11 +481,11 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-32",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 40.0, 38.0, 47.0 ],
+					"patching_rect" : [ 15.0, 40.0, 40.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 7.0, 43.0, 73.0, 20.0 ],
 					"text" : "Right Delay"
@@ -697,7 +697,7 @@
 					"destination" : [ "obj-30", 6 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 545.87912, 372.045441, 658.0, 372.045441, 658.0, 225.045441, 563.383663, 225.045441 ],
+					"midpoints" : [ 545.87912, 372.045441, 658.0, 372.045441, 658.0, 225.045441, 563.383662, 225.045441 ],
 					"source" : [ "obj-27", 1 ]
 				}
 
@@ -707,7 +707,7 @@
 					"destination" : [ "obj-30", 7 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 557.888163, 333.045441, 648.0, 333.045441, 648.0, 231.045441, 578.248535, 231.045441 ],
+					"midpoints" : [ 557.888164, 333.045441, 648.0, 333.045441, 648.0, 231.045441, 578.248535, 231.045441 ],
 					"source" : [ "obj-28", 1 ]
 				}
 

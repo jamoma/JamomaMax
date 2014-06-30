@@ -37,8 +37,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 478.0, 18.0, 134.0, 20.0 ],
-					"text" : "j.receive~ audio/out.R1"
+					"patching_rect" : [ 478.0, 18.0, 127.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R"
 				}
 
 			}
@@ -51,8 +51,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 323.0, 18.0, 132.0, 20.0 ],
-					"text" : "j.receive~ audio/out.L1"
+					"patching_rect" : [ 323.0, 18.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.L"
 				}
 
 			}

@@ -8,7 +8,7 @@
 			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 47.0, 44.0, 644.0, 520.0 ],
+		"rect" : [ 610.0, 179.0, 644.0, 520.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -352,7 +352,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 463.0, 3.0, 134.0, 20.0 ],
+					"patching_rect" : [ 462.5, 3.0, 134.0, 20.0 ],
 					"text" : "j.receive~ audio/out.R1"
 				}
 

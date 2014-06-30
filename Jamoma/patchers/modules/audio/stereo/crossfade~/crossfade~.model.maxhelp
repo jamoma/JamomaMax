@@ -368,8 +368,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 224.0, 509.0, 300.0, 140.0 ],
-									"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
+									"patching_rect" : [ 224.0, 509.0, 300.0, 175.0 ],
+									"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ]
 								}
 
 							}
@@ -382,8 +382,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
-									"patching_rect" : [ 408.0, 108.0, 300.0, 140.0 ],
-									"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
+									"patching_rect" : [ 408.0, 108.0, 300.0, 175.0 ],
+									"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ]
 								}
 
 							}
@@ -396,23 +396,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
-									"patching_rect" : [ 83.0, 108.0, 300.0, 140.0 ],
-									"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 13.0,
-									"hidden" : 1,
-									"id" : "obj-5",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 400.0, 443.0, 87.0, 21.0 ],
-									"text" : "loadmess set"
+									"patching_rect" : [ 83.0, 108.0, 300.0, 175.0 ],
+									"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ]
 								}
 
 							}
@@ -428,20 +413,6 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 38.0, 324.0, 139.0, 20.0 ],
 									"text" : "r crossfade~.model.cmd"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-4",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 400.0, 464.0, 137.0, 18.0 ],
-									"text" : "audio/mute 0"
 								}
 
 							}
@@ -495,28 +466,10 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 1 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-26", 2 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-26", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
 									"source" : [ "obj-3", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
-									"disabled" : 0,
-									"hidden" : 1,
-									"source" : [ "obj-5", 0 ]
 								}
 
 							}
@@ -711,13 +664,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.fileLoader.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/fileLoader",
-				"patcherrelativepath" : "../../../../components/deprecated/fileLoader",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"patcherrelativepath" : "../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
@@ -898,10 +844,6 @@
 			}
 , 			{
 				"name" : "j.dataspace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
