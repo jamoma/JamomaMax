@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 243.0, 44.0, 577.0, 357.0 ],
+		"rect" : [ 65.0, 125.0, 641.0, 513.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -51,8 +51,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 372.0, 60.0, 163.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"patching_rect" : [ 219.0, 297.0, 127.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R"
 				}
 
 			}
@@ -65,8 +65,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 372.0, 16.0, 163.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"patching_rect" : [ 39.0, 297.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.L"
 				}
 
 			}
@@ -78,9 +78,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 384.0, 80.5, 4.0, 77.0 ],
+					"patching_rect" : [ 219.5, 326.0, 15.0, 77.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 289.0, 21.0, 4.0, 47.0 ]
+					"presentation_rect" : [ 288.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -92,9 +92,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 372.0, 45.0, 4.0, 80.0 ],
+					"patching_rect" : [ 39.5, 326.0, 15.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 284.0, 21.0, 4.0, 47.0 ]
+					"presentation_rect" : [ 281.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}

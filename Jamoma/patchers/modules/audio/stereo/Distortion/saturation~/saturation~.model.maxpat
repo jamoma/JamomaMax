@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 56.0, 44.0, 885.0, 435.0 ],
@@ -35,8 +35,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 34.0, 135.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 429.0, 90.0, 0.0, 0.0 ]
+					"patching_rect" : [ 34.0, 135.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -122,7 +121,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 396.0, 17.0, 154.0, 127.0 ],
+					"patching_rect" : [ 396.0, 17.0, 134.0, 127.0 ],
 					"text" : "j.parameter preamp @ramp/drive Max @repetitions/filter 1 @type decimal @range -12 48 @clipmode none @description \"Preamp (dB).\" @dataspace gain @dataspace/unit dB",
 					"varname" : "preamp"
 				}
@@ -151,8 +150,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 111.0, 319.0, 74.0, 20.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 111.0, 319.0, 52.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -165,8 +164,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 34.0, 319.0, 74.0, 20.0 ],
-					"text" : "j.out~ 1"
+					"patching_rect" : [ 34.0, 319.0, 50.0, 20.0 ],
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -179,8 +178,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 111.0, 180.0, 67.0, 20.0 ],
-					"text" : "j.in~ 2"
+					"patching_rect" : [ 111.0, 180.0, 45.0, 20.0 ],
+					"text" : "j.in~ R"
 				}
 
 			}
@@ -193,8 +192,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 34.0, 180.0, 67.0, 20.0 ],
-					"text" : "j.in~ 1"
+					"patching_rect" : [ 34.0, 180.0, 43.0, 20.0 ],
+					"text" : "j.in~ L"
 				}
 
 			}
@@ -224,7 +223,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 222.0, 17.0, 148.0, 114.0 ],
+					"patching_rect" : [ 222.0, 17.0, 132.0, 114.0 ],
 					"text" : "j.parameter depth @ramp/drive Max @repetitions/filter 1 @type decimal @range 0 99 @clipmode both @description \"Saturation: Depth.\"",
 					"varname" : "depth"
 				}
