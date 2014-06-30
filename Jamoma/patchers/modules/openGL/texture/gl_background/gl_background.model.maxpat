@@ -67,7 +67,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 52.0, 36.0, 154.0, 24.0 ],
-					"text" : "j.gl_group.model GL"
+					"text" : "j.gl_group.model"
 				}
 
 			}
