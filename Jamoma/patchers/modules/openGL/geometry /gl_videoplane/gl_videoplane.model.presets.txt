@@ -3,39 +3,39 @@
 # "edit a comment"
 data/active 1
 color/alpha 1.000000
-material/light/ambient 0.000000 0.000000 0.000000 0.000000
+light/ambient 0.000000 0.000000 0.000000 0.000000
 fog/amount 0.000000
-render/antialias 0
-render/automatic 1
-material/automatic 1
+antialias 0
+automatic 1
+light/automatic 1
 data/bypass 0
 depth/clear 0
 videoplane/client_storage 1
 videoplane/colormode argb
-render/context my_context
-material/light/diffuse 0.000000 0.000000 0.000000 0.000000
+context my_context
+light/diffuse 0.000000 0.000000 0.000000 0.000000
 videoplane/dim 20 20
 videoplane/displaylist 0
-material/light/emission 0.000000 0.000000 0.000000 0.000000
-render/enable 1
+light/emission 0.000000 0.000000 0.000000 0.000000
+enable 1
 blend/enable 0
-material/light/enable 0
+light/enable 0
 depth/enable 1
 videoplane/gridmode 0
 depth/inherit 0
 color/inherit 0
 material/inherit 0
 videoplane/interpolate 1
-render/layer 0
+layer 0
 blend/mode 6 7
 videoplane/nudge 0.010000
 videoplane/texture/offset 0.000000 0.000000
 fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-3D/position 0.000000 0.000000 0.000000
-color/rgb 1.000000 1.000000 1.000000
-3D/rotate 0.000000 0.000000 0.000000 1.000000
+position 0.000000 0.000000 0.000000
+color 1.000000 1.000000 1.000000
+rotate 0.000000 0.000000 0.000000 1.000000
 videoplane/texture/scale 1.000000 1.000000
-3D/scale 1.000000 1.000000 1.000000
+scale 1.000000 1.000000 1.000000
 material/shininess 10.000000
-material/light/specular 0.000000 0.000000 0.000000 0.000000
-
+light/specular 0.000000 0.000000 0.000000 0.000000
+rend

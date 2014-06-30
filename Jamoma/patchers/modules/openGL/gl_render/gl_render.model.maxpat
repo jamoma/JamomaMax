@@ -104,7 +104,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -604,7 +604,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 31.5, 26.0, 210.0, 31.0 ],
 									"text" : "j.parameter fps/active @type boolean @description \"active fps return\"",
-									"varname" : "color/rgb[2]"
+									"varname" : ""
 								}
 
 							}
@@ -830,8 +830,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 86.0, 155.0, 24.0 ],
-					"text" : "j.gl_group.model GL"
+					"patching_rect" : [ 9.0, 86.0, 131.0, 24.0 ],
+					"text" : "j.gl_group.model"
 				}
 
 			}
@@ -873,7 +873,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 58.0, 289.5, 95.0, 20.0 ],
-					"text" : "j.send 3D/rotate"
+					"text" : "j.send rotate"
 				}
 
 			}
@@ -902,7 +902,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 9.0, 320.0, 106.0, 20.0 ],
-					"text" : "j.send 3D/position"
+					"text" : "j.send position"
 				}
 
 			}

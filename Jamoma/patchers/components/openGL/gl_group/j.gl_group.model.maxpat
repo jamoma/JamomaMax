@@ -146,8 +146,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 81.0, 232.0, 492.0, 31.0 ],
-									"text" : "j.parameter render/layer @type integer @range 0 255 @clipmode low @ramp/drive none @description \"Object layer number. Only valid when /render/automatic is enabled.\" @default 0",
+									"patching_rect" : [ 81.0, 232.0, 491.0, 31.0 ],
+									"text" : "j.parameter layer @type integer @range 0 255 @clipmode low @ramp/drive none @description \"Object layer number. Only valid when /render/automatic is enabled.\" @default 0",
 									"varname" : "render/layer"
 								}
 
@@ -163,8 +163,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 122.5, 301.5, 351.0, 31.0 ],
-									"text" : "j.parameter render/context @type string @description \"The named drawing context in which to draw.\" @default my_context",
+									"patching_rect" : [ 122.5, 301.5, 326.0, 31.0 ],
+									"text" : "j.parameter context @type string @description \"The named drawing context in which to draw.\" @default my_context",
 									"varname" : "render/context"
 								}
 
@@ -175,13 +175,12 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-39",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 38.5, 90.0, 244.0, 31.0 ],
-									"text" : "j.parameter render/enable @type boolean @description \"Enable drawing.\" @default 1",
+									"patching_rect" : [ 38.5, 90.0, 410.0, 19.0 ],
+									"text" : "j.parameter enable @type boolean @description \"Enable drawing.\" @default 1",
 									"varname" : "render/enable"
 								}
 
@@ -192,13 +191,12 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-40",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 21.0, 309.0, 31.0 ],
-									"text" : "j.parameter render/automatic @type boolean @description \"Automatic rendering flag.\" @default 1",
+									"patching_rect" : [ 20.0, 21.0, 475.0, 19.0 ],
+									"text" : "j.parameter automatic @type boolean @description \"Automatic rendering flag.\" @default 1",
 									"varname" : "render/automatic"
 								}
 
@@ -209,13 +207,12 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-41",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 61.0, 155.0, 237.0, 31.0 ],
-									"text" : "j.parameter render/antialias @type boolean @description \"Aliasing flag.\" @default 0",
+									"patching_rect" : [ 61.0, 154.0, 403.0, 19.0 ],
+									"text" : "j.parameter antialias @type boolean @description \"Aliasing flag.\" @default 0",
 									"varname" : "render/antialias"
 								}
 
@@ -582,7 +579,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 567.0, 203.0, 683.0, 341.0 ],
+						"rect" : [ 237.0, 201.0, 506.0, 294.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -654,8 +651,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 60.5, 172.799988, 353.0, 31.0 ],
-									"text" : "j.parameter 3D/scale @ramp/drive Max @type array @description \"3D scaling factor as xyz coordinates.\" @default 1. 1. 1.",
+									"patching_rect" : [ 60.5, 172.799988, 331.0, 31.0 ],
+									"text" : "j.parameter scale @ramp/drive Max @type array @description \"3D scaling factor as xyz coordinates.\" @default 1. 1. 1.",
 									"varname" : "3D/scale"
 								}
 
@@ -671,8 +668,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 40.0, 96.399994, 394.0, 31.0 ],
-									"text" : "j.parameter 3D/rotate @type array @ramp/drive Max @description \"3D rotation as angle and xyz rotation axis coordinates.\" @default 0. 0. 0. 1.",
+									"patching_rect" : [ 40.0, 96.399994, 380.0, 31.0 ],
+									"text" : "j.parameter rotate @type array @ramp/drive Max @description \"3D rotation as angle and xyz rotation axis coordinates.\" @default 0. 0. 0. 1.",
 									"varname" : "3D/rotate"
 								}
 
@@ -688,8 +685,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 19.0, 26.0, 453.0, 31.0 ],
-									"text" : "j.parameter 3D/position @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"3D origin as xyz coordinates.\" @default 0. 0. 0.",
+									"patching_rect" : [ 19.0, 26.0, 459.0, 31.0 ],
+									"text" : "j.parameter position @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"3D origin as xyz coordinates.\" @default 0. 0. 0.",
 									"varname" : "3D/position"
 								}
 
@@ -1046,7 +1043,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 109.0, 48.0, 469.0, 31.0 ],
-									"text" : "j.parameter color/alpha @type decimal @range 0. 1. @clipmode both @ramp/drive Max @description \"Object alpha transparency (0.-1.).\" @default 1.",
+									"text" : "j.parameter alpha @type decimal @range 0. 1. @clipmode both @ramp/drive Max @description \"Object alpha transparency (0.-1.).\" @default 1.",
 									"varname" : "color/alpha"
 								}
 
@@ -1062,8 +1059,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 40.0, 11.0, 467.0, 31.0 ],
-									"text" : "j.parameter color/rgb @type array @description \"Object color as red, green, blue (0.-1.).\" @default 1. 1. 1. @dataspace color @dataspace/unit rgb @range 0 1 @clipmode both",
+									"patching_rect" : [ 40.0, 11.0, 473.0, 31.0 ],
+									"text" : "j.parameter color @type array @description \"Object color as red, green, blue (0.-1.).\" @default 1. 1. 1. @dataspace color @dataspace/unit rgb @range 0 1 @clipmode both",
 									"varname" : "color/rgb"
 								}
 
@@ -1539,8 +1536,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 132.5, 324.284302, 398.0, 31.0 ],
-									"text" : "j.parameter material/shininess @type decimal @range 0. 255. @clipmode both @ramp/drive Max @description \"Material shininess.\" @default 10.",
+									"patching_rect" : [ 132.5, 324.284302, 465.0, 31.0 ],
+									"text" : "j.parameter shininess @type decimal @range 0. 255. @clipmode both @ramp/drive Max @description \"Material shininess.\" @default 10.",
 									"varname" : "material/shininess"
 								}
 
@@ -1573,8 +1570,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 162.0, 386.74118, 305.0, 31.0 ],
-									"text" : "j.parameter material/automatic @type boolean @description \"Automatic material attributes.\" @default 1",
+									"patching_rect" : [ 162.0, 386.74118, 465.0, 31.0 ],
+									"text" : "j.parameter light/automatic @type boolean @description \"Automatic material attributes.\" @default 1",
 									"varname" : "material/automatic"
 								}
 
@@ -1585,13 +1582,12 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-44",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 13.5, 12.0, 271.5, 31.0 ],
-									"text" : "j.parameter material/light/enable @type boolean @description \"Calculate lighting.\" @default 0",
+									"patching_rect" : [ 13.5, 12.0, 447.0, 19.0 ],
+									"text" : "j.parameter light/enable @type boolean @description \"Calculate lighting.\" @default 0",
 									"varname" : "material/light/enable"
 								}
 
@@ -1607,8 +1603,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 105.0, 261.827454, 469.0, 31.0 ],
-									"text" : "j.parameter material/light/specular @type array @ramp/drive Max @description \"The specular light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"patching_rect" : [ 105.0, 261.827454, 520.0, 31.0 ],
+									"text" : "j.parameter light/specular @type array @ramp/drive Max @description \"The specular light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/specular"
 								}
 
@@ -1624,8 +1620,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 91.0, 199.37059, 452.0, 31.0 ],
-									"text" : "j.parameter material/light/emission @type array @ramp/drive Max @description \"The material emission property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"patching_rect" : [ 91.0, 199.37059, 540.0, 31.0 ],
+									"text" : "j.parameter light/emission @type array @ramp/drive Max @description \"The material emission property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/emission"
 								}
 
@@ -1641,8 +1637,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 71.0, 136.913727, 447.0, 31.0 ],
-									"text" : "j.parameter material/light/diffuse @type array @ramp/drive Max @description \"The diffuse light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"patching_rect" : [ 71.0, 136.913727, 560.0, 31.0 ],
+									"text" : "j.parameter light/diffuse @type array @ramp/drive Max @description \"The diffuse light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/diffuse"
 								}
 
@@ -1658,8 +1654,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 38.0, 74.456863, 460.0, 31.0 ],
-									"text" : "j.parameter material/light/ambient @type array @ramp/drive Max @description \"The ambient light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"patching_rect" : [ 38.0, 74.456863, 579.0, 31.0 ],
+									"text" : "j.parameter light/ambient @type array @ramp/drive Max @description \"The ambient light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/ambient"
 								}
 
