@@ -378,14 +378,16 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.427451, 0.427451, 0.427451, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1033",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 128.0, 396.0, 155.0, 19.0 ],
+					"patching_rect" : [ 128.0, 396.0, 82.0, 31.0 ],
 					"text" : "j.out 1 @type jit_gl_texture"
 				}
 
