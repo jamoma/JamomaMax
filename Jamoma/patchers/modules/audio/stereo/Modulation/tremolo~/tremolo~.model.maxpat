@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 98.0, 118.0, 903.0, 593.0 ],
@@ -36,8 +36,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 219.0, 475.0, 73.0, 20.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 219.0, 475.0, 52.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -50,8 +50,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 96.25, 475.0, 73.0, 20.0 ],
-					"text" : "j.out~ 1"
+					"patching_rect" : [ 96.25, 475.0, 50.0, 20.0 ],
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -64,8 +64,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 219.0, 120.0, 66.0, 20.0 ],
-					"text" : "j.in~ 2"
+					"patching_rect" : [ 219.0, 120.0, 45.0, 20.0 ],
+					"text" : "j.in~ R"
 				}
 
 			}
@@ -78,8 +78,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 99.0, 120.0, 66.0, 20.0 ],
-					"text" : "j.in~ 1"
+					"patching_rect" : [ 99.0, 120.0, 43.0, 20.0 ],
+					"text" : "j.in~ L"
 				}
 
 			}
@@ -93,7 +93,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 699.0, 52.0, 156.0, 114.0 ],
+					"patching_rect" : [ 699.0, 52.0, 132.0, 114.0 ],
 					"text" : "j.parameter lfo/depth @type decimal @range 0. 100. @clipmode both @ramp/drive Max @repetitions/filter 1 @description \"LFO depth (0-100%).\"",
 					"varname" : "#1/lfo/depth"
 				}
@@ -109,7 +109,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 328.5, 52.0, 171.0, 141.0 ],
+					"patching_rect" : [ 328.5, 52.0, 139.0, 141.0 ],
 					"text" : "j.parameter lfo/frequency @type decimal @range 0. 100. @clipmode low @ramp/drive Max @repetitions/filter 1 @dataspace time @dataspace/unit Hz @description \"LFO frequency (Hz).\"",
 					"varname" : "#1/lfo/frequency"
 				}

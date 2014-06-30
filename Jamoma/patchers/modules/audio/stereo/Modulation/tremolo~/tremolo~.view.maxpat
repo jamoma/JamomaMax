@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 485.0, 161.0, 1125.0, 572.0 ],
+		"rect" : [ 53.0, 99.0, 806.0, 509.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -36,8 +36,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 470.0, 71.0, 163.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"patching_rect" : [ 517.0, 25.0, 127.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R"
 				}
 
 			}
@@ -50,8 +50,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 470.0, 20.0, 163.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"patching_rect" : [ 337.0, 25.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.L"
 				}
 
 			}
@@ -64,7 +64,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 470.0, 433.5, 126.0, 20.0 ],
+					"patching_rect" : [ 337.0, 438.5, 126.0, 20.0 ],
 					"text" : "j.remote lfo/depth",
 					"varname" : "#1/lfo/depth"
 				}
@@ -79,7 +79,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 470.0, 319.0, 149.0, 20.0 ],
+					"patching_rect" : [ 337.0, 324.0, 149.0, 20.0 ],
 					"text" : "j.remote lfo/frequency",
 					"varname" : "#1/lfo/frequency"
 				}
@@ -93,9 +93,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 470.0, 102.0, 10.0, 57.0 ],
+					"patching_rect" : [ 517.0, 56.0, 10.0, 57.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 290.0, 22.0, 4.0, 44.0 ]
+					"presentation_rect" : [ 288.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -107,9 +107,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 470.0, 47.0, 10.0, 57.0 ],
+					"patching_rect" : [ 337.0, 52.0, 10.0, 57.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 284.0, 22.0, 4.0, 44.0 ]
+					"presentation_rect" : [ 281.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -138,7 +138,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 470.0, 200.0, 129.0, 20.0 ],
+					"patching_rect" : [ 337.0, 205.0, 129.0, 20.0 ],
 					"text" : "j.remote lfo/phase",
 					"varname" : "tremolo/phase_offset"
 				}
@@ -154,7 +154,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 470.0, 175.0, 40.0, 20.0 ],
+					"patching_rect" : [ 337.0, 180.0, 40.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 220.0, 25.0, 40.0, 20.0 ],
 					"triangle" : 0,
@@ -173,7 +173,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 470.0, 405.0, 40.0, 20.0 ],
+					"patching_rect" : [ 337.0, 410.0, 40.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 100.0, 45.0, 40.0, 20.0 ],
 					"triangle" : 0,
@@ -219,7 +219,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 470.0, 293.0, 40.0, 20.0 ],
+					"patching_rect" : [ 337.0, 298.0, 40.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 100.0, 25.0, 40.0, 20.0 ],
 					"triangle" : 0,
@@ -299,7 +299,7 @@
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 479.5, 475.5, 445.5, 475.5, 445.5, 395.0, 479.5, 395.0 ],
+					"midpoints" : [ 346.5, 480.5, 312.5, 480.5, 312.5, 400.0, 346.5, 400.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -318,7 +318,7 @@
 					"destination" : [ "obj-22", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 479.5, 348.0, 443.5, 348.0, 443.5, 275.0, 479.5, 275.0 ],
+					"midpoints" : [ 346.5, 353.0, 310.5, 353.0, 310.5, 280.0, 346.5, 280.0 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -355,7 +355,7 @@
 					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 479.5, 250.0, 453.0, 250.0, 453.0, 171.0, 479.5, 171.0 ],
+					"midpoints" : [ 346.5, 255.0, 320.0, 255.0, 320.0, 176.0, 346.5, 176.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -383,7 +383,7 @@
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 479.5, 192.0, 479.5, 192.0 ],
+					"midpoints" : [ 346.5, 197.0, 346.5, 197.0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
