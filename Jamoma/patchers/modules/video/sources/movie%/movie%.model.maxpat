@@ -1044,7 +1044,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 95.0, 1198.0, 382.0 ],
+						"rect" : [ 25.0, 95.0, 901.0, 391.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1072,7 +1072,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 514.0, 311.0, 101.0, 19.0 ],
+									"patching_rect" : [ 514.0, 324.0, 101.0, 19.0 ],
 									"text" : "prepend autostart"
 								}
 
@@ -1083,13 +1083,13 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1015",
-									"linecount" : 3,
+									"linecount" : 4,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 514.0, 256.0, 600.0, 43.0 ],
-									"text" : "j.parameter autostart @type boolean @description \"Defines module's behavior when 'file' parameter is received. When set to 0, reading of a video file is triggered with 'start'. When set to 1 (default), opening a video file automatically triggers 'start'. \"",
+									"patching_rect" : [ 514.0, 256.0, 362.0, 55.0 ],
+									"text" : "j.parameter autostart @type boolean @description \"Defines module's behavior when 'file' parameter is received. When set to 0, reading of a video file is triggered with 'start'. When set to 1 (default), opening a video file automatically triggers 'start'. \" @priority 5",
 									"varname" : "camera/camera[1]"
 								}
 
@@ -1105,8 +1105,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 382.0, 176.0, 418.0, 31.0 ],
-									"text" : "j.parameter rate @type decimal @repetitions/filter 1 @ramp/drive Max @range -2. 2. @clipmode none @description \"Playback rate of video file\"",
+									"patching_rect" : [ 382.0, 176.0, 416.0, 31.0 ],
+									"text" : "j.parameter rate @type decimal @repetitions/filter 1 @ramp/drive Max @range -2. 2. @clipmode none @description \"Playback rate of video file\" @priority 15",
 									"varname" : "file/rate"
 								}
 
@@ -1251,7 +1251,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 367.5, 121.0, 372.0, 19.0 ],
+									"patching_rect" : [ 367.5, 121.0, 330.0, 19.0 ],
 									"text" : "j.message dispose @type none @description \"Playback control\""
 								}
 
@@ -1266,7 +1266,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 189.0, 68.0, 356.0, 19.0 ],
+									"patching_rect" : [ 189.0, 68.0, 314.0, 19.0 ],
 									"text" : "j.message stop @type none @description \"Playback control\""
 								}
 
@@ -1281,7 +1281,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 105.5, 44.0, 358.0, 19.0 ],
+									"patching_rect" : [ 105.5, 44.0, 316.0, 19.0 ],
 									"text" : "j.message start @type none @description \"Playback control\""
 								}
 
@@ -1296,8 +1296,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 19.0, 19.0, 369.0, 19.0 ],
-									"text" : "j.parameter file @type string @description \"video file\""
+									"patching_rect" : [ 19.0, 19.0, 383.0, 19.0 ],
+									"text" : "j.parameter path @type string @description \"video file path\" @priority 10"
 								}
 
 							}
@@ -1982,35 +1982,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

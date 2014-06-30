@@ -8,4 +8,4 @@ active 1
 dim 640 480
 fps 25
 source movie
-movie/file wheel.mov
+movie/path wheel.mov

@@ -2,9 +2,11 @@
 - preset "default"
 - description "the default preset"
 # ###########################################
+# 
 data/active 1
 data/bypass 0
-file countdown.mov
+path countdown.mov
+rate 1
 adapt 0
 singlefield 1
 unique 1
@@ -13,9 +15,9 @@ highquality 1
 autostart 1
 colormode argb
 dim 640 480
-rate 1
 loop normal
 loop/notify 0
 vol 1
 framedump 0
-
+# 
+# ###########################################

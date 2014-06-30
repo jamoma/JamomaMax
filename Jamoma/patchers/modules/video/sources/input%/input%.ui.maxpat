@@ -30,19 +30,6 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "dropfile",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 490.166687, 27.5, 33.0, 42.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ -4.020554, -7.0, 189.0, 60.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
@@ -885,6 +872,19 @@
 					"outlettype" : [ "", "bang" ],
 					"patching_rect" : [ 223.166656, 31.537872, 100.0, 19.0 ],
 					"text" : "opendialog"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "dropfile",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 490.166687, 27.5, 33.0, 42.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ -4.020554, -7.0, 189.0, 60.0 ]
 				}
 
 			}

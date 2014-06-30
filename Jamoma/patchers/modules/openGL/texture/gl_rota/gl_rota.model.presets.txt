@@ -1,0 +1,47 @@
+
+
+
+- preset "default"
+  position 0.000000 0.000000 0.000000 
+  rotate 0.000000 0.000000 1.000000 0.000000 
+  scale 1.000000 1.000000 1.000000 
+  anchor 0.500000 0.500000 
+  blend/enable 0
+  blend/mode 6 7 
+  boundmode alpha
+  color/alpha 1.000000
+  color/inherit 0
+  color 1.000000 1.000000 1.000000 
+  depth/clear 0
+  depth/enable 1
+  depth/inherit 0
+  fog/amount 0.000000
+  fog/inherit 0
+  fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 
+  light/automatic 1
+  material/inherit 0
+  light/ambient 0.000000 0.000000 0.000000 0.000000 
+  light/diffuse 0.000000 0.000000 0.000000 0.000000 
+  light/emission 0.000000 0.000000 0.000000 0.000000 
+  light/enable 0
+  light/specular 0.000000 0.000000 0.000000 0.000000 
+  material/shininess 16.000000
+  offset 0.000000 0.000000 
+  antialias 0
+  automatic 1
+  context my_context
+  enable 1
+  layer 0
+  slab/adapt 1
+  slab/dim 720 480 
+  slab/rect 0 0 1 1 
+  slab/texrect 0 0 1 1 
+  theta 0.000000
+  video/bypass 0
+  video/freeze 0
+  video/mute 0
+  video/preview 0
+
+  zoom 1.000000 1.000000 
+  
+

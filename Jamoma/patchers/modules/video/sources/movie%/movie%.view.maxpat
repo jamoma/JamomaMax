@@ -1022,7 +1022,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 667.695923, 116.462128, 79.0, 19.0 ],
-					"text" : "j.remote file"
+					"text" : "j.remote path"
 				}
 
 			}

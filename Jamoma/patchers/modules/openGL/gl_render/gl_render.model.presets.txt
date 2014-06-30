@@ -1,0 +1,37 @@
+
+# ###########################################
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+data/active 1
+data/bypass 0
+fps/active 0
+framerate 25
+handle/active 0
+color/alpha 1.000000
+light/ambient 0.000000 0.000000 0.000000 0.000000
+fog/amount 0.000000
+antialias 0
+light/automatic 1
+automatic 1
+depth/clear 0
+context my_context
+light/diffuse 0.000000 0.000000 0.000000 0.000000
+light/emission 0.000000 0.000000 0.000000 0.000000
+light/enable 0
+enable 1
+depth/enable 1
+blend/enable 0
+color/inherit 0
+material/inherit 0
+depth/inherit 0
+layer 0
+blend/mode 6 7
+fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+position 0.000000 0.000000 0.000000
+color 1.000000 1.000000 1.000000
+rotate 0.000000 0.000000 0.000000 1.000000
+scale 1.000000 1.000000 1.000000
+material/shininess 10.000000
+light/specular 0.000000 0.000000 0.000000 0.000000

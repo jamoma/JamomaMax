@@ -182,7 +182,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 712.0, 606.5, 119.0, 19.0 ],
-					"text" : "j.remote render/layer",
+					"text" : "j.remote layer",
 					"varname" : "render/layer"
 				}
 
@@ -262,7 +262,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 712.0, 573.5, 132.0, 19.0 ],
-					"text" : "j.remote render/context",
+					"text" : "j.remote context",
 					"varname" : "render/context"
 				}
 
@@ -405,7 +405,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 713.0, 733.0, 128.0, 19.0 ],
-					"text" : "j.remote render/enable",
+					"text" : "j.remote enable",
 					"varname" : "render/enable"
 				}
 
@@ -420,7 +420,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 713.0, 699.0, 145.0, 19.0 ],
-					"text" : "j.remote render/automatic",
+					"text" : "j.remote automatic",
 					"varname" : "render/automatic"
 				}
 
@@ -435,7 +435,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 713.0, 659.0, 136.0, 19.0 ],
-					"text" : "j.remote render/antialias",
+					"text" : "j.remote antialias",
 					"varname" : "render/antialias"
 				}
 
@@ -465,7 +465,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 715.0, 478.5, 153.0, 19.0 ],
-					"text" : "j.remote material/automatic",
+					"text" : "j.remote light/automatic",
 					"varname" : "material/automatic"
 				}
 
@@ -480,7 +480,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 713.0, 448.5, 163.0, 19.0 ],
-					"text" : "j.remote material/light/enable",
+					"text" : "j.remote light/enable",
 					"varname" : "material/light/enable"
 				}
 
@@ -600,7 +600,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 300.0, 871.0, 171.0, 19.0 ],
-					"text" : "j.remote material/light/specular",
+					"text" : "j.remote light/specular",
 					"varname" : "material/light/specular"
 				}
 
@@ -628,8 +628,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 300.0, 801.0, 173.0, 19.0 ],
-					"text" : "j.remote material/light/emission",
+					"patching_rect" : [ 300.0, 801.0, 128.0, 19.0 ],
+					"text" : "j.remote light/emission",
 					"varname" : "material/light/emission"
 				}
 
@@ -657,8 +657,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 300.0, 733.0, 163.0, 19.0 ],
-					"text" : "j.remote material/light/diffuse",
+					"patching_rect" : [ 300.0, 733.0, 117.0, 19.0 ],
+					"text" : "j.remote light/diffuse",
 					"varname" : "material/light/diffuse"
 				}
 
@@ -687,7 +687,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 300.0, 671.0, 170.0, 19.0 ],
-					"text" : "j.remote material/light/ambient",
+					"text" : "j.remote light/ambient",
 					"varname" : "material/light/ambient"
 				}
 
@@ -745,7 +745,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 317.0, 406.0, 113.0, 19.0 ],
-					"text" : "j.remote color/alpha",
+					"text" : "j.remote alpha",
 					"varname" : "color/alpha"
 				}
 
@@ -759,8 +759,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 300.0, 456.0, 103.0, 19.0 ],
-					"text" : "j.remote color/rgb",
+					"patching_rect" : [ 300.0, 456.0, 81.0, 19.0 ],
+					"text" : "j.remote color",
 					"varname" : "color/rgb"
 				}
 
@@ -789,7 +789,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 261.0, 292.0, 101.0, 19.0 ],
-					"text" : "j.remote 3D/scale",
+					"text" : "j.remote scale",
 					"varname" : "3D/scale"
 				}
 
@@ -818,7 +818,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 261.0, 235.0, 115.0, 19.0 ],
-					"text" : "j.remote 3D/rotate",
+					"text" : "j.remote rotate",
 					"varname" : "3D/rotate"
 				}
 
@@ -847,7 +847,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 261.0, 161.0, 115.0, 19.0 ],
-					"text" : "j.remote 3D/position",
+					"text" : "j.remote position",
 					"varname" : "3D/position"
 				}
 
@@ -4084,7 +4084,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
 				"patcherrelativepath" : "../../data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
