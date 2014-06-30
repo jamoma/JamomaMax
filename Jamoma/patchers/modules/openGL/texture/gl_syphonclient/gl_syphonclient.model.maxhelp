@@ -118,7 +118,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 141.5, 48.0, 126.0, 17.0 ],
-									"text" : "GL/render/context foo"
+									"text" : "render/context foo"
 								}
 
 							}
@@ -320,14 +320,14 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "gl.syphonclient.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.syphonclient",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/opentexture/gl.syphonclient",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl.videoplane.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.videoplane",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/opengeometry /gl.videoplane",
 				"patcherrelativepath" : "../../geometry /gl.videoplane",
 				"type" : "JSON",
 				"implicit" : 1
@@ -341,15 +341,15 @@
 			}
 , 			{
 				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../../components/openGL/gl_group",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/opengl_group",
+				"patcherrelativepath" : "../../../../components/opengl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../../components/openGL/gl_group",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/opengl_group",
+				"patcherrelativepath" : "../../../../components/opengl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -390,7 +390,7 @@
 			}
 , 			{
 				"name" : "gl.syphonclient.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.syphonclient",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/opentexture/gl.syphonclient",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

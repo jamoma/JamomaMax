@@ -297,7 +297,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 158.5, 95.0, 126.0, 17.0 ],
-									"text" : "GL/render/context foo"
+									"text" : "render/context foo"
 								}
 
 							}
@@ -520,14 +520,14 @@
 			}
 , 			{
 				"name" : "gl.syphonserver.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.syphonserver",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/opentexture/gl.syphonserver",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl.syphonserver.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.syphonserver",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/opentexture/gl.syphonserver",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

@@ -77,7 +77,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 187.75, 19.181824, 239.0, 20.0 ],
-					"text" : "j.parameter GL/render/context @type string"
+					"text" : "j.parameter render/context @type string"
 				}
 
 			}
