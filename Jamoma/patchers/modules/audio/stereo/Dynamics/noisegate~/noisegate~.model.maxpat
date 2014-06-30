@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 0.0, 44.0, 1061.0, 640.0 ],
@@ -35,8 +35,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 378.0, 184.0, 24.0, 24.0 ],
-					"presentation_rect" : [ 383.0, 182.0, 0.0, 0.0 ]
+					"patching_rect" : [ 378.0, 184.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -63,8 +62,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 457.0, 495.0, 73.0, 20.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 457.0, 495.0, 52.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -77,8 +76,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 457.0, 238.0, 66.0, 20.0 ],
-					"text" : "j.in~ 2"
+					"patching_rect" : [ 457.0, 238.0, 45.0, 20.0 ],
+					"text" : "j.in~ R"
 				}
 
 			}
@@ -106,8 +105,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 378.0, 495.0, 73.0, 20.0 ],
-					"text" : "j.out~ 1"
+					"patching_rect" : [ 378.0, 495.0, 50.0, 20.0 ],
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -120,8 +119,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 378.0, 238.0, 66.0, 20.0 ],
-					"text" : "j.in~ 1"
+					"patching_rect" : [ 378.0, 238.0, 43.0, 20.0 ],
+					"text" : "j.in~ L"
 				}
 
 			}
