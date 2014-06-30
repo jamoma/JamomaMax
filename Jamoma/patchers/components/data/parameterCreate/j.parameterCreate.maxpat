@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 1.0, 44.0, 325.0, 772.0 ],
+		"rect" : [ 833.0, 49.0, 326.0, 777.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,56 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"hidden" : 1,
+					"id" : "obj-152",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 181.0, 785.0, 139.0, 18.0 ],
+					"text" : "generateDocumentation"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"hidden" : 1,
+					"id" : "obj-151",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 82.0, 785.0, 90.0, 18.0 ],
+					"text" : "savePresetFile"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"hidden" : 1,
+					"id" : "obj-149",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 82.0, 811.0, 187.0, 20.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "j.parameterCreatePresetDoc.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js j.parameterCreatePresetDoc.js"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 8.0,
@@ -597,7 +647,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 335.0, 698.0, 133.0, 20.0 ],
+					"patching_rect" : [ 351.0, 737.0, 133.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "j.thisparentpatcher.js",
 						"parameter_enable" : 0
@@ -617,20 +667,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 116.0, 826.5, 176.0, 18.0 ],
+					"patching_rect" : [ 136.0, 906.5, 176.0, 18.0 ],
 					"text" : "model/documentation/generate"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "connect to j.model (to create preset & documentation)",
-					"hidden" : 1,
-					"id" : "obj-98",
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 74.0, 823.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -9444,7 +9482,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 74.0, 776.0, 251.0, 17.0 ],
+					"patching_rect" : [ 94.0, 856.0, 251.0, 17.0 ],
 					"text" : "preset:store 1 default, preset:write"
 				}
 
@@ -9459,7 +9497,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 139.0, 799.0, 170.0, 17.0 ],
+					"patching_rect" : [ 159.0, 879.0, 170.0, 17.0 ],
 					"text" : "model:reference/generate"
 				}
 
@@ -10649,7 +10687,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 335.0, 673.0, 52.0, 19.0 ],
+					"patching_rect" : [ 351.0, 712.0, 52.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -11809,7 +11847,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 84.0, 75.0, 158.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 135.0, 110.0, 158.0, 22.0 ]
+					"presentation_rect" : [ 135.0, 110.0, 158.0, 22.0 ],
+					"text" : "CCCDDDDDD"
 				}
 
 			}
@@ -12112,15 +12151,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-98", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-140", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -12152,6 +12182,24 @@
 					"disabled" : 0,
 					"hidden" : 1,
 					"source" : [ "obj-146", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-149", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-151", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-149", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-152", 0 ]
 				}
 
 			}
@@ -12301,15 +12349,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-98", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-22", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -12454,7 +12493,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
+					"destination" : [ "obj-151", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
 					"source" : [ "obj-3", 0 ]
@@ -12593,15 +12632,6 @@
 					"disabled" : 0,
 					"hidden" : 1,
 					"source" : [ "obj-42", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-98", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-43", 0 ]
 				}
 
 			}
@@ -12805,7 +12835,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-43", 0 ],
+					"destination" : [ "obj-152", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
 					"source" : [ "obj-7", 0 ]
@@ -13243,22 +13273,6 @@
 					"source" : [ "obj-99", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.thisparentpatcher.js",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../javascript",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.map.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.dataspace.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
