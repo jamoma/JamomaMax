@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 567.0, 110.0, 573.0, 348.0 ],
+		"rect" : [ 49.0, 84.0, 573.0, 348.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -73,8 +73,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 379.75, 24.5, 125.0, 20.0 ],
-					"text" : "j.receive~ audio/out.2"
+					"patching_rect" : [ 379.75, 24.5, 127.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R"
 				}
 
 			}
@@ -88,7 +88,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
 					"patching_rect" : [ 214.25, 24.5, 125.0, 20.0 ],
-					"text" : "j.receive~ audio/out.1"
+					"text" : "j.receive~ audio/out.L"
 				}
 
 			}
@@ -100,11 +100,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 383.5, 54.5, 30.0, 25.0 ],
+					"patching_rect" : [ 379.75, 54.5, 18.0, 59.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 140.145828, 21.5, 30.0, 25.0 ]
+					"presentation_rect" : [ 141.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -116,11 +115,10 @@
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"orientation" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 218.0, 54.5, 30.0, 25.0 ],
+					"patching_rect" : [ 214.25, 54.5, 18.0, 59.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 125.145821, 21.5, 30.0, 25.0 ]
+					"presentation_rect" : [ 134.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -158,7 +156,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -327,7 +325,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 200.0, 235.0, 40.0, 40.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 64.5, 19.5, 54.0, 54.0 ],
+					"presentation_rect" : [ 64.5, 19.5, 50.5, 50.5 ],
 					"size" : 2.0
 				}
 
@@ -361,7 +359,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 295.0, 55.0, 220.0, 81.0 ],
@@ -578,7 +576,7 @@
 					"patching_rect" : [ 0.0, -1.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
-					"text" : "/noM..ess"
+					"text" : "/no_..ess"
 				}
 
 			}

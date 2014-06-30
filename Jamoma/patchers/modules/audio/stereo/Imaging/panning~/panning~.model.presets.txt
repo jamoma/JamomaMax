@@ -1,6 +1,6 @@
 
 
-- preset "chateau de preset"
+- preset "default"
 # "edit a comment"
 mode FastMode
 position 0.000000

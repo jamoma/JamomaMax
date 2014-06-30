@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 137.0, 431.0, 605.0, 388.0 ],
+		"rect" : [ 137.0, 431.0, 819.0, 478.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,8 +36,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 107.0, 337.0, 50.0, 20.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 107.0, 337.0, 52.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -51,7 +51,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 48.0, 337.0, 50.0, 20.0 ],
-					"text" : "j.out~ 1"
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -64,7 +64,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 85.0, 246.0, 69.0, 18.0 ],
+					"patching_rect" : [ 202.5, 246.0, 69.0, 18.0 ],
 					"text" : "position $1"
 				}
 
@@ -79,7 +79,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 432.0, 32.5, 127.0, 141.0 ],
+					"patching_rect" : [ 549.5, 32.5, 127.0, 141.0 ],
 					"text" : "j.parameter mode @type string @description \"Choose internal calculation mode for panning: fast uses a lookup table while precision performs trigonometric calculations.\"",
 					"varname" : "mode[1]"
 				}
@@ -95,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 268.0, 32.5, 127.0, 100.0 ],
+					"patching_rect" : [ 385.5, 32.5, 127.0, 100.0 ],
 					"text" : "j.parameter shape @type string @description \"Choose the panning function: linear, squareroot, or equal-power.\"",
 					"varname" : "shape[1]"
 				}
@@ -111,7 +111,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 85.0, 32.5, 133.0, 127.0 ],
+					"patching_rect" : [ 202.5, 32.5, 133.0, 127.0 ],
 					"text" : "j.parameter position @type decimal @range -1 1. @ramp/drive Max @clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
 					"varname" : "position"
 				}
@@ -132,7 +132,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 1059.0, 262.0, 325.0, 283.0 ],
@@ -291,7 +291,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 432.0, 246.0, 72.0, 20.0 ],
+					"patching_rect" : [ 549.5, 246.0, 72.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -335,7 +335,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 1073.0, 269.0, 425.0, 284.0 ],
@@ -526,7 +526,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 268.0, 246.0, 74.0, 20.0 ],
+					"patching_rect" : [ 385.5, 246.0, 74.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -649,7 +649,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 441.5, 278.0, 57.5, 278.0 ],
+					"midpoints" : [ 559.0, 278.0, 57.5, 278.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -687,7 +687,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 277.5, 278.0, 57.5, 278.0 ],
+					"midpoints" : [ 395.0, 278.0, 57.5, 278.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -697,7 +697,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 94.5, 277.0, 57.5, 277.0 ],
+					"midpoints" : [ 212.0, 277.0, 57.5, 277.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
