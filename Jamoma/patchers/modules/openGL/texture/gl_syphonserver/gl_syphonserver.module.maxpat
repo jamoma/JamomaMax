@@ -61,7 +61,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 12.0, 153.0, 268.0, 20.0 ],
-					"text" : "gl.syphonserver.model #1"
+					"text" : "gl_syphonserver.model #1"
 				}
 
 			}
@@ -72,13 +72,12 @@
 					"id" : "obj-11",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.syphonserver.view.maxpat",
+					"name" : "gl_syphonserver.view.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ -0.5, -1.0, 300.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ -0.5, 0.0, 300.0, 70.0 ],
-					"varname" : "gl.videoplane"
+					"presentation_rect" : [ -0.5, 0.0, 300.0, 70.0 ]
 				}
 
 			}
@@ -103,15 +102,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "gl.syphonserver.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.syphonserver",
+				"name" : "gl_syphonserver.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_syphonserver",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.syphonserver.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.syphonserver",
+				"name" : "gl_syphonserver.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_syphonserver",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -122,6 +121,10 @@
 			}
 , 			{
 				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "jit.gl.syphonserver.mxo",
 				"type" : "iLaX"
 			}
 , 			{

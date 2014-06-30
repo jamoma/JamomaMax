@@ -33,13 +33,61 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
+					"id" : "obj-13",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 160.0, 343.5, 74.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 160.0, 86.0, 78.0, 19.0 ],
+					"text" : "handle/reset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-14",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 243.0, 343.5, 50.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 243.0, 86.0, 50.0, 19.0 ],
+					"text" : "reset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-15",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 310.0, 343.5, 120.0, 19.0 ],
+					"text" : "j.send handle/reset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
 					"id" : "obj-10",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 160.0, 297.5, 78.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 196.0, 86.0, 78.0, 19.0 ],
+					"presentation_rect" : [ 190.0, 66.0, 78.0, 19.0 ],
 					"text" : "handle/active"
 				}
 
@@ -54,7 +102,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 243.0, 297.5, 20.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 279.0, 86.0, 20.0, 20.0 ]
+					"presentation_rect" : [ 273.0, 66.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -296,6 +344,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -368,6 +425,10 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
  ]

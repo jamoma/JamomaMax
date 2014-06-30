@@ -33,7 +33,7 @@
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "gl.text2d.view.maxpat",
+					"name" : "gl_text2d.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -54,7 +54,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 30.0, 189.0, 158.0, 20.0 ],
-					"text" : "gl.text2d.model #1",
+					"text" : "gl_text2d.model #1",
 					"varname" : "j.model"
 				}
 
@@ -123,8 +123,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "gl.text2d.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.text2d",
+				"name" : "gl_text2d.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_text2d",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -137,8 +137,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.text2d.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.text2d",
+				"name" : "gl_text2d.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_text2d",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -185,10 +185,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
@@ -210,6 +206,10 @@
 			}
 , 			{
 				"name" : "j.dataspace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
  ]

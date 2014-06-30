@@ -29,45 +29,6 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 295.0, 24.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-4",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 279.0, 132.0, 50.0, 17.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-1",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 284.5, 51.0, 100.0, 31.0 ],
-					"text" : "j.receive model:address"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-26",
@@ -1067,15 +1028,6 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1147,14 +1099,33 @@
 				}
 
 			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.gl_group.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
+				"type" : "JSON",
+				"implicit" : 1
+			}
 , 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 0 ]
-				}
-
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

@@ -131,8 +131,8 @@
 									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 141.5, 83.0, 137.0, 31.0 ],
 									"text" : "gl.syphonclient.model syphonclient"
 								}
@@ -290,13 +290,12 @@
 					"id" : "obj-11",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.videoplane.view.maxpat",
+					"name" : "gl_videoplane.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.5, 180.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"varname" : "gl.videoplane"
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
 				}
 
 			}
@@ -307,28 +306,27 @@
 					"id" : "obj-12",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.syphonclient.view.maxpat",
+					"name" : "gl_syphonclient.view.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.5, 95.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"varname" : "input%"
+					"patching_rect" : [ 20.5, 95.0, 300.0, 73.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
 
 			}
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "gl.syphonclient.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/opentexture/gl.syphonclient",
+				"name" : "gl_syphonclient.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_syphonclient",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.videoplane.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/opengeometry /gl.videoplane",
-				"patcherrelativepath" : "../../geometry /gl.videoplane",
+				"name" : "gl_videoplane.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
+				"patcherrelativepath" : "../../geometry /gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -341,15 +339,15 @@
 			}
 , 			{
 				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/opengl_group",
-				"patcherrelativepath" : "../../../../components/opengl_group",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/opengl_group",
-				"patcherrelativepath" : "../../../../components/opengl_group",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -389,13 +387,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.syphonclient.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/opentexture/gl.syphonclient",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
@@ -421,38 +412,6 @@
 			}
 , 			{
 				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jit.gl.syphonclient.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
  ]

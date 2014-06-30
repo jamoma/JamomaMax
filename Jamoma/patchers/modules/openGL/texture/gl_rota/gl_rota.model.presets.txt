@@ -29,7 +29,7 @@
   offset 0.000000 0.000000 
   render/antialias 0
   render/automatic 1
-  render/context none
+  render/context my_context
   render/enable 1
   render/layer 0
   slab/adapt 1

@@ -31,6 +31,20 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 54.0, 134.0, 96.0, 19.0 ],
+					"text" : "j.gl_group.model"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"id" : "obj-38",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -66,22 +80,6 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 274.0, 239.0, 37.0, 19.0 ],
 					"text" : "j.in 3"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "none",
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 14.0,
-					"id" : "obj-30",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 163.0, 132.0, 24.0 ],
-					"text" : "j.gl_group.model"
 				}
 
 			}
@@ -260,7 +258,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 557.0, 100.0, 274.0, 31.0 ],
+					"patching_rect" : [ 557.0, 100.0, 278.0, 31.0 ],
 					"text" : "j.parameter layer.3 @type array @description \"Blend coefficients for layer 3 as list of rgba values.\"",
 					"varname" : "layer_2"
 				}
@@ -490,6 +488,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-38", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -521,15 +528,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-30", 0 ]
 				}
 
 			}
@@ -568,6 +566,30 @@
 					"source" : [ "obj-4", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.gl_group.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

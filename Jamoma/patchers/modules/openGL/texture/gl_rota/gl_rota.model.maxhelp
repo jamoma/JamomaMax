@@ -31,7 +31,7 @@
 				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "bpatcher",
-					"name" : "gl.render.module.maxpat",
+					"name" : "gl_render.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -72,7 +72,7 @@
 				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
-					"name" : "gl.rota.module.maxpat",
+					"name" : "gl_rota.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -85,7 +85,7 @@
 				"box" : 				{
 					"id" : "obj-9",
 					"maxclass" : "bpatcher",
-					"name" : "gl.videoplane.module.maxpat",
+					"name" : "gl_videoplane.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -124,16 +124,16 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "gl.videoplane.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.videoplane",
-				"patcherrelativepath" : "../../geometry /gl.videoplane",
+				"name" : "gl_videoplane.module.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
+				"patcherrelativepath" : "../../geometry /gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.videoplane.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.videoplane",
-				"patcherrelativepath" : "../../geometry /gl.videoplane",
+				"name" : "gl_videoplane.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
+				"patcherrelativepath" : "../../geometry /gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -159,9 +159,9 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.videoplane.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.videoplane",
-				"patcherrelativepath" : "../../geometry /gl.videoplane",
+				"name" : "gl_videoplane.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
+				"patcherrelativepath" : "../../geometry /gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -169,26 +169,26 @@
 				"name" : "j.gl_group.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
 				"patcherrelativepath" : "../../../../components/openGL/gl_group",
-				"type" : "TEXT",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.rota.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.rota",
+				"name" : "gl_rota.module.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_rota",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.rota.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.rota",
+				"name" : "gl_rota.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_rota",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.rota.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.rota",
+				"name" : "gl_rota.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_rota",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -250,23 +250,23 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.render.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl.render",
-				"patcherrelativepath" : "../../gl.render",
+				"name" : "gl_render.module.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
+				"patcherrelativepath" : "../../gl_render",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.render.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl.render",
-				"patcherrelativepath" : "../../gl.render",
+				"name" : "gl_render.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
+				"patcherrelativepath" : "../../gl_render",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.render.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl.render",
-				"patcherrelativepath" : "../../gl.render",
+				"name" : "gl_render.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
+				"patcherrelativepath" : "../../gl_render",
 				"type" : "JSON",
 				"implicit" : 1
 			}

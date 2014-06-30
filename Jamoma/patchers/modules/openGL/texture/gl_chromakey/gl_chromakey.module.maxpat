@@ -33,7 +33,7 @@
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "gl.chromakey.view.maxpat",
+					"name" : "gl_chromakey.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -54,7 +54,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 28.0, 175.0, 158.0, 20.0 ],
-					"text" : "gl.chromakey.model #1",
+					"text" : "gl_chromakey.model #1",
 					"varname" : "j.model"
 				}
 
@@ -144,8 +144,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "gl.chromakey.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.chromakey",
+				"name" : "gl_chromakey.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_chromakey",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -158,9 +158,23 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.chromakey.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.chromakey",
+				"name" : "gl_chromakey.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_chromakey",
 				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.gl_group.panel.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.gl_group.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -200,7 +214,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.oscroute.mxo",
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.dataspace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
  ]

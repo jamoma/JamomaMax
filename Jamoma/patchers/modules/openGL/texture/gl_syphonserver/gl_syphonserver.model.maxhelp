@@ -34,7 +34,7 @@
 					"id" : "obj-1",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.syphonserver.view.maxpat",
+					"name" : "gl_syphonserver.view.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 20.5, 214.0, 300.0, 70.0 ],
@@ -339,8 +339,7 @@
 									"id" : "obj-4",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 0,
 									"patching_rect" : [ 158.5, 130.0, 196.0, 19.0 ],
 									"text" : "gl.syphonserver.model syphonserver"
 								}
@@ -519,15 +518,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.syphonserver.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/opentexture/gl.syphonserver",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gl.syphonserver.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/opentexture/gl.syphonserver",
+				"name" : "gl_syphonserver.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_syphonserver",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -554,18 +546,6 @@
 			}
 , 			{
 				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "jit.gl.syphonserver.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
  ]

@@ -57,7 +57,7 @@
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "gl.alphamixer.view.maxpat",
+					"name" : "gl_alphamixer.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -78,7 +78,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 28.0, 230.0, 158.0, 20.0 ],
-					"text" : "gl.alphamixer.model #1",
+					"text" : "gl_alphamixer.model #1",
 					"varname" : "j.model"
 				}
 
@@ -186,8 +186,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "gl.alphamixer.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.alphamixer",
+				"name" : "gl_alphamixer.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_alphamixer",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -196,12 +196,12 @@
 				"name" : "j.gl_group.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
 				"patcherrelativepath" : "../../../../components/openGL/gl_group",
-				"type" : "TEXT",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.alphamixer.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.alphamixer",
+				"name" : "gl_alphamixer.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_alphamixer",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -214,9 +214,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.class.gl_slab.inspect.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/class.gl_slab.inspect",
-				"patcherrelativepath" : "../../../../components/deprecated/class.gl_slab.inspect",
+				"name" : "j.gl_group.panel.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.gl_group.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -249,7 +256,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.oscroute.mxo",
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.dataspace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
  ]

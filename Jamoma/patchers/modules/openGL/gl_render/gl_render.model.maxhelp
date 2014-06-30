@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 340.0, 44.0, 665.0, 417.0 ],
+		"rect" : [ 340.0, 44.0, 354.0, 415.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -241,7 +241,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 665.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 354.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -254,7 +254,7 @@
 					"id" : "obj-11",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.render.module.maxpat",
+					"name" : "gl_render.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -267,22 +267,22 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "gl.render.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl.render",
+				"name" : "gl_render.module.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.render.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl.render",
+				"name" : "gl_render.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.render.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl.render",
+				"name" : "gl_render.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

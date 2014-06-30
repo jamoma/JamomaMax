@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 431.0, 53.0, 650.0, 821.0 ],
+		"rect" : [ 431.0, 53.0, 618.0, 777.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -32,13 +32,12 @@
 					"id" : "obj-3",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.videoplane.module.maxpat",
+					"name" : "gl_videoplane.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 63.0, 642.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 63.0, 488.0, 300.0, 140.0 ],
-					"varname" : "jmod.gl.alphamixer%[1]"
+					"patching_rect" : [ 52.0, 615.0, 300.0, 140.0 ],
+					"presentation_rect" : [ 63.0, 488.0, 300.0, 140.0 ]
 				}
 
 			}
@@ -47,25 +46,25 @@
 					"id" : "obj-1",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.render.module.maxpat",
+					"name" : "gl_render.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 22.0, 111.0, 300.0, 105.0 ],
+					"patching_rect" : [ 11.0, 84.0, 300.0, 105.0 ],
 					"presentation_rect" : [ 790.0, 485.0, 300.0, 105.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "gl.alphamixer", "@description", "A four layer slab-based video mixer using alpha channel for each layer" ],
+					"args" : [ "@name", "gl_alphamixer", "@description", "A four layer slab-based video mixer using alpha channel for each layer" ],
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 650.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 618.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -80,7 +79,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 94.0, 336.0, 65.0, 19.0 ],
+					"patching_rect" : [ 83.0, 309.0, 65.0, 19.0 ],
 					"text" : "(Foremost)"
 				}
 
@@ -94,7 +93,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 443.0, 336.0, 67.0, 19.0 ],
+					"patching_rect" : [ 432.0, 309.0, 67.0, 19.0 ],
 					"text" : "(Backmost)"
 				}
 
@@ -108,7 +107,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 453.0, 321.0, 46.0, 19.0 ],
+					"patching_rect" : [ 442.0, 294.0, 46.0, 19.0 ],
 					"text" : "Layer 4"
 				}
 
@@ -122,7 +121,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 322.5, 321.0, 46.0, 19.0 ],
+					"patching_rect" : [ 311.5, 294.0, 46.0, 19.0 ],
 					"text" : "Layer 3"
 				}
 
@@ -136,7 +135,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 214.0, 321.0, 46.0, 19.0 ],
+					"patching_rect" : [ 203.0, 294.0, 46.0, 19.0 ],
 					"text" : "Layer 2"
 				}
 
@@ -150,7 +149,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 53.0, 275.0, 65.0, 19.0 ],
+					"patching_rect" : [ 42.0, 248.0, 65.0, 19.0 ],
 					"text" : "onebang 1"
 				}
 
@@ -165,7 +164,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 428.0, 364.0, 82.0, 29.0 ],
+					"patching_rect" : [ 417.0, 337.0, 82.0, 29.0 ],
 					"text" : "read colorbars.png"
 				}
 
@@ -180,7 +179,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 413.0, 406.0, 70.0, 31.0 ],
+					"patching_rect" : [ 402.0, 379.0, 70.0, 31.0 ],
 					"text" : "jit.qt.movie 320 240"
 				}
 
@@ -195,7 +194,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 301.0, 364.0, 89.0, 29.0 ],
+					"patching_rect" : [ 290.0, 337.0, 89.0, 29.0 ],
 					"text" : "read countdown.mov"
 				}
 
@@ -210,7 +209,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 286.0, 406.0, 71.0, 31.0 ],
+					"patching_rect" : [ 275.0, 379.0, 71.0, 31.0 ],
 					"text" : "jit.qt.movie 320 240"
 				}
 
@@ -225,7 +224,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 194.0, 364.0, 66.0, 29.0 ],
+					"patching_rect" : [ 183.0, 337.0, 66.0, 29.0 ],
 					"text" : "read dishes.mov"
 				}
 
@@ -240,7 +239,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 179.0, 406.0, 66.0, 31.0 ],
+					"patching_rect" : [ 168.0, 379.0, 70.0, 31.0 ],
 					"text" : "jit.qt.movie 320 240"
 				}
 
@@ -255,7 +254,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 81.0, 364.0, 62.0, 29.0 ],
+					"patching_rect" : [ 70.0, 337.0, 62.0, 29.0 ],
 					"text" : "read dozer.mov"
 				}
 
@@ -270,7 +269,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 63.0, 406.0, 74.0, 31.0 ],
+					"patching_rect" : [ 52.0, 379.0, 74.0, 31.0 ],
 					"text" : "jit.qt.movie 320 240"
 				}
 
@@ -280,13 +279,12 @@
 					"id" : "obj-43",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl.alphamixer.module.maxpat",
+					"name" : "gl_alphamixer.module.maxpat",
 					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 63.0, 482.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"varname" : "jmod.gl.alphamixer%"
+					"patching_rect" : [ 52.0, 455.0, 300.0, 140.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
 				}
 
 			}
@@ -299,7 +297,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 104.0, 321.0, 46.0, 19.0 ],
+					"patching_rect" : [ 93.0, 294.0, 46.0, 19.0 ],
 					"text" : "Layer 1"
 				}
 
@@ -310,11 +308,12 @@
 					"fontsize" : 18.0,
 					"frgb" : 0.0,
 					"id" : "obj-49",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 181.0, 234.0, 467.0, 28.0 ],
-					"text" : "2) Test out the alpha values. They control opacity."
+					"patching_rect" : [ 361.0, 488.0, 254.0, 50.0 ],
+					"text" : "Test out the alpha values. They control opacity."
 				}
 
 			}
@@ -326,7 +325,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 404.0, 309.0, 106.0, 134.0 ],
+					"patching_rect" : [ 393.0, 282.0, 106.0, 134.0 ],
 					"rounded" : 15
 				}
 
@@ -339,7 +338,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 287.0, 309.0, 106.0, 134.0 ],
+					"patching_rect" : [ 276.0, 282.0, 106.0, 134.0 ],
 					"rounded" : 15
 				}
 
@@ -352,8 +351,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 170.0, 309.0, 106.0, 134.0 ],
-					"presentation_rect" : [ 170.0, 264.0, 0.0, 0.0 ],
+					"patching_rect" : [ 159.0, 282.0, 106.0, 134.0 ],
 					"rounded" : 15
 				}
 
@@ -366,7 +364,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 53.0, 309.0, 106.0, 134.0 ],
+					"patching_rect" : [ 42.0, 282.0, 106.0, 134.0 ],
 					"rounded" : 15
 				}
 
@@ -377,50 +375,47 @@
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 20.5, 234.0, 51.5, 234.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"color" : [ 1.0, 0.0, 0.0, 0.501961 ],
 					"destination" : [ "obj-30", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 31.5, 354.0, 422.5, 354.0 ],
+					"midpoints" : [ 20.5, 234.0, 157.0, 234.0, 157.0, 267.0, 403.0, 267.0, 403.0, 372.0, 411.5, 372.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"color" : [ 1.0, 0.0, 0.0, 0.501961 ],
 					"destination" : [ "obj-33", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 31.5, 354.0, 295.5, 354.0 ],
+					"midpoints" : [ 20.5, 234.0, 157.0, 234.0, 157.0, 267.0, 271.0, 267.0, 271.0, 375.0, 284.5, 375.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"color" : [ 1.0, 0.0, 0.0, 0.501961 ],
 					"destination" : [ "obj-39", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 31.5, 354.0, 188.5, 354.0 ],
+					"midpoints" : [ 20.5, 234.0, 157.0, 234.0, 157.0, 267.0, 169.0, 267.0, 169.0, 372.0, 177.5, 372.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"color" : [ 1.0, 0.0, 0.0, 0.501961 ],
 					"destination" : [ "obj-42", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 31.5, 354.0, 72.5, 354.0 ],
+					"midpoints" : [ 20.5, 366.0, 61.5, 366.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -431,7 +426,7 @@
 					"destination" : [ "obj-28", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 62.5, 317.0, 437.5, 317.0 ],
+					"midpoints" : [ 51.5, 290.0, 426.5, 290.0 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -442,7 +437,7 @@
 					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 62.5, 317.0, 310.5, 317.0 ],
+					"midpoints" : [ 51.5, 290.0, 299.5, 290.0 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -453,7 +448,7 @@
 					"destination" : [ "obj-37", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 62.5, 317.0, 203.5, 317.0 ],
+					"midpoints" : [ 51.5, 290.0, 192.5, 290.0 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -464,7 +459,7 @@
 					"destination" : [ "obj-40", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 62.5, 317.0, 90.5, 317.0 ],
+					"midpoints" : [ 51.5, 290.0, 79.5, 290.0 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -474,7 +469,7 @@
 					"destination" : [ "obj-30", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 437.5, 406.0, 422.5, 406.0 ],
+					"midpoints" : [ 426.5, 379.0, 411.5, 379.0 ],
 					"source" : [ "obj-28", 0 ]
 				}
 
@@ -493,7 +488,7 @@
 					"destination" : [ "obj-33", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 310.5, 403.0, 295.5, 403.0 ],
+					"midpoints" : [ 299.5, 376.0, 284.5, 376.0 ],
 					"source" : [ "obj-31", 0 ]
 				}
 
@@ -512,7 +507,7 @@
 					"destination" : [ "obj-39", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 203.5, 402.0, 188.5, 402.0 ],
+					"midpoints" : [ 192.5, 375.0, 177.5, 375.0 ],
 					"source" : [ "obj-37", 0 ]
 				}
 
@@ -531,7 +526,7 @@
 					"destination" : [ "obj-42", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 90.5, 399.0, 72.5, 399.0 ],
+					"midpoints" : [ 79.5, 372.0, 61.5, 372.0 ],
 					"source" : [ "obj-40", 0 ]
 				}
 
@@ -556,15 +551,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "gl.alphamixer.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.alphamixer",
+				"name" : "gl_alphamixer.module.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_alphamixer",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.alphamixer.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.alphamixer",
+				"name" : "gl_alphamixer.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_alphamixer",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -573,12 +568,12 @@
 				"name" : "j.gl_group.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
 				"patcherrelativepath" : "../../../../components/openGL/gl_group",
-				"type" : "TEXT",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.alphamixer.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl.alphamixer",
+				"name" : "gl_alphamixer.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_alphamixer",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -633,23 +628,23 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.render.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl.render",
-				"patcherrelativepath" : "../../gl.render",
+				"name" : "gl_render.module.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
+				"patcherrelativepath" : "../../gl_render",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.render.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl.render",
-				"patcherrelativepath" : "../../gl.render",
+				"name" : "gl_render.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
+				"patcherrelativepath" : "../../gl_render",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.render.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl.render",
-				"patcherrelativepath" : "../../gl.render",
+				"name" : "gl_render.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
+				"patcherrelativepath" : "../../gl_render",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -661,23 +656,23 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.videoplane.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.videoplane",
-				"patcherrelativepath" : "../../geometry /gl.videoplane",
+				"name" : "gl_videoplane.module.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
+				"patcherrelativepath" : "../../geometry /gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.videoplane.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.videoplane",
-				"patcherrelativepath" : "../../geometry /gl.videoplane",
+				"name" : "gl_videoplane.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
+				"patcherrelativepath" : "../../geometry /gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl.videoplane.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl.videoplane",
-				"patcherrelativepath" : "../../geometry /gl.videoplane",
+				"name" : "gl_videoplane.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
+				"patcherrelativepath" : "../../geometry /gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
