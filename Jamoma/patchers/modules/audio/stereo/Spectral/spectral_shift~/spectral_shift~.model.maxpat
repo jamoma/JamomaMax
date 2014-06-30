@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 397.0, 44.0, 1188.0, 433.0 ],
@@ -86,7 +86,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 779.0, 225.0, 730.0, 559.0 ],
@@ -574,7 +574,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 680.0, 180.0, 43.0, 20.0 ],
-					"text" : "j.in~ 1"
+					"text" : "j.in~ L"
 				}
 
 			}
@@ -588,7 +588,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 210.0, 339.0, 50.0, 20.0 ],
-					"text" : "j.out~ 1"
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -648,7 +648,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 396.0, 174.0, 205.0, 20.0 ],
-					"text" : "pfft~ j.spectral_shiftVoice~ 1024 4"
+					"text" : "pfft~ j.spectral_shift_voice~ 1024 4"
 				}
 
 			}
@@ -662,7 +662,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 17.0, 27.0, 186.0, 87.0 ],
+					"patching_rect" : [ 17.0, 27.0, 188.0, 87.0 ],
 					"text" : "j.parameter frequency/shift @type decimal @range -500 500 @dataspace time @dataspace/unit Hz @description \"Slide all frequency bins up or down (Hz).\""
 				}
 
@@ -691,8 +691,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 396.0, 339.0, 50.0, 20.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 396.0, 339.0, 52.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -705,8 +705,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 779.0, 180.0, 43.0, 20.0 ],
-					"text" : "j.in~ 2"
+					"patching_rect" : [ 779.0, 180.0, 45.0, 20.0 ],
+					"text" : "j.in~ R"
 				}
 
 			}
@@ -904,23 +904,23 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.spectral_shiftVoice~.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/spectral_shift~",
+				"name" : "j.spectral_shift_voice~.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
-				"patcherrelativepath" : "../limiter~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
-				"patcherrelativepath" : "../limiter~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}

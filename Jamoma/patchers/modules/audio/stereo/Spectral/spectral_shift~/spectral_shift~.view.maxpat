@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 32.0, 338.0, 1225.0, 667.0 ],
+		"rect" : [ 35.0, 323.0, 777.0, 527.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -228,8 +228,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 525.5, 500.0, 141.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"patching_rect" : [ 273.5, 299.0, 127.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R"
 				}
 
 			}
@@ -242,8 +242,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 509.5, 457.0, 141.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"patching_rect" : [ 123.5, 299.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.L"
 				}
 
 			}
@@ -255,9 +255,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 533.0, 526.0, 4.0, 80.0 ],
+					"patching_rect" : [ 275.0, 330.0, 14.0, 78.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 290.0, 25.0, 4.0, 40.0 ]
+					"presentation_rect" : [ 288.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -269,9 +269,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 509.5, 482.0, 4.0, 80.0 ],
+					"patching_rect" : [ 125.0, 330.0, 14.0, 78.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 285.0, 25.0, 4.0, 40.0 ]
+					"presentation_rect" : [ 281.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -289,7 +289,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 218.0, 55.0, 229.0, 239.0 ],
@@ -1006,7 +1006,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 0.0, 80.0, 127.0, 20.0 ],
+					"patching_rect" : [ 0.0, 80.0, 133.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
