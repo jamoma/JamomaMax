@@ -1,0 +1,39 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+GL/color/alpha 1.000000
+GL/material/light/ambient 0.000000 0.000000 0.000000 0.000000
+GL/fog/amount 0.000000
+GL/render/antialias 0
+GL/material/automatic 1
+GL/render/automatic 1
+cache_mode vertexarray
+GL/depth/clear 0
+GL/render/context my_context
+GL/material/light/diffuse 0.000000 0.000000 0.000000 0.000000
+dim 20 20
+GL/material/light/emission 0.000000 0.000000 0.000000 0.000000
+GL/depth/enable 1
+GL/blend/enable 0
+GL/material/light/enable 0
+GL/render/enable 1
+gridmode 0
+GL/material/inherit 0
+GL/color/inherit 0
+GL/depth/inherit 0
+GL/render/layer 0
+matrixoutput 0
+GL/blend/mode 6 7
+GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+GL/3D/position 0.000000 0.000000 0.000000
+rad_minor 0.250000
+GL/color/rgb 1.000000 1.000000 1.000000
+GL/3D/rotate 0.000000 0.000000 0.000000 1.000000
+GL/3D/scale 1.000000 1.000000 1.000000
+shape sphere
+GL/material/shininess 10.000000
+GL/material/light/specular 0.000000 0.000000 0.000000 0.000000
+# 
+# ###########################################
