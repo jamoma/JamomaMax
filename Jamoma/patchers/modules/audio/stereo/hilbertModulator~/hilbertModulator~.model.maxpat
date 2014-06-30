@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 76.0, 235.0, 959.0, 509.0 ],
@@ -51,8 +51,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 276.0, 73.0, 67.0, 20.0 ],
-					"text" : "j.in~ 2"
+					"patching_rect" : [ 276.0, 73.0, 45.0, 20.0 ],
+					"text" : "j.in~ R"
 				}
 
 			}
@@ -65,8 +65,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 276.0, 425.0, 74.0, 20.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 276.0, 425.0, 52.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -79,8 +79,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 41.0, 425.0, 74.0, 20.0 ],
-					"text" : "j.out~ 1"
+					"patching_rect" : [ 41.0, 425.0, 50.0, 20.0 ],
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -93,8 +93,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 41.0, 73.0, 67.0, 20.0 ],
-					"text" : "j.in~ 1"
+					"patching_rect" : [ 41.0, 73.0, 43.0, 20.0 ],
+					"text" : "j.in~ L"
 				}
 
 			}
@@ -134,7 +134,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 405.333313, 22.0, 525.0, 47.0 ],
+					"patching_rect" : [ 405.333313, 22.0, 526.0, 47.0 ],
 					"text" : "j.parameter modulatingFrequency @type decimal @range -200. 1000. @clipmode none @ramp/function linear @ramp/drive Max @description \"Modulator frequency (Hz). \" @dataspace time @dataspace/unit Hz"
 				}
 
@@ -269,8 +269,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 387.0, 286.0, 416.0, 393.0 ],
@@ -699,8 +699,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 10.0, 59.0, 400.0, 326.0 ],
@@ -944,8 +944,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 387.0, 286.0, 416.0, 393.0 ],
