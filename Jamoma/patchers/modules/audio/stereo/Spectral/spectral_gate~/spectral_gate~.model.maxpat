@@ -526,7 +526,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 599.0, 254.0, 179.0, 20.0 ],
-					"text" : "pfft~ j.spectralGate~.lib 4096 4"
+					"text" : "pfft~ j.spectral_gate~.lib 4096 4"
 				}
 
 			}
@@ -777,8 +777,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.spectralGate~.lib.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectralGate~",
+				"name" : "j.spectral_gate~.lib.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_gate~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

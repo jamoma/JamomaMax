@@ -76,7 +76,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 33.0, 658.0, 157.0, 20.0 ],
-									"text" : "s spectralGate~.model.cmd"
+									"text" : "s spectral_gate~.model.cmd"
 								}
 
 							}
@@ -161,7 +161,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 55.0, 420.0, 157.0, 20.0 ],
-									"text" : "s spectralGate~.model.cmd"
+									"text" : "s spectral_gate~.model.cmd"
 								}
 
 							}
@@ -257,7 +257,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 72.0, 271.0, 157.0, 20.0 ],
-									"text" : "s spectralGate~.model.cmd"
+									"text" : "s spectral_gate~.model.cmd"
 								}
 
 							}
@@ -311,7 +311,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "spectralGate~.module" ],
+					"jsarguments" : [ "spectral_gate~.module" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -401,13 +401,13 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 68.0, 317.0, 155.0, 20.0 ],
-									"text" : "r spectralGate~.model.cmd"
+									"text" : "r spectral_gate~.model.cmd"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "spectralGate~.module", "@description", "Spectral purification and noise reduction, based on the Hipno Brita plugin." ],
+									"args" : [ "@name", "spectral_gate~.module", "@description", "Spectral purification and noise reduction, based on the Hipno Brita plugin." ],
 									"bgmode" : 1,
 									"id" : "obj-3",
 									"maxclass" : "bpatcher",
@@ -450,7 +450,7 @@
 								"box" : 								{
 									"id" : "obj-1",
 									"maxclass" : "bpatcher",
-									"name" : "spectralGate~.module.maxpat",
+									"name" : "spectral_gate~.module.maxpat",
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
@@ -590,22 +590,22 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "spectralGate~.module.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectralGate~",
+				"name" : "spectral_gate~.module.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_gate~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "spectralGate~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectralGate~",
+				"name" : "spectral_gate~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_gate~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.spectralGate~.lib.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectralGate~",
+				"name" : "j.spectral_gate~.lib.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_gate~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -625,8 +625,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "spectralGate~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectralGate~",
+				"name" : "spectral_gate~.view.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_gate~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

@@ -33,7 +33,7 @@
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "spectralGate~.view.maxpat",
+					"name" : "spectral_gate~.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -54,7 +54,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 25.0, 199.0, 138.0, 20.0 ],
-					"text" : "spectralGate~.model #1"
+					"text" : "spectral_gate~.model #1"
 				}
 
 			}
@@ -163,15 +163,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "spectralGate~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectralGate~",
+				"name" : "spectral_gate~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_gate~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.spectralGate~.lib.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectralGate~",
+				"name" : "j.spectral_gate~.lib.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_gate~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -191,8 +191,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "spectralGate~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectralGate~",
+				"name" : "spectral_gate~.view.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_gate~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
