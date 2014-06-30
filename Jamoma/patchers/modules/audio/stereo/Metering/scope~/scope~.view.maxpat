@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 84.0, 185.0, 1596.0, 730.0 ],
@@ -148,7 +148,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 574.0, 319.0 ],
@@ -358,14 +358,14 @@
 					"fontsize" : 12.0,
 					"hint" : "Choose what model to monitor",
 					"id" : "obj-5",
-					"items" : [ "degrade~", ",", "input~", ",", "input~/balance", ",", "output~", ",", "output~/balance", ",", "output~/limiter", ",", "output~/record", ",", "output~/saturation", ",", "saturation~", ",", "scope~" ],
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 372.0, 149.0, 100.0, 20.0 ],
-					"prefix" : "Mac HD:/",
+					"prefix" : "Macintosh HD:/",
 					"presentation" : 1,
 					"presentation_rect" : [ 155.0, 21.0, 142.0, 20.0 ]
 				}
@@ -395,8 +395,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 552.0, 304.5, 125.0, 33.0 ],
-					"text" : "sprintf address %s/audio/out.2:signal"
+					"patching_rect" : [ 552.0, 304.5, 136.0, 33.0 ],
+					"text" : "sprintf address %s/audio/out.R:signal"
 				}
 
 			}
@@ -410,8 +410,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 361.0, 304.5, 125.0, 33.0 ],
-					"text" : "sprintf address %s/audio/out.1:signal"
+					"patching_rect" : [ 361.0, 304.5, 134.0, 33.0 ],
+					"text" : "sprintf address %s/audio/out.L:signal"
 				}
 
 			}
@@ -474,7 +474,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -693,8 +693,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 552.0, 364.5, 125.0, 20.0 ],
-					"text" : "j.receive~ audio/out.2"
+					"patching_rect" : [ 552.0, 364.5, 127.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R"
 				}
 
 			}
@@ -708,7 +708,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
 					"patching_rect" : [ 361.0, 364.5, 125.0, 20.0 ],
-					"text" : "j.receive~ audio/out.1"
+					"text" : "j.receive~ audio/out.L"
 				}
 
 			}
@@ -759,7 +759,6 @@
 					"patching_rect" : [ 361.0, 476.5, 210.0, 112.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 74.0, 41.5, 223.0, 131.0 ],
-					"range" : [ -1.0, 1.0 ],
 					"rounded" : 15
 				}
 
@@ -857,7 +856,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
-					"text" : "/scope~"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -952,7 +951,7 @@
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1073.833374, 459.75, 370.5, 459.75 ],
+					"midpoints" : [ 1073.833333, 459.75, 370.5, 459.75 ],
 					"source" : [ "obj-16", 1 ]
 				}
 
@@ -1139,6 +1138,42 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"parameters" : 		{
+			"obj-40" : [ " ", " ", 0 ]
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.dataspace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.namespace.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
