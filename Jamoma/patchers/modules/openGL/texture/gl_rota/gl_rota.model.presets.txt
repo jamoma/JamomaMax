@@ -3,10 +3,10 @@
 - description "something about this preset"
 # ###########################################
 # 
-anchor 0.000000 0.000000
+anchor 0.500000 0.500000
 offset 0.000000 0.000000
-theta 0.000000
-zoom 0.5 0.5
+theta 0
+zoom 0.500000 0.500000
 boundmode wrap
 # 
 # ###########################################
