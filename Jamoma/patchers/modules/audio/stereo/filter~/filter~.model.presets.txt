@@ -9,7 +9,7 @@
    gain 0.000000
    type lowpass
    frequency 1548.000000
-   q 1.000000
+   octave_bandwidth 1.000000
  
 
 - preset "Bandpass Octave filter 1000 Hz"
@@ -21,7 +21,7 @@
    gain 0.000000
    type bandpass
    frequency 1000.000000
-   q 1.408000
+   octave_bandwidth 1.00000
  
 
 - preset "Bandpass 3rd-Octave filter 1000 Hz"
@@ -33,6 +33,6 @@
    gain 0.000000
    type bandpass
    frequency 1000.000000
-   q 4.330000
+   octave_bandwidth 0.333333
  
 
