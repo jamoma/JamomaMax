@@ -68,7 +68,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 898.71875, 214.0, 196.0, 100.0 ],
+					"patching_rect" : [ 898.71875, 214.0, 199.0, 100.0 ],
 					"text" : "j.messageArray filter.[6]/q @type decimal @ramp/drive scheduler @range 0. 100. @clipmode both @repetitions/filter 1 @description \"Resonance (Q) is deprecated, use octave_bandwidth instead.\" @priority 4"
 				}
 
@@ -159,8 +159,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 339.0, 235.0, 25.0, 25.0 ],
-									"presentation_rect" : [ 386.0, 234.0, 0.0, 0.0 ]
+									"patching_rect" : [ 339.0, 235.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -1179,13 +1178,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-14",
-					"linecount" : 5,
+					"linecount" : 6,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 879.1875, 348.0, 236.0625, 74.0 ],
-					"text" : "j.parameterArray filter.[6]/octave_bandwith @type decimal @ramp/drive scheduler @range 0. 100. @clipmode both @repetitions/filter 1 @description \"Resonance (Q)\" @priority 4"
+					"patching_rect" : [ 879.1875, 348.0, 236.0625, 87.0 ],
+					"text" : "j.parameterArray filter.[6]/octave_bandwith @type decimal @ramp/drive scheduler @range 0.01 10. @clipmode both @repetitions/filter 1 @description \"Filter bandwidth/slope width in octaves.\" @priority 4"
 				}
 
 			}
@@ -1267,7 +1266,7 @@
 					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 228.0, 610.0, 141.699982, 64.0 ],
-					"setfilter" : [ 3, 7, 1, 0, 0, 5000.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2, 5, 1, 0, 0, 1000.0, 1.0, 1.555556, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 5, 1, 0, 0, 300.0, 1.0, 1.555556, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 6, 1, 0, 0, 75.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+					"setfilter" : [ 3, 7, 1, 0, 0, 5000.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2, 5, 1, 0, 0, 1000.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 5, 1, 0, 0, 300.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 6, 1, 0, 0, 75.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 				}
 
 			}
@@ -1500,7 +1499,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 997.21875, 434.0, 323.5, 434.0 ],
+					"midpoints" : [ 997.21875, 438.0, 323.5, 438.0 ],
 					"source" : [ "obj-14", 1 ]
 				}
 
