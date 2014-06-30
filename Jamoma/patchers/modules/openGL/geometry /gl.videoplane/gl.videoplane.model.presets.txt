@@ -1,5 +1,4 @@
 
-
 - preset "default"
 # "edit a comment"
 data/active 1
@@ -13,7 +12,7 @@ data/bypass 0
 GL/depth/clear 0
 videoplane/client_storage 1
 videoplane/colormode argb
-GL/render/context foo
+GL/render/context my_context
 GL/material/light/diffuse 0.000000 0.000000 0.000000 0.000000
 videoplane/dim 20 20
 videoplane/displaylist 0
@@ -39,3 +38,4 @@ videoplane/texture/scale 1.000000 1.000000
 GL/3D/scale 1.000000 1.000000 1.000000
 GL/material/shininess 10.000000
 GL/material/light/specular 0.000000 0.000000 0.000000 0.000000
+

@@ -4,8 +4,9 @@
 data/active 1
 alphaignore 1
 data/bypass 0
-key/color 0.190000 0.340000 0.110000
+key/color 0.392157 0.392157 0.392157
 fade 0.100000
 key/max 1.000000
 key/min 0.000000
 tolerance 0.400000
+
