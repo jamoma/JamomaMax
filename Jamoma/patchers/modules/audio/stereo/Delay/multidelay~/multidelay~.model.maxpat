@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 108.0, 60.0, 905.0, 661.0 ],
@@ -41,8 +41,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -271,7 +271,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 272.0, 539.0, 50.0, 20.0 ],
-					"text" : "j.out~ 1"
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -285,7 +285,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 233.5, 200.5, 43.0, 20.0 ],
-					"text" : "j.in~ 1"
+					"text" : "j.in~ L"
 				}
 
 			}
@@ -317,8 +317,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 7,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 566.0, 91.0, 640.0, 480.0 ],
@@ -733,8 +733,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 422.0, 539.0, 50.0, 20.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 422.0, 539.0, 52.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -747,8 +747,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 538.0, 200.5, 43.0, 20.0 ],
-					"text" : "j.in~ 2"
+					"patching_rect" : [ 538.0, 200.5, 45.0, 20.0 ],
+					"text" : "j.in~ R"
 				}
 
 			}
@@ -762,7 +762,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 62.25, 272.5, 159.25, 141.0 ],
+					"patching_rect" : [ 62.25, 272.5, 139.25, 141.0 ],
 					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @clipmode both @range -70. 0. @dataspace gain @dataspace/unit db @description \"Amount of delay feedback (dB).\"",
 					"varname" : "feedback[1]"
 				}
@@ -794,7 +794,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 289.5, 148.0, 243.0, 74.0 ],
+					"patching_rect" : [ 289.5, 148.0, 245.0, 74.0 ],
 					"text" : "j.parameter delay/left @type array @repetitions/filter 1 @ramp/drive none @range 0 10000 @clipmode low @description \"Delay time in milliseconds for left channel.\"",
 					"varname" : "left[1]"
 				}
