@@ -311,7 +311,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"title" : "/spectralShift~.view",
+						"title" : "/spectral_shift~.view",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -1020,7 +1020,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p \"spectralShift Panel\""
+					"text" : "p \"spectral_shift Panel\""
 				}
 
 			}

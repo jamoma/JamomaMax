@@ -648,7 +648,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 396.0, 174.0, 205.0, 20.0 ],
-					"text" : "pfft~ j.spectralShiftVoice~ 1024 4"
+					"text" : "pfft~ j.spectral_shiftVoice~ 1024 4"
 				}
 
 			}
@@ -904,8 +904,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.spectralShiftVoice~.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/spectralShift~",
+				"name" : "j.spectral_shiftVoice~.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/spectral_shift~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

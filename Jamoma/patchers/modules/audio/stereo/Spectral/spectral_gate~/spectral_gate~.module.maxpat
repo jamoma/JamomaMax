@@ -53,7 +53,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 25.0, 199.0, 138.0, 20.0 ],
+					"patching_rect" : [ 25.0, 199.0, 140.0, 20.0 ],
 					"text" : "spectral_gate~.model #1"
 				}
 
@@ -89,7 +89,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 144.0, 135.0, 25.0, 25.0 ]
+					"patching_rect" : [ 146.0, 135.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -100,7 +100,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 144.0, 250.5, 25.0, 25.0 ]
+					"patching_rect" : [ 146.0, 250.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -111,7 +111,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 84.5, 250.5, 25.0, 25.0 ]
+					"patching_rect" : [ 85.5, 255.0, 25.0, 25.0 ]
 				}
 
 			}

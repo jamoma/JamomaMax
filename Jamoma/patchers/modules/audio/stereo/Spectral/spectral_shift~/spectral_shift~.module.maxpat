@@ -32,7 +32,7 @@
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "spectralShift~.view.maxpat",
+					"name" : "spectral_shift~.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -52,7 +52,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "signal", "signal" ],
 					"patching_rect" : [ 25.0, 199.0, 138.0, 20.0 ],
-					"text" : "spectralShift~.model #1"
+					"text" : "spectral_shift~.model #1"
 				}
 
 			}
@@ -182,15 +182,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "spectralShift~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectralShift~",
+				"name" : "spectral_shift~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectral_shift~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.spectralShift~.lib.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectralShift~",
+				"name" : "j.spectral_shift~.lib.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectral_shift~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -203,8 +203,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "spectralShift~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectralShift~",
+				"name" : "spectral_shift~.view.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectral_shift~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

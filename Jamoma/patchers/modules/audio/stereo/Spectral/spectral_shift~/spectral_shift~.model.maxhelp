@@ -320,7 +320,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "spectralShift~.model" ],
+					"jsarguments" : [ "spectral_shift~.model" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -388,7 +388,7 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"args" : [ "@name", "spectralShift~.model", "@description", "4 in 1 kinderegg: Pitch shift, frequency shift, feedback delay and limiter" ],
+									"args" : [ "@name", "spectral_shift~.model", "@description", "4 in 1 kinderegg: Pitch shift, frequency shift, feedback delay and limiter" ],
 									"bgmode" : 1,
 									"id" : "obj-3",
 									"maxclass" : "bpatcher",
@@ -431,7 +431,7 @@
 								"box" : 								{
 									"id" : "obj-2",
 									"maxclass" : "bpatcher",
-									"name" : "spectralShift~.module.maxpat",
+									"name" : "spectral_shift~.module.maxpat",
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "signal", "signal" ],
@@ -562,22 +562,22 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "spectralShift~.module.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectralShift~",
+				"name" : "spectral_shift~.module.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectral_shift~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "spectralShift~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectralShift~",
+				"name" : "spectral_shift~.model.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectral_shift~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.spectralShiftVoice~.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectralShift~",
+				"name" : "j.spectral_shiftVoice~.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectral_shift~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -597,8 +597,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "spectralShift~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectralShift~",
+				"name" : "spectral_shift~.view.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/spectral_shift~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
