@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 101.0, 81.0, 1163.0, 684.0 ],
+		"rect" : [ 101.0, 81.0, 985.0, 505.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -37,8 +37,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 550.0, 520.0, 115.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"patching_rect" : [ 331.0, 299.0, 127.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R"
 				}
 
 			}
@@ -51,8 +51,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 550.0, 475.0, 115.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"patching_rect" : [ 185.0, 299.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.L"
 				}
 
 			}
@@ -64,9 +64,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 550.0, 545.0, 4.0, 80.0 ],
+					"patching_rect" : [ 338.5, 327.0, 4.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 290.555542, 25.0, 4.0, 38.0 ]
+					"presentation_rect" : [ 288.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -78,9 +78,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 550.0, 500.0, 4.0, 80.0 ],
+					"patching_rect" : [ 185.0, 319.0, 4.0, 80.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 286.0, 25.0, 4.0, 38.0 ]
+					"presentation_rect" : [ 281.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -97,7 +97,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 245.0, 173.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 45.0, 126.0, 18.0 ],
+					"presentation_rect" : [ 10.0, 47.0, 126.0, 18.0 ],
 					"text" : "Decay response",
 					"textpos" : [ 10.0, 3.0 ]
 				}
@@ -134,7 +134,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 65.0, 172.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 155.0, 25.0, 125.0, 18.0 ],
+					"presentation_rect" : [ 147.0, 25.0, 125.0, 18.0 ],
 					"range" : [ -48.0, 18.0 ],
 					"text" : "Threshold",
 					"textpos" : [ 10.0, 3.0 ],
@@ -156,7 +156,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 550.0, 345.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 155.0, 45.0, 115.0, 18.0 ],
+					"presentation_rect" : [ 147.0, 47.0, 125.0, 18.0 ],
 					"text" : "Invert Off",
 					"texton" : "Invert On"
 				}
@@ -228,7 +228,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 550.0, 575.0, 400.0, 33.0 ],
+					"patching_rect" : [ 550.0, 432.0, 400.0, 33.0 ],
 					"text" : "Credits: This module is based on the plugin Brita that was part of the now discontinued Hipno, a set of Pluggo plugins developed by Electrotap"
 				}
 
@@ -242,7 +242,7 @@
 					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/spectralGate~"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -395,6 +395,27 @@
 					"source" : [ "obj-69", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.textslider.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
