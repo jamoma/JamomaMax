@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 480.0, 102.0, 823.0, 651.0 ],
+		"rect" : [ 480.0, 102.0, 767.0, 435.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -97,7 +97,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 480.0, 128.0, 823.0, 625.0 ],
+						"rect" : [ 480.0, 128.0, 767.0, 409.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -126,7 +126,7 @@
 									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 823.0, 70.0 ],
+									"patching_rect" : [ 0.0, 0.0, 767.0, 70.0 ],
 									"prototypename" : "bphelp",
 									"varname" : "maxhelpui[1]"
 								}
@@ -141,8 +141,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 374.0, 501.0, 186.0, 19.0 ],
-									"text" : "jit.window gridshape_help_context"
+									"patching_rect" : [ 27.0, 190.0, 142.0, 19.0 ],
+									"text" : "jit.window gridshape_help"
 								}
 
 							}
@@ -155,7 +155,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 374.0, 413.0, 117.0, 19.0 ],
+									"patching_rect" : [ 27.0, 116.0, 117.0, 19.0 ],
 									"text" : "qmetro 20 @active 1"
 								}
 
@@ -169,7 +169,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "erase", "" ],
-									"patching_rect" : [ 374.0, 440.0, 124.5, 19.0 ],
+									"patching_rect" : [ 27.0, 140.0, 70.0, 19.0 ],
 									"text" : "t b erase l"
 								}
 
@@ -183,8 +183,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 374.0, 475.0, 70.0, 19.0 ],
-									"text" : "jit.gl.render"
+									"patching_rect" : [ 27.0, 168.0, 150.0, 19.0 ],
+									"text" : "jit.gl.render gridshape_help"
 								}
 
 							}
@@ -199,7 +199,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 366.0, 260.0, 187.0, 19.0 ],
+									"patching_rect" : [ 27.0, 226.0, 187.0, 19.0 ],
 									"text" : "gl_gridshape.model gl_gridshape"
 								}
 
@@ -229,7 +229,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 398.0, 94.0, 142.0, 20.0 ],
+									"patching_rect" : [ 401.0, 95.0, 142.0, 20.0 ],
 									"text" : "save a preset for this tab"
 								}
 
@@ -242,7 +242,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 374.0, 94.0, 20.0, 20.0 ]
+									"patching_rect" : [ 377.0, 95.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -256,7 +256,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 374.0, 124.0, 80.0, 20.0 ],
+									"patching_rect" : [ 377.0, 125.0, 80.0, 20.0 ],
 									"text" : "j.helpHelper"
 								}
 
@@ -267,16 +267,18 @@
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-15",
+									"linecount" : 5,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 608.0, 523.0, 150.0, 20.0 ],
-									"text" : "this is a nice story"
+									"patching_rect" : [ 377.0, 260.0, 311.0, 74.0 ],
+									"text" : "Creates one of several simple shapes (sphere, torus, cylinder, opencyclinder, cube, opencube, plane, circle) laid out on a connected grid. These shapes may be either rendered directly, or sent out the leftmost outlet as a matrix of values."
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"fontface" : 2,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
@@ -284,7 +286,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 430.0, 154.0, 150.0, 20.0 ],
+									"patching_rect" : [ 426.0, 155.0, 150.0, 20.0 ],
 									"text" : "one model to rule them all"
 								}
 
@@ -298,8 +300,23 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 374.0, 154.0, 49.0, 20.0 ],
+									"patching_rect" : [ 377.0, 155.0, 49.0, 20.0 ],
 									"text" : "j.model"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"attr" : "active",
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-2",
+									"maxclass" : "attrui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 27.0, 92.0, 80.0, 20.0 ],
+									"text_width" : 56.0
 								}
 
 							}
@@ -324,6 +341,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
@@ -336,7 +362,7 @@
 									"destination" : [ "obj-11", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 436.25, 471.0, 383.5, 471.0 ],
+									"midpoints" : [ 62.0, 164.0, 36.5, 164.0 ],
 									"source" : [ "obj-7", 1 ]
 								}
 
@@ -389,7 +415,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 823.0, 625.0 ],
+						"rect" : [ 0.0, 26.0, 767.0, 409.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,

@@ -1,5 +1,5 @@
 
-- preset gridshape
+- preset "gridshape"
 - description "something about this preset"
 # ###########################################
 # 
@@ -13,18 +13,18 @@ gl_gridshape/GL/material/automatic 1
 gl_gridshape/data/bypass 0
 gl_gridshape/cache_mode vertexarray
 gl_gridshape/GL/depth/clear 0
-gl_gridshape/GL/render/context gridshape_help_context
+gl_gridshape/GL/render/context gridshape_help
 gl_gridshape/GL/material/light/diffuse 0.000000 0.000000 0.000000 0.000000
 gl_gridshape/dim 20 20
 gl_gridshape/GL/material/light/emission 0.000000 0.000000 0.000000 0.000000
-gl_gridshape/GL/render/enable 1
+gl_gridshape/GL/depth/enable 1
 gl_gridshape/GL/blend/enable 0
 gl_gridshape/GL/material/light/enable 1
-gl_gridshape/GL/depth/enable 1
+gl_gridshape/GL/render/enable 1
 gl_gridshape/gridmode 0
-gl_gridshape/GL/material/inherit 0
-gl_gridshape/GL/depth/inherit 0
 gl_gridshape/GL/color/inherit 0
+gl_gridshape/GL/depth/inherit 0
+gl_gridshape/GL/material/inherit 0
 gl_gridshape/GL/render/layer 0
 gl_gridshape/matrixoutput 0
 gl_gridshape/GL/blend/mode 6 7
