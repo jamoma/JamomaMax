@@ -66,7 +66,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 433.999969, 87.0, 100.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 205.0, 45.0, 63.0, 15.0 ],
+					"presentation_rect" : [ 223.0, 45.0, 63.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.menu[2]",
@@ -91,7 +91,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 433.999969, 22.0, 100.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 205.0, 27.75, 63.0, 15.0 ],
+					"presentation_rect" : [ 223.0, 27.75, 63.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.menu[1]",
@@ -174,7 +174,7 @@
 					"outlettype" : [ "list" ],
 					"patching_rect" : [ 277.5, 401.0, 13.0, 84.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 288.0, 24.0, 5.0, 40.0 ]
+					"presentation_rect" : [ 14.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -188,7 +188,7 @@
 					"outlettype" : [ "list" ],
 					"patching_rect" : [ 140.5, 401.0, 13.0, 84.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 281.0, 24.0, 5.0, 40.0 ]
+					"presentation_rect" : [ 7.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
@@ -234,7 +234,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 433.999969, 152.0, 63.0, 21.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 12.25, 31.75, 70.0, 24.5 ],
+					"presentation_rect" : [ 38.25, 31.75, 70.0, 24.5 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.text[2]",
@@ -365,7 +365,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 496.333252, 550.0, 18.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 142.0, 32.75, 18.0, 20.0 ],
+					"presentation_rect" : [ 164.0, 32.75, 18.0, 20.0 ],
 					"text" : ":",
 					"varname" : "sep2_disp"
 				}
@@ -384,7 +384,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 435.0, 550.0, 18.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 122.0, 32.75, 18.0, 20.0 ],
+					"presentation_rect" : [ 144.0, 32.75, 18.0, 20.0 ],
 					"text" : ":",
 					"varname" : "sep1_disp"
 				}
@@ -407,7 +407,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 514.333252, 550.0, 31.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 147.333313, 32.75, 23.0, 20.0 ],
+					"presentation_rect" : [ 169.333313, 32.75, 23.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "s_disp"
@@ -431,7 +431,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 458.333374, 550.0, 31.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 129.333344, 32.75, 23.0, 20.0 ],
+					"presentation_rect" : [ 151.333344, 32.75, 23.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "min_disp"
@@ -455,7 +455,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 401.0, 550.0, 31.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 108.0, 32.75, 23.0, 20.0 ],
+					"presentation_rect" : [ 130.0, 32.75, 23.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "h_disp"
@@ -778,7 +778,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 1.0, 0.0, 300.0, 70.0 ],
 					"text" : "/no_model_address"
 				}
 
