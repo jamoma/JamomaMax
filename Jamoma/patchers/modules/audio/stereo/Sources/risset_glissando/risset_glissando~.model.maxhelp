@@ -311,7 +311,7 @@
 					"filename" : "helpname.js",
 					"id" : "obj-4",
 					"ignoreclick" : 1,
-					"jsarguments" : [ "rissetGlissando~.model" ],
+					"jsarguments" : [ "risset_glissando~.model" ],
 					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -379,7 +379,7 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"args" : [ "@name", "rissetGlissando~.model", "@description", "Audio synthesis generating Shepard/Risset infinite glissandi" ],
+									"args" : [ "@name", "risset_glissando~.model", "@description", "Audio synthesis generating Shepard/Risset infinite glissandi" ],
 									"bgmode" : 1,
 									"id" : "obj-1",
 									"maxclass" : "bpatcher",
@@ -410,7 +410,7 @@
 									"id" : "obj-9",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "rissetGlissando~.module.maxpat",
+									"name" : "risset_glissando~.module.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
@@ -541,22 +541,22 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "rissetGlissando~.module.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/rissetGlissando",
+				"name" : "risset_glissando~.module.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/risset_glissando",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "rissetGlissando~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/rissetGlissando",
+				"name" : "risset_glissando~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/risset_glissando",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "rissetGlissando~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/rissetGlissando",
+				"name" : "risset_glissando~.view.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/risset_glissando",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

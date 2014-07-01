@@ -45,7 +45,7 @@
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "rissetGlissando~.view.maxpat",
+					"name" : "risset_glissando~.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -66,7 +66,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 37.0, 202.0, 175.0, 20.0 ],
-					"text" : "rissetGlissando~.model #1"
+					"text" : "risset_glissando~.model #1"
 				}
 
 			}
@@ -134,15 +134,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "rissetGlissando~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/rissetGlissando",
+				"name" : "risset_glissando~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/risset_glissando",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "rissetGlissando~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/rissetGlissando",
+				"name" : "risset_glissando~.view.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/risset_glissando",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
