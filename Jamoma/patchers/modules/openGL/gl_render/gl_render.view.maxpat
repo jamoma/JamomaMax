@@ -32,6 +32,34 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
+					"id" : "obj-18",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 43.0, 175.0, 89.0, 29.0 ],
+					"text" : "model:address /gl_render"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 0.0, 112.0, 110.0, 19.0 ],
+					"text" : "j.gl_group.panel GL"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-13",
 					"maxclass" : "comment",
@@ -94,6 +122,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "active handling manipulation",
 					"id" : "obj-11",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -139,6 +168,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "active fps return",
 					"id" : "obj-8",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -184,6 +214,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"fontname" : "Verdana",
 					"fontsize" : 12.0,
 					"id" : "obj-4",
@@ -232,6 +263,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "the framerate you want",
 					"fontname" : "Verdana",
 					"fontsize" : 12.0,
 					"id" : "obj-3",
@@ -310,7 +342,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
-					"text" : "/no_model_address"
+					"text" : "/gl_render"
 				}
 
 			}
@@ -348,6 +380,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-57", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-18", 0 ]
 				}
 
 			}
@@ -398,6 +439,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-66", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -416,6 +466,27 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "j.gl_group.panel.maxpat",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../components/openGL/gl_group",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.gl_group.view.maxpat",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../components/openGL/gl_group",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.list2parameter.maxpat",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"patcherrelativepath" : "../../../components/data/list2parameter",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
@@ -429,6 +500,14 @@
 			}
 , 			{
 				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.dataspace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
  ]
