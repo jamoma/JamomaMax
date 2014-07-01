@@ -215,6 +215,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
