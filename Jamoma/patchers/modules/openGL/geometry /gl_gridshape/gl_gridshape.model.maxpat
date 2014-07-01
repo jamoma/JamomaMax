@@ -77,8 +77,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 112.0, 45.0, 154.0, 24.0 ],
-					"text" : "j.gl_group.model GL"
+					"patching_rect" : [ 112.0, 45.0, 131.0, 24.0 ],
+					"text" : "j.gl_group.model"
 				}
 
 			}
@@ -671,7 +671,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
 				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1

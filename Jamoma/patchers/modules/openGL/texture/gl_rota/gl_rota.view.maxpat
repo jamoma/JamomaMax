@@ -368,7 +368,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 235.0, 275.0, 116.0, 19.0 ],
+					"patching_rect" : [ 282.0, 275.0, 116.0, 19.0 ],
 					"text" : "j.remote boundmode",
 					"varname" : "boundmode"
 				}
@@ -379,15 +379,16 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-14",
-					"items" : [ "wrap", ",", "mirror", ",", "clamp", ",", "clear" ],
+					"items" : [ "clear", ",", "alpha", ",", "wrap", ",", "clip", ",", "fold" ],
+					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 176.0, 275.0, 50.0, 19.0 ],
+					"patching_rect" : [ 176.0, 275.0, 100.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 225.0, 82.0, 69.0, 19.0 ],
+					"presentation_rect" : [ 225.0, 82.0, 68.0, 19.0 ],
 					"varname" : "BOUNDMODE"
 				}
 

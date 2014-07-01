@@ -40,14 +40,16 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
+					"color" : [ 0.427451, 0.427451, 0.427451, 1.0 ],
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"id" : "obj-21",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 56.0, 246.0, 154.0, 20.0 ],
+					"patching_rect" : [ 56.0, 227.5, 82.0, 31.0 ],
 					"text" : "j.out 1 @type jit_gl_texture"
 				}
 

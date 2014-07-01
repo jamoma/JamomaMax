@@ -153,8 +153,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 102.0, 42.0, 154.0, 24.0 ],
-					"text" : "j.gl_group.model GL"
+					"patching_rect" : [ 102.0, 42.0, 131.0, 24.0 ],
+					"text" : "j.gl_group.model"
 				}
 
 			}
