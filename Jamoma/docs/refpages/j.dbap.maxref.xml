@@ -112,13 +112,11 @@
       </description>
     </method>
     <method name='blurall'>
-      <digest>
-        The <m>blurall<m> message with a decimal argument can be used to set <m>@blur</m>
-        factor for all sources.
-      </digest>
+		<digest>
+        The <m>blurall</m> message with a decimal argument can be used to set <m>@blur</m> factor for all sources.
+		</digest>
       <description>
-        The <m>blurall<m> message with a decimal argument can be used to set <m>@blur</m>
-        factor for all sources.
+        The <m>blurall</m> message with a decimal argument can be used to set <m>@blur</m> factor for all sources.
       </description>
     </method>
     <method name='dst_position'>
