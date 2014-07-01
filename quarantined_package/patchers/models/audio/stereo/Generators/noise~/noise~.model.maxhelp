@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
-			"architecture" : "x86"
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 29.0, 69.0, 869.0, 635.0 ],
+		"rect" : [ 100.0, 100.0, 869.0, 635.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,15 +29,16 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "/nnnnnoiseeee" ],
+					"annotation" : "none",
+					"args" : [ "noise" ],
 					"id" : "obj-5",
 					"maxclass" : "bpatcher",
 					"name" : "noise~.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 85.0, 115.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
+					"patching_rect" : [ 85.0, 115.0, 150.0, 70.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ]
 				}
 
 			}
@@ -62,11 +63,11 @@
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "output~.module.maxpat",
-					"numinlets" : 3,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 110.0, 435.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 15.0, 15.0, 300.0, 140.0 ],
+					"patching_rect" : [ 110.0, 435.0, 300.0, 175.0 ],
+					"presentation_rect" : [ 15.0, 15.0, 300.0, 175.0 ],
 					"varname" : "/output~"
 				}
 
@@ -316,11 +317,11 @@
 					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
+					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 110.0, 275.0, 159.0, 21.0 ],
-					"text" : "noise~.model /nnnnnoiseeee"
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 110.0, 275.0, 111.0, 21.0 ],
+					"text" : "noise~.model noise"
 				}
 
 			}
@@ -444,131 +445,147 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-4::obj-1::obj-100" : [ "live.text[2]", "live.text[1]", 0 ],
+			"obj-4::obj-1::obj-82" : [ "pan", "Pan", 0 ],
+			"obj-4::obj-1::obj-90" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-4::obj-1::obj-108" : [ "live.text[4]", "live.text[4]", 0 ],
+			"obj-4::obj-1::obj-98" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-4::obj-1::obj-97" : [ "live.numbox", "CPU", 0 ],
+			"obj-4::obj-1::obj-53" : [ "Master Gain", "Master Gain", 0 ],
+			"obj-4::obj-1::obj-102" : [ "live.text", "live.text", 0 ],
+			"obj-4::obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
+			"obj-5::obj-2" : [ "live.menu", "live.menu", 0 ],
+			"obj-4::obj-1::obj-104" : [ "live.dial[1]", "Depth", 0 ],
+			"obj-4::obj-1::obj-99" : [ "live.menu[2]", "live.menu[2]", 0 ],
+			"obj-4::obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
+			"obj-4::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-4::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-4::obj-1::obj-103" : [ "live.text[3]", "live.text", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "windowed-fft~.maxpat",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/msp-help",
-				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/Cycling '74/msp-help",
+				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 6.1/Cycling '74/msp-help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.module.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
-				"patcherrelativepath" : "../output~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"patcherrelativepath" : "../../Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
-				"patcherrelativepath" : "../output~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"patcherrelativepath" : "../../Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "saturation~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/saturation~",
-				"patcherrelativepath" : "../saturation~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
+				"patcherrelativepath" : "../../Distortion/saturation~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../limiter~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../limiter~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
-				"patcherrelativepath" : "../balance~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"patcherrelativepath" : "../../Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
-				"patcherrelativepath" : "../record~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"patcherrelativepath" : "../../Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
-				"patcherrelativepath" : "../record~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"patcherrelativepath" : "../../Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../../components/thru",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
-				"patcherrelativepath" : "../output~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"patcherrelativepath" : "../../Output/output~",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../javascript",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "",
 				"bootpath" : "/",
-				"patcherrelativepath" : "../../../../../../../../../../..",
+				"patcherrelativepath" : "../../../../../../../../../../../../../..",
 				"type" : "fold",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../../components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../../components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../../components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
-				"patcherrelativepath" : "../../../components/jamomaPath",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"patcherrelativepath" : "../../../../../components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "noise~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/noise~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/noise~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "noise~.model.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.send.mxo",
@@ -623,19 +640,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{

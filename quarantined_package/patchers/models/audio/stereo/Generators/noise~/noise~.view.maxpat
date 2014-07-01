@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 175.0, 136.0, 1154.0, 521.0 ],
+		"rect" : [ 153.0, 136.0, 764.0, 556.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -31,27 +31,96 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-4",
+					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 335.0, 128.0, 82.0, 20.0 ],
-					"text" : "j.receive~ out"
+					"patching_rect" : [ 517.75, 34.5, 127.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "", "" ],
+					"patching_rect" : [ 352.25, 34.5, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.L"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "amplitude of output signal 2",
+					"id" : "obj-7",
+					"ignoreclick" : 1,
+					"maxclass" : "live.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 517.75, 64.5, 18.0, 59.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 141.0, 24.0, 5.0, 40.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"annotation" : "amplitude of output signal 1",
-					"id" : "obj-3",
+					"id" : "obj-8",
+					"ignoreclick" : 1,
 					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 335.0, 157.0, 4.0, 80.0 ],
+					"patching_rect" : [ 352.25, 64.5, 18.0, 59.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 292.0, 20.5, 4.0, 47.0 ]
+					"presentation_rect" : [ 134.0, 24.0, 5.0, 40.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 150.0, 192.0, 112.0, 20.0 ],
+					"text" : "prepend setsymbol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "live.menu",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 150.0, 231.0, 100.0, 15.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 10.0, 36.5, 100.0, 15.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "live.menu",
+							"parameter_shortname" : "live.menu",
+							"parameter_type" : 2,
+							"parameter_enum" : [ "white", "pink" ]
+						}
+
+					}
+,
+					"varname" : "live.menu"
 				}
 
 			}
@@ -64,43 +133,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 85.0, 85.0, 110.0, 20.0 ],
+					"patching_rect" : [ 150.0, 264.0, 110.0, 20.0 ],
 					"text" : "j.remote mode",
 					"varname" : "feedback[2]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "Feedback mode. 'pingpong': crossed-over feedback between the two delays. 'stereo': two mono delay lines each with independent feedback paths.'pingleft' and 'pingright' feed the left or the right delay outputs back.",
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-1",
-					"items" : [ "stereo", ",", "pingpong", ",", "pingright", ",", "pingleft" ],
-					"maxclass" : "umenu",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "int", "", "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 85.0, 36.0, 100.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 85.0, 35.0, 115.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-32",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 35.0, 50.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 35.0, 35.0, 50.0, 20.0 ],
-					"text" : "mode"
 				}
 
 			}
@@ -150,8 +185,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
+					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"text" : "/no_model_address"
 				}
 
@@ -159,20 +195,28 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 1 ]
+					"source" : [ "obj-12", 2 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 94.5, 123.0, 76.5, 123.0, 76.5, 26.0, 94.5, 26.0 ],
-					"source" : [ "obj-12", 0 ]
+					"source" : [ "obj-12", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -196,14 +240,36 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
  ],
+		"parameters" : 		{
+			"obj-2" : [ "live.menu", "live.menu", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
