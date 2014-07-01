@@ -32,6 +32,20 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 635.0, 509.0, 100.0, 19.0 ],
+					"text" : "jit.qt.movie"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"id" : "obj-24",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -249,7 +263,9 @@
 					"patching_rect" : [ 676.695923, 295.443268, 52.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 234.257431, 60.0, 60.441391, 19.0 ],
-					"setminmax" : [ -5.0, 5.0 ]
+					"setminmax" : [ 0.0, 2.0 ],
+					"setstyle" : 1,
+					"signed" : 1
 				}
 
 			}
