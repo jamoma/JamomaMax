@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x86"
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 752.0, 44.0, 461.0, 289.0 ],
@@ -104,8 +104,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 102.0, 174.0, 50.0, 20.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 98.0, 174.0, 52.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -118,8 +118,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 37.5, 174.0, 50.0, 20.0 ],
-					"text" : "j.out~ 1"
+					"patching_rect" : [ 33.5, 174.0, 50.0, 20.0 ],
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -138,7 +138,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x86"
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 443.0, 288.0, 907.0, 688.0 ],
@@ -233,7 +233,7 @@
 											"major" : 6,
 											"minor" : 1,
 											"revision" : 7,
-											"architecture" : "x86"
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 480.0, 128.0, 422.0, 407.0 ],
@@ -762,7 +762,7 @@
 											"major" : 6,
 											"minor" : 1,
 											"revision" : 7,
-											"architecture" : "x86"
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 68.0, 50.0, 1041.0, 764.0 ],
@@ -894,7 +894,7 @@
 															"major" : 6,
 															"minor" : 1,
 															"revision" : 7,
-															"architecture" : "x86"
+															"architecture" : "x64"
 														}
 ,
 														"rect" : [ 50.0, 94.0, 416.0, 330.0 ],
@@ -1203,7 +1203,7 @@
 															"major" : 6,
 															"minor" : 1,
 															"revision" : 7,
-															"architecture" : "x86"
+															"architecture" : "x64"
 														}
 ,
 														"rect" : [ 448.0, 77.0, 832.0, 519.0 ],
@@ -1962,7 +1962,7 @@
 											"major" : 6,
 											"minor" : 1,
 											"revision" : 7,
-											"architecture" : "x86"
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 44.0, 59.0, 692.0, 483.0 ],
@@ -2302,7 +2302,7 @@
 											"major" : 6,
 											"minor" : 1,
 											"revision" : 7,
-											"architecture" : "x86"
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 141.0, 153.0, 309.0, 396.0 ],
@@ -2478,7 +2478,7 @@
 											"major" : 6,
 											"minor" : 1,
 											"revision" : 7,
-											"architecture" : "x86"
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 40.0, 59.0, 344.0, 297.0 ],
@@ -2977,7 +2977,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 33.5, 31.0, 104.0, 20.0 ],
+					"patching_rect" : [ 33.5, 31.0, 148.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3004,7 +3004,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 37.5, 239.0, 107.0, 20.0 ],
+					"patching_rect" : [ 33.5, 241.0, 107.0, 20.0 ],
 					"text" : "---signal outputs---"
 				}
 
@@ -3016,7 +3016,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 102.0, 210.0, 25.0, 25.0 ]
+					"patching_rect" : [ 98.0, 210.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -3027,7 +3027,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 37.5, 210.0, 25.0, 25.0 ]
+					"patching_rect" : [ 33.5, 210.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -3103,6 +3103,49 @@
 					"source" : [ "obj-91", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "balance~.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"patcherrelativepath" : "../../Imaging/balance~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.dataspace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.panorama~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
