@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 26.0, 62.0, 321.0, 442.0 ],
+		"rect" : [ 26.0, 62.0, 275.0, 384.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -606,7 +606,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 27.0, 51.0, 949.0, 945.0 ],
+						"rect" : [ 854.0, 44.0, 949.0, 945.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -629,12 +629,42 @@
 								"box" : 								{
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 212.0, 900.5, 138.0, 19.0 ],
+									"text" : "prepend smooth_shading"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 212.0, 874.5, 541.0, 19.0 ],
+									"text" : "j.parameter smooth_shading @type boolean @description \"enable Smooth Shading.\" @default 0",
+									"varname" : "render/antialias[7]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
 									"id" : "obj-27",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 901.5, 105.0, 19.0 ],
+									"patching_rect" : [ 212.0, 842.5, 105.0, 19.0 ],
 									"text" : "prepend viewalign"
 								}
 
@@ -649,7 +679,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 212.0, 882.5, 505.0, 19.0 ],
+									"patching_rect" : [ 212.0, 823.5, 505.0, 19.0 ],
 									"text" : "j.parameter viewalign @type boolean @description \"View aligned transformation flag.\" @default 0",
 									"varname" : "render/antialias[6]"
 								}
@@ -664,7 +694,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 199.0, 859.0, 136.0, 19.0 ],
+									"patching_rect" : [ 199.0, 800.0, 136.0, 19.0 ],
 									"text" : "prepend transform_reset"
 								}
 
@@ -679,7 +709,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 199.0, 840.0, 621.0, 19.0 ],
+									"patching_rect" : [ 199.0, 781.0, 621.0, 19.0 ],
 									"text" : "j.parameter transform_reset @type integer @description \"Modelview and projection transform reset flag.\" @default 0",
 									"varname" : "render/context[4]"
 								}
@@ -694,7 +724,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 174.5, 808.0, 113.0, 19.0 ],
+									"patching_rect" : [ 174.5, 749.0, 113.0, 19.0 ],
 									"text" : "prepend shader"
 								}
 
@@ -709,7 +739,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 174.5, 789.0, 525.0, 19.0 ],
+									"patching_rect" : [ 174.5, 730.0, 525.0, 19.0 ],
 									"text" : "j.parameter shader @type string @description \"The name of the shader to be applied.\" @default none",
 									"varname" : "render/context[3]"
 								}
@@ -724,7 +754,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 685.0, 111.0, 19.0 ],
+									"patching_rect" : [ 158.5, 626.0, 111.0, 19.0 ],
 									"text" : "prepend poly_mode"
 								}
 
@@ -739,7 +769,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 665.0, 572.0, 19.0 ],
+									"patching_rect" : [ 158.5, 606.0, 572.0, 19.0 ],
 									"text" : "j.parameter poly_mode @type array @ramp/drive none @description \"Polygon rendering modes.\" @default 0 0",
 									"varname" : "render/antialias[5]"
 								}
@@ -754,7 +784,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 638.0, 105.0, 19.0 ],
+									"patching_rect" : [ 158.5, 579.0, 105.0, 19.0 ],
 									"text" : "prepend point_size"
 								}
 
@@ -769,7 +799,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 618.0, 463.0, 19.0 ],
+									"patching_rect" : [ 158.5, 559.0, 463.0, 19.0 ],
 									"text" : "j.parameter point_size @type decimal @description \"The draw point size.\" @default 1.",
 									"varname" : "render/antialias[4]"
 								}
@@ -784,7 +814,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 754.0, 121.0, 19.0 ],
+									"patching_rect" : [ 158.5, 695.0, 121.0, 19.0 ],
 									"text" : "prepend matrixoutput"
 								}
 
@@ -800,7 +830,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 715.0, 493.0, 31.0 ],
+									"patching_rect" : [ 158.5, 656.0, 493.0, 31.0 ],
 									"text" : "j.parameter matrixoutput @type integer @range 0 2 @clipmode both @ramp/drive none @description \"Matrix output mode.\" @default 0",
 									"varname" : "render/layer[1]"
 								}
@@ -815,7 +845,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 133.5, 407.0, 113.0, 19.0 ],
+									"patching_rect" : [ 133.5, 348.0, 113.0, 19.0 ],
 									"text" : "prepend capture"
 								}
 
@@ -830,7 +860,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 133.5, 388.0, 468.0, 19.0 ],
+									"patching_rect" : [ 133.5, 329.0, 468.0, 19.0 ],
 									"text" : "j.parameter capture @type string @description \"The name of a texture to be rendered to \"",
 									"varname" : "render/context[1]"
 								}
@@ -845,7 +875,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 588.0, 105.0, 19.0 ],
+									"patching_rect" : [ 158.5, 529.0, 105.0, 19.0 ],
 									"text" : "prepend line_width"
 								}
 
@@ -860,7 +890,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 568.0, 463.0, 19.0 ],
+									"patching_rect" : [ 158.5, 509.0, 463.0, 19.0 ],
 									"text" : "j.parameter line_width @type decimal @description \"The drawing line width.\" @default 1.",
 									"varname" : "render/antialias[3]"
 								}
@@ -875,7 +905,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 535.0, 105.0, 19.0 ],
+									"patching_rect" : [ 158.5, 476.0, 105.0, 19.0 ],
 									"text" : "prepend inherit_all"
 								}
 
@@ -891,7 +921,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 504.0, 695.0, 31.0 ],
+									"patching_rect" : [ 158.5, 445.0, 695.0, 31.0 ],
 									"text" : "j.parameter inherit_all @type boolean @description \"When the flag is set, all GL attributes from named drawing context are inherited.\" @default 0",
 									"varname" : "render/antialias[2]"
 								}
@@ -906,7 +936,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 462.5, 113.0, 19.0 ],
+									"patching_rect" : [ 158.5, 403.5, 113.0, 19.0 ],
 									"text" : "prepend cull_face"
 								}
 
@@ -921,7 +951,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 443.5, 421.0, 19.0 ],
+									"patching_rect" : [ 158.5, 384.5, 421.0, 19.0 ],
 									"text" : "j.parameter cull_face @type integer @description \"Face culling mode\" @default 0",
 									"varname" : "render/context[2]"
 								}
@@ -936,7 +966,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 115.0, 356.0, 105.0, 19.0 ],
+									"patching_rect" : [ 115.0, 297.0, 105.0, 19.0 ],
 									"text" : "prepend axes"
 								}
 
@@ -951,7 +981,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 115.0, 337.0, 449.0, 19.0 ],
+									"patching_rect" : [ 115.0, 278.0, 449.0, 19.0 ],
 									"text" : "j.parameter axes @type boolean @description \"x/y/z axis rendering off/on\" @default 0",
 									"varname" : "render/antialias[1]"
 								}
@@ -966,7 +996,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 61.0, 194.0, 105.0, 19.0 ],
+									"patching_rect" : [ 61.0, 135.0, 105.0, 19.0 ],
 									"text" : "prepend antialias"
 								}
 
@@ -980,7 +1010,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 78.0, 255.0, 105.0, 19.0 ],
+									"patching_rect" : [ 78.0, 196.0, 105.0, 19.0 ],
 									"text" : "prepend layer"
 								}
 
@@ -994,7 +1024,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 40.5, 148.0, 105.0, 19.0 ],
+									"patching_rect" : [ 40.5, 89.0, 105.0, 19.0 ],
 									"text" : "prepend enable"
 								}
 
@@ -1008,7 +1038,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 20.0, 103.0, 105.0, 19.0 ],
+									"patching_rect" : [ 20.0, 44.0, 105.0, 19.0 ],
 									"text" : "prepend automatic"
 								}
 
@@ -1022,7 +1052,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 98.5, 304.5, 113.0, 19.0 ],
+									"patching_rect" : [ 98.5, 245.5, 113.0, 19.0 ],
 									"text" : "prepend drawto"
 								}
 
@@ -1038,7 +1068,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 78.0, 224.0, 851.0, 31.0 ],
+									"patching_rect" : [ 78.0, 165.0, 851.0, 31.0 ],
 									"text" : "j.parameter layer @type integer @range 0 255 @clipmode low @ramp/drive none @description \"Object layer number. Only valid when /render/automatic is enabled.\" @default 0",
 									"varname" : "render/layer"
 								}
@@ -1054,7 +1084,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 98.5, 285.5, 601.0, 19.0 ],
+									"patching_rect" : [ 98.5, 226.5, 601.0, 19.0 ],
 									"text" : "j.parameter context @type string @description \"The named drawing context in which to draw.\" @default my_context",
 									"varname" : "render/context"
 								}
@@ -1070,7 +1100,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 40.5, 129.0, 410.0, 19.0 ],
+									"patching_rect" : [ 40.5, 70.0, 410.0, 19.0 ],
 									"text" : "j.parameter enable @type boolean @description \"Enable drawing.\" @default 1",
 									"varname" : "render/enable"
 								}
@@ -1086,7 +1116,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 84.0, 475.0, 19.0 ],
+									"patching_rect" : [ 20.0, 25.0, 475.0, 19.0 ],
 									"text" : "j.parameter automatic @type boolean @description \"Automatic rendering flag.\" @default 1",
 									"varname" : "render/automatic"
 								}
@@ -1102,7 +1132,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 61.0, 175.0, 403.0, 19.0 ],
+									"patching_rect" : [ 61.0, 116.0, 403.0, 19.0 ],
 									"text" : "j.parameter antialias @type boolean @description \"Aliasing flag.\" @default 0",
 									"varname" : "render/antialias"
 								}
@@ -1115,7 +1145,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 31.0, 876.5, 25.0, 25.0 ],
+									"patching_rect" : [ 20.0, 921.5, 25.0, 25.0 ],
 									"varname" : "u391007852"
 								}
 
@@ -1321,6 +1351,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-50", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1334,6 +1373,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-41", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-5", 0 ]
 								}
 
 							}
@@ -3180,6 +3228,11 @@
 					"source" : [ "obj-6", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
