@@ -36,8 +36,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 397.5, 224.0, 262.0, 18.0 ],
-					"text" : "address /a_story/gl_gridshape(view)/ui:highlight"
+					"patching_rect" : [ 397.5, 224.0, 316.0, 18.0 ],
+					"text" : "address /videoplane_help/gl_videoplane(view)/ui:highlight"
 				}
 
 			}
@@ -73,8 +73,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 184.5, 358.0, 105.0, 18.0 ],
-					"text" : "preset a_story"
+					"patching_rect" : [ 184.5, 358.0, 133.0, 18.0 ],
+					"text" : "preset videoplane_help"
 				}
 
 			}
@@ -129,7 +129,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.5, 399.5, 104.0, 18.0 ],
+					"patching_rect" : [ 279.0, 382.0, 104.0, 18.0 ],
 					"text" : "preset:write/again"
 				}
 
@@ -174,8 +174,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 32.0, 274.0, 89.0, 18.0 ],
-					"text" : "a_story"
+					"patching_rect" : [ 32.0, 274.0, 97.0, 18.0 ],
+					"text" : "videoplane_help"
 				}
 
 			}
@@ -273,7 +273,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 658.0, 193.5, 112.0, 18.0 ],
-					"text" : "gl_gridshape"
+					"text" : "gl_videoplane"
 				}
 
 			}
@@ -488,7 +488,7 @@
 					"destination" : [ "obj-19", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 232.25, 146.0, 111.5, 146.0 ],
+					"midpoints" : [ 232.25, 146.0, 119.5, 146.0 ],
 					"source" : [ "obj-15", 1 ]
 				}
 
@@ -661,6 +661,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-34", 0 ]
 				}
 
 			}

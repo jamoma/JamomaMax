@@ -474,7 +474,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-220",
 					"maxclass" : "flonum",
-					"maximum" : 1.0,
 					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -484,8 +483,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 364.5, 296.5, 40.0, 19.0 ],
 					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "FogAmount[2]"
+					"triscale" : 0.9
 				}
 
 			}
@@ -575,7 +573,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-113",
 					"maxclass" : "flonum",
-					"maximum" : 1.0,
 					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -585,8 +582,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 364.5, 277.5, 40.0, 19.0 ],
 					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "FogAmount[1]"
+					"triscale" : 0.9
 				}
 
 			}
@@ -641,7 +637,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-103",
 					"maxclass" : "flonum",
-					"maximum" : 1.0,
 					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -681,7 +676,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-107",
 					"maxclass" : "flonum",
-					"maximum" : 1.0,
 					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -702,7 +696,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-108",
 					"maxclass" : "flonum",
-					"maximum" : 1.0,
 					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -817,7 +810,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-88",
 					"maxclass" : "flonum",
-					"maximum" : 1.0,
 					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -827,8 +819,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 365.0, 56.0, 40.0, 19.0 ],
 					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "AmbR[1]"
+					"triscale" : 0.9
 				}
 
 			}
@@ -846,8 +837,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 491.0, 56.0, 40.0, 19.0 ],
 					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "AmbA[1]"
+					"triscale" : 0.9
 				}
 
 			}
@@ -857,7 +847,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-90",
 					"maxclass" : "flonum",
-					"maximum" : 1.0,
 					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -867,8 +856,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 449.0, 56.0, 40.0, 19.0 ],
 					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "AmbB[1]"
+					"triscale" : 0.9
 				}
 
 			}
@@ -878,7 +866,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-91",
 					"maxclass" : "flonum",
-					"maximum" : 1.0,
 					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -888,8 +875,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 407.0, 56.0, 40.0, 19.0 ],
 					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "AmbG[1]"
+					"triscale" : 0.9
 				}
 
 			}
@@ -1532,7 +1518,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-16",
 					"maxclass" : "flonum",
-					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
@@ -1541,8 +1526,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 220.0, 84.0, 40.0, 19.0 ],
 					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "ScaleZ[1]"
+					"triscale" : 0.9
 				}
 
 			}
@@ -1552,7 +1536,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-17",
 					"maxclass" : "flonum",
-					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
@@ -1561,8 +1544,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 177.0, 84.0, 40.0, 19.0 ],
 					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "ScaleY[1]"
+					"triscale" : 0.9
 				}
 
 			}
@@ -1572,7 +1554,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-18",
 					"maxclass" : "flonum",
-					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
@@ -1581,8 +1562,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 136.0, 84.0, 40.0, 19.0 ],
 					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "ScaleX[1]"
+					"triscale" : 0.9
 				}
 
 			}
@@ -4010,7 +3990,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-207",
 					"maxclass" : "flonum",
-					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
@@ -4030,7 +4009,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-208",
 					"maxclass" : "flonum",
-					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
@@ -4050,7 +4028,6 @@
 					"fontsize" : 10.0,
 					"id" : "obj-209",
 					"maxclass" : "flonum",
-					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],

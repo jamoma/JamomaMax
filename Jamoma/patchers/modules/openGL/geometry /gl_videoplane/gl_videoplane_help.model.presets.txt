@@ -1,0 +1,136 @@
+
+- preset "videoplane_help"
+- description "something about this preset"
+# ###########################################
+# 
+input%/movie/loop/points 0 1000
+input%/movie/dim 640 480
+input%/movie/path wheel.mov
+input%/data/active 1
+videoplane/data/active 1
+videoplane.2/data/active 1
+input%/active 1
+videoplane/alpha 1.000000
+videoplane.2/alpha 1.000000
+videoplane/light/ambient 0.000000 0.000000 0.000000 0.000000
+videoplane.2/light/ambient 0.000000 0.000000 0.000000 0.000000
+videoplane/fog/amount 0.000000
+videoplane.2/fog/amount 0.000000
+videoplane/anchor 0.000000 0.000000 0.000000
+videoplane.2/anchor 0.000000 0.000000 0.000000
+videoplane.2/anim UID
+videoplane/anim UID
+videoplane/antialias 0
+videoplane.2/antialias 0
+videoplane/light/automatic 1
+videoplane/automatic 1
+videoplane.2/light/automatic 1
+videoplane.2/automatic 1
+videoplane/aux_alpha 1.000000
+videoplane.2/aux_alpha 1.000000
+videoplane/aux_color 1.000000 1.000000 1.000000
+videoplane.2/aux_color 1.000000 1.000000 1.000000
+videoplane/axes 0
+videoplane.2/axes 0
+input%/data/bypass 0
+videoplane/data/bypass 0
+videoplane.2/data/bypass 0
+videoplane/depth/clear 0
+videoplane.2/depth/clear 0
+videoplane/videoplane/client_storage 1
+videoplane.2/videoplane/client_storage 1
+videoplane/color 1.000000 1.000000 1.000000
+videoplane.2/color 1.000000 0.000000 0.000000
+videoplane/videoplane/colormode argb
+videoplane.2/videoplane/colormode argb
+videoplane/context videoplane_help
+videoplane.2/context videoplane_help
+videoplane/cull_face 0
+videoplane.2/cull_face 0
+videoplane/light/diffuse 0.000000 0.000000 0.000000 0.000000
+videoplane.2/light/diffuse 0.000000 0.000000 0.000000 0.000000
+videoplane.2/videoplane/dim 20 20
+input%/grab/dim 640 480
+input%/noise/dim 640 480
+input%/dim 640 480
+videoplane/videoplane/dim 20 20
+videoplane/videoplane/displaylist 0
+videoplane.2/videoplane/displaylist 0
+videoplane/light/emission 0.000000 0.000000 0.000000 0.000000
+videoplane.2/light/emission 0.000000 0.000000 0.000000 0.000000
+videoplane/light/enable 0
+videoplane/blend/enable 0
+videoplane/depth/enable 1
+videoplane/enable 1
+videoplane.2/light/enable 0
+videoplane.2/blend/enable 0
+videoplane.2/depth/enable 1
+videoplane.2/enable 1
+videoplane/filterclass default
+videoplane.2/filterclass default
+input%/fps 25
+videoplane/videoplane/gridmode 0
+videoplane.2/videoplane/gridmode 0
+videoplane/material/inherit 0
+videoplane/color/inherit 0
+videoplane/depth/inherit 0
+videoplane.2/material/inherit 0
+videoplane.2/color/inherit 0
+videoplane.2/depth/inherit 0
+videoplane/inherit_all 0
+videoplane.2/inherit_all 0
+videoplane/inherit_texture 0
+videoplane.2/inherit_texture 0
+videoplane/videoplane/interpolate 1
+videoplane.2/videoplane/interpolate 1
+videoplane/layer 0
+videoplane.2/layer 0
+videoplane/line_width 1.000000
+videoplane.2/line_width 0.000000
+videoplane/matrixoutput 0
+videoplane.2/matrixoutput 0
+videoplane/blend/mode 6 7
+videoplane.2/blend/mode 6.000000 7.000000
+videoplane/videoplane/nudge 0.010000
+videoplane.2/videoplane/nudge 0.010000
+videoplane.2/videoplane/texture/offset 0.000000 0.000000
+videoplane/videoplane/texture/offset 0.000000 0.000000
+videoplane/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+videoplane.2/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+videoplane/point_size 1.000000
+videoplane.2/point_size 3.400000
+videoplane.2/poly_mode 1.000000 2.000000
+videoplane/poly_mode 0 0
+videoplane/position 0.000000 0.000000 -1.090000
+videoplane.2/position 0.500000 -0.400000 0.000000
+videoplane/rotate 23.000000 18.000000 20.000000 -2.500000
+videoplane.2/rotate -33.000000 8.000000 51.000000 1.000000
+videoplane/scale 1.333300 1.000000 1.000000
+videoplane.2/videoplane/texture/scale 1.000000 1.000000
+videoplane/videoplane/texture/scale 1.000000 1.000000
+videoplane.2/scale 0.320000 0.230000 1.000000
+videoplane.2/shader none
+videoplane/shader none
+videoplane/shininess 10.000000
+videoplane.2/shininess 10.000000
+videoplane.2/smooth_shading 0
+videoplane/smooth_shading 0
+input%/source movie
+videoplane/light/specular 0.000000 0.000000 0.000000 0.000000
+videoplane.2/light/specular 0.000000 0.000000 0.000000 0.000000
+videoplane/tex_map 0
+videoplane.2/tex_map 0
+videoplane/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+videoplane.2/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+videoplane/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+videoplane.2/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+videoplane.2/texture none
+videoplane/texture none
+videoplane.2/transform_reset 0
+videoplane/transform_reset 0
+videoplane.2/viewalign 0
+videoplane/viewalign 0
+videoplane/depth/write 1
+videoplane.2/depth/write 1
+# 
+# ###########################################
