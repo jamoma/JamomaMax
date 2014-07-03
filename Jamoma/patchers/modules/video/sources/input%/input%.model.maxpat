@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 559.0, 97.0, 881.0, 305.0 ],
+		"rect" : [ 559.0, 97.0, 857.0, 328.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -795,11 +795,11 @@
 					"coll_data" : 					{
 						"count" : 3,
 						"data" : [ 							{
-								"key" : "grab",
+								"key" : "cam",
 								"value" : [ 1 ]
 							}
 , 							{
-								"key" : "movie",
+								"key" : "file",
 								"value" : [ 2 ]
 							}
 , 							{
@@ -892,7 +892,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 81.0, 47.0, 252.0, 20.0 ],
-					"text" : "j.parameter active @type boolean",
+					"text" : "j.parameter framemotor @type boolean",
 					"varname" : "synth/noise/on[2]"
 				}
 
@@ -908,8 +908,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 155.0, 73.0, 408.0, 33.0 ],
-					"text" : "j.parameter fps @type integer @range 0 120 @clipmode low @description \"frame rate desired\" @dataspace time @dataspace/unit ms",
+					"patching_rect" : [ 155.0, 73.0, 411.0, 33.0 ],
+					"text" : "j.parameter framemotor/fps @type integer @range 0 120 @clipmode low @description \"frame rate desired\" @dataspace time @dataspace/unit ms",
 					"varname" : "camera/camera[2]"
 				}
 
@@ -940,8 +940,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 13.0, 9.0, 606.0, 33.0 ],
-					"text" : "j.parameter source @type string @description \"Choose between 'grab', 'movie' , 'noise' as input\" @range grab movie noise",
+					"patching_rect" : [ 13.0, 9.0, 366.0, 33.0 ],
+					"text" : "j.parameter source @type string @description \"Choose between 'cam', 'movie' , 'noise' as video source\" @range cam file noise",
 					"varname" : "source_mode[1]"
 				}
 
@@ -1147,72 +1147,6 @@
 					"source" : [ "obj-7", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "noise%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
-				"patcherrelativepath" : "../noise%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "movie%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../movie%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "grab%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
-				"patcherrelativepath" : "../grab%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.namespace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscroute.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
