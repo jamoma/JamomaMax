@@ -5,19 +5,21 @@
 # 
 data/active 1
 data/bypass 0
-path countdown.mov
-rate 1
-adapt 0
-singlefield 1
-unique 1
-deinterlace 1
-highquality 1
-autostart 1
+framemotor 1
+framemotor/fps 25
 colormode argb
+direction normal
+loop/mode loop
+loop/points 0 240
+loop/report 0
+rate 1
+unique 1
 dim 640 480
-loop normal
-loop/notify 0
+adapt 0
 vol 1
-framedump 0
+highquality 1
+singlefield 1
+deinterlace 1
+path countdown.mov
 # 
 # ###########################################

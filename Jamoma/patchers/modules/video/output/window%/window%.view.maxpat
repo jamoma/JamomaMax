@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 272.0, 578.0, 655.0, 376.0 ],
+		"rect" : [ 272.0, 578.0, 655.0, 418.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -28,6 +28,86 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-56",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 183.0, 337.0, 39.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 265.0, 21.0, 39.0, 19.0 ],
+					"text" : "name"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-51",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 235.0, 375.0, 100.0, 19.0 ],
+					"text" : "route text"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "The name of the window. Jitter OpenGL objects attach to a rendering context through the window's name.",
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-47",
+					"keymode" : 1,
+					"lines" : 1,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 235.0, 337.0, 100.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 153.979446, 21.0, 115.0, 19.0 ],
+					"text" : "my_context"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-46",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 235.0, 308.9776, 94.0, 20.0 ],
+					"text" : "j.remote name"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-45",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 3.0, 84.0, 141.0, 17.0 ],
+					"text" : "model:address /window%"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Arial",
@@ -194,6 +274,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "ascii reference of the key that toggle fullscreen on/off",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-53",
@@ -202,9 +283,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 97.999939, 239.9776, 50.0, 19.0 ],
+					"patching_rect" : [ 92.999939, 263.982086, 50.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 180.0, 68.727272, 32.0, 19.0 ],
+					"presentation_rect" : [ 180.0, 83.909088, 32.0, 19.0 ],
 					"triangle" : 0
 				}
 
@@ -227,6 +308,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "window sync with screen",
 					"id" : "obj-44",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -296,9 +378,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 12.5, 239.9776, 86.0, 16.0 ],
+					"patching_rect" : [ 7.5, 263.982086, 86.0, 16.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 214.0, 71.727272, 86.0, 16.0 ],
+					"presentation_rect" : [ 214.0, 86.909088, 86.0, 16.0 ],
 					"text" : "fullscreen/shortcut"
 				}
 
@@ -417,6 +499,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "window context shared",
 					"id" : "obj-28",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -431,6 +514,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "window double buffer",
 					"id" : "obj-27",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -445,6 +529,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "depth buffer",
 					"id" : "obj-26",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -459,6 +544,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "window fullscreen anti-aliasing",
 					"id" : "obj-25",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -487,6 +573,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "show menu bar at fullscreen",
 					"id" : "obj-23",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -501,6 +588,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "allow to resize the window from the bottom right",
 					"id" : "obj-22",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -515,6 +603,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Toggle fullscreen - can be turned on and off with the ESC key.",
 					"id" : "obj-21",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -529,6 +618,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "keep the window always in front of other apps",
 					"id" : "obj-20",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -543,6 +633,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "enable or disable window's border",
 					"id" : "obj-19",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -565,7 +656,7 @@
 					"numinlets" : 11,
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
-					"patching_rect" : [ 119.0, 118.495522, 103.0, 19.0 ],
+					"patching_rect" : [ 114.0, 142.499985, 103.0, 19.0 ],
 					"text" : "j.list2parameter 2"
 				}
 
@@ -579,9 +670,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 321.0, 116.495522, 52.0, 19.0 ],
+					"patching_rect" : [ 316.0, 140.499985, 52.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 253.020554, 43.0, 51.0, 19.0 ],
+					"presentation_rect" : [ 250.0, 65.363632, 51.0, 19.0 ],
 					"text" : "position"
 				}
 
@@ -596,9 +687,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 180.0, 77.995522, 47.0, 16.0 ],
+					"patching_rect" : [ 175.0, 116.999985, 47.0, 16.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 205.020554, 43.0, 47.0, 16.0 ],
+					"presentation_rect" : [ 202.0, 65.363632, 47.0, 16.0 ],
 					"triangle" : 0
 				}
 
@@ -613,7 +704,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 222.0, 116.495522, 99.0, 20.0 ],
+					"patching_rect" : [ 217.0, 140.499985, 99.0, 20.0 ],
 					"text" : "j.remote position"
 				}
 
@@ -628,9 +719,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 119.0, 77.995522, 47.0, 16.0 ],
+					"patching_rect" : [ 114.0, 116.999985, 47.0, 16.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 156.0, 43.0, 47.0, 16.0 ],
+					"presentation_rect" : [ 153.979446, 65.363632, 47.0, 16.0 ],
 					"triangle" : 0
 				}
 
@@ -645,7 +736,7 @@
 					"numinlets" : 11,
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
-					"patching_rect" : [ 119.0, 200.495514, 103.0, 19.0 ],
+					"patching_rect" : [ 114.0, 224.499969, 103.0, 19.0 ],
 					"text" : "j.list2parameter 2"
 				}
 
@@ -659,9 +750,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 299.0, 198.495514, 28.0, 19.0 ],
+					"patching_rect" : [ 294.0, 222.499969, 28.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 253.020554, 21.0, 28.0, 19.0 ],
+					"presentation_rect" : [ 250.0, 43.363632, 28.0, 19.0 ],
 					"text" : "size"
 				}
 
@@ -676,9 +767,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 180.0, 159.995514, 47.0, 16.0 ],
+					"patching_rect" : [ 175.0, 197.993256, 47.0, 16.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 205.020554, 21.0, 47.0, 16.0 ],
+					"presentation_rect" : [ 202.0, 43.363632, 47.0, 16.0 ],
 					"triangle" : 0
 				}
 
@@ -693,7 +784,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 222.0, 198.495514, 77.0, 20.0 ],
+					"patching_rect" : [ 217.0, 222.499969, 77.0, 20.0 ],
 					"text" : "j.remote size"
 				}
 
@@ -708,9 +799,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 119.0, 159.995514, 47.0, 16.0 ],
+					"patching_rect" : [ 114.0, 197.993256, 47.0, 16.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 156.0, 21.0, 47.0, 16.0 ],
+					"presentation_rect" : [ 153.979446, 43.363632, 47.0, 16.0 ],
 					"triangle" : 0
 				}
 
@@ -725,7 +816,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 314.0, 35.0, 40.0, 19.0 ],
+					"patching_rect" : [ 3.0, 106.493286, 40.0, 19.0 ],
 					"text" : "j.view",
 					"varname" : "j.model"
 				}
@@ -740,7 +831,7 @@
 					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
-					"text" : "/no_model_address"
+					"text" : "/window%"
 				}
 
 			}
@@ -754,7 +845,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 156.0, 239.9776, 155.0, 20.0 ],
+					"patching_rect" : [ 151.0, 263.982086, 155.0, 20.0 ],
 					"text" : "j.remote fullscreen/shortcut"
 				}
 
@@ -1014,10 +1105,47 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-45", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-47", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-51", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-47", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 10 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 244.5, 399.0, 226.0, 399.0, 226.0, 304.0, 244.5, 304.0 ],
+					"source" : [ "obj-51", 0 ]
 				}
 
 			}
@@ -1087,7 +1215,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
 				"patcherrelativepath" : "../../../../components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
