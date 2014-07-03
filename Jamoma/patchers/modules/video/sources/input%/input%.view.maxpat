@@ -45,22 +45,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-52",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 598.166626, 122.0, 30.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 176.979446, 43.5, 30.0, 20.0 ],
-					"text" : "dim"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"annotation" : "none",
 					"bordercolor" : [ 0.086275, 0.086275, 0.086275, 1.0 ],
 					"fontname" : "Arial",
@@ -123,8 +107,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 325.5, 217.0, 87.0, 19.0 ],
-					"text" : "j.remote active",
+					"patching_rect" : [ 325.5, 217.0, 117.0, 19.0 ],
+					"text" : "j.remote framemotor",
 					"varname" : "source_mode[3]"
 				}
 
@@ -139,23 +123,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 259.0, 217.0, 20.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 278.0, 22.0, 20.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-7",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 234.0, 185.5, 25.0, 19.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 154.0, 23.0, 25.0, 19.0 ],
-					"text" : "fps"
+					"presentation_rect" : [ 278.0, 20.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -174,7 +142,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 259.0, 185.5, 54.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 179.0, 23.0, 33.0, 19.0 ],
+					"presentation_rect" : [ 179.0, 21.0, 33.0, 19.0 ],
 					"triangle" : 0
 				}
 
@@ -189,8 +157,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 325.5, 186.0, 72.0, 19.0 ],
-					"text" : "j.remote fps",
+					"patching_rect" : [ 325.5, 186.0, 137.0, 19.0 ],
+					"text" : "j.remote framemotor/fps",
 					"varname" : "source_mode[2]"
 				}
 
@@ -213,12 +181,13 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Choose between 'camera', 'movie' , 'noise' as input",
+					"annotation" : "Choose between 'cam', 'file' , 'noise' as input",
+					"autopopulate" : 1,
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"hint" : "",
 					"id" : "obj-8",
-					"items" : [ "grab", ",", "movie", ",", "noise" ],
+					"items" : [ "file", ",", "cam", ",", "noise" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -227,7 +196,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 325.5, 25.5, 76.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 215.0, 23.0, 62.0, 19.0 ],
+					"presentation_rect" : [ 215.0, 21.0, 62.0, 19.0 ],
 					"varname" : "source_mode"
 				}
 
@@ -280,7 +249,6 @@
 					"name" : "input%.ui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"offset" : [ 0.0, -120.0 ],
 					"patching_rect" : [ 377.666656, 79.5, 72.0, 34.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 4.0, 21.0, 178.0, 49.0 ]
@@ -458,15 +426,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{

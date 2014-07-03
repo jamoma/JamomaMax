@@ -8,7 +8,6 @@ data/bypass 0
 framemotor 1
 framemotor/fps 25
 colormode argb
-direction normal
 loop/mode loop
 loop/points 0 240
 loop/report 0
