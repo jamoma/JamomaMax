@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 78.0, 86.0, 816.0, 424.0 ],
+		"rect" : [ 78.0, 86.0, 753.0, 413.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -29,6 +29,20 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 257.0, 97.0, 38.0, 19.0 ],
+					"text" : "t l l"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 12.0,
@@ -46,7 +60,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 277.0, 57.0, 641.0, 349.0 ],
+						"rect" : [ 271.0, 166.0, 1275.0, 412.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -72,11 +86,11 @@
 									"id" : "obj-5",
 									"linecount" : 2,
 									"maxclass" : "newobj",
-									"numinlets" : 12,
-									"numoutlets" : 12,
-									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "" ],
-									"patching_rect" : [ 55.0, 95.0, 546.0, 31.0 ],
-									"text" : "route fog lighting_enable rotate scale fog_params auto_material mat_ambient mat_diffuse mat_emission mat_specular shininess"
+									"numinlets" : 25,
+									"numoutlets" : 25,
+									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
+									"patching_rect" : [ 55.0, 95.0, 1120.0, 31.0 ],
+									"text" : "route fog lighting_enable rotate scale fog_params auto_material mat_ambient mat_diffuse mat_emission mat_specular shininess cull_face line_width matfile matrix output point_size poly_mode transfor_reset viewalign cull_face line_width matrixoutput transform_reset"
 								}
 
 							}
@@ -87,7 +101,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 55.0, 255.0, 25.0, 25.0 ]
+									"patching_rect" : [ 1156.0, 297.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -118,14 +132,14 @@
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-5", 11 ]
+									"source" : [ "obj-5", 24 ]
 								}
 
 							}
  ]
 					}
 ,
-					"patching_rect" : [ 45.0, 82.0, 161.0, 21.0 ],
+					"patching_rect" : [ 26.0, 82.0, 161.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -145,6 +159,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 14.0,
@@ -153,7 +168,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 45.0, 52.0, 132.0, 24.0 ],
+					"patching_rect" : [ 26.0, 52.0, 132.0, 24.0 ],
 					"text" : "j.gl_group.model"
 				}
 
@@ -199,7 +214,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 497.0, 119.0, 204.0, 31.0 ],
+					"patching_rect" : [ 497.0, 82.0, 204.0, 31.0 ],
 					"text" : "j.message clear @type none @description \"Clear buffered image.\"",
 					"varname" : "tolerance[1]"
 				}
@@ -216,7 +231,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 92.0, 135.0, 373.0, 31.0 ],
+					"patching_rect" : [ 73.0, 135.0, 373.0, 31.0 ],
 					"text" : "j.parameter weight @type decimal @range 0. 1. @clipmode both @description \"Low pass filter coefficient.\"",
 					"varname" : "tolerance"
 				}
@@ -233,7 +248,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 583.0, 219.0, 190.0, 31.0 ],
+					"patching_rect" : [ 534.0, 255.0, 190.0, 31.0 ],
 					"text" : "j.model @description \"Background model using jit.gl.slab.\"",
 					"varname" : "jmod.hub"
 				}
@@ -248,22 +263,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 497.0, 195.0, 38.0, 19.0 ],
+					"patching_rect" : [ 497.0, 219.0, 38.0, 19.0 ],
 					"text" : "zl reg"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-18",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 52.0, 245.0, 78.0, 19.0 ],
-					"text" : "j.pass drawto"
 				}
 
 			}
@@ -276,8 +277,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 257.0, 295.0, 159.0, 19.0 ],
-					"text" : "jit.gl.slab none @type float32"
+					"patching_rect" : [ 257.0, 295.0, 131.0, 19.0 ],
+					"text" : "jit.gl.slab @type float32"
 				}
 
 			}
@@ -288,7 +289,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 583.0, 267.0, 25.0, 25.0 ]
+					"patching_rect" : [ 534.0, 303.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -302,7 +303,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
 					"patching_rect" : [ 257.0, 255.0, 259.0, 19.0 ],
-					"text" : "jit.gl.slab none @file co.normal.jxs @type float32"
+					"text" : "jit.gl.slab @file co.normal.jxs @type float32"
 				}
 
 			}
@@ -338,7 +339,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 92.0, 174.0, 94.0, 19.0 ],
+					"patching_rect" : [ 73.0, 174.0, 94.0, 19.0 ],
 					"text" : "prepend amount"
 				}
 
@@ -352,7 +353,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 92.0, 202.0, 85.0, 19.0 ],
+					"patching_rect" : [ 73.0, 202.0, 85.0, 19.0 ],
 					"text" : "prepend param"
 				}
 
@@ -360,10 +361,20 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 35.5, 291.0, 266.5, 291.0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 54.5, 231.0, 266.5, 231.0 ],
+					"midpoints" : [ 35.5, 231.0, 266.5, 231.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -398,16 +409,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 61.5, 283.0, 266.5, 283.0 ],
-					"source" : [ "obj-18", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-8", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -429,7 +430,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 101.5, 230.5, 266.5, 230.5 ],
+					"midpoints" : [ 82.5, 230.5, 266.5, 230.5 ],
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -454,17 +455,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 266.5, 103.0, 525.5, 103.0 ],
-					"source" : [ "obj-31", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-31", 0 ]
@@ -486,6 +477,25 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-39", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-19", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 285.5, 125.0, 525.5, 125.0 ],
+					"source" : [ "obj-4", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -514,10 +524,6 @@
 				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "j.pass.mxo",
-				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.model.mxo",

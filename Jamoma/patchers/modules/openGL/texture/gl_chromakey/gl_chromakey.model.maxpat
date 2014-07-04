@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 277.0, 57.0, 641.0, 349.0 ],
+						"rect" : [ 271.0, 166.0, 1275.0, 412.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -72,11 +72,11 @@
 									"id" : "obj-5",
 									"linecount" : 2,
 									"maxclass" : "newobj",
-									"numinlets" : 12,
-									"numoutlets" : 12,
-									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "" ],
-									"patching_rect" : [ 55.0, 95.0, 546.0, 31.0 ],
-									"text" : "route fog lighting_enable rotate scale fog_params auto_material mat_ambient mat_diffuse mat_emission mat_specular shininess"
+									"numinlets" : 25,
+									"numoutlets" : 25,
+									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
+									"patching_rect" : [ 55.0, 95.0, 1120.0, 31.0 ],
+									"text" : "route fog lighting_enable rotate scale fog_params auto_material mat_ambient mat_diffuse mat_emission mat_specular shininess cull_face line_width matfile matrix output point_size poly_mode transfor_reset viewalign cull_face line_width matrixoutput transform_reset"
 								}
 
 							}
@@ -87,7 +87,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 55.0, 255.0, 25.0, 25.0 ]
+									"patching_rect" : [ 1156.0, 297.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -118,7 +118,7 @@
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-5", 11 ]
+									"source" : [ "obj-5", 24 ]
 								}
 
 							}
@@ -145,6 +145,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 14.0,
