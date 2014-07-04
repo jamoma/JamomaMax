@@ -8,7 +8,8 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 911.0, 481.0, 634.0, 493.0 ],
+		"rect" : [ 263.0, 459.0, 634.0, 493.0 ],
+		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -32,14 +33,33 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
-					"id" : "obj-244",
+					"id" : "obj-21",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 108.0, 55.0, 19.0 ],
+					"patching_rect" : [ 10.0, 33.5, 61.0, 31.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 9.5, 17.0, 48.0, 19.0 ],
-					"text" : "context"
+					"presentation_rect" : [ 4.5, 30.5, 93.0, 19.0 ],
+					"text" : "real framerate ",
+					"textjustification" : 2
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-244",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 17.0, 108.0, 55.0, 31.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 18.5, 72.0, 79.0, 19.0 ],
+					"text" : "context name"
 				}
 
 			}
@@ -72,7 +92,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 87.0, 108.0, 37.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 9.5, 2.0, 122.5, 18.0 ],
+					"presentation_rect" : [ 98.0, 72.0, 122.5, 18.0 ],
 					"varname" : "Context[4]"
 				}
 
@@ -117,7 +137,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 195.0, 457.5, 45.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 216.5, 113.0, 45.0, 19.0 ],
+					"presentation_rect" : [ 219.5, 164.0, 45.0, 19.0 ],
 					"text" : "stereo"
 				}
 
@@ -135,7 +155,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 250.0, 457.5, 18.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 201.5, 113.0, 60.0, 18.0 ],
+					"presentation_rect" : [ 204.5, 164.0, 60.0, 18.0 ],
 					"size" : 1,
 					"values" : [ 0 ],
 					"varname" : "FogInherit[2]"
@@ -168,7 +188,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 195.0, 429.5, 45.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 46.5, 113.0, 45.0, 19.0 ],
+					"presentation_rect" : [ 49.5, 164.0, 45.0, 19.0 ],
 					"text" : "fsaa"
 				}
 
@@ -186,7 +206,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 250.0, 429.5, 18.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 31.5, 113.0, 60.0, 18.0 ],
+					"presentation_rect" : [ 34.5, 164.0, 60.0, 18.0 ],
 					"size" : 1,
 					"values" : [ 0 ],
 					"varname" : "FogInherit[1]"
@@ -220,7 +240,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 128.0, 333.5, 40.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 61.5, 85.214294, 40.0, 19.0 ],
+					"presentation_rect" : [ 98.0, 138.214294, 40.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9
 				}
@@ -237,8 +257,9 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 60.0, 334.214294, 56.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 13.5, 85.214294, 48.0, 19.0 ],
-					"text" : "far_clip"
+					"presentation_rect" : [ 49.5, 138.214294, 48.0, 19.0 ],
+					"text" : "far_clip",
+					"textjustification" : 2
 				}
 
 			}
@@ -284,7 +305,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 128.0, 304.5, 40.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 183.0, 85.214294, 40.0, 19.0 ],
+					"presentation_rect" : [ 223.0, 138.214294, 40.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9
 				}
@@ -301,7 +322,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 60.0, 305.214294, 56.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 130.0, 85.214294, 56.0, 19.0 ],
+					"presentation_rect" : [ 170.0, 138.214294, 56.0, 19.0 ],
 					"text" : "near_clip"
 				}
 
@@ -317,7 +338,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 195.0, 402.5, 45.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 128.5, 113.0, 45.0, 19.0 ],
+					"presentation_rect" : [ 131.5, 164.0, 45.0, 19.0 ],
 					"text" : "sync"
 				}
 
@@ -335,7 +356,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 250.0, 402.5, 18.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 113.5, 113.0, 60.0, 18.0 ],
+					"presentation_rect" : [ 116.5, 164.0, 60.0, 18.0 ],
 					"size" : 1,
 					"values" : [ 0 ],
 					"varname" : "FogInherit"
@@ -368,7 +389,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 344.0, 66.0, 56.0, 34.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 226.0, 2.0, 56.0, 34.0 ]
+					"presentation_rect" : [ 98.0, 30.5, 56.0, 34.0 ]
 				}
 
 			}
@@ -410,8 +431,9 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 42.0, 16.0, 61.0, 31.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 146.5, 17.0, 87.0, 19.0 ],
-					"text" : "framerate (fps)"
+					"presentation_rect" : [ -2.5, 4.5, 100.0, 19.0 ],
+					"text" : "desired framerate",
+					"textjustification" : 2
 				}
 
 			}
@@ -428,7 +450,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 102.0, 16.0, 50.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 165.0, 2.0, 50.0, 19.0 ]
+					"presentation_rect" : [ 98.0, 4.5, 56.0, 19.0 ]
 				}
 
 			}
@@ -505,7 +527,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 111.0, 226.042969, 40.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 93.0, 58.042969, 40.0, 19.0 ],
+					"presentation_rect" : [ 98.0, 114.042969, 40.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "ColR"
@@ -526,7 +548,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 237.0, 226.042969, 40.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 219.0, 58.042969, 40.0, 19.0 ],
+					"presentation_rect" : [ 224.0, 114.042969, 40.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "ColA"
@@ -547,7 +569,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 195.0, 226.042969, 40.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 177.0, 58.042969, 40.0, 19.0 ],
+					"presentation_rect" : [ 182.0, 114.042969, 40.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "ColB"
@@ -568,7 +590,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 153.0, 226.042969, 40.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 135.0, 58.042969, 40.0, 19.0 ],
+					"presentation_rect" : [ 140.0, 114.042969, 40.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "ColG"
@@ -586,7 +608,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 237.0, 209.042969, 40.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 219.0, 41.042969, 40.0, 19.0 ],
+					"presentation_rect" : [ 224.0, 97.042969, 40.0, 19.0 ],
 					"text" : "Alpha"
 				}
 
@@ -602,7 +624,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 195.0, 209.042969, 38.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 177.0, 41.042969, 38.0, 19.0 ],
+					"presentation_rect" : [ 182.0, 97.042969, 38.0, 19.0 ],
 					"text" : "Blue"
 				}
 
@@ -618,7 +640,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 153.0, 209.042969, 39.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 135.0, 41.042969, 39.0, 19.0 ],
+					"presentation_rect" : [ 140.0, 97.042969, 39.0, 19.0 ],
 					"text" : "Green"
 				}
 
@@ -634,7 +656,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 111.0, 209.042969, 40.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 93.0, 41.042969, 40.0, 19.0 ],
+					"presentation_rect" : [ 98.0, 97.042969, 40.0, 19.0 ],
 					"text" : "Red"
 				}
 
@@ -650,7 +672,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 42.0, 226.042969, 66.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 9.5, 58.042969, 66.0, 19.0 ],
+					"presentation_rect" : [ 31.5, 114.042969, 66.0, 19.0 ],
 					"text" : "erase color",
 					"textjustification" : 2
 				}
@@ -958,22 +980,6 @@
 					"source" : [ "obj-98", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../../components/data/list2parameter",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

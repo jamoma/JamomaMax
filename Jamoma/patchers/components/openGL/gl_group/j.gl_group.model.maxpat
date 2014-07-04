@@ -38,7 +38,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 199.0, 295.0, 100.0, 31.0 ],
-					"text" : "j.model #1 @priority 2"
+					"text" : "j.model #1 @priority -1"
 				}
 
 			}
@@ -1129,8 +1129,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 98.5, 226.5, 601.0, 19.0 ],
-									"text" : "j.parameter context @type string @description \"The named drawing context in which to draw.\" @default my_context",
+									"patching_rect" : [ 98.5, 226.5, 665.0, 19.0 ],
+									"text" : "j.parameter context @type string @description \"The named drawing context in which to draw.\" @default my_context @priority -1",
 									"varname" : "render/context"
 								}
 
