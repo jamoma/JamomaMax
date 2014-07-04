@@ -198,13 +198,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.class.gl_slab.inspect.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/class.gl_slab.inspect",
-				"patcherrelativepath" : "../../../../components/deprecated/class.gl_slab.inspect",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../../../../components/data/maxhelpui",
