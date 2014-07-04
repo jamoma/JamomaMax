@@ -1449,7 +1449,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 452.0, 304.0, 126.0, 43.0 ],
-					"text" : "j.model @description \"Output to an OpenGL window\""
+					"text" : "j.model @description \"Output to an OpenGL window\" @priority 1"
 				}
 
 			}
@@ -1463,7 +1463,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 16.0, 272.0, 109.0, 19.0 ],
-					"text" : "jit.window"
+					"text" : "jit.window jamoma"
 				}
 
 			}
