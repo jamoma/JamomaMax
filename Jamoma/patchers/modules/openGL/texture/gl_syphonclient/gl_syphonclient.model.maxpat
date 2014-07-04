@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 271.0, 166.0, 206.0, 222.0 ],
+						"rect" : [ 271.0, 166.0, 1323.0, 318.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -70,12 +70,13 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-5",
+									"linecount" : 3,
 									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 55.0, 95.0, 98.0, 19.0 ],
-									"text" : "routepass drawto"
+									"numinlets" : 26,
+									"numoutlets" : 26,
+									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
+									"patching_rect" : [ 55.0, 93.0, 584.0, 43.0 ],
+									"text" : "route color aux_color cull_face depth_clear depth_enable depth_write fog fog_params lighting_enable line_width mat_ambient auto_material mat_diffuse mat_emission matfile shininess mat_specular matrixoutput point_size poly_mode rotate scale smooth_shading transform_reset viewalign"
 								}
 
 							}
@@ -86,7 +87,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 55.0, 135.0, 25.0, 25.0 ]
+									"patching_rect" : [ 55.0, 171.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -117,14 +118,14 @@
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-5", 0 ]
+									"source" : [ "obj-5", 25 ]
 								}
 
 							}
  ]
 					}
 ,
-					"patching_rect" : [ 623.5, 155.0, 161.0, 21.0 ],
+					"patching_rect" : [ 623.5, 150.0, 161.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -699,7 +700,6 @@
 					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 633.0, 177.0, 195.0, 177.0, 195.0, 156.0, 65.5, 156.0 ],
 					"source" : [ "obj-32", 0 ]
 				}
 
