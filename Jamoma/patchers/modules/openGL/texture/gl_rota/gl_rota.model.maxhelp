@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 423.0, 44.0, 330.0, 636.0 ],
+		"rect" : [ 423.0, 44.0, 338.0, 798.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -29,14 +29,27 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "bpatcher",
+					"name" : "window%.module.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 15.0, 83.5, 300.0, 105.0 ],
+					"presentation_rect" : [ 39.0, 110.5, 300.0, 105.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "bpatcher",
 					"name" : "gl_render.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 12.0, 84.0, 300.0, 105.0 ],
-					"presentation_rect" : [ 12.0, 317.0, 300.0, 105.0 ]
+					"patching_rect" : [ 15.0, 207.0, 300.0, 175.0 ],
+					"presentation_rect" : [ 12.0, 317.0, 300.0, 175.0 ]
 				}
 
 			}
@@ -48,8 +61,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 12.0, 199.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 239.0, 243.0, 300.0, 140.0 ]
+					"patching_rect" : [ 15.0, 401.0, 300.0, 105.0 ],
+					"presentation_rect" : [ 239.0, 243.0, 300.0, 105.0 ]
 				}
 
 			}
@@ -76,7 +89,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 12.0, 353.0, 300.0, 105.0 ],
+					"patching_rect" : [ 15.0, 524.0, 300.0, 105.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ]
 				}
 
@@ -89,7 +102,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 12.0, 471.0, 300.0, 140.0 ],
+					"patching_rect" : [ 15.0, 642.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
 				}
 
@@ -110,15 +123,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-6", 0 ]
 				}
 
 			}
@@ -264,9 +268,30 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "gl_render_basic_view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render/view_tabs",
+				"patcherrelativepath" : "../../gl_render/view_tabs",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "gl_render.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
 				"patcherrelativepath" : "../../gl_render",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "window%.module.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
+				"patcherrelativepath" : "../../../video/output/window%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "window%.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
+				"patcherrelativepath" : "../../../video/output/window%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -294,15 +319,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -322,7 +339,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -330,7 +347,23 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.namespace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscroute.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
  ]

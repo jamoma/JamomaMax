@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 476.0, 60.0, 376.0, 630.0 ],
+		"rect" : [ 428.0, 51.0, 336.0, 786.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -29,14 +29,55 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-9",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 96.0, 602.0, 104.0, 17.0 ],
+					"text" : "GL/blend/enable 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 96.0, 573.0, 144.0, 19.0 ],
+					"text" : "j.initialized /gl_videoplane"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "bpatcher",
+					"name" : "window%.module.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 18.0, 80.5, 300.0, 105.0 ],
+					"presentation_rect" : [ 24.0, 95.5, 300.0, 105.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
 					"name" : "gl_render.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 35.0, 81.0, 300.0, 105.0 ],
-					"presentation_rect" : [ 37.0, 196.0, 300.0, 105.0 ]
+					"patching_rect" : [ 18.0, 199.0, 300.0, 175.0 ],
+					"presentation_rect" : [ 37.0, 196.0, 300.0, 175.0 ]
 				}
 
 			}
@@ -49,7 +90,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 376.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 336.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -63,7 +104,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 35.0, 460.5, 300.0, 140.0 ],
+					"patching_rect" : [ 18.0, 627.5, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
 				}
 
@@ -76,8 +117,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 35.0, 204.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
+					"patching_rect" : [ 18.0, 379.5, 300.0, 105.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ]
 				}
 
 			}
@@ -90,7 +131,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 35.0, 366.5, 300.0, 70.0 ],
+					"patching_rect" : [ 18.0, 495.5, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
 				}
 
@@ -116,10 +157,19 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
+					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-4", 0 ]
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
@@ -160,9 +210,9 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../../components/openGL/gl_group",
+				"name" : "j.class.gl_slab.inspect.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/class.gl_slab.inspect",
+				"patcherrelativepath" : "../../../../components/deprecated/class.gl_slab.inspect",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -174,9 +224,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.class.gl_slab.inspect.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/class.gl_slab.inspect",
-				"patcherrelativepath" : "../../../../components/deprecated/class.gl_slab.inspect",
+				"name" : "j.gl_group.panel.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.gl_group.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -212,13 +269,6 @@
 				"name" : "gl_videoplane.view.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
 				"patcherrelativepath" : "../../geometry /gl_videoplane",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -272,6 +322,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "gl_render_basic_view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render/view_tabs",
+				"patcherrelativepath" : "../../gl_render/view_tabs",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "gl_render.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
 				"patcherrelativepath" : "../../gl_render",
@@ -279,9 +336,30 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "window%.module.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
+				"patcherrelativepath" : "../../../video/output/window%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "window%.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
+				"patcherrelativepath" : "../../../video/output/window%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "window%.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
 				"patcherrelativepath" : "../../../video/output/window%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.initialized.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/initialized",
+				"patcherrelativepath" : "../../../../components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -318,7 +396,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -330,11 +408,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.pass.mxo",
+				"name" : "j.oscroute.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
