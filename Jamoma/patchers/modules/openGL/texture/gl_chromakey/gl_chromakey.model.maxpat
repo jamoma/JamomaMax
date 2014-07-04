@@ -154,8 +154,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2.0, 135.666672, 132.0, 24.0 ],
-					"text" : "j.gl_group.model"
+					"patching_rect" : [ 2.0, 135.666672, 155.0, 24.0 ],
+					"text" : "j.gl_group.model GL"
 				}
 
 			}
@@ -263,7 +263,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
 					"patching_rect" : [ 63.0, 300.0, 239.0, 19.0 ],
-					"text" : "jit.gl.slab my_context @file co.chromakey.jxs"
+					"text" : "jit.gl.slab @file co.chromakey.jxs"
 				}
 
 			}

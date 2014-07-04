@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 75.0, 417.0, 781.0, 474.0 ],
+		"rect" : [ 104.0, 413.0, 781.0, 474.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -226,7 +226,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 19.0, 161.0, 154.0, 24.0 ],
-					"text" : "j.gl_group.model"
+					"text" : "j.gl_group.model GL"
 				}
 
 			}
@@ -402,7 +402,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 128.0, 260.0, 37.0, 19.0 ],
+					"patching_rect" : [ 128.0, 275.0, 37.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 

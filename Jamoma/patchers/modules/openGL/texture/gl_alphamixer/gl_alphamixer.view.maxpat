@@ -49,8 +49,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2.0, 150.0, 93.0, 19.0 ],
-					"text" : "j.gl_group.panel",
+					"patching_rect" : [ 2.0, 150.0, 111.0, 19.0 ],
+					"text" : "j.gl_group.panel GL",
 					"varname" : "inspector"
 				}
 
@@ -1188,10 +1188,6 @@
 			}
 , 			{
 				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
