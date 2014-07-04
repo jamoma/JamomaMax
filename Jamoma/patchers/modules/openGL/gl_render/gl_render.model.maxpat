@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 157.0, 166.0, 714.0, 521.0 ],
+		"rect" : [ 53.0, 442.0, 714.0, 521.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -45,7 +45,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
+						"rect" : [ 37.0, 530.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -65,6 +65,418 @@
 						"digest" : "",
 						"tags" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x86"
+										}
+,
+										"rect" : [ 25.0, 69.0, 732.0, 480.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
+										"gridonopen" : 0,
+										"gridsize" : [ 15.0, 15.0 ],
+										"gridsnaponopen" : 0,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"boxanimatetime" : 200,
+										"imprint" : 0,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"boxes" : [ 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-2",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
+													"patching_rect" : [ 349.0, 29.0, 315.0, 31.0 ],
+													"text" : "j.parameter erase_color_alpha @type decimal @description \"the erase color Alpha.\" @default 1.",
+													"varname" : "fog/amount[1]"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-1",
+													"maxclass" : "newobj",
+													"numinlets" : 4,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 37.0, 75.0, 331.0, 20.0 ],
+													"text" : "pak 0.2 0.2 0.2 1."
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-51",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 105.5, 286.5, 123.0, 19.0 ],
+													"text" : "prepend sync"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-53",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
+													"patching_rect" : [ 105.5, 252.5, 288.0, 31.0 ],
+													"text" : "j.parameter sync @type boolean @description \"Enable vertical sync.\" @default 1",
+													"varname" : "depth/inherit[3]"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-49",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 433.0, 370.5, 123.0, 19.0 ],
+													"text" : "prepend stereo"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-50",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
+													"patching_rect" : [ 433.0, 339.5, 288.0, 31.0 ],
+													"text" : "j.parameter stereo @type boolean @description \"Enable stereo rendering.\" @default 0",
+													"varname" : "depth/inherit[2]"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-60",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 400.5, 292.5, 84.0, 19.0 ],
+													"text" : "prepend fsaa"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-55",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
+													"patching_rect" : [ 400.5, 252.5, 288.0, 31.0 ],
+													"text" : "j.parameter fsaa @type boolean @description \"Enable Full-Scene Anti-Aliased drawing.\" @default 0",
+													"varname" : "depth/inherit"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-8",
+													"maxclass" : "outlet",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 37.0, 418.0, 25.0, 25.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-30",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 75.0, 183.0, 117.0, 19.0 ],
+													"text" : "prepend near_clip"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-31",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
+													"patching_rect" : [ 75.0, 152.0, 270.0, 31.0 ],
+													"text" : "j.parameter near_clip @type decimal @description \"Far clipping plane distance.\" @default 0.1",
+													"varname" : "fog/amount[2]"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-17",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 342.0, 183.0, 117.0, 19.0 ],
+													"text" : "prepend far_clip"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-52",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
+													"patching_rect" : [ 342.0, 152.0, 263.0, 31.0 ],
+													"text" : "j.parameter far_clip @type decimal @description \"Far clipping plane distance.\" @default 100.",
+													"varname" : "fog/amount"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-16",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 37.0, 103.0, 114.0, 19.0 ],
+													"text" : "prepend erase_color"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+													"fontname" : "Verdana",
+													"fontsize" : 10.0,
+													"id" : "obj-10",
+													"linecount" : 3,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
+													"patching_rect" : [ 37.0, 29.0, 297.0, 43.0 ],
+													"text" : "j.parameter erase_color @type array @dataspace color @dataspace/unit rgb @description \"the erase color\" @default 0.2 0.2 0.2"
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-16", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-1", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-1", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-10", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-8", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-16", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-8", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-17", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-1", 3 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-2", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-8", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-30", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-30", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-31", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-8", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-49", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-49", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-50", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-8", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-51", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-17", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-52", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-51", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-53", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-60", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-55", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-8", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-60", 0 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 42.0, 27.0, 100.0, 20.0 ],
+									"saved_object_attributes" : 									{
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
+										"default_fontsize" : 12.0,
+										"description" : "",
+										"digest" : "",
+										"fontface" : 0,
+										"fontname" : "Arial",
+										"fontsize" : 12.0,
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p basic"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -107,7 +519,7 @@
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 50.0, 94.0, 737.0, 480.0 ],
+										"rect" : [ 9.0, 335.0, 698.0, 403.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -162,8 +574,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 118.0, 196.0, 444.0, 31.0 ],
-													"text" : "j.parameter up @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera up vector.\" @default 0. 1. 0.",
+													"patching_rect" : [ 118.0, 196.0, 455.0, 31.0 ],
+													"text" : "j.parameter camera/up @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera up vector.\" @default 0. 1. 0.",
 													"varname" : "3D/position[3]"
 												}
 
@@ -194,7 +606,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 72.0, 121.0, 431.0, 31.0 ],
-													"text" : "j.parameter lookat @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera lookat position.\" @default 0. 0. 0.",
+													"text" : "j.parameter camera/lookat @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera lookat position.\" @default 0. 0. 0.",
 													"varname" : "3D/position[1]"
 												}
 
@@ -224,7 +636,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 158.0, 280.0, 497.0, 19.0 ],
-													"text" : "j.parameter lens_angle @type decimal @description \"Camera lens angle.\" @default 45.",
+													"text" : "j.parameter camera/lens_angle @type decimal @description \"Camera lens angle.\" @default 45.",
 													"varname" : "fog/amount[1]"
 												}
 
@@ -254,8 +666,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 39.0, 42.799988, 399.0, 31.0 ],
-													"text" : "j.parameter camera @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera position.\" @default 0. 0. 2.",
+													"patching_rect" : [ 39.0, 42.799988, 621.0, 31.0 ],
+													"text" : "j.parameter camera/position @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera position.\" @default 0. 0. 2.",
 													"varname" : "3D/position"
 												}
 
@@ -428,7 +840,7 @@
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 50.0, 94.0, 735.0, 502.0 ],
+										"rect" : [ 50.0, 94.0, 745.0, 498.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -467,7 +879,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 55.0, 388.0, 168.0, 20.0 ],
+													"patching_rect" : [ 55.0, 382.0, 168.0, 20.0 ],
 													"text" : "prepend light_specular"
 												}
 
@@ -484,7 +896,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 55.0, 345.0, 486.0, 31.0 ],
-													"text" : "j.parameter light_specular @type array @default 1. 1. 1. 1. @range 0 1 @clipmode both @description \"Specular lighting color.\"",
+													"text" : "j.parameter light/specular @type array @default 1. 1. 1. 1. @range 0 1 @clipmode both @description \"Specular lighting color.\"",
 													"varname" : "color/rgb[4]"
 												}
 
@@ -514,7 +926,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 55.0, 287.0, 492.0, 19.0 ],
-													"text" : "j.parameter light_position @type array @default 1. 1. 1. 0. @description \"Light position\"",
+													"text" : "j.parameter light/position @type array @default 1. 1. 1. 0. @description \"Light position\"",
 													"varname" : "color/rgb[3]"
 												}
 
@@ -560,7 +972,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 55.0, 195.0, 473.0, 31.0 ],
-													"text" : "j.parameter light_global_ambient @type array @default 0. 0. 0. 1. @range 0 1 @clipmode both @description \"Global ambient lighting color.\"",
+													"text" : "j.parameter light/global_ambient @type array @default 0. 0. 0. 1. @range 0 1 @clipmode both @description \"Global ambient lighting color.\"",
 													"varname" : "color/rgb[2]"
 												}
 
@@ -575,7 +987,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 55.0, 147.0, 129.0, 20.0 ],
-													"text" : "prepend light_ambient"
+													"text" : "prepend light_diffuse"
 												}
 
 											}
@@ -591,7 +1003,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 55.0, 110.0, 473.0, 31.0 ],
-													"text" : "j.parameter light_diffuse @type array @default 1. 1. 1. 1. @range 0 1 @clipmode both @description \"Diffuse lighting color.\"",
+													"text" : "j.parameter light/diffuse @type array @default 1. 1. 1. 1. @range 0 1 @clipmode both @description \"Diffuse lighting color.\"",
 													"varname" : "color/rgb[1]"
 												}
 
@@ -637,7 +1049,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 55.0, 26.0, 473.0, 31.0 ],
-													"text" : "j.parameter light_ambient @type array @default 0. 0. 0. 1. @range 0 1 @clipmode both @description \"Ambient lighting color.\"",
+													"text" : "j.parameter light/ambient @type array @default 0. 0. 0. 1. @range 0 1 @clipmode both @description \"Ambient lighting color.\"",
 													"varname" : "color/rgb"
 												}
 
@@ -777,7 +1189,7 @@
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 30.0, 45.0, 1374.0, 896.0 ],
+										"rect" : [ 373.0, 61.0, 939.0, 937.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -803,7 +1215,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 24.0, 932.0, 25.0, 25.0 ]
+													"patching_rect" : [ 21.0, 677.0, 25.0, 25.0 ]
 												}
 
 											}
@@ -816,7 +1228,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 35.0, 886.0, 123.0, 19.0 ],
+													"patching_rect" : [ 32.0, 631.0, 123.0, 19.0 ],
 													"text" : "prepend verbose"
 												}
 
@@ -832,71 +1244,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 35.0, 852.0, 306.0, 31.0 ],
+													"patching_rect" : [ 32.0, 597.0, 306.0, 31.0 ],
 													"text" : "j.parameter verbose @type boolean @description \"Enable printing messages to the Max window.\" @default 1",
 													"varname" : "depth/inherit[4]"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-51",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 22.0, 231.5, 123.0, 19.0 ],
-													"text" : "prepend sync"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-53",
-													"linecount" : 2,
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 22.0, 197.5, 288.0, 31.0 ],
-													"text" : "j.parameter sync @type boolean @description \"Enable vertical sync.\" @default 1",
-													"varname" : "depth/inherit[3]"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-49",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 611.0, 231.5, 123.0, 19.0 ],
-													"text" : "prepend stereo"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-50",
-													"linecount" : 2,
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 611.0, 197.5, 288.0, 31.0 ],
-													"text" : "j.parameter stereo @type boolean @description \"Enable stereo rendering.\" @default 0",
-													"varname" : "depth/inherit[2]"
 												}
 
 											}
@@ -909,7 +1259,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 44.0, 805.5, 141.0, 19.0 ],
+													"patching_rect" : [ 41.0, 550.5, 141.0, 19.0 ],
 													"text" : "prepend shared_context"
 												}
 
@@ -925,7 +1275,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 44.0, 774.5, 387.0, 31.0 ],
+													"patching_rect" : [ 41.0, 519.5, 387.0, 31.0 ],
 													"text" : "j.parameter shared_context @type string @description \"Context name to share resources with\"",
 													"varname" : "render/context[6]"
 												}
@@ -940,7 +1290,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 495.0, 698.5, 133.0, 19.0 ],
+													"patching_rect" : [ 492.0, 443.5, 133.0, 19.0 ],
 													"text" : "substitute set setsymbol"
 												}
 
@@ -954,15 +1304,15 @@
 													"numinlets" : 1,
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
-													"patching_rect" : [ 495.0, 676.5, 132.0, 19.0 ],
-													"text" : "j.remote animmode",
+													"patching_rect" : [ 492.0, 421.5, 132.0, 19.0 ],
+													"text" : "j.remote rotate_order",
 													"varname" : "render/context[4]"
 												}
 
 											}
 , 											{
 												"box" : 												{
-													"annotation" : "Determines which space the anim_move and anim_turn messages will affect the position and orientation of this object",
+													"annotation" : "Set the order rotations are applied for the rotatexyz attribute for all child gl objects.",
 													"fontname" : "Verdana",
 													"fontsize" : 10.0,
 													"id" : "obj-44",
@@ -973,7 +1323,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "int", "", "" ],
 													"parameter_enable" : 0,
-													"patching_rect" : [ 495.0, 722.5, 64.0, 19.0 ],
+													"patching_rect" : [ 492.0, 467.5, 64.0, 19.0 ],
 													"presentation" : 1,
 													"presentation_rect" : [ 496.0, 1045.5, 77.0, 19.0 ]
 												}
@@ -988,7 +1338,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 44.0, 713.5, 122.0, 19.0 ],
+													"patching_rect" : [ 41.0, 458.5, 122.0, 19.0 ],
 													"text" : "prepend rotate_order"
 												}
 
@@ -1004,7 +1354,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 44.0, 676.5, 411.0, 31.0 ],
+													"patching_rect" : [ 41.0, 421.5, 411.0, 31.0 ],
 													"text" : "j.parameter rotate_order @type string @description \"Set the order rotations are applied for the rotatexyz attribute for all child gl objects.\" @default auto",
 													"varname" : "render/context[5]"
 												}
@@ -1019,7 +1369,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 35.0, 537.0, 117.0, 19.0 ],
+													"patching_rect" : [ 32.0, 282.0, 117.0, 19.0 ],
 													"text" : "prepend point_fade"
 												}
 
@@ -1034,7 +1384,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 35.0, 506.0, 541.0, 19.0 ],
+													"patching_rect" : [ 32.0, 251.0, 541.0, 19.0 ],
 													"text" : "j.parameter point_fade @type decimal @description \"Point fade threshold for point sprites.\" @default 60.",
 													"varname" : "fog/amount[3]"
 												}
@@ -1049,7 +1399,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 35.0, 480.0, 113.0, 19.0 ],
+													"patching_rect" : [ 32.0, 225.0, 113.0, 19.0 ],
 													"text" : "prepend point_atten"
 												}
 
@@ -1065,40 +1415,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 35.0, 443.799988, 771.0, 31.0 ],
+													"patching_rect" : [ 32.0, 188.799988, 771.0, 31.0 ],
 													"text" : "j.parameter point_atten @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Point attenuation factor for point sprites.\" @default 1. 0. 0.1",
 													"varname" : "3D/position[2]"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-30",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 22.0, 135.0, 117.0, 19.0 ],
-													"text" : "prepend near_clip"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-31",
-													"linecount" : 2,
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 22.0, 104.0, 270.0, 31.0 ],
-													"text" : "j.parameter near_clip @type decimal @description \"Far clipping plane distance.\" @default 0.1",
-													"varname" : "fog/amount[2]"
 												}
 
 											}
@@ -1112,7 +1431,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 343.5, 578.0, 312.0, 31.0 ],
+													"patching_rect" : [ 340.5, 323.0, 313.0, 31.0 ],
 													"text" : "0 = connect vertices in 2D geometry matrix along columns \n1 = connect vertices in 2D geometry matrix along rows\n"
 												}
 
@@ -1126,7 +1445,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 44.0, 618.0, 123.0, 19.0 ],
+													"patching_rect" : [ 41.0, 363.0, 123.0, 19.0 ],
 													"text" : "prepend geom_rows"
 												}
 
@@ -1142,133 +1461,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 44.0, 578.0, 288.0, 31.0 ],
+													"patching_rect" : [ 41.0, 323.0, 288.0, 31.0 ],
 													"text" : "j.parameter geom_rows @type boolean @description \"Vertex connection mode.\" @default 0",
 													"varname" : "depth/inherit[1]"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-60",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 317.0, 237.5, 84.0, 19.0 ],
-													"text" : "prepend fsaa"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-55",
-													"linecount" : 2,
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 317.0, 197.5, 288.0, 31.0 ],
-													"text" : "j.parameter fsaa @type boolean @description \"Enable Full-Scene Anti-Aliased drawing.\" @default 0",
-													"varname" : "depth/inherit"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-17",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 289.0, 135.0, 117.0, 19.0 ],
-													"text" : "prepend far_clip"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-52",
-													"linecount" : 2,
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 289.0, 104.0, 263.0, 31.0 ],
-													"text" : "j.parameter far_clip @type decimal @description \"Far clipping plane distance.\" @default 100.",
-													"varname" : "fog/amount"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-16",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 22.0, 53.0, 114.0, 19.0 ],
-													"text" : "prepend erase_color"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-28",
-													"maxclass" : "newobj",
-													"numinlets" : 2,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 1430.0, 270.5, 133.0, 19.0 ],
-													"text" : "substitute set setsymbol"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-15",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 4,
-													"outlettype" : [ "", "", "", "" ],
-													"patching_rect" : [ 1430.0, 248.5, 132.0, 19.0 ],
-													"text" : "j.remote animmode",
-													"varname" : "render/context[3]"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"annotation" : "Determines which space the anim_move and anim_turn messages will affect the position and orientation of this object",
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-24",
-													"items" : [ "default", ",", "back", ",", "front", ",", "back_left", ",", "back_right", ",", "front_left", ",", "front_right", ",", "left", ",", "right", ",", "front_and_back" ],
-													"labelclick" : 1,
-													"maxclass" : "umenu",
-													"numinlets" : 1,
-													"numoutlets" : 3,
-													"outlettype" : [ "int", "", "" ],
-													"parameter_enable" : 0,
-													"patching_rect" : [ 1430.0, 294.5, 64.0, 19.0 ],
-													"presentation" : 1,
-													"presentation_rect" : [ 440.0, 524.0, 77.0, 19.0 ]
 												}
 
 											}
@@ -1281,7 +1476,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 35.0, 383.5, 122.0, 19.0 ],
+													"patching_rect" : [ 32.0, 128.5, 122.0, 19.0 ],
 													"text" : "prepend draw_buffer"
 												}
 
@@ -1297,7 +1492,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 35.0, 352.5, 387.0, 31.0 ],
+													"patching_rect" : [ 32.0, 97.5, 387.0, 31.0 ],
 													"text" : "j.parameter draw_buffer @type string @description \"Drawing buffer\" @default default",
 													"varname" : "render/context[1]"
 												}
@@ -1313,7 +1508,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 35.0, 281.5, 475.0, 19.0 ],
+													"patching_rect" : [ 32.0, 26.5, 475.0, 19.0 ],
 													"text" : "j.parameter doublebuffer @type boolean @description \"Enable double buffering\" @default 1"
 												}
 
@@ -1327,7 +1522,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 35.0, 301.5, 91.0, 17.0 ],
+													"patching_rect" : [ 32.0, 46.5, 91.0, 17.0 ],
 													"text" : "doublebuffer $1"
 												}
 
@@ -1343,7 +1538,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 351.0, 852.0, 203.0, 31.0 ],
+													"patching_rect" : [ 348.0, 597.0, 203.0, 31.0 ],
 													"text" : "j.parameter debug @type boolean @description \"Enable debugging\""
 												}
 
@@ -1357,7 +1552,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 351.0, 885.0, 59.0, 17.0 ],
+													"patching_rect" : [ 348.0, 630.0, 59.0, 17.0 ],
 													"text" : "debug $1"
 												}
 
@@ -1371,7 +1566,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 449.0, 805.5, 103.0, 19.0 ],
+													"patching_rect" : [ 446.0, 550.5, 103.0, 19.0 ],
 													"text" : "prepend texture"
 												}
 
@@ -1387,25 +1582,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 449.0, 774.5, 387.0, 31.0 ],
+													"patching_rect" : [ 446.0, 519.5, 387.0, 31.0 ],
 													"text" : "j.parameter copy_texture @type string @description \"Named texture to copy the framebuffer to\"",
 													"varname" : "render/context[2]"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-													"fontname" : "Verdana",
-													"fontsize" : 10.0,
-													"id" : "obj-10",
-													"linecount" : 2,
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 22.0, 14.0, 293.0, 31.0 ],
-													"text" : "j.parameter erase_color @type array @dataspace color @description \"the erase color\""
 												}
 
 											}
@@ -1416,15 +1595,6 @@
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-1", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-16", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-10", 0 ]
 												}
 
 											}
@@ -1443,42 +1613,6 @@
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-14", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-24", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-15", 2 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-28", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-15", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-8", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-16", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-8", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-17", 0 ]
 												}
 
 											}
@@ -1511,47 +1645,10 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-15", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"midpoints" : [ 1462.0, 319.5, 1426.0, 319.5, 1426.0, 241.5, 1439.5, 241.5 ],
-													"source" : [ "obj-24", 1 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-24", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-28", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
 													"destination" : [ "obj-8", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-3", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-8", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-30", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-30", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-31", 0 ]
 												}
 
 											}
@@ -1632,7 +1729,7 @@
 													"destination" : [ "obj-43", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [ 527.0, 747.5, 491.0, 747.5, 491.0, 669.5, 504.5, 669.5 ],
+													"midpoints" : [ 524.0, 492.5, 488.0, 492.5, 488.0, 414.5, 501.5, 414.5 ],
 													"source" : [ "obj-44", 1 ]
 												}
 
@@ -1678,60 +1775,6 @@
 													"destination" : [ "obj-8", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
-													"source" : [ "obj-49", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-49", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-50", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-8", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-51", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-17", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-52", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-51", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-53", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-60", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-55", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-8", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
 													"source" : [ "obj-57", 0 ]
 												}
 
@@ -1751,15 +1794,6 @@
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-6", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-8", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-60", 0 ]
 												}
 
 											}
@@ -1911,7 +1945,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 307.0, 74.0, 50.0, 17.0 ],
-					"text" : "25."
+					"text" : "25"
 				}
 
 			}
@@ -2347,8 +2381,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 83.0, 131.0, 24.0 ],
-					"text" : "j.gl_group.model"
+					"patching_rect" : [ 9.0, 83.0, 154.0, 24.0 ],
+					"text" : "j.gl_group.model GL"
 				}
 
 			}
@@ -2374,7 +2408,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 473.25, 144.0, 156.75, 43.0 ],
+					"patching_rect" : [ 473.25, 144.0, 159.0, 43.0 ],
 					"text" : "j.model #1 @tag OpenGL @description \"create a GL render context.\""
 				}
 
