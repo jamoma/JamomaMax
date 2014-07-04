@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 632.0, 222.0, 1048.0, 549.0 ],
+		"rect" : [ 291.0, 180.0, 1048.0, 549.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,22 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 11.0,
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 462.8125, 489.072418, 128.0, 19.0 ],
+					"text" : "j.send loop/points:range",
+					"varname" : "loop[2]"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Arial",
@@ -1655,8 +1671,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 160.0, 54.0, 374.0, 31.0 ],
-									"text" : "j.parameter loop/points @type array @description \"List of low and high loop point values\" @range 0 10000 @clipmode low",
+									"patching_rect" : [ 160.0, 54.0, 337.0, 31.0 ],
+									"text" : "j.parameter loop/points @type array @description \"List of low and high loop point values\" @range 0 100 @clipmode low",
 									"varname" : "loop[3]"
 								}
 
@@ -2549,6 +2565,16 @@
 					"hidden" : 0,
 					"midpoints" : [ 168.5, 204.0, 40.0, 204.0 ],
 					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 354.3125, 486.0, 472.3125, 486.0 ],
+					"source" : [ "obj-17", 0 ]
 				}
 
 			}

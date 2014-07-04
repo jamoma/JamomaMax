@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -72,6 +72,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-24",
@@ -100,6 +101,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-20",
@@ -107,7 +109,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 115.0, 229.0, 131.0, 19.0 ],
+					"patching_rect" : [ 115.0, 230.0, 131.0, 19.0 ],
 					"text" : "j.receive model:address"
 				}
 
@@ -125,15 +127,16 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-23",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 408.0, 223.0, 230.0, 31.0 ],
+					"patching_rect" : [ 408.0, 206.0, 204.0, 43.0 ],
 					"text" : "j.model @description \"Write data to a text file with a timestamp for each value.\"",
 					"varname" : "j.model"
 				}
@@ -177,7 +180,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "open" ],
-					"patching_rect" : [ 225.0, 176.0, 41.0, 19.0 ],
+					"patching_rect" : [ 136.0, 188.0, 41.0, 19.0 ],
 					"text" : "t open"
 				}
 
@@ -204,7 +207,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 340.5, 174.0, 15.0, 15.0 ]
+					"patching_rect" : [ 340.5, 169.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -347,6 +350,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1007",
@@ -363,6 +367,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1009",
@@ -379,6 +384,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1012",
@@ -394,6 +400,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.427451, 0.427451, 0.427451, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1013",
@@ -401,13 +408,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 446.0, 157.0, 56.0, 19.0 ],
+					"patching_rect" : [ 446.0, 157.0, 37.0, 19.0 ],
 					"text" : "j.in 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1016",
@@ -428,7 +436,7 @@
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 234.5, 200.0, 103.5, 200.0 ],
+					"midpoints" : [ 145.5, 218.0, 103.5, 218.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 

@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -29,6 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-39",
@@ -162,7 +163,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 27.0, 662.0, 50.0, 19.0 ],
+					"patching_rect" : [ 27.0, 662.0, 54.0, 19.0 ],
 					"text" : "gate 2 1"
 				}
 
@@ -176,7 +177,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "int", "int" ],
-					"patching_rect" : [ 27.0, 688.0, 59.0, 19.0 ],
+					"patching_rect" : [ 27.0, 694.0, 59.0, 19.0 ],
 					"text" : "change 0."
 				}
 
@@ -232,7 +233,7 @@
 					"fontsize" : 10.0,
 					"id" : "obj-17",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 154.0, 579.0, 135.0, 19.0 ],
@@ -364,7 +365,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 165.0, 277.0, 70.0, 19.0 ],
+					"patching_rect" : [ 165.0, 281.0, 70.0, 19.0 ],
 					"text" : "gate 2 1"
 				}
 
@@ -399,6 +400,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1003",
@@ -415,6 +417,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1005",
@@ -423,7 +426,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 75.5, 67.0, 290.0, 31.0 ],
+					"patching_rect" : [ 75.5, 67.0, 234.0, 31.0 ],
 					"text" : "j.parameter clip @type boolean @clipmode none @description \"Turn clipping on.\"",
 					"varname" : "clip[1]"
 				}
@@ -431,6 +434,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1007",
@@ -439,7 +443,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 165.0, 163.0, 298.0, 31.0 ],
+					"patching_rect" : [ 165.0, 163.0, 257.0, 31.0 ],
 					"text" : "j.parameter smooth @type boolean @clipmode none @description \"Turn smoothing on\"",
 					"varname" : "smooth[1]"
 				}
@@ -447,6 +451,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1009",
@@ -455,7 +460,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 290.0, 231.0, 326.0, 31.0 ],
+					"patching_rect" : [ 290.0, 231.0, 283.0, 31.0 ],
 					"text" : "j.parameter smooth/value @type decimal @clipmode none @description \"Smoothing value (slide).\"",
 					"varname" : "smooth/value"
 				}
@@ -463,6 +468,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1012",
@@ -471,7 +477,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 312.0, 463.0, 361.0, 31.0 ],
+					"patching_rect" : [ 312.0, 463.0, 322.0, 31.0 ],
 					"text" : "j.parameter scale/output/max @type decimal @clipmode none @description \"Output maximum scaling value.\"",
 					"varname" : "scale/output/max"
 				}
@@ -479,6 +485,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1014",
@@ -487,7 +494,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 232.0, 422.0, 352.0, 31.0 ],
+					"patching_rect" : [ 232.0, 422.0, 302.0, 31.0 ],
 					"text" : "j.parameter scale/output/min @type decimal @clipmode none @description \"Input minimum scaling value.\"",
 					"varname" : "scale/output/min"
 				}
@@ -495,6 +502,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1016",
@@ -503,7 +511,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 210.0, 382.0, 422.0, 31.0 ],
+					"patching_rect" : [ 210.0, 382.0, 406.0, 31.0 ],
 					"text" : "j.parameter scale/input/max @type decimal @clipmode none @description \"Input maximum scaling value. Only works in manual scaling mode.\"",
 					"varname" : "scale/input/max"
 				}
@@ -511,6 +519,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1018",
@@ -519,7 +528,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 165.0, 347.0, 419.0, 31.0 ],
+					"patching_rect" : [ 165.0, 347.0, 383.0, 31.0 ],
 					"text" : "j.parameter scale/input/min @type decimal @clipmode none @description \"Input minimum scaling value. Only works in manual scaling mode.\"",
 					"varname" : "scale/input/min"
 				}
@@ -541,6 +550,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1035",
@@ -549,7 +559,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 103.0, 115.0, 587.0, 31.0 ],
+					"patching_rect" : [ 103.0, 115.0, 329.0, 31.0 ],
 					"text" : "j.parameter scale @type integer @clipmode none @description \"Choose scaling mode: none - manual - auto.\"",
 					"varname" : "scale[1]"
 				}
@@ -707,7 +717,7 @@
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 67.5, 682.0, 112.5, 682.0 ],
+					"midpoints" : [ 71.5, 689.0, 112.5, 689.0 ],
 					"source" : [ "obj-12", 1 ]
 				}
 
