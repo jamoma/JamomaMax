@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 25.0, 69.0, 838.0, 530.0 ],
+		"rect" : [ 25.0, 69.0, 498.0, 514.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -29,46 +29,17 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-6",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 483.0, 414.0, 60.0, 20.0 ],
-					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 0.499132, 1.0 ],
-					"bgcolor2" : [ 1.0, 1.0, 0.498915, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 18.0,
-					"gradient" : 1,
-					"id" : "obj-7",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 483.0, 446.0, 329.0, 25.0 ],
-					"text" : "\"j.class.gl_slab.inspect is deprecated…\"",
-					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-8",
-					"maxclass" : "newobj",
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-12",
+					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 483.0, 487.0, 95.0, 20.0 ],
-					"text" : "print WARNING"
+					"patching_rect" : [ 30.0, 30.0, 55.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 10.0, 89.0, 55.0, 19.0 ],
+					"text" : "Context"
 				}
 
 			}
@@ -76,13 +47,83 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"id" : "obj-1",
-					"maxclass" : "message",
+					"frgb" : 0.0,
+					"id" : "obj-123",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 30.0, 93.5, 51.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 190.0, 110.0, 51.0, 19.0 ],
+					"text" : "Antialias"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-125",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 30.0, 158.5, 45.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 195.0, 89.0, 45.0, 19.0 ],
+					"text" : "active"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-7",
+					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 733.0, 238.0, 44.0, 17.0 ],
-					"text" : "0 0 1 1"
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 367.0, 165.787109, 58.0, 19.0 ],
+					"text" : "route text"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 367.0, 187.787109, 132.0, 19.0 ],
+					"text" : "j.remote context",
+					"varname" : "render/context"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "The named drawing context in which to draw.",
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-1",
+					"keymode" : 1,
+					"linecount" : 3,
+					"lines" : 1,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 327.0, 187.787109, 37.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 85.0, 89.0, 110.0, 18.0 ],
+					"text" : "my_context",
+					"varname" : "Context"
 				}
 
 			}
@@ -91,12 +132,106 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-2",
-					"maxclass" : "message",
-					"numinlets" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 349.0, 316.287109, 128.0, 19.0 ],
+					"text" : "j.remote active",
+					"varname" : "render/enable"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-40",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 349.0, 282.287109, 145.0, 19.0 ],
+					"text" : "j.remote automatic",
+					"varname" : "render/automatic"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 350.0, 251.287109, 136.0, 19.0 ],
+					"text" : "j.remote antialias",
+					"varname" : "render/antialias"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "Automatic rendering flag.",
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"disabled" : [ 0 ],
+					"id" : "obj-122",
+					"itemtype" : 1,
+					"maxclass" : "radiogroup",
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 685.0, 94.0, 52.0, 17.0 ],
-					"text" : "720 480"
+					"parameter_enable" : 0,
+					"patching_rect" : [ 327.0, 282.287109, 18.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 134.5, 110.0, 23.0, 18.0 ],
+					"size" : 1,
+					"values" : [ 1 ],
+					"varname" : "RenderAutomatic"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "Aliasing flag.",
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"disabled" : [ 0 ],
+					"id" : "obj-124",
+					"itemtype" : 1,
+					"maxclass" : "radiogroup",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 328.0, 251.287109, 18.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 238.0, 110.0, 73.0, 18.0 ],
+					"size" : 1,
+					"values" : [ 0 ],
+					"varname" : "Antialias"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "Enable drawing.",
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"disabled" : [ 0 ],
+					"id" : "obj-126",
+					"itemtype" : 1,
+					"maxclass" : "radiogroup",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 327.0, 316.287109, 18.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 238.0, 89.0, 23.0, 18.0 ],
+					"size" : 1,
+					"values" : [ 1 ],
+					"varname" : "RenderEnable"
 				}
 
 			}
@@ -141,16 +276,16 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-9",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 234.0, 372.0, 518.0, 31.0 ],
-					"text" : "j.parameter slab/texrect @type array @ramp/drive none @description \"The extent or rectangular coordinates bounding the texture coordinates for the slab geometry (default = 0 0 1 1).\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 234.0, 372.0, 92.0, 19.0 ],
+					"text" : "j.remote texrect",
 					"varname" : "slab/texrect"
 				}
 
@@ -171,16 +306,16 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-15",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 206.0, 270.0, 429.0, 31.0 ],
-					"text" : "j.parameter slab/rect @type array @ramp/drive none @description \"The extent or rectangular coordinates bounding the slab geometry (default = 0 0 1 1).\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 210.0, 267.0, 76.0, 19.0 ],
+					"text" : "j.remote rect",
 					"varname" : "slab/rect"
 				}
 
@@ -201,32 +336,32 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-18",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 95.0, 199.0, 379.0, 31.0 ],
-					"text" : "j.parameter slab/adapt @type boolean @description \"Enables or disables adapting and resizing to input source dimensions (default = 1).\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 95.0, 199.0, 85.0, 19.0 ],
+					"text" : "j.remote adapt",
 					"varname" : "slab/adapt"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-21",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 271.0, 126.0, 460.0, 31.0 ],
-					"text" : "j.parameter slab/dim @type array @ramp/drive none @description \"The dimensions of the output jit.gl.texture object when adapt is disabled (default = 720 480).\"",
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 271.0, 126.0, 76.0, 19.0 ],
+					"text" : "j.remote dim",
 					"varname" : "slab/dim"
 				}
 
@@ -297,38 +432,6 @@
 					"size" : 1,
 					"values" : [ 1 ],
 					"varname" : "ADAPT"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-28",
-					"maxclass" : "textbutton",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 685.0, 30.0, 100.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 170.0, 10.0, 85.0, 18.0 ],
-					"rounded" : 8.0,
-					"text" : "Defaults"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-29",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "bang", "int", "bang" ],
-					"patching_rect" : [ 685.0, 55.0, 67.0, 19.0 ],
-					"text" : "t b 1 b"
 				}
 
 			}
@@ -531,6 +634,22 @@
 			}
 , 			{
 				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"frgb" : 0.0,
+					"id" : "obj-121",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 30.0, 124.5, 59.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 76.5, 110.0, 69.0, 19.0 ],
+					"text" : "Automatic"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"background" : 1,
 					"id" : "obj-5",
 					"maxclass" : "panel",
@@ -538,27 +657,16 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 326.0, 418.0, 143.0, 27.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1.0, 4.0, 265.0, 88.0 ]
+					"presentation_rect" : [ 1.0, 4.0, 265.0, 164.5 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
+					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 742.5, 262.0, 639.0, 262.0, 639.0, 262.0, 215.5, 262.0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 742.5, 362.0, 243.5, 362.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -609,6 +717,33 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-10", 10 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-122", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-124", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-126", 0 ]
 				}
 
 			}
@@ -681,10 +816,9 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-21", 0 ],
+					"destination" : [ "obj-126", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 694.5, 118.0, 280.5, 118.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -743,43 +877,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-25", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-29", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-28", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-29", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 718.5, 83.0, 104.0, 83.0, 104.0, 105.0, 104.5, 105.0 ],
-					"source" : [ "obj-29", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-29", 0 ]
 				}
 
 			}
@@ -875,7 +972,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-122", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-40", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-124", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-6", 0 ]
@@ -893,6 +999,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-10", 10 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -904,12 +1019,12 @@
 		"dependency_cache" : [ 			{
 				"name" : "j.list2parameter.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../data/list2parameter",
+				"patcherrelativepath" : "../data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.parameter.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
  ]
