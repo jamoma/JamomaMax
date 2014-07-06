@@ -171,7 +171,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 845.0, 136.0, 113.0, 20.0 ],
-									"text" : "j.octavebandwith2q"
+									"text" : "j.octavebandwidth2q"
 								}
 
 							}
@@ -305,7 +305,7 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "j.octavebandwith2q", "@description", "Convert filter octave bandwith to resonance/slope" ],
+									"args" : [ "@name", "j.octavebandwidth2q", "@description", "Convert filter octave bandwidth to resonance/slope" ],
 									"bgmode" : 1,
 									"id" : "obj-4",
 									"maxclass" : "bpatcher",
@@ -540,8 +540,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.octavebandwith2q.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwith2q",
+				"name" : "j.octavebandwidth2q.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
