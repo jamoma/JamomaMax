@@ -8,7 +8,7 @@
 			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 0.0, 96.0, 1462.0, 852.0 ],
+		"rect" : [ 0.0, 96.0, 1219.0, 870.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -31,13 +31,72 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 741.1875, 363.0, 113.0, 20.0 ],
+					"text" : "j.octavebandwidth2q"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-14",
+					"linecount" : 10,
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 741.1875, 171.0, 151.0, 141.0 ],
+					"text" : "j.parameterArray filter.[6]/octave_bandwidth @type decimal @ramp/drive scheduler @range 0.01 10. @clipmode both @repetitions/filter 1 @description \"Filter bandwidth/slope width in octaves.\" @priority 5"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-24",
+					"linecount" : 12,
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 399.0625, 171.0, 138.0, 167.0 ],
+					"text" : "j.parameterArray filter.[6]/frequency @type decimal @range 30. 11025. @clipmode both @ramp/drive scheduler @repetitions/filter 1 @dataspace pitch @dataspace/unit Hz @priority 3 @description \"Center frequency (Hz)\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-27",
+					"linecount" : 9,
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 228.0, 171.0, 160.0, 127.0 ],
+					"text" : "j.parameterArray filter.[6]/type @type string @priority 2 @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf | resonant | allpass \""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-15",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 898.71875, 321.0, 113.0, 20.0 ],
-					"text" : "j.q2octavebandwith"
+					"patching_rect" : [ 903.3125, 284.5, 113.0, 20.0 ],
+					"text" : "j.q2octavebandwidth"
 				}
 
 			}
@@ -51,7 +110,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 938.71875, 186.0, 87.0, 22.0 ],
+					"patching_rect" : [ 943.3125, 143.0, 87.0, 22.0 ],
 					"text" : "Deprecated:",
 					"textcolor" : [ 1.0, 0.497094, 0.0, 1.0 ]
 				}
@@ -68,7 +127,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 898.71875, 214.0, 199.0, 100.0 ],
+					"patching_rect" : [ 903.3125, 171.0, 199.0, 100.0 ],
 					"text" : "j.messageArray filter.[6]/q @type decimal @ramp/drive scheduler @range 0. 100. @clipmode both @repetitions/filter 1 @description \"Resonance (Q) is deprecated, use octave_bandwidth instead.\" @priority 4"
 				}
 
@@ -110,7 +169,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 314.0, 478.0, 101.0, 20.0 ],
+					"patching_rect" : [ 298.5, 478.0, 101.0, 20.0 ],
 					"text" : "prepend whichfilt"
 				}
 
@@ -1097,7 +1156,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 228.0, 92.0, 1104.3125, 20.0 ],
+					"patching_rect" : [ 228.0, 92.0, 874.3125, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1124,7 +1183,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 662.125, 363.0, 39.0, 20.0 ],
+					"patching_rect" : [ 570.125, 363.0, 39.0, 20.0 ],
 					"text" : "dbtoa"
 				}
 
@@ -1138,7 +1197,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 314.0, 449.0, 32.5, 20.0 ],
+					"patching_rect" : [ 298.5, 449.0, 32.5, 20.0 ],
 					"text" : "- 1"
 				}
 
@@ -1148,58 +1207,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-13",
-					"linecount" : 7,
+					"linecount" : 10,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 662.125, 237.0, 182.0, 100.0 ],
-					"text" : "j.parameterArray filter.[6]/gain @type decimal @range -24 24 @clipmode both @ramp/drive scheduler @repetitions/filter 1 @dataspace/unit dB @priority 3 @dataspace gain @description \"Gain (dB)\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-24",
-					"linecount" : 9,
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 445.0625, 237.0, 184.0, 127.0 ],
-					"text" : "j.parameterArray filter.[6]/frequency @type decimal @range 30. 11025. @clipmode both @ramp/drive scheduler @repetitions/filter 1 @dataspace pitch @dataspace/unit Hz @priority 2 @description \"Center frequency (Hz)\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-14",
-					"linecount" : 6,
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 879.1875, 348.0, 236.0625, 87.0 ],
-					"text" : "j.parameterArray filter.[6]/octave_bandwith @type decimal @ramp/drive scheduler @range 0.01 10. @clipmode both @repetitions/filter 1 @description \"Filter bandwidth/slope width in octaves.\" @priority 4"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-27",
-					"linecount" : 7,
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 228.0, 237.0, 191.0, 100.0 ],
-					"text" : "j.parameterArray filter.[6]/type @type string @priority 1 @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf | resonant | allpass \""
+					"patching_rect" : [ 570.125, 171.0, 151.0, 141.0 ],
+					"text" : "j.parameterArray filter.[6]/gain @type decimal @range -24 24 @clipmode both @ramp/drive scheduler @repetitions/filter 1 @dataspace/unit dB @priority 4 @dataspace gain @description \"Gain (dB)\""
 				}
 
 			}
@@ -1223,12 +1237,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-18",
+					"linecount" : 9,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 228.0, 29.0, 1000.0, 20.0 ],
-					"text" : "j.parameter bands @type integer @priority -1 @description \"Number of bands of the filter\" @tag setup @repetitions/filter 1 @clipmode both @range 1 24",
+					"patching_rect" : [ 77.0, 60.0, 132.0, 127.0 ],
+					"text" : "j.parameter bands @type integer @priority 1 @description \"Number of bands of the filter\" @tag setup @repetitions/filter 1 @clipmode both @range 1 24",
 					"varname" : "bands[1]"
 				}
 
@@ -1431,7 +1446,7 @@
 					"destination" : [ "obj-44", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 323.5, 504.0, 237.5, 504.0 ],
+					"midpoints" : [ 308.0, 504.0, 237.5, 504.0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -1469,7 +1484,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 753.125, 429.5, 323.5, 429.5 ],
+					"midpoints" : [ 645.625, 429.5, 308.0, 429.5 ],
 					"source" : [ "obj-13", 1 ]
 				}
 
@@ -1485,10 +1500,9 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-23", 7 ],
+					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 888.6875, 578.5, 360.199982, 578.5 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -1499,7 +1513,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 997.21875, 438.0, 323.5, 438.0 ],
+					"midpoints" : [ 816.6875, 438.0, 308.0, 438.0 ],
 					"source" : [ "obj-14", 1 ]
 				}
 
@@ -1510,6 +1524,16 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 7 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 750.6875, 578.5, 360.199982, 578.5 ],
+					"source" : [ "obj-17", 0 ]
 				}
 
 			}
@@ -1565,7 +1589,7 @@
 					"destination" : [ "obj-23", 5 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 454.5625, 561.5, 325.142844, 561.5 ],
+					"midpoints" : [ 408.5625, 561.5, 325.142844, 561.5 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -1576,7 +1600,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 537.0625, 424.0, 323.5, 424.0 ],
+					"midpoints" : [ 468.0625, 424.0, 308.0, 424.0 ],
 					"source" : [ "obj-24", 1 ]
 				}
 
@@ -1678,7 +1702,7 @@
 					"destination" : [ "obj-23", 6 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 671.625, 570.5, 342.671413, 570.5 ],
+					"midpoints" : [ 579.625, 570.5, 342.671413, 570.5 ],
 					"source" : [ "obj-52", 0 ]
 				}
 
@@ -1802,9 +1826,16 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.q2octavebandwith.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
-				"patcherrelativepath" : "../../../../components/audio/q2octavebandwith",
+				"name" : "j.q2octavebandwidth.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwidth",
+				"patcherrelativepath" : "../../../../../components/audio/q2octavebandwidth",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.octavebandwidth2q.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"patcherrelativepath" : "../../../../../components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}

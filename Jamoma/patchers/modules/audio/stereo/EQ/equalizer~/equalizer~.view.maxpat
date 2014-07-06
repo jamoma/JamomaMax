@@ -116,7 +116,7 @@
 							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 386.0, 543.0, 581.0, 424.0 ],
+						"rect" : [ 199.0, 91.0, 581.0, 424.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -922,7 +922,7 @@
 					"fontsize" : 12.0,
 					"id" : "obj-15",
 					"maxclass" : "number",
-					"maximum" : 8,
+					"maximum" : 16,
 					"minimum" : 1,
 					"mouseup" : 1,
 					"numinlets" : 1,
@@ -1201,29 +1201,29 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "equalizer~views.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.octavebandwith2q.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwith2q",
-				"patcherrelativepath" : "../../../../components/audio/octavebandwith2q",
+				"name" : "j.octavebandwidth2q.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"patcherrelativepath" : "../../../../../components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.q2octavebandwith.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
-				"patcherrelativepath" : "../../../../components/audio/q2octavebandwith",
+				"name" : "j.q2octavebandwidth.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwidth",
+				"patcherrelativepath" : "../../../../../components/audio/q2octavebandwidth",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}

@@ -163,7 +163,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 553.0, 326.0, 185.0, 20.0 ],
-					"text" : "combine prefix /octave_bandwith"
+					"text" : "combine prefix /octave_bandwidth"
 				}
 
 			}
@@ -401,7 +401,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 170.0, 155.0, 113.0, 20.0 ],
-									"text" : "j.q2octavebandwith"
+									"text" : "j.q2octavebandwidth"
 								}
 
 							}
@@ -740,7 +740,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 355.0, 150.0, 113.0, 20.0 ],
-									"text" : "j.octavebandwith2q"
+									"text" : "j.octavebandwidth2q"
 								}
 
 							}
@@ -1459,7 +1459,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 392.0, 373.0, 147.0, 20.0 ],
-					"text" : "j.remote octave_bandwith"
+					"text" : "j.remote octave_bandwidth"
 				}
 
 			}
@@ -1934,16 +1934,16 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.octavebandwith2q.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwith2q",
-				"patcherrelativepath" : "../../../../components/audio/octavebandwith2q",
+				"name" : "j.octavebandwidth2q.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"patcherrelativepath" : "../../../../components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.q2octavebandwith.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
-				"patcherrelativepath" : "../../../../components/audio/q2octavebandwith",
+				"name" : "j.q2octavebandwidth.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwidth",
+				"patcherrelativepath" : "../../../../components/audio/q2octavebandwidth",
 				"type" : "JSON",
 				"implicit" : 1
 			}
