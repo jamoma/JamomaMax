@@ -39,7 +39,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 550.0, 339.0, 83.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 147.0, 47.0, 116.0, 17.0 ],
+					"presentation_rect" : [ 147.0, 47.0, 116.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.text",
@@ -117,7 +117,7 @@
 				"box" : 				{
 					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated..",
 					"bgcolor" : [ 0.909804, 0.909804, 0.909804, 1.0 ],
-					"bordercolor" : [ 0.0, 0.019608, 0.078431, 1.0 ],
+					"bordercolor" : [ 0.27451, 0.32549, 0.4, 1.0 ],
 					"fgcolor" : [ 0.94902, 0.756863, 0.309804, 1.0 ],
 					"fontface" : 1,
 					"fontname" : "Arial",
@@ -129,10 +129,10 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 245.0, 160.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 47.0, 116.0, 18.0 ],
+					"presentation_rect" : [ 10.0, 47.0, 116.0, 15.0 ],
 					"range" : [ -48.0, 18.0 ],
 					"text" : "Decay response",
-					"textpos" : [ 10.0, 3.0 ],
+					"textpos" : [ 10.0, 2.0 ],
 					"unit" : "dB"
 				}
 
@@ -141,7 +141,7 @@
 				"box" : 				{
 					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated..",
 					"bgcolor" : [ 0.909804, 0.909804, 0.909804, 1.0 ],
-					"bordercolor" : [ 0.0, 0.019608, 0.078431, 1.0 ],
+					"bordercolor" : [ 0.27451, 0.32549, 0.4, 1.0 ],
 					"fgcolor" : [ 0.94902, 0.756863, 0.309804, 1.0 ],
 					"fontface" : 1,
 					"fontname" : "Arial",
@@ -153,10 +153,10 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 150.0, 160.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 25.0, 116.0, 18.0 ],
+					"presentation_rect" : [ 10.0, 25.0, 116.0, 15.0 ],
 					"range" : [ -48.0, 18.0 ],
 					"text" : "Attack response",
-					"textpos" : [ 10.0, 3.0 ],
+					"textpos" : [ 10.0, 2.0 ],
 					"unit" : "dB"
 				}
 
@@ -165,7 +165,7 @@
 				"box" : 				{
 					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated..",
 					"bgcolor" : [ 0.909804, 0.909804, 0.909804, 1.0 ],
-					"bordercolor" : [ 0.0, 0.019608, 0.078431, 1.0 ],
+					"bordercolor" : [ 0.27451, 0.32549, 0.4, 1.0 ],
 					"fgcolor" : [ 0.94902, 0.756863, 0.309804, 1.0 ],
 					"fontface" : 1,
 					"fontname" : "Arial",
@@ -177,11 +177,11 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 65.0, 160.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 147.0, 25.0, 116.0, 18.0 ],
+					"presentation_rect" : [ 147.0, 25.0, 116.0, 15.0 ],
 					"prototypename" : "M4L",
 					"range" : [ -48.0, 18.0 ],
 					"text" : "Threshold",
-					"textpos" : [ 10.0, 3.0 ],
+					"textpos" : [ 10.0, 2.0 ],
 					"unit" : "dB"
 				}
 
@@ -262,11 +262,11 @@
 					"id" : "obj-50",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -358,8 +358,26 @@
 					"destination" : [ "obj-66", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"source" : [ "obj-61", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-66", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
 					"midpoints" : [ 559.5, 126.0, 540.0, 126.0, 540.0, 58.0, 559.5, 58.0 ],
 					"source" : [ "obj-61", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-67", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-62", 2 ]
 				}
 
 			}
@@ -378,8 +396,26 @@
 					"destination" : [ "obj-69", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"source" : [ "obj-63", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
 					"midpoints" : [ 559.5, 308.0, 542.0, 308.0, 542.0, 235.0, 559.5, 235.0 ],
 					"source" : [ "obj-63", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-64", 2 ]
 				}
 
 			}
