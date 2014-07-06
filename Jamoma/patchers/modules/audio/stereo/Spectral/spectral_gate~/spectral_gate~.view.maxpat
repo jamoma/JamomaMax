@@ -2,10 +2,10 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 101.0, 81.0, 985.0, 505.0 ],
@@ -29,6 +29,35 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"automation" : "Invert Off",
+					"id" : "obj-4",
+					"maxclass" : "live.text",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 550.0, 339.0, 83.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 147.0, 47.0, 116.0, 17.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "live.text",
+							"parameter_shortname" : "live.text",
+							"parameter_type" : 2,
+							"parameter_mmax" : 1.0,
+							"parameter_enum" : [ "Invert Off", "val2" ]
+						}
+
+					}
+,
+					"text" : "Invert Off",
+					"texton" : "Invert On",
+					"varname" : "live.text"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -87,56 +116,22 @@
 , 			{
 				"box" : 				{
 					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated..",
-					"defaultvalue" : 100.0,
+					"bgcolor" : [ 0.909804, 0.909804, 0.909804, 1.0 ],
+					"bordercolor" : [ 0.0, 0.019608, 0.078431, 1.0 ],
+					"fgcolor" : [ 0.94902, 0.756863, 0.309804, 1.0 ],
+					"fontface" : 1,
 					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-69",
+					"knobcolor" : [ 0.94902, 0.756863, 0.309804, 1.0 ],
 					"maxclass" : "j.textslider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 550.0, 245.0, 173.0, 20.0 ],
+					"patching_rect" : [ 550.0, 245.0, 160.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 47.0, 126.0, 18.0 ],
-					"text" : "Decay response",
-					"textpos" : [ 10.0, 3.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated..",
-					"defaultvalue" : 100.0,
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-67",
-					"maxclass" : "j.textslider",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 550.0, 150.0, 171.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 25.0, 124.0, 18.0 ],
-					"text" : "Attack response",
-					"textpos" : [ 10.0, 3.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated..",
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-66",
-					"maxclass" : "j.textslider",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 550.0, 65.0, 172.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 147.0, 25.0, 125.0, 18.0 ],
+					"presentation_rect" : [ 10.0, 47.0, 116.0, 18.0 ],
 					"range" : [ -48.0, 18.0 ],
-					"text" : "Threshold",
+					"text" : "Decay response",
 					"textpos" : [ 10.0, 3.0 ],
 					"unit" : "dB"
 				}
@@ -144,21 +139,50 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated.",
+					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated..",
+					"bgcolor" : [ 0.909804, 0.909804, 0.909804, 1.0 ],
+					"bordercolor" : [ 0.0, 0.019608, 0.078431, 1.0 ],
+					"fgcolor" : [ 0.94902, 0.756863, 0.309804, 1.0 ],
+					"fontface" : 1,
 					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-65",
-					"maxclass" : "textbutton",
-					"mode" : 1,
+					"id" : "obj-67",
+					"knobcolor" : [ 0.94902, 0.756863, 0.309804, 1.0 ],
+					"maxclass" : "j.textslider",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 550.0, 345.0, 100.0, 20.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 550.0, 150.0, 160.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 147.0, 47.0, 125.0, 18.0 ],
-					"text" : "Invert Off",
-					"texton" : "Invert On"
+					"presentation_rect" : [ 10.0, 25.0, 116.0, 18.0 ],
+					"range" : [ -48.0, 18.0 ],
+					"text" : "Attack response",
+					"textpos" : [ 10.0, 3.0 ],
+					"unit" : "dB"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "Sets the threshold below which a bin of the spectrum is attenuated..",
+					"bgcolor" : [ 0.909804, 0.909804, 0.909804, 1.0 ],
+					"bordercolor" : [ 0.0, 0.019608, 0.078431, 1.0 ],
+					"fgcolor" : [ 0.94902, 0.756863, 0.309804, 1.0 ],
+					"fontface" : 1,
+					"fontname" : "Arial",
+					"id" : "obj-66",
+					"knobcolor" : [ 0.94902, 0.756863, 0.309804, 1.0 ],
+					"maxclass" : "j.textslider",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 550.0, 65.0, 160.0, 17.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 147.0, 25.0, 116.0, 18.0 ],
+					"prototypename" : "M4L",
+					"range" : [ -48.0, 18.0 ],
+					"text" : "Threshold",
+					"textpos" : [ 10.0, 3.0 ],
+					"unit" : "dB"
 				}
 
 			}
@@ -238,11 +262,11 @@
 					"id" : "obj-50",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/no_model_address"
+					"text" : "/noModelAddress"
 				}
 
 			}
@@ -290,6 +314,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -352,20 +385,11 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-65", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 559.5, 406.0, 544.0, 406.0, 544.0, 339.0, 559.5, 339.0 ],
+					"midpoints" : [ 559.5, 399.0, 540.5, 399.0, 540.5, 329.0, 559.5, 329.0 ],
 					"source" : [ "obj-64", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-64", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-65", 0 ]
 				}
 
 			}
@@ -397,6 +421,10 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-4" : [ "live.text", "live.text", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "j.view.mxo",
 				"type" : "iLaX"
