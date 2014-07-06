@@ -130,10 +130,8 @@
 					"patching_rect" : [ 550.0, 245.0, 160.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 10.0, 47.0, 116.0, 15.0 ],
-					"range" : [ -48.0, 18.0 ],
 					"text" : "Decay response",
-					"textpos" : [ 10.0, 2.0 ],
-					"unit" : "dB"
+					"textpos" : [ 10.0, 2.0 ]
 				}
 
 			}
@@ -154,10 +152,8 @@
 					"patching_rect" : [ 550.0, 150.0, 160.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 10.0, 25.0, 116.0, 15.0 ],
-					"range" : [ -48.0, 18.0 ],
 					"text" : "Attack response",
-					"textpos" : [ 10.0, 2.0 ],
-					"unit" : "dB"
+					"textpos" : [ 10.0, 2.0 ]
 				}
 
 			}
