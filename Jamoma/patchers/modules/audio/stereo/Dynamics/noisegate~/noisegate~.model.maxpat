@@ -2,13 +2,13 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1061.0, 640.0 ],
+		"rect" : [ 698.0, 155.0, 1061.0, 640.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -150,8 +150,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 113.0, 75.5, 594.0, 47.0 ],
-					"text" : "j.parameter release @type integer @ramp/drive Max @repetitions/filter 1 @range 0 1000 @clipmode both @description \"When the gate closes, this parameter sets how many milliseconds it will take to fade out.\" @dataspace time @dataspace/unit ms",
+					"patching_rect" : [ 113.0, 71.5, 582.0, 47.0 ],
+					"text" : "j.parameter release @type decimal @ramp/drive Max @repetitions/filter 1 @range 0 1000 @clipmode both @description \"When the gate closes, this parameter sets how many milliseconds it will take to fade out.\" @dataspace time @dataspace/unit ms",
 					"varname" : "release"
 				}
 
@@ -166,8 +166,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 33.0, 18.0, 600.0, 47.0 ],
-					"text" : "j.parameter attack @type integer @ramp/drive Max @repetitions/filter 1 @range 0 1000 @clipmode low @description \"When the gate opens, this parameter sets how many milliseconds it will take to fade in.\" @dataspace time @dataspace/unit ms",
+					"patching_rect" : [ 33.0, 18.0, 569.0, 47.0 ],
+					"text" : "j.parameter attack @type decimal @ramp/drive Max @repetitions/filter 1 @range 0 1000 @clipmode low @description \"When the gate opens, this parameter sets how many milliseconds it will take to fade in.\" @dataspace time @dataspace/unit ms",
 					"varname" : "attack"
 				}
 
@@ -411,7 +411,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 168.0, 333.0, 82.0, 18.0 ],
+					"patching_rect" : [ 172.0, 333.0, 82.0, 18.0 ],
 					"text" : "rampdown $1"
 				}
 
@@ -425,7 +425,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 88.0, 333.0, 67.0, 18.0 ],
+					"patching_rect" : [ 92.0, 333.0, 67.0, 18.0 ],
 					"text" : "rampup $1"
 				}
 
@@ -453,7 +453,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 763.0, 31.5, 131.0, 20.0 ],
+					"patching_rect" : [ 763.0, 31.5, 112.0, 20.0 ],
 					"text" : "Noise gate - stereo"
 				}
 
@@ -574,7 +574,7 @@
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 177.5, 404.5, 543.5, 404.5 ],
+					"midpoints" : [ 181.5, 404.5, 543.5, 404.5 ],
 					"source" : [ "obj-19", 0 ]
 				}
 
@@ -584,7 +584,7 @@
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 97.5, 404.5, 543.5, 404.5 ],
+					"midpoints" : [ 101.5, 404.5, 543.5, 404.5 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
