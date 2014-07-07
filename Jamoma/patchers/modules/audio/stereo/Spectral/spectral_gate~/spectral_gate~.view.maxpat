@@ -98,7 +98,8 @@
 							"parameter_type" : 0,
 							"parameter_mmin" : -48.0,
 							"parameter_mmax" : 18.0,
-							"parameter_unitstyle" : 4
+							"parameter_unitstyle" : 9,
+							"parameter_units" : "%.1f dB"
 						}
 
 					}
@@ -437,10 +438,10 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-3" : [ "live.dial[2]", "Decay", 0 ],
+			"obj-2" : [ "live.dial[1]", "Attack", 0 ],
 			"obj-4" : [ "live.text", "live.text", 0 ],
 			"obj-1" : [ "live.dial", "Threshold", 0 ],
-			"obj-2" : [ "live.dial[1]", "Attack", 0 ]
+			"obj-3" : [ "live.dial[2]", "Decay", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
