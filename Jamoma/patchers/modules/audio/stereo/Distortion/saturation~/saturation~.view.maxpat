@@ -84,7 +84,8 @@
 							"parameter_type" : 0,
 							"parameter_mmin" : -12.0,
 							"parameter_mmax" : 48.0,
-							"parameter_unitstyle" : 4
+							"parameter_unitstyle" : 9,
+							"parameter_units" : "%.1f dB"
 						}
 
 					}
@@ -278,11 +279,11 @@
 					"id" : "obj-29",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 105.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/no_..ess"
 				}
 
 			}
@@ -398,8 +399,8 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-8" : [ "live.menu", "live.menu", 0 ],
 			"obj-10" : [ "live.dial[1]", "Preamp", 0 ],
+			"obj-8" : [ "live.menu", "live.menu", 0 ],
 			"obj-2" : [ "Depth", "Depth", 0 ]
 		}
 ,
