@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 62.0, 149.0, 549.0, 550.0 ],
+		"rect" : [ 62.0, 149.0, 547.0, 589.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -301,7 +301,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.5, 382.0, 203.0, 130.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.5, 0.0, 542.0, 546.0 ],
+					"presentation_rect" : [ 0.5, 0.0, 542.0, 585.0 ],
 					"varname" : "view"
 				}
 

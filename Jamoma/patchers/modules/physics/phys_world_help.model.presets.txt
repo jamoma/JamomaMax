@@ -1,0 +1,46 @@
+
+- preset "gridshape"
+- description "something about this preset"
+# ###########################################
+# 
+myWorld/data/active 1
+myWorld/automatic 1
+myWorld/data/bypass 0
+myWorld/collisions 0
+myWorld/collisions_mode simple
+myWorld/context my_context
+myWorld/debug 1
+myWorld/dynamics 1
+myWorld/fixedtimestep 60
+myWorld/gravity 0.000000 -9.800000 0.000000
+myWorld/maxsubsteps 1
+myWorld/raytest_mode closest
+myWorld/split_impulse 1
+myWorld/worldbox 1
+myWorld/worldbox_scale 5.000000 5.000000 5.000000
+myWorld/worldname my_context-world
+# 
+# ###########################################
+
+- preset "phys_world"
+- description "something about this preset"
+# ###########################################
+# 
+myWorld/data/active 1
+myWorld/automatic 1
+myWorld/data/bypass 0
+myWorld/collisions 0
+myWorld/collisions_mode simple
+myWorld/context my_context
+myWorld/debug 1
+myWorld/dynamics 1
+myWorld/fixedtimestep 60
+myWorld/gravity 0 -9.800000 0
+myWorld/maxsubsteps 1
+myWorld/picker 1
+myWorld/raytest_mode closest
+myWorld/worldbox 1
+myWorld/worldbox_scale 5.000000 4.000000 5.000000
+myWorld/worldname my_context-world
+# 
+# ###########################################
