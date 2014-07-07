@@ -112,7 +112,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 123.0, 168.0, 40.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 210.0, 25.0, 40.0, 18.0 ],
+					"presentation_rect" : [ 210.0, 25.0, 55.0, 18.0 ],
 					"prototypename" : "Live",
 					"triscale" : 0.75,
 					"varname" : "Right[1]"
@@ -148,7 +148,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 123.0, 350.0, 40.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 78.0, 45.0, 40.0, 18.0 ],
+					"presentation_rect" : [ 78.0, 45.0, 55.0, 18.0 ],
 					"prototypename" : "Live",
 					"triscale" : 0.75,
 					"varname" : "Right"
@@ -184,7 +184,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 123.0, 260.0, 40.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 78.0, 25.0, 40.0, 18.0 ],
+					"presentation_rect" : [ 78.0, 25.0, 55.0, 18.0 ],
 					"prototypename" : "Live",
 					"triscale" : 0.75,
 					"varname" : "Left"
@@ -428,10 +428,6 @@
 
 			}
  ],
-		"parameters" : 		{
-
-		}
-,
 		"dependency_cache" : [ 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
