@@ -2,10 +2,10 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 0.0, 96.0, 1219.0, 870.0 ],
@@ -31,13 +31,36 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-24",
+					"linecount" : 10,
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 399.0625, 171.0, 164.0, 141.0 ],
+					"text" : "j.parameterArray filter.[6]/frequency @type decimal @range 20. 20000. @clipmode both @ramp/drive scheduler @repetitions/filter 1 @dataspace time @dataspace/unit Hz @priority 3 @description \"Center frequency (Hz)\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-17",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 741.1875, 363.0, 113.0, 20.0 ],
-					"text" : "j.octavebandwidth2q"
+					"patching_rect" : [ 741.1875, 363.0, 119.0, 20.0 ],
+					"text" : "j.octavebandwidth2q",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -60,21 +83,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-24",
-					"linecount" : 12,
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 399.0625, 171.0, 138.0, 167.0 ],
-					"text" : "j.parameterArray filter.[6]/frequency @type decimal @range 30. 11025. @clipmode both @ramp/drive scheduler @repetitions/filter 1 @dataspace pitch @dataspace/unit Hz @priority 3 @description \"Center frequency (Hz)\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-27",
 					"linecount" : 9,
 					"maxclass" : "newobj",
@@ -88,15 +96,23 @@
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-15",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 903.3125, 284.5, 113.0, 20.0 ],
-					"text" : "j.q2octavebandwidth"
+					"patching_rect" : [ 903.3125, 284.5, 119.0, 20.0 ],
+					"text" : "j.q2octavebandwidth",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -176,20 +192,27 @@
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-53",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 6,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "float", "", "float", "int", "" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x64"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 405.0, 68.0, 547.0, 332.0 ],
@@ -235,20 +258,27 @@
 							}
 , 							{
 								"box" : 								{
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-23",
+									"lockeddragscroll" : 0,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 5,
+									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "", "float", "", "float", "int" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 6,
-											"minor" : 1,
-											"revision" : 7,
-											"architecture" : "x64"
+											"major" : 7,
+											"minor" : 0,
+											"revision" : 0,
+											"architecture" : "x86"
 										}
 ,
 										"rect" : [ 82.0, 121.0, 549.0, 634.0 ],
@@ -294,20 +324,27 @@
 											}
 , 											{
 												"box" : 												{
+													"bgmode" : 0,
+													"border" : 0,
+													"clickthrough" : 0,
+													"enablehscroll" : 0,
+													"enablevscroll" : 0,
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-38",
+													"lockeddragscroll" : 0,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
+													"offset" : [ 0.0, 0.0 ],
 													"outlettype" : [ "" ],
 													"patcher" : 													{
 														"fileversion" : 1,
 														"appversion" : 														{
-															"major" : 6,
-															"minor" : 1,
-															"revision" : 7,
-															"architecture" : "x64"
+															"major" : 7,
+															"minor" : 0,
+															"revision" : 0,
+															"architecture" : "x86"
 														}
 ,
 														"rect" : [ 987.0, 395.0, 505.0, 412.0 ],
@@ -721,7 +758,8 @@
 														"tags" : ""
 													}
 ,
-													"text" : "p +"
+													"text" : "p +",
+													"viewvisibility" : 0
 												}
 
 											}
@@ -947,7 +985,8 @@
 										"tags" : ""
 									}
 ,
-									"text" : "p paramValues"
+									"text" : "p paramValues",
+									"viewvisibility" : 0
 								}
 
 							}
@@ -1170,7 +1209,8 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p resize"
+					"text" : "p resize",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -1281,7 +1321,7 @@
 					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 228.0, 610.0, 141.699982, 64.0 ],
-					"setfilter" : [ 3, 7, 1, 0, 0, 5000.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2, 5, 1, 0, 0, 1000.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 5, 1, 0, 0, 300.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 6, 1, 0, 0, 75.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+					"setfilter" : [ 3, 7, 1, 0, 0, 5000.0, 1.0, 1.414214, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2, 5, 1, 0, 0, 1000.0, 1.0, 1.414214, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 5, 1, 0, 0, 300.0, 1.0, 1.414214, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 6, 1, 0, 0, 75.0, 1.0, 1.414214, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 				}
 
 			}
@@ -1589,7 +1629,7 @@
 					"destination" : [ "obj-23", 5 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 408.5625, 561.5, 325.142844, 561.5 ],
+					"midpoints" : [ 408.5625, 561.5, 325.142853, 561.5 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -1600,7 +1640,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 468.0625, 424.0, 308.0, 424.0 ],
+					"midpoints" : [ 481.0625, 424.0, 308.0, 424.0 ],
 					"source" : [ "obj-24", 1 ]
 				}
 
@@ -1702,7 +1742,7 @@
 					"destination" : [ "obj-23", 6 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 579.625, 570.5, 342.671413, 570.5 ],
+					"midpoints" : [ 579.625, 570.5, 342.671417, 570.5 ],
 					"source" : [ "obj-52", 0 ]
 				}
 
@@ -1827,15 +1867,15 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.q2octavebandwidth.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwidth",
-				"patcherrelativepath" : "../../../../../components/audio/q2octavebandwidth",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.octavebandwidth2q.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
-				"patcherrelativepath" : "../../../../../components/audio/octavebandwidth2q",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
