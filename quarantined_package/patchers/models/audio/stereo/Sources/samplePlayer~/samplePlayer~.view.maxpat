@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"revision" : 8,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 807.0, 60.0, 653.0, 449.0 ],
@@ -41,8 +41,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"revision" : 8,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 287.0, 55.0, 271.0, 321.0 ],
@@ -485,8 +485,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 412.0, 35.0, 142.0, 20.0 ],
-					"text" : "j.receive~ out.2"
+					"patching_rect" : [ 412.0, 35.0, 127.0, 20.0 ],
+					"text" : "j.receive~ audio/out.R"
 				}
 
 			}
@@ -499,8 +499,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 412.0, 12.0, 142.0, 20.0 ],
-					"text" : "j.receive~ out.1"
+					"patching_rect" : [ 412.0, 12.0, 125.0, 20.0 ],
+					"text" : "j.receive~ audio/out.L"
 				}
 
 			}
@@ -746,8 +746,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"revision" : 8,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 231.0, 277.0, 525.0, 327.0 ],
@@ -902,8 +902,8 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
-											"architecture" : "x86"
+											"revision" : 8,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 25.0, 69.0, 308.0, 301.0 ],
@@ -2029,8 +2029,8 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
-											"architecture" : "x86"
+											"revision" : 8,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 40.0, 55.0, 238.0, 375.0 ],
@@ -2379,7 +2379,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 233.0, 436.0, 61.0, 17.0 ],
-									"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "grow", "close", "zoom", "nofloat", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 231, 277, 756, 604, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
+									"save" : [ "#N", "thispatcher", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
 									"text" : "thispatcher"
 								}
 
@@ -2806,7 +2806,7 @@
 									"destination" : [ "obj-77", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 809.166687, 369.0, 808.5, 369.0 ],
+									"midpoints" : [ 809.166667, 369.0, 808.5, 369.0 ],
 									"source" : [ "obj-48", 1 ]
 								}
 
@@ -2816,7 +2816,7 @@
 									"destination" : [ "obj-78", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 809.166687, 343.0, 833.5, 343.0 ],
+									"midpoints" : [ 809.166667, 343.0, 833.5, 343.0 ],
 									"source" : [ "obj-48", 1 ]
 								}
 
@@ -3322,7 +3322,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
-					"text" : "/noModelAddress"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -3676,7 +3676,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}

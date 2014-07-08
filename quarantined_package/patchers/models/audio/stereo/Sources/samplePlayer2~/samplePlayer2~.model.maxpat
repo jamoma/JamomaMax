@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"revision" : 8,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 106.0, 118.0, 1142.0, 687.0 ],
@@ -28,6 +28,34 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
+					"patching_rect" : [ 459.0, 619.0, 52.0, 20.0 ],
+					"text" : "j.out~ R"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
+					"patching_rect" : [ 405.0, 619.0, 50.0, 20.0 ],
+					"text" : "j.out~ L"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -69,8 +97,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 8,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 418.0, 188.0, 640.0, 480.0 ],
@@ -344,7 +372,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 580.0, 535.0, 158.0, 60.0 ],
+					"patching_rect" : [ 580.0, 535.0, 160.0, 60.0 ],
 					"text" : "this part of the patcher is entirely about turning off gizmo~ when it isn't needed to save CPU cycles."
 				}
 
@@ -489,8 +517,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 8,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 71.0, 69.0, 640.0, 480.0 ],
@@ -783,8 +811,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 8,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 750.0, 183.0, 478.0, 469.0 ],
@@ -1259,7 +1287,7 @@
 					"id" : "obj-20",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 436.0, 71.0, 94.0, 33.0 ],
@@ -1377,8 +1405,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 8,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 265.0, 233.0, 830.0, 424.0 ],
@@ -1514,8 +1542,8 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
-											"architecture" : "x86"
+											"revision" : 8,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
@@ -1649,8 +1677,8 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
-											"architecture" : "x86"
+											"revision" : 8,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
@@ -1970,8 +1998,8 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
-											"architecture" : "x86"
+											"revision" : 8,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 25.0, 69.0, 270.0, 210.0 ],
@@ -2061,8 +2089,8 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
-											"architecture" : "x86"
+											"revision" : 8,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 25.0, 69.0, 270.0, 210.0 ],
@@ -2215,7 +2243,7 @@
 									"fontsize" : 12.0,
 									"id" : "obj-23",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 474.0, 50.0, 154.0, 19.0 ],
@@ -2761,7 +2789,7 @@
 									"destination" : [ "obj-30", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 59.0, 61.0, 407.833344, 61.0 ],
+									"midpoints" : [ 59.0, 61.0, 407.833333, 61.0 ],
 									"source" : [ "obj-8", 0 ]
 								}
 
@@ -2993,7 +3021,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 440.0, 615.0, 24.0, 24.0 ]
+					"patching_rect" : [ 459.0, 649.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -3025,8 +3053,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 8,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 10.0, 59.0, 600.0, 426.0 ],
@@ -3218,7 +3246,7 @@
 					"fontsize" : 12.0,
 					"id" : "obj-28",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 463.0, 242.0, 306.0, 20.0 ],
@@ -3233,7 +3261,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 405.0, 615.0, 24.0, 24.0 ]
+					"patching_rect" : [ 405.0, 649.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -3299,7 +3327,7 @@
 					"fontsize" : 12.0,
 					"id" : "obj-37",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 12,
 					"numoutlets" : 12,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 242.0, 47.0, 841.0, 20.0 ],
@@ -3446,6 +3474,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -3575,7 +3612,7 @@
 					"destination" : [ "obj-2", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 472.5, 262.0, 745.833313, 262.0 ],
+					"midpoints" : [ 472.5, 262.0, 745.833333, 262.0 ],
 					"source" : [ "obj-28", 0 ]
 				}
 
@@ -3713,7 +3750,7 @@
 					"destination" : [ "obj-2", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 849.318176, 291.0, 718.166687, 291.0 ],
+					"midpoints" : [ 849.318182, 291.0, 718.166667, 291.0 ],
 					"source" : [ "obj-37", 8 ]
 				}
 
@@ -3760,7 +3797,7 @@
 					"destination" : [ "obj-34", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 774.590881, 76.0, 835.0, 76.0, 835.0, 289.0, 524.5, 289.0 ],
+					"midpoints" : [ 774.590909, 76.0, 835.0, 76.0, 835.0, 289.0, 524.5, 289.0 ],
 					"source" : [ "obj-37", 7 ]
 				}
 
@@ -3779,7 +3816,7 @@
 					"destination" : [ "obj-46", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 998.772705, 212.5, 969.5, 212.5 ],
+					"midpoints" : [ 998.772727, 212.5, 969.5, 212.5 ],
 					"source" : [ "obj-37", 10 ]
 				}
 
@@ -3837,6 +3874,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-39", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -3908,7 +3954,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
+					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-45", 1 ]
@@ -3917,7 +3963,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-30", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-45", 0 ]
@@ -4212,15 +4258,15 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../../components/thru",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gizmo_transpose.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/gizmo_transpose",
-				"patcherrelativepath" : "../../../components/gizmo_transpose",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/gizmo_transpose",
+				"patcherrelativepath" : "../../../../../components/audio/gizmo_transpose",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -4234,6 +4280,10 @@
 			}
 , 			{
 				"name" : "j.xfade~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
  ]
