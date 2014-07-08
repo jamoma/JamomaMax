@@ -68,8 +68,6 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)model_preset_read_again,           "preset:read/again",	0);
 	class_addmethod(c->maxClass, (method)model_preset_write_again,          "preset:write/again",	0);
 #endif
-    class_addmethod(c->maxClass, (method)model_signal_return_content,       "return_content",		A_CANT, 0);
-
     class_addmethod(c->maxClass, (method)model_signal_amenities,            "input_created",		A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_amenities,            "output_created",		A_CANT, 0);
     

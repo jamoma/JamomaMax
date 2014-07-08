@@ -203,7 +203,7 @@ void model_preset_dowrite_again(TTPtr self)
 		
 		aTextHandler = o[0];
 
-		aTextHandler.set(kTTSym_object, EXTRA-presetManager);
+		aTextHandler.set(kTTSym_object, EXTRA->presetManager);
 		
 		critical_enter(0);
 		tterr = aTextHandler.send(kTTSym_WriteAgain);
