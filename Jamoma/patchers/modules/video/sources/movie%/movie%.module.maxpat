@@ -49,9 +49,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
+					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, -1.0, 300.0, 140.0 ]
+					"presentation_rect" : [ 0.0, -1.0, 300.0, 105.0 ]
 				}
 
 			}
@@ -173,6 +173,14 @@
 			}
 , 			{
 				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.namespace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{

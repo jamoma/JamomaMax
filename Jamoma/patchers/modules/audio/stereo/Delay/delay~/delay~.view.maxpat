@@ -2,13 +2,13 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 558.0, 145.0, 679.0, 679.0 ],
+		"rect" : [ 205.0, 91.0, 748.0, 679.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -83,37 +83,38 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 1,
 					"fontname" : "Arial",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-30",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 169.0, 25.0, 63.0, 20.0 ],
+					"patching_rect" : [ 169.0, 25.0, 56.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.5, 25.0, 63.0, 20.0 ],
+					"presentation_rect" : [ 150.5, 25.0, 56.0, 18.0 ],
 					"text" : "Max delay"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Maximum delay size in samples.",
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
+					"bgcolor" : [ 0.909804, 0.909804, 0.909804, 1.0 ],
+					"bordercolor" : [ 0.27451, 0.32549, 0.4, 1.0 ],
+					"fontname" : "Arial Bold",
+					"fontsize" : 10.0,
 					"id" : "obj-12",
 					"maxclass" : "number",
-					"minimum" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 123.0, 168.0, 78.0, 20.0 ],
+					"patching_rect" : [ 123.0, 168.0, 40.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 210.0, 25.0, 64.0, 20.0 ],
-					"triangle" : 0,
-					"triscale" : 0.9,
+					"presentation_rect" : [ 210.0, 25.0, 55.0, 18.0 ],
+					"prototypename" : "Live",
+					"triscale" : 0.75,
 					"varname" : "Right[1]"
 				}
 
@@ -135,21 +136,21 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Delay time in samples for right channel.",
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
+					"bgcolor" : [ 0.909804, 0.909804, 0.909804, 1.0 ],
+					"bordercolor" : [ 0.27451, 0.32549, 0.4, 1.0 ],
+					"fontname" : "Arial Bold",
+					"fontsize" : 10.0,
 					"id" : "obj-6",
 					"maxclass" : "number",
-					"minimum" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 123.0, 350.0, 45.0, 20.0 ],
+					"patching_rect" : [ 123.0, 350.0, 40.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 78.0, 45.0, 64.0, 20.0 ],
-					"triangle" : 0,
-					"triscale" : 0.9,
+					"presentation_rect" : [ 78.0, 45.0, 55.0, 18.0 ],
+					"prototypename" : "Live",
+					"triscale" : 0.75,
 					"varname" : "Right"
 				}
 
@@ -171,53 +172,55 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Delay time in samples for left channel.",
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
+					"bgcolor" : [ 0.909804, 0.909804, 0.909804, 1.0 ],
+					"bordercolor" : [ 0.27451, 0.32549, 0.4, 1.0 ],
+					"fontname" : "Arial Bold",
+					"fontsize" : 10.0,
 					"id" : "obj-8",
 					"maxclass" : "number",
-					"minimum" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 123.0, 260.0, 45.0, 20.0 ],
+					"patching_rect" : [ 123.0, 260.0, 40.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 78.0, 25.0, 64.0, 20.0 ],
-					"triangle" : 0,
-					"triscale" : 0.9,
+					"presentation_rect" : [ 78.0, 25.0, 55.0, 18.0 ],
+					"prototypename" : "Live",
+					"triscale" : 0.75,
 					"varname" : "Left"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 1,
 					"fontname" : "Arial",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-9",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 16.0, 45.0, 72.0, 20.0 ],
+					"patching_rect" : [ 16.0, 45.0, 66.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 45.0, 72.0, 20.0 ],
+					"presentation_rect" : [ 8.0, 45.0, 66.0, 18.0 ],
 					"text" : "Delay Right"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 1,
 					"fontname" : "Arial",
-					"fontsize" : 12.0,
+					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-10",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 16.0, 25.0, 63.0, 20.0 ],
+					"patching_rect" : [ 16.0, 25.0, 56.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 25.0, 63.0, 20.0 ],
+					"presentation_rect" : [ 8.0, 25.0, 56.0, 18.0 ],
 					"text" : "Delay Left"
 				}
 

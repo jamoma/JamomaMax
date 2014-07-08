@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 26.0, 62.0, 321.0, 442.0 ],
+		"rect" : [ 26.0, 62.0, 380.0, 357.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -28,6 +28,21 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-3",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 199.0, 295.0, 100.0, 31.0 ],
+					"text" : "j.model #1 @priority -1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
@@ -326,8 +341,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 158.5, 298.5, 83.0, 24.0 ],
-					"presentation_rect" : [ 143.0, 319.5, 0.0, 0.0 ],
+					"patching_rect" : [ 124.875, 244.0, 83.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -569,7 +583,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 145.5, 255.0, 70.0, 24.0 ],
+					"patching_rect" : [ 111.875, 215.0, 70.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -607,7 +621,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 27.0, 51.0, 949.0, 945.0 ],
+						"rect" : [ 731.0, 44.0, 949.0, 945.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -630,12 +644,72 @@
 								"box" : 								{
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
+									"id" : "obj-29",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 221.0, 953.994507, 132.0, 19.0 ],
+									"text" : "prepend lighting_enable"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-44",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 221.0, 927.5, 447.0, 19.0 ],
+									"text" : "j.parameter light/enable @type boolean @description \"Calculate lighting.\" @default 0",
+									"varname" : "material/light/enable"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 212.0, 900.5, 138.0, 19.0 ],
+									"text" : "prepend smooth_shading"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 212.0, 874.5, 541.0, 19.0 ],
+									"text" : "j.parameter smooth_shading @type boolean @description \"enable Smooth Shading.\" @default 0",
+									"varname" : "render/antialias[7]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
 									"id" : "obj-27",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 901.5, 105.0, 19.0 ],
+									"patching_rect" : [ 212.0, 842.5, 105.0, 19.0 ],
 									"text" : "prepend viewalign"
 								}
 
@@ -650,7 +724,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 212.0, 882.5, 505.0, 19.0 ],
+									"patching_rect" : [ 212.0, 823.5, 505.0, 19.0 ],
 									"text" : "j.parameter viewalign @type boolean @description \"View aligned transformation flag.\" @default 0",
 									"varname" : "render/antialias[6]"
 								}
@@ -665,7 +739,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 199.0, 859.0, 136.0, 19.0 ],
+									"patching_rect" : [ 199.0, 800.0, 136.0, 19.0 ],
 									"text" : "prepend transform_reset"
 								}
 
@@ -680,7 +754,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 199.0, 840.0, 621.0, 19.0 ],
+									"patching_rect" : [ 199.0, 781.0, 621.0, 19.0 ],
 									"text" : "j.parameter transform_reset @type integer @description \"Modelview and projection transform reset flag.\" @default 0",
 									"varname" : "render/context[4]"
 								}
@@ -695,7 +769,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 174.5, 808.0, 113.0, 19.0 ],
+									"patching_rect" : [ 174.5, 749.0, 113.0, 19.0 ],
 									"text" : "prepend shader"
 								}
 
@@ -710,7 +784,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 174.5, 789.0, 525.0, 19.0 ],
+									"patching_rect" : [ 174.5, 730.0, 525.0, 19.0 ],
 									"text" : "j.parameter shader @type string @description \"The name of the shader to be applied.\" @default none",
 									"varname" : "render/context[3]"
 								}
@@ -725,7 +799,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 685.0, 111.0, 19.0 ],
+									"patching_rect" : [ 158.5, 626.0, 111.0, 19.0 ],
 									"text" : "prepend poly_mode"
 								}
 
@@ -740,7 +814,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 665.0, 572.0, 19.0 ],
+									"patching_rect" : [ 158.5, 606.0, 572.0, 19.0 ],
 									"text" : "j.parameter poly_mode @type array @ramp/drive none @description \"Polygon rendering modes.\" @default 0 0",
 									"varname" : "render/antialias[5]"
 								}
@@ -755,7 +829,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 638.0, 105.0, 19.0 ],
+									"patching_rect" : [ 158.5, 579.0, 105.0, 19.0 ],
 									"text" : "prepend point_size"
 								}
 
@@ -770,7 +844,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 618.0, 463.0, 19.0 ],
+									"patching_rect" : [ 158.5, 559.0, 463.0, 19.0 ],
 									"text" : "j.parameter point_size @type decimal @description \"The draw point size.\" @default 1.",
 									"varname" : "render/antialias[4]"
 								}
@@ -785,7 +859,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 754.0, 121.0, 19.0 ],
+									"patching_rect" : [ 158.5, 695.0, 121.0, 19.0 ],
 									"text" : "prepend matrixoutput"
 								}
 
@@ -801,7 +875,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 715.0, 493.0, 31.0 ],
+									"patching_rect" : [ 158.5, 656.0, 493.0, 31.0 ],
 									"text" : "j.parameter matrixoutput @type integer @range 0 2 @clipmode both @ramp/drive none @description \"Matrix output mode.\" @default 0",
 									"varname" : "render/layer[1]"
 								}
@@ -816,7 +890,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 133.5, 407.0, 113.0, 19.0 ],
+									"patching_rect" : [ 133.5, 348.0, 113.0, 19.0 ],
 									"text" : "prepend capture"
 								}
 
@@ -831,7 +905,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 133.5, 388.0, 468.0, 19.0 ],
+									"patching_rect" : [ 133.5, 329.0, 468.0, 19.0 ],
 									"text" : "j.parameter capture @type string @description \"The name of a texture to be rendered to \"",
 									"varname" : "render/context[1]"
 								}
@@ -846,7 +920,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 588.0, 105.0, 19.0 ],
+									"patching_rect" : [ 158.5, 529.0, 105.0, 19.0 ],
 									"text" : "prepend line_width"
 								}
 
@@ -861,7 +935,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 568.0, 463.0, 19.0 ],
+									"patching_rect" : [ 158.5, 509.0, 463.0, 19.0 ],
 									"text" : "j.parameter line_width @type decimal @description \"The drawing line width.\" @default 1.",
 									"varname" : "render/antialias[3]"
 								}
@@ -876,7 +950,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 535.0, 105.0, 19.0 ],
+									"patching_rect" : [ 158.5, 476.0, 105.0, 19.0 ],
 									"text" : "prepend inherit_all"
 								}
 
@@ -892,7 +966,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 504.0, 695.0, 31.0 ],
+									"patching_rect" : [ 158.5, 445.0, 695.0, 31.0 ],
 									"text" : "j.parameter inherit_all @type boolean @description \"When the flag is set, all GL attributes from named drawing context are inherited.\" @default 0",
 									"varname" : "render/antialias[2]"
 								}
@@ -907,7 +981,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 462.5, 113.0, 19.0 ],
+									"patching_rect" : [ 158.5, 403.5, 113.0, 19.0 ],
 									"text" : "prepend cull_face"
 								}
 
@@ -922,7 +996,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 443.5, 421.0, 19.0 ],
+									"patching_rect" : [ 158.5, 384.5, 421.0, 19.0 ],
 									"text" : "j.parameter cull_face @type integer @description \"Face culling mode\" @default 0",
 									"varname" : "render/context[2]"
 								}
@@ -937,7 +1011,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 115.0, 356.0, 105.0, 19.0 ],
+									"patching_rect" : [ 115.0, 297.0, 105.0, 19.0 ],
 									"text" : "prepend axes"
 								}
 
@@ -952,7 +1026,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 115.0, 337.0, 449.0, 19.0 ],
+									"patching_rect" : [ 115.0, 278.0, 449.0, 19.0 ],
 									"text" : "j.parameter axes @type boolean @description \"x/y/z axis rendering off/on\" @default 0",
 									"varname" : "render/antialias[1]"
 								}
@@ -967,7 +1041,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 61.0, 194.0, 105.0, 19.0 ],
+									"patching_rect" : [ 61.0, 135.0, 105.0, 19.0 ],
 									"text" : "prepend antialias"
 								}
 
@@ -981,7 +1055,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 78.0, 255.0, 105.0, 19.0 ],
+									"patching_rect" : [ 78.0, 196.0, 105.0, 19.0 ],
 									"text" : "prepend layer"
 								}
 
@@ -995,7 +1069,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 40.5, 148.0, 105.0, 19.0 ],
+									"patching_rect" : [ 40.5, 89.0, 105.0, 19.0 ],
 									"text" : "prepend enable"
 								}
 
@@ -1009,7 +1083,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 20.0, 103.0, 105.0, 19.0 ],
+									"patching_rect" : [ 20.0, 44.0, 105.0, 19.0 ],
 									"text" : "prepend automatic"
 								}
 
@@ -1023,7 +1097,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 98.5, 304.5, 113.0, 19.0 ],
+									"patching_rect" : [ 98.5, 245.5, 113.0, 19.0 ],
 									"text" : "prepend drawto"
 								}
 
@@ -1039,7 +1113,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 78.0, 224.0, 851.0, 31.0 ],
+									"patching_rect" : [ 78.0, 165.0, 851.0, 31.0 ],
 									"text" : "j.parameter layer @type integer @range 0 255 @clipmode low @ramp/drive none @description \"Object layer number. Only valid when /render/automatic is enabled.\" @default 0",
 									"varname" : "render/layer"
 								}
@@ -1055,8 +1129,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 98.5, 285.5, 601.0, 19.0 ],
-									"text" : "j.parameter context @type string @description \"The named drawing context in which to draw.\" @default my_context",
+									"patching_rect" : [ 98.5, 226.5, 665.0, 19.0 ],
+									"text" : "j.parameter context @type string @description \"The named drawing context in which to draw.\" @default my_context @priority -1",
 									"varname" : "render/context"
 								}
 
@@ -1071,7 +1145,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 40.5, 129.0, 410.0, 19.0 ],
+									"patching_rect" : [ 40.5, 70.0, 410.0, 19.0 ],
 									"text" : "j.parameter enable @type boolean @description \"Enable drawing.\" @default 1",
 									"varname" : "render/enable"
 								}
@@ -1087,7 +1161,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 84.0, 475.0, 19.0 ],
+									"patching_rect" : [ 20.0, 25.0, 475.0, 19.0 ],
 									"text" : "j.parameter automatic @type boolean @description \"Automatic rendering flag.\" @default 1",
 									"varname" : "render/automatic"
 								}
@@ -1103,7 +1177,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 61.0, 175.0, 403.0, 19.0 ],
+									"patching_rect" : [ 61.0, 116.0, 403.0, 19.0 ],
 									"text" : "j.parameter antialias @type boolean @description \"Aliasing flag.\" @default 0",
 									"varname" : "render/antialias"
 								}
@@ -1116,7 +1190,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 31.0, 876.5, 25.0, 25.0 ],
+									"patching_rect" : [ 20.0, 921.5, 25.0, 25.0 ],
 									"varname" : "u391007852"
 								}
 
@@ -1304,6 +1378,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-29", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1322,6 +1405,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-50", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1335,6 +1427,24 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-41", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-29", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-44", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-5", 0 ]
 								}
 
 							}
@@ -1413,7 +1523,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 116.5, 217.0, 70.0, 24.0 ],
+					"patching_rect" : [ 98.875, 186.0, 70.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -1681,7 +1791,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 104.0, 182.833328, 65.0, 24.0 ],
+					"patching_rect" : [ 85.875, 157.0, 65.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2005,7 +2115,6 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -2119,7 +2228,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 35.0, 46.166668, 64.0, 24.0 ],
+					"patching_rect" : [ 33.875, 41.0, 64.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2390,7 +2499,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 55.5, 80.333336, 59.0, 24.0 ],
+					"patching_rect" : [ 46.875, 70.0, 59.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2609,7 +2718,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 89.5, 148.666672, 47.0, 24.0 ],
+					"patching_rect" : [ 72.875, 128.0, 47.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2646,7 +2755,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 632.0, 564.0 ],
+						"rect" : [ 14.0, 59.0, 725.0, 692.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2669,12 +2778,229 @@
 								"box" : 								{
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
+									"id" : "obj-13",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 221.5, 582.5, 103.0, 19.0 ],
+									"text" : "prepend matfile"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-14",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 221.5, 545.5, 427.0, 31.0 ],
+									"text" : "j.parameter material/matfile @type string @description \"The Jitter material file to apply (.jitmtl)\" @default none",
+									"varname" : "render/context[1]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 7,
+											"architecture" : "x86"
+										}
+,
+										"rect" : [ 25.0, 69.0, 220.0, 314.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
+										"gridonopen" : 0,
+										"gridsize" : [ 15.0, 15.0 ],
+										"gridsnaponopen" : 0,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"boxanimatetime" : 200,
+										"imprint" : 0,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"boxes" : [ 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-6",
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 32.0, 173.0, 53.0, 18.0 ],
+													"text" : "material"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-4",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 105.0, 173.0, 101.0, 20.0 ],
+													"text" : "prepend material"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-3",
+													"maxclass" : "newobj",
+													"numinlets" : 2,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
+													"patching_rect" : [ 32.0, 98.0, 92.0, 20.0 ],
+													"text" : "route none"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-2",
+													"maxclass" : "outlet",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 32.0, 245.0, 25.0, 25.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-1",
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 32.0, 21.0, 25.0, 25.0 ]
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-3", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-1", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-4", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-3", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-6", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-3", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-4", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-6", 0 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 200.5, 508.5, 107.0, 19.0 ],
+									"saved_object_attributes" : 									{
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
+										"default_fontsize" : 12.0,
+										"description" : "",
+										"digest" : "",
+										"fontface" : 0,
+										"fontname" : "Arial",
+										"fontsize" : 12.0,
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p prepend_material"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-11",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 200.5, 471.5, 422.0, 31.0 ],
+									"text" : "j.parameter material/name @type string @description \"The name of the material to be applied\" @default none",
+									"varname" : "render/context[2]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
 									"id" : "obj-6",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 186.0, 486.692566, 135.0, 19.0 ],
+									"patching_rect" : [ 176.0, 437.692566, 135.0, 19.0 ],
 									"text" : "prepend inherit_material"
 								}
 
@@ -2688,7 +3014,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 162.0, 424.235687, 123.0, 19.0 ],
+									"patching_rect" : [ 152.0, 362.235687, 123.0, 19.0 ],
 									"text" : "prepend auto_material"
 								}
 
@@ -2702,22 +3028,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 132.5, 361.778839, 123.0, 19.0 ],
+									"patching_rect" : [ 122.5, 312.778839, 107.0, 19.0 ],
 									"text" : "prepend shininess"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-3",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 13.5, 49.494514, 132.0, 19.0 ],
-									"text" : "prepend lighting_enable"
 								}
 
 							}
@@ -2728,7 +3040,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.5, 520.0, 25.0, 25.0 ],
+									"patching_rect" : [ 28.0, 645.0, 25.0, 25.0 ],
 									"varname" : "u109007775"
 								}
 
@@ -2742,7 +3054,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 105.0, 299.32196, 123.0, 19.0 ],
+									"patching_rect" : [ 95.0, 250.32196, 123.0, 19.0 ],
 									"text" : "prepend mat_specular"
 								}
 
@@ -2756,7 +3068,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 91.0, 236.865112, 125.0, 19.0 ],
+									"patching_rect" : [ 81.0, 187.865112, 125.0, 19.0 ],
 									"text" : "prepend mat_emission"
 								}
 
@@ -2770,7 +3082,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 71.0, 174.408249, 122.0, 19.0 ],
+									"patching_rect" : [ 61.0, 125.408249, 122.0, 19.0 ],
 									"text" : "prepend mat_diffuse"
 								}
 
@@ -2784,7 +3096,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 38.0, 111.951378, 122.0, 19.0 ],
+									"patching_rect" : [ 28.0, 62.951378, 122.0, 19.0 ],
 									"text" : "prepend mat_ambient"
 								}
 
@@ -2800,8 +3112,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 132.5, 324.284302, 465.0, 31.0 ],
-									"text" : "j.parameter shininess @type decimal @range 0. 255. @clipmode both @ramp/drive Max @description \"Material shininess.\" @default 10.",
+									"patching_rect" : [ 122.5, 275.284302, 465.0, 31.0 ],
+									"text" : "j.parameter material/shininess @type decimal @range 0. 255. @clipmode both @ramp/drive Max @description \"Material shininess.\" @default 10.",
 									"varname" : "material/shininess"
 								}
 
@@ -2817,7 +3129,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 186.0, 449.198029, 312.0, 31.0 ],
+									"patching_rect" : [ 176.0, 400.198029, 312.0, 31.0 ],
 									"text" : "j.parameter material/inherit @type boolean @description \"Inherit material properties from context.\" @default 0",
 									"varname" : "material/inherit"
 								}
@@ -2829,30 +3141,13 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-43",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 162.0, 386.74118, 465.0, 31.0 ],
-									"text" : "j.parameter light/automatic @type boolean @description \"Automatic material attributes.\" @default 1",
+									"patching_rect" : [ 152.0, 337.74118, 538.0, 19.0 ],
+									"text" : "j.parameter material/automatic @type boolean @description \"Automatic material attributes.\" @default 1",
 									"varname" : "material/automatic"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-44",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 13.5, 12.0, 447.0, 19.0 ],
-									"text" : "j.parameter light/enable @type boolean @description \"Calculate lighting.\" @default 0",
-									"varname" : "material/light/enable"
 								}
 
 							}
@@ -2867,8 +3162,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 105.0, 261.827454, 520.0, 31.0 ],
-									"text" : "j.parameter light/specular @type array @ramp/drive Max @description \"The specular light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"patching_rect" : [ 95.0, 212.827454, 520.0, 31.0 ],
+									"text" : "j.parameter material/specular @type array @ramp/drive Max @description \"The specular light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/specular"
 								}
 
@@ -2884,8 +3179,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 91.0, 199.37059, 540.0, 31.0 ],
-									"text" : "j.parameter light/emission @type array @ramp/drive Max @description \"The material emission property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"patching_rect" : [ 81.0, 150.37059, 540.0, 31.0 ],
+									"text" : "j.parameter material/emission @type array @ramp/drive Max @description \"The material emission property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/emission"
 								}
 
@@ -2901,8 +3196,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 71.0, 136.913727, 560.0, 31.0 ],
-									"text" : "j.parameter light/diffuse @type array @ramp/drive Max @description \"The diffuse light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"patching_rect" : [ 61.0, 87.913727, 564.0, 31.0 ],
+									"text" : "j.parameter material/diffuse @type array @ramp/drive Max @description \"The diffuse light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/diffuse"
 								}
 
@@ -2918,8 +3213,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 38.0, 74.456863, 579.0, 31.0 ],
-									"text" : "j.parameter light/ambient @type array @ramp/drive Max @description \"The ambient light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"patching_rect" : [ 28.0, 25.456863, 606.0, 31.0 ],
+									"text" : "j.parameter material/ambient @type array @ramp/drive Max @description \"The ambient light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/ambient"
 								}
 
@@ -2930,7 +3225,34 @@
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-3", 0 ]
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-14", 0 ]
 								}
 
 							}
@@ -2967,15 +3289,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-43", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-44", 0 ]
 								}
 
 							}
@@ -3072,7 +3385,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 73.0, 114.5, 83.0, 24.0 ],
+					"patching_rect" : [ 59.875, 99.0, 83.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -3097,7 +3410,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 337.0, 30.0, 30.0 ]
+					"patching_rect" : [ 20.0, 295.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -3186,6 +3499,10 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
  ]

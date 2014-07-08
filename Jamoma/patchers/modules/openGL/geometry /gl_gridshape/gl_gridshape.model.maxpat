@@ -77,8 +77,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 112.0, 45.0, 131.0, 24.0 ],
-					"text" : "j.gl_group.model"
+					"patching_rect" : [ 112.0, 45.0, 154.0, 24.0 ],
+					"text" : "j.gl_group.model GL"
 				}
 
 			}
@@ -101,7 +101,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 82.0, 419.0, 892.0, 564.0 ],
+						"rect" : [ 82.0, 419.0, 730.0, 569.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -233,7 +233,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 230.0, 457.0, 128.0, 19.0 ],
+									"patching_rect" : [ 196.0, 388.0, 128.0, 19.0 ],
 									"text" : "prepend rad_minor"
 								}
 
@@ -249,20 +249,6 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 149.5, 260.0, 105.0, 19.0 ],
 									"text" : "prepend displaylist"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-1",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 205.5, 379.0, 121.0, 19.0 ],
-									"text" : "prepend matrixoutput"
 								}
 
 							}
@@ -293,7 +279,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 230.0, 419.0, 380.0, 31.0 ],
+									"patching_rect" : [ 196.0, 350.0, 380.0, 31.0 ],
 									"text" : "j.parameter rad_minor @type decimal @default 0.25 @description \"The minor radius of a torus, if one is rendered or sent out as a matrix.\"",
 									"varname" : "tracking"
 								}
@@ -318,23 +304,6 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-1055",
-									"linecount" : 2,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 205.5, 340.0, 550.0, 31.0 ],
-									"text" : "j.parameter matrixoutput @type int @range 0 2 @default 0 @clipmode both @description \"enable matrix output. \"",
-									"varname" : "leadscale"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"comment" : "",
 									"id" : "obj-24",
 									"maxclass" : "outlet",
@@ -346,15 +315,6 @@
 							}
  ],
 						"lines" : [ 							{
-								"patchline" : 								{
-									"destination" : [ "obj-24", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-1", 0 ]
-								}
-
-							}
-, 							{
 								"patchline" : 								{
 									"destination" : [ "obj-9", 0 ],
 									"disabled" : 0,
@@ -387,15 +347,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-1050", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-1055", 0 ]
 								}
 
 							}
@@ -671,7 +622,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
 				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1

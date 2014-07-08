@@ -69,13 +69,13 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-5",
-									"linecount" : 6,
+									"linecount" : 7,
 									"maxclass" : "newobj",
-									"numinlets" : 11,
-									"numoutlets" : 11,
-									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
-									"patching_rect" : [ 22.0, 77.0, 145.0, 79.0 ],
-									"text" : "route rotate scale fog_params auto_material mat_ambient mat_diffuse mat_emission mat_specular shininess lighting_enable"
+									"numinlets" : 13,
+									"numoutlets" : 13,
+									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "", "" ],
+									"patching_rect" : [ 22.0, 77.0, 145.0, 92.0 ],
+									"text" : "route auto_material mat_ambient mat_diffuse mat_emission mat_specular shininess lighting_enable cull_face line_width matrixoutput point_size poly_mode"
 								}
 
 							}
@@ -117,7 +117,7 @@
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-5", 10 ]
+									"source" : [ "obj-5", 12 ]
 								}
 
 							}
@@ -153,8 +153,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 102.0, 42.0, 131.0, 24.0 ],
-					"text" : "j.gl_group.model"
+					"patching_rect" : [ 102.0, 42.0, 154.0, 24.0 ],
+					"text" : "j.gl_group.model GL"
 				}
 
 			}
@@ -1102,7 +1102,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
 				"patcherrelativepath" : "../../../../components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1

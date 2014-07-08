@@ -10,10 +10,10 @@ delay/left 250
 delay/right 750
 feedback/gain -9.000000
 feedback/mode stereo
+filter/type lowpass
 filter/frequency 8571.957031
 filter/gain 1.000000
-filter/q 0.801650
-filter/type lowpass
+filter/octave_bandwidth 2.000000
 limiter/active 1
 limiter/dcblocker/active 1
 limiter/lookahead 100

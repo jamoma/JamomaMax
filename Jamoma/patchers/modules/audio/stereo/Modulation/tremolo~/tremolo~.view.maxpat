@@ -2,13 +2,13 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 53.0, 99.0, 806.0, 509.0 ],
+		"rect" : [ 51.0, 64.0, 806.0, 509.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,84 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "live.dial",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 508.0, 201.5, 55.0, 47.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 66.5, 20.5, 55.0, 47.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "LFO Depth",
+							"parameter_shortname" : "LFO Depth",
+							"parameter_type" : 0,
+							"parameter_mmax" : 100.0,
+							"parameter_unitstyle" : 5
+						}
+
+					}
+,
+					"varname" : "live.dial[2]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "live.dial",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 337.0, 201.5, 44.0, 47.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 6.0, 20.5, 44.0, 47.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "LFO Freq",
+							"parameter_shortname" : "LFO Freq",
+							"parameter_type" : 0,
+							"parameter_mmax" : 100.0,
+							"parameter_unitstyle" : 3
+						}
+
+					}
+,
+					"varname" : "live.dial[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "live.dial",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 171.0, 201.5, 55.0, 47.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 138.0, 20.5, 55.0, 47.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "live.dial",
+							"parameter_shortname" : "LFO Phase",
+							"parameter_type" : 0,
+							"parameter_mmax" : 1.0,
+							"parameter_unitstyle" : 1
+						}
+
+					}
+,
+					"varname" : "live.dial"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -64,7 +142,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 337.0, 438.5, 126.0, 20.0 ],
+					"patching_rect" : [ 508.0, 175.0, 126.0, 20.0 ],
 					"text" : "j.remote lfo/depth",
 					"varname" : "#1/lfo/depth"
 				}
@@ -79,7 +157,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 337.0, 324.0, 149.0, 20.0 ],
+					"patching_rect" : [ 337.0, 175.0, 149.0, 20.0 ],
 					"text" : "j.remote lfo/frequency",
 					"varname" : "#1/lfo/frequency"
 				}
@@ -117,68 +195,14 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-1",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 153.0, 25.0, 104.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 143.0, 25.0, 77.0, 20.0 ],
-					"text" : "Phase  (0-1)"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 337.0, 205.0, 129.0, 20.0 ],
+					"patching_rect" : [ 171.0, 175.0, 129.0, 20.0 ],
 					"text" : "j.remote lfo/phase",
 					"varname" : "tremolo/phase_offset"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-4",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "float", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 337.0, 180.0, 40.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 220.0, 25.0, 40.0, 20.0 ],
-					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "PhaseOffset"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-5",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "float", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 337.0, 410.0, 40.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 100.0, 45.0, 40.0, 20.0 ],
-					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "Depth"
 				}
 
 			}
@@ -211,57 +235,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-22",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "float", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 337.0, 298.0, 40.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 100.0, 25.0, 40.0, 20.0 ],
-					"triangle" : 0,
-					"triscale" : 0.9,
-					"varname" : "Frequency"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-24",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 10.0, 45.0, 89.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 45.0, 89.0, 20.0 ],
-					"text" : "LFO Depth (%)"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-25",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 10.0, 25.0, 87.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 25.0, 87.0, 20.0 ],
-					"text" : "LFO Freq (Hz)"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "",
 					"id" : "obj-28",
 					"maxclass" : "outlet",
@@ -287,7 +260,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-14", 2 ]
@@ -296,17 +269,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 346.5, 480.5, 312.5, 480.5, 312.5, 400.0, 346.5, 400.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-15", 2 ]
@@ -315,10 +287,9 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 346.5, 353.0, 310.5, 353.0, 310.5, 280.0, 346.5, 280.0 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -343,7 +314,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-2", 2 ]
@@ -352,20 +323,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 346.5, 255.0, 320.0, 255.0, 320.0, 176.0, 346.5, 176.0 ],
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-22", 0 ]
 				}
 
 			}
@@ -380,11 +341,30 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-49", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 346.5, 197.0, 346.5, 197.0 ],
-					"source" : [ "obj-4", 0 ]
+					"midpoints" : [ 180.5, 257.5, 166.5, 257.5, 166.5, 165.0, 180.5, 165.0 ],
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 346.5, 257.5, 329.5, 257.5, 329.5, 165.0, 346.5, 165.0 ],
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}
@@ -393,20 +373,18 @@
 					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-49", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-6", 0 ]
+					"midpoints" : [ 517.5, 258.0, 505.5, 258.0, 505.5, 165.0, 517.5, 165.0 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
  ],
+		"parameters" : 		{
+			"obj-8" : [ "LFO Freq", "LFO Freq", 0 ],
+			"obj-9" : [ "LFO Depth", "LFO Depth", 0 ],
+			"obj-7" : [ "live.dial", "LFO Phase", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"

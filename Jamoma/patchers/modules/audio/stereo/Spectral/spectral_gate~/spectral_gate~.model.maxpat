@@ -2,10 +2,10 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 0.0, 44.0, 1169.0, 452.0 ],
@@ -119,12 +119,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-63",
-					"linecount" : 11,
+					"linecount" : 10,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 302.0, 12.5, 130.0, 154.0 ],
+					"patching_rect" : [ 302.0, 12.5, 134.0, 141.0 ],
 					"text" : "j.parameter response/decay @type decimal @range 0. 1. @clipmode both @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
 
@@ -149,12 +149,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-61",
-					"linecount" : 10,
+					"linecount" : 9,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 10.0, 12.5, 133.0, 141.0 ],
+					"patching_rect" : [ 10.0, 12.5, 136.0, 127.0 ],
 					"text" : "j.parameter threshold @type decimal @range -48. 18. @clipmode none @ramp/drive Max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
 
@@ -207,8 +207,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 628.0, 114.0, 66.0, 20.0 ],
-					"text" : "j.in~ 1"
+					"patching_rect" : [ 628.0, 114.0, 43.0, 20.0 ],
+					"text" : "j.in~ L"
 				}
 
 			}
@@ -235,27 +235,34 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 794.0, 114.0, 67.0, 20.0 ],
-					"text" : "j.in~ 2"
+					"patching_rect" : [ 794.0, 114.0, 45.0, 20.0 ],
+					"text" : "j.in~ R"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-15",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x64"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 695.0, 343.0 ],
@@ -455,7 +462,8 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p response"
+					"text" : "p response",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -504,15 +512,23 @@
 , 			{
 				"box" : 				{
 					"annotation" : "A stereo limiter",
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-36",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 3,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 596.5, 293.0, 339.5, 20.0 ],
-					"text" : "limiter~.model"
+					"text" : "limiter~.model",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -778,22 +794,22 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.spectral_gate~.lib.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_gate~",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_gate~",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_gate~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}

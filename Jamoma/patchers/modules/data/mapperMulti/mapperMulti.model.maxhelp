@@ -566,10 +566,10 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "an interface for a movie model",
+					"annotation" : "none",
 					"id" : "obj-9",
 					"maxclass" : "bpatcher",
-					"name" : "movie.view.maxpat",
+					"name" : "movie%.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -610,7 +610,7 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "a movie playback model",
+					"annotation" : "Read QT movie film.",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-6",
@@ -619,13 +619,13 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 678.0, 227.0, 100.0, 18.0 ],
-					"text" : "movie.model"
+					"text" : "movie%.model"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "a movie playback model",
+					"annotation" : "Read QT movie film.",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-1",
@@ -634,7 +634,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 678.0, 249.0, 100.0, 18.0 ],
-					"text" : "movie.model"
+					"text" : "movie%.model"
 				}
 
 			}
@@ -725,155 +725,155 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "wacom.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/wacom",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/wacom",
 				"patcherrelativepath" : "../wacom",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapperMulti.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapperMulti",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapperMulti",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "movie.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/movie",
-				"patcherrelativepath" : "../../../../../../../../JamomaUserLibs/GMEA/Max/Picture/movie",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.render.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/renderComponents",
-				"patcherrelativepath" : "../../../../../../../../JamomaUserLibs/GMEA/Max/Picture/renderComponents",
+				"name" : "movie%.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
+				"patcherrelativepath" : "../../video/sources/movie%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "track.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/track",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/track",
 				"patcherrelativepath" : "../../../../examples/Modular0.6_overview/track",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "myMovie.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
 				"patcherrelativepath" : "../../../../examples/Modular0.6_overview/movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../../../components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../../../components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../../../components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
 				"patcherrelativepath" : "../../../components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "movie.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/JamomaUserLibs/GMEA/Max/Picture/movie",
-				"patcherrelativepath" : "../../../../../../../../JamomaUserLibs/GMEA/Max/Picture/movie",
+				"name" : "movie%.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
+				"patcherrelativepath" : "../../video/sources/movie%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.list2parameter.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"patcherrelativepath" : "../../../components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
 				"patcherrelativepath" : "../mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
 				"patcherrelativepath" : "../mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapperMulti.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapperMulti",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapperMulti",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespaceMenu.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespaceMenu",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespaceMenu",
 				"patcherrelativepath" : "../../../components/data/namespaceMenu",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapperCollSetter.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mapperMulti",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapperMulti",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cueManager.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/quarantined_package/patchers/models/control/cueManager",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/quarantined_package/patchers/models/control/cueManager",
 				"patcherrelativepath" : "../../../../../quarantined_package/patchers/models/control/cueManager",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespace+.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/quarantined/namespace+",
-				"patcherrelativepath" : "../../../components/quarantined/namespace+",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/quarantined_package/patchers/components/namespace+",
+				"patcherrelativepath" : "../../../../../quarantined_package/patchers/components/namespace+",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cueManager.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/quarantined_package/patchers/models/control/cueManager",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/quarantined_package/patchers/models/control/cueManager",
 				"patcherrelativepath" : "../../../../../quarantined_package/patchers/models/control/cueManager",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.viewMuter.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/quarantined/muters",
-				"patcherrelativepath" : "../../../components/quarantined/muters",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/quarantined_package/patchers/components/muters",
+				"patcherrelativepath" : "../../../../../quarantined_package/patchers/components/muters",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -910,15 +910,11 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -926,11 +922,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -938,7 +930,19 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.namespace.mxo",
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{

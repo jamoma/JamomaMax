@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 1063.0, 44.0, 1010.0, 395.0 ],
+		"rect" : [ 670.0, 44.0, 663.0, 264.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -29,6 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-11",
@@ -67,8 +68,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-39",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -79,11 +81,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1123.0, 346.0, 640.0, 577.0 ],
+						"rect" : [ 1040.0, 346.0, 640.0, 577.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -703,7 +705,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 155.0, 191.0, 266.0, 19.0 ],
+					"patching_rect" : [ 92.0, 149.0, 266.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -723,8 +725,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
@@ -734,11 +737,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 667.0, 355.0, 750.0, 387.0 ],
+						"rect" : [ 667.0, 355.0, 646.0, 234.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -815,6 +818,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1",
@@ -968,7 +972,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 105.0, 256.0, 60.0, 19.0 ],
+					"patching_rect" : [ 46.0, 210.0, 71.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -988,8 +992,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -999,11 +1004,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 52.0, 59.0, 798.0, 228.0 ],
+						"rect" : [ 52.0, 59.0, 836.0, 180.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -1024,6 +1029,7 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1",
@@ -1032,13 +1038,14 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 448.0, 113.0, 418.0, 31.0 ],
+									"patching_rect" : [ 448.0, 113.0, 354.0, 31.0 ],
 									"text" : "j.return cooked/button/right @range 0 1 @type boolean @clipmode both @description \"Cooked right button activity on-off (1-0)\""
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-2",
@@ -1047,13 +1054,14 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 426.0, 70.0, 408.0, 31.0 ],
+									"patching_rect" : [ 426.0, 70.0, 344.0, 31.0 ],
 									"text" : "j.return raw/rightButton @range 0 1 @type boolean @clipmode both @description \"Raw right button activity on-off (1-0)\""
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-3",
@@ -1062,13 +1070,14 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 30.0, 111.0, 412.0, 31.0 ],
+									"patching_rect" : [ 30.0, 111.0, 348.0, 31.0 ],
 									"text" : "j.return cooked/button/left @range 0 1 @type boolean @clipmode both @description \"Cooked left button activity on-off (1-0)\""
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-4",
@@ -1077,7 +1086,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 13.0, 68.0, 411.0, 31.0 ],
+									"patching_rect" : [ 13.0, 68.0, 347.0, 31.0 ],
 									"text" : "j.return raw/leftButton @range 0 1 @type boolean @clipmode both @description \"Raw left button activity on-off (1-0)\""
 								}
 
@@ -1146,7 +1155,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 375.0, 256.0, 63.0, 19.0 ],
+					"patching_rect" : [ 316.0, 210.0, 80.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1166,8 +1175,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
@@ -1177,7 +1187,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1202,6 +1212,7 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1",
@@ -1210,13 +1221,14 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 239.0, 333.0, 603.0, 31.0 ],
+									"patching_rect" : [ 239.0, 333.0, 605.0, 31.0 ],
 									"text" : "j.return cooked/rotation/roll @range -1. 1. @type decimal @clipmode none @description \"Cooked Z rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-2",
@@ -1232,6 +1244,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-3",
@@ -1247,6 +1260,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-4",
@@ -1262,6 +1276,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-5",
@@ -1270,13 +1285,14 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 60.0, 139.0, 566.0, 31.0 ],
+									"patching_rect" : [ 60.0, 139.0, 567.0, 31.0 ],
 									"text" : "j.return cooked/rotation/pitch @range -1. 1. @type decimal @clipmode none @description \"Cooked X rotation from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-6",
@@ -1453,7 +1469,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 294.0, 256.0, 69.0, 19.0 ],
+					"patching_rect" : [ 229.333344, 210.0, 80.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1473,8 +1489,9 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
@@ -1484,11 +1501,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 694.0, 81.0, 849.0, 495.0 ],
+						"rect" : [ 27.0, 337.0, 849.0, 495.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -1523,6 +1540,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-13",
@@ -1531,13 +1549,14 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 258.0, 395.0, 637.0, 31.0 ],
-									"text" : "j.return cooked/position @range -1. 1. @type array @clipmode none @repetitions/filter 1 @dataspace position @dataspace/unit xyz @description \"XYZ position\" @enable 0 @dataspace position @dataspace/unit xyz"
+									"patching_rect" : [ 257.5, 395.0, 580.0, 31.0 ],
+									"text" : "j.return cooked/position @range -1. 1. @type array @clipmode none @repetitions/filter 1 @dataspace position @dataspace/unit xyz @description \"XYZ position\" @active 0 @dataspace position @dataspace/unit xyz"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-1",
@@ -1546,13 +1565,14 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 151.0, 333.0, 602.0, 31.0 ],
-									"text" : "j.return cooked/position/z @range -1. 1. @type decimal @clipmode none @description \"Cooked Z position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
+									"patching_rect" : [ 150.5, 333.0, 462.0, 31.0 ],
+									"text" : "j.return cooked/position/z @range -1. 1. @type decimal @clipmode none @description \"Cooked Z position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-2",
@@ -1561,13 +1581,14 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 212.0, 292.0, 592.0, 31.0 ],
+									"patching_rect" : [ 211.5, 292.0, 429.0, 31.0 ],
 									"text" : "j.return raw/Tz @range -243 232 @type integer @clipmode none @description \"Raw Z position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-3",
@@ -1576,13 +1597,14 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 233.0, 242.0, 602.0, 31.0 ],
-									"text" : "j.return cooked/position/y @range -1. 1. @type decimal @clipmode none @description \"Cooked Y position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
+									"patching_rect" : [ 232.5, 242.0, 463.0, 31.0 ],
+									"text" : "j.return cooked/position/y @range -1. 1. @type decimal @clipmode none @description \"Cooked Y position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-4",
@@ -1591,13 +1613,14 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 120.0, 195.0, 592.0, 31.0 ],
+									"patching_rect" : [ 119.5, 195.0, 415.0, 31.0 ],
 									"text" : "j.return raw/Ty @range -241 255 @type integer @clipmode none @description \"Raw Y position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-5",
@@ -1606,8 +1629,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 60.0, 143.0, 603.0, 31.0 ],
-									"text" : "j.return cooked/position/x @range -1. 1. @type decimal @clipmode none @description \"Cooked X position from the 3D Connexion Space Navigator\" @repetitions/filter 0 @enable 1"
+									"patching_rect" : [ 59.5, 143.0, 459.0, 31.0 ],
+									"text" : "j.return cooked/position/x @range -1. 1. @type decimal @clipmode none @description \"Cooked X position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
 							}
@@ -1655,6 +1678,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-9",
@@ -1663,7 +1687,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.0, 98.0, 593.0, 31.0 ],
+									"patching_rect" : [ 49.5, 98.0, 417.0, 31.0 ],
 									"text" : "j.return raw/Tx @range -214 281 @type integer @clipmode none @description \"Raw X position from the 3D Connexion Space Navigator\" @repetitions/filter 0"
 								}
 
@@ -1825,7 +1849,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 185.0, 256.0, 85.0, 19.0 ],
+					"patching_rect" : [ 123.666672, 210.0, 99.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
@@ -1845,14 +1869,16 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1005",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 402.0, 150.0, 536.0, 19.0 ],
+					"patching_rect" : [ 339.0, 102.0, 277.0, 31.0 ],
 					"text" : "j.parameter device @type string @repetitions/filter 0 @description \"What SpaceNavigator model to use\"",
 					"varname" : "on[2]"
 				}
@@ -1860,6 +1886,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1004",
@@ -1868,7 +1895,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 155.0, 102.0, 283.0, 31.0 ],
+					"patching_rect" : [ 92.0, 102.0, 241.0, 31.0 ],
 					"text" : "j.parameter active @type boolean @clipmode none @description \"Turn polling on\"",
 					"varname" : "on[1]"
 				}
@@ -2009,19 +2036,6 @@
 					"source" : [ "obj-39", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

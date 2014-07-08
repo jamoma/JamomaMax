@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 35.0, 63.0, 722.0, 509.0 ],
+		"rect" : [ 35.0, 63.0, 371.0, 507.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,21 +29,6 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-2",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 23.0, 84.0, 444.0, 33.0 ],
-					"text" : "this module hase an internal qmetro, (default is active) but you can disable it (by sending it active = 0) and send it bangs thru its first inlet to render frame"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"args" : [ "@name", "input%.model", "@description", "Video sources" ],
 					"bgmode" : 1,
 					"id" : "obj-18",
@@ -51,7 +36,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 722.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 371.0, 70.0 ],
 					"prototypename" : "bphelp",
 					"varname" : "maxhelpui"
 				}
@@ -93,21 +78,6 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 23.0, 125.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-21",
-					"linecount" : 22,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 356.0, 125.0, 334.0, 274.0 ],
-					"text" : "The module has three different modes, which can be selected from the top menu:\r\r- Camera: this can be used with any web/DV camera connected to the system. Choose device in the list, and click the on/off button to start sampling. The size of the video can be changed on the fly, allowing to reduce the size to get better performance.\r\r- Movie file: this is for playing back any QuickTime compatible video file. Files may be loaded by just dropping them on top of the module. Looping can be turned on or off, and the looping section can be defined in the upper scroll bar. The file can be scrubbed in the lower scroll bar. Audio playback can be turned on or off, and the playback rate can be changed by dragging on the number (notice that negative values will play the file backwards. The size of the video can be changed on the fly to improve performance.\r\r- Noise : this is mainly for testing purposes in case you have no camera or video files around, but still want to send some video. It generates white noise in either 1 or 4 planes."
 				}
 
 			}
@@ -233,15 +203,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.namespace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -249,7 +219,15 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{

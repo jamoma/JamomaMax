@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 54.0, 116.0, 1041.0, 686.0 ],
+		"rect" : [ 280.0, 185.0, 1041.0, 686.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -113,22 +113,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-26",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 42.0, 41.0, 454.0, 19.0 ],
-					"text" : "j.message video/genframe @type none @description \"bang to generate the next frame\"",
-					"varname" : "videoplane/client_storage[1]"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-11",
@@ -136,7 +120,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 41.0, 604.0, 213.0, 19.0 ],
+					"patching_rect" : [ 41.0, 610.0, 213.0, 19.0 ],
 					"text" : "j.out geometry_matrix @type jit_matrix"
 				}
 
@@ -217,8 +201,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 156.0, 342.5, 131.0, 24.0 ],
-					"text" : "j.gl_group.model"
+					"patching_rect" : [ 156.0, 340.5, 155.0, 24.0 ],
+					"text" : "j.gl_group.model GL"
 				}
 
 			}
@@ -231,7 +215,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 41.0, 578.0, 126.0, 19.0 ],
+					"patching_rect" : [ 41.0, 578.0, 91.0, 19.0 ],
 					"text" : "jit.gl.videoplane"
 				}
 
@@ -262,8 +246,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 444.5, 429.0, 471.0, 19.0 ],
-					"text" : "j.parameter videoplane/colormode @type string @description \"Color mode (argb or uyvy).\"",
+					"patching_rect" : [ 444.5, 429.0, 568.0, 19.0 ],
+					"text" : "j.parameter videoplane/colormode @type string @description \"Color mode (argb or uyvy).\" @range argb uyvy",
 					"varname" : "videoplane/colormode"
 				}
 
@@ -279,8 +263,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 618.5, 459.0, 275.0, 31.0 ],
-					"text" : "j.parameter videoplane/interpolate @type boolean @description \\\"Interpolation.\\\"",
+					"patching_rect" : [ 618.5, 459.0, 247.5, 31.0 ],
+					"text" : "j.parameter videoplane/interpolate @type boolean @description Interpolation",
 					"varname" : "videoplane/interpolate"
 				}
 
@@ -413,21 +397,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-17",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 444.5, 459.0, 96.0, 19.0 ],
-					"text" : "j.pass argb uyvy"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-19",
@@ -514,31 +483,8 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"attr" : "client_storage",
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-1",
-					"maxclass" : "attrui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 182.5, 570.0, 180.0, 19.0 ]
-				}
-
-			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
@@ -558,7 +504,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
+					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1013", 0 ]
@@ -679,24 +625,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-17", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-17", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -756,15 +684,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-21", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-26", 0 ]
 				}
 
 			}
@@ -842,38 +761,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../../components/openGL/gl_group",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.pass.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

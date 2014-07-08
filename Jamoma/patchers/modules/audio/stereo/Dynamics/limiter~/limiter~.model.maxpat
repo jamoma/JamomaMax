@@ -2,10 +2,10 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 0.0, 44.0, 445.0, 371.0 ],
@@ -29,15 +29,23 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-32",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 147.0, 43.0, 182.0, 20.0 ],
-					"text" : "limiter.parametersAndMessages"
+					"text" : "limiter.parametersAndMessages",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -279,8 +287,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}

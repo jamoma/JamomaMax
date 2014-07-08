@@ -2,10 +2,10 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 397.0, 44.0, 1188.0, 433.0 ],
@@ -73,20 +73,27 @@
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-34",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x64"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 779.0, 225.0, 730.0, 559.0 ],
@@ -109,6 +116,20 @@
 						"digest" : "",
 						"tags" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 327.0, 216.0, 41.0, 20.0 ],
+									"text" : "dbtoa"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -253,13 +274,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-1013",
-									"linecount" : 10,
+									"linecount" : 9,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 327.0, 100.0, 145.0, 141.0 ],
-									"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range -60 6 @clipmode both @description \"Feedback gain leven (dB).\" @dataspace gain @dataspace/unit linear",
+									"patching_rect" : [ 327.0, 60.0, 151.0, 127.0 ],
+									"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range -60 6 @clipmode both @description \"Feedback gain leven (dB).\" @dataspace gain @dataspace/unit dB",
 									"varname" : "feedback"
 								}
 
@@ -269,12 +290,12 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-1025",
-									"linecount" : 10,
+									"linecount" : 9,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 503.0, 100.0, 150.0, 141.0 ],
+									"patching_rect" : [ 503.0, 60.0, 156.0, 127.0 ],
 									"text" : "j.parameter feedback/time @type decimal @ramp/drive Max @repetitions/filter 1 @range 0 200 @clipmode both @description \"Feedback delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
 									"varname" : "right"
 								}
@@ -329,6 +350,15 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-19", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-12", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -338,7 +368,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-19", 0 ],
+									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-1013", 0 ]
@@ -492,7 +522,8 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p feedback"
+					"text" : "p feedback",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -552,15 +583,23 @@
 , 			{
 				"box" : 				{
 					"annotation" : "A stereo limiter",
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-25",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 3,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 210.0, 222.0, 391.0, 20.0 ],
-					"text" : "limiter~.model limiter @amenities none"
+					"text" : "limiter~.model limiter @amenities none",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -905,22 +944,22 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.spectral_shift_voice~.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}

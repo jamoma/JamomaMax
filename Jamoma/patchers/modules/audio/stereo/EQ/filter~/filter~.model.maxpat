@@ -2,10 +2,10 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 164.0, 56.0, 969.0, 806.0 ],
@@ -29,15 +29,23 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-14",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 213.857147, 258.0, 113.0, 20.0 ],
-					"text" : "j.q2octavebandwith"
+					"patching_rect" : [ 213.857147, 258.0, 119.0, 20.0 ],
+					"text" : "j.q2octavebandwidth",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -60,15 +68,23 @@
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-4",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 213.857147, 323.0, 113.0, 20.0 ],
-					"text" : "j.octavebandwith2q"
+					"patching_rect" : [ 213.857147, 323.0, 119.0, 20.0 ],
+					"text" : "j.octavebandwidth2q",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -235,7 +251,7 @@
 					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 72.85714, 371.0, 160.0, 66.0 ],
-					"setfilter" : [ 0, 1, 1, 0, 0, 1548.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+					"setfilter" : [ 0, 1, 1, 0, 0, 1548.0, 1.0, 1.414214, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 				}
 
 			}
@@ -367,8 +383,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 173.571426, 110.0, 594.0, 33.0 ],
-					"text" : "j.parameter frequency @type decimal @range 30. 11025. @clipmode both @ramp/drive Max @repetitions/filter 1 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
+					"patching_rect" : [ 173.571426, 109.0, 605.0, 33.0 ],
+					"text" : "j.parameter frequency @type decimal @range 20. 20000. @clipmode both @ramp/drive Max @repetitions/filter 1 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
 					"varname" : "cf"
 				}
 
@@ -550,7 +566,7 @@
 					"destination" : [ "obj-8", 6 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 203.5, 352.0, 203.214283, 352.0 ],
+					"midpoints" : [ 203.5, 352.0, 203.214279, 352.0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -584,16 +600,16 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.octavebandwith2q.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwith2q",
-				"patcherrelativepath" : "../../../../components/audio/octavebandwith2q",
+				"name" : "j.octavebandwidth2q.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.q2octavebandwith.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
-				"patcherrelativepath" : "../../../../components/audio/q2octavebandwith",
+				"name" : "j.q2octavebandwidth.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}

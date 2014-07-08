@@ -1070,16 +1070,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.octavebandwith2q.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwith2q",
-				"patcherrelativepath" : "../../../../components/audio/octavebandwith2q",
+				"name" : "j.octavebandwidth2q.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"patcherrelativepath" : "../../../../components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.q2octavebandwith.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
-				"patcherrelativepath" : "../../../../components/audio/q2octavebandwith",
+				"name" : "j.q2octavebandwidth.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwidth",
+				"patcherrelativepath" : "../../../../components/audio/q2octavebandwidth",
 				"type" : "JSON",
 				"implicit" : 1
 			}
