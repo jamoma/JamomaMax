@@ -29,6 +29,184 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-33",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1084.333496, 521.0, 156.0, 24.0 ],
+					"presentation_rect" : [ 1083.333496, 519.5, 0.0, 0.0 ],
+					"text" : "Display phase response"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-32",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 652.0, 445.5, 32.5, 20.0 ],
+					"text" : "f"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-31",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 652.0, 468.5, 163.0, 18.0 ],
+					"text" : "curvecolor 0.44 0.43 0.43 $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"appearance" : 1,
+					"automation" : "View Phase",
+					"fontsize" : 12.0,
+					"id" : "obj-27",
+					"maxclass" : "live.text",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 652.0, 413.5, 90.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 33.5, 387.0, 90.0, 19.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "live.text[2]",
+							"parameter_shortname" : "live.text[2]",
+							"parameter_type" : 2,
+							"parameter_mmax" : 1.0,
+							"parameter_enum" : [ "View Phase", "val2" ]
+						}
+
+					}
+,
+					"text" : "View Phase",
+					"texton" : "View Phase",
+					"varname" : "live.text[2]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
+					"bordercolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
+					"bwidthcolor" : [ 0.917647, 0.94902, 0.054902, 1.0 ],
+					"curvecolor" : [ 0.917647, 0.94902, 0.054902, 1.0 ],
+					"dbdisplay" : 0,
+					"fgcolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"hbwidthcolor" : [ 0.917647, 0.94902, 0.054902, 1.0 ],
+					"hcurvecolor" : [ 0.917647, 0.94902, 0.054902, 1.0 ],
+					"hfgcolor" : [ 0.917647, 0.94902, 0.054902, 0.2 ],
+					"id" : "obj-11",
+					"linmarkers" : [ 0.0, 11025.0, 16537.5 ],
+					"logmarkers" : [ 0.0, 100.0, 1000.0, 10000.0 ],
+					"markercolor" : [ 0.301961, 0.337255, 0.403922, 0.0 ],
+					"maxclass" : "filtergraph~",
+					"nfilters" : 1,
+					"numdisplay" : 0,
+					"numinlets" : 8,
+					"numoutlets" : 7,
+					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 199.299118, 784.0, 203.0, 60.5 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 14.500031, 36.0, 420.999939, 180.0 ],
+					"prototypename" : "M4L.black",
+					"range" : [ 0.041667, 24.0 ],
+					"setfilter" : [ 0, 5, 1, 1, 0, 1182.533447, 0.425347, 0.72338, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"textcolor" : [ 0.666667, 0.698039, 0.717647, 0.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"autoout" : 1,
+					"bgcolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
+					"bordercolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
+					"bwidthcolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
+					"curvecolor" : [ 0.44, 0.43, 0.43, 0.0 ],
+					"fgcolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"hbwidthcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"hcurvecolor" : [ 1.0, 0.603922, 0.0, 0.0 ],
+					"hfgcolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
+					"id" : "obj-20",
+					"linmarkers" : [ 0.0, 11025.0, 16537.5 ],
+					"logmarkers" : [ 31.25, 62.5, 125.0, 250.0, 500.0, 1000.0, 2000.0, 4000.0, 8000.0, 16000.0 ],
+					"markercolor" : [ 0.301961, 0.337255, 0.403922, 0.0 ],
+					"maxclass" : "filtergraph~",
+					"nfilters" : 1,
+					"numdisplay" : 0,
+					"numinlets" : 8,
+					"numoutlets" : 7,
+					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 854.666687, 510.0, 185.366669, 46.0 ],
+					"phasespect" : 1,
+					"presentation" : 1,
+					"presentation_rect" : [ 14.500031, 36.0, 420.999939, 180.0 ],
+					"prototypename" : "M4L.black",
+					"range" : [ 0.041667, 24.0 ],
+					"setfilter" : [ 0, 0, 1, 1, 0, 102.889992, 0.101838, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"textcolor" : [ 0.666667, 0.698039, 0.717647, 0.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"autoout" : 1,
+					"bgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
+					"bordercolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
+					"bwidthcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
+					"curvecolor" : [ 1.0, 0.603922, 0.0, 1.0 ],
+					"fgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"hbwidthcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"hcurvecolor" : [ 1.0, 0.603922, 0.0, 1.0 ],
+					"hfgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
+					"id" : "obj-1",
+					"linmarkers" : [ 0.0, 11025.0, 16537.5 ],
+					"logmarkers" : [ 31.25, 62.5, 125.0, 250.0, 500.0, 1000.0, 2000.0, 4000.0, 8000.0, 16000.0 ],
+					"markercolor" : [ 0.301961, 0.337255, 0.403922, 1.0 ],
+					"maxclass" : "filtergraph~",
+					"nfilters" : 1,
+					"numdisplay" : 0,
+					"numinlets" : 8,
+					"numoutlets" : 7,
+					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 854.666687, 440.5, 185.366669, 46.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 14.500031, 36.0, 420.999939, 180.0 ],
+					"prototypename" : "M4L.black",
+					"range" : [ 0.041667, 24.0 ],
+					"setfilter" : [ 0, 0, 1, 1, 0, 102.889992, 0.101838, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"textcolor" : [ 0.666667, 0.698039, 0.717647, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-39",
@@ -151,7 +329,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 531.0, 117.0, 114.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 236.5, 387.0, 130.0, 20.0 ],
+					"presentation_rect" : [ 273.5, 387.0, 130.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.text[1]",
@@ -180,7 +358,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 531.0, 48.0, 110.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 83.5, 387.0, 130.0, 20.0 ],
+					"presentation_rect" : [ 137.944458, 387.0, 130.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.text",
@@ -2169,7 +2347,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1084.333496, 449.5, 153.0, 24.0 ],
-					"text" : "GUI widget"
+					"text" : "Display freq responce"
 				}
 
 			}
@@ -2462,74 +2640,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
-					"bordercolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
-					"bwidthcolor" : [ 0.917647, 0.94902, 0.054902, 1.0 ],
-					"curvecolor" : [ 0.917647, 0.94902, 0.054902, 1.0 ],
-					"dbdisplay" : 0,
-					"fgcolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"hbwidthcolor" : [ 0.917647, 0.94902, 0.054902, 1.0 ],
-					"hcurvecolor" : [ 0.917647, 0.94902, 0.054902, 1.0 ],
-					"hfgcolor" : [ 0.917647, 0.94902, 0.054902, 0.2 ],
-					"id" : "obj-11",
-					"linmarkers" : [ 0.0, 11025.0, 16537.5 ],
-					"logmarkers" : [ 0.0, 100.0, 1000.0, 10000.0 ],
-					"markercolor" : [ 0.301961, 0.337255, 0.403922, 0.0 ],
-					"maxclass" : "filtergraph~",
-					"nfilters" : 1,
-					"numdisplay" : 0,
-					"numinlets" : 8,
-					"numoutlets" : 7,
-					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 199.299118, 784.0, 203.0, 60.5 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 14.500031, 36.0, 420.999939, 180.0 ],
-					"prototypename" : "M4L.black",
-					"range" : [ 0.041667, 24.0 ],
-					"setfilter" : [ 0, 5, 1, 1, 0, 1182.533447, 0.425347, 0.72338, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
-					"textcolor" : [ 0.666667, 0.698039, 0.717647, 0.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"autoout" : 1,
-					"bgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
-					"bordercolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
-					"bwidthcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
-					"curvecolor" : [ 1.0, 0.603922, 0.0, 1.0 ],
-					"fgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"hbwidthcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"hcurvecolor" : [ 1.0, 0.603922, 0.0, 1.0 ],
-					"hfgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
-					"id" : "obj-1",
-					"linmarkers" : [ 0.0, 11025.0, 16537.5 ],
-					"logmarkers" : [ 0.0, 100.0, 1000.0, 10000.0 ],
-					"markercolor" : [ 0.301961, 0.337255, 0.403922, 1.0 ],
-					"maxclass" : "filtergraph~",
-					"nfilters" : 1,
-					"numdisplay" : 0,
-					"numinlets" : 8,
-					"numoutlets" : 7,
-					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 854.666687, 440.5, 185.366669, 46.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 14.500031, 36.0, 420.999939, 180.0 ],
-					"prototypename" : "M4L.black",
-					"range" : [ 0.041667, 24.0 ],
-					"setfilter" : [ 0, 0, 1, 1, 0, 102.889992, 0.101838, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
-					"textcolor" : [ 0.666667, 0.698039, 0.717647, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-38",
@@ -2764,6 +2874,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-32", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-27", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2808,6 +2927,24 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-30", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-31", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-32", 0 ]
 				}
 
 			}
@@ -2997,6 +3134,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 864.166687, 432.0, 839.0, 432.0, 839.0, 495.0, 864.166687, 495.0 ],
+					"source" : [ "obj-63", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-28", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -3064,6 +3211,7 @@
  ],
 		"parameters" : 		{
 			"obj-45" : [ "live.text", "live.text", 0 ],
+			"obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-46" : [ "live.text[1]", "live.text", 0 ],
 			"obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
