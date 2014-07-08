@@ -88,7 +88,7 @@ void model_preset_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 			
 			aTextHandler = o[0];
 
-			aTextHandler.set(kTTSym_object, EXTRA->presetManager);
+			aTextHandler.set(kTTSym_object, *EXTRA->presetManager);
 			
 			critical_enter(0);
 			tterr = aTextHandler.send(kTTSym_Read, v, none);
@@ -120,7 +120,7 @@ void model_preset_doread_again(TTPtr self)
 		
 		aTextHandler = o[0];
 
-		aTextHandler.set(kTTSym_object, EXTRA->presetManager);
+		aTextHandler.set(kTTSym_object, *EXTRA->presetManager);
 		
 		critical_enter(0);
 		tterr = aTextHandler.send(kTTSym_ReadAgain);
@@ -163,7 +163,7 @@ void model_preset_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		if (!tterr) {
 			aTextHandler = o[0];
 
-			aTextHandler.set(kTTSym_object, EXTRA->presetManager);
+			aTextHandler.set(kTTSym_object, *EXTRA->presetManager);
 			
 			critical_enter(0);
 			tterr = aTextHandler.send(kTTSym_Write, v, none);
@@ -203,7 +203,7 @@ void model_preset_dowrite_again(TTPtr self)
 		
 		aTextHandler = o[0];
 
-		aTextHandler.set(kTTSym_object, EXTRA->presetManager);
+		aTextHandler.set(kTTSym_object, *EXTRA->presetManager);
 		
 		critical_enter(0);
 		tterr = aTextHandler.send(kTTSym_WriteAgain);
