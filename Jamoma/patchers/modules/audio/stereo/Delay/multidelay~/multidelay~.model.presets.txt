@@ -1,0 +1,19 @@
+
+
+- preset "default"
+# "edit a comment"
+
+audio/gain 100.000000
+audio/mix 100.000000
+delay/max 10000
+delay/left 1666.666626 3809.523926 5714.285645 7857.143066 10000.000000
+delay/right 1428.571411 3571.428467  5238.095215 8333.333008 10000.000000
+feedback/gain -18.000000
+feedback/mode pingpong
+limiter/active 1
+limiter/lookahead 64
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 0.000000
+limiter/release 300.00000
+limiter/threshold -1.000000

@@ -60,14 +60,16 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)model_preset_edit,                 "dblclick",				A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_preset_edclose,              "edclose",				A_CANT, 0);
-	
+#ifndef JCOM_VIEW
 	class_addmethod(c->maxClass, (method)model_preset_read,                 "preset:read",			A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)model_preset_write,                "preset:write",			A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)model_preset_edit,                 "preset:edit",			A_GIMME, 0);
 	
 	class_addmethod(c->maxClass, (method)model_preset_read_again,           "preset:read/again",	0);
 	class_addmethod(c->maxClass, (method)model_preset_write_again,          "preset:write/again",	0);
-    
+#endif
+    class_addmethod(c->maxClass, (method)model_signal_return_content,       "return_content",		A_CANT, 0);
+
     class_addmethod(c->maxClass, (method)model_signal_amenities,            "input_created",		A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_amenities,            "output_created",		A_CANT, 0);
     
@@ -152,6 +154,9 @@ void WrappedContainerClass_free(TTPtr self)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTAddress    modelAddress, presetAddress;
     TTValue      v, none;
+    
+    if (!EXTRA)
+        return;
     
     if (EXTRA->modelInfo->valid()) {
         
@@ -273,7 +278,6 @@ void model_subscribe(TTPtr self)
                 // Create internal TTTextHandler (for documention and preset management)
                 aTextHandler = TTObject(kTTSym_TextHandler);
                 x->internals->append(kTTSym_TextHandler, aTextHandler);
-                aTextHandler.set(kTTSym_object, x->wrappedObject);
                 
                 if (!EXTRA->attr_amenities->lookup(TTSymbol("all"), v))
                     EXTRA->all_amenities = YES;
@@ -329,10 +333,18 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     TTAddress       modelAdrs, argAdrs, viewAdrs;
     TTValue         v;
     
+    // look at hierarchy
+    hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
+    
     // if args exists, the first argument of the patcher is the model:address value
     if (argc > 0 && atom_gettype(argv) == A_SYM) {
 
         argAdrs = TTAddress(atom_getsym(argv)->s_name);
+        
+        // in poly case : use the same instance as the container address
+        if (hierarchy == gensym("poly"))
+            if (argAdrs.getInstance() == kTTSymEmpty)
+                argAdrs = argAdrs.appendInstance(EXTRA->containerAddress.getInstance());
         
         // if the address is absolute : use it directly
         if (argAdrs.getType() == kAddressAbsolute) {
@@ -366,8 +378,6 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     }
     // else look around the patcher for model of the same class
     else {
-        
-        hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
         
         // if the view is inside a bpatcher
         if (hierarchy == _sym_bpatcher)
@@ -543,9 +553,10 @@ void model_reference_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		
 		if (!tterr) {
 			aTextHandler = o[0];
+
+			aTextHandler.set(kTTSym_object, x->wrappedObject);
 			
 			critical_enter(0);
-			aTextHandler.set(kTTSym_object, x->wrappedObject);
 			aTextHandler.send(kTTSym_Write, v, none);
 			critical_exit(0);
 		}

@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 37.0, 119.0, 1250.0, 511.0 ],
+		"rect" : [ 37.0, 119.0, 1421.0, 525.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -38,7 +38,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 213.0, 172.0, 98.0, 33.0 ],
+					"patching_rect" : [ 1127.0, 365.0, 98.0, 33.0 ],
 					"text" : "manage presets for the model"
 				}
 
@@ -53,7 +53,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 266.0, 95.0, 181.0, 33.0 ],
+					"patching_rect" : [ 1180.0, 288.0, 181.0, 33.0 ],
 					"text" : "create an alias to use a specific or temporary address"
 				}
 
@@ -70,9 +70,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 368.0, 125.0, 79.0, 18.0 ],
-					"text" : "alias/remove",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"patching_rect" : [ 1282.0, 318.0, 79.0, 18.0 ],
+					"text" : "alias/remove"
 				}
 
 			}
@@ -88,9 +87,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 266.0, 125.0, 97.0, 18.0 ],
-					"text" : "alias /madMovie",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"patching_rect" : [ 1180.0, 318.0, 97.0, 18.0 ],
+					"text" : "alias /madMovie"
 				}
 
 			}
@@ -103,7 +101,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 979.0, 72.0, 57.0, 20.0 ],
+					"patching_rect" : [ 623.0, 80.0, 57.0, 20.0 ],
 					"text" : "deferlow"
 				}
 
@@ -117,7 +115,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 416.0, 275.0, 74.0, 20.0 ],
+					"patching_rect" : [ 60.0, 283.0, 74.0, 20.0 ],
 					"text" : "prepend set"
 				}
 
@@ -131,7 +129,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 777.0, 142.0, 74.0, 20.0 ],
+					"patching_rect" : [ 421.0, 150.0, 74.0, 20.0 ],
 					"text" : "prepend set"
 				}
 
@@ -145,7 +143,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1005.0, 142.0, 74.0, 20.0 ],
+					"patching_rect" : [ 649.0, 150.0, 74.0, 20.0 ],
 					"text" : "prepend set"
 				}
 
@@ -159,7 +157,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 811.0, 279.0, 34.0, 18.0 ],
+					"patching_rect" : [ 455.0, 287.0, 34.0, 18.0 ],
 					"text" : "start"
 				}
 
@@ -173,7 +171,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 777.0, 279.0, 33.0, 18.0 ],
+					"patching_rect" : [ 421.0, 287.0, 33.0, 18.0 ],
 					"text" : "stop"
 				}
 
@@ -187,7 +185,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "" ],
-					"patching_rect" : [ 777.0, 256.0, 86.0, 20.0 ],
+					"patching_rect" : [ 421.0, 264.0, 86.0, 20.0 ],
 					"text" : "sel 0 1"
 				}
 
@@ -202,7 +200,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 371.0, 345.0, 254.0, 60.0 ],
+					"patching_rect" : [ 15.0, 353.0, 254.0, 60.0 ],
 					"text" : "The j.out handles signal outputing.\n\nNotice a /out level is automatically created when a j.out is in added to a model"
 				}
 
@@ -217,7 +215,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 632.0, 361.0, 56.0, 20.0 ],
+					"patching_rect" : [ 276.0, 369.0, 56.0, 20.0 ],
 					"text" : "j.out"
 				}
 
@@ -232,7 +230,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1035.0, 450.0, 204.0, 38.0 ],
+					"patching_rect" : [ 1204.0, 458.0, 204.0, 38.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 15.0, 105.0, 201.0, 38.0 ],
@@ -249,7 +247,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1058.0, 167.0, 32.0, 20.0 ],
+					"patching_rect" : [ 702.0, 175.0, 32.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 75.0, 30.0, 33.0, 20.0 ],
 					"text" : "rate",
@@ -266,7 +264,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1005.0, 274.0, 79.0, 20.0 ],
+					"patching_rect" : [ 649.0, 282.0, 79.0, 20.0 ],
 					"text" : "prepend rate"
 				}
 
@@ -283,7 +281,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1005.0, 167.0, 50.0, 20.0 ],
+					"patching_rect" : [ 649.0, 175.0, 50.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 107.0, 28.0, 50.0, 20.0 ]
 				}
@@ -300,7 +298,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1005.0, 198.0, 227.0, 60.0 ],
+					"patching_rect" : [ 649.0, 206.0, 221.0, 60.0 ],
 					"text" : "j.parameter rate @type decimal @range -2. 2. @default 1. @description \"movie playback rate\" @ramp/drive Max"
 				}
 
@@ -314,7 +312,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 800.0, 167.0, 35.0, 20.0 ],
+					"patching_rect" : [ 444.0, 175.0, 35.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 35.0, 28.0, 35.0, 20.0 ],
 					"text" : "play",
@@ -331,7 +329,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 688.0, 459.0, 35.0, 20.0 ],
+					"patching_rect" : [ 332.0, 467.0, 35.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 60.0, 52.0, 35.0, 20.0 ],
 					"text" : "fps",
@@ -348,7 +346,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 378.0, 301.0, 35.0, 20.0 ],
+					"patching_rect" : [ 22.0, 309.0, 35.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 75.0, 7.0, 35.0, 20.0 ],
 					"text" : "path",
@@ -365,7 +363,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 556.0, 127.0, 35.0, 20.0 ],
+					"patching_rect" : [ 200.0, 135.0, 35.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 36.0, 7.0, 35.0, 20.0 ],
 					"text" : "load",
@@ -380,7 +378,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 632.0, 461.0, 25.0, 25.0 ]
+					"patching_rect" : [ 276.0, 469.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -393,7 +391,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 716.0, 361.0, 70.0, 20.0 ],
+					"patching_rect" : [ 360.0, 369.0, 70.0, 20.0 ],
 					"text" : "t getstate l"
 				}
 
@@ -407,7 +405,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 777.0, 428.0, 57.0, 20.0 ],
+					"patching_rect" : [ 421.0, 436.0, 57.0, 20.0 ],
 					"text" : "route fps"
 				}
 
@@ -421,7 +419,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 777.0, 167.0, 20.0, 20.0 ],
+					"patching_rect" : [ 421.0, 175.0, 20.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.0, 28.0, 20.0, 20.0 ]
 				}
@@ -438,7 +436,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 777.0, 198.0, 205.0, 47.0 ],
+					"patching_rect" : [ 421.0, 206.0, 205.0, 47.0 ],
 					"text" : "j.parameter play @type boolean @description \"play the movie\" @priority 2"
 				}
 
@@ -452,7 +450,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 875.0, 274.0, 63.0, 19.0 ],
+					"patching_rect" : [ 519.0, 282.0, 63.0, 19.0 ],
 					"text" : "qmetro 30"
 				}
 
@@ -466,7 +464,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 528.0, 174.0, 59.0, 20.0 ],
+					"patching_rect" : [ 172.0, 182.0, 59.0, 20.0 ],
 					"text" : "tosymbol"
 				}
 
@@ -481,7 +479,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 716.0, 390.0, 80.0, 35.0 ]
+					"patching_rect" : [ 360.0, 398.0, 80.0, 35.0 ]
 				}
 
 			}
@@ -498,7 +496,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 723.0, 459.0, 50.0, 20.0 ],
+					"patching_rect" : [ 367.0, 467.0, 50.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.0, 52.0, 47.0, 20.0 ]
 				}
@@ -513,7 +511,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 416.0, 301.0, 207.0, 20.0 ],
+					"patching_rect" : [ 60.0, 309.0, 207.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 108.0, 7.0, 290.0, 20.0 ],
 					"text" : "oh.mov",
@@ -530,7 +528,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"outlinecolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
-					"patching_rect" : [ 528.0, 125.0, 24.0, 24.0 ],
+					"patching_rect" : [ 172.0, 133.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 12.0, 3.0, 24.0, 24.0 ]
 				}
@@ -545,7 +543,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 528.0, 152.0, 69.0, 20.0 ],
+					"patching_rect" : [ 172.0, 160.0, 69.0, 20.0 ],
 					"text" : "opendialog"
 				}
 
@@ -559,7 +557,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 632.0, 275.0, 82.0, 20.0 ],
+					"patching_rect" : [ 276.0, 283.0, 82.0, 20.0 ],
 					"text" : "prepend read"
 				}
 
@@ -573,7 +571,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 632.0, 317.0, 202.0, 20.0 ],
+					"patching_rect" : [ 276.0, 325.0, 202.0, 20.0 ],
 					"text" : "jit.qt.movie @autostart 0 @vol 0"
 				}
 
@@ -587,9 +585,9 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 777.0, 459.0, 178.0, 33.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 421.0, 467.0, 178.0, 33.0 ],
 					"text" : "j.return fps @type decimal @description \"current fps\""
 				}
 
@@ -605,7 +603,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 528.0, 87.0, 202.0, 33.0 ],
+					"patching_rect" : [ 172.0, 95.0, 202.0, 33.0 ],
 					"text" : "j.message file/load @type none @description \"load a movie\""
 				}
 
@@ -621,7 +619,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 528.0, 198.0, 226.0, 47.0 ],
+					"patching_rect" : [ 172.0, 206.0, 226.0, 47.0 ],
 					"text" : "j.parameter file/path @type string @description \"the path to a movie\" @priority 1"
 				}
 
@@ -638,9 +636,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 42.0, 172.0, 83.0, 18.0 ],
-					"text" : "preset default",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"patching_rect" : [ 956.0, 365.0, 83.0, 18.0 ],
+					"text" : "preset default"
 				}
 
 			}
@@ -656,9 +653,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 133.0, 172.0, 71.0, 18.0 ],
-					"text" : "preset:read",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"patching_rect" : [ 1047.0, 365.0, 71.0, 18.0 ],
+					"text" : "preset:read"
 				}
 
 			}
@@ -674,9 +670,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 133.0, 195.0, 73.0, 18.0 ],
-					"text" : "preset:write",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"patching_rect" : [ 1047.0, 388.0, 73.0, 18.0 ],
+					"text" : "preset:write"
 				}
 
 			}
@@ -705,7 +700,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 45.0, 95.0, 157.0, 33.0 ],
+					"patching_rect" : [ 959.0, 288.0, 157.0, 33.0 ],
 					"text" : "generate an html documentation of the model"
 				}
 
@@ -717,7 +712,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 9.0, 265.0, 25.0, 25.0 ]
+					"patching_rect" : [ 923.0, 458.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -731,7 +726,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 110.0, 25.0, 25.0 ]
+					"patching_rect" : [ 923.0, 303.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -745,7 +740,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 9.0, 231.0, 286.0, 20.0 ],
+					"patching_rect" : [ 923.0, 424.0, 286.0, 20.0 ],
 					"text" : "j.model @description \"a movie playback model\"",
 					"varname" : "_jcom_node"
 				}
@@ -763,9 +758,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 42.0, 125.0, 176.0, 18.0 ],
-					"text" : "model/documentation/generate",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"patching_rect" : [ 956.0, 318.0, 176.0, 18.0 ],
+					"text" : "model/documentation/generate"
 				}
 
 			}
@@ -781,9 +775,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 42.0, 195.0, 74.0, 18.0 ],
-					"text" : "preset:store",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"patching_rect" : [ 956.0, 388.0, 74.0, 18.0 ],
+					"text" : "preset:store"
 				}
 
 			}
@@ -794,7 +787,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1198.0, 408.0, 34.0, 32.0 ],
+					"patching_rect" : [ 842.0, 416.0, 34.0, 32.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 412.0, 77.0 ]
 				}
@@ -810,7 +803,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1019.0, 96.0, 156.0, 27.0 ],
+					"patching_rect" : [ 663.0, 104.0, 156.0, 27.0 ],
 					"text" : "this workaround because the movie starts when rate 1. is sent on init"
 				}
 
@@ -824,7 +817,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 979.0, 96.0, 33.0, 18.0 ],
+					"patching_rect" : [ 623.0, 104.0, 33.0, 18.0 ],
 					"text" : "stop"
 				}
 
@@ -839,7 +832,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 939.0, 47.0, 59.0, 20.0 ],
+					"patching_rect" : [ 583.0, 55.0, 59.0, 20.0 ],
 					"text" : "j.init"
 				}
 
@@ -868,7 +861,7 @@
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 786.5, 250.5, 884.5, 250.5 ],
+					"midpoints" : [ 430.5, 258.5, 528.5, 258.5 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -878,7 +871,7 @@
 					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 786.5, 251.0, 767.5, 251.0, 767.5, 135.0, 786.5, 135.0 ],
+					"midpoints" : [ 430.5, 259.0, 411.5, 259.0, 411.5, 143.0, 430.5, 143.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -897,7 +890,7 @@
 					"destination" : [ "obj-52", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 884.5, 306.5, 641.5, 306.5 ],
+					"midpoints" : [ 528.5, 314.5, 285.5, 314.5 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -943,7 +936,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 275.5, 148.5, 18.5, 148.5 ],
+					"midpoints" : [ 1189.5, 341.5, 932.5, 341.5 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
@@ -971,7 +964,7 @@
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1014.5, 264.0, 996.5, 264.0, 996.5, 135.0, 1014.5, 135.0 ],
+					"midpoints" : [ 658.5, 272.0, 640.5, 272.0, 640.5, 143.0, 658.5, 143.0 ],
 					"source" : [ "obj-27", 0 ]
 				}
 
@@ -990,7 +983,7 @@
 					"destination" : [ "obj-33", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 537.5, 259.0, 425.5, 259.0 ],
+					"midpoints" : [ 181.5, 267.0, 69.5, 267.0 ],
 					"source" : [ "obj-28", 0 ]
 				}
 
@@ -1000,7 +993,7 @@
 					"destination" : [ "obj-50", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 537.5, 259.5, 641.5, 259.5 ],
+					"midpoints" : [ 181.5, 267.5, 285.5, 267.5 ],
 					"source" : [ "obj-28", 0 ]
 				}
 
@@ -1019,7 +1012,7 @@
 					"destination" : [ "obj-52", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 786.5, 306.5, 641.5, 306.5 ],
+					"midpoints" : [ 430.5, 314.5, 285.5, 314.5 ],
 					"source" : [ "obj-32", 0 ]
 				}
 
@@ -1038,7 +1031,7 @@
 					"destination" : [ "obj-44", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 776.5, 385.0, 725.5, 385.0 ],
+					"midpoints" : [ 420.5, 393.0, 369.5, 393.0 ],
 					"source" : [ "obj-34", 1 ]
 				}
 
@@ -1066,7 +1059,7 @@
 					"destination" : [ "obj-46", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 786.5, 451.5, 732.5, 451.5 ],
+					"midpoints" : [ 430.5, 459.5, 376.5, 459.5 ],
 					"source" : [ "obj-36", 0 ]
 				}
 
@@ -1076,7 +1069,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 377.5, 148.5, 18.5, 148.5 ],
+					"midpoints" : [ 1291.5, 341.5, 932.5, 341.5 ],
 					"source" : [ "obj-37", 0 ]
 				}
 
@@ -1086,7 +1079,7 @@
 					"destination" : [ "obj-52", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 820.5, 306.5, 641.5, 306.5 ],
+					"midpoints" : [ 464.5, 314.5, 285.5, 314.5 ],
 					"source" : [ "obj-39", 0 ]
 				}
 
@@ -1096,7 +1089,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 51.5, 148.5, 18.5, 148.5 ],
+					"midpoints" : [ 965.5, 341.5, 932.5, 341.5 ],
 					"source" : [ "obj-40", 0 ]
 				}
 
@@ -1106,7 +1099,7 @@
 					"destination" : [ "obj-52", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 988.5, 306.0, 641.5, 306.0 ],
+					"midpoints" : [ 632.5, 314.0, 285.5, 314.0 ],
 					"source" : [ "obj-43", 0 ]
 				}
 
@@ -1170,7 +1163,7 @@
 					"destination" : [ "obj-34", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 641.5, 351.0, 725.5, 351.0 ],
+					"midpoints" : [ 285.5, 359.0, 369.5, 359.0 ],
 					"source" : [ "obj-52", 0 ]
 				}
 
@@ -1189,7 +1182,7 @@
 					"destination" : [ "obj-52", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1014.5, 306.0, 641.5, 306.0 ],
+					"midpoints" : [ 658.5, 314.0, 285.5, 314.0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -1217,7 +1210,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 142.5, 216.5, 18.5, 216.5 ],
+					"midpoints" : [ 1056.5, 409.5, 932.5, 409.5 ],
 					"source" : [ "obj-88", 0 ]
 				}
 
@@ -1227,7 +1220,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 142.5, 192.0, 18.5, 192.0 ],
+					"midpoints" : [ 1056.5, 385.0, 932.5, 385.0 ],
 					"source" : [ "obj-91", 0 ]
 				}
 
@@ -1237,7 +1230,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 51.5, 216.5, 18.5, 216.5 ],
+					"midpoints" : [ 965.5, 409.5, 932.5, 409.5 ],
 					"source" : [ "obj-92", 0 ]
 				}
 
@@ -1247,35 +1240,10 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 51.5, 192.0, 18.5, 192.0 ],
+					"midpoints" : [ 965.5, 385.0, 932.5, 385.0 ],
 					"source" : [ "obj-93", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

@@ -1,0 +1,14 @@
+
+
+- preset "default"
+# "edit a comment"
+active 1
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+depth 10.000000
+mode sinus
+preamp 0.000000
+ 
+

@@ -1,0 +1,9 @@
+
+
+
+- preset "default"
+  device 0
+  normalizeMidi 1
+
+  
+

@@ -669,12 +669,10 @@ void textslider_paint(t_textslider *x, t_object *view)
 		TTLimit(value, 0.0, 1.0);   
 	}
 	double			position;
-
-	// TODO: Rounded corners
 	
 	g = (t_jgraphics*) patcherview_get_jgraphics(view);		// obtain graphics context
 	jbox_get_rect_for_view((t_object *)x, view, &rect);		// this is the box rectangle -- but we draw relative to 0 0, and thus only care about width & height
-	position = ((rect.width-3)*value)+1;					// -3: one pixel for each border and -1 for counting to N-1 
+	position = ((rect.width-3)*value)+1;					// -5: one pixels for each border and -1 for counting to N-1
 
 	// Draw passive part of slider
 	 
@@ -686,7 +684,7 @@ void textslider_paint(t_textslider *x, t_object *view)
 	// Draw frame
 	jgraphics_rectangle(g, 0., 0., rect.width, rect.height);
 	jgraphics_set_source_jrgba(g, &x->attrBorderColor); 
-	jgraphics_set_line_width(g, 1.0);
+	jgraphics_set_line_width(g, 2.0);
 	jgraphics_stroke(g);
 	
 	if (value > 0.)
@@ -697,7 +695,7 @@ void textslider_paint(t_textslider *x, t_object *view)
 		
 		// Draw slider knob
 		jgraphics_set_source_jrgba(g, &x->attrKnobColor);
-		jgraphics_line_draw_fast(g, position, 1.0, position, rect.height-1.0, 1.0);
+		jgraphics_line_draw_fast(g, position, 1.0, position, rect.height-2.0, 2.0);
 	}
 	
 }

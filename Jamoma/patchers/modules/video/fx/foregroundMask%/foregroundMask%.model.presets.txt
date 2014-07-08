@@ -1,0 +1,7 @@
+
+- preset "default"
+# "edit a comment"
+data/active 1
+data/bypass 0
+filter/feedback 0.200000
+threshold 0.340000

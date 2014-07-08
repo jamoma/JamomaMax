@@ -74,7 +74,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_mouseleave,						"mouseleave",						A_CANT, 0);
 	class_addmethod(c, (method)ui_oksize,							"oksize",							A_CANT, 0);
     
-    class_addmethod(c, (method)ui_edit,                             "dblclick",                         A_CANT, 0);
+    class_addmethod(c, (method)ui_edit_state,                       "dblclick",                         A_CANT, 0);
     class_addmethod(c, (method)ui_edclose,                          "edclose",                          A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_modelParamExplorer_callback,		"return_modelParamExploration",		A_CANT, 0);
@@ -87,7 +87,6 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
     
     class_addmethod(c, (method)ui_return_model_content,             "return_model_content",             A_CANT, 0);
 	
-	class_addmethod(c, (method)ui_return_metersdefeated,			"return_metersdefeated",			A_CANT, 0);
 	class_addmethod(c, (method)ui_return_mute,						"return_mute",						A_CANT, 0);
 	class_addmethod(c, (method)ui_return_bypass,					"return_bypass",					A_CANT, 0);
 	class_addmethod(c, (method)ui_return_mix,						"return_mix",						A_CANT, 0);
@@ -1174,54 +1173,67 @@ void ui_menu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 void ui_menu_qfn(t_ui *x)
 {
 	t_symobject *item = (t_symobject *)linklist_getindex(x->menu_items, x->menu_selection);
-    TTValue     none;
+    t_atom      a;
     
     // get model object
     t_object *modelObject = ui_get_model_object(x);
     if (!modelObject)
         return;
     
-    // TODO : use the model object to directly send message to the Max object
+    if (item->sym == gensym("Open Model Reference Page"))
+        object_method(modelObject, _sym_anything, gensym("model:reference/open"), 0, NULL);
+	
+	else if (item->sym == gensym("Open Model Help Patch"))
+        object_method(modelObject, _sym_anything, gensym("model:help/open"), 0, NULL);
+	
+	else if (item->sym == gensym("Open Model Internal"))
+        object_method(modelObject, _sym_anything, gensym("model:internal/open"), 0, NULL);
+    
+    else if (item->sym == gensym("Edit Current State"))
+		ui_edit_state(x);
+    
+	else if (item->sym == gensym("Load Presets File"))
+		object_method(modelObject, gensym("preset:read"), 0, NULL);
+    
+    else if (item->sym == gensym("Save Presets File"))
+		object_method(modelObject, gensym("preset:write/again"), 0, NULL);
+    
+	else if (item->sym == gensym("Save Presets File As"))
+		object_method(modelObject, gensym("preset:write"), 0, NULL);
+
+	else if (item->sym == gensym("Edit Presets File"))
+		object_method(modelObject, gensym("preset:edit"), 0, NULL);
+	
+	else if (item->sym == gensym("Create New Preset")) {
+    
+		long    result;
+        char    *text;
+        char    buf[512];
         
-	if (item->sym == gensym("Defeat Signal Meters")) {
-		; // TODO : how to do this ?
-	}
-	else if (item->sym == gensym("Disable UI Updates")) {
-		; // TODO : set each j.remote freeze attribute
-	}
-	
-	else if (item->sym == gensym("Load Settings..."))
-		defer(x, (method)ui_preset_doread, NULL, 0, 0L);
-	
-	else if (item->sym == gensym("Save Settings..."))
-		defer(x, (method)ui_preset_dowrite, NULL, 0, 0L);
-	
-	else if (item->sym == gensym("Restore Default Settings"))
-		ui_viewer_send(x, TTSymbol("preset:recall"), 1);
-	
-	else if (item->sym == gensym("Store Current Preset"))
-		ui_viewer_send(x, TTSymbol("preset:store"), none);
-	
-	else if (item->sym == gensym("Store as Next Preset"))
-		ui_preset_store_next(x);
+        strcpy(buf, "Château de Preset");
+        
+        result = jdialog_showtext("Provide a name for this Preset", buf, 0, &text);
+        if (result != 1)
+            return;
+        
+        atom_setsym(&a, gensym(text));
+        object_method(modelObject, _sym_anything, gensym("preset:new"), 1, &a);
+    }
+    
+    else if (item->sym == gensym("Update Current Preset"))
+		object_method(modelObject, _sym_anything, gensym("preset:update"), 0, NULL);
+    
+    else if (item->sym == gensym("Delete Current Preset"))
+		object_method(modelObject, _sym_anything, gensym("preset:delete"), 0, NULL);
 	
 	else if (item->sym == gensym("Open Preset Interface"))
 		ui_preset_interface(x);
-	
-	else if (item->sym == gensym("Edit Current State as Text"))
-		ui_edit(x);
-	
-	else if (item->sym == gensym("Open Model Internal"))
-		ui_viewer_send(x, TTSymbol("model:internal/open"), none);
-	
-	else if (item->sym == gensym("Open Model Help Patch"))
-		ui_viewer_send(x, TTSymbol("model:help/open"), none);
-	
-	else if (item->sym == gensym("Open Model Reference Page"))
-		ui_viewer_send(x, TTSymbol("model:reference/open"), none);
-	
-	else	// assume the menu item is a preset name
-		ui_viewer_send(x, TTSymbol("preset:recall"), TTSymbol(item->sym->s_name));
+
+	else {  // assume the menu item is a preset name
+        
+        atom_setsym(&a, item->sym);
+        object_method(modelObject, _sym_anything, gensym("preset:recall"), 1, &a);
+    }
 }
 
 void ui_menu_build(t_ui *x)
@@ -1233,53 +1245,46 @@ void ui_menu_build(t_ui *x)
 		return;
 	
 	linklist_clear(x->menu_items);
-	item = (t_symobject *)symobject_new(gensym("Disable UI Updates"));
-	linklist_append(x->menu_items, item);	
-	item = (t_symobject *)symobject_new(gensym("-"));
-	linklist_append(x->menu_items, item);
-	
-	if (x->has_meters) {
-		item = (t_symobject *)symobject_new(gensym("Defeat Signal Meters"));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Clear Signal Meters"));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("-"));
-		linklist_append(x->menu_items, item);
-	}
-	
-	if (x->has_preset) {
-		item = (t_symobject *)symobject_new(gensym("Load Settings..."));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Save Settings..."));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Restore Default Settings"));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Store Current Preset"));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Store as Next Preset"));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Open Preset Interface"));
-	}
-	
-	linklist_append(x->menu_items, item);
-	
-	item = (t_symobject *)symobject_new(gensym("-"));
-	if (x->has_model) {
+    
+    // append model operations
+    if (x->has_model) {
         
-        linklist_append(x->menu_items, item);
-        item = (t_symobject *)symobject_new(gensym("Edit Current State as Text"));
-		linklist_append(x->menu_items, item);
 		item = (t_symobject *)symobject_new(gensym("Open Model Reference Page"));
 		linklist_append(x->menu_items, item);
 		item = (t_symobject *)symobject_new(gensym("Open Model Help Patch"));
 		linklist_append(x->menu_items, item);
 		item = (t_symobject *)symobject_new(gensym("Open Model Internal"));
+        linklist_append(x->menu_items, item);
+        item = (t_symobject *)symobject_new(gensym("Edit Current State"));
+        linklist_append(x->menu_items, item);
 	}
 	
-	linklist_append(x->menu_items, item);	
+    // append preset operations
+	if (x->has_preset) {
+        
+        item = (t_symobject *)symobject_new(gensym("-"));
+        linklist_append(x->menu_items, item);
+        
+		item = (t_symobject *)symobject_new(gensym("Load Presets File"));
+		linklist_append(x->menu_items, item);
+        item = (t_symobject *)symobject_new(gensym("Save Presets File"));
+        linklist_append(x->menu_items, item);
+		item = (t_symobject *)symobject_new(gensym("Save Presets File As"));
+		linklist_append(x->menu_items, item);
+		item = (t_symobject *)symobject_new(gensym("Edit Presets File"));
+		linklist_append(x->menu_items, item);
+		item = (t_symobject *)symobject_new(gensym("Create New Preset"));
+        linklist_append(x->menu_items, item);
+        item = (t_symobject *)symobject_new(gensym("Update Current Preset"));
+		linklist_append(x->menu_items, item);
+		item = (t_symobject *)symobject_new(gensym("Delete Current Preset"));
+		linklist_append(x->menu_items, item);
+		item = (t_symobject *)symobject_new(gensym("Open Preset Interface"));
+	}
 	
 	// append preset name list
 	if (x->preset_names) {
+        
 		item = (t_symobject *)symobject_new(gensym("-"));
 		linklist_append(x->menu_items, item);
 		
@@ -1501,7 +1506,7 @@ void* ui_oksize(t_ui *x, t_rect *rect)
 	return (void *)1;
 }
 
-void ui_edit(t_ui *x)
+void ui_edit_state(t_ui *x)
 {
     TTString    *buffer;
     char        title[MAX_FILENAME_CHARS];

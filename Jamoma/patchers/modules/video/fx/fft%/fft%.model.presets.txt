@@ -1,0 +1,7 @@
+
+- preset "default"
+# "edit a comment"
+data/active 1
+data/bypass 0
+dim 128.000000 128.000000
+mode phase

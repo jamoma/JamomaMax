@@ -1,0 +1,6 @@
+
+
+- preset "default"
+toggle 0
+time 40
+randomness 0

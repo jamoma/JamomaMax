@@ -1,0 +1,8 @@
+
+- preset "default"
+# "edit a commen"
+/similarity%/data/active 1
+/similarity%/data/bypass 0
+/similarity%/mode 2
+/similarity%/algorithm 1
+

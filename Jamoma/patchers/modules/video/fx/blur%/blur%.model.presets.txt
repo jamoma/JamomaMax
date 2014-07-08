@@ -1,0 +1,9 @@
+
+
+- preset "default"
+# "edit a comment"
+data/active 1
+data/bypass 0
+center 0.000000
+ring 22.000000
+ripple 11.000000

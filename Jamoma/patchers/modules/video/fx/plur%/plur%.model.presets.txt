@@ -1,0 +1,11 @@
+
+- preset "default"
+# "edit a comment"
+data/active 1
+data/bypass 0
+mode 1
+scale 2
+step/x 30
+range/x 25
+step/y 30
+range/y 25

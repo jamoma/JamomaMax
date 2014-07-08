@@ -1,0 +1,24 @@
+
+
+- preset "default"
+# "edit a comment"
+audio/gain 100.000000
+balance/mode FastMode
+balance/position 0.000000
+balance/shape EqualPower
+ch.1 1
+ch.2 2
+limiter/active 1
+limiter/lookahead 64
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 300.00000
+limiter/threshold -1.000000
+record/file/type aiff
+record/samptype int24
+saturation/active 1
+saturation/depth 10.000000
+
+ 
+

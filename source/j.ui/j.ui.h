@@ -203,7 +203,6 @@ void		ui_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom* argv
 void		ui_return_model_init(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_model_content(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
-void		ui_return_metersdefeated(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_mute(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_bypass(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_mix(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
@@ -212,14 +211,11 @@ void		ui_return_freeze(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_active(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
 // prototype : text editor
-void		ui_edit(t_ui *x);
+void		ui_edit_state(t_ui *x);
 void		ui_edclose(t_ui *x, char **text, long size);
 void		ui_doedit(t_ui *x);
 
 // prototype: ui handling for preset features
-void		ui_preset_store_next(t_ui *x);
-void		ui_preset_doread(t_ui *x);
-void		ui_preset_dowrite(t_ui *x);
 void		ui_return_preset_names(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
 #endif // __J_UI__

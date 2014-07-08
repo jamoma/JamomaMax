@@ -1,0 +1,15 @@
+
+
+
+- preset "default"
+  clip 1
+  repetitions 0
+  scale/input/max 0
+  scale/input/min 0
+  scale/output/max 127.000000
+  scale/output/min 0
+  scale 2
+  smooth 1
+  smooth/value 2.000000
+  
+

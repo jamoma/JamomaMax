@@ -134,12 +134,5 @@ bool JAMOMA_EXPORT jamoma_string_compare(char *s1, char *s2);
 bool JAMOMA_EXPORT jamoma_loadextern(t_symbol *objectname, long argc, t_atom *argv, t_object **object);
 
 
-/** Translates a Max path+filename combo into a correct absolutepath.
- @param in_path			The path of the file.
- @param in_filename		The name of the file.
- @param out_filepath	The resulting combined path and file
- */
-void JAMOMA_EXPORT jamoma_getfilepath(short in_path, char *in_filename, char *out_filepath);
-
 #endif //__JAMOMA_FOR_MAX_H__
 

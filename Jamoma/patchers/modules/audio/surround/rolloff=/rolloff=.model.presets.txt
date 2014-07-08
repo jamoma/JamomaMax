@@ -1,0 +1,9 @@
+
+
+- preset "default"
+# "edit a comment"
+numSources 1
+referenceDistance 1.000000
+rollOff 6.000000
+ 
+

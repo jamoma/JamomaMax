@@ -1,0 +1,21 @@
+
+
+
+- preset "default"
+  edit edit
+  in/action 0
+  in/direct 0
+  in/message 0
+  in/module/derivative 0
+  in/module/listindex 0
+  in/value 0.000000
+  in/value/variation 0
+  out/action 0
+  out/direct 0  
+  out/message 0
+  out/ramp 0
+  out/value 0.000000
+  time/repeat 0.000000
+  time/wait 0
+  
+
