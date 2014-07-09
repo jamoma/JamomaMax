@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"revision" : 8,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 20.0, 147.0, 1420.0, 718.0 ],
@@ -52,7 +52,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 535.0, 487.0, 50.0, 20.0 ],
-					"text" : "j.out~ 1"
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -402,8 +402,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"revision" : 8,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 280.0, 395.0, 810.0, 402.0 ],
@@ -693,8 +693,8 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
-											"architecture" : "x86"
+											"revision" : 8,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 25.0, 69.0, 270.0, 210.0 ],
@@ -784,8 +784,8 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
-											"architecture" : "x86"
+											"revision" : 8,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 25.0, 69.0, 270.0, 210.0 ],
@@ -1670,8 +1670,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"revision" : 8,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 418.0, 188.0, 640.0, 480.0 ],
@@ -1963,8 +1963,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"revision" : 8,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 419.0, 54.0, 197.0, 200.0 ],
@@ -2384,8 +2384,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 618.5, 487.0, 50.0, 20.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 618.5, 487.0, 52.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}

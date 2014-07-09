@@ -2,9 +2,9 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 6,
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
 			"architecture" : "x86"
 		}
 ,
@@ -105,7 +105,19 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "bang" ],
 					"patching_rect" : [ 36.5, 157.0, 305.666626, 20.0 ],
-					"save" : [ "#N", "sfplay~", "1378__sflist", 4, 120960, 1, "", ";" ],
+					"saved_object_attributes" : 					{
+						"basictuning" : 440,
+						"followglobaltempo" : 0,
+						"formant" : [ 1.0 ],
+						"formantcorrection" : 0,
+						"mode" : "basic",
+						"originallength" : [ 0.0, "ticks" ],
+						"originaltempo" : 120.0,
+						"pitchcorrection" : 0,
+						"quality" : "basic",
+						"timestretch" : [ 0 ]
+					}
+,
 					"text" : "sfplay~ #0__sflist 4 0 1"
 				}
 
@@ -137,15 +149,23 @@
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-91",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.5, 125.0, 155.0, 20.0 ],
-					"text" : "filePlayer.algorithm"
+					"patching_rect" : [ 36.5, 125.0, 199.0, 20.0 ],
+					"text" : "filePlayer.parametersAndMessages",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -272,7 +292,7 @@
 					"destination" : [ "obj-91", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 332.666626, 189.0, 348.5, 189.0, 348.5, 113.0, 182.0, 113.0 ],
+					"midpoints" : [ 332.666626, 189.0, 348.5, 189.0, 348.5, 113.0, 226.0, 113.0 ],
 					"source" : [ "obj-6", 5 ]
 				}
 
@@ -370,9 +390,9 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "filePlayer.algorithm.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~/shared",
-				"patcherrelativepath" : "../shared",
+				"name" : "filePlayer.parametersAndMessages.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/filePlayer~/shared",
+				"patcherrelativepath" : "../../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Sources/filePlayer~/shared",
 				"type" : "JSON",
 				"implicit" : 1
 			}

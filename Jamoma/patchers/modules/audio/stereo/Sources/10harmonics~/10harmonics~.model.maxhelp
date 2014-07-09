@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 59.0, 44.0, 419.0, 612.0 ],
+		"rect" : [ 59.0, 44.0, 426.0, 648.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -42,11 +42,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 419.0, 586.0 ],
+						"rect" : [ 0.0, 26.0, 426.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -127,11 +127,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 419.0, 586.0 ],
+						"rect" : [ 0.0, 26.0, 426.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -214,11 +214,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 419.0, 586.0 ],
+						"rect" : [ 0.0, 26.0, 426.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -335,11 +335,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 59.0, 70.0, 419.0, 586.0 ],
+						"rect" : [ 59.0, 70.0, 426.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -367,8 +367,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 39.0, 414.0, 300.0, 140.0 ],
-									"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
+									"patching_rect" : [ 39.0, 414.0, 300.0, 175.0 ],
+									"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ]
 								}
 
 							}
@@ -432,13 +432,12 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-4",
-									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 362.0, 127.0, 31.0 ],
-									"text" : "frequency 293.664768"
+									"patching_rect" : [ 212.0, 362.0, 127.0, 18.0 ],
+									"text" : "harmonic.10/gain -54."
 								}
 
 							}
@@ -570,11 +569,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 419.0, 586.0 ],
+						"rect" : [ 0.0, 26.0, 426.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -619,23 +618,52 @@
 			}
  ],
 		"lines" : [  ],
+		"parameters" : 		{
+			"obj-2::obj-2::obj-1::obj-34" : [ "live.numbox[6]", "live.numbox", 0 ],
+			"obj-2::obj-8::obj-1::obj-53" : [ "Master Gain", "Master Gain", 0 ],
+			"obj-2::obj-8::obj-1::obj-103" : [ "live.text[3]", "live.text", 0 ],
+			"obj-2::obj-2::obj-1::obj-23" : [ "live.numbox[4]", "live.numbox", 0 ],
+			"obj-2::obj-2::obj-1::obj-6" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-2::obj-8::obj-1::obj-100" : [ "live.text[2]", "live.text[1]", 0 ],
+			"obj-2::obj-2::obj-1::obj-32" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-2::obj-8::obj-1::obj-102" : [ "live.text", "live.text", 0 ],
+			"obj-2::obj-8::obj-1::obj-97" : [ "live.numbox[12]", "CPU", 0 ],
+			"obj-2::obj-8::obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
+			"obj-2::obj-8::obj-1::obj-111" : [ "live.numbox[11]", "live.numbox[2]", 0 ],
+			"obj-2::obj-8::obj-1::obj-90" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-2::obj-2::obj-1::obj-15" : [ "live.numbox[1]", "live.numbox", 0 ],
+			"obj-2::obj-2::obj-1::obj-21" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-2::obj-8::obj-1::obj-110" : [ "live.numbox[13]", "live.numbox[1]", 0 ],
+			"obj-2::obj-8::obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
+			"obj-2::obj-2::obj-1::obj-36" : [ "live.numbox[8]", "live.numbox", 0 ],
+			"obj-2::obj-8::obj-1::obj-98" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-2::obj-8::obj-1::obj-104" : [ "live.dial[1]", "Depth", 0 ],
+			"obj-2::obj-2::obj-1::obj-37" : [ "live.numbox[9]", "live.numbox", 0 ],
+			"obj-2::obj-8::obj-1::obj-82" : [ "pan", "Pan", 0 ],
+			"obj-2::obj-2::obj-1::obj-35" : [ "live.numbox[7]", "live.numbox", 0 ],
+			"obj-2::obj-8::obj-1::obj-108" : [ "live.text[4]", "live.text[4]", 0 ],
+			"obj-2::obj-2::obj-1::obj-16" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-2::obj-8::obj-1::obj-99" : [ "live.menu[2]", "live.menu[2]", 0 ],
+			"obj-2::obj-2::obj-1::obj-38" : [ "live.numbox[10]", "live.numbox[10]", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "10harmonics~.module.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/10harmonics~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/10harmonics~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "10harmonics~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/10harmonics~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/10harmonics~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "10harmonics~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/10harmonics~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/10harmonics~",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -643,154 +671,147 @@
 , 			{
 				"name" : "j.list2parameter.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../../components/data/list2parameter",
+				"patcherrelativepath" : "../../../../../components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../../components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../../components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../../components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../../../components/data/jamomaPath",
+				"patcherrelativepath" : "../../../../../components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.module.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/output~",
-				"patcherrelativepath" : "../output~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"patcherrelativepath" : "../../Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/output~",
-				"patcherrelativepath" : "../output~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"patcherrelativepath" : "../../Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "saturation~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/saturation~",
-				"patcherrelativepath" : "../saturation~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
+				"patcherrelativepath" : "../../Distortion/saturation~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
-				"patcherrelativepath" : "../limiter~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/limiter~",
-				"patcherrelativepath" : "../limiter~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/balance~",
-				"patcherrelativepath" : "../balance~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"patcherrelativepath" : "../../Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/record~",
-				"patcherrelativepath" : "../record~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"patcherrelativepath" : "../../Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/record~",
-				"patcherrelativepath" : "../record~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"patcherrelativepath" : "../../Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/output~",
-				"patcherrelativepath" : "../output~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"patcherrelativepath" : "../../Output/output~",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../../javascript",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "",
 				"bootpath" : "/",
-				"patcherrelativepath" : "../../../../../../../../../../../../..",
+				"patcherrelativepath" : "../../../../../../../../../../../../../..",
 				"type" : "fold",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpstarter.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpname.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gainParameters.helper.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/help",
-				"patcherrelativepath" : "../../../../../help",
+				"patcherrelativepath" : "../../../../../../help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.presetParameters.helper.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/help",
-				"patcherrelativepath" : "../../../../../help",
+				"patcherrelativepath" : "../../../../../../help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.attrParameters.helper.maxpat",
 				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/help",
-				"patcherrelativepath" : "../../../../../help",
+				"patcherrelativepath" : "../../../../../../help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -868,14 +889,6 @@
 			}
 , 			{
 				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
 , 			{

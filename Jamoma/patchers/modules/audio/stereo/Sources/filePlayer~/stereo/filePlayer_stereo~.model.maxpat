@@ -2,13 +2,13 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 6,
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 436.0, 69.0, 516.0, 352.0 ],
+		"rect" : [ 436.0, 69.0, 542.0, 352.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -35,21 +35,29 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 233.0, 135.0, 25.0, 25.0 ]
+					"patching_rect" : [ 280.0, 132.0, 25.0, 25.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-91",
+					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 123.0, 155.0, 20.0 ],
-					"text" : "filePlayer.algorithm"
+					"patching_rect" : [ 30.0, 123.0, 199.0, 20.0 ],
+					"text" : "filePlayer.parametersAndMessages",
+					"viewvisibility" : 0
 				}
 
 			}
@@ -62,8 +70,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 83.5, 217.5, 73.0, 20.0 ],
-					"text" : "j.out~ 2"
+					"patching_rect" : [ 83.5, 217.5, 52.0, 20.0 ],
+					"text" : "j.out~ R"
 				}
 
 			}
@@ -77,7 +85,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 233.0, 176.0, 245.0, 47.0 ],
+					"patching_rect" : [ 280.0, 173.0, 245.0, 47.0 ],
 					"text" : "j.model @description \"Sound file playback module with preloading of files. Stereo version.\""
 				}
 
@@ -92,7 +100,19 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "signal", "bang" ],
 					"patching_rect" : [ 30.0, 163.0, 179.5, 20.0 ],
-					"save" : [ "#N", "sfplay~", "1053__sflist", 2, 120960, 1, "", ";" ],
+					"saved_object_attributes" : 					{
+						"basictuning" : 440,
+						"followglobaltempo" : 0,
+						"formant" : [ 1.0 ],
+						"formantcorrection" : 0,
+						"mode" : "basic",
+						"originallength" : [ 0.0, "ticks" ],
+						"originaltempo" : 120.0,
+						"pitchcorrection" : 0,
+						"quality" : "basic",
+						"timestretch" : [ 0 ]
+					}
+,
 					"text" : "sfplay~ #0__sflist 2 0 1"
 				}
 
@@ -129,7 +149,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 30.0, 217.5, 50.0, 20.0 ],
-					"text" : "j.out~ 1"
+					"text" : "j.out~ L"
 				}
 
 			}
@@ -140,7 +160,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 233.0, 254.5, 25.0, 25.0 ]
+					"patching_rect" : [ 280.0, 251.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -222,7 +242,7 @@
 					"destination" : [ "obj-91", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 200.0, 193.0, 214.0, 193.0, 214.0, 111.0, 175.5, 111.0 ],
+					"midpoints" : [ 200.0, 193.0, 241.0, 193.0, 241.0, 111.0, 219.5, 111.0 ],
 					"source" : [ "obj-6", 3 ]
 				}
 
@@ -232,7 +252,7 @@
 					"destination" : [ "obj-91", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 146.5, 205.0, 223.0, 205.0, 223.0, 97.0, 39.5, 97.0 ],
+					"midpoints" : [ 146.5, 205.0, 249.0, 205.0, 249.0, 97.0, 39.5, 97.0 ],
 					"source" : [ "obj-6", 2 ]
 				}
 
@@ -248,9 +268,9 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "filePlayer.algorithm.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/filePlayer~/shared",
-				"patcherrelativepath" : "../shared",
+				"name" : "filePlayer.parametersAndMessages.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/filePlayer~/shared",
+				"patcherrelativepath" : "../../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Sources/filePlayer~/shared",
 				"type" : "JSON",
 				"implicit" : 1
 			}
