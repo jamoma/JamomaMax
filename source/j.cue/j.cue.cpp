@@ -157,12 +157,6 @@ void WrappedCueManageClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
-    TTValue o, empty;
-    x->internals->lookup(kTTSym_XmlHandler, o);
-    
-    TTObject aXmlHandler = o[0];
-    aXmlHandler.set(kTTSym_object, empty);
-	
     delete EXTRA->toEdit;
     
 	free(EXTRA);
