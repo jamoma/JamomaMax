@@ -421,7 +421,6 @@ void remote_array_subscribe(TTPtr self, t_symbol *address)
 void remote_address(TTPtr self, t_symbol *address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTObject        anObject, aSubscriber;
 	t_symbol		*instanceAddress;
 	TTValue			v;
 	TTUInt32		i;
@@ -445,8 +444,13 @@ void remote_address(TTPtr self, t_symbol *address)
                     jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
                     x->cursor = TTSymbol(instanceAddress->s_name);
                     
-                    if (!x->internals->lookup(x->cursor, v))
+                    if (!x->internals->lookup(x->cursor, v)) {
+                        
+                        TTObject o = v[0];
+                        o.set(kTTSym_address, kTTAdrsEmpty);
+                        
                         x->internals->remove(x->cursor);
+                    }
                 }
                 
                 // Ends iteration on internals
