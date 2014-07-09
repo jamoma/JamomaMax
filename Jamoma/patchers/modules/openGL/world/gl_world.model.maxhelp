@@ -691,13 +691,24 @@
 										"tags" : "",
 										"boxes" : [ 											{
 												"box" : 												{
+													"id" : "obj-3",
+													"maxclass" : "button",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 22.0, 79.0, 20.0, 20.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
 													"id" : "obj-11",
 													"maxclass" : "toggle",
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "int" ],
 													"parameter_enable" : 0,
-													"patching_rect" : [ 22.0, 40.0, 20.0, 20.0 ]
+													"patching_rect" : [ 22.0, 32.0, 20.0, 20.0 ]
 												}
 
 											}
@@ -710,7 +721,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 22.0, 64.0, 100.0, 20.0 ],
+													"patching_rect" : [ 22.0, 56.0, 100.0, 20.0 ],
 													"text" : "qmetro 0.05 hz"
 												}
 
@@ -724,7 +735,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
-													"patching_rect" : [ 22.0, 13.5, 259.0, 20.0 ],
+													"patching_rect" : [ 22.0, 5.5, 259.0, 20.0 ],
 													"text" : "j.receive /world/my_world/render/data/active"
 												}
 
@@ -738,7 +749,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 300.0, 104.5, 52.0, 19.0 ],
+													"patching_rect" : [ 300.0, 121.5, 52.0, 19.0 ],
 													"text" : "0.3"
 												}
 
@@ -752,7 +763,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
-													"patching_rect" : [ 300.0, 135.5, 128.0, 21.0 ],
+													"patching_rect" : [ 300.0, 149.5, 128.0, 21.0 ],
 													"text" : "jit.matrix 3 float32 1"
 												}
 
@@ -767,7 +778,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
-													"patching_rect" : [ 22.0, 122.5, 100.0, 65.0 ],
+													"patching_rect" : [ 22.0, 136.5, 100.0, 65.0 ],
 													"text" : "jit.expr @expr snorm[0]*3 snorm[1]*2 snorm[2]*3"
 												}
 
@@ -781,7 +792,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
-													"patching_rect" : [ 22.0, 99.5, 172.0, 21.0 ],
+													"patching_rect" : [ 22.0, 113.5, 172.0, 21.0 ],
 													"text" : "jit.matrix 3 float32 4 6 4"
 												}
 
@@ -795,7 +806,7 @@
 													"numinlets" : 8,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 47.0, 285.0, 154.0, 21.0 ],
+													"patching_rect" : [ 47.0, 290.0, 154.0, 21.0 ],
 													"text" : "jit.gl.material my_context"
 												}
 
@@ -810,7 +821,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
-													"patching_rect" : [ 22.0, 315.0, 167.0, 36.0 ],
+													"patching_rect" : [ 22.0, 320.0, 167.0, 36.0 ],
 													"text" : "jit.gl.gridshape my_context @shape cube"
 												}
 
@@ -824,7 +835,7 @@
 													"numinlets" : 3,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 22.0, 241.0, 364.0, 21.0 ],
+													"patching_rect" : [ 22.0, 255.0, 364.0, 21.0 ],
 													"text" : "jit.gl.multiple my_context 3 @glparams position rotate scale"
 												}
 
@@ -839,7 +850,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 3,
 													"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
-													"patching_rect" : [ 22.0, 195.0, 364.0, 36.0 ],
+													"patching_rect" : [ 22.0, 209.0, 364.0, 36.0 ],
 													"text" : "jit.phys.multiple 2 @physparams position scale @worldname my_context-world @shape cube @friction 1"
 												}
 
@@ -910,6 +921,25 @@
 											}
 , 											{
 												"patchline" : 												{
+													"destination" : [ "obj-22", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"midpoints" : [ 31.5, 106.75, 309.5, 106.75 ],
+													"source" : [ "obj-3", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-97", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-3", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
 													"destination" : [ "obj-6", 1 ],
 													"disabled" : 0,
 													"hidden" : 0,
@@ -937,16 +967,7 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-22", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-9", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-97", 0 ],
+													"destination" : [ "obj-3", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-9", 0 ]
@@ -986,7 +1007,7 @@
 , 							{
 								"box" : 								{
 									"fontname" : "Arial",
-									"fontsize" : 12.0,
+									"fontsize" : 11.0,
 									"id" : "obj-29",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -1059,7 +1080,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 245.5, 93.0, 107.0, 31.0 ],
-													"text" : "phys_world.view my_world/world"
+													"text" : "phys_world.view my_world/physics"
 												}
 
 											}
@@ -1202,7 +1223,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 24.0, 176.0, 51.0, 20.0 ],
+									"patching_rect" : [ 24.0, 176.0, 48.0, 19.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
@@ -1223,16 +1244,16 @@
 , 							{
 								"box" : 								{
 									"annotation" : "none",
-									"args" : [ "my_world/render" ],
+									"args" : [ "my_world/physics" ],
 									"id" : "obj-27",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
-									"name" : "gl_render.view.maxpat",
+									"name" : "phys_world.view.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 24.0, 202.0, 300.0, 175.0 ],
-									"presentation_rect" : [ 58.5, 486.0, 300.0, 175.0 ],
+									"patching_rect" : [ 24.0, 202.0, 300.0, 280.0 ],
+									"presentation_rect" : [ 58.5, 486.0, 300.0, 280.0 ],
 									"varname" : "view"
 								}
 
@@ -1250,7 +1271,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 24.0, 149.0, 274.0, 19.0 ],
+									"patching_rect" : [ 24.0, 149.0, 300.0, 19.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 23.0, 35.0, 285.0, 17.0 ],
 									"saved_attribute_attributes" : 									{
@@ -1267,7 +1288,7 @@
 ,
 									"segmented" : 1,
 									"spacing_y" : 0.0,
-									"tabs" : [ "render", "window", "world" ],
+									"tabs" : [ "render", "window", "physics" ],
 									"truncate" : 0,
 									"varname" : "tab"
 								}
@@ -2137,23 +2158,9 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl_render.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
-				"patcherrelativepath" : "../gl_render",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../components/openGL/gl_group",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../components/openGL/gl_group",
+				"name" : "phys_world.view.maxpat",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/physics",
+				"patcherrelativepath" : "../../physics",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -2161,13 +2168,6 @@
 				"name" : "j.list2parameter.maxpat",
 				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
 				"patcherrelativepath" : "../../../components/data/list2parameter",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gl_render_basic_view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render/view_tabs",
-				"patcherrelativepath" : "../gl_render/view_tabs",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -2223,11 +2223,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.view.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remote.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
  ]
