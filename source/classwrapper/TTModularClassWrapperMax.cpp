@@ -124,14 +124,19 @@ void wrappedModularClass_unregister(WrappedModularInstancePtr x)
     
 	x->subscriberObject = TTObject();
     
-	if (x->wrappedObject.name() != kTTSym_Application) {
+    // check the wrappedObject is still valid because it could have been released in spec->_free method
+	if (x->wrappedObject.valid()) {
         
-        if (x->wrappedObject.instance()->getReferenceCount() > 1)
-            object_error((t_object*)x, "there are still unreleased reference of the wrappedObject (refcount = %d)", x->wrappedObject.instance()->getReferenceCount() - 1);
-        
-        // this line should release the last instance of the wrapped object
-        // otherwise there is something wrong
-        x->wrappedObject = TTObject();
+        // don't release the local application
+        if (!(x->wrappedObject.instance() == accessApplicationLocal)) {
+            
+            if (x->wrappedObject.instance()->getReferenceCount() > 1)
+                object_error((t_object*)x, "there are still unreleased reference of the wrappedObject (refcount = %d)", x->wrappedObject.instance()->getReferenceCount() - 1);
+            
+            // this line should release the last instance of the wrapped object
+            // otherwise there is something wrong
+            x->wrappedObject = TTObject();
+        }
     }
 
 #endif
