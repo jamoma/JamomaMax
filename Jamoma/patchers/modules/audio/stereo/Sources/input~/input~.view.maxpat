@@ -2,13 +2,13 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 0,
-			"revision" : 0,
+			"major" : 6,
+			"minor" : 1,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 22.0, 44.0, 1430.0, 935.0 ],
+		"rect" : [ 168.0, 44.0, 1430.0, 935.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -31,23 +31,15 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"annotation" : "none",
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 0.0, 187.0, 142.0, 20.0 ],
-					"text" : "limiter~.view input/limiter",
-					"viewvisibility" : 0
+					"text" : "limiter~.view input/limiter"
 				}
 
 			}
@@ -683,8 +675,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 123.083344, 369.0, 144.0, 20.0 ],
-					"text" : "j.remote audio/active",
+					"patching_rect" : [ 123.083344, 371.0, 151.0, 20.0 ],
+					"text" : "j.remote input/audio/active",
 					"varname" : "audio[1]"
 				}
 
@@ -698,8 +690,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 123.083344, 451.0, 111.0, 20.0 ],
-					"text" : "j.remote dspStatus"
+					"patching_rect" : [ 123.083344, 455.0, 140.0, 20.0 ],
+					"text" : "j.remote input/dspStatus"
 				}
 
 			}
@@ -719,26 +711,19 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-49",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 0,
-							"revision" : 0,
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -899,8 +884,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p set0",
-					"viewvisibility" : 0
+					"text" : "p set0"
 				}
 
 			}
@@ -1095,26 +1079,19 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-12",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "float", "float", "float" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 0,
-							"revision" : 0,
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -1365,8 +1342,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p time",
-					"viewvisibility" : 0
+					"text" : "p time"
 				}
 
 			}
@@ -1387,26 +1363,19 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-29",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 0,
-							"revision" : 0,
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -1692,8 +1661,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p show&hide",
-					"viewvisibility" : 0
+					"text" : "p show&hide"
 				}
 
 			}
@@ -2389,35 +2357,35 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-24" : [ "Master Gain", "Master Gain", 0 ],
-			"obj-1::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-58" : [ "live.text[2]", "live.text[4]", 0 ],
-			"obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-108" : [ "live.text[4]", "live.text[4]", 0 ],
-			"obj-1::obj-42" : [ "live.text[7]", "live.text", 0 ],
+			"obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
 			"obj-4" : [ "live.text[1]", "live.text[1]", 0 ],
 			"obj-1::obj-45" : [ "live.text[6]", "live.text", 0 ],
-			"obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
-			"obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-48" : [ "live.menu", "live.menu", 0 ],
-			"obj-74" : [ "live.dial[1]", "Transpose", 0 ],
-			"obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-82" : [ "pan", "Pan", 0 ],
-			"obj-1::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-1::obj-42" : [ "live.text[7]", "live.text", 0 ],
 			"obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
 			"obj-1::obj-13" : [ "Release", "Release", 0 ],
-			"obj-59" : [ "live.text[3]", "live.text[3]", 0 ],
+			"obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-24" : [ "Master Gain", "Master Gain", 0 ],
+			"obj-48" : [ "live.menu", "live.menu", 0 ],
 			"obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
-			"obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-1::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-58" : [ "live.text[2]", "live.text[4]", 0 ],
 			"obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
-			"obj-45" : [ "live.numbox", "live.numbox", 0 ]
+			"obj-74" : [ "live.dial[1]", "Transpose", 0 ],
+			"obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-82" : [ "pan", "Pan", 0 ],
+			"obj-108" : [ "live.text[4]", "live.text[4]", 0 ],
+			"obj-45" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-1::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-59" : [ "live.text[3]", "live.text[3]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "limiter~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
