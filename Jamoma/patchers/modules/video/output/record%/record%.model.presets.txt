@@ -1,0 +1,12 @@
+
+
+- preset "default"
+# "edit a comment"
+data/active 1
+data/bypass 0
+codec photojpeg
+dim 640 480
+framerate 25
+interp 0
+quality high
+realtime 0

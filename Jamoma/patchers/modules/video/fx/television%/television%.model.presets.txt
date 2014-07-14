@@ -1,0 +1,11 @@
+
+- preset "default"
+# "edit a comment
+data/active 1
+data/bypass 0
+fade 0.350000
+noise/granularity.x 5
+noise/granularity.y 5
+noise/probability 0.100000
+stability 100
+updaterate 33

@@ -1,0 +1,49 @@
+
+
+- preset "default"
+# "edit a comment"
+audio/gain 100.000000
+audio/mute 0
+limiter/active 1
+limiter/dcblocker/active 1
+limiter/lookahead 64
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 0.000000
+limiter/release 300.000000
+limiter/threshold 0.000000
+numSpeakers 8
+offset 0
+record/file/type aiff
+record/samptype int24
+setup 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 
+ 
+
+- preset "2 channels"
+ numSpeakers 2
+ 
+
+- preset "4 channels"
+ numSpeakers 4
+ 
+
+- preset "6 channels"
+ numSpeakers 6
+ 
+
+- preset "8 channels"
+ numSpeakers 8
+ 
+
+- preset "16 channels"
+ numSpeakers 16
+ 
+
+- preset "24 channels"
+ numSpeakers 24
+ 
+
+- preset "32 channels"
+ numSpeakers 32
+ 
+

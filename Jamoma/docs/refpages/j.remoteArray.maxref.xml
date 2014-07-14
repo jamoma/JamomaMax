@@ -23,18 +23,18 @@
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				set the value of the selected instance(s)
+				Set the value of the selected instance(s)
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the value of the selected instance(s)
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				index (use * to bind all instances)
+				Index (use * to bind all instances)
 			</digest>
 			<description>
-				TEXT_HERE
+				Select instance addressed by the input
 			</description>
 		</inlet>
 	</inletlist>
@@ -42,10 +42,10 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				set: connect to ui object
+				Connect to ui object
 			</digest>
 			<description>
-				TEXT_HERE
+				Value prepended with the set message. Note that values are deferlowed.
 			</description>
 		</outlet>
 	</outletlist>
@@ -53,10 +53,10 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				Parameter value
 			</digest>
 			<description>
-				TEXT_HERE
+				Parameter value
 			</description>
 		</objarg>
 	</objarglist>
@@ -76,10 +76,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Send value to parameter
 			</digest>
 			<description>
-				TEXT_HERE
+				Send value to parameter
 			</description>
 		</method>
 		<method name="float">
@@ -87,10 +87,10 @@
 				<arg name="ARG_NAME_0" type="float" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Send value to parameter
 			</digest>
 			<description>
-				TEXT_HERE
+				Send value to parameter
 			</description>
 		</method>
 		<method name="list">
@@ -98,10 +98,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Send values to parameter
 			</digest>
 			<description>
-				TEXT_HERE
+				Send values to parameter
 			</description>
 		</method>
 		<method name="anything">
@@ -109,10 +109,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Send message to parameter
 			</digest>
 			<description>
-				TEXT_HERE
+				Send message to parameter
 			</description>
 		</method>
 		<method name="address">
@@ -120,10 +120,10 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Set the array of parameters address j.remoteArray is binding to
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the array of parameters address j.remoteArray is binding to
 			</description>
 		</method>
 		<method name="array">
@@ -131,10 +131,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Dispatch a list of value to all instances
 			</digest>
 			<description>
-				TEXT_HERE
+				Dispatch a list of value to all instances
 			</description>
 		</method>
 		<method name="array/select">
@@ -142,10 +142,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Address a particular instance
 			</digest>
 			<description>
-				TEXT_HERE
+				Address a particular instance
 			</description>
 		</method>
 		<method name="array/resize">
@@ -153,32 +153,32 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Resize the array of remotes
 			</digest>
 			<description>
-				TEXT_HERE
+				Resize the array of remotes
 			</description>
 		</method>
-		<method name="dump">
+		<!-- <method name="dump">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</method>
+		</method> -->
 	</methodlist>
 	<!--ATTRIBUTES-->
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Enable of disable the remotes
 			</digest>
 			<description>
-				TEXT_HERE
+				Enable of disable the remotes
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -186,42 +186,42 @@
 		</attribute>
 		<attribute name="address" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				parameterArray address
 			</digest>
 			<description>
-				TEXT_HERE
+				The parameterArray address j.remoteArray is binding ti
 			</description>
 		</attribute>
 		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				The dataspace to use in a view
 			</digest>
 			<description>
-				TEXT_HERE
+				The dataspace to use in a view
 			</description>
 		</attribute>
 		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				The dataspace unit to use in a view
 			</digest>
 			<description>
-				TEXT_HERE
+				The dataspace unit to use in a view
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				A description
 			</digest>
 			<description>
-				TEXT_HERE
+				Description of the remote
 			</description>
 		</attribute>
 		<attribute name="format" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Values output format
 			</digest>
 			<description>
-				TEXT_HERE
+				Specify whether parameters values will be output one by one or all as a list
 			</description>
 			<attributelist>
 				<attribute name="enumvals" get="1" set="1" type="atom" size="2">
@@ -247,7 +247,7 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
 			</attributelist>
 		</attribute>
-		<attribute name="freeze" get="1" set="1" type="int" size="1">
+		<!-- <attribute name="freeze" get="1" set="1" type="int" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
@@ -257,13 +257,13 @@
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
 			</attributelist>
-		</attribute>
+		</attribute> -->
 		<attribute name="highlight" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Enable ui highlighting
 			</digest>
 			<description>
-				TEXT_HERE
+				Enable ui highlighting
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -271,20 +271,20 @@
 		</attribute>
 		<attribute name="tag" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Define tag for the remoteArray
 			</digest>
 			<description>
-				TEXT_HERE
+				Define tag for the remoteArray
 			</description>
 		</attribute>
-		<attribute name="type" get="1" set="1" type="symbol" size="1">
+		<!-- <attribute name="type" get="1" set="1" type="symbol" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 	</attributelist>
 	<!--EXAMPLE-->
 	<examplelist>
@@ -292,8 +292,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="j.remote">
 		</seealso>
 	</seealsolist>
 </c74object>

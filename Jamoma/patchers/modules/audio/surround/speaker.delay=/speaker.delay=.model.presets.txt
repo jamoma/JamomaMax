@@ -1,0 +1,10 @@
+
+
+
+- preset "default"
+  audio/bypass 0
+  automatic 1
+  numSpeakers 0
+  temperature 20.000000
+  
+

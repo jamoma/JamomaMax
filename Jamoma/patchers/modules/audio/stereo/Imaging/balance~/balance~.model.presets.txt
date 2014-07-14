@@ -1,0 +1,33 @@
+#################################
+- preset "default"
+# "edit a comment"
+#################################
+audio/mute 0
+audio/gain 100.000000
+position 0.000000
+shape EqualPower
+Mode FastMode
+
+
+#################################
+- preset "left"
+# "edit a comment"
+#################################
+
+audio/mute 0
+audio/gain 100.000000
+position -1.000000
+shape EqualPower
+Mode FastMode
+
+
+#################################
+- preset "right"
+# "edit a comment"
+#################################
+
+audio/mute 0
+audio/gain 100.000000
+position 1.000000
+shape EqualPower
+Mode FastMode

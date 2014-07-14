@@ -1,0 +1,13 @@
+
+
+- preset "default"
+# "edit a comment"
+audio/bypass 0
+lfo/depth 50.000000
+lfo/frequency 5.000000
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+lfo/phase 0.000000
+ 
+

@@ -1,0 +1,38 @@
+
+- preset "default"
+# "edit a comment"
+/brcosa%/data/active 1
+/brcosa%/data/bypass 0
+/brcosa%/brightness 1.000000
+/brcosa%/contrast 2.000000
+/brcosa%/saturation 1.000000
+/brcosa%/monochrome 1
+
+- preset "chateau de preset"
+# "edit a comment"
+/brcosa%/data/active 1
+/brcosa%/brightness 2.000000
+/brcosa%/data/bypass 0
+/brcosa%/contrast -2.000000
+/brcosa%/monochrome 1
+/brcosa%/saturation 2.000000
+
+
+- preset "top"
+# "edit a comment"
+data/active 1
+brightness 10.000000
+data/bypass 0
+contrast 0.000000
+monochrome 1
+saturation 0.000000
+
+
+- preset "contrast"
+# "edit a comment"
+data/active 1
+brightness 135.000000
+data/bypass 0
+contrast 2.000000
+monochrome 1
+saturation 1.000000

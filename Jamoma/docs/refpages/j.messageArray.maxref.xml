@@ -31,10 +31,10 @@
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				index (use * to bind all instances)
+				index
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				Index of the instance to send value to. (1 to max number of instance. * will send value to all instances)
 			</description>
 		</inlet>
 	</inletlist>
@@ -78,7 +78,7 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				The address message followed by an osc name containing a number of instances placed in bracket declares an array of messages in the namespace. Ex: 'address my/message.[5]'
+				Define an array of messages in the namespace. Ex: 'address my/message.[5]'
 			</digest>
 			<description>
 				The address message followed by an osc name containing a number of instances placed in bracket declares an array of messages in the namespace. Ex: 'address my/message.[5]'
@@ -100,10 +100,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				This message create a new array of j.messages
+				Change the number of instances			
 			</digest>
 			<description>
-				This message create a new array of j.messages
+				Change the number of instances
 			</description>
 		</method>
 		<method name="dec">
@@ -111,10 +111,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Decrement the value by the amount defined by the @value/stepsize attribute
+				Decrement the value by the amount defined by the @stepsize attribute
 			</digest>
 			<description>
-				Decrement the value by the amount defined by the @value/stepsize attribute
+				Decrement the value by the amount defined by the @stepsize attribute
 			</description>
 		</method>
 		<method name="dump">
@@ -133,10 +133,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Increment the value by the amount defined by the @value/stepsize attribute
+				Increment the value by the amount defined by the @stepsize attribute
 			</digest>
 			<description>
-				Increment the value by the amount defined by the @value/stepsize attribute
+				Increment the value by the amount defined by the @stepsize attribute
 			</description>
 		</method>
 		<method name="init">
@@ -169,7 +169,7 @@
 				Set what dataspace used internally by the message for unit conversions
 			</digest>
 			<description>
-				Set what dataspace used internally by the message for unit conversions
+				Set what dataspace used internally by the message for unit conversions (angle, color, distance, gain, none, orientation, position, speed, temperature, time)
 			</description>
 		</attribute>
 		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
@@ -177,12 +177,11 @@
 				The dataspace unit used for communication to the algorithm from the outside world
 			</digest>
 			<description>
-				The dataspace unit used for communication to the algorithm from the outside world
-			</description>
+				The dataspace unit used for remote communication. Available values depend on the dataspace attribute value. See j.dataspace help patch for more information.			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Short info about the message. Used for auto-documentation of the model
+				Short info about the message
 			</digest>
 			<description>
 				Short info about the message. Used for auto-documentation of the model
@@ -259,7 +258,7 @@
 				TEXT_HERE
 			</description>
 		</attribute>
-		<attribute name="range/bounds" get="1" set="1" type="atom" size="1">
+		<attribute name="range" get="1" set="1" type="atom" size="1">
 			<digest>
 				Lower and upper boundaries defining the range of possible message values
 			</digest>
@@ -267,9 +266,9 @@
 				Lower and upper boundaries defining the range of possible message values
 			</description>
 		</attribute>
-		<attribute name="range/clipmode" get="1" set="1" type="symbol" size="1">
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
+				Define clipping behaviour at the boundaries of the message range
 			</digest>
 			<description>
 				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
@@ -313,7 +312,7 @@ Some optional tags			</description>
 				Current message value
 			</description>
 		</attribute>
-		<attribute name="value/default" get="1" set="1" type="int" size="1">
+		<attribute name="default" get="1" set="1" type="int" size="1">
 			<digest>
 				Default message value
 			</digest>
@@ -321,12 +320,12 @@ Some optional tags			</description>
 				Default message value
 			</description>
 		</attribute>
-		<attribute name="value/stepsize" get="1" set="1" type="int" size="1">
+		<attribute name="stepsize" get="1" set="1" type="int" size="1">
 			<digest>
-				Step by which the current value is being increased/decreased when a /value/inc or /value/dec message is received
+				incrementation/decrementation amount			
 			</digest>
 			<description>
-				Step by which the current value is being increased/decreased when a /value/inc or /value/dec message is received
+				Step by which the current value is being increased/decreased when a 'inc' or 'dec' message is received
 			</description>
 		</attribute>
 	</attributelist>

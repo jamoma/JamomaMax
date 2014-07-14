@@ -856,7 +856,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 692.0, 1078.0, 159.0, 18.0 ],
-									"text" : "address /test:value/stepsize"
+									"text" : "address /test:stepsize"
 								}
 
 							}
@@ -898,7 +898,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 661.0, 1018.001831, 232.0, 33.0 ],
-									"text" : "j.test.assert.equal value/stepsize-test @input value/stepsize 2 @compareTo 2"
+									"text" : "j.test.assert.equal stepsize-test @input stepsize 2 @compareTo 2"
 								}
 
 							}
@@ -1111,7 +1111,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 691.0, 887.0, 151.0, 18.0 ],
-									"text" : "address /test:value/default"
+									"text" : "address /test:default"
 								}
 
 							}
@@ -1153,7 +1153,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 660.0, 816.001892, 223.0, 33.0 ],
-									"text" : "j.test.assert.equal value/default-test @input value/default 1 @compareTo 1"
+									"text" : "j.test.assert.equal default-test @input default 1 @compareTo 1"
 								}
 
 							}
@@ -1446,7 +1446,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 354.0, 887.0, 165.0, 18.0 ],
-									"text" : "address /test:range/clipmode"
+									"text" : "address /test:clipmode"
 								}
 
 							}
@@ -1488,7 +1488,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 323.0, 823.001892, 253.0, 33.0 ],
-									"text" : "j.test.assert.equal range/clipmode-test @input range/clipmode fold @compareTo fold"
+									"text" : "j.test.assert.equal clipmode-test @input clipmode fold @compareTo fold"
 								}
 
 							}
@@ -1526,7 +1526,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 355.0, 696.0, 156.0, 18.0 ],
-									"text" : "address /test:range/bounds"
+									"text" : "address /test:range"
 								}
 
 							}
@@ -1568,7 +1568,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 324.0, 635.001892, 270.0, 33.0 ],
-									"text" : "j.test.assert.equal range/bounds-test @input range/bounds -1. 1. @compareTo -1. 1."
+									"text" : "j.test.assert.equal range-test @input range -1. 1. @compareTo -1. 1."
 								}
 
 							}

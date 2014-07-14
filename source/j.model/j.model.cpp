@@ -60,20 +60,18 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)model_preset_edit,                 "dblclick",				A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_preset_edclose,              "edclose",				A_CANT, 0);
-	
+#ifndef JCOM_VIEW
 	class_addmethod(c->maxClass, (method)model_preset_read,                 "preset:read",			A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)model_preset_write,                "preset:write",			A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)model_preset_edit,                 "preset:edit",			A_GIMME, 0);
 	
 	class_addmethod(c->maxClass, (method)model_preset_read_again,           "preset:read/again",	0);
 	class_addmethod(c->maxClass, (method)model_preset_write_again,          "preset:write/again",	0);
-    
+#endif
     class_addmethod(c->maxClass, (method)model_signal_return_content,       "return_content",		A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_signal_return_data_mute,     "return_data_mute",		A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_data_active,   "return_data_active",	A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_signal_return_data_bypass,   "return_data_bypass",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_data_freeze,   "return_data_freeze",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_data_preview,  "return_data_preview",  A_CANT, 0);
     
     class_addmethod(c->maxClass, (method)model_signal_return_audio_mute,    "return_audio_mute",	A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_return_audio_bypass,  "return_audio_bypass",  A_CANT, 0);
@@ -94,7 +92,14 @@ void WrapTTContainerClass(WrappedClassPtr c)
 void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue						none;
+	TTValue     none;
+    ObjectPtr   aPatcher;
+    
+    // is there already a j.model or j.view in the patcher ?
+    jamoma_patcher_get_model_or_view(jamoma_patcher_get((ObjectPtr)x), &aPatcher);
+    
+    if (aPatcher)
+        object_error((ObjectPtr)x, "can't have two models or views in the same patcher");
 		
 	// create a container
 	jamoma_container_create((ObjectPtr)x, &x->wrappedObject);
@@ -147,6 +152,9 @@ void WrappedContainerClass_free(TTPtr self)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTAddress    modelAddress, presetAddress;
     TTValue      v;
+    
+    if (!EXTRA)
+        return;
     
     if (EXTRA->modelInfo) {
         
@@ -270,8 +278,6 @@ void model_subscribe(TTPtr self)
                 TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&aTextHandler), args);
                 v = TTValue(aTextHandler);
                 x->internals->append(kTTSym_TextHandler, v);
-                v = TTValue(x->wrappedObject);
-                aTextHandler->setAttributeValue(kTTSym_object, v);
                 
                 if (!EXTRA->attr_amenities->lookup(TTSymbol("all"), v))
                     EXTRA->all_amenities = YES;
@@ -327,10 +333,18 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
     TTAddress       modelAdrs, argAdrs, viewAdrs;
     TTValue         v;
     
+    // look at hierarchy
+    hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
+    
     // if args exists, the first argument of the patcher is the model:address value
     if (argc > 0 && atom_gettype(argv) == A_SYM) {
 
         argAdrs = TTAddress(atom_getsym(argv)->s_name);
+        
+        // in poly case : use the same instance as the container address
+        if (hierarchy == gensym("poly"))
+            if (argAdrs.getInstance() == kTTSymEmpty)
+                argAdrs = argAdrs.appendInstance(EXTRA->containerAddress.getInstance());
         
         // if the address is absolute : use it directly
         if (argAdrs.getType() == kAddressAbsolute) {
@@ -364,8 +378,6 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
     }
     // else look around the patcher for model of the same class
     else {
-        
-        hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
         
         // if the view is inside a bpatcher
         if (hierarchy == _sym_bpatcher)
@@ -406,7 +418,7 @@ void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
     
     // if the model:address is still empty : the view is not binding a model for instant
     if (modelAdrs == kTTSymEmpty)
-        modelAdrs = TTAddress("/noModelAddress");
+        modelAdrs = TTAddress("/no_model_address");
     
     // set the model:address attribute to notify all observers
     EXTRA->modelInfo->setAttributeValue(kTTSym_address, modelAdrs);
@@ -541,6 +553,9 @@ void model_reference_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		
 		if (!tterr) {
 			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+            
+            v = TTValue(x->wrappedObject);
+            aTextHandler->setAttributeValue(kTTSym_object, v);
 			
 			critical_enter(0);
             o = TTValue(x->wrappedObject);

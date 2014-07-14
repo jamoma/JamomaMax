@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
+ <preset name="a_story">
+  <!--""edit a comment""-->
+  <command address="input~/source">soundfile</command>
+  <command address="input~/input/ch.1">1</command>
+  <command address="output~/ch.1">1</command>
+  <command address="input~/input/ch.2">2</command>
+  <command address="output~/ch.2">2</command>
+  <command address="output~/saturation/depth">10.000000</command>
+  <command address="input~/testtone/frequency">1000</command>
+  <command address="input~/audio/gain">26.389610</command>
+  <command address="template~/audio/gain">93.000000</command>
+  <command address="output~/audio/gain">100.000000</command>
+  <command address="output~/limiter/lookahead">64</command>
+  <command address="input~/file/loop">1</command>
+  <command address="input~/balance/mode">FastMode</command>
+  <command address="output~/limiter/mode">exponential</command>
+  <command address="output~/balance/mode">FastMode</command>
+  <command address="input~/file/play">0</command>
+  <command address="input~/balance/position">0.000000</command>
+  <command address="output~/balance/position">0.000000</command>
+  <command address="output~/limiter/postamp">0.000000</command>
+  <command address="output~/limiter/preamp">6.000000</command>
+  <command address="input~/clicktrain/rate">1.000000</command>
+  <command address="output~/limiter/release">300.000000</command>
+  <command address="output~/record/samptype">int24</command>
+  <command address="input~/balance/shape">EqualPower</command>
+  <command address="output~/balance/shape">EqualPower</command>
+  <command address="template~/thisParameter">1.240000</command>
+  <command address="output~/limiter/threshold">-1.000000</command>
+  <command address="input~/file/transpose">0.000000</command>
+  <command address="output~/record/file/type">aiff</command>
+ </preset>
+ <preset name="another_story">
+  <!--"edit a comment"-->
+  <command address="input~/source">pink</command>
+  <command address="template~/thisMenu">linear</command>
+  <command address="input~/input/ch.1">1</command>
+  <command address="output~/ch.1">1</command>
+  <command address="input~/input/ch.2">2</command>
+  <command address="output~/ch.2">2</command>
+  <command address="output~/saturation/depth">10.000000</command>
+  <command address="input~/testtone/frequency">1000</command>
+  <command address="output~/audio/gain">37.110390</command>
+  <command address="template~/audio/gain">93.000000</command>
+  <command address="input~/audio/gain">51.129871</command>
+  <command address="output~/limiter/lookahead">64</command>
+  <command address="input~/file/loop">1</command>
+  <command address="output~/limiter/mode">exponential</command>
+  <command address="output~/balance/mode">FastMode</command>
+  <command address="input~/balance/mode">FastMode</command>
+  <command address="input~/file/play">0</command>
+  <command address="output~/balance/position">0.000000</command>
+  <command address="input~/balance/position">0.750000</command>
+  <command address="output~/limiter/postamp">0.000000</command>
+  <command address="output~/limiter/preamp">6.000000</command>
+  <command address="input~/clicktrain/rate">1.000000</command>
+  <command address="output~/limiter/release">300.000000</command>
+  <command address="output~/record/samptype">int24</command>
+  <command address="input~/balance/shape">EqualPower</command>
+  <command address="output~/balance/shape">EqualPower</command>
+  <command address="template~/thisParameter">40.000000</command>
+  <command address="output~/limiter/threshold">-1.000000</command>
+  <command address="input~/file/transpose">0.000000</command>
+  <command address="output~/record/file/type">aiff</command>
+ </preset>
+</jamoma>

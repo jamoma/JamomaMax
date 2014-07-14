@@ -39,6 +39,9 @@ void		cue_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 void		cue_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		cue_return_order(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
+void		cue_get(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		cue_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+
 void		cue_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		cue_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
 void		cue_read_again(TTPtr self);
@@ -88,6 +91,9 @@ void WrapTTCueManagerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)cue_edit,					"dblclick",				A_CANT, 0);
 	class_addmethod(c->maxClass, (method)cue_edclose,				"edclose",				A_CANT, 0);
+    
+    class_addmethod(c->maxClass, (method)cue_get,					"get",					A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)cue_set,					"set",                  A_GIMME, 0);
 	
 	class_addmethod(c->maxClass, (method)cue_read,					"read",					A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)cue_write,					"write",				A_GIMME, 0);
@@ -106,7 +112,6 @@ void WrappedCueManagerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	SymbolPtr					name;
     TTValue                     v, args;
-    TTXmlHandlerPtr				aXmlHandler;
 	TTTextHandlerPtr			aTextHandler;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
 	
@@ -129,16 +134,8 @@ void WrappedCueManagerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 1);
 	x->outlets[line_out] = outlet_new(x, NULL);						// anything outlet to output data
 	
-	// Prepare Internals hash to store XmlHanler and TextHandler object
+	// Prepare Internals hash to store TextHandler object
 	x->internals = new TTHash();
-    
-    // create internal TTXmlHandler and internal messages for Read and Write
-    aXmlHandler = NULL;
-    TTObjectBaseInstantiate(kTTSym_XmlHandler, TTObjectBaseHandle(&aXmlHandler), args);
-    v = TTValue(aXmlHandler);
-    x->internals->append(kTTSym_XmlHandler, v);
-    v = TTValue(x->wrappedObject);
-    aXmlHandler->setAttributeValue(kTTSym_object, v);
     
     // create internal TTTextHandler
     aTextHandler = NULL;
@@ -259,6 +256,89 @@ void cue_return_order(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	outlet_anything(x->outlets[dump_out], gensym("order"), argc, argv);
 }
 
+void cue_get(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTHashPtr   allCues;
+	TTValue     v;
+	TTSymbol    name, attribute;
+    TTObjectBasePtr cue;
+    AtomCount	ac = 0;
+	AtomPtr		av = NULL;
+    
+    if (argc == 2) {
+        
+        if (atom_gettype(argv) == A_SYM && atom_gettype(argv+1) == A_SYM) {
+            
+            attribute = TTSymbol((char*)atom_getsym(argv)->s_name);
+            name = TTSymbol((char*)atom_getsym(argv+1)->s_name);
+            
+            // get cue object table
+            x->wrappedObject->getAttributeValue("cues", v);
+            allCues = TTHashPtr((TTPtr)v[0]);
+            
+            if (allCues) {
+                
+                // get cue
+                if (!allCues->lookup(name, v)) {
+                    
+                    cue = v[0];
+                    if (!cue->getAttributeValue(attribute, v)) {
+                        
+                        v.prepend(name);
+                        jamoma_ttvalue_to_Atom(v, &ac, &av);
+                        
+                        object_obex_dumpout(self, atom_getsym(argv), ac, av);
+                    }
+                    else
+                        object_error((ObjectPtr)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
+                }
+                else
+                    object_error((ObjectPtr)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
+            }
+        }
+    }
+}
+
+void cue_set(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+{
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    TTHashPtr   allCues;
+	TTValue     v;
+	TTSymbol    name, attribute;
+    TTObjectBasePtr cue;
+    
+    if (argc >= 2) {
+        
+        if (atom_gettype(argv) == A_SYM && atom_gettype(argv+1) == A_SYM) {
+            
+            attribute = TTSymbol((char*)atom_getsym(argv)->s_name);
+            name = TTSymbol((char*)atom_getsym(argv+1)->s_name);
+            
+            // get cue object table
+            x->wrappedObject->getAttributeValue("cues", v);
+            allCues = TTHashPtr((TTPtr)v[0]);
+            
+            if (allCues) {
+                
+                // get cue
+                if (!allCues->lookup(name, v)) {
+                    
+                    cue = v[0];
+                    
+                    // prepare value to set
+                    jamoma_ttvalue_from_Atom(v, _sym_nothing, argc-2, argv+2);
+                    
+                    if (cue->setAttributeValue(attribute, v))
+                        object_error((ObjectPtr)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
+                }
+                else
+                    object_error((ObjectPtr)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
+            }
+        }
+    }
+}
+
 void cue_read(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
 	defer(self, (method)cue_doread, msg, argc, argv);
@@ -269,7 +349,7 @@ void cue_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			o, v, none;
 	TTSymbol		fullpath;
-	TTXmlHandlerPtr	aXmlHandler = NULL;
+	TTTextHandlerPtr	aTextHandler = NULL;
 	TTErr			tterr;
 	
 	if (x->wrappedObject) {
@@ -277,14 +357,17 @@ void cue_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		fullpath = jamoma_file_read((ObjectPtr)x, argc, argv, (t_fourcc)'TEXT');
 		v.append(fullpath);
 		
-		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
 			
-			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+            
+            o = TTValue(x->wrappedObject);
+			aTextHandler->setAttributeValue(kTTSym_object, o);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_Read, v, none);
+			tterr = aTextHandler->sendMessage(kTTSym_Read, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -304,19 +387,22 @@ void cue_doread_again(TTPtr self)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			o, v, none;
-	TTXmlHandlerPtr	aXmlHandler = NULL;
+	TTTextHandlerPtr	aTextHandler = NULL;
 	TTErr			tterr;
 	
 	if (x->wrappedObject) {
 		
-		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
 			
-			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+            
+            o = TTValue(x->wrappedObject);
+			aTextHandler->setAttributeValue(kTTSym_object, o);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_ReadAgain, v, none);
+			tterr = aTextHandler->sendMessage(kTTSym_ReadAgain, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -338,24 +424,27 @@ void cue_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	char 			filename[MAX_FILENAME_CHARS];
 	TTSymbol		fullpath;
 	TTValue			o, v, none;
-	TTXmlHandlerPtr	aXmlHandler;
+	TTTextHandlerPtr	aTextHandler;
 	TTErr			tterr;
 	
 	if (x->wrappedObject) {
 		
-		// Default XML File Name
-		snprintf(filename, MAX_FILENAME_CHARS, "cuelist.xml");
+		// Default TEXT File Name
+		snprintf(filename, MAX_FILENAME_CHARS, "untitled.cues.txt");
 		
 		fullpath = jamoma_file_write((ObjectPtr)x, argc, argv, filename);
 		v.append(fullpath);
 		
-		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
-			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+            
+            o = TTValue(x->wrappedObject);
+			aTextHandler->setAttributeValue(kTTSym_object, o);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_Write, v, none);
+			tterr = aTextHandler->sendMessage(kTTSym_Write, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -375,19 +464,22 @@ void cue_dowrite_again(TTPtr self)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			o, v, none;
-	TTXmlHandlerPtr	aXmlHandler = NULL;
+	TTTextHandlerPtr	aTextHandler = NULL;
 	TTErr			tterr;
 	
 	if (x->wrappedObject) {
 		
-		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
 			
-			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+            
+            o = TTValue(x->wrappedObject);
+			aTextHandler->setAttributeValue(kTTSym_object, o);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_WriteAgain, v, none);
+			tterr = aTextHandler->sendMessage(kTTSym_WriteAgain, v, none);
 			critical_exit(0);
 			
 			if (!tterr)

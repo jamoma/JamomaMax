@@ -142,7 +142,7 @@ TTErr jamoma_subscriber_create(ObjectPtr x, TTObjectBasePtr aTTObjectBase, TTAdd
                 // warn the user that it should provide unique name
                 
                 // if no name has been provided
-                if (patcherArg == kTTAdrsEmpty)
+                if (patcherArg == kTTAdrsEmpty && patcherContext == kTTSym_model)
                     object_warn(patcher, "No name provided to %s %s. Using %s.", patcherClass.c_str(), patcherContext.c_str(), newContextAddress.getNameInstance().c_str());
 
                 // if a duplicate name.instance was passed in argument
@@ -186,13 +186,13 @@ void jamoma_subscriber_get_patcher_list(ObjectPtr x, TTList& aContextListToFill)
 		jamoma_patcher_get_info(objPtr, &patcherPtr, patcherContext, patcherClass, patcherName);
 		
 		if (patcherName && patcherPtr) {
-			
+		/* théo - when commenting this part we allow to subscribe view into model and model into view
 			// check if the patcher have the same context than lower patchers
 			if (patcherContext == lowerContext || lowerContext == kTTSymEmpty) {
-				
+		
 				// keep it as lowerContext
 				lowerContext = patcherContext;
-				
+		*/		
 				// insert the current patcher name and his pointer to the list
 				v = patcherName;
 				v.append((TTPtr)patcherPtr);
@@ -200,12 +200,14 @@ void jamoma_subscriber_get_patcher_list(ObjectPtr x, TTList& aContextListToFill)
 				
 				// replace current object by his parent patcher
 				objPtr = patcherPtr;
-			}
+		/*	théo - when commenting this part we allow to subscribe view into model and model into view
+            }
 			else {
 				
 				// skip the patcher to go directly to an upper one
 				objPtr = patcherPtr;
 			}
+        */
 		}
 		else
 			break;
@@ -1283,31 +1285,31 @@ SymbolPtr jamoma_patcher_get_hierarchy(ObjectPtr patcher)
 	}
 }
 
-/** Get the context from the upper jcom model|view in the patcher or from patcher's name */
+/** Get the context from the upper j.model|view in the patcher or from patcher's name */
 void jamoma_patcher_get_context(ObjectPtr *patcher, TTSymbol& returnedContext)
 {
-	SymbolPtr	hierarchy, _sym_jcommodel, _sym_jcomview, _sym_context;
+	SymbolPtr	hierarchy, _sym_j_model, _sym_j_view, _sym_context;
 	ObjectPtr	obj, upperPatcher;
 	TTBoolean	found = NO;
 	
-	// Look for jcom model|view in the patcher
+	// Look for j.model|view in the patcher
 	obj = object_attr_getobj(*patcher, _sym_firstobject);
 	
 	// TODO : cache those t_symbol else where ...
-	_sym_jcommodel = gensym("j.model");
-	_sym_jcomview = gensym("j.view");
+	_sym_j_model = gensym("j.model");
+	_sym_j_view = gensym("j.view");
 	
 	while (obj) {
 		
 		_sym_context = object_attr_getsym(obj, _sym_maxclass);
 		
-		if (_sym_context == _sym_jcommodel) {
+		if (_sym_context == _sym_j_model) {
 			
 			returnedContext = kTTSym_model;
 			found = YES;
 			break;
 			
-		} else if (_sym_context == _sym_jcomview) {
+		} else if (_sym_context == _sym_j_view) {
 			
 			returnedContext = kTTSym_view;
 			found = YES;
@@ -1320,25 +1322,6 @@ void jamoma_patcher_get_context(ObjectPtr *patcher, TTSymbol& returnedContext)
 	// if no context
 	if (!found) {
 		
-		/*	to -- don't get the context from the filename anymore because it make two ways to set it...
-		SymbolPtr  patcherName;
-         
-		// try to get it from the patcher name
-		patcherName = object_attr_getsym(*patcher, _sym_filename);
-		if (patcherName != _sym_nothing) {
-			// Is there a ".model.maxpat" string in the patcher name ?
-			if (strstr(patcherName->s_name, ".model.maxpat")) {
-				returnedContext = kTTSym_model;
-				return;
-			}
-			// Is there a ".view.maxpat" string in the patcher name ?
-			else if (strstr(patcherName->s_name, ".view.maxpat")) {
-				returnedContext = kTTSym_view;
-				return;
-			}
-		}
-		 */
-		
 		// in subpatcher look upper
 		hierarchy = jamoma_patcher_get_hierarchy(*patcher);
 		if (hierarchy == _sym_subpatcher || hierarchy == _sym_bpatcher || hierarchy == SymbolGen("poly")) {
@@ -1348,11 +1331,11 @@ void jamoma_patcher_get_context(ObjectPtr *patcher, TTSymbol& returnedContext)
 			
 			jamoma_patcher_get_context(&upperPatcher, returnedContext);
 			
-			// if the context is still NULL and there is a jcom model|view at this level
+			// if the context is still NULL and there is a j.model|view at this level
 			// the default case would be to set it as a model patcher by default
 			if (returnedContext == kTTSymEmpty && found)
 				returnedContext = kTTSym_model;
-			// keep the upperPatcher if no jcom model|view around
+			// keep the upperPatcher if no j.model|view around
 			// because it is where the context is defined
 			else if (!found)
 				*patcher = upperPatcher;
@@ -1370,6 +1353,7 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 	ObjectPtr	upperPatcher;
 	TTString	s_toParse;
 	TTStringIter begin, end;
+    TTBoolean   intoHelp = NO;
 	
 	// extract class from the file name
 	patcherName =  object_attr_getsym(patcher, _sym_filename);
@@ -1380,6 +1364,21 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 	
 		begin = s_toParse.begin();
 		end = s_toParse.end();
+        
+        // parse .maxpat
+		if (!ttRegexForMaxpat->parse(begin, end)) {
+			s_toParse = TTString(begin, ttRegexForMaxpat->begin());
+			begin = s_toParse.begin();
+			end = s_toParse.end();
+		}
+		// parse .maxhelp
+		else if (!ttRegexForMaxhelp->parse(begin, end)) {
+			s_toParse = TTString(begin, ttRegexForMaxhelp->begin());
+			begin = s_toParse.begin();
+			end = s_toParse.end();
+            
+            intoHelp = YES;
+		}
 
 		// parse jmod.
 		if (!ttRegexForJmod->parse(begin, end)) {
@@ -1421,21 +1420,9 @@ void jamoma_patcher_get_class(ObjectPtr patcher, TTSymbol context, TTSymbol& ret
 			}
 		}
 		
-		// parse .maxpat
-		if (!ttRegexForMaxpat->parse(begin, end)) {
-			s_toParse = TTString(begin, ttRegexForMaxpat->begin());
-			begin = s_toParse.begin();
-			end = s_toParse.end();
-		}
-		// parse .maxhelp
-		else if (!ttRegexForMaxhelp->parse(begin, end)) {
-			s_toParse = TTString(begin, ttRegexForMaxhelp->begin());
-			begin = s_toParse.begin();
-			end = s_toParse.end();
-            
-            // append Maxhelp to the class to clarify the namespace
-            s_toParse += "Maxhelp";
-		}
+        // in help patcher : append _help to the class to clarify the namespace
+        if (intoHelp)
+            s_toParse += "_help";
         
 		returnedClass = TTSymbol(s_toParse);
 	}
@@ -1499,22 +1486,22 @@ void jamoma_patcher_get_name(ObjectPtr patcher, TTSymbol context, TTSymbol& retu
 	}
 }
 
-/** Get all context info from the root jcom model|view in the patcher */
+/** Get all context info from the root j.model|view in the patcher */
 void jamoma_patcher_share_info(ObjectPtr patcher, ObjectPtr *returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass,  TTSymbol& returnedName)
 {
 	TTValue		patcherInfo;
 	ObjectPtr	obj;
-	SymbolPtr	_sym_jcommodel, _sym_jcomview, _sym_jcomcontext, _sym_share;
+	SymbolPtr	_sym_j_model, _sym_j_view, _sym_j_context, _sym_share;
 	
 	obj = object_attr_getobj(patcher, _sym_firstobject);
 	
 	// TODO : cache those t_symbol else where ...
-	_sym_jcommodel = gensym("j.model");
-	_sym_jcomview = gensym("j.view");
+	_sym_j_model = gensym("j.model");
+	_sym_j_view = gensym("j.view");
 	_sym_share = gensym("share_patcher_info");
 	while (obj) {
-		_sym_jcomcontext = object_attr_getsym(obj, _sym_maxclass);
-		if (_sym_jcomcontext == _sym_jcommodel || _sym_jcomcontext == _sym_jcomview) {
+		_sym_j_context = object_attr_getsym(obj, _sym_maxclass);
+		if (_sym_j_context == _sym_j_model || _sym_j_context == _sym_j_view) {
 		
 			// ask it patcher info
 			object_method(object_attr_getobj(obj, _sym_object), _sym_share, &patcherInfo);
@@ -1536,18 +1523,18 @@ void jamoma_patcher_get_model_or_view(ObjectPtr patcher, ObjectPtr *returnedMode
 {
 	TTValue		patcherInfo;
 	ObjectPtr	obj;
-	SymbolPtr	_sym_jcommodel, _sym_jcomview, _sym_jcomcontext;
+	SymbolPtr	_sym_j_model, _sym_j_view, _sym_j_context;
     
     *returnedModelOrView = NULL;
 	
 	obj = object_attr_getobj(patcher, _sym_firstobject);
 	
 	// TODO : cache those t_symbol else where ...
-	_sym_jcommodel = gensym("j.model");
-	_sym_jcomview = gensym("j.view");
+	_sym_j_model = gensym("j.model");
+	_sym_j_view = gensym("j.view");
 	while (obj) {
-		_sym_jcomcontext = object_attr_getsym(obj, _sym_maxclass);
-		if (_sym_jcomcontext == _sym_jcommodel || _sym_jcomcontext == _sym_jcomview) {
+		_sym_j_context = object_attr_getsym(obj, _sym_maxclass);
+		if (_sym_j_context == _sym_j_model || _sym_j_context == _sym_j_view) {
             
             *returnedModelOrView = object_attr_getobj(obj, _sym_object);
             break;
@@ -1586,23 +1573,23 @@ void jamoma_patcher_get_model_patcher(ObjectPtr patcher, TTSymbol modelClass, Ob
 	}
 }
 
-/** Get patcher's node from the root jcom model|view in the patcher */
+/** Get patcher's node from the root j.model|view in the patcher */
 void jamoma_patcher_share_node(ObjectPtr patcher, TTNodePtr *patcherNode)
 {
 	ObjectPtr	obj;
-	SymbolPtr	_sym_jcommodel, _sym_jcomview, _sym_jcomcontext, _sym_share;
+	SymbolPtr	_sym_j_model, _sym_j_view, _sym_j_context, _sym_share;
 	
 	*patcherNode = NULL;
 	
 	obj = object_attr_getobj(patcher, _sym_firstobject);
 	
 	// TODO : cache those t_symbol else where ...
-	_sym_jcommodel = gensym("j.model");
-	_sym_jcomview = gensym("j.view");
+	_sym_j_model = gensym("j.model");
+	_sym_j_view = gensym("j.view");
 	_sym_share = gensym("share_patcher_node");
 	while (obj) {
-		_sym_jcomcontext = object_attr_getsym(obj, _sym_maxclass);
-		if (_sym_jcomcontext == _sym_jcommodel || _sym_jcomcontext == _sym_jcomview) {
+		_sym_j_context = object_attr_getsym(obj, _sym_maxclass);
+		if (_sym_j_context == _sym_j_model || _sym_j_context == _sym_j_view) {
 			
 			// ask it patcher info
 			object_method(object_attr_getobj(obj, _sym_object), _sym_share, patcherNode);
@@ -1618,7 +1605,7 @@ void jamoma_patcher_share_node(ObjectPtr patcher, TTNodePtr *patcherNode)
 TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass, TTSymbol& returnedName)
 {
 	TTBoolean	canShare;
-	SymbolPtr	_sym_jcomcontext;
+	SymbolPtr	_sym_j_context;
 	TTString	viewName;
 	ObjectPtr	patcher;
 	ObjectPtr	sharedPatcher = NULL;
@@ -1628,15 +1615,15 @@ TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbo
 	
 	*returnedPatcher = jamoma_patcher_get(obj);
 
-	_sym_jcomcontext = object_classname(obj);
-	canShare = _sym_jcomcontext == gensym("j.model") || _sym_jcomcontext == gensym("j.view");
+	_sym_j_context = object_classname(obj);
+	canShare = _sym_j_context == gensym("j.model") || _sym_j_context == gensym("j.view");
 	
 	patcher = *returnedPatcher;
 
 	// Get the context, the class and the name of the patcher
 	if (*returnedPatcher) {
 		
-		// try to get them from a jcom model|view around to go faster (except for jcom model|view of course)
+		// try to get them from a j.model|view around to go faster (except for j.model|view of course)
 		if (!canShare) {
 			
 			jamoma_patcher_share_info(*returnedPatcher, &sharedPatcher, sharedContext, sharedClass, sharedName);
@@ -1651,8 +1638,8 @@ TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbo
 			}
 		}
 		
-		// get the context looking for a jcom model|view in the patcher
-		// it will also return a patcher above where a jcom model|view has been found
+		// get the context looking for a j.model|view in the patcher
+		// it will also return a patcher above where a j.model|view has been found
 		jamoma_patcher_get_context(returnedPatcher, returnedContext);
 		
 		// if still no context : stop the subscription process
@@ -1661,7 +1648,7 @@ TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbo
 			returnedName = S_SEPARATOR;
             returnedClass = kTTSymEmpty;
             
-			// can't find any jcom model|view with a correct context attribute in the patcher
+			// can't find any j.model|view with a correct context attribute in the patcher
 			// so this means the object have to be registered under the root
 			return kTTErrGeneric;
 		}
@@ -1673,7 +1660,7 @@ TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbo
 		if (returnedClass == kTTSymEmpty)
 			returnedClass = TTSymbol("Untitled");
 		
-		// for jcom model|view object, use the patcher where it is to get the name
+		// for j.model|view object, use the patcher where it is to get the name
 		if (canShare)
 			jamoma_patcher_get_name(patcher, returnedContext, returnedName);
 		// else get the name from the argument of the patcher
@@ -1694,9 +1681,7 @@ TTErr jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbo
 				returnedName = TTSymbol(viewName.data());
 			}
             
-            // format name coming from class name in case the class name contains . or _
-            // TODO : replace each '.' by the Uppercase of the letter after the '.'
-            // for the moment we replace '.' and ' ' by '_'
+            // format name coming from class name replacing '.' and ' ' by '_'
             TTString s_toParse = returnedName.c_str();
             std::replace(s_toParse.begin(), s_toParse.end(), '.', '_');
             std::replace(s_toParse.begin(), s_toParse.end(), ' ', '_');
@@ -1957,12 +1942,13 @@ TTSymbol jamoma_file_write(ObjectPtr x, AtomCount argc, AtomPtr argv, char* defa
 	return result;
 }
 
-/** Get BOOT style filepath grom args or, if no args open a dialog to read a file */
+/** Get BOOT style filepath from args or, if no args open a dialog to read a file */
 TTSymbol jamoma_file_read(ObjectPtr x, AtomCount argc, AtomPtr argv, t_fourcc filetype)
 {
 	char 			filepath[MAX_FILENAME_CHARS];	// for storing the name of the file locally
 	char 			fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
-	short 			path;							// pathID#
+    char            posixpath[MAX_PATH_CHARS];
+	short 			path = 0;						// pathID#
 	t_fourcc		outtype;
 	SymbolPtr		userpath;
 	TTSymbol		result = kTTSymEmpty;
@@ -1973,24 +1959,27 @@ TTSymbol jamoma_file_read(ObjectPtr x, AtomCount argc, AtomPtr argv, t_fourcc fi
 			userpath = atom_getsym(argv);
 			
 			if (userpath != _sym_nothing && userpath != _sym_bang) {
-				// Use BOOT style path
-				path = 0;
-				path_nameconform(userpath->s_name, fullpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);// Copy symbol argument to a local string
-				
-				result = TTSymbol(fullpath);
+                
+                strcpy(filepath, userpath->s_name);    // must copy symbol before calling locatefile_extended
+                if (locatefile_extended(filepath, &path, &outtype, &filetype, 1)) {     // Returns 0 if successful
+                    
+                    object_error(x, "%s : not found", filepath);
+                    return result;
+                }
 			}
 		}
 	}
 	
 	// ... or open a dialog
-	if (result == kTTSymEmpty)
-		if (!open_dialog(filepath, &path, &outtype, &filetype, 1)) {	// Returns 0 if successful
-			char posixpath[MAX_PATH_CHARS];
-			
-			path_topathname(path, filepath, fullpath);
-			path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
-			result = TTSymbol(posixpath);
-		}
+	if (!path)
+		open_dialog(filepath, &path, &outtype, &filetype, 1);
+
+    if (path) {
+        
+        path_topathname(path, filepath, fullpath);
+        path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
+        result = TTSymbol(posixpath);
+    }
 	
 	return result;
 }

@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.parameterArray" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Handling array of parameters in Jamoma model
 	</digest>
 	<description>
-		TEXT_HERE
+		j.parameterArray creates an arrtay of parameters in a Jamoma model
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,25 +16,25 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			parameter
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				set the value of the selected instance(s)
+				Value of the selected instance(s)
 			</digest>
 			<description>
-				TEXT_HERE
+				Value of the selected instance(s)
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				index (use * to bind all instances)
+				index
 			</digest>
 			<description>
-				TEXT_HERE
+				Index of the instance to send value to. (1 to max number of instance. * will send value to all instances)
 			</description>
 		</inlet>
 	</inletlist>
@@ -53,10 +53,10 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				OSC name defining an array of parameters in the namespace using a bracket-based syntaxe: my/message.[2]
 			</digest>
 			<description>
-				TEXT_HERE
+				OSC name defining an array of parameters in the namespace using a bracket-based syntaxe: my/message.[2]
 			</description>
 		</objarg>
 	</objarglist>
@@ -65,10 +65,10 @@
 		<method name="bang">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="int">
@@ -76,10 +76,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="float">
@@ -87,10 +87,10 @@
 				<arg name="ARG_NAME_0" type="float" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="list">
@@ -98,10 +98,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="anything">
@@ -109,10 +109,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="+">
@@ -120,10 +120,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Increment the value by the amount defined by the @stepsize attribute
 			</digest>
 			<description>
-				TEXT_HERE
+				Increment the value by the amount defined by the @stepsize attribute
 			</description>
 		</method>
 		<method name="-">
@@ -131,10 +131,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Decrement the value by the amount defined by the @stepsize attribute
 			</digest>
 			<description>
-				TEXT_HERE
+				Decrement the value by the amount defined by the @stepsize attribute
 			</description>
 		</method>
 		<method name="address">
@@ -142,10 +142,10 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Define an array of parameters in the namespace. Ex: 'address my/message.[5]'
 			</digest>
 			<description>
-				TEXT_HERE
+				The address message followed by an osc name containing a number of instances placed in bracket declares an array of parameters in the namespace. Ex: 'address my/message.[5]'
 			</description>
 		</method>
 		<method name="array">
@@ -153,10 +153,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Dispatch a list of values to instances of the parameters
 			</digest>
 			<description>
-				TEXT_HERE
+				Dispatch a list of values to instances of the parameters
 			</description>
 		</method>
 		<method name="array/select">
@@ -164,10 +164,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				This message select which instance to address
 			</digest>
 			<description>
-				TEXT_HERE
+				This message select which j.parameterArray's instance to address
 			</description>
 		</method>
 		<method name="array/resize">
@@ -175,10 +175,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Change the number of instances
 			</digest>
 			<description>
-				TEXT_HERE
+				Change the number of instances
 			</description>
 		</method>
 		<method name="dec">
@@ -186,10 +186,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Decrement the value by the amount defined by the @stepsize attribute
 			</digest>
 			<description>
-				TEXT_HERE
+				Decrement the value by the amount defined by the @stepsize attribute
 			</description>
 		</method>
 		<method name="dump">
@@ -197,10 +197,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Dump
 			</digest>
 			<description>
-				TEXT_HERE
+				Dum all attributes values
 			</description>
 		</method>
 		<method name="inc">
@@ -208,10 +208,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Increment the value by the amount defined by the @stepsize attribute
 			</digest>
 			<description>
-				TEXT_HERE
+				Increment the value by the amount defined by the @stepsize attribute
 			</description>
 		</method>
 		<method name="init">
@@ -230,10 +230,10 @@
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Enable or disable parameter instances
 			</digest>
 			<description>
-				TEXT_HERE
+				Enable or disable parameter instances
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -241,34 +241,34 @@
 		</attribute>
 		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Dataspace used for unit conversion
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the dataspace used internally by parameters for unit conversion. For example, for a gain dataspace with a unit dB, one can set the value from a remote using midi value
 			</description>
 		</attribute>
 		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				The dataspace unit used for remote communication
 			</digest>
 			<description>
-				TEXT_HERE
+				The dataspace unit used for remote communication. Available values depend on the dataspace attribute value. See j.dataspace help patch for more information.
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Short info about the parameters
 			</digest>
 			<description>
-				TEXT_HERE
+				Short info about the parameters. Used for auto-documentation of the model
 			</description>
 		</attribute>
 		<attribute name="format" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Format of the values output: single or array
 			</digest>
 			<description>
-				TEXT_HERE
+				Format of the values output: single or array
 			</description>
 			<attributelist>
 				<attribute name="enumvals" get="1" set="1" type="atom" size="2">
@@ -296,114 +296,114 @@
 		</attribute>
 		<attribute name="priority" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Priority of the parameter instances
 			</digest>
 			<description>
-				TEXT_HERE
+				Define priority in which parameters value will be recalled when initialization for example
 			</description>
 		</attribute>
 		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
 			</digest>
 			<description>
-				TEXT_HERE
+				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
 			</description>
 		</attribute>
 		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Function used for ramping
 			</digest>
 			<description>
-				TEXT_HERE
+				The mapping function determining the curve of the ramping to new message value
 			</description>
 		</attribute>
 		<attribute name="ramp/function/parameters" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Optional parameters for the chosen ramping function
 			</digest>
 			<description>
-				TEXT_HERE
+				Optional parameters for the chosen ramping function
 			</description>
 		</attribute>
 		<attribute name="ramp/status" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Ramp status
 			</digest>
 			<description>
-				TEXT_HERE
+				Ramp status. THe attribute will be set to 1 when ramping or to 0 when done
 			</description>
 		</attribute>
-		<attribute name="range/bounds" get="1" set="1" type="atom" size="1">
+		<attribute name="range" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Lower and upper value oundaries
 			</digest>
 			<description>
-				TEXT_HERE
+				Lower and upper boundaries defining the range of possible message values
 			</description>
 		</attribute>
-		<attribute name="range/clipmode" get="1" set="1" type="symbol" size="1">
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Define clipping behaviour at the boundaries of the message range
 			</digest>
 			<description>
-				TEXT_HERE
+				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
 			</description>
 		</attribute>
 		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Filtering out repeting values
 			</digest>
 			<description>
-				TEXT_HERE
+				Determines whether repeated values will be filtered: when this attribute is enabled, repetitions are filtered out (like [change] object in Max)
 			</description>
 		</attribute>
-		<attribute name="service" get="1" set="1" type="symbol" size="1">
+		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 		<attribute name="tag" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Some optional tags
 			</digest>
 			<description>
-				TEXT_HERE
+				Some optional tags
 			</description>
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Datatype of the parameter. Options are: decimal, integer, boolean, string, array, generic
 			</digest>
 			<description>
-				TEXT_HERE
+				Datatype of the parameter. Options are: decimal, integer, boolean, string, array, generic
 			</description>
 		</attribute>
 		<attribute name="value" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Current parameters value
 			</digest>
 			<description>
-				TEXT_HERE
+				Current parameters value
 			</description>
 		</attribute>
-		<attribute name="value/default" get="1" set="1" type="int" size="1">
+		<attribute name="default" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Default parameters value
 			</digest>
 			<description>
-				TEXT_HERE
+				Default parameters value. This value will be recall on initialization of the model
 			</description>
 		</attribute>
-		<attribute name="value/stepsize" get="1" set="1" type="int" size="1">
+		<attribute name="stepsize" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				increment/decrement amount
 			</digest>
 			<description>
-				TEXT_HERE
+				Step by which the current value is being increased/decreased when a 'inc' or 'dec' message is received
 			</description>
 		</attribute>
 	</attributelist>
@@ -413,8 +413,11 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="j.parameter">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.remoteArray">
+			<!-- TEXT_HERE -->
 		</seealso>
 	</seealsolist>
 </c74object>

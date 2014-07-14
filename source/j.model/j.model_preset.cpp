@@ -21,7 +21,6 @@ void model_preset_amenities(TTPtr self)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTAddress                   modelAdrs;
 	TTValue						v, a, args;
-	TTXmlHandlerPtr				aXmlHandler;
     TTAddress                   presetAddress;
     TTNodePtr                   aNode;
     TTBoolean                   newInstanceCreated;
@@ -40,15 +39,7 @@ void model_preset_amenities(TTPtr self)
 	
         EXTRA->presetManager->setAttributeValue(kTTSym_address, modelAdrs);
         
-        // create internal TTXmlHandler
-        aXmlHandler = NULL;
-        TTObjectBaseInstantiate(kTTSym_XmlHandler, TTObjectBaseHandle(&aXmlHandler), args);
-        v = TTValue(aXmlHandler);
-        x->internals->append(kTTSym_XmlHandler, v);
-        v = TTValue(EXTRA->presetManager);
-        aXmlHandler->setAttributeValue(kTTSym_object, v);
-        
-        // if desired, load default modelClass.patcherContext.xml file preset
+        // if desired, load default modelClass.patcherContext.presets.txt file preset
         if (EXTRA->attr_load_default)
             defer_low(x, (method)model_preset_default, 0, 0, 0L);
     }
@@ -83,7 +74,7 @@ void model_preset_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			o, v, none;
 	TTSymbol		fullpath;
-	TTXmlHandlerPtr	aXmlHandler = NULL;
+	TTTextHandlerPtr	aTextHandler = NULL;
 	TTErr			tterr;
 	
 	if (EXTRA->presetManager) {
@@ -91,14 +82,17 @@ void model_preset_doread(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv
 		fullpath = jamoma_file_read((ObjectPtr)x, argc, argv, 'TEXT');
 		v.append(fullpath);
 		
-		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
 			
-			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+            
+            o = TTValue(EXTRA->presetManager);
+            aTextHandler->setAttributeValue(kTTSym_object, o);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_Read, v, none);
+			tterr = aTextHandler->sendMessage(kTTSym_Read, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -117,18 +111,21 @@ void model_preset_read_again(TTPtr self)
 void model_preset_doread_again(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTXmlHandlerPtr	aXmlHandler = NULL;
+	TTTextHandlerPtr	aTextHandler = NULL;
 	TTValue			o;
 	TTErr			tterr;
 	
-	tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+	tterr = x->internals->lookup(kTTSym_TextHandler, o);
 	
 	if (!tterr) {
 		
-		aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+		aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+        
+        o = TTValue(EXTRA->presetManager);
+        aTextHandler->setAttributeValue(kTTSym_object, o);
 		
 		critical_enter(0);
-		tterr = aXmlHandler->sendMessage(kTTSym_ReadAgain);
+		tterr = aTextHandler->sendMessage(kTTSym_ReadAgain);
 		critical_exit(0);
 		
 		if (!tterr)
@@ -149,7 +146,7 @@ void model_preset_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 	char 			filename[MAX_FILENAME_CHARS];
 	TTSymbol		fullpath;
 	TTValue			o, v, none;
-	TTXmlHandlerPtr	aXmlHandler;
+	TTTextHandlerPtr	aTextHandler;
 	TTErr			tterr;
 	
 	// stop filewatcher
@@ -158,18 +155,21 @@ void model_preset_dowrite(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr arg
 	
 	if (EXTRA->presetManager) {
 		
-		// Default XML File Name
-		snprintf(filename, MAX_FILENAME_CHARS, "%s.%s.xml", x->patcherClass.c_str(), x->patcherContext.c_str());
+		// Default TEXT File Name
+		snprintf(filename, MAX_FILENAME_CHARS, "%s.%s.presets.txt", x->patcherClass.c_str(), x->patcherContext.c_str());
 		fullpath = jamoma_file_write((ObjectPtr)x, argc, argv, filename);
 		v.append(fullpath);
 		
-		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+		tterr = x->internals->lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
-			aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+            
+            o = TTValue(EXTRA->presetManager);
+            aTextHandler->setAttributeValue(kTTSym_object, o);
 			
 			critical_enter(0);
-			tterr = aXmlHandler->sendMessage(kTTSym_Write, v, none);
+			tterr = aTextHandler->sendMessage(kTTSym_Write, v, none);
 			critical_exit(0);
 			
 			if (!tterr)
@@ -192,18 +192,25 @@ void model_preset_write_again(TTPtr self)
 void model_preset_dowrite_again(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTXmlHandlerPtr	aXmlHandler = NULL;
+	TTTextHandlerPtr	aTextHandler = NULL;
 	TTValue			o;
 	TTErr			tterr;
+    
+    // stop filewatcher
+	if (EXTRA->filewatcher)
+		filewatcher_stop(EXTRA->filewatcher);
 	
-	tterr = x->internals->lookup(kTTSym_XmlHandler, o);
+	tterr = x->internals->lookup(kTTSym_TextHandler, o);
 	
 	if (!tterr) {
 		
-		aXmlHandler = TTXmlHandlerPtr((TTObjectBasePtr)o[0]);
+		aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+        
+        o = TTValue(EXTRA->presetManager);
+        aTextHandler->setAttributeValue(kTTSym_object, o);
 		
 		critical_enter(0);
-		tterr = aXmlHandler->sendMessage(kTTSym_WriteAgain);
+		tterr = aTextHandler->sendMessage(kTTSym_WriteAgain);
 		critical_exit(0);
 		
 		if (!tterr)
@@ -211,6 +218,10 @@ void model_preset_dowrite_again(TTPtr self)
 		else
 			object_obex_dumpout(self, _sym_error, 0, NULL);
 	}
+    
+    // start filewatcher
+	if (EXTRA->filewatcher)
+		filewatcher_start(EXTRA->filewatcher);
 }
 
 void model_preset_default(TTPtr self)
@@ -221,24 +232,24 @@ void model_preset_default(TTPtr self)
 	char 		fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
 	char		posixpath[MAX_PATH_CHARS];
 	t_atom		a;
-	SymbolPtr	xmlfile;
+	SymbolPtr	textfile;
 
 	if (x->patcherClass != kTTSymEmpty) {
 		
 		if (x->patcherContext == kTTSym_model)
-			jamoma_edit_filename(*ModelPresetFormat, x->patcherClass, &xmlfile);
+			jamoma_edit_filename(*ModelPresetFormat, x->patcherClass, &textfile);
 		
 		else if (x->patcherContext == kTTSym_view)
-			jamoma_edit_filename(*ViewPresetFormat, x->patcherClass, &xmlfile);
+			jamoma_edit_filename(*ViewPresetFormat, x->patcherClass, &textfile);
 		else
 			return object_error((ObjectPtr)x, "preset_default : can't get the context of the patcher");
 		
-		if (locatefile_extended((char*)xmlfile->s_name, &outvol, &outtype, &filetype, 1)) {
-			//object_warn((ObjectPtr)x, "preset_default : can't find %s file in the Max search path", xmlfile.data());
+		if (locatefile_extended((char*)textfile->s_name, &outvol, &outtype, &filetype, 1)) {
+			//object_warn((ObjectPtr)x, "preset_default : can't find %s file in the Max search path", textfile.data());
 			return;
 		}
 		
-		path_topathname(outvol, (char*)xmlfile->s_name, fullpath);
+		path_topathname(outvol, (char*)textfile->s_name, fullpath);
 		path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
 		
 		atom_setsym(&a, gensym(posixpath));
@@ -254,7 +265,7 @@ void model_preset_default(TTPtr self)
 			object_free(EXTRA->filewatcher);
 		}
 		
-		EXTRA->filewatcher = filewatcher_new((ObjectPtr)x, outvol, (char*)xmlfile->s_name);
+		EXTRA->filewatcher = filewatcher_new((ObjectPtr)x, outvol, (char*)textfile->s_name);
 		filewatcher_start(EXTRA->filewatcher);
 	}
 	else

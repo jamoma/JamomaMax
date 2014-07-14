@@ -18,23 +18,18 @@
 		<metadata name="tag">
 			model
 		</metadata>
+		<metadata name="tag">
+			mvc
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				input
+				Input value
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
-		</inlet>
-		<inlet id="1" type="INLET_TYPE">
-			<digest>
-				input
-			</digest>
-			<description>
-				TEXT_HERE
+				Input value
 			</description>
 		</inlet>
 	</inletlist>
@@ -42,10 +37,10 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				direct: values
+				Value output
 			</digest>
 			<description>
-				TEXT_HERE
+				Value output
 			</description>
 		</outlet>
 	</outletlist>
@@ -53,10 +48,10 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				Node name
 			</digest>
 			<description>
-				TEXT_HERE
+				Node name
 			</description>
 		</objarg>
 	</objarglist>
@@ -65,10 +60,10 @@
 		<method name="bang">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="int">
@@ -76,10 +71,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="float">
@@ -87,10 +82,10 @@
 				<arg name="ARG_NAME_0" type="float" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="list">
@@ -98,10 +93,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="anything">
@@ -109,10 +104,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="+">
@@ -120,10 +115,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Increment parameter value
 			</digest>
 			<description>
-				TEXT_HERE
+				Increment parameter value by the value defined with the stepsize attribute
 			</description>
 		</method>
 		<method name="-">
@@ -131,10 +126,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Decrement parameter value
 			</digest>
 			<description>
-				TEXT_HERE
+				Decrement parameter value by the value defined with the stepsize attribute
 			</description>
 		</method>
 		<method name="address">
@@ -142,10 +137,10 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Set node name
 			</digest>
 			<description>
-				TEXT_HERE
+				Set node name
 			</description>
 		</method>
 		<method name="dec">
@@ -153,10 +148,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Decrement parameter value
 			</digest>
 			<description>
-				TEXT_HERE
+				Decrement parameter value by the value defined with the stepsize attribute
 			</description>
 		</method>
 		<method name="dump">
@@ -164,10 +159,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Dump
 			</digest>
 			<description>
-				TEXT_HERE
+				Dump j.parameter attributes state
 			</description>
 		</method>
 		<method name="inc">
@@ -175,10 +170,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Increment parameter value
 			</digest>
 			<description>
-				TEXT_HERE
+				Increment parameter value by the value defined with the stepsize attribute
 			</description>
 		</method>
 		<method name="init">
@@ -197,10 +192,10 @@
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Enable parameter
 			</digest>
 			<description>
-				TEXT_HERE
+				Enable parameter
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -208,138 +203,138 @@
 		</attribute>
 		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Dataspace used by the parameter
 			</digest>
 			<description>
-				TEXT_HERE
+				Dataspace used by the parameter (angle, color, distance, gain, none, orientation, position, speed, temperature, time)
 			</description>
 		</attribute>
 		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Dataspace unit used by the parameter
 			</digest>
 			<description>
-				TEXT_HERE
+				Dataspace unit used by the parameter
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Node description
 			</digest>
 			<description>
-				TEXT_HERE
+				Node description
 			</description>
 		</attribute>
 		<attribute name="priority" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Set j.parameter priority
 			</digest>
 			<description>
-				TEXT_HERE
+				Set parameter value order within a model
 			</description>
 		</attribute>
 		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set the scheduler driving the ramp
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the scheduler driving the ramp: none, max
 			</description>
 		</attribute>
 		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Function to be used for ramping
 			</digest>
 			<description>
-				TEXT_HERE
+				Function to be used for ramping (cosine, crossFadeIn, crossFadeOut, exponential, freehand, linear, logarithm, lowpass, power, smoothPolynomial, tanh, bartlett, blackman, blackmanHarris, expodec, gauss, hamming, hanning, kaiser, nuttall, rectangular, rosenbergGlottalPulse, trapezoid, tukey, welch)
 			</description>
 		</attribute>
 		<attribute name="ramp/function/parameters" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Parameters of the selected function used for ramping
 			</digest>
 			<description>
-				TEXT_HERE
+				Parameters of the selected function used for ramping
 			</description>
 		</attribute>
 		<attribute name="ramp/status" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Ramp status
 			</digest>
 			<description>
-				TEXT_HERE
+				Ramp status. THe attribute will be set to 1 when ramping or to 0 when done
 			</description>
 		</attribute>
-		<attribute name="range/bounds" get="1" set="1" type="atom" size="1">
+		<attribute name="range" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				j.parameter value range
 			</digest>
 			<description>
-				TEXT_HERE
+				j.parameter value range
 			</description>
 		</attribute>
-		<attribute name="range/clipmode" get="1" set="1" type="symbol" size="1">
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set how values exceeding range will be clipped
 			</digest>
 			<description>
-				TEXT_HERE
+				Set how values exceeding range will be clipped (none, low, high, wrap, fold)
 			</description>
 		</attribute>
 		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Filtering of value repetitions
 			</digest>
 			<description>
-				TEXT_HERE
+				Set whether to filter out value repetitions or not
 			</description>
 		</attribute>
-		<attribute name="service" get="1" set="1" type="symbol" size="1">
+		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 		<attribute name="tag" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Some tags associated to the parameter
 			</digest>
 			<description>
-				TEXT_HERE
+				Some tags associated to the parameter
 			</description>
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Type of the parameter value
 			</digest>
 			<description>
-				TEXT_HERE
+				Type of the parameter value
 			</description>
 		</attribute>
 		<attribute name="value" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Current parameter value
 			</digest>
 			<description>
-				TEXT_HERE
+				Current parameter value
 			</description>
 		</attribute>
-		<attribute name="value/default" get="1" set="1" type="int" size="1">
+		<attribute name="default" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Default value
 			</digest>
 			<description>
-				TEXT_HERE
+				Default value output by j.parameter on model initialization
 			</description>
 		</attribute>
-		<attribute name="value/stepsize" get="1" set="1" type="int" size="1">
+		<attribute name="stepsize" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Size of the incrementation/decrementation
 			</digest>
 			<description>
-				TEXT_HERE
+				Size the j.parameter's value will be incremented/decremented
 			</description>
 		</attribute>
 	</attributelist>
@@ -349,8 +344,11 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="j.model">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.message">
+			<!-- TEXT_HERE -->
 		</seealso>
 	</seealsolist>
 </c74object>

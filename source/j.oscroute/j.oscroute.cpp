@@ -14,45 +14,14 @@
  */
 
 
-#include "JamomaForMax.h"
-
-#define MAX_ARGCOUNT 100
-#define MAX_MESS_SIZE 2048
-
-typedef struct _oscroute{					// Data Structure for this object
-	t_object		ob;							// REQUIRED: Our object
-	void			*outlets[MAX_ARGCOUNT];		// my outlet array
-	void			*outlet_overflow;			// this outlet doubles as the dumpout outlet
-	t_symbol		*arguments[MAX_ARGCOUNT];	// symbols to match
-	long unsigned	arglen[MAX_ARGCOUNT];		// strlen of symbols to match
-	short			num_args;
-	//long			attr_strip;					// ATTRIBUTE: 1 = strip leading slash off any messages
-	void			*proxy_inlet;				// pointer to the second inlet (when present)
-} t_oscroute;
-
-// Prototypes for our methods:
-void *oscroute_new(t_symbol *s, long argc, t_atom *argv);
-void oscroute_free(t_oscroute *x);
-void oscroute_assist(t_oscroute *x, void *b, long msg, long arg, char *dst);
-void oscroute_bang(t_oscroute *x);
-void oscroute_int(t_oscroute *x, long n);
-void oscroute_float(t_oscroute *x, double f);
-void oscroute_list(t_oscroute *x, t_symbol *msg, long argc, t_atom *argv);
-void oscroute_symbol(t_oscroute *x, t_symbol *msg, long argc, t_atom *argv);
-//void oscroute_list(t_oscroute *x, t_symbol *msg, long argc, t_atom *argv);
-
-// Globals
-t_class		*oscroute_class;				// Required: Global pointer for our class
-
+#include "j.oscroute.h"
 
 /************************************************************************************/
 // Main() Function
 
 int JAMOMA_EXPORT_MAXOBJ main(void)
 {
-	//long attrflags = 0;
 	t_class *c;
-	//t_object *attr;
 	
 	// Initialize Globals
 	jamoma_init();
@@ -69,11 +38,6 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
   	class_addmethod(c, (method)oscroute_symbol,			"anything", A_GIMME,	0L);	
 	class_addmethod(c, (method)oscroute_assist,			"assist",	A_CANT,		0L); 
     class_addmethod(c, (method)object_obex_dumpout, 	"dumpout",	A_CANT,		0);
-
-	// ATTRIBUTE: strip
-	/*attr = attr_offset_new("strip", _sym_long, attrflags,
-		(method)0, (method)0, calcoffset(t_oscroute, attr_strip));
-	class_addattr(c, attr);	*/
 
 	// Finalize our class
 	class_register(CLASS_BOX, c);
@@ -95,16 +59,19 @@ void *oscroute_new(t_symbol *s, long argc, t_atom *argv)
 		//object_obex_store((void *)x, _sym_dumpout, (object *)x->outlet_overflow);	// dumpout
 		x->num_args = argc;
 		
-		if (argc < 1) {	// if no args are provided, we provide a way to set the arg using an inlet
+		// If no argumentss are provided, we create one proxy inlet so that the arg can be set using an inlet
+		if (argc < 1) {
 			x->num_args = 1;
 			x->arguments[0] = gensym("/nil");
 			x->arglen[0] = 4;
-			x->proxy_inlet = proxy_new(x, 1, 0L);
+			x->proxy_inlet[0] = proxy_new(x, 1, 0L);
 			x->outlets[0] = outlet_new(x, 0);
 		}
 		else {
-			x->proxy_inlet = 0;
-			for (i=x->num_args-1; i >= 0; i--) {				
+			// If we have arguments, we create one proxy inlet (right to left) for each of them, so that they can be dynamically changed.
+			for (i=argc; i>0; i--)
+				x->proxy_inlet[i-1] = proxy_new(x, i, 0L);
+			for (i=x->num_args-1; i >= 0; i--) {
 				x->outlets[i] = outlet_new(x, 0);		// Create Outlet
 				switch(argv[i].a_type) {
 					case A_SYM:
@@ -135,15 +102,17 @@ void *oscroute_new(t_symbol *s, long argc, t_atom *argv)
 				}
 			}
 		}
-		//attr_args_process(x, argc, argv);			//handle attribute args	
 	}
 	return (x);										// return the pointer to our new instantiation
 }
 
 void oscroute_free(t_oscroute *x)
 {
-	if (x->proxy_inlet != 0)
-		freeobject((t_object *)(x->proxy_inlet));
+	short i;
+	
+	// All proxy objects must be freed
+	for (i=0; i<x->num_args; i++)
+		freeobject((t_object *)(x->proxy_inlet[i]));
 }
 
 
@@ -154,7 +123,7 @@ void oscroute_free(t_oscroute *x)
 // Method for Assistance Messages
 void oscroute_assist(t_oscroute *x, void *b, long msg, long arg, char *dst)
 {
-	if (msg==1) 						// Inlet
+	if (msg==1) 					// Inlet
 		strcpy(dst, "Input");
 	else if (msg==2) { 				// Outlets
 		if (arg < x->num_args)
@@ -228,10 +197,10 @@ void oscroute_symbol(t_oscroute *x, t_symbol *msg, long argc, t_atom *argv)
 	char		input[MAX_MESS_SIZE];	// our input string
 	long		inlet = proxy_getinlet((t_object *)x);
 
-	// If the message comes in the second inlet, then set the string to match...
-	if (inlet == 1) {
-		x->arguments[0] = msg;
-		x->arglen[0] = strlen(msg->s_name);
+	// If the message comes in the second (or third, ...) inlet, then set the string to match...
+	if (inlet > 0) {
+		x->arguments[inlet-1] = msg;
+		x->arglen[inlet-1] = strlen(msg->s_name);
 		return;
 	}
 	

@@ -16,7 +16,10 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			ramp
+		</metadata>
+		<metadata name="tag">
+			line
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -26,15 +29,7 @@
 				input
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
-		</inlet>
-		<inlet id="1" type="INLET_TYPE">
-			<digest>
 				input
-			</digest>
-			<description>
-				TEXT_HERE
 			</description>
 		</inlet>
 	</inletlist>
@@ -45,7 +40,7 @@
 				ramping value
 			</digest>
 			<description>
-				TEXT_HERE
+				ramping value
 			</description>
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
@@ -53,12 +48,12 @@
 				dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				dumpout
 			</description>
 		</outlet>
 	</outletlist>
 	<!--ARGUMENTS-->
-	<objarglist>
+	<!-- <objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
 				TEXT_HERE
@@ -67,16 +62,16 @@
 				TEXT_HERE
 			</description>
 		</objarg>
-	</objarglist>
+	</objarglist> -->
 	<!--MESSAGES-->
 	<methodlist>
 		<method name="bang">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Output new ramp value when in async mode
 			</digest>
 			<description>
-				TEXT_HERE
+				Output new ramp value when in async mode
 			</description>
 		</method>
 		<method name="int">
@@ -84,10 +79,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Jump to value
 			</digest>
 			<description>
-				TEXT_HERE
+				Jump to value
 			</description>
 		</method>
 		<method name="float">
@@ -95,10 +90,10 @@
 				<arg name="ARG_NAME_0" type="float" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Jump to value
 			</digest>
 			<description>
-				TEXT_HERE
+				Jump to value
 			</description>
 		</method>
 		<method name="list">
@@ -106,21 +101,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Jump to value
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
-		</method>
-		<method name="anything">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
+				Jump to value
 			</description>
 		</method>
 		<method name="dump">
@@ -128,10 +112,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Dump attributes value
 			</digest>
 			<description>
-				TEXT_HERE
+				Dump attributes value
 			</description>
 		</method>
 		<method name="go">
@@ -139,10 +123,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Ramp to target value
 			</digest>
 			<description>
-				TEXT_HERE
+				Ramp to target value in the defined amount of time
 			</description>
 		</method>
 		<method name="set">
@@ -150,10 +134,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Set value (without output)
 			</digest>
 			<description>
-				TEXT_HERE
+				Set j.ramp to value without causing output
 			</description>
 		</method>
 		<method name="slide">
@@ -161,19 +145,19 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Manually ramp to a target value
 			</digest>
 			<description>
-				TEXT_HERE
+				Manually ramp from last output value to the value defined by the target message
 			</description>
 		</method>
 		<method name="stop">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Stop ramp
 			</digest>
 			<description>
-				TEXT_HERE
+				Stop ramp
 			</description>
 		</method>
 		<method name="target">
@@ -181,10 +165,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Set value to be reached by ramp
 			</digest>
 			<description>
-				TEXT_HERE
+				Set value to be reached by ramp when using the slide message
 			</description>
 		</method>
 	</methodlist>
@@ -192,34 +176,34 @@
 	<attributelist>
 		<attribute name="function" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set ramping function
 			</digest>
 			<description>
-				TEXT_HERE
+				Set ramping function
 			</description>
 		</attribute>
 		<attribute name="ramp/time" get="1" set="1" type="float" size="1">
 			<digest>
-				TEXT_HERE
+				Set ramping time
 			</digest>
 			<description>
-				TEXT_HERE
+				Set ramping time
 			</description>
 		</attribute>
 		<attribute name="running" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Report ramping state
 			</digest>
 			<description>
-				TEXT_HERE
+				Report ramping state
 			</description>
 		</attribute>
 		<attribute name="scheduler" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set the scheduler running the drive
 			</digest>
 			<description>
-				TEXT_HERE
+				Set the scheduler running the drive
 			</description>
 		</attribute>
 	</attributelist>
@@ -230,6 +214,7 @@
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="j.parameter"/>
+		<seealso name="j.ramp~"/>
 		<seealso name="slide"/>
 	</seealsolist>
 </c74object>

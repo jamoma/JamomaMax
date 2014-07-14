@@ -103,8 +103,8 @@ void jamoma_init(void)
 		ttRegexForBracket = new TTRegex("\\[(\\d|\\d\\d|\\d\\d\\d)\\]");	// parse until 999
 		
 		ModelPatcherFormat = new TTString("%s.model.maxpat");
-		ModelPresetFormat = new TTString("%s.model.xml");
-		ViewPresetFormat = new TTString("%s.view.xml");
+		ModelPresetFormat = new TTString("%s.model.presets.txt");
+		ViewPresetFormat = new TTString("%s.view.presets.txt");
 		HelpPatcherFormat = new TTString("%s.model");
 		RefpageFormat = new TTString("%s.model");
 		DocumentationFormat = new TTString("%s.model.html");
@@ -326,27 +326,6 @@ bool jamoma_loadextern(t_symbol *objectname, long argc, t_atom *argv, t_object *
     
 	*object = (t_object *)object_new_typed(CLASS_BOX, objectname, argc, argv);
 	return true;
-}
-
-// Function the translates a Max path+filename combo into a correct absolutepath
-// TODO: remove this function once we've completed the transition to Max5, as path_topathname() is fixed for Max5
-void jamoma_getfilepath(short in_path, char *in_filename, char *out_filepath)
-{
-	char	path[4096];
-	
-	path_topathname(in_path, in_filename, path);
-    
-#ifdef MAC_VERSION
-	char *temppath;
-	temppath = strchr(path, ':');
-	*temppath = '\0';
-	temppath += 1;
-    
-	// at this point temppath points to the path after the volume, and out_filepath points to the volume
-	sprintf(out_filepath, "/Volumes/%s%s", path, temppath);
-#else // WIN_VERSION
-	strcpy(out_filepath, path);
-#endif
 }
 
 

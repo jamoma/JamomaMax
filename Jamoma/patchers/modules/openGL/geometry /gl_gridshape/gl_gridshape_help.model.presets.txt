@@ -1,0 +1,64 @@
+
+- preset "gridshape"
+- description "something about this preset"
+# ###########################################
+# 
+gl_gridshape/GL/context gridshape_help
+gl_gridshape/data/active 1
+gl_gridshape/GL/alpha 1.000000
+gl_gridshape/GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+gl_gridshape/GL/fog/amount 0.000000
+gl_gridshape/GL/anchor 0.000000 0.000000 0.000000
+gl_gridshape/GL/anim UID
+gl_gridshape/GL/antialias 0
+gl_gridshape/GL/material/automatic 1
+gl_gridshape/GL/automatic 1
+gl_gridshape/GL/aux_alpha 1.000000
+gl_gridshape/GL/aux_color 1.000000 1.000000 1.000000
+gl_gridshape/GL/axes 0
+gl_gridshape/data/bypass 0
+gl_gridshape/cache_mode vertexarray
+gl_gridshape/GL/depth/clear 0
+gl_gridshape/GL/color 1.000000 1.000000 1.000000
+gl_gridshape/GL/cull_face 0
+gl_gridshape/GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+gl_gridshape/dim 20 20
+gl_gridshape/GL/material/emission 0.000000 0.000000 0.000000 0.000000
+gl_gridshape/GL/depth/enable 1
+gl_gridshape/GL/blend/enable 0
+gl_gridshape/GL/light/enable 1
+gl_gridshape/GL/enable 1
+gl_gridshape/GL/filterclass default
+gl_gridshape/gridmode 0
+gl_gridshape/GL/color/inherit 0
+gl_gridshape/GL/depth/inherit 0
+gl_gridshape/GL/material/inherit 0
+gl_gridshape/GL/inherit_all 0
+gl_gridshape/GL/inherit_texture 0
+gl_gridshape/GL/layer 0
+gl_gridshape/GL/line_width 1.000000
+gl_gridshape/GL/material/matfile none
+gl_gridshape/GL/matrixoutput 0
+gl_gridshape/GL/blend/mode 6 7
+gl_gridshape/GL/material/name none
+gl_gridshape/GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+gl_gridshape/GL/point_size 1.000000
+gl_gridshape/GL/poly_mode 0 0
+gl_gridshape/GL/position 0.000000 0.000000 0.000000
+gl_gridshape/rad_minor 0.400000
+gl_gridshape/GL/rotate 17.000000 1.300000 2.000000 1.000000
+gl_gridshape/GL/scale 0.400000 0.400000 0.400000
+gl_gridshape/GL/shader none
+gl_gridshape/shape torus
+gl_gridshape/GL/material/shininess 10.000000
+gl_gridshape/GL/smooth_shading 0
+gl_gridshape/GL/material/specular 0.000000 0.000000 0.000000 0.000000
+gl_gridshape/GL/tex_map 0
+gl_gridshape/GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+gl_gridshape/GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+gl_gridshape/GL/texture none
+gl_gridshape/GL/transform_reset 0
+gl_gridshape/GL/viewalign 0
+gl_gridshape/GL/depth/write 1
+# 
+# ###########################################

@@ -1,0 +1,21 @@
+
+
+- preset "default"
+# "edit a comment"
+limiter/dcblocker/active 1
+audio/bypass 0
+feedback/gain -60.00000
+audio/gain 100.000000
+limiter/lookahead 100
+audio/mix 100.000000
+limiter/mode exponenti60
+audio/mute 0
+limiter/postamp 0.000000
+limiter/preamp 5.000000
+limiter/release 250.000000
+frequency/scale -2.260000
+frequency/shift -344.000000
+limiter/threshold 0.000000
+feedback/time 10.000000
+ 
+

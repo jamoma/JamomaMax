@@ -1,0 +1,25 @@
+
+
+- preset "default"
+# "edit a comment"
+source soundfile
+audio/gain 100.
+balance/mode FastMode
+balance/position 0.000000
+balance/shape EqualPower
+clicktrain/rate 1.000000
+file/loop 1
+file/play 0
+file/transpose 0.000000
+input/channel.L 1
+input/channel.R 2
+input/limiter/active 1
+input/limiter/dcblocker/active 1
+input/limiter/lookahead 100
+input/limiter/postamp 0.000000
+input/limiter/preamp 0.000000
+input/limiter/release 1000.000000
+input/limiter/threshold 0.000000
+testtone/frequency 1000
+ 
+

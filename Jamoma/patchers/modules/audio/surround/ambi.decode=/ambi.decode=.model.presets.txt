@@ -1,0 +1,31 @@
+
+
+
+- preset "default"
+  audio/gain 100.000000
+  audio/mute 0
+  flavor Furse-Malham
+  numSpeakers 8
+  order 3
+  orderWeights 1.000000 0.500000 0.100000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+  view/highlight none
+  
+
+- preset "malham"
+  order 3
+  flavor Furse-Malham
+  orderWeights 0.823242 1.000000 0.442259 0.079101 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 
+  
+
+- preset "furse"
+  order 3
+  flavor Furse-Malham
+  orderWeights 0.707017 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 
+  
+
+- preset "inphase"
+  order 3
+  flavor Furse-Malham
+  orderWeights 1.944000 1.296000 0.324000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 
+  
+

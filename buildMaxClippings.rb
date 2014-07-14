@@ -18,7 +18,7 @@ initPath = "#{glibdir}/../Implementations/Max/Jamoma/patches/init"
 
 
 def writePatch(myModule, clippingsPath, moduleType)
-  moduleName = myModule.sub(/.+\/jmod.(.*).maxpat/,'\1')
+  moduleName = myModule.sub(/.+\/(.*).module.maxpat/,'\1')
   
   puts "======== #{moduleType} modules ========"
   puts "#{moduleName}"
@@ -26,7 +26,7 @@ def writePatch(myModule, clippingsPath, moduleType)
   FileUtils.rm("#{clippingsPath}/#{moduleType}\ modules/jmod.clip.#{moduleName}.maxpat") if File.exist?("#{clippingsPath}/#{moduleType}\ modules/jmod.clip.#{moduleName}.maxpat")
   
     
-  clp = File.open("#{clippingsPath}/#{moduleType}\ modules/jmod.clip.#{moduleName}.maxpat", "w+")
+  clp = File.open("#{clippingsPath}/#{moduleType}\ modules/clip.#{moduleName}.module.maxpat", "w+")
   clp.write("{
      \"patcher\" :   {
        \"fileversion\" : 1,

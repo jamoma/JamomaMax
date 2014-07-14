@@ -474,7 +474,7 @@ void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	
 	// search through all connected objects for a patcher object
 	object_obex_lookup(obj, _sym_pound_B, &box);
-	myoutlet = (t_outlet*)jbox_getoutlet((t_jbox*)box, 1);
+	myoutlet = (t_outlet*)jbox_getoutlet((t_jbox*)box, panel_out);
 	if (myoutlet)
 		connecteds = (t_dll*)myoutlet->o_dll;
 	
@@ -497,14 +497,6 @@ void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		name = NULL;
 		connecteds = connecteds->d_next;
 	}
-}
-
-void ui_return_metersdefeated(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	t_ui* obj = (t_ui*)self;
-	
-	obj->is_metersdefeated = atom_getlong(argv);
-	jbox_redraw(&obj->box);
 }
 
 void ui_return_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
@@ -547,60 +539,11 @@ void ui_return_freeze(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	jbox_redraw(&obj->box);
 }
 
-void ui_return_preview(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void ui_return_active(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 {
-	t_ui*			obj = (t_ui*)self;
-	TTAddress 		outAdrs;
-	TTValue			v, none;
-	TTNodePtr		aNode;
-	TTValuePtr		newBaton;
-	TTAttributePtr	anAttribute = NULL;
-	TTErr			err;
-	
-	obj->is_previewing = atom_getlong(argv);
-	
-	// get the TTOutput object
-	if (!obj->modelOutput) {
-		outAdrs = obj->modelAddress.appendAddress(TTAddress("data/out"));
-		
-		if (!JamomaDirectory->getTTNode(outAdrs, &aNode))
-            obj->modelOutput = (TTOutputPtr)aNode->getObject();
-	}
-	
-	if (obj->modelOutput) {
-		
-		err = obj->modelOutput->findAttribute(TTSymbol("signal"), &anAttribute);
-		if (!err) {
-			
-			if (obj->is_previewing) {
-				
-				// reset preview signal
-				if (obj->previewSignal) {
-					anAttribute->unregisterObserverForNotifications(*(obj->previewSignal));
-					TTObjectBaseRelease(TTObjectBaseHandle(&obj->previewSignal));
-					obj->previewSignal = NULL;
-				}
-				
-				TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&obj->previewSignal), none);
-				
-				newBaton = new TTValue(TTPtr(self));
-				obj->previewSignal->setAttributeValue(kTTSym_baton, TTPtr(newBaton));
-				obj->previewSignal->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_signal));
-				obj->previewSignal->setAttributeValue(TTSymbol("owner"), TTSymbol("j.ui"));					// this is usefull only to debug
-				
-				anAttribute->registerObserverForNotifications(*(obj->previewSignal));
-			}
-			else {
-				
-				if (obj->previewSignal) {
-					anAttribute->unregisterObserverForNotifications(*(obj->previewSignal));
-					TTObjectBaseRelease(TTObjectBaseHandle(&obj->previewSignal));
-					obj->previewSignal = NULL;
-				}
-			}
-		}
-	}
-	
+    t_ui* obj = (t_ui*)self;
+    
+    obj->is_active = atom_getlong(argv);
 	jbox_redraw(&obj->box);
 }
 
@@ -647,7 +590,7 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 	TTBoolean	mix = NO;
 	TTBoolean	bypass = NO;
 	TTBoolean	freeze = NO;
-	TTBoolean	preview = NO;
+	TTBoolean	active = NO;
     TTBoolean	mute = NO;
 	TTBoolean	preset = NO;		// is there a preset node in the model ?
 	TTBoolean	model = NO;			// is there a model node in the model ?
@@ -691,15 +634,10 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		}
         
         if (dataInput || dataOutput)
-            mute = true;
+            active = true;
         
         if (dataInput && dataOutput)
             bypass = true;
-        
-        if (dataOutput) {
-            freeze = true;
-            preview = true;
-        }
         
         if (audioInput || audioOutput)
             mute = true;
@@ -764,14 +702,14 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 			change = true;
 		}
 		
-		// preview
-		if (preview != obj->has_preview) {
-			obj->has_preview = preview;
-			if (preview)
-				ui_viewer_create(obj, &anObject, gensym("return_preview"), TTSymbol("data/preview"), obj->modelAddress, NO); // don't subscribe this viewer
+		// active
+		if (active != obj->has_active) {
+			obj->has_active = active;
+			if (active)
+				ui_viewer_create(obj, &anObject, gensym("return_active"), TTSymbol("data/active"), obj->modelAddress, NO); // don't subscribe this viewer
 			else {
-				ui_viewer_destroy(obj, TTSymbol("data/preview"));
-				obj->hash_viewers->remove(TTSymbol("data/preview"));
+				ui_viewer_destroy(obj, TTSymbol("data/active"));
+				obj->hash_viewers->remove(TTSymbol("data/active"));
 			}
 			
 			change = true;
@@ -794,15 +732,9 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		if (preset != obj->has_preset) {
 			obj->has_preset = preset;
 			if (preset) {
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:recall"), obj->modelAddress, NO); // don't subscribe this viewer
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("preset:store"), obj->modelAddress, NO); // don't subscribe this viewer
 				ui_viewer_create(obj, &anObject, gensym("return_preset_names"), TTSymbol("preset:names"), obj->modelAddress, NO); // don't subscribe this viewer
 			}
 			else {
-				ui_viewer_destroy(obj, TTSymbol("preset:recall"));
-				obj->hash_viewers->remove(TTSymbol("preset:recall"));
-				ui_viewer_destroy(obj, TTSymbol("preset:store"));
-				obj->hash_viewers->remove(TTSymbol("preset:store"));
 				ui_viewer_destroy(obj, TTSymbol("preset:names"));
 				obj->hash_viewers->remove(TTSymbol("preset:names"));
 			}
@@ -811,40 +743,11 @@ void ui_return_model_content(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr 
 		}
 		
 		// model
-		if (model != obj->has_model) {
+		if (model != obj->has_model)
 			obj->has_model = model;
-			if (model) {
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:internal/open"), obj->modelAddress, NO); // don't subscribe this viewer
-				ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:help/open"), obj->modelAddress, NO); // don't subscribe this viewer
-                ui_viewer_create(obj, &anObject, NULL, TTSymbol("model:reference/open"), obj->modelAddress, NO); // don't subscribe this viewer
-            }
-			else {
-                ui_viewer_destroy(obj, TTSymbol("model:internal/open"));
-				obj->hash_viewers->remove(TTSymbol("model:internal/open"));
-				ui_viewer_destroy(obj, TTSymbol("model:help/open"));
-				obj->hash_viewers->remove(TTSymbol("model:help/open"));
-                ui_viewer_destroy(obj, TTSymbol("model:reference/open"));
-				obj->hash_viewers->remove(TTSymbol("model:reference/open"));
-			}
-			
-			change = true;
-		}
 		
 		if (change)
 			jbox_redraw(&obj->box);
 		
-	}
-}
-
-void ui_return_signal(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	t_ui* obj = (t_ui*)self;
-	
-	if (argc && argv) {
-		
-		if (msg == _sym_nothing)
-			outlet_atoms(obj->outlets[preview_out], argc, argv);
-		else
-			outlet_anything(obj->outlets[preview_out], msg, argc, argv);
 	}
 }

@@ -4,12 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 308.0, 44.0, 1005.0, 476.0 ],
-		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -309,7 +308,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 763.0, 152.0, 225.0, 60.0 ],
-					"text" : "j.parameter rate @type decimal @range/bounds -2. 2. @value/default 1. @description \"movie playback rate\" @ramp/drive Max"
+					"text" : "j.parameter rate @type decimal @range -2. 2. @default 1. @description \"movie playback rate\" @ramp/drive Max"
 				}
 
 			}
@@ -585,8 +584,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 484.0, 413.0, 178.0, 33.0 ],
 					"text" : "j.return fps @type decimal @description \"current fps\""
 				}

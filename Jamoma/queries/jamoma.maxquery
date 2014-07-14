@@ -1,0 +1,50 @@
+{
+	"queries" : [
+		{
+			"name" : "Jamoma externals",
+			"columns" : [ "name", "description", "tags", "typed_usage_count" ],
+			"order_by" : "typed_usage_count",
+			"order" : "descending",
+			"slots" : [
+				{
+					"field" : "name",
+					"comparison" : "beginswith",
+					"argument" : ""
+				},
+				{
+					"field" : "name",
+					"comparison" : "beginswith",
+					"argument" : "j."
+				},
+				{
+					"field" : "kind",
+					"comparison" : "kindis",
+					"argument" : "object"
+				}
+			]
+		},
+		{
+			"name" : "Jamoma models",
+			"columns" : [ "name", "description", "tags", "typed_usage_count" ],
+			"order_by" : "typed_usage_count",
+			"order" : "descending",
+			"slots" : [
+				{
+					"field" : "name",
+					"comparison" : "beginswith",
+					"argument" : ""
+				},
+				{
+					"field" : "name",
+					"comparison" : "endswith",
+					"argument" : ".model"
+				},
+				{
+					"field" : "kind",
+					"comparison" : "kindis",
+					"argument" : ""
+				}
+			]
+		}
+	]
+}

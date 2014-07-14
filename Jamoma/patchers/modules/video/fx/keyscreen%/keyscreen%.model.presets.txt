@@ -1,0 +1,12 @@
+
+
+- preset "default"
+# "edit a comment"
+key/blue 0.168627
+key/green 0.701961
+key 3
+mask 1
+mode 1
+key/red 0.000000
+target 2
+tolerance 0.550000
