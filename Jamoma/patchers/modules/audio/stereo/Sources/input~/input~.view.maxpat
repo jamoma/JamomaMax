@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 613.0, 95.0, 1430.0, 935.0 ],
+		"rect" : [ 490.0, 95.0, 1430.0, 935.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -47,6 +47,7 @@
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.5 ],
 					"bordercolor" : [ 0.501961, 0.501961, 0.501961, 0.5 ],
 					"floatoutput" : 1,
+					"hidden" : 1,
 					"id" : "obj-26",
 					"maxclass" : "slider",
 					"numinlets" : 1,
@@ -139,7 +140,8 @@
 							"parameter_type" : 0,
 							"parameter_mmin" : 0.2,
 							"parameter_mmax" : 16000.0,
-							"parameter_unitstyle" : 3
+							"parameter_unitstyle" : 3,
+							"parameter_exponent" : 2.0
 						}
 
 					}
@@ -166,9 +168,10 @@
 							"parameter_longname" : "live.numbox",
 							"parameter_shortname" : "live.numbox",
 							"parameter_type" : 0,
-							"parameter_mmin" : 0.2,
-							"parameter_mmax" : 16000.0,
-							"parameter_unitstyle" : 3
+							"parameter_mmin" : 0.01,
+							"parameter_mmax" : 100.0,
+							"parameter_unitstyle" : 3,
+							"parameter_exponent" : 2.0
 						}
 
 					}
@@ -221,6 +224,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-79",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -228,7 +232,7 @@
 					"patching_rect" : [ 1062.75, 319.0, 139.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.708344, 47.0, 127.291656, 18.0 ],
-					"text" : "_pag_accords1.aif",
+					"text" : "No file selected",
 					"varname" : "filename"
 				}
 
@@ -306,6 +310,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "Control soundfile playback speed/transposition as MIDI transposition.",
+					"hidden" : 1,
 					"id" : "obj-74",
 					"maxclass" : "live.dial",
 					"numinlets" : 1,
@@ -334,6 +339,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "Loop soundfile.",
+					"hidden" : 1,
 					"hint" : "",
 					"id" : "obj-62",
 					"maxclass" : "live.text",
@@ -364,6 +370,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "Play sound file.",
+					"hidden" : 1,
 					"id" : "obj-59",
 					"maxclass" : "live.text",
 					"numinlets" : 1,
@@ -392,6 +399,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-58",
 					"maxclass" : "live.text",
 					"mode" : 0,
@@ -1063,6 +1071,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-63",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1080,6 +1089,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"hint" : "",
 					"id" : "obj-60",
 					"maxclass" : "comment",
@@ -1100,6 +1110,7 @@
 					"cantchange" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
+					"hidden" : 1,
 					"id" : "obj-31",
 					"ignoreclick" : 1,
 					"maxclass" : "number",
@@ -1123,6 +1134,7 @@
 					"cantchange" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
+					"hidden" : 1,
 					"id" : "obj-43",
 					"ignoreclick" : 1,
 					"maxclass" : "number",
@@ -1146,6 +1158,7 @@
 					"cantchange" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
+					"hidden" : 1,
 					"id" : "obj-46",
 					"ignoreclick" : 1,
 					"maxclass" : "number",
@@ -2487,29 +2500,29 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-1::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-1::obj-42" : [ "live.text[7]", "live.text", 0 ],
-			"obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
-			"obj-1::obj-13" : [ "Release", "Release", 0 ],
-			"obj-82" : [ "pan", "Pan", 0 ],
+			"obj-58" : [ "live.text[2]", "live.text[4]", 0 ],
+			"obj-4" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
 			"obj-45" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-1::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-1::obj-45" : [ "live.text[6]", "live.text", 0 ],
-			"obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
-			"obj-58" : [ "live.text[2]", "live.text[4]", 0 ],
-			"obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
-			"obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
 			"obj-74" : [ "live.dial[1]", "Transpose", 0 ],
-			"obj-108" : [ "live.text[4]", "live.text[4]", 0 ],
-			"obj-4" : [ "live.text[1]", "live.text[1]", 0 ],
-			"obj-59" : [ "live.text[3]", "live.text[3]", 0 ],
-			"obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
 			"obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-48" : [ "live.menu", "live.menu", 0 ],
-			"obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-1::obj-42" : [ "live.text[7]", "live.text", 0 ],
+			"obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
+			"obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-108" : [ "live.text[4]", "live.text[4]", 0 ],
 			"obj-24" : [ "Master Gain", "Master Gain", 0 ],
-			"obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ]
+			"obj-1::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-59" : [ "live.text[3]", "live.text[3]", 0 ],
+			"obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-1::obj-45" : [ "live.text[6]", "live.text", 0 ],
+			"obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-48" : [ "live.menu", "live.menu", 0 ],
+			"obj-1::obj-13" : [ "Release", "Release", 0 ],
+			"obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-82" : [ "pan", "Pan", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
