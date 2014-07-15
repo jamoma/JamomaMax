@@ -1,0 +1,95 @@
+
+- preset "modules"
+- description "something about this preset"
+# ###########################################
+# 
+input~/source pink
+template~/thisMenu exponential
+input~/input/limiter/active 1
+input~/input/limiter/dcblocker/active 1
+output~/saturation/active 1
+output~/limiter/active 1
+output~/ch.1 1
+output~/ch.2 2
+input~/input/channel.L 1
+input~/input/channel.R 2
+output~/saturation/depth 10.000000
+input~/testtone/frequency 1000
+input~/audio/gain 100.000000
+template~/audio/gain 82.000000
+output~/audio/gain 73.250000
+input~/input/limiter/lookahead 100
+output~/limiter/lookahead 64
+input~/file/loop 1
+template~/audio/mix 100.000000
+output~/limiter/mode exponential
+output~/balance/mode FastMode
+input~/balance/mode FastMode
+template~/audio/mute 1
+input~/file/play 0
+output~/balance/position 0.000000
+input~/balance/position 0.000000
+input~/input/limiter/postamp 0.000000
+output~/limiter/postamp 0.000000
+input~/input/limiter/preamp 0.000000
+output~/limiter/preamp 6.000000
+input~/clicktrain/rate 1.000000
+output~/limiter/release 300.000000
+input~/input/limiter/release 1000.000000
+output~/record/samptype int24
+output~/balance/shape EqualPower
+input~/balance/shape EqualPower
+template~/thisParameter 14.000000
+input~/input/limiter/threshold 0.000000
+output~/limiter/threshold -1.000000
+input~/file/transpose 0.000000
+output~/record/file/type aiff
+# 
+# ###########################################
+
+- preset "a_story"
+- description "something about this preset"
+# ###########################################
+# 
+input~/source clicktrain
+template~/thisMenu linear
+output~/limiter/active 1
+output~/saturation/active 1
+input~/input/limiter/active 1
+input~/input/limiter/dcblocker/active 1
+output~/ch.1 1
+output~/ch.2 2
+input~/input/channel.L 1
+input~/input/channel.R 2
+output~/saturation/depth 10.000000
+input~/testtone/frequency 1000
+input~/audio/gain 73.250000
+template~/audio/gain 100.000000
+output~/audio/gain 100.000000
+output~/limiter/lookahead 64
+input~/input/limiter/lookahead 100
+input~/file/loop 1
+template~/audio/mix 100.000000
+output~/balance/mode FastMode
+input~/balance/mode FastMode
+output~/limiter/mode exponential
+input~/file/play 0
+output~/balance/position 0.000000
+input~/balance/position 0.000000
+output~/limiter/postamp 0.000000
+input~/input/limiter/postamp 0.000000
+output~/limiter/preamp 6.000000
+input~/input/limiter/preamp 0.000000
+input~/clicktrain/rate 2.000000
+output~/limiter/release 300.000000
+input~/input/limiter/release 1000.000000
+output~/record/samptype int24
+output~/balance/shape EqualPower
+input~/balance/shape EqualPower
+template~/thisParameter 2.000000
+output~/limiter/threshold -1.000000
+input~/input/limiter/threshold 0.000000
+input~/file/transpose 0.000000
+output~/record/file/type aiff
+# 
+# ###########################################
