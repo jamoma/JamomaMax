@@ -8,9 +8,9 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 888.0, 424.0, 795.0, 449.0 ],
+		"rect" : [ 888.0, 424.0, 191.0, 58.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -48,19 +48,25 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 32.0, 15.0, 25.0, 25.0 ]
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 9.0, 31.0, 25.0, 25.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-23",
-					"maxclass" : "button",
+					"maxclass" : "textbutton",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 32.0, 49.0, 31.5, 31.5 ]
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 9.0, 65.0, 150.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 16.0, 21.0, 150.0, 24.0 ],
+					"text" : "save a preset for this tab"
 				}
 
 			}
@@ -146,22 +152,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 32.0, 316.5, 116.0, 45.0 ],
 					"text" : "preset:read/again, preset:new $1, preset:write"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bubble" : 1,
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-24",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 71.0, 39.25, 84.0, 51.0 ],
-					"text" : "save a preset for this tab"
 				}
 
 			}
@@ -346,20 +336,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 184.5, 382.0, 88.0, 18.0 ],
 					"text" : "preset:clear"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 317.0, 266.0, 135.0, 20.0 ],
-					"text" : "j.initialized /a_story 200"
 				}
 
 			}
@@ -570,6 +546,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 18.5, 181.0, 41.5, 181.0 ],
 					"source" : [ "obj-23", 0 ]
 				}
 
@@ -735,6 +712,22 @@
 					"source" : [ "obj-8", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.getNameOfRootPatcher.js",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/javascript",
+				"patcherrelativepath" : "../../../../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

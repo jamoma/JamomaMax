@@ -1,0 +1,71 @@
+- cue "init"
+- description "something about this cue"
+# ###########################################
+# 
+/brcosa%/brightness 0.000000
+/brcosa%/contrast -1.000000
+/brcosa%/data/active 1
+/brcosa%/data/bypass 0
+/brcosa%/monochrome 1
+/brcosa%/saturation 1.000000
+# 
+/events/address /
+# 
+/movie%/data/active 1
+/movie%/data/bypass 0
+/movie%/framemotor 1
+/movie%/framemotor/fps 25
+/movie%/colormode argb
+/movie%/loop/mode loop
+/movie%/loop/points 0 240
+/movie%/loop/report 0
+/movie%/rate 1
+/movie%/unique 1
+/movie%/dim 640 480
+/movie%/adapt 0
+/movie%/vol 1
+/movie%/highquality 1
+/movie%/singlefield 1
+/movie%/deinterlace 1
+/movie%/path countdown.mov
+# 
+/orsize%/angle 0
+/orsize%/boundmode fold
+/orsize%/data/active 1
+/orsize%/data/bypass 0
+/orsize%/mirror 0
+/orsize%/offset 0.000000 0.000000
+/orsize%/rotate1 0
+/orsize%/rotate2 0
+/orsize%/zoom 1.000000 1.000000
+# 
+# ###########################################
+
+- cue "fade"
+- description "something about this cue"
+# ###########################################
+# 
+/brcosa%/brightness 1.000000 ramp 2000
+
+- cue "invert"
+- description "something about this cue"
+# ###########################################
+# 
+/brcosa%/contrast -1.000000 ramp 5000
+# 
+
+- cue "move"
+- description "something about this cue"
+# ###########################################
+# 
+/orsize%/angle 18 ramp 10000
+/orsize%/boundmode fold
+/orsize%/data/active 1
+/orsize%/data/bypass 0
+/orsize%/mirror 1
+/orsize%/offset 0.450000 0.310000 ramp 10000
+/orsize%/rotate1 1
+/orsize%/rotate2 1
+/orsize%/zoom 0.100000 0.100000 ramp 10000
+# 
+

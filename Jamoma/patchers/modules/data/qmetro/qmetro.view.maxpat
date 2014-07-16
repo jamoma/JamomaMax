@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 155.0, 218.0, 554.0, 319.0 ],
+		"rect" : [ 904.0, 65.0, 554.0, 319.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -52,15 +52,16 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 304.0, 232.0, 42.0, 19.0 ],
+					"patching_rect" : [ 302.0, 289.0, 42.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 92.0, 0.0, 42.0, 19.0 ],
+					"presentation_rect" : [ 92.0, 19.0, 42.0, 19.0 ],
 					"text" : "trigger"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Sent every time the metronome fires.",
 					"id" : "obj-6",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -68,13 +69,14 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 284.0, 289.0, 18.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 129.800354, 0.948519, 18.0, 18.0 ],
+					"presentation_rect" : [ 129.800354, 19.948519, 18.0, 18.0 ],
 					"varname" : "TriggerButton"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Defines a range of randomness in milliseconds to be applied to the metro interval",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-7",
@@ -101,7 +103,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 339.0, 202.0, 100.0, 19.0 ],
+					"patching_rect" : [ 284.0, 141.0, 100.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 1.0, 51.411854, 100.0, 19.0 ],
 					"text" : "Randomness (ms)"
@@ -124,6 +126,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Metro interval (ms)",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-11",
@@ -143,21 +146,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 309.0, 32.0, 20.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 46.0, 21.0, 15.0, 15.0 ],
-					"varname" : "MetroToggle"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
@@ -165,7 +153,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 339.0, 136.0, 61.0, 19.0 ],
+					"patching_rect" : [ 284.0, 72.0, 61.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 1.0, 36.0, 61.0, 19.0 ],
 					"text" : "Time (ms)"
@@ -191,28 +179,12 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-38",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 339.0, 62.0, 65.0, 19.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 1.0, 19.0, 65.0, 19.0 ],
-					"text" : "On/Off"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-40",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 15.0, 150.0, 244.0, 19.0 ],
+					"patching_rect" : [ 15.0, 150.0, 53.0, 19.0 ],
 					"text" : "j.view",
 					"varname" : "j.model"
 				}
@@ -243,30 +215,15 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-43",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 339.0, 32.0, 123.0, 19.0 ],
-					"text" : "j.remote toggle",
-					"varname" : "toggle"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-47",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
-					"text" : "/#1"
+					"text" : "/qmetro"
 				}
 
 			}
@@ -286,15 +243,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-43", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-12", 0 ]
 				}
 
 			}
@@ -331,15 +279,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-41", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-43", 0 ]
 				}
 
 			}

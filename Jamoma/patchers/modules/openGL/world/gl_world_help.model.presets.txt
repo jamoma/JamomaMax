@@ -50,8 +50,8 @@ my_world/render/GL/filterclass default
 my_world/physics/fixedtimestep 200
 my_world/window/floating 0
 my_world/render/framerate 60.000000
-my_world/render/fsaa 0
-my_world/window/fsaa 0
+my_world/render/fsaa 1
+my_world/window/fsaa 1
 my_world/window/fsmenubar 1
 my_world/window/fullscreen 0
 my_world/render/geom_rows 0

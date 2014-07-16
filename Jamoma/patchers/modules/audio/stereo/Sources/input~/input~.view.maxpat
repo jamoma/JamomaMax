@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 8,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 168.0, 44.0, 1430.0, 935.0 ],
+		"rect" : [ 490.0, 95.0, 1430.0, 935.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -30,6 +30,83 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-41",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 451.916718, 777.0, 50.0, 18.0 ],
+					"text" : "set $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"bordercolor" : [ 0.501961, 0.501961, 0.501961, 0.5 ],
+					"floatoutput" : 1,
+					"hidden" : 1,
+					"id" : "obj-26",
+					"maxclass" : "slider",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"orientation" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 451.916718, 802.0, 244.916718, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 13.5, 81.5, 133.0, 14.0 ],
+					"size" : 1.0,
+					"varname" : "pos_slider"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-22",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 451.916718, 829.0, 50.0, 18.0 ],
+					"text" : "pos $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 451.916718, 854.0, 100.0, 20.0 ],
+					"text" : "j.send file/direct"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-7",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 101.0, 233.0, 129.0, 18.0 ],
+					"text" : "model:address /input~"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"annotation" : "none",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -45,6 +122,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "The Frequency of the test tone. in [Hz] by default.",
 					"hidden" : 1,
 					"id" : "obj-47",
 					"maxclass" : "live.numbox",
@@ -62,7 +140,8 @@
 							"parameter_type" : 0,
 							"parameter_mmin" : 0.2,
 							"parameter_mmax" : 16000.0,
-							"parameter_unitstyle" : 3
+							"parameter_unitstyle" : 3,
+							"parameter_exponent" : 2.0
 						}
 
 					}
@@ -73,6 +152,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "How often a click is generated. in [Hz] by default.",
 					"hidden" : 1,
 					"id" : "obj-45",
 					"maxclass" : "live.numbox",
@@ -88,9 +168,10 @@
 							"parameter_longname" : "live.numbox",
 							"parameter_shortname" : "live.numbox",
 							"parameter_type" : 0,
-							"parameter_mmin" : 0.2,
-							"parameter_mmax" : 16000.0,
-							"parameter_unitstyle" : 3
+							"parameter_mmin" : 0.01,
+							"parameter_mmax" : 100.0,
+							"parameter_unitstyle" : 3,
+							"parameter_exponent" : 2.0
 						}
 
 					}
@@ -143,13 +224,14 @@
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-79",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1062.75, 319.0, 139.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 15.708344, 63.0, 127.291656, 18.0 ],
+					"presentation_rect" : [ 15.708344, 47.0, 127.291656, 18.0 ],
 					"text" : "No file selected",
 					"varname" : "filename"
 				}
@@ -227,6 +309,8 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Control soundfile playback speed/transposition as MIDI transposition.",
+					"hidden" : 1,
 					"id" : "obj-74",
 					"maxclass" : "live.dial",
 					"numinlets" : 1,
@@ -254,6 +338,8 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Loop soundfile.",
+					"hidden" : 1,
 					"hint" : "",
 					"id" : "obj-62",
 					"maxclass" : "live.text",
@@ -283,6 +369,8 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Play sound file.",
+					"hidden" : 1,
 					"id" : "obj-59",
 					"maxclass" : "live.text",
 					"numinlets" : 1,
@@ -311,6 +399,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-58",
 					"maxclass" : "live.text",
 					"mode" : 0,
@@ -378,6 +467,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : " Set logical input for right channel.",
 					"hidden" : 1,
 					"id" : "obj-111",
 					"maxclass" : "live.numbox",
@@ -404,6 +494,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : " Set logical input for left channel.",
 					"hidden" : 1,
 					"id" : "obj-110",
 					"maxclass" : "live.numbox",
@@ -500,6 +591,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right",
 					"id" : "obj-82",
 					"maxclass" : "live.dial",
 					"numinlets" : 1,
@@ -541,6 +633,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Set gain of model's outputs (as MIDI value by default).",
 					"id" : "obj-24",
 					"maxclass" : "live.slider",
 					"numinlets" : 1,
@@ -723,7 +816,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -895,10 +988,10 @@
 					"id" : "obj-28",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 451.416626, 727.0, 141.0, 20.0 ],
-					"text" : "j.remote file/time/relative"
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 451.916718, 751.0, 141.0, 20.0 ],
+					"text" : "j.receive file/time/relative"
 				}
 
 			}
@@ -978,13 +1071,14 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-63",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 589.916565, 662.0, 18.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 179.875, 30.0, 18.0, 20.0 ],
+					"presentation_rect" : [ 47.708344, 63.0, 18.0, 20.0 ],
 					"text" : ":",
 					"varname" : "sep2_disp"
 				}
@@ -995,6 +1089,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"hint" : "",
 					"id" : "obj-60",
 					"maxclass" : "comment",
@@ -1002,7 +1097,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 528.583374, 662.0, 18.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 161.875, 30.0, 18.0, 20.0 ],
+					"presentation_rect" : [ 29.708344, 63.0, 18.0, 20.0 ],
 					"text" : ":",
 					"varname" : "sep1_disp"
 				}
@@ -1015,6 +1110,7 @@
 					"cantchange" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
+					"hidden" : 1,
 					"id" : "obj-31",
 					"ignoreclick" : 1,
 					"maxclass" : "number",
@@ -1024,7 +1120,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 607.916565, 662.0, 31.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 187.208313, 30.0, 23.0, 19.0 ],
+					"presentation_rect" : [ 55.041656, 63.0, 23.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "s_disp"
@@ -1038,6 +1134,7 @@
 					"cantchange" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
+					"hidden" : 1,
 					"id" : "obj-43",
 					"ignoreclick" : 1,
 					"maxclass" : "number",
@@ -1047,7 +1144,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 551.916748, 662.0, 31.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 169.208344, 30.0, 23.0, 19.0 ],
+					"presentation_rect" : [ 37.041687, 63.0, 23.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "min_disp"
@@ -1061,6 +1158,7 @@
 					"cantchange" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 11.0,
+					"hidden" : 1,
 					"id" : "obj-46",
 					"ignoreclick" : 1,
 					"maxclass" : "number",
@@ -1070,7 +1168,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 494.583344, 662.0, 31.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 147.875, 30.0, 23.0, 19.0 ],
+					"presentation_rect" : [ 15.708344, 63.0, 23.0, 19.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "h_disp"
@@ -1091,7 +1189,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1375,11 +1473,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 499.0, 79.0, 1122.0, 446.0 ],
+						"rect" : [ 241.0, 494.0, 1122.0, 446.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1428,13 +1526,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-9",
-									"linecount" : 17,
+									"linecount" : 18,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 835.333313, 112.0, 163.0, 232.0 ],
-									"text" : "script hide clicktrainText, script hide clicktrainFreq, script hide toneText, script hide toneFreq, script hide filename, script hide Channel_Left, script hide Channel_Right, script hide filetext, script hide Open_button, script hide Play_button, script hide h_disp, script hide min_disp, script hide s_disp, script hide sep1_disp, script hide sep2_disp, script hide loop_disp, script hide transpose_disp, script hide loop_desc"
+									"patching_rect" : [ 835.333313, 112.0, 166.0, 246.0 ],
+									"text" : "script hide clicktrainText, script hide clicktrainFreq, script hide toneText, script hide toneFreq, script hide filename, script hide Channel_Left, script hide Channel_Right, script hide filetext, script hide Open_button, script hide Play_button, script hide h_disp, script hide min_disp, script hide s_disp, script hide sep1_disp, script hide sep2_disp, script hide loop_disp, script hide transpose_disp, script hide loop_desc, script hide pos_slider"
 								}
 
 							}
@@ -1443,13 +1541,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-5",
-									"linecount" : 15,
+									"linecount" : 16,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 440.666656, 112.0, 179.0, 206.0 ],
-									"text" : "script hide filename, script hide clicktrainFreq, script hide clicktrainText, script hide Channel_Left, script hide Channel_Right, script show toneFreq, script show toneText, script hide filetext, script hide Open_button, script hide Play_button, script hide h_disp, script hide min_disp, script hide s_disp, script hide sep1_disp, script hide sep2_disp, script hide loop_disp, script hide transpose_disp, script hide loop_desc"
+									"patching_rect" : [ 440.666656, 112.0, 179.0, 219.0 ],
+									"text" : "script hide filename, script hide clicktrainFreq, script hide clicktrainText, script hide Channel_Left, script hide Channel_Right, script show toneFreq, script show toneText, script hide filetext, script hide Open_button, script hide Play_button, script hide h_disp, script hide min_disp, script hide s_disp, script hide sep1_disp, script hide sep2_disp, script hide loop_disp, script hide transpose_disp, script hide loop_desc, script hide pos_slider"
 								}
 
 							}
@@ -1464,7 +1562,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 241.0, 112.0, 192.0, 192.0 ],
-									"text" : "script hide clicktrainText, script hide clicktrainFreq, script hide toneText, script hide toneFreq, script show Channel_Left, script show Channel_Right, script hide filename, script hide filetext, script hide Open_button, script hide Play_button, script hide h_disp, script hide min_disp, script hide s_disp, script hide sep1_disp, script hide sep2_disp, script hide loop_disp, script hide transpose_disp, script hide loop_desc"
+									"text" : "script hide clicktrainText, script hide clicktrainFreq, script hide toneText, script hide toneFreq, script show Channel_Left, script show Channel_Right, script hide filename, script hide filetext, script hide Open_button, script hide Play_button, script hide h_disp, script hide min_disp, script hide s_disp, script hide sep1_disp, script hide sep2_disp, script hide loop_disp, script hide transpose_disp, script hide loop_desc, script hide pos_slider"
 								}
 
 							}
@@ -1473,13 +1571,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
-									"linecount" : 17,
+									"linecount" : 18,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 638.0, 112.0, 169.0, 232.0 ],
-									"text" : "script hide clicktrainText, script hide clicktrainFreq, script hide toneText, script hide toneFreq, script show filename, script hide Channel_Left, script hide Channel_Right, script show filetext, script show Open_button, script show Play_button, script show h_disp, script show min_disp, script show s_disp, script show sep1_disp, script show sep2_disp, script show loop_disp, script show transpose_disp, script show loop_desc"
+									"patching_rect" : [ 638.0, 112.0, 169.0, 246.0 ],
+									"text" : "script hide clicktrainText, script hide clicktrainFreq, script hide toneText, script hide toneFreq, script show filename, script hide Channel_Left, script hide Channel_Right, script show filetext, script show Open_button, script show Play_button, script show h_disp, script show min_disp, script show s_disp, script show sep1_disp, script show sep2_disp, script show loop_disp, script show transpose_disp, script show loop_desc, script show pos_slider"
 								}
 
 							}
@@ -1494,7 +1592,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 46.0, 111.0, 187.0, 206.0 ],
-									"text" : "script hide filename, script show clicktrainFreq, script show clicktrainText, script hide Channel_Left, script hide Channel_Right, script hide toneFreq,, script hide toneText, script hide filetext, script hide Open_button, script hide Play_button, script hide h_disp, script hide min_disp, script hide s_disp, script hide sep1_disp, script hide sep2_disp, script hide loop_disp, script hide transpose_disp, script hide loop_desc"
+									"text" : "script hide filename, script show clicktrainFreq, script show clicktrainText, script hide Channel_Left, script hide Channel_Right, script hide toneFreq,, script hide toneText, script hide filetext, script hide Open_button, script hide Play_button, script hide h_disp, script hide min_disp, script hide s_disp, script hide sep1_disp, script hide sep2_disp, script hide loop_disp, script hide transpose_disp, script hide loop_desc, script hide pos_slider"
 								}
 
 							}
@@ -1891,7 +1989,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
-					"text" : "/no_model_address"
+					"text" : "/input~"
 				}
 
 			}
@@ -1990,6 +2088,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-22", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-47", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2013,6 +2120,24 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-41", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-28", 0 ]
 				}
 
 			}
@@ -2068,6 +2193,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-41", 0 ]
 				}
 
 			}
@@ -2232,6 +2366,15 @@
 					"destination" : [ "obj-25", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
 					"source" : [ "obj-72", 0 ]
 				}
 
@@ -2357,34 +2500,34 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
-			"obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
-			"obj-4" : [ "live.text[1]", "live.text[1]", 0 ],
-			"obj-1::obj-45" : [ "live.text[6]", "live.text", 0 ],
-			"obj-1::obj-42" : [ "live.text[7]", "live.text", 0 ],
-			"obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
-			"obj-1::obj-13" : [ "Release", "Release", 0 ],
-			"obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-24" : [ "Master Gain", "Master Gain", 0 ],
-			"obj-48" : [ "live.menu", "live.menu", 0 ],
-			"obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
-			"obj-1::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
 			"obj-58" : [ "live.text[2]", "live.text[4]", 0 ],
-			"obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
-			"obj-74" : [ "live.dial[1]", "Transpose", 0 ],
+			"obj-4" : [ "live.text[1]", "live.text[1]", 0 ],
 			"obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-82" : [ "pan", "Pan", 0 ],
-			"obj-108" : [ "live.text[4]", "live.text[4]", 0 ],
+			"obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
 			"obj-45" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-1::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-59" : [ "live.text[3]", "live.text[3]", 0 ]
+			"obj-74" : [ "live.dial[1]", "Transpose", 0 ],
+			"obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-1::obj-42" : [ "live.text[7]", "live.text", 0 ],
+			"obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
+			"obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-108" : [ "live.text[4]", "live.text[4]", 0 ],
+			"obj-24" : [ "Master Gain", "Master Gain", 0 ],
+			"obj-1::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-59" : [ "live.text[3]", "live.text[3]", 0 ],
+			"obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-1::obj-45" : [ "live.text[6]", "live.text", 0 ],
+			"obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-48" : [ "live.menu", "live.menu", 0 ],
+			"obj-1::obj-13" : [ "Release", "Release", 0 ],
+			"obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-82" : [ "pan", "Pan", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "limiter~.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"patcherrelativepath" : "../../Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
@@ -2406,7 +2549,15 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
  ]

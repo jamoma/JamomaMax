@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 64.0, 44.0, 724.0, 788.0 ],
+		"rect" : [ 893.0, 112.0, 724.0, 788.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -82,7 +82,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 380.0, 510.0, 52.0, 17.0 ],
-					"text" : "/max $1"
+					"text" : "max $1"
 				}
 
 			}
@@ -96,7 +96,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 304.0, 510.0, 48.0, 17.0 ],
-					"text" : "/min $1"
+					"text" : "min $1"
 				}
 
 			}
@@ -237,7 +237,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 154.0, 579.0, 135.0, 19.0 ],
-					"text" : "j.oscroute /min /max"
+					"text" : "j.oscroute min max"
 				}
 
 			}
@@ -528,7 +528,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 165.0, 347.0, 383.0, 31.0 ],
+					"patching_rect" : [ 165.0, 347.0, 386.0, 31.0 ],
 					"text" : "j.parameter scale/input/min @type decimal @clipmode none @description \"Input minimum scaling value. Only works in manual scaling mode.\"",
 					"varname" : "scale/input/min"
 				}
