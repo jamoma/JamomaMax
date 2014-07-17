@@ -1,5 +1,5 @@
 function bang() {
-    var prev = 0;
+    var prev = this;
     var owner = this.patcher.box;
     while (owner) {
         prev = owner;
