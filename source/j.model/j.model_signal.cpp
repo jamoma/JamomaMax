@@ -73,7 +73,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("data/active"), gensym("return_data_active"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-                aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
                 aData->setAttributeValue(kTTSym_description, TTSymbol("this parameter turns on model's data processing"));
                 aData->setAttributeValue(kTTSym_valueDefault, YES);
             }
@@ -90,7 +90,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("data/bypass"), gensym("return_data_bypass"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-                aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
                 aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter bypasses the model's data processing algorithm, letting incoming signal pass through unaffected"));
                 aData->setAttributeValue(kTTSym_valueDefault, NO);
             }
@@ -111,7 +111,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("audio/mute"), gensym("return_audio_mute"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-                aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
                 aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter turns off model's audio processing"));
                 aData->setAttributeValue(kTTSym_valueDefault, NO);
             }
@@ -128,7 +128,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("audio/bypass"), gensym("return_audio_bypass"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
                 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-                aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
                 aData->setAttributeValue(kTTSym_description, TTSymbol("When active, this parameter bypasses the model's audio processing algorithm, letting incoming signal pass through unaffected"));
                 aData->setAttributeValue(kTTSym_valueDefault, NO);
             }
@@ -142,7 +142,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("audio/mix"), gensym("return_audio_mix"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
                 aData->setAttributeValue(kTTSym_type, kTTSym_decimal);
-                aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
                 v = TTValue(0., 100.);
                 aData->setAttributeValue(kTTSym_rangeBounds, v);
                 aData->setAttributeValue(kTTSym_rangeClipmode, kTTSym_both);
@@ -165,7 +165,7 @@ void model_signal_return_content(TTPtr self, SymbolPtr msg, AtomCount argc, Atom
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("audio/gain"), gensym("return_audio_gain"), x->patcherPtr, kTTSym_parameter, (TTObjectBasePtr*)&aData);
                 aData->setAttributeValue(kTTSym_type, kTTSym_decimal);
-                aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+                aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
                 v = TTValue(0., 127.);
                 aData->setAttributeValue(kTTSym_rangeBounds, v);
                 aData->setAttributeValue(kTTSym_rangeClipmode, kTTSym_both);

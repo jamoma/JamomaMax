@@ -120,7 +120,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 		TTValue container_args; // TODO: (optional) pass address callback and value callback (these are both for the activity return mechanism)
 		
 		TTObjectBaseInstantiate(TTSymbol("Container"), TTObjectBaseHandle(&x->model), container_args);
-		x->model->setAttributeValue(kTTSym_tag, kTTSym_model);
+		x->model->setAttributeValue(kTTSym_tags, kTTSym_model);
 		
 		directory->TTNodeCreate(x->name, x->model, context, &returnedNode, &newInstanceCreated);	
 		x->model->setAttributeValue("address", TTAddress(name));
