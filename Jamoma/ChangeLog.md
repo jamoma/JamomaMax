@@ -10,7 +10,14 @@
 
 ### Alpha releases
 
+### 0.6.0.a40 (In development)
+
+- replacing @tag by @tags in j.model|view|node|parameter|message|return
+
+
+
 ### 0.6.0.a36-39 (2014-07-14)
+
 - Many modules and externals have been quarantined and are not into the package anymore.
 - Internal data/mute parameter have been renamed into data/active
 - j.ui: 
