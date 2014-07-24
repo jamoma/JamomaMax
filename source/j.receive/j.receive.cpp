@@ -252,7 +252,8 @@ void receive_subscribe(TTPtr self)
             else {
                 
                 // observe model:address attribute (in view patcher : deferlow return_model_address)
-                makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), &anObject, x->patcherContext == kTTSym_view);  
+                makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), &anObject, x->patcherContext == kTTSym_view);
+                
                 anObject->sendMessage(kTTSym_Get);
                 return;
             }
@@ -274,7 +275,6 @@ void receive_subscribe(TTPtr self)
 		object_obex_dumpout((ObjectPtr)x, gensym("address"), 1, a);
         
         x->wrappedObject->sendMessage(kTTSym_Get);
-        
 		return;
 	}
 	
@@ -320,7 +320,9 @@ void receive_return_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, Ato
 		JamomaDebug object_post((ObjectPtr)x, "binds on %s", absoluteAddress.c_str());
         
         // get the value to refresh it
-		x->wrappedObject->sendMessage(kTTSym_Get);
+        // but don't do a get of a j.in or j.out signal
+        if (x->address.getAttribute() != kTTSym_signal)
+            x->wrappedObject->sendMessage(kTTSym_Get);
 	}
 }
 
