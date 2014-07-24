@@ -2329,7 +2329,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 473.25, 144.0, 159.0, 43.0 ],
-					"text" : "j.model #1 @tag OpenGL @description \"create a GL render context.\"  @priority 2"
+					"text" : "j.model @tags OpenGL @description \"create a GL render context.\"  @priority 2"
 				}
 
 			}

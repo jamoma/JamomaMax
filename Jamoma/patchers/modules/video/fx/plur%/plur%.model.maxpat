@@ -81,7 +81,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 313.857147, 421.714294, 178.0, 31.0 ],
-					"text" : "j.model @tag video @description \"peace - love - unity - rave\"",
+					"text" : "j.model @tags video @description \"peace - love - unity - rave\"",
 					"varname" : "j.model"
 				}
 

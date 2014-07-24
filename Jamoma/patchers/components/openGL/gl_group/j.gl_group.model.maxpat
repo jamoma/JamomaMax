@@ -38,7 +38,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 199.0, 295.0, 100.0, 31.0 ],
-					"text" : "j.model #1 @priority -1"
+					"text" : "j.model @priority -1"
 				}
 
 			}

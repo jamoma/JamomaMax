@@ -39,7 +39,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 216.25, 441.0, 187.0, 31.0 ],
-					"text" : "j.model @tag video @description \"Choke chromakey 3 sources\"",
+					"text" : "j.model @tags video @description \"Choke chromakey 3 sources\"",
 					"varname" : "j.model"
 				}
 
