@@ -54,7 +54,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 232.0, 374.0, 180.0, 31.0 ],
-					"text" : "j.model @tag video @description \"neon glow effect\"",
+					"text" : "j.model @tags video @description \"neon glow effect\"",
 					"varname" : "j.model"
 				}
 

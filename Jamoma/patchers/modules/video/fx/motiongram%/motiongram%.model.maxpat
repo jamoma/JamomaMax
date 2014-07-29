@@ -54,7 +54,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 333.0, 431.0, 241.0, 31.0 ],
-					"text" : "j.model @tag video @description \"Creates a motiongram from running video stream\"",
+					"text" : "j.model @tags video @description \"Creates a motiongram from running video stream\"",
 					"varname" : "jmod.hub"
 				}
 

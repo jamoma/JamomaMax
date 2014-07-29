@@ -352,7 +352,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 273.0, 59.373978, 142.0, 47.0 ],
-					"text" : "j.model @tag GLtexture @description \"syphon server\""
+					"text" : "j.model @tags GLtexture @description \"syphon server\""
 				}
 
 			}

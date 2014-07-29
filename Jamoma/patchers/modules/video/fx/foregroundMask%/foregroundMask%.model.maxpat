@@ -39,7 +39,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 252.5, 320.0, 224.0, 31.0 ],
-					"text" : "j.model @tag video @description \"Create mask based on image foreground.\"",
+					"text" : "j.model @tags video @description \"Create mask based on image foreground.\"",
 					"varname" : "j.model"
 				}
 
