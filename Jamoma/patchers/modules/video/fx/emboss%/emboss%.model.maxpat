@@ -50,7 +50,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 185.5, 364.5, 121.0, 43.0 ],
-					"text" : "j.model @tag video @description \"cheesy embossing effect\"",
+					"text" : "j.model @tags video @description \"cheesy embossing effect\"",
 					"varname" : "j.model"
 				}
 

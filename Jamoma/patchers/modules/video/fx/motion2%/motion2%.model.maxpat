@@ -105,7 +105,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 184.0, 165.0, 306.0, 19.0 ],
-					"text" : "j.model @tag video @description \"Motion-related analysis\"",
+					"text" : "j.model @tags video @description \"Motion-related analysis\"",
 					"varname" : "j.model"
 				}
 

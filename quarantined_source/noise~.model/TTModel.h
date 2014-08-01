@@ -41,7 +41,7 @@ public:
 		mDirectory = TTApplicationGetDirectory(TTObjectBasePtr(mApplication));
 
 		TTObjectBaseInstantiate(TTSymbol("Container"), TTObjectBaseHandle(&mContainer), args);
-		mContainer->setAttributeValue(kTTSym_tag, kTTSym_model);
+		mContainer->setAttributeValue(kTTSym_tags, kTTSym_model);
 		
 		mDirectory->TTNodeCreate(address, mContainer, mContext, &returnedNode, &newInstanceCreated);
 		mContainer->setAttributeValue("address", address);

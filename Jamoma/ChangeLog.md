@@ -10,9 +10,28 @@
 
 ### Alpha releases
 
-### 0.6.0.a35 (In development)
+### 0.6.0.a40 (In development)
 
-- New external j.mutesolo~ mutes and soloes individual MSP channels.
+- replacing @tag by @tags in j.model|view|node|parameter|message|return
+
+
+
+### 0.6.0.a36-39 (2014-07-14)
+
+- Many modules and externals have been quarantined and are not into the package anymore.
+- Internal data/mute parameter have been renamed into data/active
+- j.ui: 
+	- the panel have to be connected to the leftmost outlet
+	- the menu have been completely redisigned
+- j.cue: uses .cues text file format instead xml
+- j.model: uses .presets text file format instead xml
+- j.view: allowing views to be loaded by a poly~
+
+
+
+### 0.6.0.a35 (2014-05-31)
+
+- New external j.mutesolo~ mutes and soloes individual MSP channels
 - New external j.mutesolo= mutes and soloes individual channels of an AudioGraph signal.
 - Updated several integration tests to use testpackage:
     - All tests for Foundation (https://github.com/jamoma/JamomaMax/issues/541)
@@ -21,6 +40,7 @@
     - All tests for AudioGraph (https://github.com/jamoma/JamomaMax/issues/543)
 - Fixed help pacth and ref page for j.dcblock=
 - j.oscroute: Routing arguments can be changed dynamically (https://github.com/jamoma/JamomaMax/issues/181)
+
 
 
 ### 0.6.0.a34 (2014-05-10)
@@ -105,7 +125,7 @@
     - If you want to update your patches using _find and replace all_, you need to do so in two steps
         1. Replace `@repetitions/allow 0` into ``@repetitions/filter 1``
         2. Substitute the `@repetitions/allow 1` for `@repetitions/filter 0``
-- Rhe `reset` message have been replaced by `init` message for more consistency with j.model.
+- The `reset` message have been replaced by `init` message for more consistency with j.model.
 - j.parameter initializes properly if it is located under no j.model.
 - j.model : initializes properly if located inside a subpatcher and under no other j.model.
 - j.ui : creates a `ui` node with `:size`, `:freeze` and `:highlight` attributes.

@@ -149,31 +149,31 @@ void map_subscribe(TTPtr self)
 	 // expose attributes of TTMapper as TTData in the tree structure
 	 x->subscriberObject->exposeAttribute(x->wrappedObject, TTSymbol("input"), kTTSym_parameter, &aData);
 	 aData->setAttributeValue(kTTSym_type, kTTSym_string);
-	 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+	 aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
 	 aData->setAttributeValue(kTTSym_description, TTSymbol("The input address to map"));
 	 x->subscriberObject->exposeAttribute(x->wrappedObject, TTSymbol("output"), kTTSym_parameter, &aData);
 	 aData->setAttributeValue(kTTSym_type, kTTSym_string);
-	 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+	 aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
 	 aData->setAttributeValue(kTTSym_description, TTSymbol("The output address to map"));
 	 x->subscriberObject->exposeAttribute(x->wrappedObject, TTSymbol("inputMin"), kTTSym_parameter, &aData);
 	 aData->setAttributeValue(kTTSym_type, kTTSym_decimal);
-	 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+	 aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
 	 aData->setAttributeValue(kTTSym_description, TTSymbol("The low bound input value"));
 	 x->subscriberObject->exposeAttribute(x->wrappedObject, TTSymbol("inputMax"), kTTSym_parameter, &aData);
 	 aData->setAttributeValue(kTTSym_type, kTTSym_decimal);
-	 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+	 aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
 	 aData->setAttributeValue(kTTSym_description, TTSymbol("The high bound input value"));
 	 x->subscriberObject->exposeAttribute(x->wrappedObject, TTSymbol("outputMin"), kTTSym_parameter, &aData);
 	 aData->setAttributeValue(kTTSym_type, kTTSym_decimal);
-	 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+	 aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
 	 aData->setAttributeValue(kTTSym_description, TTSymbol("The low bound output value"));
 	 x->subscriberObject->exposeAttribute(x->wrappedObject, TTSymbol("outputMax"), kTTSym_parameter, &aData);
 	 aData->setAttributeValue(kTTSym_type, kTTSym_decimal);
-	 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+	 aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
 	 aData->setAttributeValue(kTTSym_description, TTSymbol("The high bound output value"));
 	 x->subscriberObject->exposeAttribute(x->wrappedObject, TTSymbol("enable"), kTTSym_parameter, &aData);
 	 aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-	 aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
+	 aData->setAttributeValue(kTTSym_tags, kTTSym_generic);
 	 aData->setAttributeValue(kTTSym_description, TTSymbol("Turn on and off the mapping"));
 	 }
 	 */

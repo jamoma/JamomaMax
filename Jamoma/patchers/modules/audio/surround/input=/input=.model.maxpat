@@ -4542,7 +4542,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 22.0, 266.0, 450.0, 20.0 ],
-					"text" : "j.model @tag @description \"A simple multichannel sampleplayer based on sfplay~\"",
+					"text" : "j.model @tags audio @description \"A simple multichannel sampleplayer based on sfplay~\"",
 					"varname" : "j.hub"
 				}
 
