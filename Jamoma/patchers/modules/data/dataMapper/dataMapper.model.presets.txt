@@ -1,0 +1,140 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+function linear
+function/parameters none
+input/going.down/action.1 none
+input/going.up/action.1 none
+output/going.up/action.1 none
+output/going.down/action.1 none
+input/going.down/action.2 none
+input/going.up/action.2 none
+output/going.down/action.2 none
+output/going.up/action.2 none
+output/going.up/action.3 none
+input/going.down/action.3 none
+output/going.down/action.3 none
+input/going.up/action.3 none
+data/active 1
+data/bypass 0
+input/index 0
+input none
+input/max 1.000000
+output/max 1.000000
+input/min 0.000000
+output/min 0.000000
+output none
+rampTime 0
+output/threshold.down 0.000000
+input/threshold.down 0.000000
+output/threshold.up 1.000000
+input/threshold.up 1.000000
+# 
+# ###########################################
+
+- preset "mouseY2samplerate"
+- description "something about this preset"
+# ###########################################
+# 
+function freehand
+function/parameters curveList 0.000000 0.000000 exponential base 1.000000 0.136326 0.528325 exponential base 1.000000 0.536656 0.240148 exponential base 1.000000 0.697282 0.772168 exponential base 0.196894 1.000000 1.000000 exponential base 1.000000
+output/going.down/action.1 none
+input/going.up/action.1 none
+output/going.up/action.1 none
+input/going.down/action.1 none
+output/going.down/action.2 none
+output/going.up/action.2 none
+input/going.up/action.2 none
+input/going.down/action.2 none
+output/going.down/action.3 none
+output/going.up/action.3 none
+input/going.up/action.3 none
+input/going.down/action.3 none
+data/active 1
+data/bypass 0
+input/index 0
+input /mouse/position/y
+output/max 1.000000
+input/max 1.000000
+output/min 0.000000
+input/min 0.000000
+output /degrade~/samplerateRatio
+rampTime 0
+input/threshold.down 0.000000
+output/threshold.down 0.000000
+output/threshold.up 1.000000
+input/threshold.up 1.000000
+# 
+# ###########################################
+
+- preset "mouseX2bitdepth"
+- description "something about this preset"
+# ###########################################
+# 
+function power
+function/parameters powerValue 1.000000 symmetry none
+output/going.down/action.1 none
+input/going.up/action.1 none
+output/going.up/action.1 none
+input/going.down/action.1 none
+output/going.down/action.2 none
+output/going.up/action.2 none
+input/going.up/action.2 none
+input/going.down/action.2 none
+output/going.down/action.3 none
+output/going.up/action.3 none
+input/going.up/action.3 none
+input/going.down/action.3 none
+data/active 1
+data/bypass 0
+input/index 0
+input /mouse/position/x
+output/max 24
+input/max 1.000000
+output/min 1
+input/min 0.500000
+output /degrade~/bitdepth
+rampTime 0
+input/threshold.down 0.000000
+output/threshold.down 1.000000
+output/threshold.up 24.000000
+input/threshold.up 1.000000
+# 
+# ###########################################
+
+- preset "whatthe?"
+- description "something about this preset"
+# ###########################################
+# 
+function freehand
+function/parameters.1 curveList 0.000000 0.000000 exponential base 1.000000 0.242587 0.481527 exponential base 1.000000 0.269769 0.134236 exponential base 1.000000 0.586079 0.750000 exponential base 1.000000 0.586079 0.612069 exponential base 1.000000 0.615733 0.161330 exponential base 1.000000 0.709638 0.717980 exponential base 1.000000 0.845552 0.496305 exponential base 1.000000 0.848023 0.474138 exponential base 1.000000 1.000000 1.000000 exponential base 1.000000
+input/going.down/action.1 none
+output/going.down/action.1 none
+input/going.up/action.1 none
+output/going.up/action.1 none
+input/going.up/action.2 none
+output/going.down/action.2 none
+output/going.up/action.2 none
+input/going.down/action.2 none
+input/going.up/action.3 none
+output/going.down/action.3 none
+output/going.up/action.3 none
+input/going.down/action.3 none
+data/active 1
+data/bypass 0
+input/index 0
+input /mouse/position/x
+output/max 10.000000
+input/max 1.000000
+output/min 1
+input/min 0.500000
+output /degrade~/bitdepth
+rampTime 0
+input/threshold.down 0.000000
+output/threshold.down 1.000000
+output/threshold.up 1.000000
+input/threshold.up 1.000000
+# 
+# ###########################################
