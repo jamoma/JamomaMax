@@ -18,6 +18,9 @@
 		<metadata name="tag">
 			parameter
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>

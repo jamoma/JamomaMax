@@ -15,13 +15,39 @@
 		</metadata>
 		<metadata name="tag">
 			TEXT_HERE
+				</metadata>
+		<metadata name="tag">
+			Jamoma
+				</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			Jamoma
 		</metadata>
 	</metadatalist>
+
+
 	<!--INLETS-->
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
-			<digest>
-				Multichannel input and control messages
+				</metadata>
+		<metadata name="tag">
+			Jamoma
+				</metadata>
+		<metadata name="tag">
+			Jamoma
+				</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+
+
+t and control messages
 			</digest>
 			<description>
 				TEXT_HERE

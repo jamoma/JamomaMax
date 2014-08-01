@@ -24,6 +24,9 @@
 		<metadata name="tag">
 			mixing
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
