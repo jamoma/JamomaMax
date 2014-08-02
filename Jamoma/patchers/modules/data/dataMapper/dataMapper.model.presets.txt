@@ -103,38 +103,3 @@ output/threshold.up 24.000000
 input/threshold.up 1.000000
 # 
 # ###########################################
-
-- preset "whatthe?"
-- description "something about this preset"
-# ###########################################
-# 
-function freehand
-function/parameters.1 curveList 0.000000 0.000000 exponential base 1.000000 0.242587 0.481527 exponential base 1.000000 0.269769 0.134236 exponential base 1.000000 0.586079 0.750000 exponential base 1.000000 0.586079 0.612069 exponential base 1.000000 0.615733 0.161330 exponential base 1.000000 0.709638 0.717980 exponential base 1.000000 0.845552 0.496305 exponential base 1.000000 0.848023 0.474138 exponential base 1.000000 1.000000 1.000000 exponential base 1.000000
-input/going.down/action.1 none
-output/going.down/action.1 none
-input/going.up/action.1 none
-output/going.up/action.1 none
-input/going.up/action.2 none
-output/going.down/action.2 none
-output/going.up/action.2 none
-input/going.down/action.2 none
-input/going.up/action.3 none
-output/going.down/action.3 none
-output/going.up/action.3 none
-input/going.down/action.3 none
-data/active 1
-data/bypass 0
-input/index 0
-input /mouse/position/x
-output/max 10.000000
-input/max 1.000000
-output/min 1
-input/min 0.500000
-output /degrade~/bitdepth
-rampTime 0
-input/threshold.down 0.000000
-output/threshold.down 1.000000
-output/threshold.up 1.000000
-input/threshold.up 1.000000
-# 
-# ###########################################
