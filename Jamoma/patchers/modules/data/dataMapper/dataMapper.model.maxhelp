@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 823.0, 44.0, 875.0, 719.0 ],
+		"rect" : [ 711.0, 159.0, 875.0, 719.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -31,21 +31,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-11",
-					"linecount" : 10,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 465.5, 243.0, 169.0, 141.0 ],
-					"text" : "TODO:\n\nAdapter zoom function + plot si range sont changés\n\nchecker priorités de tout ce petit monde...\n\nLes thresholds up/down sont most likely cassés..."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-36",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -53,20 +38,6 @@
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 21.5, 501.0, 50.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-34",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 168.0, 519.0, 150.0, 20.0 ],
-					"text" : "change output range ?"
 				}
 
 			}
@@ -165,7 +136,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 30.0, 653.0, 50.0, 31.0 ],
-					"text" : "0.829524"
+					"text" : "9.888518"
 				}
 
 			}
@@ -243,27 +214,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-13",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 112.0, 149.0, 132.0, 18.0 ],
-					"text" : "output/going.down 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-12",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.0, 149.0, 71.0, 18.0 ],
-					"text" : "0.699405"
+					"text" : "0.573958"
 				}
 
 			}
@@ -398,15 +355,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-13", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 1 ]
 				}
 
 			}
@@ -567,17 +515,17 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-4::obj-8" : [ "live.text", "live.text", 0 ],
-			"obj-19::obj-21" : [ "live.text[2]", "live.text", 0 ],
-			"obj-3::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
 			"obj-3::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
 			"obj-19::obj-8" : [ "live.text[3]", "live.text", 0 ],
-			"obj-4::obj-21" : [ "live.text[1]", "live.text", 0 ]
+			"obj-3::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
+			"obj-4::obj-21" : [ "live.text[1]", "live.text", 0 ],
+			"obj-19::obj-21" : [ "live.text[2]", "live.text", 0 ],
+			"obj-4::obj-8" : [ "live.text", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "dataMapper.model.maxpat",
-				"bootpath" : "/Users/jln/Dropbox/DévGMEA/temp/dataMapper",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -585,48 +533,48 @@
 , 			{
 				"name" : "mouse.module.maxpat",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../../../@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../../../@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.view.maxpat",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../../../@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.module.maxpat",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "dataMapper.view.maxpat",
-				"bootpath" : "/Users/jln/Dropbox/DévGMEA/temp/dataMapper",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -634,22 +582,29 @@
 , 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "options.freehand.maxpat",
-				"bootpath" : "/Users/jln/Dropbox/DévGMEA/temp/dataMapper",
-				"patcherrelativepath" : ".",
+				"name" : "j.function_generic.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper/function_options",
+				"patcherrelativepath" : "./function_options",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "options.generic.maxpat",
-				"bootpath" : "/Users/jln/Dropbox/DévGMEA/temp/dataMapper",
-				"patcherrelativepath" : ".",
+				"name" : "j.jamomabrowser.view.maxpat",
+				"bootpath" : "/Users/jln/@dev/@GoPlug/Library/jamomaBrowser-widget",
+				"patcherrelativepath" : "../../../../../../../../../@dev/@GoPlug/Library/jamomaBrowser-widget",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.get_onscreen_position.js",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
+				"patcherrelativepath" : "../../../../javascript",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
