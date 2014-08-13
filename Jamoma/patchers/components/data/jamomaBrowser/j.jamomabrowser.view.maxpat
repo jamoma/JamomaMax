@@ -30,6 +30,20 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-21",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 13.0, 384.0, 156.0, 18.0 ],
+					"text" : "screenposition menuwidget"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "",
 					"id" : "obj-25",
 					"maxclass" : "outlet",
@@ -157,7 +171,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 13.0, 378.0, 161.0, 20.0 ],
+					"patching_rect" : [ 13.0, 426.0, 161.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "j.get_onscreen_position.js",
 						"parameter_enable" : 0
@@ -499,7 +513,8 @@
 					"presentation" : 1,
 					"presentation_rect" : [ -0.5, 0.0, 42.0, 20.0 ],
 					"rounded" : 8.0,
-					"text" : "≣"
+					"text" : "≣",
+					"varname" : "menuwidget"
 				}
 
 			}
@@ -612,6 +627,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -676,7 +700,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
+					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-35", 0 ]
@@ -712,7 +736,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
+					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-42", 0 ]
@@ -804,7 +828,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "j.get_onscreen_position.js",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../@Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
+				"patcherrelativepath" : "../../../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
