@@ -827,7 +827,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::comment::hidden",
-									"varname" : "u381001481"
+									"varname" : "u363001817"
 								}
 
 							}
@@ -847,7 +847,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::menu::hidden",
-									"varname" : "u942001483"
+									"varname" : "u928001819"
 								}
 
 							}
@@ -1356,7 +1356,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 141.0, 100.0, 32.5, 18.0 ],
+					"patching_rect" : [ 133.0, 98.0, 32.5, 18.0 ],
 					"text" : "/"
 				}
 
@@ -1498,7 +1498,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 295.0, 300.0, 640.0, 480.0 ],
+						"rect" : [ 323.0, 282.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2409,8 +2409,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 324.0, 130.0, 237.0, 33.0 ],
-					"text" : "j.namespace mySelection @filter/list data @format jit.cellblock @relative 0"
+					"patching_rect" : [ 324.0, 130.0, 212.0, 33.0 ],
+					"text" : "j.namespace @filter/list data @format jit.cellblock @relative 0"
 				}
 
 			}
@@ -2440,8 +2440,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 50.0, 130.0, 234.0, 33.0 ],
-					"text" : "j.namespace mySelection @filter/list model @format jit.cellblock @relative 0"
+					"patching_rect" : [ 50.0, 130.0, 222.0, 33.0 ],
+					"text" : "j.namespace @filter/list model @format jit.cellblock @relative 0"
 				}
 
 			}
@@ -2559,7 +2559,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 72.0, 100.0, 57.0, 18.0 ],
+					"patching_rect" : [ 72.0, 98.0, 57.0, 18.0 ],
 					"text" : "select/all"
 				}
 
