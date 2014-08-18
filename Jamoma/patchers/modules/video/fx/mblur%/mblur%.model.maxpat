@@ -39,7 +39,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 176.650696, 259.0, 238.0, 43.0 ],
-					"text" : "j.model @tag video @description \"Create a Motion-Blur type of effect by using a brightness-based envelope follower\"",
+					"text" : "j.model @tags video @description \"Create a Motion-Blur type of effect by using a brightness-based envelope follower\"",
 					"varname" : "j.model"
 				}
 

@@ -672,7 +672,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 392.0, 62.0, 320.0, 31.0 ],
-					"text" : "j.model @tag video @description \"Display of various types of bounding boxes based on filtered image or motion image.\"",
+					"text" : "j.model @tags video @description \"Display of various types of bounding boxes based on filtered image or motion image.\"",
 					"varname" : "j.model"
 				}
 

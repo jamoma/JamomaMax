@@ -52,7 +52,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 103.5, 294.5, 391.0, 20.0 ],
-					"text" : "j.node someNode @priority 1 @description \"a useful node\" @tag useful"
+					"text" : "j.node someNode @priority 1 @description \"a useful node\" @tags useful"
 				}
 
 			}

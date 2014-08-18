@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 531.0, 286.0, 946.0, 702.0 ],
+		"rect" : [ 182.0, 198.0, 946.0, 702.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -71,7 +71,7 @@
 					"patching_rect" : [ 468.0, 375.0, 238.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 6.0, 42.0, 150.0, 20.0 ],
-					"text" : "oh.mov"
+					"text" : "wheel.mov"
 				}
 
 			}
@@ -85,7 +85,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 534.0, 649.0, 283.0, 47.0 ],
+					"patching_rect" : [ 534.0, 649.0, 285.0, 47.0 ],
 					"text" : "About panel, if a patcher is connected to his outlet, the j.ui  will automatically create an internal ui/panel message and add the \"+\" widget."
 				}
 
@@ -491,7 +491,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,

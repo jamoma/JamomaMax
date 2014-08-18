@@ -50,7 +50,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 334.0, 123.0, 140.0, 79.0 ],
-					"text" : "j.model @tag video @description \"Creates a similarity matrix from a running video input. This could be either a regular video or a motiongram.\"",
+					"text" : "j.model @tags video @description \"Creates a similarity matrix from a running video input. This could be either a regular video or a motiongram.\"",
 					"varname" : "jmod.hub"
 				}
 

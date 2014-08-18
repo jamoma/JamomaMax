@@ -18,6 +18,9 @@
 		<metadata name="tag">
 			view
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
@@ -269,7 +272,7 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
 			</attributelist>
 		</attribute>
-		<attribute name="tag" get="1" set="1" type="symbol" size="1">
+		<attribute name="tags" get="1" set="1" type="symbol" size="1">
 			<digest>
 				Define tag for the remoteArray
 			</digest>

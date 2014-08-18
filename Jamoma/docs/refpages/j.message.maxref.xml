@@ -21,6 +21,9 @@
 		<metadata name="tag">
 			mvc
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<!-- <inletlist>
@@ -240,7 +243,7 @@ Lower and upper boundaries defining the range of possible message values			</des
 				TEXT_HERE
 			</description>
 		</attribute> -->
-		<attribute name="tag" get="1" set="1" type="atom" size="1">
+		<attribute name="tags" get="1" set="1" type="atom" size="1">
 			<digest>
 				Some user defined tags
 			</digest>

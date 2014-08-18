@@ -21,6 +21,9 @@
 		<metadata name="tag">
 			line
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>

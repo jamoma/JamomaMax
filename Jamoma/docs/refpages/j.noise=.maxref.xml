@@ -18,6 +18,9 @@
 		<metadata name="tag">
 			multichannel
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>

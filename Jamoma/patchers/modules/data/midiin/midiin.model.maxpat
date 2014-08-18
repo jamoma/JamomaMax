@@ -3016,7 +3016,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1164.0, 321.0, 301.0, 19.0 ],
-					"text" : "j.model @tag control @description \"Use any MIDI device\""
+					"text" : "j.model @tags control @description \"Use any MIDI device\""
 				}
 
 			}

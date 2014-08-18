@@ -53,7 +53,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 286.0, 217.0, 196.0, 31.0 ],
-					"text" : "j.model @tag video @description \"This module doesn't do much yet\"",
+					"text" : "j.model @tags video @description \"This module doesn't do much yet\"",
 					"varname" : "j.model"
 				}
 

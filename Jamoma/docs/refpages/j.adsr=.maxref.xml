@@ -15,9 +15,19 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			enveloppe
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+				</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			Jamoma
 		</metadata>
 	</metadatalist>
+
 	<!--INLETS-->
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">

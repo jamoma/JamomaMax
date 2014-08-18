@@ -662,7 +662,7 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 	// to look for user-defined object
 	aFilter = new TTDictionaryBase;
 	aFilter->setSchema(kTTSym_filter);
-	aFilter->append(kTTSym_attribute, kTTSym_tag);
+	aFilter->append(kTTSym_attribute, kTTSym_tags);
 	aFilter->append(kTTSym_value, kTTSym_generic);
 	aFilter->append(kTTSym_mode, kTTSym_exclude);
 	defaultFilterBank->append(TTSymbol("noGenericTag"), (TTPtr)aFilter);
@@ -670,7 +670,7 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 	// to look for generic tagged object
 	aFilter = new TTDictionaryBase;
 	aFilter->setSchema(kTTSym_filter);
-	aFilter->append(kTTSym_attribute, kTTSym_tag);
+	aFilter->append(kTTSym_attribute, kTTSym_tags);
 	aFilter->append(kTTSym_value, kTTSym_generic);
 	aFilter->append(kTTSym_mode, kTTSym_restrict);
 	defaultFilterBank->append(TTSymbol("genericTag"), (TTPtr)aFilter);
