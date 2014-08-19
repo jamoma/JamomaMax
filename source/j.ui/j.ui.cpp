@@ -386,15 +386,19 @@ void ui_build(t_ui *x)
         
         if (moduleHierarchy == _sym_bpatcher) {
             
-            // resize the module bpatcher
-            object_attr_get_rect(moduleBox, _sym_patching_rect, &boxRect);
-            boxRect.width = uiRect.width;
-            boxRect.height = uiRect.height;
-            object_attr_set_rect(moduleBox, _sym_patching_rect, &boxRect);
-            object_attr_get_rect(moduleBox, _sym_presentation_rect, &boxRect);
-            boxRect.width = uiRect.width;
-            boxRect.height = uiRect.height;
-            object_attr_set_rect(moduleBox, _sym_presentation_rect, &boxRect);
+            // is there no j.ui object inside the module bpatcher
+            if (!jamoma_patcher_get_ui(modulePatcher)) {
+                
+                // resize the module bpatcher
+                object_attr_get_rect(moduleBox, _sym_patching_rect, &boxRect);
+                boxRect.width = uiRect.width;
+                boxRect.height = uiRect.height;
+                object_attr_set_rect(moduleBox, _sym_patching_rect, &boxRect);
+                object_attr_get_rect(moduleBox, _sym_presentation_rect, &boxRect);
+                boxRect.width = uiRect.width;
+                boxRect.height = uiRect.height;
+                object_attr_set_rect(moduleBox, _sym_presentation_rect, &boxRect);
+            }
         }
 	}
 	else if (hierarchy == _sym_subpatcher) {
