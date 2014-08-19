@@ -289,7 +289,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 196.0, 140.0, 380.0, 31.0 ],
-					"text" : "j.parameter thresh @type decimal @ramp/drive Max @description \"Edge detection threshold - pixels below the threshold are set to black.\"",
+					"text" : "j.parameter thresh @type decimal @ramp/drive max @description \"Edge detection threshold - pixels below the threshold are set to black.\"",
 					"varname" : "thresh"
 				}
 

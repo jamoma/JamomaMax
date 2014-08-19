@@ -84,7 +84,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 340.0, 60.0, 150.0, 47.0 ],
-									"text" : "if a signal is connected to the last inlet, it sets the @drive attribute"
+									"text" : "if a signal is connected to the last inlet, it sets the @drive max attribute"
 								}
 
 							}

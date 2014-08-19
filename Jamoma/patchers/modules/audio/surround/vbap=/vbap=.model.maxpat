@@ -482,7 +482,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 468.5, 64.0, 151.0, 114.0 ],
-													"text" : "j.messageArray source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @ramp/drive Max @ramp/function linear @description \"Input gain for the nth source.\""
+													"text" : "j.messageArray source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @ramp/drive max @ramp/function linear @description \"Input gain for the nth source.\""
 												}
 
 											}

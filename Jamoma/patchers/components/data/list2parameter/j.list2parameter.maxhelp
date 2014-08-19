@@ -155,7 +155,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 391.0, 172.0, 315.0, 19.0 ],
-					"text" : "j.parameter testing @type array @ramp/drive Max",
+					"text" : "j.parameter testing @type array @ramp/drive max",
 					"varname" : "testing"
 				}
 
