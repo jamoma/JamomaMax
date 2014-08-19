@@ -286,10 +286,14 @@ void model_preset_filechanged(TTPtr self, char *filename, short path)
 	atom_setsym(&a, gensym(posixpath));
 	defer_low(self, (method)model_preset_doread, gensym("read"), 1, &a);
 	
-	// try to recall last current preset
+    /* since JamomaMax#711 : we decide to mute the triggering of the current preset
+     
+    // try to recall last current preset
 	current = v[0];
 	atom_setsym(&a, gensym((char*)current.c_str()));
 	defer_low((t_object*)x, (method)model_preset_dorecall, NULL, 1, &a);
+     
+    */
 }
 
 void model_preset_dorecall(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
