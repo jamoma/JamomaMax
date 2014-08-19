@@ -271,12 +271,12 @@ void op_dsp64(t_op *x, t_object *dsp64, short *count, double samplerate, long ma
 	for (i=0; i < x->maxNumChannels; i++) {
 		j = x->maxNumChannels + i;
 		if (count[i] && count[j])
-			x->numChannels++;		
+			x->numChannels = i+1;
 	}
 	
 	if (x->numChannels > 0) {
-		x->audioIn->setAttributeValue(kTTSym_numChannels, x->maxNumChannels);
-		x->audioOut->setAttributeValue(kTTSym_numChannels, x->maxNumChannels);
+		x->audioIn->setAttributeValue(kTTSym_numChannels, x->numChannels);
+		x->audioOut->setAttributeValue(kTTSym_numChannels, x->numChannels);
 		x->audioIn->setAttributeValue(kTTSym_vectorSize, (TTUInt16)maxvectorsize);
 		x->audioOut->setAttributeValue(kTTSym_vectorSize, (TTUInt16)maxvectorsize);
 		//audioIn will be set in the perform method
