@@ -1449,7 +1449,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 46.0, 127.0, 355.0, 43.0 ],
-													"text" : "j.parameter foot/control @type integer @range 0 127 @clipmode both @repetitions/filter 0 @ramp/drive max @priority 2 @description \"Foot Pedal: Continuous Controller.\"",
+													"text" : "j.parameter foot/control @type integer @range 0 127 @clipmode both @repetitions/filter 0 @ramp/drive Max @priority 2 @description \"Foot Pedal: Continuous Controller.\"",
 													"varname" : "foot/control"
 												}
 

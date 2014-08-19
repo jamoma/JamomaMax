@@ -505,7 +505,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 17.0, 18.0, 138.0, 79.0 ],
-					"text" : "j.parameter yfade @type decimal @ramp/drive max @repetitions/filter 1 @range 0. 1. @clipmode both @description \"Crossfade switch\"",
+					"text" : "j.parameter yfade @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 1. @clipmode both @description \"Crossfade switch\"",
 					"varname" : "yfade"
 				}
 

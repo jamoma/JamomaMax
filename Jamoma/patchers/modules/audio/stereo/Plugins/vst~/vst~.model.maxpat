@@ -5664,7 +5664,7 @@
             376.0,
             43.0
           ],
-          "text": "j.parameter \"parameter/<parameter name>\" @type decimal @range 0. 1. @clipmode both @ramp/drive max @priority 3 @description \"Address specific parameter of the VST plugin.\"",
+          "text": "j.parameter \"parameter/<parameter name>\" @type decimal @range 0. 1. @clipmode both @ramp/drive Max @priority 3 @description \"Address specific parameter of the VST plugin.\"",
           "varname": "parameter/<parameter name>"
         }
       },

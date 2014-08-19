@@ -1693,7 +1693,7 @@
             569.0,
             31.0
           ],
-          "text": "j.parameter updaterate @type integer @ramp/drive max @repetitions/filter 1 @range 0 240 @clipmode low @description \"Sample rate in [Hz] by default\"",
+          "text": "j.parameter updaterate @type integer @ramp/drive Max @repetitions/filter 1 @range 0 240 @clipmode low @description \"Sample rate in [Hz] by default\"",
           "varname": "sample_rate[1]"
         }
       },
