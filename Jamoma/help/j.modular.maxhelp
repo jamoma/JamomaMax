@@ -464,7 +464,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 38.0, 107.0, 146.0, 60.0 ],
-									"text" : "j.parameter myFloat @type decimal @ramp/drive Max @range -10. 10.",
+									"text" : "j.parameter myFloat @type decimal @ramp/drive max @range -10. 10.",
 									"varname" : "myFloat"
 								}
 

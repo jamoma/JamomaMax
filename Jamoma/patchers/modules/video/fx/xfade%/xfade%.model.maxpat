@@ -577,7 +577,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 11.0, 9.0, 433.0, 31.0 ],
-					"text" : "j.parameter xfade @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 1. @clipmode both @description \"Crossfade value\"",
+					"text" : "j.parameter xfade @type decimal @ramp/drive max @repetitions/filter 1 @range 0. 1. @clipmode both @description \"Crossfade value\"",
 					"varname" : "xfade[1]"
 				}
 

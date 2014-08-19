@@ -5598,7 +5598,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 602.0, 528.0, 296.0, 47.0 ],
-					"text" : "j.parameter orderWeights @type array @description \"manually set weights for given number of orders.\" @repetitions/filter 1 @ramp/drive Max"
+					"text" : "j.parameter orderWeights @type array @description \"manually set weights for given number of orders.\" @repetitions/filter 1 @ramp/drive max"
 				}
 
 			}

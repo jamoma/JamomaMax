@@ -50,7 +50,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 155.5, 68.5, 145.0, 141.0 ],
-					"text" : "j.parameter range @type decimal @range -36 36 @clipmode low @repetitions/filter 1 @ramp/drive Max @dataspace gain @dataspace/unit db @description \"range of values above and below the zero line to display.\"",
+					"text" : "j.parameter range @type decimal @range -36 36 @clipmode low @repetitions/filter 1 @ramp/drive max @dataspace gain @dataspace/unit db @description \"range of values above and below the zero line to display.\"",
 					"varname" : "j.parameter.mxb[4]"
 				}
 

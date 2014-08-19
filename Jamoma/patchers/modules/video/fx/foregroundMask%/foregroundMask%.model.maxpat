@@ -461,7 +461,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 283.0, 116.0, 294.0, 67.0 ],
-					"text" : "j.parameter threshold @type decimal @range 0 1 @clipmode both @ramp/drive Max @ramp/function linear @description \"Threshold level for masking, based on absolute difference between foreground and background.\"",
+					"text" : "j.parameter threshold @type decimal @range 0 1 @clipmode both @ramp/drive max @ramp/function linear @description \"Threshold level for masking, based on absolute difference between foreground and background.\"",
 					"varname" : "module_in[2]"
 				}
 
@@ -492,7 +492,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 126.0, 22.0, 451.0, 43.0 ],
-					"text" : "j.parameter filter/feedback @type decimal @range 0 1 @clipmode both @ramp/drive Max @ramp/function linear @description \"Feedback coefficient. Used for background removal by calculating running mean of incomming image.\"",
+					"text" : "j.parameter filter/feedback @type decimal @range 0 1 @clipmode both @ramp/drive max @ramp/function linear @description \"Feedback coefficient. Used for background removal by calculating running mean of incomming image.\"",
 					"varname" : "module_in[1]"
 				}
 

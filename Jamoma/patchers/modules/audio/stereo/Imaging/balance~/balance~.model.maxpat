@@ -112,7 +112,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 262.0, 11.5, 166.0, 114.0 ],
-					"text" : "j.parameter position @type decimal @range -1 1. @ramp/drive Max @clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
+					"text" : "j.parameter position @type decimal @range -1 1. @ramp/drive max @clipmode both @description \"set the position of the panpot.  -1 == fully left, 0 == center, 1== fully right\"",
 					"varname" : "position"
 				}
 
