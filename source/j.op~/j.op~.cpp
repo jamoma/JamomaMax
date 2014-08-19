@@ -269,7 +269,7 @@ void op_dsp64(t_op *x, t_object *dsp64, short *count, double samplerate, long ma
 	x->vs = (TTUInt16)maxvectorsize;
 	
 	for (i=0; i < x->maxNumChannels; i++) {
-		j = x->maxNumChannels + i + 1;
+		j = x->maxNumChannels + i;
 		if (count[i] && count[j])
 			x->numChannels++;		
 	}
