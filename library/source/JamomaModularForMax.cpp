@@ -1425,6 +1425,31 @@ void jamoma_patcher_get_input_output(t_object *patcher, TTBoolean& dataInput, TT
 	}
 }
 
+/** Is there a j.ui object */
+TTBoolean jamoma_patcher_get_ui(t_object *patcher)
+{
+	TTValue		patcherInfo;
+	t_object	*obj;
+	t_symbol	*_sym_jcomcontext, *_sym_jui;
+    TTBoolean   uiObject = NO;
+
+	obj = object_attr_getobj(patcher, _sym_firstobject);
+	
+	// TODO : cache this t_symbol else where ...
+	_sym_jui = gensym("j.ui");
+	while (obj) {
+		_sym_jcomcontext = object_attr_getsym(obj, _sym_maxclass);
+		
+        uiObject = _sym_jcomcontext == _sym_jui;
+        if (uiObject)
+            break;
+        
+		obj = object_attr_getobj(obj, _sym_nextobject);
+	}
+    
+    return uiObject;
+}
+
 /** Get the "aClass.model" external in the patcher */
 void jamoma_patcher_get_model_patcher(t_object *patcher, TTSymbol modelClass, t_object **returnedModelPatcher)
 {
