@@ -172,7 +172,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 158.0, 92.0, 348.0, 43.0 ],
-					"text" : "j.parameter opValue @type decimal @ramp/drive max @repetitions/filter 1 @description \"Number to associate with operation.\"",
+					"text" : "j.parameter opValue @type decimal @ramp/drive Max @repetitions/filter 1 @description \"Number to associate with operation.\"",
 					"varname" : "op_value"
 				}
 

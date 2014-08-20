@@ -233,7 +233,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 435.0, 126.0, 514.0, 31.0 ],
-					"text" : "j.parameter saturation @type decimal @ramp/drive max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Saturation of image - 1 is default\"",
+					"text" : "j.parameter saturation @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Saturation of image - 1 is default\"",
 					"varname" : "saturation[1]"
 				}
 
@@ -250,7 +250,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 326.0, 83.0, 504.0, 31.0 ],
-					"text" : "j.parameter contrast @type decimal @ramp/drive max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Contrast of image - 1 is default\"",
+					"text" : "j.parameter contrast @type decimal @ramp/drive Max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Contrast of image - 1 is default\"",
 					"varname" : "contrast[1]"
 				}
 
@@ -266,7 +266,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 200.0, 46.0, 515.0, 19.0 ],
-					"text" : "j.parameter brightness @type decimal @ramp/drive max @repetitions/filter 1 @range 0",
+					"text" : "j.parameter brightness @type decimal @ramp/drive Max @repetitions/filter 1 @range 0",
 					"varname" : "brightness[1]"
 				}
 

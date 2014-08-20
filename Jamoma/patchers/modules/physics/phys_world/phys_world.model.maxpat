@@ -515,7 +515,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 127.5, 230.0, 387.0, 31.0 ],
-									"text" : "j.parameter worldbox_scale @type array @ramp/drive max @description \"Changes the size and shape of the world bounds\" @default 5 5 5",
+									"text" : "j.parameter worldbox_scale @type array @ramp/drive Max @description \"Changes the size and shape of the world bounds\" @default 5 5 5",
 									"varname" : "3D/position[2]"
 								}
 
@@ -531,7 +531,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 92.0, 159.0, 317.0, 31.0 ],
-									"text" : "j.parameter gravity @type array @ramp/drive max @description \"gravity applied to the world\" @default 0 -9.8 0",
+									"text" : "j.parameter gravity @type array @ramp/drive Max @description \"gravity applied to the world\" @default 0 -9.8 0",
 									"varname" : "3D/position[1]"
 								}
 
@@ -841,7 +841,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 844.0, 130.0, 536.0, 19.0 ],
-					"text" : "j.message touch @type array @ramp/drive max @description \"touch message for phys.picker\"",
+					"text" : "j.message touch @type array @ramp/drive Max @description \"touch message for phys.picker\"",
 					"varname" : "3D/position[5]"
 				}
 
