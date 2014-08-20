@@ -560,7 +560,8 @@ TTErr remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		
 		// send to each view
 		if (x->arrayIndex == 0) {
-			TTValue     keys;
+            
+			TTValue keys;
             
 			if (!x->internals->isEmpty()) {
 				x->internals->getKeys(keys);
@@ -574,7 +575,8 @@ TTErr remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 				}
 			}
             
-			x->cursor = kTTSymEmpty;
+            // watching the first instance by default
+            x->cursor = keys[0];
             
             return err;
 		}
@@ -594,29 +596,10 @@ void WrappedViewerClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *a
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTObject o;
 	
-	if (proxy_getinlet((t_object*)x)) {
+	if (proxy_getinlet((t_object*)x))
 		wrappedModularClass_ArraySelect(self, msg, argc, argv);
-	}
-	else {
-		
-		// send to each view
-		if (x->arrayIndex == 0) {
-			TTValue keys;
-			if (!x->internals->isEmpty()) {
-				x->internals->getKeys(keys);
-				for (int i = 0; i < keys.size(); i++) {
-					x->cursor = keys[i];
-                    o = selectedObject;
-					jamoma_viewer_send(o, msg, argc, argv);
-				}
-				x->cursor = kTTSymEmpty;
-			}
-		}
-		else {
-            o = selectedObject;
-			jamoma_viewer_send(o, msg, argc, argv);
-        }
-	}
+	else
+        remote_list(self, msg, argc, argv);
 }
 
 TTErr remote_array(TTPtr self, t_symbol *msg, long argc, t_atom *argv)

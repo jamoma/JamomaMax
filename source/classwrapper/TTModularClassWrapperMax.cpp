@@ -531,11 +531,6 @@ void wrappedModularClass_dump(TTPtr self)
         object_obex_dumpout(self, gensym("address"), 1, &a);
     }
 #endif
-	
-    if (!selectedObject) {
-        //object_error((t_object*)x, "dump : can't dump *");
-        return;
-    }
     
     selectedObject->getAttributeNames(names);
 	

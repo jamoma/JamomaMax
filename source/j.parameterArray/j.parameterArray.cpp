@@ -127,6 +127,9 @@ void WrappedDataClass_new(TTPtr self, long argc, t_atom *argv)
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
 	x->outlets[index_out] = outlet_new(x, NULL);					// long outlet to output data index
 	x->outlets[data_out] = outlet_new(x, NULL);						// anything outlet to output data
+    
+    x->useInternals = YES;
+    x->internals->setThreadProtection(YES);
 	
 	x->arraySize = 0;
 	x->arrayIndex = 0;
@@ -416,16 +419,18 @@ void data_list(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 		
 		// send to each data
 		if (x->arrayIndex == 0) {
+            
 			TTValue keys;
-			if (!x->internals->isEmpty()) {
-				x->internals->getKeys(keys);
-				for (TTUInt32 i = 0; i < keys.size(); i++) {
-					x->cursor = keys[i];
-                    o = selectedObject;
-					jamoma_data_command(o, msg, argc, argv);
-				}
-			}
-			x->cursor = kTTSymEmpty;
+			
+            x->internals->getKeys(keys);
+            for (TTUInt32 i = 0; i < keys.size(); i++) {
+                x->cursor = keys[i];
+                o = selectedObject;
+                jamoma_data_command(o, msg, argc, argv);
+            }
+            
+            // watch an instance by default
+            x->cursor = keys[0];
 		}
 		else {
             o = selectedObject;
@@ -442,29 +447,10 @@ void WrappedDataClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *arg
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTObject o;
 	
-	if (proxy_getinlet((t_object*)x)) {
+	if (proxy_getinlet((t_object*)x))
 		wrappedModularClass_ArraySelect(self, msg, argc, argv);
-	}
-	else {
-		
-		// send to each data
-		if (x->arrayIndex == 0) {
-			TTValue keys;
-			if (!x->internals->isEmpty()) {
-				x->internals->getKeys(keys);
-				for (TTUInt32 i=0; i<keys.size(); i++) {
-					x->cursor = keys[i];
-                    o = selectedObject;
-					jamoma_data_command(o, msg, argc, argv);
-				}
-				x->cursor = kTTSymEmpty;
-			}
-		}
-		else {
-            o = selectedObject;
-			jamoma_data_command(o, msg, argc, argv);
-        }
-	}
+	else
+        data_list(self, msg, argc, argv);
 }
 
 void data_array(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
