@@ -75,7 +75,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 635.0, 208.5, 136.0, 141.0 ],
-					"text" : "j.parameter rolloff @type decimal @range -96 0. @clipmode high @ramp/drive max @ramp/function linear @description \"Rolloff in dB for the Gaussian windowing function.\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter rolloff @type decimal @range -96 0. @clipmode high @ramp/drive Max @ramp/function linear @description \"Rolloff in dB for the Gaussian windowing function.\" @dataspace gain @dataspace/unit dB",
 					"varname" : "rolloff"
 				}
 
@@ -107,7 +107,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 170.0, 12.5, 191.0, 100.0 ],
-					"text" : "j.parameter rate @type decimal @range -12 12 @clipmode none @ramp/drive max @ramp/function linear @description \"Rate of the glissando movement as MIDI pitch difference per second.\"",
+					"text" : "j.parameter rate @type decimal @range -12 12 @clipmode none @ramp/drive Max @ramp/function linear @description \"Rate of the glissando movement as MIDI pitch difference per second.\"",
 					"varname" : "rate"
 				}
 
@@ -123,7 +123,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 375.5, 12.5, 211.0, 74.0 ],
-					"text" : "j.parameter spacing @type decimal @range 0 12 @clipmode low @ramp/drive max @ramp/function linear @description \"Spacing between adjecent oscillators (as MIDI values).\"",
+					"text" : "j.parameter spacing @type decimal @range 0 12 @clipmode low @ramp/drive Max @ramp/function linear @description \"Spacing between adjecent oscillators (as MIDI values).\"",
 					"varname" : "spacing"
 				}
 
@@ -139,7 +139,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 25.5, 12.5, 136.0, 100.0 ],
-					"text" : "j.parameter range @type array @ramp/drive max @ramp/function linear @description \"The range of the sweeps as MIDI values.\"",
+					"text" : "j.parameter range @type array @ramp/drive Max @ramp/function linear @description \"The range of the sweeps as MIDI values.\"",
 					"varname" : "range"
 				}
 

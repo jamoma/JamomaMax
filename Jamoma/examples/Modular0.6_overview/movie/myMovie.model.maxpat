@@ -299,7 +299,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 649.0, 206.0, 221.0, 60.0 ],
-					"text" : "j.parameter rate @type decimal @range -2. 2. @default 1. @description \"movie playback rate\" @ramp/drive max"
+					"text" : "j.parameter rate @type decimal @range -2. 2. @default 1. @description \"movie playback rate\" @ramp/drive Max"
 				}
 
 			}

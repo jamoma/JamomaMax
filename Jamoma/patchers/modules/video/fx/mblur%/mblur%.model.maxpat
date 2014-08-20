@@ -160,7 +160,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 22.650696, 15.0, 393.0, 43.0 ],
-					"text" : "j.parameter slide/down @type decimal @ramp/drive max @clipmode low @range 1 100 @description \"The slide down factor - meaning how quickly (in frames) colors move from bright to dark\"",
+					"text" : "j.parameter slide/down @type decimal @ramp/drive Max @clipmode low @range 1 100 @description \"The slide down factor - meaning how quickly (in frames) colors move from bright to dark\"",
 					"varname" : "slide_down"
 				}
 
@@ -177,7 +177,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 111.0, 61.662048, 380.0, 43.0 ],
-					"text" : "j.parameter slide/up @type decimal @ramp/drive max @clipmode low @range 1 100 @description \"The slide up factor - meaning how quickly (in frames) colors move from dark up to bright\"",
+					"text" : "j.parameter slide/up @type decimal @ramp/drive Max @clipmode low @range 1 100 @description \"The slide up factor - meaning how quickly (in frames) colors move from dark up to bright\"",
 					"varname" : "slide_up"
 				}
 

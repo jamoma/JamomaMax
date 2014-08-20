@@ -4374,7 +4374,7 @@
                                     381.0,
                                     55.0
                                   ],
-                                  "text": "sprintf script newdefault parameter/%s %ld %ld j.parameter parameter/%s @type decimal @range 0. 1. @clipmode both @ramp/drive max @priority 3 @description \"Nth parameter of the VST plugin.\""
+                                  "text": "sprintf script newdefault parameter/%s %ld %ld j.parameter parameter/%s @type decimal @range 0. 1. @clipmode both @ramp/drive Max @priority 3 @description \"Nth parameter of the VST plugin.\""
                                 }
                               },
                               {

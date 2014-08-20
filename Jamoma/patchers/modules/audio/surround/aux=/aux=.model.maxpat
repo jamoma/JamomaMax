@@ -669,7 +669,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 903.0, 90.5, 148.0, 181.0 ],
-					"text" : "j.parameterArray aux.[3]/gain @repetitions/filter 1 @type decimal @range -70. 12. @clipmode both @ramp/drive max @dataspace gain @dataspace/unit db @format single @description \"Gain of the input cable applied to the auxiliary bus.\"",
+					"text" : "j.parameterArray aux.[3]/gain @repetitions/filter 1 @type decimal @range -70. 12. @clipmode both @ramp/drive Max @dataspace gain @dataspace/unit db @format single @description \"Gain of the input cable applied to the auxiliary bus.\"",
 					"varname" : "aux.1/gain"
 				}
 

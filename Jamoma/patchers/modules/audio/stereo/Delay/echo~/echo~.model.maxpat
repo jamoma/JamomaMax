@@ -375,7 +375,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 567.785706, 399.0, 151.0, 154.0 ],
-					"text" : "j.parameter feedback/gain @type decimal @ramp/drive max @repetitions/filter 1 @range -70. 0. @clipmode both @description Feedback. @dataspace gain @dataspace/unit db @description \"Feedback gain in dB.\"",
+					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range -70. 0. @clipmode both @description Feedback. @dataspace gain @dataspace/unit db @description \"Feedback gain in dB.\"",
 					"varname" : "feedback"
 				}
 
@@ -391,7 +391,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 730.285706, 143.5, 151.0, 154.0 ],
-					"text" : "j.parameter delay/right @type integer @ramp/drive max @repetitions/filter 1 @range 0 10000 @clipmode both @dataspace time @dataspace/unit ms @description \"Delay time in milliseconds for right channel.\"",
+					"text" : "j.parameter delay/right @type integer @ramp/drive Max @repetitions/filter 1 @range 0 10000 @clipmode both @dataspace time @dataspace/unit ms @description \"Delay time in milliseconds for right channel.\"",
 					"varname" : "right"
 				}
 
@@ -407,7 +407,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 567.785706, 143.5, 146.0, 154.0 ],
-					"text" : "j.parameter delay/left @type integer @ramp/drive max @repetitions/filter 1 @range 0 10000 @clipmode both @dataspace time @dataspace/unit ms @description \"Delay time in milliseconds for left channel.\"",
+					"text" : "j.parameter delay/left @type integer @ramp/drive Max @repetitions/filter 1 @range 0 10000 @clipmode both @dataspace time @dataspace/unit ms @description \"Delay time in milliseconds for left channel.\"",
 					"varname" : "left"
 				}
 

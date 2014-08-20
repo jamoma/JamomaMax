@@ -803,7 +803,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 126.25, 452.5, 145.0, 127.0 ],
-					"text" : "j.parameter feedback/gain @type decimal @ramp/drive max @repetitions/filter 1 @clipmode both @range -70. 0. @dataspace gain @dataspace/unit db @description \"Amount of delay feedback (dB).\"",
+					"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @clipmode both @range -70. 0. @dataspace gain @dataspace/unit db @description \"Amount of delay feedback (dB).\"",
 					"varname" : "feedback[1]"
 				}
 
@@ -851,7 +851,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 336.0, 72.5, 153.0, 141.0 ],
-					"text" : "j.parameter delay/max @type integer @priority 1 @dataspace time @dataspace/unit ms @ramp/drive max @repetitions/filter 1 @range 0 10000 @clipmode low @description \"Max delay time in milliseconds.\"",
+					"text" : "j.parameter delay/max @type integer @priority 1 @dataspace time @dataspace/unit ms @ramp/drive Max @repetitions/filter 1 @range 0 10000 @clipmode low @description \"Max delay time in milliseconds.\"",
 					"varname" : "maxdelay"
 				}
 

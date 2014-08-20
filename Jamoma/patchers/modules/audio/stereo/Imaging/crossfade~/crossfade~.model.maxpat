@@ -293,7 +293,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 186.0, 26.0, 376.0, 60.0 ],
-					"text" : "j.parameter position @type decimal @range 1. 2. @ramp/drive max @description \"Set the position of the crossfade.  1 is entirely source 1 - 2 is entirely source 2 - positions in the middle are a location between source one and two.\"",
+					"text" : "j.parameter position @type decimal @range 1. 2. @ramp/drive Max @description \"Set the position of the crossfade.  1 is entirely source 1 - 2 is entirely source 2 - positions in the middle are a location between source one and two.\"",
 					"varname" : "position"
 				}
 
