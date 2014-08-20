@@ -218,7 +218,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 294.0, 138.0, 435.0, 31.0 ],
-					"text" : "j.parameter bleed @type decimal @ramp/drive Max @description \"Sets convolution kernel value for all colors\"",
+					"text" : "j.parameter bleed @type decimal @ramp/drive max @description \"Sets convolution kernel value for all colors\"",
 					"varname" : "bleed"
 				}
 
@@ -234,7 +234,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 199.0, 100.0, 486.0, 19.0 ],
-					"text" : "j.parameter gain @type decimal @ramp/drive Max @description \"The gain level for all colors\"",
+					"text" : "j.parameter gain @type decimal @ramp/drive max @description \"The gain level for all colors\"",
 					"varname" : "gain"
 				}
 
@@ -250,7 +250,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 142.0, 60.0, 536.0, 19.0 ],
-					"text" : "j.parameter feedback @type decimal @ramp/drive Max @description \"The feedback value for all colors\"",
+					"text" : "j.parameter feedback @type decimal @ramp/drive max @description \"The feedback value for all colors\"",
 					"varname" : "feedback"
 				}
 
@@ -266,7 +266,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 73.0, 21.0, 566.0, 19.0 ],
-					"text" : "j.parameter feedforward @type decimal @ramp/drive Max @description \"The feedforward value for all colors\"",
+					"text" : "j.parameter feedforward @type decimal @ramp/drive max @description \"The feedforward value for all colors\"",
 					"varname" : "feedforward"
 				}
 

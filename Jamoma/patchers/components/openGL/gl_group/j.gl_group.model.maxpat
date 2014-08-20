@@ -106,7 +106,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 108.0, 297.370605, 546.0, 31.0 ],
-									"text" : "j.parameter tex_plane_t @type array @ramp/drive Max @description \"The texture generation coefficients a b c d, which apply to tex_map modes 1 and 3.\" @default 0. 1. 0. 0.",
+									"text" : "j.parameter tex_plane_t @type array @ramp/drive max @description \"The texture generation coefficients a b c d, which apply to tex_map modes 1 and 3.\" @default 0. 1. 0. 0.",
 									"varname" : "material/light/emission[1]"
 								}
 
@@ -137,7 +137,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 93.0, 216.37059, 546.0, 31.0 ],
-									"text" : "j.parameter tex_plane_s @type array @ramp/drive Max @description \"The texture generation coefficients a b c d that apply to tex_map modes 1 and 3.\" @default 1. 0. 0. 0.",
+									"text" : "j.parameter tex_plane_s @type array @ramp/drive max @description \"The texture generation coefficients a b c d that apply to tex_map modes 1 and 3.\" @default 1. 0. 0. 0.",
 									"varname" : "material/light/emission"
 								}
 
@@ -1873,7 +1873,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 75.0, 247.0, 470.0, 43.0 ],
-									"text" : "j.parameter anchor @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"The anchor position in local space. Allows for offsetting the local 3D origin around which transforms are applied.\" @default 0. 0. 0.",
+									"text" : "j.parameter anchor @type array @ramp/drive max @dataspace position @dataspace/unit openGL @description \"The anchor position in local space. Allows for offsetting the local 3D origin around which transforms are applied.\" @default 0. 0. 0.",
 									"varname" : "3D/position[1]"
 								}
 
@@ -1932,7 +1932,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 60.5, 172.799988, 331.0, 31.0 ],
-									"text" : "j.parameter scale @ramp/drive Max @type array @description \"3D scaling factor as xyz coordinates.\" @default 1. 1. 1.",
+									"text" : "j.parameter scale @ramp/drive max @type array @description \"3D scaling factor as xyz coordinates.\" @default 1. 1. 1.",
 									"varname" : "3D/scale"
 								}
 
@@ -1949,7 +1949,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 40.0, 96.399994, 380.0, 31.0 ],
-									"text" : "j.parameter rotate @type array @ramp/drive Max @description \"3D rotation as angle and xyz rotation axis coordinates.\" @default 0. 0. 0. 1.",
+									"text" : "j.parameter rotate @type array @ramp/drive max @description \"3D rotation as angle and xyz rotation axis coordinates.\" @default 0. 0. 0. 1.",
 									"varname" : "3D/rotate"
 								}
 
@@ -1966,7 +1966,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 19.0, 26.0, 459.0, 31.0 ],
-									"text" : "j.parameter position @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"3D origin as xyz coordinates.\" @default 0. 0. 0.",
+									"text" : "j.parameter position @type array @ramp/drive max @dataspace position @dataspace/unit openGL @description \"3D origin as xyz coordinates.\" @default 0. 0. 0.",
 									"varname" : "3D/position"
 								}
 
@@ -2310,7 +2310,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 163.0, 257.0, 469.0, 31.0 ],
-									"text" : "j.parameter aux_alpha @type decimal @range 0. 1. @clipmode both @ramp/drive Max @description \"auxilliary alpha transparency (0.-1.).\" @default 1.",
+									"text" : "j.parameter aux_alpha @type decimal @range 0. 1. @clipmode both @ramp/drive max @description \"auxilliary alpha transparency (0.-1.).\" @default 1.",
 									"varname" : "color/alpha[1]"
 								}
 
@@ -2389,7 +2389,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 109.0, 48.0, 469.0, 31.0 ],
-									"text" : "j.parameter alpha @type decimal @range 0. 1. @clipmode both @ramp/drive Max @description \"Object alpha transparency (0.-1.).\" @default 1.",
+									"text" : "j.parameter alpha @type decimal @range 0. 1. @clipmode both @ramp/drive max @description \"Object alpha transparency (0.-1.).\" @default 1.",
 									"varname" : "color/alpha"
 								}
 
@@ -2643,7 +2643,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 20.0, 3.0, 385.0, 31.0 ],
-									"text" : "j.parameter fog/params @type array @ramp/drive Max @description \"Fog color (RGBA), density,start and end.\" @default 0. 0. 0. 0. 0. 0. 0.",
+									"text" : "j.parameter fog/params @type array @ramp/drive max @description \"Fog color (RGBA), density,start and end.\" @default 0. 0. 0. 0. 0. 0. 0.",
 									"varname" : "fog/params"
 								}
 
@@ -3113,7 +3113,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 122.5, 275.284302, 465.0, 31.0 ],
-									"text" : "j.parameter material/shininess @type decimal @range 0. 255. @clipmode both @ramp/drive Max @description \"Material shininess.\" @default 10.",
+									"text" : "j.parameter material/shininess @type decimal @range 0. 255. @clipmode both @ramp/drive max @description \"Material shininess.\" @default 10.",
 									"varname" : "material/shininess"
 								}
 
@@ -3163,7 +3163,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 95.0, 212.827454, 520.0, 31.0 ],
-									"text" : "j.parameter material/specular @type array @ramp/drive Max @description \"The specular light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"text" : "j.parameter material/specular @type array @ramp/drive max @description \"The specular light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/specular"
 								}
 
@@ -3180,7 +3180,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 81.0, 150.37059, 540.0, 31.0 ],
-									"text" : "j.parameter material/emission @type array @ramp/drive Max @description \"The material emission property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"text" : "j.parameter material/emission @type array @ramp/drive max @description \"The material emission property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/emission"
 								}
 
@@ -3197,7 +3197,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 61.0, 87.913727, 564.0, 31.0 ],
-									"text" : "j.parameter material/diffuse @type array @ramp/drive Max @description \"The diffuse light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"text" : "j.parameter material/diffuse @type array @ramp/drive max @description \"The diffuse light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/diffuse"
 								}
 
@@ -3214,7 +3214,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 25.456863, 606.0, 31.0 ],
-									"text" : "j.parameter material/ambient @type array @ramp/drive Max @description \"The ambient light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
+									"text" : "j.parameter material/ambient @type array @ramp/drive max @description \"The ambient light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/ambient"
 								}
 

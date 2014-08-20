@@ -90,7 +90,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 31.0, 164.0, 364.0, 60.0 ],
-					"text" : "j.parameterArray harmonic.[10]/gain @format single @type decimal @ramp/drive Max @ramp/function linear @dataspace gain @dataspace/unit dB @description \"Gain values (dB) for the 1st partial\""
+					"text" : "j.parameterArray harmonic.[10]/gain @format single @type decimal @ramp/drive max @ramp/function linear @dataspace gain @dataspace/unit dB @description \"Gain values (dB) for the 1st partial\""
 				}
 
 			}
@@ -120,7 +120,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 568.5, 152.0, 331.0, 60.0 ],
-					"text" : "j.parameter frequency @type decimal @range 20 20000 @clipmode none @ramp/drive Max @ramp/function linear @dataspace time @dataspace/unit Hz @description \"Fundamental frequency of the signal.\"",
+					"text" : "j.parameter frequency @type decimal @range 20 20000 @clipmode none @ramp/drive max @ramp/function linear @dataspace time @dataspace/unit Hz @description \"Fundamental frequency of the signal.\"",
 					"varname" : "frequency"
 				}
 

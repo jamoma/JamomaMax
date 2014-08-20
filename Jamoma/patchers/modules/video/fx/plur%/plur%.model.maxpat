@@ -409,7 +409,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 207.142853, 349.714264, 611.0, 19.0 ],
-					"text" : "j.parameter scale @type integer @ramp/drive Max @description \"scale: actually a bit shift before display. normal is 8.\"",
+					"text" : "j.parameter scale @type integer @ramp/drive max @description \"scale: actually a bit shift before display. normal is 8.\"",
 					"varname" : "scale"
 				}
 
@@ -460,7 +460,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 88.0, 75.0, 476.0, 31.0 ],
-					"text" : "j.parameter step/x @type integer @ramp/drive Max @description \"x/step and y/step represent the distance between the 'corners' between which the 'interpolation' takes place.\"",
+					"text" : "j.parameter step/x @type integer @ramp/drive max @description \"x/step and y/step represent the distance between the 'corners' between which the 'interpolation' takes place.\"",
 					"varname" : "x_step"
 				}
 
@@ -477,7 +477,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 142.571426, 111.714294, 476.0, 31.0 ],
-					"text" : "j.parameter step/y @type integer @ramp/drive Max @description \"x/step and y/step represent the distance between the 'corners' between which the 'interpolation' takes place.\"",
+					"text" : "j.parameter step/y @type integer @ramp/drive max @description \"x/step and y/step represent the distance between the 'corners' between which the 'interpolation' takes place.\"",
 					"varname" : "y_step"
 				}
 
@@ -494,7 +494,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 254.571426, 179.714294, 480.0, 31.0 ],
-					"text" : "j.parameter range/y @type integer @ramp/drive Max @description \"x/range and y/range represent the distance between the actual points used for the 'interpolation' calculation.\"",
+					"text" : "j.parameter range/y @type integer @ramp/drive max @description \"x/range and y/range represent the distance between the actual points used for the 'interpolation' calculation.\"",
 					"varname" : "y_range"
 				}
 
@@ -511,7 +511,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 199.428574, 146.0, 494.0, 31.0 ],
-					"text" : "j.parameter range/x @type integer @ramp/drive Max @description \"x/range and y/range range represent the distance between the actual points used for the 'interpolation' calculation.\"",
+					"text" : "j.parameter range/x @type integer @ramp/drive max @description \"x/range and y/range range represent the distance between the actual points used for the 'interpolation' calculation.\"",
 					"varname" : "x_range"
 				}
 
