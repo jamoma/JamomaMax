@@ -532,6 +532,11 @@ void wrappedModularClass_dump(TTPtr self)
     }
 #endif
 	
+    if (!selectedObject) {
+        //object_error((t_object*)x, "dump : can't dump *");
+        return;
+    }
+    
     selectedObject->getAttributeNames(names);
 	
     for (i = 0; i < names.size(); i++) {

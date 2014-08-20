@@ -249,11 +249,15 @@ void remote_new_address(TTPtr self, t_symbol *address)
 
 void remote_array_create(TTPtr self, TTObject& returnedViewer, TTUInt32 index)
 {
-	TTValue	baton;
-	
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    t_symbol    *iAdrs;
+	TTValue     baton;
+    
 	returnedViewer = TTObject(kTTSym_Viewer);
     
-    baton = TTValue(self, index);
+    jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, index);
+    
+    baton = TTValue(self, index, TTSymbol(iAdrs->s_name));
 	returnedViewer.set(kTTSym_baton, baton);
 	returnedViewer.set(kTTSym_function, TTPtr(&remote_array_return_value));
 }
@@ -684,13 +688,13 @@ void remote_array_return_value(const TTValue& baton, const TTValue& v)
 {
     WrappedModularInstancePtr	x;
 	TTValue						array;
-	t_symbol					*msg, *iAdrs;
+	t_symbol					*msg;
 	long						argc = 0;
 	TTUInt32					i, j;
 	t_atom*						argv = NULL;
 	TTBoolean					shifted = NO;
     
-	// unpack baton (a t_object* and the index of the value)
+	// unpack baton (a t_object, the index of the value and the instance symbol)
 	x = WrappedModularInstancePtr((TTPtr)baton[0]);
 	i = baton[1];
     
@@ -701,10 +705,8 @@ void remote_array_return_value(const TTValue& baton, const TTValue& v)
     }
 	
 	// output index
-	if (x->arrayIndex == 0) {
-		jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, i);
-		x->cursor = TTSymbol(iAdrs->s_name);
-	}
+	if (x->arrayIndex == 0)
+		x->cursor = baton[2];
     
 	outlet_int(x->outlets[index_out], i);
 		
