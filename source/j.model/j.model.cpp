@@ -260,8 +260,18 @@ void model_subscribe(TTPtr self)
 			// check if it's a sub model
 			isSubModel = atom_getsym(av) == _sym_p;
 			
-			// in subpatcher the name of the patcher is part of the argument
+			// in subpatcher :
 			if (jamoma_patcher_get_hierarchy(aPatcher) == _sym_subpatcher) {
+                
+                // remove first 'p' or 'patcher'
+                if (ac > 0 && av) {
+                    if (atom_getsym(av) == _sym_p || atom_getsym(av) == _sym_patcher) {
+                        ac--;
+                        av++;
+                    }
+                }
+                
+                // remove the next argument because it is the class
 				ac--;
 				av++;
 			}
@@ -363,7 +373,6 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                 
                 // observe the selected view model:address attribute
                 makeInternals_receiver(self, EXTRA->containerAddress.getParent(), TTAddress("model:address"), gensym("return_upper_view_model_address"), aReceiver, YES); // we need to deferlow to avoid lock crash on TTContainer content
-                aReceiver.send(kTTSym_Get);
             }
             // use the argument address as an absolute address
             else {
