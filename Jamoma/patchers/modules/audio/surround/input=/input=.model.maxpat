@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 84.0, 79.0, 982.0, 503.0 ],
+		"rect" : [ 84.0, 79.0, 1555.0, 803.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -68,7 +68,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -457,7 +457,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -709,7 +709,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -1434,7 +1434,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -1605,7 +1605,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -1698,7 +1698,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -2174,7 +2174,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -2477,7 +2477,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 7,
+															"revision" : 8,
 															"architecture" : "x86"
 														}
 ,
@@ -2974,7 +2974,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 7,
+															"revision" : 8,
 															"architecture" : "x86"
 														}
 ,
@@ -3090,7 +3090,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 7,
+															"revision" : 8,
 															"architecture" : "x86"
 														}
 ,
@@ -4093,7 +4093,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -4415,7 +4415,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 523.0, 37.0, 602.0, 20.0 ],
+					"patching_rect" : [ 918.0, 37.0, 602.0, 20.0 ],
 					"text" : "j.message direct @type generic @repetitions/filter 0 @description \"direct commands to the sfplay~ object\"",
 					"varname" : "play[2]"
 				}
@@ -4432,7 +4432,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 826.0, 506.0, 283.0, 60.0 ],
+					"patching_rect" : [ 1001.0, 416.0, 283.0, 60.0 ],
 					"text" : "j.message start @type decimal @repetitions/filter 1 @dataspace time @dataspace/unit second @description \"start time in soundfile to play in [sec]\"",
 					"varname" : "start"
 				}
@@ -4448,7 +4448,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 523.0, 11.0, 636.0, 20.0 ],
+					"patching_rect" : [ 918.0, 11.0, 636.0, 20.0 ],
 					"text" : "j.parameter countdown @type boolean @description \"changes the time displayed in the module to countdown mode\"",
 					"varname" : "countdown[1]"
 				}
@@ -4464,7 +4464,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 603.0, 279.0, 403.0, 20.0 ],
+					"patching_rect" : [ 1001.0, 201.0, 403.0, 20.0 ],
 					"text" : "j.message pause @type boolean @repetitions/filter 1 @description Pause",
 					"varname" : "play[1]"
 				}
@@ -4480,7 +4480,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 542.0, 336.0, 516.0, 20.0 ],
+					"patching_rect" : [ 940.0, 258.0, 516.0, 20.0 ],
 					"text" : "j.parameter play @type boolean @repetitions/filter 1 @priority 2 @description \"starts playback\"",
 					"varname" : "play"
 				}
@@ -4496,7 +4496,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 525.0, 60.0, 369.0, 20.0 ],
+					"patching_rect" : [ 920.0, 60.0, 369.0, 20.0 ],
 					"text" : "j.parameter loop @type boolean @description \"Loop soundfile.\"",
 					"varname" : "loop"
 				}
@@ -4513,8 +4513,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 360.0, 442.0, 565.0, 33.0 ],
-					"text" : "j.parameter open @type string @priority 1 @repetitions/filter 0 @description \"Open sound file specified by filename. Without a filename a standard open file dialog allows you to choose a file.\""
+					"patching_rect" : [ 929.0, 321.0, 349.0, 33.0 ],
+					"text" : "j.parameter path @type string @priority 1 @repetitions/filter 0 @description \"Open sound file specified by filename.\""
 				}
 
 			}
@@ -4541,7 +4541,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 22.0, 266.0, 450.0, 20.0 ],
+					"patching_rect" : [ 22.0, 266.0, 490.0, 20.0 ],
 					"text" : "j.model @tags audio @description \"A simple multichannel sampleplayer based on sfplay~\"",
 					"varname" : "j.hub"
 				}
@@ -4839,7 +4839,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
