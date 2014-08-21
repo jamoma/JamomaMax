@@ -27,7 +27,7 @@
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
-		"title" : "equalizer~_large",
+		"title" : "/equalizer~(view)",
 		"boxes" : [ 			{
 				"box" : 				{
 					"bubble" : 1,
@@ -1030,7 +1030,6 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"color" : [ 0.937255, 0.733333, 0.317647, 1.0 ],
@@ -1432,7 +1431,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p filter_numeric_view"
+					"text" : "p filter_numeric"
 				}
 
 			}
@@ -2285,7 +2284,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p filter_graph_view"
+					"text" : "p filter_graph"
 				}
 
 			}
