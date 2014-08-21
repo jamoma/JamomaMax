@@ -369,8 +369,6 @@ void remote_array_subscribe(TTPtr self, t_symbol *address)
         // make the model:address receiver binds on the model:address attribute
         EXTRA->modelAddressReceiver->set(kTTSym_address, contextAddress.appendAddress(TTAddress("model:address")));
         
-		// get the model:address value
-        EXTRA->modelAddressReceiver->send(kTTSym_Get);
         return;
 	}
 	
@@ -795,11 +793,16 @@ void remote_create_model_address_receiver(TTPtr self)
 	args.append(returnValueCallback);
 	
 	EXTRA->modelAddressReceiver = new TTObject(kTTSym_Receiver, args);
+    
+    // DEBUG
+    EXTRA->modelAddressReceiver->track(YES);
 }
 
 void remote_free_model_address_receiver(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    EXTRA->modelAddressReceiver->set(kTTSym_address, kTTAdrsEmpty);
     
     delete EXTRA->modelAddressReceiver;
 }

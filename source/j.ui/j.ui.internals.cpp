@@ -106,19 +106,17 @@ void ui_receiver_create(t_ui *obj, TTObject& returnedReceiver, t_symbol *aCallba
 	
 	returnedReceiver = TTObject(kTTSym_Receiver, args);
 	
-	// Set address to bind
+	// edit address
     if (appendNameAsAttribute)
         adrs = address.appendAttribute(name);
     else
         adrs = address.appendAddress(TTAddress(name.c_str()));
-        
-	returnedReceiver.set(kTTSym_address, adrs);
     
-    // refresh receiver
-	returnedReceiver.send(kTTSym_Get);
-	
-	// Store receiver
+    // store receiver
 	obj->hash_receivers->append(name, returnedReceiver);
+    
+    // set address attribute (after storing the receiver as the value can be updated in the same time)
+	returnedReceiver.set(kTTSym_address, adrs);
 }
 
 void ui_receiver_destroy_all(t_ui *obj)
@@ -171,14 +169,16 @@ void ui_viewer_create(t_ui *obj, TTObject& returnedViewer, t_symbol *aCallbackMe
 	else
 		viewerAddress = kTTAdrsEmpty;
 	
-	// Set address to bind
+	// edit address to bind
 	adrs = address.appendAddress(TTAddress(name.c_str()));
-	returnedViewer.set(kTTSym_address, adrs);
 	
-	// Store viewer
+	// store viewer
 	args = TTValue(returnedViewer);
 	args.append(viewerAddress);
 	obj->hash_viewers->append(name, args);
+    
+    // set address attribute (after storing the receiver as the value can be updated in the same time)
+	returnedViewer.set(kTTSym_address, adrs);
 }
 
 void ui_viewer_destroy(t_ui *obj, TTSymbol name)

@@ -317,7 +317,6 @@ void ui_subscribe(t_ui *x, t_symbol *address)
             // update the model address and get the initialized state
             aReceiver = v[0];
             aReceiver.set(kTTSym_address, x->modelAddress.appendAttribute(kTTSym_initialized));
-            aReceiver.send(kTTSym_Get);
         }
         
         // create internal TTPreset to handle model's state

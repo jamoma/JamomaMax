@@ -284,7 +284,7 @@ void send_subscribe(TTPtr self)
             
             // observe model:address attribute (in view patcher : deferlow return_model_address)
 			makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), anObject, x->patcherContext == kTTSym_view);
-			anObject.send(kTTSym_Get);
+
 			return;
 		}
 	}
