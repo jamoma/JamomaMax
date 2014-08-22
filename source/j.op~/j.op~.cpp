@@ -251,6 +251,14 @@ void op_perform64(t_op *x, t_object *dsp64, double **ins, long numins, double **
 }
 
 
+void op_perform_zero(t_op *x, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
+{
+	int i;
+	
+	for (i=0; i<numouts; i++)
+		memset(outs[i], 0, sizeof(double) * sampleframes);
+}
+
 
 void op_dsp64(t_op *x, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
@@ -263,17 +271,21 @@ void op_dsp64(t_op *x, t_object *dsp64, short *count, double samplerate, long ma
 	for (i=0; i < x->maxNumChannels; i++) {
 		j = x->maxNumChannels + i;
 		if (count[i] && count[j])
-			x->numChannels++;		
+			x->numChannels = i+1;
 	}
 	
-	x->audioIn->setAttributeValue(kTTSym_numChannels, x->maxNumChannels);
-	x->audioOut->setAttributeValue(kTTSym_numChannels, x->maxNumChannels);
-	x->audioIn->setAttributeValue(kTTSym_vectorSize, (TTUInt16)maxvectorsize);
-	x->audioOut->setAttributeValue(kTTSym_vectorSize, (TTUInt16)maxvectorsize);
-	//audioIn will be set in the perform method
-	x->audioOut->sendMessage(TT("alloc"));
-	
-	x->op->setAttributeValue(kTTSym_sampleRate, samplerate);
-	object_method(dsp64, gensym("dsp_add64"), x, op_perform64, 0, NULL);	
+	if (x->numChannels > 0) {
+		x->audioIn->setAttributeValue(kTTSym_numChannels, x->numChannels);
+		x->audioOut->setAttributeValue(kTTSym_numChannels, x->numChannels);
+		x->audioIn->setAttributeValue(kTTSym_vectorSize, (TTUInt16)maxvectorsize);
+		x->audioOut->setAttributeValue(kTTSym_vectorSize, (TTUInt16)maxvectorsize);
+		//audioIn will be set in the perform method
+		x->audioOut->sendMessage(TT("alloc"));
+		
+		x->op->setAttributeValue(kTTSym_sampleRate, samplerate);
+		object_method(dsp64, gensym("dsp_add64"), x, op_perform64, 0, NULL);
+	}
+	else
+		object_method(dsp64, gensym("dsp_add64"), x, op_perform_zero, 0, NULL);
 }
 

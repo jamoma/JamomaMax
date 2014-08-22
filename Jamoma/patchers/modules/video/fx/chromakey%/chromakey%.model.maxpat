@@ -151,7 +151,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 399.0, 431.0, 271.0, 31.0 ],
-					"text" : "j.model @tag video @description \"Simple 2-source chromakey : Keying based on chromatic distance\"",
+					"text" : "j.model @tags video @description \"Simple 2-source chromakey : Keying based on chromatic distance\"",
 					"varname" : "j.model"
 				}
 

@@ -174,7 +174,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 625.5, 604.0, 250.0, 31.0 ],
-					"text" : "j.model @tag gl @description \"Apply incoming video matrix as texture to OpenGL videoplane.\"",
+					"text" : "j.model @tags gl @description \"Apply incoming video matrix as texture to OpenGL videoplane.\"",
 					"varname" : "j.model"
 				}
 

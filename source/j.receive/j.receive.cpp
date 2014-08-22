@@ -181,8 +181,6 @@ void WrappedReceiverClass_new(TTPtr self, long argc, t_atom *argv)
         
         JamomaDebug object_post((t_object*)x, "binds on %s", x->address.c_str());
         
-        x->wrappedObject.send(kTTSym_Get);
-        
 		return;
 	}
 	
@@ -244,15 +242,14 @@ void receive_subscribe(TTPtr self)
                 object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
                 
                 JamomaDebug object_post((t_object*)x, "binds on %s", contextAddress.appendAddress(x->address).c_str());
-                
-                x->wrappedObject.send(kTTSym_Get);
+
                 return;
             }
             else {
                 
                 // observe model:address attribute (in view patcher : deferlow return_model_address)
                 makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), anObject, x->patcherContext == kTTSym_view);
-                anObject.send(kTTSym_Get);
+                
                 return;
             }
 		}
@@ -270,8 +267,6 @@ void receive_subscribe(TTPtr self)
 		
 		atom_setsym(a, gensym((char*)absoluteAddress.c_str()));
 		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
-        
-        x->wrappedObject.send(kTTSym_Get);
         
 		return;
 	}
@@ -315,9 +310,6 @@ void receive_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *
 		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
 		
 		JamomaDebug object_post((t_object*)x, "binds on %s", absoluteAddress.c_str());
-        
-        // get the value to refresh it
-		x->wrappedObject.send(kTTSym_Get);
 	}
 }
 
@@ -412,8 +404,6 @@ void receive_address(TTPtr self, t_symbol *address)
 		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
         
         JamomaDebug object_post((t_object*)x, "binds on %s", x->address.c_str());
-        
-        x->wrappedObject.send(kTTSym_Get);
         
 		return;
 	}

@@ -662,7 +662,7 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 	// to look for user-defined object
 	aFilter = new TTDictionaryBase;
 	aFilter->setSchema(kTTSym_filter);
-	aFilter->append(kTTSym_attribute, kTTSym_tag);
+	aFilter->append(kTTSym_attribute, kTTSym_tags);
 	aFilter->append(kTTSym_value, kTTSym_generic);
 	aFilter->append(kTTSym_mode, kTTSym_exclude);
 	defaultFilterBank->append(TTSymbol("noGenericTag"), (TTPtr)aFilter);
@@ -670,7 +670,7 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 	// to look for generic tagged object
 	aFilter = new TTDictionaryBase;
 	aFilter->setSchema(kTTSym_filter);
-	aFilter->append(kTTSym_attribute, kTTSym_tag);
+	aFilter->append(kTTSym_attribute, kTTSym_tags);
 	aFilter->append(kTTSym_value, kTTSym_generic);
 	aFilter->append(kTTSym_mode, kTTSym_restrict);
 	defaultFilterBank->append(TTSymbol("genericTag"), (TTPtr)aFilter);
@@ -1279,15 +1279,45 @@ void jamoma_patcher_get_class(t_object *patcher, TTSymbol context, TTSymbol& ret
 	}
 	else {
 		
-		// in subpatcher look upper
+		// in subpatcher : look to the name else look upper
 		hierarchy = jamoma_patcher_get_hierarchy(patcher);
-		if (hierarchy == _sym_subpatcher || hierarchy == _sym_bpatcher) {
+		if (hierarchy == _sym_subpatcher) {
+            
+            long    ac = 0;
+            t_atom  *av = NULL;
+            
+            jamoma_patcher_get_args(patcher, &ac, &av);
+            
+            // remove first 'p' or 'patcher'
+            if (ac > 0 && av) {
+                if (atom_getsym(av) == _sym_p || atom_getsym(av) == _sym_patcher) {
+                    ac--;
+                    av++;
+                }
+            }
+            
+            // is there still arguments ?
+            if (ac > 0 && av) {
+                
+                // the first argument is the class
+                returnedClass = TTSymbol(atom_getsym(av)->s_name);
+            }
+            else {
+                
+                // get the patcher where is the patcher to look for the class one step upper
+                upperPatcher = jamoma_patcher_get(patcher);
 			
-			// get the patcher where is the patcher to look for the class one step upper
-			upperPatcher = jamoma_patcher_get(patcher);
-			
-			jamoma_patcher_get_class(upperPatcher, context, returnedClass);
+                jamoma_patcher_get_class(upperPatcher, context, returnedClass);
+            }
 		}
+        // in bpatcher : look upper
+        else if (hierarchy == _sym_bpatcher) {
+            
+            // get the patcher where is the patcher to look for the class one step upper
+            upperPatcher = jamoma_patcher_get(patcher);
+			
+            jamoma_patcher_get_class(upperPatcher, context, returnedClass);
+        }
 		// default case : a patcher has no class
 		else if (hierarchy == _sym_topmost)
 			returnedClass = kTTSymEmpty;
@@ -1307,13 +1337,24 @@ void jamoma_patcher_get_name(t_object *patcher, TTSymbol context, TTSymbol& retu
 	hierarchy = jamoma_patcher_get_hierarchy(patcher);
 	jamoma_patcher_get_args(patcher, &ac, &av);
 	
-	// ignore the first argument for subpatcher
+	// for subpatcher :
 	if (hierarchy == _sym_subpatcher) {
-		av++;
+        
+        // remove first 'p' or 'patcher'
+        if (ac > 0 && av) {
+            if (atom_getsym(av) == _sym_p || atom_getsym(av) == _sym_patcher) {
+                ac--;
+                av++;
+            }
+        }
+        
+        // remove the next argument because it is the class
 		ac--;
+        av++;
 	}
 	
-	if (ac && av) {
+    // is there still arguments ?
+	if (ac > 0 && av) {
         
         // notice we have to test view case before model case 
         // because a j.view can be in subpatcher too
@@ -1423,6 +1464,31 @@ void jamoma_patcher_get_input_output(t_object *patcher, TTBoolean& dataInput, TT
         
 		obj = object_attr_getobj(obj, _sym_nextobject);
 	}
+}
+
+/** Is there a j.ui object */
+TTBoolean jamoma_patcher_get_ui(t_object *patcher)
+{
+	TTValue		patcherInfo;
+	t_object	*obj;
+	t_symbol	*_sym_jcomcontext, *_sym_jui;
+    TTBoolean   uiObject = NO;
+
+	obj = object_attr_getobj(patcher, _sym_firstobject);
+	
+	// TODO : cache this t_symbol else where ...
+	_sym_jui = gensym("j.ui");
+	while (obj) {
+		_sym_jcomcontext = object_attr_getsym(obj, _sym_maxclass);
+		
+        uiObject = _sym_jcomcontext == _sym_jui;
+        if (uiObject)
+            break;
+        
+		obj = object_attr_getobj(obj, _sym_nextobject);
+	}
+    
+    return uiObject;
 }
 
 /** Get the "aClass.model" external in the patcher */
@@ -1718,6 +1784,15 @@ t_symbol *jamoma_parse_dieze(t_object *x, t_symbol *address)
 		// Try to get the patcher arguments
 		jamoma_patcher_get_args(patcher, &ac, &av);
 		if (hierarchy == _sym_subpatcher) {
+            
+            // remove first 'p' or 'patcher'
+            if (ac > 0 && av) {
+                if (atom_getsym(av) == _sym_p || atom_getsym(av) == _sym_patcher) {
+                    ac--;
+                    av++;
+                }
+            }
+            
 			av++;
 			ac--;
 		}

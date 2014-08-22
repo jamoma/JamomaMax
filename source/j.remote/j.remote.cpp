@@ -247,9 +247,7 @@ void remote_subscribe(TTPtr self)
             anObject = v[0];
             anObject.set(kTTSym_address, absoluteAddress.appendAttribute(kTTSym_description));
         }
-        
-        anObject.send(kTTSym_Get);
-        
+
         return;
 	}
 	
@@ -302,7 +300,6 @@ void remote_subscribe(TTPtr self)
             
             // observe model:address attribute (in view patcher : deferlow return_model_address)
             makeInternals_receiver(x, contextAddress, TTSymbol("model:address"), gensym("return_model_address"), anObject, x->patcherContext == kTTSym_view);
-            anObject.send(kTTSym_Get);
                 
             return;
         }
@@ -325,8 +322,6 @@ void remote_subscribe(TTPtr self)
             anObject = v[0];
             anObject.set(kTTSym_address, absoluteAddress.appendAttribute(kTTSym_description));
         }
-        
-        anObject.send(kTTSym_Get);
         
         return;
 	}
@@ -455,8 +450,6 @@ void remote_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *a
             anObject = v[0];
             anObject.set(kTTSym_address, absoluteAddress.appendAttribute(kTTSym_description));
         }
-        
-        anObject.send(kTTSym_Get);
 		
 		atom_setsym(a, gensym((char*)absoluteAddress.c_str()));
 		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);

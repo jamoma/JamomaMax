@@ -10,19 +10,15 @@
 	</description>
 	<!--METADATA-->
 	<metadatalist>
-		<metadata name="author">
-			Jamoma
-		</metadata>
-		<metadata name="tag">
-			TEXT_HERE
-		</metadata>
+		<metadata name="author">Jamoma</metadata>
+		<metadata name="tag">Jamoma</metadata>
 	</metadatalist>
+
+
 	<!--INLETS-->
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
-			<digest>
-				Multichannel input and control messages
-			</digest>
+			<digest>control messages</digest>
 			<description>
 				TEXT_HERE
 			</description>

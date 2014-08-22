@@ -127,6 +127,9 @@ void WrappedDataClass_new(TTPtr self, long argc, t_atom *argv)
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
 	x->outlets[index_out] = outlet_new(x, NULL);					// long outlet to output data index
 	x->outlets[data_out] = outlet_new(x, NULL);						// anything outlet to output data
+    
+    x->useInternals = YES;
+    x->internals->setThreadProtection(YES);
 	
 	x->arraySize = 0;
 	x->arrayIndex = 0;
@@ -268,11 +271,15 @@ void data_new_address(TTPtr self, t_symbol *relativeAddress)
 
 void data_array_create(TTPtr self, TTObject& returnedData, TTSymbol service, TTUInt32 index)
 {
-	TTValue	baton;
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    t_symbol    *iAdrs;
+	TTValue     baton;
 
 	returnedData = TTObject(kTTSym_Data, service);
     
-    baton = TTValue(self, index);
+    jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, index);
+    
+    baton = TTValue(self, index, TTSymbol(iAdrs->s_name));
 	returnedData.set(kTTSym_baton, baton);
 	returnedData.set(kTTSym_function, TTPtr(&data_array_return_value));
 }
@@ -412,16 +419,18 @@ void data_list(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 		
 		// send to each data
 		if (x->arrayIndex == 0) {
+            
 			TTValue keys;
-			if (!x->internals->isEmpty()) {
-				x->internals->getKeys(keys);
-				for (TTUInt32 i = 0; i < keys.size(); i++) {
-					x->cursor = keys[i];
-                    o = selectedObject;
-					jamoma_data_command(o, msg, argc, argv);
-				}
-			}
-			x->cursor = kTTSymEmpty;
+			
+            x->internals->getKeys(keys);
+            for (TTUInt32 i = 0; i < keys.size(); i++) {
+                x->cursor = keys[i];
+                o = selectedObject;
+                jamoma_data_command(o, msg, argc, argv);
+            }
+            
+            // watch an instance by default
+            x->cursor = keys[0];
 		}
 		else {
             o = selectedObject;
@@ -438,29 +447,10 @@ void WrappedDataClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *arg
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTObject o;
 	
-	if (proxy_getinlet((t_object*)x)) {
+	if (proxy_getinlet((t_object*)x))
 		wrappedModularClass_ArraySelect(self, msg, argc, argv);
-	}
-	else {
-		
-		// send to each data
-		if (x->arrayIndex == 0) {
-			TTValue keys;
-			if (!x->internals->isEmpty()) {
-				x->internals->getKeys(keys);
-				for (TTUInt32 i=0; i<keys.size(); i++) {
-					x->cursor = keys[i];
-                    o = selectedObject;
-					jamoma_data_command(o, msg, argc, argv);
-				}
-				x->cursor = kTTSymEmpty;
-			}
-		}
-		else {
-            o = selectedObject;
-			jamoma_data_command(o, msg, argc, argv);
-        }
-	}
+	else
+        data_list(self, msg, argc, argv);
 }
 
 void data_array(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
@@ -518,22 +508,19 @@ void data_array_return_value(const TTValue& baton, const TTValue& v)
 {
 	WrappedModularInstancePtr	x;
 	TTValue                     array;
-	t_symbol					*msg, *iAdrs;
+	t_symbol					*msg;
 	TTUInt32					i;
 	long						argc = 0;
 	t_atom						*argv = NULL;
 	TTBoolean					shifted = NO;
 
-	
-	// unpack baton (a t_object *and the index of the value)
+	// unpack baton (a t_object, the index of the value and the instance symbol)
 	x = WrappedModularInstancePtr((TTPtr)baton[0]);
 	i = baton[1];
 	
 	// output index
-	if (x->arrayIndex == 0) {
-		jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, i);
-		x->cursor = TTSymbol(iAdrs->s_name);
-	}
+	if (x->arrayIndex == 0)
+        x->cursor = baton[2];
 	
 	outlet_int(x->outlets[index_out], i);
 	

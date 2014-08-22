@@ -54,7 +54,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 232.0, 374.0, 180.0, 31.0 ],
-					"text" : "j.model @tag video @description \"neon glow effect\"",
+					"text" : "j.model @tags video @description \"neon glow effect\"",
 					"varname" : "j.model"
 				}
 
@@ -224,7 +224,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 14.0, 13.0, 355.0, 31.0 ],
-					"text" : "j.parameter luminance @type decimal @ramp/drive Max @range 0. 1. @description \"Sets the luminance.\"",
+					"text" : "j.parameter luminance @type decimal @ramp/drive max @range 0. 1. @description \"Sets the luminance.\"",
 					"varname" : "lum"
 				}
 
@@ -241,7 +241,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 75.0, 52.0, 350.0, 31.0 ],
-					"text" : "j.parameter tolerance @type decimal @ramp/drive Max @range 0. 1. @description \"Sets the tolerance.\"",
+					"text" : "j.parameter tolerance @type decimal @ramp/drive max @range 0. 1. @description \"Sets the tolerance.\"",
 					"varname" : "tol"
 				}
 

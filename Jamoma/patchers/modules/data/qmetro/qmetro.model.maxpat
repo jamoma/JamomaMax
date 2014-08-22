@@ -272,7 +272,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 157.0, 117.0, 591.0, 43.0 ],
-					"text" : "j.parameter randomness @type integer @ramp/drive Max @repetitions/filter 1 @range 0 5000 @clipmode low @description \"Defines a range of randomness in milliseconds to be applied to the metro interval\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter randomness @type integer @ramp/drive max @repetitions/filter 1 @range 0 5000 @clipmode low @description \"Defines a range of randomness in milliseconds to be applied to the metro interval\" @dataspace time @dataspace/unit ms",
 					"varname" : "randomness"
 				}
 
@@ -304,7 +304,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 87.0, 74.0, 606.0, 31.0 ],
-					"text" : "j.parameter time @type integer @ramp/drive Max @repetitions/filter 1 @range 1 5000 @clipmode low @dataspace time @dataspace/unit ms @description \"Metro interval (ms)\"",
+					"text" : "j.parameter time @type integer @ramp/drive max @repetitions/filter 1 @range 1 5000 @clipmode low @dataspace time @dataspace/unit ms @description \"Metro interval (ms)\"",
 					"varname" : "time"
 				}
 

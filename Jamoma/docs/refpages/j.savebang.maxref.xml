@@ -21,6 +21,9 @@
 		<metadata name="tag">
 			patching
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>

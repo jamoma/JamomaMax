@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
+ <!--protocols setup-->
+ <protocol name="OSC">
+  <i-score port="13580" ip="127.0.0.1"/>
+ </protocol>
+ <protocol name="Minuit">
+  <video port="9998u" ip="127.0.0.1"/>
+  <i-score port="13579" ip="127.0.0.1"/>
+ </protocol>
+ <!--applications namespace-->
+ <application name="video" author="" version="" type="mirror" cachedAttributes="rangeClipmode tag rangeBounds service priority">
+  <node address="window%(view)" object="Container" priority="0" service="view" tag="none">
+   <node address="sync(toggle)" object="Viewer" tag="none"/>
+   <size object="Viewer" tag="none"/>
+   <ui object="UiInfo"/>
+   <node address="shared(toggle)" object="Viewer" tag="none"/>
+   <position object="Viewer" tag="none"/>
+   <node address="name(textedit)" object="Viewer" tag="none"/>
+   <node address="interp(toggle)" object="Viewer" tag="none"/>
+   <node address="grow(toggle)" object="Viewer" tag="none"/>
+   <node address="fullscreen(toggle)" object="Viewer" tag="none"/>
+   <node address="fsmenubar(toggle)" object="Viewer" tag="none"/>
+   <fullscreen object="none">
+    <node address="shortcut(number)" object="Viewer" tag="none"/>
+   </fullscreen>
+   <model object="ModelInfo"/>
+   <node address="floating(toggle)" object="Viewer" tag="none"/>
+   <node address="doublebuffer(toggle)" object="Viewer" tag="none"/>
+   <node address="fsaa(toggle)" object="Viewer" tag="none"/>
+   <node address="depthbuffer(toggle)" object="Viewer" tag="none"/>
+   <node address="border(toggle)" object="Viewer" tag="none"/>
+  </node>
+  <node address="movie%(view)" object="Container" priority="0" service="view" tag="none">
+   <unique object="Viewer" tag="none"/>
+   <ui object="UiInfo"/>
+   <model object="ModelInfo"/>
+   <node address="rate(flonum)" object="Viewer" tag="none"/>
+   <node address="play(textbutton)" object="Viewer" tag="none"/>
+   <deinterlace object="Viewer" tag="none"/>
+   <singlefield object="Viewer" tag="none"/>
+   <dim object="Viewer" tag="none"/>
+   <loop object="none">
+    <node address="points(number)" object="Viewer" tag="none"/>
+    <report object="Viewer" tag="none"/>
+    <node address="mode(umenu)" object="Viewer" tag="none"/>
+   </loop>
+   <node address="colormode(umenu)" object="Viewer" tag="none"/>
+   <highquality object="Viewer" tag="none"/>
+   <adapt object="Viewer" tag="none"/>
+  </node>
+  <movie.1 object="Container" priority="0" service="model" tag="none">
+   <stop object="Data" rangeClipmode="none" tag="none" priority="0" service="message"/>
+   <play object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="message"/>
+   <loop object="none">
+    <notify object="Data" rangeClipmode="none" tag="none" priority="0" service="return"/>
+    <report object="Data" rangeClipmode="none" tag="none" priority="8" rangeBounds="0 1" service="parameter"/>
+    <points object="Data" rangeClipmode="low" tag="none" priority="7" rangeBounds="0 10600" service="parameter">
+     <reset object="Data" rangeClipmode="none" tag="none" priority="0" service="message"/>
+    </points>
+    <mode object="Data" rangeClipmode="none" tag="none" priority="6" rangeBounds="&quot;one shot&quot; loop palindrome" service="parameter"/>
+   </loop>
+   <model object="ModelInfo"/>
+   <length object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="return"/>
+   <eject object="Data" rangeClipmode="none" tag="none" priority="0" service="message"/>
+   <duration object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="return"/>
+   <dim object="Data" rangeClipmode="low" tag="none" priority="11" rangeBounds="1 1000" service="parameter"/>
+   <unique object="Data" rangeClipmode="none" tag="none" priority="10" rangeBounds="0 1" service="parameter"/>
+   <data object="none">
+    <out.1 object="Output"/>
+    <bypass object="Data" rangeClipmode="none" tag="generic" priority="2" rangeBounds="0 1" service="parameter"/>
+    <in.1 object="Input"/>
+    <active object="Data" rangeClipmode="none" tag="generic" priority="1" rangeBounds="0 1" service="parameter"/>
+   </data>
+   <vol object="Data" rangeClipmode="none" tag="none" priority="13" rangeBounds="0.000000 1.000000" service="parameter"/>
+   <time object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="return"/>
+   <deinterlace object="Data" rangeClipmode="none" tag="none" priority="16" rangeBounds="0 1" service="parameter"/>
+   <highquality object="Data" rangeClipmode="none" tag="none" priority="14" rangeBounds="0 1" service="parameter"/>
+   <moviename object="Data" rangeClipmode="none" tag="none" priority="0" service="return"/>
+   <path object="Data" rangeClipmode="none" tag="none" priority="17" service="parameter"/>
+   <start object="Data" rangeClipmode="none" tag="none" priority="0" service="message"/>
+   <adapt object="Data" rangeClipmode="none" tag="none" priority="12" rangeBounds="0 1" service="parameter"/>
+   <framemotor object="Data" rangeClipmode="none" tag="none" priority="3" rangeBounds="0 1" service="parameter">
+    <fps object="Data" rangeClipmode="low" tag="none" priority="0" rangeBounds="0 120" service="parameter"/>
+   </framemotor>
+   <frame object="Data" rangeClipmode="low" tag="none" priority="0" rangeBounds="0 100000" service="message"/>
+   <preset object="PresetManager"/>
+   <moviedim object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="return"/>
+   <rate object="Data" rangeClipmode="none" tag="none" priority="9" rangeBounds="-5.000000 5.000000" service="parameter"/>
+   <colormode object="Data" rangeClipmode="none" tag="none" priority="4" rangeBounds="argb uyvy" service="parameter"/>
+   <singlefield object="Data" rangeClipmode="none" tag="none" priority="15" rangeBounds="0 1" service="parameter"/>
+  </movie.1>
+  <node address="grab%(view)" object="Container" priority="0" service="view" tag="none">
+   <ui object="UiInfo"/>
+   <node address="input(umenu)" object="Viewer" tag="none"/>
+   <model object="ModelInfo"/>
+   <node address="device(umenu)" object="Viewer" tag="none"/>
+   <dim object="Viewer" tag="none"/>
+   <node address="status(umenu)" object="Viewer" tag="none"/>
+  </node>
+  <gl_videoplane object="Container" priority="0" service="model" tag="gl">
+   <preset object="PresetManager"/>
+   <model object="ModelInfo"/>
+   <data object="none">
+    <out.geometry_matrix object="Output"/>
+    <bypass object="Data" rangeClipmode="none" tag="generic" priority="0" rangeBounds="0 1" service="parameter"/>
+    <in.1 object="Input"/>
+    <active object="Data" rangeClipmode="none" tag="generic" priority="0" rangeBounds="0 1" service="parameter"/>
+   </data>
+   <videoplane object="none">
+    <texture object="none">
+     <scale object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+     <offset object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    </texture>
+    <nudge object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <interpolate object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <gridmode object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+    <displaylist object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <dim object="Data" rangeClipmode="low" tag="none" priority="0" rangeBounds="1 1000" service="parameter"/>
+    <colormode object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="argb uyvy" service="parameter"/>
+    <client_storage object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   </videoplane>
+   <GL object="Container" priority="255" service="model" tag="none">
+    <transform_reset object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <texture object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+    <tex_plane_s object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <tex_map object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <scale object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <preset object="PresetManager"/>
+    <poly_mode object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <point_size object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <model object="ModelInfo"/>
+    <inherit_all object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <filterclass object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+    <position object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <enable object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <line_width object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <depth object="none">
+     <write object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <inherit object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <enable object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <clear object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    </depth>
+    <light object="none">
+     <enable object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    </light>
+    <smooth_shading object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <cull_face object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <rotate object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <layer object="Data" rangeClipmode="low" tag="none" priority="0" rangeBounds="0 255" service="parameter"/>
+    <antialias object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <inherit_texture object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <viewalign object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <capture object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+    <tex_plane_t object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <blend object="none">
+     <mode object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 10" service="parameter"/>
+     <enable object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    </blend>
+    <alpha object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <color object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 1" service="parameter">
+     <inherit object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    </color>
+    <aux_alpha object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <matrixoutput object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 2" service="parameter"/>
+    <automatic object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <shader object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+    <axes object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <aux_color object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <anim object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+    <anchor object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <material object="none">
+     <shininess object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0.000000 255.000000" service="parameter"/>
+     <name object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+     <emission object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+     <diffuse object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+     <automatic object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <matfile object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+     <inherit object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <specular object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+     <ambient object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    </material>
+    <context object="Data" rangeClipmode="none" tag="none" priority="-1" service="parameter"/>
+    <fog object="none">
+     <params object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+     <inherit object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <amount object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    </fog>
+    <animmode object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+   </GL>
+  </gl_videoplane>
+  <node address="gl_render(view)" object="Container" priority="0" service="view" tag="none">
+   <ui object="UiInfo"/>
+   <node address="stereo(radiogroup)" object="Viewer" tag="none"/>
+   <model object="ModelInfo"/>
+   <node address="near_clip(flonum)" object="Viewer" tag="none"/>
+   <node address="gl_group(view)" object="Container" priority="0" service="view" tag="none">
+    <node address="transform_reset(umenu)" object="Viewer" tag="none"/>
+    <node address="smooth_shading(radiogroup)" object="Viewer" tag="none"/>
+    <node address="shader(textedit)" object="Viewer" tag="none"/>
+    <scale object="Viewer" tag="none"/>
+    <rotate object="Viewer" tag="none"/>
+    <position object="Viewer" tag="none"/>
+    <poly_mode object="Viewer" tag="none"/>
+    <model object="ModelInfo"/>
+    <tex_plane_s object="Viewer" tag="none"/>
+    <node address="matrixoutput(umenu)" object="Viewer" tag="none"/>
+    <node address="filterclass(textedit)" object="Viewer" tag="none"/>
+    <node address="line_width(flonum)" object="Viewer" tag="none"/>
+    <light object="none">
+     <node address="enable(radiogroup)" object="Viewer" tag="none"/>
+    </light>
+    <node address="inherit_all(radiogroup)" object="Viewer" tag="none"/>
+    <node address="tex_map(umenu)" object="Viewer" tag="none"/>
+    <fog object="none">
+     <params object="Viewer" tag="none"/>
+     <node address="inherit(radiogroup)" object="Viewer" tag="none"/>
+     <node address="amount(flonum)" object="Viewer" tag="none"/>
+    </fog>
+    <node address="cull_face(umenu)" object="Viewer" tag="none"/>
+    <node address="enable(radiogroup)" object="Viewer" tag="none"/>
+    <depth object="none">
+     <node address="write(radiogroup)" object="Viewer" tag="none"/>
+     <node address="inherit(radiogroup)" object="Viewer" tag="none"/>
+     <node address="enable(radiogroup)" object="Viewer" tag="none"/>
+     <node address="clear(radiogroup)" object="Viewer" tag="none"/>
+    </depth>
+    <node address="layer(number)" object="Viewer" tag="none"/>
+    <node address="viewalign(radiogroup)" object="Viewer" tag="none"/>
+    <tex_plane_t object="Viewer" tag="none"/>
+    <node address="aux_alpha(flonum)" object="Viewer" tag="none"/>
+    <blend object="none">
+     <mode object="Viewer" tag="none"/>
+     <node address="enable(radiogroup)" object="Viewer" tag="none"/>
+    </blend>
+    <node address="antialias(radiogroup)" object="Viewer" tag="none"/>
+    <node address="capture(textedit)" object="Viewer" tag="none"/>
+    <aux_color object="Viewer" tag="none"/>
+    <node address="axes(radiogroup)" object="Viewer" tag="none"/>
+    <color object="Viewer" tag="none">
+     <node address="inherit(radiogroup)" object="Viewer" tag="none"/>
+    </color>
+    <node address="anim(textedit)" object="Viewer" tag="none"/>
+    <node address="point_size(flonum)" object="Viewer" tag="none"/>
+    <anchor object="Viewer" tag="none"/>
+    <material object="none">
+     <node address="name(textedit)" object="Viewer" tag="none"/>
+     <emission object="Viewer" tag="none"/>
+     <node address="inherit(radiogroup)" object="Viewer" tag="none"/>
+     <node address="file(textedit)" object="Viewer" tag="none"/>
+     <node address="automatic(radiogroup)" object="Viewer" tag="none"/>
+     <node address="shininess(flonum)" object="Viewer" tag="none"/>
+     <diffuse object="Viewer" tag="none"/>
+     <specular object="Viewer" tag="none"/>
+     <ambient object="Viewer" tag="none"/>
+    </material>
+    <node address="animmode(umenu)" object="Viewer" tag="none"/>
+    <node address="context(textedit)" object="Viewer" tag="none"/>
+    <node address="texture(textedit)" object="Viewer" tag="none"/>
+    <node address="automatic(radiogroup)" object="Viewer" tag="none"/>
+    <node address="alpha(flonum)" object="Viewer" tag="none"/>
+   </node>
+   <node address="sync(radiogroup)" object="Viewer" tag="none"/>
+   <node address="framerate(flonum)" object="Viewer" tag="none"/>
+   <node address="far_clip(flonum)" object="Viewer" tag="none"/>
+   <node address="erase_color_alpha(flonum)" object="Viewer" tag="none"/>
+   <GL object="none">
+    <node address="context(textedit)" object="Viewer" tag="none"/>
+   </GL>
+   <erase_color object="Viewer" tag="none"/>
+   <node address="fsaa(radiogroup)" object="Viewer" tag="none"/>
+  </node>
+  <motion object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="return"/>
+  <cam.1 object="Container" priority="0" service="model" tag="none">
+   <status object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+   <settings object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="message"/>
+   <preset object="PresetManager"/>
+   <inputlist object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="return"/>
+   <getinputlist object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="message"/>
+   <device object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+   <framemotor object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter">
+    <fps object="Data" rangeClipmode="low" tag="none" priority="0" rangeBounds="0 120" service="parameter"/>
+   </framemotor>
+   <input object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+   <direct object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="message"/>
+   <model object="ModelInfo"/>
+   <devicelist object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="return"/>
+   <dim object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+   <getdevicelist object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="message"/>
+   <data object="none">
+    <out.1 object="Output"/>
+    <bypass object="Data" rangeClipmode="none" tag="generic" priority="0" rangeBounds="0 1" service="parameter"/>
+    <in.1 object="Input"/>
+    <active object="Data" rangeClipmode="none" tag="generic" priority="0" rangeBounds="0 1" service="parameter"/>
+   </data>
+  </cam.1>
+  <gl_render object="Container" priority="2" service="model" tag="OpenGL">
+   <worldtoscreen object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="return"/>
+   <verbose object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <sync object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <stereo object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <shared_context object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+   <screentoworld object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="return"/>
+   <rotate_order object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+   <draw_buffer object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+   <preset object="PresetManager"/>
+   <point_fade object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+   <point_atten object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+   <near_clip object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+   <light object="none">
+    <specular object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <position object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <global_ambient object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <diffuse object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <ambient object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   </light>
+   <fsaa object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <data object="none">
+    <out.1 object="Output"/>
+    <bypass object="Data" rangeClipmode="none" tag="generic" priority="0" rangeBounds="0 1" service="parameter"/>
+    <in.1 object="Input"/>
+    <active object="Data" rangeClipmode="none" tag="generic" priority="0" rangeBounds="0 1" service="parameter"/>
+   </data>
+   <far_clip object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+   <geom_rows object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <erase_color_alpha object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+   <GL object="Container" priority="255" service="model" tag="none">
+    <transform_reset object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <texture object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+    <tex_plane_s object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <tex_map object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <scale object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <preset object="PresetManager"/>
+    <poly_mode object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <point_size object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <model object="ModelInfo"/>
+    <inherit_all object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <filterclass object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+    <position object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <enable object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <line_width object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <depth object="none">
+     <write object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <inherit object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <enable object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <clear object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    </depth>
+    <light object="none">
+     <enable object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    </light>
+    <smooth_shading object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <cull_face object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <rotate object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <layer object="Data" rangeClipmode="low" tag="none" priority="0" rangeBounds="0 255" service="parameter"/>
+    <antialias object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <inherit_texture object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <viewalign object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <capture object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+    <tex_plane_t object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <blend object="none">
+     <mode object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 10" service="parameter"/>
+     <enable object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    </blend>
+    <alpha object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <color object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 1" service="parameter">
+     <inherit object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    </color>
+    <aux_alpha object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <matrixoutput object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 2" service="parameter"/>
+    <automatic object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <shader object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+    <axes object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <aux_color object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+    <anim object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+    <anchor object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <material object="none">
+     <shininess object="Data" rangeClipmode="both" tag="none" priority="0" rangeBounds="0.000000 255.000000" service="parameter"/>
+     <name object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+     <emission object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+     <diffuse object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+     <automatic object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <matfile object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+     <inherit object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <specular object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+     <ambient object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    </material>
+    <context object="Data" rangeClipmode="none" tag="none" priority="-1" service="parameter"/>
+    <fog object="none">
+     <params object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+     <inherit object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+     <amount object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    </fog>
+    <animmode object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+   </GL>
+   <debug object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <erase_color object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+   <draw object="Data" rangeClipmode="none" tag="none" priority="0" service="return"/>
+   <framerate object="Data" rangeClipmode="low" tag="none" priority="0" rangeBounds="0.000000 10000.000000" service="parameter"/>
+   <doublebuffer object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <done object="Data" rangeClipmode="none" tag="none" priority="0" service="return"/>
+   <model object="ModelInfo"/>
+   <copy_texture object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+   <camera object="none">
+    <up object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <position object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <lookat object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+    <lens_angle object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+   </camera>
+  </gl_render>
+  <node address="gl_videoplane(view)" object="Container" priority="0" service="view" tag="none">
+   <videoplane object="none">
+    <node address="interpolate(radiogroup)" object="Viewer" tag="none"/>
+    <texture object="none">
+     <scale object="Viewer" tag="none"/>
+     <offset object="Viewer" tag="none"/>
+    </texture>
+    <node address="colormode(umenu)" object="Viewer" tag="none"/>
+    <node address="gridmode(umenu)" object="Viewer" tag="none"/>
+    <node address="displaylist(radiogroup)" object="Viewer" tag="none"/>
+    <dim object="Viewer" tag="none"/>
+    <node address="nudge(flonum)" object="Viewer" tag="none"/>
+    <node address="client_storage(radiogroup)" object="Viewer" tag="none"/>
+   </videoplane>
+   <ui object="UiInfo"/>
+   <model object="ModelInfo"/>
+   <node address="gl_group(view)" object="Container" priority="0" service="view" tag="none">
+    <node address="transform_reset(umenu)" object="Viewer" tag="none"/>
+    <node address="smooth_shading(radiogroup)" object="Viewer" tag="none"/>
+    <node address="shader(textedit)" object="Viewer" tag="none"/>
+    <scale object="Viewer" tag="none"/>
+    <rotate object="Viewer" tag="none"/>
+    <position object="Viewer" tag="none"/>
+    <poly_mode object="Viewer" tag="none"/>
+    <model object="ModelInfo"/>
+    <tex_plane_s object="Viewer" tag="none"/>
+    <node address="matrixoutput(umenu)" object="Viewer" tag="none"/>
+    <node address="filterclass(textedit)" object="Viewer" tag="none"/>
+    <node address="line_width(flonum)" object="Viewer" tag="none"/>
+    <light object="none">
+     <node address="enable(radiogroup)" object="Viewer" tag="none"/>
+    </light>
+    <node address="inherit_all(radiogroup)" object="Viewer" tag="none"/>
+    <node address="tex_map(umenu)" object="Viewer" tag="none"/>
+    <fog object="none">
+     <params object="Viewer" tag="none"/>
+     <node address="inherit(radiogroup)" object="Viewer" tag="none"/>
+     <node address="amount(flonum)" object="Viewer" tag="none"/>
+    </fog>
+    <node address="cull_face(umenu)" object="Viewer" tag="none"/>
+    <node address="enable(radiogroup)" object="Viewer" tag="none"/>
+    <depth object="none">
+     <node address="write(radiogroup)" object="Viewer" tag="none"/>
+     <node address="inherit(radiogroup)" object="Viewer" tag="none"/>
+     <node address="enable(radiogroup)" object="Viewer" tag="none"/>
+     <node address="clear(radiogroup)" object="Viewer" tag="none"/>
+    </depth>
+    <node address="layer(number)" object="Viewer" tag="none"/>
+    <node address="viewalign(radiogroup)" object="Viewer" tag="none"/>
+    <tex_plane_t object="Viewer" tag="none"/>
+    <node address="aux_alpha(flonum)" object="Viewer" tag="none"/>
+    <blend object="none">
+     <mode object="Viewer" tag="none"/>
+     <node address="enable(radiogroup)" object="Viewer" tag="none"/>
+    </blend>
+    <node address="antialias(radiogroup)" object="Viewer" tag="none"/>
+    <node address="capture(textedit)" object="Viewer" tag="none"/>
+    <aux_color object="Viewer" tag="none"/>
+    <node address="axes(radiogroup)" object="Viewer" tag="none"/>
+    <color object="Viewer" tag="none">
+     <node address="inherit(radiogroup)" object="Viewer" tag="none"/>
+    </color>
+    <node address="anim(textedit)" object="Viewer" tag="none"/>
+    <node address="point_size(flonum)" object="Viewer" tag="none"/>
+    <anchor object="Viewer" tag="none"/>
+    <material object="none">
+     <node address="name(textedit)" object="Viewer" tag="none"/>
+     <emission object="Viewer" tag="none"/>
+     <node address="inherit(radiogroup)" object="Viewer" tag="none"/>
+     <node address="file(textedit)" object="Viewer" tag="none"/>
+     <node address="automatic(radiogroup)" object="Viewer" tag="none"/>
+     <node address="shininess(flonum)" object="Viewer" tag="none"/>
+     <diffuse object="Viewer" tag="none"/>
+     <specular object="Viewer" tag="none"/>
+     <ambient object="Viewer" tag="none"/>
+    </material>
+    <node address="animmode(umenu)" object="Viewer" tag="none"/>
+    <node address="context(textedit)" object="Viewer" tag="none"/>
+    <node address="texture(textedit)" object="Viewer" tag="none"/>
+    <node address="automatic(radiogroup)" object="Viewer" tag="none"/>
+    <node address="alpha(flonum)" object="Viewer" tag="none"/>
+   </node>
+  </node>
+  <window% object="Container" priority="1" service="model" tag="none">
+   <sync object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <shared object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <preset object="PresetManager"/>
+   <pickray object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="return">
+    <active object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   </pickray>
+   <position object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+   <mousewheel object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="return">
+    <active object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   </mousewheel>
+   <model object="ModelInfo"/>
+   <interpolate object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <idlemouse object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="return">
+    <active object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   </idlemouse>
+   <mouse object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="return"/>
+   <fullscreen object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter">
+    <shortcut object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   </fullscreen>
+   <size object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="parameter"/>
+   <fsmenubar object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <grow object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <fsaa object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <floating object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <front object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0.000000 1.000000" service="message"/>
+   <name object="Data" rangeClipmode="none" tag="none" priority="0" service="parameter"/>
+   <doublebuffer object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <depthbuffer object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+   <data object="none">
+    <in.1 object="Input"/>
+    <active object="Data" rangeClipmode="none" tag="generic" priority="0" rangeBounds="0 1" service="parameter"/>
+   </data>
+   <border object="Data" rangeClipmode="none" tag="none" priority="0" rangeBounds="0 1" service="parameter"/>
+  </window%>
+ </application>
+ <application name="i-score" author="" version="" type="local" cachedAttributes="">
+  <!---->
+  <Main object="Scenario" viewPosition="0 0" viewZoom="1.000000 1.000000" date="0.000000" duration="36000000u" rigid="0" endCondition="0" verticalSize="1u" position="0.000000" verticalPosition="0u" compiled="0" running="0" color="255 255 255" startCondition="0" name="Main" speed="1.000000" durationMax="0u" externalTick="0" endDate="36000000u" startDate="0u" mute="0" durationMin="0u" container="0"/>
+ </application>
+ <Scenario name="Main" mute="0" color="255 255 255" viewZoom="1.000000 1.000000" viewPosition="0 0">
+  <startEvent name="start" date="0u" mute="0"/>
+  <endEvent name="end" date="36000000u" mute="0"/>
+ </Scenario>
+</jamoma>

@@ -18,6 +18,9 @@
 		<metadata name="tag">
 			model
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<!-- <inletlist>
@@ -354,7 +357,7 @@
 				The priority of the model - used for preset and cue management
 			</description>
 		</attribute>
-		<attribute name="tag" get="1" set="1" type="atom" size="1">
+		<attribute name="tags" get="1" set="1" type="atom" size="1">
 			<digest>
 				Arbitrary list of tags that can be further used by several services such as j.namespace
 			</digest>

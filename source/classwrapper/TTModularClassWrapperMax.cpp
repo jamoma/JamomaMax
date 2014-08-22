@@ -531,7 +531,7 @@ void wrappedModularClass_dump(TTPtr self)
         object_obex_dumpout(self, gensym("address"), 1, &a);
     }
 #endif
-	
+    
     selectedObject->getAttributeNames(names);
 	
     for (i = 0; i < names.size(); i++) {
@@ -979,13 +979,14 @@ TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, t_symbo
     returnedViewer.set(kTTSym_baton, baton);
 	returnedViewer.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	
-	// Set address attributes
+	// edit address
 	adrs = address.appendAddress(TTAddress(name));
-    
-	returnedViewer.set(kTTSym_address, adrs);
 	
 	// default registration case : store object only (see in unregister method)
 	x->internals->append(name, returnedViewer);
+    
+    // set address attribute (after registration as the value can be updated in the same time)
+	returnedViewer.set(kTTSym_address, adrs);
     
     JamomaDebug object_post((t_object*)x, "makes internal \"%s\" viewer to bind on : %s", name.c_str(), adrs.c_str());
     
@@ -1022,16 +1023,17 @@ TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, t_sym
 	
 	returnedReceiver = TTObject(kTTSym_Receiver, args);
 	
-	// Set address attributes
+	// edit address
 	if (appendNameAsAttribute)
         adrs = address.appendAttribute(name);
     else
         adrs = address.appendAddress(TTAddress(name.c_str()));
 	
-	returnedReceiver.set(kTTSym_address, adrs);
-	
 	// default registration case : store object only (see in unregister method)
 	x->internals->append(name, returnedReceiver);
+    
+    // set address attribute (after registration as the value can be updated in the same time)
+    returnedReceiver.set(kTTSym_address, adrs);
     
     JamomaDebug object_post((t_object*)x, "makes internal \"%s\" receiver to bind on : %s", name.c_str(), adrs.c_str());
     
@@ -1053,16 +1055,17 @@ TTErr makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObjec
 	
 	returnedSender = TTObject(kTTSym_Sender);
 	
-	// Set address attributes
+	// edit address
 	if (appendNameAsAttribute)
         adrs = address.appendAttribute(name);
     else
         adrs = address.appendAddress(TTAddress(name.c_str()));
 	
-	returnedSender.set(kTTSym_address, adrs);
-	
 	// default registration case : store object only (see in unregister method)
 	x->internals->append(name, returnedSender);
+    
+    // set address attribute
+	returnedSender.set(kTTSym_address, adrs);
     
     JamomaDebug object_post((t_object*)x, "makes internal \"%s\" sender to bind on : %s", name.c_str(), adrs.c_str());
     

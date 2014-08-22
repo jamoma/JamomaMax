@@ -61,7 +61,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 213.857147, 217.0, 543.0, 33.0 ],
-					"text" : "j.message q @type decimal @ramp/drive Max @range 0. 100. @clipmode both @repetitions/filter 1 @description \"DEPRECATED: q resonance/slope. Use octave_bandwidth instead.\"",
+					"text" : "j.message q @type decimal @ramp/drive max @range 0. 100. @clipmode both @repetitions/filter 1 @description \"DEPRECATED: q resonance/slope. Use octave_bandwidth instead.\"",
 					"varname" : "q[1]"
 				}
 
@@ -352,7 +352,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 194.0, 151.0, 532.0, 33.0 ],
-					"text" : "j.parameter gain @type decimal @range -24 24 @clipmode both @ramp/drive Max @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter gain @type decimal @range -24 24 @clipmode both @ramp/drive max @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
 					"varname" : "filtergain"
 				}
 
@@ -368,7 +368,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 213.857147, 284.0, 532.0, 33.0 ],
-					"text" : "j.parameter octave_bandwidth @type decimal @ramp/drive Max @range 0.1 10. @clipmode both @repetitions/filter 1 @description \"Filter bandwidth/slope width expressed as octaves.\"",
+					"text" : "j.parameter octave_bandwidth @type decimal @ramp/drive max @range 0.1 10. @clipmode both @repetitions/filter 1 @description \"Filter bandwidth/slope width expressed as octaves.\"",
 					"varname" : "q"
 				}
 
@@ -384,7 +384,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 173.571426, 109.0, 605.0, 33.0 ],
-					"text" : "j.parameter frequency @type decimal @range 20. 20000. @clipmode both @ramp/drive Max @repetitions/filter 1 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
+					"text" : "j.parameter frequency @type decimal @range 20. 20000. @clipmode both @ramp/drive max @repetitions/filter 1 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
 					"varname" : "cf"
 				}
 

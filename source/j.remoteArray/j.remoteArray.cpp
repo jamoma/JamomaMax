@@ -249,11 +249,15 @@ void remote_new_address(TTPtr self, t_symbol *address)
 
 void remote_array_create(TTPtr self, TTObject& returnedViewer, TTUInt32 index)
 {
-	TTValue	baton;
-	
+    WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    t_symbol    *iAdrs;
+	TTValue     baton;
+    
 	returnedViewer = TTObject(kTTSym_Viewer);
     
-    baton = TTValue(self, index);
+    jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, index);
+    
+    baton = TTValue(self, index, TTSymbol(iAdrs->s_name));
 	returnedViewer.set(kTTSym_baton, baton);
 	returnedViewer.set(kTTSym_function, TTPtr(&remote_array_return_value));
 }
@@ -365,8 +369,6 @@ void remote_array_subscribe(TTPtr self, t_symbol *address)
         // make the model:address receiver binds on the model:address attribute
         EXTRA->modelAddressReceiver->set(kTTSym_address, contextAddress.appendAddress(TTAddress("model:address")));
         
-		// get the model:address value
-        EXTRA->modelAddressReceiver->send(kTTSym_Get);
         return;
 	}
 	
@@ -556,7 +558,8 @@ TTErr remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		
 		// send to each view
 		if (x->arrayIndex == 0) {
-			TTValue     keys;
+            
+			TTValue keys;
             
 			if (!x->internals->isEmpty()) {
 				x->internals->getKeys(keys);
@@ -570,7 +573,8 @@ TTErr remote_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 				}
 			}
             
-			x->cursor = kTTSymEmpty;
+            // watching the first instance by default
+            x->cursor = keys[0];
             
             return err;
 		}
@@ -590,29 +594,10 @@ void WrappedViewerClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *a
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTObject o;
 	
-	if (proxy_getinlet((t_object*)x)) {
+	if (proxy_getinlet((t_object*)x))
 		wrappedModularClass_ArraySelect(self, msg, argc, argv);
-	}
-	else {
-		
-		// send to each view
-		if (x->arrayIndex == 0) {
-			TTValue keys;
-			if (!x->internals->isEmpty()) {
-				x->internals->getKeys(keys);
-				for (int i = 0; i < keys.size(); i++) {
-					x->cursor = keys[i];
-                    o = selectedObject;
-					jamoma_viewer_send(o, msg, argc, argv);
-				}
-				x->cursor = kTTSymEmpty;
-			}
-		}
-		else {
-            o = selectedObject;
-			jamoma_viewer_send(o, msg, argc, argv);
-        }
-	}
+	else
+        remote_list(self, msg, argc, argv);
 }
 
 TTErr remote_array(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
@@ -684,13 +669,13 @@ void remote_array_return_value(const TTValue& baton, const TTValue& v)
 {
     WrappedModularInstancePtr	x;
 	TTValue						array;
-	t_symbol					*msg, *iAdrs;
+	t_symbol					*msg;
 	long						argc = 0;
 	TTUInt32					i, j;
 	t_atom*						argv = NULL;
 	TTBoolean					shifted = NO;
     
-	// unpack baton (a t_object* and the index of the value)
+	// unpack baton (a t_object, the index of the value and the instance symbol)
 	x = WrappedModularInstancePtr((TTPtr)baton[0]);
 	i = baton[1];
     
@@ -701,10 +686,8 @@ void remote_array_return_value(const TTValue& baton, const TTValue& v)
     }
 	
 	// output index
-	if (x->arrayIndex == 0) {
-		jamoma_edit_numeric_instance(x->arrayFormatInteger, &iAdrs, i);
-		x->cursor = TTSymbol(iAdrs->s_name);
-	}
+	if (x->arrayIndex == 0)
+		x->cursor = baton[2];
     
 	outlet_int(x->outlets[index_out], i);
 		
@@ -810,11 +793,16 @@ void remote_create_model_address_receiver(TTPtr self)
 	args.append(returnValueCallback);
 	
 	EXTRA->modelAddressReceiver = new TTObject(kTTSym_Receiver, args);
+    
+    // DEBUG
+    EXTRA->modelAddressReceiver->track(YES);
 }
 
 void remote_free_model_address_receiver(TTPtr self)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    EXTRA->modelAddressReceiver->set(kTTSym_address, kTTAdrsEmpty);
     
     delete EXTRA->modelAddressReceiver;
 }

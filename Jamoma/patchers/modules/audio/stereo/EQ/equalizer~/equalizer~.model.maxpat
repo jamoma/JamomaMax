@@ -1283,7 +1283,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 77.0, 60.0, 132.0, 127.0 ],
-					"text" : "j.parameter bands @type integer @priority 1 @description \"Number of bands of the filter\" @tag setup @repetitions/filter 1 @clipmode both @range 1 24",
+					"text" : "j.parameter bands @type integer @priority 1 @description \"Number of bands of the filter\" @tags setup @repetitions/filter 1 @clipmode both @range 1 24",
 					"varname" : "bands[1]"
 				}
 

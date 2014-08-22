@@ -280,7 +280,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 327.0, 60.0, 151.0, 127.0 ],
-									"text" : "j.parameter feedback/gain @type decimal @ramp/drive Max @repetitions/filter 1 @range -60 6 @clipmode both @description \"Feedback gain leven (dB).\" @dataspace gain @dataspace/unit dB",
+									"text" : "j.parameter feedback/gain @type decimal @ramp/drive max @repetitions/filter 1 @range -60 6 @clipmode both @description \"Feedback gain leven (dB).\" @dataspace gain @dataspace/unit dB",
 									"varname" : "feedback"
 								}
 
@@ -296,7 +296,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 503.0, 60.0, 156.0, 127.0 ],
-									"text" : "j.parameter feedback/time @type decimal @ramp/drive Max @repetitions/filter 1 @range 0 200 @clipmode both @description \"Feedback delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
+									"text" : "j.parameter feedback/time @type decimal @ramp/drive max @repetitions/filter 1 @range 0 200 @clipmode both @description \"Feedback delay time in milliseconds.\" @dataspace time @dataspace/unit ms",
 									"varname" : "right"
 								}
 

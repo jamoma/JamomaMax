@@ -167,7 +167,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 319.0, 150.0, 424.0, 31.0 ],
-					"text" : "j.parameter edgeblend/fade/bottom @type decimal @ramp/drive Max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
+					"text" : "j.parameter edgeblend/fade/bottom @type decimal @ramp/drive max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/bottom"
 				}
 
@@ -184,7 +184,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 286.5, 108.0, 421.0, 31.0 ],
-					"text" : "j.parameter edgeblend/fade/right @type decimal @ramp/drive Max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
+					"text" : "j.parameter edgeblend/fade/right @type decimal @ramp/drive max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/right"
 				}
 
@@ -201,7 +201,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 254.0, 59.0, 417.0, 31.0 ],
-					"text" : "j.parameter edgeblend/fade/top @type decimal @ramp/drive Max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
+					"text" : "j.parameter edgeblend/fade/top @type decimal @ramp/drive max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/top"
 				}
 
@@ -218,7 +218,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 221.5, 23.0, 417.0, 31.0 ],
-					"text" : "j.parameter edgeblend/fade/left @type decimal @ramp/drive Max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
+					"text" : "j.parameter edgeblend/fade/left @type decimal @ramp/drive max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/left"
 				}
 

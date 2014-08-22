@@ -18,6 +18,9 @@
 		<metadata name="tag">
 			parameter
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
@@ -366,7 +369,7 @@
 				TEXT_HERE
 			</description>
 		</attribute> -->
-		<attribute name="tag" get="1" set="1" type="atom" size="1">
+		<attribute name="tags" get="1" set="1" type="atom" size="1">
 			<digest>
 				Some optional tags
 			</digest>

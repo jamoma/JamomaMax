@@ -161,7 +161,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 18.0, 131.0, 372.0, 19.0 ],
-					"text" : "j.model @tag control @description \"Browsing and selecting files\"",
+					"text" : "j.model @tags control @description \"Browsing and selecting files\"",
 					"varname" : "j.model"
 				}
 

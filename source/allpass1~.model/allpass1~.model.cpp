@@ -112,7 +112,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 		TTValue container_args; // TODO: (optional) pass address callback and value callback (these are both for the activity return mechanism)
 		
 		x->model = TTObject(kTTSym_Container, container_args);
-		x->model.set(kTTSym_tag, kTTSym_model);
+		x->model.set(kTTSym_tags, kTTSym_model);
 		
         TTValue registration_args(x->name, x->model, context);
         JamomaApplication.send("ObjectRegister", registration_args, none);

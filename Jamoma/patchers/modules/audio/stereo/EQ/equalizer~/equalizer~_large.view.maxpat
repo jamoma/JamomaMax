@@ -2,13 +2,13 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 0,
-			"revision" : 0,
+			"major" : 6,
+			"minor" : 1,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1680.0, 956.0 ],
+		"rect" : [ 0.0, 44.0, 450.0, 420.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -18,15 +18,16 @@
 		"gridsize" : [ 15.0, 15.0 ],
 		"gridsnaponopen" : 0,
 		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
+		"toolbarvisible" : 0,
 		"boxanimatetime" : 200,
 		"imprint" : 0,
-		"enablehscroll" : 1,
-		"enablevscroll" : 1,
+		"enablehscroll" : 0,
+		"enablevscroll" : 0,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"title" : "/equalizer~(view)",
 		"boxes" : [ 			{
 				"box" : 				{
 					"bubble" : 1,
@@ -38,7 +39,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1084.333496, 521.0, 156.0, 24.0 ],
-					"presentation_rect" : [ 1083.333496, 519.5, 0.0, 0.0 ],
 					"text" : "Display phase response"
 				}
 
@@ -131,7 +131,7 @@
 					"presentation_rect" : [ 14.500031, 36.0, 420.999939, 180.0 ],
 					"prototypename" : "M4L.black",
 					"range" : [ 0.041667, 24.0 ],
-					"setfilter" : [ 0, 5, 1, 1, 0, 1182.533447, 0.425347, 0.72338, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"setfilter" : [ 0, 6, 1, 1, 0, 75.0, 1.0, 1.414214, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
 					"textcolor" : [ 0.666667, 0.698039, 0.717647, 0.0 ]
 				}
 
@@ -154,7 +154,7 @@
 					"logmarkers" : [ 31.25, 62.5, 125.0, 250.0, 500.0, 1000.0, 2000.0, 4000.0, 8000.0, 16000.0 ],
 					"markercolor" : [ 0.301961, 0.337255, 0.403922, 0.0 ],
 					"maxclass" : "filtergraph~",
-					"nfilters" : 1,
+					"nfilters" : 4,
 					"numdisplay" : 0,
 					"numinlets" : 8,
 					"numoutlets" : 7,
@@ -166,7 +166,7 @@
 					"presentation_rect" : [ 14.500031, 36.0, 420.999939, 180.0 ],
 					"prototypename" : "M4L.black",
 					"range" : [ 0.041667, 24.0 ],
-					"setfilter" : [ 0, 0, 1, 1, 0, 102.889992, 0.101838, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"setfilter" : [ 3, 0, 1, 0, 0, 135.0, 1.0, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2, 0, 1, 0, 0, 90.0, 1.0, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 0, 1, 0, 0, 60.0, 1.0, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 0, 1, 1, 0, 102.889992, 0.101838, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
 					"textcolor" : [ 0.666667, 0.698039, 0.717647, 0.0 ]
 				}
 
@@ -189,7 +189,7 @@
 					"logmarkers" : [ 31.25, 62.5, 125.0, 250.0, 500.0, 1000.0, 2000.0, 4000.0, 8000.0, 16000.0 ],
 					"markercolor" : [ 0.301961, 0.337255, 0.403922, 1.0 ],
 					"maxclass" : "filtergraph~",
-					"nfilters" : 1,
+					"nfilters" : 4,
 					"numdisplay" : 0,
 					"numinlets" : 8,
 					"numoutlets" : 7,
@@ -200,7 +200,7 @@
 					"presentation_rect" : [ 14.500031, 36.0, 420.999939, 180.0 ],
 					"prototypename" : "M4L.black",
 					"range" : [ 0.041667, 24.0 ],
-					"setfilter" : [ 0, 0, 1, 1, 0, 102.889992, 0.101838, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"setfilter" : [ 3, 0, 1, 0, 0, 135.0, 1.0, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2, 0, 1, 0, 0, 90.0, 1.0, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 0, 1, 0, 0, 60.0, 1.0, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 0, 1, 1, 0, 102.889992, 0.101838, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
 					"textcolor" : [ 0.666667, 0.698039, 0.717647, 1.0 ]
 				}
 
@@ -530,26 +530,19 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-18",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 0,
-							"revision" : 0,
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -877,8 +870,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p update_tabs",
-					"viewvisibility" : 0
+					"text" : "p update_tabs"
 				}
 
 			}
@@ -995,7 +987,7 @@
 					"prototypename" : "M4L.2",
 					"rounded" : 0.0,
 					"tabcolor" : [ 0.568627, 0.619608, 0.662745, 1.0 ],
-					"tabs" : [ "1", "2", "3", "4", "5" ],
+					"tabs" : [ "1", "2", "3", "4" ],
 					"textcolor" : [ 0.101961, 0.121569, 0.172549, 1.0 ]
 				}
 
@@ -1003,30 +995,23 @@
 , 			{
 				"box" : 				{
 					"annotation" : "none",
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-35",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 6,
 					"numoutlets" : 6,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 0,
-							"revision" : 0,
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 1229.0, 473.0 ],
+						"rect" : [ 460.0, 44.0, 1229.0, 473.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1051,13 +1036,13 @@
 									"fontname" : "Helvetica Neue Light",
 									"fontsize" : 14.0,
 									"id" : "obj-5",
-									"linecount" : 2,
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 441.0, 100.0, 149.0, 40.0 ],
-									"text" : "j.remote frequency @dataspace/unit midi"
+									"patching_rect" : [ 441.0, 100.0, 177.0, 56.0 ],
+									"text" : "j.remote frequency frequency.midi_converter @dataspace/unit midi"
 								}
 
 							}
@@ -1446,34 +1431,26 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p filter_numeric_view",
-					"viewvisibility" : 0
+					"text" : "p filter_numeric"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"annotation" : "none",
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-21",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 4,
 					"numoutlets" : 3,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "", "" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 0,
-							"revision" : 0,
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1521,26 +1498,19 @@
 							}
 , 							{
 								"box" : 								{
-									"bgmode" : 0,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
 									"fontname" : "Helvetica Neue Light",
 									"fontsize" : 14.0,
 									"id" : "obj-45",
-									"lockeddragscroll" : 0,
 									"maxclass" : "newobj",
 									"numinlets" : 4,
 									"numoutlets" : 4,
-									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "", "", "", "" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 7,
-											"minor" : 0,
-											"revision" : 0,
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -1855,8 +1825,7 @@
 										"tags" : ""
 									}
 ,
-									"text" : "p gate_when_changing_type",
-									"viewvisibility" : 0
+									"text" : "p gate_when_changing_type"
 								}
 
 							}
@@ -1947,47 +1916,31 @@
 							}
 , 							{
 								"box" : 								{
-									"bgmode" : 0,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
 									"fontname" : "Helvetica Neue Light",
 									"fontsize" : 14.0,
 									"id" : "obj-15",
 									"linecount" : 2,
-									"lockeddragscroll" : 0,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 694.861084, 208.0, 131.0, 23.0 ],
-									"text" : "j.q2octavebandwidth",
-									"viewvisibility" : 0
+									"text" : "j.q2octavebandwidth"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgmode" : 0,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
 									"fontname" : "Helvetica Neue Light",
 									"fontsize" : 14.0,
 									"id" : "obj-12",
 									"linecount" : 2,
-									"lockeddragscroll" : 0,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 694.861084, 320.0, 131.0, 23.0 ],
-									"text" : "j.octavebandwidth2q",
-									"viewvisibility" : 0
+									"text" : "j.octavebandwidth2q"
 								}
 
 							}
@@ -2331,8 +2284,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p filter_graph_view",
-					"viewvisibility" : 0
+					"text" : "p filter_graph"
 				}
 
 			}
@@ -2494,23 +2446,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-61",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1228.388916, 275.0, 118.0, 20.0 ],
-					"text" : "j.octavebandwidth2q",
-					"viewvisibility" : 0
+					"text" : "j.octavebandwidth2q"
 				}
 
 			}
@@ -2611,13 +2555,13 @@
 					"linmarkers" : [ 0.0, 11025.0, 16537.5 ],
 					"logmarkers" : [ 0.0, 100.0, 1000.0, 10000.0 ],
 					"maxclass" : "filtergraph~",
-					"nfilters" : 1,
+					"nfilters" : 4,
 					"numinlets" : 8,
 					"numoutlets" : 7,
 					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 854.666687, 357.5, 185.366669, 43.5 ],
-					"setfilter" : [ 0, 5, 1, 0, 0, 56.437965, 1.0, 2.21, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+					"setfilter" : [ 3, 7, 1, 0, 0, 5000.0, 1.0, 1.414214, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2, 5, 1, 0, 0, 1000.0, 1.0, 1.414214, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 5, 1, 0, 0, 300.0, 1.0, 1.414214, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 6, 1, 0, 0, 75.0, 1.0, 1.414214, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 				}
 
 			}
@@ -2650,7 +2594,7 @@
 					"patching_rect" : [ 34.0, 11.0, 300.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 450.0, 420.0 ],
-					"text" : "/no_model_address"
+					"text" : "/eq"
 				}
 
 			}
@@ -3207,56 +3151,6 @@
 					"source" : [ "obj-9", 1 ]
 				}
 
-			}
- ],
-		"parameters" : 		{
-			"obj-45" : [ "live.text", "live.text", 0 ],
-			"obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-46" : [ "live.text[1]", "live.text", 0 ],
-			"obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-9" : [ "live.menu", "live.menu", 0 ],
-			"obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-19" : [ "live.numbox", "live.numbox", 0 ]
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "j.octavebandwidth2q.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
-				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.q2octavebandwidth.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
-				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remoteArray.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

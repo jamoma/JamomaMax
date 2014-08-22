@@ -179,7 +179,6 @@ void nmspc_subscribe(TTPtr self)
 		x->wrappedObject.set(kTTSym_address, x->address);
 		
 		makeInternals_receiver(x, contextAddress, TTSymbol("/model:address"), gensym("return_model_address"), anObject, YES); // YES : we want to deferlow this method
-		anObject.send(kTTSym_Get);
 	}
 	
 	// while the context node is not registered : try to binds again :(

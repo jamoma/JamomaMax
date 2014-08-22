@@ -1168,7 +1168,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 291.0, 257.5, 203.0, 33.0 ],
-									"text" : "j.model @tag control @description \"this model doesn't do anything\"",
+									"text" : "j.model @tags control @description \"this model doesn't do anything\"",
 									"varname" : "j.hub"
 								}
 

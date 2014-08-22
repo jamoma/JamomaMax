@@ -614,7 +614,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 118.0, 196.0, 455.0, 31.0 ],
-													"text" : "j.parameter camera/up @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera up vector.\" @default 0. 1. 0.",
+													"text" : "j.parameter camera/up @type array @ramp/drive max @dataspace position @dataspace/unit openGL @description \"Camera up vector.\" @default 0. 1. 0.",
 													"varname" : "3D/position[3]"
 												}
 
@@ -645,7 +645,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 72.0, 121.0, 431.0, 31.0 ],
-													"text" : "j.parameter camera/lookat @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera lookat position.\" @default 0. 0. 0.",
+													"text" : "j.parameter camera/lookat @type array @ramp/drive max @dataspace position @dataspace/unit openGL @description \"Camera lookat position.\" @default 0. 0. 0.",
 													"varname" : "3D/position[1]"
 												}
 
@@ -706,7 +706,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 39.0, 42.799988, 621.0, 31.0 ],
-													"text" : "j.parameter camera/position @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera position.\" @default 0. 0. 2.",
+													"text" : "j.parameter camera/position @type array @ramp/drive max @dataspace position @dataspace/unit openGL @description \"Camera position.\" @default 0. 0. 2.",
 													"varname" : "3D/position"
 												}
 
@@ -1407,7 +1407,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 32.0, 188.799988, 771.0, 31.0 ],
-													"text" : "j.parameter point_atten @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Point attenuation factor for point sprites.\" @default 1. 0. 0.1",
+													"text" : "j.parameter point_atten @type array @ramp/drive max @dataspace position @dataspace/unit openGL @description \"Point attenuation factor for point sprites.\" @default 1. 0. 0.1",
 													"varname" : "3D/position[2]"
 												}
 
@@ -2329,7 +2329,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 473.25, 144.0, 159.0, 43.0 ],
-					"text" : "j.model #1 @tag OpenGL @description \"create a GL render context.\"  @priority 2"
+					"text" : "j.model @tags OpenGL @description \"create a GL render context.\"  @priority 2"
 				}
 
 			}

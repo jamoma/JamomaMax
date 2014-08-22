@@ -31,7 +31,7 @@ public:
 	{
 		// create container object
 		mContainer = TTObject("Container"); // TODO: (optional) pass address callback and value callback (these are both for the activity return mechanism)
-		mContainer.set(kTTSym_tag, kTTSym_model);
+		mContainer.set(kTTSym_tags, kTTSym_model);
 		
         // register the container object into the local application directly under the root
 		TTAddress	address = kTTAdrsRoot.appendAddress(TTAddress(mName));
