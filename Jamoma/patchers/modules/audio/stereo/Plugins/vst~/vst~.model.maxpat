@@ -1303,7 +1303,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 341.333344, 481.0, 161.0, 60.0 ],
-					"text" : "j.model @tag audio effects @description \"Wrap VST and AudioUnit plug-ins as a Jamoma model.\""
+					"text" : "j.model @tags audio effects @description \"Wrap VST and AudioUnit plug-ins as a Jamoma model.\""
 				}
 
 			}
