@@ -332,7 +332,7 @@ void send_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *arg
 	TTAddress                   absoluteAddress;
 	t_atom						a[1];
 	
-	if (argc && argv && x->wrappedObject.valid()) {
+	if (argc && argv && x->wrappedObject.valid() && x->address.getType() == kAddressRelative) {
 		
 		// set address attribute of the wrapped Receiver object
 		absoluteAddress = TTAddress(atom_getsym(argv)->s_name).appendAddress(x->address);
@@ -432,8 +432,22 @@ void send_address(TTPtr self, t_symbol *address)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     t_atom						a[1];
+    TTAddress                   newAddress = TTAddress(jamoma_parse_dieze((t_object*)x, address)->s_name);
     
-    x->address =  TTAddress(jamoma_parse_dieze((t_object*)x, address)->s_name);
+    // if the former address was relative and the new one is absolute :
+    // we don't need model:address receiver anymore
+    if (x->address.getType() == kAddressRelative &&
+        newAddress.getType() == kAddressAbsolute) {
+        
+        TTValue v;
+        TTErr   err = x->internals->lookup(TTSymbol("/model:address"), v);
+        
+        if (!err)
+            x->internals->remove(TTSymbol("/model:address"));
+    }
+    
+    // assign the new address
+	x->address = newAddress;
     
     // for absolute address
 	if (x->address.getType() == kAddressAbsolute) {
@@ -442,6 +456,9 @@ void send_address(TTPtr self, t_symbol *address)
 		
 		atom_setsym(a, gensym((char*)x->address.c_str()));
 		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
+        
+        JamomaDebug object_post((t_object*)x, "binds on %s", x->address.c_str());
+        
 		return;
 	}
     

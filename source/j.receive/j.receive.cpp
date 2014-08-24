@@ -299,7 +299,7 @@ void receive_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *
 	TTAddress                   absoluteAddress;
 	t_atom						a[1];
 	
-	if (argc && argv && x->wrappedObject.valid()) {
+	if (argc && argv && x->wrappedObject.valid() && x->address.getType() == kAddressRelative) {
 		
 		// set address attribute of the wrapped Receiver object
 		absoluteAddress = TTAddress(atom_getsym(argv)->s_name).appendAddress(x->address);
@@ -400,6 +400,7 @@ void receive_address(TTPtr self, t_symbol *address)
 	if (x->address.getType() == kAddressAbsolute) {
 		
 		x->wrappedObject.set(kTTSym_address, x->address);
+        
 		atom_setsym(a, gensym((char*)x->address.c_str()));
 		object_obex_dumpout((t_object*)x, gensym("address"), 1, a);
         
