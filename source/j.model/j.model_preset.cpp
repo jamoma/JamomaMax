@@ -39,9 +39,7 @@ void model_preset_amenities(TTPtr self)
 	
         EXTRA->presetManager->set(kTTSym_address, modelAdrs);
         
-        // if desired, load default modelClass.patcherContext.presets.txt file preset
-        if (EXTRA->attr_load_default)
-            defer_low(x, (method)model_preset_default, 0, 0, 0L);
+        defer_low(x, (method)model_preset_default, 0, 0, 0L);
     }
 }
 
@@ -231,8 +229,12 @@ void model_preset_default(TTPtr self)
 	t_symbol*	textfile;
 
 	if (x->patcherClass != kTTSymEmpty) {
-		
-		if (x->patcherContext == kTTSym_model)
+        
+        if (EXTRA->attr_presets != kTTSym_none) {
+            
+            textfile = gensym(EXTRA->attr_presets.c_str());
+        }
+		else if (x->patcherContext == kTTSym_model)
 			jamoma_edit_filename(*ModelPresetFormat, x->patcherClass, &textfile);
 		
 		else if (x->patcherContext == kTTSym_view)
@@ -449,20 +451,20 @@ void model_preset_doedit(TTPtr self)
 	EXTRA->presetName = kTTSymEmpty;
 }
 
-t_max_err model_preset_set_load_default(TTPtr self, TTPtr attr, long ac, const t_atom *av) 
+t_max_err model_preset_set_presets(TTPtr self, TTPtr attr, long ac, const t_atom *av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
 	if (ac&&av) {
-		EXTRA->attr_load_default = atom_getlong(av) == 1;
+		EXTRA->attr_presets = TTSymbol(atom_getsym(av)->s_name);
 	}
 	else
-		EXTRA->attr_load_default = true; // default true
+		EXTRA->attr_presets = kTTSym_none; // default true
 	
 	return MAX_ERR_NONE;
 }
 
-t_max_err model_preset_get_load_default(TTPtr self, TTPtr attr, long *ac, t_atom **av)
+t_max_err model_preset_get_presets(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -477,7 +479,7 @@ t_max_err model_preset_get_load_default(TTPtr self, TTPtr attr, long *ac, t_atom
 		}
 	}
 	
-	atom_setlong(*av, EXTRA->attr_load_default == 1);
+	atom_setsym(*av, gensym(EXTRA->attr_presets.c_str()));
 	
 	return MAX_ERR_NONE;
 }

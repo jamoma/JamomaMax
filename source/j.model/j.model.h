@@ -30,7 +30,7 @@ typedef struct extra {
 	t_object            *textEditor;		///< The text editor window.
     
     TTObject            *presetManager;		///< The preset manager object.
-    TTBoolean           attr_load_default;
+    TTSymbol            attr_presets;
 	TTPtr               filewatcher;		///< A preset filewatcher.
 	TTObject            *toEdit;			///< The object to edit (a preset or all the preset list).
 	TTSymbol            presetName;			///< The name of the edited preset.
@@ -301,7 +301,7 @@ void		model_preset_doedit(TTPtr self);
  @param ac
  @param av
  */
-t_max_err	model_preset_get_load_default(TTPtr self, TTPtr attr, long *ac, t_atom **av);
+t_max_err	model_preset_get_presets(TTPtr self, TTPtr attr, long *ac, t_atom **av);
 
 
 /**
@@ -310,7 +310,7 @@ t_max_err	model_preset_get_load_default(TTPtr self, TTPtr attr, long *ac, t_atom
  @param ac
  @param av
  */
-t_max_err	model_preset_set_load_default(TTPtr self, TTPtr attr, long ac, const t_atom *av);
+t_max_err	model_preset_set_presets(TTPtr self, TTPtr attr, long ac, const t_atom *av);
 
 
 /**

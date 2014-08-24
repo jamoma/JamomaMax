@@ -78,16 +78,16 @@ void WrapTTContainerClass(WrappedClassPtr c)
     class_addmethod(c->maxClass, (method)model_signal_return_audio_bypass,  "return_audio_bypass",  A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_return_audio_mix,     "return_audio_mix",     A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_return_audio_gain,    "return_audio_gain",	A_CANT, 0);
-	
-	CLASS_ATTR_LONG(c->maxClass,		"load_default",	0,		WrappedModularInstance,	extra);
-	CLASS_ATTR_DEFAULT(c->maxClass,		"load_default",	0,		"1");
-	CLASS_ATTR_ACCESSORS(c->maxClass,	"load_default",			model_preset_get_load_default,	model_preset_set_load_default);
-	CLASS_ATTR_STYLE(c->maxClass,		"load_default",	0,		"onoff");
     
     CLASS_ATTR_ATOM(c->maxClass,        "amenities",	0,		WrappedModularInstance,	extra);
 	CLASS_ATTR_DEFAULT(c->maxClass,		"amenities",	0,		"all");
 	CLASS_ATTR_ACCESSORS(c->maxClass,	"amenities",			model_get_amenities, model_set_amenities);
 	CLASS_ATTR_STYLE(c->maxClass,		"amenities",	0,		"text");
+    
+    CLASS_ATTR_ATOM(c->maxClass,        "presets",	0,          WrappedModularInstance,	extra);
+	CLASS_ATTR_DEFAULT(c->maxClass,		"presets",	0,          "none");
+	CLASS_ATTR_ACCESSORS(c->maxClass,	"presets",              model_preset_get_presets, model_preset_set_presets);
+	CLASS_ATTR_STYLE(c->maxClass,		"presets",	0,          "text");
 }
 
 void WrappedContainerClass_new(TTPtr self, long argc, t_atom *argv)
@@ -127,7 +127,7 @@ void WrappedContainerClass_new(TTPtr self, long argc, t_atom *argv)
     EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
     EXTRA->presetManager = new TTObject();
-    EXTRA->attr_load_default = true;
+    EXTRA->attr_presets = kTTSym_none;
 	EXTRA->filewatcher = NULL;
     EXTRA->toEdit = new TTObject();
 	*EXTRA->toEdit = x->wrappedObject;
