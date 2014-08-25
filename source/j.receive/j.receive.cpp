@@ -384,8 +384,13 @@ void receive_address(TTPtr self, t_symbol *address)
         TTValue v;
         TTErr   err = x->internals->lookup(TTSymbol("/model:address"), v);
         
-        if (!err)
+        if (!err) {
+            
+            TTObject aReceiver = v[0];
+            aReceiver.set(kTTSym_address, kTTAdrsEmpty);
+            
             x->internals->remove(TTSymbol("/model:address"));
+        }
     }
     
     // assign the new address
