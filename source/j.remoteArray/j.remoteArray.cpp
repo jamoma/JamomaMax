@@ -75,7 +75,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 	spec->_free = &WrappedViewerClass_free;
 	spec->_any = &WrappedViewerClass_anything;
 
-	return wrapTTModularClassAsMaxClass(kTTSym_Viewer, "j.remoteArray", NULL, spec);
+	return wrapTTModularClassAsMaxClass(kTTSym_Viewer, "j.remote_array", NULL, spec);
 }
 
 void WrapTTViewerClass(WrappedClassPtr c)
