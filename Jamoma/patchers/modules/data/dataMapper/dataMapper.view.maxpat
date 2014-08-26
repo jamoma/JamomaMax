@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 1.0, 44.0, 976.0, 617.0 ],
+		"rect" : [ 1.0, 44.0, 1355.0, 932.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -35,8 +35,8 @@
 					"maxclass" : "bpatcher",
 					"name" : "j.jamomabrowser.view.maxpat",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
 					"patching_rect" : [ 464.500061, 206.0, 174.666626, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 45.333344, 46.0, 178.666656, 26.0 ]
@@ -50,8 +50,8 @@
 					"maxclass" : "bpatcher",
 					"name" : "j.jamomabrowser.view.maxpat",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
 					"patching_rect" : [ 255.500031, 202.5, 185.666718, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 45.333344, 25.0, 178.666656, 26.0 ]
@@ -758,7 +758,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 922.0, 44.0, 753.0, 539.0 ],
+						"rect" : [ 556.0, 70.0, 748.0, 523.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -768,7 +768,7 @@
 						"gridsize" : [ 15.0, 15.0 ],
 						"gridsnaponopen" : 0,
 						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
+						"toolbarvisible" : 0,
 						"boxanimatetime" : 200,
 						"imprint" : 0,
 						"enablehscroll" : 1,
@@ -777,7 +777,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"title" : "/dataMapper(view).1",
+						"title" : "/dataMapper(view).2",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -2149,8 +2149,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 894.666626, 268.0, 209.0, 20.0 ],
-									"text" : "j.parameter_array function/parameters.[1]"
+									"patching_rect" : [ 894.666626, 268.0, 222.5, 20.0 ],
+									"text" : "j.remote_array function/parameters.[1]"
 								}
 
 							}
@@ -4075,7 +4075,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 15.0, 258.5, 136.0, 20.0 ],
+									"patching_rect" : [ 15.0, 258.5, 136.0, 33.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 8.0, 6.5, 214.0, 20.0 ],
 									"text" : "/degrade~/audio/mix : 100.00"
@@ -7475,7 +7475,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 450.0, 105.0 ],
-					"text" : "/mapper"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -7970,6 +7970,64 @@
 					"source" : [ "obj-8", 0 ]
 				}
 
+			}
+ ],
+		"parameters" : 		{
+			"obj-8" : [ "live.text", "live.text", 0 ],
+			"obj-21" : [ "live.text[1]", "live.text", 0 ]
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.function_generic.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper/function_options",
+				"patcherrelativepath" : "./function_options",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.jamomabrowser.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaBrowser",
+				"patcherrelativepath" : "../../../components/data/jamomaBrowser",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.get_onscreen_position.js",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/javascript",
+				"patcherrelativepath" : "../../../../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote_array.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.map.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
