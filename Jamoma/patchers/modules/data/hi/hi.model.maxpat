@@ -53,7 +53,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 428.0, 246.0, 459.0, 31.0 ],
-					"text" : "j.parameter elements @type interger @clipmode low @range 1 256 @description \"number of elements (determines the number of returns created in returnArray)\"",
+					"text" : "j.parameter_array)\"",
 					"varname" : "device_menu[2]"
 				}
 
@@ -128,7 +128,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 250.0, 352.0, 376.0, 31.0 ],
-					"text" : "j.returnArray hi.[8] @type integer @description \"Raw data from Human Interface device.\""
+					"text" : "j.parameter_array hi.[8] @type integer @description \"Raw data from Human Interface device.\""
 				}
 
 			}
@@ -1064,7 +1064,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.returnArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
  ]

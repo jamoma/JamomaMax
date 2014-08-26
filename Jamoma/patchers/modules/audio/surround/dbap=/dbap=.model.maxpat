@@ -1408,7 +1408,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 684.0, 574.0, 33.0 ],
-					"text" : "j.messageArray speaker.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+					"text" : "j.parameter_array speaker.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 				}
 
 			}
@@ -1423,7 +1423,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 588.0, 596.0, 33.0 ],
-					"text" : "j.parameterArray source.[32]/weight @type array @range 0. 1. @description \"Set spatial weight of the nth source.\""
+					"text" : "j.parameter_array source.[32]/weight @type array @range 0. 1. @description \"Set spatial weight of the nth source.\""
 				}
 
 			}
@@ -1438,7 +1438,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 488.0, 592.0, 33.0 ],
-					"text" : "j.messageArray source.[32]/active @type boolean @repetitions/filter 0 @description \"Mute or unmute the nth source.\""
+					"text" : "j.parameter_array source.[32]/active @type boolean @repetitions/filter 0 @description \"Mute or unmute the nth source.\""
 				}
 
 			}
@@ -1453,7 +1453,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 409.0, 593.0, 33.0 ],
-					"text" : "j.messageArray source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @description \"Input gain for the nth source.\""
+					"text" : "j.parameter_array source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @description \"Input gain for the nth source.\""
 				}
 
 			}
@@ -1468,7 +1468,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 313.0, 606.0, 33.0 ],
-					"text" : "j.messageArray source.[32]/blur @type decimal @range 0. 100. @description \"Set spatial blur of the nth source.\""
+					"text" : "j.parameter_array source.[32]/blur @type decimal @range 0. 100. @description \"Set spatial blur of the nth source.\""
 				}
 
 			}
@@ -1511,7 +1511,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 232.0, 569.0, 33.0 ],
-					"text" : "j.messageArray source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+					"text" : "j.parameter_array source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 				}
 
 			}
@@ -2687,11 +2687,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.messageArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameterArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
  ]

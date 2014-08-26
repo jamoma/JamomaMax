@@ -734,7 +734,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 399.5, 675.5, 136.0, 167.0 ],
-					"text" : "j.returnArray audio/amplitude.[32] @type decimal @format array @range -70. 6. @clipmode none @repetitions/filter 0 @dataspace gain @dataspace/unit linear @description \"amplitude of the Nth multichannel cable\""
+					"text" : "j.parameter_array audio/amplitude.[32] @type decimal @format array @range -70. 6. @clipmode none @repetitions/filter 0 @dataspace gain @dataspace/unit linear @description \"amplitude of the Nth multichannel cable\""
 				}
 
 			}
@@ -1750,7 +1750,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.returnArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

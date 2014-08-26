@@ -2637,7 +2637,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.messageArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

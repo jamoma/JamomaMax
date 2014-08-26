@@ -2,9 +2,9 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 0,
-			"revision" : 0,
+			"major" : 6,
+			"minor" : 1,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -630,25 +630,18 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-49",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 0,
-							"revision" : 0,
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -815,8 +808,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p displayFileName",
-					"viewvisibility" : 0
+					"text" : "p displayFileName"
 				}
 
 			}
@@ -1054,8 +1046,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 727.5, 155.0, 129.0, 20.0 ],
-					"text" : "j.remote nextFile/open"
+					"patching_rect" : [ 727.5, 154.0, 129.0, 20.0 ],
+					"text" : "j.remote nextFile/path"
 				}
 
 			}
@@ -1518,11 +1510,11 @@
  ],
 		"parameters" : 		{
 			"obj-23" : [ "live.text[4]", "live.text[3]", 0 ],
-			"obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-21" : [ "live.text[3]", "live.text", 0 ],
-			"obj-24" : [ "live.text[5]", "live.text[3]", 0 ],
 			"obj-18" : [ "live.text[2]", "live.text", 0 ],
-			"obj-17" : [ "live.text[1]", "live.text", 0 ]
+			"obj-17" : [ "live.text[1]", "live.text", 0 ],
+			"obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-24" : [ "live.text[5]", "live.text[3]", 0 ],
+			"obj-21" : [ "live.text[3]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{

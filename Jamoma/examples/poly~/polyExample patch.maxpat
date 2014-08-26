@@ -67,7 +67,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 12.0, 149.0, 211.0, 33.0 ],
-					"text" : "A view of the model and of all parameters using a j.remoteArray"
+					"text" : "A view of the model and of all parameters using a j.parameter_array"
 				}
 
 			}
@@ -217,7 +217,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remoteArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

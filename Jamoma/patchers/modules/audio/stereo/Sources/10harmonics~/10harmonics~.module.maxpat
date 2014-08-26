@@ -178,7 +178,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameterArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -194,7 +194,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remoteArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

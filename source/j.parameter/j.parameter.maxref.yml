@@ -1,36 +1,29 @@
-title: j.parameterArray
-author: [Jamoma, Julien Rabin]
-created_at: 2013/1/30
-tags: [parameter, control, osc, array]
+title: j.parameter
+author: [Jamoma]
+created_at: 2012/1/1
+tags: [parameter, control, osc]
 
-brief: Handling array of parameters in the Jamoma modules
+brief: Handling parameters in the Jamoma modules
 
 desc: >
- "j.parameterArray creates an array of parameters in a Jamoma model."
+ "j.parameter creates a parameter in a Jamoma model."
 
 inputs:
  - name: left
    desc: "input value"
- - name: right
-   desc: "index of the addressed parameter"
 
 outputs:
  - name: left
    desc: direct values
- - name: middle
-   desc: "index of the value output at the left outlet"
  - name: right
    desc: "dumpout"
 
 args:
  - name: name
    type: symbol
-   desc: "OSC name defining an array of parameters in the namespace using a bracket-based syntaxe: my/parameter.[2]"
+   desc: "OSC name defining parameter in the namespace"
 
 messages:
- - name: address
-   type: symbol
-   desc: "The address message followed by an osc name containing a number of instances placed in bracket declares an array of parameters in the namespace. Ex: 'address my/parameter.[5]'"
 
 attributes:
  - name: type
@@ -103,11 +96,6 @@ attributes:
    desc: "Step by which the current value is being increased/decreased when a /value/inc or /value/dec message is received"
    unit:
    default: 1.
- - name: format
-   type: symbol
-   desc: "Format of the values output: single or array"
-   unit:
-   default: single
  - name: tag
    type: symbol
    desc: "Some optional tags"
@@ -120,10 +108,9 @@ attributes:
  #   default: 1.
 
 seealso:
- - j.parameter
- - j.messageArray
- - j.returnArray
- - j.remoteArray
+ - j.parameter_array
+ - j.message
+ - j.return
  - j.model
  - j.ramp
  - j.dataspace

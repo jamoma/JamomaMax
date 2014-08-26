@@ -7,35 +7,39 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		469BD9F8180B582C00A023B3 /* j.returnArray.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.returnArray.yml; sourceTree = "<group>"; };
-		D2070BA31540232E000C45A1 /* j.parameterArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = j.parameterArray.cpp; path = ../j.parameterArray/j.parameterArray.cpp; sourceTree = SOURCE_ROOT; };
+		467A25CE1805650900DA28C7 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
+		467A25CF1805650900DA28C7 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
+		469BD9F0180B56BA00A023B3 /* j.parameter_array.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.parameter_array.yml; sourceTree = "<group>"; };
+		D2661D4C153AD7FF0003EE67 /* j.parameter_array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.parameter_array.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		08FB7794FE84155DC02AAC07 /* j.returnArray */ = {
+		08FB7794FE84155DC02AAC07 /* j.parameter_array */ = {
 			isa = PBXGroup;
 			children = (
-				469BD9F8180B582C00A023B3 /* j.returnArray.yml */,
-				D2070BA31540232E000C45A1 /* j.parameterArray.cpp */,
+				469BD9F0180B56BA00A023B3 /* j.parameter_array.yml */,
+				D2661D4C153AD7FF0003EE67 /* j.parameter_array.cpp */,
+				467A25CF1805650900DA28C7 /* TTModularClassWrapperMax.h */,
+				467A25CE1805650900DA28C7 /* TTModularClassWrapperMax.cpp */,
 			);
-			name = j.returnArray;
+			name = j.parameter_array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		D28A88AD04BDD90700651E21 /* j.returnArray */ = {
+		D28A88AD04BDD90700651E21 /* j.parameter_array */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(Configuration) $(ACTION)";
-			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.returnArray" */;
+			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.parameter_array" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			dependencies = (
 			);
-			name = j.returnArray;
+			name = j.parameter_array;
 			passBuildSettingsInEnvironment = 1;
-			productName = j.returnArray;
+			productName = j.parameter_array;
 		};
 /* End PBXLegacyTarget section */
 
@@ -43,9 +47,9 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 			};
-			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.returnArray" */;
+			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.parameter_array" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -55,11 +59,11 @@
 				French,
 				German,
 			);
-			mainGroup = 08FB7794FE84155DC02AAC07 /* j.returnArray */;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* j.parameter_array */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D28A88AD04BDD90700651E21 /* j.returnArray */,
+				D28A88AD04BDD90700651E21 /* j.parameter_array */,
 			);
 		};
 /* End PBXProject section */
@@ -76,7 +80,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.returnArray;
+				PRODUCT_NAME = j.parameter_array;
 			};
 			name = Debug;
 		};
@@ -87,14 +91,13 @@
 				COPY_PHASE_STRIP = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.returnArray;
+				PRODUCT_NAME = j.parameter_array;
 			};
 			name = Release;
 		};
 		1DEB919408733D9F0010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -105,7 +108,6 @@
 		1DEB919508733D9F0010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = macosx;
@@ -115,7 +117,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.returnArray" */ = {
+		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.parameter_array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919008733D9F0010E9CD /* Debug */,
@@ -124,7 +126,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.returnArray" */ = {
+		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.parameter_array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919408733D9F0010E9CD /* Debug */,

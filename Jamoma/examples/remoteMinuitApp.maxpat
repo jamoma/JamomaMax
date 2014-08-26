@@ -1312,7 +1312,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameterArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

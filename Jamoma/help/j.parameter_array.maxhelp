@@ -192,7 +192,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-3",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.parameterArray" ],
+									"jsarguments" : [ "j.parameter_array" ],		
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -245,7 +245,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 480.0, 453.0, 185.0, 83.0 ],
-									"text" : "You can address any instance by sending the instance number in j.parameterArray right inlet"
+									"text" : "You can address any instance by sending the instance number in j.parameter_array right inlet"
 								}
 
 							}
@@ -400,7 +400,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 82.0, 585.0, 357.0, 20.0 ],
-									"text" : "j.parameterArray items.[6] @type decimal @description Hello"
+									"text" : "j.parameter_array items.[6] @type decimal @description Hello"
 								}
 
 							}
@@ -429,7 +429,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 46.0, 322.0, 361.0, 20.0 ],
-									"text" : "j.parameterArray object.[6] @type decimal @description Hello"
+									"text" : "j.parameter_array object.[6] @type decimal @description Hello"
 								}
 
 							}
@@ -500,7 +500,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 46.0, 292.0, 404.0, 20.0 ],
-									"text" : "j.parameterArray source.[4]/position @type integer @description Hello"
+									"text" : "j.parameter_array source.[4]/position @type integer @description Hello"
 								}
 
 							}
@@ -711,7 +711,7 @@
 									"filename" : "helpname.js",
 									"id" : "obj-2",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.parameterArray" ],
+									"jsarguments" : [ "j.parameter_array" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -846,7 +846,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 157.0, 448.0, 267.0, 20.0 ],
-									"text" : "j.parameterArray indexed.[5] @format single",
+									"text" : "j.parameter_array indexed.[5] @format single",
 									"varname" : "my_float[1]"
 								}
 
@@ -997,7 +997,7 @@
 									"filename" : "helpname.js",
 									"id" : "obj-7",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.parameterArray" ],
+									"jsarguments" : [ "j.parameter_array" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1176,7 +1176,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 66.0, 357.0, 348.0, 20.0 ],
-									"text" : "j.parameterArray split/items.[5] @type array @format single",
+									"text" : "j.parameter_array split/items.[5] @type array @format single",
 									"varname" : "my_float[1]"
 								}
 
@@ -1334,7 +1334,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 128.0, 566.5, 172.0, 69.0 ],
-									"text" : "In 'array' mode, j.parameterArray will output a list containing values of all instances"
+									"text" : "In 'array' mode, j.parameter_array will output a list containing values of all instances"
 								}
 
 							}
@@ -1350,7 +1350,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 340.0, 218.0, 153.0, 141.0 ],
-									"text" : "In 'single' mode (default), j.parameterArray will output the instance whose value has been changed out of the middle outlet then the value out of the left outlet"
+									"text" : "In 'single' mode (default), j.parameter_array will output the instance whose value has been changed out of the middle outlet then the value out of the left outlet"
 								}
 
 							}
@@ -1365,7 +1365,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 60.0, 100.0, 156.0, 65.0 ],
-									"text" : "You can specify how will j.parameterArray output its values using the @format attribute."
+									"text" : "You can specify how will j.parameter_array output its values using the @format attribute."
 								}
 
 							}
@@ -1375,7 +1375,7 @@
 									"filename" : "helpname.js",
 									"id" : "obj-2",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.parameterArray" ],
+									"jsarguments" : [ "j.parameter_array" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1524,7 +1524,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 340.0, 566.5, 274.0, 20.0 ],
-									"text" : "j.parameterArray other/stuff.[5] @format array",
+									"text" : "j.parameter_array other/stuff.[5] @format array",
 									"varname" : "my_float[2]"
 								}
 
@@ -1640,7 +1640,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 359.0, 280.0, 20.0 ],
-									"text" : "j.parameterArray some/stuff.[5] @format single",
+									"text" : "j.parameter_array some/stuff.[5] @format single",
 									"varname" : "my_float[1]"
 								}
 
@@ -1830,7 +1830,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 503.0, 1014.0, 97.0, 17.0 ],
-					"text" : "j.returnArray"
+					"text" : "j.parameter_array"
 				}
 
 			}
@@ -1981,7 +1981,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 188.0, 164.0, 260.0, 20.0 ],
-									"text" : "j.parameterArray distant.[5] @type decimal",
+									"text" : "j.parameter_array distant.[5] @type decimal",
 									"varname" : "my_float[1]"
 								}
 
@@ -1992,7 +1992,7 @@
 									"filename" : "helpname.js",
 									"id" : "obj-2",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.parameterArray" ],
+									"jsarguments" : [ "j.parameter_array" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -2268,7 +2268,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.parameterArray", "@description", "Define an array of parameter instances" ],
+					"args" : [ "@name", "j.parameter_array", "@description", "Define an array of parameter instances" ],
 					"bgmode" : 1,
 					"id" : "obj-19",
 					"maxclass" : "bpatcher",
@@ -2291,7 +2291,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 503.0, 996.0, 113.0, 17.0 ],
-					"text" : "j.messageArray"
+					"text" : "j.parameter_array"
 				}
 
 			}
@@ -2438,7 +2438,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameterArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
  ]

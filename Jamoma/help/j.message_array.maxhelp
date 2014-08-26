@@ -396,7 +396,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-3",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.messageArray" ],
+									"jsarguments" : [ "j.message_array" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -417,7 +417,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 55.0, 559.0, 356.0, 20.0 ],
-									"text" : "j.messageArray object.[6] @type decimal @description Hello"
+									"text" : "j.message_array object.[6] @type decimal @description Hello"
 								}
 
 							}
@@ -488,7 +488,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 55.0, 266.0, 400.0, 20.0 ],
-									"text" : "j.messageArray source.[4]/position @type integer @description Hello"
+									"text" : "j.message_array source.[4]/position @type integer @description Hello"
 								}
 
 							}
@@ -664,7 +664,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 66.0, 259.0, 182.0, 20.0 ],
-									"text" : "j.remoteArray /split/items.[5]"
+									"text" : "j.message_array /split/items.[5]"
 								}
 
 							}
@@ -837,7 +837,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 66.0, 357.0, 343.0, 20.0 ],
-									"text" : "j.messageArray split/items.[5] @type array @format single",
+									"text" : "j.message_array split/items.[5] @type array @format single",
 									"varname" : "my_float[1]"
 								}
 
@@ -993,7 +993,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 733.0, 224.5, 182.0, 20.0 ],
-									"text" : "j.remoteArray /other/stuff.[5]",
+									"text" : "j.message_array /other/stuff.[5]",
 									"varname" : "my_float[4]"
 								}
 
@@ -1009,7 +1009,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 278.5, 184.0, 20.0 ],
-									"text" : "j.remoteArray /some/stuff.[5]",
+									"text" : "j.message_array /some/stuff.[5]",
 									"varname" : "my_float[3]"
 								}
 
@@ -1027,7 +1027,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 521.0, 301.5, 172.0, 69.0 ],
-									"text" : "In 'array' mode, j.parameterArray will output a list containing values of all instances"
+									"text" : "In 'array' mode, j.message_array will output a list containing values of all instances"
 								}
 
 							}
@@ -1043,7 +1043,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 340.0, 218.0, 153.0, 141.0 ],
-									"text" : "In 'single' mode (default), j.parameterArray will output the instance whose value has been changed out of the middle outlet then the value out of the left outlet"
+									"text" : "In 'single' mode (default), j.message_array will output the instance whose value has been changed out of the middle outlet then the value out of the left outlet"
 								}
 
 							}
@@ -1058,7 +1058,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 50.0, 77.0, 172.0, 65.0 ],
-									"text" : "You can specify how will j.messageArray output its values using the @format attribute."
+									"text" : "You can specify how will j.message_array output its values using the @format attribute."
 								}
 
 							}
@@ -1202,7 +1202,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 733.0, 301.5, 270.0, 20.0 ],
-									"text" : "j.messageArray other/stuff.[5] @format array",
+									"text" : "j.message_array other/stuff.[5] @format array",
 									"varname" : "my_float[2]"
 								}
 
@@ -1318,7 +1318,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 326.0, 276.0, 20.0 ],
-									"text" : "j.messageArray some/stuff.[5] @format single",
+									"text" : "j.message_array some/stuff.[5] @format single",
 									"varname" : "my_float[1]"
 								}
 
@@ -1508,11 +1508,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.messageArray.mxo",
+				"name" : "j.message_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remoteArray.mxo",
+				"name" : "j.message_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

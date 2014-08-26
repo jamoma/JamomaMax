@@ -7,39 +7,39 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		22AD15EE16597E8C002FD7E3 /* j.remoteArray.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.remoteArray.yml; sourceTree = "<group>"; };
+		22AD15EE16597E8C002FD7E3 /* j.remote_array.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.remote_array.yml; sourceTree = "<group>"; };
 		467A25D01805651900DA28C7 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
 		467A25D11805651900DA28C7 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
-		D2A79C3C15C55EAA00D14111 /* j.remoteArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.remoteArray.cpp; sourceTree = "<group>"; };
+		D2A79C3C15C55EAA00D14111 /* j.remote_array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.remote_array.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		08FB7794FE84155DC02AAC07 /* j.remoteArray */ = {
+		08FB7794FE84155DC02AAC07 /* j.remote_array */ = {
 			isa = PBXGroup;
 			children = (
-				22AD15EE16597E8C002FD7E3 /* j.remoteArray.yml */,
-				D2A79C3C15C55EAA00D14111 /* j.remoteArray.cpp */,
+				22AD15EE16597E8C002FD7E3 /* j.remote_array.yml */,
+				D2A79C3C15C55EAA00D14111 /* j.remote_array.cpp */,
 				467A25D11805651900DA28C7 /* TTModularClassWrapperMax.h */,
 				467A25D01805651900DA28C7 /* TTModularClassWrapperMax.cpp */,
 			);
-			name = j.remoteArray;
+			name = j.remote_array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		D28A88AD04BDD90700651E21 /* j.remoteArray */ = {
+		D28A88AD04BDD90700651E21 /* j.remote_array */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(Configuration) $(ACTION)";
-			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.remoteArray" */;
+			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.remote_array" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			dependencies = (
 			);
-			name = j.remoteArray;
+			name = j.remote_array;
 			passBuildSettingsInEnvironment = 1;
-			productName = j.remoteArray;
+			productName = j.remote_array;
 		};
 /* End PBXLegacyTarget section */
 
@@ -49,7 +49,7 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 			};
-			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.remoteArray" */;
+			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.remote_array" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -59,11 +59,11 @@
 				French,
 				German,
 			);
-			mainGroup = 08FB7794FE84155DC02AAC07 /* j.remoteArray */;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* j.remote_array */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D28A88AD04BDD90700651E21 /* j.remoteArray */,
+				D28A88AD04BDD90700651E21 /* j.remote_array */,
 			);
 		};
 /* End PBXProject section */
@@ -80,7 +80,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.remoteArray;
+				PRODUCT_NAME = j.remote_array;
 			};
 			name = Debug;
 		};
@@ -91,7 +91,7 @@
 				COPY_PHASE_STRIP = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.remoteArray;
+				PRODUCT_NAME = j.remote_array;
 			};
 			name = Release;
 		};
@@ -117,7 +117,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.remoteArray" */ = {
+		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.remote_array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919008733D9F0010E9CD /* Debug */,
@@ -126,7 +126,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.remoteArray" */ = {
+		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.remote_array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919408733D9F0010E9CD /* Debug */,

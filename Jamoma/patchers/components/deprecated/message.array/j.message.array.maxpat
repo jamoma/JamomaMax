@@ -54,7 +54,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 129.0, 459.0, 487.0, 25.0 ],
-					"text" : "j.message.array is deprecated. Use j.messageArray instead",
+					"text" : "j.parameter_array instead",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 

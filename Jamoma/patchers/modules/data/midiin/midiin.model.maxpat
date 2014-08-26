@@ -4673,7 +4673,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 211.0, 483.400024, 408.0, 19.0 ],
-					"text" : "j.returnArray cc.[128] @type integer @description \"MIDI CC: [number, value]\"",
+					"text" : "j.parameter_array cc.[128] @type integer @description \"MIDI CC: [number, value]\"",
 					"varname" : "ctlin_connect_2"
 				}
 
@@ -5298,7 +5298,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.returnArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

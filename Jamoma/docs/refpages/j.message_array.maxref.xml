@@ -3,12 +3,12 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="j.returnArray" module="" category="Jamoma">
+<c74object name="j.parameter_array" module="" category="Jamoma">
 	<digest>
-		Declare an array of output nodes in the Jamoma namespace
+		Handling array of messages in Jamoma model
 	</digest>
 	<description>
-		Declare an output node in the Jamoma namespace
+		j.parameter_array creates an array of messages in a Jamoma model
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			mvc
+			message
 		</metadata>
 		<metadata name="tag">
 			Jamoma
@@ -29,15 +29,15 @@
 				set the value of the selected instance(s)
 			</digest>
 			<description>
-				Value to propagate in Jamoma namespace
+				<!-- TEXT_HERE -->
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				index (use * to bind all instances)
+				index
 			</digest>
 			<description>
-				index (use * to bind all instances)
+				Index of the instance to send value to. (1 to max number of instance. * will send value to all instances)
 			</description>
 		</inlet>
 	</inletlist>
@@ -48,7 +48,7 @@
 				direct: values
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</outlet>
 	</outletlist>
@@ -56,88 +56,24 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				Node name array
+				OSC name defining an array of messages in the namespace using a bracket-based syntaxe: my/message.[2]
 			</digest>
 			<description>
-				Node name array
+				OSC name defining an array of messages in the namespace using a bracket-based syntaxe: my/message.[2]
 			</description>
 		</objarg>
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="bang">
-			<arglist />
-			<digest>
-				Value to output
-			</digest>
-			<description>
-				Value to output
-			</description>
-		</method>
-		<method name="int">
-			<arglist>
-				<arg name="ARG_NAME_0" type="int" optional="0" />
-			</arglist>
-			<digest>
-				Value to output
-			</digest>
-			<description>
-				Value to output
-			</description>
-		</method>
-		<method name="float">
-			<arglist>
-				<arg name="ARG_NAME_0" type="float" optional="0" />
-			</arglist>
-			<digest>
-				Value to output
-			</digest>
-			<description>
-				Value to output
-			</description>
-		</method>
-		<method name="list">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				Value to output
-			</digest>
-			<description>
-				Value to output
-			</description>
-		</method>
 		<method name="anything">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Value to output
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				Value to output
-			</description>
-		</method>
-		<method name="+">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				Increment and output last received value
-			</digest>
-			<description>
-				Increment and output last received value
-			</description>
-		</method>
-		<method name="-">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				Decrement and output last received value
-			</digest>
-			<description>
-				Decrement and output last received value
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="address">
@@ -145,21 +81,10 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				Nodes array addresses
+				Define an array of messages in the namespace. Ex: 'address my/message.[5]'
 			</digest>
 			<description>
-				Nodes array addresses
-			</description>
-		</method>
-		<method name="array">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				Dispatch list of values to instance of the returnArray
-			</digest>
-			<description>
-				Dispatch list of values to instance of the returnArray
+				The address message followed by an osc name containing a number of instances placed in bracket declares an array of messages in the namespace. Ex: 'address my/message.[5]'
 			</description>
 		</method>
 		<method name="array/select">
@@ -167,10 +92,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Set value of a particular address
+				This message select which j.parameter_array's instance to address
 			</digest>
 			<description>
-				Set value of a particular address
+				This message select which j.parameter_array's instance to address
 			</description>
 		</method>
 		<method name="array/resize">
@@ -178,10 +103,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				Change the size of the array of nodes
+				Change the number of instances			
 			</digest>
 			<description>
-				Change the size of the array of nodes
+				Change the number of instances
 			</description>
 		</method>
 		<method name="dec">
@@ -189,10 +114,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Decrement and output last received value
+				Decrement the value by the amount defined by the @stepsize attribute
 			</digest>
 			<description>
-				Decrement and output last received value
+				Decrement the value by the amount defined by the @stepsize attribute
 			</description>
 		</method>
 		<method name="dump">
@@ -200,10 +125,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Dump returnArray attributes value
+				Dump all attributes out the right-most outlet
 			</digest>
 			<description>
-				Dump returnArray attributes value
+				Dump all attributes out the right-most outlet
 			</description>
 		</method>
 		<method name="inc">
@@ -211,10 +136,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Increment and output last received value
+				Increment the value by the amount defined by the @stepsize attribute
 			</digest>
 			<description>
-				Increment and output last received value
+				Increment the value by the amount defined by the @stepsize attribute
 			</description>
 		</method>
 		<method name="init">
@@ -222,10 +147,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Reset the selected j.return instances to their default state
+				Reset the selected j.message instance to its default state
 			</digest>
 			<description>
-				Reset the selected j.return instances to their default state
+				Reset the selected j.message instance to its default state
 			</description>
 		</method>
 	</methodlist>
@@ -233,10 +158,10 @@
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				Enable or disable returns array
+				Set whether the array of j.message is enable or not
 			</digest>
 			<description>
-				Enable or disable returns array
+				Set whether the array of j.message is enable or not
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -244,44 +169,43 @@
 		</attribute>
 		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Dataspace of the returns
+				Set what dataspace used internally by the message for unit conversions
 			</digest>
 			<description>
-				Dataspace of the returns (angle, color, distance, gain, none, orientation, position, speed, temperature, time)
+				Set what dataspace used internally by the message for unit conversions (angle, color, distance, gain, none, orientation, position, speed, temperature, time)
 			</description>
 		</attribute>
 		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Dataspace unit of the return
+				The dataspace unit used for communication to the algorithm from the outside world
 			</digest>
 			<description>
-				Dataspace unit of the return
-			</description>
+				The dataspace unit used for remote communication. Available values depend on the dataspace attribute value. See j.dataspace help patch for more information.			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Node description
+				Short info about the message
 			</digest>
 			<description>
-				Node description
+				Short info about the message. Used for auto-documentation of the model
 			</description>
 		</attribute>
 		<attribute name="format" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Values output format
+				Format of the values output: single or array
 			</digest>
 			<description>
-				Specify whether parameters values will be output one by one or all as a list
+				Format of the values output: single or array
 			</description>
 			<attributelist>
 				<attribute name="enumvals" get="1" set="1" type="atom" size="2">
 					<enumlist>
 						<enum name="single">
 							<digest>
-								TEXT_HERE
+								Values are output instance by instance
 							</digest>
 							<description>
-								TEXT_HERE
+								Values are output instance by instance
 							</description>
 						</enum>
 						<enum name="array">
@@ -297,68 +221,68 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
 			</attributelist>
 		</attribute>
-		<attribute name="priority" get="1" set="1" type="int" size="1">
+		<!-- <attribute name="priority" get="1" set="1" type="int" size="1">
 			<digest>
-				Priorities of the returns
+				TEXT_HERE
 			</digest>
 			<description>
-				Priorities of the returns
+				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Set the scheduler driving the ramp
+				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
 			</digest>
 			<description>
-				Set the scheduler driving the ramp: none, max
+				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
 			</description>
 		</attribute>
 		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Function to be used for ramping
+				The mapping function determining the curve of the ramping to new message value
 			</digest>
 			<description>
-				Function to be used for ramping (cosine, crossFadeIn, crossFadeOut, exponential, freehand, linear, logarithm, lowpass, power, smoothPolynomial, tanh, bartlett, blackman, blackmanHarris, expodec, gauss, hamming, hanning, kaiser, nuttall, rectangular, rosenbergGlottalPulse, trapezoid, tukey, welch)
+				The mapping function determining the curve of the ramping to new message value
 			</description>
 		</attribute>
 		<attribute name="ramp/function/parameters" get="1" set="1" type="atom" size="1">
 			<digest>
-				Parameters of the selected function used for ramping
+				Optional parameters for the chosen ramping function
 			</digest>
 			<description>
-				Parameters of the selected function used for ramping
+				Optional parameters for the chosen ramping function
 			</description>
 		</attribute>
 		<attribute name="ramp/status" get="1" set="1" type="int" size="1">
 			<digest>
-				Ramp status
+				TEXT_HERE
 			</digest>
 			<description>
-				Ramp status. THe attribute will be set to 1 when ramping or to 0 when done
+				TEXT_HERE
 			</description>
 		</attribute>
 		<attribute name="range" get="1" set="1" type="atom" size="1">
 			<digest>
-				value range
+				Lower and upper boundaries defining the range of possible message values
 			</digest>
 			<description>
-				value range
+				Lower and upper boundaries defining the range of possible message values
 			</description>
 		</attribute>
 		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Set how values exceeding range will be clipped
+				Define clipping behaviour at the boundaries of the message range
 			</digest>
 			<description>
-				Set how values exceeding range will be clipped (none, low, high, wrap, fold)
+				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
 			</description>
 		</attribute>
 		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
 			<digest>
-				Filtering of value repetitions
+				Determines whether repeated message values will be filtered: when this attribute is enabled, repetitions are filtered out (like [change] object in Max)
 			</digest>
 			<description>
-				Set whether to filter out value repetitions or not
+				Determines whether repeated message values will be filtered: when this attribute is enabled, repetitions are filtered out (like [change] object in Max)
 			</description>
 		</attribute>
 		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
@@ -371,42 +295,40 @@
 		</attribute> -->
 		<attribute name="tags" get="1" set="1" type="atom" size="1">
 			<digest>
-				Some tags associated to the parameter
-			</digest>
+Some optional tags			</digest>
 			<description>
-				Some tags associated to the parameter
-			</description>
+Some optional tags			</description>
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Type of the parameter value
+				Datatype of the message. Options are: decimal, integer, boolean, string, array, generic
 			</digest>
 			<description>
-				Type of the parameter value
+				Datatype of the message. Options are: decimal, integer, boolean, string, array, generic
 			</description>
 		</attribute>
 		<attribute name="value" get="1" set="1" type="int" size="1">
 			<digest>
-				Last returns value
+				Current message value
 			</digest>
 			<description>
-				Last returns value
+				Current message value
 			</description>
 		</attribute>
-		<!-- <attribute name="default" get="1" set="1" type="int" size="1">
+		<attribute name="default" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Default message value
 			</digest>
 			<description>
-				TEXT_HERE
+				Default message value
 			</description>
-		</attribute> -->
+		</attribute>
 		<attribute name="stepsize" get="1" set="1" type="int" size="1">
 			<digest>
-				Size of the incrementation/decrementation
+				incrementation/decrementation amount			
 			</digest>
 			<description>
-				Size the j.parameter's value will be incremented/decremented
+				Step by which the current value is being increased/decreased when a 'inc' or 'dec' message is received
 			</description>
 		</attribute>
 	</attributelist>
@@ -416,11 +338,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.return">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.parameterArray">
-			<!-- TEXT_HERE -->
-		</seealso>
+		<seealso name="j.message"/>
+		<seealso name="j.parameter_array"/>
+		<seealso name="j.parameter_array"/>
 	</seealsolist>
 </c74object>

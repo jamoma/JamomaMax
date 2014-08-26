@@ -1,4 +1,0 @@
-max objectfile j.parameter_array j.parameterarray;
-max objectfile j.message_array j.messagearray;
-max objectfile j.return_array j.returnarray;
-max objectfile j.remote_array j.remotearray;

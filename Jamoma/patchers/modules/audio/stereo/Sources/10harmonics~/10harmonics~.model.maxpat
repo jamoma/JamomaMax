@@ -90,7 +90,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 31.0, 164.0, 364.0, 60.0 ],
-					"text" : "j.parameterArray harmonic.[10]/gain @format single @type decimal @ramp/drive max @ramp/function linear @dataspace gain @dataspace/unit dB @description \"Gain values (dB) for the 1st partial\""
+					"text" : "j.parameter_array harmonic.[10]/gain @format single @type decimal @ramp/drive Max @ramp/function linear @dataspace gain @dataspace/unit dB @description \"Gain values (dB) for the 1st partial\""
 				}
 
 			}
@@ -105,7 +105,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 429.0, 15.5, 249.0, 87.0 ],
-					"text" : "j.parameterArray factor.[10] @format array @type decimal @range 1. 100. @clipmode low @description \"list of factors that determines the frequencies of the 10 partials as a factor of the fundamental frequency, default is 1 2 3 4 5 6 7 8 9 10\""
+					"text" : "j.parameter_array factor.[10] @format array @type decimal @range 1. 100. @clipmode low @description \"list of factors that determines the frequencies of the 10 partials as a factor of the fundamental frequency, default is 1 2 3 4 5 6 7 8 9 10\""
 				}
 
 			}
@@ -120,7 +120,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 568.5, 152.0, 331.0, 60.0 ],
-					"text" : "j.parameter frequency @type decimal @range 20 20000 @clipmode none @ramp/drive max @ramp/function linear @dataspace time @dataspace/unit Hz @description \"Fundamental frequency of the signal.\"",
+					"text" : "j.parameter frequency @type decimal @range 20 20000 @clipmode none @ramp/drive Max @ramp/function linear @dataspace time @dataspace/unit Hz @description \"Fundamental frequency of the signal.\"",
 					"varname" : "frequency"
 				}
 
@@ -532,7 +532,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameterArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
  ]

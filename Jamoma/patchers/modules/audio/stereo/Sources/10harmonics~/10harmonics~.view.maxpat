@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 8,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 33.0, 97.0, 1084.0, 741.0 ],
@@ -30,6 +30,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "Fundamental frequency of the signal.",
 					"id" : "obj-38",
 					"maxclass" : "live.numbox",
 					"numinlets" : 1,
@@ -404,8 +405,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 132.0, 253.5, 284.0, 20.0 ],
-					"text" : "j.remoteArray harmonic.[10]/gain @format array"
+					"patching_rect" : [ 132.0, 253.5, 286.0, 20.0 ],
+					"text" : "j.remote_array harmonic.[10]/gain @format array"
 				}
 
 			}
@@ -690,8 +691,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 582.299988, 547.0, 219.0, 20.0 ],
-					"text" : "j.remoteArray factor.[10] @format array"
+					"patching_rect" : [ 582.299988, 547.0, 239.0, 20.0 ],
+					"text" : "j.remote_array factor.[10] @format array"
 				}
 
 			}
@@ -838,7 +839,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"text" : "/no_model_address"
+					"text" : "/10harmonics~"
 				}
 
 			}
@@ -1260,48 +1261,6 @@
 					"source" : [ "obj-8", 0 ]
 				}
 
-			}
- ],
-		"parameters" : 		{
-			"obj-34" : [ "live.numbox[6]", "live.numbox", 0 ],
-			"obj-23" : [ "live.numbox[4]", "live.numbox", 0 ],
-			"obj-6" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-32" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-15" : [ "live.numbox[1]", "live.numbox", 0 ],
-			"obj-21" : [ "live.numbox[3]", "live.numbox", 0 ],
-			"obj-36" : [ "live.numbox[8]", "live.numbox", 0 ],
-			"obj-37" : [ "live.numbox[9]", "live.numbox", 0 ],
-			"obj-35" : [ "live.numbox[7]", "live.numbox", 0 ],
-			"obj-16" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-38" : [ "live.numbox[10]", "live.numbox[10]", 0 ]
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../../../components/data/list2parameter",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remoteArray.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

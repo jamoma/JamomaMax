@@ -1,4 +1,4 @@
-title: j.messageArray
+title: j.message_array
 author: [Jamoma, Julien Rabin]
 created_at: 2013/1/30
 tags: [message, control, osc, array]
@@ -6,7 +6,7 @@ tags: [message, control, osc, array]
 brief: Handling array of messages in the Jamoma modules
 
 desc: >
- "j.messageArray creates an array of messages in a Jamoma model."
+ "j.message_array creates an array of messages in a Jamoma model."
 
 inputs:
  - name: left
@@ -121,9 +121,9 @@ attributes:
 
 seealso:
  - j.message
- - j.messageArray
- - j.returnArray
- - j.remoteArray
+ - j.message_array
+ - j.return_array
+ - j.remote_array
  - j.model
  - j.ramp
  - j.dataspace

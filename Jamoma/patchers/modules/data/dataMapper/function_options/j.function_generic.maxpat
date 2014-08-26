@@ -592,7 +592,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 149.5, 568.0, 90.0, 20.0 ],
-					"text" : "to remoteArray"
+					"text" : "to remote_array"
 				}
 
 			}

@@ -124,7 +124,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1084.0, 231.0, 202.0, 20.0 ],
-					"text" : "j.remoteArray parametersToBind.[4]"
+					"text" : "j.parameter_array parametersToBind.[4]"
 				}
 
 			}
@@ -194,7 +194,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 860.0, 464.0, 219.0, 20.0 ],
-					"text" : "j.messageArray messageThese.[4]"
+					"text" : "j.parameter_array messageThese.[4]"
 				}
 
 			}
@@ -333,7 +333,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1084.0, 281.0, 183.0, 20.0 ],
-					"text" : "j.returnArray returnThese.[4]"
+					"text" : "j.parameter_array returnThese.[4]"
 				}
 
 			}
@@ -2574,7 +2574,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.returnArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -2614,7 +2614,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.messageArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -2630,7 +2630,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remoteArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

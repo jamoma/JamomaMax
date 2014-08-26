@@ -1,14 +1,14 @@
 defines:
   - ARRAY_EXTERNAL
-  - JMOD_RETURN
+  - JMOD_MESSAGE
   
 sources:
-  - ../j.parameterArray/j.parameterArray.cpp		
+  - ../j.parameter_array/j.parameter_array.cpp		
   - ../classwrapper/TTModularClassWrapperMax.cpp
   - ../c74support/max-includes/common/commonsyms.cpp
     
 includes:
-  - ../j.parameterArray
+  - ../j.parameter_array
   - ../../../../Core/Foundation/library/includes
   - ../../../../Core/Modular/library/includes
   - ../../../../Core/Modular/library/PeerObject

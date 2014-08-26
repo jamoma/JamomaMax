@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -125,7 +125,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 470.500031, 228.0, 107.0, 47.0 ],
-					"text" : "j.remoteArray filter.[5]/frequency @format single"
+					"text" : "j.remote_array filter.[5]/frequency @format single"
 				}
 
 			}
@@ -140,7 +140,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 598.000061, 228.0, 97.999939, 47.0 ],
-					"text" : "j.remoteArray filter.[5]/gain @format single"
+					"text" : "j.remote_array filter.[5]/gain @format single"
 				}
 
 			}
@@ -334,7 +334,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 278.000061, 228.0, 100.0, 47.0 ],
-					"text" : "j.remoteArray filter.[5]/type @format single"
+					"text" : "j.remote_array filter.[5]/type @format single"
 				}
 
 			}
@@ -349,7 +349,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 699.500061, 228.0, 151.0, 47.0 ],
-					"text" : "j.remoteArray filter.[5]/octave_bandwidth @format single"
+					"text" : "j.remote_array filter.[5]/octave_bandwidth @format single"
 				}
 
 			}

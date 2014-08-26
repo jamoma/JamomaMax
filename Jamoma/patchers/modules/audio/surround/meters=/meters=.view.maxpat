@@ -130,7 +130,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 407.0, 41.5, 481.0, 20.0 ],
-					"text" : "j.remoteArray audio/amplitude.[32] @format array @dataspace gain @dataspace/unit db"
+					"text" : "j.parameter_array audio/amplitude.[32] @format array @dataspace gain @dataspace/unit db"
 				}
 
 			}
@@ -283,7 +283,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remoteArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
  ]
