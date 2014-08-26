@@ -405,7 +405,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 132.0, 253.5, 284.0, 20.0 ],
-					"text" : "j.remoteArray harmonic.[10]/gain @format array"
+					"text" : "j.parameter_array harmonic.[10]/gain @format array"
 				}
 
 			}
@@ -691,7 +691,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 582.299988, 547.0, 219.0, 20.0 ],
-					"text" : "j.remoteArray factor.[10] @format array"
+					"text" : "j.parameter_array factor.[10] @format array"
 				}
 
 			}
@@ -1296,7 +1296,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remoteArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

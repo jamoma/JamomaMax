@@ -2150,7 +2150,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 894.666626, 268.0, 209.0, 20.0 ],
-									"text" : "j.remoteArray function/parameters.[1]"
+									"text" : "j.parameter_array function/parameters.[1]"
 								}
 
 							}

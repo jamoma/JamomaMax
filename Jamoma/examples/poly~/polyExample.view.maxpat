@@ -147,7 +147,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 161.333328, 185.0, 188.0, 19.0 ],
-					"text" : "j.remoteArray unit.[0]/myFloat",
+					"text" : "j.parameter_array unit.[0]/myFloat",
 					"varname" : "jalg.filter_params"
 				}
 

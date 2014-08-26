@@ -78,13 +78,13 @@
 
 ### 0.6.0.a29 (2014-01-01)
 
-- j.messageArray : Now have the same behavior for incoming values than j.parameterArray and j.returnArray.
-- j.returnArray : Now have 3 outlets, outputs values on the leftmost outlet and output index on the middle outlet.
+- j.parameter_array.
+- j.parameter_array : Now have 3 outlets, outputs values on the leftmost outlet and output index on the middle outlet.
 - j.receive : When binding on /any/address, the returned address is not anymore /any/address:value but simply /any/address.
-- j.remoteArray : Adding a set and a setArray messages in order to only update the parameters but not outputs.
+- j.parameter_array messages in order to only update the parameters but not outputs.
 - j.cue : Adding a `@relative 0|1` attribute to allow cue management relatively to a model address.
 - j.map : Adding a `@input/index` to select an index to map into the input value (e.g. the y coordinate of a position parameter).
-- j.parameterArray, j.messageArray and the other array controller objects : In `@format array`, outputs the `@default` value after a array/resize message.
+- j.parameter_array and the other array controller objects : In `@format array`, outputs the `@default` value after a array/resize message.
 - j.dbap : No longer crashes if instantiated before any other jitter external has been initialized.
 
 
@@ -102,8 +102,8 @@
 - j.remote : highlight state can be handled by a shift+click on the ui object.
 - j.remote : adding a set message in order to only update the parameter but not outputs.
 - j.namespace : fixing selection for remoteApp:/ address case.
-- j.parameterArray : improving the @format array mechanism.
-- j.remoteArray : improving the @format array mechanism.
+- j.parameter_array : improving the @format array mechanism.
+- j.parameter_array : improving the @format array mechanism.
 
 
 

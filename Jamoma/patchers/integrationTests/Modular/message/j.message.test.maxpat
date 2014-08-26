@@ -74,7 +74,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 316.0, 566.0, 171.0, 60.0 ],
-									"text" : "j.test.assert.equal j.message:integerArray:fold1 @input 11. 31. 31 jamoma @compareTo 9 9 9 0"
+									"text" : "j.parameter_array:fold1 @input 11. 31. 31 jamoma @compareTo 9 9 9 0"
 								}
 
 							}
@@ -89,7 +89,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 717.5, 566.0, 171.0, 60.0 ],
-									"text" : "j.test.assert.equal j.message:integerArray:fold2 @input 11. 41. 41 jamoma @compareTo 9 1 1 0"
+									"text" : "j.parameter_array:fold2 @input 11. 41. 41 jamoma @compareTo 9 1 1 0"
 								}
 
 							}
@@ -104,7 +104,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 85.0, 566.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold1 @type integerArray @clipmode fold @range 0 10"
+									"text" : "j.parameter_array @clipmode fold @range 0 10"
 								}
 
 							}
@@ -119,7 +119,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 492.0, 566.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold2 @type integerArray @clipmode fold @range -10 10"
+									"text" : "j.parameter_array @clipmode fold @range -10 10"
 								}
 
 							}
@@ -134,7 +134,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 566.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold3 @type integerArray @clipmode fold @range -20 -10"
+									"text" : "j.parameter_array @clipmode fold @range -20 -10"
 								}
 
 							}
@@ -163,7 +163,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1122.0, 566.0, 174.0, 60.0 ],
-									"text" : "j.test.assert.equal j.message:integerArray:fold3 @input -9. 21. 21 jamoma @compareTo -11 -19 -19 -20"
+									"text" : "j.parameter_array:fold3 @input -9. 21. 21 jamoma @compareTo -11 -19 -19 -20"
 								}
 
 							}
@@ -195,7 +195,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 316.0, 410.0, 157.0, 74.0 ],
-									"text" : "j.test.assert.equal j.message:decimalArray:fold1 @input 11. 31. 31 jamoma @compareTo 9. 9. 9. 0."
+									"text" : "j.parameter_array:fold1 @input 11. 31. 31 jamoma @compareTo 9. 9. 9. 0."
 								}
 
 							}
@@ -314,7 +314,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 717.5, 410.0, 157.0, 74.0 ],
-									"text" : "j.test.assert.equal j.message:decimalArray:fold2 @input 11. 41. 41 jamoma @compareTo 9. 1. 1. 0."
+									"text" : "j.parameter_array:fold2 @input 11. 41. 41 jamoma @compareTo 9. 1. 1. 0."
 								}
 
 							}
@@ -329,7 +329,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 85.0, 410.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold1 @type decimalArray @clipmode fold @range 0 10"
+									"text" : "j.parameter_array @clipmode fold @range 0 10"
 								}
 
 							}
@@ -344,7 +344,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 492.0, 410.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold2 @type decimalArray @clipmode fold @range -10 10"
+									"text" : "j.parameter_array @clipmode fold @range -10 10"
 								}
 
 							}
@@ -359,7 +359,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 410.0, 221.0, 47.0 ],
-									"text" : "j.message arrayFold3 @type decimalArray @clipmode fold @range -20 -10"
+									"text" : "j.parameter_array @clipmode fold @range -20 -10"
 								}
 
 							}
@@ -388,7 +388,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1122.0, 410.0, 176.0, 60.0 ],
-									"text" : "j.test.assert.equal j.message:decimalArray:fold3 @input -9. 21. 21 jamoma @compareTo -11. -19. -19. -20."
+									"text" : "j.parameter_array:fold3 @input -9. 21. 21 jamoma @compareTo -11. -19. -19. -20."
 								}
 
 							}
@@ -1325,7 +1325,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 494.0, 583.0, 204.0, 47.0 ],
-									"text" : "j.message arrayWrap2 @type integerArray @clipmode wrap @range -10 10"
+									"text" : "j.parameter_array @clipmode wrap @range -10 10"
 								}
 
 							}
@@ -1340,7 +1340,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 123.0, 583.0, 204.0, 47.0 ],
-									"text" : "j.message arrayWrap1 @type integerArray @clipmode wrap @range 0 10"
+									"text" : "j.parameter_array @clipmode wrap @range 0 10"
 								}
 
 							}
@@ -1399,7 +1399,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 583.0, 204.0, 47.0 ],
-									"text" : "j.message arrayWrap3 @type integerArray @clipmode wrap @range -20 -10"
+									"text" : "j.parameter_array @clipmode wrap @range -20 -10"
 								}
 
 							}
@@ -1536,7 +1536,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 331.0, 446.0, 150.0, 74.0 ],
-									"text" : "j.test.assert.equal j.message:decimalArray:wrap1 @input 11. 41. 41 jamoma @compareTo 1. 1. 1. 0."
+									"text" : "j.parameter_array:wrap1 @input 11. 41. 41 jamoma @compareTo 1. 1. 1. 0."
 								}
 
 							}
@@ -1551,7 +1551,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 701.5, 446.0, 164.0, 74.0 ],
-									"text" : "j.test.assert.equal j.message:decimalArray:wrap2 @input 11. 51. 51 jamoma @compareTo -9. -9. -9. 0."
+									"text" : "j.parameter_array:wrap2 @input 11. 51. 51 jamoma @compareTo -9. -9. -9. 0."
 								}
 
 							}
@@ -1580,7 +1580,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 894.5, 446.0, 201.0, 47.0 ],
-									"text" : "j.message arrayWrap3 @type decimalArray @clipmode wrap @range -20 -10"
+									"text" : "j.parameter_array @clipmode wrap @range -20 -10"
 								}
 
 							}
@@ -1595,7 +1595,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1107.0, 446.0, 190.5, 60.0 ],
-									"text" : "j.test.assert.equal j.message:decimalArray:wrap3 @input -9. 51. 51 jamoma @compareTo -19. -19. -19. -20."
+									"text" : "j.parameter_array:wrap3 @input -9. 51. 51 jamoma @compareTo -19. -19. -19. -20."
 								}
 
 							}
@@ -1610,7 +1610,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 494.0, 446.0, 201.0, 47.0 ],
-									"text" : "j.message arrayWrap2 @type decimalArray @clipmode wrap @range -10 10"
+									"text" : "j.parameter_array @clipmode wrap @range -10 10"
 								}
 
 							}
@@ -1625,7 +1625,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 123.0, 446.0, 201.0, 47.0 ],
-									"text" : "j.message arrayWrap1 @type decimalArray @clipmode wrap @range 0 10"
+									"text" : "j.parameter_array @clipmode wrap @range 0 10"
 								}
 
 							}
@@ -2932,7 +2932,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 103.5, 371.0, 246.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeIntegerArray:receiveList 1 2 3 0"
+																	"text" : "j.parameter_array:receiveList 1 2 3 0"
 																}
 
 															}
@@ -2961,7 +2961,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 217.0, 126.0, 43.0 ],
-																	"text" : "j.message test @type integerArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -2976,7 +2976,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 412.958313, 350.0, 301.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeIntegerArray:receiveList:LongButOK 511"
+																	"text" : "j.parameter_array:receiveList:LongButOK 511"
 																}
 
 															}
@@ -3061,7 +3061,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 719.958313, 392.0, 352.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeIntegerArray:receiveList:tooLongAndCrooped 2 @issue 628"
+																	"text" : "j.parameter_array:receiveList:tooLongAndCrooped 2 @issue 628"
 																}
 
 															}
@@ -3076,7 +3076,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 665.458313, 217.0, 128.0, 43.0 ],
-																	"text" : "j.message test6 @type integerArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -3133,7 +3133,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 355.958313, 217.0, 133.0, 43.0 ],
-																	"text" : "j.message test5 @type integerArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -3459,7 +3459,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 104.5, 205.0, 342.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeIntegerArray:receiveSymbolWithArguments 0 1 3 6"
+																	"text" : "j.parameter_array:receiveSymbolWithArguments 0 1 3 6"
 																}
 
 															}
@@ -3474,7 +3474,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 130.0, 128.0, 43.0 ],
-																	"text" : "j.message test4 @type integerArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -3600,7 +3600,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 103.5, 233.0, 245.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeIntegerArray:receiveFloat 3"
+																	"text" : "j.parameter_array:receiveFloat 3"
 																}
 
 															}
@@ -3615,7 +3615,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 100.0, 126.0, 43.0 ],
-																	"text" : "j.message test3 @type integerArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -3746,7 +3746,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 101.0, 251.0, 241.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeIntegerArray:receiveInt 10"
+																	"text" : "j.parameter_array:receiveInt 10"
 																}
 
 															}
@@ -3761,7 +3761,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 100.0, 121.0, 43.0 ],
-																	"text" : "j.message test2 @type integerArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -4106,7 +4106,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 103.5, 371.0, 250.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeDecimalArray:receiveList 1. 2. 3. 0."
+																	"text" : "j.parameter_array:receiveList 1. 2. 3. 0."
 																}
 
 															}
@@ -4135,7 +4135,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 217.0, 126.0, 43.0 ],
-																	"text" : "j.message test @type decimalArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -4150,7 +4150,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 412.958313, 350.0, 307.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeDecimalArray:receiveList:LongButOK 511"
+																	"text" : "j.parameter_array:receiveList:LongButOK 511"
 																}
 
 															}
@@ -4235,7 +4235,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 719.958313, 392.0, 352.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeDecimalArray:receiveList:tooLongAndCrooped 2 @issue 628"
+																	"text" : "j.parameter_array:receiveList:tooLongAndCrooped 2 @issue 628"
 																}
 
 															}
@@ -4250,7 +4250,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 665.458313, 217.0, 128.0, 43.0 ],
-																	"text" : "j.message test6 @type decimalArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -4307,7 +4307,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 355.958313, 217.0, 133.0, 43.0 ],
-																	"text" : "j.message test5 @type decimalArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -4642,7 +4642,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 104.5, 205.0, 347.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeDecimalArray:receiveSymbolWithArguments 0. 1. 3.14"
+																	"text" : "j.parameter_array:receiveSymbolWithArguments 0. 1. 3.14"
 																}
 
 															}
@@ -4657,7 +4657,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 130.0, 128.0, 43.0 ],
-																	"text" : "j.message test4 @type decimalArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -4783,7 +4783,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 103.5, 233.0, 255.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeDecimalArray:receiveFloat 3.14"
+																	"text" : "j.parameter_array:receiveFloat 3.14"
 																}
 
 															}
@@ -4798,7 +4798,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 100.0, 126.0, 43.0 ],
-																	"text" : "j.message test3 @type decimalArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -4929,7 +4929,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 101.0, 251.0, 246.0, 43.0 ],
-																	"text" : "j.test.assert.equal.old j.message:typeDecimalArray:receiveInt 10."
+																	"text" : "j.parameter_array:receiveInt 10."
 																}
 
 															}
@@ -4944,7 +4944,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 100.0, 121.0, 43.0 ],
-																	"text" : "j.message test2 @type decimalArray @repetitions/filter 0"
+																	"text" : "j.parameter_array @repetitions/filter 0"
 																}
 
 															}
@@ -14061,7 +14061,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 150.0, 600.0, 262.0, 43.0 ],
-													"text" : "j.test.assert.equal.old j.message:ramp:decimalArray:correctValues 1"
+													"text" : "j.parameter_array:correctValues 1"
 												}
 
 											}
@@ -14127,7 +14127,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 450.0, 600.0, 264.0, 43.0 ],
-													"text" : "j.test.assert.equal.old j.message:ramp:decimalArray:correctTiming 1"
+													"text" : "j.parameter_array:correctTiming 1"
 												}
 
 											}
@@ -14437,7 +14437,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 150.0, 150.0, 560.0, 19.0 ],
-													"text" : "j.message test @type decimalArray @ramp/drive scheduler @ramp/function linear @repetitions/filter 0"
+													"text" : "j.parameter_array @ramp/drive scheduler @ramp/function linear @repetitions/filter 0"
 												}
 
 											}
@@ -16988,7 +16988,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 180.0, 175.0, 284.0, 31.0 ],
-													"text" : "j.message test @type decimalArray @ramp/drive scheduler @ramp/function linear @repetitions/filter 0"
+													"text" : "j.parameter_array @ramp/drive scheduler @ramp/function linear @repetitions/filter 0"
 												}
 
 											}
@@ -17835,7 +17835,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 180.0, 170.0, 552.0, 19.0 ],
-													"text" : "j.message test @type decimalArray @ramp/drive scheduler @ramp/function linear @repetitions/filter 0"
+													"text" : "j.parameter_array @ramp/drive scheduler @ramp/function linear @repetitions/filter 0"
 												}
 
 											}

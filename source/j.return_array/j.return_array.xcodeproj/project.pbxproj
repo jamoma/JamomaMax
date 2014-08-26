@@ -7,35 +7,35 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		469BD9F8180B582C00A023B3 /* j.returnArray.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.returnArray.yml; sourceTree = "<group>"; };
-		D2070BA31540232E000C45A1 /* j.parameterArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = j.parameterArray.cpp; path = ../j.parameterArray/j.parameterArray.cpp; sourceTree = SOURCE_ROOT; };
+		469BD9F8180B582C00A023B3 /* j.return_array.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.return_array.yml; sourceTree = "<group>"; };
+		D2070BA31540232E000C45A1 /* j.parameter_array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = j.parameter_array.cpp; path = ../j.parameter_array/j.parameter_array.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		08FB7794FE84155DC02AAC07 /* j.returnArray */ = {
+		08FB7794FE84155DC02AAC07 /* j.return_array */ = {
 			isa = PBXGroup;
 			children = (
-				469BD9F8180B582C00A023B3 /* j.returnArray.yml */,
-				D2070BA31540232E000C45A1 /* j.parameterArray.cpp */,
+				469BD9F8180B582C00A023B3 /* j.return_array.yml */,
+				D2070BA31540232E000C45A1 /* j.parameter_array.cpp */,
 			);
-			name = j.returnArray;
+			name = j.return_array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		D28A88AD04BDD90700651E21 /* j.returnArray */ = {
+		D28A88AD04BDD90700651E21 /* j.return_array */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(Configuration) $(ACTION)";
-			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.returnArray" */;
+			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.return_array" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			dependencies = (
 			);
-			name = j.returnArray;
+			name = j.return_array;
 			passBuildSettingsInEnvironment = 1;
-			productName = j.returnArray;
+			productName = j.return_array;
 		};
 /* End PBXLegacyTarget section */
 
@@ -45,7 +45,7 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 			};
-			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.returnArray" */;
+			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.return_array" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -55,11 +55,11 @@
 				French,
 				German,
 			);
-			mainGroup = 08FB7794FE84155DC02AAC07 /* j.returnArray */;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* j.return_array */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D28A88AD04BDD90700651E21 /* j.returnArray */,
+				D28A88AD04BDD90700651E21 /* j.return_array */,
 			);
 		};
 /* End PBXProject section */
@@ -76,7 +76,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.returnArray;
+				PRODUCT_NAME = j.return_array;
 			};
 			name = Debug;
 		};
@@ -87,7 +87,7 @@
 				COPY_PHASE_STRIP = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.returnArray;
+				PRODUCT_NAME = j.return_array;
 			};
 			name = Release;
 		};
@@ -115,7 +115,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.returnArray" */ = {
+		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.return_array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919008733D9F0010E9CD /* Debug */,
@@ -124,7 +124,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.returnArray" */ = {
+		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.return_array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919408733D9F0010E9CD /* Debug */,

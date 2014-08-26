@@ -38,7 +38,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 399.0625, 171.0, 164.0, 141.0 ],
-					"text" : "j.parameterArray filter.[6]/frequency @type decimal @range 20. 20000. @clipmode both @ramp/drive scheduler @repetitions/filter 1 @dataspace time @dataspace/unit Hz @priority 3 @description \"Center frequency (Hz)\""
+					"text" : "j.parameter_array filter.[6]/frequency @type decimal @range 20. 20000. @clipmode both @ramp/drive scheduler @repetitions/filter 1 @dataspace time @dataspace/unit Hz @priority 3 @description \"Center frequency (Hz)\""
 				}
 
 			}
@@ -75,7 +75,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 741.1875, 171.0, 151.0, 141.0 ],
-					"text" : "j.parameterArray filter.[6]/octave_bandwidth @type decimal @ramp/drive scheduler @range 0.01 10. @clipmode both @repetitions/filter 1 @description \"Filter bandwidth/slope width in octaves.\" @priority 5"
+					"text" : "j.parameter_array filter.[6]/octave_bandwidth @type decimal @ramp/drive scheduler @range 0.01 10. @clipmode both @repetitions/filter 1 @description \"Filter bandwidth/slope width in octaves.\" @priority 5"
 				}
 
 			}
@@ -90,7 +90,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 228.0, 171.0, 160.0, 127.0 ],
-					"text" : "j.parameterArray filter.[6]/type @type string @priority 2 @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf | resonant | allpass \""
+					"text" : "j.parameter_array filter.[6]/type @type string @priority 2 @description \"What kind of filter to use. Possible values: lowpass | highpass | bandpass | bandstop | peaknotch | lowshelf | highshelf | resonant | allpass \""
 				}
 
 			}
@@ -144,7 +144,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 903.3125, 171.0, 199.0, 100.0 ],
-					"text" : "j.messageArray filter.[6]/q @type decimal @ramp/drive scheduler @range 0. 100. @clipmode both @repetitions/filter 1 @description \"Resonance (Q) is deprecated, use octave_bandwidth instead.\" @priority 4"
+					"text" : "j.parameter_array filter.[6]/q @type decimal @ramp/drive scheduler @range 0. 100. @clipmode both @repetitions/filter 1 @description \"Resonance (Q) is deprecated, use octave_bandwidth instead.\" @priority 4"
 				}
 
 			}
@@ -1253,7 +1253,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 570.125, 171.0, 151.0, 141.0 ],
-					"text" : "j.parameterArray filter.[6]/gain @type decimal @range -24 24 @clipmode both @ramp/drive scheduler @repetitions/filter 1 @dataspace/unit dB @priority 4 @dataspace gain @description \"Gain (dB)\""
+					"text" : "j.parameter_array filter.[6]/gain @type decimal @range -24 24 @clipmode both @ramp/drive scheduler @repetitions/filter 1 @dataspace/unit dB @priority 4 @dataspace gain @description \"Gain (dB)\""
 				}
 
 			}
@@ -1900,7 +1900,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameterArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1908,7 +1908,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.messageArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
  ]

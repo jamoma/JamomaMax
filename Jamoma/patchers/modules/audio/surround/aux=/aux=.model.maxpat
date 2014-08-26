@@ -637,7 +637,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 596.0, 90.5, 121.0, 100.0 ],
-					"text" : "j.messageArray aux.[3]/description @type string @format single @description \"Descriptive text for the auxiliary bus.\"",
+					"text" : "j.parameter_array aux.[3]/description @type string @format single @description \"Descriptive text for the auxiliary bus.\"",
 					"varname" : "aux.1/description"
 				}
 
@@ -653,7 +653,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 742.0, 90.5, 108.0, 114.0 ],
-					"text" : "j.parameterArray aux.[3]/active @type boolean @format single @description \"Switch the auxiliary bus on and off.\"",
+					"text" : "j.parameter_array aux.[3]/active @type boolean @format single @description \"Switch the auxiliary bus on and off.\"",
 					"varname" : "aux.1/active"
 				}
 
@@ -669,7 +669,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 903.0, 90.5, 148.0, 181.0 ],
-					"text" : "j.parameterArray aux.[3]/gain @repetitions/filter 1 @type decimal @range -70. 12. @clipmode both @ramp/drive Max @dataspace gain @dataspace/unit db @format single @description \"Gain of the input cable applied to the auxiliary bus.\"",
+					"text" : "j.parameter_array aux.[3]/gain @repetitions/filter 1 @type decimal @range -70. 12. @clipmode both @ramp/drive Max @dataspace gain @dataspace/unit db @format single @description \"Gain of the input cable applied to the auxiliary bus.\"",
 					"varname" : "aux.1/gain"
 				}
 
@@ -1036,11 +1036,11 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.parameterArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.messageArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

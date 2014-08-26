@@ -320,7 +320,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 557.0, 78.0, 128.0, 114.0 ],
-					"text" : "j.parameter setup @type integerArray @range 1 32 @clipmode low @description \"List of output channels that multicable signal is routed to.\"",
+					"text" : "j.parameter_array @range 1 32 @clipmode low @description \"List of output channels that multicable signal is routed to.\"",
 					"varname" : "setup"
 				}
 

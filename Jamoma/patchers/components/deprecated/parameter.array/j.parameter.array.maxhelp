@@ -40,7 +40,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 49.0, 174.0, 504.0, 25.0 ],
-					"text" : "j.parameter.array is deprecated. Use j.parameterArray instead",
+					"text" : "j.parameter_array instead",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 

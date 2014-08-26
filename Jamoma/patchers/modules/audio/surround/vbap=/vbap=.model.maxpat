@@ -467,7 +467,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 667.0, 64.0, 139.0, 100.0 ],
-													"text" : "j.messageArray source.[32]/active @type boolean @description \"Mute ( /active 0) or unmute (/active 1) the nth source.\""
+													"text" : "j.parameter_array source.[32]/active @type boolean @description \"Mute ( /active 0) or unmute (/active 1) the nth source.\""
 												}
 
 											}
@@ -482,7 +482,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 468.5, 64.0, 151.0, 114.0 ],
-													"text" : "j.messageArray source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @ramp/drive Max @ramp/function linear @description \"Input gain for the nth source.\""
+													"text" : "j.parameter_array source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @ramp/drive Max @ramp/function linear @description \"Input gain for the nth source.\""
 												}
 
 											}
@@ -497,7 +497,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 278.0, 64.0, 123.0, 100.0 ],
-													"text" : "j.messageArray source.[32]/blur @type decimal @range 0. 100. @description \"Set spatial blur of the nth source.\""
+													"text" : "j.parameter_array source.[32]/blur @type decimal @range 0. 100. @description \"Set spatial blur of the nth source.\""
 												}
 
 											}
@@ -512,7 +512,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 50.0, 64.0, 148.0, 100.0 ],
-													"text" : "j.messageArray source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+													"text" : "j.parameter_array source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 												}
 
 											}
@@ -1964,7 +1964,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 415.0, 203.0, 115.0, 20.0 ],
-									"text" : "print messageArray"
+									"text" : "print message_array"
 								}
 
 							}
@@ -2215,7 +2215,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 309.0, 85.0, 148.0, 100.0 ],
-									"text" : "j.messageArray speaker.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+									"text" : "j.parameter_array speaker.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 								}
 
 							}
@@ -3199,7 +3199,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.messageArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

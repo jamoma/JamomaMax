@@ -1936,7 +1936,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 387.5, 218.0, 243.0, 33.0 ],
-									"text" : "j.parameterArray output/going.up/action.[3] @type generic @default none"
+									"text" : "j.parameter_array output/going.up/action.[3] @type generic @default none"
 								}
 
 							}
@@ -2007,7 +2007,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 125.5, 218.0, 258.0, 33.0 ],
-									"text" : "j.parameterArray output/going.down/action.[3] @type generic @default none"
+									"text" : "j.parameter_array output/going.down/action.[3] @type generic @default none"
 								}
 
 							}
@@ -2438,7 +2438,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 383.5, 218.0, 232.0, 33.0 ],
-									"text" : "j.parameterArray input/going.up/action.[3] @type generic @default none"
+									"text" : "j.parameter_array input/going.up/action.[3] @type generic @default none"
 								}
 
 							}
@@ -2509,7 +2509,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 125.5, 218.0, 247.0, 33.0 ],
-									"text" : "j.parameterArray input/going.down/action.[3] @type generic @default none"
+									"text" : "j.parameter_array input/going.down/action.[3] @type generic @default none"
 								}
 
 							}
@@ -2807,7 +2807,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 479.5, 157.0, 235.0, 33.0 ],
-					"text" : "j.parameterArray function/parameters.[1] @type generic @format single @priority 2"
+					"text" : "j.parameter_array function/parameters.[1] @type generic @format single @priority 2"
 				}
 
 			}
@@ -3484,7 +3484,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameterArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

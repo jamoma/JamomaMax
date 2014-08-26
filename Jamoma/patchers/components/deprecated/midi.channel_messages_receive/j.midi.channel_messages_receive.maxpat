@@ -32334,7 +32334,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 420.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.16/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32348,7 +32348,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 370.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.14/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32362,7 +32362,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 345.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.13/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32376,7 +32376,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 295.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.11/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32390,7 +32390,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 270.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.10/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32404,7 +32404,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 245.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.9/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32418,7 +32418,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 220.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.8/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32432,7 +32432,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 195.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.7/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32446,7 +32446,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 395.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.15/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32460,7 +32460,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 170.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.6/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32474,7 +32474,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 145.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.5/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32488,7 +32488,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 320.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.12/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32502,7 +32502,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 120.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.4/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32516,7 +32516,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 95.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.3/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32530,7 +32530,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 70.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.2/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32544,7 +32544,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 45.0, 702.0, 19.0 ],
-									"text" : "j.message raw/voice.1/poly @type integerArray @description \"Send MID Aftertouch message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MID Aftertouch message to VST plug-in.\""
 								}
 
 							}
@@ -32616,7 +32616,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 320.333344, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.12/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32630,7 +32630,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 420.333344, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.16/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32644,7 +32644,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 370.333344, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.14/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32658,7 +32658,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 345.333344, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.13/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32672,7 +32672,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 295.333344, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.11/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32686,7 +32686,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 270.333344, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.10/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32700,7 +32700,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 245.333328, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.9/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32714,7 +32714,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 220.333328, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.8/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32728,7 +32728,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 195.333328, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.7/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32742,7 +32742,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 395.333344, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.15/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32756,7 +32756,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 170.333328, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.6/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32770,7 +32770,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 145.333328, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.5/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32784,7 +32784,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 120.333336, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.4/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32798,7 +32798,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 95.333336, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.3/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32812,7 +32812,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 70.333336, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.2/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}
@@ -32826,7 +32826,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 45.0, 600.0, 19.0 ],
-									"text" : "j.message raw/voice.1/note @type integerArray @description \"Send MIDI Note On message to VST plug-in.\""
+									"text" : "j.parameter_array @description \"Send MIDI Note On message to VST plug-in.\""
 								}
 
 							}

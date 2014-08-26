@@ -108,7 +108,7 @@ attributes:
  #   default: 1.
 
 seealso:
- - j.parameterArray
+ - j.parameter_array
  - j.message
  - j.return
  - j.model

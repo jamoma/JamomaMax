@@ -1,4 +1,4 @@
-title: j.parameterArray
+title: j.parameter_array
 author: [Jamoma, Julien Rabin]
 created_at: 2013/1/30
 tags: [parameter, control, osc, array]
@@ -6,7 +6,7 @@ tags: [parameter, control, osc, array]
 brief: Handling array of parameters in the Jamoma modules
 
 desc: >
- "j.parameterArray creates an array of parameters in a Jamoma model."
+ "j.parameter_array creates an array of parameters in a Jamoma model."
 
 inputs:
  - name: left
@@ -121,9 +121,9 @@ attributes:
 
 seealso:
  - j.parameter
- - j.messageArray
- - j.returnArray
- - j.remoteArray
+ - j.message_array
+ - j.return_array
+ - j.remote_array
  - j.model
  - j.ramp
  - j.dataspace

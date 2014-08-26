@@ -204,7 +204,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 827.0, 83.5, 107.0, 114.0 ],
-					"text" : "j.messageArray source.[32]/active @type boolean @value 1 @format single @description \"active 0 will mute the Nth source.\""
+					"text" : "j.parameter_array source.[32]/active @type boolean @value 1 @format single @description \"active 0 will mute the Nth source.\""
 				}
 
 			}
@@ -219,7 +219,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 953.0, 83.5, 135.0, 141.0 ],
-					"text" : "j.messageArray source.[32]/position @type array @dataspace position @dataspace/unit xyz @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
+					"text" : "j.parameter_array source.[32]/position @type array @dataspace position @dataspace/unit xyz @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -442,7 +442,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.messageArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

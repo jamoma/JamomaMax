@@ -3,12 +3,12 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="j.messageArray" module="" category="Jamoma">
+<c74obj.parameter_array" module="" category="Jamoma">
 	<digest>
 		Handling array of messages in Jamoma model
 	</digest>
 	<description>
-		j.messageArray creates an array of messages in a Jamoma model
+		j.parameter_array creates an array of messages in a Jamoma model
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -92,10 +92,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				This message select which j.messageArray's instance to address
+				This message select which j.parameter_array's instance to address
 			</digest>
 			<description>
-				This message select which j.messageArray's instance to address
+				This message select which j.parameter_array's instance to address
 			</description>
 		</method>
 		<method name="array/resize">
@@ -339,7 +339,7 @@ Some optional tags			</description>
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="j.message"/>
-		<seealso name="j.parameterArray"/>
-		<seealso name="j.remoteArray"/>
+		<seealso name="j.parameter_array"/>
+		<seealso name="j.parameter_array"/>
 	</seealsolist>
 </c74object>

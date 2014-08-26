@@ -123,10 +123,10 @@ else
     cleanAndBuildExternal glibdir, "j.out~"
     cleanAndBuildExternal glibdir, "j.out="
     
-    cleanAndBuildExternal glibdir, "j.messageArray"
-    cleanAndBuildExternal glibdir, "j.parameterArray"
-    cleanAndBuildExternal glibdir, "j.remoteArray"
-    cleanAndBuildExternal glibdir, "j.returnArray"
+    cleanAndBuildExternal glibdir, "j.message_array"
+    cleanAndBuildExternal glibdir, "j.parameter_array"
+    cleanAndBuildExternal glibdir, "j.remote_array"
+    cleanAndBuildExternal glibdir, "j.return_array"
     
     cleanAndBuildExternal glibdir, "j.receive"
     cleanAndBuildExternal glibdir, "j.receive~"

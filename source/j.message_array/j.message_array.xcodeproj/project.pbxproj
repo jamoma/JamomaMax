@@ -7,35 +7,35 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		469BD9E9180B556D00A023B3 /* j.messageArray.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.messageArray.yml; sourceTree = "<group>"; };
-		D2EA728F1538AFE20041FD40 /* j.parameterArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = j.parameterArray.cpp; path = ../j.parameterArray/j.parameterArray.cpp; sourceTree = SOURCE_ROOT; };
+		469BD9E9180B556D00A023B3 /* j.message_array.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.message_array.yml; sourceTree = "<group>"; };
+		D2EA728F1538AFE20041FD40 /* j.parameter_array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = j.parameter_array.cpp; path = ../j.parameter_array/j.parameter_array.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		08FB7794FE84155DC02AAC07 /* j.messageArray */ = {
+		08FB7794FE84155DC02AAC07 /* j.message_array */ = {
 			isa = PBXGroup;
 			children = (
-				469BD9E9180B556D00A023B3 /* j.messageArray.yml */,
-				D2EA728F1538AFE20041FD40 /* j.parameterArray.cpp */,
+				469BD9E9180B556D00A023B3 /* j.message_array.yml */,
+				D2EA728F1538AFE20041FD40 /* j.parameter_array.cpp */,
 			);
-			name = j.messageArray;
+			name = j.message_array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		D28A88AD04BDD90700651E21 /* j.messageArray */ = {
+		D28A88AD04BDD90700651E21 /* j.message_array */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(Configuration) $(ACTION)";
-			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.messageArray" */;
+			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.message_array" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			dependencies = (
 			);
-			name = j.messageArray;
+			name = j.message_array;
 			passBuildSettingsInEnvironment = 1;
-			productName = j.messageArray;
+			productName = j.message_array;
 		};
 /* End PBXLegacyTarget section */
 
@@ -45,7 +45,7 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 			};
-			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.messageArray" */;
+			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.message_array" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -55,11 +55,11 @@
 				French,
 				German,
 			);
-			mainGroup = 08FB7794FE84155DC02AAC07 /* j.messageArray */;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* j.message_array */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D28A88AD04BDD90700651E21 /* j.messageArray */,
+				D28A88AD04BDD90700651E21 /* j.message_array */,
 			);
 		};
 /* End PBXProject section */
@@ -76,7 +76,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.messageArray;
+				PRODUCT_NAME = j.message_array;
 			};
 			name = Debug;
 		};
@@ -87,7 +87,7 @@
 				COPY_PHASE_STRIP = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.messageArray;
+				PRODUCT_NAME = j.message_array;
 			};
 			name = Release;
 		};
@@ -115,7 +115,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.messageArray" */ = {
+		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.message_array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919008733D9F0010E9CD /* Debug */,
@@ -124,7 +124,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.messageArray" */ = {
+		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.message_array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919408733D9F0010E9CD /* Debug */,

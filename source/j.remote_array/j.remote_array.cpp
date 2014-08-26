@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.remoteArray : An array of j.remote objects
+ * @brief j.remote_array : An array of j.remote objects
  *
  * @details Useful when designing views and more.
  *
@@ -713,7 +713,7 @@ void remote_array_return_value(TTPtr baton, TTValue& v)
 	x = WrappedModularInstancePtr((TTPtr)(*b)[0]);
 	i = (*b)[1];
     
-    // a gate to not output the value if it have been set by this j.remoteArray
+    // a gate to not output the value if it have been set by this j.remote_array
     if (EXTRA->setting) {
         EXTRA->setting = NO;
         return;

@@ -137,7 +137,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 81.0, 310.0, 187.0, 20.0 ],
-									"text" : "j.remoteArray /source.[6]/position"
+									"text" : "j.parameter_array /source.[6]/position"
 								}
 
 							}
@@ -330,7 +330,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-18",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.remoteArray" ],
+									"j.parameter_array" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -622,7 +622,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 92.0, 383.0, 187.0, 20.0 ],
-									"text" : "j.remoteArray /source.[6]/position"
+									"text" : "j.parameter_array /source.[6]/position"
 								}
 
 							}
@@ -695,7 +695,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 383.0, 243.0, 219.0, 33.0 ],
-									"text" : "j.parameterArray source.[6]/position @description Hello"
+									"text" : "j.parameter_array source.[6]/position @description Hello"
 								}
 
 							}
@@ -872,11 +872,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.parameterArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remoteArray.mxo",
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
  ]

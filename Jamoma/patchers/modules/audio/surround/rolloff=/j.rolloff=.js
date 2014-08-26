@@ -44,7 +44,7 @@ setoutletassist(0,  "messages for j.mixer=");
 function msg_int(i)
 {
     if (inlet==1)
-    currentChannel = i-1;   // While messageArray counts from 1, javascript counts from 0
+    currentChannel = i-1;   // While message_array counts from 1, javascript counts from 0
 }
 
 function sourceactive(value)

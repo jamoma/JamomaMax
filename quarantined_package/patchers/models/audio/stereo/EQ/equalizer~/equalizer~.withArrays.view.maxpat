@@ -121,7 +121,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 346.249969, 313.5, 173.000031, 33.0 ],
-					"text" : "j.remoteArray filter.[6]/octave_bandwith"
+					"text" : "j.remote_array filter.[6]/octave_bandwith"
 				}
 
 			}
@@ -3024,7 +3024,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 524.369324, 326.5, 174.749924, 20.0 ],
-					"text" : "j.remoteArray filter.[6]/gain"
+					"text" : "j.remote_array filter.[6]/gain"
 				}
 
 			}
@@ -3038,7 +3038,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 632.638855, 273.0, 204.0, 20.0 ],
-					"text" : "j.remoteArray filter.[6]/frequency"
+					"text" : "j.remote_array filter.[6]/frequency"
 				}
 
 			}
@@ -3052,7 +3052,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 791.666626, 197.0, 172.0, 20.0 ],
-					"text" : "j.remoteArray filter.[6]/type"
+					"text" : "j.remote_array filter.[6]/type"
 				}
 
 			}
@@ -3918,7 +3918,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remoteArray.mxo",
+				"name" : "j.remote_array.mxo",
 				"type" : "iLaX"
 			}
  ]

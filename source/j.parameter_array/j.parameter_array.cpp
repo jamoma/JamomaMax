@@ -2,7 +2,7 @@
  *
  * @ingroup implementationMaxExternals
  *
- * @brief j.parameterArray / j.messageArray / j.returnArray : An array of nodes in a model
+ * @brief j.parameter_array / j.message_array / j.return_array : An array of nodes in a model
  *
  * @details
  *
