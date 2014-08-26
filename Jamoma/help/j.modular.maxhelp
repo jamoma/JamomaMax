@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 100.0, 100.0, 543.0, 854.0 ],
+		"rect" : [ 0.0, 44.0, 543.0, 854.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,9 +38,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 223.0, 340.0, 305.0, 67.0 ],
-					"presentation_rect" : [ 246.0, 350.0, 0.0, 0.0 ],
-					"text" : "This external will be revamped in a near future… It will be sleeped in j.osc / j.minuit / j.app etc…",
+					"patching_rect" : [ 223.0, 340.0, 314.0, 67.0 ],
+					"text" : "This external will be revamped in a near future… It will be splitted in j.osc / j.minuit / j.app etc…",
 					"underline" : 1
 				}
 
@@ -139,8 +138,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 223.0, 701.5, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
+					"patching_rect" : [ 223.0, 701.5, 150.0, 105.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 105.0 ]
 				}
 
 			}
@@ -280,7 +279,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -600,7 +599,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2332,52 +2331,70 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
+			"obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
+			"obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
+			"obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
+			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
 				"patcherrelativepath" : "../patchers/components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/equalizer~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/EQ/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "equalizer~views.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/equalizer~",
+				"name" : "j.octavebandwidth2q.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"patcherrelativepath" : "../patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"name" : "equalizer~_large.view.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/EQ/equalizer~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.q2octavebandwidth.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
+				"patcherrelativepath" : "../patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -2426,11 +2443,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.view.mxo",
+				"name" : "j.remoteArray.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive~.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
  ]
