@@ -386,13 +386,8 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     // else look around the patcher for model of the same class
     else {
         
-        // if the view is inside a bpatcher
-        if (hierarchy == _sym_bpatcher)
-            // look for a model of the same class into the patcher of the bpatcher to get his model:address
-            jamoma_patcher_get_model_patcher(jamoma_patcher_get(x->patcherPtr), x->patcherClass, &aPatcher);
-        else
-            // look for a model of the same class into the patcher to get his model:address
-            jamoma_patcher_get_model_patcher(x->patcherPtr, x->patcherClass, &aPatcher);
+        // look for a model of the same class into the patcher of the bpatcher to get his model:address
+        jamoma_patcher_get_model_patcher(jamoma_patcher_get(x->patcherPtr), x->patcherClass, &aPatcher);
         
         // if a model exists
         if (aPatcher) {
