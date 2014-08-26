@@ -66,16 +66,16 @@ int C74_EXPORT main(void)
 	spec->_any = &WrappedDataClass_anything;
 	
 #ifdef JMOD_MESSAGE
-	return wrapTTModularClassAsMaxClass(kTTSym_Data, "j.messageArray", NULL, spec);
+	return wrapTTModularClassAsMaxClass(kTTSym_Data, "j.message_array", NULL, spec);
 #endif
 	
 #ifdef JMOD_RETURN
-	return wrapTTModularClassAsMaxClass(kTTSym_Data, "j.returnArray", NULL, spec);
+	return wrapTTModularClassAsMaxClass(kTTSym_Data, "j.return_array", NULL, spec);
 #endif
 	
 #ifndef JMOD_MESSAGE
 #ifndef JMOD_RETURN
-	return wrapTTModularClassAsMaxClass(kTTSym_Data, "j.parameterArray", NULL, spec);
+	return wrapTTModularClassAsMaxClass(kTTSym_Data, "j.parameter_array", NULL, spec);
 #endif
 #endif
 }
