@@ -188,7 +188,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-16",
 									"ignoreclick" : 1,
-									"j.parameter_array" ],
+									"jsarguments" : [ "j.return_array" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -322,7 +322,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 312.0, 328.0, 20.0 ],
-									"text" : "j.parameter_array object.[6] @type decimal @description Hello"
+									"text" : "j.return_array object.[6] @type decimal @description Hello"
 								}
 
 							}
@@ -477,7 +477,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 49.0, 250.0, 370.0, 20.0 ],
-									"text" : "j.parameter_array source.[4]/position @type integer @description Hello"
+									"text" : "j.return_array source.[4]/position @type integer @description Hello"
 								}
 
 							}
@@ -637,7 +637,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.parameter_array.mxo",
+				"name" : "j.return_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

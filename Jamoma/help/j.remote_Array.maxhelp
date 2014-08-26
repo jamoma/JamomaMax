@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -132,10 +132,11 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-1",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 2,
-									"numoutlets" : 4,
-									"outlettype" : [ "", "", "", "" ],
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 81.0, 310.0, 187.0, 20.0 ],
 									"text" : "j.parameter_array /source.[6]/position"
 								}
@@ -226,7 +227,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -286,7 +287,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -330,7 +331,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-18",
 									"ignoreclick" : 1,
-									"j.parameter_array" ],
+									"jsarguments" : [ "j.remote_array" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -621,8 +622,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 92.0, 383.0, 187.0, 20.0 ],
-									"text" : "j.parameter_array /source.[6]/position"
+									"patching_rect" : [ 92.0, 383.0, 207.0, 20.0 ],
+									"text" : "j.remote_array /source.[6]/position"
 								}
 
 							}
@@ -723,7 +724,7 @@
 									"destination" : [ "obj-1", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 384.5, 378.5, 269.5, 378.5 ],
+									"midpoints" : [ 384.5, 378.5, 289.5, 378.5 ],
 									"source" : [ "obj-11", 0 ]
 								}
 
@@ -752,7 +753,7 @@
 									"destination" : [ "obj-1", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 415.5, 378.0, 269.5, 378.0 ],
+									"midpoints" : [ 415.5, 378.0, 289.5, 378.0 ],
 									"source" : [ "obj-22", 0 ]
 								}
 
@@ -876,7 +877,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter_array.mxo",
+				"name" : "j.remote_array.mxo",
 				"type" : "iLaX"
 			}
  ]
