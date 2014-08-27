@@ -793,9 +793,6 @@ void remote_create_model_address_receiver(TTPtr self)
 	args.append(returnValueCallback);
 	
 	EXTRA->modelAddressReceiver = new TTObject(kTTSym_Receiver, args);
-    
-    // DEBUG
-    EXTRA->modelAddressReceiver->track(YES);
 }
 
 void remote_free_model_address_receiver(TTPtr self)
