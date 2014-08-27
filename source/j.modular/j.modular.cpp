@@ -243,7 +243,7 @@ void modular_namespace_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv
 	
 	if (x->wrappedObject.valid()) {
 		
-		fullpath = jamoma_file_read((t_object*)x, argc, argv, NULL);
+		fullpath = jamoma_file_read((t_object*)x, argc, argv, (t_fourcc)'TEXT');
 		v.append(fullpath);
 		
 		tterr = x->internals->lookup(kTTSym_XmlHandler, o);
