@@ -147,6 +147,12 @@ void WrappedApplicationClass_free(TTPtr self)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTObject    localApplication = accessApplicationLocal;
     
+    // the xmlhandler have to forget the application object
+    TTValue o;
+    x->internals->lookup(kTTSym_XmlHandler, o);
+    TTObject empty, anXmlHandler = o[0];
+    anXmlHandler.set(kTTSym_object, empty);
+    
 	// don't release the local application
 	if (!(x->wrappedObject == localApplication)) {
         
