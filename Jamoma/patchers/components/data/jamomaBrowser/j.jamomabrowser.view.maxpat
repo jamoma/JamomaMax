@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 213.0, 72.0, 883.0, 804.0 ],
+		"rect" : [ 213.0, 72.0, 887.0, 667.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -29,6 +29,21 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-17",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 696.0, 469.0, 70.0, 33.0 ],
+					"text" : "substitute bang none"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -190,7 +205,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 696.0, 531.0, 77.0, 20.0 ],
+					"patching_rect" : [ 696.0, 537.0, 77.0, 20.0 ],
 					"text" : "prepend hint"
 				}
 
@@ -204,7 +219,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 696.0, 498.0, 32.5, 20.0 ],
+					"patching_rect" : [ 696.0, 514.0, 32.5, 20.0 ],
 					"text" : "t l l"
 				}
 
@@ -218,7 +233,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 696.0, 459.0, 61.0, 20.0 ],
+					"patching_rect" : [ 696.0, 446.0, 61.0, 20.0 ],
 					"text" : "route text"
 				}
 
@@ -252,7 +267,8 @@
 					"patching_rect" : [ 696.0, 398.0, 163.0, 42.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 18.0, 0.0, 153.0, 20.0 ],
-					"tabmode" : 0
+					"tabmode" : 0,
+					"text" : "none"
 				}
 
 			}
@@ -572,7 +588,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
+					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-14", 0 ]
@@ -599,6 +615,24 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-17", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -620,7 +654,7 @@
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 591.166687, 562.0, 719.0, 562.0 ],
+					"midpoints" : [ 591.166687, 580.0, 719.0, 580.0 ],
 					"source" : [ "obj-2", 1 ]
 				}
 
@@ -657,7 +691,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 705.5, 556.0, 681.0, 556.0, 681.0, 390.0, 705.5, 390.0 ],
+					"midpoints" : [ 705.5, 565.0, 681.0, 565.0, 681.0, 390.0, 705.5, 390.0 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -827,7 +861,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.get_onscreen_position.js",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
+				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/javascript",
 				"patcherrelativepath" : "../../../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
