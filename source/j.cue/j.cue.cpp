@@ -159,6 +159,12 @@ void WrappedCueManageClass_free(TTPtr self)
     
     delete EXTRA->toEdit;
     
+    // the texthanler have to forget the cue manager object
+    TTValue o;
+    x->internals->lookup(kTTSym_TextHandler, o);
+    TTObject empty, aTextHandler = o[0];
+    aTextHandler.set(kTTSym_object, empty);
+    
 	free(EXTRA);
 }
 
