@@ -827,7 +827,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::comment::hidden",
-									"varname" : "u731001405"
+									"varname" : "u030008645"
 								}
 
 							}
@@ -847,7 +847,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::menu::hidden",
-									"varname" : "u735001407"
+									"varname" : "u849008647"
 								}
 
 							}
@@ -874,8 +874,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 249.0, 295.0, 217.0, 20.0 ],
-									"text" : "poly~ j.jamomabrowser.poly.maxpat 10"
+									"patching_rect" : [ 249.0, 291.5, 237.0, 20.0 ],
+									"text" : "poly~ j.namespacebrowser.poly.maxpat 10"
 								}
 
 							}
@@ -2080,6 +2080,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 1.0, 0.0, 375.0, 20.0 ],
 					"tabmode" : 0,
+					"text" : "au mix",
 					"varname" : "textedit"
 				}
 
@@ -3253,8 +3254,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.jamomabrowser.poly.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaBrowser",
+				"name" : "j.namespacebrowser.poly.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespacebrowser",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

@@ -220,7 +220,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.0, 149.0, 71.0, 18.0 ],
-					"text" : "0.573958"
+					"text" : "1."
 				}
 
 			}
@@ -515,12 +515,12 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-3::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-19::obj-8" : [ "live.text[3]", "live.text", 0 ],
 			"obj-3::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
-			"obj-4::obj-21" : [ "live.text[1]", "live.text", 0 ],
-			"obj-19::obj-21" : [ "live.text[2]", "live.text", 0 ],
-			"obj-4::obj-8" : [ "live.text", "live.text", 0 ]
+			"obj-19::obj-8" : [ "live.text", "live.text", 0 ],
+			"obj-3::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
+			"obj-4::obj-8" : [ "live.text[3]", "live.text", 0 ],
+			"obj-4::obj-21" : [ "live.text[2]", "live.text", 0 ],
+			"obj-19::obj-21" : [ "live.text[1]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -594,9 +594,9 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.jamomabrowser.view.maxpat",
-				"bootpath" : "/Users/jln/@dev/@GoPlug/Library/jamomaBrowser-widget",
-				"patcherrelativepath" : "../../../../../../../../../@dev/@GoPlug/Library/jamomaBrowser-widget",
+				"name" : "j.namespacebrowser.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespacebrowser",
+				"patcherrelativepath" : "../../../components/data/namespacebrowser",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -621,10 +621,6 @@
 			}
 , 			{
 				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -669,10 +665,6 @@
 			}
 , 			{
 				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
  ]

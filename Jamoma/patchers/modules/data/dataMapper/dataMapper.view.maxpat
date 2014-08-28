@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 1.0, 44.0, 680.0, 932.0 ],
+		"rect" : [ 359.0, 44.0, 680.0, 932.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -33,11 +33,11 @@
 					"annotation" : "none",
 					"id" : "obj-41",
 					"maxclass" : "bpatcher",
-					"name" : "j.jamomabrowser.view.maxpat",
+					"name" : "j.namespacebrowser.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 464.500061, 206.0, 174.666626, 20.0 ],
+					"patching_rect" : [ 464.500061, 202.5, 174.666626, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 45.333344, 46.0, 178.666656, 26.0 ]
 				}
@@ -48,7 +48,7 @@
 					"annotation" : "none",
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",
-					"name" : "j.jamomabrowser.view.maxpat",
+					"name" : "j.namespacebrowser.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
@@ -820,7 +820,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 253.0, 280.0, 100.0, 20.0 ],
-									"presentation_rect" : [ 250.800003, 286.0, 0.0, 0.0 ],
 									"text" : "scale 0. 1. 0. 1."
 								}
 
@@ -2235,9 +2234,9 @@
 									"fontsize" : 12.0,
 									"id" : "obj-137",
 									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 4,
-									"outlettype" : [ "", "", "", "" ],
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 894.666626, 268.0, 222.5, 20.0 ],
 									"text" : "j.remote_array function/parameters.[1]"
 								}
@@ -7629,7 +7628,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 450.0, 105.0 ],
-					"text" : "/mapper"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -7657,7 +7656,7 @@
 					"destination" : [ "obj-41", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 474.000061, 256.0, 449.166687, 256.0, 449.166687, 202.0, 474.000061, 202.0 ],
+					"midpoints" : [ 474.000061, 255.0, 450.0, 255.0, 450.0, 198.0, 474.000061, 198.0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -8124,6 +8123,64 @@
 					"source" : [ "obj-8", 0 ]
 				}
 
+			}
+ ],
+		"parameters" : 		{
+			"obj-8" : [ "live.text", "live.text", 0 ],
+			"obj-21" : [ "live.text[1]", "live.text", 0 ]
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.function_generic.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper/function_options",
+				"patcherrelativepath" : "./function_options",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.namespacebrowser.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespacebrowser",
+				"patcherrelativepath" : "../../../components/data/namespacebrowser",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.get_onscreen_position.js",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
+				"patcherrelativepath" : "../../../../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.map.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
