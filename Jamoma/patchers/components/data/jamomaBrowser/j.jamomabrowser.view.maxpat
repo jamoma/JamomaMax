@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 784.0, 75.0, 887.0, 746.0 ],
+		"rect" : [ 523.0, 44.0, 887.0, 746.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -29,6 +29,20 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-34",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 272.0, 330.0, 58.0, 20.0 ],
+					"text" : "freebang"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -105,7 +119,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 13.0, 532.0, 67.0, 19.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "grow", "close", "zoom", "nofloat", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 784, 75, 1671, 821, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
+					"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "grow", "close", "zoom", "nofloat", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 523, 44, 1410, 790, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
 
@@ -134,7 +148,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 63.416672, 422.0, 156.0, 18.0 ],
+					"patching_rect" : [ 224.0, 670.0, 156.0, 18.0 ],
 					"text" : "screenposition menuwidget"
 				}
 
@@ -213,7 +227,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 63.416672, 394.5, 20.0, 20.0 ]
+					"patching_rect" : [ 224.0, 642.5, 20.0, 20.0 ]
 				}
 
 			}
@@ -268,7 +282,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 63.416672, 464.0, 161.0, 20.0 ],
+					"patching_rect" : [ 224.0, 712.0, 161.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "j.get_onscreen_position.js",
 						"parameter_enable" : 0
@@ -434,7 +448,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 364.0, 351.0, 24.0, 20.0 ],
+					"patching_rect" : [ 371.0, 387.0, 24.0, 20.0 ],
 					"text" : "t b"
 				}
 
@@ -463,7 +477,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 364.0, 395.5, 89.0, 18.0 ],
+					"patching_rect" : [ 371.0, 431.5, 89.0, 18.0 ],
 					"text" : "model:address"
 				}
 
@@ -502,7 +516,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 265.0, 315.0, 92.0, 20.0 ],
+					"patching_rect" : [ 272.0, 351.0, 92.0, 20.0 ],
 					"text" : "j.remote closed"
 				}
 
@@ -531,7 +545,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 364.0, 315.0, 183.0, 20.0 ],
+					"patching_rect" : [ 371.0, 351.0, 183.0, 20.0 ],
 					"text" : "receive /jamomabrowser/binding"
 				}
 
@@ -825,6 +839,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-34", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -988,7 +1011,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.get_onscreen_position.js",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/javascript",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
 				"patcherrelativepath" : "../../../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
