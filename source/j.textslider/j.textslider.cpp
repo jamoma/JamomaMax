@@ -664,7 +664,7 @@ void textslider_paint(t_textslider *x, t_object *view)
 	
 	if (x->attrRange[0] == x->attrRange[1])
 		value = 0.5;
-	else{
+	else {
 		value = (x->attrValue - x->attrRange[0])/x->attrRangeDelta;
 		TTLimit(value, 0.0, 1.0);   
 	}

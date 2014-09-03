@@ -22,21 +22,21 @@
 
 // Data Structure for this object
 typedef struct _init{
-	Object				obj;
+	t_object            obj;
 	TTNodePtr			patcherNode;
-	TTReceiverPtr		initReceiver;
-	TTSubscriberPtr		subscriberObject;
+	TTObject            initReceiver;
+	TTObject            subscriberObject;
 	TTAddress           address;
 	TTHandle            outlets;
 } t_init;
 
 // Prototypes for methods
-void *init_new(SymbolPtr s, AtomCount argc, AtomPtr argv);			// New Object Creation Method
+void *init_new(t_symbol* s, long argc, t_atom* argv);			// New Object Creation Method
 void init_free(t_init *x);
 void init_assist(t_init *x, void *b, long m, long a, char *s);		// Assistance Method
 void init_subscribe(t_init *x);
-void init_return_address(t_init *x, SymbolPtr msg, AtomCount argc, AtomPtr argv);
-void init_return_value(t_init *x, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void init_return_address(t_init *x, t_symbol *msg, long argc, t_atom *argv);
+void init_return_value(t_init *x, t_symbol *msg, long argc, t_atom *argv);
 //void init_bang(t_init *x);
 
 // Globals
@@ -74,11 +74,11 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 // Object Life
 
 // Create
-void *init_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
+void *init_new(t_symbol *s, long argc, t_atom *argv)
 {
 	long 		attrstart = attr_args_offset(argc, argv);						// support normal arguments
 	t_init 		*x = (t_init *)object_alloc(g_init_class);
-	SymbolPtr	relativeAddress = _sym_nothing;											// could be used to binds on a sub level j.hub
+	t_symbol	*relativeAddress = _sym_nothing;											// could be used to binds on a sub level j.hub
 
 	if (attrstart && argv)
 		atom_arg_getsym(&relativeAddress, 0, attrstart, argv);
@@ -90,28 +90,27 @@ void *init_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 		x->outlets[start_out] = bangout(x);
 
 		x->patcherNode = NULL;
-		x->initReceiver = NULL;
-		x->subscriberObject = NULL;
-		x->address = TTAddress(jamoma_parse_dieze((ObjectPtr)x, relativeAddress)->s_name);
+		x->address = TTAddress(jamoma_parse_dieze((t_object*)x, relativeAddress)->s_name);
 		
 		attr_args_process(x, argc, argv);										// handle attribute args				
 
 		// The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-		defer_low((ObjectPtr)x, (method)init_subscribe, NULL, 0, 0);
+		defer_low((t_object*)x, (method)init_subscribe, NULL, 0, 0);
 	}
 	
 	return (x);																	// Return the pointer
 }
 
 void init_free(t_init *x)
-{	
-	if (x->initReceiver)
-		TTObjectBaseRelease(TTObjectBaseHandle(&x->initReceiver));
-	
-	if (x->subscriberObject)
-		TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
+{
+    // release the receiver
+    x->initReceiver.set(kTTSym_address, kTTAdrsEmpty);
+    x->initReceiver = TTObject();
+    
+    // release the subscriber
+    x->subscriberObject = TTObject();
 }
 
 
@@ -134,22 +133,21 @@ void init_assist(t_init *x, void *b, long msg, long arg, char *dst)
 
 void init_subscribe(t_init *x)
 {
-	TTValue			v, args, none;
-	TTAddress       contextAddress = kTTAdrsEmpty;
-    TTAddress       returnedAddress;
-    TTNodePtr       returnedNode = NULL;
-    TTNodePtr       returnedContextNode = NULL;
-	TTObjectBasePtr	returnAddressCallback, returnValueCallback;
-	TTValuePtr		returnAddressBaton, returnValueBaton;
+	TTValue     v, args, none;
+	TTAddress   contextAddress = kTTAdrsEmpty;
+    TTAddress   returnedAddress;
+    TTNodePtr   returnedNode = NULL;
+    TTNodePtr   returnedContextNode = NULL;
+	TTObject    returnAddressCallback, returnValueCallback, empty;
 	
 	// for relative address
 	if (x->address.getType() == kAddressRelative) {
 
-		if (!jamoma_subscriber_create((ObjectPtr)x, NULL, x->address, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+		if (!jamoma_subscriber_create((t_object*)x, empty, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
             
 			// get the context address to make
 			// a receiver on the contextAddress:initialized attribute
-			x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
+			x->subscriberObject.get("contextAddress", v);
 			contextAddress = v[0];
 		}
 		
@@ -157,24 +155,19 @@ void init_subscribe(t_init *x)
 		if (contextAddress != kTTAdrsEmpty) {
 			
 			// Make a TTReceiver object
-			returnAddressCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-			TTObjectBaseInstantiate(TTSymbol("callback"), &returnAddressCallback, none);
-			returnAddressBaton = new TTValue(TTPtr(x));
-			returnAddressCallback->setAttributeValue(kTTSym_baton, TTPtr(returnAddressBaton));
-			returnAddressCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_address));
+			returnAddressCallback = TTObject("callback");
+			returnAddressCallback.set(kTTSym_baton, TTPtr(x));
+			returnAddressCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_address));
 			args.append(returnAddressCallback);
 			
-			returnValueCallback = NULL;				// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-			TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
-			returnValueBaton = new TTValue(TTPtr(x));
-			returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
-			returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+			returnValueCallback = TTObject("callback");
+			returnValueCallback.set(kTTSym_baton, TTPtr(x));
+			returnValueCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 			args.append(returnValueCallback);
 			
-			x->initReceiver = NULL;
-			TTObjectBaseInstantiate(kTTSym_Receiver, TTObjectBaseHandle(&x->initReceiver), args);
+			x->initReceiver = TTObject(kTTSym_Receiver, args);
 			
-			x->initReceiver->setAttributeValue(kTTSym_address, contextAddress.appendAttribute(kTTSym_initialized));
+			x->initReceiver.set(kTTSym_address, contextAddress.appendAttribute(kTTSym_initialized));
 		}
 		
 		// while the context node is not registered : try to binds again :(
@@ -185,26 +178,25 @@ void init_subscribe(t_init *x)
 		else {
 			
 			// release the subscriber
-			TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
-			x->subscriberObject = NULL;
+			x->subscriberObject = TTObject();
 			
 			// The following must be deferred because we have to interrogate our box,
 			// and our box is not yet valid until we have finished instantiating the object.
 			// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-			defer_low((ObjectPtr)x, (method)init_subscribe, NULL, 0, 0);
+			defer_low((t_object*)x, (method)init_subscribe, NULL, 0, 0);
 		}
 	}
 	else
-		object_error((ObjectPtr)x, "can't bind because %s is not a relative address", x->address.c_str());
+		object_error((t_object*)x, "can't bind because %s is not a relative address", x->address.c_str());
 }
 
-void init_return_address(t_init *x, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void init_return_address(t_init *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	;
 }
 
 // GO !
-void init_return_value(t_init *x, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void init_return_value(t_init *x, t_symbol *msg, long argc, t_atom *argv)
 {
 	if (atom_gettype(argv) == A_LONG) {
         
@@ -221,7 +213,7 @@ void init_return_value(t_init *x, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 void init_bang(t_init *x)
 {
 	if (x->contextNode)
-		if (x->contextNode->getObject())
-			x->contextNode->getObject()->sendMessage(TTSymbol("Init"));
+		if (x->contextNode->getObject().valid())
+			x->contextNode->getObject().send("Init");
 }
  */

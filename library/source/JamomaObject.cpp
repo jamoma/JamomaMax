@@ -38,7 +38,7 @@ void jamoma_object_initclass(void)
 }
 
 
-t_object* jamoma_object_new()
+t_object *jamoma_object_new()
 {
 	t_jamoma_object		*obj = (t_jamoma_object *)object_alloc(s_jamoma_class);
 	if (obj) {

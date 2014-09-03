@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 0
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 100.0, 100.0, 720.0, 343.0 ],
+		"rect" : [ 100.0, 100.0, 717.0, 423.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -31,12 +32,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-9",
+					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
-					"patching_rect" : [ 370.0, 215.0, 320.0, 19.0 ],
-					"text" : "j.dataspace# @dataspace color @input hsl @output rgb8"
+					"patching_rect" : [ 370.0, 215.0, 108.0, 60.0 ],
+					"text" : "j.dataspace- @dataspace color @input hsl @output rgb8"
 				}
 
 			}
@@ -49,7 +51,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 370.0, 290.0, 87.0, 17.0 ],
+					"patching_rect" : [ 370.0, 331.0, 87.0, 18.0 ],
 					"text" : "255. 21.25 0."
 				}
 
@@ -63,7 +65,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 435.0, 145.0, 62.0, 17.0 ],
+					"patching_rect" : [ 435.0, 145.0, 62.0, 18.0 ],
 					"text" : "240 50 50"
 				}
 
@@ -77,7 +79,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 370.0, 145.0, 56.0, 17.0 ],
+					"patching_rect" : [ 370.0, 145.0, 56.0, 18.0 ],
 					"text" : "5 100 50"
 				}
 
@@ -91,7 +93,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 370.0, 260.0, 81.0, 19.0 ],
+					"patching_rect" : [ 370.0, 301.0, 81.0, 20.0 ],
 					"text" : "j.unpack-"
 				}
 
@@ -105,7 +107,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
-					"patching_rect" : [ 370.0, 175.0, 68.0, 19.0 ],
+					"patching_rect" : [ 370.0, 175.0, 68.0, 20.0 ],
 					"text" : "j.pack-"
 				}
 
@@ -120,7 +122,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 30.0, 145.0, 50.0, 19.0 ]
+					"patching_rect" : [ 30.0, 145.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -134,7 +136,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 30.0, 290.0, 50.0, 19.0 ]
+					"patching_rect" : [ 30.0, 331.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -147,7 +149,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 966.0, 70.0 ]
+					"patching_rect" : [ 0.0, 0.0, 720.0, 70.0 ]
 				}
 
 			}
@@ -160,7 +162,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 30.0, 260.0, 81.0, 19.0 ],
+					"patching_rect" : [ 30.0, 301.0, 81.0, 20.0 ],
 					"text" : "j.unpack-"
 				}
 
@@ -170,12 +172,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-2",
+					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
-					"patching_rect" : [ 30.0, 215.0, 329.0, 19.0 ],
-					"text" : "j.dataspace# @dataspace time @input midi @output Hertz"
+					"patching_rect" : [ 30.0, 215.0, 116.0, 60.0 ],
+					"text" : "j.dataspace- @dataspace time @input midi @output Hertz"
 				}
 
 			}
@@ -188,7 +191,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
-					"patching_rect" : [ 30.0, 175.0, 70.0, 19.0 ],
+					"patching_rect" : [ 30.0, 175.0, 70.0, 20.0 ],
 					"text" : "j.pack-"
 				}
 
@@ -263,7 +266,7 @@
 					"destination" : [ "obj-7", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 379.5, 282.0, 447.5, 282.0 ],
+					"midpoints" : [ 379.5, 323.0, 447.5, 323.0 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
@@ -280,29 +283,29 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/code/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../Modules/Modular/Max/library/components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/code/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../Modules/Modular/Max/library/components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/code/Jamoma/Modules/Modular/Max/library/components/maxhelpui",
-				"patcherrelativepath" : "../../Modules/Modular/Max/library/components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
+				"patcherrelativepath" : "../patchers/components/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/code/Jamoma/Modules/Modular/Max/library/components/jamomaPath",
-				"patcherrelativepath" : "../../Modules/Modular/Max/library/components/jamomaPath",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
+				"patcherrelativepath" : "../patchers/components/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -314,19 +317,23 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.pack#.mxo",
+				"name" : "j.dataspace-.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace#.mxo",
+				"name" : "j.unpack-.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack#.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.route.mxo",
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
  ]

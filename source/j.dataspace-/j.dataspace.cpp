@@ -19,37 +19,37 @@
 
 // Data Structure for this object
 struct Dataspace {
-   	Object				    obj;
+   	t_object				obj;
 	TTGraphObjectBasePtr	graphObject;
 	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
-	SymbolPtr			    attrDataspace;
-	SymbolPtr			    attrInput;
-    SymbolPtr			    attrOutput;
+	t_symbol*			    attrDataspace;
+	t_symbol*			    attrInput;
+    t_symbol*			    attrOutput;
 };
 typedef Dataspace* DataspacePtr;
 
 
 // Prototypes for methods
-DataspacePtr	DataspaceNew			(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+DataspacePtr	DataspaceNew			(t_symbol* msg, long argc, t_atom* argv);
 void			DataspaceFree			(DataspacePtr self);
 void			DataspaceAssist			(DataspacePtr self, void* b, long msg, long arg, char* dst);
-MaxErr			DataspaceSetDataspace	(DataspacePtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr			DataspaceSetInput		(DataspacePtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr			DataspaceGetInput		(DataspacePtr self, void* attr, AtomCount* argc, AtomPtr* argv);
-MaxErr			DataspaceSetOutput		(DataspacePtr self, void* attr, AtomCount argc, AtomPtr argv);
-MaxErr			DataspaceGetOutput		(DataspacePtr self, void* attr, AtomCount* argc, AtomPtr* argv);
+t_max_err			DataspaceSetDataspace	(DataspacePtr self, void* attr, long argc, t_atom* argv);
+t_max_err			DataspaceSetInput		(DataspacePtr self, void* attr, long argc, t_atom* argv);
+t_max_err			DataspaceGetInput		(DataspacePtr self, void* attr, long* argc, t_atom** argv);
+t_max_err			DataspaceSetOutput		(DataspacePtr self, void* attr, long argc, t_atom* argv);
+t_max_err			DataspaceGetOutput		(DataspacePtr self, void* attr, long* argc, t_atom** argv);
 
 
 // Globals
-static ClassPtr sDataspaceClass;
+static t_class* sDataspaceClass;
 
 
 /************************************************************************************/
 // Main() Function
 
-int TTGRAPH_EXTERNAL_EXPORT main(void)
+int C74_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTGraphInit();	
 	common_symbols_init();
@@ -83,7 +83,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-DataspacePtr DataspaceNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+DataspacePtr DataspaceNew(t_symbol* msg, long argc, t_atom* argv)
 {
     DataspacePtr	self;
 	TTValue			v;
@@ -91,16 +91,16 @@ DataspacePtr DataspaceNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
     self = DataspacePtr(object_alloc(sDataspaceClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		self->attrDataspace = _sym_none;
 		
-		v.setSize(2);
-		v.set(0, TT("dataspace"));
-		v.set(1, TTUInt32(1));
+		v.resize(2);
+		v[0] = "dataspace";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);		
 
-		if (!self->graphObject->mKernel) {
+		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
@@ -126,7 +126,7 @@ void DataspaceAssist(DataspacePtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
 		strcpy (dst, "dictionary input and control messages");		
-	else if (msg==2){	// Outlets
+	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "dictionary output");
 		else
@@ -137,58 +137,58 @@ void DataspaceAssist(DataspacePtr self, void* b, long msg, long arg, char* dst)
 
 // ATTRIBUTE SETTERS
 
-MaxErr DataspaceSetDataspace(DataspacePtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err DataspaceSetDataspace(DataspacePtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrDataspace = atom_getsym(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("dataspace"), TT(self->attrDataspace->s_name));
+		self->graphObject->mKernel.set(TT("dataspace"), TT(self->attrDataspace->s_name));
 	}
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr DataspaceSetInput(DataspacePtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err DataspaceSetInput(DataspacePtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrInput = atom_getsym(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("inputUnit"), TT(self->attrInput->s_name));
+		self->graphObject->mKernel.set(TT("inputUnit"), TT(self->attrInput->s_name));
 	}
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr DataspaceGetInput(DataspacePtr self, void* attr, AtomCount* argc, AtomPtr* argv)
+t_max_err DataspaceGetInput(DataspacePtr self, void* attr, long* argc, t_atom** argv)
 {
 	TTValue		v;
 	TTSymbol	s;
 	
 	if (*argc && *argv) {
-		self->graphObject->mKernel->getAttributeValue(TT("inputUnit"), v);
-		v.get(0, s);
+		self->graphObject->mKernel.get(TT("inputUnit"), v);
+		s = v[0];
 		atom_setsym(*argv, gensym(s.c_str()));
 	}
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr DataspaceSetOutput(DataspacePtr self, void* attr, AtomCount argc, AtomPtr argv)
+t_max_err DataspaceSetOutput(DataspacePtr self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
 		self->attrOutput = atom_getsym(argv);
-		self->graphObject->mKernel->setAttributeValue(TT("outputUnit"), TT(self->attrOutput->s_name));
+		self->graphObject->mKernel.set(TT("outputUnit"), TT(self->attrOutput->s_name));
 	}
 	return MAX_ERR_NONE;
 }
 
 
-MaxErr DataspaceGetOutput(DataspacePtr self, void* attr, AtomCount* argc, AtomPtr* argv)
+t_max_err DataspaceGetOutput(DataspacePtr self, void* attr, long* argc, t_atom** argv)
 {
 	TTValue		v;
 	TTSymbol	s;
 	
 	if (*argc && *argv) {
-		self->graphObject->mKernel->getAttributeValue(TT("outputUnit"), v);
-		v.get(0, s);
+		self->graphObject->mKernel.get(TT("outputUnit"), v);
+		s = v[0];
 		atom_setsym(*argv, gensym(s.c_str()));
 	}
 	return MAX_ERR_NONE;

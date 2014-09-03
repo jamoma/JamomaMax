@@ -23,7 +23,7 @@ TT_MODULAR_CONSTRUCTOR,
 mFreeze(NO),
 mHighlight(kTTSym_none)
 {
-    TT_ASSERT("Correct number of args to create TTUiInfo", arguments.size() == 1);
+    TT_ASSERT("Correct number of args to create TTUiInfo", (arguments.size() == 1));
     
     if (arguments.size() == 1)
         if (arguments[0].type() == kTypePointer)
@@ -52,7 +52,7 @@ TTErr TTUiInfo::setSize(const TTValue& newValue)
 	rect->width = TTUInt32(newValue[0]);
 	rect->height = TTUInt32(newValue[1]);
     
-	object_attr_set_rect((ObjectPtr)mObject, _sym_presentation_rect, rect);
+	object_attr_set_rect((t_object*)mObject, _sym_presentation_rect, rect);
     
     ui_build(mObject);
 	
@@ -73,25 +73,28 @@ TTErr TTUiInfo::getSize(TTValue& value)
 TTErr TTUiInfo::setFreeze(const TTValue& newValue)
 {
     long		argc = 0;
-	AtomPtr		argv = NULL;
+	t_atom      *argv = NULL;
     TTNodePtr   modelNode;
     TTErr       err;
+    TTObject    modelObject;
 	
     mFreeze = newValue;
     
 	// get the TTContainer object of the view patch
-    err = JamomaDirectory->getTTNode(mObject->viewAddress, &modelNode);
+    err = accessApplicationLocalDirectory->getTTNode(mObject->viewAddress, &modelNode);
     
     if (!err) {
         
-        if (modelNode->getObject()) {
+        modelObject = modelNode->getObject();
+        
+        if (modelObject.valid()) {
             
             jamoma_ttvalue_to_Atom(mFreeze, &argc, &argv);
             
             // set freeze attribute to all j.remote (on 3 levels only as we don't have the // operator)
-            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*:freeze"), argc, argv);
-            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*/*.*:freeze"), argc, argv);
-            jamoma_container_send(TTContainerPtr(modelNode->getObject()), gensym("*.*/*.*/*.*:freeze"), argc, argv);
+            jamoma_container_send(modelObject, gensym("*.*:freeze"), argc, argv);
+            jamoma_container_send(modelObject, gensym("*.*/*.*:freeze"), argc, argv);
+            jamoma_container_send(modelObject, gensym("*.*/*.*/*.*:freeze"), argc, argv);
             
             return kTTErrNone;
         }

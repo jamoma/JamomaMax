@@ -9,198 +9,180 @@
 */
 
 #include "TTModularClassWrapperMax.h"
-#include "ext.h"						// Max Header
-#include "z_dsp.h"						// MSP Header
-#include "ext_obex.h"					// Max Object Extensions (attributes) Header
+#include "ext.h"                                // Max Header
+#include "z_dsp.h"                              // MSP Header
+#include "ext_obex.h"                           // Max Object Extensions (attributes) Header
 
 
 class TTModel {
-	typedef std::vector<TTObjectBasePtr>	TTModelMemberObjects;
-	typedef TTModelMemberObjects::iterator	TTModelMemberIter;
 	
-	TTPtr					mContext;
-	TTSymbol				mName;
-	TTContainer*			mContainer;
-	TTApplicationPtr		mApplication;
-	TTNodeDirectoryPtr		mDirectory;
-	TTModelMemberObjects	mMembers;		///< The member TTData, TTInput, TTPresetManager, etc.
-	TTModelMemberObjects	mCallbacks;		///< The callbacks used by TTData, TTInput, TTPresetManager, etc.
+    TTObject                mContainer;         // a model is based on a #TTcontainer class
+    TTSymbol				mName;              // the name of our model
+	TTPtr					mContext;           // the context of our model
+    
+    TTObject                mApplicationLocal;  // ease the access to our local application
+    TTList                  mMembers;           // the name of each registered members
 
 public:
-	TTModel(TTPtr aContext, TTSymbol aName) :
+	TTModel(TTSymbol aName, TTPtr aContext) :
+    mName(aName),
 	mContext(aContext),
-	mName(aName),
-	mContainer(NULL)
+    mApplicationLocal(accessApplicationLocal)
 	{
-		TTValue		args; // TODO: (optional) pass address callback and value callback (these are both for the activity return mechanism)
-		TTNodePtr	returnedNode		= NULL;
-		TTBoolean	newInstanceCreated	= NO;
-		TTAddress	address(mName);
-
-		mApplication = (TTApplicationPtr)TTApplicationManagerGetApplication("Jamoma");
-		mDirectory = TTApplicationGetDirectory(TTObjectBasePtr(mApplication));
-
-		TTObjectBaseInstantiate(TTSymbol("Container"), TTObjectBaseHandle(&mContainer), args);
-		mContainer->setAttributeValue(kTTSym_tags, kTTSym_model);
+		// create container object
+		mContainer = TTObject("Container"); // TODO: (optional) pass address callback and value callback (these are both for the activity return mechanism)
+		mContainer.set(kTTSym_tags, kTTSym_model);
 		
-		mDirectory->TTNodeCreate(address, mContainer, mContext, &returnedNode, &newInstanceCreated);
-		mContainer->setAttributeValue("address", address);
+        // register the container object into the local application directly under the root
+		TTAddress	address = kTTAdrsRoot.appendAddress(TTAddress(mName));
+        TTValue		v, args = TTValue(address, mContainer, mContext);
+        mApplicationLocal.send("ObjectRegister", args, v);
+		
+        // set the effective registration address as container address
+		mContainer.set("address", v);
 	}
 	
 	~TTModel()
 	{
-		chuck(TTObjectBaseHandle(&mContainer));
-		
-		for (TTModelMemberIter i = mMembers.begin(); i != mMembers.begin(); i++) {
-			TTObjectBasePtr thing = *i;
-			chuck(&thing);
-		}
-		
-		for (TTModelMemberIter i = mMembers.begin(); i != mMembers.begin(); i++) {
-			TTObjectBasePtr callback = *i;
-			TTObjectBaseRelease(TTObjectBaseHandle(&callback));
-		}
+        TTValue none;
+        
+        // unregister all members (and destroy them if nobody else references them)
+        for (mMembers.begin(); mMembers.end(); mMembers.end())
+        {
+            TTAddress address = mMembers.current()[0];
+            mApplicationLocal.send("ObjectUnregister", address, none);
+        }
 	}
 	
-	/**	Free a single item (container, data, input, output, preset, etc).  Used by destructor. */
-	void chuck(TTObjectBaseHandle aThing)
+	/** Create a data object -- used by the creators for parameter/message/return */
+	TTErr createData(TTSymbol aName, TTSymbol aServiceName, TTFunctionWithBatonAndValue aCallbackFunction, TTPtr aBaton, TTObject& dataObject)
 	{
-		TTValue vAddress;
-		TTSymbol symAddress;
-		
-		(*aThing)->getAttributeValue(kTTSym_address, vAddress);
-		symAddress = vAddress;
-		TTAddress address(symAddress);
-		mDirectory->TTNodeRemove(address);
-		TTObjectBaseRelease(TTObjectBaseHandle(aThing));
-	}
-	
-	/** Create a generic thing -- used by the creators for parameter/message/return */
-	TTErr createThing(TTSymbol aServiceName, TTSymbol aName, TTSymbol aType, TTFunctionWithBatonAndValue aCallbackFunction, TTPtr aBaton, TTSymbol aDescription)
-	{
-		TTCallback*	callback = NULL;
-		TTValuePtr	baton = new TTValue(TTPtr(aBaton));
-		TTData*		parameter = NULL;
-		TTValue		parameter_args, none;
-		TTString	name("/");
-		TTNodePtr	returnedNode = NULL;
-		TTBoolean	newInstanceCreated = NO;
-		
-		name += aName.string();
-		
-		TTObjectBaseInstantiate(TTSymbol("callback"), TTObjectBaseHandle(&callback), none);
-		callback->setAttributeValue(TTSymbol("baton"),	baton);
-		callback->setAttributeValue(TTSymbol("function"), TTPtr(aCallbackFunction));
-		
-		parameter_args.append(callback);
-		parameter_args.append(aServiceName);
-		
-		TTObjectBaseInstantiate(TTSymbol("Data"), TTObjectBaseHandle(&parameter), parameter_args);
-		parameter->setAttributeValue(kTTSym_type, aType);
-		parameter->setAttributeValue(kTTSym_description, aDescription);
-		
-		TTAddress address(TTString(mName.string()) + name);
-		mDirectory->TTNodeCreate(address, parameter, mContext, &returnedNode, &newInstanceCreated);
-		
-		mCallbacks.push_back(callback);
-		mMembers.push_back(parameter);
+        // create a data object
+		dataObject = TTObject("Data", aServiceName);
+        dataObject.set("baton",	aBaton);
+		dataObject.set("function", TTPtr(aCallbackFunction));
+        
+        // register the data object into the local application under a /mName/aName address
+		TTAddress   address = kTTAdrsRoot.appendAddress(TTAddress(mName)).appendAddress(TTAddress(aName));
+        TTValue     v, args = TTValue(address, dataObject);
+        mApplicationLocal.send("ObjectRegister", args, v);
+        
+        // remember its effective registration address to unregister it later
+        mMembers.append(v);
+        
 		return kTTErrNone;
 	}
 	
-	
-	TTErr createParameter(TTSymbol aName, TTSymbol aType, TTValue aDefaultValue, TTFunctionWithBatonAndValue aCallbackFunction, TTPtr aBaton, TTSymbol aDescription)
+    
+	TTErr createParameter(TTSymbol aName, TTFunctionWithBatonAndValue aCallbackFunction, TTPtr aBaton, TTSymbol aType, TTSymbol aDescription, TTValue aDefaultValue)
 	{
-		TTErr	err = createThing(kTTSym_parameter, aName, aType, aCallbackFunction, aBaton, aDescription);
-		TTData*	parameter = NULL;
-		
-		if (!err) {
-			parameter = (TTData*)mMembers.back();
-			parameter->setAttributeValue(kTTSym_valueDefault, aDefaultValue);
-		}
-		return err;
+        TTObject parameterObject;
+		TTErr err = createData(aName, kTTSym_parameter, aCallbackFunction, aBaton, parameterObject);
+        
+        // set attributes
+        if (!err) {
+            
+            parameterObject.set("type", aType);
+            parameterObject.set("description", aDescription);
+            parameterObject.set("defaultValue", aDescription);
+        }
+        
+        return err;
 	}
 
 	
-	TTErr createMessage(TTSymbol aName, TTSymbol aType, TTFunctionWithBatonAndValue aCallbackFunction, TTPtr aBaton, TTSymbol aDescription)
+	TTErr createMessage(TTSymbol aName, TTFunctionWithBatonAndValue aCallbackFunction, TTPtr aBaton, TTSymbol aType, TTSymbol aDescription)
 	{
-		return createThing(kTTSym_message, aName, aType, aCallbackFunction, aBaton, aDescription);
+		TTObject messageObject;
+		TTErr err = createData(aName, kTTSym_message, aCallbackFunction, aBaton, messageObject);
+        
+        // set attributes
+        if (!err) {
+            
+            messageObject.set("type", aType);
+            messageObject.set("description", aDescription);
+        }
+        
+        return err;
 	}
 
 	
-	TTErr createReturn(TTSymbol aName, TTSymbol aType, TTFunctionWithBatonAndValue aCallbackFunction, TTPtr aBaton, TTSymbol aDescription)
+	TTErr createReturn(TTSymbol aName, TTFunctionWithBatonAndValue aCallbackFunction, TTPtr aBaton, TTSymbol aType, TTSymbol aDescription)
 	{
-		return createThing(kTTSym_return, aName, aType, aCallbackFunction, aBaton, aDescription);
+		TTObject returnObject;
+		TTErr err = createData(aName, kTTSym_return, aCallbackFunction, aBaton, returnObject);
+        
+        // set attributes
+        if (!err) {
+            
+            returnObject.set("type", aType);
+            returnObject.set("description", aDescription);
+        }
+        
+        return err;
 	}
 
 	
-	TTInputAudio* createInput(TTSymbol aName)
+	TTErr createInput(TTSymbol aName, TTObject& inputAudioObject)
 	{
-		TTValue			in_args;
-		TTString		name("/");
-		TTObjectBasePtr	inputObject = NULL;
-		TTNodePtr		returnedNode = NULL;
-		TTBoolean		newInstanceCreated = NO;
+        // create a audio input object
+		inputAudioObject =  TTObject("Input.audio");
 		
-		in_args.append(TT("audio"));
-		name += aName.string();
-		
-		TTAddress address(TTString(mName.string()) + name);
-		
-		TTObjectBaseInstantiate(TTSymbol("Input.audio"), TTObjectBaseHandle(&inputObject), in_args);
-		mDirectory->TTNodeCreate(address, inputObject, mContext, &returnedNode, &newInstanceCreated);
-		mMembers.push_back(inputObject);
-		return (TTInputAudio*)inputObject;
+        // register the audio input object into the local application under a /mName/audio/in.aName address
+		TTAddress   address = kTTAdrsRoot.appendAddress(TTAddress(mName)).appendAddress(TTAddress("audio/in")).appendInstance(TTAddress(aName));
+        TTValue     v, args = TTValue(address, inputAudioObject);
+        mApplicationLocal.send("ObjectRegister", args, v);
+        
+        // remember its effective registration address to unregister it later
+        mMembers.append(v);
+        
+		return kTTErrNone;
 	}
 		
 	
-	TTOutputAudio* createOutput(TTSymbol aName)
+	TTErr createOutput(TTSymbol aName, TTObject& outputAudioObject)
 	{
-		TTValue			out_args;
-		TTString		name("/");
-		TTObjectBasePtr	outputObject = NULL;
-		TTNodePtr		returnedNode = NULL;
-		TTBoolean		newInstanceCreated = NO;
-				
-		out_args.append(TT("audio"));
-		name += aName.string();
+        // create a audio output object
+		outputAudioObject =  TTObject("Output.audio");
 		
-		TTAddress address(TTString(mName.string()) + name);
-		
-		TTObjectBaseInstantiate(TTSymbol("Output.audio"), TTObjectBaseHandle(&outputObject), out_args);
-		mDirectory->TTNodeCreate(address, outputObject, mContext, &returnedNode, &newInstanceCreated);
-		mMembers.push_back(outputObject);
-		return (TTOutputAudio*)outputObject;
+        // register the audio output object into the local application under a /mName/audio/out.aName address
+		TTAddress   address = kTTAdrsRoot.appendAddress(TTAddress(mName)).appendAddress(TTAddress("audio/out")).appendInstance(TTAddress(aName));
+        TTValue     v, args = TTValue(address, outputAudioObject);
+        mApplicationLocal.send("ObjectRegister", args, v);
+        
+        // remember its effective registration address to unregister it later
+        mMembers.append(v);
+        
+		return kTTErrNone;
 	}
 	
-	
-	TTErr createPresetManager()
+    TTErr createPresetManager()
 	{
-		TTValue			preset_args; // no args needed
-		TTString		name("/preset");
-		TTAddress		address(TTString(mName.string()) + name);
-		TTObjectBasePtr	presetManager = NULL;
-		TTNodePtr		returnedNode = NULL;
-		TTBoolean		newInstanceCreated = NO;
+        // create a preset manager object
+		TTObject presetManagerObject =  TTObject("PresetManager");
 		
-		TTObjectBaseInstantiate(kTTSym_PresetManager, TTObjectBaseHandle(&presetManager), preset_args);
-		mDirectory->TTNodeCreate(address, presetManager, mContext, &returnedNode, &newInstanceCreated);
-		
-		presetManager->setAttributeValue("address", TTAddress(name));
-		mMembers.push_back(presetManager);
-		// TODO: tell it to load a preset
+        // register the preset manager object into the local application under a /mName/preset address
+		TTAddress   address = kTTAdrsRoot.appendAddress(TTAddress(mName)).appendAddress(TTAddress("preset"));
+        TTValue     v, args = TTValue(address, presetManagerObject);
+        mApplicationLocal.send("ObjectRegister", args, v);
+        
+        // remember its effective registration address to unregister it later
+        mMembers.append(v);
+        
+        // TODO: tell it to load a preset
 		// 1. create TTXMLHandler object
 		// 2. set the object attr of the above object to be the PresetManager
 		// 3. send read message to the TTXMLHandler w/ the filepath as an argument
 		// 4. send recall message on the PresetManager
 		// 5. free the TTXMLHandler
-		
+        
 		return kTTErrNone;
 	}
-	
-	
+
+
 	void init()
 	{
-		mContainer->sendMessage("Init");
+		mContainer.send("Init");
 	}
 	
 };

@@ -1087,7 +1087,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 197.0, 160.0, 206.0, 67.0 ],
-					"text" : "j.parameter angle @type integer @ramp/drive Max @repetitions/filter 1 @range 0 90 @clipmode none @description \"Rotate image - in degrees\"",
+					"text" : "j.parameter angle @type integer @ramp/drive max @repetitions/filter 1 @range 0 90 @clipmode none @description \"Rotate image - in degrees\"",
 					"varname" : "angle[1]"
 				}
 

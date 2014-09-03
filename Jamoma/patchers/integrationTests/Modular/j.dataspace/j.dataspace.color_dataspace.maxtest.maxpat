@@ -5,7 +5,7 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 0.0, 49.0, 1508.0, 891.0 ],
@@ -70,7 +70,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 604.5, 802.0, 254.5, 47.0 ],
+					"patching_rect" : [ 604.5, 802.0, 257.0, 47.0 ],
 					"text" : "test.assert Jamoma/Modular/.jataspace/color/neutral2hsv @tags Jamoma Modular j.dataspace"
 				}
 
@@ -86,7 +86,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 812.5, 742.0, 261.5, 47.0 ],
+					"patching_rect" : [ 812.5, 742.0, 263.0, 47.0 ],
 					"text" : "test.assert Jamoma/Modular/.jataspace/color/rgb82neutral @tags Jamoma Modular j.dataspace"
 				}
 
@@ -102,7 +102,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 184.0, 396.0, 257.5, 47.0 ],
+					"patching_rect" : [ 184.0, 396.0, 261.0, 47.0 ],
 					"text" : "test.assert Jamoma/Modular/.jataspace/color/cmy2neutral @tags Jamoma Modular j.dataspace"
 				}
 
@@ -134,7 +134,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 604.5, 396.0, 254.5, 47.0 ],
+					"patching_rect" : [ 604.5, 396.0, 257.0, 47.0 ],
 					"text" : "test.assert Jamoma/Modular/.jataspace/color/hsv2neutral @tags Jamoma Modular j.dataspace"
 				}
 
@@ -183,6 +183,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-105",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -208,7 +210,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -514,6 +516,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-82",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -554,7 +558,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -860,6 +864,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-87",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -900,7 +906,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -1206,6 +1212,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-92",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1246,7 +1254,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -1552,6 +1560,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-97",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1592,7 +1602,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -1898,6 +1908,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-77",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1938,7 +1950,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -2244,6 +2256,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-72",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -2284,7 +2298,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -2590,6 +2604,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-67",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -2630,7 +2646,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -2936,6 +2952,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-62",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -2976,7 +2994,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 7,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
@@ -3282,6 +3300,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-31",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -3333,7 +3353,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1166.0, 742.0, 303.0, 47.0 ],
+					"patching_rect" : [ 1166.0, 742.0, 304.0, 47.0 ],
 					"text" : "test.assert Jamoma/Modular/.jataspace/color/pointersNotMixedUp @tags Jamoma Modular j.dataspace"
 				}
 
@@ -3435,7 +3455,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 812.5, 343.0, 261.5, 47.0 ],
+					"patching_rect" : [ 812.5, 343.0, 263.0, 47.0 ],
 					"text" : "test.assert Jamoma/Modular/.jataspace/color/rgb82neutral @tags Jamoma Modular j.dataspace"
 				}
 

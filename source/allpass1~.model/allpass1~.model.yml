@@ -9,7 +9,6 @@ includes:
   - ../../../../Core/DSP/library/includes
   - ../../../../Core/Modular/library/includes
   - ../../../../Core/Modular/library/PeerObject
-  - ../../../../Core/Modular/library/ModularForMax
   - ../../../../Core/Modular/library/SchedulerLib
   - ../../../../Core/Modular/library/ProtocolLib
   - ../classwrapper
@@ -20,5 +19,6 @@ libraries:
   - DSP
   - MODULAR
   - C74
+  - JAMOMA_FOR_MAX
 
 prefix: ../c74support/max-includes/macho-prefix.pch

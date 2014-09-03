@@ -15,7 +15,7 @@
 
 #include "TTClassWrapperMax.h"
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	TTDSPInit();
 	return wrapTTClassAsMaxClass(TT("function"), "j.function~", NULL);

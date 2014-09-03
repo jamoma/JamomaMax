@@ -30,7 +30,7 @@
 
 #include "TTClassWrapperMax.h"
 
-#include "TTModular.h"				// Jamoma Modular API
+#include "TTModular.h"              // Jamoma Modular API
 #include "JamomaForMax.h"           // Jamoma for Max
 #include "TTInputAudio.h"
 #include "TTOutputAudio.h"
@@ -59,7 +59,7 @@ typedef void (*Spec_WrapTTModularClass)(WrappedClassPtr c);
  @param argv		Pointer to the atom array of arguments
  @ingroup typedefs
 */
-typedef void (*Spec_WrappedClass_new)(TTPtr self, AtomCount argc, AtomPtr argv);
+typedef void (*Spec_WrappedClass_new)(TTPtr self, long argc, t_atom *argv);
 
 
 /** Wrapper for the 'free' method, called when an object is being freed.
@@ -77,7 +77,7 @@ typedef void (*Spec_WrappedClass_free)(TTPtr self);
  @param argc		t_atomarray count (length) for the array of arguments
  @param argv		Pointer to the atom array of arguments
 */
-typedef void (*Spec_WrappedClass_anything)(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+typedef void (*Spec_WrappedClass_anything)(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /** Wrapper for a method called when the object receives notifications.
@@ -119,26 +119,26 @@ typedef struct _wrappedModularInstance {
 	TTHandle								inlets;						///< an array of inlets
 	long									index;						///< index of the inlet used
 	TTHandle								outlets;					///< an array of outlet
-	SymbolPtr								msg;
-	AtomCount								argc;						
-	AtomPtr									argv;
+	t_symbol								*msg;
+	long                                    argc;
+	t_atom									*argv;
 
 	WrappedClassPtr							wrappedClassDefinition;		///< A pointer to the class definition
 
 #ifndef ARRAY_EXTERNAL
-	TTObjectBasePtr							wrappedObject;				///< The instance of the Jamoma object we are wrapping
-	TTSubscriberPtr							subscriberObject;			///< The instance of a TTSubscriber object used to 
+	TTObject                                wrappedObject;				///< The instance of the Jamoma object we are wrapping
+	TTObject                                subscriberObject;			///< The instance of a TTSubscriber object used to
 																		///< register the wrapped object in the tree structure
 #endif
 	
 	TTBoolean								useInternals;				///< The hash table can be used as an array of wrappedObject
-	TTHashPtr								internals;					///< An hash table to store any internal TTObjectBases (like TTData, TTViewer, ...)
+	TTHashPtr                               internals;					///< An hash table to store any internal TTObjectBases (like TTData, TTViewer, ...)
 	TTBoolean								iterateInternals;			///< The flag is true when an iteration is done on the internals
 	TTSymbol								cursor;						///< to select an entry in x->internals
 	
 	TTAddress								address;					///< sometime external needs to store an address (e.g. send, receive, view, ...)
 	
-	ObjectPtr								patcherPtr;					///< the patcher in which the external is (ignoring subpatcher)
+	t_object								*patcherPtr;					///< the patcher in which the external is (ignoring subpatcher)
 	TTSymbol								patcherContext;				///< the patcher context in which the external is (model, view)
 	TTSymbol								patcherClass;				///< the patcher class in which the external is
 	TTSymbol								patcherName;				///< the patcher name in which the external is
@@ -153,10 +153,10 @@ typedef struct _wrappedModularInstance {
 	TTString								arrayFormatInteger;         ///< a format string to edit numeric instance
 	TTString								arrayFormatString;			///< a format string to edit string instance
 	
-	SymbolPtr								arrayAttrFormat;			// Is it 'single' format output or 'array' format output
+	t_symbol								*arrayAttrFormat;			// Is it 'single' format output or 'array' format output
 #endif
 	
-	void*									extra;						///< used to keep very specific things
+	void									*extra;						///< used to keep very specific things
 	
 } WrappedModularInstance;
 
@@ -169,28 +169,28 @@ typedef WrappedModularInstance* WrappedModularInstancePtr;	///< Pointer to a wra
 
 /** tools to copy msg, argc and argv into the member msg, argc and argv of the WrappedModularInstance
 */
-void		copy_msg_argc_argv(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void		copy_msg_argc_argv(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
 
 // Use internals to store several objects :
 
 /**
  */
-TTErr		makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTPtr context, TTSymbol service, TTObjectBasePtr *returnedData, TTBoolean deferlow = NO);
-TTErr		makeInternals_explorer(TTPtr self, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedExplorer, TTBoolean deferlow = NO);
+TTErr		makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, t_symbol *callbackMethod, TTPtr context, TTSymbol service, TTObject& returnedData, TTBoolean deferlow = NO);
+TTErr		makeInternals_explorer(TTPtr self, TTSymbol name, t_symbol *callbackMethod, TTObject& returnedExplorer, TTBoolean deferlow = NO);
 
 
 /**
  */
-TTErr		makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedViewer, TTBoolean deferlow = NO);
+TTErr		makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, t_symbol *callbackMethod, TTObject& returnedViewer, TTBoolean deferlow = NO);
 
 
 /**
  */
-TTErr		makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedReceiver, TTBoolean deferlow = NO, TTBoolean appendNameAsAttribute = NO);
+TTErr		makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, t_symbol *callbackMethod, TTObject& returnedReceiver, TTBoolean deferlow = NO, TTBoolean appendNameAsAttribute = NO);
 
 /**
  */
-TTErr       makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObjectBasePtr *returnedSender, TTBoolean appendNameAsAttribute = NO);
+TTErr       makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObject& returnedSender, TTBoolean appendNameAsAttribute = NO);
 
 /**
  */
@@ -212,7 +212,7 @@ TTErr		wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCl
  @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
-ObjectPtr	wrappedModularClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv);
+t_object	*wrappedModularClass_new(t_symbol *name, long argc, t_atom *argv);
 
 
 /**
@@ -227,7 +227,7 @@ void		wrappedModularClass_free(WrappedModularInstancePtr x);
 
 /**
 */
-t_max_err	wrappedModularClass_notify(TTPtr self, t_symbol *s, SymbolPtr msg, void *sender, void *data);
+t_max_err	wrappedModularClass_notify(TTPtr self, t_symbol *s, t_symbol *msg, void *sender, void *data);
 
 
 /**
@@ -241,7 +241,7 @@ void		wrappedModularClass_shareContextNode(TTPtr self, TTNodePtr *contextNode);
  @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
-t_max_err	wrappedModularClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, AtomPtr* argv);
+t_max_err	wrappedModularClass_attrGet(TTPtr self, t_object *attr, long* argc, t_atom** argv);
 
 
 /**
@@ -250,7 +250,7 @@ t_max_err	wrappedModularClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* arg
  @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
-t_max_err	wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomPtr argv);
+t_max_err	wrappedModularClass_attrSet(TTPtr self, t_object *attr, long argc, const t_atom *argv);
 
 
 /** This method handles "anything" messages to the Max object that wraps the #TTModularClass.
@@ -259,7 +259,7 @@ t_max_err	wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc
  @param argc		Number of arguments for the message.
  @param argv		The arguments of the message as a pointer to an atom array
 */
-void		wrappedModularClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
+void		wrappedModularClass_anything(TTPtr self, t_symbol *s, long argc, t_atom *argv);
 
 
 /**
@@ -268,7 +268,7 @@ void		wrappedModularClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, Atom
  @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
-TTErr		wrappedModularClass_sendMessage(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
+TTErr		wrappedModularClass_sendMessage(TTPtr self, t_symbol *s, long argc, const t_atom *argv);
 
 
 /**
@@ -277,7 +277,7 @@ TTErr		wrappedModularClass_sendMessage(TTPtr self, SymbolPtr s, AtomCount argc, 
  @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
-TTErr		wrappedModularClass_setAttribute(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
+TTErr		wrappedModularClass_setAttribute(TTPtr self, t_symbol *s, long argc, const t_atom *argv);
 
 
 /**
@@ -296,37 +296,37 @@ TTPtr		wrappedModularClass_oksize(TTPtr self, t_rect *newrect);
 
 /**
 */
-void		wrappedModularClass_mousedblclick(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers);
+void		wrappedModularClass_mousedblclick(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
 
 
 /**
 */
-void		wrappedModularClass_mousedown(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers);
+void		wrappedModularClass_mousedown(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
 
 
 /**
 */
-void		wrappedModularClass_mousedrag(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers);
+void		wrappedModularClass_mousedrag(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
 
 
 /**
 */
-void		wrappedModularClass_mouseup(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers);
+void		wrappedModularClass_mouseup(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
 
 
 /**
 */
-void		wrappedModularClass_mouseenter(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers);
+void		wrappedModularClass_mouseenter(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
 
 
 /**
 */
-void		wrappedModularClass_mousemove(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers);
+void		wrappedModularClass_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
 
 
 /**
 */
-void		wrappedModularClass_mouseleave(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers);
+void		wrappedModularClass_mouseleave(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
 
 
 /**
@@ -342,7 +342,7 @@ int			convertModifiersFromMaxToTTGraphics(int maxModifiers);
  @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
-t_max_err	wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av);
+t_max_err	wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, long *ac, t_atom **av);
 
 
 /**
@@ -351,7 +351,7 @@ t_max_err	wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, AtomCount *ac, A
  @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
-t_max_err	wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av);
+t_max_err	wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, long ac, const t_atom *av);
 
 
 /**
@@ -360,7 +360,7 @@ t_max_err	wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, AtomCount ac, At
  @param argc		t_atomarray count (length)
  @param argv		Pointer to the atom array
 */
-void		wrappedModularClass_ArraySelect(TTPtr self, SymbolPtr msg, AtomCount ac, AtomPtr av);
+void		wrappedModularClass_ArraySelect(TTPtr self, t_symbol *msg, long ac, const t_atom *av);
 
 
 /**

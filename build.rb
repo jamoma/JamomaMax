@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby -wKU
+#!/usr/bin/env ruby -wU
 # encoding: utf-8
 
 # move to Max directory
@@ -148,8 +148,12 @@ else
       #puts
       puts "Testing in 64bit Max"
       puts "==================================================="
-      Dir.chdir "/Applications/Max 6.1/packages/testpackage/ruby"
-      puts `arch -arch x86_64 ruby test.rb "/Applications/Max 6.1"`
+      if Dir.exists? "/Applications/Max 6.1/packages/testpackage/ruby"
+        Dir.chdir "/Applications/Max 6.1/packages/testpackage/ruby"
+        puts `arch -arch x86_64 ruby test.rb "/Applications/Max 6.1"`
+      else
+        puts "Test Package not found in /Applications/Max 6.1"
+      end
       puts
       puts "=================DONE===================="
       puts

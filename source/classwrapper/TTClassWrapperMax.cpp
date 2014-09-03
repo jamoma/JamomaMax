@@ -21,7 +21,7 @@ extern "C" void wrappedClass_receiveNotificationForOutlet(WrappedInstancePtr sel
 static t_hashtab*	wrappedMaxClasses = NULL;
 
 
-ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
+t_object* wrappedClass_new(t_symbol* name, long argc, t_atom* argv)
 {	
 	WrappedClass*		wrappedMaxClass = NULL;
     WrappedInstancePtr	x = NULL;
@@ -31,12 +31,12 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 	TTErr				err = kTTErrNone;
 	
 	// Find the WrappedClass
-	hashtab_lookup(wrappedMaxClasses, name, (ObjectPtr*)&wrappedMaxClass);
+	hashtab_lookup(wrappedMaxClasses, name, (t_object**)&wrappedMaxClass);
 	
 	// If the WrappedClass has a validity check defined, then call the validity check function.
 	// If it returns an error, then we won't instantiate the object.
-	if(wrappedMaxClass){
-		if(wrappedMaxClass->validityCheck)
+	if (wrappedMaxClass) {
+		if (wrappedMaxClass->validityCheck)
 			err = wrappedMaxClass->validityCheck(wrappedMaxClass->validityCheckArgument);
 		else
 			err = kTTErrNone;
@@ -44,41 +44,36 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 	else
 		err = kTTErrGeneric;
 	
-	if(!err)
+	if (!err)
 		x = (WrappedInstancePtr)object_alloc(wrappedMaxClass->maxClass);
-    if(x){
+    if (x) {
 		x->wrappedClassDefinition = wrappedMaxClass;
 		x->maxNumChannels = 2;		// An initial argument to this object will set the maximum number of channels
-		if(attrstart && argv)
+		if (attrstart && argv)
 			x->maxNumChannels = atom_getlong(argv);
 		
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
-
-		
-		
-		
-		
 		
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("numChannelsUseFixedRatioInputsToOutputs"), v)) {
 		   TTUInt16	inputs;
 		   TTUInt16	outputs;
 		   
-		   v.get(0, inputs);
-		   v.get(1, outputs);
+		   inputs = v[0];
+		   outputs = v[1];
 		   x->numInputs = x->maxNumChannels * inputs;
 		   x->numOutputs = x->maxNumChannels * outputs;
 		}
 		else if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("fixedNumChannels"), v)) {
 			TTUInt16 numChannels;
 			
-			v.get(0, numChannels);
+			numChannels = v[0];
 			x->numInputs = numChannels;
 			x->numOutputs = numChannels;
 		}
 		else if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("fixedNumOutputChannels"), v)) {
 			TTUInt16 numChannels;
 			
-			v.get(0, numChannels);
+			numChannels = v[0];
 			x->numInputs = x->maxNumChannels;
 			x->numOutputs = numChannels;
 		}
@@ -90,15 +85,15 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("additionalSignalInputSetsAttribute"), v)) {
 			x->numControlSignals = v.size();
 			x->controlSignalNames = new TTSymbol[x->numControlSignals];
-			for(TTUInt16 i=0; i<x->numControlSignals; i++){
+			for (TTUInt16 i=0; i<x->numControlSignals; i++) {
 				x->numInputs++;
-				v.get(i, x->controlSignalNames[i]);
+				x->controlSignalNames[i] = v[i];
 			}
 		}
 		
-		TTObjectBaseInstantiate(wrappedMaxClass->ttblueClassName, &x->wrappedObject, x->maxNumChannels);		
-		TTObjectBaseInstantiate(TT("audiosignal"), &x->audioIn, x->numInputs);
-		TTObjectBaseInstantiate(TT("audiosignal"), &x->audioOut,x->numOutputs);
+		x->wrappedObject = new TTAudioObject(wrappedMaxClass->ttblueClassName, x->maxNumChannels);
+		x->audioIn = new TTAudio(x->numInputs);
+		x->audioOut = new TTAudio(x->numOutputs);
 		attr_args_process(x,argc,argv);				// handle attribute args			
     	object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x,NULL));	// dumpout
 		
@@ -111,23 +106,23 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
             TTUInt16    outletIndex = 0;
             TTSymbol	notificationName;
             
- 			v.get(0, outletIndex);
- 			v.get(1, notificationName);
+ 			outletIndex = v[0];
+ 			notificationName = v[1];
             
             // TODO: to support more than one notification->outlet we need see how many args are actually passed-in
             // and then we need to track them in a hashtab or something...
             
             x->controlOutlet = outlet_new((t_pxobject*)x, NULL);
             
-            err = TTObjectBaseInstantiate(TT("callback"), &x->controlCallback, none);
-            x->controlCallback->setAttributeValue(TT("function"), TTPtr(&wrappedClass_receiveNotificationForOutlet));
-            x->controlCallback->setAttributeValue(TT("baton"), TTPtr(x));	
+            x->controlCallback = new TTObject("callback");
+            x->controlCallback->set("function", TTPtr(&wrappedClass_receiveNotificationForOutlet));
+            x->controlCallback->set("baton", TTPtr(x));	
  
         	// dynamically add a message to the callback object so that it can handle the 'objectFreeing' notification
-            x->controlCallback->registerMessage(notificationName, (TTMethod)&TTCallback::notify, kTTMessagePassValue);
+            x->controlCallback->instance()->registerMessage(notificationName, (TTMethod)&TTCallback::notify, kTTMessagePassValue);
             
             // tell the source that is passed in that we want to watch it
-            x->wrappedObject->registerObserverForNotifications(*x->controlCallback);            
+            x->wrappedObject->registerObserverForNotifications(*x->controlCallback);
 
         }
         
@@ -137,16 +132,16 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 		  
 		x->obj.z_misc = Z_NO_INPLACE;
 	}
-	return ObjectPtr(x);
+	return (t_object*)x;
 }
 
 
 void wrappedClass_free(WrappedInstancePtr x)
 {
 	dsp_free((t_pxobject *)x);
-	TTObjectBaseRelease(&x->wrappedObject);
-	TTObjectBaseRelease(&x->audioIn);
-	TTObjectBaseRelease(&x->audioOut);
+	delete x->wrappedObject;
+	delete x->audioIn;
+	delete x->audioOut;
 	delete[] x->controlSignalNames;
 }
 
@@ -154,77 +149,66 @@ void wrappedClass_free(WrappedInstancePtr x)
 void wrappedClass_receiveNotificationForOutlet(WrappedInstancePtr self, TTValue& arg)
 {
     TTString	string = arg[0];
-    SymbolPtr   s = gensym((char*)string.c_str());
+    t_symbol*   s = gensym((char*)string.c_str());
     
     outlet_anything(self->controlOutlet, s, 0, NULL);
 }
 
 
-t_max_err wrappedClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, AtomPtr* argv)
+t_max_err wrappedClass_attrGet(TTPtr self, t_object* attr, long* argc, t_atom** argv)
 {
-	SymbolPtr	attrName = (SymbolPtr)object_method(attr, _sym_getname);
+	t_symbol*	attrName = (t_symbol*)object_method(attr, _sym_getname);
 	TTValue		v;
-	AtomCount	i;
+	long	i;
 	WrappedInstancePtr x = (WrappedInstancePtr)self;
 	TTPtr		rawpointer;
-	MaxErr		err;
+	t_max_err		err;
 	
-	err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (ObjectPtr*)&rawpointer);
+	err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (t_object**)&rawpointer);
 	if (err)
 		return err;
 
 	TTSymbol	ttAttrName(rawpointer);
 	
-	x->wrappedObject->getAttributeValue(ttAttrName, v);
+	x->wrappedObject->get(ttAttrName, v);
 
 	*argc = v.size();
 	if (!(*argv)) // otherwise use memory passed in
 		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.size());
 
 	for (i=0; i<v.size(); i++) {
-		if(v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64){
+		if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64) {
 			TTFloat64	value;
-			v.get(i, value);
+			value = v[i];
 			atom_setfloat(*argv+i, value);
 		}
-		else if(v[i].type() == kTypeSymbol){
+		else if (v[i].type() == kTypeSymbol) {
 			TTSymbol	value;
-			v.get(i, value);
+			value = v[i];
 			atom_setsym(*argv+i, gensym((char*)value.c_str()));
 		}
-		else{	// assume int
+		else {	// assume int
 			TTInt32		value;
-			v.get(i, value);
+			value = v[i];
 			atom_setlong(*argv+i, value);
 		}
 	}	
 	return MAX_ERR_NONE;
 }
 
-#ifdef __LP64__
-TTInt64	AtomGetInt(AtomPtr a)
-{
-	return (TTInt64)atom_getlong(a);
-}
-#else
-int AtomGetInt(AtomPtr a)
-{
-	return (int)atom_getlong(a);
-}
-#endif
 
-t_max_err wrappedClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomPtr argv)
+t_max_err wrappedClass_attrSet(TTPtr self, t_object* attr, long argc, t_atom* argv)
 {
 	WrappedInstancePtr x = (WrappedInstancePtr)self;
 	
 	if (argc && argv) {
-		SymbolPtr	attrName = (SymbolPtr)object_method(attr, _sym_getname);
+		t_symbol*	attrName = (t_symbol*)object_method(attr, _sym_getname);
 		TTValue		v;
-		AtomCount	i;
-		MaxErr		err;
+		long	i;
+		t_max_err		err;
 		TTPtr		ptr = NULL;
 		
-		err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (ObjectPtr*)&ptr);
+		err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (t_object**)&ptr);
 		if (err)
 			return err;
 		
@@ -232,72 +216,72 @@ t_max_err wrappedClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomP
 		
 		v.resize(argc);
 		for (i=0; i<argc; i++) {
-			if(atom_gettype(argv+i) == A_LONG)
-				v.set(i, AtomGetInt(argv+i));
-			else if(atom_gettype(argv+i) == A_FLOAT)
-				v.set(i, atom_getfloat(argv+i));
-			else if(atom_gettype(argv+i) == A_SYM)
-				v.set(i, TT(atom_getsym(argv+i)->s_name));
+			if (atom_gettype(argv+i) == A_LONG)
+				v[i] = (TTInt32)atom_getlong(argv+i);
+			else if (atom_gettype(argv+i) == A_FLOAT)
+				v[i] = atom_getfloat(argv+i);
+			else if (atom_gettype(argv+i) == A_SYM)
+				v[i] = TT(atom_getsym(argv+i)->s_name);
 			else
-				object_error(ObjectPtr(x), "bad type for attribute setter");
+				object_error((t_object*)x, "bad type for attribute setter");
 		}
-		x->wrappedObject->setAttributeValue(ttAttrName, v);
+		x->wrappedObject->set(ttAttrName, v);
 		return MAX_ERR_NONE;
 	}
 	return MAX_ERR_GENERIC;
 }
 
 
-void wrappedClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
+void wrappedClass_anything(TTPtr self, t_symbol* s, long argc, t_atom* argv)
 {
 	WrappedInstancePtr	x = (WrappedInstancePtr)self;
 	TTSymbol			ttName;
-	MaxErr				err;
+	t_max_err				err;
 	TTValue				v_in;
 	TTValue				v_out;
 	
-	err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, s, (ObjectPtr*)&ttName);
+	err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, s, (t_object**)&ttName);
 	if (err) {
-		object_post(ObjectPtr(x), "no method found for %s", s->s_name);
+		object_post((t_object*)x, "no method found for %s", s->s_name);
 		return;
 	}
 
 	if (argc && argv) {
 		v_in.resize(argc);
-		for (AtomCount i=0; i<argc; i++) {
+		for (long i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v_in.set(i, AtomGetInt(argv+i));
+				v_in[i] = (TTInt32)atom_getlong(argv+i);
 			else if (atom_gettype(argv+i) == A_FLOAT)
-				v_in.set(i, atom_getfloat(argv+i));
+				v_in[i] = atom_getfloat(argv+i);
 			else if (atom_gettype(argv+i) == A_SYM)
-				v_in.set(i, TT(atom_getsym(argv+i)->s_name));
+				v_in[i] = TT(atom_getsym(argv+i)->s_name);
 			else
-				object_error(ObjectPtr(x), "bad type for message arg");
+				object_error((t_object*)x, "bad type for message arg");
 		}
 	}
-	x->wrappedObject->sendMessage(ttName, v_in, v_out);
+	x->wrappedObject->send(ttName, v_in, v_out);
 		
 	// process the returned value for the dumpout outlet
 	{
-		AtomCount	ac = v_out.size();
+		long	ac = v_out.size();
 
 		if (ac) {
-			AtomPtr		av = (AtomPtr)malloc(sizeof(t_atom) * ac);
+			t_atom*		av = (t_atom*)malloc(sizeof(t_atom) * ac);
 			
-			for (AtomCount i=0; i<ac; i++) {
-				if (v_out[0].type() == kTypeSymbol){
+			for (long i=0; i<ac; i++) {
+				if (v_out[0].type() == kTypeSymbol) {
 					TTSymbol ttSym;
-					v_out.get(i, ttSym);
+					ttSym = v_out[i];
 					atom_setsym(av+i, gensym((char*)ttSym.c_str()));
 				}
 				else if (v_out[0].type() == kTypeFloat32 || v_out[0].type() == kTypeFloat64) {
 					TTFloat64 f = 0.0;
-					v_out.get(i, f);
+					f = v_out[i];
 					atom_setfloat(av+i, f);
 				}
 				else {
 					TTInt32 l = 0;
-					v_out.get(i, l);
+					l = v_out[i];
 					atom_setfloat(av+i, l);
 				}
 			}
@@ -311,10 +295,10 @@ void wrappedClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv
 // Method for Assistance Messages
 void wrappedClass_assist(WrappedInstancePtr self, void *b, long msg, long arg, char *dst)
 {
-	if(msg==1)	{		// Inlets
+	if (msg==1)	{		// Inlets
 		if (arg==0)
 			strcpy(dst, "signal input, control messages"); //leftmost inlet
-		else{ 
+		else { 
 			if (arg > self->numInputs-self->numControlSignals-1)
 				//strcpy(dst, "control signal input");		
 				snprintf(dst, 256, "control signal for \"%s\"", self->controlSignalNames[arg - self->numInputs+1].c_str());
@@ -322,7 +306,7 @@ void wrappedClass_assist(WrappedInstancePtr self, void *b, long msg, long arg, c
 				strcpy(dst, "signal input");		
 		}
 	}
-	else if(msg==2)	{	// Outlets
+	else if (msg==2)	{	// Outlets
 		if (arg < self->numOutputs)
 			strcpy(dst, "signal output");
 		else
@@ -331,7 +315,7 @@ void wrappedClass_assist(WrappedInstancePtr self, void *b, long msg, long arg, c
 }
 
 
-void wrappedClass_perform64(WrappedInstancePtr self, ObjectPtr dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
+void wrappedClass_perform64(WrappedInstancePtr self, t_object* dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
 	TTUInt16 i;
 	//TTUInt16 numChannels = numouts;
@@ -342,11 +326,11 @@ void wrappedClass_perform64(WrappedInstancePtr self, ObjectPtr dsp64, double **i
 		int signal_index = self->numInputs - self->numControlSignals + i;
 		
 		if (self->signals_connected[signal_index])
-			self->wrappedObject->setAttributeValue(self->controlSignalNames[i], *ins[signal_index]);
+			self->wrappedObject->set(self->controlSignalNames[i], *ins[signal_index]);
 	}
 	
-	self->audioIn->setNumChannelsWithInt(self->numInputs-self->numControlSignals);
-	self->audioOut->setNumChannelsWithInt(self->numOutputs);
+	self->audioIn->setNumChannels(self->numInputs-self->numControlSignals);
+	self->audioOut->setNumChannels(self->numOutputs);
 	self->audioOut->allocWithVectorSize(sampleframes);
 	
 	for (i=0; i < self->numInputs-self->numControlSignals; i++)
@@ -360,18 +344,18 @@ void wrappedClass_perform64(WrappedInstancePtr self, ObjectPtr dsp64, double **i
 }
 
 
-void wrappedClass_dsp64(WrappedInstancePtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags)
+void wrappedClass_dsp64(WrappedInstancePtr self, t_object* dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
 	for (int i=0; i < (self->numInputs + self->numOutputs); i++)
 		self->signals_connected[i] = count[i];
 	
 	ttEnvironment->setAttributeValue(kTTSym_sampleRate, samplerate);
-	self->wrappedObject->setAttributeValue(TT("sampleRate"), samplerate);
+	self->wrappedObject->set(TT("sampleRate"), samplerate);
 	
 	self->vs = maxvectorsize;
 	
-	self->audioIn->setAttributeValue(TT("vectorSize"), self->vs);
-	self->audioOut->setAttributeValue(TT("vectorSize"), self->vs);
+	self->audioIn->setVectorSizeWithInt(self->vs);
+	self->audioOut->setVectorSizeWithInt(self->vs);
 	
 	object_method(dsp64, gensym("dsp_add64"), self, wrappedClass_perform64, 0, NULL);
 }
@@ -384,13 +368,12 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 
 TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, WrappedClassPtr* c, WrappedClassOptionsPtr options)
 {
-	TTObjectBase*		o = NULL;
+	TTObject		o(ttblueClassName, 1);	// Create a temporary instance of the class so that we can query it.
 	TTValue			v;
-	TTUInt16		numChannels = 1;
 	WrappedClass*	wrappedMaxClass = NULL;
 	TTSymbol		name;
 	TTCString		nameCString = NULL;
-	SymbolPtr		nameMaxSymbol = NULL;
+	t_symbol*		nameMaxSymbol = NULL;
 	TTUInt32		nameSize = 0;
 	
 	common_symbols_init();
@@ -413,37 +396,34 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 	wrappedMaxClass->validityCheckArgument = NULL;
 	wrappedMaxClass->options = options;
 	wrappedMaxClass->maxNamesToTTNames = hashtab_new(0);
-	
-	// Create a temporary instance of the class so that we can query it.
-	TTObjectBaseInstantiate(ttblueClassName, &o, numChannels);
-	
-	if (!o) {
+		
+	if (!o.valid()) {
 		error("Jamoma ClassWrapper failed to load %s", ttblueClassName.c_str());
 		return kTTErrAllocFailed;
 	}
 
-	o->getMessageNames(v);
+	o.messages(v);
 	for (TTUInt16 i=0; i<v.size(); i++) {
-		v.get(i, name);
+		name = v[i];
 		//nameSize = name->getString().length();	// to -- this crash on Windows...
 		nameSize = strlen(name.c_str());
 		nameCString = new char[nameSize+1];
 		strncpy_zero(nameCString, name.c_str(), nameSize+1);
 
 		nameMaxSymbol = gensym(nameCString);
-		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, ObjectPtr(name.rawpointer()));
+		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, (t_object*)name.rawpointer());
 		class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_anything, nameCString, A_GIMME, 0);
 		
 		delete nameCString;
 		nameCString = NULL;
 	}
 	
-	o->getAttributeNames(v);
+	o.attributes(v);
 	for (TTUInt16 i=0; i<v.size(); i++) {
 		TTAttributePtr	attr = NULL;
-		SymbolPtr		maxType = _sym_long;
+		t_symbol*		maxType = _sym_long;
 		
-		v.get(i, name);
+		name = v[i];
 		//nameSize = name->getString().length();	// to -- this crash on Windows...
 		nameSize = strlen(name.c_str());
 		nameCString = new char[nameSize+1];
@@ -457,7 +437,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 				continue;					// generators don't have inputs, and so don't really provide a bypass
 		}
 		
-		o->findAttribute(name, &attr);
+		o.instance()->findAttribute(name, &attr);
 		
 		if (attr->type == kTypeFloat32)
 			maxType = _sym_float32;
@@ -466,7 +446,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 		else if (attr->type == kTypeSymbol || attr->type == kTypeString)
 			maxType = _sym_symbol;
 		
-		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, ObjectPtr(name.rawpointer()));
+		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, (t_object*)name.rawpointer());
 		class_addattr(wrappedMaxClass->maxClass, attr_offset_new(nameCString, maxType, 0, (method)wrappedClass_attrGet, (method)wrappedClass_attrSet, 0));
 		
 		// Add display styles for the Max 5 inspector
@@ -478,9 +458,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 		delete nameCString;
 		nameCString = NULL;
 	}
-	
-	TTObjectBaseRelease(&o);
-		
+			
  	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_dsp64, 		"dsp64",		A_CANT, 0L);
     class_addmethod(wrappedMaxClass->maxClass, (method)object_obex_dumpout, 	"dumpout",		A_CANT, 0); 
 	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_assist, 	"assist",		A_CANT, 0L);
@@ -491,7 +469,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 	if (c)
 		*c = wrappedMaxClass;
 	
-	hashtab_store(wrappedMaxClasses, wrappedMaxClass->maxClassName, ObjectPtr(wrappedMaxClass));
+	hashtab_store(wrappedMaxClasses, wrappedMaxClass->maxClassName, (t_object*)wrappedMaxClass);
 	return kTTErrNone;
 }
 
@@ -543,7 +521,7 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 
 
 
-TTErr TTValueFromAtoms(TTValue& v, AtomCount ac, AtomPtr av)
+TTErr TTValueFromAtoms(TTValue& v, long ac, t_atom* av)
 {
 	v.clear();
 	
@@ -553,7 +531,7 @@ TTErr TTValueFromAtoms(TTValue& v, AtomCount ac, AtomPtr av)
 	return kTTErrNone;
 }
 
-TTErr TTAtomsFromValue(const TTValue& v, AtomCount* ac, AtomPtr* av)
+TTErr TTAtomsFromValue(const TTValue& v, long* ac, t_atom** av)
 {
 	int	size = v.size();
 	
@@ -592,7 +570,7 @@ TTErr TTAtomsFromValue(const TTValue& v, AtomCount* ac, AtomPtr* av)
 	than the input matrix, and the Jamoma object cannot change the size of a Jitter matrix.
 */
 
-long TTMatrixReferenceJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix, TTBoolean copy)
+long TTMatrixReferenceJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix, TTBoolean copy)
 {
 	t_jit_matrix_info	jitterMatrixInfo;
 	TTBytePtr			jitterMatrixData;
@@ -604,18 +582,18 @@ long TTMatrixReferenceJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix, T
 	jit_object_method(aJitterMatrix, _sym_getdata, &jitterMatrixData);
 	
 	if (!copy)
-		aTTMatrix->referenceExternalData(jitterMatrixData);
+		aMatrix.referenceExternalData(jitterMatrixData);
 	
 	if (jitterMatrixInfo.type == _sym_char)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_uint8);
+		aMatrix.set(kTTSym_type, kTTSym_uint8);
 	else if (jitterMatrixInfo.type == _sym_long)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_int32);
+		aMatrix.set(kTTSym_type, kTTSym_int32);
 	else if (jitterMatrixInfo.type == _sym_float32)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_float32);
+		aMatrix.set(kTTSym_type, kTTSym_float32);
 	else if (jitterMatrixInfo.type == _sym_float64)
-		aTTMatrix->setAttributeValue(kTTSym_type, kTTSym_float64);
+		aMatrix.set(kTTSym_type, kTTSym_float64);
 	
-	aTTMatrix->setAttributeValue(kTTSym_elementCount, (int)jitterMatrixInfo.planecount);
+	aMatrix.set(kTTSym_elementCount, (int)jitterMatrixInfo.planecount);
 	
 	jitterDimensionCount = jitterMatrixInfo.dimcount;
 	dimensions.resize(jitterDimensionCount);
@@ -623,27 +601,27 @@ long TTMatrixReferenceJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix, T
 	for (int d=0; d < jitterDimensionCount; d++) {
 		// The first 2 dimensions (rows and columns) are reversed in Jitter as compared to Jamoma
 		if (d == 1)
-			dimensions.set(0, (int)jitterMatrixInfo.dim[d]);
+			dimensions[0] = (int)jitterMatrixInfo.dim[d];
 		else if (d==0 && jitterDimensionCount>1)
-			dimensions.set(1, (int)jitterMatrixInfo.dim[d]);			
+			dimensions[1] = (int)jitterMatrixInfo.dim[d];
 		else
-			dimensions.set(d, (int)jitterMatrixInfo.dim[d]);
+			dimensions[d] = (int)jitterMatrixInfo.dim[d];
 	}
 	
-	aTTMatrix->setAttributeValue(kTTSym_dimensions, dimensions);
-		
+	aMatrix.set(kTTSym_dimensions, dimensions);
+	
 	return jitterMatrixLock;
 }
 
 
 // Assumes jitter matrix is locked, matrix dimensions agree , and we're ready to go 
-TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix)
+TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix)
 {
 	t_jit_matrix_info	jitterMatrixInfo;
 	TTBytePtr			jitterMatrixData;
 	TTValue				dimensions;
 	int					dimcount;
-	TTBytePtr			data = aTTMatrix->getLockedPointer();
+	TTBytePtr			data = aMatrix.getLockedPointer();
 	
 	jit_object_method(aJitterMatrix, _sym_getinfo, &jitterMatrixInfo);
 	jit_object_method(aJitterMatrix, _sym_getdata, &jitterMatrixData);
@@ -655,27 +633,29 @@ TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatri
 	}
 	else if (dimcount == 2) {
 		for (int i=0; i<jitterMatrixInfo.dim[1]; i++) { // step through the jitter matrix by row
-			memcpy(data+(i*jitterMatrixInfo.dim[0] * aTTMatrix->getComponentStride()),
+			memcpy(data+(i*jitterMatrixInfo.dim[0] * aMatrix.getComponentStride()),
 				   jitterMatrixData+(i*jitterMatrixInfo.dimstride[1]), 
 				   jitterMatrixInfo.dimstride[0] * jitterMatrixInfo.dim[0]);
 		}
 	}
 	else {
 		// not supporting other dimcounts yet...
+		aMatrix.releaseLockedPointer();
 		return kTTErrInvalidType;
 	}
+	aMatrix.releaseLockedPointer();
 	return kTTErrNone;
 }
 
 
 // Assumes jitter matrix is locked, matrix dimensions agree , and we're ready to go 
-TTErr TTMatrixCopyDataToJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix)
+TTErr TTMatrixCopyDataToJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix)
 {
 	t_jit_matrix_info	jitterMatrixInfo;
 	TTBytePtr			jitterMatrixData;
 	TTValue				dimensions;
 	int					dimcount;
-	TTBytePtr			data = aTTMatrix->getLockedPointer();
+	TTBytePtr			data = aMatrix.getLockedPointer();
 	
 	jit_object_method(aJitterMatrix, _sym_getinfo, &jitterMatrixInfo);
 	jit_object_method(aJitterMatrix, _sym_getdata, &jitterMatrixData);
@@ -690,13 +670,15 @@ TTErr TTMatrixCopyDataToJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix)
 	else if (dimcount == 2) {
 		for (int i=0; i<jitterMatrixInfo.dim[1]; i++) {  // step through the jitter matrix by row
 			memcpy(jitterMatrixData+(i*jitterMatrixInfo.dimstride[1]), 
-				   data+(i*jitterMatrixInfo.dim[0] * aTTMatrix->getComponentStride()), 
+				   data+(i*jitterMatrixInfo.dim[0] * aMatrix.getComponentStride()), 
 				   jitterMatrixInfo.dimstride[0] * jitterMatrixInfo.dim[0]);
 		}
 	}
 	else {
 		// not supporting other dimcounts yet...
+		aMatrix.releaseLockedPointer();
 		return kTTErrInvalidType;
 	}
+	aMatrix.releaseLockedPointer();
 	return kTTErrNone;
 }

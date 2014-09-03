@@ -20,26 +20,10 @@
 
 #include "TTGraphAPI.h"				// Definitions for Jamoma Graph
 
-#ifdef TT_PLATFORM_WIN
-#define TTGRAPH_EXTERNAL_EXPORT __declspec(dllexport)
-#else
-#define TTGRAPH_EXTERNAL_EXPORT
-#endif
-
 // TYPE DEFINITIONS
 
-typedef t_class*	ClassPtr;
-typedef t_object*	ObjectPtr;
-typedef t_symbol*	SymbolPtr;
-typedef t_atom*		AtomPtr;
-typedef long		AtomCount;
-typedef t_max_err	MaxErr;
-#ifndef GENSYM
-#define GENSYM(s) gensym((char*)s)
-#endif
-
 #ifndef SELF
-#define SELF ObjectPtr(self)
+#define SELF ((t_object*)(self))
 #endif
 
 
@@ -48,8 +32,8 @@ typedef TTErr (*TTValidityCheckFunction)(const TTPtr data);		///< A type that ca
 class WrappedClassOptions;
 
 typedef struct _wrappedClass {
-	ClassPtr				maxClass;							///< The Max class pointer.
-	SymbolPtr				maxClassName;						///< The name to give the Max class.
+	t_class*				maxClass;							///< The Max class pointer.
+	t_symbol*				maxClassName;						///< The name to give the Max class.
 	TTSymbol				ttClassName;						///< The name of the class as registered with the Jamoma framework.
 	TTValidityCheckFunction validityCheck;						///< A function to call to validate the context for an object before it is instantiated.
 	TTPtr					validityCheckArgument;				///< An argument to pass to the validityCheck function when it is called.
@@ -110,20 +94,11 @@ TTErr wrapAsMaxGraph(TTSymbol& ttblueClassName, char* maxClassName, WrappedClass
 TTErr wrapAsMaxGraph(TTSymbol& ttblueClassName, char* maxClassName, WrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument, WrappedClassOptionsPtr options);
 
 
-// NOTE: DUPLICATIONS FROM THE MSP WRAPPER
-
-#ifdef __LP64__
-TTInt64	AtomGetInt(AtomPtr a);
-#else
-int AtomGetInt(AtomPtr a);
-#endif
-
-
-TTErr MaxGraphReset(ObjectPtr self);
-TTErr MaxGraphSetup(ObjectPtr self);
-TTErr MaxGraphConnect(ObjectPtr self, TTGraphObjectBasePtr audioSourceObject, TTUInt16 sourceOutletNumber);
-TTErr MaxGraphDrop(ObjectPtr x, long inletNumber, ObjectPtr sourceMaxObject, long sourceOutletNumber);
-TTErr MaxGraphObject(ObjectPtr x, TTGraphObjectBasePtr* returnedGraphObject);
+TTErr MaxGraphReset(t_object* self);
+TTErr MaxGraphSetup(t_object* self);
+TTErr MaxGraphConnect(t_object* self, TTGraphObjectBasePtr audioSourceObject, TTUInt16 sourceOutletNumber);
+TTErr MaxGraphDrop(t_object* x, long inletNumber, t_object* sourceMaxObject, long sourceOutletNumber);
+TTErr MaxGraphObject(t_object* x, TTGraphObjectBasePtr* returnedGraphObject);
 
 #endif // __TT_MAX_GRAPH_H__
 

@@ -106,7 +106,7 @@ void delta_bang(t_delta *x);
 void delta_int(t_delta *x, long n);
 void delta_float(t_delta *x, double f);
 void delta_clear(t_delta *x);
-void delta_set(t_delta *x, Symbol *s, long ac, Atom *setval);
+void delta_set(t_delta *x, Symbol *s, long ac, t_atom *setval);
 void delta_assist(t_delta *x, void *b, long msg, long arg, char *dst);
 
 // Globals

@@ -981,7 +981,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 391.0, 31.0, 311.0, 43.0 ],
-					"text" : "j.parameter framedelay @repetitions/filter 1 @type integer @range 0 200 @clipmode low @description \"what is the maximum delay in frames\" @ramp/drive Max",
+					"text" : "j.parameter framedelay @repetitions/filter 1 @type integer @range 0 200 @clipmode low @description \"what is the maximum delay in frames\" @ramp/drive max",
 					"varname" : "hue_angle[1]"
 				}
 

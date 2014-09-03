@@ -20,7 +20,7 @@
 
 // Definitions
 void		WrapTTNodeInfoClass(WrappedClassPtr c);
-void		WrappedNodeInfoClass_new(TTPtr self, AtomCount argc, AtomPtr argv);
+void		WrappedNodeInfoClass_new(TTPtr self, long argc, t_atom* argv);
 void        WrappedNodeInfoClass_free(TTPtr self);
 
 
@@ -31,7 +31,7 @@ void        WrappedNodeInfoClass_free(TTPtr self);
  @param arg		Determines what input/output assistance is requested for.
  @param dst		Destination address that assistance string is copied to.
  */
-void		node_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst);
+void		node_assist(TTPtr self, TTPtr b, long msg, long arg, char *dst);
 
 /** Subscribe the j.node into the directory.
  @param self	The node instance.
@@ -39,9 +39,9 @@ void		node_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst);
  @param argc    useless
  @param argv    useless
  */
-void        node_subscribe(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, AtomPtr argv);
+void        node_subscribe(TTPtr self, t_symbol* relativeAddress, long argc, t_atom* argv);
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	ModularSpec *spec = new ModularSpec;
 	spec->_wrap = &WrapTTNodeInfoClass;
@@ -59,11 +59,11 @@ void WrapTTNodeInfoClass(WrappedClassPtr c)
 }
 
 
-void WrappedNodeInfoClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
+void WrappedNodeInfoClass_new(TTPtr self, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	SymbolPtr					relativeAddress;
-	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
+	t_symbol *relativeAddress;
+	long      attrstart = attr_args_offset(argc, argv);			// support normal arguments
 	
 	// check address argument
 	relativeAddress = _sym_nothing;
@@ -72,7 +72,7 @@ void WrappedNodeInfoClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 			relativeAddress = atom_getsym(argv);
 	
 	if (relativeAddress == _sym_nothing) {
-		object_error((ObjectPtr)x, "needs a name as first argument");
+		object_error((t_object*)x, "needs a name as first argument");
 		return;
 	}
     
@@ -88,11 +88,11 @@ void WrappedNodeInfoClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
         relativeAddress == gensym("model")          ||
         relativeAddress == gensym("preset")         ) {
         
-        object_error((ObjectPtr)x, "%s address is reserved by j.model", relativeAddress->s_name);
+        object_error((t_object*)x, "%s address is reserved by j.model", relativeAddress->s_name);
 		return;
     }
     
-    jamoma_node_info_create((ObjectPtr)x, &x->wrappedObject);
+    jamoma_node_info_create((t_object*)x, x->wrappedObject);
 	
 	if (argc && argv)
         attr_args_process(x, argc, argv);
@@ -100,10 +100,10 @@ void WrappedNodeInfoClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
 	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-	defer_low((ObjectPtr)x, (method)node_subscribe, relativeAddress, argc, argv);
+	defer_low((t_object*)x, (method)node_subscribe, relativeAddress, argc, argv);
 }
 
-void node_subscribe(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, AtomPtr argv)
+void node_subscribe(TTPtr self, t_symbol* relativeAddress, long argc, t_atom* argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTAddress   returnedAddress;
@@ -113,14 +113,14 @@ void node_subscribe(TTPtr self, SymbolPtr relativeAddress, AtomCount argc, AtomP
 	// for relative address
 	if (TTAddress(relativeAddress->s_name).getType() == kAddressRelative) {
         
-		jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, TTAddress(jamoma_parse_dieze((ObjectPtr)x, relativeAddress)->s_name), &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
+		jamoma_subscriber_create((t_object*)x, x->wrappedObject, TTAddress(jamoma_parse_dieze((t_object*)x, relativeAddress)->s_name), x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
 	}
 	else
-		object_error((ObjectPtr)x, "can't register because %s is not a relative address", relativeAddress->s_name);
+		object_error((t_object*)x, "can't register because %s is not a relative address", relativeAddress->s_name);
 }
 
 // Method for Assistance Messages
-void node_assist(TTPtr self, TTPtr b, long msg, AtomCount arg, char *dst)
+void node_assist(TTPtr self, TTPtr b, long msg, long arg, char *dst)
 {
 	if (msg==1) 						// Inlet
 		strcpy(dst, "input");

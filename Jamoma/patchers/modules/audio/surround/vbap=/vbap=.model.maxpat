@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -156,12 +156,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1014",
-					"linecount" : 10,
+					"linecount" : 9,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 347.0, 63.0, 131.0, 141.0 ],
+					"patching_rect" : [ 347.0, 63.0, 133.0, 127.0 ],
 					"text" : "j.parameter dimensions @repetitions/filter 1 @type integer @range 2 3 @clipmode both @priority 2 @description \"Dimension of the loudspeaker setup (2D or 3D).\"",
 					"varname" : "destination/dimensions"
 				}
@@ -195,11 +195,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 289.0, 44.0, 1391.0, 956.0 ],
+						"rect" : [ 289.0, 70.0, 1391.0, 930.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -243,7 +243,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 462.0, 28.0, 133.0, 141.0 ],
+									"patching_rect" : [ 462.0, 28.0, 133.0, 127.0 ],
 									"text" : "j.parameter numSources @repetitions/filter 1 @type integer @range 1 32 @clipmode both @priority 1 @description \"Number of incomming mono sources to pan.\"",
 									"varname" : "source/voices"
 								}
@@ -321,11 +321,11 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ -46.0, 527.0, 1680.0, 930.0 ],
+										"rect" : [ 213.0, 287.0, 1680.0, 930.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -467,7 +467,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 667.0, 64.0, 139.0, 100.0 ],
-													"text" : "j.parameter_array source.[32]/active @type boolean @description \"Mute ( /active 0) or unmute (/active 1) the nth source.\""
+													"text" : "j.message_array source.[32]/active @type boolean @description \"Mute ( /active 0) or unmute (/active 1) the nth source.\""
 												}
 
 											}
@@ -482,7 +482,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 468.5, 64.0, 151.0, 114.0 ],
-													"text" : "j.parameter_array source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @ramp/drive Max @ramp/function linear @description \"Input gain for the nth source.\""
+													"text" : "j.message_array source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @ramp/drive Max @ramp/function linear @description \"Input gain for the nth source.\""
 												}
 
 											}
@@ -496,8 +496,8 @@
 													"numinlets" : 2,
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
-													"patching_rect" : [ 278.0, 64.0, 123.0, 100.0 ],
-													"text" : "j.parameter_array source.[32]/blur @type decimal @range 0. 100. @description \"Set spatial blur of the nth source.\""
+													"patching_rect" : [ 277.0, 64.0, 123.0, 100.0 ],
+													"text" : "j.message_array source.[32]/blur @type decimal @range 0. 100. @description \"Set spatial blur of the nth source.\""
 												}
 
 											}
@@ -512,7 +512,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 50.0, 64.0, 148.0, 100.0 ],
-													"text" : "j.parameter_array source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+													"text" : "j.message_array source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 												}
 
 											}
@@ -1015,7 +1015,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -1932,7 +1932,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -1963,7 +1963,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 415.0, 203.0, 115.0, 20.0 ],
+									"patching_rect" : [ 415.0, 203.0, 119.0, 20.0 ],
 									"text" : "print message_array"
 								}
 
@@ -1995,7 +1995,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -2184,7 +2184,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 786.0, 93.0, 139.0, 141.0 ],
+									"patching_rect" : [ 786.0, 93.0, 139.0, 127.0 ],
 									"text" : "j.parameter numSpeakers @repetitions/filter 1 @type integer @range 2 32 @clipmode both @priority 3 @description \"Number of speakers that signals are distributed to.\"",
 									"varname" : "destination/voices"
 								}
@@ -2215,7 +2215,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 309.0, 85.0, 148.0, 100.0 ],
-									"text" : "j.parameter_array speaker.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+									"text" : "j.message_array speaker.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
 								}
 
 							}
@@ -2302,7 +2302,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -3199,7 +3199,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter_array.mxo",
+				"name" : "j.message_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
