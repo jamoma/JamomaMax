@@ -2,7 +2,7 @@
 
 ### Beta releases
 
-### 0.6.0.b01
+### 0.6.0.b01 (In development)
 
 - wacom.model
 	- position is now an array of x and y values
@@ -10,15 +10,20 @@
 
 ### Alpha releases
 
-### 0.6.0.a40 (In development)
+### 0.6.0.a40 (2014-09-03)
 
 - replacing @tag by @tags in j.model|view|node|parameter|message|return
+- renaming j.parameterArray into j.parameter_array
+- renaming j.messageArray into j.message_array
+- renaming j.returnArray into j.return_array
+- renaming j.remoteArray into j.remote_array
+- Downcasing @ramp/drive options : so Max becomes max and System becomes system
 
 
 
 ### 0.6.0.a36-39 (2014-07-14)
 
-- Many modules and externals have been quarantined and are not into the package anymore.
+- Many modules and externals have been quarantined and are not into the package anymore
 - Internal data/mute parameter have been renamed into data/active
 - j.ui: 
 	- the panel have to be connected to the leftmost outlet
@@ -32,7 +37,7 @@
 ### 0.6.0.a35 (2014-05-31)
 
 - New external j.mutesolo~ mutes and soloes individual MSP channels
-- New external j.mutesolo= mutes and soloes individual channels of an AudioGraph signal.
+- New external j.mutesolo= mutes and soloes individual channels of an AudioGraph signal
 - Updated several integration tests to use testpackage:
     - All tests for Foundation (https://github.com/jamoma/JamomaMax/issues/541)
     - All tests for DSP (https://github.com/jamoma/JamomaMax/issues/542)
