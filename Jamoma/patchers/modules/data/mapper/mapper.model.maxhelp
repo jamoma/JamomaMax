@@ -136,7 +136,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 30.0, 653.0, 50.0, 31.0 ],
-					"text" : "9.888518"
+					"text" : "0.366667"
 				}
 
 			}
@@ -146,11 +146,11 @@
 					"args" : [ "mapper2" ],
 					"id" : "obj-19",
 					"maxclass" : "bpatcher",
-					"name" : "dataMapper.view.maxpat",
+					"name" : "mapper.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 197.5, 570.0, 450.0, 105.0 ],
+					"patching_rect" : [ 269.5, 595.0, 450.0, 105.0 ],
 					"presentation_rect" : [ 266.0, 541.0, 450.0, 105.0 ]
 				}
 
@@ -161,13 +161,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-20",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 21.5, 598.0, 156.0, 33.0 ],
-					"text" : "dataMapper.model mapper2 /mouse/position/y"
+					"patching_rect" : [ 21.5, 595.0, 234.0, 20.0 ],
+					"text" : "mapper.model mapper2 /mouse/position/y"
 				}
 
 			}
@@ -220,7 +219,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.0, 149.0, 71.0, 18.0 ],
-					"text" : "0.573958"
+					"text" : "86.981766"
 				}
 
 			}
@@ -297,11 +296,11 @@
 					"args" : [ "mapper" ],
 					"id" : "obj-4",
 					"maxclass" : "bpatcher",
-					"name" : "dataMapper.view.maxpat",
+					"name" : "mapper.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 318.0, 82.0, 450.0, 105.0 ],
+					"patching_rect" : [ 332.0, 123.0, 450.0, 105.0 ],
 					"presentation_rect" : [ 20.0, 93.0, 450.0, 105.0 ]
 				}
 
@@ -344,7 +343,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 88.0, 156.0, 47.0 ],
-					"text" : "dataMapper.model mapper /mouse/position/y /degrade~/samplerateRatio"
+					"text" : "mapper.model mapper /mouse/position/y /degrade~/samplerateRatio"
 				}
 
 			}
@@ -515,17 +514,17 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-3::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-19::obj-8" : [ "live.text[3]", "live.text", 0 ],
 			"obj-3::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
-			"obj-4::obj-21" : [ "live.text[1]", "live.text", 0 ],
-			"obj-19::obj-21" : [ "live.text[2]", "live.text", 0 ],
-			"obj-4::obj-8" : [ "live.text", "live.text", 0 ]
+			"obj-19::obj-8" : [ "live.text", "live.text", 0 ],
+			"obj-3::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
+			"obj-4::obj-8" : [ "live.text[3]", "live.text", 0 ],
+			"obj-4::obj-21" : [ "live.text[2]", "live.text", 0 ],
+			"obj-19::obj-21" : [ "live.text[1]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "dataMapper.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper",
+				"name" : "mapper.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapper",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -573,8 +572,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "dataMapper.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper",
+				"name" : "mapper.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapper",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -588,15 +587,15 @@
 			}
 , 			{
 				"name" : "j.function_generic.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper/function_options",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapper/function_options",
 				"patcherrelativepath" : "./function_options",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.jamomabrowser.view.maxpat",
-				"bootpath" : "/Users/jln/@dev/@GoPlug/Library/jamomaBrowser-widget",
-				"patcherrelativepath" : "../../../../../../../../../@dev/@GoPlug/Library/jamomaBrowser-widget",
+				"name" : "j.namespacebrowser.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespacebrowser",
+				"patcherrelativepath" : "../../../components/data/namespacebrowser",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -621,10 +620,6 @@
 			}
 , 			{
 				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -669,10 +664,6 @@
 			}
 , 			{
 				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
  ]

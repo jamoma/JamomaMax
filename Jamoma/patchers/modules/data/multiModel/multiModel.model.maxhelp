@@ -41,7 +41,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 22.0, 180.0, 150.0, 106.0 ],
+					"patching_rect" : [ 22.0, 180.0, 151.0, 106.0 ],
 					"text" : "because script-created models need to wait to be initialized before being able to receive parameter values from preset...\n:-s"
 				}
 
@@ -69,8 +69,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 93.0, 133.0, 149.0, 18.0 ],
-					"text" : "preset \"dataMapper test1\""
+					"patching_rect" : [ 93.0, 133.0, 126.0, 18.0 ],
+					"text" : "preset \"mapper test1\""
 				}
 
 			}
@@ -158,94 +158,66 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-4::obj-30::obj-93::obj-21" : [ "live.text[1]", "live.text", 0 ],
-			"obj-4::obj-30::obj-93::obj-8" : [ "live.text", "live.text", 0 ],
+			"obj-4::obj-30::obj-93::obj-14" : [ "live.dial[3]", "Bit depth", 0 ],
 			"obj-4::obj-13" : [ "live.text[2]", "live.text", 0 ],
 			"obj-3::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
+			"obj-4::obj-30::obj-93::obj-13" : [ "live.dial[2]", "Sample rate", 0 ],
 			"obj-3::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "mouse.module.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../../../Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../../../Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../../../Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.module.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "multiModel.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Dropbox/DévGMEA (1)/temp/multiModel",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/multiModel",
 				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "dataMapper.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper",
-				"patcherrelativepath" : "../../../../Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "multiModel.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Dropbox/DévGMEA (1)/temp/multiModel",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/multiModel",
 				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "dataMapper.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper",
-				"patcherrelativepath" : "../../../../Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.function_generic.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper/function_options",
-				"patcherrelativepath" : "../../../../Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/dataMapper/function_options",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -290,7 +262,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.map.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -298,27 +270,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter_array.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
  ]
