@@ -1005,6 +1005,7 @@ TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, t_sym
     if (!x->internals->lookup(name, v)) {
         returnedReceiver = v[0];
         JamomaDebug object_post((t_object*)x, "makeInternals_receiver : \"%s\" internal already exists", name.c_str());
+        returnedReceiver.send("Get");
         return kTTErrNone;
     }
 	
