@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -29,6 +29,48 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"hidden" : 1,
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 52.5, 223.5, 72.0, 20.0 ],
+					"text" : "loadmess 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-36",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 17.0, 223.5, 20.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-32",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 17.0, 249.5, 62.0, 18.0 ],
+					"text" : "activity $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"fontname" : "Arial",
@@ -42,7 +84,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -880,7 +922,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 210.0, 415.0, 300.0, 47.0 ],
+					"patching_rect" : [ 210.0, 441.0, 300.0, 47.0 ],
 					"text" : "The local view below is only here to see the model is well controled and to change value here and see that the remote view is also updated."
 				}
 
@@ -895,8 +937,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 210.0, 500.5, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
+					"patching_rect" : [ 210.0, 526.5, 150.0, 105.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 105.0 ]
 				}
 
 			}
@@ -906,7 +948,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 565.0, 45.0, 45.0 ]
+					"patching_rect" : [ 15.0, 591.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -919,7 +961,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 119.0, 486.0, 61.0, 19.0 ],
+					"patching_rect" : [ 119.0, 512.0, 61.0, 19.0 ],
 					"text" : "saw~ 330"
 				}
 
@@ -933,7 +975,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 486.0, 52.0, 19.0 ],
+					"patching_rect" : [ 15.0, 512.0, 52.0, 19.0 ],
 					"text" : "tri~ 220"
 				}
 
@@ -949,7 +991,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 15.0, 513.5, 123.0, 33.0 ],
+					"patching_rect" : [ 15.0, 539.5, 123.0, 33.0 ],
 					"text" : "equalizer~.model filter"
 				}
 
@@ -964,7 +1006,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 289.0, 122.5, 142.0, 33.0 ],
+					"patching_rect" : [ 301.0, 122.5, 142.0, 33.0 ],
 					"text" : "write the namespace of remoteMinuitApplication"
 				}
 
@@ -979,7 +1021,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 347.5, 241.0, 33.0 ],
+					"patching_rect" : [ 17.0, 389.5, 241.0, 33.0 ],
 					"text" : "This j.modular binds on myApplication (see in j.modular.maxhelp)"
 				}
 
@@ -993,7 +1035,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 195.5, 344.0, 20.0 ],
+					"patching_rect" : [ 17.0, 195.5, 320.0, 20.0 ],
 					"text" : "This j.modular exposes this patch on the Jamoma network"
 				}
 
@@ -1008,7 +1050,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 415.0, 196.0, 60.0 ],
+					"patching_rect" : [ 5.0, 441.0, 196.0, 60.0 ],
 					"text" : "The remoteMinuitApp have an equalizer~ model you can control remotely from an equalizer~ view in myApplication."
 				}
 
@@ -1023,9 +1065,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 130.0, 101.0, 18.0 ],
-					"text" : "namespace/write",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"patching_rect" : [ 200.0, 130.0, 101.0, 18.0 ],
+					"text" : "namespace/write"
 				}
 
 			}
@@ -1038,7 +1079,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 159.0, 93.5, 112.0, 20.0 ],
+					"patching_rect" : [ 171.0, 93.5, 112.0, 20.0 ],
 					"text" : "loadmess activity 1"
 				}
 
@@ -1054,9 +1095,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 5.0, 275.5, 157.0, 45.0 ],
-					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 8002, name, protocol/setup",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"patching_rect" : [ 17.0, 317.5, 157.0, 45.0 ],
+					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 7001, name, protocol/setup"
 				}
 
 			}
@@ -1069,7 +1109,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 5.0, 252.5, 60.0, 20.0 ],
+					"patching_rect" : [ 17.0, 294.5, 60.0, 20.0 ],
 					"text" : "loadbang"
 				}
 
@@ -1084,7 +1124,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 5.0, 327.5, 196.0, 20.0 ],
+					"patching_rect" : [ 17.0, 369.5, 180.0, 20.0 ],
 					"text" : "j.modular myApplication Minuit"
 				}
 
@@ -1115,9 +1155,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 5.0, 116.5, 157.0, 45.0 ],
-					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 9001, name, protocol/setup",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"patching_rect" : [ 17.0, 116.5, 157.0, 45.0 ],
+					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 7002, name, protocol/setup"
 				}
 
 			}
@@ -1130,7 +1169,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 5.0, 93.5, 60.0, 20.0 ],
+					"patching_rect" : [ 17.0, 93.5, 60.0, 20.0 ],
 					"text" : "loadbang"
 				}
 
@@ -1145,7 +1184,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 5.0, 175.5, 257.0, 20.0 ],
+					"patching_rect" : [ 17.0, 175.5, 241.0, 20.0 ],
 					"text" : "j.modular Minuit @name remoteMinuitApp"
 				}
 
@@ -1167,6 +1206,16 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-36", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"midpoints" : [ 62.0, 219.0, 26.5, 219.0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
@@ -1204,6 +1253,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 26.5, 273.5, 11.5, 273.5, 11.5, 169.5, 26.5, 169.5 ],
+					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1216,8 +1275,17 @@
 					"destination" : [ "obj-27", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 168.5, 169.0, 14.5, 169.0 ],
+					"midpoints" : [ 180.5, 169.0, 26.5, 169.0 ],
 					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-32", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-36", 0 ]
 				}
 
 			}
@@ -1226,7 +1294,7 @@
 					"destination" : [ "obj-27", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 197.5, 169.5, 14.5, 169.5 ],
+					"midpoints" : [ 209.5, 169.5, 26.5, 169.5 ],
 					"source" : [ "obj-40", 0 ]
 				}
 
@@ -1259,31 +1327,49 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-7::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
+			"obj-7::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-7::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-7::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
+			"obj-7::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-7::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
+			"obj-7::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
+			"obj-7::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "equalizer~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/equalizer~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"patcherrelativepath" : "../../patchers/modules/audio/stereo/EQ/equalizer~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.q2octavebandwidth.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
+				"patcherrelativepath" : "../../patchers/components/audio/q2octavebandwith",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.octavebandwidth2q.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"patcherrelativepath" : "../../patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/equalizer~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"patcherrelativepath" : "../../patchers/modules/audio/stereo/EQ/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "equalizer~views.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/equalizer~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/equalizer~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"name" : "equalizer~_large.view.maxpat",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"patcherrelativepath" : "../../patchers/modules/audio/stereo/EQ/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1324,6 +1410,14 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.remote_array.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
@@ -1332,11 +1426,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
  ]
