@@ -22,8 +22,6 @@
 TT_MODULAR_CONSTRUCTOR,
 mClass(kTTSymEmpty)
 {
-    TT_ASSERT("Correct number of args to create TTModelInfo", arguments.size() == 1);
-    
     if (arguments.size() == 1)
         if (arguments[0].type() == kTypePointer)
             mObject = (t_object*)(TTPtr(arguments[0]));

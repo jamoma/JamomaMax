@@ -23,8 +23,6 @@ TT_MODULAR_CONSTRUCTOR,
 mFreeze(NO),
 mHighlight(kTTSym_none)
 {
-    TT_ASSERT("Correct number of args to create TTUiInfo", (arguments.size() == 1));
-    
     if (arguments.size() == 1)
         if (arguments[0].type() == kTypePointer)
             mObject = (t_ui*)(TTPtr(arguments[0]));
