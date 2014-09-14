@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 544.0, 44.0, 515.0, 647.0 ],
+		"rect" : [ 693.0, 44.0, 514.0, 657.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,190 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-16",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 252.0, 363.0, 219.0, 33.0 ],
+					"presentation_rect" : [ 247.0, 358.5, 0.0, 0.0 ],
+					"text" : "Which allows the control of parameters in myApplication:"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 16.0,
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 8,
+							"architecture" : "x86"
+						}
+,
+						"rect" : [ 1082.0, 99.0, 236.0, 152.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 0,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"boxanimatetime" : 200,
+						"imprint" : 0,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-8",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 3.0, 103.5, 215.0, 33.0 ],
+									"text" : "This j.modular binds on i-score \n(see i-score.org)"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-2",
+									"linecount" : 3,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 10.0, 31.5, 157.0, 45.0 ],
+									"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 13579, name, protocol/setup"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 10.0, 8.5, 60.0, 20.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 10.0, 83.5, 180.0, 20.0 ],
+									"text" : "j.modular i-score Minuit"
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 439.0, 86.0, 72.0, 24.0 ],
+					"presentation_rect" : [ 437.0, 609.0, 0.0, 0.0 ],
+					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"default_fontsize" : 12.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p i-score",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-21",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 252.0, 402.5, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-12",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 309.5, 402.5, 181.0, 20.0 ],
+					"text" : "j.remote myApplication:/myFloat"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -84,11 +268,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1015.0, 44.0, 664.0, 853.0 ],
+						"rect" : [ 644.0, 44.0, 664.0, 853.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -111,6 +295,36 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-27",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 251.5, 188.0, 106.0, 20.0 ],
+									"presentation_rect" : [ 219.5, 190.0, 0.0, 0.0 ],
+									"text" : "or with a j.remote:"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-25",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 309.5, 133.0, 150.0, 20.0 ],
+									"presentation_rect" : [ 311.0, 132.0, 0.0, 0.0 ],
+									"text" : "with messages:"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
 									"id" : "obj-3",
 									"maxclass" : "message",
 									"numinlets" : 2,
@@ -130,7 +344,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 93.0, 140.0, 20.0 ],
-									"text" : "udpsend 127.0.0.1 8002"
+									"text" : "udpsend 127.0.0.1 7001"
 								}
 
 							}
@@ -173,8 +387,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 10.0, 6.0, 626.0, 33.0 ],
-									"text" : "This is an overview of all the Minuit requests. This should be completetly transparent for end user but for debugging reason it could be important to understand how works Minuit."
+									"patching_rect" : [ 10.0, 6.0, 662.0, 33.0 ],
+									"text" : "This is an overview of all the Minuit requests. All of this is happening under the hood for the end user  in normal usage, though, for debugging reasons, it can be important to understand how Minuit works."
 								}
 
 							}
@@ -217,8 +431,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 417.0, 419.0, 205.0, 33.0 ],
-									"text" : "Observe creation and destruction into the namespace of myApplication"
+									"patching_rect" : [ 417.0, 419.0, 224.0, 33.0 ],
+									"text" : "Observe the creations and destructions of objects in myApplication"
 								}
 
 							}
@@ -232,7 +446,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 416.0, 150.0, 20.0 ],
-									"text" : "Listen myApplication"
+									"text" : "Listen to myApplication"
 								}
 
 							}
@@ -319,6 +533,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 752.0, 626.0, 20.0 ],
+									"text" : "myApplication:listen /myInt:life delete",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 
@@ -893,7 +1108,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 443.0, 62.0, 67.0, 24.0 ],
+					"patching_rect" : [ 439.0, 62.0, 67.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -918,12 +1133,12 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-11",
-					"linecount" : 3,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 210.0, 441.0, 300.0, 47.0 ],
-					"text" : "The local view below is only here to see the model is well controled and to change value here and see that the remote view is also updated."
+					"patching_rect" : [ 210.0, 441.0, 303.0, 60.0 ],
+					"text" : "The local view below can be used:\n- to see  that the model is actually controlled remotely\n- to change value here and see that the remote view is also updated."
 				}
 
 			}
@@ -1021,7 +1236,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 389.5, 241.0, 33.0 ],
+					"patching_rect" : [ 17.0, 389.5, 215.0, 33.0 ],
 					"text" : "This j.modular binds on myApplication (see in j.modular.maxhelp)"
 				}
 
@@ -1051,7 +1266,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 441.0, 196.0, 60.0 ],
-					"text" : "The remoteMinuitApp have an equalizer~ model you can control remotely from an equalizer~ view in myApplication."
+					"text" : "The remoteMinuitApp has an equalizer~ model you can control remotely from an equalizer~ view in myApplication."
 				}
 
 			}
@@ -1200,7 +1415,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 29.0, 505.0, 33.0 ],
-					"text" : "This is a simulation of a remote application using the Minuit protocol to to be controled or to control, get or listen the parameter of myApplication (see in j.modular.maxhelp)"
+					"text" : "This is a simulation of a remote application using the Minuit protocol to be controlled by, or to control, get or listen the parameters of myApplication (see in j.modular.maxhelp)"
 				}
 
 			}
@@ -1212,6 +1427,15 @@
 					"hidden" : 1,
 					"midpoints" : [ 62.0, 219.0, 26.5, 219.0 ],
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-12", 0 ]
 				}
 
 			}
@@ -1230,6 +1454,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-21", 0 ]
 				}
 
 			}
@@ -1328,47 +1561,47 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-7::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
+			"obj-7::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
 			"obj-7::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-7::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
 			"obj-7::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
-			"obj-7::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-7::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
+			"obj-7::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
 			"obj-7::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-7::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ]
+			"obj-7::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
+			"obj-7::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-7::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "equalizer~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
 				"patcherrelativepath" : "../../patchers/modules/audio/stereo/EQ/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.q2octavebandwidth.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
 				"patcherrelativepath" : "../../patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.octavebandwidth2q.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
 				"patcherrelativepath" : "../../patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
 				"patcherrelativepath" : "../../patchers/modules/audio/stereo/EQ/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~_large.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
 				"patcherrelativepath" : "../../patchers/modules/audio/stereo/EQ/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1

@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 543.0, 854.0 ],
+		"rect" : [ 2.0, 44.0, 543.0, 854.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,6 +29,176 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontface" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-25",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 9.0, 539.0, 259.0, 20.0 ],
+					"text" : "Another example using the Minuit protocol:"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-20",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 318.0, 294.0, 223.0, 33.0 ],
+					"text" : "this patcher simulates a remote OSC application:"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 16.0,
+					"id" : "obj-19",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 8,
+							"architecture" : "x86"
+						}
+,
+						"rect" : [ 1082.0, 99.0, 236.0, 152.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 0,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"boxanimatetime" : 200,
+						"imprint" : 0,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-8",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 3.0, 103.5, 215.0, 33.0 ],
+									"text" : "This j.modular binds on i-score \n(see i-score.org)"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-2",
+									"linecount" : 3,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 10.0, 31.5, 157.0, 45.0 ],
+									"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 13579, name, protocol/setup"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 10.0, 8.5, 60.0, 20.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 10.0, 83.5, 180.0, 20.0 ],
+									"text" : "j.modular i-score Minuit"
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 461.0, 826.0, 72.0, 24.0 ],
+					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"default_fontsize" : 12.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p i-score",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"fontname" : "Arial",
@@ -42,7 +212,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -526,7 +696,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 399.0, 300.0, 138.0, 24.0 ],
+					"patching_rect" : [ 395.0, 539.0, 138.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -556,8 +726,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 223.0, 340.0, 314.0, 67.0 ],
-					"text" : "This external will be revamped in a near future… It will be splitted in j.osc / j.minuit / j.midi etc…",
+					"patching_rect" : [ 220.0, 354.0, 313.0, 67.0 ],
+					"text" : "This external will be revamped in a near future… It will be split in \nj.osc / j.minuit / j.midi etc…",
 					"underline" : 1
 				}
 
@@ -570,7 +740,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 9.0, 460.0, 20.0, 20.0 ]
+					"patching_rect" : [ 9.0, 482.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -584,7 +754,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 483.0, 58.0, 18.0 ],
+					"patching_rect" : [ 9.0, 505.0, 58.0, 18.0 ],
 					"text" : "learn $1"
 				}
 
@@ -598,7 +768,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 6.0, 547.0, 60.0, 20.0 ],
+					"patching_rect" : [ 9.0, 584.0, 60.0, 20.0 ],
 					"text" : "loadbang"
 				}
 
@@ -612,7 +782,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 9.0, 678.0, 193.0, 20.0 ],
+					"patching_rect" : [ 6.0, 705.0, 193.0, 20.0 ],
 					"text" : "Then bind the remote filter model."
 				}
 
@@ -627,7 +797,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 223.0, 678.0, 213.0, 18.0 ],
+					"patching_rect" : [ 220.0, 721.5, 213.0, 18.0 ],
 					"text" : "model:address remoteMinuitApp:/filter"
 				}
 
@@ -642,7 +812,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 9.0, 701.5, 193.0, 47.0 ],
+					"patching_rect" : [ 6.0, 728.5, 193.0, 47.0 ],
 					"text" : "And then you can control the equalizer~ model of the remoteMinuitApp using this view."
 				}
 
@@ -656,7 +826,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 223.0, 701.5, 150.0, 105.0 ],
+					"patching_rect" : [ 220.0, 745.0, 150.0, 105.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 105.0 ]
 				}
 
@@ -671,7 +841,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 180.0, 196.0, 72.0, 20.0 ],
+					"patching_rect" : [ 9.0, 197.5, 72.0, 20.0 ],
 					"text" : "loadmess 1"
 				}
 
@@ -686,7 +856,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 9.0, 767.5, 193.0, 74.0 ],
+					"patching_rect" : [ 6.0, 775.5, 193.0, 74.0 ],
 					"text" : "See in Max console the Minuit requests/answers between myApplication and remoteMinuitApp when you click on one of this message."
 				}
 
@@ -701,7 +871,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 110.0, 629.5, 281.0, 33.0 ],
+					"patching_rect" : [ 113.0, 667.5, 281.0, 33.0 ],
 					"text" : "Once the remoteMinuitApp is opened, discover his namespace (no need to load a namespace file)."
 				}
 
@@ -716,7 +886,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 637.0, 101.0, 18.0 ],
+					"patching_rect" : [ 9.0, 674.0, 101.0, 18.0 ],
 					"text" : "namespace/build"
 				}
 
@@ -732,7 +902,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 570.5, 157.0, 31.0 ],
+					"patching_rect" : [ 9.0, 607.5, 157.0, 31.0 ],
 					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 7002"
 				}
 
@@ -747,7 +917,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 6.0, 527.0, 178.5, 20.0 ],
+					"patching_rect" : [ 9.0, 564.0, 178.5, 20.0 ],
 					"text" : "More about Minuit protocol :"
 				}
 
@@ -762,7 +932,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 609.0, 212.0, 20.0 ],
+					"patching_rect" : [ 9.0, 646.0, 212.0, 20.0 ],
 					"text" : "j.modular remoteMinuitApp Minuit"
 				}
 
@@ -777,7 +947,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 184.5, 527.0, 317.5, 60.0 ],
+					"patching_rect" : [ 187.5, 564.0, 317.5, 60.0 ],
 					"text" : "Open the remoteMinuitApp patcher using Max Runtime (see in Jamoma/examples folder) to see how Minuit allows namespace discovering for applcation that use Minuit protocol."
 				}
 
@@ -797,11 +967,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 544.0, 44.0, 634.0, 184.0 ],
+						"rect" : [ 546.0, 44.0, 634.0, 184.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -889,8 +1059,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 6.0, 7.0, 149.0, 47.0 ],
-									"text" : "Here is two parameters of myApplication to test Minuit request"
+									"patching_rect" : [ 6.0, 7.0, 155.0, 47.0 ],
+									"text" : "Here are two parameters of myApplication to test Minuit request"
 								}
 
 							}
@@ -1117,11 +1287,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 544.0, 296.0, 945.0, 533.0 ],
+						"rect" : [ 546.0, 298.0, 945.0, 533.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1661,7 +1831,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-24",
-									"items" : "<empty>",
+									"items" : [ "", ",", "filter", ",", "filter/frequency", ",", "filter/type", ",", "player", ",", "player/end", ",", "player/gain", ",", "player/play" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -2382,7 +2552,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 260.0, 300.0, 138.0, 24.0 ],
+					"patching_rect" : [ 395.0, 311.0, 138.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -2407,12 +2577,12 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-40",
-					"linecount" : 6,
+					"linecount" : 7,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 108.75, 427.0, 414.25, 87.0 ],
-					"text" : "Many applications cannot describe themself because they use a protocol which doesn't allow it (like OSC). That's why you need to load a namespace file to declare the parameter|message|return of the application to handle.\n\nFor the remoteOSCApp used for this example, load the \"remoteOSCApp - namespace.xml\" file in Jamoma/examples folder before."
+					"patching_rect" : [ 105.75, 430.0, 436.0, 100.0 ],
+					"text" : "Many applications cannot describe themselves because they use a protocol which doesn't allow it (e.g. OSC). That's why you need to load a namespace file to declare the parameters|messages|returns that the application handles.\nFor the remoteOSCApp used for this example, first load the \"remoteOSCApp - namespace.xml\" file in Jamoma/examples/remote communication folder.\n\nOSC Addresses can also be dynamically added to the namespace by \"learning\""
 				}
 
 			}
@@ -2437,7 +2607,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 341.0, 228.0, 145.0, 20.0 ],
+					"patching_rect" : [ 342.0, 215.0, 145.0, 20.0 ],
 					"text" : "j.receive /:activity/out"
 				}
 
@@ -2450,7 +2620,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 341.0, 250.0, 94.0, 20.0 ],
+					"patching_rect" : [ 342.0, 237.0, 94.0, 20.0 ],
 					"text" : "print activity/out"
 				}
 
@@ -2464,7 +2634,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 184.5, 228.0, 137.0, 20.0 ],
+					"patching_rect" : [ 185.5, 215.0, 137.0, 20.0 ],
 					"text" : "j.receive /:activity/in"
 				}
 
@@ -2479,7 +2649,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 431.0, 100.0, 18.0 ],
+					"patching_rect" : [ 9.0, 434.0, 100.0, 18.0 ],
 					"text" : "namespace/read"
 				}
 
@@ -2495,7 +2665,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 351.0, 175.5, 45.0 ],
+					"patching_rect" : [ 9.0, 354.0, 175.5, 45.0 ],
 					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 7003 7004, name, protocol/setup"
 				}
 
@@ -2509,7 +2679,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 9.0, 328.0, 60.0, 20.0 ],
+					"patching_rect" : [ 9.0, 331.0, 60.0, 20.0 ],
 					"text" : "loadbang"
 				}
 
@@ -2524,7 +2694,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 403.0, 200.0, 20.0 ],
+					"patching_rect" : [ 9.0, 406.0, 200.0, 20.0 ],
 					"text" : "j.modular remoteOSCApp OSC"
 				}
 
@@ -2540,8 +2710,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 6.0, 291.0, 254.0, 33.0 ],
-					"text" : "With 2 arguments, j.modular enable a protocol to deal with a remote application :"
+					"patching_rect" : [ 6.0, 294.0, 254.0, 33.0 ],
+					"text" : "With 2 arguments, j.modular enables a protocol to deal with a remote application :"
 				}
 
 			}
@@ -2557,7 +2727,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 6.0, 74.0, 246.0, 33.0 ],
-					"text" : "With 1 argument, j.modular enable a protocol to deal with the patcher :"
+					"text" : "With 1 argument, j.modular enables a protocol to deal with the patcher :"
 				}
 
 			}
@@ -2571,7 +2741,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 164.5, 123.0, 127.0, 33.0 ],
+					"patching_rect" : [ 164.5, 130.0, 127.0, 33.0 ],
 					"text" : "setup the parameters of the protocol used."
 				}
 
@@ -2585,7 +2755,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 9.0, 104.0, 60.0, 20.0 ],
+					"patching_rect" : [ 8.0, 109.0, 60.0, 20.0 ],
 					"text" : "loadbang"
 				}
 
@@ -2598,7 +2768,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 184.5, 250.0, 87.0, 20.0 ],
+					"patching_rect" : [ 185.5, 237.0, 87.0, 20.0 ],
 					"text" : "print activity/in"
 				}
 
@@ -2614,7 +2784,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 125.0, 154.0, 31.0 ],
+					"patching_rect" : [ 9.0, 132.0, 154.0, 31.0 ],
 					"text" : "protocol/setup ip localhost, protocol/setup port 7001"
 				}
 
@@ -2630,7 +2800,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 159.5, 243.0, 33.0 ],
+					"patching_rect" : [ 9.0, 166.5, 243.0, 33.0 ],
 					"text" : "j.modular Minuit @name myApplication @author \"Jamoma Team\" @version v1"
 				}
 
@@ -2652,7 +2822,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.modular", "@description", "Manage communication between a Jamoma patch and distant application using many protocoles" ],
+					"args" : [ "@name", "j.modular", "@description", "Manage communication between a Jamoma patcher and distant applications using various protocols" ],
 					"id" : "obj-31",
 					"maxclass" : "bpatcher",
 					"name" : "j.maxhelpui.maxpat",
@@ -2677,13 +2847,35 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"id" : "obj-30",
+					"maxclass" : "panel",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2.0, 72.0, 539.0, 214.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"id" : "obj-34",
+					"maxclass" : "panel",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2.0, 290.0, 539.0, 560.0 ]
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-27", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 18.5, 505.0, 3.5, 505.0, 3.5, 398.0, 18.5, 398.0 ],
+					"midpoints" : [ 18.5, 526.0, 3.5, 526.0, 3.5, 401.0, 18.5, 401.0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -2738,7 +2930,7 @@
 					"destination" : [ "obj-27", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 18.5, 451.0, 3.5, 451.0, 3.5, 399.0, 18.5, 399.0 ],
+					"midpoints" : [ 18.5, 454.0, 3.5, 454.0, 3.5, 402.0, 18.5, 402.0 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -2766,7 +2958,7 @@
 					"destination" : [ "obj-44", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 15.5, 658.0, 3.5, 658.0, 3.5, 605.0, 15.5, 605.0 ],
+					"midpoints" : [ 18.5, 695.0, 6.5, 695.0, 6.5, 642.0, 18.5, 642.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -2776,7 +2968,7 @@
 					"destination" : [ "obj-33", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 18.5, 277.0, 4.5, 277.0, 4.5, 155.5, 18.5, 155.5 ],
+					"midpoints" : [ 18.5, 277.0, 7.5, 277.0, 7.5, 155.5, 18.5, 155.5 ],
 					"source" : [ "obj-32", 0 ]
 				}
 
@@ -2822,75 +3014,75 @@
 					"destination" : [ "obj-36", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
-					"midpoints" : [ 189.5, 221.5, 18.5, 221.5 ],
+					"midpoints" : [ 18.5, 221.5, 18.5, 221.5 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
-			"obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
 			"obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
-			"obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
-			"obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
-			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ]
+			"obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
+			"obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
 				"patcherrelativepath" : "../patchers/components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/EQ/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.octavebandwidth2q.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
 				"patcherrelativepath" : "../patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~_large.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/EQ/equalizer~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.q2octavebandwidth.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
 				"patcherrelativepath" : "../patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
