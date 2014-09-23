@@ -578,7 +578,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 896.0, 441.0, 53.0, 18.0 ],
-					"text" : "ui/panel"
+					"text" : "ui:panel"
 				}
 
 			}
