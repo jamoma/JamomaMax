@@ -66,7 +66,7 @@ TTErr TTModelInfo::Rename(const TTValue& inputValue, TTValue& outputValue)
     
     TTErr err = x->wrappedObject.send("Rename", inputValue, outputValue);
     
-    //update model address only in j.model case ()
+    //update model address only in j.model case
 #ifndef JCOM_VIEW
     if (!err) {
         
