@@ -41,6 +41,12 @@ public:
     
     void setAddressReadOnly(TTBoolean readOnly);
     
+    /** Rename the model
+     @param inputValue      a new name.instance #TTSymbol
+     @param outputValue     the effective #TTSymbol name.instance
+     @return #TTErr error code */
+    TTErr Rename(const TTValue& inputValue, TTValue& outputValue);
+    
     /** Open the internal patcher
      @return    TTErr       kTTErrNone
      */

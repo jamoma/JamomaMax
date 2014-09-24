@@ -29,6 +29,7 @@ mClass(kTTSymEmpty)
     addAttributeWithSetter(Address, kTypeSymbol);
     addAttribute(Class, kTypeSymbol);
     
+    addMessageWithArguments(Rename);
     addMessage(InternalOpen);
     addMessage(HelpOpen);
     addMessage(ReferenceOpen);
@@ -48,7 +49,7 @@ TTErr TTModelInfo::setAddress(const TTValue& newValue)
 {
     mAddress = newValue[0];
     
-    // notify content observers
+    // notify address observers
     addressAttribute->sendNotification(kTTSym_notify, mAddress);	// we use kTTSym_notify because we know that observers are TTCallback
     
     return kTTErrNone;
@@ -57,6 +58,29 @@ TTErr TTModelInfo::setAddress(const TTValue& newValue)
 void TTModelInfo::setAddressReadOnly(TTBoolean readOnly)
 {
     addressAttribute->setreadOnly(readOnly);
+}
+
+TTErr TTModelInfo::Rename(const TTValue& inputValue, TTValue& outputValue)
+{
+    WrappedModularInstancePtr x = (WrappedModularInstancePtr)mObject;
+    
+    TTErr err = x->wrappedObject.send("Rename", inputValue, outputValue);
+    
+    //update model address only in j.model case ()
+#ifndef JCOM_VIEW
+    if (!err) {
+        
+        TTValue v;
+        
+        x->wrappedObject.get(kTTSym_address, v);
+        
+        mAddress = v[0];
+    
+        // notify address observers
+        addressAttribute->sendNotification(kTTSym_notify, mAddress);	// we use kTTSym_notify because we know that observers are TTCallback
+    }
+#endif
+    return err;
 }
 
 TTErr TTModelInfo::InternalOpen()
