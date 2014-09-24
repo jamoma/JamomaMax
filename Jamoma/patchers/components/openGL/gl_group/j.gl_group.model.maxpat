@@ -1873,7 +1873,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 75.0, 247.0, 470.0, 43.0 ],
-									"text" : "j.parameter anchor @type array @ramp/drive max @dataspace position @dataspace/unit openGL @description \"The anchor position in local space. Allows for offsetting the local 3D origin around which transforms are applied.\" @default 0. 0. 0.",
+									"text" : "j.parameter anchor @type array @ramp/drive max @dataspace position @unit openGL @description \"The anchor position in local space. Allows for offsetting the local 3D origin around which transforms are applied.\" @default 0. 0. 0.",
 									"varname" : "3D/position[1]"
 								}
 
@@ -1966,7 +1966,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 19.0, 26.0, 459.0, 31.0 ],
-									"text" : "j.parameter position @type array @ramp/drive max @dataspace position @dataspace/unit openGL @description \"3D origin as xyz coordinates.\" @default 0. 0. 0.",
+									"text" : "j.parameter position @type array @ramp/drive max @dataspace position @unit openGL @description \"3D origin as xyz coordinates.\" @default 0. 0. 0.",
 									"varname" : "3D/position"
 								}
 
@@ -2327,7 +2327,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 76.0, 220.0, 502.0, 31.0 ],
-									"text" : "j.parameter aux_color @type array @description \"The auxiliary color in the form red green blue\" @default 1. 1. 1. @dataspace color @dataspace/unit rgb @range 0 1 @clipmode both",
+									"text" : "j.parameter aux_color @type array @description \"The auxiliary color in the form red green blue\" @default 1. 1. 1. @dataspace color @unit rgb @range 0 1 @clipmode both",
 									"varname" : "color/rgb[1]"
 								}
 
@@ -2406,7 +2406,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 40.0, 11.0, 473.0, 31.0 ],
-									"text" : "j.parameter color @type array @description \"Object color as red, green, blue (0.-1.).\" @default 1. 1. 1. @dataspace color @dataspace/unit rgb @range 0 1 @clipmode both",
+									"text" : "j.parameter color @type array @description \"Object color as red, green, blue (0.-1.).\" @default 1. 1. 1. @dataspace color @unit rgb @range 0 1 @clipmode both",
 									"varname" : "color/rgb"
 								}
 

@@ -155,7 +155,7 @@
             ],
             "dataspace": "time",
             "clipmode": "both",
-            "dataspace/unit": "Hz",
+            "unit": "Hz",
             "default": [
               5000
             ],
@@ -687,7 +687,7 @@
             ],
             "dataspace": "time",
             "clipmode": "both",
-            "dataspace/unit": "Hz",
+            "unit": "Hz",
             "default": [
               250
             ],

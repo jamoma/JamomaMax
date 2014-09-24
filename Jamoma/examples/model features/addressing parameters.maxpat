@@ -1483,7 +1483,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 346.0, 760.5, 140.0, 47.0 ],
-									"text" : "j.remote /filter-units/gain @dataspace gain @dataspace/unit linear"
+									"text" : "j.remote /filter-units/gain @dataspace gain @unit linear"
 								}
 
 							}

@@ -101,7 +101,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 67.5, 356.106842, 114.0, 18.0 ],
-									"text" : "dataspace/unit midi"
+									"text" : "unit midi"
 								}
 
 							}
@@ -185,7 +185,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 67.5, 155.106842, 114.0, 18.0 ],
-									"text" : "dataspace/unit midi"
+									"text" : "unit midi"
 								}
 
 							}
@@ -477,7 +477,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 67.5, 356.106842, 105.0, 18.0 ],
-									"text" : "dataspace/unit db"
+									"text" : "unit db"
 								}
 
 							}
@@ -561,7 +561,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 67.5, 155.106842, 105.0, 18.0 ],
-									"text" : "dataspace/unit db"
+									"text" : "unit db"
 								}
 
 							}
@@ -853,7 +853,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 67.5, 356.106842, 121.0, 18.0 ],
-									"text" : "dataspace/unit linear"
+									"text" : "unit linear"
 								}
 
 							}
@@ -937,7 +937,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 67.5, 155.106842, 121.0, 18.0 ],
-									"text" : "dataspace/unit linear"
+									"text" : "unit linear"
 								}
 
 							}

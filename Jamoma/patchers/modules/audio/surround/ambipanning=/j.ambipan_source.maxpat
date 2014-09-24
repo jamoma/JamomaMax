@@ -252,7 +252,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 308.0, 410.0, 584.0, 43.0 ],
-					"text" : "j.message source.1/distance/dBUnit @type decimal @range 0. 100. @clipmode both @ramp/drive max @ramp/function linear @description \"Sets the distance unit for the exponential distance model.\" @dataspace gain @dataspace/unit dB"
+					"text" : "j.message source.1/distance/dBUnit @type decimal @range 0. 100. @clipmode both @ramp/drive max @ramp/function linear @description \"Sets the distance unit for the exponential distance model.\" @dataspace gain @unit dB"
 				}
 
 			}
@@ -380,7 +380,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 346.0, 263.0, 545.0, 43.0 ],
-					"text" : "j.message source.1/gain @type decimal @ramp/drive max @ramp/function linear @range 0. 127. @clipmode low @dataspace gain @dataspace/unit midi @description \"Input gain for the nth source.\""
+					"text" : "j.message source.1/gain @type decimal @ramp/drive max @ramp/function linear @range 0. 127. @clipmode low @dataspace gain @unit midi @description \"Input gain for the nth source.\""
 				}
 
 			}
@@ -570,7 +570,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 377.0, 124.0, 513.0, 31.0 ],
-					"text" : "j.message source.1/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+					"text" : "j.message source.1/position @type array @dataspace position @unit xyz @description \"Position of the nth source.\""
 				}
 
 			}

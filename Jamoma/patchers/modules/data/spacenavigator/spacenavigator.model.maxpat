@@ -1550,7 +1550,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 257.5, 395.0, 580.0, 31.0 ],
-									"text" : "j.return cooked/position @range -1. 1. @type array @clipmode none @repetitions/filter 1 @dataspace position @dataspace/unit xyz @description \"XYZ position\" @active 0 @dataspace position @dataspace/unit xyz"
+									"text" : "j.return cooked/position @range -1. 1. @type array @clipmode none @repetitions/filter 1 @dataspace position @unit xyz @description \"XYZ position\" @active 0 @dataspace position @unit xyz"
 								}
 
 							}

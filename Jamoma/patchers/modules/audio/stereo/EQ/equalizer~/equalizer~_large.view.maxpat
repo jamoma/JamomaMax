@@ -1042,7 +1042,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 441.0, 100.0, 177.0, 56.0 ],
-									"text" : "j.remote frequency frequency.midi_converter @dataspace/unit midi"
+									"text" : "j.remote frequency frequency.midi_converter @unit midi"
 								}
 
 							}
