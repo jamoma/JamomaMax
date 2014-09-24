@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 4,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 380.0, 131.0, 1050.0, 634.0 ],
+		"rect" : [ 100.0, 100.0, 1050.0, 634.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -101,11 +101,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 380.0, 157.0, 1050.0, 608.0 ],
+						"rect" : [ 100.0, 126.0, 1050.0, 608.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -151,7 +151,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 602.75, 452.0, 108.5, 18.0 ],
-									"text" : "position"
+									"text" : "angle"
 								}
 
 							}
@@ -435,7 +435,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-22",
-									"items" : [ "daz", ",", "cylindrical", ",", "openGL", ",", "ad", ",", "polar", ",", "aed", ",", "spherical", ",", "xy", ",", "cart2D", ",", "xyz", ",", "cart3D" ],
+									"items" : [ "deg", ",", "degree", ",", "rad", ",", "radian" ],
 									"labelclick" : 1,
 									"maxclass" : "umenu",
 									"numinlets" : 1,
@@ -521,7 +521,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-28",
-									"items" : [ "daz", ",", "cylindrical", ",", "openGL", ",", "ad", ",", "polar", ",", "aed", ",", "spherical", ",", "xy", ",", "cart2D", ",", "xyz", ",", "cart3D" ],
+									"items" : [ "deg", ",", "degree", ",", "rad", ",", "radian" ],
 									"labelclick" : 1,
 									"maxclass" : "umenu",
 									"numinlets" : 1,
@@ -1026,7 +1026,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -1181,7 +1181,8 @@
 									"maxclass" : "ambimonitor",
 									"mode" : 2,
 									"numinlets" : 1,
-									"numoutlets" : 0,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 45.0, 175.0, 128.0, 256.0 ],
 									"presentation_rect" : [ 0.0, 0.0, 20.0, 40.0 ]
 								}
@@ -1356,7 +1357,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 14.0, 476.0, 25.0, 19.0 ],
+									"patching_rect" : [ 14.0, 476.0, 25.0, 20.0 ],
 									"text" : "t b"
 								}
 
@@ -1371,7 +1372,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 14.0, 495.0, 205.0, 17.0 ],
+									"patching_rect" : [ 14.0, 495.0, 205.0, 18.0 ],
 									"text" : "load j.SpatDIF.coordinates.maxpat"
 								}
 
@@ -1386,7 +1387,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 14.0, 514.0, 57.0, 19.0 ],
+									"patching_rect" : [ 14.0, 514.0, 57.0, 20.0 ],
 									"text" : "pcontrol"
 								}
 
@@ -1650,7 +1651,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -1680,7 +1681,8 @@
 									"maxclass" : "ambimonitor",
 									"mode" : 2,
 									"numinlets" : 1,
-									"numoutlets" : 0,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 153.0, 189.0, 128.0, 256.0 ],
 									"presentation_rect" : [ 15.0, 15.0, 20.0, 40.0 ]
 								}
@@ -1710,7 +1712,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 122.0, 472.0, 25.0, 19.0 ],
+									"patching_rect" : [ 122.0, 472.0, 25.0, 20.0 ],
 									"text" : "t b"
 								}
 
@@ -1725,7 +1727,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 122.0, 491.0, 205.0, 17.0 ],
+									"patching_rect" : [ 122.0, 491.0, 205.0, 18.0 ],
 									"text" : "load j.SpatDIF.coordinates.maxpat"
 								}
 
@@ -1740,7 +1742,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 122.0, 510.0, 57.0, 19.0 ],
+									"patching_rect" : [ 122.0, 510.0, 57.0, 20.0 ],
 									"text" : "pcontrol"
 								}
 
@@ -2167,7 +2169,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -2293,7 +2295,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 41.0, 235.0, 338.0, 20.0 ],
-									"text" : "j.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.dataspace @dataspace gain @input midigain @output linear"
 								}
 
 							}
@@ -2389,7 +2391,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 4,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -2879,7 +2881,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 4,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -3076,7 +3078,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 345.0, 575.0, 74.0, 19.0 ],
+									"patching_rect" : [ 345.0, 575.0, 74.0, 20.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
@@ -3409,6 +3411,10 @@
 			}
 , 			{
 				"name" : "j.dataspace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "ambimonitor.mxo",
 				"type" : "iLaX"
 			}
  ]
