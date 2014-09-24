@@ -38,7 +38,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 548.0, 30.0, 548.0, 33.0 ],
-					"text" : "j.parameter audio/gain @type integer @range 0 127 @clipmode both @dataspace gain @unit midi",
+					"text" : "j.parameter audio/gain @type integer @range 0 127 @clipmode both @dataspace gain @unit midigain",
 					"varname" : "voices[5]"
 				}
 

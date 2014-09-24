@@ -987,7 +987,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 47.0, 271.0, 87.0 ],
-																	"text" : "j.parameter file/transpose @type decimal @range -12. 12. @clipmode none @dataspace time @unit midi @ramp/drive max @ramp/function linear @description \"Control soundfile playback speed/transposition as MIDI transposition.\""
+																	"text" : "j.parameter file/transpose @type decimal @range -12. 12. @clipmode none @dataspace time @unit midipitch @ramp/drive max @ramp/function linear @description \"Control soundfile playback speed/transposition as MIDI transposition.\""
 																}
 
 															}

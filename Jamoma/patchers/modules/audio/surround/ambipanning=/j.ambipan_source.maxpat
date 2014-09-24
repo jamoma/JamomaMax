@@ -380,7 +380,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 346.0, 263.0, 545.0, 43.0 ],
-					"text" : "j.message source.1/gain @type decimal @ramp/drive max @ramp/function linear @range 0. 127. @clipmode low @dataspace gain @unit midi @description \"Input gain for the nth source.\""
+					"text" : "j.message source.1/gain @type decimal @ramp/drive max @ramp/function linear @range 0. 127. @clipmode low @dataspace gain @unit midigain @description \"Input gain for the nth source.\""
 				}
 
 			}
