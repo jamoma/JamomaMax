@@ -211,7 +211,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 23.0, 235.0, 335.0, 55.0 ],
-					"text" : "j.parameter #1/lfo/frequency @type decimal @range 0. 100. @clipmode low @ramp/drive max @repetitions/filter 1 @dataspace time @dataspace/unit Hz",
+					"text" : "j.parameter #1/lfo/frequency @type decimal @range 0. 100. @clipmode low @ramp/drive max @repetitions/filter 1 @dataspace time @unit Hz",
 					"varname" : "#1/lfo/frequency"
 				}
 

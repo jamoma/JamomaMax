@@ -160,7 +160,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 336.0, 205.0, 133.0, 47.0 ],
-					"text" : "j.remote feedback/gain @dataspace gain @dataspace/unit db",
+					"text" : "j.remote feedback/gain @dataspace gain @unit db",
 					"varname" : "feedback"
 				}
 

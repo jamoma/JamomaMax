@@ -1301,7 +1301,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 379.0, 135.0, 175.0, 104.0 ],
-									"text" : "j.parameter can be defined a dataspace and a unit using the @dataspace and @dataspace/unit attributes. See help patch for j.dataspace to explore the list of available dataspaces"
+									"text" : "j.parameter can be defined a dataspace and a unit using the @dataspace and @unit attributes. See help patch for j.dataspace to explore the list of available dataspaces"
 								}
 
 							}
@@ -1343,7 +1343,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 213.0, 439.0, 216.0, 20.0 ],
-									"text" : "j.remote /gain @dataspace/unit db"
+									"text" : "j.remote /gain @unit db"
 								}
 
 							}
@@ -1388,7 +1388,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 208.0, 164.0, 145.0, 60.0 ],
-									"text" : "j.parameter gain @type decimal @dataspace gain @dataspace/unit linear"
+									"text" : "j.parameter gain @type decimal @dataspace gain @unit linear"
 								}
 
 							}
@@ -2408,7 +2408,7 @@
 									"fontsize" : 10.0,
 									"frozen_object_attributes" : 									{
 										"dataspace" : "pitch",
-										"dataspace/unit" : "hz",
+										"unit" : "hz",
 										"type" : "decimal"
 									}
 ,
@@ -3108,7 +3108,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 41.0, 633.0, 100.0, 19.0 ],
-									"text" : "@dataspace/unit"
+									"text" : "@unit"
 								}
 
 							}

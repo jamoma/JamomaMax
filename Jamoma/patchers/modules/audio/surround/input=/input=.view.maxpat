@@ -179,7 +179,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 294.0, 178.0, 530.0, 31.0 ],
-									"text" : "j.return info/length @type integer @description \"length of the soundfile in [ms]\" @dataspace time @dataspace/unit ms"
+									"text" : "j.return info/length @type integer @description \"length of the soundfile in [ms]\" @dataspace time @unit ms"
 								}
 
 							}

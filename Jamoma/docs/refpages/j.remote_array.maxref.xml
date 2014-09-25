@@ -203,7 +203,7 @@
 				The dataspace to use in a view
 			</description>
 		</attribute>
-		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
+		<attribute name="unit" get="1" set="1" type="symbol" size="1">
 			<digest>
 				The dataspace unit to use in a view
 			</digest>

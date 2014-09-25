@@ -241,7 +241,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1116.5, 37.0, 149.0, 127.0 ],
-					"text" : "j.parameter release @type decimal @range 0 500 @clipmode low @dataspace time @dataspace/unit ms @ramp/drive max @description \"The release time (ms).\"",
+					"text" : "j.parameter release @type decimal @range 0 500 @clipmode low @dataspace time @unit ms @ramp/drive max @description \"The release time (ms).\"",
 					"varname" : "release"
 				}
 
@@ -257,7 +257,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 940.5, 37.0, 171.0, 154.0 ],
-					"text" : "j.parameter lookahead @type integer @range 0 256 @clipmode both @ramp/drive max @repetitions/filter 1 @dataspace time @dataspace/unit sample @description \"The number of samples (up to 256) to look ahead into the signal to see what is coming.\"",
+					"text" : "j.parameter lookahead @type integer @range 0 256 @clipmode both @ramp/drive max @repetitions/filter 1 @dataspace time @unit sample @description \"The number of samples (up to 256) to look ahead into the signal to see what is coming.\"",
 					"varname" : "lookahead"
 				}
 
@@ -273,7 +273,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 769.5, 37.0, 166.0, 181.0 ],
-					"text" : "j.parameter threshold @type decimal @range -48 6 @clipmode none @ramp/drive max @dataspace gain @dataspace/unit dB @description \"The limiter threshold (in dB below full scale). When the input signal level exceeds this threshold, it will be attenuated as necessary to keep the level below the threshold.\"",
+					"text" : "j.parameter threshold @type decimal @range -48 6 @clipmode none @ramp/drive max @dataspace gain @unit dB @description \"The limiter threshold (in dB below full scale). When the input signal level exceeds this threshold, it will be attenuated as necessary to keep the level below the threshold.\"",
 					"varname" : "threshold"
 				}
 
@@ -289,7 +289,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 614.0, 37.0, 151.0, 141.0 ],
-					"text" : "j.parameter postamp @type decimal @range -6 48 @clipmode none @dataspace gain @dataspace/unit dB @ramp/drive max @description \"The gain in dB applied to the signal after limiting. \"",
+					"text" : "j.parameter postamp @type decimal @range -6 48 @clipmode none @dataspace gain @unit dB @ramp/drive max @description \"The gain in dB applied to the signal after limiting. \"",
 					"varname" : "postamp"
 				}
 
@@ -305,7 +305,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 459.0, 37.0, 149.5, 154.0 ],
-					"text" : "j.parameter preamp @type decimal @range -6 48 @clipmode none @ramp/drive max @dataspace gain @dataspace/unit dB @ramp/function linear @description \"The gain in dB applied to the signal before limiting.\"",
+					"text" : "j.parameter preamp @type decimal @range -6 48 @clipmode none @ramp/drive max @dataspace gain @unit dB @ramp/function linear @description \"The gain in dB applied to the signal before limiting.\"",
 					"varname" : "preamp"
 				}
 

@@ -1940,7 +1940,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 43.0, 315.0, 161.0, 18.0 ],
-									"text" : "address /test:dataspace/unit"
+									"text" : "address /test:unit"
 								}
 
 							}
@@ -1982,7 +1982,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 12.0, 253.001862, 275.0, 33.0 ],
-									"text" : "j.test.assert.equal dataspace/unit-test @input dataspace/unit radian @compareTo radian"
+									"text" : "j.test.assert.equal unit-test @input unit radian @compareTo radian"
 								}
 
 							}

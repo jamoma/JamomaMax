@@ -679,7 +679,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 395.0, 6.0, 581.0, 47.0 ],
-					"text" : "j.parameter temperature @type decimal @repetitions/filter 1 @range -273. 40. @clipmode low @description \"temperature to calculate speed of sound.\" @dataspace temperature @dataspace/unit Celsius",
+					"text" : "j.parameter temperature @type decimal @repetitions/filter 1 @range -273. 40. @clipmode low @description \"temperature to calculate speed of sound.\" @dataspace temperature @unit Celsius",
 					"varname" : "voices[1]"
 				}
 
@@ -695,7 +695,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 427.0, 294.0, 627.0, 33.0 ],
-					"text" : "j.parameter.array 32 speaker delay @type decimal @repetitions/filter 0 @range 0. 1000. @clipmode both @dataspace time @dataspace/unit ms @description \"delay to be applied on the Nth speaker  in [ms] by default\""
+					"text" : "j.parameter.array 32 speaker delay @type decimal @repetitions/filter 0 @range 0. 1000. @clipmode both @dataspace time @unit ms @description \"delay to be applied on the Nth speaker  in [ms] by default\""
 				}
 
 			}
@@ -710,7 +710,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 427.0, 248.0, 605.0, 33.0 ],
-					"text" : "j.message.array 32 speaker position @type array @repetitions/filter 0 @dataspace position @dataspace/unit xyz @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+					"text" : "j.message.array 32 speaker position @type array @repetitions/filter 0 @dataspace position @unit xyz @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
 				}
 
 			}

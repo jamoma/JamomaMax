@@ -4433,7 +4433,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1001.0, 416.0, 283.0, 60.0 ],
-					"text" : "j.message start @type decimal @repetitions/filter 1 @dataspace time @dataspace/unit second @description \"start time in soundfile to play in [sec]\"",
+					"text" : "j.message start @type decimal @repetitions/filter 1 @dataspace time @unit second @description \"start time in soundfile to play in [sec]\"",
 					"varname" : "start"
 				}
 

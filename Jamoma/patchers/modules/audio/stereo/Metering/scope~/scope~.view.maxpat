@@ -149,7 +149,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 808.5, 167.0, 123.000061, 47.0 ],
-					"text" : "j.remote range @dataspace gain @dataspace/unit db",
+					"text" : "j.remote range @dataspace gain @unit db",
 					"varname" : "j.parameter.mxb[4]"
 				}
 

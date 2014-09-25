@@ -1783,7 +1783,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 389.5, 61.0, 146.0, 18.0 ],
-					"text" : "dataspace/unit $1, bang"
+					"text" : "unit $1, bang"
 				}
 
 			}

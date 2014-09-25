@@ -616,7 +616,7 @@
             588.0,
             43.0
           ],
-          "text": "j.parameter sidechain @type decimal @range -60. 3. @clipmode both @description \"gain for controlling the effect of the recursive bandpass sidechain\" @dataspace gain @dataspace/unit dB"
+          "text": "j.parameter sidechain @type decimal @range -60. 3. @clipmode both @description \"gain for controlling the effect of the recursive bandpass sidechain\" @dataspace gain @unit dB"
         }
       },
       {
@@ -630,7 +630,7 @@
             ],
             "dataspace": "time",
             "clipmode": "both",
-            "dataspace/unit": "Hz",
+            "unit": "Hz",
             "default": [
               5000
             ],
@@ -782,7 +782,7 @@
             ],
             "dataspace": "time",
             "clipmode": "both",
-            "dataspace/unit": "Hz",
+            "unit": "Hz",
             "default": [
               250
             ],

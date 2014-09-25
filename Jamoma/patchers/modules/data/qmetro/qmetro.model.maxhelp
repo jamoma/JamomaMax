@@ -67,7 +67,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 487.0, 232.0, 215.0, 17.0 ],
-					"text" : "time:/dataspace/unit millisecond"
+					"text" : "time:/unit millisecond"
 				}
 
 			}
@@ -81,7 +81,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 487.0, 207.0, 194.0, 17.0 ],
-					"text" : "time:/dataspace/unit second"
+					"text" : "time:/unit second"
 				}
 
 			}

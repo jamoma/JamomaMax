@@ -283,7 +283,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 25.0, 166.037781, 119.0, 20.0 ],
-									"text" : "route dataspace/unit"
+									"text" : "route unit"
 								}
 
 							}
@@ -452,7 +452,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 25.0, 191.501862, 236.0, 33.0 ],
-									"text" : "j.test.assert.equal dataspace/unit-test @input dataspace/unit @compareTo none"
+									"text" : "j.test.assert.equal unit-test @input unit @compareTo none"
 								}
 
 							}

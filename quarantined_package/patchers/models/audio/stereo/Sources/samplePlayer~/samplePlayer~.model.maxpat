@@ -2243,7 +2243,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 195.0, 636.0, 477.0, 33.0 ],
-					"text" : "j.return info/length @type integer @description \"returns the length in [ms] of the internal buffer\" @repetitions/filter 0 @dataspace time @dataspace/unit ms"
+					"text" : "j.return info/length @type integer @description \"returns the length in [ms] of the internal buffer\" @repetitions/filter 0 @dataspace time @unit ms"
 				}
 
 			}
