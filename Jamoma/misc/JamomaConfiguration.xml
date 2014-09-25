@@ -11,7 +11,7 @@
   <entry App="ramp/function/parameters" TT="rampFunctionParameters"/>
   <entry App="range" TT="rangeBounds"/>
   <entry App="ramp/status" TT="rampStatus"/>
-  <entry App="dataspace/unit" TT="dataspaceUnit"/>
+  <entry App="unit" TT="dataspaceUnit"/>
   <entry App="j.parameter" TT="Data service parameter"/>
   <entry App="j.return" TT="Data service return"/>
   <entry App="activity/in" TT="activityIn"/>

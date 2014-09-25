@@ -135,7 +135,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 243.0, 124.5, 601.0, 47.0 ],
-					"text" : "j.parameter threshold @type decimal @ramp/drive max @repetitions/filter 1 @range -90 24 @clipmode both @description \"The threshold sets the level at which the Noise Gate opens and closes..\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter threshold @type decimal @ramp/drive max @repetitions/filter 1 @range -90 24 @clipmode both @description \"The threshold sets the level at which the Noise Gate opens and closes..\" @dataspace gain @unit dB",
 					"varname" : "threshold"
 				}
 
@@ -151,7 +151,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 113.0, 71.5, 582.0, 47.0 ],
-					"text" : "j.parameter release @type decimal @ramp/drive max @repetitions/filter 1 @range 0 1000 @clipmode both @description \"When the gate closes, this parameter sets how many milliseconds it will take to fade out.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter release @type decimal @ramp/drive max @repetitions/filter 1 @range 0 1000 @clipmode both @description \"When the gate closes, this parameter sets how many milliseconds it will take to fade out.\" @dataspace time @unit ms",
 					"varname" : "release"
 				}
 
@@ -167,7 +167,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 33.0, 18.0, 569.0, 47.0 ],
-					"text" : "j.parameter attack @type decimal @ramp/drive max @repetitions/filter 1 @range 0 1000 @clipmode low @description \"When the gate opens, this parameter sets how many milliseconds it will take to fade in.\" @dataspace time @dataspace/unit ms",
+					"text" : "j.parameter attack @type decimal @ramp/drive max @repetitions/filter 1 @range 0 1000 @clipmode low @description \"When the gate opens, this parameter sets how many milliseconds it will take to fade in.\" @dataspace time @unit ms",
 					"varname" : "attack"
 				}
 

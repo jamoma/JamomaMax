@@ -156,7 +156,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 161.0, 409.0, 33.0 ],
-									"text" : "j.return file/time @type decimal @dataspace time @dataspace/unit s @description \"Elapsed time for current recording, expressed in seconds.\""
+									"text" : "j.return file/time @type decimal @dataspace time @unit s @description \"Elapsed time for current recording, expressed in seconds.\""
 								}
 
 							}

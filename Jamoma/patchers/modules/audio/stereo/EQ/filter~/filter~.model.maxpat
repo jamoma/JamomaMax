@@ -352,7 +352,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 194.0, 151.0, 532.0, 33.0 ],
-					"text" : "j.parameter gain @type decimal @range -24 24 @clipmode both @ramp/drive max @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter gain @type decimal @range -24 24 @clipmode both @ramp/drive max @repetitions/filter 1 @description \"Gain (dB)\" @dataspace gain @unit dB",
 					"varname" : "filtergain"
 				}
 
@@ -384,7 +384,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 173.571426, 109.0, 605.0, 33.0 ],
-					"text" : "j.parameter frequency @type decimal @range 20. 20000. @clipmode both @ramp/drive max @repetitions/filter 1 @description \"Center frequency (Hz)\" @dataspace time @dataspace/unit Hz",
+					"text" : "j.parameter frequency @type decimal @range 20. 20000. @clipmode both @ramp/drive max @repetitions/filter 1 @description \"Center frequency (Hz)\" @dataspace time @unit Hz",
 					"varname" : "cf"
 				}
 

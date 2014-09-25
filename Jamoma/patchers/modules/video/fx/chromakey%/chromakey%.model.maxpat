@@ -231,7 +231,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 60.0, 17.0, 561.0, 31.0 ],
-					"text" : "j.parameter key/color @repetitions/filter 1 @type array @dataspace color @dataspace/unit rgb @range 0. 1. @clipmode both @description \"Chroma keying color (RGB in the range 0-1).\"",
+					"text" : "j.parameter key/color @repetitions/filter 1 @type array @dataspace color @unit rgb @range 0. 1. @clipmode both @description \"Chroma keying color (RGB in the range 0-1).\"",
 					"varname" : "key/blue[1]"
 				}
 

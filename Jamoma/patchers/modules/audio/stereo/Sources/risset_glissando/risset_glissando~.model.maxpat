@@ -75,7 +75,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 635.0, 208.5, 136.0, 141.0 ],
-					"text" : "j.parameter rolloff @type decimal @range -96 0. @clipmode high @ramp/drive max @ramp/function linear @description \"Rolloff in dB for the Gaussian windowing function.\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter rolloff @type decimal @range -96 0. @clipmode high @ramp/drive max @ramp/function linear @description \"Rolloff in dB for the Gaussian windowing function.\" @dataspace gain @unit dB",
 					"varname" : "rolloff"
 				}
 

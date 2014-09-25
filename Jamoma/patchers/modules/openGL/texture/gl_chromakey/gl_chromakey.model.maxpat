@@ -281,7 +281,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 326.0, 111.0, 415.0, 31.0 ],
-					"text" : "j.parameter keycolor @type array @range 0. 255. @clipmode both @dataspace color @dataspace/unit rgb @description \"Color target (RGB).\" @priority 40",
+					"text" : "j.parameter keycolor @type array @range 0. 255. @clipmode both @dataspace color @unit rgb @description \"Color target (RGB).\" @priority 40",
 					"varname" : "color"
 				}
 
