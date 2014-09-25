@@ -825,6 +825,10 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
         if (TTName == TTSymbol("enable"))
             continue;
 #endif
+        
+        // we want to hide service attribute for Max external
+        if (TTName == TTSymbol("service"))
+            continue;
 		
 		if ((MaxName = jamoma_TTName_To_MaxName(TTName))) {
             
