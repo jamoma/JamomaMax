@@ -11991,7 +11991,7 @@
             495.0,
             43.0
           ],
-          "text": "j.parameter center/decay @repetitions/filter 1 @type decimal @range 0 60 @clipmode low @description \"max. attenuation inside the center area in dB\" @dataspace gain @dataspace/unit dB",
+          "text": "j.parameter center/decay @repetitions/filter 1 @type decimal @range 0 60 @clipmode low @description \"max. attenuation inside the center area in dB\" @dataspace gain @unit dB",
           "varname": "destination/voices[4]"
         }
       },

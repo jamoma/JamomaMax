@@ -292,7 +292,7 @@ void jamomaSymbolsInit()
 	    //jps_inspector					= SymbolGen("inspector");
 	jps_type						= SymbolGen("type");
 	jps_dataspace					= SymbolGen("dataspace");
-	jps_unit						= SymbolGen("dataspace/unit");
+	jps_unit						= SymbolGen("unit");
 		
 	jps_range_bounds				= SymbolGen("range/bounds");
 	jps_range_clipmode				= SymbolGen("range/clipmode");

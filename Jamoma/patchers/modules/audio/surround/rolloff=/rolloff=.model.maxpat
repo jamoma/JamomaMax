@@ -219,7 +219,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 953.0, 83.5, 135.0, 141.0 ],
-					"text" : "j.parameter_array source.[32]/position @type array @dataspace position @dataspace/unit xyz @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
+					"text" : "j.parameter_array source.[32]/position @type array @dataspace position @unit xyz @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -234,7 +234,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 651.666748, 83.5, 134.0, 141.0 ],
-					"text" : "j.parameter rollOff @type decimal @repetitions/filter 1 @range 1. 6. @clipmode both @dataspace gain @dataspace/unit dB @description \"Roll-off in dB per doubling of distance.\"",
+					"text" : "j.parameter rollOff @type decimal @repetitions/filter 1 @range 1. 6. @clipmode both @dataspace gain @unit dB @description \"Roll-off in dB per doubling of distance.\"",
 					"varname" : "meters_per_unit[1]"
 				}
 

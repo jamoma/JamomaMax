@@ -1574,7 +1574,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 74.0, 315.0, 272.0, 18.0 ],
-									"text" : "/test:dataspace angle, /test:dataspace/unit radian"
+									"text" : "/test:dataspace angle, /test:unit radian"
 								}
 
 							}
@@ -1601,7 +1601,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 12.0, 228.0, 119.0, 20.0 ],
-									"text" : "route dataspace/unit"
+									"text" : "route unit"
 								}
 
 							}
@@ -1630,7 +1630,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 12.0, 253.001862, 244.0, 33.0 ],
-									"text" : "j.test.assert.equal dataspace/unit-test @input dataspace/unit @compareTo radian"
+									"text" : "j.test.assert.equal unit-test @input unit @compareTo radian"
 								}
 
 							}

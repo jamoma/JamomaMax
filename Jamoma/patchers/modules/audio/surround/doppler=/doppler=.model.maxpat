@@ -464,7 +464,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1244.0, 20.0, 136.0, 141.0 ],
-					"text" : "j.parameter_array source.[32]/position @type array @dataspace position @dataspace/unit xyz @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
+					"text" : "j.parameter_array source.[32]/position @type array @dataspace position @unit xyz @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
 				}
 
 			}

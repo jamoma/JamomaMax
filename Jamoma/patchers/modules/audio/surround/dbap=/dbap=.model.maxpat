@@ -38,7 +38,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 548.0, 30.0, 548.0, 33.0 ],
-					"text" : "j.parameter audio/gain @type integer @range 0 127 @clipmode both @dataspace gain @dataspace/unit midi",
+					"text" : "j.parameter audio/gain @type integer @range 0 127 @clipmode both @dataspace gain @unit midigain",
 					"varname" : "voices[5]"
 				}
 
@@ -1408,7 +1408,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 684.0, 574.0, 33.0 ],
-					"text" : "j.parameter_array speaker.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+					"text" : "j.parameter_array speaker.[32]/position @type array @dataspace position @unit xyz @description \"Position of the nth source.\""
 				}
 
 			}
@@ -1453,7 +1453,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 409.0, 593.0, 33.0 ],
-					"text" : "j.parameter_array source.[32]/gain @type decimal @dataspace gain @dataspace/unit linear @description \"Input gain for the nth source.\""
+					"text" : "j.parameter_array source.[32]/gain @type decimal @dataspace gain @unit linear @description \"Input gain for the nth source.\""
 				}
 
 			}
@@ -1511,7 +1511,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 425.0, 232.0, 569.0, 33.0 ],
-					"text" : "j.parameter_array source.[32]/position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+					"text" : "j.parameter_array source.[32]/position @type array @dataspace position @unit xyz @description \"Position of the nth source.\""
 				}
 
 			}

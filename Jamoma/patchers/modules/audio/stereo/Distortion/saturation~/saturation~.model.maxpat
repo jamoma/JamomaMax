@@ -122,7 +122,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 396.0, 17.0, 134.0, 127.0 ],
-					"text" : "j.parameter preamp @ramp/drive max @repetitions/filter 1 @type decimal @range -12 48 @clipmode none @description \"Preamp (dB).\" @dataspace gain @dataspace/unit dB",
+					"text" : "j.parameter preamp @ramp/drive max @repetitions/filter 1 @type decimal @range -12 48 @clipmode none @description \"Preamp (dB).\" @dataspace gain @unit dB",
 					"varname" : "preamp"
 				}
 

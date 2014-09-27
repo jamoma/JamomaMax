@@ -1917,7 +1917,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 291.5, 37.0, 180.0, 127.0 ],
-									"text" : "j.parameter reverb/level @type decimal @repetitions/filter 1 @range 0 1 @clipmode low @dataspace gain @dataspace/unit linear @description \"level of the reverb.\"",
+									"text" : "j.parameter reverb/level @type decimal @repetitions/filter 1 @range 0 1 @clipmode low @dataspace gain @unit linear @description \"level of the reverb.\"",
 									"varname" : "reverb[3]"
 								}
 
@@ -2231,7 +2231,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 665.000061, 19.0, 186.0, 154.0 ],
-									"text" : "j.parameter chorus/depth @type decimal @repetitions/filter 1 @range 0 1 @clipmode low @ramp/drive max @clipmode low @dataspace time @dataspace/unit ms @description \"depth-parameter of the fluidsynth~.\"",
+									"text" : "j.parameter chorus/depth @type decimal @repetitions/filter 1 @range 0 1 @clipmode low @ramp/drive max @clipmode low @dataspace time @unit ms @description \"depth-parameter of the fluidsynth~.\"",
 									"varname" : "chorus[3]"
 								}
 
@@ -2247,7 +2247,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 466.166687, 19.0, 186.0, 154.0 ],
-									"text" : "j.parameter chorus/speed @type decimal @repetitions/filter 1 @range 0 1 @clipmode low @ramp/drive max @clipmode low @dataspace time @dataspace/unit Hz @description \"speed-parameter of the fluidsynth~.\"",
+									"text" : "j.parameter chorus/speed @type decimal @repetitions/filter 1 @range 0 1 @clipmode low @ramp/drive max @clipmode low @dataspace time @unit Hz @description \"speed-parameter of the fluidsynth~.\"",
 									"varname" : "chorus[2]"
 								}
 
@@ -2263,7 +2263,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 267.333344, 19.0, 175.0, 141.0 ],
-									"text" : "j.parameter chorus/level @type decimal @repetitions/filter 1 @range 0 1 @clipmode low @dataspace gain @dataspace/unit linear @ramp/drive max @description \"level of the chorus.\"",
+									"text" : "j.parameter chorus/level @type decimal @repetitions/filter 1 @range 0 1 @clipmode low @dataspace gain @unit linear @ramp/drive max @description \"level of the chorus.\"",
 									"varname" : "chorus[6]"
 								}
 

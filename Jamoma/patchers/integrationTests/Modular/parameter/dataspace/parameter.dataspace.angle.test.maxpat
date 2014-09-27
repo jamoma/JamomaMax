@@ -101,7 +101,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 67.5, 155.106842, 129.0, 18.0 ],
-									"text" : "dataspace/unit degree"
+									"text" : "unit degree"
 								}
 
 							}
@@ -318,7 +318,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 67.5, 155.106842, 125.0, 18.0 ],
-									"text" : "dataspace/unit radian"
+									"text" : "unit radian"
 								}
 
 							}

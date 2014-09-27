@@ -5659,7 +5659,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 601.0, 85.0, 546.0, 33.0 ],
-					"text" : "j.message.array 32 speaker position @type array @dataspace position @dataspace/unit xyz @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+					"text" : "j.message.array 32 speaker position @type array @dataspace position @unit xyz @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
 				}
 
 			}

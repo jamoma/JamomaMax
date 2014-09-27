@@ -137,7 +137,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 441.5, 226.0, 134.0, 114.0 ],
-					"text" : "j.return samplerate @type integer @dataspace time @dataspace/unit Hz @dataspace time @dataspace/unit Hz @description \"Sample rate (Hz).\""
+					"text" : "j.return samplerate @type integer @dataspace time @unit Hz @dataspace time @unit Hz @description \"Sample rate (Hz).\""
 				}
 
 			}

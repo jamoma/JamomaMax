@@ -449,10 +449,10 @@ void ui_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 
 void ui_return_model_init(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
-	t_ui*     obj = (t_ui*)self;
-	long      init = atom_getlong(argv);
-	TTValue   v;
-    TTObject   aReceiver;
+	t_ui*       obj = (t_ui*)self;
+	long        init = atom_getlong(argv);
+	TTValue     v;
+    TTObject    aReceiver;
 	
     // if the model is initialized and no content observer have been created
 	if (init) {
@@ -465,9 +465,9 @@ void ui_return_model_init(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
         
         else {
             
-            // get the content of the model
+            // update address to get the content of the model
             aReceiver = v[0];
-            aReceiver.send(kTTSym_Get);
+            aReceiver.set(kTTSym_address, obj->modelAddress.appendAttribute(kTTSym_content));
         }
 	}
 }
