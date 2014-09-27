@@ -4,11 +4,12 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
+		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -75,6 +76,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Free-field amplitude roll-of with distance.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-2",
@@ -82,17 +84,18 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 87.0, 261.0, 128.0, 20.0 ],
-					"text" : "sur.rolloff~.model #1"
+					"patching_rect" : [ 87.0, 261.0, 99.0, 20.0 ],
+					"text" : "rolloff=.model #1"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "sur.rolloff~.view.maxpat",
+					"name" : "rolloff=.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -138,60 +141,6 @@
 					"source" : [ "obj-4", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "sur.rolloff~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.rolloff~",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "sur.rolloff~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.rolloff~",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.sur.rolloff.js",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.rolloff~",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.unpack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter_array.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

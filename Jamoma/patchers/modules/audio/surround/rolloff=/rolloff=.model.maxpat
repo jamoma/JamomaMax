@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -106,13 +106,13 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 297.0, 340.0, 89.0, 20.0 ],
+					"patching_rect" : [ 297.0, 340.0, 77.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "j.sur.rolloff.js",
+						"filename" : "j.rolloff=.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js j.sur.rolloff.js"
+					"text" : "js j.rolloff=.js"
 				}
 
 			}
@@ -187,7 +187,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "audio.connect" ],
 					"patching_rect" : [ 235.0, 12.0, 25.0, 25.0 ],
 					"varname" : "in[1]"
 				}
@@ -260,12 +260,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1026",
-					"linecount" : 10,
+					"linecount" : 9,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 297.0, 83.5, 141.0, 141.0 ],
+					"patching_rect" : [ 297.0, 83.5, 144.0, 127.0 ],
 					"text" : "j.parameter numSources @type integer @repetitions/filter 1 @range 1 32 @clipmode both @description \"The number of sound sources. Changes only take effect when audio is off.\"",
 					"varname" : "voices"
 				}
@@ -292,32 +292,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"color" : [ 1.0, 0.501961, 0.0, 1.0 ],
-					"destination" : [ "obj-15", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1020.5, 333.25, 376.5, 333.25 ],
-					"source" : [ "obj-1010", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1010", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"color" : [ 1.0, 0.501961, 0.0, 1.0 ],
-					"destination" : [ "obj-15", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 880.5, 330.75, 376.5, 330.75 ],
-					"source" : [ "obj-1012", 1 ]
 				}
 
 			}
@@ -428,30 +406,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.sur.rolloff.js",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.rolloff~",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter_array.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.mixer=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
