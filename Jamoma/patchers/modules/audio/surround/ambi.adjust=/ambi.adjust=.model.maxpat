@@ -1988,7 +1988,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1442.0, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2004,7 +2004,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1346.466675, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2020,7 +2020,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1250.93335, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2036,7 +2036,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1155.400024, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2052,7 +2052,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1059.866699, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2068,7 +2068,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 964.333252, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2084,7 +2084,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 868.799988, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2100,7 +2100,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 773.266663, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2116,7 +2116,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 677.733337, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2132,7 +2132,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 582.200012, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2148,7 +2148,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 486.666687, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2164,7 +2164,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 391.133331, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2180,7 +2180,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 295.600006, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2196,7 +2196,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 200.06665, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2212,7 +2212,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 104.53334, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
@@ -2227,7 +2227,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 9.0, 683.0, 81.0, 33.0 ],
-									"text" : "ambiAdjust=.gain.helper"
+									"text" : "ambiAdjust=.gain_helper"
 								}
 
 							}
