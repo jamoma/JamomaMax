@@ -644,11 +644,11 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 761.0, 133.0, 169.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "j.sur.speaker.delays.js",
+						"filename" : "j.speaker.delays=.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js j.sur.speaker.delays.js",
+					"text" : "js j.speaker.delays=.js",
 					"varname" : "javascript"
 				}
 
@@ -926,7 +926,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.sur.speaker.delays.js",
+				"name" : "j.speaker.delays=.js",
 				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.speaker.delay~",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",

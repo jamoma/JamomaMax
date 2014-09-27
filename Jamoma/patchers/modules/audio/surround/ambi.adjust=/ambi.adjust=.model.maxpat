@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -28,34 +28,6 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-15",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "float", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 370.0, 82.0, 50.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-9",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "float", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 314.0, 82.0, 50.0, 20.0 ]
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -176,7 +148,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -206,7 +178,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "list" ],
-									"patching_rect" : [ 71.0, 207.0, 5.0, 100.0 ]
+									"patching_rect" : [ 71.0, 207.0, 5.0, 100.0 ],
+									"slidercolor" : [ 0.152941, 0.156863, 0.133333, 1.0 ]
 								}
 
 							}
@@ -217,7 +190,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "list" ],
-									"patching_rect" : [ 57.0, 207.0, 5.0, 100.0 ]
+									"patching_rect" : [ 57.0, 207.0, 5.0, 100.0 ],
+									"slidercolor" : [ 0.152941, 0.156863, 0.133333, 1.0 ]
 								}
 
 							}
@@ -553,7 +527,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -812,7 +786,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 155.0, 87.0, 100.0, 0.0 ],
+									"patching_rect" : [ 155.0, 87.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[0]"
 								}
@@ -827,7 +801,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 182.0, 114.0, 100.0, 0.0 ],
+									"patching_rect" : [ 182.0, 114.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[1]"
 								}
@@ -842,7 +816,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 209.0, 141.0, 100.0, 0.0 ],
+									"patching_rect" : [ 209.0, 141.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[2]"
 								}
@@ -857,7 +831,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 236.0, 168.0, 100.0, 0.0 ],
+									"patching_rect" : [ 236.0, 168.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[3]"
 								}
@@ -872,7 +846,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 263.0, 195.0, 100.0, 0.0 ],
+									"patching_rect" : [ 263.0, 195.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[4]"
 								}
@@ -887,7 +861,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 290.0, 222.0, 100.0, 0.0 ],
+									"patching_rect" : [ 290.0, 222.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[5]"
 								}
@@ -902,7 +876,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 317.0, 249.0, 100.0, 0.0 ],
+									"patching_rect" : [ 317.0, 249.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[6]"
 								}
@@ -917,7 +891,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 344.0, 276.0, 100.0, 0.0 ],
+									"patching_rect" : [ 344.0, 276.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[7]"
 								}
@@ -932,7 +906,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 371.0, 303.0, 100.0, 0.0 ],
+									"patching_rect" : [ 371.0, 303.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[8]"
 								}
@@ -947,7 +921,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 398.0, 330.0, 100.0, 0.0 ],
+									"patching_rect" : [ 398.0, 330.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[9]"
 								}
@@ -962,7 +936,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 425.0, 357.0, 100.0, 0.0 ],
+									"patching_rect" : [ 425.0, 357.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[10]"
 								}
@@ -977,7 +951,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 452.0, 384.0, 100.0, 0.0 ],
+									"patching_rect" : [ 452.0, 384.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[11]"
 								}
@@ -992,7 +966,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 479.0, 411.0, 100.0, 0.0 ],
+									"patching_rect" : [ 479.0, 411.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[12]"
 								}
@@ -1007,7 +981,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 506.0, 438.0, 100.0, 0.0 ],
+									"patching_rect" : [ 506.0, 438.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[13]"
 								}
@@ -1022,7 +996,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 533.0, 465.0, 100.0, 0.0 ],
+									"patching_rect" : [ 533.0, 465.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[14]"
 								}
@@ -1037,7 +1011,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 560.0, 492.0, 100.0, 0.0 ],
+									"patching_rect" : [ 560.0, 492.0, 67.0, 20.0 ],
 									"text" : "peakamp~",
 									"varname" : "peakamp~[15]"
 								}
@@ -1667,7 +1641,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -2798,7 +2772,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -2850,7 +2824,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -3092,7 +3066,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -3307,7 +3281,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -3611,6 +3585,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 4,
@@ -3666,7 +3641,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -4015,7 +3990,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -4263,7 +4238,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -4920,12 +4895,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1024",
-					"linecount" : 10,
+					"linecount" : 9,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 120.0, 73.0, 129.0, 141.0 ],
+					"patching_rect" : [ 120.0, 73.0, 132.0, 127.0 ],
 					"text" : "j.parameter order @type integer @range 1 3 @clipmode both @repetitions/filter 0 @description \"Ambisonic order. Note: Order is only updated when audio is not running.\"",
 					"varname" : "order"
 				}
@@ -5762,15 +5737,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-16", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -5912,36 +5878,6 @@
 					"source" : [ "obj-8", 15 ]
 				}
 
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.pack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.unpack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

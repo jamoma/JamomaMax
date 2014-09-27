@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -75,6 +75,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Get information on multichannel signal.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-2",
@@ -82,17 +83,18 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 87.0, 261.0, 126.0, 20.0 ],
-					"text" : "sur.info~.model #1"
+					"patching_rect" : [ 87.0, 261.0, 90.0, 20.0 ],
+					"text" : "info=.model #1"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "sur.info~.view.maxpat",
+					"name" : "info=.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -141,15 +143,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "sur.info~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.info~",
+				"name" : "info=.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/info=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.info~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.info~",
+				"name" : "info=.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/info=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

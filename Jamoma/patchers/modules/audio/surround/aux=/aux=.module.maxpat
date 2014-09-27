@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -97,6 +97,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Route incomming multichannel signal to three auxiliary channels.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-2",
@@ -104,17 +105,18 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "audio.connect", "audio.connect", "audio.connect" ],
-					"patching_rect" : [ 87.0, 261.0, 126.0, 20.0 ],
-					"text" : "sur.aux~.model #1"
+					"patching_rect" : [ 87.0, 261.0, 90.0, 20.0 ],
+					"text" : "aux=.model #1"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "sur.aux~.view.maxpat",
+					"name" : "aux=.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -181,15 +183,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "sur.aux~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.aux~",
+				"name" : "aux=.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/aux=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.aux~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.aux~",
+				"name" : "aux=.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/aux=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -215,7 +217,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter_array.mxo",
+				"name" : "j.message_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

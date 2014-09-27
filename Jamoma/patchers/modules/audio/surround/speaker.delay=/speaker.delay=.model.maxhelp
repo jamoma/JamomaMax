@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 105.0, 126.0, 933.0, 539.0 ],
+		"rect" : [ 295.0, 212.0, 933.0, 539.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -141,7 +141,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -173,7 +173,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 315.0, 206.0, 156.0, 19.0 ],
+									"patching_rect" : [ 315.0, 206.0, 156.0, 20.0 ],
 									"text" : "imagine ... audio here "
 								}
 
@@ -226,7 +226,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -320,7 +320,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 484.0, 338.0, 349.0, 33.0 ],
+					"patching_rect" : [ 484.0, 338.0, 351.0, 33.0 ],
 					"text" : "consequently, in manual mode, this module can also be used to apply delays for other purposes, rather than distance correction. "
 				}
 
@@ -440,7 +440,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -614,7 +614,7 @@
 				"box" : 				{
 					"id" : "obj-27",
 					"maxclass" : "bpatcher",
-					"name" : "sur.setup.module.maxpat",
+					"name" : "setup.module=.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 47.0, 155.0, 150.0, 70.0 ],
@@ -636,7 +636,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -687,7 +687,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -1462,7 +1462,7 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "sur.speaker.delay~.module.maxpat",
+					"name" : "speaker.delay=.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 279.0, 229.0, 150.0, 70.0 ],
@@ -1557,43 +1557,43 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/initialized",
-				"patcherrelativepath" : "../../../components/initialized",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/initialized",
+				"patcherrelativepath" : "../../../../components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.position2ambimonitor.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/position2ambimonitor",
-				"patcherrelativepath" : "../../../components/position2ambimonitor",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/position2ambimonitor",
+				"patcherrelativepath" : "../../../../components/audio/position2ambimonitor",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
-				"patcherrelativepath" : "../../../components/jamomaPath",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"patcherrelativepath" : "../../../../components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}

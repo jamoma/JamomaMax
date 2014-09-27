@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -29,10 +29,11 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "none",
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "sur.limiter~.view.maxpat",
+					"name" : "limiter=.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -44,6 +45,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "A mutlichannel AudioGraph limiter",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-47",
@@ -51,8 +53,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 37.0, 202.0, 122.0, 20.0 ],
-					"text" : "sur.limiter~.model #1"
+					"patching_rect" : [ 37.0, 201.0, 102.0, 20.0 ],
+					"text" : "limiter=.model #1"
 				}
 
 			}
@@ -141,22 +143,22 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "sur.limiter~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.limiter~",
+				"name" : "limiter=.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/limiter=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../../audio/limiter~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.limiter~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.limiter~",
+				"name" : "limiter=.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/limiter=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

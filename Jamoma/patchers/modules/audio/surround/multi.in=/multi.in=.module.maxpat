@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -29,10 +29,11 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "none",
 					"args" : [ "#1" ],
 					"id" : "obj-17",
 					"maxclass" : "bpatcher",
-					"name" : "sur.multi.in~.view.maxpat",
+					"name" : "multi.in=.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -44,6 +45,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Pack up to 32 mono signals onto a multi cable.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-18",
@@ -51,8 +53,8 @@
 					"numinlets" : 33,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 13.40625, 178.0, 822.358398, 20.0 ],
-					"text" : "sur.multi.in~.model #1"
+					"patching_rect" : [ 13.40625, 178.0, 822.28125, 20.0 ],
+					"text" : "multi.in=.model #1"
 				}
 
 			}
@@ -792,15 +794,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "sur.multi.in~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.multi.in~",
+				"name" : "multi.in=.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.in=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.multi.in~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.multi.in~",
+				"name" : "multi.in=.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.in=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

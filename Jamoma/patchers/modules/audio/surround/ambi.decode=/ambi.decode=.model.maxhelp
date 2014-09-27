@@ -2461,14 +2461,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.sur.ch.doppler~.maxpat",
+				"name" : "j.ch.doppler=.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.doppler~",
 				"patcherrelativepath" : "../sur.doppler~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.sur.doppler.js",
+				"name" : "j.doppler=.js",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.doppler~",
 				"patcherrelativepath" : "../sur.doppler~",
 				"type" : "TEXT",

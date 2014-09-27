@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 70.0, 1680.0, 930.0 ],
+		"rect" : [ 0.0, 70.0, 1680.0, 930.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -214,13 +214,13 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 372.0, 118.0, 20.0 ],
+									"patching_rect" : [ 50.0, 372.0, 88.0, 20.0 ],
 									"saved_object_attributes" : 									{
-										"filename" : "j.sur.doppler.js",
+										"filename" : "j.doppler=.js",
 										"parameter_enable" : 0
 									}
 ,
-									"text" : "js j.sur.doppler.js",
+									"text" : "js j.doppler=.js",
 									"varname" : "javascript"
 								}
 
@@ -417,7 +417,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "audio.connect" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 80.0, 5.0, 25.0, 25.0 ],
 					"varname" : "signalin"
 				}
@@ -478,7 +478,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1447.0, 194.0, 150.0, 100.0 ],
+					"patching_rect" : [ 1447.0, 194.0, 153.0, 100.0 ],
 					"text" : "j.parameter metersPerUnit @type decimal @repetitions/filter 1 @range 0. 10. @clipmode low @description \"Meters per unit lengt as provided by the /aed messages.\"",
 					"varname" : "meters_per_unit"
 				}

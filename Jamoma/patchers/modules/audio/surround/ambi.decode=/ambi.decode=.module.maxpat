@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 401.0, 95.0, 640.0, 480.0 ],
+		"rect" : [ 231.0, 231.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -34,7 +34,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 196.0, 320.0, 25.0, 25.0 ]
+					"patching_rect" : [ 218.0, 320.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -63,19 +63,19 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Incomming multichannel signal",
+					"comment" : "",
 					"id" : "obj-3",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 196.0, 216.0, 25.0, 25.0 ]
+					"patching_rect" : [ 218.0, 216.0, 25.0, 25.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Vector base amplitude panning (VBAP) of multiple sources for multiple speakers.",
+					"annotation" : "Adjust relative weight of components of ambisonic signal.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-2",
@@ -83,21 +83,21 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 87.0, 261.0, 96.0, 20.0 ],
-					"text" : "vbap=.model #1"
+					"patching_rect" : [ 87.0, 261.0, 139.0, 20.0 ],
+					"text" : "ambi.decode=.model #1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "none",
+					"annotation" : "Decoding ambisonic signal to multispeaker setup. NOTE: The positions of the speakers are not maintained by this module.",
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "vbap=.view.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"name" : "ambi.decode=.view.maxpat",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
@@ -143,16 +143,37 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "vbap=.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/vbap=",
+				"name" : "ambi.decode=.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/ambi.decode=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "vbap=.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/vbap=",
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max 6.1.8/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1.8/patches/m4l-patches/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "ambi.decode=.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/ambi.decode=",
 				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.message.array.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/message.array",
+				"patcherrelativepath" : "../../../../components/deprecated/message.array",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.message.array.instance.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/message.array",
+				"patcherrelativepath" : "../../../../components/deprecated/message.array",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -165,11 +186,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.view.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message_array.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -177,11 +198,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "vbap.mxo",
+				"name" : "ambidecode~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -189,15 +214,23 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.mixer=.mxo",
+				"name" : "j.oscinstance.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.out~.mxo",
+				"name" : "j.dataspace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.model.mxo",
+				"name" : "j.pass.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.unpack=.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.pack=.mxo",
 				"type" : "iLaX"
 			}
  ]
