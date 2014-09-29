@@ -66,7 +66,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 528.75, 432.0, 130.5, 33.0 ],
-					"text" : "j.remote frequency @unit midipitch",
+					"text" : "j.remote frequency @unit midinote",
 					"varname" : "cf[3]"
 				}
 

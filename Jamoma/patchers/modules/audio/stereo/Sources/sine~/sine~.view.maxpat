@@ -185,7 +185,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 248.0, 328.0, 133.0, 47.0 ],
-					"text" : "j.remote note @dataspace time @unit midipitch",
+					"text" : "j.remote note @dataspace time @unit midinote",
 					"varname" : "frequency"
 				}
 
