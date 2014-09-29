@@ -72,6 +72,6 @@ seealso:
  - j.message
  - j.parameter
  - j.hub
- - j.dataspace
+ - j.unit
 
 discussion: Jamoma is a free and open source project. http://www.jamoma.org

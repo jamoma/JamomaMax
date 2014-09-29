@@ -39,7 +39,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 184.0, 802.0, 263.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/neutral2cmy @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/color/neutral2cmy @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -55,7 +55,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 391.5, 742.0, 209.5, 47.0 ],
-					"text" : "test.assert TEST/datapace/color/neutral2hsl @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert TEST/datapace/color/neutral2hsl @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -71,7 +71,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 604.5, 802.0, 257.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/neutral2hsv @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/color/neutral2hsv @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -87,7 +87,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 812.5, 742.0, 263.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/rgb82neutral @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/color/rgb82neutral @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -103,7 +103,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 184.0, 396.0, 261.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/cmy2neutral @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/color/cmy2neutral @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -119,7 +119,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 391.5, 343.0, 209.5, 47.0 ],
-					"text" : "test.assert TEST/datapace/color/hsl2neutral @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert TEST/datapace/color/hsl2neutral @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -135,7 +135,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 604.5, 396.0, 257.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/hsv2neutral @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/color/hsv2neutral @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -3354,7 +3354,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1166.0, 742.0, 304.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/pointersNotMixedUp @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/color/pointersNotMixedUp @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -3411,7 +3411,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1187.5, 568.0, 109.0, 60.0 ],
-					"text" : "j.dataspace @dataspace color @input hsl @output rgb"
+					"text" : "j.unit @dataspace color @input hsl @output rgb"
 				}
 
 			}
@@ -3440,7 +3440,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 812.5, 541.0, 115.0, 60.0 ],
-					"text" : "j.dataspace @dataspace color @input rgb @output rgb8"
+					"text" : "j.unit @dataspace color @input rgb @output rgb8"
 				}
 
 			}
@@ -3456,7 +3456,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 812.5, 343.0, 263.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/rgb82neutral @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/color/rgb82neutral @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -3485,7 +3485,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 812.5, 157.0, 121.0, 60.0 ],
-					"text" : "j.dataspace @dataspace color @input rgb8 @output rgb"
+					"text" : "j.unit @dataspace color @input rgb8 @output rgb"
 				}
 
 			}
@@ -3528,7 +3528,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 604.5, 541.0, 115.0, 60.0 ],
-					"text" : "j.dataspace @dataspace color @input rgb @output hsv"
+					"text" : "j.unit @dataspace color @input rgb @output hsv"
 				}
 
 			}
@@ -3557,7 +3557,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 391.5, 541.0, 109.0, 60.0 ],
-					"text" : "j.dataspace @dataspace color @input rgb @output hsl"
+					"text" : "j.unit @dataspace color @input rgb @output hsl"
 				}
 
 			}
@@ -3586,7 +3586,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 184.0, 541.0, 115.0, 60.0 ],
-					"text" : "j.dataspace @dataspace color @input rgb @output cmy"
+					"text" : "j.unit @dataspace color @input rgb @output cmy"
 				}
 
 			}
@@ -3617,7 +3617,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1023.5, 396.0, 266.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/rgb2neutral @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/color/rgb2neutral @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -3646,7 +3646,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1023.5, 157.0, 115.0, 60.0 ],
-					"text" : "j.dataspace @dataspace color @input rgb @output rgb"
+					"text" : "j.unit @dataspace color @input rgb @output rgb"
 				}
 
 			}
@@ -3675,7 +3675,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 604.5, 157.0, 115.0, 60.0 ],
-					"text" : "j.dataspace @dataspace color @input hsv @output rgb"
+					"text" : "j.unit @dataspace color @input hsv @output rgb"
 				}
 
 			}
@@ -3704,7 +3704,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 391.5, 157.0, 109.0, 60.0 ],
-					"text" : "j.dataspace @dataspace color @input hsl @output rgb"
+					"text" : "j.unit @dataspace color @input hsl @output rgb"
 				}
 
 			}
@@ -3761,7 +3761,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 184.0, 157.0, 109.0, 60.0 ],
-					"text" : "j.dataspace @dataspace color @input cmy @output rgb"
+					"text" : "j.unit @dataspace color @input cmy @output rgb"
 				}
 
 			}
@@ -4593,7 +4593,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

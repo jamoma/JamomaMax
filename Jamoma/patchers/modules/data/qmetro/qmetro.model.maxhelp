@@ -222,7 +222,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 442.0, 356.0, 293.0, 19.0 ],
-					"text" : "j.dataspace @dataspace time @input s @output ms"
+					"text" : "j.unit @dataspace time @input s @output ms"
 				}
 
 			}
@@ -693,7 +693,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

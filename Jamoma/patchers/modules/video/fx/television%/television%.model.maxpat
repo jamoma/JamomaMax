@@ -444,7 +444,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 418.0, 155.0, 319.0, 20.0 ],
-					"text" : "j.dataspace @dataspace time @input Hz @output ms"
+					"text" : "j.unit @dataspace time @input Hz @output ms"
 				}
 
 			}
@@ -1834,7 +1834,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

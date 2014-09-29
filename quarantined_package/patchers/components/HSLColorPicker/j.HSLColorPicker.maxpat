@@ -152,7 +152,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 415.0, 125.0, 129.0, 43.0 ],
-									"text" : "j.dataspace @dataspace color @input rgb @output hsl"
+									"text" : "j.unit @dataspace color @input rgb @output hsl"
 								}
 
 							}
@@ -302,7 +302,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 80.0, 305.0, 19.0 ],
-													"text" : "j.dataspace @dataspace color @input hsl @output rgb"
+													"text" : "j.unit @dataspace color @input hsl @output rgb"
 												}
 
 											}
@@ -437,7 +437,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 820.0, 155.0, 131.0, 43.0 ],
-									"text" : "j.dataspace @dataspace color @input hsl @output rgb"
+									"text" : "j.unit @dataspace color @input hsl @output rgb"
 								}
 
 							}

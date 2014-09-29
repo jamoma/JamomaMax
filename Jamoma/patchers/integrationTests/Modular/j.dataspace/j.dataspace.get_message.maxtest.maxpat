@@ -237,7 +237,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 864.400024, 627.5, 273.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/message/dataspace @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/message/dataspace @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -296,7 +296,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 710.799988, 541.5, 271.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/message/getoutput @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/message/getoutput @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -312,7 +312,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 557.200012, 627.5, 261.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/message/getinput @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/message/getinput @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -328,7 +328,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 403.600037, 541.5, 262.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/message/unit.get @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/message/unit.get @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -344,7 +344,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 250.0, 627.5, 299.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/message/dataspaces.get @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/message/dataspaces.get @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -401,7 +401,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 162.0, 184.0, 107.0, 60.0 ],
-					"text" : "j.dataspace @dataspace angle @input rad @output deg"
+					"text" : "j.unit @dataspace angle @input rad @output deg"
 				}
 
 			}
@@ -795,7 +795,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

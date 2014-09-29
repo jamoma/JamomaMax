@@ -131,7 +131,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-7",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.dataspace" ],
+									"jsarguments" : [ "j.unit" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -574,7 +574,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 142.0, 400.0, 97.0, 20.0 ],
-									"text" : "j.dataspace"
+									"text" : "j.unit"
 								}
 
 							}
@@ -1171,7 +1171,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 233.0, 282.0, 331.0, 20.0 ],
-									"text" : "j.dataspace @dataspace position @input xy @output ad"
+									"text" : "j.unit @dataspace position @input xy @output ad"
 								}
 
 							}
@@ -1292,7 +1292,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 44.0, 117.0, 344.0, 20.0 ],
-									"text" : "j.dataspace @dataspace position @input xyz @output aed"
+									"text" : "j.unit @dataspace position @input xyz @output aed"
 								}
 
 							}
@@ -1933,7 +1933,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 152.0, 135.0, 344.0, 20.0 ],
-									"text" : "j.dataspace @dataspace position @input aed @output xyz"
+									"text" : "j.unit @dataspace position @input aed @output xyz"
 								}
 
 							}
@@ -2204,7 +2204,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 82.0, 105.0, 241.0, 60.0 ],
-									"text" : "Rather than the default Max/MSP convention that a midi value of 128 is like multiplying by 1.0, in the j.dataspace, a midivalue of 100 is like multiplying with 1.0"
+									"text" : "Rather than the default Max/MSP convention that a midi value of 128 is like multiplying by 1.0, in the j.unit, a midivalue of 100 is like multiplying with 1.0"
 								}
 
 							}
@@ -2295,7 +2295,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 41.0, 235.0, 338.0, 20.0 ],
-									"text" : "j.dataspace @dataspace gain @input midigain @output linear"
+									"text" : "j.unit @dataspace gain @input midigain @output linear"
 								}
 
 							}
@@ -2705,7 +2705,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 40.0, 475.0, 323.0, 20.0 ],
-									"text" : "j.dataspace @dataspace color @input rgb @output hsl"
+									"text" : "j.unit @dataspace color @input rgb @output hsl"
 								}
 
 							}
@@ -2847,7 +2847,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 40.0, 348.0, 323.0, 20.0 ],
-									"text" : "j.dataspace @dataspace color @input hsl @output rgb"
+									"text" : "j.unit @dataspace color @input hsl @output rgb"
 								}
 
 							}
@@ -3410,7 +3410,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

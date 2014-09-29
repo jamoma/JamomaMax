@@ -2,7 +2,7 @@
  * 
  * @ingroup implementationMaxExternalsGraph
  *
- * @brief j.dataspace# - Max external for Jamoma Graph that converts values from one kind of unit to another kind of unit
+ * @brief j.unit- - Max external for Jamoma Graph that converts values from one kind of unit to another kind of unit
  *
  * @details The convertions make use of the DataspaceLib
  *
@@ -54,7 +54,7 @@ int C74_EXPORT main(void)
 	TTGraphInit();	
 	common_symbols_init();
 	
-	c = class_new("j.dataspace-", (method)DataspaceNew, (method)DataspaceFree, sizeof(Dataspace), (method)0L, A_GIMME, 0);
+	c = class_new("j.unit-", (method)DataspaceNew, (method)DataspaceFree, sizeof(Dataspace), (method)0L, A_GIMME, 0);
 	
 	class_addmethod(c, (method)MaxGraphReset,		"graph.reset",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphSetup,		"graph.setup",		A_CANT, 0);

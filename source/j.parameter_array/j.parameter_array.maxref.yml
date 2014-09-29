@@ -126,6 +126,6 @@ seealso:
  - j.remote_array
  - j.model
  - j.ramp
- - j.dataspace
+ - j.unit
 
 discussion: Jamoma is a free and open source project. http://www.jamoma.org
