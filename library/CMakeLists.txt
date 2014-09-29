@@ -40,7 +40,7 @@ add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
 
 target_link_libraries(${PROJECT_NAME} JamomaFoundation)
 target_link_libraries(${PROJECT_NAME} JamomaModular)
-target_link_libraries(${PROJECT_NAME} C:/Users/Laugre/Travail/09-ossia/Implementations/Max/source/c74support/max-includes/MaxAPI)
+target_link_libraries(${PROJECT_NAME} ../source/c74support/max-includes/MaxAPI)
 
 addAppleFramework(Carbon)
 
