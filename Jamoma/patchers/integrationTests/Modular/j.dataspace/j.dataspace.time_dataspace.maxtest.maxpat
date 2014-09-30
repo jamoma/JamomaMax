@@ -55,7 +55,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 614.0, 608.0, 119.0, 60.0 ],
-					"text" : "j.dataspace @dataspace time @input second @output speed"
+					"text" : "j.unit @dataspace time @input second @output speed"
 				}
 
 			}
@@ -70,7 +70,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 137.0, 608.0, 109.0, 60.0 ],
-					"text" : "j.dataspace @dataspace time @input second @output cents"
+					"text" : "j.unit @dataspace time @input second @output cents"
 				}
 
 			}
@@ -85,7 +85,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 296.0, 608.0, 108.0, 60.0 ],
-					"text" : "j.dataspace @dataspace time @input second @output Hz"
+					"text" : "j.unit @dataspace time @input second @output Hz"
 				}
 
 			}
@@ -184,7 +184,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 455.0, 608.0, 110.0, 60.0 ],
-					"text" : "j.dataspace @dataspace time @input second @output midi"
+					"text" : "j.unit @dataspace time @input second @output midi"
 				}
 
 			}
@@ -703,7 +703,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 917.0, 779.0, 277.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/time/neutral2sample @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/time/neutral2sample @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -732,7 +732,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 917.0, 617.0, 107.0, 60.0 ],
-					"text" : "j.dataspace @dataspace time @input second @output sample"
+					"text" : "j.unit @dataspace time @input second @output sample"
 				}
 
 			}
@@ -748,7 +748,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 614.0, 732.0, 264.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutralspeed @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutralspeed @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -764,7 +764,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 455.0, 786.0, 260.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutral2midi @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutral2midi @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -780,7 +780,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 296.0, 732.0, 253.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutral2Hz @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutral2Hz @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -796,7 +796,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 137.0, 786.0, 267.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutral2cents @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutral2cents @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -854,7 +854,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 624.0, 348.0, 273.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/speed2neutral @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/speed2neutral @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -870,7 +870,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 460.0, 409.0, 263.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/midi2neutral @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/midi2neutral @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -886,7 +886,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 296.0, 348.0, 255.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/Hz2neutral @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/Hz2neutral @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -902,7 +902,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 132.0, 409.0, 269.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/cents2neutral @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/cents2neutral @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -931,7 +931,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 624.0, 166.0, 109.0, 60.0 ],
-					"text" : "j.dataspace @dataspace time @input speed @output s"
+					"text" : "j.unit @dataspace time @input speed @output s"
 				}
 
 			}
@@ -946,7 +946,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 460.0, 166.0, 105.0, 60.0 ],
-					"text" : "j.dataspace @dataspace time @input midi @output s"
+					"text" : "j.unit @dataspace time @input midi @output s"
 				}
 
 			}
@@ -961,7 +961,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 296.0, 166.0, 105.0, 60.0 ],
-					"text" : "j.dataspace @dataspace time @input Hz @output s"
+					"text" : "j.unit @dataspace time @input Hz @output s"
 				}
 
 			}
@@ -976,7 +976,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 132.0, 166.0, 114.0, 60.0 ],
-					"text" : "j.dataspace @dataspace time @input cents @output s"
+					"text" : "j.unit @dataspace time @input cents @output s"
 				}
 
 			}
@@ -1526,7 +1526,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

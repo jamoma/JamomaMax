@@ -77,7 +77,7 @@
             140.0,
             43.0
           ],
-          "text": "j.dataspace @dataspace gain @input db @output linear"
+          "text": "j.unit @dataspace gain @input db @output linear"
         }
       },
       {
@@ -543,7 +543,7 @@
             98.0,
             55.0
           ],
-          "text": "j.dataspace @dataspace gain @input db @output linear"
+          "text": "j.unit @dataspace gain @input db @output linear"
         }
       },
       {

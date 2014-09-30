@@ -1526,7 +1526,7 @@
                                     101.0,
                                     55.0
                                   ],
-                                  "text": "j.dataspace @dataspace gain @input midi @output linear"
+                                  "text": "j.unit @dataspace gain @input midi @output linear"
                                 }
                               },
                               {
@@ -3116,7 +3116,7 @@
                             101.0,
                             55.0
                           ],
-                          "text": "j.dataspace @dataspace gain @input midi @output linear"
+                          "text": "j.unit @dataspace gain @input midi @output linear"
                         }
                       },
                       {

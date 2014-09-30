@@ -2111,7 +2111,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 90.0, 165.0, 305.0, 19.0 ],
-													"text" : "j.dataspace @dataspace color @input hsl @output rgb"
+													"text" : "j.unit @dataspace color @input hsl @output rgb"
 												}
 
 											}
@@ -2824,7 +2824,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

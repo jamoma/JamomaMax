@@ -987,7 +987,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 47.0, 271.0, 87.0 ],
-																	"text" : "j.parameter file/transpose @type decimal @range -12. 12. @clipmode none @dataspace time @unit midipitch @ramp/drive max @ramp/function linear @description \"Control soundfile playback speed/transposition as MIDI transposition.\""
+																	"text" : "j.parameter file/transpose @type decimal @range -12. 12. @clipmode none @dataspace time @unit midinote @ramp/drive max @ramp/function linear @description \"Control soundfile playback speed/transposition as MIDI transposition.\""
 																}
 
 															}
@@ -1029,7 +1029,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 144.0, 323.0, 20.0 ],
-																	"text" : "j.dataspace @dataspace time @input midi @output speed"
+																	"text" : "j.unit @dataspace time @input midi @output speed"
 																}
 
 															}
@@ -3328,7 +3328,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

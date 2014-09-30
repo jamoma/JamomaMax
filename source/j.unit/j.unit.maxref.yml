@@ -1,4 +1,4 @@
-title: j.dataspace
+title: j.unit
 author: [Jamoma, Nils Peters]
 created_at: 2012/1/1
 tags: [conversion, math, units]
@@ -6,7 +6,7 @@ tags: [conversion, math, units]
 brief: A swiss-army knife unit converter
 
 desc: >
- j.dataspace converts between various types of units using the Jamoma dataspaceLib.
+ j.unit converts between various types of units using the Jamoma dataspaceLib.
 
 inputs:
  - name: 1
@@ -65,6 +65,6 @@ messages:
 seealso:
  - j.parameter
  - j.message
- - j.dataspace#
+ - j.unit#
 
 discussion: Jamoma is a free and open source project. http://www.jamoma.org

@@ -255,7 +255,7 @@
 				The dataspace unit used for remote communication
 			</digest>
 			<description>
-				The dataspace unit used for remote communication. Available values depend on the dataspace attribute value. See j.dataspace help patch for more information.
+				The dataspace unit used for remote communication. Available values depend on the dataspace attribute value. See j.unit help patch for more information.
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">

@@ -2,7 +2,7 @@
  * 
  * @ingroup implementationMaxExternals
  *
- * @brief j.dataspace - Max external that converts values from one kind of unit to another kind of unit
+ * @brief j.unit - Max external that converts values from one kind of unit to another kind of unit
  *
  * @details The convertions make use of the DataspaceLib
  *
@@ -59,7 +59,7 @@ int C74_EXPORT main(void)
 	common_symbols_init();
 	
 	// Define our class
-	c = class_new("j.dataspace",(method)dataspace_new, (method)dataspace_free, sizeof(t_dataspace), (method)0L, A_GIMME, 0);
+	c = class_new("j.unit",(method)dataspace_new, (method)dataspace_free, sizeof(t_dataspace), (method)0L, A_GIMME, 0);
 	
 	// Make methods accessible for our class:
 	class_addmethod(c, (method)dataspace_int,			"int",				A_LONG, 0);

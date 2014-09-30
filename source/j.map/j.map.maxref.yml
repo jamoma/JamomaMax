@@ -84,7 +84,7 @@ seealso:
  - jmod.mapperContinuous
  - jmod.mapper
  - j.function
- - j.dataspace
+ - j.unit
  - scale
 
 discussion: Jamoma is a free and open source project. http://www.jamoma.org 

@@ -329,7 +329,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 85.0, 195.0, 143.0, 43.0 ],
-					"text" : "j.dataspace @dataspace position @input aed @output xyz"
+					"text" : "j.unit @dataspace position @input aed @output xyz"
 				}
 
 			}

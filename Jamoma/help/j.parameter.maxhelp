@@ -1301,7 +1301,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 379.0, 135.0, 175.0, 104.0 ],
-									"text" : "j.parameter can be defined a dataspace and a unit using the @dataspace and @unit attributes. See help patch for j.dataspace to explore the list of available dataspaces"
+									"text" : "j.parameter can be defined a dataspace and a unit using the @dataspace and @unit attributes. See help patch for j.unit to explore the list of available dataspaces"
 								}
 
 							}
@@ -3050,7 +3050,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 437.0, 602.0, 89.0, 17.0 ],
-									"text" : "j.dataspace"
+									"text" : "j.unit"
 								}
 
 							}

@@ -2194,7 +2194,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 260.0, 97.0, 19.0 ],
-									"text" : "j.dataspace"
+									"text" : "j.unit"
 								}
 
 							}

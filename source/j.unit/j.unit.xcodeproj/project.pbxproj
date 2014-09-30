@@ -7,33 +7,33 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		D27A2E2E161AFD0C00A79F00 /* j.dataspace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.dataspace.cpp; sourceTree = "<group>"; };
+		D27A2E2E161AFD0C00A79F00 /* j.unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.unit.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		08FB7794FE84155DC02AAC07 /* j.dataspace */ = {
+		08FB7794FE84155DC02AAC07 /* j.unit */ = {
 			isa = PBXGroup;
 			children = (
-				D27A2E2E161AFD0C00A79F00 /* j.dataspace.cpp */,
+				D27A2E2E161AFD0C00A79F00 /* j.unit.cpp */,
 			);
-			name = j.dataspace;
+			name = j.unit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		D28A88AD04BDD90700651E21 /* j.dataspace */ = {
+		D28A88AD04BDD90700651E21 /* j.unit */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION) $(CONFIGURATION)";
-			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.dataspace" */;
+			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.unit" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			dependencies = (
 			);
-			name = j.dataspace;
+			name = j.unit;
 			passBuildSettingsInEnvironment = 1;
-			productName = j.dataspace;
+			productName = j.unit;
 		};
 /* End PBXLegacyTarget section */
 
@@ -43,7 +43,7 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 			};
-			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.dataspace" */;
+			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.unit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -53,11 +53,11 @@
 				French,
 				German,
 			);
-			mainGroup = 08FB7794FE84155DC02AAC07 /* j.dataspace */;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* j.unit */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D28A88AD04BDD90700651E21 /* j.dataspace */,
+				D28A88AD04BDD90700651E21 /* j.unit */,
 			);
 		};
 /* End PBXProject section */
@@ -74,7 +74,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.dataspace;
+				PRODUCT_NAME = j.unit;
 			};
 			name = Debug;
 		};
@@ -85,7 +85,7 @@
 				COPY_PHASE_STRIP = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.dataspace;
+				PRODUCT_NAME = j.unit;
 			};
 			name = Release;
 		};
@@ -116,7 +116,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.dataspace" */ = {
+		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.unit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919008733D9F0010E9CD /* Debug */,
@@ -125,7 +125,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.dataspace" */ = {
+		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.unit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919408733D9F0010E9CD /* Debug */,

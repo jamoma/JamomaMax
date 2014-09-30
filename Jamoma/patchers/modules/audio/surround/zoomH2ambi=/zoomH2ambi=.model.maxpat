@@ -156,7 +156,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 101.0, 162.0, 147.0, 47.0 ],
-									"text" : "j.dataspace @dataspace gain @input dB @output linear"
+									"text" : "j.unit @dataspace gain @input dB @output linear"
 								}
 
 							}

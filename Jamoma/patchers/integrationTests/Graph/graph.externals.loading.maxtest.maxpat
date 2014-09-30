@@ -191,7 +191,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 601.0, 117.300003, 111.0, 20.0 ],
-					"text" : "j.dataspace-"
+					"text" : "j.unit-"
 				}
 
 			}
@@ -517,7 +517,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace-.mxo",
+				"name" : "j.unit-.mxo",
 				"type" : "iLaX"
 			}
 , 			{

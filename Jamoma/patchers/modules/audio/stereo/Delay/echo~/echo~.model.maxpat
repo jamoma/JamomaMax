@@ -89,7 +89,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 128.0, 105.0, 60.0 ],
-									"text" : "j.dataspace @dataspace gain @input db @output linear"
+									"text" : "j.unit @dataspace gain @input db @output linear"
 								}
 
 							}
@@ -1160,7 +1160,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
  ]

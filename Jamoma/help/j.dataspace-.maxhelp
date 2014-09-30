@@ -38,7 +38,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 370.0, 215.0, 108.0, 60.0 ],
-					"text" : "j.dataspace- @dataspace color @input hsl @output rgb8"
+					"text" : "j.unit- @dataspace color @input hsl @output rgb8"
 				}
 
 			}
@@ -178,7 +178,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 30.0, 215.0, 116.0, 60.0 ],
-					"text" : "j.dataspace- @dataspace time @input midi @output Hertz"
+					"text" : "j.unit- @dataspace time @input midi @output Hertz"
 				}
 
 			}
@@ -317,7 +317,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.dataspace-.mxo",
+				"name" : "j.unit-.mxo",
 				"type" : "iLaX"
 			}
 , 			{

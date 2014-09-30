@@ -121,7 +121,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 120.0, 591.0, 204.0, 33.0 ],
-					"text" : "j.dataspace @dataspace angle @input radian @output degree"
+					"text" : "j.unit @dataspace angle @input radian @output degree"
 				}
 
 			}
@@ -615,7 +615,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

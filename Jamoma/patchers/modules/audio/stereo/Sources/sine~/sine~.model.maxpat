@@ -105,7 +105,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 866.0, 122.0, 117.0, 60.0 ],
-					"text" : "j.dataspace @dataspace time @input midi @output hz"
+					"text" : "j.unit @dataspace time @input midi @output hz"
 				}
 
 			}
@@ -161,7 +161,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 866.0, 23.0, 206.0, 60.0 ],
-					"text" : "j.parameter note @type decimal @range 0. 20000. @ramp/drive max @dataspace time @unit midipitch @description \"Frequency used.\"",
+					"text" : "j.parameter note @type decimal @range 0. 20000. @ramp/drive max @dataspace time @unit midinote @description \"Frequency used.\"",
 					"varname" : "frequency"
 				}
 
@@ -1440,7 +1440,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
  ]

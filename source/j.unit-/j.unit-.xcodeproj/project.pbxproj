@@ -8,8 +8,8 @@
 
 /* Begin PBXFileReference section */
 		A744E8CF192672A500814D7E /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		A744E8D0192672A500814D7E /* j.dataspace.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.dataspace.cpp; sourceTree = "<group>"; };
-		A744E8D1192672A500814D7E /* j.dataspace-.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.dataspace-.yml"; sourceTree = "<group>"; };
+		A744E8D0192672A500814D7E /* j.unit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.unit.cpp; sourceTree = "<group>"; };
+		A744E8D1192672A500814D7E /* j.unit-.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.unit-.yml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -17,26 +17,26 @@
 			isa = PBXGroup;
 			children = (
 				A744E8CF192672A500814D7E /* Makefile */,
-				A744E8D1192672A500814D7E /* j.dataspace-.yml */,
-				A744E8D0192672A500814D7E /* j.dataspace.cpp */,
+				A744E8D1192672A500814D7E /* j.unit-.yml */,
+				A744E8D0192672A500814D7E /* j.unit.cpp */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		A744E8C91926728900814D7E /* j.dataspace- */ = {
+		A744E8C91926728900814D7E /* j.unit- */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION)";
-			buildConfigurationList = A744E8CC1926728900814D7E /* Build configuration list for PBXLegacyTarget "j.dataspace-" */;
+			buildConfigurationList = A744E8CC1926728900814D7E /* Build configuration list for PBXLegacyTarget "j.unit-" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			dependencies = (
 			);
-			name = "j.dataspace-";
+			name = "j.unit-";
 			passBuildSettingsInEnvironment = 1;
-			productName = "j.dataspace-";
+			productName = "j.unit-";
 		};
 /* End PBXLegacyTarget section */
 
@@ -47,7 +47,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = org.jamoma;
 			};
-			buildConfigurationList = A744E8C81926728900814D7E /* Build configuration list for PBXProject "j.dataspace-" */;
+			buildConfigurationList = A744E8C81926728900814D7E /* Build configuration list for PBXProject "j.unit-" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -58,7 +58,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A744E8C91926728900814D7E /* j.dataspace- */,
+				A744E8C91926728900814D7E /* j.unit- */,
 			);
 		};
 /* End PBXProject section */
@@ -158,7 +158,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A744E8C81926728900814D7E /* Build configuration list for PBXProject "j.dataspace-" */ = {
+		A744E8C81926728900814D7E /* Build configuration list for PBXProject "j.unit-" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A744E8CA1926728900814D7E /* Debug */,
@@ -167,7 +167,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A744E8CC1926728900814D7E /* Build configuration list for PBXLegacyTarget "j.dataspace-" */ = {
+		A744E8CC1926728900814D7E /* Build configuration list for PBXLegacyTarget "j.unit-" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A744E8CD1926728900814D7E /* Debug */,

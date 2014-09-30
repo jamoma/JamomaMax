@@ -1512,7 +1512,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 20.5, 16.0, 421.0, 132.0 ],
-									"text" : "parameters inside a model can be addressed using different units thanks to j.parameter embedded unit conversion mechanism.\n\nJamoma for Max provides a number of units conversions (called dataspace) features. Checkout j.dataspace to see a list of all available datdspaces and units.",
+									"text" : "parameters inside a model can be addressed using different units thanks to j.parameter embedded unit conversion mechanism.\n\nJamoma for Max provides a number of units conversions (called dataspace) features. Checkout j.unit to see a list of all available datdspaces and units.",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 								}
 

@@ -782,7 +782,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 88.0, 129.0, 138.0, 43.0 ],
-									"text" : "j.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.unit @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -2045,7 +2045,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 610.0, 155.0, 105.0, 60.0 ],
-									"text" : "j.dataspace @dataspace gain @input midi @output linear"
+									"text" : "j.unit @dataspace gain @input midi @output linear"
 								}
 
 							}
@@ -2671,7 +2671,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

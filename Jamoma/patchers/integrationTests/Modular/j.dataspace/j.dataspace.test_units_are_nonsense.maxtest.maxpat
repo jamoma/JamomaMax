@@ -209,7 +209,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 240.0, 207.0, 180.0, 33.0 ],
-					"text" : "j.dataspace @dataspace none @input a @output b"
+					"text" : "j.unit @dataspace none @input a @output b"
 				}
 
 			}
@@ -225,7 +225,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 215.0, 333.0, 295.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dataspace/nonexisting_dataspace @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/j.unit/nonexisting_dataspace @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -268,7 +268,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 541.0, 207.0, 195.0, 33.0 ],
-					"text" : "j.dataspace @dataspace time @input nonsense @output midi"
+					"text" : "j.unit @dataspace time @input nonsense @output midi"
 				}
 
 			}
@@ -284,7 +284,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 516.0, 333.0, 299.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dataspace/input_unit_is_nonsense @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/j.unit/input_unit_is_nonsense @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -342,7 +342,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 846.0, 207.0, 175.0, 47.0 ],
-					"text" : "j.dataspace @dataspace time @input midi @output nonsense"
+					"text" : "j.unit @dataspace time @input midi @output nonsense"
 				}
 
 			}
@@ -358,7 +358,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 821.0, 333.0, 306.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dataspace/output_unit_is_nonsense @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/j.unit/output_unit_is_nonsense @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -585,7 +585,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{
