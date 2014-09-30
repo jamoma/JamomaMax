@@ -40,7 +40,7 @@ add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
 
 target_link_libraries(${PROJECT_NAME} JamomaFoundation)
 target_link_libraries(${PROJECT_NAME} JamomaModular)
-target_link_libraries(${PROJECT_NAME} ../source/c74support/max-includes/MaxAPI)
+target_link_libraries(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/../source/c74support/max-includes/MaxAPI)
 
 addAppleFramework(Carbon)
 
