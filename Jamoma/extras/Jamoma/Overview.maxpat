@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 181.0, 44.0, 220.0, 312.0 ],
+		"rect" : [ 181.0, 44.0, 216.0, 318.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -32,13 +32,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-29",
-					"linecount" : 3,
+					"linecount" : 7,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 390.0, 280.0, 170.0, 41.0 ],
-					"text" : "tabs Models Components Examples \"Application Builder\" UserLib Tutorials Plugtastic"
+					"patching_rect" : [ 390.0, 280.0, 80.0, 90.0 ],
+					"text" : "tabs Models Components Examples \"Application Builder\" Tutorials Plugtastic"
 				}
 
 			}
@@ -47,13 +47,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-26",
-					"linecount" : 5,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 229.0, 280.0, 118.0, 65.0 ],
-					"text" : "tabs Models Components Examples \"Application Builder\" UserLib Tutorials"
+					"patching_rect" : [ 229.0, 280.0, 165.0, 41.0 ],
+					"text" : "tabs Models Components Examples \"Application Builder\" Tutorials"
 				}
 
 			}
@@ -364,7 +364,7 @@
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 339.0, 99.0, 701.0, 484.0 ],
+										"rect" : [ 451.0, 91.0, 701.0, 484.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 1,
 										"default_fontsize" : 10.0,
@@ -6649,7 +6649,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 476.0, 428.0, 604.0, 402.0 ],
+						"rect" : [ 406.0, 187.0, 604.0, 402.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 10.0,
@@ -8166,7 +8166,7 @@
 					"patching_rect" : [ 19.0, 300.0, 203.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 37.0, 230.0, 19.0 ],
-					"text" : "Overview of Jamoma library",
+					"text" : "Overview of Jamoma dummy",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 				}
 
