@@ -390,7 +390,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 101.0, 131.0, 101.0, 55.0 ],
-													"text" : "j.unit @dataspace gain @input midi @output linear"
+													"text" : "j.unit @dataspace gain @input midigain @output linear"
 												}
 
 											}
@@ -1277,7 +1277,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 100.0, 98.0, 55.0 ],
-													"text" : "j.unit @dataspace gain @input midi @output linear"
+													"text" : "j.unit @dataspace gain @input midigain @output linear"
 												}
 
 											}
