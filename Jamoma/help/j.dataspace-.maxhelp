@@ -178,7 +178,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 30.0, 215.0, 116.0, 60.0 ],
-					"text" : "j.unit- @dataspace time @input midi @output Hertz"
+					"text" : "j.unit- @dataspace time @input midinote @output Hertz"
 				}
 
 			}

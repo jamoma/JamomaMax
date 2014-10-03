@@ -105,7 +105,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 866.0, 122.0, 117.0, 60.0 ],
-					"text" : "j.unit @dataspace time @input midi @output hz"
+					"text" : "j.unit @dataspace time @input midinote @output hz"
 				}
 
 			}
