@@ -65,6 +65,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -130,8 +131,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 17.0, 133.0, 250.0, 20.0 ],
-									"text" : "j.modular WebSocket @name monPatchMax"
+									"patching_rect" : [ 17.0, 133.0, 128.0, 20.0 ],
+									"text" : "j.modular WebSocket"
 								}
 
 							}
@@ -516,34 +517,19 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-22",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 219.0, 378.0, 207.0, 18.0 ],
-									"text" : "protocol/setup output bar"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
+									"frgb" : 0.0,
 									"id" : "obj-34",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 219.0, 351.0, 207.0, 18.0 ],
-									"text" : "protocol/setup input foo"
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 438.0, 517.0, 100.0, 33.0 ],
+									"text" : "this doesn't work for the moment",
+									"textcolor" : [ 0.656533, 0.177776, 0.21779, 1.0 ]
 								}
 
 							}
@@ -615,7 +601,8 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 561.0, 553.0, 72.0, 20.0 ],
-									"text" : "ctlin 2 1"
+									"text" : "ctlin 2 1",
+									"textcolor" : [ 0.656533, 0.177776, 0.21779, 1.0 ]
 								}
 
 							}
@@ -683,7 +670,8 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 561.0, 502.0, 151.0, 20.0 ],
-									"text" : "j.return channel.1/control.2"
+									"text" : "j.return channel.1/control.2",
+									"textcolor" : [ 0.656533, 0.177776, 0.21779, 1.0 ]
 								}
 
 							}
@@ -725,7 +713,8 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 760.0, 502.0, 151.0, 20.0 ],
-									"text" : "j.return channel.1/note.36"
+									"text" : "j.return channel.1/note.36",
+									"textcolor" : [ 0.656533, 0.177776, 0.21779, 1.0 ]
 								}
 
 							}
@@ -891,7 +880,8 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "int" ],
 									"patching_rect" : [ 760.0, 553.0, 72.0, 20.0 ],
-									"text" : "notein 36 1"
+									"text" : "notein 36 1",
+									"textcolor" : [ 0.656533, 0.177776, 0.21779, 1.0 ]
 								}
 
 							}
@@ -930,7 +920,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-1",
-									"items" : [ "to Max 1", ",", "to Max 2" ],
+									"items" : [ "Akai MPD24", ",", "Akai MPD24", ",", "to Max 1", ",", "to Max 2" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1288,7 +1278,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-24",
-									"items" : [ "from Max 1", ",", "from Max 2" ],
+									"items" : [ "Akai MPD24", ",", "Akai MPD24", ",", "Akai MPD24 Port 3", ",", "from Max 1", ",", "from Max 2" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1337,7 +1327,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 617.0, 187.0, 152.0, 18.0 ],
-									"text" : "/channel.1/note.42"
+									"text" : "/channel.1/note.33"
 								}
 
 							}
@@ -1379,7 +1369,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 617.0, 268.0, 152.0, 18.0 ]
+									"patching_rect" : [ 617.0, 268.0, 152.0, 18.0 ],
+									"text" : "/channel.1/control.15"
 								}
 
 							}
@@ -1460,7 +1451,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-13",
-									"items" : "<empty>",
+									"items" : [ "channel.1", ",", "channel.1/control.1", ",", "channel.1/control.15", ",", "channel.1/note.33", ",", "channel.1/pressure" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1710,15 +1701,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-48", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-22", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-28", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1801,15 +1783,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-33", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-48", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-34", 0 ]
 								}
 
 							}
@@ -4300,14 +4273,14 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
+			"obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
 			"obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
 			"obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
 			"obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
-			"obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ]
+			"obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
+			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
