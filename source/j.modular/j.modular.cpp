@@ -21,7 +21,7 @@
 // This is used to store extra data
 typedef struct extra {
 	
-	TTSymbol			protocolName;	// remember the handled protocol 
+	TTSymbol			protocolName;       // remember the handled protocol
 	
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
@@ -81,8 +81,7 @@ void WrappedApplicationClass_new(TTPtr self, long argc, t_atom *argv)
 		
 		// our wrapped object is the local application
         x->wrappedObject = accessApplicationLocal;
-        x->wrappedObject.get("name", v);
-		applicationName = v[0];
+        x->wrappedObject.get("name", applicationName);
 		
 		if (attrstart == 1)
 			protocolName = TTSymbol(atom_getsym(argv)->s_name);
@@ -149,6 +148,11 @@ void WrappedApplicationClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTObject    localApplication = accessApplicationLocal;
+    TTObject    protocol;
+    TTSymbol    applicationName;
+    
+    // get application name
+    x->wrappedObject.get(kTTSym_name, applicationName);
     
     // the xmlhandler have to forget the application object
     TTValue o;
@@ -156,13 +160,20 @@ void WrappedApplicationClass_free(TTPtr self)
     TTObject empty, anXmlHandler = o[0];
     anXmlHandler.set(kTTSym_object, empty);
     
+     // unregister the application to the protocol
+    if (EXTRA->protocolName != kTTSymEmpty) {
+    
+        TTValue out;
+        protocol = accessProtocol(EXTRA->protocolName);
+        protocol.send("ApplicationUnregister", applicationName, out);
+    }
+    
 	// don't release the local application
 	if (!(x->wrappedObject == localApplication)) {
         
-        TTValue v, out;
-        x->wrappedObject.get("name", v);
+        TTValue out;
         x->wrappedObject = TTObject();
-		TTModularApplicationManager->sendMessage("ApplicationRelease", v, out);
+		TTModularApplicationManager->sendMessage("ApplicationRelease", applicationName, out);
     }
 	
 	free(EXTRA);
@@ -190,7 +201,7 @@ void modular_protocol_setup(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	TTValue		v, out, parameterValue;
 	long        ac;
 	t_atom      *av;
-	
+    
 	// get the protocol object
     aProtocol = accessProtocol(EXTRA->protocolName);
 	if (aProtocol.valid()) {
@@ -199,13 +210,13 @@ void modular_protocol_setup(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
             
             if (argc && argv) {
                 
-                // select this application
-                x->wrappedObject.get(kTTSym_name, v);
-                applicationName = v[0];
-                aProtocol.send("ApplicationSelect", applicationName, out);
-                
                 // stop protocol
                 aProtocol.send("Stop");
+                
+                // select this application
+                x->wrappedObject.get(kTTSym_name, applicationName);
+                if (aProtocol.send("ApplicationSelect", applicationName, out))
+                    object_error((t_object*)x, "%s is not registered to the %s protocol", applicationName.c_str(), EXTRA->protocolName.c_str());
                 
                 // set parameters
                 parameterName = TTSymbol(atom_getsym(argv)->s_name);
@@ -218,6 +229,11 @@ void modular_protocol_setup(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
             }
             // or if no arg : dumpout the current setup
             else {
+                
+                // select this application
+                x->wrappedObject.get(kTTSym_name, applicationName);
+                if (aProtocol.send("ApplicationSelect", applicationName, out))
+                    object_error((t_object*)x, "%s is not registered to the %s protocol", applicationName.c_str(), EXTRA->protocolName.c_str());
                 
                 aProtocol.get("parameterNames", out);
                 for (TTElementIter it = out.begin() ; it != out.end() ; it++) {
