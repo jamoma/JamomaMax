@@ -111,7 +111,7 @@ void WrapTTRampClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)ramp_set,					"set",						A_GIMME,	0);
 	class_addmethod(c->maxClass, (method)ramp_stop,					"stop",						0);
 
-    class_addmethod(c->maxClass, (method)ramp_schedulerParameter,	"scheduler/parameter/value",A_GIMME,	0);
+    class_addmethod(c->maxClass, (method)ramp_schedulerParameter,	"drive/parameter/value",A_GIMME,	0);
 	class_addmethod(c->maxClass, (method)ramp_functionParameter,	"function/parameter/value",	A_GIMME,	0);
 }
 
@@ -132,8 +132,8 @@ void WrappedRampClass_new(TTPtr self, long argc, t_atom* argv)
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr));
     x->outlets[k_outlet_value] = outlet_new(x, 0L);
     
-    // Set default scheduler
-    x->wrappedObject.set("scheduler", TTSymbol("Max"));
+    // Set default drive
+    x->wrappedObject.set("drive", TTSymbol("max"));
     
     // Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
@@ -191,7 +191,8 @@ void ramp_int(TTPtr self, long value)
     TTValue none;
     
     x->wrappedObject.send("Set", TTFloat64(value), none);
-
+    
+    *(EXTRA->currentValue) = TTFloat64(value);
     outlet_float(x->outlets[k_outlet_value], value);
 }
 
@@ -204,11 +205,12 @@ void ramp_float(TTPtr self, double value)
     
     x->wrappedObject.send("Set", TTFloat64(value), none);
     
+    *(EXTRA->currentValue) = TTFloat64(value);
     outlet_float(x->outlets[k_outlet_value], value);
 }
 
 
-// SET FLOAT INPUT
+// SET LIST INPUT
 void ramp_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -217,6 +219,7 @@ void ramp_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
     
     x->wrappedObject.send("Set", v, none);
+    *(EXTRA->currentValue) = v;
 }
 
 
@@ -255,7 +258,7 @@ void ramp_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     if (ramp_keyword_index == -1) { // just a list w/o ramp information
         
         x->wrappedObject.send("Set", v, none);
-        
+        *(EXTRA->currentValue) = v;
         outlet_anything(x->outlets[k_outlet_value], _sym_list, argc, argv);
     }
     else {
@@ -267,7 +270,9 @@ void ramp_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         }
         else { // "ramp" is the second last list member, so we start ramping
             
-            x->wrappedObject.send("Set", *(EXTRA->currentValue), none);
+            if (EXTRA->currentValue->size() == v.size())
+                x->wrappedObject.send("Set", *(EXTRA->currentValue), none);
+            
             x->wrappedObject.send("Target", v, none);
             x->wrappedObject.send("Go", TTFloat64(atom_getfloat(argv+argc-1)), none);
         }
@@ -305,19 +310,19 @@ void ramp_schedulerParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     if (argc == 1) {
         
         v = TTSymbol(atom_getsym(argv)->s_name);
-        x->wrappedObject.get("schedulerParameterValue", v);
+        x->wrappedObject.get("driveParameterValue", v);
         
         v.prepend(TTSymbol(atom_getsym(argv)->s_name));
         jamoma_ttvalue_to_Atom(v, &ac, &av);
         
-        object_obex_dumpout(x, gensym("scheduler/parameter/value"), ac, av);
+        object_obex_dumpout(x, gensym("drive/parameter/value"), ac, av);
         return;
     }
     
     // 2 or more arguments : set the value
     jamoma_ttvalue_from_Atom(v, _sym_nothing, argc, argv);
     
-    x->wrappedObject.set("schedulerParameterValue", v);
+    x->wrappedObject.set("driveParameterValue", v);
 }
 
 void ramp_functionParameter(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
