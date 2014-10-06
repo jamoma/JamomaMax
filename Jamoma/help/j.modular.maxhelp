@@ -65,7 +65,6 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -527,7 +526,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 438.0, 517.0, 100.0, 33.0 ],
+									"patching_rect" : [ 438.0, 517.0, 101.0, 33.0 ],
 									"text" : "this doesn't work for the moment",
 									"textcolor" : [ 0.656533, 0.177776, 0.21779, 1.0 ]
 								}
@@ -877,8 +876,8 @@
 									"id" : "obj-47",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "int", "int" ],
+									"numoutlets" : 3,
+									"outlettype" : [ "int", "int", "int" ],
 									"patching_rect" : [ 760.0, 553.0, 72.0, 20.0 ],
 									"text" : "notein 36 1",
 									"textcolor" : [ 0.656533, 0.177776, 0.21779, 1.0 ]
@@ -2358,7 +2357,7 @@
 									"outlettype" : [ "", "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 233.0, 79.0, 135.0, 19.0 ],
-									"text" : "foo bar vb"
+									"text" : "\"here I am\""
 								}
 
 							}
@@ -2543,7 +2542,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 546.0, 298.0, 945.0, 533.0 ],
+						"rect" : [ 546.0, 298.0, 946.0, 600.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2564,6 +2563,208 @@
 						"tags" : "",
 						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-75",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 633.0, 539.0, 101.0, 33.0 ],
+									"text" : "this doesn't work for the moment",
+									"textcolor" : [ 0.656533, 0.177776, 0.21779, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontface" : 1,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-74",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 439.0, 486.0, 334.0, 20.0 ],
+									"text" : "... or reflect its state (use ip and second port parameters)"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontface" : 1,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-73",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 3.0, 486.0, 401.5, 20.0 ],
+									"text" : "myApplication can also be controlled remotely ..."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-72",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 527.0, 573.0, 100.0, 18.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-70",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 527.0, 545.5, 100.0, 20.0 ],
+									"text" : "udpreceive 7006",
+									"textcolor" : [ 0.656533, 0.177776, 0.21779, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-68",
+									"maxclass" : "number",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "int", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 349.5, 522.5, 50.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-65",
+									"linecount" : 2,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 272.5, 532.5, 74.0, 31.0 ],
+									"text" : "/mySymbol \"here I am\""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-64",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 349.5, 545.5, 61.0, 18.0 ],
+									"text" : "/myInt $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-62",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "float", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 195.5, 522.5, 50.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-58",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 195.5, 545.5, 74.0, 18.0 ],
+									"text" : "/myFloat $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-42",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 195.5, 573.0, 148.0, 20.0 ],
+									"text" : "udpsend 127.0.0.1 7005"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-31",
+									"linecount" : 2,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 9.0, 539.0, 170.5, 31.0 ],
+									"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 7005 7006"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-41",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 9.0, 516.0, 60.0, 20.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 9.0, 573.0, 100.0, 20.0 ],
+									"text" : "j.modular OSC"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -2685,7 +2886,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 447.0, 428.5, 224.0, 20.0 ],
+									"patching_rect" : [ 447.0, 418.5, 224.0, 20.0 ],
 									"text" : "Attributes can be changed dynamically "
 								}
 
@@ -2699,7 +2900,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 447.0, 326.0, 393.0, 20.0 ],
+									"patching_rect" : [ 447.0, 318.0, 393.0, 20.0 ],
 									"text" : "Feedbacks from remoteOSCApp are handled too."
 								}
 
@@ -2792,7 +2993,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 447.0, 350.0, 20.0, 20.0 ]
+									"patching_rect" : [ 447.0, 342.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -2806,7 +3007,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 447.0, 378.0, 180.0, 33.0 ],
+									"patching_rect" : [ 447.0, 370.0, 180.0, 33.0 ],
 									"text" : "j.send remoteOSCApp:/player/play"
 								}
 
@@ -2888,7 +3089,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 532.0, 460.0, 60.0, 18.0 ],
+									"patching_rect" : [ 770.25, 411.5, 60.0, 18.0 ],
 									"text" : "-90. 0."
 								}
 
@@ -2900,7 +3101,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 660.0, 391.0, 20.0, 20.0 ]
+									"patching_rect" : [ 660.0, 383.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -2914,7 +3115,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 660.0, 350.0, 180.0, 33.0 ],
+									"patching_rect" : [ 660.0, 342.0, 180.0, 33.0 ],
 									"text" : "j.receive remoteOSCApp:/player/end"
 								}
 
@@ -3014,7 +3215,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 447.0, 460.0, 65.0, 18.0 ],
+									"patching_rect" : [ 697.0, 411.5, 65.0, 18.0 ],
 									"text" : "-100. 12."
 								}
 
@@ -3029,7 +3230,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 447.0, 486.0, 237.0, 33.0 ],
+									"patching_rect" : [ 697.0, 437.5, 197.0, 33.0 ],
 									"text" : "j.remote remoteOSCApp:/player/gain:range"
 								}
 
@@ -3543,10 +3744,19 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-31", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-6", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 541.5, 481.5, 456.5, 481.5 ],
+									"midpoints" : [ 779.75, 433.0, 706.5, 433.0 ],
 									"source" : [ "obj-33", 0 ]
 								}
 
@@ -3644,6 +3854,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-31", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-41", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-40", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -3726,10 +3945,19 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-42", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-58", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-18", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 456.5, 524.0, 441.5, 524.0, 441.5, 454.0, 456.5, 454.0 ],
+									"midpoints" : [ 706.5, 474.5, 691.5, 474.5, 691.5, 405.5, 706.5, 405.5 ],
 									"source" : [ "obj-6", 0 ]
 								}
 
@@ -3746,11 +3974,40 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-58", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-62", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-52", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"midpoints" : [ 814.5, 146.75, 706.5, 146.75 ],
 									"source" : [ "obj-63", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-42", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 359.0, 567.75, 205.0, 567.75 ],
+									"source" : [ "obj-64", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-42", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 282.0, 567.75, 205.0, 567.75 ],
+									"source" : [ "obj-65", 0 ]
 								}
 
 							}
@@ -3765,10 +4022,29 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-64", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-68", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-72", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 536.5, 568.75, 617.5, 568.75 ],
+									"source" : [ "obj-70", 0 ]
 								}
 
 							}
@@ -3912,13 +4188,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-28",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 354.0, 175.5, 45.0 ],
-					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 7003 7004, name, protocol/setup"
+					"patching_rect" : [ 9.0, 367.0, 175.5, 31.0 ],
+					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 7003 7004"
 				}
 
 			}
@@ -3931,7 +4207,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 9.0, 331.0, 60.0, 20.0 ],
+					"patching_rect" : [ 9.0, 344.0, 60.0, 20.0 ],
 					"text" : "loadbang"
 				}
 
@@ -4273,14 +4549,14 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
 			"obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
 			"obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
-			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ]
+			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
+			"obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
