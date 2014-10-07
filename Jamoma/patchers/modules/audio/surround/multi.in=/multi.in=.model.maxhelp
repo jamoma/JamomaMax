@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"revision" : 9,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 147.0, 270.0, 825.0, 617.0 ],
@@ -43,7 +43,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "sur.multi.in~.module", "@description", "Put audio signals on a multicable" ],
+					"args" : [ "@name", "multi.in=.module", "@description", "Put audio signals on a multicable" ],
 					"bgmode" : 1,
 					"id" : "obj-5",
 					"maxclass" : "bpatcher",
@@ -70,8 +70,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 9,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 595.0, 98.0, 600.0, 426.0 ],
@@ -264,7 +264,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 124.0625, 337.5, 83.0, 20.0 ],
+					"patching_rect" : [ 124.0625, 360.0, 83.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -343,12 +343,12 @@
 					"id" : "obj-14",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "sur.multi.in~.module.maxpat",
+					"name" : "multi.in=.module.maxpat",
 					"numinlets" : 33,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 124.0625, 280.0, 300.0, 35.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 35.0 ]
+					"patching_rect" : [ 124.0625, 280.0, 150.0, 70.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ]
 				}
 
 			}
@@ -360,7 +360,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 124.0625, 382.0, 36.0, 20.0 ],
+					"patching_rect" : [ 124.0625, 388.0, 36.0, 20.0 ],
 					"text" : "dac~"
 				}
 
@@ -728,7 +728,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 218.5, 322.0, 169.0, 51.0 ],
+					"patching_rect" : [ 305.5625, 289.5, 169.0, 51.0 ],
 					"text" : "Changes in channel offset only takes effect the next time audio is started."
 				}
 
@@ -852,7 +852,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 414.5625, 464.0, 133.5625, 464.0 ],
+					"midpoints" : [ 264.5625, 464.0, 133.5625, 464.0 ],
 					"source" : [ "obj-14", 1 ]
 				}
 
@@ -1184,51 +1184,51 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "sur.multi.in~.module.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.multi.in~",
+				"name" : "multi.in=.module.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.in=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.multi.in~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.multi.in~",
+				"name" : "multi.in=.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.in=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.multi.in~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.multi.in~",
+				"name" : "multi.in=.view.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.in=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
-				"patcherrelativepath" : "../../../components/jamomaPath",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"patcherrelativepath" : "../../../../components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
