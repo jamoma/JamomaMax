@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 8,
-			"architecture" : "x86"
+			"revision" : 9,
+			"architecture" : "x64"
 		}
 ,
-		"rect" : [ 401.0, 269.0, 859.0, 285.0 ],
+		"rect" : [ 401.0, 269.0, 889.0, 356.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,9 +37,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 0.0, 0.0, 300.0, 35.0 ],
+					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 35.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ]
 				}
 
 			}
@@ -52,7 +52,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 33,
 					"numoutlets" : 2,
-					"outlettype" : [ "", "audio.connect" ],
+					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 13.40625, 178.0, 822.28125, 20.0 ],
 					"text" : "multi.in=.model #1"
 				}
@@ -78,7 +78,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 816.764648, 149.0, 23.0, 23.0 ]
+					"patching_rect" : [ 816.6875, 126.0, 23.0, 23.0 ]
 				}
 
 			}
@@ -438,7 +438,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 13.40625, 126.0, 23.0, 23.0 ]
+					"patching_rect" : [ 13.40625, 149.0, 23.0, 23.0 ]
 				}
 
 			}
@@ -795,14 +795,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "multi.in=.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.in=",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.in=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "multi.in=.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.in=",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.in=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
