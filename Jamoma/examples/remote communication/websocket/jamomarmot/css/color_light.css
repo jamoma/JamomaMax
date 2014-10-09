@@ -1,0 +1,20 @@
+div.toggle:hover, li.input:hover {
+    background-color: #DDD ;
+}
+
+li.input.editable {
+    background-color: #BBB ;
+}
+
+li.input.editingByOther {
+    background-color: #FDD ;
+}
+
+input {
+    background-color: #BBB;
+    color: #000;
+}
+
+label {
+    font-weight: bold ;
+}

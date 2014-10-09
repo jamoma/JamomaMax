@@ -1,0 +1,93 @@
+body {
+    font-family: 'Ubuntu Mono', sans-serif;
+    line-height: 1.1 ;
+}
+
+div.toggle {
+    background : no-repeat left ;
+    background-position: 5px;
+    background-size: 10px 10px ;
+    text-decoration:underline ;
+}
+
+div.toggle:hover, li.input:hover {
+    transition : .3s;
+    background-color: #DDD ;
+}
+
+li.input.ui-sortable-helper {
+    height : 20px !important;
+}
+
+li.input.editable {
+    transition : 0s;
+    background-color: #BBB ;
+}
+
+li.input.editingByOther {
+    background-color: #FDD ;
+}
+
+div.toggle .arrow {
+    display: inline-block;
+    padding: 5px ;
+    transition: 0.3s;
+}
+
+div.toggle.closed .arrow {
+    -webkit-transform : rotate(-90deg);
+    -moz-transform : rotate(-90deg);
+}
+
+div.toggle.open .arrow {
+    -webkit-transform : rotate(0deg);
+    -moz-transform : rotate(0deg);
+}
+
+li {
+    list-style-type: none ;
+}
+
+.hidden {
+    display: none;
+}
+
+span.data {
+    font-size: inherit;
+}
+
+input {
+    font-family: 'Ubuntu Mono', sans-serif;
+    background-color: #BBB;
+    border: none ;
+    color: #000;
+    font-size: inherit;
+}
+
+input[type="text"] {
+    min-width : 40px;
+    outline: 0 ;
+}
+
+input[type="number"] {
+    min-width : 40px;
+}
+
+.showOnLiHover{
+    visibility: hidden;
+}
+
+.showOnLiHover a{
+    cursor: pointer ;
+    text-decoration: underline ;
+    margin-left: 5px ;
+    float: right ;
+}
+
+.input:hover .showOnLiHover , .toggle:hover .showOnLiHover{
+    visibility: visible;
+}
+
+.editable .showOnLiHover {
+    visibility: visible;
+}
