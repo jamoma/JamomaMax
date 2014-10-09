@@ -52,7 +52,8 @@ function BoolInput(attributes, parentLi)
         };
         message[address] = Boolean(value) ;
         ws.send(JSON.stringify(message));
-        Preset.setValue(address, Boolean(value));
+		value = value === 'true' ? true : false;
+		Preset.setValue(address, value);
         //_this.transformToSpan();
         return false;
     };
