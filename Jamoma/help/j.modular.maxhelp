@@ -46,7 +46,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 546.0, 570.0, 944.0, 328.0 ],
+						"rect" : [ 546.0, 570.0, 950.0, 328.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -65,87 +65,168 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontface" : 1,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-10",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 307.5, 87.0, 140.0, 18.0 ],
-									"text" : "protocol/setup port 9002"
+									"frgb" : 0.0,
+									"id" : "obj-17",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 539.5, 2.0, 387.0, 20.0 ],
+									"text" : "Connect to our local application via its own html representation :"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"bgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-11",
+									"id" : "obj-16",
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 288.5, 45.0, 152.0, 18.0 ],
-									"text" : "protocol/setup ip 127.0.0.1"
+									"patching_rect" : [ 539.5, 31.5, 143.0, 18.0 ],
+									"text" : "url http://127.0.0.1:9001"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-4",
-									"maxclass" : "newobj",
+									"id" : "obj-14",
+									"maxclass" : "jweb",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 288.5, 133.0, 206.0, 20.0 ],
-									"text" : "j.modular telecommande WebSocket"
+									"patching_rect" : [ 539.5, 53.5, 387.0, 266.0 ],
+									"url" : "http://127.0.0.1:9001/?"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-13",
+									"linecount" : 2,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 25.5, 138.0, 413.0, 31.0 ],
+									"text" : "\"/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/help/../examples/remote communication/websocket/html\""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 9.5, 57.5, 46.5, 20.0 ],
+									"text" : "r path"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-10",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 56.0, 31.5, 299.0, 47.0 ],
+									"text" : "we setup our local application to return an example html page (in \"example/remote communication\" folder) when a client wants to connect to ourself"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-31",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 135.5, 102.5, 341.0, 20.0 ],
+									"text" : "we need to filter hardrive in case there is a space into its name",
+									"textcolor" : [ 0.656533, 0.177776, 0.21779, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.656533, 0.177776, 0.21779, 1.0 ],
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-28",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "int" ],
+									"patching_rect" : [ 9.5, 102.5, 126.0, 19.0 ],
+									"text" : "conformpath max boot"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-5",
+									"linecount" : 2,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 9.5, 174.5, 155.0, 31.0 ],
+									"text" : "protocol/setup htmlPath $1, protocol/setup port 9001"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 35.5, 87.0, 140.0, 18.0 ],
-									"text" : "protocol/setup port 9001"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-1",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 17.0, 133.0, 128.0, 20.0 ],
+									"patching_rect" : [ 9.5, 214.5, 137.0, 20.0 ],
 									"text" : "j.modular WebSocket"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-5",
-									"maxclass" : "message",
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-12",
+									"maxclass" : "newobj",
 									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 17.0, 45.0, 139.0, 18.0 ],
-									"text" : "protocol/setup ip 0.0.0.0"
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 9.5, 80.5, 358.5, 19.0 ],
+									"text" : "combine path \"../examples/remote communication/websocket/html\""
 								}
 
 							}
@@ -159,7 +240,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 17.0, 217.5, 72.0, 20.0 ],
+									"patching_rect" : [ 15.0, 240.5, 72.0, 20.0 ],
 									"text" : "loadmess 1"
 								}
 
@@ -172,7 +253,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 17.0, 244.0, 20.0, 20.0 ]
+									"patching_rect" : [ 15.0, 267.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -186,7 +267,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 37.0, 237.5, 139.0, 33.0 ],
+									"patching_rect" : [ 35.0, 260.5, 139.0, 33.0 ],
 									"text" : "listen messages from/to a MIDI controller"
 								}
 
@@ -201,7 +282,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 17.0, 271.0, 62.0, 18.0 ],
+									"patching_rect" : [ 15.0, 294.0, 62.0, 18.0 ],
 									"text" : "activity $1"
 								}
 
@@ -216,36 +297,55 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 3.0, 2.0, 300.75, 20.0 ],
-									"text" : "Enable a communication with a remote web page :"
+									"patching_rect" : [ 3.0, 2.0, 387.0, 20.0 ],
+									"text" : "Setup the local application to be controlled remotly from the web :"
 								}
 
 							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
+									"destination" : [ "obj-28", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-10", 0 ]
+									"source" : [ "obj-12", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
+									"destination" : [ "obj-14", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-11", 0 ]
+									"source" : [ "obj-16", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
+									"destination" : [ "obj-13", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 26.5, 295.0, 12.5, 295.0, 12.5, 125.0, 26.5, 125.0 ],
+									"midpoints" : [ 19.0, 130.75, 429.0, 130.75 ],
+									"source" : [ "obj-28", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-28", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 24.5, 315.0, 5.75, 315.0, 5.75, 209.5, 19.0, 209.5 ],
 									"source" : [ "obj-32", 0 ]
 								}
 
@@ -261,19 +361,20 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
+									"destination" : [ "obj-7", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 19.0, 206.0, 19.0, 206.0 ],
 									"source" : [ "obj-5", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
+									"destination" : [ "obj-12", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-7", 0 ]
+									"source" : [ "obj-6", 0 ]
 								}
 
 							}
@@ -2357,7 +2458,7 @@
 									"outlettype" : [ "", "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 233.0, 79.0, 135.0, 19.0 ],
-									"text" : "\"here I am\""
+									"text" : "bla"
 								}
 
 							}
@@ -2561,7 +2662,6 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -4377,6 +4477,67 @@
 			}
 , 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"hidden" : 1,
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 475.0, 693.0, 41.0, 20.0 ],
+					"text" : "s path"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"hidden" : 1,
+					"id" : "obj-35",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 423.0, 624.0, 60.0, 20.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"hidden" : 1,
+					"id" : "obj-38",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 423.0, 668.5, 71.0, 19.0 ],
+					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+					"text" : "thispatcher"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"hidden" : 1,
+					"id" : "obj-42",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 423.0, 648.0, 35.0, 18.0 ],
+					"text" : "path",
+					"varname" : "img_fold"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"background" : 1,
 					"id" : "obj-30",
 					"maxclass" : "panel",
@@ -4503,6 +4664,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-42", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-32", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -4521,10 +4691,28 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-38", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-48", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-38", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-42", 0 ]
 				}
 
 			}
@@ -4550,13 +4738,13 @@
  ],
 		"parameters" : 		{
 			"obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
+			"obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
 			"obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
 			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
 			"obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ]
+			"obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
