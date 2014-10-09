@@ -116,11 +116,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-13",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 25.5, 138.0, 413.0, 18.0 ]
+									"patching_rect" : [ 25.5, 138.0, 413.0, 31.0 ],
+									"text" : "\"/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/help/../examples/remote communication/websocket/jamomarmot\""
 								}
 
 							}
@@ -4208,7 +4210,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 105.75, 430.0, 436.0, 100.0 ],
-					"text" : "Many applications cannot describe themselves because they use a protocol which doesn't allow it (e.g. OSC). That's why you need to load a namespace file to declare the parameters|messages|returns that the application handles.\nFor the remoteOSCApp used for this example, first load the \"remoteOSCApp - namespace.xml\" file in Jamoma/examples/remote communication folder.\n\nOSC Addresses can also be dynamically added to the namespace by \"learning\""
+					"text" : "Many applications cannot describe themselves because they use a protocol which doesn't allow it (e.g. OSC). That's why you need to load a namespace file to declare the parameters|messages|returns that the application handles.\nFor the remoteOSCApp used for this example, first load the \"remoteOSCApp - namespace.xml\" file in Jamoma/examples/remote communication/osc folder.\n\nOSC Addresses can also be dynamically added to the namespace by \"learning\""
 				}
 
 			}
@@ -4735,14 +4737,14 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
+			"obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
-			"obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
 			"obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
-			"obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ]
+			"obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
