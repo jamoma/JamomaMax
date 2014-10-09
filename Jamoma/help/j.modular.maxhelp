@@ -107,7 +107,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 539.5, 53.5, 387.0, 266.0 ],
-									"url" : "http://127.0.0.1:9001/?"
+									"url" : "http://127.0.0.1:9001/"
 								}
 
 							}
@@ -116,13 +116,11 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-13",
-									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 25.5, 138.0, 413.0, 31.0 ],
-									"text" : "\"/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/help/../examples/remote communication/websocket/html\""
+									"patching_rect" : [ 25.5, 138.0, 413.0, 18.0 ]
 								}
 
 							}
@@ -150,7 +148,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 56.0, 31.5, 299.0, 47.0 ],
+									"patching_rect" : [ 56.0, 31.5, 300.0, 47.0 ],
 									"text" : "we setup our local application to return an example html page (in \"example/remote communication\" folder) when a client wants to connect to ourself"
 								}
 
@@ -196,7 +194,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 9.5, 174.5, 155.0, 31.0 ],
+									"patching_rect" : [ 9.5, 174.5, 158.0, 31.0 ],
 									"text" : "protocol/setup htmlPath $1, protocol/setup port 9001"
 								}
 
@@ -225,8 +223,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 9.5, 80.5, 358.5, 19.0 ],
-									"text" : "combine path \"../examples/remote communication/websocket/html\""
+									"patching_rect" : [ 9.5, 80.5, 403.5, 19.0 ],
+									"text" : "combine path \"../examples/remote communication/websocket/jamomarmot\""
 								}
 
 							}
@@ -4737,14 +4735,14 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
+			"obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
-			"obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ]
+			"obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
+			"obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
+			"obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
