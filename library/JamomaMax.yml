@@ -1,5 +1,6 @@
 defines:
   - JAMOMA_EXPORTS
+  - TTSCORE_IMPORT
 
 sources:
   - source/JamomaForMax.cpp
@@ -16,12 +17,14 @@ includes:
   - ../../../Core/Modular/library/PeerObject
   - ../../../Core/Modular/library/ProtocolLib
   - ../../../Core/Modular/library/SchedulerLib
+  - ../../../Core/Score/library/includes
   - C74-INCLUDES
 
 libraries:
   - FOUNDATION
   - DSP
   - MODULAR
+  - SCORE
   - C74
 
 frameworks:
