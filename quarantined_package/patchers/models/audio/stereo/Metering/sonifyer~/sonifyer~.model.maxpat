@@ -651,7 +651,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 440.0, 492.0, 557.0, 33.0 ],
-					"text" : "j.message counter @type integer @range 0 1024 @clipmode low @ramp/drive Max @description \"The counter that runs through the matrix.\""
+					"text" : "j.message counter @type integer @range 0 1024 @clipmode low @ramp/drive max @description \"The counter that runs through the matrix.\""
 				}
 
 			}

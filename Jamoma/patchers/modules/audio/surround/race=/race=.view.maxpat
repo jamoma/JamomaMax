@@ -155,7 +155,7 @@
             ],
             "dataspace": "time",
             "clipmode": "both",
-            "dataspace/unit": "Hz",
+            "unit": "Hz",
             "default": [
               5000
             ],
@@ -687,7 +687,7 @@
             ],
             "dataspace": "time",
             "clipmode": "both",
-            "dataspace/unit": "Hz",
+            "unit": "Hz",
             "default": [
               250
             ],
@@ -1154,7 +1154,7 @@
         "type": "iLaX"
       },
       {
-        "name": "j.dataspace.mxo",
+        "name": "j.unit.mxo",
         "type": "iLaX"
       },
       {

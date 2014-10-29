@@ -250,12 +250,12 @@
 				Set the dataspace used internally by parameters for unit conversion. For example, for a gain dataspace with a unit dB, one can set the value from a remote using midi value
 			</description>
 		</attribute>
-		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
+		<attribute name="unit" get="1" set="1" type="symbol" size="1">
 			<digest>
 				The dataspace unit used for remote communication
 			</digest>
 			<description>
-				The dataspace unit used for remote communication. Available values depend on the dataspace attribute value. See j.dataspace help patch for more information.
+				The dataspace unit used for remote communication. Available values depend on the dataspace attribute value. See j.unit help patch for more information.
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">

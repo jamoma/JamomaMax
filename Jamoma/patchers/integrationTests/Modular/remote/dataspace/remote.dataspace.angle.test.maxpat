@@ -95,7 +95,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 8.0, 228.0, 229.0, 20.0 ],
-					"text" : "j.remote test @dataspace/unit radian"
+					"text" : "j.remote test @unit radian"
 				}
 
 			}
@@ -559,7 +559,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 8.0, 135.0, 245.0, 33.0 ],
-					"text" : "j.parameter test @type decimal @dataspace angle @dataspace/unit degree"
+					"text" : "j.parameter test @type decimal @dataspace angle @unit degree"
 				}
 
 			}

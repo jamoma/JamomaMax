@@ -30,7 +30,7 @@ void unfocus_bang(t_unfocus *x);
 
 
 // Class Statics
-static ClassPtr	sUnfocusClass;
+static t_class*	sUnfocusClass;
 
 
 /************************************************************************************/
@@ -88,8 +88,8 @@ void unfocus_assist(t_unfocus *x, void *b, long msg, long arg, char *dst)
 // METHOD: bang
 void unfocus_bang(t_unfocus *x)
 {
-	ObjectPtr	patcher = NULL;
-	ObjectPtr	patcherview = NULL;
+	t_object*	patcher = NULL;
+	t_object*	patcherview = NULL;
 	
 	object_obex_lookup(x, gensym("#P"), &patcher);
 	if (patcher)

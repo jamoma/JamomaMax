@@ -20,31 +20,31 @@
 
 // Data Structure for this object
 struct Unpack {
-   	Object				    obj;
+   	t_object				obj;
 	TTGraphObjectBasePtr	graphObject;
-	TTPtr				    graphOutlets[16];	// this _must_ be third (for the setup call)
-	TTObjectBasePtr			callback;		// TTCallback object that attaches to the graphObject to be notified when there is new data to output.
+	TTPtr				    graphOutlets[16];	///< this _must_ be third (for the setup call)
+	TTObject*				callback;			///< TTCallback object that attaches to the graphObject to be notified when there is new data to output.
 };
 typedef Unpack* UnpackPtr;
 
 
 // Prototypes for methods
-UnpackPtr	UnpackNew			(SymbolPtr msg, AtomCount argc, AtomPtr argv);
+UnpackPtr	UnpackNew			(t_symbol *msg, long argc, t_atom* argv);
 void   		UnpackFree			(UnpackPtr self);
 void   		UnpackAssist		(UnpackPtr self, void* b, long msg, long arg, char* dst);
 void		UnpackGraphCallback	(UnpackPtr self, TTValue& arg);
 
 
 // Globals
-static ClassPtr sUnpackClass;
+static t_class* sUnpackClass;
 
 
 /************************************************************************************/
 // Main() Function
 
-int TTGRAPH_EXTERNAL_EXPORT main(void)
+int C74_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class *c;
 	
 	TTGraphInit();	
 	common_symbols_init();
@@ -68,7 +68,7 @@ int TTGRAPH_EXTERNAL_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-UnpackPtr UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+UnpackPtr UnpackNew(t_symbol *msg, long argc, t_atom* argv)
 {
     UnpackPtr	self;
 	TTValue		v, none;
@@ -76,26 +76,27 @@ UnpackPtr UnpackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	
     self = UnpackPtr(object_alloc(sUnpackClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (ObjectPtr)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
 		self->graphOutlets[0] = outlet_new(self, NULL);
 		
-		v.setSize(2);
-		v.set(0, TT("graph.output"));
-		v.set(1, TTUInt32(1));
+		v.resize(2);
+		v[0] = "graph.output";
+		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 		
-		if (!self->graphObject->mKernel) {
+		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
 		
-		err = TTObjectBaseInstantiate(TT("callback"), (TTObjectBasePtr*)&self->callback, none);
-		self->callback->setAttributeValue(TT("function"), TTPtr(&UnpackGraphCallback));
-		self->callback->setAttributeValue(TT("baton"), TTPtr(self));	
-		// dynamically add a message to the callback object so that it can handle the 'dictionaryReceived' notification
-		self->callback->registerMessage(TT("dictionaryReceived"), (TTMethod)&TTCallback::notify, kTTMessagePassValue);
-		// tell the graph object that we want to watch it
-		self->graphObject->mKernel->registerObserverForNotifications(*self->callback);
+		self->callback = new TTObject("callback");
+		self->callback->set(TT("function"), TTPtr(&UnpackGraphCallback));
+		self->callback->set(TT("baton"), TTPtr(self));
+		
+		// Dynamically add a message to the callback object so that it can handle the 'dictionaryReceived' notification
+		self->callback->instance()->registerMessage(TT("dictionaryReceived"), (TTMethod)&TTCallback::notify, kTTMessagePassValue);
+		// Tell the graph object that we want to watch it
+		self->graphObject->mKernel.registerObserverForNotifications(*self->callback);
 		
 		attr_args_process(self, argc, argv);
 	}
@@ -118,7 +119,7 @@ void UnpackAssist(UnpackPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
 		strcpy (dst, "multichannel input and control messages");		
-	else if (msg==2){	// Outlets
+	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "multichannel output");
 		else
@@ -132,40 +133,41 @@ void UnpackGraphCallback(UnpackPtr self, TTValue& arg)
 {
 	TTDictionaryPtr aDictionary = NULL;
 	TTValue			v;
-	AtomCount		ac;
-	AtomPtr			ap;
+	long			ac;
+	t_atom*			ap;
 	TTBoolean		firstItemASymbol = NO;
 	TTSymbol		firstItem;
 	
-	arg.get(0, (TTPtr*)(&aDictionary));
+	//arg.get(0, (TTPtr*)(&aDictionary));
+	aDictionary = (TTDictionaryPtr)(TTPtr)arg[0];
 	aDictionary->getValue(v);
-	ac = v.getSize();
+	ac = v.size();
 	if (ac) {
-		ap = new Atom[ac];
+		ap = new t_atom[ac];
 		for (int i=0; i<ac; i++) {
-			if (v.getType() == kTypeInt8   ||
-				v.getType() == kTypeUInt8  ||
-				v.getType() == kTypeInt16  ||
-				v.getType() == kTypeUInt16 ||
-				v.getType() == kTypeInt32  ||
-				v.getType() == kTypeUInt32 ||
-				v.getType() == kTypeInt64  ||
-				v.getType() == kTypeUInt64)
+			if (v[i].type() == kTypeInt8   ||
+				v[i].type() == kTypeUInt8  ||
+				v[i].type() == kTypeInt16  ||
+				v[i].type() == kTypeUInt16 ||
+				v[i].type() == kTypeInt32  ||
+				v[i].type() == kTypeUInt32 ||
+				v[i].type() == kTypeInt64  ||
+				v[i].type() == kTypeUInt64)
 			{
 				TTInt32 ival;
 				
-				v.get(i, ival);
+				ival = v[i];
 				atom_setlong(ap+i, ival);
 			}
-			else if (v.getType() == kTypeFloat32 || v.getType() == kTypeFloat64)
+			else if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64)
 			{
-				atom_setfloat(ap+i, v.getFloat64(i));
+				atom_setfloat(ap+i, v[i]);
 			}
-			else if (v.getType() == kTypeSymbol)
+			else if (v[i].type() == kTypeSymbol)
 			{
 				TTSymbol s;
 				
-				v.get(i, s);
+				s = v[i];
 				atom_setsym(ap+i, gensym((char*)s.c_str()));
 				if (i==0) {
 					firstItemASymbol = YES;

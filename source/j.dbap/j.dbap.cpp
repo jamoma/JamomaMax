@@ -428,7 +428,7 @@ void dbap_hull(t_dbap *x, long f)
 /** Display a hitmap view of the dbap for a destination and a source weight config or all (on the info outlet ?) */
 void dbap_view(t_dbap *x, void *msg, long argc, t_atom *argv)
 {
-	long dst, src,i ,j;
+	long dst, src,i;
 	t_symbol *all;
 	
 	// clear the view matrix
@@ -486,7 +486,7 @@ void dbap_view_size(t_dbap *x, long sizeX, long sizeY) {
         
         // warn the user that large dimension while take a long to render
         if ((sizeX > MAX_SIZE_VIEW_X)||(sizeY > MAX_SIZE_VIEW_Y))
-            object_warn(ObjectPtr(x), "size over %d x %d takes time to render", MAX_SIZE_VIEW_X, MAX_SIZE_VIEW_Y);
+            object_warn((t_object*)x, "size over %d x %d takes time to render", MAX_SIZE_VIEW_X, MAX_SIZE_VIEW_Y);
 		
 		x->view_info.dim[0] = sizeX;
 		x->view_info.dim[1] = sizeY;

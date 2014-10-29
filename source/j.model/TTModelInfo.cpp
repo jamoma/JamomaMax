@@ -22,15 +22,14 @@
 TT_MODULAR_CONSTRUCTOR,
 mClass(kTTSymEmpty)
 {
-    TT_ASSERT("Correct number of args to create TTModelInfo", arguments.size() == 1);
-    
     if (arguments.size() == 1)
         if (arguments[0].type() == kTypePointer)
-            mObject = ObjectPtr(TTPtr(arguments[0]));
+            mObject = (t_object*)(TTPtr(arguments[0]));
     
     addAttributeWithSetter(Address, kTypeSymbol);
     addAttribute(Class, kTypeSymbol);
     
+    addMessageWithArguments(Rename);
     addMessage(InternalOpen);
     addMessage(HelpOpen);
     addMessage(ReferenceOpen);
@@ -50,7 +49,7 @@ TTErr TTModelInfo::setAddress(const TTValue& newValue)
 {
     mAddress = newValue[0];
     
-    // notify content observers
+    // notify address observers
     addressAttribute->sendNotification(kTTSym_notify, mAddress);	// we use kTTSym_notify because we know that observers are TTCallback
     
     return kTTErrNone;
@@ -61,9 +60,32 @@ void TTModelInfo::setAddressReadOnly(TTBoolean readOnly)
     addressAttribute->setreadOnly(readOnly);
 }
 
+TTErr TTModelInfo::Rename(const TTValue& inputValue, TTValue& outputValue)
+{
+    WrappedModularInstancePtr x = (WrappedModularInstancePtr)mObject;
+    TTValue v;
+    
+    TTErr err = x->wrappedObject.send("Rename", inputValue, outputValue);
+    
+    x->wrappedObject.get(kTTSym_service, v);
+    TTSymbol service = v[0];
+    
+    //update model address only in j.model case
+    if (!err && service == kTTSym_model) {
+        
+        x->wrappedObject.get(kTTSym_address, v);
+        mAddress = v[0];
+    
+        // notify address observers
+        addressAttribute->sendNotification(kTTSym_notify, mAddress);	// we use kTTSym_notify because we know that observers are TTCallback
+    }
+
+    return err;
+}
+
 TTErr TTModelInfo::InternalOpen()
 {	
-	ObjectPtr p = jamoma_patcher_get(mObject);
+	t_object *p = jamoma_patcher_get(mObject);
 	
 	object_method(p, _sym_vis);
     
@@ -75,7 +97,7 @@ TTErr TTModelInfo::HelpOpen()
 	// opening the model helpfile
 	if (mClass != kTTSymEmpty) {
 		
-		SymbolPtr helpfileName;
+		t_symbol *helpfileName;
 		jamoma_edit_filename(*HelpPatcherFormat, mClass, &helpfileName);
 		classname_openhelp((char*)helpfileName->s_name);
         
@@ -90,7 +112,7 @@ TTErr TTModelInfo::ReferenceOpen()
     // opening the model reference
     if (mClass != kTTSymEmpty) {
         
-		SymbolPtr refpagefileName;
+		t_symbol *refpagefileName;
 		jamoma_edit_filename(*RefpageFormat, mClass, &refpagefileName);
 		classname_openrefpage((char*)refpagefileName->s_name);
         
@@ -111,7 +133,7 @@ TTErr TTModelInfo::Mute()
 {
     /*
      WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-     ObjectPtr					patcher = jamoma_patcher_get((ObjectPtr)x);
+     t_object*					patcher = jamoma_patcher_get((t_object*)x);
      long						mute;
      t_atom						a[2];
      

@@ -1,0 +1,71 @@
+body {
+    background-color: #333 ;
+    color: #DDD ;
+}
+
+div.toggle {
+    text-decoration: none ;
+}
+
+div.toggle:hover, li.input:hover {
+    background-color: #444 ;
+}
+
+ul.dynamicNode.sorting li.node {
+    border : 1px solid rgba(168, 255, 96, 0.15) ;
+    margin-bottom : 5px ;
+    padding : 1px ;
+}
+
+ul.dynamicNode.sorting li.node>div {
+    border-bottom : 1px solid rgba(168, 255, 96, 0.1) ;
+}
+
+ul.dynamicField.sorting li.input {
+    border: 1px solid rgba(114, 217, 231, 0.15);
+    margin-bottom : 1px ;
+    padding : 1px ;
+}
+
+.fieldPlaceholder {
+    width : auto ;
+    height : 20px ;
+    opacity : 0.5 ;
+    border : 3px solid rgba(114, 217, 231, 0.8);
+}
+
+.nodePlaceholder {
+    width : auto ;
+    height : 40px ;
+    opacity : 0.5 ;
+    border : 3px solid rgba(168, 255, 96, 0.8);
+}
+
+/*ul.dynamicField li.node>div {
+    border-bottom : 1px solid rgba(168, 255, 96, 0.1) ;
+}*/
+
+li.node>div , label.node{
+    color: #a8ff60 ;
+}
+
+li.input>label , label.input{
+    color: #72d9e7 ;
+}
+
+li.input.editable {
+    background-color: #666 ;
+}
+
+li.input.editingByOther {
+    background-color: #979 ;
+}
+
+input {
+    background-color: #666;
+    color: #DDD;
+}
+
+.showOnLiHover a {
+    color : #ff73fd ;
+}

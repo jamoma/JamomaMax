@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 25.0, 69.0, 313.0, 250.0 ],
+		"rect" : [ 670.0, 344.0, 502.0, 256.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -29,15 +29,16 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "none",
 					"id" : "obj-7",
 					"maxclass" : "bpatcher",
-					"name" : "dataMapper.view.maxpat",
+					"name" : "mapper.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+					"patching_rect" : [ 0.0, 0.0, 450.0, 105.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 450.0, 105.0 ]
 				}
 
 			}
@@ -66,15 +67,16 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "edit a one to one data mapping",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 171.0, 130.0, 20.0 ],
-					"text" : "dataMapper.model #1"
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 28.0, 171.0, 103.0, 20.0 ],
+					"text" : "mapper.model #1"
 				}
 
 			}
@@ -96,65 +98,6 @@
 					"source" : [ "obj-3", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "dataMapper.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/UserLib/GMEA/Max/Data/dataMapper",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "dataMapper.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/UserLib/GMEA/Max/Data/dataMapper",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.map.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter_array.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

@@ -5310,7 +5310,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 142.0, 95.0, 172.0, 17.0 ],
-									"text" : "remove @dataspace/unit"
+									"text" : "remove @unit"
 								}
 
 							}
@@ -5396,7 +5396,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 43.0, 66.0, 175.0, 19.0 ],
-									"text" : "prepend @dataspace/unit"
+									"text" : "prepend @unit"
 								}
 
 							}
@@ -5933,7 +5933,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 260.0, 97.0, 19.0 ],
-													"text" : "j.dataspace"
+													"text" : "j.unit"
 												}
 
 											}

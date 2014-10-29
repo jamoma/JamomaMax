@@ -363,7 +363,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 37.0, 29.0, 297.0, 43.0 ],
-													"text" : "j.parameter erase_color @type array @dataspace color @dataspace/unit rgb @description \"the erase color\" @default 0.2 0.2 0.2"
+													"text" : "j.parameter erase_color @type array @dataspace color @unit rgb @description \"the erase color\" @default 0.2 0.2 0.2"
 												}
 
 											}
@@ -614,7 +614,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 118.0, 196.0, 455.0, 31.0 ],
-													"text" : "j.parameter camera/up @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera up vector.\" @default 0. 1. 0.",
+													"text" : "j.parameter camera/up @type array @ramp/drive max @dataspace position @unit openGL @description \"Camera up vector.\" @default 0. 1. 0.",
 													"varname" : "3D/position[3]"
 												}
 
@@ -645,7 +645,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 72.0, 121.0, 431.0, 31.0 ],
-													"text" : "j.parameter camera/lookat @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera lookat position.\" @default 0. 0. 0.",
+													"text" : "j.parameter camera/lookat @type array @ramp/drive max @dataspace position @unit openGL @description \"Camera lookat position.\" @default 0. 0. 0.",
 													"varname" : "3D/position[1]"
 												}
 
@@ -706,7 +706,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 39.0, 42.799988, 621.0, 31.0 ],
-													"text" : "j.parameter camera/position @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Camera position.\" @default 0. 0. 2.",
+													"text" : "j.parameter camera/position @type array @ramp/drive max @dataspace position @unit openGL @description \"Camera position.\" @default 0. 0. 2.",
 													"varname" : "3D/position"
 												}
 
@@ -1072,7 +1072,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 534.0, 26.0, 150.0, 33.0 ],
-													"text" : "@dataspace color @dataspace/unit rgb"
+													"text" : "@dataspace color @unit rgb"
 												}
 
 											}
@@ -1407,7 +1407,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 32.0, 188.799988, 771.0, 31.0 ],
-													"text" : "j.parameter point_atten @type array @ramp/drive Max @dataspace position @dataspace/unit openGL @description \"Point attenuation factor for point sprites.\" @default 1. 0. 0.1",
+													"text" : "j.parameter point_atten @type array @ramp/drive max @dataspace position @unit openGL @description \"Point attenuation factor for point sprites.\" @default 1. 0. 0.1",
 													"varname" : "3D/position[2]"
 												}
 
@@ -2191,7 +2191,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 365.5, 18.5, 310.0, 47.0 ],
-					"text" : "j.parameter framerate @type decimal @range 0. 10000. @clipmode low @dataspace time @dataspace/unit fps @description \"the framerate you want\""
+					"text" : "j.parameter framerate @type decimal @range 0. 10000. @clipmode low @dataspace time @unit fps @description \"the framerate you want\""
 				}
 
 			}

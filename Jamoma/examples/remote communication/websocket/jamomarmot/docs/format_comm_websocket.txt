@@ -1,0 +1,53 @@
+Syntaxe des messages de communication par websocket (format json)
+
+// set value attribute
+set 				=> { "sender" : "telecommande", 	"command" : "set", 			<address> : <value> }
+
+// set several attributes
+set 				=> { "sender" : "telecommande", 	"command" : "set", 			<address> : { ":value" : <value>, ":range" : <range> } }
+
+// get value attribute
+get request 		=> { "sender" : "telecommande", 	"command" : "?get", 		<address> : null }
+get answer			=> { "sender" : "demoapp", 			"command" : ":get", 		<address> : <value> }
+get error			=> { "sender" : "demoapp", 			"command" : "!get", 		<address> : "error description" }
+
+// get several attributes
+get request 		=> { "sender" : "telecommande", 	"command" : "?get", 		<address> : { ":type" : null, ":value" : null, ":range" : null } }
+get answer			=> { "sender" : "demoapp", 			"command" : ":get", 		<address> : { ":type" : <type>, ":value" : <value>, ":range" : <range> } }
+get error			=> { "sender" : "demoapp", 			"command" : "!get", 		<address> : "error description" }
+
+// get namespace
+namespace request 	=> { "sender" : "telecommande", 	"command" : "?namespace", 	<address> : null }
+namespace answer	=> { "sender" : "demoapp", 			"command" : ":namespace", 	<address> : { ":type" : <type>, "nodes" : <node1 node2 node3 ...>, "attributes" : <attribute1 attribute2 ...> } }
+namespace error		=> { "sender" : "demoapp", 			"command" : "!namespace", 	<address> : "error description" }
+
+// get full namespace (with default values)
+namespace request 	=> { "sender" : "telecommande", 	"command" : "?namespace_all", 	<address> : null }
+namespace answer	=> { "sender" : "demoapp", 			"command" : ":namespace_all", 	<address> : {
+																								{ <address1> : { ":type" : <type>, ":value" : <value>, ":range" : <range>},
+																								{ <address2> : { ":type" : <type>, ":value" : <value>, ":range" : <range>},
+																								{ <address3> : 
+																								{
+																										  { <address31> : { ":type" : <type>, ":value" : <value>, ":range" : <range>},
+																										  { <address32> : { ":type" : <type>, ":value" : <value>, ":range" : <range>}
+																								}
+																							}
+namespace error		=> { "sender" : "demoapp", 			"command" : "!namespace_all", 	<address> : "error description" }
+
+// get snapshot (with current value)
+namespace request 	=> { "sender" : "telecommande", 	"command" : "?snapshot", 	<address> : null }
+namespace answer	=> { "sender" : "demoapp", 			"command" : ":snapshot", 	<address> : {
+																								{ <address1> : { ":type" : <type>, ":value" : <value>, ":range" : <range>},
+																								{ <address2> : { ":type" : <type>, ":value" : <value>, ":range" : <range>},
+																								{ <address3> : 
+																								{
+																										  { <address31> : { ":type" : <type>, ":value" : <value>, ":range" : <range>},
+																										  { <address32> : { ":type" : <type>, ":value" : <value>, ":range" : <range>}
+																								}
+																							}
+namespace error		=> { "sender" : "demoapp", 			"command" : "!snapshot", 	<address> : "error description" }
+
+// listen value attribute
+listen request 		=> { "sender" : "telecommande", 	"command" : "?listen", 		<address> : null }
+listen answer		=> { "sender" : "demoapp", 			"command" : ":listen", 		<address> : <value> }
+listen error		=> { "sender" : "demoapp", 			"command" : "!listen", 		<address> : "error description" }

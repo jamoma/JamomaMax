@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 7,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 353.0, 234.0, 1180.0, 555.0 ],
+		"rect" : [ 93.0, 217.0, 1180.0, 555.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -85,6 +85,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-20",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -112,6 +114,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-18",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -139,6 +143,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.862505, 1.0, 0.862799, 1.0 ],
+					"bordercolor" : [ 0.0, 0.498039, 0.0, 1.0 ],
 					"id" : "obj-5",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -203,7 +209,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 240.0, 207.0, 180.0, 33.0 ],
-					"text" : "j.dataspace @dataspace none @input a @output b"
+					"text" : "j.unit @dataspace none @input a @output b"
 				}
 
 			}
@@ -218,8 +224,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 215.0, 333.0, 292.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dataspace/nonexisting_dataspace @tags Jamoma Modular j.dataspace"
+					"patching_rect" : [ 215.0, 333.0, 295.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.unit/nonexisting_dataspace @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -262,7 +268,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 541.0, 207.0, 195.0, 33.0 ],
-					"text" : "j.dataspace @dataspace time @input nonsense @output midi"
+					"text" : "j.unit @dataspace time @input nonsense @output midi"
 				}
 
 			}
@@ -277,8 +283,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 516.0, 333.0, 298.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dataspace/input_unit_is_nonsense @tags Jamoma Modular j.dataspace"
+					"patching_rect" : [ 516.0, 333.0, 299.0, 47.0 ],
+					"text" : "test.assert Jamoma/Modular/j.unit/input_unit_is_nonsense @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -336,7 +342,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 846.0, 207.0, 175.0, 47.0 ],
-					"text" : "j.dataspace @dataspace time @input midi @output nonsense"
+					"text" : "j.unit @dataspace time @input midinote @output nonsense"
 				}
 
 			}
@@ -352,7 +358,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 821.0, 333.0, 306.0, 47.0 ],
-					"text" : "test.assert Jamoma/Modular/j.dataspace/output_unit_is_nonsense @tags Jamoma Modular j.dataspace"
+					"text" : "test.assert Jamoma/Modular/j.unit/output_unit_is_nonsense @tags Jamoma Modular j.unit"
 				}
 
 			}
@@ -579,7 +585,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

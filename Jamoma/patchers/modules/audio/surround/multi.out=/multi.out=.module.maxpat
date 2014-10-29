@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"revision" : 9,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 37.0, 76.0, 859.0, 285.0 ],
@@ -29,16 +29,17 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "none",
 					"args" : [ "#1" ],
 					"id" : "obj-19",
 					"maxclass" : "bpatcher",
-					"name" : "sur.multi.out~.view.maxpat",
+					"name" : "multi.out=.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 0.0, 0.0, 300.0, 35.0 ],
+					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 35.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ]
 				}
 
 			}
@@ -56,15 +57,16 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Unpack up to 32 mono signals onto a multi cable.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 33,
-					"outlettype" : [ "", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal" ],
-					"patching_rect" : [ 13.40625, 179.0, 822.59375, 19.0 ],
-					"text" : "sur.multi.out~.model #1"
+					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
+					"patching_rect" : [ 13.40625, 179.0, 822.608704, 20.0 ],
+					"text" : "multi.out=.model #1"
 				}
 
 			}
@@ -452,7 +454,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 633.5, 133.0, 170.0, 19.0 ],
+					"patching_rect" : [ 44.5, 126.0, 178.0, 20.0 ],
 					"text" : "multichannel AudioGraph signal"
 				}
 
@@ -775,15 +777,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "sur.multi.out~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.multi.out~",
+				"name" : "multi.out=.model.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.out=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.multi.out~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.multi.out~",
+				"name" : "multi.out=.view.maxpat",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.out=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

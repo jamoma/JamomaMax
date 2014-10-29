@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -34,8 +34,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 196.0, 320.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 196.0, 319.0, 0.0, 0.0 ]
+					"patching_rect" : [ 196.0, 320.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -76,6 +75,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Vector base amplitude panning (VBAP) of multiple sources for multiple speakers.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-2",
@@ -83,17 +83,18 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
-					"patching_rect" : [ 87.0, 261.0, 128.0, 20.0 ],
-					"text" : "sur.vbap~.model #1"
+					"patching_rect" : [ 87.0, 261.0, 96.0, 20.0 ],
+					"text" : "vbap=.model #1"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"args" : [ "#1" ],
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
-					"name" : "sur.vbap~.view.maxpat",
+					"name" : "vbap=.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -142,15 +143,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "sur.vbap~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.vbap~",
+				"name" : "vbap=.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/vbap=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.vbap~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.vbap~",
+				"name" : "vbap=.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/vbap=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -168,11 +169,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "define_loudspeakers.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter_array.mxo",
+				"name" : "j.message_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -180,7 +177,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

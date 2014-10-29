@@ -66,7 +66,7 @@ attributes:
    desc: "Set what dataspace used internally by the parameter for unit conversions."
    unit:
    default: none
- - name: dataspace/unit
+ - name: unit
    type: symbol
    desc: "The dataspace unit used for communication to the algorithm from the outside world."
    unit:
@@ -113,6 +113,6 @@ seealso:
  - j.return
  - j.model
  - j.ramp
- - j.dataspace
+ - j.unit
 
 discussion: Jamoma is a free and open source project. http://www.jamoma.org

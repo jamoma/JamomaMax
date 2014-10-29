@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 544.0, 44.0, 835.0, 738.0 ],
+		"rect" : [ 697.0, 50.0, 835.0, 738.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -92,8 +92,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 427.0, 693.0, 202.0, 20.0 ],
-					"text" : "j.remote sur_rolloff~/source.1/active"
+					"patching_rect" : [ 427.0, 693.0, 181.0, 20.0 ],
+					"text" : "j.remote /rolloff=/source.1/active"
 				}
 
 			}
@@ -106,8 +106,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 164.0, 693.0, 213.0, 20.0 ],
-					"text" : "j.remote sur_doppler~/source.1/active"
+					"patching_rect" : [ 164.0, 693.0, 192.0, 20.0 ],
+					"text" : "j.remote /doppler=/source.1/active"
 				}
 
 			}
@@ -163,7 +163,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 330.0, 245.5, 58.0, 20.0 ],
+					"patching_rect" : [ 330.0, 280.5, 58.0, 20.0 ],
 					"text" : "j.pack= 1"
 				}
 
@@ -227,7 +227,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -370,7 +370,7 @@
 					"id" : "obj-5",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "sur.rolloff~.module.maxpat",
+					"name" : "rolloff=.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
@@ -400,7 +400,7 @@
 					"id" : "obj-7",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "sur.output~.module.maxpat",
+					"name" : "output=.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -439,7 +439,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -794,7 +794,7 @@
 					"id" : "obj-11",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "sur.doppler~.module.maxpat",
+					"name" : "doppler=.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "audio.connect" ],
@@ -813,8 +813,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 330.0, 94.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
+					"patching_rect" : [ 330.0, 94.0, 300.0, 175.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
 					"varname" : "/input~"
 				}
 
@@ -881,7 +881,6 @@
 					"destination" : [ "obj-11", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 339.5, 300.75, 619.5, 300.75 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -927,7 +926,6 @@
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 144.5, 479.0, 306.5, 479.0, 306.5, 327.0, 338.5, 327.0 ],
 					"source" : [ "obj-18", 0 ]
 				}
 
@@ -937,7 +935,6 @@
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 144.5, 479.0, 320.5, 479.0, 320.5, 428.0, 338.5, 428.0 ],
 					"source" : [ "obj-18", 0 ]
 				}
 
@@ -1008,213 +1005,239 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-19::obj-1::obj-74" : [ "live.dial[1]", "Transpose", 0 ],
+			"obj-19::obj-1::obj-45" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-19::obj-1::obj-58" : [ "live.text[3]", "live.text[4]", 0 ],
+			"obj-19::obj-1::obj-1::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-19::obj-1::obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-19::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-19::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-19::obj-1::obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-19::obj-1::obj-59" : [ "live.text[7]", "live.text[3]", 0 ],
+			"obj-19::obj-1::obj-1::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-19::obj-1::obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-19::obj-1::obj-4" : [ "live.text[6]", "live.text[1]", 0 ],
+			"obj-19::obj-1::obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-19::obj-1::obj-108" : [ "live.text[4]", "live.text[4]", 0 ],
+			"obj-19::obj-1::obj-1::obj-13" : [ "Release", "Release", 0 ],
+			"obj-19::obj-1::obj-48" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-19::obj-1::obj-1::obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-19::obj-1::obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-19::obj-1::obj-1::obj-30" : [ "live.menu", "live.menu", 0 ],
+			"obj-19::obj-1::obj-82" : [ "pan", "Pan", 0 ],
+			"obj-19::obj-1::obj-24" : [ "Master Gain", "Master Gain", 0 ],
+			"obj-19::obj-1::obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
+			"obj-19::obj-1::obj-47" : [ "live.numbox[3]", "live.numbox", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "input~.module.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
-				"patcherrelativepath" : "../../audio/input~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"patcherrelativepath" : "../../stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
-				"patcherrelativepath" : "../../audio/input~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"patcherrelativepath" : "../../stereo/Sources/input~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter~.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
-				"patcherrelativepath" : "../../audio/input~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"patcherrelativepath" : "../../stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.fileLoader.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/fileLoader",
-				"patcherrelativepath" : "../../../components/_deprecated/fileLoader",
+				"name" : "limiter~.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../stereo/Dynamics/limiter~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter.parametersAndMessages.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"bootpath" : "/Applications/Max 6.1.8/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1.8/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
-				"patcherrelativepath" : "../../audio/balance~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"patcherrelativepath" : "../../stereo/Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.doppler~.module.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.doppler~",
-				"patcherrelativepath" : "../sur.doppler~",
+				"name" : "doppler=.module.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/doppler=",
+				"patcherrelativepath" : "../doppler=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.doppler~.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.doppler~",
-				"patcherrelativepath" : "../sur.doppler~",
+				"name" : "doppler=.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/doppler=",
+				"patcherrelativepath" : "../doppler=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.doppler~.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.doppler~",
-				"patcherrelativepath" : "../sur.doppler~",
+				"name" : "doppler=.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/doppler=",
+				"patcherrelativepath" : "../doppler=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.sur.ch.doppler~.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.doppler~",
-				"patcherrelativepath" : "../sur.doppler~",
+				"name" : "j.ch.doppler=.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/doppler=",
+				"patcherrelativepath" : "../doppler=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.sur.doppler.js",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.doppler~",
-				"patcherrelativepath" : "../sur.doppler~",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "sur.output~.module.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.output~",
-				"patcherrelativepath" : "../sur.output~",
+				"name" : "output=.module.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/output=",
+				"patcherrelativepath" : "../output=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.output~.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.output~",
-				"patcherrelativepath" : "../sur.output~",
+				"name" : "output=.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/output=",
+				"patcherrelativepath" : "../output=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.js_systeminfo.js",
 				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../javascript",
+				"patcherrelativepath" : "../../../../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.panel.widget.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../../audio/limiter~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.output~.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.output~",
-				"patcherrelativepath" : "../sur.output~",
+				"name" : "output=.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/output=",
+				"patcherrelativepath" : "../output=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.limiter~.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.limiter~",
-				"patcherrelativepath" : "../sur.limiter~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../../audio/limiter~",
+				"name" : "limiter=.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/limiter=",
+				"patcherrelativepath" : "../limiter=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
-				"patcherrelativepath" : "../../audio/record~",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"patcherrelativepath" : "../../stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.rolloff~.module.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.rolloff~",
+				"name" : "rolloff=.module.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/rolloff=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.rolloff~.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.rolloff~",
+				"name" : "rolloff=.view.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/rolloff=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.rolloff~.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.rolloff~",
+				"name" : "rolloff=.model.maxpat",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/rolloff=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.sur.rolloff.js",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.rolloff~",
+				"name" : "j.rolloff=.js",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/rolloff=",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"patcherrelativepath" : "../../../../components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
-				"patcherrelativepath" : "../../../components/jamomaPath",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"patcherrelativepath" : "../../../../components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.position2ambimonitor.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/position2ambimonitor",
-				"patcherrelativepath" : "../../../components/position2ambimonitor",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/position2ambimonitor",
+				"patcherrelativepath" : "../../../../components/audio/position2ambimonitor",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.ambimonitor2position.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/ambimonitor2position",
-				"patcherrelativepath" : "../../../components/ambimonitor2position",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/ambimonitor2position",
+				"patcherrelativepath" : "../../../../components/audio/ambimonitor2position",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/initialized",
-				"patcherrelativepath" : "../../../components/initialized",
+				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/initialized",
+				"patcherrelativepath" : "../../../../components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1227,19 +1250,23 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.textslider.mxo",
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.savebang.mxo",
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1251,15 +1278,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.dataspace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pass.mxo",
+				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1268,6 +1287,18 @@
 			}
 , 			{
 				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.limiter~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1287,6 +1318,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.textslider.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.gain=.mxo",
 				"type" : "iLaX"
 			}
@@ -1300,14 +1335,6 @@
 			}
 , 			{
 				"name" : "j.mixer=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{

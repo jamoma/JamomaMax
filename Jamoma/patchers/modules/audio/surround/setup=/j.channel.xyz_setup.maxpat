@@ -102,7 +102,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 213.0, 594.0, 43.0 ],
-									"text" : "j.message xyz.2 @type array @repetitions/filter 0 @description \"alternative description of position of voice #1 as xyz coodinate.\" @dataspace position @dataspace/unit xyz @ramp/drive Max",
+									"text" : "j.message xyz.2 @type array @repetitions/filter 0 @description \"alternative description of position of voice #1 as xyz coodinate.\" @dataspace position @unit xyz @ramp/drive max",
 									"varname" : "parameter[3]"
 								}
 
@@ -1332,7 +1332,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 301.0, 448.0, 570.0, 43.0 ],
-					"text" : "j.parameter xyz.0 @type array @repetitions/filter 0 @description \"Position of voice 0 as xyz coordinates.\" @dataspace position @dataspace/unit xyz @ramp/drive Max",
+					"text" : "j.parameter xyz.0 @type array @repetitions/filter 0 @description \"Position of voice 0 as xyz coordinates.\" @dataspace position @unit xyz @ramp/drive max",
 					"varname" : "parameter"
 				}
 

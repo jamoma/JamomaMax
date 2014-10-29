@@ -2194,7 +2194,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 260.0, 97.0, 19.0 ],
-									"text" : "j.dataspace"
+									"text" : "j.unit"
 								}
 
 							}
@@ -2574,7 +2574,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 64.0, 606.0, 230.0, 24.0 ],
-					"text" : "sprintf address %s:dataspace/unit"
+					"text" : "sprintf address %s:unit"
 				}
 
 			}

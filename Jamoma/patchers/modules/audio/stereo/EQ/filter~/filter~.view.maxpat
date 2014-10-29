@@ -66,7 +66,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 528.75, 432.0, 130.5, 33.0 ],
-					"text" : "j.remote frequency @dataspace/unit midi",
+					"text" : "j.remote frequency @unit midinote",
 					"varname" : "cf[3]"
 				}
 
@@ -425,7 +425,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 83.333336, 438.0, 131.0, 47.0 ],
-					"text" : "j.remote gain @dataspace gain @dataspace/unit linear",
+					"text" : "j.remote gain @dataspace gain @unit linear",
 					"varname" : "filtergain[1]"
 				}
 

@@ -2,10 +2,10 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 0,
-			"revision" : 0,
-			"architecture" : "x86"
+			"major" : 6,
+			"minor" : 1,
+			"revision" : 9,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 752.0, 44.0, 461.0, 289.0 ],
@@ -45,24 +45,16 @@
 , 			{
 				"box" : 				{
 					"annotation" : "Balancing the two channels of a stereo signal.",
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
 					"linecount" : 2,
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 3,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 33.5, 92.0, 148.0, 33.0 ],
-					"text" : "balance~.model balance @amenities none",
-					"viewvisibility" : 0
+					"text" : "balance~.model balance @amenities none"
 				}
 
 			}
@@ -133,27 +125,20 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-56",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 2,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 0,
-							"revision" : 0,
-							"architecture" : "x86"
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 9,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 443.0, 288.0, 907.0, 688.0 ],
@@ -235,27 +220,20 @@
 							}
 , 							{
 								"box" : 								{
-									"bgmode" : 0,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-40",
-									"lockeddragscroll" : 0,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 7,
-											"minor" : 0,
-											"revision" : 0,
-											"architecture" : "x86"
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 9,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 480.0, 128.0, 422.0, 407.0 ],
@@ -288,7 +266,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 164.0, 59.0, 149.0, 141.0 ],
-													"text" : "j.parameter clicktrain/rate @type decimal @ramp/drive Max @description \"How often a click is generated. in [Hz] by default.\" @range 0.01 100. @clipmode both @dataspace time @dataspace/unit Hz",
+													"text" : "j.parameter clicktrain/rate @type decimal @ramp/drive max @description \"How often a click is generated. in [Hz] by default.\" @range 0.01 100. @clipmode both @dataspace time @unit Hz",
 													"varname" : "ch_1[1]"
 												}
 
@@ -445,8 +423,7 @@
 										"tags" : ""
 									}
 ,
-									"text" : "p clicktrain~",
-									"viewvisibility" : 0
+									"text" : "p clicktrain~"
 								}
 
 							}
@@ -772,27 +749,20 @@
 							}
 , 							{
 								"box" : 								{
-									"bgmode" : 0,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-27",
-									"lockeddragscroll" : 0,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "signal" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 7,
-											"minor" : 0,
-											"revision" : 0,
-											"architecture" : "x86"
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 9,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 68.0, 50.0, 1041.0, 764.0 ],
@@ -830,23 +800,15 @@
 											}
 , 											{
 												"box" : 												{
-													"bgmode" : 0,
-													"border" : 0,
-													"clickthrough" : 0,
-													"enablehscroll" : 0,
-													"enablevscroll" : 0,
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-10",
-													"lockeddragscroll" : 0,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
-													"offset" : [ 0.0, 0.0 ],
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 187.0, 332.0, 37.0, 20.0 ],
-													"text" : "thru",
-													"viewvisibility" : 0
+													"text" : "thru"
 												}
 
 											}
@@ -877,7 +839,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 25.0, 37.0, 248.0, 33.0 ],
+													"patching_rect" : [ 25.0, 37.0, 250.0, 33.0 ],
 													"text" : "j.parameter file/path @type string @priority 2 @description \"the path to a sound file\""
 												}
 
@@ -918,28 +880,21 @@
 											}
 , 											{
 												"box" : 												{
-													"bgmode" : 0,
-													"border" : 0,
-													"clickthrough" : 0,
 													"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-													"enablehscroll" : 0,
-													"enablevscroll" : 0,
 													"fontname" : "Arial",
 													"fontsize" : 13.0,
 													"id" : "obj-37",
-													"lockeddragscroll" : 0,
 													"maxclass" : "newobj",
 													"numinlets" : 0,
 													"numoutlets" : 1,
-													"offset" : [ 0.0, 0.0 ],
 													"outlettype" : [ "signal" ],
 													"patcher" : 													{
 														"fileversion" : 1,
 														"appversion" : 														{
-															"major" : 7,
-															"minor" : 0,
-															"revision" : 0,
-															"architecture" : "x86"
+															"major" : 6,
+															"minor" : 1,
+															"revision" : 9,
+															"architecture" : "x64"
 														}
 ,
 														"rect" : [ 50.0, 94.0, 416.0, 330.0 ],
@@ -963,20 +918,6 @@
 														"tags" : "",
 														"boxes" : [ 															{
 																"box" : 																{
-																	"fontname" : "Arial",
-																	"fontsize" : 12.0,
-																	"id" : "obj-2",
-																	"maxclass" : "flonum",
-																	"numinlets" : 1,
-																	"numoutlets" : 2,
-																	"outlettype" : [ "float", "bang" ],
-																	"parameter_enable" : 0,
-																	"patching_rect" : [ 160.5, 179.0, 50.0, 20.0 ]
-																}
-
-															}
-, 															{
-																"box" : 																{
 																	"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 																	"fontname" : "Arial",
 																	"fontsize" : 12.0,
@@ -987,7 +928,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 50.0, 47.0, 271.0, 87.0 ],
-																	"text" : "j.parameter file/transpose @type decimal @range -12. 12. @clipmode none @dataspace time @dataspace/unit midi @ramp/drive Max @ramp/function linear @description \"Control soundfile playback speed/transposition as MIDI transposition.\""
+																	"text" : "j.parameter file/transpose @type decimal @range -12. 12. @clipmode none @dataspace time @unit midinote @ramp/drive max @ramp/function linear @description \"Control soundfile playback speed/transposition as MIDI transposition.\""
 																}
 
 															}
@@ -1028,8 +969,8 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
-																	"patching_rect" : [ 50.0, 144.0, 323.0, 20.0 ],
-																	"text" : "j.dataspace @dataspace time @input midi @output speed"
+																	"patching_rect" : [ 50.0, 144.0, 308.0, 20.0 ],
+																	"text" : "j.unit @dataspace time @input midinote @output speed"
 																}
 
 															}
@@ -1065,15 +1006,6 @@
 																	"disabled" : 0,
 																	"hidden" : 0,
 																	"source" : [ "obj-23", 0 ]
-																}
-
-															}
-, 															{
-																"patchline" : 																{
-																	"destination" : [ "obj-2", 0 ],
-																	"disabled" : 0,
-																	"hidden" : 0,
-																	"source" : [ "obj-27", 0 ]
 																}
 
 															}
@@ -1130,8 +1062,7 @@
 														"tags" : ""
 													}
 ,
-													"text" : "p transposeAndSpeedControl",
-													"viewvisibility" : 0
+													"text" : "p transposeAndSpeedControl"
 												}
 
 											}
@@ -1235,28 +1166,21 @@
 											}
 , 											{
 												"box" : 												{
-													"bgmode" : 0,
-													"border" : 0,
-													"clickthrough" : 0,
 													"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-													"enablehscroll" : 0,
-													"enablevscroll" : 0,
 													"fontname" : "Arial",
 													"fontsize" : 14.0,
 													"id" : "obj-5",
-													"lockeddragscroll" : 0,
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
-													"offset" : [ 0.0, 0.0 ],
 													"outlettype" : [ "loop_flag" ],
 													"patcher" : 													{
 														"fileversion" : 1,
 														"appversion" : 														{
-															"major" : 7,
-															"minor" : 0,
-															"revision" : 0,
-															"architecture" : "x86"
+															"major" : 6,
+															"minor" : 1,
+															"revision" : 9,
+															"architecture" : "x64"
 														}
 ,
 														"rect" : [ 448.0, 77.0, 832.0, 519.0 ],
@@ -1328,13 +1252,13 @@
 																	"fontname" : "Arial",
 																	"fontsize" : 12.0,
 																	"id" : "obj-94",
-																	"linecount" : 7,
+																	"linecount" : 6,
 																	"maxclass" : "newobj",
 																	"numinlets" : 1,
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 271.0, 363.0, 156.0, 100.0 ],
-																	"text" : "j.return file/time/absolute @type decimal @dataspace time @dataspace/unit s @description \"Current absolute position in sound file, expressed in seconds.\""
+																	"text" : "j.return file/time/absolute @type decimal @dataspace time @unit s @description \"Current absolute position in sound file, expressed in seconds.\""
 																}
 
 															}
@@ -1616,8 +1540,7 @@
 														"tags" : ""
 													}
 ,
-													"text" : "p playPosition",
-													"viewvisibility" : 0
+													"text" : "p playPosition"
 												}
 
 											}
@@ -1715,19 +1638,7 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "signal", "signal", "signal", "bang" ],
 													"patching_rect" : [ 187.0, 373.0, 154.0, 20.0 ],
-													"saved_object_attributes" : 													{
-														"basictuning" : 440,
-														"followglobaltempo" : 0,
-														"formant" : [ 1.0 ],
-														"formantcorrection" : 0,
-														"mode" : "basic",
-														"originallength" : [ 0.0, "ticks" ],
-														"originaltempo" : 120.0,
-														"pitchcorrection" : 0,
-														"quality" : "basic",
-														"timestretch" : [ 0 ]
-													}
-,
+													"save" : [ "#N", "sfplay~", "", 2, 403200, 1, "", ";" ],
 													"text" : "sfplay~ 2 403200 1"
 												}
 
@@ -2009,35 +1920,27 @@
 										"tags" : ""
 									}
 ,
-									"text" : "p sfplay~",
-									"viewvisibility" : 0
+									"text" : "p sfplay~"
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"annotation" : "none",
-									"bgmode" : 0,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-28",
-									"lockeddragscroll" : 0,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "signal" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 7,
-											"minor" : 0,
-											"revision" : 0,
-											"architecture" : "x86"
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 9,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 44.0, 59.0, 715.0, 558.0 ],
@@ -2093,24 +1996,16 @@
 , 											{
 												"box" : 												{
 													"annotation" : "A stereo limiter",
-													"bgmode" : 0,
-													"border" : 0,
-													"clickthrough" : 0,
-													"enablehscroll" : 0,
-													"enablevscroll" : 0,
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-11",
 													"linecount" : 2,
-													"lockeddragscroll" : 0,
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 3,
-													"offset" : [ 0.0, 0.0 ],
 													"outlettype" : [ "signal", "signal", "" ],
 													"patching_rect" : [ 67.0, 371.0, 131.0, 33.0 ],
-													"text" : "limiter~.model limiter @amenities none",
-													"viewvisibility" : 0
+													"text" : "limiter~.model limiter @amenities none"
 												}
 
 											}
@@ -2431,34 +2326,26 @@
 										"tags" : ""
 									}
 ,
-									"text" : "p input",
-									"viewvisibility" : 0
+									"text" : "p input"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgmode" : 0,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-29",
-									"lockeddragscroll" : 0,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 7,
-											"minor" : 0,
-											"revision" : 0,
-											"architecture" : "x86"
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 9,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 141.0, 153.0, 309.0, 396.0 ],
@@ -2485,13 +2372,13 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-44",
-													"linecount" : 7,
+													"linecount" : 6,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 48.0, 104.0, 186.0, 114.0 ],
-													"text" : "j.parameter testtone/frequency @type integer @ramp/drive Max @range 0.2 16000. @clipmode both @dataspace time @dataspace/unit Hz @description \"The Frequency of the test tone. in [Hz] by default.\"",
+													"text" : "j.parameter testtone/frequency @type integer @ramp/drive max @range 0.2 16000. @clipmode both @dataspace time @unit Hz @description \"The Frequency of the test tone. in [Hz] by default.\"",
 													"varname" : "ch_1[2]"
 												}
 
@@ -2615,34 +2502,26 @@
 										"tags" : ""
 									}
 ,
-									"text" : "p testtone~",
-									"viewvisibility" : 0
+									"text" : "p testtone~"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgmode" : 0,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-30",
-									"lockeddragscroll" : 0,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 7,
-											"minor" : 0,
-											"revision" : 0,
-											"architecture" : "x86"
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 9,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 40.0, 59.0, 344.0, 297.0 ],
@@ -2751,8 +2630,7 @@
 										"tags" : ""
 									}
 ,
-									"text" : "p pink~",
-									"viewvisibility" : 0
+									"text" : "p pink~"
 								}
 
 							}
@@ -3156,8 +3034,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p Sound_sources",
-					"viewvisibility" : 0
+					"text" : "p Sound_sources"
 				}
 
 			}
@@ -3273,29 +3150,29 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 7/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 7/patches/m4l-patches/Pluggo for Live resources/patches",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
-				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"patcherrelativepath" : "../../Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -3328,7 +3205,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

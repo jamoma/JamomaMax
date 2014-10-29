@@ -643,7 +643,7 @@
 					"framecolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 					"hint" : "choose which attribute to access",
 					"id" : "obj-26",
-					"items" : [ "active", ",", "bypass", ",", "dataspace", ",", "dataspace/unit", ",", "description", ",", "priority", ",", "ramp/drive", ",", "ramp/function", ",", "ramp/function/parameters", ",", "ramp/status", ",", "range", ",", "clipmode", ",", "repetitions/filter", ",", "service", ",", "tags", ",", "type", ",", "value", ",", "default", ",", "stepsize" ],
+					"items" : [ "active", ",", "bypass", ",", "dataspace", ",", "unit", ",", "description", ",", "priority", ",", "ramp/drive", ",", "ramp/function", ",", "ramp/function/parameters", ",", "ramp/status", ",", "range", ",", "clipmode", ",", "repetitions/filter", ",", "service", ",", "tags", ",", "type", ",", "value", ",", "default", ",", "stepsize" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,

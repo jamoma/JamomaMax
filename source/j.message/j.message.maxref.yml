@@ -63,7 +63,7 @@ attributes:
    desc: Set what dataspace used internally by the message for unit conversions.
    unit:
    default: none
- - name: dataspace/unit
+ - name: unit
    type: symbol
    desc: "The dataspace unit used for communication to the algorithm from the outside world."
    unit:
@@ -103,4 +103,4 @@ seealso:
  - j.parameter
  - j.hub
  - j.ramp
- - j.dataspace
+ - j.unit

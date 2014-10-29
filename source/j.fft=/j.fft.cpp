@@ -16,7 +16,7 @@
 
 #include "maxAudioGraph.h"
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	wrapAsMaxAudioGraph(TT("fft"), "j.fft=", NULL);
 	wrapAsMaxAudioGraph(TT("fft"), "fft=", NULL);

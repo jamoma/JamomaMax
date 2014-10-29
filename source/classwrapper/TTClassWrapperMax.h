@@ -18,20 +18,7 @@
 #include "TTFoundationAPI.h"		// Jamoma Foundation API
 #include "TTDSP.h"					// Jamoma DSP API
 
-#ifdef WIN_VERSION
-#define TTCLASSWRAPPERMAX_EXPORT __declspec(dllexport) 
-#else
-#define TTCLASSWRAPPERMAX_EXPORT __attribute__((visibility("default")))
-#endif
-
 // TYPE DEFINITIONS
-
-typedef t_class*	ClassPtr;
-typedef t_object*	ObjectPtr;
-typedef t_symbol*	SymbolPtr;
-typedef t_atom*		AtomPtr;
-typedef long		AtomCount;
-typedef t_max_err	MaxErr;
 
 typedef TTErr (*TTValidityCheckFunction)(const TTPtr data);		///< A type that can be used to store a pointer to a validity checking function.
 
@@ -44,8 +31,8 @@ typedef TTErr (*TTValidityCheckFunction)(const TTPtr data);		///< A type that ca
 class WrappedClassOptions;
 
 typedef struct _wrappedClass {
-	ClassPtr				maxClass;							///< The Max class pointer.
-	SymbolPtr				maxClassName;						///< The name to give the Max class.
+	t_class*				maxClass;							///< The Max class pointer.
+	t_symbol*				maxClassName;						///< The name to give the Max class.
 	TTSymbol				ttblueClassName;					///< The name of the class as registered with the TTBlue framework.
 	TTValidityCheckFunction validityCheck;						///< A function to call to validate the context for an object before it is instantiated.
 	TTPtr					validityCheckArgument;				///< An argument to pass to the validityCheck function when it is called.
@@ -96,9 +83,9 @@ typedef WrappedClassOptions* WrappedClassOptionsPtr;			///< A pointer to Wrapped
 typedef struct _wrappedInstance {
     t_pxobject 		obj;						///< Max audio object header
 	WrappedClassPtr	wrappedClassDefinition;		///< A pointer to the class definition
-	TTAudioObjectBase*	wrappedObject;				///< The instance of the TTBlue object we are wrapping
-	TTAudioSignal*	audioIn;					///< Audio input signal
-	TTAudioSignal*	audioOut;					///< Audio output signal
+	TTAudioObject*	wrappedObject;				///< The instance of the TTBlue object we are wrapping
+	TTAudio*		audioIn;					///< Audio input signal
+	TTAudio*		audioOut;					///< Audio output signal
 	TTUInt16		vs;
 	TTUInt16		maxNumChannels;				///< The number of channels for which this object is initialized to operate upon
 	TTUInt16		numChannels;				///< The actual number of channels in use
@@ -108,7 +95,7 @@ typedef struct _wrappedInstance {
 	TTSymbol*		controlSignalNames;			///< An array of attribute names for the control signals.
     
     TTPtr           controlOutlet;              ///< for output from a notification
-    TTObjectBasePtr	controlCallback;            ///< for output from a notification
+    TTObject*		controlCallback;            ///< for output from a notification
 	
 	t_bool			signals_connected[256];		///< which inlets and outlets are actually connected to audio signals
 } WrappedInstance;
@@ -124,9 +111,9 @@ typedef WrappedInstance* WrappedInstancePtr;	///< Pointer to a wrapped instance 
 
 // private:
 // self has to be TTPtr because different wrappers (such as the ui wrapper) have different implementations.
-t_max_err wrappedClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, AtomPtr* argv);
-t_max_err wrappedClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomPtr argv);
-void wrappedClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
+t_max_err wrappedClass_attrGet(TTPtr self, t_object* attr, long* argc, t_atom** argv);
+t_max_err wrappedClass_attrSet(TTPtr self, t_object* attr, long argc, t_atom* argv);
+void wrappedClass_anything(TTPtr self, t_symbol* s, long argc, t_atom* argv);
 void wrappedClass_assist(WrappedInstancePtr self, void *b, long msg, long arg, char *dst);
 
 
@@ -149,27 +136,11 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
 TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, WrappedClassPtr* c, TTValidityCheckFunction validityCheck, WrappedClassOptionsPtr options);
 TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, WrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument, WrappedClassOptionsPtr options);
 
+TTErr TTValueFromAtoms(TTValue& v, long ac, t_atom* av);
+TTErr TTAtomsFromValue(const TTValue& v, long* ac, t_atom** av); // NOTE: allocates memory
 
-
-
-// UTILS
-
-#ifdef __LP64__
-TTInt64	AtomGetInt(AtomPtr a);
-#else
-int AtomGetInt(AtomPtr a);
-#endif
-
-
-
-
-
-
-TTErr TTValueFromAtoms(TTValue& v, AtomCount ac, AtomPtr av);
-TTErr TTAtomsFromValue(const TTValue& v, AtomCount* ac, AtomPtr* av); // NOTE: allocates memory
-
-long TTMatrixReferenceJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix, TTBoolean copy = true);
-TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix);
-TTErr TTMatrixCopyDataToJitterMatrix(TTMatrixPtr aTTMatrix, TTPtr aJitterMatrix);
+long TTMatrixReferenceJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix, TTBoolean copy = true);
+TTErr TTMatrixCopyDataFromJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix);
+TTErr TTMatrixCopyDataToJitterMatrix(TTMatrix aMatrix, TTPtr aJitterMatrix);
 
 #endif // __TT_CLASS_WRAPPER_MAX_H__

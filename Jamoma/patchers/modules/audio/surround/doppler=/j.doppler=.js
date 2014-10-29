@@ -90,7 +90,7 @@ function numsources(value)
         // Create and connect doppler subpatches
         for (i=0; i<num_voices; i++)
         {            
-            outlet(0, "script", "newdefault", "doppler["+(i+1)+"]", (80+30*i), (330+25*i), "j.sur.ch.doppler~");
+            outlet(0, "script", "newdefault", "doppler["+(i+1)+"]", (80+30*i), (330+25*i), "j.ch.doppler=");
             outlet(0, "script", "connect", "unpack=",               i, "doppler["+(i+1)+"]",    0);
             outlet(0, "script", "connect", "doppler["+(i+1)+"]",    0, "pack=",                 i);
             outlet(0, "script", "connect", "active_gate",           i, "doppler["+(i+1)+"]",    1);

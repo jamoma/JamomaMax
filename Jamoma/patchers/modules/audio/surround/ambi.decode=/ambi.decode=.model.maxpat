@@ -390,7 +390,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 101.0, 131.0, 101.0, 55.0 ],
-													"text" : "j.dataspace @dataspace gain @input midi @output linear"
+													"text" : "j.unit @dataspace gain @input midigain @output linear"
 												}
 
 											}
@@ -1277,7 +1277,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 100.0, 98.0, 55.0 ],
-													"text" : "j.dataspace @dataspace gain @input midi @output linear"
+													"text" : "j.unit @dataspace gain @input midigain @output linear"
 												}
 
 											}
@@ -5598,7 +5598,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 602.0, 528.0, 296.0, 47.0 ],
-					"text" : "j.parameter orderWeights @type array @description \"manually set weights for given number of orders.\" @repetitions/filter 1 @ramp/drive Max"
+					"text" : "j.parameter orderWeights @type array @description \"manually set weights for given number of orders.\" @repetitions/filter 1 @ramp/drive max"
 				}
 
 			}
@@ -5659,7 +5659,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 601.0, 85.0, 546.0, 33.0 ],
-					"text" : "j.message.array 32 speaker position @type array @dataspace position @dataspace/unit xyz @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
+					"text" : "j.message.array 32 speaker position @type array @dataspace position @unit xyz @description \"Position of the Nth speaker. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -6127,7 +6127,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

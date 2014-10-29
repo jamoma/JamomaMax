@@ -149,7 +149,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 808.5, 167.0, 123.000061, 47.0 ],
-					"text" : "j.remote range @dataspace gain @dataspace/unit db",
+					"text" : "j.remote range @dataspace gain @unit db",
 					"varname" : "j.parameter.mxb[4]"
 				}
 
@@ -605,7 +605,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 145.0, 95.5, 60.0 ],
-									"text" : "j.dataspace @dataspace gain @input db @output linear"
+									"text" : "j.unit @dataspace gain @input db @output linear"
 								}
 
 							}
@@ -1215,7 +1215,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

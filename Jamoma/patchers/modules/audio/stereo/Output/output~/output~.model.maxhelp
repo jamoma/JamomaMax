@@ -373,7 +373,8 @@
 									"maxclass" : "bpatcher",
 									"name" : "j.attrParameters.helper.maxpat",
 									"numinlets" : 0,
-									"numoutlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 33.0, 24.0, 649.0, 495.0 ]
 								}
 
@@ -1271,7 +1272,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ -240.0, 70.0, 1680.0, 930.0 ],
+		"rect" : [ 0.0, 70.0, 1680.0, 930.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -68,7 +68,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -91,7 +91,6 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -215,13 +214,13 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 372.0, 118.0, 20.0 ],
+									"patching_rect" : [ 50.0, 372.0, 88.0, 20.0 ],
 									"saved_object_attributes" : 									{
-										"filename" : "j.sur.doppler.js",
+										"filename" : "j.doppler=.js",
 										"parameter_enable" : 0
 									}
 ,
-									"text" : "js j.sur.doppler.js",
+									"text" : "js j.doppler=.js",
 									"varname" : "javascript"
 								}
 
@@ -465,7 +464,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1244.0, 20.0, 136.0, 141.0 ],
-					"text" : "j.parameter_array source.[32]/position @type array @dataspace position @dataspace/unit xyz @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
+					"text" : "j.parameter_array source.[32]/position @type array @dataspace position @unit xyz @format single @description \"Position of the Nth source. In cartesian coordinates (xyz) by default \""
 				}
 
 			}
@@ -474,12 +473,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1002",
-					"linecount" : 8,
+					"linecount" : 7,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1447.0, 194.0, 147.0, 114.0 ],
+					"patching_rect" : [ 1447.0, 194.0, 153.0, 100.0 ],
 					"text" : "j.parameter metersPerUnit @type decimal @repetitions/filter 1 @range 0. 10. @clipmode low @description \"Meters per unit lengt as provided by the /aed messages.\"",
 					"varname" : "meters_per_unit"
 				}
@@ -524,8 +523,8 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 80.0, 330.0, 100.0, 20.0 ],
-					"text" : "j.sur.ch.doppler~",
+					"patching_rect" : [ 80.0, 330.0, 80.0, 20.0 ],
+					"text" : "j.ch.doppler=",
 					"varname" : "doppler[1]"
 				}
 
@@ -656,41 +655,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.sur.ch.doppler~.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.doppler~",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.sur.doppler.js",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.doppler~",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.pack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.unpack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter_array.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

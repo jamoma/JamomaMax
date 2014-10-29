@@ -175,12 +175,12 @@
 				Set what dataspace used internally by the message for unit conversions (angle, color, distance, gain, none, orientation, position, speed, temperature, time)
 			</description>
 		</attribute>
-		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
+		<attribute name="unit" get="1" set="1" type="symbol" size="1">
 			<digest>
 				The dataspace unit used for communication to the algorithm from the outside world
 			</digest>
 			<description>
-				The dataspace unit used for remote communication. Available values depend on the dataspace attribute value. See j.dataspace help patch for more information.			</description>
+				The dataspace unit used for remote communication. Available values depend on the dataspace attribute value. See j.unit help patch for more information.			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>

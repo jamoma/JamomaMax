@@ -1528,7 +1528,7 @@
                                     101.0,
                                     55.0
                                   ],
-                                  "text": "j.dataspace @dataspace gain @input midi @output linear"
+                                  "text": "j.unit @dataspace gain @input midigain @output linear"
                                 }
                               },
                               {
@@ -3118,7 +3118,7 @@
                             101.0,
                             55.0
                           ],
-                          "text": "j.dataspace @dataspace gain @input midi @output linear"
+                          "text": "j.unit @dataspace gain @input midigain @output linear"
                         }
                       },
                       {
@@ -8869,7 +8869,7 @@
                             324.0,
                             19.0
                           ],
-                          "text": "j.dataspace @dataspace position @input xyz @output aed"
+                          "text": "j.unit @dataspace position @input xyz @output aed"
                         }
                       },
                       {
@@ -11991,7 +11991,7 @@
             495.0,
             43.0
           ],
-          "text": "j.parameter center/decay @repetitions/filter 1 @type decimal @range 0 60 @clipmode low @description \"max. attenuation inside the center area in dB\" @dataspace gain @dataspace/unit dB",
+          "text": "j.parameter center/decay @repetitions/filter 1 @type decimal @range 0 60 @clipmode low @description \"max. attenuation inside the center area in dB\" @dataspace gain @unit dB",
           "varname": "destination/voices[4]"
         }
       },

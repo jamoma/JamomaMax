@@ -67,7 +67,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 487.0, 232.0, 215.0, 17.0 ],
-					"text" : "time:/dataspace/unit millisecond"
+					"text" : "time:/unit millisecond"
 				}
 
 			}
@@ -81,7 +81,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 487.0, 207.0, 194.0, 17.0 ],
-					"text" : "time:/dataspace/unit second"
+					"text" : "time:/unit second"
 				}
 
 			}
@@ -222,7 +222,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 442.0, 356.0, 293.0, 19.0 ],
-					"text" : "j.dataspace @dataspace time @input s @output ms"
+					"text" : "j.unit @dataspace time @input s @output ms"
 				}
 
 			}
@@ -693,7 +693,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

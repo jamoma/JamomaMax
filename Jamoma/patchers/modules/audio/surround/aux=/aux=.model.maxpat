@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -36,8 +36,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 632.5, 566.5, 50.0, 18.0 ],
-					"presentation_rect" : [ 632.5, 566.5, 0.0, 0.0 ]
+					"patching_rect" : [ 632.5, 566.5, 50.0, 18.0 ]
 				}
 
 			}
@@ -50,8 +49,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 654.0, 542.0, 50.0, 18.0 ],
-					"presentation_rect" : [ 654.0, 542.0, 0.0, 0.0 ]
+					"patching_rect" : [ 654.0, 542.0, 50.0, 18.0 ]
 				}
 
 			}
@@ -64,8 +62,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 678.0, 517.0, 50.0, 18.0 ],
-					"presentation_rect" : [ 678.0, 517.0, 0.0, 0.0 ]
+					"patching_rect" : [ 678.0, 517.0, 50.0, 18.0 ]
 				}
 
 			}
@@ -79,7 +76,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 766.5, 547.5, 50.0, 18.0 ],
-					"presentation_rect" : [ 766.5, 549.5, 0.0, 0.0 ]
+					"text" : "mute 1"
 				}
 
 			}
@@ -93,7 +90,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 788.0, 523.0, 50.0, 18.0 ],
-					"presentation_rect" : [ 788.0, 525.0, 0.0, 0.0 ]
+					"text" : "mute 1"
 				}
 
 			}
@@ -107,7 +104,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 812.0, 498.0, 50.0, 18.0 ],
-					"presentation_rect" : [ 812.0, 500.0, 0.0, 0.0 ]
+					"text" : "mute 1"
 				}
 
 			}
@@ -116,12 +113,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-17",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 930.5, 530.5, 50.0, 18.0 ],
-					"presentation_rect" : [ 929.0, 532.0, 0.0, 0.0 ]
+					"patching_rect" : [ 930.5, 530.5, 50.0, 31.0 ],
+					"text" : "linearGain 0."
 				}
 
 			}
@@ -130,12 +128,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-16",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 952.0, 506.0, 50.0, 18.0 ],
-					"presentation_rect" : [ 950.0, 506.0, 0.0, 0.0 ]
+					"patching_rect" : [ 952.0, 506.0, 50.0, 31.0 ],
+					"text" : "linearGain 0."
 				}
 
 			}
@@ -144,11 +143,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-15",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 976.0, 481.0, 50.0, 18.0 ]
+					"patching_rect" : [ 976.0, 481.0, 50.0, 31.0 ],
+					"text" : "linearGain 0."
 				}
 
 			}
@@ -166,7 +167,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -466,7 +467,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 903.0, 314.0, 105.0, 60.0 ],
-					"text" : "j.dataspace @dataspace gain @input db @output linear"
+					"text" : "j.unit @dataspace gain @input db @output linear"
 				}
 
 			}
@@ -633,11 +634,11 @@
 					"id" : "obj-1003",
 					"linecount" : 7,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 596.0, 90.5, 121.0, 100.0 ],
-					"text" : "j.parameter_array aux.[3]/description @type string @format single @description \"Descriptive text for the auxiliary bus.\"",
+					"text" : "j.message_array aux.[3]/description @type string @format single @description \"Descriptive text for the auxiliary bus.\"",
 					"varname" : "aux.1/description"
 				}
 
@@ -653,7 +654,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 742.0, 90.5, 108.0, 114.0 ],
-					"text" : "j.parameter_array aux.[3]/active @type boolean @format single @description \"Switch the auxiliary bus on and off.\"",
+					"text" : "j.message_array aux.[3]/active @type boolean @format single @description \"Switch the auxiliary bus on and off.\"",
 					"varname" : "aux.1/active"
 				}
 
@@ -668,8 +669,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 903.0, 90.5, 148.0, 181.0 ],
-					"text" : "j.parameter_array aux.[3]/gain @repetitions/filter 1 @type decimal @range -70. 12. @clipmode both @ramp/drive Max @dataspace gain @dataspace/unit db @format single @description \"Gain of the input cable applied to the auxiliary bus.\"",
+					"patching_rect" : [ 903.0, 90.5, 132.0, 181.0 ],
+					"text" : "j.parameter_array aux.[3]/gain @repetitions/filter 1 @type decimal @range -70. 12. @clipmode both @ramp/drive Max @dataspace gain @unit db @format single @description \"Gain of the input cable applied to the auxiliary bus.\"",
 					"varname" : "aux.1/gain"
 				}
 
@@ -1040,7 +1041,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter_array.mxo",
+				"name" : "j.message_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1048,7 +1049,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

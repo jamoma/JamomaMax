@@ -20,14 +20,14 @@
 
 /** A base class for Jamoma models
  */
-class TTMODULAR_EXPORT TTModelInfo : public TTDataObjectBase
+class TTMODULAR_EXPORT TTModelInfo : public TTObjectBase
 {
 	TTCLASS_SETUP(TTModelInfo)
     
     TTAddress           mAddress;               ///< ATTRIBUTE : the address of the model (for j.model) or the address of the model to bind (j.view)
     TTSymbol            mClass;                 ///< ATTRIBUTE : the class name of the model
     
-    ObjectPtr           mObject;                ///< cache the max object
+    t_object            *mObject;                ///< cache the max object
     
     TTAttributePtr      addressAttribute;       ///< cache address attribute for observer notification
     
@@ -40,6 +40,12 @@ public:
     TTErr setAddress(const TTValue& newValue);
     
     void setAddressReadOnly(TTBoolean readOnly);
+    
+    /** Rename the model
+     @param inputValue      a new name.instance #TTSymbol
+     @param outputValue     the effective #TTSymbol name.instance
+     @return #TTErr error code */
+    TTErr Rename(const TTValue& inputValue, TTValue& outputValue);
     
     /** Open the internal patcher
      @return    TTErr       kTTErrNone

@@ -781,7 +781,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 267.0, 418.0, 124.0, 92.0 ],
-					"text" : "j.return position @type array @range 0. 1. @dataspace position @dataspace/unit xy @description \"Position of the Wacom tool\""
+					"text" : "j.return position @type array @range 0. 1. @dataspace position @unit xy @description \"Position of the Wacom tool\""
 				}
 
 			}

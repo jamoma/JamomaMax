@@ -334,7 +334,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 650.0, 446.5, 358.0, 33.0 ],
-									"text" : "j.message myFloat @clipmode none @type decimal @ramp/drive Max @description \"My float\"",
+									"text" : "j.message myFloat @clipmode none @type decimal @ramp/drive max @description \"My float\"",
 									"varname" : "my_float"
 								}
 

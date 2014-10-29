@@ -444,7 +444,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 418.0, 155.0, 319.0, 20.0 ],
-					"text" : "j.dataspace @dataspace time @input Hz @output ms"
+					"text" : "j.unit @dataspace time @input Hz @output ms"
 				}
 
 			}
@@ -1063,7 +1063,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 580.5, 260.0, 370.0, 43.0 ],
-					"text" : "j.parameter stability @repetitions/filter 1 @type integer @range 1 100 @clipmode none @description \"stability of the picture in horizontal and vertical dimension\" @ramp/drive Max",
+					"text" : "j.parameter stability @repetitions/filter 1 @type integer @range 1 100 @clipmode none @description \"stability of the picture in horizontal and vertical dimension\" @ramp/drive max",
 					"varname" : "hue_angle[5]"
 				}
 
@@ -1080,7 +1080,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 418.0, 106.0, 308.0, 43.0 ],
-					"text" : "j.parameter updaterate @repetitions/filter 1 @type integer @range 1 100 @clipmode low @description \"update rate for changes in the effect\" @ramp/drive Max",
+					"text" : "j.parameter updaterate @repetitions/filter 1 @type integer @range 1 100 @clipmode low @description \"update rate for changes in the effect\" @ramp/drive max",
 					"varname" : "hue_angle[4]"
 				}
 
@@ -1097,7 +1097,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 206.5, 125.0, 191.0, 55.0 ],
-					"text" : "j.parameter fade @repetitions/filter 1 @type decimal @range 0. 1. @clipmode both @description \"over saturation effect\" @ramp/drive Max",
+					"text" : "j.parameter fade @repetitions/filter 1 @type decimal @range 0. 1. @clipmode both @description \"over saturation effect\" @ramp/drive max",
 					"varname" : "hue_angle[3]"
 				}
 
@@ -1114,7 +1114,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 134.960266, 73.0, 588.0, 31.0 ],
-					"text" : "j.parameter noise/granularity.y @repetitions/filter 1 @type integer @range 0. 100. @clipmode low @description \"Size of the noise particles in y dimension\" @ramp/drive Max",
+					"text" : "j.parameter noise/granularity.y @repetitions/filter 1 @type integer @range 0. 100. @clipmode low @description \"Size of the noise particles in y dimension\" @ramp/drive max",
 					"varname" : "hue_angle[2]"
 				}
 
@@ -1131,7 +1131,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 61.579529, 40.0, 588.0, 31.0 ],
-					"text" : "j.parameter noise/granularity.x @repetitions/filter 1 @type integer @range 0. 100. @clipmode low @description \"Size of the noise particles in x dimension\" @ramp/drive Max",
+					"text" : "j.parameter noise/granularity.x @repetitions/filter 1 @type integer @range 0. 100. @clipmode low @description \"Size of the noise particles in x dimension\" @ramp/drive max",
 					"varname" : "hue_angle[1]"
 				}
 
@@ -1162,7 +1162,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 8.0, 7.0, 594.0, 31.0 ],
-					"text" : "j.parameter noise/probability @repetitions/filter 1 @type decimal @range 0. 1. @clipmode both @description \"Set the amount of 'snow' on the TV \" @ramp/drive Max",
+					"text" : "j.parameter noise/probability @repetitions/filter 1 @type decimal @range 0. 1. @clipmode both @description \"Set the amount of 'snow' on the TV \" @ramp/drive max",
 					"varname" : "hue_angle"
 				}
 
@@ -1834,7 +1834,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

@@ -37,7 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 211.0, 420.0, 100.0, 20.0 ],
-					"text" : "j.dataspace"
+					"text" : "j.unit"
 				}
 
 			}
@@ -1342,7 +1342,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
  ]

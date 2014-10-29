@@ -21,9 +21,9 @@
 /************************************************************************************/
 // Main() Function
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
-	ClassPtr c;
+	t_class* c;
 	
 	TTAudioGraphInit();	
 	common_symbols_init();
@@ -48,7 +48,7 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 /************************************************************************************/
 // Object Creation Method
 
-PackPtr PackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
+PackPtr PackNew(t_symbol* msg, long argc, t_atom* argv)
 {
    PackPtr	self;
 	TTValue	sr(sys_getsr());
@@ -67,13 +67,13 @@ PackPtr PackNew(SymbolPtr msg, AtomCount argc, AtomPtr argv)
 		
 		// Create an embedded Jamoma AudioGraph object functioning as a signal generator.
 		v.resize(3);
-		v.set(0, TT("audio.generator"));
-		v.set(1, 0); // no audio graph inlets (only msp inlets)
-		v.set(2, 1); // one audio graph outlet
+		v[0] = "audio.generator";
+		v[1] = 0; // no audio graph inlets (only msp inlets)
+		v[2] = 1; // one audio graph outlet
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 		self->audioGraphObject->addAudioFlag(kTTAudioGraphGenerator);
 		// Self check and return error if this did not work out.
-		if (!self->audioGraphObject->getUnitGenerator()) {
+		if (!self->audioGraphObject->getUnitGenerator().valid()) {
 			object_error(SELF, "cannot load audio.generator");
 			return NULL;
 		}
@@ -132,21 +132,21 @@ TTErr PackSetup(PackPtr self)
 {
 	t_atom a[2];
 	
-	atom_setobj(a+0, ObjectPtr(self->audioGraphObject));
+	atom_setobj(a+0, (t_object*)(self->audioGraphObject));
 	atom_setlong(a+1, 0);
 	outlet_anything(self->audioGraphObjectOutlet, gensym("audio.connect"), 2, a);
 	return kTTErrNone;
 }
 
 
-void PackPerform64(PackPtr self, ObjectPtr dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
+void PackPerform64(PackPtr self, t_object* dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {	
 	for (TTUInt32 i=0; i < self->numChannels; i++)
-		TTAudioGraphGeneratorPtr(self->audioGraphObject->getUnitGenerator())->mBuffer->setVector64Copy(i, self->vectorSize, ins[i]);
+		TTAudioGraphGeneratorPtr(self->audioGraphObject->getUnitGenerator().instance())->mBuffer->setVector64Copy(i, self->vectorSize, ins[i]);
 }
 
 
-void PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, long maxvectorsize, long flags)
+void PackDsp64(PackPtr self, t_object* dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
 	self->vectorSize = maxvectorsize;
 	
@@ -169,10 +169,10 @@ void PackDsp64(PackPtr self, ObjectPtr dsp64, short *count, double samplerate, l
 	self->numChannels = self->maxNumChannels;
 	self->audioGraphObject->setOutputNumChannels(0, self->numChannels);
 	
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_vectorSize, self->vectorSize);
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_maxNumChannels, self->maxNumChannels);
-	self->audioGraphObject->getUnitGenerator()->setAttributeValue(kTTSym_sampleRate, samplerate);
+	self->audioGraphObject->getUnitGenerator().set(kTTSym_vectorSize, self->vectorSize);
+	self->audioGraphObject->getUnitGenerator().set(kTTSym_maxNumChannels, self->maxNumChannels);
+	self->audioGraphObject->getUnitGenerator().set(kTTSym_sampleRate, samplerate);
 	
 	object_method(dsp64, gensym("dsp_add64"), self,PackPerform64, 0, NULL); 
-	//dsp_add64(dsp64, (ObjectPtr)self, (t_perfroutine64)PackPerform64, 0, NULL);
+	//dsp_add64(dsp64, (t_object*)self, (t_perfroutine64)PackPerform64, 0, NULL);
 }

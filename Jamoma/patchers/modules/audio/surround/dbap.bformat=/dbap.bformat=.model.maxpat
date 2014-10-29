@@ -354,7 +354,7 @@
                             102.0,
                             55.0
                           ],
-                          "text": "j.dataspace @dataspace gain @input midi @output linear"
+                          "text": "j.unit @dataspace gain @input midigain @output linear"
                         }
                       },
                       {
@@ -996,7 +996,7 @@
                     102.0,
                     55.0
                   ],
-                  "text": "j.dataspace @dataspace gain @input midi @output linear"
+                  "text": "j.unit @dataspace gain @input midigain @output linear"
                 }
               },
               {
@@ -2138,7 +2138,7 @@
             577.0,
             31.0
           ],
-          "text": "j.message.array 8 source gain @type decimal @dataspace gain @dataspace/unit linear @description \"Input gain for the nth source.\""
+          "text": "j.message.array 8 source gain @type decimal @dataspace gain @unit linear @description \"Input gain for the nth source.\""
         }
       },
       {
@@ -2184,7 +2184,7 @@
             602.0,
             31.0
           ],
-          "text": "j.message.array 32 speaker position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+          "text": "j.message.array 32 speaker position @type array @dataspace position @unit xyz @description \"Position of the nth source.\""
         }
       },
       {
@@ -2207,7 +2207,7 @@
             589.0,
             31.0
           ],
-          "text": "j.message.array 8 source position @type array @dataspace position @dataspace/unit xyz @description \"Position of the nth source.\""
+          "text": "j.message.array 8 source position @type array @dataspace position @unit xyz @description \"Position of the nth source.\""
         }
       },
       {

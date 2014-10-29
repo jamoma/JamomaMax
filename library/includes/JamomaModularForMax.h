@@ -26,8 +26,8 @@
 #include "TTOutput.h"
 
 extern JAMOMA_EXPORT	TTSymbol			kTTSym_Jamoma;			///<
-extern JAMOMA_EXPORT	TTApplicationPtr	JamomaApplication;		///<
-extern JAMOMA_EXPORT	TTNodeDirectoryPtr	JamomaDirectory;		///<
+extern JAMOMA_EXPORT	TTObject            JamomaApplicationManager;///<
+extern JAMOMA_EXPORT	TTObject            JamomaApplication;		///<
 
 extern JAMOMA_EXPORT	TTRegex*			ttRegexForJmod;			///< A global regex to parse jmod. (usefull to detect a 0.5 module)
 extern JAMOMA_EXPORT	TTRegex*			ttRegexForJcom;			///< A global regex to parse j.
@@ -48,16 +48,7 @@ extern JAMOMA_EXPORT	TTString*			DocumentationFormat;	///<
 #define ModelPatcher "model" 
 #define ViewPatcher "view"
 
-#define JamomaDebug if (getLocalApplicationDebug)
-
-
-// Method to deal with the jamoma directory
-/////////////////////////////////////////
-
-/** Dump all the OSC address of the directory in the max window.
- @return						#TTErr error message if the method does not execute as expected.
- */
-TTErr JAMOMA_EXPORT jamoma_directory_dump_observers(void);
+#define JamomaDebug if (accessApplicationLocalDebug)
 
 
 // Methods to deal with TTSubscriber
@@ -66,7 +57,7 @@ TTErr JAMOMA_EXPORT jamoma_directory_dump_observers(void);
 /**	Create a #TTSubscriber object and register a #TTObject into the tree
  or, if aTTObject is NULL, retrieve all context info to bind on an object.
  @param x
- @param aTTObjectBase
+ @param anObject
  @param relativeAddress
  @param returnedSubscriber		Pointer to the new #TTSubscriber object.
  @param returnedAddress
@@ -74,7 +65,7 @@ TTErr JAMOMA_EXPORT jamoma_directory_dump_observers(void);
  @param returnedContextNode
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_subscriber_create(ObjectPtr x, TTObjectBasePtr aTTObjectBase, TTAddress relativeAddress, TTSubscriberPtr *returnedSubscriber, TTSymbol& returnedAddress, TTNodePtr *returnedNode, TTNodePtr *returnedContextNode);
+TTErr JAMOMA_EXPORT jamoma_subscriber_create(t_object *x, TTObject& anObject, TTAddress relativeAddress, TTObject& returnedSubscriber, TTSymbol& returnedAddress, TTNodePtr *returnedNode, TTNodePtr *returnedContextNode);
 
 
 /** Get the <patcher name, patcher pointer> list above an external.
@@ -82,7 +73,7 @@ TTErr JAMOMA_EXPORT jamoma_subscriber_create(ObjectPtr x, TTObjectBasePtr aTTObj
  @param x
  @param aContextListToFill
  */
-void JAMOMA_EXPORT jamoma_subscriber_get_patcher_list(ObjectPtr x, TTList& aContextListToFill);
+void JAMOMA_EXPORT jamoma_subscriber_get_patcher_list(t_object *x, TTList& aContextListToFill);
 
 
 
@@ -94,7 +85,7 @@ void JAMOMA_EXPORT jamoma_subscriber_get_patcher_list(ObjectPtr x, TTList& aCont
  @param returnedContainer
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_container_create(ObjectPtr x, TTObjectBasePtr *returnedContainer);
+TTErr JAMOMA_EXPORT jamoma_container_create(t_object *x, TTObject& returnedContainer);
 
 
 /**	Send Max data to a node (e.g., a j.parameter object) using a #TTContainer object.
@@ -104,7 +95,7 @@ TTErr JAMOMA_EXPORT jamoma_container_create(ObjectPtr x, TTObjectBasePtr *return
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_container_send(TTContainerPtr aContainer, SymbolPtr relativeAddressAndAttribute, AtomCount argc, AtomPtr argv);
+TTErr JAMOMA_EXPORT jamoma_container_send(TTObject& aContainer, t_symbol *relativeAddressAndAttribute, long argc, const t_atom *argv);
 
 
 
@@ -116,7 +107,7 @@ TTErr JAMOMA_EXPORT jamoma_container_send(TTContainerPtr aContainer, SymbolPtr r
  @param returnedNodeInfo
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_node_info_create(ObjectPtr x, TTObjectBasePtr *returnedNodeInfo);
+TTErr JAMOMA_EXPORT jamoma_node_info_create(t_object *x, TTObject& returnedNodeInfo);
 
 
 
@@ -129,7 +120,7 @@ TTErr JAMOMA_EXPORT jamoma_node_info_create(ObjectPtr x, TTObjectBasePtr *return
  @param service
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_data_create(ObjectPtr x, TTObjectBasePtr *returnedData, TTSymbol service);
+TTErr JAMOMA_EXPORT jamoma_data_create(t_object *x, TTObject& returnedData, TTSymbol service);
 
 
 /**	Set the #TTData value attribute using the #TTData::Command method.
@@ -139,7 +130,7 @@ TTErr JAMOMA_EXPORT jamoma_data_create(ObjectPtr x, TTObjectBasePtr *returnedDat
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_data_command(TTDataPtr aData, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+TTErr JAMOMA_EXPORT jamoma_data_command(TTObject& aData, t_symbol *msg, long argc, const t_atom *argv);
 
 
 
@@ -151,7 +142,7 @@ TTErr JAMOMA_EXPORT jamoma_data_command(TTDataPtr aData, SymbolPtr msg, AtomCoun
  @param returnedSender
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_sender_create(ObjectPtr x, TTObjectBasePtr *returnedSender);
+TTErr JAMOMA_EXPORT jamoma_sender_create(t_object *x, TTObject& returnedSender);
 
 
 /**	Create a #TTSender object for audio signal.
@@ -159,7 +150,7 @@ TTErr JAMOMA_EXPORT jamoma_sender_create(ObjectPtr x, TTObjectBasePtr *returnedS
  @param returnedSender
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_sender_create_audio(ObjectPtr x, TTObjectBasePtr *returnedSender);
+TTErr JAMOMA_EXPORT jamoma_sender_create_audio(t_object *x, TTObject& returnedSender);
 
 
 /**	Send Max data using a #TTSender object.
@@ -169,7 +160,7 @@ TTErr JAMOMA_EXPORT jamoma_sender_create_audio(ObjectPtr x, TTObjectBasePtr *ret
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_sender_send(TTSenderPtr aSender, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+TTErr JAMOMA_EXPORT jamoma_sender_send(TTObject& aSender, t_symbol *msg, long argc, const t_atom *argv);
 
 
 
@@ -181,7 +172,7 @@ TTErr JAMOMA_EXPORT jamoma_sender_send(TTSenderPtr aSender, SymbolPtr msg, AtomC
  @param returnedReceiver
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_receiver_create(ObjectPtr x, TTObjectBasePtr *returnedReceiver);
+TTErr JAMOMA_EXPORT jamoma_receiver_create(t_object *x, TTObject& returnedReceiver);
 
 
 /**	Create a #TTReceiver object for audio signal.
@@ -189,7 +180,7 @@ TTErr JAMOMA_EXPORT jamoma_receiver_create(ObjectPtr x, TTObjectBasePtr *returne
  @param returnedReceiver
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_receiver_create_audio(ObjectPtr x, TTObjectBasePtr *returnedReceiver);
+TTErr JAMOMA_EXPORT jamoma_receiver_create_audio(t_object *x, TTObject& returnedReceiver);
 
 
 
@@ -201,7 +192,7 @@ TTErr JAMOMA_EXPORT jamoma_receiver_create_audio(ObjectPtr x, TTObjectBasePtr *r
  @param returnedPresetManager
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_presetManager_create(ObjectPtr x, TTObjectBasePtr *returnedPresetManager);
+TTErr JAMOMA_EXPORT jamoma_presetManager_create(t_object *x, TTObject& returnedPresetManager);
 
 
 /**	Create a #TTCueManager object.
@@ -209,7 +200,7 @@ TTErr JAMOMA_EXPORT jamoma_presetManager_create(ObjectPtr x, TTObjectBasePtr *re
  @param returnedCueManager
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_cueManager_create(ObjectPtr x, TTObjectBasePtr *returnedCueManager);
+TTErr JAMOMA_EXPORT jamoma_cueManager_create(t_object *x, TTObject& returnedCueManager);
 
 
 
@@ -221,7 +212,7 @@ TTErr JAMOMA_EXPORT jamoma_cueManager_create(ObjectPtr x, TTObjectBasePtr *retur
  @param returnedInput
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_input_create(ObjectPtr x, TTObjectBasePtr *returnedInput);
+TTErr JAMOMA_EXPORT jamoma_input_create(t_object *x, TTObject& returnedInput);
 
 
 /**	Create a #TTInput object for audio signal. 
@@ -229,7 +220,7 @@ TTErr JAMOMA_EXPORT jamoma_input_create(ObjectPtr x, TTObjectBasePtr *returnedIn
  @param returnedInput
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_input_create_audio(ObjectPtr x, TTObjectBasePtr *returnedInput);
+TTErr JAMOMA_EXPORT jamoma_input_create_audio(t_object *x, TTObject& returnedInput);
 
 
 /**	Send any signal to a TTInput object.
@@ -239,7 +230,7 @@ TTErr JAMOMA_EXPORT jamoma_input_create_audio(ObjectPtr x, TTObjectBasePtr *retu
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_input_send(TTInputPtr anInput, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+TTErr JAMOMA_EXPORT jamoma_input_send(TTObject& anInput, t_symbol *msg, long argc, const t_atom *argv);
 
 
 
@@ -251,7 +242,7 @@ TTErr JAMOMA_EXPORT jamoma_input_send(TTInputPtr anInput, SymbolPtr msg, AtomCou
  @param returnedOutput
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_output_create(ObjectPtr x, TTObjectBasePtr *returnedOutput);
+TTErr JAMOMA_EXPORT jamoma_output_create(t_object *x, TTObject& returnedOutput);
 
 
 /**	Create an output object for audio signal.
@@ -259,7 +250,7 @@ TTErr JAMOMA_EXPORT jamoma_output_create(ObjectPtr x, TTObjectBasePtr *returnedO
  @param returnedOutput
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_output_create_audio(ObjectPtr x, TTObjectBasePtr *returnedOutput);
+TTErr JAMOMA_EXPORT jamoma_output_create_audio(t_object *x, TTObject& returnedOutput);
 
 
 /**	Send any signal to a TTOutput object.
@@ -269,7 +260,7 @@ TTErr JAMOMA_EXPORT jamoma_output_create_audio(ObjectPtr x, TTObjectBasePtr *ret
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_output_send(TTOutputPtr anOutput, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+TTErr JAMOMA_EXPORT jamoma_output_send(TTObject& anOutput, t_symbol *msg, long argc, const t_atom *argv);
 
 
 // Method to deal with TTMapper
@@ -280,7 +271,7 @@ TTErr JAMOMA_EXPORT jamoma_output_send(TTOutputPtr anOutput, SymbolPtr msg, Atom
  @param returnedMapper
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_mapper_create(ObjectPtr x, TTObjectBasePtr *returnedMapper);
+TTErr JAMOMA_EXPORT jamoma_mapper_create(t_object *x, TTObject& returnedMapper);
 
 
 
@@ -292,7 +283,7 @@ TTErr JAMOMA_EXPORT jamoma_mapper_create(ObjectPtr x, TTObjectBasePtr *returnedM
  @param returnedViewer
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_viewer_create(ObjectPtr x, TTObjectBasePtr *returnedViewer);
+TTErr JAMOMA_EXPORT jamoma_viewer_create(t_object *x, TTObject& returnedViewer);
 
 
 /**	Send Max data using a #TTViewer object.
@@ -302,7 +293,7 @@ TTErr JAMOMA_EXPORT jamoma_viewer_create(ObjectPtr x, TTObjectBasePtr *returnedV
  @param argv					Pointer to the array of arguments.
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_viewer_send(TTViewerPtr aViewer, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+TTErr JAMOMA_EXPORT jamoma_viewer_send(TTObject& aViewer, t_symbol *msg, long argc, const t_atom *argv);
 
 
 
@@ -314,7 +305,7 @@ TTErr JAMOMA_EXPORT jamoma_viewer_send(TTViewerPtr aViewer, SymbolPtr msg, AtomC
  @param returnedExplorer
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_explorer_create(ObjectPtr x, TTObjectBasePtr *returnedExplorer);
+TTErr JAMOMA_EXPORT jamoma_explorer_create(t_object *x, TTObject& returnedExplorer);
 
 
 /** 
@@ -332,7 +323,7 @@ TTHashPtr JAMOMA_EXPORT jamoma_explorer_default_filter_bank(void);
  @param returnedRamp
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_ramp_create(ObjectPtr x, TTObjectBasePtr *returnedRamp);
+TTErr JAMOMA_EXPORT jamoma_ramp_create(t_object *x, TTObject& returnedRamp);
 
 
 /**
@@ -351,35 +342,35 @@ void JAMOMA_EXPORT jamoma_callback_return_ramped_value(void *o, TTUInt32 n, TTFl
  @param baton
  @param v
  */
-void JAMOMA_EXPORT jamoma_callback_return_address(TTPtr baton, TTValue& v);
+void JAMOMA_EXPORT jamoma_callback_return_address(const TTValue& baton, const TTValue& v);
 
 
 /** Return the value to a j.* external as msg, argc, argv.
  @param baton       The Max wrapper object
  @param v           The value(s) being passed back. This is passed back as an array of three argumens: msg, argc and argv
  */
-void JAMOMA_EXPORT jamoma_callback_return_value(TTPtr baton, TTValue& v);
+void JAMOMA_EXPORT jamoma_callback_return_value(const TTValue& baton, const TTValue& v);
 
 
 /** Return the value to a j.* external as msg, argc, argv. The msg part carries information about what type of atom(s) we are getting, 
  @param baton       The Max wrapper object
  @param v           The value(s) being passed back. This is passed back as an array of three argumens: msg, argc and argv
  */
-void JAMOMA_EXPORT jamoma_callback_return_value_typed(TTPtr baton, TTValue& v);
+void JAMOMA_EXPORT jamoma_callback_return_value_typed(const TTValue& baton, const TTValue& v);
 
 
 /** Return any signal.
  @param baton
  @param v
  */
-void JAMOMA_EXPORT jamoma_callback_return_signal(TTPtr baton, TTValue& v);
+void JAMOMA_EXPORT jamoma_callback_return_signal(const TTValue& baton, const TTValue& v);
 
 
 /** Return audio signal.
  @param baton
  @param v
  */
-void JAMOMA_EXPORT jamoma_callback_return_signal_audio(TTPtr baton, TTValue& v);
+void JAMOMA_EXPORT jamoma_callback_return_signal_audio(const TTValue& baton, const TTValue& v);
 
 
 
@@ -389,7 +380,7 @@ void JAMOMA_EXPORT jamoma_callback_return_signal_audio(TTPtr baton, TTValue& v);
 /** Convenient method to get the patcher easily.
  @param obj
  */
-ObjectPtr JAMOMA_EXPORT jamoma_patcher_get(ObjectPtr obj);
+t_object *JAMOMA_EXPORT jamoma_patcher_get(t_object *obj);
 
 
 /** Convenient method to get the patcher argument easily.
@@ -405,18 +396,18 @@ void JAMOMA_EXPORT jamoma_patcher_get_args(t_object *patcher, long *argc, t_atom
  @param patcher
  @return
  */
-SymbolPtr JAMOMA_EXPORT jamoma_patcher_get_hierarchy(ObjectPtr patcher);
+t_symbol *JAMOMA_EXPORT jamoma_patcher_get_hierarchy(t_object *patcher);
 
 
 /** Get the context from the upper jcom model|view in the patcher or from patcher's name.
  @param patcher
  @param returnedContext
  */
-void JAMOMA_EXPORT jamoma_patcher_get_context(ObjectPtr *patcher, TTSymbol& returnedContext);
+void JAMOMA_EXPORT jamoma_patcher_get_context(t_object **patcher, TTSymbol& returnedContext);
 
 
 /** Get the class of the patcher from the file name (removing .model and .view convention name if they are in) */
-void JAMOMA_EXPORT jamoma_patcher_get_class(ObjectPtr patcher,  TTSymbol context, TTSymbol& returnedClass);
+void JAMOMA_EXPORT jamoma_patcher_get_class(t_object *patcher, TTSymbol context, TTSymbol& returnedClass);
 
 
 /** Get the name of the patcher from his arguments.
@@ -424,7 +415,7 @@ void JAMOMA_EXPORT jamoma_patcher_get_class(ObjectPtr patcher,  TTSymbol context
  @param context
  @param returnedName
  */
-void JAMOMA_EXPORT jamoma_patcher_get_name(ObjectPtr patcher, TTSymbol context, TTSymbol& returnedName);
+void JAMOMA_EXPORT jamoma_patcher_get_name(t_object *patcher, TTSymbol context, TTSymbol& returnedName);
 
 /** Get all context info from the root jcom model|view in the patcher.
  @param patcher
@@ -433,14 +424,14 @@ void JAMOMA_EXPORT jamoma_patcher_get_name(ObjectPtr patcher, TTSymbol context, 
  @param returnedClass
  @param returnedName
  */
-void JAMOMA_EXPORT jamoma_patcher_share_info(ObjectPtr patcher, ObjectPtr *returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass,  TTSymbol& returnedName);
+void JAMOMA_EXPORT jamoma_patcher_share_info(t_object *patcher, t_object **returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass,  TTSymbol& returnedName);
 
 
 /** Get patcher's node from the root jcom model|view in the patcher.
  @param obj
  @param patcherNode
  */
-void JAMOMA_EXPORT jamoma_patcher_share_node(ObjectPtr obj, TTNodePtr *patcherNode);
+void JAMOMA_EXPORT jamoma_patcher_share_node(t_object *obj, TTNodePtr *patcherNode);
 
 
 /** Get all context info from an object (his patcher and the context, the class and the name of his patcher).
@@ -451,20 +442,20 @@ void JAMOMA_EXPORT jamoma_patcher_share_node(ObjectPtr obj, TTNodePtr *patcherNo
  @param returnedName
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_patcher_get_info(ObjectPtr obj, ObjectPtr *returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass,  TTSymbol& returnedName);
+TTErr JAMOMA_EXPORT jamoma_patcher_get_info(t_object *obj, t_object **returnedPatcher, TTSymbol& returnedContext, TTSymbol& returnedClass, TTSymbol& returnedName);
 
 /** Get j.model or j.view of a patcher 
  @param patcher
  @param returnedModelOrView
  */
-void JAMOMA_EXPORT jamoma_patcher_get_model_or_view(ObjectPtr patcher, ObjectPtr *returnedModelOrView);
+void JAMOMA_EXPORT jamoma_patcher_get_model_or_view(t_object *patcher, t_object **returnedModelOrView);
 
 /** Get the "aClass.model" external in the patcher.
  @param patcher
  @param modelClass
  @param returnedModelPatcher
  */
-void JAMOMA_EXPORT jamoma_patcher_get_model_patcher(ObjectPtr patcher, TTSymbol modelClass, ObjectPtr *returnedModelPatcher);
+void JAMOMA_EXPORT jamoma_patcher_get_model_patcher(t_object *patcher, TTSymbol modelClass, t_object **returnedModelPatcher);
 
 /** Look into the given patcher to know if there are data or audio inputs and outputs
  @param patcher
@@ -492,7 +483,7 @@ TTBoolean JAMOMA_EXPORT jamoma_patcher_get_ui(t_object *patcher);
  @param argv					Pointer to the array of arguments.
  @param shifted
  */
-void JAMOMA_EXPORT jamoma_ttvalue_to_typed_Atom(const TTValue& v, SymbolPtr *msg, AtomCount *argc, AtomPtr *argv, TTBoolean& shifted);
+void JAMOMA_EXPORT jamoma_ttvalue_to_typed_Atom(const TTValue& v, t_symbol **msg, long *argc, t_atom **argv, TTBoolean& shifted);
 
 
 /** Make an Atom array from a #TTValue. (NB: This method allocate memory for the Atom array. Make sure to free it afterwards!)
@@ -500,7 +491,7 @@ void JAMOMA_EXPORT jamoma_ttvalue_to_typed_Atom(const TTValue& v, SymbolPtr *msg
  @param argc					The number of arguments of the message.
  @param argv					Pointer to the array of arguments.
  */
-void JAMOMA_EXPORT jamoma_ttvalue_to_Atom(const TTValue& v, AtomCount *argc, AtomPtr *argv);
+void JAMOMA_EXPORT jamoma_ttvalue_to_Atom(const TTValue& v, long *argc, t_atom **argv);
 
 
 /** Make a #TTValue from Atom array. 
@@ -509,15 +500,15 @@ void JAMOMA_EXPORT jamoma_ttvalue_to_Atom(const TTValue& v, AtomCount *argc, Ato
  @param argc					The number of arguments of the message.
  @param argv					Pointer to the array of arguments.
  */
-void JAMOMA_EXPORT jamoma_ttvalue_from_Atom(TTValue& v, SymbolPtr msg, AtomCount argc, AtomPtr argv);
+void JAMOMA_EXPORT jamoma_ttvalue_from_Atom(TTValue& v, t_symbol *msg, long argc, const t_atom *argv);
 
 
-/** Convert a TTSymbol "MyObjectMessage" into a SymbolPtr "my/object/message"
+/** Convert a TTSymbol "MyObjectMessage" into a t_symbol *"my/object/message"
  or return NULL if the TTSymbol doesn't begin by an uppercase letter.
  @param TTName
  @return
  */
-SymbolPtr JAMOMA_EXPORT jamoma_TTName_To_MaxName(TTSymbol TTName);
+t_symbol *JAMOMA_EXPORT jamoma_TTName_To_MaxName(TTSymbol TTName);
 
 
 /** Load an external for internal use. Returns true if successful.
@@ -527,7 +518,7 @@ SymbolPtr JAMOMA_EXPORT jamoma_TTName_To_MaxName(TTSymbol TTName);
  @param object
  @return
  */
-TTBoolean JAMOMA_EXPORT jamoma_extern_load(SymbolPtr objectname, AtomCount argc, AtomPtr argv, ObjectPtr *object);
+TTBoolean JAMOMA_EXPORT jamoma_extern_load(t_symbol *objectname, long argc, const t_atom *argv, t_object** object);
 
 
 /** Returned the N inside "pp/xx.[N]/yyy" and a format string as "pp/xx.%d/yy" and a format string as "pp/xx.%s/yy".
@@ -536,7 +527,7 @@ TTBoolean JAMOMA_EXPORT jamoma_extern_load(SymbolPtr objectname, AtomCount argc,
  @param ss_format
  @return
  */
-TTUInt32 JAMOMA_EXPORT jamoma_parse_bracket(SymbolPtr s, TTString& si_format, TTString& ss_format);
+TTUInt32 JAMOMA_EXPORT jamoma_parse_bracket(t_symbol *s, TTString& si_format, TTString& ss_format);
 
 
 /** Edit a new instance of the given format address using interger.
@@ -544,7 +535,7 @@ TTUInt32 JAMOMA_EXPORT jamoma_parse_bracket(SymbolPtr s, TTString& si_format, TT
  @param returnedName
  @param i
  */
-void JAMOMA_EXPORT jamoma_edit_numeric_instance(TTString format, SymbolPtr *returnedName, long i);
+void JAMOMA_EXPORT jamoma_edit_numeric_instance(TTString format, t_symbol** returnedName, long i);
 
 
 /** Edit a new instance of the given format address using string.
@@ -552,7 +543,7 @@ void JAMOMA_EXPORT jamoma_edit_numeric_instance(TTString format, SymbolPtr *retu
  @param returnedName
  @param s
  */
-void JAMOMA_EXPORT jamoma_edit_string_instance(TTString format, SymbolPtr *returnedName, TTString s);
+void JAMOMA_EXPORT jamoma_edit_string_instance(TTString format, t_symbol** returnedName, TTString s);
 
 
 /** Edit a file name from a given file format and a class name.
@@ -560,7 +551,7 @@ void JAMOMA_EXPORT jamoma_edit_string_instance(TTString format, SymbolPtr *retur
  @param className
  @param returnedFileName
  */
-void JAMOMA_EXPORT jamoma_edit_filename(TTString format, TTSymbol className, SymbolPtr *returnedFileName);
+void JAMOMA_EXPORT jamoma_edit_filename(TTString format, TTSymbol className, t_symbol** returnedFileName);
 
 
 /** Parse #N inside address and replace them by parent patcher arguments if there are.
@@ -568,7 +559,7 @@ void JAMOMA_EXPORT jamoma_edit_filename(TTString format, TTSymbol className, Sym
  @param address
  @return
  */
-SymbolPtr JAMOMA_EXPORT jamoma_parse_dieze(ObjectPtr x, SymbolPtr address);
+t_symbol *JAMOMA_EXPORT jamoma_parse_dieze(t_object *x, t_symbol *address);
 
 
 
@@ -582,7 +573,7 @@ SymbolPtr JAMOMA_EXPORT jamoma_parse_dieze(ObjectPtr x, SymbolPtr address);
  @param default_filename
  @return
  */
-TTSymbol JAMOMA_EXPORT jamoma_file_write(ObjectPtr x, AtomCount argc, AtomPtr argv, char* default_filename);
+TTSymbol JAMOMA_EXPORT jamoma_file_write(t_object *x, long argc, const t_atom *argv, char* default_filename);
 
 
 /** Get BOOT style filepath from args or, if no args open a dialog to read a file.
@@ -592,7 +583,7 @@ TTSymbol JAMOMA_EXPORT jamoma_file_write(ObjectPtr x, AtomCount argc, AtomPtr ar
  @param filetype
  @return
  */
-TTSymbol JAMOMA_EXPORT jamoma_file_read(ObjectPtr x, AtomCount argc, AtomPtr argv, t_fourcc filetype);
+TTSymbol JAMOMA_EXPORT jamoma_file_read(t_object *x, long argc, const t_atom *argv, t_fourcc filetype);
 
 #endif // __JAMOMA_MODULAR_FOR_MAX_H__
 	

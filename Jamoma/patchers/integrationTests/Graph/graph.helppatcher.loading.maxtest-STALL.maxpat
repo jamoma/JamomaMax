@@ -31,6 +31,75 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 546.0, 619.0, 57.0, 20.0 ],
+					"text" : "print huh"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-19",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 857.25, 326.260406, 150.0, 20.0 ],
+					"text" : "j.midi.out- is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-17",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 857.25, 300.960358, 150.0, 20.0 ],
+					"text" : "j.midi.in- is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-16",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 857.25, 275.66037, 159.0, 20.0 ],
+					"text" : "j.midi.format- is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-15",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 857.25, 250.360352, 150.0, 20.0 ],
+					"text" : "j.midi.filter- is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-26",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -442,62 +511,11 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 857.25, 323.799988, 111.0, 20.0 ],
-					"text" : "j.midi.out-"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 857.25, 298.5, 111.0, 20.0 ],
-					"text" : "j.midi.in-"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 857.25, 273.200012, 111.0, 20.0 ],
-					"text" : "j.midi.format-"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-11",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 857.25, 247.899994, 111.0, 20.0 ],
-					"text" : "j.midi.filter-"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-9",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 857.25, 222.600006, 111.0, 20.0 ],
 					"text" : "j.iter-"
 				}
@@ -509,8 +527,9 @@
 					"fontsize" : 12.0,
 					"id" : "obj-8",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 857.25, 172.0, 111.0, 20.0 ],
 					"text" : "j.append-"
 				}
@@ -522,10 +541,11 @@
 					"fontsize" : 12.0,
 					"id" : "obj-5",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 857.25, 197.300003, 111.0, 20.0 ],
-					"text" : "j.dataspace-"
+					"text" : "j.unit-"
 				}
 
 			}
@@ -535,8 +555,9 @@
 					"fontsize" : 12.0,
 					"id" : "obj-10",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 857.25, 349.100006, 111.0, 20.0 ],
 					"text" : "j.op-"
 				}
@@ -548,8 +569,9 @@
 					"fontsize" : 12.0,
 					"id" : "obj-18",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 857.25, 425.0, 111.0, 20.0 ],
 					"text" : "j.unpack-"
 				}
@@ -561,8 +583,9 @@
 					"fontsize" : 12.0,
 					"id" : "obj-22",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "graph.connect", "" ],
 					"patching_rect" : [ 857.25, 374.399994, 111.0, 20.0 ],
 					"text" : "j.pack-"
 				}
@@ -1747,7 +1770,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 857.25, 399.700012, 298.0, 20.0 ],
-					"text" : "commenting out j.plug.parameter- as it's not compiling",
+					"text" : "j.plug.parameter- is quarantined",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -2168,15 +2191,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-84", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-89", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2196,6 +2210,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-93", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-93", 0 ]
@@ -2230,6 +2253,30 @@
 			}
 , 			{
 				"name" : "oscar.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.pack-.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.unpack-.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.op-.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.unit-.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.append-.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.iter-.mxo",
 				"type" : "iLaX"
 			}
 , 			{

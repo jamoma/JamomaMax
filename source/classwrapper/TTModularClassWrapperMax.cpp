@@ -15,7 +15,7 @@
 static t_hashtab*	wrappedMaxClasses = NULL;
 
 
-ObjectPtr wrappedModularClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
+t_object *wrappedModularClass_new(t_symbol *name, long argc, t_atom *argv)
 {
 	WrappedClass*				wrappedMaxClass = NULL;
     WrappedModularInstancePtr	x = NULL;
@@ -29,12 +29,12 @@ ObjectPtr wrappedModularClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 #endif
 	
 	// Find the WrappedClass
-	hashtab_lookup(wrappedMaxClasses, name, (ObjectPtr*)&wrappedMaxClass);
+	hashtab_lookup(wrappedMaxClasses, name, (t_object**)&wrappedMaxClass);
 	
 	// If the WrappedClass has a validity check defined, then call the validity check function.
 	// If it returns an error, then we won't instantiate the object.
-	if(wrappedMaxClass){
-		if(wrappedMaxClass->validityCheck)
+	if (wrappedMaxClass) {
+		if (wrappedMaxClass->validityCheck)
 			err = wrappedMaxClass->validityCheck(wrappedMaxClass->validityCheckArgument);
 		else
 			err = kTTErrNone;
@@ -42,17 +42,15 @@ ObjectPtr wrappedModularClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 	else
 		err = kTTErrGeneric;
 	
-	if(!err)
+	if (!err)
 		x = (WrappedModularInstancePtr)object_alloc(wrappedMaxClass->maxClass);
 	
-    if(x){
+    if (x) {
 		
 		x->wrappedClassDefinition = wrappedMaxClass;
 		
-#ifndef ARRAY_EXTERNAL
-		x->subscriberObject = NULL;
-#endif
 		x->useInternals = NO;
+        x->internals = new TTHash();
 		x->address = kTTAdrsEmpty;
 		x->argv = NULL;
 		x->iterateInternals = NO;
@@ -111,89 +109,81 @@ ObjectPtr wrappedModularClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 			// handle attribute args
 			attr_args_process(x, argc, argv);
 	}
-	return ObjectPtr(x);
+	return (t_object*)x;
 }
 
 
 void wrappedModularClass_unregister(WrappedModularInstancePtr x)
 {
-	TTValue			keys, storedObject;
-	TTSymbol		name;
-	TTAddress		objectAddress;
-	TTObjectBasePtr	anObject;
-	TTObjectBasePtr aSubscriber;
-	TTErr			err;
+	TTValue		keys, v, none;
+	TTSymbol	name;
+	TTAddress	objectAddress;
+	TTErr		err;
     
 #ifndef ARRAY_EXTERNAL
-	if (x->subscriberObject)
-		TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
-	
-	if (x->wrappedObject)
-		if (x->wrappedObject->getName() != kTTSym_Application)
-			TTObjectBaseRelease(&x->wrappedObject);
+    
+	x->subscriberObject = TTObject();
+    
+    // check the wrappedObject is still valid because it could have been released in spec->_free method
+	if (x->wrappedObject.valid()) {
+        
+        // don't release the local application
+        if (!(x->wrappedObject.instance() == accessApplicationLocal)) {
+            
+            if (x->wrappedObject.instance()->getReferenceCount() > 1)
+                object_error((t_object*)x, "there are still unreleased reference of the wrappedObject (refcount = %d)", x->wrappedObject.instance()->getReferenceCount() - 1);
+            
+            // this line should release the last instance of the wrapped object
+            // otherwise there is something wrong
+            x->wrappedObject = TTObject();
+        }
+    }
+
 #endif
 	
-	if (x->internals) {
-		if (!x->internals->isEmpty()) {
-			
-			err = x->internals->getKeys(keys);
-			
-			if (!err) {
-				
-				x->iterateInternals = YES;
-				
-				for (int i = 0; i < keys.size(); i++) {
-					
-					name = keys[i];
-					storedObject.clear();
-					err = x->internals->lookup(name, storedObject);
-					
-					if (!err) {
-						anObject = NULL;
-						anObject = storedObject[0];
-						
-						// absolute registration case : remove the address
-						if (storedObject.size() == 2) {
-							objectAddress = storedObject[1];
-							
-							JamomaDebug object_post((ObjectPtr)x, "Remove internal %s object at : %s", name.c_str(), objectAddress.c_str());
-							JamomaDirectory->TTNodeRemove(objectAddress);
-						}
-						
-						// relative registration case : get an handler on a subscriber and delete it
-						if (storedObject.size() == 3) {
-							aSubscriber = NULL;
-							aSubscriber = storedObject[2];
-							
-							if (aSubscriber)
-								if (aSubscriber->valid)		// to -- should be better to understand why the subscriber is not valid
-									TTObjectBaseRelease(&aSubscriber);
-						}
-						
-						if (anObject)
-							if (anObject->valid)            // to -- should be better to understand why the object is not valid
-								TTObjectBaseRelease(&anObject);
-					}
-				}
-				
-				x->iterateInternals = NO;
-			}
-			delete x->internals;
-		}
-	}
-	
-#ifndef ARRAY_EXTERNAL
-	x->subscriberObject = NULL;
-	x->wrappedObject = NULL;
-#endif
-	
-	x->internals = NULL;
+    if (!x->internals->isEmpty()) {
+        
+        err = x->internals->getKeys(keys);
+        
+        if (!err) {
+            
+            x->iterateInternals = YES;
+            
+            for (int i = 0; i < keys.size(); i++) {
+                
+                name = keys[i];
+                err = x->internals->lookup(name, v);
+                
+                if (!err) {
+                    
+                    TTObject o = v[0];
+                    
+                    if (o.name() == kTTSym_Sender || o.name() == kTTSym_Receiver || o.name() == kTTSym_Viewer)
+                        o.set(kTTSym_address, kTTAdrsEmpty);
+                    
+                    // absolute registration case : remove the address
+                    if (v.size() == 2) {
+                        objectAddress = v[1];
+                        
+                        JamomaDebug object_post((t_object*)x, "Remove internal %s object at : %s", name.c_str(), objectAddress.c_str());
+                        JamomaApplication.send("ObjectUnregister", objectAddress, none);
+                    }
+                }
+            }
+            x->iterateInternals = NO;
+        }
+        x->internals->clear();
+    }
 }
 
 
 void wrappedModularClass_free(WrappedModularInstancePtr x)
 {
 	ModularSpec* spec = (ModularSpec*)x->wrappedClassDefinition->specificities;
+    
+    // call specific free method before freeing internal stuff
+	if (spec->_free)
+		spec->_free(x);
 	
 	wrappedModularClass_unregister(x);
 	
@@ -206,9 +196,9 @@ void wrappedModularClass_free(WrappedModularInstancePtr x)
 #endif
 	
 	x->argv = NULL;
-	
-	if (spec->_free)
-		spec->_free(x);
+    
+    delete x->internals;
+    x->internals = NULL;
 }
 
 
@@ -216,31 +206,32 @@ t_max_err wrappedModularClass_notify(TTPtr self, t_symbol *s, t_symbol *msg, voi
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	ModularSpec*				spec = (ModularSpec*)x->wrappedClassDefinition->specificities;
-	TTValue						v;
+	TTValue						v, none;
 	TTAddress                   contextAddress;
     
 #ifndef ARRAY_EXTERNAL
-	ObjectPtr					context;
+	t_object	*				context;
     
-	if (x->subscriberObject) {
-		x->subscriberObject->getAttributeValue(TTSymbol("context"), v);
-		context = ObjectPtr((TTPtr)v[0]);
+	if (x->subscriberObject.valid()) {
+        
+		x->subscriberObject.get("context", v);
+		context = (t_object*)((TTPtr)v[0]);
 		
 		// if the patcher is deleted
 		if (sender == context) {
 			if (msg == _sym_free) {
 				
 				// delete the context node if it exists
-				x->subscriberObject->getAttributeValue(TTSymbol("contextAddress"), v);
+				x->subscriberObject.get("contextAddress", v);
 				contextAddress = v[0];
 				
-				JamomaDirectory->TTNodeRemove(contextAddress);
+				JamomaApplication.send("ObjectUnregister", contextAddress, none);
 				
 				// delete
-				TTObjectBaseRelease(TTObjectBaseHandle(&x->subscriberObject));
+				x->subscriberObject = TTObject();
 				
 				// no more notification
-				object_detach_byptr((ObjectPtr)x, context);
+				object_detach_byptr((t_object*)x, context);
 			}
 		}
 	}
@@ -268,8 +259,8 @@ void wrappedModularClass_shareContextNode(TTPtr self, TTNodePtr *contextNode)
 #ifndef ARRAY_EXTERNAL
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
-	if (x->subscriberObject) {
-		x->subscriberObject->getAttributeValue(TTSymbol("contextNode"), v);
+	if (x->subscriberObject.valid()) {
+		x->subscriberObject.get("contextNode", v);
 		*contextNode = TTNodePtr((TTPtr)v[0]);
 	}
 	else
@@ -278,15 +269,15 @@ void wrappedModularClass_shareContextNode(TTPtr self, TTNodePtr *contextNode)
 }
 
 
-t_max_err wrappedModularClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* argc, AtomPtr* argv)
+t_max_err wrappedModularClass_attrGet(TTPtr self, t_object *attr, long* argc, t_atom** argv)
 {
-	SymbolPtr	attrName = (SymbolPtr)object_method(attr, _sym_getname);
+	t_symbol	*attrName = (t_symbol*)object_method(attr, _sym_getname);
 	TTValue		v;
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
-	MaxErr		err;
+	t_max_err	err;
 	TTPtr		ptr;
 	
-	err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (ObjectPtr*)&ptr);
+	err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (t_object**)&ptr);
 	if (err)
 		return err;
 	
@@ -301,14 +292,14 @@ t_max_err wrappedModularClass_attrGet(TTPtr self, ObjectPtr attr, AtomCount* arg
 }
 
 
-t_max_err wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc, AtomPtr argv)
+t_max_err wrappedModularClass_attrSet(TTPtr self, t_object *attr, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr x = (WrappedModularInstancePtr)self;
-	SymbolPtr	attrName = (SymbolPtr)object_method(attr, _sym_getname);
+	t_symbol	*attrName = (t_symbol*)object_method(attr, _sym_getname);
 	TTValue		v;
-	AtomCount	ac = 0;
-	AtomPtr		av = NULL;
-	MaxErr		m_err;
+	long        ac = 0;
+	t_atom		*av = NULL;
+	t_max_err	m_err;
 	TTErr		err;
 	TTPtr		ptr;
 	
@@ -321,7 +312,7 @@ t_max_err wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc
 		x->iterateInternals = YES;
 		
 		// then recall this method for each element of the array
-		if (x->internals) {
+		if (!x->internals->isEmpty()) {
 			err = x->internals->getKeys(keys);
 			if (!err) {
 				for (TTUInt32 i = 0; i < keys.size(); i++) {
@@ -337,7 +328,7 @@ t_max_err wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc
 		return MAX_ERR_NONE;
 	}
 	
-	m_err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (ObjectPtr*)&ptr);
+	m_err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, attrName, (t_object**)&ptr);
 	if (m_err)
 		return m_err;
 	
@@ -376,7 +367,7 @@ t_max_err wrappedModularClass_attrSet(TTPtr self, ObjectPtr attr, AtomCount argc
 }
 
 
-void wrappedModularClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
+void wrappedModularClass_anything(TTPtr self, t_symbol *s, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	ModularSpec*				spec = (ModularSpec*)x->wrappedClassDefinition->specificities;
@@ -389,7 +380,7 @@ void wrappedModularClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomP
 		x->iterateInternals = YES;
 		
 		// then recall this method for each element of the array
-		if (x->internals) {
+		if (!x->internals->isEmpty()) {
 			
 			TTUInt32	i = 0;
 			TTValue		keys;
@@ -446,19 +437,19 @@ void wrappedModularClass_anything(TTPtr self, SymbolPtr s, AtomCount argc, AtomP
 }
 
 
-TTErr wrappedModularClass_sendMessage(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
+TTErr wrappedModularClass_sendMessage(TTPtr self, t_symbol *s, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			inputValue, outputValue;
 	TTSymbol		ttName;
 	TTMessagePtr	aMessage = NULL;
-	AtomCount		ac = 0;
-	AtomPtr			av = NULL;
-	MaxErr			m_err;
+	long            ac = 0;
+	t_atom			*av = NULL;
+	t_max_err		m_err;
 	TTErr			err;
     TTPtr           ptr;
 	
-	m_err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, s, (ObjectPtr*)&ptr);
+	m_err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, s, (t_object**)&ptr);
 	if (!m_err) {
 		
 		// Is it a message of the wrapped object ?
@@ -486,14 +477,14 @@ TTErr wrappedModularClass_sendMessage(TTPtr self, SymbolPtr s, AtomCount argc, A
 }
 
 
-TTErr wrappedModularClass_setAttribute(TTPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
+TTErr wrappedModularClass_setAttribute(TTPtr self, t_symbol *s, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			inputValue, outputValue;
 	TTSymbol		ttName;
 	TTAttributePtr	anAttribute= NULL;
-	AtomCount		ac = 0;
-	AtomPtr			av = NULL;
+	long            ac = 0;
+	t_atom			*av = NULL;
 	TTErr			err;
 	
 	err = selectedObject->findAttribute(TTSymbol(s->s_name), &anAttribute);
@@ -524,23 +515,23 @@ void wrappedModularClass_dump(TTPtr self)
     TTValue			names, v;
     TTUInt32		i;
     TTSymbol		aName, address;
-    SymbolPtr		s;
-    AtomCount		ac;
-    AtomPtr			av;
+    t_symbol		*s;
+    long            ac;
+    t_atom			*av;
 	
 #ifndef ARRAY_EXTERNAL
     t_atom			a;
 	
-    if (x->subscriberObject)
+    if (x->subscriberObject.valid())
     {
     	// send out the absolute address of the subscriber
-        x->subscriberObject->getAttributeValue(TTSymbol("nodeAddress"), v);
+        x->subscriberObject.get("nodeAddress", v);
         address = v[0];
         atom_setsym(&a, gensym((char *) address.c_str()));
         object_obex_dumpout(self, gensym("address"), 1, &a);
     }
 #endif
-	
+    
     selectedObject->getAttributeNames(names);
 	
     for (i = 0; i < names.size(); i++) {
@@ -565,8 +556,8 @@ void wrappedModularClass_paint(WrappedModularInstancePtr x, t_object *view)
 {
 	t_rect			rect;
 	t_rect			r;
-	t_jgraphics*	g;
-	t_jsurface*		jsurface;
+	t_jgraphics     *g;
+	t_jsurface		*jsurface;
 	unsigned char*	data;
 	TTValue			v;
 	TTErr			err;
@@ -620,7 +611,7 @@ TTPtr wrappedModularClass_oksize(TTPtr self, t_rect *newrect)
 }
 
 
-void wrappedModularClass_mousedblclick(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mousedblclick(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -634,7 +625,7 @@ void wrappedModularClass_mousedblclick(TTPtr self, ObjectPtr patcherview, t_pt p
 }
 
 
-void wrappedModularClass_mousedown(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mousedown(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -648,7 +639,7 @@ void wrappedModularClass_mousedown(TTPtr self, ObjectPtr patcherview, t_pt pt, l
 }
 
 
-void wrappedModularClass_mousedrag(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mousedrag(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -662,7 +653,7 @@ void wrappedModularClass_mousedrag(TTPtr self, ObjectPtr patcherview, t_pt pt, l
 }
 
 
-void wrappedModularClass_mouseup(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mouseup(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -676,7 +667,7 @@ void wrappedModularClass_mouseup(TTPtr self, ObjectPtr patcherview, t_pt pt, lon
 }
 
 
-void wrappedModularClass_mouseenter(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mouseenter(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -690,7 +681,7 @@ void wrappedModularClass_mouseenter(TTPtr self, ObjectPtr patcherview, t_pt pt, 
 }
 
 
-void wrappedModularClass_mousemove(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -704,7 +695,7 @@ void wrappedModularClass_mousemove(TTPtr self, ObjectPtr patcherview, t_pt pt, l
 }
 
 
-void wrappedModularClass_mouseleave(TTPtr self, ObjectPtr patcherview, t_pt pt, long modifiers)
+void wrappedModularClass_mouseleave(TTPtr self, t_object *patcherview, t_pt pt, long modifiers)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue					v;
@@ -740,11 +731,11 @@ int convertModifiersFromMaxToTTGraphics(int maxModifiers)
 
 TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxClassName, WrappedClassPtr* c, ModularSpec* specificities)
 {
-	TTObjectBase*	o = NULL;
+	TTObject        o;
 	TTValue			v, args;
 	WrappedClass*	wrappedMaxClass = NULL;
 	TTSymbol		TTName;
-	SymbolPtr		MaxName = NULL;
+	t_symbol		*MaxName = NULL;
     TTUInt16        i;
 	
 	jamoma_init();
@@ -785,11 +776,10 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 #endif
 	
 	// Create a temporary instance of the class so that we can query it.
-    args.resize(32);
-	TTObjectBaseInstantiate(ttblueClassName, &o, args);
+	o = TTObject(ttblueClassName);
 	
 	// Register Messages as Max method
-	o->getMessageNames(v);
+	o.messages(v);
 	for (i = 0; i < v.size(); i++) {
 		TTName = v[i];
         
@@ -817,16 +807,16 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
                 TTName == TTSymbol("resetBenchmarking"))
                 continue;
             else if ((MaxName = jamoma_TTName_To_MaxName(TTName))) {
-                hashtab_store(wrappedMaxClass->maxNamesToTTNames, MaxName, ObjectPtr(TTName.rawpointer()));
+                hashtab_store(wrappedMaxClass->maxNamesToTTNames, MaxName, (t_object*)(TTName.rawpointer()));
                 class_addmethod(wrappedMaxClass->maxClass, (method)wrappedModularClass_anything, MaxName->s_name, A_GIMME, 0);
             }
 	}
 	
 	// Register Attributes as Max attr
-	o->getAttributeNames(v);
+	o.attributes(v);
 	for (i = 0; i < v.size(); i++) {
 		TTAttributePtr	attr = NULL;
-		SymbolPtr		maxType = _sym_long;
+		t_symbol		*maxType = _sym_long;
 		
 		TTName = v[i];
         
@@ -835,13 +825,17 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
         if (TTName == TTSymbol("enable"))
             continue;
 #endif
+        
+        // we want to hide service attribute for Max external
+        if (TTName == TTSymbol("service"))
+            continue;
 		
 		if ((MaxName = jamoma_TTName_To_MaxName(TTName))) {
             
             if (TTName == kTTSym_bypass && wrappedMaxClass->maxClassName != gensym("j.in") && wrappedMaxClass->maxClassName != gensym("j.in~"))
                 continue;
             
-			o->findAttribute(TTName, &attr);
+			o.instance()->findAttribute(TTName, &attr);
 			
 			if (attr->type == kTypeFloat32)
 				maxType = _sym_float32;
@@ -852,8 +846,8 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 			else if (attr->type == kTypeLocalValue)
 				maxType = _sym_atom;
 			
-			hashtab_store(wrappedMaxClass->maxNamesToTTNames, MaxName, ObjectPtr(TTName.rawpointer()));
-			class_addattr(wrappedMaxClass->maxClass, attr_offset_new(MaxName->s_name, maxType, 0, (method)wrappedModularClass_attrGet, (method)wrappedModularClass_attrSet, NULL));
+			hashtab_store(wrappedMaxClass->maxNamesToTTNames, MaxName, (t_object*)(TTName.rawpointer()));
+			class_addattr(wrappedMaxClass->maxClass, attr_offset_new(MaxName->s_name, maxType, 0, (method)wrappedModularClass_attrGet, (method)wrappedModularClass_attrSet, 0));
 			
 			// Add display styles for the Max 5 inspector
 			if (attr->type == kTypeBoolean)
@@ -862,8 +856,6 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 				CLASS_ATTR_STYLE(wrappedMaxClass->maxClass,	"fontFace", 0, "font");
 		}
 	}
-	
-	TTObjectBaseRelease(&o);
 	
 #ifdef UI_EXTERNAL
 	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_paint,						"paint",				A_CANT, 0L);
@@ -900,225 +892,187 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 	if (c)
 		*c = wrappedMaxClass;
 	
-	hashtab_store(wrappedMaxClasses, wrappedMaxClass->maxClassName, ObjectPtr(wrappedMaxClass));
+	hashtab_store(wrappedMaxClasses, wrappedMaxClass->maxClassName, (t_object*)(wrappedMaxClass));
 	return kTTErrNone;
 }
 
 
-TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTPtr context, TTSymbol service, TTObjectBasePtr *returnedData, TTBoolean deferlow)
+TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, t_symbol *callbackMethod, TTPtr context, TTSymbol service, TTObject& returnedData, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args, v, none;
-	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
-	TTNodePtr		aNode;
-	TTBoolean		nodeCreated;
-	TTAddress       dataAddress, dataName;
-	TTValue			storedObject;
+	TTValue			baton, v, out;
+	TTAddress       dataAddress;
+    TTSymbol        dataName;
     
-	// Prepare arguments to create a TTData object
-	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
+	returnedData = TTObject(kTTSym_Data, service);
+    
+    baton = TTValue(TTPtr(x), TTPtr(callbackMethod), deferlow);
 	
-	returnValueBaton = new TTValue(TTPtr(x));
-	returnValueBaton->append(TTPtr(callbackMethod));
-    returnValueBaton->append(deferlow);
-	
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
-	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
-	args.append(returnValueCallback);
-	
-	args.append(service);
-	
-	*returnedData = NULL;
-	TTObjectBaseInstantiate(kTTSym_Data, TTObjectBaseHandle(returnedData), args);
+    returnedData.set(kTTSym_baton, baton);
+	returnedData.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	
 	// absolute registration
 	dataAddress = address.appendAddress(TTAddress(name));
-	JamomaDirectory->TTNodeCreate(dataAddress, *returnedData, context, &aNode, &nodeCreated);
+    v = TTValue(dataAddress, returnedData, context);
+	JamomaApplication.send("ObjectRegister", v, out);
 	
-	aNode->getAddress(dataAddress);
-	aNode->getAddress(dataName, address);
+	dataAddress = out[0];
+	dataName = dataAddress.getNameInstance();
     
 	// absolute registration case : set the address in second position (see in unregister method)
-	storedObject = TTValue(TTObjectBasePtr(*returnedData));
-	storedObject.append(dataAddress);
-	x->internals->append(TTSymbol(dataName.c_str()), storedObject);
+	v = TTValue(returnedData, dataAddress);
+	x->internals->append(dataName, v);
 	
-	JamomaDebug object_post((ObjectPtr)x, "makes internal \"%s\" %s at : %s", dataName.c_str(), service.c_str(), dataAddress.c_str());
+	JamomaDebug object_post((t_object*)x, "makes internal \"%s\" %s at : %s", dataName.c_str(), service.c_str(), dataAddress.c_str());
 	
 	return kTTErrNone;
 }
 
 
-TTErr makeInternals_explorer(TTPtr self, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedExplorer, TTBoolean deferlow)
+TTErr makeInternals_explorer(TTPtr self, TTSymbol name, t_symbol *callbackMethod, TTObject& returnedExplorer, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args, storedObject, none;
-	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
+	TTValue		v, args, baton;
+	TTObject    returnValueCallback;
     
     // check the internals do not exist yet
-    if (!x->internals->lookup(name, args)) {
-        *returnedExplorer = args[0];
-        JamomaDebug object_post((ObjectPtr)x, "makeInternals_explorer : \"%s\" internal already exists", name.c_str());
+    if (!x->internals->lookup(name, v)) {
+        returnedExplorer = v[0];
+        JamomaDebug object_post((t_object*)x, "makeInternals_explorer : \"%s\" internal already exists", name.c_str());
         return kTTErrNone;
     }
 	
 	// prepare arguments
-	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
+	returnValueCallback = TTObject("callback");
     
-	returnValueBaton = new TTValue(TTPtr(x));
-	returnValueBaton->append(TTPtr(callbackMethod));
-    returnValueBaton->append(deferlow);
+	baton = TTValue(TTPtr(x), TTPtr(callbackMethod), deferlow);
     
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
-	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+	returnValueCallback.set(kTTSym_baton, baton);
+	returnValueCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
 	
 	args.append((TTPtr)jamoma_explorer_default_filter_bank());
 	
-	*returnedExplorer = NULL;
-	TTObjectBaseInstantiate(kTTSym_Explorer, TTObjectBaseHandle(returnedExplorer), args);
+	returnedExplorer = TTObject(kTTSym_Explorer, args);
 	
 	// default registration case : store object only (see in unregister method)
-	storedObject = TTValue(TTObjectBasePtr(*returnedExplorer));
-	x->internals->append(name, storedObject);
+	x->internals->append(name, returnedExplorer);
     
-    JamomaDebug object_post((ObjectPtr)x, "makes internal \"%s\" explorer", name.c_str());
+    JamomaDebug object_post((t_object*)x, "makes internal \"%s\" explorer", name.c_str());
     
 	return kTTErrNone;
 }
 
 
-TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedViewer, TTBoolean deferlow)
+TTErr makeInternals_viewer(TTPtr self, TTAddress address, TTSymbol name, t_symbol *callbackMethod, TTObject& returnedViewer, TTBoolean deferlow)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args, storedObject, none;
-	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
+	TTValue			v, baton;
 	TTAddress       adrs;
     
     // check the internals do not exist yet
-    if (!x->internals->lookup(name, args)) {
-        *returnedViewer = args[0];
-        JamomaDebug object_post((ObjectPtr)x, "makeInternals_viewer : \"%s\" internal already exists", name.c_str());
+    if (!x->internals->lookup(name, v)) {
+        returnedViewer = v[0];
+        JamomaDebug object_post((t_object*)x, "makeInternals_viewer : \"%s\" internal already exists", name.c_str());
         return kTTErrNone;
     }
 	
-	// prepare arguments
-	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
+	returnedViewer = TTObject(kTTSym_Viewer);
     
-	returnValueBaton = new TTValue(TTPtr(x));
-	returnValueBaton->append(TTPtr(callbackMethod));
-    returnValueBaton->append(deferlow);
-    
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
-	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
-	args.append(returnValueCallback);
+    baton = TTValue(TTPtr(x), TTPtr(callbackMethod), deferlow);
+    returnedViewer.set(kTTSym_baton, baton);
+	returnedViewer.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	
-	*returnedViewer = NULL;
-	TTObjectBaseInstantiate(kTTSym_Viewer, TTObjectBaseHandle(returnedViewer), args);
-	
-	// Set address attributes
+	// edit address
 	adrs = address.appendAddress(TTAddress(name));
-    
-	(*returnedViewer)->setAttributeValue(kTTSym_address, adrs);
 	
 	// default registration case : store object only (see in unregister method)
-	storedObject = TTValue(TTObjectBasePtr(*returnedViewer));
-	x->internals->append(name, storedObject);
+	x->internals->append(name, returnedViewer);
     
-    JamomaDebug object_post((ObjectPtr)x, "makes internal \"%s\" viewer to bind on : %s", name.c_str(), adrs.c_str());
+    // set address attribute (after registration as the value can be updated in the same time)
+	returnedViewer.set(kTTSym_address, adrs);
+    
+    JamomaDebug object_post((t_object*)x, "makes internal \"%s\" viewer to bind on : %s", name.c_str(), adrs.c_str());
     
 	return kTTErrNone;
 }
 
 
-TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, SymbolPtr callbackMethod, TTObjectBasePtr *returnedReceiver, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
+TTErr makeInternals_receiver(TTPtr self, TTAddress address, TTSymbol name, t_symbol *callbackMethod, TTObject& returnedReceiver, TTBoolean deferlow, TTBoolean appendNameAsAttribute)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args, storedObject, none;
-	TTObjectBasePtr	returnValueCallback;
-	TTValuePtr		returnValueBaton;
+	TTValue			v, args, baton;
+	TTObject        returnValueCallback, empty;
 	TTAddress       adrs;
     
     // check the internals do not exist yet
-    if (!x->internals->lookup(name, args)) {
-        *returnedReceiver = args[0];
-        JamomaDebug object_post((ObjectPtr)x, "makeInternals_receiver : \"%s\" internal already exists", name.c_str());
+    if (!x->internals->lookup(name, v)) {
+        returnedReceiver = v[0];
+        JamomaDebug object_post((t_object*)x, "makeInternals_receiver : \"%s\" internal already exists", name.c_str());
+        returnedReceiver.send("Get");
         return kTTErrNone;
     }
 	
 	// prepare arguments
 	
 	// we don't want the address back
-	args.append(NULL);
+	args.append(empty);
 	
-	returnValueCallback = NULL;			// without this, TTObjectBaseInstantiate try to release an oldObject that doesn't exist ... Is it good ?
-	TTObjectBaseInstantiate(TTSymbol("callback"), &returnValueCallback, none);
+	returnValueCallback = TTObject("callback");
     
-	returnValueBaton = new TTValue(TTPtr(x));
-	returnValueBaton->append(TTPtr(callbackMethod));
-    returnValueBaton->append(deferlow);
+	baton = TTValue(TTPtr(x), TTPtr(callbackMethod), deferlow);
     
-	returnValueCallback->setAttributeValue(kTTSym_baton, TTPtr(returnValueBaton));
-	returnValueCallback->setAttributeValue(kTTSym_function, TTPtr(&jamoma_callback_return_value));
+	returnValueCallback.set(kTTSym_baton, baton);
+	returnValueCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	args.append(returnValueCallback);
 	
-	*returnedReceiver = NULL;
-	TTObjectBaseInstantiate(kTTSym_Receiver, TTObjectBaseHandle(returnedReceiver), args);
+	returnedReceiver = TTObject(kTTSym_Receiver, args);
 	
-	// Set address attributes
+	// edit address
 	if (appendNameAsAttribute)
         adrs = address.appendAttribute(name);
     else
         adrs = address.appendAddress(TTAddress(name.c_str()));
 	
-	(*returnedReceiver)->setAttributeValue(kTTSym_address, adrs);
-	
 	// default registration case : store object only (see in unregister method)
-	storedObject = TTValue(TTObjectBasePtr(*returnedReceiver));
-	x->internals->append(name, storedObject);
+	x->internals->append(name, returnedReceiver);
     
-    JamomaDebug object_post((ObjectPtr)x, "makes internal \"%s\" receiver to bind on : %s", name.c_str(), adrs.c_str());
+    // set address attribute (after registration as the value can be updated in the same time)
+    returnedReceiver.set(kTTSym_address, adrs);
+    
+    JamomaDebug object_post((t_object*)x, "makes internal \"%s\" receiver to bind on : %s", name.c_str(), adrs.c_str());
     
 	return kTTErrNone;
 }
 
-TTErr makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObjectBasePtr *returnedSender, TTBoolean appendNameAsAttribute)
+TTErr makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObject& returnedSender, TTBoolean appendNameAsAttribute)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			args, storedObject;
-	TTAddress       adrs;
+    TTValue     v;
+	TTAddress   adrs;
     
     // check the internals do not exist yet
-    if (!x->internals->lookup(name, args)) {
-        *returnedSender = args[0];
-        JamomaDebug object_post((ObjectPtr)x, "makeInternals_sender : \"%s\" internal already exists", name.c_str());
+    if (!x->internals->lookup(name, v)) {
+        returnedSender = v[0];
+        JamomaDebug object_post((t_object*)x, "makeInternals_sender : \"%s\" internal already exists", name.c_str());
         return kTTErrNone;
     }
 	
-	// no arguments
+	returnedSender = TTObject(kTTSym_Sender);
 	
-	*returnedSender = NULL;
-	TTObjectBaseInstantiate(kTTSym_Sender, TTObjectBaseHandle(returnedSender), args);
-	
-	// Set address attributes
+	// edit address
 	if (appendNameAsAttribute)
         adrs = address.appendAttribute(name);
     else
         adrs = address.appendAddress(TTAddress(name.c_str()));
 	
-	(*returnedSender)->setAttributeValue(kTTSym_address, adrs);
-	
 	// default registration case : store object only (see in unregister method)
-	storedObject = TTValue(TTObjectBasePtr(*returnedSender));
-	x->internals->append(name, storedObject);
+	x->internals->append(name, returnedSender);
     
-    JamomaDebug object_post((ObjectPtr)x, "makes internal \"%s\" sender to bind on : %s", name.c_str(), adrs.c_str());
+    // set address attribute
+	returnedSender.set(kTTSym_address, adrs);
+    
+    JamomaDebug object_post((t_object*)x, "makes internal \"%s\" sender to bind on : %s", name.c_str(), adrs.c_str());
     
 	return kTTErrNone;
 }
@@ -1126,24 +1080,19 @@ TTErr makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObjec
 TTErr removeInternals_data(TTPtr self, TTAddress address, TTAddress name)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			storedObject;
-	TTObjectBasePtr	aData;
-	TTAddress       dataAddress;
-	TTErr			err;
+	TTValue		v, none;
+	TTAddress   dataAddress;
+	TTErr		err;
 	
-	err = x->internals->lookup(name, storedObject);
+	err = x->internals->lookup(name, v);
 	
 	if (!err) {
-		aData = storedObject[0];
-		dataAddress = storedObject[1];
 		
-		JamomaDebug object_post((ObjectPtr)x, "Remove internal %s object at : %s", name.c_str(), dataAddress.c_str());
-		JamomaDirectory->TTNodeRemove(dataAddress);
+		dataAddress = v[1];
 		
-		if (aData)
-			if (aData->valid)	// to -- should be better to understand why the data is not valid
-				TTObjectBaseRelease(&aData);
-		
+		JamomaDebug object_post((t_object*)x, "Remove internal %s object at : %s", name.c_str(), dataAddress.c_str());
+		JamomaApplication.send("ObjectUnregister", dataAddress, none);
+
 		x->internals->remove(name);
 	}
 	
@@ -1154,20 +1103,19 @@ TTErr removeInternals_data(TTPtr self, TTAddress address, TTAddress name)
 TTObjectBasePtr	getSelectedObject(WrappedModularInstancePtr x)
 {
 	if (x->useInternals) {
-		TTValue v;
-		TTObjectBasePtr o;
-		TTErr err;
+		TTValue     v;
+		TTObject    o;
+		TTErr       err;
         
 		err = x->internals->lookup(x->cursor, v);
 		if (!err)
 			o = v[0];
-		else o = NULL;
 		
-		return o;
+		return o.instance();
 	}
 #ifndef ARRAY_EXTERNAL
 	else
-		return x->wrappedObject;
+		return x->wrappedObject.instance();
 #else
 	else
 		return NULL;
@@ -1175,7 +1123,7 @@ TTObjectBasePtr	getSelectedObject(WrappedModularInstancePtr x)
 }
 
 
-void copy_msg_argc_argv(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void copy_msg_argc_argv(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTBoolean	copyMsg = false;
@@ -1189,13 +1137,13 @@ void copy_msg_argc_argv(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
     // prepare memory if needed
     if (x->argv == NULL) {
         x->argc = argc + copyMsg;
-        x->argv = (AtomPtr)sysmem_newptr(sizeof(t_atom) * x->argc);
+        x->argv = (t_atom*)sysmem_newptr(sizeof(t_atom) * x->argc);
     }
     // or resize memory if needed
     else if (x->argc != argc + copyMsg) {
         x->argc = argc + copyMsg;
         sysmem_freeptr(x->argv);
-        x->argv = (AtomPtr)sysmem_newptr(sizeof(t_atom) * x->argc);
+        x->argv = (t_atom*)sysmem_newptr(sizeof(t_atom) * x->argc);
     }
     
     // copy
@@ -1214,7 +1162,7 @@ void copy_msg_argc_argv(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 
 
 #ifdef ARRAY_EXTERNAL
-t_max_err wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av)
+t_max_err wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -1223,7 +1171,7 @@ t_max_err wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, AtomCount *ac, A
 	} else {
 		//otherwise allocate memory
 		*ac = 1;
-		if (!(*av = (AtomPtr)getbytes(sizeof(Atom)*(*ac)))) {
+		if (!(*av = (t_atom*)getbytes(sizeof(t_atom)*(*ac)))) {
 			*ac = 0;
 			return MAX_ERR_OUT_OF_MEM;
 		}
@@ -1235,7 +1183,7 @@ t_max_err wrappedModularClass_FormatGet(TTPtr self, TTPtr attr, AtomCount *ac, A
 }
 
 
-t_max_err wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av)
+t_max_err wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, long ac, const t_atom *av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -1249,14 +1197,14 @@ t_max_err wrappedModularClass_FormatSet(TTPtr self, TTPtr attr, AtomCount ac, At
 }
 
 
-void wrappedModularClass_ArraySelect(TTPtr self, SymbolPtr msg, AtomCount ac, AtomPtr av)
+void wrappedModularClass_ArraySelect(TTPtr self, t_symbol *msg, long ac, const t_atom *av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	SymbolPtr					instanceAddress;
+	t_symbol					*instanceAddress;
 	TTUInt8						i;
 	TTValue						v;
 	
-	if (x->internals) {
+	if (!x->internals->isEmpty()) {
 		
 		if (ac && av) {
 			if (atom_gettype(av) == A_LONG) {
@@ -1267,7 +1215,7 @@ void wrappedModularClass_ArraySelect(TTPtr self, SymbolPtr msg, AtomCount ac, At
 					x->cursor = TTSymbol(instanceAddress->s_name);
 				}
 				else
-					object_error((ObjectPtr)x, "array/select : %ld is not a valid index", i);
+					object_error((t_object*)x, "array/select : %ld is not a valid index", i);
 			}
 			else if (atom_gettype(av) == A_SYM) {
 				
@@ -1277,7 +1225,7 @@ void wrappedModularClass_ArraySelect(TTPtr self, SymbolPtr msg, AtomCount ac, At
 					x->cursor = TTSymbol(instanceAddress->s_name);
 				}
 				else
-					object_error((ObjectPtr)x, "array/select : %s is not a valid index", atom_getsym(av)->s_name);
+					object_error((t_object*)x, "array/select : %s is not a valid index", atom_getsym(av)->s_name);
 			}
 		}
 		else {
@@ -1287,18 +1235,18 @@ void wrappedModularClass_ArraySelect(TTPtr self, SymbolPtr msg, AtomCount ac, At
 				x->cursor = TTSymbol(instanceAddress->s_name);
 			}
 			else
-				object_error((ObjectPtr)x, "array/select : %s is not a valid index", msg->s_name);
+				object_error((t_object*)x, "array/select : %s is not a valid index", msg->s_name);
 		}
 	}
 	else
-		object_error((ObjectPtr)x, "array/select : the array is empty");
+		object_error((t_object*)x, "array/select : the array is empty");
 }
 
 
 void wrappedModularClass_ArrayResize(TTPtr self, long newSize)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    SymbolPtr	instanceAddress;
+    t_symbol	*instanceAddress;
     TTString    s_bracket;
     TTValue     v;
     
@@ -1313,11 +1261,11 @@ void wrappedModularClass_ArrayResize(TTPtr self, long newSize)
         
         jamoma_edit_string_instance(x->arrayFormatString, &instanceAddress, s_bracket.c_str());
         
-        object_method((ObjectPtr)x, gensym("address"), instanceAddress, 0, NULL);
-        JamomaDebug object_post((ObjectPtr)x, "array/resize : to %s address", instanceAddress->s_name);
+        object_method((t_object*)x, gensym("address"), instanceAddress, 0, NULL);
+        JamomaDebug object_post((t_object*)x, "array/resize : to %s address", instanceAddress->s_name);
     }
     else
-        object_error((ObjectPtr)x, "array/resize : %d is not a valid size", newSize);
+        object_error((t_object*)x, "array/resize : %d is not a valid size", newSize);
 }
 #endif
 
