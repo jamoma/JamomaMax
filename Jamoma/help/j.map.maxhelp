@@ -122,7 +122,7 @@
 									"attr" : "input/threshold/down",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-29",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -957,7 +957,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 151.0, 190.0, 1300.0, 685.0 ],
+						"rect" : [ 0.0, 26.0, 1300.0, 685.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -979,10 +979,10 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"attr" : "input/min",
+									"attr" : "inverse",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-14",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -1082,7 +1082,7 @@
 									"attr" : "input/threshold/down",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-36",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -1343,7 +1343,7 @@
 									"attr" : "output/max",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-8",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -1360,7 +1360,7 @@
 									"attr" : "output/min",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-18",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -1377,7 +1377,7 @@
 									"attr" : "input/max",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-3",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -2115,7 +2115,7 @@
 									"attr" : "input/min",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-2",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -2690,7 +2690,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1300.0, 685.0 ],
+						"rect" : [ 151.0, 190.0, 1300.0, 685.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2711,6 +2711,23 @@
 						"tags" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"attr" : "inverse",
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frozen_box_attributes" : [ "lock", "attr" ],
+									"id" : "obj-4",
+									"lock" : 1,
+									"maxclass" : "attrui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 601.5, 201.0, 74.5, 20.0 ],
+									"text_width" : 50.0
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"bubble" : 1,
 									"bubbletextmargin" : 10,
@@ -3078,6 +3095,16 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 611.0, 223.5, 485.5, 223.5 ],
+									"source" : [ "obj-4", 0 ]
 								}
 
 							}
