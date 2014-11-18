@@ -3,7 +3,7 @@
 - description "something about this preset"
 # ###########################################
 # 
-my_world/render/GL/context my_context
+my_world/render/GL/context default
 my_world/data/active 1
 my_world/physics/data/active 1
 my_world/render/data/active 1
@@ -28,7 +28,7 @@ my_world/render/GL/depth/clear 0
 my_world/physics/collisions 0
 my_world/physics/collisions_mode simple
 my_world/render/GL/color 1.000000 1.000000 1.000000
-my_world/physics/context my_context
+my_world/physics/context default
 my_world/render/GL/cull_face 0
 my_world/physics/debug 0
 my_world/window/depthbuffer 1
@@ -72,7 +72,7 @@ my_world/render/GL/matrixoutput 0
 my_world/physics/maxsubsteps 10
 my_world/render/GL/blend/mode 6 7
 my_world/render/GL/material/name none
-my_world/window/name my_context
+my_world/window/name default
 my_world/render/near_clip 0.100000
 my_world/render/GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
 my_world/physics/picker 1
@@ -109,7 +109,7 @@ my_world/render/verbose 1
 my_world/render/GL/viewalign 0
 my_world/physics/worldbox 1
 my_world/physics/worldbox_scale 6.000000 3.000000 6.000000
-my_world/physics/worldname my_context-world
+my_world/physics/worldname default-world
 my_world/render/GL/depth/write 1
 # 
 # ###########################################

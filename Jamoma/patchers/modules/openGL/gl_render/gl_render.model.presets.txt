@@ -19,7 +19,7 @@ GL/axes 0
 data/bypass 0
 GL/depth/clear 0
 GL/color 1.000000 1.000000 1.000000
-GL/context my_context
+GL/context default
 GL/cull_face 0
 light/diffuse 1.000000 1.000000 1.000000 1.000000
 GL/material/diffuse 0.000000 0.000000 0.000000 0.000000

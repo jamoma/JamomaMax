@@ -12,7 +12,7 @@ data/bypass 0
 depth/clear 0
 videoplane/client_storage 1
 videoplane/colormode argb
-context my_context
+context default
 light/diffuse 0.000000 0.000000 0.000000 0.000000
 videoplane/dim 20 20
 videoplane/displaylist 0
