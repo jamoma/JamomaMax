@@ -2,51 +2,55 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 26.0, 62.0, 380.0, 357.0 ],
+		"rect" : [ 34.0, 79.0, 794.0, 582.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
-		"default_fontsize" : 10.0,
+		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"default_fontname" : "Arial",
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "default",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-3",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 199.0, 295.0, 100.0, 31.0 ],
+					"patching_rect" : [ 199.0, 295.0, 115.0, 22.0 ],
+					"style" : "default",
 					"text" : "j.model @priority -1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 14.0,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -55,10 +59,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 25.0, 69.0, 679.0, 564.0 ],
@@ -67,19 +72,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -90,6 +103,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 108.0, 334.865112, 125.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend tex_plane_t"
 								}
 
@@ -106,6 +120,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 108.0, 297.370605, 546.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter tex_plane_t @type array @ramp/drive max @description \"The texture generation coefficients a b c d, which apply to tex_map modes 1 and 3.\" @default 0. 1. 0. 0.",
 									"varname" : "material/light/emission[1]"
 								}
@@ -121,6 +136,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 93.0, 253.865112, 125.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend tex_plane_s"
 								}
 
@@ -137,6 +153,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 93.0, 216.37059, 546.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter tex_plane_s @type array @ramp/drive max @description \"The texture generation coefficients a b c d that apply to tex_map modes 1 and 3.\" @default 1. 0. 0. 0.",
 									"varname" : "material/light/emission"
 								}
@@ -152,6 +169,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 28.5, 76.5, 103.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend texture"
 								}
 
@@ -168,6 +186,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.5, 34.5, 387.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter texture @type string @description \"The name of the texture to be applied\" @default none",
 									"varname" : "render/context[2]"
 								}
@@ -183,6 +202,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 146.0, 431.692566, 135.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend inherit_texture"
 								}
 
@@ -197,6 +217,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 63.5, 161.494507, 132.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend tex_map"
 								}
 
@@ -209,6 +230,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 13.5, 520.0, 25.0, 25.0 ],
+									"style" : "",
 									"varname" : "u109007775"
 								}
 
@@ -225,6 +247,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 146.0, 394.198029, 312.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter inherit_texture @type boolean @description \"Inherit texture attributes from context.\" @default 0",
 									"varname" : "material/inherit"
 								}
@@ -242,6 +265,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 63.5, 124.0, 447.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter tex_map @type integer @description \"Mode for automatic generation of texture coordinate controls.\" @default 0",
 									"varname" : "material/light/enable"
 								}
@@ -341,29 +365,22 @@
  ]
 					}
 ,
-					"patching_rect" : [ 124.875, 244.0, 83.0, 24.0 ],
+					"patching_rect" : [ 124.875, 244.0, 63.0, 21.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p texture"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 14.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -372,10 +389,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 407.0, 104.0, 528.0, 385.0 ],
@@ -384,19 +402,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -407,6 +433,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 99.5, 296.5, 103.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend filterclass"
 								}
 
@@ -423,6 +450,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 99.5, 254.5, 387.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter filterclass @type string @description \"The name of this object's pick filter class\" @default default",
 									"varname" : "render/context[2]"
 								}
@@ -438,6 +466,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
 									"patching_rect" : [ 18.5, 71.0, 57.0, 20.0 ],
+									"style" : "",
 									"text" : "sel UID"
 								}
 
@@ -452,6 +481,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 83.0, 199.5, 113.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend animmode"
 								}
 
@@ -468,6 +498,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 83.0, 147.5, 394.0, 43.0 ],
+									"style" : "",
 									"text" : "j.parameter animmode @type string @description \"Determines which space the anim_move and anim_turn messages will affect the position and orientation of this object\"",
 									"varname" : "render/context[1]"
 								}
@@ -483,6 +514,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 18.5, 101.5, 80.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend anim"
 								}
 
@@ -499,6 +531,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 18.5, 33.5, 387.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter anim @type string @description \"The name of a jit.anim.node object that handles all spatial transforms for this instance\" @default UID",
 									"varname" : "render/context"
 								}
@@ -512,6 +545,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 18.5, 335.5, 25.0, 25.0 ],
+									"style" : "",
 									"varname" : "u391007852"
 								}
 
@@ -583,20 +617,16 @@
  ]
 					}
 ,
-					"patching_rect" : [ 111.875, 215.0, 70.0, 24.0 ],
+					"patching_rect" : [ 111.875, 215.0, 53.0, 21.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p anim",
 					"varname" : "anim"
 				}
@@ -604,9 +634,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 14.0,
 					"id" : "obj-22",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -615,56 +642,88 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
-						"rect" : [ 731.0, 44.0, 949.0, 945.0 ],
+						"rect" : [ 34.0, 79.0, 1612.0, 933.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
+									"id" : "obj-33",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 226.25, 265.0, 283.0, 37.0 ],
+									"style" : "default",
+									"text" : "Prevent setting drawing context when we choose to use a default drawinf context"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-30",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 98.5, 256.0, 77.0, 22.0 ],
+									"style" : "default",
+									"text" : "route default"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-29",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 221.0, 953.994507, 132.0, 19.0 ],
+									"patching_rect" : [ 1095.0, 469.994507, 140.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend lighting_enable"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-44",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 221.0, 927.5, 447.0, 19.0 ],
+									"patching_rect" : [ 1095.0, 443.5, 469.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter light/enable @type boolean @description \"Calculate lighting.\" @default 0",
 									"varname" : "material/light/enable"
 								}
@@ -672,29 +731,26 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-4",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 900.5, 138.0, 19.0 ],
+									"patching_rect" : [ 1086.0, 416.5, 147.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend smooth_shading"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-5",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 212.0, 874.5, 541.0, 19.0 ],
+									"patching_rect" : [ 1086.0, 390.5, 572.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter smooth_shading @type boolean @description \"enable Smooth Shading.\" @default 0",
 									"varname" : "render/antialias[7]"
 								}
@@ -702,29 +758,26 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-27",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 842.5, 105.0, 19.0 ],
+									"patching_rect" : [ 1086.0, 358.5, 111.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend viewalign"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-28",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 212.0, 823.5, 505.0, 19.0 ],
+									"patching_rect" : [ 1086.0, 339.5, 530.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter viewalign @type boolean @description \"View aligned transformation flag.\" @default 0",
 									"varname" : "render/antialias[6]"
 								}
@@ -732,29 +785,26 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-25",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 199.0, 800.0, 136.0, 19.0 ],
+									"patching_rect" : [ 1073.0, 316.0, 143.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend transform_reset"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-26",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 199.0, 781.0, 621.0, 19.0 ],
+									"patching_rect" : [ 1073.0, 297.0, 648.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter transform_reset @type integer @description \"Modelview and projection transform reset flag.\" @default 0",
 									"varname" : "render/context[4]"
 								}
@@ -762,29 +812,26 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-23",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 174.5, 749.0, 113.0, 19.0 ],
+									"patching_rect" : [ 1048.5, 265.0, 121.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend shader"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-24",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 174.5, 730.0, 525.0, 19.0 ],
+									"patching_rect" : [ 1048.5, 246.0, 553.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter shader @type string @description \"The name of the shader to be applied.\" @default none",
 									"varname" : "render/context[3]"
 								}
@@ -792,29 +839,26 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-20",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 626.0, 111.0, 19.0 ],
+									"patching_rect" : [ 1032.5, 142.0, 118.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend poly_mode"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-22",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 606.0, 572.0, 19.0 ],
+									"patching_rect" : [ 1032.5, 122.0, 602.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter poly_mode @type array @ramp/drive none @description \"Polygon rendering modes.\" @default 0 0",
 									"varname" : "render/antialias[5]"
 								}
@@ -822,29 +866,26 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-18",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 579.0, 105.0, 19.0 ],
+									"patching_rect" : [ 1032.5, 95.0, 112.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend point_size"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-19",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 559.0, 463.0, 19.0 ],
+									"patching_rect" : [ 1032.5, 75.0, 487.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter point_size @type decimal @description \"The draw point size.\" @default 1.",
 									"varname" : "render/antialias[4]"
 								}
@@ -852,30 +893,27 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-16",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 695.0, 121.0, 19.0 ],
+									"patching_rect" : [ 1032.5, 211.0, 125.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend matrixoutput"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-17",
 									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 656.0, 493.0, 31.0 ],
+									"patching_rect" : [ 1032.5, 172.0, 516.0, 35.0 ],
+									"style" : "default",
 									"text" : "j.parameter matrixoutput @type integer @range 0 2 @clipmode both @ramp/drive none @description \"Matrix output mode.\" @default 0",
 									"varname" : "render/layer[1]"
 								}
@@ -883,29 +921,26 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-14",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 133.5, 348.0, 113.0, 19.0 ],
+									"patching_rect" : [ 133.5, 399.5, 120.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend capture"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-15",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 133.5, 329.0, 468.0, 19.0 ],
+									"patching_rect" : [ 133.5, 380.5, 487.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter capture @type string @description \"The name of a texture to be rendered to \"",
 									"varname" : "render/context[1]"
 								}
@@ -913,29 +948,26 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-11",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 529.0, 105.0, 19.0 ],
+									"patching_rect" : [ 1032.5, 45.0, 109.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend line_width"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-13",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 509.0, 463.0, 19.0 ],
+									"patching_rect" : [ 1032.5, 12.0, 485.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter line_width @type decimal @description \"The drawing line width.\" @default 1.",
 									"varname" : "render/antialias[3]"
 								}
@@ -943,30 +975,27 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-9",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 476.0, 105.0, 19.0 ],
+									"patching_rect" : [ 158.5, 527.5, 110.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend inherit_all"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-10",
 									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 445.0, 695.0, 31.0 ],
+									"patching_rect" : [ 158.5, 496.5, 666.0, 35.0 ],
+									"style" : "default",
 									"text" : "j.parameter inherit_all @type boolean @description \"When the flag is set, all GL attributes from named drawing context are inherited.\" @default 0",
 									"varname" : "render/antialias[2]"
 								}
@@ -974,29 +1003,26 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-6",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.5, 403.5, 113.0, 19.0 ],
+									"patching_rect" : [ 158.5, 455.0, 121.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend cull_face"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-7",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 158.5, 384.5, 421.0, 19.0 ],
+									"patching_rect" : [ 158.5, 436.0, 445.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter cull_face @type integer @description \"Face culling mode\" @default 0",
 									"varname" : "render/context[2]"
 								}
@@ -1004,29 +1030,26 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-2",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 115.0, 297.0, 105.0, 19.0 ],
+									"patching_rect" : [ 115.0, 348.5, 112.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend axes"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-3",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 115.0, 278.0, 449.0, 19.0 ],
+									"patching_rect" : [ 115.0, 329.5, 469.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter axes @type boolean @description \"x/y/z axis rendering off/on\" @default 0",
 									"varname" : "render/antialias[1]"
 								}
@@ -1034,86 +1057,79 @@
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-56",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 61.0, 135.0, 105.0, 19.0 ],
+									"patching_rect" : [ 61.0, 135.0, 111.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend antialias"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-54",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 78.0, 196.0, 105.0, 19.0 ],
+									"patching_rect" : [ 78.0, 196.0, 111.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend layer"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-51",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 40.5, 89.0, 105.0, 19.0 ],
+									"patching_rect" : [ 40.5, 89.0, 113.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend enable"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-50",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 20.0, 44.0, 105.0, 19.0 ],
+									"patching_rect" : [ 20.0, 44.0, 111.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend automatic"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-12",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 98.5, 245.5, 113.0, 19.0 ],
+									"patching_rect" : [ 98.5, 297.0, 119.0, 22.0 ],
+									"style" : "default",
 									"text" : "prepend drawto"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-1",
 									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 78.0, 165.0, 851.0, 31.0 ],
+									"patching_rect" : [ 78.0, 165.0, 837.0, 35.0 ],
+									"style" : "default",
 									"text" : "j.parameter layer @type integer @range 0 255 @clipmode low @ramp/drive none @description \"Object layer number. Only valid when /render/automatic is enabled.\" @default 0",
 									"varname" : "render/layer"
 								}
@@ -1121,31 +1137,27 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-8",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 98.5, 226.5, 665.0, 19.0 ],
-									"text" : "j.parameter context @type string @description \"The named drawing context in which to draw.\" @default my_context @priority -1",
+									"patching_rect" : [ 98.5, 226.5, 667.0, 22.0 ],
+									"style" : "default",
+									"text" : "j.parameter context @type string @description \"The named drawing context in which to draw.\" @default default @priority -1",
 									"varname" : "render/context"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-39",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 40.5, 70.0, 410.0, 19.0 ],
+									"patching_rect" : [ 40.5, 70.0, 434.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter enable @type boolean @description \"Enable drawing.\" @default 1",
 									"varname" : "render/enable"
 								}
@@ -1153,15 +1165,13 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-40",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 25.0, 475.0, 19.0 ],
+									"patching_rect" : [ 20.0, 25.0, 498.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter automatic @type boolean @description \"Automatic rendering flag.\" @default 1",
 									"varname" : "render/automatic"
 								}
@@ -1169,15 +1179,13 @@
 							}
 , 							{
 								"box" : 								{
-									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-41",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 61.0, 116.0, 403.0, 19.0 ],
+									"patching_rect" : [ 61.0, 116.0, 425.0, 22.0 ],
+									"style" : "default",
 									"text" : "j.parameter antialias @type boolean @description \"Aliasing flag.\" @default 0",
 									"varname" : "render/antialias"
 								}
@@ -1190,7 +1198,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 20.0, 921.5, 25.0, 25.0 ],
+									"patching_rect" : [ 20.0, 655.5, 25.0, 25.0 ],
+									"style" : "default",
 									"varname" : "u391007852"
 								}
 
@@ -1396,6 +1405,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-12", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-30", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-51", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1504,7 +1522,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-12", 0 ],
+									"destination" : [ "obj-30", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-8", 0 ]
@@ -1523,29 +1541,22 @@
  ]
 					}
 ,
-					"patching_rect" : [ 98.875, 186.0, 70.0, 24.0 ],
+					"patching_rect" : [ 98.875, 186.0, 53.0, 21.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p render"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 14.0,
 					"id" : "obj-19",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -1554,10 +1565,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 25.0, 69.0, 569.0, 491.0 ],
@@ -1566,19 +1578,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -1589,6 +1609,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 54.0, 180.0, 123.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend depth_write"
 								}
 
@@ -1605,6 +1626,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 54.0, 140.0, 350.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter depth/write @type boolean @description \"Enable writing to the depth buffer\" @default 1",
 									"varname" : "depth/inherit[1]"
 								}
@@ -1620,6 +1642,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 91.0, 248.0, 123.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend inherit_depth"
 								}
 
@@ -1636,6 +1659,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 91.0, 208.0, 313.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter depth/inherit @type boolean @description \"Inherit depth properties from context.\" @default 0",
 									"varname" : "depth/inherit"
 								}
@@ -1649,6 +1673,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 16.0, 289.0, 25.0, 25.0 ],
+									"style" : "",
 									"varname" : "u789007854"
 								}
 
@@ -1663,6 +1688,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 30.0, 115.0, 123.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend depth_clear"
 								}
 
@@ -1677,6 +1703,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 15.0, 52.0, 123.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend depth_enable"
 								}
 
@@ -1693,6 +1720,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 15.0, 12.0, 278.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter depth/enable @type boolean @description \"Enable depth buffering.\" @default 1",
 									"varname" : "depth/enable"
 								}
@@ -1710,6 +1738,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 30.0, 75.0, 317.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter depth/clear @type boolean @description \"Clear depth buffer before rendering the object.\" @default 0",
 									"varname" : "depth/clear"
 								}
@@ -1791,29 +1820,22 @@
  ]
 					}
 ,
-					"patching_rect" : [ 85.875, 157.0, 65.0, 24.0 ],
+					"patching_rect" : [ 85.875, 157.0, 50.0, 21.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p depth"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 14.0,
 					"id" : "obj-16",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -1822,10 +1844,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 237.0, 201.0, 587.0, 362.0 ],
@@ -1834,19 +1857,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -1857,6 +1888,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 75.0, 298.200012, 95.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend anchor"
 								}
 
@@ -1873,6 +1905,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 75.0, 247.0, 470.0, 43.0 ],
+									"style" : "",
 									"text" : "j.parameter anchor @type array @ramp/drive max @dataspace position @unit openGL @description \"The anchor position in local space. Allows for offsetting the local 3D origin around which transforms are applied.\" @default 0. 0. 0.",
 									"varname" : "3D/position[1]"
 								}
@@ -1888,6 +1921,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 60.5, 207.0, 80.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend scale"
 								}
 
@@ -1902,6 +1936,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 40.0, 139.600006, 85.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend rotate"
 								}
 
@@ -1916,6 +1951,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 19.0, 67.199997, 95.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend position"
 								}
 
@@ -1932,6 +1968,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 60.5, 172.799988, 331.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter scale @ramp/drive max @type array @description \"3D scaling factor as xyz coordinates.\" @default 1. 1. 1.",
 									"varname" : "3D/scale"
 								}
@@ -1949,6 +1986,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 40.0, 96.399994, 380.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter rotate @type array @ramp/drive max @description \"3D rotation as angle and xyz rotation axis coordinates.\" @default 0. 0. 0. 1.",
 									"varname" : "3D/rotate"
 								}
@@ -1966,6 +2004,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 19.0, 26.0, 459.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter position @type array @ramp/drive max @dataspace position @unit openGL @description \"3D origin as xyz coordinates.\" @default 0. 0. 0.",
 									"varname" : "3D/position"
 								}
@@ -1979,6 +2018,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 19.0, 327.0, 25.0, 25.0 ],
+									"style" : "",
 									"varname" : "u746007855"
 								}
 
@@ -2059,29 +2099,22 @@
  ]
 					}
 ,
-					"patching_rect" : [ 20.0, 12.0, 71.0, 24.0 ],
+					"patching_rect" : [ 20.0, 11.0, 54.0, 21.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p spatial"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 14.0,
 					"id" : "obj-14",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -2090,10 +2123,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 25.0, 69.0, 695.0, 234.0 ],
@@ -2102,19 +2136,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -2125,6 +2167,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 28.0, 117.0, 123.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend blend_enable"
 								}
 
@@ -2139,6 +2182,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 8.0, 59.0, 117.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend blend_mode"
 								}
 
@@ -2155,6 +2199,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 8.0, 20.0, 657.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter blend/mode @type array @description \"Blend modes for source and destination planes.\" @default 6 7 @range 0 10 @clipmode both",
 									"varname" : "blend/mode"
 								}
@@ -2171,6 +2216,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 87.0, 471.0, 19.0 ],
+									"style" : "",
 									"text" : "j.parameter blend/enable @type boolean @description \"Enable blending.\" @default 0",
 									"varname" : "blend/enable"
 								}
@@ -2184,6 +2230,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 8.0, 177.0, 25.0, 25.0 ],
+									"style" : "",
 									"varname" : "u010007844"
 								}
 
@@ -2228,29 +2275,22 @@
  ]
 					}
 ,
-					"patching_rect" : [ 33.875, 41.0, 64.0, 24.0 ],
+					"patching_rect" : [ 33.875, 41.0, 49.0, 21.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p blend"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 14.0,
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -2259,10 +2299,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 25.0, 69.0, 677.0, 377.0 ],
@@ -2271,19 +2312,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -2294,6 +2343,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 47.0, 300.0, 135.0, 19.0 ],
+									"style" : "",
 									"text" : "pak aux_color 1. 1. 1. 1."
 								}
 
@@ -2310,6 +2360,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 163.0, 257.0, 469.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter aux_alpha @type decimal @range 0. 1. @clipmode both @ramp/drive max @description \"auxilliary alpha transparency (0.-1.).\" @default 1.",
 									"varname" : "color/alpha[1]"
 								}
@@ -2327,6 +2378,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 76.0, 220.0, 502.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter aux_color @type array @description \"The auxiliary color in the form red green blue\" @default 1. 1. 1. @dataspace color @unit rgb @range 0 1 @clipmode both",
 									"varname" : "color/rgb[1]"
 								}
@@ -2342,6 +2394,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 34.0, 162.0, 123.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend inherit_color"
 								}
 
@@ -2356,6 +2409,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 17.0, 90.0, 111.0, 19.0 ],
+									"style" : "",
 									"text" : "pak color 1. 1. 1. 1."
 								}
 
@@ -2372,6 +2426,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 34.0, 120.0, 300.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter color/inherit @type boolean @description \"Inherit color properties from context.\" @default 0",
 									"varname" : "color/inherit"
 								}
@@ -2389,6 +2444,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 109.0, 48.0, 469.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter alpha @type decimal @range 0. 1. @clipmode both @ramp/drive max @description \"Object alpha transparency (0.-1.).\" @default 1.",
 									"varname" : "color/alpha"
 								}
@@ -2406,6 +2462,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 40.0, 11.0, 473.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter color @type array @description \"Object color as red, green, blue (0.-1.).\" @default 1. 1. 1. @dataspace color @unit rgb @range 0 1 @clipmode both",
 									"varname" : "color/rgb"
 								}
@@ -2419,6 +2476,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 17.0, 342.0, 25.0, 25.0 ],
+									"style" : "",
 									"varname" : "u401007858"
 								}
 
@@ -2499,29 +2557,22 @@
  ]
 					}
 ,
-					"patching_rect" : [ 46.875, 70.0, 59.0, 24.0 ],
+					"patching_rect" : [ 46.875, 70.0, 46.0, 21.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p color"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 14.0,
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -2530,10 +2581,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 25.0, 69.0, 466.0, 261.0 ],
@@ -2542,19 +2594,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -2565,6 +2625,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 62.5, 171.0, 117.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend fog"
 								}
 
@@ -2579,6 +2640,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 38.5, 104.0, 110.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend inherit_fog"
 								}
 
@@ -2593,6 +2655,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 20.0, 41.0, 117.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend fog_params"
 								}
 
@@ -2609,6 +2672,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 62.5, 137.0, 354.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter fog/amount @type decimal @range 0. 1. @description \"The amount of fog effect.\" @default 0.",
 									"varname" : "fog/amount"
 								}
@@ -2626,6 +2690,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 38.5, 62.0, 267.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter fog/inherit @type boolean @description \"inherit fog properties from context.\"",
 									"varname" : "fog/inherit"
 								}
@@ -2643,6 +2708,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 20.0, 3.0, 385.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter fog/params @type array @ramp/drive max @description \"Fog color (RGBA), density,start and end.\" @default 0. 0. 0. 0. 0. 0. 0.",
 									"varname" : "fog/params"
 								}
@@ -2656,6 +2722,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 20.0, 213.0, 25.0, 25.0 ],
+									"style" : "",
 									"varname" : "u624007861"
 								}
 
@@ -2718,29 +2785,22 @@
  ]
 					}
 ,
-					"patching_rect" : [ 72.875, 128.0, 47.0, 24.0 ],
+					"patching_rect" : [ 72.875, 128.0, 37.0, 21.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p fog"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 14.0,
 					"id" : "obj-49",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -2749,10 +2809,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 14.0, 59.0, 725.0, 692.0 ],
@@ -2761,19 +2822,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -2784,6 +2853,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 221.5, 582.5, 103.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend matfile"
 								}
 
@@ -2800,6 +2870,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 221.5, 545.5, 427.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter material/matfile @type string @description \"The Jitter material file to apply (.jitmtl)\" @default none",
 									"varname" : "render/context[1]"
 								}
@@ -2817,10 +2888,11 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 6,
-											"minor" : 1,
-											"revision" : 7,
-											"architecture" : "x86"
+											"major" : 7,
+											"minor" : 0,
+											"revision" : 0,
+											"architecture" : "x86",
+											"modernui" : 1
 										}
 ,
 										"rect" : [ 25.0, 69.0, 220.0, 314.0 ],
@@ -2829,19 +2901,27 @@
 										"default_fontsize" : 12.0,
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
-										"gridonopen" : 0,
+										"gridonopen" : 1,
 										"gridsize" : [ 15.0, 15.0 ],
-										"gridsnaponopen" : 0,
+										"gridsnaponopen" : 1,
+										"objectsnaponopen" : 1,
 										"statusbarvisible" : 2,
 										"toolbarvisible" : 1,
+										"lefttoolbarpinned" : 0,
+										"toptoolbarpinned" : 0,
+										"righttoolbarpinned" : 0,
+										"bottomtoolbarpinned" : 0,
+										"toolbars_unpinned_last_save" : 0,
+										"tallnewobj" : 0,
 										"boxanimatetime" : 200,
-										"imprint" : 0,
 										"enablehscroll" : 1,
 										"enablevscroll" : 1,
 										"devicewidth" : 0.0,
 										"description" : "",
 										"digest" : "",
 										"tags" : "",
+										"style" : "",
+										"subpatcher_template" : "",
 										"boxes" : [ 											{
 												"box" : 												{
 													"fontname" : "Arial",
@@ -2852,6 +2932,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 32.0, 173.0, 53.0, 18.0 ],
+													"style" : "",
 													"text" : "material"
 												}
 
@@ -2866,6 +2947,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 105.0, 173.0, 101.0, 20.0 ],
+													"style" : "",
 													"text" : "prepend material"
 												}
 
@@ -2880,6 +2962,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 32.0, 98.0, 92.0, 20.0 ],
+													"style" : "",
 													"text" : "route none"
 												}
 
@@ -2891,7 +2974,8 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 32.0, 245.0, 25.0, 25.0 ]
+													"patching_rect" : [ 32.0, 245.0, 25.0, 25.0 ],
+													"style" : ""
 												}
 
 											}
@@ -2903,7 +2987,8 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 32.0, 21.0, 25.0, 25.0 ]
+													"patching_rect" : [ 32.0, 21.0, 25.0, 25.0 ],
+													"style" : ""
 												}
 
 											}
@@ -2958,18 +3043,14 @@
 ,
 									"patching_rect" : [ 200.5, 508.5, 107.0, 19.0 ],
 									"saved_object_attributes" : 									{
-										"default_fontface" : 0,
-										"default_fontname" : "Arial",
-										"default_fontsize" : 12.0,
 										"description" : "",
 										"digest" : "",
-										"fontface" : 0,
-										"fontname" : "Arial",
-										"fontsize" : 12.0,
 										"globalpatchername" : "",
+										"style" : "",
 										"tags" : ""
 									}
 ,
+									"style" : "",
 									"text" : "p prepend_material"
 								}
 
@@ -2986,6 +3067,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 200.5, 471.5, 422.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter material/name @type string @description \"The name of the material to be applied\" @default none",
 									"varname" : "render/context[2]"
 								}
@@ -3001,6 +3083,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 176.0, 437.692566, 135.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend inherit_material"
 								}
 
@@ -3015,6 +3098,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 152.0, 362.235687, 123.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend auto_material"
 								}
 
@@ -3029,6 +3113,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 122.5, 312.778839, 107.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend shininess"
 								}
 
@@ -3041,6 +3126,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 28.0, 645.0, 25.0, 25.0 ],
+									"style" : "",
 									"varname" : "u109007775"
 								}
 
@@ -3055,6 +3141,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 95.0, 250.32196, 123.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend mat_specular"
 								}
 
@@ -3069,6 +3156,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 81.0, 187.865112, 125.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend mat_emission"
 								}
 
@@ -3083,6 +3171,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 61.0, 125.408249, 122.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend mat_diffuse"
 								}
 
@@ -3097,6 +3186,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 28.0, 62.951378, 122.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend mat_ambient"
 								}
 
@@ -3113,6 +3203,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 122.5, 275.284302, 465.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter material/shininess @type decimal @range 0. 255. @clipmode both @ramp/drive max @description \"Material shininess.\" @default 10.",
 									"varname" : "material/shininess"
 								}
@@ -3130,6 +3221,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 176.0, 400.198029, 312.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter material/inherit @type boolean @description \"Inherit material properties from context.\" @default 0",
 									"varname" : "material/inherit"
 								}
@@ -3146,6 +3238,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 152.0, 337.74118, 538.0, 19.0 ],
+									"style" : "",
 									"text" : "j.parameter material/automatic @type boolean @description \"Automatic material attributes.\" @default 1",
 									"varname" : "material/automatic"
 								}
@@ -3163,6 +3256,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 95.0, 212.827454, 520.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter material/specular @type array @ramp/drive max @description \"The specular light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/specular"
 								}
@@ -3180,6 +3274,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 81.0, 150.37059, 540.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter material/emission @type array @ramp/drive max @description \"The material emission property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/emission"
 								}
@@ -3197,6 +3292,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 61.0, 87.913727, 564.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter material/diffuse @type array @ramp/drive max @description \"The diffuse light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/diffuse"
 								}
@@ -3214,6 +3310,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 28.0, 25.456863, 606.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter material/ambient @type array @ramp/drive max @description \"The ambient light material property as red, green, blue, alpha (0.-1.).\" @default 0. 0. 0. 0.",
 									"varname" : "material/light/ambient"
 								}
@@ -3385,20 +3482,16 @@
  ]
 					}
 ,
-					"patching_rect" : [ 59.875, 99.0, 83.0, 24.0 ],
+					"patching_rect" : [ 59.875, 99.0, 63.0, 21.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p material"
 				}
 
@@ -3410,7 +3503,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 295.0, 30.0, 30.0 ]
+					"patching_rect" : [ 20.0, 295.0, 30.0, 30.0 ],
+					"style" : ""
 				}
 
 			}
@@ -3505,7 +3599,8 @@
 				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
