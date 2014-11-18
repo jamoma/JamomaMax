@@ -38,6 +38,24 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontface" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-7",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 189.354172, 36.5, 65.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 188.75, 36.75, 40.0, 20.0 ],
+					"style" : "",
+					"text" : "Loop",
+					"varname" : "filename[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -65,37 +83,6 @@
 					"setstyle" : 1,
 					"slidercolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
 					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"appearance" : 1,
-					"automation" : "Loop",
-					"automationon" : "Loop",
-					"id" : "obj-39",
-					"maxclass" : "live.text",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 682.75, 43.5, 88.0, 17.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 188.75, 37.75, 48.25, 17.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_longname" : "live.text[7]",
-							"parameter_shortname" : "live.text",
-							"parameter_type" : 2,
-							"parameter_mmax" : 1.0,
-							"parameter_enum" : [ "Loop", "Loop" ]
-						}
-
-					}
-,
-					"text" : "Loop",
-					"texton" : "Loop",
-					"varname" : "live.text[2]"
 				}
 
 			}
@@ -1211,22 +1198,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-67",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 682.75, 14.5, 99.0, 22.0 ],
-					"style" : "",
-					"text" : "j.remote file/loop",
-					"varname" : "loop"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"border" : 0.0,
 					"id" : "obj-38",
 					"maxclass" : "dropfile",
@@ -1518,16 +1489,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-67", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 692.25, 68.5, 668.25, 68.5, 668.25, 4.5, 692.25, 4.5 ],
-					"source" : [ "obj-39", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1571,18 +1532,8 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-39", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-67", 0 ]
-				}
-
-			}
  ],
 		"parameters" : 		{
-			"obj-39" : [ "live.text[7]", "live.text", 0 ],
 			"obj-59" : [ "live.text[3]", "live.text[3]", 0 ],
 			"obj-35" : [ "live.text[2]", "live.text", 0 ],
 			"obj-13" : [ "live.menu", "live.menu", 0 ],
@@ -1600,15 +1551,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
