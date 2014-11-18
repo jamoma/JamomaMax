@@ -1,0 +1,12 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+fliptexture 0
+file/play 1
+loop/mode normal
+loop/points -1 -1
+loop/report 1
+# 
+# ###########################################
