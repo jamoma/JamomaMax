@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 539.0, 607.0 ],
+		"rect" : [ 325.0, 93.0, 493.0, 636.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -38,12 +38,51 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 49.0, 139.0, 41.0, 21.0 ],
+					"style" : "",
+					"text" : "t b l"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 49.0, 283.0, 62.0, 21.0 ],
+					"style" : "",
+					"text" : "filter/clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 49.0, 105.0, 125.0, 21.0 ],
+					"style" : "",
+					"text" : "file/path chickens.mp4"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "jit.pwindow",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 388.0, 139.0, 80.0, 60.0 ]
+					"patching_rect" : [ 388.0, 188.0, 80.0, 60.0 ]
 				}
 
 			}
@@ -62,7 +101,7 @@
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 71.0, 134.0, 300.0, 70.0 ],
+					"patching_rect" : [ 71.0, 183.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 34.0, 126.0, 300.0, 70.0 ],
 					"viewvisibility" : 1
 				}
@@ -70,7 +109,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "foregroundMask%", "@description", "Create mask based on image foreground." ],
+					"args" : [ "@name", "foreground_mask%", "@description", "Create mask based on image foreground." ],
 					"bgmode" : 1,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -97,7 +136,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 71.0, 339.0, 240.0, 180.0 ],
+					"patching_rect" : [ 71.0, 424.0, 240.0, 180.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 240.0, 180.0 ]
 				}
 
@@ -112,12 +151,12 @@
 					"id" : "obj-1",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "foregroundMask%.module.maxpat",
+					"name" : "foreground_mask%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 71.0, 238.0, 300.0, 70.0 ],
+					"patching_rect" : [ 71.0, 323.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"viewvisibility" : 1
 				}
@@ -138,6 +177,33 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-13", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -147,22 +213,31 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 80.5, 214.0, 379.0, 214.0, 379.0, 128.0, 397.5, 128.0 ],
+					"midpoints" : [ 80.5, 263.0, 379.0, 263.0, 379.0, 177.0, 397.5, 177.0 ],
 					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "foregroundMask%.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/foregroundMask%",
+				"name" : "foreground_mask%.module.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/foreground_mask%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "foregroundMask%.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/foregroundMask%",
+				"name" : "foreground_mask%.model.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/foreground_mask%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -175,8 +250,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "foregroundMask%.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/foregroundMask%",
+				"name" : "foreground_mask%.view.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/foreground_mask%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
