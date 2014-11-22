@@ -38,6 +38,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 140.0, 106.0, 83.0, 22.0 ],
+					"style" : "",
+					"text" : "file/path none"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"args" : [ "@name", "soundfile~.model", "@description", "Stereo sound file playback." ],
 					"bgmode" : 1,
 					"border" : 0,
@@ -121,14 +134,23 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
 			"obj-3::obj-1::obj-100" : [ "live.text[7]", "live.text[1]", 0 ],
 			"obj-3::obj-1::obj-104" : [ "live.dial[1]", "Depth", 0 ],
 			"obj-3::obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
 			"obj-3::obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
-			"obj-3::obj-1::obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
 			"obj-3::obj-1::obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-3::obj-1::obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
 			"obj-3::obj-1::obj-53" : [ "Master Gain", "Master Gain", 0 ],
 			"obj-3::obj-1::obj-12::obj-30" : [ "live.menu", "live.menu", 0 ],
 			"obj-3::obj-1::obj-99" : [ "live.menu[2]", "live.menu[2]", 0 ],
