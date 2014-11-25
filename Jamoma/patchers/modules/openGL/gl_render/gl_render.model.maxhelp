@@ -130,7 +130,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
 									"patching_rect" : [ 33.333328, 168.714294, 120.0, 92.0 ],
-									"text" : "jit.gl.gridshape my_context @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.3 0.3 0.3 @color 0. 0.57 0.81"
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.3 0.3 0.3 @color 0. 0.57 0.81"
 								}
 
 							}

@@ -46,3 +46,10 @@ project.xcworkspace
 *.vcxproj
 
 JamomaMaxVersion.h
+
+# théo needs to hide a j.score external (which is based on Jamoma script support so it is placed into the Implementation/Max folder on his machine)
+source/j.score/
+
+# théo needs to hide a j.leapmotion external (which is based on Jamoma script support so it is placed into the Implementation/Max folder on his machine)
+source/j.leapmotion/
+

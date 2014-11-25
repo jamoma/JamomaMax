@@ -342,7 +342,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 846.0, 207.0, 175.0, 47.0 ],
-					"text" : "j.unit @dataspace time @input midi @output nonsense"
+					"text" : "j.unit @dataspace time @input midinote @output nonsense"
 				}
 
 			}

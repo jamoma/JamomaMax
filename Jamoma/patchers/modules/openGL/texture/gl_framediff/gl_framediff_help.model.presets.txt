@@ -12,14 +12,14 @@ window%/fsmenubar 1
 window%/fullscreen 0
 window%/fullscreen/shortcut 27
 window%/grow 1
-window%/name my_context
+window%/name default
 window%/position 0.000000 45.000000
 window%/shared 0
 window%/size 320 240
 window%/sync 0
 # 
 # 
-gl_render/GL/context my_context
+gl_render/GL/context default
 gl_render/GL/alpha 1.000000
 gl_render/GL/anchor 0.000000 0.000000 0.000000
 gl_render/GL/anim UID
@@ -96,7 +96,7 @@ gl_render/stereo 0
 gl_render/sync 1
 gl_render/verbose 1
 # 
-gl_brcosa/context my_context
+gl_brcosa/context default
 gl_brcosa/active 1
 gl_brcosa/adapt 1
 gl_brcosa/antialias 0
@@ -110,7 +110,7 @@ gl_brcosa/rect 0 0 1 1
 gl_brcosa/saturation 0.000000
 gl_brcosa/texrect 0 0 1 1
 # 
-gl_framediff/context my_context
+gl_framediff/context default
 gl_framediff/active 1
 gl_framediff/adapt 1
 gl_framediff/antialias 0
@@ -124,7 +124,7 @@ gl_framediff/texrect 0 0 1 1
 gl_framediff/threshold -0.280000
 # 
 # 
-gl_videoplane/GL/context my_context
+gl_videoplane/GL/context default
 gl_videoplane/GL/alpha 1.000000
 gl_videoplane/GL/anchor 0.000000 0.000000 0.000000
 gl_videoplane/GL/anim UID

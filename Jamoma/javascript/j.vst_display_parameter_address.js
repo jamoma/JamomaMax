@@ -29,6 +29,7 @@ function symbol(aNodeAddress)
   var sliderText = aNodeAddress.toString();
   
   sliderText = sliderText.replace("parameter/", "");
+  sliderText = sliderText.replace(/\d+/,"");
   
   // underscore => space
   sliderText = sliderText.replace(/_/g, ' ');

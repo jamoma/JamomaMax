@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"revision" : 9,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 276.0, 72.0, 1004.0, 524.0 ],
@@ -83,7 +83,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 312.0, 142.0, 35.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 265.0, 0.0, 35.0, 20.0 ],
+					"presentation_rect" : [ 101.0, 34.0, 35.0, 20.0 ],
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Offset"
@@ -99,9 +99,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 178.0, 0.0, 93.0, 20.0 ],
+					"patching_rect" : [ 14.0, 34.0, 93.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 178.0, 0.0, 93.0, 20.0 ],
+					"presentation_rect" : [ 14.0, 34.0, 93.0, 20.0 ],
 					"text" : "Channel offset:"
 				}
 
@@ -124,12 +124,12 @@
 					"id" : "obj-52",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 0.0, 0.0, 300.0, 35.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 35.0 ],
-					"text" : "/noModelAddress"
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
+					"text" : "/no_..ess"
 				}
 
 			}

@@ -38,7 +38,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 103.0, 104.0, 102.0, 60.0 ],
-					"text" : "j.unit @dataspace time @input midi @output speed"
+					"text" : "j.unit @dataspace time @input midinote @output speed"
 				}
 
 			}
