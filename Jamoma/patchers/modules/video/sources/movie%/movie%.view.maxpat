@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1206.0, 933.0 ],
+		"rect" : [ 34.0, 79.0, 1181.0, 933.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -39,13 +39,25 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "int" ],
+					"patching_rect" : [ 943.0, 673.265869, 57.0, 22.0 ],
+					"style" : "",
+					"text" : "strippath"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 779.695923, 190.128479, 37.0, 22.0 ],
-					"presentation_rect" : [ 913.0, 200.128479, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "set 0"
 				}
@@ -149,17 +161,6 @@
 					"text" : "Jitter matrix",
 					"texton" : "OpenGL texture",
 					"varname" : "live.text[2]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-80",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 783.0, 799.0, 150.0, 20.0 ],
-					"style" : ""
 				}
 
 			}
@@ -502,9 +503,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 403.5, 174.145508, 81.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.remote play"
+					"patching_rect" : [ 403.5, 174.145508, 98.0, 22.0 ],
+					"style" : "",
+					"text" : "j.remote file/play"
 				}
 
 			}
@@ -1288,9 +1289,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 943.0, 680.265869, 123.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.receive moviename"
+					"patching_rect" : [ 943.0, 640.531738, 101.0, 22.0 ],
+					"style" : "",
+					"text" : "j.receive file/path"
 				}
 
 			}
@@ -1544,8 +1545,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 504.5, 63.0, 98.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.send eject"
+					"style" : "",
+					"text" : "j.send path/eject"
 				}
 
 			}
@@ -1556,9 +1557,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 403.5, 94.0, 82.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.send path"
+					"patching_rect" : [ 403.5, 94.0, 88.0, 22.0 ],
+					"style" : "",
+					"text" : "j.send file/path"
 				}
 
 			}
@@ -2213,6 +2214,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2231,7 +2241,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
+					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-73", 0 ]
@@ -2359,13 +2369,13 @@
  ],
 		"parameters" : 		{
 			"obj-41" : [ "live.text[4]", "live.text[4]", 0 ],
-			"obj-91" : [ "live.text[5]", "live.text[2]", 0 ],
-			"obj-89" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-39" : [ "live.text[3]", "live.text", 0 ],
+			"obj-91" : [ "live.text[5]", "live.text[2]", 0 ],
 			"obj-37" : [ "live.text[1]", "live.text", 0 ],
+			"obj-89" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-49" : [ "live.button", "live.button", 0 ],
-			"obj-53" : [ "live.button[1]", "live.button", 0 ],
-			"obj-36" : [ "live.text", "live.text", 0 ]
+			"obj-36" : [ "live.text", "live.text", 0 ],
+			"obj-53" : [ "live.button[1]", "live.button", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
