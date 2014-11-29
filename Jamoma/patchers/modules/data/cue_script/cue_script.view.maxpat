@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -41,6 +41,7 @@
 				"box" : 				{
 					"id" : "obj-33",
 					"maxclass" : "live.text",
+					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -68,6 +69,7 @@
 				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "live.text",
+					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -95,6 +97,7 @@
 				"box" : 				{
 					"id" : "obj-26",
 					"maxclass" : "live.text",
+					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -122,6 +125,7 @@
 				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "live.text",
+					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -149,6 +153,7 @@
 				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "live.text",
+					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -186,7 +191,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -422,6 +427,9 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-14",
 					"items" : "<empty>",
 					"labelclick" : 1,
@@ -495,7 +503,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -725,6 +733,7 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial Bold",
 					"fontsize" : 10.0,
 					"id" : "obj-3",
@@ -1128,11 +1137,11 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-33" : [ "live.text[4]", "live.text", 0 ],
-			"obj-4" : [ "live.text", "live.text", 0 ],
-			"obj-26" : [ "live.text[2]", "live.text", 0 ],
+			"obj-5" : [ "live.text[1]", "live.text", 0 ],
 			"obj-31" : [ "live.text[3]", "live.text", 0 ],
-			"obj-5" : [ "live.text[1]", "live.text", 0 ]
+			"obj-4" : [ "live.text", "live.text", 0 ],
+			"obj-33" : [ "live.text[4]", "live.text", 0 ],
+			"obj-26" : [ "live.text[2]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
