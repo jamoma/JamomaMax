@@ -413,7 +413,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 179.0, 354.0, 87.0, 36.0 ],
-													"text" : "jit.gl.sketch my_context"
+													"text" : "jit.gl.sketch default"
 												}
 
 											}
@@ -713,7 +713,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 511.0, 206.0, 154.0, 21.0 ],
-													"text" : "jit.gl.material my_context"
+													"text" : "jit.gl.material default"
 												}
 
 											}
@@ -728,7 +728,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
 													"patching_rect" : [ 482.0, 237.0, 112.0, 87.0 ],
-													"text" : "jit.gl.gridshape my_context @shape plane @rotatexyz 90 0 0 @position 0 -3. 0. @scale 6 6"
+													"text" : "jit.gl.gridshape default @shape plane @rotatexyz 90 0 0 @position 0 -3. 0. @scale 6 6"
 												}
 
 											}
@@ -850,7 +850,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 47.0, 290.0, 154.0, 21.0 ],
-													"text" : "jit.gl.material my_context"
+													"text" : "jit.gl.material default"
 												}
 
 											}
@@ -865,7 +865,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
 													"patching_rect" : [ 22.0, 320.0, 167.0, 36.0 ],
-													"text" : "jit.gl.gridshape my_context @shape cube"
+													"text" : "jit.gl.gridshape default @shape cube"
 												}
 
 											}
@@ -879,7 +879,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 22.0, 255.0, 364.0, 21.0 ],
-													"text" : "jit.gl.multiple my_context 3 @glparams position rotate scale"
+													"text" : "jit.gl.multiple default 3 @glparams position rotate scale"
 												}
 
 											}
@@ -894,7 +894,7 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
 													"patching_rect" : [ 22.0, 209.0, 364.0, 36.0 ],
-													"text" : "jit.phys.multiple 2 @physparams position scale @worldname my_context-world @shape cube @friction 1"
+													"text" : "jit.phys.multiple 2 @physparams position scale @worldname default-world @shape cube @friction 1"
 												}
 
 											}
@@ -1448,7 +1448,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
 													"patching_rect" : [ 232.0, 559.0, 140.0, 50.0 ],
-													"text" : "jit.gl.model my_context @file duck.dae"
+													"text" : "jit.gl.model default @file duck.dae"
 												}
 
 											}
@@ -1463,7 +1463,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
 													"patching_rect" : [ 69.0, 405.5, 146.0, 79.0 ],
-													"text" : "jit.gl.model my_context @file duck.dae @drawgroup 1 @automatic 0 @matrixoutput 1"
+													"text" : "jit.gl.model default @file duck.dae @drawgroup 1 @automatic 0 @matrixoutput 1"
 												}
 
 											}
@@ -1478,7 +1478,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 232.0, 513.0, 273.0, 36.0 ],
-													"text" : "jit.phys.body @worldname my_context-world @kinematic 1"
+													"text" : "jit.phys.body @worldname default-world @kinematic 1"
 												}
 
 											}
@@ -1728,7 +1728,7 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 164.0, 339.0, 87.0, 36.0 ],
-													"text" : "jit.gl.sketch my_context"
+													"text" : "jit.gl.sketch default"
 												}
 
 											}

@@ -1,0 +1,12 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+audio/gain 100.000000
+audio/mute 0
+file/path none
+file/loop 0
+file/play 0
+# 
+# ###########################################

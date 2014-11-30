@@ -7,41 +7,35 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		461FFA71174A8F9200FE2943 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
-		461FFA72174A8F9200FE2943 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
-		469BD9EA180B55C000A023B3 /* j.modular.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.modular.yml; sourceTree = "<group>"; };
-		46A5878319FEA7A5000E15F2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		D2CAE29415118DEC0020B900 /* j.modular.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.modular.cpp; sourceTree = "<group>"; };
+		221569961A098A19000AB4B0 /* j.unit~.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "j.unit~.cpp"; sourceTree = "<group>"; };
+		221569971A098A19000AB4B0 /* j.unit~.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.unit~.yml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		08FB7794FE84155DC02AAC07 /* j.modular */ = {
+		08FB7794FE84155DC02AAC07 /* j.unit */ = {
 			isa = PBXGroup;
 			children = (
-				469BD9EA180B55C000A023B3 /* j.modular.yml */,
-				46A5878319FEA7A5000E15F2 /* Makefile */,
-				D2CAE29415118DEC0020B900 /* j.modular.cpp */,
-				461FFA72174A8F9200FE2943 /* TTModularClassWrapperMax.h */,
-				461FFA71174A8F9200FE2943 /* TTModularClassWrapperMax.cpp */,
+				221569971A098A19000AB4B0 /* j.unit~.yml */,
+				221569961A098A19000AB4B0 /* j.unit~.cpp */,
 			);
-			name = j.modular;
+			name = j.unit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		D28A88AD04BDD90700651E21 /* j.modular */ = {
+		D28A88AD04BDD90700651E21 /* j.unit */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "$(Configuration) $(ACTION)";
-			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.modular" */;
+			buildArgumentsString = "$(ACTION) $(CONFIGURATION)";
+			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.unit" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			dependencies = (
 			);
-			name = j.modular;
+			name = j.unit;
 			passBuildSettingsInEnvironment = 1;
-			productName = j.modular;
+			productName = j.unit;
 		};
 /* End PBXLegacyTarget section */
 
@@ -49,9 +43,9 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 			};
-			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.modular" */;
+			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.unit~" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -61,11 +55,11 @@
 				French,
 				German,
 			);
-			mainGroup = 08FB7794FE84155DC02AAC07 /* j.modular */;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* j.unit */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D28A88AD04BDD90700651E21 /* j.modular */,
+				D28A88AD04BDD90700651E21 /* j.unit */,
 			);
 		};
 /* End PBXProject section */
@@ -82,7 +76,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.modular;
+				PRODUCT_NAME = j.unit;
 			};
 			name = Debug;
 		};
@@ -93,13 +87,17 @@
 				COPY_PHASE_STRIP = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = j.modular;
+				PRODUCT_NAME = j.unit;
 			};
 			name = Release;
 		};
 		1DEB919408733D9F0010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_64_BIT)",
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -110,6 +108,7 @@
 		1DEB919508733D9F0010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = macosx;
@@ -119,7 +118,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.modular" */ = {
+		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "j.unit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919008733D9F0010E9CD /* Debug */,
@@ -128,7 +127,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.modular" */ = {
+		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.unit~" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919408733D9F0010E9CD /* Debug */,
