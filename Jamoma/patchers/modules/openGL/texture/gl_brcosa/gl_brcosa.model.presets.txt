@@ -3,7 +3,7 @@
 - description "something about this preset"
 # ###########################################
 # 
-GL/context my_context
+GL/context default
 data/active 1
 GL/alpha 1.000000
 GL/material/ambient 0.000000 0.000000 0.000000 0.000000

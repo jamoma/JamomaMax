@@ -3,9 +3,9 @@
 - description "something about this preset"
 # ###########################################
 # 
-videoplane/GL/context my_context
-gl_render/GL/context my_context
-videoplane.2/GL/context my_context
+videoplane/GL/context default
+gl_render/GL/context default
+videoplane.2/GL/context default
 input%/data/active 1
 input%/data/bypass 0
 input%/dim 640 480
@@ -150,7 +150,7 @@ videoplane.2/GL/matrixoutput 0
 gl_render/GL/blend/mode 6 7
 videoplane/GL/blend/mode 6 7
 videoplane.2/GL/blend/mode 6 7
-window%/name my_context
+window%/name default
 gl_render/GL/material/name none
 videoplane/GL/material/name none
 videoplane.2/GL/material/name none

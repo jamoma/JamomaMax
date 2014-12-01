@@ -15,6 +15,7 @@ rate 1
 unique 1
 dim 640 480
 adapt 0
+output_texture 0
 vol 1
 highquality 1
 singlefield 1
