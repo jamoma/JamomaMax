@@ -11,7 +11,8 @@ find_package(MaxSDK REQUIRED)
 addMaxsupport()
 
 IF(APPLE)
-	FIND_LIBRARY(CARBON_LIB CarbonCore)
+	FIND_LIBRARY(CARBON_LIB Carbon)
+#	FIND_LIBRARY(CARBON_LIB CarbonCore)
 	FIND_LIBRARY(MaxAPI_LIB MaxAPI
 				 PATH ${CMAKE_CURRENT_SOURCE_DIR}/../source/c74support/max-includes/)
 	MARK_AS_ADVANCED (MaxAPI_LIB)
