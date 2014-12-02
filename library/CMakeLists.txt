@@ -10,6 +10,14 @@ find_package(MaxSDK REQUIRED)
 
 addMaxsupport()
 
+IF(APPLE)
+	FIND_LIBRARY(CARBON_LIB CarbonCore)
+	FIND_LIBRARY(MaxAPI_LIB MaxAPI
+				 PATH ${CMAKE_CURRENT_SOURCE_DIR}/../source/c74support/max-includes/)
+	MARK_AS_ADVANCED (MaxAPI_LIB)
+	SET(OSX_LIBS ${MaxAPI_LIB} ${CARBON_LIB})
+ENDIF (APPLE)
+
 set(PROJECT_SRCS
 ${CMAKE_CURRENT_SOURCE_DIR}/source/JamomaForMax.cpp
 ${CMAKE_CURRENT_SOURCE_DIR}/source/JamomaModularForMax.cpp
@@ -38,11 +46,16 @@ include_directories("${PROJECT_SOURCE_DIR}/../../../Core/DSP/library/includes")
 
 add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
 
+addAppleFramework(Carbon)
+if(APPLE)
+	message("Linking with: ${OSX_FRAMEWORKS}")
+	target_link_libraries(${PROJECT_NAME} ${OSX_FRAMEWORKS})
+endif()
+
 target_link_libraries(${PROJECT_NAME} JamomaFoundation)
 target_link_libraries(${PROJECT_NAME} JamomaModular)
-target_link_libraries(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/../source/c74support/max-includes/MaxAPI)
+target_link_libraries(${PROJECT_NAME} ${OSX_LIBS})
 
-addAppleFramework(Carbon)
 
 ### Output ###
 setOutput()

@@ -1,1 +1,5 @@
+project(MaxExternals)
+if(APPLE)
+	include_directories("/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers/")
+endif()
 addExternals()

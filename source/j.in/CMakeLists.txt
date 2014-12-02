@@ -27,6 +27,12 @@ target_link_libraries(${PROJECT_NAME} JamomaModular)
 target_link_libraries(${PROJECT_NAME} JamomaMax)
 target_link_libraries(${PROJECT_NAME} JamomaDSP)
 
+if(APPLE)
+	addAppleFramework(CoreServices)
+	addAppleFramework(Carbon)
+	target_link_libraries(${PROJECT_NAME} ${OSX_FRAMEWORKS})
+endif()
+
 ### Output ###
 setOutput()
 
