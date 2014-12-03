@@ -18,6 +18,11 @@ ${CMAKE_CURRENT_SOURCE_DIR}/source/JamomaSymbols.cpp
 ${CMAKE_CURRENT_SOURCE_DIR}/../source/c74support/max-includes/common/commonsyms.cpp
 )
 
+### GetGitDescription ###
+include(${CMAKE_CURRENT_SOURCE_DIR}/Shared/CMake/GetGitRevisionDescription)
+get_git_head_revision(GIT_REFSPEC GIT_SHA1)
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/includes/JamomaMaxVersion.h.in" @ONLY)
+
 file(GLOB_RECURSE PROJECT_HDRS
     ${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h
 	${CMAKE_CURRENT_SOURCE_DIR}../../../Core/Foundation/library/includes/*.h
