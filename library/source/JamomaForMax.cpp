@@ -272,23 +272,6 @@ bool jamoma_atom_compare(t_symbol *type, t_atom *a1, t_atom *a2)
 	return 0;
 }
 
-void jamoma_file_writeline(t_filehandle *fh, long *the_eof, const char *the_text)
-{
-	char		tempstring[4096];
-	short		err = 0;
-	t_ptr_size	len = 0;
-	
-	strcpy(tempstring, the_text);
-	strcat(tempstring, "\n");
-	len = strlen(tempstring);
-	err = sysfile_write(*fh, &len, &tempstring);
-	if (err) {
-		error("jamoma: sysfile_write error (%d)", err);
-		return;
-	}
-	*the_eof = *the_eof + len;
-}
-
 // Compare Strings: Is s2 after s1 in alphabetical order?
 bool jamoma_string_compare(char *s1, char *s2)
 {
