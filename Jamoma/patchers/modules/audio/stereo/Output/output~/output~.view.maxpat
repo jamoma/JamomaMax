@@ -5,10 +5,10 @@
 			"major" : 6,
 			"minor" : 1,
 			"revision" : 9,
-			"architecture" : "x64"
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 8.0, 44.0, 1533.0, 956.0 ],
+		"rect" : [ 8.0, 45.0, 1533.0, 956.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -338,6 +338,7 @@
 				"box" : 				{
 					"appearance" : 2,
 					"id" : "obj-97",
+					"ignoreclick" : 1,
 					"maxclass" : "live.numbox",
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -688,7 +689,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 9,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 542.0, 99.0, 640.0, 480.0 ],
@@ -985,7 +986,7 @@
 							"major" : 6,
 							"minor" : 1,
 							"revision" : 9,
-							"architecture" : "x64"
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 201.0, 112.0, 434.0, 298.0 ],
@@ -2104,35 +2105,35 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-90" : [ "live.text[4]", "live.text[1]", 0 ],
-			"obj-97" : [ "live.numbox", "CPU", 0 ],
-			"obj-12::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-99" : [ "live.menu[2]", "live.menu[2]", 0 ],
-			"obj-103" : [ "live.text[5]", "live.text", 0 ],
-			"obj-12::obj-30" : [ "live.menu", "live.menu", 0 ],
-			"obj-102" : [ "live.text[3]", "live.text", 0 ],
-			"obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
-			"obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
-			"obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
-			"obj-12::obj-42" : [ "live.text[1]", "live.text", 0 ],
-			"obj-100" : [ "live.text[7]", "live.text[1]", 0 ],
-			"obj-82" : [ "pan", "Pan", 0 ],
-			"obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
-			"obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-106" : [ "live.dial[3]", "Release", 0 ],
-			"obj-98" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-104" : [ "live.dial[1]", "Depth", 0 ],
 			"obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
 			"obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
+			"obj-12::obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-12::obj-13" : [ "Release", "Release", 0 ],
+			"obj-100" : [ "live.text[7]", "live.text[1]", 0 ],
+			"obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-82" : [ "pan", "Pan", 0 ],
 			"obj-53" : [ "Master Gain", "Master Gain", 0 ],
+			"obj-97" : [ "live.numbox", "CPU", 0 ],
+			"obj-103" : [ "live.text[5]", "live.text", 0 ],
+			"obj-12::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-98" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-90" : [ "live.text[4]", "live.text[1]", 0 ],
+			"obj-102" : [ "live.text[3]", "live.text", 0 ],
+			"obj-99" : [ "live.menu[2]", "live.menu[2]", 0 ],
+			"obj-104" : [ "live.dial[1]", "Depth", 0 ],
 			"obj-107" : [ "live.dial[4]", "Preamp", 0 ],
-			"obj-12::obj-13" : [ "Release", "Release", 0 ]
+			"obj-106" : [ "live.dial[3]", "Release", 0 ],
+			"obj-12::obj-30" : [ "live.menu", "live.menu", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "limiter~.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"patcherrelativepath" : "../../Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
