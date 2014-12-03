@@ -121,7 +121,7 @@ void model_signal_amenities(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                 aData.set(kTTSym_rangeClipmode, kTTSym_both);
                 v = TTValue(100.);
                 aData.set(kTTSym_valueDefault, v);							// Assume 100%, so that processed signal is passed through
-                aData.set(kTTSym_rampDrive, TTSymbol("Max"));
+                aData.set(kTTSym_rampDrive, TTSymbol("max"));
                 aData.set(kTTSym_rampFunction, TTSymbol("linear"));
                 aData.set(kTTSym_description, TTSymbol("Controls the wet/dry mix in percent"));
             }
@@ -144,7 +144,7 @@ void model_signal_amenities(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                 aData.set(kTTSym_rangeClipmode, kTTSym_both);
                 v = TTValue(100.);
                 aData.set(kTTSym_valueDefault, v);
-                aData.set(kTTSym_rampDrive, TTSymbol("Max"));
+                aData.set(kTTSym_rampDrive, TTSymbol("max"));
                 aData.set(kTTSym_rampFunction, TTSymbol("linear"));
                 aData.set(kTTSym_description, TTSymbol("Set gain of model's outputs (as MIDI value by default)."));
             }
