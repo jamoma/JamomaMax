@@ -262,7 +262,7 @@ TTErr jamoma_data_create(t_object *x, TTObject& returnedData, TTSymbol service)
     // prepare its callback
     returnedData.set(kTTSym_baton, TTPtr(x));
 	returnedData.set(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
-    returnedData.set(TTSymbol("rampDriveDefault"), TTSymbol("Max"));
+    returnedData.set(TTSymbol("rampDriveDefault"), TTSymbol("max"));
 	
 	return kTTErrNone;
 }

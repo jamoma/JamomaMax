@@ -65,7 +65,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 335.0, 179.0, 126.0, 19.0 ],
-					"text" : "jit.window my_context"
+					"text" : "jit.window default"
 				}
 
 			}

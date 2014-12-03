@@ -12,7 +12,7 @@ light/automatic 1
 automatic 1
 data/bypass 0
 depth/clear 0
-context my_context
+context default
 light/diffuse 0.000000 0.000000 0.000000 0.000000
 light/emission 0.000000 0.000000 0.000000 0.000000
 light/enable 0

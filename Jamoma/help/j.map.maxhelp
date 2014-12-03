@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 353.0, 202.0, 1300.0, 711.0 ],
+		"rect" : [ 151.0, 164.0, 1300.0, 711.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -42,7 +42,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -122,7 +122,7 @@
 									"attr" : "input/threshold/down",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-29",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -208,7 +208,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 252.0, 198.5, 20.0, 20.0 ]
+									"patching_rect" : [ 252.0, 192.5, 20.0, 20.0 ]
 								}
 
 							}
@@ -226,7 +226,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -468,7 +468,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 252.0, 353.0, 176.0, 74.0 ],
-									"text" : "j.map @function cosine @input/threshold/down 0.25 @input/threshold/up 0.75 @output/threshold/down 0.25 @output/threshold/up 0.75"
+									"text" : "j.map @function exponential @input/threshold/down 0.25 @input/threshold/up 0.75 @output/threshold/down 0.25 @output/threshold/up 0.75"
 								}
 
 							}
@@ -688,7 +688,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -894,7 +894,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -953,11 +953,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 353.0, 228.0, 1300.0, 685.0 ],
+						"rect" : [ 0.0, 26.0, 1300.0, 685.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -978,6 +978,23 @@
 						"tags" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"attr" : "inverse",
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frozen_box_attributes" : [ "lock", "attr" ],
+									"id" : "obj-14",
+									"lock" : 1,
+									"maxclass" : "attrui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 10.0, 365.0, 234.0, 20.0 ],
+									"text_width" : 180.0
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"bgcolor" : [ 1.0, 1.0, 1.0, 0.5 ],
 									"fontname" : "Arial",
@@ -1021,7 +1038,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 10.0, 416.5, 234.0, 20.0 ],
+									"patching_rect" : [ 10.0, 458.0, 234.0, 20.0 ],
 									"text_width" : 180.0
 								}
 
@@ -1038,7 +1055,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 10.0, 398.5, 234.0, 20.0 ],
+									"patching_rect" : [ 10.0, 440.0, 234.0, 20.0 ],
 									"text_width" : 180.0
 								}
 
@@ -1055,7 +1072,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 10.0, 376.5, 234.0, 20.0 ],
+									"patching_rect" : [ 10.0, 418.0, 234.0, 20.0 ],
 									"text_width" : 180.0
 								}
 
@@ -1065,14 +1082,14 @@
 									"attr" : "input/threshold/down",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-36",
 									"lock" : 1,
 									"maxclass" : "attrui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 10.0, 358.5, 234.0, 20.0 ],
+									"patching_rect" : [ 10.0, 400.0, 234.0, 20.0 ],
 									"text_width" : 180.0
 								}
 
@@ -1116,7 +1133,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -1326,7 +1343,7 @@
 									"attr" : "output/max",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-8",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -1343,7 +1360,7 @@
 									"attr" : "output/min",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-18",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -1360,7 +1377,7 @@
 									"attr" : "input/max",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-3",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -1419,7 +1436,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -1926,7 +1943,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-12",
-									"items" : "ratio",
+									"items" : "base",
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1958,7 +1975,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-15",
-									"items" : [ "cosine", ",", "crossFadeIn", ",", "crossFadeOut", ",", "exponential", ",", "freehand", ",", "linear", ",", "logarithm", ",", "lowpass", ",", "power", ",", "smoothPolynomial", ",", "tanh", ",", "bartlett", ",", "blackman", ",", "blackmanHarris", ",", "expodec", ",", "gauss", ",", "hamming", ",", "hanning", ",", "kaiser", ",", "nuttall", ",", "rectangular", ",", "rosenbergGlottalPulse", ",", "trapezoid", ",", "tukey", ",", "welch" ],
+									"items" : [ "linear", ",", "easeInBack", ",", "easeInOutBack", ",", "easeOutBack", ",", "easeInBounce", ",", "easeInOutBounce", ",", "easeOutBounce", ",", "easeInCircular", ",", "easeInOutCircular", ",", "easeOutCircular", ",", "easeInCubic", ",", "easeInOutCubic", ",", "easeOutCubic", ",", "easeInElastic", ",", "easeInOutElastic", ",", "easeOutElastic", ",", "easeInExponential", ",", "easeInOutExponential", ",", "easeOutExponential", ",", "easeInQuadratic", ",", "easeInOutQuadratic", ",", "easeOutQuadratic", ",", "easeInQuartic", ",", "easeInOutQuartic", ",", "easeOutQuartic", ",", "easeInQuintic", ",", "easeInOutQuintic", ",", "easeOutQuintic", ",", "easeInSine", ",", "easeInOutSine", ",", "easeOutSine", ",", "exponential", ",", "freehand", ",", "logarithm", ",", "lowpass", ",", "power", ",", "smoothPolynomial", ",", "tanh", ",", "bartlett", ",", "blackman", ",", "blackmanHarris", ",", "expodec", ",", "gauss", ",", "hamming", ",", "hanning", ",", "kaiser", ",", "nuttall", ",", "rectangular", ",", "rosenbergGlottalPulse", ",", "trapezoid", ",", "tukey", ",", "welch" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -2098,7 +2115,7 @@
 									"attr" : "input/min",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frozen_box_attributes" : [ "attr", "lock" ],
+									"frozen_box_attributes" : [ "lock", "attr" ],
 									"id" : "obj-2",
 									"lock" : 1,
 									"maxclass" : "attrui",
@@ -2144,6 +2161,15 @@
 									"disabled" : 0,
 									"hidden" : 1,
 									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-175", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-14", 0 ]
 								}
 
 							}
@@ -2660,11 +2686,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1300.0, 685.0 ],
+						"rect" : [ 151.0, 190.0, 1300.0, 685.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2685,6 +2711,23 @@
 						"tags" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"attr" : "inverse",
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frozen_box_attributes" : [ "lock", "attr" ],
+									"id" : "obj-4",
+									"lock" : 1,
+									"maxclass" : "attrui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 601.5, 201.0, 74.5, 20.0 ],
+									"text_width" : 50.0
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"bubble" : 1,
 									"bubbletextmargin" : 10,
@@ -3057,6 +3100,16 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 611.0, 223.5, 485.5, 223.5 ],
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-9", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -3127,7 +3180,7 @@
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 1179.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 1300.0, 70.0 ],
 					"varname" : "maxhelpui"
 				}
 
@@ -3146,7 +3199,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -3196,8 +3249,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 63.0, 194.0, 156.0, 20.0 ],
-									"text" : "j.map @function cosine"
+									"patching_rect" : [ 63.0, 194.0, 184.0, 20.0 ],
+									"text" : "j.map @function exponential"
 								}
 
 							}
@@ -3461,28 +3514,28 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../patchers/components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
 				"patcherrelativepath" : "../patchers/components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
@@ -3490,13 +3543,13 @@
 , 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.map.functions.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/help",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/help",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
