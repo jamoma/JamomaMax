@@ -106,8 +106,7 @@ function(git_describe _var)
 
 	execute_process(COMMAND
 		"${GIT_EXECUTABLE}"
-		describe --always
-		${hash}
+		describe
 		${ARGN}
 		WORKING_DIRECTORY
 		"${CMAKE_SOURCE_DIR}"
@@ -117,9 +116,6 @@ function(git_describe _var)
 		out
 		ERROR_QUIET
 		OUTPUT_STRIP_TRAILING_WHITESPACE)
-	if(NOT res EQUAL 0)
-		set(out "${out}-${res}-NOTFOUND")
-	endif()
 
 	set(${_var} "${out}" PARENT_SCOPE)
 endfunction()
