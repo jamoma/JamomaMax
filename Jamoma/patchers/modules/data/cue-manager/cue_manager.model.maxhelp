@@ -42,27 +42,11 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 8.0, 310.0, 327.0, 20.0 ],
+					"patching_rect" : [ 8.0, 310.0, 188.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.0, 294.0, 193.0, 20.0 ],
+					"presentation_rect" : [ 7.0, 246.0, 188.0, 20.0 ],
 					"style" : "",
-					"text" : "TODO : bouton readagain"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-10",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 7.0, 266.0, 327.0, 33.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 7.0, 265.0, 193.0, 33.0 ],
-					"style" : "",
-					"text" : "TODO : filepath is not shown in the GUI when saveas the cues file"
+					"text" : "TODO : make a readagain button"
 				}
 
 			}
@@ -75,7 +59,7 @@
 					"patching_rect" : [ 10.0, 284.0, 327.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 7.0, 236.0, 193.0, 33.0 ],
+					"presentation_rect" : [ 7.0, 211.0, 193.0, 33.0 ],
 					"style" : "",
 					"text" : "TODO : edit name & descitpion in edit mode doesn't work"
 				}
@@ -91,23 +75,9 @@
 					"patching_rect" : [ 7.0, 247.0, 327.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 7.0, 208.0, 193.0, 33.0 ],
+					"presentation_rect" : [ 7.0, 180.0, 193.0, 33.0 ],
 					"style" : "",
 					"text" : "TODO : les guillements doivent être enlevés de la description"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 115.0, 232.0, 287.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 7.0, 180.05835, 287.0, 20.0 ],
-					"style" : "",
-					"text" : "TODO : new cue needs to be automatically selected"
 				}
 
 			}
