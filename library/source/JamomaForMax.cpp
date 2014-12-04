@@ -127,7 +127,7 @@ void jamoma_init(void)
 		hash_modules = (t_hashtab*)hashtab_new(0);
 		// TODO: Use quittask_install() to set up a destructor for this to free it before Max exits
 
-		// Add Jamoma Key Commands:
+		// Add Jamoma Key Commands
 		
 		// J -- Jamoma: a new object box with "j." in it
 		atom_setsym(a+0, SymbolGen("J"));
@@ -136,11 +136,11 @@ void jamoma_init(void)
 		atom_setsym(a+3, SymbolGen("j."));
 		object_method_typed(max, SymbolGen("definecommand"), 4, a, NULL);
 				
-		// M -- Module: a new object box with "jmod." in it
+		// M -- Module: a new object box with ".model" in it
 		atom_setsym(a+0, SymbolGen("M"));
 		atom_setsym(a+1, SymbolGen("patcher"));
 		atom_setsym(a+2, SymbolGen("inserttextobj"));
-		atom_setsym(a+3, SymbolGen("jmod."));
+		atom_setsym(a+3, SymbolGen(".model"));
 		object_method_typed(max, SymbolGen("definecommand"), 4, a, NULL);
         		
 		// I -- Input: a new audio input module
@@ -156,50 +156,8 @@ void jamoma_init(void)
 		object_method_parse(max, SymbolGen("definecommand"), (char*)"D patcher inserttextobj \"bpatcher @name .module\"", NULL);		
 
 		// X -- Continuous Mapper module
-		object_method_parse(max, SymbolGen("definecommand"), (char*)"X patcher insertobj bpatcher @name mapperContinuous.model.maxpat @args mapper", NULL);		
-		
-		// !!!! --- x is defined here to work around a 'bug' in the Max Toolbox b13 ( http://code.google.com/p/maxtoolbox/downloads/list )
-		object_method_parse(max, SymbolGen("definecommand"), (char*)"x patcher nothing", NULL);		
-		
-		//definecommandinstructions, are unspooirted in max5 and gives anoying error messages 
-		if (max6){
-			// J -- Jamoma: a new object box with "j." in it
-			atom_setsym(a+0, SymbolGen("patcher"));
-			atom_setsym(a+1, SymbolGen("J"));
-			atom_setsym(a+2, SymbolGen("j. object"));
-			object_method_typed(max, SymbolGen("definecommandinstructions"), 3, a, NULL);
-			// M -- Module: a new object box with "jmod." in it
-			atom_setsym(a+0, SymbolGen("patcher"));
-			atom_setsym(a+1, SymbolGen("M"));
-			atom_setsym(a+2, SymbolGen("jmod. object"));
-			object_method_typed(max, SymbolGen("definecommandinstructions"), 3, a, NULL);
-			// I -- Input: a new audio input module
-			atom_setsym(a+0, SymbolGen("patcher"));
-			atom_setsym(a+1, SymbolGen("I"));
-			atom_setsym(a+2, SymbolGen("jmod.input~"));
-			object_method_typed(max, SymbolGen("definecommandinstructions"), 3, a, NULL);
-			// O -- Output: a new audio output module
-			atom_setsym(a+0, SymbolGen("patcher"));
-			atom_setsym(a+1, SymbolGen("O"));
-			atom_setsym(a+2, SymbolGen("jmod.output~"));
-			object_method_typed(max, SymbolGen("definecommandinstructions"), 3, a, NULL);	
-			// B -- BPatcher: a new module in a bpatcher
-			atom_setsym(a+0, SymbolGen("patcher"));
-			atom_setsym(a+1, SymbolGen("B"));
-			atom_setsym(a+2, SymbolGen("bpatcher @name jmod. @args myModule"));
-			object_method_typed(max, SymbolGen("definecommandinstructions"), 3, a, NULL);		
-			// D -- Demo: a new module in a bpatcher,
-			atom_setsym(a+0, SymbolGen("patcher"));
-			atom_setsym(a+1, SymbolGen("D"));
-			atom_setsym(a+2, SymbolGen("bpatcher @name jmod."));
-			object_method_typed(max, SymbolGen("definecommandinstructions"), 3, a, NULL);
-			// X -- Continuous Mapper module
-			atom_setsym(a+0, SymbolGen("patcher"));
-			atom_setsym(a+1, SymbolGen("X"));
-			atom_setsym(a+2, SymbolGen("jmod.mapperContinuous"));
-			object_method_typed(max, SymbolGen("definecommandinstructions"), 3, a, NULL);	
-		}
-		
+		object_method_parse(max, SymbolGen("definecommand"), (char*)"X patcher insertobj bpatcher @name mapper.module.maxpat @args mapper", NULL);
+				
 		// now the jamoma object
 		{
 			t_symbol *jamomaSymbol = SymbolGen("jamoma");
