@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 879.0, 45.0, 629.0, 716.0 ],
+		"rect" : [ 0.0, 45.0, 901.0, 777.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -39,6 +39,21 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-26",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 449.0, 42.0, 355.0, 22.0 ],
+					"style" : "",
+					"text" : "filter/set toto part #1 mode exclude, $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-22",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -61,7 +76,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 174.25, 345.0, 113.0, 35.0 ],
+					"patching_rect" : [ 199.25, 349.0, 113.0, 35.0 ],
 					"style" : "",
 					"text" : "combine DEVICE model @triggers 1"
 				}
@@ -1341,7 +1356,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 342.25, 169.0, 214.0, 35.0 ],
+					"patching_rect" : [ 342.25, 169.0, 230.0, 35.0 ],
 					"style" : "",
 					"text" : "j.namespace #1 @filter/list parameter @format jit.cellblock @sort priority"
 				}
@@ -1373,7 +1388,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 56.25, 219.0, 199.0, 35.0 ],
+					"patching_rect" : [ 56.25, 219.0, 207.0, 35.0 ],
 					"style" : "",
 					"text" : "j.namespace #1 @filter/list model @format jit.cellblock @sort priority"
 				}
@@ -1384,7 +1399,7 @@
 					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"border" : 0,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ] ],
+					"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 1, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ] ],
 					"cols" : 1,
 					"colwidth" : 200,
 					"fgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -1405,7 +1420,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 193.0, 31.0, 184.0, 199.0 ],
 					"rowheight" : 20,
-					"rows" : 1,
+					"rows" : 2,
 					"sccolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"selmode" : 3,
 					"sgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
@@ -1418,7 +1433,7 @@
 					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"border" : 0,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 1, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 2, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 3, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 4, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 5, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ] ],
+					"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 1, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 0, 2, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 3, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ] ],
 					"cols" : 1,
 					"colwidth" : 200,
 					"fgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -1439,7 +1454,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 4.0, 31.0, 184.0, 199.0 ],
 					"rowheight" : 20,
-					"rows" : 6,
+					"rows" : 4,
 					"sccolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"selmode" : 3,
 					"sgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
@@ -1644,11 +1659,19 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-84", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 28.75, 215.0, 65.75, 215.0 ],
-					"source" : [ "obj-25", 0 ]
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}
