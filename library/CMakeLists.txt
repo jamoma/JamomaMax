@@ -56,13 +56,14 @@ include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/PeerObj
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/ProtocolLib")
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/SchedulerLib")
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/DSP/library/includes")
+include_directories("${PROJECT_SOURCE_DIR}/../../Core/Graph/library/includes")
 
 
 add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
 
 target_link_libraries(${PROJECT_NAME} JamomaFoundation)
 target_link_libraries(${PROJECT_NAME} JamomaModular)
-target_link_libraries(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/../source/c74support/max-includes/MaxAPI)
+target_link_libraries(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/../source/c74support/max-includes/MaxAPI.lib)
 
 addAppleFramework(Carbon)
 
