@@ -4,6 +4,6 @@
 # ###########################################
 # 
 address /
-namespace cue_manager-namespace
+namespace events
 # 
 # ###########################################

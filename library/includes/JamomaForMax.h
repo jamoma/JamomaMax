@@ -110,15 +110,6 @@ void JAMOMA_EXPORT jamoma_atom_copy(t_atom *dst, t_atom *src);
  */
 bool JAMOMA_EXPORT jamoma_atom_compare(t_symbol *type, t_atom *a1, t_atom *a2);
 
-
-/** Utility for writing newline terminated text to a file with the Max API.
- @param fh				Pointer to the file handler.
- @param the_eof			Pointer to the end of the file.
- @param the _text		Pointer to the text line that we want to write.
- */
-void JAMOMA_EXPORT jamoma_file_writeline(t_filehandle *fh, long *the_eof, char *the_text);
-
-
 /** Compare two strings.
  @param s1				Pointer to the first of the two strings to compare-
  @param s2				Pointer to the second of the two strings to compare.

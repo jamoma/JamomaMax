@@ -1,0 +1,70 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+name my_world
+phys_worldname my_physWorld
+auto_handle 0
+automatic 1
+collisions 0
+collisions_mode simple
+dim 640 480
+displaylink 1
+doublebuffer 1
+draw_buffer default
+drawbang prerender
+dynamics 1
+enable_cornerpin 0
+erase_color 0.200000 0.200000 0.200000
+erase_color_alpha 1.000000
+esc_fullscreen 1
+far_clip 100.000000
+fixedtimestep 60
+floating 0
+framerate 60.000000
+fsaa 0
+fsmenubar 1
+fullscreen 0
+geom_rows 0
+gravity 0 -9.800000 0
+high_res 0
+maxsubsteps 8
+near_clip 0.100000
+ortho 0
+output_matrix 0
+output_texture 0
+physic_debug 0
+point_atten 1.000000 0.000000 0.100000
+point_fade 60.000000
+position 0.000000 0.000000 0.000000
+preserve_aspect 1
+raytest_mode closest
+rotate 0.000000 0.000000 0.000000 1.000000
+rotate_order auto
+scale 1.000000 1.000000 1.000000
+shared 0
+size 640 480
+stereo 0
+sync 1
+verbose 1
+visible 1
+windowposition 100 100
+worldbox_scale 6.000000 3.000000 6.000000
+camera/lens_angle 45.000000
+camera/lookat 0.000000 0.000000 0.000000
+camera/position 1.085295 2 9.515009
+camera/up 0.000000 1.000000 0.000000
+data/active 1
+data/bypass 0
+light/ambient_alpha 1.000000
+light/ambient_color 0.000000 0.000000 0.000000
+light/diffuse_alpha 1.000000
+light/diffuse_color 1.000000 1.000000 1.000000
+light/global_ambiant_alpha 1.000000
+light/global_ambient_color 0.000000 0.000000 0.000000
+light/position 1.000000 1.000000 1.000000 0.000000
+light/specular_alpha 1.000000
+light/specular_color 1.000000 1.000000 1.000000
+# 
+# ###########################################
