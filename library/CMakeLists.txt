@@ -20,8 +20,24 @@ ${CMAKE_CURRENT_SOURCE_DIR}/../source/c74support/max-includes/common/commonsyms.
 
 ### GetGitDescription ###
 include(${CMAKE_CURRENT_SOURCE_DIR}/../Shared/CMake/modules/GetGitRevisionDescription.cmake	)
-get_git_head_revision(GIT_REFSPEC GIT_SHA1)
-# git_describe(GIT_SHA1 HEAD --always)
+git_describe(GIT_SHA_SHORT --always)
+git_describe(GIT_TAG --always --tags)
+string(REPLACE "." ";" GIT_TAG_LIST ${GIT_TAG})
+list(LENGTH GIT_TAG_LIST len)
+if (len GREATER 0)
+	list(GET GIT_TAG_LIST 0 GIT_VERSION_MAJ)
+endif (len GREATER 0)
+if (len GREATER 1)
+	list(GET GIT_TAG_LIST 1 GIT_VERSION_MIN)
+endif (len GREATER 1)
+if (len GREATER 2)
+	list(GET GIT_TAG_LIST 2 GIT_VERSION_SUB)
+endif (len GREATER 2)
+if (len GREATER 3)
+	list(GET GIT_TAG_LIST 3 GIT_VERSION_MOD_LONG)
+endif (len GREATER 3)
+string(REPLACE "-" ";" GIT_VERSION_MOD_LIST ${GIT_VERSION_MOD_LONG})
+list(GET GIT_VERSION_MOD_LIST 0 GIT_VERSION_MOD)
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/includes/JamomaMaxVersion.h.in" "${CMAKE_CURRENT_SOURCE_DIR}/includes/JamomaMaxVersion.h" @ONLY)
 
 file(GLOB_RECURSE PROJECT_HDRS
