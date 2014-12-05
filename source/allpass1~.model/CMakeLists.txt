@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 2.6)
+project(allpass~.model)
+
+add_definitions(-DJCOM_VIEW)
+
+set(PROJECT_SRCS
+  ${CMAKE_CURRENT_SOURCE_DIR}/allpass1~.model.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/../c74support/max-includes/common/commonsyms.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/../classwrapper/TTClassWrapperMax.cpp
+)
+
+include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/Cmake/MaxExternalCommon.cmake)

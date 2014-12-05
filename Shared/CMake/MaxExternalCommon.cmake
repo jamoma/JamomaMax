@@ -1,7 +1,6 @@
 set(PROJECT_SRCS
-${PROJECT_SRCS}
-${CMAKE_CURRENT_SOURCE_DIR}/../classwrapper/TTModularClassWrapperMax.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/../c74support/max-includes/common/commonsyms.cpp
+	${PROJECT_SRCS}
+	${CMAKE_CURRENT_SOURCE_DIR}/../c74support/max-includes/common/commonsyms.cpp
 )
 
 include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Foundation/library/includes")
@@ -11,6 +10,8 @@ include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/Peer
 include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/ModularForMax")
 include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/SchedulerLib")
 include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/ProtocolLib")
+include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Graph/library/includes")
+include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/AudioGraph/library/includes")
 include_directories("${PROJECT_SOURCE_DIR}/../classwrapper")
 include_directories("${FILE_H_DIR}")
 
@@ -22,6 +23,8 @@ target_link_libraries(${PROJECT_NAME} JamomaFoundation)
 target_link_libraries(${PROJECT_NAME} JamomaModular)
 target_link_libraries(${PROJECT_NAME} JamomaMax)
 target_link_libraries(${PROJECT_NAME} JamomaDSP)
+target_link_libraries(${PROJECT_NAME} JamomaGraph)
+target_link_libraries(${PROJECT_NAME} JamomaAudioGraph)
 
 ### Output ###
 setOutput()
