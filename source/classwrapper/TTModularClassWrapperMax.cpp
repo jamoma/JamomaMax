@@ -281,9 +281,10 @@ t_max_err wrappedModularClass_attrGet(TTPtr self, t_object *attr, long* argc, t_
 	if (err)
 		return err;
 	
-	TTSymbol	ttAttrName(ptr);
+	TTSymbol ttAttrName(ptr);
 	
-	if (selectedObject) {
+	if (selectedObject)
+    {
 		selectedObject->getAttributeValue(ttAttrName, v);
 		jamoma_ttvalue_to_Atom(v, argc, argv);
 	}
