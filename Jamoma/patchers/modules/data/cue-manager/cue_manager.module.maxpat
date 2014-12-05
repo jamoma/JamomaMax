@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 91.0, 218.0, 381.0, 379.0 ],
+		"rect" : [ 10.0, 48.0, 300.0, 175.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -78,9 +78,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 27.0, 19.05835, 300.0, 210.0 ],
+					"patching_rect" : [ 27.0, 19.05835, 300.0, 175.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1.0, 1.05835, 300.0, 210.0 ],
+					"presentation_rect" : [ 1.0, 1.05835, 300.0, 175.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -89,6 +89,7 @@
 				"box" : 				{
 					"annotation" : "none",
 					"color" : [ 0.265236, 0.618493, 0.031451, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-51",
@@ -98,7 +99,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 43.0, 278.55835, 223.0, 22.0 ],
 					"style" : "",
-					"text" : "cue_manager.model #1"
+					"text" : "cue_manager.model events"
 				}
 
 			}
@@ -121,92 +122,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "cue_manager.model.maxpat",
-				"bootpath" : "~/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/cue-manager",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cue_manager.view.maxpat",
-				"bootpath" : "~/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/cue-manager",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.datetime.maxpat",
-				"bootpath" : "~/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/datetime",
-				"patcherrelativepath" : "../../../components/data/datetime",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.namespace_selector.maxpat",
-				"bootpath" : "~/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespace_selector",
-				"patcherrelativepath" : "../../../components/data/namespace_selector",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.cue.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.namespace.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }
