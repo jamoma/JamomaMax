@@ -8,6 +8,7 @@ followglobaltempo 0
 formant 1.000000
 formantcorrection 0
 mode basic
+originallength 1 0 0
 originaltempo 120.000000
 pitchcorrection 0
 pitchshift 1.000000
@@ -18,3 +19,5 @@ timestretch 0
 audio/gain 100.000000
 audio/mute 0
 file/loop 0
+# 
+# ###########################################
