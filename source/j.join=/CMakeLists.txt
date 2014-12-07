@@ -1,4 +1,3 @@
-
 cmake_policy(SET CMP0037 OLD)
 project(j.join=)
 
