@@ -1,4 +1,3 @@
-cmake_minimum_required(VERSION 2.6)
 cmake_policy(SET CMP0037 OLD)
 
 project(j.clip=)
@@ -11,4 +10,3 @@ set(PROJECT_SRCS
 )
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/Cmake/MaxExternalCommon.cmake)
-

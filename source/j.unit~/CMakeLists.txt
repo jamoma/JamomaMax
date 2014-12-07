@@ -5,7 +5,6 @@ project(j.unit~)
 
 set(PROJECT_SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/j.unit~.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/../c74support/max-includes/common/commonsyms.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/../classwrapper/TTClassWrapperMax.cpp
 )
 
