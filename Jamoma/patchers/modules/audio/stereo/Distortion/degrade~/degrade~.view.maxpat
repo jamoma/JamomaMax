@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 8,
-			"architecture" : "x64"
+			"revision" : 6,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 75.0, 392.0, 958.0, 406.0 ],
+		"rect" : [ 29.0, 385.0, 958.0, 406.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -30,6 +30,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "The number of bits that will be retained in each sample - use this for bit crunching effects",
 					"id" : "obj-14",
 					"maxclass" : "live.dial",
 					"numinlets" : 1,
@@ -43,7 +44,7 @@
 						"valueof" : 						{
 							"parameter_longname" : "live.dial[1]",
 							"parameter_shortname" : "Bit depth",
-							"parameter_type" : 0,
+							"parameter_type" : 1,
 							"parameter_mmax" : 24.0,
 							"parameter_enum" : [ "1", "24" ],
 							"parameter_unitstyle" : 0
@@ -57,6 +58,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "A ratio of the emulated sample-rate to the global sample-rate.",
 					"id" : "obj-13",
 					"maxclass" : "live.dial",
 					"numinlets" : 1,
@@ -212,7 +214,7 @@
 					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
-					"text" : "/no_model_address"
+					"text" : "/deg"
 				}
 
 			}
@@ -290,28 +292,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"parameters" : 		{
-			"obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-14" : [ "live.dial[1]", "Bit depth", 0 ]
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

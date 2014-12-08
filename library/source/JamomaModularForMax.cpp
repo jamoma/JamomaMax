@@ -262,7 +262,7 @@ TTErr jamoma_data_create(t_object *x, TTObject& returnedData, TTSymbol service)
     // prepare its callback
     returnedData.set(kTTSym_baton, TTPtr(x));
 	returnedData.set(kTTSym_function, TTPtr(&jamoma_callback_return_value_typed));
-    returnedData.set(TTSymbol("rampDriveDefault"), TTSymbol("Max"));
+    returnedData.set(TTSymbol("rampDriveDefault"), TTSymbol("max"));
 	
 	return kTTErrNone;
 }
@@ -963,20 +963,23 @@ void jamoma_ttvalue_to_Atom(const TTValue& v, long *argc, t_atom **argv)
 	if (!(*argv)) // otherwise use memory passed in
 		*argv = (t_atom*)sysmem_newptr(sizeof(t_atom) * (*argc));
 	
-	for (i = 0; i < *argc; i++) {
-		
-		if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64){
+	for (i = 0; i < v.size(); i++)
+    {
+		if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64)
+        {
 			f = v[i];
 			atom_setfloat((*argv)+i, f);
 		}
-		else if (v[i].type() == kTypeSymbol) {
+		else if (v[i].type() == kTypeSymbol)
+        {
 			s = v[i];
             if (s == kTTSymEmpty)
                 atom_setsym((*argv)+i, _sym_bang); // because empty symbol can't be filtered in Max
 			else
                 atom_setsym((*argv)+i, gensym((char*)s.c_str()));
 		}
-		else {	// assume int
+		else
+        {	// assume int
 			t = v[i];
 			atom_setlong((*argv)+i, t);
 		}
@@ -986,25 +989,27 @@ void jamoma_ttvalue_to_Atom(const TTValue& v, long *argc, t_atom **argv)
 /** Make a TTValue from Atom array */
 void jamoma_ttvalue_from_Atom(TTValue& v, t_symbol *msg, long argc, const t_atom *argv)
 {
-	long	i, start;
+	long i, start;
 	
 	if ((msg == _sym_bang || msg == _sym_nothing) && argc == 0)
 		v.clear();
-	else {
-		
+	else
+    {
 		// add msg to the value
-		if (msg != _sym_nothing && msg != _sym_int && msg != _sym_float && msg != _sym_symbol && msg != _sym_list) {
+		if (msg != _sym_nothing && msg != _sym_int && msg != _sym_float && msg != _sym_symbol && msg != _sym_list)
+        {
 			v.resize(argc+1);
 			v[0] = TTSymbol(msg->s_name);
 			start = 1;
 		}
-		else {
+		else
+        {
 			v.resize(argc);
 			start = 0;
 		}
 			
 		// convert Atom to TTValue
-		for (i = 0; i < argc; i++) 
+		for (i = 0; i < argc; i++)
 		{
 			if (atom_gettype(argv+i) == A_LONG)
 				v[i+start] = (int)atom_getlong(argv+i);
