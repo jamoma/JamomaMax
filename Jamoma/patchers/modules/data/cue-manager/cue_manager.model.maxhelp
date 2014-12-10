@@ -38,6 +38,51 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 8.0, 310.0, 188.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 7.0, 246.0, 188.0, 20.0 ],
+					"style" : "",
+					"text" : "TODO : make a readagain button"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 10.0, 284.0, 327.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 7.0, 211.0, 193.0, 33.0 ],
+					"style" : "",
+					"text" : "TODO : edit name & descitpion in edit mode doesn't work"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 7.0, 247.0, 327.0, 33.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 7.0, 180.0, 193.0, 33.0 ],
+					"style" : "",
+					"text" : "TODO : les guillements doivent être enlevés de la description"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"annotation" : "none",
 					"bgcolor" : [ 0.937255, 0.937255, 0.937255, 0.0 ],
 					"bgmode" : 0,
@@ -115,9 +160,9 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 14.0, 9.05835, 300.0, 210.0 ],
+					"patching_rect" : [ 14.0, 9.05835, 300.0, 175.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.0, 3.05835, 300.0, 210.0 ],
+					"presentation_rect" : [ 7.0, 3.05835, 300.0, 175.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -242,10 +287,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
@@ -258,6 +299,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
@@ -266,15 +311,15 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
