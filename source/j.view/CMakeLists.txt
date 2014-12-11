@@ -4,34 +4,12 @@ project(j.view)
 add_definitions(-DJCOM_VIEW)
 
 set(PROJECT_SRCS
-${CMAKE_CURRENT_SOURCE_DIR}/../j.model/j.model.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/../j.model/j.model_preset.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/../j.model/j.model_signal.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/../j.model/TTModelInfo.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/../classwrapper/TTModularClassWrapperMax.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/../c74support/max-includes/common/commonsyms.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/../j.model/j.model.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/../j.model/j.model_preset.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/../j.model/j.model_signal.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/../j.model/TTModelInfo.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/../classwrapper/TTModularClassWrapperMax.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/../c74support/max-includes/common/commonsyms.cpp
 )
 
-include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Foundation/library/includes")
-include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/DSP/library/includes")
-include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/includes")
-include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/PeerObject")
-include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/ModularForMax")
-include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/SchedulerLib")
-include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/ProtocolLib")
-include_directories("${PROJECT_SOURCE_DIR}/../classwrapper")
-
-addMaxsupport()
-
-add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
-
-target_link_libraries(${PROJECT_NAME} JamomaFoundation)
-target_link_libraries(${PROJECT_NAME} JamomaModular)
-target_link_libraries(${PROJECT_NAME} JamomaMax)
-target_link_libraries(${PROJECT_NAME} JamomaDSP)
-
-### Output ###
-setOutput()
-
-### Tests ###
-addTestTarget()
+include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/Cmake/MaxExternalCommon.cmake)

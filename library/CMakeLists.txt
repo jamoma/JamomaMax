@@ -7,6 +7,44 @@ find_package(MaxSDK REQUIRED)
  # if(NOT MaxSDK_FOUND)
    # message(FATAL_ERROR "Package MaxSDK required, but not found!")
  # endif()
+ 
+if ( APPLE )
+	#FIND_LIBRARY(CARBON_LIBRARY CarbonCore)
+	#MESSAGE(STATUS "  Found CarbonCore ${CARBON_LIBRARY}")
+	#MARK_AS_ADVANCED (CARBON_LIBRARY)
+	#SET(EXTRA_LIBS ${EXTRA_LIBS} ${CARBON_LIBRARY})
+	FIND_PATH(FILE_H_DIR Files.h /System/Library/Frameworks/ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers/)
+	message( STATUS " Files.h have been found here : ${FILE_H_DIR}")
+	IF( ${FILE_H_DIR} EQUAL "FILE_H_DIR-NOT_FOUND")
+		message( STATUS "  Files.h NOT FOUND !!" )
+	ELSE( ${FILE_H_DIR} EQUAL "FILE_H_DIR-NOT_FOUND")
+		include_directories("${FILE_H_DIR}")
+	ENDIF( ${FILE_H_DIR} EQUAL "FILE_H_DIR-NOT_FOUND")
+	
+endif ( APPLE )
+
+### GetGitDescription ###
+include(${CMAKE_CURRENT_SOURCE_DIR}/../Shared/CMake/modules/GetGitRevisionDescription.cmake	)
+git_describe(GIT_SHA_SHORT --always)
+git_describe(GIT_TAG --always --tags)
+string(REPLACE "." ";" GIT_TAG_LIST ${GIT_TAG})
+list(LENGTH GIT_TAG_LIST len)
+if (len GREATER 0)
+	list(GET GIT_TAG_LIST 0 GIT_VERSION_MAJ)
+endif (len GREATER 0)
+if (len GREATER 1)
+	list(GET GIT_TAG_LIST 1 GIT_VERSION_MIN)
+endif (len GREATER 1)
+if (len GREATER 2)
+	list(GET GIT_TAG_LIST 2 GIT_VERSION_SUB)
+endif (len GREATER 2)
+if (len GREATER 3)
+	list(GET GIT_TAG_LIST 3 GIT_VERSION_MOD_LONG)
+endif (len GREATER 3)
+string(REPLACE "-" ";" GIT_VERSION_MOD_LIST ${GIT_VERSION_MOD_LONG})
+list(GET GIT_VERSION_MOD_LIST 0 GIT_VERSION_MOD)
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/includes/JamomaMaxVersion.h.in" "${CMAKE_CURRENT_SOURCE_DIR}/includes/JamomaMaxVersion.h" @ONLY)
+
 
 addMaxsupport()
 
@@ -34,6 +72,8 @@ file(GLOB_RECURSE PROJECT_HDRS
     ${CMAKE_CURRENT_SOURCE_DIR}../../../Core/Modular/library/PeerObject/*.h
     ${CMAKE_CURRENT_SOURCE_DIR}../../../Core/Modular/library/ProtocolLib/*.h
     ${CMAKE_CURRENT_SOURCE_DIR}../../../Core/Modular/library/SchedulerLib/*.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../../Core/Graph/library/includes/*.h
+    ${FILE_H_DIR}/Files.h
 )
 
 include_directories("${PROJECT_SOURCE_DIR}/includes")
@@ -43,7 +83,8 @@ include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/PeerObj
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/ProtocolLib")
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/SchedulerLib")
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/DSP/library/includes")
-
+include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Graph/library/includes")
+include_directories("${FILE_H_DIR}")
 
 add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
 
@@ -56,7 +97,6 @@ endif()
 target_link_libraries(${PROJECT_NAME} JamomaFoundation)
 target_link_libraries(${PROJECT_NAME} JamomaModular)
 target_link_libraries(${PROJECT_NAME} ${OSX_LIBS})
-
 
 ### Output ###
 setOutput()
