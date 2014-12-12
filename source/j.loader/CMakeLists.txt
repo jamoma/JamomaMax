@@ -36,3 +36,5 @@ setOutput()
 
 ### Tests ###
 addTestTarget()
+
+INSTALL(TARGETS ${PROJECT_NAME} DESTINATION "${PROJECT_SOURCE_DIR}/../../Jamoma/extensions")
