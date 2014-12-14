@@ -22,10 +22,10 @@ addMaxsupport()
 
 add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
 
-target_link_libraries(${PROJECT_NAME} JamomaFoundation)
-target_link_libraries(${PROJECT_NAME} JamomaModular)
+target_link_libraries(${PROJECT_NAME} Foundation)
+target_link_libraries(${PROJECT_NAME} Modular)
 target_link_libraries(${PROJECT_NAME} JamomaMax)
-target_link_libraries(${PROJECT_NAME} JamomaDSP)
+target_link_libraries(${PROJECT_NAME} DSP)
 
 if(APPLE)
 	addAppleFramework(CoreServices)
