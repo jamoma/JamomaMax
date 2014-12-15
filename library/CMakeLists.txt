@@ -7,20 +7,25 @@ find_package(MaxSDK REQUIRED)
  # if(NOT MaxSDK_FOUND)
    # message(FATAL_ERROR "Package MaxSDK required, but not found!")
  # endif()
- 
+
 if ( APPLE )
 	#FIND_LIBRARY(CARBON_LIBRARY CarbonCore)
 	#MESSAGE(STATUS "  Found CarbonCore ${CARBON_LIBRARY}")
 	#MARK_AS_ADVANCED (CARBON_LIBRARY)
 	#SET(EXTRA_LIBS ${EXTRA_LIBS} ${CARBON_LIBRARY})
-	FIND_PATH(FILE_H_DIR Files.h /System/Library/Frameworks/ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers/)
+	FIND_PATH(FILE_H_DIR Files.h
+            HINTS
+            /System/Library/Frameworks/
+            /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers/
+            /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers
+            /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers)
 	message( STATUS " Files.h have been found here : ${FILE_H_DIR}")
 	IF( ${FILE_H_DIR} EQUAL "FILE_H_DIR-NOT_FOUND")
 		message( STATUS "  Files.h NOT FOUND !!" )
 	ELSE( ${FILE_H_DIR} EQUAL "FILE_H_DIR-NOT_FOUND")
 		include_directories("${FILE_H_DIR}")
 	ENDIF( ${FILE_H_DIR} EQUAL "FILE_H_DIR-NOT_FOUND")
-	
+
 endif ( APPLE )
 
 ### GetGitDescription ###
