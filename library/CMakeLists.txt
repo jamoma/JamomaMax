@@ -87,8 +87,9 @@ include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/Protoco
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/SchedulerLib")
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/DSP/library/includes")
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Graph/library/includes")
-include_directories("${FILE_H_DIR}")
-
+if(APPLE)
+	include_directories("${FILE_H_DIR}")
+endif()
 add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
 
 addAppleFramework(Carbon)

@@ -8,8 +8,9 @@ include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/Modu
 include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/SchedulerLib")
 include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/ProtocolLib")
 include_directories("${PROJECT_SOURCE_DIR}/../classwrapper")
-include_directories("${FILE_H_DIR}")
-
+if(APPLE)
+	include_directories("${FILE_H_DIR}")
+endif()
 addMaxsupport()
 
 add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
