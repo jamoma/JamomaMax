@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"revision" : 9,
+			"architecture" : "x64"
 		}
 ,
 		"rect" : [ 201.0, 127.0, 1044.0, 731.0 ],
@@ -42,11 +42,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 9,
+							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 201.0, 153.0, 1044.0, 705.0 ],
+						"rect" : [ 0.0, 26.0, 1044.0, 705.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -89,11 +89,11 @@
 									"id" : "obj-1",
 									"maxclass" : "bpatcher",
 									"name" : "degrade~.module.maxpat",
-									"numinlets" : 3,
+									"numinlets" : 2,
 									"numoutlets" : 3,
-									"outlettype" : [ "", "signal", "signal" ],
-									"patching_rect" : [ 60.0, 135.0, 300.0, 70.0 ],
-									"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
+									"outlettype" : [ "signal", "signal", "" ],
+									"patching_rect" : [ 60.0, 135.0, 150.0, 70.0 ],
+									"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ]
 								}
 
 							}
@@ -233,7 +233,6 @@
 					}
 ,
 					"patching_rect" : [ 319.0, 175.0, 58.0, 18.0 ],
-					"presentation_rect" : [ 319.0, 175.0, 0.0, 0.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -264,11 +263,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 9,
+							"architecture" : "x64"
 						}
 ,
-						"rect" : [ 54.0, 94.0, 640.0, 480.0 ],
+						"rect" : [ 0.0, 26.0, 1044.0, 705.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -288,7 +287,6 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [  ],
 						"lines" : [  ]
 					}
@@ -313,6 +311,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "this view doesn't display anything",
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-24",
@@ -324,8 +323,8 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
-							"architecture" : "x86"
+							"revision" : 9,
+							"architecture" : "x64"
 						}
 ,
 						"rect" : [ 54.0, 94.0, 0.0, 0.0 ],
@@ -348,6 +347,7 @@
 						"digest" : "",
 						"tags" : "",
 						"showontab" : 1,
+						"title" : "Basic",
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
@@ -447,7 +447,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 157.0, 307.25, 235.0, 33.0 ],
+									"patching_rect" : [ 220.0, 307.25, 235.0, 33.0 ],
 									"text" : "a panel patcher that can be used  to display further controls"
 								}
 
@@ -469,6 +469,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "Output information from mouse",
 									"fontname" : "Arial",
 									"fontsize" : 10.0,
 									"id" : "obj-19",
@@ -483,13 +484,14 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "Emulate the use of lower sample-rates and bit-resolution.",
 									"fontname" : "Arial",
 									"fontsize" : 10.0,
 									"id" : "obj-20",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
+									"numinlets" : 2,
 									"numoutlets" : 3,
-									"outlettype" : [ "", "signal", "signal" ],
+									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 169.0, 602.75, 85.0, 18.0 ],
 									"text" : "degrade~.model"
 								}
@@ -497,13 +499,14 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "Stereo echo module.",
 									"fontname" : "Arial",
 									"fontsize" : 10.0,
 									"id" : "obj-3",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
+									"numinlets" : 2,
 									"numoutlets" : 3,
-									"outlettype" : [ "", "signal", "signal" ],
+									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 274.0, 602.75, 85.0, 18.0 ],
 									"text" : "echo~.model"
 								}
@@ -522,8 +525,8 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
-											"architecture" : "x86"
+											"revision" : 9,
+											"architecture" : "x64"
 										}
 ,
 										"rect" : [ 25.0, 69.0, 811.0, 302.0 ],
@@ -545,7 +548,7 @@
 										"description" : "",
 										"digest" : "",
 										"tags" : "",
-										"title" : "/uiMaxhelp(view)",
+										"title" : "/Basic(view)",
 										"boxes" : [ 											{
 												"box" : 												{
 													"fontname" : "Arial",
@@ -604,7 +607,7 @@
 										"lines" : [  ]
 									}
 ,
-									"patching_rect" : [ 421.0, 314.0, 48.0, 20.0 ],
+									"patching_rect" : [ 169.0, 313.75, 48.0, 20.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
@@ -690,7 +693,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 204.0, 517.0, 153.0, 18.0 ]
+									"patching_rect" : [ 204.0, 517.0, 153.0, 18.0 ],
+									"text" : "mouse/position/x 0.369271"
 								}
 
 							}
@@ -773,10 +777,10 @@
 									"id" : "obj-2",
 									"maxclass" : "j.ui",
 									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 169.0, 212.0, 300.0, 70.0 ],
-									"text" : "/noModelAddress",
+									"text" : "/no_model_address",
 									"textcolor" : [ 0.65, 0.65, 0.65, 1.0 ]
 								}
 
@@ -886,7 +890,7 @@
 									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-2", 1 ]
+									"source" : [ "obj-2", 0 ]
 								}
 
 							}
@@ -941,45 +945,92 @@
 			}
  ],
 		"lines" : [  ],
+		"parameters" : 		{
+			"obj-26::obj-1::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
+			"obj-26::obj-1::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
+				"name" : "basic.txt",
+				"bootpath" : "/Applications/Max 6.1/packages/IMIpatches/patchers/DbN3D/Sketchpad",
+				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/packages/IMIpatches/patchers/DbN3D/Sketchpad",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "echo~.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/echo~",
-				"patcherrelativepath" : "../patchers/modules/audio/echo~",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Delay/echo~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Delay/echo~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter~.model.maxpat",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter.parametersAndMessages.maxpat",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "filter~.model.maxpat",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/filter~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/EQ/filter~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.octavebandwidth2q.maxpat",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"patcherrelativepath" : "../patchers/components/audio/octavebandwidth2q",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.q2octavebandwidth.maxpat",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
+				"patcherrelativepath" : "../patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/control/mouse",
-				"patcherrelativepath" : "../patchers/modules/control/mouse",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.module.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../patchers/modules/audio/degrade~",
+				"bootpath" : "/Volumes/data/RENAUD/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -993,10 +1044,6 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1017,6 +1064,14 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.limiter~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{
