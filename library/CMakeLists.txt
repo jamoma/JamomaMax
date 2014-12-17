@@ -3,11 +3,6 @@ project(JamomaMax)
 
 add_definitions(-DJAMOMA_EXPORTS)
 
-find_package(MaxSDK REQUIRED)
- # if(NOT MaxSDK_FOUND)
-   # message(FATAL_ERROR "Package MaxSDK required, but not found!")
- # endif()
-
 if ( APPLE )
 	#FIND_LIBRARY(CARBON_LIBRARY CarbonCore)
 	#MESSAGE(STATUS "  Found CarbonCore ${CARBON_LIBRARY}")
@@ -53,18 +48,6 @@ if (len2 GREATER 0)
 endif (len2 GREATER 0)
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/includes/JamomaMaxVersion.h.in" "${CMAKE_CURRENT_SOURCE_DIR}/includes/JamomaMaxVersion.h" @ONLY)
 
-
-addMaxsupport()
-
-IF(APPLE)
-	FIND_LIBRARY(CARBON_LIB Carbon)
-#	FIND_LIBRARY(CARBON_LIB CarbonCore)
-	FIND_LIBRARY(MaxAPI_LIB MaxAPI
-				 PATH ${CMAKE_CURRENT_SOURCE_DIR}/../source/c74support/max-includes/)
-	MARK_AS_ADVANCED (MaxAPI_LIB)
-	SET(OSX_LIBS ${MaxAPI_LIB} ${CARBON_LIB})
-ENDIF (APPLE)
-
 set(PROJECT_SRCS
 ${CMAKE_CURRENT_SOURCE_DIR}/source/JamomaForMax.cpp
 ${CMAKE_CURRENT_SOURCE_DIR}/source/JamomaModularForMax.cpp
@@ -92,6 +75,7 @@ include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/Protoco
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/SchedulerLib")
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/DSP/library/includes")
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Graph/library/includes")
+
 if(APPLE)
 	include_directories("${FILE_H_DIR}")
 endif()
@@ -101,11 +85,18 @@ addAppleFramework(Carbon)
 if(APPLE)
 	message("Linking with: ${OSX_FRAMEWORKS}")
 	target_link_libraries(${PROJECT_NAME} ${OSX_FRAMEWORKS})
+	
+	FIND_LIBRARY(CARBON_LIB Carbon)
+#	FIND_LIBRARY(CARBON_LIB CarbonCore)
+	SET(CARBON_LIB ${CARBON_LIB})
+	target_link_libraries(${PROJECT_NAME} ${CARBON_LIB})
 endif()
+
+addMaxsupport()
+target_link_libraries(${PROJECT_NAME} ${MaxAPI_LIB})
 
 target_link_libraries(${PROJECT_NAME} Foundation)
 target_link_libraries(${PROJECT_NAME} Modular)
-target_link_libraries(${PROJECT_NAME} ${OSX_LIBS})
 
 ### Output ###
 setOutput()
