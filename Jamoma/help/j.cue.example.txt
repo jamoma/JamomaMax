@@ -37,7 +37,7 @@
 /mouse/active 0
 /degrade~/samplerateRatio 0.100000 ramp 2000
 /degrade~/bitdepth 1 ramp 2000
-/degrade~/audio/gain 80.000000 ramp 2000
+/degrade~/audio/gain 0.000000 ramp 2000
 /degrade~/audio/mix 0.000000 ramp 2000
 /degrade~/audio/bypass 0
 
