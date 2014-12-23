@@ -37,7 +37,7 @@ void		WrappedCueManageClass_free(TTPtr self);
 void		cue_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 
 void		cue_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-void		cue_return_order(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		cue_return_names(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 void		cue_get(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 void		cue_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
@@ -84,7 +84,7 @@ void WrapTTCueManagerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)cue_return_value,			"return_value",			A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)cue_return_order,			"return_order",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)cue_return_names,			"return_names",			A_CANT, 0);
     
 	class_addmethod(c->maxClass, (method)cue_read,					"cue_read",				A_CANT, 0);
 	class_addmethod(c->maxClass, (method)cue_write,					"cue_write",			A_CANT, 0);
@@ -255,10 +255,10 @@ void cue_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		outlet_anything(x->outlets[line_out], msg, argc, argv);
 }
 
-void cue_return_order(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void cue_return_names(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	outlet_anything(x->outlets[dump_out], gensym("order"), argc, argv);
+	outlet_anything(x->outlets[dump_out], gensym("names"), argc, argv);
 }
 
 void cue_get(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
@@ -544,16 +544,19 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 	*EXTRA->toEdit = x->wrappedObject;
 	EXTRA->cueName = kTTSymEmpty;
 	
-	if (argc && argv) {
-		
-		if (atom_gettype(argv) == A_LONG) {
+	if (argc && argv)
+    {
+		if (atom_gettype(argv) == A_LONG)
+        {
+            TTUInt32 index = atom_getlong(argv);
 			
-			// get cues order
-			x->wrappedObject.get("order", v);
+			// get cues names
+			x->wrappedObject.get("names", v);
 			
-			if (atom_getlong(argv) <= v.size())
-				v.get(atom_getlong(argv)-1, name);
-			else {
+			if (index > 0 && index <= v.size())
+				v.get(index-1, name);
+			else
+            {
 				object_error((t_object*)x, "%d does'nt exist", atom_getlong(argv));
 				return;
 			}
@@ -561,22 +564,23 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 		else if (atom_gettype(argv) == A_SYM)
 			name = TTSymbol(atom_getsym(argv)->s_name);
 		
-		if (name != kTTSymEmpty) {
-			
+		if (name != kTTSymEmpty)
+        {
 			// get cue object table
 			x->wrappedObject.get("cues", v);
 			allCues = TTHashPtr((TTPtr)v[0]);
 			
-			if (allCues) {
-				
+			if (allCues)
+            {
 				// get cue to edit
-				if (!allCues->lookup(name, v)) {
-					
+				if (!allCues->lookup(name, v))
+                {
 					// edit a cue
 					*EXTRA->toEdit = v[0];
 					EXTRA->cueName = name;
 				}
-				else {
+				else
+                {
 					object_error((t_object*)x, "%s does'nt exist", atom_getsym(argv)->s_name);
 					return;
 				}
