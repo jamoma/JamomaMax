@@ -185,13 +185,8 @@ void data_array_build(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 
-    TTAddress   returnedAddress;
-    TTNodePtr   returnedNode = NULL;
-    TTNodePtr   returnedContextNode = NULL;
 	t_symbol    *instanceAddress;
 	TTObject    anObject;
-	TTObject    aSubscriber;
-	TTValue		v;
     
     TTUInt32    newSize = atom_getlong(argv);
     TTUInt32    lastSize = x->arraySize;
@@ -230,9 +225,10 @@ void data_array_build(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 #endif
 #endif
             // append the data to the internals table (without subscriber)
-            v = TTValue(anObject);
-            v.append(TTSymbol(instanceAddress->s_name));
-            x->internals->append(TTSymbol(instanceAddress->s_name), v);
+            TTValue cache(anObject);
+            cache.append(TTSymbol(instanceAddress->s_name));
+            
+            x->internals->append(TTSymbol(instanceAddress->s_name), cache);
             
             // inverse objects order for iteration purpose (see in data_array_return_value : array mode)
             EXTRA->objectsSorted->insert(0, anObject);
@@ -246,16 +242,17 @@ void data_array_build(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
         {
             jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
             
-            x->internals->lookup(TTSymbol(instanceAddress->s_name), v);
-            anObject = v[0];
+            TTValue cache;
+            x->internals->lookup(TTSymbol(instanceAddress->s_name), cache);
+            anObject = cache[0];
             
             // remove the data from the internal table (this will also unregister the data as the subscriber is stored into the table)
             x->internals->remove(TTSymbol(instanceAddress->s_name));
 
             // remove objects from the beginning because they are ordered for iteration purpose (see in data_array_return_value : array mode)
-            EXTRA->objectsSorted->getIndex(0, v);
-            EXTRA->objectsSorted->remove(v);
-            v.clear();
+            EXTRA->objectsSorted->getIndex(0, cache);
+            EXTRA->objectsSorted->remove(cache);
+            cache.clear();
             
             if (anObject.instance()->getReferenceCount() > 1)
                 object_error((t_object*)x, "there are still unreleased reference of a %s wrappedObject(refcount = %d)", instanceAddress->s_name, anObject.instance()->getReferenceCount() - 1);
@@ -282,19 +279,25 @@ void data_array_build(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
         // select data at index
         jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
         
-        x->internals->lookup(TTSymbol(instanceAddress->s_name), v);
-        anObject = v[0];
+        TTValue cache;
+        x->internals->lookup(TTSymbol(instanceAddress->s_name), cache);
+        anObject = cache[0];
         
         // subscribe the data
+        TTAddress   returnedAddress;
+        TTNodePtr   returnedNode = NULL;
+        TTNodePtr   returnedContextNode = NULL;
+        TTObject    aSubscriber;
+        
         if (!jamoma_subscriber_create((t_object*)x, anObject, TTAddress(instanceAddress->s_name),  aSubscriber, returnedAddress, &returnedNode, &returnedContextNode))
         {
             if (aSubscriber.valid())
             {
                 // append the subscriber to the internals table
-                x->internals->remove(v);
+                x->internals->remove(TTSymbol(instanceAddress->s_name));
                 
-                v.append(aSubscriber);
-                x->internals->append(TTSymbol(instanceAddress->s_name), v);
+                cache.append(aSubscriber);
+                x->internals->append(TTSymbol(instanceAddress->s_name), cache);
             }
         }
         
