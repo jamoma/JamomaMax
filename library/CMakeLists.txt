@@ -94,6 +94,8 @@ endif()
 
 addMaxsupport()
 target_link_libraries(${PROJECT_NAME} ${MaxAPI_LIB})
+target_link_libraries(${PROJECT_NAME} ${MaxAudio_LIB})
+target_link_libraries(${PROJECT_NAME} ${Jitter_LIB})
 
 target_link_libraries(${PROJECT_NAME} Foundation)
 target_link_libraries(${PROJECT_NAME} Modular)
