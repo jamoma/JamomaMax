@@ -32,6 +32,7 @@ typedef struct extra {
 	TTUInt32		countSubscription;      // to count how many time we try to subscribe
     TTListPtr       values;                 // store all values in a list for array format
     TTBoolean       setting;                // a flag to know if the remote array is updated by a set message
+    TTBoolean       lock;                   // a flag to lock
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
 
@@ -140,6 +141,7 @@ void WrappedViewerClass_new(TTPtr self, long argc, t_atom *argv)
     EXTRA->ui_qelem_list = new TTList();
 	EXTRA->countSubscription = 0;
     EXTRA->values = new TTList();
+    EXTRA->lock = NO;
     
     // create model:address receiver
     remote_create_model_address_receiver(self);
@@ -680,7 +682,8 @@ void remote_array_return_value(const TTValue& baton, const TTValue& v)
 	i = baton[1];
     
     // a gate to not output the value if it have been set by this j.remote_array
-    if (EXTRA->setting) {
+    if (EXTRA->setting)
+    {
         EXTRA->setting = NO;
         return;
     }
@@ -692,43 +695,56 @@ void remote_array_return_value(const TTValue& baton, const TTValue& v)
 	outlet_int(x->outlets[index_out], i);
 		
 	// in array output mode
-	// edit a value containing all values
-	if (x->arrayAttrFormat == gensym("array")) {
-        
+	// edit an array containing all values
+	if (x->arrayAttrFormat == gensym("array"))
+    {
         // don't output array when changing address
         if (EXTRA->changingAddress)
             return;
-
-        // get each values in reverse order
-        j = EXTRA->values->getSize();
         
-        for (EXTRA->values->begin();
-             EXTRA->values->end();
-             EXTRA->values->next()) {
+        if (!EXTRA->lock)
+        {
+            EXTRA->lock = YES;
             
-            // store the incoming value at the right index
-            if (j == i)
-                EXTRA->values->current() = v;
+            TTListPtr vlist = EXTRA->values;
             
-            // add the stored value
-            if (EXTRA->values->current().size())
-                array.prepend(EXTRA->values->current());
+            // get each values in reverse order
+            j = vlist->getSize();
             
-            // use 0. as default value
-            else
-                array.prepend(0.);
+            for (vlist->begin();
+                 vlist->end();
+                 vlist->next())
+            {
+                // store the incoming value at the right index
+                if (j == i)
+                    vlist->current() = v;
+                
+                // prepare array to output
+                TTValue prepend = vlist->current();
+                TTUInt32 size = prepend.size();
+                if (size > 0)
+                    array.prepend(prepend);
+                
+                // use 0. as default value
+                else
+                    array.prepend(0.);
+                
+                j--;
+            }
             
-            j--;
+            // output array value
+            jamoma_ttvalue_to_typed_Atom(array, &msg, &argc, &argv, shifted);
+            
+            // append to the list used by qelem
+            EXTRA->ui_qelem_list->append(array);
+            
+            EXTRA->lock = NO;
         }
-    
-		// output array value
-		jamoma_ttvalue_to_typed_Atom(array, &msg, &argc, &argv, shifted);
-        
-        // append to the list used by qelem
-        EXTRA->ui_qelem_list->append(array);
+        else
+            return;
 	}
-	else {
-        
+	else
+    {
 		// output single value
 		jamoma_ttvalue_to_typed_Atom(v, &msg, &argc, &argv, shifted);
         
