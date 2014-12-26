@@ -3,18 +3,14 @@ CUE initialisation # (fold)
 ##############################
 
     # Model input_help
+    
+    /input_help/source pink
     /input_help/audio/gain 0.                   # Midi units can be specified as floats in Jamoma
-    /input_help/balance 0.    
-    /input_help/soundfile/loop 0
-    /input_help/soundfile/play 0
-    /input_help/source none
-    /input_help/ch.1 0
-    /input_help/ch.2 0
-    /input_help/view/freeze 0
+    /input_help/balance 0.
     
     # Model filter_help
     /filter_help/filtertype bandpass
-    /filter_help/audio/gain 0
+    /filter_help/audio/gain 100.
     /filter_help/audio/mix 100.000
     /filter_help/audio/bypass 0
     /filter_help/audio/mute 0
@@ -54,7 +50,6 @@ CUE audio_on # (fold)
     /output_help/audio/active 1                 # Turn on the DSP
 
     # Model input_help
-    /input_help/source pink
     /input_help/audio/gain 90.000 ramp 2000     # Ramp to this new value over 2 seconds...
     
     # Model filter_help
@@ -113,7 +108,7 @@ CUE dataspaceDemo	# (fold)
 	WAIT 4000
 	
 	# Change the ramp function from the default linear function to a cosince function
-	/output_help/audio/gain:/ramp/function cosine
+	/output_help/audio/gain:/ramp/function easeInOutSine
 	# Options for regular functions: cosine, exponential, linear, logarithm, lowpass, power, smoothPolynomial, tanh, 
 	# Options for window functions: bartlett, blackman, blackmanHarris, expodec, gauss, hamming, hanning, kaiser, nuttall, rectangular, trapezoid, tukey, welch
 		

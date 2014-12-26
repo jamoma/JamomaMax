@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 315.0, 197.0, 1012.0, 648.0 ],
+		"rect" : [ 283.0, 115.0, 1012.0, 648.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -43,7 +43,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -371,7 +371,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -408,7 +408,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -557,7 +557,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -686,7 +686,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -1459,11 +1459,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
+						"rect" : [ 283.0, 141.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1484,6 +1484,34 @@
 						"tags" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-21",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 276.5, 584.0, 92.0, 20.0 ],
+									"text" : "prepend recall"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-9",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 568.0, 111.0, 47.0, 18.0 ],
+									"text" : "names"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -1522,7 +1550,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 568.0, 547.0, 114.0, 18.0 ],
-									"text" : "set ramp Init 1000"
+									"text" : "set ramp init 1000"
 								}
 
 							}
@@ -1536,7 +1564,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 568.0, 526.5, 227.0, 18.0 ],
-									"text" : "set description Init \"a better description\""
+									"text" : "set description init \"a better description\""
 								}
 
 							}
@@ -1550,7 +1578,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 568.0, 506.5, 114.0, 18.0 ],
-									"text" : "get ramp Init"
+									"text" : "get ramp init"
 								}
 
 							}
@@ -1564,7 +1592,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 568.0, 487.0, 114.0, 18.0 ],
-									"text" : "get description Init"
+									"text" : "get description init"
 								}
 
 							}
@@ -1577,7 +1605,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 301.0, 475.0, 205.0, 18.0 ]
+									"patching_rect" : [ 301.0, 475.0, 205.0, 18.0 ],
+									"text" : "recall"
 								}
 
 							}
@@ -1605,7 +1634,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 596.5, 80.5, 112.0, 33.0 ],
+									"patching_rect" : [ 582.5, 73.0, 112.0, 33.0 ],
 									"text" : "Re-order the cues stored in j.cue."
 								}
 
@@ -1834,7 +1863,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 236.0, 590.0, 91.0, 20.0 ],
+									"patching_rect" : [ 138.0, 530.0, 91.0, 20.0 ],
 									"text" : "loadmess clear"
 								}
 
@@ -1859,7 +1888,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-17",
-									"items" : "<empty>",
+									"items" : [ "init", ",", "Act I - Scene I", ",", "Act I - Scene II", ",", "Outro" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -2054,6 +2083,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-17", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-12", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
@@ -2063,9 +2101,20 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 286.0, 609.0, 208.25, 609.0, 208.25, 402.0, 228.5, 402.0 ],
+									"source" : [ "obj-21", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-17", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
+									"midpoints" : [ 147.5, 554.5, 245.5, 554.5 ],
 									"source" : [ "obj-23", 0 ]
 								}
 
@@ -2234,6 +2283,16 @@
 								}
 
 							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 577.5, 213.5, 228.5, 213.5 ],
+									"source" : [ "obj-9", 0 ]
+								}
+
+							}
  ]
 					}
 ,
@@ -2296,7 +2355,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2543,7 +2602,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -2906,7 +2965,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -3172,7 +3231,7 @@
 									"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"border" : 0,
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 1, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 2, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 3, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 4, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 5, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ] ],
+									"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 1, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 2, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ] ],
 									"cols" : 1,
 									"colwidth" : 200,
 									"fgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -3192,7 +3251,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 10.0, 374.0, 184.0, 211.0 ],
 									"rowheight" : 20,
-									"rows" : 6,
+									"rows" : 3,
 									"sccolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"selmode" : 3,
 									"sgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
@@ -3709,7 +3768,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -3804,7 +3863,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 38.0, 328.0, 109.0, 18.0 ],
-									"text" : "current/ramp 2000"
+									"text" : "current/ramp 4000"
 								}
 
 							}
@@ -4341,7 +4400,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -4747,7 +4806,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -4907,11 +4966,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 315.0, 223.0, 1012.0, 622.0 ],
+						"rect" : [ 0.0, 26.0, 1012.0, 622.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5264,7 +5323,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 48.5, 316.0, 189.0, 127.0 ],
+									"patching_rect" : [ 48.5, 316.0, 192.0, 127.0 ],
 									"prototypename" : "Jamoma.bold",
 									"text" : "Without any argument, the 'new', 'recall' and 'update' message will work from the last stored, recalled or updated cue.\n\nie. Sending 'new' to j.cue will erase the lastly stored or recalled cue and store the new content of the models or modules.",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
@@ -5470,7 +5529,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -5545,62 +5604,62 @@
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpstarter.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpname.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
 				"patcherrelativepath" : "../patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
 				"patcherrelativepath" : "../patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
 				"patcherrelativepath" : "../patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1

@@ -57,7 +57,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1153.0, 84.0, 176.0, 89.0 ],
+					"patching_rect" : [ 1153.0, 84.0, 178.0, 89.0 ],
 					"style" : "",
 					"text" : "j.parameter output_texture @type boolean @description \"Flag determining whether camera image is passed out as a Jitter matrix or an OpenGL texture.\""
 				}
@@ -248,7 +248,7 @@
 													"maxclass" : "inlet",
 													"numinlets" : 0,
 													"numoutlets" : 1,
-													"outlettype" : [ "clear" ],
+													"outlettype" : [ "" ],
 													"patching_rect" : [ 160.0, 43.0, 25.0, 25.0 ],
 													"style" : ""
 												}
@@ -462,7 +462,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 2,
-									"outlettype" : [ "clear", "" ],
+									"outlettype" : [ "", "clear" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
@@ -1451,7 +1451,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 744.5, 84.0, 129.0, 76.0 ],
+					"patching_rect" : [ 744.5, 84.0, 131.0, 76.0 ],
 					"style" : "default",
 					"text" : "j.message settings @description \"Open dialog for camera settings - doesn't work with Max > 0.6.1\"",
 					"varname" : "j.parameter[1]"
@@ -1544,8 +1544,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 211.0, 290.0, 166.0, 22.0 ],
-					"style" : "default",
+					"patching_rect" : [ 211.0, 290.0, 155.0, 22.0 ],
+					"style" : "",
 					"text" : "jit.grab 640 480 @unique 1",
 					"varname" : "grabber"
 				}
