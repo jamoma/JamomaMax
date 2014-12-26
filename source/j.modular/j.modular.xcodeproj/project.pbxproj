@@ -10,6 +10,7 @@
 		461FFA71174A8F9200FE2943 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
 		461FFA72174A8F9200FE2943 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
 		469BD9EA180B55C000A023B3 /* j.modular.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.modular.yml; sourceTree = "<group>"; };
+		46A5878319FEA7A5000E15F2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		D2CAE29415118DEC0020B900 /* j.modular.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.modular.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -18,6 +19,7 @@
 			isa = PBXGroup;
 			children = (
 				469BD9EA180B55C000A023B3 /* j.modular.yml */,
+				46A5878319FEA7A5000E15F2 /* Makefile */,
 				D2CAE29415118DEC0020B900 /* j.modular.cpp */,
 				461FFA72174A8F9200FE2943 /* TTModularClassWrapperMax.h */,
 				461FFA71174A8F9200FE2943 /* TTModularClassWrapperMax.cpp */,

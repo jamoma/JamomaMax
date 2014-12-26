@@ -8,7 +8,7 @@ dim 20 20
 gridmode 0
 rad_minor 0.250000
 shape sphere
-GL/context my_context
+GL/context default
 GL/alpha 1.000000
 GL/anchor 0.000000 0.000000 0.000000
 GL/anim UID
@@ -69,7 +69,7 @@ dim 20 20
 gridmode 0
 rad_minor 0.250000
 shape sphere
-GL/context my_context
+GL/context default
 GL/alpha 1.000000
 GL/anchor 0.000000 0.000000 0.000000
 GL/anim UID
@@ -132,7 +132,7 @@ displaylist 1
 gridmode 0
 rad_minor 0.250000
 shape plane
-GL/context my_context
+GL/context default
 GL/alpha 1.000000
 GL/anchor 0.000000 0.000000 0.000000
 GL/anim UID

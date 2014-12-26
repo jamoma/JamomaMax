@@ -2,31 +2,40 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 338.0, 44.0, 607.0, 424.0 ],
+		"rect" : [ 338.0, 79.0, 984.0, 757.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
@@ -38,7 +47,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 252.5, 320.0, 224.0, 31.0 ],
+					"patching_rect" : [ 477.5, 416.0, 225.0, 33.0 ],
+					"style" : "",
 					"text" : "j.model @tags video @description \"Create mask based on image foreground.\"",
 					"varname" : "j.model"
 				}
@@ -53,7 +63,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 283.0, 251.0, 40.0, 19.0 ],
+					"patching_rect" : [ 508.0, 347.0, 40.0, 21.0 ],
+					"style" : "",
 					"text" : "round"
 				}
 
@@ -67,7 +78,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 283.0, 221.0, 43.0, 19.0 ],
+					"patching_rect" : [ 508.0, 317.0, 43.0, 21.0 ],
+					"style" : "",
 					"text" : "* 255."
 				}
 
@@ -79,7 +91,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 252.5, 357.0, 25.0, 25.0 ]
+					"patching_rect" : [ 477.5, 453.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -90,7 +103,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 372.0, 25.0, 25.0 ]
+					"patching_rect" : [ 246.0, 468.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -102,7 +116,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 25.0, 25.0, 25.0 ]
+					"patching_rect" : [ 246.0, 121.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -115,7 +130,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 21.0, 140.0, 73.0, 19.0 ],
+					"patching_rect" : [ 246.0, 236.0, 73.0, 21.0 ],
+					"style" : "",
 					"text" : "jit.rgb2luma"
 				}
 
@@ -129,7 +145,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 21.0, 290.0, 116.0, 19.0 ],
+					"patching_rect" : [ 246.0, 386.0, 116.0, 21.0 ],
+					"style" : "",
 					"text" : "j.noiseremoval%"
 				}
 
@@ -146,10 +163,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -158,19 +176,27 @@
 						"default_fontsize" : 10.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 5.0, 5.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -181,6 +207,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 140.0, 170.0, 32.5, 19.0 ],
+									"style" : "",
 									"text" : "!- 1."
 								}
 
@@ -193,7 +220,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 95.0, 35.0, 25.0, 25.0 ]
+									"patching_rect" : [ 95.0, 35.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -207,6 +235,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 140.0, 225.0, 83.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend alpha"
 								}
 
@@ -221,6 +250,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "int", "int" ],
 									"patching_rect" : [ 140.0, 200.0, 60.0, 19.0 ],
+									"style" : "",
 									"text" : "change 0."
 								}
 
@@ -232,8 +262,9 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 140.0, 35.0, 25.0, 25.0 ]
+									"outlettype" : [ "jit_matrix" ],
+									"patching_rect" : [ 140.0, 35.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -244,7 +275,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 140.0, 255.0, 25.0, 25.0 ]
+									"patching_rect" : [ 140.0, 255.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -256,7 +288,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 35.0, 25.0, 25.0 ]
+									"patching_rect" : [ 50.0, 35.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -270,6 +303,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 140.0, 135.0, 32.5, 19.0 ],
+									"style" : "",
 									"text" : "f"
 								}
 
@@ -284,6 +318,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 140.0, 80.0, 24.0, 19.0 ],
+									"style" : "",
 									"text" : "t b"
 								}
 
@@ -298,6 +333,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 95.0, 165.0, 24.0, 19.0 ],
+									"style" : "",
 									"text" : "t 1"
 								}
 
@@ -387,20 +423,18 @@
  ]
 					}
 ,
-					"patching_rect" : [ 126.0, 165.0, 48.0, 19.0 ],
+					"patching_rect" : [ 351.0, 261.0, 48.0, 21.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Verdana",
-						"default_fontsize" : 10.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
 						"fontname" : "Verdana",
 						"fontsize" : 10.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "",
 					"text" : "p alpha"
 				}
 
@@ -412,9 +446,10 @@
 					"id" : "obj-89",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 126.0, 200.0, 140.0, 19.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 351.0, 296.0, 140.0, 21.0 ],
+					"style" : "",
 					"text" : "cv.jit.ravg @alpha 0.0005"
 				}
 
@@ -428,7 +463,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 21.0, 240.0, 104.0, 19.0 ],
+					"patching_rect" : [ 246.0, 336.0, 104.0, 21.0 ],
+					"style" : "",
 					"text" : "jit.op @op absdiff"
 				}
 
@@ -444,7 +480,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 141.0, 68.0, 267.0, 31.0 ],
+					"patching_rect" : [ 366.0, 164.0, 267.0, 33.0 ],
+					"style" : "",
 					"text" : "j.message filter/clear @type none @description \"Reset filter used for background removal.\""
 				}
 
@@ -460,7 +497,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 283.0, 116.0, 294.0, 67.0 ],
+					"patching_rect" : [ 508.0, 212.0, 294.0, 69.0 ],
+					"style" : "",
 					"text" : "j.parameter threshold @type decimal @range 0 1 @clipmode both @ramp/drive max @ramp/function linear @description \"Threshold level for masking, based on absolute difference between foreground and background.\"",
 					"varname" : "module_in[2]"
 				}
@@ -475,7 +513,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 21.0, 330.0, 131.0, 19.0 ],
+					"patching_rect" : [ 246.0, 426.0, 131.0, 21.0 ],
+					"style" : "",
 					"text" : "j.out 1 @type jit_matrix"
 				}
 
@@ -491,7 +530,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 126.0, 22.0, 451.0, 43.0 ],
+					"patching_rect" : [ 351.0, 118.0, 451.0, 45.0 ],
+					"style" : "",
 					"text" : "j.parameter filter/feedback @type decimal @range 0 1 @clipmode both @ramp/drive max @ramp/function linear @description \"Feedback coefficient. Used for background removal by calculating running mean of incomming image.\"",
 					"varname" : "module_in[1]"
 				}
@@ -506,7 +546,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 21.0, 87.0, 58.0, 19.0 ],
+					"patching_rect" : [ 246.0, 183.0, 58.0, 21.0 ],
+					"style" : "",
 					"text" : "j.in 1"
 				}
 
@@ -544,7 +585,7 @@
 					"destination" : [ "obj-125", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 150.5, 131.5, 150.0, 131.5 ],
+					"midpoints" : [ 375.5, 227.5, 375.0, 227.5 ],
 					"source" : [ "obj-1013", 0 ]
 				}
 
@@ -563,7 +604,7 @@
 					"destination" : [ "obj-125", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 135.5, 139.0, 135.5, 139.0 ],
+					"midpoints" : [ 360.5, 235.0, 360.5, 235.0 ],
 					"source" : [ "obj-1086", 0 ]
 				}
 
@@ -636,7 +677,7 @@
 					"destination" : [ "obj-20", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 292.5, 274.0, 127.5, 274.0 ],
+					"midpoints" : [ 517.5, 370.0, 352.5, 370.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -646,7 +687,7 @@
 					"destination" : [ "obj-125", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 135.5, 230.0, 276.0, 230.0, 276.0, 153.0, 164.5, 153.0 ],
+					"midpoints" : [ 360.5, 326.0, 501.0, 326.0, 501.0, 249.0, 389.5, 249.0 ],
 					"source" : [ "obj-89", 0 ]
 				}
 
@@ -663,7 +704,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.noiseremoval%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/noiseremoval%",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/video/noiseremoval%",
 				"patcherrelativepath" : "../../../../components/video/noiseremoval%",
 				"type" : "JSON",
 				"implicit" : 1
@@ -685,10 +726,15 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "cv.jit.ravg.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

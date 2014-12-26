@@ -11,7 +11,7 @@ antialias 0
 light/automatic 1
 automatic 1
 depth/clear 0
-context my_context
+context default
 light/diffuse 0.000000 0.000000 0.000000 0.000000
 light/emission 0.000000 0.000000 0.000000 0.000000
 depth/enable 1

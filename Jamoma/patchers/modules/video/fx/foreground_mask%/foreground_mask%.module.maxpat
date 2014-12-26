@@ -45,7 +45,7 @@
 					"args" : [ "#1" ],
 					"id" : "obj-5",
 					"maxclass" : "bpatcher",
-					"name" : "foregroundMask%.view.maxpat",
+					"name" : "foreground_mask%.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
@@ -66,7 +66,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 6.0, 129.0, 178.0, 19.0 ],
-					"text" : "foregroundMask%.model #1"
+					"text" : "foreground_mask%.model #1"
 				}
 
 			}
@@ -123,8 +123,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "foregroundMask%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/foregroundMask%",
+				"name" : "foreground_mask%.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/foreground_mask%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -137,8 +137,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "foregroundMask%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/foregroundMask%",
+				"name" : "foreground_mask%.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/foreground_mask%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
