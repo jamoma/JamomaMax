@@ -4,11 +4,12 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 9,
 			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 133.0, 149.0, 605.0, 342.0 ],
+		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -29,15 +30,17 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"id" : "obj-6",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 329.5, 53.0, 35.0, 17.0 ],
-					"text" : "clear"
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 59.0, 78.0, 121.0, 19.0 ],
+					"text" : "j.remote devicesMenu",
+					"varname" : "device_menu[2]"
 				}
 
 			}
@@ -205,19 +208,19 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Choose which HI device to use",
+					"annotation" : "none",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"hint" : "Device",
 					"id" : "obj-10",
-					"items" : "<empty>",
+					"items" : [ "Apple Mikey HID Driver", ",", "Souris de Pascal BALTAZAR", ",", "Apple Internal Keyboard / Trackpad", ",", "Apple Internal Keyboard / Trackpad 2", ",", "Apple Keyboard", ",", "Apple Keyboard 2", ",", "Apple Internal Keyboard / Trackpad 3" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 106.0, 86.0, 149.0, 19.0 ],
+					"patching_rect" : [ 93.0, 104.0, 149.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 65.0, 25.0, 155.0, 19.0 ],
 					"varname" : "device_menu"
@@ -234,7 +237,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 171.0, 113.0, 89.0, 19.0 ],
+					"patching_rect" : [ 158.0, 131.0, 89.0, 19.0 ],
 					"text" : "j.remote device",
 					"varname" : "device_menu[1]"
 				}
@@ -287,7 +290,7 @@
 					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/no_model_address"
+					"text" : "/hi"
 				}
 
 			}
@@ -315,7 +318,7 @@
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 180.5, 139.0, 93.0, 139.0, 93.0, 81.0, 115.5, 81.0 ],
+					"midpoints" : [ 167.5, 157.0, 80.0, 157.0, 80.0, 99.0, 102.5, 99.0 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -326,6 +329,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 1 ]
 				}
 
 			}
@@ -367,15 +379,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -392,19 +395,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
