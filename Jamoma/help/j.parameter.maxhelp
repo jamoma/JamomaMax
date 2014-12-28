@@ -5,7 +5,7 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 1,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -53,7 +53,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -141,7 +141,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -256,7 +256,6 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 0.99842, 0.972394, 1.0, 0.0 ],
 									"bgfillcolor_angle" : 270.0,
 									"bgfillcolor_autogradient" : 0.79,
 									"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -266,7 +265,6 @@
 									"bgfillcolor_type" : "gradient",
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
-									"gradient" : 0,
 									"id" : "obj-45",
 									"maxclass" : "message",
 									"numinlets" : 2,
@@ -531,7 +529,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -901,7 +899,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1205,7 +1203,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-13",
-									"items" : [ "EvenMoreThanFirstPriority", ",", "MoreThanFirstPriority", ",", "FirstPriority", ",", "SecondPriority", ",", "something/completely/different/param", ",", "yet/another/node/param", ",", "SamePriority", ",", "LessPriority", ",", "some/other/node/param", ",", "NoPriority", ",", "NoPriorityA", ",", "NoPriorityB", ",", "some/sub/node/param" ],
+									"items" : [ "EvenMoreThanFirstPriority", ",", "MoreThanFirstPriority", ",", "FirstPriority", ",", "something/completely/different/param", ",", "SecondPriority", ",", "SamePriority", ",", "yet/another/node/param", ",", "LessPriority", ",", "some/other/node/param", ",", "NoPriority", ",", "NoPriorityA", ",", "NoPriorityB", ",", "some/sub/node/param" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1292,7 +1290,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1365,9 +1363,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 446.0, 317.0, 49.0, 18.0 ],
+									"patching_rect" : [ 439.0, 317.0, 73.0, 22.0 ],
 									"style" : "",
-									"text" : "50 midi"
+									"text" : "50 midigain"
 								}
 
 							}
@@ -1396,7 +1394,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 379.0, 317.0, 45.0, 18.0 ],
+									"patching_rect" : [ 379.0, 317.0, 45.0, 22.0 ],
 									"style" : "",
 									"text" : "-70 db"
 								}
@@ -1413,7 +1411,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 213.0, 468.0, 93.0, 20.0 ],
+									"patching_rect" : [ 213.0, 468.0, 93.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -1427,7 +1425,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 213.0, 439.0, 216.0, 20.0 ],
+									"patching_rect" : [ 213.0, 439.0, 216.0, 22.0 ],
 									"style" : "",
 									"text" : "j.remote /gain @unit db"
 								}
@@ -1444,7 +1442,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 208.0, 317.0, 111.0, 20.0 ],
+									"patching_rect" : [ 208.0, 317.0, 111.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -1462,7 +1460,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 208.0, 126.0, 50.0, 20.0 ],
+									"patching_rect" : [ 208.0, 126.0, 50.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -1477,7 +1475,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 208.0, 164.0, 145.0, 60.0 ],
+									"patching_rect" : [ 208.0, 164.0, 145.0, 49.0 ],
 									"style" : "",
 									"text" : "j.parameter gain @type decimal @dataspace gain @unit linear"
 								}
@@ -1526,7 +1524,7 @@
 									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 455.5, 344.0, 360.5, 344.0, 360.5, 154.0, 217.5, 154.0 ],
+									"midpoints" : [ 448.5, 344.0, 360.5, 344.0, 360.5, 154.0, 217.5, 154.0 ],
 									"source" : [ "obj-23", 0 ]
 								}
 
@@ -1562,7 +1560,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1626,11 +1624,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1058.0, 756.0 ],
+						"rect" : [ 0.0, 26.0, 1058.0, 756.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1673,7 +1671,6 @@
 , 							{
 								"box" : 								{
 									"arrow" : 0,
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bgfillcolor_angle" : 270.0,
 									"bgfillcolor_color" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bgfillcolor_color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -1881,7 +1878,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 446.0, 190.0, 297.0, 64.0 ],
+									"patching_rect" : [ 446.0, 190.0, 300.0, 64.0 ],
 									"style" : "",
 									"text" : "By default, j.parameter will ramp using the function defined by the ramp/function attibute. Here, we use a linear function by default. This attribute can be changed on the fly to use different curves."
 								}
@@ -2119,11 +2116,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1058.0, 756.0 ],
+						"rect" : [ 100.0, 126.0, 1058.0, 756.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2341,7 +2338,6 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 0.866667, 0.866667, 0.866667, 0.0 ],
 									"bgfillcolor_angle" : 270.0,
 									"bgfillcolor_autogradient" : 0.79,
 									"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -2351,7 +2347,6 @@
 									"bgfillcolor_type" : "gradient",
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
-									"gradient" : 0,
 									"id" : "obj-35",
 									"maxclass" : "message",
 									"numinlets" : 2,
@@ -2628,7 +2623,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2684,7 +2679,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 634.0, 433.0, 46.0, 17.0 ],
+									"patching_rect" : [ 634.0, 433.0, 46.0, 21.0 ],
 									"style" : "",
 									"text" : "trez"
 								}
@@ -2699,7 +2694,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 594.0, 433.0, 39.0, 17.0 ],
+									"patching_rect" : [ 594.0, 433.0, 39.0, 21.0 ],
 									"style" : "",
 									"text" : "doz"
 								}
@@ -2714,7 +2709,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 554.0, 433.0, 40.0, 17.0 ],
+									"patching_rect" : [ 554.0, 433.0, 40.0, 21.0 ],
 									"style" : "",
 									"text" : "uno"
 								}
@@ -2730,7 +2725,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 419.0, 458.0, 212.0, 19.0 ],
+									"patching_rect" : [ 419.0, 458.0, 212.0, 21.0 ],
 									"style" : "",
 									"text" : "j.parameter my_menu @type string",
 									"varname" : "my_menu"
@@ -2747,7 +2742,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 419.0, 360.0, 226.0, 19.0 ],
+									"patching_rect" : [ 419.0, 360.0, 226.0, 21.0 ],
 									"style" : "",
 									"text" : "j.parameter my_toggle @type boolean",
 									"varname" : "my_toggle"
@@ -2764,7 +2759,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 419.0, 271.0, 204.0, 19.0 ],
+									"patching_rect" : [ 419.0, 271.0, 204.0, 21.0 ],
 									"style" : "",
 									"text" : "j.parameter my_int @type integer",
 									"varname" : "my_int"
@@ -2783,7 +2778,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 419.0, 433.0, 74.0, 19.0 ],
+									"patching_rect" : [ 419.0, 433.0, 74.0, 21.0 ],
 									"style" : "",
 									"varname" : "My_Menu"
 								}
@@ -2813,7 +2808,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 419.0, 251.0, 51.0, 19.0 ],
+									"patching_rect" : [ 419.0, 251.0, 51.0, 21.0 ],
 									"style" : "",
 									"triscale" : 0.9,
 									"varname" : "My_Int"
@@ -2955,7 +2950,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -3811,7 +3806,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max.app/Contents/Resources/C74/help/resources",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max.app/Contents/Resources/C74/help/resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max.app/Contents/Resources/C74/help/resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
