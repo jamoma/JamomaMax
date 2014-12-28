@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 367.0, 176.0, 1078.0, 783.0 ],
+		"rect" : [ 100.0, 100.0, 1078.0, 783.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -996,7 +996,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 367.0, 202.0, 1078.0, 757.0 ],
+						"rect" : [ 100.0, 126.0, 1078.0, 757.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1027,12 +1027,26 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"hidden" : 1,
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 652.0, 318.0, 74.0, 22.0 ],
+									"style" : "",
+									"text" : "prepend set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"hidden" : 1,
 									"id" : "obj-16",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 548.0, 344.0, 74.0, 22.0 ],
+									"patching_rect" : [ 557.0, 344.0, 74.0, 22.0 ],
 									"style" : "",
 									"text" : "prepend set"
 								}
@@ -1046,7 +1060,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "float" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 548.0, 415.0, 81.5, 15.0 ],
+									"patching_rect" : [ 557.0, 415.0, 116.5, 15.0 ],
 									"pictures" : [ "linear.svg", "easeInBack.svg", "easeInOutBack.svg", "easeOutBack.svg", "easeInBounce.svg", "easeInOutBounce.svg", "easeOutBounce.svg", "easeInCircular.svg", "easeInOutCircular.svg", "easeOutCircular.svg", "easeInCubic.svg", "easeInOutCubic.svg", "easeOutCubic.svg", "easeInElastic.svg", "easeInOutElastic.svg", "easeOutElastic.svg", "easeInExponential.svg", "easeInOutExponential.svg", "easeOutExponential.svg", "easeInQuadratic.svg", "easeInOutQuadratic.svg", "easeOutQuadratic.svg", "easeInQuartic.svg", "easeInOutQuartic.svg", "easeOutQuartic.svg", "easeInQuintic.svg", "easeInOutQuintic.svg", "easeOutQuintic.svg", "easeInSine.svg", "easeInOutSine.svg", "easeOutSine.svg", "exponential.svg", "freehand.svg", "logarithm.svg", "lowpass.svg", "power.svg", "smoothPolynomial.svg", "tanh.svg", "bartlett.svg", "blackman.svg", "blackmanHarris.svg", "expodec.svg", "gauss.svg", "hamming.svg", "hanning.svg", "kaiser.svg", "nuttall.svg", "rectangular.svg", "rosenbergGlottalPulse.svg", "trapezoid.svg", "tukey.svg", "welch.svg" ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
@@ -1071,7 +1085,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "float" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 548.0, 375.0, 81.5, 30.0 ],
+									"patching_rect" : [ 557.0, 375.0, 81.5, 30.0 ],
 									"pictures" : [ "linear.svg", "easeInBack.svg", "easeInOutBack.svg", "easeOutBack.svg", "easeInBounce.svg", "easeInOutBounce.svg", "easeOutBounce.svg", "easeInCircular.svg", "easeInOutCircular.svg", "easeOutCircular.svg", "easeInCubic.svg", "easeInOutCubic.svg", "easeOutCubic.svg", "easeInElastic.svg", "easeInOutElastic.svg", "easeOutElastic.svg", "easeInExponential.svg", "easeInOutExponential.svg", "easeOutExponential.svg", "easeInQuadratic.svg", "easeInOutQuadratic.svg", "easeOutQuadratic.svg", "easeInQuartic.svg", "easeInOutQuartic.svg", "easeOutQuartic.svg", "easeInQuintic.svg", "easeInOutQuintic.svg", "easeOutQuintic.svg", "easeInSine.svg", "easeInOutSine.svg", "easeOutSine.svg", "exponential.svg", "freehand.svg", "logarithm.svg", "lowpass.svg", "power.svg", "smoothPolynomial.svg", "tanh.svg", "bartlett.svg", "blackman.svg", "blackmanHarris.svg", "expodec.svg", "gauss.svg", "hamming.svg", "hanning.svg", "kaiser.svg", "nuttall.svg", "rectangular.svg", "rosenbergGlottalPulse.svg", "trapezoid.svg", "tukey.svg", "welch.svg" ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
@@ -1097,7 +1111,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "float" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 640.5, 375.0, 108.0, 48.0 ],
+									"patching_rect" : [ 652.0, 349.0, 108.0, 48.0 ],
 									"pictures" : [ "linear.png", "easeInBack.png", "easeInOutBack.png", "easeOutBack.png", "easeInBounce.png", "easeInOutBounce.png", "easeOutBounce.png", "easeInCircular.png", "easeInOutCircular.png", "easeOutCircular.png", "easeInCubic.png", "easeInOutCubic.png", "easeOutCubic.png", "easeInElastic.png", "easeInOutElastic.png", "easeOutElastic.png", "easeInExponential.png", "easeInOutExponential.png", "easeOutExponential.png", "easeInQuadratic.png", "easeInOutQuadratic.png", "easeOutQuadratic.png", "easeInQuartic.png", "easeInOutQuartic.png", "easeOutQuartic.png", "easeInQuintic.png", "easeInOutQuintic.png", "easeOutQuintic.png", "easeInSine.png", "easeInOutSine.png", "easeOutSine.png", "exponential.png", "freehand.png", "logarithm.png", "lowpass.png", "power.png", "smoothPolynomial.png", "tanh.png", "bartlett.png", "blackman.png", "blackmanHarris.png", "expodec.png", "gauss.png", "hamming.png", "hanning.png", "kaiser.png", "nuttall.png", "rectangular.png", "rosenbergGlottalPulse.png", "trapezoid.png", "tukey.png", "welch.png" ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
@@ -2682,11 +2696,30 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-16", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"midpoints" : [ 661.5, 399.0, 643.0, 399.0, 643.0, 334.0, 566.5, 334.0 ],
+									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-50", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 694.5, 440.75, 636.0, 440.75 ],
+									"midpoints" : [ 706.0, 440.75, 636.0, 440.75 ],
 									"source" : [ "obj-15", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-16", 0 ]
 								}
 
 							}
@@ -2704,7 +2737,7 @@
 									"destination" : [ "obj-16", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 557.5, 443.0, 539.5, 443.0, 539.5, 333.0, 557.5, 333.0 ],
+									"midpoints" : [ 566.5, 443.0, 548.5, 443.0, 548.5, 333.0, 566.5, 333.0 ],
 									"source" : [ "obj-17", 0 ]
 								}
 
@@ -2714,7 +2747,18 @@
 									"destination" : [ "obj-50", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 615.25, 441.5, 636.0, 441.5 ],
 									"source" : [ "obj-17", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"midpoints" : [ 566.5, 443.0, 543.0, 443.0, 543.0, 312.0, 661.5, 312.0 ],
+									"source" : [ "obj-17", 0 ]
 								}
 
 							}
@@ -2950,6 +2994,15 @@
 									"hidden" : 0,
 									"midpoints" : [ 930.0, 406.0, 930.0, 406.0 ],
 									"source" : [ "obj-58", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-15", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-6", 0 ]
 								}
 
 							}
