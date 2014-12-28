@@ -295,7 +295,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 9.0, 277.0, 30.0, 30.0 ],
-									"presentation_rect" : [ 9.0, 277.0, 0.0, 0.0 ],
 									"style" : ""
 								}
 
@@ -530,7 +529,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 495.5, 59.0, 22.0 ],
-									"presentation_rect" : [ 28.5, 549.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "tosymbol"
 								}
@@ -570,7 +568,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 50.0, 41.0, 30.0, 30.0 ],
-									"presentation_rect" : [ 58.0, 41.0, 0.0, 0.0 ],
 									"style" : ""
 								}
 
@@ -623,7 +620,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 97.0, 280.0, 50.0, 22.0 ],
-									"presentation_rect" : [ 903.0, 621.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "path"
 								}
@@ -783,7 +779,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 672.0, 439.0, 358.0, 143.0 ],
 									"style" : "",
-									"text" : "<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?> cr <!DOCTYPE svg PUBLIC \\\"-//W3C//DTD SVG 1.1//EN\\\" \\\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\\\"> cr <svg version=\\\"1.1\\\" id=\\\"Calque_1\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" xmlns:xlink=\\\"http://www.w3.org/1999/xlink\\\" x=\\\"0px\\\" y=\\\"0px\\\" width=\\\"39px\\\" height=\\\"18.8px\\\" viewBox=\\\"0 0 39 18.8\\\" enable-background=\\\"new 0 0 39 18.8\\\" xml:space=\\\"preserve\\\"> cr <g id=\\\"sine\\\"> cr tab <path fill=\\\"none\\\" y=\\\"6\\\" stroke=\\\"#808080\\\" stroke-linecap=\\\"round\\\" d=\\\""
+									"text" : "<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?> cr <!DOCTYPE svg PUBLIC \\\"-//W3C//DTD SVG 1.1//EN\\\" \\\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\\\"> cr <svg version=\\\"1.1\\\" id=\\\"Calque_1\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" xmlns:xlink=\\\"http://www.w3.org/1999/xlink\\\" x=\\\"0px\\\" y=\\\"0px\\\" width=\\\"39px\\\" height=\\\"18.8px\\\" viewBox=\\\"0 0 39 18.8\\\" enable-background=\\\"new 0 0 39 18.8\\\" xml:space=\\\"preserve\\\"> cr <g id=\\\"sine\\\"> cr tab <path fill=\\\"none\\\" stroke=\\\"#000000\\\" stroke-linecap=\\\"round\\\" d=\\\""
 								}
 
 							}
