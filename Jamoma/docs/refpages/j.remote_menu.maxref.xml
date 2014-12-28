@@ -3,12 +3,12 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="j.remote" module="" category="Jamoma">
+<c74object name="j.remote_menu" module="" category="Jamoma">
 	<digest>
-		access parameter values remotely
+		connect to a menu and manage list of items
 	</digest>
 	<description>
-		j.remote allows to access parameter values remotely by connecting UI objects to them
+		j.remote_menu allows to automatically fill the menu with the list of items in the range
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -42,7 +42,7 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				set: connect to ui object + speedlimed
+				set: connect to menu object + speedlimed
 			</digest>
 			<description>
 				TEXT_HERE
@@ -58,7 +58,7 @@
 		</outlet>
 		<outlet id="2" type="OUTLET_TYPE">
 			<digest>
-				highlight : connect to ui object to manage highlight state
+				highlight : connect to menu object to manage highlight state
 			</digest>
 			<description>
 				TEXT_HERE
