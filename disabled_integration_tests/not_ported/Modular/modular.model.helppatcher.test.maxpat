@@ -2,35 +2,42 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 1,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 594.0, 44.0, 1007.0, 896.0 ],
+		"rect" : [ 594.0, 79.0, 1007.0, 896.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-11",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
@@ -39,10 +46,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x64"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 1,
+							"architecture" : "x64",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 35.0, 105.0, 1032.0, 791.0 ],
@@ -51,19 +59,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -74,6 +90,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 256.0, 472.0, 39.0, 20.0 ],
+									"style" : "",
 									"text" : "zl rev"
 								}
 
@@ -82,12 +99,12 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 14.0,
-									"frgb" : 0.0,
 									"id" : "obj-23",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 76.0, 37.0, 469.0, 22.0 ],
+									"style" : "",
 									"text" : "Scan patchers/modules folder and build a list of all module help patchers"
 								}
 
@@ -106,6 +123,7 @@
 										"embed" : 0
 									}
 ,
+									"style" : "",
 									"text" : "coll _objects_to_test_"
 								}
 
@@ -120,6 +138,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "count" ],
 									"patching_rect" : [ 76.0, 218.998596, 57.0, 20.0 ],
+									"style" : "",
 									"text" : "t b count"
 								}
 
@@ -132,7 +151,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 822.0, 116.0, 25.0, 25.0 ]
+									"patching_rect" : [ 822.0, 116.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -146,6 +166,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "clear", "zlclear" ],
 									"patching_rect" : [ 822.0, 168.998596, 171.0, 20.0 ],
+									"style" : "",
 									"text" : "t clear zlclear"
 								}
 
@@ -160,6 +181,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 256.0, 435.998596, 83.0, 20.0 ],
+									"style" : "",
 									"text" : "zl group 8000"
 								}
 
@@ -174,6 +196,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "int" ],
 									"patching_rect" : [ 593.0, 349.998596, 54.0, 20.0 ],
+									"style" : "",
 									"text" : "uzi 10 0"
 								}
 
@@ -188,6 +211,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 593.0, 320.998596, 72.0, 20.0 ],
+									"style" : "",
 									"text" : "route count"
 								}
 
@@ -202,6 +226,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 256.0, 368.998596, 219.0, 20.0 ],
+									"style" : "",
 									"text" : "regexp .maxhelp @substitute .maxhelp"
 								}
 
@@ -216,6 +241,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "int" ],
 									"patching_rect" : [ 256.0, 334.998596, 58.0, 20.0 ],
+									"style" : "",
 									"text" : "strippath"
 								}
 
@@ -230,6 +256,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 256.0, 218.998596, 88.0, 20.0 ],
+									"style" : "",
 									"text" : "prepend prefix"
 								}
 
@@ -244,6 +271,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 256.0, 193.998596, 60.0, 20.0 ],
+									"style" : "",
 									"text" : "tosymbol"
 								}
 
@@ -258,6 +286,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 256.0, 168.998596, 298.0, 20.0 ],
+									"style" : "",
 									"text" : "regexp integrationTests/Modular @substitute modules"
 								}
 
@@ -266,17 +295,16 @@
 								"box" : 								{
 									"autopopulate" : 1,
 									"depth" : 7,
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
 									"id" : "obj-3",
-									"items" : [ "audio", ",", "audio/10harmonics~", ",", "audio/10harmonics~/10harmonics~.model.html", ",", "audio/10harmonics~/10harmonics~.model.maxhelp", ",", "audio/10harmonics~/10harmonics~.model.maxpat", ",", "audio/10harmonics~/10harmonics~.model.xml", ",", "audio/10harmonics~/10harmonics~.module.maxpat", ",", "audio/10harmonics~/10harmonics~.view.maxpat", ",", "audio/balance~", ",", "audio/balance~/balance~.model.html", ",", "audio/balance~/balance~.model.maxhelp", ",", "audio/balance~/balance~.model.maxpat", ",", "audio/balance~/balance~.model.xml", ",", "audio/balance~/balance~.module.maxpat", ",", "audio/balance~/balance~view.maxpat", ",", "audio/crossfade~", ",", "audio/crossfade~/crossfade~.model.html", ",", "audio/crossfade~/crossfade~.model.maxhelp", ",", "audio/crossfade~/crossfade~.model.maxpat", ",", "audio/crossfade~/crossfade~.model.xml", ",", "audio/crossfade~/crossfade~.module.maxpat", ",", "audio/crossfade~/crossfade~.view.maxpat", ",", "audio/degrade~", ",", "audio/degrade~/degrade~.model.maxhelp", ",", "audio/degrade~/degrade~.model.maxpat", ",", "audio/degrade~/degrade~.model.xml", ",", "audio/degrade~/degrade~.module.maxpat", ",", "audio/degrade~/degrade~.view.maxpat", ",", "audio/delay~", ",", "audio/delay~/delay~.model.html", ",", "audio/delay~/delay~.model.maxhelp", ",", "audio/delay~/delay~.model.maxpat", ",", "audio/delay~/delay~.model.xml", ",", "audio/delay~/delay~.module.maxpat", ",", "audio/delay~/delay~.view.maxpat", ",", "audio/echo~", ",", "audio/echo~/echo~.model.html", ",", "audio/echo~/echo~.model.maxhelp", ",", "audio/echo~/echo~.model.maxpat", ",", "audio/echo~/echo~.model.xml", ",", "audio/echo~/echo~.module.maxpat", ",", "audio/echo~/echo~.view.maxpat", ",", "audio/equalizer~", ",", "audio/equalizer~/equalizerM~.model.maxpat", ",", "audio/equalizer~/equalizerM~.model.xml", ",", "audio/equalizer~/equalizer~-withArrays.view.maxpat", ",", "audio/equalizer~/equalizer~.model.maxhelp", ",", "audio/equalizer~/equalizer~.model.maxpat", ",", "audio/equalizer~/equalizer~.model.xml", ",", "audio/equalizer~/equalizer~.module.maxpat", ",", "audio/equalizer~/equalizer~.view.maxpat", ",", "audio/equalizer~/equalizer~views.maxpat", ",", "audio/equalizer~/jmod.equalizer~.html", ",", "audio/filePlayer~", ",", "audio/filePlayer~/4-channels", ",", "audio/filePlayer~/4-channels/filePlayer.4ch~.model.html", ",", "audio/filePlayer~/4-channels/filePlayer.4ch~.model.maxhelp", ",", "audio/filePlayer~/4-channels/filePlayer.4ch~.model.maxpat", ",", "audio/filePlayer~/4-channels/filePlayer.4ch~.model.xml", ",", "audio/filePlayer~/4-channels/fileplayer.4ch~.module.maxpat", ",", "audio/filePlayer~/filePlayer.mono~.modelBug.maxhelp", ",", "audio/filePlayer~/jalg.filePlayer.gui.maxpat", ",", "audio/filePlayer~/mono", ",", "audio/filePlayer~/mono/filePlayer.mono~.model.html", ",", "audio/filePlayer~/mono/filePlayer.mono~.model.maxhelp", ",", "audio/filePlayer~/mono/filePlayer.mono~.model.maxpat", ",", "audio/filePlayer~/mono/filePlayer.mono~.model.xml", ",", "audio/filePlayer~/mono/fileplayer.mono~.module.maxpat", ",", "audio/filePlayer~/shared", ",", "audio/filePlayer~/shared/filePlayer.algorithm.maxpat", ",", "audio/filePlayer~/shared/filePlayer~.view.maxpat", ",", "audio/filePlayer~/shared/j.filePlayer-demo.txt", ",", "audio/filePlayer~/stereo", ",", "audio/filePlayer~/stereo/filePlayer.stereo~.model.html", ",", "audio/filePlayer~/stereo/filePlayer.stereo~.model.maxhelp", ",", "audio/filePlayer~/stereo/filePlayer.stereo~.model.maxpat", ",", "audio/filePlayer~/stereo/filePlayer.stereo~.model.xml", ",", "audio/filePlayer~/stereo/fileplayer.stereo~.module.maxpat", ",", "audio/filter~", ",", "audio/filter~/filter~.model.html", ",", "audio/filter~/filter~.model.maxhelp", ",", "audio/filter~/filter~.model.maxpat", ",", "audio/filter~/filter~.model.xml", ",", "audio/filter~/filter~.module.maxpat", ",", "audio/filter~/filter~.view.maxpat", ",", "audio/fluidsynth~", ",", "audio/fluidsynth~/fluidsynth~.model.html", ",", "audio/fluidsynth~/fluidsynth~.model.maxhelp", ",", "audio/fluidsynth~/fluidsynth~.model.maxpat", ",", "audio/fluidsynth~/fluidsynth~.model.xml", ",", "audio/fluidsynth~/fluidsynth~.module.maxpat", ",", "audio/fluidsynth~/fluidsynth~.view.maxpat", ",", "audio/hilbertModulator~", ",", "audio/hilbertModulator~/hilbertModulator~.model.html", ",", "audio/hilbertModulator~/hilbertModulator~.model.maxhelp", ",", "audio/hilbertModulator~/hilbertModulator~.model.maxpat", ",", "audio/hilbertModulator~/hilbertModulator~.model.xml", ",", "audio/hilbertModulator~/hilbertModulator~.module.maxpat", ",", "audio/hilbertModulator~/hilbertModulator~.view.maxpat", ",", "audio/input~", ",", "audio/input~/input~.model.html", ",", "audio/input~/input~.model.maxhelp", ",", "audio/input~/input~.model.maxpat", ",", "audio/input~/input~.model.xml", ",", "audio/input~/input~.module.maxpat", ",", "audio/input~/input~.view.maxpat", ",", "audio/limiter~", ",", "audio/limiter~/limiter.parametersAndMessages.maxpat", ",", "audio/limiter~/limiter~.model.html", ",", "audio/limiter~/limiter~.model.maxhelp", ",", "audio/limiter~/limiter~.model.maxpat", ",", "audio/limiter~/limiter~.model.xml", ",", "audio/limiter~/limiter~.module.maxpat", ",", "audio/limiter~/limiter~.panel.widget.maxpat", ",", "audio/limiter~/limiter~.view.maxpat", ",", "audio/multidelay~", ",", "audio/multidelay~/multidelay~.model.html", ",", "audio/multidelay~/multidelay~.model.maxhelp", ",", "audio/multidelay~/multidelay~.model.maxpat", ",", "audio/multidelay~/multidelay~.model.xml", ",", "audio/multidelay~/multidelay~.module.maxpat", ",", "audio/multidelay~/multidelay~.view.maxpat", ",", "audio/noisegate~", ",", "audio/noisegate~/noisegate~.model.html", ",", "audio/noisegate~/noisegate~.model.maxhelp", ",", "audio/noisegate~/noisegate~.model.maxpat", ",", "audio/noisegate~/noisegate~.model.xml", ",", "audio/noisegate~/noisegate~.module.maxpat", ",", "audio/noisegate~/noisegate~.view.maxpat", ",", "audio/noise~", ",", "audio/noise~/noise~.model.html", ",", "audio/noise~/noise~.model.maxhelp", ",", "audio/noise~/noise~.model.xml", ",", "audio/noise~/noise~.module.maxpat", ",", "audio/noise~/noise~.view.maxpat", ",", "audio/output~", ",", "audio/output~/output~.model.html", ",", "audio/output~/output~.model.maxhelp", ",", "audio/output~/output~.model.maxpat", ",", "audio/output~/output~.model.xml", ",", "audio/output~/output~.module.maxpat", ",", "audio/output~/output~.view.maxpat", ",", "audio/panning~", ",", "audio/panning~/panning~.model.maxhelp", ",", "audio/panning~/panning~.model.maxpat", ",", "audio/panning~/panning~.model.xml", ",", "audio/panning~/panning~.module.maxpat", ",", "audio/panning~/panning~.view.maxpat", ",", "audio/record~", ",", "audio/record~/record.parametersAndMessages.maxpat", ",", "audio/record~/record~.model.maxhelp", ",", "audio/record~/record~.model.maxpat", ",", "audio/record~/record~.model.xml", ",", "audio/record~/record~.module.maxpat", ",", "audio/record~/record~.view.maxpat", ",", "audio/rissetGlissando", ",", "audio/rissetGlissando/rissetGlissando~.model.html", ",", "audio/rissetGlissando/rissetGlissando~.model.maxhelp", ",", "audio/rissetGlissando/rissetGlissando~.model.maxpat", ",", "audio/rissetGlissando/rissetGlissando~.model.xml", ",", "audio/rissetGlissando/rissetGlissando~.module.maxpat", ",", "audio/rissetGlissando/rissetGlissando~.view.maxpat", ",", "audio/samplePlayer2~", ",", "audio/samplePlayer2~/samplePlayer2~.model.html", ",", "audio/samplePlayer2~/samplePlayer2~.model.maxhelp", ",", "audio/samplePlayer2~/samplePlayer2~.model.maxpat", ",", "audio/samplePlayer2~/samplePlayer2~.model.xml", ",", "audio/samplePlayer~", ",", "audio/samplePlayer~/samplePlayer~.model.html", ",", "audio/samplePlayer~/samplePlayer~.model.maxhelp", ",", "audio/samplePlayer~/samplePlayer~.model.maxpat", ",", "audio/samplePlayer~/samplePlayer~.model.xml", ",", "audio/samplePlayer~/samplePlayer~.module.maxpat", ",", "audio/samplePlayer~/samplePlayer~.view.maxpat", ",", "audio/saturation~", ",", "audio/saturation~/saturation~.model.html", ",", "audio/saturation~/saturation~.model.maxhelp", ",", "audio/saturation~/saturation~.model.maxpat", ",", "audio/saturation~/saturation~.model.xml", ",", "audio/saturation~/saturation~.module.maxpat", ",", "audio/saturation~/saturation~.view.maxpat", ",", "audio/scope~", ",", "audio/scope~/scope~.model.maxhelp", ",", "audio/scope~/scope~.model.maxpat", ",", "audio/scope~/scope~.model.xml", ",", "audio/scope~/scope~.module.maxpat", ",", "audio/scope~/scope~.view.html", ",", "audio/scope~/scope~.view.maxpat", ",", "audio/sine~", ",", "audio/sine~/sine~.model.html", ",", "audio/sine~/sine~.model.maxhelp", ",", "audio/sine~/sine~.model.maxpat", ",", "audio/sine~/sine~.model.xml", ",", "audio/sine~/sine~.module.maxpat", ",", "audio/sine~/sine~.view.maxpat", ",", "audio/sonifyer~", ",", "audio/sonifyer~/sonifyer~.model.html", ",", "audio/sonifyer~/sonifyer~.model.maxhelp", ",", "audio/sonifyer~/sonifyer~.model.maxpat", ",", "audio/sonifyer~/sonifyer~.model.xml", ",", "audio/sonifyer~/sonifyer~.view.maxpat", ",", "audio/spectralGate~", ",", "audio/spectralGate~/j.spectralGate~.lib.maxpat", ",", "audio/spectralGate~/spectralGate~.model.html", ",", "audio/spectralGate~/spectralGate~.model.maxhelp", ",", "audio/spectralGate~/spectralGate~.model.maxpat", ",", "audio/spectralGate~/spectralGate~.model.xml", ",", "audio/spectralGate~/spectralGate~.module.maxpat", ",", "audio/spectralGate~/spectralGate~.view.maxpat", ",", "audio/spectralShift~", ",", "audio/spectralShift~/j.spectralShiftVoice~.maxpat", ",", "audio/spectralShift~/spectralShift~.model.html", ",", "audio/spectralShift~/spectralShift~.model.maxhelp", ",", "audio/spectralShift~/spectralShift~.model.maxpat", ",", "audio/spectralShift~/spectralShift~.model.xml", ",", "audio/spectralShift~/spectralShift~.module.maxpat", ",", "audio/spectralShift~/spectralShift~.view.maxpat", ",", "audio/spectrogram~", ",", "audio/spectrogram~/spectrogram~.model.html", ",", "audio/spectrogram~/spectrogram~.model.maxhelp", ",", "audio/spectrogram~/spectrogram~.model.maxpat", ",", "audio/spectrogram~/spectrogram~.model.xml", ",", "audio/spectrogram~/spectrogram~.module.maxpat", ",", "audio/spectrogram~/spectrogram~.view.maxpat", ",", "audio/tremolo~", ",", "audio/tremolo~/tremolo~.model.html", ",", "audio/tremolo~/tremolo~.model.maxhelp", ",", "audio/tremolo~/tremolo~.model.maxpat", ",", "audio/tremolo~/tremolo~.model.xml", ",", "audio/tremolo~/tremolo~.module.maxpat", ",", "audio/tremolo~/tremolo~.view.maxpat", ",", "audio/vst~", ",", "audio/vst~/vst~.model.html", ",", "audio/vst~/vst~.model.maxhelp", ",", "audio/vst~/vst~.model.maxpat", ",", "audio/vst~/vst~.model.xml", ",", "audio/vst~/vst~.view.maxpat", ",", "control", ",", "control/bcf2000", ",", "control/bcf2000/bcf2000.model.html", ",", "control/bcf2000/bcf2000.model.maxhelp", ",", "control/bcf2000/bcf2000.model.maxpat", ",", "control/bcf2000/bcf2000.model.xml", ",", "control/bcf2000/bcf2000.view.maxpat", ",", "control/bcf2000/BCFFader.view.maxpat", ",", "control/bcf2000/BCFKey.view.maxpat", ",", "control/bcf2000/BCFtrack.view.maxpat", ",", "control/bcf2000/Push_encoder_press.maxpat", ",", "control/bcf2000/Push_encoder_turn.maxpat", ",", "control/colorpicker", ",", "control/colorpicker/colorpicker.model.html", ",", "control/colorpicker/colorpicker.model.maxhelp", ",", "control/colorpicker/colorpicker.model.maxpat", ",", "control/colorpicker/colorpicker.model.xml", ",", "control/colorpicker/colorpicker.view.maxpat", ",", "control/cueComment", ",", "control/cueComment/cueComment.model.html", ",", "control/cueComment/cueComment.model.maxhelp", ",", "control/cueComment/cueComment.model.xml", ",", "control/cueComment/cueComment.view.maxpat", ",", "control/cueManager", ",", "control/cueManager/cuelist_help.txt", ",", "control/cueManager/cueManager.lite.view.maxpat", ",", "control/cueManager/cueManager.maxhelp", ",", "control/cueManager/cueManager.model.maxpat", ",", "control/cueManager/cueManager.view.maxpat", ",", "control/cueManager/CuePrioritiesPropagator.maxpat", ",", "control/cueManager/jmod.cueManager.html", ",", "control/cueManager/jmod.cueManager.maxhelp", ",", "control/cueManager/jmod.cueManager.maxpat", ",", "control/cueManager/jmod.cueManager.xml", ",", "control/cueScript", ",", "control/cueScript/cueScript.model.html", ",", "control/cueScript/cueScript.model.maxhelp", ",", "control/cueScript/cueScript.model.maxpat", ",", "control/cueScript/cueScript.model.xml", ",", "control/cueScript/cueScript.view.maxpat", ",", "control/cueScript/jmod.demo_cuescript.txt", ",", "control/cueTrigger", ",", "control/cueTrigger/cueTrigger.model.html", ",", "control/cueTrigger/cueTrigger.model.maxhelp", ",", "control/cueTrigger/cueTrigger.model.xml", ",", "control/cueTrigger/cueTrigger.view.maxpat", ",", "control/fileBrowser", ",", "control/fileBrowser/fileBrowser.model.html", ",", "control/fileBrowser/fileBrowser.model.maxhelp", ",", "control/fileBrowser/fileBrowser.model.maxpat", ",", "control/fileBrowser/fileBrowser.model.xml", ",", "control/fileBrowser/fileBrowser.module.maxpat", ",", "control/fileBrowser/fileBrowser.view.maxpat", ",", "control/fileNameGenerator", ",", "control/fileNameGenerator/fileNameGenerator.model.html", ",", "control/fileNameGenerator/fileNameGenerator.model.maxhelp", ",", "control/fileNameGenerator/fileNameGenerator.model.xml", ",", "control/fileNameGenerator/fileNameGenerator.view.maxpat", ",", "control/globalTransport", ",", "control/globalTransport/globalTransport.model.html", ",", "control/globalTransport/globalTransport.model.maxhelp", ",", "control/globalTransport/globalTransport.model.xml", ",", "control/globalTransport/globalTransport.view.maxpat", ",", "control/hi", ",", "control/hi/hi.model.html", ",", "control/hi/hi.model.maxhelp", ",", "control/hi/hi.model.maxpat", ",", "control/hi/hi.model.xml", ",", "control/hi/hi.module.maxpat", ",", "control/hi/hi.view.maxpat", ",", "control/layout", ",", "control/layout/jmod.layout.locate_patcher.js", ",", "control/layout/jmod.layouthelp.xml", ",", "control/layout/layout.model.html", ",", "control/layout/layout.model.maxhelp", ",", "control/layout/layout.model.xml", ",", "control/layout/layout.view.maxpat", ",", "control/layout/modules.txt", ",", "control/mapper", ",", "control/mapper/j.mappings.js", ",", "control/mapper/jalg.transformation.maxpat", ",", "control/mapper/mapper.model.html", ",", "control/mapper/mapper.model.maxhelp", ",", "control/mapper/mapper.model.maxpat", ",", "control/mapper/mapper.model.xml", ",", "control/mapper/mapper.view.maxpat", ",", "control/mapperBCF", ",", "control/mapperBCF/bcfFader.view.maxpat", ",", "control/mapperBCF/bcfKey.view.maxpat", ",", "control/mapperBCF/bcfMapper.model.maxpat", ",", "control/mapperBCF/bcfMapper.view.maxpat", ",", "control/mapperBCF/bcfModels.maxpat", ",", "control/mapperBCF/bcfPress.view.maxpat", ",", "control/mapperBCF/bcfTrack.model.maxpat", ",", "control/mapperBCF/bcfTrack.view.maxpat", ",", "control/mapperBCF/bcfTurn.view.maxpat", ",", "control/mapperBCF/mapperBCF.model.maxhelp", ",", "control/mapperBCF/mapperBCF.model.maxpat", ",", "control/mapperBCF/mapperBCF.model.xml", ",", "control/mapperBCF/mapperBCF.view.maxpat", ",", "control/mapperContinuous", ",", "control/mapperContinuous/mapperContinuous.model.html", ",", "control/mapperContinuous/mapperContinuous.model.maxhelp", ",", "control/mapperContinuous/mapperContinuous.model.xml", ",", "control/mapperContinuous/mapperContinuous.view.maxpat", ",", "control/mapperDiscrete", ",", "control/mapperDiscrete/mapperDiscrete.model.html", ",", "control/mapperDiscrete/mapperDiscrete.model.maxhelp", ",", "control/mapperDiscrete/mapperDiscrete.model.xml", ",", "control/mapperDiscrete/mapperDiscrete.view.maxpat", ",", "control/mapperDiscrete/mappperDiscreteHelp1.xml", ",", "control/mapperDiscrete/mappperDiscreteHelp2.xml", ",", "control/mapperMulti", ",", "control/mapperMulti/mapper.model.maxpat", ",", "control/mapperMulti/mapper.view.maxpat", ",", "control/mapperMulti/mapperCollSetter.maxpat", ",", "control/mapperMulti/mapperMulti.maxhelp", ",", "control/mapperMulti/mapperMulti.model.maxpat", ",", "control/mapperMulti/mapperMulti.model.xml", ",", "control/mapperMulti/mapperMulti.view.maxpat", ",", "control/messages", ",", "control/messages/messages.model.html", ",", "control/messages/messages.model.maxhelp", ",", "control/messages/messages.model.xml", ",", "control/messages/messages.view.maxpat", ",", "control/midiin", ",", "control/midiin/midiin.model.html", ",", "control/midiin/midiin.model.maxhelp", ",", "control/midiin/midiin.model.maxpat", ",", "control/midiin/midiin.model.xml", ",", "control/midiin/midiin.module.maxpat", ",", "control/midiin/midiin.view.maxpat", ",", "control/mouse", ",", "control/mouse/mouse.model.html", ",", "control/mouse/mouse.model.maxhelp", ",", "control/mouse/mouse.model.maxpat", ",", "control/mouse/mouse.model.xml", ",", "control/mouse/mouse.module.maxpat", ",", "control/mouse/mouse.view.maxpat", ",", "control/oscnet", ",", "control/oscnet/jalg.oscnet.ui.maxpat", ",", "control/oscnet/oscnet.model.html", ",", "control/oscnet/oscnet.model.maxhelp", ",", "control/oscnet/oscnet.model.maxpat", ",", "control/oscnet/oscnet.model.xml", ",", "control/oscnet/oscnet.view.maxpat", ",", "control/qmetro", ",", "control/qmetro/qmetro.model.html", ",", "control/qmetro/qmetro.model.maxhelp", ",", "control/qmetro/qmetro.model.maxpat", ",", "control/qmetro/qmetro.model.xml", ",", "control/qmetro/qmetro.module.maxpat", ",", "control/qmetro/qmetro.view.maxpat", ",", "control/spacenavigator", ",", "control/spacenavigator/spacenavigator.model.html", ",", "control/spacenavigator/spacenavigator.model.maxhelp", ",", "control/spacenavigator/spacenavigator.model.maxpat", ",", "control/spacenavigator/spacenavigator.model.xml", ",", "control/spacenavigator/spacenavigator.view.maxpat", ",", "control/wacom", ",", "control/wacom/wacom.model.html", ",", "control/wacom/wacom.model.maxhelp", ",", "control/wacom/wacom.model.maxpat", ",", "control/wacom/wacom.model.xml", ",", "control/wacom/wacom.view.maxpat", ",", "data", ",", "data/condition", ",", "data/condition/condition.model.html", ",", "data/condition/condition.model.maxhelp", ",", "data/condition/condition.model.maxpat", ",", "data/condition/condition.model.xml", ",", "data/condition/condition.view.maxpat", ",", "data/textwriter", ",", "data/textwriter/jalg.textwriter.mxt", ",", "data/textwriter/textwriter.model.html", ",", "data/textwriter/textwriter.model.maxhelp", ",", "data/textwriter/textwriter.model.maxpat", ",", "data/textwriter/textwriter.model.xml", ",", "data/textwriter/textwriter.view.maxpat", ",", "openGL", ",", "openGL/gl.alphamixer%", ",", "openGL/gl.alphamixer%/gl.alphamixer%.model.html", ",", "openGL/gl.alphamixer%/gl.alphamixer%.model.maxhelp", ",", "openGL/gl.alphamixer%/gl.alphamixer%.model.maxpat", ",", "openGL/gl.alphamixer%/gl.alphamixer%.model.xml", ",", "openGL/gl.alphamixer%/gl.alphamixer%.module.maxpat", ",", "openGL/gl.alphamixer%/gl.alphamixer%.view.maxpat", ",", "openGL/gl.alphamixer%/shaders", ",", "openGL/gl.alphamixer%/shaders/j.4ch_alphamixer.jxs", ",", "openGL/gl.alphamixer%/shaders/j.4ch_alphamixer.vp.glsl", ",", "openGL/gl.chromakey%", ",", "openGL/gl.chromakey%/gl.chromakey%.model.html", ",", "openGL/gl.chromakey%/gl.chromakey%.model.maxhelp", ",", "openGL/gl.chromakey%/gl.chromakey%.model.maxpat", ",", "openGL/gl.chromakey%/gl.chromakey%.model.xml", ",", "openGL/gl.chromakey%/gl.chromakey%.module.maxpat", ",", "openGL/gl.chromakey%/gl.chromakey%.view.maxpat", ",", "openGL/gl.chromakey%/jmod.gl.td.chromakey-demo.txt", ",", "openGL/gl.edgeblend%", ",", "openGL/gl.edgeblend%/gl.chromakey%.module.maxpat", ",", "openGL/gl.edgeblend%/gl.edgeblend%.model.html", ",", "openGL/gl.edgeblend%/gl.edgeblend%.model.maxhelp", ",", "openGL/gl.edgeblend%/gl.edgeblend%.model.maxpat", ",", "openGL/gl.edgeblend%/gl.edgeblend%.model.xml", ",", "openGL/gl.edgeblend%/gl.edgeblend%.view.maxpat", ",", "openGL/gl.td.background%", ",", "openGL/gl.td.background%/gl.background%.model.html", ",", "openGL/gl.td.background%/gl.background%.model.maxhelp", ",", "openGL/gl.td.background%/gl.background%.model.maxpat", ",", "openGL/gl.td.background%/gl.background%.model.xml", ",", "openGL/gl.td.background%/gl.background%.module.maxpat", ",", "openGL/gl.td.background%/gl.background%.view.maxpat", ",", "openGL/gl.td.rota%", ",", "openGL/gl.td.rota%/gl.td.rota%.model.html", ",", "openGL/gl.td.rota%/gl.td.rota%.model.maxhelp", ",", "openGL/gl.td.rota%/gl.td.rota%.model.maxpat", ",", "openGL/gl.td.rota%/gl.td.rota%.model.xml", ",", "openGL/gl.td.rota%/gl.td.rota%.module.maxpat", ",", "openGL/gl.td.rota%/gl.td.rota%.view.maxpat", ",", "openGL/gl.text2d%", ",", "openGL/gl.text2d%/gl.text2d%.model.html", ",", "openGL/gl.text2d%/gl.text2d%.model.maxhelp", ",", "openGL/gl.text2d%/gl.text2d%.model.maxpat", ",", "openGL/gl.text2d%/gl.text2d%.model.xml", ",", "openGL/gl.text2d%/gl.text2d%.module.maxpat", ",", "openGL/gl.text2d%/gl.text2d%.view.maxpat", ",", "openGL/gl.text2d%/GNU-LGPL.txt", ",", "openGL/gl.text2d%/jmod.gl.text2d%-demo.txt", ",", "openGL/gl.videoplane%", ",", "openGL/gl.videoplane%/gl.videoplane%.model.html", ",", "openGL/gl.videoplane%/gl.videoplane%.model.maxhelp", ",", "openGL/gl.videoplane%/gl.videoplane%.model.maxpat", ",", "openGL/gl.videoplane%/gl.videoplane%.model.xml", ",", "openGL/gl.videoplane%/gl.videoplane%.module.maxpat", ",", "openGL/gl.videoplane%/gl.videoplane%.view.maxpat", ",", "spatialization", ",", "spatialization/dbap_bformat=", ",", "spatialization/dbap_bformat=/dbap_bformat=.model.html", ",", "spatialization/dbap_bformat=/dbap_bformat=.model.maxhelp", ",", "spatialization/dbap_bformat=/dbap_bformat=.model.maxpat", ",", "spatialization/dbap_bformat=/dbap_bformat=.model.xml", ",", "spatialization/dbap_bformat=/dbap_bformat=.view.maxpat", ",", "spatialization/sur.ambi.adjust~", ",", "spatialization/sur.ambi.adjust~/ambiAdjust≈.gain.helper.maxpat", ",", "spatialization/sur.ambi.adjust~/sur.ambi.adjust~.model.html", ",", "spatialization/sur.ambi.adjust~/sur.ambi.adjust~.model.maxhelp", ",", "spatialization/sur.ambi.adjust~/sur.ambi.adjust~.model.maxpat", ",", "spatialization/sur.ambi.adjust~/sur.ambi.adjust~.model.xml", ",", "spatialization/sur.ambi.adjust~/sur.ambi.adjust~.module.maxpat", ",", "spatialization/sur.ambi.adjust~/sur.ambi.adjust~.view.maxpat", ",", "spatialization/sur.ambi.decode~", ",", "spatialization/sur.ambi.decode~/sur.ambi.decode~.model.html", ",", "spatialization/sur.ambi.decode~/sur.ambi.decode~.model.maxhelp", ",", "spatialization/sur.ambi.decode~/sur.ambi.decode~.model.maxpat", ",", "spatialization/sur.ambi.decode~/sur.ambi.decode~.model.xml", ",", "spatialization/sur.ambi.decode~/sur.ambi.decode~.view.maxpat", ",", "spatialization/sur.ambi.encodeM~", ",", "spatialization/sur.ambi.encodeM~/sur.ambi.encodeM~.model.html", ",", "spatialization/sur.ambi.encodeM~/sur.ambi.encodeM~.model.maxhelp", ",", "spatialization/sur.ambi.encodeM~/sur.ambi.encodeM~.model.maxpat", ",", "spatialization/sur.ambi.encodeM~/sur.ambi.encodeM~.model.xml", ",", "spatialization/sur.ambi.encodeM~/sur.ambi.encodeM~.view.maxpat", ",", "spatialization/sur.ambipanning~", ",", "spatialization/sur.ambipanning~/j.ambipanSource.maxpat", ",", "spatialization/sur.ambipanning~/sur.ambipanning~.model.html", ",", "spatialization/sur.ambipanning~/sur.ambipanning~.model.maxhelp", ",", "spatialization/sur.ambipanning~/sur.ambipanning~.model.maxpat", ",", "spatialization/sur.ambipanning~/sur.ambipanning~.model.xml", ",", "spatialization/sur.ambipanning~/sur.ambipanning~.view.maxpat", ",", "spatialization/sur.ambisonics~", ",", "spatialization/sur.ambisonics~/sur.ambisonics~.model.html", ",", "spatialization/sur.ambisonics~/sur.ambisonics~.model.maxhelp", ",", "spatialization/sur.ambisonics~/sur.ambisonics~.model.maxpat", ",", "spatialization/sur.ambisonics~/sur.ambisonics~.model.xml", ",", "spatialization/sur.ambisonics~/sur.ambisonics~.view.maxpat", ",", "spatialization/sur.aux~", ",", "spatialization/sur.aux~/sur.aux~.model.html", ",", "spatialization/sur.aux~/sur.aux~.model.maxhelp", ",", "spatialization/sur.aux~/sur.aux~.model.maxpat", ",", "spatialization/sur.aux~/sur.aux~.model.xml", ",", "spatialization/sur.aux~/sur.aux~.module.maxpat", ",", "spatialization/sur.aux~/sur.aux~.view.maxpat", ",", "spatialization/sur.dbap~", ",", "spatialization/sur.dbap~/sur.dbap~.model.maxhelp", ",", "spatialization/sur.dbap~/sur.dbap~.model.maxpat", ",", "spatialization/sur.dbap~/sur.dbap~.model.xml", ",", "spatialization/sur.dbap~/sur.dbap~.module.html", ",", "spatialization/sur.dbap~/sur.dbap~.module.maxpat", ",", "spatialization/sur.doppler~", ",", "spatialization/sur.doppler~/j.sur.ch.doppler~.maxpat", ",", "spatialization/sur.doppler~/j.sur.doppler.js", ",", "spatialization/sur.doppler~/sur.doppler~.model.html", ",", "spatialization/sur.doppler~/sur.doppler~.model.maxhelp", ",", "spatialization/sur.doppler~/sur.doppler~.model.maxpat", ",", "spatialization/sur.doppler~/sur.doppler~.model.xml", ",", "spatialization/sur.doppler~/sur.doppler~.module.maxpat", ",", "spatialization/sur.doppler~/sur.doppler~.view.maxpat", ",", "spatialization/sur.info~", ",", "spatialization/sur.info~/sur.info~.model.html", ",", "spatialization/sur.info~/sur.info~.model.maxhelp", ",", "spatialization/sur.info~/sur.info~.model.maxpat", ",", "spatialization/sur.info~/sur.info~.model.xml", ",", "spatialization/sur.info~/sur.info~.module.maxpat", ",", "spatialization/sur.info~/sur.info~.view.maxpat", ",", "spatialization/sur.input~", ",", "spatialization/sur.input~/input.timeDisplay.maxpat", ",", "spatialization/sur.input~/sur.input~.model.html", ",", "spatialization/sur.input~/sur.input~.model.maxhelp", ",", "spatialization/sur.input~/sur.input~.model.maxpat", ",", "spatialization/sur.input~/sur.input~.model.xml", ",", "spatialization/sur.input~/sur.input~.view.maxpat", ",", "spatialization/sur.limiter~", ",", "spatialization/sur.limiter~/sur.limiter~.model.html", ",", "spatialization/sur.limiter~/sur.limiter~.model.maxhelp", ",", "spatialization/sur.limiter~/sur.limiter~.model.maxpat", ",", "spatialization/sur.limiter~/sur.limiter~.model.xml", ",", "spatialization/sur.limiter~/sur.limiter~.module.maxpat", ",", "spatialization/sur.limiter~/sur.limiter~.view.maxpat", ",", "spatialization/sur.meters~", ",", "spatialization/sur.meters~/sur.meters~.model.html", ",", "spatialization/sur.meters~/sur.meters~.model.maxhelp", ",", "spatialization/sur.meters~/sur.meters~.model.maxpat", ",", "spatialization/sur.meters~/sur.meters~.model.xml", ",", "spatialization/sur.meters~/sur.meters~.module.maxpat", ",", "spatialization/sur.meters~/sur.meters~.view.maxpat", ",", "spatialization/sur.multi.in~", ",", "spatialization/sur.multi.in~/sur.multi.in~.model.html", ",", "spatialization/sur.multi.in~/sur.multi.in~.model.maxhelp", ",", "spatialization/sur.multi.in~/sur.multi.in~.model.maxpat", ",", "spatialization/sur.multi.in~/sur.multi.in~.model.xml", ",", "spatialization/sur.multi.in~/sur.multi.in~.module.maxpat", ",", "spatialization/sur.multi.in~/sur.multi.in~.view.maxpat", ",", "spatialization/sur.multi.out~", ",", "spatialization/sur.multi.out~/sur.multi.out~.model.html", ",", "spatialization/sur.multi.out~/sur.multi.out~.model.maxhelp", ",", "spatialization/sur.multi.out~/sur.multi.out~.model.maxpat", ",", "spatialization/sur.multi.out~/sur.multi.out~.model.xml", ",", "spatialization/sur.multi.out~/sur.multi.out~.module.maxpat", ",", "spatialization/sur.multi.out~/sur.multi.out~.view.maxpat", ",", "spatialization/sur.output~", ",", "spatialization/sur.output~/sur.output~.model.html", ",", "spatialization/sur.output~/sur.output~.model.maxhelp", ",", "spatialization/sur.output~/sur.output~.model.maxpat", ",", "spatialization/sur.output~/sur.output~.model.xml", ",", "spatialization/sur.output~/sur.output~.module.maxpat", ",", "spatialization/sur.output~/sur.output~.view.maxpat", ",", "spatialization/sur.position", ",", "spatialization/sur.position/sur.position.model.html", ",", "spatialization/sur.position/sur.position.model.xml", ",", "spatialization/sur.position/sur.position.view.maxpat", ",", "spatialization/sur.race~", ",", "spatialization/sur.race~/pingpong.poly.maxpat", ",", "spatialization/sur.race~/sur.race~.model.html", ",", "spatialization/sur.race~/sur.race~.model.maxhelp", ",", "spatialization/sur.race~/sur.race~.model.maxpat", ",", "spatialization/sur.race~/sur.race~.model.xml", ",", "spatialization/sur.race~/sur.race~.view.maxpat", ",", "spatialization/sur.rolloff~", ",", "spatialization/sur.rolloff~/j.sur.rolloff.js", ",", "spatialization/sur.rolloff~/sur.rolloff~.model.html", ",", "spatialization/sur.rolloff~/sur.rolloff~.model.maxhelp", ",", "spatialization/sur.rolloff~/sur.rolloff~.model.maxpat", ",", "spatialization/sur.rolloff~/sur.rolloff~.model.xml", ",", "spatialization/sur.rolloff~/sur.rolloff~.module.maxpat", ",", "spatialization/sur.rolloff~/sur.rolloff~.view.maxpat", ",", "spatialization/sur.setup", ",", "spatialization/sur.setup/j.sur.channel.xyz_setup.maxpat", ",", "spatialization/sur.setup/sur.setup.model.html", ",", "spatialization/sur.setup/sur.setup.model.maxhelp", ",", "spatialization/sur.setup/sur.setup.model.xml", ",", "spatialization/sur.setup/sur.setup.view.maxpat", ",", "spatialization/sur.speaker.delay~", ",", "spatialization/sur.speaker.delay~/j.sur.speaker.delays.js", ",", "spatialization/sur.speaker.delay~/sur.speaker.delay~.model.html", ",", "spatialization/sur.speaker.delay~/sur.speaker.delay~.model.maxhelp", ",", "spatialization/sur.speaker.delay~/sur.speaker.delay~.model.maxpat", ",", "spatialization/sur.speaker.delay~/sur.speaker.delay~.model.xml", ",", "spatialization/sur.speaker.delay~/sur.speaker.delay~.view.maxpat", ",", "spatialization/sur.speaker.distamp~", ",", "spatialization/sur.speaker.distamp~/sur.speaker.distamp~.model.html", ",", "spatialization/sur.speaker.distamp~/sur.speaker.distamp~.model.maxhelp", ",", "spatialization/sur.speaker.distamp~/sur.speaker.distamp~.model.maxpat", ",", "spatialization/sur.speaker.distamp~/sur.speaker.distamp~.model.xml", ",", "spatialization/sur.speaker.distamp~/sur.speaker.distamp~.view.maxpat", ",", "spatialization/sur.vbap~", ",", "spatialization/sur.vbap~/sur.vbap~.model.html", ",", "spatialization/sur.vbap~/sur.vbap~.model.maxhelp", ",", "spatialization/sur.vbap~/sur.vbap~.model.maxpat", ",", "spatialization/sur.vbap~/sur.vbap~.model.xml", ",", "spatialization/sur.vbap~/sur.vbap~.module.maxpat", ",", "spatialization/sur.vbap~/sur.vbap~.view.maxpat", ",", "spatialization/sur.waveformViewer", ",", "spatialization/sur.waveformViewer/jmod.sur.waveformViewer~.html", ",", "spatialization/sur.waveformViewer/jmod.sur.waveformViewer~.maxhelp", ",", "spatialization/sur.waveformViewer/jmod.sur.waveformViewer~.maxpat", ",", "spatialization/sur.waveformViewer/jmod.sur.waveformViewer~.xml", ",", "spatialization/sur.zoomH2ambi~", ",", "spatialization/sur.zoomH2ambi~/sur.zoomH2ambi~.model.html", ",", "spatialization/sur.zoomH2ambi~/sur.zoomH2ambi~.model.maxhelp", ",", "spatialization/sur.zoomH2ambi~/sur.zoomH2ambi~.model.xml", ",", "spatialization/sur.zoomH2ambi~/sur.zoomH2ambi~.view.maxpat", ",", "video", ",", "video/alphablend%", ",", "video/alphablend%/alphablend%.model.html", ",", "video/alphablend%/alphablend%.model.maxhelp", ",", "video/alphablend%/alphablend%.model.maxpat", ",", "video/alphablend%/alphablend%.model.xml", ",", "video/alphablend%/alphablend%.module.maxpat", ",", "video/alphablend%/alphablend%.view.maxpat", ",", "video/avg4%", ",", "video/avg4%/avg4%.model.html", ",", "video/avg4%/avg4%.model.maxhelp", ",", "video/avg4%/avg4%.model.maxpat", ",", "video/avg4%/avg4%.model.xml", ",", "video/avg4%/avg4%.module.maxpat", ",", "video/avg4%/avg4%.view.maxpat", ",", "video/background%", ",", "video/background%/background%.model.html", ",", "video/background%/background%.model.maxhelp", ",", "video/background%/background%.model.maxpat", ",", "video/background%/background%.model.xml", ",", "video/background%/background%.module.maxpat", ",", "video/background%/background%.view.maxpat", ",", "video/blur%", ",", "video/blur%/blur%.model.html", ",", "video/blur%/blur%.model.maxhelp", ",", "video/blur%/blur%.model.maxpat", ",", "video/blur%/blur%.model.xml", ",", "video/blur%/blur%.module.maxpat", ",", "video/blur%/blur%.view.maxpat", ",", "video/box%", ",", "video/box%/box%.model.html", ",", "video/box%/box%.model.maxhelp", ",", "video/box%/box%.model.maxpat", ",", "video/box%/box%.model.xml", ",", "video/box%/box%.module.maxpat", ",", "video/box%/box%.view.maxpat", ",", "video/brcosa%", ",", "video/brcosa%/brcosa%.model.html", ",", "video/brcosa%/brcosa%.model.maxhelp", ",", "video/brcosa%/brcosa%.model.maxpat", ",", "video/brcosa%/brcosa%.model.xml", ",", "video/brcosa%/brcosa%.module.maxpat", ",", "video/brcosa%/brcosa%.view.maxpat", ",", "video/chromakey%", ",", "video/chromakey%/chromakey%.model.html", ",", "video/chromakey%/chromakey%.model.maxhelp", ",", "video/chromakey%/chromakey%.model.maxpat", ",", "video/chromakey%/chromakey%.model.xml", ",", "video/chromakey%/chromakey%.module.maxpat", ",", "video/chromakey%/chromakey%.view.maxpat", ",", "video/edge%", ",", "video/edge%/edge%.model.html", ",", "video/edge%/edge%.model.maxhelp", ",", "video/edge%/edge%.model.maxpat", ",", "video/edge%/edge%.model.xml", ",", "video/edge%/edge%.module.maxpat", ",", "video/edge%/edge%.view.maxpat", ",", "video/emboss%", ",", "video/emboss%/emboss%.model.html", ",", "video/emboss%/emboss%.model.maxhelp", ",", "video/emboss%/emboss%.model.maxpat", ",", "video/emboss%/emboss%.model.xml", ",", "video/emboss%/emboss%.module.maxpat", ",", "video/emboss%/emboss%.view.maxpat", ",", "video/fft%", ",", "video/fft%/fft%.model.html", ",", "video/fft%/fft%.model.maxhelp", ",", "video/fft%/fft%.model.maxpat", ",", "video/fft%/fft%.model.xml", ",", "video/fft%/fft%.module.maxpat", ",", "video/fft%/fft%.view.maxpat", ",", "video/fluoride%", ",", "video/fluoride%/fluoride%.model.html", ",", "video/fluoride%/fluoride%.model.maxhelp", ",", "video/fluoride%/fluoride%.model.maxpat", ",", "video/fluoride%/fluoride%.model.xml", ",", "video/fluoride%/fluoride%.module.maxpat", ",", "video/fluoride%/fluoride%.view.maxpat", ",", "video/foregroundMask%", ",", "video/foregroundMask%/foregroundMask%.model.html", ",", "video/foregroundMask%/foregroundMask%.model.maxhelp", ",", "video/foregroundMask%/foregroundMask%.model.maxpat", ",", "video/foregroundMask%/foregroundMask%.model.xml", ",", "video/foregroundMask%/foregroundMask%.module.maxpat", ",", "video/foregroundMask%/foregroundMask%.view.maxpat", ",", "video/ifft%", ",", "video/ifft%/ifft%.model.html", ",", "video/ifft%/ifft%.model.maxhelp", ",", "video/ifft%/ifft%.model.maxpat", ",", "video/ifft%/ifft%.model.xml", ",", "video/ifft%/ifft%.module.maxpat", ",", "video/ifft%/ifft%.view.maxpat", ",", "video/input%", ",", "video/input%/input%.model.html", ",", "video/input%/input%.model.maxhelp", ",", "video/input%/input%.model.maxpat", ",", "video/input%/input%.model.xml", ",", "video/input%/input%.module.maxpat", ",", "video/input%/input%.ui.maxpat", ",", "video/input%/input%.view.maxpat", ",", "video/keyscreen%", ",", "video/keyscreen%/keyscreen%.model.html", ",", "video/keyscreen%/keyscreen%.model.maxhelp", ",", "video/keyscreen%/keyscreen%.model.maxpat", ",", "video/keyscreen%/keyscreen%.model.xml", ",", "video/keyscreen%/keyscreen%.module.maxpat", ",", "video/keyscreen%/keyscreen%.view.maxpat", ",", "video/mblur%", ",", "video/mblur%/mblur%.model.html", ",", "video/mblur%/mblur%.model.maxhelp", ",", "video/mblur%/mblur%.model.maxpat", ",", "video/mblur%/mblur%.model.xml", ",", "video/mblur%/mblur%.module.maxpat", ",", "video/mblur%/mblur%.view.maxpat", ",", "video/motion%", ",", "video/motion%/motion%.model.html", ",", "video/motion%/motion%.model.maxhelp", ",", "video/motion%/motion%.model.maxpat", ",", "video/motion%/motion%.model.xml", ",", "video/motion%/motion%.module.maxpat", ",", "video/motion%/motion%.view.maxpat", ",", "video/motion2%", ",", "video/motion2%/motion2%.model.html", ",", "video/motion2%/motion2%.model.maxhelp", ",", "video/motion2%/motion2%.model.maxpat", ",", "video/motion2%/motion2%.model.xml", ",", "video/motion2%/motion2%.module.maxpat", ",", "video/motion2%/motion2%.view.maxpat", ",", "video/motiongram%", ",", "video/motiongram%/motiongram%.model.html", ",", "video/motiongram%/motiongram%.model.maxhelp", ",", "video/motiongram%/motiongram%.model.maxpat", ",", "video/motiongram%/motiongram%.model.xml", ",", "video/motiongram%/motiongram%.module.maxpat", ",", "video/motiongram%/motiongram%.view.maxpat", ",", "video/moviePlayer%", ",", "video/moviePlayer%/moviePlayer%.model.html", ",", "video/moviePlayer%/moviePlayer%.model.maxhelp", ",", "video/moviePlayer%/moviePlayer%.model.maxpat", ",", "video/moviePlayer%/moviePlayer%.model.xml", ",", "video/moviePlayer%/moviePlayer%.module.maxpat", ",", "video/moviePlayer%/moviePlayer%.view.maxpat", ",", "video/op%", ",", "video/op%/op%.model.html", ",", "video/op%/op%.model.maxhelp", ",", "video/op%/op%.model.maxpat", ",", "video/op%/op%.model.xml", ",", "video/op%/op%.module.maxpat", ",", "video/op%/op%.view.maxpat", ",", "video/orsize%", ",", "video/orsize%/orsize%.model.html", ",", "video/orsize%/orsize%.model.maxhelp", ",", "video/orsize%/orsize%.model.maxpat", ",", "video/orsize%/orsize%.model.xml", ",", "video/orsize%/orsize%.module.maxpat", ",", "video/orsize%/orsize%.view.maxpat", ",", "video/output%", ",", "video/output%/output%.model.html", ",", "video/output%/output%.model.maxhelp", ",", "video/output%/output%.model.maxpat", ",", "video/output%/output%.model.xml", ",", "video/output%/output%.module.maxpat", ",", "video/output%/output%.view.maxpat", ",", "video/plur%", ",", "video/plur%/plur%.model.html", ",", "video/plur%/plur%.model.maxhelp", ",", "video/plur%/plur%.model.maxpat", ",", "video/plur%/plur%.model.xml", ",", "video/plur%/plur%.module.maxpat", ",", "video/plur%/plur%.view.maxpat", ",", "video/posterize%", ",", "video/posterize%/posterize%.model.html", ",", "video/posterize%/posterize%.model.maxhelp", ",", "video/posterize%/posterize%.model.maxpat", ",", "video/posterize%/posterize%.model.xml", ",", "video/posterize%/posterize%.module.maxpat", ",", "video/posterize%/posterize%.view.maxpat", ",", "video/record%", ",", "video/record%/record%.model.html", ",", "video/record%/record%.model.maxhelp", ",", "video/record%/record%.model.maxpat", ",", "video/record%/record%.model.xml", ",", "video/record%/record%.module.maxpat", ",", "video/record%/record%.view.maxpat", ",", "video/rgb2gray%", ",", "video/rgb2gray%/rgb2gray%.model.html", ",", "video/rgb2gray%/rgb2gray%.model.maxhelp", ",", "video/rgb2gray%/rgb2gray%.model.maxpat", ",", "video/rgb2gray%/rgb2gray%.model.xml", ",", "video/rgb2gray%/rgb2gray%.module.maxpat", ",", "video/rgb2gray%/rgb2gray%.view.maxpat", ",", "video/similarity%", ",", "video/similarity%/similarity%.model.html", ",", "video/similarity%/similarity%.model.maxhelp", ",", "video/similarity%/similarity%.model.maxpat", ",", "video/similarity%/similarity%.model.xml", ",", "video/similarity%/similarity%.module.maxpat", ",", "video/similarity%/similarity%.view.maxpat", ",", "video/slitscan%", ",", "video/slitscan%/slitscan%.model.html", ",", "video/slitscan%/slitscan%.model.maxhelp", ",", "video/slitscan%/slitscan%.model.maxpat", ",", "video/slitscan%/slitscan%.model.xml", ",", "video/slitscan%/slitscan%.module.maxpat", ",", "video/slitscan%/slitscan%.view.maxpat", ",", "video/television%", ",", "video/television%/television%.model.html", ",", "video/television%/television%.model.maxhelp", ",", "video/television%/television%.model.maxpat", ",", "video/television%/television%.model.xml", ",", "video/television%/television%.module.maxpat", ",", "video/television%/television%.view.maxpat", ",", "video/wake%", ",", "video/wake%/wake%.model.html", ",", "video/wake%/wake%.model.maxhelp", ",", "video/wake%/wake%.model.maxpat", ",", "video/wake%/wake%.model.xml", ",", "video/wake%/wake%.module.maxpat", ",", "video/wake%/wake%.view.maxpat", ",", "video/xfade%", ",", "video/xfade%/xfade%.model.html", ",", "video/xfade%/xfade%.model.maxhelp", ",", "video/xfade%/xfade%.model.maxpat", ",", "video/xfade%/xfade%.model.xml", ",", "video/xfade%/xfade%.module.maxpat", ",", "video/xfade%/xfade%.view.maxpat", ",", "video/yfade%", ",", "video/yfade%/yfade%.model.html", ",", "video/yfade%/yfade%.model.maxhelp", ",", "video/yfade%/yfade%.model.maxpat", ",", "video/yfade%/yfade%.model.xml", ",", "video/yfade%/yfade%.module.maxpat", ",", "video/yfade%/yfade%.view.maxpat" ],
+									"items" : [ "audio", ",", "audio/stereo", ",", "audio/stereo/Delay", ",", "audio/stereo/Delay/delay~", ",", "audio/stereo/Delay/delay~/delay~.model.html", ",", "audio/stereo/Delay/delay~/delay~.model.maxhelp", ",", "audio/stereo/Delay/delay~/delay~.model.maxpat", ",", "audio/stereo/Delay/delay~/delay~.model.presets.txt", ",", "audio/stereo/Delay/delay~/delay~.module.maxpat", ",", "audio/stereo/Delay/delay~/delay~.view.maxpat", ",", "audio/stereo/Delay/echo~", ",", "audio/stereo/Delay/echo~/echo~.model.html", ",", "audio/stereo/Delay/echo~/echo~.model.maxhelp", ",", "audio/stereo/Delay/echo~/echo~.model.maxpat", ",", "audio/stereo/Delay/echo~/echo~.model.presets.txt", ",", "audio/stereo/Delay/echo~/echo~.module.maxpat", ",", "audio/stereo/Delay/echo~/echo~.view.maxpat", ",", "audio/stereo/Delay/multidelay~", ",", "audio/stereo/Delay/multidelay~/multidelay~.model.html", ",", "audio/stereo/Delay/multidelay~/multidelay~.model.maxhelp", ",", "audio/stereo/Delay/multidelay~/multidelay~.model.maxpat", ",", "audio/stereo/Delay/multidelay~/multidelay~.model.presets.txt", ",", "audio/stereo/Delay/multidelay~/multidelay~.module.maxpat", ",", "audio/stereo/Delay/multidelay~/multidelay~.view.maxpat", ",", "audio/stereo/Distortion", ",", "audio/stereo/Distortion/degrade~", ",", "audio/stereo/Distortion/degrade~/degrade~.model.maxhelp", ",", "audio/stereo/Distortion/degrade~/degrade~.model.maxpat", ",", "audio/stereo/Distortion/degrade~/degrade~.model.presets.txt", ",", "audio/stereo/Distortion/degrade~/degrade~.module.maxpat", ",", "audio/stereo/Distortion/degrade~/degrade~.view.maxpat", ",", "audio/stereo/Distortion/saturation~", ",", "audio/stereo/Distortion/saturation~/saturation~.model.html", ",", "audio/stereo/Distortion/saturation~/saturation~.model.maxhelp", ",", "audio/stereo/Distortion/saturation~/saturation~.model.maxpat", ",", "audio/stereo/Distortion/saturation~/saturation~.model.presets.txt", ",", "audio/stereo/Distortion/saturation~/saturation~.module.maxpat", ",", "audio/stereo/Distortion/saturation~/saturation~.view.maxpat", ",", "audio/stereo/Dynamics", ",", "audio/stereo/Dynamics/limiter~", ",", "audio/stereo/Dynamics/limiter~/limiter.parametersAndMessages.maxpat", ",", "audio/stereo/Dynamics/limiter~/limiter~.model.html", ",", "audio/stereo/Dynamics/limiter~/limiter~.model.maxhelp", ",", "audio/stereo/Dynamics/limiter~/limiter~.model.maxpat", ",", "audio/stereo/Dynamics/limiter~/limiter~.model.presets.txt", ",", "audio/stereo/Dynamics/limiter~/limiter~.module.maxpat", ",", "audio/stereo/Dynamics/limiter~/limiter~.panel.widget.maxpat", ",", "audio/stereo/Dynamics/limiter~/limiter~.view.maxpat", ",", "audio/stereo/Dynamics/noisegate~", ",", "audio/stereo/Dynamics/noisegate~/noisegate~.model.html", ",", "audio/stereo/Dynamics/noisegate~/noisegate~.model.maxhelp", ",", "audio/stereo/Dynamics/noisegate~/noisegate~.model.maxpat", ",", "audio/stereo/Dynamics/noisegate~/noisegate~.model.presets.txt", ",", "audio/stereo/Dynamics/noisegate~/noisegate~.module.maxpat", ",", "audio/stereo/Dynamics/noisegate~/noisegate~.view.maxpat", ",", "audio/stereo/EQ", ",", "audio/stereo/EQ/equalizer~", ",", "audio/stereo/EQ/equalizer~/equalizer~.model.maxhelp", ",", "audio/stereo/EQ/equalizer~/equalizer~.model.maxpat", ",", "audio/stereo/EQ/equalizer~/equalizer~.model.presets.txt", ",", "audio/stereo/EQ/equalizer~/equalizer~.module.maxpat", ",", "audio/stereo/EQ/equalizer~/equalizer~.view.maxpat", ",", "audio/stereo/EQ/equalizer~/equalizer~_large.view.maxpat", ",", "audio/stereo/EQ/equalizer~/equalizer~_wide.view.maxpat", ",", "audio/stereo/EQ/equalizer~/jmod.equalizer~.html", ",", "audio/stereo/EQ/filter~", ",", "audio/stereo/EQ/filter~/filter~.model.html", ",", "audio/stereo/EQ/filter~/filter~.model.maxhelp", ",", "audio/stereo/EQ/filter~/filter~.model.maxpat", ",", "audio/stereo/EQ/filter~/filter~.model.presets.txt", ",", "audio/stereo/EQ/filter~/filter~.module.maxpat", ",", "audio/stereo/EQ/filter~/filter~.view.maxpat", ",", "audio/stereo/Imaging", ",", "audio/stereo/Imaging/balance~", ",", "audio/stereo/Imaging/balance~/balance~.model.html", ",", "audio/stereo/Imaging/balance~/balance~.model.maxhelp", ",", "audio/stereo/Imaging/balance~/balance~.model.maxpat", ",", "audio/stereo/Imaging/balance~/balance~.model.presets.txt", ",", "audio/stereo/Imaging/balance~/balance~.module.maxpat", ",", "audio/stereo/Imaging/balance~/balance~view.maxpat", ",", "audio/stereo/Imaging/crossfade~", ",", "audio/stereo/Imaging/crossfade~/crossfade~.model.html", ",", "audio/stereo/Imaging/crossfade~/crossfade~.model.maxhelp", ",", "audio/stereo/Imaging/crossfade~/crossfade~.model.maxpat", ",", "audio/stereo/Imaging/crossfade~/crossfade~.model.presets.txt", ",", "audio/stereo/Imaging/crossfade~/crossfade~.module.maxpat", ",", "audio/stereo/Imaging/crossfade~/crossfade~.view.maxpat", ",", "audio/stereo/Imaging/panning~", ",", "audio/stereo/Imaging/panning~/panning~.model.maxhelp", ",", "audio/stereo/Imaging/panning~/panning~.model.maxpat", ",", "audio/stereo/Imaging/panning~/panning~.model.presets.txt", ",", "audio/stereo/Imaging/panning~/panning~.module.maxpat", ",", "audio/stereo/Imaging/panning~/panning~.view.maxpat", ",", "audio/stereo/Metering", ",", "audio/stereo/Metering/scope~", ",", "audio/stereo/Metering/scope~/scope~.model.maxhelp", ",", "audio/stereo/Metering/scope~/scope~.model.maxpat", ",", "audio/stereo/Metering/scope~/scope~.model.presets.txt", ",", "audio/stereo/Metering/scope~/scope~.module.maxpat", ",", "audio/stereo/Metering/scope~/scope~.view.html", ",", "audio/stereo/Metering/scope~/scope~.view.maxpat", ",", "audio/stereo/Modulation", ",", "audio/stereo/Modulation/hilbertModulator~", ",", "audio/stereo/Modulation/hilbertModulator~/hilbertModulator~.model.html", ",", "audio/stereo/Modulation/hilbertModulator~/hilbertModulator~.model.maxhelp", ",", "audio/stereo/Modulation/hilbertModulator~/hilbertModulator~.model.maxpat", ",", "audio/stereo/Modulation/hilbertModulator~/hilbertModulator~.model.presets.txt", ",", "audio/stereo/Modulation/hilbertModulator~/hilbertModulator~.module.maxpat", ",", "audio/stereo/Modulation/hilbertModulator~/hilbertModulator~.view.maxpat", ",", "audio/stereo/Modulation/tremolo~", ",", "audio/stereo/Modulation/tremolo~/tremolo~.model.html", ",", "audio/stereo/Modulation/tremolo~/tremolo~.model.maxhelp", ",", "audio/stereo/Modulation/tremolo~/tremolo~.model.maxpat", ",", "audio/stereo/Modulation/tremolo~/tremolo~.model.presets.txt", ",", "audio/stereo/Modulation/tremolo~/tremolo~.module.maxpat", ",", "audio/stereo/Modulation/tremolo~/tremolo~.view.maxpat", ",", "audio/stereo/Output", ",", "audio/stereo/Output/output~", ",", "audio/stereo/Output/output~/output~.model.html", ",", "audio/stereo/Output/output~/output~.model.maxhelp", ",", "audio/stereo/Output/output~/output~.model.maxpat", ",", "audio/stereo/Output/output~/output~.model.presets.txt", ",", "audio/stereo/Output/output~/output~.module.maxpat", ",", "audio/stereo/Output/output~/output~.view.maxpat", ",", "audio/stereo/Output/record~", ",", "audio/stereo/Output/record~/record.parametersAndMessages.maxpat", ",", "audio/stereo/Output/record~/record~.model.maxhelp", ",", "audio/stereo/Output/record~/record~.model.maxpat", ",", "audio/stereo/Output/record~/record~.model.presets.txt", ",", "audio/stereo/Output/record~/record~.module.maxpat", ",", "audio/stereo/Output/record~/record~.view.maxpat", ",", "audio/stereo/Plugins", ",", "audio/stereo/Plugins/vst~", ",", "audio/stereo/Plugins/vst~/j.vst_bind_to_parameter.maxpat", ",", "audio/stereo/Plugins/vst~/vst~.model.html", ",", "audio/stereo/Plugins/vst~/vst~.model.maxhelp", ",", "audio/stereo/Plugins/vst~/vst~.model.maxpat", ",", "audio/stereo/Plugins/vst~/vst~.model.presets.txt", ",", "audio/stereo/Plugins/vst~/vst~.module.maxpat", ",", "audio/stereo/Plugins/vst~/vst~.view.maxpat", ",", "audio/stereo/Sources", ",", "audio/stereo/Sources/10harmonics~", ",", "audio/stereo/Sources/10harmonics~/10harmonics~.model.html", ",", "audio/stereo/Sources/10harmonics~/10harmonics~.model.maxhelp", ",", "audio/stereo/Sources/10harmonics~/10harmonics~.model.maxpat", ",", "audio/stereo/Sources/10harmonics~/10harmonics~.model.presets.txt", ",", "audio/stereo/Sources/10harmonics~/10harmonics~.module.maxpat", ",", "audio/stereo/Sources/10harmonics~/10harmonics~.view.maxpat", ",", "audio/stereo/Sources/input~", ",", "audio/stereo/Sources/input~/input~.model.html", ",", "audio/stereo/Sources/input~/input~.model.maxhelp", ",", "audio/stereo/Sources/input~/input~.model.maxpat", ",", "audio/stereo/Sources/input~/input~.model.presets.txt", ",", "audio/stereo/Sources/input~/input~.module.maxpat", ",", "audio/stereo/Sources/input~/input~.view.maxpat", ",", "audio/stereo/Sources/risset_glissando", ",", "audio/stereo/Sources/risset_glissando/risset_glissando~.model.html", ",", "audio/stereo/Sources/risset_glissando/risset_glissando~.model.maxhelp", ",", "audio/stereo/Sources/risset_glissando/risset_glissando~.model.maxpat", ",", "audio/stereo/Sources/risset_glissando/risset_glissando~.model.presets.txt", ",", "audio/stereo/Sources/risset_glissando/risset_glissando~.module.maxpat", ",", "audio/stereo/Sources/risset_glissando/risset_glissando~.view.maxpat", ",", "audio/stereo/Sources/sine~", ",", "audio/stereo/Sources/sine~/sine~.model.html", ",", "audio/stereo/Sources/sine~/sine~.model.maxhelp", ",", "audio/stereo/Sources/sine~/sine~.model.maxpat", ",", "audio/stereo/Sources/sine~/sine~.model.presets.txt", ",", "audio/stereo/Sources/sine~/sine~.module.maxpat", ",", "audio/stereo/Sources/sine~/sine~.view.maxpat", ",", "audio/stereo/Sources/soundfile~", ",", "audio/stereo/Sources/soundfile~/soundfile~.model.maxhelp", ",", "audio/stereo/Sources/soundfile~/soundfile~.model.maxpat", ",", "audio/stereo/Sources/soundfile~/soundfile~.model.presets.txt", ",", "audio/stereo/Sources/soundfile~/soundfile~.module.maxpat", ",", "audio/stereo/Sources/soundfile~/soundfile~.view.maxpat", ",", "audio/stereo/Spectral", ",", "audio/stereo/Spectral/spectral_gate~", ",", "audio/stereo/Spectral/spectral_gate~/j.spectral_gate~.lib.maxpat", ",", "audio/stereo/Spectral/spectral_gate~/spectral_gate~.model.html", ",", "audio/stereo/Spectral/spectral_gate~/spectral_gate~.model.maxhelp", ",", "audio/stereo/Spectral/spectral_gate~/spectral_gate~.model.maxpat", ",", "audio/stereo/Spectral/spectral_gate~/spectral_gate~.model.presets.txt", ",", "audio/stereo/Spectral/spectral_gate~/spectral_gate~.module.maxpat", ",", "audio/stereo/Spectral/spectral_gate~/spectral_gate~.view.maxpat", ",", "audio/stereo/Spectral/spectral_shift~", ",", "audio/stereo/Spectral/spectral_shift~/j.spectral_shift_voice~.maxpat", ",", "audio/stereo/Spectral/spectral_shift~/spectral_shift~.model.html", ",", "audio/stereo/Spectral/spectral_shift~/spectral_shift~.model.maxhelp", ",", "audio/stereo/Spectral/spectral_shift~/spectral_shift~.model.maxpat", ",", "audio/stereo/Spectral/spectral_shift~/spectral_shift~.model.presets.txt", ",", "audio/stereo/Spectral/spectral_shift~/spectral_shift~.module.maxpat", ",", "audio/stereo/Spectral/spectral_shift~/spectral_shift~.view.maxpat", ",", "audio/surround", ",", "audio/surround/ambi.adjust=", ",", "audio/surround/ambi.adjust=/ambi.adjust=.gain_helper.maxpat", ",", "audio/surround/ambi.adjust=/ambi.adjust=.model.html", ",", "audio/surround/ambi.adjust=/ambi.adjust=.model.maxhelp", ",", "audio/surround/ambi.adjust=/ambi.adjust=.model.maxpat", ",", "audio/surround/ambi.adjust=/ambi.adjust=.model.presets.txt", ",", "audio/surround/ambi.adjust=/ambi.adjust=.module.maxpat", ",", "audio/surround/ambi.adjust=/ambi.adjust=.view.maxpat", ",", "audio/surround/ambi.decode=", ",", "audio/surround/ambi.decode=/ambi.decode=.model.html", ",", "audio/surround/ambi.decode=/ambi.decode=.model.maxhelp", ",", "audio/surround/ambi.decode=/ambi.decode=.model.maxpat", ",", "audio/surround/ambi.decode=/ambi.decode=.model.presets.txt", ",", "audio/surround/ambi.decode=/ambi.decode=.module.maxpat", ",", "audio/surround/ambi.decode=/ambi.decode=.view.maxpat", ",", "audio/surround/ambi.encodeM=", ",", "audio/surround/ambi.encodeM=/ambi.encodeM=.model.html", ",", "audio/surround/ambi.encodeM=/ambi.encodeM=.model.maxhelp", ",", "audio/surround/ambi.encodeM=/ambi.encodeM=.model.maxpat", ",", "audio/surround/ambi.encodeM=/ambi.encodeM=.model.presets.txt", ",", "audio/surround/ambi.encodeM=/ambi.encodeM=.module.maxpat", ",", "audio/surround/ambi.encodeM=/ambi.encodeM=.view.maxpat", ",", "audio/surround/ambipanning=", ",", "audio/surround/ambipanning=/ambipanning=.model.html", ",", "audio/surround/ambipanning=/ambipanning=.model.maxhelp", ",", "audio/surround/ambipanning=/ambipanning=.model.maxpat", ",", "audio/surround/ambipanning=/ambipanning=.model.presets.txt", ",", "audio/surround/ambipanning=/ambipanning=.module.maxpat", ",", "audio/surround/ambipanning=/ambipanning=.view.maxpat", ",", "audio/surround/ambipanning=/j.ambipan_source.maxpat", ",", "audio/surround/ambisonics=", ",", "audio/surround/ambisonics=/ambisonics=.model.html", ",", "audio/surround/ambisonics=/ambisonics=.model.maxhelp", ",", "audio/surround/ambisonics=/ambisonics=.model.maxpat", ",", "audio/surround/ambisonics=/ambisonics=.model.presets.txt", ",", "audio/surround/ambisonics=/ambisonics=.module.maxpat", ",", "audio/surround/ambisonics=/ambisonics=.view.maxpat", ",", "audio/surround/aux=", ",", "audio/surround/aux=/aux=.model.html", ",", "audio/surround/aux=/aux=.model.maxhelp", ",", "audio/surround/aux=/aux=.model.maxpat", ",", "audio/surround/aux=/aux=.model.presets.txt", ",", "audio/surround/aux=/aux=.module.maxpat", ",", "audio/surround/aux=/aux=.view.maxpat", ",", "audio/surround/dbap.bformat=", ",", "audio/surround/dbap.bformat=/dbap.bformat=.model.html", ",", "audio/surround/dbap.bformat=/dbap.bformat=.model.maxhelp", ",", "audio/surround/dbap.bformat=/dbap.bformat=.model.maxpat", ",", "audio/surround/dbap.bformat=/dbap.bformat=.model.presets.txt", ",", "audio/surround/dbap.bformat=/dbap.bformat=.module.maxpat", ",", "audio/surround/dbap.bformat=/dbap.bformat=.view.maxpat", ",", "audio/surround/dbap=", ",", "audio/surround/dbap=/dbap=.model.maxhelp", ",", "audio/surround/dbap=/dbap=.model.maxpat", ",", "audio/surround/dbap=/dbap=.model.presets.txt", ",", "audio/surround/dbap=/dbap=.module.html", ",", "audio/surround/dbap=/dbap=.module.maxpat", ",", "audio/surround/doppler=", ",", "audio/surround/doppler=/doppler=.model.html", ",", "audio/surround/doppler=/doppler=.model.maxhelp", ",", "audio/surround/doppler=/doppler=.model.maxpat", ",", "audio/surround/doppler=/doppler=.model.presets.txt", ",", "audio/surround/doppler=/doppler=.module.maxpat", ",", "audio/surround/doppler=/doppler=.view.maxpat", ",", "audio/surround/doppler=/j.ch.doppler=.maxpat", ",", "audio/surround/doppler=/j.doppler=.js", ",", "audio/surround/info=", ",", "audio/surround/info=/info=.model.html", ",", "audio/surround/info=/info=.model.maxhelp", ",", "audio/surround/info=/info=.model.maxpat", ",", "audio/surround/info=/info=.model.presets.txt", ",", "audio/surround/info=/info=.module.maxpat", ",", "audio/surround/info=/info=.view.maxpat", ",", "audio/surround/input=", ",", "audio/surround/input=/input.timeDisplay.maxpat", ",", "audio/surround/input=/input=.model.html", ",", "audio/surround/input=/input=.model.maxhelp", ",", "audio/surround/input=/input=.model.maxpat", ",", "audio/surround/input=/input=.model.presets.txt", ",", "audio/surround/input=/input=.module.maxpat", ",", "audio/surround/input=/input=.view.maxpat", ",", "audio/surround/limiter=", ",", "audio/surround/limiter=/limiter=.model.html", ",", "audio/surround/limiter=/limiter=.model.maxhelp", ",", "audio/surround/limiter=/limiter=.model.maxpat", ",", "audio/surround/limiter=/limiter=.model.presets.txt", ",", "audio/surround/limiter=/limiter=.module.maxpat", ",", "audio/surround/limiter=/limiter=.view.maxpat", ",", "audio/surround/meters=", ",", "audio/surround/meters=/meters=.model.html", ",", "audio/surround/meters=/meters=.model.maxhelp", ",", "audio/surround/meters=/meters=.model.maxpat", ",", "audio/surround/meters=/meters=.model.presets.txt", ",", "audio/surround/meters=/meters=.module.maxpat", ",", "audio/surround/meters=/meters=.view.maxpat", ",", "audio/surround/multi.in=", ",", "audio/surround/multi.in=/multi.in=.model.html", ",", "audio/surround/multi.in=/multi.in=.model.maxhelp", ",", "audio/surround/multi.in=/multi.in=.model.maxpat", ",", "audio/surround/multi.in=/multi.in=.model.presets.txt", ",", "audio/surround/multi.in=/multi.in=.module.maxpat", ",", "audio/surround/multi.in=/multi.in=.view.maxpat", ",", "audio/surround/multi.out=", ",", "audio/surround/multi.out=/multi.out=.model.html", ",", "audio/surround/multi.out=/multi.out=.model.maxhelp", ",", "audio/surround/multi.out=/multi.out=.model.maxpat", ",", "audio/surround/multi.out=/multi.out=.model.presets.txt", ",", "audio/surround/multi.out=/multi.out=.module.maxpat", ",", "audio/surround/multi.out=/multi.out=.view.maxpat", ",", "audio/surround/output=", ",", "audio/surround/output=/output=.model.html", ",", "audio/surround/output=/output=.model.maxhelp", ",", "audio/surround/output=/output=.model.maxpat", ",", "audio/surround/output=/output=.model.presets.txt", ",", "audio/surround/output=/output=.module.maxpat", ",", "audio/surround/output=/output=.view.maxpat", ",", "audio/surround/position=", ",", "audio/surround/position=/position=.model.html", ",", "audio/surround/position=/position=.model.presets.txt", ",", "audio/surround/position=/position=.view.maxpat", ",", "audio/surround/race=", ",", "audio/surround/race=/pingpong.poly.maxpat", ",", "audio/surround/race=/race=.model.html", ",", "audio/surround/race=/race=.model.maxhelp", ",", "audio/surround/race=/race=.model.maxpat", ",", "audio/surround/race=/race=.model.presets.txt", ",", "audio/surround/race=/race=.module.maxpat", ",", "audio/surround/race=/race=.view.maxpat", ",", "audio/surround/rolloff=", ",", "audio/surround/rolloff=/j.rolloff=.js", ",", "audio/surround/rolloff=/rolloff=.model.html", ",", "audio/surround/rolloff=/rolloff=.model.maxhelp", ",", "audio/surround/rolloff=/rolloff=.model.maxpat", ",", "audio/surround/rolloff=/rolloff=.model.presets.txt", ",", "audio/surround/rolloff=/rolloff=.module.maxpat", ",", "audio/surround/rolloff=/rolloff=.view.maxpat", ",", "audio/surround/setup=", ",", "audio/surround/setup=/j.channel.xyz_setup.maxpat", ",", "audio/surround/setup=/setup=.model.html", ",", "audio/surround/setup=/setup=.model.maxhelp", ",", "audio/surround/setup=/setup=.model.presets.txt", ",", "audio/surround/setup=/setup=.module.maxpat", ",", "audio/surround/setup=/setup=.view.maxpat", ",", "audio/surround/speaker.delay=", ",", "audio/surround/speaker.delay=/j.speaker.delays=.js", ",", "audio/surround/speaker.delay=/speaker.delay=.model.html", ",", "audio/surround/speaker.delay=/speaker.delay=.model.maxhelp", ",", "audio/surround/speaker.delay=/speaker.delay=.model.maxpat", ",", "audio/surround/speaker.delay=/speaker.delay=.model.presets.txt", ",", "audio/surround/speaker.delay=/speaker.delay=.module.maxpat", ",", "audio/surround/speaker.delay=/speaker.delay=.view.maxpat", ",", "audio/surround/speaker.distamp=", ",", "audio/surround/speaker.distamp=/speaker.distamp=.model.html", ",", "audio/surround/speaker.distamp=/speaker.distamp=.model.maxhelp", ",", "audio/surround/speaker.distamp=/speaker.distamp=.model.maxpat", ",", "audio/surround/speaker.distamp=/speaker.distamp=.model.presets.txt", ",", "audio/surround/speaker.distamp=/speaker.distamp=.module.maxpat", ",", "audio/surround/speaker.distamp=/speaker.distamp=.view.maxpat", ",", "audio/surround/vbap=", ",", "audio/surround/vbap=/vbap=.model.html", ",", "audio/surround/vbap=/vbap=.model.maxhelp", ",", "audio/surround/vbap=/vbap=.model.maxpat", ",", "audio/surround/vbap=/vbap=.model.presets.txt", ",", "audio/surround/vbap=/vbap=.module.maxpat", ",", "audio/surround/vbap=/vbap=.view.maxpat", ",", "audio/surround/waveform_viewer", ",", "audio/surround/waveform_viewer/waveform_viewer=.model.html", ",", "audio/surround/waveform_viewer/waveform_viewer=.model.maxhelp", ",", "audio/surround/waveform_viewer/waveform_viewer=.model.maxpat", ",", "audio/surround/waveform_viewer/waveform_viewer=.model.presets.txt", ",", "audio/surround/zoomH2ambi=", ",", "audio/surround/zoomH2ambi=/zoomH2ambi=.model.html", ",", "audio/surround/zoomH2ambi=/zoomH2ambi=.model.maxhelp", ",", "audio/surround/zoomH2ambi=/zoomH2ambi=.model.maxpat", ",", "audio/surround/zoomH2ambi=/zoomH2ambi=.model.presets.txt", ",", "audio/surround/zoomH2ambi=/zoomH2ambi=.module.maxpat", ",", "audio/surround/zoomH2ambi=/zoomH2ambi=.view.maxpat", ",", "data", ",", "data/condition", ",", "data/condition/condition.model.html", ",", "data/condition/condition.model.maxhelp", ",", "data/condition/condition.model.maxpat", ",", "data/condition/condition.model.presets.txt", ",", "data/condition/condition.view.maxpat", ",", "data/cue-manager", ",", "data/cue-manager/cue_manager.model.maxhelp", ",", "data/cue-manager/cue_manager.model.maxpat", ",", "data/cue-manager/cue_manager.module.maxpat", ",", "data/cue-manager/cue_manager.view.maxpat", ",", "data/cue-manager/cuelist.txt", ",", "data/cue_script", ",", "data/cue_script/cue_script.demoscript.txt", ",", "data/cue_script/cue_script.model.html", ",", "data/cue_script/cue_script.model.maxhelp", ",", "data/cue_script/cue_script.model.maxpat", ",", "data/cue_script/cue_script.model.presets.txt", ",", "data/cue_script/cue_script.module.maxpat", ",", "data/cue_script/cue_script.view.maxpat", ",", "data/fileBrowser", ",", "data/fileBrowser/fileBrowser.model.html", ",", "data/fileBrowser/fileBrowser.model.maxhelp", ",", "data/fileBrowser/fileBrowser.model.maxpat", ",", "data/fileBrowser/fileBrowser.model.presets.txt", ",", "data/fileBrowser/fileBrowser.module.maxpat", ",", "data/fileBrowser/fileBrowser.view.maxpat", ",", "data/filename_generator", ",", "data/filename_generator/filename_generator.model.html", ",", "data/filename_generator/filename_generator.model.maxhelp", ",", "data/filename_generator/filename_generator.model.maxpat", ",", "data/filename_generator/filename_generator.model.presets.txt", ",", "data/filename_generator/filename_generator.module.maxpat", ",", "data/filename_generator/filename_generator.view.maxpat", ",", "data/hi", ",", "data/hi/hi.model.html", ",", "data/hi/hi.model.maxhelp", ",", "data/hi/hi.model.maxpat", ",", "data/hi/hi.model.presets.txt", ",", "data/hi/hi.module.maxpat", ",", "data/hi/hi.view.maxpat", ",", "data/mapper", ",", "data/mapper/function_options", ",", "data/mapper/function_options/j.function_freehand.maxpat", ",", "data/mapper/function_options/j.function_generic.maxpat", ",", "data/mapper/function_options/j.function_power.maxpat", ",", "data/mapper/mapper.model.maxhelp", ",", "data/mapper/mapper.model.maxpat", ",", "data/mapper/mapper.model.presets.txt", ",", "data/mapper/mapper.module.maxpat", ",", "data/mapper/mapper.view.maxpat", ",", "data/mapperBCF", ",", "data/mapperBCF/bcfFader.view.maxpat", ",", "data/mapperBCF/bcfKey.view.maxpat", ",", "data/mapperBCF/bcfMapper.model.maxpat", ",", "data/mapperBCF/bcfMapper.view.maxpat", ",", "data/mapperBCF/bcfModels.maxpat", ",", "data/mapperBCF/bcfPress.view.maxpat", ",", "data/mapperBCF/bcfTrack.model.maxpat", ",", "data/mapperBCF/bcfTrack.view.maxpat", ",", "data/mapperBCF/bcfTurn.view.maxpat", ",", "data/mapperBCF/mapperBCF.model.maxhelp", ",", "data/mapperBCF/mapperBCF.model.maxpat", ",", "data/mapperBCF/mapperBCF.view.maxpat", ",", "data/midiin", ",", "data/midiin/midiin.model.html", ",", "data/midiin/midiin.model.maxhelp", ",", "data/midiin/midiin.model.maxpat", ",", "data/midiin/midiin.model.presets.txt", ",", "data/midiin/midiin.module.maxpat", ",", "data/midiin/midiin.view.maxpat", ",", "data/mouse", ",", "data/mouse/mouse.model.html", ",", "data/mouse/mouse.model.maxhelp", ",", "data/mouse/mouse.model.maxpat", ",", "data/mouse/mouse.model.presets.txt", ",", "data/mouse/mouse.module.maxpat", ",", "data/mouse/mouse.view.maxpat", ",", "data/multiModel", ",", "data/multiModel/multiModel.model.maxhelp", ",", "data/multiModel/multiModel.model.maxpat", ",", "data/multiModel/multiModel.model.presets.txt", ",", "data/multiModel/multiModel.view.maxpat", ",", "data/qmetro", ",", "data/qmetro/qmetro.model.html", ",", "data/qmetro/qmetro.model.maxhelp", ",", "data/qmetro/qmetro.model.maxpat", ",", "data/qmetro/qmetro.model.presets.txt", ",", "data/qmetro/qmetro.module.maxpat", ",", "data/qmetro/qmetro.view.maxpat", ",", "data/spacenavigator", ",", "data/spacenavigator/spacenavigator.model.html", ",", "data/spacenavigator/spacenavigator.model.maxhelp", ",", "data/spacenavigator/spacenavigator.model.maxpat", ",", "data/spacenavigator/spacenavigator.model.presets.txt", ",", "data/spacenavigator/spacenavigator.view.maxpat", ",", "data/textwriter", ",", "data/textwriter/textwriter.model.html", ",", "data/textwriter/textwriter.model.maxhelp", ",", "data/textwriter/textwriter.model.maxpat", ",", "data/textwriter/textwriter.model.presets.txt", ",", "data/textwriter/textwriter.view.maxpat", ",", "data/tosca", ",", "data/tosca/tosca.model.maxpat", ",", "data/wacom", ",", "data/wacom/wacom.model.html", ",", "data/wacom/wacom.model.maxhelp", ",", "data/wacom/wacom.model.maxpat", ",", "data/wacom/wacom.model.presets.txt", ",", "data/wacom/wacom.view.maxpat", ",", "openGL", ",", "openGL/geometry", ",", "openGL/geometry/gl_gridshape", ",", "openGL/geometry/gl_gridshape/gl_gridshape.model.maxhelp", ",", "openGL/geometry/gl_gridshape/gl_gridshape.model.maxpat", ",", "openGL/geometry/gl_gridshape/gl_gridshape.model.presets.txt", ",", "openGL/geometry/gl_gridshape/gl_gridshape.module.maxpat", ",", "openGL/geometry/gl_gridshape/gl_gridshape.view.maxpat", ",", "openGL/geometry/gl_text2d", ",", "openGL/geometry/gl_text2d/gl_text2d.model.maxhelp", ",", "openGL/geometry/gl_text2d/gl_text2d.model.maxpat", ",", "openGL/geometry/gl_text2d/gl_text2d.model.presets.txt", ",", "openGL/geometry/gl_text2d/gl_text2d.module.maxpat", ",", "openGL/geometry/gl_text2d/gl_text2d.view.maxpat", ",", "openGL/geometry/gl_videoplane", ",", "openGL/geometry/gl_videoplane/gl_videoplane.model.maxhelp", ",", "openGL/geometry/gl_videoplane/gl_videoplane.model.maxpat", ",", "openGL/geometry/gl_videoplane/gl_videoplane.model.presets.txt", ",", "openGL/geometry/gl_videoplane/gl_videoplane.module.maxpat", ",", "openGL/geometry/gl_videoplane/gl_videoplane.view.maxpat", ",", "openGL/gl_render", ",", "openGL/gl_render/gl_render.model.maxhelp", ",", "openGL/gl_render/gl_render.model.maxpat", ",", "openGL/gl_render/gl_render.model.presets.txt", ",", "openGL/gl_render/gl_render.module.maxpat", ",", "openGL/gl_render/gl_render.view.maxpat", ",", "openGL/gl_render/view_tabs", ",", "openGL/gl_render/view_tabs/gl_render_advanced_view.maxpat", ",", "openGL/gl_render/view_tabs/gl_render_basic_view.maxpat", ",", "openGL/gl_render/view_tabs/gl_render_camera_view.maxpat", ",", "openGL/gl_render/view_tabs/gl_render_light_view.maxpat", ",", "openGL/source", ",", "openGL/source/gl_hap", ",", "openGL/source/gl_hap/gl_hap.model.maxhelp", ",", "openGL/source/gl_hap/gl_hap.model.maxpat", ",", "openGL/source/gl_hap/gl_hap.model.presets.txt", ",", "openGL/source/gl_hap/gl_hap.module.maxpat", ",", "openGL/source/gl_hap/gl_hap.view.maxpat", ",", "openGL/texture", ",", "openGL/texture/gl_alphamixer", ",", "openGL/texture/gl_alphamixer/gl_alphamixer.model.maxhelp", ",", "openGL/texture/gl_alphamixer/gl_alphamixer.model.maxpat", ",", "openGL/texture/gl_alphamixer/gl_alphamixer.model.presets.txt", ",", "openGL/texture/gl_alphamixer/gl_alphamixer.module.maxpat", ",", "openGL/texture/gl_alphamixer/gl_alphamixer.view.maxpat", ",", "openGL/texture/gl_alphamixer/shaders", ",", "openGL/texture/gl_alphamixer/shaders/j.4ch_alphamixer.jxs", ",", "openGL/texture/gl_alphamixer/shaders/j.4ch_alphamixer.vp.glsl", ",", "openGL/texture/gl_background", ",", "openGL/texture/gl_background/gl_background.model.maxhelp", ",", "openGL/texture/gl_background/gl_background.model.maxpat", ",", "openGL/texture/gl_background/gl_background.model.presets.txt", ",", "openGL/texture/gl_background/gl_background.module.maxpat", ",", "openGL/texture/gl_background/gl_background.view.maxpat", ",", "openGL/texture/gl_brcosa", ",", "openGL/texture/gl_brcosa/gl_brcosa.model.maxhelp", ",", "openGL/texture/gl_brcosa/gl_brcosa.model.maxpat", ",", "openGL/texture/gl_brcosa/gl_brcosa.model.presets.txt", ",", "openGL/texture/gl_brcosa/gl_brcosa.module.maxpat", ",", "openGL/texture/gl_brcosa/gl_brcosa.view.maxpat", ",", "openGL/texture/gl_chromakey", ",", "openGL/texture/gl_chromakey/gl_chromakey.model.maxhelp", ",", "openGL/texture/gl_chromakey/gl_chromakey.model.maxpat", ",", "openGL/texture/gl_chromakey/gl_chromakey.model.presets.txt", ",", "openGL/texture/gl_chromakey/gl_chromakey.module.maxpat", ",", "openGL/texture/gl_chromakey/gl_chromakey.view.maxpat", ",", "openGL/texture/gl_edgeblend", ",", "openGL/texture/gl_edgeblend/gl_edgeblend.model.maxhelp", ",", "openGL/texture/gl_edgeblend/gl_edgeblend.model.maxpat", ",", "openGL/texture/gl_edgeblend/gl_edgeblend.model.presets.txt", ",", "openGL/texture/gl_edgeblend/gl_edgeblend.module.maxpat", ",", "openGL/texture/gl_edgeblend/gl_edgeblend.view.maxpat", ",", "openGL/texture/gl_framediff", ",", "openGL/texture/gl_framediff/gl_framediff.model.maxhelp", ",", "openGL/texture/gl_framediff/gl_framediff.model.maxpat", ",", "openGL/texture/gl_framediff/gl_framediff.module.maxpat", ",", "openGL/texture/gl_framediff/gl_framediff.view.maxpat", ",", "openGL/texture/gl_framediff/gl_framediff_help.model.presets.txt", ",", "openGL/texture/gl_framediff/gl_videoplane_help.model.presets.txt", ",", "openGL/texture/gl_rota", ",", "openGL/texture/gl_rota/gl_rota.model.maxhelp", ",", "openGL/texture/gl_rota/gl_rota.model.maxpat", ",", "openGL/texture/gl_rota/gl_rota.model.presets.txt", ",", "openGL/texture/gl_rota/gl_rota.module.maxpat", ",", "openGL/texture/gl_rota/gl_rota.view.maxpat", ",", "openGL/texture/gl_syphonclient", ",", "openGL/texture/gl_syphonclient/gl_syphonclient.model.maxhelp", ",", "openGL/texture/gl_syphonclient/gl_syphonclient.model.maxpat", ",", "openGL/texture/gl_syphonclient/gl_syphonclient.module.maxpat", ",", "openGL/texture/gl_syphonclient/gl_syphonclient.view.maxpat", ",", "openGL/texture/gl_syphonserver", ",", "openGL/texture/gl_syphonserver/gl_syphonserver.model.maxhelp", ",", "openGL/texture/gl_syphonserver/gl_syphonserver.model.maxpat", ",", "openGL/texture/gl_syphonserver/gl_syphonserver.module.maxpat", ",", "openGL/texture/gl_syphonserver/gl_syphonserver.view.maxpat", ",", "openGL/world", ",", "openGL/world/gl_world.model.maxhelp", ",", "openGL/world/gl_world.model.maxpat", ",", "openGL/world/gl_world.model.presets.txt", ",", "openGL/world/gl_world.module.maxpat", ",", "openGL/world/gl_world.view.maxpat", ",", "openGL/world/gl_world_basic_view.maxpat", ",", "openGL/world/gl_world_physic.view.maxpat", ",", "openGL/world/gl_world_render_view.maxpat", ",", "physics", ",", "physics/phys_world", ",", "physics/phys_world/phys_world.model.maxhelp", ",", "physics/phys_world/phys_world.model.maxpat", ",", "physics/phys_world/phys_world.model.presets.txt", ",", "physics/phys_world/phys_world.view.maxpat", ",", "video", ",", "video/fx", ",", "video/fx/alphablend%", ",", "video/fx/alphablend%/alphablend%.model.maxhelp", ",", "video/fx/alphablend%/alphablend%.model.maxpat", ",", "video/fx/alphablend%/alphablend%.model.presets.txt", ",", "video/fx/alphablend%/alphablend%.module.maxpat", ",", "video/fx/alphablend%/alphablend%.view.maxpat", ",", "video/fx/avg4%", ",", "video/fx/avg4%/avg4%.model.maxhelp", ",", "video/fx/avg4%/avg4%.model.maxpat", ",", "video/fx/avg4%/avg4%.model.presets.txt", ",", "video/fx/avg4%/avg4%.module.maxpat", ",", "video/fx/avg4%/avg4%.view.maxpat", ",", "video/fx/background%", ",", "video/fx/background%/background%.model.maxhelp", ",", "video/fx/background%/background%.model.maxpat", ",", "video/fx/background%/background%.model.presets.txt", ",", "video/fx/background%/background%.module.maxpat", ",", "video/fx/background%/background%.view.maxpat", ",", "video/fx/blur%", ",", "video/fx/blur%/blur%.model.maxhelp", ",", "video/fx/blur%/blur%.model.maxpat", ",", "video/fx/blur%/blur%.model.presets.txt", ",", "video/fx/blur%/blur%.module.maxpat", ",", "video/fx/blur%/blur%.view.maxpat", ",", "video/fx/brcosa%", ",", "video/fx/brcosa%/brcosa%.model.maxhelp", ",", "video/fx/brcosa%/brcosa%.model.maxpat", ",", "video/fx/brcosa%/brcosa%.model.presets.txt", ",", "video/fx/brcosa%/brcosa%.module.maxpat", ",", "video/fx/brcosa%/brcosa%.view.maxpat", ",", "video/fx/chromakey%", ",", "video/fx/chromakey%/chromakey%.model.maxhelp", ",", "video/fx/chromakey%/chromakey%.model.maxpat", ",", "video/fx/chromakey%/chromakey%.model.presets.txt", ",", "video/fx/chromakey%/chromakey%.module.maxpat", ",", "video/fx/chromakey%/chromakey%.view.maxpat", ",", "video/fx/edge%", ",", "video/fx/edge%/edge%.model.maxhelp", ",", "video/fx/edge%/edge%.model.maxpat", ",", "video/fx/edge%/edge%.model.presets.txt", ",", "video/fx/edge%/edge%.module.maxpat", ",", "video/fx/edge%/edge%.view.maxpat", ",", "video/fx/emboss%", ",", "video/fx/emboss%/emboss%.model.maxhelp", ",", "video/fx/emboss%/emboss%.model.maxpat", ",", "video/fx/emboss%/emboss%.model.presets.txt", ",", "video/fx/emboss%/emboss%.module.maxpat", ",", "video/fx/emboss%/emboss%.view.maxpat", ",", "video/fx/fft%", ",", "video/fx/fft%/fft%.model.maxhelp", ",", "video/fx/fft%/fft%.model.maxpat", ",", "video/fx/fft%/fft%.model.presets.txt", ",", "video/fx/fft%/fft%.module.maxpat", ",", "video/fx/fft%/fft%.view.maxpat", ",", "video/fx/fluoride%", ",", "video/fx/fluoride%/fluoride%.model.maxhelp", ",", "video/fx/fluoride%/fluoride%.model.maxpat", ",", "video/fx/fluoride%/fluoride%.model.presets.txt", ",", "video/fx/fluoride%/fluoride%.module.maxpat", ",", "video/fx/fluoride%/fluoride%.view.maxpat", ",", "video/fx/foreground_mask%", ",", "video/fx/foreground_mask%/foreground_mask%.model.maxhelp", ",", "video/fx/foreground_mask%/foreground_mask%.model.maxpat", ",", "video/fx/foreground_mask%/foreground_mask%.model.presets.txt", ",", "video/fx/foreground_mask%/foreground_mask%.module.maxpat", ",", "video/fx/foreground_mask%/foreground_mask%.view.maxpat", ",", "video/fx/ifft%", ",", "video/fx/ifft%/ifft%.model.maxhelp", ",", "video/fx/ifft%/ifft%.model.maxpat", ",", "video/fx/ifft%/ifft%.model.presets.txt", ",", "video/fx/ifft%/ifft%.module.maxpat", ",", "video/fx/ifft%/ifft%.view.maxpat", ",", "video/fx/keyscreen%", ",", "video/fx/keyscreen%/keyscreen%.model.maxhelp", ",", "video/fx/keyscreen%/keyscreen%.model.maxpat", ",", "video/fx/keyscreen%/keyscreen%.model.presets.txt", ",", "video/fx/keyscreen%/keyscreen%.module.maxpat", ",", "video/fx/keyscreen%/keyscreen%.view.maxpat", ",", "video/fx/mblur%", ",", "video/fx/mblur%/mblur%.model.maxhelp", ",", "video/fx/mblur%/mblur%.model.maxpat", ",", "video/fx/mblur%/mblur%.model.presets.txt", ",", "video/fx/mblur%/mblur%.module.maxpat", ",", "video/fx/mblur%/mblur%.view.maxpat", ",", "video/fx/motion%", ",", "video/fx/motion%/motion%.model.maxhelp", ",", "video/fx/motion%/motion%.model.maxpat", ",", "video/fx/motion%/motion%.model.presets.txt", ",", "video/fx/motion%/motion%.module.maxpat", ",", "video/fx/motion%/motion%.view.maxpat", ",", "video/fx/motion2%", ",", "video/fx/motion2%/motion2%.model.maxhelp", ",", "video/fx/motion2%/motion2%.model.maxpat", ",", "video/fx/motion2%/motion2%.model.presets.txt", ",", "video/fx/motion2%/motion2%.module.maxpat", ",", "video/fx/motion2%/motion2%.view.maxpat", ",", "video/fx/motiongram%", ",", "video/fx/motiongram%/motiongram%.model.maxhelp", ",", "video/fx/motiongram%/motiongram%.model.maxpat", ",", "video/fx/motiongram%/motiongram%.model.presets.txt", ",", "video/fx/motiongram%/motiongram%.module.maxpat", ",", "video/fx/motiongram%/motiongram%.view.maxpat", ",", "video/fx/op%", ",", "video/fx/op%/op%.model.maxhelp", ",", "video/fx/op%/op%.model.maxpat", ",", "video/fx/op%/op%.model.presets.txt", ",", "video/fx/op%/op%.module.maxpat", ",", "video/fx/op%/op%.view.maxpat", ",", "video/fx/orsize%", ",", "video/fx/orsize%/orsize%.model.maxhelp", ",", "video/fx/orsize%/orsize%.model.maxpat", ",", "video/fx/orsize%/orsize%.model.presets.txt", ",", "video/fx/orsize%/orsize%.module.maxpat", ",", "video/fx/orsize%/orsize%.view.maxpat", ",", "video/fx/plur%", ",", "video/fx/plur%/plur%.model.maxhelp", ",", "video/fx/plur%/plur%.model.maxpat", ",", "video/fx/plur%/plur%.model.presets.txt", ",", "video/fx/plur%/plur%.module.maxpat", ",", "video/fx/plur%/plur%.view.maxpat", ",", "video/fx/posterize%", ",", "video/fx/posterize%/posterize%.model.maxhelp", ",", "video/fx/posterize%/posterize%.model.maxpat", ",", "video/fx/posterize%/posterize%.model.presets.txt", ",", "video/fx/posterize%/posterize%.module.maxpat", ",", "video/fx/posterize%/posterize%.view.maxpat", ",", "video/fx/rgb2gray%", ",", "video/fx/rgb2gray%/rgb2gray%.model.maxhelp", ",", "video/fx/rgb2gray%/rgb2gray%.model.maxpat", ",", "video/fx/rgb2gray%/rgb2gray%.model.presets.txt", ",", "video/fx/rgb2gray%/rgb2gray%.module.maxpat", ",", "video/fx/rgb2gray%/rgb2gray%.view.maxpat", ",", "video/fx/similarity%", ",", "video/fx/similarity%/similarity%.model.maxhelp", ",", "video/fx/similarity%/similarity%.model.maxpat", ",", "video/fx/similarity%/similarity%.model.presets.txt", ",", "video/fx/similarity%/similarity%.module.maxpat", ",", "video/fx/similarity%/similarity%.view.maxpat", ",", "video/fx/slitscan%", ",", "video/fx/slitscan%/slitscan%.model.maxhelp", ",", "video/fx/slitscan%/slitscan%.model.maxpat", ",", "video/fx/slitscan%/slitscan%.model.presets.txt", ",", "video/fx/slitscan%/slitscan%.module.maxpat", ",", "video/fx/slitscan%/slitscan%.view.maxpat", ",", "video/fx/television%", ",", "video/fx/television%/television%.model.maxhelp", ",", "video/fx/television%/television%.model.maxpat", ",", "video/fx/television%/television%.model.presets.txt", ",", "video/fx/television%/television%.module.maxpat", ",", "video/fx/television%/television%.view.maxpat", ",", "video/fx/wake%", ",", "video/fx/wake%/wake%.model.maxhelp", ",", "video/fx/wake%/wake%.model.maxpat", ",", "video/fx/wake%/wake%.model.presets.txt", ",", "video/fx/wake%/wake%.module.maxpat", ",", "video/fx/wake%/wake%.view.maxpat", ",", "video/fx/xfade%", ",", "video/fx/xfade%/xfade%.model.maxhelp", ",", "video/fx/xfade%/xfade%.model.maxpat", ",", "video/fx/xfade%/xfade%.model.presets.txt", ",", "video/fx/xfade%/xfade%.module.maxpat", ",", "video/fx/xfade%/xfade%.view.maxpat", ",", "video/fx/yfade%", ",", "video/fx/yfade%/yfade%.model.maxhelp", ",", "video/fx/yfade%/yfade%.model.maxpat", ",", "video/fx/yfade%/yfade%.model.presets.txt", ",", "video/fx/yfade%/yfade%.module.maxpat", ",", "video/fx/yfade%/yfade%.view.maxpat", ",", "video/output", ",", "video/output/preview%", ",", "video/output/preview%/preview%.model.maxhelp", ",", "video/output/preview%/preview%.model.presets.txt", ",", "video/output/preview%/preview%.module.maxpat", ",", "video/output/record%", ",", "video/output/record%/record%.model.maxhelp", ",", "video/output/record%/record%.model.maxpat", ",", "video/output/record%/record%.model.presets.txt", ",", "video/output/record%/record%.module.maxpat", ",", "video/output/record%/record%.view.maxpat", ",", "video/output/window%", ",", "video/output/window%/window%.model.maxhelp", ",", "video/output/window%/window%.model.maxpat", ",", "video/output/window%/window%.model.presets.txt", ",", "video/output/window%/window%.module.maxpat", ",", "video/output/window%/window%.view.maxpat", ",", "video/sources", ",", "video/sources/grab%", ",", "video/sources/grab%/grab%.model.maxhelp", ",", "video/sources/grab%/grab%.model.maxpat", ",", "video/sources/grab%/grab%.model.presets.txt", ",", "video/sources/grab%/grab%.module.maxpat", ",", "video/sources/grab%/grab%.view.maxpat", ",", "video/sources/input%", ",", "video/sources/input%/input%.model.maxhelp", ",", "video/sources/input%/input%.model.maxpat", ",", "video/sources/input%/input%.model.presets.txt", ",", "video/sources/input%/input%.module.maxpat", ",", "video/sources/input%/input%.ui.maxpat", ",", "video/sources/input%/input%.view.maxpat", ",", "video/sources/movie%", ",", "video/sources/movie%/movie%.model.maxhelp", ",", "video/sources/movie%/movie%.model.maxpat", ",", "video/sources/movie%/movie%.model.presets.txt", ",", "video/sources/movie%/movie%.module.maxpat", ",", "video/sources/movie%/movie%.view.maxpat", ",", "video/sources/noise%", ",", "video/sources/noise%/noise%.model.maxhelp", ",", "video/sources/noise%/noise%.model.maxpat", ",", "video/sources/noise%/noise%.model.presets.txt", ",", "video/sources/noise%/noise%.module.maxpat", ",", "video/sources/noise%/noise%.view.maxpat" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 256.0, 287.998596, 356.0, 20.0 ],
-									"prefix" : "Macintosh HD:/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/"
+									"prefix" : "Macintosh HD:/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/",
+									"style" : ""
 								}
 
 							}
@@ -288,7 +316,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 76.0, 116.0, 25.0, 25.0 ]
+									"patching_rect" : [ 76.0, 116.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -300,7 +329,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 256.0, 116.0, 25.0, 25.0 ]
+									"patching_rect" : [ 256.0, 116.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -311,7 +341,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 256.0, 695.998596, 25.0, 25.0 ]
+									"patching_rect" : [ 256.0, 695.998596, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -325,6 +356,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 256.0, 510.357544, 27.0, 20.0 ],
+									"style" : "",
 									"text" : "iter"
 								}
 
@@ -339,6 +371,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 256.0, 580.071228, 24.0, 20.0 ],
+									"style" : "",
 									"text" : "t b"
 								}
 
@@ -353,6 +386,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 256.0, 663.14386, 33.0, 20.0 ],
+									"style" : "",
 									"text" : "+ 1"
 								}
 
@@ -365,9 +399,10 @@
 									"maxclass" : "number",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "int", "bang" ],
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 256.0, 633.14386, 51.0, 20.0 ]
+									"patching_rect" : [ 256.0, 633.14386, 51.0, 20.0 ],
+									"style" : ""
 								}
 
 							}
@@ -381,6 +416,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "", "", "int" ],
 									"patching_rect" : [ 256.0, 606.64386, 92.0, 20.0 ],
+									"style" : "",
 									"text" : "counter 1 1000"
 								}
 
@@ -395,6 +431,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 256.0, 538.357544, 98.0, 20.0 ],
+									"style" : "",
 									"text" : "prepend insert 1"
 								}
 
@@ -413,6 +450,7 @@
 										"embed" : 0
 									}
 ,
+									"style" : "",
 									"text" : "coll _objects_to_test_"
 								}
 
@@ -658,63 +696,56 @@
  ]
 					}
 ,
-					"patching_rect" : [ 248.0, 190.002838, 165.0, 20.0 ],
+					"patching_rect" : [ 248.0, 190.002838, 165.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p buildListOfHelpPatchers"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-23",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 321.0, 135.858948, 70.0, 20.0 ],
+					"patching_rect" : [ 321.0, 135.858948, 70.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+					"style" : "default",
 					"text" : "thispatcher"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-64",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 474.0, 794.0, 39.0, 20.0 ],
+					"patching_rect" : [ 474.0, 794.0, 39.0, 22.0 ],
+					"style" : "default",
 					"text" : "zl rev"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-63",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 474.0, 822.0, 95.0, 20.0 ],
+					"patching_rect" : [ 474.0, 822.0, 95.0, 22.0 ],
+					"style" : "default",
 					"text" : "sprintf %s -- %s"
 				}
 
@@ -734,124 +765,116 @@
  ]
 					}
 ,
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-60",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 474.0, 730.0, 59.5, 20.0 ],
+					"patching_rect" : [ 474.0, 730.0, 60.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 1
 					}
 ,
+					"style" : "default",
 					"text" : "coll"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-16",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 474.0, 762.0, 55.0, 20.0 ],
+					"patching_rect" : [ 474.0, 762.0, 55.0, 22.0 ],
+					"style" : "default",
 					"text" : "pack s s"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-15",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 474.0, 849.0, 75.0, 20.0 ],
+					"patching_rect" : [ 474.0, 849.0, 75.0, 22.0 ],
+					"style" : "default",
 					"text" : "print Testing"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
 					"fontsize" : 18.0,
-					"frgb" : 0.0,
 					"id" : "obj-1",
-					"linecount" : 4,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 450.0, 183.360352, 304.0, 87.0 ],
+					"patching_rect" : [ 450.0, 183.360352, 388.0, 67.0 ],
+					"style" : "default",
 					"text" : "This test opens the help patches sequencially, and leave them open for 0.5 seconds to check that we do not get error messages (or crashes)."
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-20",
 					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 399.0, 675.148132, 211.0, 47.0 ],
+					"patching_rect" : [ 399.0, 675.148132, 211.0, 49.0 ],
+					"style" : "default",
 					"text" : "test.assert NoErrorsRunningDSPinHelpPatchers @tags Jamoma Foundation"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
 					"id" : "obj-17",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 399.0, 647.146729, 20.0, 20.0 ]
+					"patching_rect" : [ 399.0, 647.146729, 20.0, 20.0 ],
+					"style" : "default"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 399.0, 623.0, 35.0, 20.0 ],
+					"patching_rect" : [ 399.0, 623.0, 35.0, 22.0 ],
+					"style" : "default",
 					"text" : "== 0"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 399.0, 596.366089, 32.5, 20.0 ],
+					"patching_rect" : [ 399.0, 596.366089, 33.0, 22.0 ],
+					"style" : "default",
 					"text" : "i"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-105",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -860,10 +883,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x64"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 1,
+							"architecture" : "x64",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 897.0, 92.0, 696.0, 696.0 ],
@@ -872,19 +896,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -895,6 +927,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 84.0, 55.0, 20.0 ],
+									"style" : "",
 									"text" : "gate 1 1"
 								}
 
@@ -907,9 +940,10 @@
 									"maxclass" : "number",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "int", "bang" ],
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 50.0, 114.142426, 51.0, 20.0 ]
+									"patching_rect" : [ 50.0, 114.142426, 51.0, 20.0 ],
+									"style" : ""
 								}
 
 							}
@@ -923,6 +957,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 390.716522, 35.0, 20.0 ],
+									"style" : "",
 									"text" : "qlim"
 								}
 
@@ -937,6 +972,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 364.716522, 35.0, 20.0 ],
+									"style" : "",
 									"text" : "qlim"
 								}
 
@@ -951,6 +987,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 50.0, 275.142426, 63.0, 20.0 ],
+									"style" : "",
 									"text" : "delay 500"
 								}
 
@@ -965,6 +1002,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "int" ],
 									"patching_rect" : [ 50.0, 148.142426, 222.0, 20.0 ],
+									"style" : "",
 									"text" : "t b i"
 								}
 
@@ -979,6 +1017,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 209.074066, 35.0, 20.0 ],
+									"style" : "",
 									"text" : "qlim"
 								}
 
@@ -993,6 +1032,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 182.21225, 35.0, 20.0 ],
+									"style" : "",
 									"text" : "qlim"
 								}
 
@@ -1005,7 +1045,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ]
+									"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -1017,7 +1058,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 86.0, 40.0, 25.0, 25.0 ]
+									"patching_rect" : [ 86.0, 40.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -1028,7 +1070,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 460.716522, 25.0, 25.0 ]
+									"patching_rect" : [ 50.0, 460.716522, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -1039,7 +1082,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 253.0, 460.716522, 25.0, 25.0 ]
+									"patching_rect" : [ 253.0, 460.716522, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -1146,28 +1190,22 @@
  ]
 					}
 ,
-					"patching_rect" : [ 139.0, 355.860352, 195.0, 20.0 ],
+					"patching_rect" : [ 139.0, 355.860352, 195.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p open_helppatch_for_0.5_second"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-98",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -1176,10 +1214,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x64"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 1,
+							"architecture" : "x64",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 0.0, 44.0, 530.0, 503.0 ],
@@ -1188,19 +1227,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -1211,6 +1258,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 245.0, 276.0, 24.0, 20.0 ],
+									"style" : "",
 									"text" : "t 0"
 								}
 
@@ -1226,6 +1274,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 276.0, 142.0, 98.0 ],
+									"style" : "",
 									"text" : "script newobject newobj @text $1 @varname foo @textcolor 1. 0.66 0. 1. @fontface bold @fontsize 32 @patching_position 450 305"
 								}
 
@@ -1240,6 +1289,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 188.0, 37.0, 20.0 ],
+									"style" : "",
 									"text" : "thru"
 								}
 
@@ -1254,6 +1304,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 148.0, 80.0, 20.0 ],
+									"style" : "",
 									"text" : "route symbol"
 								}
 
@@ -1272,6 +1323,7 @@
 										"embed" : 0
 									}
 ,
+									"style" : "",
 									"text" : "coll _objects_to_test_"
 								}
 
@@ -1284,7 +1336,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ]
+									"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -1295,7 +1348,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 448.0, 421.5755, 25.0, 25.0 ]
+									"patching_rect" : [ 448.0, 421.5755, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -1306,7 +1360,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 245.0, 421.5755, 25.0, 25.0 ]
+									"patching_rect" : [ 245.0, 421.5755, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -1317,7 +1372,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 421.5755, 25.0, 25.0 ]
+									"patching_rect" : [ 50.0, 421.5755, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -1407,28 +1463,22 @@
  ]
 					}
 ,
-					"patching_rect" : [ 315.0, 477.71936, 214.0, 20.0 ],
+					"patching_rect" : [ 315.0, 477.71936, 214.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p script_create_help_patch_for_object"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-93",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -1437,10 +1487,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x64"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 1,
+							"architecture" : "x64",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -1449,19 +1500,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -1472,6 +1531,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 100.0, 47.0, 20.0 ],
+									"style" : "",
 									"text" : "error 1"
 								}
 
@@ -1483,7 +1543,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 50.0, 129.495728, 20.0, 20.0 ]
+									"patching_rect" : [ 50.0, 129.495728, 20.0, 20.0 ],
+									"style" : ""
 								}
 
 							}
@@ -1497,6 +1558,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "", "", "int" ],
 									"patching_rect" : [ 50.0, 155.0, 105.0, 20.0 ],
+									"style" : "",
 									"text" : "counter 1 100000"
 								}
 
@@ -1508,7 +1570,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 265.495728, 25.0, 25.0 ]
+									"patching_rect" : [ 50.0, 265.495728, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -1543,34 +1606,29 @@
  ]
 					}
 ,
-					"patching_rect" : [ 425.0, 558.720764, 88.0, 20.0 ],
+					"patching_rect" : [ 425.0, 558.720764, 88.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "default",
 					"text" : "p count_errors"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-89",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 40.0, 282.43161, 118.0, 20.0 ],
+					"patching_rect" : [ 40.0, 282.43161, 118.0, 22.0 ],
+					"style" : "default",
 					"text" : "t b 0"
 				}
 
@@ -1582,148 +1640,137 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 175.0, 203.072632, 20.0, 20.0 ]
+					"patching_rect" : [ 175.0, 203.072632, 20.0, 20.0 ],
+					"style" : "default"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-72",
 					"maxclass" : "newobj",
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
-					"patching_rect" : [ 175.0, 228.072632, 92.0, 20.0 ],
+					"patching_rect" : [ 175.0, 228.072632, 92.0, 22.0 ],
+					"style" : "default",
 					"text" : "counter 1 1000"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-68",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 139.0, 546.146729, 35.0, 20.0 ],
+					"patching_rect" : [ 139.0, 546.146729, 35.0, 22.0 ],
+					"style" : "default",
 					"text" : "qlim"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-69",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 139.0, 519.146729, 35.0, 20.0 ],
+					"patching_rect" : [ 139.0, 519.146729, 35.0, 22.0 ],
+					"style" : "default",
 					"text" : "qlim"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-53",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 170.0, 477.71936, 97.0, 18.0 ],
+					"patching_rect" : [ 170.0, 477.71936, 97.0, 22.0 ],
+					"style" : "default",
 					"text" : "script delete foo"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-46",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 315.0, 541.576904, 70.0, 20.0 ],
+					"patching_rect" : [ 315.0, 541.576904, 70.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+					"style" : "default",
 					"text" : "thispatcher"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 1.0, 0.698039, 0.698039, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-21",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 175.0, 135.858948, 35.0, 20.0 ],
+					"patching_rect" : [ 175.0, 135.858948, 35.0, 22.0 ],
+					"style" : "default",
 					"text" : "qlim"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-52",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "bang", "bang", "path", "bang" ],
-					"patching_rect" : [ 175.0, 72.572632, 238.0, 20.0 ],
+					"patching_rect" : [ 175.0, 72.572632, 238.0, 22.0 ],
+					"style" : "default",
 					"text" : "t b b path b"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-70",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 175.0, 16.001404, 60.0, 20.0 ],
+					"patching_rect" : [ 175.0, 16.001404, 60.0, 22.0 ],
+					"style" : "default",
 					"text" : "loadbang"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 175.0, 45.430176, 33.0, 20.0 ],
+					"patching_rect" : [ 175.0, 45.430176, 33.0, 22.0 ],
+					"style" : "default",
 					"text" : "qlim"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-84",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 316.002838, 83.0, 20.0 ],
+					"patching_rect" : [ 40.0, 316.002838, 83.0, 22.0 ],
+					"style" : "default",
 					"text" : "test.terminate"
 				}
 
@@ -2030,8 +2077,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../components/thru",
+				"bootpath" : "/Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -2043,7 +2090,8 @@
 				"name" : "oscar.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
