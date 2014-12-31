@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 1,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 90.0, 1405.0, 956.0 ],
+		"rect" : [ 351.0, 79.0, 1158.0, 779.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -52,11 +52,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1405.0, 930.0 ],
+						"rect" : [ 0.0, 26.0, 1158.0, 753.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -93,7 +93,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 922.0, 294.0, 59.5, 20.0 ],
+									"patching_rect" : [ 922.0, 294.0, 59.5, 22.0 ],
 									"saved_object_attributes" : 									{
 										"embed" : 0
 									}
@@ -114,7 +114,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 922.0, 223.0, 174.0, 47.0 ],
+									"patching_rect" : [ 922.0, 223.0, 174.0, 49.0 ],
 									"style" : "",
 									"text" : "j.namespace @filter/list model @depth 1 @sort priority @format coll"
 								}
@@ -131,7 +131,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
 									"patching_rect" : [ 711.0, 294.0, 174.0, 111.0 ],
-									"rows" : 4
+									"rows" : 50
 								}
 
 							}
@@ -146,7 +146,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 711.0, 223.0, 174.0, 47.0 ],
+									"patching_rect" : [ 711.0, 223.0, 174.0, 49.0 ],
 									"style" : "",
 									"text" : "j.namespace @filter/list model @depth 1 @sort priority @format jit.cellblock"
 								}
@@ -161,7 +161,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 497.0, 358.0, 150.0, 18.0 ],
+									"patching_rect" : [ 497.0, 358.0, 150.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -169,14 +169,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-20",
-									"items" : [ "input_sort", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "output_sort" ],
+									"items" : [ "input_sort", ",", "pool", ",", "Zdbap", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "output_sort", ",", "LED.dedans", ",", "LED.cascadeB", ",", "LED.cascadeH", ",", "LED.rasantS", ",", "LED.soleil", ",", "LED.douche", ",", "LEDs.face", ",", "LEDs.jar", ",", "vent.HC", ",", "LEDs.cour", ",", "vent.HJ", ",", "vent.HL", ",", "vent.HF", ",", "vent.VC", ",", "vent.VJ", ",", "vent.VL", ",", "vent.VF", ",", "brumis.P", ",", "brumis.G", ",", "brumis.O", ",", "vent.O", ",", "turbine", ",", "vent.C", ",", "salle", ",", "Hverb~", ",", "Gverb~", ",", "verbMatrix", ",", "Leap", ",", "SP", ",", "equalizerM~", ",", "equalizer~", ",", "track.1", ",", "track.10", ",", "track.11", ",", "track.12", ",", "track.2", ",", "track.3", ",", "track.4", ",", "track.5", ",", "track.6", ",", "track.7", ",", "track.8", ",", "track.9", ",", "wac" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 507.0, 294.0, 140.0, 20.0 ],
-									"prefix" : "Mac Julien:/",
+									"patching_rect" : [ 507.0, 294.0, 140.0, 22.0 ],
+									"prefix" : "Servo:/",
 									"style" : ""
 								}
 
@@ -192,7 +192,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 507.0, 223.0, 174.0, 47.0 ],
+									"patching_rect" : [ 507.0, 223.0, 174.0, 49.0 ],
 									"style" : "",
 									"text" : "j.namespace @filter/list model @depth 1 @sort priority @format umenu_prefix"
 								}
@@ -207,7 +207,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 300.0, 358.0, 150.0, 18.0 ],
+									"patching_rect" : [ 300.0, 358.0, 150.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -215,13 +215,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-16",
-									"items" : [ "input_sort", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "output_sort" ],
+									"items" : [ "input_sort", ",", "pool", ",", "Zdbap", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "output_sort", ",", "LED.dedans", ",", "LED.cascadeB", ",", "LED.cascadeH", ",", "LED.rasantS", ",", "LED.soleil", ",", "LED.douche", ",", "LEDs.face", ",", "LEDs.jar", ",", "vent.HC", ",", "LEDs.cour", ",", "vent.HJ", ",", "vent.HL", ",", "vent.HF", ",", "vent.VC", ",", "vent.VJ", ",", "vent.VL", ",", "vent.VF", ",", "brumis.P", ",", "brumis.G", ",", "brumis.O", ",", "vent.O", ",", "turbine", ",", "vent.C", ",", "salle", ",", "Hverb~", ",", "Gverb~", ",", "verbMatrix", ",", "Leap", ",", "SP", ",", "equalizerM~", ",", "equalizer~", ",", "track.1", ",", "track.10", ",", "track.11", ",", "track.12", ",", "track.2", ",", "track.3", ",", "track.4", ",", "track.5", ",", "track.6", ",", "track.7", ",", "track.8", ",", "track.9", ",", "wac" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 310.0, 294.0, 140.0, 20.0 ],
+									"patching_rect" : [ 310.0, 294.0, 140.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -237,7 +237,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 310.0, 223.0, 174.0, 47.0 ],
+									"patching_rect" : [ 310.0, 223.0, 174.0, 49.0 ],
 									"style" : "",
 									"text" : "j.namespace @filter/list model @depth 1 @sort priority @format umenu"
 								}
@@ -280,11 +280,12 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-8",
+									"linecount" : 18,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 114.0, 398.0, 174.0, 18.0 ],
+									"patching_rect" : [ 114.0, 398.0, 174.0, 250.0 ],
 									"style" : ""
 								}
 
@@ -312,7 +313,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 114.0, 161.0, 56.0, 20.0 ],
+									"patching_rect" : [ 114.0, 161.0, 56.0, 22.0 ],
 									"style" : "",
 									"text" : "deferlow"
 								}
@@ -327,7 +328,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 114.0, 130.0, 69.0, 20.0 ],
+									"patching_rect" : [ 114.0, 130.0, 69.0, 22.0 ],
 									"style" : "",
 									"text" : "loadmess /"
 								}
@@ -344,7 +345,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 114.0, 223.0, 174.0, 47.0 ],
+									"patching_rect" : [ 114.0, 223.0, 174.0, 49.0 ],
 									"style" : "",
 									"text" : "j.namespace @filter/list model @depth 1 @sort priority @format none"
 								}
@@ -535,11 +536,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1405.0, 930.0 ],
+						"rect" : [ 0.0, 26.0, 1158.0, 753.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -600,11 +601,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 38.0, 78.0, 240.0, 375.0 ],
+						"rect" : [ 38.0, 79.0, 240.0, 375.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -642,7 +643,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 59.0, 23.0, 89.0, 20.0 ],
+									"patching_rect" : [ 59.0, 23.0, 89.0, 22.0 ],
 									"style" : "",
 									"text" : "loadmess front"
 								}
@@ -658,7 +659,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 59.0, 50.0, 69.0, 20.0 ],
+									"patching_rect" : [ 59.0, 50.0, 69.0, 22.0 ],
 									"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 									"style" : "",
 									"text" : "thispatcher"
@@ -828,11 +829,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1405.0, 930.0 ],
+						"rect" : [ 0.0, 26.0, 1158.0, 753.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -910,16 +911,16 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-5",
-									"items" : [ "degrade_sort.1", ",", "degrade_sort.2", ",", "input_sort", ",", "input_sort/balance", ",", "input_sort/input", ",", "output_sort", ",", "output_sort/balance", ",", "output_sort/limiter", ",", "output_sort/record", ",", "output_sort/saturation" ],
+									"items" : [ "Gverb~", ",", "Hverb~", ",", "LED.cascadeB", ",", "LED.cascadeH", ",", "LED.dedans", ",", "LED.douche", ",", "LED.rasantS", ",", "LED.soleil", ",", "LEDs.cour", ",", "LEDs.face", ",", "LEDs.jar", ",", "Leap", ",", "Leap/map.1", ",", "Leap/map.2", ",", "Leap/map.3", ",", "Leap/map.4", ",", "SP", ",", "SP/map.1", ",", "SP/map.2", ",", "SP/map.3", ",", "SP/map.4", ",", "Zdbap", ",", "brumis.G", ",", "brumis.O", ",", "brumis.P", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "equalizerM~", ",", "equalizer~", ",", "input_sort", ",", "input_sort/balance", ",", "input_sort/input", ",", "output_sort", ",", "output_sort/balance", ",", "output_sort/limiter", ",", "output_sort/record", ",", "output_sort/saturation", ",", "pool", ",", "salle", ",", "track.1", ",", "track.1/eq", ",", "track.1/gran", ",", "track.1/mod", ",", "track.1/spat", ",", "track.10", ",", "track.10/eq", ",", "track.10/gran", ",", "track.10/mod", ",", "track.10/spat", ",", "track.11", ",", "track.11/eq", ",", "track.11/gran", ",", "track.11/mod", ",", "track.11/spat", ",", "track.12", ",", "track.12/eq", ",", "track.12/gran", ",", "track.12/mod", ",", "track.12/spat", ",", "track.2", ",", "track.2/eq", ",", "track.2/gran", ",", "track.2/mod", ",", "track.2/spat", ",", "track.3", ",", "track.3/eq", ",", "track.3/gran", ",", "track.3/mod", ",", "track.3/spat", ",", "track.4", ",", "track.4/eq", ",", "track.4/gran", ",", "track.4/mod", ",", "track.4/spat", ",", "track.5", ",", "track.5/eq", ",", "track.5/gran", ",", "track.5/mod", ",", "track.5/spat", ",", "track.6", ",", "track.6/eq", ",", "track.6/gran", ",", "track.6/mod", ",", "track.6/spat", ",", "track.7", ",", "track.7/eq", ",", "track.7/gran", ",", "track.7/mod", ",", "track.7/spat", ",", "track.8", ",", "track.8/eq", ",", "track.8/gran", ",", "track.8/mod", ",", "track.8/spat", ",", "track.9", ",", "track.9/eq", ",", "track.9/gran", ",", "track.9/mod", ",", "track.9/spat", ",", "turbine", ",", "vent.C", ",", "vent.HC", ",", "vent.HF", ",", "vent.HJ", ",", "vent.HL", ",", "vent.O", ",", "vent.VC", ",", "vent.VF", ",", "vent.VJ", ",", "vent.VL", ",", "verbMatrix", ",", "wac" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 574.0, 392.0, 168.0, 20.0 ],
-									"prefix" : "Mac Julien:/",
+									"patching_rect" : [ 574.0, 392.0, 168.0, 22.0 ],
+									"prefix" : "Servo:/",
 									"presentation" : 1,
-									"presentation_rect" : [ 283.0, 217.0, 168.0, 20.0 ],
+									"presentation_rect" : [ 283.0, 217.0, 168.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -933,7 +934,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 574.0, 265.0, 56.0, 20.0 ],
+									"patching_rect" : [ 574.0, 265.0, 56.0, 22.0 ],
 									"style" : "",
 									"text" : "deferlow"
 								}
@@ -948,7 +949,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 574.0, 237.0, 69.0, 20.0 ],
+									"patching_rect" : [ 574.0, 237.0, 69.0, 22.0 ],
 									"style" : "",
 									"text" : "loadmess /"
 								}
@@ -965,7 +966,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 574.0, 295.0, 107.0, 74.0 ],
+									"patching_rect" : [ 574.0, 295.0, 107.0, 76.0 ],
 									"style" : "",
 									"text" : "j.namespace @filter/list model @format umenu_prefix @depth 2"
 								}
@@ -980,7 +981,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 161.0, 265.0, 56.0, 20.0 ],
+									"patching_rect" : [ 161.0, 265.0, 56.0, 22.0 ],
 									"style" : "",
 									"text" : "deferlow"
 								}
@@ -995,7 +996,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 161.0, 237.0, 69.0, 20.0 ],
+									"patching_rect" : [ 161.0, 237.0, 69.0, 22.0 ],
 									"style" : "",
 									"text" : "loadmess /"
 								}
@@ -1004,16 +1005,16 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-17",
-									"items" : [ "degrade_sort.1", ",", "degrade_sort.2", ",", "input_sort", ",", "output_sort" ],
+									"items" : [ "Gverb~", ",", "Hverb~", ",", "LED.cascadeB", ",", "LED.cascadeH", ",", "LED.dedans", ",", "LED.douche", ",", "LED.rasantS", ",", "LED.soleil", ",", "LEDs.cour", ",", "LEDs.face", ",", "LEDs.jar", ",", "Leap", ",", "SP", ",", "Zdbap", ",", "brumis.G", ",", "brumis.O", ",", "brumis.P", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "equalizerM~", ",", "equalizer~", ",", "input_sort", ",", "output_sort", ",", "pool", ",", "salle", ",", "track.1", ",", "track.10", ",", "track.11", ",", "track.12", ",", "track.2", ",", "track.3", ",", "track.4", ",", "track.5", ",", "track.6", ",", "track.7", ",", "track.8", ",", "track.9", ",", "turbine", ",", "vent.C", ",", "vent.HC", ",", "vent.HF", ",", "vent.HJ", ",", "vent.HL", ",", "vent.O", ",", "vent.VC", ",", "vent.VF", ",", "vent.VJ", ",", "vent.VL", ",", "verbMatrix", ",", "wac" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 161.0, 392.0, 168.0, 20.0 ],
-									"prefix" : "Mac Julien:/",
+									"patching_rect" : [ 161.0, 392.0, 168.0, 22.0 ],
+									"prefix" : "Servo:/",
 									"presentation" : 1,
-									"presentation_rect" : [ 404.0, 403.0, 168.0, 20.0 ],
+									"presentation_rect" : [ 404.0, 403.0, 168.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -1029,7 +1030,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 161.0, 295.0, 115.0, 74.0 ],
+									"patching_rect" : [ 161.0, 295.0, 115.0, 76.0 ],
 									"style" : "",
 									"text" : "j.namespace @filter/list model @format umenu_prefix @depth 1"
 								}
@@ -1121,11 +1122,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1405.0, 930.0 ],
+						"rect" : [ 0.0, 26.0, 1158.0, 753.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1176,7 +1177,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 397.0, 199.0, 56.0, 20.0 ],
+									"patching_rect" : [ 397.0, 199.0, 56.0, 22.0 ],
 									"style" : "",
 									"text" : "deferlow"
 								}
@@ -1191,7 +1192,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 397.0, 178.0, 69.0, 20.0 ],
+									"patching_rect" : [ 397.0, 178.0, 69.0, 22.0 ],
 									"style" : "",
 									"text" : "loadmess /"
 								}
@@ -1200,16 +1201,16 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-10",
-									"items" : [ "input_sort", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "output_sort" ],
+									"items" : [ "input_sort", ",", "pool", ",", "Zdbap", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "output_sort", ",", "LED.dedans", ",", "LED.cascadeB", ",", "LED.cascadeH", ",", "LED.rasantS", ",", "LED.soleil", ",", "LED.douche", ",", "LEDs.face", ",", "LEDs.jar", ",", "vent.HC", ",", "LEDs.cour", ",", "vent.HJ", ",", "vent.HL", ",", "vent.HF", ",", "vent.VC", ",", "vent.VJ", ",", "vent.VL", ",", "vent.VF", ",", "brumis.P", ",", "brumis.G", ",", "brumis.O", ",", "vent.O", ",", "turbine", ",", "vent.C", ",", "salle", ",", "Hverb~", ",", "Gverb~", ",", "verbMatrix", ",", "Leap", ",", "SP", ",", "equalizerM~", ",", "equalizer~", ",", "track.1", ",", "track.10", ",", "track.11", ",", "track.12", ",", "track.2", ",", "track.3", ",", "track.4", ",", "track.5", ",", "track.6", ",", "track.7", ",", "track.8", ",", "track.9", ",", "wac" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 397.0, 341.0, 168.0, 20.0 ],
-									"prefix" : "Mac Julien:/",
+									"patching_rect" : [ 397.0, 341.0, 168.0, 22.0 ],
+									"prefix" : "Servo:/",
 									"presentation" : 1,
-									"presentation_rect" : [ 744.0, 374.0, 168.0, 20.0 ],
+									"presentation_rect" : [ 744.0, 374.0, 168.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -1225,7 +1226,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 397.0, 244.0, 175.0, 47.0 ],
+									"patching_rect" : [ 397.0, 244.0, 175.0, 49.0 ],
 									"style" : "",
 									"text" : "j.namespace @filter/list model @format umenu_prefix @depth 1 @sort priority"
 								}
@@ -1240,7 +1241,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 172.0, 199.0, 56.0, 20.0 ],
+									"patching_rect" : [ 172.0, 199.0, 56.0, 22.0 ],
 									"style" : "",
 									"text" : "deferlow"
 								}
@@ -1255,7 +1256,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 172.0, 178.0, 69.0, 20.0 ],
+									"patching_rect" : [ 172.0, 178.0, 69.0, 22.0 ],
 									"style" : "",
 									"text" : "loadmess /"
 								}
@@ -1264,16 +1265,16 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-6",
-									"items" : [ "degrade_sort.1", ",", "degrade_sort.2", ",", "input_sort", ",", "output_sort" ],
+									"items" : [ "Gverb~", ",", "Hverb~", ",", "LED.cascadeB", ",", "LED.cascadeH", ",", "LED.dedans", ",", "LED.douche", ",", "LED.rasantS", ",", "LED.soleil", ",", "LEDs.cour", ",", "LEDs.face", ",", "LEDs.jar", ",", "Leap", ",", "SP", ",", "Zdbap", ",", "brumis.G", ",", "brumis.O", ",", "brumis.P", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "equalizerM~", ",", "equalizer~", ",", "input_sort", ",", "output_sort", ",", "pool", ",", "salle", ",", "track.1", ",", "track.10", ",", "track.11", ",", "track.12", ",", "track.2", ",", "track.3", ",", "track.4", ",", "track.5", ",", "track.6", ",", "track.7", ",", "track.8", ",", "track.9", ",", "turbine", ",", "vent.C", ",", "vent.HC", ",", "vent.HF", ",", "vent.HJ", ",", "vent.HL", ",", "vent.O", ",", "vent.VC", ",", "vent.VF", ",", "vent.VJ", ",", "vent.VL", ",", "verbMatrix", ",", "wac" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 172.0, 341.0, 168.0, 20.0 ],
-									"prefix" : "Mac Julien:/",
+									"patching_rect" : [ 172.0, 341.0, 168.0, 22.0 ],
+									"prefix" : "Servo:/",
 									"presentation" : 1,
-									"presentation_rect" : [ 381.0, 197.0, 168.0, 20.0 ],
+									"presentation_rect" : [ 381.0, 197.0, 168.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -1289,7 +1290,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 172.0, 244.0, 175.0, 47.0 ],
+									"patching_rect" : [ 172.0, 244.0, 175.0, 49.0 ],
 									"style" : "",
 									"text" : "j.namespace @filter/list model @format umenu_prefix @depth 1 @sort alphabetic"
 								}
@@ -1381,11 +1382,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1405.0, 930.0 ],
+						"rect" : [ 0.0, 26.0, 1158.0, 753.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -1712,14 +1713,14 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-15",
-									"linecount" : 20,
+									"linecount" : 133,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 59.0, 182.0, 73.0, 31.0 ],
 									"style" : "",
-									"text" : "degrade_sort.1 degrade_sort.2 input_sort input_sort/balance input_sort/input input_sort/input/limiter output_sort output_sort/balance output_sort/limiter output_sort/record output_sort/saturation"
+									"text" : "Gverb~ Hverb~ LED.cascadeB LED.cascadeH LED.dedans LED.douche LED.rasantS LED.soleil LEDs.cour LEDs.face LEDs.jar Leap Leap/map.1 Leap/map.2 Leap/map.3 Leap/map.4 SP SP/map.1 SP/map.2 SP/map.3 SP/map.4 Zdbap brumis.G brumis.O brumis.P degrade_sort.1 degrade_sort.2 equalizerM~ equalizer~ input_sort input_sort/balance input_sort/input input_sort/input/limiter output_sort output_sort/balance output_sort/limiter output_sort/record output_sort/saturation pool salle track.1 track.1/eq track.1/gran track.1/mod track.1/spat track.10 track.10/eq track.10/gran track.10/mod track.10/spat track.11 track.11/eq track.11/gran track.11/mod track.11/spat track.12 track.12/eq track.12/gran track.12/mod track.12/spat track.2 track.2/eq track.2/gran track.2/mod track.2/spat track.3 track.3/eq track.3/gran track.3/mod track.3/spat track.4 track.4/eq track.4/gran track.4/mod track.4/spat track.5 track.5/eq track.5/gran track.5/mod track.5/spat track.6 track.6/eq track.6/gran track.6/mod track.6/spat track.7 track.7/eq track.7/gran track.7/mod track.7/spat track.8 track.8/eq track.8/gran track.8/mod track.8/spat track.9 track.9/eq track.9/gran track.9/mod track.9/spat turbine vent.C vent.HC vent.HF vent.HJ vent.HL vent.O vent.VC vent.VF vent.VJ vent.VL verbMatrix wac"
 								}
 
 							}
@@ -1808,7 +1809,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1954,7 +1955,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -2485,7 +2486,7 @@
 									"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"border" : 0,
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 1, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 2, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 3, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 4, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 5, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 6, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 7, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 8, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 9, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 10, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ] ],
+									"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 1, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 2, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 3, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 4, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 5, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 6, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 7, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 8, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 9, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 10, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 11, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 12, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 13, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 14, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 15, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 16, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 17, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 18, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 19, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 20, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 21, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 22, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 23, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 24, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 25, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 26, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 27, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 28, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 29, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 30, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 31, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 32, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 33, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 34, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 35, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 36, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 37, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 38, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 39, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 40, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 41, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 42, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 43, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 44, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 45, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 46, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 47, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 48, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 49, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 50, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 51, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 52, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 53, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 54, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 55, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 56, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 57, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 58, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 59, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 60, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 61, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 62, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 63, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 64, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 65, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 66, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 67, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 68, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 69, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 70, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 71, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 72, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 73, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 74, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 75, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 76, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 77, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 78, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 79, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 80, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 81, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 82, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 83, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 84, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 85, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 86, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 87, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 88, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 89, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 90, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 91, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 92, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 93, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 94, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 95, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 96, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 97, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 98, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 99, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 100, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 101, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 102, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 103, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 104, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 105, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 106, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 107, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 108, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 109, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 110, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 111, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ], [ 0, 112, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.619608, 0.0, 0.360784, 1.0, -1, -1, -1 ] ],
 									"cols" : 1,
 									"colwidth" : 200,
 									"fgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -2506,7 +2507,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 3.0, 87.0, 184.0, 211.0 ],
 									"rowheight" : 20,
-									"rows" : 11,
+									"rows" : 113,
 									"sccolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"selmode" : 3,
 									"sgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
@@ -2921,11 +2922,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1405.0, 930.0 ],
+						"rect" : [ 0.0, 26.0, 1158.0, 753.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2962,7 +2963,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 477.0, 50.0, 18.0 ],
+									"patching_rect" : [ 212.0, 477.0, 50.0, 22.0 ],
 									"style" : "",
 									"text" : "126"
 								}
@@ -2977,7 +2978,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 22.0, 722.0, 91.0, 18.0 ],
+									"patching_rect" : [ 22.0, 722.0, 91.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/list none, /"
 								}
@@ -3006,7 +3007,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 154.0, 211.0, 18.0 ],
+									"patching_rect" : [ 69.0, 154.0, 211.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/set myObjectFilter mode exclude"
 								}
@@ -3021,7 +3022,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 135.0, 208.0, 18.0 ],
+									"patching_rect" : [ 69.0, 135.0, 208.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/set myObjectFilter mode include"
 								}
@@ -3065,7 +3066,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 293.0, 215.0, 18.0 ],
+									"patching_rect" : [ 69.0, 293.0, 215.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/set myAddressFilter mode hamlet"
 								}
@@ -3080,7 +3081,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 274.0, 221.0, 18.0 ],
+									"patching_rect" : [ 69.0, 274.0, 221.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/set myAddressFilter mode exclude"
 								}
@@ -3095,7 +3096,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 255.0, 219.0, 18.0 ],
+									"patching_rect" : [ 69.0, 255.0, 219.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/set myAddressFilter mode restrict"
 								}
@@ -3110,7 +3111,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 236.0, 219.0, 18.0 ],
+									"patching_rect" : [ 69.0, 236.0, 219.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/set myAddressFilter mode include"
 								}
@@ -3125,7 +3126,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 83.0, 421.0, 124.0, 18.0 ],
+									"patching_rect" : [ 83.0, 421.0, 124.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/info myPartFilter"
 								}
@@ -3140,7 +3141,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 232.0, 421.0, 145.0, 18.0 ],
+									"patching_rect" : [ 232.0, 421.0, 145.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/remove myPartFilter"
 								}
@@ -3160,7 +3161,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -3559,7 +3560,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 625.0, 478.0, 66.0, 20.0 ],
+									"patching_rect" : [ 625.0, 478.0, 66.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -3596,7 +3597,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 342.0, 263.0, 18.0 ],
+									"patching_rect" : [ 69.0, 342.0, 263.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/set myPartFilter part /preset mode exclude"
 								}
@@ -3643,7 +3644,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 83.0, 402.0, 147.0, 18.0 ],
+									"patching_rect" : [ 83.0, 402.0, 147.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/info myAddressFilter"
 								}
@@ -3658,7 +3659,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 83.0, 383.0, 137.0, 18.0 ],
+									"patching_rect" : [ 83.0, 383.0, 137.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/info myObjectFilter"
 								}
@@ -3703,7 +3704,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 22.0, 691.0, 97.0, 18.0 ],
+									"patching_rect" : [ 22.0, 691.0, 97.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/list model, /"
 								}
@@ -3821,7 +3822,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 286.0, 478.0, 337.0, 18.0 ],
+									"patching_rect" : [ 286.0, 478.0, 337.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/set"
 								}
@@ -3836,7 +3837,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 16.0, 477.0, 194.0, 20.0 ],
+									"patching_rect" : [ 16.0, 477.0, 194.0, 22.0 ],
 									"prefix" : "Macintosh HD:/",
 									"style" : ""
 								}
@@ -3852,7 +3853,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 16.0, 447.0, 227.0, 20.0 ],
+									"patching_rect" : [ 16.0, 447.0, 227.0, 22.0 ],
 									"style" : "",
 									"text" : "j.namespace @format umenu_prefix"
 								}
@@ -3867,7 +3868,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 16.0, 104.0, 32.5, 18.0 ],
+									"patching_rect" : [ 16.0, 104.0, 32.5, 22.0 ],
 									"style" : "",
 									"text" : "/"
 								}
@@ -3882,7 +3883,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 104.0, 339.0, 18.0 ],
+									"patching_rect" : [ 69.0, 104.0, 339.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/set myObjectFilter object Data attribute tag value generic"
 								}
@@ -3897,7 +3898,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 232.0, 383.0, 157.0, 18.0 ],
+									"patching_rect" : [ 232.0, 383.0, 157.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/remove myObjectFilter"
 								}
@@ -3912,7 +3913,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 408.0, 421.0, 51.0, 18.0 ],
+									"patching_rect" : [ 408.0, 421.0, 51.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/list"
 								}
@@ -3943,7 +3944,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 203.0, 289.0, 18.0 ],
+									"patching_rect" : [ 69.0, 203.0, 289.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/set myAddressFilter name in instance 2"
 								}
@@ -3958,7 +3959,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 232.0, 402.0, 167.0, 18.0 ],
+									"patching_rect" : [ 232.0, 402.0, 167.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/remove myAddressFilter"
 								}
@@ -4245,13 +4246,13 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 116.0, 1405.0, 930.0 ],
+						"rect" : [ 351.0, 105.0, 1158.0, 753.0 ],
 						"bglocked" : 0,
-						"openinpresentation" : 0,
+						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -4342,7 +4343,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -4657,14 +4658,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-13",
-									"items" : "<empty>",
+									"items" : [ "L", ",", "R" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 851.0, 569.0, 35.0, 22.0 ],
-									"prefix" : "/input_sort/balance.",
+									"prefix" : "/equalizer~/audio/out.",
 									"presentation" : 1,
 									"presentation_rect" : [ 493.0, 253.0, 35.0, 22.0 ],
 									"style" : ""
@@ -4719,7 +4720,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -4998,7 +4999,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -5546,14 +5547,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-47",
-									"items" : "<empty>",
+									"items" : [ "bypass", ",", "gain", ",", "in", ",", "mix", ",", "mute", ",", "out" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 776.0, 407.0, 168.0, 22.0 ],
-									"prefix" : "/input_sort/balance/",
+									"prefix" : "/equalizer~/audio/",
 									"presentation" : 1,
 									"presentation_rect" : [ 360.0, 225.0, 168.0, 22.0 ],
 									"style" : ""
@@ -5603,8 +5604,7 @@
 									"patching_rect" : [ 454.0, 789.0, 152.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 210.0, 420.0, 419.0, 20.0 ],
-									"style" : "",
-									"text" : "100.00"
+									"style" : ""
 								}
 
 							}
@@ -5620,7 +5620,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 60.0, 450.0, 568.0, 20.0 ],
 									"style" : "",
-									"text" : "/input_sort/audio/gain"
+									"text" : "/equalizer~/audio:"
 								}
 
 							}
@@ -5712,7 +5712,7 @@
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 404.0, 630.0, 119.0, 22.0 ],
-									"prefix" : "/input_sort/audio/gain:",
+									"prefix" : "/equalizer~/audio:",
 									"presentation" : 1,
 									"presentation_rect" : [ 60.0, 420.0, 139.0, 22.0 ],
 									"style" : ""
@@ -5729,7 +5729,7 @@
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 412.0, 474.0, 139.0, 22.0 ],
-									"prefix" : "/input_sort/",
+									"prefix" : "/track.1/eq/",
 									"presentation" : 1,
 									"presentation_rect" : [ 60.0, 315.0, 139.0, 22.0 ],
 									"style" : ""
@@ -5739,14 +5739,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-19",
-									"items" : "<empty>",
+									"items" : "filtergraph",
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 262.0, 474.0, 139.0, 22.0 ],
-									"prefix" : "/input_sort/",
+									"prefix" : "/track.1/eq/",
 									"presentation" : 1,
 									"presentation_rect" : [ 60.0, 285.0, 139.0, 22.0 ],
 									"style" : ""
@@ -5756,14 +5756,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-18",
-									"items" : "<empty>",
+									"items" : [ "bands", ",", "filter.2/type", ",", "filter.3/type", ",", "filter.4/type", ",", "filter.5/type", ",", "filter.1/type", ",", "filter.1/frequency", ",", "filter.2/frequency", ",", "filter.4/frequency", ",", "filter.5/frequency", ",", "filter.3/frequency", ",", "filter.1/gain", ",", "filter.4/gain", ",", "filter.5/gain", ",", "filter.3/gain", ",", "filter.2/gain", ",", "filter.1/bandwidth", ",", "filter.3/bandwidth", ",", "filter.5/bandwidth", ",", "filter.2/bandwidth", ",", "filter.4/bandwidth", ",", "audio/bypass", ",", "audio/gain", ",", "audio/mix", ",", "audio/mute" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 103.0, 474.0, 139.0, 22.0 ],
-									"prefix" : "/input_sort/",
+									"prefix" : "/track.1/eq/",
 									"presentation" : 1,
 									"presentation_rect" : [ 60.0, 255.0, 139.0, 22.0 ],
 									"style" : ""
@@ -5824,14 +5824,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-3",
-									"items" : [ "degrade_sort.1", ",", "degrade_sort.2", ",", "input_sort", ",", "input_sort/balance", ",", "input_sort/input", ",", "input_sort/input/limiter", ",", "output_sort", ",", "output_sort/balance", ",", "output_sort/limiter", ",", "output_sort/record", ",", "output_sort/saturation" ],
+									"items" : [ "Gverb~", ",", "Hverb~", ",", "LED.cascadeB", ",", "LED.cascadeH", ",", "LED.dedans", ",", "LED.douche", ",", "LED.rasantS", ",", "LED.soleil", ",", "LEDs.cour", ",", "LEDs.face", ",", "LEDs.jar", ",", "Leap", ",", "Leap/map.1", ",", "Leap/map.2", ",", "Leap/map.3", ",", "Leap/map.4", ",", "SP", ",", "SP/map.1", ",", "SP/map.2", ",", "SP/map.3", ",", "SP/map.4", ",", "Zdbap", ",", "brumis.G", ",", "brumis.O", ",", "brumis.P", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "equalizerM~", ",", "equalizer~", ",", "input_sort", ",", "input_sort/balance", ",", "input_sort/input", ",", "input_sort/input/limiter", ",", "output_sort", ",", "output_sort/balance", ",", "output_sort/limiter", ",", "output_sort/record", ",", "output_sort/saturation", ",", "pool", ",", "salle", ",", "track.1", ",", "track.1/eq", ",", "track.1/gran", ",", "track.1/mod", ",", "track.1/spat", ",", "track.10", ",", "track.10/eq", ",", "track.10/gran", ",", "track.10/mod", ",", "track.10/spat", ",", "track.11", ",", "track.11/eq", ",", "track.11/gran", ",", "track.11/mod", ",", "track.11/spat", ",", "track.12", ",", "track.12/eq", ",", "track.12/gran", ",", "track.12/mod", ",", "track.12/spat", ",", "track.2", ",", "track.2/eq", ",", "track.2/gran", ",", "track.2/mod", ",", "track.2/spat", ",", "track.3", ",", "track.3/eq", ",", "track.3/gran", ",", "track.3/mod", ",", "track.3/spat", ",", "track.4", ",", "track.4/eq", ",", "track.4/gran", ",", "track.4/mod", ",", "track.4/spat", ",", "track.5", ",", "track.5/eq", ",", "track.5/gran", ",", "track.5/mod", ",", "track.5/spat", ",", "track.6", ",", "track.6/eq", ",", "track.6/gran", ",", "track.6/mod", ",", "track.6/spat", ",", "track.7", ",", "track.7/eq", ",", "track.7/gran", ",", "track.7/mod", ",", "track.7/spat", ",", "track.8", ",", "track.8/eq", ",", "track.8/gran", ",", "track.8/mod", ",", "track.8/spat", ",", "track.9", ",", "track.9/eq", ",", "track.9/gran", ",", "track.9/mod", ",", "track.9/spat", ",", "turbine", ",", "vent.C", ",", "vent.HC", ",", "vent.HF", ",", "vent.HJ", ",", "vent.HL", ",", "vent.O", ",", "vent.VC", ",", "vent.VF", ",", "vent.VJ", ",", "vent.VL", ",", "verbMatrix", ",", "wac" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 28.0, 325.0, 168.0, 22.0 ],
-									"prefix" : "Mac Julien:/",
+									"prefix" : "Servo:/",
 									"presentation" : 1,
 									"presentation_rect" : [ 30.0, 225.0, 168.0, 22.0 ],
 									"style" : ""
@@ -6427,28 +6427,28 @@
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.model.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"bootpath" : "~/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
@@ -6462,35 +6462,35 @@
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"bootpath" : "~/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.model.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"bootpath" : "~/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "saturation~.model.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
+				"bootpath" : "~/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/saturation~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record~.model.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"bootpath" : "~/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"bootpath" : "~/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
@@ -6521,6 +6521,10 @@
 			}
 , 			{
 				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
