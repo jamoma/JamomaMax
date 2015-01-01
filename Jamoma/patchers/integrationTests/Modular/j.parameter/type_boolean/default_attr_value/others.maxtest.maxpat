@@ -1083,7 +1083,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 565.0, 683.216736, 466.0, 49.0 ],
 					"style" : "",
-					"text" : "test.assert Jamoma/Modular/j.parameter/type_boolean/default_attr_value/ramp/repetitions/filter @tags Jamoma Modular j.parameter"
+					"text" : "test.assert Jamoma/Modular/j.parameter/type_boolean/default_attr_value/repetitions/filter @tags Jamoma Modular j.parameter"
 				}
 
 			}

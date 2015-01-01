@@ -218,7 +218,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 215.0, 333.0, 284.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/j.unit/nonexisting_dataspace @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/nonexisting_dataspace @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -272,7 +272,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 516.0, 333.0, 288.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/j.unit/input_unit_is_nonsense @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/input_unit_is_nonsense @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -339,7 +339,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 821.0, 333.0, 296.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/j.unit/output_unit_is_nonsense @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/output_unit_is_nonsense @tags Jamoma Foundation j.unit"
 				}
 
 			}

@@ -46,7 +46,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 184.0, 802.0, 253.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/neutral2cmy @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/color/neutral2cmy @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -60,7 +60,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 391.5, 742.0, 238.0, 33.0 ],
 					"style" : "default",
-					"text" : "test.assert TEST/datapace/color/neutral2hsl @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/color/neutral2hsl @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -74,7 +74,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 604.5, 802.0, 248.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/neutral2hsv @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/color/neutral2hsv @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -88,7 +88,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 812.5, 742.0, 253.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/rgb82neutral @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/color/rgb82neutral @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -102,7 +102,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 184.0, 396.0, 251.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/cmy2neutral @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/color/cmy2neutral @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -116,7 +116,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 391.5, 343.0, 238.0, 33.0 ],
 					"style" : "default",
-					"text" : "test.assert TEST/datapace/color/hsl2neutral @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/color/hsl2neutral @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -130,7 +130,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 604.5, 396.0, 248.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/hsv2neutral @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/color/hsv2neutral @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -3421,7 +3421,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1166.0, 742.0, 289.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/pointersNotMixedUp @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/color/pointersNotMixedUp @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -3515,7 +3515,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 812.5, 343.0, 253.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/rgb82neutral @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/color/rgb82neutral @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -3662,7 +3662,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1023.5, 396.0, 257.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/color/rgb2neutral @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/color/rgb2neutral @tags Jamoma Foundation j.unit"
 				}
 
 			}

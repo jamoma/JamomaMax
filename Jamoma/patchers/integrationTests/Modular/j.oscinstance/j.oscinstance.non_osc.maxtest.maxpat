@@ -113,7 +113,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 647.0, 516.0, 259.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamokma/Modular/j.oscinstance/non_osc/float @tags Jamoma Modular j.oscinstance"
+					"text" : "test.assert Jamoma/Modular/j.oscinstance/non_osc/float @tags Jamoma Modular j.oscinstance"
 				}
 
 			}
@@ -324,7 +324,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1067.0, 516.0, 264.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamokma/Modular/j.oscinstance/non_osc/bang @tags Jamoma Modular j.oscinstance"
+					"text" : "test.assert Jamoma/Modular/j.oscinstance/non_osc/bang @tags Jamoma Modular j.oscinstance"
 				}
 
 			}
@@ -390,7 +390,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 217.0, 516.0, 276.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamokma/Modular/j.oscinstance/non_osc/symbol @tags Jamoma Modular j.oscinstance"
+					"text" : "test.assert Jamoma/Modular/j.oscinstance/non_osc/symbol @tags Jamoma Modular j.oscinstance"
 				}
 
 			}
@@ -456,7 +456,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 432.0, 455.0, 254.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamokma/Modular/j.oscinstance/non_osc/list @tags Jamoma Modular j.oscinstance"
+					"text" : "test.assert Jamoma/Modular/j.oscinstance/non_osc/list @tags Jamoma Modular j.oscinstance"
 				}
 
 			}
@@ -509,7 +509,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 867.0, 455.0, 248.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamokma/Modular/j.oscinstance/non_osc/int @tags Jamoma Modular j.oscinstance"
+					"text" : "test.assert Jamoma/Modular/j.oscinstance/non_osc/int @tags Jamoma Modular j.oscinstance"
 				}
 
 			}

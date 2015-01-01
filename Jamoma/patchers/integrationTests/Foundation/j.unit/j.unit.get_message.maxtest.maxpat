@@ -234,7 +234,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 864.400024, 627.5, 259.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/message/dataspace @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/message/dataspace @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -287,7 +287,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 710.799988, 541.5, 260.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/message/getoutput @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/message/getoutput @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -301,7 +301,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 557.200012, 627.5, 250.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/message/getinput @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/message/getinput @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -315,7 +315,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 403.600037, 541.5, 252.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/message/unit.get @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/message/unit.get @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -329,7 +329,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 250.0, 627.5, 284.0, 45.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/message/dataspaces.get @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/message/dataspaces.get @tags Jamoma Foundation j.unit"
 				}
 
 			}

@@ -320,14 +320,14 @@
 				"box" : 				{
 					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
 					"id" : "obj-146",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 460.0, 520.252625, 382.0, 49.0 ],
+					"patching_rect" : [ 460.0, 520.252625, 447.0, 35.0 ],
 					"style" : "",
-					"text" : "test.assert Jamoma/Modular/j.parameter/type_boolean/default_attr_value/default @tags Jamoma Modular j.parameter"
+					"text" : "test.assert Jamoma/Modular/j.parameter/type_boolean/default_attr_value/stepsize @tags Jamoma Modular j.parameter"
 				}
 
 			}

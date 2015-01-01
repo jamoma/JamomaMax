@@ -657,7 +657,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 916.0, 745.0, 277.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/time/neutral2sample @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/time/neutral2sample @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -698,7 +698,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 614.0, 732.0, 264.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutralspeed @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/pitch/neutralspeed @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -712,7 +712,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 455.0, 786.0, 260.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutral2midi @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/pitch/neutral2midi @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -726,7 +726,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 296.0, 732.0, 253.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutral2Hz @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/pitch/neutral2Hz @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -740,7 +740,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 137.0, 786.0, 267.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/neutral2cents @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/pitch/neutral2cents @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -791,7 +791,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 624.0, 348.0, 273.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/speed2neutral @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/pitch/speed2neutral @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -805,7 +805,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 460.0, 409.0, 263.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/midi2neutral @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/pitch/midi2neutral @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -819,7 +819,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 296.0, 348.0, 255.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/Hz2neutral @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/pitch/Hz2neutral @tags Jamoma Foundation j.unit"
 				}
 
 			}
@@ -833,7 +833,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 132.0, 409.0, 269.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/Modular/.jataspace/pitch/cents2neutral @tags Jamoma Modular j.unit"
+					"text" : "test.assert Jamoma/Foundation/j.unit/pitch/cents2neutral @tags Jamoma Foundation j.unit"
 				}
 
 			}
