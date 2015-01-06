@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 1,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 262.0, 193.0, 1028.0, 752.0 ],
+		"rect" : [ 130.0, 289.0, 1028.0, 752.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -52,7 +52,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -311,7 +311,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -375,11 +375,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 262.0, 219.0, 1028.0, 726.0 ],
+						"rect" : [ 130.0, 315.0, 1028.0, 726.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -409,44 +409,70 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"arrow" : 0,
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bgfillcolor_angle" : 270.0,
-									"bgfillcolor_color" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bgfillcolor_color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
-									"bgfillcolor_color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-									"bgfillcolor_proportion" : 0.39,
-									"bgfillcolor_type" : "color",
-									"fontname" : "Arial Bold",
-									"fontsize" : 10.0,
-									"id" : "obj-13",
-									"ignoreclick" : 1,
-									"items" : [ "linear", ",", "easeInBack", ",", "easeInOutBack", ",", "easeOutBack", ",", "easeInBounce", ",", "easeInOutBounce", ",", "easeOutBounce", ",", "easeInCircular", ",", "easeInOutCircular", ",", "easeOutCircular", ",", "easeInCubic", ",", "easeInOutCubic", ",", "easeOutCubic", ",", "easeInElastic", ",", "easeInOutElastic", ",", "easeOutElastic", ",", "easeInExponential", ",", "easeInOutExponential", ",", "easeOutExponential", ",", "easeInQuadratic", ",", "easeInOutQuadratic", ",", "easeOutQuadratic", ",", "easeInQuartic", ",", "easeInOutQuartic", ",", "easeOutQuartic", ",", "easeInQuintic", ",", "easeInOutQuintic", ",", "easeOutQuintic", ",", "easeInSine", ",", "easeInOutSine", ",", "easeOutSine", ",", "exponential", ",", "freehand", ",", "logarithm", ",", "lowpass", ",", "power", ",", "smoothPolynomial", ",", "tanh", ",", "bartlett", ",", "blackman", ",", "blackmanHarris", ",", "expodec", ",", "gauss", ",", "hamming", ",", "hanning", ",", "kaiser", ",", "nuttall", ",", "rectangular", ",", "rosenbergGlottalPulse", ",", "trapezoid", ",", "tukey", ",", "welch" ],
-									"maxclass" : "umenu",
+									"hidden" : 1,
+									"id" : "obj-9",
+									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "int", "", "" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 829.0, 190.0, 123.0, 20.0 ],
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 881.5, 141.0, 74.0, 22.0 ],
 									"style" : "",
-									"textcolor" : [ 0.301961, 0.337255, 0.403922, 1.0 ]
+									"text" : "prepend set"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"fontsize" : 30.0,
-									"id" : "obj-12",
+									"hidden" : 1,
+									"id" : "obj-14",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 767.0, 159.0, 74.0, 22.0 ],
+									"style" : "",
+									"text" : "prepend set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-15",
 									"maxclass" : "live.menu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "float" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 757.0, 184.0, 70.0, 37.0 ],
+									"patching_rect" : [ 767.0, 230.0, 116.5, 15.0 ],
 									"pictures" : [ "linear.svg", "easeInBack.svg", "easeInOutBack.svg", "easeOutBack.svg", "easeInBounce.svg", "easeInOutBounce.svg", "easeOutBounce.svg", "easeInCircular.svg", "easeInOutCircular.svg", "easeOutCircular.svg", "easeInCubic.svg", "easeInOutCubic.svg", "easeOutCubic.svg", "easeInElastic.svg", "easeInOutElastic.svg", "easeOutElastic.svg", "easeInExponential.svg", "easeInOutExponential.svg", "easeOutExponential.svg", "easeInQuadratic.svg", "easeInOutQuadratic.svg", "easeOutQuadratic.svg", "easeInQuartic.svg", "easeInOutQuartic.svg", "easeOutQuartic.svg", "easeInQuintic.svg", "easeInOutQuintic.svg", "easeOutQuintic.svg", "easeInSine.svg", "easeInOutSine.svg", "easeOutSine.svg", "exponential.svg", "freehand.svg", "logarithm.svg", "lowpass.svg", "power.svg", "smoothPolynomial.svg", "tanh.svg", "bartlett.svg", "blackman.svg", "blackmanHarris.svg", "expodec.svg", "gauss.svg", "hamming.svg", "hanning.svg", "kaiser.svg", "nuttall.svg", "rectangular.svg", "rosenbergGlottalPulse.svg", "trapezoid.svg", "tukey.svg", "welch.svg" ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_longname" : "live.menu[3]",
+											"parameter_longname" : "live.menu[1]",
+											"parameter_shortname" : "live.menu",
+											"parameter_type" : 2,
+											"parameter_enum" : [ "linear", "easeInBack", "easeInOutBack", "easeOutBack", "easeInBounce", "easeInOutBounce", "easeOutBounce", "easeInCircular", "easeInOutCircular", "easeOutCircular", "easeInCubic", "easeInOutCubic", "easeOutCubic", "easeInElastic", "easeInOutElastic", "easeOutElastic", "easeInExponential", "easeInOutExponential", "easeOutExponential", "easeInQuadratic", "easeInOutQuadratic", "easeOutQuadratic", "easeInQuartic", "easeInOutQuartic", "easeOutQuartic", "easeInQuintic", "easeInOutQuintic", "easeOutQuintic", "easeInSine", "easeInOutSine", "easeOutSine", "exponential", "freehand", "logarithm", "lowpass", "power", "smoothPolynomial", "tanh", "bartlett", "blackman", "blackmanHarris", "expodec", "gauss", "hamming", "hanning", "kaiser", "nuttall", "rectangular", "rosenbergGlottalPulse", "trapezoid", "tukey", "welch" ]
+										}
+
+									}
+,
+									"varname" : "live.menu[2]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 24.0,
+									"id" : "obj-20",
+									"maxclass" : "live.menu",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "float" ],
+									"parameter_enable" : 1,
+									"patching_rect" : [ 767.0, 190.0, 81.5, 30.0 ],
+									"pictures" : [ "linear.svg", "easeInBack.svg", "easeInOutBack.svg", "easeOutBack.svg", "easeInBounce.svg", "easeInOutBounce.svg", "easeOutBounce.svg", "easeInCircular.svg", "easeInOutCircular.svg", "easeOutCircular.svg", "easeInCubic.svg", "easeInOutCubic.svg", "easeOutCubic.svg", "easeInElastic.svg", "easeInOutElastic.svg", "easeOutElastic.svg", "easeInExponential.svg", "easeInOutExponential.svg", "easeOutExponential.svg", "easeInQuadratic.svg", "easeInOutQuadratic.svg", "easeOutQuadratic.svg", "easeInQuartic.svg", "easeInOutQuartic.svg", "easeOutQuartic.svg", "easeInQuintic.svg", "easeInOutQuintic.svg", "easeOutQuintic.svg", "easeInSine.svg", "easeInOutSine.svg", "easeOutSine.svg", "exponential.svg", "freehand.svg", "logarithm.svg", "lowpass.svg", "power.svg", "smoothPolynomial.svg", "tanh.svg", "bartlett.svg", "blackman.svg", "blackmanHarris.svg", "expodec.svg", "gauss.svg", "hamming.svg", "hanning.svg", "kaiser.svg", "nuttall.svg", "rectangular.svg", "rosenbergGlottalPulse.svg", "trapezoid.svg", "tukey.svg", "welch.svg" ],
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_longname" : "live.menu[2]",
 											"parameter_shortname" : "live.menu",
 											"parameter_type" : 2,
 											"parameter_enum" : [ "linear", "easeInBack", "easeInOutBack", "easeOutBack", "easeInBounce", "easeInOutBounce", "easeOutBounce", "easeInCircular", "easeInOutCircular", "easeOutCircular", "easeInCubic", "easeInOutCubic", "easeOutCubic", "easeInElastic", "easeInOutElastic", "easeOutElastic", "easeInExponential", "easeInOutExponential", "easeOutExponential", "easeInQuadratic", "easeInOutQuadratic", "easeOutQuadratic", "easeInQuartic", "easeInOutQuartic", "easeOutQuartic", "easeInQuintic", "easeInOutQuintic", "easeOutQuintic", "easeInSine", "easeInOutSine", "easeOutSine", "exponential", "freehand", "logarithm", "lowpass", "power", "smoothPolynomial", "tanh", "bartlett", "blackman", "blackmanHarris", "expodec", "gauss", "hamming", "hanning", "kaiser", "nuttall", "rectangular", "rosenbergGlottalPulse", "trapezoid", "tukey", "welch" ]
@@ -455,7 +481,46 @@
 									}
 ,
 									"usepicture" : 1,
-									"varname" : "live.menu[1]"
+									"varname" : "live.menu[3]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 40.0,
+									"id" : "obj-18",
+									"maxclass" : "live.menu",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "float" ],
+									"parameter_enable" : 1,
+									"patching_rect" : [ 881.5, 171.0, 108.0, 48.0 ],
+									"pictures" : [ "linear.png", "easeInBack.png", "easeInOutBack.png", "easeOutBack.png", "easeInBounce.png", "easeInOutBounce.png", "easeOutBounce.png", "easeInCircular.png", "easeInOutCircular.png", "easeOutCircular.png", "easeInCubic.png", "easeInOutCubic.png", "easeOutCubic.png", "easeInElastic.png", "easeInOutElastic.png", "easeOutElastic.png", "easeInExponential.png", "easeInOutExponential.png", "easeOutExponential.png", "easeInQuadratic.png", "easeInOutQuadratic.png", "easeOutQuadratic.png", "easeInQuartic.png", "easeInOutQuartic.png", "easeOutQuartic.png", "easeInQuintic.png", "easeInOutQuintic.png", "easeOutQuintic.png", "easeInSine.png", "easeInOutSine.png", "easeOutSine.png", "exponential.png", "freehand.png", "logarithm.png", "lowpass.png", "power.png", "smoothPolynomial.png", "tanh.png", "bartlett.png", "blackman.png", "blackmanHarris.png", "expodec.png", "gauss.png", "hamming.png", "hanning.png", "kaiser.png", "nuttall.png", "rectangular.png", "rosenbergGlottalPulse.png", "trapezoid.png", "tukey.png", "welch.png" ],
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_longname" : "live.menu[4]",
+											"parameter_shortname" : "live.menu",
+											"parameter_type" : 2,
+											"parameter_enum" : [ "linear", "easeInBack", "easeInOutBack", "easeOutBack", "easeInBounce", "easeInOutBounce", "easeOutBounce", "easeInCircular", "easeInOutCircular", "easeOutCircular", "easeInCubic", "easeInOutCubic", "easeOutCubic", "easeInElastic", "easeInOutElastic", "easeOutElastic", "easeInExponential", "easeInOutExponential", "easeOutExponential", "easeInQuadratic", "easeInOutQuadratic", "easeOutQuadratic", "easeInQuartic", "easeInOutQuartic", "easeOutQuartic", "easeInQuintic", "easeInOutQuintic", "easeOutQuintic", "easeInSine", "easeInOutSine", "easeOutSine", "exponential", "freehand", "logarithm", "lowpass", "power", "smoothPolynomial", "tanh", "bartlett", "blackman", "blackmanHarris", "expodec", "gauss", "hamming", "hanning", "kaiser", "nuttall", "rectangular", "rosenbergGlottalPulse", "trapezoid", "tukey", "welch" ]
+										}
+
+									}
+,
+									"usepicture" : 1,
+									"varname" : "live.menu[4]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-19",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 885.5, 269.0, 100.0, 22.0 ],
+									"style" : "",
+									"text" : "prepend function"
 								}
 
 							}
@@ -589,7 +654,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1309,19 +1374,6 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-16",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 782.5, 239.0, 105.0, 22.0 ],
-									"style" : "default",
-									"text" : "prepend function"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"hidden" : 1,
 									"id" : "obj-17",
 									"maxclass" : "newobj",
@@ -1560,7 +1612,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 644.0, 138.0, 197.0, 33.0 ],
+									"patching_rect" : [ 644.0, 116.0, 197.0, 33.0 ],
 									"style" : "default",
 									"text" : "Choose from among the available ramp drive methods and functions"
 								}
@@ -1598,29 +1650,49 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-13", 0 ],
+									"destination" : [ "obj-15", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"source" : [ "obj-12", 0 ]
+									"source" : [ "obj-14", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-16", 0 ],
+									"destination" : [ "obj-20", 0 ],
 									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-12", 1 ]
+									"hidden" : 1,
+									"source" : [ "obj-14", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-40", 0 ],
+									"destination" : [ "obj-14", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"midpoints" : [ 776.5, 258.0, 758.5, 258.0, 758.5, 148.0, 776.5, 148.0 ],
+									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-19", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 792.0, 294.0, 88.5, 294.0 ],
-									"source" : [ "obj-16", 0 ]
+									"midpoints" : [ 825.25, 256.5, 895.0, 256.5 ],
+									"source" : [ "obj-15", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-9", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"midpoints" : [ 776.5, 256.0, 866.0, 256.0, 866.0, 133.0, 891.0, 133.0 ],
+									"source" : [ "obj-15", 0 ]
 								}
 
 							}
@@ -1631,6 +1703,45 @@
 									"hidden" : 1,
 									"midpoints" : [ 40.5, 359.0, 88.5, 359.0 ],
 									"source" : [ "obj-17", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-14", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"midpoints" : [ 891.0, 222.0, 867.0, 222.0, 867.0, 153.0, 776.5, 153.0 ],
+									"source" : [ "obj-18", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-19", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 935.5, 255.75, 895.0, 255.75 ],
+									"source" : [ "obj-18", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-40", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 895.0, 294.0, 88.5, 294.0 ],
+									"source" : [ "obj-19", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-15", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-20", 0 ]
 								}
 
 							}
@@ -1892,6 +2003,15 @@
 								}
 
 							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-9", 0 ]
+								}
+
+							}
  ]
 					}
 ,
@@ -1923,7 +2043,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2002,7 +2122,6 @@
 							}
 , 							{
 								"box" : 								{
-									"fontsize" : 12.0,
 									"id" : "obj-4",
 									"items" : [ "max", ",", "system" ],
 									"labelclick" : 1,
@@ -2100,7 +2219,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -2682,7 +2801,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 1,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -3311,7 +3430,6 @@
 							}
 , 							{
 								"box" : 								{
-									"fontsize" : 12.0,
 									"id" : "obj-15",
 									"items" : [ "linear", ",", "easeInBack", ",", "easeInOutBack", ",", "easeOutBack", ",", "easeInBounce", ",", "easeInOutBounce", ",", "easeOutBounce", ",", "easeInCircular", ",", "easeInOutCircular", ",", "easeOutCircular", ",", "easeInCubic", ",", "easeInOutCubic", ",", "easeOutCubic", ",", "easeInElastic", ",", "easeInOutElastic", ",", "easeOutElastic", ",", "easeInExponential", ",", "easeInOutExponential", ",", "easeOutExponential", ",", "easeInQuadratic", ",", "easeInOutQuadratic", ",", "easeOutQuadratic", ",", "easeInQuartic", ",", "easeInOutQuartic", ",", "easeOutQuartic", ",", "easeInQuintic", ",", "easeInOutQuintic", ",", "easeOutQuintic", ",", "easeInSine", ",", "easeInOutSine", ",", "easeOutSine", ",", "exponential", ",", "freehand", ",", "logarithm", ",", "lowpass", ",", "power", ",", "smoothPolynomial", ",", "tanh", ",", "bartlett", ",", "blackman", ",", "blackmanHarris", ",", "expodec", ",", "gauss", ",", "hamming", ",", "hanning", ",", "kaiser", ",", "nuttall", ",", "rectangular", ",", "rosenbergGlottalPulse", ",", "trapezoid", ",", "tukey", ",", "welch" ],
 									"labelclick" : 1,
@@ -3358,7 +3476,6 @@
 							}
 , 							{
 								"box" : 								{
-									"fontsize" : 12.0,
 									"id" : "obj-23",
 									"items" : "<empty>",
 									"labelclick" : 1,
@@ -3389,7 +3506,6 @@
 							}
 , 							{
 								"box" : 								{
-									"fontsize" : 12.0,
 									"id" : "obj-9",
 									"items" : "<empty>",
 									"labelclick" : 1,
@@ -3737,13 +3853,15 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-46::obj-12" : [ "live.menu[3]", "live.menu", 0 ]
+			"obj-46::obj-18" : [ "live.menu[4]", "live.menu", 0 ],
+			"obj-46::obj-15" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-46::obj-20" : [ "live.menu[2]", "live.menu", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max.app/Contents/Resources/C74/help/resources",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max.app/Contents/Resources/C74/help/resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max.app/Contents/Resources/C74/help/resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
