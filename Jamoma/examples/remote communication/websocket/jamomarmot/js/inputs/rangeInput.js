@@ -50,13 +50,7 @@ function RangeInput(attributes, parentLi)
         _this.value = value;
         span.setAttribute('data-value', value);
         span.innerHTML = value;
-        var address = attributes.address;
-        var message = {
-            sender : 'telecommande',
-            operation: 'valueChange'
-        };
-        message[address] = parseFloat(value) ;
-        ws.send(JSON.stringify(message));
+        Preset.setValue(attributes.address, parseFloat(_this.value));
     };
 
     this.transformToSpan = function() {
