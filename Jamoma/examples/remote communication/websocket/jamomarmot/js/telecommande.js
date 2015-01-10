@@ -22,11 +22,10 @@ $(document).ready(function() {
     var absoluteAddress = '';
     var appName = document.getElementById('appName');
 
-    $('#connect').on('click', function() {
         console.log('connecting') ;
         document.getElementById('fadingBarsG').classList.remove('hidden');
         var settings = {
-            host: 'ws://' + $('#ip').val() + ':' + $('#port').val()
+            host: 'ws://' + window.location.hostname + ':' + window.location.port
         };
 
         ws = new WebSocket(settings.host);
@@ -137,6 +136,8 @@ $(document).ready(function() {
 
                 case ':namespace_all' :
                         Animation.namespace = data[Object.keys(data)[2]] ;
+                        var sender = data.sender ;
+                        document.getElementById('appName').innerHTML += ' - ' + sender ;
                         console.log(Animation.namespace) ;
                         builder = new ListBuilder() ;
                         var form = new NamespaceParser(Animation.namespace, builder).getForm() ;
@@ -162,7 +163,6 @@ $(document).ready(function() {
             }
 
         };
-    });
 
     function refreshAllValues(form)
     {
