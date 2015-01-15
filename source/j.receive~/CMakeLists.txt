@@ -3,7 +3,7 @@ cmake_policy(SET CMP0037 OLD)
 
 add_definitions(-DAUDIO_EXTERNAL -DJCOM_RECEIVE_TILDE)
 
-project(j.receive~)
+project(j.receive_tilda)
 
 set(PROJECT_SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/../j.receive/j.receive.cpp

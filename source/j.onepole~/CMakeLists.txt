@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
 cmake_policy(SET CMP0037 OLD)
 
-project(j.onepole~)
+project(j.onepole_tilda)
 
 set(PROJECT_SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/j.onepole~.cpp

@@ -3,7 +3,7 @@ cmake_policy(SET CMP0037 OLD)
 
 add_definitions( -DAUDIO_EXTERNAL -DJCOM_SEND_TILDE)
 
-project(j.send~)
+project(j.send_tilda)
 
 set(PROJECT_SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/../j.send/j.send.cpp
