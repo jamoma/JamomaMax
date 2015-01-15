@@ -561,10 +561,10 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "default", "bang" ],
+					"outlettype" : [ "default", "float" ],
 					"patching_rect" : [ 460.0, 234.0, 218.0, 22.0 ],
 					"style" : "",
-					"text" : "t default bang"
+					"text" : "t default 0."
 				}
 
 			}
@@ -600,6 +600,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 1.0, 0.66, 0.0, 1.0 ],
 					"id" : "obj-143",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -607,7 +608,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 460.0, 283.658844, 218.0, 22.0 ],
 					"style" : "",
-					"text" : "test.string.equals"
+					"text" : "test.equals"
 				}
 
 			}
@@ -1115,6 +1116,10 @@
 				"patcherrelativepath" : "../../../../../../../../../../../../Documents/Max/Packages/testpackage/misc",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "oscar.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "oscar.mxo",

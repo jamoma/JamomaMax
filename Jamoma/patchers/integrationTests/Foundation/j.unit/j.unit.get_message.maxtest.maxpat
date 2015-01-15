@@ -89,15 +89,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-30",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 250.0, 502.5, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 250.0, 502.5, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -117,15 +117,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-26",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 864.400024, 502.5, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 864.400024, 502.5, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -144,15 +144,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-25",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 710.799988, 502.5, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 710.799988, 502.5, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -171,15 +171,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-22",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 557.200012, 502.5, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 557.200012, 502.5, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -198,15 +198,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-19",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 403.600037, 502.5, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 403.600037, 502.5, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}

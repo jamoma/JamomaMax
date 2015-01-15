@@ -38,15 +38,15 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-15",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 512.0, 382.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 512.0, 382.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -78,15 +78,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-14",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 157.0, 382.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 157.0, 382.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -221,6 +221,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-54",
 					"linecount" : 3,
 					"maxclass" : "newobj",
@@ -287,6 +288,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-49",
 					"linecount" : 3,
 					"maxclass" : "newobj",
@@ -531,14 +533,14 @@
 		"dependency_cache" : [ 			{
 				"name" : "test.string.equals.maxpat",
 				"bootpath" : "~/Documents/Max/Packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../Documents/Max/Packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max/Packages/testpackage/misc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "test.string.equals.js",
 				"bootpath" : "~/Documents/Max/Packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../Documents/Max/Packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max/Packages/testpackage/misc",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
