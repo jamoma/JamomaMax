@@ -15,6 +15,16 @@ addMaxsupport()
 
 add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
 
+# Since XCode does not like tildas in project names, if
+# a project_name ends by _tilda, we replace it with '~' in the
+# Max object.
+if("${PROJECT_NAME}" MATCHES ".*_tilda")
+	string(REGEX REPLACE "_tilda" "~" JAMOMAMAX_EXTERNAL_OUTPUT_NAME "${PROJECT_NAME}")
+	set_target_properties(${PROJECT_NAME}
+						  PROPERTIES OUTPUT_NAME "${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}")
+endif()
+
+
 target_link_libraries(${PROJECT_NAME} Foundation)
 target_link_libraries(${PROJECT_NAME} Modular)
 target_link_libraries(${PROJECT_NAME} JamomaMax)
@@ -22,8 +32,8 @@ target_link_libraries(${PROJECT_NAME} DSP)
 target_link_libraries(${PROJECT_NAME} Graph)
 target_link_libraries(${PROJECT_NAME} AudioGraph)
 
-### Output ###
+### Output ###
 setOutput()
 
-### Tests ###
+### Tests ###
 addTestTarget()
