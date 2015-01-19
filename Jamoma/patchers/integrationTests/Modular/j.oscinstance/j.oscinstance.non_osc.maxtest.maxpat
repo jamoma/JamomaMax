@@ -38,15 +38,15 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-55",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1067.0, 408.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 1067.0, 408.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -91,20 +91,21 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-30",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 867.0, 408.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 867.0, 408.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-6",
 					"linecount" : 3,
 					"maxclass" : "newobj",
@@ -119,20 +120,21 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-24",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 647.0, 408.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 647.0, 408.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-23",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -146,15 +148,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-19",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 432.0, 408.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 432.0, 408.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -173,6 +175,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-22",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -186,15 +189,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-18",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 217.0, 408.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 217.0, 408.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -213,6 +216,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-14",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -252,6 +256,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -316,6 +321,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-13",
 					"linecount" : 3,
 					"maxclass" : "newobj",
@@ -382,6 +388,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-44",
 					"linecount" : 3,
 					"maxclass" : "newobj",
@@ -448,6 +455,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-38",
 					"linecount" : 3,
 					"maxclass" : "newobj",
@@ -501,6 +509,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-29",
 					"linecount" : 3,
 					"maxclass" : "newobj",
@@ -1012,14 +1021,14 @@
 		"dependency_cache" : [ 			{
 				"name" : "test.string.equals.maxpat",
 				"bootpath" : "~/Documents/Max/Packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../Documents/Max/Packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max/Packages/testpackage/misc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "test.string.equals.js",
 				"bootpath" : "~/Documents/Max/Packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../Documents/Max/Packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max/Packages/testpackage/misc",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

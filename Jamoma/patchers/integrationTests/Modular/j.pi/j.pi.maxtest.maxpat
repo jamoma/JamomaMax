@@ -209,15 +209,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-19",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 433.5, 296.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 433.5, 296.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -263,15 +263,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-16",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 229.0, 296.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 229.0, 296.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -526,7 +526,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "j.pi.maxpat",
 				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/pi",
-				"patcherrelativepath" : "../../../../Jamoma/patchers/components/data/pi",
+				"patcherrelativepath" : "../../../components/data/pi",
 				"type" : "JSON",
 				"implicit" : 1
 			}

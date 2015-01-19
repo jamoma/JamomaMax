@@ -58,7 +58,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 391.5, 742.0, 238.0, 33.0 ],
+					"patching_rect" : [ 391.5, 742.0, 288.0, 33.0 ],
 					"style" : "default",
 					"text" : "test.assert Jamoma/Foundation/j.unit/color/neutral2hsl @tags Jamoma Foundation j.unit"
 				}
@@ -114,7 +114,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 391.5, 343.0, 238.0, 33.0 ],
+					"patching_rect" : [ 391.5, 343.0, 288.0, 33.0 ],
 					"style" : "default",
 					"text" : "test.assert Jamoma/Foundation/j.unit/color/hsl2neutral @tags Jamoma Foundation j.unit"
 				}
@@ -174,15 +174,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-105",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1166.0, 714.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 1166.0, 714.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -518,15 +518,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-82",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 184.0, 714.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 184.0, 714.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -875,15 +875,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-87",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 391.5, 714.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 391.5, 714.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -1232,15 +1232,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-92",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 604.5, 714.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 604.5, 714.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -1589,15 +1589,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-97",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 812.5, 714.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 812.5, 714.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -1946,15 +1946,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-77",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 184.0, 317.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 184.0, 317.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -2303,15 +2303,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-72",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 391.5, 317.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 391.5, 317.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -2660,15 +2660,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-67",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 604.5, 317.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 604.5, 317.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -3017,15 +3017,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-62",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 812.5, 317.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 812.5, 317.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -3374,15 +3374,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-31",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1023.5, 317.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 1023.5, 317.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -3540,7 +3540,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 812.5, 157.0, 100.0, 45.0 ],
+					"patching_rect" : [ 812.5, 157.0, 103.0, 45.0 ],
 					"style" : "default",
 					"text" : "j.unit @dataspace color @input rgb8 @output rgb"
 				}
@@ -3793,7 +3793,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 184.0, 157.0, 100.0, 45.0 ],
+					"patching_rect" : [ 184.0, 157.0, 103.0, 45.0 ],
 					"style" : "default",
 					"text" : "j.unit @dataspace color @input cmy @output rgb"
 				}

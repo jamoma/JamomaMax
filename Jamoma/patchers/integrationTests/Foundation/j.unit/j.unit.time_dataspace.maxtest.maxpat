@@ -304,15 +304,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-15",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 916.0, 705.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 916.0, 705.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -330,15 +330,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-40",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 614.0, 705.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 614.0, 705.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -357,15 +357,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-38",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 455.0, 705.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 455.0, 705.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -384,15 +384,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-36",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 296.0, 705.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 296.0, 705.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -411,15 +411,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-34",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 137.0, 705.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 137.0, 705.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -438,15 +438,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-32",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 132.0, 313.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 132.0, 313.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -465,15 +465,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-30",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 296.0, 313.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 296.0, 313.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -492,15 +492,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-28",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 460.0, 313.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 460.0, 313.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -519,15 +519,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-27",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 624.0, 313.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 624.0, 313.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
