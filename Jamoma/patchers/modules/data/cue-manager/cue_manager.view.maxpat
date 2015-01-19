@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 298.0, 197.0, 300.0, 175.0 ],
+		"rect" : [ 696.0, 526.0, 315.0, 178.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -293,7 +293,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"title" : "/cue_manager(view)",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-9",
@@ -664,7 +663,6 @@
 					"fontsize" : 12.0,
 					"id" : "obj-71",
 					"keymode" : 1,
-					"linecount" : 2,
 					"lines" : 3,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
@@ -676,7 +674,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 6.0, 112.199982, 292.0, 35.350128 ],
 					"style" : "",
-					"text" : "\"something about this cue\"",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -686,7 +683,7 @@
 					"annotation" : "none",
 					"fontsize" : 14.0,
 					"id" : "obj-20",
-					"items" : "setup",
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1450,16 +1447,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-107",
-					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.75, 161.5, 301.0, 40.0 ],
+					"patching_rect" : [ 14.75, 161.5, 302.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 3,
-					"presentation_rect" : [ 6.0, 39.199982, 294.0, 40.0 ],
-					"style" : "",
-					"text" : "Mac HD:/Users/julienrabin/@GMEA/Productions/Sonorama/Sonorama project/patchers/sonorama.cues.txt"
+					"presentation_rect" : [ 6.0, 39.199982, 294.0, 18.0 ],
+					"style" : ""
 				}
 
 			}
@@ -1601,7 +1595,7 @@
 					"patching_rect" : [ 23.0, 18.0, 300.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, -1.0, 300.0, 175.0 ],
-					"text" : "/cues"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -1979,7 +1973,54 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.datetime.maxpat",
+				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/datetime",
+				"patcherrelativepath" : "../../../components/data/datetime",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.namespace_selector.maxpat",
+				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespace_selector",
+				"patcherrelativepath" : "../../../components/data/namespace_selector",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.namespace.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
