@@ -10,3 +10,6 @@ set(PROJECT_SRCS
 )
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/Cmake/MaxExternalCommon.cmake)
+
+
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "j.~")
