@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 8,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 100.0, 100.0, 1123.0, 691.0 ],
+		"rect" : [ 69.0, 79.0, 1123.0, 691.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -43,7 +43,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -425,7 +425,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 8,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -568,7 +568,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 8,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -825,7 +825,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -885,11 +885,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1123.0, 665.0 ],
+						"rect" : [ 0.0, 26.0, 1123.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -1331,7 +1331,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1483,7 +1483,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 8,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -1792,7 +1792,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2666,11 +2666,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1123.0, 665.0 ],
+						"rect" : [ 69.0, 105.0, 1123.0, 665.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2834,11 +2834,11 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 8,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
+										"rect" : [ 25.0, 69.0, 561.0, 353.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -2861,12 +2861,40 @@
 												"box" : 												{
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
+													"id" : "obj-14",
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 247.0, 319.75, 261.25, 18.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-11",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "", "", "" ],
+													"patching_rect" : [ 247.0, 277.0, 82.5, 33.0 ],
+													"text" : "j.receive preset:names"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
 													"id" : "obj-104",
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 281.0, 339.0, 97.0, 18.0 ],
+													"patching_rect" : [ 247.0, 199.0, 97.0, 18.0 ],
 													"text" : "preset:delete 2"
 												}
 
@@ -2880,7 +2908,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 281.0, 263.0, 67.0, 18.0 ],
+													"patching_rect" : [ 247.0, 123.0, 67.0, 18.0 ],
 													"text" : "preset:edit"
 												}
 
@@ -2894,7 +2922,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 281.0, 203.0, 106.0, 18.0 ],
+													"patching_rect" : [ 247.0, 63.0, 106.0, 18.0 ],
 													"text" : "preset:edit default"
 												}
 
@@ -2908,7 +2936,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 281.0, 319.0, 127.0, 18.0 ],
+													"patching_rect" : [ 247.0, 179.0, 127.0, 18.0 ],
 													"text" : "preset:delete default"
 												}
 
@@ -2922,7 +2950,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 289.0, 214.0, 18.0 ],
+													"patching_rect" : [ 16.0, 149.0, 214.0, 18.0 ],
 													"text" : "preset:rename default \"curious preset\""
 												}
 
@@ -2936,7 +2964,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 269.0, 189.0, 18.0 ],
+													"patching_rect" : [ 16.0, 129.0, 189.0, 18.0 ],
 													"text" : "preset:copy default defaultCopy 1"
 												}
 
@@ -2950,7 +2978,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 249.0, 126.0, 18.0 ],
+													"patching_rect" : [ 16.0, 109.0, 126.0, 18.0 ],
 													"text" : "preset:move default 3"
 												}
 
@@ -2964,7 +2992,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 216.0, 97.0, 18.0 ],
+													"patching_rect" : [ 16.0, 76.0, 97.0, 18.0 ],
 													"text" : "preset:move 1 2"
 												}
 
@@ -2978,7 +3006,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 333.0, 154.25, 73.0, 18.0 ],
+													"patching_rect" : [ 299.0, 14.25, 73.0, 18.0 ],
 													"text" : "preset:clear"
 												}
 
@@ -2992,7 +3020,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 349.0, 263.0, 97.0, 20.0 ],
+													"patching_rect" : [ 315.0, 123.0, 97.0, 20.0 ],
 													"text" : "all the preset list",
 													"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 												}
@@ -3008,7 +3036,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 50.0, 154.25, 103.0, 33.0 ],
+													"patching_rect" : [ 16.0, 14.25, 103.0, 33.0 ],
 													"text" : "change the order of the preset list"
 												}
 
@@ -3022,7 +3050,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 417.0, 154.25, 114.0, 20.0 ],
+													"patching_rect" : [ 383.0, 14.25, 114.0, 20.0 ],
 													"text" : "clear the preset list"
 												}
 
@@ -3034,7 +3062,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 179.111115, 417.0, 25.0, 25.0 ]
+													"patching_rect" : [ 145.111115, 277.0, 25.0, 25.0 ]
 												}
 
 											}
@@ -3054,6 +3082,16 @@
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-104", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-14", 1 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"midpoints" : [ 256.5, 314.375, 498.75, 314.375 ],
+													"source" : [ "obj-11", 0 ]
 												}
 
 											}
@@ -3741,7 +3779,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -4071,7 +4109,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -4532,7 +4570,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -5033,7 +5071,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -5344,7 +5382,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 8,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -5382,7 +5420,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 8,
+															"revision" : 6,
 															"architecture" : "x86"
 														}
 ,
@@ -5750,14 +5788,14 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
 				"patcherrelativepath" : "../patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
@@ -5765,7 +5803,7 @@
 , 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
