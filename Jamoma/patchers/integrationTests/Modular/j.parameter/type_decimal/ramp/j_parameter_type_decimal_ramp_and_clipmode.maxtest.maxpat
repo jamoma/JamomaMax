@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -209,7 +209,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-47",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -377,7 +377,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-18",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1161,8 +1161,7 @@
 			}
 , 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../../../Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
