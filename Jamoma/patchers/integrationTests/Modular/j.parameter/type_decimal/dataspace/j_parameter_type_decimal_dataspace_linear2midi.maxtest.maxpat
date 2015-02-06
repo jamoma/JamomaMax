@@ -179,7 +179,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 322.0, 272.0, 218.0, 62.0 ],
 					"style" : "",
-					"text" : "j.parameter linear2db @type decimal @dataspace gain @unit midigain @ramp/drive scheduler @ramp/function linear"
+					"text" : "j.parameter linear2db @type decimal @dataspace gain @unit midigain @ramp/drive max @ramp/function linear"
 				}
 
 			}

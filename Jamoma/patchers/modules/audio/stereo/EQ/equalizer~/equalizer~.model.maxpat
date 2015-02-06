@@ -48,7 +48,7 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 399.0625, 171.0, 154.0, 156.0 ],
 					"style" : "",
-					"text" : "j.parameter_array filter.[6]/frequency @type decimal @range 20. 20000. @clipmode both @ramp/drive scheduler @repetitions/filter 1 @dataspace time @unit Hz @priority 3 @description \"Center frequency (Hz)\" @default 1000."
+					"text" : "j.parameter_array filter.[6]/frequency @type decimal @range 20. 20000. @clipmode both @ramp/drive max @repetitions/filter 1 @dataspace time @unit Hz @priority 3 @description \"Center frequency (Hz)\" @default 1000."
 				}
 
 			}
@@ -79,7 +79,7 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 741.1875, 171.0, 151.0, 156.0 ],
 					"style" : "",
-					"text" : "j.parameter_array filter.[6]/octave_bandwidth @type decimal @ramp/drive scheduler @range 0.01 10. @clipmode both @repetitions/filter 1 @description \"Filter bandwidth/slope width in octaves.\" @priority 5 @default 1"
+					"text" : "j.parameter_array filter.[6]/octave_bandwidth @type decimal @ramp/drive max @range 0.01 10. @clipmode both @repetitions/filter 1 @description \"Filter bandwidth/slope width in octaves.\" @priority 5 @default 1"
 				}
 
 			}
@@ -1204,7 +1204,7 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 570.125, 171.0, 141.0, 143.0 ],
 					"style" : "",
-					"text" : "j.parameter_array filter.[6]/gain @type decimal @range -24 24 @clipmode both @ramp/drive scheduler @repetitions/filter 1 @unit dB @priority 4 @dataspace gain @description \"Gain (dB)\" @default 0."
+					"text" : "j.parameter_array filter.[6]/gain @type decimal @range -24 24 @clipmode both @ramp/drive max @repetitions/filter 1 @unit dB @priority 4 @dataspace gain @description \"Gain (dB)\" @default 0."
 				}
 
 			}

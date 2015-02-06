@@ -819,7 +819,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 43.0, 54.0, 210.0, 76.0 ],
 									"style" : "",
-									"text" : "j.parameter rate @type decimal @range -100. 100. @clipmode both @repetitions/filter 0 @ramp/drive scheduler @ramp/function linear @dataspace none @priority 6",
+									"text" : "j.parameter rate @type decimal @range -100. 100. @clipmode both @repetitions/filter 0 @ramp/drive max @ramp/function linear @dataspace none @priority 6",
 									"varname" : "rate"
 								}
 

@@ -171,7 +171,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 266.0, 265.0, 194.0, 62.0 ],
 					"style" : "",
-					"text" : "j.parameter aa @type integer @dataspace gain @unit midigain @ramp/drive scheduler @ramp/function linear"
+					"text" : "j.parameter aa @type integer @dataspace gain @unit midigain @ramp/drive max @ramp/function linear"
 				}
 
 			}

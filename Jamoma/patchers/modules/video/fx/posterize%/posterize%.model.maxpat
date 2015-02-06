@@ -116,7 +116,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 270.0, 66.0, 128.0, 116.0 ],
-					"text" : "j.parameter levels @type decimal @range 1.001 15 @clipmode low @ramp/drive scheduler @ramp/function linear @description \"Amount of levels to flatten color information  towards.\""
+					"text" : "j.parameter levels @type decimal @range 1.001 15 @clipmode low @ramp/drive max @ramp/function linear @description \"Amount of levels to flatten color information  towards.\""
 				}
 
 			}
