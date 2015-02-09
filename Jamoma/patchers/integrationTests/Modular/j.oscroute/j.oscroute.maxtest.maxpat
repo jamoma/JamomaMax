@@ -116,15 +116,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-59",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1020.0, 371.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 1020.0, 371.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -170,15 +170,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-47",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 829.0, 371.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 829.0, 371.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -224,15 +224,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-43",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 683.5, 371.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 683.5, 371.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -252,15 +252,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-39",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 538.0, 371.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 538.0, 371.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -319,15 +319,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-31",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 347.0, 371.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 347.0, 371.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -360,15 +360,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-27",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 201.5, 371.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 201.5, 371.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -414,15 +414,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-4",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 56.0, 371.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 56.0, 371.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -1210,14 +1210,14 @@
 		"dependency_cache" : [ 			{
 				"name" : "test.string.equals.maxpat",
 				"bootpath" : "~/Documents/Max/Packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../Documents/Max/Packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max/Packages/testpackage/misc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "test.string.equals.js",
 				"bootpath" : "~/Documents/Max/Packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../Documents/Max/Packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max/Packages/testpackage/misc",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

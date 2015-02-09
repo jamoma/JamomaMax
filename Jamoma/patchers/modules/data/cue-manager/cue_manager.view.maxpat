@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 1,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 452.0, 51.0, 766.0, 506.0 ],
+		"rect" : [ 696.0, 526.0, 315.0, 178.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -261,11 +261,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 460.0, 52.0, 564.0, 404.0 ],
+						"rect" : [ 565.0, 70.0, 383.0, 264.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -711,7 +711,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1012,7 +1012,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 1,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1450,7 +1450,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.75, 161.5, 301.0, 18.0 ],
+					"patching_rect" : [ 14.75, 161.5, 302.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 6.0, 39.199982, 294.0, 18.0 ],
 					"style" : ""
@@ -1595,7 +1595,7 @@
 					"patching_rect" : [ 23.0, 18.0, 300.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, -1.0, 300.0, 175.0 ],
-					"text" : "/cue_manager"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -1977,20 +1977,20 @@
 		"dependency_cache" : [ 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.datetime.maxpat",
-				"bootpath" : "~/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/datetime",
+				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/datetime",
 				"patcherrelativepath" : "../../../components/data/datetime",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespace_selector.maxpat",
-				"bootpath" : "~/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespace_selector",
+				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespace_selector",
 				"patcherrelativepath" : "../../../components/data/namespace_selector",
 				"type" : "JSON",
 				"implicit" : 1

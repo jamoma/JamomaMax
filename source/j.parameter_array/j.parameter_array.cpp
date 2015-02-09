@@ -310,7 +310,8 @@ void data_array_build(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
     x->iterateInternals = NO;
     
     // select all datas
-    wrappedModularClass_ArraySelect(self, gensym("*"), 0, NULL);
+    if (x->arraySize > 0)
+        wrappedModularClass_ArraySelect(self, gensym("*"), 0, NULL);
 }
 
 void data_array_build_index(TTPtr self, TTObject& returnedData, TTSymbol service, TTUInt32 index)
@@ -351,8 +352,24 @@ void data_address(TTPtr self, t_symbol *address)
                 }
                 
                 t_atom number;
-                atom_setlong(&number, jamoma_parse_bracket(address, x->arrayFormatInteger, x->arrayFormatString));
-
+                TTString newArrayFormatInteger;
+                TTString newArrayFormatString;
+                atom_setlong(&number, jamoma_parse_bracket(address, newArrayFormatInteger, newArrayFormatString));
+                
+                // if the address format change
+                if (newArrayFormatInteger != x->arrayFormatInteger &&
+                    newArrayFormatString != x->arrayFormatString &&
+                    x->arraySize > 0)
+                {
+                    // delete all formers addresses
+                    t_atom zero;
+                    atom_setlong(&zero, 0);
+                    defer(self,(method)data_array_build, _sym_nothing, 1, &zero);
+                }
+                
+                x->arrayFormatInteger = newArrayFormatInteger;
+                x->arrayFormatString = newArrayFormatString;
+                
                 // build internals
                 defer(self,(method)data_array_build, _sym_nothing, 1, &number);
                 

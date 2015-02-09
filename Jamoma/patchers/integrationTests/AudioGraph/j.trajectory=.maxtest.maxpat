@@ -38,15 +38,15 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-57",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 150.75, 454.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 150.75, 454.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -145,15 +145,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-47",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 489.25, 454.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 489.25, 454.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -252,15 +252,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-38",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 781.25, 454.0, 20.0, 20.0 ],
-					"style" : "default"
+					"patching_rect" : [ 781.25, 454.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}

@@ -144,6 +144,7 @@ void jamoma_subscriber_get_patcher_list(t_object *x, TTList& aContextListToFill)
 	t_object	*patcherPtr = NULL;
 	TTSymbol	patcherContext;
 	TTSymbol	patcherName;
+    TTSymbol    patcherInstance;
 	TTSymbol	patcherClass;
 	TTSymbol	lowerContext;
 	
@@ -160,11 +161,9 @@ void jamoma_subscriber_get_patcher_list(t_object *x, TTList& aContextListToFill)
 		
 				// keep it as lowerContext
 				lowerContext = patcherContext;
-		*/		
-				// insert the current patcher name and his pointer to the list
-				v = patcherName;
-				v.append((TTPtr)patcherPtr);
-				aContextListToFill.insert(0, v);
+		*/
+                // store each name.instance part of the patcherName (level.i/sub.j/name.k)
+                jamoma_subscriber_fill_list(aContextListToFill, TTAddress(patcherName), patcherPtr);
 				
 				// replace current object by his parent patcher
 				objPtr = patcherPtr;
@@ -181,6 +180,17 @@ void jamoma_subscriber_get_patcher_list(t_object *x, TTList& aContextListToFill)
 			break;
 		
 	} while (jamoma_patcher_get_hierarchy(objPtr) != _sym_topmost);
+}
+
+void jamoma_subscriber_fill_list(TTList& listToFill, TTAddress address, TTPtr pointer)
+{
+    TTSymbol level = address.getNameInstance();
+    TTValue v(level, pointer);
+    listToFill.insert(0, v);
+    
+    TTAddress parent = address.getParent();
+    if (parent != kTTAdrsEmpty)
+        jamoma_subscriber_fill_list(listToFill, parent, pointer);
 }
 
 // Method to deal with TTContainer

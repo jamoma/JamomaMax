@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 1,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 482.0, 108.0, 634.0, 753.0 ],
+		"rect" : [ 539.0, 79.0, 634.0, 753.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,15 +38,15 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-27",
+					"bubble" : 1,
+					"id" : "obj-5",
+					"linecount" : 7,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 118.0, 129.0, 20.0 ],
-					"presentation_rect" : [ 37.0, 86.0, 0.0, 0.0 ],
-					"style" : "default",
-					"text" : "Deprecated approach:",
-					"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
+					"patching_rect" : [ 211.0, 187.0, 165.0, 104.0 ],
+					"style" : "",
+					"text" : "j.initialized provides a deferlowed notification of a model initialization.\n\nOne can also provide as argument an optional delay time."
 				}
 
 			}
@@ -56,7 +56,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 277.0, 118.0, 150.0, 20.0 ],
+					"patching_rect" : [ 23.0, 92.0, 150.0, 20.0 ],
 					"style" : "",
 					"text" : "Some models"
 				}
@@ -64,95 +64,26 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-23",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 324.0, 257.0, 20.0 ],
-					"style" : "",
-					"text" : "Notification when a model has been initialised:"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 1,
-					"fontsize" : 12.0,
-					"id" : "obj-6",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 230.0, 287.0, 20.0 ],
-					"presentation_rect" : [ 31.0, 167.0, 0.0, 0.0 ],
-					"style" : "default",
-					"text" : "j.initialized is deprecated:",
-					"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 12.0,
-					"id" : "obj-21",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 261.0, 536.0, 298.0, 20.0 ],
-					"style" : "default",
-					"text" : "Responds to all models under a node"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 12.0,
 					"id" : "obj-20",
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 261.0, 467.0, 193.0, 20.0 ],
+					"patching_rect" : [ 260.0, 559.0, 193.0, 60.0 ],
 					"style" : "default",
-					"text" : "Responds to all model instances"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 12.0,
-					"id" : "obj-17",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 30.0, 562.0, 177.0, 22.0 ],
-					"style" : "default",
-					"text" : "print /all_Initialized"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 12.0,
-					"id" : "obj-19",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 30.0, 536.0, 215.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.receive /*.*:initialized"
+					"text" : "Note that if you dont need extra deferlow and delay features of j.initialized, you may use j.receive to bind to a model init notification"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"annotation" : "Output information from mouse",
-					"fontsize" : 12.0,
 					"id" : "obj-16",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 277.0, 178.0, 163.0, 22.0 ],
+					"patching_rect" : [ 23.0, 152.0, 163.0, 22.0 ],
 					"style" : "default",
 					"text" : "mouse.model /mouse.1"
 				}
@@ -160,12 +91,11 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 12.0,
 					"id" : "obj-14",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 493.0, 180.0, 22.0 ],
+					"patching_rect" : [ 28.0, 585.0, 180.0, 22.0 ],
 					"style" : "default",
 					"text" : "print /mice_Initialized"
 				}
@@ -173,13 +103,12 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 12.0,
 					"id" : "obj-15",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 29.0, 467.0, 219.0, 22.0 ],
+					"patching_rect" : [ 28.0, 559.0, 219.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.receive /mouse.*:initialized"
 				}
@@ -187,12 +116,11 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 12.0,
 					"id" : "obj-13",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 442.0, 525.0, 20.0 ],
+					"patching_rect" : [ 29.0, 368.0, 211.0, 20.0 ],
 					"style" : "default",
 					"text" : "Wildcards can be used in notifications"
 				}
@@ -201,13 +129,12 @@
 , 			{
 				"box" : 				{
 					"annotation" : "Output information from mouse",
-					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 277.0, 147.0, 151.0, 22.0 ],
+					"patching_rect" : [ 23.0, 121.0, 151.0, 22.0 ],
 					"style" : "default",
 					"text" : "mouse.model /mouse"
 				}
@@ -215,12 +142,11 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 12.0,
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 375.0, 180.0, 22.0 ],
+					"patching_rect" : [ 29.0, 416.0, 180.0, 22.0 ],
 					"style" : "default",
 					"text" : "print /mouse_Initialized0.6"
 				}
@@ -228,34 +154,19 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 12.0,
 					"id" : "obj-11",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 29.0, 349.0, 210.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.receive /mouse:initialized"
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 29.0, 390.0, 77.0, 22.0 ],
+					"style" : "",
+					"text" : "j.initialized /*"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 12.0,
-					"id" : "obj-7",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 256.0, 294.0, 20.0 ],
-					"style" : "default",
-					"text" : "Please use j.receive instead, as illustrated below"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 12.0,
 					"id" : "obj-18",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -269,7 +180,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 12.0,
 					"hidden" : 1,
 					"id" : "obj-42",
 					"maxclass" : "newobj",
@@ -284,7 +194,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 12.0,
 					"hidden" : 1,
 					"id" : "obj-43",
 					"maxclass" : "newobj",
@@ -299,7 +208,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 12.0,
 					"id" : "obj-72",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -312,12 +220,11 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 12.0,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 178.0, 166.0, 22.0 ],
+					"patching_rect" : [ 23.0, 259.0, 166.0, 22.0 ],
 					"style" : "default",
 					"text" : "print /mouse_Initialized"
 				}
@@ -346,15 +253,14 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 12.0,
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 29.0, 147.0, 161.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.initialized /mouse"
+					"patching_rect" : [ 23.0, 228.0, 139.0, 22.0 ],
+					"style" : "",
+					"text" : "j.initialized /mouse 1000"
 				}
 
 			}
@@ -388,15 +294,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-19", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -416,42 +313,42 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/initialized",
+				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/initialized",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
 				"patcherrelativepath" : "../jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
 				"patcherrelativepath" : "../../../modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1

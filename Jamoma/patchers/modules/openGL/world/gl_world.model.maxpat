@@ -1258,7 +1258,7 @@
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 218.0, 554.0, 601.0, 45.0 ],
 													"style" : "",
-													"text" : "j.parameter maxsubsteps @type integer @range 1 100 @clipmode low @ramp/drive scheduler @description \"Maximum number of internal simulation steps between updates (default = 1). Increase this number if FPS is low in order to prevent the simulation from losing time.\" @default 1",
+													"text" : "j.parameter maxsubsteps @type integer @range 1 100 @clipmode low @ramp/drive max @description \"Maximum number of internal simulation steps between updates (default = 1). Increase this number if FPS is low in order to prevent the simulation from losing time.\" @default 1",
 													"varname" : "3D/position[3]"
 												}
 
