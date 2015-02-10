@@ -228,14 +228,8 @@ void score_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 
 void score_filechanged(TTPtr self, char *filename, short path)
 {
-	char 		fullpath[MAX_PATH_CHARS];		// path and name passed on to the xml parser
-	char		posixpath[MAX_PATH_CHARS];
-	t_atom		a;
-	
-	path_topathname(path, filename, fullpath);
-	path_nameconform(fullpath, posixpath, PATH_STYLE_NATIVE, PATH_TYPE_BOOT);
-	
-	atom_setsym(&a, gensym(posixpath));
+	t_atom a;
+	atom_setsym(&a, gensym(filename));
 	defer_low(self, (method)score_doread, gensym("read"), 1, &a);
 }
 
@@ -253,10 +247,10 @@ void score_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         // stop the score
         x->wrappedObject.send("End");
         
-        TTSymbol filepath = jamoma_file_read((t_object*)x, argc, argv, 0);
+        TTSymbol userpath = jamoma_file_read((t_object*)x, argc, argv, 0);
         
         critical_enter(0);
-        TTErr err = EXTRA->xmlHandler->send(kTTSym_Read, filepath);
+        TTErr err = EXTRA->xmlHandler->send(kTTSym_Read, userpath);
         critical_exit(0);
         
         if (!err)
@@ -273,11 +267,13 @@ void score_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         
         short       outvol;
         t_fourcc	outtype, filetype = 'TEXT';
+        char        filepath[MAX_FILENAME_CHARS];
         
-        if (locatefile_extended((char*)filepath.c_str(), &outvol, &outtype, &filetype, 0))
+        strncpy_zero(filepath, userpath.c_str(), MAX_FILENAME_CHARS); // must copy symbol before calling locatefile_extended
+        if (locatefile_extended((char*)filepath, &outvol, &outtype, &filetype, 0))
 			return;
 		
-		EXTRA->filewatcher = filewatcher_new((t_object*)x, outvol, (char*)filepath.c_str());
+		EXTRA->filewatcher = filewatcher_new((t_object*)x, outvol, (char*)filepath);
 		filewatcher_start(EXTRA->filewatcher);
 	}
 }
@@ -326,10 +322,10 @@ void score_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         char filename[MAX_FILENAME_CHARS];
 		snprintf(filename, MAX_FILENAME_CHARS, "untitled.score");
         
-        TTSymbol filepath = jamoma_file_write((t_object*)x, argc, argv, filename);
+        TTSymbol userpath = jamoma_file_write((t_object*)x, argc, argv, filename);
 		
         critical_enter(0);
-        TTErr err = EXTRA->xmlHandler->send(kTTSym_Write, filepath);
+        TTErr err = EXTRA->xmlHandler->send(kTTSym_Write, userpath);
         critical_exit(0);
         
         if (!err)
@@ -346,11 +342,13 @@ void score_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         
         short       outvol;
         t_fourcc	outtype, filetype = 'TEXT';
+        char        filepath[MAX_FILENAME_CHARS];
         
-        if (locatefile_extended((char*)filepath.c_str(), &outvol, &outtype, &filetype, 0))
+        strncpy_zero(filepath, userpath.c_str(), MAX_FILENAME_CHARS); // must copy symbol before calling locatefile_extended
+        if (locatefile_extended((char*)filepath, &outvol, &outtype, &filetype, 0))
 			return;
 		
-		EXTRA->filewatcher = filewatcher_new((t_object*)x, outvol, (char*)filepath.c_str());
+		EXTRA->filewatcher = filewatcher_new((t_object*)x, outvol, (char*)filepath);
 		filewatcher_start(EXTRA->filewatcher);
 	}
 }
