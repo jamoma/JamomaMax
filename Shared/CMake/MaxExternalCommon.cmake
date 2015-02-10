@@ -3,10 +3,13 @@ set(PROJECT_SRCS
 	${CMAKE_CURRENT_SOURCE_DIR}/../c74support/max-includes/common/commonsyms.cpp
 )
 
+include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Foundation/library/includes")
+include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/includes")
 include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/PeerObject")
 include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/ModularForMax")
 include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/SchedulerLib")
 include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/Modular/library/ProtocolLib")
+include_directories("${PROJECT_SOURCE_DIR}/../../../../Core/DSP/library/includes")
 include_directories("${PROJECT_SOURCE_DIR}/../classwrapper")
 
 if(APPLE)
@@ -42,8 +45,8 @@ if(APPLE)
 		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_DEPLOYMENT_LOCATION "YES")
 		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_GENERATE_PKGINFO_FILE "YES")
 		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_DSTROOT "${EXECUTABLE_OUTPUT_PATH}")
-		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_INSTALL_PATH "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}")
-		#SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_GCC_DYNAMIC_NO_PIC "NO")
+		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_INSTALL_PATH "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/externals")
+		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_GCC_DYNAMIC_NO_PIC "NO")
 endif()
 
 ### Output ###
