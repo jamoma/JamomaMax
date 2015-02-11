@@ -1932,7 +1932,7 @@ TTSymbol jamoma_file_read(t_object *x, long argc, const t_atom *argv, t_fourcc f
 			
 			if (userpath != _sym_nothing && userpath != _sym_bang) {
                 
-                strcpy(filepath, userpath->s_name);    // must copy symbol before calling locatefile_extended
+                strncpy_zero(filepath, userpath->s_name, MAX_FILENAME_CHARS); // must copy symbol before calling locatefile_extended
                 if (locatefile_extended(filepath, &path, &outtype, &filetype, 1)) {     // Returns 0 if successful
                     
                     object_error(x, "%s : not found", filepath);

@@ -115,7 +115,7 @@ t_object *wrappedModularClass_new(t_symbol *name, long argc, t_atom *argv)
 
 void wrappedModularClass_unregister(WrappedModularInstancePtr x)
 {
-	TTValue		keys, v, none;
+	TTValue		keys, v;
 	TTSymbol	name;
 	TTAddress	objectAddress;
 	TTErr		err;
@@ -166,7 +166,7 @@ void wrappedModularClass_unregister(WrappedModularInstancePtr x)
                         objectAddress = v[1];
                         
                         JamomaDebug object_post((t_object*)x, "Remove internal %s object at : %s", name.c_str(), objectAddress.c_str());
-                        JamomaApplication.send("ObjectUnregister", objectAddress, none);
+                        JamomaApplication.send("ObjectUnregister", objectAddress);
                     }
                 }
             }
@@ -206,7 +206,7 @@ t_max_err wrappedModularClass_notify(TTPtr self, t_symbol *s, t_symbol *msg, voi
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	ModularSpec*				spec = (ModularSpec*)x->wrappedClassDefinition->specificities;
-	TTValue						v, none;
+	TTValue						v;
 	TTAddress                   contextAddress;
     
 #ifndef ARRAY_EXTERNAL
@@ -225,7 +225,7 @@ t_max_err wrappedModularClass_notify(TTPtr self, t_symbol *s, t_symbol *msg, voi
 				x->subscriberObject.get("contextAddress", v);
 				contextAddress = v[0];
 				
-				JamomaApplication.send("ObjectUnregister", contextAddress, none);
+				JamomaApplication.send("ObjectUnregister", contextAddress);
 				
 				// delete
 				x->subscriberObject = TTObject();
@@ -915,7 +915,7 @@ TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, t_symbol 
 	// absolute registration
 	dataAddress = address.appendAddress(TTAddress(name));
     v = TTValue(dataAddress, returnedData, context);
-	JamomaApplication.send("ObjectRegister", v, out);
+	out = JamomaApplication.send("ObjectRegister", v);
 	
 	dataAddress = out[0];
 	dataName = dataAddress.getNameInstance();
@@ -1081,7 +1081,7 @@ TTErr makeInternals_sender(TTPtr self, TTAddress address, TTSymbol name, TTObjec
 TTErr removeInternals_data(TTPtr self, TTAddress address, TTAddress name)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue		v, none;
+	TTValue		v;
 	TTAddress   dataAddress;
 	TTErr		err;
 	
@@ -1092,7 +1092,7 @@ TTErr removeInternals_data(TTPtr self, TTAddress address, TTAddress name)
 		dataAddress = v[1];
 		
 		JamomaDebug object_post((t_object*)x, "Remove internal %s object at : %s", name.c_str(), dataAddress.c_str());
-		JamomaApplication.send("ObjectUnregister", dataAddress, none);
+		JamomaApplication.send("ObjectUnregister", dataAddress);
 
 		x->internals->remove(name);
 	}
