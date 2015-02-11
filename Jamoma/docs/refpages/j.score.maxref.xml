@@ -23,7 +23,7 @@
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
-	<-- <inletlist>
+	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
 			</digest>
@@ -51,17 +51,6 @@
 			</description>
 		</outlet>
 	</outletlist>
-	<!--ARGUMENTS-->
-	<!---objarglist>
-		<objarg id="0" name="model address" type="symbol" optional="1">
-			<digest>
-				Address of the model to listen for initialization state
-			</digest>
-			<description>
-				Address of the model to listen for initialization state
-			</description>
-		</objarg>
-	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
 		<method name="read">
