@@ -254,7 +254,12 @@ void data_subscribe(TTPtr self, t_symbol *relativeAddress, long argc, t_atom *ar
 #ifndef JMOD_RETURN
         // if a j.parameter is registered under the root : reset to the default value our self
         if (returnedContextNode == accessApplicationLocalDirectory->getRoot())
-            x->wrappedObject.send(kTTSym_Init);
+        {
+            TTBoolean initialized;
+            x->wrappedObject.get("initialized", initialized);
+            if (!initialized)
+                x->wrappedObject.send(kTTSym_Init);
+        }
 #endif
 #endif
 	}

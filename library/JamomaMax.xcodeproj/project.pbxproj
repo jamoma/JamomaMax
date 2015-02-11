@@ -19,6 +19,7 @@
 		463A464A180AEA3F006624BC /* JamomaMax.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = JamomaMax.yml; sourceTree = "<group>"; };
 		463A464B180AEAF1006624BC /* JamomaMaxVersion.template.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JamomaMaxVersion.template.h; sourceTree = "<group>"; };
 		463A464C180AEF2B006624BC /* JamomaMaxObjectTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JamomaMaxObjectTypes.h; sourceTree = "<group>"; };
+		46A5878519FEB6FD000E15F2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -26,6 +27,7 @@
 			isa = PBXGroup;
 			children = (
 				463A464A180AEA3F006624BC /* JamomaMax.yml */,
+				46A5878519FEB6FD000E15F2 /* Makefile */,
 				463A463B180ADC96006624BC /* includes */,
 				463A4644180ADC9B006624BC /* source */,
 			);

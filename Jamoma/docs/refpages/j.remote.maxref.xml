@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.remote" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		access parameter values remotely
 	</digest>
 	<description>
-		TEXT_HERE
+		j.remote allows to access parameter values remotely by connecting UI objects to them
 	</description>
 	<!--METADATA-->
 	<metadatalist>

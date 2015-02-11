@@ -149,6 +149,17 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
 			</attributelist>
 		</attribute>
+		<attribute name="clipmode" get="1" set="1" type="int" size="1">
+			<digest>
+				Clipmode for values exceeding the specified range
+			</digest>
+			<description>
+				How to deal with values outside the specified range
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="none low high both" />
+			</attributelist>
+		</attribute>
 		<attribute name="function" get="1" set="1" type="symbol" size="1">
 			<digest>
 				Set the transfert function to be used for mapping

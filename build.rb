@@ -146,13 +146,14 @@ else
       #puts
       #puts "=================DONE===================="
       #puts
-      puts "Testing in 64bit Max"
+      
+      puts "Testing in 64bit version of Max 7"
       puts "==================================================="
-      if Dir.exists? "/Applications/Max 6.1/packages/testpackage/ruby"
-        Dir.chdir "/Applications/Max 6.1/packages/testpackage/ruby"
-        puts `arch -arch x86_64 ruby test.rb "/Applications/Max 6.1"`
+      if Dir.exists? "#{ENV["HOME"]}/Documents/Max 7/Packages/testpackage/ruby"
+        Dir.chdir "#{ENV["HOME"]}/Documents/Max 7/Packages/testpackage/ruby"
+        puts `arch -arch x86_64 ruby test.rb "/Applications"`
       else
-        puts "Test Package not found in /Applications/Max 6.1"
+        puts "Test Package not found in #{ENV["HOME"]}/Documents/Max 7/Packages/"
       end
       puts
       puts "=================DONE===================="

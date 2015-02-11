@@ -57,6 +57,9 @@
 // Jamoma Core includes
 #include "TTFoundationAPI.h"
 #include "TTModular.h"
+#ifdef TTSCORE_IMPORT
+#include "TTScore.h"
+#endif
 
 // Max includes
 #include "ext.h"

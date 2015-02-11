@@ -74,7 +74,7 @@ TTErr JAMOMA_EXPORT jamoma_subscriber_create(t_object *x, TTObject& anObject, TT
  @param aContextListToFill
  */
 void JAMOMA_EXPORT jamoma_subscriber_get_patcher_list(t_object *x, TTList& aContextListToFill);
-
+void jamoma_subscriber_fill_list(TTList& listToFill, TTAddress address, TTPtr pointer);
 
 
 // Method to deal with #TTContainer
