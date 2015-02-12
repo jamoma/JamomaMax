@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual C++ Express 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "j.cuemanager", "j.cuemanager.vcproj", "{18B2306C-61CF-4E00-849A-9D9288C31505}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "j.state", "j.state.vcproj", "{18B2306C-61CF-4E00-849A-9D9288C31505}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

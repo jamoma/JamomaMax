@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="j.cuemanager"
+	Name="j.state"
 	ProjectGUID="{18B2306C-61CF-4E00-849A-9D9288C31505}"
 	RootNamespace="j.dbap"
 	Keyword="Win32Proj"
@@ -188,11 +188,11 @@
 			>
 		</File>
 		<File
-			RelativePath=".\j.cuemanager.cpp"
+			RelativePath=".\j.state.cpp"
 			>
 		</File>
 		<File
-			RelativePath=".\j.cuemanager.h"
+			RelativePath=".\j.state.h"
 			>
 		</File>
 	</Files>
